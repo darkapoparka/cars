@@ -31,7 +31,6 @@
 		mileageOptions,
 		priceOptions,
 		searchPriceSuggestions,
-		sortChipLabels,
 		sortOptions
 	} from './mobile-inventory-filter-data';
 	import {
@@ -113,7 +112,7 @@
 	});
 	const transmissions = $derived(uniqueSorted(vehicles.map((vehicle) => vehicle.transmission)));
 
-	const sortChipLabel = $derived(sortChipLabels[sort]);
+	const sortLabel = $derived(sortOptions.find((option) => option.value === sort)?.label ?? '');
 	const priceLabel = $derived(priceOptions.find((option) => option.value === price)?.label ?? '');
 	const mileageLabel = $derived(
 		mileageOptions.find((option) => option.value === mileage)?.label ?? ''
@@ -165,10 +164,19 @@
 			sort !== 'price-asc'
 		)
 	);
-	const hasAdvancedFilters = $derived(
-		Boolean(
-			selectedBodies.length || fuel || mileage || transmission || price || sort !== 'price-asc'
-		)
+	const activeFilterCount = $derived(
+		[
+			selectedBrands.length,
+			selectedModels.length,
+			selectedBodies.length,
+			fuel,
+			mileage,
+			transmission,
+			price,
+			availability,
+			feature.length,
+			condition
+		].filter(Boolean).length
 	);
 	const criteria = $derived({
 		query,
@@ -210,7 +218,11 @@
 		sort = readMobileSort(params.get('sort'));
 	}
 	function syncUrl() {
-		const params = serializeInventoryFilters(criteria, sort, new URL(window.location.href).searchParams);
+		const params = serializeInventoryFilters(
+			criteria,
+			sort,
+			new URL(window.location.href).searchParams
+		);
 		replaceState(
 			resolve(
 				`${mode === 'map' ? '/inventory/map' : '/inventory'}${params.size ? `?${params}` : ''}`
@@ -530,18 +542,23 @@
 	}
 </script>
 
-<div class="mobile-inventory" aria-label="Мобилна страница автомобили">
+<div class="mobile-inventory">
 	<main id="main-content" tabindex="-1">
 		<h1 class="sr-only">Автомобили на склад — Ден и Нощ Ауто Груп</h1>
-		<MobileInventoryTop {mode} {query} onOpenSearch={() => openFilterSheet('search')} />
+		<MobileInventoryTop
+			{mode}
+			{query}
+			{activeFilterCount}
+			{sortLabel}
+			sortActive={sort !== 'price-asc'}
+			onOpenSearch={() => openFilterSheet('search')}
+			onOpenFilters={() => openFilterSheet('all')}
+			onOpenSort={() => openFilterSheet('sort')}
+		/>
 
 		<section class="mobile-inventory-results" aria-live="polite">
 			<MobileInventoryQuickFilters
 				vehiclesCount={vehicles.length}
-				resultCount={filteredVehicles.length}
-				{hasAdvancedFilters}
-				{sort}
-				{sortChipLabel}
 				{selectedBrands}
 				{brandSummary}
 				{selectedModels}
@@ -553,12 +570,14 @@
 				{bodySummary}
 				{hasActiveFilters}
 				{priceLabel}
-				{brandLogoPath}
 				openFilterSheet={(nextMode) => openFilterSheet(nextMode)}
 				{clearFilters}
-				{clearPrice}
 			/>
-			<p class="sr-only" role="status">{resultCountLabel}</p>
+			<div class="mobile-inventory-summary">
+				<p role="status">{resultCountLabel}</p>
+				{#if hasActiveFilters}<button type="button" onclick={clearFilters}>Изчисти филтрите</button
+					>{/if}
+			</div>
 			<MobileInventoryResults vehicles={sortedVehicles} onClearFilters={clearFilters} />
 		</section>
 	</main>

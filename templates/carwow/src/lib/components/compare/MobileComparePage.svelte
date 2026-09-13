@@ -2,14 +2,16 @@
 	import { resolve } from '$app/paths';
 	import { GitCompare, Plus, X } from '@lucide/svelte';
 	import { getGarageContext } from '$lib/state/garage.svelte';
-	import { getDayNightVehicleBySlug, type Car } from '$lib/data/daynight-vehicles';
+	import type { Car } from '$lib/data/daynight-vehicles';
+	import { resolveGarageVehicles, MAX_COMPARE_VEHICLES } from '$lib/utils/garage';
+	import GarageUnavailable from '$lib/components/shared/GarageUnavailable.svelte';
+	let { catalogue }: { catalogue: Car[] } = $props();
 	import MobileCompareSelector from './MobileCompareSelector.svelte';
 	let selectorOpen = $state(false);
 	import MobileBottomDock from '$lib/components/home/mobile/MobileBottomDock.svelte';
 	const garage = getGarageContext();
-	const vehicles = $derived(
-		garage.compare.map(getDayNightVehicleBySlug).filter((car): car is Car => Boolean(car))
-	);
+	const selection = $derived(resolveGarageVehicles(garage.compare, catalogue));
+	const vehicles = $derived(selection.available);
 	const rows: { label: string; value: (car: Car) => string }[] = [
 		{ label: 'Година', value: (car) => String(car.year) },
 		{ label: 'Пробег', value: (car) => car.mileage },
@@ -26,11 +28,20 @@
 	<main id="main-content" tabindex="-1">
 		<div class="page-title">
 			<h1>Сравнение</h1>
-			<span aria-label={`${vehicles.length} от 3 избрани автомобила`}>{vehicles.length} / 3</span>
+			<span
+				role="status"
+				aria-label={`${vehicles.length} от ${MAX_COMPARE_VEHICLES} избрани автомобила`}
+				>{vehicles.length} / {MAX_COMPARE_VEHICLES}</span
+			>
 		</div>
+		<GarageUnavailable
+			slugs={selection.unavailable}
+			onRemove={(slug) => garage.toggleCompare(slug)}
+		/>
 		<div class="actions">
 			<button type="button" aria-haspopup="dialog" onclick={() => (selectorOpen = true)}>
-				<Plus size={20} /> {vehicles.length < 3 ? 'Добави автомобил' : 'Промени избора'}
+				<Plus size={20} />
+				{vehicles.length < MAX_COMPARE_VEHICLES ? 'Добави автомобил' : 'Промени избора'}
 			</button>
 			{#if vehicles.length > 2}<span>Плъзнете за третия автомобил</span>{/if}
 		</div>
@@ -69,14 +80,14 @@
 			<section class="empty" aria-label="Няма избрани автомобили">
 				<GitCompare size={28} aria-hidden="true" />
 				<h2>Кои автомобили сравнявате?</h2>
-				<p>Изберете до 3 автомобила, за да сравните характеристиките им.</p>
+				<p>Изберете до {MAX_COMPARE_VEHICLES} автомобила, за да сравните характеристиките им.</p>
 			</section>
 		{/if}
 	</main>
 	<MobileBottomDock />
 </div>
 
-{#if selectorOpen}<MobileCompareSelector onClose={() => (selectorOpen = false)} />{/if}
+{#if selectorOpen}<MobileCompareSelector {catalogue} onClose={() => (selectorOpen = false)} />{/if}
 
 <style>
 	.mobile-compare {
@@ -99,13 +110,13 @@
 	h1 {
 		margin: 0;
 		color: inherit;
-		font-size: 22px;
-		font-weight: 700;
+		font-size: var(--sa-text-card-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.2;
 	}
 	.page-title span {
 		color: var(--sa-ink-soft);
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		font-variant-numeric: tabular-nums;
 	}
 	.empty {
@@ -120,12 +131,12 @@
 	}
 	.empty h2 {
 		margin: 0;
-		font-size: 18px;
+		font-size: var(--sa-text-lg);
 		line-height: 1.3;
 	}
 	.empty p {
 		margin: 0;
-		font-size: 14px;
+		font-size: var(--sa-type-body);
 		line-height: 1.5;
 		color: var(--sa-ink-soft);
 	}
@@ -138,7 +149,7 @@
 		padding: 16px;
 	}
 	.actions span {
-		font-size: 12px;
+		font-size: var(--sa-text-caption);
 		color: var(--sa-ink-soft);
 	}
 	.actions button {
@@ -153,8 +164,8 @@
 		width: 100%;
 		color: var(--sa-ink);
 		font: inherit;
-		font-size: 14px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 	}
 	.cars {
 		display: grid;
@@ -206,12 +217,12 @@
 	}
 	.identity a {
 		color: inherit;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 1.35;
-		font-weight: 600;
+		font-weight: var(--sa-button-font-weight);
 	}
 	.identity strong {
-		font-size: 17px;
+		font-size: var(--sa-text-control);
 		line-height: 1.3;
 	}
 	dl {
@@ -224,15 +235,15 @@
 		border-top: 1px solid var(--sa-line);
 	}
 	dt {
-		font-size: 12px;
+		font-size: var(--sa-text-caption);
 		color: var(--sa-ink-soft);
 		margin-bottom: 4px;
 	}
 	dd {
 		margin: 0;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 1.4;
-		font-weight: 500;
+		font-weight: var(--sa-weight-medium);
 		overflow-wrap: anywhere;
 	}
 	a:focus-visible,
@@ -240,5 +251,41 @@
 	.cars:focus-visible {
 		outline: 2px solid var(--sa-red);
 		outline-offset: 2px;
+	}
+
+	/* Mobile typography contract */
+	.mobile-compare h1 {
+		font-size: var(--sa-mobile-type-page-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-compare .page-title span,
+	.mobile-compare .actions span {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+	}
+	.mobile-compare .empty h2 {
+		font-size: var(--sa-mobile-type-section-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-compare .empty p {
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-compare .actions button,
+	.mobile-compare .identity a,
+	.mobile-compare dd {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-button-font-weight);
+	}
+	.mobile-compare .identity strong {
+		font-size: var(--sa-mobile-type-feature-title);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-compare dt {
+		font-size: var(--sa-mobile-type-micro);
+		font-weight: var(--sa-weight-semibold);
 	}
 </style>

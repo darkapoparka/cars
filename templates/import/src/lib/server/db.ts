@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto';
 import { agents } from '$lib/data/agents';
 import { daynightContact } from '$lib/data/daynight';
 import { getVehicleBySlug, vehicles } from '$lib/data/vehicles';
@@ -237,7 +238,7 @@ export const createDayNightSessionRecord = (user: DayNightUser): DayNightSession
 		expiresAt,
 		name: user.name,
 		role: user.role,
-		token: nextId('session'),
+		token: randomUUID(),
 		userId: user.id
 	};
 
@@ -283,7 +284,7 @@ const normalizeAgentSlug = (slug?: string) => {
 	return agents.some((agent) => agent.slug === normalized) ? normalized : undefined;
 };
 
-export const createDayNightInquiryRecord = (
+export const buildDayNightInquiryRecord = (
 	input: Partial<DayNightInquiryRecord>
 ): DayNightInquiryRecord => {
 	const routePath = input.routePath ?? '/contact';
@@ -300,7 +301,7 @@ export const createDayNightInquiryRecord = (
 		contactName: input.contactName?.trim() || 'Day Night Auto website lead',
 		contactPhone: input.contactPhone?.trim() || daynightContact.primaryPhoneLabel,
 		createdAt: stamp(),
-		id: nextId('inquiry'),
+		id: randomUUID(),
 		message: input.message?.trim() || 'Website inquiry queued for Day Night Auto follow-up.',
 		routePath,
 		source: input.source ?? 'website',
@@ -310,8 +311,12 @@ export const createDayNightInquiryRecord = (
 		vehicleTitle: vehicle?.title ?? input.vehicleTitle
 	};
 
-	inquiries.unshift(record);
+	return record;
+};
 
+export const createDayNightInquiryRecord = (input: Partial<DayNightInquiryRecord>) => {
+	const record = buildDayNightInquiryRecord(input);
+	inquiries.unshift(record);
 	return record;
 };
 
@@ -476,7 +481,8 @@ const normalizeListingRecord = (
 
 	return {
 		bodyType: trimmedValue(input.bodyType) || existing?.bodyType || 'On request',
-		brand: trimmedValue(input.brand) || existing?.brand || title.split(/\s+/)[0] || 'Day Night Auto',
+		brand:
+			trimmedValue(input.brand) || existing?.brand || title.split(/\s+/)[0] || 'Day Night Auto',
 		color: trimmedValue(input.color) || existing?.color || 'On request',
 		createdAt,
 		description:

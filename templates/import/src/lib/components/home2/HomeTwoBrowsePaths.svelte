@@ -188,22 +188,22 @@
 	}
 
 	.home2-action-card--import {
-		background: #E3062F;
-		color: #1C1C1C !important;
+		background: #e3062f;
+		color: #1c1c1c !important;
 	}
 
 	.home2-action-card--import:hover {
-		background: #B9161C;
-		color: #1C1C1C !important;
+		background: #b9161c;
+		color: #1c1c1c !important;
 	}
 
 	.home2-action-card--consultation {
-		background: #1C1C1C;
+		background: #1c1c1c;
 		color: #ffffff !important;
 	}
 
 	.home2-action-card--consultation:hover {
-		background: #1C1C1C;
+		background: #1c1c1c;
 		color: #ffffff !important;
 	}
 
@@ -252,13 +252,13 @@
 	}
 
 	.home2-action-card--import .home2-action-card__copy em {
-		background: #1C1C1C;
+		background: #1c1c1c;
 		color: #ffffff;
 	}
 
 	.home2-action-card--consultation .home2-action-card__copy em {
 		background: #fee2e2;
-		color: #1C1C1C;
+		color: #1c1c1c;
 	}
 
 	.home2-action-card__copy em :global(svg),

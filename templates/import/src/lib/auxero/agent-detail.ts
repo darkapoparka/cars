@@ -55,11 +55,7 @@ export const agentDetailFromAgent = (agent: Agent): AuxeroAgentDetailContent => 
 			mapSrc: daynightContact.mapEmbedUrl,
 			messagePlaceholder: 'Напишете запитването си тук',
 			phone: daynightContact.primaryPhoneLabel,
-			subjectOptions: [
-				'Наличност на автомобила',
-				'Запазване на оглед',
-				'Внос и финансиране'
-			],
+			subjectOptions: ['Наличност на автомобила', 'Запазване на оглед', 'Внос и финансиране'],
 			submitLabel: 'Изпрати запитване',
 			termsLabel: 'Общи условия.',
 			viberHref: daynightContact.viberHref,

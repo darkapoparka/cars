@@ -30,11 +30,26 @@
 	--bc-text-h7: 1rem;
 	--bc-leading-h7: 1.5;
 	--bc-text-body: 16px;
+	/* Role scale: controls are readable at their existing tap-target height.
+	   Use only the 400/600/700 weights shipped by the Sofia Sans font assets. */
+	--bc-text-control: 1rem;
+	--bc-leading-control: 1.375;
+	--bc-text-filter: 1.125rem;
+	--bc-leading-filter: 1.333333;
+	--bc-text-search: 1.125rem;
+	--bc-text-search-trigger: 1.25rem;
+	--bc-leading-search: 1.333333;
+	--bc-text-prose: 1.125rem;
+	--bc-leading-prose: 1.65;
+	--bc-weight-body: 400;
+	--bc-weight-control: 400;
+	--bc-weight-heading: 600;
+	--bc-weight-emphasis: 700;
 	--bc-leading-body: 1.625;
 	--bc-text-body-lg: 18px;
 	--bc-leading-body-lg: 1.55;
 	--bc-text-cta: 18px;
-	--bc-leading-cta: 1.2;
+	--bc-leading-cta: 1.333333;
 	--bc-text-meta: 13px;
 	--bc-leading-meta: 1.4;
 	--bc-text-label: 14px;
@@ -44,31 +59,31 @@
 	--bc-tracking-tight: -0.025em;
 	--bc-tracking-display: -0.035em;
 
-	--bc-bg: #fbfbfa;
-	--bc-bg-strong: #f3f3f1;
-	--bc-ink: #1c1c1c;
+	--bc-bg: #ffffff;
+	--bc-bg-strong: #eef1f4;
+	--bc-ink: #17191c;
 	--bc-ink-soft: #1c1c1c;
-	--bc-copy: #4b4b4b;
-	--bc-muted: #696665;
+	--bc-copy: #4f5965;
+	--bc-muted: #626d7c;
 	--bc-muted-light: #9fa1a4;
 	--bc-subtle: #697078;
 	--bc-white: #ffffff;
 
-	--bc-surface: #f1f2f3;
-	--bc-surface-soft: #f7f7f6;
-	--bc-surface-hover: #eceff2;
+	--bc-surface: #f5f7f9;
+	--bc-surface-soft: #f8fafc;
+	--bc-surface-hover: #eef1f4;
 	--bc-surface-raised: #ffffff;
-	--bc-border: #dde0e4;
+	--bc-border: #d8dde3;
 	--bc-border-strong: #c8cdd3;
 	--bc-hero-control-border: rgba(28, 28, 28, 0.42);
 	--bc-hero-action-surface: rgba(255, 255, 255, 0.85);
 	--bc-hero-action-border: rgba(255, 255, 255, 0.62);
 
-	--bc-control: #f3f4f5;
-	--bc-control-hover: #eef0f2;
-	--bc-control-active: #e5e7eb;
-	--bc-hover-surface: #f4f4f4;
-	--bc-hover-surface-strong: #eceeef;
+	--bc-control: var(--bc-surface);
+	--bc-control-hover: var(--bc-surface-hover);
+	--bc-control-active: var(--bc-border);
+	--bc-hover-surface: var(--bc-surface);
+	--bc-hover-surface-strong: var(--bc-surface-hover);
 	--bc-hover-border: #b9161c;
 	--bc-hover-accent: #8f1016;
 	--bc-hover-accent-strong: #8f1016;
@@ -78,11 +93,11 @@
 
 	--bc-accent: #b9161c;
 	--bc-accent-hover: #8f1016;
-	--bc-accent-soft: #f3f4f6;
+	--bc-accent-soft: var(--bc-surface);
 	--bc-accent-contrast: #ffffff;
 	--bc-accent-alt: #8f1016;
 	--bc-accent-bright: #ee1d24;
-	--bc-accent-bright-soft: #f3f4f6;
+	--bc-accent-bright-soft: var(--bc-surface);
 	--bc-accent-olive: #b9161c;
 	--bc-focus: #b9161c;
 	--bc-focus-contrast: #ffffff;
@@ -94,13 +109,13 @@
 	--bc-warning: #f4bd0e;
 	--bc-danger: #e85347;
 
-	--bc-card-bg: #f1f2f3;
-	--bc-card-hover: #f4f4f4;
-	--bc-card-ink: #1c1c1c;
-	--bc-card-muted: #666b72;
-	--bc-card-media: #f4f5f6;
-	--bc-card-chip: #ffffff;
-	--bc-card-chip-border: #dfe2e5;
+	--bc-card-bg: var(--bc-surface);
+	--bc-card-hover: var(--bc-surface-hover);
+	--bc-card-ink: var(--bc-ink);
+	--bc-card-muted: var(--bc-muted);
+	--bc-card-media: var(--bc-surface-soft);
+	--bc-card-chip: var(--bc-white);
+	--bc-card-chip-border: var(--bc-border);
 	--bc-card-pill: rgb(28 28 28 / 0.78);
 	--bc-card-pill-hover: rgb(28 28 28 / 0.88);
 
@@ -167,20 +182,20 @@
 	--bc-dashboard-status-bg: #f3f4f6;
 	--bc-dashboard-status-text: #8f1016;
 
-	--bc-showcase-bg: #f5f5f4;
+	--bc-showcase-bg: var(--bc-surface);
 	--bc-showcase-dark: #101010;
 	--bc-showcase-dark-soft: #1c1c1c;
 	--bc-showcase-dark-panel: #050505;
-	--bc-showcase-ink: #1c1c1c;
-	--bc-showcase-muted: #6b7076;
-	--bc-showcase-line: #dfe2e5;
-	--bc-showcase-icon-bg: #f3f4f6;
-	--bc-showcase-card-hover: #f7f7f6;
+	--bc-showcase-ink: var(--bc-ink);
+	--bc-showcase-muted: var(--bc-muted);
+	--bc-showcase-line: var(--bc-border);
+	--bc-showcase-icon-bg: var(--bc-surface);
+	--bc-showcase-card-hover: var(--bc-surface-soft);
 
 	--bc-container-narrow: 760px;
-	--bc-container-page: 1440px;
+	--bc-container-page: 1320px;
 	--bc-container-wide: 1920px;
-	--bc-page-x: 15px;
+	--bc-page-x: 14px;
 	--bc-page-y: 32px;
 	--bc-section-sm: clamp(32px, 4vw, 54px);
 	--bc-section-md: clamp(48px, 6vw, 76px);
@@ -192,22 +207,71 @@
 	   receive progressively more visual and physical weight. */
 	--bc-control-height-compact: 36px;
 	--bc-control-height-secondary: 40px;
-	--bc-control-height-chip: 42px;
+	--bc-control-height-chip: 44px;
 	--bc-control-height-standard: 44px;
 	--bc-control-height-primary: 48px;
 	--bc-control-height-hero: 56px;
+	--bc-mobile-entry-inset: 2px;
+	--bc-mobile-entry-gap: 10px;
+
+	/* Shared responsive UI primitives. Route components consume these instead of
+	   inventing spacing, type, neutral colors, control heights and radii. */
+	--bc-space-1: 4px;
+	--bc-space-2: 8px;
+	--bc-space-3: 12px;
+	--bc-space-4: 16px;
+	--bc-space-5: 20px;
+	--bc-space-6: 24px;
+	--bc-space-7: 28px;
+	--bc-space-8: 32px;
+	--bc-mobile-gutter: 14px;
+	--bc-mobile-dark: #090a0b;
+	--bc-dark-surface: #101113;
+	--bc-dark-border: #202326;
+	--bc-dark-hover: #25282b;
+	--bc-muted-on-dark: #bdc1c1;
+	--bc-footer-bg: #1c1c1c;
+	--bc-footer-panel: #242426;
+	--bc-footer-border: #3b3b3e;
+	--bc-footer-icon-border: #49494e;
+	--bc-footer-muted: #b5bac2;
+	--bc-footer-link: #ccd0d5;
+	--bc-footer-ink: #f7f7f7;
+	--bc-dark-muted: #c4c7cb;
+	--bc-mobile-appbar-height: 56px;
+	--bc-mobile-nav-height: 70px;
+	--bc-mobile-stat-height: 30px;
+	--bc-mobile-page-title: 28px;
+	--bc-mobile-page-title-leading: 32px;
+	--bc-mobile-section-title: 22px;
+	--bc-mobile-section-title-leading: 28px;
+	--bc-mobile-card-title: 1.125rem;
+	--bc-mobile-card-title-leading: 24px;
+	--bc-mobile-body: var(--bc-text-body);
+	--bc-mobile-body-leading: 24px;
+	--bc-mobile-label: var(--bc-text-label);
+	--bc-mobile-label-leading: 20px;
+	--bc-mobile-meta: var(--bc-text-meta);
+	--bc-mobile-meta-leading: 18px;
+	--bc-mobile-stat: 0.75rem;
+	--bc-mobile-stat-leading: 16px;
+	--bc-mobile-card-price: 1.25rem;
+	--bc-mobile-price: 22px;
+	--bc-mobile-price-leading: 28px;
+	--bc-accent-tint: rgb(185 22 28 / 0.12);
 
 	--bc-radius-xs: 4px;
 	--bc-radius-sm: 6px;
 	--bc-radius-md: 8px;
 	--bc-radius-lg: 12px;
 	--bc-radius-control: var(--bc-radius-lg);
-	--bc-radius-card: 16px;
-	--bc-radius-panel: 24px;
-	--bc-radius-section: 28px;
-	--bc-radius-modal: 40px;
+	--bc-radius-card: 12px;
+	--bc-radius-panel: 16px;
+	--bc-radius-section: 20px;
+	--bc-radius-modal: 24px;
 	--bc-radius-pill: 999px;
 
+	--bc-shadow-sticky: 0 -8px 20px rgb(23 25 28 / 0.08);
 	--bc-shadow-subtle: 0 1px 3px rgb(28 28 28 / 0.08);
 	--bc-shadow-card: 0 4px 12px rgb(28 28 28 / 0.08);
 	--bc-shadow-panel: 0 12px 34px rgb(28 28 28 / 0.12);
@@ -217,6 +281,19 @@
 	--bc-motion-hover: 140ms ease;
 	--bc-motion-standard: 220ms ease;
 	--bc-motion-drawer: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (min-width: 768px) {
+	:root {
+		--bc-page-x: 32px;
+	}
+
+	.daynight-public-shell .container {
+		width: min(calc(100% - (var(--bc-page-x) * 2)), var(--bc-container-page));
+		max-width: var(--bc-container-page);
+		margin-inline: auto;
+		padding-inline: 0;
+	}
 }
 
 html {
@@ -260,6 +337,26 @@ body::-webkit-scrollbar-thumb:hover {
 	background: var(--bc-brand-hover);
 }
 
+@media (max-width: 767.98px) {
+	:root {
+		/* Mobile pages share one grey canvas with white cards above it. */
+		--bc-bg: var(--bc-bg-strong);
+		--bc-card-bg: var(--bc-white);
+	}
+
+	html,
+	body {
+		scrollbar-width: none;
+		scrollbar-gutter: auto;
+	}
+
+	html::-webkit-scrollbar,
+	body::-webkit-scrollbar {
+		display: none;
+		width: 0;
+	}
+}
+
 body {
 	margin: 0;
 	border: 0;
@@ -277,6 +374,13 @@ body {
 	letter-spacing: inherit;
 }
 
+/* Legacy form CSS gives placeholders their own font size. Keep each hint
+   identical to its input, including mobile search and validation states. */
+body :is(input, textarea)::placeholder {
+	font: inherit !important;
+	letter-spacing: inherit;
+}
+
 :where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .h7) {
 	font-family: var(--bc-font-heading);
 	font-synthesis: none;
@@ -286,13 +390,13 @@ body {
 
 :where(h1, .h1) {
 	font-size: var(--bc-text-h1);
-	font-weight: 700;
+	font-weight: var(--bc-weight-heading);
 	line-height: var(--bc-leading-h1);
 }
 
 :where(h2, .h2) {
 	font-size: var(--bc-text-h2);
-	font-weight: 700;
+	font-weight: var(--bc-weight-heading);
 	line-height: var(--bc-leading-h2);
 }
 

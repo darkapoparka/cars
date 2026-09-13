@@ -1,5 +1,7 @@
 # Auto Best
 
+**Working branch: `main`.** Use one writer per checkout. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
+
 A reusable automotive website template built with **Svelte 5, SvelteKit, TypeScript and Vite**. Clone it for a dealership, replace the business content and imagery, and build on the existing interface instead of rebuilding the site.
 
 Project repository: **`darkapoparka/cars-template-auto-best`**.
@@ -64,3 +66,5 @@ provenance/                Asset origins and third-party notices
 [Product overview](PRODUCT.md), [template reference](TEMPLATE.md), [agent notes](AGENTS.md), [asset provenance](ASSET_PROVENANCE.md) and [source notices](SOURCE_LICENSE.md) complete the reference.
 
 The template intentionally retains source/sample content for its design. Replace it when creating a real dealer site. Technical setup does not depend on an Agency OS account, CRM, database, or another automotive template.
+
+Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).

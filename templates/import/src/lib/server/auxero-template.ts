@@ -3087,6 +3087,7 @@ function injectLocalBehavior(
 	}, runtimeListenerOptions);
 	document.addEventListener('submit', async (event) => {
 		const form = event.target;
+		if (form.hasAttribute('data-managed-inquiry')) return;
 		if (form.matches('[data-daynight-search-form="inventory"]')) {
 			event.preventDefault();
 			go(inventorySearchUrl(form));
@@ -3168,8 +3169,10 @@ function injectLocalBehavior(
 			});
 			setFormStatus(form, 'Заявката е подготвена. Day Night Auto ще се свърже с вас.');
 		} else if (form.matches('.daynight-service-form')) {
-			await postJson('/api/inquiries', payload);
-			setFormStatus(form, 'Service request queued locally for Day Night Auto');
+			const result = await postJson('/api/inquiries', payload);
+			setFormStatus(form, result?.ok && result?.data?.inquiry?.id
+				? 'Демонстрационната заявка е запазена. Не е изпратено съобщение до търговец.'
+				: 'Заявката не е запазена. Провери данните и опитай отново.');
 		} else if (form.matches('.daynight-blog-comment-form')) {
 			await postJson('/api/messages', payload);
 			setFormStatus(form, 'Comment saved locally for Day Night Auto review');
@@ -3180,12 +3183,12 @@ function injectLocalBehavior(
 			});
 			setFormStatus(form, 'Newsletter signup saved locally for Day Night Auto');
 		} else {
-			await postJson('/api/inquiries', payload);
+			const result = await postJson('/api/inquiries', payload);
 			setFormStatus(
 				form,
-				form.matches('.daynight-contact-form')
-					? 'Съобщението е подготвено локално за Day Night Auto'
-					: 'Inquiry sent to Day Night Auto locally'
+				result?.ok && result?.data?.inquiry?.id
+					? 'Демонстрационната заявка е запазена. Не е изпратено съобщение до търговец.'
+					: 'Заявката не е запазена. Провери данните и опитай отново.'
 			);
 		}
 	}, runtimeListenerOptions);
@@ -3194,7 +3197,7 @@ function injectLocalBehavior(
 		const value = Number(String(input?.value || '0').replace(/[^0-9.-]/g, ''));
 		return Number.isFinite(value) ? value : 0;
 	};
-	const formatEur = (value) => Math.round(value).toLocaleString('fr-FR').replace(/\u202f/g, ' ') + ' EUR';
+	const formatEur = (value) => Math.round(value).toLocaleString('fr-FR').replace(/\u202f/g, ' ') + ' €';
 	const updateCalculator = (calculator) => {
 		const price = readCalcNumber(calculator, 'price');
 		const transport = readCalcNumber(calculator, 'transport');

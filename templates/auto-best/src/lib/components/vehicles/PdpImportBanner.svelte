@@ -39,16 +39,16 @@
   .dn-pdp-import-dialog::backdrop { background: rgba(8,10,14,.64); backdrop-filter: blur(2px); }
   .dn-pdp-import-sheet { padding: 20px; border-radius: 22px; background: #fff; }
   .dn-pdp-import-sheet header { display: flex; align-items: center; gap: 14px; }
-  .dn-pdp-import-sheet h2 { flex: 1; margin: 0; font-size: 22px; line-height: 1.2; letter-spacing: -.025em; }
+  .dn-pdp-import-sheet h2 { flex: 1; margin: 0; font-size: var(--dn-text-subheading); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
   .dn-pdp-import-sheet header button { display: grid; width: 42px; height: 42px; place-items: center; border: 0; border-radius: 50%; background: #f1f2f4; color: #202329; cursor: pointer; }  .dn-pdp-import-sheet ol { display: grid; gap: 14px; margin: 24px 0 0; padding: 0; list-style: none; }
   .dn-pdp-import-sheet li { display: grid; grid-template-columns: 34px minmax(0,1fr); align-items: center; gap: 12px; }
-  .dn-pdp-import-sheet li > span { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: #202329; color: #fff; font-size: 11px; font-weight: 750; }
-  .dn-pdp-import-sheet li strong { font-size: 15px; line-height: 1.35; }
-  .dn-pdp-import-sheet__cta { display: flex; min-height: 48px; align-items: center; justify-content: center; gap: 8px; margin-top: 22px; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font-size: 14px; font-weight: 700; }
+  .dn-pdp-import-sheet li > span { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: #202329; color: #fff; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); }
+  .dn-pdp-import-sheet li strong { font-size: var(--dn-text-body); line-height: var(--dn-leading-meta); }
+  .dn-pdp-import-sheet__cta { display: flex; min-height: 48px; align-items: center; justify-content: center; gap: 8px; margin-top: 22px; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); }
   @media (max-width: 767px) {
     .dn-pdp-import { margin: 12px 12px 0; }
     .dn-pdp-import-dialog { inset: auto 0 0; width: 100%; margin: 0; border-radius: 24px 24px 0 0; }
     .dn-pdp-import-sheet { padding: 20px 16px max(22px,env(safe-area-inset-bottom)); border-radius: 24px 24px 0 0; }
-    .dn-pdp-import-sheet h2 { font-size: 21px; }
+    .dn-pdp-import-sheet h2 { font-size: var(--dn-text-card); }
   }
 </style>

@@ -1,11 +1,4 @@
 <script lang="ts">
-  import { onDestroy } from 'svelte';
-  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
-  let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
-  let heading: HTMLHeadingElement;
-  onDestroy(() => releaseOffset?.(false));
-  import { cleanFilterFormData as cleanFormData } from '$lib/ui/forms';
-  import { filtersFromDraft } from '$data/filter-fields';
   import Icon from '$components/ui/Icon.svelte';
   import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
   import { resolve } from '$app/paths';
@@ -31,9 +24,23 @@
   let searchOpen = $state(false);
   let mobileView = $state<MobileFilterView>('main');
   let modelOptions = $derived(listingModelsForMake(make));
-  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, filtersFromDraft({
-    q: query, make, model, body, fuel, priceMax, mileageMax, yearMin
-  })));
+  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, {
+    q: query,
+    make,
+    model,
+    body,
+    fuel,
+    transmission: '',
+    version: '',
+    equipment: [],
+    condition: '',
+    yearMin: yearMin ? Number(yearMin) : null,
+    yearMax: null,
+    priceMin: null,
+    priceMax: priceMax ? Number(priceMax) : null,
+    mileageMax: mileageMax ? Number(mileageMax) : null,
+    sort: 'default'
+  }));
   let hasFilters = $derived(Boolean(query || make || model || body || priceMax || fuel || mileageMax || yearMin));
   const formatNumber = (value: string) => new Intl.NumberFormat('bg-BG').format(Number(value));
   let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || 'Всички марки');
@@ -89,13 +96,10 @@
   };
 
   const openSearch = () => {
-    if (!dialog || dialog.open) return;
-    releaseOffset = preserveScrollOffset('--dn-home-search-scroll');
     searchOpen = true;
     mobileView = 'main';
     dialog?.showModal();
-    if (window.matchMedia('(min-width: 768px)').matches) searchInput?.focus();
-    else heading?.focus();
+    if (window.matchMedia('(min-width: 768px)').matches) requestAnimationFrame(() => searchInput?.focus());
   };
 
   const closeSearch = () => {
@@ -159,15 +163,19 @@
   const restoreTriggerFocus = () => {
     searchOpen = false;
     mobileView = 'main';
-    releaseOffset?.();
-    if (trigger?.isConnected) trigger.focus();
+    trigger?.focus();
   };
 
-
+  const cleanFormData = (event: FormDataEvent) => {
+    for (const key of new Set(event.formData.keys())) {
+      const values = event.formData.getAll(key);
+      if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
+    }
+  };
 </script>
 
 <button
-  class="dn-quick-search__trigger"
+  class="dn-quick-search__trigger dn-entry-field"
   type="button"
   {@attach attachTrigger}
   aria-haspopup="dialog"
@@ -191,7 +199,6 @@
   onclick={handleDialogClick}
   oncancel={handleCancel}
   onclose={restoreTriggerFocus}
-  onkeydown={trapDialogTab}
 >
   <div class="dn-quick-search__panel">
     <header class="dn-quick-search__header">
@@ -207,7 +214,7 @@
           <Icon name="arrow-left" size={21} strokeWidth={1.8} />
         </button>
       {/if}
-      <h2 id="quick-search-title" bind:this={heading} tabindex="-1">
+      <h2 id="quick-search-title">
         <span class="dn-quick-search__title-desktop">Търсене на автомобил</span>
         <span class="dn-quick-search__title-mobile">{mobileMenuTitle}</span>
       </h2>
@@ -224,10 +231,11 @@
       onformdata={cleanFormData}
     >
       <label class="dn-sr-only" for="quick-search-input">Марка, модел или ключова дума</label>
-      <div class="dn-quick-search__input-wrap">
+      <div class="dn-quick-search__input-wrap dn-entry-field">
         <Icon name="search" size={21} strokeWidth={1.8} />
         <input
           id="quick-search-input"
+          class="dn-entry-field__input"
           {@attach attachSearchInput}
           bind:value={query}
           type="search"
@@ -331,23 +339,14 @@
 </dialog>
 
 <style>
-  :global(body:has(.dn-quick-search__dialog:modal)) { position: fixed; top: var(--dn-home-search-scroll, 0); width: 100%; overflow: hidden; }
-  #quick-search-title:focus { outline: none; }
   .dn-quick-search__trigger {
     display: grid;
     width: 100%;
-    min-height: 48px;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 11px;
     margin: 0 0 12px;
     padding: 0 16px;
-    border: 1px solid #dfe2e6;
-    border-radius: var(--dn-radius-button);
-    background: #f8f9fa;
-    color: #686d75;
-    font: inherit;
-    font-size: 16px;
     text-align: left;
     cursor: pointer;
     transition: border-color 160ms ease-out, background-color 160ms ease-out;
@@ -355,11 +354,8 @@
 
   @media (min-width: 992px) {
     .dn-quick-search__trigger {
-      min-height: var(--dn-discovery-search-height);
       margin-bottom: var(--dn-discovery-gap);
       padding-inline: 18px;
-      border-radius: 14px;
-      background: #f5f6f7;
     }
   }
 
@@ -368,15 +364,10 @@
     background: #f3f4f6;
   }
 
-  .dn-quick-search__trigger:focus-visible {
-    outline: 3px solid rgba(196, 1, 1, 0.2);
-    outline-offset: 2px;
-  }
-
   .dn-quick-search__hint {
     color: #2d3036;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: var(--dn-text-meta);
+    font-weight: var(--dn-weight-semibold);
   }
 
   .dn-quick-search__label-mobile,
@@ -421,9 +412,9 @@
   .dn-quick-search__header h2 {
     margin: 0;
     font-size: var(--dn-text-subheading);
-    font-weight: 650;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-quick-search__reset,
@@ -465,37 +456,9 @@
 
   .dn-quick-search__input-wrap {
     display: flex;
-    height: 64px;
     align-items: center;
-    gap: 12px;
-    padding: 0 20px;
-    border: 1px solid transparent;
-    border-radius: var(--dn-radius-control);
-    background: #e9ecef;
-    color: #727780;
-  }
-
-  .dn-quick-search__input-wrap:focus-within {
-    border-color: #c40101;
-    background: #fff;
-  }
-
-  .dn-quick-search__input-wrap input {
-    width: 100%;
-    min-width: 0;
-    height: 100%;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    color: #191c22;
-    font: inherit;
-    font-size: var(--dn-text-lead);
-    line-height: var(--dn-leading-lead);
-  }
-
-  .dn-quick-search__input-wrap input::placeholder {
-    color: #777c84;
-    opacity: 1;
+    gap: var(--dn-space-3);
+    padding: 0 var(--dn-space-4);
   }
 
   @media (max-width: 767px) {
@@ -542,8 +505,8 @@
 
     .dn-quick-search__header h2 {
       text-align: center;
-      font-size: 18px;
-      letter-spacing: -0.01em;
+      font-size: var(--dn-text-lead);
+      letter-spacing: var(--dn-tracking-heading);
     }
 
     .dn-quick-search__reset {
@@ -557,8 +520,8 @@
       color: var(--dn-red);
       cursor: pointer;
       font: inherit;
-      font-size: 13px;
-      font-weight: 650;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-semibold);
     }
 
     .dn-quick-search__back {
@@ -611,23 +574,6 @@
       display: none;
     }
 
-    .dn-quick-search__input-wrap {
-      height: 48px;
-      padding-inline: 16px;
-      border-color: transparent;
-      border-radius: var(--dn-pill);
-      background: #f1f2f4;
-    }
-
-    .dn-quick-search__input-wrap:focus-within {
-      border-color: var(--dn-red);
-      background: #f1f2f4;
-    }
-
-    .dn-quick-search__input-wrap input {
-      font-size: var(--dn-text-body);
-    }
-
     .dn-quick-search__mobile-filters {
       display: flex;
       min-height: 0;
@@ -663,14 +609,14 @@
     }
 
     .dn-quick-search__filter-row strong {
-      font-size: 15px;
-      font-weight: 650;
+      font-size: var(--dn-text-body);
+      font-weight: var(--dn-weight-semibold);
     }
 
     .dn-quick-search__filter-row > span {
       overflow: hidden;
       color: #626975;
-      font-size: 14px;
+      font-size: var(--dn-text-meta);
       text-align: right;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -713,9 +659,9 @@
       color: #24272c;
       cursor: pointer;
       font: inherit;
-      font-size: 14px;
-      font-weight: 650;
-      line-height: 1.25;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
       transition: background-color 140ms ease-out, color 140ms ease-out;
     }
 
@@ -748,9 +694,7 @@
       background: var(--dn-red);
       color: #fff;
       cursor: pointer;
-      font: inherit;
-      font-size: 15px;
-      font-weight: 700;
+      font: var(--dn-cta-font);
     }
 
     .dn-quick-search__mobile-footer button:disabled {

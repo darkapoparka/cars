@@ -15,7 +15,9 @@
 		"verify": "npm run check && npm run lint && npm run test:unit -- --run",
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
-		"test:e2e": "playwright test"
+		"test:e2e": "playwright test",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.4",
@@ -27,6 +29,7 @@
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"@tailwindcss/vite": "^4.2.2",
 		"@types/node": "^24",
+		"drizzle-kit": "0.31.10",
 		"eslint": "^10.2.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.17.0",
@@ -48,11 +51,15 @@
 	"dependencies": {
 		"@ai-sdk/openai": "^3.0.68",
 		"@ai-sdk/svelte": "^4.0.197",
+		"@hugeicons/core-free-icons": "4.3.2",
+		"@hugeicons/svelte": "1.1.5",
 		"@lucide/svelte": "^1.17.0",
+		"@neondatabase/serverless": "1.1.0",
 		"@tabler/icons-svelte": "^3.44.0",
 		"ai": "^6.0.197",
 		"bits-ui": "^2.18.1",
 		"clsx": "^2.1.1",
+		"drizzle-orm": "0.45.2",
 		"tailwind-merge": "^3.6.0",
 		"tailwind-variants": "^3.2.2",
 		"vaul-svelte": "^1.0.0-next.7",

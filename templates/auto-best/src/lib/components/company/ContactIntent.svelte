@@ -5,10 +5,11 @@
   import { brand } from '$config/brand';
   import { contactPreparation, type ContactTopic } from '$data/company';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
-  import ImportEnquiry from './ImportEnquiry.svelte';
+  import VehicleEnquiry from './VehicleEnquiry.svelte';
   import TradeInEnquiry from './TradeInEnquiry.svelte';
   import TradeInInfoDrawer from './TradeInInfoDrawer.svelte';
   import ImportHowItWorks from './ImportHowItWorks.svelte';
+  import WorkflowSupport from './WorkflowSupport.svelte';
 
   let { topic, vehicle = null, importUrl = null }: { topic: ContactTopic; vehicle?: Vehicle | null; importUrl?: string | null } = $props();
   const preparation = $derived(contactPreparation[topic.id]);
@@ -24,6 +25,7 @@
   <div class="dn-contact-intent__main">
     {#if topic.id === 'trade-in' || topic.id === 'import'}
       <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продай или бартер' : topic.title}</h1>
+      {#if topic.id === 'import'}<p class="dn-contact-workflow-hint">Линк към обява или описание</p>{/if}
     {/if}
     <div class="dn-contact-intent__heading">
       <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Свържете се с екипа</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Обадете се на екипа</span>{/if}</h2>
@@ -42,7 +44,7 @@
     {#if topic.id === 'trade-in'}
       <TradeInEnquiry />
     {:else if topic.id === 'import'}
-      {#key topic.id}<ImportEnquiry {importUrl} />{/key}
+      {#key topic.id}<VehicleEnquiry kind="import" {importUrl} />{/key}
     {:else if preparation}
       <div class="dn-contact-preparation">
         <h2>{preparation.title}</h2>
@@ -72,6 +74,10 @@
     </div>
     {/if}
   </div>
+
+  {#if topic.id === 'trade-in' || topic.id === 'import'}
+    <WorkflowSupport topic={topic.id} />
+  {/if}
 
   {#if topic.id === 'trade-in'}
     <TradeInInfoDrawer />
@@ -161,6 +167,9 @@
 </div>
 
 <style>
+  .dn-contact-workflow-hint { display: none; margin: var(--dn-space-2) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); text-align: center; }
+  @media (max-width: 767px) { .dn-contact-workflow-hint { display: block; } }
+  .dn-contact-intent--workflow { row-gap: 0; }
   .dn-contact-description--mobile { display: none; }
   .dn-contact-desktop-copy, .dn-contact-visit { display: none; }
   .dn-contact-intent--tradein { grid-template-columns: 1fr; width: min(920px, 100%); }
@@ -177,7 +186,7 @@
     .dn-contact-intent--general .dn-contact-card__links,
     .dn-contact-intent--general .dn-contact-card__actions { display: none; }
     .dn-contact-visit { display: grid; gap: 18px; margin-top: 24px; }
-    .dn-contact-visit p { display: flex; align-items: flex-start; gap: 14px; margin: 0; color: #525a66; font-size: 16px; line-height: 1.5; }
+    .dn-contact-visit p { display: flex; align-items: flex-start; gap: 14px; margin: 0; color: #525a66; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
     .dn-contact-visit :global(svg) { flex-shrink: 0; color: var(--dn-red); }
     .dn-contact-visit > a { justify-self: start; gap: 10px; min-height: 52px; background: #eef0f2; color: #202329; }
     .dn-contact-visit > a:hover { background: #e3e6ea; }
@@ -192,9 +201,9 @@
 
   @media (max-width: 991px) {
     .dn-contact-preparation { display: block; margin-top: 24px; }
-    .dn-contact-preparation h2 { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4; }
+    .dn-contact-preparation h2 { margin: 0; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
     .dn-contact-preparation ul { display: grid; gap: 12px; margin: 14px 0 0; padding-left: 20px; list-style: disc; }
-    .dn-contact-preparation li { padding-left: 4px; color: #525a66; font-size: 15px; line-height: 1.5; }
+    .dn-contact-preparation li { padding-left: 4px; color: #525a66; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
     .dn-contact-preparation li::marker { color: var(--dn-red); }
   }
 

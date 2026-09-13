@@ -107,7 +107,7 @@ export const auxeroCalculatorFields: AuxeroCalculatorField[] = [
 export const formatEur = (value: number) =>
 	`${Math.round(value)
 		.toLocaleString('fr-FR')
-		.replace(/\u202f/g, ' ')} EUR`;
+		.replace(/\u202f/g, ' ')} €`;
 
 export const calculateAuxeroCalculatorTotals = (
 	values: Record<AuxeroCalculatorInputKey, number> = auxeroCalculatorInitial

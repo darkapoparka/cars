@@ -775,8 +775,8 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 	},
 	legalLinks: [
 		{ href: '/terms', label: 'Terms Of Services' },
-		{ href: '/terms', label: 'Privacy Policy' },
-		{ href: '/terms', label: 'Cookie Policy' }
+		{ href: '/privacy', label: 'Privacy Policy' },
+		{ href: '/cookies', label: 'Cookie Policy' }
 	],
 	logo: {
 		alt: daynightBrand.name,
@@ -824,8 +824,8 @@ export const homeFiveFooterDataForLocale = (locale: Locale): HomeFiveFooterData 
 		},
 		legalLinks: [
 			{ href: '/terms', label: 'Общи условия' },
-			{ href: '/terms', label: 'Поверителност' },
-			{ href: '/terms', label: 'Бисквитки' }
+			{ href: '/privacy', label: 'Поверителност' },
+			{ href: '/cookies', label: 'Бисквитки' }
 		],
 		quickLinks: [
 			{ href: '/about', label: 'За нас' },
@@ -1410,7 +1410,7 @@ const compareVehicleFrom = (vehicle: Vehicle): HomeFiveCompareVehicle => ({
 const formatKm = (value: number) => `${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} km`;
 
 const formatMonthly = (value: number, locale: Locale) =>
-	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? 'EUR/мес.' : 'EUR/mo'}`;
+	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`;
 
 const compactFuelLabel = (fuel: string, locale: Locale) => {
 	const normalizedFuel = fuel.toLowerCase();

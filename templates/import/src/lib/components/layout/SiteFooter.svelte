@@ -21,8 +21,8 @@
 		<div class="site-footer__brand">
 			<img src={daynightAssets.logoDark} alt="Day Night Auto" />
 			<p>
-				{daynightBrand.tagline}. Проверка на източник, съдействие при внос, продажба на автомобили
-				и огледи с уговорка.
+				{daynightBrand.tagline}. Проверка на източник, съдействие при внос, продажба на автомобили и
+				огледи с уговорка.
 			</p>
 		</div>
 		<div>
@@ -54,8 +54,8 @@
 			<span>©2026 {daynightBrand.name}. Всички права запазени.</span>
 			<div>
 				<a href={resolve('/terms')}>Общи условия</a>
-				<a href={resolve('/terms')}>Поверителност</a>
-				<a href={resolve('/terms')}>Бисквитки</a>
+				<a href={resolve('/privacy')}>Поверителност</a>
+				<a href={resolve('/cookies')}>Бисквитки</a>
 			</div>
 		</div>
 	</div>

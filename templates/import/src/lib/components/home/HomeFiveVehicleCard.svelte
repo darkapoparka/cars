@@ -109,7 +109,7 @@
 			<span class="daynight-card-price__amount">{vehicle.priceLabel.replace('EUR', '€')}</span>
 			<a
 				href={resolve('/financing')}
-				class="daynight-card-price__monthly"
+				class="daynight-card-price__monthly daynight-card-price__finance-link"
 				aria-label={`${copy.finance}: ${vehicle.monthlyLabel}`}
 				>{vehicle.monthlyLabel.replace('EUR', '€')}</a
 			>
@@ -184,7 +184,7 @@
 	}
 
 	.daynight-card-specs li span {
-		color: #1c1c1c;
+		color: var(--bc-ink);
 	}
 
 	.daynight-card-price {
@@ -224,7 +224,7 @@
 		border: 1px solid var(--bc-accent);
 		border-radius: var(--bc-radius-control);
 		background: var(--bc-accent);
-		color: #ffffff !important;
+		color: var(--bc-white) !important;
 		font-size: 18px !important;
 		font-weight: 600 !important;
 		line-height: 1.2;
@@ -252,14 +252,14 @@
 	.daynight-card-actions .view-details:focus-visible {
 		border-color: var(--bc-accent-hover) !important;
 		background: var(--bc-accent-hover) !important;
-		color: #ffffff !important;
+		color: var(--bc-white) !important;
 	}
 
 	@media (hover: hover) and (pointer: fine) {
 		.daynight-card-actions .view-details:hover {
 			border-color: var(--bc-accent-hover) !important;
 			background: var(--bc-accent-hover) !important;
-			color: #ffffff !important;
+			color: var(--bc-white) !important;
 		}
 	}
 
@@ -271,14 +271,14 @@
 	}
 
 	.daynight-card-soft-hover {
-		background-color: #fafafa;
+		background-color: var(--bc-surface-soft);
 		transition:
 			background-color 0.25s ease,
 			box-shadow 0.25s ease;
 	}
 
 	.daynight-card-soft-hover .content {
-		background-color: #fafafa;
+		background-color: var(--bc-surface-soft);
 		transition: background-color 0.25s ease;
 	}
 
@@ -286,7 +286,7 @@
 		.daynight-card-price__amount {
 			border-radius: 8px;
 			background: rgb(185 22 28 / 0.12);
-			color: #1c1c1c;
+			color: var(--bc-ink);
 			padding: 1px 8px;
 			transition:
 				background-color 0.2s ease,
@@ -325,13 +325,13 @@
 		}
 
 		.daynight-card-soft-hover .card-box__price {
-			color: #1c1c1c !important;
+			color: var(--bc-ink) !important;
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.daynight-card-soft-hover:hover,
 			.daynight-card-soft-hover:focus-within {
-				background-color: #ffffff;
+				background-color: var(--bc-white);
 				border-color: var(--bc-border-strong) !important;
 				box-shadow: inset 0 0 0 1px rgb(185 22 28 / 0.2) !important;
 				transform: none;
@@ -339,7 +339,7 @@
 
 			.daynight-card-soft-hover:hover .content,
 			.daynight-card-soft-hover:focus-within .content {
-				background-color: #ffffff;
+				background-color: var(--bc-white);
 			}
 
 			.daynight-card-soft-hover:hover .card-box__price,
@@ -348,7 +348,7 @@
 			.daynight-card-soft-hover:focus-within .card-box__title a,
 			.daynight-card-soft-hover:hover .bottom .category a,
 			.daynight-card-soft-hover:focus-within .bottom .category a {
-				color: #1c1c1c !important;
+				color: var(--bc-ink) !important;
 				text-decoration: none !important;
 			}
 
@@ -361,37 +361,37 @@
 			.daynight-card-soft-hover:hover .daynight-card-price__amount,
 			.daynight-card-soft-hover:focus-within .daynight-card-price__amount {
 				background-color: rgb(185 22 28 / 0.14);
-				color: #1c1c1c;
+				color: var(--bc-ink);
 			}
 		}
 	}
 
 	@media (min-width: 992px) {
 		.card-box-style-1 .image {
-			background: var(--bc-card-media, #f4f5f2);
+			background: var(--bc-card-media, var(--bc-surface-soft));
 		}
 
 		.card-box-style-1 .top .highlight {
 			border: 1px solid rgba(28, 28, 28, 0.1);
-			background: #ffffff !important;
+			background: var(--bc-white) !important;
 			box-shadow: 0 4px 12px rgba(28, 28, 28, 0.14);
-			color: var(--bc-card-ink, #1c1c1c) !important;
+			color: var(--bc-card-ink, var(--bc-ink)) !important;
 		}
 
 		.daynight-card-price__amount {
 			background: transparent;
-			color: var(--bc-card-ink, #1c1c1c);
+			color: var(--bc-card-ink, var(--bc-ink));
 			padding: 0;
 		}
 
 		.daynight-card-soft-hover {
-			background-color: var(--bc-card-bg, #f1f2f3);
+			background-color: var(--bc-card-bg, var(--bc-surface));
 			border-color: transparent;
 			box-shadow: none !important;
 		}
 
 		.daynight-card-soft-hover .content {
-			background-color: var(--bc-card-bg, #f1f2f3);
+			background-color: var(--bc-card-bg, var(--bc-surface));
 		}
 
 		.card-box-style-1 .bottom .category {
@@ -400,7 +400,7 @@
 		}
 
 		.daynight-card-soft-hover .card-box__price {
-			color: var(--bc-card-ink, #1c1c1c) !important;
+			color: var(--bc-card-ink, var(--bc-ink)) !important;
 		}
 
 		.daynight-card-soft-hover .daynight-card-price__finance-link:focus-visible {
@@ -411,7 +411,7 @@
 		@media (hover: hover) and (pointer: fine) {
 			.daynight-card-soft-hover:hover,
 			.daynight-card-soft-hover:focus-within {
-				background-color: var(--bc-card-hover, #f4f4f4);
+				background-color: var(--bc-card-hover, var(--bc-surface-hover));
 				border-color: transparent !important;
 				box-shadow: none !important;
 				transform: none;
@@ -419,20 +419,20 @@
 
 			.daynight-card-soft-hover:hover .content,
 			.daynight-card-soft-hover:focus-within .content {
-				background-color: var(--bc-card-hover, #f4f4f4);
+				background-color: var(--bc-card-hover, var(--bc-surface-hover));
 			}
 
 			.daynight-card-soft-hover:hover .card-box__price,
 			.daynight-card-soft-hover:focus-within .card-box__price,
 			.daynight-card-soft-hover:hover .card-box__title a,
 			.daynight-card-soft-hover:focus-within .card-box__title a {
-				color: var(--bc-card-ink, #1c1c1c) !important;
+				color: var(--bc-card-ink, var(--bc-ink)) !important;
 				text-decoration: none !important;
 			}
 
 			.daynight-card-soft-hover:hover .bottom .category a,
 			.daynight-card-soft-hover:focus-within .bottom .category a {
-				color: #ffffff !important;
+				color: var(--bc-white) !important;
 				text-decoration: none !important;
 			}
 
@@ -445,7 +445,7 @@
 			.daynight-card-soft-hover:hover .daynight-card-price__amount,
 			.daynight-card-soft-hover:focus-within .daynight-card-price__amount {
 				background-color: transparent;
-				color: var(--bc-card-ink, #1c1c1c);
+				color: var(--bc-card-ink, var(--bc-ink));
 			}
 
 			.daynight-card-soft-hover .daynight-card-price__finance-link:hover {
@@ -460,7 +460,7 @@
 			overflow: hidden;
 			border: 0;
 			border-radius: 10px;
-			background: var(--bc-surface);
+			background: var(--bc-card-bg);
 			box-shadow: none !important;
 		}
 
@@ -478,12 +478,12 @@
 		}
 
 		.daynight-card-soft-hover .content {
-			background: var(--bc-surface);
+			background: var(--bc-card-bg);
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.daynight-card-soft-hover:hover .content {
-				background: var(--bc-surface);
+				background: var(--bc-card-bg);
 			}
 		}
 
@@ -510,8 +510,8 @@
 			letter-spacing: -0.1px;
 			line-height: 24px;
 			border: 1px solid rgba(28, 28, 28, 0.08);
-			background: #ffffff !important;
-			color: var(--bc-card-ink, #1c1c1c) !important;
+			background: var(--bc-white) !important;
+			color: var(--bc-card-ink, var(--bc-ink)) !important;
 		}
 
 		.card-box-style-1 .top .heart {
@@ -535,11 +535,25 @@
 		}
 
 		.card-box-style-1 .card-box__title a {
-			display: inline-flex;
+			display: flex;
+			width: 100%;
+			min-width: 0;
+			max-width: 100%;
 			min-height: 44px;
 			align-items: center;
+			overflow: hidden;
 			margin-block: -9px;
 			padding-block: 9px;
+			white-space: nowrap;
+		}
+
+		.card-box-style-1 .daynight-card-title-full {
+			display: block;
+			min-width: 0;
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 
 		/* Auxero app.css underlines the title/brand link on tap (.active fake-hover
@@ -555,9 +569,9 @@
 			display: grid !important;
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 			order: 1;
-			gap: 5px 6px !important;
+			gap: 5px !important;
 			margin-top: 0;
-			margin-bottom: 12px !important;
+			margin-bottom: 9px !important;
 		}
 
 		.daynight-card-specs li {
@@ -567,12 +581,12 @@
 			justify-content: center;
 			box-sizing: border-box;
 			gap: 0;
-			padding: 5px 9px;
-			min-height: 44px;
-			font-size: 13px;
-			line-height: 18px;
-			/* Inner chips stay white so they remain visible against the standard soft card surface. */
-			background: #ffffff;
+			padding: 3px 7px;
+			min-height: 32px;
+			font-size: 12px;
+			line-height: 16px;
+			/* Inset specs use a soft fill within the white mobile card. */
+			background: var(--bc-surface-soft);
 			border-color: var(--bc-border);
 		}
 
@@ -652,7 +666,7 @@
 			border-radius: 6px;
 			line-height: 20px;
 			border: 0 !important;
-			background: #fff !important;
+			background: var(--bc-white) !important;
 			font-size: 14px;
 			flex: 0 1 auto;
 			overflow: hidden;

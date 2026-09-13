@@ -81,7 +81,9 @@ const run = async () => {
 				console.log(`FAIL ${name}.${vpName} — ${error.message.split('\n')[0]}`);
 				try {
 					await page.screenshot({ path: file, fullPage: false });
-				} catch {}
+				} catch {
+					// Best-effort failure screenshot only.
+				}
 			}
 		}
 		await context.close();

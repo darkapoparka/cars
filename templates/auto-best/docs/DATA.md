@@ -39,7 +39,7 @@ The types constrain shape, not the truth of business details. Keep display phone
 
 The output derives `year`, formatted `mileage` and `href` (`/listing-detail-v1/<id>`). Formatting uses `bg-BG`; the price formatter appends the euro symbol. Store numeric prices/mileage in the input rather than parsing them from displayed strings.
 
-The current local record schema also contains explicit `model` and `version` strings. The mapper defaults `verification` to `sample` but accepts a record-specific value. Model/version facets use those dedicated fields. For a verified record, supply the correct record data and an `evidenceUrl` rather than changing only a site-wide flag.
+In the committed standalone source, model choices are derived from the display title and the make; version matching also searches the title. The output mapper stamps records as `sample`. Switching this baseline to verified inventory requires an explicit record-level mapper change, not only setting a presentation flag. The local working refactor has explicit model/version fields; those are not part of the baseline schema documented here.
 
 Adding a vehicle affects inventory, featured stock, brand/body counts, filters, recommendations, contact context and the sitemap. The current fixture set contains eight records, but route resolution is based on the records rather than a fixed eight-page routing table. Shared source images do not establish that two sample records represent the same physical car.
 
@@ -74,7 +74,7 @@ const matches = filterListingVehicles(featuredVehicles, filters);
 const href = `/listing-grid?${listingParams(filters)}`;
 ```
 
-The current source also has `priceMinExclusive`, serialized as `price_min_exclusive=1`, for non-overlapping budget bands. `data/discovery.ts` owns the budget partition; `data/filter-fields.ts` provides `filtersFromDraft` and `invalidRange`. `config/discovery.ts` defines the input year policy: 1900 through the current year plus one.
+Make, body, fuel and transmission choices derive from inventory. The standalone baseline still declares year, price, mileage, version and equipment options in `listingFilterOptions`; review those arrays when adapting the inventory. Price bounds are inclusive in this baseline.
 
 The precise external query keys and examples are in [Routes](ROUTES.md). A new facet needs updates to its type, parse/serialize behavior, matching, controls, chips and tests—not only a new input.
 
@@ -84,7 +84,7 @@ The precise external query keys and examples are in [Routes](ROUTES.md). A new f
 
 `resolveImportUrl` accepts a trimmed HTTP(S) URL of at most 2048 characters without embedded credentials. It normalizes the URL but does not request its content. `journeys.ts` resolves known vehicle IDs, constructs contact links, and confines return links to the expected list.
 
-The current source extracts `finance.ts`: `FinanceSelection`, `financeTerms`, `calculateFinance`, `parseFinanceSelection` and `financeParams`. Deposit/term use `down_payment` and `term` in the URL, and the contact/detail loaders restore valid selections. Invalid amounts or unsupported terms produce no selection. `enquiry.ts` validates trimmed make/model and year; `ui/enquiry-validation.ts` connects errors to native form validity. `ui/enquiry-photos.ts` manages up to six local JPG/PNG/WebP previews, up to 10 MiB each, with object-URL cleanup.
+In the standalone baseline, the principal calculation lives in `VehicleFinanceCalculator.svelte`. Terms are 12, 24, 36, 48 or 60 months. The normalized deposit is clamped to the vehicle price; remaining principal is divided by the term and rounded. The contact link carries vehicle/topic but does not serialize the entered deposit or term in this baseline.
 
 ## Editorial
 

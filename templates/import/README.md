@@ -1,10 +1,13 @@
 # Import automotive template
 
+**Working branch: `main`.** Use one writer per checkout. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
+
 Canonical standalone master: **`darkapoparka/cars-template-import`**. This repository is a reusable dealership design, not a dealer-specific project and not evidence that any sample business data is current.
 
 **AI/agent entry point:** read `AGENTS.md`, then `TEMPLATE.md`, `docs/LEAD-BUILD.md`, and `docs/QA.md` before editing.
 
 ## Portfolio role
+
 - Template key: `import`
 - Role: Design 2 option in an Import trio
 - Design position: import/sourcing specialist for dealers that actively sell the import journey
@@ -12,9 +15,11 @@ Canonical standalone master: **`darkapoparka/cars-template-import`**. This repos
 - Import is Design 2 in the intentional Import trio; it does not add a fourth design.
 
 ## Rule of ownership
+
 Improve this repository only when the task is a **shared template improvement**. For a **lead build**, use canonical Cars clients/<slug>/ through its approved-release clone workflow; never personalize this master.
 
 ## Quick start
+
 `npm ci`
 
 Preview command: `npm run dev -- --host 127.0.0.1 --port 6464 --strictPort`

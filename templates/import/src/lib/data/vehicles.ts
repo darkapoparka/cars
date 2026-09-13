@@ -59,7 +59,7 @@ export const vehicles: Vehicle[] = daynightVehicles.map((vehicle, index) => ({
 	bodyType: vehicle.body,
 	condition: conditionForStatus(vehicle.status, vehicle.isClientVehicle),
 	price: vehicle.priceEur,
-	priceLabel: vehicle.price,
+	priceLabel: vehicle.price.replace(/\s*EUR\b/, ' €'),
 	priceBgn: vehicle.priceBgn,
 	monthly: Math.round(vehicle.priceEur / 72),
 	year: vehicle.year,

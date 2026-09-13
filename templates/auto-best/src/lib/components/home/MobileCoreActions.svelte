@@ -38,7 +38,7 @@
       cta: 'Виж условия',
       href: '/contact?topic=leasing',
       tone: 'dark',
-      image: '/assets/images/template/menu-leasing-v2.webp',
+      image: '/assets/images/template/menu-leasing-v2.png',
       width: 1610,
       height: 977
     }
@@ -98,24 +98,24 @@
       min-height: 164px;
       flex-direction: column;
       align-items: flex-start;
-      padding: 13px;
+      padding: 13px 12px 96px;
     }
 
     .dn-mobile-core-card strong {
       max-width: none;
-      font-size: 18px;
-      font-weight: 760;
-      line-height: 1.08;
-      letter-spacing: -.025em;
-      white-space: nowrap;
+      font-size: var(--dn-text-lead);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
+      letter-spacing: var(--dn-tracking-heading);
+      white-space: normal;
     }
 
     .dn-mobile-core-card small {
       max-width: 16ch;
       margin-top: 6px;
-      font-size: 11.5px;
-      font-weight: 500;
-      line-height: 1.28;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-medium);
+      line-height: var(--dn-leading-meta);
       opacity: .9;
     }
 
@@ -125,7 +125,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      height: 60%;
+      height: 96px;
       pointer-events: none;
     }
 

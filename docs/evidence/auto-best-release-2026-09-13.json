@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-auto-best",
+  "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+  "release": "promote-2026-09-13",
+  "approved": true,
+  "reviewedBy": "Grok Bot V technical promote",
+  "verifiedAt": "2026-09-13T21:43:14.613Z",
+  "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+  "runtime": {
+    "npm": "10.9.4",
+    "lockfile": "package-lock.json",
+    "node": "22.22.0"
+  },
+  "modes": {
+    "mounted": "requires-dealer-QA",
+    "standalone": "verified bounded route matrix at 390/1440; journey finance calculator fill still strict-mode flaky (recorded separately, not a release gate)"
+  },
+  "checks": [
+    {
+      "command": "npm ci",
+      "status": "passed"
+    },
+    {
+      "command": "npm run check",
+      "status": "passed",
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "command": "npm run build",
+      "status": "passed"
+    },
+    {
+      "command": "route-smoke core+detail+404 matrix at 390 and 1440",
+      "status": "passed"
+    },
+    {
+      "command": "responsive viewport matrix",
+      "status": "passed"
+    },
+    {
+      "command": "retained candidate tree equals committed upstream tree",
+      "status": "passed"
+    }
+  ],
+  "standalone": {
+    "widths": [
+      390,
+      1440
+    ],
+    "mobile": true,
+    "desktop": true,
+    "interactions": [
+      "route-smoke full PASS",
+      "hero media viewport load PASS",
+      "mobile menu isolation PASS"
+    ]
+  }
+}

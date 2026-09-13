@@ -220,9 +220,10 @@ export const extractAuxeroRuntimeHtml = (
 
 		return undefined;
 	};
-	document.addEventListener('submit', (event) => {
+	document.addEventListener('submit', async (event) => {
 		const form = event.target;
 		if (!(form instanceof HTMLFormElement)) return;
+		if (form.hasAttribute('data-managed-inquiry')) return;
 
 		const config = daynightEarlyFormConfig(form);
 		if (!config) return;
@@ -234,7 +235,7 @@ export const extractAuxeroRuntimeHtml = (
 				key,
 				typeof value === 'string' ? value : value.name
 			]));
-			fetch(config.url, {
+			const response = await fetch(config.url, {
 				body: JSON.stringify({
 					...payload,
 					routePath: window.location.pathname,
@@ -243,9 +244,15 @@ export const extractAuxeroRuntimeHtml = (
 				credentials: 'same-origin',
 				headers: { 'content-type': 'application/json' },
 				method: 'POST'
-			}).catch(() => undefined);
-		} catch (_error) {}
-		setDayNightEarlyFormStatus(form, config.status);
+			});
+			const result = await response.json();
+			if (!response.ok || !result.ok) throw new Error('Not saved');
+			setDayNightEarlyFormStatus(form, config.url === '/api/inquiries'
+				? 'Демонстрационната заявка е запазена. Не е изпратено съобщение до търговец.'
+				: config.status);
+		} catch (_error) {
+			setDayNightEarlyFormStatus(form, 'Заявката не е запазена. Провери данните и опитай отново.');
+		}
 	}, true);
 	let daynightRuntimeStarted = false;
 	const daynightRuntimeWaitsForBodyScripts = ${JSON.stringify(waitForBodyScripts)};

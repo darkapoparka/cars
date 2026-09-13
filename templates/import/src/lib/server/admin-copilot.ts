@@ -29,7 +29,7 @@ export const copilotChatRequestSchema = z
 	})
 	.passthrough();
 
-export type CopilotContext = ReturnType<typeof getAdminCmsOverview>;
+export type CopilotContext = Awaited<ReturnType<typeof getAdminCmsOverview>>;
 
 export const copilotQuickPrompts = [
 	{

@@ -53,8 +53,8 @@
 				<div class="container">
 					<h1 class="h2 mb-12 text-center">Калкулатор за внос</h1>
 					<p class="h7 line-height-28 text-secondary mb-40 text-center">
-						Изчисли ориентировъчна крайна цена за автомобил от Европа преди точна разбивка от
-						Day Night Auto.
+						Изчисли ориентировъчна крайна цена за автомобил от Европа преди точна разбивка от Day
+						Night Auto.
 					</p>
 					<CalculatorEstimator {calculator} />
 				</div>

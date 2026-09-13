@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-carwow",
+  "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+  "release": "promote-2026-09-13",
+  "approved": true,
+  "reviewedBy": "Grok Bot V technical promote",
+  "verifiedAt": "2026-09-13T21:43:14.613Z",
+  "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+  "runtime": {
+    "npm": "10.9.4",
+    "lockfile": "package-lock.json",
+    "node": "22.22.0"
+  },
+  "modes": {
+    "mounted": "requires-dealer-QA",
+    "standalone": "verified bounded HTTP route matrix on vite preview; home-runtime console warnings on Windows webgpu ignored as non-blocking"
+  },
+  "checks": [
+    {
+      "command": "npm ci",
+      "status": "passed"
+    },
+    {
+      "command": "npm run check",
+      "status": "passed",
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "command": "npm run build",
+      "status": "passed"
+    },
+    {
+      "command": "preview HTTP / /inventory /contact",
+      "status": "passed"
+    },
+    {
+      "command": "retained candidate tree equals committed upstream tree",
+      "status": "passed"
+    }
+  ],
+  "standalone": {
+    "widths": [
+      390,
+      1440
+    ],
+    "mobile": true,
+    "desktop": true,
+    "notes": "Committed SHA only; uncommitted carwow WIP not included"
+  }
+}

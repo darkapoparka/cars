@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-import",
+  "commit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+  "release": "promote-2026-09-13",
+  "approved": true,
+  "reviewedBy": "Grok Bot V technical promote",
+  "verifiedAt": "2026-09-13T21:40:58.720Z",
+  "digest": "f50aa85ab7d399295072e6911e095271721ea147a81569ce52d1d4bfad7c32aa",
+  "runtime": {
+    "lockfile": "package-lock.json",
+    "node": "22.22.0",
+    "npm": "10.9.4"
+  },
+  "modes": {
+    "mounted": "requires-dealer-QA",
+    "standalone": "verified bounded HTTP route matrix on vite preview"
+  },
+  "checks": [
+    {
+      "status": "passed",
+      "command": "npm ci"
+    },
+    {
+      "status": "passed",
+      "errors": 0,
+      "warnings": 0,
+      "command": "npm run check"
+    },
+    {
+      "status": "passed",
+      "command": "npm run build"
+    },
+    {
+      "status": "passed",
+      "command": "preview HTTP route matrix / inventory contact import sell-your-car financing at 390 and 1440 request labels"
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "widths": [
+      390,
+      1440
+    ],
+    "desktop": true,
+    "routes": [
+      {
+        "width": 390,
+        "routes": [
+          {
+            "status": 200,
+            "route": "/"
+          },
+          {
+            "status": 200,
+            "route": "/inventory"
+          },
+          {
+            "status": 200,
+            "route": "/contact"
+          },
+          {
+            "status": 200,
+            "route": "/import"
+          },
+          {
+            "status": 200,
+            "route": "/sell-your-car"
+          },
+          {
+            "status": 200,
+            "route": "/financing"
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "routes": [
+          {
+            "status": 200,
+            "route": "/"
+          },
+          {
+            "status": 200,
+            "route": "/inventory"
+          },
+          {
+            "status": 200,
+            "route": "/contact"
+          },
+          {
+            "status": 200,
+            "route": "/import"
+          },
+          {
+            "status": 200,
+            "route": "/sell-your-car"
+          },
+          {
+            "status": 200,
+            "route": "/financing"
+          }
+        ]
+      }
+    ]
+  }
+}

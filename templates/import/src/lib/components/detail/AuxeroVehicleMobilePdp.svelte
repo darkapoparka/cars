@@ -5,6 +5,7 @@
 	import type { AuxeroVehicleDetailData, AuxeroVehicleDetailDrawerTabId } from '$lib/auxero/detail';
 	import { ArrowLeft, Check, GitCompare, Heart, PhoneCall, Send, Share2, X } from '@lucide/svelte';
 	import { Drawer } from 'vaul-svelte';
+	import { templateInquiryCopy } from '$lib/data/template-settings';
 
 	let { detail }: { detail: AuxeroVehicleDetailData } = $props();
 
@@ -25,6 +26,7 @@
 	let inquiryOpen = $state(false);
 	let inquiryStatus = $state('');
 	let inquirySubmitting = $state(false);
+	let inquirySaved = $state(false);
 
 	const heroGalleryImages = $derived(Array.from(new Set(detail.galleryImages)));
 	const heroImage = $derived(heroGalleryImages[selectedImageIndex] ?? detail.image);
@@ -144,6 +146,7 @@
 		// Start each inquiry session clean so a previous success message doesn't linger
 		// under a fresh, empty form when the drawer is reopened.
 		inquiryStatus = '';
+		inquirySaved = false;
 		inquirySubmitting = false;
 		inquiryOpen = true;
 	};
@@ -154,6 +157,9 @@
 
 	const submitInquiry = async (event: SubmitEvent) => {
 		event.preventDefault();
+		if (inquirySubmitting) return;
+		inquirySaved = false;
+		inquiryStatus = '';
 
 		const form = event.currentTarget as HTMLFormElement;
 		const payload = Object.fromEntries(new FormData(form).entries());
@@ -161,7 +167,7 @@
 		inquirySubmitting = true;
 
 		try {
-			await fetch('/api/inquiries', {
+			const response = await fetch(resolve('/api/inquiries'), {
 				body: JSON.stringify({
 					...payload,
 					source: 'vehicle-detail-mobile',
@@ -170,13 +176,16 @@
 				headers: { 'content-type': 'application/json' },
 				method: 'POST'
 			});
+			const result = await response.json();
+			if (!response.ok || !result.ok || !result.data?.inquiry?.id) throw new Error('Not saved');
+			inquirySaved = true;
+			inquiryStatus = templateInquiryCopy.success;
+			form.reset();
 		} catch {
-			// The prototype still confirms local capture if the API is unavailable.
+			inquiryStatus = 'Заявката не е запазена. Провери данните и опитай отново.';
+		} finally {
+			inquirySubmitting = false;
 		}
-
-		inquirySubmitting = false;
-		inquiryStatus = detail.copy.inquirySuccess;
-		form.reset();
 	};
 
 	const openImageViewer = (index: number) => {
@@ -476,7 +485,7 @@
 			</div>
 
 			<Drawer.Description class="daynight-mobile-pdp__inquiry-description">
-				<span class="daynight-mobile-pdp__inquiry-intro">{detail.copy.inquiryIntro}</span>
+				<span class="daynight-mobile-pdp__inquiry-intro">{templateInquiryCopy.notice}</span>
 			</Drawer.Description>
 
 			<form class="daynight-mobile-pdp__inquiry-form" onsubmit={submitInquiry} data-vaul-no-drag>
@@ -511,7 +520,7 @@
 				</button>
 
 				<p class="daynight-mobile-pdp__inquiry-status" aria-live="polite">
-					{#if inquiryStatus}
+					{#if inquirySaved}
 						<Check size={16} strokeWidth={2.4} aria-hidden="true" />
 					{/if}
 					{inquiryStatus}
@@ -773,9 +782,9 @@
 			min-width: 0;
 			max-width: 100%;
 			overflow: hidden;
-			font-size: 12px;
-			font-weight: 800;
-			line-height: 15px;
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-control);
+			line-height: var(--bc-leading-control);
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
@@ -873,17 +882,17 @@
 		.daynight-mobile-pdp__drawer-heading p {
 			margin-bottom: 3px;
 			color: var(--bc-accent);
-			font-size: 16px;
-			font-weight: 800;
-			line-height: 20px;
+			font-size: var(--bc-mobile-card-title);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-card-title-leading);
 		}
 
 		.daynight-mobile-pdp__drawer-title {
 			display: block;
 			color: #1c1c1c;
-			font-size: 20px;
-			font-weight: 800;
-			line-height: 24px;
+			font-size: var(--bc-mobile-section-title);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-section-title-leading);
 			overflow-wrap: anywhere;
 		}
 
@@ -896,9 +905,9 @@
 			background: var(--bc-surface);
 			color: #1c1c1c;
 			padding: 0 10px;
-			font-size: 12px;
-			font-weight: 800;
-			line-height: 15px;
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-meta-leading);
 			white-space: nowrap;
 		}
 
@@ -936,9 +945,9 @@
 			color: #1c1c1c;
 			cursor: pointer;
 			padding: 0 4px 8px;
-			font-size: 16px;
-			font-weight: 800;
-			line-height: 18px;
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-control);
+			line-height: var(--bc-leading-control);
 			white-space: nowrap;
 		}
 
@@ -1001,17 +1010,18 @@
 		.daynight-mobile-pdp__eyebrow {
 			margin: 0;
 			color: #728093;
-			font-size: 12px;
-			font-weight: 800;
-			line-height: 16px;
+			font-size: var(--bc-mobile-label);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-label-leading);
 			text-transform: uppercase;
 		}
 
 		.daynight-mobile-pdp__body-copy {
 			margin: 0;
 			color: #5f6871;
-			font-size: 15px;
-			line-height: 24px;
+			font-size: var(--bc-mobile-body);
+			line-height: var(--bc-mobile-body-leading);
+			font-weight: var(--bc-weight-body);
 		}
 
 		.daynight-mobile-pdp__finance {
@@ -1036,23 +1046,23 @@
 
 		.daynight-mobile-pdp__finance span {
 			color: #728093;
-			font-size: 12px;
-			font-weight: 800;
-			line-height: 16px;
+			font-size: var(--bc-mobile-label);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-label-leading);
 		}
 
 		.daynight-mobile-pdp__finance strong {
 			margin: 3px 0 5px;
-			font-size: 18px;
-			font-weight: 800;
-			line-height: 22px;
+			font-size: var(--bc-mobile-card-title);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-card-title-leading);
 		}
 
 		.daynight-mobile-pdp__finance small {
 			color: #5f6871;
-			font-size: 12px;
-			font-weight: 700;
-			line-height: 17px;
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-meta-leading);
 		}
 
 		.daynight-mobile-pdp__spec-list,
@@ -1079,9 +1089,9 @@
 			align-items: center;
 			gap: 8px;
 			color: #68727a;
-			font-size: 14px;
-			font-weight: 800;
-			line-height: 18px;
+			font-size: var(--bc-mobile-body);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-body-leading);
 		}
 
 		.daynight-mobile-pdp__spec-list img {
@@ -1094,17 +1104,17 @@
 			min-width: 0;
 			overflow-wrap: anywhere;
 			text-align: right;
-			font-size: 14px;
-			font-weight: 800;
-			line-height: 18px;
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-leading-control);
 		}
 
 		.daynight-mobile-pdp__feature-groups h2 {
 			margin: 0 0 9px;
 			color: #1c1c1c;
-			font-size: 15px;
-			font-weight: 800;
-			line-height: 19px;
+			font-size: var(--bc-mobile-card-title);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-card-title-leading);
 		}
 
 		.daynight-mobile-pdp__feature-groups li {
@@ -1112,9 +1122,9 @@
 			align-items: flex-start;
 			gap: 8px;
 			color: #4c565f;
-			font-size: 14px;
-			font-weight: 750;
-			line-height: 20px;
+			font-size: var(--bc-mobile-body);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-body-leading);
 		}
 
 		.daynight-mobile-pdp__feature-groups li :global(svg) {
@@ -1139,9 +1149,9 @@
 			gap: 6px;
 			border: 0;
 			border-radius: var(--bc-radius-control);
-			font-size: 14px;
-			font-weight: 800;
-			line-height: 18px;
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-leading-control);
 			text-align: center;
 			text-decoration: none;
 			cursor: pointer;
@@ -1280,9 +1290,9 @@
 			margin: 0 0 2px;
 			overflow: hidden;
 			color: #728093;
-			font-size: 12px;
-			font-weight: 800;
-			line-height: 16px;
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-meta-leading);
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
@@ -1295,9 +1305,9 @@
 		.daynight-mobile-pdp__inquiry-title {
 			display: block;
 			color: #1c1c1c;
-			font-size: 19px;
-			font-weight: 800;
-			line-height: 23px;
+			font-size: var(--bc-mobile-section-title);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-section-title-leading);
 		}
 
 		.daynight-mobile-pdp__inquiry-close {
@@ -1319,9 +1329,9 @@
 			display: block;
 			margin: -2px 0 2px;
 			color: #5f6871;
-			font-size: 14px;
-			font-weight: 600;
-			line-height: 20px;
+			font-size: var(--bc-mobile-body);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-body-leading);
 		}
 
 		.daynight-mobile-pdp__inquiry-form {
@@ -1336,9 +1346,9 @@
 
 		.daynight-mobile-pdp__inquiry-form label span {
 			color: #1c1c1c;
-			font-size: 12px;
-			font-weight: 800;
-			line-height: 16px;
+			font-size: var(--bc-mobile-label);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-label-leading);
 		}
 
 		.daynight-mobile-pdp__inquiry-form input,
@@ -1352,9 +1362,9 @@
 			padding: 12px 13px;
 			font: inherit;
 			/* >=16px stops iOS Safari from auto-zooming on focus inside the drawer. */
-			font-size: 16px;
-			font-weight: 600;
-			line-height: 20px;
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-control);
+			line-height: var(--bc-leading-control);
 		}
 
 		.daynight-mobile-pdp__inquiry-form textarea {
@@ -1381,9 +1391,9 @@
 			background: var(--bc-accent);
 			color: #ffffff;
 			cursor: pointer;
-			font-size: 15px;
-			font-weight: 800;
-			line-height: 19px;
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-leading-control);
 			transition: background-color 0.18s ease;
 		}
 
@@ -1411,9 +1421,9 @@
 			min-height: 18px;
 			margin: 0;
 			color: #4c5a14;
-			font-size: 13px;
-			font-weight: 800;
-			line-height: 18px;
+			font-size: var(--bc-mobile-body);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-body-leading);
 		}
 
 		.daynight-mobile-pdp__inquiry-status :global(svg) {
@@ -1430,9 +1440,9 @@
 			border-radius: 10px;
 			background: #ffffff;
 			color: #1c1c1c;
-			font-size: 15px;
-			font-weight: 800;
-			line-height: 19px;
+			font-size: var(--bc-text-control);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-leading-control);
 			text-decoration: none;
 		}
 
@@ -1484,9 +1494,9 @@
 			background: rgba(255, 255, 255, 0.13);
 			color: #ffffff;
 			padding: 10px 13px;
-			font-size: 13px;
-			font-weight: 800;
-			line-height: 16px;
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-mobile-meta-leading);
 		}
 
 		.daynight-mobile-pdp__viewer-stage {
@@ -1558,7 +1568,9 @@
 		}
 
 		.daynight-mobile-pdp__tab {
-			font-size: 14px;
+			font-size: var(--bc-text-control);
+			line-height: var(--bc-leading-control);
+			font-weight: var(--bc-weight-control);
 		}
 	}
 </style>

@@ -191,7 +191,8 @@ export const messages: Record<Locale, PublicMessages> = {
 		},
 		home: {
 			actionBand: {
-				buyBody: 'Discuss import, documents, viewing and next steps with a Day Night Auto consultant.',
+				buyBody:
+					'Discuss import, documents, viewing and next steps with a Day Night Auto consultant.',
 				buyCta: 'Book time',
 				buyTitle: 'Book A Consultation',
 				importBody: 'Selection, inspection, documents and delivery from Europe.',
@@ -442,7 +443,8 @@ export const messages: Record<Locale, PublicMessages> = {
 			finance: 'Финансиране',
 			financeIntro:
 				'Ориентировъчна вноска преди окончателни данъци, регистрация и транспортни разходи.',
-			financeTerms: 'Ориентировъчно за 72 месеца. Финалните условия се потвърждават от Day Night Auto.',
+			financeTerms:
+				'Ориентировъчно за 72 месеца. Финалните условия се потвърждават от Day Night Auto.',
 			formConsent:
 				'Да, искам да получавам информация за цената на този автомобил и полезна информация за покупката.',
 			formTerms: 'С използването на тази услуга приемате нашето',

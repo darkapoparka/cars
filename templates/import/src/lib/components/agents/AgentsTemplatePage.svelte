@@ -91,6 +91,11 @@
 		color: #1c1c1c !important;
 	}
 
+	:global(.daynight-agents-page .daynight-agent-grid) {
+		max-width: 1080px;
+		margin-inline: auto;
+	}
+
 	:global(.daynight-dashboard-agents .daynight-agent-grid) {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}

@@ -8,6 +8,7 @@ export type BrandConfig = {
   phoneHref: `tel:${string}`;
   appointment: string;
   logo: `/${string}`;
+  logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}`;
   instagramUrl: `https://${string}`;
   facebookUrl: `https://${string}`;
@@ -30,5 +31,6 @@ export const brand = {
   addressLine,
   address: `${addressLine}, ${city}`,
   appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/template/auto-best-logo.svg'
+  logo: '/assets/images/template/auto-best-logo.svg',
+  logoOnDark: '/assets/images/template/auto-best-logo-light.svg'
 } as const satisfies BrandConfig;

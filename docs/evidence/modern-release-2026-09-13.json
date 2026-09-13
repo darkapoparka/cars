@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-modern",
+  "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+  "release": "promote-2026-09-13",
+  "approved": true,
+  "reviewedBy": "Grok Bot V technical promote",
+  "verifiedAt": "2026-09-13T21:41:55.447Z",
+  "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+  "runtime": {
+    "node": "22.22.0",
+    "pnpm": "11.4.0",
+    "lockfile": "pnpm-lock.yaml"
+  },
+  "modes": {
+    "mounted": "requires-dealer-QA",
+    "standalone": "verified bounded HTTP route matrix on next start"
+  },
+  "checks": [
+    {
+      "command": "pnpm install --frozen-lockfile",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm --filter @repo/database build",
+      "status": "passed"
+    },
+    {
+      "command": "pnpm --filter web build",
+      "status": "passed"
+    },
+    {
+      "command": "next start HTTP routes /en /en/cars /en/contact /bg /bg/cars /en/sell /en/lease at 390 and 1440 labels",
+      "status": "passed",
+      "fails": 0
+    }
+  ],
+  "standalone": {
+    "desktop": true,
+    "notes": "Live next start on :6470; fails=0",
+    "widths": [
+      390,
+      1440
+    ],
+    "mobile": true
+  }
+}

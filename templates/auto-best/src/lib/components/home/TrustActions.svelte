@@ -136,10 +136,10 @@
   .dn-trust-card { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 234px; padding: 28px; overflow: hidden; border-radius: 16px; background: #101114; color: #fff; }
   .dn-trust-card--red { background: #b80024; }
   .dn-trust-card__content { position: relative; display: flex; flex: 1; flex-direction: column; width: 52%; }
-  .dn-trust-card h3 { margin: 0 0 12px; color: inherit; font-size: 24px; font-weight: 600; line-height: 1.25; }
+  .dn-trust-card h3 { margin: 0 0 12px; color: inherit; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
   .dn-trust-card h3 a { color: inherit; }
   .dn-trust-card h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .dn-trust-card p { margin: 0 0 20px; color: #e3e4e7; font-size: 16px; line-height: 1.5; }
+  .dn-trust-card p { margin: 0 0 20px; color: #e3e4e7; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
   .dn-trust-card__description-line { display: block; }
   .dn-trust-card__vehicle { position: absolute; right: -32px; bottom: 4px; width: min(340px, calc(48% + 20px)); height: 226px; pointer-events: none; }
   .dn-trust-card__vehicle :global(img) { object-position: right center; }
@@ -187,31 +187,31 @@
   .dn-service-card { display: flex; flex-direction: column; min-width: 0; min-height: 272px; padding: 24px; border-radius: 16px; background: #fff; }
   .dn-service-card .dn-trust-card__icon { display: block; width: 60px; height: 60px; margin-bottom: 20px; color: var(--dn-red); }
   .dn-service-card .dn-trust-card__content { width: 100%; }
-  .dn-service-card h3 { margin: 0 0 12px; color: #24272c; font-size: 20px; line-height: 1.25; }
+  .dn-service-card h3 { margin: 0 0 12px; color: #24272c; font-size: var(--dn-text-card); line-height: var(--dn-leading-heading); }
   .dn-service-card h3 a { color: inherit; }
-  .dn-service-card p { margin: 0 0 24px; color: #696665; font-size: 16px; line-height: 1.5; }
+  .dn-service-card p { margin: 0 0 24px; color: #696665; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
   .dn-service-card .dn-trust-card__action { width: 100%; padding-inline: 10px; border: 1px solid var(--dn-red); color: var(--dn-red); font: var(--dn-cta-font); }
   .dn-service-card .dn-trust-card__action:hover { background: var(--dn-red); color: #fff; }
   .dn-service-card a:focus-visible { outline: 2px solid var(--dn-red); outline-offset: 3px; }
   @media (min-width: 992px) and (max-width: 1199px) {
-    .dn-trust-card h3 { font-size: 20px; }
-    .dn-trust-card p { font-size: 15px; }
+    .dn-trust-card h3 { font-size: var(--dn-text-card); }
+    .dn-trust-card p { font-size: var(--dn-text-body); }
     .dn-home-services .dn-trust-actions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 991px) {
     .dn-home-services { padding: 24px 0 32px; background: var(--dn-mobile-canvas); }
     .dn-home-services .dn-trust-actions__panel { padding: 0; background: transparent; }
     .dn-services-heading { display: block; margin-bottom: 16px; }
-    .dn-services-heading h2 { font-size: 22px; }
+    .dn-services-heading h2 { font-size: var(--dn-text-subheading); }
     
-    .dn-services-heading > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+    .dn-services-heading > a { display: inline-flex; align-items: center; min-height: 44px; font-size: var(--dn-text-meta); }
     .dn-home-services .dn-trust-actions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .dn-service-card { min-height: 154px; padding: 12px; border-radius: 14px; }
     .dn-service-card .dn-trust-card__icon { width: 38px; height: 38px; margin-bottom: 10px; }
     .dn-service-card .dn-trust-card__icon :global(svg) { width: 38px; height: 38px; }
-    .dn-service-card h3 { font-size: 14px; white-space: nowrap; }
+    .dn-service-card h3 { font-size: var(--dn-text-meta); white-space: nowrap; }
     .dn-service-card p { display: none; }
-    .dn-service-card .dn-trust-card__action { padding: 0; border: 0; color: #4f5661; font-size: 13px; }
+    .dn-service-card .dn-trust-card__action { padding: 0; border: 0; color: #4f5661; font-size: var(--dn-control-size); }
     .dn-service-card .dn-trust-card__action:hover { background: transparent; color: var(--dn-red); }
     .dn-trust-actions { padding: 16px 0 24px; background: var(--dn-mobile-canvas); }
     .dn-trust-actions__grid { gap: 10px; }
@@ -225,8 +225,8 @@
     .dn-trust-card .dn-trust-card__icon :global(svg) { width: 32px; height: 32px; }
     .dn-trust-card__content { width: 100%; }
     .dn-trust-card .dn-trust-card__content { position: static; }
-    .dn-trust-card h3 { margin-bottom: 8px; font-size: 16px; font-weight: 650; text-wrap: balance; }
-    .dn-trust-card .dn-trust-card__action { min-height: 20px; justify-content: center; align-self: center; gap: 6px; padding: 0; border-radius: 0; background: transparent; color: var(--dn-muted); font-size: 14px; font-weight: 500; }
+    .dn-trust-card h3 { margin-bottom: 8px; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); text-wrap: balance; }
+    .dn-trust-card .dn-trust-card__action { min-height: 20px; justify-content: center; align-self: center; gap: 6px; padding: 0; border-radius: 0; background: transparent; color: var(--dn-muted); font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
     .dn-trust-card .dn-trust-card__action::after { position: absolute; inset: 0; border-radius: inherit; content: ''; }
     .dn-trust-card .dn-trust-card__action :global(svg) { flex-shrink: 0; }
     .dn-trust-card:hover { background: var(--dn-surface); }
@@ -241,7 +241,7 @@
     .dn-service-card .dn-trust-card__icon { display: none; }
     .dn-service-card__art { display: flex; align-items: center; justify-content: center; height: 88px; width: 100%; margin-bottom: 4px; pointer-events: none; }
     .dn-service-card__art :global(.dn-artwork-region) { width: min(100%, var(--service-art-width)); }
-    .dn-service-card h3 { margin: 0; font-size: 18px; line-height: 1.22; white-space: normal; }
+    .dn-service-card h3 { margin: 0; font-size: var(--dn-text-lead); line-height: var(--dn-leading-heading); white-space: normal; }
     .dn-service-card .dn-trust-card__action { display: none; }
     .dn-service-card .dn-trust-card__content { position: static; flex: none; }
     .dn-service-card h3 a::after { position: absolute; inset: 0; border-radius: inherit; content: ''; }
@@ -253,8 +253,8 @@
     .dn-trust-card--ownership.dn-trust-card--red { background: #b80024; }
     .dn-trust-card--ownership .dn-trust-card__icon { display: none; }
     .dn-trust-card--ownership .dn-trust-card__content { width: 58%; }
-    .dn-trust-card--ownership h3 { font-size: 20px; text-wrap: initial; line-height: 1.2; }
-    .dn-trust-card--ownership .dn-trust-card__action { align-self: flex-start; min-height: 44px; margin-top: auto; color: #fff; font-size: 15px; font-weight: 600; }
+    .dn-trust-card--ownership h3 { font-size: var(--dn-text-card); text-wrap: initial; line-height: var(--dn-leading-heading); }
+    .dn-trust-card--ownership .dn-trust-card__action { align-self: flex-start; min-height: 44px; margin-top: auto; color: #fff; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
     .dn-trust-card--ownership .dn-trust-card__action :global(svg) { display: none; }
     .dn-trust-card--ownership .dn-trust-card__action:hover { color: #fff; }
     .dn-trust-card--ownership .dn-trust-card__ownership-art { display: flex; position: absolute; right: -18px; top: 0; bottom: 0; width: 56%; align-items: center; pointer-events: none; mask-image: linear-gradient(to right, transparent, #000 32%); }
@@ -276,9 +276,9 @@
       align-items: center;
       justify-content: center;
       margin: 0;
-      font-size: 18px;
-      line-height: 1.2;
-      font-weight: 700;
+      font-size: var(--dn-text-lead);
+      line-height: var(--dn-leading-heading);
+      font-weight: var(--dn-weight-semibold);
       text-align: center;
     }
     .dn-trust-card--illustrated .dn-trust-card__mobile-art {

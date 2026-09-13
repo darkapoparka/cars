@@ -41,7 +41,7 @@ Business configuration in `src/lib/config` is imported by client-rendered code a
 
 ## Response configuration
 
-Legacy redirects and shared response headers are implemented in `src/hooks.server.ts`. The local refactored source configures document CSP in `svelte.config.js`, allowing SvelteKit to supply its generated script nonce/hash; the hook adds the other response headers without replacing that CSP. Development and production connection directives differ. For framework CSP settings, see [SvelteKit configuration](https://svelte.dev/docs/kit/configuration).
+Legacy redirects and shared response headers are implemented in `src/hooks.server.ts`. The standalone baseline currently builds its Content-Security-Policy in that hook. Its inline-script and WebSocket allowances are part of that actual implementation; this documentation does not describe it as the newer nonce/hash configuration. For framework CSP settings, see [SvelteKit configuration](https://svelte.dev/docs/kit/configuration).
 
 ## Verify the deployed application
 

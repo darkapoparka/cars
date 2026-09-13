@@ -8,7 +8,7 @@
 
 	let { data, form } = $props();
 	const emailValue = $derived(
-		form && 'email' in form ? String(form.email) : 'admin@daynight.local'
+		form && 'email' in form ? String(form.email) : data.databaseMode ? '' : 'admin@daynight.local'
 	);
 </script>
 
@@ -82,7 +82,7 @@
 								name="password"
 								type="password"
 								autocomplete="current-password"
-								placeholder="At least 8 characters"
+								placeholder={data.databaseMode ? 'Your admin password' : 'At least 8 characters'}
 								required
 							/>
 						</div>
@@ -94,7 +94,11 @@
 					</form>
 				</Card.Content>
 				<Card.Footer class="text-muted-foreground text-sm">
-					Prototype account: admin@daynight.local with any intentional 8+ character password.
+					{#if data.databaseMode}
+						Sign in with the administrator credentials configured for this template.
+					{:else}
+						Prototype account: admin@daynight.local with any intentional 8+ character password.
+					{/if}
 				</Card.Footer>
 			</Card.Root>
 		</div>

@@ -225,7 +225,7 @@
 
 	.home2-search__input button {
 		align-items: center;
-		background: #E3062F;
+		background: #e3062f;
 		border: 0;
 		border-radius: 50%;
 		color: #101514;

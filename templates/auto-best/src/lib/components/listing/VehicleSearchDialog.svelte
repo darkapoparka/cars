@@ -1,7 +1,5 @@
 <script lang="ts">
-  import { cleanFilterFormData as cleanFormData } from '$lib/ui/forms';
-  import { filtersFromDraft, invalidRange } from '$data/filter-fields';
-  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
+  import { preserveScrollOffset } from '$lib/ui/overlay';
   import { onDestroy } from 'svelte';
   let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
   onDestroy(() => releaseOffset?.(false));
@@ -26,14 +24,13 @@
   let draftYearMin = $state('');
   let draftYearMax = $state('');
   let draftPriceMin = $state('');
-  let exclusiveMinimum = $state<string | null>(null);
   let draftPriceMax = $state('');
   let draftMileageMax = $state('');
   let draftModelOptions = $derived(listingModelsForMake(draftMake));
-  let hasInvalidPriceRange = $derived(invalidRange(draftPriceMin, draftPriceMax));
-  let hasInvalidYearRange = $derived(invalidRange(draftYearMin, draftYearMax));
+  let hasInvalidPriceRange = $derived(Boolean(draftPriceMin && draftPriceMax && Number(draftPriceMin) > Number(draftPriceMax)));
+  let hasInvalidYearRange = $derived(Boolean(draftYearMin && draftYearMax && Number(draftYearMin) > Number(draftYearMax)));
   let hasInvalidRange = $derived(hasInvalidPriceRange || hasInvalidYearRange);
-  let draftFilters = $derived(filtersFromDraft({
+  let draftFilters = $derived<ListingFilters>({
     q: draftQuery,
     make: draftMake,
     model: draftModel,
@@ -43,14 +40,13 @@
     transmission: draftTransmission,
     version: draftVersion,
     equipment: draftEquipment,
-    yearMin: draftYearMin,
-    yearMax: draftYearMax,
-    priceMin: draftPriceMin,
-    priceMax: draftPriceMax,
-    mileageMax: draftMileageMax,
-    priceMinExclusive: exclusiveMinimum !== null && exclusiveMinimum === draftPriceMin,
+    yearMin: draftYearMin ? Number(draftYearMin) : null,
+    yearMax: draftYearMax ? Number(draftYearMax) : null,
+    priceMin: draftPriceMin ? Number(draftPriceMin) : null,
+    priceMax: draftPriceMax ? Number(draftPriceMax) : null,
+    mileageMax: draftMileageMax ? Number(draftMileageMax) : null,
     sort: filters.sort
-  }));
+  });
   let matchingVehicles = $derived(filterListingVehicles(listingVehicles, draftFilters));
   let hasLiveFilters = $derived(Boolean(
     draftQuery || draftMake || draftModel || draftBody || draftCondition || draftFuel || draftTransmission ||
@@ -88,7 +84,6 @@
     draftYearMin = current.yearMin !== null ? String(current.yearMin) : '';
     draftYearMax = current.yearMax !== null ? String(current.yearMax) : '';
     draftPriceMin = current.priceMin !== null ? String(current.priceMin) : '';
-    exclusiveMinimum = current.priceMinExclusive ? draftPriceMin : null;
     draftPriceMax = current.priceMax !== null ? String(current.priceMax) : '';
     draftMileageMax = current.mileageMax !== null ? String(current.mileageMax) : '';
   };
@@ -121,7 +116,6 @@
     draftYearMin = '';
     draftYearMax = '';
     draftPriceMin = '';
-    exclusiveMinimum = null;
     draftPriceMax = '';
     draftMileageMax = '';
   };
@@ -173,7 +167,12 @@
     if (returnFocus?.isConnected) returnFocus.focus();
   };
 
-
+  const cleanFormData = (event: FormDataEvent) => {
+    for (const key of new Set(event.formData.keys())) {
+      const values = event.formData.getAll(key);
+      if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
+    }
+  };
 </script>
 
 {@render children(openFilters, filtersOpen)}
@@ -188,7 +187,6 @@
   onclick={handleDialogClick}
   oncancel={handleCancel}
   onclose={restorePage}
-  onkeydown={trapDialogTab}
 >
   <form
     class="dn-listing-filter__dialog-panel"
@@ -355,7 +353,6 @@
         <span>{matchingVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${matchingVehicles.length} автомобила`}</span>
         <Icon name="search" size={18} />
       </button>
-      {#if draftFilters.priceMinExclusive}<input type="hidden" name="price_min_exclusive" value="1" />{/if}
       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
     </footer>
   </form>
@@ -378,7 +375,7 @@
     outline: 0;
     background: #f5f6f7;
     color: #202329;
-    font: 500 16px/24px var(--dn-font);
+    font: var(--dn-body-font);
   }
   input::placeholder {
     color: #737984;
@@ -437,10 +434,10 @@
 
   .dn-listing-filter__dialog-header h2 {
     margin: 0;
-    font-size: 24px;
-    font-weight: 650;
-    line-height: 1.2;
-    letter-spacing: -0.025em;
+    font-size: var(--dn-text-subheading);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-listing-filter__close {
@@ -467,7 +464,7 @@
   .dn-listing-filter__clear {
     color: #555c66;
     font-size: var(--dn-text-body);
-    font-weight: 650;
+    font-weight: var(--dn-weight-semibold);
   }
 
   .dn-listing-filter__clear:hover,
@@ -513,7 +510,7 @@
     outline: 0;
     background: transparent;
     box-shadow: none;
-    font-size: 16px;
+    font-size: var(--dn-control-size);
   }
 
   .dn-listing-filter__inline-submit {
@@ -528,7 +525,7 @@
     border-radius: var(--dn-radius-button);
     background: #202329;
     color: #fff;
-    font: 650 14px/20px var(--dn-font);
+    font: var(--dn-control-font);
     cursor: pointer;
     transition: background-color 150ms ease-out;
   }
@@ -569,9 +566,9 @@
       display: block;
       margin: 0 0 6px 2px;
       color: var(--dn-muted);
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 18px;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-meta);
     }
 
 
@@ -581,7 +578,7 @@
     height: 58px;
     padding-inline: 16px;
     border-radius: var(--dn-radius-control);
-    font-size: 16px;
+    font-size: var(--dn-control-size);
   }
 
   @media (min-width: 768px) {
@@ -599,9 +596,9 @@
   .dn-listing-filter__filter-group h3 {
     margin: 0;
     color: #202329;
-    font-size: 18px;
-    font-weight: 650;
-    line-height: 1.3;
+    font-size: var(--dn-text-lead);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-control);
   }
 
   .dn-listing-filter__equipment-grid {
@@ -620,9 +617,9 @@
     border-radius: var(--dn-radius-control);
     background: #fff;
     color: #353a42;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.25;
+    font-size: var(--dn-text-meta);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
     cursor: pointer;
     transition: background-color 150ms ease-out, color 150ms ease-out;
   }
@@ -663,9 +660,9 @@
     flex: 1 1 100%;
     margin: 0;
     color: #a20d1a;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.4;
+    font-size: var(--dn-text-meta);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-listing-filter__dialog-submit {
@@ -680,8 +677,8 @@
     border-radius: var(--dn-radius-button);
     background: var(--dn-red);
     color: #fff;
-    font: 650 18px/24px var(--dn-font);
     cursor: pointer;
+    font: var(--dn-cta-font);
   }
 
   .dn-listing-filter__dialog-submit:hover,
@@ -710,8 +707,8 @@
     :global(html:has(.dn-listing-filter__dialog[open])) { overflow: hidden; }
     .dn-listing-filter__inline-submit, .dn-listing-filter__filter-groups { display: none; }
     .dn-mobile-filter-fields { display: grid; gap: 8px; }
-    .dn-mobile-filter-fields button { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 52px; padding: 12px 16px; border: 0; border-radius: 14px; background: #f1f2f4; color: #24272c; text-align: left; font: 400 14px/1.4 var(--dn-font); cursor: pointer; }
-    .dn-mobile-filter-fields strong { flex: 0 0 auto; font-weight: 650; }
+    .dn-mobile-filter-fields button { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 52px; padding: 12px 16px; border: 0; border-radius: 14px; background: #f1f2f4; color: #24272c; text-align: left; font: var(--dn-control-font); cursor: pointer; }
+    .dn-mobile-filter-fields strong { flex: 0 0 auto; font-weight: var(--dn-weight-semibold); }
     .dn-mobile-filter-fields span { flex: 1; min-width: 0; text-align: right; color: #656b74; overflow-wrap: anywhere; }
     .dn-mobile-filter-fields :global(svg) { flex: 0 0 17px; color: #656b74; }
     .dn-listing-filter__dialog-submit :global(svg) { display: none; }
@@ -755,7 +752,7 @@
     }
 
     .dn-listing-filter__dialog-search input[type='search'] {
-      font-size: 16px;
+      font-size: var(--dn-control-size);
     }
 
     .dn-listing-filter__core-grid {
@@ -788,10 +785,10 @@
 
     .dn-listing-filter__dialog-submit {
       white-space: nowrap;
-      font-size: 15px;
       min-width: 0;
       flex: 1;
       padding-inline: 16px;
+      font: var(--dn-cta-font);
     }
 
   }

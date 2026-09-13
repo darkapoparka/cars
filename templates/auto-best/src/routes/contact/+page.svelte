@@ -19,7 +19,7 @@
   />
 </svelte:head>
 
-<ContactHero topic={data.topic} vehicle={data.vehicle} financeSelection={data.financeSelection} />
+<ContactHero topic={data.topic} vehicle={data.vehicle} />
 
 <section class="dn-contact-section" class:dn-contact-section--general={data.topic.id === 'general'} class:dn-contact-section--topic={data.topic.id !== 'general'} class:dn-contact-section--workflow={data.topic.id === 'trade-in' || data.topic.id === 'import'} class:dn-contact-section--import={data.topic.id === 'import'} id="contact-intent" aria-label="Свържете се с екипа">
   <div class="container">

@@ -3,7 +3,7 @@
   import { afterNavigate } from '$app/navigation';
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
-  import { onDestroy, tick } from 'svelte';
+  import { onDestroy, onMount, tick } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import Icon from '$components/ui/Icon.svelte';
   import NavigationFeatureCard from './NavigationFeatureCard.svelte';
@@ -24,7 +24,7 @@
   let megaPanel: HTMLDivElement | undefined;
   let megaTrigger: HTMLAnchorElement | undefined;
   let releaseScroll: (() => void) | undefined;
-  let { mobileFooterVisible = false }: { mobileFooterVisible?: boolean } = $props();
+  let mobileFooterVisible = $state(false);
   const compactDetailHeader = $derived(
     page.url.pathname.startsWith('/blog-detail/') || page.url.pathname.startsWith('/listing-detail-v1/')
   );
@@ -192,7 +192,15 @@
   };
 
 
-
+  onMount(() => {
+    const footer = document.getElementById('dn-site-footer');
+    if (!footer || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      mobileFooterVisible = Boolean(entry?.isIntersecting && entry.intersectionRatio > 0.02);
+    }, { threshold: [0, 0.02, 0.2] });
+    observer.observe(footer);
+    return () => observer.disconnect();
+  });
 
   onDestroy(() => {
     releaseScroll?.();
@@ -240,7 +248,12 @@
         <div class="dn-header__inner">
           <div class="dn-logo-box">
             <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
-              <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+              <picture>
+                {#if mobileSurfaceHeader || page.url.pathname === '/contact'}
+                  <source media="(max-width: 991px)" srcset={brand.logoOnDark} />
+                {/if}
+                <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+              </picture>
             </a>
           </div>
 
@@ -560,7 +573,7 @@
       min-height: 52px;
       place-items: center;
       align-content: center;
-      grid-template-rows: 26px 16px;
+      grid-template-rows: 26px auto;
       gap: 2px;
       padding: 4px 1px;
       border: 0;
@@ -568,15 +581,15 @@
       background: transparent;
       color: #4f5662;
       font: inherit;
-      font-size: 12px;
-      font-weight: 650;
-      line-height: 1.15;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-control-weight);
+      line-height: var(--dn-leading-control);
       cursor: pointer;
     }
 
     .dn-mobile-bottom-nav a.active,
     .dn-mobile-bottom-nav button.active {
-      color: var(--dn-red);
+      color: var(--dn-ink);
     }
 
     .dn-mobile-bottom-nav__icon {
@@ -619,8 +632,8 @@
       justify-content: center;
       gap: 7px;
       border-radius: var(--dn-radius-button);
-      font-size: 15px;
-      font-weight: 700;
+      font-size: var(--dn-text-body);
+      font-weight: var(--dn-control-weight);
       text-align: center;
     }
 

@@ -26,7 +26,7 @@ export const formatInventoryKm = (value: number) =>
 	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} km`;
 
 export const formatInventoryMonthly = (value: number, locale: Locale = 'en') =>
-	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? 'EUR/мес.' : 'EUR/mo'}`;
+	`${value.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} ${locale === 'bg' ? '€/мес.' : '€/mo'}`;
 
 export const inventoryCardHighlightClass = () => 'bg-primary-2';
 

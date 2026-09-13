@@ -51,17 +51,17 @@
     .dn-home-page :global(.dn-home-section-title) {
       margin: 0;
       font-size: var(--dn-home-heading-size);
-      font-weight: 650;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
+      letter-spacing: var(--dn-tracking-heading);
       text-align: center;
       text-wrap: balance;
     }
 
     .dn-home-page :global(.dn-home-section-heading > p) {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: var(--dn-text-body);
+      line-height: var(--dn-leading-body);
       max-width: 60ch;
       text-align: center;
     }

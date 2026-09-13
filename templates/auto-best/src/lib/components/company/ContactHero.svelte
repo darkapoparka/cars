@@ -1,5 +1,4 @@
 <script lang="ts">
-  import type { FinanceSelection } from '$data/finance';
   import { resolve } from '$app/paths';
   import type { Vehicle } from '$data/inventory';
   import ContactVehicle from './ContactVehicle.svelte';
@@ -8,7 +7,7 @@
   import { brand } from '$config/brand';
   import type { ContactTopic } from '$data/company';
 
-  let { topic, vehicle = null, financeSelection = null }: { topic: ContactTopic; vehicle?: Vehicle | null; financeSelection?: FinanceSelection | null } = $props();
+  let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
   const heroDescriptions = {
     general: `${brand.city} · Оглед с предварителна уговорка`,
     inspection: 'Изберете автомобил и уговорете удобен час',
@@ -45,7 +44,7 @@
     {#if topic.id === 'leasing'}
       {#if vehicle}
         <div class="dn-contact-hero__vehicle dn-route-hero__control">
-          <ContactVehicle {vehicle} {financeSelection} hero />
+          <ContactVehicle {vehicle} hero />
         </div>
       {:else}
         <a class="dn-contact-button dn-contact-button--primary dn-contact-hero__action dn-route-hero__control" href={resolve('/listing-grid')}>

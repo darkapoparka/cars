@@ -14,7 +14,7 @@ export const posts: BlogPost[] = [
 		title: 'Какво проверява Day Night Auto преди внос на автомобил от Европа',
 		category: 'Подбрани автомобили',
 		date: 'Май 2026',
-		image: '/assets/daynight/blog/import-studio-v2.png',
+		image: '/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp',
 		excerpt:
 			'История, пробег, сервизни записи, снимки от покупката и документи правят решението за внос по-спокойно.',
 		content: [
@@ -28,7 +28,7 @@ export const posts: BlogPost[] = [
 		title: 'Какво означава „готов за регистрация“',
 		category: 'Документи',
 		date: 'Май 2026',
-		image: '/assets/daynight/blog/registration-studio-v2.png',
+		image: '/assets/daynight/codex-generated-v2/blog/blog-cover-registration-v2.webp',
 		excerpt:
 			'Технически проверки, кодиране, документи и подготовка според модела са част от истинското предаване.',
 		content: [
@@ -42,7 +42,7 @@ export const posts: BlogPost[] = [
 		title: 'Как Day Night Auto преглежда клиентски автомобил',
 		category: 'Продай автомобила си',
 		date: 'Май 2026',
-		image: '/assets/daynight/blog/inspection-studio-v2.png',
+		image: '/assets/daynight/blog/generated-v3/customer-inspection.webp',
 		excerpt:
 			'Снимки, VIN, сервизна история, пробег и очаквана цена помагат на екипа да даде реалистична обратна връзка.',
 		content: [

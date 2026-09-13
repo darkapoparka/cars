@@ -27,9 +27,7 @@ export function GET({ request, url }: { request: Request; url: URL }) {
 	});
 }
 
-const inventoryStatus = (
-	value: string | undefined
-): DayNightInventoryListingStatus | undefined => {
+const inventoryStatus = (value: string | undefined): DayNightInventoryListingStatus | undefined => {
 	if (value === 'draft' || value === 'published' || value === 'archived') return value;
 
 	return undefined;

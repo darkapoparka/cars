@@ -48,6 +48,7 @@ codex-screenshots/
 .codex-screenshots/
 .playwright-mcp/
 .bohemcars-cms/
+.daynight-cms/
 .getrich-dev-*/
 static/uploads/cms/
 .tmp/
@@ -64,3 +65,5 @@ dev*.log
 
 # Local preview/demo render artifacts (not used by the app)
 static/_previews/
+
+.vercel

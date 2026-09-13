@@ -1,4 +1,3 @@
-import { parseFinanceSelection } from '$data/finance';
 import { listReturn } from '$data/journeys';
 import { error } from '@sveltejs/kit';
 import { featuredVehicles } from '$data/inventory';
@@ -29,5 +28,5 @@ export const load: PageLoad = ({ params, url }) => {
     })
     .slice(0, 3);
 
-  return { returnTo: listReturn(url.searchParams.get('return'), '/listing-grid'), vehicle, recommendations, financeSelection: parseFinanceSelection(url.searchParams, vehicle.priceEur) };
+  return { returnTo: listReturn(url.searchParams.get('return'), '/listing-grid'), vehicle, recommendations };
 };

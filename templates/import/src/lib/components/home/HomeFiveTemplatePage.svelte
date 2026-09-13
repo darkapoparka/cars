@@ -68,13 +68,18 @@
 	<HomeFiveHero {hero} />
 	<HomeFiveFeaturedVehicles vehicles={featuredVehicles} {copy} compactDesktop />
 	<HomeFiveActionBand {copy} variant="ownership" />
-	<HomeFiveBrowseSection {brandCards} {typeCards} {copy} />
+	<HomeFiveBrowseSection {brandCards} {typeCards} {copy}>
+		{#snippet betweenGroups()}
+			<HomeFiveActionBand {copy} variant="selection" />
+		{/snippet}
+	</HomeFiveBrowseSection>
 	<HomeFiveActionBand {copy} />
 	<YouTubeSection
 		videos={aboutVideos}
 		english={copy.actionBand.importTitle === 'Import From Europe'}
 	/>
 	<HomeFiveReviewsSection {reviews} {copy} />
+	<HomeFiveActionBand {copy} variant="consultation" />
 	<HomeFiveNewsSection posts={newsPosts} {copy} />
 </AuxeroPublicShell>
 
@@ -339,8 +344,22 @@
 			order: 60;
 		}
 
-		:global(#main-content > .daynight-action-band) {
-			order: 50;
+		:global(#main-content > .daynight-action-band--guidance) {
+			display: none;
+		}
+
+		:global(#main-content > .daynight-home-reviews) {
+			order: 70;
+		}
+
+		:global(#main-content > .daynight-action-band--consultation) {
+			order: 80;
+			padding-top: 16px;
+			padding-bottom: 4px;
+		}
+
+		:global(#main-content > .daynight-news-section) {
+			order: 90;
 		}
 
 		:global(body.auxero-template-home-05-html #main-content *),

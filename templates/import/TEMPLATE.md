@@ -1,6 +1,7 @@
 # Template reference — Import
 
 ## Identity
+
 - Repository: `darkapoparka/cars-template-import`
 - Key: `import`
 - Role: Design 2 option in an Import trio
@@ -12,12 +13,16 @@
 This is a **template master**, not a sendable dealer demo. The baseline intentionally preserves source/sample material for design fidelity; every lead copy requires a complete identity and content sweep.
 
 ## Install and run
+
 ```text
 npm ci
 npm run dev -- --host 127.0.0.1 --port 6464 --strictPort
 ```
 
 ## Primary personalization surface
+
+Shared customer typography follows [Typography](docs/TYPOGRAPHY.md).
+
 - `src/lib/data/daynight.ts`
 - `src/lib/data/daynight-listings.json`
 - `src/lib/data/vehicles.ts`
@@ -28,6 +33,7 @@ npm run dev -- --host 127.0.0.1 --port 6464 --strictPort
 Do not assume these are the only identity consumers. Search every retained route, data module, metadata definition and static asset before declaring a skin complete.
 
 ## Representative QA routes
+
 - `/`
 - `/inventory`
 - `/contact`
@@ -36,18 +42,24 @@ Do not assume these are the only identity consumers. Search every retained route
 - `/import`
 
 ## Required checks
+
 - `npm run check`
 - `npm run build`
 
+## Inquiry persistence
+
+Optional Neon-backed inquiry storage and private template admin access are documented in [Inquiry database](docs/INQUIRY-DATABASE.md). Without database configuration the synthetic preview remains in memory. Saving is separate from notification delivery.
+
 ## Current constraints
+
 Use Import as Design 2 in the intentional Auto Best / Import / Carwow trio when it fits the dealer’s real offer.
 
-
-
 ## Source lineage
+
 Split on 2026-09-10 from the live working tree at `J:/cars/templates/import`. The split deliberately captured local working-tree changes, including changes newer than the `cars` repository HEAD. Historical root instructions were archived under `docs/legacy/from-cars-2026-09-10/`; use them only for provenance, never as current operating instructions.
 
 ## Portfolio policy
+
 Cars owns portfolio choices: standard Auto Best / Modern / Carwow, or Auto Best / Import / Carwow. See [Cars integration](docs/CARS-INTEGRATION.md).
 
 Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).

@@ -68,7 +68,8 @@
 			<Card.Header class="border-b">
 				<div>
 					<Card.Title>Listings</Card.Title>
-					<Card.Description>Inventory records available to the Day Night Auto CMS.</Card.Description>
+					<Card.Description>Inventory records available to the Day Night Auto CMS.</Card.Description
+					>
 				</div>
 			</Card.Header>
 			<Card.Content class="grid gap-4 p-4">

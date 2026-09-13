@@ -83,7 +83,8 @@ export const daynightReviews = [
 	}
 ] satisfies DayNightReview[];
 
-export const daynightReviewDisclosure = 'Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения.';
+export const daynightReviewDisclosure =
+	'Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения.';
 
 export const daynightReviewCount = daynightReviews.length;
 export const daynightReviewCountLabel = `${daynightReviewCount} примерни отзива`;
@@ -98,6 +99,6 @@ export const daynightReviewDistribution = [5, 4, 3, 2, 1].map((rating) => {
 		id: `${rating}-star`,
 		label: String(rating),
 		count,
-		percent: `${daynightReviewCount ? Math.round(count / daynightReviewCount * 100) : 0}%`
+		percent: `${daynightReviewCount ? Math.round((count / daynightReviewCount) * 100) : 0}%`
 	};
 });

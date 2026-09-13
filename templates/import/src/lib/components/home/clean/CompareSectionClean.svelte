@@ -117,7 +117,7 @@
 	/* Calm hover: tint the image plate only (no transform). #FEE2E2 has no bc token. */
 	.cmp-vehicle:hover .cmp-image,
 	.cmp-vehicle:focus-visible .cmp-image {
-		background: #FEE2E2;
+		background: #fee2e2;
 	}
 
 	.cmp-content {

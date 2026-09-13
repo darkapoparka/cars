@@ -43,7 +43,7 @@ BASE_URL=http://127.0.0.1:6461 npm run smoke
 
 The default browser helper uses installed Chrome. `PLAYWRIGHT_CHANNEL` can select another supported Chromium channel; `PLAYWRIGHT_EXECUTABLE_PATH` can point to an installed browser binary. A browser installation and a running target server are separate prerequisites from installing the npm package.
 
-The current local helper also accepts `PLAYWRIGHT_ENGINE=webkit` or `firefox`; install the corresponding Playwright browser before using it. The default remains Chromium/Chrome. Map-provider fixtures are used in some suites, so those suites do not prove that the live map provider rendered.
+The standalone `browser.mjs` launches Chromium through the configured Chrome channel/executable. It does not currently implement a `PLAYWRIGHT_ENGINE` switch; setting that variable alone does not add WebKit coverage.
 
 ## Files changed during development
 

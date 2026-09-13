@@ -41,7 +41,6 @@
 		idPrefix="desktop-contact"
 		showEmptyStatus={false}
 		statusClass="daynight-contact-form__status"
-		statusMessage="Съобщението е подготвено локално за Day Night Auto"
 		submitLabel={form.submitLabel}
 	/>
 </div>

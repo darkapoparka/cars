@@ -2,7 +2,10 @@
 
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehicle-facts";
-import { mobileVehicleCardContentClassName, mobileVehicleCardMediaClassName } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
+import {
+  mobileVehicleCardContentClassName,
+  mobileVehicleCardMediaClassName,
+} from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import Image from "next/image";
 import { useState } from "react";
 import {
@@ -67,25 +70,25 @@ export function LeaseSelectedVehicle({
             {vehicle.title}
           </h2>
           <div className="min-w-0">
-          <p
-            className="font-bold text-[18px] text-zinc-950 tabular-nums leading-5 tracking-tight"
-            data-slot="lease-selected-vehicle-price"
-          >
-            {vehicle.priceLabel}
-          </p>
-          {vehicle.monthlyLabel ? (
             <p
-              className="text-[12px] text-muted-foreground leading-4"
-              title={
-                locale === "bg"
-                  ? "Ориентировъчна месечна вноска"
-                  : "Estimated monthly payment"
-              }
+              className="font-bold text-[18px] text-zinc-950 tabular-nums leading-5 tracking-tight"
+              data-slot="lease-selected-vehicle-price"
             >
-              {locale === "bg" ? "от " : "from "}
-              {vehicle.monthlyLabel}
+              {vehicle.priceLabel}
             </p>
-          ) : null}
+            {vehicle.monthlyLabel ? (
+              <p
+                className="text-[12px] text-muted-foreground leading-4"
+                title={
+                  locale === "bg"
+                    ? "Ориентировъчна месечна вноска"
+                    : "Estimated monthly payment"
+                }
+              >
+                {locale === "bg" ? "от " : "from "}
+                {vehicle.monthlyLabel}
+              </p>
+            ) : null}
           </div>
         </div>
         <DealerVehicleFacts
@@ -95,7 +98,7 @@ export function LeaseSelectedVehicle({
       </div>
       {onSelect ? (
         <button
-          aria-label={`${vehicle.title}, ${vehicle.priceLabel}`}
+          aria-label={`${locale === "bg" ? "Изберете" : "Select"} ${vehicle.title}, ${vehicle.priceLabel}`}
           aria-pressed={selected}
           className="absolute inset-0 rounded-xl focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-[-2px] active:bg-black/5"
           data-vehicle-selected={selected}

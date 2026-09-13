@@ -3,12 +3,7 @@
   import { vehicleContactHref } from '$data/journeys';
   import { bodyLabel } from '$data/listing';
   import { resolve } from '$app/paths';
-  import { tick, onDestroy } from 'svelte';
-  import { lockPageScroll, trapDialogTab } from '$lib/ui/overlay';
-  import { imageStatus } from '$lib/ui/image';
-  let failedImage = $state('');
-  let releaseFinance: (() => void) | undefined;
-  onDestroy(() => releaseFinance?.());
+  import { tick } from 'svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
@@ -31,11 +26,7 @@
   let shareCopied = $state(false);
   let financeDialog = $state<HTMLDialogElement>();
 
-  const openFinance = () => {
-    if (!financeDialog || financeDialog.open) return;
-    releaseFinance = lockPageScroll();
-    financeDialog.showModal();
-  };
+  const openFinance = () => financeDialog?.showModal();
   const closeFinance = () => financeDialog?.close();
 
   async function shareVehicle() {
@@ -67,10 +58,9 @@
     if (!nextTab) return;
 
     event.preventDefault();
-    const tablist = (event.currentTarget as HTMLElement).closest('[role="tablist"]');
     selectDetailTab(nextTab);
     await tick();
-    tablist?.querySelector<HTMLElement>(`#detail-tab-${nextTab}`)?.focus();
+    document.getElementById(`detail-tab-${nextTab}`)?.focus();
   }
 
   const conditionLabel = (condition: Vehicle['condition']) => condition === 'new' ? 'Нов' : 'Употребяван';
@@ -121,15 +111,12 @@
                 </div>
                 <img
                   src={data.vehicle.image}
-                  {@attach imageStatus(failed => failedImage = failed ? data.vehicle.image : '')}
-                  style:visibility={failedImage === data.vehicle.image ? 'hidden' : undefined}
                   alt={data.vehicle.title}
                   width="1245"
                   height="988"
                   fetchpriority="high"
                   decoding="async"
                 />
-                {#if failedImage === data.vehicle.image}<span class="dn-vehicle-image-fallback" role="img" aria-label={`Снимката на ${data.vehicle.title} не е налична`}>Снимката не е налична</span>{/if}
               </figure>
             </div>
 
@@ -214,7 +201,7 @@
               </button>
               <div class="dn-detail-finance-inline">
                 {#key data.vehicle.id}
-                  <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} initialSelection={data.financeSelection} />
+                  <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />
                 {/key}
               </div>
             </section>
@@ -240,7 +227,7 @@
           </div>
           <div class="dn-detail-related__list">
             {#each data.recommendations as vehicle (vehicle.id)}
-              <a class="dn-detail-related-card" href={resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) })}>
+              <a class="dn-detail-related-card" href={resolve(vehicle.href as '/listing-detail-v1/1')}>
                 <img src={vehicle.image} alt="" width="420" height="280" decoding="async" />
                 <span>
                   <strong>{vehicle.title}</strong>
@@ -257,8 +244,6 @@
     class="dn-detail-finance-dialog"
     id="dn-detail-finance-dialog"
     bind:this={financeDialog}
-    onclose={() => releaseFinance?.()}
-    onkeydown={trapDialogTab}
     aria-labelledby="dn-detail-finance-dialog-title"
     onclick={(event) => { if (event.target === event.currentTarget) closeFinance(); }}
   >
@@ -273,12 +258,8 @@
         </button>
       </header>
       {#key data.vehicle.id}
-        <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} initialSelection={data.financeSelection} />
+        <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />
       {/key}
     </div>
   </dialog>
 </div>
-
-<style>
-  .dn-vehicle-image-fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 16px; color: #626974; background: #eceff2; text-align: center; }
-</style>

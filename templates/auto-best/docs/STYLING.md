@@ -15,6 +15,8 @@ Auto Best combines an image-led automotive layout, Onest typography, rounded sur
 
 Svelte component `<style>` blocks own internal presentation. Route sheets such as `contact/contact.css`, `listing-grid/listing.css` and the detail `detail.css` files own page composition and route-specific component adaptations. Route CSS is imported from the corresponding page and is global CSS; its selectors therefore use route/component prefixes.
 
+`Footer.svelte` owns the footer and its optional service links, including their responsive styles. The footer uses the shared white surface, dark logo variant (`brand.logo`), regular navigation type and red phone CTA. Mobile keeps the contact block and company links; desktop includes both navigation columns. The shell's footer visibility/padding relationship remains in `composition.css`.
+
 Svelte adds a scoping class to component selectors, which changes specificity. Moving a selector unchanged from a component to a global sheet can change the result. Explicit `:global(...)` selectors are used where an owner styles child-component output. See the [Svelte scoped styles reference](https://svelte.dev/docs/svelte/scoped-styles).
 
 The `dn-` class prefix is inherited naming, not a runtime dependency on the original dealer. Renaming it is unnecessary for a client skin.
@@ -54,17 +56,32 @@ The root layout imports `@fontsource-variable/onest`. `--dn-font` is `Onest Vari
 
 | Token | Size | Typical use |
 | --- | --- | --- |
-| `--dn-text-badge` | `0.75rem` | Compact badges |
+| `--dn-text-caption` | `0.75rem` | Nonessential video durations |
+| `--dn-text-badge` | `0.875rem` | Compact badges |
 | `--dn-text-meta` | `0.875rem` | Supporting metadata |
-| `--dn-text-body` | `1rem` | Body copy and default action type |
-| `--dn-text-lead` | `1.125rem` | Introductory copy |
+| `--dn-text-body` | `1rem` | Body copy, inputs and ordinary controls |
+| `--dn-text-lead` | `1.125rem` | Introductory copy, primary actions and prominent entry fields |
 | `--dn-text-card` | `1.25rem` | Card headings |
 | `--dn-text-subheading` | `1.5rem` | Subheadings |
 | `--dn-text-heading` | `1.875rem` | Headings |
+| `--dn-text-section-compact` | `2rem` | Compact desktop section titles |
 | `--dn-text-section` | `2.625rem` | Large section titles |
+| `--dn-text-hero` / `--dn-text-hero-large` | `3rem` / `3.5rem` | Hero titles |
 | `--dn-text-display` | `3.75rem` | Display text |
 
-Component-specific sizes also exist; the table is not a command to normalize every heading. Mobile section headings commonly use 22px, and mobile service titles use 18px in the current working design. The shared action shorthand is `--dn-cta-font`, with weight 600, body-size text and 1.3 line-height. Heading tracking and responsive sizes are owned by the relevant component.
+All live-text typography values belong to `tokens.css`. Components and route sheets select semantic roles; they must not introduce numeric font sizes, font weights, line heights, tracking, or local font shorthands. `check:typography`, included in `validate`, enforces this boundary. Fluid section, hero and display roles also live in tokens. Responsive layouts may select a smaller heading role, but must not shrink ordinary controls below the control role to make them fit.
+
+Use regular 400 for prose, medium 500 for navigation/actions and semibold 600 for headings and emphasis. Primary actions use `--dn-cta-font` (18px/500 at the default root size); ordinary controls use `--dn-control-font` (16px/500). Both use 1.3 line-height. `--dn-tab-font` supplies quieter 16px/500 entry tabs. The shared `.dn-segmented-control` / `.dn-segmented-option` style owns Buy/Import, Sale/Trade-in and Link/Info controls: 44px total height, pill geometry, pale surface, white selected option and keyboard focus. The 40px options and 2px outer inset remain smaller than the 52px entry fields. Entry CTAs use the shared 44px `--dn-entry-action-height` while retaining the 18px CTA type. Components retain their existing tab/group behavior.
+
+The entry field is the strongest editable element. `.dn-entry-field` and `.dn-entry-field__input` own its shared border, surface, focus and `--dn-entry-font` (18px/400), with a 52px minimum frame height. The multiline modifier uses the control radius. Home search and both import entry modes consume this same style; do not add smaller local font or border overrides. `ContactIntent` renders one secondary white phone button below the Sell/Import card, outside `.dn-contact-intent__main`, using the ordinary control type, pill radius and 44px action height. Enquiry components do not duplicate that entry call action.
+
+Sell/Import entry fields fill their card width. `EnquiryEntryField.svelte` renders an input-shaped button with a single-line saved value and opens a native dialog to edit a listing link, VIN, or description and budget. The editor is a bottom sheet on mobile and a centered dialog on desktop. Save applies the draft; Cancel, Escape and backdrop dismissal discard it and restore focus. Switching Link/Info preserves each value and the card height. The red CTA continues the existing enquiry flow; an empty Import entry opens its editor first.
+
+The centered mode switch uses `--dn-entry-segment-width` (up to 240px with a narrow-screen inset), and the red CTA uses `--dn-entry-action-width` (up to 220px). These controls remain narrower and shorter than the entry field. Mobile entry titles have one short helper line underneath; the Sell/Import fields have no decorative leading icon.
+
+Body copy is 16px with 1.5 leading; long editorial prose uses 1.65. Labels, supporting metadata, helper text and the mobile dock use the 14px meta role. Nonessential video duration text may use the 12px caption role. Mobile section headings use 24px and service titles use 18px. Make controls and cards reflow around the type instead of adding smaller local overrides. Include `textarea` in native font inheritance.
+
+Sell/Trade-in accepts an optional listing URL or 17-character VIN before opening the enquiry. The reference remains editable and is included in the review and copied/shared text. When supplied, vehicle details are optional; without it, the existing required vehicle fields apply. This is a reference shortcut, not ad import, VIN decoding or automatic valuation. `src/lib/data/vehicle-reference.ts` owns parsing and reuses the listing URL validator.
 
 ## Shape, spacing and layout
 
@@ -85,9 +102,15 @@ Component-specific sizes also exist; the table is not a command to normalize eve
 
 There is no universal spacing-scale engine. Existing layouts use small 8–12px gaps, 12–24px internal padding and larger section spacing where appropriate. Mobile cards also use local 14px corners; drawers commonly use 24px top corners. Keep the owning value rather than inventing an additional global token for a one-off adjustment.
 
-The control family is rounded: pill actions, rounded input surfaces and compact circular icon buttons. The mobile sell action and import entry control use 44px geometry in the current working design. That is not a blanket instruction to resize every desktop control or every drawer button to 44px.
+The control family is rounded: pill actions, rounded input surfaces and compact circular icon buttons. Entry tabs have at least a 44px hit height. Sell and import primary actions have at least 52px height and explicit text labels. The import link/criteria field is separate from its primary action, so a small icon does not have to communicate the entire request action. Other controls retain their owning geometry and expand when text wraps.
+
+Inventory filter chips (including removable active filters), results filters/sorting, the header phone link and mobile footer contact links have a minimum 44px hit height. Keep vehicle-card dimensions and their 8px mobile inventory / 10px carousel gaps independent from control sizing. Metadata badges are labels inside the card link, not separate touch targets. Tablet service cards extend the action link over the card; verify the actual hit area before resizing its text. Vehicle-card keyboard focus uses the opaque `--dn-focus` color and an inset outline so the card's clipped corners do not hide it.
 
 ## Responsive composition
+
+Mobile inventory cards use one 18px/500 title row with an ellipsis; the full name remains in the link's accessible label, the title attribute and the detail page. The right-hand column uses 14px vertical / 12px horizontal padding, four rows (24/20/20/22px), and 6px gaps, giving the current cards a consistent 132px height. Metadata uses 14px text in compact 20px badges. Fuel/transmission badges omit decorative icons on phones; desktop badges retain them. Mobile photos fill their entire image column with `object-fit: cover`, with no letterboxing. Keep the 8px gap between inventory cards. The keyboard-only focus border is drawn above the photograph and badges so the complete card remains visibly selected; normal tapping does not display this border.
+
+Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars otherwise change the available page and fixed-navigation width when moving between long pages (Home) and short pages (Sell/Import). Overlay scrollbars on touch devices retain their normal behavior.
 
 | Range | Main behavior |
 | --- | --- |
@@ -100,7 +123,7 @@ Additional 359/374/380px and 1199px rules handle particular text, grid and contr
 
 ## Homepage patterns
 
-**Hero and search.** The hero and its vehicle artwork remain separate from the search panel. Mobile Buy/Import tabs have a light enclosing panel and a dark selected tab; primary actions are red. Desktop discovery is its own presentation. The older charcoal-search token names do not mean the current entire search panel should be recolored charcoal.
+**Hero and search.** The hero and its vehicle artwork remain separate from the search panel. Buy/Import tabs share the quieter pill-shaped segmented control with Sell/Import. The white, bordered entry field uses larger regular text; primary actions remain red. Desktop discovery is its own presentation. The older charcoal-search token names do not mean the current entire search panel should be recolored charcoal.
 
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 

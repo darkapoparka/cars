@@ -43,7 +43,7 @@
   background: #f4f6fa;
   color: #343941;
   font-size: var(--dn-text-meta);
-  font-weight: 650;
+  font-weight: var(--dn-weight-semibold);
 }
 
 .dn-detail-title-card > a:hover,
@@ -53,10 +53,10 @@
   min-width: 0;
   margin: 0;
   color: #171b21;
-  font-size: 30px;
-  font-weight: 650;
-  line-height: 1.2;
-  letter-spacing: -.03em;
+  font-size: var(--dn-text-heading);
+  font-weight: var(--dn-weight-semibold);
+  line-height: var(--dn-leading-heading);
+  letter-spacing: var(--dn-tracking-heading);
 }
 
 .dn-detail-gallery {
@@ -109,9 +109,9 @@
   margin: 0;
   color: #24272c;
   font-size: var(--dn-text-heading);
-  font-weight: 650;
-  line-height: 1.18;
-  letter-spacing: -.025em;
+  font-weight: var(--dn-weight-semibold);
+  line-height: var(--dn-leading-heading);
+  letter-spacing: var(--dn-tracking-heading);
 }
 
 .dn-detail-description > p {
@@ -140,8 +140,8 @@
   background: transparent;
   color: #6b717a;
   font: inherit;
-  font-size: 17px;
-  font-weight: 650;
+  font-size: var(--dn-control-size);
+  font-weight: var(--dn-control-weight);
   cursor: pointer;
   transition: color 160ms ease;
 }
@@ -185,7 +185,7 @@
   margin-top: 24px;
   color: #24272c;
   font-size: var(--dn-text-lead);
-  font-weight: 650;
+  font-weight: var(--dn-weight-semibold);
 }
 
 .dn-detail-inline-action svg {
@@ -213,14 +213,14 @@
   gap: 4px;
 }
 
-.dn-detail-overview dt { color: #7a8089; font-size: var(--dn-text-meta); font-weight: 500; line-height: var(--dn-leading-meta); }
+.dn-detail-overview dt { color: #7a8089; font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); }
 
 .dn-detail-overview dd {
   min-width: 0;
   margin: 0;
   color: #272b31;
   font-size: var(--dn-text-body);
-  font-weight: 650;
+  font-weight: var(--dn-weight-semibold);
   line-height: var(--dn-leading-body);
 }
 
@@ -253,7 +253,7 @@
   background: #3f961f;
   color: #fff;
   font-size: var(--dn-text-badge);
-  font-weight: 800;
+  font-weight: var(--dn-weight-semibold);
 }
 
 .dn-detail-equipment li span::after { content: '✓'; }
@@ -265,9 +265,9 @@
   justify-content: center;
   padding: 0 22px;
   border-radius: var(--dn-radius-button);
-  font-size: var(--dn-text-lead);
-  font-weight: 600;
-  line-height: 1.3;
+  font-size: var(--dn-control-size);
+  font-weight: var(--dn-control-weight);
+  line-height: var(--dn-leading-control);
   text-align: center;
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
@@ -318,24 +318,24 @@
   padding: 8px;
 }
 
-.dn-detail-summary__label { margin: 0; color: #7a8089; font-size: var(--dn-text-meta); font-weight: 600; }
+.dn-detail-summary__label { margin: 0; color: #7a8089; font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); }
 
 .dn-detail-summary { padding: 20px 24px 22px; }
 
 .dn-detail-summary__price {
   margin: 4px 0 0;
   color: var(--dn-red);
-  font-size: 36px;
-  font-weight: 650;
-  letter-spacing: -.02em;
+  font-size: var(--dn-text-section-compact);
+  font-weight: var(--dn-weight-semibold);
+  letter-spacing: var(--dn-tracking-heading);
 }
 
 .dn-detail-summary__availability {
   max-width: 300px;
   margin: 10px 0 0;
   color: #646a73;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: var(--dn-text-meta);
+  line-height: var(--dn-leading-meta);
 }
 
 .dn-detail-summary__actions {
@@ -349,8 +349,8 @@
 .dn-detail-dealer .dn-detail-button {
   min-height: 48px;
   padding-inline: 14px;
-  font-size: 17px;
-  font-weight: 650;
+  font-size: var(--dn-control-size);
+  font-weight: var(--dn-control-weight);
 }
 
 .dn-detail-dealer__header {
@@ -369,8 +369,8 @@
   margin: 0;
   color: #24272c;
   font-size: var(--dn-text-card);
-  font-weight: 700;
-  line-height: 1.35;
+  font-weight: var(--dn-weight-semibold);
+  line-height: var(--dn-leading-meta);
 }
 
 .dn-detail-dealer__details {
@@ -387,7 +387,7 @@
   margin: 0;
   color: #555b64;
   font-size: var(--dn-text-meta);
-  line-height: 1.5;
+  line-height: var(--dn-leading-body);
 }
 
 .dn-detail-dealer__details svg {
@@ -399,7 +399,7 @@
   align-items: center;
   color: #24272c;
   font-size: var(--dn-text-body);
-  font-weight: 650;
+  font-weight: var(--dn-weight-semibold);
 }
 
 .dn-detail-dealer__details a:hover { color: var(--dn-red); }
@@ -434,7 +434,7 @@
   gap: 24px;
 }
 
-.dn-detail-related h2 { margin: 0; font-size: 30px; line-height: 1.2; }
+.dn-detail-related h2 { margin: 0; font-size: var(--dn-text-heading); line-height: var(--dn-leading-heading); }
 .dn-detail-related__header p { margin: 8px 0 0; color: #666d77; font-size: var(--dn-text-body); }
 .dn-detail-related__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 24px; }
 
@@ -463,9 +463,9 @@
 .dn-detail-related-card > span { display: block; padding: 18px 20px 20px; }
 .dn-detail-related__list strong,
 .dn-detail-related__list b { display: block; }
-.dn-detail-related__list strong { color: #2f343b; font-size: var(--dn-text-card); font-weight: 650; line-height: 1.35; }
-.dn-detail-related__list b { margin-top: 10px; color: var(--dn-red); font-size: var(--dn-text-lead); font-weight: 700; line-height: var(--dn-leading-lead); }
-.dn-detail-related__all { display: inline-flex; color: var(--dn-red); font-size: var(--dn-text-body); font-weight: 650; }
+.dn-detail-related__list strong { color: #2f343b; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
+.dn-detail-related__list b { margin-top: 10px; color: var(--dn-red); font-size: var(--dn-text-lead); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-lead); }
+.dn-detail-related__all { display: inline-flex; color: var(--dn-red); font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
 .dn-detail-related__all:hover,
 .dn-detail-related__all:focus-visible { color: var(--dn-red-hover); }
 
@@ -474,7 +474,7 @@
   .dn-detail-card { padding: 22px; }
   .dn-detail-media-card { padding: 8px; }
   .dn-detail-title-card { padding: 18px 20px; }
-  .dn-detail-title-card h1 { font-size: 28px; }
+  .dn-detail-title-card h1 { font-size: var(--dn-text-heading); }
   .dn-detail-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .dn-detail-equipment { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -533,13 +533,13 @@
 
 .dn-detail-finance-sheet__header span {
   color: #737a84;
-  font-size: 13px;
+  font-size: var(--dn-text-meta);
 }
 
 .dn-detail-finance-sheet__header h2 {
   margin: 2px 0 0;
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: var(--dn-text-subheading);
+  line-height: var(--dn-leading-heading);
 }
 
 .dn-detail-finance-sheet__header button {
@@ -643,9 +643,9 @@
 
   .dn-detail-title-card > a { display: none; }
   .dn-detail-title-card h1 {
-    font-size: 24px;
-    font-weight: 680;
-    line-height: 1.12;
+    font-size: var(--dn-text-subheading);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-section);
   }
 
   .dn-detail-summary {
@@ -663,9 +663,9 @@
   .dn-detail-summary__price {
     margin: 0;
     color: #171a20;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.08;
+    font-size: var(--dn-text-heading);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-section);
   }
 
   .dn-detail-info-card {
@@ -693,8 +693,8 @@
     padding: 0 8px;
     border-radius: 8px;
     color: #626873;
-    font-size: 14px;
-    font-weight: 650;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
   }
 
   .dn-detail-tabs button.active {
@@ -712,24 +712,24 @@
   }
 
   .dn-detail-overview dt {
-    font-size: 13px;
-    line-height: 1.35;
+    font-size: var(--dn-text-meta);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-detail-overview dd {
-    font-size: 15.5px;
-    line-height: 1.35;
+    font-size: var(--dn-text-body);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-detail-description > p {
     margin: 0;
-    font-size: 15px;
-    line-height: 1.55;
+    font-size: var(--dn-text-body);
+    line-height: var(--dn-leading-body);
   }
 
   .dn-detail-inline-action {
     margin-top: 16px;
-    font-size: 15px;
+    font-size: var(--dn-text-body);
   }
 
   .dn-detail-equipment {
@@ -738,8 +738,8 @@
     margin: 0;
   }
   .dn-detail-equipment li {
-    font-size: 15px;
-    line-height: 1.45;
+    font-size: var(--dn-text-body);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-detail-finance-card,
@@ -798,15 +798,15 @@
   }
 
   .dn-detail-finance-trigger__copy strong {
-    font-size: 15px;
-    line-height: 1.25;
+    font-size: var(--dn-text-body);
+    line-height: var(--dn-leading-heading);
   }
 
   .dn-detail-finance-trigger__copy small {
     overflow: hidden;
     color: #68707a;
-    font-size: 12.5px;
-    line-height: 1.35;
+    font-size: var(--dn-text-meta);
+    line-height: var(--dn-leading-meta);
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -818,7 +818,7 @@
     height: 40px;
   }
 
-  .dn-detail-dealer h2 { font-size: 18px; }
+  .dn-detail-dealer h2 { font-size: var(--dn-text-lead); }
   .dn-detail-dealer__details { margin-top: 14px; gap: 10px; }
 
   .dn-detail-location-card__header {
@@ -828,7 +828,7 @@
     margin-bottom: 12px;
   }
 
-  .dn-detail-location-card__header h2 { font-size: 20px; }
+  .dn-detail-location-card__header h2 { font-size: var(--dn-text-card); }
   .dn-detail-location-card__header p { text-align: left; }
 
   .dn-detail-related {
@@ -846,9 +846,9 @@
     padding-inline: 16px;
   }
   .dn-detail-related h2 {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: -.02em;
+    font-size: var(--dn-text-card);
+    font-weight: var(--dn-weight-semibold);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-detail-related__header p,
@@ -887,11 +887,11 @@
   }
 
   .dn-detail-related-card > span { padding: 12px 14px 14px; }
-  .dn-detail-related__list strong { font-size: 15px; line-height: 1.3; }
+  .dn-detail-related__list strong { font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
   .dn-detail-related__list b {
     margin-top: 5px;
     color: #11151c;
-    font-size: 17px;
+    font-size: var(--dn-text-lead);
   }
 
   .dn-detail-finance-dialog {

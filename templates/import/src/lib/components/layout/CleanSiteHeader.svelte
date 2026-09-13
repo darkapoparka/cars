@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
+	import { SvelteURLSearchParams } from 'svelte/reactivity';
 	import { Globe2, MapPin, PhoneCall } from '@lucide/svelte';
 	import { daynightAssets } from '$lib/data/daynight';
 	import type { HomeFiveHeaderData } from '$lib/auxero/home-five';
@@ -31,9 +32,10 @@
 
 	// External (tel:/mailto:/https:) hrefs bypass `resolve`; internal start with `/`.
 	const linkHref = (href: string) => (href.startsWith('/') ? resolve(href as '/') : href);
-	const languageCode = (option: string) => (option === 'English' || option === 'Английски' ? 'en' : 'bg');
+	const languageCode = (option: string) =>
+		option === 'English' || option === 'Английски' ? 'en' : 'bg';
 	const languageHref = (option: string) => {
-		const params = new URLSearchParams(page.url.searchParams);
+		const params = new SvelteURLSearchParams(page.url.searchParams);
 		params.set('lang', languageCode(option));
 		return `${page.url.pathname}?${params.toString()}`;
 	};

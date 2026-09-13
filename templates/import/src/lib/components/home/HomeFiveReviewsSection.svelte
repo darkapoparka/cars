@@ -424,7 +424,7 @@
 
 		.daynight-home-reviews :global(.testimonior-box) {
 			min-height: 224px;
-			background: var(--bc-surface);
+			background: var(--bc-card-bg);
 			padding: 18px !important;
 		}
 

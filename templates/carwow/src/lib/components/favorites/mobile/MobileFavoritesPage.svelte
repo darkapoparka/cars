@@ -4,7 +4,10 @@
 	import DayNightSpecIcon from '$lib/components/shared/icons/DayNightSpecIcon.svelte';
 	import { shortFuel } from '$lib/utils/format';
 	import { getGarageContext } from '$lib/state/garage.svelte';
-	import { getDayNightVehicleBySlug, type DayNightVehicle } from '$lib/data/daynight-vehicles';
+	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
+	import { resolveGarageVehicles } from '$lib/utils/garage';
+	import GarageUnavailable from '$lib/components/shared/GarageUnavailable.svelte';
+	let { catalogue }: { catalogue: DayNightVehicle[] } = $props();
 	import MobileHeader from '$lib/components/home/mobile/MobileHeader.svelte';
 	import MobileBottomDock from '$lib/components/home/mobile/MobileBottomDock.svelte';
 	import {
@@ -17,12 +20,8 @@
 
 	onMount(() => enhanceDayNightImageFallbacks());
 
-	// Map saved slugs → vehicles, dropping any that are no longer in the catalogue.
-	const vehicles = $derived(
-		garage.favorites
-			.map((slug) => getDayNightVehicleBySlug(slug))
-			.filter((vehicle): vehicle is DayNightVehicle => Boolean(vehicle))
-	);
+	const selection = $derived(resolveGarageVehicles(garage.favorites, catalogue));
+	const vehicles = $derived(selection.available);
 
 	const countLabel = $derived(
 		vehicles.length === 1 ? '1 запазен автомобил' : `${vehicles.length} запазени автомобила`
@@ -33,7 +32,7 @@
 	}
 </script>
 
-<div class="mobile-favorites" aria-label="Запазени автомобили">
+<div class="mobile-favorites">
 	<MobileHeader banner />
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-favorites-top">
@@ -44,6 +43,10 @@
 		</section>
 
 		<section class="mobile-favorites-results" aria-live="polite">
+			<GarageUnavailable
+				slugs={selection.unavailable}
+				onRemove={(slug) => garage.toggleFavorite(slug)}
+			/>
 			{#if vehicles.length}
 				<div class="mobile-favorites-list">
 					{#each vehicles as vehicle (vehicle.slug)}
@@ -155,7 +158,7 @@
 		margin: 0;
 		color: #fff;
 		font-size: var(--sa-text-xl);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.02em;
 		line-height: 1.2;
 	}
@@ -163,8 +166,8 @@
 	.mobile-favorites-top p {
 		margin: 0;
 		color: rgba(255, 255, 255, 0.82);
-		font-size: var(--sa-text-sm);
-		font-weight: 600;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.35;
 	}
 
@@ -227,7 +230,7 @@
 		padding: 5px 7px;
 		color: #fff;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 	}
 
@@ -258,7 +261,7 @@
 	.mobile-favorites-card__title small {
 		color: #7e8896;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0.07em;
 		line-height: 1;
 		text-transform: uppercase;
@@ -270,7 +273,7 @@
 		margin: 0;
 		color: #0f1629;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.017em;
 		line-height: 1.16;
 		-webkit-box-orient: vertical;
@@ -287,7 +290,7 @@
 	.mobile-favorites-card__price strong {
 		color: var(--sa-price);
 		font-size: var(--sa-text-lg);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.01em;
 		line-height: 1.1;
 		white-space: nowrap;
@@ -298,7 +301,7 @@
 		min-width: 0;
 		color: #6b7480;
 		font-size: var(--sa-text-xs);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.1;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -327,7 +330,7 @@
 		padding: 0 3px;
 		color: #4e5965;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
@@ -379,14 +382,14 @@
 		margin: 0;
 		color: #111315;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 	}
 
 	.mobile-favorites-empty p {
 		margin: 0;
 		max-width: 26ch;
-		color: #66707a;
-		font-size: var(--sa-text-sm);
+		color: #56616e;
+		font-size: var(--sa-type-body);
 		line-height: 1.4;
 	}
 
@@ -400,7 +403,7 @@
 		padding: 0 16px;
 		color: #fff;
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-button-font-weight);
 		text-decoration: none;
 	}
 
@@ -420,7 +423,7 @@
 		margin-bottom: 6px;
 		color: rgba(255, 255, 255, 0.85);
 		font-size: var(--sa-text-sm);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		text-decoration: none;
 	}
 
@@ -466,14 +469,14 @@
 		}
 		.mobile-favorites-top h1 {
 			color: #fff;
-			font-size: 26px;
-			font-weight: 700;
+			font-size: var(--sa-text-2xl);
+			font-weight: var(--sa-weight-heading);
 		}
 		.mobile-favorites-top p {
 			color: #c9cdd3;
-			font-size: 14px;
+			font-size: var(--sa-type-body);
 			line-height: 1.5;
-			font-weight: 400;
+			font-weight: var(--sa-weight-regular);
 		}
 	}
 	@media (max-width: 370px) {
@@ -488,5 +491,54 @@
 		.mobile-favorites-card h3 {
 			font-size: var(--sa-text-base);
 		}
+	}
+
+	/* Mobile typography contract */
+	.mobile-favorites-top h1 {
+		font-size: var(--sa-mobile-type-page-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-favorites-top p {
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-favorites-card__media span,
+	.mobile-favorites-card__title small {
+		font-size: var(--sa-mobile-type-micro);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-favorites-card h3 {
+		font-size: var(--sa-mobile-type-card-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-favorites-card__price strong {
+		font-size: var(--sa-mobile-type-feature-title);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-favorites-card__price span {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+	}
+	.mobile-favorites-card li {
+		font-size: var(--sa-mobile-type-micro);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-favorites-empty h2 {
+		font-size: var(--sa-mobile-type-section-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-favorites-empty p {
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-favorites-empty a,
+	.mobile-favorites-top__back {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-button-font-weight);
 	}
 </style>

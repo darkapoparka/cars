@@ -42,7 +42,7 @@
   .dn-brand-card__frame { display: contents; }
   .dn-discovery-toggle { display: none; }
   @media (max-width: 767px) {
-    .dn-discovery-toggle { display: flex; width: 100%; min-height: 44px; align-items: center; justify-content: center; margin-top: 10px; border: 1px solid #d9dde1; border-radius: var(--dn-radius-button); background: #eceef0; color: #24272c; font: inherit; font-size: 14px; font-weight: 600; }
+    .dn-discovery-toggle { display: flex; width: 100%; min-height: 44px; align-items: center; justify-content: center; margin-top: 10px; border: 1px solid #d9dde1; border-radius: var(--dn-radius-button); background: #eceef0; color: #24272c; font: inherit; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
     .dn-discovery-toggle:focus-visible { outline: 3px solid #8c959f; outline-offset: 3px; }
   }
 
@@ -50,29 +50,29 @@
   .dn-brand-shell { padding: 0; border-radius: 20px; background: var(--dn-home-panel); }
   .dn-brand-hero { padding: 32px 32px 24px; }
   .dn-brand-hero__copy { display: flex; min-height: 44px; align-items: center; justify-content: space-between; gap: 24px; }
-  .dn-brand-hero h2 { margin: 0; color: #1f2937; font-size: 32px; font-weight: 650; line-height: 1.2; letter-spacing: -.03em; }
+  .dn-brand-hero h2 { margin: 0; color: #1f2937; font-size: var(--dn-text-section-compact); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
   .dn-heading-mobile { display: none; }
-  .dn-brand-hero__cta { display: inline-flex; min-height: 44px; flex-shrink: 0; align-items: center; justify-content: center; padding: 0 20px; border: 1px solid #e1e4e8; border-radius: var(--dn-radius-button); background: #fff; color: #24272c; font-size: 16px; font-weight: 600; line-height: 1.3; }
+  .dn-brand-hero__cta { display: inline-flex; min-height: 44px; flex-shrink: 0; align-items: center; justify-content: center; padding: 0 20px; border: 1px solid #e1e4e8; border-radius: var(--dn-radius-button); background: #fff; color: #24272c; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); line-height: var(--dn-leading-control); }
   .dn-brand-panel { padding: 0 32px 32px; border-radius: 0 0 20px 20px; background: var(--dn-home-panel); }
   .dn-brand-grid { display: grid; grid-template-columns: repeat(var(--brand-columns), minmax(0, 1fr)); gap: 16px; margin-top: 0; }
   .dn-brand-card { display: block; min-width: 0; padding: 16px 12px; border: 0; border-radius: 16px; background: #fff; color: #24272c; text-align: center; transform: none; transition: box-shadow 180ms ease-out; }
   .dn-brand-card__image { display: flex; width: 100%; height: 52px; align-items: center; justify-content: center; margin-bottom: 12px; }
   .dn-brand-card__image img { width: 100%; height: 52px; object-fit: contain; }
-  .dn-brand-card strong { display: block; margin: 0; color: #24272c; font-size: 16px; font-weight: 600; line-height: 1.3; }
+  .dn-brand-card strong { display: block; margin: 0; color: #24272c; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
   .dn-brand-card:hover, .dn-brand-card:focus-visible { box-shadow: var(--dn-card-hover-shadow); }
   .dn-brand-hero__cta:hover { background: #e9edf1; }
   a:focus-visible { outline: 3px solid #8c959f; outline-offset: 3px; }
 
   @media (min-width: 768px) and (max-width: 1199px) {
     .dn-brand-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .dn-brand-hero h2 { font-size: 28px; }
+    .dn-brand-hero h2 { font-size: var(--dn-text-heading); }
   }
 
   @media (min-width: 992px) {
     .dn-brand-hero { padding: 0; }
     .dn-brand-panel { position: relative; margin-top: calc(-1 * var(--dn-home-banner-overlap)); padding: 24px; border-radius: var(--dn-radius); }
     .dn-brand-card__image, .dn-brand-card__image img { height: 72px; }
-    .dn-brand-card strong { font-size: 18px; line-height: 24px; }
+    .dn-brand-card strong { font-size: var(--dn-text-lead); line-height: var(--dn-leading-body); }
   }
 
   @media (max-width: 767px) {
@@ -80,9 +80,9 @@
     .dn-brand-shell { padding-inline: 0; border-radius: 0; background: transparent; }
     .dn-brand-hero { padding: 0; }
     .dn-brand-hero__copy { gap: 16px; }
-    .dn-brand-hero h2 { color: #171a20; font-size: 22px; font-weight: 700; line-height: 1.15; letter-spacing: -.025em; }
+    .dn-brand-hero h2 { color: #171a20; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
     .dn-heading-desktop { display: none; }
-    .dn-brand-hero__cta { display: none; min-height: 44px; padding: 0; border: 0; background: transparent; color: #4f5661; font-size: 14px; }
+    .dn-brand-hero__cta { display: none; min-height: 44px; padding: 0; border: 0; background: transparent; color: #4f5661; font-size: var(--dn-cta-size); }
     .dn-heading-mobile { display: inline; }
     .dn-brand-panel { margin-top: 8px; padding: 0; border-radius: 0; background: transparent; }
     .dn-brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
@@ -94,10 +94,10 @@
     .dn-brand-all-glyph span { border-radius: 50%; background: #cdd2d8; }
     .dn-brand-all-glyph span:first-child { background: var(--dn-red); }
     .dn-brand-card--secondary { display: none; }
-    .dn-brand-card strong { font-size: 15px; line-height: 1.2; }
+    .dn-brand-card strong { font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
     .dn-brand-card--additional { order: 2; }
-    .dn-discovery-toggle { order: 1; display: block; min-height: 108px; margin: 0; padding: 10px 6px; border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); font-size: 15px; }
-    .dn-discovery-toggle strong { display: block; line-height: 1.2; font-weight: 700; }
+    .dn-discovery-toggle { order: 1; display: block; min-height: 108px; margin: 0; padding: 10px 6px; border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); font-size: var(--dn-control-size); }
+    .dn-discovery-toggle strong { display: block; line-height: var(--dn-leading-control); font-weight: var(--dn-weight-semibold); }
   }
 
   @media (prefers-reduced-motion: reduce) {

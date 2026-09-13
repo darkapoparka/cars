@@ -293,7 +293,7 @@
 	}
 
 	.home2-browse-cta__copy small {
-		color: #E3062F;
+		color: #e3062f;
 		font-size: 12px;
 		font-weight: 1000;
 		line-height: 1;

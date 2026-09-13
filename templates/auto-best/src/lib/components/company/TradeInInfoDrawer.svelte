@@ -1,9 +1,7 @@
 <script lang="ts">
-  import { tick, onDestroy } from 'svelte';
-  import { lockPageScroll, trapDialogTab } from '$lib/ui/overlay';
-  let releaseScroll: (() => void) | undefined;
-  onDestroy(() => releaseScroll?.());
+  import { tick } from 'svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import { brand } from '$config/brand';
 
   let dialog: HTMLDialogElement;
   let trigger: HTMLButtonElement;
@@ -14,11 +12,9 @@
 
   async function openDrawer() {
     dragOffset = 0;
-    if (dialog.open) return;
-    releaseScroll = lockPageScroll();
     dialog.showModal();
     await tick();
-    heading.focus();
+    heading.focus({ preventScroll: true });
   }
 
   function closeDrawer() {
@@ -26,10 +22,9 @@
   }
 
   function handleClose() {
-    releaseScroll?.();
     dragOffset = 0;
     dragging = false;
-    trigger?.isConnected && trigger.focus();
+    trigger?.isConnected && trigger.focus({ preventScroll: true });
   }
   function startPeekDrag(event: PointerEvent) {
     dragStart = event.clientY;
@@ -82,7 +77,7 @@
   class="dn-tradein-info-dialog"
   bind:this={dialog}
   aria-labelledby="tradein-info-title"
-  onclose={handleClose} onkeydown={trapDialogTab}
+  onclose={handleClose}
   onclick={(event) => { if (event.target === event.currentTarget) closeDrawer(); }}
 >
   <div class="dn-tradein-info-sheet" class:dragging style:transform={`translateY(${dragOffset}px)`}>
@@ -104,45 +99,49 @@
     </header>
 
     <div class="dn-tradein-info-sheet__body">
-      <section class="dn-tradein-info-group" aria-labelledby="tradein-prepare-title">
-        <h3 id="tradein-prepare-title">Подготви</h3>
-        <div class="dn-tradein-info-list">
-          <div><Icon name="car" size={19} /><p><strong>Данни за автомобила</strong><span>Марка, модел, година и пробег.</span></p></div>
-          <div><Icon name="message" size={19} /><p><strong>Снимки и състояние</strong><span>Екстериор, интериор и видими забележки.</span></p></div>
-          <div><Icon name="tag" size={19} /><p><strong>Цена, ако имаш ориентир</strong><span>Полето е по желание и не е автоматична оценка.</span></p></div>
-        </div>
-      </section>
-
-      <section class="dn-tradein-info-group" aria-labelledby="tradein-next-title">
-        <h3 id="tradein-next-title">След това</h3>
-        <ol class="dn-tradein-info-steps">
-          <li><span>1</span><p><strong>Попълваш автомобила</strong><span>Данните остават на устройството, докато не решиш да ги споделиш.</span></p></li>
-          <li><span>2</span><p><strong>Споделяш или се обаждаш</strong><span>Ти избираш начина за контакт с екипа.</span></p></li>
-          <li><span>3</span><p><strong>Обсъждате конкретния автомобил</strong><span>Следващата стъпка зависи от състоянието и сделката.</span></p></li>
+      <section class="dn-tradein-info-group dn-tradein-info-prepare" aria-labelledby="tradein-prepare-title">
+        <h3 id="tradein-prepare-title">Какво да подготвиш</h3>
+        <ol class="dn-tradein-info-list">
+          <li><span aria-hidden="true">1.</span><p><strong>Данни за автомобила</strong><span>Марка, модел, година и пробег.</span></p></li>
+          <li><span aria-hidden="true">2.</span><p><strong>Снимки и състояние</strong><span>Отвън, отвътре и забележки.</span></p></li>
+          <li><span aria-hidden="true">3.</span><p><strong>Желана цена</strong><span>По желание — това не е оценка.</span></p></li>
         </ol>
       </section>
 
+      <section class="dn-tradein-info-group dn-tradein-info-process" aria-labelledby="tradein-next-title">
+        <h3 id="tradein-next-title">Как продължаваме</h3>
+        <ol class="dn-tradein-info-steps">
+          <li><span aria-hidden="true">1.</span><p><strong>Попълваш и преглеждаш данните.</strong></p></li>
+          <li><span aria-hidden="true">2.</span><p><strong>Споделяш ги или се обаждаш.</strong></p></li>
+          <li><span aria-hidden="true">3.</span><p><strong>Обсъждаме автомобила и условията.</strong></p></li>
+        </ol>
+      </section>
+
+      <footer class="dn-tradein-info-actions">
+        <button type="button" onclick={closeDrawer}>Към автомобила <Icon name="arrow-right" size={18} /></button>
+        <a href={brand.phoneHref}><Icon name="phone" size={18} />Обади се</a>
+      </footer>
     </div>
   </div>
 </dialog>
 
 <style>
-  .dn-tradein-info-drawer { width: fit-content; margin: 16px auto 0; }
+  .dn-tradein-info-drawer { width: fit-content; margin: var(--dn-space-4) auto 0; }
   .dn-tradein-info-drawer__peek {
     position: relative;
     display: inline-flex;
     min-height: 44px;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 9px 16px;
+    gap: var(--dn-space-2);
+    padding: var(--dn-space-2) var(--dn-space-4);
     border: 0;
     border-radius: var(--dn-radius-button);
-    background: #171a1f;
-    color: #fff;
+    background: var(--dn-ink);
+    color: var(--dn-white);
     font: inherit;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
     cursor: pointer;
   }
   .dn-tradein-info-drawer__peek :global(svg) { transform: rotate(180deg); }
@@ -157,20 +156,20 @@
     margin: auto;
     padding: 0;
     border: 0;
-    border-radius: 24px;
+    border-radius: var(--dn-radius-lg);
     background: transparent;
-    color: #fff;
+    color: var(--dn-ink);
     overflow: visible;
   }
-  .dn-tradein-info-dialog::backdrop { background: rgba(8,10,14,.88); backdrop-filter: blur(3px); }
+  .dn-tradein-info-dialog::backdrop { background: rgba(8,10,14,.52); backdrop-filter: blur(3px); }
   .dn-tradein-info-sheet {
     display: flex;
     max-height: min(620px, 70dvh);
     flex-direction: column;
     overflow: hidden;
     border: 0;
-    border-radius: 24px;
-    background: #171a1f;
+    border-radius: var(--dn-radius-lg);
+    background: var(--dn-white);
     box-shadow: none;
     transition: transform 180ms cubic-bezier(.2,.8,.2,1);
   }
@@ -180,97 +179,88 @@
     width: 100%;
     min-height: 24px;
     place-items: center;
-    padding: 7px 0 2px;
+    padding: var(--dn-space-2) 0 var(--dn-space-half);
     border: 0;
-    background: #171a1f;
+    background: var(--dn-white);
     cursor: grab;
     touch-action: none;
   }
-  .dn-tradein-info-sheet__grabber span { width: 42px; height: 4px; border-radius: 999px; background: #737a84; }
+  .dn-tradein-info-sheet__grabber span { width: 42px; height: 4px; border-radius: var(--dn-pill); background: var(--dn-muted); }
   .dn-tradein-info-sheet__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
-    padding: 4px 20px 16px;
-    background: #171a1f;
-    color: #fff;
+    gap: var(--dn-space-3);
+    padding: var(--dn-space-1) var(--dn-space-5) var(--dn-space-4);
+    background: var(--dn-white);
+    color: var(--dn-ink);
   }
-  .dn-tradein-info-sheet__header h2 { margin: 0; color: #fff; font-size: 23px; font-weight: 700; line-height: 1.15; letter-spacing: -.025em; }
+  .dn-tradein-info-sheet__header h2 { margin: 0; color: var(--dn-ink); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
   .dn-tradein-info-sheet__header h2:focus { outline: none; }
   .dn-tradein-info-sheet__close {
     display: grid;
-    width: 42px;
-    height: 42px;
-    flex: 0 0 42px;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
     place-items: center;
     border: 0;
     border-radius: 50%;
-    background: #2a2e35;
-    color: #fff;
+    background: var(--dn-surface);
+    color: var(--dn-ink);
     cursor: pointer;
   }
   .dn-tradein-info-sheet__body {
     display: grid;
     min-height: 0;
-    gap: 18px;
-    padding: 0 16px 20px;
+    gap: var(--dn-space-5);
+    padding: 0 var(--dn-space-4) var(--dn-space-5);
     overflow-y: auto;
-    background: #171a1f;
-    color: #fff;
+    background: var(--dn-white);
+    color: var(--dn-ink);
     overscroll-behavior: contain;
   }
-  .dn-tradein-info-group { display: grid; gap: 10px; }
-  .dn-tradein-info-group h3 { margin: 0; color: #cdd2d8; font-size: 14px; font-weight: 700; line-height: 1.25; letter-spacing: .01em; text-align: center; }
-  .dn-tradein-info-list { display: grid; gap: 2px; margin: 0; padding: 6px; border-radius: 18px; background: #20242a; }
-  .dn-tradein-info-list > div {
-    display: grid;
-    grid-template-columns: 36px minmax(0,1fr);
-    align-items: center;
-    gap: 10px;
-    min-height: 50px;
-    padding: 8px 10px;
-    border-radius: 12px;
-    background: transparent;
-  }
-  .dn-tradein-info-list > div > :global(svg) { box-sizing: content-box; width: 18px; height: 18px; margin: 0; padding: 7px; border-radius: 10px; background: #2a2f36; color: #d6dbe1; }
+  .dn-tradein-info-group { display: grid; gap: var(--dn-space-3); }
+  .dn-tradein-info-group h3 { margin: 0; color: var(--dn-ink); font-size: var(--dn-text-lead); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); text-align: left; }
+  .dn-tradein-info-list { display: grid; gap: var(--dn-space-4); margin: 0; padding: 0; background: transparent; list-style: none; }
+  .dn-tradein-info-list > li { display: block; min-height: 50px; }
   .dn-tradein-info-list p,
-  .dn-tradein-info-steps p { display: grid; gap: 2px; margin: 0; }
+  .dn-tradein-info-steps p { display: contents; }
   .dn-tradein-info-list strong,
-  .dn-tradein-info-steps strong { color: #fff; font-size: 13px; font-weight: 700; line-height: 1.35; }
-  .dn-tradein-info-list p > span,
-  .dn-tradein-info-steps p > span { color: #aeb5bf; font-size: 12px; line-height: 1.45; }
-  .dn-tradein-info-steps { display: grid; gap: 2px; margin: 0; padding: 6px; border-radius: 18px; background: #20242a; list-style: none; }
-  .dn-tradein-info-steps li { display: grid; grid-template-columns: 28px minmax(0,1fr); align-items: center; gap: 10px; min-height: 50px; padding: 8px 10px; border-radius: 12px; background: transparent; }
-  .dn-tradein-info-steps li > span {
-    display: grid;
-    width: 24px;
-    height: 24px;
-    place-items: center;
-    border-radius: 50%;
-    background: #fff;
-    color: #171a1f;
-    font-size: 11px;
-    font-weight: 750;
-  }
+  .dn-tradein-info-steps strong { color: var(--dn-ink); font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); }
+  .dn-tradein-info-list p > span { display: block; margin-top: var(--dn-space-half); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
+  .dn-tradein-info-steps { display: grid; gap: var(--dn-space-4); margin: 0; padding: 0; background: transparent; list-style: none; }
+  .dn-tradein-info-steps li { display: block; }
+  .dn-tradein-info-list li > span, .dn-tradein-info-steps li > span { margin-inline-end: var(--dn-space-2); font-variant-numeric: tabular-nums; color: var(--dn-ink); font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); }
+  .dn-tradein-info-prepare { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-mobile-canvas); color: var(--dn-ink); gap: var(--dn-space-3); }
+  .dn-tradein-info-prepare h3 { color: var(--dn-ink); }
+  .dn-tradein-info-prepare strong { color: var(--dn-ink); }
+  .dn-tradein-info-prepare p > span { color: var(--dn-muted); }
+  .dn-tradein-info-sheet__header, .dn-tradein-info-sheet__grabber { flex-shrink: 0; }
+  .dn-tradein-info-actions { display: grid; grid-template-columns: 1fr 1fr; gap: var(--dn-space-3); padding-top: 0; }
+  .dn-tradein-info-actions :is(button, a) { display: flex; align-items: center; justify-content: center; gap: var(--dn-space-2); min-height: 44px; padding: var(--dn-space-3) var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-ink); font: inherit; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); text-decoration: none; cursor: pointer; }
+  .dn-tradein-info-actions button { background: var(--dn-red); color: var(--dn-white); border-color: transparent; }
+  .dn-tradein-info-actions button:hover { background: var(--dn-red-hover); }
+  .dn-tradein-info-actions a:hover { background: var(--dn-surface); }
+
   @media (max-width: 767px) {
     .dn-tradein-info-drawer {
       position: fixed;
       left: 50%;
-      bottom: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom) + 10px);
+      bottom: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom));
       z-index: 1890;
-      width: min(230px, calc(100% - 72px));
+      width: min(300px, calc(100% - 48px));
       margin: 0;
       transform: translateX(-50%);
     }
     .dn-tradein-info-drawer__peek {
       width: 100%;
-      min-height: 45px;
-      padding: 14px 14px 7px;
-      border: 0;
-      border-radius: 16px 16px 0 0;
-      background: #171a1f;
-      color: #fff;
+      min-height: 52px;
+      padding: var(--dn-space-4) var(--dn-space-4) var(--dn-space-2);
+      border: 1px solid var(--dn-ink);
+      border-bottom: 0;
+      border-radius: var(--dn-radius) var(--dn-radius) 0 0;
+      background: var(--dn-ink);
+      color: var(--dn-white);
       box-shadow: none;
     }
     .dn-tradein-info-drawer__handle {
@@ -280,8 +270,8 @@
       display: block;
       width: 34px;
       height: 3px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.58);
+      border-radius: var(--dn-pill);
+      background: var(--dn-muted-on-ink);
       transform: translateX(-50%);
     }
     .dn-tradein-info-dialog {
@@ -289,21 +279,19 @@
       width: 100%;
       max-height: calc(100dvh - max(24px, env(safe-area-inset-top)));
       margin: 0;
-      border-radius: 24px 24px 0 0;
+      border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
     }
     .dn-tradein-info-sheet {
       max-height: calc(100dvh - max(24px, env(safe-area-inset-top)));
-      border-radius: 24px 24px 0 0;
+      border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
     }
-    .dn-tradein-info-sheet__header { padding: 4px 16px 12px; }
-    .dn-tradein-info-sheet__header h2 { font-size: 21px; }
-    .dn-tradein-info-sheet__body { gap: 18px; padding: 0 16px max(18px, env(safe-area-inset-bottom)); }
+    .dn-tradein-info-sheet__header { padding: var(--dn-space-1) var(--dn-space-4) var(--dn-space-3); }
+    .dn-tradein-info-sheet__body { gap: var(--dn-space-5); padding: 0 var(--dn-space-4) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
   }
 
-  @media (max-width: 374px) {
-    .dn-tradein-info-drawer { width: min(218px, calc(100% - 68px)); }
-    .dn-tradein-info-drawer__peek { font-size: 12px; }
-  }
+  .dn-tradein-info-process { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-ink); }
+  .dn-tradein-info-process :is(h3, strong) { color: var(--dn-white); }
+  .dn-tradein-info-process li > span { color: var(--dn-white); }
 
   @media (prefers-reduced-motion: reduce) {
     .dn-tradein-info-sheet { transition: none; }

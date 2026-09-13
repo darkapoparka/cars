@@ -1,28 +1,40 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
-const location = 'гр. София, Студентски град, ул. Атанас Манчев 18';
+const phoneE164 = '+359877733110';
+const city = 'София';
+const shortName = 'Day Night Auto';
+const district = 'Студентски град';
+const street = 'ул. Атанас Манчев 18';
+const location = `гр. ${city}, ${district}, ${street}`;
 
 export const daynightSite = {
 	name: 'DAY NIGHT AUTO GROUP',
-	shortName: 'Day Night Auto',
+	shortName,
+	city,
+	region: city,
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
+	phoneE164,
+	...contactLinks(phoneE164),
 	phone: '0877733110',
 	phoneLabel: '0877 733 110',
 	email: '',
 	location,
-	locationShort: 'Студентски град, София',
+	locationShort: `${district}, ${city}`,
+	locationLandmark: `${district} · ${street}`,
 	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
-	mapUrl:
-		'https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018',
-	mapLabel: 'Day Night Auto Group, София, България',
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
 	sourceInventory: 'https://daynight.mobile.bg/',
-	inventoryCount: 40,
-	logoLight: '/brand/daynight-logo-generated.png',
-	logoDark: '/brand/daynight-logo-generated.png',
+	logoLight: '/brand/daynight-logo.webp',
+	logoDark: '/brand/daynight-logo.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

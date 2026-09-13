@@ -22,8 +22,4 @@
 	/>
 </svelte:head>
 
-<FaqsCleanPage
-	groups={data.groups}
-	header={data.header}
-	footer={data.footer}
-/>
+<FaqsCleanPage groups={data.groups} header={data.header} footer={data.footer} />

@@ -1,4 +1,11 @@
-export type DayNightArticleCategory = 'Новини' | 'Съвети' | 'Финансиране' | 'Документи' | 'Марки' | 'Покупка' | 'Продажба';
+export type DayNightArticleCategory =
+	| 'Новини'
+	| 'Съвети'
+	| 'Финансиране'
+	| 'Документи'
+	| 'Марки'
+	| 'Покупка'
+	| 'Продажба';
 export type DayNightArticleKind = 'news' | 'guide';
 
 export type DayNightArticleSection = {

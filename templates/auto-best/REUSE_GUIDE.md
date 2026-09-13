@@ -2,6 +2,12 @@
 
 The normal workflow is to clone the template, replace its business content and media, and keep the established page layouts and interactions. The result is an independent client project.
 
+## Logo assets
+
+Set both `brand.logo` (light backgrounds) and `brand.logoOnDark` (dark backgrounds) in `src/lib/config/brand.ts`. Both assets must be transparent. For a black-only lead logo, create a faithful white variant; preserve its shape, lettering, proportions and clear space. Use an approved reversed logo if available. Do not compensate for a dark logo with a white rectangle, pill, border, shadow or a background baked into the image.
+
+The shared header selects the light variant on mobile home/contact dark overlays and the regular variant on light headers. The white mobile menu uses the regular variant; the dark footer uses `logoOnDark`. Future dealer-logo placements must select by their actual background. Keep surrounding page/navigation surfaces intact and preserve visible keyboard focus and a minimum 44px logo-link height. Verify both assets in mobile/desktop headers, open menus and the footer before accepting a clone.
+
 ## Create the project
 
 For a standalone client repository:
@@ -54,7 +60,7 @@ Replace sample records with the client inventory. Keep stable positive numeric I
 
 Review `listingFilterOptions` after changing inventory: some versions derive choices while the standalone baseline has explicit arrays for several facets. Body and brand artwork coverage is separate from current stock. Keep an intentional zero-results state for categories without matches.
 
-The local refactored records include explicit `model` and `version` fields and accept a record-level `verification` value. Supply `evidenceUrl` for a verified vehicle. Those fields also feed model/version discovery and published-mode validation.
+In the standalone baseline, the inventory mapper currently marks all output records as sample and derives model options from titles. Supporting verified records or explicit models requires changing that mapper/domain boundary intentionally; changing only `verifiedInventory` does not do it.
 
 ## Images and generated banners
 
@@ -83,3 +89,5 @@ Run the documented checks, then inspect home, inventory, a vehicle detail, About
 Search the retained source for `Auto Best`, `Day & Night`, `day-night`, the old phone/address, social handles and video IDs. Review rather than blindly replacing filenames: historical provenance may retain names, while active content must match the client. Visual inspection is necessary for image-baked identity.
 
 Keep the site in preview mode during preparation. Build and indexing configuration are in [Deployment](docs/DEPLOYMENT.md). Record the actual template commit used for the copy so later shared fixes can be selectively ported without overwriting client changes.
+
+Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).

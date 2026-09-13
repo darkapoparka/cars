@@ -31,7 +31,7 @@ import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace
 
 const getDealerNavigationItemClassName = (active: boolean) =>
   cn(
-    "relative flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-1 px-0.5 text-[12px] leading-4 transition-colors focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px]",
+    "relative flex min-h-[60px] min-w-0 touch-manipulation flex-col items-center justify-center gap-1 px-0.5 text-[12px] leading-4 transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
     active
       ? "font-semibold text-[var(--lead-site-accent)]"
       : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
@@ -102,7 +102,7 @@ export const DealerBottomNav = ({
     <>
       <nav
         aria-label={navigationLabel}
-        className="fixed inset-x-0 bottom-0 z-40 border-zinc-200/70 border-t bg-white lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 border-zinc-200/50 border-t bg-white/80 backdrop-blur-lg lg:hidden"
         data-slot="dealer-bottom-nav"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
@@ -128,7 +128,7 @@ export const DealerBottomNav = ({
             );
           })}
           <button
-            aria-controls="dealer-mobile-menu"
+            aria-controls={menuOpen ? "dealer-mobile-menu" : undefined}
             aria-expanded={menuOpen}
             aria-haspopup="dialog"
             className={getDealerNavigationItemClassName(
@@ -202,12 +202,12 @@ export const DealerBottomNav = ({
             >
               <a
                 aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-                className="flex min-h-12 min-w-0 items-center justify-center gap-2 rounded-xl bg-zinc-950 px-2.5 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
                 href={leadSite.phoneHref}
                 onClick={() => setMenuOpen(false)}
               >
                 <DealerUiIcon className="size-5 shrink-0" name="phone" />
-                <span className="whitespace-nowrap font-semibold text-[14px] tabular-nums leading-5">
+                <span className="whitespace-nowrap font-medium text-body tabular-nums">
                   {isBg ? "Обади се" : "Call us"}
                 </span>
               </a>
@@ -217,14 +217,14 @@ export const DealerBottomNav = ({
                     ? `Отворете картата: ${leadSite.address}`
                     : "Open showroom map"
                 }
-                className="flex min-h-12 min-w-0 items-center justify-center gap-2 rounded-xl bg-zinc-950 px-2.5 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
                 href={leadSite.mapsUrl}
                 onClick={() => setMenuOpen(false)}
                 rel="noreferrer"
                 target="_blank"
               >
                 <DealerUiIcon className="size-5 shrink-0" name="location" />
-                <span className="min-w-0 text-center font-semibold text-[14px] leading-5">
+                <span className="min-w-0 whitespace-nowrap text-center font-medium text-body">
                   {isBg ? "Посети ни" : "Visit us"}
                 </span>
               </a>
@@ -340,7 +340,7 @@ export const BottomMarketplaceNav = ({
             <Link
               aria-current={item.active ? "page" : undefined}
               className={cn(
-                "flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 font-medium text-micro transition-colors",
+                "flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 font-medium text-[11px] leading-[14px] transition-colors",
                 item.active
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"

@@ -250,13 +250,12 @@ export const vehicleDetailFromVehicle = (
 	locale: Locale = 'en'
 ): AuxeroVehicleDetailData => {
 	const consultant =
-		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ??
-		daynightConsultants[0];
+		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0];
 	const copy = getMessages(locale).detail;
 	const fallbackImage = vehicleImageFallback(vehicle);
 	const primaryImage = vehicleImageOverrides[vehicle.slug] ?? vehicle.image;
 	const galleryImages = Array.from(
-		new Set([primaryImage, ...vehicle.gallery, ...vehicle.images].filter(Boolean))
+		new Set([...vehicle.gallery, ...vehicle.images, primaryImage].filter(Boolean))
 	).slice(0, 7);
 
 	return {

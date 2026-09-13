@@ -1,4 +1,5 @@
-export const daynightTeamDisclosure = 'Демо профили и портрети: примерни роли, а не потвърдени членове на екипа.';
+export const daynightTeamDisclosure =
+	'Демо профили и портрети: примерни роли, а не потвърдени членове на екипа.';
 
 export type DayNightTeamMember = {
 	slug: string;
@@ -14,20 +15,20 @@ export type DayNightTeamMember = {
 export const daynightTeam: DayNightTeamMember[] = [
 	{
 		slug: 'prodazhbi-showroom',
-		name: "Екип продажби Day Night Auto",
+		name: 'Екип продажби Day Night Auto',
 		role: 'Консултант продажби',
-		phone: "0877733110",
+		phone: '0877733110',
 		email: '',
 		image: '/assets/images/pages/daynight-team-sales-v1.webp',
 		bio: 'Екипът съдейства при избор на автомобил, първи оглед, сравнение на наличните предложения и подреден процес до сделката.',
 		detail:
-			"Консултантите на Day Night Auto помагат с избор според бюджет, пробег, оборудване и реална наличност. При нужда подготвят оглед, запазване на автомобил и координация на следващите стъпки."
+			'Консултантите на Day Night Auto помагат с избор според бюджет, пробег, оборудване и реална наличност. При нужда подготвят оглед, запазване на автомобил и координация на следващите стъпки.'
 	},
 	{
 		slug: 'barter-i-ocenka',
 		name: 'Екип бартер и оценка',
 		role: 'Оценка, покупка и бартер',
-		phone: "0877733110",
+		phone: '0877733110',
 		email: '',
 		image: '/assets/images/pages/daynight-team-evaluation-v1.webp',
 		bio: 'Екипът приема запитвания за продажба или замяна на автомобил и подготвя реалистична оценка според пазара и състоянието.',
@@ -38,7 +39,7 @@ export const daynightTeam: DayNightTeamMember[] = [
 		slug: 'dokumenti-finansirane',
 		name: 'Екип документи и финансиране',
 		role: 'Документи и финансиране',
-		phone: "0877733110",
+		phone: '0877733110',
 		email: '',
 		image: '/assets/images/pages/daynight-team-documents-v1.webp',
 		bio: 'Екипът координира документи, регистрация, разсрочено плащане и подготовка за предаване на автомобила.',
@@ -49,7 +50,7 @@ export const daynightTeam: DayNightTeamMember[] = [
 		slug: 'klientski-zapitvania',
 		name: 'Екип клиентски заявки',
 		role: 'Огледи и следващи стъпки',
-		phone: "0877733110",
+		phone: '0877733110',
 		email: '',
 		image: '/assets/images/pages/daynight-team-customer-v1.webp',
 		bio: 'Екипът подготвя запитванията, уточнява часове за оглед и държи комуникацията подредена преди посещение на място.',

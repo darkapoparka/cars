@@ -48,7 +48,7 @@ All parameters belong to `/listing-grid`. Values are parsed by `data/listing.ts`
 
 Use `URLSearchParams` when building links so spaces, Unicode and repeated values are encoded correctly. Changing make clears its dependent model. Form controls preserve unrelated applied parameters.
 
-The current local source additionally supports `price_min_exclusive=1`. Budget links use it to make adjacent bands non-overlapping. Keep it with its minimum-price value when preserving the applied filter state.
+The committed standalone baseline has no exclusive-price-bound parameter. Its minimum and maximum price comparisons are inclusive.
 
 ## Detail return links
 
@@ -75,7 +75,7 @@ The optional `vehicle` parameter is resolved only for inspection/leasing. For ex
 
 Import can receive `vehicle_url`, for example `/contact?topic=import&vehicle_url=<encoded-https-url>`. The value is normalized by `resolveImportUrl`; no remote advert content is fetched. The `#contact-intent` fragment targets the enquiry section.
 
-The current local source also carries `down_payment` and `term` for a known vehicle. For example, `/contact?topic=leasing&vehicle=1&down_payment=10000&term=24` displays the valid selection; the detail return can restore it. Allowed terms are 12, 24, 36, 48 and 60 months. The deposit must be nonnegative, no greater than the price, and at most two decimal places. Invalid selection data is ignored rather than becoming an offer.
+The standalone baseline finance link carries `topic=leasing` and `vehicle`, but does not carry the calculator deposit or term. Those inputs remain local to the calculator in that source version.
 
 ## Enquiry behavior
 
