@@ -1,6 +1,6 @@
 # Lead build guardrails
 
-Owner-requested standard, 8 September 2026. Read this with the root `AGENTS.md`, `docs/WORKFLOW.md`, `catalog.json` and the selected masters' `TEMPLATE.md` files before any lead implementation. Current explicit owner instructions determine scope. These rules are acceptance requirements, not an automated QA system.
+Owner-requested standard, 8 September 2026; branding/template-preservation rules tightened 13 September 2026. Read this with the root `AGENTS.md`, `docs/WORKFLOW.md`, `catalog.json` and the selected masters' `TEMPLATE.md` files before any lead implementation. Current explicit owner instructions determine scope. These rules are acceptance requirements, not an automated QA system.
 
 The old multi-session campaign is closed; its execution contract and assignments remain historical evidence. [WORKFLOW](WORKFLOW.md) owns current implementation and [LEAD-PUBLISHING](LEAD-PUBLISHING.md) owns publication. A research record is not application data, a sale, a contact event or a passed check.
 
@@ -22,7 +22,7 @@ Record current source URLs and actual observation dates. Historical advertisemen
 
 ## 3. Inspect branding visually — mandatory
 
-Inspect the rendered dealer website/profile, its header/banner images and, where useful, published signage, social profile images and listing watermarks. Save a source URL plus a screenshot or image reference. Text-only page extraction can omit the logo. Do not infer 'no logo' from missing parsed text or missing downloadable brand guidelines.
+Logo research is a completion prerequisite. Inspect the rendered dealer website/profile and run visual public-source checks using browser/image search and business databases/listings (including Google results where accessible), plus marketplace profiles, social profile images, published signage, header/banner imagery and listing watermarks where useful. Save the source URL plus a screenshot or image reference. Text-only page extraction can omit the logo. Do not infer 'no logo' from missing parsed text, a missing downloadable brand guide or a single failed source.
 
 Confirm that each asset belongs to the same business. Do not mistake a marketplace badge, vehicle manufacturer's emblem, nearby dealer or stock photo for the dealer's logo. A blurred but recognizable dealer banner is existing branding; it is not a reason to substitute a generic CSS/text label.
 
@@ -30,19 +30,20 @@ Keep these concepts separate in the facts/asset notes: `publishedBranding`, `sou
 
 ### Required logo decision
 
-1. Use a suitable, permitted original logo when available. Optimize it without changing the identity.
-2. When the only usable reference is blurry/dated, preserve its recognizable name, lettering character, dominant colors and overall identity in a professional refresh. The owner authorizes image-generation-assisted concepts for this campaign. Use image generation for the creative recreation when needed and available; do not replace that step with a plain bold Arial SVG and call it finished.
-3. When no recognizable branding can be found after documented visual checks, create a professional, clearly identified proposal concept under the owner's authorization, not a purported historical logo. A temporary text label is allowed during work only; it is not final brand acceptance.
+1. Use a suitable, permitted original logo when available. Optimize it without changing the identity. Do not generate a different identity merely because image generation is available.
+2. When the recognizable published logo is too blurry, low-resolution, dated or otherwise unsuitable for the required UI surfaces, preserve its recognizable business name, lettering character, dominant colors and overall identity in a professional refresh. Use the available image-generation tool for the creative recreation. This step is mandatory when a refresh is required; do not skip it for convenience or replace it with a CSS/text/font/SVG workaround.
+3. When no recognizable branding can be found after the documented visual checks above, create a professional, clearly identified proposal concept with the available image-generation tool under the owner's authorization, not a purported historical logo. A temporary text label may exist during implementation only; it cannot satisfy final acceptance.
+4. If required image generation cannot be completed, record the precise branding blocker and keep the dealer build incomplete. Do not silently downgrade to a homemade text logo or other workaround and call it finished.
 
-For an edit/recreation tool call, provide an actual usable image target supported by the tool. Do not supply an opaque invented image ID, claim an inaccessible asset was inspected, or claim a generation occurred when it did not. If the reference cannot be used by that tool, use a permitted original asset directly or report the precise asset blocker. Do not bypass tool restrictions.
+For an edit/recreation tool call, provide an actual usable image target supported by the tool. Do not supply an opaque invented image ID, claim an inaccessible asset was inspected, or claim a generation occurred when it did not. If the reference cannot be used directly by the image tool, use it as visual reference only where permitted and preserve a suitable original asset when that is the correct decision. Do not bypass tool restrictions.
 
 ### Finish the asset, then integrate it
 
-Inspect spelling (including Cyrillic/Arabic where applicable), letter shapes, spacing, small-size legibility, stray pixels, unwanted backgrounds and transparency. No fake checkerboard transparency, giant invisible margins, clipping, stretched lettering, unwanted slogans or watermarks. Generate intentional light/dark treatments of the same identity, not three unrelated dealer logos.
+Inspect spelling (including Cyrillic/Arabic where applicable), letter shapes, spacing, small-size legibility, stray pixels, unwanted backgrounds and transparency. No fake checkerboard transparency, giant invisible margins, clipping, stretched lettering, unwanted slogans or watermarks. Generate intentional light/dark treatments of the same identity when the design actually requires them, not three unrelated dealer logos.
 
-Where vector output is appropriate, use actual outlined geometry and inspect the trace. An SVG containing an embedded bitmap is not resolution-independent vector art. Never describe a font-dependent text fallback as an outlined logo. Preserve the generated source and its generation ID/hash when available; retain published-source attribution and describe the changes without asserting unverified rights or dealership approval.
+For this dealer workflow, final integrated primary logo treatments must be committed raster image assets such as transparent PNG/WebP and appropriate favicon/touch-icon exports. An official/source SVG may be retained as provenance or a working source when permitted, but an SVG—especially a text/font-based SVG—is not the final dealer-branding workaround. CSS-only wordmarks, quick SVG text labels, font tricks, HTML text substitutes and generated placeholder badges cannot satisfy completion.
 
-Save logo, alternate-surface logo, favicon and appropriate PNG/touch-icon exports in EACH application's public/static directory. Verify the bytes were committed and all consumers use them. Check desktop/mobile headers, sticky bars, drawers, footers, dealer cards, metadata, favicons and manifests. Inspect inherited masks, filters, `srcset`, dimensions and backgrounds: Modern's old split-logo clipping was a concrete Navara integration trap. Fix consumer-specific presentation without redesigning the surrounding layout.
+Save the logo, any required alternate-surface logo, favicon and appropriate PNG/touch-icon exports in EACH application's public/static directory. Verify the bytes were committed and all consumers use them. Check desktop/mobile headers, sticky bars, drawers, footers, dealer cards, metadata, favicons and manifests in every offered design. Inspect inherited masks, filters, `srcset`, dimensions, transparent padding and backgrounds: Modern's old split-logo clipping was a concrete Navara integration trap. Fix consumer-specific presentation without redesigning the surrounding layout.
 
 ## 4. Copy actual masters and preserve the working approach
 
@@ -51,6 +52,18 @@ Use `scripts/new-client.mjs` when executable, including its dry run, then person
 Do not inherit Git metadata, deployment/CRM bindings, `.env` credentials, caches, dependencies, generated test reports, historical agent instructions/tasks, private license certificates or passed QA. Keep necessary workspace packages, manifests, lockfiles, source licenses and applicable asset provenance. Reject unsafe symlinks rather than linking applications to the masters. Record source template version and exact source commit/tree.
 
 Preserve layouts, components, routes, typography, spacing, breakpoints, navigation and interactions. Do not migrate frameworks, upgrade dependencies, add a backend, replace screens with lookalikes, or create Actions to defer copying/personalization. Change only lead data/content/assets and minimal consumer fixes needed for correctness. Masters and unrelated client folders remain unchanged.
+
+### Preserve hero composition and media behavior
+
+The template's hero is part of the master composition, not a blank canvas for each dealer. Preserve its section structure, sizing, aspect treatment, masks/overlays, object positioning, responsive behavior and intended visual hierarchy unless the owner explicitly requests shared template work.
+
+- Keep the template's existing hero media when it is a deliberate reusable design asset and no dealer-specific replacement is required by that template's content boundary.
+- If a template intentionally exposes dealer-specific hero media, select a suitable sourced/permitted dealer asset that works inside the existing composition. Do not redesign the hero around the image.
+- Do not create custom collages, replacement hero systems, arbitrary zoom/crop/object-position overrides, stretched media, invented gradients/masks or client-only layout changes simply to make a new image fit.
+- Compare the personalized hero against the exact source template at both mobile and desktop widths. Cropped faces/vehicles/logos, awkward empty areas, loss of focal subject, stretched media or materially different composition are build defects.
+- If correct dealer media cannot be found for an optional replacement slot, keep the template-safe asset/state or record the gap; do not improvise a worse hero.
+
+Normal personalization is dealer identity/logo assets, supported theme colors, sourced facts/copy/contact details, inventory/listing data, permitted vehicle media and metadata. It is not authorization to restyle sections or invent a one-off design system inside a client copy.
 
 ## 5. One fact sheet and stock/asset set for three designs
 
@@ -76,7 +89,9 @@ Unavailable forms/integrations stay demos. A local draft/share/copy action is no
 
 Run checks supported by the environment: source/data consistency, local asset paths, imports/types, lockfile installation, relevant framework checks/builds and browser review. Fix repairable issues yourself. Use retained manifests for exact runtime/package-manager versions; a successful install in one app says nothing about another. Keep full Modern dependencies and generate its local Prisma client where required without running migrations or provisioning a database.
 
-Where executable, review home/entry, inventory, a real detail, contact, desktop/mobile navigation, search/filter, gallery, dismissal/focus return and safe demo enquiry behavior at 390 and 1440 px. Review offered alternate homepages. Check image loads, overflow, console errors and selected-vehicle context. Compare the template composition before/after, not another client's content.
+Where executable, review home/entry, inventory, a real detail, contact, desktop/mobile navigation, search/filter, gallery, dismissal/focus return and safe demo enquiry behavior at 390 and 1440 px. Review offered alternate homepages. Check image loads, overflow, console errors and selected-vehicle context. Compare each personalized template against its exact source composition before/after, not another client's content.
+
+Brand/hero QA is mandatory in that browser review. At both 390 and 1440 px, inspect the hero crop/composition and every visible logo treatment in each offered design. A logo that is clipped, tiny because of excess transparent padding, unreadable, filtered incorrectly, missing, replaced by styled text, or inconsistent between variants is a failed check. A hero that is awkwardly cropped, stretched, zoomed or structurally different from the master without explicit authorization is a failed check.
 
 Label an isolated logo harness as an asset test, syntax parsing as syntax parsing, and source review as source review. None is a full application browser test, typecheck or build. Keep `.client/project.json` in the normal schema with false/unverified QA flags until corresponding app evidence exists. Do not inherit or manufacture pass flags. A local server launch is not browser acceptance.
 
@@ -93,5 +108,7 @@ Use `scripts/start-preview.ps1` where applicable to avoid source-specific fixed-
 ### Completion gate
 
 All three apps contain real independent files, coherent source-backed content and local permitted assets, and every necessary content/brand fix is implemented. Their final canonical and publishing commits match the requested delivery scope; the changed-path allowlist was checked. The handoff and per-variant evidence distinguish executed and unavailable checks. Outstanding essential branding/content/assets or known functional defects mean incomplete; unavailable full runtime QA means committed but not runtime-verified. Neither is 'finished and tested'.
+
+A build also fails this gate if any offered design ships with a workaround text/CSS/SVG logo instead of the selected committed image branding, if a required image-generation refresh/proposal was skipped, if the logo was not visually sourced/researched, or if the personalized hero no longer matches the template's intended composition at mobile and desktop widths.
 
 The owner asked for working demos, not a polished explanation of missing work. Deliver the implementation and precise evidence; never promise unattended/background completion.
