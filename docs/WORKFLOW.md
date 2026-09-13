@@ -11,18 +11,32 @@ A new dealer request includes personalization, suitable QA, a scoped source comm
 1. Resolve the business against existing client folders, registry aliases, regional research and accessible private CRM identity. Preserve stable IDs. A missing CRM connection means unknown history. Reuse existing work; do not invent a new spelling to bypass a duplicate.
 2. Select three distinct designs. Standard: `auto-best,modern,carwow`. Import-based: `auto-best,import,carwow`, when requested or justified by the real offer. Preserve an existing `dealer.json` and recorded remote/domain. Additional or legacy designs require an explicit scope and compatible packaging; the automated publisher supports these two trios.
 3. Run `node scripts/template-release.mjs discover` to report development heads, then `status`. The clone helper verifies every selected approved snapshot. Discovery does not approve a development head. Resolve release holds through [promotion](TEMPLATE-PROMOTION.md), without overwriting working template refinements.
-4. Prepare one sourced and dated dealer fact/inventory/asset pack. [Guardrails](LEAD-BUILD-GUARDRAILS.md) govern logo inspection, local assets, claims, current/historical stock and complete identity sweeps. The pack is shared input for all three apps; edit their actual typed data/configuration boundaries.
+4. Prepare one sourced and dated dealer fact/inventory/asset pack. [Guardrails](LEAD-BUILD-GUARDRAILS.md) govern mandatory visual logo research, image-generation refresh/proposal rules, final raster logo assets, local assets, claims, current/historical stock and complete identity sweeps. The pack is shared input for all three apps; edit their actual typed data/configuration boundaries.
 5. Dry-run `node scripts/new-client.mjs --client <slug> --repository <owner/repo> --preset standard --dry-run` (or `--preset import`). On the authorized build, repeat without `--dry-run`. It preserves real source/lockfiles, checks copy integrity, excludes inherited secrets/instructions and writes portable guidance plus exact source pins. It does not invent business facts or connect providers.
-6. Apply identity, approved media, services, stock, prices and contact destinations through each template's existing boundaries. Preserve layout, typography, spacing, cards, routes and interactions. Complete the identity scan across retained routes and offered homepages. A styling defect that needs shared work goes to the upstream template unless fixing it is necessary for this authorized demo.
-7. Install from the retained lockfile and documented runtime. Use `start-preview.ps1` or `start-client.ps1` with free ports. Run focused framework checks/build and [QA](QA.md). Record actual results in variant metadata and the client brief.
+6. Apply identity, approved media, services, stock, prices and contact destinations through each template's existing boundaries. Preserve layout, typography, spacing, cards, hero composition/media behavior, routes and interactions. Do not create client-only replacement hero systems or workaround CSS/text/SVG logos. Complete the identity scan across retained routes and offered homepages. A styling defect that needs shared work goes to the upstream template unless fixing it is necessary for this authorized demo.
+7. Install from the retained lockfile and documented runtime. Use `start-preview.ps1` or `start-client.ps1` with free ports. Run focused framework checks/build and [QA](QA.md). Record actual results in variant metadata and the client brief. Browser review must include hero crop/composition and logo integration for every offered design at mobile and desktop widths.
 8. Commit only this dealer's canonical source. Follow [publishing](LEAD-PUBLISHING.md) for deterministic packaging, mirror reconciliation, a non-force push, exact deployment identity and public browser checks.
 9. Update the technical registry and generated views. Retain provider, browser and owner-review limits independently; a successful local build cannot mark a deployment verified.
+
+### Branding and template preflight
+
+Before a new dealer or whole-template refresh can be called complete, confirm all of the following:
+
+- [ ] The exact approved template release was used and the template layout/composition remains recognizable and intact.
+- [ ] Hero structure and responsive crop/positioning match the master at mobile and desktop widths; no awkward zoom, clipping, stretching or improvised replacement composition was introduced.
+- [ ] Dealer branding was visually researched from public visual sources/business listings rather than inferred only from parsed text.
+- [ ] A suitable real published logo is used when available; a required low-quality-logo refresh or no-logo proposal used the available image-generation tool rather than a CSS/text/font/SVG workaround.
+- [ ] Final dealer logo treatments are committed raster image assets (for example transparent PNG/WebP plus required favicon/touch-icon exports), not temporary styled text or quick SVG labels.
+- [ ] Logo integration was checked in desktop/mobile headers, drawers/sticky navigation, footer, metadata/favicon/manifest and every offered design.
+- [ ] Inventory, copy, business facts, contact details and colors were personalized through existing template boundaries without casually redesigning reusable components.
+
+Any unchecked branding/hero item is an incomplete dealer build, not a harmless cosmetic follow-up.
 
 ## Existing dealer correction
 
 Read its manifest, brief, variant metadata and registry before editing. Confirm which source was deployed. Preserve the current offered trio, business identity and public paths. Compare unmatched publishing changes before regenerating. Make the smallest requested correction in canonical source or the shared packaging layer, verify affected journeys and complete publication only within the request's scope.
 
-A dealer does not receive newer template source automatically. Port a selected reusable fix when requested; a whole-template refresh is an explicit migration with preserved dealer content and route/interaction QA.
+A dealer does not receive newer template source automatically. Port a selected reusable fix when requested; a whole-template refresh is an explicit migration with preserved dealer content and route/interaction QA. A refresh must also repeat the branding/template preflight above so old client-specific hero or logo workarounds are not carried into the new template release.
 
 ## Fact pack and records
 
