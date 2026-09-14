@@ -129,6 +129,10 @@ async function mountSvelte(files, key, base) {
     });
   }
   const renderer = `${key}/src/lib/server/${key === 'carwow' ? 'daynight-template-renderer' : 'auxero-template'}.ts`;
+  if (!files.has(renderer)) {
+    if (key === 'carwow') return;
+    throw new Error(`Required packaging source is missing: ${renderer}`);
+  }
   edit(files, renderer, (text) => {
     const statement = key === 'carwow' ? "import { previewHtml } from '$lib/utils/preview-paths';" : "import { previewHtml, previewPath } from '$lib/utils/preview-paths';";
     if (!text.includes(statement)) text = `${statement}\n${text}`;

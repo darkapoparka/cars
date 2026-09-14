@@ -186,6 +186,15 @@ for (const middle of ['modern', 'import']) {
   });
 }
 
+test('native Carwow packages without the removed legacy renderer', async (t) => {
+  const options = await fixture(t);
+  await fs.rm(path.join(options.source, 'carwow/src/lib/server/daynight-template-renderer.ts'));
+  const result = await packageDealer(options);
+  assert.ok(result.files.includes('carwow/src/routes/+layout.svelte'));
+  assert.ok(!result.files.includes('carwow/src/lib/server/daynight-template-renderer.ts'));
+  assert.match(await fs.readFile(path.join(result.destination, 'carwow/src/routes/+layout.svelte'), 'utf8'), /localPath\(page.url.pathname\)/);
+});
+
 test('mounted paths keep assets, API, CSS, links, route comparisons and raw renderer behavior distinct', async (t) => {
   const options = await fixture(t, 'import');
   await packageDealer(options);
