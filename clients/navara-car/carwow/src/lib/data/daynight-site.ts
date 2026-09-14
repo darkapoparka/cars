@@ -10,7 +10,7 @@ const city = "Варна";
 const shortName = "Navara Car";
 const district = "Варна";
 const street = "бул. „Цар Освободител“, Кайсиева градина";
-const location = `гр. ${city}, ${district}, ${street}`;
+const location = "бул. „Цар Освободител“, Кайсиева градина, Варна";
 
 export const daynightSite = {
 	name: "Навара кар",
@@ -26,15 +26,16 @@ export const daynightSite = {
 	phoneLabel: "0899 192 300",
 	email: "",
 	location,
-	locationShort: `${district}, ${city}`,
-	locationLandmark: `${district} · ${street}`,
-	hoursLabel: "Contact the dealership before visiting.",
+	locationShort: "бул. „Цар Освободител“, Кайсиева градина",
+	locationLandmark: "бул. „Цар Освободител“, Кайсиева градина, Варна",
+	hoursLabel: "Посещения с предварителна уговорка.",
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
 	sourceInventory: "https://navara.mobile.bg/",
 	logoLight: "/navara/wordmark-light.svg",
 	logoDark: "/navara/wordmark.svg",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
@@ -90,7 +91,6 @@ export const publicNavGroups = [
 		href: '/about',
 		children: [
 			{ label: "За Navara Car", href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

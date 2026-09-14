@@ -30,7 +30,7 @@ export const brand = {
   phoneHref: "tel:+359899192300",
   addressLine,
   address: "бул. „Цар Освободител“, Кайсиева градина, Варна",
-  appointment: "Contact the dealership before visiting.",
+  appointment: "Посещения с предварителна уговорка.",
   logo: "/navara/wordmark.svg",
   logoOnDark: "/navara/wordmark.svg"
 } as const satisfies BrandConfig;

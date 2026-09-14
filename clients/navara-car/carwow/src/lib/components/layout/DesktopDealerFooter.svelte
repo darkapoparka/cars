@@ -58,23 +58,29 @@
 					<MapPin size={19} /><span>{daynightSite.location}</span><ArrowUpRight size={15} />
 				</a>
 				<div class="dealer-footer__socials" aria-label="Социални мрежи">
+{#if daynightSite.socialLinks.facebook}
 					<a
-						href="https://www.facebook.com/61566304063141/"
+						href={daynightSite.socialLinks.facebook}
 						aria-label="Facebook"
 						target="_blank"
 						rel="noopener noreferrer"
 						><img src="/assets/icons/input-facebook.svg" width="21" height="21" alt="" /></a
 					>
+					{/if}
+{#if youtubeChannelUrl}
 					<a {...youtubeLink} aria-label="YouTube"
 						><img src="/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a
 					>
+					{/if}
+{#if daynightSite.socialLinks.instagram}
 					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
+						href={daynightSite.socialLinks.instagram}
 						aria-label="Instagram"
 						target="_blank"
 						rel="noopener noreferrer"
 						><img src="/assets/icons/input-instagram.svg" width="21" height="21" alt="" /></a
 					>
+					{/if}
 				</div>
 			</div>
 		</div>

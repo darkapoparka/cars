@@ -1506,7 +1506,7 @@
   ],
   "links": [],
   "bytes": 32819241,
-  "sourceCommit": "5eac0e28241d3af1d76da4f92ae6118db8e67343",
+  "sourceCommit": "c17ed6b1fb45a4f866ba2be802cab9c5d3ae5450",
   "sourceTree": "ad91f27e1774ad08b4b0bfd0c053e37bf1ffd4c5",
   "method": "Approved Cars snapshot plus explicit dealer data/assets overlay",
   "approvedTemplate": {
@@ -1523,6 +1523,7 @@
       "src/lib/data/company.ts",
       "src/lib/data/dealer-profile.json",
       "src/lib/components/company/ShowroomMap.svelte (address adapter)",
+      "src/lib/components/home/Hero.svelte (dealer location binding)",
       "src/routes/listing-detail-v1/[id]/+page.svelte (dealer identity)",
       "navara/favicon.svg",
       "navara/icon.png",

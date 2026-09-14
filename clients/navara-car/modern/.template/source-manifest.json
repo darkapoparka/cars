@@ -6879,7 +6879,7 @@
   ],
   "links": [],
   "bytes": 98543919,
-  "sourceCommit": "5eac0e28241d3af1d76da4f92ae6118db8e67343",
+  "sourceCommit": "c17ed6b1fb45a4f866ba2be802cab9c5d3ae5450",
   "sourceTree": "affe25a64cb2ecacf60a772c311ce7514dba7b02",
   "method": "Approved Cars snapshot plus explicit dealer data/assets overlay",
   "approvedTemplate": {
@@ -6910,6 +6910,7 @@
       "packages/marketplace/inventory-csv.test.ts",
       "packages/marketplace/listing-core.test.ts",
       "packages/marketplace/mock-directory.ts",
+      "packages/marketplace-ui/components/marketplace-masthead.tsx",
       "packages/marketplace-ui/lib/account-save-flow.test.ts",
       "packages/marketplace-ui/lib/listing-truth.ts",
       "packages/marketplace-ui/lib/marketplace-control-copy.ts",
