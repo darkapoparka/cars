@@ -222,6 +222,7 @@ test('Modern keeps the locale loop guard, static-demo-only validation and tracin
   const options = await fixture(t);
   await packageDealer(options);
   const proxy = await fs.readFile(path.join(options.destination, 'modern/apps/web/proxy.ts'), 'utf8');
+  assert.match(proxy, /import \{ leadSite \} from "@repo\/marketplace"/);
   assert.match(proxy, /if \(leadSite.staticDemoMode\)/);
   assert.match(proxy, /request.headers.get\("x-dealer-locale-rewrite"\) === "1"/);
   assert.match(proxy, /requestHeaders.set\("x-dealer-locale-rewrite", "1"\)/);

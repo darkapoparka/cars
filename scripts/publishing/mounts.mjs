@@ -190,6 +190,8 @@ function mountModern(files) {
     return text;
   });
   edit(files, 'modern/apps/web/proxy.ts', (text) => {
+    const leadSiteImport = 'import { leadSite } from "@repo/marketplace";';
+    if (!text.includes(leadSiteImport)) text = `${leadSiteImport}\n${text}`;
     if (text.includes('x-dealer-locale-rewrite')) {
       if (!text.includes('NextResponse.rewrite') || !text.includes('/variant-2')) throw new Error('Unknown Modern locale rewrite shape');
       return text;
