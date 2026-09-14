@@ -93,6 +93,16 @@ function normalizeBusiness(client, slug, rawFacts) {
     rawFacts?.previewNotice, rawFacts?.status
   ].map(valueText));
   const mapsQuery = encodeURIComponent(`${name}, ${address || source.city || ''}`);
+  const isBulgarian = countryCode === 'BG';
+  const defaultHours = isBulgarian
+    ? 'Посещения с предварителна уговорка.'
+    : 'Contact the dealership before visiting.';
+  const defaultInventoryNotice = isBulgarian
+    ? 'Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.'
+    : 'Dated listing samples; confirm price and availability directly with the dealership.';
+  const defaultPreviewNotice = isBulgarian
+    ? 'Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.'
+    : 'Independent preview. Forms do not send messages and no reservation is created.';
   return {
     slug,
     name,
@@ -112,7 +122,7 @@ function normalizeBusiness(client, slug, rawFacts) {
     phoneHref,
     phoneE164: phoneHref.replace(/^tel:/, ''),
     email: firstString(source.email),
-    hours: firstString(valueText(source.hours), source.hoursDisplay, source.hoursNote, source.appointment, source.appointmentNote, 'Contact the dealership before visiting.'),
+    hours: firstString(valueText(source.hours), source.hoursDisplay, source.hoursNote, source.appointment, source.appointmentNote, defaultHours),
     website: firstString(source.website, source.sourceUrl, source.stockUrl, source.marketplaceUrl),
     inventoryUrl: firstString(source.stockUrl, source.marketplaceUrl, source.sourceProfile, source.sourceUrl, source.website),
     contactUrl: firstString(source.contactUrl, source.contactsUrl, source.contactSourceUrl, source.website),
@@ -129,8 +139,8 @@ function normalizeBusiness(client, slug, rawFacts) {
       tiktok: firstString(social.tiktok, source.tiktok)
     },
     services: asArray(source.services),
-    inventoryNotice: notices.join(' ') || 'Dated listing samples; confirm price and availability directly with the dealership.',
-    previewNotice: previewNotices.join(' ') || 'Independent preview. Forms do not send messages and no reservation is created.',
+    inventoryNotice: notices.join(' ') || defaultInventoryNotice,
+    previewNotice: previewNotices.join(' ') || defaultPreviewNotice,
     observedAt: firstString(source.observedAt, source.stockSnapshotDate, source.capturedAt, rawFacts?.observedAt),
     coordinates: source.coordinates && typeof source.coordinates === 'object' ? source.coordinates : null,
     raw: source

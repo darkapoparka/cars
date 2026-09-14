@@ -48,6 +48,7 @@ test('Auto Best refresh keeps approved hero artwork and restores Navara dealer d
     'src/lib/data/inventory.ts',
     'src/lib/data/company.ts',
     'src/lib/components/company/ShowroomMap.svelte',
+    'src/lib/components/home/Hero.svelte',
     'src/routes/listing-detail-v1/[id]/+page.svelte'
   ]);
 
@@ -68,7 +69,15 @@ test('Auto Best refresh keeps approved hero artwork and restores Navara dealer d
     'dealer personalization must not overwrite template-owned vehicle artwork');
   assert.match(fs.readFileSync(path.join(root, 'src/lib/config/brand.ts'), 'utf8'), /Навара кар/);
   assert.match(fs.readFileSync(path.join(root, 'src/lib/data/inventory.ts'), 'utf8'), /Nissan Micra 1\.0 N-Sport/);
-  assert.match(fs.readFileSync(path.join(root, 'src/lib/data/inventory.ts'), 'utf8'), /\/navara\/vehicles\//);
+  const autoBestInventory = fs.readFileSync(path.join(root, 'src/lib/data/inventory.ts'), 'utf8');
+  assert.match(autoBestInventory, /\/navara\/vehicles\//);
+  assert.match(autoBestInventory, /"body": "Hatchback"/);
+  assert.match(autoBestInventory, /"body": "SUV"/);
+  const autoBestBrand = fs.readFileSync(path.join(root, 'src/lib/config/brand.ts'), 'utf8');
+  assert.match(autoBestBrand, /Посещения с предварителна уговорка/);
+  const autoBestHero = fs.readFileSync(path.join(root, 'src/lib/components/home/Hero.svelte'), 'utf8');
+  assert.doesNotMatch(autoBestHero, /Студентски град/);
+  assert.match(autoBestHero, /brand\.addressLine/);
   assert.doesNotMatch(fs.readFileSync(path.join(root, 'src/routes/listing-detail-v1/[id]/+page.svelte'), 'utf8'), /Auto Best/);
   fs.rmSync(root, { recursive: true, force: true });
   fs.rmSync(legacy, { recursive: true, force: true });
@@ -79,7 +88,8 @@ test('Modern refresh preserves the approved hero while retaining stable fixture 
   const { root, template } = temporaryCandidate('modern', [
     hero,
     'packages/marketplace/lead-site.ts',
-    'packages/marketplace-domain/testing/mock-data.ts'
+    'packages/marketplace-domain/testing/mock-data.ts',
+    'packages/marketplace-ui/components/marketplace-masthead.tsx'
   ]);
 
   applyRefreshAdapter({
@@ -97,6 +107,8 @@ test('Modern refresh preserves the approved hero while retaining stable fixture 
   const leadSite = fs.readFileSync(path.join(root, 'packages/marketplace/lead-site.ts'), 'utf8');
   assert.match(leadSite, /name: "Навара кар"/);
   assert.match(leadSite, /heroPath: "\/lead-hero\.jpg"/);
+  const masthead = fs.readFileSync(path.join(root, 'packages/marketplace-ui/components/marketplace-masthead.tsx'), 'utf8');
+  assert.doesNotMatch(masthead, /Студентски град|Studentski grad/);
   fs.rmSync(root, { recursive: true, force: true });
 });
 
@@ -106,6 +118,12 @@ test('Carwow refresh keeps current hero composition and removes sample dealer id
     hero,
     'src/lib/data/daynight-current-inventory.ts',
     'src/lib/data/daynight-site.ts',
+    'src/lib/data/daynight-videos.ts',
+    'src/lib/components/layout/SiteChromeTopBar.svelte',
+    'src/lib/components/layout/DayNightFooter.svelte',
+    'src/lib/components/layout/DesktopDealerFooter.svelte',
+    'src/lib/components/home/mobile/mobile-home-data.ts',
+    'src/lib/components/about/DesktopAboutPage.svelte',
     'static/site.webmanifest'
   ]);
 
@@ -126,6 +144,17 @@ test('Carwow refresh keeps current hero composition and removes sample dealer id
   assert.match(inventory, /"mileage": "63 800 km"/);
   assert.doesNotMatch(inventory, /[\u00a0\u202f]/,
     'Carwow numeric strings must use parser-safe ASCII spaces');
+  const carwowPublicFiles = [
+    'src/lib/components/layout/SiteChromeTopBar.svelte',
+    'src/lib/components/layout/DayNightFooter.svelte',
+    'src/lib/components/layout/DesktopDealerFooter.svelte',
+    'src/lib/components/home/mobile/mobile-home-data.ts',
+    'src/lib/components/about/DesktopAboutPage.svelte',
+    'src/lib/data/daynight-videos.ts'
+  ].map((file) => fs.readFileSync(path.join(root, file), 'utf8')).join('\n');
+  assert.doesNotMatch(carwowPublicFiles, /Студентски град|daynight\.auto\.plovdiv|kristiankirilov|61566304063141/);
+  assert.match(site, /socialLinks: \{\"facebook\":\"\",\"instagram\":\"\",\"youtube\":\"\",\"tiktok\":\"\"\}/);
+  assert.match(carwowPublicFiles, /homeVideos: DayNightVideo\[\] = \[\]/);
   fs.rmSync(root, { recursive: true, force: true });
 });
 

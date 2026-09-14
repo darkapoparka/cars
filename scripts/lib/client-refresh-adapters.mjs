@@ -96,6 +96,20 @@ function mileageKm(listing) {
     listing.mileageUnit === 'mi' ? listing.mileageValue * 1.609344 : listing.mileageValue
   ));
 }
+function autoBestBody(bodyType, rawBody = '') {
+  const normalized = String(bodyType || '').toLowerCase();
+  const raw = String(rawBody || '').toLowerCase();
+  if (normalized === 'hatchback') return 'Hatchback';
+  if (normalized === 'sedan') return 'Sedan';
+  if (normalized === 'wagon') return 'Wagon';
+  if (normalized === 'suv') return 'SUV';
+  if (normalized === 'coupe') return 'Coupe';
+  if (normalized === 'convertible') return 'Convertible';
+  if (normalized === 'pickup') return 'Pickup Truck';
+  if (normalized === 'van' || normalized === 'minibus') return 'Minivan';
+  if (raw.includes('sportback') || raw.includes('спортбек')) return 'Sportback';
+  return rawBody || bodyType || 'Other';
+}
 function autoBestEquipment(features) {
   const joined = features.join(' ').toLowerCase();
   const result = [];
@@ -160,7 +174,7 @@ function autoBestInventory(profile) {
     evidenceUrl: item.sourceUrl || b.inventoryUrl,
     image: item.image,
     category: item.body || item.bodyType,
-    body: item.bodyType,
+    body: autoBestBody(item.bodyType, item.body),
     make: item.make,
     title: item.title,
     year: String(item.year),
@@ -299,6 +313,18 @@ function patchAutoBestMap(candidate, profile) {
   write(file, text);
 }
 
+function patchAutoBestHero(candidate) {
+  const file = path.join(candidate, 'src/lib/components/home/Hero.svelte');
+  if (!exists(file)) return null;
+  let text = read(file);
+  text = text.replace(
+    '{brand.city} · Студентски град · Оглед по уговорка',
+    '{brand.addressLine} · Оглед по уговорка'
+  );
+  write(file, text);
+  return 'src/lib/components/home/Hero.svelte (dealer location binding)';
+}
+
 function patchAutoBestIdentity(candidate) {
   const file = path.join(candidate, 'src/routes/listing-detail-v1/[id]/+page.svelte');
   let text = read(file);
@@ -320,6 +346,7 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
   write(path.join(candidate, 'src/lib/data/company.ts'), autoBestCompany(profile));
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'), `${JSON.stringify(profile, null, 2)}\n`);
   patchAutoBestMap(candidate, profile);
+  const heroFile = patchAutoBestHero(candidate);
   const identityFile = patchAutoBestIdentity(candidate);
   return [
     'src/lib/config/brand.ts',
@@ -327,6 +354,7 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
     'src/lib/data/company.ts',
     'src/lib/data/dealer-profile.json',
     'src/lib/components/company/ShowroomMap.svelte (address adapter)',
+    ...(heroFile ? [heroFile] : []),
     identityFile
   ];
 }
@@ -417,7 +445,9 @@ function patchModernDealerText(candidate, profile) {
     ['daynight-import', `${b.slug}-import`],
     ['daynight-inspection', `${b.slug}-documents`],
     ['София', b.city],
-    ['Sofia', b.city]
+    ['Sofia', b.city],
+    ['Студентски град', b.region || b.city],
+    ['Studentski grad', b.region || b.city]
   ];
   const roots = [
     path.join(candidate, 'apps/web/app'),
@@ -541,6 +571,8 @@ function patchCarwowSite(candidate, oldVariant, profile) {
   for (const [name, value] of Object.entries(constants)) {
     text = text.replace(new RegExp(`const ${name} = '[^']*';`), `const ${name} = ${q(value)};`);
   }
+  text = text.replace(/const location = `[^`]*`;/,
+    `const location = ${q(b.address || b.addressLine || b.city)};`);
   const scalar = {
     name: b.name,
     countryCode: b.countryCode,
@@ -559,10 +591,139 @@ function patchCarwowSite(candidate, oldVariant, profile) {
   for (const [key, value] of Object.entries(scalar)) {
     text = text.replace(new RegExp(`(^\\s*${key}:\\s*)'[^']*'`, 'm'), `$1${q(value)}`);
   }
+  text = text
+    .replace(/^\s*locationShort:\s*`[^`]*`,/m, `\tlocationShort: ${q(b.addressLine || b.city)},`)
+    .replace(/^\s*locationLandmark:\s*`[^`]*`,/m, `\tlocationLandmark: ${q(b.address || b.addressLine || b.city)},`);
+  const socialLinks = {
+    facebook: b.socialLinks?.facebook || '',
+    instagram: b.socialLinks?.instagram || '',
+    youtube: b.socialLinks?.youtube || '',
+    tiktok: b.socialLinks?.tiktok || ''
+  };
+  if (!text.includes('\tsocialLinks:')) {
+    text = text.replace('\n\tprimaryCta:', `\n\tsocialLinks: ${JSON.stringify(socialLinks)},\n\tprimaryCta:`);
+  }
+  text = text.replace(/\n\s*\{ label: 'Профил на автокъщата', href: '\/about\/daynight-auto-plovdiv' \},/, '');
   text = text.replace("{ label: 'За Day Night Auto', href: '/about' }",
     `{ label: ${q(textFor(profile, `За ${b.shortName || b.name}`, `About ${b.shortName || b.name}`))}, href: '/about' }`);
   write(file, text);
   return { logoLight, logoDark };
+}
+
+function replaceRange(text, startMarker, endMarker, replacement, label) {
+  const start = text.indexOf(startMarker);
+  const end = text.indexOf(endMarker, start);
+  if (start < 0 || end < 0) throw new Error(`Cannot locate ${label}`);
+  return text.slice(0, start) + replacement + text.slice(end);
+}
+
+function wrapSvelteBlock(text, needle, condition, label) {
+  const at = text.indexOf(needle);
+  if (at < 0) throw new Error(`Cannot locate ${label}`);
+  const start = text.lastIndexOf('\n\t\t\t\t\t<a', at);
+  const close = text.indexOf('</a', at);
+  const end = text.indexOf('>', close) + 1;
+  if (start < 0 || close < 0 || end <= 0) throw new Error(`Cannot bound ${label}`);
+  const block = text.slice(start + 1, end).replace(needle, condition.href);
+  return text.slice(0, start + 1) + `{#if ${condition.when}}\n${block}\n\t\t\t\t\t{/if}` + text.slice(end);
+}
+
+function patchCarwowDealerSurfaces(candidate, profile) {
+  const b = profile.business;
+  const changed = [];
+  const social = b.socialLinks || {};
+
+  const topbarFile = path.join(candidate, 'src/lib/components/layout/SiteChromeTopBar.svelte');
+  if (exists(topbarFile)) {
+    let value = read(topbarFile).replace(
+      'const locationShort = `Студентски град, ${daynightSite.city}`;',
+      'const locationShort = daynightSite.locationShort;'
+    );
+    const start = '\t\t\t<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">';
+    const end = '\n\t\t\t<div class="relative border-l border-sa-surface/25 pl-3" id="language-select">';
+    const socialMarkup = `\t\t\t{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram}
+\t\t\t\t<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">
+\t\t\t\t\t{#if daynightSite.socialLinks.facebook}
+\t\t\t\t\t\t<li><a href={daynightSite.socialLinks.facebook} aria-label="Facebook" target="_blank" rel="noopener" class={socialLinkBase + ' site-chrome-topbar__social-link--facebook'}><SiteChromeIcon name="facebook" /></a></li>
+\t\t\t\t\t{/if}
+\t\t\t\t\t{#if daynightSite.socialLinks.instagram}
+\t\t\t\t\t\t<li><a href={daynightSite.socialLinks.instagram} aria-label="Instagram" target="_blank" rel="noopener" class={socialLinkBase + ' site-chrome-topbar__social-link--instagram'}><SiteChromeIcon name="instagram" /></a></li>
+\t\t\t\t\t{/if}
+\t\t\t\t</ul>
+\t\t\t{/if}`;
+    value = replaceRange(value, start, end, socialMarkup, 'Carwow topbar social block');
+    write(topbarFile, value);
+    changed.push('src/lib/components/layout/SiteChromeTopBar.svelte');
+  }
+
+  const mobileDataFile = path.join(candidate, 'src/lib/components/home/mobile/mobile-home-data.ts');
+  if (exists(mobileDataFile)) {
+    let value = read(mobileDataFile);
+    const entries = [];
+    if (social.facebook) entries.push({ label: 'Facebook', href: social.facebook, title: 'Facebook', icon: 'facebook', external: true });
+    if (social.instagram) entries.push({ label: 'Instagram', href: social.instagram, title: 'Instagram', icon: 'instagram', external: true });
+    entries.push({ label: 'Mobile.bg', href: '__SOURCE_INVENTORY__', title: textFor(profile, 'Виж наличните автомобили в mobile.bg', 'View dealer inventory'), icon: 'mobilebg', external: true });
+    const rendered = entries.map((entry) => entry.href === '__SOURCE_INVENTORY__'
+      ? `\t{ label: ${q(entry.label)}, href: daynightSite.sourceInventory, title: ${q(entry.title)}, icon: ${q(entry.icon)}, external: true }`
+      : `\t${JSON.stringify(entry)}`).join(',\n');
+    value = value.replace(/export const footerSocialLinks: FooterSocialLink\[\] = \[[\s\S]*?\n\];/,
+      `export const footerSocialLinks: FooterSocialLink[] = [\n${rendered}\n];`);
+    write(mobileDataFile, value);
+    changed.push('src/lib/components/home/mobile/mobile-home-data.ts');
+  }
+
+  const videoFile = path.join(candidate, 'src/lib/data/daynight-videos.ts');
+  write(videoFile, `export type DayNightVideo = {\n\tid: string;\n\ttitle: string;\n\tduration: string;\n\tthumbnail: string;\n\turl: string;\n};\n\nexport const youtubeChannelUrl = ${q(social.youtube || '')};\nexport const homeVideos: DayNightVideo[] = [];\n`);
+  changed.push('src/lib/data/daynight-videos.ts');
+
+  const dealerFooterFile = path.join(candidate, 'src/lib/components/layout/DesktopDealerFooter.svelte');
+  if (exists(dealerFooterFile)) {
+    let value = read(dealerFooterFile);
+    value = wrapSvelteBlock(value, 'href="https://www.facebook.com/61566304063141/"',
+      { when: 'daynightSite.socialLinks.facebook', href: 'href={daynightSite.socialLinks.facebook}' }, 'desktop footer Facebook');
+    value = wrapSvelteBlock(value, 'href="https://www.instagram.com/daynight.auto.plovdiv/"',
+      { when: 'daynightSite.socialLinks.instagram', href: 'href={daynightSite.socialLinks.instagram}' }, 'desktop footer Instagram');
+    const youtubeAt = value.indexOf('<a {...youtubeLink}');
+    if (youtubeAt >= 0) {
+      const close = value.indexOf('</a', youtubeAt);
+      const end = value.indexOf('>', close) + 1;
+      const start = value.lastIndexOf('\n\t\t\t\t\t<a', youtubeAt);
+      const block = value.slice(start + 1, end);
+      value = value.slice(0, start + 1) + `{#if youtubeChannelUrl}\n${block}\n\t\t\t\t\t{/if}` + value.slice(end);
+    }
+    write(dealerFooterFile, value);
+    changed.push('src/lib/components/layout/DesktopDealerFooter.svelte');
+  }
+
+  const legacyFooterFile = path.join(candidate, 'src/lib/components/layout/DayNightFooter.svelte');
+  if (exists(legacyFooterFile)) {
+    const value = read(legacyFooterFile)
+      .replace("href: 'https://www.facebook.com/61566304063141/'", 'href: daynightSite.socialLinks.facebook')
+      .replace("href: 'https://www.instagram.com/daynight.auto.plovdiv/'", 'href: daynightSite.socialLinks.instagram');
+    write(legacyFooterFile, value);
+    changed.push('src/lib/components/layout/DayNightFooter.svelte');
+  }
+
+  const aboutFile = path.join(candidate, 'src/lib/components/about/DesktopAboutPage.svelte');
+  if (exists(aboutFile)) {
+    let value = read(aboutFile)
+      .replace('Разгледай автомобилите онлайн или ни посети в Студентски град.', 'Разгледай автомобилите онлайн или ни посети на {daynightSite.locationShort}.')
+      .replace('<strong>Студентски град, {daynightSite.city}</strong>', '<strong>{daynightSite.locationShort}</strong>');
+    const start = '\t\t\t\t<div class="about-hero-socials">';
+    const end = '\n\t\t\t</nav>';
+    const replacement = `\t\t\t\t{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram || youtubeChannelUrl}
+\t\t\t\t\t<div class="about-hero-socials">
+\t\t\t\t\t\t{#if daynightSite.socialLinks.facebook}<a href={daynightSite.socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><SiteChromeIcon name="facebook" /></a>{/if}
+\t\t\t\t\t\t{#if daynightSite.socialLinks.instagram}<a href={daynightSite.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><SiteChromeIcon name="instagram" /></a>{/if}
+\t\t\t\t\t\t{#if youtubeChannelUrl}<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" /></a>{/if}
+\t\t\t\t\t</div>
+\t\t\t\t{/if}`;
+    value = replaceRange(value, start, end, replacement, 'Carwow about social block');
+    write(aboutFile, value);
+    changed.push('src/lib/components/about/DesktopAboutPage.svelte');
+  }
+
+  return changed;
 }
 
 function patchDealerTextFiles(candidate, profile) {
@@ -599,6 +760,7 @@ function patchCarwow({ oldVariant, candidate, profile }) {
   write(inventory, carwowInventory(profile));
   const siteAssets = patchCarwowSite(candidate, oldVariant, profile);
   const safeContent = applyCarwowSafeContent({ candidate, profile, logo: siteAssets.logoLight || siteAssets.logoDark });
+  const dealerSurfaces = patchCarwowDealerSurfaces(candidate, profile);
   const changed = patchDealerTextFiles(candidate, profile);
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'), `${JSON.stringify(profile, null, 2)}\n`);
   return [
@@ -606,6 +768,7 @@ function patchCarwow({ oldVariant, candidate, profile }) {
     'src/lib/data/daynight-site.ts',
     'src/lib/data/dealer-profile.json',
     ...safeContent,
+    ...dealerSurfaces,
     ...changed,
     ...patchCarwowManifest(candidate, profile)
   ];
@@ -870,6 +1033,7 @@ export function applyRefreshAdapter({ key, oldVariant, candidate, profile }) {
 }
 
 export const refreshAdapterInternals = {
+  autoBestBody,
   autoBestEquipment,
   autoBestInventory,
   modernListing,
