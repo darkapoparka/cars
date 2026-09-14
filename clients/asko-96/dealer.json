@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "slug": "asko-96",
+  "dealerId": null,
+  "repository": "darkapoparka/cars-asko96",
+  "defaultBranch": "main",
+  "language": "bg",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "extraAssets": [
+    "assets"
+  ],
+  "packaging": {
+    "version": "1"
+  },
+  "switcher": {
+    "language": "bg",
+    "accent": "#2563eb"
+  }
+}

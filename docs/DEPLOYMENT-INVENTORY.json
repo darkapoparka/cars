@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-12T21:04:17.825Z",
+  "updatedAt": "2026-09-14T20:38:30.000Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.",
@@ -97,7 +97,7 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -106,7 +106,7 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -115,21 +115,26 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-albasmamotors.vercel.app/",
+        "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+        "projectName": "cars-albasmamotors",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": "ae-sharjah-al-basma-motors",
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-albasmamotors",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -142,7 +147,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+          "url": "https://cars-albasmamotors.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -255,7 +263,7 @@
           "state": "implemented-needs-local-qa",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -264,7 +272,7 @@
           "state": "implemented-needs-local-qa",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -273,21 +281,26 @@
           "state": "implemented-needs-local-qa",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-alhamooralthahabi.vercel.app/",
+        "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+        "projectName": "cars-alhamooralthahabi",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": "ae-sharjah-al-hamoor-al-thahabi",
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-alhamooralthahabi",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -300,7 +313,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+          "url": "https://cars-alhamooralthahabi.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -468,7 +484,7 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -477,7 +493,7 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -486,21 +502,26 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-asko96.vercel.app/",
+        "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+        "projectName": "cars-asko96",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-asko96",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -513,7 +534,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+          "url": "https://cars-asko96.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -548,7 +572,7 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -557,7 +581,7 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -566,21 +590,26 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-astracar.vercel.app/",
+        "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+        "projectName": "cars-astracar",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-astracar",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -593,7 +622,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+          "url": "https://cars-astracar.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -918,7 +950,7 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -927,7 +959,7 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -936,21 +968,26 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-autolife.vercel.app/",
+        "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+        "projectName": "cars-autolife",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-autolife",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -963,7 +1000,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+          "url": "https://cars-autolife.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -998,7 +1038,7 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -1007,7 +1047,7 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -1016,21 +1056,26 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-automarketvarna.vercel.app/",
+        "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+        "projectName": "cars-automarketvarna",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-automarketvarna",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -1043,7 +1088,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+          "url": "https://cars-automarketvarna.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -1078,7 +1126,7 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -1087,7 +1135,7 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -1096,21 +1144,26 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-avangardauto.vercel.app/",
+        "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+        "projectName": "cars-avangardauto",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-avangardauto",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -1123,7 +1176,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+          "url": "https://cars-avangardauto.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -1149,7 +1205,7 @@
     },
     {
       "slug": "avtoborsa-mania",
-      "name": "АВТОБОРСА МАНИЯ",
+      "name": "╨É╨Æ╨ó╨₧╨æ╨₧╨á╨í╨É ╨£╨É╨¥╨ÿ╨»",
       "localPath": "clients/avtoborsa-mania",
       "localPresent": true,
       "variants": [
@@ -1485,7 +1541,7 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -1494,7 +1550,7 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -1503,21 +1559,26 @@
           "state": "personalized-local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-championautopro.vercel.app/",
+        "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+        "projectName": "cars-championautopro",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-championautopro",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -1530,7 +1591,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+          "url": "https://cars-championautopro.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -1556,7 +1620,7 @@
     },
     {
       "slug": "chernomore-varna",
-      "name": "Автосалон Черно море",
+      "name": "╨É╨▓╤é╨╛╤ü╨░╨╗╨╛╨╜ ╨º╨╡╤Ç╨╜╨╛ ╨╝╨╛╤Ç╨╡",
       "localPath": "clients/chernomore-varna",
       "localPresent": true,
       "variants": [
@@ -1883,7 +1947,7 @@
           "state": "personalized-qa-pending",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -1892,7 +1956,7 @@
           "state": "personalized-qa-pending",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -1901,21 +1965,26 @@
           "state": "personalized-qa-pending",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-eliqauto.vercel.app/",
+        "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+        "projectName": "cars-eliqauto",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-eliqauto",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -1928,7 +1997,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+          "url": "https://cars-eliqauto.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -1963,7 +2035,7 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -1972,7 +2044,7 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -1981,21 +2053,26 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-elitautoimport.vercel.app/",
+        "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+        "projectName": "cars-elitautoimport",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-elitautoimport",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -2008,7 +2085,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+          "url": "https://cars-elitautoimport.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -2227,7 +2307,7 @@
           "state": "local-demo-verified",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -2236,7 +2316,7 @@
           "state": "local-demo-verified",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -2245,25 +2325,29 @@
           "state": "local-demo-verified",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "existing-public-preview",
+        "state": "live-discovered",
         "repository": "https://github.com/darkapoparka/excellent-cars",
         "project": "excellent-cars",
-        "url": "https://excellent-cars.vercel.app",
+        "url": "https://excellent-cars.vercel.app/",
         "verifiedAt": "2026-09-10",
         "source": "J:/excellent-cars",
-        "note": "Existing deployment source is separate from the Cars working copy."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+        "projectName": "excellent-cars",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/excellent-cars",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -2276,7 +2360,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+          "url": "https://excellent-cars.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -2394,7 +2481,7 @@
     },
     {
       "slug": "extra-car-sm",
-      "name": "ЕКСТРА КАР-СМ",
+      "name": "╨ò╨Ü╨í╨ó╨á╨É ╨Ü╨É╨á-╨í╨£",
       "localPath": "clients/extra-car-sm",
       "localPresent": true,
       "variants": [
@@ -2587,7 +2674,7 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -2596,7 +2683,7 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -2605,21 +2692,26 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-f1rstmotors.vercel.app/",
+        "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+        "projectName": "cars-f1rstmotors",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-f1rstmotors",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -2632,7 +2724,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+          "url": "https://cars-f1rstmotors.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -3529,7 +3624,7 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -3538,7 +3633,7 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -3547,21 +3642,26 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-ivoauto.vercel.app/",
+        "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+        "projectName": "cars-ivoauto",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-ivoauto",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -3574,7 +3674,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+          "url": "https://cars-ivoauto.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -3600,7 +3703,7 @@
     },
     {
       "slug": "kapitol-varna",
-      "name": "КАПИТОЛ",
+      "name": "╨Ü╨É╨ƒ╨ÿ╨ó╨₧╨¢",
       "localPath": "clients/kapitol-varna",
       "localPresent": true,
       "variants": [
@@ -3778,7 +3881,7 @@
           "state": "needs-personalization",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -3787,7 +3890,7 @@
           "state": "needs-personalization",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -3796,21 +3899,26 @@
           "state": "needs-personalization",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-kgteamauto.vercel.app/",
+        "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+        "projectName": "cars-kgteamauto",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": "bg-plovdiv-kg-team-auto",
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-kgteamauto",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -3823,7 +3931,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+          "url": "https://cars-kgteamauto.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -4043,7 +4154,7 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -4052,7 +4163,7 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -4061,21 +4172,26 @@
           "state": "local-qa-passed",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-legendauto.vercel.app/",
+        "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+        "projectName": "cars-legendauto",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-legendauto",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -4088,7 +4204,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+          "url": "https://cars-legendauto.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -4735,42 +4854,64 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "needs-personalization",
+          "state": "refreshed-needs-local-qa",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
-          "templateSource": null,
+          "entry": "/",
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+            "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+            "exportPolicy": "cars-source-v1"
+          },
           "localPresent": true
         },
         {
           "key": "modern",
-          "state": "needs-personalization",
+          "state": "refreshed-needs-local-qa",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
-          "templateSource": null,
+          "entry": "/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+            "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+            "exportPolicy": "cars-source-v1"
+          },
           "localPresent": true
         },
         {
           "key": "carwow",
-          "state": "needs-personalization",
+          "state": "refreshed-needs-local-qa",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
-          "templateSource": null,
+          "entry": "/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+            "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+            "exportPolicy": "cars-source-v1"
+          },
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "ready",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-navaracar.vercel.app/",
+        "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+        "projectName": "cars-navaracar",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z",
+        "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
+        "deploymentId": "dpl_J9ecCizS7h64kXiCC5zQdd7g7sqW"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-navaracar",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -4783,10 +4924,18 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "passed",
+          "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+          "url": "https://cars-navaracar.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z",
+          "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
+          "deploymentId": "dpl_J9ecCizS7h64kXiCC5zQdd7g7sqW"
         },
         "browser": {
-          "state": "unknown"
+          "state": "passed",
+          "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
+          "checkedAt": "2026-09-14T20:37:51.728Z",
+          "matrix": "3 variants × 4 routes × 390/1440; FAB, identity, assets, console and overflow passed"
         },
         "ownerReview": {
           "state": "unknown"
@@ -5237,14 +5386,14 @@
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
         {
           "key": "import",
           "state": "ready-for-local-review",
-          "entry": null,
+          "entry": "/variant-2/",
           "publicUrl": null,
           "templateSource": null,
           "qaRecorded": true,
@@ -5255,21 +5404,26 @@
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-outletcarsvarna.vercel.app/",
+        "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+        "projectName": "cars-outletcarsvarna",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-outletcarsvarna",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -5282,7 +5436,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+          "url": "https://cars-outletcarsvarna.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -5305,7 +5462,7 @@
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -5314,7 +5471,7 @@
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -5323,21 +5480,26 @@
           "state": "ready-for-local-review",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-perfectauto.vercel.app/",
+        "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+        "projectName": "cars-perfectauto",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-perfectauto",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -5350,7 +5512,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+          "url": "https://cars-perfectauto.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -5456,7 +5621,7 @@
     },
     {
       "slug": "prestige-varna",
-      "name": "Автосалон ПРЕСТИЖ",
+      "name": "╨É╨▓╤é╨╛╤ü╨░╨╗╨╛╨╜ ╨ƒ╨á╨ò╨í╨ó╨ÿ╨û",
       "localPath": "clients/prestige-varna",
       "localPresent": true,
       "variants": [
@@ -5557,7 +5722,7 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -5566,7 +5731,7 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -5575,21 +5740,26 @@
           "state": "local-review-ready",
           "qaRecorded": true,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-priselci.vercel.app/",
+        "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+        "projectName": "cars-priselci",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-priselci",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -5602,7 +5772,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+          "url": "https://cars-priselci.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -5638,7 +5811,10 @@
           "qaRecorded": true,
           "publicUrl": null,
           "entry": "/",
-          "templateSource": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "4e4d2b5b544a654a6bf2942afee633bf10b398c9"
+          },
           "localPresent": true
         },
         {
@@ -5646,7 +5822,10 @@
           "state": "ready-for-local-review",
           "entry": "/variant-2/",
           "publicUrl": null,
-          "templateSource": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-import",
+            "commit": "724d3f825dcd738a2058db9ef01aedb78114ae65"
+          },
           "qaRecorded": true,
           "localPresent": true
         },
@@ -5656,14 +5835,17 @@
           "qaRecorded": true,
           "publicUrl": null,
           "entry": "/variant-3/",
-          "templateSource": null,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a"
+          },
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "preview-verified-with-temporary-share",
-        "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app",
+        "state": "live-discovered",
+        "url": "https://cars-promosalevarna.vercel.app/",
         "deploymentId": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
         "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
         "branch": "codex/workflow-pilot-20260912",
@@ -5673,7 +5855,12 @@
           "expiresAt": "2026-09-13T17:20:37Z",
           "note": "Direct deployment URL redirects to Vercel login. Temporary sharing was verified in new browser contexts without account login. Protection settings and production were not changed; the token stays in ignored runtime only."
         },
-        "verifiedAt": "2026-09-12T18:22:31.486Z"
+        "verifiedAt": "2026-09-12T18:22:31.486Z",
+        "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+        "projectName": "cars-promosalevarna",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z",
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh."
       },
       "id": null,
       "aliases": [],
@@ -5717,12 +5904,13 @@
           "providerBuild": "READY for the exact exported commit"
         },
         "deployment": {
-          "state": "ready",
+          "state": "live-discovered",
           "id": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
           "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
           "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
-          "url": "https://cars-promosalevarna-qff6s3mf9-tyj5.vercel.app",
-          "target": "preview"
+          "url": "https://cars-promosalevarna.vercel.app/",
+          "target": "preview",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "passed",
@@ -6479,7 +6667,7 @@
     },
     {
       "slug": "tesi-car-varna",
-      "name": "Теси Кар",
+      "name": "╨ó╨╡╤ü╨╕ ╨Ü╨░╤Ç",
       "localPath": "clients/tesi-car-varna",
       "localPresent": true,
       "variants": [
@@ -6583,7 +6771,7 @@
           "state": "in-progress",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -6592,7 +6780,7 @@
           "state": "in-progress",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -6601,21 +6789,26 @@
           "state": "in-progress",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-texasdriveauto.vercel.app/",
+        "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+        "projectName": "cars-texasdriveauto",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": "us-tx-dallas-texas-drive-auto",
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-texasdriveauto",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -6628,7 +6821,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+          "url": "https://cars-texasdriveauto.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"
@@ -6664,7 +6860,7 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/",
           "templateSource": null,
           "localPresent": true
         },
@@ -6673,7 +6869,7 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-2/cars",
           "templateSource": null,
           "localPresent": true
         },
@@ -6682,21 +6878,26 @@
           "state": "personalized-unverified",
           "qaRecorded": false,
           "publicUrl": null,
-          "entry": null,
+          "entry": "/variant-3/",
           "templateSource": null,
           "localPresent": true
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "unknown",
+        "state": "live-discovered",
         "legacyState": "not-deployed",
-        "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "url": "https://cars-thedealerspoint.vercel.app/",
+        "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+        "projectName": "cars-thedealerspoint",
+        "defaultBranch": "main",
+        "checkedAt": "2026-09-14T20:38:30.000Z"
       },
       "id": null,
       "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
+      "repository": "darkapoparka/cars-thedealerspoint",
+      "packagingVersion": "1",
       "evidence": {
         "source": {
           "state": "committed",
@@ -6709,7 +6910,10 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-discovered",
+          "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+          "url": "https://cars-thedealerspoint.vercel.app/",
+          "checkedAt": "2026-09-14T20:38:30.000Z"
         },
         "browser": {
           "state": "unknown"

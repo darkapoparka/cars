@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "slug": "kg-team-auto",
+  "dealerId": "bg-plovdiv-kg-team-auto",
+  "repository": "darkapoparka/cars-kgteamauto",
+  "defaultBranch": "main",
+  "language": "bg",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "extraAssets": [],
+  "packaging": {
+    "version": "1"
+  },
+  "switcher": {
+    "language": "bg",
+    "accent": "#2563eb"
+  }
+}
