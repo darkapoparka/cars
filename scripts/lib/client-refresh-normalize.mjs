@@ -71,7 +71,10 @@ function normalizeCountryCode(value, locale) {
 }
 
 function normalizeBusiness(client, slug, rawFacts) {
-  const source = rawFacts?.business || rawFacts || (slug === 'eliqauto' ? legacyEliqBusiness(client) : {});
+  const hasRawFacts = rawFacts && typeof rawFacts === 'object' && Object.keys(rawFacts).length > 0;
+  const source = hasRawFacts
+    ? (rawFacts.business || rawFacts)
+    : (slug === 'eliqauto' ? legacyEliqBusiness(client) : {});
   const countryCode = normalizeCountryCode(source.countryCode || source.country, source.locale);
   const locale = firstString(source.locale, countryCode === 'BG' ? 'bg-BG' : countryCode === 'AE' ? 'en-AE' : countryCode === 'US' ? 'en-US' : 'en-US');
   const currency = firstString(source.currency, countryCode === 'BG' ? 'EUR' : countryCode === 'AE' ? 'AED' : countryCode === 'US' ? 'USD' : 'EUR').toUpperCase();

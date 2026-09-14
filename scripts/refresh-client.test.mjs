@@ -11,6 +11,7 @@ import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const NAVARA = path.join(ROOT, 'clients/navara-car');
 const PROMOSALE = path.join(ROOT, 'clients/promosale-varna');
+const ELIQ = path.join(ROOT, 'clients/eliqauto');
 const profile = loadDealerProfile(NAVARA, 'navara-car');
 const promosaleProfile = loadDealerProfile(PROMOSALE, 'promosale-varna');
 
@@ -28,6 +29,15 @@ function temporaryCandidate(templateKey, files) {
   for (const relative of files) copyRelative(template, root, relative);
   return { root, template };
 }
+
+test('legacy ELIQ source normalizes the published dealer identity', () => {
+  const eliq = loadDealerProfile(ELIQ, 'eliqauto');
+  assert.equal(eliq.business.name, 'ELIQ AUTO');
+  assert.equal(eliq.business.city, 'Пазарджик');
+  assert.equal(eliq.business.phoneDisplay, '0896 781 662');
+  assert.match(eliq.business.logo, /eliq-auto-wordmark-header\.png$/);
+  assert.equal(eliq.listings.length, 16);
+});
 
 test('Auto Best refresh keeps approved hero artwork and restores Navara dealer data', () => {
   const protectedFile = 'src/lib/data/vehicle-artwork.ts';
