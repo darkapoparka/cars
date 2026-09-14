@@ -122,6 +122,10 @@ test('Carwow refresh keeps current hero composition and removes sample dealer id
   assert.doesNotMatch(site, /Day Night Auto/i);
   const inventory = fs.readFileSync(path.join(root, 'src/lib/data/daynight-current-inventory.ts'), 'utf8');
   assert.match(inventory, /Nissan Micra 1\.0 N-Sport/);
+  assert.match(inventory, /"priceEur": "10 500 €"/);
+  assert.match(inventory, /"mileage": "63 800 km"/);
+  assert.doesNotMatch(inventory, /[\u00a0\u202f]/,
+    'Carwow numeric strings must use parser-safe ASCII spaces');
   fs.rmSync(root, { recursive: true, force: true });
 });
 

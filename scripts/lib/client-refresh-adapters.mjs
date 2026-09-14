@@ -483,13 +483,13 @@ function carwowInventory(profile) {
     sourceUrl: item.sourceUrl || b.inventoryUrl,
     priceEur: new Intl.NumberFormat(b.locale || 'en-US', {
       style: 'currency', currency: item.currency || b.currency, maximumFractionDigits: 0
-    }).format(Number(item.priceAmount || 0)),
+    }).format(Number(item.priceAmount || 0)).replace(/\s+/g, ' '),
     priceBgn: '',
     status: item.availability,
     date: String(item.year),
     mileage: item.mileageUnit === 'mi'
-      ? `${new Intl.NumberFormat(b.locale || 'en-US').format(item.mileageValue)} mi`
-      : `${new Intl.NumberFormat(b.locale || 'en-US').format(item.mileageValue)} km`,
+      ? `${new Intl.NumberFormat(b.locale || 'en-US').format(item.mileageValue).replace(/\s+/g, ' ')} mi`
+      : `${new Intl.NumberFormat(b.locale || 'en-US').format(item.mileageValue).replace(/\s+/g, ' ')} km`,
     color: item.color,
     fuel: item.fuel,
     power: item.powerHp ? `${item.powerHp} hp` : '',
