@@ -3,6 +3,7 @@ import { leadSite } from "@repo/marketplace";
 import { MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerMobileHeaderIcon } from "./dealer-mobile-header-icon";
@@ -13,8 +14,12 @@ export const DealerMobileBrandBar = ({
   tone = "dark",
   wordmarkTone = "original",
   onNavigate,
+  leadingAction,
+  trailingAction,
 }: {
   readonly isBg: boolean;
+  readonly leadingAction?: ReactNode;
+  readonly trailingAction?: ReactNode;
   readonly locale?: string;
   readonly tone?: "clean" | "dark" | "light";
   readonly wordmarkTone?: "original" | "light" | "dark";
@@ -23,10 +28,6 @@ export const DealerMobileBrandBar = ({
   const light = tone === "light";
   const clean = tone === "clean";
   const logoWidthClassName = "w-[144px] max-w-[48vw]";
-  // Use the complete Navara mark, not the source dealer's split recolouring mask.
-  const logoSrc = wordmarkTone === "light"
-    ? "/navara/wordmark-light.svg"
-    : leadSite.logoPath;
 
   return (
     <div
@@ -35,20 +36,22 @@ export const DealerMobileBrandBar = ({
         !clean && (light ? "text-zinc-950" : "text-white"),
         clean
           ? "flex h-11 justify-center"
-          : "grid h-[54px] grid-cols-[44px_minmax(0,1fr)_44px]"
+          : "grid h-11 grid-cols-[44px_minmax(0,1fr)_44px]"
       )}
     >
-      {clean ? null : (
-        <a
-          aria-label={isBg ? "Отвори местоположението" : "Open location"}
-          className={mobileHeaderIconActionClassName}
-          href={leadSite.mapsUrl}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <DealerMobileHeaderIcon icon={MapPin} kind="location" />
-        </a>
-      )}
+      {clean
+        ? null
+        : (leadingAction ?? (
+            <a
+              aria-label={isBg ? "Отвори местоположението" : "Open location"}
+              className={mobileHeaderIconActionClassName}
+              href={leadSite.mapsUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <DealerMobileHeaderIcon icon={MapPin} kind="location" />
+            </a>
+          ))}
 
       <Link
         aria-label={isBg ? "Начало" : "Home"}
@@ -65,24 +68,48 @@ export const DealerMobileBrandBar = ({
           <Image
             alt={leadSite.name}
             className="h-full w-full object-contain"
-            height={458}
+            height={512}
             priority
             sizes="(max-width: 1023px) 144px, 0px"
-            src={logoSrc}
-            width={2091}
+            src={leadSite.logoPath}
+            style={
+              wordmarkTone === "original"
+                ? undefined
+                : { clipPath: "inset(0 68% 0 0)" }
+            }
+            width={1780}
           />
+          {wordmarkTone === "original" ? null : (
+            <Image
+              alt=""
+              aria-hidden="true"
+              className={cn(
+                "pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]",
+                wordmarkTone === "light"
+                  ? "brightness-0 invert"
+                  : "brightness-0"
+              )}
+              height={512}
+              priority
+              sizes="(max-width: 1023px) 144px, 0px"
+              src={leadSite.logoPath}
+              width={1780}
+            />
+          )}
         </span>
       </Link>
 
-      {clean ? null : (
-        <a
-          aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-          className={mobileHeaderIconActionClassName}
-          href={leadSite.phoneHref}
-        >
-          <DealerMobileHeaderIcon icon={Phone} kind="phone" />
-        </a>
-      )}
+      {clean
+        ? null
+        : (trailingAction ?? (
+            <a
+              aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
+              className={mobileHeaderIconActionClassName}
+              href={leadSite.phoneHref}
+            >
+              <DealerMobileHeaderIcon icon={Phone} kind="phone" />
+            </a>
+          ))}
     </div>
   );
 };

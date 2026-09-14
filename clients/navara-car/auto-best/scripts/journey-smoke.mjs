@@ -58,10 +58,11 @@ try {
     });
     await suite.check(`stock discovery ${width}`, async () => {
       await page.goto(base, { waitUntil: 'networkidle' });
-      const shortcuts = await page.locator('.dn-body-type, .dn-brand-card').evaluateAll(links => links.map(link => link.getAttribute('href')));
-      for (const route of shortcuts) {
+      const shortcuts = await page.locator('.dn-body-type, .dn-brand-card').evaluateAll(links => links.map(link => ({ route: link.getAttribute('href'), count: Number(link.dataset.stockCount) })));
+      for (const { route, count } of shortcuts) {
         await page.goto(base + route, { waitUntil: 'networkidle' });
-        assert(await page.locator('.dn-listing-results .dn-vehicle-card').count() > 0, `${route} must have stock`);
+        assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), count, `${route} must reflect actual stock`);
+        if (!count) assert(await page.getByText('Няма съвпадения', { exact: true }).isVisible());
       }
       await page.goto(`${base}/listing-grid?equipment=4x4&equipment=4x4&price_max=0`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 0);
@@ -101,10 +102,18 @@ try {
       try {
         await page.goto(base, { waitUntil: 'networkidle' });
         assert(!media.some(url => /home-hero-v3|home-black-v1/.test(url)));
-        assert.equal(media.some(url => url.includes('urus-front-v1')), width < 768);
+        assert(!media.some(url => url.includes('urus-front-v1')), 'Home uses the refreshed two-car artwork');
+        const homeArtwork = await page.locator('.dn-hero-vehicles__pair img').evaluate(image => image.currentSrc);
+        assert(width < 768 ? homeArtwork.includes('collection-banner-v2') : homeArtwork.startsWith('data:'));
         const sources = await page.locator('.dn-hero-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
         assert(sources.every(src => width >= 1440 ? src.startsWith('http') : src.startsWith('data:')));
-        evidence.push({ width, heroSources: sources });
+        evidence.push({ width, heroSources: sources, homeArtwork });
+        for (const [topic, scene] of [['trade-in', 'sell'], ['import', 'import']]) {
+          await page.goto(`${base}/contact?topic=${topic}`, { waitUntil: 'networkidle' });
+          const support = await page.locator('.dn-hero-vehicles__support img').evaluateAll(images => images.map(image => image.currentSrc));
+          assert.equal(support.length, 2);
+          assert(support.every(src => width < 768 ? src.includes(`mobile-${scene}-v1`) : src.startsWith('data:')));
+        }
       } finally { await page.close(); }
     }
     return evidence;

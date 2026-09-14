@@ -5,7 +5,6 @@ import {
   organizationDirectoryEntriesSchema,
 } from "./directory";
 import { getMockListingById } from "./mock-data";
-import { leadSite } from "./lead-site";
 
 const getRepresentativeVehicle = (
   listingId: string,
@@ -37,7 +36,7 @@ const getRepresentativeVehicle = (
  * never presented as verified real-world businesses.
  */
 export const mockOrganizationDirectoryCoreEntries =
-  organizationDirectoryEntriesSchema.parse(leadSite.staticDemoMode ? [] : [
+  organizationDirectoryEntriesSchema.parse([
     {
       brandCoverage: [
         {
@@ -121,7 +120,7 @@ export const mockOrganizationDirectoryCoreEntries =
         "Illustrative EV sourcing profile using marketplace-backed examples for delivery, inspection, and registration workflows.",
       displayName: "EV Import Network Demo",
       headquarters: {
-        city: "Sofia",
+        city: "Варна",
         countryCode: "BG",
       },
       headline: "Electric vehicles sourced from Germany to Bulgaria",
@@ -186,9 +185,9 @@ export const mockOrganizationDirectoryCoreEntries =
       dealerOrgId: "dealer-sofia-premium",
       description:
         "Local dealer inventory with inspection history and finance enquiries.",
-      displayName: "Sofia Premium Cars",
+      displayName: "Варна Premium Cars",
       headquarters: {
-        city: "Sofia",
+        city: "Варна",
         countryCode: "BG",
       },
       headline: "Premium used cars available locally",
@@ -203,7 +202,7 @@ export const mockOrganizationDirectoryCoreEntries =
       },
       orgType: "dealer",
       profileImage: {
-        alt: "Premium vehicle showroom in Sofia",
+        alt: "Premium vehicle showroom in Варна",
         url: "/images/directory/sofia-premium-cars-profile.webp",
       },
       representativeVehicles: [
@@ -279,7 +278,7 @@ export const mockOrganizationDirectoryCoreEntries =
         "Commercial van specialist with local stock, VAT-ready offers, and finance enquiries.",
       displayName: "Pro Vans Bulgaria",
       headquarters: {
-        city: "Sofia",
+        city: "Варна",
         countryCode: "BG",
       },
       headline: "Passenger and commercial vans in local stock",
@@ -460,7 +459,7 @@ const scaleOrganizationTypes = [
 ] as const satisfies readonly OrganizationDirectoryType[];
 
 const scaleHeadquarters = [
-  { city: "Sofia", countryCode: "BG" },
+  { city: "Варна", countryCode: "BG" },
   { city: "Plovdiv", countryCode: "BG" },
   { city: "Varna", countryCode: "BG" },
   { city: "Hamburg", countryCode: "DE" },
@@ -574,8 +573,6 @@ const createScaleOrganization = (index: number): OrganizationDirectoryEntry => {
 export const createMockOrganizationDirectoryScaleEntries = (
   totalOrganizations = 120
 ) => {
-  // The dealer preview replaces marketplace inventory with its own sample set.
-  if (leadSite.staticDemoMode) return [];
   if (totalOrganizations < mockOrganizationDirectoryCoreEntries.length) {
     throw new Error(
       `Directory scale fixtures require at least ${mockOrganizationDirectoryCoreEntries.length} organizations`

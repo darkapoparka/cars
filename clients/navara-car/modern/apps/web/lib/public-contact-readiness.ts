@@ -1,6 +1,5 @@
 import { isExactRemoteHttpsDeploymentOrigin } from "@repo/next-config/environment-contract";
 import { z } from "zod";
-import { leadSite } from "@repo/marketplace/lead-site";
 
 interface PublicContactEnvironment {
   nodeEnv?: string;
@@ -58,7 +57,6 @@ export const isPublicContactSubmissionAvailable = (
     resendToken: process.env.RESEND_TOKEN,
   }
 ) => {
-  if (leadSite.staticDemoMode) return false;
   const deliveryIsReady =
     isRuntimeReadySender(environment.resendFrom) &&
     hasValue(environment.resendToken, 12) &&

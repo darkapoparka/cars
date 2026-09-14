@@ -5,7 +5,6 @@
 		CarFront,
 		ChevronRight,
 		ClipboardCheck,
-		Phone,
 		Repeat,
 		ShieldCheck,
 		X
@@ -14,8 +13,8 @@
 	import { submitLead } from '$lib/client/lead-submit';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
+	import MobileHeroBar from '$lib/components/shared/MobileHeroBar.svelte';
 
-	const phoneHref = `tel:${daynightSite.phone}`;
 	type ServiceSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const services = [
@@ -27,7 +26,7 @@
 			cta: 'Заяви оглед',
 			href: '/contact',
 			icon: ShieldCheck,
-			points: ['Попитайте по публикувания телефон', 'Условията зависят от конкретния автомобил', 'Формата е демонстрационна']
+			points: ['Проверка на историята', 'Оглед на място', 'Следващи стъпки преди капаро']
 		},
 		{
 			id: 'documents',
@@ -37,7 +36,7 @@
 			cta: 'Попитай за документи',
 			href: '/contact',
 			icon: ClipboardCheck,
-			points: ['Попитайте по публикувания телефон', 'Условията зависят от конкретния автомобил', 'Формата е демонстрационна']
+			points: ['Договор и фактура', 'Прехвърляне и номера', 'Финални стъпки при предаване']
 		},
 		{
 			id: 'trade',
@@ -47,7 +46,11 @@
 			cta: 'Заяви оценка',
 			href: '/sell-your-car',
 			icon: Repeat,
-			points: ['Попитайте по публикувания телефон', 'Условията зависят от конкретния автомобил', 'Формата е демонстрационна']
+			points: [
+				'Оценка на Вашия автомобил',
+				'Приспадане към следваща покупка',
+				'Опция за директно изкупуване'
+			]
 		},
 		{
 			id: 'finance',
@@ -57,7 +60,7 @@
 			cta: 'Виж варианти',
 			href: '/financing',
 			icon: Banknote,
-			points: ['Попитайте по публикувания телефон', 'Условията зависят от конкретния автомобил', 'Формата е демонстрационна']
+			points: ['Ориентировъчна месечна вноска', 'Съдействие с лизинг', 'Сравнение спрямо бюджет']
 		}
 	] as const;
 
@@ -130,7 +133,7 @@
 	}
 </script>
 
-<div class="mobile-services-app" aria-label="Услуги Навара кар">
+<div class="mobile-services-app">
 	<header class="mobile-services-hero">
 		<img
 			class="mobile-services-hero__bg"
@@ -138,22 +141,12 @@
 			alt=""
 			aria-hidden="true"
 		/>
-		<div class="mobile-services-hero__bar">
-			<a href={resolve('/')} aria-label="Навара кар начало">
-				<img
-					src={resolve('/navara/wordmark.svg')}
-					alt={daynightSite.shortName}
-				/>
-			</a>
-			<a class="mobile-services-hero__phone" href={phoneHref} aria-label="Обади се">
-				<Phone size={19} strokeWidth={2.45} />
-			</a>
-		</div>
+		<MobileHeroBar showLocation={false} />
 
 		<div class="mobile-services-hero__copy">
 			<span>Услуги</span>
 			<h1>Подкрепа преди и след покупка</h1>
-			<p>Продажба, съдействие за регистрация и лизинг са посочени в обявите. Другите възможности се уточняват.</p>
+			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в {daynightSite.city}.</p>
 		</div>
 
 		<div class="mobile-services-hero__actions">
@@ -358,36 +351,6 @@
 		object-position: center right;
 	}
 
-	.mobile-services-hero__bar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--sa-mobile-gap-md);
-	}
-
-	.mobile-services-hero__bar img {
-		display: block;
-		width: 170px;
-		height: auto;
-	}
-
-	.mobile-services-hero__phone {
-		display: grid;
-		width: var(--sa-mobile-pill-h);
-		height: var(--sa-mobile-pill-h);
-		flex: 0 0 auto;
-		place-items: center;
-		border-radius: 50%;
-		background: var(--sa-red);
-		color: #fff !important;
-	}
-
-	.mobile-services-hero__phone :global(svg),
-	.mobile-services-hero__phone :global(svg *) {
-		color: #fff !important;
-		stroke: #fff !important;
-	}
-
 	.mobile-services-hero__copy {
 		display: grid;
 		gap: var(--sa-mobile-gap-xs);
@@ -584,7 +547,7 @@
 	}
 
 	.mobile-services-card small {
-		color: #66707a;
+		color: #56616e;
 		font-size: var(--sa-text-xs);
 		font-weight: 600;
 		line-height: 1.34;
@@ -626,7 +589,7 @@
 	.mobile-service-sheet header div:nth-child(2) > span {
 		color: var(--sa-blue);
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -659,7 +622,7 @@
 		padding: 10px;
 		color: #111827;
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.25;
 	}
 
@@ -691,7 +654,7 @@
 	.mobile-service-sheet__field span {
 		color: #74808c;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -707,7 +670,7 @@
 		background: transparent !important;
 		box-shadow: none !important;
 		color: var(--sa-ink) !important;
-		font: 700 var(--sa-text-base) / 1.18 var(--sa-font) !important;
+		font: var(--sa-weight-strong) var(--sa-text-base) / 1.18 var(--sa-font) !important;
 		outline: 0 !important;
 		padding: 0 !important;
 	}
@@ -725,8 +688,8 @@
 		border-radius: 11px;
 		background: var(--sa-red);
 		color: #fff !important;
-		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.mobile-service-sheet__submit:disabled {
@@ -741,7 +704,7 @@
 		padding: 10px 11px;
 		color: #b42318;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.35;
 	}
 
@@ -774,14 +737,14 @@
 
 	.mobile-service-sheet__success strong {
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.12;
 	}
 
 	.mobile-service-sheet__success small {
 		color: #647084;
 		font-size: var(--sa-text-xs);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.28;
 	}
 
@@ -789,5 +752,71 @@
 		.mobile-services-app {
 			display: block;
 		}
+	}
+
+	/* Mobile typography contract */
+	.mobile-services-hero__copy span,
+	.mobile-service-sheet header div:nth-child(2) > span,
+	.mobile-service-sheet__field span {
+		font-size: var(--sa-mobile-type-micro);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-services-hero h1 {
+		font-size: var(--sa-mobile-type-page-title);
+		font-weight: var(--sa-weight-display);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-services-hero p {
+		font-size: var(--sa-mobile-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-services-primary,
+	.mobile-services-secondary,
+	.mobile-services-chips button {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-services-heading h2,
+	.mobile-service-sheet h2 {
+		font-size: var(--sa-mobile-type-section-title);
+		font-weight: var(--sa-weight-strong);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-services-card strong {
+		font-size: var(--sa-mobile-type-card-title);
+		font-weight: var(--sa-weight-strong);
+	}
+	.mobile-services-card small {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-service-sheet li {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-semibold);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-service-sheet__field input {
+		font: var(--sa-weight-regular) var(--sa-mobile-type-input) / var(--sa-mobile-leading-meta)
+			var(--sa-font) !important;
+	}
+	.mobile-service-sheet__submit {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
+	}
+	.mobile-service-sheet__error {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-semibold);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-service-sheet__success strong {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-service-sheet__success small {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-meta);
 	}
 </style>

@@ -6,12 +6,12 @@
   import AboutTeam from '$components/company/AboutTeam.svelte';
   import AboutPartners from '$components/company/AboutPartners.svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
-  import { brand, dealerSource } from '$config/brand';
+  import { brand } from '$config/brand';
 </script>
 
 <svelte:head>
   <title>За нас — {brand.name}</title>
-  <meta name="description" content={`${brand.name} — публикувани автомобили във Варна, адрес и контакт. ${dealerSource.previewNotice}`} />
+  <meta name="description" content={`${brand.name} — премиум автомобили, внос по заявка, собствен лизинг, бартер и огледи с предварителна уговорка в ${brand.city}.`} />
 </svelte:head>
 
 <AboutHero />
@@ -21,11 +21,12 @@
 
 <section class="dn-about-showroom dn-section" aria-labelledby="about-showroom-title">
   <div class="container">
-    <div class="dn-about-showroom__heading">
-      <h2 id="about-showroom-title">Автокъща във {brand.city}</h2>
-      <p>{brand.address}. {brand.appointment}</p>
-      <p>{dealerSource.business.directions}</p>
+    <div class="dn-about-showroom__card">
+      <div class="dn-about-showroom__heading">
+        <h2 id="about-showroom-title">Посетете шоурума</h2>
+        <p>{brand.address} · {brand.appointment}</p>
+      </div>
+      <ShowroomMap />
     </div>
-    <ShowroomMap />
   </div>
 </section>

@@ -11,7 +11,7 @@
 	let inquirySubmitState = $state<LeadSubmitState>('idle');
 	let inquirySubmitMessage = $state('');
 
-	const inquiryErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон на ${daynightSite.phoneLabel}.`;
+	const inquiryErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
 
 	function readFormValue(formData: FormData, name: string) {
 		const value = formData.get(name);
@@ -146,7 +146,7 @@
 		</div>
 		<button
 			type="submit"
-			class="sa-cta sa-cta-primary mb-18 w-full"
+			class="mb-18 sa-cta w-full sa-cta-primary"
 			disabled={inquirySubmitState === 'submitting'}
 		>
 			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}

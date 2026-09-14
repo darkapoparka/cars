@@ -1,5 +1,3 @@
-import source from '$data/navara-data.json';
-
 export type BrandConfig = {
   name: string;
   shortName: string;
@@ -10,24 +8,29 @@ export type BrandConfig = {
   phoneHref: `tel:${string}`;
   appointment: string;
   logo: `/${string}`;
-  youtubeUrl?: `https://${string}`;
-  instagramUrl?: `https://${string}`;
-  facebookUrl?: `https://${string}`;
+  logoOnDark: `/${string}`;
+  youtubeUrl: `https://${string}`;
+  instagramUrl: `https://${string}`;
+  facebookUrl: `https://${string}`;
 };
 
-const business = source.business;
-export const brand: BrandConfig = {
-  name: business.name,
-  shortName: business.name,
-  city: business.city,
-  addressLine: business.addressLine,
-  address: business.address,
-  phone: business.phoneDisplay,
-  phoneHref: `tel:${business.phoneE164}`,
-  appointment: 'Работно време не е публикувано. Уточнете посещението по телефона.',
-  logo: '/navara/wordmark.svg'
-};
+const name = "Навара кар";
+const shortName = "Navara Car";
+const city = "Варна";
+const addressLine = "бул. „Цар Освободител“, Кайсиева градина";
 
-export const dealerSource = source;
-export const dealerMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${business.name}, ${business.address}`)}`;
-export const dealerMapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(`${business.name}, ${business.address}`)}&z=14&hl=bg&output=embed`;
+export const brand = {
+  name,
+  shortName,
+  city,
+  youtubeUrl: "https://www.youtube.com/",
+  instagramUrl: "https://www.instagram.com/",
+  facebookUrl: "https://www.facebook.com/",
+  phone: "0899 192 300",
+  phoneHref: "tel:+359899192300",
+  addressLine,
+  address: "бул. „Цар Освободител“, Кайсиева градина, Варна",
+  appointment: "Contact the dealership before visiting.",
+  logo: "/navara/wordmark.svg",
+  logoOnDark: "/navara/wordmark.svg"
+} as const satisfies BrandConfig;

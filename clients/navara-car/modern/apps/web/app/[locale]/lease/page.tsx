@@ -35,14 +35,14 @@ const leadingYearPattern = /^\d{4}\s+/;
 
 const pageCopy = {
   bg: {
-    badge: "Лизинг по запитване",
+    badge: `Финансиране от ${leadSite.shortName}`,
     description:
       "Изберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.",
     faqTitle: "Често задавани въпроси",
     faqs: [
       {
         answer:
-          "Изберете обява и подгответе предпочитанията си. Обадете се, за да проверите възможността за лизинг, доставчика и писмените условия. Формата не изпраща съобщение.",
+          "Изберете автомобил от наличностите и изпратете заявка с предпочитания срок и първоначална вноска. Екипът ще се свърже с вас, за да уточни възможността за финансиране и конкретните условия.",
         question: "Как да започна?",
       },
       {
@@ -51,8 +51,7 @@ const pageCopy = {
         question: "Каква първоначална вноска е необходима?",
       },
       {
-        answer:
-          "Необходимите документи зависят от конкретния случай. Екипът на Navara Car ще ви даде точен списък още при първия разговор.",
+        answer: `Необходимите документи зависят от конкретния случай. Екипът на ${leadSite.shortName} ще ви даде точен списък още при първия разговор.`,
         question: "Какви документи ще са ми нужни?",
       },
       {
@@ -64,14 +63,14 @@ const pageCopy = {
     title: "Финансиране за следващия ви автомобил",
   },
   en: {
-    badge: "Ask about leasing",
+    badge: `Financing from ${leadSite.shortName}`,
     description:
       "Choose a vehicle from our inventory and contact us for a tailored offer. The terms are confirmed for the vehicle and your individual profile.",
     faqTitle: "Frequently asked questions",
     faqs: [
       {
         answer:
-          "Choose a listing and prepare your preferences. Call to confirm leasing availability, the provider and written terms. This form does not send a message.",
+          "Choose a vehicle from the inventory and send a request with your preferred term and initial payment. The team will contact you to confirm financing availability and the specific terms.",
         question: "How do I get started?",
       },
       {
@@ -80,8 +79,7 @@ const pageCopy = {
         question: "What initial payment is required?",
       },
       {
-        answer:
-          "Required documents depend on the individual case. The Navara Car team will give you an exact list during the first conversation.",
+        answer: `Required documents depend on the individual case. The ${leadSite.shortName} team will give you an exact list during the first conversation.`,
         question: "Which documents will I need?",
       },
       {
@@ -103,8 +101,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Уточнете дали за избраната обява се предлага лизинг и поискайте конкретни писмени условия."
-      : "Ask whether leasing is offered for the selected listing and request written terms.",
+      ? `Индивидуална оферта за финансиране на автомобил от ${leadSite.name}.`
+      : `A tailored vehicle financing offer from ${leadSite.name}.`,
     locale,
     path: "/lease",
     title: isBg ? "Финансиране на автомобил" : "Vehicle financing",
@@ -186,7 +184,7 @@ export default async function LeasePage({
               fill
               priority
               sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/navara/vehicles/11787311216769974-1.webp"
+              src="/images/lease/day-night-financing-hero-v1.webp"
             />
             <div
               aria-hidden="true"

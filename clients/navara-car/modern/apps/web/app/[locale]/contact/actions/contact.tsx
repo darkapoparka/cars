@@ -1,8 +1,8 @@
 "use server";
 
 import { getReliableEmailDelivery } from "@repo/email";
-import { leadSite } from "@repo/marketplace/lead-site";
 import { ContactTemplate } from "@repo/email/templates/contact";
+import { leadSite } from "@repo/marketplace";
 import { log } from "@repo/observability/log";
 import { headers } from "next/headers";
 import { env } from "@/env";
@@ -43,12 +43,12 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
         ),
     notConfigured: isImportRequest
       ? localized(
-          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на Navara Car.",
-          "The form is ready, but message delivery is not configured yet. Call Navara Car directly."
+          `Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на ${leadSite.shortName}.`,
+          `The form is ready, but message delivery is not configured yet. Call ${leadSite.shortName} directly.`
         )
       : localized(
-          "Каналът за съобщения още не е конфигуриран. Обадете се директно на Navara Car.",
-          "Message delivery is not configured yet. Call Navara Car directly."
+          `Каналът за съобщения още не е конфигуриран. Обадете се директно на ${leadSite.shortName}.`,
+          `Message delivery is not configured yet. Call ${leadSite.shortName} directly.`
         ),
     rateLimited: localized(
       "Достигнахте лимита за запитвания. Опитайте отново по-късно.",
@@ -60,9 +60,9 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
     ),
     success: localized(
       isImportRequest
-        ? "Запитването е подготвено до екипа на Navara Car."
-        : "Запитването е изпратено до екипа на Navara Car.",
-      "Your request has been sent to the Navara Car team."
+        ? `Заявката е изпратена до екипа на ${leadSite.shortName}.`
+        : `Запитването е изпратено до екипа на ${leadSite.shortName}.`,
+      `Your request has been sent to the ${leadSite.shortName} team.`
     ),
   };
 };
@@ -144,7 +144,6 @@ export const submitContactRequest = async (
   const isBg = formData.get("locale") === "bg";
   const isImportRequest = formData.get("context") === "import-request";
   const copy = getCopy(isBg, isImportRequest);
-  if (leadSite.staticDemoMode) return { message: copy.notConfigured, status: "error" };
   const requestHeaders = await headers();
   const requestContext = getPublicRequestContext(requestHeaders);
   const result = await submitPublicSupportRequest(formData, requestContext, {
@@ -170,7 +169,7 @@ export const submitContactRequest = async (
             />
           ),
           ...(request.email ? { replyTo: request.email } : {}),
-          subject: `Navara Car: ${topic.en}`,
+          subject: `${leadSite.shortName}: ${topic.en}`,
           to: env.RESEND_FROM,
         },
       });

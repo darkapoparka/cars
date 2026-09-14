@@ -63,9 +63,7 @@ export function mapPublishedVehicleToCar(vehicle: VehicleRow, photos: VehiclePho
 		features: vehicle.features,
 		highlights: vehicle.highlights,
 		lot: vehicle.lot,
-		sourceUrl: vehicle.source_url,
-		observedAt: vehicle.published_at ? new Date(vehicle.published_at).toISOString().slice(0, 10) : "",
-		availabilityLabel: "Публикувана обява — потвърдете наличността"
+		sourceUrl: vehicle.source_url
 	};
 }
 

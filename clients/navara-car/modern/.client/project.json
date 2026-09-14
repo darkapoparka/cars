@@ -2,16 +2,54 @@
   "schemaVersion": 1,
   "client": "navara-car",
   "templateKey": "modern",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
   "createdAt": "2026-09-08",
-  "state": "needs-personalization",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
-  "availableHomes": [{"id":"main","route":"/cars"}],
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
   "offeredHomes": [],
   "publicUrl": null,
-  "qa": {"desktop":false,"mobile":false,"identity":false,"contactPath":false},
-  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
   "sourceCommit": "a3b9ec746fd2ff4f7fa075021afc90be5ff9f302",
   "sourceTree": "66bfb8196bbce18832ada6b34b02dda97baba25b",
-  "branding": {"updatedAt":"2026-09-08","kind":"owner-requested-image-generated-refresh","asset":"/navara/wordmark.svg","generationId":"6f04e7f5-5407-4e05-96b9-3b41140c0f20","dealerApproved":false,"verification":"../../BRANDING.md"}
+  "branding": {
+    "updatedAt": "2026-09-08",
+    "kind": "owner-requested-image-generated-refresh",
+    "asset": "/navara/wordmark.svg",
+    "generationId": "6f04e7f5-5407-4e05-96b9-3b41140c0f20",
+    "dealerApproved": false,
+    "verification": "../../BRANDING.md"
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "d9ceade67d8ce1a614bf011dc32a4545bba52b10",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-14T02:49:25.955Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

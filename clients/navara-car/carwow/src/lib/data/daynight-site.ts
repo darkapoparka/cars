@@ -1,83 +1,112 @@
-import { daynightReviewCount, daynightReviewCountLabel, daynightReviewLinkLabel } from './daynight-reviews';
-import source from './navara-data.json';
+import { contactLinks } from '$lib/utils/contact-links';
+import {
+	daynightReviewCount,
+	daynightReviewCountLabel,
+	daynightReviewLinkLabel
+} from './daynight-reviews';
 
-const business = source.business;
-const location = business.address;
-const mapQuery = encodeURIComponent(`${business.name}, ${location}`);
-// Internal export names are retained for the master component contracts, not dealer identity.
+const phoneE164 = "+359899192300";
+const city = "Варна";
+const shortName = "Navara Car";
+const district = "Варна";
+const street = "бул. „Цар Освободител“, Кайсиева градина";
+const location = `гр. ${city}, ${district}, ${street}`;
+
 export const daynightSite = {
-  name: business.name,
-  shortName: business.name,
-  phone: business.phoneE164,
-  phoneLabel: business.phoneDisplay,
-  email: '',
-  location,
-  locationShort: 'Кайсиева градина, Варна',
-  hoursLabel: 'Работно време не е публикувано. Уточнете посещението по телефона.',
-  mapEmbedSrc: `https://www.google.com/maps?q=${mapQuery}&z=14&hl=bg&output=embed`,
-  mapUrl: `https://www.google.com/maps/search/?api=1&query=${mapQuery}`,
-  mapLabel: `${business.name} — търсене по публикувания адрес; точният вход се уточнява`,
-  sourceInventory: business.marketplaceUrl,
-  inventoryCount: source.vehicles.length,
-  logoLight: '/navara/wordmark-light.svg',
-  logoDark: '/navara/wordmark.svg',
-  primaryCta: 'Виж автомобилите от обявите',
-  sellCarCta: 'Въпрос за автомобил',
-  accountCta: 'Контакт с продавача',
-  phoneCta: 'Уточни оглед по телефона',
-  heroTitle: business.name,
-  heroSubtitle: 'Автомобили въвъв Варна · Селекция от обяви към 08.09.2026 г.',
-  reviewCount: daynightReviewCount,
-  reviewCountLabel: daynightReviewCountLabel,
-  reviewLinkLabel: daynightReviewLinkLabel,
-  inventoryNotice: source.inventoryNotice,
-  previewNotice: source.previewNotice,
-  observedAt: source.observedAt,
-  directions: business.directions
+	name: "Навара кар",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359899192300",
+	phoneLabel: "0899 192 300",
+	email: "",
+	location,
+	locationShort: `${district}, ${city}`,
+	locationLandmark: `${district} · ${street}`,
+	hoursLabel: "Contact the dealership before visiting.",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://navara.mobile.bg/",
+	logoLight: "/navara/wordmark-light.svg",
+	logoDark: "/navara/wordmark.svg",
+	primaryCta: 'Виж наличните автомобили',
+	sellCarCta: 'Продай автомобил',
+	accountCta: 'Свържи се с екипа',
+	phoneCta: 'Обади се за оглед',
+	heroTitle: "Навара кар",
+	heroSubtitle: "Варна · Селекция от обяви към 08.09.2026 г., а не складова наличност в реално време. Потвърдете цената, наличността и данните с продавача.",
+	reviewCount: daynightReviewCount,
+	reviewCountLabel: daynightReviewCountLabel,
+	reviewLinkLabel: daynightReviewLinkLabel
 } as const;
 
 export const publicNavItems = [
-  { label: 'Начало', href: '/' },
-  { label: 'Автомобили', href: '/inventory' },
-  { label: 'Друг автомобил', href: '/sell-your-car' },
-  { label: 'Услуги', href: '/services' },
-  { label: 'За нас', href: '/about' },
-  { label: 'Полезно', href: '/blog' },
-  { label: 'Контакти', href: '/contact' }
+	{ label: 'Начало', href: '/' },
+	{ label: 'Автомобили', href: '/inventory' },
+	{ label: 'Продай', href: '/sell-your-car' },
+	{ label: 'Услуги', href: '/services' },
+	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
+	{ label: 'Контакти', href: '/contact' }
 ] as const;
+
 export const publicNavGroups = [
-  { label: 'Начало', href: '/' },
-  { label: 'Автомобили', href: '/inventory', children: [
-    { label: 'Автомобили от обявите', href: '/inventory' },
-    { label: 'Адрес на автокъщата', href: '/inventory/map' },
-    { label: 'Сравнение', href: '/compare' },
-    { label: 'Калкулатор', href: '/calculator' }
-  ] },
-  { label: 'Друг автомобил', href: '/sell-your-car', children: [
-    { label: 'Попитай за възможността', href: '/sell-your-car' },
-    { label: 'Подготви въпрос — демо', href: '/sell-your-car/request' }
-  ] },
-  { label: 'Услуги', href: '/services', children: [
-    { label: 'Публикувани услуги', href: '/services' },
-    { label: 'Лизинг по запитване', href: '/financing' },
-    { label: 'Въпроси и отговори', href: '/faq' }
-  ] },
-  { label: 'За нас', href: '/about', children: [
-    { label: `За ${business.name}`, href: '/about' },
-    { label: 'Контакт с екипа', href: '/team' },
-    { label: 'За отзивите', href: '/reviews' },
-    { label: 'Полезно преди оглед', href: '/blog' },
-    { label: 'За демонстрацията', href: '/terms' }
-  ] },
-  { label: 'Контакти', href: '/contact' }
+	{ label: 'Начало', href: '/' },
+	{
+		label: 'Автомобили',
+		href: '/inventory',
+		children: [
+			{ label: 'Всички автомобили', href: '/inventory' },
+			{ label: 'Карта', href: '/inventory/map' },
+			{ label: 'Сравнение', href: '/compare' },
+			{ label: 'Калкулатор', href: '/calculator' }
+		]
+	},
+	{
+		label: 'Продай',
+		href: '/sell-your-car',
+		children: [
+			{ label: 'Продай или замени', href: '/sell-your-car' },
+			{ label: 'Заявка за оценка', href: '/sell-your-car/request' }
+		]
+	},
+	{
+		label: 'Услуги',
+		href: '/services',
+		children: [
+			{ label: 'Дилърски услуги', href: '/services' },
+			{ label: 'Финансиране', href: '/financing' },
+			{ label: 'ЧЗВ', href: '/faq' }
+		]
+	},
+	{
+		label: 'За нас',
+		href: '/about',
+		children: [
+			{ label: "За Navara Car", href: '/about' },
+			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: 'Екип', href: '/team' },
+			{ label: 'Отзиви', href: '/reviews' },
+			{ label: 'Блог', href: '/blog' },
+			{ label: 'Условия', href: '/terms' }
+		]
+	},
+	{ label: 'Контакти', href: '/contact' }
 ] as const;
+
 export const footerNavItems = [
-  { label: 'Автомобили от обявите', href: '/inventory' },
-  { label: 'Адрес на автокъщата', href: '/inventory/map' },
-  { label: 'Лизинг по запитване', href: '/financing' },
-  { label: 'Калкулатор', href: '/calculator' },
-  { label: 'Въпрос за друг автомобил', href: '/sell-your-car' },
-  { label: 'Подготви въпрос — демо', href: '/sell-your-car/request' },
-  { label: 'Публикувани услуги', href: '/services' },
-  { label: 'Въпроси и отговори', href: '/faq' }
+	{ label: 'Налични автомобили', href: '/inventory' },
+	{ label: 'Карта на автомобили', href: '/inventory/map' },
+	{ label: 'Финансиране', href: '/financing' },
+	{ label: 'Калкулатор', href: '/calculator' },
+	{ label: 'Продай или замени', href: '/sell-your-car' },
+	{ label: 'Заявка за оценка', href: '/sell-your-car/request' },
+	{ label: 'Услуги', href: '/services' },
+	{ label: 'ЧЗВ', href: '/faq' }
 ] as const;

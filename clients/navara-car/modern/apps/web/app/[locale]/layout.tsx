@@ -15,6 +15,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { CSSProperties, ReactNode } from "react";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileFinancingInterceptor } from "./components/mobile-financing-interceptor";
 import { MobileVisibleViewport } from "./components/mobile-visible-viewport";
@@ -33,10 +34,8 @@ const publicSans = Inter({
 export const metadata: Metadata = {
   applicationName: leadSite.name,
   icons: {
-    icon: [{ type: "image/svg+xml", url: "/navara/favicon.svg" }],
-    apple: [{ type: "image/png", url: "/navara/icon.png", sizes: "180x180" }],
+    icon: [{ type: "image/png", url: leadSite.logoPath }],
   },
-  manifest: "/navara/site.webmanifest",
   metadataBase: new URL(getPublicWebBaseUrl()),
 };
 
@@ -60,6 +59,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
       lang={normalizedLocale}
       style={
         {
+          "--canvas": "oklch(0.945 0.006 264)",
           "--lead-site-accent": leadSite.accent,
           "--lead-site-accent-active":
             "color-mix(in srgb, var(--lead-site-accent) 68%, black)",
@@ -96,7 +96,10 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
               <TooltipProvider>{children}</TooltipProvider>
             </AnalyticsProvider>
           )}
-          <MobileFinancingInterceptor locale={normalizedLocale} />
+          <MobileFinancingInterceptor
+            locale={normalizedLocale}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
+          />
           <Toaster />
         </ThemeProvider>
         {leadSite.staticDemoMode ||

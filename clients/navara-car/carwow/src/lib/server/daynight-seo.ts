@@ -1,3 +1,4 @@
+import { daynightSite } from '$lib/data/daynight-site';
 import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 import { DEFAULT_DESCRIPTION, DAY_SITE_TITLE, getPublicStaticRoute } from './public-routes';
 
@@ -16,8 +17,8 @@ export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
 		.filter(Boolean);
 
 	return {
-		title: `${vehicle.title} | Навара кар`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Обява на Навара кар към 08.09.2026 г.; потвърдете наличността и условията.`
+		title: `${vehicle.title} | ${daynightSite.shortName}`,
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Автомобил от ${daynightSite.shortName}. Условията се потвърждават при запитване.`
 	};
 }
 

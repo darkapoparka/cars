@@ -108,7 +108,7 @@ export function vehicleSeedRow(
 		fuel: vehicle.fuel,
 		transmission: vehicle.transmission,
 		body: vehicle.body,
-		doors: typeof vehicle.doors === "number" && Number.isInteger(vehicle.doors) ? vehicle.doors : null,
+		doors: Number.isInteger(vehicle.doors) ? vehicle.doors : null,
 		engine: vehicle.engine,
 		power: vehicle.power,
 		drive: vehicle.drive,
@@ -177,7 +177,7 @@ export function postSeedRow(dealerId: string, article: DayNightArticle): SeedPos
 		cover_url: compact(article.image) || null,
 		category: article.category,
 		tags: [...article.tags],
-		author: compact(article.author) || 'Навара кар',
+		author: compact(article.author) || 'Navara Car',
 		read_minutes: Math.max(1, Math.trunc(article.readMinutes || 1)),
 		published_at: articleDateToPublishedAt(article.date),
 		status: 'published'
