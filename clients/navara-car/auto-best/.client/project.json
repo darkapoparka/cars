@@ -45,10 +45,10 @@
     "version": "1",
     "entry": "/"
   },
-  "workflowCommit": "d9ceade67d8ce1a614bf011dc32a4545bba52b10",
+  "workflowCommit": "5eac0e28241d3af1d76da4f92ae6118db8e67343",
   "refresh": {
-    "previousTemplateVersion": "2026.09.08-polish-1",
-    "refreshedAt": "2026-09-14T02:49:08.733Z",
+    "previousTemplateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "refreshedAt": "2026-09-14T19:15:26.741Z",
     "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
     "mode": "fresh-template-plus-dealer-overlay"
   }
