@@ -126,6 +126,9 @@ redirect(303, '/account');
       'modern/packages/marketplace-ui/components/marketplace-locale-switch-link.tsx': 'const links = <><a href={href} /><a href={targetPath} /></>;\n',
       'modern/apps/web/proxy.ts': 'const publicProxy: NextProxy = async (request, event) => {\n  const headersResponse = await securityHeaders();\n  return composedMiddleware(request, event);\n};\n',
       'modern/apps/web/app/component.tsx': 'const image="/assets/car.webp", lead="/lead-logo.png"; const route="/cars";\n',
+      'modern/apps/web/app/[locale]/contact/page.tsx': 'const hero = "/day-night-contact-hero-v1.png";\n',
+      'modern/apps/web/app/[locale]/desktop-header.css': '.contact{background:url("/day-night-contact-hero-v1.png")}\n',
+      'modern/apps/web/public/day-night-contact-hero-v1.png': Buffer.from([1, 2, 3, 4]),
       'modern/apps/web/app/globals.css': '.hero{background:url(/images/hero.webp)}\n',
       'modern/apps/web/.next/route.json': '{}',
       'modern/packages/database/package.json': '{"name":"@repo/database"}\n',
@@ -233,6 +236,8 @@ test('Modern keeps the locale loop guard, static-demo-only validation and tracin
   assert.match(await fs.readFile(path.join(options.destination, 'modern/packages/next-config/index.ts'), 'utf8'), /outputFileTracingRoot: resolve\(monorepoRoot, "\.\."\)/);
   assert.match(await fs.readFile(path.join(options.destination, 'modern/packages/marketplace-ui/components/marketplace-locale-switch-link.tsx'), 'utf8'), /href=\{`\/variant-2\$\{targetPath\}`\}/);
   assert.match(await fs.readFile(path.join(options.destination, 'modern/apps/web/app/component.tsx'), 'utf8'), /const route="\/cars"/);
+  assert.match(await fs.readFile(path.join(options.destination, 'modern/apps/web/app/[locale]/contact/page.tsx'), 'utf8'), /\/variant-2\/day-night-contact-hero-v1\.png/);
+  assert.match(await fs.readFile(path.join(options.destination, 'modern/apps/web/app/[locale]/desktop-header.css'), 'utf8'), /url\("\/variant-2\/day-night-contact-hero-v1\.png"\)/);
 });
 
 test('missing anchors, hybrid mounts, traversal, omitted assets and unsafe output fail before output exists', async (t) => {

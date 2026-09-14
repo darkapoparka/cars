@@ -162,8 +162,8 @@ function mountModern(files) {
   for (const [name] of files) {
     if (!name.startsWith('modern/') || !codeExtensions.test(name) || /\.(?:test|spec)\./.test(name)) continue;
     edit(files, name, (text) => text
-      .replace(/(["'`])\/(assets\/|images\/|lead-)/g, '$1/variant-2/$2')
-      .replace(/url\(\s*(['"]?)\/(assets\/|images\/|lead-)/g, 'url($1/variant-2/$2'));
+      .replace(/(["'`])\/(assets\/|images\/|lead-|day-night-)/g, '$1/variant-2/$2')
+      .replace(/url\(\s*(['"]?)\/(assets\/|images\/|lead-|day-night-)/g, 'url($1/variant-2/$2'));
   }
   edit(files, configName, (text) => {
     const anchor = 'nextConfig.images = nextConfig.images ?? {};';
