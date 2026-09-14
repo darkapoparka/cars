@@ -245,14 +245,29 @@ function copyRefreshTree(source, target) {
     else if (entry.isFile()) { fs.mkdirSync(path.dirname(to), { recursive: true }); fs.copyFileSync(from, to); }
   }
 }
-function mirrorRefreshTree(source, target) {
+export function mirrorRefreshTree(source, target) {
   fs.mkdirSync(target, { recursive: true });
   for (const entry of fs.readdirSync(target, { withFileTypes: true })) {
     if (REFRESH_CACHE_NAMES.has(entry.name) || entry.name === '.git') continue;
+    const current = path.join(target, entry.name);
     const expected = path.join(source, entry.name);
-    if (!exists(expected)) fs.rmSync(path.join(target, entry.name), { recursive: true, force: true });
+    if (!exists(expected)) {
+      fs.rmSync(current, { recursive: true, force: true });
+      continue;
+    }
+    const expectedEntry = fs.lstatSync(expected);
+    if (entry.isDirectory() && expectedEntry.isDirectory()) {
+      mirrorRefreshTree(expected, current);
+    } else if (entry.isDirectory() !== expectedEntry.isDirectory()) {
+      fs.rmSync(current, { recursive: true, force: true });
+    }
   }
-  copyRefreshTree(source, target);
+  for (const entry of fs.readdirSync(source, { withFileTypes: true })) {
+    if (REFRESH_CACHE_NAMES.has(entry.name) || entry.name === '.git') continue;
+    const from = path.join(source, entry.name), to = path.join(target, entry.name);
+    if (entry.isDirectory()) mirrorRefreshTree(from, to);
+    else if (entry.isFile()) { fs.mkdirSync(path.dirname(to), { recursive: true }); fs.copyFileSync(from, to); }
+  }
 }
 function dirtyClientPaths(root,slug){return git(root,['status','--porcelain=v1','--untracked-files=all','--',`clients/${slug}`]).split(/\r?\n/).filter(Boolean);}
 
