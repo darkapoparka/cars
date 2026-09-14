@@ -983,6 +983,28 @@ export function getAgentBySlug(slug: string) {
 `);
 }
 
+function patchImportHeroBindings(candidate) {
+  const file = path.join(candidate, 'src/lib/components/home/HomeFiveHero.svelte');
+  if (!exists(file)) return null;
+  let text = read(file);
+  if (!text.includes("import { daynightContact } from '$lib/data/daynight';")) {
+    text = text.replace(
+      "import { resolve } from '$app/paths';",
+      "import { resolve } from '$app/paths';\n\timport { daynightContact } from '$lib/data/daynight';"
+    );
+  }
+  text = text.replace(
+    /const mobileShowroomMapHref =\n\s*'[^']*';/,
+    "const mobileShowroomMapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(daynightContact.addressLabel)}`;"
+  );
+  text = text.replace(
+    /const mobileShowroomPhoneHref = '[^']*';/,
+    'const mobileShowroomPhoneHref = daynightContact.primaryPhoneHref;'
+  );
+  write(file, text);
+  return 'src/lib/components/home/HomeFiveHero.svelte (dealer contact binding)';
+}
+
 function patchImportText(candidate, profile) {
   const b = profile.business;
   const replacements = [
@@ -1010,6 +1032,7 @@ function patchImport({ oldVariant, candidate, profile }) {
   patchImportAgents(candidate);
   const safeContent = applyImportSafeContent({ candidate, profile });
   const changed = patchImportText(candidate, profile);
+  const heroBinding = patchImportHeroBindings(candidate);
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'),
     `${JSON.stringify(profile, null, 2)}\n`);
   return [
@@ -1020,7 +1043,8 @@ function patchImport({ oldVariant, candidate, profile }) {
     'src/lib/data/agents.ts',
     'src/lib/data/dealer-profile.json',
     ...safeContent,
-    ...changed
+    ...changed,
+    ...(heroBinding ? [heroBinding] : [])
   ];
 }
 

@@ -167,7 +167,8 @@ test('Import refresh retains the approved structural hero and replaces sample st
     'src/lib/data/daynight-listings.json',
     'src/lib/data/vehicles.ts',
     'src/lib/data/dealers.ts',
-    'src/lib/data/agents.ts'
+    'src/lib/data/agents.ts',
+    'src/lib/components/home/HomeFiveHero.svelte'
   ]);
 
   applyRefreshAdapter({
@@ -188,5 +189,12 @@ test('Import refresh retains the approved structural hero and replaces sample st
   const vehicles = fs.readFileSync(path.join(root, 'src/lib/data/vehicles.ts'), 'utf8');
   assert.match(vehicles, /knownBrokenImageFallbacks: Record<string, string> = \{\}/);
   assert.doesNotMatch(vehicles, /card-48|inventory-audi/);
+  const heroSource = fs.readFileSync(
+    path.join(root, 'src/lib/components/home/HomeFiveHero.svelte'),
+    'utf8'
+  );
+  assert.match(heroSource, /daynightContact\.addressLabel/);
+  assert.match(heroSource, /daynightContact\.primaryPhoneHref/);
+  assert.doesNotMatch(heroSource, /Day Night Auto%20Plovdiv|0877733110/);
   fs.rmSync(root, { recursive: true, force: true });
 });
