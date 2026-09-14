@@ -184,7 +184,7 @@
 			<!-- Primary nav with mega-menu panels -->
 			<nav
 				class="hidden flex-1 items-center justify-center md:flex md:self-stretch"
-				aria-label="Day Night Auto"
+				aria-label="Promosale Varna"
 			>
 				<ul class="flex h-full items-center gap-4 min-[1400px]:gap-3">
 					{#each header.navigation as item (item.href)}

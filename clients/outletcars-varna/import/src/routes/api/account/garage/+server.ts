@@ -13,7 +13,7 @@ export function GET({ request, url }: { request: Request; url: URL }) {
 	const session = resolveDayNightApiSession(request, url.searchParams.get('role') ?? undefined);
 
 	if (!session) {
-		return errorJson('OUTLETCARS.BG — Варна account session is required', 401);
+		return errorJson('OUTLETCARS.BG account session is required', 401);
 	}
 
 	return okJson(getDayNightGarageState(session));
@@ -24,7 +24,7 @@ export async function POST({ request }: { request: Request }) {
 	const session = resolveDayNightApiSession(request, payloadString(payload, 'actorRole', 'role'));
 
 	if (!session) {
-		return errorJson('OUTLETCARS.BG — Варна account session is required', 401);
+		return errorJson('OUTLETCARS.BG account session is required', 401);
 	}
 
 	const patch: Partial<DayNightGarageState> = {};

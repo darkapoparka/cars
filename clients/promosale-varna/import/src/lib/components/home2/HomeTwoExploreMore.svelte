@@ -48,7 +48,7 @@
 			{/each}
 		</div>
 
-		<div class="home2-browse-cta-grid" aria-label="Бързи Day Night Auto действия">
+		<div class="home2-browse-cta-grid" aria-label="Бързи Promosale Varna действия">
 			<a class="home2-browse-cta home2-browse-cta--inventory" href={resolve('/inventory')}>
 				<img
 					src="/assets/daynight/home2/home2-cta-browse-generated-v1.webp"

@@ -110,7 +110,7 @@
 		min-height: calc(100dvh - 126px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
 	}
 	.mobile-service-entry__start {
-		padding: 10px var(--bc-space-4) 32px;
+		padding: 10px var(--bc-space-4) var(--bc-space-8);
 		background: var(--bc-mobile-dark);
 	}
 	.mobile-service-entry__modes {
@@ -218,7 +218,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-top: 12px;
+		margin-top: var(--bc-mobile-entry-gap);
 	}
 	.mobile-service-entry__alternative {
 		margin-bottom: var(--bc-space-5);
@@ -264,19 +264,21 @@
 	:global(.mobile-service-entry__help) {
 		display: flex;
 		width: auto;
-		min-height: 36px;
+		min-height: var(--bc-control-height-standard);
 		align-items: center;
 		gap: var(--bc-space-2);
 		margin: 0;
 		padding: 0 14px;
-		border: 1px solid rgb(255 255 255 / 0.14);
+		border: 2px solid transparent;
 		border-radius: var(--bc-radius-pill);
 		background: rgb(255 255 255 / 0.08);
+		background-clip: padding-box;
+		box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
 		color: var(--bc-white);
-		font-size: var(--bc-text-control);
+		font-size: var(--bc-text-cta);
 		font-weight: var(--bc-weight-control);
 		cursor: pointer;
-		line-height: var(--bc-leading-control);
+		line-height: var(--bc-leading-cta);
 	}
 	.mobile-service-entry__browse {
 		position: relative;

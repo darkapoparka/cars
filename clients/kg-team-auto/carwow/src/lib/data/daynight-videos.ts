@@ -1,3 +1,10 @@
-export const youtubeChannelUrl = '';
-export type DealerVideo = {id:string;title:string;duration:string;thumbnail:string;url:string};
-export const homeVideos: DealerVideo[] = [];
+export type DayNightVideo = {
+	id: string;
+	title: string;
+	duration: string;
+	thumbnail: string;
+	url: string;
+};
+
+export const youtubeChannelUrl = "";
+export const homeVideos: DayNightVideo[] = [];

@@ -14,7 +14,6 @@
 </script>
 
 <svelte:head>
-<meta name="robots" content="noindex,nofollow" />
   {#if canonicalUrl}<link rel="canonical" href={canonicalUrl} />{/if}
   {#if !indexable}<meta name="robots" content="noindex, nofollow" />{/if}
 </svelte:head>

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Admin - Settings</title>
+	<title>Promosale Varna Admin - Settings</title>
 </svelte:head>
 
 <AdminShell title="Settings" activePath="/admin/settings">

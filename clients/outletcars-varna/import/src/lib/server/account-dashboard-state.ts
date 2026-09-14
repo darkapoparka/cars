@@ -33,9 +33,9 @@ type RecentDashboardItem = {
 };
 
 export const accountAvatarByRole: Record<DayNightRole, string> = {
-	admin: '/dealer/logo-on-light-v2.svg',
-	agent: agents[1]?.image ?? '/dealer/logo-on-light-v2.svg',
-	customer: '/dealer/logo-on-light-v2.svg'
+	admin: '/assets/daynight/team/avatar-sales.jpg',
+	agent: agents[1]?.image ?? '/assets/daynight/team/avatar-logistics.jpg',
+	customer: '/assets/daynight/team/avatar-inspection.jpg'
 };
 
 export const formatDashboardDate = (value: string, fallback = 'Днес') => {
@@ -109,7 +109,7 @@ const dashboardAgentLabel = (slug?: string) => {
 		'daynight-sales': 'Sales team'
 	};
 
-	return (slug && labels[slug]) || 'OUTLETCARS.BG — Варна team';
+	return (slug && labels[slug]) || 'OUTLETCARS.BG team';
 };
 
 export const activeRouteForAccountTemplate = (templateFile: string, routePath = '') => {
@@ -325,10 +325,10 @@ export const accountDashboardRecentData = (context: AccountContext): AuxeroDashb
 		avatarRole: 'agent' as DayNightRole,
 		body: message.message,
 		date: message.createdAt,
-		name: message.threadId === 'daynight-sales' ? 'OUTLETCARS.BG — Варна Sales' : message.authorName,
+		name: message.threadId === 'daynight-sales' ? 'OUTLETCARS.BG Sales' : message.authorName,
 		title: message.vehicleSlug
 			? (vehicles.find((vehicle) => vehicle.slug === message.vehicleSlug)?.title ??
-				'Автомобил на OUTLETCARS.BG — Варна')
+				'Автомобил на OUTLETCARS.BG')
 			: message.threadId
 	}));
 
@@ -357,7 +357,7 @@ export const accountDashboardRecentData = (context: AccountContext): AuxeroDashb
 			}
 		],
 		heading: 'Скорошни съобщения',
-		intro: 'Продължи последния разговор с OUTLETCARS.BG — Варна и движи запазените автомобили напред.',
+		intro: 'Продължи последния разговор с OUTLETCARS.BG и движи запазените автомобили напред.',
 		items: items.map((item, index) => {
 			const message = messages[index];
 
@@ -368,7 +368,7 @@ export const accountDashboardRecentData = (context: AccountContext): AuxeroDashb
 				dateLabel: formatDashboardDate(item.date, `${20 + index} май 2026`),
 				href: '/account/messages',
 				id: message?.id ?? `${item.name}-${item.title}-${index}`,
-				metaLabel: message?.threadId ?? 'Продажби OUTLETCARS.BG — Варна',
+				metaLabel: message?.threadId ?? 'Продажби OUTLETCARS.BG',
 				name: item.name,
 				statusLabel: messageStatusLabel(message?.status ?? 'open'),
 				title: item.title

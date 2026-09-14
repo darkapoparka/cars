@@ -1,3 +1,4 @@
+import { leadSite } from "@repo/marketplace";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
@@ -19,13 +20,13 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Започнете заявка за автомобил от Китай с доставка до България от Перфект Ауто."
-      : "Start a request for a vehicle from China with delivery to Bulgaria from Перфект Ауто.",
+      ? `Започнете заявка за автомобил от Китай с доставка до България от ${leadSite.shortName}.`
+      : `Start a request for a vehicle from China with delivery to Bulgaria from ${leadSite.shortName}.`,
     locale,
     path,
     title: isBg
-      ? "Внос от Китай | Перфект Ауто"
-      : "Import from China | Перфект Ауто",
+      ? `Внос от Китай | ${leadSite.shortName}`
+      : `Import from China | ${leadSite.shortName}`,
   });
 };
 

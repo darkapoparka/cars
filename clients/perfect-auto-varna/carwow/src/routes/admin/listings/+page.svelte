@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import Copy from '@lucide/svelte/icons/copy';
 	import ExternalLink from '@lucide/svelte/icons/external-link';
 	import MoreHorizontal from '@lucide/svelte/icons/more-horizontal';
@@ -75,7 +75,7 @@
 
 	function handleVehicleImageError(event: Event) {
 		const image = event.currentTarget as HTMLImageElement | null;
-		const fallbackSrc = resolve('/variant-3/assets/images/card/card-1.jpg');
+		const fallbackSrc = resolve('/assets/images/card/card-1.jpg');
 
 		if (!image || image.getAttribute('src') === fallbackSrc) return;
 
@@ -218,7 +218,7 @@
 											<div class="flex min-w-0 items-center gap-3">
 												<img
 													class="ring-border size-12 rounded-md object-cover ring-1"
-													src={vehicle.image || '/variant-3/assets/images/card/card-1.jpg'}
+													src={vehicle.image || '/assets/images/card/card-1.jpg'}
 													alt=""
 													onerror={handleVehicleImageError}
 												/>

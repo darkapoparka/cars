@@ -51,8 +51,8 @@ const submissionMessageBg: Record<string, string> = {
 	'Vehicle submission queued for review.': 'Заявката е в опашка за преглед.',
 	'Client vehicle submitted with VIN, photos, and service history for review.':
 		'Клиентският автомобил е подаден с VIN, снимки и сервизна история за преглед.',
-	'Customer asked whether OUTLETCARS.BG — Варна can prepare a direct offer or client listing.':
-		'Клиентът пита дали OUTLETCARS.BG — Варна може да подготви директна оферта или обява.'
+	'Customer asked whether OUTLETCARS.BG can prepare a direct offer or client listing.':
+		'Клиентът пита дали OUTLETCARS.BG може да подготви директна оферта или обява.'
 };
 
 const localizeSubmissionMessage = (message: string) => submissionMessageBg[message] ?? message;
@@ -73,7 +73,7 @@ export const accountSubmissionListingRows = (): AuxeroAccountListingRow[] =>
 				label: 'Редактирай'
 			},
 			{
-				ariaLabel: 'Съобщение до OUTLETCARS.BG — Варна',
+				ariaLabel: 'Съобщение до OUTLETCARS.BG',
 				href: '/account/messages',
 				icon: '/assets/images/dashboard/Messages.svg',
 				kind: 'message',
@@ -100,7 +100,7 @@ export const accountListingsData = (
 ): AuxeroAccountListingsData =>
 	context.isAdmin
 		? {
-				footerText: `Showing ${source.length} of ${vehicles.length} OUTLETCARS.BG — Варна entries`,
+				footerText: `Showing ${source.length} of ${vehicles.length} OUTLETCARS.BG entries`,
 				headers: ['Car', 'Brand', 'Year', 'Transmission', 'Fuel Type', 'Action'],
 				isSubmissions: false,
 				pagination: ['1', '2', '3'],

@@ -2,17 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import {
-		ArrowUpDown,
-		Calendar,
-		ChevronDown,
-		Cog,
-		Fuel,
-		Gauge,
-		Search,
-		SlidersHorizontal,
-		X
-	} from '@lucide/svelte';
+	import { ArrowUpDown, ChevronDown, Search, SlidersHorizontal, X } from '@lucide/svelte';
 	import { tick } from 'svelte';
 	import type { AuxeroInventoryVehicleCard } from '$lib/auxero/inventory';
 	import type { InventoryMobileData } from '$lib/auxero/inventory-mobile';
@@ -20,6 +10,7 @@
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
 	import { Drawer } from 'vaul-svelte';
 	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
+	import MobileVehicleCard from '$lib/components/common/MobileVehicleCard.svelte';
 
 	type FilterDrawerMode =
 		| 'all'
@@ -30,7 +21,8 @@
 		| 'mileage'
 		| 'body'
 		| 'price'
-		| 'extras';
+		| 'extras'
+		| 'year';
 	type FilterDraft = {
 		body: string;
 		brand: string;
@@ -70,7 +62,8 @@
 		mileage: 'daynight-inventory-mobile-mileage-drawer',
 		model: 'daynight-inventory-mobile-model-drawer',
 		price: 'daynight-inventory-mobile-price-drawer',
-		sort: 'daynight-inventory-mobile-sort-drawer'
+		sort: 'daynight-inventory-mobile-sort-drawer',
+		year: 'daynight-inventory-mobile-year-drawer'
 	} as const;
 	const activeOptionValue = (options: InventoryMobileData['brandOptions']) =>
 		options.find((option) => option.active)?.value ?? '';
@@ -197,19 +190,7 @@
 	const priceSelected = $derived(
 		mobile.priceOptions.some((option) => option.active && option.value)
 	);
-	const transmissionSelected = $derived(
-		mobile.transmissionOptions.some((option) => option.active && option.value)
-	);
 	const yearSelected = $derived(mobile.yearOptions.some((option) => option.active && option.value));
-	const drawerFilterSelected = $derived(
-		bodySelected ||
-			extrasSelected ||
-			fuelSelected ||
-			mileageSelected ||
-			priceSelected ||
-			transmissionSelected ||
-			yearSelected
-	);
 	const sortSelected = $derived(
 		mobile.sortOptions.some((option) => option.active && option.value !== 'best-match')
 	);
@@ -223,9 +204,6 @@
 	const filterDrawerHasActions = $derived(
 		filterDrawerMode === 'all' || filterDrawerMode === 'brand' || filterDrawerMode === 'model'
 	);
-	const filterDrawerKicker = $derived(
-		filterDrawerMode === 'sort' ? mobile.sortLabel : mobile.filterLabel
-	);
 	const filterDrawerTitle = $derived.by(() => {
 		if (filterDrawerMode === 'body') return mobile.bodyLabel;
 		if (filterDrawerMode === 'brand') return mobile.brandLabel;
@@ -235,6 +213,7 @@
 		if (filterDrawerMode === 'model') return mobile.modelLabel;
 		if (filterDrawerMode === 'price') return mobile.priceLabel;
 		if (filterDrawerMode === 'sort') return mobile.sortLabel;
+		if (filterDrawerMode === 'year') return mobile.yearLabel;
 
 		return mobile.drawerTitle;
 	});
@@ -434,15 +413,6 @@
 	const closeFilterDrawer = () => {
 		filterDrawerOpen = false;
 	};
-	const fallbackImage = '/assets/images/card/card-48.jpg';
-	const useFallbackImage = (event: Event) => {
-		const image = event.currentTarget as HTMLImageElement;
-
-		if (!image.src.endsWith(fallbackImage)) {
-			image.src = fallbackImage;
-		}
-	};
-	const mobileImage = (card: AuxeroInventoryVehicleCard) => card.image;
 </script>
 
 <div class="daynight-inventory-mobile" style:display={filtersOnly ? 'contents' : undefined}>
@@ -450,71 +420,57 @@
 		<main class="daynight-inventory-mobile__main">
 			<h1 class="sr-only">{inventoryHeading}</h1>
 			<div class="daynight-inventory-mobile__search">
-				<div class="daynight-inventory-mobile__search-field">
-					<button
-						type="button"
-						class="daynight-inventory-mobile__search-label"
-						aria-haspopup="dialog"
-						aria-controls="daynight-inventory-mobile-search-drawer"
-						aria-expanded={searchDrawerOpen}
-						onclick={openSearchDrawer}
-					>
-						<span class:active={Boolean(mobile.searchValue)}>
-							{mobile.searchDisplayValue || mobile.searchPlaceholder}
-						</span>
-					</button>
-					<button
-						type="button"
-						class="daynight-inventory-mobile__search-action"
-						aria-label={mobile.searchLabel}
-						aria-controls="daynight-inventory-mobile-search-drawer"
-						aria-expanded={searchDrawerOpen}
-						onclick={openSearchDrawer}
-					>
-						<Search size={19} strokeWidth={2.2} aria-hidden="true" />
-					</button>
-				</div>
+				<button
+					type="button"
+					class="daynight-inventory-mobile__search-field"
+					aria-label={mobile.searchDisplayValue || mobile.searchPlaceholder}
+					aria-haspopup="dialog"
+					aria-expanded={searchDrawerOpen}
+					onclick={openSearchDrawer}
+				>
+					<Search size={20} strokeWidth={2} aria-hidden="true" />
+					<span>{mobile.searchDisplayValue || mobile.searchLabel}</span>
+				</button>
+				<button
+					type="button"
+					class="daynight-inventory-mobile__header-action"
+					class:active={hasActiveFilters}
+					aria-haspopup="dialog"
+					aria-expanded={filterDrawerOpen && filterDrawerMode === 'all'}
+					onclick={() => openFilterDrawer('all')}
+				>
+					<SlidersHorizontal size={20} strokeWidth={2} aria-hidden="true" />
+					<span class="sr-only">{mobile.filterLabel}</span>
+					{#if hasActiveFilters}
+						<span class="daynight-inventory-mobile__filter-count"
+							>{mobile.activeFilters.length}</span
+						>
+					{/if}
+				</button>
+				<button
+					type="button"
+					class="daynight-inventory-mobile__header-action"
+					class:active={sortSelected}
+					aria-label={`${mobile.sortLabel}: ${mobile.sortValue}`}
+					aria-haspopup="dialog"
+					aria-expanded={filterDrawerOpen && filterDrawerMode === 'sort'}
+					onclick={() => openFilterDrawer('sort')}
+				>
+					<ArrowUpDown size={20} strokeWidth={2} aria-hidden="true" />
+
+					{#if sortSelected}
+						<span class="daynight-inventory-mobile__sort-dot" aria-hidden="true"></span>
+					{/if}
+				</button>
 			</div>
 
 			<nav class="daynight-inventory-mobile__tools" aria-label={mobile.filterLabel}>
 				<button
 					type="button"
 					class="daynight-inventory-mobile__tool-choice"
-					class:active={drawerFilterSelected}
-					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.all}
-					aria-expanded={filterDrawerOpen && filterDrawerMode === 'all'}
-					onclick={() => openFilterDrawer('all')}
-				>
-					<SlidersHorizontal size={18} strokeWidth={2.2} aria-hidden="true" />
-					<span>{mobile.filterLabel}</span>
-					{#if hasActiveFilters}
-						<strong>{mobile.activeFilters.length}</strong>
-					{/if}
-				</button>
-				<button
-					type="button"
-					class="daynight-inventory-mobile__tool-choice"
-					class:active={sortSelected}
-					aria-label={`${mobile.sortLabel}: ${mobile.sortValue}`}
-					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.sort}
-					aria-expanded={filterDrawerOpen && filterDrawerMode === 'sort'}
-					onclick={() => openFilterDrawer('sort')}
-				>
-					<ArrowUpDown size={18} strokeWidth={2.2} aria-hidden="true" />
-					<span>{mobile.sortLabel}</span>
-					{#if sortSelected}
-						<strong>{mobile.sortValue}</strong>
-					{/if}
-				</button>
-				<button
-					type="button"
-					class="daynight-inventory-mobile__tool-choice"
 					class:active={brandSelected}
 					aria-label={`${mobile.brandLabel}: ${mobile.brandValue}`}
 					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.brand}
 					aria-expanded={filterDrawerOpen && filterDrawerMode === 'brand'}
 					onclick={() => openFilterDrawer('brand')}
 				>
@@ -530,7 +486,6 @@
 					class:active={modelSelected}
 					aria-label={`${mobile.modelLabel}: ${mobile.modelValue}`}
 					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.model}
 					aria-expanded={filterDrawerOpen && filterDrawerMode === 'model'}
 					onclick={() => openFilterDrawer('model')}
 				>
@@ -543,10 +498,39 @@
 				<button
 					type="button"
 					class="daynight-inventory-mobile__tool-choice"
+					class:active={priceSelected}
+					aria-label={`${mobile.priceLabel}: ${mobile.priceValue}`}
+					aria-haspopup="dialog"
+					aria-expanded={filterDrawerOpen && filterDrawerMode === 'price'}
+					onclick={() => openFilterDrawer('price')}
+				>
+					<span>{mobile.priceLabel}</span>
+					{#if priceSelected}
+						<strong>{mobile.priceValue}</strong>
+					{/if}
+					<ChevronDown size={17} strokeWidth={2.1} aria-hidden="true" />
+				</button>
+				<button
+					type="button"
+					class="daynight-inventory-mobile__tool-choice"
+					class:active={yearSelected}
+					aria-label={`${mobile.yearLabel}: ${mobile.yearValue}`}
+					aria-haspopup="dialog"
+					aria-expanded={filterDrawerOpen && filterDrawerMode === 'year'}
+					onclick={() => openFilterDrawer('year')}
+				>
+					<span>{mobile.yearLabel}</span>
+					{#if yearSelected}
+						<strong>{mobile.yearValue}</strong>
+					{/if}
+					<ChevronDown size={17} strokeWidth={2.1} aria-hidden="true" />
+				</button>
+				<button
+					type="button"
+					class="daynight-inventory-mobile__tool-choice"
 					class:active={fuelSelected}
 					aria-label={`${mobile.fuelLabel}: ${mobile.fuelValue}`}
 					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.fuel}
 					aria-expanded={filterDrawerOpen && filterDrawerMode === 'fuel'}
 					onclick={() => openFilterDrawer('fuel')}
 				>
@@ -562,7 +546,6 @@
 					class:active={mileageSelected}
 					aria-label={`${mobile.mileageLabel}: ${mobile.mileageValue}`}
 					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.mileage}
 					aria-expanded={filterDrawerOpen && filterDrawerMode === 'mileage'}
 					onclick={() => openFilterDrawer('mileage')}
 				>
@@ -578,7 +561,6 @@
 					class:active={bodySelected}
 					aria-label={`${mobile.bodyLabel}: ${bodyValue}`}
 					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.body}
 					aria-expanded={filterDrawerOpen && filterDrawerMode === 'body'}
 					onclick={() => openFilterDrawer('body')}
 				>
@@ -591,26 +573,9 @@
 				<button
 					type="button"
 					class="daynight-inventory-mobile__tool-choice"
-					class:active={priceSelected}
-					aria-label={`${mobile.priceLabel}: ${mobile.priceValue}`}
-					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.price}
-					aria-expanded={filterDrawerOpen && filterDrawerMode === 'price'}
-					onclick={() => openFilterDrawer('price')}
-				>
-					<span>{mobile.priceLabel}</span>
-					{#if priceSelected}
-						<strong>{mobile.priceValue}</strong>
-					{/if}
-					<ChevronDown size={17} strokeWidth={2.1} aria-hidden="true" />
-				</button>
-				<button
-					type="button"
-					class="daynight-inventory-mobile__tool-choice"
 					class:active={extrasSelected}
 					aria-label={`${mobile.extrasLabel}: ${mobile.featureValue}`}
 					aria-haspopup="dialog"
-					aria-controls={filterDrawerIds.extras}
 					aria-expanded={filterDrawerOpen && filterDrawerMode === 'extras'}
 					onclick={() => openFilterDrawer('extras')}
 				>
@@ -632,37 +597,7 @@
 
 			<section class="daynight-inventory-mobile__cards" aria-label={mobile.countLabel}>
 				{#each cards as card (card.slug)}
-					<article class="daynight-inventory-mobile-card">
-						<a
-							class="daynight-inventory-mobile-card__image"
-							href={resolve('/inventory/[slug]', { slug: card.slug })}
-						>
-							<img
-								src={mobileImage(card)}
-								alt={card.title}
-								width="660"
-								height="440"
-								loading="lazy"
-								decoding="async"
-								onerror={useFallbackImage}
-							/>
-							<span>{card.tag}</span>
-						</a>
-						<div class="daynight-inventory-mobile-card__body">
-							<p>{card.brand}</p>
-							<h2>
-								<a href={resolve('/inventory/[slug]', { slug: card.slug })}>{card.title}</a>
-							</h2>
-							<strong>{card.priceLabel}</strong>
-							<small>{card.monthlyLabel}</small>
-							<ul>
-								<li><Gauge size={14} strokeWidth={2} aria-hidden="true" />{card.mileageLabel}</li>
-								<li><Calendar size={14} strokeWidth={2} aria-hidden="true" />{card.year}</li>
-								<li><Fuel size={14} strokeWidth={2} aria-hidden="true" />{card.fuel}</li>
-								<li><Cog size={14} strokeWidth={2} aria-hidden="true" />{card.transmission}</li>
-							</ul>
-						</div>
-					</article>
+					<MobileVehicleCard {card} />
 				{:else}
 					<div class="daynight-inventory-mobile__empty">
 						<h2>{copy.emptyTitle}</h2>
@@ -797,12 +732,11 @@
 		</Drawer.Overlay>
 		<Drawer.Content
 			id={filterDrawerId}
-			class={`daynight-inventory-mobile-drawer__sheet daynight-inventory-mobile-drawer__sheet--filters ${filterDrawerMode === 'all' ? 'daynight-inventory-mobile-drawer__sheet--full' : ''} ${filterDrawerHasActions ? 'daynight-inventory-mobile-drawer__sheet--with-actions' : ''}`}
+			class={`daynight-inventory-mobile-drawer__sheet daynight-inventory-mobile-drawer__sheet--filters ${filtersOnly ? 'daynight-inventory-mobile-drawer__sheet--fullscreen' : ''} ${filterDrawerMode === 'all' ? 'daynight-inventory-mobile-drawer__sheet--full' : ''} ${filterDrawerHasActions ? 'daynight-inventory-mobile-drawer__sheet--with-actions' : ''}`}
 		>
-			<Drawer.Handle class="daynight-inventory-mobile-drawer__handle" />
+			{#if !filtersOnly}<Drawer.Handle class="daynight-inventory-mobile-drawer__handle" />{/if}
 			<header>
 				<div>
-					<p>{filterDrawerKicker}</p>
 					<Drawer.Title>
 						<span class="daynight-inventory-mobile-drawer__title">
 							{filterDrawerTitle}
@@ -818,26 +752,26 @@
 					{mobile.countLabel}
 				</span>
 			</Drawer.Description>
+			{#if filterDrawerMode === 'all'}
+				<form
+					onsubmit={(event) => {
+						event.preventDefault();
+						applyFilterDraft();
+					}}
+				>
+					<label class="daynight-inventory-mobile-drawer__search-box">
+						<Search size={19} strokeWidth={2.15} aria-hidden="true" />
+						<input
+							type="search"
+							bind:value={filterDraft.model}
+							placeholder={mobile.searchPlaceholder}
+							aria-label={mobile.searchPlaceholder}
+							enterkeyhint="search"
+						/>
+					</label>
+				</form>
+			{/if}
 			<div class="daynight-inventory-mobile-drawer__body" data-vaul-no-drag>
-				{#if filterDrawerMode === 'all'}
-					<form
-						onsubmit={(event) => {
-							event.preventDefault();
-							applyFilterDraft();
-						}}
-					>
-						<label class="daynight-inventory-mobile-drawer__search-box">
-							<Search size={19} strokeWidth={2.15} aria-hidden="true" />
-							<input
-								type="search"
-								bind:value={filterDraft.model}
-								placeholder={mobile.searchPlaceholder}
-								aria-label={mobile.searchPlaceholder}
-								enterkeyhint="search"
-							/>
-						</label>
-					</form>
-				{/if}
 				{#if filterDrawerMode === 'brand'}
 					<div class="daynight-inventory-mobile-drawer__group">
 						<label class="daynight-inventory-mobile-drawer__search-box">
@@ -1023,7 +957,7 @@
 						</div>
 					</div>
 				{/if}
-				{#if filterDrawerMode === 'all'}
+				{#if filterDrawerMode === 'all' || filterDrawerMode === 'year'}
 					<div class="daynight-inventory-mobile-drawer__group">
 						<p>{mobile.yearLabel}</p>
 						<div>
@@ -1042,6 +976,8 @@
 							{/each}
 						</div>
 					</div>
+				{/if}
+				{#if filterDrawerMode === 'all'}
 					<div class="daynight-inventory-mobile-drawer__group">
 						<p>{mobile.transmissionLabel}</p>
 						<div>
@@ -1115,8 +1051,8 @@
 		max-width: 100vw;
 		overflow-x: hidden;
 		min-height: 100vh;
-		background: var(--bc-surface);
-		color: #111111;
+		background: var(--bc-bg);
+		color: var(--bc-ink);
 	}
 
 	.daynight-inventory-mobile__main {
@@ -1124,100 +1060,108 @@
 		width: 100%;
 		max-width: 100vw;
 		min-width: 0;
-		gap: 10px;
+		gap: var(--bc-space-2);
 		overflow-x: hidden;
-		padding: max(14px, env(safe-area-inset-top)) 14px 92px;
+		padding: max(6px, env(safe-area-inset-top)) 14px 92px;
 	}
 
 	.daynight-inventory-mobile__search {
-		display: block;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) repeat(2, var(--bc-control-height-standard));
+		align-items: center;
+		gap: var(--bc-space-2);
 		min-width: 0;
+	}
+
+	.daynight-inventory-mobile__header-action {
+		position: relative;
+		display: grid;
+		place-items: center;
+		width: var(--bc-control-height-standard);
+		height: var(--bc-control-height-standard);
+		padding: 0;
+		border: 0;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-white);
+		color: var(--bc-ink);
+		cursor: pointer;
+	}
+	.daynight-inventory-mobile__header-action.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+	.daynight-inventory-mobile__header-action:focus-visible {
+		outline: 2px solid var(--bc-accent);
+		outline-offset: 2px;
+	}
+	.daynight-inventory-mobile__filter-count {
+		position: absolute;
+		top: -3px;
+		right: -3px;
+		display: grid;
+		place-items: center;
+		min-width: 18px;
+		height: 18px;
+		padding: 0 3px;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-ink);
+		color: var(--bc-white);
+		font-size: var(--bc-mobile-stat);
+		line-height: 1;
+	}
+	.daynight-inventory-mobile__sort-dot {
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: currentColor;
 	}
 
 	.daynight-inventory-mobile__search-field {
 		display: flex;
 		width: 100%;
-		max-width: 100%;
-		min-height: 50px;
 		min-width: 0;
+		height: var(--bc-control-height-standard);
 		align-items: center;
-		gap: 10px;
+		gap: var(--bc-space-2);
 		border: 0;
-		border-radius: 999px;
-		background: #ffffff;
-		box-shadow: 0 1px 2px rgb(17 24 39 / 0.06);
-		padding: 5px 5px 5px 14px;
-		color: #1c1c1c;
-	}
-
-	.daynight-inventory-mobile__search-label {
-		display: flex;
-		overflow: hidden;
-		min-width: 0;
-		height: 44px !important;
-		flex: 1 1 auto;
-		align-items: center;
-		border: 0;
-		background: transparent;
-		color: #1c1c1c;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-white);
+		padding: 0 14px;
+		color: var(--bc-ink);
 		cursor: pointer;
-		padding: 0;
 		text-align: left;
 	}
-
-	.daynight-inventory-mobile__search-label span {
-		display: block;
+	.daynight-inventory-mobile__search-field :global(svg) {
+		flex: 0 0 auto;
+		color: var(--bc-copy);
+	}
+	.daynight-inventory-mobile__search-field span {
 		min-width: 0;
 		overflow: hidden;
-		color: #637184;
-		font-size: 15px;
-		font-weight: 600;
-		line-height: 21px;
+		font-size: var(--bc-text-search-trigger);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-leading-search);
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-
-	.daynight-inventory-mobile__search-label span.active {
-		color: #1c1c1c;
-	}
-
-	.daynight-inventory-mobile__search-action {
-		display: flex;
-		width: 44px;
-		height: 44px;
-		align-items: center;
-		justify-content: center;
-		flex: 0 0 44px;
-		border: 0 !important;
-		border-radius: 999px;
-		background: #1c1c1c;
-		box-shadow: none !important;
-		color: #ffffff;
-		cursor: pointer;
-		padding: 0;
-	}
-
-	.daynight-inventory-mobile__search-action :global(svg),
-	.daynight-inventory-mobile__search-action :global(path) {
-		stroke: #ffffff;
-	}
-
-	.daynight-inventory-mobile__search-label:focus-visible,
-	.daynight-inventory-mobile__search-action:focus-visible {
-		outline: 2px solid #1c1c1c;
+	.daynight-inventory-mobile__search-field:focus-visible {
+		outline: 2px solid var(--bc-accent);
 		outline-offset: 2px;
 	}
 
 	.daynight-inventory-mobile__tools {
 		display: flex;
 		min-width: 0;
-		gap: 8px;
-		margin: 0 -14px;
+		gap: var(--bc-space-2);
+		margin: 0 calc(-1 * var(--bc-mobile-gutter));
 		overflow-x: auto;
-		padding: 0 14px 2px;
+		padding: 0 var(--bc-mobile-gutter) 2px;
 		scrollbar-width: none;
-		-webkit-mask-image: linear-gradient(to right, #000 calc(100% - 34px), transparent);
-		mask-image: linear-gradient(to right, #000 calc(100% - 34px), transparent);
+		-webkit-mask-image: linear-gradient(to right, var(--bc-ink) calc(100% - 34px), transparent);
+		mask-image: linear-gradient(to right, var(--bc-ink) calc(100% - 34px), transparent);
 	}
 
 	.daynight-inventory-mobile__tools::-webkit-scrollbar {
@@ -1229,19 +1173,19 @@
 		display: inline-flex;
 		min-width: 0;
 		flex: 0 0 auto;
-		min-height: 44px;
+		min-height: var(--bc-control-height-standard);
 		align-items: center;
-		gap: 8px;
+		gap: var(--bc-space-2);
 		border: 0;
 		border-radius: var(--bc-radius-control);
-		background: #ffffff;
-		padding: 0 13px;
+		background: var(--bc-white);
+		padding: 0 var(--bc-space-3);
 		appearance: none;
-		color: #1c1c1c;
+		color: var(--bc-ink);
 		cursor: pointer;
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 18px;
+		font-size: var(--bc-text-filter);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-filter);
 		text-decoration: none;
 		white-space: nowrap;
 	}
@@ -1249,20 +1193,20 @@
 	.daynight-inventory-mobile__tools button.active {
 		background: var(--bc-accent);
 		box-shadow: none;
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 
 	.daynight-inventory-mobile__tools button:focus-visible,
 	.daynight-inventory-mobile__tools a:focus-visible {
 		background: var(--bc-accent-hover);
 		box-shadow: none;
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 
 	.daynight-inventory-mobile__tool-choice:focus-visible span,
 	.daynight-inventory-mobile__tool-choice:focus-visible strong,
 	.daynight-inventory-mobile__tool-choice:focus-visible :global(svg) {
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 
 	.daynight-inventory-mobile__tools button.daynight-inventory-mobile__tool-choice {
@@ -1271,17 +1215,17 @@
 	}
 
 	.daynight-inventory-mobile__tool-choice span {
-		color: #1c1c1c;
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 18px;
+		color: var(--bc-ink);
+		font-size: var(--bc-text-filter);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-filter);
 	}
 
 	.daynight-inventory-mobile__tool-choice.active span {
-		color: #ffffff;
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 18px;
+		color: var(--bc-white);
+		font-size: var(--bc-text-filter);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-filter);
 		text-transform: none;
 	}
 
@@ -1290,10 +1234,10 @@
 		min-width: 0;
 		max-width: min(42vw, 138px);
 		overflow: hidden;
-		color: #111111;
-		font-size: 14px;
-		font-weight: 600;
-		line-height: 18px;
+		color: var(--bc-ink);
+		font-size: var(--bc-text-filter);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-filter);
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
@@ -1303,154 +1247,24 @@
 	}
 
 	.daynight-inventory-mobile__tool-clear {
-		min-height: 44px;
+		min-height: var(--bc-control-height-standard);
 		border: 0;
 		border-radius: var(--bc-radius-control);
-		background: #ffffff;
-		font-size: 13px;
+		background: var(--bc-white);
+		font-size: var(--bc-text-filter);
+		line-height: var(--bc-leading-filter);
+		font-weight: var(--bc-weight-control);
 	}
 
 	.daynight-inventory-mobile__cards {
 		display: grid;
 		min-width: 0;
-		gap: 10px;
+		gap: var(--bc-space-3);
 		margin-top: 8px;
 	}
 
-	.daynight-inventory-mobile-card {
-		display: grid;
-		width: 100%;
-		max-width: 100%;
-		min-width: 0;
-		grid-template-columns: clamp(96px, 32vw, 132px) minmax(0, 1fr);
-		min-height: 154px;
-		overflow: hidden;
-		border: 0;
-		border-radius: 8px;
-		background: #ffffff;
-		box-shadow: none;
-	}
-
-	.daynight-inventory-mobile-card__image {
-		position: relative;
-		display: block;
-		min-height: 154px;
-		overflow: hidden;
-	}
-
-	.daynight-inventory-mobile-card__image img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		min-height: 154px;
-		object-fit: cover;
-	}
-
-	.daynight-inventory-mobile-card__image span {
-		position: absolute;
-		top: 8px;
-		left: 8px;
-		min-height: 24px;
-		border-radius: 999px;
-		background: var(--bc-accent);
-		padding: 0 8px;
-		color: #ffffff;
-		font-size: 10px;
-		font-weight: 700;
-		line-height: 24px;
-		text-transform: uppercase;
-	}
-
-	.daynight-inventory-mobile-card__body {
-		display: grid;
-		min-width: 0;
-		align-content: start;
-		overflow: visible;
-		padding: 10px 10px 10px 11px;
-	}
-
-	.daynight-inventory-mobile-card__body p {
-		margin: 0 0 2px;
-		color: #637184;
-		font-size: 11px;
-		font-weight: 600;
-		line-height: 13px;
-		text-transform: uppercase;
-	}
-
-	.daynight-inventory-mobile-card__body h2 {
-		min-width: 0;
-		margin: 0 0 5px;
-		overflow: visible;
-		color: #101010;
-		font-size: 17px;
-		font-weight: 650;
-		line-height: 22px;
-		overflow-wrap: anywhere;
-	}
-
-	.daynight-inventory-mobile-card__body h2 a {
-		display: inline;
-		min-width: 0;
-		overflow: visible;
-		color: inherit;
-		font-size: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-		overflow-wrap: anywhere;
-	}
-
-	.daynight-inventory-mobile-card__body strong {
-		color: var(--bc-accent);
-		font-size: 20px;
-		font-weight: 700;
-		line-height: 24px;
-	}
-
-	.daynight-inventory-mobile-card__body small {
-		margin-bottom: 7px;
-		color: #67717d;
-		font-size: 11px;
-		font-weight: 600;
-		line-height: 14px;
-	}
-
-	.daynight-inventory-mobile-card__body ul {
-		display: grid;
-		grid-template-columns: minmax(max-content, 1fr) minmax(0, 1fr);
-		gap: 6px;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	.daynight-inventory-mobile-card__body li {
-		display: flex;
-		min-width: 0;
-		min-height: 36px;
-		align-items: center;
-		justify-content: flex-start;
-		gap: 4px;
-		overflow: visible;
-		border-radius: 8px;
-		background: var(--bc-surface-soft);
-		padding: 6px;
-		color: #4b5563;
-		font-size: 12px;
-		font-weight: 600;
-		line-height: 1.35;
-		overflow-wrap: normal;
-		text-align: left;
-		white-space: nowrap;
-		font-variant-numeric: tabular-nums;
-	}
-
-	.daynight-inventory-mobile-card__body li :global(svg) {
-		flex: 0 0 auto;
-	}
-
 	.daynight-inventory-mobile__empty {
-		border-radius: 8px;
+		border-radius: var(--bc-radius-md);
 		background: var(--bc-surface);
 		padding: 18px;
 	}
@@ -1463,12 +1277,12 @@
 
 	.daynight-inventory-mobile__empty p {
 		margin: 0 0 12px;
-		color: #67717d;
+		color: var(--bc-muted);
 	}
 
 	.daynight-inventory-mobile__empty a {
 		color: var(--bc-accent);
-		font-weight: 650;
+		font-weight: var(--bc-weight-heading);
 	}
 
 	:global(.daynight-inventory-mobile-drawer__backdrop) {
@@ -1503,7 +1317,7 @@
 		height: auto;
 		max-height: min(calc(86dvh - var(--bc-kb-inset, 0px)), 720px);
 		align-content: start;
-		gap: 16px;
+		gap: var(--bc-space-4);
 		grid-auto-rows: max-content;
 		overflow: hidden;
 		border-radius: 18px 18px 0 0;
@@ -1523,7 +1337,7 @@
 		display: grid;
 		grid-template-rows: max-content minmax(0, 1fr);
 		background: var(--bc-bg);
-		color: var(--bc-ink, #111111);
+		color: var(--bc-ink, var(--bc-ink));
 	}
 
 	.daynight-inventory-mobile-search-overlay__bar {
@@ -1542,7 +1356,7 @@
 		justify-content: center;
 		flex: 0 0 40px;
 		border: 0;
-		border-radius: 999px;
+		border-radius: var(--bc-radius-pill);
 		background: var(--bc-surface);
 		color: inherit;
 		cursor: pointer;
@@ -1552,7 +1366,7 @@
 	.daynight-inventory-mobile-search-overlay__scroll {
 		display: grid;
 		min-height: 0;
-		gap: 16px;
+		gap: var(--bc-space-4);
 		align-content: start;
 		grid-auto-rows: max-content;
 		overflow-y: auto;
@@ -1595,6 +1409,18 @@
 		grid-template-rows: max-content max-content max-content minmax(0, 1fr) max-content;
 	}
 
+	:global(.daynight-inventory-mobile-drawer__sheet--full[data-vaul-drawer]) {
+		grid-template-rows: max-content max-content max-content max-content minmax(0, 1fr) max-content;
+	}
+	:global(.daynight-inventory-mobile-drawer__sheet--fullscreen[data-vaul-drawer]) {
+		top: 0;
+		height: calc(100dvh - var(--bc-kb-inset, 0px));
+		max-height: calc(100dvh - var(--bc-kb-inset, 0px));
+		border-radius: 0;
+		padding-top: max(var(--bc-space-3), env(safe-area-inset-top));
+		grid-template-rows: max-content max-content max-content minmax(0, 1fr) max-content;
+	}
+
 	:global(.daynight-inventory-mobile-drawer__sheet[data-vaul-drawer]::-webkit-scrollbar) {
 		display: none;
 	}
@@ -1617,7 +1443,7 @@
 		width: 44px;
 		height: 5px;
 		transform: translate(-50%, -50%);
-		border-radius: 999px;
+		border-radius: var(--bc-radius-pill);
 		background: var(--bc-border);
 		content: '';
 	}
@@ -1637,28 +1463,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 16px;
+		gap: var(--bc-space-4);
 	}
 
 	:global(.daynight-inventory-mobile-drawer__sheet header div) {
 		min-width: 0;
 	}
 
-	:global(.daynight-inventory-mobile-drawer__sheet header p) {
-		margin: 0 0 2px;
-		color: var(--bc-accent);
-		font-size: 12px;
-		font-weight: 650;
-		line-height: 16px;
-		text-transform: uppercase;
-	}
-
 	.daynight-inventory-mobile-drawer__title {
 		display: block;
-		color: #111111;
-		font-size: 24px;
-		font-weight: 700;
-		line-height: 30px;
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-section-title);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-section-title-leading);
 	}
 
 	.daynight-inventory-mobile-drawer__description {
@@ -1672,34 +1489,34 @@
 
 	:global(.daynight-inventory-mobile-drawer__sheet header button) {
 		display: flex;
-		width: 44px;
-		height: 44px;
+		width: var(--bc-control-height-standard);
+		height: var(--bc-control-height-standard);
 		align-items: center;
 		justify-content: center;
-		flex: 0 0 44px;
+		flex: 0 0 var(--bc-control-height-standard);
 		border: 0;
 		border-radius: 50%;
 		background: var(--bc-surface);
-		color: #111111;
+		color: var(--bc-ink);
 		cursor: pointer;
 		padding: 0;
 	}
 
 	.daynight-inventory-mobile-drawer__search-form {
 		display: grid;
-		gap: 10px;
+		gap: var(--bc-space-3);
 	}
 
 	.daynight-inventory-mobile-drawer__search-box {
 		display: flex;
-		min-height: 50px;
+		min-height: var(--bc-control-height-primary);
 		align-items: center;
-		gap: 10px;
-		border: 1px solid #e2e8dc;
-		border-radius: 999px;
+		gap: var(--bc-space-3);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-pill);
 		background: var(--bc-surface);
-		padding: 0 13px;
-		color: #111111;
+		padding: 0 var(--bc-space-3);
+		color: var(--bc-ink);
 	}
 
 	.daynight-inventory-mobile-drawer__search-box--submit {
@@ -1709,17 +1526,17 @@
 	.daynight-inventory-mobile-drawer__search-box input {
 		min-width: 0;
 		width: 100%;
-		height: 48px;
+		height: var(--bc-control-height-primary);
 		flex: 1 1 auto;
 		border: 0 !important;
 		border-radius: 0 !important;
 		background: transparent !important;
 		box-shadow: none !important;
-		color: #111111;
+		color: var(--bc-ink);
 		/* >=16px stops iOS Safari from auto-zooming (and shifting the vaul sheet) on focus. */
-		font-size: 16px;
-		font-weight: 600;
-		line-height: 22px;
+		font-size: var(--bc-text-search);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-leading-search);
 		outline: 0;
 		padding: 0 !important;
 		appearance: none;
@@ -1730,31 +1547,31 @@
 	}
 
 	.daynight-inventory-mobile-drawer__search-box:focus-within {
-		outline: 2px solid #1c1c1c;
+		outline: 2px solid var(--bc-ink);
 		outline-offset: 2px;
 	}
 
 	.daynight-inventory-mobile-drawer__search-submit {
 		display: inline-flex;
-		width: 42px;
-		min-width: 42px;
-		height: 42px;
-		min-height: 42px;
+		width: var(--bc-control-height-standard);
+		min-width: var(--bc-control-height-standard);
+		height: var(--bc-control-height-standard);
+		min-height: var(--bc-control-height-standard);
 		align-items: center;
 		justify-content: center;
 		flex: 0 0 auto;
 		border: 0;
-		border-radius: 999px;
+		border-radius: var(--bc-radius-pill);
 		background: var(--bc-accent);
 		appearance: none;
-		color: #ffffff;
+		color: var(--bc-white);
 		cursor: pointer;
 		padding: 0;
 	}
 
 	.daynight-inventory-mobile-drawer__search-submit :global(svg),
 	.daynight-inventory-mobile-drawer__search-submit :global(path) {
-		stroke: #ffffff;
+		stroke: var(--bc-white);
 	}
 
 	.daynight-inventory-mobile-drawer__search-submit:focus-visible,
@@ -1762,7 +1579,7 @@
 	.daynight-inventory-mobile-drawer__group button:focus-visible,
 	.daynight-inventory-mobile-drawer__clear:focus-visible,
 	.daynight-inventory-mobile-drawer__done:focus-visible {
-		outline: 2px solid #1c1c1c;
+		outline: 2px solid var(--bc-ink);
 		outline-offset: 2px;
 	}
 
@@ -1770,7 +1587,7 @@
 		display: grid;
 		min-height: 0;
 		overflow-y: auto;
-		gap: 16px;
+		gap: var(--bc-space-4);
 		padding-bottom: 2px;
 		-webkit-overflow-scrolling: touch;
 		scrollbar-width: none;
@@ -1782,22 +1599,22 @@
 
 	.daynight-inventory-mobile-drawer__group {
 		display: grid;
-		gap: 9px;
+		gap: var(--bc-space-2);
 	}
 
 	.daynight-inventory-mobile-drawer__group p {
 		margin: 0;
-		color: #728093;
-		font-size: 12px;
-		font-weight: 800;
-		line-height: 16px;
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-label-leading);
 		text-transform: uppercase;
 	}
 
 	.daynight-inventory-mobile-drawer__group div {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 8px;
+		gap: var(--bc-space-2);
 	}
 
 	.daynight-inventory-mobile-drawer__group--logos div {
@@ -1816,19 +1633,19 @@
 	.daynight-inventory-mobile-drawer__group button,
 	.daynight-inventory-mobile-drawer__clear {
 		display: inline-flex;
-		min-height: 44px;
+		min-height: var(--bc-control-height-standard);
 		align-items: center;
 		gap: 7px;
 		border: 0;
-		border-radius: 8px;
+		border-radius: var(--bc-radius-md);
 		background: var(--bc-surface);
-		padding: 0 12px;
+		padding: 0 var(--bc-space-3);
 		appearance: none;
-		color: #111111;
+		color: var(--bc-ink);
 		cursor: pointer;
-		font-size: 14px;
-		font-weight: 800;
-		line-height: 18px;
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-control);
 		text-align: left;
 	}
 
@@ -1839,15 +1656,17 @@
 		justify-content: center;
 		flex-direction: column;
 		gap: 6px;
-		padding: 8px 5px;
-		font-size: 12px;
+		padding: var(--bc-space-2) 5px;
+		font-size: var(--bc-text-control);
 		text-align: center;
+		line-height: var(--bc-leading-control);
+		font-weight: var(--bc-weight-control);
 	}
 
 	.daynight-inventory-mobile-drawer__group a.active,
 	.daynight-inventory-mobile-drawer__group button.active {
 		background: var(--bc-accent);
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 
 	.daynight-inventory-mobile-drawer__brand-logo-frame {
@@ -1886,25 +1705,25 @@
 		height: 21px;
 		align-items: center;
 		justify-content: center;
-		border-radius: 999px;
-		background: #ffffff;
-		color: #67717d;
-		font-size: 11px;
-		font-weight: 800;
-		line-height: 21px;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-white);
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-meta);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-meta-leading);
 	}
 
 	.daynight-inventory-mobile-drawer__empty-option {
 		display: inline-flex;
-		min-height: 44px;
+		min-height: var(--bc-control-height-standard);
 		align-items: center;
-		border-radius: 8px;
+		border-radius: var(--bc-radius-md);
 		background: var(--bc-surface-soft);
-		color: #728093;
-		font-size: 14px;
-		font-weight: 800;
-		line-height: 18px;
-		padding: 0 12px;
+		color: var(--bc-muted);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-control);
+		padding: 0 var(--bc-space-3);
 	}
 
 	.daynight-inventory-mobile-drawer__actions {
@@ -1913,27 +1732,28 @@
 		z-index: 3;
 		display: grid;
 		grid-template-columns: 1fr 1.5fr;
-		gap: 9px;
-		margin: 2px -16px 0;
-		border-top: 1px solid #e6ebdf;
+		gap: var(--bc-space-2);
+		margin: 2px calc(-1 * var(--bc-space-4)) 0;
+		border-top: 1px solid var(--bc-border);
 		background: var(--bc-bg);
-		padding: 12px 16px max(14px, env(safe-area-inset-bottom));
-		box-shadow: 0 -14px 22px rgba(251, 252, 250, 0.95);
+		padding: var(--bc-space-3) var(--bc-space-4)
+			max(var(--bc-mobile-gutter), env(safe-area-inset-bottom));
+		box-shadow: var(--bc-shadow-sticky);
 	}
 
 	.daynight-inventory-mobile-drawer__clear {
 		justify-content: center;
-		min-height: 50px;
-		border-radius: 10px;
+		min-height: var(--bc-control-height-primary);
+		border-radius: var(--bc-radius-control);
 		background: var(--bc-surface);
-		color: #1c1c1c;
+		color: var(--bc-ink);
 	}
 
 	.daynight-inventory-mobile-drawer__clear--search {
-		gap: 8px;
+		gap: var(--bc-space-2);
 		background: var(--bc-accent);
-		color: #ffffff;
-		font-weight: 650;
+		color: var(--bc-white);
+		font-weight: var(--bc-weight-heading);
 		text-align: center;
 		white-space: nowrap;
 	}
@@ -1944,39 +1764,27 @@
 		height: 23px;
 		align-items: center;
 		justify-content: center;
-		border-radius: 999px;
+		border-radius: var(--bc-radius-pill);
 		background: rgba(255, 255, 255, 0.72);
-		color: #1c1c1c;
-		font-size: 11px;
-		font-weight: 800;
-		line-height: 23px;
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-meta);
+		font-weight: var(--bc-weight-body);
+		line-height: var(--bc-mobile-meta-leading);
 	}
 
 	.daynight-inventory-mobile-drawer__done {
 		display: inline-flex;
-		min-height: 50px;
+		min-height: var(--bc-control-height-primary);
 		align-items: center;
 		justify-content: center;
 		border: 0;
-		border-radius: 10px;
+		border-radius: var(--bc-radius-control);
 		background: var(--bc-accent);
 		appearance: none;
-		color: #ffffff;
+		color: var(--bc-white);
 		cursor: pointer;
-		font-size: 15px;
-		font-weight: 650;
-		line-height: 19px;
-	}
-
-	@media (max-width: 399px) {
-		.daynight-inventory-mobile-card {
-			grid-template-columns: clamp(96px, calc(100vw - 251px), 124px) minmax(0, 1fr);
-		}
-	}
-
-	@media (max-width: 359px) {
-		.daynight-inventory-mobile-card__body li :global(svg) {
-			display: none;
-		}
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-leading-cta);
 	}
 </style>

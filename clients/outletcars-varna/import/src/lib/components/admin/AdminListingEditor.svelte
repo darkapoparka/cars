@@ -144,7 +144,7 @@
 				</Card.Title>
 				<Card.Description>
 					{mode === 'create'
-						? 'Create a durable local OUTLETCARS.BG — Варна CMS record.'
+						? 'Create a durable local OUTLETCARS.BG CMS record.'
 						: 'Edit the full local CMS listing record.'}
 				</Card.Description>
 			</div>

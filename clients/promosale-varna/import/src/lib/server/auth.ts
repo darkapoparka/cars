@@ -23,17 +23,17 @@ export { daynightRoleLabel } from './roles';
 export const daynightDemoSessions: Record<DayNightRole, DayNightSession> = {
 	admin: {
 		email: 'admin@daynight.local',
-		name: 'Day Night Auto Admin',
+		name: 'Promosale Varna Admin',
 		role: 'admin'
 	},
 	agent: {
 		email: 'agent@daynight.local',
-		name: 'Day Night Auto Agent',
+		name: 'Promosale Varna Agent',
 		role: 'agent'
 	},
 	customer: {
 		email: 'customer@daynight.local',
-		name: 'Day Night Auto Customer',
+		name: 'Promosale Varna Customer',
 		role: 'customer'
 	}
 };
@@ -176,11 +176,11 @@ export const requireDayNightPageSession = (
 
 	if (!session) {
 		if (hasInquiryDatabase() && request.method === 'GET') redirect(303, '/admin/login');
-		error(401, 'Day Night Auto account session is required');
+		error(401, 'Promosale Varna account session is required');
 	}
 
 	if (!canAccessDayNightRoute(session, routePath)) {
-		error(403, 'Day Night Auto account role cannot access this route');
+		error(403, 'Promosale Varna account role cannot access this route');
 	}
 
 	return session;

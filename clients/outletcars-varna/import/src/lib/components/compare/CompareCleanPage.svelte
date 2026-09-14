@@ -57,7 +57,7 @@
 				{t('Сравнение', 'Compare')}
 			</p>
 			<h1 class="m-0 mb-3 max-w-xl text-bc-h2 font-semibold text-white">
-				{t('Сравни автомобили от OUTLETCARS.BG — Варна', 'Compare OUTLETCARS.BG — Варна vehicles')}
+				{t('Сравни автомобили от OUTLETCARS.BG', 'Compare OUTLETCARS.BG vehicles')}
 			</h1>
 			<p class="m-0 max-w-xl text-base leading-6 font-medium text-white/75">
 				{t(

@@ -28,6 +28,6 @@ export const actions: Actions = {
 
 		const id = await createVehicle(db, dealerId, parsed.data);
 
-		throw redirect(303, `/variant-3/admin/listings/${id}?created=1`);
+		throw redirect(303, `/admin/listings/${id}?created=1`);
 	}
 };

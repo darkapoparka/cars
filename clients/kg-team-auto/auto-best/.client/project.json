@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "kg-team-auto",
   "templateKey": "auto-best",
-  "templateVersion": "2026.09.08-polish-1",
+  "templateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
   "createdAt": "2026-09-08T21:59:05.443Z",
-  "state": "needs-personalization",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -24,5 +24,22 @@
     "leadId": null,
     "demoProjectId": null,
     "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/"
+  },
+  "workflowCommit": "5ee3f8f76e79e9cca76b025528ee27415b1132fb",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.08-polish-1",
+    "refreshedAt": "2026-09-14T20:54:15.330Z",
+    "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }

@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "asko-96",
   "templateKey": "carwow",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
   "createdAt": "2026-09-06T20:49:20.390Z",
-  "state": "local-review-ready",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -17,21 +17,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "frameworkCheck": "npm run check: 0 errors, 0 warnings",
-    "build": "npm run build: passed final 2026-09-07",
-    "routeMatrix": ".client/qa-routes.json",
-    "finalRecheck": ".client/qa-final.json",
-    "interactions": ".client/qa-interactions.json",
-    "viewports": [
-      390,
-      1440
-    ],
-    "identityScope": "Offered home and primary public routes, metadata, phone/map/social destinations. Internal source identifiers preserved.",
-    "autofixer": "44 changed Svelte files reviewed; final six components also checked. External href false positives and inherited bind:this suggestions retained."
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -39,7 +28,6 @@
     "registered": false
   },
   "localUrl": "http://127.0.0.1:6613/",
-  "updatedAt": "2026-09-06T21:16:01.435198+00:00",
   "businessName": "АСКО 96",
   "stockSnapshot": "2026-09-06",
   "stockCount": 16,
@@ -59,11 +47,21 @@
     "Viber links derive from the verified phone; account availability and actual phone/message delivery not tested.",
     "Browser emulation at390/1440 is local QA, not physical-device or hosted acceptance."
   ],
-  "runtime": {
-    "pid": 28564,
-    "port": 6613,
-    "node": "24.18.0",
-    "launcher": "J:/cars/scripts/start-preview.ps1",
-    "folder": "J:/cars/clients/asko-96/carwow"
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "5ee3f8f76e79e9cca76b025528ee27415b1132fb",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-14T20:56:39.819Z",
+    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }

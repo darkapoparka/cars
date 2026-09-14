@@ -52,7 +52,7 @@
 		activePath = '/admin',
 		children,
 		contentClass,
-		eyebrow = 'Day Night Auto CMS',
+		eyebrow = 'Promosale Varna CMS',
 		primaryAction,
 		sidebarVariant = 'inset',
 		title
@@ -104,7 +104,7 @@
 										B
 									</span>
 									<span class="grid flex-1 text-left text-sm leading-tight">
-										<span class="truncate text-sm font-semibold">Day Night Auto</span>
+										<span class="truncate text-sm font-semibold">Promosale Varna</span>
 										<span class="text-muted-foreground truncate text-xs">Admin CMS</span>
 									</span>
 								</a>

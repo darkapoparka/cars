@@ -25,7 +25,7 @@ function SocialBrandIcon({
           aria-hidden="true"
           className="size-[19px]"
           height={19}
-          src="/variant-2/images/social/instagram-white.svg"
+          src="/images/social/instagram-white.svg"
           width={19}
         />
       </span>
@@ -43,7 +43,7 @@ function SocialBrandIcon({
         }
         height={platform === "youtube" ? 36 : 28}
         sizes={platform === "youtube" ? "42px" : "28px"}
-        src={`/variant-2/images/social/${platform}.png`}
+        src={`/images/social/${platform}.png`}
         width={platform === "youtube" ? 42 : 28}
       />
     </span>
@@ -58,10 +58,7 @@ export function DealerSocialLinks({
   isBg: boolean;
 }) {
   const configured = socialPlatforms.filter(
-    (platform) =>
-      links?.[platform.key] ||
-      platform.key === "youtube" ||
-      platform.key === "facebook"
+    (platform) => links?.[platform.key]
   );
   if (!configured.length) {
     return null;

@@ -18,14 +18,14 @@
 		{ href: '/calculator', label: 'Калкулатор' },
 		{ href: '/agents', label: 'Консултанти' },
 		{ href: '/blog', label: 'Съвети' },
-		{ href: '/about', label: 'За Day Night Auto' }
+		{ href: '/about', label: 'За Promosale Varna' }
 	] as const;
 </script>
 
 {#if header}
 	<header class="home2-header">
 		<div class="home2-header__inner">
-			<a class="home2-header__logo" href={resolve('/home2')} aria-label="Day Night Auto Home2">
+			<a class="home2-header__logo" href={resolve('/home2')} aria-label="Promosale Varna Home2">
 				<img src="/brand/daynight-wordmark.svg" alt={header.logo.alt} />
 			</a>
 

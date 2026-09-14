@@ -1,16 +1,14 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-
-
-  const mapEmbedUrl = brand.mapsEmbedUrl;
-  const directionsUrl = brand.mapsUrl;
+  const mapEmbedUrl = "https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed";
+  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 </script>
 
 <div class="dn-showroom-map">
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={`Карта до ${brand.name}`}
+    title={"Карта до" + ` ${brand.name}`}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
@@ -49,13 +47,13 @@
     background: rgba(255, 255, 255, .96);
     box-shadow: 0 8px 20px rgba(18, 25, 38, .12);
     color: var(--dn-ink);
-    font-size: 14px;
-    font-weight: 700;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
   }
 
   .dn-showroom-map__link:hover,
   .dn-showroom-map__link:focus-visible {
-    color: var(--dn-accent-text);
+    color: var(--dn-red);
   }
 
   @media (max-width: 767px) {

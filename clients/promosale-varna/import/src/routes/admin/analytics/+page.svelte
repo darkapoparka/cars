@@ -42,7 +42,7 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Admin - Analytics</title>
+	<title>Promosale Varna Admin - Analytics</title>
 </svelte:head>
 
 <AdminShell title="Analytics" activePath="/admin/analytics">

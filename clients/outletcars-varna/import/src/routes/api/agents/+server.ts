@@ -51,7 +51,7 @@ export async function PATCH({ request }: { request: Request }) {
 	});
 
 	if (!agent) {
-		return errorJson('OUTLETCARS.BG — Варна agent not found', 404);
+		return errorJson('OUTLETCARS.BG agent not found', 404);
 	}
 
 	return okJson({ agent });

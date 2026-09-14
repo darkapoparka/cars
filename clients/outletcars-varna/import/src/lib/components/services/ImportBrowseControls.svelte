@@ -19,7 +19,6 @@
 	const summary = $derived(importCriteriaSummary(criteria));
 	let open = $state(false);
 	let draft = $state({ ...emptyImportCriteria });
-	const years = Array.from({ length: 37 }, (_, index) => String(new Date().getFullYear() - index));
 	const openFilters = () => {
 		draft = { ...criteria };
 		open = true;
@@ -55,7 +54,15 @@
 					aria-current={criteria.origin === country.value ? 'true' : undefined}
 					data-sveltekit-noscroll
 				>
-					{country.label}
+					<img
+						class="import-browse__flag"
+						src={country.flagSrc}
+						alt=""
+						aria-hidden="true"
+						width="24"
+						height="18"
+					/>
+					<span>{country.label}</span>
 				</a>
 			{/each}
 		</nav>
@@ -72,7 +79,6 @@
 			{/if}
 		</div>
 	{/if}
-	<p class="import-browse__availability" role="status">Няма публикувани оферти за внос.</p>
 </div>
 
 <Drawer.Root bind:open direction="bottom" fixed>
@@ -90,13 +96,27 @@
 		>
 		<form onsubmit={apply}>
 			<div class="import-filters-fields">
-				<label class="wide" for="import-filter-origin"
-					>Държава<select id="import-filter-origin" bind:value={draft.origin}
-						>{#each importCountries as country (country.value)}<option value={country.value}
-								>{country.value ? country.label : 'Без значение'}</option
-							>{/each}</select
-					></label
-				>
+				<fieldset class="wide import-filters-choice">
+					<legend>Държава</legend>
+					<div class="import-filters-country-grid">
+						{#each importCountries as country (country.value)}
+							<button
+								type="button"
+								class:active={draft.origin === country.value}
+								aria-pressed={draft.origin === country.value}
+								onclick={() => (draft.origin = country.value)}
+							>
+								<img
+									src={country.flagSrc}
+									alt=""
+									aria-hidden="true"
+									width="24"
+									height="18"
+								/><strong>{country.label}</strong>
+							</button>
+						{/each}
+					</div>
+				</fieldset>
 				<label for="import-filter-make"
 					>Марка<input
 						id="import-filter-make"
@@ -118,11 +138,13 @@
 					/></label
 				>
 				<label for="import-filter-year"
-					>Година от<select id="import-filter-year" bind:value={draft.minYear}
-						><option value="">Без значение</option>{#each years as year (year)}<option value={year}
-								>{year}</option
-							>{/each}</select
-					></label
+					>Година от<input
+						id="import-filter-year"
+						inputmode="numeric"
+						maxlength="4"
+						placeholder="Напр. 2021"
+						bind:value={draft.minYear}
+					/></label
 				>
 				<label for="import-filter-budget"
 					>Бюджет до (€)<input
@@ -134,21 +156,30 @@
 						bind:value={draft.maxPrice}
 					/></label
 				>
-				<label for="import-filter-fuel"
-					>Гориво<select id="import-filter-fuel" bind:value={draft.fuel}
-						><option value="">Всички</option>{#each importFuels as fuel (fuel)}<option value={fuel}
-								>{fuel}</option
-							>{/each}</select
-					></label
-				>
-				<label for="import-filter-transmission"
-					>Скорости<select id="import-filter-transmission" bind:value={draft.transmission}
-						><option value="">Всички</option
-						>{#each importTransmissions as transmission (transmission)}<option value={transmission}
-								>{transmission}</option
-							>{/each}</select
-					></label
-				>
+				<fieldset class="wide import-filters-choice">
+					<legend>Гориво</legend>
+					<div class="import-filters-chips">
+						{#each importFuels as fuel (fuel)}<button
+								type="button"
+								class:active={draft.fuel === fuel}
+								aria-pressed={draft.fuel === fuel}
+								onclick={() => (draft.fuel = draft.fuel === fuel ? '' : fuel)}>{fuel}</button
+							>{/each}
+					</div>
+				</fieldset>
+				<fieldset class="wide import-filters-choice">
+					<legend>Скорости</legend>
+					<div class="import-filters-chips">
+						{#each importTransmissions as transmission (transmission)}<button
+								type="button"
+								class:active={draft.transmission === transmission}
+								aria-pressed={draft.transmission === transmission}
+								onclick={() =>
+									(draft.transmission = draft.transmission === transmission ? '' : transmission)}
+								>{transmission}</button
+							>{/each}
+					</div>
+				</fieldset>
 			</div>
 			<footer>
 				<button type="button" class="reset" onclick={() => (draft = { ...emptyImportCriteria })}
@@ -161,54 +192,131 @@
 
 <style>
 	.import-browse {
-		margin-bottom: 12px;
+		margin-bottom: 10px;
 	}
 	.import-browse__countries {
 		display: flex;
-		gap: 8px;
+		gap: var(--bc-space-2);
 		overflow-x: auto;
 		min-width: 0;
 		padding: 2px;
 		scrollbar-width: none;
 	}
+	.import-browse__flag {
+		display: block;
+		width: 24px;
+		height: 18px;
+		flex: 0 0 24px;
+		border-radius: 3px;
+		object-fit: cover;
+	}
+	.import-filters-choice {
+		display: grid;
+		gap: var(--bc-space-2);
+		margin: 0;
+		border: 0;
+		padding: 0;
+	}
+	.import-filters-choice legend {
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-label);
+		font-weight: 600;
+		padding: 0;
+	}
+	.import-filters-country-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--bc-space-2);
+	}
+	.import-filters-country-grid button {
+		display: grid;
+		min-height: 62px;
+		place-items: center;
+		gap: var(--bc-space-1);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-control);
+		background: var(--bc-white);
+		color: var(--bc-ink);
+		cursor: pointer;
+		padding: var(--bc-space-2);
+	}
+	.import-filters-country-grid button > img {
+		display: block;
+		width: 24px;
+		height: 18px;
+		border-radius: 3px;
+		object-fit: cover;
+	}
+	.import-filters-country-grid button strong {
+		font-size: var(--bc-mobile-meta);
+		line-height: var(--bc-mobile-meta-leading);
+	}
+	.import-filters-country-grid button.active {
+		border-color: var(--bc-accent);
+		background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
+		color: var(--bc-accent-hover);
+	}
+	.import-filters-chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--bc-space-2);
+	}
+	.import-filters-chips button {
+		min-height: var(--bc-control-height-standard);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-white);
+		color: var(--bc-ink);
+		cursor: pointer;
+		font-size: var(--bc-mobile-label);
+		font-weight: 650;
+		padding: 0 var(--bc-space-3);
+	}
+	.import-filters-chips button.active {
+		border-color: var(--bc-accent);
+		background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
+		color: var(--bc-accent-hover);
+	}
+
 	.import-browse__countries::-webkit-scrollbar {
 		display: none;
 	}
 	.import-browse__countries a {
 		display: inline-flex;
 		align-items: center;
-		gap: 6px;
+		gap: var(--bc-space-2);
 		flex-shrink: 0;
-		min-height: 44px;
-		padding: 0 16px;
+		min-height: var(--bc-control-height-standard);
+		padding: 0 var(--bc-space-4);
 		border-radius: var(--bc-radius-control);
-		background: var(--bc-surface-raised);
-		color: #17191c;
-		font-size: 14px;
+		border: 1px solid var(--bc-border);
+		background: var(--bc-surface-soft);
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-body);
 		font-weight: 600;
 		white-space: nowrap;
 	}
 	.import-browse__countries a[aria-current] {
 		background: var(--bc-accent);
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 	.import-browse__toolbar {
 		display: flex;
-		gap: 8px;
+		gap: var(--bc-space-2);
 		align-items: center;
 	}
 	.import-browse__filter {
 		position: relative;
 		display: grid;
 		place-items: center;
-		flex: 0 0 44px;
-		min-height: 44px;
-		border: 0;
+		flex: 0 0 var(--bc-control-height-standard);
+		min-height: var(--bc-control-height-standard);
+		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-control);
-		background: var(--bc-surface-raised);
-		color: #17191c;
-		padding: 0 12px;
-		font-size: 14px;
+		background: var(--bc-surface-soft);
+		color: var(--bc-ink);
+		padding: 0 var(--bc-space-3);
+		font-size: var(--bc-mobile-body);
 		font-weight: 600;
 		cursor: pointer;
 	}
@@ -218,41 +326,39 @@
 		right: -3px;
 		display: grid;
 		place-items: center;
-		width: 20px;
-		height: 20px;
+		width: var(--bc-space-5);
+		height: var(--bc-space-5);
 		border-radius: 50%;
 		background: var(--bc-accent);
-		color: #ffffff;
-		font-size: 12px;
+		color: var(--bc-white);
+		font-size: var(--bc-mobile-meta);
 	}
 	.import-browse__clear {
 		display: inline-flex;
 		align-items: center;
-		min-height: 44px;
-		color: #555b63;
-		text-decoration: underline;
-		font-size: 13px;
+		min-height: var(--bc-control-height-standard);
+		color: var(--bc-copy);
+		text-decoration: none !important;
+		font-size: var(--bc-mobile-label);
 	}
 	.import-browse__selection {
 		display: flex;
 		align-items: center;
-		gap: 12px;
-		margin-top: 8px;
+		gap: var(--bc-space-3);
+		margin-top: var(--bc-space-2);
 	}
 	.import-browse__summary {
 		flex: 1;
 		margin: 0;
-		color: #17191c;
-		font-size: 14px;
-		line-height: 20px;
+		color: var(--bc-ink);
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-space-5);
 		overflow-wrap: anywhere;
 	}
-	.import-browse__availability {
-		margin: 12px 0 0;
-		color: #555b63;
-		font-size: 13px;
-		line-height: 19px;
+	.import-browse a {
+		text-decoration: none !important;
 	}
+
 	.import-browse a:focus-visible,
 	.import-browse button:focus-visible {
 		outline: 2px solid var(--bc-accent);
@@ -271,113 +377,111 @@
 		max-height: calc(100dvh - 24px);
 		overflow-y: auto;
 		overscroll-behavior: contain;
-		padding: 12px 16px max(20px, env(safe-area-inset-bottom));
-		background: var(--bc-bg);
-		color: #17191c;
-		border-radius: 20px 20px 0 0;
+		padding: var(--bc-space-3) var(--bc-space-4) max(var(--bc-space-5), env(safe-area-inset-bottom));
+		background: var(--bc-bg-strong);
+		color: var(--bc-ink);
+		border-radius: var(--bc-radius-panel) var(--bc-radius-panel) 0 0;
 		box-shadow: none;
 		outline: none;
 	}
 	:global(.import-filters-handle) {
 		width: 40px;
 		height: 4px;
-		margin: 0 auto 12px;
-		border-radius: 999px;
+		margin: 0 auto var(--bc-space-3);
+		border-radius: var(--bc-radius-control);
 		background: var(--bc-border-strong);
 	}
 	.import-filters-heading {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 12px;
+		gap: var(--bc-space-3);
 	}
 	:global(.import-filters-title) {
 		margin: 0;
-		font-size: 23px;
-		line-height: 28px;
+		font-size: var(--bc-mobile-section-title);
+		line-height: var(--bc-mobile-section-title-leading);
 		font-weight: 700;
 	}
 	:global(.import-filters-close) {
 		display: grid;
 		place-items: center;
-		width: 44px;
-		height: 44px;
+		width: var(--bc-control-height-standard);
+		height: var(--bc-control-height-standard);
 		border: 0;
 		border-radius: 50%;
-		background: var(--bc-surface);
-		color: #17191c;
+		background: var(--bc-surface-hover);
+		color: var(--bc-ink);
 		cursor: pointer;
 	}
 	:global(.import-filters-description) {
-		margin: 4px 0 20px;
-		color: #555b63;
-		font-size: 14px;
-		line-height: 20px;
+		margin: var(--bc-space-1) 0 var(--bc-space-5);
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-body);
+		line-height: var(--bc-space-5);
 	}
 	.import-filters-fields {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 16px 12px;
+		gap: var(--bc-space-4) var(--bc-space-3);
 	}
 	label {
 		display: grid;
-		gap: 6px;
+		gap: var(--bc-space-2);
 		min-width: 0;
-		color: #34383d;
-		font-size: 13px;
+		color: var(--bc-copy);
+		font-size: var(--bc-mobile-label);
 		font-weight: 600;
 	}
 	.wide {
 		grid-column: 1 / -1;
 	}
-	input,
-	select {
+	input {
 		width: 100%;
 		min-width: 0;
-		height: 48px !important;
-		padding: 0 12px !important;
+		height: var(--bc-control-height-primary) !important;
+		padding: 0 var(--bc-space-3) !important;
 		border: 1px solid var(--bc-border) !important;
 		border-radius: var(--bc-radius-control) !important;
-		background: var(--bc-surface-soft) !important;
-		color: #17191c;
-		font-size: 16px;
+		background: var(--bc-white) !important;
+		color: var(--bc-ink);
+		font-size: var(--bc-text-body);
 		box-shadow: none !important;
 	}
 	input::placeholder {
-		color: #626973;
+		color: var(--bc-muted);
 	}
 	input:focus-visible,
-	select:focus-visible,
 	footer button:focus-visible {
 		outline: 2px solid var(--bc-accent);
 		outline-offset: 2px;
 	}
 	footer {
 		position: sticky;
-		bottom: -20px;
+		bottom: calc(-1 * var(--bc-space-5));
 		display: flex;
-		gap: 12px;
-		margin-top: 20px;
-		padding: 12px 0;
-		background: var(--bc-bg);
+		gap: var(--bc-space-3);
+		margin-top: var(--bc-space-5);
+		padding: var(--bc-space-3) 0;
+		background: var(--bc-bg-strong);
 	}
 	footer button {
-		min-height: 48px;
-		border-radius: 999px;
-		padding: 0 16px;
-		font-size: 14px;
+		min-height: var(--bc-control-height-primary);
+		border-radius: var(--bc-radius-control);
+		padding: 0 var(--bc-space-4);
+		font-size: var(--bc-mobile-body);
 		font-weight: 600;
 		cursor: pointer;
 	}
 	.reset {
 		border: 1px solid var(--bc-border);
-		background: #ffffff;
-		color: #17191c;
+		background: var(--bc-white);
+		color: var(--bc-ink);
 	}
 	.apply {
 		flex: 1;
 		border: 0;
 		background: var(--bc-accent);
-		color: #ffffff;
+		color: var(--bc-white);
 	}
 </style>

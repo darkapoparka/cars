@@ -227,7 +227,7 @@ export async function getAdminCmsOverview() {
 			},
 			{
 				description:
-					'Inventory CRUD uses local Day Night Auto server state before the Supabase migration.',
+					'Inventory CRUD uses local Promosale Varna server state before the Supabase migration.',
 				status: 'Prototype',
 				title: 'Inventory persistence'
 			},

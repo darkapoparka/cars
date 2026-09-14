@@ -34,7 +34,7 @@ export const load: PageServerLoad = ({ request, url }) => {
 		auxeroFullPage: true,
 		beforeMessageHtml: messageSlot.beforeHtml,
 		dashboard: getAccountDashboardPageData('message.html', renderOptions, {
-			subtitle: 'Продължете разговорите си с екипа на Day Night Auto.',
+			subtitle: 'Продължете разговорите си с екипа на Promosale Varna.',
 			title: 'Съобщения'
 		}),
 		messageHtml: messageSlot.sectionHtml,

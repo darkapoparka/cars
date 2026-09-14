@@ -1,58 +1,14 @@
-export interface BlogPost {
-	slug: string;
-	title: string;
-	category: string;
-	date: string;
-	image: string;
-	excerpt: string;
-	content: string[];
-}
-
-export const posts: BlogPost[] = [
-	{
-		slug: 'vnos-ot-kanada-proverka',
-		title: 'Какво проверява Day Night Auto преди внос на автомобил от Европа',
-		category: 'Подбрани автомобили',
-		date: 'Май 2026',
-		image: '/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp',
-		excerpt:
-			'История, пробег, сервизни записи, снимки от покупката и документи правят решението за внос по-спокойно.',
-		content: [
-			'Преди да препоръча автомобил, Day Night Auto проверява произход, пробег, сервизна история, състояние и документи, за да знае купувачът какво одобрява още преди колата да напусне Европа.',
-			'Най-силните предложения идват от проследими източници с ясни снимки, история и сервизен контекст.',
-			'След одобрение Day Night Auto организира транспорта, митническите стъпки и подготовката за регистрация.'
-		]
-	},
-	{
-		slug: 'gotov-za-registracia',
-		title: 'Какво означава „готов за регистрация“',
-		category: 'Документи',
-		date: 'Май 2026',
-		image: '/assets/daynight/codex-generated-v2/blog/blog-cover-registration-v2.webp',
-		excerpt:
-			'Технически проверки, кодиране, документи и подготовка според модела са част от истинското предаване.',
-		content: [
-			'При внесен автомобил подготовката не свършва с транспорта. Документите, техническите изисквания и спецификите по модела трябва да се прегледат преди регистрация.',
-			'Някои коли се нуждаят от осветление, навигация, кодиране или други настройки преди употреба в Европа.',
-			'Ясната оферта трябва да разделя следващите стъпки и очакваните разходи, преди купувачът да поеме ангажимент.'
-		]
-	},
-	{
-		slug: 'prodai-avtomobila-si',
-		title: 'Как Day Night Auto преглежда клиентски автомобил',
-		category: 'Продай автомобила си',
-		date: 'Май 2026',
-		image: '/assets/daynight/blog/generated-v3/customer-inspection.webp',
-		excerpt:
-			'Снимки, VIN, сервизна история, пробег и очаквана цена помагат на екипа да даде реалистична обратна връзка.',
-		content: [
-			'Когато клиент иска да продаде автомобил, първата стъпка е ясна информация: VIN, пробег, история, снимки и документи.',
-			'След преглед Day Night Auto може да обсъди директна оферта, съдействие при продажба или публикуване на колата като клиентски автомобил.',
-			'Добрата информация в началото спестява време и помага цената да остане реалистична.'
-		]
-	}
-];
-
-export function getPostBySlug(slug: string) {
-	return posts.find((post) => post.slug === slug);
-}
+export interface BlogPost { slug: string; title: string; category: string; date: string; image: string; excerpt: string; content: string[]; }
+export const posts: BlogPost[] = [{
+  "slug": "confirm-current-availability",
+  "title": "Как да потвърдите актуална наличност в Promosale Varna",
+  "category": "Информация за автокъщата",
+  "date": "2026-09-09",
+  "image": "/assets/daynight/codex-generated-v2/blog/blog-cover-import-check-v2.webp",
+  "excerpt": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+  "content": [
+    "Свържете се с автокъщата на 0892 020 208 и посочете точния автомобил преди посещение.",
+    "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
+  ]
+}];
+export function getPostBySlug(slug: string) { return posts.find((post) => post.slug === slug); }

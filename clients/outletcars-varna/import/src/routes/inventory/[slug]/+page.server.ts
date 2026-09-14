@@ -27,8 +27,8 @@ export const load: PageServerLoad = ({ params, request, url }) => {
 
 	const metaDescription =
 		locale === 'bg'
-			? `${vehicle.title} — ${vehicle.year}, ${vehicle.mileage}, ${vehicle.fuel}. Цена ${vehicle.priceLabel}. Провери история, оборудване и снимки в OUTLETCARS.BG — Варна.`
-			: `${vehicle.title} — ${vehicle.year}, ${vehicle.mileage}, ${vehicle.fuel}. Price ${vehicle.priceLabel}. Check history, equipment and photos at OUTLETCARS.BG — Варна.`;
+			? `${vehicle.title} — ${vehicle.year}, ${vehicle.mileage}, ${vehicle.fuel}. Цена ${vehicle.priceLabel}. Провери история, оборудване и снимки в OUTLETCARS.BG.`
+			: `${vehicle.title} — ${vehicle.year}, ${vehicle.mileage}, ${vehicle.fuel}. Price ${vehicle.priceLabel}. Check history, equipment and photos at OUTLETCARS.BG.`;
 
 	return {
 		auxeroFullPage: true,

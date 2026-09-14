@@ -106,7 +106,7 @@ export const actions: Actions = {
 
 		await updatePostStatus(db, dealerId, id, status);
 
-		throw redirect(303, '/variant-3/admin/posts?updated=status');
+		throw redirect(303, '/admin/posts?updated=status');
 	},
 	bulkStatus: async ({ locals, request }) => {
 		const formData = await request.formData();
@@ -126,7 +126,7 @@ export const actions: Actions = {
 
 		await updatePostsStatus(db, dealerId, ids, status);
 
-		throw redirect(303, '/variant-3/admin/posts?bulk=status');
+		throw redirect(303, '/admin/posts?bulk=status');
 	},
 	remove: async ({ locals, request }) => {
 		const formData = await request.formData();
@@ -145,7 +145,7 @@ export const actions: Actions = {
 
 		await deletePost(db, dealerId, id);
 
-		throw redirect(303, '/variant-3/admin/posts?deleted=1');
+		throw redirect(303, '/admin/posts?deleted=1');
 	},
 	bulkRemove: async ({ locals, request }) => {
 		const ids = readPostIds(await request.formData());
@@ -163,6 +163,6 @@ export const actions: Actions = {
 
 		await deletePosts(db, dealerId, ids);
 
-		throw redirect(303, '/variant-3/admin/posts?bulk=deleted');
+		throw redirect(303, '/admin/posts?bulk=deleted');
 	}
 };

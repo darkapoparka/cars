@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { GitCompare, Heart, Menu, Plus, Search, User, X } from '@lucide/svelte';
 	import { goto } from '$app/navigation';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { publicNavItems, daynightSite } from '$lib/data/daynight-site';
 	import { cn } from '$lib/utils.js';
 	import { getGarageContext } from '$lib/state/garage.svelte';
@@ -29,7 +29,7 @@
 
 <header class={cn('site-header', variant === 'home' && 'site-header--home')}>
 	<div class="site-header__inner">
-		<a class="site-header__logo" href={resolve('/')} aria-label="Перфект Ауто home">
+		<a class="site-header__logo" href={resolve('/')} aria-label={`${daynightSite.shortName} home`}>
 			<img
 				src={variant === 'home' ? daynightSite.logoLight : daynightSite.logoDark}
 				alt={daynightSite.name}

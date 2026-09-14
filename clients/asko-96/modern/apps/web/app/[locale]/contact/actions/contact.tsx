@@ -2,6 +2,7 @@
 
 import { getReliableEmailDelivery } from "@repo/email";
 import { ContactTemplate } from "@repo/email/templates/contact";
+import { leadSite } from "@repo/marketplace";
 import { log } from "@repo/observability/log";
 import { headers } from "next/headers";
 import { env } from "@/env";
@@ -42,12 +43,12 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
         ),
     notConfigured: isImportRequest
       ? localized(
-          "Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на АСКО 96.",
-          "The form is ready, but message delivery is not configured yet. Call АСКО 96 directly."
+          `Формата е готова, но каналът за съобщения още не е конфигуриран. Обадете се директно на ${leadSite.shortName}.`,
+          `The form is ready, but message delivery is not configured yet. Call ${leadSite.shortName} directly.`
         )
       : localized(
-          "Каналът за съобщения още не е конфигуриран. Обадете се директно на АСКО 96.",
-          "Message delivery is not configured yet. Call АСКО 96 directly."
+          `Каналът за съобщения още не е конфигуриран. Обадете се директно на ${leadSite.shortName}.`,
+          `Message delivery is not configured yet. Call ${leadSite.shortName} directly.`
         ),
     rateLimited: localized(
       "Достигнахте лимита за запитвания. Опитайте отново по-късно.",
@@ -59,9 +60,9 @@ const getCopy = (isBg: boolean, isImportRequest: boolean) => {
     ),
     success: localized(
       isImportRequest
-        ? "Заявката е изпратена до екипа на АСКО 96."
-        : "Запитването е изпратено до екипа на АСКО 96.",
-      "Your request has been sent to the АСКО 96 team."
+        ? `Заявката е изпратена до екипа на ${leadSite.shortName}.`
+        : `Запитването е изпратено до екипа на ${leadSite.shortName}.`,
+      `Your request has been sent to the ${leadSite.shortName} team.`
     ),
   };
 };
@@ -168,7 +169,7 @@ export const submitContactRequest = async (
             />
           ),
           ...(request.email ? { replyTo: request.email } : {}),
-          subject: `АСКО 96: ${topic.en}`,
+          subject: `${leadSite.shortName}: ${topic.en}`,
           to: env.RESEND_FROM,
         },
       });

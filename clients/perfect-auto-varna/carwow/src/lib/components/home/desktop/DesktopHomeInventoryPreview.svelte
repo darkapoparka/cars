@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import type { HomeDesktopVehicle } from '$lib/types/home';
 	import DesktopHomeInventoryCard from './DesktopHomeInventoryCard.svelte';
 	import DesktopHomeInventoryTabs from './DesktopHomeInventoryTabs.svelte';
@@ -32,7 +33,7 @@
 			href={showHeaderCta ? resolve('/inventory') : undefined}
 			label={`Виж всички ${inventoryCount} автомобила`}
 			copy={showHeaderSubtitle
-				? 'Последно добавени предложения от наличността на Перфект Ауто.'
+				? `Последно добавени предложения от наличността на ${daynightSite.shortName}.`
 				: undefined}
 		/>
 	</div>

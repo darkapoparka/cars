@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { localPath, previewPath } from '$lib/utils/preview-paths';
 	import geistCyrillicFont from '@fontsource-variable/geist/files/geist-cyrillic-wght-normal.woff2?url';
 	import geistLatinFont from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
 	import { onMount } from 'svelte';
+	import { initializeViewport } from '$lib/hooks/viewport.svelte';
 	import '$lib/styles/tokens.css';
 	import '$lib/styles/storefront.css';
 	// Native desktop chrome layer: re-emits the chrome's Tailwind utilities with
@@ -21,18 +21,19 @@
 	import ChatWidget from '$lib/components/chat/ChatWidget.svelte';
 	import JsonLdScript from '$lib/components/seo/JsonLdScript.svelte';
 	import { setStorefrontInventorySummaryContext } from '$lib/components/layout/storefront-inventory-summary-context';
-	import { getRouteBodyClasses, routeManagesOwnChrome } from '$lib/data/template-routes';
+	import { getRouteBodyClasses, routeManagesOwnChrome } from '$lib/config/storefront-routes';
 	import { GarageState, setGarageContext } from '$lib/state/garage.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 
 	let { children, data } = $props();
+	initializeViewport(() => data.initialViewport === 'mobile');
 	const garage = new GarageState();
-	const routeBodyClasses = $derived(getRouteBodyClasses(localPath(page.url.pathname)));
-	const usesRouteManagedChrome = $derived(routeManagesOwnChrome(localPath(page.url.pathname)));
-	const usesStandaloneAppChrome = $derived(localPath(page.url.pathname).startsWith('/admin'));
+	const routeBodyClasses = $derived(getRouteBodyClasses(page.url.pathname));
+	const usesRouteManagedChrome = $derived(routeManagesOwnChrome(page.url.pathname));
+	const usesStandaloneAppChrome = $derived(page.url.pathname.startsWith('/admin'));
 	// /favorites owns its responsive chrome inside the route, so the layout
 	// fallback header/footer and global chat launcher stay out of its shell.
-	const usesFavoritesRouteChrome = $derived(localPath(page.url.pathname).startsWith('/favorites'));
+	const usesFavoritesRouteChrome = $derived(page.url.pathname.startsWith('/favorites'));
 	// The global template header/footer depend on per-route body classes, which
 	// error pages don't have — +error.svelte brings its own minimal chrome.
 	const hidesGlobalChrome = $derived(
@@ -44,7 +45,7 @@
 	const showsChatWidget = $derived(
 		!usesStandaloneAppChrome &&
 			!usesFavoritesRouteChrome &&
-			!localPath(page.url.pathname).startsWith('/presentation') &&
+			!page.url.pathname.startsWith('/presentation') &&
 			page.error === null
 	);
 	setGarageContext(garage);
@@ -58,25 +59,26 @@
 			'@type': 'AutoDealer',
 			name: daynightSite.name,
 			alternateName: daynightSite.shortName,
-			image: `${origin}/variant-3/brand/daynight-logo-generated.png`,
-			logo: `${origin}/variant-3/brand/daynight-logo-generated.png`,
-			url: `${origin}${previewPath('/')}`,
+			image: `${origin}${daynightSite.logoLight}`,
+			logo: `${origin}${daynightSite.logoLight}`,
+			url: `${origin}/`,
 			telephone: daynightSite.phone,
 			...(daynightSite.email ? { email: daynightSite.email } : {}),
 			address: {
 				'@type': 'PostalAddress',
 				streetAddress: daynightSite.location,
-				addressLocality: 'Варна',
-				addressRegion: 'Варна',
-				addressCountry: 'BG'
+				addressLocality: daynightSite.city,
+				addressRegion: daynightSite.region,
+				addressCountry: daynightSite.countryCode
 			},
-			areaServed: 'BG',
+			areaServed: daynightSite.countryCode,
 			priceRange: '€€'
 		}).replaceAll('<', '\\u003c')
 	);
 
 	onMount(() => {
 		garage.hydrateFromStorage();
+		return () => garage.dispose();
 	});
 </script>
 
@@ -97,7 +99,7 @@
 <RouteBodyClassRuntime bodyClasses={routeBodyClasses} />
 
 {#if !hidesGlobalChrome}
-	<SiteHeader variant="light" pathname={localPath(page.url.pathname)} />
+	<SiteHeader variant="light" pathname={page.url.pathname} />
 {/if}
 
 {@render children()}
@@ -112,8 +114,10 @@
 {/if}
 
 <style>
-	:global(html) {
-		scrollbar-gutter: stable;
+	@media (min-width: 992px) {
+		:global(html) {
+			scrollbar-gutter: stable;
+		}
 	}
 
 	:global(html.daynight-scroll-locked .header-wrapper.header-sticky),
@@ -131,7 +135,7 @@
 		border-radius: 10px;
 		background: var(--sa-blue);
 		color: var(--sa-surface);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		text-decoration: none;
 		transform: translateY(-160%);
 		transition: transform 0.16s ease;

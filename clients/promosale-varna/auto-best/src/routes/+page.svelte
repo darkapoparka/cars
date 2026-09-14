@@ -1,7 +1,7 @@
 <script lang="ts">
   import Hero from '$components/home/Hero.svelte';
   import SearchBox from '$components/home/SearchBox.svelte';
-  import MobileBudget from '$components/home/MobileBudget.svelte';
+  import MobileCoreActions from '$components/home/MobileCoreActions.svelte';
   import BodyTypes from '$components/home/BodyTypes.svelte';
   import InventorySection from '$components/home/InventorySection.svelte';
   import BrandSection from '$components/home/BrandSection.svelte';
@@ -14,21 +14,20 @@
 
 <svelte:head>
   <title>{brand.name} — Премиум автомобили в {brand.city}</title>
-  <meta name="description" content={`Премиум автомобили, внос и финансиране по запитване в ${brand.city}.`} />
+  <meta name="description" content={`Премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
 </svelte:head>
 
 <div class="dn-home-page">
   <div class="dn-home-slot dn-home-slot--hero"><Hero /></div>
   <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
+  <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
   <div class="dn-home-slot dn-home-slot--browse-actions"><TrustActions group="browse" /></div>
-  <div class="dn-home-slot dn-home-slot--budget"><MobileBudget /></div>
   <div class="dn-home-slot dn-home-slot--inventory"><InventorySection /></div>
   <div class="dn-home-slot dn-home-slot--body"><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--brands"><BrandSection /></div>
   <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" /></div>
   <div class="dn-home-slot dn-home-slot--editorial"><Editorial /></div>
   <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
-  <div class="dn-home-slot dn-home-slot--services"><TrustActions group="all" variant="cards" /></div>
 </div>
 
 <style>
@@ -52,17 +51,17 @@
     .dn-home-page :global(.dn-home-section-title) {
       margin: 0;
       font-size: var(--dn-home-heading-size);
-      font-weight: 650;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
+      letter-spacing: var(--dn-tracking-heading);
       text-align: center;
       text-wrap: balance;
     }
 
     .dn-home-page :global(.dn-home-section-heading > p) {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: var(--dn-text-body);
+      line-height: var(--dn-leading-body);
       max-width: 60ch;
       text-align: center;
     }
@@ -152,6 +151,11 @@
 
     .dn-home-slot {
       display: contents;
+    }
+
+    .dn-home-slot--browse-actions,
+    .dn-home-slot--ownership-actions {
+      display: none;
     }
   }
 </style>

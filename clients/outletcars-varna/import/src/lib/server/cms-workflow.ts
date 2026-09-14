@@ -165,7 +165,7 @@ export const scoreInventoryCompleteness = (listing: CmsCompletenessInput): CmsCo
 	score += addMissing({
 		condition:
 			meaningful(listing.description) &&
-			!listing.description?.includes('queued in the OUTLETCARS.BG — Варна CMS'),
+			!listing.description?.includes('queued in the OUTLETCARS.BG CMS'),
 		missing,
 		name: 'description',
 		points: 8

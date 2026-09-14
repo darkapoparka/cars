@@ -149,7 +149,7 @@
 </script>
 
 <svelte:head>
-	<title>{dashboard.title} - OUTLETCARS.BG — Варна</title>
+	<title>{dashboard.title} - OUTLETCARS.BG</title>
 </svelte:head>
 
 <div class="dash-shell" data-daynight-dashboard>

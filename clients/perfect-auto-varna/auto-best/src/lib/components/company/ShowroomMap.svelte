@@ -1,15 +1,14 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-
-  const mapEmbedUrl = brand.mapsEmbedUrl;
-  const directionsUrl = brand.mapsUrl;
+  const mapEmbedUrl = "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed";
+  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 </script>
 
 <div class="dn-showroom-map">
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={`Карта до ${brand.name}`}
+    title={"Карта до" + ` ${brand.name}`}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
@@ -48,8 +47,8 @@
     background: rgba(255, 255, 255, .96);
     box-shadow: 0 8px 20px rgba(18, 25, 38, .12);
     color: var(--dn-ink);
-    font-size: 14px;
-    font-weight: 700;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
   }
 
   .dn-showroom-map__link:hover,

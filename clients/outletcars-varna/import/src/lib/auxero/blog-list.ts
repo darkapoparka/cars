@@ -9,5 +9,5 @@ export const auxeroBlogListPage: AuxeroBlogListPageData = {
 	contactHref: '/contact',
 	contactLabel: 'Попитай',
 	pageLabel: '1',
-	title: 'Съвети от OUTLETCARS.BG — Варна'
+	title: 'Съвети от OUTLETCARS.BG'
 };

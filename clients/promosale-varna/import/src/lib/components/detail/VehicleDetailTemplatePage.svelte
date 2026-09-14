@@ -37,7 +37,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title={`${detail.title} — Day Night Auto`}
+	title={`${detail.title} — Promosale Varna`}
 >
 	<section class="daynight-pdp-desktop pb-100">
 		<div class="tf-spacing-style4"></div>

@@ -67,7 +67,7 @@
 		onclick={toggleDropdown}
 	>
 		<span class="core-dropdown__selected">{triggerLabel}</span>
-		<img src="/variant-3/assets/icons/chevron-down-primary.svg" alt="chevron" class="core-dropdown__icon" />
+		<img src="/assets/icons/chevron-down-primary.svg" alt="chevron" class="core-dropdown__icon" />
 	</button>
 	<div class="core-dropdown__menu" id="coreDropdownMenu">
 		<ul class="core-dropdown__list">

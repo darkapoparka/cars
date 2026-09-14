@@ -42,7 +42,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Analytics</title>
+	<title>OUTLETCARS.BG Admin - Analytics</title>
 </svelte:head>
 
 <AdminShell title="Analytics" activePath="/admin/analytics">

@@ -104,7 +104,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Dashboard</title>
+	<title>OUTLETCARS.BG Admin - Dashboard</title>
 </svelte:head>
 
 <AdminShell

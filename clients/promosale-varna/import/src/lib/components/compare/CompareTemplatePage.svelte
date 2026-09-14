@@ -66,8 +66,8 @@
 		{pageDocument}
 		runtimeHtml={shellRuntimeHtml}
 		title={locale === 'bg'
-			? 'Сравни автомобили — Day Night Auto'
-			: 'Compare Vehicles — Day Night Auto'}
+			? 'Сравни автомобили — Promosale Varna'
+			: 'Compare Vehicles — Promosale Varna'}
 	>
 		<section class="daynight-compare-page pb-100">
 			<div class="tf-spacing-style3"></div>
@@ -82,8 +82,8 @@
 						</p>
 						<h1 class="h2">
 							{locale === 'bg'
-								? 'Сравни автомобили от Day Night Auto'
-								: 'Compare Day Night Auto vehicles'}
+								? 'Сравни автомобили от Promosale Varna'
+								: 'Compare Promosale Varna vehicles'}
 						</h1>
 						<p>
 							{locale === 'bg'

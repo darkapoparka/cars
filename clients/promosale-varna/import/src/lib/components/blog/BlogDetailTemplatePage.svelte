@@ -41,7 +41,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title={`${post.title} — Day Night Auto`}
+	title={`${post.title} — Promosale Varna`}
 >
 	<article class="dn-article">
 		<header class="dn-article__header">

@@ -17,7 +17,7 @@
 			<div class="daynight-about-location__content wow fadeInLeft" data-wow-delay="0.1s">
 				<div class="daynight-about-location__cards">
 					<div class="daynight-about-location__panel-head">
-						<span>Шоурум Day Night Auto</span>
+						<span>Шоурум Promosale Varna</span>
 						<strong>Огледи с предварителна уговорка</strong>
 					</div>
 					<article class="daynight-about-location-card">
@@ -95,7 +95,7 @@
 					allowfullscreen
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
-					title="Day Night Auto Plovdiv map"
+					title="Promosale Varna Plovdiv map"
 				></iframe>
 
 				<div class="daynight-about-location__map-info">
@@ -103,7 +103,7 @@
 						<img src="/assets/icons/MapPin.svg" alt="" />
 					</span>
 					<div>
-						<strong>Day Night Auto</strong>
+						<strong>Promosale Varna</strong>
 						<small>{office.address}</small>
 					</div>
 				</div>

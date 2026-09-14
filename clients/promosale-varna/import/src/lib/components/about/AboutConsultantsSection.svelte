@@ -10,7 +10,7 @@
 <section class="daynight-consultants">
 	<div class="container">
 		<AboutSectionHeader
-			heading="Хората зад Day Night Auto"
+			heading="Хората зад Promosale Varna"
 			description="Личен контакт от първия въпрос до предаването на автомобила."
 		/>
 
@@ -38,14 +38,14 @@
 								<a
 									class="bc-team-card__chip"
 									{...externalHref(consultant.phoneHref)}
-									aria-label="Обади се на Day Night Auto"
+									aria-label="Обади се на Promosale Varna"
 								>
 									<img src="/assets/icons/PhoneCall.svg" alt="" />
 								</a>
 								<a
 									class="bc-team-card__chip"
 									{...externalHref(consultant.emailHref)}
-									aria-label="Имейл до Day Night Auto"
+									aria-label="Имейл до Promosale Varna"
 								>
 									<img src="/assets/icons/input-telegram.svg" alt="" />
 								</a>

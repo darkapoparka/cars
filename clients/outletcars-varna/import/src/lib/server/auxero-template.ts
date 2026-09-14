@@ -281,11 +281,11 @@ function wireGlobalSearchForms(html: string) {
 		)
 		.replace(
 			/<input type="text" class="search-form__input" placeholder="Search\.\.\." autocomplete="off" id="searchInput">/g,
-			'<input type="text" class="search-form__input" name="q" placeholder="Search OUTLETCARS.BG — Варна inventory" autocomplete="off" id="searchInput">'
+			'<input type="text" class="search-form__input" name="q" placeholder="Search OUTLETCARS.BG inventory" autocomplete="off" id="searchInput">'
 		)
 		.replace(
 			/<input type="text" class="search-modal__input" placeholder="Search for anything" autocomplete="off" id="searchModalInput">/g,
-			'<input type="text" class="search-modal__input" name="q" placeholder="Search OUTLETCARS.BG — Варна inventory" autocomplete="off" id="searchModalInput">'
+			'<input type="text" class="search-modal__input" name="q" placeholder="Search OUTLETCARS.BG inventory" autocomplete="off" id="searchModalInput">'
 		);
 }
 
@@ -315,18 +315,18 @@ function stripBlockedTemplateAnchors(html: string) {
 
 function applyDayNightBranding(html: string) {
 	return html
-		.replaceAll('Aurexo | Car Dealer, Rental & Listing HTML Template', 'OUTLETCARS.BG — Варна')
-		.replaceAll('Aurexo Garage', 'OUTLETCARS.BG — Варна')
+		.replaceAll('Aurexo | Car Dealer, Rental & Listing HTML Template', 'OUTLETCARS.BG')
+		.replaceAll('Aurexo Garage', 'OUTLETCARS.BG')
 		.replaceAll('Aurexo', daynightBrand.name)
-		.replaceAll('Super Admin', 'OUTLETCARS.BG — Варна Admin')
+		.replaceAll('Super Admin', 'OUTLETCARS.BG Admin')
 		.replaceAll('themesflat@gmail.com', daynightContact.emailLabel)
 		.replaceAll('https://themeforest.net/user/themesflat', `https://${daynightBrand.domain}`)
 		.replace(
 			/6205 Peachtree Dunwoody Rd,\s*Atlanta,\s*(?:GA 30328)?/g,
 			daynightContact.addressLabel
 		)
-		.replaceAll('/assets/images/logo-white.png', daynightAssets.logoLight)
-		.replaceAll('/assets/images/logo.png', daynightAssets.logoDark)
+		.replaceAll('/assets/images/logo-white.png', daynightAssets.logoDark)
+		.replaceAll('/assets/images/logo.png', daynightAssets.logoLight)
 		.replaceAll(
 			'/assets/images/brand/app-store-dark.png',
 			'/assets/images/brand/app-store-dark.webp'
@@ -335,22 +335,22 @@ function applyDayNightBranding(html: string) {
 			'/assets/images/brand/google-play-dark.png',
 			'/assets/images/brand/google-play-dark.webp'
 		)
-		.replaceAll('alt="logo-white.png"', 'alt="OUTLETCARS.BG — Варна"')
-		.replaceAll('alt="logo"', 'alt="OUTLETCARS.BG — Варна"')
+		.replaceAll('alt="logo-white.png"', 'alt="OUTLETCARS.BG"')
+		.replaceAll('alt="logo"', 'alt="OUTLETCARS.BG"')
 		.replaceAll('href="/account/favorites"', 'href="/account"')
 		.replaceAll('href="./account/favorites"', 'href="./account"')
 		.replaceAll('aria-label="Wishlist"', 'aria-label="Любими"')
-		.replaceAll('Search Cars Near You – Buy Today!', 'Find Your Next OUTLETCARS.BG — Варна Vehicle')
-		.replaceAll('Search Cars Near You', 'Find Your Next OUTLETCARS.BG — Варна Vehicle')
-		.replaceAll('Get Your Dream Car', 'Import or buy with OUTLETCARS.BG — Варна')
-		.replaceAll('Listing Grid 3 Columns', 'OUTLETCARS.BG — Варна Inventory')
-		.replaceAll('Sale Agents', 'OUTLETCARS.BG — Варна Consultants')
+		.replaceAll('Search Cars Near You – Buy Today!', 'Find Your Next OUTLETCARS.BG Vehicle')
+		.replaceAll('Search Cars Near You', 'Find Your Next OUTLETCARS.BG Vehicle')
+		.replaceAll('Get Your Dream Car', 'Import or buy with OUTLETCARS.BG')
+		.replaceAll('Listing Grid 3 Columns', 'OUTLETCARS.BG Inventory')
+		.replaceAll('Sale Agents', 'OUTLETCARS.BG Consultants')
 		.replaceAll('Sale Agents List', 'Consultants')
 		.replaceAll('Sale Agents Detail', 'Consultant Profile')
 		.replaceAll('Dealer Listing', 'Consultants')
 		.replaceAll('Dealer Detail', 'Consultant Detail')
-		.replaceAll('Want to sell your car?', 'Want to sell your car with OUTLETCARS.BG — Варна?')
-		.replaceAll('Contact Us', 'Contact OUTLETCARS.BG — Варна')
+		.replaceAll('Want to sell your car?', 'Want to sell your car with OUTLETCARS.BG?')
+		.replaceAll('Contact Us', 'Contact OUTLETCARS.BG')
 		.replaceAll('Get Prequalified for Auto Financing', 'Services for import, documents, and sales')
 		.replaceAll('Financing', 'Services')
 		.replaceAll('Sevices Center', 'Services')
@@ -359,7 +359,7 @@ function applyDayNightBranding(html: string) {
 			/Monday–Friday from 8 AM to 8 PM\s*<br>\s*Saturday from 9 AM to 6 PM EST/g,
 			'Monday-Friday 9:00 - 18:00 <br>Weekend viewings by appointment'
 		)
-		.replaceAll('Buying a car', 'Buying With OUTLETCARS.BG — Варна')
+		.replaceAll('Buying a car', 'Buying With OUTLETCARS.BG')
 		.replaceAll('Selling a car', 'Sell Your Car')
 		.replaceAll('Investor Relations', 'Services')
 		.replaceAll('Careers', 'FAQ')
@@ -368,7 +368,7 @@ function applyDayNightBranding(html: string) {
 		.replaceAll('Certified Pre-Owned', 'Verified Listings')
 		.replaceAll('Car Payment Calculators', 'Import Calculator')
 		.replaceAll('Car Reviews & Ratings', 'Client Reviews')
-		.replaceAll('Download App', 'OUTLETCARS.BG — Варна Online')
+		.replaceAll('Download App', 'OUTLETCARS.BG Online')
 		.replaceAll('Clients Reviews', 'Client Reviews')
 		.replace(/My Listing(?!s)/g, 'My Listings')
 		.replaceAll('My Reviews', 'Reviews')
@@ -388,7 +388,7 @@ function applyDayNightBranding(html: string) {
 		.replaceAll('(555) 123-4567', daynightContact.primaryPhoneLabel)
 		.replace(
 			/<p class="text-secondary mb-4">Username:[\s\S]*?<\/p>\s*<p class="text-secondary">Password:[\s\S]*?<\/p>/g,
-			'<p class="text-secondary mb-4">Use your OUTLETCARS.BG — Варна account credentials.</p>'
+			'<p class="text-secondary mb-4">Use your OUTLETCARS.BG account credentials.</p>'
 		)
 		.replace(
 			/©2026[\s\S]*?All Rights Reserved\./g,
@@ -2888,7 +2888,7 @@ function injectLocalBehavior(
 
 		img.dataset.daynightFallbackApplied = 'true';
 		img.src = vehicleImageFallback;
-		if (!img.alt) img.alt = 'OUTLETCARS.BG — Варна vehicle';
+		if (!img.alt) img.alt = 'OUTLETCARS.BG vehicle';
 	};
 	const prepareVehicleImages = () => {
 		document.querySelectorAll('img').forEach((img) => {
@@ -3047,7 +3047,7 @@ function injectLocalBehavior(
 				updateGarageState();
 				syncGarageState();
 				const modalText = document.querySelector('#CompareModal .h4, #CompareModal .h5, #CompareModal p');
-				if (modalText) modalText.textContent = 'Added to OUTLETCARS.BG — Варна compare list';
+				if (modalText) modalText.textContent = 'Added to OUTLETCARS.BG compare list';
 				return;
 			}
 		}
@@ -3080,13 +3080,14 @@ function injectLocalBehavior(
 				}
 				setFormStatus(
 					form,
-					formAction.getAttribute('data-daynight-form-status') || 'Saved locally by OUTLETCARS.BG — Варна'
+					formAction.getAttribute('data-daynight-form-status') || 'Saved locally by OUTLETCARS.BG'
 				);
 			}
 		}
 	}, runtimeListenerOptions);
 	document.addEventListener('submit', async (event) => {
 		const form = event.target;
+		if (form.hasAttribute('data-managed-inquiry')) return;
 		if (form.matches('[data-daynight-search-form="inventory"]')) {
 			event.preventDefault();
 			go(inventorySearchUrl(form));
@@ -3122,13 +3123,13 @@ function injectLocalBehavior(
 			});
 			const session = result?.data?.session;
 			if (session) writeList(sessionKey, [session]);
-			setFormStatus(form, 'Customer account created locally for OUTLETCARS.BG — Варна');
+			setFormStatus(form, 'Customer account created locally for OUTLETCARS.BG');
 		} else if (form.matches('#ForgotPasswordModal form')) {
 			await postJson('/api/auth/recovery', {
 				...payload,
 				email: payload.email || payload['email-forgot-password']
 			});
-			setFormStatus(form, 'Password recovery request queued locally for OUTLETCARS.BG — Варна');
+			setFormStatus(form, 'Password recovery request queued locally for OUTLETCARS.BG');
 		} else if (form.matches('.daynight-profile-form')) {
 			await postJson('/api/account/profile', payload);
 			setFormStatus(form, 'Profile saved locally for ' + runtimeData.account.session.name);
@@ -3151,41 +3152,43 @@ function injectLocalBehavior(
 				setFormStatus(
 					form,
 					listingId
-						? 'Listing changes saved locally for OUTLETCARS.BG — Варна'
-						: 'Listing draft saved locally for OUTLETCARS.BG — Варна review'
+						? 'Listing changes saved locally for OUTLETCARS.BG'
+						: 'Listing draft saved locally for OUTLETCARS.BG review'
 				);
 			} else {
 				await postJson('/api/inventory/submissions', {
 					...payload,
 					source: 'customer-listing'
 				});
-				setFormStatus(form, 'Listing draft saved locally for OUTLETCARS.BG — Варна review');
+				setFormStatus(form, 'Listing draft saved locally for OUTLETCARS.BG review');
 			}
 		} else if (form.matches('.daynight-sell-form')) {
 			await postJson('/api/inventory/submissions', {
 				...payload,
 				source: 'sell-your-car'
 			});
-			setFormStatus(form, 'Заявката е подготвена. OUTLETCARS.BG — Варна ще се свърже с вас.');
+			setFormStatus(form, 'Заявката е подготвена. OUTLETCARS.BG ще се свърже с вас.');
 		} else if (form.matches('.daynight-service-form')) {
-			await postJson('/api/inquiries', payload);
-			setFormStatus(form, 'Service request queued locally for OUTLETCARS.BG — Варна');
+			const result = await postJson('/api/inquiries', payload);
+			setFormStatus(form, result?.ok && result?.data?.inquiry?.id
+				? 'Демонстрационната заявка е запазена. Не е изпратено съобщение до търговец.'
+				: 'Заявката не е запазена. Провери данните и опитай отново.');
 		} else if (form.matches('.daynight-blog-comment-form')) {
 			await postJson('/api/messages', payload);
-			setFormStatus(form, 'Comment saved locally for OUTLETCARS.BG — Варна review');
+			setFormStatus(form, 'Comment saved locally for OUTLETCARS.BG review');
 		} else if (form.matches('.daynight-newsletter-form, .form-footer, .newsletter-form')) {
 			await postJson('/api/messages', {
 				...payload,
 				message: 'Newsletter signup'
 			});
-			setFormStatus(form, 'Newsletter signup saved locally for OUTLETCARS.BG — Варна');
+			setFormStatus(form, 'Newsletter signup saved locally for OUTLETCARS.BG');
 		} else {
-			await postJson('/api/inquiries', payload);
+			const result = await postJson('/api/inquiries', payload);
 			setFormStatus(
 				form,
-				form.matches('.daynight-contact-form')
-					? 'Съобщението е подготвено локално за OUTLETCARS.BG — Варна'
-					: 'Inquiry sent to OUTLETCARS.BG — Варна locally'
+				result?.ok && result?.data?.inquiry?.id
+					? 'Демонстрационната заявка е запазена. Не е изпратено съобщение до търговец.'
+					: 'Заявката не е запазена. Провери данните и опитай отново.'
 			);
 		}
 	}, runtimeListenerOptions);
@@ -3194,7 +3197,7 @@ function injectLocalBehavior(
 		const value = Number(String(input?.value || '0').replace(/[^0-9.-]/g, ''));
 		return Number.isFinite(value) ? value : 0;
 	};
-	const formatEur = (value) => Math.round(value).toLocaleString('fr-FR').replace(/\u202f/g, ' ') + ' EUR';
+	const formatEur = (value) => Math.round(value).toLocaleString('fr-FR').replace(/\u202f/g, ' ') + ' €';
 	const updateCalculator = (calculator) => {
 		const price = readCalcNumber(calculator, 'price');
 		const transport = readCalcNumber(calculator, 'transport');
@@ -3336,11 +3339,11 @@ export function auxeroRouteResponse(routePath: string, options: AuxeroRenderOpti
 		: resolveDayNightSession(routePath, options.searchParams);
 
 	if (!session) {
-		return new Response('OUTLETCARS.BG — Варна account session is required', { status: 401 });
+		return new Response('OUTLETCARS.BG account session is required', { status: 401 });
 	}
 
 	if (!canAccessDayNightRoute(session, routePath)) {
-		return new Response('OUTLETCARS.BG — Варна account role cannot access this route', { status: 403 });
+		return new Response('OUTLETCARS.BG account role cannot access this route', { status: 403 });
 	}
 
 	return auxeroResponse(templateFile, { ...options, routePath, session });

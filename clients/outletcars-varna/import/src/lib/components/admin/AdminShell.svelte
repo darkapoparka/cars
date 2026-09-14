@@ -52,7 +52,7 @@
 		activePath = '/admin',
 		children,
 		contentClass,
-		eyebrow = 'OUTLETCARS.BG — Варна CMS',
+		eyebrow = 'OUTLETCARS.BG CMS',
 		primaryAction,
 		sidebarVariant = 'inset',
 		title
@@ -104,7 +104,7 @@
 										B
 									</span>
 									<span class="grid flex-1 text-left text-sm leading-tight">
-										<span class="truncate text-sm font-semibold">OUTLETCARS.BG — Варна</span>
+										<span class="truncate text-sm font-semibold">OUTLETCARS.BG</span>
 										<span class="text-muted-foreground truncate text-xs">Admin CMS</span>
 									</span>
 								</a>

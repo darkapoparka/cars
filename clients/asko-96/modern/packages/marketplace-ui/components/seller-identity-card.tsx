@@ -58,7 +58,7 @@ export const LeadSiteListingIdentityCard = ({
     >
       <Image
         alt={leadSite.name}
-        className="h-12 w-auto max-w-full rounded bg-zinc-950 object-contain object-left"
+        className="h-12 w-auto max-w-full object-contain object-left"
         height={48}
         src={leadSite.logoPath}
         width={220}

@@ -5,10 +5,10 @@
 	import type { HomePageCopy } from '$lib/i18n/messages';
 	import { ArrowRight } from '@lucide/svelte';
 
-	// Clean Svelte 5 + Tailwind v4 rebuild of the "Съвети от OUTLETCARS.BG — Варна" news band:
+	// Clean Svelte 5 + Tailwind v4 rebuild of the "Съвети от OUTLETCARS.BG" news band:
 	//   • Dark-green band header (title left, green "Виж всички" pill right). The title
 	//     reproduces the live composition — when copy.newsTitle contains "daynight",
-	//     the brand word is swapped for the OUTLETCARS.BG — Варна wordmark image (a <picture> that
+	//     the brand word is swapped for the OUTLETCARS.BG — ВАРНА wordmark image (a <picture> that
 	//     serves the light logo on mobile, dark-template logo on desktop), and the
 	//     remaining text renders as a plain span. Otherwise the title prints verbatim.
 	//   • Three overlay cards: cover photo fills the card, a dark gradient sits on top,
@@ -23,7 +23,7 @@
 
 	// Mirror the live header composition: split the brand word out of the title so the
 	// wordmark logo can stand in for it, and remember whether the brand leads the phrase
-	// ("OUTLETCARS.BG — Варна notes" → logo first) or trails it ("Съвети от OUTLETCARS.BG — Варна" → logo last).
+	// ("OUTLETCARS.BG notes" → logo first) or trails it ("Съвети от OUTLETCARS.BG" → logo last).
 	const brandedNewsTitle = $derived(/daynight/i.test(copy.newsTitle));
 	const brandFirstNewsTitle = $derived(copy.newsTitle.toLowerCase().startsWith('daynight'));
 	const newsTitleWithoutBrand = $derived(copy.newsTitle.replace(/daynight/i, '').trim());
@@ -41,11 +41,11 @@
 					{#if brandedNewsTitle}
 						{#if brandFirstNewsTitle}
 							<picture class="inline-flex w-[clamp(198px,18vw,286px)] leading-none">
-								<source media="(max-width: 767px)" srcset={daynightAssets.logoDark} />
+								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
 								<img
 									class="block h-auto w-full"
 									src={daynightAssets.logoDark}
-									alt="OUTLETCARS.BG — Варна"
+									alt="OUTLETCARS.BG"
 									width="220"
 									height="58"
 									loading="lazy"
@@ -60,11 +60,11 @@
 								<span>{newsTitleWithoutBrand}</span>
 							{/if}
 							<picture class="inline-flex w-[clamp(198px,18vw,286px)] leading-none">
-								<source media="(max-width: 767px)" srcset={daynightAssets.logoDark} />
+								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
 								<img
 									class="block h-auto w-full"
 									src={daynightAssets.logoDark}
-									alt="OUTLETCARS.BG — Варна"
+									alt="OUTLETCARS.BG"
 									width="220"
 									height="58"
 									loading="lazy"

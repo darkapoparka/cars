@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Settings</title>
+	<title>OUTLETCARS.BG Admin - Settings</title>
 </svelte:head>
 
 <AdminShell title="Settings" activePath="/admin/settings">

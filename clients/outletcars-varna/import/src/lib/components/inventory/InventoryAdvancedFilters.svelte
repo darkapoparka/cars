@@ -406,8 +406,9 @@
 		min-width: 0;
 	}
 	.field span {
-		font-size: 14px;
-		font-weight: 600;
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-label-leading);
 	}
 	.field select,
 	.field input {
@@ -420,7 +421,9 @@
 		background: #f5f6f7;
 		color: var(--bc-ink);
 		padding: 0 12px;
-		font-size: 15px;
+		font-size: var(--bc-text-control);
+		line-height: var(--bc-leading-control);
+		font-weight: var(--bc-weight-control);
 	}
 	fieldset {
 		min-width: 0;
@@ -432,8 +435,9 @@
 	}
 	legend {
 		margin-bottom: 12px;
-		font-size: 16px;
-		font-weight: 650;
+		font-size: var(--bc-mobile-card-title);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-card-title-leading);
 	}
 	.features {
 		display: grid;
@@ -448,9 +452,11 @@
 		border: 1px solid var(--bc-border);
 		border-radius: 8px;
 		padding: 8px 12px;
-		font-size: 14px;
+		font-size: var(--bc-text-control);
 		background: white;
 		cursor: pointer;
+		line-height: var(--bc-leading-control);
+		font-weight: var(--bc-weight-control);
 	}
 	.features input {
 		width: 17px;

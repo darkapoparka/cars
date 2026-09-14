@@ -1,33 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
-const location = "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите, Пловдив";
+const phoneE164 = "";
+const city = "Пловдив";
+const shortName = "K-G Team Auto";
+const district = "Пловдив";
+const street = "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите";
+const location = "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите";
 
 export const daynightSite = {
 	name: "K-G Team Auto",
-	shortName: "TEAM AUTO",
-	phone: "+359877346262",
-	phoneLabel: "0877 34 62 62",
-	email: '',
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "",
+	phoneLabel: "",
+	email: "",
 	location,
-	locationShort: "Пловдив",
+	locationShort: "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+	locationLandmark: "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
 	hoursLabel: "Работното време не е публикувано. Потвърдете по телефона преди посещение.",
-	mapEmbedSrc: "https://www.google.com/maps?q=K-G%20Team%20Auto%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%93%20%D0%AE%D0%B3%2C%20%D0%9E%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D1%8A%D1%81%D1%82%D0%B5%D0%BD%20%D0%BF%D1%8A%D1%82%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%20%D0%A7%D0%B8%D0%B8%D1%80%D0%B8%D1%82%D0%B5%2C%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2&output=embed",
-	mapUrl: "https://www.google.com/maps/search/?api=1&query=K-G%20Team%20Auto%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%93%20%D0%AE%D0%B3%2C%20%D0%9E%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D1%8A%D1%81%D1%82%D0%B5%D0%BD%20%D0%BF%D1%8A%D1%82%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%20%D0%A7%D0%B8%D0%B8%D1%80%D0%B8%D1%82%D0%B5%2C%20%D0%9F%D0%BB%D0%BE%D0%B2%D0%B4%D0%B8%D0%B2",
-	mapLabel: "K-G Team Auto, Пловдив",
-	sourceInventory: "https://team-auto.mobile.bg/",
-	inventoryCount: 10,
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "",
 	logoLight: "/dealer/logo-light.png",
 	logoDark: "/dealer/logo.png",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
 	heroTitle: "K-G Team Auto",
-	heroSubtitle: "Автомобили от публикувани обяви в Пловдив. Проверете наличността преди посещение.",
+	heroSubtitle: "Пловдив · Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -76,8 +90,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За K-G Team Auto', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За K-G Team Auto", href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

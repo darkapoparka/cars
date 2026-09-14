@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { calculateFinance, financeDefaults, formatFinanceEur } from '$lib/utils/finance-estimate';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();

@@ -17,9 +17,9 @@
 	} = $props();
 
 	const leftCarSrc =
-		'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
+		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
 	const rightCarSrc =
-		'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
+		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
 
 	function openMap() {
 		window.open(daynightSite.mapUrl, '_blank', 'noopener,noreferrer');
@@ -74,7 +74,7 @@
 				class="daynight-home-hero__photo"
 				src={desktopOnlyImagePlaceholder}
 				srcset={desktopOnlySrcset(
-					'/variant-3/assets/images/home2/daynight-hero-cutoff-imagegen-v1.webp',
+					'/assets/images/home2/daynight-hero-cutoff-imagegen-v1.webp',
 					1983
 				)}
 				sizes={desktopOnlySizes('100vw')}
@@ -103,13 +103,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>Победа · бул. Цар Освободител 110, кв. Победа</span>
+						<span>{daynightSite.locationLandmark}</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Отвори Google Maps до Перфект Ауто"
+						aria-label={`Отвори Google Maps до ${daynightSite.shortName}`}
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,11 +120,11 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">Перфект Ауто</span>
+							<span class="daynight-home-hero__location-map-label">{daynightSite.name}</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>Перфект Ауто Варна</strong>
-							<span>гр. Варна, бул. Цар Освободител 110, кв. Победа</span>
+							<strong>{daynightSite.shortName} {daynightSite.city}</strong>
+							<span>{daynightSite.location}</span>
 							<em>Отвори Google Maps</em>
 						</span>
 					</button>

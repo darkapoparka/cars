@@ -20,7 +20,7 @@
 					allowfullscreen
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
-					title="Day Night Auto location map"
+					title="Promosale Varna location map"
 				></iframe>
 			</div>
 

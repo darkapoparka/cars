@@ -3,13 +3,13 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    "id": "perfect-auto-21788859055085650",
-    "slug": "perfect-auto-21788859055085650",
+    "id": "am-1001",
+    "slug": "mercedes-benz-ml-320-cdi-2006-21788859055085650",
     "category": "car",
     "dealerOrgId": "dealer-perfect-auto-varna",
     "status": "active",
     "title": "Mercedes-Benz ML 320 CDI",
-    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г. Не се начислява ДДС. Оригинална обява: https://perfektauto.mobile.bg/obiava-21788859055085650-mercedes-benz-ml-320-cdi",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
     "price": {
       "amount": 6900,
       "currency": "EUR"
@@ -17,23 +17,23 @@ export const mockListings: VehicleListing[] = [
     "priceType": "fixed",
     "images": [
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-01-1.webp",
+        "url": "/assets/perfect-auto/vehicle-01-1.webp",
         "alt": "Mercedes-Benz ML 320 CDI"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-01-2.webp",
+        "url": "/assets/perfect-auto/vehicle-01-2.webp",
         "alt": "Mercedes-Benz ML 320 CDI"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-01-3.webp",
+        "url": "/assets/perfect-auto/vehicle-01-3.webp",
         "alt": "Mercedes-Benz ML 320 CDI"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-01-4.webp",
+        "url": "/assets/perfect-auto/vehicle-01-4.webp",
         "alt": "Mercedes-Benz ML 320 CDI"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-01-5.webp",
+        "url": "/assets/perfect-auto/vehicle-01-5.webp",
         "alt": "Mercedes-Benz ML 320 CDI"
       }
     ],
@@ -42,16 +42,15 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Победа",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
-      "bodyType": "suv",
-      "fuelType": "diesel",
       "make": "Mercedes-Benz",
       "model": "ML 320 CDI",
       "year": 2006,
+      "bodyType": "suv",
+      "fuelType": "diesel",
       "transmission": "automatic",
       "mileageValue": 249000,
       "mileageUnit": "km",
@@ -63,19 +62,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
     },
-    "publishedAt": "2026-09-10T09:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "perfect-auto-21788174780697334",
-    "slug": "perfect-auto-21788174780697334",
+    "id": "am-1010",
+    "slug": "mercedes-benz-g-350-4-matic-facelift-bluetec-full-2015-21788174780697334",
     "category": "car",
     "dealerOrgId": "dealer-perfect-auto-varna",
     "status": "active",
     "title": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
-    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г. Не се начислява ДДС. Оригинална обява: https://perfektauto.mobile.bg/obiava-21788174780697334-mercedes-benz-g-350-4-matic-facelift-bluetec-full-eks-shibedah",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
     "price": {
       "amount": 59900,
       "currency": "EUR"
@@ -83,23 +83,23 @@ export const mockListings: VehicleListing[] = [
     "priceType": "fixed",
     "images": [
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-02-1.webp",
+        "url": "/assets/perfect-auto/vehicle-02-1.webp",
         "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-02-2.webp",
+        "url": "/assets/perfect-auto/vehicle-02-2.webp",
         "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-02-3.webp",
+        "url": "/assets/perfect-auto/vehicle-02-3.webp",
         "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-02-4.webp",
+        "url": "/assets/perfect-auto/vehicle-02-4.webp",
         "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-02-5.webp",
+        "url": "/assets/perfect-auto/vehicle-02-5.webp",
         "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
       }
     ],
@@ -108,7 +108,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Победа",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -118,31 +118,31 @@ export const mockListings: VehicleListing[] = [
       },
       {
         "bg": "Лизинг",
-        "en": "Leasing enquiry"
+        "en": "Лизинг"
       },
       {
         "bg": "Бартер",
-        "en": "Trade-in"
+        "en": "Бартер"
       },
       {
         "bg": "Навигация",
-        "en": "Navigation"
+        "en": "Навигация"
       },
       {
         "bg": "Парктроник",
-        "en": "Parking sensors"
+        "en": "Парктроник"
       },
       {
         "bg": "Кожен салон",
-        "en": "Leather interior"
+        "en": "Кожен салон"
       }
     ],
     "spec": {
-      "bodyType": "suv",
-      "fuelType": "diesel",
       "make": "Mercedes-Benz",
       "model": "G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
       "year": 2015,
+      "bodyType": "suv",
+      "fuelType": "diesel",
       "transmission": "automatic",
       "mileageValue": 151000,
       "mileageUnit": "km",
@@ -154,19 +154,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
     },
-    "publishedAt": "2026-09-10T09:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "perfect-auto-21788174574608668",
-    "slug": "perfect-auto-21788174574608668",
+    "id": "am-1011",
+    "slug": "audi-q7-50-tdi-facelift-quattro-s-line-maxton-full-rs-2022-21788174574608668",
     "category": "car",
     "dealerOrgId": "dealer-perfect-auto-varna",
     "status": "active",
     "title": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
-    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г. Цената е без ДДС. Оригинална обява: https://perfektauto.mobile.bg/obiava-21788174574608668-audi-q7-50-tdi-facelift-quattro-s-line-maxton-full-rs",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
     "price": {
       "amount": 44900,
       "currency": "EUR"
@@ -174,23 +175,23 @@ export const mockListings: VehicleListing[] = [
     "priceType": "fixed",
     "images": [
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-03-1.webp",
+        "url": "/assets/perfect-auto/vehicle-03-1.webp",
         "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-03-2.webp",
+        "url": "/assets/perfect-auto/vehicle-03-2.webp",
         "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-03-3.webp",
+        "url": "/assets/perfect-auto/vehicle-03-3.webp",
         "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-03-4.webp",
+        "url": "/assets/perfect-auto/vehicle-03-4.webp",
         "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-03-5.webp",
+        "url": "/assets/perfect-auto/vehicle-03-5.webp",
         "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
       }
     ],
@@ -199,7 +200,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Победа",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -209,39 +210,39 @@ export const mockListings: VehicleListing[] = [
       },
       {
         "bg": "Лизинг",
-        "en": "Leasing enquiry"
+        "en": "Лизинг"
       },
       {
         "bg": "Бартер",
-        "en": "Trade-in"
+        "en": "Бартер"
       },
       {
         "bg": "Навигация",
-        "en": "Navigation"
+        "en": "Навигация"
       },
       {
         "bg": "Парктроник",
-        "en": "Parking sensors"
+        "en": "Парктроник"
       },
       {
         "bg": "Кожен салон",
-        "en": "Leather interior"
+        "en": "Кожен салон"
       },
       {
         "bg": "Панорамен люк",
-        "en": "Panoramic roof"
+        "en": "Панорамен люк"
       },
       {
         "bg": "Head up display",
-        "en": "Head-up display"
+        "en": "Head up display"
       }
     ],
     "spec": {
-      "bodyType": "suv",
-      "fuelType": "diesel",
       "make": "Audi",
       "model": "Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
       "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "diesel",
       "transmission": "automatic",
       "mileageValue": 136000,
       "mileageUnit": "km",
@@ -253,19 +254,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
     },
-    "publishedAt": "2026-09-10T09:59:57.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "perfect-auto-21787209952978104",
-    "slug": "perfect-auto-21787209952978104",
+    "id": "am-1012",
+    "slug": "lexus-nx-450-full-mark-lev-head-u-2026-21787209952978104",
     "category": "car",
     "dealerOrgId": "dealer-perfect-auto-varna",
     "status": "active",
     "title": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
-    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г. Цената е без ДДС. Оригинална обява: https://perfektauto.mobile.bg/obiava-21787209952978104-lexus-nx-450-chisto-nov-full-ekstri-mark-lev-pano-head-u",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
     "price": {
       "amount": 55900,
       "currency": "EUR"
@@ -273,23 +275,23 @@ export const mockListings: VehicleListing[] = [
     "priceType": "fixed",
     "images": [
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-04-1.webp",
+        "url": "/assets/perfect-auto/vehicle-04-1.webp",
         "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-04-2.webp",
+        "url": "/assets/perfect-auto/vehicle-04-2.webp",
         "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-04-3.webp",
+        "url": "/assets/perfect-auto/vehicle-04-3.webp",
         "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-04-4.webp",
+        "url": "/assets/perfect-auto/vehicle-04-4.webp",
         "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-04-5.webp",
+        "url": "/assets/perfect-auto/vehicle-04-5.webp",
         "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
       }
     ],
@@ -298,7 +300,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Победа",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -308,39 +310,39 @@ export const mockListings: VehicleListing[] = [
       },
       {
         "bg": "Лизинг",
-        "en": "Leasing enquiry"
+        "en": "Лизинг"
       },
       {
         "bg": "Бартер",
-        "en": "Trade-in"
+        "en": "Бартер"
       },
       {
         "bg": "Навигация",
-        "en": "Navigation"
+        "en": "Навигация"
       },
       {
         "bg": "Парктроник",
-        "en": "Parking sensors"
+        "en": "Парктроник"
       },
       {
         "bg": "Кожен салон",
-        "en": "Leather interior"
+        "en": "Кожен салон"
       },
       {
         "bg": "Панорамен люк",
-        "en": "Panoramic roof"
+        "en": "Панорамен люк"
       },
       {
         "bg": "Head up display",
-        "en": "Head-up display"
+        "en": "Head up display"
       }
     ],
     "spec": {
-      "bodyType": "suv",
-      "fuelType": "plug_in_hybrid",
       "make": "Lexus",
       "model": "NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
       "year": 2026,
+      "bodyType": "suv",
+      "fuelType": "hybrid",
       "transmission": "automatic",
       "mileageValue": 0,
       "mileageUnit": "km",
@@ -352,19 +354,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
     },
-    "publishedAt": "2026-09-10T09:59:56.000Z",
+    "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "perfect-auto-21787209746596224",
-    "slug": "perfect-auto-21787209746596224",
+    "id": "am-1013",
+    "slug": "bmw-x6-30d-xdrive-swarovski-m-packet-maxton-2022-21787209746596224",
     "category": "car",
     "dealerOrgId": "dealer-perfect-auto-varna",
     "status": "active",
     "title": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
-    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г. Цената е без ДДС. Оригинална обява: https://perfektauto.mobile.bg/obiava-21787209746596224-bmw-x6-30d-xdrive-swarovski-m-packet-maxton",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
     "price": {
       "amount": 48900,
       "currency": "EUR"
@@ -372,23 +375,23 @@ export const mockListings: VehicleListing[] = [
     "priceType": "fixed",
     "images": [
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-05-1.webp",
+        "url": "/assets/perfect-auto/vehicle-05-1.webp",
         "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-05-2.webp",
+        "url": "/assets/perfect-auto/vehicle-05-2.webp",
         "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-05-3.webp",
+        "url": "/assets/perfect-auto/vehicle-05-3.webp",
         "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-05-4.webp",
+        "url": "/assets/perfect-auto/vehicle-05-4.webp",
         "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-05-5.webp",
+        "url": "/assets/perfect-auto/vehicle-05-5.webp",
         "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
       }
     ],
@@ -397,7 +400,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Победа",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -407,35 +410,35 @@ export const mockListings: VehicleListing[] = [
       },
       {
         "bg": "Лизинг",
-        "en": "Leasing enquiry"
+        "en": "Лизинг"
       },
       {
         "bg": "Бартер",
-        "en": "Trade-in"
+        "en": "Бартер"
       },
       {
         "bg": "Навигация",
-        "en": "Navigation"
+        "en": "Навигация"
       },
       {
         "bg": "Парктроник",
-        "en": "Parking sensors"
+        "en": "Парктроник"
       },
       {
         "bg": "Кожен салон",
-        "en": "Leather interior"
+        "en": "Кожен салон"
       },
       {
         "bg": "Head up display",
-        "en": "Head-up display"
+        "en": "Head up display"
       }
     ],
     "spec": {
-      "bodyType": "suv",
-      "fuelType": "diesel",
       "make": "BMW",
       "model": "X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
       "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "diesel",
       "transmission": "automatic",
       "mileageValue": 138000,
       "mileageUnit": "km",
@@ -447,19 +450,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
     },
-    "publishedAt": "2026-09-10T09:59:55.000Z",
+    "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "perfect-auto-11786890129374054",
-    "slug": "perfect-auto-11786890129374054",
+    "id": "am-1014",
+    "slug": "ford-mustang-2016-11786890129374054",
     "category": "car",
     "dealerOrgId": "dealer-perfect-auto-varna",
     "status": "active",
     "title": "Ford Mustang * КАМЕРА *",
-    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г. Не се начислява ДДС. Оригинална обява: https://perfektauto.mobile.bg/obiava-11786890129374054-ford-mustang-kamera",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
     "price": {
       "amount": 19900,
       "currency": "EUR"
@@ -467,23 +471,23 @@ export const mockListings: VehicleListing[] = [
     "priceType": "fixed",
     "images": [
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-06-1.webp",
+        "url": "/assets/perfect-auto/vehicle-06-1.webp",
         "alt": "Ford Mustang * КАМЕРА *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-06-2.webp",
+        "url": "/assets/perfect-auto/vehicle-06-2.webp",
         "alt": "Ford Mustang * КАМЕРА *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-06-3.webp",
+        "url": "/assets/perfect-auto/vehicle-06-3.webp",
         "alt": "Ford Mustang * КАМЕРА *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-06-4.webp",
+        "url": "/assets/perfect-auto/vehicle-06-4.webp",
         "alt": "Ford Mustang * КАМЕРА *"
       },
       {
-        "url": "/variant-2/assets/perfect-auto/vehicle-06-5.webp",
+        "url": "/assets/perfect-auto/vehicle-06-5.webp",
         "alt": "Ford Mustang * КАМЕРА *"
       }
     ],
@@ -492,41 +496,41 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Победа",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
       {
         "bg": "Лизинг",
-        "en": "Leasing enquiry"
+        "en": "Лизинг"
       },
       {
         "bg": "Бартер",
-        "en": "Trade-in"
+        "en": "Бартер"
       },
       {
         "bg": "Навигация",
-        "en": "Navigation"
+        "en": "Навигация"
       },
       {
         "bg": "Парктроник",
-        "en": "Parking sensors"
+        "en": "Парктроник"
       },
       {
         "bg": "Кожен салон",
-        "en": "Leather interior"
+        "en": "Кожен салон"
       },
       {
         "bg": "Head up display",
-        "en": "Head-up display"
+        "en": "Head up display"
       }
     ],
     "spec": {
-      "bodyType": "coupe",
-      "fuelType": "gasoline",
       "make": "Ford",
       "model": "Mustang * КАМЕРА *",
       "year": 2016,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
       "transmission": "automatic",
       "mileageValue": 48000,
       "mileageUnit": "km",
@@ -538,12 +542,717 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
     },
-    "publishedAt": "2026-09-10T09:59:54.000Z",
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1002",
+    "slug": "mercedes-benz-ml-320-cdi-2006-21788859055085650",
+    "category": "car",
+    "dealerOrgId": "dealer-perfect-auto-varna",
+    "status": "active",
+    "title": "Mercedes-Benz ML 320 CDI",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+    "price": {
+      "amount": 6900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/perfect-auto/vehicle-01-1.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-01-2.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-01-3.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-01-4.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-01-5.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "ML 320 CDI",
+      "year": 2006,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 249000,
+      "mileageUnit": "km",
+      "enginePowerHp": 224,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-perfect-auto-varna",
+      "type": "dealer",
+      "displayName": "Перфект Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
+    },
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1003",
+    "slug": "mercedes-benz-g-350-4-matic-facelift-bluetec-full-2015-21788174780697334",
+    "category": "car",
+    "dealerOrgId": "dealer-perfect-auto-varna",
+    "status": "active",
+    "title": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+    "price": {
+      "amount": 59900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/perfect-auto/vehicle-02-1.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-02-2.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-02-3.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-02-4.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-02-5.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Лизинг",
+        "en": "Лизинг"
+      },
+      {
+        "bg": "Бартер",
+        "en": "Бартер"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Кожен салон",
+        "en": "Кожен салон"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+      "year": 2015,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 151000,
+      "mileageUnit": "km",
+      "enginePowerHp": 258,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-perfect-auto-varna",
+      "type": "dealer",
+      "displayName": "Перфект Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
+    },
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1004",
+    "slug": "audi-q7-50-tdi-facelift-quattro-s-line-maxton-full-rs-2022-21788174574608668",
+    "category": "car",
+    "dealerOrgId": "dealer-perfect-auto-varna",
+    "status": "active",
+    "title": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+    "price": {
+      "amount": 44900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/perfect-auto/vehicle-03-1.webp",
+        "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-03-2.webp",
+        "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-03-3.webp",
+        "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-03-4.webp",
+        "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-03-5.webp",
+        "alt": "Audi Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Лизинг",
+        "en": "Лизинг"
+      },
+      {
+        "bg": "Бартер",
+        "en": "Бартер"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Кожен салон",
+        "en": "Кожен салон"
+      },
+      {
+        "bg": "Панорамен люк",
+        "en": "Панорамен люк"
+      },
+      {
+        "bg": "Head up display",
+        "en": "Head up display"
+      }
+    ],
+    "spec": {
+      "make": "Audi",
+      "model": "Q7 50 TDI FACELIFT QUATTRO* S LINE* MAXTON* FULL* RS",
+      "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 136000,
+      "mileageUnit": "km",
+      "enginePowerHp": 286,
+      "colorExterior": "Тъмно сив"
+    },
+    "seller": {
+      "id": "dealer-perfect-auto-varna",
+      "type": "dealer",
+      "displayName": "Перфект Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
+    },
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1005",
+    "slug": "lexus-nx-450-full-mark-lev-head-u-2026-21787209952978104",
+    "category": "car",
+    "dealerOrgId": "dealer-perfect-auto-varna",
+    "status": "active",
+    "title": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+    "price": {
+      "amount": 55900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/perfect-auto/vehicle-04-1.webp",
+        "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-04-2.webp",
+        "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-04-3.webp",
+        "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-04-4.webp",
+        "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-04-5.webp",
+        "alt": "Lexus NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Лизинг",
+        "en": "Лизинг"
+      },
+      {
+        "bg": "Бартер",
+        "en": "Бартер"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Кожен салон",
+        "en": "Кожен салон"
+      },
+      {
+        "bg": "Панорамен люк",
+        "en": "Панорамен люк"
+      },
+      {
+        "bg": "Head up display",
+        "en": "Head up display"
+      }
+    ],
+    "spec": {
+      "make": "Lexus",
+      "model": "NX 450 ЧИСТО НОВ * FULL Екстри * MARK LEV * ПАНО * HEAD U",
+      "year": 2026,
+      "bodyType": "suv",
+      "fuelType": "hybrid",
+      "transmission": "automatic",
+      "mileageValue": 0,
+      "mileageUnit": "km",
+      "enginePowerHp": 304,
+      "colorExterior": "Червен"
+    },
+    "seller": {
+      "id": "dealer-perfect-auto-varna",
+      "type": "dealer",
+      "displayName": "Перфект Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
+    },
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1006",
+    "slug": "bmw-x6-30d-xdrive-swarovski-m-packet-maxton-2022-21787209746596224",
+    "category": "car",
+    "dealerOrgId": "dealer-perfect-auto-varna",
+    "status": "active",
+    "title": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+    "price": {
+      "amount": 48900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/perfect-auto/vehicle-05-1.webp",
+        "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-05-2.webp",
+        "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-05-3.webp",
+        "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-05-4.webp",
+        "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-05-5.webp",
+        "alt": "BMW X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Лизинг",
+        "en": "Лизинг"
+      },
+      {
+        "bg": "Бартер",
+        "en": "Бартер"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Кожен салон",
+        "en": "Кожен салон"
+      },
+      {
+        "bg": "Head up display",
+        "en": "Head up display"
+      }
+    ],
+    "spec": {
+      "make": "BMW",
+      "model": "X6 30d xDrive * SWAROVSKI * M PACKET * MAXTON *",
+      "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 138000,
+      "mileageUnit": "km",
+      "enginePowerHp": 286,
+      "colorExterior": "Т.зелен"
+    },
+    "seller": {
+      "id": "dealer-perfect-auto-varna",
+      "type": "dealer",
+      "displayName": "Перфект Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
+    },
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1007",
+    "slug": "ford-mustang-2016-11786890129374054",
+    "category": "car",
+    "dealerOrgId": "dealer-perfect-auto-varna",
+    "status": "active",
+    "title": "Ford Mustang * КАМЕРА *",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+    "price": {
+      "amount": 19900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/perfect-auto/vehicle-06-1.webp",
+        "alt": "Ford Mustang * КАМЕРА *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-06-2.webp",
+        "alt": "Ford Mustang * КАМЕРА *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-06-3.webp",
+        "alt": "Ford Mustang * КАМЕРА *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-06-4.webp",
+        "alt": "Ford Mustang * КАМЕРА *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-06-5.webp",
+        "alt": "Ford Mustang * КАМЕРА *"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "Лизинг",
+        "en": "Лизинг"
+      },
+      {
+        "bg": "Бартер",
+        "en": "Бартер"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Кожен салон",
+        "en": "Кожен салон"
+      },
+      {
+        "bg": "Head up display",
+        "en": "Head up display"
+      }
+    ],
+    "spec": {
+      "make": "Ford",
+      "model": "Mustang * КАМЕРА *",
+      "year": 2016,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 48000,
+      "mileageUnit": "km",
+      "enginePowerHp": 317,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-perfect-auto-varna",
+      "type": "dealer",
+      "displayName": "Перфект Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
+    },
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1008",
+    "slug": "mercedes-benz-ml-320-cdi-2006-21788859055085650",
+    "category": "car",
+    "dealerOrgId": "dealer-perfect-auto-varna",
+    "status": "active",
+    "title": "Mercedes-Benz ML 320 CDI",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+    "price": {
+      "amount": 6900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/perfect-auto/vehicle-01-1.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-01-2.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-01-3.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-01-4.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-01-5.webp",
+        "alt": "Mercedes-Benz ML 320 CDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "ML 320 CDI",
+      "year": 2006,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 249000,
+      "mileageUnit": "km",
+      "enginePowerHp": 224,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-perfect-auto-varna",
+      "type": "dealer",
+      "displayName": "Перфект Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
+    },
+    "publishedAt": "2026-09-10T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1009",
+    "slug": "mercedes-benz-g-350-4-matic-facelift-bluetec-full-2015-21788174780697334",
+    "category": "car",
+    "dealerOrgId": "dealer-perfect-auto-varna",
+    "status": "active",
+    "title": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+    "description": "Публикувана обява на Перфект Ауто към 10.09.2026 г.",
+    "price": {
+      "amount": 59900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/assets/perfect-auto/vehicle-02-1.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-02-2.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-02-3.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-02-4.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      },
+      {
+        "url": "/assets/perfect-auto/vehicle-02-5.webp",
+        "alt": "Mercedes-Benz G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Варна",
+      "country": "България"
+    },
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Лизинг",
+        "en": "Лизинг"
+      },
+      {
+        "bg": "Бартер",
+        "en": "Бартер"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Кожен салон",
+        "en": "Кожен салон"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "G 350 4 MATIC FACELIFT BLUETEC * FULL ЕКС * Шибедах *",
+      "year": 2015,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 151000,
+      "mileageUnit": "km",
+      "enginePowerHp": 258,
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-perfect-auto-varna",
+      "type": "dealer",
+      "displayName": "Перфект Ауто",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/perfect-auto/cover.png"
+    },
+    "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

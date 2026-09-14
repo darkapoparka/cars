@@ -411,7 +411,7 @@ const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 			]
 		},
 		{
-			title: 'Day Night Auto Support',
+			title: 'Promosale Varna Support',
 			links: [
 				{ href: '/services', label: 'Import & Buying Services' },
 				{ href: '/calculator', label: 'Import Cost Calculator' },
@@ -424,7 +424,7 @@ const inventoryMegaMenu: HomeFiveHeaderInventoryMegaMenu = {
 		copy: 'Filter by body, fuel, price, and mileage before you book a viewing.',
 		ctaHref: '/inventory',
 		ctaLabel: 'View All Inventory',
-		title: `${inventoryVehicles.length} vehicles in the Day Night Auto stock feed`
+		title: `${inventoryVehicles.length} vehicles in the Promosale Varna stock feed`
 	}
 };
 
@@ -447,7 +447,7 @@ const aboutMegaMenu: HomeFiveHeaderContainerMenu = {
 		{ href: '/agents', label: 'Meet Our Consultants' },
 		{ href: '/reviews', label: 'Client Reviews' },
 		{ href: '/faqs', label: 'Frequently Asked Questions' },
-		{ href: '/blog', label: 'Day Night Auto Notes' },
+		{ href: '/blog', label: 'Promosale Varna Notes' },
 		{ href: '/contact', label: 'Visit The Office' }
 	]
 };
@@ -511,7 +511,7 @@ const inventoryMegaMenuForLocale = (locale: Locale): HomeFiveHeaderInventoryMega
 				]
 			},
 			{
-				title: locale === 'bg' ? 'Съдействие от Day Night Auto' : 'Day Night Auto Support',
+				title: locale === 'bg' ? 'Съдействие от Promosale Varna' : 'Promosale Varna Support',
 				links: [
 					{
 						href: '/services',
@@ -542,7 +542,7 @@ const inventoryMegaMenuForLocale = (locale: Locale): HomeFiveHeaderInventoryMega
 			title:
 				locale === 'bg'
 					? `${inventoryVehicles.length} автомобила в наличност`
-					: `${inventoryVehicles.length} vehicles in the Day Night Auto stock feed`
+					: `${inventoryVehicles.length} vehicles in the Promosale Varna stock feed`
 		}
 	};
 };
@@ -571,7 +571,7 @@ const aboutMegaMenuForLocale = (locale: Locale): HomeFiveHeaderContainerMenu => 
 					{ href: '/agents', label: 'Нашите консултанти' },
 					{ href: '/reviews', label: 'Отзиви от клиенти' },
 					{ href: '/faqs', label: 'Често задавани въпроси' },
-					{ href: '/blog', label: 'Съвети от Day Night Auto' },
+					{ href: '/blog', label: 'Съвети от Promosale Varna' },
 					{ href: '/contact', label: 'Посети офиса' }
 				]
 			: aboutMegaMenu.links
@@ -722,7 +722,7 @@ export const homeFiveHeaderData: HomeFiveHeaderData = homeFiveHeaderDataForLocal
 export const homeFiveReviewItems: HomeFiveReview[] = [
 	{
 		name: 'Aleksandar Vytev',
-		role: 'Клиент на Day Night Auto',
+		role: 'Клиент на Promosale Varna',
 		avatar: '/assets/images/avatar/avatar-1.webp',
 		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
 	},
@@ -730,7 +730,7 @@ export const homeFiveReviewItems: HomeFiveReview[] = [
 		name: 'Krasimir Georgiev',
 		role: 'Клиент с внос',
 		avatar: '/assets/images/avatar/avatar-2.webp',
-		text: 'Day Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
+		text: 'Promosale Varna запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
 	},
 	{
 		name: 'Iliyan Petrov',
@@ -785,12 +785,12 @@ export const homeFiveFooterData: HomeFiveFooterData = {
 	},
 	quickLinks: [
 		{ href: '/about', label: 'About Us' },
-		{ href: '/inventory?view=4', label: 'Buying With Day Night Auto' },
+		{ href: '/inventory?view=4', label: 'Buying With Promosale Varna' },
 		{ href: '/sell-your-car', label: 'Sell Your Car' },
 		{ href: '/services', label: 'Services' },
 		{ href: '/faqs', label: 'FAQ' },
 		{ href: '/blog', label: 'News' },
-		{ href: '/contact', label: 'Contact Day Night Auto' }
+		{ href: '/contact', label: 'Contact Promosale Varna' }
 	],
 	socialLinks: [
 		{ href: daynightContact.facebookHref, icon: 'facebook', label: 'Facebook' },
@@ -829,12 +829,12 @@ export const homeFiveFooterDataForLocale = (locale: Locale): HomeFiveFooterData 
 		],
 		quickLinks: [
 			{ href: '/about', label: 'За нас' },
-			{ href: '/inventory?view=4', label: 'Покупка с Day Night Auto' },
+			{ href: '/inventory?view=4', label: 'Покупка с Promosale Varna' },
 			{ href: '/sell-your-car', label: 'Продай автомобила си' },
 			{ href: '/services', label: 'Услуги' },
 			{ href: '/faqs', label: 'FAQ' },
 			{ href: '/blog', label: 'Новини' },
-			{ href: '/contact', label: 'Контакт с Day Night Auto' }
+			{ href: '/contact', label: 'Контакт с Promosale Varna' }
 		],
 		socialLinks: [
 			{ href: daynightContact.facebookHref, icon: 'facebook', label: 'Facebook' },
@@ -1197,7 +1197,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Подбрани автомобили',
 					drawerTitle: 'Изпрати линк за проверка',
 					helper:
-						'Постави линк към обява от Европа или VIN. Day Night Auto ще провери история, снимки, пробег и ориентировъчна крайна цена.',
+						'Постави линк към обява от Европа или VIN. Promosale Varna ще провери история, снимки, пробег и ориентировъчна крайна цена.',
 					inputName: 'vehicle',
 					label: 'Внос',
 					mobileHeading: 'Внеси автомобил от Европа.',
@@ -1246,7 +1246,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Import from Europe',
 					drawerTitle: 'Send a listing link',
 					helper:
-						'Paste a Canadian listing URL or VIN. Day Night Auto will review history, photos, mileage, and estimated landed cost.',
+						'Paste a Canadian listing URL or VIN. Promosale Varna will review history, photos, mileage, and estimated landed cost.',
 					inputName: 'vehicle',
 					label: 'Import',
 					mobileHeading: 'Import from Europe.',

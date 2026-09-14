@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Admin - Agents</title>
+	<title>Promosale Varna Admin - Agents</title>
 </svelte:head>
 
 <AdminShell title="Agents" activePath="/admin/agents">

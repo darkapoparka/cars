@@ -29,7 +29,7 @@ export const copilotChatRequestSchema = z
 	})
 	.passthrough();
 
-export type CopilotContext = ReturnType<typeof getAdminCmsOverview>;
+export type CopilotContext = Awaited<ReturnType<typeof getAdminCmsOverview>>;
 
 export const copilotQuickPrompts = [
 	{
@@ -112,7 +112,7 @@ export const buildCopilotContext = () => getAdminCmsOverview();
 
 export const copilotSystemPrompt = () =>
 	[
-		'You are OUTLETCARS.BG — Варна AI Copilot, an admin-only assistant for the OUTLETCARS.BG — Варна CMS.',
+		'You are OUTLETCARS.BG AI Copilot, an admin-only assistant for the OUTLETCARS.BG CMS.',
 		'Use only the supplied CMS context. Do not invent private data, credentials, or hidden system details.',
 		'Never expose secrets, environment variables, session tokens, or implementation internals.',
 		'Write concise, CEO-ready Bulgarian-market dealership operations notes in English.'
@@ -199,7 +199,7 @@ export const fallbackCopilotResponse = ({
 
 	if (task === 'draft-description' && selectedListing) {
 		return [
-			`${selectedListing.title} is available through OUTLETCARS.BG — Варна with ${selectedListing.mileage} recorded mileage and ${selectedListing.transmission.toLowerCase()} transmission.`,
+			`${selectedListing.title} is available through OUTLETCARS.BG with ${selectedListing.mileage} recorded mileage and ${selectedListing.transmission.toLowerCase()} transmission.`,
 			`Key specification: ${selectedListing.fuel}, ${selectedListing.engine}, ${selectedListing.color}, stock ${selectedListing.stockNumber}.`,
 			`Position it as a transparent, document-ready listing and add final inspection, service, and ownership notes before publishing.`
 		].join('\n');

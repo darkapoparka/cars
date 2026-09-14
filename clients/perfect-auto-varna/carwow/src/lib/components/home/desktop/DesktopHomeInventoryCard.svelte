@@ -1,6 +1,6 @@
 <script lang="ts">
 	import DesktopVehicleActions from '$lib/components/shared/DesktopVehicleActions.svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { fromAction } from 'svelte/attachments';
 	import { getDayNightVehicleCondition, type DayNightVehicle } from '$lib/data/daynight-vehicles';
 	import {
@@ -66,7 +66,7 @@
 			{#if visiblePhotoCount}
 				<div class="daynight-home-inventory-card__tag-row">
 					<p class="daynight-home-inventory-card__badge">
-						<img src="/variant-3/assets/icons/picture.svg" alt="" aria-hidden="true" />
+						<img src="/assets/icons/picture.svg" alt="" aria-hidden="true" />
 						{visiblePhotoCount}
 					</p>
 				</div>
@@ -81,16 +81,16 @@
 		</p>
 		<ul class="daynight-home-inventory-card__specs">
 			<li>
-				<img src="/variant-3/assets/icons/icon-gauge.svg" alt="" aria-hidden="true" /><span
+				<img src="/assets/icons/icon-gauge.svg" alt="" aria-hidden="true" /><span
 					>{vehicle.mileage}</span
 				>
 			</li>
 			<li>
-				<img src="/variant-3/assets/icons/calendar.svg" alt="" aria-hidden="true" /><span>{vehicle.year}</span
+				<img src="/assets/icons/calendar.svg" alt="" aria-hidden="true" /><span>{vehicle.year}</span
 				>
 			</li>
 			<li>
-				<img src="/variant-3/assets/icons/gaspump.svg" alt="" aria-hidden="true" /><span>{vehicle.fuel}</span>
+				<img src="/assets/icons/gaspump.svg" alt="" aria-hidden="true" /><span>{vehicle.fuel}</span>
 			</li>
 		</ul>
 		<p class="daynight-home-inventory-card__price">
@@ -132,7 +132,7 @@
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__status) {
 			border-radius: 7px !important;
-			font-size: 12px !important;
+			font-size: var(--sa-text-caption) !important;
 			min-height: 28px !important;
 			padding: 0 10px !important;
 		}
@@ -155,13 +155,13 @@
 			border: 1px solid rgba(255, 255, 255, 0.45) !important;
 			border-radius: 7px !important;
 			box-shadow: none !important;
-			font-size: 12px !important;
+			font-size: var(--sa-text-caption) !important;
 			min-height: 28px !important;
 			padding: 0 9px !important;
 		}
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__badge-link) {
-			font-size: 12px !important;
+			font-size: var(--sa-text-caption) !important;
 		}
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__content) {
@@ -172,8 +172,8 @@
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__title),
 		:global(body.daynight-home-page .daynight-home-inventory-card__title a) {
-			font-size: 18px !important;
-			font-weight: 700 !important;
+			font-size: var(--sa-text-lg) !important;
+			font-weight: var(--sa-weight-strong) !important;
 			height: 47px !important;
 			line-height: 1.3 !important;
 			max-height: 47px !important;
@@ -224,7 +224,7 @@
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__specs li span) {
 			color: #475467 !important;
-			font-size: 13px !important;
+			font-size: var(--sa-text-caption) !important;
 			line-height: 18px !important;
 		}
 
@@ -237,13 +237,13 @@
 		}
 
 		:global(body.daynight-home-page .daynight-card-price__value) {
-			font-size: 24px !important;
-			font-weight: 750 !important;
+			font-size: var(--sa-text-2xl) !important;
+			font-weight: var(--sa-weight-strong) !important;
 		}
 
 		:global(body.daynight-home-page .daynight-card-price__monthly),
 		:global(body.daynight-home-page .daynight-card-price__link) {
-			font-size: 13px !important;
+			font-size: var(--sa-text-caption) !important;
 			line-height: 17px !important;
 		}
 	}

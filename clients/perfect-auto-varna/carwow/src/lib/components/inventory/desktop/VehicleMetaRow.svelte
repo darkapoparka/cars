@@ -6,15 +6,15 @@
 
 <ul class="tag {styleClass}">
 	<li>
-		<img src="/variant-3/assets/icons/icon-gauge.svg" alt="" aria-hidden="true" /><span
+		<img src="/assets/icons/icon-gauge.svg" alt="" aria-hidden="true" /><span
 			>{vehicle.mileage}</span
 		>
 	</li>
 	<li>
-		<img src="/variant-3/assets/icons/calendar.svg" alt="" aria-hidden="true" /><span>{vehicle.year}</span>
+		<img src="/assets/icons/calendar.svg" alt="" aria-hidden="true" /><span>{vehicle.year}</span>
 	</li>
 	<li>
-		<img src="/variant-3/assets/icons/gaspump.svg" alt="" aria-hidden="true" /><span>{vehicle.fuel}</span>
+		<img src="/assets/icons/gaspump.svg" alt="" aria-hidden="true" /><span>{vehicle.fuel}</span>
 	</li>
 </ul>
 
@@ -50,7 +50,7 @@
 	}
 
 	.tag.style2 li span {
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 20px;
 		min-width: 0;
 		overflow: hidden;
@@ -76,7 +76,7 @@
 		}
 
 		.tag.style2 li span {
-			font-size: 14px;
+			font-size: var(--sa-text-caption);
 			line-height: 20px;
 		}
 	}

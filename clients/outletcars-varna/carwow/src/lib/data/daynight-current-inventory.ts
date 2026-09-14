@@ -1,35 +1,35 @@
-// Dealer-advertised sample observed 2026-09-09T19:17:27.878450+00:00
+// Dealer listing snapshot normalized from the canonical Cars source pack.
 export type CurrentDayNightListing = {
-	id: string;
-	title: string;
-	sourceUrl: string;
-	priceEur: string;
-	priceBgn: string;
-	status: string;
-	date: string;
-	mileage: string;
-	color: string;
-	fuel: string;
-	power: string;
-	transmission: string;
-	body: string;
-	features: string[];
-	image: string;
+  id: string;
+  title: string;
+  sourceUrl: string;
+  priceEur: string;
+  priceBgn: string;
+  status: string;
+  date: string;
+  mileage: string;
+  color: string;
+  fuel: string;
+  power: string;
+  transmission: string;
+  body: string;
+  features: string[];
+  image: string;
 };
 
-export const currentDayNightListings: CurrentDayNightListing[] = [
+export const currentDayNightListings = [
   {
     "id": "21780566866553359",
     "title": "Audi Q5 Mild Hybrid/S-line/quattro 1 ГОДИНА ГАРАНЦИЯ",
     "sourceUrl": "https://outletcarsvarna.mobile.bg/obiava-21780566866553359-audi-q5-mild-hybrid-s-line-quattro-1-godina-garantsiya",
     "priceEur": "39 500 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "април 2021 г.",
-    "mileage": "80 037 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2021",
+    "mileage": "80 037 km",
     "color": "Тъмно син мет.",
     "fuel": "Дизелов",
-    "power": "204 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Джип",
     "features": [
@@ -90,12 +90,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://outletcarsvarna.mobile.bg/obiava-11780668057655036-citroen-c3-1-2-100hp-garantsiya-do-03-2027g",
     "priceEur": "15 950 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "март 2025 г.",
-    "mileage": "34 393 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2025",
+    "mileage": "34 393 km",
     "color": "Бял",
     "fuel": "Бензинов",
-    "power": "100 к.с.",
+    "power": "",
     "transmission": "Ръчна",
     "body": "Хечбек",
     "features": [
@@ -142,12 +142,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://outletcarsvarna.mobile.bg/obiava-11778766828983143-opel-corsa-edition",
     "priceEur": "14 390 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "юни 2024 г.",
-    "mileage": "73 085 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2024",
+    "mileage": "73 085 km",
     "color": "Светло сив",
     "fuel": "Бензинов",
-    "power": "100 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Хечбек",
     "features": [
@@ -197,12 +197,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://outletcarsvarna.mobile.bg/obiava-21779776692067869-vw-tiguan-1-5tsi-150hp-garantsiya-do-04-2028",
     "priceEur": "23 900 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "май 2023 г.",
-    "mileage": "97 608 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2023",
+    "mileage": "97 608 km",
     "color": "Tъмно син",
     "fuel": "Бензинов",
-    "power": "150 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Джип",
     "features": [
@@ -251,12 +251,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://outletcarsvarna.mobile.bg/obiava-11782296205813235-vw-arteon-r-line-garantsiya-do-04-2028",
     "priceEur": "23 500 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "май 2023 г.",
-    "mileage": "115 387 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2023",
+    "mileage": "115 387 km",
     "color": "Сив",
     "fuel": "Дизелов",
-    "power": "150 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Седан",
     "features": [
@@ -312,12 +312,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://outletcarsvarna.mobile.bg/obiava-11782392995192464-peugeot-2008-gt",
     "priceEur": "21 200 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "май 2024 г.",
-    "mileage": "75 424 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2024",
+    "mileage": "75 424 km",
     "color": "Червен",
     "fuel": "Бензинов",
-    "power": "130 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Джип",
     "features": [
@@ -368,12 +368,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://outletcarsvarna.mobile.bg/obiava-21786715209008072-audi-q7-4-2-tdi-v8-340-k-s-800-nm-feyslift",
     "priceEur": "11 500 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "август 2010 г.",
-    "mileage": "315 000 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2010",
+    "mileage": "315 000 km",
     "color": "Черен",
     "fuel": "Дизелов",
-    "power": "340 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Джип",
     "features": [
@@ -435,12 +435,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://outletcarsvarna.mobile.bg/obiava-11785245019997658-vw-arteon-r-line",
     "priceEur": "24 500 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "август 2023 г.",
-    "mileage": "89 543 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2023",
+    "mileage": "89 543 km",
     "color": "Черен",
     "fuel": "Дизелов",
-    "power": "150 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Комби",
     "features": [
@@ -490,4 +490,4 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     ],
     "image": "/dealer/inventory/11785245019997658-1.webp"
   }
-];
+] satisfies CurrentDayNightListing[];

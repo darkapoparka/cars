@@ -45,7 +45,7 @@
 		modals={shellModals}
 		{pageDocument}
 		runtimeHtml={shellRuntimeHtml}
-		title="Калкулатор за внос — Day Night Auto"
+		title="Калкулатор за внос — Promosale Varna"
 	>
 		<div data-daynight-calculator-page>
 			<section class="pb-100">

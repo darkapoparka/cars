@@ -15,6 +15,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { CSSProperties, ReactNode } from "react";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileFinancingInterceptor } from "./components/mobile-financing-interceptor";
 import { MobileVisibleViewport } from "./components/mobile-visible-viewport";
@@ -32,9 +33,8 @@ const publicSans = Inter({
 
 export const metadata: Metadata = {
   applicationName: leadSite.name,
-  robots: { index: false, follow: false, nocache: true },
   icons: {
-    icon: [{ type: "image/png", url: "/dealer/favicon.png" }],
+    icon: [{ type: "image/png", url: leadSite.logoPath }],
   },
   metadataBase: new URL(getPublicWebBaseUrl()),
 };
@@ -59,6 +59,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
       lang={normalizedLocale}
       style={
         {
+          "--canvas": "oklch(0.945 0.006 264)",
           "--lead-site-accent": leadSite.accent,
           "--lead-site-accent-active":
             "color-mix(in srgb, var(--lead-site-accent) 68%, black)",
@@ -95,7 +96,10 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
               <TooltipProvider>{children}</TooltipProvider>
             </AnalyticsProvider>
           )}
-          <MobileFinancingInterceptor locale={normalizedLocale} />
+          <MobileFinancingInterceptor
+            locale={normalizedLocale}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
+          />
           <Toaster />
         </ThemeProvider>
         {leadSite.staticDemoMode ||

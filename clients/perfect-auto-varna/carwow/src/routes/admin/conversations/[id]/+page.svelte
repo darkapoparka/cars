@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import Archive from '@lucide/svelte/icons/archive';
 	import CheckCheck from '@lucide/svelte/icons/check-check';
 	import MessageSquareReply from '@lucide/svelte/icons/message-square-reply';

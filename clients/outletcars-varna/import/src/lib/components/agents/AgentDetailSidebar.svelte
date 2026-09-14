@@ -20,7 +20,7 @@
 					allowfullscreen
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
-					title="OUTLETCARS.BG — Варна location map"
+					title="OUTLETCARS.BG location map"
 				></iframe>
 			</div>
 

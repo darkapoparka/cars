@@ -10,7 +10,7 @@
 		<header class="daynight-terms__header">
 			<h1 class="daynight-terms__title">{title}</h1>
 			<p class="daynight-terms__intro">
-				Кратко и ясно: как Day Night Auto представя информация, организира огледи и обработва
+				Кратко и ясно: как Promosale Varna представя информация, организира огледи и обработва
 				запитвания.
 			</p>
 		</header>

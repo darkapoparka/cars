@@ -1,30 +1,35 @@
-# Source and reuse record
+# Source lineage and notices
 
-This repository is the registered **Day & Night Auto Group lead demo**, not the reusable Agency OS template.
+This project is the reusable **Auto Best** template, published as `darkapoparka/cars-template-auto-best`. It derives from the native SvelteKit work originally prepared for the Day & Night automotive demo. The current project identity is distinct from that historical client identity.
 
-## Licensed lineage
+## Inherited source record
 
-- Agency OS template: `automotive/autodeal-best`
-- Source class: licensed static reference
-- Recorded clearance: written multi-project grant
-- Template state: `ready`
-- Lead-demo project: `autodeal-best-day-night`
-- Agency OS demo ID: `34051203-c11c-4c25-974e-1a8dc519448f`
+The source documentation dated 3 September 2026 records:
 
-The live Agency OS record was checked on 2026-09-03. It records approved written multi-project source clearance and passed source, media, build, browser, test, and secrets evidence for the base template. The underlying grant and purchase/permission evidence remain in approved private storage and are intentionally not committed here.
+| Field | Historical recorded value |
+| --- | --- |
+| Template lineage | `automotive/autodeal-best` |
+| Source class | Licensed static reference |
+| Recorded source clearance | Written multi-project grant |
+| Source template state | `ready` |
+| Source lead project | `autodeal-best-day-night` |
 
-This repository may be used and deployed only within that recorded scope. Do not redistribute the original reference package, license evidence, or deleted mirror runtime as a standalone product.
+The source note says the associated Agency OS record was checked on that date and the underlying grant/purchase or permission evidence is held in private storage. These statements are historical evidence; this documentation rewrite did not retrieve or newly verify the grant. No new license or broader distribution permission is created by this file.
 
-## Historical acquisition record
+Use the underlying material only within its recorded permission scope. Do not redistribute the original reference package, private license evidence or retired mirror runtime as a standalone product. Source-specific photos, marks and third-party media have their own provenance and do not become generic assets merely because the template is reusable.
 
-The original acquisition tooling identifies `https://autodealnextjs.vercel.app/` as the licensed AutoDeal reference. The preserved capture manifest records a later `https://daynight.mobile.bg/` snapshot. Those facts are retained as historical provenance; they are not interchangeable current-source claims and neither host is a runtime dependency of the native SvelteKit application.
+## Acquisition history
 
-The legacy mirror and generated client bundles were removed from the active project after the native migration. Their history remains available in Git, while `provenance/mirror-manifest.json` preserves the capture inventory.
+The preserved acquisition tooling identifies the AutoDeal reference at `autodealnextjs.vercel.app`. The capture manifest identifies the observed source `daynight.mobile.bg`. These are separate records and do not establish that one script produced the other capture. Neither is a runtime page-rendering dependency of the native SvelteKit application.
 
-## Font
+The standalone template repository was established on 10 September 2026 from the Cars workspace working tree. The mirror/page-composition runtime was retired; [provenance/mirror-manifest.json](provenance/mirror-manifest.json) retains capture metadata. The [provenance index](provenance/README.md) explains the records.
 
-The interface uses Onest. It is bundled through Fontsource from the Google Fonts Onest family, which is published under the SIL Open Font License 1.1. See the [Google Fonts source metadata](https://github.com/google/fonts/blob/main/ofl/onest/METADATA.pb).
+## Font and icons
 
-## Promotion boundary
+The interface bundles Onest through `@fontsource-variable/onest`. The inherited notes identify SIL Open Font License 1.1; keep the applicable package/font notice when distributing it.
 
-This branded demo must not be registered or published as a generic reusable template. A future promotion must start as a separate Agency OS template-promotion task, remove Day & Night identity and lead-specific media, verify the grant against the intended reuse, pass the current template readiness preflight, and create/update the canonical Neon template record.
+Retained icon notices: [Phosphor](provenance/phosphor-icons-LICENSE.txt), [Hugeicons](provenance/hugeicons-LICENSE.txt), and [Simple Icons](provenance/simple-icons-LICENSE.md). Actual rendered families are determined by the Svelte components. Keeping a historical notice does not mean every historical icon is still used.
+
+## Client copies
+
+Carry the relevant source and third-party notices into a client copy. Replace source-dealer identity and media where necessary. The [Reuse guide](REUSE_GUIDE.md) covers implementation; [Asset provenance](ASSET_PROVENANCE.md) identifies media families and dated origin notes.

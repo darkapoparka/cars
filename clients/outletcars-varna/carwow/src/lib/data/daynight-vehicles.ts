@@ -1,4 +1,3 @@
-import stock from './dealer-stock.json';
 import { currentDayNightListings, type CurrentDayNightListing } from './daynight-current-inventory';
 
 export type Car = {
@@ -89,7 +88,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const transmission = normalizeTransmission(listing.transmission);
 	const body = normalizeBody(listing.body);
 	const isIncoming = /очакван/i.test(listing.title);
-	const availability = isIncoming ? 'Очакван внос' : 'Обявен';
+	const availability = isIncoming ? 'Очакван внос' : 'Наличен';
 	const drive = listing.features.some((feature) => /4x4|xdrive|quattro|4matic/i.test(feature))
 		? '4x4'
 		: '—';
@@ -100,7 +99,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const features = listing.features.length > 0 ? listing.features : ['Свържете се за оборудване'];
 	const conditionLine = isIncoming
 		? 'Очакван внос — свържете се за актуален срок и условия.'
-		: 'Датирана обява въвъв Варна — потвърдете наличността и уговорете оглед.';
+		: 'Наличен автомобил в Варна — свържете се за оглед.';
 
 	return {
 		slug: `${slugBase}-${listing.id.slice(-6)}`,
@@ -114,7 +113,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		fuel,
 		transmission,
 		body,
-		doors: 0,
+		doors: body === 'Купе' ? 3 : 5,
 		engine: '—',
 		power: listing.power,
 		drive,
@@ -124,7 +123,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		priceBgn: listing.priceBgn,
 		monthly: 'Финансиране по запитване',
 		image: listing.image,
-		gallery: stock.find(record => record.id === listing.id)?.images ?? [listing.image],
+		gallery: [listing.image],
 		badges: [
 			availability,
 			...(listing.status && listing.status !== availability ? [listing.status] : []),
@@ -134,7 +133,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		description: `${identity.shortTitle}, ${year} г., ${fuel.toLocaleLowerCase('bg-BG')}, ${listing.mileage}, ${listing.power}, ${transmission.toLocaleLowerCase('bg-BG')}. ${conditionLine}`,
 		features,
 		highlights: [availability, listing.power, drive],
-		lot: `AD-${listing.id.slice(-6)}`,
+		lot: `DN-${listing.id.slice(-6)}`,
 		sourceUrl: listing.sourceUrl
 	};
 };

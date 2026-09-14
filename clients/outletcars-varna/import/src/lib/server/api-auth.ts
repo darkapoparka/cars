@@ -33,13 +33,13 @@ export const requireDayNightApiAccess = ({
 	const session = resolveDayNightApiSession(request, fallbackRole);
 
 	if (!session) {
-		return { response: errorJson('OUTLETCARS.BG — Варна account session is required', 401) };
+		return { response: errorJson('OUTLETCARS.BG account session is required', 401) };
 	}
 
 	if (allowedRoles && !allowedRoles.includes(session.role)) {
 		return {
 			response: errorJson(
-				`OUTLETCARS.BG — Варна ${daynightRoleLabel(session.role)} role cannot access this API`,
+				`OUTLETCARS.BG ${daynightRoleLabel(session.role)} role cannot access this API`,
 				403
 			)
 		};
@@ -47,7 +47,7 @@ export const requireDayNightApiAccess = ({
 
 	if (routePath && !canAccessDayNightRoute(session, routePath)) {
 		return {
-			response: errorJson('OUTLETCARS.BG — Варна account role cannot access this API route', 403)
+			response: errorJson('OUTLETCARS.BG account role cannot access this API route', 403)
 		};
 	}
 

@@ -97,7 +97,7 @@ export const actions: Actions = {
 
 		await updateVehicleStatus(db, dealerId, id, status);
 
-		throw redirect(303, '/variant-3/admin/listings?updated=status');
+		throw redirect(303, '/admin/listings?updated=status');
 	},
 	bulkStatus: async ({ locals, request }) => {
 		const formData = await request.formData();
@@ -117,7 +117,7 @@ export const actions: Actions = {
 
 		await updateVehiclesStatus(db, dealerId, ids, status);
 
-		throw redirect(303, '/variant-3/admin/listings?bulk=status');
+		throw redirect(303, '/admin/listings?bulk=status');
 	},
 	duplicate: async ({ locals, request }) => {
 		const formData = await request.formData();
@@ -142,7 +142,7 @@ export const actions: Actions = {
 			});
 		}
 
-		throw redirect(303, `/variant-3/admin/listings/${duplicateId}?created=copy`);
+		throw redirect(303, `/admin/listings/${duplicateId}?created=copy`);
 	},
 	remove: async ({ locals, request }) => {
 		const formData = await request.formData();
@@ -161,6 +161,6 @@ export const actions: Actions = {
 
 		await deleteVehicle(db, dealerId, id);
 
-		throw redirect(303, '/variant-3/admin/listings?deleted=1');
+		throw redirect(303, '/admin/listings?deleted=1');
 	}
 };

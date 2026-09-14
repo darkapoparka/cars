@@ -164,7 +164,7 @@
 {:else if name === 'facebook'}
 	<img
 		class="block size-6 object-contain"
-		src="/variant-3/assets/icons/facebook.svg"
+		src="/assets/icons/facebook.svg"
 		alt=""
 		aria-hidden="true"
 		width="24"
@@ -173,7 +173,7 @@
 {:else if name === 'instagram'}
 	<img
 		class="block size-6 object-contain"
-		src="/variant-3/assets/icons/instagram-official-gradient.svg"
+		src="/assets/icons/instagram-official-gradient.svg"
 		alt=""
 		aria-hidden="true"
 		width="24"

@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Admin - Posts</title>
+	<title>Promosale Varna Admin - Posts</title>
 </svelte:head>
 
 <AdminShell title="Posts" activePath="/admin/posts">

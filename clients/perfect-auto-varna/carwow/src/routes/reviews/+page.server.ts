@@ -3,8 +3,9 @@ import type { PageServerLoad } from './$types';
 
 // Native (de-templated) /reviews storefront route. StorefrontTemplateContent owns
 // the remaining template-era content utilities, so this route no longer asks the
-// layout for /variant-3/assets/app.css or the template head stylesheet.
-export const prerender = true;
+// layout for /assets/app.css or the template head stylesheet.
+// This response includes request-specific viewport chrome and live inventory context.
+export const prerender = false;
 
 export const load: PageServerLoad = () => ({
 	seo: routeSeo('reviews')

@@ -9,10 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>Често задавани въпроси — Day Night Auto</title>
+	<title>Често задавани въпроси — Promosale Varna</title>
 	<meta
 		name="description"
-		content="Отговори на често задавани въпроси за вноса на автомобили от Европа с Day Night Auto — проверки, срокове, разходи, документи, гаранция, продажба и огледи."
+		content="Отговори на често задавани въпроси за вноса на автомобили от Европа с Promosale Varna — проверки, срокове, разходи, документи, гаранция, продажба и огледи."
 	/>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />

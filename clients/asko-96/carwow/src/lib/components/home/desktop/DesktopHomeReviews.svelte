@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import Check from '@lucide/svelte/icons/check';
+	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
@@ -27,14 +29,6 @@
 
 	type ReviewRoute = '/reviews' | '/inventory' | '/sell-your-car' | '/sell-your-car/request';
 
-	type Review = {
-		id: string;
-		description: string;
-		avatar: string;
-		name: string;
-		meta: string;
-	};
-
 	type ActionCard = {
 		id: string;
 		modifier: string;
@@ -49,37 +43,15 @@
 		ctaLabel: string;
 	};
 
-	const starIds: string[] = [];
+	const starIds = ['star-1', 'star-2', 'star-3', 'star-4', 'star-5'] as const;
 
-	const reviews: Review[] = [
-  {
-    "id": "service-0",
-    "description": "Разгледайте публикуваните предложения на АСКО 96. Потвърдете наличността преди посещение.",
-    "avatar": "/assets/asko96/asko96-wordmark.png",
-    "name": "Автомобили",
-    "meta": "Продажба на автомобили"
-  },
-  {
-    "id": "service-1",
-    "description": "АСКО 96 предлага замяна и изкупуване. Свържете се с екипа за условията и оценка.",
-    "avatar": "/assets/asko96/asko96-wordmark.png",
-    "name": "Замяна и изкупуване",
-    "meta": "Вашият автомобил"
-  },
-  {
-    "id": "service-2",
-    "description": "Обсъдете търсения автомобил, бюджет и условия за внос с АСКО 96.",
-    "avatar": "/assets/asko96/asko96-wordmark.png",
-    "name": "Внос по поръчка",
-    "meta": "По вашите критерии"
-  }
-];
+	const reviews = daynightReviews.slice(0, 3);
 
 	const actionCards: ActionCard[] = [
 		{
 			id: 'buy-confidently',
 			modifier: 'inventory',
-			image: '/assets/asko96/vehicle-03-1.webp',
+			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp',
 			alt: 'Mercedes-Benz G-Class и Lamborghini Urus',
 			title: 'Купи автомобил уверено',
 			balancedTitle: 'Купи автомобил',
@@ -100,14 +72,14 @@
 		{
 			id: 'sell-or-trade',
 			modifier: 'sell',
-			image: '/assets/asko96/vehicle-03-1.webp',
+			image: '/assets/images/home-promos/urus-rear-v4.webp',
 			alt: 'Продай или замени автомобил',
 			title: 'Продай или замени лесно',
 			balancedTitle: 'Продай или замени',
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
-				'Получете обратна връзка от екипа на АСКО 96.',
+				`Получете обратна връзка от екипа на ${daynightSite.shortName}.`,
 				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [
@@ -131,10 +103,11 @@
 	{#if showReviews}
 		<div class="daynight-home-container home-reviews-heading">
 			<DesktopSectionHeading
-				title="Услуги на АСКО 96"
+				title="Отзиви от клиенти"
 				href={showHeaderCta ? resolve('/reviews') : undefined}
 				label={ctaLabel}
 			/>
+			<p class="home-reviews-disclosure">{daynightReviewDisclosure}</p>
 		</div>
 		<div
 			class="daynight-home-container daynight-home-section-panel daynight-home-section-panel--reviews"
@@ -145,11 +118,11 @@
 						<div class="daynight-home-review-grid__item">
 							<a href={resolve('/reviews')} class="daynight-home-review-card">
 								<div class="daynight-home-review-card__rating">
-									{#each starIds as star (star)}
+									{#each starIds.slice(0, review.rating) as star (star)}
 										<img src="/assets/icons/star.svg" alt="" aria-hidden="true" />
 									{/each}
 								</div>
-								<p class="daynight-home-review-card__description">{review.description}</p>
+								<p class="daynight-home-review-card__description">{review.text}</p>
 								<div class="daynight-home-review-card__user">
 									<img
 										class="daynight-home-review-card__avatar"
@@ -160,7 +133,7 @@
 									/>
 									<div class="daynight-home-review-card__user-content">
 										<p class="daynight-home-review-card__name">{review.name}</p>
-										<p class="daynight-home-review-card__meta">{review.meta}</p>
+										<p class="daynight-home-review-card__meta">{review.label}</p>
 									</div>
 								</div>
 							</a>
@@ -223,6 +196,11 @@
 </section>
 
 <style>
+	.home-reviews-disclosure {
+		margin: 12px 0 0;
+		color: var(--sa-ink-soft);
+		font: var(--sa-weight-medium) var(--sa-text-sm)/1.5 var(--sa-font);
+	}
 	.home-action-button {
 		margin-top: 22px;
 		display: flex;
@@ -293,8 +271,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-action-card__title {
 		color: var(--banner-foreground) !important;
-		font-size: clamp(23px, 1.8vw, 28px);
-		font-weight: 700;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.025em;
 		line-height: 1.12;
 	}
@@ -305,8 +283,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-action-card__list li {
 		color: var(--banner-foreground);
-		font-size: 14px;
-		font-weight: 550;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 8px;
 		line-height: 1.35;
 	}
@@ -335,8 +313,8 @@
 		box-shadow: none !important;
 		color: #fff !important;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 700;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		height: 44px;
 		justify-content: center;
 		margin-top: auto;
@@ -396,14 +374,14 @@
 	:global(body.daynight-home-page)
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__title) {
-		font-size: clamp(25px, 2.1vw, 29px);
+		font-size: var(--sa-text-panel-title);
 	}
 
 	:global(body.daynight-home-page)
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__list li) {
-		font-size: 15px;
-		font-weight: 500;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.4;
 	}
 
@@ -416,7 +394,7 @@
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__cta) {
 		align-self: flex-start;
-		font-size: 16px;
+		font-size: var(--sa-button-font-size);
 		justify-self: start;
 		margin: auto 0 0;
 	}
@@ -430,13 +408,13 @@
 	:global(body.daynight-home-page) .daynight-home-reviews__browse-cta-link {
 		align-items: center;
 		background: transparent;
-		border: 1px solid #8b6811;
+		border: 1px solid #c91620;
 		border-radius: 8px;
 		box-sizing: border-box;
-		color: #8b6811;
+		color: #c91620;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 650;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		justify-content: center;
 		min-height: 42px;
 		padding: 0 18px;
@@ -449,8 +427,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-reviews__browse-cta-link:hover,
 	:global(body.daynight-home-page) .daynight-home-reviews__browse-cta-link:focus-visible {
-		background: #8b6811;
-		border-color: #8b6811;
+		background: #c91620;
+		border-color: #c91620;
 		color: #fff;
 	}
 

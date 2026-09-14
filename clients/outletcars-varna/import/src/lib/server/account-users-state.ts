@@ -43,7 +43,7 @@ export const accountUserManagementRowsData = (): AuxeroUserManagementRow[] =>
 	}));
 
 export const accountUserManagementData = (context: AccountContext): AuxeroUserManagementData => ({
-	footerText: 'Role-aware prototype accounts and lead contacts managed by OUTLETCARS.BG — Варна.',
+	footerText: 'Role-aware prototype accounts and lead contacts managed by OUTLETCARS.BG.',
 	headers: ['User', 'Email', 'Role', 'Context', 'Status', 'Action'],
 	rows: context.isAdmin ? accountUserManagementRowsData() : []
 });

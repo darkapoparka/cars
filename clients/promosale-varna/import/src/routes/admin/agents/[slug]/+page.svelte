@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Admin - {data.agent.name}</title>
+	<title>Promosale Varna Admin - {data.agent.name}</title>
 </svelte:head>
 
 <AdminShell title={data.agent.name} activePath="/admin/agents">

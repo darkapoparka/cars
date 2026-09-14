@@ -239,7 +239,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="OUTLETCARS.BG — Варна listing location"
+						title="OUTLETCARS.BG listing location"
 					></iframe>
 				</div>
 			</div>

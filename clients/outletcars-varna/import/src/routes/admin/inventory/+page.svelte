@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Inventory</title>
+	<title>OUTLETCARS.BG Admin - Inventory</title>
 </svelte:head>
 
 <AdminShell
@@ -68,7 +68,8 @@
 			<Card.Header class="border-b">
 				<div>
 					<Card.Title>Listings</Card.Title>
-					<Card.Description>Inventory records available to the OUTLETCARS.BG — Варна CMS.</Card.Description>
+					<Card.Description>Inventory records available to the OUTLETCARS.BG CMS.</Card.Description
+					>
 				</div>
 			</Card.Header>
 			<Card.Content class="grid gap-4 p-4">

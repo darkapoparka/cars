@@ -10,12 +10,12 @@
 
 <script lang="ts">
 	const iconPaths: Record<DayNightSpecIconName, string> = {
-		body: '/variant-3/assets/icons/auto.svg',
-		engine: '/variant-3/assets/icons/engine.svg',
-		fuel: '/variant-3/assets/icons/gaspump.svg',
-		mileage: '/variant-3/assets/icons/icon-gauge.svg',
-		transmission: '/variant-3/assets/icons/manual.svg',
-		year: '/variant-3/assets/icons/calendar.svg'
+		body: '/assets/icons/auto.svg',
+		engine: '/assets/icons/engine.svg',
+		fuel: '/assets/icons/gaspump.svg',
+		mileage: '/assets/icons/icon-gauge.svg',
+		transmission: '/assets/icons/manual.svg',
+		year: '/assets/icons/calendar.svg'
 	};
 
 	let { name, size = 14 }: { name: DayNightSpecIconName; size?: number } = $props();

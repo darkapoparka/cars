@@ -81,7 +81,7 @@
 			href: '/financing'
 		},
 		{
-			title: 'Sell or part exchange with Day Night Auto',
+			title: 'Sell or part exchange with Promosale Varna',
 			image: '/assets/images/sell/trade-in-promo-v1.webp',
 			href: '/sell-your-car'
 		}
@@ -97,10 +97,10 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Marketplace | Home2</title>
+	<title>Promosale Varna Marketplace | Home2</title>
 	<meta
 		name="description"
-		content="Browse, buy, sell and review verified cars from Day Night Auto София."
+		content="Browse, buy, sell and review verified cars from Promosale Varna Варна."
 	/>
 	<meta name="robots" content="noindex,nofollow" />
 </svelte:head>
@@ -115,8 +115,8 @@
 		/>
 
 		<header class="home2-nav" aria-label="Home2 navigation">
-			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="Day Night Auto Home2">
-				<img src={daynightSite.logoLight} alt="Day Night Auto" />
+			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="Promosale Varna Home2">
+				<img src={daynightSite.logoLight} alt="Promosale Varna" />
 			</a>
 
 			<nav class="home2-nav__links" aria-label="Primary">
@@ -141,7 +141,7 @@
 
 		<h1 id="home2-title">
 			<span>Changing your car?</span>
-			<span>Day Night Auto can help</span>
+			<span>Promosale Varna can help</span>
 		</h1>
 
 		<form class="home2-search" onsubmit={submitSearch} aria-label="Find your next car">
@@ -218,7 +218,7 @@
 				<Zap size={54} fill="currentColor" strokeWidth={2.4} />
 				<div>
 					<h2 id="trending-title">Premium is trending</h2>
-					<p>Popular Day Night Auto picks, ready to compare side by side</p>
+					<p>Popular Promosale Varna picks, ready to compare side by side</p>
 				</div>
 			</div>
 
@@ -263,7 +263,7 @@
 				<Star size={55} fill="currentColor" strokeWidth={1.8} />
 				<div>
 					<h2 id="reviews-title">This is how it should feel</h2>
-					<p>Customers rate Day Night Auto as excellent for buying, selling and support</p>
+					<p>Customers rate Promosale Varna as excellent for buying, selling and support</p>
 				</div>
 			</div>
 
@@ -290,7 +290,7 @@
 
 	<section class="home2-dark" aria-labelledby="easy-title">
 		<div class="home2-dark__intro">
-			<img src="/brand/daynight-team-placeholder.svg" alt="Day Night Auto consultant" />
+			<img src="/brand/daynight-team-placeholder.svg" alt="Promosale Varna consultant" />
 			<div>
 				<h2 id="easy-title">We make car changing easy</h2>
 				<p>
@@ -316,7 +316,7 @@
 			<HeartHandshake size={58} fill="currentColor" strokeWidth={2.3} />
 			<div>
 				<h2 id="explore-title">Explore cars</h2>
-				<p>Browse Day Night Auto stock by the brands and body styles customers ask for most.</p>
+				<p>Browse Promosale Varna stock by the brands and body styles customers ask for most.</p>
 			</div>
 		</div>
 

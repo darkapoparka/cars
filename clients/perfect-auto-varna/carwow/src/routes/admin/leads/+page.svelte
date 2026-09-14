@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import Archive from '@lucide/svelte/icons/archive';
 	import Mail from '@lucide/svelte/icons/mail';
 	import Phone from '@lucide/svelte/icons/phone';

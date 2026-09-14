@@ -58,7 +58,7 @@ export const homeTwoBrandLogoForName = (name: string, fallbackImage: string) =>
 
 export const homeTwoReviews: HomeTwoReview[] = [
 	{
-		author: 'Александър, клиент на OUTLETCARS.BG — Варна',
+		author: 'Александър, клиент на OUTLETCARS.BG',
 		body: 'Преди огледа получих история, разходи и следващи стъпки. Нямаше дребен шрифт, само конкретна информация.',
 		title: 'Пълна картина преди сделка'
 	},
@@ -73,7 +73,7 @@ export const homeTwoReviews: HomeTwoReview[] = [
 		title: 'Честна обратна връзка'
 	},
 	{
-		author: 'Мария, оглед във Варна',
+		author: 'Мария, оглед в Пловдив',
 		body: 'Колата беше подготвена, проверката беше ясна, а финансирането беше обяснено спокойно, без натиск.',
 		title: 'Оглед без натиск'
 	}
@@ -164,9 +164,9 @@ export const homeTwoDealCards: HomeTwoDealCard[] = [
 		monthly: 'от 690 €/месец',
 		price: '36 500 EUR',
 		priceLabel: 'Цена от',
-		saving: 'Попитайте за историята',
+		saving: 'Проверена история',
 		slug: '21764342419542174',
-		stock: 'Варна · Наличен',
+		stock: 'София · Наличен',
 		title: 'BMW X5 M Sport'
 	},
 	{
@@ -181,7 +181,7 @@ export const homeTwoDealCards: HomeTwoDealCard[] = [
 		priceLabel: 'Цена от',
 		saving: 'Готов за регистрация',
 		slug: '21778068579001193',
-		stock: 'OUTLETCARS.BG — Варна · Проверен',
+		stock: 'OUTLETCARS.BG — ВАРНА · Проверен',
 		title: 'BMW X4 M Competition'
 	},
 	{

@@ -8,7 +8,7 @@ export async function POST({ request }: { request: Request }) {
 	const confirmPassword = payloadString(payload, 'confirmPassword', 'ConfirmPassword-SignUp');
 
 	if (confirmPassword && confirmPassword !== password) {
-		return errorJson('OUTLETCARS.BG — Варна account passwords do not match', 400);
+		return errorJson('OUTLETCARS.BG account passwords do not match', 400);
 	}
 
 	const session = registerDayNightCustomer({
@@ -19,7 +19,7 @@ export async function POST({ request }: { request: Request }) {
 	});
 
 	if (!session) {
-		return errorJson('OUTLETCARS.BG — Варна customer account could not be created', 400);
+		return errorJson('OUTLETCARS.BG customer account could not be created', 400);
 	}
 
 	const cookie = sessionCookieForDayNightSession(session);

@@ -9,5 +9,5 @@ export const POST: RequestHandler = async ({ request }) => {
 		});
 	}
 
-	throw redirect(303, '/variant-3/admin/login');
+	throw redirect(303, '/admin/login');
 };

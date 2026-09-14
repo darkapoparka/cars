@@ -1,4 +1,4 @@
-export const daynightTeamDisclosure = 'Демо профили и портрети: примерни роли, а не потвърдени членове на екипа.';
+export const daynightTeamDisclosure = "Общ контакт на автокъщата, а не именуван или независимо потвърден профил на служител." as const;
 
 export type DayNightTeamMember = {
 	slug: string;
@@ -11,7 +11,18 @@ export type DayNightTeamMember = {
 	detail: string;
 };
 
-export const daynightTeam: DayNightTeamMember[] = [];
+export const daynightTeam: DayNightTeamMember[] = [
+	{
+		slug: 'dealer-contact',
+		name: "OUTLETCARS.BG",
+		role: "Запитвания за наличност и оглед",
+		phone: "0898 921 010",
+		email: "",
+		image: "/dealer/logo-on-dark-v2.svg",
+		bio: "Свържете се с OUTLETCARS.BG, за да потвърдите актуална наличност, данни за автомобила и възможност за оглед.",
+		detail: "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата. Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
+	}
+];
 
 export const getDayNightTeamMemberBySlug = (slug: string) =>
 	daynightTeam.find((member) => member.slug === slug);

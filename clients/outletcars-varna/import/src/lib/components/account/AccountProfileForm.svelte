@@ -248,7 +248,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="OUTLETCARS.BG — Варна map"
+						title="OUTLETCARS.BG map"
 					></iframe>
 				</div>
 			</div>

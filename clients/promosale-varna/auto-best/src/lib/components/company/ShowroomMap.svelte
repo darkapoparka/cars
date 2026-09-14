@@ -1,7 +1,6 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(brand.address)}&z=17&hl=bg&output=embed`;
+  const mapEmbedUrl = "https://maps.google.com/maps?q=Promosale%20Varna%2C%20%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%B0%20%D0%B3%D0%B0%D1%80%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed";
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 </script>
 
@@ -9,7 +8,7 @@
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={`Карта до ${brand.name}`}
+    title={"Карта до" + ` ${brand.name}`}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
@@ -48,8 +47,8 @@
     background: rgba(255, 255, 255, .96);
     box-shadow: 0 8px 20px rgba(18, 25, 38, .12);
     color: var(--dn-ink);
-    font-size: 14px;
-    font-weight: 700;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
   }
 
   .dn-showroom-map__link:hover,

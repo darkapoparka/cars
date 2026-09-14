@@ -5,7 +5,7 @@ import { canManageDealer, getAdminCapabilities, isStaffRole } from './roles';
 
 export async function requireAdminDealer(locals: App.Locals) {
 	if (!locals.user) {
-		throw redirect(303, '/variant-3/admin/login');
+		throw redirect(303, '/admin/login');
 	}
 
 	if (!locals.db) {

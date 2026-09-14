@@ -197,7 +197,7 @@ const text = (locale: Locale) =>
 				clearFilters: 'Изчисти филтрите',
 				controlsLabel: 'Контроли за изглед и филтри',
 				emptyMap:
-					'Няма автомобили по тези филтри. Изчисти филтрите или се свържи с OUTLETCARS.BG — Варна за входящи автомобили.',
+					'Няма автомобили по тези филтри. Изчисти филтрите или се свържи с OUTLETCARS.BG за входящи автомобили.',
 				extras: 'Екстри',
 				filterButton: 'Филтри',
 				filterPresentation: 'Тип филтри',
@@ -234,13 +234,13 @@ const text = (locale: Locale) =>
 				inventoryTitle: 'Налични автомобили',
 				fuel: 'Гориво',
 				gearbox: 'Скорости',
-				mapTitle: 'Зона за огледи OUTLETCARS.BG — Варна',
+				mapTitle: 'Зона за огледи OUTLETCARS.BG',
 				matchingVehicleLabel: (count: number) =>
 					`${count} ${count === 1 ? 'съвпадащ автомобил' : 'съвпадащи автомобила'}`,
 				mileage: 'Пробег',
 				model: 'Модел',
 				price: 'Цена',
-				searchAria: 'Търси в OUTLETCARS.BG — Варна',
+				searchAria: 'Търси в OUTLETCARS.BG',
 				searchPlaceholder: 'Търси по марка, модел, година, гориво, екстри...',
 				searchSubmit: 'Търси',
 				selected: (count: number) => `${count} избрани`,
@@ -280,7 +280,7 @@ const text = (locale: Locale) =>
 				clearFilters: 'Clear filters',
 				controlsLabel: 'View and filter controls',
 				emptyMap:
-					'No cars match these filters. Clear filters or contact OUTLETCARS.BG — Варна for incoming vehicles.',
+					'No cars match these filters. Clear filters or contact OUTLETCARS.BG for incoming vehicles.',
 				extras: 'Extras',
 				filterButton: 'Filters',
 				filterPresentation: 'Filter style',
@@ -317,23 +317,23 @@ const text = (locale: Locale) =>
 				inventoryTitle: 'Available vehicles',
 				fuel: 'Fuel',
 				gearbox: 'Gearbox',
-				mapTitle: 'OUTLETCARS.BG — Варна viewing area',
+				mapTitle: 'OUTLETCARS.BG viewing area',
 				matchingVehicleLabel: (count: number) =>
 					`${count} ${count === 1 ? 'matching vehicle' : 'matching vehicles'}`,
 				mileage: 'Mileage',
 				model: 'Model',
 				price: 'Price',
-				searchAria: 'Search OUTLETCARS.BG — Варна inventory',
+				searchAria: 'Search OUTLETCARS.BG inventory',
 				searchPlaceholder: 'Search make, model, year, fuel, extras...',
 				searchSubmit: 'Search',
 				selected: (count: number) => `${count} selected`,
 				showCount: (count: number) => `Show ${count}`,
 				showing: (count: number, hasFilters: boolean) =>
 					count === 0
-						? `Showing 0 of ${vehicles.length} OUTLETCARS.BG — Варна Listings`
+						? `Showing 0 of ${vehicles.length} OUTLETCARS.BG Listings`
 						: hasFilters
-							? `Showing 1 - ${count} of ${count} matching OUTLETCARS.BG — Варна Listings`
-							: `Showing 1 - ${count} of ${count} OUTLETCARS.BG — Варна Listings`,
+							? `Showing 1 - ${count} of ${count} matching OUTLETCARS.BG Listings`
+							: `Showing 1 - ${count} of ${count} OUTLETCARS.BG Listings`,
 				sort: 'Sort Vehicles by',
 				sortOptions: {
 					'best-match': 'Best Match',
@@ -637,7 +637,7 @@ const brandOptions = (): AuxeroInventoryFilterOption[] => {
 	return brands
 		.map((brand) => ({
 			count: counts.get(brand) ?? 0,
-			image: brandLogos[brand] ?? '/dealer/logo-on-light-v2.svg',
+			image: brandLogos[brand] ?? '/brand/daynight-wordmark.svg',
 			label: brand === 'Mercedes-Benz' ? 'Mercedes' : brand,
 			value: brand
 		}))
@@ -1052,7 +1052,7 @@ export const inventoryDesktopDataFromState = (
 	return {
 		activeFilters: activeFilters(state, locale, options),
 		ariaLabel:
-			locale === 'bg' ? 'Налични автомобили от OUTLETCARS.BG — Варна' : 'OUTLETCARS.BG — Варна inventory',
+			locale === 'bg' ? 'Налични автомобили от OUTLETCARS.BG' : 'OUTLETCARS.BG inventory',
 		controlsLabel: labels.controlsLabel,
 		filterButtonLabel: labels.filterButton,
 		filterPresentation: state.filterPresentation,

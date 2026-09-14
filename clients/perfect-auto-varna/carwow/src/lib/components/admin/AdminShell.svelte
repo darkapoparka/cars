@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { daynightSite } from '$lib/data/daynight-site';
+	import { resolve } from '$app/paths';
 	import BarChart3 from '@lucide/svelte/icons/bar-chart-3';
 	import Activity from '@lucide/svelte/icons/activity';
 	import CarFront from '@lucide/svelte/icons/car-front';
@@ -85,7 +86,7 @@
 									>
 										<img
 											class="h-7 w-auto object-contain"
-											src={resolve('/variant-3/brand/daynight-logo-generated.png')}
+											src={resolve(daynightSite.logoLight)}
 											alt=""
 										/>
 									</span>
@@ -148,7 +149,7 @@
 						Inventory, leads, imports, and content are managed from this workspace.
 					</p>
 				</div>
-				<form method="POST" action="/variant-3/admin/logout">
+				<form method="POST" action="/admin/logout">
 					<Button
 						variant="ghost"
 						class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground w-full justify-start"

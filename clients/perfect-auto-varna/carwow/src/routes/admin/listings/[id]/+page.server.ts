@@ -63,7 +63,7 @@ export const actions: Actions = {
 			} satisfies VehicleFormFailure);
 		}
 
-		throw redirect(303, `/variant-3/admin/listings/${params.id}?updated=1`);
+		throw redirect(303, `/admin/listings/${params.id}?updated=1`);
 	},
 	remove: async ({ locals, params }) => {
 		const { db, dealerId, capabilities } = await requireAdminDealer(locals);
@@ -73,6 +73,6 @@ export const actions: Actions = {
 
 		await deleteVehicle(db, dealerId, params.id);
 
-		throw redirect(303, '/variant-3/admin/listings?deleted=1');
+		throw redirect(303, '/admin/listings?deleted=1');
 	}
 };

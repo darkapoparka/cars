@@ -183,7 +183,7 @@ export async function PATCH({ request }: { request: Request }) {
 	const listing = updateInventoryListing(id, listingPayload(payload));
 
 	if (!listing) {
-		return errorJson('Day Night Auto inventory listing not found', 404);
+		return errorJson('Promosale Varna inventory listing not found', 404);
 	}
 
 	return okJson({ listing });
@@ -209,7 +209,7 @@ export async function DELETE({ request }: { request: Request }) {
 	const listing = archiveInventoryListing(id);
 
 	if (!listing) {
-		return errorJson('Day Night Auto inventory listing not found', 404);
+		return errorJson('Promosale Varna inventory listing not found', 404);
 	}
 
 	return okJson({ listing });

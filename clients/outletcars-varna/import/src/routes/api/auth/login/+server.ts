@@ -9,7 +9,7 @@ export async function POST({ request }: { request: Request }) {
 	const session = authenticateDayNightUser({ email, password, role });
 
 	if (!session) {
-		return errorJson('Invalid OUTLETCARS.BG — Варна account credentials', 401);
+		return errorJson('Invalid OUTLETCARS.BG account credentials', 401);
 	}
 
 	const cookie = sessionCookieForDayNightSession(session);

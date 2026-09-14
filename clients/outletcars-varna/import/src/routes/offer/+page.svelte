@@ -22,7 +22,7 @@
 	} from '@lucide/svelte';
 
 	const heroImage = '/assets/daynight/offer/offer-poster-background.webp';
-	const logo = '/dealer/logo-on-light-v2.svg';
+	const logo = '/brand/daynight-wordmark.svg';
 
 	const stats = [
 		{ value: '42', label: 'реални автомобила в каталога' },
@@ -94,7 +94,7 @@
 
 	const stack = [
 		{ label: 'Frontend', value: 'SvelteKit, Svelte 5, TypeScript, Vite' },
-		{ label: 'UI база', value: 'Auxero template fidelity + OUTLETCARS.BG — Варна визуална адаптация' },
+		{ label: 'UI база', value: 'Auxero template fidelity + OUTLETCARS.BG визуална адаптация' },
 		{ label: 'Данни', value: 'структуриран автомобилен feed, server adapters, route state' },
 		{ label: 'Качество', value: 'Vitest, Playwright, svelte-check, ESLint, Prettier' },
 		{ label: 'Готовност', value: 'responsive pages, admin flows, SEO routes, reusable components' }
@@ -129,32 +129,32 @@
 </script>
 
 <svelte:head>
-	<title>Оферта за OUTLETCARS.BG — Варна</title>
+	<title>Оферта за OUTLETCARS.BG</title>
 	<meta
 		name="description"
-		content="Клиентска оферта за новия OUTLETCARS.BG — Варна сайт: реален каталог, админ панел, услуги, SEO, технологии и следващи стъпки."
+		content="Клиентска оферта за новия OUTLETCARS.BG сайт: реален каталог, админ панел, услуги, SEO, технологии и следващи стъпки."
 	/>
 	<link rel="preload" as="image" href={heroImage} />
 </svelte:head>
 
 <main class="offer-page" data-daynight-offer>
-	<header class="offer-header" aria-label="OUTLETCARS.BG — Варна offer header">
-		<a class="offer-header__logo" href={resolve('/')} aria-label="OUTLETCARS.BG — Варна home">
-			<img src={logo} alt="OUTLETCARS.BG — Варна" />
+	<header class="offer-header" aria-label="OUTLETCARS.BG offer header">
+		<a class="offer-header__logo" href={resolve('/')} aria-label="OUTLETCARS.BG home">
+			<img src={logo} alt="OUTLETCARS.BG" />
 		</a>
 		<div class="offer-header__meta">
 			<span>Оферта</span>
-			<a href={resolve('/')} aria-label="Отвори OUTLETCARS.BG — Варна сайта">Към сайта</a>
+			<a href={resolve('/')} aria-label="Отвори OUTLETCARS.BG сайта">Към сайта</a>
 		</div>
 	</header>
 
 	<section class="offer-hero">
 		<div class="offer-wrap offer-hero__grid">
 			<div class="offer-hero__copy">
-				<p class="offer-eyebrow">Предложение за OUTLETCARS.BG — Варна</p>
+				<p class="offer-eyebrow">Предложение за OUTLETCARS.BG</p>
 				<h1>Новият сайт не е идея. Той вече работи.</h1>
 				<p class="offer-hero__lead">
-					Изградих реална версия на OUTLETCARS.BG — Варна върху Auxero визуалната база: каталог с истински
+					Изградих реална версия на OUTLETCARS.BG върху Auxero визуалната база: каталог с истински
 					автомобили, страници за услуги, админ зона, сравнение, любими, блог, SEO и ясна пътна
 					карта към production.
 				</p>
@@ -172,7 +172,7 @@
 				<img src={heroImage} alt="Premium showroom workspace with a digital website proposal" />
 				<figcaption>
 					<span>Built as a real product surface</span>
-					<strong>SvelteKit + Auxero + OUTLETCARS.BG — Варна data</strong>
+					<strong>SvelteKit + Auxero + OUTLETCARS.BG data</strong>
 				</figcaption>
 			</figure>
 		</div>
@@ -193,7 +193,7 @@
 		<div class="offer-wrap">
 			<div class="offer-section__head">
 				<p class="offer-eyebrow">Визуално доказателство</p>
-				<h2>Не е generic landing page. Това е OUTLETCARS.BG — Варна продукт.</h2>
+				<h2>Не е generic landing page. Това е OUTLETCARS.BG продукт.</h2>
 				<p>
 					Страниците използват реалните теми, снимки, сценарии и действия, които клиент на автокъща
 					очаква да види.
@@ -221,7 +221,7 @@
 				<h2>Готови функции, които могат да се покажат веднага.</h2>
 				<p>
 					Фокусът е практичен: клиентът намира автомобил, разбира услугата, праща запитване,
-					сравнява, запазва и OUTLETCARS.BG — Варна може да управлява съдържанието.
+					сравнява, запазва и OUTLETCARS.BG може да управлява съдържанието.
 				</p>
 			</div>
 
@@ -284,7 +284,7 @@
 		<div class="offer-wrap offer-closing">
 			<div>
 				<p class="offer-eyebrow">Финал</p>
-				<h2>Ако OUTLETCARS.BG — Варна иска, това може да стане официалният сайт.</h2>
+				<h2>Ако OUTLETCARS.BG иска, това може да стане официалният сайт.</h2>
 			</div>
 			<div class="offer-closing__panel">
 				<div class="offer-closing__icons" aria-hidden="true">

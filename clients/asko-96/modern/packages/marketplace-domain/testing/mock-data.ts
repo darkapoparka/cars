@@ -1,16 +1,15 @@
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
-// Representative stock captured from https://asko96.mobile.bg/ on 2026-09-06.
 export const mockListings: VehicleListing[] = [
   {
-    "id": "asko-21788444587626928",
-    "slug": "asko-21788444587626928",
+    "id": "am-1001",
+    "slug": "toyota-rav4-hybrid-2024-21788444587626928",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Toyota Rav4 HYBRID",
-    "description": "Toyota Rav4 HYBRID, 2024 г., хибрид, 14 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-21788444587626928-toyota-rav4-hybrid-camera-podgrev-car-play-lizing",
+    "description": "Toyota Rav4 HYBRID, 2024 г., хибрид, 14 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 36500,
       "currency": "EUR"
@@ -27,10 +26,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Toyota",
       "model": "Rav4 HYBRID",
@@ -48,19 +46,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T10:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-06T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "asko-11788418194310981",
-    "slug": "asko-11788418194310981",
+    "id": "am-1010",
+    "slug": "audi-a7-s-line-2011-11788418194310981",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Audi A7 S-LINE",
-    "description": "Audi A7 S-LINE, 2011 г., бензин, 211 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-11788418194310981-audi-a7-s-line-germany-distr-air-memory-podgrev-auto-h-liz",
+    "description": "Audi A7 S-LINE, 2011 г., бензин, 211 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 14000,
       "currency": "EUR"
@@ -89,10 +88,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Audi",
       "model": "A7 S-LINE",
@@ -110,19 +108,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-06T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "asko-21788361724092359",
-    "slug": "asko-21788361724092359",
+    "id": "am-1011",
+    "slug": "mercedes-benz-glc-coupe-350amg-2018-21788361724092359",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Mercedes-Benz GLC Coupe 350AMG",
-    "description": "Mercedes-Benz GLC Coupe 350AMG, 2018 г., дизел, 179 200 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-21788361724092359-mercedes-benz-glc-coupe-350amg-9gtron-germany-camera-ambient-keyless-go-li",
+    "description": "Mercedes-Benz GLC Coupe 350AMG, 2018 г., дизел, 179 200 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 26000,
       "currency": "EUR"
@@ -151,10 +150,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "GLC Coupe 350AMG",
@@ -172,19 +170,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-06T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "asko-21788340495159936",
-    "slug": "asko-21788340495159936",
+    "id": "am-1012",
+    "slug": "mercedes-benz-gls-400-amg-2020-21788340495159936",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Mercedes-Benz GLS 400 AMG",
-    "description": "Mercedes-Benz GLS 400 AMG, 2020 г., дизел, 135 141 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Цената е без ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-21788340495159936-mercedes-benz-gls-400-amg-7mesta-pano-distr-360cam-burmest-obduh-vaku-li",
+    "description": "Mercedes-Benz GLS 400 AMG, 2020 г., дизел, 135 141 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 47000,
       "currency": "EUR"
@@ -213,10 +212,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "GLS 400 AMG",
@@ -234,19 +232,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:57.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-11788268077076934",
-    "slug": "asko-11788268077076934",
+    "id": "am-1013",
+    "slug": "mini-countryman-all4-2014-11788268077076934",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Mini Countryman ALL4",
-    "description": "Mini Countryman ALL4, 2014 г., бензин, 205 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-11788268077076934-mini-countryman-all4-germany-panorama-podgrev-lizing",
+    "description": "Mini Countryman ALL4, 2014 г., бензин, 205 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 7777,
       "currency": "EUR"
@@ -275,10 +274,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mini",
       "model": "Countryman ALL4",
@@ -296,19 +294,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:56.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-21787916905998235",
-    "slug": "asko-21787916905998235",
+    "id": "am-1014",
+    "slug": "audi-sq7-ful-led-2018-21787916905998235",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Audi SQ7 FUL LED",
-    "description": "Audi SQ7 FUL LED, 2018 г., дизел, 170 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-21787916905998235-audi-sq7-ful-led-podgrev-obduh-distron-kamera-lane-asist-li",
+    "description": "Audi SQ7 FUL LED, 2018 г., дизел, 170 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 32000,
       "currency": "EUR"
@@ -337,10 +336,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Audi",
       "model": "SQ7 FUL LED",
@@ -358,19 +356,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:55.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-11787665314733489",
-    "slug": "asko-11787665314733489",
+    "id": "am-1002",
+    "slug": "citroen-c5x-plug-in-2022-11787665314733489",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Citroen C5X PLUG IN",
-    "description": "Citroen C5X PLUG IN, 2022 г., електрически, 162 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Виж оригиналната обява. Оригинална обява: https://asko96.mobile.bg/obiava-11787665314733489-citroen-c5x-plug-in-keyles-panorama-podgrev-head-up-360kamera",
+    "description": "Citroen C5X PLUG IN, 2022 г., електрически, 162 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 17900,
       "currency": "EUR"
@@ -399,10 +398,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Citroen",
       "model": "C5X PLUG IN",
@@ -412,27 +410,27 @@ export const mockListings: VehicleListing[] = [
       "transmission": "automatic",
       "mileageValue": 162000,
       "mileageUnit": "km",
-      "enginePowerHp": 225,
-      "colorExterior": ""
+      "enginePowerHp": 225
     },
     "seller": {
       "id": "dealer-asko-96",
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:54.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-11787664720233597",
-    "slug": "asko-11787664720233597",
+    "id": "am-1003",
+    "slug": "audi-a5-s-line-plus-2012-11787664720233597",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Audi A5 S-LINE PLUS",
-    "description": "Audi A5 S-LINE PLUS, 2012 г., дизел, 230 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-11787664720233597-audi-a5-s-line-plus-edition-germany-bang-olufsen-lane-asis",
+    "description": "Audi A5 S-LINE PLUS, 2012 г., дизел, 230 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 14000,
       "currency": "EUR"
@@ -461,10 +459,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Audi",
       "model": "A5 S-LINE PLUS",
@@ -482,19 +479,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:53.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-11787318670316786",
-    "slug": "asko-11787318670316786",
+    "id": "am-1004",
+    "slug": "mercedes-benz-e-220-amg-2016-11787318670316786",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Mercedes-Benz E 220 AMG",
-    "description": "Mercedes-Benz E 220 AMG, 2016 г., дизел, 195 530 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-11787318670316786-mercedes-benz-e-220-amg-germany-180camera-ambi-podgrev-park-pilot-lizi",
+    "description": "Mercedes-Benz E 220 AMG, 2016 г., дизел, 195 530 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 19500,
       "currency": "EUR"
@@ -511,10 +509,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "E 220 AMG",
@@ -532,19 +529,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:52.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-11787292903991160",
-    "slug": "asko-11787292903991160",
+    "id": "am-1005",
+    "slug": "mercedes-benz-s-680-l-2024-11787292903991160",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Mercedes-Benz S 680 L",
-    "description": "Mercedes-Benz S 680 L, 2024 г., бензин, 140 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Цената е без ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-11787292903991160-mercedes-benz-s-680-l-v12-maybach-tvx3-distr-pano-obduh-burmester",
+    "description": "Mercedes-Benz S 680 L, 2024 г., бензин, 140 000 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 120000,
       "currency": "EUR"
@@ -561,10 +559,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "S 680 L",
@@ -582,19 +579,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:51.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-11787147161945133",
-    "slug": "asko-11787147161945133",
+    "id": "am-1006",
+    "slug": "mercedes-benz-s-500-l-2015-11787147161945133",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Mercedes-Benz S 500 L",
-    "description": "Mercedes-Benz S 500 L, 2015 г., бензин, 173 291 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-11787147161945133-mercedes-benz-s-500-l-amg-4m-tvx3-distr-pano-vakuum-hud-obduh-masazh-li",
+    "description": "Mercedes-Benz S 500 L, 2015 г., бензин, 173 291 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 29500,
       "currency": "EUR"
@@ -623,10 +621,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "S 500 L",
@@ -644,19 +641,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:50.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-21787145927135700",
-    "slug": "asko-21787145927135700",
+    "id": "am-1007",
+    "slug": "mini-countryman-sd-2018-21787145927135700",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Mini Countryman SD",
-    "description": "Mini Countryman SD, 2018 г., дизел, 190 582 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-21787145927135700-mini-countryman-sd-all4-germany-head-up-camera-pano-car-play-lizin",
+    "description": "Mini Countryman SD, 2018 г., дизел, 190 582 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 18500,
       "currency": "EUR"
@@ -685,10 +683,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mini",
       "model": "Countryman SD",
@@ -706,19 +703,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:49.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-21786786821064251",
-    "slug": "asko-21786786821064251",
+    "id": "am-1008",
+    "slug": "porsche-cayenne-s-2018-21786786821064251",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Porsche Cayenne S",
-    "description": "Porsche Cayenne S, 2018 г., бензин, 165 009 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-21786786821064251-porsche-cayenne-s-germany-pano-digital-air-camera-keyless-go-lizin",
+    "description": "Porsche Cayenne S, 2018 г., бензин, 165 009 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 39000,
       "currency": "EUR"
@@ -747,10 +745,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Porsche",
       "model": "Cayenne S",
@@ -768,19 +765,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
+      "city": "София",
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "publishedAt": "2026-09-06T09:59:48.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "asko-21786778589147860",
-    "slug": "asko-21786778589147860",
+    "id": "am-1009",
+    "slug": "jeep-compass-4x4-2019-21786778589147860",
     "category": "car",
     "dealerOrgId": "dealer-asko-96",
     "status": "active",
     "title": "Jeep Compass 4x4",
-    "description": "Jeep Compass 4x4, 2019 г., дизел, 181 889 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-21786778589147860-jeep-compass-4x4-limited-distron-lane-asyst-car-play-ambi-lizin",
+    "description": "Jeep Compass 4x4, 2019 г., дизел, 181 889 км. За актуална наличност, оборудване и условия се свържете с АСКО 96.",
     "price": {
       "amount": 14000,
       "currency": "EUR"
@@ -809,10 +807,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
+      "region": "София",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Jeep",
       "model": "Compass 4x4",
@@ -830,124 +827,13 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "АСКО 96",
       "verificationStatus": "unverified",
-      "city": "София"
-    },
-    "publishedAt": "2026-09-06T09:59:47.000Z",
-    "promoted": false
-  },
-  {
-    "id": "asko-21786540153108868",
-    "slug": "asko-21786540153108868",
-    "category": "car",
-    "dealerOrgId": "dealer-asko-96",
-    "status": "active",
-    "title": "BMW X3 М40D",
-    "description": "BMW X3 М40D, 2022 г., дизел, 90 800 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-21786540153108868-bmw-x3-m40d-distr-3dcamera-harman-hud-podgrev-car-play-li",
-    "price": {
-      "amount": 43900,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/asko96/vehicle-15-1.webp",
-        "alt": "BMW X3 М40D"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
       "city": "София",
-      "region": "Ботевградско шосе",
-      "country": "България"
+      "logoUrl": "/assets/asko96/asko96-logo.png"
     },
-    "features": [],
-    "spec": {
-      "make": "BMW",
-      "model": "X3 М40D",
-      "year": 2022,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 90800,
-      "mileageUnit": "km",
-      "enginePowerHp": 340,
-      "colorExterior": "Черен"
-    },
-    "seller": {
-      "id": "dealer-asko-96",
-      "type": "dealer",
-      "displayName": "АСКО 96",
-      "verificationStatus": "unverified",
-      "city": "София"
-    },
-    "publishedAt": "2026-09-06T09:59:46.000Z",
-    "promoted": false
-  },
-  {
-    "id": "asko-11786173977658651",
-    "slug": "asko-11786173977658651",
-    "category": "car",
-    "dealerOrgId": "dealer-asko-96",
-    "status": "active",
-    "title": "BMW 550 M",
-    "description": "BMW 550 M, 2013 г., дизел, 184 120 км. За актуална наличност, оборудване и условия се свържете с АСКО 96. Не се начислява ДДС. Оригинална обява: https://asko96.mobile.bg/obiava-11786173977658651-bmw-550-m-xd-shadow-line-360cam-podgrev-memory-harman-lizi",
-    "price": {
-      "amount": 17500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/asko96/vehicle-16-1.webp",
-        "alt": "BMW 550 M"
-      },
-      {
-        "url": "/assets/asko96/vehicle-16-2.webp",
-        "alt": "BMW 550 M"
-      },
-      {
-        "url": "/assets/asko96/vehicle-16-3.webp",
-        "alt": "BMW 550 M"
-      },
-      {
-        "url": "/assets/asko96/vehicle-16-4.webp",
-        "alt": "BMW 550 M"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "София",
-      "region": "Ботевградско шосе",
-      "country": "България"
-    },
-    "features": [],
-    "spec": {
-      "make": "BMW",
-      "model": "550 M",
-      "year": 2013,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 184120,
-      "mileageUnit": "km",
-      "enginePowerHp": 381,
-      "colorExterior": "Черен"
-    },
-    "seller": {
-      "id": "dealer-asko-96",
-      "type": "dealer",
-      "displayName": "АСКО 96",
-      "verificationStatus": "unverified",
-      "city": "София"
-    },
-    "publishedAt": "2026-09-06T09:59:45.000Z",
+    "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

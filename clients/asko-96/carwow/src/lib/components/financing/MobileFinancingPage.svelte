@@ -1,17 +1,10 @@
 <script lang="ts">
-	import {
-		BadgeCheck,
-		CarFront,
-		ClipboardCheck,
-		Clock,
-		Phone,
-		PhoneCall,
-		Send
-	} from '@lucide/svelte';
+	import { BadgeCheck, CarFront, ClipboardCheck, Clock, PhoneCall, Send } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
+	import MobileHeroBar from '$lib/components/shared/MobileHeroBar.svelte';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = daynightSite.phoneHref;
 
 	const benefits = [
 		{
@@ -37,7 +30,7 @@
 	const steps = [
 		'Изпращаш запитване с автомобил и месечен бюджет.',
 		'Получаваш ориентировъчна вноска и условия.',
-		'Оглед в София и финализиране с екипа.'
+		`Оглед в ${daynightSite.city} и финализиране с екипа.`
 	] as const;
 
 	const faqs = [
@@ -45,7 +38,7 @@
 			id: 'documents',
 			question: 'Какви документи са нужни?',
 			answer:
-				'Попитайте АСКО 96 за необходимите документи според избрания автомобил и условията за лизинг.'
+				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото.'
 		},
 		{
 			id: 'trade-in',
@@ -56,35 +49,27 @@
 			id: 'speed',
 			question: 'Колко време отнема одобрението?',
 			answer:
-				'Срокът и условията за одобрение се потвърждават индивидуално с АСКО 96.'
+				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават при огледа.'
 		}
 	] as const;
 </script>
 
-<div class="mobile-financing-app" aria-label="Финансиране от АСКО 96">
+<div class="mobile-financing-app">
 	<header class="mobile-financing-hero">
 		<img
 			class="mobile-financing-hero__bg"
-			src={resolve('/assets/asko96/asko96-showroom.jpg')}
+			src={resolve('/assets/images/pages/daynight-services-consultation-v1.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
-		<div class="mobile-financing-hero__bar">
-			<a href={resolve('/')} aria-label="АСКО 96 начало">
-				<img
-					src={resolve('/assets/asko96/asko96-wordmark.png')}
-					alt={daynightSite.shortName}
-				/>
-			</a>
-			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Обади се">
-				<Phone size={19} strokeWidth={2.45} />
-			</a>
-		</div>
+		<MobileHeroBar showLocation={false} />
 
 		<div class="mobile-financing-hero__copy">
 			<span>Финансиране</span>
 			<h1>Финансиране и разсрочено плащане</h1>
-			<p>Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в София.</p>
+			<p>
+				Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в {daynightSite.city}.
+			</p>
 		</div>
 
 		<div class="mobile-financing-actions">
@@ -209,7 +194,7 @@
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background: rgba(20, 100, 218, 0.86);
+		background: rgba(5, 7, 10, 0.88);
 		content: '';
 	}
 
@@ -224,36 +209,6 @@
 		object-position: center;
 	}
 
-	.mobile-financing-hero__bar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--sa-mobile-gap-md);
-	}
-
-	.mobile-financing-hero__bar img {
-		display: block;
-		width: 170px;
-		height: auto;
-	}
-
-	.mobile-financing-hero__phone {
-		display: grid;
-		width: var(--sa-mobile-pill-h);
-		height: var(--sa-mobile-pill-h);
-		flex: 0 0 auto;
-		place-items: center;
-		border-radius: 50%;
-		background: var(--sa-red);
-		color: #fff !important;
-	}
-
-	.mobile-financing-hero__phone :global(svg),
-	.mobile-financing-hero__phone :global(svg *) {
-		color: #fff !important;
-		stroke: #fff !important;
-	}
-
 	.mobile-financing-hero__copy {
 		display: grid;
 		gap: var(--sa-mobile-gap-xs);
@@ -262,10 +217,10 @@
 
 	.mobile-financing-hero__copy span,
 	.mobile-financing-heading span,
-	.mobile-financing-cta span {
+	.mobile-financing-cta > div > span {
 		color: rgba(255, 255, 255, 0.76);
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -274,7 +229,7 @@
 		margin: 0;
 		color: #fff;
 		font-size: var(--sa-text-2xl);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.07;
 	}
@@ -282,8 +237,8 @@
 	.mobile-financing-hero p {
 		margin: 0;
 		color: rgba(255, 255, 255, 0.88);
-		font-size: var(--sa-text-sm);
-		font-weight: 700;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.3;
 	}
 
@@ -301,8 +256,8 @@
 		gap: var(--sa-mobile-gap-xs);
 		border-radius: 8px;
 		color: #fff !important;
-		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1;
 		overflow: hidden;
 		padding: 0 8px;
@@ -352,7 +307,7 @@
 		margin: 0;
 		color: #111827;
 		font-size: var(--sa-text-xl);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.1;
 	}
@@ -387,14 +342,14 @@
 	.mobile-financing-card strong {
 		color: #111827;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.1;
 	}
 
 	.mobile-financing-card small {
-		color: #66707a;
+		color: #56616e;
 		font-size: var(--sa-text-xs);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.28;
 	}
 
@@ -426,13 +381,13 @@
 		background: var(--sa-blue);
 		color: #fff;
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 	}
 
 	.mobile-financing-steps span {
 		color: #111827;
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.25;
 	}
 
@@ -451,14 +406,14 @@
 	.mobile-financing-faq strong {
 		color: #111827;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.15;
 	}
 
 	.mobile-financing-faq small {
-		color: #66707a;
+		color: #56616e;
 		font-size: var(--sa-text-sm);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.35;
 	}
 
@@ -480,22 +435,22 @@
 	.mobile-financing-cta h2 {
 		margin: 0;
 		color: #fff;
-		font-size: var(--sa-text-xl);
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.1;
 	}
 
 	.mobile-financing-cta p {
 		margin: 0;
 		color: rgba(255, 255, 255, 0.86);
-		font-size: var(--sa-text-sm);
-		font-weight: 700;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.3;
 	}
 
 	.mobile-financing-cta a {
 		display: inline-flex;
-		min-height: var(--sa-mobile-hero-cta-h);
+		min-height: var(--sa-mobile-action-h);
 		align-items: center;
 		gap: 7px;
 		margin-top: 4px;
@@ -503,8 +458,19 @@
 		background: #fff;
 		padding: 0 14px;
 		color: var(--sa-blue) !important;
-		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
+	}
+
+	.mobile-financing-cta a span {
+		color: inherit;
+	}
+	.mobile-financing-cta a:focus-visible {
+		outline: 2px solid var(--sa-surface);
+		outline-offset: 4px;
+	}
+	.mobile-financing-cta a:active {
+		background: var(--sa-line);
 	}
 
 	.mobile-financing-cta a :global(svg) {
@@ -516,5 +482,62 @@
 		.mobile-financing-app {
 			display: block;
 		}
+	}
+
+	/* Mobile typography contract */
+	.mobile-financing-hero__copy span,
+	.mobile-financing-heading span,
+	.mobile-financing-cta > div > span {
+		font-size: var(--sa-mobile-type-micro);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-financing-hero h1 {
+		font-size: var(--sa-mobile-type-page-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-financing-hero p {
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-financing-action {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
+	}
+	.mobile-financing-heading h2,
+	.mobile-financing-cta h2 {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-financing-card strong,
+	.mobile-financing-faq strong {
+		font-size: var(--sa-mobile-type-card-title);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-financing-card small {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-financing-steps strong {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-financing-steps span {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-semibold);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-financing-faq small,
+	.mobile-financing-cta p {
+		font-size: var(--sa-mobile-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-financing-cta a {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 	}
 </style>

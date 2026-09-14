@@ -1,3 +1,3 @@
 <svelte:head>
-	<title>Сравни автомобили — OUTLETCARS.BG — Варна</title>
+	<title>Сравни автомобили — OUTLETCARS.BG</title>
 </svelte:head>

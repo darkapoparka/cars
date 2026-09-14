@@ -34,7 +34,7 @@ export const load: PageServerLoad = ({ request, url }) => {
 		auxeroFullPage: true,
 		beforeMessageHtml: messageSlot.beforeHtml,
 		dashboard: getAccountDashboardPageData('message.html', renderOptions, {
-			subtitle: 'Продължете разговорите си с екипа на OUTLETCARS.BG — Варна.',
+			subtitle: 'Продължете разговорите си с екипа на OUTLETCARS.BG.',
 			title: 'Съобщения'
 		}),
 		messageHtml: messageSlot.sectionHtml,

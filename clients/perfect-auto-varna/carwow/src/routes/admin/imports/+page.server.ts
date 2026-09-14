@@ -169,7 +169,7 @@ export const actions: Actions = {
 			.set({ status })
 			.where(and(eq(importRequests.dealer_id, dealerId), eq(importRequests.id, id)));
 
-		throw redirect(303, '/variant-3/admin/imports?updated=status');
+		throw redirect(303, '/admin/imports?updated=status');
 	},
 	bulkStatus: async ({ locals, request }) => {
 		const formData = await request.formData();
@@ -192,6 +192,6 @@ export const actions: Actions = {
 			.set({ status })
 			.where(and(eq(importRequests.dealer_id, dealerId), inArray(importRequests.id, ids)));
 
-		throw redirect(303, '/variant-3/admin/imports?bulk=status');
+		throw redirect(303, '/admin/imports?bulk=status');
 	}
 };

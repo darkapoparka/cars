@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 
 	type PaymentMode = 'cash' | 'finance';
@@ -70,7 +70,7 @@
 
 				<p class="flex items-center gap-8">
 					<img
-						src="/variant-3/assets/icons/Info.svg"
+						src="/assets/icons/Info.svg"
 						alt=""
 						aria-hidden="true"
 						data-daynight-img="1"
@@ -92,7 +92,7 @@
 
 				<div class={['core-dropdown flex items-center gap-8', isVatDropdownOpen && 'active']}>
 					<img
-						src="/variant-3/assets/icons/Info.svg"
+						src="/assets/icons/Info.svg"
 						alt=""
 						aria-hidden="true"
 						data-daynight-img="1"
@@ -159,15 +159,15 @@
 
 	.pdp-payment-price__cash {
 		color: #1c1c1c;
-		font-size: 32px;
-		font-weight: 700;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.08;
 	}
 
 	.pdp-payment-price__monthly {
 		color: #4b5563;
-		font-size: 18px;
-		font-weight: 500;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.3;
 	}
 

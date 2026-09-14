@@ -3,7 +3,7 @@
   import { afterNavigate } from '$app/navigation';
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
-  import { onDestroy, tick } from 'svelte';
+  import { onDestroy, onMount, tick } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import Icon from '$components/ui/Icon.svelte';
   import NavigationFeatureCard from './NavigationFeatureCard.svelte';
@@ -24,6 +24,7 @@
   let megaPanel: HTMLDivElement | undefined;
   let megaTrigger: HTMLAnchorElement | undefined;
   let releaseScroll: (() => void) | undefined;
+  let mobileFooterVisible = $state(false);
   const compactDetailHeader = $derived(
     page.url.pathname.startsWith('/blog-detail/') || page.url.pathname.startsWith('/listing-detail-v1/')
   );
@@ -191,6 +192,16 @@
   };
 
 
+  onMount(() => {
+    const footer = document.getElementById('dn-site-footer');
+    if (!footer || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      mobileFooterVisible = Boolean(entry?.isIntersecting && entry.intersectionRatio > 0.02);
+    }, { threshold: [0, 0.02, 0.2] });
+    observer.observe(footer);
+    return () => observer.disconnect();
+  });
+
   onDestroy(() => {
     releaseScroll?.();
   });
@@ -210,6 +221,7 @@
 <div
   class="dn-header-fixed"
   class:dn-header-fixed--compact={compactDetailHeader}
+  class:dn-header-fixed--vehicle-detail={vehicleDetailHeader}
   class:dn-header-fixed--mobile-surface={mobileSurfaceHeader}
   class:dn-header-fixed--home-overlay={homeOverlayHeader}
   class:dn-header-fixed--contact-overlay={page.url.pathname === '/contact'}
@@ -237,8 +249,10 @@
           <div class="dn-logo-box">
             <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
               <picture>
-                <source media="(max-width: 991px)" srcset={homeOverlayHeader || page.url.pathname === '/contact' ? brand.logoOnDark : brand.logo} />
-                <img src={brand.logo} alt={brand.name} width="696" height="438" fetchpriority="high" />
+                {#if mobileSurfaceHeader || page.url.pathname === '/contact'}
+                  <source media="(max-width: 991px)" srcset={brand.logoOnDark} />
+                {/if}
+                <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
               </picture>
             </a>
           </div>
@@ -356,7 +370,7 @@
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" aria-label="Основни действия">
+      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} aria-label="Основни действия">
         <a
           class:active={page.url.pathname === '/'}
           href={resolve('/')}
@@ -542,6 +556,13 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
       padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right));
       padding-top: 3px;
+      transition: transform 180ms ease, opacity 150ms ease;
+    }
+
+    .dn-mobile-bottom-nav--footer-visible {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(100%);
     }
 
     .dn-mobile-bottom-nav a,
@@ -552,7 +573,7 @@
       min-height: 52px;
       place-items: center;
       align-content: center;
-      grid-template-rows: 26px 16px;
+      grid-template-rows: 26px auto;
       gap: 2px;
       padding: 4px 1px;
       border: 0;
@@ -560,15 +581,15 @@
       background: transparent;
       color: #4f5662;
       font: inherit;
-      font-size: 12px;
-      font-weight: 650;
-      line-height: 1.15;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-control-weight);
+      line-height: var(--dn-leading-control);
       cursor: pointer;
     }
 
     .dn-mobile-bottom-nav a.active,
     .dn-mobile-bottom-nav button.active {
-      color: var(--dn-red);
+      color: var(--dn-ink);
     }
 
     .dn-mobile-bottom-nav__icon {
@@ -611,8 +632,8 @@
       justify-content: center;
       gap: 7px;
       border-radius: var(--dn-radius-button);
-      font-size: 15px;
-      font-weight: 700;
+      font-size: var(--dn-text-body);
+      font-weight: var(--dn-control-weight);
       text-align: center;
     }
 
@@ -641,6 +662,16 @@
 
     .dn-header-fixed--listing .dn-topbar,
     .dn-header-fixed--listing .dn-header__lower {
+      display: none;
+    }
+
+    .dn-header-fixed--vehicle-detail {
+      height: 0;
+      min-height: 0;
+      background: transparent;
+    }
+
+    .dn-header-fixed--vehicle-detail .dn-header {
       display: none;
     }
 
@@ -733,7 +764,4 @@
       display: none;
     }
   }
-
-.dn-logo picture { display: block; }
-.dn-logo img { object-fit: contain; object-position: left center; }
 </style>

@@ -3,7 +3,7 @@
   import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
   import { resolve } from '$app/paths';
   import { featuredVehicles } from '$data/inventory';
-  import { filterListingVehicles, listingFilterOptions, listingModelsForMake } from '$data/listing';
+  import { bodyLabel, filterListingVehicles, listingFilterOptions, listingModelsForMake } from '$data/listing';
   import type { Attachment } from 'svelte/attachments';
 
 
@@ -67,7 +67,7 @@
   let mobileMenuOptions = $derived.by<MobileFilterOption[]>(() => {
     if (mobileView === 'make') return listingFilterOptions.makes.map((value) => ({ value, label: value || 'Всички марки' }));
     if (mobileView === 'model') return modelOptions.map((value) => ({ value, label: value || 'Всички модели' }));
-    if (mobileView === 'body') return listingFilterOptions.bodies.map((value) => ({ value, label: value || 'Всички купета' }));
+    if (mobileView === 'body') return listingFilterOptions.bodies.map((value) => ({ value, label: bodyLabel(value) || 'Всички купета' }));
     if (mobileView === 'price') return listingFilterOptions.prices.map((value) => ({ value, label: value ? `До ${formatNumber(value)} €` : 'Всеки бюджет' }));
     if (mobileView === 'fuel') return listingFilterOptions.fuels.map((value) => ({ value, label: value || 'Всяко гориво' }));
     if (mobileView === 'mileage') return listingFilterOptions.mileages.map((value) => ({ value, label: value ? `До ${formatNumber(value)} км` : 'Всеки пробег' }));
@@ -175,7 +175,7 @@
 </script>
 
 <button
-  class="dn-quick-search__trigger"
+  class="dn-quick-search__trigger dn-entry-field"
   type="button"
   {@attach attachTrigger}
   aria-haspopup="dialog"
@@ -231,10 +231,11 @@
       onformdata={cleanFormData}
     >
       <label class="dn-sr-only" for="quick-search-input">Марка, модел или ключова дума</label>
-      <div class="dn-quick-search__input-wrap">
+      <div class="dn-quick-search__input-wrap dn-entry-field">
         <Icon name="search" size={21} strokeWidth={1.8} />
         <input
           id="quick-search-input"
+          class="dn-entry-field__input"
           {@attach attachSearchInput}
           bind:value={query}
           type="search"
@@ -274,7 +275,7 @@
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('body')}>
             <strong>Купе</strong>
-            <span>{body || 'Всички купета'}</span>
+            <span>{bodyLabel(body) || 'Всички купета'}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
@@ -341,18 +342,11 @@
   .dn-quick-search__trigger {
     display: grid;
     width: 100%;
-    min-height: 48px;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 11px;
     margin: 0 0 12px;
     padding: 0 16px;
-    border: 1px solid #dfe2e6;
-    border-radius: var(--dn-radius-button);
-    background: #f8f9fa;
-    color: #686d75;
-    font: inherit;
-    font-size: 16px;
     text-align: left;
     cursor: pointer;
     transition: border-color 160ms ease-out, background-color 160ms ease-out;
@@ -360,11 +354,8 @@
 
   @media (min-width: 992px) {
     .dn-quick-search__trigger {
-      min-height: var(--dn-discovery-search-height);
       margin-bottom: var(--dn-discovery-gap);
       padding-inline: 18px;
-      border-radius: 14px;
-      background: #f5f6f7;
     }
   }
 
@@ -373,15 +364,10 @@
     background: #f3f4f6;
   }
 
-  .dn-quick-search__trigger:focus-visible {
-    outline: 3px solid rgba(215, 174, 53, 0.2);
-    outline-offset: 2px;
-  }
-
   .dn-quick-search__hint {
     color: #2d3036;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: var(--dn-text-meta);
+    font-weight: var(--dn-weight-semibold);
   }
 
   .dn-quick-search__label-mobile,
@@ -426,9 +412,9 @@
   .dn-quick-search__header h2 {
     margin: 0;
     font-size: var(--dn-text-subheading);
-    font-weight: 650;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-quick-search__reset,
@@ -459,7 +445,7 @@
   }
 
   .dn-quick-search__close:focus-visible {
-    outline: 3px solid rgba(215, 174, 53, 0.2);
+    outline: 3px solid rgba(196, 1, 1, 0.2);
     outline-offset: -3px;
   }
 
@@ -470,37 +456,9 @@
 
   .dn-quick-search__input-wrap {
     display: flex;
-    height: 64px;
     align-items: center;
-    gap: 12px;
-    padding: 0 20px;
-    border: 1px solid transparent;
-    border-radius: var(--dn-radius-control);
-    background: #e9ecef;
-    color: #727780;
-  }
-
-  .dn-quick-search__input-wrap:focus-within {
-    border-color: var(--dn-red);
-    background: #fff;
-  }
-
-  .dn-quick-search__input-wrap input {
-    width: 100%;
-    min-width: 0;
-    height: 100%;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    color: #191c22;
-    font: inherit;
-    font-size: var(--dn-text-lead);
-    line-height: var(--dn-leading-lead);
-  }
-
-  .dn-quick-search__input-wrap input::placeholder {
-    color: #777c84;
-    opacity: 1;
+    gap: var(--dn-space-3);
+    padding: 0 var(--dn-space-4);
   }
 
   @media (max-width: 767px) {
@@ -547,8 +505,8 @@
 
     .dn-quick-search__header h2 {
       text-align: center;
-      font-size: 18px;
-      letter-spacing: -0.01em;
+      font-size: var(--dn-text-lead);
+      letter-spacing: var(--dn-tracking-heading);
     }
 
     .dn-quick-search__reset {
@@ -559,11 +517,11 @@
       padding: 0;
       border: 0;
       background: transparent;
-      color: var(--dn-accent-text);
+      color: var(--dn-red);
       cursor: pointer;
       font: inherit;
-      font-size: 13px;
-      font-weight: 650;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-semibold);
     }
 
     .dn-quick-search__back {
@@ -587,7 +545,7 @@
     }
 
     .dn-quick-search__back:focus-visible {
-      outline: 3px solid rgba(215, 174, 53, 0.18);
+      outline: 3px solid rgba(196, 1, 1, 0.18);
       outline-offset: -3px;
     }
 
@@ -614,23 +572,6 @@
 
     .dn-quick-search__form--mobile-hidden {
       display: none;
-    }
-
-    .dn-quick-search__input-wrap {
-      height: 48px;
-      padding-inline: 16px;
-      border-color: transparent;
-      border-radius: var(--dn-pill);
-      background: #f1f2f4;
-    }
-
-    .dn-quick-search__input-wrap:focus-within {
-      border-color: var(--dn-red);
-      background: #f1f2f4;
-    }
-
-    .dn-quick-search__input-wrap input {
-      font-size: var(--dn-text-body);
     }
 
     .dn-quick-search__mobile-filters {
@@ -668,14 +609,14 @@
     }
 
     .dn-quick-search__filter-row strong {
-      font-size: 15px;
-      font-weight: 650;
+      font-size: var(--dn-text-body);
+      font-weight: var(--dn-weight-semibold);
     }
 
     .dn-quick-search__filter-row > span {
       overflow: hidden;
       color: #626975;
-      font-size: 14px;
+      font-size: var(--dn-text-meta);
       text-align: right;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -691,7 +632,7 @@
 
     .dn-quick-search__filter-row:focus-visible {
       border-color: var(--dn-red);
-      outline: 3px solid rgba(215, 174, 53, 0.18);
+      outline: 3px solid rgba(196, 1, 1, 0.18);
       outline-offset: -3px;
     }
 
@@ -718,9 +659,9 @@
       color: #24272c;
       cursor: pointer;
       font: inherit;
-      font-size: 14px;
-      font-weight: 650;
-      line-height: 1.25;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
       transition: background-color 140ms ease-out, color 140ms ease-out;
     }
 
@@ -729,7 +670,7 @@
     }
 
     .dn-quick-search__option:focus-visible {
-      outline: 3px solid rgba(215, 174, 53, 0.2);
+      outline: 3px solid rgba(196, 1, 1, 0.2);
       outline-offset: -3px;
     }
 
@@ -739,6 +680,7 @@
     }
 
     .dn-quick-search__mobile-footer {
+      margin-top: auto;
       flex: 0 0 auto;
       padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
       background: #fff;
@@ -750,11 +692,9 @@
       border: 0;
       border-radius: var(--dn-radius-button);
       background: var(--dn-red);
-      color: var(--dn-accent-ink);
+      color: #fff;
       cursor: pointer;
-      font: inherit;
-      font-size: 15px;
-      font-weight: 700;
+      font: var(--dn-cta-font);
     }
 
     .dn-quick-search__mobile-footer button:disabled {

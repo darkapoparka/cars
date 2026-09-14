@@ -156,8 +156,8 @@ const detailFeatureTabs = (
 						? `Наличността е обновена ${daynightFetchedAt}`
 						: `Inventory refreshed ${daynightFetchedAt}`
 					: locale === 'bg'
-						? 'Наличността е обновена от източника на Day Night Auto'
-						: 'Inventory refreshed from Day Night Auto source data'
+						? 'Наличността е обновена от източника на Promosale Varna'
+						: 'Inventory refreshed from Promosale Varna source data'
 			]
 		}
 	];

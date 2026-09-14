@@ -26,7 +26,7 @@ export type PostOverview = {
 
 const formKeys: ReadonlyArray<keyof PostFormInput> = postFormKeys;
 
-const fallbackPostImage = '/variant-3/assets/images/blog/post-44.jpg';
+const fallbackPostImage = '/assets/images/blog/post-44.jpg';
 const daynightArticleCategories = new Set<DayNightArticleCategory>([
 	'Покупка',
 	'Продажба',

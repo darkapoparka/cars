@@ -7,11 +7,14 @@ import {
 
 const phoneE164 = "+359892020208";
 const city = "Варна";
+const shortName = "Promosale Varna";
+const district = "Варна";
+const street = "Морска гара Варна";
 const location = "Морска гара Варна, Варна, България";
 
 export const daynightSite = {
 	name: "Promosale Varna",
-	shortName: "Promosale Varna",
+	shortName,
 	city,
 	region: city,
 	countryCode: "BG",
@@ -19,26 +22,26 @@ export const daynightSite = {
 	currency: "EUR",
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "0892020208",
+	phone: "359892020208",
 	phoneLabel: "0892 020 208",
 	email: "",
 	location,
-	locationShort: "Морска гара Варна, Варна",
-	locationLandmark: "Морска гара Варна",
+	locationShort: "Морска гара Варна",
+	locationLandmark: "Морска гара Варна, Варна, България",
 	hoursLabel: "Пон.–пет. 09:30–18:30; съб. 10:00–14:00; нед. почивен ден",
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
-	mapUrl: "https://www.google.com/maps/search/?api=1&query=%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%B0%20%D0%B3%D0%B0%D1%80%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
-	mapLabel: "Promosale Varna, Варна",
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
 	sourceInventory: "https://promosale_varna.mobile.bg/",
-	inventoryCount: 6,
 	logoLight: "/dealer/logo.png",
 	logoDark: "/dealer/logo.png",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
 	heroTitle: "Promosale Varna",
-	heroSubtitle: "Автомобили въвъв Варна. Разгледайте предложенията и уговорете оглед.",
+	heroSubtitle: "Варна · Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -87,8 +90,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Promosale Varna', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/dealer' },
+			{ label: "За Promosale Varna", href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

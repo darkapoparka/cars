@@ -12,13 +12,24 @@ import { keys as security } from "@repo/security/keys";
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
+const getStaticDemoDeploymentOrigin = (): string | undefined => {
+  const deploymentHost =
+    process.env.VERCEL_ENV === "production"
+      ? (process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL)
+      : (process.env.VERCEL_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL);
+  const normalizedHost = deploymentHost?.trim();
+
+  return normalizedHost ? `https://${normalizedHost}` : undefined;
+};
+
 if (leadSite.staticDemoMode) {
-  const origin = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3001";
-  process.env.NEXT_PUBLIC_APP_URL ??= origin;
-  process.env.NEXT_PUBLIC_WEB_URL ??= origin;
-  process.env.NEXT_PUBLIC_API_URL ??= origin;
+  const deploymentOrigin = getStaticDemoDeploymentOrigin();
+  process.env.NEXT_PUBLIC_APP_URL ??=
+    deploymentOrigin ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_WEB_URL ??=
+    deploymentOrigin ?? "http://localhost:3001";
+  process.env.NEXT_PUBLIC_API_URL ??=
+    deploymentOrigin ?? "http://localhost:3002";
 }
 
 export const env = createEnv({
@@ -44,7 +55,8 @@ export const env = createEnv({
   },
 });
 
-if (!leadSite.staticDemoMode) assertRuntimeEnvironmentContract({
+assertRuntimeEnvironmentContract({
+  allowSharedOrigins: leadSite.staticDemoMode,
   apiUrl: process.env.NEXT_PUBLIC_API_URL,
   appUrl: process.env.NEXT_PUBLIC_APP_URL,
   docsUrl: process.env.NEXT_PUBLIC_DOCS_URL,

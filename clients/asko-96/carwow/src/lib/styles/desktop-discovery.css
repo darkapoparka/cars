@@ -7,8 +7,8 @@
 .inventory-hero,
 .inventory-filter-triggers,
 .desktop-vehicle-actions {
-	--sa-red: #8b6811;
-	--sa-red-strong: #6f5108;
+	--sa-red: #d50028;
+	--sa-red-strong: #b70022;
 	--discovery-search-height: 54px;
 	--discovery-search-action-size: 44px;
 	--discovery-control-border: #d9dde1;
@@ -53,7 +53,7 @@ body.daynight-home-page
 	background: var(--discovery-surface) !important;
 	background-image: none !important;
 	color: var(--discovery-ink) !important;
-	font: 500 14px/1.2 var(--sa-font, Arial, sans-serif) !important;
+	font: var(--sa-weight-medium) var(--sa-text-caption)/1.2 var(--sa-font, Arial, sans-serif) !important;
 	box-shadow: none !important;
 	transform: none !important;
 	text-decoration: none !important;

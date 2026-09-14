@@ -140,7 +140,7 @@ export async function PATCH({ request }: { request: Request }) {
 		});
 
 		if (!inquiry) {
-			return errorJson('Day Night Auto inquiry not found', 404);
+			return errorJson('Promosale Varna inquiry not found', 404);
 		}
 
 		return okJson({ inquiry });

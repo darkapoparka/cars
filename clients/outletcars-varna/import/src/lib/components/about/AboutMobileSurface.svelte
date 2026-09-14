@@ -21,10 +21,10 @@
 	aria-controls="daynight-about-mobile-contact-drawer"
 />
 
-<section class="daynight-about-mobile" aria-label="OUTLETCARS.BG — Варна мобилен преглед">
+<section class="daynight-about-mobile" aria-label="OUTLETCARS.BG мобилен преглед">
 	<header class="daynight-about-mobile__header">
-		<a class="daynight-about-mobile__logo" href={resolve('/')} aria-label="OUTLETCARS.BG — Варна начало">
-			<img src={daynightAssets.logoLight} alt="OUTLETCARS.BG — Варна" />
+		<a class="daynight-about-mobile__logo" href={resolve('/')} aria-label="OUTLETCARS.BG начало">
+			<img src={daynightAssets.logoLight} alt="OUTLETCARS.BG" />
 		</a>
 
 		<div class="daynight-about-mobile__actions">
@@ -88,7 +88,7 @@
 
 		<header>
 			<div>
-				<p>OUTLETCARS.BG — Варна</p>
+				<p>OUTLETCARS.BG</p>
 				<h2 id="daynight-about-mobile-contact-title">Контакти и локация</h2>
 			</div>
 			<label

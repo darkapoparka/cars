@@ -1,22 +1,29 @@
-export interface FeaturedVideo { id: string; title: string; duration: string; thumbnail: string; }
-// Curated official ASKO96 channel videos, verified 2026-09-06.
+export interface FeaturedVideo {
+  id: string;
+  title: string;
+  duration: string;
+  thumbnail: string;
+}
+
+// Selected automotive videos from the owner-supplied channel, verified 2026-09-05.
+// This is a curated selection, not an automatically refreshed channel feed.
 export const featuredVideos: readonly FeaturedVideo[] = [
   {
-    "id": "MZryizpxa6k",
-    "title": "Porsche Cayenne Може Всичко",
-    "duration": "5:24",
-    "thumbnail": "/assets/asko96/video-MZryizpxa6k.jpg"
+    id: '6S3dLIgeAT8',
+    title: 'Най-желаната кола в България | Lamborghini Urus',
+    duration: '23:19',
+    thumbnail: '/assets/images/lead/day-night-video-urus.jpg'
   },
   {
-    "id": "DoIn6yzLoyY",
-    "title": "Този Mercedes S500 има ВСИЧКО",
-    "duration": "5:24",
-    "thumbnail": "/assets/asko96/video-DoIn6yzLoyY.jpg"
+    id: 'zG6rjLpT4u8',
+    title: 'Продадох най-новата Панамера',
+    duration: '14:33',
+    thumbnail: '/assets/images/lead/day-night-video-panamera.jpg'
   },
   {
-    "id": "rgcZmHqkdWw",
-    "title": "Mercedes GLC 220 - Голям Багажник и Малък Разход",
-    "duration": "4:06",
-    "thumbnail": "/assets/asko96/video-rgcZmHqkdWw.jpg"
+    id: 'w_XaGmIWJFM',
+    title: 'Каква е разликата в G-класите',
+    duration: '23:03',
+    thumbnail: '/assets/images/lead/day-night-video-g-class.jpg'
   }
 ];

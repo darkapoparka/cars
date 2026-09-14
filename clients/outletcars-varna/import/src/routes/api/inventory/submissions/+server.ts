@@ -86,7 +86,7 @@ export async function PATCH({ request }: { request: Request }) {
 	});
 
 	if (!submission) {
-		return errorJson('OUTLETCARS.BG — Варна vehicle submission not found', 404);
+		return errorJson('OUTLETCARS.BG vehicle submission not found', 404);
 	}
 
 	return okJson({ submission });

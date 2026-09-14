@@ -88,7 +88,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const transmission = normalizeTransmission(listing.transmission);
 	const body = normalizeBody(listing.body);
 	const isIncoming = /очакван/i.test(listing.title);
-	const availability = isIncoming ? 'Очакван внос' : 'Публикувана обява';
+	const availability = isIncoming ? 'Очакван внос' : 'Наличен';
 	const drive = listing.features.some((feature) => /4x4|xdrive|quattro|4matic/i.test(feature))
 		? '4x4'
 		: '—';
@@ -99,7 +99,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const features = listing.features.length > 0 ? listing.features : ['Свържете се за оборудване'];
 	const conditionLine = isIncoming
 		? 'Очакван внос — свържете се за актуален срок и условия.'
-		: 'Обява към 10.09.2026 г. — потвърдете наличността и огледа по телефона.';
+		: 'Наличен автомобил в Варна — свържете се за оглед.';
 
 	return {
 		slug: `${slugBase}-${listing.id.slice(-6)}`,
@@ -123,7 +123,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		priceBgn: listing.priceBgn,
 		monthly: 'Финансиране по запитване',
 		image: listing.image,
-		gallery: listing.gallery,
+		gallery: [listing.image],
 		badges: [
 			availability,
 			...(listing.status && listing.status !== availability ? [listing.status] : []),
@@ -133,7 +133,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		description: `${identity.shortTitle}, ${year} г., ${fuel.toLocaleLowerCase('bg-BG')}, ${listing.mileage}, ${listing.power}, ${transmission.toLocaleLowerCase('bg-BG')}. ${conditionLine}`,
 		features,
 		highlights: [availability, listing.power, drive],
-		lot: `AM-${listing.id.slice(-6)}`,
+		lot: `DN-${listing.id.slice(-6)}`,
 		sourceUrl: listing.sourceUrl
 	};
 };

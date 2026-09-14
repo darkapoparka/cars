@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { lockBodyScroll, unlockBodyScroll } from '$lib/utils/body-scroll-lock';
 	import type { Attachment } from 'svelte/attachments';
 

@@ -41,7 +41,6 @@
 		idPrefix="desktop-contact"
 		showEmptyStatus={false}
 		statusClass="daynight-contact-form__status"
-		statusMessage="Съобщението е подготвено локално за OUTLETCARS.BG — Варна"
 		submitLabel={form.submitLabel}
 	/>
 </div>

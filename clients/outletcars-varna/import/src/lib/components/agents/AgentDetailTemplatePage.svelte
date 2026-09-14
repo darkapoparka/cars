@@ -37,7 +37,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Консултанти — OUTLETCARS.BG — Варна"
+	title="Консултанти — OUTLETCARS.BG"
 >
 	<div class="innerpage-container container">
 		<AgentDetailMainContent {detail} />

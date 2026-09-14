@@ -356,9 +356,9 @@
 		<a
 			class="daynight-compare-mobile__brand"
 			href={resolve('/')}
-			aria-label="OUTLETCARS.BG — Варна начало"
+			aria-label="OUTLETCARS.BG начало"
 		>
-			<img src={daynightAssets.logoLight} alt="OUTLETCARS.BG — Варна" width="1285" height="235" />
+			<img src={daynightAssets.logoLight} alt="OUTLETCARS.BG" width="1285" height="235" />
 		</a>
 		<button
 			class="daynight-compare-mobile__appbar-add"
@@ -577,8 +577,8 @@
 			</header>
 			<Drawer.Description class="daynight-compare-mobile-drawer__description">
 				{locale === 'bg'
-					? 'Избери автомобил от наличните модели на OUTLETCARS.BG — Варна.'
-					: 'Choose from available OUTLETCARS.BG — Варна models.'}
+					? 'Избери автомобил от наличните модели на OUTLETCARS.BG.'
+					: 'Choose from available OUTLETCARS.BG models.'}
 			</Drawer.Description>
 
 			<label class="daynight-compare-mobile-drawer__search" data-vaul-no-drag>

@@ -17,7 +17,7 @@
 			<div class="daynight-about-location__content wow fadeInLeft" data-wow-delay="0.1s">
 				<div class="daynight-about-location__cards">
 					<div class="daynight-about-location__panel-head">
-						<span>Шоурум OUTLETCARS.BG — Варна</span>
+						<span>Шоурум OUTLETCARS.BG</span>
 						<strong>Огледи с предварителна уговорка</strong>
 					</div>
 					<article class="daynight-about-location-card">
@@ -95,7 +95,7 @@
 					allowfullscreen
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
-					title="OUTLETCARS.BG — Варна Plovdiv map"
+					title="OUTLETCARS.BG Plovdiv map"
 				></iframe>
 
 				<div class="daynight-about-location__map-info">
@@ -103,7 +103,7 @@
 						<img src="/assets/icons/MapPin.svg" alt="" />
 					</span>
 					<div>
-						<strong>OUTLETCARS.BG — Варна</strong>
+						<strong>OUTLETCARS.BG</strong>
 						<small>{office.address}</small>
 					</div>
 				</div>

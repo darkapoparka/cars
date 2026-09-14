@@ -1,28 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
+const phoneE164 = "+359899769696";
+const city = "София";
+const shortName = "АСКО 96";
+const district = "София";
+const street = "бул. „Ботевградско шосе“ 300";
+const location = "бул. „Ботевградско шосе“ 300";
+
 export const daynightSite = {
-	name: 'АСКО 96',
-	shortName: 'АСКО 96',
-	phone: '0899769696',
-	phoneLabel: '0899 76 96 96',
-	email: 'askogroup@abv.bg',
-	location: 'гр. София, бул. „Ботевградско шосе“ 300',
-	mapUrl: "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
-	mapLabel: 'АСКО 96, София, България',
-	sourceInventory: 'https://asko96.mobile.bg/',
-	inventoryCount: 16,
-	logoLight: '/assets/asko96/asko96-wordmark.png',
-	logoDark: '/assets/asko96/asko96-wordmark.png',
+	name: "АСКО 96",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359899769696",
+	phoneLabel: "0899 76 96 96",
+	email: "askogroup@abv.bg",
+	location,
+	locationShort: "бул. „Ботевградско шосе“ 300",
+	locationLandmark: "бул. „Ботевградско шосе“ 300",
+	hoursLabel: "Понеделник – петък: 09:00–18:30; Събота: 10:00–16:00; Неделя: почивен ден",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://asko96.mobile.bg/",
+	logoLight: "/assets/asko96/asko96-logo.png",
+	logoDark: "/assets/asko96/asko96-logo.png",
+	socialLinks: {"facebook":"https://www.facebook.com/p/Asko96-100050328800477/","instagram":"","youtube":"https://www.youtube.com/@asko96bulgaria","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
-	accountCta: 'Вход / Профил',
+	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: 'АСКО 96',
-	heroSubtitle: 'София - Премиум автомобили в София с подреден процес за оглед и запитване',
+	heroTitle: "АСКО 96",
+	heroSubtitle: "София · Подбрани автомобили от публикуваните обяви. Наличностите и условията се потвърждават с АСКО 96.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -34,6 +53,7 @@ export const publicNavItems = [
 	{ label: 'Продай', href: '/sell-your-car' },
 	{ label: 'Услуги', href: '/services' },
 	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
 	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
@@ -70,15 +90,10 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За АСКО 96', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За АСКО 96", href: '/about' },
 			{ label: 'Екип', href: '/team' },
-			{ label: 'Услуги и информация', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{
-				label: 'Покупка без риск',
-				href: '/blog/kak-da-kupim-upotrebyavan-avtomobil'
-			},
+			{ label: 'Отзиви', href: '/reviews' },
+			{ label: 'Блог', href: '/blog' },
 			{ label: 'Условия', href: '/terms' }
 		]
 	},

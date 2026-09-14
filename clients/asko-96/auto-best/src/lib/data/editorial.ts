@@ -23,11 +23,11 @@ export type BlogFilters = {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Проверка преди покупка',
+    title: 'Какво да проверите преди покупка?',
     text: 'История, документи и техническо състояние се потвърждават директно с екипа.',
     category: 'Оглед',
     tag: 'Оглед',
-    image: '/assets/asko96/vehicle-02-1.webp',
+    image: '/assets/images/blog/blog-1.jpg',
     sections: [
       {
         title: 'Започнете с историята и документите',
@@ -45,11 +45,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 2,
-    title: 'Внос и документи',
+    title: 'Как протича вносът на автомобил?',
     text: 'Обсъдете търсене, транспорт и подготовката за регистрация в България.',
     category: 'Внос',
     tag: 'Документи',
-    image: '/assets/asko96/vehicle-03-1.webp',
+    image: '/assets/images/blog/blog-2.jpg',
     sections: [
       {
         title: 'Определете точни критерии за търсенето',
@@ -67,11 +67,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
-    title: 'Лизинг и условия',
+    title: 'Как да сравните лизингови оферти?',
     text: 'Попитайте за актуалните условия според избрания автомобил.',
     category: 'Лизинг',
     tag: 'Лизинг',
-    image: '/assets/asko96/vehicle-04-1.webp',
+    image: '/assets/images/blog/blog-3.jpg',
     sections: [
       {
         title: 'Сравнявайте цялата оферта',
@@ -93,7 +93,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Марка, купе и бюджет се уточняват с екипа според вашите критерии.',
     category: 'Насоки',
     tag: 'Избор',
-    image: '/assets/asko96/vehicle-05-1.webp',
+    image: '/assets/images/blog/blog-4.jpg',
     sections: [
       {
         title: 'Започнете от ежедневната употреба',
@@ -115,7 +115,7 @@ export const blogPosts: BlogPost[] = [
     text: `Уговорете посещение на ${brand.addressLine}.`,
     category: 'Оглед',
     tag: brand.city,
-    image: '/assets/asko96/vehicle-06-1.webp',
+    image: '/assets/images/blog/blog-5.jpg',
     sections: [
       {
         title: 'Запазете удобно време предварително',
@@ -137,7 +137,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Предложете автомобил за бартер и поискайте индивидуална оценка.',
     category: 'Бартер',
     tag: 'Бартер',
-    image: '/assets/asko96/vehicle-07-1.webp',
+    image: '/assets/images/blog/blog-6.jpg',
     sections: [
       {
         title: 'Подгответе точна информация за автомобила',
@@ -159,7 +159,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Екипът ориентира за следващите стъпки след пристигане на автомобила.',
     category: 'Внос',
     tag: 'Документи',
-    image: '/assets/asko96/vehicle-08-1.webp',
+    image: '/assets/images/blog/blog-7.jpg',
     sections: [
       {
         title: 'Подредете наличните документи',
@@ -181,7 +181,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Пробег, история, оборудване и наличност се потвърждават на място.',
     category: 'Оглед',
     tag: 'Оглед',
-    image: '/assets/asko96/vehicle-09-1.webp',
+    image: '/assets/images/blog/blog-8.jpg',
     sections: [
       {
         title: 'Попитайте за историята и текущото състояние',
@@ -203,7 +203,7 @@ export const blogPosts: BlogPost[] = [
     text: 'Свържете се за сервиз, документи и следващи стъпки след сделката.',
     category: 'Насоки',
     tag: 'Сервиз',
-    image: '/assets/asko96/vehicle-10-1.webp',
+    image: '/assets/images/blog/blog-9.jpg',
     sections: [
       {
         title: 'Съхранете документите и планирайте сроковете',

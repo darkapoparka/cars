@@ -69,7 +69,7 @@ export async function PATCH({ request }: { request: Request }) {
 	});
 
 	if (!message) {
-		return errorJson('OUTLETCARS.BG — Варна message thread not found', 404);
+		return errorJson('OUTLETCARS.BG message thread not found', 404);
 	}
 
 	return okJson({ message });

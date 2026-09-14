@@ -6,7 +6,7 @@ import {
 } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { ScanLine } from "lucide-react";
-import type { ReactNode } from "react";
+import type { MouseEventHandler, ReactNode } from "react";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
 import { mobileSellVehicleCopy } from "./mobile-sell-vehicle-policy";
 import { MobileServiceHelpButton } from "./mobile-service-help";
@@ -17,13 +17,15 @@ export const MobileSellVehicleHero = ({
   onOpenDetails,
   onOpenInfo,
   onOpenVin,
+  ready,
   vin,
 }: {
   inventoryShelf: ReactNode;
   locale: "bg" | "en";
-  onOpenDetails: () => void;
-  onOpenInfo: () => void;
-  onOpenVin: () => void;
+  onOpenDetails: MouseEventHandler<HTMLButtonElement>;
+  onOpenInfo: MouseEventHandler<HTMLButtonElement>;
+  onOpenVin: MouseEventHandler<HTMLButtonElement>;
+  ready: boolean;
   vin: string;
 }) => {
   const content = mobileSellVehicleCopy[locale];
@@ -33,11 +35,12 @@ export const MobileSellVehicleHero = ({
       <MobileDealerServiceHero
         helpAction={
           <MobileServiceHelpButton
+            disabled={!ready}
             onClick={onOpenInfo}
             title={content.howTitle}
           />
         }
-        imageSrc="/dealer/hero-car-1.webp"
+        imageSrc="/images/sell/day-night-mobile-studio-v1.png"
         locale={locale}
         tone="sell"
       >
@@ -47,8 +50,9 @@ export const MobileSellVehicleHero = ({
             aria-label={
               locale === "bg" ? "Въведете VIN номер" : "Enter VIN number"
             }
-            className="flex h-[52px] w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 focus-visible:outline-2 focus-visible:outline-zinc-900 focus-visible:outline-offset-2 active:bg-zinc-100"
+            className="flex h-12 w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 focus-visible:outline-2 focus-visible:outline-zinc-900 focus-visible:outline-offset-2 active:bg-zinc-100"
             data-slot="mobile-sell-vin-entry"
+            disabled={!ready}
             onClick={onOpenVin}
             type="button"
           >
@@ -57,7 +61,7 @@ export const MobileSellVehicleHero = ({
               className="size-[18px] shrink-0 text-zinc-500"
             />
             <span
-              className={`min-w-0 flex-1 truncate text-[16px] ${vin ? "text-zinc-950" : "text-zinc-500"}`}
+              className={`min-w-0 flex-1 truncate font-medium text-body ${vin ? "text-zinc-950" : "text-zinc-500"}`}
             >
               {vin || content.vin}
             </span>
@@ -74,7 +78,8 @@ export const MobileSellVehicleHero = ({
           aria-haspopup="dialog"
           className={getMobileQuickPillClassName(true, "mx-auto flex w-fit")}
           data-slot="mobile-sell-manual-entry"
-          onClick={() => onOpenDetails()}
+          disabled={!ready}
+          onClick={onOpenDetails}
           type="button"
         >
           <span>

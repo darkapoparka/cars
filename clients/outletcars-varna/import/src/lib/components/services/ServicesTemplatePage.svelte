@@ -38,7 +38,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Услуги — OUTLETCARS.BG — Варна"
+	title="Услуги — OUTLETCARS.BG"
 >
 	<ServicesContent {form} {services} />
 </AuxeroPublicShell>

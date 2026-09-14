@@ -6,14 +6,16 @@
 .dn-topbar__list li:last-child { margin-left: auto; }
 .dn-topbar__list li { display: inline-flex; align-items: center; gap: 8px; }
 .dn-topbar__list li .dn-icon { color: #666c74; }
-.dn-topbar__list a { color: #30343a; font-weight: 600; }
+.dn-topbar__list a { display: inline-flex; min-height: 44px; align-items: center; color: #30343a; font-weight: var(--dn-control-weight); }
+.dn-topbar__list a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
 .dn-header__lower { background: #fff; border-top: 1px solid rgba(20,23,29,.06); border-bottom: 1px solid rgba(20,23,29,.06); }
 .dn-header__inner { min-height: 94px; display: grid; grid-template-columns: 270px minmax(420px,1fr) auto; align-items: center; gap: 20px; }
-.dn-logo { display: inline-flex; align-items: center; }
+.dn-logo { display: inline-flex; min-height: 44px; align-items: center; }
+.dn-logo picture { display: flex; align-items: center; }
 .dn-logo img { width: auto; max-width: 230px; height: 64px; object-fit: contain; }
 .dn-nav { display: flex; justify-content: center; }
 .dn-nav__list { display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.dn-nav__list > li > a { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: var(--dn-radius-control); color: #24272c; font-size: var(--dn-text-lead); font-weight: 600; letter-spacing: -.015em; line-height: 24px; transition: background-color 160ms ease, color 160ms ease; }
+.dn-nav__list > li > a { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: var(--dn-radius-control); color: #24272c; font-size: var(--dn-text-lead); font-weight: var(--dn-control-weight); letter-spacing: var(--dn-tracking-heading); line-height: var(--dn-leading-body); transition: background-color 160ms ease, color 160ms ease; }
 .dn-nav__list > li.dn-nav__item--current > a, .dn-nav__list > li > a:hover { background: #f2f3f5; }
 .dn-header-actions { display: flex; align-items: center; gap: 10px; }
 .dn-header-actions .dn-header-action { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 0 16px; border-radius: var(--dn-radius-button); }

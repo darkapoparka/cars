@@ -35,7 +35,7 @@ export const load: PageServerLoad = ({ request, url }) => {
 		auxeroFullPage: true,
 		beforePasswordHtml: passwordSlot.beforeHtml,
 		dashboard: getAccountDashboardPageData('change-password.html', renderOptions, {
-			subtitle: 'Update account credentials for this OUTLETCARS.BG — Варна workspace.',
+			subtitle: 'Update account credentials for this OUTLETCARS.BG workspace.',
 			title: 'Profile Security'
 		}),
 		pageDocument: removeAuxeroPageDocumentBodyHtml(pageDocument),

@@ -68,7 +68,7 @@
 			]
 		},
 		{
-			title: 'Day Night Auto',
+			title: 'Promosale Varna',
 			links: [
 				{ href: '/about', label: 'За нас', icon: Info },
 				{ href: '/contact', label: 'Контакти', icon: PhoneCall },
@@ -175,7 +175,7 @@
 
 		<div class="mobile-menu-sheet__header">
 			<div>
-				<p>Day Night Auto</p>
+				<p>Promosale Varna</p>
 				<strong id="mobile-bottom-menu-title">Меню</strong>
 			</div>
 			<label

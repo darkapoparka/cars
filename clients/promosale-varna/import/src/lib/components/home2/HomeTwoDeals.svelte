@@ -10,7 +10,7 @@
 			<Zap size={54} fill="currentColor" strokeWidth={2.4} />
 			<div>
 				<h2 id="home2-deals-title">Премиум изборът е актуален</h2>
-				<p>Популярни Day Night Auto предложения, готови за сравнение и оглед.</p>
+				<p>Популярни Promosale Varna предложения, готови за сравнение и оглед.</p>
 			</div>
 		</div>
 

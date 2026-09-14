@@ -20,6 +20,7 @@
 		sectionId,
 		panel = 'dark',
 		compact = false,
+		deckWidth = 'standard',
 		artwork = 'cars',
 		rail,
 		afterPanel,
@@ -35,6 +36,7 @@
 		sectionId?: string;
 		panel?: 'dark' | 'light';
 		compact?: boolean;
+		deckWidth?: 'standard' | 'wide' | 'full';
 		artwork?: 'cars' | 'contact';
 		rail?: Snippet;
 		afterPanel?: Snippet;
@@ -53,6 +55,8 @@
 		'daynight-yellow-route-hero',
 		rail && 'daynight-yellow-route-hero--with-rail',
 		compact && 'daynight-yellow-route-hero--compact',
+		deckWidth === 'wide' && 'daynight-yellow-route-hero--deck-wide',
+		deckWidth === 'full' && 'daynight-yellow-route-hero--deck-full',
 		artwork === 'contact' && 'daynight-yellow-route-hero--contact'
 	]}
 	aria-labelledby={headingId}
@@ -66,7 +70,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							resolve('/dealer/showroom.webp'),
+							resolve('/assets/daynight-contact/contact-support-cutouts.webp'),
 							1536
 						)}
 						sizes={desktopOnlySizes('48vw')}
@@ -104,7 +108,6 @@
 		{#if copy}
 			<p>{copy}</p>
 		{/if}
-
 		{#if children || (primaryLabel && primaryHref)}
 			<div
 				class={[
@@ -284,7 +287,7 @@
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
 		font-size: var(--sa-text-desktop-hero-title);
-		font-weight: 900;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: var(--sa-tracking-desktop-hero-title);
 		line-height: var(--sa-leading-desktop-hero-title);
 		margin: 0 !important;
@@ -294,8 +297,8 @@
 
 	p {
 		color: #282313;
-		font-size: clamp(17px, 1.35vw, 20px);
-		font-weight: 650;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.4;
 		margin: 18px 0 0 !important;
 		max-width: 720px;
@@ -310,6 +313,18 @@
 		max-width: 780px;
 		padding: 14px;
 		width: 100%;
+	}
+
+	.daynight-yellow-route-hero--deck-wide .daynight-yellow-route-hero__deck {
+		max-width: 1040px;
+	}
+
+	.daynight-yellow-route-hero--deck-full .daynight-yellow-route-hero__content {
+		max-width: 1368px;
+	}
+
+	.daynight-yellow-route-hero--deck-full .daynight-yellow-route-hero__deck {
+		max-width: 1320px;
 	}
 
 	.daynight-yellow-route-hero__actions {
@@ -367,43 +382,8 @@
 		right: 0;
 	}
 
-	.daynight-yellow-route-hero__actions a {
-		align-items: center;
-		border: 1px solid transparent;
-		border-radius: 9px;
-		display: inline-flex;
-		font-size: var(--sa-text-desktop-action-sm, 16px);
-		font-weight: 800;
-		justify-content: center;
-		min-height: 48px;
-		padding: 0 20px;
-		text-decoration: none;
-		transition:
-			background-color 160ms ease,
-			border-color 160ms ease;
-	}
-
-	.daynight-yellow-route-hero__primary {
-		background: var(--sa-red);
-		color: #fff;
-	}
-
-	.daynight-yellow-route-hero__primary:hover {
-		background: var(--sa-red-strong);
-	}
-
-	.daynight-yellow-route-hero__secondary.sa-cta-ghost {
-		background: #fff;
-		color: var(--sa-ink);
-	}
-
-	.daynight-yellow-route-hero__secondary.sa-cta-ghost:hover {
-		background: #f2f2f2;
-	}
-
-	.daynight-yellow-route-hero__actions a:focus-visible {
-		outline: 3px solid #fff;
-		outline-offset: 3px;
+	.daynight-yellow-route-hero__actions .sa-cta {
+		width: 100%;
 	}
 
 	.daynight-yellow-route-hero__car {
@@ -431,8 +411,8 @@
 
 	:global(.daynight-yellow-route-hero .daynight-inventory-searchbar__label) {
 		color: #fff;
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		margin: 0 0 7px;
 		text-align: left;
 	}
@@ -452,8 +432,8 @@
 		box-sizing: border-box;
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		height: 54px;
 		min-width: 0;
 		outline: 0;
@@ -466,8 +446,8 @@
 		border-radius: 0;
 		color: #fff;
 		font-family: var(--sa-font);
-		font-size: 15px;
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	:global(.daynight-yellow-route-hero .daynight-inventory-searchbar__submit img) {
@@ -483,7 +463,7 @@
 		}
 
 		h1 {
-			font-size: clamp(44px, 5.2vw, 62px);
+			font-size: var(--sa-text-desktop-hero-title);
 		}
 	}
 

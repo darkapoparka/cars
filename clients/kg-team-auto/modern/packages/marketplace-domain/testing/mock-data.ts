@@ -1,33 +1,32 @@
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
-// Local preview snapshot. publishedAt is snapshot ordering time, not the source advert publication date.
 export const mockListings: VehicleListing[] = [
   {
-    "id": "11783754278742708",
+    "id": "am-1001",
     "slug": "toyota-yaris-742708",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11783754278742708-toyota-yaris-1-33i-116000km-6-speed-swiss-edition",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 7500.0,
+      "amount": 7500,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/11783754278742708-1.webp",
-        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION — снимка от обявата"
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
       },
       {
         "url": "/dealer/11783754278742708-2.webp",
-        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION — снимка от обявата"
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
       },
       {
         "url": "/dealer/11783754278742708-3.webp",
-        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION — снимка от обявата"
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
       }
     ],
     "badges": [
@@ -35,8 +34,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -63,14 +62,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Toyota",
       "model": "Yaris",
-      "trim": "1.33I 116000KM 6-SPEED SWISS EDITION",
       "year": 2014,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 116000,
       "mileageUnit": "km",
-      "enginePowerHp": 99,
       "colorExterior": "Черен"
     },
     "seller": {
@@ -78,37 +75,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "21785829117309786",
+    "id": "am-1010",
     "slug": "nissan-qashqai-309786",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-21785829117309786-nissan-qashqai-2-0i-131000km-automatic",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 7700.0,
+      "amount": 7700,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/21785829117309786-1.webp",
-        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC — снимка от обявата"
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
       },
       {
         "url": "/dealer/21785829117309786-2.webp",
-        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC — снимка от обявата"
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
       },
       {
         "url": "/dealer/21785829117309786-3.webp",
-        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC — снимка от обявата"
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
       }
     ],
     "badges": [
@@ -116,8 +112,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -140,14 +136,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Nissan",
       "model": "Qashqai",
-      "trim": "2.0i 131000KM AUTOMATIC",
       "year": 2014,
       "bodyType": "suv",
       "fuelType": "gasoline",
       "transmission": "automatic",
       "mileageValue": 131000,
       "mileageUnit": "km",
-      "enginePowerHp": 141,
       "colorExterior": "Перла"
     },
     "seller": {
@@ -155,37 +149,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "11678716951277480",
+    "id": "am-1011",
     "slug": "mitsubishi-colt-277480",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Mitsubishi Colt 1.5 I SWISS",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11678716951277480-mitsubishi-colt-1-5-i-swiss",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 2700.0,
+      "amount": 2700,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/11678716951277480-1.webp",
-        "alt": "Mitsubishi Colt 1.5 I SWISS — снимка от обявата"
+        "alt": "Mitsubishi Colt 1.5 I SWISS"
       },
       {
         "url": "/dealer/11678716951277480-2.webp",
-        "alt": "Mitsubishi Colt 1.5 I SWISS — снимка от обявата"
+        "alt": "Mitsubishi Colt 1.5 I SWISS"
       },
       {
         "url": "/dealer/11678716951277480-3.webp",
-        "alt": "Mitsubishi Colt 1.5 I SWISS — снимка от обявата"
+        "alt": "Mitsubishi Colt 1.5 I SWISS"
       }
     ],
     "badges": [
@@ -193,8 +186,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -209,14 +202,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Mitsubishi",
       "model": "Colt",
-      "trim": "1.5 I SWISS",
       "year": 2007,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 189000,
       "mileageUnit": "km",
-      "enginePowerHp": 109,
       "colorExterior": "Бял"
     },
     "seller": {
@@ -224,37 +215,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "11773570472954394",
+    "id": "am-1012",
     "slug": "mini-cooper-954394",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Mini Cooper 1.6i 153000km EURO-5 75PS.",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11773570472954394-mini-cooper-1-6i-153000km-euro-5-75ps",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 4950.0,
+      "amount": 4950,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/11773570472954394-1.webp",
-        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS. — снимка от обявата"
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
       },
       {
         "url": "/dealer/11773570472954394-2.webp",
-        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS. — снимка от обявата"
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
       },
       {
         "url": "/dealer/11773570472954394-3.webp",
-        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS. — снимка от обявата"
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
       }
     ],
     "badges": [
@@ -262,8 +252,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -286,14 +276,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Mini",
       "model": "Cooper",
-      "trim": "1.6i 153000km EURO-5 75PS.",
       "year": 2013,
       "bodyType": "coupe",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 153000,
       "mileageUnit": "km",
-      "enginePowerHp": 75,
       "colorExterior": "Черен"
     },
     "seller": {
@@ -301,37 +289,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "11780222156478967",
+    "id": "am-1013",
     "slug": "honda-jazz-478967",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11780222156478967-honda-jazz-1-4-si-automatic-sport-edition",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 7950.0,
+      "amount": 7950,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/11780222156478967-1.webp",
-        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION — снимка от обявата"
+        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION"
       },
       {
         "url": "/dealer/11780222156478967-2.webp",
-        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION — снимка от обявата"
+        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION"
       },
       {
         "url": "/dealer/11780222156478967-3.webp",
-        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION — снимка от обявата"
+        "alt": "Honda Jazz 1.4-SI AUTOMATIC SPORT EDITION"
       }
     ],
     "badges": [
@@ -339,8 +326,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -359,14 +346,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Honda",
       "model": "Jazz",
-      "trim": "1.4-SI AUTOMATIC SPORT EDITION",
       "year": 2013,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "automatic",
       "mileageValue": 145000,
       "mileageUnit": "km",
-      "enginePowerHp": 99,
       "colorExterior": "Черен"
     },
     "seller": {
@@ -374,37 +359,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "21788253346975689",
+    "id": "am-1014",
     "slug": "honda-cr-v-975689",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-21788253346975689-honda-cr-v-2-2-i-ctdi-177000km-executiv",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 7500.0,
+      "amount": 7500,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/21788253346975689-1.webp",
-        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV — снимка от обявата"
+        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV"
       },
       {
         "url": "/dealer/21788253346975689-2.webp",
-        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV — снимка от обявата"
+        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV"
       },
       {
         "url": "/dealer/21788253346975689-3.webp",
-        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV — снимка от обявата"
+        "alt": "Honda Cr-v 2.2 I-CTDI 177000KM EXECUTIV"
       }
     ],
     "badges": [
@@ -412,8 +396,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -448,14 +432,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Honda",
       "model": "Cr-v",
-      "trim": "2.2 I-CTDI 177000KM EXECUTIV",
       "year": 2009,
       "bodyType": "suv",
       "fuelType": "diesel",
       "transmission": "manual",
       "mileageValue": 177000,
       "mileageUnit": "km",
-      "enginePowerHp": 140,
       "colorExterior": "Сив"
     },
     "seller": {
@@ -463,37 +445,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "11782979504874945",
+    "id": "am-1002",
     "slug": "vw-golf-874945",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11782979504874945-vw-golf-vi-tdi-swiss-edition-6-speed-4x4",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 5999.0,
+      "amount": 5999,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/11782979504874945-1.webp",
-        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4 — снимка от обявата"
+        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4"
       },
       {
         "url": "/dealer/11782979504874945-2.webp",
-        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4 — снимка от обявата"
+        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4"
       },
       {
         "url": "/dealer/11782979504874945-3.webp",
-        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4 — снимка от обявата"
+        "alt": "VW Golf VI-TDI SWISS EDITION 6-SPEED 4X4"
       }
     ],
     "badges": [
@@ -501,8 +482,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -529,14 +510,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "VW",
       "model": "Golf",
-      "trim": "VI-TDI SWISS EDITION 6-SPEED 4X4",
       "year": 2013,
       "bodyType": "wagon",
       "fuelType": "diesel",
       "transmission": "manual",
       "mileageValue": 197000,
       "mileageUnit": "km",
-      "enginePowerHp": 105,
       "colorExterior": "Бял"
     },
     "seller": {
@@ -544,37 +523,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "11778753257201470",
+    "id": "am-1003",
     "slug": "toyota-auris-201470",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Toyota Auris 1.8 HSD 181000KM EURO5",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11778753257201470-toyota-auris-1-8-hsd-181000km-euro5",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 7500.0,
+      "amount": 7500,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/11778753257201470-1.webp",
-        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5 — снимка от обявата"
+        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5"
       },
       {
         "url": "/dealer/11778753257201470-2.webp",
-        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5 — снимка от обявата"
+        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5"
       },
       {
         "url": "/dealer/11778753257201470-3.webp",
-        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5 — снимка от обявата"
+        "alt": "Toyota Auris 1.8 HSD 181000KM EURO5"
       }
     ],
     "badges": [
@@ -582,8 +560,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -614,14 +592,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Toyota",
       "model": "Auris",
-      "trim": "1.8 HSD 181000KM EURO5",
       "year": 2011,
       "bodyType": "hatchback",
       "fuelType": "hybrid",
       "transmission": "automatic",
       "mileageValue": 181000,
       "mileageUnit": "km",
-      "enginePowerHp": 99,
       "colorExterior": "Бял"
     },
     "seller": {
@@ -629,37 +605,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "11777536762184091",
+    "id": "am-1004",
     "slug": "suzuki-swift-184091",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Suzuki Swift 1.3i 151000km. SWISS EDITION",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11777536762184091-suzuki-swift-1-3i-151000km-swiss-edition",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 4500.0,
+      "amount": 4500,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/11777536762184091-1.webp",
-        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION — снимка от обявата"
+        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION"
       },
       {
         "url": "/dealer/11777536762184091-2.webp",
-        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION — снимка от обявата"
+        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION"
       },
       {
         "url": "/dealer/11777536762184091-3.webp",
-        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION — снимка от обявата"
+        "alt": "Suzuki Swift 1.3i 151000km. SWISS EDITION"
       }
     ],
     "badges": [
@@ -667,8 +642,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -683,14 +658,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Suzuki",
       "model": "Swift",
-      "trim": "1.3i 151000km. SWISS EDITION",
       "year": 2010,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 151000,
       "mileageUnit": "km",
-      "enginePowerHp": 92,
       "colorExterior": "Черен"
     },
     "seller": {
@@ -698,37 +671,36 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "11701247770704576",
+    "id": "am-1005",
     "slug": "subaru-impreza-704576",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
     "title": "Subaru Impreza 2.0i SWISS EDITION",
-    "description": "Примерни обяви към 09.09.2026 г. Не са жив каталог. Потвърдете цена, наличност и данни с продавача. Източник: https://team-auto.mobile.bg/obiava-11701247770704576-subaru-impreza-2-0i-swiss-edition",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "price": {
-      "amount": 3300.0,
+      "amount": 3300,
       "currency": "EUR"
     },
     "priceType": "fixed",
     "images": [
       {
         "url": "/dealer/11701247770704576-1.webp",
-        "alt": "Subaru Impreza 2.0i SWISS EDITION — снимка от обявата"
+        "alt": "Subaru Impreza 2.0i SWISS EDITION"
       },
       {
         "url": "/dealer/11701247770704576-2.webp",
-        "alt": "Subaru Impreza 2.0i SWISS EDITION — снимка от обявата"
+        "alt": "Subaru Impreza 2.0i SWISS EDITION"
       },
       {
         "url": "/dealer/11701247770704576-3.webp",
-        "alt": "Subaru Impreza 2.0i SWISS EDITION — снимка от обявата"
+        "alt": "Subaru Impreza 2.0i SWISS EDITION"
       }
     ],
     "badges": [
@@ -736,8 +708,8 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Пловдив",
-      "region": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-      "country": "България"
+      "region": "Пловдив",
+      "country": "BG"
     },
     "features": [
       {
@@ -760,14 +732,12 @@ export const mockListings: VehicleListing[] = [
     "spec": {
       "make": "Subaru",
       "model": "Impreza",
-      "trim": "2.0i SWISS EDITION",
       "year": 2007,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 207000,
       "mileageUnit": "km",
-      "enginePowerHp": 160,
       "colorExterior": "Светло сив"
     },
     "seller": {
@@ -775,13 +745,304 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "K-G Team Auto",
       "verificationStatus": "unverified",
-      "city": "Пловдив",
-      "logoUrl": "/dealer/logo.png"
+      "city": "Пловдив"
     },
-    "publishedAt": "2026-09-09T00:00:00.000Z",
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1006",
+    "slug": "toyota-yaris-742708",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "price": {
+      "amount": 7500,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/11783754278742708-1.webp",
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
+      },
+      {
+        "url": "/dealer/11783754278742708-2.webp",
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
+      },
+      {
+        "url": "/dealer/11783754278742708-3.webp",
+        "alt": "Toyota Yaris 1.33I 116000KM 6-SPEED SWISS EDITION"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Пловдив",
+      "country": "BG"
+    },
+    "features": [
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатик",
+        "en": "Климатик"
+      }
+    ],
+    "spec": {
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": 2014,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 116000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1007",
+    "slug": "nissan-qashqai-309786",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Nissan Qashqai 2.0i 131000KM AUTOMATIC",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "price": {
+      "amount": 7700,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/21785829117309786-1.webp",
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
+      },
+      {
+        "url": "/dealer/21785829117309786-2.webp",
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
+      },
+      {
+        "url": "/dealer/21785829117309786-3.webp",
+        "alt": "Nissan Qashqai 2.0i 131000KM AUTOMATIC"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Пловдив",
+      "country": "BG"
+    },
+    "features": [
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      }
+    ],
+    "spec": {
+      "make": "Nissan",
+      "model": "Qashqai",
+      "year": 2014,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 131000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
+    },
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1008",
+    "slug": "mitsubishi-colt-277480",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Mitsubishi Colt 1.5 I SWISS",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "price": {
+      "amount": 2700,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/11678716951277480-1.webp",
+        "alt": "Mitsubishi Colt 1.5 I SWISS"
+      },
+      {
+        "url": "/dealer/11678716951277480-2.webp",
+        "alt": "Mitsubishi Colt 1.5 I SWISS"
+      },
+      {
+        "url": "/dealer/11678716951277480-3.webp",
+        "alt": "Mitsubishi Colt 1.5 I SWISS"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Пловдив",
+      "country": "BG"
+    },
+    "features": [
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Климатик",
+        "en": "Климатик"
+      }
+    ],
+    "spec": {
+      "make": "Mitsubishi",
+      "model": "Colt",
+      "year": 2007,
+      "bodyType": "hatchback",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 189000,
+      "mileageUnit": "km",
+      "colorExterior": "Бял"
+    },
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1009",
+    "slug": "mini-cooper-954394",
+    "category": "car",
+    "dealerOrgId": "dealer-kg-team-auto",
+    "status": "active",
+    "title": "Mini Cooper 1.6i 153000km EURO-5 75PS.",
+    "description": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+    "price": {
+      "amount": 4950,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/11773570472954394-1.webp",
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
+      },
+      {
+        "url": "/dealer/11773570472954394-2.webp",
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
+      },
+      {
+        "url": "/dealer/11773570472954394-3.webp",
+        "alt": "Mini Cooper 1.6i 153000km EURO-5 75PS."
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Пловдив",
+      "region": "Пловдив",
+      "country": "BG"
+    },
+    "features": [
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Система ISOFIX",
+        "en": "Система ISOFIX"
+      },
+      {
+        "bg": "Сервизна книжка",
+        "en": "Сервизна книжка"
+      },
+      {
+        "bg": "Климатроник",
+        "en": "Климатроник"
+      }
+    ],
+    "spec": {
+      "make": "Mini",
+      "model": "Cooper",
+      "year": 2013,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "manual",
+      "mileageValue": 153000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
+    },
+    "seller": {
+      "id": "dealer-kg-team-auto",
+      "type": "dealer",
+      "displayName": "K-G Team Auto",
+      "verificationStatus": "unverified",
+      "city": "Пловдив"
+    },
+    "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [
@@ -898,7 +1159,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds: string[] = [];
+export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
@@ -913,7 +1174,48 @@ export interface MockSavedSearch {
   title: string;
 }
 
-export const mockSavedSearches: MockSavedSearch[] = [];
+export const mockSavedSearches: MockSavedSearch[] = [
+  {
+    id: "saved-search-premium-suv",
+    title: "Premium SUVs under 100k",
+    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
+    filters: {
+      body: "suv",
+      category: "car",
+      priceMax: 100_000,
+      seller: "dealer",
+    },
+    cadence: "daily",
+    newMatches: 3,
+    lastRunAt: "2026-06-06T07:00:00.000Z",
+  },
+  {
+    id: "saved-search-lease-ev",
+    title: "Lease-ready EVs",
+    description: "Electric lease offers with automatic transmission.",
+    filters: {
+      category: "lease",
+      fuel: "electric",
+      transmission: "automatic",
+    },
+    cadence: "instant",
+    newMatches: 1,
+    lastRunAt: "2026-06-07T06:30:00.000Z",
+  },
+  {
+    id: "saved-search-family-varna",
+    title: "Family cars near Varna",
+    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
+    filters: {
+      category: "car",
+      location: "Varna",
+      mileageMax: 90_000,
+    },
+    cadence: "weekly",
+    newMatches: 0,
+    lastRunAt: "2026-06-03T08:00:00.000Z",
+  },
+];
 
 const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
   "am-1001": "active",
@@ -948,7 +1250,48 @@ export interface MockDealerLead {
   status: "new" | "contacted" | "qualified" | "closed";
 }
 
-export const mockDealerLeads: MockDealerLead[] = [];
+export const mockDealerLeads: MockDealerLead[] = [
+  {
+    buyerName: "Nikolay Petrov",
+    id: "lead-1001",
+    intent: "finance",
+    listingId: "am-1001",
+    listingTitle: "2020 BMW X5 M50d",
+    receivedAt: "2026-06-07T07:30:00.000Z",
+    source: "listing",
+    status: "new",
+  },
+  {
+    buyerName: "Elena Dimitrova",
+    id: "lead-1002",
+    intent: "test_drive",
+    listingId: "am-1003",
+    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
+    receivedAt: "2026-06-06T15:20:00.000Z",
+    source: "saved_search",
+    status: "contacted",
+  },
+  {
+    buyerName: "Martin Georgiev",
+    id: "lead-1003",
+    intent: "availability",
+    listingId: "am-1008",
+    listingTitle: "2020 Mercedes-Benz AMG GT 43",
+    receivedAt: "2026-06-05T12:10:00.000Z",
+    source: "dealer_profile",
+    status: "qualified",
+  },
+  {
+    buyerName: "Iva Marinova",
+    id: "lead-1004",
+    intent: "trade_in",
+    listingId: "am-1005",
+    listingTitle: "2018 Mercedes-Benz V 250d VIP Business",
+    receivedAt: "2026-06-04T09:45:00.000Z",
+    source: "listing",
+    status: "closed",
+  },
+];
 
 export const getMockDealerStats = () => {
   const inventory = getMockDealerInventory();
@@ -986,7 +1329,64 @@ export interface MockModerationReport {
   status: "new" | "reviewing" | "resolved" | "dismissed";
 }
 
-export const mockModerationReports: MockModerationReport[] = [];
+export const mockModerationReports: MockModerationReport[] = [
+  {
+    id: "report-1001",
+    listingId: "am-1003",
+    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
+    reason: "incorrect_details",
+    details:
+      "Buyer says lease terms in the message thread do not match the listing price.",
+    reporter: "Elena Dimitrova",
+    source: "buyer_report",
+    status: "new",
+    severity: "high",
+    flags: ["Lease price mismatch", "Recent edit", "High intent lead"],
+    createdAt: "2026-06-07T09:20:00.000Z",
+  },
+  {
+    id: "report-1002",
+    listingId: "am-1006",
+    listingTitle: "2021 Range Rover Sport SVR",
+    reason: "duplicate",
+    details:
+      "System found matching photos and mileage on another active dealer listing.",
+    reporter: "System",
+    source: "system_flag",
+    status: "reviewing",
+    severity: "medium",
+    flags: ["Photo reuse", "Similar VIN pattern"],
+    createdAt: "2026-06-07T06:45:00.000Z",
+  },
+  {
+    id: "report-1003",
+    listingId: "am-1002",
+    listingTitle: "2021 Mercedes-Benz GLE 400d Coupe",
+    reason: "seller_behavior",
+    details:
+      "Reporter says seller asked to move payment to an unverified channel.",
+    reporter: "Nikolay Petrov",
+    source: "buyer_report",
+    status: "new",
+    severity: "high",
+    flags: ["Payment risk", "Private seller"],
+    createdAt: "2026-06-06T17:30:00.000Z",
+  },
+  {
+    id: "report-1004",
+    listingId: "am-1008",
+    listingTitle: "2020 Mercedes-Benz AMG GT 43",
+    reason: "prohibited_content",
+    details:
+      "Admin review flagged promotional copy that may overstate warranty coverage.",
+    reporter: "Admin review",
+    source: "admin_review",
+    status: "dismissed",
+    severity: "low",
+    flags: ["Copy review"],
+    createdAt: "2026-06-05T12:10:00.000Z",
+  },
+];
 
 export interface MockTrustReview {
   city: string;

@@ -10,7 +10,9 @@
 	// The breadcrumb chevron imgs are replaced with lucide's ChevronRight.
 
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import { ChevronRight, Mail, Share2 } from '@lucide/svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import type { DayNightArticle } from '$lib/data/daynight-blog';
 
@@ -21,8 +23,6 @@
 	const relatedArticles = $derived(
 		articles.filter((candidate) => candidate.slug !== article.slug).slice(0, 3)
 	);
-	const secondaryArticle = $derived(relatedArticles[0] ?? article);
-	const tertiaryArticle = $derived(relatedArticles[1] ?? secondaryArticle);
 	const adjacentArticles = $derived.by(() => {
 		const sourceArticles = articles.length ? articles : [article];
 		const index = sourceArticles.findIndex((candidate) => candidate.slug === article.slug);
@@ -33,7 +33,7 @@
 			next: sourceArticles[(safeIndex + 1) % sourceArticles.length]
 		};
 	});
-	const shareUrl = $derived(`https://asko96.mobile.bg/blog/${article.slug}`);
+	const shareUrl = $derived(`${page.url.origin}${resolve('/blog/[slug]', { slug: article.slug })}`);
 	const encodedShareUrl = $derived(encodeURIComponent(shareUrl));
 	const encodedShareTitle = $derived(encodeURIComponent(article.title));
 	const facebookShareLinkProps = $derived({
@@ -60,7 +60,7 @@
 
 {#snippet articleMeta()}
 	<ul class="bloc-details-tag-style-2 mb-40">
-		<li><a class="h7" href={resolve('/about/daynight-auto-plovdiv')}>{article.author}</a></li>
+		{#if article.author}<li><span class="h7">{article.author}</span></li>{/if}
 		<li><a class="h7" href={resolve('/blog')}>{formatArticleDate(article.date)}</a></li>
 		<li>
 			<a class="h7" href={resolve(filterHref('category', article.category))}>{article.category}</a>
@@ -96,7 +96,7 @@
 		<div class="content">
 			<p class="h5 title mb-8 text-white">{related.title}</p>
 			<div class="blog-related-meta flex justify-start gap-8">
-				<span class="text-xs text-white">от {related.author}</span>
+				{#if related.author}<span class="text-xs text-white">от {related.author}</span>{/if}
 				<span class="text-xs text-white">{formatArticleDate(related.date)}</span>
 				<span class="text-highlight text-underline text-xs uppercase">{related.category}</span>
 			</div>
@@ -105,6 +105,16 @@
 {/snippet}
 
 <div class="blog-article-page">
+	<DesktopYellowRouteHero
+		headingId="blog-article-route-title"
+		title={article.title}
+		copy={`${article.category} · ${formatArticleDate(article.date)}`}
+		primaryLabel="Всички публикации"
+		primaryHref="/blog"
+		secondaryLabel="Свържете се"
+		secondaryHref="/contact"
+		compact
+	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
@@ -117,7 +127,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="blog-article-main">
 		<div class="bloc-details-container">
 			<h1 class="title-2 mb-16 text-center">{article.title}</h1>
 			{@render articleMeta()}
@@ -130,43 +140,12 @@
 			/>
 			<p class="h7 text-secondary line-height-28 mb-28">{article.description}</p>
 
-			<div class="quote mb-28">
-				<div class="content">
-					<p class="h4 mb-14 capitalize">
-						"Провереният избор започва с документи, история, реален оглед и ясен бюджет."
-					</p>
-					<p class="h7 flex items-center gap-8">
-						<img src="/assets/icons/line.svg" alt="" aria-hidden="true" />
-						АСКО 96
-					</p>
-				</div>
-				<img class="icon-quote" src="/assets/icons/quote.svg" alt="" aria-hidden="true" />
-			</div>
-
-			<p class="text-secondary h7 line-height-28 mb-40">
-				{article.summary[0] ?? article.description}
-			</p>
-
-			<div class="md-grid-cols-1 mb-40 grid grid-cols-2 gap-20">
-				<div>
-					<img class="radius-20 flex" src={secondaryArticle.image} alt={secondaryArticle.title} />
-				</div>
-				<div>
-					<img class="radius-20 flex" src={tertiaryArticle.image} alt={tertiaryArticle.title} />
-				</div>
-			</div>
-
 			{#each article.sections as section (section.heading)}
-				<p class="h4 mb-12">{section.heading}</p>
+				<h2 class="h4 mb-12">{section.heading}</h2>
 				{#each section.paragraphs as paragraph (paragraph)}
 					<p class="text-secondary h7 line-height-28 mb-28">{paragraph}</p>
 				{/each}
 			{/each}
-
-			<p class="h4 mb-12">Заключение</p>
-			<p class="text-secondary h7 line-height-28 mb-40">
-				{article.summary.at(-1) ?? article.description}
-			</p>
 
 			<div class="md-flex-col mb-40 flex justify-between gap-16">
 				<ul class="blog-detail-tags flex gap-12">
@@ -181,12 +160,12 @@
 			<div class="divider mb-40"></div>
 			<div class="mb-40">
 				<div class="listing-details--contact-dealer mb-20">
-					<img src="/assets/asko96/asko96-wordmark.png" alt={daynightSite.shortName} />
+					<img src={daynightSite.logoLight} alt={daynightSite.shortName} />
 					<div class="content">
 						<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-4">
-							АСКО 96
+							{daynightSite.shortName}
 						</a>
-						<p class="text-secondary mb-18">Автокъща в София</p>
+						<p class="text-secondary mb-18">Автокъща в {daynightSite.city}</p>
 						{#if daynightSite.email}
 							<a href={`mailto:${daynightSite.email}`} class="text-highlight text-sm">
 								{daynightSite.email}
@@ -195,8 +174,8 @@
 					</div>
 				</div>
 				<p class="h7 line-height-28">
-					АСКО 96 публикува практични съвети и новини за наличност, покупка, оглед, документи,
-					регистрация и финансиране на употребявани автомобили в София.
+					Имате въпрос за конкретен автомобил? <a href={resolve('/contact')}>Свържете се с екипа</a> и
+					посочете обявата, която ви интересува.
 				</p>
 			</div>
 
@@ -242,6 +221,17 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.blog-article-page > .background-light,
+		.blog-article-main .title-2 {
+			display: none;
+		}
+
+		.blog-article-main {
+			padding-top: var(--sa-space-10);
+		}
+	}
+
 	/* Self-contained scoped styles for /blog/[slug]. Reproduce the legacy app.css +
 	   StorefrontTemplateContent :global rules for the verbatim class strings used
 	   above. Brand colours route through tokens (--sa-*); template neutrals stay
@@ -250,9 +240,9 @@
 	.blog-article-page {
 		box-sizing: border-box;
 		color: #1c1c1c;
-		font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
-		font-size: 16px;
-		font-weight: 400;
+		font-family: var(--sa-font);
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 		letter-spacing: 0;
 	}
@@ -351,10 +341,6 @@
 		display: grid;
 	}
 
-	.grid-cols-2 {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
 	.grid-cols-3 {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
@@ -385,10 +371,6 @@
 
 	.gap-16 {
 		gap: 16px;
-	}
-
-	.gap-20 {
-		gap: 20px;
 	}
 
 	.gap-24 {
@@ -429,7 +411,7 @@
 	}
 
 	.text-highlight {
-		color: var(--sa-blue, var(--sa-red));
+		color: var(--sa-blue, #b00000);
 	}
 
 	.text-underline {
@@ -438,12 +420,12 @@
 	}
 
 	.text-sm {
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 1.45;
 	}
 
 	.text-xs {
-		font-size: 12px;
+		font-size: var(--sa-text-caption);
 		line-height: 1.35;
 	}
 
@@ -452,50 +434,50 @@
 	}
 
 	.font-weight-500 {
-		font-weight: 500;
+		font-weight: var(--sa-weight-medium);
 	}
 
 	.font-weight-600 {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	/* Heading utilities — app.css forced 600 on the heading group; StorefrontTemplate
 	   Content re-set .h4/.h5 to 650 (winning at source order) while .h7 stayed 600. */
 	.h4 {
-		font-size: 22px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-card-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.25;
 	}
 
 	.h5 {
-		font-size: 18px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
 	.h7 {
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.6;
 	}
 
 	.title-2 {
-		font-size: clamp(34px, 4vw, 54px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.08;
 	}
 
 	.blog-article-page h1 {
 		color: #111827;
-		font-weight: 700;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 		text-align: center;
 	}
 
-	.blog-article-page h2 {
+	.blog-article-page h2:not(.h4) {
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 	}
 
@@ -508,16 +490,16 @@
 		gap: 10px;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 		list-style: none;
 	}
 
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
-		font-weight: 400;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 22px;
 	}
 
@@ -550,23 +532,6 @@
 		object-fit: cover;
 	}
 
-	/* Pull quote */
-	.quote {
-		position: relative;
-		border: 1px solid #e3e6ea;
-		border-radius: 8px;
-		background: #f5f7fb;
-		padding: 26px;
-	}
-
-	.quote .icon-quote {
-		position: absolute;
-		right: 24px;
-		bottom: 20px;
-		width: 42px;
-		opacity: 0.18;
-	}
-
 	/* Tag + share rows */
 	.bloc-details-tag-style-2,
 	.blog-detail-tags,
@@ -593,13 +558,13 @@
 		background: #fff;
 		color: #344054;
 		padding: 10px 12px;
-		font-weight: var(--sa-weight-semibold);
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.blog-detail-tags a:hover {
-		border-color: var(--sa-blue, var(--sa-red));
+		border-color: var(--sa-blue, #b00000);
 		background: #eef4ff;
-		color: var(--sa-blue, var(--sa-red));
+		color: var(--sa-blue, #b00000);
 	}
 
 	.blog-detail-social a :global(svg) {
@@ -621,7 +586,7 @@
 		border-radius: 12px;
 		background: #fff;
 		padding: 20px;
-		box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+		box-shadow: none;
 	}
 
 	.listing-details--contact-dealer img {
@@ -679,48 +644,88 @@
 	}
 
 	@media (max-width: 991px) {
-		.bloc-details-container .title-2 {
-			font-size: 32px;
-			line-height: 1.12;
+		.blog-article-page .container,
+		.blog-article-page .bloc-details-container {
+			width: calc(100% - 2 * var(--sa-mobile-gutter-wide));
+			padding: 0;
+		}
+		.blog-article-page .breadcrumb {
+			min-height: var(--sa-mobile-action-h);
+			padding-block: var(--sa-mobile-gap-xs);
+			gap: var(--sa-mobile-gap-sm);
+		}
+		.blog-article-page .bloc-details-container .title-2 {
+			font-size: var(--sa-mobile-type-page-title);
+			line-height: var(--sa-mobile-leading-heading);
 			text-align: left;
 		}
-
-		.bloc-details-tag-style-2 {
+		.blog-article-page h2:not(.h4) {
+			font-size: var(--sa-mobile-type-section-title);
+			line-height: 1.25;
+		}
+		.blog-article-page .h4,
+		.blog-article-page .h5 {
+			font-size: var(--sa-mobile-type-feature-title);
+			line-height: var(--sa-mobile-leading-heading);
+		}
+		.blog-article-page .h7 {
+			font-size: var(--sa-mobile-type-input);
+			font-weight: var(--sa-weight-regular);
+			line-height: var(--sa-leading-body);
+		}
+		.blog-article-page .text-secondary {
+			color: var(--sa-ink-soft);
+		}
+		.blog-article-page .bloc-details-tag-style-2 {
 			justify-content: flex-start;
 		}
-	}
-
-	@media (max-width: 767px) {
-		.container {
-			width: min(100% - 32px, 1320px);
+		.blog-article-page .py-100 {
+			padding-block: var(--sa-space-8);
 		}
-
-		.bloc-details-container {
-			width: min(100% - 32px, 930px);
+		.blog-article-page .md-grid-cols-1,
+		.blog-article-page .grid-cols-3 {
+			grid-template-columns: minmax(0, 1fr);
 		}
-
-		.py-100 {
-			padding-top: 56px;
-			padding-bottom: 56px;
-		}
-
-		.md-grid-cols-1,
-		.grid-cols-2,
-		.grid-cols-3 {
-			grid-template-columns: 1fr;
-		}
-
-		.md-flex-col {
+		.blog-article-page .md-flex-col {
 			flex-direction: column;
 		}
-
-		.blog-detail-recentpost {
+		.blog-article-page .blog-detail-recentpost {
 			align-items: flex-start;
 			flex-direction: column;
+			gap: var(--sa-mobile-gap-lg);
 		}
-
-		.blog-detail-recentpost > div {
+		.blog-article-page .blog-detail-recentpost > div {
 			max-width: none;
+		}
+		.blog-article-page .blog-detail-tags a,
+		.blog-article-page .blog-detail-social a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: var(--sa-mobile-action-h);
+			min-width: var(--sa-mobile-action-h);
+		}
+		.blog-article-page .post-style-2 {
+			min-height: 230px;
+		}
+		.blog-article-page .post-style-2 .content {
+			padding: var(--sa-mobile-gap-lg);
+		}
+		.blog-article-page .post-style-2 .blog-related-meta {
+			color: var(--sa-surface);
+			font-size: var(--sa-mobile-type-meta);
+		}
+		.blog-article-page .listing-details--contact-dealer {
+			padding: var(--sa-mobile-gap-lg);
+			gap: var(--sa-mobile-gap-md);
+			grid-template-columns: 72px minmax(0, 1fr);
+		}
+		.blog-article-page .listing-details--contact-dealer img {
+			width: 72px;
+			height: auto;
+		}
+		.blog-article-page .mb-40 {
+			margin-bottom: var(--sa-mobile-page-gap);
 		}
 	}
 </style>

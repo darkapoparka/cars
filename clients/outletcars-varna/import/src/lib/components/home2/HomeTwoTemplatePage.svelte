@@ -58,14 +58,14 @@
 	});
 </script>
 
-<AuxeroHead assets={pageDocument.headAssets} title="OUTLETCARS.BG — Варна Marketplace | Home2" />
+<AuxeroHead assets={pageDocument.headAssets} title="OUTLETCARS.BG Marketplace | Home2" />
 <svelte:element this={'script'}>
 	{bodyClassScript}
 </svelte:element>
 <svelte:head>
 	<meta
 		name="description"
-		content="Купи, продай или внеси автомобил с OUTLETCARS.BG — Варна през Carwow-вдъхновена marketplace начална страница."
+		content="Купи, продай или внеси автомобил с OUTLETCARS.BG през Carwow-вдъхновена marketplace начална страница."
 	/>
 </svelte:head>
 

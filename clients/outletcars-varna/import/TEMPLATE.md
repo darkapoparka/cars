@@ -1,58 +1,65 @@
-# Import
+# Template reference — Import
 
-Key: `import` · version: `2026.09.06-baseline` · family: `auxero`.
+## Identity
 
-Dark Day & Night source baseline with buy/import/sell journeys. Related to showroom; not an entirely independent template family.
+- Repository: `darkapoparka/cars-template-import`
+- Key: `import`
+- Role: Design 2 option in an Import trio
+- Design position: import/sourcing specialist for dealers that actively sell the import journey
+- Stack: SvelteKit + Vite (Auxero-derived)
+- Primary entry: `/`
+- Suggested standalone review port: `6464`
 
-## Status
+This is a **template master**, not a sendable dealer demo. The baseline intentionally preserves source/sample material for design fidelity; every lead copy requires a complete identity and content sweep.
 
-source-branded-candidate. Source branding/demo content is retained as a visual baseline. This is a candidate for personalization, not a finished generic config-driven template or a sendable lead demo.
+## Install and run
 
-## Provenance
-
-M:\codex\agency-os-projects\leads\automotive\day-night-auto-group\bohemcars-style; 48facd336a99647988bc55419eef2f4bbdfa362e plus current uncommitted files
-
-Existing license/asset notes remain with the source. No new multi-client rights determination was made. Source instructions and old project task ledgers are historical; J:/cars/AGENTS.md governs this copy.
-
-## Run
-
-Run `npm ci` using the retained lockfile.
-
-From J:/cars, on a free port:
-
-```powershell
-./scripts/start-preview.ps1 -Template import -Port 6464
+```text
+npm ci
+npm run dev -- --host 127.0.0.1 --port 6464 --strictPort
 ```
 
-Suggested library URL: http://127.0.0.1:6464/. The suggestion is not proof that a listener is running; see the audit runtime record. Original inspected source port: 6518.
+## Primary personalization surface
 
-`npm run check` and `npm run build` for application changes.
-
-## Real homepage choices
-
-- `main`: `/`
-
-Copy the whole project to retain all variants. Select a primary entry after copying; retain alternate-home choice links when requested.
-
-## Personalization boundaries
+Shared customer typography follows [Typography](docs/TYPOGRAPHY.md).
 
 - `src/lib/data/daynight.ts`
 - `src/lib/data/daynight-listings.json`
 - `src/lib/data/vehicles.ts`
-- `src/lib/styles`
-- `static`
+- `src/lib/styles/`
+- `static/assets/daynight/`
+- `static/`
 
-These are current code/data ownership locations, not a promise that one config edits the whole app. Scan every retained route, metadata, contact value and identity-bearing asset after changes.
-
-Preserve the Auxero-derived route structure, the compact mobile shell and existing search/filter contracts. Central source data is in daynight.ts/daynight-listings.json, with additional template identity in routes and assets. This is related to showroom, not an independent design family.
+Do not assume these are the only identity consumers. Search every retained route, data module, metadata definition and static asset before declaring a skin complete.
 
 ## Representative QA routes
 
 - `/`
 - `/inventory`
-- `/inventory/21764342419542174`
 - `/contact`
 - `/sell-your-car`
 - `/financing`
+- `/import`
 
-Use 390 and 1440 px, plus every offered home. Exercise navigation, filters, detail return, overlay dismissal and the main contact path. Existing source data and frontend feedback do not prove real form delivery or a working provider integration.
+## Required checks
+
+- `npm run check`
+- `npm run build`
+
+## Inquiry persistence
+
+Optional Neon-backed inquiry storage and private template admin access are documented in [Inquiry database](docs/INQUIRY-DATABASE.md). Without database configuration the synthetic preview remains in memory. Saving is separate from notification delivery.
+
+## Current constraints
+
+Use Import as Design 2 in the intentional Auto Best / Import / Carwow trio when it fits the dealer’s real offer.
+
+## Source lineage
+
+Split on 2026-09-10 from the live working tree at `J:/cars/templates/import`. The split deliberately captured local working-tree changes, including changes newer than the `cars` repository HEAD. Historical root instructions were archived under `docs/legacy/from-cars-2026-09-10/`; use them only for provenance, never as current operating instructions.
+
+## Portfolio policy
+
+Cars owns portfolio choices: standard Auto Best / Modern / Carwow, or Auto Best / Import / Carwow. See [Cars integration](docs/CARS-INTEGRATION.md).
+
+Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).

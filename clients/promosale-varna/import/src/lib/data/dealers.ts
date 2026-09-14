@@ -1,4 +1,4 @@
-import { daynightAssets, daynightContact } from './daynight';
+import { daynightAssets, daynightBrand, daynightContact } from './daynight';
 import { vehicles } from './vehicles';
 
 export interface Dealer {
@@ -16,16 +16,16 @@ export interface Dealer {
 
 export const dealers: Dealer[] = [
 	{
-		slug: 'daynight-plovdiv',
-		name: 'Promosale Varna',
+		slug: "promosale-varna",
+		name: daynightBrand.name,
 		location: daynightContact.addressLabel,
-		address: `${daynightContact.addressLabel}. ${daynightContact.appointmentNote}.`,
+		address: daynightContact.addressLabel + '. ' + daynightContact.appointmentNote + '.',
 		phone: daynightContact.primaryPhoneLabel,
 		logo: daynightAssets.logoDark,
 		cover: daynightAssets.hero,
 		inventory: vehicles.length,
 		rating: 0,
-		specialties: ['Europe imports', 'Verified history', 'Documents', 'Client vehicles']
+		specialties: []
 	}
 ];
 

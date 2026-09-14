@@ -46,7 +46,7 @@ export async function PATCH({ request }: { request: Request }) {
 	});
 
 	if (!user) {
-		return errorJson('OUTLETCARS.BG — Варна user not found', 404);
+		return errorJson('OUTLETCARS.BG user not found', 404);
 	}
 
 	return okJson({ user });

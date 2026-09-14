@@ -189,7 +189,7 @@ export const extractAuxeroRuntimeHtml = (
 		if (form.matches('.daynight-contact-form')) {
 			return {
 				source: 'daynight-contact-form',
-				status: 'Съобщението е подготвено локално за Day Night Auto',
+				status: 'Съобщението е подготвено локално за Promosale Varna',
 				url: '/api/inquiries'
 			};
 		}
@@ -197,7 +197,7 @@ export const extractAuxeroRuntimeHtml = (
 		if (form.matches('.daynight-blog-comment-form')) {
 			return {
 				source: 'daynight-blog-comment-form',
-				status: 'Коментарът е запазен локално за преглед от Day Night Auto',
+				status: 'Коментарът е запазен локално за преглед от Promosale Varna',
 				url: '/api/messages'
 			};
 		}
@@ -205,7 +205,7 @@ export const extractAuxeroRuntimeHtml = (
 		if (form.matches('.daynight-sell-form')) {
 			return {
 				source: 'sell-your-car',
-				status: 'Заявката е подготвена. Day Night Auto ще се свърже с вас.',
+				status: 'Заявката е подготвена. Promosale Varna ще се свърже с вас.',
 				url: '/api/inventory/submissions'
 			};
 		}
@@ -213,7 +213,7 @@ export const extractAuxeroRuntimeHtml = (
 		if (form.matches('.daynight-service-form')) {
 			return {
 				source: 'daynight-service-form',
-				status: 'Заявката за услуга е подготвена локално за Day Night Auto',
+				status: 'Заявката за услуга е подготвена локално за Promosale Varna',
 				url: '/api/inquiries'
 			};
 		}

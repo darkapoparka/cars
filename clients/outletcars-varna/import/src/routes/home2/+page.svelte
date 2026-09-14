@@ -1,3 +1,3 @@
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна</title>
+	<title>OUTLETCARS.BG</title>
 </svelte:head>

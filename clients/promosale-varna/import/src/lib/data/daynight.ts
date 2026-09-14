@@ -67,9 +67,9 @@ const feed = mobileBgFeed as MobileBgFeed;
 const makeNames = [
   "Mercedes-Benz",
   "Peugeot",
+  "BMW",
   "Porsche",
-  "Audi",
-  "BMW"
+  "Audi"
 ] as const;
 
 const parseNumber = (value: string) => Number(value.replace(/[^\d.]/g, '')) || 0;
@@ -152,7 +152,7 @@ const toVehicle = (listing: MobileBgListing): DayNightVehicle => {
 		fuel: normalizeFuel(listing.fuel),
 		transmission: normalizeTransmission(listing.gearbox),
 		body: normalizeBody(listing.category),
-		status: 'Advertised',
+		status: listing.badge === 'НОВА ОБЯВА' ? 'New listing' : 'Available',
 		label: String(parseYear(listing.production)),
 		image: listing.image,
 		sourceUrl: listing.href,
@@ -178,7 +178,7 @@ export const daynightContact = {
   "primaryPhoneHref": "tel:+359892020208",
   "marketplacePhoneLabel": "0892 020 208",
   "marketplacePhoneHref": "tel:+359892020208",
-  "emailLabel": "Запитване в Mobile.bg",
+  "emailLabel": "Онлайн запитване",
   "emailHref": "https://promosale_varna.mobile.bg/contacts",
   "viberHref": "",
   "facebookHref": "",
@@ -188,27 +188,46 @@ export const daynightContact = {
   "youtubeHref": "",
   "addressLabel": "Морска гара Варна, Варна, България",
   "appointmentNote": "Пон.–пет. 09:30–18:30; съб. 10:00–14:00; нед. почивен ден",
-  "mapEmbedUrl": "https://maps.google.com/maps?q=%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%B0%20%D0%B3%D0%B0%D1%80%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&hl=bg&output=embed"
+  "mapEmbedUrl": "https://maps.google.com/maps?q=Promosale%20Varna%2C%20%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%B0%20%D0%B3%D0%B0%D1%80%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed"
 } as const;
 
 export const daynightBrand = {
   "name": "Promosale Varna",
-  "displayName": "Promosale Varna",
+  "displayName": "PROMOSALE VARNA",
   "bulgarianName": "Promosale Varna",
-  "domain": "promosale-varna.example",
-  "tagline": "Автомобили във Варна — предложения и огледи",
-  "legalNote": "Демонстрационен проект. Датирани обяви от публичния каталог; наличността се потвърждава от търговеца."
+  "domain": "promosale_varna.mobile.bg",
+  "tagline": "Promosale Varna · Варна",
+  "legalNote": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата. Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
 } as const;
 
 export const daynightAssets = {
-  "logoDark": "/dealer/logo.png",
-  "logoLight": "/dealer/logo.png",
-  "hero": "/dealer/showroom.webp",
-  "homeHeroSlides": [],
-  "footerImage": "/dealer/showroom.webp"
+	logoDark: "/dealer/logo-light.png",
+	logoLight: "/dealer/logo.png",
+	hero: '/assets/daynight/hero/home-05-showroom-exterior.webp',
+	homeHeroSlides: [],
+	footerImage: '/assets/daynight/footer-premium-request-v2.webp'
 } as const;
 
-export const daynightConsultants: {slug:string; name:string; title:string; image:string}[] = [];
+export const daynightConsultants = [
+  {
+    "slug": "promosale-varna-sales",
+    "name": "Продажби и огледи",
+    "title": "Запитвания към Promosale Varna",
+    "image": "/brand/daynight-team-placeholder.svg"
+  },
+  {
+    "slug": "promosale-varna-import",
+    "name": "Внос и подбор",
+    "title": "Запитвания за внос и наличности",
+    "image": "/brand/daynight-team-placeholder.svg"
+  },
+  {
+    "slug": "promosale-varna-documents",
+    "name": "Документи и предаване",
+    "title": "Следващи стъпки по сделката",
+    "image": "/brand/daynight-team-placeholder.svg"
+  }
+] as const;
 
 export const mainNavigation = [
 	{ label: 'Начало', href: '/', matchPrefixes: ['/'] },

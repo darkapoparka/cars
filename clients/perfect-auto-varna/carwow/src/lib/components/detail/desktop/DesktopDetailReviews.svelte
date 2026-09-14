@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightReviewAverage, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import {
@@ -23,7 +23,7 @@
 				<div class="rating-box__stars">
 					{#each desktopDetailStarIndexes as starIndex (starIndex)}
 						<img
-							src="/variant-3/assets/icons/star-2.svg"
+							src="/assets/icons/star-2.svg"
 							alt=""
 							aria-hidden="true"
 							data-daynight-img="1"
@@ -41,7 +41,7 @@
 					<p class="rating-box__bar-label">
 						<span class="text">{rating.label}</span>
 						<img
-							src="/variant-3/assets/icons/star-2.svg"
+							src="/assets/icons/star-2.svg"
 							alt=""
 							aria-hidden="true"
 							data-daynight-img="1"
@@ -57,9 +57,7 @@
 			{/each}
 		</div>
 		<div class="rating-box__button">
-			<a href="#reviewForm" class="sa-cta sa-cta-primary sa-cta-compact">
-				Добавете отзив
-			</a>
+			<a href="#reviewForm" class="sa-cta-compact sa-cta sa-cta-primary"> Добавете отзив </a>
 		</div>
 	</div>
 </div>
@@ -89,7 +87,7 @@
 					<div class="flex items-center">
 						{#each desktopDetailStarIndexes.slice(0, review.rating) as starIndex (starIndex)}
 							<img
-								src="/variant-3/assets/icons/star-2.svg"
+								src="/assets/icons/star-2.svg"
 								alt=""
 								aria-hidden="true"
 								data-daynight-img="1"
@@ -117,7 +115,7 @@
 
 	<a
 		href={resolve('/contact?intent=review')}
-		class="sa-cta sa-cta-primary sa-cta-compact"
+		class="sa-cta-compact sa-cta sa-cta-primary"
 		title="Отзивите се потвърждават от екипа преди публикуване."
 	>
 		Изпратете отзив

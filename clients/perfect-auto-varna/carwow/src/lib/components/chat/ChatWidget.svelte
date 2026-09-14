@@ -68,7 +68,7 @@
 		errorMessage = '';
 
 		try {
-			const response = await fetch('/variant-3/api/chat/conversations', {
+			const response = await fetch('/api/chat/conversations', {
 				headers: { accept: 'application/json' }
 			});
 			const body = await readResponse(response);
@@ -99,7 +99,7 @@
 		errorMessage = '';
 
 		try {
-			const response = await fetch('/variant-3/api/chat/conversations', {
+			const response = await fetch('/api/chat/conversations', {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
@@ -128,7 +128,7 @@
 		errorMessage = '';
 
 		try {
-			const response = await fetch(`/variant-3/api/chat/conversations/${conversation.id}/messages`, {
+			const response = await fetch(`/api/chat/conversations/${conversation.id}/messages`, {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
@@ -163,7 +163,7 @@
 		const suffix = lastMessage ? `?after=${encodeURIComponent(lastMessage.createdAt)}` : '';
 
 		try {
-			const response = await fetch(`/variant-3/api/chat/conversations/${conversation.id}/messages${suffix}`, {
+			const response = await fetch(`/api/chat/conversations/${conversation.id}/messages${suffix}`, {
 				headers: { accept: 'application/json' }
 			});
 			const body = await response.json().catch(() => null);
@@ -262,11 +262,7 @@
 
 	@media (max-width: 991px) {
 		.chat-widget {
-			position: relative;
-			right: auto;
-			bottom: auto;
-			padding: 12px 16px calc(88px + env(safe-area-inset-bottom));
-			background: var(--sa-surface);
+			display: none;
 		}
 		.chat-dialog {
 			inset: auto 12px 12px 12px;

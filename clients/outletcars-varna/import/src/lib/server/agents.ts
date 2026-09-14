@@ -23,7 +23,7 @@ const agentState = new Map<string, ManagedAgentState>(
 	agents.map((agent) => [
 		agent.slug,
 		{
-			note: `${agent.title} is available for OUTLETCARS.BG — Варна customer follow-up.`,
+			note: `${agent.title} is available for OUTLETCARS.BG customer follow-up.`,
 			status: 'active',
 			updatedAt: '2026-05-25T09:00:00.000Z'
 		}

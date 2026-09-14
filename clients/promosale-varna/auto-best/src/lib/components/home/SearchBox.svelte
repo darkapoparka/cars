@@ -33,8 +33,9 @@
 <section class="dn-search-wrap" aria-label="Търсене на автомобил">
   <div class="container">
     <div class="dn-search">
-      <div class="dn-search__mobile-modes" role="tablist" aria-label="Основна цел">
+      <div class="dn-search__mobile-modes dn-segmented-control" role="tablist" aria-label="Основна цел">
         <button
+          class="dn-segmented-option"
           bind:this={buyTab}
           id="home-buy-tab"
           type="button"
@@ -46,6 +47,7 @@
           onkeydown={handleModeKey}
         >Купи</button>
         <button
+          class="dn-segmented-option"
           bind:this={importTab}
           id="home-import-tab"
           type="button"
@@ -67,16 +69,17 @@
       <div id="home-import-search" class={['dn-search__import', { 'dn-search__import--active': mode === 'import' }]} role="tabpanel" aria-labelledby="home-import-tab">
         <form class="dn-search__import-form" method="GET" action={resolve('/contact#contact-intent')} novalidate onsubmit={validateImport}>
           <input type="hidden" name="topic" value="import" />
-          <label class="dn-search__import-field">
+          <label class="dn-search__import-field dn-entry-field">
             <Icon name="globe" size={20} strokeWidth={1.8} />
             <span class="dn-sr-only">Линк към обява за внос</span>
             <input
+              class="dn-entry-field__input"
               bind:this={importInput}
               bind:value={importUrl}
               type="url"
               inputmode="url"
               name="vehicle_url"
-              placeholder="Поставете линк към обява"
+              placeholder="Линк към обява"
               maxlength={2048}
               required
               autocomplete="off"
@@ -90,13 +93,13 @@
           {#if importError}
             <p id="home-import-error" class="dn-search__import-error" role="alert">{importError}</p>
           {/if}
-          <button class="dn-search__mobile-all" type="submit">Продължи към контакт <Icon name="arrow-right" size={17} strokeWidth={2} /></button>
+          <button class="dn-search__mobile-all" type="submit">Заяви внос <Icon name="arrow-right" size={17} strokeWidth={2} /></button>
         </form>
       </div>
       <div class="dn-search__desktop-form">
         <VehicleSearchDialog filters={desktopFilters}>
           {#snippet children(openFilters, filtersOpen)}
-            <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} />
+            <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} enableSticky={false} />
           {/snippet}
         </VehicleSearchDialog>
       </div>
@@ -104,8 +107,8 @@
 
   </div>
   <nav class="dn-search__mobile-shortcuts" aria-label="Бързи филтри">
-    <a href={resolve('/listing-grid?price_max=20000')}>До 20 000 €</a>
-    <a href={resolve('/listing-grid?price_min=20000&price_max=30000')}>20–30 000 €</a>
+    <a href={resolve('/listing-grid?price_max=60000')}>До 60 000 €</a>
+    <a href={resolve('/listing-grid?price_min=60000&price_max=70000')}>60–70 000 €</a>
     <a href={resolve('/listing-grid?make=Audi')}>Audi</a>
     <a href={resolve('/listing-grid?make=Mercedes-Benz')}>Mercedes</a>
     <a href={resolve('/listing-grid?make=BMW')}>BMW</a>
@@ -175,6 +178,11 @@
   }
 
   @media (max-width: 767px) {
+    .dn-search__mobile-modes {
+      display: grid;
+      width: var(--dn-entry-segment-width);
+      justify-self: center;
+    }
     .dn-search__buy { display: contents; }
     .dn-search-wrap {
       margin-top: -52px;
@@ -194,43 +202,8 @@
       background: var(--dn-white);
     }
 
-    .dn-search__mobile-modes {
-      display: grid;
-      min-height: 50px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 4px;
-      padding: 3px;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-home-panel);
-    }
-
-    .dn-search__mobile-modes button {
-      display: inline-flex;
-      min-width: 0;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      border: 0;
-      border-radius: var(--dn-radius-button);
-      background: transparent;
-      color: var(--dn-muted);
-      font-size: 14px;
-      font-weight: 650;
-      cursor: pointer;
-    }
-
-    .dn-search__mobile-modes [aria-selected='true'] {
-      background: var(--dn-ink);
-      color: #fff;
-    }
-
     .dn-search :global(.dn-quick-search__trigger) {
-      min-height: 52px;
       margin: 0;
-      border: 0;
-      background: var(--dn-home-panel);
-      color: var(--dn-muted);
     }
 
     .dn-search__desktop-form,
@@ -247,41 +220,15 @@
 
     .dn-search__import-field {
       display: flex;
-      min-height: 52px;
       align-items: center;
       gap: 10px;
       padding: 0 16px;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-home-panel);
-      color: var(--dn-muted);
-    }
-
-    .dn-search__import-field input {
-      width: 100%;
-      min-width: 0;
-      min-height: 52px;
-      padding: 0;
-      border: 0;
-      outline: none;
-      background: transparent;
-      color: var(--dn-ink);
-      font-size: 16px;
-    }
-
-    .dn-search__import-field input::placeholder {
-      color: var(--dn-muted);
-      opacity: 1;
-    }
-
-    .dn-search__import-field:focus-within {
-      outline: 3px solid var(--dn-focus);
-      outline-offset: 2px;
     }
 
     .dn-search__import-error {
       margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
+      font-size: var(--dn-text-meta);
+      line-height: var(--dn-leading-body);
     }
 
     .dn-search__import-error {
@@ -311,8 +258,8 @@
       border-radius: var(--dn-radius-button);
       background: var(--dn-mobile-surface);
       color: #30363f;
-      font-size: 13px;
-      font-weight: 650;
+      font-size: var(--dn-control-size);
+      font-weight: var(--dn-control-weight);
       white-space: nowrap;
     }
 
@@ -320,7 +267,7 @@
       display: flex;
       width: fit-content;
       max-width: 100%;
-      min-height: 44px;
+      min-height: var(--dn-entry-action-height);
       justify-self: center;
       align-items: center;
       justify-content: center;
@@ -331,8 +278,8 @@
       border-radius: var(--dn-radius-button);
       background: var(--dn-red);
       color: #fff;
-      font-size: 14px;
-      font-weight: 700;
+      font-size: var(--dn-cta-size);
+      font-weight: var(--dn-cta-weight);
       cursor: pointer;
     }
 

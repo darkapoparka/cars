@@ -57,7 +57,7 @@
 		modals={shellModals}
 		{pageDocument}
 		runtimeHtml={shellRuntimeHtml}
-		title="Продай автомобила си — OUTLETCARS.BG — Варна"
+		title="Продай автомобила си — OUTLETCARS.BG"
 	>
 		<PageBanner banner={hero} />
 		<section class="daynight-sell-page background-light py-100">
@@ -65,7 +65,7 @@
 				<div class="lg-grid-cols-1 grid grid-cols-2 gap-30">
 					<div class="daynight-sell-page__steps">
 						<p class="text-highlight font-weight-600 mb-8">Процес</p>
-						<h2 class="mb-18">Как OUTLETCARS.BG — Варна подготвя продажбата</h2>
+						<h2 class="mb-18">Как OUTLETCARS.BG подготвя продажбата</h2>
 						<div class="grid grid-cols-1 gap-16">
 							{#each steps as step, index (step.title)}
 								<div

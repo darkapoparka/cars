@@ -11,7 +11,7 @@
 
 	let { calculator }: { calculator: AuxeroCalculatorData } = $props();
 
-	const inputClass = (active: boolean) => `${active ? 'active ' : ''}input-large`;
+	const inputClass = (_active: boolean) => 'input-large';
 	const fieldValue = (key: AuxeroCalculatorInputKey) =>
 		calculator.fields.find((field) => field.key === key)?.value ?? auxeroCalculatorInitial[key];
 	const summaryLabel = (key: AuxeroCalculatorSummaryRow['key'], fallback: string) =>
@@ -126,7 +126,7 @@
 			min-width: 0;
 			border-color: transparent !important;
 			border-radius: 8px !important;
-			background: #FEE2E2 !important;
+			background: #fee2e2 !important;
 			padding: 17px !important;
 		}
 
@@ -150,8 +150,7 @@
 		}
 
 		[data-daynight-calculator] :global(.border-box:last-child .text-56),
-		[data-daynight-calculator]
-			:global(.border-box:last-child [data-daynight-calc-output='total']) {
+		[data-daynight-calculator] :global(.border-box:last-child [data-daynight-calc-output='total']) {
 			color: #fee2e2 !important;
 		}
 

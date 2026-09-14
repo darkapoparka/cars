@@ -7,13 +7,12 @@
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
+  import PdpImportBanner from '$components/vehicles/PdpImportBanner.svelte';
   import { brand } from '$config/brand';
   import { formatVehiclePrice, type Vehicle } from '$data/inventory';
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
-  let galleryIndices = $state<Record<number, number>>({});
-  const activeImage = $derived(data.vehicle.gallery[galleryIndices[data.vehicle.id] ?? 0] ?? data.vehicle.image);
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const detailTabs = [
@@ -24,6 +23,25 @@
   type DetailTab = (typeof detailTabs)[number]['id'];
   let activeTabsByVehicle = $state<Record<number, DetailTab>>({});
   let activeDetailTab = $derived(activeTabsByVehicle[data.vehicle.id] ?? 'overview');
+  let shareCopied = $state(false);
+  let financeDialog = $state<HTMLDialogElement>();
+
+  const openFinance = () => financeDialog?.showModal();
+  const closeFinance = () => financeDialog?.close();
+
+  async function shareVehicle() {
+    const url = window.location.href;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: data.vehicle.title, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      shareCopied = true;
+    } catch (error) {
+      if (!(error instanceof DOMException && error.name === 'AbortError')) shareCopied = false;
+    }
+  }
 
   const selectDetailTab = (tab: DetailTab) => {
     activeTabsByVehicle[data.vehicle.id] = tab;
@@ -63,7 +81,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Датирана примерна обява от ${brand.name} в ${brand.city}.`}
+    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
   />
 </svelte:head>
 
@@ -85,8 +103,14 @@
                 <a class="dn-detail-mobile-back" href={data.returnTo} aria-label="Назад към автомобилите">
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
+                <div class="dn-detail-mobile-actions">
+                  <a {...phoneLinkAttributes} aria-label={`Обадете се на ${brand.phone}`}><Icon name="phone" size={20} strokeWidth={1.9} /></a>
+                  <button type="button" onclick={shareVehicle} aria-label={shareCopied ? 'Линкът е копиран' : 'Споделете автомобила'}>
+                    <Icon name="share" size={20} strokeWidth={1.9} />
+                  </button>
+                </div>
                 <img
-                  src={activeImage}
+                  src={data.vehicle.image}
                   alt={data.vehicle.title}
                   width="1245"
                   height="988"
@@ -94,11 +118,6 @@
                   decoding="async"
                 />
               </figure>
-              <div class="dn-detail-thumbnails" aria-label="Снимки от обявата">
-                {#each data.vehicle.gallery as image, index (image)}
-                  <button type="button" aria-label={`Снимка ${index + 1}`} aria-pressed={(galleryIndices[data.vehicle.id] ?? 0) === index} onclick={() => galleryIndices[data.vehicle.id] = index}><img src={image} alt={`${data.vehicle.title} — снимка ${index + 1}`} width="160" height="100" loading="lazy" /></button>
-                {/each}
-              </div>
             </div>
 
             <section class="dn-detail-card dn-detail-info-card" aria-label="Информация за автомобила">
@@ -137,7 +156,7 @@
                   aria-labelledby="detail-tab-description"
                 >
                   <p>
-                    {data.vehicle.title} е пример от обявите, записани на 09.09.2026 г., на {brand.name}. Свържете се с
+                    {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
                     екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
                   </p>
                   <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>
@@ -171,31 +190,28 @@
               <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
               <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
               <div class="dn-detail-summary__actions">
-                <a class="dn-detail-button dn-detail-button--primary" {...phoneLinkAttributes}>Обадете се</a>
-                <a class="dn-detail-button dn-detail-button--dark" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
+                <a class="dn-detail-button dn-detail-button--call" {...phoneLinkAttributes}>Обадете се</a>
+                <a class="dn-detail-button dn-detail-button--enquiry" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
               </div>
             </section>
 
-            <section class="dn-detail-card dn-detail-finance-card" aria-label="Калкулатор за финансиране">
-              {#key data.vehicle.id}
-                <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />
-              {/key}
+            <section class="dn-detail-card dn-detail-finance-card" aria-label="Финансиране">
+              <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label="Отворете финансирането за този автомобил">
+                <img class="dn-detail-finance-banner" src="/assets/images/lead/pdp-finance-clean-mobile.webp" alt="Финансиране за този автомобил" width="450" height="150" loading="lazy" decoding="async" />
+              </button>
+              <div class="dn-detail-finance-inline">
+                {#key data.vehicle.id}
+                  <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />
+                {/key}
+              </div>
             </section>
 
-            <section class="dn-detail-card dn-detail-dealer" aria-labelledby="seller-title">
-              <header class="dn-detail-dealer__header">
-                <img src={brand.logo} alt="" width="132" height="44" loading="lazy" decoding="async" />
-                <h2 id="seller-title">{brand.name}</h2>
-              </header>
+            <PdpImportBanner />
 
-              <div class="dn-detail-dealer__details">
-                <p><Icon name="map-pin" size={20} strokeWidth={1.7} /><span>{brand.address}</span></p>
-                <a {...phoneLinkAttributes}><Icon name="phone" size={20} strokeWidth={1.7} /><span>{brand.phone}</span></a>
-              </div>
-
-              <div class="dn-detail-dealer__actions">
-                <a class="dn-detail-button dn-detail-button--dark" href={resolve(vehicleContactHref(data.vehicle.id))}>Обсъдете автомобила</a>
-              </div>
+            <section class="dn-detail-card dn-detail-dealer" aria-label={brand.name}>
+              <a class="dn-detail-dealer-banner" href={resolve(vehicleContactHref(data.vehicle.id))}>
+                <img src="/assets/images/lead/pdp-seller-clean-mobile.webp" alt={`${brand.name} — доверен дилър. Обсъдете автомобила.`} width="360" height="270" loading="lazy" decoding="async" />
+              </a>
             </section>
 
           </aside>
@@ -223,4 +239,27 @@
         </section>
       </div>
     </section>
+
+  <dialog
+    class="dn-detail-finance-dialog"
+    id="dn-detail-finance-dialog"
+    bind:this={financeDialog}
+    aria-labelledby="dn-detail-finance-dialog-title"
+    onclick={(event) => { if (event.target === event.currentTarget) closeFinance(); }}
+  >
+    <div class="dn-detail-finance-sheet">
+      <header class="dn-detail-finance-sheet__header">
+        <div>
+          <span>За {data.vehicle.title}</span>
+          <h2 id="dn-detail-finance-dialog-title">Финансиране</h2>
+        </div>
+        <button type="button" onclick={closeFinance} aria-label="Затворете калкулатора">
+          <Icon name="x" size={20} strokeWidth={1.8} />
+        </button>
+      </header>
+      {#key data.vehicle.id}
+        <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />
+      {/key}
+    </div>
+  </dialog>
 </div>

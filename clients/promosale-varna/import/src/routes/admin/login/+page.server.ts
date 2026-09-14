@@ -30,7 +30,7 @@ export const actions: Actions = {
 		if (!session?.token) {
 			return fail(400, {
 				email,
-				error: 'Invalid Day Night Auto staff credentials.'
+				error: 'Invalid Promosale Varna staff credentials.'
 			});
 		}
 

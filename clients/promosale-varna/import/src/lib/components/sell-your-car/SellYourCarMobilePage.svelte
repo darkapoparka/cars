@@ -173,7 +173,7 @@
 			<span class="daynight-sell-mobile-sheet__handle" aria-hidden="true"></span>
 			<header class="daynight-sell-mobile-sheet__header">
 				<div>
-					<p>Day Night Auto шоурум</p>
+					<p>Promosale Varna шоурум</p>
 					<h2 id="sell-mobile-location-title">{daynightContact.addressLabel}</h2>
 				</div>
 				<button type="button" aria-label="Затвори" onclick={() => setLocationSheetOpen(false)}>
@@ -185,7 +185,7 @@
 				<span class="road road-b"></span>
 				<span class="road road-c"></span>
 				<span class="pin"><MapPin size={24} strokeWidth={2.4} /></span>
-				<span class="badge">Day Night Auto</span>
+				<span class="badge">Promosale Varna</span>
 			</div>
 			<div class="daynight-sell-mobile__location-copy">
 				<span>{daynightContact.appointmentNote}</span>

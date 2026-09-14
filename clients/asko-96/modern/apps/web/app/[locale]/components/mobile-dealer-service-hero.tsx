@@ -8,13 +8,13 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 const serviceWordmarkTones = {
-  leasing: "dark",
+  leasing: "light",
   import: "dark",
   sell: "dark",
   contact: "original",
 } as const;
 const serviceBackgrounds = {
-  leasing: "#d7ae35",
+  leasing: "#bd001b",
   import: "#f5c542",
   sell: "#dce8ee",
   contact: "#09090b",
@@ -76,7 +76,7 @@ export function MobileDealerServiceHero({
           <div
             className={cn(
               "grid h-11 grid-cols-[44px_minmax(0,1fr)_44px] items-center gap-3",
-              tone === "contact"
+              tone === "leasing" || tone === "contact"
                 ? "text-white"
                 : "text-zinc-950"
             )}

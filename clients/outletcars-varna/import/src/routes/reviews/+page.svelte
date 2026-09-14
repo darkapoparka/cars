@@ -9,10 +9,10 @@
 </script>
 
 <svelte:head>
-	<title>Отзиви — OUTLETCARS.BG — Варна</title>
+	<title>Отзиви — OUTLETCARS.BG</title>
 	<meta
 		name="description"
-		content="Отзиви от клиенти на OUTLETCARS.BG — Варна — реални истории за покупка и внос на автомобили: ясен процес, уговорени срокове и без скрити такси."
+		content="Отзиви от клиенти на OUTLETCARS.BG — реални истории за покупка и внос на автомобили: ясен процес, уговорени срокове и без скрити такси."
 	/>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />

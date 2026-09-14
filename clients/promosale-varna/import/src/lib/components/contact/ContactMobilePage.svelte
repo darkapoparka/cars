@@ -184,7 +184,7 @@
 			<span class="daynight-contact-mobile-sheet__handle" aria-hidden="true"></span>
 			<header class="daynight-contact-mobile-sheet__header">
 				<div>
-					<p>Day Night Auto</p>
+					<p>Promosale Varna</p>
 					<h2 id="contact-mobile-form-title">{form.title}</h2>
 				</div>
 				<button type="button" onclick={closeForm} aria-label="Затвори">

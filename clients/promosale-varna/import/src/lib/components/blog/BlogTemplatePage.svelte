@@ -39,7 +39,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Новини — Day Night Auto"
+	title="Новини — Promosale Varna"
 >
 	<section class="daynight-blog-page" data-daynight-blog-page>
 		<div class="bc-container daynight-blog-page__inner">

@@ -26,7 +26,7 @@
 			aria-hidden="true"
 		/>
 
-		<h1 id="home2-title">Сменяш автомобила? Day Night Auto помага</h1>
+		<h1 id="home2-title">Сменяш автомобила? Promosale Varna помага</h1>
 
 		<form
 			class="home2-search"

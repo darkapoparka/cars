@@ -96,8 +96,8 @@
 	:global(
 		.inventory-template-shell .daynight-inventory-quick-form .daynight-inventory-type-pill.is-active
 	) {
-		background: #8b6811;
-		border-color: #8b6811;
+		background: #b00000;
+		border-color: #b00000;
 		color: #fff;
 	}
 
@@ -116,8 +116,8 @@
 			.daynight-inventory-quick-form
 			.daynight-inventory-type-pill.is-selected
 	) {
-		background: #8b6811;
-		border-color: #8b6811;
+		background: #b00000;
+		border-color: #b00000;
 		color: #fff;
 	}
 
@@ -141,8 +141,8 @@
 		content: 'x';
 		display: inline-flex;
 		flex: 0 0 auto;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		height: 18px;
 		justify-content: center;
 		line-height: 1;
@@ -153,7 +153,7 @@
 
 	:global(.inventory-template-shell .daynight-inventory-type-pill:focus-visible) {
 		box-shadow: none;
-		outline: 2px solid #8b6811;
+		outline: 2px solid #b00000;
 		outline-offset: 2px;
 	}
 </style>

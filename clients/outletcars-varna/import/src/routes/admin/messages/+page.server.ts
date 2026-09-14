@@ -6,9 +6,9 @@ import { createMessage, normalizeMessageStatus, updateMessage } from '$lib/serve
 
 const value = (formData: FormData, key: string) => String(formData.get(key) ?? '').trim();
 const staffEmail = 'admin@daynight.local';
-const staffName = 'OUTLETCARS.BG — Варна Staff';
+const staffName = 'OUTLETCARS.BG Staff';
 
-type CmsMessage = ReturnType<typeof getAdminCmsOverview>['messages'][number];
+type CmsMessage = Awaited<ReturnType<typeof getAdminCmsOverview>>['messages'][number];
 
 const isStaffMessage = (message: CmsMessage) =>
 	message.authorEmail.toLowerCase() === staffEmail || /staff|admin|agent/i.test(message.authorName);
@@ -87,9 +87,9 @@ const buildThreads = (messages: CmsMessage[]) => {
 	);
 };
 
-export const load: PageServerLoad = ({ request, url }) => {
+export const load: PageServerLoad = async ({ request, url }) => {
 	const session = requireDayNightPageSession(request, 'admin/messages', url.searchParams);
-	const cms = getAdminCmsOverview();
+	const cms = await getAdminCmsOverview();
 	const threads = buildThreads(cms.messages);
 	const requestedThread = url.searchParams.get('thread');
 	const activeThread =

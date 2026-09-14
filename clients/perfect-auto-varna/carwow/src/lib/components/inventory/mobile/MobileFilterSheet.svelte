@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { Car, Fuel, Search, X } from '@lucide/svelte';
 	import MobileFilterOptions from './MobileFilterOptions.svelte';
 	import type { CountOption, FilterSheetMode, SortKey } from '$lib/types/mobile-inventory';
 
-	type BrandLogoPath = `/variant-3/assets/images/brand/${string}`;
+	type BrandLogoPath = `/assets/images/brand/${string}`;
 	type LabelOption = { value: string; label: string };
 	type SortOption = { value: SortKey; label: string };
 
@@ -519,7 +519,7 @@
 			<MobileFilterOptions
 				ariaLabel="Цена"
 				allLabel="Всички цени"
-				allCount={vehiclesCount}
+				allCount={priceOptionCount('')}
 				allActive={!price}
 				options={priceOptions}
 				isSelected={(value) => price === value}

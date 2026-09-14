@@ -1,4 +1,3 @@
-import stock from './dealer-stock.json';
 import { daynightVehicles } from './daynight';
 import type { InventoryFilters, SortKey, Vehicle, VehicleCondition } from '$lib/types/vehicle';
 
@@ -7,26 +6,13 @@ export type { InventoryFilters, SortKey, Vehicle, VehicleCondition } from '$lib/
 const detailGalleryFallback: string[] = [];
 
 const conditionForStatus = (status: string, isClientVehicle: boolean): VehicleCondition => {
-	if (isClientVehicle) return 'Used';
+	if (isClientVehicle) return 'Certified';
 	if (status === 'New listing') return 'New';
 
 	return 'Used';
 };
 
-const knownBrokenImageFallbacks: Record<string, string> = {
-	'21764342419542174': '/assets/images/card/card-48.jpg',
-	'21778067767337633': '/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp',
-	'21778068579001193': '/assets/images/card/card-55.jpg',
-	'21779200396408437': '/assets/images/card/card-38.jpg',
-	'21779118142363481': '/assets/images/card/card-48.jpg',
-	'21779117876725419': '/assets/images/card/card-3.jpg',
-	'11777282776427940': '/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp',
-	'21750419064369634': '/assets/images/card/card-48.jpg',
-	'11766312659396823': '/assets/images/card/card-6.jpg',
-	'11768743659815066': '/assets/images/card/card-5.jpg',
-	'11775058343987884': '/assets/images/card/card-5.jpg',
-	'21741178468686255': '/assets/images/card/card-48.jpg'
-};
+const knownBrokenImageFallbacks: Record<string, string> = {};
 const imageForVehicle = (vehicle: { id: string; image: string }) =>
 	knownBrokenImageFallbacks[vehicle.id] ?? vehicle.image;
 
@@ -49,7 +35,7 @@ export const vehicles: Vehicle[] = daynightVehicles.map((vehicle, index) => ({
 	bodyType: vehicle.body,
 	condition: conditionForStatus(vehicle.status, vehicle.isClientVehicle),
 	price: vehicle.priceEur,
-	priceLabel: vehicle.price,
+	priceLabel: vehicle.price.replace(/\s*EUR\b/, ' €'),
 	priceBgn: vehicle.priceBgn,
 	monthly: Math.round(vehicle.priceEur / 72),
 	year: vehicle.year,
@@ -60,20 +46,15 @@ export const vehicles: Vehicle[] = daynightVehicles.map((vehicle, index) => ({
 	exterior: vehicle.color,
 	interior: 'On request',
 	location: vehicle.location,
-	vin: 'Не е публикуван',
+	vin: vehicle.sourceId,
 	stockNumber: vehicle.sourceId,
 	tag: vehicle.status,
 	tagTone: vehicle.isClientVehicle ? 'dark' : index % 3 === 0 ? 'lime' : 'violet',
 	image: imageForVehicle(vehicle),
 	images: [imageForVehicle(vehicle)],
-	gallery: stock.find(record => record.id === vehicle.id)?.images ?? [vehicle.image],
-	dealerSlug: 'daynight-plovdiv',
-	agentSlug:
-		index % 3 === 0
-			? 'daynight-sales'
-			: index % 3 === 1
-				? 'daynight-import'
-				: 'daynight-inspection',
+	gallery: [imageForVehicle(vehicle), ...detailGalleryFallback],
+	dealerSlug: "outletcars-varna",
+	agentSlug: "outletcars-varna-sales",
 	rating: 0,
 	description: vehicle.description,
 	features: vehicle.features.slice(0, 18),

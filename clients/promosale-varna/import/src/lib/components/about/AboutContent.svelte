@@ -20,7 +20,7 @@
 		leftImage="/assets/daynight/banners/about-showroom-v1.png"
 		rightImage="/assets/daynight/banners/about-kristian-v1.png"
 		labelledby="about-page-title"
-		title="За Day Night Auto"
+		title="За Promosale Varna"
 		mobileTitle={about.hero.title}
 		mobileDescription={about.hero.description}
 	>

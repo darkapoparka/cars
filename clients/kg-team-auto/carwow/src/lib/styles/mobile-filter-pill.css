@@ -1,0 +1,22 @@
+/* Match the rendered Home quick-filter labels, including their regular text weight. */
+.mobile-filter-pill {
+	display: inline-flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	min-height: var(--sa-mobile-pill-h);
+	border: 0;
+	border-radius: var(--sa-pill-radius);
+	padding: 0 var(--sa-pill-pad-x);
+	background: var(--sa-fill);
+	color: var(--sa-ink);
+	font: var(--sa-weight-regular) var(--sa-mobile-type-filter) / 1.5 var(--sa-font);
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+@media (max-width: 390px) {
+	.mobile-filter-pill {
+		padding-inline: 8px;
+	}
+}

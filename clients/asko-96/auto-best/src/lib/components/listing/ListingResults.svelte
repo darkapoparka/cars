@@ -1,8 +1,9 @@
 <script lang="ts">
+  import { page } from '$app/state';
   import { resolve } from '$app/paths';
   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
   import Icon from '$components/ui/Icon.svelte';
-  import { listingFilterOptions, type ListingFilters } from '$data/listing';
+  import { activeFilterCount, listingHiddenFields, listingFilterOptions, type ListingFilters } from '$data/listing';
   import type { Vehicle } from '$data/inventory';
 
   let { filters, vehicles, draftFilters, openFilters, filtersOpen }: {
@@ -12,7 +13,7 @@
     openFilters: (event: MouseEvent, field?: string) => void;
     filtersOpen: boolean;
   } = $props();
-  let activeCount = $derived(Object.entries(draftFilters).filter(([key, value]) => !['q', 'sort', 'equipment'].includes(key) && Boolean(value)).length + draftFilters.equipment.length);
+  let activeCount = $derived(activeFilterCount(draftFilters));
   const mobileSortLabels = {
     default: 'Препоръчани',
     newest: 'Най-нови',
@@ -21,26 +22,7 @@
     'mileage-asc': 'Най-нисък пробег'
   } as const;
 
-  const hiddenFields = (filters: ListingFilters) => {
-    const fields: Array<[string, string]> = [
-      ['q', filters.q],
-      ['make', filters.make],
-      ['model', filters.model],
-      ['body', filters.body],
-      ['fuel', filters.fuel],
-      ['transmission', filters.transmission],
-      ['version', filters.version],
-      ['condition', filters.condition],
-      ['year_min', filters.yearMin ? String(filters.yearMin) : ''],
-      ['year_max', filters.yearMax ? String(filters.yearMax) : ''],
-      ['price_min', filters.priceMin ? String(filters.priceMin) : ''],
-      ['price_max', filters.priceMax ? String(filters.priceMax) : ''],
-      ['mileage_max', filters.mileageMax ? String(filters.mileageMax) : ''],
-      ...filters.equipment.map((item): [string, string] => ['equipment', item])
-    ];
-
-    return fields.filter(([, value]) => value);
-  };
+  const hiddenFields = (filters: ListingFilters) => listingHiddenFields(filters, ['sort']);
 
   const submitSort = (event: Event) => {
     const select = event.currentTarget as HTMLSelectElement;
@@ -50,18 +32,13 @@
 
 <section class="dn-listing-results" aria-labelledby="listing-results-title">
   <div class="container">
+    <h2 id="listing-results-title" class="dn-sr-only">Налични автомобили</h2>
     <div class="dn-listing-results__heading">
-      <h2 id="listing-results-title">
-        <span class="dn-listing-results__title-full">Налични автомобили</span>
-        <span class="dn-listing-results__title-mobile" aria-live="polite">{vehicles.length} {vehicles.length === 1 ? 'кола' : 'коли'}</span>
-        <span class="dn-listing-results__count" aria-live="polite">{vehicles.length}</span>
-      </h2>
-
       <div class="dn-listing-results__tools">
-      <button class="dn-listing-results__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
-        <Icon name="adjustments" size={18} /><span>Филтри</span>
-        {#if activeCount}<span class="dn-listing-results__filter-count">{activeCount}</span>{/if}
-      </button>
+        <button class="dn-listing-results__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+          <Icon name="adjustments" size={18} /><span>Филтри</span>
+          {#if activeCount}<span class="dn-listing-results__filter-count">{activeCount}</span>{/if}
+        </button>
       <form class="dn-listing-sort" method="GET" action={resolve('/listing-grid')}>
         {#each hiddenFields(filters) as [name, value], index (`${name}-${value}-${index}`)}
           <input type="hidden" {name} {value} />
@@ -82,7 +59,7 @@
     {#if vehicles.length}
       <div class="dn-listing-results__grid">
         {#each vehicles as vehicle, index (vehicle.id)}
-          <VehicleCard {vehicle} showPrice priority={index < 4} layout="listing" />
+          <VehicleCard {vehicle} returnTo={`${page.url.pathname}${page.url.search}#vehicle-${vehicle.id}`} showPrice priority={index < 4} layout="listing" />
         {/each}
       </div>
     {:else}
@@ -96,50 +73,31 @@
 </section>
 
 <style>
-  .dn-listing-results__tools { display: flex; align-items: center; gap: 10px; }
-  .dn-listing-results__filters { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 46px; padding: 0 16px; border: 1px solid #202329; border-radius: var(--dn-radius-control); background: #202329; color: #fff; font: 600 14px var(--dn-font); cursor: pointer; }
-  .dn-listing-results__filters:hover { background: #3a3e46; border-color: #3a3e46; }
-  .dn-listing-results__filters:focus-visible { outline: 3px solid #0b57d0; outline-offset: 3px; }
-  .dn-listing-results__filter-count { display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 4px; border-radius: var(--dn-pill); background: #fff; color: #202329; font-size: 12px; }
-  @media (max-width: 767px) { .dn-listing-results__filters { display: none; } }
+  .dn-listing-results__tools {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid #dfe2e6;
+    border-radius: var(--dn-pill);
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(18, 25, 38, .07);
+  }
+  .dn-listing-results__filters { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border: 0; border-radius: var(--dn-pill); background: #202329; color: #fff; font: var(--dn-control-font); cursor: pointer; }
+  .dn-listing-results__filters:hover { background: #343941; }
+  .dn-listing-results__filters:focus-visible { outline: 2px solid var(--dn-red); outline-offset: 2px; }
+  .dn-listing-results__filter-count { display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 4px; border-radius: var(--dn-pill); background: #fff; color: #202329; font-size: var(--dn-control-size); }
 
   .dn-listing-results {
-    padding: 48px 0 72px;
+    padding: 20px 0 72px;
     background: #f4f5f7;
   }
 
   .dn-listing-results__heading {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px 24px;
-    margin-bottom: 24px;
-    text-align: left;
-  }
-
-  .dn-listing-results__heading h2 {
-    width: auto;
-    min-width: 0;
-    margin: 0;
-    color: #202329;
-    font-size: var(--dn-text-heading);
-    font-weight: 600;
-    line-height: 38px;
-    letter-spacing: -0.025em;
-    text-align: left;
-  }
-
-  .dn-listing-results__count {
-    margin-left: 6px;
-    color: #6b7280;
-    font-size: var(--dn-text-card);
-    font-weight: 500;
-    letter-spacing: 0;
-    white-space: nowrap;
-  }
-
-  .dn-listing-results__title-mobile {
-    display: none;
+    justify-content: center;
+    margin: 0 0 20px;
   }
 
   .dn-listing-sort__mobile-value {
@@ -149,15 +107,15 @@
   .dn-listing-sort {
     position: relative;
     display: inline-flex;
-    width: 190px;
-    min-width: 190px;
-    height: 46px;
-    min-height: 46px;
-    flex: 0 0 190px;
+    width: 178px;
+    min-width: 178px;
+    height: 44px;
+    min-height: 44px;
+    flex: 0 0 178px;
     align-items: center;
     padding: 0;
-    border: 1px solid #d7dbe2;
-    border-radius: var(--dn-radius-control);
+    border: 0;
+    border-radius: var(--dn-pill);
     background: #fff;
     color: #4d5562;
     cursor: pointer;
@@ -208,14 +166,14 @@
     outline: 0;
     background: transparent;
     color: #202329;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-weight-regular);
     appearance: none;
     cursor: pointer;
   }
 
   .dn-listing-sort select:focus-visible {
-    outline: 2px solid var(--dn-red);
+    outline: 2px solid #c40101;
     outline-offset: 2px;
   }
 
@@ -232,7 +190,14 @@
     height: 100%;
   }
 
-  @media (max-width: 1199px) {
+  @media (min-width: 992px) and (max-width: 1279px) {
+    .dn-listing-results__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
     .dn-listing-results__grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
@@ -245,30 +210,10 @@
     }
 
     .dn-listing-results__heading {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip-path: inset(50%);
-      margin: -1px;
-    }
-
-    .dn-listing-results__heading .dn-listing-sort { display: none; }
-
-    .dn-listing-results__heading h2 {
-      flex: 1;
-      font-size: 15px;
-      line-height: 1.2;
-    }
-
-    .dn-listing-results__title-full,
-    .dn-listing-results__count {
       display: none;
     }
 
-    .dn-listing-results__title-mobile {
-      display: inline;
-    }
+    .dn-listing-results__heading .dn-listing-sort { display: none; }
 
     .dn-listing-sort {
       width: 190px;
@@ -289,9 +234,9 @@
     }
 
     .dn-listing-sort select {
-      height: 42px;
+      height: 44px;
       padding: 0 30px 0 36px;
-      font-size: 14px;
+      font-size: var(--dn-control-size);
       color: transparent;
     }
 
@@ -306,9 +251,9 @@
       left: 36px;
       display: block;
       color: #202329;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 20px;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-medium);
+      line-height: var(--dn-leading-meta);
       white-space: nowrap;
       pointer-events: none;
     }

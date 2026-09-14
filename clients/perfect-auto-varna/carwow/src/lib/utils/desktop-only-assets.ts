@@ -1,4 +1,4 @@
-export const desktopOnlyImagePlaceholder = '/variant-3/assets/images/placeholder/transparent-1x1.svg';
+export const desktopOnlyImagePlaceholder = '/assets/images/placeholder/transparent-1x1.svg';
 
 export function desktopOnlySrcset(src: string, width: number) {
 	return `${desktopOnlyImagePlaceholder} 4w, ${src} ${width}w`;

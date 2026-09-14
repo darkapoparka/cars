@@ -1,4 +1,3 @@
-import { localPath, previewPath } from '$lib/utils/preview-paths';
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import { getAuth, hasAuthRuntimeConfig } from '$lib/server/auth/auth';
@@ -8,12 +7,11 @@ import { createRateLimitKey, rateLimit } from '$lib/server/rate-limit';
 const loginAliases = new Map([['admin', 'admin@cars.local']]);
 
 function safeRedirectTo(value: string | null) {
-	const path = value ? localPath(value) : '';
-	if (!(path === '/admin' || path.startsWith('/admin/')) || path.startsWith('/admin/login')) {
-		return previewPath('/admin');
+	if (!value || !value.startsWith('/admin') || value.startsWith('/admin/login')) {
+		return '/admin';
 	}
 
-	return previewPath(path);
+	return value;
 }
 
 function normalizeLoginIdentifier(value: string) {

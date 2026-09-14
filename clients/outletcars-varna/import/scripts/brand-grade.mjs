@@ -37,14 +37,18 @@ function walk(dir, acc = []) {
 		const p = join(dir, name);
 		const s = statSync(p);
 		if (s.isDirectory()) walk(p, acc);
-		else if (extname(name).toLowerCase() === '.png' && !basename(name).includes(SUFFIX)) acc.push(p);
+		else if (extname(name).toLowerCase() === '.png' && !basename(name).includes(SUFFIX))
+			acc.push(p);
 	}
 	return acc;
 }
 
 // A full-canvas solid layer with baked-in alpha, blended via a libvips mode.
 function tint(width, height, { r, g, b }, alpha, blend) {
-	return { input: { create: { width, height, channels: 4, background: { r, g, b, alpha } } }, blend };
+	return {
+		input: { create: { width, height, channels: 4, background: { r, g, b, alpha } } },
+		blend
+	};
 }
 
 async function grade(src) {
@@ -82,10 +86,17 @@ const failed = [];
 
 for (const src of sources) {
 	try {
-		(await grade(src)) === 'graded' ? graded++ : skipped++;
+		if ((await grade(src)) === 'graded') graded += 1;
+		else skipped += 1;
 	} catch (err) {
 		failed.push(`${src}: ${err.message}`);
 	}
 }
 
-console.log(JSON.stringify({ target: TARGET, strength: STRENGTH, total: sources.length, graded, skipped, failed }, null, 2));
+console.log(
+	JSON.stringify(
+		{ target: TARGET, strength: STRENGTH, total: sources.length, graded, skipped, failed },
+		null,
+		2
+	)
+);

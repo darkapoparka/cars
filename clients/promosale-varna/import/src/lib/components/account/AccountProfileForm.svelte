@@ -248,7 +248,7 @@
 						allowfullscreen
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
-						title="Day Night Auto map"
+						title="Promosale Varna map"
 					></iframe>
 				</div>
 			</div>

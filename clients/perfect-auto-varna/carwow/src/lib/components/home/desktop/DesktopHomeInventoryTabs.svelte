@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { desktopHomeInventoryPills } from './desktop-home-inventory-data';
 	import '$lib/styles/desktop-discovery.css';
 </script>

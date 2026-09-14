@@ -1,33 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
-const location = 'гр. Варна, бул. Цар Освободител 110, кв. Победа';
+const phoneE164 = "+359888802226";
+const city = "Варна";
+const shortName = "Перфект Ауто";
+const district = "Варна";
+const street = "бул. Цар Освободител 110, кв. Победа";
+const location = "бул. Цар Освободител 110, кв. Победа";
 
 export const daynightSite = {
-	name: 'Перфект Ауто',
-	shortName: 'Перфект Ауто',
-	phone: '0888802226',
-	phoneLabel: '0888 802 226',
-	email: '',
+	name: "Перфект Ауто",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359888802226",
+	phoneLabel: "0888 802 226",
+	email: "",
 	location,
-	locationShort: 'Победа, Варна',
-	hoursLabel: 'Огледи с предварителна уговорка',
+	locationShort: "бул. Цар Освободител 110, кв. Победа",
+	locationLandmark: "бул. Цар Освободител 110, кв. Победа",
+	hoursLabel: "За работно време и оглед се обадете предварително.",
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
-	mapUrl: "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D1%80%D1%84%D0%B5%D0%BA%D1%82%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20110%2C%20%D0%BA%D0%B2.%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0",
-	mapLabel: 'Перфект Ауто, Варна, България',
-	sourceInventory: 'https://perfektauto.mobile.bg/',
-	inventoryCount: 40,
-	logoLight: '/variant-3/assets/perfect-auto/cover.png',
-	logoDark: '/variant-3/assets/perfect-auto/cover.png',
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://perfektauto.mobile.bg/",
+	logoLight: "/assets/perfect-auto/cover.png",
+	logoDark: "/assets/perfect-auto/cover.png",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: 'Перфект Ауто',
-	heroSubtitle: 'Автомобили от ЕС, оглед и запитване във Варна',
+	heroTitle: "Перфект Ауто",
+	heroSubtitle: "Варна · Представителни обяви към 10.09.2026 г. Потвърдете наличността и условията по телефона.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -76,8 +90,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Перфект Ауто', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За Перфект Ауто", href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

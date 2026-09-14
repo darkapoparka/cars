@@ -130,7 +130,7 @@
 			.card-box__title
 			a
 	) {
-		color: #8b6811 !important;
+		color: #b00000 !important;
 	}
 
 	:global(

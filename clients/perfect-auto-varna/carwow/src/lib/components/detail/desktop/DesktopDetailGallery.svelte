@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { buildVehicleContactHref } from '$lib/utils/contact-intent';
 	import { fromAction } from 'svelte/attachments';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
@@ -58,9 +58,13 @@
 
 {#snippet galleryActions()}
 	<div class="listing-details-item--content">
-		<a class="listing-details-item--button" href={resolve(buildVehicleContactHref(vehicle, 'video'))} title="Заяви видео преглед">
+		<a
+			class="listing-details-item--button"
+			href={resolve(buildVehicleContactHref(vehicle, 'video'))}
+			title="Заяви видео преглед"
+		>
 			<img
-				src={resolve('/variant-3/assets/icons/playcircle.svg')}
+				src={resolve('/assets/icons/playcircle.svg')}
 				alt=""
 				aria-hidden="true"
 				data-daynight-img="1"
@@ -69,9 +73,13 @@
 			/>
 			Заяви видео преглед
 		</a>
-		<a class="listing-details-item--button" href={resolve(buildVehicleContactHref(vehicle, 'photos'))} title="Заяви още снимки">
+		<a
+			class="listing-details-item--button"
+			href={resolve(buildVehicleContactHref(vehicle, 'photos'))}
+			title="Заяви още снимки"
+		>
 			<img
-				src={resolve('/variant-3/assets/icons/view-all-photo.svg')}
+				src={resolve('/assets/icons/view-all-photo.svg')}
 				alt=""
 				aria-hidden="true"
 				data-daynight-img="1"

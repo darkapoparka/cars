@@ -17,7 +17,7 @@
 		<div class="listing-details--contact-dealer style-3 mb-20">
 			<img
 				src={sidebar.consultantImage}
-				alt="OUTLETCARS.BG — Варна consultant"
+				alt="OUTLETCARS.BG consultant"
 				width="96"
 				height="96"
 				loading="lazy"
@@ -53,7 +53,7 @@
 				</div>
 				<div class="content">
 					<div class="md-gap-6 mb-6 flex justify-start gap-12">
-						<span class="text-xs">от OUTLETCARS.BG — Варна</span><span class="text-xs">{post.date}</span>
+						<span class="text-xs">от OUTLETCARS.BG</span><span class="text-xs">{post.date}</span>
 					</div>
 					<p class="title h7">{post.title}</p>
 				</div>

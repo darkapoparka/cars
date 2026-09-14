@@ -63,13 +63,13 @@ export const load: PageServerLoad = ({ request, url }) => {
 		searchParams: url.searchParams,
 		view
 	};
-	const seoTitle = locale === 'bg' ? 'Автомобили — OUTLETCARS.BG — Варна' : 'Cars — OUTLETCARS.BG — Варна';
+	const seoTitle = locale === 'bg' ? 'Автомобили — OUTLETCARS.BG' : 'Cars — OUTLETCARS.BG';
 	const pageDocument = inventoryPageDocument(templateFile, seoTitle);
 	pageDocument.headAssets = ensureDescriptionMeta(
 		pageDocument.headAssets,
 		locale === 'bg'
-			? 'Разгледай наличните автомобили на OUTLETCARS.BG — Варна — филтрирай по марка, тип, цена и пробег. Подбрани автомобили и съдействие при регистрация.'
-			: 'Browse OUTLETCARS.BG — Варна inventory — filter by brand, type, price and mileage. Europe import and registration support.'
+			? 'Разгледай наличните автомобили на OUTLETCARS.BG — филтрирай по марка, тип, цена и пробег. Подбрани автомобили и съдействие при регистрация.'
+			: 'Browse OUTLETCARS.BG inventory — filter by brand, type, price and mileage. Europe import and registration support.'
 	);
 	const inventoryState = getInventoryState(templateFile, renderOptions);
 

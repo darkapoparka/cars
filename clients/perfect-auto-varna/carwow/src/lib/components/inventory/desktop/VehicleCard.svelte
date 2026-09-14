@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { fromAction } from 'svelte/attachments';
 	import { getDayNightVehicleCondition, placeholderImageSlugs } from '$lib/data/daynight-vehicles';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
@@ -78,7 +78,7 @@
 				{#if hasRealPhotos}
 					<p class="category text-white uppercase">
 						<img
-							src="/variant-3/assets/icons/picture.svg"
+							src="/assets/icons/picture.svg"
 							alt=""
 							aria-hidden="true"
 							decoding="async"

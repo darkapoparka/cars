@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { Chat } from '@ai-sdk/svelte';
 	import Bot from '@lucide/svelte/icons/bot';
 	import CircleAlert from '@lucide/svelte/icons/circle-alert';

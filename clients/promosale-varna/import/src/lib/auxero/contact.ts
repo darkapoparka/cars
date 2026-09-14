@@ -46,7 +46,7 @@ export const contactPageInfo: AuxeroContactPageInfo = {
 	eyebrow: 'Контакт',
 	mapSrc:
 		'https://maps.google.com/maps?q=Plovdiv%20South%20Industrial%20Zone&t=&z=13&ie=UTF8&iwloc=&output=embed',
-	officeLabel: 'Офис Day Night Auto',
+	officeLabel: 'Офис Promosale Varna',
 	phoneHref: daynightContact.primaryPhoneHref,
 	phoneLabel: daynightContact.primaryPhoneLabel,
 	secondaryPhoneHref: daynightContact.marketplacePhoneHref,
@@ -56,7 +56,7 @@ export const contactPageInfo: AuxeroContactPageInfo = {
 		{ href: daynightContact.viberHref, icon: 'ChatCircleDots.svg', label: 'Viber' },
 		{ href: daynightContact.youtubeHref, icon: 'input-youtube.svg', label: 'YouTube' }
 	],
-	title: 'Свържете се с Day Night Auto',
+	title: 'Свържете се с Promosale Varna',
 	workNote: daynightContact.appointmentNote
 };
 

@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Edit Listing</title>
+	<title>OUTLETCARS.BG Admin - Edit Listing</title>
 </svelte:head>
 
 <AdminShell title={listing?.title ?? 'Listing not found'} activePath="/admin/inventory">

@@ -2,21 +2,56 @@
   "schemaVersion": 1,
   "client": "perfect-auto-varna",
   "templateKey": "auto-best",
-  "templateVersion": "2026.09.08-refresh-2",
+  "templateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
   "createdAt": "2026-09-09T21:55:37.522Z",
-  "state": "ready-for-local-review",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
-  "availableHomes": [{"id":"main","route":"/"}],
-  "offeredHomes": [{"id":"main","route":"/"}],
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
   "publicUrl": null,
-  "qa": {"desktop":true,"mobile":true,"identity":true,"contactPath":true},
-  "verification": {
-    "node": "v22.22.0",
-    "check": {"command":"npm run check","exitCode":0},
-    "build": {"command":"npm run build","exitCode":0},
-    "browser": {"checks":6,"widths":[390,1440],"routes":["/","/listing-grid","/contact"]},
-    "notVerified": ["all secondary interactions","real form delivery","public deployment","dealer approval"]
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
-  "crm": {"leadId":null,"demoProjectId":null,"registered":false},
-  "content": {"facts":"../business-facts.json","stock":"../stock.json","inventorySnapshot":true,"dealerApproval":false,"mediaRightsIndependentlyEstablished":false}
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "content": {
+    "facts": "../business-facts.json",
+    "stock": "../stock.json",
+    "inventorySnapshot": true,
+    "dealerApproval": false,
+    "mediaRightsIndependentlyEstablished": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/"
+  },
+  "workflowCommit": "5ee3f8f76e79e9cca76b025528ee27415b1132fb",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.08-refresh-2",
+    "refreshedAt": "2026-09-14T20:55:32.281Z",
+    "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

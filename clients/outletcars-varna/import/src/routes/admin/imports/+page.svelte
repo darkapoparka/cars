@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Imports</title>
+	<title>OUTLETCARS.BG Admin - Imports</title>
 </svelte:head>
 
 <AdminShell title="Imports" activePath="/admin/imports">

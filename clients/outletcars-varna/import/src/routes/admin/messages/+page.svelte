@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Messages</title>
+	<title>OUTLETCARS.BG Admin - Messages</title>
 </svelte:head>
 
 <AdminShell title="Messages" activePath="/admin/messages">

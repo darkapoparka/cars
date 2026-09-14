@@ -8,7 +8,7 @@ const validListing = {
   category: "car",
   description: "A complete and accurate vehicle description.",
   fuelType: "diesel",
-  locationCity: "Sofia",
+  locationCity: "Пловдив",
   make: "BMW",
   mileageValue: 42_000,
   model: "X5",

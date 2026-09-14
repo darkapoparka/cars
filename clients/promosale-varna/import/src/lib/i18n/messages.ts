@@ -185,14 +185,14 @@ export const messages: Record<Locale, PublicMessages> = {
 			languageOptions: ['English', 'Bulgarian'],
 			megaDetails: 'Details',
 			megaView: 'View',
-			searchPlaceholder: 'Search Day Night Auto inventory',
+			searchPlaceholder: 'Search Promosale Varna inventory',
 			signIn: 'Sign In',
 			wishlist: 'Wishlist'
 		},
 		home: {
 			actionBand: {
 				buyBody:
-					'Discuss import, documents, viewing and next steps with a Day Night Auto consultant.',
+					'Discuss import, documents, viewing and next steps with a Promosale Varna consultant.',
 				buyCta: 'Book time',
 				buyTitle: 'Book A Consultation',
 				importBody: 'Selection, inspection, documents and delivery from Europe.',
@@ -208,26 +208,26 @@ export const messages: Record<Locale, PublicMessages> = {
 				{ label: '70 000 - 100 000 EUR', active: false },
 				{ label: '100 000+ EUR', active: false }
 			],
-			budgetTitle: 'Day Night Auto by Budget',
-			byline: 'by Day Night Auto',
+			budgetTitle: 'Promosale Varna by Budget',
+			byline: 'by Promosale Varna',
 			commonCta: 'View All',
 			compareEmpty: 'Your compare is currently empty',
 			compareTitle: 'Compare Top Rated Vehicles',
 			featuredTitle: 'Newest Vehicles',
-			newsTitle: 'Day Night Auto notes',
+			newsTitle: 'Promosale Varna notes',
 			readMore: 'Read more',
 			reviewsTitle: 'Client Reviews',
 			seo: {
 				description:
-					'Day Night Auto: verified cars with clear origin, plus Europe import — selection, inspection, documents, delivery and warranty for Bulgaria.',
-				title: 'Day Night Auto — Cars & Import From Europe'
+					'Promosale Varna: verified cars with clear origin, plus Europe import — selection, inspection, documents, delivery and warranty for Bulgaria.',
+				title: 'Promosale Varna — Cars & Import From Europe'
 			},
 			typeCta: 'View All Types',
 			typeTitle: 'Browse By Type',
 			vehicleCard: vehicleCardEn
 		},
 		hero: {
-			checksTitle: 'Day Night Auto Checks',
+			checksTitle: 'Promosale Varna Checks',
 			ctaLabel: 'View Inventory',
 			features: [
 				'Verified source listing',
@@ -239,7 +239,7 @@ export const messages: Record<Locale, PublicMessages> = {
 				'Viewing by appointment',
 				'Client vehicle intake'
 			],
-			heading: 'Browse, Compare, Drive With Day Night Auto!',
+			heading: 'Browse, Compare, Drive With Promosale Varna!',
 			searchSubmitPrefix: 'Show',
 			searchSubmitSuffix: 'Matches',
 			slideSubtitle: 'Europe-sourced vehicles with verified history and clear appointment support.',
@@ -268,26 +268,26 @@ export const messages: Record<Locale, PublicMessages> = {
 			}
 		},
 		inventory: {
-			emptyBody: 'Clear filters or contact Day Night Auto for a Europe import request.',
-			emptyTitle: 'No Day Night Auto vehicles match these filters',
+			emptyBody: 'Clear filters or contact Promosale Varna for a Europe import request.',
+			emptyTitle: 'No Promosale Varna vehicles match these filters',
 			reset: 'Reset inventory',
 			vehicleCard: vehicleCardEn
 		},
 		detail: {
-			callDayNight: 'Call Day Night Auto',
+			callDayNight: 'Call Promosale Varna',
 			carOverview: 'Car Overview',
 			cash: 'Cash',
 			chatOnViber: 'Chat on Viber',
 			compare: 'Compare',
-			consultantLabel: 'Day Night Auto Consultant',
+			consultantLabel: 'Promosale Varna Consultant',
 			description: 'Description',
 			detailDescriptionFallback:
-				'is available through Day Night Auto with source review and viewing by appointment.',
+				'is available through Promosale Varna with source review and viewing by appointment.',
 			directions: 'Get Directions',
 			email: 'Email',
 			finance: 'Finance',
 			financeIntro: 'Estimated payment before final taxes, registration, and transport costs.',
-			financeTerms: 'Estimated over 72 months. Final terms confirmed by Day Night Auto.',
+			financeTerms: 'Estimated over 72 months. Final terms confirmed by Promosale Varna.',
 			formConsent:
 				'Yes, I would like to receive price alerts on this vehicle and helpful shopping information.',
 			formTerms: 'By using this service, you accept our',
@@ -295,8 +295,8 @@ export const messages: Record<Locale, PublicMessages> = {
 			getToKnow: 'Get To Know this car',
 			inquiryTitle: 'Send Inquiry about Vehicle',
 			inquiryCta: 'Inquire',
-			inquiryIntro: 'Leave your details and Day Night Auto will get back to you about this car.',
-			inquirySuccess: 'Done — Day Night Auto will be in touch as soon as possible.',
+			inquiryIntro: 'Leave your details and Promosale Varna will get back to you about this car.',
+			inquirySuccess: 'Done — Promosale Varna will be in touch as soon as possible.',
 			callCta: 'Call',
 			message: 'Message',
 			messagePlaceholder: 'Comment',
@@ -364,25 +364,25 @@ export const messages: Record<Locale, PublicMessages> = {
 				{ label: '100 000+ EUR', active: false }
 			],
 			budgetTitle: 'Автомобили по бюджет',
-			byline: 'от Day Night Auto',
+			byline: 'от Promosale Varna',
 			commonCta: 'Виж всички',
 			compareEmpty: 'Списъкът за сравнение е празен',
 			compareTitle: 'Сравни избрани автомобили',
 			featuredTitle: 'Най-нови автомобили',
-			newsTitle: 'Съвети от Day Night Auto',
+			newsTitle: 'Съвети от Promosale Varna',
 			readMore: 'Прочети повече',
 			reviewsTitle: 'Отзиви от клиенти',
 			seo: {
 				description:
-					'Day Night Auto: проверени автомобили с ясен произход и подбор на автомобили — подбор, проверка, документи, доставка и гаранция за България.',
-				title: 'Day Night Auto — автомобили и подбор на автомобили'
+					'Promosale Varna: проверени автомобили с ясен произход и подбор на автомобили — подбор, проверка, документи, доставка и гаранция за България.',
+				title: 'Promosale Varna — автомобили и подбор на автомобили'
 			},
 			typeCta: 'Виж всички типове',
 			typeTitle: 'Разгледай по тип',
 			vehicleCard: vehicleCardBg
 		},
 		hero: {
-			checksTitle: 'Проверки от Day Night Auto',
+			checksTitle: 'Проверки от Promosale Varna',
 			ctaLabel: 'Виж наличните',
 			features: [
 				'Проверен източник',
@@ -394,7 +394,7 @@ export const messages: Record<Locale, PublicMessages> = {
 				'Оглед с предварителна уговорка',
 				'Прием на клиентски автомобили'
 			],
-			heading: 'Разгледай, сравни и избери с Day Night Auto!',
+			heading: 'Разгледай, сравни и избери с Promosale Varna!',
 			searchSubmitPrefix: 'Покажи',
 			searchSubmitSuffix: 'автомобила',
 			slideSubtitle: 'Автомобили от Европа с проверена история и ясни следващи стъпки преди оглед.',
@@ -423,28 +423,28 @@ export const messages: Record<Locale, PublicMessages> = {
 			}
 		},
 		inventory: {
-			emptyBody: 'Изчисти филтрите или се свържи с Day Night Auto за подбор на автомобили.',
+			emptyBody: 'Изчисти филтрите или се свържи с Promosale Varna за подбор на автомобили.',
 			emptyTitle: 'Няма автомобили, които отговарят на тези филтри',
 			reset: 'Изчисти филтрите',
 			vehicleCard: vehicleCardBg
 		},
 		detail: {
-			callDayNight: 'Обади се на Day Night Auto',
+			callDayNight: 'Обади се на Promosale Varna',
 			carOverview: 'Основни данни',
 			cash: 'В брой',
 			chatOnViber: 'Чат във Viber',
 			compare: 'Сравни',
-			consultantLabel: 'Консултант Day Night Auto',
+			consultantLabel: 'Консултант Promosale Varna',
 			description: 'Описание',
 			detailDescriptionFallback:
-				'е наличен чрез Day Night Auto с проверка на източника и оглед с предварителна уговорка.',
+				'е наличен чрез Promosale Varna с проверка на източника и оглед с предварителна уговорка.',
 			directions: 'Виж упътване',
 			email: 'Имейл',
 			finance: 'Финансиране',
 			financeIntro:
 				'Ориентировъчна вноска преди окончателни данъци, регистрация и транспортни разходи.',
 			financeTerms:
-				'Ориентировъчно за 72 месеца. Финалните условия се потвърждават от Day Night Auto.',
+				'Ориентировъчно за 72 месеца. Финалните условия се потвърждават от Promosale Varna.',
 			formConsent:
 				'Да, искам да получавам информация за цената на този автомобил и полезна информация за покупката.',
 			formTerms: 'С използването на тази услуга приемате нашето',
@@ -569,16 +569,16 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	// Inventory + detail template strings. Multi-word/compound phrases are listed
 	// before the generic single-word rules below (e.g. /Price/) so they match first.
 	[
-		/Showing (\d+)\s*[-–]\s*(\d+) of (\d+) matching(?: Day Night Auto)? Listings/g,
+		/Showing (\d+)\s*[-–]\s*(\d+) of (\d+) matching(?: Promosale Varna)? Listings/g,
 		'Показани $1 – $2 от $3 съвпадащи обяви'
 	],
 	[
-		/Showing (\d+)\s*[-–]\s*(\d+) of (\d+)(?: Day Night Auto)? Listings/g,
+		/Showing (\d+)\s*[-–]\s*(\d+) of (\d+)(?: Promosale Varna)? Listings/g,
 		'Показани $1 – $2 от $3 обяви'
 	],
-	[/Showing 0 of (\d+)(?: Day Night Auto)? Listings/g, 'Показани 0 от $1 обяви'],
+	[/Showing 0 of (\d+)(?: Promosale Varna)? Listings/g, 'Показани 0 от $1 обяви'],
 	// Inventory banner + searchbar
-	[/Day Night Auto current stock/gi, 'Налични автомобили в Day Night Auto'],
+	[/Promosale Varna current stock/gi, 'Налични автомобили в Promosale Varna'],
 	[
 		/(\d+) vehicles available with appointment viewings and source checks\./g,
 		'$1 налични автомобила с оглед по уговорка и проверен произход.'
@@ -587,14 +587,14 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 		/(\d+) matching vehicles available with appointment viewings and source checks\./g,
 		'$1 съвпадащи автомобила с оглед по уговорка и проверен произход.'
 	],
-	[/Search Day Night Auto inventory/g, 'Търси в Day Night Auto'],
+	[/Search Promosale Varna inventory/g, 'Търси в Promosale Varna'],
 	[/Search brand, model, stock #/g, 'Търси марка, модел, номер #'],
 	[
 		/Search make, model, year, fuel, extras\.\.\./g,
 		'Търси по марка, модел, година, гориво, екстри...'
 	],
 	[/Search for anything/g, 'Търси каквото и да е'],
-	[/Day Night Auto Inventory/g, 'Инвентар'],
+	[/Promosale Varna Inventory/g, 'Инвентар'],
 	[/\bFilters\b/g, 'Филтри'],
 	[/\bMake\b/g, 'Марка'],
 	[/\bModel\b/g, 'Модел'],
@@ -623,11 +623,11 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Terms Of Services/g, 'Общи условия'],
 	[/Privacy Policy/g, 'Поверителност'],
 	[/Cookie Policy/g, 'Бисквитки'],
-	[/Contact Day Night Auto/g, 'Контакт с Day Night Auto'],
-	[/Buying With Day Night Auto/g, 'Покупка с Day Night Auto'],
+	[/Contact Promosale Varna/g, 'Контакт с Promosale Varna'],
+	[/Buying With Promosale Varna/g, 'Покупка с Promosale Varna'],
 	[/Inventory Map/g, 'Карта на наличните'],
 	[/Import Calculator/g, 'Калкулатор за внос'],
-	[/Day Night Auto Online/g, 'Day Night Auto онлайн'],
+	[/Promosale Varna Online/g, 'Promosale Varna онлайн'],
 	[/Opening Hours:/g, 'Работно време:'],
 	[/Monday-Friday 9:00 - 18:00/g, 'Понеделник-петък 9:00 - 18:00'],
 	[/Weekend viewings by appointment/g, 'Огледи през уикенда с уговорка'],
@@ -710,14 +710,14 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/\bYear\b/g, 'Година'],
 	// Detail page feature tabs + helper copy (built in English by applyDetailData,
 	// translated here). Verbatim strings copied from the source so they match.
-	[/Day Night Auto Notes/g, 'Съвети от Day Night Auto'],
+	[/Promosale Varna Notes/g, 'Съвети от Promosale Varna'],
 	[
 		/Estimated payment before final taxes, registration, and transport costs\./g,
 		'Прогнозна вноска без крайни данъци, регистрация и транспорт.'
 	],
 	[
-		/Estimated over 72 months\. Final terms confirmed by Day Night Auto\./g,
-		'Прогноза за 72 месеца. Крайните условия се потвърждават от Day Night Auto.'
+		/Estimated over 72 months\. Final terms confirmed by Promosale Varna\./g,
+		'Прогноза за 72 месеца. Крайните условия се потвърждават от Promosale Varna.'
 	],
 	[
 		/Listed vehicle price\. Final taxes and registration costs confirmed before purchase\./g,
@@ -729,8 +729,8 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Mechanical inspection can be arranged/g, 'Може да се организира технически преглед'],
 	[/Engine details on request/g, 'Детайли за двигателя по запитване'],
 	[
-		/Inventory refreshed from Day Night Auto source data/g,
-		'Наличността е обновена от данните на Day Night Auto'
+		/Inventory refreshed from Promosale Varna source data/g,
+		'Наличността е обновена от данните на Promosale Varna'
 	],
 	[/Inventory refreshed/g, 'Наличността е обновена'],
 	[/Verified source listing/g, 'Проверена обява от източника'],
@@ -739,9 +739,9 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Vehicle viewings by appointment/g, 'Огледите се потвърждават предварително'],
 	[/Registration and documents/g, 'Регистрация и документи'],
 	[/Viewing appointment/g, 'Оглед по уговорка'],
-	[/Day Night Auto Consultants/g, 'Консултанти на Day Night Auto'],
-	[/Day Night Auto Consultant/g, 'Консултант на Day Night Auto'],
-	[/Call Day Night Auto/g, 'Обади се на Day Night Auto'],
+	[/Promosale Varna Consultants/g, 'Консултанти на Promosale Varna'],
+	[/Promosale Varna Consultant/g, 'Консултант на Promosale Varna'],
+	[/Call Promosale Varna/g, 'Обади се на Promosale Varna'],
 	[/Chat on Viber/g, 'Пиши във Viber'],
 	[/EUR\/mo/g, 'EUR/мес.'],
 	[/\bEquipment\b/g, 'Оборудване'],
@@ -765,7 +765,7 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Compare Vehicles/g, 'Сравни автомобили'],
 	[/Shop By Body Type/g, 'По тип купе'],
 	[/Shop By Fuel Type/g, 'По гориво'],
-	[/Day Night Auto Support/g, 'Съдействие от Day Night Auto'],
+	[/Promosale Varna Support/g, 'Съдействие от Promosale Varna'],
 	[/Import & Buying Services/g, 'Внос и покупка'],
 	[/Import Cost Calculator/g, 'Калкулатор за внос'],
 	[/Sell Your Car/g, 'Продай автомобила си'],
@@ -775,10 +775,10 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Find a Consultant/g, 'Намери консултант'],
 	[/Verified Listings/g, 'Проверени обяви'],
 	[/Client Reviews/g, 'Отзиви от клиенти'],
-	[/Contact Day Night Auto/g, 'Контакт с Day Night Auto'],
+	[/Contact Promosale Varna/g, 'Контакт с Promosale Varna'],
 	[/Frequently Asked Questions/g, 'Често задавани въпроси'],
-	[/Day Night Auto Notes/g, 'Съвети от Day Night Auto'],
-	[/Compare Day Night Auto Vehicles Side-by-Side/g, 'Сравни автомобили от Day Night Auto'],
+	[/Promosale Varna Notes/g, 'Съвети от Promosale Varna'],
+	[/Compare Promosale Varna Vehicles Side-by-Side/g, 'Сравни автомобили от Promosale Varna'],
 	[
 		/Compare price, mileage, source details, and specifications before you book a viewing\./g,
 		'Сравни цена, пробег, източник и спецификации преди да запазиш оглед.'

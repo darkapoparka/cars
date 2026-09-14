@@ -1,9 +1,8 @@
-import { localPath } from '$lib/utils/preview-paths';
 import crypto from 'node:crypto';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
 import { svelteKitHandler } from 'better-auth/svelte-kit';
-import { getRouteBodyClasses } from '$lib/data/template-routes';
+import { getRouteBodyClasses } from '$lib/config/storefront-routes';
 import { getAuth, hasAuthRuntimeConfig } from '$lib/server/auth/auth';
 import { getAuthSession } from '$lib/server/auth/session';
 import { createDb, hasDatabaseUrl } from '$lib/server/db/client';
@@ -19,7 +18,7 @@ function warnMissingProductionDatabaseUrl() {
 	warnedMissingProductionDatabase = true;
 	console.error(
 		[
-			'Перфект Ауто PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
+			'ПЕРФЕКТ АУТО PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
 			'The storefront will use demo-only static inventory fallback and admin/write endpoints will fail closed.',
 			'Set DATABASE_URL before promoting this Vercel deployment.'
 		].join(' ')
@@ -55,6 +54,20 @@ export function injectBodyClasses(html: string, bodyClasses: string[]) {
 	)}`;
 }
 
+function varyByDevice(response: Response) {
+	const vary = response.headers.get('vary') ?? '';
+	if (
+		response.headers.get('content-type')?.includes('text/html') &&
+		!vary
+			.toLowerCase()
+			.split(',')
+			.some((key) => key.trim() === 'user-agent')
+	) {
+		response.headers.set('Vary', [vary, 'User-Agent'].filter(Boolean).join(', '));
+	}
+	return response;
+}
+
 export const handle: Handle = async ({ event, resolve }) => {
 	const hasDb = hasDatabaseUrl();
 	if (!hasDb) warnMissingProductionDatabaseUrl();
@@ -66,7 +79,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	event.locals.session = session;
 	event.locals.user = user;
 
-	const bodyClasses = getRouteBodyClasses(localPath(event.url.pathname));
+	const bodyClasses = getRouteBodyClasses(event.url.pathname);
 	const resolveOptions = bodyClasses.length
 		? {
 				transformPageChunk: ({ html }: { html: string }) => injectBodyClasses(html, bodyClasses)
@@ -76,15 +89,16 @@ export const handle: Handle = async ({ event, resolve }) => {
 		resolve(eventToResolve, resolveOptions);
 
 	if (hasAuthRuntimeConfig()) {
-		return svelteKitHandler({
+		const response = await svelteKitHandler({
 			event,
 			resolve: resolveWithBodyClasses,
 			auth: getAuth(),
 			building
 		});
+		return varyByDevice(response);
 	}
 
-	return resolveWithBodyClasses(event);
+	return varyByDevice(await resolveWithBodyClasses(event));
 };
 
 export const handleError: HandleServerError = ({ error, event, status, message }) => {

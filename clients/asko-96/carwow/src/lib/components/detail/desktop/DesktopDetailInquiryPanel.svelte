@@ -75,7 +75,6 @@
 <div class="listing-details--sidebar-box">
 	<p class="h5 mb-16 capitalize">Запитване за автомобила</p>
 
-	<p class="text-sm">Демо форма без доставка. За реално запитване: 0899 76 96 96.</p>
 	<form
 		action="#"
 		class="send-inquiry"
@@ -147,7 +146,7 @@
 		</div>
 		<button
 			type="submit"
-			class="sa-cta sa-cta-primary mb-18 w-full"
+			class="mb-18 sa-cta w-full sa-cta-primary"
 			disabled={inquirySubmitState === 'submitting'}
 		>
 			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}

@@ -98,7 +98,7 @@ export const navigation: NavigationItem[] = [
       features: [
         { id: 'about-showroom', tone: 'ink', artwork: featureArtwork.showroom, title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, href: '/about-us' },
         { id: 'about-import', artwork: featureArtwork.import, tone: 'red', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', href: '/contact?topic=import' },
-        { id: 'about-leasing', tone: 'ink', artwork: featureArtwork.finance, title: 'Запитване за лизинг', detail: 'Обсъдете условията директно с екипа.', href: '/contact?topic=leasing' }
+        { id: 'about-leasing', tone: 'ink', artwork: featureArtwork.finance, title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', href: '/contact?topic=leasing' }
       ],
       groups: [
         {
@@ -120,7 +120,7 @@ export const navigation: NavigationItem[] = [
           ]
         }
       ],
-      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и лизинг чрез партньори.' }
+      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и собствен лизинг.' }
     }
   },
   {

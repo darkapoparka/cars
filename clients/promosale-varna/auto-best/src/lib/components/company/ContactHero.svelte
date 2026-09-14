@@ -11,13 +11,13 @@
   const heroDescriptions = {
     general: `${brand.city} · Оглед с предварителна уговорка`,
     inspection: 'Изберете автомобил и уговорете удобен час',
-    import: 'Обсъдете автомобил, бюджет и внос с екипа',
+    import: 'Започнете с обява или критерии за автомобил',
     leasing: 'Условия според избрания автомобил',
     'trade-in': 'Получете оценка за своя автомобил'
   };
 </script>
 
-<section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} aria-labelledby="contact-title">
+<section class="dn-contact-hero dn-route-hero" class:dn-route-hero--studio={topic.id !== 'general'} class:dn-route-hero--charcoal={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} mobileScene={topic.id === 'trade-in' ? 'sell' : topic.id === 'import' ? 'import' : 'car'} />
   <picture>
     {#if topic.id === 'trade-in'}

@@ -16,12 +16,21 @@
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
-	import { daynightReviews } from '$lib/data/daynight-reviews';
-
-	const stars: number[] = [];
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
+	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 </script>
 
 <div class="reviews-page">
+	<DesktopYellowRouteHero
+		headingId="reviews-route-title"
+		title="Отзиви от клиенти"
+		copy={daynightReviewDisclosure}
+		panel="light"
+		primaryLabel="Виж автомобилите"
+		primaryHref="/inventory"
+		secondaryLabel="Свържете се"
+		secondaryHref="/contact"
+	/>
 	<!-- breadcrumb -->
 	<section class="background-light mb-32">
 		<div class="container">
@@ -39,7 +48,7 @@
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Услуги на АСКО 96</span>
+					<span>Отзиви от клиенти</span>
 				</li>
 			</ul>
 		</div>
@@ -49,22 +58,27 @@
 	<!-- New Cars -->
 	<section class="pb-100">
 		<div class="container">
-			<h2>Услуги на АСКО 96</h2>
+			<h1>Отзиви от клиенти</h1>
+			<p class="review-disclosure">{daynightReviewDisclosure}</p>
 			<div class="tf-spacing-style3"></div>
 
 			<div class="lg-grid-cols-2 md-grid-cols-1 mb-40 grid grid-cols-3 gap-x-30 gap-y-38">
 				{#each daynightReviews as review (review.id)}
 					<div class="testimonior-box">
-						<div class="mb-16 flex items-center gap-4">
-							{#each stars as star (star)}
-								<img src="/assets/icons/star-6.svg" alt="testimonior" />
+						<div
+							class="mb-16 flex items-center gap-4"
+							role="img"
+							aria-label={`${review.rating} от 5 — примерна оценка`}
+						>
+							{#each Array.from({ length: review.rating }, (_, i) => i) as star (star)}
+								<img src="/assets/icons/star-6.svg" alt="" />
 							{/each}
 						</div>
 						<p class="testimonior-box--desc mb-16">
 							{review.text}
 						</p>
 						<div class="testimonior-box--user">
-							<img class="testimonior--img" src={review.avatar} alt="avatar" />
+							<img class="testimonior--img" src={review.avatar} alt="" />
 							<div class="testimonior-box--user-content">
 								<p class="h5 title">{review.name}</p>
 								<p class="desc">{review.label}</p>
@@ -79,6 +93,24 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.reviews-page > .background-light,
+		.reviews-page > .pb-100 > .container > h1,
+		.review-disclosure,
+		.reviews-page > .pb-100 > .container > .tf-spacing-style3 {
+			display: none;
+		}
+
+		.reviews-page > .pb-100 {
+			padding-top: var(--sa-desktop-section-y-md);
+		}
+	}
+
+	.review-disclosure {
+		color: var(--sa-muted);
+		margin-top: 12px;
+		text-align: center;
+	}
 	/* Self-contained scoped styles for /reviews. These reproduce the exact rules the
 	   legacy app.css + StorefrontTemplateContent :global stylesheet provided for the
 	   verbatim class strings used above, confirmed against getComputedStyle at
@@ -96,7 +128,7 @@
 	   card desc/label, breadcrumb spans) override it below. */
 	.reviews-page {
 		color: #1c1c1c;
-		font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
+		font-family: var(--sa-font);
 		letter-spacing: 0;
 	}
 
@@ -111,7 +143,7 @@
 	}
 
 	.reviews-page p,
-	.reviews-page h2,
+	.reviews-page h1,
 	.reviews-page ul {
 		margin-top: 0;
 	}
@@ -187,11 +219,11 @@
 	/* Heading — app.css + StorefrontTemplateContent both supply the h2 styling; the
 	   effective computed result at 1440px is colour #111827, the clamp font size,
 	   weight 700, line-height 1.08. */
-	.reviews-page h2 {
+	.reviews-page h1 {
 		margin-bottom: 0;
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.08;
 	}
@@ -206,8 +238,8 @@
 		margin: 0;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 		list-style: none;
 	}
@@ -217,8 +249,8 @@
 	   line-height 22px comes from app.css's `.breadcrumb a, .breadcrumb span`. */
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
-		font-weight: 400;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 22px;
 	}
 
@@ -252,7 +284,7 @@
 		border: 1px solid #e4e8ef;
 		border-radius: 8px;
 		background: #fff;
-		box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+		box-shadow: none;
 	}
 
 	/* app.css supplied `font-size: 18px`; StorefrontTemplateContent (loaded after, equal
@@ -260,7 +292,7 @@
 	   18px / 1.65 blend via matched-rule inspection of the baseline. */
 	.testimonior-box--desc {
 		color: #374151;
-		font-size: 18px;
+		font-size: var(--sa-text-lg);
 		line-height: 1.65;
 	}
 
@@ -297,8 +329,8 @@
 
 	/* Card name. */
 	.h5 {
-		font-size: 18px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
@@ -308,7 +340,7 @@
 	   shrinks. Colour #667085 from StorefrontTemplateContent's `.desc`. */
 	.desc {
 		color: #667085;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 26px;
 	}
 

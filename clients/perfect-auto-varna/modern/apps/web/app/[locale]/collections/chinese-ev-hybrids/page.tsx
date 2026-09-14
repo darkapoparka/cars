@@ -1,6 +1,6 @@
 import { Badge } from "@repo/design-system/components/ui/badge";
 import { Button } from "@repo/design-system/components/ui/button";
-import { getCollectionPath } from "@repo/marketplace";
+import { getCollectionPath, leadSite } from "@repo/marketplace";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight, CarFront } from "lucide-react";
@@ -43,8 +43,7 @@ const collectionCopy = {
     listingHeading: "Актуални обяви",
     resultsLabel: "резултата",
     title: "Китайски електромобили и хибриди",
-    truth:
-      "Перфект Ауто не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.",
+    truth: `${leadSite.shortName} не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.`,
   },
   en: {
     badge: "Editorial collection",
@@ -61,8 +60,7 @@ const collectionCopy = {
     listingHeading: "Current listings",
     resultsLabel: "results",
     title: "Chinese EVs and hybrids",
-    truth:
-      "Перфект Ауто does not claim an official partnership with the displayed brands. Every offer is confirmed individually.",
+    truth: `${leadSite.shortName} does not claim an official partnership with the displayed brands. Every offer is confirmed individually.`,
   },
 } as const;
 
@@ -136,7 +134,7 @@ export default async function ChineseCollectionPage({
                   fallbackLabel={copy.heroUnavailable}
                   loading="eager"
                   sizes="(min-width: 1024px) 320px, 100vw"
-                  src="/variant-2/images/directory/china-ev-importer-profile.webp"
+                  src="/images/directory/china-ev-importer-profile.webp"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-black/60 px-5 py-3 text-white backdrop-blur-[2px]">
                   <p className="font-medium text-sm">{copy.heroCaption}</p>

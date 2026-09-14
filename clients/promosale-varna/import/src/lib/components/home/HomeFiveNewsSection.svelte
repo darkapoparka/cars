@@ -10,7 +10,7 @@
 
 	let cards = $derived(posts.slice(0, 3));
 	const readAllBlogTitle = $derived(
-		copy.newsTitle === 'Day Night Auto notes' ? 'Read all blog posts' : 'Виж всички статии'
+		copy.newsTitle === 'Promosale Varna notes' ? 'Read all blog posts' : 'Виж всички статии'
 	);
 	const brandedNewsTitle = $derived(/daynight/i.test(copy.newsTitle));
 	const brandFirstNewsTitle = $derived(copy.newsTitle.toLowerCase().startsWith('daynight'));
@@ -28,7 +28,7 @@
 								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
 								<img
 									src={daynightAssets.logoDark}
-									alt="Day Night Auto"
+									alt="Promosale Varna"
 									width="220"
 									height="58"
 									loading="lazy"
@@ -46,7 +46,7 @@
 								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
 								<img
 									src={daynightAssets.logoDark}
-									alt="Day Night Auto"
+									alt="Promosale Varna"
 									width="220"
 									height="58"
 									loading="lazy"

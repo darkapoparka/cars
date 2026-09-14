@@ -86,28 +86,13 @@
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
 				<a href={daynightSite.phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
-				<div class="about-hero-socials">
-					<a
-						href="https://www.facebook.com/61566304063141/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
-					>
-					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
-					>
-					<a
-						href={youtubeChannelUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="YouTube"
-					>
-						<img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" />
-					</a>
-				</div>
+				{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram || youtubeChannelUrl}
+					<div class="about-hero-socials">
+						{#if daynightSite.socialLinks.facebook}<a href={daynightSite.socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><SiteChromeIcon name="facebook" /></a>{/if}
+						{#if daynightSite.socialLinks.instagram}<a href={daynightSite.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><SiteChromeIcon name="instagram" /></a>{/if}
+						{#if youtubeChannelUrl}<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" /></a>{/if}
+					</div>
+				{/if}
 			</nav>
 		</div>
 	</DesktopYellowRouteHero>
@@ -171,7 +156,7 @@
 					автомобил.
 				</p>
 				<p>
-					Разгледай автомобилите онлайн или ни посети в Студентски град. Екипът ще уточни
+					Разгледай автомобилите онлайн или ни посети на {daynightSite.locationShort}. Екипът ще уточни
 					наличността, подробностите по автомобила и удобен час за оглед.
 				</p>
 				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
@@ -247,7 +232,7 @@
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Студентски град, {daynightSite.city}</strong>
+						<strong>{daynightSite.locationShort}</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}

@@ -91,7 +91,7 @@
 				onclick={() => filters.removeTag(tag.field, tag.value)}
 			>
 				<span class="select-item__label">{tag.label}</span>
-				<img src="/variant-3/assets/icons/X.svg" alt="" aria-hidden="true" class="filter-icon" />
+				<img src="/assets/icons/X.svg" alt="" aria-hidden="true" class="filter-icon" />
 			</button>
 		{/each}
 	</div>
@@ -103,7 +103,7 @@
 		onclick={clearAll}
 	>
 		Изчисти
-		<img src="/variant-3/assets/icons/X-White.svg" alt="" aria-hidden="true" />
+		<img src="/assets/icons/X-White.svg" alt="" aria-hidden="true" />
 	</button>
 </div>
 
@@ -125,12 +125,12 @@
 		min-height: 44px;
 	}
 	:global(.inventory-refined .daynight-inventory-result-count) {
-		font: 500 17px/1.4 var(--sa-font) !important;
+		font: var(--sa-weight-medium) var(--sa-text-control)/1.4 var(--sa-font) !important;
 		color: #454d55 !important;
 		margin: 0 !important;
 	}
 	:global(.inventory-refined .daynight-inventory-result-count span) {
-		font-weight: 750 !important;
+		font-weight: var(--sa-weight-strong) !important;
 		color: #161a1d;
 	}
 	.inventory-toolbar-actions {

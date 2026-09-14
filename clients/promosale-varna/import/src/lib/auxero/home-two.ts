@@ -58,7 +58,7 @@ export const homeTwoBrandLogoForName = (name: string, fallbackImage: string) =>
 
 export const homeTwoReviews: HomeTwoReview[] = [
 	{
-		author: 'Александър, клиент на Day Night Auto',
+		author: 'Александър, клиент на Promosale Varna',
 		body: 'Преди огледа получих история, разходи и следващи стъпки. Нямаше дребен шрифт, само конкретна информация.',
 		title: 'Пълна картина преди сделка'
 	},
@@ -181,7 +181,7 @@ export const homeTwoDealCards: HomeTwoDealCard[] = [
 		priceLabel: 'Цена от',
 		saving: 'Готов за регистрация',
 		slug: '21778068579001193',
-		stock: 'DAY NIGHT AUTO GROUP · Проверен',
+		stock: 'PROMOSALE VARNA · Проверен',
 		title: 'BMW X4 M Competition'
 	},
 	{

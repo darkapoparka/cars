@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "asko-96",
   "templateKey": "auto-best",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
   "createdAt": "2026-09-06T20:48:48.418Z",
-  "state": "local-review-ready",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,27 +20,16 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "widths": [
-      390,
-      1440
-    ],
-    "routes": "9 routes at each width: 200, no page errors, broken images or horizontal overflow",
-    "interactions": "Toyota filter to one result, detail and phone link; sell enquiry review without sending; mobile menu Escape dismissal",
-    "validation": "npm ci Node 22.23.2; npm run validate: architecture/assets/Svelte 0 errors 0 warnings/production build passed",
-    "artifacts": ".client/qa/",
-    "autofixer": "28 changed components reviewed; external tel/social/map URL false positives and preexisting attachment/effect style suggestions retained"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
     "demoProjectId": null,
     "registered": false
   },
-  "previewUrl": "http://127.0.0.1:6611/",
-  "updatedAt": "2026-09-06T21:05:10.663Z",
   "businessName": "АСКО 96",
   "stockSnapshotDate": "2026-09-06",
   "stockCount": 16,
@@ -59,11 +48,21 @@
     "External maps and video playback depend on provider/browser access; channel IDs and map destination verified",
     "Full official logo retained in secondary placements includes its source 28-year medal; main navigation uses official wordmark"
   ],
-  "runtime": {
-    "project": "J:/cars/clients/asko-96/auto-best",
-    "pid": 77816,
-    "port": 6611,
-    "node": "22.23.2",
-    "verified": "Browser screenshot captured after final runtime restart"
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/"
+  },
+  "workflowCommit": "5ee3f8f76e79e9cca76b025528ee27415b1132fb",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-14T20:56:15.996Z",
+    "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }

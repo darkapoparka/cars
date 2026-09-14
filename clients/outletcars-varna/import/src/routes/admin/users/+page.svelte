@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Users</title>
+	<title>OUTLETCARS.BG Admin - Users</title>
 </svelte:head>
 
 <AdminShell title="Users" activePath="/admin/users">
@@ -50,7 +50,7 @@
 				<div>
 					<Card.Title>Accounts and leads</Card.Title>
 					<Card.Description
-						>Admin, agent, customer, and lead records visible to OUTLETCARS.BG — Варна.</Card.Description
+						>Admin, agent, customer, and lead records visible to OUTLETCARS.BG.</Card.Description
 					>
 				</div>
 			</Card.Header>

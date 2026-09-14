@@ -31,7 +31,7 @@
 	const banner = {
 		description:
 			'Ориентировъчна месечна вноска за избрания автомобил. Финалните условия се потвърждават с партньорска банка преди покупка.',
-		eyebrow: 'Day Night Auto финансиране',
+		eyebrow: 'Promosale Varna финансиране',
 		image: '/assets/daynight/services/evaluate-link-service.webp',
 		title: 'Финансиране на автомобил'
 	};
@@ -70,7 +70,7 @@
 			title: 'Избери автомобил'
 		},
 		{
-			text: 'Изпрати запитване с избрания автомобил. Day Night Auto подготвя офертата с партньорска банка.',
+			text: 'Изпрати запитване с избрания автомобил. Promosale Varna подготвя офертата с партньорска банка.',
 			title: 'Заяви оферта'
 		},
 		{
@@ -87,7 +87,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Финансиране — Day Night Auto"
+	title="Финансиране — Promosale Varna"
 >
 	<div class="daynight-financing-page" data-daynight-financing>
 		<PageBanner {banner} />

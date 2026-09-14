@@ -31,7 +31,7 @@
 {:else if name === 'facebook'}
 	<img
 		class="block size-5 object-contain"
-		src="/variant-3/assets/icons/facebook.svg"
+		src="/assets/icons/facebook.svg"
 		alt=""
 		aria-hidden="true"
 		width="20"
@@ -40,7 +40,7 @@
 {:else if name === 'instagram'}
 	<img
 		class="block size-5 object-contain"
-		src="/variant-3/assets/icons/instagram-official-gradient.svg"
+		src="/assets/icons/instagram-official-gradient.svg"
 		alt=""
 		aria-hidden="true"
 		width="20"
@@ -49,7 +49,7 @@
 {:else if name === 'tiktok'}
 	<img
 		class="block size-5 object-contain"
-		src="/variant-3/assets/icons/tiktok-official-circle.png"
+		src="/assets/icons/tiktok-official-circle.png"
 		alt=""
 		aria-hidden="true"
 		loading="lazy"

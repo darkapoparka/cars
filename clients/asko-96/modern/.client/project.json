@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "asko-96",
   "templateKey": "modern",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
   "createdAt": "2026-09-06T20:49:05.945Z",
-  "state": "local-review-ready",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,27 +20,17 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "widths": [
-      390,
-      1440
-    ],
-    "routes": "10 routes at each width, HTTP200, no broken visible images, horizontal overflow or browser errors",
-    "interactions": "Toyota search returns one car at both widths; detail/phone correct; browser Back retains query; mobile filters open and dismiss with Escape; menu opens and dismisses",
-    "validation": "Frozen pnpm install, Prisma client generation, web typecheck and final production build passed",
-    "artifacts": "J:/cars/audits/2026-09-06/results-asko-modern.json; asko96-build/modern-interactions.json; modern-interactions-desktop.json; modern-build-final.log; modern-build-brand-final.log; results-asko-modern-final-runtime.json"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
     "demoProjectId": null,
     "registered": false
   },
-  "previewUrl": "http://127.0.0.1:6612/cars",
   "businessName": "АСКО 96",
-  "updatedAt": "2026-09-06T21:11:21.812Z",
   "stockSnapshotDate": "2026-09-06",
   "stockCount": 16,
   "changes": [
@@ -58,12 +48,21 @@
     "Official secondary logo includes its original 28-year medal",
     "CRM unregistered; current Agency OS project inaccessible through connected account"
   ],
-  "runtime": {
-    "project": "J:/cars/clients/asko-96/modern/apps/web",
-    "launcherPid": 64044,
-    "pid": 77780,
-    "port": 6612,
-    "node": "22.23.2",
-    "verified": "Fresh browser render after final build/restart, 2026-09-07"
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "5ee3f8f76e79e9cca76b025528ee27415b1132fb",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-14T20:56:28.417Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }

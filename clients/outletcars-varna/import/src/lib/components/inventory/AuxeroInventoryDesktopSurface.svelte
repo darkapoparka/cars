@@ -615,7 +615,7 @@
 
 <section
 	id="inventory-results"
-	class="daynight-inventory-main pb-100"
+	class="daynight-inventory-main"
 	aria-label="Автомобили в наличност"
 >
 	<div class="container">

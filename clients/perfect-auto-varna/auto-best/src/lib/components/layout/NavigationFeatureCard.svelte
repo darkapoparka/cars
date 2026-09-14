@@ -30,7 +30,7 @@
   .dn-mega__feature--ink { background: var(--dn-ink); color: var(--dn-white); }
   .dn-mega__feature--ink:hover { background: var(--dn-ink); }
   .copy { position: relative; z-index: 1; min-height: 2.5em; font-size: var(--dn-text-subheading); }
-  strong { display: block; color: inherit; font-size: inherit; font-weight: var(--dn-menu-heading-weight); line-height: 1.25; }
+  strong { display: block; color: inherit; font-size: inherit; font-weight: var(--dn-menu-heading-weight); line-height: var(--dn-leading-heading); }
   .artwork { display: flex; flex: none; align-items: flex-end; justify-content: center; height: var(--dn-menu-art-height); margin: auto -12px 24px; }
   .artwork :global(.feature-artwork) { width: min(96%, calc(var(--dn-menu-art-height) * var(--artwork-ratio))); height: auto; }
   .artwork :global(img) { mix-blend-mode: multiply; }

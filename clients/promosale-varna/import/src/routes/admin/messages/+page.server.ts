@@ -6,7 +6,7 @@ import { createMessage, normalizeMessageStatus, updateMessage } from '$lib/serve
 
 const value = (formData: FormData, key: string) => String(formData.get(key) ?? '').trim();
 const staffEmail = 'admin@daynight.local';
-const staffName = 'Day Night Auto Staff';
+const staffName = 'Promosale Varna Staff';
 
 type CmsMessage = Awaited<ReturnType<typeof getAdminCmsOverview>>['messages'][number];
 

@@ -38,7 +38,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="Въпроси — Day Night Auto"
+	title="Въпроси — Promosale Varna"
 >
 	<FaqsContent {featured} {groups} />
 </AuxeroPublicShell>

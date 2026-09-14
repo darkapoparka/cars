@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Agents</title>
+	<title>OUTLETCARS.BG Admin - Agents</title>
 </svelte:head>
 
 <AdminShell title="Agents" activePath="/admin/agents">

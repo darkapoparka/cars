@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
@@ -6,61 +7,61 @@
 	const overviewItems = $derived([
 		{
 			id: 'mileage',
-			icon: '/variant-3/assets/icons/icon-gauge.svg',
+			icon: '/assets/icons/icon-gauge.svg',
 			label: 'Пробег:',
 			value: vehicle.mileage
 		},
 		{
 			id: 'year',
-			icon: '/variant-3/assets/icons/calendar.svg',
+			icon: '/assets/icons/calendar.svg',
 			label: 'Година:',
 			value: `${vehicle.year}`
 		},
 		{
 			id: 'fuel',
-			icon: '/variant-3/assets/icons/gaspump.svg',
+			icon: '/assets/icons/gaspump.svg',
 			label: 'Гориво:',
 			value: vehicle.fuel
 		},
 		{
 			id: 'color',
-			icon: '/variant-3/assets/icons/palette.svg',
+			icon: '/assets/icons/palette.svg',
 			label: 'Цвят:',
 			value: vehicle.color
 		},
 		{
 			id: 'location',
-			icon: '/variant-3/assets/icons/MapPin.svg',
+			icon: '/assets/icons/MapPin.svg',
 			label: 'Локация:',
-			value: 'Варна'
+			value: `${daynightSite.city}`
 		},
 		{
 			id: 'interior',
-			icon: '/variant-3/assets/icons/Seatbelt.svg',
+			icon: '/assets/icons/Seatbelt.svg',
 			label: 'Интериор:',
 			value: 'Тъмен салон'
 		},
 		{
 			id: 'engine',
-			icon: '/variant-3/assets/icons/Frame.svg',
+			icon: '/assets/icons/Frame.svg',
 			label: 'Двигател:',
 			value: vehicle.engine
 		},
 		{
 			id: 'transmission',
-			icon: '/variant-3/assets/icons/transmission-2.svg',
+			icon: '/assets/icons/transmission-2.svg',
 			label: 'Скоростна кутия:',
 			value: vehicle.transmission
 		},
 		{
 			id: 'vin',
-			icon: '/variant-3/assets/icons/Barcode.svg',
+			icon: '/assets/icons/Barcode.svg',
 			label: 'VIN:',
 			value: 'предоставя се при оглед'
 		},
 		{
 			id: 'lot',
-			icon: '/variant-3/assets/icons/QrCode.svg',
+			icon: '/assets/icons/QrCode.svg',
 			label: 'Референтен №:',
 			value: vehicle.lot
 		}
@@ -92,12 +93,12 @@
 
 <style>
 	.car-overview-list-style2 :global(.h7) {
-		font-size: 16px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.45;
 	}
 
 	.car-overview-list-style2 > li > span {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 </style>

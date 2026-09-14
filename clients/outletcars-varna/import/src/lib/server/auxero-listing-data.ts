@@ -1,4 +1,4 @@
-import { daynightBrand, daynightConsultants, daynightContact, daynightFetchedAt } from '$lib/data/daynight';
+import { daynightConsultants, daynightContact, daynightFetchedAt } from '$lib/data/daynight';
 import type { Agent } from '$lib/data/agents';
 import { listManagedAgents, type ManagedAgent } from './agents';
 import {
@@ -137,7 +137,7 @@ for (const vehicle of vehicles) {
 const inventoryBrandPills = brands
 	.map((brand) => ({
 		count: brandCounts.get(brand) ?? 0,
-		image: brandLogos[brand] ?? '/dealer/logo-on-light-v2.svg',
+		image: brandLogos[brand] ?? '/brand/daynight-wordmark.svg',
 		label: brand === 'Mercedes-Benz' ? 'Mercedes' : brand,
 		value: brand
 	}))
@@ -639,13 +639,13 @@ const inventoryShowingText = (state: InventoryState) => {
 	const hasFilters = Object.keys(state.filters).length > 0;
 	const selectedCount = state.selected.length;
 
-	if (selectedCount === 0) return `Showing 0 of ${vehicles.length} OUTLETCARS.BG — Варна Listings`;
+	if (selectedCount === 0) return `Showing 0 of ${vehicles.length} OUTLETCARS.BG Listings`;
 
 	if (hasFilters) {
-		return `Showing 1 - ${selectedCount} of ${selectedCount} matching OUTLETCARS.BG — Варна Listings`;
+		return `Showing 1 - ${selectedCount} of ${selectedCount} matching OUTLETCARS.BG Listings`;
 	}
 
-	return `Showing 1 - ${selectedCount} of ${selectedCount} OUTLETCARS.BG — Варна Listings`;
+	return `Showing 1 - ${selectedCount} of ${selectedCount} OUTLETCARS.BG Listings`;
 };
 
 const inventoryLayoutToggle = (state: InventoryState) => {
@@ -696,7 +696,7 @@ const inventoryUtilityToolbar = (state: InventoryState) => {
 const inventoryHeroSearchSurface = (state: InventoryState) => {
 	const searchQuery = selectedSearchQuery(state);
 
-	return `<form class="daynight-inventory-searchbar" action="/inventory" method="get" role="search" aria-label="Search OUTLETCARS.BG — Варна inventory" data-daynight-search-form="inventory">
+	return `<form class="daynight-inventory-searchbar" action="/inventory" method="get" role="search" aria-label="Search OUTLETCARS.BG inventory" data-daynight-search-form="inventory">
 		${inventorySearchHiddenInputs(state)}
 		<div class="daynight-inventory-searchbar__row">
 			<div class="daynight-inventory-searchbar__primary">
@@ -714,7 +714,7 @@ const inventoryHeroSearchSurface = (state: InventoryState) => {
 const inventorySearchSurface = (state: InventoryState) => {
 	const searchQuery = selectedSearchQuery(state);
 
-	return `<form class="daynight-inventory-searchbar" action="/inventory" method="get" role="search" aria-label="Search OUTLETCARS.BG — Варна inventory" data-daynight-search-form="inventory">
+	return `<form class="daynight-inventory-searchbar" action="/inventory" method="get" role="search" aria-label="Search OUTLETCARS.BG inventory" data-daynight-search-form="inventory">
 		${inventorySearchHiddenInputs(state)}
 		<div class="daynight-inventory-searchbar__row">
 			<div class="daynight-inventory-searchbar__primary">
@@ -884,10 +884,10 @@ const inventorySidebarRail = (state: InventoryState) => {
 };
 
 const inventoryBanner = (state: InventoryState) =>
-	`<section class="daynight-inventory-banner" aria-label="OUTLETCARS.BG — Варна inventory showcase">
+	`<section class="daynight-inventory-banner" aria-label="OUTLETCARS.BG inventory showcase">
 	<div class="container">
 		<div class="daynight-inventory-banner__copy">
-			<h1 id="daynight-inventory-title" class="daynight-sr-only">OUTLETCARS.BG — Варна Inventory</h1>
+			<h1 id="daynight-inventory-title" class="daynight-sr-only">OUTLETCARS.BG Inventory</h1>
 		</div>
 		<div class="daynight-inventory-banner__cars" aria-hidden="true">
 			<img class="daynight-inventory-banner__car daynight-inventory-banner__car--x5" src="/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp" alt="" loading="eager" decoding="async">
@@ -1044,8 +1044,8 @@ const inventoryContent = (state: InventoryState) => {
 		.join('\n');
 	const empty = `<div class="card-box card-box-style-1 daynight-empty-state">
 		<div class="content border-light">
-			<p class="h6 card-box__title mb-8">No OUTLETCARS.BG — Варна vehicles match these filters</p>
-			<p class="text-secondary mb-15">Clear filters or contact OUTLETCARS.BG — Варна for a Europe import request.</p>
+			<p class="h6 card-box__title mb-8">No OUTLETCARS.BG vehicles match these filters</p>
+			<p class="text-secondary mb-15">Clear filters or contact OUTLETCARS.BG for a Europe import request.</p>
 			<a href="/inventory" class="view-details">Reset inventory <img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt="reset"></a>
 		</div>
 	</div>`;
@@ -1111,7 +1111,7 @@ const inventoryDashboard = (
 
 const inventoryMainSection = (
 	state: InventoryState
-) => `<section class="daynight-inventory-main pb-100" aria-label="OUTLETCARS.BG — Варна inventory results">
+) => `<section class="daynight-inventory-main pb-100" aria-label="OUTLETCARS.BG inventory results">
 	<div class="container">
 		${inventoryDashboard(state)}
 	</div>
@@ -1327,17 +1327,17 @@ export const applyCompareData = (html: string, options: AuxeroRenderOptions = {}
 		html
 			.replaceAll(
 				'<h2>Compare Cars Side-by-Side</h2>',
-				'<h1 class="h2">Сравни автомобили от OUTLETCARS.BG — Варна</h1>'
+				'<h1 class="h2">Сравни автомобили от OUTLETCARS.BG</h1>'
 			)
 			.replaceAll(
 				'<h2 class="text-center mb-12 capitalize">Compare Cars Side-by-Side</h2>',
-				'<h1 class="h2 text-center mb-12 capitalize">Сравни автомобили от OUTLETCARS.BG — Варна</h1>'
+				'<h1 class="h2 text-center mb-12 capitalize">Сравни автомобили от OUTLETCARS.BG</h1>'
 			)
 			.replaceAll(
-				'<h2 class="text-center mb-12 capitalize">Сравни автомобили от OUTLETCARS.BG — Варна</h2>',
-				'<h1 class="h2 text-center mb-12 capitalize">Сравни автомобили от OUTLETCARS.BG — Варна</h1>'
+				'<h2 class="text-center mb-12 capitalize">Сравни автомобили от OUTLETCARS.BG</h2>',
+				'<h1 class="h2 text-center mb-12 capitalize">Сравни автомобили от OUTLETCARS.BG</h1>'
 			)
-			.replaceAll('Compare Cars Side-by-Side', 'Сравни автомобили от OUTLETCARS.BG — Варна')
+			.replaceAll('Compare Cars Side-by-Side', 'Сравни автомобили от OUTLETCARS.BG')
 			.replaceAll(
 				'Compare features, performance, and pricing to choose the perfect car.',
 				'Сравни цена, пробег, източник и спецификации преди да запазиш оглед.'
@@ -1427,17 +1427,17 @@ export const applyAgentsData = (html: string, options: AuxeroRenderOptions = {})
 	const next = html
 		.replaceAll('Find a Dealer', 'Намери консултант')
 		.replace(
-			'<h2>OUTLETCARS.BG — Варна Consultants</h2>',
+			'<h2>OUTLETCARS.BG Consultants</h2>',
 			adminMode
 				? '<h1 class="h2">Управление на консултанти</h1>'
-				: '<h1 class="h2">Консултанти на OUTLETCARS.BG — Варна</h1>'
+				: '<h1 class="h2">Консултанти на OUTLETCARS.BG</h1>'
 		);
 
 	return replaceFirstDivAfter(
 		next,
 		adminMode
 			? '<h1 class="h2">Управление на консултанти</h1>'
-			: '<h1 class="h2">Консултанти на OUTLETCARS.BG — Варна</h1>',
+			: '<h1 class="h2">Консултанти на OUTLETCARS.BG</h1>',
 		'<div class="grid grid-cols-4',
 		agentGrid(adminMode)
 	);
@@ -1468,7 +1468,7 @@ export const applyAgentDetailData = (html: string, options: AuxeroRenderOptions 
 	const inventoryState = getAgentInventoryState(agent, 3);
 	let next = html
 		.replaceAll('Mike Hanley', escapeHtml(agent.name))
-		.replaceAll('Verified Dealer', 'Verified OUTLETCARS.BG — Варна Consultant')
+		.replaceAll('Verified Dealer', 'Verified OUTLETCARS.BG Consultant')
 		.replace('/assets/images/pages/sale-agent-9.jpg', escapeHtml(agent.image))
 		.replace(
 			/<p class="text-secondary mb-4">\s*Darrell Steward[\s\S]*?<\/p>/,
@@ -1476,9 +1476,9 @@ export const applyAgentDetailData = (html: string, options: AuxeroRenderOptions 
 		)
 		.replace(
 			/<p class="text-secondary mb-40">\s*His passion[\s\S]*?<\/p>/,
-			`<p class="text-secondary mb-40">OUTLETCARS.BG — Варна keeps every conversation practical: source details, inspection context, import or registration steps, and viewing appointments are confirmed before the next commitment.</p>`
+			`<p class="text-secondary mb-40">OUTLETCARS.BG keeps every conversation practical: source details, inspection context, import or registration steps, and viewing appointments are confirmed before the next commitment.</p>`
 		)
-		.replace(/Dealer Inventory \(3\)/g, `OUTLETCARS.BG — Варна Inventory (${inventoryState.count})`)
+		.replace(/Dealer Inventory \(3\)/g, `OUTLETCARS.BG Inventory (${inventoryState.count})`)
 		.replace(
 			/<iframe src="https:\/\/www\.google\.com\/maps\/embed\?pb=[^"]*"/g,
 			`<iframe src="${daynightMapEmbedSrc}"`
@@ -1492,7 +1492,7 @@ export const applyAgentDetailData = (html: string, options: AuxeroRenderOptions 
 		.replaceAll('1-555-678-9999', escapeHtml(daynightContact.marketplacePhoneLabel))
 		.replaceAll('tel:1-555-678-8888', daynightContact.primaryPhoneHref)
 		.replaceAll('tel:1-555-678-9999', daynightContact.marketplacePhoneHref)
-		.replaceAll('Call To Dealer', 'Call OUTLETCARS.BG — Варна')
+		.replaceAll('Call To Dealer', 'Call OUTLETCARS.BG')
 		.replaceAll('Chat via WhatsApp', 'Chat on Viber')
 		.replaceAll('value="Tony Nguyen"', 'value=""')
 		.replaceAll(`value="${daynightContact.emailLabel}"`, 'value=""')
@@ -1511,7 +1511,7 @@ export const applyAgentDetailData = (html: string, options: AuxeroRenderOptions 
 	);
 	next = replaceFirstDivAfter(
 		next,
-		'OUTLETCARS.BG — Варна Inventory',
+		'OUTLETCARS.BG Inventory',
 		'<div class="grid grid-cols-1',
 		agentInventoryGrid(agent)
 	);
@@ -1538,15 +1538,15 @@ export const applyContactData = (html: string) => {
 		)
 		.replace(
 			'<p class="h3 mb-12 capitalize">Reach Out to Us</p>',
-			'<h1 class="h3 mb-12 capitalize">Свържете се с OUTLETCARS.BG — Варна</h1>'
+			'<h1 class="h3 mb-12 capitalize">Свържете се с OUTLETCARS.BG</h1>'
 		)
-		.replaceAll('Reach Out to Us', 'Свържете се с OUTLETCARS.BG — Варна')
+		.replaceAll('Reach Out to Us', 'Свържете се с OUTLETCARS.BG')
 		.replaceAll(
 			'We’re here to assist with any questions, concerns, or inquiries—contact us today!',
 			'Пишете за наличен автомобил, подбор на автомобили, оглед, документи или продажба.'
 		)
-		.replaceAll('Address Business', 'Офис OUTLETCARS.BG — Варна')
-		.replaceAll('Contact OUTLETCARS.BG — Варна', 'Контакт с OUTLETCARS.BG — Варна')
+		.replaceAll('Address Business', 'Офис OUTLETCARS.BG')
+		.replaceAll('Contact OUTLETCARS.BG', 'Контакт с OUTLETCARS.BG')
 		.replaceAll(
 			'6205 Peachtree Dunwoody Rd, Atlanta, GA 30328',
 			escapeHtml(daynightContact.addressLabel)
@@ -1554,7 +1554,7 @@ export const applyContactData = (html: string) => {
 		.replaceAll('Week-Day: 8:00 - 18:00', 'Понеделник-петък: 9:00 - 18:00')
 		.replaceAll('Sunday: Closed', 'Уикенд: с уговорка')
 		.replaceAll('Working Time', 'Работно време')
-		.replaceAll('Follow Us On social media:', 'Последвайте OUTLETCARS.BG — Варна:')
+		.replaceAll('Follow Us On social media:', 'Последвайте OUTLETCARS.BG:')
 		.replaceAll(
 			"We'd love to hear from you! If you have any questions",
 			daynightContact.appointmentNote
@@ -1566,17 +1566,17 @@ export const applyContactData = (html: string) => {
 		.replaceAll('value="Tony"', 'value=""')
 		.replaceAll('placeholder="Enter your last name"', 'placeholder="Enter your last name"');
 
-	const contactInfoStart = next.indexOf('Офис OUTLETCARS.BG — Варна');
-	const contactInfoLabelStart = next.indexOf('Контакт с OUTLETCARS.BG — Варна', contactInfoStart);
+	const contactInfoStart = next.indexOf('Офис OUTLETCARS.BG');
+	const contactInfoLabelStart = next.indexOf('Контакт с OUTLETCARS.BG', contactInfoStart);
 
 	if (contactInfoLabelStart >= 0) {
-		next = `${next.slice(0, contactInfoLabelStart)}Телефон OUTLETCARS.BG — Варна${next.slice(
-			contactInfoLabelStart + 'Контакт с OUTLETCARS.BG — Варна'.length
+		next = `${next.slice(0, contactInfoLabelStart)}Телефон OUTLETCARS.BG${next.slice(
+			contactInfoLabelStart + 'Контакт с OUTLETCARS.BG'.length
 		)}`;
 	}
 
 	const contactMapOverlay = `<div class="daynight-contact-map__overlay">
-		<p class="daynight-contact-map__eyebrow">OUTLETCARS.BG — Варна Plovdiv</p>
+		<p class="daynight-contact-map__eyebrow">OUTLETCARS.BG Plovdiv</p>
 		<h1>Огледи и консултации с уговорка</h1>
 		<p>${escapeHtml(daynightContact.addressLabel)}</p>
 		<div class="daynight-contact-map__actions">
@@ -1680,7 +1680,7 @@ const matchingVehicleLabel = (count: number) =>
 
 const mapLocationList = (groups: MapLocationGroup[]) => {
 	if (!groups.length) {
-		return `<p class="text-secondary mb-16" data-daynight-map-empty="true">Няма автомобили по тези филтри. Изчисти филтрите или се свържи с OUTLETCARS.BG — Варна за входящи автомобили.</p>`;
+		return `<p class="text-secondary mb-16" data-daynight-map-empty="true">Няма автомобили по тези филтри. Изчисти филтрите или се свържи с OUTLETCARS.BG за входящи автомобили.</p>`;
 	}
 
 	return `<ul class="daynight-map-fallback__locations">
@@ -1703,7 +1703,7 @@ const inventoryMapFallback = (state: InventoryState) => {
 
 	return `<div id="map" class="daynight-map-fallback" data-map-zoom="16" data-map-scroll="true" data-daynight-map-selected="${state.selected.length}">
 				<div class="daynight-map-fallback__inner">
-					<p class="h4 mb-12">Зона за огледи OUTLETCARS.BG — Варна</p>
+					<p class="h4 mb-12">Зона за огледи OUTLETCARS.BG</p>
 					<p class="text-secondary mb-8">${escapeHtml(daynightContact.addressLabel)}</p>
 					<p class="text-secondary mb-12" data-daynight-map-summary="${escapeHtml(matchingVehicleLabel(state.selected.length))}">${escapeHtml(matchingVehicleLabel(state.selected.length))}, групирани по локация за оглед.</p>
 					${mapLocationList(groups)}
@@ -1745,9 +1745,9 @@ export const applyInventoryData = (
 	}
 
 	return replaceDemoVehicleCopy(next)
-		.replaceAll('Listing Grid 4 Columns', 'OUTLETCARS.BG — Варна Inventory')
-		.replaceAll('Listing Grid 3 Columns', 'OUTLETCARS.BG — Варна Inventory')
-		.replaceAll('Listing Grid Half Map', 'OUTLETCARS.BG — Варна Inventory Map')
+		.replaceAll('Listing Grid 4 Columns', 'OUTLETCARS.BG Inventory')
+		.replaceAll('Listing Grid 3 Columns', 'OUTLETCARS.BG Inventory')
+		.replaceAll('Listing Grid Half Map', 'OUTLETCARS.BG Inventory Map')
 		.replaceAll('$120', '0 EUR')
 		.replaceAll('$750', '150 000 EUR');
 };
@@ -1789,7 +1789,7 @@ const featureTabs = (vehicle: Vehicle) => {
 			daynightContact.appointmentNote,
 			daynightFetchedAt
 				? `Inventory refreshed ${daynightFetchedAt}`
-				: 'Inventory refreshed from OUTLETCARS.BG — Варна source data'
+				: 'Inventory refreshed from OUTLETCARS.BG source data'
 		]
 	];
 
@@ -1856,7 +1856,7 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 	const vehicle = getVehicleDetailOrFallback(options.slug);
 	const monthly = `${vehicle.monthly.toLocaleString('fr-FR').replace(/\u202f/g, ' ')} EUR/mo`;
 	const consultant =
-		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0] ?? { image: '/dealer/logo-on-light-v2.svg', name: daynightBrand.name, slug: 'showroom-contact', title: 'Контакт с автокъщата' };
+		daynightConsultants.find((agent) => agent.slug === vehicle.agentSlug) ?? daynightConsultants[0];
 	let next = html
 		// Lead with the actual price, not the financing estimate: make the Cash tab
 		// active by default so the headline shows the car price; Finance is one tab away.
@@ -1887,7 +1887,7 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 			/The 2024 - 2025 Honda HR-V is offered[\s\S]*?RM 141,900\./,
 			escapeHtml(
 				vehicle.description ||
-					`${vehicle.title} is available through OUTLETCARS.BG — Варна with source review and viewing by appointment.`
+					`${vehicle.title} is available through OUTLETCARS.BG with source review and viewing by appointment.`
 			)
 		)
 		.replaceAll('$44.900', escapeHtml(vehicle.priceLabel))
@@ -1895,7 +1895,7 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 		.replaceAll('$46.300|', escapeHtml(vehicle.priceLabel))
 		.replaceAll(
 			'$1,560 due at signing · 72 mo · 7.89% APR',
-			'Estimated over 72 months. Final terms confirmed by OUTLETCARS.BG — Варна.'
+			'Estimated over 72 months. Final terms confirmed by OUTLETCARS.BG.'
 		)
 		.replaceAll(
 			'List price w/o taxes, fees, and accessories',
@@ -1921,12 +1921,12 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 			'/assets/images/avatar/coment-avatar-2.png',
 			'/assets/images/avatar/coment-avatar-2.webp'
 		)
-		.replaceAll('Verified Dealer', 'OUTLETCARS.BG — Варна Consultant')
+		.replaceAll('Verified Dealer', 'OUTLETCARS.BG Consultant')
 		.replaceAll('1-555-678-8888', escapeHtml(daynightContact.primaryPhoneLabel))
 		.replaceAll('1-555-678-9999', escapeHtml(daynightContact.marketplacePhoneLabel))
 		.replaceAll('tel:1-555-678-8888', daynightContact.primaryPhoneHref)
 		.replaceAll('tel:1-555-678-9999', daynightContact.marketplacePhoneHref)
-		.replaceAll('Call To Dealer', 'Call OUTLETCARS.BG — Варна')
+		.replaceAll('Call To Dealer', 'Call OUTLETCARS.BG')
 		.replaceAll('Chat via WhatsApp', 'Chat on Viber')
 		.replaceAll('Tony Nguyen', '')
 		.replaceAll('This Vehicle&#39;s Availability 2', 'Registration and documents')
@@ -1952,15 +1952,15 @@ export const applyDetailData = (html: string, options: AuxeroRenderOptions = {})
 		.replaceAll('Customer Reviews', 'Отзиви от клиенти')
 		.replaceAll('(1,968 Ratings)', '(1 968 оценки)')
 		.replaceAll('Write a review', 'Напиши отзив')
-		.replaceAll('Randynox', 'Клиент от Варна')
-		.replaceAll('Mista Nyroom', 'Купувач от Варна')
+		.replaceAll('Randynox', 'Клиент от Пловдив')
+		.replaceAll('Mista Nyroom', 'Купувач от София')
 		.replaceAll('Heather Dick', 'Собственик от Варна')
 		.replaceAll('August 13, 2025', '13 август 2025')
 		.replaceAll('August 22, 2025', '22 август 2025')
 		.replaceAll('August 18, 2025', '18 август 2025')
 		.replaceAll(
 			'Bought new in 2012, and it’s still running strong at over 180,000 miles. I’ve only had to replace the battery and brakes once. The ride is smooth, the interior still feels solid, and the fuel economy hasn’t dropped much.',
-			'OUTLETCARS.BG — Варна ни помогна да изберем автомобил с ясна история и реален пробег. Огледът беше организиран спокойно, а документите бяха обяснени предварително.'
+			'OUTLETCARS.BG ни помогна да изберем автомобил с ясна история и реален пробег. Огледът беше организиран спокойно, а документите бяха обяснени предварително.'
 		)
 		.replaceAll(
 			'Picked this car up used about five years ago with 90k miles. It’s now at 160k and still starts every morning without hesitation. Maintenance is simple, parts are cheap, and it’s surprisingly comfortable on long drives.',

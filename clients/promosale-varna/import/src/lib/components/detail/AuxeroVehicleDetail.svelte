@@ -97,7 +97,7 @@
 				<a
 					href={contactHref}
 					class="btn-icon-circle hover-fill-white"
-					aria-label={`Попитай Day Night Auto за ${detail.title}`}
+					aria-label={`Попитай Promosale Varna за ${detail.title}`}
 				>
 					{@render shareIcon()}
 				</a>
@@ -131,7 +131,7 @@
 	<div class="daynight-pdp-closing__copy">
 		<p class="daynight-pdp-closing__title">Искаш оглед?</p>
 		<p class="daynight-pdp-closing__text">
-			Изпрати запитване и Day Night Auto ще върне конкретен отговор за {detail.title}.
+			Изпрати запитване и Promosale Varna ще върне конкретен отговор за {detail.title}.
 		</p>
 	</div>
 	<a href={contactHref} class="daynight-pdp-closing__btn">Попитай за автомобила</a>

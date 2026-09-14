@@ -14,14 +14,7 @@ const getRepresentativeVehicle = (
   const image = listing?.images[0];
 
   if (!(listing && image)) {
-    return {
-      availability,
-      href: "/cars",
-      id: `demo-${listingId}`,
-      image: { alt: "Демонстрационен автомобил", url: "/variant-2/images/avatars/organization-01.webp" },
-      price: { amount: 0, currency: "EUR" as const },
-      title: "Демонстрационен автомобил",
-    };
+    throw new Error(`Missing representative marketplace listing: ${listingId}`);
   }
 
   return {
@@ -78,7 +71,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "importer",
       profileImage: {
         alt: "Vehicle import facility in Hamburg",
-        url: "/variant-2/images/directory/hamburg-importer-profile.webp",
+        url: "/images/directory/hamburg-importer-profile.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("am-1009", "source_stock"),
@@ -127,7 +120,7 @@ export const mockOrganizationDirectoryCoreEntries =
         "Illustrative EV sourcing profile using marketplace-backed examples for delivery, inspection, and registration workflows.",
       displayName: "EV Import Network Demo",
       headquarters: {
-        city: "Sofia",
+        city: "Варна",
         countryCode: "BG",
       },
       headline: "Electric vehicles sourced from Germany to Bulgaria",
@@ -142,7 +135,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "importer",
       profileImage: {
         alt: "Electric vehicle sourcing and logistics facility",
-        url: "/variant-2/images/directory/china-ev-importer-profile.webp",
+        url: "/images/directory/china-ev-importer-profile.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("am-1014", "orderable"),
@@ -192,9 +185,9 @@ export const mockOrganizationDirectoryCoreEntries =
       dealerOrgId: "dealer-sofia-premium",
       description:
         "Local dealer inventory with inspection history and finance enquiries.",
-      displayName: "Sofia Premium Cars",
+      displayName: "Варна Premium Cars",
       headquarters: {
-        city: "Sofia",
+        city: "Варна",
         countryCode: "BG",
       },
       headline: "Premium used cars available locally",
@@ -209,8 +202,8 @@ export const mockOrganizationDirectoryCoreEntries =
       },
       orgType: "dealer",
       profileImage: {
-        alt: "Premium vehicle showroom in Sofia",
-        url: "/variant-2/images/directory/sofia-premium-cars-profile.webp",
+        alt: "Premium vehicle showroom in Варна",
+        url: "/images/directory/sofia-premium-cars-profile.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("am-1001", "local"),
@@ -256,7 +249,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "Coastal electric vehicle specialist near Varna",
-        url: "/variant-2/images/directory/black-sea-ev-profile.webp",
+        url: "/images/directory/black-sea-ev-profile.webp",
       },
       representativeVehicles: [getRepresentativeVehicle("am-1003", "local")],
       slug: "black-sea-ev",
@@ -285,7 +278,7 @@ export const mockOrganizationDirectoryCoreEntries =
         "Commercial van specialist with local stock, VAT-ready offers, and finance enquiries.",
       displayName: "Pro Vans Bulgaria",
       headquarters: {
-        city: "Sofia",
+        city: "Варна",
         countryCode: "BG",
       },
       headline: "Passenger and commercial vans in local stock",
@@ -301,7 +294,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "Commercial van stock outside a dealership",
-        url: "/variant-2/images/avatars/organization-03.webp",
+        url: "/images/avatars/organization-03.webp",
       },
       representativeVehicles: [getRepresentativeVehicle("am-1005", "local")],
       slug: "pro-vans-bulgaria",
@@ -346,7 +339,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "distributor",
       profileImage: {
         alt: "Vehicle logistics truck at a distribution facility",
-        url: "/variant-2/images/avatars/organization-04.webp",
+        url: "/images/avatars/organization-04.webp",
       },
       representativeVehicles: [getRepresentativeVehicle("am-1006", "local")],
       slug: "danube-trucks",
@@ -391,7 +384,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "Vehicle outside a modern regional showroom",
-        url: "/variant-2/images/avatars/organization-01.webp",
+        url: "/images/avatars/organization-01.webp",
       },
       representativeVehicles: [getRepresentativeVehicle("am-1008", "local")],
       slug: "trakia-auto",
@@ -441,7 +434,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "manufacturer",
       profileImage: {
         alt: "Vehicle on an illustrative production line",
-        url: "/variant-2/images/avatars/organization-07.webp",
+        url: "/images/avatars/organization-07.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("am-1004", "orderable"),
@@ -466,7 +459,7 @@ const scaleOrganizationTypes = [
 ] as const satisfies readonly OrganizationDirectoryType[];
 
 const scaleHeadquarters = [
-  { city: "Sofia", countryCode: "BG" },
+  { city: "Варна", countryCode: "BG" },
   { city: "Plovdiv", countryCode: "BG" },
   { city: "Varna", countryCode: "BG" },
   { city: "Hamburg", countryCode: "DE" },
@@ -550,7 +543,7 @@ const createScaleOrganization = (index: number): OrganizationDirectoryEntry => {
       ? {
           profileImage: {
             alt: `Generic vehicle business artwork for directory scale demo ${fixtureNumber}`,
-            url: `/variant-2/images/avatars/organization-0${(index % 7) + 1}.webp`,
+            url: `/images/avatars/organization-0${(index % 7) + 1}.webp`,
           },
         }
       : {}),

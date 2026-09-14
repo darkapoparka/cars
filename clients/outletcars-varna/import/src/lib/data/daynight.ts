@@ -65,11 +65,11 @@ export type DayNightVehicle = {
 const feed = mobileBgFeed as MobileBgFeed;
 
 const makeNames = [
-  "Peugeot",
-  "Citroen",
   "Audi",
+  "Citroen",
   "Opel",
-  "VW"
+  "VW",
+  "Peugeot"
 ] as const;
 
 const parseNumber = (value: string) => Number(value.replace(/[^\d.]/g, '')) || 0;
@@ -152,7 +152,7 @@ const toVehicle = (listing: MobileBgListing): DayNightVehicle => {
 		fuel: normalizeFuel(listing.fuel),
 		transmission: normalizeTransmission(listing.gearbox),
 		body: normalizeBody(listing.category),
-		status: 'Advertised',
+		status: listing.badge === 'НОВА ОБЯВА' ? 'New listing' : 'Available',
 		label: String(parseYear(listing.production)),
 		image: listing.image,
 		sourceUrl: listing.href,
@@ -178,7 +178,7 @@ export const daynightContact = {
   "primaryPhoneHref": "tel:+359898921010",
   "marketplacePhoneLabel": "0898 921 010",
   "marketplacePhoneHref": "tel:+359898921010",
-  "emailLabel": "Запитване в Mobile.bg",
+  "emailLabel": "Онлайн запитване",
   "emailHref": "https://outletcarsvarna.mobile.bg/contacts",
   "viberHref": "",
   "facebookHref": "",
@@ -188,27 +188,46 @@ export const daynightContact = {
   "youtubeHref": "",
   "addressLabel": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
   "appointmentNote": "Пон.–пет. 08:30–17:30; съб.–нед. почивни дни",
-  "mapEmbedUrl": "https://maps.google.com/maps?q=%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%D0%BE%D1%88%20%D0%A5%D1%83%D0%BD%D1%8F%D0%B4%D0%B8%20518%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9A%D0%90%D0%A2%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&hl=bg&output=embed"
+  "mapEmbedUrl": "https://maps.google.com/maps?q=OUTLETCARS.BG%20%E2%80%94%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%D0%BE%D1%88%20%D0%A5%D1%83%D0%BD%D1%8F%D0%B4%D0%B8%20518%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9A%D0%90%D0%A2%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed"
 } as const;
 
 export const daynightBrand = {
   "name": "OUTLETCARS.BG — Варна",
-  "displayName": "OUTLETCARS.BG — Варна",
+  "displayName": "OUTLETCARS.BG — ВАРНА",
   "bulgarianName": "OUTLETCARS.BG — Варна",
-  "domain": "outletcars-varna.example",
-  "tagline": "Автомобили във Варна — предложения и огледи",
-  "legalNote": "Демонстрационен проект. Датирани обяви от публичния каталог; наличността се потвърждава от търговеца."
+  "domain": "outletcarsvarna.mobile.bg",
+  "tagline": "OUTLETCARS.BG — Варна · Варна",
+  "legalNote": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата. Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
 } as const;
 
 export const daynightAssets = {
-  "logoDark": "/dealer/logo-on-light-v2.svg",
-  "logoLight": "/dealer/logo-on-dark-v2.svg",
-  "hero": "/dealer/showroom.webp",
-  "homeHeroSlides": [],
-  "footerImage": "/dealer/showroom.webp"
+	logoDark: "/dealer/logo-on-dark-v2.svg",
+	logoLight: "/dealer/logo-on-dark-v2.svg",
+	hero: '/assets/daynight/hero/home-05-showroom-exterior.webp',
+	homeHeroSlides: [],
+	footerImage: '/assets/daynight/footer-premium-request-v2.webp'
 } as const;
 
-export const daynightConsultants: {slug:string; name:string; title:string; image:string}[] = [];
+export const daynightConsultants = [
+  {
+    "slug": "outletcars-varna-sales",
+    "name": "Продажби и огледи",
+    "title": "Запитвания към OUTLETCARS.BG — Варна",
+    "image": "/brand/daynight-team-placeholder.svg"
+  },
+  {
+    "slug": "outletcars-varna-import",
+    "name": "Внос и подбор",
+    "title": "Запитвания за внос и наличности",
+    "image": "/brand/daynight-team-placeholder.svg"
+  },
+  {
+    "slug": "outletcars-varna-documents",
+    "name": "Документи и предаване",
+    "title": "Следващи стъпки по сделката",
+    "image": "/brand/daynight-team-placeholder.svg"
+  }
+] as const;
 
 export const mainNavigation = [
 	{ label: 'Начало', href: '/', matchPrefixes: ['/'] },

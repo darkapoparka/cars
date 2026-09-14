@@ -17,10 +17,10 @@
 	<CenteredRouteHero
 		supportText="Подбор, проверка и съдействие до предаването на автомобила."
 		image="/assets/daynight/banners/route-about-studio-v6.png"
-		leftImage="/dealer/showroom.webp"
-		rightImage="/dealer/logo-on-light-v2.svg"
+		leftImage="/assets/daynight/banners/about-showroom-v1.png"
+		rightImage="/assets/daynight/banners/about-kristian-v1.png"
 		labelledby="about-page-title"
-		title="За OUTLETCARS.BG — Варна"
+		title="За OUTLETCARS.BG"
 		mobileTitle={about.hero.title}
 		mobileDescription={about.hero.description}
 	>

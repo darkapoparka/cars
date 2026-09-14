@@ -53,7 +53,7 @@
 		modals={shellModals}
 		{pageDocument}
 		runtimeHtml={shellRuntimeHtml}
-		title="Контакти — Day Night Auto"
+		title="Контакти — Promosale Varna"
 	>
 		<div class="daynight-contact-page">
 			<CenteredRouteHero
@@ -111,7 +111,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="contact-socials" aria-label="Day Night Auto в социалните мрежи">
+							<div class="contact-socials" aria-label="Promosale Varna в социалните мрежи">
 								{#each [{ label: 'Facebook', href: daynightContact.facebookHref, icon: 'facebook' }, { label: 'Instagram', href: daynightContact.instagramHref, icon: 'instagram' }, { label: 'TikTok', href: daynightContact.tiktokHref, icon: 'tiktok' }] as social (social.label)}
 									<a {...hrefAttributes(social.href)}
 										><img src={`/assets/icons/brands/${social.icon}.svg`} alt="" />{social.label}</a

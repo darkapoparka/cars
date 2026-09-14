@@ -1,3 +1,3 @@
 <svelte:head>
-	<title>Day Night Auto</title>
+	<title>Promosale Varna</title>
 </svelte:head>

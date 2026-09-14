@@ -82,7 +82,7 @@ export const actions: Actions = {
 			return notFoundFailure(errorValue);
 		}
 
-		throw redirect(303, '/variant-3/admin/conversations?updated=closed');
+		throw redirect(303, '/admin/conversations?updated=closed');
 	},
 	reopen: async ({ locals, request }) => {
 		const formData = await request.formData();
@@ -103,6 +103,6 @@ export const actions: Actions = {
 			return notFoundFailure(errorValue);
 		}
 
-		throw redirect(303, '/variant-3/admin/conversations?updated=open');
+		throw redirect(303, '/admin/conversations?updated=open');
 	}
 };

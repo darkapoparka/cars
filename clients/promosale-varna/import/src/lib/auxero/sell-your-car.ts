@@ -46,10 +46,10 @@ export type AuxeroSellCarMobileStep = {
 
 export const sellYourCarHero: AuxeroPageBanner = {
 	description:
-		'Изпрати VIN, пробег, очаквана цена и телефон. Day Night Auto ще прегледа автомобила и ще предложи реалистичен следващ ход.',
-	eyebrow: 'Day Night Auto оценка',
+		'Изпрати VIN, пробег, очаквана цена и телефон. Promosale Varna ще прегледа автомобила и ще предложи реалистичен следващ ход.',
+	eyebrow: 'Promosale Varna оценка',
 	image: '/assets/daynight/services/sell-car-service.webp',
-	title: 'Продай автомобила си с Day Night Auto'
+	title: 'Продай автомобила си с Promosale Varna'
 };
 
 export const auxeroSellSteps: AuxeroSellCarStep[] = [
@@ -59,7 +59,7 @@ export const auxeroSellSteps: AuxeroSellCarStep[] = [
 	},
 	{
 		title: 'Проверка на история и състояние',
-		text: 'Day Night Auto преглежда информацията и уточнява липсващите детайли преди препоръка.'
+		text: 'Promosale Varna преглежда информацията и уточнява липсващите детайли преди препоръка.'
 	},
 	{
 		title: 'Избор на път за продажба',

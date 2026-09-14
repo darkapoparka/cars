@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { previewPath } from '$lib/utils/preview-paths';
 	import FileText from '@lucide/svelte/icons/file-text';
 	import ImageIcon from '@lucide/svelte/icons/image';
 	import Save from '@lucide/svelte/icons/save';
@@ -177,7 +176,7 @@
 					<Save data-icon="inline-start" aria-hidden="true" />
 					{submitLabel}
 				</Button>
-				<Button href={previewPath(cancelHref)} variant="outline" class="min-w-28 flex-1">Cancel</Button>
+				<Button href={cancelHref} variant="outline" class="min-w-28 flex-1">Cancel</Button>
 			</Card.Content>
 		</Card.Root>
 

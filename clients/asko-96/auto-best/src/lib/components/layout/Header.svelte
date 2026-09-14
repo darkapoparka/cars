@@ -1,29 +1,35 @@
 <script lang="ts">
+  import { lockPageScroll } from '$lib/ui/overlay';
   import { afterNavigate } from '$app/navigation';
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
-  import { onDestroy, tick } from 'svelte';
+  import { onDestroy, onMount, tick } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import Icon from '$components/ui/Icon.svelte';
-  import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
+  import NavigationFeatureCard from './NavigationFeatureCard.svelte';
+  import ActionLink from '$components/ui/ActionLink.svelte';
+  import MobileMenu from './MobileMenu.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
+  import { vehicleContactHref, selectedVehicle } from '$data/journeys';
   import { brand } from '$config/brand';
   import { navigation, type InternalNavigationHref, type MegaMenu, type NavigationHref, type NavigationItem } from '$data/navigation';
 
   let mega = $state<MegaMenu | null>(null);
   let megaItemId = $state('');
   let mobileOpen = $state(false);
-  let mobileMenu = $state<HTMLDivElement>();
+  let mobileMenu = $state<HTMLDialogElement>();
   let mobileToggle = $state<HTMLButtonElement>();
   let mobileCloseButton = $state<HTMLButtonElement>();
   let mobileReturnFocus = $state<HTMLButtonElement>();
   let megaPanel: HTMLDivElement | undefined;
   let megaTrigger: HTMLAnchorElement | undefined;
-  let previousBodyOverflow = '';
+  let releaseScroll: (() => void) | undefined;
+  let mobileFooterVisible = $state(false);
   const compactDetailHeader = $derived(
     page.url.pathname.startsWith('/blog-detail/') || page.url.pathname.startsWith('/listing-detail-v1/')
   );
-  const vehicleDetailHeader = $derived(page.url.pathname.startsWith('/listing-detail-v1/'));
+  const detailVehicle = $derived(page.status === 200 && page.url.pathname.startsWith('/listing-detail-v1/') ? selectedVehicle(page.params.id ?? null) : null);
+  const vehicleDetailHeader = $derived(Boolean(detailVehicle));
   const mobileSurfaceHeader = $derived(page.url.pathname === '/');
   const listingHeader = $derived(page.url.pathname === '/listing-grid');
   const homeOverlayHeader = $derived(page.url.pathname === '/');
@@ -37,7 +43,7 @@
   const isInternalHref = (href: NavigationHref): href is InternalNavigationHref => href.startsWith('/');
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
-  const attachMobileMenu: Attachment<HTMLDivElement> = (node) => {
+  const attachMobileMenu: Attachment<HTMLDialogElement> = (node) => {
     mobileMenu = node;
     return () => {
       if (mobileMenu === node) mobileMenu = undefined;
@@ -71,8 +77,8 @@
         if (node.isConnected && !node.contains(document.activeElement)) closeMega();
       });
     };
-    const handlePointerLeave = () => {
-      if (!node.contains(document.activeElement)) queueDismiss();
+    const handlePointerLeave = (event: PointerEvent) => {
+      if (event.pointerType === 'mouse') closeMega();
     };
     const handleFocusOut = (event: FocusEvent) => {
       if (!(event.relatedTarget instanceof Node) || !node.contains(event.relatedTarget)) queueDismiss();
@@ -150,18 +156,20 @@
   };
 
   const openMobile = async (event?: MouseEvent) => {
-    previousBodyOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    if (mobileOpen) return;
+    releaseScroll = lockPageScroll();
     mobileReturnFocus = event?.currentTarget instanceof HTMLButtonElement ? event.currentTarget : mobileToggle;
     mobileOpen = true;
     await tick();
+    mobileMenu?.showModal();
     mobileCloseButton?.focus();
   };
 
   const closeMobile = async (restoreFocus = true) => {
     if (!mobileOpen) return;
+    mobileMenu?.close();
     mobileOpen = false;
-    document.body.style.overflow = previousBodyOverflow;
+    releaseScroll?.();
     if (restoreFocus) {
       await tick();
       mobileReturnFocus?.focus();
@@ -183,24 +191,19 @@
     }
   };
 
-  const handleMobileKeydown = (event: KeyboardEvent) => {
-    if (event.key !== 'Tab' || !mobileMenu) return;
-    const focusable = Array.from(mobileMenu.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'));
-    const first = focusable.at(0);
-    const last = focusable.at(-1);
-    if (!first || !last) return;
 
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  };
+  onMount(() => {
+    const footer = document.getElementById('dn-site-footer');
+    if (!footer || !('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      mobileFooterVisible = Boolean(entry?.isIntersecting && entry.intersectionRatio > 0.02);
+    }, { threshold: [0, 0.02, 0.2] });
+    observer.observe(footer);
+    return () => observer.disconnect();
+  });
 
   onDestroy(() => {
-    if (mobileOpen) document.body.style.overflow = previousBodyOverflow;
+    releaseScroll?.();
   });
 
   afterNavigate(() => {
@@ -209,16 +212,20 @@
   });
 </script>
 
-<svelte:window onkeydown={handleWindowKeydown} />
+<svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); if (window.innerWidth < 992) closeMega(); }} />
+
+{#if mega}
+  <button class="dn-mega-backdrop" tabindex="-1" aria-label="Затворете навигацията" onclick={closeMega}></button>
+{/if}
 
 <div
   class="dn-header-fixed"
   class:dn-header-fixed--compact={compactDetailHeader}
+  class:dn-header-fixed--vehicle-detail={vehicleDetailHeader}
   class:dn-header-fixed--mobile-surface={mobileSurfaceHeader}
   class:dn-header-fixed--home-overlay={homeOverlayHeader}
   class:dn-header-fixed--contact-overlay={page.url.pathname === '/contact'}
   class:dn-header-fixed--listing={listingHeader}
-  {@attach attachMegaDismissBoundary}
 >
   <header
     class:dn-header--mega-open={Boolean(mega)}
@@ -236,12 +243,17 @@
       </div>
     </div>
 
-    <div class="dn-header__lower">
+    <div class="dn-header__lower" {@attach attachMegaDismissBoundary}>
       <div class="container">
         <div class="dn-header__inner">
           <div class="dn-logo-box">
             <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
-              <picture class="asko-logo"><img src={brand.darkLogo} alt={brand.name} width="220" height="58" fetchpriority="high" /></picture>
+              <picture>
+                {#if mobileSurfaceHeader || page.url.pathname === '/contact'}
+                  <source media="(max-width: 991px)" srcset={brand.logoOnDark} />
+                {/if}
+                <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+              </picture>
             </a>
           </div>
 
@@ -273,10 +285,7 @@
                       <div class="dn-mega__feature-panel">
                         <div class="dn-mega__features">
                           {#each mega.features as feature (feature.id)}
-                            <a class="dn-mega__feature" href={resolve(feature.href)}>
-                              <img src={feature.image} alt="" width="800" height="450" loading="eager" />
-                              <span><strong>{feature.title}</strong><small>{feature.detail}</small></span>
-                            </a>
+                            <NavigationFeatureCard {feature} />
                           {/each}
                         </div>
                       </div>
@@ -296,8 +305,7 @@
                           {/each}
                         </nav>
                         <div class="dn-mega__side-action">
-                          <a href={resolve(mega.cta.href)}>{mega.cta.label}</a>
-                          <p>{mega.cta.detail}</p>
+                          <ActionLink href={mega.cta.href}>{mega.cta.label}</ActionLink>
                         </div>
                       </div>
                     </div>
@@ -308,14 +316,14 @@
           </nav>
 
           <div class="dn-header-actions">
-            <a class="dn-header-action dn-header-action--secondary" href={resolve('/contact')}>
+            <ActionLink class="dn-header-action dn-header-action--secondary" href="/contact">
               <Icon name="mail" size={17} strokeWidth={1.8} />
               <span>Запитване</span>
-            </a>
-            <a class="dn-header-action dn-header-action--primary" href={resolve('/contact?topic=inspection')}>
+            </ActionLink>
+            <ActionLink class="dn-header-action dn-header-action--primary" href={detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'}>
               <Icon name="calendar" size={17} strokeWidth={1.8} />
               <span>Запазете оглед</span>
-            </a>
+            </ActionLink>
           </div>
 
           <div class="dn-mobile-controls">
@@ -348,66 +356,21 @@
     </div>
 
     {#if mobileOpen}
-      <button
-        class="dn-mobile-menu__backdrop"
-        type="button"
-        tabindex="-1"
-        aria-label="Затворете менюто"
-        onclick={() => closeMobile()}
-      ></button>
-      <div
-        class="dn-mobile-menu"
-        id="dn-mobile-menu"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="dn-mobile-menu-title"
-        tabindex="-1"
-        {@attach attachMobileMenu}
-        onkeydown={handleMobileKeydown}
-      >
-        <h2 class="dn-sr-only" id="dn-mobile-menu-title">Основна навигация</h2>
-        <div class="dn-mobile-menu__header">
-          <a class="dn-mobile-menu__brand" href={resolve('/')} aria-label={`${brand.name} — начало`} onclick={() => void closeMobile(false)}>
-            <img src={brand.logo} alt={brand.name} width="160" height="44" />
-          </a>
-        <button
-          class="dn-mobile-menu__close"
-          type="button"
-          {@attach attachMobileCloseButton}
-          aria-label="Затворете менюто"
-          onclick={() => closeMobile()}
-        ><MobileNavIcon name="close" size={20} /></button>
-        </div>
-        <div class="dn-mobile-menu__contact">
-          <a class="dn-mobile-menu__call" {...phoneLinkAttributes}><MobileNavIcon name="phone" size={20} /><strong>Обадете се</strong><span>{brand.phone}</span></a>
-          <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><strong>Локация</strong><span>{brand.city}</span></a>
-        </div>
-        <nav aria-label="Мобилна навигация">
-          <a href={resolve('/listing-grid')} aria-current={listingHeader ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/blog')} aria-current={page.url.pathname.startsWith('/blog') ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
-        </nav>
-        <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
-          <a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>
-          <a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>
-        </div>
-        <p class="dn-mobile-menu__address">{brand.addressLine}</p>
-      </div>
+      <MobileMenu {closeMobile} {attachMobileMenu} {attachMobileCloseButton} {listingHeader} />
     {/if}
   </header>
 
   <div hidden={mobileOpen}>
     {#if vehicleDetailHeader}
       <nav class="dn-mobile-detail-bar" aria-label="Действия за автомобила">
-        <a class="dn-mobile-detail-bar__secondary" href={resolve('/contact?topic=inspection')}>Заявете оглед</a>
+        <a class="dn-mobile-detail-bar__secondary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>Заявете оглед</a>
         <a class="dn-mobile-detail-bar__primary" {...phoneLinkAttributes}>
           <MobileNavIcon name="phone" size={20} />
           Обадете се
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" aria-label="Основни действия">
+      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} aria-label="Основни действия">
         <a
           class:active={page.url.pathname === '/'}
           href={resolve('/')}
@@ -548,7 +511,7 @@
     .dn-header-fixed--contact-overlay .dn-header__lower { background: transparent; border: 0; }
     .dn-header-fixed--contact-overlay .dn-mobile-control,
     .dn-header-fixed--contact-overlay .dn-mobile-toggle { background: rgba(15,17,20,.7); color: #fff; border: 1px solid rgba(255,255,255,.3); }
-    .dn-header-fixed--contact-overlay .dn-mobile-control--call { border-color: var(--dn-red); background: var(--dn-red); }
+    .dn-header-fixed--contact-overlay .dn-mobile-control--call { border-color: var(--dn-ink); background: var(--dn-ink); }
 
     .dn-header-fixed--compact .dn-header__inner {
       min-height: 68px;
@@ -571,8 +534,8 @@
     }
 
     .dn-mobile-control--call {
-      background: var(--dn-red);
-      color: var(--dn-accent-ink);
+      background: var(--dn-ink);
+      color: #fff;
     }
 
     .dn-mobile-bottom-nav,
@@ -593,6 +556,13 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
       padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right));
       padding-top: 3px;
+      transition: transform 180ms ease, opacity 150ms ease;
+    }
+
+    .dn-mobile-bottom-nav--footer-visible {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(100%);
     }
 
     .dn-mobile-bottom-nav a,
@@ -603,7 +573,7 @@
       min-height: 52px;
       place-items: center;
       align-content: center;
-      grid-template-rows: 26px 16px;
+      grid-template-rows: 26px auto;
       gap: 2px;
       padding: 4px 1px;
       border: 0;
@@ -611,15 +581,15 @@
       background: transparent;
       color: #4f5662;
       font: inherit;
-      font-size: 12px;
-      font-weight: 650;
-      line-height: 1.15;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-control-weight);
+      line-height: var(--dn-leading-control);
       cursor: pointer;
     }
 
     .dn-mobile-bottom-nav a.active,
     .dn-mobile-bottom-nav button.active {
-      color: var(--dn-accent-text);
+      color: var(--dn-ink);
     }
 
     .dn-mobile-bottom-nav__icon {
@@ -662,19 +632,19 @@
       justify-content: center;
       gap: 7px;
       border-radius: var(--dn-radius-button);
-      font-size: 15px;
-      font-weight: 700;
+      font-size: var(--dn-text-body);
+      font-weight: var(--dn-control-weight);
       text-align: center;
     }
 
     .dn-mobile-detail-bar__secondary {
-      background: #1f2329;
+      background: var(--dn-red);
       color: #fff;
     }
 
     .dn-mobile-detail-bar__primary {
-      background: var(--dn-red);
-      color: var(--dn-accent-ink);
+      background: var(--dn-ink);
+      color: #fff;
     }
   }
 
@@ -692,6 +662,16 @@
 
     .dn-header-fixed--listing .dn-topbar,
     .dn-header-fixed--listing .dn-header__lower {
+      display: none;
+    }
+
+    .dn-header-fixed--vehicle-detail {
+      height: 0;
+      min-height: 0;
+      background: transparent;
+    }
+
+    .dn-header-fixed--vehicle-detail .dn-header {
       display: none;
     }
 
@@ -723,8 +703,8 @@
     }
 
     .dn-header--mobile-surface .dn-mobile-control--call {
-      border-color: var(--dn-red);
-      background: var(--dn-red);
+      border-color: var(--dn-ink);
+      background: var(--dn-ink);
     }
 
 
@@ -749,8 +729,8 @@
     }
 
     .dn-header-fixed--home-overlay .dn-mobile-control--call {
-      border-color: var(--dn-red);
-      background: var(--dn-red);
+      border-color: var(--dn-ink);
+      background: var(--dn-ink);
     }
   }
 
@@ -771,19 +751,6 @@
     }
     .dn-header .dn-logo img { width: 142px; max-width: 142px; height: 40px; }
     .dn-header-fixed--home-overlay { background: transparent; }
-    .dn-mobile-menu::before { content: ''; width: 36px; height: 4px; flex-shrink: 0; margin: -6px auto 16px; border-radius: 4px; background: #dfe2e6; }
-    .dn-mobile-menu__header { position: relative; justify-content: center; min-height: 44px; }
-    .dn-mobile-menu__close { position: absolute; right: 0; }
-    .dn-mobile-menu__contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
-    .dn-mobile-menu__contact a { display: grid; grid-template-columns: 20px 1fr; align-items: center; gap: 6px 8px; padding: 16px 12px; border-radius: 14px; background: #f3f4f6; color: #202329; font-size: 14px; }
-    .dn-mobile-menu__contact span { grid-column: 1 / -1; font-size: 14px; }
-    .dn-mobile-menu__contact .dn-mobile-menu__call { background: var(--dn-red); color: var(--dn-accent-ink); }
-    .dn-mobile-menu nav { margin-top: 16px; }
-    .dn-mobile-menu nav a { min-height: 52px; gap: 12px; font-size: 15px; font-weight: 600; }
-    .dn-mobile-menu nav a span { flex: 1; }
-    .dn-mobile-menu__social { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding-top: 16px; margin-top: 16px; border-top: 1px solid #e7e8eb; }
-    .dn-mobile-menu__social a { display: grid; justify-items: center; gap: 6px; padding: 10px 4px; border-radius: 12px; background: #f3f4f6; color: #202329; font-size: 12px; }
-    .dn-mobile-menu__address { margin: 16px 0 0; color: #626873; font-size: 12px; line-height: 1.5; }
   }
   @media (max-width: 359px) {
     .dn-header .dn-logo img { width: 132px; max-width: 132px; height: 40px; }

@@ -36,7 +36,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="За нас — Day Night Auto"
+	title="За нас — Promosale Varna"
 >
 	<AboutContent {about} />
 </AuxeroPublicShell>

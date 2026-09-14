@@ -9,11 +9,11 @@ import {
 	updateInventoryListingStatus
 } from '$lib/server/inventory';
 
-export const load: PageServerLoad = ({ request, url }) => {
+export const load: PageServerLoad = async ({ request, url }) => {
 	const session = requireDayNightPageSession(request, 'admin/inventory', url.searchParams);
 	const query = (url.searchParams.get('q') ?? '').trim().toLowerCase();
 	const status = (url.searchParams.get('status') ?? 'all').toLowerCase();
-	const cms = getAdminCmsOverview();
+	const cms = await getAdminCmsOverview();
 	const rows = getAdminInventoryRows({ includeArchived: status === 'archived' });
 	const activeRows = getAdminInventoryRows();
 	const inventory = rows.filter((vehicle) => {

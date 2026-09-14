@@ -11,6 +11,8 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  verification: 'sample' | 'verified';
+  evidenceUrl?: string;
   image: string;
   category: string;
   body: string;
@@ -28,10 +30,11 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Source-backed ASKO96 advert snapshot, 2026-09-06. Availability requires confirmation.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-21788444587626928-toyota-rav4-hybrid-camera-podgrev-car-play-lizing",
     "image": "/assets/asko96/vehicle-01-1.webp",
     "category": "SUV",
     "body": "SUV",
@@ -43,17 +46,17 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 14000,
     "fuel": "Хибрид",
     "transmission": "Автоматик",
-    "equipment": [
-      "Подгряване на седалки"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 36500,
     "href": "/listing-detail-v1/1"
   },
   {
     "id": 2,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-11788418194310981-audi-a7-s-line-germany-distr-air-memory-podgrev-auto-h-liz",
     "image": "/assets/asko96/vehicle-02-1.webp",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Audi",
     "title": "Audi A7 S-LINE",
@@ -63,15 +66,15 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 211000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
-    "equipment": [
-      "Подгряване на седалки"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 14000,
     "href": "/listing-detail-v1/2"
   },
   {
     "id": 3,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-21788361724092359-mercedes-benz-glc-coupe-350amg-9gtron-germany-camera-ambient-keyless-go-li",
     "image": "/assets/asko96/vehicle-03-1.webp",
     "category": "SUV",
     "body": "SUV",
@@ -83,15 +86,15 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 179200,
     "fuel": "Дизел",
     "transmission": "Автоматик",
-    "equipment": [
-      "Безключов достъп"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 26000,
     "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-21788340495159936-mercedes-benz-gls-400-amg-7mesta-pano-distr-360cam-burmest-obduh-vaku-li",
     "image": "/assets/asko96/vehicle-04-1.webp",
     "category": "SUV",
     "body": "SUV",
@@ -103,18 +106,17 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 135141,
     "fuel": "Дизел",
     "transmission": "Автоматик",
-    "equipment": [
-      "360° камера",
-      "Панорамен покрив"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 47000,
     "href": "/listing-detail-v1/4"
   },
   {
     "id": 5,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-11788268077076934-mini-countryman-all4-germany-panorama-podgrev-lizing",
     "image": "/assets/asko96/vehicle-05-1.webp",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Mini",
     "title": "Mini Countryman ALL4",
@@ -124,16 +126,15 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 205000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
-    "equipment": [
-      "Панорамен покрив",
-      "Подгряване на седалки"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 7777,
     "href": "/listing-detail-v1/5"
   },
   {
     "id": 6,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-21787916905998235-audi-sq7-ful-led-podgrev-obduh-distron-kamera-lane-asist-li",
     "image": "/assets/asko96/vehicle-06-1.webp",
     "category": "SUV",
     "body": "SUV",
@@ -145,18 +146,18 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 170000,
     "fuel": "Дизел",
     "transmission": "Автоматик",
-    "equipment": [
-      "Подгряване на седалки"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 32000,
     "href": "/listing-detail-v1/6"
   },
   {
     "id": 7,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-11787665314733489-citroen-c5x-plug-in-keyles-panorama-podgrev-head-up-360kamera",
     "image": "/assets/asko96/vehicle-07-1.webp",
     "category": "Estate",
-    "body": "Estate",
+    "body": "Wagon",
     "make": "Citroen",
     "title": "Citroen C5X PLUG IN",
     "year": "2022",
@@ -165,18 +166,17 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 162000,
     "fuel": "Електрически",
     "transmission": "Автоматик",
-    "equipment": [
-      "360° камера",
-      "Подгряване на седалки"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 17900,
     "href": "/listing-detail-v1/7"
   },
   {
     "id": 8,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-11787664720233597-audi-a5-s-line-plus-edition-germany-bang-olufsen-lane-asis",
     "image": "/assets/asko96/vehicle-08-1.webp",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Audi",
     "title": "Audi A5 S-LINE PLUS",
@@ -193,8 +193,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 9,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-11787318670316786-mercedes-benz-e-220-amg-germany-180camera-ambi-podgrev-park-pilot-lizi",
     "image": "/assets/asko96/vehicle-09-1.webp",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz E 220 AMG",
@@ -204,17 +206,17 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 195530,
     "fuel": "Дизел",
     "transmission": "Автоматик",
-    "equipment": [
-      "Подгряване на седалки"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 19500,
     "href": "/listing-detail-v1/9"
   },
   {
     "id": 10,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-11787292903991160-mercedes-benz-s-680-l-v12-maybach-tvx3-distr-pano-obduh-burmester",
     "image": "/assets/asko96/vehicle-10-1.webp",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz S 680 L",
@@ -224,17 +226,17 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 140000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
-    "equipment": [
-      "Панорамен покрив"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 120000,
     "href": "/listing-detail-v1/10"
   },
   {
     "id": 11,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-11787147161945133-mercedes-benz-s-500-l-amg-4m-tvx3-distr-pano-vakuum-hud-obduh-masazh-li",
     "image": "/assets/asko96/vehicle-11-1.webp",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz S 500 L",
@@ -244,17 +246,17 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 173291,
     "fuel": "Бензин",
     "transmission": "Автоматик",
-    "equipment": [
-      "Панорамен покрив"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 29500,
     "href": "/listing-detail-v1/11"
   },
   {
     "id": 12,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-21787145927135700-mini-countryman-sd-all4-germany-head-up-camera-pano-car-play-lizin",
     "image": "/assets/asko96/vehicle-12-1.webp",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Mini",
     "title": "Mini Countryman SD",
@@ -264,15 +266,15 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 190582,
     "fuel": "Дизел",
     "transmission": "Автоматик",
-    "equipment": [
-      "Панорамен покрив"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 18500,
     "href": "/listing-detail-v1/12"
   },
   {
     "id": 13,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-21786786821064251-porsche-cayenne-s-germany-pano-digital-air-camera-keyless-go-lizin",
     "image": "/assets/asko96/vehicle-13-1.webp",
     "category": "SUV",
     "body": "SUV",
@@ -284,16 +286,15 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 165009,
     "fuel": "Бензин",
     "transmission": "Автоматик",
-    "equipment": [
-      "Панорамен покрив",
-      "Безключов достъп"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 39000,
     "href": "/listing-detail-v1/13"
   },
   {
     "id": 14,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-21786778589147860-jeep-compass-4x4-limited-distron-lane-asyst-car-play-ambi-lizin",
     "image": "/assets/asko96/vehicle-14-1.webp",
     "category": "SUV",
     "body": "SUV",
@@ -312,6 +313,8 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 15,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-21786540153108868-bmw-x3-m40d-distr-3dcamera-harman-hud-podgrev-car-play-li",
     "image": "/assets/asko96/vehicle-15-1.webp",
     "category": "SUV",
     "body": "SUV",
@@ -323,17 +326,17 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 90800,
     "fuel": "Дизел",
     "transmission": "Автоматик",
-    "equipment": [
-      "Подгряване на седалки"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 43900,
     "href": "/listing-detail-v1/15"
   },
   {
     "id": 16,
+    "verification": "verified",
+    "evidenceUrl": "https://asko96.mobile.bg/obiava-11786173977658651-bmw-550-m-xd-shadow-line-360cam-podgrev-memory-harman-lizi",
     "image": "/assets/asko96/vehicle-16-1.webp",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "BMW",
     "title": "BMW 550 M",
@@ -343,13 +346,18 @@ export const featuredVehicles: Vehicle[] = [
     "mileageKm": 184120,
     "fuel": "Дизел",
     "transmission": "Автоматик",
-    "equipment": [
-      "360° камера",
-      "Подгряване на седалки"
-    ],
+    "equipment": [],
     "condition": "used",
     "priceEur": 17500,
     "href": "/listing-detail-v1/16"
   }
 ];
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+
+const inventoryLocale = "bg-BG";
+const inventoryCurrency = "EUR";
+export const formatVehiclePrice = (amount: number) =>
+  new Intl.NumberFormat(inventoryLocale, {
+    style: 'currency',
+    currency: inventoryCurrency,
+    maximumFractionDigits: 0
+  }).format(amount);

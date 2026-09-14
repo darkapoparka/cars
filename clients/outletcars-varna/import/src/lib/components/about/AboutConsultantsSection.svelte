@@ -10,7 +10,7 @@
 <section class="daynight-consultants">
 	<div class="container">
 		<AboutSectionHeader
-			heading="Хората зад OUTLETCARS.BG — Варна"
+			heading="Хората зад OUTLETCARS.BG"
 			description="Личен контакт от първия въпрос до предаването на автомобила."
 		/>
 
@@ -38,18 +38,18 @@
 								<a
 									class="bc-team-card__chip"
 									{...externalHref(consultant.phoneHref)}
-									aria-label="Обади се на OUTLETCARS.BG — Варна"
+									aria-label="Обади се на OUTLETCARS.BG"
 								>
 									<img src="/assets/icons/PhoneCall.svg" alt="" />
 								</a>
 								<a
 									class="bc-team-card__chip"
 									{...externalHref(consultant.emailHref)}
-									aria-label="Имейл до OUTLETCARS.BG — Варна"
+									aria-label="Имейл до OUTLETCARS.BG"
 								>
 									<img src="/assets/icons/input-telegram.svg" alt="" />
 								</a>
-								{#each (consultant.socials ?? []).slice(0, 2) as social (social.label)}
+								{#each consultant.socials.slice(0, 2) as social (social.label)}
 									<a
 										class="bc-team-card__chip"
 										{...externalHref(social.href)}

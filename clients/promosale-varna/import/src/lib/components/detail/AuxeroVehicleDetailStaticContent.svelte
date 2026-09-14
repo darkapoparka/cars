@@ -143,7 +143,7 @@
 		<img src="/assets/icons/MapPin.svg" alt="" />
 	</span>
 	<span class="daynight-pdp-map__card">
-		<strong>Day Night Auto</strong>
+		<strong>Promosale Varna</strong>
 		<span>{detail.contact.address}</span>
 		<small>Отвори в Google Maps ↗</small>
 	</span>
@@ -153,104 +153,8 @@
 <section class="daynight-pdp-reviews-shell" aria-labelledby="daynight-pdp-reviews-title">
 	<div class="daynight-pdp-reviews-shell__header">
 		<p class="h4" id="daynight-pdp-reviews-title">Клиентски отзиви</p>
-		<a href={reviewsHref} class="daynight-pdp-reviews-shell__all">Виж всички отзиви →</a>
 	</div>
-
-<div class="rating-box">
-	<div class="rating-box__content">
-		<div class="rating-box__overview">
-			<div class="rating-box__average">
-				<span class="rating-box__score">4.8</span>
-				<div class="rating-box__stars">
-					<img src="/assets/icons/star-2.svg" alt="star" />
-					<img src="/assets/icons/star-2.svg" alt="star" />
-					<img src="/assets/icons/star-2.svg" alt="star" />
-					<img src="/assets/icons/star-2.svg" alt="star" />
-					<img src="/assets/icons/star-2.svg" alt="star" />
-				</div>
-				<p class="rating-box__count">(157 отзива във Facebook)</p>
-			</div>
-		</div>
-		<div class="rating-box__distribution">
-			{@render ratingBar('5', '60%', '60%')}
-			{@render ratingBar('4', '20%', '20%')}
-			{@render ratingBar('3', '10%', '10%')}
-			{@render ratingBar('2', '7%', '7%')}
-			{@render ratingBar('1', '3%', '3%')}
-		</div>
-		<div class="rating-box__button">
-			<a href={reviewsHref} class="btn btn-primary btn-large font-weight-600">
-				Виж всички отзиви
-			</a>
-		</div>
-	</div>
-</div>
-
-<div class="comments daynight-pdp-reviews mb-40">
-	<div class="comment-box">
-		<div class="comment-box__header mb-20">
-			<div class="comment-box__avatar">
-				<img src="/assets/images/avatar/coment-avatar-1.webp" alt="avatar" />
-			</div>
-			<div>
-				<div class="text-secondary mb-8 flex items-center gap-4">
-					<p class="h5">Александър Вътев</p>
-					<span class="text-secondary text-sm">-</span>
-					<span class="text-secondary text-sm">13 август 2025</span>
-				</div>
-				{@render starRow()}
-			</div>
-		</div>
-		<p class="text-secondary">
-			Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрация преди да поема
-			ангажимент. Огледът беше спокоен, с ясни документи и конкретни следващи действия.
-		</p>
-	</div>
-
-	<div class="comment-box">
-		<div class="comment-box__header mb-20">
-			<div class="comment-box__avatar">
-				<img src="/assets/images/avatar/avatar-2.webp" alt="avatar" />
-			</div>
-			<div>
-				<div class="text-secondary mb-8 flex items-center gap-4">
-					<p class="h5">Красимир Георгиев</p>
-					<span class="text-secondary text-sm">-</span>
-					<span class="text-secondary text-sm">22 август 2025</span>
-				</div>
-				{@render starRow()}
-			</div>
-		</div>
-		<p class="text-secondary">
-			Day Night Auto запазиха разговора практичен: снимки, документи, пробег и реалните разходи,
-			които имат значение преди доставка. Хареса ми, че нямаше излишни обещания.
-		</p>
-	</div>
-
-	<div class="comment-box">
-		<div class="comment-box__header mb-20">
-			<div class="comment-box__avatar">
-				<img src="/assets/images/avatar/coment-avatar-2.webp" alt="avatar" />
-			</div>
-			<div>
-				<div class="text-secondary mb-8 flex items-center gap-4">
-					<p class="h5">Илиян Петров</p>
-					<span class="text-secondary text-sm">-</span>
-					<span class="text-secondary text-sm">18 август 2025</span>
-				</div>
-				{@render starRow()}
-			</div>
-		</div>
-		<p class="text-secondary" id="reviewForm">
-			Изпратих данните за клиентски автомобил и получих ясна обратна връзка за цена, документи и
-			най-добрия начин да бъде представен автомобилът.
-		</p>
-	</div>
-
-	<p>
-		<a href={reviewsHref} class="text-underline font-weight-600">Виж още отзиви</a>
-	</p>
-</div>
+	<p class="text-secondary">В този независим преглед не са включени потвърдени клиентски отзиви.</p>
 </section>
 
 <style>

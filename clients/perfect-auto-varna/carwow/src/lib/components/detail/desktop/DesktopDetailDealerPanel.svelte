@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 
-	const phoneHref = `tel:${daynightSite.phone}`;
-	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
+	const phoneHref = daynightSite.phoneHref;
+	const viberHref = daynightSite.viberHref;
 	const mapLinkProps = {
 		href: daynightSite.mapUrl,
 		target: '_blank',
@@ -15,8 +15,8 @@
 	<div class="listing-details--contact">
 		<div class="listing-details--contact-dealer mb-28">
 			<img
-				src="/variant-3/assets/images/avatar/contact-avatar.webp"
-				alt="Перфект Ауто"
+				src="/assets/images/avatar/contact-avatar.webp"
+				alt={`${daynightSite.shortName}`}
 				data-daynight-img="1"
 				decoding="async"
 				loading="eager"
@@ -24,12 +24,12 @@
 
 			<div class="content">
 				<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-8">
-					Перфект Ауто
+					{daynightSite.shortName}
 				</a>
 
 				<div class="verify">
 					<img
-						src="/variant-3/assets/icons/SealCheck.svg"
+						src="/assets/icons/SealCheck.svg"
 						alt="verified"
 						data-daynight-img="1"
 						decoding="async"
@@ -44,7 +44,7 @@
 			<li>
 				<p class="icon">
 					<img
-						src="/variant-3/assets/icons/MapPin.svg"
+						src="/assets/icons/MapPin.svg"
 						alt=""
 						aria-hidden="true"
 						data-daynight-img="1"
@@ -62,7 +62,7 @@
 			<li class="items-center">
 				<p class="icon">
 					<img
-						src="/variant-3/assets/icons/PhoneCall.svg"
+						src="/assets/icons/PhoneCall.svg"
 						alt=""
 						aria-hidden="true"
 						data-daynight-img="1"
@@ -78,9 +78,9 @@
 			</li>
 		</ul>
 
-		<a href={phoneHref} class="sa-cta sa-cta-primary sa-cta-compact mb-12 w-full">
+		<a href={phoneHref} class="sa-cta-compact mb-12 sa-cta w-full sa-cta-primary">
 			<img
-				src="/variant-3/assets/icons/PhoneCall-2.svg"
+				src="/assets/icons/PhoneCall-2.svg"
 				alt=""
 				aria-hidden="true"
 				data-daynight-img="1"
@@ -90,9 +90,9 @@
 			Обади се за оглед
 		</a>
 
-		<a href={viberHref} class="sa-cta sa-cta-ghost sa-cta-compact w-full">
+		<a href={viberHref} class="sa-cta-compact sa-cta w-full sa-cta-ghost">
 			<img
-				src="/variant-3/assets/icons/ChatCircleDots.svg"
+				src="/assets/icons/ChatCircleDots.svg"
 				alt=""
 				aria-hidden="true"
 				data-daynight-img="1"

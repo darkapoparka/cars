@@ -149,7 +149,7 @@
 				<div class="min-w-0">
 					<Card.Description class="flex items-center gap-2">
 						<Bot aria-hidden="true" />
-						OUTLETCARS.BG — Варна operations assistant
+						OUTLETCARS.BG operations assistant
 					</Card.Description>
 					<Card.Title class="text-2xl font-semibold">CMS workbench</Card.Title>
 				</div>

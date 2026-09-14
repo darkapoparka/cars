@@ -13,7 +13,7 @@ export const load: PageServerLoad = async ({ locals, parent, params, url }) => {
 	const layout = await parent();
 
 	if (!locals.db || !layout.dealer?.id) {
-		throw redirect(303, '/variant-3/admin/login');
+		throw redirect(303, '/admin/login');
 	}
 
 	const post = await getPostById(locals.db, layout.dealer.id, params.id);
@@ -60,7 +60,7 @@ export const actions: Actions = {
 			});
 		}
 
-		throw redirect(303, `/variant-3/admin/posts/${params.id}?updated=1`);
+		throw redirect(303, `/admin/posts/${params.id}?updated=1`);
 	},
 	remove: async ({ locals, params }) => {
 		const { db, dealerId, capabilities } = await requireAdminDealer(locals);
@@ -73,6 +73,6 @@ export const actions: Actions = {
 
 		await deletePost(db, dealerId, params.id);
 
-		throw redirect(303, '/variant-3/admin/posts?deleted=1');
+		throw redirect(303, '/admin/posts?deleted=1');
 	}
 };

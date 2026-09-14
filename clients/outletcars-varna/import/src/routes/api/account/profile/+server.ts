@@ -18,7 +18,7 @@ export async function POST({ request }: { request: Request }) {
 	const phone = payloadString(payload, 'phone', 'Phone', 'SalesPhone');
 
 	if (!session) {
-		return errorJson('OUTLETCARS.BG — Варна account session is required', 401);
+		return errorJson('OUTLETCARS.BG account session is required', 401);
 	}
 
 	const user = updateDayNightUserProfile({
@@ -29,7 +29,7 @@ export async function POST({ request }: { request: Request }) {
 	});
 
 	if (!user) {
-		return errorJson('OUTLETCARS.BG — Варна account profile not found', 404);
+		return errorJson('OUTLETCARS.BG account profile not found', 404);
 	}
 
 	return okJson({

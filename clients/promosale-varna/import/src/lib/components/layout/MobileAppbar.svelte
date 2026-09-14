@@ -7,7 +7,7 @@
 	let {
 		actionsLabel = 'Контакт',
 		children,
-		logoAlt = 'Day Night Auto',
+		logoAlt = 'Promosale Varna',
 		surface = 'transparent',
 		onMap
 	}: {
@@ -22,7 +22,7 @@
 <!-- Keep contact actions in a fixed order across routes. The map callback
      preserves existing location drawers without changing the button geometry. -->
 <header class:bc-mobile-appbar--dark={surface === 'dark'} class="bc-mobile-appbar">
-	<a class="bc-mobile-appbar__brand" href={resolve('/')} aria-label="Day Night Auto начало">
+	<a class="bc-mobile-appbar__brand" href={resolve('/')} aria-label="Promosale Varna начало">
 		<img src={daynightAssets.logoLight} alt={logoAlt} width="1744" height="512" />
 	</a>
 	<div class="bc-mobile-appbar__actions" role="group" aria-label={actionsLabel}>

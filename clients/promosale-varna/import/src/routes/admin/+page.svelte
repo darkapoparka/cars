@@ -104,7 +104,7 @@
 </script>
 
 <svelte:head>
-	<title>Day Night Auto Admin - Dashboard</title>
+	<title>Promosale Varna Admin - Dashboard</title>
 </svelte:head>
 
 <AdminShell

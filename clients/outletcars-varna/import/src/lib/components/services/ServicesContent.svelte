@@ -132,7 +132,7 @@
 				class="lazyload parallax"
 				data-src="/assets/daynight/proof-studio-import-handoff.webp"
 				src="/assets/daynight/proof-studio-import-handoff.webp"
-				alt="OUTLETCARS.BG — Варна service support"
+				alt="OUTLETCARS.BG service support"
 			/>
 		</div>
 		<div class="index-10 relative container">
@@ -157,7 +157,7 @@
 						<li class="contact gap-12">
 							<div class="icon"><img src="/assets/icons/PhoneCall-2.svg" alt="phone" /></div>
 							<div class="flex flex-col gap-4">
-								<p class="text-muted text-sm">OUTLETCARS.BG — Варна</p>
+								<p class="text-muted text-sm">OUTLETCARS.BG</p>
 								<a
 									{...externalHref(services.contact.phoneHref)}
 									class="inline-flex min-h-8 items-center text-sm text-white"

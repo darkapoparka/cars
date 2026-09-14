@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Posts</title>
+	<title>OUTLETCARS.BG Admin - Posts</title>
 </svelte:head>
 
 <AdminShell title="Posts" activePath="/admin/posts">

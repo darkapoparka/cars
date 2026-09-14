@@ -1,35 +1,35 @@
-// Dealer-advertised sample observed 2026-09-09T19:17:27.878450+00:00
+// Dealer listing snapshot normalized from the canonical Cars source pack.
 export type CurrentDayNightListing = {
-	id: string;
-	title: string;
-	sourceUrl: string;
-	priceEur: string;
-	priceBgn: string;
-	status: string;
-	date: string;
-	mileage: string;
-	color: string;
-	fuel: string;
-	power: string;
-	transmission: string;
-	body: string;
-	features: string[];
-	image: string;
+  id: string;
+  title: string;
+  sourceUrl: string;
+  priceEur: string;
+  priceBgn: string;
+  status: string;
+  date: string;
+  mileage: string;
+  color: string;
+  fuel: string;
+  power: string;
+  transmission: string;
+  body: string;
+  features: string[];
+  image: string;
 };
 
-export const currentDayNightListings: CurrentDayNightListing[] = [
+export const currentDayNightListings = [
   {
     "id": "21788787563552939",
     "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ",
     "sourceUrl": "https://promosale_varna.mobile.bg/obiava-21788787563552939-mercedes-benz-eqe-350-burmester-podgrev-lizing",
     "priceEur": "26 900 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "април 2022 г.",
-    "mileage": "294 900 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2022",
+    "mileage": "294 900 km",
     "color": "Черен",
     "fuel": "Електрически",
-    "power": "292 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Седан",
     "features": [
@@ -100,12 +100,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://promosale_varna.mobile.bg/obiava-11787906058256951-peugeot-2008-gt-full-pano-podgrev-lizing",
     "priceEur": "24 990 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "февруари 2021 г.",
-    "mileage": "19 900 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2021",
+    "mileage": "19 900 km",
     "color": "Оранжев",
     "fuel": "Електрически",
-    "power": "136 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Хечбек",
     "features": [
@@ -177,12 +177,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://promosale_varna.mobile.bg/obiava-11786461174971809-bmw-740-i-long-m-sport-full-individual-lizing",
     "priceEur": "44 900 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "януари 2020 г.",
-    "mileage": "149 000 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2020",
+    "mileage": "149 000 km",
     "color": "Червен",
     "fuel": "Бензинов",
-    "power": "340 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Стреч лимузина",
     "features": [
@@ -264,12 +264,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://promosale_varna.mobile.bg/obiava-11786375334835370-porsche-panamera-4s-matrix-nappa-bose-sportchrono-lizing",
     "priceEur": "44 900 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "януари 2017 г.",
-    "mileage": "179 000 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2017",
+    "mileage": "179 000 km",
     "color": "Бял",
     "fuel": "Бензинов",
-    "power": "440 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Купе",
     "features": [
@@ -347,12 +347,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://promosale_varna.mobile.bg/obiava-11786370554050885-audi-a1-s-line-tfsi-ultra-alcantara-carplay-lizing",
     "priceEur": "11 900 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "май 2017 г.",
-    "mileage": "150 300 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2017",
+    "mileage": "150 300 km",
     "color": "Тъмно сив",
     "fuel": "Бензинов",
-    "power": "95 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Хечбек",
     "features": [
@@ -423,12 +423,12 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     "sourceUrl": "https://promosale_varna.mobile.bg/obiava-11786106091652576-mercedes-benz-eqb-amg-7-mesten-garantsiya-obsluzhen-lizing",
     "priceEur": "24 500 €",
     "priceBgn": "",
-    "status": "Датирана обява",
-    "date": "февруари 2023 г.",
-    "mileage": "140 900 км",
+    "status": "advertised; confirm with dealer",
+    "date": "2023",
+    "mileage": "140 900 km",
     "color": "Черен",
     "fuel": "Електрически",
-    "power": "190 к.с.",
+    "power": "",
     "transmission": "Автоматична",
     "body": "Джип",
     "features": [
@@ -498,4 +498,4 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
     ],
     "image": "/dealer/inventory/11786106091652576-1.webp"
   }
-];
+] satisfies CurrentDayNightListing[];

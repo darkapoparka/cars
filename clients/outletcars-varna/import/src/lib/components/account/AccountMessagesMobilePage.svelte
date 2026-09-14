@@ -43,14 +43,14 @@
 		<a
 			class="daynight-messages-mobile__brand"
 			href={resolve('/')}
-			aria-label="OUTLETCARS.BG — Варна начало"
+			aria-label="OUTLETCARS.BG начало"
 		>
-			<img src={daynightAssets.logoLight} alt="OUTLETCARS.BG — Варна" width="1285" height="235" />
+			<img src={daynightAssets.logoLight} alt="OUTLETCARS.BG" width="1285" height="235" />
 		</a>
 		<a
 			class="daynight-messages-mobile__call"
-			href="tel:+359898921010"
-			aria-label="Обади се на OUTLETCARS.BG — Варна"
+			href="tel:359898921010"
+			aria-label="Обади се на OUTLETCARS.BG"
 		>
 			<PhoneCall size={19} strokeWidth={2.2} aria-hidden="true" />
 		</a>
@@ -76,7 +76,7 @@
 			</header>
 
 			<div class="daynight-messages-mobile__thread" aria-live="polite">
-				<p class="daynight-messages-mobile__date">Разговор с OUTLETCARS.BG — Варна</p>
+				<p class="daynight-messages-mobile__date">Разговор с OUTLETCARS.BG</p>
 				{#each visibleMessages as message (message.id)}
 					<div class={['daynight-messages-mobile__message', message.sent && 'is-sent']}>
 						<p>{message.text}</p>

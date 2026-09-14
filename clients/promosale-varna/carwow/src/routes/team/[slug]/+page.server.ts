@@ -30,7 +30,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		member,
 		members: daynightTeam,
 		seo: {
-			title: `${member.name} | Day Night Auto`,
+			title: `${member.name} | Promosale Varna`,
 			description: member.bio
 		}
 	};

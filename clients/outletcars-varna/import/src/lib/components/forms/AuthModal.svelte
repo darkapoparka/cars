@@ -17,7 +17,7 @@
 
 					<form action="#">
 						<div class="resutl mb-20">
-							<p class="text-secondary mb-4">Use your OUTLETCARS.BG — Варна account credentials.</p>
+							<p class="text-secondary mb-4">Use your OUTLETCARS.BG account credentials.</p>
 						</div>
 
 						<label for="email-login" class="mb-20 px-2">

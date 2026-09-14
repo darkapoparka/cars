@@ -115,7 +115,36 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 		hero: daynightAssets.hero
 	},
 	brands: aboutBrandCards,
-	consultants: agentCardsFromAgents(agents),
+	consultants: [
+		{
+			...agentCardsFromAgents(agents)[0],
+			slug: 'kristiyan-kirilov',
+			name: 'Кристиян Кирилов',
+			title: 'Изпълнителен директор · CEO',
+			socials: [
+				{
+					href: 'https://www.instagram.com/kristiankirilov13/',
+					icon: 'brands/instagram.svg',
+					label: 'Кристиян Кирилов в Instagram'
+				}
+			],
+			image: '/assets/daynight/team/kristian-kirilov-public.jpg'
+		},
+		{
+			...agentCardsFromAgents(agents)[1],
+			slug: 'demo-mariya-petrova',
+			name: 'Мария Петрова',
+			title: 'Продажби и огледи · Демо профил',
+			image: '/assets/daynight/team/demo-mariya.png'
+		},
+		{
+			...agentCardsFromAgents(agents)[2],
+			slug: 'demo-aleksandar-ivanov',
+			name: 'Александър Иванов',
+			title: 'Внос и консултации · Демо профил',
+			image: '/assets/daynight/team/demo-aleksandar.png'
+		}
+	],
 	contact: {
 		primaryPhoneHref: daynightContact.primaryPhoneHref,
 		primaryPhoneLabel: daynightContact.primaryPhoneLabel
@@ -127,9 +156,9 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 		],
 		description:
 			'Автомобили от Европа, проверка по конкретен VIN, документи и оглед с ясен следващ ход.',
-		eyebrow: 'За OUTLETCARS.BG — Варна',
+		eyebrow: 'За OUTLETCARS.BG',
 		image: '/assets/daynight/hero/about-daynight-process-banner.webp',
-		title: 'OUTLETCARS.BG — Варна: автомобили от Европа'
+		title: 'OUTLETCARS.BG: автомобили от Европа'
 	},
 	intro: {
 		title: 'Какво проверяваме',
@@ -141,9 +170,9 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 			'Транспорт, мита, ДДС, подготовка и регистрация',
 			'Огледи, документи и предаване с предварителна уговорка'
 		],
-		mainImageAlt: 'OUTLETCARS.BG — Варна showroom',
+		mainImageAlt: 'OUTLETCARS.BG showroom',
 		subImage: '/assets/daynight/proof-studio-import-handoff.webp',
-		subImageAlt: 'OUTLETCARS.BG — Варна handoff'
+		subImageAlt: 'OUTLETCARS.BG handoff'
 	},
 	office: {
 		address: daynightContact.addressLabel,
@@ -152,11 +181,11 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 			'Огледите са с уговорка, за да има време за конкретния автомобил, документи, история и следваща стъпка.',
 		email: daynightContact.emailLabel,
 		emailHref: daynightContact.emailHref,
-		heading: 'Посети OUTLETCARS.BG — Варна',
+		heading: 'Посети OUTLETCARS.BG',
 		hours: 'Понеделник-петък: 9:00 - 18:00',
 		mapEmbedUrl: daynightContact.mapEmbedUrl,
 		mapHref:
-			'https://www.google.com/maps/search/?api=1&query=OUTLETCARS.BG — Варна%20Plovdiv%20South%20Industrial%20Zone',
+			'https://www.google.com/maps/search/?api=1&query=OUTLETCARS.BG%20Plovdiv%20South%20Industrial%20Zone',
 		phone: daynightContact.primaryPhoneLabel,
 		phoneHref: daynightContact.primaryPhoneHref,
 		secondaryPhone: daynightContact.marketplacePhoneLabel,
@@ -166,7 +195,7 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 		eyebrow: 'Екип и история',
 		heading: 'Екип за автомобили от Европа',
 		description:
-			'OUTLETCARS.BG — Варна работи около конкретния автомобил: налична кола, линк от Европа, VIN, документи, ориентир за крайни разходи, оглед и предаване.',
+			'OUTLETCARS.BG работи около конкретния автомобил: налична кола, линк от Европа, VIN, документи, ориентир за крайни разходи, оглед и предаване.',
 		statement:
 			'Целта е клиентът да знае какво гледа, колко реално струва и каква е следващата стъпка преди ангажимент.',
 		highlights: [
@@ -194,7 +223,7 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 			description: 'Организираме оглед, документи, регистрация или продажба с уговорка.'
 		}
 	],
-	reviews: [].slice(0, 4),
+	reviews: auxeroReviewCards.slice(0, 4),
 	stats: [
 		{ value: String(vehicles.length), suffix: '', label: 'Автомобила в наличност' },
 		{ value: String(brands.length), suffix: '', label: 'Марки в инвентара' },
@@ -212,6 +241,6 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 			'Оглед, продажба на клиентски автомобил и предаване с уговорка'
 		],
 		image: '/assets/daynight/cta/premium-cars-banner.webp',
-		imageAlt: 'Why choose OUTLETCARS.BG — Варна'
+		imageAlt: 'Why choose OUTLETCARS.BG'
 	}
 };

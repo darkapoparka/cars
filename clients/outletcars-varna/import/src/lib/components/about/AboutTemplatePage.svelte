@@ -36,7 +36,7 @@
 	modals={shellModals}
 	{pageDocument}
 	runtimeHtml={shellRuntimeHtml}
-	title="За нас — OUTLETCARS.BG — Варна"
+	title="За нас — OUTLETCARS.BG"
 >
 	<AboutContent {about} />
 </AuxeroPublicShell>

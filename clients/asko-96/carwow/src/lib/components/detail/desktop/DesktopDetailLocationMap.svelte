@@ -2,11 +2,8 @@
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 
-	const mapUrl =
-		daynightSite.mapUrl;
-	const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-		`${daynightSite.mapLabel}, ${daynightSite.location}`
-	)}&output=embed`;
+	const mapUrl = daynightSite.mapUrl;
+	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 </script>
 
 <div class="md-flex-col md-items-start mb-16 flex items-center justify-between gap-16">
@@ -32,7 +29,7 @@
 
 <LazyMapEmbed
 	class="widget-gg-map radius-16 mb-40 flex overflow-hidden"
-	title="Карта до АСКО 96 София"
+	title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
 	src={mapEmbedSrc}
 	height="520px"
 	iframeStyle="border:0;width: 100%;"

@@ -407,10 +407,10 @@ const applyAccountShell = (
 	options: AuxeroRenderOptions = {}
 ) => {
 	const context = accountContext(templateFile, options);
-	const listingHeading = context.isAdmin ? 'OUTLETCARS.BG — Варна Inventory' : 'Моите автомобили';
+	const listingHeading = context.isAdmin ? 'OUTLETCARS.BG Inventory' : 'Моите автомобили';
 
 	let next = html
-		.replaceAll('OUTLETCARS.BG — Варна Admin', escapeHtml(context.session.name))
+		.replaceAll('OUTLETCARS.BG Admin', escapeHtml(context.session.name))
 		.replaceAll(
 			'/assets/images/dashboard/dashbroard_avatar.webp',
 			accountAvatarByRole[context.session.role]
@@ -785,7 +785,7 @@ const favoriteGrid = (context: AccountContext) => {
 	const content = savedVehicles.length
 		? savedVehicles.map((vehicle) => favoriteCard(vehicle)).join('\n')
 		: `<div class="dashboard-box bg-white" data-daynight-favorites-empty="true">
-			<p class="h4 mb-8">No saved OUTLETCARS.BG — Варна vehicles yet</p>
+			<p class="h4 mb-8">No saved OUTLETCARS.BG vehicles yet</p>
 			<p class="text-secondary">Use the heart action on inventory cards to build your saved list.</p>
 		</div>`;
 
@@ -938,7 +938,7 @@ const applyDashboardData = (
 	);
 	next = replaceFirstDivAfter(
 		next,
-		context.isAdmin ? 'OUTLETCARS.BG — Варна Inventory' : 'My Listings',
+		context.isAdmin ? 'OUTLETCARS.BG Inventory' : 'My Listings',
 		'<div class="cart-wrapper">',
 		cartWrapper(accountListingsData(context))
 	);
@@ -1175,11 +1175,11 @@ const applyAddListingData = (
 		.replaceAll('List Now', context.isAdmin ? 'Publish Locally' : 'Submit Draft')
 		.replace(
 			'<a href="#" class="btn btn-line-1 px-24 btn-large font-weight-600">',
-			'<a href="#" class="btn btn-line-1 px-24 btn-large font-weight-600 daynight-local-form-action" data-daynight-form-target=".daynight-add-listing-form" data-daynight-form-status="Listing draft saved locally for OUTLETCARS.BG — Варна review" data-daynight-submit-form="true" data-daynight-listing-status="draft">'
+			'<a href="#" class="btn btn-line-1 px-24 btn-large font-weight-600 daynight-local-form-action" data-daynight-form-target=".daynight-add-listing-form" data-daynight-form-status="Listing draft saved locally for OUTLETCARS.BG review" data-daynight-submit-form="true" data-daynight-listing-status="draft">'
 		)
 		.replace(
 			'<a href="#" class="btn btn-primary px-24 btn-large font-weight-600">',
-			`<a href="#" class="btn btn-primary px-24 btn-large font-weight-600 daynight-local-form-action" data-daynight-form-target=".daynight-add-listing-form" data-daynight-form-status="Listing submitted locally for OUTLETCARS.BG — Варна" data-daynight-submit-form="true" data-daynight-listing-status="${primaryListingStatus}">`
+			`<a href="#" class="btn btn-primary px-24 btn-large font-weight-600 daynight-local-form-action" data-daynight-form-target=".daynight-add-listing-form" data-daynight-form-status="Listing submitted locally for OUTLETCARS.BG" data-daynight-submit-form="true" data-daynight-listing-status="${primaryListingStatus}">`
 		)
 		.replaceAll('value="Audi A6 Avant E-Tron"', `value="${escapeHtml(title)}"`)
 		.replaceAll('placeholder="Years"', 'placeholder="Year"')
@@ -1257,17 +1257,17 @@ const replaceDashboardDemoText = (html: string) =>
 		.replaceAll('$44.900,00', vehicles[0]?.priceLabel ?? 'On request')
 		.replaceAll('$42.800,00', vehicles[1]?.priceLabel ?? 'On request')
 		.replaceAll('$45.500,00', vehicles[2]?.priceLabel ?? 'On request')
-		.replaceAll('Randynox', 'OUTLETCARS.BG — Варна Lead')
-		.replaceAll('Mista Nyroom', 'OUTLETCARS.BG — Варна Customer')
-		.replaceAll('Marvin McKinney', 'OUTLETCARS.BG — Варна Sales')
-		.replaceAll('John Smith', 'OUTLETCARS.BG — Варна Customer')
-		.replaceAll('Brooklyn Simmons', 'OUTLETCARS.BG — Варна Inspection')
-		.replaceAll('Arlene McCoy', 'OUTLETCARS.BG — Варна Import')
-		.replaceAll('Darrell Steward', 'OUTLETCARS.BG — Варна Admin')
-		.replaceAll('Theresa Webb', 'OUTLETCARS.BG — Варна Support')
+		.replaceAll('Randynox', 'OUTLETCARS.BG Lead')
+		.replaceAll('Mista Nyroom', 'OUTLETCARS.BG Customer')
+		.replaceAll('Marvin McKinney', 'OUTLETCARS.BG Sales')
+		.replaceAll('John Smith', 'OUTLETCARS.BG Customer')
+		.replaceAll('Brooklyn Simmons', 'OUTLETCARS.BG Inspection')
+		.replaceAll('Arlene McCoy', 'OUTLETCARS.BG Import')
+		.replaceAll('Darrell Steward', 'OUTLETCARS.BG Admin')
+		.replaceAll('Theresa Webb', 'OUTLETCARS.BG Support')
 		.replaceAll('grew-sra@gmail.com', daynightContact.emailLabel)
-		.replaceAll('Hey! there I&#39;m available', 'OUTLETCARS.BG — Варна follow-up is ready')
-		.replaceAll("Hey! there I'm available", 'OUTLETCARS.BG — Варна follow-up is ready');
+		.replaceAll('Hey! there I&#39;m available', 'OUTLETCARS.BG follow-up is ready')
+		.replaceAll("Hey! there I'm available", 'OUTLETCARS.BG follow-up is ready');
 
 export const applyAccountTemplateData = (
 	html: string,

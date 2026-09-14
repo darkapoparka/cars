@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - Add Listing</title>
+	<title>OUTLETCARS.BG Admin - Add Listing</title>
 </svelte:head>
 
 <AdminShell title="Add listing" activePath="/admin/inventory/new">

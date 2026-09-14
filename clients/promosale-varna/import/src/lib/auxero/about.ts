@@ -156,9 +156,9 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 		],
 		description:
 			'Автомобили от Европа, проверка по конкретен VIN, документи и оглед с ясен следващ ход.',
-		eyebrow: 'За Day Night Auto',
+		eyebrow: 'За Promosale Varna',
 		image: '/assets/daynight/hero/about-daynight-process-banner.webp',
-		title: 'Day Night Auto: автомобили от Европа'
+		title: 'Promosale Varna: автомобили от Европа'
 	},
 	intro: {
 		title: 'Какво проверяваме',
@@ -170,9 +170,9 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 			'Транспорт, мита, ДДС, подготовка и регистрация',
 			'Огледи, документи и предаване с предварителна уговорка'
 		],
-		mainImageAlt: 'Day Night Auto showroom',
+		mainImageAlt: 'Promosale Varna showroom',
 		subImage: '/assets/daynight/proof-studio-import-handoff.webp',
-		subImageAlt: 'Day Night Auto handoff'
+		subImageAlt: 'Promosale Varna handoff'
 	},
 	office: {
 		address: daynightContact.addressLabel,
@@ -181,11 +181,11 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 			'Огледите са с уговорка, за да има време за конкретния автомобил, документи, история и следваща стъпка.',
 		email: daynightContact.emailLabel,
 		emailHref: daynightContact.emailHref,
-		heading: 'Посети Day Night Auto',
+		heading: 'Посети Promosale Varna',
 		hours: 'Понеделник-петък: 9:00 - 18:00',
 		mapEmbedUrl: daynightContact.mapEmbedUrl,
 		mapHref:
-			'https://www.google.com/maps/search/?api=1&query=Day Night Auto%20Plovdiv%20South%20Industrial%20Zone',
+			'https://www.google.com/maps/search/?api=1&query=Promosale Varna%20Plovdiv%20South%20Industrial%20Zone',
 		phone: daynightContact.primaryPhoneLabel,
 		phoneHref: daynightContact.primaryPhoneHref,
 		secondaryPhone: daynightContact.marketplacePhoneLabel,
@@ -195,7 +195,7 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 		eyebrow: 'Екип и история',
 		heading: 'Екип за автомобили от Европа',
 		description:
-			'Day Night Auto работи около конкретния автомобил: налична кола, линк от Европа, VIN, документи, ориентир за крайни разходи, оглед и предаване.',
+			'Promosale Varna работи около конкретния автомобил: налична кола, линк от Европа, VIN, документи, ориентир за крайни разходи, оглед и предаване.',
 		statement:
 			'Целта е клиентът да знае какво гледа, колко реално струва и каква е следващата стъпка преди ангажимент.',
 		highlights: [
@@ -241,6 +241,6 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 			'Оглед, продажба на клиентски автомобил и предаване с уговорка'
 		],
 		image: '/assets/daynight/cta/premium-cars-banner.webp',
-		imageAlt: 'Why choose Day Night Auto'
+		imageAlt: 'Why choose Promosale Varna'
 	}
 };

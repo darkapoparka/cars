@@ -6,8 +6,8 @@ export async function POST({ request }: { request: Request }) {
 	const email = payloadString(payload, 'email', 'username', 'email-forgot-password');
 	const message = createMessage({
 		email,
-		message: 'Password recovery request from the preserved OUTLETCARS.BG — Варна auth modal.',
-		name: 'OUTLETCARS.BG — Варна password recovery',
+		message: 'Password recovery request from the preserved OUTLETCARS.BG auth modal.',
+		name: 'OUTLETCARS.BG password recovery',
 		routePath: '/account/password',
 		threadId: 'daynight-auth'
 	});

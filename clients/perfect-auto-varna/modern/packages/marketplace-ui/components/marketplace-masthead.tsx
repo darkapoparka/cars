@@ -80,10 +80,10 @@ const leadSiteMastheadBannerStyle = {
     "radial-gradient(circle at 50% 145%, rgba(255, 255, 255, 0.1), transparent 54%)",
 } as const;
 const leadSiteModeArtwork: Record<MarketplaceMode, string> = {
-  buy: "/variant-2/lead-nav-inventory-v7.png",
-  imports: "/variant-2/lead-nav-import-v7.png",
-  lease: "/variant-2/lead-nav-finance-v2.png",
-  sell: "/variant-2/lead-nav-sell-v7.png",
+  buy: "/lead-nav-inventory-v7.png",
+  imports: "/lead-nav-import-v7.png",
+  lease: "/lead-nav-finance-v2.png",
+  sell: "/lead-nav-sell-v7.png",
 };
 const leadSiteModeArtworkScale: Record<MarketplaceMode, string> = {
   buy: "scale-[0.92]",
@@ -398,7 +398,7 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
                 <span aria-hidden="true" className="px-1 text-white/40">
                   ·
                 </span>
-                {isBg ? "Победа" : "Studentski grad"}
+                {isBg ? "Варна" : "Варна"}
               </p>
               <p className="mt-1 text-white/60 text-xs">{leadSite.address}</p>
             </div>

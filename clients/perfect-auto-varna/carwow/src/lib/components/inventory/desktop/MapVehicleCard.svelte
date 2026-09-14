@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { getDayNightVehicleCondition } from '$lib/data/daynight-vehicles';
 	import { getOptionalGarageContext } from '$lib/state/garage.svelte';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
@@ -123,11 +123,11 @@
 		</p>
 		<div class="flex items-center gap-[8px]">
 			<p class="category text-white uppercase">
-				<img src="/variant-3/assets/icons/picture.svg" alt="" aria-hidden="true" />
+				<img src="/assets/icons/picture.svg" alt="" aria-hidden="true" />
 				8
 			</p>
 			<p class="category text-white uppercase">
-				<img src="/variant-3/assets/icons/play.svg" alt="" aria-hidden="true" />
+				<img src="/assets/icons/play.svg" alt="" aria-hidden="true" />
 				1
 			</p>
 		</div>

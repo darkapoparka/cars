@@ -1,4 +1,6 @@
-# Design QA: Day Night Auto Desktop Home Hero
+# Historical design QA: superseded desktop home hero
+
+> Source-era evidence only. The blue-glass hero, port, test path and completion claims below do not describe the current template. Follow `AGENTS.md`, `DESIGN.md`, `DESKTOP_STYLE_GUIDE.md` and `docs/QA.md` for current work.
 
 ## Scope
 

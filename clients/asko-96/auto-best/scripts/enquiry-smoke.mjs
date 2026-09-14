@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
-import { chromium } from 'playwright';
+import { launchBrowser, previewUrl } from './browser.mjs';
 
-const base = process.env.BASE_URL || 'http://127.0.0.1:5173';
+const base = previewUrl();
 const output = 'artifacts/enquiry-smoke';
 await mkdir(output, { recursive: true });
-const browser = await chromium.launch({ headless: true });
+const browser = await launchBrowser();
 const photo = await readFile('static/assets/images/lead/day-night-stock-01.webp');
 const results = [];
 try {
@@ -106,8 +106,12 @@ try {
     assert.deepEqual(errors, []);
     assert.deepEqual(posts, [], 'Drafts must not be sent to a server');
     results.push({ width, passed: true, geometry, pageErrors: errors.length, serverSubmissions: posts.length });
+    await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
     console.log(`PASS sell/import forms, photos, review, share, draft, focus at ${width}px`);
     await page.close();
   }
   await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
-} finally { await browser.close(); }
+} catch (error) {
+  results.push({ passed: false, error: error.stack });
+  throw error;
+} finally { await browser.close(); await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2)); }

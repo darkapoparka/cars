@@ -1,3 +1,4 @@
+import { daynightVehicles } from '$lib/data/daynight-vehicles';
 import { cars } from '$lib/data/daynight-vehicles';
 import { daynightSite } from '$lib/data/daynight-site';
 
@@ -82,7 +83,7 @@ function featuredCars() {
 		slug: car.slug,
 		title: car.shortTitle,
 		subtitle: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
-		summary: featuredSummaries[car.slug] ?? 'Verified OUTLETCARS.BG — Варна stock',
+		summary: featuredSummaries[car.slug] ?? 'Verified OUTLETCARS.BG stock',
 		image: car.image,
 		cardImage: featuredCardImages[car.slug] ?? car.image,
 		price: car.priceEur,
@@ -135,7 +136,7 @@ export function load() {
 	return {
 		site: daynightSite,
 		stats: {
-			total: daynightSite.inventoryCount,
+			total: daynightVehicles.length,
 			dealers: 'Варна',
 			rating: '4.9/5',
 			reviews: '240+'

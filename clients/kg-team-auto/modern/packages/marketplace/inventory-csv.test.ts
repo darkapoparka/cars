@@ -220,7 +220,7 @@ describe("deterministic inventory CSV contract", () => {
   });
 
   test("recomputes stored mapping identity and regenerates canonical rows", () => {
-    const csv = `${INVENTORY_CSV_REQUIRED_COLUMNS.join(",")}\nupsert,car-1,2026-07-13T09:00:00Z,car,Volvo,XC60,2024,suv,gasoline,automatic,offer-1,Volvo XC60,Clean car,available,12000,5749900,EUR,2,margin,Sofia,Bulgaria,BG,bg|de`;
+    const csv = `${INVENTORY_CSV_REQUIRED_COLUMNS.join(",")}\nupsert,car-1,2026-07-13T09:00:00Z,car,Volvo,XC60,2024,suv,gasoline,automatic,offer-1,Volvo XC60,Clean car,available,12000,5749900,EUR,2,margin,Пловдив,Bulgaria,BG,bg|de`;
     const analysis = analyzeInventoryCsv(csv);
     const mapping = createInventoryCsvMappingVersion({
       delimiter: analysis.delimiter,
@@ -267,7 +267,7 @@ describe("deterministic inventory CSV contract", () => {
   });
 
   test("fails closed on stored mapping hash drift and quarantines invalid rows", () => {
-    const csv = `${INVENTORY_CSV_REQUIRED_COLUMNS.join(",")}\nupsert,car-1,01/02/2024,car,Volvo,XC60,2024,suv,petrol,automatic,offer-1,Volvo XC60,Clean car,available,12000,5749900,EUR,2,margin,Sofia,Bulgaria,BG,bg`;
+    const csv = `${INVENTORY_CSV_REQUIRED_COLUMNS.join(",")}\nupsert,car-1,01/02/2024,car,Volvo,XC60,2024,suv,petrol,automatic,offer-1,Volvo XC60,Clean car,available,12000,5749900,EUR,2,margin,Пловдив,Bulgaria,BG,bg`;
     const analysis = analyzeInventoryCsv(csv);
     const mapping = createInventoryCsvMappingVersion({
       delimiter: analysis.delimiter,
@@ -298,7 +298,7 @@ describe("deterministic inventory CSV contract", () => {
   });
 
   test("rejects substituted artifact bytes instead of branding a caller hash", () => {
-    const csv = `${INVENTORY_CSV_REQUIRED_COLUMNS.join(",")}\nupsert,car-1,2026-07-13T09:00:00Z,car,Volvo,XC60,2024,suv,gasoline,automatic,offer-1,Volvo XC60,Clean car,available,12000,5749900,EUR,2,margin,Sofia,Bulgaria,BG,bg`;
+    const csv = `${INVENTORY_CSV_REQUIRED_COLUMNS.join(",")}\nupsert,car-1,2026-07-13T09:00:00Z,car,Volvo,XC60,2024,suv,gasoline,automatic,offer-1,Volvo XC60,Clean car,available,12000,5749900,EUR,2,margin,Пловдив,Bulgaria,BG,bg`;
     const analysis = analyzeInventoryCsv(csv);
     const mapping = createInventoryCsvMappingVersion({
       delimiter: analysis.delimiter,

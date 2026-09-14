@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { submitLead } from '$lib/client/lead-submit';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
@@ -146,7 +146,7 @@
 		</div>
 		<button
 			type="submit"
-			class="sa-cta sa-cta-primary mb-18 w-full"
+			class="mb-18 sa-cta w-full sa-cta-primary"
 			disabled={inquirySubmitState === 'submitting'}
 		>
 			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}

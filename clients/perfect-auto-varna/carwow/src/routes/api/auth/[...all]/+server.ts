@@ -1,4 +1,3 @@
-import { localPath } from '$lib/utils/preview-paths';
 import { json } from '@sveltejs/kit';
 import { disabledAuthPaths, getAuth, hasAuthRuntimeConfig } from '$lib/server/auth/auth';
 import type { RequestHandler } from './$types';
@@ -8,7 +7,7 @@ function unavailable() {
 }
 
 function authPath(request: Request) {
-	const path = localPath(new URL(request.url).pathname);
+	const path = new URL(request.url).pathname;
 	return path.replace(/^\/api\/auth/, '') || '/';
 }
 

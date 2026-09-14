@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { daynightContact } from '$lib/data/daynight';
 	import type {
 		HomeFiveHeroAction,
 		HomeFiveHeroActionMode,
@@ -22,9 +23,8 @@
 
 	let { hero }: { hero?: HomeFiveHeroData } = $props();
 
-	const mobileShowroomMapHref =
-		'https://www.google.com/maps/search/?api=1&query=Day Night Auto%20Plovdiv%20South%20Industrial%20Zone';
-	const mobileShowroomPhoneHref = 'tel:0877733110';
+	const mobileShowroomMapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(daynightContact.addressLabel)}`;
+	const mobileShowroomPhoneHref = daynightContact.primaryPhoneHref;
 	const inventoryFilterHref = (name: string, value: string) =>
 		`/inventory?${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 	const isEnglish = $derived(hero?.searchSubmitPrefix === 'Show');
@@ -145,14 +145,14 @@
 						{ href: '/calculator', label: 'Import calculator' },
 						{ href: '/services', label: 'Import process' },
 						{ href: '/agents', label: 'Consultant' },
-						{ href: '/contact', label: 'Ask Day Night Auto' },
+						{ href: '/contact', label: 'Ask Promosale Varna' },
 						{ href: '/inventory', label: 'Available cars' }
 					]
 				: [
 						{ href: '/calculator', label: 'Калкулатор' },
 						{ href: '/services', label: 'Процес по внос' },
 						{ href: '/agents', label: 'Консултант' },
-						{ href: '/contact', label: 'Попитай Day Night Auto' },
+						{ href: '/contact', label: 'Попитай Promosale Varna' },
 						{ href: '/inventory', label: 'Налични коли' }
 					];
 		}
@@ -163,14 +163,14 @@
 						{ href: '/sell-your-car', label: 'Valuation form' },
 						{ href: '/services', label: 'Selling process' },
 						{ href: '/agents', label: 'Consultant' },
-						{ href: '/contact', label: 'Ask Day Night Auto' },
+						{ href: '/contact', label: 'Ask Promosale Varna' },
 						{ href: '/inventory', label: 'Available cars' }
 					]
 				: [
 						{ href: '/sell-your-car', label: 'Оценка' },
 						{ href: '/services', label: 'Как продаваме' },
 						{ href: '/agents', label: 'Консултант' },
-						{ href: '/contact', label: 'Попитай Day Night Auto' },
+						{ href: '/contact', label: 'Попитай Promosale Varna' },
 						{ href: '/inventory', label: 'Налични коли' }
 					];
 		}
@@ -470,7 +470,7 @@
 				<span class="daynight-mobile-location-sheet__handle"></span>
 				<header>
 					<div>
-						<p>{isEnglish ? 'Day Night Auto showroom' : 'Day Night Auto шоурум'}</p>
+						<p>{isEnglish ? 'Promosale Varna showroom' : 'Promosale Varna шоурум'}</p>
 						<h2 id="daynight-mobile-location-title">
 							{isEnglish ? 'Plovdiv, South Industrial Zone' : 'Пловдив, Индустриална зона - Юг'}
 						</h2>
@@ -490,7 +490,7 @@
 					<span class="daynight-mobile-location-map__pin">
 						<MapPin size={24} strokeWidth={2.4} aria-hidden="true" />
 					</span>
-					<span class="daynight-mobile-location-map__badge">Day Night Auto</span>
+					<span class="daynight-mobile-location-map__badge">Promosale Varna</span>
 				</div>
 				<div class="daynight-mobile-location-address">
 					<span>{isEnglish ? 'Showroom address' : 'Адрес на шоурума'}</span>
@@ -1467,7 +1467,7 @@
 		}
 
 		.daynight-mobile-hero {
-			padding: 10px 0 33px;
+			padding: 10px 0 var(--bc-space-8);
 			background: transparent;
 		}
 
@@ -1496,7 +1496,7 @@
 		.daynight-mobile-hero__search-module {
 			display: grid;
 			gap: var(--bc-mobile-entry-gap);
-			margin-bottom: 9px;
+			margin-bottom: var(--bc-mobile-entry-gap);
 			padding: 0;
 		}
 

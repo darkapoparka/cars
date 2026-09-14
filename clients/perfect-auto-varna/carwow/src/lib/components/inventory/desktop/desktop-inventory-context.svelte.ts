@@ -1,6 +1,6 @@
 import { createContext } from 'svelte';
 import { replaceState } from '$app/navigation';
-import { resolve } from '$lib/utils/preview-paths';
+import { resolve } from '$app/paths';
 import { page } from '$app/state';
 import { readDesktopSort, serializeInventoryFilters } from '$lib/utils/inventory-url';
 import {

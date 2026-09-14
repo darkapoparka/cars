@@ -17,7 +17,7 @@
 		>
 		</path>
 	</svg>
-	<img class="progress-wrap-icon" src="/variant-3/assets/icons/top.svg" alt="top" />
+	<img class="progress-wrap-icon" src="/assets/icons/top.svg" alt="top" />
 </button>
 
 <style>

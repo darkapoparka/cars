@@ -1,4 +1,3 @@
-import { previewPath } from '$lib/utils/preview-paths';
 import { getRequestEvent } from '$app/server';
 import { env } from '$env/dynamic/private';
 import { betterAuth } from 'better-auth';
@@ -41,7 +40,6 @@ export function getAuth() {
 	if (!authInstance) {
 		authInstance = betterAuth({
 			appName: 'Перфект Ауто Admin',
-			basePath: previewPath('/api/auth'),
 			baseURL: env.BETTER_AUTH_URL?.trim() || undefined,
 			secret: getBetterAuthSecret(),
 			database: drizzleAdapter(createDb(), {

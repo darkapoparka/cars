@@ -18,7 +18,7 @@ export async function POST({ request }: { request: Request }) {
 	const user = session ? findDayNightUserByEmail(session.email) : undefined;
 
 	if (!session) {
-		return errorJson('OUTLETCARS.BG — Варна account session is required', 401);
+		return errorJson('OUTLETCARS.BG account session is required', 401);
 	}
 
 	if (!nextPassword || nextPassword.length < 8) {
@@ -30,7 +30,7 @@ export async function POST({ request }: { request: Request }) {
 	}
 
 	if (!user) {
-		return errorJson('OUTLETCARS.BG — Варна account not found', 404);
+		return errorJson('OUTLETCARS.BG account not found', 404);
 	}
 
 	const passwordChange = createDayNightPasswordChangeRecord(user);

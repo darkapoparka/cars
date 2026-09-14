@@ -46,10 +46,10 @@ export type AuxeroSellCarMobileStep = {
 
 export const sellYourCarHero: AuxeroPageBanner = {
 	description:
-		'Изпрати VIN, пробег, очаквана цена и телефон. OUTLETCARS.BG — Варна ще прегледа автомобила и ще предложи реалистичен следващ ход.',
-	eyebrow: 'OUTLETCARS.BG — Варна оценка',
+		'Изпрати VIN, пробег, очаквана цена и телефон. OUTLETCARS.BG ще прегледа автомобила и ще предложи реалистичен следващ ход.',
+	eyebrow: 'OUTLETCARS.BG оценка',
 	image: '/assets/daynight/services/sell-car-service.webp',
-	title: 'Продай автомобила си с OUTLETCARS.BG — Варна'
+	title: 'Продай автомобила си с OUTLETCARS.BG'
 };
 
 export const auxeroSellSteps: AuxeroSellCarStep[] = [
@@ -59,7 +59,7 @@ export const auxeroSellSteps: AuxeroSellCarStep[] = [
 	},
 	{
 		title: 'Проверка на история и състояние',
-		text: 'OUTLETCARS.BG — Варна преглежда информацията и уточнява липсващите детайли преди препоръка.'
+		text: 'OUTLETCARS.BG преглежда информацията и уточнява липсващите детайли преди препоръка.'
 	},
 	{
 		title: 'Избор на път за продажба',
@@ -76,7 +76,7 @@ export const sellCarMobileCopy: AuxeroSellCarMobileCopy = {
 	formEyebrow: 'Бърза заявка',
 	formTitle: 'Попълни за минута',
 	logoAlt: daynightBrand.name,
-	logoSrc: '/dealer/logo-on-light-v2.svg',
+	logoSrc: '/brand/daynight-wordmark.svg',
 	messageLabel: 'Пиши ни',
 	statusMessage: 'Заявката е подготвена. Обади се или пиши, за да я финализираме веднага.',
 	stepsTitle: 'Как работи',

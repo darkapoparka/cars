@@ -185,13 +185,14 @@ export const messages: Record<Locale, PublicMessages> = {
 			languageOptions: ['English', 'Bulgarian'],
 			megaDetails: 'Details',
 			megaView: 'View',
-			searchPlaceholder: 'Search OUTLETCARS.BG — Варна inventory',
+			searchPlaceholder: 'Search OUTLETCARS.BG inventory',
 			signIn: 'Sign In',
 			wishlist: 'Wishlist'
 		},
 		home: {
 			actionBand: {
-				buyBody: 'Discuss import, documents, viewing and next steps with a OUTLETCARS.BG — Варна consultant.',
+				buyBody:
+					'Discuss import, documents, viewing and next steps with a OUTLETCARS.BG consultant.',
 				buyCta: 'Book time',
 				buyTitle: 'Book A Consultation',
 				importBody: 'Selection, inspection, documents and delivery from Europe.',
@@ -207,26 +208,26 @@ export const messages: Record<Locale, PublicMessages> = {
 				{ label: '70 000 - 100 000 EUR', active: false },
 				{ label: '100 000+ EUR', active: false }
 			],
-			budgetTitle: 'OUTLETCARS.BG — Варна by Budget',
-			byline: 'by OUTLETCARS.BG — Варна',
+			budgetTitle: 'OUTLETCARS.BG by Budget',
+			byline: 'by OUTLETCARS.BG',
 			commonCta: 'View All',
 			compareEmpty: 'Your compare is currently empty',
 			compareTitle: 'Compare Top Rated Vehicles',
 			featuredTitle: 'Newest Vehicles',
-			newsTitle: 'OUTLETCARS.BG — Варна notes',
+			newsTitle: 'OUTLETCARS.BG notes',
 			readMore: 'Read more',
 			reviewsTitle: 'Client Reviews',
 			seo: {
 				description:
-					'OUTLETCARS.BG — Варна: verified cars with clear origin, plus Europe import — selection, inspection, documents, delivery and warranty for Bulgaria.',
-				title: 'OUTLETCARS.BG — Варна — Cars & Import From Europe'
+					'OUTLETCARS.BG: verified cars with clear origin, plus Europe import — selection, inspection, documents, delivery and warranty for Bulgaria.',
+				title: 'OUTLETCARS.BG — Cars & Import From Europe'
 			},
 			typeCta: 'View All Types',
 			typeTitle: 'Browse By Type',
 			vehicleCard: vehicleCardEn
 		},
 		hero: {
-			checksTitle: 'OUTLETCARS.BG — Варна Checks',
+			checksTitle: 'OUTLETCARS.BG Checks',
 			ctaLabel: 'View Inventory',
 			features: [
 				'Verified source listing',
@@ -238,7 +239,7 @@ export const messages: Record<Locale, PublicMessages> = {
 				'Viewing by appointment',
 				'Client vehicle intake'
 			],
-			heading: 'Browse, Compare, Drive With OUTLETCARS.BG — Варна!',
+			heading: 'Browse, Compare, Drive With OUTLETCARS.BG!',
 			searchSubmitPrefix: 'Show',
 			searchSubmitSuffix: 'Matches',
 			slideSubtitle: 'Europe-sourced vehicles with verified history and clear appointment support.',
@@ -267,26 +268,26 @@ export const messages: Record<Locale, PublicMessages> = {
 			}
 		},
 		inventory: {
-			emptyBody: 'Clear filters or contact OUTLETCARS.BG — Варна for a Europe import request.',
-			emptyTitle: 'No OUTLETCARS.BG — Варна vehicles match these filters',
+			emptyBody: 'Clear filters or contact OUTLETCARS.BG for a Europe import request.',
+			emptyTitle: 'No OUTLETCARS.BG vehicles match these filters',
 			reset: 'Reset inventory',
 			vehicleCard: vehicleCardEn
 		},
 		detail: {
-			callDayNight: 'Call OUTLETCARS.BG — Варна',
+			callDayNight: 'Call OUTLETCARS.BG',
 			carOverview: 'Car Overview',
 			cash: 'Cash',
 			chatOnViber: 'Chat on Viber',
 			compare: 'Compare',
-			consultantLabel: 'OUTLETCARS.BG — Варна Consultant',
+			consultantLabel: 'OUTLETCARS.BG Consultant',
 			description: 'Description',
 			detailDescriptionFallback:
-				'is available through OUTLETCARS.BG — Варна with source review and viewing by appointment.',
+				'is available through OUTLETCARS.BG with source review and viewing by appointment.',
 			directions: 'Get Directions',
 			email: 'Email',
 			finance: 'Finance',
 			financeIntro: 'Estimated payment before final taxes, registration, and transport costs.',
-			financeTerms: 'Estimated over 72 months. Final terms confirmed by OUTLETCARS.BG — Варна.',
+			financeTerms: 'Estimated over 72 months. Final terms confirmed by OUTLETCARS.BG.',
 			formConsent:
 				'Yes, I would like to receive price alerts on this vehicle and helpful shopping information.',
 			formTerms: 'By using this service, you accept our',
@@ -294,8 +295,8 @@ export const messages: Record<Locale, PublicMessages> = {
 			getToKnow: 'Get To Know this car',
 			inquiryTitle: 'Send Inquiry about Vehicle',
 			inquiryCta: 'Inquire',
-			inquiryIntro: 'Leave your details and OUTLETCARS.BG — Варна will get back to you about this car.',
-			inquirySuccess: 'Done — OUTLETCARS.BG — Варна will be in touch as soon as possible.',
+			inquiryIntro: 'Leave your details and OUTLETCARS.BG will get back to you about this car.',
+			inquirySuccess: 'Done — OUTLETCARS.BG will be in touch as soon as possible.',
 			callCta: 'Call',
 			message: 'Message',
 			messagePlaceholder: 'Comment',
@@ -363,25 +364,25 @@ export const messages: Record<Locale, PublicMessages> = {
 				{ label: '100 000+ EUR', active: false }
 			],
 			budgetTitle: 'Автомобили по бюджет',
-			byline: 'от OUTLETCARS.BG — Варна',
+			byline: 'от OUTLETCARS.BG',
 			commonCta: 'Виж всички',
 			compareEmpty: 'Списъкът за сравнение е празен',
 			compareTitle: 'Сравни избрани автомобили',
 			featuredTitle: 'Най-нови автомобили',
-			newsTitle: 'Съвети от OUTLETCARS.BG — Варна',
+			newsTitle: 'Съвети от OUTLETCARS.BG',
 			readMore: 'Прочети повече',
 			reviewsTitle: 'Отзиви от клиенти',
 			seo: {
 				description:
-					'OUTLETCARS.BG — Варна: проверени автомобили с ясен произход и подбор на автомобили — подбор, проверка, документи, доставка и гаранция за България.',
-				title: 'OUTLETCARS.BG — Варна — автомобили и подбор на автомобили'
+					'OUTLETCARS.BG: проверени автомобили с ясен произход и подбор на автомобили — подбор, проверка, документи, доставка и гаранция за България.',
+				title: 'OUTLETCARS.BG — автомобили и подбор на автомобили'
 			},
 			typeCta: 'Виж всички типове',
 			typeTitle: 'Разгледай по тип',
 			vehicleCard: vehicleCardBg
 		},
 		hero: {
-			checksTitle: 'Проверки от OUTLETCARS.BG — Варна',
+			checksTitle: 'Проверки от OUTLETCARS.BG',
 			ctaLabel: 'Виж наличните',
 			features: [
 				'Проверен източник',
@@ -393,7 +394,7 @@ export const messages: Record<Locale, PublicMessages> = {
 				'Оглед с предварителна уговорка',
 				'Прием на клиентски автомобили'
 			],
-			heading: 'Разгледай, сравни и избери с OUTLETCARS.BG — Варна!',
+			heading: 'Разгледай, сравни и избери с OUTLETCARS.BG!',
 			searchSubmitPrefix: 'Покажи',
 			searchSubmitSuffix: 'автомобила',
 			slideSubtitle: 'Автомобили от Европа с проверена история и ясни следващи стъпки преди оглед.',
@@ -422,27 +423,28 @@ export const messages: Record<Locale, PublicMessages> = {
 			}
 		},
 		inventory: {
-			emptyBody: 'Изчисти филтрите или се свържи с OUTLETCARS.BG — Варна за подбор на автомобили.',
+			emptyBody: 'Изчисти филтрите или се свържи с OUTLETCARS.BG за подбор на автомобили.',
 			emptyTitle: 'Няма автомобили, които отговарят на тези филтри',
 			reset: 'Изчисти филтрите',
 			vehicleCard: vehicleCardBg
 		},
 		detail: {
-			callDayNight: 'Обади се на OUTLETCARS.BG — Варна',
+			callDayNight: 'Обади се на OUTLETCARS.BG',
 			carOverview: 'Основни данни',
 			cash: 'В брой',
 			chatOnViber: 'Чат във Viber',
 			compare: 'Сравни',
-			consultantLabel: 'Консултант OUTLETCARS.BG — Варна',
+			consultantLabel: 'Консултант OUTLETCARS.BG',
 			description: 'Описание',
 			detailDescriptionFallback:
-				'е наличен чрез OUTLETCARS.BG — Варна с проверка на източника и оглед с предварителна уговорка.',
+				'е наличен чрез OUTLETCARS.BG с проверка на източника и оглед с предварителна уговорка.',
 			directions: 'Виж упътване',
 			email: 'Имейл',
 			finance: 'Финансиране',
 			financeIntro:
 				'Ориентировъчна вноска преди окончателни данъци, регистрация и транспортни разходи.',
-			financeTerms: 'Ориентировъчно за 72 месеца. Финалните условия се потвърждават от OUTLETCARS.BG — Варна.',
+			financeTerms:
+				'Ориентировъчно за 72 месеца. Финалните условия се потвърждават от OUTLETCARS.BG.',
 			formConsent:
 				'Да, искам да получавам информация за цената на този автомобил и полезна информация за покупката.',
 			formTerms: 'С използването на тази услуга приемате нашето',
@@ -567,16 +569,16 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	// Inventory + detail template strings. Multi-word/compound phrases are listed
 	// before the generic single-word rules below (e.g. /Price/) so they match first.
 	[
-		/Showing (\d+)\s*[-–]\s*(\d+) of (\d+) matching(?: OUTLETCARS.BG — Варна)? Listings/g,
+		/Showing (\d+)\s*[-–]\s*(\d+) of (\d+) matching(?: OUTLETCARS.BG)? Listings/g,
 		'Показани $1 – $2 от $3 съвпадащи обяви'
 	],
 	[
-		/Showing (\d+)\s*[-–]\s*(\d+) of (\d+)(?: OUTLETCARS.BG — Варна)? Listings/g,
+		/Showing (\d+)\s*[-–]\s*(\d+) of (\d+)(?: OUTLETCARS.BG)? Listings/g,
 		'Показани $1 – $2 от $3 обяви'
 	],
-	[/Showing 0 of (\d+)(?: OUTLETCARS.BG — Варна)? Listings/g, 'Показани 0 от $1 обяви'],
+	[/Showing 0 of (\d+)(?: OUTLETCARS.BG)? Listings/g, 'Показани 0 от $1 обяви'],
 	// Inventory banner + searchbar
-	[/OUTLETCARS.BG — Варна current stock/gi, 'Налични автомобили в OUTLETCARS.BG — Варна'],
+	[/OUTLETCARS.BG current stock/gi, 'Налични автомобили в OUTLETCARS.BG'],
 	[
 		/(\d+) vehicles available with appointment viewings and source checks\./g,
 		'$1 налични автомобила с оглед по уговорка и проверен произход.'
@@ -585,14 +587,14 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 		/(\d+) matching vehicles available with appointment viewings and source checks\./g,
 		'$1 съвпадащи автомобила с оглед по уговорка и проверен произход.'
 	],
-	[/Search OUTLETCARS.BG — Варна inventory/g, 'Търси в OUTLETCARS.BG — Варна'],
+	[/Search OUTLETCARS.BG inventory/g, 'Търси в OUTLETCARS.BG'],
 	[/Search brand, model, stock #/g, 'Търси марка, модел, номер #'],
 	[
 		/Search make, model, year, fuel, extras\.\.\./g,
 		'Търси по марка, модел, година, гориво, екстри...'
 	],
 	[/Search for anything/g, 'Търси каквото и да е'],
-	[/OUTLETCARS.BG — Варна Inventory/g, 'Инвентар'],
+	[/OUTLETCARS.BG Inventory/g, 'Инвентар'],
 	[/\bFilters\b/g, 'Филтри'],
 	[/\bMake\b/g, 'Марка'],
 	[/\bModel\b/g, 'Модел'],
@@ -621,11 +623,11 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Terms Of Services/g, 'Общи условия'],
 	[/Privacy Policy/g, 'Поверителност'],
 	[/Cookie Policy/g, 'Бисквитки'],
-	[/Contact OUTLETCARS.BG — Варна/g, 'Контакт с OUTLETCARS.BG — Варна'],
-	[/Buying With OUTLETCARS.BG — Варна/g, 'Покупка с OUTLETCARS.BG — Варна'],
+	[/Contact OUTLETCARS.BG/g, 'Контакт с OUTLETCARS.BG'],
+	[/Buying With OUTLETCARS.BG/g, 'Покупка с OUTLETCARS.BG'],
 	[/Inventory Map/g, 'Карта на наличните'],
 	[/Import Calculator/g, 'Калкулатор за внос'],
-	[/OUTLETCARS.BG — Варна Online/g, 'OUTLETCARS.BG — Варна онлайн'],
+	[/OUTLETCARS.BG Online/g, 'OUTLETCARS.BG онлайн'],
 	[/Opening Hours:/g, 'Работно време:'],
 	[/Monday-Friday 9:00 - 18:00/g, 'Понеделник-петък 9:00 - 18:00'],
 	[/Weekend viewings by appointment/g, 'Огледи през уикенда с уговорка'],
@@ -708,14 +710,14 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/\bYear\b/g, 'Година'],
 	// Detail page feature tabs + helper copy (built in English by applyDetailData,
 	// translated here). Verbatim strings copied from the source so they match.
-	[/OUTLETCARS.BG — Варна Notes/g, 'Съвети от OUTLETCARS.BG — Варна'],
+	[/OUTLETCARS.BG Notes/g, 'Съвети от OUTLETCARS.BG'],
 	[
 		/Estimated payment before final taxes, registration, and transport costs\./g,
 		'Прогнозна вноска без крайни данъци, регистрация и транспорт.'
 	],
 	[
-		/Estimated over 72 months\. Final terms confirmed by OUTLETCARS.BG — Варна\./g,
-		'Прогноза за 72 месеца. Крайните условия се потвърждават от OUTLETCARS.BG — Варна.'
+		/Estimated over 72 months\. Final terms confirmed by OUTLETCARS.BG\./g,
+		'Прогноза за 72 месеца. Крайните условия се потвърждават от OUTLETCARS.BG.'
 	],
 	[
 		/Listed vehicle price\. Final taxes and registration costs confirmed before purchase\./g,
@@ -727,8 +729,8 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Mechanical inspection can be arranged/g, 'Може да се организира технически преглед'],
 	[/Engine details on request/g, 'Детайли за двигателя по запитване'],
 	[
-		/Inventory refreshed from OUTLETCARS.BG — Варна source data/g,
-		'Наличността е обновена от данните на OUTLETCARS.BG — Варна'
+		/Inventory refreshed from OUTLETCARS.BG source data/g,
+		'Наличността е обновена от данните на OUTLETCARS.BG'
 	],
 	[/Inventory refreshed/g, 'Наличността е обновена'],
 	[/Verified source listing/g, 'Проверена обява от източника'],
@@ -737,9 +739,9 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Vehicle viewings by appointment/g, 'Огледите се потвърждават предварително'],
 	[/Registration and documents/g, 'Регистрация и документи'],
 	[/Viewing appointment/g, 'Оглед по уговорка'],
-	[/OUTLETCARS.BG — Варна Consultants/g, 'Консултанти на OUTLETCARS.BG — Варна'],
-	[/OUTLETCARS.BG — Варна Consultant/g, 'Консултант на OUTLETCARS.BG — Варна'],
-	[/Call OUTLETCARS.BG — Варна/g, 'Обади се на OUTLETCARS.BG — Варна'],
+	[/OUTLETCARS.BG Consultants/g, 'Консултанти на OUTLETCARS.BG'],
+	[/OUTLETCARS.BG Consultant/g, 'Консултант на OUTLETCARS.BG'],
+	[/Call OUTLETCARS.BG/g, 'Обади се на OUTLETCARS.BG'],
 	[/Chat on Viber/g, 'Пиши във Viber'],
 	[/EUR\/mo/g, 'EUR/мес.'],
 	[/\bEquipment\b/g, 'Оборудване'],
@@ -763,7 +765,7 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Compare Vehicles/g, 'Сравни автомобили'],
 	[/Shop By Body Type/g, 'По тип купе'],
 	[/Shop By Fuel Type/g, 'По гориво'],
-	[/OUTLETCARS.BG — Варна Support/g, 'Съдействие от OUTLETCARS.BG — Варна'],
+	[/OUTLETCARS.BG Support/g, 'Съдействие от OUTLETCARS.BG'],
 	[/Import & Buying Services/g, 'Внос и покупка'],
 	[/Import Cost Calculator/g, 'Калкулатор за внос'],
 	[/Sell Your Car/g, 'Продай автомобила си'],
@@ -773,10 +775,10 @@ const auxeroBgReplacements: Array<[RegExp, string]> = [
 	[/Find a Consultant/g, 'Намери консултант'],
 	[/Verified Listings/g, 'Проверени обяви'],
 	[/Client Reviews/g, 'Отзиви от клиенти'],
-	[/Contact OUTLETCARS.BG — Варна/g, 'Контакт с OUTLETCARS.BG — Варна'],
+	[/Contact OUTLETCARS.BG/g, 'Контакт с OUTLETCARS.BG'],
 	[/Frequently Asked Questions/g, 'Често задавани въпроси'],
-	[/OUTLETCARS.BG — Варна Notes/g, 'Съвети от OUTLETCARS.BG — Варна'],
-	[/Compare OUTLETCARS.BG — Варна Vehicles Side-by-Side/g, 'Сравни автомобили от OUTLETCARS.BG — Варна'],
+	[/OUTLETCARS.BG Notes/g, 'Съвети от OUTLETCARS.BG'],
+	[/Compare OUTLETCARS.BG Vehicles Side-by-Side/g, 'Сравни автомобили от OUTLETCARS.BG'],
 	[
 		/Compare price, mileage, source details, and specifications before you book a viewing\./g,
 		'Сравни цена, пробег, източник и спецификации преди да запазиш оглед.'

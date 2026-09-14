@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { footerNavItems, daynightSite } from '$lib/data/daynight-site';
 
 	const buyingLinks = footerNavItems.slice(0, 4);
@@ -11,7 +11,7 @@
 		<div class="site-footer__brand">
 			<img src={daynightSite.logoLight} alt={daynightSite.name} />
 			<p>
-				Проверени автомобили в Варна със съдействие за оглед, документи, регистрация, финансиране
+				Проверени автомобили в {daynightSite.city} със съдействие за оглед, документи, регистрация, финансиране
 				и бартер.
 			</p>
 		</div>

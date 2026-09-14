@@ -79,15 +79,13 @@
 		ctaLabel = 'Виж всички типове',
 		showHeaderCta = true,
 		showBelowCta = false,
-		showEmptyCategories = false,
-		headerCtaPlacement = 'inline'
+		showEmptyCategories = false
 	}: {
 		title?: string;
 		ctaLabel?: string;
 		showHeaderCta?: boolean;
 		showBelowCta?: boolean;
 		showEmptyCategories?: boolean;
-		headerCtaPlacement?: 'inline' | 'stacked';
 	} = $props();
 
 	let vehicleCategories = $derived(
@@ -98,7 +96,13 @@
 </script>
 
 <section class="daynight-home-section daynight-home-section--vehicle-types">
-	<div class="daynight-home-container home-browse-heading"><DesktopSectionHeading title={title} href={showHeaderCta ? resolve('/inventory') : undefined} label={ctaLabel} /></div>
+	<div class="daynight-home-container home-browse-heading">
+		<DesktopSectionHeading
+			{title}
+			href={showHeaderCta ? resolve('/inventory') : undefined}
+			label={ctaLabel}
+		/>
+	</div>
 	<div class="daynight-home-section-content daynight-home-container">
 		<div class="daynight-vehicle-types">
 			<div class="daynight-vehicle-types__grid">
@@ -140,7 +144,9 @@
 </section>
 
 <style>
- .home-browse-heading { padding-top: 36px; }
+	.home-browse-heading {
+		padding-top: 36px;
+	}
 	:global(body.daynight-home-page) .daynight-vehicle-types__grid {
 		gap: 16px !important;
 	}
@@ -191,15 +197,15 @@
 	}
 
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__title {
-		font-size: 20px !important;
-		font-weight: 650 !important;
+		font-size: var(--sa-text-xl) !important;
+		font-weight: var(--sa-weight-heading) !important;
 		line-height: 1.2 !important;
 		margin: 0 0 4px !important;
 	}
 
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__count {
 		color: #64748b !important;
-		font-size: 13px !important;
+		font-size: var(--sa-text-caption) !important;
 		line-height: 1.3 !important;
 		margin: 0 !important;
 	}
@@ -213,13 +219,13 @@
 	:global(body.daynight-home-page) .daynight-home-browse-cta__link {
 		align-items: center;
 		background: transparent;
-		border: 1px solid #8b6811;
+		border: 1px solid #c91620;
 		border-radius: 8px;
 		box-sizing: border-box;
-		color: #8b6811;
+		color: #c91620;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 650;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		justify-content: center;
 		min-height: 42px;
 		padding: 0 18px;
@@ -232,8 +238,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-browse-cta__link:hover,
 	:global(body.daynight-home-page) .daynight-home-browse-cta__link:focus-visible {
-		background: #8b6811;
-		border-color: #8b6811;
+		background: #c91620;
+		border-color: #c91620;
 		color: #fff;
 	}
 
@@ -298,7 +304,7 @@
 		.daynight-home-section--vehicle-types
 			:global(.daynight-home-section-banner__cta:focus-visible) {
 			background: transparent !important;
-			color: #8b6811 !important;
+			color: #c91620 !important;
 		}
 	}
 </style>

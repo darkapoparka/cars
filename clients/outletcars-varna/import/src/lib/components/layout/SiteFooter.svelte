@@ -12,21 +12,21 @@
 		{ href: '/services', label: 'Услуги' },
 		{ href: '/sell-your-car', label: 'Продай автомобил' },
 		{ href: '/agents', label: 'Консултанти' },
-		{ href: '/contact', label: 'Контакт с OUTLETCARS.BG — Варна' }
+		{ href: '/contact', label: 'Контакт с OUTLETCARS.BG' }
 	] as const;
 </script>
 
 <footer class="site-footer">
 	<div class="site-footer__top container">
 		<div class="site-footer__brand">
-			<img src={daynightAssets.logoLight} alt="OUTLETCARS.BG — Варна" />
+			<img src={daynightAssets.logoDark} alt="OUTLETCARS.BG" />
 			<p>
-				{daynightBrand.tagline}. Проверка на източник, съдействие при внос, продажба на автомобили
-				и огледи с уговорка.
+				{daynightBrand.tagline}. Проверка на източник, съдействие при внос, продажба на автомобили и
+				огледи с уговорка.
 			</p>
 		</div>
 		<div>
-			<p class="footer-title">Покупка с OUTLETCARS.BG — Варна</p>
+			<p class="footer-title">Покупка с OUTLETCARS.BG</p>
 			<ul>
 				{#each buyingLinks as link (link)}
 					<li><a href={resolve(link.href)}>{link.label}</a></li>
@@ -42,7 +42,7 @@
 			</ul>
 		</div>
 		<div>
-			<p class="footer-title">OUTLETCARS.BG — Варна онлайн</p>
+			<p class="footer-title">OUTLETCARS.BG онлайн</p>
 			<div class="app-buttons">
 				<a href={resolve('/contact')}>{daynightContact.primaryPhoneLabel}</a>
 				<a href={resolve('/contact')}>Viber</a>
@@ -54,8 +54,8 @@
 			<span>©2026 {daynightBrand.name}. Всички права запазени.</span>
 			<div>
 				<a href={resolve('/terms')}>Общи условия</a>
-				<a href={resolve('/terms')}>Поверителност</a>
-				<a href={resolve('/terms')}>Бисквитки</a>
+				<a href={resolve('/privacy')}>Поверителност</a>
+				<a href={resolve('/cookies')}>Бисквитки</a>
 			</div>
 		</div>
 	</div>

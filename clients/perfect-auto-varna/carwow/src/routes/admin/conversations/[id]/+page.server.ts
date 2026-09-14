@@ -70,7 +70,7 @@ export const actions: Actions = {
 			return notFoundFailure(errorValue);
 		}
 
-		throw redirect(303, `/variant-3/admin/conversations/${params.id}?sent=reply`);
+		throw redirect(303, `/admin/conversations/${params.id}?sent=reply`);
 	},
 	close: async ({ locals, params }) => {
 		const { db, dealerId, capabilities } = await requireAdminDealer(locals);
@@ -84,7 +84,7 @@ export const actions: Actions = {
 			return notFoundFailure(errorValue);
 		}
 
-		throw redirect(303, `/variant-3/admin/conversations/${params.id}?updated=closed`);
+		throw redirect(303, `/admin/conversations/${params.id}?updated=closed`);
 	},
 	reopen: async ({ locals, params }) => {
 		const { db, dealerId, capabilities } = await requireAdminDealer(locals);
@@ -98,7 +98,7 @@ export const actions: Actions = {
 			return notFoundFailure(errorValue);
 		}
 
-		throw redirect(303, `/variant-3/admin/conversations/${params.id}?updated=open`);
+		throw redirect(303, `/admin/conversations/${params.id}?updated=open`);
 	},
 	markRead: async ({ locals, params }) => {
 		const { db, dealerId, capabilities, profile } = await requireAdminDealer(locals);
@@ -112,6 +112,6 @@ export const actions: Actions = {
 			return notFoundFailure(errorValue);
 		}
 
-		throw redirect(303, `/variant-3/admin/conversations/${params.id}?updated=read`);
+		throw redirect(303, `/admin/conversations/${params.id}?updated=read`);
 	}
 };

@@ -281,11 +281,11 @@ function wireGlobalSearchForms(html: string) {
 		)
 		.replace(
 			/<input type="text" class="search-form__input" placeholder="Search\.\.\." autocomplete="off" id="searchInput">/g,
-			'<input type="text" class="search-form__input" name="q" placeholder="Search Day Night Auto inventory" autocomplete="off" id="searchInput">'
+			'<input type="text" class="search-form__input" name="q" placeholder="Search Promosale Varna inventory" autocomplete="off" id="searchInput">'
 		)
 		.replace(
 			/<input type="text" class="search-modal__input" placeholder="Search for anything" autocomplete="off" id="searchModalInput">/g,
-			'<input type="text" class="search-modal__input" name="q" placeholder="Search Day Night Auto inventory" autocomplete="off" id="searchModalInput">'
+			'<input type="text" class="search-modal__input" name="q" placeholder="Search Promosale Varna inventory" autocomplete="off" id="searchModalInput">'
 		);
 }
 
@@ -315,10 +315,10 @@ function stripBlockedTemplateAnchors(html: string) {
 
 function applyDayNightBranding(html: string) {
 	return html
-		.replaceAll('Aurexo | Car Dealer, Rental & Listing HTML Template', 'Day Night Auto')
-		.replaceAll('Aurexo Garage', 'Day Night Auto')
+		.replaceAll('Aurexo | Car Dealer, Rental & Listing HTML Template', 'Promosale Varna')
+		.replaceAll('Aurexo Garage', 'Promosale Varna')
 		.replaceAll('Aurexo', daynightBrand.name)
-		.replaceAll('Super Admin', 'Day Night Auto Admin')
+		.replaceAll('Super Admin', 'Promosale Varna Admin')
 		.replaceAll('themesflat@gmail.com', daynightContact.emailLabel)
 		.replaceAll('https://themeforest.net/user/themesflat', `https://${daynightBrand.domain}`)
 		.replace(
@@ -335,22 +335,22 @@ function applyDayNightBranding(html: string) {
 			'/assets/images/brand/google-play-dark.png',
 			'/assets/images/brand/google-play-dark.webp'
 		)
-		.replaceAll('alt="logo-white.png"', 'alt="Day Night Auto"')
-		.replaceAll('alt="logo"', 'alt="Day Night Auto"')
+		.replaceAll('alt="logo-white.png"', 'alt="Promosale Varna"')
+		.replaceAll('alt="logo"', 'alt="Promosale Varna"')
 		.replaceAll('href="/account/favorites"', 'href="/account"')
 		.replaceAll('href="./account/favorites"', 'href="./account"')
 		.replaceAll('aria-label="Wishlist"', 'aria-label="Любими"')
-		.replaceAll('Search Cars Near You – Buy Today!', 'Find Your Next Day Night Auto Vehicle')
-		.replaceAll('Search Cars Near You', 'Find Your Next Day Night Auto Vehicle')
-		.replaceAll('Get Your Dream Car', 'Import or buy with Day Night Auto')
-		.replaceAll('Listing Grid 3 Columns', 'Day Night Auto Inventory')
-		.replaceAll('Sale Agents', 'Day Night Auto Consultants')
+		.replaceAll('Search Cars Near You – Buy Today!', 'Find Your Next Promosale Varna Vehicle')
+		.replaceAll('Search Cars Near You', 'Find Your Next Promosale Varna Vehicle')
+		.replaceAll('Get Your Dream Car', 'Import or buy with Promosale Varna')
+		.replaceAll('Listing Grid 3 Columns', 'Promosale Varna Inventory')
+		.replaceAll('Sale Agents', 'Promosale Varna Consultants')
 		.replaceAll('Sale Agents List', 'Consultants')
 		.replaceAll('Sale Agents Detail', 'Consultant Profile')
 		.replaceAll('Dealer Listing', 'Consultants')
 		.replaceAll('Dealer Detail', 'Consultant Detail')
-		.replaceAll('Want to sell your car?', 'Want to sell your car with Day Night Auto?')
-		.replaceAll('Contact Us', 'Contact Day Night Auto')
+		.replaceAll('Want to sell your car?', 'Want to sell your car with Promosale Varna?')
+		.replaceAll('Contact Us', 'Contact Promosale Varna')
 		.replaceAll('Get Prequalified for Auto Financing', 'Services for import, documents, and sales')
 		.replaceAll('Financing', 'Services')
 		.replaceAll('Sevices Center', 'Services')
@@ -359,7 +359,7 @@ function applyDayNightBranding(html: string) {
 			/Monday–Friday from 8 AM to 8 PM\s*<br>\s*Saturday from 9 AM to 6 PM EST/g,
 			'Monday-Friday 9:00 - 18:00 <br>Weekend viewings by appointment'
 		)
-		.replaceAll('Buying a car', 'Buying With Day Night Auto')
+		.replaceAll('Buying a car', 'Buying With Promosale Varna')
 		.replaceAll('Selling a car', 'Sell Your Car')
 		.replaceAll('Investor Relations', 'Services')
 		.replaceAll('Careers', 'FAQ')
@@ -368,7 +368,7 @@ function applyDayNightBranding(html: string) {
 		.replaceAll('Certified Pre-Owned', 'Verified Listings')
 		.replaceAll('Car Payment Calculators', 'Import Calculator')
 		.replaceAll('Car Reviews & Ratings', 'Client Reviews')
-		.replaceAll('Download App', 'Day Night Auto Online')
+		.replaceAll('Download App', 'Promosale Varna Online')
 		.replaceAll('Clients Reviews', 'Client Reviews')
 		.replace(/My Listing(?!s)/g, 'My Listings')
 		.replaceAll('My Reviews', 'Reviews')
@@ -388,7 +388,7 @@ function applyDayNightBranding(html: string) {
 		.replaceAll('(555) 123-4567', daynightContact.primaryPhoneLabel)
 		.replace(
 			/<p class="text-secondary mb-4">Username:[\s\S]*?<\/p>\s*<p class="text-secondary">Password:[\s\S]*?<\/p>/g,
-			'<p class="text-secondary mb-4">Use your Day Night Auto account credentials.</p>'
+			'<p class="text-secondary mb-4">Use your Promosale Varna account credentials.</p>'
 		)
 		.replace(
 			/©2026[\s\S]*?All Rights Reserved\./g,
@@ -2888,7 +2888,7 @@ function injectLocalBehavior(
 
 		img.dataset.daynightFallbackApplied = 'true';
 		img.src = vehicleImageFallback;
-		if (!img.alt) img.alt = 'Day Night Auto vehicle';
+		if (!img.alt) img.alt = 'Promosale Varna vehicle';
 	};
 	const prepareVehicleImages = () => {
 		document.querySelectorAll('img').forEach((img) => {
@@ -3047,7 +3047,7 @@ function injectLocalBehavior(
 				updateGarageState();
 				syncGarageState();
 				const modalText = document.querySelector('#CompareModal .h4, #CompareModal .h5, #CompareModal p');
-				if (modalText) modalText.textContent = 'Added to Day Night Auto compare list';
+				if (modalText) modalText.textContent = 'Added to Promosale Varna compare list';
 				return;
 			}
 		}
@@ -3080,7 +3080,7 @@ function injectLocalBehavior(
 				}
 				setFormStatus(
 					form,
-					formAction.getAttribute('data-daynight-form-status') || 'Saved locally by Day Night Auto'
+					formAction.getAttribute('data-daynight-form-status') || 'Saved locally by Promosale Varna'
 				);
 			}
 		}
@@ -3123,13 +3123,13 @@ function injectLocalBehavior(
 			});
 			const session = result?.data?.session;
 			if (session) writeList(sessionKey, [session]);
-			setFormStatus(form, 'Customer account created locally for Day Night Auto');
+			setFormStatus(form, 'Customer account created locally for Promosale Varna');
 		} else if (form.matches('#ForgotPasswordModal form')) {
 			await postJson('/api/auth/recovery', {
 				...payload,
 				email: payload.email || payload['email-forgot-password']
 			});
-			setFormStatus(form, 'Password recovery request queued locally for Day Night Auto');
+			setFormStatus(form, 'Password recovery request queued locally for Promosale Varna');
 		} else if (form.matches('.daynight-profile-form')) {
 			await postJson('/api/account/profile', payload);
 			setFormStatus(form, 'Profile saved locally for ' + runtimeData.account.session.name);
@@ -3152,22 +3152,22 @@ function injectLocalBehavior(
 				setFormStatus(
 					form,
 					listingId
-						? 'Listing changes saved locally for Day Night Auto'
-						: 'Listing draft saved locally for Day Night Auto review'
+						? 'Listing changes saved locally for Promosale Varna'
+						: 'Listing draft saved locally for Promosale Varna review'
 				);
 			} else {
 				await postJson('/api/inventory/submissions', {
 					...payload,
 					source: 'customer-listing'
 				});
-				setFormStatus(form, 'Listing draft saved locally for Day Night Auto review');
+				setFormStatus(form, 'Listing draft saved locally for Promosale Varna review');
 			}
 		} else if (form.matches('.daynight-sell-form')) {
 			await postJson('/api/inventory/submissions', {
 				...payload,
 				source: 'sell-your-car'
 			});
-			setFormStatus(form, 'Заявката е подготвена. Day Night Auto ще се свърже с вас.');
+			setFormStatus(form, 'Заявката е подготвена. Promosale Varna ще се свърже с вас.');
 		} else if (form.matches('.daynight-service-form')) {
 			const result = await postJson('/api/inquiries', payload);
 			setFormStatus(form, result?.ok && result?.data?.inquiry?.id
@@ -3175,13 +3175,13 @@ function injectLocalBehavior(
 				: 'Заявката не е запазена. Провери данните и опитай отново.');
 		} else if (form.matches('.daynight-blog-comment-form')) {
 			await postJson('/api/messages', payload);
-			setFormStatus(form, 'Comment saved locally for Day Night Auto review');
+			setFormStatus(form, 'Comment saved locally for Promosale Varna review');
 		} else if (form.matches('.daynight-newsletter-form, .form-footer, .newsletter-form')) {
 			await postJson('/api/messages', {
 				...payload,
 				message: 'Newsletter signup'
 			});
-			setFormStatus(form, 'Newsletter signup saved locally for Day Night Auto');
+			setFormStatus(form, 'Newsletter signup saved locally for Promosale Varna');
 		} else {
 			const result = await postJson('/api/inquiries', payload);
 			setFormStatus(
@@ -3339,11 +3339,11 @@ export function auxeroRouteResponse(routePath: string, options: AuxeroRenderOpti
 		: resolveDayNightSession(routePath, options.searchParams);
 
 	if (!session) {
-		return new Response('Day Night Auto account session is required', { status: 401 });
+		return new Response('Promosale Varna account session is required', { status: 401 });
 	}
 
 	if (!canAccessDayNightRoute(session, routePath)) {
-		return new Response('Day Night Auto account role cannot access this route', { status: 403 });
+		return new Response('Promosale Varna account role cannot access this route', { status: 403 });
 	}
 
 	return auxeroResponse(templateFile, { ...options, routePath, session });

@@ -82,7 +82,7 @@
 </script>
 
 <svelte:head>
-	<title>OUTLETCARS.BG — Варна Admin - AI Copilot</title>
+	<title>OUTLETCARS.BG Admin - AI Copilot</title>
 </svelte:head>
 
 <AdminShell title="AI Copilot" activePath="/admin/copilot">
@@ -133,7 +133,7 @@
 						<Bot aria-hidden="true" />
 					</span>
 					<div class="min-w-0">
-						<Card.Title>OUTLETCARS.BG — Варна AI Copilot</Card.Title>
+						<Card.Title>OUTLETCARS.BG AI Copilot</Card.Title>
 						<Card.Description class="truncate">
 							{#if data.copilot.enabled}
 								Streaming through {data.copilot.model}

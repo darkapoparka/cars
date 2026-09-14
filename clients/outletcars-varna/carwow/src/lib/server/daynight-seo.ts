@@ -1,3 +1,4 @@
+import { daynightSite } from '$lib/data/daynight-site';
 import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 import { DEFAULT_DESCRIPTION, DAY_SITE_TITLE, getPublicStaticRoute } from './public-routes';
 
@@ -16,8 +17,8 @@ export function vehicleSeo(vehicle: DayNightVehicle): PageSeo {
 		.filter(Boolean);
 
 	return {
-		title: `${vehicle.title} | OUTLETCARS.BG — Варна`,
-		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Проверен автомобил от OUTLETCARS.BG — Варна с опция за финансиране.`
+		title: `${vehicle.title} | ${daynightSite.shortName}`,
+		description: `${vehicle.title}${facts.length ? ` - ${facts.join(', ')}` : ''}. Автомобил от ${daynightSite.shortName}. Условията се потвърждават при запитване.`
 	};
 }
 

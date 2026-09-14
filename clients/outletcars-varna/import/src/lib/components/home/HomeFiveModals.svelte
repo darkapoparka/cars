@@ -21,7 +21,7 @@
 
 	const closeIcon = '/assets/icons/close-modal.svg';
 	const searchPlaceholder = $derived(
-		header?.ui.searchPlaceholder ?? 'Search OUTLETCARS.BG — Варна inventory'
+		header?.ui.searchPlaceholder ?? 'Search OUTLETCARS.BG inventory'
 	);
 	const garage = getGarageContext();
 	const isEnglish = $derived(copy.compareTitle === 'Compare Top Rated Vehicles');

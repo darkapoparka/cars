@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import {
 		desktopOnlyImagePlaceholder,

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import CarFront from '@lucide/svelte/icons/car-front';
 	import FileText from '@lucide/svelte/icons/file-text';
 	import Gauge from '@lucide/svelte/icons/gauge';

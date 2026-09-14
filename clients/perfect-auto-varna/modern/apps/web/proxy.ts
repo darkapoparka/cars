@@ -1,9 +1,9 @@
+import { defaultLocale, isLocale } from "@repo/internationalization/config";
 import {
   getLocaleCookieOptions,
   internationalizationMiddleware,
   LOCALE_COOKIE_NAME,
 } from "@repo/internationalization/proxy";
-import { leadSite } from "@repo/marketplace/lead-site";
 import { SecurityRequestDeniedError, secure } from "@repo/security";
 import {
   createPublicNoseconeOptions,
@@ -13,6 +13,7 @@ import {
 import { createNEMO } from "@rescale/nemo";
 import { type NextProxy, type NextRequest, NextResponse } from "next/server";
 import { env } from "@/env";
+import { getPublicLocales } from "@/lib/public-locale-policy";
 import { shouldFailClosedOnProtectionError } from "@/lib/public-proxy-policy";
 import { getCanonicalTaxonomyPathname } from "@/lib/public-route-normalization";
 
@@ -95,28 +96,28 @@ const composedMiddleware = createNEMO(
   }
 );
 
-const createBulgarianLeadSiteRedirect = (
+const createLeadSiteLocaleRedirect = (
   request: NextRequest,
   headersResponse: Response
 ) => {
-  const isEnglishLeadSitePath =
-    leadSite.staticDemoMode &&
-    (request.nextUrl.pathname === "/en" ||
-      request.nextUrl.pathname.startsWith("/en/"));
+  const pathLocale = request.nextUrl.pathname.split("/")[1] ?? "";
+  const isDisabledLocale =
+    isLocale(pathLocale) && !getPublicLocales().includes(pathLocale);
 
   if (
-    !isEnglishLeadSitePath ||
+    !isDisabledLocale ||
     (request.method !== "GET" && request.method !== "HEAD")
   ) {
     return;
   }
 
-  const bulgarianUrl = request.nextUrl.clone();
-  bulgarianUrl.pathname = request.nextUrl.pathname.slice(3) || "/";
-  const redirectResponse = NextResponse.redirect(bulgarianUrl, 308);
+  const defaultLocaleUrl = request.nextUrl.clone();
+  defaultLocaleUrl.pathname =
+    request.nextUrl.pathname.slice(pathLocale.length + 1) || "/";
+  const redirectResponse = NextResponse.redirect(defaultLocaleUrl, 308);
   redirectResponse.cookies.set(
     LOCALE_COOKIE_NAME,
-    "bg",
+    defaultLocale,
     getLocaleCookieOptions()
   );
 
@@ -131,31 +132,13 @@ const createBulgarianLeadSiteRedirect = (
 
 const publicProxy: NextProxy = async (request, event) => {
   const headersResponse = await securityHeaders();
-  // Preserve the service mount when resolving this static dealer's locale.
-  if (leadSite.staticDemoMode) {
-    const pathname = request.nextUrl.pathname.replace(/^\/variant-2(?=\/|$)/, "") || "/";
-    if (request.headers.get("x-dealer-locale-rewrite") === "1" || /^\/bg(?:\/|$)/.test(pathname)) {
-      return headersResponse;
-    }
-    const localePath = /^\/(bg|en)(\/|$)/.test(pathname)
-      ? pathname.replace(/^\/en(?=\/|$)/, "/bg")
-      : `/bg${pathname === "/" ? "" : pathname}`;
-    const url = new URL(`/variant-2${localePath}${request.nextUrl.search}`, request.url);
-    const requestHeaders = new Headers(request.headers);
-    requestHeaders.set("x-dealer-locale-rewrite", "1");
-    const response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
-    for (const [key, value] of headersResponse.headers) {
-      if (key !== "x-middleware-next") response.headers.set(key, value);
-    }
-    return response;
-  }
-  const bulgarianLeadSiteRedirect = createBulgarianLeadSiteRedirect(
+  const leadSiteLocaleRedirect = createLeadSiteLocaleRedirect(
     request,
     headersResponse
   );
 
-  if (bulgarianLeadSiteRedirect) {
-    return bulgarianLeadSiteRedirect;
+  if (leadSiteLocaleRedirect) {
+    return leadSiteLocaleRedirect;
   }
 
   const canonicalTaxonomyPathname = getCanonicalTaxonomyPathname(

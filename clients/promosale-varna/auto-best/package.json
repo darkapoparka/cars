@@ -1,5 +1,5 @@
 {
-  "name": "promosale-varna-auto-best",
+  "name": "day-and-night-autodeal",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -8,15 +8,17 @@
     "node": "^22.12.0"
   },
   "scripts": {
-    "dev": "vite --host 127.0.0.1 --port 6761 --strictPort",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --threshold error",
     "check:architecture": "node scripts/check-architecture.mjs",
     "check:assets": "node scripts/check-assets.mjs",
-    "validate": "npm run check:architecture && npm run check:assets && npm run check:domain && npm run check && npm run build",
+    "check:typography": "node scripts/check-typography.mjs",
+    "validate": "npm run check:architecture && npm run check:typography && npm run check:assets && npm run check:domain && npm run check && npm run build",
     "quality": "npm run validate && npm run smoke",
     "smoke": "node scripts/sveltekit-smoke.mjs && node scripts/enquiry-smoke.mjs && node scripts/mobile-filter-smoke.mjs && node scripts/desktop-discovery-smoke.mjs",
+    "smoke:typography": "node scripts/typography-smoke.mjs",
     "check:domain": "node scripts/check-domain.mjs"
   },
   "dependencies": {

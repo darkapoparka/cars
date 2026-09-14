@@ -10,7 +10,7 @@
       <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
         <h2 id="editorial-title" class="dn-home-section-title">
           <span class="dn-heading-desktop">Полезно при избор на автомобил</span>
-          <span class="dn-heading-mobile">Полезно</span>
+          <span class="dn-heading-mobile">Полезно при избора</span>
         </h2>
         
         <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>Вижте всички статии</a>
@@ -99,10 +99,10 @@
   .dn-editorial__heading h2 {
     margin: 0 0 14px;
     color: #fff;
-    font-size: 42px;
-    font-weight: 650;
-    line-height: 1.15;
-    letter-spacing: -0.03em;
+    font-size: var(--dn-text-section);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
     text-align: center;
   }
 
@@ -117,9 +117,9 @@
     border-radius: var(--dn-radius-button);
     background: #c40101;
     color: #fff;
-    font-size: var(--dn-text-lead);
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: var(--dn-cta-size);
+    font-weight: var(--dn-cta-weight);
+    line-height: var(--dn-leading-control);
     transition: background-color 0.3s ease;
   }
 
@@ -197,8 +197,8 @@
     background: #c40101;
     color: #fff;
     font-size: var(--dn-text-meta);
-    font-weight: 650;
-    line-height: 18px;
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-editorial-item__content {
@@ -217,17 +217,17 @@
     position: relative;
     color: #626a75;
     font-size: var(--dn-text-meta);
-    font-weight: 500;
-    line-height: 18px;
+    font-weight: var(--dn-weight-medium);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-editorial-item h3 {
     margin: 0 0 9px;
     color: #24272c;
-    font-size: 20px;
-    font-weight: 650;
-    line-height: 1.27;
-    letter-spacing: -0.02em;
+    font-size: var(--dn-text-card);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
     transition: color 180ms ease-out;
   }
 
@@ -242,8 +242,8 @@
     overflow: hidden;
     color: #66707d;
     font-size: var(--dn-text-body);
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: var(--dn-weight-regular);
+    line-height: var(--dn-leading-body);
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -298,14 +298,14 @@
 
   @media (max-width: 767px) {
     .dn-editorial {
-      padding: 24px 0 12px;
+      padding: 24px 0 18px;
       background: var(--dn-mobile-canvas);
     }
 
     .dn-editorial__banner {
       min-height: 0;
       margin: 0;
-      padding: 0 12px;
+      padding: 0;
       overflow: visible;
       border-radius: 0;
       background: none;
@@ -327,9 +327,9 @@
     .dn-editorial__heading h2 {
       margin: 0;
       color: #171a20;
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.15;
+      font-size: var(--dn-text-subheading);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
       text-align: left;
     }
 
@@ -343,24 +343,17 @@
 
     
 
-    .dn-editorial__cta {
-      min-height: 44px;
-      padding: 0;
-      background: transparent;
-      color: #4f5661;
-      font-size: 14px;
-      font-weight: 650;
-    }
+    .dn-editorial__cta { display: none; }
 
     .dn-editorial__layout {
       display: grid;
-      grid-auto-columns: min(278px, calc(100vw - 78px));
+      grid-auto-columns: var(--dn-home-carousel-card-width);
       grid-auto-flow: column;
       grid-template-columns: none;
-      gap: 10px;
+      gap: var(--dn-home-carousel-gap);
       overflow-x: auto;
-      padding: 0 12px 4px;
-      scroll-padding-left: 12px;
+      padding: 0 0 4px;
+      scroll-padding-left: 0;
       scroll-snap-type: x proximity;
       scrollbar-width: none;
     }
@@ -397,12 +390,12 @@
 
     .dn-editorial-item h3 {
       margin-bottom: 7px;
-      font-size: 17px;
+      font-size: var(--dn-text-lead);
     }
 
     .dn-editorial-item__summary {
-      font-size: 14px;
-      line-height: 1.4;
+      font-size: var(--dn-text-meta);
+      line-height: var(--dn-leading-meta);
     }
   }
   @media (min-width: 992px) {
@@ -438,7 +431,7 @@
     
 
     .dn-editorial__heading h2 {
-      font-size: 32px;
+      font-size: var(--dn-text-section-compact);
       color: #171a20;
       text-align: left;
       margin: 0;
@@ -453,7 +446,7 @@
       padding-inline: 20px;
       background: #fff;
       color: #24272c;
-      font-size: 16px;
+      font-size: var(--dn-cta-size);
     }
 
     .dn-editorial__cta:hover,
@@ -476,6 +469,6 @@
 
 
   @media (max-width: 767px) {
-    .dn-editorial__cta { display: none; }
+    .dn-editorial__cta, .dn-editorial-item__badge { display: none; }
   }
 </style>
