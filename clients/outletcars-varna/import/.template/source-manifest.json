@@ -7420,7 +7420,7 @@
   ],
   "links": [],
   "bytes": 185187793,
-  "sourceCommit": "5ee3f8f76e79e9cca76b025528ee27415b1132fb",
+  "sourceCommit": "cc82770c4cb62175b58248efb2662b7d61de114c",
   "sourceTree": "e907f2580eb55024f05d2f2d42b8e5360c56be28",
   "method": "Approved Cars snapshot plus explicit dealer data/assets overlay",
   "approvedTemplate": {
@@ -7481,6 +7481,7 @@
       "src/lib/components/contact/ContactMobilePage.svelte",
       "src/lib/components/contact/ContactTemplatePage.svelte",
       "src/lib/components/detail/AuxeroVehicleDetail.svelte",
+      "src/lib/components/detail/AuxeroVehicleDetailStaticContent.svelte",
       "src/lib/components/detail/VehicleDetailTemplatePage.svelte",
       "src/lib/components/faqs/FaqsContent.svelte",
       "src/lib/components/faqs/FaqsTemplatePage.svelte",
@@ -7576,6 +7577,7 @@
       "src/routes/inventory/[slug]/+page.server.ts",
       "src/routes/offer/+page.svelte",
       "src/routes/reviews/+page.svelte",
+      "src/lib/components/home/HomeFiveHero.svelte (dealer contact binding)",
       "dealer/apple-touch-icon.png",
       "dealer/favicon-v2.ico",
       "dealer/favicon.ico",
@@ -7627,8 +7629,7 @@
       "dealer/oem/porsche.webp",
       "dealer/oem/toyota.webp",
       "dealer/oem/vw.svg",
-      "dealer/showroom.webp",
-      "src/lib/components/home/HomeFiveHero.svelte (dealer contact binding)"
+      "dealer/showroom.webp"
     ]
   }
 }

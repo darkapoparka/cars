@@ -61,10 +61,10 @@
     "version": "1",
     "entry": "/variant-2/"
   },
-  "workflowCommit": "5ee3f8f76e79e9cca76b025528ee27415b1132fb",
+  "workflowCommit": "cc82770c4cb62175b58248efb2662b7d61de114c",
   "refresh": {
-    "previousTemplateVersion": "2026.09.06-baseline",
-    "refreshedAt": "2026-09-14T20:53:51.442Z",
+    "previousTemplateVersion": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+    "refreshedAt": "2026-09-14T21:22:24.327Z",
     "approvedTemplateCommit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
     "mode": "fresh-template-plus-dealer-overlay"
   }

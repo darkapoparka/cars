@@ -1,1 +1,0 @@
-import fs from 'node:fs';const p='src/lib/data/listing.ts';fs.writeFileSync(p,fs.readFileSync(p,'utf8').replace("fuels: ['', 'Дизел', 'Бензин', 'Хибрид']","fuels: ['', ...new Set(featuredVehicles.map((vehicle) => vehicle.fuel))]"));

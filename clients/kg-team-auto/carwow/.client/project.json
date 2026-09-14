@@ -35,10 +35,10 @@
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "5ee3f8f76e79e9cca76b025528ee27415b1132fb",
+  "workflowCommit": "cc82770c4cb62175b58248efb2662b7d61de114c",
   "refresh": {
-    "previousTemplateVersion": "2026.09.08-repair-1",
-    "refreshedAt": "2026-09-14T20:55:04.200Z",
+    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "refreshedAt": "2026-09-14T21:23:24.630Z",
     "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
     "mode": "fresh-template-plus-dealer-overlay"
   }
