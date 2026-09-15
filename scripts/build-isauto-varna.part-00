@@ -1,0 +1,100 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+
+const ROOT = process.cwd();
+const SLUG = 'isauto-varna';
+const CLIENT = path.join(ROOT, 'clients', SLUG);
+const TODAY = '2026-09-16';
+const SITE = 'https://www.isauto.net/';
+const CONTACTS = 'https://www.isauto.net/contacts';
+const MOBILE = 'https://isautovarna.mobile.bg/';
+const HERO_SOURCE = 'https://www.isauto.net/assets/home_top_image-6c0593ce5c4b33195567916b1cfd688ffce5c161da970f43e515f452d71c66d3.png';
+const ADDRESS = 'Бизнес парк Варна, сграда B6';
+const PHONE_DISPLAY = '0899 266 666';
+const PHONE_E164 = '+359899266666';
+const EMAIL = 'varna@isauto.net';
+const USER_AGENT = 'Mozilla/5.0 (compatible; CarsLeadBuilder/1.0; +https://github.com/darkapoparka/cars)';
+
+const listings = [
+  {
+    id: 'is-1001', numericId: 1,
+    slug: 'audi-r8-performance-v10-2021',
+    title: 'Audi R8 Performance V10', shortTitle: 'Audi R8', make: 'Audi', model: 'R8', trim: 'Performance V10 · B&O · Ceramic · Carbon',
+    year: 2021, mileageKm: 75000, fuelBg: 'Бензин', fuelLong: 'Бензинов', fuelCode: 'gasoline', transmissionBg: 'Автоматик', transmissionLong: 'Автоматична', transmissionCode: 'automatic',
+    category: 'Купе', body: 'Coupe', bodyBg: 'Купе', bodyCode: 'coupe', priceEur: 148224, priceBgn: '289 900.95 лв.', color: '—', power: '—',
+    equipment: [], features: ['Bang & Olufsen', 'Керамични спирачки', 'Carbon пакет'],
+    sourceUrl: 'https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10'
+  },
+  {
+    id: 'is-1002', numericId: 2,
+    slug: 'audi-q7-50-tdi-2022',
+    title: 'Audi Q7 50 TDI', shortTitle: 'Audi Q7', make: 'Audi', model: 'Q7', trim: '50 TDI · Virtual · 4-zone · Camera 360',
+    year: 2022, mileageKm: 57500, fuelBg: 'Дизел', fuelLong: 'Дизелов', fuelCode: 'diesel', transmissionBg: 'Автоматик', transmissionLong: 'Автоматична', transmissionCode: 'automatic',
+    category: 'SUV', body: 'SUV', bodyBg: 'Джип', bodyCode: 'suv', priceEur: 67439, priceBgn: '131 899.22 лв.', color: '—', power: '—',
+    equipment: ['4x4', '360° камера', 'Подгряване на седалки', 'Навигация', 'Парктроник'], features: ['Virtual cockpit', 'Подгряване на седалки', '4-зонов климатроник', '360° камера'],
+    sourceUrl: 'https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9'
+  },
+  {
+    id: 'is-1003', numericId: 3,
+    slug: 'bmw-m5-xdrive-2018',
+    title: 'BMW M5', shortTitle: 'BMW M5', make: 'BMW', model: 'M5', trim: 'xDrive · Ceramic · Bowers & Wilkins · Adaptive LED',
+    year: 2018, mileageKm: 61000, fuelBg: 'Бензин', fuelLong: 'Бензинов', fuelCode: 'gasoline', transmissionBg: 'Автоматик', transmissionLong: 'Автоматична', transmissionCode: 'automatic',
+    category: 'Седан', body: 'Sedan', bodyBg: 'Лимузина', bodyCode: 'sedan', priceEur: 71530, priceBgn: '139 900.52 лв.', color: '—', power: '—',
+    equipment: ['4x4', 'Навигация', 'Парктроник', 'Безключов достъп'], features: ['xDrive', 'Керамични спирачки', 'Bowers & Wilkins', 'Adaptive LED'],
+    sourceUrl: 'https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8'
+  },
+  {
+    id: 'is-1004', numericId: 4,
+    slug: 'bmw-x5-xdrive-2014',
+    title: 'BMW X5 xDrive', shortTitle: 'BMW X5', make: 'BMW', model: 'X5', trim: 'xDrive · Sport · Panoramic roof',
+    year: 2014, mileageKm: 196000, fuelBg: 'Дизел', fuelLong: 'Дизелов', fuelCode: 'diesel', transmissionBg: 'Автоматик', transmissionLong: 'Автоматична', transmissionCode: 'automatic',
+    category: 'SUV', body: 'SUV', bodyBg: 'Джип', bodyCode: 'suv', priceEur: 24491, priceBgn: '47 900.23 лв.', color: '—', power: '—',
+    equipment: ['4x4', 'Панорамен покрив', 'Подгряване на седалки'], features: ['xDrive', 'Sport пакет', 'Подгряване на седалки', 'Панорамен покрив'],
+    sourceUrl: 'https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7'
+  },
+  {
+    id: 'is-1005', numericId: 5,
+    slug: 'bmw-750-m-performance-2019',
+    title: 'BMW 750 M Performance', shortTitle: 'BMW 750', make: 'BMW', model: '7 Series', trim: '750 · M Performance · Laser · Harman Kardon',
+    year: 2019, mileageKm: 167000, fuelBg: 'Дизел', fuelLong: 'Дизелов', fuelCode: 'diesel', transmissionBg: 'Автоматик', transmissionLong: 'Автоматична', transmissionCode: 'automatic',
+    category: 'Седан', body: 'Sedan', bodyBg: 'Лимузина', bodyCode: 'sedan', priceEur: 61304, priceBgn: '119 900.20 лв.', color: '—', power: '—',
+    equipment: ['Навигация', 'Парктроник', 'Безключов достъп'], features: ['M Performance', 'Laser светлини', 'Alcantara', 'Virtual cockpit', 'Harman Kardon'],
+    sourceUrl: 'https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3'
+  },
+  {
+    id: 'is-1006', numericId: 6,
+    slug: 'audi-a5-sportback-20-tdi-2018',
+    title: 'Audi A5 Sportback 2.0 TDI', shortTitle: 'Audi A5 Sportback', make: 'Audi', model: 'A5', trim: 'Sportback · S line · Virtual · Ambient',
+    year: 2018, mileageKm: 175000, fuelBg: 'Дизел', fuelLong: 'Дизелов', fuelCode: 'diesel', transmissionBg: 'Автоматик', transmissionLong: 'Автоматична', transmissionCode: 'automatic',
+    category: 'Спортбек', body: 'Sportback', bodyBg: 'Купе', bodyCode: 'coupe', priceEur: 19900, priceBgn: '38 921.02 лв.', color: '—', power: '—',
+    equipment: ['Подгряване на седалки', 'Навигация', 'Парктроник'], features: ['S line', 'Ambient осветление', 'Virtual cockpit', 'Подгряване на седалки', 'Парктроник', 'F1 пера'],
+    sourceUrl: 'https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745'
+  }
+];
+
+const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
+const ensureDir = (target) => fs.mkdir(target, { recursive: true });
+async function writeText(relative, content) {
+  const target = path.join(ROOT, relative);
+  await ensureDir(path.dirname(target));
+  await fs.writeFile(target, content.endsWith('\n') ? content : `${content}\n`, 'utf8');
+}
+async function readText(relative) { return fs.readFile(path.join(ROOT, relative), 'utf8'); }
+async function writeJson(relative, value) { await writeText(relative, json(value)); }
+async function exists(target) { return fs.access(target).then(() => true, () => false); }
+
+if (!(await exists(CLIENT))) throw new Error(`Missing ${CLIENT}; run scripts/new-client.mjs first.`);
+const sharpRoot = process.env.IS_AUTO_SHARP_ROOT;
+if (!sharpRoot) throw new Error('IS_AUTO_SHARP_ROOT is required.');
+const sharp = (await import(pathToFileURL(path.join(sharpRoot, 'node_modules/sharp/lib/index.js')).href)).default;
+
+async function fetchResponse(url) {
+  const response = await fetch(url, {
+    redirect: 'follow',
+    headers: { 'user-agent': USER_AGENT, accept: '*/*', 'accept-language': 'bg,en;q=0.8' }
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
+  return response;
+}
+async function fetchHtml(url) { return (await fetchResponse(url)).text(); }
