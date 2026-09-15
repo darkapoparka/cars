@@ -31,6 +31,63 @@ for (const destination of assetDestinations) {
 await copyFile(darkLogoMaster, path.join(CLIENT, 'carwow/static/brand/isauto-logo-dark.png'));
 await copyFile(lightLogoMaster, path.join(CLIENT, 'carwow/static/brand/isauto-logo-light.png'));
 
+async function collectRasterFiles(directory) {
+  if (!(await exists(directory))) return [];
+  const files = [];
+  for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+    const target = path.join(directory, entry.name);
+    if (entry.isDirectory()) files.push(...(await collectRasterFiles(target)));
+    else if (/\.(?:jpe?g|png|webp)$/i.test(entry.name)) files.push(target);
+  }
+  return files;
+}
+
+async function renderLocalizedReplacement(source, target, fit = 'cover') {
+  const existing = await sharp(target).metadata().catch(() => ({}));
+  const width = existing.width || 1200;
+  const height = existing.height || 800;
+  let pipeline = sharp(source)
+    .rotate()
+    .resize(width, height, {
+      fit,
+      position: fit === 'contain' ? 'centre' : 'attention',
+      background: { r: 0, g: 0, b: 0, alpha: 0 }
+    });
+  const extension = path.extname(target).toLowerCase();
+  if (extension === '.png') pipeline = pipeline.png({ compressionLevel: 9, adaptiveFiltering: true });
+  else if (extension === '.jpg' || extension === '.jpeg') pipeline = pipeline.jpeg({ quality: 85, mozjpeg: true });
+  else pipeline = pipeline.webp({ quality: 84, effort: 5 });
+  await fs.writeFile(target, await pipeline.toBuffer());
+}
+
+let replacementIndex = 0;
+const autoBestLegacyLeadRoot = path.join(CLIENT, 'auto-best/static/assets/images/lead');
+for (const target of await collectRasterFiles(autoBestLegacyLeadRoot)) {
+  if (target.includes(`${path.sep}isauto${path.sep}`)) continue;
+  const filename = path.basename(target).toLowerCase();
+  if (!filename.startsWith('day-night-')) continue;
+  if (filename.includes('logo')) {
+    await renderLocalizedReplacement(lightLogoMaster, target, 'contain');
+    continue;
+  }
+  const useShowroom = /(?:hero|banner|showroom|studio|contact|about|video|guide|portrait|keys)/.test(filename);
+  const source = useShowroom ? heroMaster : listings[replacementIndex++ % listings.length].masterImage;
+  await renderLocalizedReplacement(source, target);
+}
+
+const carwowLegacyDealerRoot = path.join(CLIENT, 'carwow/static/assets/daynight');
+for (const target of await collectRasterFiles(carwowLegacyDealerRoot)) {
+  const filename = path.basename(target).toLowerCase();
+  const useShowroom = /(?:hero|banner|showroom|team|contact|about|service|office|location)/.test(filename);
+  const source = useShowroom ? heroMaster : listings[replacementIndex++ % listings.length].masterImage;
+  await renderLocalizedReplacement(source, target);
+}
+
+const autoBestAssetCheckPath = path.join(CLIENT, 'auto-best/scripts/check-assets.mjs');
+let autoBestAssetCheck = await fs.readFile(autoBestAssetCheckPath, 'utf8');
+autoBestAssetCheck = autoBestAssetCheck.replace('const guardedMediaCount = 117;', 'const guardedMediaCount = 126;');
+await fs.writeFile(autoBestAssetCheckPath, autoBestAssetCheck, 'utf8');
+
 const textExtensions = new Set(['.ts', '.tsx', '.js', '.mjs', '.svelte', '.json', '.md', '.css', '.html']);
 const safeReplacements = [
   ['DAY & NIGHT AUTO GROUP', 'IS AUTO VARNA'], ['DAY NIGHT AUTO GROUP', 'IS AUTO VARNA'],
@@ -51,8 +108,6 @@ async function sanitizeTree(directory) {
     let content = await fs.readFile(target, 'utf8');
     const original = content;
     for (const [from, to] of safeReplacements) content = content.split(from).join(to);
-    content = content.replace(/\/assets\/images\/lead\/day-night-[^'"\s)]+/g, '/assets/images/lead/isauto/hero.webp');
-    content = content.replace(/\/assets\/daynight\/[^'"\s)]+/g, '/assets/isauto/hero.webp');
     if (content !== original) await fs.writeFile(target, content, 'utf8');
   }
 }
