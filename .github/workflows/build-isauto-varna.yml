@@ -61,12 +61,12 @@ jobs:
           if [ ! -d clients/isauto-varna ]; then
             node scripts/new-client.mjs \
               --client isauto-varna \
-              --repository darkapoparka/cars \
+              --repository darkapoparka/cars-isautovarna \
               --preset standard \
               --dry-run
             node scripts/new-client.mjs \
               --client isauto-varna \
-              --repository darkapoparka/cars \
+              --repository darkapoparka/cars-isautovarna \
               --preset standard
           fi
 
