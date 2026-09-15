@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител 110, кв. Победа",
   appointment: "За работно време и оглед се обадете предварително.",
-  logo: "/assets/perfect-auto/cover.png",
-  logoOnDark: "/assets/perfect-auto/cover.png"
+  logo: "/assets/perfect-auto/perfekt-auto-logo.webp",
+  logoOnDark: "/assets/perfect-auto/perfekt-auto-logo-light.webp"
 } as const satisfies BrandConfig;
