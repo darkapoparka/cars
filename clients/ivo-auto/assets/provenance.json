@@ -9,9 +9,16 @@
     "method": "image-generation-assisted professional proposal",
     "official": false,
     "sha256": {
-      "main": "ef8aa664de1cf421c8888ea46ba20f6396b5ebb1e3e5c2e15df89769eda8b823",
-      "darkBackground": "7ac55c0381e48bb157052a15445db8f39a4eae05d0dfcde7a7746f99c8453704"
-    }
+      "mainPng": "7b7dadf1c779f68b84e8d01de313a52709b32715826811571300baf9c46e840d",
+      "darkBackgroundPng": "48c1d789ba30fc5a59a697976384f74d25d78056978243b0655da41ad953c60c",
+      "main": "e7dd0d595525f68b288822a880877aa54937cfc587e7cbb5bd5017688bcda3d8",
+      "darkBackground": "d63b81a67bc64a32160173fd991166cbeec5c4a455049e8e1c54c7ed4ac0e7c0"
+    },
+    "sourcePngFile": "ivo-auto-logo.png",
+    "darkBackgroundSourcePngFile": "ivo-auto-logo-light.png",
+    "pipeline": "image-generation-assisted transparent PNG master -> Sharp WebP (quality 92, alpha quality 100)",
+    "sourceArchiveNote": "The accepted transparent Image Gen artwork existed only as WebP in the previous pass; transparent PNG masters were restored from those accepted pixels before final WebP encoding.",
+    "svgDealerLogoUsed": false
   },
   "stock": [
     {

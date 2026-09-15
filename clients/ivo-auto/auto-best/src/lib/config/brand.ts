@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. „Цар Освободител“ 256",
   appointment: "Свържете се за работно време и оглед.",
-  logo: "/assets/ivo-auto/wordmark.svg",
-  logoOnDark: "/assets/ivo-auto/wordmark-light.svg"
+  logo: "/assets/ivo-auto/ivo-auto-logo.webp",
+  logoOnDark: "/assets/ivo-auto/ivo-auto-logo-light.webp"
 } as const satisfies BrandConfig;

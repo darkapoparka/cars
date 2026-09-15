@@ -59,7 +59,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -127,7 +127,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -195,7 +195,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -262,7 +262,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -324,7 +324,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -386,7 +386,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -448,7 +448,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -516,7 +516,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -584,7 +584,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -646,7 +646,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -714,7 +714,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -782,7 +782,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -850,7 +850,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -912,7 +912,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/ivo-auto/wordmark.svg"
+      "logoUrl": "/assets/ivo-auto/ivo-auto-logo.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
