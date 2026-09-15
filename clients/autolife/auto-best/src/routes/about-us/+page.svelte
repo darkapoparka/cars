@@ -1,5 +1,6 @@
 <script lang="ts">
   import './about.css';
+  import { template } from '$config/template';
   import AboutHero from '$components/company/AboutHero.svelte';
   import AboutProcess from '$components/company/AboutProcess.svelte';
   import AboutTeam from '$components/company/AboutTeam.svelte';
@@ -10,20 +11,22 @@
 
 <svelte:head>
   <title>За нас — {brand.name}</title>
-  <meta name="description" content={`${brand.name} — публикувани автомобили и контакт за оглед в ${brand.city}.`} />
+  <meta name="description" content={`${brand.name} — премиум автомобили, внос по заявка, собствен лизинг, бартер и огледи с предварителна уговорка в ${brand.city}.`} />
 </svelte:head>
 
 <AboutHero />
 <AboutProcess />
-<AboutTeam />
-<AboutPartners />
+{#if template.sections.demoTeam}<AboutTeam />{/if}
+{#if template.sections.demoPartners}<AboutPartners />{/if}
 
 <section class="dn-about-showroom dn-section" aria-labelledby="about-showroom-title">
   <div class="container">
-    <div class="dn-about-showroom__heading">
-      <h2 id="about-showroom-title">Шоурум в {brand.city}</h2>
-      <p>{brand.address}. {brand.appointment}.</p>
+    <div class="dn-about-showroom__card">
+      <div class="dn-about-showroom__heading">
+        <h2 id="about-showroom-title">Посетете шоурума</h2>
+        <p>{brand.address} · {brand.appointment}</p>
+      </div>
+      <ShowroomMap />
     </div>
-    <ShowroomMap />
   </div>
 </section>

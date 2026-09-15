@@ -14,7 +14,7 @@ describe("marketplace filter policy", () => {
 
   it("keeps quick filter activation and labels derived from the same filter state", () => {
     const filters = parseMarketplaceSearchParams({
-      location: "Sofia",
+      location: "Варна",
       priceMax: 70_000,
       priceMin: 50_000,
       sort: "newest",
@@ -35,7 +35,7 @@ describe("marketplace filter policy", () => {
     const filters = parseMarketplaceSearchParams({
       make: "BMW",
       model: "X5",
-      location: "Sofia",
+      location: "Варна",
     });
 
     expect(

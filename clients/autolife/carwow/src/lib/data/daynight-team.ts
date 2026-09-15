@@ -1,3 +1,5 @@
+export const daynightTeamDisclosure = "Общ контакт на автокъщата, а не именуван или независимо потвърден профил на служител." as const;
+
 export type DayNightTeamMember = {
 	slug: string;
 	name: string;
@@ -9,7 +11,18 @@ export type DayNightTeamMember = {
 	detail: string;
 };
 
-export const daynightTeam: DayNightTeamMember[] = [];
+export const daynightTeam: DayNightTeamMember[] = [
+	{
+		slug: 'dealer-contact',
+		name: "Аутолайф",
+		role: "Запитвания за наличност и оглед",
+		phone: "0895 766 736",
+		email: "",
+		image: "/assets/autolife/wordmark.svg",
+		bio: "Свържете се с Аутолайф, за да потвърдите актуална наличност, данни за автомобила и възможност за оглед.",
+		detail: "Представителна извадка от 16 публикувани обяви; наличност и цена се потвърждават по телефона. Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
+	}
+];
 
 export const getDayNightTeamMemberBySlug = (slug: string) =>
 	daynightTeam.find((member) => member.slug === slug);

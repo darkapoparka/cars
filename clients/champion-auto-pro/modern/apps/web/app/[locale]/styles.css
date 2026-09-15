@@ -124,47 +124,6 @@ html {
   [data-slot="drawer-content"] [data-slot="command-list"] {
     padding-top: 0.125rem;
   }
-
-  /*
-   * Full-screen mobile filter overlays keep the header available, but the
-   * primary action now follows the content. This avoids a permanent CTA bar
-   * consuming usable viewport space and keeps short sheets feeling lighter.
-   */
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    ) {
-    display: block;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-    scroll-padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-header"] {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-header"]
-    + div {
-    min-height: auto;
-    overflow: visible;
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-footer"] {
-    padding-top: 0.75rem;
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-    margin-top: 0;
-  }
 }
 
 .shiki {
@@ -203,9 +162,3 @@ html {
   content: attr(title);
   @apply inline-block text-muted-foreground text-right mb-6 text-sm;
 }
-
-/* Original dealer logo on light surfaces. */
-img[src*="champion%2Flogo.png"],img[src*="champion/logo.png"],img[src="/lead-logo.png"] { filter: invert(1) grayscale(1); mix-blend-mode: multiply; object-fit: contain; }
-
-/* Keep the original light logo legible on the dark desktop header. */
-.dealer-desktop-brand img { filter: none; mix-blend-mode: normal; }

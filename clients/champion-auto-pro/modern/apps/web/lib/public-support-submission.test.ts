@@ -88,7 +88,7 @@ describe("public support submission", () => {
         mileage: "62000",
         model: "X5 xDrive40d",
         origin: "DE",
-        phone: "0885072555",
+        phone: "359885072555",
         sourceUrl: "https://example.com/bmw-x5",
         topic: "importer",
         year: "2022",
@@ -104,7 +104,7 @@ describe("public support submission", () => {
         make: "BMW",
         model: "X5 xDrive40d",
         origin: "DE",
-        phone: "0885072555",
+        phone: "359885072555",
         sourceUrl: "https://example.com/bmw-x5",
       }),
       expect.anything()

@@ -13,6 +13,7 @@ import {
   Truck,
   X,
 } from "lucide-react";
+import type { MouseEvent } from "react";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getMobileQuickPillClassName } from "../lib/mobile-quick-pill";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
@@ -22,6 +23,16 @@ import {
   mobileDealerContentClassName,
 } from "./mobile-dealer-chrome";
 import { MobilePillRail } from "./mobile-pill-rail";
+
+// Safari does not focus pointer-activated buttons. Establish the actual
+// trigger before the overlay coordinator captures focus for dismissal.
+const openFromButton = (
+  event: MouseEvent<HTMLButtonElement>,
+  open: () => void
+) => {
+  event.currentTarget.focus({ preventScroll: true });
+  open();
+};
 
 const categoryIcons = {
   car: CarFront,
@@ -76,20 +87,26 @@ interface MobileDealerQuickFiltersProps {
 }
 
 const getMobileSearchText = (
-  discoverySummary: string,
-  filterCount: number,
   isBg: boolean,
-  totalListings: number
+  totalListings: number,
+  category: VehicleCategory
 ) => {
-  if (filterCount > 0) {
-    return discoverySummary;
-  }
-
+  const nouns = {
+    car: { bg: ["автомобил", "автомобила"], en: ["car", "cars"] },
+    lease: { bg: ["автомобил", "автомобила"], en: ["car", "cars"] },
+    motorbike: {
+      bg: ["мотоциклет", "мотоциклета"],
+      en: ["motorcycle", "motorcycles"],
+    },
+    truck: { bg: ["камион", "камиона"], en: ["truck", "trucks"] },
+    van: { bg: ["бус", "буса"], en: ["van", "vans"] },
+  };
+  const noun = nouns[category][isBg ? "bg" : "en"][totalListings === 1 ? 0 : 1];
   if (isBg) {
-    return `Търси ${totalListings} ${totalListings === 1 ? "автомобил" : "автомобила"}`;
+    return `Търси ${totalListings} ${noun}`;
   }
 
-  return `Search ${totalListings} ${totalListings === 1 ? "vehicle" : "vehicles"}`;
+  return `Search ${totalListings} ${noun}`;
 };
 
 const categoryLabels: Record<VehicleCategory, { bg: string; en: string }> = {
@@ -155,10 +172,10 @@ const MobileSearchButton = ({
         : "bg-zinc-100 ring-zinc-200/80 hover:bg-zinc-200 focus-visible:outline-ring",
       isCompact
         ? "h-11 flex-1 rounded-full px-3"
-        : "h-[52px] w-full rounded-full px-4"
+        : "h-12 w-full rounded-full px-4"
     )}
     data-slot="mobile-discovery-search"
-    onClick={onOpenSearch}
+    onClick={(event) => openFromButton(event, onOpenSearch)}
     type="button"
   >
     <Search
@@ -168,11 +185,11 @@ const MobileSearchButton = ({
     />
     <span
       className={cn(
-        "min-w-0 flex-1 truncate tabular-nums leading-5",
-        isCompact ? "text-[15px]" : "text-[16px]",
-        hasMakeModelSelection
-          ? "font-medium text-zinc-950"
-          : "font-normal text-zinc-600"
+        "min-w-0 flex-1 truncate font-medium tabular-nums",
+        isCompact
+          ? "text-[length:var(--text-compact-control)] leading-[var(--text-compact-control--line-height)]"
+          : "text-[length:var(--text-body)] leading-[var(--text-body--line-height)]",
+        hasMakeModelSelection ? "text-zinc-950" : "text-zinc-600"
       )}
     >
       {hasMakeModelSelection ? makeModelValue : searchLabel}
@@ -222,7 +239,7 @@ const MobileCompactDiscoverySurface = ({
         aria-label={categoryLabel}
         className={mobileHeaderIconActionClassName}
         data-slot="mobile-discovery-category"
-        onClick={onOpenCategory}
+        onClick={(event) => openFromButton(event, onOpenCategory)}
         title={categoryLabels[category][isBg ? "bg" : "en"]}
         type="button"
       >
@@ -246,7 +263,7 @@ const MobileCompactDiscoverySurface = ({
         }`}
         className={mobileHeaderIconActionClassName}
         data-slot="mobile-discovery-filters"
-        onClick={onOpenFilters}
+        onClick={(event) => openFromButton(event, onOpenFilters)}
         title={getConditionsValue(filterCount, isBg)}
         type="button"
       >
@@ -277,9 +294,9 @@ export const MobileDealerQuickFilters = ({
           aria-haspopup={item.clearLabel ? undefined : "dialog"}
           aria-label={item.clearLabel}
           aria-pressed={item.active}
-          className={getMobileQuickPillClassName(item.active)}
+          className={cn("snap-start", getMobileQuickPillClassName(item.active))}
           key={item.id}
-          onClick={item.onClick}
+          onClick={(event) => openFromButton(event, item.onClick)}
           type="button"
         >
           <span className="max-w-36 truncate">{item.label}</span>
@@ -305,7 +322,6 @@ export const MobileDealerQuickFilters = ({
 export const MobileCompactSearchHeader = ({
   category,
   categoryLabel,
-  discoverySummary,
   filterCount,
   isBg,
   makeModelLabel,
@@ -320,7 +336,7 @@ export const MobileCompactSearchHeader = ({
   }
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 rounded-b-[18px] bg-zinc-950 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] sm:px-4 lg:hidden">
+    <div className="fade-in-0 slide-in-from-top-2 fixed inset-x-0 top-0 z-50 animate-in rounded-b-[18px] bg-zinc-950 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] duration-150 motion-reduce:animate-none sm:px-4 lg:hidden">
       <div className="mx-auto w-full max-w-lg">
         <MobileCompactDiscoverySurface
           category={category}
@@ -331,12 +347,7 @@ export const MobileCompactSearchHeader = ({
           onOpenCategory={onOpenCategory}
           onOpenFilters={onOpenFilters}
           onOpenSearch={onOpenSearch}
-          searchLabel={getMobileSearchText(
-            discoverySummary,
-            filterCount,
-            isBg,
-            totalListings
-          )}
+          searchLabel={getMobileSearchText(isBg, totalListings, category)}
         />
       </div>
     </div>
@@ -346,7 +357,6 @@ export const MobileCompactSearchHeader = ({
 export const MobileDealerDiscoveryHeader = ({
   category,
   categoryLabel,
-  discoverySummary,
   filterCount,
   isBg,
   locale,
@@ -359,12 +369,7 @@ export const MobileDealerDiscoveryHeader = ({
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
     makeModelValue !== "Всички марки" && makeModelValue !== "All makes";
-  const searchLabel = getMobileSearchText(
-    discoverySummary,
-    filterCount,
-    isBg,
-    totalListings
-  );
+  const searchLabel = getMobileSearchText(isBg, totalListings, category);
 
   return (
     <div className="bg-zinc-950 text-white">
@@ -376,14 +381,14 @@ export const MobileDealerDiscoveryHeader = ({
               aria-label={categoryLabel}
               className={mobileHeaderIconActionClassName}
               data-slot="mobile-discovery-category"
-              onClick={onOpenCategory}
+              onClick={(event) => openFromButton(event, onOpenCategory)}
               title={categoryLabels[category][isBg ? "bg" : "en"]}
               type="button"
             >
               <CategoryIcon category={category} />
             </button>
 
-            <DealerMobileBrandBar isBg={isBg} locale={locale} tone="clean" wordmarkTone="light" />
+            <DealerMobileBrandBar isBg={isBg} locale={locale} tone="clean" />
 
             <button
               aria-haspopup="dialog"
@@ -392,7 +397,7 @@ export const MobileDealerDiscoveryHeader = ({
               }`}
               className={mobileHeaderIconActionClassName}
               data-slot="mobile-discovery-filters"
-              onClick={onOpenFilters}
+              onClick={(event) => openFromButton(event, onOpenFilters)}
               title={getConditionsValue(filterCount, isBg)}
               type="button"
             >

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import { resolve } from '$app/paths';
 	import BarChart3 from '@lucide/svelte/icons/bar-chart-3';
 	import Activity from '@lucide/svelte/icons/activity';
@@ -85,7 +86,7 @@
 									>
 										<img
 											class="h-7 w-auto object-contain"
-											src={resolve('/assets/autolife/wordmark.svg')}
+											src={resolve(daynightSite.logoLight)}
 											alt=""
 										/>
 									</span>

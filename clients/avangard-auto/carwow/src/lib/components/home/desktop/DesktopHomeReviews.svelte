@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import Check from '@lucide/svelte/icons/check';
+	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
@@ -27,14 +29,6 @@
 
 	type ReviewRoute = '/reviews' | '/inventory' | '/sell-your-car' | '/sell-your-car/request';
 
-	type Review = {
-		id: string;
-		description: string;
-		avatar: string;
-		name: string;
-		meta: string;
-	};
-
 	type ActionCard = {
 		id: string;
 		modifier: string;
@@ -49,15 +43,15 @@
 		ctaLabel: string;
 	};
 
-	const starIds: number[] = [];
+	const starIds = ['star-1', 'star-2', 'star-3', 'star-4', 'star-5'] as const;
 
-	const reviews: Review[] = [{"id":"info-0","name":"Автомобили","meta":"Публикувани предложения","description":"Разгледайте 16 избрани обяви. За актуална наличност се свържете с AVANGARD AUTO.","avatar":"/assets/avangard/social-logo.jpg"},{"id":"info-1","name":"Регистрация","meta":"Съдействие в КАТ","description":"В обявите се предлага съдействие при регистрация и издаване на транзитни номера.","avatar":"/assets/avangard/social-logo.jpg"},{"id":"info-2","name":"Транспорт","meta":"В България","description":"В обявите се предлага транспорт до всяка точка в България. Уточнете цена и условия.","avatar":"/assets/avangard/social-logo.jpg"}];
+	const reviews = daynightReviews.slice(0, 3);
 
 	const actionCards: ActionCard[] = [
 		{
 			id: 'buy-confidently',
 			modifier: 'inventory',
-			image: '/assets/avangard/vehicle-10-1.webp',
+			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp',
 			alt: 'Mercedes-Benz G-Class и Lamborghini Urus',
 			title: 'Купи автомобил уверено',
 			balancedTitle: 'Купи автомобил',
@@ -78,14 +72,14 @@
 		{
 			id: 'sell-or-trade',
 			modifier: 'sell',
-			image: '/assets/avangard/vehicle-13-1.webp',
+			image: '/assets/images/home-promos/urus-rear-v4.webp',
 			alt: 'Продай или замени автомобил',
 			title: 'Продай или замени лесно',
 			balancedTitle: 'Продай или замени',
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
-				'Получете обратна връзка от екипа на AVANGARD AUTO.',
+				`Получете обратна връзка от екипа на ${daynightSite.shortName}.`,
 				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [
@@ -109,10 +103,11 @@
 	{#if showReviews}
 		<div class="daynight-home-container home-reviews-heading">
 			<DesktopSectionHeading
-				title="Полезна информация"
+				title="Отзиви от клиенти"
 				href={showHeaderCta ? resolve('/reviews') : undefined}
 				label={ctaLabel}
 			/>
+			<p class="home-reviews-disclosure">{daynightReviewDisclosure}</p>
 		</div>
 		<div
 			class="daynight-home-container daynight-home-section-panel daynight-home-section-panel--reviews"
@@ -123,11 +118,11 @@
 						<div class="daynight-home-review-grid__item">
 							<a href={resolve('/reviews')} class="daynight-home-review-card">
 								<div class="daynight-home-review-card__rating">
-									{#each starIds as star (star)}
+									{#each starIds.slice(0, review.rating) as star (star)}
 										<img src="/assets/icons/star.svg" alt="" aria-hidden="true" />
 									{/each}
 								</div>
-								<p class="daynight-home-review-card__description">{review.description}</p>
+								<p class="daynight-home-review-card__description">{review.text}</p>
 								<div class="daynight-home-review-card__user">
 									<img
 										class="daynight-home-review-card__avatar"
@@ -138,7 +133,7 @@
 									/>
 									<div class="daynight-home-review-card__user-content">
 										<p class="daynight-home-review-card__name">{review.name}</p>
-										<p class="daynight-home-review-card__meta">{review.meta}</p>
+										<p class="daynight-home-review-card__meta">{review.label}</p>
 									</div>
 								</div>
 							</a>
@@ -201,6 +196,11 @@
 </section>
 
 <style>
+	.home-reviews-disclosure {
+		margin: 12px 0 0;
+		color: var(--sa-ink-soft);
+		font: var(--sa-weight-medium) var(--sa-text-sm)/1.5 var(--sa-font);
+	}
 	.home-action-button {
 		margin-top: 22px;
 		display: flex;
@@ -271,8 +271,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-action-card__title {
 		color: var(--banner-foreground) !important;
-		font-size: clamp(23px, 1.8vw, 28px);
-		font-weight: 700;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.025em;
 		line-height: 1.12;
 	}
@@ -283,8 +283,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-action-card__list li {
 		color: var(--banner-foreground);
-		font-size: 14px;
-		font-weight: 550;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 8px;
 		line-height: 1.35;
 	}
@@ -313,8 +313,8 @@
 		box-shadow: none !important;
 		color: #fff !important;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 700;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		height: 44px;
 		justify-content: center;
 		margin-top: auto;
@@ -374,14 +374,14 @@
 	:global(body.daynight-home-page)
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__title) {
-		font-size: clamp(25px, 2.1vw, 29px);
+		font-size: var(--sa-text-panel-title);
 	}
 
 	:global(body.daynight-home-page)
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__list li) {
-		font-size: 15px;
-		font-weight: 500;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.4;
 	}
 
@@ -394,7 +394,7 @@
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__cta) {
 		align-self: flex-start;
-		font-size: 16px;
+		font-size: var(--sa-button-font-size);
 		justify-self: start;
 		margin: auto 0 0;
 	}
@@ -413,8 +413,8 @@
 		box-sizing: border-box;
 		color: #c91620;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 650;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		justify-content: center;
 		min-height: 42px;
 		padding: 0 18px;

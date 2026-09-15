@@ -1,28 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
+const phoneE164 = "+359886251705";
+const city = "Варна";
+const shortName = "Приселци";
+const district = "Варна";
+const street = "бул. „Цар Освободител“ 285";
+const location = "бул. „Цар Освободител“ 285";
+
 export const daynightSite = {
-	name: 'Автокъща Приселци',
-	shortName: 'Приселци',
-	phone: '0886251705',
-	phoneLabel: '0886 251 705',
-	email: '',
-	location: 'бул. „Цар Освободител“ 285, Варна',
-	mapUrl: 'https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F',
-	mapLabel: 'Автокъща Приселци, Варна, България',
-	sourceInventory: 'https://priselci.mobile.bg/',
-	inventoryCount: 16,
-	logoLight: '/assets/priselci/wordmark-light.svg',
-	logoDark: '/assets/priselci/wordmark.svg',
+	name: "Автокъща Приселци",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359886251705",
+	phoneLabel: "0886 251 705",
+	email: "",
+	location,
+	locationShort: "бул. „Цар Освободител“ 285",
+	locationLandmark: "бул. „Цар Освободител“ 285",
+	hoursLabel: "Работното време се уточнява по телефона.",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://priselci.mobile.bg/",
+	logoLight: "/assets/priselci/wordmark.svg",
+	logoDark: "/assets/priselci/wordmark-light.svg",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
-	accountCta: 'Вход / Профил',
+	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: 'Автокъща Приселци',
-	heroSubtitle: 'Автомобили във Варна. Изберете обява и се обадете за оглед.',
+	heroTitle: "Автокъща Приселци",
+	heroSubtitle: "Варна · Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -34,6 +53,7 @@ export const publicNavItems = [
 	{ label: 'Продай', href: '/sell-your-car' },
 	{ label: 'Услуги', href: '/services' },
 	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
 	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
@@ -70,15 +90,10 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Приселци', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За Приселци", href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{
-				label: 'Насоки за покупка',
-				href: '/blog/kak-da-kupim-upotrebyavan-avtomobil'
-			},
+			{ label: 'Блог', href: '/blog' },
 			{ label: 'Условия', href: '/terms' }
 		]
 	},

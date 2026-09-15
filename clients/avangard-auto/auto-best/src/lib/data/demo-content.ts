@@ -1,3 +1,17 @@
+import { featuredVehicles } from './inventory';
+
+// Visual examples only: these selections are not records of completed transactions.
+export const demoWorkflowShowcases = {
+  'trade-in': {
+    title: 'Наскоро продадени',
+    vehicles: [featuredVehicles[0], featuredVehicles[3], featuredVehicles[5]]
+  },
+  import: {
+    title: 'Последно внесени',
+    vehicles: [featuredVehicles[1], featuredVehicles[2], featuredVehicles[4]]
+  }
+};
+
 type DemoTeamMember = {
   id: string;
   name: string;
@@ -11,14 +25,46 @@ type DemoPartner = {
   image: string;
 };
 
-export const demoContentLabel = 'AVANGARD AUTO';
+export const demoContentLabel = 'Демо съдържание';
 
 export const demoTeamIntro =
-  'Контакт за автомобилите и съдействие според публикуваните обяви.';
+  'Примерни профили за визуален преглед. Имената и снимките ще бъдат заменени с реалния екип.';
 
 export const demoPartnerIntro =
-  'Избрани автомобили от публикуваните обяви.';
+  'Примерни автомобилни марки за визуален преглед. Те не представят потвърдени партньорства.';
 
-export const demoTeamMembers: DemoTeamMember[] = [{"id":"service-0","name":"Автомобили","role":"Публикувани предложения","image":"/assets/avangard/vehicle-01-1.webp"},{"id":"service-1","name":"Регистрация","role":"Съдействие в КАТ","image":"/assets/avangard/vehicle-02-1.webp"},{"id":"service-2","name":"Транспорт","role":"В България","image":"/assets/avangard/vehicle-03-1.webp"},{"id":"service-3","name":"Лизинг","role":"Индивидуални условия","image":"/assets/avangard/vehicle-04-1.webp"}];
+export const demoTeamMembers: DemoTeamMember[] = [
+  {
+    id: 'arlene-mccoy',
+    name: 'Arlene McCoy',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team1.jpg'
+  },
+  {
+    id: 'ronald-richards',
+    name: 'Ronald Richards',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team2.jpg'
+  },
+  {
+    id: 'leslie-alexander',
+    name: 'Leslie Alexander',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team3.jpg'
+  },
+  {
+    id: 'cody-fisher',
+    name: 'Cody Fisher',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team4.jpg'
+  }
+];
 
-export const demoPartners: DemoPartner[] = [{"id":"11785010475119627","name":"VW","image":"/assets/avangard/vehicle-01-1.webp"},{"id":"21783748809976935","name":"Volvo","image":"/assets/avangard/vehicle-02-1.webp"},{"id":"21766322242220471","name":"Volvo","image":"/assets/avangard/vehicle-03-1.webp"},{"id":"11782450720679744","name":"Peugeot","image":"/assets/avangard/vehicle-04-1.webp"},{"id":"11782462832415648","name":"Peugeot","image":"/assets/avangard/vehicle-05-1.webp"},{"id":"21776284342452600","name":"Nissan","image":"/assets/avangard/vehicle-06-1.webp"}];
+export const demoPartners: DemoPartner[] = [
+  { id: 'carlogo', name: 'CARLOGO', image: '/assets/images/partner/par1.png' },
+  { id: 'topcars', name: 'TOPCARS', image: '/assets/images/partner/par2.png' },
+  { id: 'vehicle-store', name: 'VEHICLE STORE', image: '/assets/images/partner/par3.png' },
+  { id: 'speedcare', name: 'SPEEDCARE', image: '/assets/images/partner/par4.png' },
+  { id: 'carservice', name: 'CARSERVICE', image: '/assets/images/partner/par5.png' },
+  { id: 'cartrade', name: 'CARTRADE', image: '/assets/images/partner/par6.png' }
+];

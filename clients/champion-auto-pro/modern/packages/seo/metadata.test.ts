@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalizedMetadata } from "./metadata";
 
-describe("Champion Auto Pro localized metadata", () => {
+describe("Day & Night localized metadata", () => {
   it("brands Bulgarian pages and emits canonical locale metadata", () => {
     const metadata = createLocalizedMetadata({
       baseUrl: "https://day-night.example",
@@ -11,18 +11,18 @@ describe("Champion Auto Pro localized metadata", () => {
       title: "Автомобили",
     });
 
-    expect(metadata.title).toBe("Автомобили | Champion Auto Pro");
-    expect(metadata.applicationName).toBe("Champion Auto Pro");
+    expect(metadata.title).toBe("Автомобили | Day & Night Auto Group");
+    expect(metadata.applicationName).toBe("Day & Night Auto Group");
     expect(metadata.alternates?.canonical).toBe(
-      "https://day-night.example/bg/cars"
+      "https://day-night.example/cars"
     );
     expect(metadata.alternates?.languages).toEqual({
-      en: "https://day-night.example/cars",
-      "bg-BG": "https://day-night.example/bg/cars",
+      en: "https://day-night.example/en/cars",
+      "bg-BG": "https://day-night.example/cars",
       "x-default": "https://day-night.example/cars",
     });
     expect(metadata.openGraph?.locale).toBe("bg_BG");
-    expect(metadata.openGraph?.url).toBe("https://day-night.example/bg/cars");
+    expect(metadata.openGraph?.url).toBe("https://day-night.example/cars");
   });
 
   it("limits alternates when a route is not translated", () => {
@@ -36,8 +36,8 @@ describe("Champion Auto Pro localized metadata", () => {
     });
 
     expect(metadata.alternates?.languages).toEqual({
-      en: "https://day-night.example/blog/launch-notes",
-      "x-default": "https://day-night.example/blog/launch-notes",
+      en: "https://day-night.example/en/blog/launch-notes",
+      "x-default": "https://day-night.example/en/blog/launch-notes",
     });
   });
 });

@@ -39,9 +39,10 @@ const locationLabelsBg: Record<string, string> = {
   Plovdiv: "Пловдив",
   Romania: "Румъния",
   Ruse: "Русе",
-  Varna: "Варна",
-  "Varna City": "Варна-град",
+  Варна: "Варна",
+  "Варна City": "Варна-град",
   "Stara Zagora": "Стара Загора",
+  Varna: "Варна",
 };
 
 const isBulgarianLocale = (locale?: string) =>

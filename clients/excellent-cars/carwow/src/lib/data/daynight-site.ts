@@ -1,28 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
+const phoneE164 = "+359895996559";
+const city = "Варна";
+const shortName = "Excellent Cars";
+const district = "Варна";
+const street = "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“";
+const location = "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“";
+
 export const daynightSite = {
-	name: 'Excellent Cars',
-	shortName: 'Excellent Cars',
-	phone: '0895996559',
-	phoneLabel: '0895 996 559',
-	email: '',
-	location: "Варна, бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
-	mapUrl: "https://www.google.com/maps/search/?api=1&query=Excellent%20Cars%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%20%D0%A5%D1%83%D0%BD%D0%B8%D1%8F%D0%B4%D0%B8%20%D0%B8%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
-	mapLabel: 'Excellent Cars, Варна, България',
-	sourceInventory: 'https://excellent.mobile.bg/',
-	inventoryCount: 16,
-	logoLight: '/assets/excellent/logo-cars.jpg',
-	logoDark: '/assets/excellent/logo-header.png',
+	name: "Excellent Cars",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359895996559",
+	phoneLabel: "0895 996 559",
+	email: "",
+	location,
+	locationShort: "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+	locationLandmark: "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+	hoursLabel: "Понеделник – петък: 08:30–19:00; Събота: 09:00–18:00; Неделя: почивен ден",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://excellent.mobile.bg/",
+	logoLight: "/assets/excellent/logo-header.png",
+	logoDark: "/assets/excellent/logo-cars.jpg",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
-	accountCta: 'Вход / Профил',
+	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: 'Excellent Cars',
-	heroSubtitle: 'Варна - Премиум автомобили в Варна с подреден процес за оглед и запитване',
+	heroTitle: "Excellent Cars",
+	heroSubtitle: "Варна · Подбрани публикувани обяви към 07.09.2026. Наличностите и условията се потвърждават по телефона.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -34,6 +53,7 @@ export const publicNavItems = [
 	{ label: 'Продай', href: '/sell-your-car' },
 	{ label: 'Услуги', href: '/services' },
 	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
 	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
@@ -70,15 +90,10 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Excellent Cars', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За Excellent Cars", href: '/about' },
 			{ label: 'Екип', href: '/team' },
-			{ label: 'Услуги и информация', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{
-				label: 'Покупка без риск',
-				href: '/blog/kak-da-kupim-upotrebyavan-avtomobil'
-			},
+			{ label: 'Отзиви', href: '/reviews' },
+			{ label: 'Блог', href: '/blog' },
 			{ label: 'Условия', href: '/terms' }
 		]
 	},

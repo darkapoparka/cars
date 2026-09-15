@@ -44,10 +44,10 @@
 
   .dn-error h1 {
     margin: 0;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 650;
-    line-height: 1.08;
-    letter-spacing: -.035em;
+    font-size: var(--dn-text-fluid-hero);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-section);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-error p:not(.dn-kicker) {
@@ -73,8 +73,8 @@
     padding: 0 22px;
     border: 1px solid var(--dn-ink);
     border-radius: var(--dn-radius-button);
-    font-size: var(--dn-text-body);
-    font-weight: 650;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
   }
 
   .dn-error__actions .dn-error__primary {

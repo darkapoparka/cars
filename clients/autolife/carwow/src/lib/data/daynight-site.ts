@@ -1,28 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
+const phoneE164 = "+359895766736";
+const city = "Варна";
+const shortName = "Аутолайф";
+const district = "Варна";
+const street = "ГП4, разклон за с. Тополи";
+const location = "ГП4, разклон за с. Тополи";
+
 export const daynightSite = {
-	name: 'AUTOLIFE',
-	shortName: 'Аутолайф',
-	phone: '0895766736',
-	phoneLabel: '0895 766 736',
-	email: '',
-	location: 'гр. Варна, ГП4, разклон за с. Тополи',
-	mapUrl: 'https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778',
-	mapLabel: 'Аутолайф, Варна, България',
-	sourceInventory: 'https://autolife.mobile.bg/',
-	inventoryCount: 16,
-	logoLight: '/assets/autolife/wordmark-light.svg',
-	logoDark: '/assets/autolife/wordmark.svg',
+	name: "Аутолайф",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359895766736",
+	phoneLabel: "0895 766 736",
+	email: "",
+	location,
+	locationShort: "ГП4, разклон за с. Тополи",
+	locationLandmark: "ГП4, разклон за с. Тополи",
+	hoursLabel: "За работно време се обадете предварително.",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://autolife.mobile.bg/",
+	logoLight: "/assets/autolife/wordmark.svg",
+	logoDark: "/assets/autolife/wordmark.svg",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
-	accountCta: 'Вход / Профил',
+	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: 'AUTOLIFE',
-	heroSubtitle: 'Автомобили във Варна · ГП4, разклон за Тополи',
+	heroTitle: "Аутолайф",
+	heroSubtitle: "Варна · Представителна извадка от 16 публикувани обяви; наличност и цена се потвърждават по телефона.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -34,6 +53,7 @@ export const publicNavItems = [
 	{ label: 'Продай', href: '/sell-your-car' },
 	{ label: 'Услуги', href: '/services' },
 	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
 	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
@@ -70,15 +90,10 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Аутолайф', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За Аутолайф", href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{
-				label: 'Покупка без риск',
-				href: '/blog/kak-da-kupim-upotrebyavan-avtomobil'
-			},
+			{ label: 'Блог', href: '/blog' },
 			{ label: 'Условия', href: '/terms' }
 		]
 	},

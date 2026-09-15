@@ -23,7 +23,7 @@ export const financingRequestCopy = {
     sending: "Изпращане…",
     success: "Заявката е изпратена",
     successBody:
-      "Контакт с AVANGARD AUTO ще се свърже с вас за конкретните условия.",
+      "Екипът на AVANGARD AUTO ще се свърже с вас за конкретните условия.",
     term: "Срок",
     title: "Заявка за финансиране",
     vehicle: "Избран автомобил",

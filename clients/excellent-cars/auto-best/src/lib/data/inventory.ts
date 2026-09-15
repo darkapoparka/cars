@@ -11,10 +11,9 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  verification: 'sample' | 'verified';
+  evidenceUrl?: string;
   image: string;
-  gallery: string[];
-  sourceUrl: string;
-  description: string;
   category: string;
   body: string;
   make: string;
@@ -31,19 +30,12 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Excellent Cars public advert snapshot, 2026-09-07; confirm availability.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21781257688134220-mercedes-benz-gle-350-amg-designo-360cam-serv-ist-ambient-diss-har",
     "image": "/assets/excellent/vehicle-01-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-01-1.webp",
-      "/assets/excellent/vehicle-01-2.webp",
-      "/assets/excellent/vehicle-01-3.webp",
-      "/assets/excellent/vehicle-01-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21781257688134220-mercedes-benz-gle-350-amg-designo-360cam-serv-ist-ambient-diss-har",
-    "description": "Mercedes-Benz GLE 350 AMG  DESIGNO, 2016 г., дизел, 179 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "Mercedes-Benz",
@@ -67,16 +59,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 2,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-11785932596351376-vw-passat-2-0tdi-highline-bluemotion-led-automat",
     "image": "/assets/excellent/vehicle-02-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-02-1.webp",
-      "/assets/excellent/vehicle-02-2.webp",
-      "/assets/excellent/vehicle-02-3.webp",
-      "/assets/excellent/vehicle-02-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-11785932596351376-vw-passat-2-0tdi-highline-bluemotion-led-automat",
-    "description": "VW Passat 2.0TDI  HIGHLINE, 2011 г., дизел, 212 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "VW",
     "title": "VW Passat 2.0TDI  HIGHLINE",
@@ -98,16 +84,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 3,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-11788181514006324-skoda-octavia-2-0tdi-4x4-digital",
     "image": "/assets/excellent/vehicle-03-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-03-1.webp",
-      "/assets/excellent/vehicle-03-2.webp",
-      "/assets/excellent/vehicle-03-3.webp",
-      "/assets/excellent/vehicle-03-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-11788181514006324-skoda-octavia-2-0tdi-4x4-digital",
-    "description": "Skoda Octavia 2.0TDI  4x4, 2022 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "Skoda",
     "title": "Skoda Octavia 2.0TDI  4x4",
@@ -129,16 +109,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 4,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-11786795820524833-cupra-born-restyling-58kw-67000km",
     "image": "/assets/excellent/vehicle-04-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-04-1.webp",
-      "/assets/excellent/vehicle-04-2.webp",
-      "/assets/excellent/vehicle-04-3.webp",
-      "/assets/excellent/vehicle-04-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-11786795820524833-cupra-born-restyling-58kw-67000km",
-    "description": "Cupra Born RESTYLING  58KW, 2022 г., електрически, 67 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Cupra",
     "title": "Cupra Born RESTYLING  58KW",
@@ -159,15 +133,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 5,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21786794971218528-hyundai-kona-1-6hev-n-line-40000km",
     "image": "/assets/excellent/vehicle-05-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-05-1.webp",
-      "/assets/excellent/vehicle-05-2.webp",
-      "/assets/excellent/vehicle-05-3.webp",
-      "/assets/excellent/vehicle-05-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21786794971218528-hyundai-kona-1-6hev-n-line-40000km",
-    "description": "Hyundai Kona 1.6HEV  N-LINE, 2020 г., хибрид, 40 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "Hyundai",
@@ -189,15 +157,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 6,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21786455005208728-kia-sportage-1-6d-automat",
     "image": "/assets/excellent/vehicle-06-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-06-1.webp",
-      "/assets/excellent/vehicle-06-2.webp",
-      "/assets/excellent/vehicle-06-3.webp",
-      "/assets/excellent/vehicle-06-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21786455005208728-kia-sportage-1-6d-automat",
-    "description": "Kia Sportage 1.6D  AUTOMAT, 2017 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "Kia",
@@ -220,15 +182,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 7,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21786453972789852-vw-tiguan-2-0tdi-4motion-swiss",
     "image": "/assets/excellent/vehicle-07-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-07-1.webp",
-      "/assets/excellent/vehicle-07-2.webp",
-      "/assets/excellent/vehicle-07-3.webp",
-      "/assets/excellent/vehicle-07-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21786453972789852-vw-tiguan-2-0tdi-4motion-swiss",
-    "description": "VW Tiguan 2.0ТDI  4MOTION, 2017 г., дизел, 199 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "VW",
@@ -252,15 +208,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 8,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21786451392501339-land-rover-range-rover-evoque-hybrid-nardo-grey-125000km",
     "image": "/assets/excellent/vehicle-08-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-08-1.webp",
-      "/assets/excellent/vehicle-08-2.webp",
-      "/assets/excellent/vehicle-08-3.webp",
-      "/assets/excellent/vehicle-08-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21786451392501339-land-rover-range-rover-evoque-hybrid-nardo-grey-125000km",
-    "description": "Land Rover Range Rover Evoque HYBRID  NARDO_GREY, 2022 г., хибрид, 125 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "Land Rover",
@@ -283,15 +233,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 9,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21773151499854810-audi-q2-2-0tfsi-quattro-s-line-digital-line-assist",
     "image": "/assets/excellent/vehicle-09-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-09-1.webp",
-      "/assets/excellent/vehicle-09-2.webp",
-      "/assets/excellent/vehicle-09-3.webp",
-      "/assets/excellent/vehicle-09-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21773151499854810-audi-q2-2-0tfsi-quattro-s-line-digital-line-assist",
-    "description": "Audi Q2 2.0TFSI  QUATTRO, 2018 г., бензин, 133 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "Audi",
@@ -315,16 +259,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 10,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-11768639133016485-dodge-challenger-5-7hemi-srt",
     "image": "/assets/excellent/vehicle-10-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-10-1.webp",
-      "/assets/excellent/vehicle-10-2.webp",
-      "/assets/excellent/vehicle-10-3.webp",
-      "/assets/excellent/vehicle-10-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-11768639133016485-dodge-challenger-5-7hemi-srt",
-    "description": "Dodge Challenger 5.7HEMI  SRT, 2014 г., бензин, 65 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
-    "category": "Купе",
+    "category": "Coupe",
     "body": "Coupe",
     "make": "Dodge",
     "title": "Dodge Challenger 5.7HEMI  SRT",
@@ -346,15 +284,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 11,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21775914499512125-vw-t-cross-1-5i-automat-48000km",
     "image": "/assets/excellent/vehicle-11-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-11-1.webp",
-      "/assets/excellent/vehicle-11-2.webp",
-      "/assets/excellent/vehicle-11-3.webp",
-      "/assets/excellent/vehicle-11-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21775914499512125-vw-t-cross-1-5i-automat-48000km",
-    "description": "VW T-Cross 1.5i  AUTOMAT, 2023 г., бензин, 48 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "VW",
@@ -377,16 +309,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 12,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21785575816054903-kia-niro-plug-in-hybrid",
     "image": "/assets/excellent/vehicle-12-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-12-1.webp",
-      "/assets/excellent/vehicle-12-2.webp",
-      "/assets/excellent/vehicle-12-3.webp",
-      "/assets/excellent/vehicle-12-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21785575816054903-kia-niro-plug-in-hybrid",
-    "description": "Kia Niro PLUG-IN-HYBRID, 2019 г., електрически, 118 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Kia",
     "title": "Kia Niro PLUG-IN-HYBRID",
@@ -408,15 +334,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 13,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21773150110056507-bmw-x3-2-0d-xdrive-m-pack",
     "image": "/assets/excellent/vehicle-13-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-13-1.webp",
-      "/assets/excellent/vehicle-13-2.webp",
-      "/assets/excellent/vehicle-13-3.webp",
-      "/assets/excellent/vehicle-13-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21773150110056507-bmw-x3-2-0d-xdrive-m-pack",
-    "description": "BMW X3 2.0D  xDrive, 2014 г., дизел, 188 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "BMW",
@@ -439,15 +359,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 14,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21785323501482685-nissan-juke-1-6t-nismo-alcantara",
     "image": "/assets/excellent/vehicle-14-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-14-1.webp",
-      "/assets/excellent/vehicle-14-2.webp",
-      "/assets/excellent/vehicle-14-3.webp",
-      "/assets/excellent/vehicle-14-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21785323501482685-nissan-juke-1-6t-nismo-alcantara",
-    "description": "Nissan Juke 1.6Т  NISMO, 2014 г., бензин, 186 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "Nissan",
@@ -471,16 +385,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 15,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-11778320754806394-peugeot-308-1-6gt-205h-p-panorama-massage",
     "image": "/assets/excellent/vehicle-15-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-15-1.webp",
-      "/assets/excellent/vehicle-15-2.webp",
-      "/assets/excellent/vehicle-15-3.webp",
-      "/assets/excellent/vehicle-15-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-11778320754806394-peugeot-308-1-6gt-205h-p-panorama-massage",
-    "description": "Peugeot 308 1.6GT  205h.p, 2016 г., бензин, 130 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Peugeot",
     "title": "Peugeot 308 1.6GT  205h.p",
@@ -502,15 +410,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 16,
+    "verification": "verified",
+    "evidenceUrl": "https://excellent.mobile.bg/obiava-21781781688732220-mazda-cx-5-2-5i-4x4-automat-skyactiv",
     "image": "/assets/excellent/vehicle-16-1.webp",
-    "gallery": [
-      "/assets/excellent/vehicle-16-1.webp",
-      "/assets/excellent/vehicle-16-2.webp",
-      "/assets/excellent/vehicle-16-3.webp",
-      "/assets/excellent/vehicle-16-4.webp"
-    ],
-    "sourceUrl": "https://excellent.mobile.bg/obiava-21781781688732220-mazda-cx-5-2-5i-4x4-automat-skyactiv",
-    "description": "Mazda CX-5 2.5i  4x4, 2015 г., бензин, 192 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "category": "SUV",
     "body": "SUV",
     "make": "Mazda",
@@ -534,4 +436,11 @@ export const featuredVehicles: Vehicle[] = [
   }
 ];
 
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+const inventoryLocale = "bg-BG";
+const inventoryCurrency = "EUR";
+export const formatVehiclePrice = (amount: number) =>
+  new Intl.NumberFormat(inventoryLocale, {
+    style: 'currency',
+    currency: inventoryCurrency,
+    maximumFractionDigits: 0
+  }).format(amount);

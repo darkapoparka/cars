@@ -1,28 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
+const phoneE164 = "+359885072555";
+const city = "Варна";
+const shortName = "Champion Auto Pro";
+const district = "Варна";
+const street = "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor";
+const location = "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor";
+
 export const daynightSite = {
 	name: "Champion Auto Pro",
-	shortName: "Champion Auto Pro",
-	phone: "0885072555",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359885072555",
 	phoneLabel: "0885 072 555",
 	email: "",
-	location: "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor, Варна",
-	mapUrl: "https://www.google.com/maps/search/?api=1&query=Champion%20Auto%20Pro%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20302%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
-	mapLabel: "Champion Auto Pro Варна",
+	location,
+	locationShort: "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
+	locationLandmark: "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
+	hoursLabel: "Понеделник – петък: 09:30–18:00; Събота: 10:00–15:00; Неделя: почивен ден",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
 	sourceInventory: "https://championautopro.mobile.bg/",
-	inventoryCount: 16,
 	logoLight: "/assets/champion/logo.png",
 	logoDark: "/assets/champion/logo.png",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
-	accountCta: 'Вход / Профил',
+	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
 	heroTitle: "Champion Auto Pro",
-	heroSubtitle: "Автомобили, бартер и лизинг във Варна",
+	heroSubtitle: "Варна · Подбрани публикувани обяви. Наличностите и условията се потвърждават по телефона.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -34,6 +53,7 @@ export const publicNavItems = [
 	{ label: 'Продай', href: '/sell-your-car' },
 	{ label: 'Услуги', href: '/services' },
 	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
 	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
@@ -70,15 +90,10 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Champion Auto Pro', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За Champion Auto Pro", href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{
-				label: 'Покупка без риск',
-				href: '/blog/kak-da-kupim-upotrebyavan-avtomobil'
-			},
+			{ label: 'Блог', href: '/blog' },
 			{ label: 'Условия', href: '/terms' }
 		]
 	},

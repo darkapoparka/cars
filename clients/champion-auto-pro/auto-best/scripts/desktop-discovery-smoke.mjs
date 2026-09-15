@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { chromium } from 'playwright';
-const base = process.env.BASE_URL || 'http://127.0.0.1:5173';
+import { launchBrowser, previewUrl } from './browser.mjs';
+const base = previewUrl();
 const output = 'artifacts/desktop-discovery-smoke';
 await mkdir(output, { recursive: true });
-const browser = await chromium.launch();
+const browser = await launchBrowser();
 const results = [];
 try {
   for (const width of [1024, 1440, 1920]) {
@@ -85,10 +85,14 @@ try {
       assert.equal(await bar.isVisible(), false, 'Desktop sticky bar must not appear on mobile');
       assert.deepEqual(errors, []);
       results.push({ route, width, passed: true });
+      await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
       console.log(`PASS desktop icon/visible filters/sticky draft and focus ${route} ${width}px`);
       await page.close();
     }
   }
+} catch (error) {
+  results.push({ passed: false, error: error.stack });
+  throw error;
 } finally {
   await browser.close();
   await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2));

@@ -5,4 +5,4 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<InventoryPageShell page={data.page} initialViewport={data.initialViewport} />
+<InventoryPageShell page={data.page} />

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
 	import {
@@ -22,7 +23,7 @@
 			copy: 'Разгледайте селекцията и попитайте за наличност.',
 			cta: 'Вижте автомобилите',
 			href: '/inventory',
-			image: '/assets/avangard/vehicle-10-1.webp'
+			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp'
 		},
 		{
 			id: 'viewing',
@@ -30,7 +31,7 @@
 			copy: 'Изберете автомобил и уговорете удобно посещение.',
 			cta: 'Запазете оглед',
 			href: '/contact',
-			image: '/assets/avangard/vehicle-14-1.webp'
+			image: '/assets/images/home-promos/phone-portrait-generated-v7.webp'
 		},
 		{
 			id: 'financing',
@@ -67,7 +68,7 @@
 		{
 			id: 'location',
 			value: '1',
-			label: 'локация във Варна',
+			label: `локация в ${daynightSite.city}`,
 			hasDivider: true
 		},
 		{
@@ -117,7 +118,7 @@
 					<img
 						src={desktopOnlyImagePlaceholder}
 						srcset={desktopOnlySrcset(
-							'/assets/avangard/vehicle-15-1.webp',
+							'/assets/images/home-promos/kristian-financing-campaign-v1.webp',
 							1800
 						)}
 						sizes={desktopOnlySizes('min(1320px, calc(100vw - 48px))')}
@@ -252,8 +253,8 @@
 	}
 	.daynight-home-campaign-card h2 {
 		color: var(--campaign-ink);
-		font-size: clamp(24px, 1.8vw, 30px);
-		font-weight: 700;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.025em;
 		line-height: 1.15;
 		margin: 0 0 12px;
@@ -261,8 +262,8 @@
 	}
 	.daynight-home-campaign-card p {
 		color: var(--campaign-copy);
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-regular);
 		line-height: 1.5;
 		margin: 0 0 20px;
 		max-width: 34ch;

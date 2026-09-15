@@ -25,3 +25,19 @@ export const heroVehiclePairs = {
 } as const satisfies Record<string, readonly [Vehicle, Vehicle]>;
 
 export type HeroVehiclePair = keyof typeof heroVehiclePairs;
+
+// Center the car itself; supporting objects can make the full composition asymmetric.
+export const mobileHeroArtwork = {
+  car: { src: '/assets/images/lead/day-night-urus-front-v1.webp', width: 600, height: 600, carCenter: 300 },
+  sell: { src: '/assets/images/lead/day-night-mobile-sell-v1.webp', width: 1200, height: 438, carCenter: 641.5 },
+  import: { src: '/assets/images/lead/day-night-mobile-import-v1.webp', width: 1200, height: 450, carCenter: 598 }
+} as const;
+
+export type MobileHeroScene = keyof typeof mobileHeroArtwork;
+
+// Viewports into the existing transparent artwork; no duplicate raster assets.
+export const mobileHeroRegions = {
+  sell: { src: mobileHeroArtwork.sell.src, width: 1200, height: 438, crop: [927, 140, 267, 291] },
+  import: { src: mobileHeroArtwork.import.src, width: 1200, height: 450, crop: [0, 152, 354, 259] },
+  home: { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 660, crop: [8, 110, 1170, 443] }
+} as const;

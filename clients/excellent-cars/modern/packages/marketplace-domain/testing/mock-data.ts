@@ -1,16 +1,15 @@
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
-// Representative Excellent Cars public adverts captured 2026-09-07.
 export const mockListings: VehicleListing[] = [
   {
-    "id": "excellent-21781257688134220",
-    "slug": "excellent-21781257688134220",
+    "id": "am-1001",
+    "slug": "mercedes-benz-gle-350-amg-designo-2016-21781257688134220",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Mercedes-Benz GLE 350 AMG  DESIGNO",
-    "description": "Mercedes-Benz GLE 350 AMG  DESIGNO, 2016 г., дизел, 179 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21781257688134220-mercedes-benz-gle-350-amg-designo-360cam-serv-ist-ambient-diss-har",
+    "description": "Mercedes-Benz GLE 350 AMG  DESIGNO, 2016 г., дизел, 179 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 32900,
       "currency": "EUR"
@@ -42,7 +41,28 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "GLE 350 AMG  DESIGNO",
@@ -60,19 +80,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T08:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "excellent-11785932596351376",
-    "slug": "excellent-11785932596351376",
+    "id": "am-1010",
+    "slug": "vw-passat-2-0tdi-highline-2011-11785932596351376",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "VW Passat 2.0TDI  HIGHLINE",
-    "description": "VW Passat 2.0TDI  HIGHLINE, 2011 г., дизел, 212 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-11785932596351376-vw-passat-2-0tdi-highline-bluemotion-led-automat",
+    "description": "VW Passat 2.0TDI  HIGHLINE, 2011 г., дизел, 212 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 10500,
       "currency": "EUR"
@@ -104,7 +125,24 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "Passat 2.0TDI  HIGHLINE",
@@ -122,19 +160,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "excellent-11788181514006324",
-    "slug": "excellent-11788181514006324",
+    "id": "am-1011",
+    "slug": "skoda-octavia-2-0tdi-4x4-2022-11788181514006324",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Skoda Octavia 2.0TDI  4x4",
-    "description": "Skoda Octavia 2.0TDI  4x4, 2022 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-11788181514006324-skoda-octavia-2-0tdi-4x4-digital",
+    "description": "Skoda Octavia 2.0TDI  4x4, 2022 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 17900,
       "currency": "EUR"
@@ -166,7 +205,24 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      }
+    ],
     "spec": {
       "make": "Skoda",
       "model": "Octavia 2.0TDI  4x4",
@@ -184,19 +240,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "excellent-11786795820524833",
-    "slug": "excellent-11786795820524833",
+    "id": "am-1012",
+    "slug": "cupra-born-restyling-58kw-2022-11786795820524833",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Cupra Born RESTYLING  58KW",
-    "description": "Cupra Born RESTYLING  58KW, 2022 г., електрически, 67 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-11786795820524833-cupra-born-restyling-58kw-67000km",
+    "description": "Cupra Born RESTYLING  58KW, 2022 г., електрически, 67 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 22900,
       "currency": "EUR"
@@ -228,7 +285,20 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      }
+    ],
     "spec": {
       "make": "Cupra",
       "model": "Born RESTYLING  58KW",
@@ -246,19 +316,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:57.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21786794971218528",
-    "slug": "excellent-21786794971218528",
+    "id": "am-1013",
+    "slug": "hyundai-kona-1-6hev-n-line-2020-21786794971218528",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Hyundai Kona 1.6HEV  N-LINE",
-    "description": "Hyundai Kona 1.6HEV  N-LINE, 2020 г., хибрид, 40 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21786794971218528-hyundai-kona-1-6hev-n-line-40000km",
+    "description": "Hyundai Kona 1.6HEV  N-LINE, 2020 г., хибрид, 40 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 17900,
       "currency": "EUR"
@@ -290,7 +361,20 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      }
+    ],
     "spec": {
       "make": "Hyundai",
       "model": "Kona 1.6HEV  N-LINE",
@@ -308,19 +392,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:56.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21786455005208728",
-    "slug": "excellent-21786455005208728",
+    "id": "am-1014",
+    "slug": "kia-sportage-1-6d-automat-2017-21786455005208728",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Kia Sportage 1.6D  AUTOMAT",
-    "description": "Kia Sportage 1.6D  AUTOMAT, 2017 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21786455005208728-kia-sportage-1-6d-automat",
+    "description": "Kia Sportage 1.6D  AUTOMAT, 2017 г., дизел, 180 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 10900,
       "currency": "EUR"
@@ -352,7 +437,24 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      }
+    ],
     "spec": {
       "make": "Kia",
       "model": "Sportage 1.6D  AUTOMAT",
@@ -370,19 +472,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:55.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21786453972789852",
-    "slug": "excellent-21786453972789852",
+    "id": "am-1002",
+    "slug": "vw-tiguan-2-0-di-4motion-2017-21786453972789852",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "VW Tiguan 2.0ТDI  4MOTION",
-    "description": "VW Tiguan 2.0ТDI  4MOTION, 2017 г., дизел, 199 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21786453972789852-vw-tiguan-2-0tdi-4motion-swiss",
+    "description": "VW Tiguan 2.0ТDI  4MOTION, 2017 г., дизел, 199 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 16990,
       "currency": "EUR"
@@ -414,7 +517,28 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "Tiguan 2.0ТDI  4MOTION",
@@ -432,19 +556,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:54.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21786451392501339",
-    "slug": "excellent-21786451392501339",
+    "id": "am-1003",
+    "slug": "land-rover-range-rover-evoque-hybrid-nardo-grey-2022-21786451392501339",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Land Rover Range Rover Evoque HYBRID  NARDO_GREY",
-    "description": "Land Rover Range Rover Evoque HYBRID  NARDO_GREY, 2022 г., хибрид, 125 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21786451392501339-land-rover-range-rover-evoque-hybrid-nardo-grey-125000km",
+    "description": "Land Rover Range Rover Evoque HYBRID  NARDO_GREY, 2022 г., хибрид, 125 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 25000,
       "currency": "EUR"
@@ -476,7 +601,24 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      }
+    ],
     "spec": {
       "make": "Land Rover",
       "model": "Range Rover Evoque HYBRID  NARDO_GREY",
@@ -494,19 +636,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:53.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21773151499854810",
-    "slug": "excellent-21773151499854810",
+    "id": "am-1004",
+    "slug": "audi-q2-2-0tfsi-quattro-2018-21773151499854810",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Audi Q2 2.0TFSI  QUATTRO",
-    "description": "Audi Q2 2.0TFSI  QUATTRO, 2018 г., бензин, 133 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21773151499854810-audi-q2-2-0tfsi-quattro-s-line-digital-line-assist",
+    "description": "Audi Q2 2.0TFSI  QUATTRO, 2018 г., бензин, 133 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 16900,
       "currency": "EUR"
@@ -538,7 +681,28 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
     "spec": {
       "make": "Audi",
       "model": "Q2 2.0TFSI  QUATTRO",
@@ -556,19 +720,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:52.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-11768639133016485",
-    "slug": "excellent-11768639133016485",
+    "id": "am-1005",
+    "slug": "dodge-challenger-5-7hemi-srt-2014-11768639133016485",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Dodge Challenger 5.7HEMI  SRT",
-    "description": "Dodge Challenger 5.7HEMI  SRT, 2014 г., бензин, 65 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-11768639133016485-dodge-challenger-5-7hemi-srt",
+    "description": "Dodge Challenger 5.7HEMI  SRT, 2014 г., бензин, 65 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 21500,
       "currency": "EUR"
@@ -600,7 +765,24 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
     "spec": {
       "make": "Dodge",
       "model": "Challenger 5.7HEMI  SRT",
@@ -618,19 +800,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:51.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21775914499512125",
-    "slug": "excellent-21775914499512125",
+    "id": "am-1006",
+    "slug": "vw-t-cross-1-5i-automat-2023-21775914499512125",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "VW T-Cross 1.5i  AUTOMAT",
-    "description": "VW T-Cross 1.5i  AUTOMAT, 2023 г., бензин, 48 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21775914499512125-vw-t-cross-1-5i-automat-48000km",
+    "description": "VW T-Cross 1.5i  AUTOMAT, 2023 г., бензин, 48 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 21990,
       "currency": "EUR"
@@ -662,7 +845,24 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "T-Cross 1.5i  AUTOMAT",
@@ -680,19 +880,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:50.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21785575816054903",
-    "slug": "excellent-21785575816054903",
+    "id": "am-1007",
+    "slug": "kia-niro-plug-in-hybrid-2019-21785575816054903",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Kia Niro PLUG-IN-HYBRID",
-    "description": "Kia Niro PLUG-IN-HYBRID, 2019 г., електрически, 118 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21785575816054903-kia-niro-plug-in-hybrid",
+    "description": "Kia Niro PLUG-IN-HYBRID, 2019 г., електрически, 118 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 16990,
       "currency": "EUR"
@@ -724,7 +925,24 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
     "spec": {
       "make": "Kia",
       "model": "Niro PLUG-IN-HYBRID",
@@ -734,27 +952,27 @@ export const mockListings: VehicleListing[] = [
       "transmission": "automatic",
       "mileageValue": 118000,
       "mileageUnit": "km",
-      "enginePowerHp": 141,
-      "colorExterior": ""
+      "enginePowerHp": 141
     },
     "seller": {
       "id": "dealer-excellent-cars",
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:49.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21773150110056507",
-    "slug": "excellent-21773150110056507",
+    "id": "am-1008",
+    "slug": "bmw-x3-2-0d-xdrive-2014-21773150110056507",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "BMW X3 2.0D  xDrive",
-    "description": "BMW X3 2.0D  xDrive, 2014 г., дизел, 188 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21773150110056507-bmw-x3-2-0d-xdrive-m-pack",
+    "description": "BMW X3 2.0D  xDrive, 2014 г., дизел, 188 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 12000,
       "currency": "EUR"
@@ -786,7 +1004,24 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      }
+    ],
     "spec": {
       "make": "BMW",
       "model": "X3 2.0D  xDrive",
@@ -804,19 +1039,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "publishedAt": "2026-09-07T07:59:48.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "excellent-21785323501482685",
-    "slug": "excellent-21785323501482685",
+    "id": "am-1009",
+    "slug": "nissan-juke-1-6-nismo-2014-21785323501482685",
     "category": "car",
     "dealerOrgId": "dealer-excellent-cars",
     "status": "active",
     "title": "Nissan Juke 1.6Т  NISMO",
-    "description": "Nissan Juke 1.6Т  NISMO, 2014 г., бензин, 186 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21785323501482685-nissan-juke-1-6t-nismo-alcantara",
+    "description": "Nissan Juke 1.6Т  NISMO, 2014 г., бензин, 186 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars.",
     "price": {
       "amount": 9500,
       "currency": "EUR"
@@ -848,7 +1084,28 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
+        "bg": "Навигация",
+        "en": "Навигация"
+      },
+      {
+        "bg": "Парктроник",
+        "en": "Парктроник"
+      },
+      {
+        "bg": "Безключов достъп",
+        "en": "Безключов достъп"
+      }
+    ],
     "spec": {
       "make": "Nissan",
       "model": "Juke 1.6Т  NISMO",
@@ -866,136 +1123,13 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Excellent Cars",
       "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T07:59:47.000Z",
-    "promoted": false
-  },
-  {
-    "id": "excellent-11778320754806394",
-    "slug": "excellent-11778320754806394",
-    "category": "car",
-    "dealerOrgId": "dealer-excellent-cars",
-    "status": "active",
-    "title": "Peugeot 308 1.6GT  205h.p",
-    "description": "Peugeot 308 1.6GT  205h.p, 2016 г., бензин, 130 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-11778320754806394-peugeot-308-1-6gt-205h-p-panorama-massage",
-    "price": {
-      "amount": 9200,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/excellent/vehicle-15-1.webp",
-        "alt": "Peugeot 308 1.6GT  205h.p"
-      },
-      {
-        "url": "/assets/excellent/vehicle-15-2.webp",
-        "alt": "Peugeot 308 1.6GT  205h.p"
-      },
-      {
-        "url": "/assets/excellent/vehicle-15-3.webp",
-        "alt": "Peugeot 308 1.6GT  205h.p"
-      },
-      {
-        "url": "/assets/excellent/vehicle-15-4.webp",
-        "alt": "Peugeot 308 1.6GT  205h.p"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
       "city": "Варна",
-      "region": "Варна",
-      "country": "България"
+      "logoUrl": "/assets/excellent/logo-header.png"
     },
-    "features": [],
-    "spec": {
-      "make": "Peugeot",
-      "model": "308 1.6GT  205h.p",
-      "year": 2016,
-      "bodyType": "hatchback",
-      "fuelType": "gasoline",
-      "transmission": "manual",
-      "mileageValue": 130000,
-      "mileageUnit": "km",
-      "enginePowerHp": 205,
-      "colorExterior": "Бял"
-    },
-    "seller": {
-      "id": "dealer-excellent-cars",
-      "type": "dealer",
-      "displayName": "Excellent Cars",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T07:59:46.000Z",
-    "promoted": false
-  },
-  {
-    "id": "excellent-21781781688732220",
-    "slug": "excellent-21781781688732220",
-    "category": "car",
-    "dealerOrgId": "dealer-excellent-cars",
-    "status": "active",
-    "title": "Mazda CX-5 2.5i  4x4",
-    "description": "Mazda CX-5 2.5i  4x4, 2015 г., бензин, 192 000 км. Данни от публикуваната обява. Потвърдете наличността, оборудването и условията с Excellent Cars. Не се начислява ДДС. Оригинална обява: https://excellent.mobile.bg/obiava-21781781688732220-mazda-cx-5-2-5i-4x4-automat-skyactiv",
-    "price": {
-      "amount": 14990,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/excellent/vehicle-16-1.webp",
-        "alt": "Mazda CX-5 2.5i  4x4"
-      },
-      {
-        "url": "/assets/excellent/vehicle-16-2.webp",
-        "alt": "Mazda CX-5 2.5i  4x4"
-      },
-      {
-        "url": "/assets/excellent/vehicle-16-3.webp",
-        "alt": "Mazda CX-5 2.5i  4x4"
-      },
-      {
-        "url": "/assets/excellent/vehicle-16-4.webp",
-        "alt": "Mazda CX-5 2.5i  4x4"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "България"
-    },
-    "features": [],
-    "spec": {
-      "make": "Mazda",
-      "model": "CX-5 2.5i  4x4",
-      "year": 2015,
-      "bodyType": "suv",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 192000,
-      "mileageUnit": "km",
-      "enginePowerHp": 190,
-      "colorExterior": "Бордо"
-    },
-    "seller": {
-      "id": "dealer-excellent-cars",
-      "type": "dealer",
-      "displayName": "Excellent Cars",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T07:59:45.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

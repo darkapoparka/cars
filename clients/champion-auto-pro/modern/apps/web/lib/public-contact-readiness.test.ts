@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { isPublicContactSubmissionAvailable } from "./public-contact-readiness";
 
 const deliveryProvider = {
-  resendFrom: "hello@championautopro.mobile.bg",
+  resendFrom: "hello@daynightautogroup.bg",
   resendToken: "re_test_token",
 };
 
@@ -47,7 +47,7 @@ describe("public contact readiness", () => {
         ...deliveryProvider,
         nodeEnv: "production",
         redisToken: "redis-token-value",
-        redisUrl: "https://redis.championautopro.mobile.bg",
+        redisUrl: "https://redis.daynightautogroup.bg",
       })
     ).toBe(true);
   });
@@ -57,8 +57,8 @@ describe("public contact readiness", () => {
       isPublicContactSubmissionAvailable({
         nodeEnv: "production",
         redisToken: "redis-token-value",
-        redisUrl: "https://redis.championautopro.mobile.bg/path",
-        resendFrom: "Champion Auto Pro<hello@championautopro.mobile.bg>",
+        redisUrl: "https://redis.daynightautogroup.bg/path",
+        resendFrom: "Champion Auto Pro<hello@daynightautogroup.bg>",
         resendToken: "wrong-token-value",
       })
     ).toBe(false);
@@ -88,7 +88,7 @@ describe("public contact readiness", () => {
       isPublicContactSubmissionAvailable({
         ...deliveryProvider,
         nodeEnv: "development",
-        resendFrom: "Champion Auto Pro Preview <hello@championautopro.mobile.bg>",
+        resendFrom: "Champion Auto Pro Preview <hello@daynightautogroup.bg>",
       })
     ).toBe(false);
   });
@@ -96,7 +96,7 @@ describe("public contact readiness", () => {
   it.each([
     "https://redis.example.test",
     "https://127.0.0.2",
-    "https://redis.championautopro.mobile.bg.",
+    "https://redis.daynightautogroup.bg.",
   ])("rejects a non-deployable Redis origin: %s", (redisUrl) => {
     expect(
       isPublicContactSubmissionAvailable({
@@ -109,8 +109,8 @@ describe("public contact readiness", () => {
   });
 
   it.each([
-    { resendFrom: " hello@championautopro.mobile.bg" },
-    { resendFrom: "hello@championautopro.mobile.bg " },
+    { resendFrom: " hello@daynightautogroup.bg" },
+    { resendFrom: "hello@daynightautogroup.bg " },
     { resendToken: " re_test_token" },
     { resendToken: "re_test_token " },
   ])("rejects surrounding provider whitespace without normalization: $resendFrom$resendToken", (override) => {
@@ -129,7 +129,7 @@ describe("public contact readiness", () => {
         ...deliveryProvider,
         nodeEnv: "production",
         redisToken: " redis-token-value ",
-        redisUrl: "https://redis.championautopro.mobile.bg",
+        redisUrl: "https://redis.daynightautogroup.bg",
       })
     ).toBe(false);
   });

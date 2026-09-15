@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "priselci",
   "templateKey": "modern",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
   "createdAt": "2026-09-06T21:48:54.245Z",
-  "state": "local-review-ready",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,19 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "checkedAt": "2026-09-08T03:39:29.880Z",
-    "evidence": "../qa-final/priselci/modern/result.json",
-    "screenshots": "../qa-final/priselci/modern",
-    "framework": {
-      "build": 0,
-      "typecheck": 0
-    },
-    "sourceScan": "../qa-final/source-scan.json",
-    "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -57,5 +48,22 @@
   "finalizationChanges": [
     "Configured social destinations only; no coming-soon promises",
     "Legible wordmarks on dark mobile/desktop headers"
-  ]
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "3314c616454263863f0355bc463e861e3cb49a91",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-15T06:11:46.895Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

@@ -1,4 +1,10 @@
-
+import { resolve } from '$app/paths';
+import {
+	postIntake,
+	invalidIntakeResponse,
+	hasResponseId,
+	type IntakeOptions
+} from './intake-request';
 
 export type LeadSubmitPayload = {
 	customerName: string;
@@ -27,6 +33,19 @@ export type LeadSubmitResult =
 			details?: unknown;
 	  };
 
-export async function submitLead(payload: LeadSubmitPayload): Promise<LeadSubmitResult> {
- return { ok: false, status: 503, error: "Демонстрационна форма. Обадете се на 0877 800 921." };
+export async function submitLead(
+	payload: LeadSubmitPayload,
+	options: IntakeOptions = {}
+): Promise<LeadSubmitResult> {
+	const result = await postIntake(resolve('/api/leads'), payload, options);
+	if (!result.ok) return result;
+	const { body } = result;
+	if (!hasResponseId(body, 'leadId') || !hasResponseId(body, 'conversationId'))
+		return invalidIntakeResponse(result.status);
+	return {
+		ok: true,
+		leadId: body.leadId,
+		conversationId: body.conversationId,
+		status: typeof body.status === 'string' ? body.status : 'new'
+	};
 }

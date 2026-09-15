@@ -3,13 +3,13 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    "id": "priselci-11784527405061757",
-    "slug": "priselci-11784527405061757",
+    "id": "am-1001",
+    "slug": "vw-golf-1-4-2007-11784527405061757",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "VW Golf 1.4 БЕНЗИН",
-    "description": "VW Golf 1.4 БЕНЗИН, 2007 г., 235 193 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11784527405061757-vw-golf-1-4-benzin",
+    "description": "VW Golf 1.4 БЕНЗИН, 2007 г., 235 193 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 3600,
       "currency": "EUR"
@@ -41,7 +41,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "Golf 1.4 БЕНЗИН",
@@ -59,19 +92,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T10:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "priselci-11758270885113337",
-    "slug": "priselci-11758270885113337",
+    "id": "am-1010",
+    "slug": "vw-passat-1-4-2010-11758270885113337",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "VW Passat 1.4 БЕНЗИН",
-    "description": "VW Passat 1.4 БЕНЗИН, 2010 г., 179 848 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11758270885113337-vw-passat-1-4-benzin",
+    "description": "VW Passat 1.4 БЕНЗИН, 2010 г., 179 848 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 4299,
       "currency": "EUR"
@@ -103,7 +137,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "Passat 1.4 БЕНЗИН",
@@ -121,19 +188,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "priselci-11753962633467246",
-    "slug": "priselci-11753962633467246",
+    "id": "am-1011",
+    "slug": "vw-passat-2-0tdi-commonrail-2008-11753962633467246",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "VW Passat 2.0TDI COMMONRAIL",
-    "description": "VW Passat 2.0TDI COMMONRAIL, 2008 г., 210 534 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11753962633467246-vw-passat-2-0tdi-commonrail",
+    "description": "VW Passat 2.0TDI COMMONRAIL, 2008 г., 210 534 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 3900,
       "currency": "EUR"
@@ -165,7 +233,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "Passat 2.0TDI COMMONRAIL",
@@ -183,19 +284,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "priselci-11784527857493559",
-    "slug": "priselci-11784527857493559",
+    "id": "am-1012",
+    "slug": "seat-ibiza-1-2-2010-11784527857493559",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Seat Ibiza 1.2 БЕНЗИН",
-    "description": "Seat Ibiza 1.2 БЕНЗИН, 2010 г., 175 532 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11784527857493559-seat-ibiza-1-2-benzin",
+    "description": "Seat Ibiza 1.2 БЕНЗИН, 2010 г., 175 532 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 3499,
       "currency": "EUR"
@@ -227,7 +329,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Seat",
       "model": "Ibiza 1.2 БЕНЗИН",
@@ -245,19 +346,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:57.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-21754395406651747",
-    "slug": "priselci-21754395406651747",
+    "id": "am-1013",
+    "slug": "renault-koleos-2-0-4-4-2010-21754395406651747",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Renault Koleos 2.0 ДИЗЕЛ 4Х4",
-    "description": "Renault Koleos 2.0 ДИЗЕЛ 4Х4, 2010 г., 181 246 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-21754395406651747-renault-koleos-2-0-dizel-4h4",
+    "description": "Renault Koleos 2.0 ДИЗЕЛ 4Х4, 2010 г., 181 246 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 44299,
       "currency": "EUR"
@@ -289,7 +391,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Блокаж на диференциала",
+        "en": "Блокаж на диференциала"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      }
+    ],
     "spec": {
       "make": "Renault",
       "model": "Koleos 2.0 ДИЗЕЛ 4Х4",
@@ -307,19 +442,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:56.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-11781856640282742",
-    "slug": "priselci-11781856640282742",
+    "id": "am-1014",
+    "slug": "peugeot-307-cc-2006-11781856640282742",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Peugeot 307 CC КАБРИО",
-    "description": "Peugeot 307 CC КАБРИО, 2006 г., 205 664 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11781856640282742-peugeot-307-cc-kabrio",
+    "description": "Peugeot 307 CC КАБРИО, 2006 г., 205 664 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 2899,
       "currency": "EUR"
@@ -351,7 +487,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "2(3) Врати",
+        "en": "2(3) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      }
+    ],
     "spec": {
       "make": "Peugeot",
       "model": "307 CC КАБРИО",
@@ -369,19 +538,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:55.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-11759747090481666",
-    "slug": "priselci-11759747090481666",
+    "id": "am-1002",
+    "slug": "ford-mondeo-2-0-dizel-2009-11759747090481666",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Ford Mondeo 2.0 DIZEL",
-    "description": "Ford Mondeo 2.0 DIZEL, 2009 г., 235 788 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11759747090481666-ford-mondeo-2-0-dizel",
+    "description": "Ford Mondeo 2.0 DIZEL, 2009 г., 235 788 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 3299,
       "currency": "EUR"
@@ -413,7 +583,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      }
+    ],
     "spec": {
       "make": "Ford",
       "model": "Mondeo 2.0 DIZEL",
@@ -431,19 +634,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:54.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-11776863022154449",
-    "slug": "priselci-11776863022154449",
-    "category": "car",
+    "id": "am-1003",
+    "slug": "peugeot-5008-2-0hdi-150-2011-11776863022154449",
+    "category": "van",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Peugeot 5008 2.0HDI 150К.С",
-    "description": "Peugeot 5008 2.0HDI 150К.С, 2011 г., 210 452 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11776863022154449-peugeot-5008-2-0hdi-150k-s",
+    "description": "Peugeot 5008 2.0HDI 150К.С, 2011 г., 210 452 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 5099,
       "currency": "EUR"
@@ -475,7 +679,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      }
+    ],
     "spec": {
       "make": "Peugeot",
       "model": "5008 2.0HDI 150К.С",
@@ -493,19 +730,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:53.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-11751891575433302",
-    "slug": "priselci-11751891575433302",
+    "id": "am-1004",
+    "slug": "mercedes-benz-c-200-2-2-cdi-2004-11751891575433302",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Mercedes-Benz C 200 2.2 CDI",
-    "description": "Mercedes-Benz C 200 2.2 CDI, 2004 г., 218 432 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11751891575433302-mercedes-benz-c-200-2-2-cdi",
+    "description": "Mercedes-Benz C 200 2.2 CDI, 2004 г., 218 432 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 2799,
       "currency": "EUR"
@@ -537,7 +775,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      }
+    ],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "C 200 2.2 CDI",
@@ -555,19 +826,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:52.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-11787126157294169",
-    "slug": "priselci-11787126157294169",
+    "id": "am-1005",
+    "slug": "citroen-c3-picasso-1-6hdi-90-2010-11787126157294169",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Citroen C3 Picasso 1.6HDI 90К.С",
-    "description": "Citroen C3 Picasso 1.6HDI 90К.С, 2010 г., 185 783 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11787126157294169-citroen-c3-picasso-1-6hdi-90k-s",
+    "description": "Citroen C3 Picasso 1.6HDI 90К.С, 2010 г., 185 783 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 3499,
       "currency": "EUR"
@@ -599,7 +871,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      }
+    ],
     "spec": {
       "make": "Citroen",
       "model": "C3 Picasso 1.6HDI 90К.С",
@@ -617,19 +922,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:51.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-11784638939574277",
-    "slug": "priselci-11784638939574277",
+    "id": "am-1006",
+    "slug": "audi-a3-1-9-tdi-105ps-2009-11784638939574277",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Audi A3 1.9 TDI 105ps",
-    "description": "Audi A3 1.9 TDI 105ps, 2009 г., 253 746 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11784638939574277-audi-a3-1-9-tdi-105ps",
+    "description": "Audi A3 1.9 TDI 105ps, 2009 г., 253 746 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 4699,
       "currency": "EUR"
@@ -661,7 +967,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      }
+    ],
     "spec": {
       "make": "Audi",
       "model": "A3 1.9 TDI 105ps",
@@ -679,19 +1018,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:50.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-11779190417819998",
-    "slug": "priselci-11779190417819998",
+    "id": "am-1007",
+    "slug": "dacia-sandero-1-4-2009-11779190417819998",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ",
-    "description": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ, 2009 г., 136 016 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11779190417819998-dacia-sandero-1-4-benzin-gaz",
+    "description": "Dacia Sandero 1.4 БЕНЗИН/ГАЗ, 2009 г., 136 016 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 2500,
       "currency": "EUR"
@@ -723,7 +1063,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Газова уредба",
+        "en": "Газова уредба"
+      }
+    ],
     "spec": {
       "make": "Dacia",
       "model": "Sandero 1.4 БЕНЗИН/ГАЗ",
@@ -741,19 +1114,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:49.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-11770812815337634",
-    "slug": "priselci-11770812815337634",
-    "category": "car",
+    "id": "am-1008",
+    "slug": "renault-grand-scenic-1-5dci-2012-11770812815337634",
+    "category": "van",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "Renault Grand scenic 1.5DCI",
-    "description": "Renault Grand scenic 1.5DCI, 2012 г., 199 811 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11770812815337634-renault-grand-scenic-1-5dci",
+    "description": "Renault Grand scenic 1.5DCI, 2012 г., 199 811 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 4299,
       "currency": "EUR"
@@ -785,7 +1159,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      }
+    ],
     "spec": {
       "make": "Renault",
       "model": "Grand scenic 1.5DCI",
@@ -803,19 +1210,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:48.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "priselci-21786691566300206",
-    "slug": "priselci-21786691566300206",
+    "id": "am-1009",
+    "slug": "bmw-x3-2-0-4-4-2007-21786691566300206",
     "category": "car",
     "dealerOrgId": "dealer-priselci",
     "status": "active",
     "title": "BMW X3 2.0 ДИЗЕЛ 4Х4",
-    "description": "BMW X3 2.0 ДИЗЕЛ 4Х4, 2007 г., 207 195 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-21786691566300206-bmw-x3-2-0-dizel-4h4",
+    "description": "BMW X3 2.0 ДИЗЕЛ 4Х4, 2007 г., 207 195 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци.",
     "price": {
       "amount": 44399,
       "currency": "EUR"
@@ -847,7 +1255,40 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      }
+    ],
     "spec": {
       "make": "BMW",
       "model": "X3 2.0 ДИЗЕЛ 4Х4",
@@ -865,136 +1306,13 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Автокъща Приселци",
       "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:47.000Z",
-    "promoted": false
-  },
-  {
-    "id": "priselci-21787900875118991",
-    "slug": "priselci-21787900875118991",
-    "category": "car",
-    "dealerOrgId": "dealer-priselci",
-    "status": "active",
-    "title": "Nissan Qashqai 1.5 DCI",
-    "description": "Nissan Qashqai 1.5 DCI, 2012 г., 192 641 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-21787900875118991-nissan-qashqai-1-5-dci",
-    "price": {
-      "amount": 5499,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/priselci/vehicle-15-1.webp",
-        "alt": "Nissan Qashqai 1.5 DCI"
-      },
-      {
-        "url": "/assets/priselci/vehicle-15-2.webp",
-        "alt": "Nissan Qashqai 1.5 DCI"
-      },
-      {
-        "url": "/assets/priselci/vehicle-15-3.webp",
-        "alt": "Nissan Qashqai 1.5 DCI"
-      },
-      {
-        "url": "/assets/priselci/vehicle-15-4.webp",
-        "alt": "Nissan Qashqai 1.5 DCI"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
       "city": "Варна",
-      "region": "Варна",
-      "country": "България"
+      "logoUrl": "/assets/priselci/wordmark.svg"
     },
-    "features": [],
-    "spec": {
-      "make": "Nissan",
-      "model": "Qashqai 1.5 DCI",
-      "year": 2012,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 192641,
-      "mileageUnit": "km",
-      "enginePowerHp": 110,
-      "colorExterior": "Черен"
-    },
-    "seller": {
-      "id": "dealer-priselci",
-      "type": "dealer",
-      "displayName": "Автокъща Приселци",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:46.000Z",
-    "promoted": false
-  },
-  {
-    "id": "priselci-11763969547989753",
-    "slug": "priselci-11763969547989753",
-    "category": "car",
-    "dealerOrgId": "dealer-priselci",
-    "status": "active",
-    "title": "Mercedes-Benz E 280 3.0CDI V6",
-    "description": "Mercedes-Benz E 280 3.0CDI V6, 2005 г., 208 357 км. Подбрана обява от 07.09.2026. Потвърдете наличността, оборудването и условията с Автокъща Приселци. Не се начислява ДДС. Оригинална обява: https://priselci.mobile.bg/obiava-11763969547989753-mercedes-benz-e-280-3-0cdi-v6",
-    "price": {
-      "amount": 64100,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/priselci/vehicle-16-1.webp",
-        "alt": "Mercedes-Benz E 280 3.0CDI V6"
-      },
-      {
-        "url": "/assets/priselci/vehicle-16-2.webp",
-        "alt": "Mercedes-Benz E 280 3.0CDI V6"
-      },
-      {
-        "url": "/assets/priselci/vehicle-16-3.webp",
-        "alt": "Mercedes-Benz E 280 3.0CDI V6"
-      },
-      {
-        "url": "/assets/priselci/vehicle-16-4.webp",
-        "alt": "Mercedes-Benz E 280 3.0CDI V6"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "България"
-    },
-    "features": [],
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "E 280 3.0CDI V6",
-      "year": 2005,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 208357,
-      "mileageUnit": "km",
-      "enginePowerHp": 190,
-      "colorExterior": "Сив"
-    },
-    "seller": {
-      "id": "dealer-priselci",
-      "type": "dealer",
-      "displayName": "Автокъща Приселци",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:45.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

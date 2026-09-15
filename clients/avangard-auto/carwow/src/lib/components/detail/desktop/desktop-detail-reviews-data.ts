@@ -1,13 +1,5 @@
-export type DesktopDetailReview = {
-	id: string;
-	name: string;
-	date: string;
-	text: string;
-	avatar?: string;
-	initials?: string;
-};
+import { daynightReviews, daynightReviewDistribution } from '$lib/data/daynight-reviews';
 
-import { daynightReviews } from '$lib/data/daynight-reviews';
-export const desktopDetailStarIndexes: number[] = [];
-export const desktopDetailRatingRows: {id:string;label:string;percent:string}[] = [];
-export const desktopDetailReviews: DesktopDetailReview[] = daynightReviews.slice(0,3).map(v => ({id:v.id,name:v.name,date:v.label,text:v.text,avatar:v.avatar}));
+export const desktopDetailStarIndexes = [1, 2, 3, 4, 5] as const;
+export const desktopDetailRatingRows = daynightReviewDistribution;
+export const desktopDetailReviews = daynightReviews.slice(0, 3);

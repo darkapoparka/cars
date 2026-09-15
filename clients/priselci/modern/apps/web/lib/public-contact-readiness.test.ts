@@ -58,7 +58,7 @@ describe("public contact readiness", () => {
         nodeEnv: "production",
         redisToken: "redis-token-value",
         redisUrl: "https://redis.daynightautogroup.bg/path",
-        resendFrom: "Day & Night<hello@daynightautogroup.bg>",
+        resendFrom: "Приселци<hello@daynightautogroup.bg>",
         resendToken: "wrong-token-value",
       })
     ).toBe(false);
@@ -88,7 +88,7 @@ describe("public contact readiness", () => {
       isPublicContactSubmissionAvailable({
         ...deliveryProvider,
         nodeEnv: "development",
-        resendFrom: "Day & Night Preview <hello@daynightautogroup.bg>",
+        resendFrom: "Приселци Preview <hello@daynightautogroup.bg>",
       })
     ).toBe(false);
   });

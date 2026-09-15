@@ -7,7 +7,8 @@
 </script>
 
 <div class="dn-app-shell">
+  <a class="dn-skip-link" href="#main-content">Към съдържанието</a>
   <Header />
-  <main>{@render children()}</main>
+  <main id="main-content" tabindex="-1">{@render children()}</main>
   <Footer showActions={showFooterActions} {showMobileFooter} />
 </div>

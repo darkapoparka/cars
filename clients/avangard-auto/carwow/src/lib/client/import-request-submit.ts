@@ -1,4 +1,10 @@
-
+import { resolve } from '$app/paths';
+import {
+	postIntake,
+	invalidIntakeResponse,
+	hasResponseId,
+	type IntakeOptions
+} from './intake-request';
 
 export type ImportRequestSubmitPayload = {
 	customerName: string;
@@ -36,7 +42,23 @@ export type ImportRequestSubmitResult =
 	  };
 
 export async function submitImportRequest(
-	payload: ImportRequestSubmitPayload
+	payload: ImportRequestSubmitPayload,
+	options: IntakeOptions = {}
 ): Promise<ImportRequestSubmitResult> {
- return { ok: false, status: 503, error: "Демонстрационна форма. Обадете се на 0877 800 921." };
+	const result = await postIntake(resolve('/api/import-requests'), payload, options);
+	if (!result.ok) return result;
+	const { body } = result;
+	if (
+		!hasResponseId(body, 'importRequestId') ||
+		!hasResponseId(body, 'leadId') ||
+		!hasResponseId(body, 'conversationId')
+	)
+		return invalidIntakeResponse(result.status);
+	return {
+		ok: true,
+		importRequestId: body.importRequestId,
+		leadId: body.leadId,
+		conversationId: body.conversationId,
+		status: typeof body.status === 'string' ? body.status : 'new'
+	};
 }

@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "autolife",
   "templateKey": "auto-best",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
   "createdAt": "2026-09-06T21:48:37.439Z",
-  "state": "local-review-ready",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,18 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "checkedAt": "2026-09-08T03:39:29.872Z",
-    "evidence": "../qa-final/autolife/auto-best/result.json",
-    "screenshots": "../qa-final/autolife/auto-best",
-    "framework": {
-      "validate": 0
-    },
-    "sourceScan": "../qa-final/source-scan.json",
-    "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -67,5 +59,22 @@
   ],
   "finalizationChanges": [
     "Corrected 10–20,000 EUR budget label"
-  ]
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/"
+  },
+  "workflowCommit": "01961d9e25915120bb5226c20028413d6ac9ac42",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-15T06:08:45.413Z",
+    "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

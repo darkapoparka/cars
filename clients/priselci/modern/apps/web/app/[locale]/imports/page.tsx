@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@repo/design-system/components/ui/accordion";
 import { cn } from "@repo/design-system/lib/utils";
+import { leadSite } from "@repo/marketplace";
 import {
   getMobileQuickPillClassName,
   marketplaceDiscoveryFrameClassName,
@@ -16,6 +17,7 @@ import { ArrowRight, Globe2, Search } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicExternalInventory } from "@/lib/public-external-inventory";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
@@ -90,8 +92,7 @@ const importFaqs = {
       question: "Какво означава доставка до България?",
     },
     {
-      answer:
-        "Не е нужен акаунт. Оставете телефон и екипът на Приселци ще се свърже с вас, за да уточни следващата стъпка.",
+      answer: `Не е нужен акаунт. Оставете телефон и екипът на ${leadSite.shortName} ще се свърже с вас, за да уточни следващата стъпка.`,
       question: "Трябва ли да се регистрирам?",
     },
   ],
@@ -112,8 +113,7 @@ const importFaqs = {
       question: "What does delivery to Bulgaria mean?",
     },
     {
-      answer:
-        "No account is required. Leave a phone number and the Приселци team will contact you about the next step.",
+      answer: `No account is required. Leave a phone number and the ${leadSite.shortName} team will contact you about the next step.`,
       question: "Do I need to register?",
     },
   ],
@@ -128,6 +128,22 @@ const pageCopy = {
     desktopTitle: "Реални обяви за внос",
     faqDescription: "Най-важното за заявката и доставката до България.",
     faqTitle: "Често задавани въпроси",
+    helpSteps: [
+      {
+        title: "Изберете автомобил",
+        description: "Изпратете линк към обява или посочете марка и модел.",
+      },
+      {
+        title: "Добавете изискванията",
+        description:
+          "Посочете държава, година, пробег и бюджет, когато са известни.",
+      },
+      {
+        title: "Уточнете офертата",
+        description:
+          "Обсъдете по телефона цената, срока и документите за конкретния автомобил.",
+      },
+    ],
     heroAlt: "Автомобил за международен внос",
     mobileTitle: "Внос на автомобил",
     routesLabel: "Бързи маршрути за внос",
@@ -135,7 +151,7 @@ const pageCopy = {
     sourceLabel: "Линк към обявата",
     sourcePlaceholder: "Поставете линк към обявата",
     sourcePlaceholderLong: "Поставете линк към конкретна обява",
-    submitLabel: "Изпратете линка",
+    submitLabel: "Продължете с този линк",
     submitText: "Поискай оферта",
   },
   en: {
@@ -146,6 +162,21 @@ const pageCopy = {
     desktopTitle: "Real vehicles available for import",
     faqDescription: "The essentials about requests and delivery to Bulgaria.",
     faqTitle: "Frequently asked questions",
+    helpSteps: [
+      {
+        title: "Choose a vehicle",
+        description: "Send a listing link or share the make and model.",
+      },
+      {
+        title: "Add your requirements",
+        description: "Include the origin, year, mileage and budget when known.",
+      },
+      {
+        title: "Discuss the offer",
+        description:
+          "Discuss price, timing and documents for the specific vehicle by phone.",
+      },
+    ],
     heroAlt: "Vehicle prepared for international import",
     mobileTitle: "Import a vehicle",
     routesLabel: "Quick import routes",
@@ -153,7 +184,7 @@ const pageCopy = {
     sourceLabel: "Vehicle listing link",
     sourcePlaceholder: "Paste listing link",
     sourcePlaceholderLong: "Paste a specific listing link",
-    submitLabel: "Submit the link",
+    submitLabel: "Continue with this link",
     submitText: "Request a quote",
   },
 } as const;
@@ -186,13 +217,13 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Изпратете линк или данни за автомобил от чужбина. Приселци ще уточни заявката за внос и доставка до България."
-      : "Send a listing link or vehicle details from abroad. Приселци will discuss the import request and delivery to Bulgaria.",
+      ? `Изпратете линк или данни за автомобил от чужбина. ${leadSite.shortName} ще уточни заявката за внос и доставка до България.`
+      : `Send a listing link or vehicle details from abroad. ${leadSite.shortName} will discuss the import request and delivery to Bulgaria.`,
     locale,
     path,
     title: isBg
-      ? "Внос на автомобил по заявка | Приселци"
-      : "Vehicle import request | Приселци",
+      ? `Внос на автомобил по заявка | ${leadSite.shortName}`
+      : `Vehicle import request | ${leadSite.shortName}`,
   });
 };
 
@@ -249,8 +280,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
         <MobileDealerServiceHero
           helpAction={
             <MobileServiceHelp
+              description={text.faqDescription}
               faqs={importFaqs[normalizedLocale]}
               locale={normalizedLocale}
+              steps={text.helpSteps}
               title={
                 normalizedLocale === "bg"
                   ? "Как работи вносът"
@@ -391,6 +424,7 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
                     defaultSourceUrl={defaultSourceUrl}
                     locale={normalizedLocale}
                     privacyHref={localize("/legal/privacy")}
+                    submissionAvailable={isPublicContactSubmissionAvailable()}
                   />
                 </div>
               </div>

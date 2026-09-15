@@ -8,3 +8,13 @@ bun.lockb
 # Miscellaneous
 /static/
 /.template-ref/
+
+# Generated outputs and local verification evidence are not source files.
+/.audit/
+/.svelte-kit/
+/.vercel/
+/.tmp/
+/build/
+/playwright-report/
+/test-results/
+/docs/legacy/

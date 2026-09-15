@@ -12,7 +12,7 @@ import {
 	getDayNightVehicleAvailability,
 	getDayNightVehicleCondition
 } from '$lib/data/daynight-vehicles';
-import { normalizeCondition } from '$lib/utils/daynight-quick-filter-dom';
+import { parseInventoryFilters, readMobileSort } from '$lib/utils/inventory-url';
 import type { InventoryListVehicle } from '$lib/types/inventory';
 
 export type { SortKey } from '$lib/types/mobile-inventory';
@@ -141,10 +141,7 @@ export function vehicleMatches(v: InventoryListVehicle, criteria: InventoryCrite
 	if (criteria.condition && getDayNightVehicleCondition(v) !== criteria.condition) {
 		return false;
 	}
-	if (
-		criteria.availability &&
-		getDayNightVehicleAvailability(v) !== criteria.availability
-	) {
+	if (criteria.availability && getDayNightVehicleAvailability(v) !== criteria.availability) {
 		return false;
 	}
 
@@ -179,21 +176,8 @@ export class InventoryFilterState {
 		this.#getVehicles = getVehicles;
 
 		if (init) {
-			this.query = init.get('q') ?? '';
-			// Multi-value fields read EVERY occurrence (`?brand=Audi&brand=BMW`) and
-			// also tolerate comma-joined values (`?brand=Audi,BMW`) — superset of the
-			// mobile comma-only form, required by the desktop deep-link + e2e.
-			this.brand = splitParams(init.getAll('brand'));
-			this.model = splitParams(init.getAll('model'));
-			this.body = splitParams(init.getAll('body'));
-			this.feature = splitParams(init.getAll('feature'));
-			this.fuel = init.get('fuel') ?? '';
-			this.transmission = init.get('transmission') ?? '';
-			this.price = init.get('price') ?? '';
-			this.mileage = init.get('mileage') ?? '';
-			this.condition = normalizeCondition(init.get('condition') || init.get('type'));
-			this.availability = init.get('availability') ?? '';
-			// `sort` is intentionally NOT hydrated from the URL (mirrors MobileInventoryPage).
+			Object.assign(this, parseInventoryFilters(init));
+			this.sort = readMobileSort(init.get('sort'));
 		}
 	}
 
@@ -225,20 +209,4 @@ export function createInventoryFilterState(
 	init?: URLSearchParams
 ): InventoryFilterState {
 	return new InventoryFilterState(getVehicles, init);
-}
-
-/** Comma-split + trim + drop-empties (mirrors MobileInventoryPage URL hydration). */
-function splitParam(value: string | null): string[] {
-	return (value ?? '')
-		.split(',')
-		.map((item) => item.trim())
-		.filter(Boolean);
-}
-
-/**
- * Repeated-param hydration: flatten every `?name=…` occurrence, comma-split each,
- * trim, dedupe, drop-empties. Handles both `?brand=A&brand=B` and `?brand=A,B`.
- */
-function splitParams(values: string[]): string[] {
-	return Array.from(new Set(values.flatMap(splitParam)));
 }

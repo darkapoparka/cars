@@ -10,7 +10,9 @@ export type FooterSocialLink = {
 
 export type BodyChipIcon = 'sedan' | 'suv' | 'wagon' | 'hatchback' | 'coupe' | 'mpv';
 
-export const footerSocialLinks: FooterSocialLink[] = [{label:'Mobile.bg',href:daynightSite.sourceInventory,title:'Обявите на Excellent Cars в Mobile.bg',icon:'mobilebg',external:true}];
+export const footerSocialLinks: FooterSocialLink[] = [
+	{ label: "Mobile.bg", href: daynightSite.sourceInventory, title: "Виж наличните автомобили в mobile.bg", icon: "mobilebg", external: true }
+];
 
 export const brandLogos: Record<string, string> = {
 	Audi: '/assets/images/brand/brand-3.png',
@@ -88,3 +90,16 @@ export const bodyChipIconFor = (body: string): BodyChipIcon => {
 };
 
 export const bodyLabel = (body: string) => (body === 'SUV' ? 'Джип' : body);
+
+// Curated browsing order belongs to template data, not the page composition.
+export const mobileBodyCatalog = ['Джип', 'Седан', 'Купе', 'Ван', 'Комби', 'Хечбек'] as const;
+export const mobileBrandCatalog = [
+	{ brand: 'BMW', label: 'BMW' },
+	{ brand: 'Mercedes-Benz', label: 'Mercedes' },
+	{ brand: 'Audi', label: 'Audi' },
+	{ brand: 'Porsche', label: 'Porsche' },
+	{ brand: 'Mazda', label: 'Mazda' },
+	{ brand: 'Honda', label: 'Honda' },
+	{ brand: 'Toyota', label: 'Toyota' },
+	{ brand: 'Volvo', label: 'Volvo' }
+] as const;

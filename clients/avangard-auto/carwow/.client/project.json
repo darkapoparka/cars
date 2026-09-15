@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "avangard-auto",
   "templateKey": "carwow",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
   "createdAt": "2026-09-06T21:49:19.074Z",
-  "state": "personalized-local-qa-passed",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,18 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "verifiedAt": "2026-09-08T03:48:52.628Z",
-    "widths": [
-      390,
-      1440
-    ],
-    "browserEvidence": "J:/cars/clients/avangard-auto/qa-final/FINAL.md",
-    "routeChecks": 10,
-    "interactionChecks": 2
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -61,5 +53,25 @@
     "Generic decorative source artwork and explicitly labelled sample administration remain.",
     "Original asset/license provenance retained; no new rights determination.",
     "Modern exact gallery-trigger focus restoration was not certified; inherited accessibility behavior remains."
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "3314c616454263863f0355bc463e861e3cb49a91",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-15T06:10:08.401Z",
+    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "mode": "fresh-template-plus-dealer-overlay"
+  },
+  "finalizationChanges": [
+    "Replaced inherited template logo with the existing AVANGARD AUTO text wordmark; official source raster remains archived because it is too small for header use."
   ]
 }

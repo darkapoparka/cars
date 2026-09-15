@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "autolife",
   "templateKey": "carwow",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
   "createdAt": "2026-09-06T21:49:19.092Z",
-  "state": "local-review-ready",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,21 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "checkedAt": "2026-09-08T03:39:50.683Z",
-    "evidence": "../qa-final/autolife/carwow/result.json",
-    "screenshots": "../qa-final/autolife/carwow",
-    "framework": {
-      "build": 0,
-      "check": 0
-    },
-    "sourceScan": "../qa-final/source-scan.json",
-    "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission",
-    "focusedEvidence": "../qa-final/focused.json",
-    "numericEvidence": "../qa-final/numeric-stock-check.json"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -75,5 +64,22 @@
     "Finance phone and retained map destinations use client business data",
     "Personalized manifest/default social-preview SVGs; old proposal/concept HTML redirects with preserved originals",
     "Empty staff detail route resolves runtime 404 instead of demanding nonexistent prerender entries"
-  ]
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "01961d9e25915120bb5226c20028413d6ac9ac42",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-15T06:09:12.852Z",
+    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

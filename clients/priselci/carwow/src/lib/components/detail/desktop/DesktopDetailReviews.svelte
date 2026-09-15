@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
+	import { daynightReviewAverage, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import {
 		desktopDetailRatingRows,
 		desktopDetailReviews,
@@ -9,14 +10,16 @@
 </script>
 
 <div class="mb-16 flex items-center justify-between gap-16">
-	<p class="h4">Отзиви — няма потвърдени публикации</p>
+	<h2 class="h4">Отзиви от клиенти</h2>
 </div>
+
+<p class="text-secondary mb-20">{daynightReviewDisclosure}</p>
 
 <div class="rating-box mb-40">
 	<div class="rating-box__content">
 		<div class="rating-box__overview">
 			<div class="rating-box__average">
-				<span class="rating-box__score">—</span>
+				<span class="rating-box__score">{daynightReviewAverage.toFixed(1)}</span>
 				<div class="rating-box__stars">
 					{#each desktopDetailStarIndexes as starIndex (starIndex)}
 						<img
@@ -54,9 +57,7 @@
 			{/each}
 		</div>
 		<div class="rating-box__button">
-			<a href="#reviewForm" class="sa-cta sa-cta-primary sa-cta-compact">
-				Добавете отзив
-			</a>
+			<a href="#reviewForm" class="sa-cta-compact sa-cta sa-cta-primary"> Добавете отзив </a>
 		</div>
 	</div>
 </div>
@@ -75,20 +76,16 @@
 							loading="lazy"
 						/>
 					</div>
-				{:else}
-					<div class="comment-box__avatar guest">
-						{review.initials}
-					</div>
 				{/if}
 				<div>
 					<div class="text-secondary mb-8 flex items-center gap-4">
 						<p class="h5">{review.name}</p>
 						<span class="text-secondary text-sm">-</span>
-						<span class="text-secondary text-sm">{review.date}</span>
+						<span class="text-secondary text-sm">{review.label}</span>
 					</div>
 
 					<div class="flex items-center">
-						{#each desktopDetailStarIndexes as starIndex (starIndex)}
+						{#each desktopDetailStarIndexes.slice(0, review.rating) as starIndex (starIndex)}
 							<img
 								src="/assets/icons/star-2.svg"
 								alt=""
@@ -113,12 +110,12 @@
 </div>
 
 <div id="reviewForm">
-	<p class="h4 mb-8 capitalize">Добавете отзив</p>
-	<p class="mb-20">Имейлът няма да бъде публикуван</p>
+	<h2 class="h4 mb-8 capitalize">Добавете отзив</h2>
+	<p class="mb-20">Изпратете мнение през формата за контакт. Публикуването се уточнява с екипа.</p>
 
 	<a
 		href={resolve('/contact?intent=review')}
-		class="sa-cta sa-cta-primary sa-cta-compact"
+		class="sa-cta-compact sa-cta sa-cta-primary"
 		title="Отзивите се потвърждават от екипа преди публикуване."
 	>
 		Изпратете отзив

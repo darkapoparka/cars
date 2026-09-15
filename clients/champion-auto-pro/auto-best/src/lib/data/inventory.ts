@@ -11,9 +11,9 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  verification: 'sample' | 'verified';
+  evidenceUrl?: string;
   image: string;
-  gallery: string[];
-  sourceUrl: string;
   category: string;
   body: string;
   make: string;
@@ -30,19 +30,12 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in Champion Auto Pro's
-// current adverts for these model families (championautopro.mobile.bg, checked 2026-08-30).
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11787294758482309-bmw-ix-40xdrive-m-sport-h-k-360",
     "image": "/assets/champion/vehicle-01-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-01-1.webp",
-      "/assets/champion/vehicle-01-2.webp",
-      "/assets/champion/vehicle-01-3.webp",
-      "/assets/champion/vehicle-01-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11787294758482309-bmw-ix-40xdrive-m-sport-h-k-360",
     "category": "SUV",
     "body": "SUV",
     "make": "BMW",
@@ -60,15 +53,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 2,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11787311251312869-audi-a6-50tdi-quattro",
     "image": "/assets/champion/vehicle-02-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-02-1.webp",
-      "/assets/champion/vehicle-02-2.webp",
-      "/assets/champion/vehicle-02-3.webp",
-      "/assets/champion/vehicle-02-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11787311251312869-audi-a6-50tdi-quattro",
-    "category": "Комби",
+    "category": "Estate",
     "body": "Wagon",
     "make": "Audi",
     "title": "Audi A6 50TDI Quattro",
@@ -85,15 +73,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 3,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11784794853353090-smart-forfour-22kw-26000km",
     "image": "/assets/champion/vehicle-03-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-03-1.webp",
-      "/assets/champion/vehicle-03-2.webp",
-      "/assets/champion/vehicle-03-3.webp",
-      "/assets/champion/vehicle-03-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11784794853353090-smart-forfour-22kw-26000km",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Smart",
     "title": "Smart Forfour 22kw.-26000км.",
@@ -110,15 +93,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 4,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11784640487309304-mercedes-benz-s-500-amg-packet-63-long",
     "image": "/assets/champion/vehicle-04-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-04-1.webp",
-      "/assets/champion/vehicle-04-2.webp",
-      "/assets/champion/vehicle-04-3.webp",
-      "/assets/champion/vehicle-04-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11784640487309304-mercedes-benz-s-500-amg-packet-63-long",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz S 500 AMG Packet 63 Long",
@@ -135,15 +113,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 5,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11771862221224289-mercedes-benz-s-400-long-full",
     "image": "/assets/champion/vehicle-05-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-05-1.webp",
-      "/assets/champion/vehicle-05-2.webp",
-      "/assets/champion/vehicle-05-3.webp",
-      "/assets/champion/vehicle-05-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11771862221224289-mercedes-benz-s-400-long-full",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz S 400 LONG-FULL",
@@ -160,14 +133,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 6,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-21784732491989700-mercedes-benz-ml-350-amg-packet",
     "image": "/assets/champion/vehicle-06-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-06-1.webp",
-      "/assets/champion/vehicle-06-2.webp",
-      "/assets/champion/vehicle-06-3.webp",
-      "/assets/champion/vehicle-06-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-21784732491989700-mercedes-benz-ml-350-amg-packet",
     "category": "SUV",
     "body": "SUV",
     "make": "Mercedes-Benz",
@@ -185,15 +153,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 7,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11784720940119234-audi-a7-s-line-full-108000km",
     "image": "/assets/champion/vehicle-07-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-07-1.webp",
-      "/assets/champion/vehicle-07-2.webp",
-      "/assets/champion/vehicle-07-3.webp",
-      "/assets/champion/vehicle-07-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11784720940119234-audi-a7-s-line-full-108000km",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Audi",
     "title": "Audi A7 S-Line FULL",
@@ -210,15 +173,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 8,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11783584641538327-mercedes-benz-b-200-amg-line",
     "image": "/assets/champion/vehicle-08-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-08-1.webp",
-      "/assets/champion/vehicle-08-2.webp",
-      "/assets/champion/vehicle-08-3.webp",
-      "/assets/champion/vehicle-08-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11783584641538327-mercedes-benz-b-200-amg-line",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz B 200 AMG Line",
@@ -235,14 +193,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 9,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-21778484741555035-audi-sq7-s-line",
     "image": "/assets/champion/vehicle-09-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-09-1.webp",
-      "/assets/champion/vehicle-09-2.webp",
-      "/assets/champion/vehicle-09-3.webp",
-      "/assets/champion/vehicle-09-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-21778484741555035-audi-sq7-s-line",
     "category": "SUV",
     "body": "SUV",
     "make": "Audi",
@@ -260,15 +213,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 10,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11758265694582686-audi-rs5-2-9tfsi-v6-quattro",
     "image": "/assets/champion/vehicle-10-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-10-1.webp",
-      "/assets/champion/vehicle-10-2.webp",
-      "/assets/champion/vehicle-10-3.webp",
-      "/assets/champion/vehicle-10-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11758265694582686-audi-rs5-2-9tfsi-v6-quattro",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Audi",
     "title": "Audi Rs5 2.9TFSI V6 Quattro",
@@ -285,14 +233,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 11,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11773307576284789-audi-e-tron-2-x-s-line",
     "image": "/assets/champion/vehicle-11-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-11-1.webp",
-      "/assets/champion/vehicle-11-2.webp",
-      "/assets/champion/vehicle-11-3.webp",
-      "/assets/champion/vehicle-11-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11773307576284789-audi-e-tron-2-x-s-line",
     "category": "SUV",
     "body": "SUV",
     "make": "Audi",
@@ -310,15 +253,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 12,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11787215050268120-vw-id-5-pro-82kw-garantsionen-104000km",
     "image": "/assets/champion/vehicle-12-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-12-1.webp",
-      "/assets/champion/vehicle-12-2.webp",
-      "/assets/champion/vehicle-12-3.webp",
-      "/assets/champion/vehicle-12-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11787215050268120-vw-id-5-pro-82kw-garantsionen-104000km",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "VW",
     "title": "VW ID.5 PRO 82kw",
@@ -335,14 +273,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 13,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-21787142969943440-toyota-highlander-60000km-gaz-prins",
     "image": "/assets/champion/vehicle-13-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-13-1.webp",
-      "/assets/champion/vehicle-13-2.webp",
-      "/assets/champion/vehicle-13-3.webp",
-      "/assets/champion/vehicle-13-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-21787142969943440-toyota-highlander-60000km-gaz-prins",
     "category": "SUV",
     "body": "SUV",
     "make": "Toyota",
@@ -360,12 +293,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 14,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-21787197677876419-mercedes-benz-eqe-300-led-navi-kam",
     "image": "/assets/champion/vehicle-14-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-14-1.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-21787197677876419-mercedes-benz-eqe-300-led-navi-kam",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz EQE 300",
@@ -382,14 +313,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 15,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-21787200936302723-mercedes-benz-eqc-400-4matic-amg-hud-360kam",
     "image": "/assets/champion/vehicle-15-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-15-1.webp",
-      "/assets/champion/vehicle-15-2.webp",
-      "/assets/champion/vehicle-15-3.webp",
-      "/assets/champion/vehicle-15-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-21787200936302723-mercedes-benz-eqc-400-4matic-amg-hud-360kam",
     "category": "SUV",
     "body": "SUV",
     "make": "Mercedes-Benz",
@@ -407,15 +333,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 16,
+    "verification": "verified",
+    "evidenceUrl": "https://championautopro.mobile.bg/obiava-11786100747512292-renault-captur-55000-km",
     "image": "/assets/champion/vehicle-16-1.webp",
-    "gallery": [
-      "/assets/champion/vehicle-16-1.webp",
-      "/assets/champion/vehicle-16-2.webp",
-      "/assets/champion/vehicle-16-3.webp",
-      "/assets/champion/vehicle-16-4.webp"
-    ],
-    "sourceUrl": "https://championautopro.mobile.bg/obiava-11786100747512292-renault-captur-55000-km",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Renault",
     "title": "Renault Captur",
@@ -432,4 +353,11 @@ export const featuredVehicles: Vehicle[] = [
   }
 ];
 
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+const inventoryLocale = "bg-BG";
+const inventoryCurrency = "EUR";
+export const formatVehiclePrice = (amount: number) =>
+  new Intl.NumberFormat(inventoryLocale, {
+    style: 'currency',
+    currency: inventoryCurrency,
+    maximumFractionDigits: 0
+  }).format(amount);

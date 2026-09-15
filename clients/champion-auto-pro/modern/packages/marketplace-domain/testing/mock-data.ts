@@ -1,16 +1,15 @@
 import type { MarketplaceSearchParams } from "../search";
 import type { Money, VehicleListing } from "../types";
 
-// Representative stock snapshot, 2026-09-07.
 export const mockListings: VehicleListing[] = [
   {
-    "id": "champion-11787294758482309",
-    "slug": "champion-11787294758482309",
+    "id": "am-1001",
+    "slug": "bmw-ix-40xdrive-2022-11787294758482309",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "BMW iX 40Xdrive",
-    "description": "BMW iX 40Xdrive, 2022 г., електрически, 28 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11787294758482309-bmw-ix-40xdrive-m-sport-h-k-360",
+    "description": "BMW iX 40Xdrive, 2022 г., електрически, 28 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 43800,
       "currency": "EUR"
@@ -42,7 +41,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "BMW",
       "model": "iX 40Xdrive",
@@ -60,19 +58,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T10:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "champion-11787311251312869",
-    "slug": "champion-11787311251312869",
+    "id": "am-1010",
+    "slug": "audi-a6-50tdi-quattro-2019-11787311251312869",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Audi A6 50TDI Quattro",
-    "description": "Audi A6 50TDI Quattro, 2019 г., дизел, 176 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11787311251312869-audi-a6-50tdi-quattro",
+    "description": "Audi A6 50TDI Quattro, 2019 г., дизел, 176 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 23000,
       "currency": "EUR"
@@ -104,7 +103,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Audi",
       "model": "A6 50TDI Quattro",
@@ -122,19 +120,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "champion-11784794853353090",
-    "slug": "champion-11784794853353090",
+    "id": "am-1011",
+    "slug": "smart-forfour-22kw-26000-2021-11784794853353090",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Smart Forfour 22kw.-26000км.",
-    "description": "Smart Forfour 22kw.-26000км., 2021 г., електрически, 26 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11784794853353090-smart-forfour-22kw-26000km",
+    "description": "Smart Forfour 22kw.-26000км., 2021 г., електрически, 26 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 12900,
       "currency": "EUR"
@@ -166,7 +165,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Smart",
       "model": "Forfour 22kw.-26000км.",
@@ -184,19 +182,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "champion-11784640487309304",
-    "slug": "champion-11784640487309304",
+    "id": "am-1012",
+    "slug": "mercedes-benz-s-500-amg-packet-63-long-2014-11784640487309304",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Mercedes-Benz S 500 AMG Packet 63 Long",
-    "description": "Mercedes-Benz S 500 AMG Packet 63 Long, 2014 г., бензин, 265 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11784640487309304-mercedes-benz-s-500-amg-packet-63-long",
+    "description": "Mercedes-Benz S 500 AMG Packet 63 Long, 2014 г., бензин, 265 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 27999,
       "currency": "EUR"
@@ -228,7 +227,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "S 500 AMG Packet 63 Long",
@@ -246,19 +244,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:57.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-11771862221224289",
-    "slug": "champion-11771862221224289",
+    "id": "am-1013",
+    "slug": "mercedes-benz-s-400-long-full-2023-11771862221224289",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Mercedes-Benz S 400 LONG-FULL",
-    "description": "Mercedes-Benz S 400 LONG-FULL, 2023 г., дизел, 73 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11771862221224289-mercedes-benz-s-400-long-full",
+    "description": "Mercedes-Benz S 400 LONG-FULL, 2023 г., дизел, 73 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 89999,
       "currency": "EUR"
@@ -290,7 +289,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "S 400 LONG-FULL",
@@ -308,19 +306,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:56.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-21784732491989700",
-    "slug": "champion-21784732491989700",
+    "id": "am-1014",
+    "slug": "mercedes-benz-ml-350-amg-packet-2012-21784732491989700",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Mercedes-Benz ML 350 AMG Packet",
-    "description": "Mercedes-Benz ML 350 AMG Packet, 2012 г., дизел, 185 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-21784732491989700-mercedes-benz-ml-350-amg-packet",
+    "description": "Mercedes-Benz ML 350 AMG Packet, 2012 г., дизел, 185 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 15999,
       "currency": "EUR"
@@ -352,7 +351,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "ML 350 AMG Packet",
@@ -370,19 +368,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:55.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-11784720940119234",
-    "slug": "champion-11784720940119234",
+    "id": "am-1002",
+    "slug": "audi-a7-s-line-full-2020-11784720940119234",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Audi A7 S-Line FULL",
-    "description": "Audi A7 S-Line FULL, 2020 г., дизел, 108 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11784720940119234-audi-a7-s-line-full-108000km",
+    "description": "Audi A7 S-Line FULL, 2020 г., дизел, 108 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 35999,
       "currency": "EUR"
@@ -414,7 +413,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Audi",
       "model": "A7 S-Line FULL",
@@ -432,19 +430,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:54.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-11783584641538327",
-    "slug": "champion-11783584641538327",
+    "id": "am-1003",
+    "slug": "mercedes-benz-b-200-amg-line-2020-11783584641538327",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Mercedes-Benz B 200 AMG Line",
-    "description": "Mercedes-Benz B 200 AMG Line, 2020 г., дизел, 95 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11783584641538327-mercedes-benz-b-200-amg-line",
+    "description": "Mercedes-Benz B 200 AMG Line, 2020 г., дизел, 95 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 17999,
       "currency": "EUR"
@@ -476,7 +475,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "B 200 AMG Line",
@@ -494,19 +492,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:53.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-21778484741555035",
-    "slug": "champion-21778484741555035",
+    "id": "am-1004",
+    "slug": "audi-sq7-s-line-2017-21778484741555035",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Audi SQ7 S-Line",
-    "description": "Audi SQ7 S-Line, 2017 г., дизел, 230 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-21778484741555035-audi-sq7-s-line",
+    "description": "Audi SQ7 S-Line, 2017 г., дизел, 230 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 33000,
       "currency": "EUR"
@@ -538,7 +537,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Audi",
       "model": "SQ7 S-Line",
@@ -556,19 +554,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:52.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-11758265694582686",
-    "slug": "champion-11758265694582686",
+    "id": "am-1005",
+    "slug": "audi-rs5-2-9tfsi-v6-quattro-2020-11758265694582686",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Audi Rs5 2.9TFSI V6 Quattro",
-    "description": "Audi Rs5 2.9TFSI V6 Quattro, 2020 г., бензин, 182 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11758265694582686-audi-rs5-2-9tfsi-v6-quattro",
+    "description": "Audi Rs5 2.9TFSI V6 Quattro, 2020 г., бензин, 182 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 39999,
       "currency": "EUR"
@@ -600,7 +599,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Audi",
       "model": "Rs5 2.9TFSI V6 Quattro",
@@ -618,19 +616,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:51.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-11773307576284789",
-    "slug": "champion-11773307576284789",
+    "id": "am-1006",
+    "slug": "audi-e-tron-2-x-s-line-2021-11773307576284789",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Audi E-Tron 2 X S-Line",
-    "description": "Audi E-Tron 2 X S-Line, 2021 г., електрически, 72 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11773307576284789-audi-e-tron-2-x-s-line",
+    "description": "Audi E-Tron 2 X S-Line, 2021 г., електрически, 72 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 31000,
       "currency": "EUR"
@@ -662,7 +661,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Audi",
       "model": "E-Tron 2 X S-Line",
@@ -680,19 +678,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:50.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-11787215050268120",
-    "slug": "champion-11787215050268120",
+    "id": "am-1007",
+    "slug": "vw-id-5-pro-82kw-2023-11787215050268120",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "VW ID.5 PRO 82kw",
-    "description": "VW ID.5 PRO 82kw, 2023 г., електрически, 104 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11787215050268120-vw-id-5-pro-82kw-garantsionen-104000km",
+    "description": "VW ID.5 PRO 82kw, 2023 г., електрически, 104 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 29999,
       "currency": "EUR"
@@ -724,7 +723,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "VW",
       "model": "ID.5 PRO 82kw",
@@ -742,19 +740,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:49.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-21787142969943440",
-    "slug": "champion-21787142969943440",
+    "id": "am-1008",
+    "slug": "toyota-highlander-60000km-prins-2019-21787142969943440",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Toyota Highlander 60000km Газ Prins",
-    "description": "Toyota Highlander 60000km Газ Prins, 2019 г., бензин, 60 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-21787142969943440-toyota-highlander-60000km-gaz-prins",
+    "description": "Toyota Highlander 60000km Газ Prins, 2019 г., бензин, 60 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 26800,
       "currency": "EUR"
@@ -786,7 +785,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Toyota",
       "model": "Highlander 60000km Газ Prins",
@@ -804,19 +802,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:48.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "champion-21787197677876419",
-    "slug": "champion-21787197677876419",
+    "id": "am-1009",
+    "slug": "mercedes-benz-eqe-300-2023-21787197677876419",
     "category": "car",
     "dealerOrgId": "dealer-champion-auto-pro",
     "status": "active",
     "title": "Mercedes-Benz EQE 300",
-    "description": "Mercedes-Benz EQE 300, 2023 г., електрически, 47 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-21787197677876419-mercedes-benz-eqe-300-led-navi-kam",
+    "description": "Mercedes-Benz EQE 300, 2023 г., електрически, 47 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro.",
     "price": {
       "amount": 44999,
       "currency": "EUR"
@@ -836,7 +835,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "EQE 300",
@@ -854,135 +852,13 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Champion Auto Pro",
       "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:47.000Z",
-    "promoted": false
-  },
-  {
-    "id": "champion-21787200936302723",
-    "slug": "champion-21787200936302723",
-    "category": "car",
-    "dealerOrgId": "dealer-champion-auto-pro",
-    "status": "active",
-    "title": "Mercedes-Benz EQC 400",
-    "description": "Mercedes-Benz EQC 400, 2021 г., електрически, 68 900 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-21787200936302723-mercedes-benz-eqc-400-4matic-amg-hud-360kam",
-    "price": {
-      "amount": 38800,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/champion/vehicle-15-1.webp",
-        "alt": "Mercedes-Benz EQC 400"
-      },
-      {
-        "url": "/assets/champion/vehicle-15-2.webp",
-        "alt": "Mercedes-Benz EQC 400"
-      },
-      {
-        "url": "/assets/champion/vehicle-15-3.webp",
-        "alt": "Mercedes-Benz EQC 400"
-      },
-      {
-        "url": "/assets/champion/vehicle-15-4.webp",
-        "alt": "Mercedes-Benz EQC 400"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
       "city": "Варна",
-      "region": "Варна",
-      "country": "България"
+      "logoUrl": "/assets/champion/logo.png"
     },
-    "features": [],
-    "spec": {
-      "make": "Mercedes-Benz",
-      "model": "EQC 400",
-      "year": 2021,
-      "bodyType": "suv",
-      "fuelType": "electric",
-      "transmission": "automatic",
-      "mileageValue": 68900,
-      "mileageUnit": "km",
-      "colorExterior": "Черен"
-    },
-    "seller": {
-      "id": "dealer-champion-auto-pro",
-      "type": "dealer",
-      "displayName": "Champion Auto Pro",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:46.000Z",
-    "promoted": false
-  },
-  {
-    "id": "champion-11786100747512292",
-    "slug": "champion-11786100747512292",
-    "category": "car",
-    "dealerOrgId": "dealer-champion-auto-pro",
-    "status": "active",
-    "title": "Renault Captur",
-    "description": "Renault Captur, 2015 г., дизел, 55 000 км. Публикувана обява към 07.09.2026. Наличност, оборудване и условия се потвърждават с Champion Auto Pro. Не се начислява ДДС. Оригинална обява: https://championautopro.mobile.bg/obiava-11786100747512292-renault-captur-55000-km",
-    "price": {
-      "amount": 9200,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/champion/vehicle-16-1.webp",
-        "alt": "Renault Captur"
-      },
-      {
-        "url": "/assets/champion/vehicle-16-2.webp",
-        "alt": "Renault Captur"
-      },
-      {
-        "url": "/assets/champion/vehicle-16-3.webp",
-        "alt": "Renault Captur"
-      },
-      {
-        "url": "/assets/champion/vehicle-16-4.webp",
-        "alt": "Renault Captur"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Варна",
-      "country": "България"
-    },
-    "features": [],
-    "spec": {
-      "make": "Renault",
-      "model": "Captur",
-      "year": 2015,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 55000,
-      "mileageUnit": "km",
-      "enginePowerHp": 90,
-      "colorExterior": "Червен"
-    },
-    "seller": {
-      "id": "dealer-champion-auto-pro",
-      "type": "dealer",
-      "displayName": "Champion Auto Pro",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:45.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

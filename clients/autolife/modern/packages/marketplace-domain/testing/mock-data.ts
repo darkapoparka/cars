@@ -3,13 +3,13 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    "id": "autolife-21769682585171886",
-    "slug": "autolife-21769682585171886",
+    "id": "am-1001",
+    "slug": "bmw-x4-2-0d-190-2017-21769682585171886",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "BMW X4 2.0D-190",
-    "description": "BMW X4 2.0D-190 M PACKET FULL MCAR VARNA, 2017 г., 190 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-21769682585171886-bmw-x4-2-0d-190-m-packet-full-mcar-varna",
+    "description": "BMW X4 2.0D-190 M PACKET FULL MCAR VARNA, 2017 г., 190 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 20500,
       "currency": "EUR"
@@ -38,10 +38,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      }
+    ],
     "spec": {
       "make": "BMW",
       "model": "X4 2.0D-190",
@@ -59,19 +92,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T00:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "autolife-11770980926901387",
-    "slug": "autolife-11770980926901387",
-    "category": "car",
+    "id": "am-1010",
+    "slug": "seat-alhambra-2-0tdi-150-2015-11770980926901387",
+    "category": "van",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Seat Alhambra 2.0TDI-150",
-    "description": "Seat Alhambra 2.0TDI-150 KOJA NAVI CAMERA PANORAMA DSG DISTR EL., 2015 г., 244 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11770980926901387-seat-alhambra-2-0tdi-150-koja-navi-camera-panorama-dsg-distr-el",
+    "description": "Seat Alhambra 2.0TDI-150 KOJA NAVI CAMERA PANORAMA DSG DISTR EL., 2015 г., 244 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 11999,
       "currency": "EUR"
@@ -100,10 +134,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "7 места",
+        "en": "7 места"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      }
+    ],
     "spec": {
       "make": "Seat",
       "model": "Alhambra 2.0TDI-150",
@@ -121,19 +188,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "autolife-11741772051965725",
-    "slug": "autolife-11741772051965725",
+    "id": "am-1011",
+    "slug": "ford-ka-2018-11741772051965725",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Ford Ka +",
-    "description": "Ford Ka + 1.5DURATORQ ACTIVE EURO6D, 2018 г., 119 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11741772051965725-ford-ka-1-5duratorq-active-euro6d",
+    "description": "Ford Ka + 1.5DURATORQ ACTIVE EURO6D, 2018 г., 119 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 6999,
       "currency": "EUR"
@@ -162,10 +230,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      }
+    ],
     "spec": {
       "make": "Ford",
       "model": "Ka +",
@@ -183,19 +284,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "autolife-11751025134623319",
-    "slug": "autolife-11751025134623319",
+    "id": "am-1012",
+    "slug": "vw-golf-1-6tdi-2010-11751025134623319",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "VW Golf 1.6TDI",
-    "description": "VW Golf 1.6TDI BLUEMOTION, 2010 г., 250 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11751025134623319-vw-golf-1-6tdi-bluemotion",
+    "description": "VW Golf 1.6TDI BLUEMOTION, 2010 г., 250 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 4500,
       "currency": "EUR"
@@ -224,10 +326,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "Golf 1.6TDI",
@@ -245,19 +380,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:57.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-11768209424885033",
-    "slug": "autolife-11768209424885033",
+    "id": "am-1013",
+    "slug": "seat-altea-facelift-2010-11768209424885033",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Seat Altea FACELIFT",
-    "description": "Seat Altea FACELIFT B/GPL, 2010 г., 242 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11768209424885033-seat-altea-facelift-b-gpl",
+    "description": "Seat Altea FACELIFT B/GPL, 2010 г., 242 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 3999,
       "currency": "EUR"
@@ -286,10 +422,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      }
+    ],
     "spec": {
       "make": "Seat",
       "model": "Altea FACELIFT",
@@ -307,19 +476,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:56.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-11762785459915323",
-    "slug": "autolife-11762785459915323",
+    "id": "am-1014",
+    "slug": "audi-a4-sline-2021-11762785459915323",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Audi A4 Sline",
-    "description": "Audi A4 Sline 4x4 DISTR DIGITAL MATRIX KEY LESS BLIND SPOT, 2021 г., 186 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Виж оригиналната обява. Оригинална обява: https://autolife.mobile.bg/obiava-11762785459915323-audi-a4-sline-4x4-distr-digital-matrix-key-less-blind-spot",
+    "description": "Audi A4 Sline 4x4 DISTR DIGITAL MATRIX KEY LESS BLIND SPOT, 2021 г., 186 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 20500,
       "currency": "EUR"
@@ -348,10 +518,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      }
+    ],
     "spec": {
       "make": "Audi",
       "model": "A4 Sline",
@@ -369,19 +572,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:55.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-11752841612433166",
-    "slug": "autolife-11752841612433166",
+    "id": "am-1002",
+    "slug": "citroen-c5-2-2-2008-11752841612433166",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Citroen C5 2.2",
-    "description": "Citroen C5 2.2 HDI 170 FULL, 2008 г., 217 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11752841612433166-citroen-c5-2-2-hdi-170-full",
+    "description": "Citroen C5 2.2 HDI 170 FULL, 2008 г., 217 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 3700,
       "currency": "EUR"
@@ -410,10 +614,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      }
+    ],
     "spec": {
       "make": "Citroen",
       "model": "C5 2.2",
@@ -431,19 +668,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:54.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-21756807262024883",
-    "slug": "autolife-21756807262024883",
+    "id": "am-1003",
+    "slug": "audi-q5-2-0tdi-170-2009-21756807262024883",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Audi Q5 2.0TDI-170",
-    "description": "Audi Q5 2.0TDI-170 PANORAMA, 2009 г., 224 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-21756807262024883-audi-q5-2-0tdi-170-panorama",
+    "description": "Audi Q5 2.0TDI-170 PANORAMA, 2009 г., 224 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 7999,
       "currency": "EUR"
@@ -472,10 +710,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      }
+    ],
     "spec": {
       "make": "Audi",
       "model": "Q5 2.0TDI-170",
@@ -493,19 +764,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:53.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-11768636298551646",
-    "slug": "autolife-11768636298551646",
-    "category": "car",
+    "id": "am-1004",
+    "slug": "vw-touran-2-0tdi-150-2021-11768636298551646",
+    "category": "van",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "VW Touran 2.0TDI-150",
-    "description": "VW Touran 2.0TDI-150 DISTR. CAMERA DSG, 2021 г., 145 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11768636298551646-vw-touran-2-0tdi-150-distr-camera-dsg",
+    "description": "VW Touran 2.0TDI-150 DISTR. CAMERA DSG, 2021 г., 145 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 13999,
       "currency": "EUR"
@@ -534,10 +806,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "Touran 2.0TDI-150",
@@ -555,19 +860,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:52.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-21774977517199416",
-    "slug": "autolife-21774977517199416",
+    "id": "am-1005",
+    "slug": "mercedes-benz-gle-coupe-2017-21774977517199416",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Mercedes-Benz GLE Coupe",
-    "description": "Mercedes-Benz GLE Coupe 350CDI AMG DISTR. PANO CAMERA HARMAN/KARDON, 2017 г., 189 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-21774977517199416-mercedes-benz-gle-coupe-350cdi-amg-distr-pano-camera-harman-kardon",
+    "description": "Mercedes-Benz GLE Coupe 350CDI AMG DISTR. PANO CAMERA HARMAN/KARDON, 2017 г., 189 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 34500,
       "currency": "EUR"
@@ -596,10 +902,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      }
+    ],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "GLE Coupe",
@@ -617,19 +956,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:51.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-21776689748685033",
-    "slug": "autolife-21776689748685033",
+    "id": "am-1006",
+    "slug": "bmw-x1-2-0d-150-2016-21776689748685033",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "BMW X1 2.0D-150",
-    "description": "BMW X1 2.0D-150 X-DRIVE, 2016 г., 250 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-21776689748685033-bmw-x1-2-0d-150-x-drive",
+    "description": "BMW X1 2.0D-150 X-DRIVE, 2016 г., 250 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 11500,
       "currency": "EUR"
@@ -658,10 +998,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
     "spec": {
       "make": "BMW",
       "model": "X1 2.0D-150",
@@ -679,19 +1052,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:50.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-11776774936356749",
-    "slug": "autolife-11776774936356749",
+    "id": "am-1007",
+    "slug": "peugeot-508-active-2019-11776774936356749",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Peugeot 508 ACTIVE",
-    "description": "Peugeot 508 ACTIVE BLUEHDI 130 S&S EAT8, 2019 г., 175 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11776774936356749-peugeot-508-active-bluehdi-130-s-s-eat8",
+    "description": "Peugeot 508 ACTIVE BLUEHDI 130 S&S EAT8, 2019 г., 175 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 12300,
       "currency": "EUR"
@@ -720,10 +1094,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      }
+    ],
     "spec": {
       "make": "Peugeot",
       "model": "508 ACTIVE",
@@ -741,19 +1148,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:49.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-21778149802063175",
-    "slug": "autolife-21778149802063175",
+    "id": "am-1008",
+    "slug": "vw-tiguan-facelift-2019-21778149802063175",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "VW Tiguan FACELIFT",
-    "description": "VW Tiguan FACELIFT 2.0TDI-150 DSG NAVI CAMERA DISTR CAR PLAY, 2019 г., 214 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-21778149802063175-vw-tiguan-facelift-2-0tdi-150-dsg-navi-camera-distr-car-play",
+    "description": "VW Tiguan FACELIFT 2.0TDI-150 DSG NAVI CAMERA DISTR CAR PLAY, 2019 г., 214 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 14999,
       "currency": "EUR"
@@ -782,10 +1190,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      }
+    ],
     "spec": {
       "make": "VW",
       "model": "Tiguan FACELIFT",
@@ -803,19 +1244,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "publishedAt": "2026-09-06T23:59:48.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "autolife-11778155314388381",
-    "slug": "autolife-11778155314388381",
+    "id": "am-1009",
+    "slug": "volvo-s60-2007-11778155314388381",
     "category": "car",
     "dealerOrgId": "dealer-autolife",
     "status": "active",
     "title": "Volvo S60 НАПЪЛНО",
-    "description": "Volvo S60 НАПЪЛНО СЕРВИЗИРАН, 2007 г., 470 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11778155314388381-volvo-s60-napalno-serviziran",
+    "description": "Volvo S60 НАПЪЛНО СЕРВИЗИРАН, 2007 г., 470 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона.",
     "price": {
       "amount": 2500,
       "currency": "EUR"
@@ -844,10 +1286,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Тополи",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      }
+    ],
     "spec": {
       "make": "Volvo",
       "model": "S60 НАПЪЛНО",
@@ -865,136 +1340,13 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-06T23:59:47.000Z",
-    "promoted": false
-  },
-  {
-    "id": "autolife-11787391986129616",
-    "slug": "autolife-11787391986129616",
-    "category": "car",
-    "dealerOrgId": "dealer-autolife",
-    "status": "active",
-    "title": "VW Passat 2.0TDI-140",
-    "description": "VW Passat 2.0TDI-140, 2012 г., 237 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11787391986129616-vw-passat-2-0tdi-140",
-    "price": {
-      "amount": 6300,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/autolife/vehicle-15-1.webp",
-        "alt": "VW Passat 2.0TDI-140"
-      },
-      {
-        "url": "/assets/autolife/vehicle-15-2.webp",
-        "alt": "VW Passat 2.0TDI-140"
-      },
-      {
-        "url": "/assets/autolife/vehicle-15-3.webp",
-        "alt": "VW Passat 2.0TDI-140"
-      },
-      {
-        "url": "/assets/autolife/vehicle-15-4.webp",
-        "alt": "VW Passat 2.0TDI-140"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
       "city": "Варна",
-      "region": "Тополи",
-      "country": "България"
+      "logoUrl": "/assets/autolife/wordmark.svg"
     },
-    "features": [],
-    "spec": {
-      "make": "VW",
-      "model": "Passat 2.0TDI-140",
-      "year": 2012,
-      "bodyType": "wagon",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 237000,
-      "mileageUnit": "km",
-      "enginePowerHp": 140,
-      "colorExterior": "Светло сив"
-    },
-    "seller": {
-      "id": "dealer-autolife",
-      "type": "dealer",
-      "displayName": "Аутолайф",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-06T23:59:46.000Z",
-    "promoted": false
-  },
-  {
-    "id": "autolife-11779369221509132",
-    "slug": "autolife-11779369221509132",
-    "category": "car",
-    "dealerOrgId": "dealer-autolife",
-    "status": "active",
-    "title": "VW Polo 1.6",
-    "description": "VW Polo 1.6 TDI HIGHLINE DSG NAVI CAR PLAY ANDROID AUTO, 2020 г., 140 000 км. Публикувана обява на Аутолайф. Потвърдете наличността, оборудването и цената по телефона. Не се начислява ДДС. Оригинална обява: https://autolife.mobile.bg/obiava-11779369221509132-vw-polo-1-6-tdi-highline-dsg-navi-car-play-android-auto",
-    "price": {
-      "amount": 9999,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/autolife/vehicle-16-1.webp",
-        "alt": "VW Polo 1.6"
-      },
-      {
-        "url": "/assets/autolife/vehicle-16-2.webp",
-        "alt": "VW Polo 1.6"
-      },
-      {
-        "url": "/assets/autolife/vehicle-16-3.webp",
-        "alt": "VW Polo 1.6"
-      },
-      {
-        "url": "/assets/autolife/vehicle-16-4.webp",
-        "alt": "VW Polo 1.6"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Тополи",
-      "country": "България"
-    },
-    "features": [],
-    "spec": {
-      "make": "VW",
-      "model": "Polo 1.6",
-      "year": 2020,
-      "bodyType": "hatchback",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 140000,
-      "mileageUnit": "km",
-      "enginePowerHp": 95,
-      "colorExterior": "Черен"
-    },
-    "seller": {
-      "id": "dealer-autolife",
-      "type": "dealer",
-      "displayName": "Аутолайф",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-06T23:59:45.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

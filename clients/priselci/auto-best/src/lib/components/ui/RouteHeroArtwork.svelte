@@ -22,9 +22,9 @@
   const coloredImages: Partial<Record<keyof typeof images, string>> = {
     silver: '/assets/images/lead/day-night-silver-color-v1.webp',
     graphite: '/assets/images/lead/day-night-graphite-color-v1.webp',
-    showroom: '/assets/priselci/vehicle-05-1.webp',
+    showroom: '/assets/images/lead/day-night-showroom-color-v1.webp',
     portrait: '/assets/images/lead/day-night-portrait-color-v1.webp',
-    guide: '/assets/priselci/vehicle-05-1.webp',
+    guide: '/assets/images/lead/day-night-guide-yellow-v1.webp',
     keys: '/assets/images/lead/day-night-keys-yellow-v1.webp',
     phone: '/assets/images/lead/day-night-contact-phone-red-v1.webp',
     email: '/assets/images/lead/day-night-contact-email-red-v1.webp'

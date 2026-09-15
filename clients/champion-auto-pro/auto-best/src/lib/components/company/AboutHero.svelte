@@ -38,7 +38,7 @@
     <nav class="dn-about-socials" aria-label="Последвайте ни в социалните мрежи">
       <span>Последвайте ни</span>
       <div class="dn-about-socials__links">
-        {#each socialProfiles.filter(item => item.href) as profile (profile.name)}
+        {#each socialProfiles as profile (profile.name)}
           <a href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={`${profile.label} — отваря се в нов раздел`}>
             <SocialBrandIcon name={profile.name} size={28} />
           </a>
@@ -50,7 +50,7 @@
 
 <style>
   .dn-about-socials { display: flex; flex-direction: column; align-items: center; gap: 10px; align-self: center; }
-  .dn-about-socials > span { color: #c9cbd0; font-size: 14px; line-height: 1.5; }
+  .dn-about-socials > span { color: #c9cbd0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   .dn-about-socials__links { display: flex; gap: 16px; }
   .dn-about-socials a { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border: 1px solid #686c73; border-radius: 50%; color: #fff; }
   .dn-about-socials a:hover { background: #fff; border-color: #fff; color: #1d1f23; }

@@ -1,3 +1,5 @@
+export const daynightTeamDisclosure = "Общ контакт на автокъщата, а не именуван или независимо потвърден профил на служител." as const;
+
 export type DayNightTeamMember = {
 	slug: string;
 	name: string;
@@ -9,7 +11,18 @@ export type DayNightTeamMember = {
 	detail: string;
 };
 
-export const daynightTeam: DayNightTeamMember[] = [{"slug":"prodazhbi-showroom","name":"Автомобили","role":"Публикувани предложения","phone":"0877800921","email":"","image":"/assets/avangard/vehicle-01-1.webp","bio":"Разгледайте 16 избрани обяви. За актуална наличност се свържете с AVANGARD AUTO.","detail":"Разгледайте 16 избрани обяви. За актуална наличност се свържете с AVANGARD AUTO."},{"slug":"barter-i-ocenka","name":"Регистрация","role":"Съдействие в КАТ","phone":"0877800921","email":"","image":"/assets/avangard/vehicle-02-1.webp","bio":"В обявите се предлага съдействие при регистрация и издаване на транзитни номера.","detail":"В обявите се предлага съдействие при регистрация и издаване на транзитни номера."},{"slug":"dokumenti-finansirane","name":"Транспорт","role":"В България","phone":"0877800921","email":"","image":"/assets/avangard/vehicle-03-1.webp","bio":"В обявите се предлага транспорт до всяка точка в България. Уточнете цена и условия.","detail":"В обявите се предлага транспорт до всяка точка в България. Уточнете цена и условия."},{"slug":"klientski-zapitvania","name":"Лизинг","role":"Индивидуални условия","phone":"0877800921","email":"","image":"/assets/avangard/vehicle-04-1.webp","bio":"Автомобили с обявена възможност за лизинг. Условията се потвърждават за конкретната сделка.","detail":"Автомобили с обявена възможност за лизинг. Условията се потвърждават за конкретната сделка."}];
+export const daynightTeam: DayNightTeamMember[] = [
+	{
+		slug: 'dealer-contact',
+		name: "AVANGARD AUTO",
+		role: "Запитвания за наличност и оглед",
+		phone: "0877 800 921",
+		email: "",
+		image: "/assets/avangard/wordmark-light.svg",
+		bio: "Свържете се с AVANGARD AUTO, за да потвърдите актуална наличност, данни за автомобила и възможност за оглед.",
+		detail: "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата. Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
+	}
+];
 
 export const getDayNightTeamMemberBySlug = (slug: string) =>
 	daynightTeam.find((member) => member.slug === slug);

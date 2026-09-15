@@ -1,15 +1,15 @@
 <script lang="ts">
   let { variant = 'cars', theme = 'light' }: { variant?: 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell'; theme?: 'light' | 'red' | 'charcoal' | 'yellow' } = $props();
   const images = {
-    cars: '/assets/avangard/vehicle-11-1.webp',
-    keys: '/assets/avangard/vehicle-12-1.webp',
-    guide: '/assets/avangard/vehicle-13-1.webp',
-    silver: '/assets/avangard/social-cover.jpg',
-    graphite: '/assets/avangard/social-cover.jpg',
-    portrait: '/assets/avangard/vehicle-16-1.webp',
-    phone: '/assets/avangard/vehicle-01-1.webp',
-    showroom: '/assets/avangard/vehicle-02-1.webp',
-    email: '/assets/avangard/vehicle-03-1.webp'
+    cars: '/assets/images/lead/day-night-studio-cars-v1.webp',
+    keys: '/assets/images/lead/day-night-studio-keys-v1.webp',
+    guide: '/assets/images/lead/day-night-studio-guide-v1.webp',
+    silver: '/assets/images/lead/day-night-hero-silver-v1.webp',
+    graphite: '/assets/images/lead/day-night-hero-graphite-v1.webp',
+    portrait: '/assets/images/lead/day-night-about-kristian-v1-light.webp',
+    phone: '/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp',
+    showroom: '/assets/images/lead/day-night-about-showroom-v1-light.webp',
+    email: '/assets/images/lead/day-night-contact-email-v1-light.webp'
   };
   const pairs = {
     cars: ['silver', 'graphite'],
@@ -20,14 +20,14 @@
     sell: ['portrait', 'keys']
   } as const;
   const coloredImages: Partial<Record<keyof typeof images, string>> = {
-    silver: '/assets/avangard/vehicle-04-1.webp',
-    graphite: '/assets/avangard/vehicle-05-1.webp',
-    showroom: '/assets/avangard/vehicle-06-1.webp',
-    portrait: '/assets/avangard/vehicle-07-1.webp',
-    guide: '/assets/avangard/vehicle-08-1.webp',
-    keys: '/assets/avangard/vehicle-09-1.webp',
-    phone: '/assets/avangard/vehicle-10-1.webp',
-    email: '/assets/avangard/vehicle-11-1.webp'
+    silver: '/assets/images/lead/day-night-silver-color-v1.webp',
+    graphite: '/assets/images/lead/day-night-graphite-color-v1.webp',
+    showroom: '/assets/images/lead/day-night-showroom-color-v1.webp',
+    portrait: '/assets/images/lead/day-night-portrait-color-v1.webp',
+    guide: '/assets/images/lead/day-night-guide-yellow-v1.webp',
+    keys: '/assets/images/lead/day-night-keys-yellow-v1.webp',
+    phone: '/assets/images/lead/day-night-contact-phone-red-v1.webp',
+    email: '/assets/images/lead/day-night-contact-email-red-v1.webp'
   };
 </script>
 

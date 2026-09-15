@@ -11,7 +11,7 @@ const serviceWordmarkTones = {
   leasing: "light",
   import: "dark",
   sell: "dark",
-  contact: "light",
+  contact: "original",
 } as const;
 const serviceBackgrounds = {
   leasing: "#bd001b",
