@@ -35,9 +35,9 @@
       "accent": "#2563eb"
     }
   },
-  "sourceCommit": "59e8d045adee61e4a94c51a73bea171eb1a29ab9",
+  "sourceCommit": "be084a6d3d9a845364be838635eb565009908a16",
   "packagingVersion": "1",
-  "payloadDigest": "97f89d32739017268573f18c0b3d8df7dc8b2128d8862556dcbcc7c2717841bd",
+  "payloadDigest": "55616df623a733a9d496c23d77a1bb22be9744a71a87862f4a1d886d5bd769cb",
   "payload": [
     {
       "path": ".gitignore",
@@ -49,7 +49,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "4cb56998d8972ba87018d6518ba074254aba120144d6091185a59ba92ff702e7"
+      "sha256": "c2291ebc8ec31a4c8f1a30eaee39d2806d597c7e2f9f4d1c9d543186d063d56b"
     },
     {
       "path": "CLIENT.md",
@@ -7080,6 +7080,18 @@
       "sha256": "c855029f83fbc5d689021bbacc415ca545609401c0ad621d47cc0cf20f3bf352"
     },
     {
+      "path": "carwow/static/blog/article/best-value-new-cars-1200x800px.webp",
+      "sha256": "ae693ed67793787ff1a88465fa7a70cc0f91f234752185a87e4a366f507540d1"
+    },
+    {
+      "path": "carwow/static/blog/article/polestar-3-carwow-awards-1200x800px.webp",
+      "sha256": "a35ad7cd8f4f17563acbe91b865a837e2eafa59b792e2b2ee3241d22e756b820"
+    },
+    {
+      "path": "carwow/static/blog/news-and-reviews/mt-banner-save-up-to-140-gbp-a-month-1200x800px.webp",
+      "sha256": "75b6888dcb21ee4c400c4947f0b5c76916159b089a56eba9b4b1c8e66cc6e3e2"
+    },
+    {
       "path": "carwow/static/brand/daynight-emblem-transparent.png",
       "sha256": "03a5e8a5359cb7a3fd82c8ce99376b56259b4c22b8e7c258036250d428d512a3"
     },
@@ -7194,6 +7206,14 @@
     {
       "path": "carwow/static/brand/getrich-logo-light.png",
       "sha256": "bc05bb753291a47504e6e193074901b38bc9dca75cf23f0cc90f6471cdd83030"
+    },
+    {
+      "path": "carwow/static/contact-showroom-entrance-banner-1x-2400x1100.webp",
+      "sha256": "9b8824f6cca26ca53f70f1680d46eba92b8a3f5621d04b895163160bfa384ea3"
+    },
+    {
+      "path": "carwow/static/cookie.svg",
+      "sha256": "a1edd47c13554ff6aff46c0b89f22474f4cdb5b36b5a1ff31ec01c7cbcb911b3"
     },
     {
       "path": "carwow/static/icons/apple-touch-icon.png",
