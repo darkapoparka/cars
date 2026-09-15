@@ -1,0 +1,100 @@
+  const selected = await selectVehicleImage(listing.sourceUrl);
+  const master = path.join(generatedRoot, `inventory-${index + 1}.webp`);
+  await processPhoto(selected.bytes, 1600, 1067, master);
+  listing.imageSourceUrl = selected.url;
+  listing.masterImage = master;
+  imageProvenance.push({
+    id: listing.id,
+    vehicle: listing.title,
+    pageUrl: listing.sourceUrl,
+    imageUrl: selected.url,
+    localizedAs: [
+      `auto-best/static/assets/images/lead/isauto/inventory-${index + 1}.webp`,
+      `modern/apps/web/public/isauto/inventory-${index + 1}.webp`,
+      `carwow/static/assets/isauto/inventory-${index + 1}.webp`
+    ],
+    capturedAt: TODAY
+  });
+}
+
+const assetDestinations = [
+  { dir: path.join(CLIENT, 'auto-best/static/assets/images/lead/isauto'), hero: 'hero.webp', dark: 'logo-dark.png', light: 'logo-light.png' },
+  { dir: path.join(CLIENT, 'modern/apps/web/public/isauto'), hero: 'hero.webp', dark: 'logo-dark.png', light: 'logo-light.png' },
+  { dir: path.join(CLIENT, 'carwow/static/assets/isauto'), hero: 'hero.webp', dark: null, light: null }
+];
+for (const destination of assetDestinations) {
+  await copyFile(heroMaster, path.join(destination.dir, destination.hero));
+  for (const [index, listing] of listings.entries()) await copyFile(listing.masterImage, path.join(destination.dir, `inventory-${index + 1}.webp`));
+  if (destination.dark) await copyFile(darkLogoMaster, path.join(destination.dir, destination.dark));
+  if (destination.light) await copyFile(lightLogoMaster, path.join(destination.dir, destination.light));
+}
+await copyFile(darkLogoMaster, path.join(CLIENT, 'carwow/static/brand/isauto-logo-dark.png'));
+await copyFile(lightLogoMaster, path.join(CLIENT, 'carwow/static/brand/isauto-logo-light.png'));
+
+const textExtensions = new Set(['.ts', '.tsx', '.js', '.mjs', '.svelte', '.json', '.md', '.css', '.html']);
+const safeReplacements = [
+  ['DAY & NIGHT AUTO GROUP', 'IS AUTO VARNA'], ['DAY NIGHT AUTO GROUP', 'IS AUTO VARNA'],
+  ['Day & Night Auto Group', 'IS AUTO Varna'], ['Day Night Auto Group', 'IS AUTO Varna'],
+  ['Day Night Auto', 'IS AUTO'], ['DAY NIGHT AUTO', 'IS AUTO'], ['Day & Night', 'IS AUTO'],
+  ['Auto Best', 'IS AUTO'], ['AUTO BEST', 'IS AUTO'],
+  ['0877733110', '0899266666'], ['0877 733 110', PHONE_DISPLAY], ['+359877733110', PHONE_E164],
+  ['087 982 4625', PHONE_DISPLAY], ['+359879824625', PHONE_E164],
+  ['ул. „Атанас Манчев“ 18, Студентски град', ADDRESS], ['ул. Атанас Манчев 18', 'сграда B6'],
+  ['Студентски град', 'Бизнес парк Варна'], ['daynight.mobile.bg', 'isautovarna.mobile.bg']
+];
+async function sanitizeTree(directory) {
+  for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+    if (['node_modules', '.git', '.next', '.svelte-kit', 'build', 'dist'].includes(entry.name)) continue;
+    const target = path.join(directory, entry.name);
+    if (entry.isDirectory()) { await sanitizeTree(target); continue; }
+    if (!textExtensions.has(path.extname(entry.name).toLowerCase())) continue;
+    let content = await fs.readFile(target, 'utf8');
+    const original = content;
+    for (const [from, to] of safeReplacements) content = content.split(from).join(to);
+    content = content.replace(/\/assets\/images\/lead\/day-night-[^'"\s)]+/g, '/assets/images/lead/isauto/hero.webp');
+    content = content.replace(/\/assets\/daynight\/[^'"\s)]+/g, '/assets/isauto/hero.webp');
+    if (content !== original) await fs.writeFile(target, content, 'utf8');
+  }
+}
+await sanitizeTree(CLIENT);
+
+await writeText(`clients/${SLUG}/auto-best/src/lib/config/brand.ts`, `export type BrandConfig = {
+  name: string;
+  shortName: string;
+  city: string;
+  addressLine: string;
+  address: string;
+  phone: string;
+  phoneHref: \`tel:\${string}\`;
+  appointment: string;
+  logo: \`/\${string}\`;
+  logoOnDark: \`/\${string}\`;
+  youtubeUrl: \`https://\${string}\`;
+  instagramUrl: \`https://\${string}\`;
+  facebookUrl: \`https://\${string}\`;
+};
+
+const city = 'Варна';
+const addressLine = '${ADDRESS}';
+
+export const brand = {
+  name: 'IS AUTO Varna',
+  shortName: 'IS AUTO',
+  city,
+  youtubeUrl: '${social.youtube}',
+  instagramUrl: '${social.instagram}',
+  facebookUrl: '${social.facebook}',
+  phone: '${PHONE_DISPLAY}',
+  phoneHref: 'tel:${PHONE_E164}',
+  addressLine,
+  address: \`\${addressLine}, \${city}\`,
+  appointment: 'Понеделник–петък 09:00–18:00 · събота 10:00–16:00',
+  logo: '/assets/images/lead/isauto/logo-dark.png',
+  logoOnDark: '/assets/images/lead/isauto/logo-light.png'
+} as const satisfies BrandConfig;`);
+
+const autoBestInventoryRecords = listings.map((item, index) => `  { id: ${item.numericId}, image: '/assets/images/lead/isauto/inventory-${index + 1}.webp', category: '${item.category}', body: '${item.body}', make: '${item.make}', title: '${item.title.replaceAll("'", "\\'")}', yearNumber: ${item.year}, mileageKm: ${item.mileageKm}, fuel: '${item.fuelBg}', transmission: '${item.transmissionBg}', equipment: ${JSON.stringify(item.equipment)}, condition: 'used', priceEur: ${item.priceEur}, evidenceUrl: '${item.sourceUrl}' }`).join(',\n');
+await writeText(`clients/${SLUG}/auto-best/src/lib/data/inventory.ts`, `export type VehicleCondition = 'new' | 'used';
+export type VehicleEquipment =
+  | '4x4'
+  | '360° камера'
