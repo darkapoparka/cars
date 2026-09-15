@@ -1,0 +1,100 @@
+  | 'Панорамен покрив'
+  | 'Подгряване на седалки'
+  | 'Навигация'
+  | 'Парктроник'
+  | 'Безключов достъп'
+  | 'Адаптивен круиз контрол';
+
+export type Vehicle = {
+  id: number;
+  verification: 'sample' | 'verified';
+  evidenceUrl?: string;
+  image: string;
+  category: string;
+  body: string;
+  make: string;
+  title: string;
+  year: string;
+  yearNumber: number;
+  mileage: string;
+  mileageKm: number;
+  fuel: string;
+  transmission: string;
+  equipment: readonly VehicleEquipment[];
+  condition: VehicleCondition;
+  priceEur: number;
+  href: \`/listing-detail-v1/\${number}\`;
+};
+
+const inventoryRecords: Omit<Vehicle, 'year' | 'mileage' | 'href' | 'verification'>[] = [
+${autoBestInventoryRecords}
+];
+
+export const featuredVehicles: Vehicle[] = inventoryRecords.map(record => ({
+  ...record,
+  verification: 'verified',
+  year: String(record.yearNumber),
+  mileage: \`\${new Intl.NumberFormat('bg-BG').format(record.mileageKm)} км\`,
+  href: \`/listing-detail-v1/\${record.id}\`
+}));
+
+export const formatVehiclePrice = (priceEur: number) => \`\${new Intl.NumberFormat('bg-BG').format(priceEur)} €\`;`);
+
+await writeText(`clients/${SLUG}/auto-best/src/lib/data/company.ts`, `import { brand } from '$config/brand';
+
+export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
+type CompanyService = { index: string; icon: CompanyServiceIcon; title: string; description: string; href: string; cta: string; };
+type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
+export type ContactTopic = { id: ContactTopicId; label: string; title: string; description: string; mobileDescription?: string; };
+
+export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {
+  'trade-in': { title: 'Подгответе за разговора', items: ['Марка, модел и година', 'Пробег и състояние', 'Снимки или линк към обява'] },
+  import: { title: 'Какъв автомобил търсите?', items: ['Марка, модел и предпочитания', 'Бюджет за покупката и вноса', 'Линк към обява, ако вече сте избрали'] },
+  leasing: { title: 'Обсъдете с екипа', items: ['Автомобилът, който сте избрали', 'Първоначална вноска и срок', 'Актуални условия за конкретната сделка'] },
+  inspection: { title: 'Уговорете посещението', items: ['Автомобилът, който искате да видите', 'Удобен ден и час', 'Потвърждение от екипа по телефона'] }
+};
+
+export function resolveImportUrl(value: string | null): string | null {
+  const candidate = value?.trim();
+  if (!candidate || candidate.length > 2048) return null;
+  try { const url = new URL(candidate); return ['http:', 'https:'].includes(url.protocol) && !url.username && !url.password ? url.href : null; }
+  catch { return null; }
+}
+
+export const companyServices: CompanyService[] = [
+  { index: '01', icon: 'inspection', title: \`Оглед в \${brand.city}\`, description: 'Посещение в шоурума с предварителна уговорка.', href: '/contact?topic=inspection', cta: 'Запазете оглед' },
+  { index: '02', icon: 'import', title: 'Внос и автомобил по поръчка', description: 'Обсъдете критерии, бюджет и следващи стъпки с екипа.', href: '/contact?topic=import', cta: 'Попитайте за внос' },
+  { index: '03', icon: 'leasing', title: 'Лизинг и разсрочване', description: 'Условията се потвърждават за конкретния автомобил и клиент.', href: '/contact?topic=leasing', cta: 'Обсъдете условия' },
+  { index: '04', icon: 'trade-in', title: 'Продажба или замяна', description: 'Предложете своя автомобил за индивидуален преглед и оценка.', href: '/contact?topic=trade-in', cta: 'Поискайте оценка' }
+];
+
+export const contactTopics: ContactTopic[] = [
+  { id: 'general', label: 'Общ въпрос', title: 'Разговор с екипа', description: \`За наличност, оглед или друг въпрос към \${brand.name}.\` },
+  { id: 'inspection', label: 'Оглед', title: \`Оглед в \${brand.city}\`, description: 'Уговорете посещение предварително, за да бъде подготвен конкретният автомобил.' },
+  { id: 'import', label: 'Внос', title: 'Автомобил по поръчка', description: 'Изпратете обява или посочете марка, модел, година и бюджет.', mobileDescription: 'Изпратете обява или задайте модел и бюджет.' },
+  { id: 'leasing', label: 'Лизинг', title: 'Лизинг и разсрочване', description: 'Получете актуални условия според избрания автомобил и конкретната сделка.' },
+  { id: 'trade-in', label: 'Замяна', title: 'Продажба или замяна', description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.' }
+];
+export const resolveContactTopic = (value: string | null) => contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
+export const showroomCoordinates = { latitude: 43.2279192, longitude: 27.8574313 } as const;`);
+
+await writeText(`clients/${SLUG}/auto-best/src/lib/data/home.ts`, `import { featuredVehicles } from './inventory';
+import { bodyLabel } from './listing';
+import { blogPosts } from './editorial';
+
+const bodyArtwork = [
+  { label: 'Седан', query: 'Sedan', image: '/assets/images/icon-box/car-list1.png', width: 180, height: 80, bounds: [9, 11, 171, 70] },
+  { label: 'SUV', query: 'SUV', image: '/assets/images/icon-box/car-list5.png', width: 206, height: 95, bounds: [0, 0, 206, 95] },
+  { label: 'Купе', query: 'Coupe', image: '/assets/images/icon-box/car-list8.png', width: 180, height: 80, bounds: [11, 15, 170, 63] },
+  { label: 'Спортбек', query: 'Sportback', image: '/assets/images/icon-box/car-list2.png', width: 180, height: 80, bounds: [12, 8, 168, 71] }
+] as const;
+const brandArtwork = [
+  { label: 'Audi', image: '/assets/images/partner/parner11.png', width: 140, height: 80, bounds: [8, 18, 132, 62] },
+  { label: 'BMW', image: '/assets/images/partner/parner12.png', width: 140, height: 80, bounds: [33, 3, 107, 77] }
+] as const;
+export const bodyTypes = bodyArtwork.map(item => ({ ...item, label: bodyLabel(item.query), count: featuredVehicles.filter(vehicle => vehicle.body === item.query).length }));
+export const brands = brandArtwork.map(item => ({ ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length }));
+export const editorial = blogPosts.slice(0, 3).map(post => ({ title: post.title, text: post.text, image: post.image, href: \`/blog-detail/\${post.id}\`, meta: 'Полезно', category: post.category }));`);
+
+await writeText(`clients/${SLUG}/modern/packages/marketplace/lead-site.ts`, `export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+export interface LeadSiteConfig {
