@@ -26,7 +26,7 @@ export const daynightFaqGroups: readonly FaqGroup[] = [
         "answer": [
           {
             "class": "h7 text-secondary line-height-28",
-            "text": "Свържете се с K-G Team Auto на  преди посещение на адрес Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите."
+            "text": "Свържете се с K-G Team Auto на +359877346262 преди посещение на адрес Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите."
           }
         ]
       },

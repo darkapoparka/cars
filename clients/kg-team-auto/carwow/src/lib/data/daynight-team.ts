@@ -16,7 +16,7 @@ export const daynightTeam: DayNightTeamMember[] = [
 		slug: 'dealer-contact',
 		name: "K-G Team Auto",
 		role: "Запитвания за наличност и оглед",
-		phone: "",
+		phone: "+359877346262",
 		email: "",
 		image: "/dealer/logo-light.png",
 		bio: "Свържете се с K-G Team Auto, за да потвърдите актуална наличност, данни за автомобила и възможност за оглед.",

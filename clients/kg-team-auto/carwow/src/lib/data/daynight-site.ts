@@ -5,7 +5,7 @@ import {
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
-const phoneE164 = "";
+const phoneE164 = "+359877346262";
 const city = "Пловдив";
 const shortName = "K-G Team Auto";
 const district = "Пловдив";
@@ -22,8 +22,8 @@ export const daynightSite = {
 	currency: "EUR",
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "",
-	phoneLabel: "",
+	phone: "359877346262",
+	phoneLabel: "+359877346262",
 	email: "",
 	location,
 	locationShort: "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
