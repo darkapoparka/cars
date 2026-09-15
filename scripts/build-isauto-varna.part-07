@@ -24,8 +24,8 @@
           git init
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          if git fetch --depth=1 origin "refs/heads/${PACKAGE_BRANCH}"; then
+          git remote add origin "https://x-access-token:\${GH_TOKEN}@github.com/\${GITHUB_REPOSITORY}.git"
+          if git fetch --depth=1 origin "refs/heads/\${PACKAGE_BRANCH}"; then
             git checkout -B "$PACKAGE_BRANCH" FETCH_HEAD
             find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           else
@@ -38,7 +38,7 @@
             exit 0
           fi
           git commit -m "Publish ${SLUG} from canonical $GITHUB_SHA"
-          git push origin "HEAD:refs/heads/${PACKAGE_BRANCH}"
+          git push origin "HEAD:refs/heads/\${PACKAGE_BRANCH}"
 `);
 
 console.log(json({
