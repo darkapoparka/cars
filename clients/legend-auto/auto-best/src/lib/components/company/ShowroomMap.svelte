@@ -1,8 +1,6 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-
-
-  const mapEmbedUrl = brand.mapsEmbedUrl;
+  const mapEmbedUrl = "https://maps.google.com/maps?q=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed";
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 </script>
 
@@ -10,7 +8,7 @@
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={`Карта до ${brand.name}`}
+    title={"Карта до" + ` ${brand.name}`}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
@@ -49,8 +47,8 @@
     background: rgba(255, 255, 255, .96);
     box-shadow: 0 8px 20px rgba(18, 25, 38, .12);
     color: var(--dn-ink);
-    font-size: 14px;
-    font-weight: 700;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
   }
 
   .dn-showroom-map__link:hover,

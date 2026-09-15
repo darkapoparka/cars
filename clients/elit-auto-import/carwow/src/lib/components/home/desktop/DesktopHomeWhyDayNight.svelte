@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
 	import {
@@ -34,10 +35,10 @@
 		},
 		{
 			id: 'financing',
-			title: 'Доставка в страната',
-			copy: 'Доставка със собствен транспорт — уточнете условията.',
+			title: 'Лизинг и замяна',
+			copy: 'Попитайте за индивидуални условия за избрания автомобил.',
 			cta: 'Поискайте условия',
-			href: '/contact',
+			href: '/financing',
 			image: '/assets/images/home-promos/leasing-calculator-cutout-v7.webp'
 		}
 	] as const;
@@ -67,7 +68,7 @@
 		{
 			id: 'location',
 			value: '1',
-			label: 'локация в Варна',
+			label: `локация в ${daynightSite.city}`,
 			hasDivider: true
 		},
 		{
@@ -128,7 +129,7 @@
 				</div>
 
 				<div class="daynight-home-why__content">
-					<h2 class="daynight-home-why__title">Доставка в страната</h2>
+					<h2 class="daynight-home-why__title">Лизинг и замяна</h2>
 					<p class="daynight-home-why__copy">
 						Попитайте за индивидуални условия според избрания автомобил.
 					</p>
@@ -252,8 +253,8 @@
 	}
 	.daynight-home-campaign-card h2 {
 		color: var(--campaign-ink);
-		font-size: clamp(24px, 1.8vw, 30px);
-		font-weight: 700;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.025em;
 		line-height: 1.15;
 		margin: 0 0 12px;
@@ -261,8 +262,8 @@
 	}
 	.daynight-home-campaign-card p {
 		color: var(--campaign-copy);
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-regular);
 		line-height: 1.5;
 		margin: 0 0 20px;
 		max-width: 34ch;

@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "automarket-varna",
   "templateKey": "modern",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
   "createdAt": "2026-09-06T21:48:54.386Z",
-  "state": "local-qa-passed",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,28 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "evidence": "../qa-final/automarket-varna/modern/result.json",
-    "frameworkChecks": true,
-    "checkedAt": "2026-09-08T03:40:50.032Z",
-    "limits": [
-      "Local demo only; no provider or form delivery verified.",
-      "Stock is a dated source-backed sample."
-    ],
-    "latestFrameworkEvidence": [
-      {
-        "path": "J:/cars/clients/automarket-varna/qa-final/modern-typecheck.log",
-        "modifiedAt": "2026-09-08T01:47:51.856Z"
-      },
-      {
-        "path": "J:/cars/clients/automarket-varna/qa-final/modern-build.log",
-        "modifiedAt": "2026-09-08T01:48:38.293Z"
-      }
-    ],
-    "finalMatrixEvidence": "J:/cars/clients/automarket-varna/qa-final/results.json"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -76,5 +58,22 @@
     "stock": "../stock.json",
     "stockCount": 16,
     "sourceTemplateVersion": "2026.09.06-refresh-1"
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "8161310561a20065116582293c4de1a41ed62329",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-14T21:33:46.432Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }

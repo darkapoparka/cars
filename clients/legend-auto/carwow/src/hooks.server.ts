@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
 import { svelteKitHandler } from 'better-auth/svelte-kit';
-import { getRouteBodyClasses } from '$lib/data/template-routes';
+import { getRouteBodyClasses } from '$lib/config/storefront-routes';
 import { getAuth, hasAuthRuntimeConfig } from '$lib/server/auth/auth';
 import { getAuthSession } from '$lib/server/auth/session';
 import { createDb, hasDatabaseUrl } from '$lib/server/db/client';
@@ -54,6 +54,20 @@ export function injectBodyClasses(html: string, bodyClasses: string[]) {
 	)}`;
 }
 
+function varyByDevice(response: Response) {
+	const vary = response.headers.get('vary') ?? '';
+	if (
+		response.headers.get('content-type')?.includes('text/html') &&
+		!vary
+			.toLowerCase()
+			.split(',')
+			.some((key) => key.trim() === 'user-agent')
+	) {
+		response.headers.set('Vary', [vary, 'User-Agent'].filter(Boolean).join(', '));
+	}
+	return response;
+}
+
 export const handle: Handle = async ({ event, resolve }) => {
 	const hasDb = hasDatabaseUrl();
 	if (!hasDb) warnMissingProductionDatabaseUrl();
@@ -75,15 +89,16 @@ export const handle: Handle = async ({ event, resolve }) => {
 		resolve(eventToResolve, resolveOptions);
 
 	if (hasAuthRuntimeConfig()) {
-		return svelteKitHandler({
+		const response = await svelteKitHandler({
 			event,
 			resolve: resolveWithBodyClasses,
 			auth: getAuth(),
 			building
 		});
+		return varyByDevice(response);
 	}
 
-	return resolveWithBodyClasses(event);
+	return varyByDevice(await resolveWithBodyClasses(event));
 };
 
 export const handleError: HandleServerError = ({ error, event, status, message }) => {

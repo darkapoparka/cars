@@ -1,34 +1,21 @@
 export type DayNightReview = {
 	id: string;
 	text: string;
-	avatar: `/assets/${string}`;
+	avatar: string;
 	name: string;
 	label: string;
+	rating: number;
 };
 
-export const daynightReviews: DayNightReview[] = [
-  {
-    "id": "service-0",
-    "text": "Внос на употребявани автомобили от ЕС и доставка по поръчка.",
-    "avatar": "/assets/automarket/cover.png",
-    "name": "Продажба на употребявани автомобили",
-    "label": "Информация от публикуваните обяви"
-  },
-  {
-    "id": "service-1",
-    "text": "Обсъдете замяна на автомобила си срещу доплащане.",
-    "avatar": "/assets/automarket/cover.png",
-    "name": "Внос от ЕС и доставка по поръчка",
-    "label": "Информация от публикуваните обяви"
-  },
-  {
-    "id": "service-2",
-    "text": "Съдействие при регистрация в КАТ и транзитни номера.",
-    "avatar": "/assets/automarket/cover.png",
-    "name": "Бартер с доплащане",
-    "label": "Информация от публикуваните обяви"
-  }
-];
-export const daynightReviewCount = daynightReviews.length;
-export const daynightReviewCountLabel = 'Услуги и информация';
-export const daynightReviewLinkLabel = 'Виж информацията';
+export const daynightReviews: DayNightReview[] = [];
+export const daynightReviewDisclosure = "В този независим преглед не са включени потвърдени клиентски отзиви." as const;
+export const daynightReviewCount = 0;
+export const daynightReviewCountLabel = "Няма потвърдени отзиви";
+export const daynightReviewLinkLabel = daynightReviewCountLabel;
+export const daynightReviewAverage = 0;
+export const daynightReviewDistribution = [5, 4, 3, 2, 1].map((rating) => ({
+	id: `${rating}-star`,
+	label: String(rating),
+	count: 0,
+	percent: '0%'
+}));

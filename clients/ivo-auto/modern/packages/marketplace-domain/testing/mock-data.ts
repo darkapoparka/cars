@@ -3,13 +3,13 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    "id": "ivo-11786049135297264",
-    "slug": "ivo-11786049135297264",
+    "id": "am-1001",
+    "slug": "rolls-royce-ghost-2011-11786049135297264",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "Rolls-Royce Ghost",
-    "description": "Rolls-Royce Ghost, 2011 г., 66 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11786049135297264-rolls-royce-ghost",
+    "description": "Rolls-Royce Ghost, 2011 г., 66 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 105000,
       "currency": "EUR"
@@ -38,10 +38,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "Rolls-Royce",
       "model": "Ghost",
@@ -59,19 +58,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T10:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "ivo-11784822971964926",
-    "slug": "ivo-11784822971964926",
+    "id": "am-1010",
+    "slug": "audi-a4-s-line-4x4-2-0t-2008-11784822971964926",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "Audi A4 S-line 4x4 2.0T",
-    "description": "Audi A4 S-line 4x4 2.0T, 2008 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11784822971964926-audi-a4-s-line-4x4-2-0t",
+    "description": "Audi A4 S-line 4x4 2.0T, 2008 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 2800,
       "currency": "EUR"
@@ -100,7 +100,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -126,19 +126,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "ivo-11775231551222536",
-    "slug": "ivo-11775231551222536",
+    "id": "am-1011",
+    "slug": "porsche-panamera-turbo-4-8i-2010-11775231551222536",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "Porsche Panamera Turbo 4.8i",
-    "description": "Porsche Panamera Turbo 4.8i, 2010 г., 145 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11775231551222536-porsche-panamera-turbo-4-8i",
+    "description": "Porsche Panamera Turbo 4.8i, 2010 г., 145 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 21000,
       "currency": "EUR"
@@ -167,7 +168,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -193,19 +194,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "ivo-21784804233950248",
-    "slug": "ivo-21784804233950248",
+    "id": "am-1012",
+    "slug": "dodge-durango-3-6-face-lift-6-1-2015-21784804233950248",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1",
-    "description": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1, 2015 г., 202 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-21784804233950248-dodge-durango-3-6-face-lift-gaz-inzh-6-1",
+    "description": "Dodge Durango 3.6 Face Lift Газ.Инж. 6+ 1, 2015 г., 202 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 13900,
       "currency": "EUR"
@@ -234,7 +236,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -259,19 +261,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:57.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-11784710943679925",
-    "slug": "ivo-11784710943679925",
+    "id": "am-1013",
+    "slug": "bmw-520-m-digital-2018-11784710943679925",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "BMW 520 M-пакет Digital",
-    "description": "BMW 520 M-пакет Digital, 2018 г., 165 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11784710943679925-bmw-520-m-paket-digital",
+    "description": "BMW 520 M-пакет Digital, 2018 г., 165 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 19000,
       "currency": "EUR"
@@ -300,10 +303,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "BMW",
       "model": "520 M-пакет Digital",
@@ -321,19 +323,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:56.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-11780924566736048",
-    "slug": "ivo-11780924566736048",
-    "category": "car",
+    "id": "am-1014",
+    "slug": "vw-touran-1-6tdi-6-1-2012-11780924566736048",
+    "category": "van",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "VW Touran 1.6TDI Автомат 6+ 1",
-    "description": "VW Touran 1.6TDI Автомат 6+ 1, 2012 г., 210 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11780924566736048-vw-touran-1-6tdi-avtomat-6-1",
+    "description": "VW Touran 1.6TDI Автомат 6+ 1, 2012 г., 210 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 3999,
       "currency": "EUR"
@@ -362,10 +365,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "VW",
       "model": "Touran 1.6TDI Автомат 6+ 1",
@@ -383,19 +385,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:55.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-11778070752693531",
-    "slug": "ivo-11778070752693531",
+    "id": "am-1002",
+    "slug": "vw-cc-2-0i-2013-11778070752693531",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "VW CC 2.0i",
-    "description": "VW CC 2.0i, 2013 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11778070752693531-vw-cc-2-0i",
+    "description": "VW CC 2.0i, 2013 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 9000,
       "currency": "EUR"
@@ -424,10 +427,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "VW",
       "model": "CC 2.0i",
@@ -445,19 +447,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:54.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-21779453321117197",
-    "slug": "ivo-21779453321117197",
+    "id": "am-1003",
+    "slug": "bmw-x5-4-0d-face-lift-8-2011-21779453321117197",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "BMW X5 4.0D Face Lift 8ск.",
-    "description": "BMW X5 4.0D Face Lift 8ск., 2011 г., 196 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-21779453321117197-bmw-x5-4-0d-face-lift-8sk",
+    "description": "BMW X5 4.0D Face Lift 8ск., 2011 г., 196 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 9500,
       "currency": "EUR"
@@ -486,7 +489,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -512,19 +515,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:53.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-21779444147151936",
-    "slug": "ivo-21779444147151936",
+    "id": "am-1004",
+    "slug": "bmw-x5-3-0d-face-lift-2005-21779444147151936",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "BMW X5 3.0D Face Lift",
-    "description": "BMW X5 3.0D Face Lift, 2005 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-21779444147151936-bmw-x5-3-0d-face-lift",
+    "description": "BMW X5 3.0D Face Lift, 2005 г., 195 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 4600,
       "currency": "EUR"
@@ -553,7 +557,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -579,19 +583,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:52.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-11780659371731573",
-    "slug": "ivo-11780659371731573",
+    "id": "am-1005",
+    "slug": "bmw-418-d-m-2017-11780659371731573",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "BMW 418 D M-Пакет",
-    "description": "BMW 418 D M-Пакет, 2017 г., 149 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11780659371731573-bmw-418-d-m-paket",
+    "description": "BMW 418 D M-Пакет, 2017 г., 149 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 16200,
       "currency": "EUR"
@@ -620,10 +625,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "BMW",
       "model": "418 D M-Пакет",
@@ -641,19 +645,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:51.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-21781871293573646",
-    "slug": "ivo-21781871293573646",
+    "id": "am-1006",
+    "slug": "subaru-b9-tribeca-3-0-2006-21781871293573646",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "Subaru B9 tribeca 3.0 Газ.Инж.",
-    "description": "Subaru B9 tribeca 3.0 Газ.Инж., 2006 г., 170 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-21781871293573646-subaru-b9-tribeca-3-0-gaz-inzh",
+    "description": "Subaru B9 tribeca 3.0 Газ.Инж., 2006 г., 170 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 3999,
       "currency": "EUR"
@@ -682,7 +687,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -708,19 +713,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:50.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-21762959348847465",
-    "slug": "ivo-21762959348847465",
+    "id": "am-1007",
+    "slug": "mercedes-benz-ml-250-amg-2014-21762959348847465",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "Mercedes-Benz ML 250 AMG-Пакет",
-    "description": "Mercedes-Benz ML 250 AMG-Пакет, 2014 г., 130 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-21762959348847465-mercedes-benz-ml-250-amg-paket",
+    "description": "Mercedes-Benz ML 250 AMG-Пакет, 2014 г., 130 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 14500,
       "currency": "EUR"
@@ -749,7 +755,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -775,19 +781,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:49.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-11774893593485843",
-    "slug": "ivo-11774893593485843",
+    "id": "am-1008",
+    "slug": "mercedes-benz-s-500-4matic-2007-11774893593485843",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "Mercedes-Benz S 500 4Matic Газ.Инж",
-    "description": "Mercedes-Benz S 500 4Matic Газ.Инж, 2007 г., 290 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11774893593485843-mercedes-benz-s-500-4matic-gaz-inzh",
+    "description": "Mercedes-Benz S 500 4Matic Газ.Инж, 2007 г., 290 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 10000,
       "currency": "EUR"
@@ -816,7 +823,7 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
     "features": [
@@ -842,19 +849,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "publishedAt": "2026-09-07T09:59:48.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "ivo-11756369185395904",
-    "slug": "ivo-11756369185395904",
+    "id": "am-1009",
+    "slug": "bmw-730-d-m-2010-11756369185395904",
     "category": "car",
     "dealerOrgId": "dealer-ivo-auto",
     "status": "active",
     "title": "BMW 730 D M-Пакет",
-    "description": "BMW 730 D M-Пакет, 2010 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11756369185395904-bmw-730-d-m-paket",
+    "description": "BMW 730 D M-Пакет, 2010 г., 214 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона.",
     "price": {
       "amount": 11000,
       "currency": "EUR"
@@ -883,10 +891,9 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
     "spec": {
       "make": "BMW",
       "model": "730 D M-Пакет",
@@ -904,141 +911,13 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Иво Ауто",
       "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:47.000Z",
-    "promoted": false
-  },
-  {
-    "id": "ivo-11775822194120541",
-    "slug": "ivo-11775822194120541",
-    "category": "car",
-    "dealerOrgId": "dealer-ivo-auto",
-    "status": "active",
-    "title": "BMW M5",
-    "description": "BMW M5, 2008 г., 218 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11775822194120541-bmw-m5",
-    "price": {
-      "amount": 30000,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/ivo-auto/vehicle-15-1.webp",
-        "alt": "BMW M5"
-      },
-      {
-        "url": "/assets/ivo-auto/vehicle-15-2.webp",
-        "alt": "BMW M5"
-      },
-      {
-        "url": "/assets/ivo-auto/vehicle-15-3.webp",
-        "alt": "BMW M5"
-      },
-      {
-        "url": "/assets/ivo-auto/vehicle-15-4.webp",
-        "alt": "BMW M5"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
       "city": "Варна",
-      "region": "Владислав Варненчик",
-      "country": "България"
+      "logoUrl": "/assets/ivo-auto/wordmark.svg"
     },
-    "features": [],
-    "spec": {
-      "make": "BMW",
-      "model": "M5",
-      "year": 2008,
-      "bodyType": "sedan",
-      "fuelType": "gasoline",
-      "transmission": "automatic",
-      "mileageValue": 218000,
-      "mileageUnit": "km",
-      "enginePowerHp": 507,
-      "colorExterior": "Tъмно син"
-    },
-    "seller": {
-      "id": "dealer-ivo-auto",
-      "type": "dealer",
-      "displayName": "Иво Ауто",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:46.000Z",
-    "promoted": false
-  },
-  {
-    "id": "ivo-11769186790854071",
-    "slug": "ivo-11769186790854071",
-    "category": "car",
-    "dealerOrgId": "dealer-ivo-auto",
-    "status": "active",
-    "title": "Audi A8 Full Led",
-    "description": "Audi A8 Full Led, 2013 г., 215 000 км. Публикувана обява на Иво Ауто. Потвърдете наличността, оборудването и условията по телефона. Не се начислява ДДС. Оригинална обява: https://ivoauto-varna.mobile.bg/obiava-11769186790854071-audi-a8-full-led",
-    "price": {
-      "amount": 15500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/ivo-auto/vehicle-16-1.webp",
-        "alt": "Audi A8 Full Led"
-      },
-      {
-        "url": "/assets/ivo-auto/vehicle-16-2.webp",
-        "alt": "Audi A8 Full Led"
-      },
-      {
-        "url": "/assets/ivo-auto/vehicle-16-3.webp",
-        "alt": "Audi A8 Full Led"
-      },
-      {
-        "url": "/assets/ivo-auto/vehicle-16-4.webp",
-        "alt": "Audi A8 Full Led"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
-      "city": "Варна",
-      "region": "Владислав Варненчик",
-      "country": "България"
-    },
-    "features": [
-      {
-        "bg": "4x4",
-        "en": "4x4"
-      }
-    ],
-    "spec": {
-      "make": "Audi",
-      "model": "A8 Full Led",
-      "year": 2013,
-      "bodyType": "sedan",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 215000,
-      "mileageUnit": "km",
-      "enginePowerHp": 250,
-      "colorExterior": "Tъмно син"
-    },
-    "seller": {
-      "id": "dealer-ivo-auto",
-      "type": "dealer",
-      "displayName": "Иво Ауто",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:45.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

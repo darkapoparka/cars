@@ -1,0 +1,57 @@
+.mobile-hero-pill {
+	display: inline-flex;
+	justify-self: center;
+	min-height: var(--sa-mobile-action-h);
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	border-radius: var(--sa-r-pill);
+	background: rgba(255, 255, 255, 0.08);
+	padding: 0 13px;
+	color: rgba(255, 255, 255, 0.92) !important;
+	font-family: var(--sa-font);
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-regular);
+	line-height: var(--sa-leading-normal);
+	text-decoration: none;
+	cursor: pointer;
+	box-shadow: none;
+	margin-top: -1px;
+	transition:
+		color 120ms ease-out,
+		background-color 120ms ease-out;
+}
+
+.mobile-hero-pill span {
+	font: inherit;
+	color: inherit !important;
+	-webkit-text-fill-color: currentColor !important;
+}
+
+.mobile-hero-pill svg,
+.mobile-hero-pill svg * {
+	width: 14px;
+	height: 14px;
+	color: currentColor !important;
+	stroke: currentColor !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.mobile-hero-pill:hover {
+		background: rgba(255, 255, 255, 0.13);
+		color: #fff !important;
+	}
+}
+
+.mobile-hero-pill:active {
+	background: rgba(255, 255, 255, 0.17);
+	color: #fff !important;
+}
+
+.mobile-hero-pill:focus-visible {
+	background: rgba(255, 255, 255, 0.08);
+	color: #fff !important;
+	outline: 2px solid rgba(255, 255, 255, 0.72);
+	outline-offset: 2px;
+}

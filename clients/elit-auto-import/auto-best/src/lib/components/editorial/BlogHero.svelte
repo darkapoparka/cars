@@ -10,7 +10,7 @@
   <HeroVehicles pair="blog" />
   <img
     class="dn-blog-hero__media"
-    src="/assets/elit/cover.png"
+    src="/assets/images/lead/day-night-blog-hero-v2.webp"
     alt=""
     width="1920"
     height="1080"

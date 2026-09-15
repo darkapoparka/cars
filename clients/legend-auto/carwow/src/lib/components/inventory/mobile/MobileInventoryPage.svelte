@@ -2,12 +2,26 @@
 	import './mobileInventory.css';
 	import { page as appPage } from '$app/state';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
-	import { getDayNightVehicleAvailability } from '$lib/data/daynight-vehicles';
+	import { afterNavigate, replaceState } from '$app/navigation';
+	import { resolve } from '$app/paths';
+	import {
+		parseInventoryFilters,
+		readMobileSort,
+		serializeInventoryFilters
+	} from '$lib/utils/inventory-url';
+	import { vehicleMatches, mileageMatches } from '$lib/state/inventory-filters.svelte';
 	import MobileFullSheet from '$lib/components/shared/mobile/MobileFullSheet.svelte';
 	import MobileBottomDock from '$lib/components/home/mobile/MobileBottomDock.svelte';
 	import CompareTray from '$lib/components/shared/CompareTray.svelte';
 	import { enhanceDayNightImageFallbacks } from '$lib/utils/daynight-image-fallback';
 	import { onMount, tick } from 'svelte';
+
+	afterNavigate(() => {
+		restoreAppliedFilters(new URL(window.location.href).searchParams);
+		if (typeof appPage.state.inventoryScrollY === 'number') {
+			window.scrollTo({ top: appPage.state.inventoryScrollY, behavior: 'instant' });
+		}
+	});
 	import MobileFilterSheet from './MobileFilterSheet.svelte';
 	import MobileInventoryQuickFilters from './MobileInventoryQuickFilters.svelte';
 	import MobileInventoryResults from './MobileInventoryResults.svelte';
@@ -17,7 +31,6 @@
 		mileageOptions,
 		priceOptions,
 		searchPriceSuggestions,
-		sortChipLabels,
 		sortOptions
 	} from './mobile-inventory-filter-data';
 	import {
@@ -26,7 +39,6 @@
 		normalize,
 		selectionSummary,
 		sortVehicles,
-		splitParam,
 		toggleValue,
 		uniqueSorted
 	} from '$lib/utils/inventory-filter-utils';
@@ -43,15 +55,17 @@
 	onMount(() => enhanceDayNightImageFallbacks());
 
 	let query = $state(appPage.url.searchParams.get('q') ?? '');
-	let selectedBrands = $state<string[]>(initialSearchValues('brand'));
-	let selectedModels = $state<string[]>(initialSearchValues('model'));
-	let selectedBodies = $state<string[]>(initialSearchValues('body'));
+	let selectedBrands = $state<string[]>(parseInventoryFilters(appPage.url.searchParams).brand);
+	let selectedModels = $state<string[]>(parseInventoryFilters(appPage.url.searchParams).model);
+	let selectedBodies = $state<string[]>(parseInventoryFilters(appPage.url.searchParams).body);
 	let fuel = $state(appPage.url.searchParams.get('fuel') ?? '');
 	let transmission = $state(appPage.url.searchParams.get('transmission') ?? '');
 	let price = $state(appPage.url.searchParams.get('price') ?? '');
 	let mileage = $state(appPage.url.searchParams.get('mileage') ?? '');
 	let availability = $state(appPage.url.searchParams.get('availability') ?? '');
-	let sort = $state<SortKey>('price-asc');
+	let sort = $state<SortKey>(readMobileSort(appPage.url.searchParams.get('sort')));
+	let feature = $state<string[]>(parseInventoryFilters(appPage.url.searchParams).feature ?? []);
+	let condition = $state(parseInventoryFilters(appPage.url.searchParams).condition ?? '');
 	let filtersOpen = $state(false);
 	let filterSheetMode = $state<FilterSheetMode>('all');
 	let selectorQuery = $state('');
@@ -98,7 +112,7 @@
 	});
 	const transmissions = $derived(uniqueSorted(vehicles.map((vehicle) => vehicle.transmission)));
 
-	const sortChipLabel = $derived(sortChipLabels[sort]);
+	const sortLabel = $derived(sortOptions.find((option) => option.value === sort)?.label ?? '');
 	const priceLabel = $derived(priceOptions.find((option) => option.value === price)?.label ?? '');
 	const mileageLabel = $derived(
 		mileageOptions.find((option) => option.value === mileage)?.label ?? ''
@@ -145,48 +159,41 @@
 			price ||
 			mileage ||
 			availability ||
+			feature.length ||
+			condition ||
 			sort !== 'price-asc'
 		)
 	);
-	const hasAdvancedFilters = $derived(
-		Boolean(
-			selectedBodies.length || fuel || mileage || transmission || price || sort !== 'price-asc'
-		)
+	const activeFilterCount = $derived(
+		[
+			selectedBrands.length,
+			selectedModels.length,
+			selectedBodies.length,
+			fuel,
+			mileage,
+			transmission,
+			price,
+			availability,
+			feature.length,
+			condition
+		].filter(Boolean).length
 	);
-	const filteredVehicles = $derived.by(() => {
-		const needle = normalize(query);
-
-		return vehicles.filter((vehicle) => {
-			const haystack = normalize(
-				[
-					vehicle.title,
-					vehicle.shortTitle,
-					vehicle.brand,
-					vehicle.model,
-					vehicle.body,
-					vehicle.fuel,
-					vehicle.transmission,
-					vehicle.year,
-					vehicle.mileage,
-					vehicle.color,
-					vehicle.features.join(' '),
-					vehicle.highlights.join(' ')
-				].join(' ')
-			);
-
-			if (needle && !needle.split(/\s+/).every((term) => haystack.includes(term))) return false;
-			if (selectedBrands.length && !selectedBrands.includes(vehicle.brand)) return false;
-			if (selectedModels.length && !selectedModels.includes(vehicle.model)) return false;
-			if (selectedBodies.length && !selectedBodies.includes(vehicle.body)) return false;
-			if (fuel && vehicle.fuel !== fuel) return false;
-			if (transmission && vehicle.transmission !== transmission) return false;
-			if (!priceMatches(vehicle.price, price)) return false;
-			if (!mileageMatches(vehicle.mileageValue, mileage)) return false;
-			if (availability && getDayNightVehicleAvailability(vehicle) !== availability) return false;
-
-			return true;
-		});
+	const criteria = $derived({
+		query,
+		brand: selectedBrands,
+		model: selectedModels,
+		body: selectedBodies,
+		fuel,
+		transmission,
+		price,
+		mileage,
+		availability,
+		feature,
+		condition
 	});
+	const filteredVehicles = $derived(
+		vehicles.filter((vehicle) => vehicleMatches(vehicle, criteria))
+	);
 	const resultCountLabel = $derived(formatVehicleCount(filteredVehicles.length));
 	const filterSheetActionLabel = $derived(
 		filterSheetMode === 'all' || filterSheetMode === 'search'
@@ -195,12 +202,37 @@
 	);
 	const sortedVehicles = $derived(sortVehicles(filteredVehicles, sort));
 
-	function initialSearchValues(name: 'brand' | 'model' | 'body') {
-		const pluralName = name === 'body' ? 'bodies' : `${name}s`;
-		return uniqueSorted([
-			...appPage.url.searchParams.getAll(name),
-			...splitParam(appPage.url.searchParams.get(pluralName))
-		]);
+	function restoreAppliedFilters(params: URLSearchParams) {
+		const parsed = parseInventoryFilters(params);
+		query = parsed.query;
+		selectedBrands = parsed.brand;
+		selectedModels = parsed.model;
+		selectedBodies = parsed.body;
+		fuel = parsed.fuel;
+		transmission = parsed.transmission;
+		price = parsed.price;
+		mileage = parsed.mileage;
+		availability = parsed.availability ?? '';
+		feature = parsed.feature ?? [];
+		condition = parsed.condition ?? '';
+		sort = readMobileSort(params.get('sort'));
+	}
+	function syncUrl() {
+		const params = serializeInventoryFilters(
+			criteria,
+			sort,
+			new URL(window.location.href).searchParams
+		);
+		replaceState(
+			resolve(
+				`${mode === 'map' ? '/inventory/map' : '/inventory'}${params.size ? `?${params}` : ''}`
+			),
+			appPage.state
+		);
+	}
+	function cancelFilterSheet() {
+		filtersOpen = false;
+		restoreAppliedFilters(new URL(window.location.href).searchParams);
 	}
 
 	function prioritizeSelected(
@@ -214,23 +246,6 @@
 			if (leftSelected !== rightSelected) return leftSelected ? -1 : 1;
 			return left.value.localeCompare(right.value, 'bg');
 		});
-	}
-
-	function priceMatches(value: number, filter: string) {
-		if (!filter) return true;
-		const option = priceOptions.find((item) => item.value === filter);
-		if (!option) return true;
-		if ('limit' in option && typeof option.limit === 'number')
-			return value > 0 && value <= option.limit;
-		if ('min' in option && typeof option.min === 'number') return value > option.min;
-		return true;
-	}
-
-	function mileageMatches(value: number, filter: string) {
-		if (!filter) return true;
-		const option = mileageOptions.find((item) => item.value === filter);
-		if (!option) return true;
-		return value > 0 && value <= option.limit;
 	}
 
 	function brandLogoPath(value: string) {
@@ -301,6 +316,7 @@
 
 	function clearPrice() {
 		price = '';
+		if (!filtersOpen) syncUrl();
 	}
 
 	function clearTransmission() {
@@ -342,7 +358,8 @@
 	}
 
 	function priceOptionCount(filter: string) {
-		return vehicles.filter((vehicle) => priceMatches(vehicle.price, filter)).length;
+		return vehicles.filter((vehicle) => vehicleMatches(vehicle, { ...criteria, price: filter }))
+			.length;
 	}
 
 	function transmissionOptionCount(value: string) {
@@ -359,7 +376,10 @@
 		price = '';
 		mileage = '';
 		availability = '';
+		feature = [];
+		condition = '';
 		sort = 'price-asc';
+		if (!filtersOpen) syncUrl();
 	}
 
 	function focusFilterSheet() {
@@ -389,6 +409,7 @@
 
 	async function completeFilterSheet() {
 		if (filterSheetMode === 'all' || filterSheetMode === 'search') {
+			syncUrl();
 			filtersOpen = false;
 			return;
 		}
@@ -521,17 +542,23 @@
 	}
 </script>
 
-<div class="mobile-inventory" aria-label="Мобилна страница автомобили">
+<div class="mobile-inventory">
 	<main id="main-content" tabindex="-1">
-		<h1 class="sr-only">Автомобили на склад — LEGEND AUTO</h1>
-		<MobileInventoryTop {mode} {query} onOpenSearch={() => openFilterSheet('search')} />
+		<h1 class="sr-only">Автомобили на склад — Ден и Нощ Ауто Груп</h1>
+		<MobileInventoryTop
+			{mode}
+			{query}
+			{activeFilterCount}
+			{sortLabel}
+			sortActive={sort !== 'price-asc'}
+			onOpenSearch={() => openFilterSheet('search')}
+			onOpenFilters={() => openFilterSheet('all')}
+			onOpenSort={() => openFilterSheet('sort')}
+		/>
 
 		<section class="mobile-inventory-results" aria-live="polite">
 			<MobileInventoryQuickFilters
 				vehiclesCount={vehicles.length}
-				{hasAdvancedFilters}
-				{sort}
-				{sortChipLabel}
 				{selectedBrands}
 				{brandSummary}
 				{selectedModels}
@@ -543,11 +570,14 @@
 				{bodySummary}
 				{hasActiveFilters}
 				{priceLabel}
-				{brandLogoPath}
 				openFilterSheet={(nextMode) => openFilterSheet(nextMode)}
 				{clearFilters}
-				{clearPrice}
 			/>
+			<div class="mobile-inventory-summary">
+				<p role="status">{resultCountLabel}</p>
+				{#if hasActiveFilters}<button type="button" onclick={clearFilters}>Изчисти филтрите</button
+					>{/if}
+			</div>
 			<MobileInventoryResults vehicles={sortedVehicles} onClearFilters={clearFilters} />
 		</section>
 	</main>
@@ -555,7 +585,11 @@
 	<MobileBottomDock />
 	<CompareTray />
 
-	<MobileFullSheet bind:open={filtersOpen} labelledBy="mobile-filter-title">
+	<MobileFullSheet
+		bind:open={filtersOpen}
+		labelledBy="mobile-filter-title"
+		onClose={cancelFilterSheet}
+	>
 		<MobileFilterSheet
 			{filterSheetMode}
 			{filterSheetEyebrow}
@@ -600,7 +634,7 @@
 			{mileageOptionCount}
 			{priceOptionCount}
 			{transmissionOptionCount}
-			onClose={() => (filtersOpen = false)}
+			onClose={cancelFilterSheet}
 			openFilterSheet={(nextMode) => openFilterSheet(nextMode)}
 			{clearCurrentSheet}
 			{completeFilterSheet}

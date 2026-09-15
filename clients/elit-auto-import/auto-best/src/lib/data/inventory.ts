@@ -11,10 +11,9 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  verification: 'sample' | 'verified';
+  evidenceUrl?: string;
   image: string;
-  gallery: string[];
-  description: string;
-  sourceUrl: string;
   category: string;
   body: string;
   make: string;
@@ -31,35 +30,27 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in ELIT AUTO's
-// current adverts for these model families (elitautoimport.mobile.bg, checked 2026-08-30).
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-21717056982373192-mercedes-benz-gl-450",
     "image": "/assets/elit/21717056982373192-0.webp",
-    "gallery": [
-      "/assets/elit/21717056982373192-0.webp",
-      "/assets/elit/21717056982373192-1.webp",
-      "/assets/elit/21717056982373192-2.webp",
-      "/assets/elit/21717056982373192-3.webp",
-      "/assets/elit/21717056982373192-4.webp"
-    ],
-    "description": "Mercedes GL 450 4matic V8 Facelift ( X164 ) Автомобилът е внос от САЩ. Пробегът е в мили (114300 мили - 184000 км).  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-21717056982373192-mercedes-benz-gl-450",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz GL 450",
     "year": "2010",
     "yearNumber": 2010,
-    "mileage": "184 000 км (по обява)",
+    "mileage": "184 000 км",
     "mileageKm": 184000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
-      "Парктроник",
-      "Подгряване на седалки"
+      "Панорамен покрив",
+      "Подгряване на седалки",
+      "Парктроник"
     ],
     "condition": "used",
     "priceEur": 13500,
@@ -67,23 +58,16 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 2,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11700571967441521-volvo-s60",
     "image": "/assets/elit/11700571967441521-0.webp",
-    "gallery": [
-      "/assets/elit/11700571967441521-0.webp",
-      "/assets/elit/11700571967441521-1.webp",
-      "/assets/elit/11700571967441521-2.webp",
-      "/assets/elit/11700571967441521-3.webp",
-      "/assets/elit/11700571967441521-4.webp"
-    ],
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Volvo S60 Автомобилът в внос от Америка! Паркинг забележки! Пробегът е в мили (206500km)! В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус. Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11700571967441521-volvo-s60",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Volvo",
     "title": "Volvo S60",
     "year": "2013",
     "yearNumber": 2013,
-    "mileage": "129 000 км (по обява)",
+    "mileage": "129 000 км",
     "mileageKm": 129000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
@@ -96,57 +80,46 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 3,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11529502627430878-toyota-prius-hybrid",
     "image": "/assets/elit/11529502627430878-0.webp",
-    "gallery": [
-      "/assets/elit/11529502627430878-0.webp",
-      "/assets/elit/11529502627430878-1.webp",
-      "/assets/elit/11529502627430878-2.webp",
-      "/assets/elit/11529502627430878-3.webp",
-      "/assets/elit/11529502627430878-4.webp"
-    ],
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Пета еко категория Перфектен автомобил внос от Америка   абсолютно реални километри  камера Нови гуми всичко платено годишна винетка 2. 5 литра разход градско каране 3. 5 лира извънградско автомобила се ползва всеки ден - за оглед с предварителна уговорка Мы говорим по русски tel. /viber/whatsapp+359887777887 Пробегът е по данни на продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11529502627430878-toyota-prius-hybrid",
-    "category": "Стреч лимузина",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Toyota",
     "title": "Toyota Prius  Hybrid",
     "year": "2016",
     "yearNumber": 2016,
-    "mileage": "60 950 км (по обява)",
+    "mileage": "60 950 км",
     "mileageKm": 60950,
     "fuel": "Хибрид",
     "transmission": "Автоматик",
-    "equipment": [],
+    "equipment": [
+      "Безключов достъп"
+    ],
     "condition": "used",
     "priceEur": 16105.69,
     "href": "/listing-detail-v1/3"
   },
   {
     "id": 4,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11694454110383951-subaru-xv-2-5-sport-4x4",
     "image": "/assets/elit/11694454110383951-0.webp",
-    "gallery": [
-      "/assets/elit/11694454110383951-0.webp",
-      "/assets/elit/11694454110383951-1.webp",
-      "/assets/elit/11694454110383951-2.webp",
-      "/assets/elit/11694454110383951-3.webp",
-      "/assets/elit/11694454110383951-4.webp"
-    ],
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест). Euro 6!  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11694454110383951-subaru-xv-2-5-sport-4x4",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Subaru",
     "title": "Subaru XV 2.5 Sport 4x4",
     "year": "2021",
     "yearNumber": 2021,
-    "mileage": "200 км (по обява)",
+    "mileage": "200 км",
     "mileageKm": 200,
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Подгряване на седалки",
       "Навигация",
-      "Подгряване на седалки"
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 27800,
@@ -154,30 +127,23 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 5,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11694504370077664-subaru-xv-2-0-limited-4x4",
     "image": "/assets/elit/11694504370077664-0.webp",
-    "gallery": [
-      "/assets/elit/11694504370077664-0.webp",
-      "/assets/elit/11694504370077664-1.webp",
-      "/assets/elit/11694504370077664-2.webp",
-      "/assets/elit/11694504370077664-3.webp",
-      "/assets/elit/11694504370077664-4.webp"
-    ],
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11694504370077664-subaru-xv-2-0-limited-4x4",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Subaru",
     "title": "Subaru XV 2.0 Limited 4x4",
     "year": "2017",
     "yearNumber": 2017,
-    "mileage": "55 000 км (по обява)",
+    "mileage": "55 000 км",
     "mileageKm": 55000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
-      "Навигация",
-      "Подгряване на седалки"
+      "Подгряване на седалки",
+      "Навигация"
     ],
     "condition": "used",
     "priceEur": 19000,
@@ -185,23 +151,16 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 6,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11752520414621839-subaru-xv-2-0-premium-4x4",
     "image": "/assets/elit/11752520414621839-0.webp",
-    "gallery": [
-      "/assets/elit/11752520414621839-0.webp",
-      "/assets/elit/11752520414621839-1.webp",
-      "/assets/elit/11752520414621839-2.webp",
-      "/assets/elit/11752520414621839-3.webp",
-      "/assets/elit/11752520414621839-4.webp"
-    ],
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 126000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11752520414621839-subaru-xv-2-0-premium-4x4",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Subaru",
     "title": "Subaru XV 2.0 Premium 4x4",
     "year": "2017",
     "yearNumber": 2017,
-    "mileage": "78 400 км (по обява)",
+    "mileage": "78 400 км",
     "mileageKm": 78400,
     "fuel": "Бензин",
     "transmission": "Автоматик",
@@ -215,23 +174,16 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 7,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11671399519745199-subaru-xv-2-0-benzin-4h4",
     "image": "/assets/elit/11671399519745199-0.webp",
-    "gallery": [
-      "/assets/elit/11671399519745199-0.webp",
-      "/assets/elit/11671399519745199-1.webp",
-      "/assets/elit/11671399519745199-2.webp",
-      "/assets/elit/11671399519745199-3.webp",
-      "/assets/elit/11671399519745199-4.webp"
-    ],
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11671399519745199-subaru-xv-2-0-benzin-4h4",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Subaru",
     "title": "Subaru XV 2.0 бензин 4х4",
     "year": "2017",
     "yearNumber": 2017,
-    "mileage": "36 000 км (по обява)",
+    "mileage": "36 000 км",
     "mileageKm": 36000,
     "fuel": "Бензин",
     "transmission": "Ръчна",
@@ -245,30 +197,23 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 8,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11752522269460399-subaru-xv-2-0-limited-sti",
     "image": "/assets/elit/11752522269460399-0.webp",
-    "gallery": [
-      "/assets/elit/11752522269460399-0.webp",
-      "/assets/elit/11752522269460399-1.webp",
-      "/assets/elit/11752522269460399-2.webp",
-      "/assets/elit/11752522269460399-3.webp",
-      "/assets/elit/11752522269460399-4.webp"
-    ],
-    "description": "Subaru XV Limited STI 2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 177000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11752522269460399-subaru-xv-2-0-limited-sti",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Subaru",
     "title": "Subaru XV 2.0 Limited STI",
     "year": "2015",
     "yearNumber": 2015,
-    "mileage": "110 000 км (по обява)",
+    "mileage": "110 000 км",
     "mileageKm": 110000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
-      "Навигация",
-      "Подгряване на седалки"
+      "Подгряване на седалки",
+      "Навигация"
     ],
     "condition": "used",
     "priceEur": 13037.94,
@@ -276,31 +221,25 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 9,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11690723101506266-subaru-outback-3-6r-limited-4h4",
     "image": "/assets/elit/11690723101506266-0.webp",
-    "gallery": [
-      "/assets/elit/11690723101506266-0.webp",
-      "/assets/elit/11690723101506266-1.webp",
-      "/assets/elit/11690723101506266-2.webp",
-      "/assets/elit/11690723101506266-3.webp",
-      "/assets/elit/11690723101506266-4.webp"
-    ],
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11690723101506266-subaru-outback-3-6r-limited-4h4",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Subaru",
     "title": "Subaru Outback 3.6R Limited 4х4",
     "year": "2017",
     "yearNumber": 2017,
-    "mileage": "19 000 км (по обява)",
+    "mileage": "19 000 км",
     "mileageKm": 19000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Подгряване на седалки",
       "Навигация",
       "Парктроник",
-      "Подгряване на седалки"
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 25500,
@@ -308,31 +247,25 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 10,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11708792902908882-subaru-outback-3-6-touring-4x4",
     "image": "/assets/elit/11708792902908882-0.webp",
-    "gallery": [
-      "/assets/elit/11708792902908882-0.webp",
-      "/assets/elit/11708792902908882-1.webp",
-      "/assets/elit/11708792902908882-2.webp",
-      "/assets/elit/11708792902908882-3.webp",
-      "/assets/elit/11708792902908882-4.webp"
-    ],
-    "description": "Subaru Outback Touring 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Всички екстри за модела!  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, адаптивни лед фарове, Apple Carplay, Android auto, keyless (безключово палене), камера за задно виждане, парктроници, подгрев не седалките (предни и задни), подгрев на волана, шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11708792902908882-subaru-outback-3-6-touring-4x4",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Subaru",
     "title": "Subaru Outback 3.6 Touring 4x4",
     "year": "2017",
     "yearNumber": 2017,
-    "mileage": "82 000 км (по обява)",
+    "mileage": "82 000 км",
     "mileageKm": 82000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Подгряване на седалки",
       "Навигация",
       "Парктроник",
-      "Подгряване на седалки"
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 21500,
@@ -340,30 +273,24 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 11,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11706466498517805-subaru-outback-3-6-limited-4x4",
     "image": "/assets/elit/11706466498517805-0.webp",
-    "gallery": [
-      "/assets/elit/11706466498517805-0.webp",
-      "/assets/elit/11706466498517805-1.webp",
-      "/assets/elit/11706466498517805-2.webp",
-      "/assets/elit/11706466498517805-3.webp",
-      "/assets/elit/11706466498517805-4.webp"
-    ],
-    "description": "Subaru Outback Limited 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, ксенонови фарове, keyless (безключово палене), камера за задно виждане, парктроници, подгрев на седалките (предни и задни), шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11706466498517805-subaru-outback-3-6-limited-4x4",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Subaru",
     "title": "Subaru Outback 3.6 Limited 4x4",
     "year": "2017",
     "yearNumber": 2017,
-    "mileage": "48 000 км (по обява)",
+    "mileage": "48 000 км",
     "mileageKm": 48000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Подгряване на седалки",
       "Парктроник",
-      "Подгряване на седалки"
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 21500,
@@ -371,29 +298,23 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 12,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11693118990022696-subaru-legacy-2-5-limited-4x4",
     "image": "/assets/elit/11693118990022696-0.webp",
-    "gallery": [
-      "/assets/elit/11693118990022696-0.webp",
-      "/assets/elit/11693118990022696-1.webp",
-      "/assets/elit/11693118990022696-2.webp",
-      "/assets/elit/11693118990022696-3.webp",
-      "/assets/elit/11693118990022696-4.webp"
-    ],
-    "description": "подходящ за ГАЗ   2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11693118990022696-subaru-legacy-2-5-limited-4x4",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Subaru",
     "title": "Subaru Legacy 2.5 Limited 4x4",
     "year": "2015",
     "yearNumber": 2015,
-    "mileage": "94 000 км (по обява)",
+    "mileage": "94 000 км",
     "mileageKm": 94000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
-      "Подгряване на седалки"
+      "Подгряване на седалки",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 13000,
@@ -401,23 +322,16 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 13,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11655794958039551-subaru-legacy-2-5-benzin-4h4",
     "image": "/assets/elit/11655794958039551-0.webp",
-    "gallery": [
-      "/assets/elit/11655794958039551-0.webp",
-      "/assets/elit/11655794958039551-1.webp",
-      "/assets/elit/11655794958039551-2.webp",
-      "/assets/elit/11655794958039551-3.webp",
-      "/assets/elit/11655794958039551-4.webp"
-    ],
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11655794958039551-subaru-legacy-2-5-benzin-4h4",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Subaru",
     "title": "Subaru Legacy 2.5 бензин 4х4",
     "year": "2014",
     "yearNumber": 2014,
-    "mileage": "137 000 км (по обява)",
+    "mileage": "137 000 км",
     "mileageKm": 137000,
     "fuel": "Бензин",
     "transmission": "Автоматик",
@@ -431,56 +345,45 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 14,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-11722966256335346-mazda-6-2-5-skyactiv",
     "image": "/assets/elit/11722966256335346-0.webp",
-    "gallery": [
-      "/assets/elit/11722966256335346-0.webp",
-      "/assets/elit/11722966256335346-1.webp",
-      "/assets/elit/11722966256335346-2.webp",
-      "/assets/elit/11722966256335346-3.webp",
-      "/assets/elit/11722966256335346-4.webp"
-    ],
-    "description": "Mazda 6 Skyactiv 2. 5 бензин (най-добрия бензинов мотор на Mazda) Доказуем пробег!  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+35988777788 Пробегът е по данни на продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-11722966256335346-mazda-6-2-5-skyactiv",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "Mazda",
     "title": "Mazda 6 2.5 Skyactiv",
     "year": "2015",
     "yearNumber": 2015,
-    "mileage": "100 789 км (по обява)",
+    "mileage": "100 789 км",
     "mileageKm": 100789,
     "fuel": "Бензин",
     "transmission": "Автоматик",
-    "equipment": [],
+    "equipment": [
+      "Безключов достъп"
+    ],
     "condition": "used",
     "priceEur": 11913.1,
     "href": "/listing-detail-v1/14"
   },
   {
     "id": 15,
+    "verification": "verified",
+    "evidenceUrl": "https://elitautoimport.mobile.bg/obiava-21691652621240351-hyundai-santa-fe",
     "image": "/assets/elit/21691652621240351-0.webp",
-    "gallery": [
-      "/assets/elit/21691652621240351-0.webp",
-      "/assets/elit/21691652621240351-1.webp",
-      "/assets/elit/21691652621240351-2.webp",
-      "/assets/elit/21691652621240351-3.webp",
-      "/assets/elit/21691652621240351-4.webp"
-    ],
-    "description": "Hyundai Santa Fe 2. 0 GRDi 4х4 7 места В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Южна Корея. Постоянен внос от САЩ и Южна Корея на автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Пробегът е по данни на продавача.",
-    "sourceUrl": "https://elitautoimport.mobile.bg/obiava-21691652621240351-hyundai-santa-fe",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Hyundai",
     "title": "Hyundai Santa fe",
     "year": "2013",
     "yearNumber": 2013,
-    "mileage": "58 000 км (по обява)",
+    "mileage": "58 000 км",
     "mileageKm": 58000,
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
-      "Подгряване на седалки"
+      "Подгряване на седалки",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 14316.17,
@@ -488,4 +391,11 @@ export const featuredVehicles: Vehicle[] = [
   }
 ];
 
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+const inventoryLocale = "bg-BG";
+const inventoryCurrency = "EUR";
+export const formatVehiclePrice = (amount: number) =>
+  new Intl.NumberFormat(inventoryLocale, {
+    style: 'currency',
+    currency: inventoryCurrency,
+    maximumFractionDigits: 0
+  }).format(amount);

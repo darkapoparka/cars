@@ -35,9 +35,9 @@ const leadingYearPattern = /^\d{4}\s+/;
 
 const pageCopy = {
   bg: {
-    badge: "Въпрос за условията",
+    badge: `Финансиране от ${leadSite.shortName}`,
     description:
-      "Няма публикувани условия за финансиране от автокъщата. Тази страница подготвя въпрос за покупка, без обещание за кредит или лизинг.",
+      "Изберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.",
     faqTitle: "Често задавани въпроси",
     faqs: [
       {
@@ -51,8 +51,7 @@ const pageCopy = {
         question: "Каква първоначална вноска е необходима?",
       },
       {
-        answer:
-          "Необходимите документи зависят от конкретния случай. Екипът на ELIT AUTO ще ви даде точен списък още при първия разговор.",
+        answer: `Необходимите документи зависят от конкретния случай. Екипът на ${leadSite.shortName} ще ви даде точен списък още при първия разговор.`,
         question: "Какви документи ще са ми нужни?",
       },
       {
@@ -61,12 +60,12 @@ const pageCopy = {
         question: "Всеки автомобил ли може да бъде финансиран?",
       },
     ],
-    title: "Уточнете условията за покупка",
+    title: "Финансиране за следващия ви автомобил",
   },
   en: {
-    badge: "Purchase terms enquiry",
+    badge: `Financing from ${leadSite.shortName}`,
     description:
-      "No dealer financing terms are published. This page prepares a purchase enquiry without promising credit or leasing.",
+      "Choose a vehicle from our inventory and contact us for a tailored offer. The terms are confirmed for the vehicle and your individual profile.",
     faqTitle: "Frequently asked questions",
     faqs: [
       {
@@ -80,8 +79,7 @@ const pageCopy = {
         question: "What initial payment is required?",
       },
       {
-        answer:
-          "Required documents depend on the individual case. The ELIT AUTO team will give you an exact list during the first conversation.",
+        answer: `Required documents depend on the individual case. The ${leadSite.shortName} team will give you an exact list during the first conversation.`,
         question: "Which documents will I need?",
       },
       {
@@ -90,7 +88,7 @@ const pageCopy = {
         question: "Can every vehicle be financed?",
       },
     ],
-    title: "Confirm purchase terms",
+    title: "Financing for your next vehicle",
   },
 } as const;
 
@@ -103,8 +101,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Индивидуална оферта за финансиране на автомобил от ELIT AUTO IMPORT EXPORT."
-      : "A tailored vehicle financing offer from ELIT AUTO IMPORT EXPORT.",
+      ? `Индивидуална оферта за финансиране на автомобил от ${leadSite.name}.`
+      : `A tailored vehicle financing offer from ${leadSite.name}.`,
     locale,
     path: "/lease",
     title: isBg ? "Финансиране на автомобил" : "Vehicle financing",
@@ -186,7 +184,7 @@ export default async function LeasePage({
               fill
               priority
               sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/assets/elit/cover.png"
+              src="/images/lease/day-night-financing-hero-v1.webp"
             />
             <div
               aria-hidden="true"

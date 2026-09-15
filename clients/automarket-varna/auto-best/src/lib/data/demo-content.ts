@@ -1,3 +1,17 @@
+import { featuredVehicles } from './inventory';
+
+// Visual examples only: these selections are not records of completed transactions.
+export const demoWorkflowShowcases = {
+  'trade-in': {
+    title: 'Наскоро продадени',
+    vehicles: [featuredVehicles[0], featuredVehicles[3], featuredVehicles[5]]
+  },
+  import: {
+    title: 'Последно внесени',
+    vehicles: [featuredVehicles[1], featuredVehicles[2], featuredVehicles[4]]
+  }
+};
+
 type DemoTeamMember = {
   id: string;
   name: string;
@@ -14,12 +28,37 @@ type DemoPartner = {
 export const demoContentLabel = 'Демо съдържание';
 
 export const demoTeamIntro =
-  'За въпроси и оглед се свържете с Аутомаркет Варна на 0886 424 400.';
+  'Примерни профили за визуален преглед. Имената и снимките ще бъдат заменени с реалния екип.';
 
 export const demoPartnerIntro =
   'Примерни автомобилни марки за визуален преглед. Те не представят потвърдени партньорства.';
 
-export const demoTeamMembers: DemoTeamMember[] = [];
+export const demoTeamMembers: DemoTeamMember[] = [
+  {
+    id: 'arlene-mccoy',
+    name: 'Arlene McCoy',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team1.jpg'
+  },
+  {
+    id: 'ronald-richards',
+    name: 'Ronald Richards',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team2.jpg'
+  },
+  {
+    id: 'leslie-alexander',
+    name: 'Leslie Alexander',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team3.jpg'
+  },
+  {
+    id: 'cody-fisher',
+    name: 'Cody Fisher',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team4.jpg'
+  }
+];
 
 export const demoPartners: DemoPartner[] = [
   { id: 'carlogo', name: 'CARLOGO', image: '/assets/images/partner/par1.png' },

@@ -28,6 +28,8 @@ const formKeys: ReadonlyArray<keyof PostFormInput> = postFormKeys;
 
 const fallbackPostImage = '/assets/images/blog/post-44.jpg';
 const daynightArticleCategories = new Set<DayNightArticleCategory>([
+	'Покупка',
+	'Продажба',
 	'Новини',
 	'Съвети',
 	'Финансиране',
@@ -191,7 +193,7 @@ async function buildPostWrite(
 		cover_url: input.coverUrl || null,
 		category: input.category || null,
 		tags: splitTags(input.tags),
-		author: input.author || 'Аутомаркет Варна',
+		author: input.author || 'Аутомаркет',
 		read_minutes: input.readMinutes,
 		status: input.status,
 		published_at: publishedAt
@@ -236,7 +238,7 @@ export function postRowToDayNightArticle(post: PostRow): DayNightArticle {
 		category,
 		kind: postKind(post.type),
 		date: (post.published_at ?? post.updated_at ?? post.created_at).slice(0, 10),
-		author: post.author || 'Аутомаркет Варна',
+		author: post.author || 'Аутомаркет',
 		image: post.cover_url || fallbackPostImage,
 		readMinutes:
 			post.read_minutes ||

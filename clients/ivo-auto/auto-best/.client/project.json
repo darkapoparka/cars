@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "ivo-auto",
   "templateKey": "auto-best",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
   "createdAt": "2026-09-06T21:48:45.924Z",
-  "state": "local-review-ready",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,20 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "checkedAt": "2026-09-08T03:39:29.887Z",
-    "evidence": "../qa-final/ivo-auto/auto-best/result.json",
-    "screenshots": "../qa-final/ivo-auto/auto-best",
-    "framework": {
-      "validate": 0,
-      "reused": true,
-      "evidence": "J:/cars/clients/ivo-auto/evidence/auto-validate.log"
-    },
-    "sourceScan": "../qa-final/source-scan.json",
-    "scope": "390 and 1440: home, inventory, actual detail, contact, about/imports, search, navigation, menu/filter Escape, enquiry destination; no external submission"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -70,5 +60,22 @@
     "Temporary wordmark, unverified official logo/hours/social profiles.",
     "Retained service/account/legal/demo surfaces need owner review before public publication; generic decorative template car artwork is not stock."
   ],
-  "finalizationChanges": []
+  "finalizationChanges": [],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/"
+  },
+  "workflowCommit": "8161310561a20065116582293c4de1a41ed62329",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-14T21:34:42.545Z",
+    "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

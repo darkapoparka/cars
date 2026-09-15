@@ -11,9 +11,9 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  verification: 'sample' | 'verified';
+  evidenceUrl?: string;
   image: string;
-  gallery: string[];
-  sourceUrl: string;
   category: string;
   body: string;
   make: string;
@@ -30,20 +30,13 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Representative dealer listings captured 2026-09-07.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11785576029711434-ford-focus-1-6d-115hp",
     "image": "/assets/automarket/vehicle-01-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-01-1.webp",
-      "/assets/automarket/vehicle-01-2.webp",
-      "/assets/automarket/vehicle-01-3.webp",
-      "/assets/automarket/vehicle-01-4.webp",
-      "/assets/automarket/vehicle-01-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11785576029711434-ford-focus-1-6d-115hp",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "Ford",
     "title": "Ford Focus 1.6D 115HP",
@@ -62,16 +55,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 2,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11714813323555032-opel-astra-1-4i-90hp",
     "image": "/assets/automarket/vehicle-02-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-02-1.webp",
-      "/assets/automarket/vehicle-02-2.webp",
-      "/assets/automarket/vehicle-02-3.webp",
-      "/assets/automarket/vehicle-02-4.webp",
-      "/assets/automarket/vehicle-02-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11714813323555032-opel-astra-1-4i-90hp",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Opel",
     "title": "Opel Astra 1.4i 90HP",
@@ -88,16 +75,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 3,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11776340911802527-opel-corsa-1-2i-80hp-gpl",
     "image": "/assets/automarket/vehicle-03-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-03-1.webp",
-      "/assets/automarket/vehicle-03-2.webp",
-      "/assets/automarket/vehicle-03-3.webp",
-      "/assets/automarket/vehicle-03-4.webp",
-      "/assets/automarket/vehicle-03-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11776340911802527-opel-corsa-1-2i-80hp-gpl",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Opel",
     "title": "Opel Corsa 1.2i 80HP GPL",
@@ -116,16 +97,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 4,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11749035353735625-ford-fiesta-1-25i-82hp-face-lift",
     "image": "/assets/automarket/vehicle-04-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-04-1.webp",
-      "/assets/automarket/vehicle-04-2.webp",
-      "/assets/automarket/vehicle-04-3.webp",
-      "/assets/automarket/vehicle-04-4.webp",
-      "/assets/automarket/vehicle-04-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11749035353735625-ford-fiesta-1-25i-82hp-face-lift",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Ford",
     "title": "Ford Fiesta 1.25i 82HP FACE LIFT",
@@ -144,16 +119,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 5,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11646385836417474-honda-jazz-1-4-i-vtec-99hp-face-lift",
     "image": "/assets/automarket/vehicle-05-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-05-1.webp",
-      "/assets/automarket/vehicle-05-2.webp",
-      "/assets/automarket/vehicle-05-3.webp",
-      "/assets/automarket/vehicle-05-4.webp",
-      "/assets/automarket/vehicle-05-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11646385836417474-honda-jazz-1-4-i-vtec-99hp-face-lift",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Honda",
     "title": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
@@ -170,16 +139,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 6,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11730904111658789-opel-meriva-1-4-turbo-120hp-gpl",
     "image": "/assets/automarket/vehicle-06-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-06-1.webp",
-      "/assets/automarket/vehicle-06-2.webp",
-      "/assets/automarket/vehicle-06-3.webp",
-      "/assets/automarket/vehicle-06-4.webp",
-      "/assets/automarket/vehicle-06-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11730904111658789-opel-meriva-1-4-turbo-120hp-gpl",
-    "category": "Миниван",
+    "category": "Minivan",
     "body": "Minivan",
     "make": "Opel",
     "title": "Opel Meriva 1.4 TURBO 120HP GPL",
@@ -198,16 +161,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 7,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11664339654646848-vw-golf-1-6tdi-105hp-dsg",
     "image": "/assets/automarket/vehicle-07-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-07-1.webp",
-      "/assets/automarket/vehicle-07-2.webp",
-      "/assets/automarket/vehicle-07-3.webp",
-      "/assets/automarket/vehicle-07-4.webp",
-      "/assets/automarket/vehicle-07-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11664339654646848-vw-golf-1-6tdi-105hp-dsg",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "VW",
     "title": "VW Golf 1.6TDI 105HP DSG",
@@ -226,15 +183,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 8,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-21702843989932817-nissan-qashqai-1-6i-117hp-face-lift",
     "image": "/assets/automarket/vehicle-08-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-08-1.webp",
-      "/assets/automarket/vehicle-08-2.webp",
-      "/assets/automarket/vehicle-08-3.webp",
-      "/assets/automarket/vehicle-08-4.webp",
-      "/assets/automarket/vehicle-08-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-21702843989932817-nissan-qashqai-1-6i-117hp-face-lift",
     "category": "SUV",
     "body": "SUV",
     "make": "Nissan",
@@ -252,15 +203,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 9,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-21777122320477562-dacia-duster-1-5dci-110hp-awd-e5a",
     "image": "/assets/automarket/vehicle-09-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-09-1.webp",
-      "/assets/automarket/vehicle-09-2.webp",
-      "/assets/automarket/vehicle-09-3.webp",
-      "/assets/automarket/vehicle-09-4.webp",
-      "/assets/automarket/vehicle-09-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-21777122320477562-dacia-duster-1-5dci-110hp-awd-e5a",
     "category": "SUV",
     "body": "SUV",
     "make": "Dacia",
@@ -280,15 +225,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 10,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-21777123440688076-mazda-cx-3-1-5d-skyactiv-105hp-awd-auto",
     "image": "/assets/automarket/vehicle-10-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-10-1.webp",
-      "/assets/automarket/vehicle-10-2.webp",
-      "/assets/automarket/vehicle-10-3.webp",
-      "/assets/automarket/vehicle-10-4.webp",
-      "/assets/automarket/vehicle-10-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-21777123440688076-mazda-cx-3-1-5d-skyactiv-105hp-awd-auto",
     "category": "SUV",
     "body": "SUV",
     "make": "Mazda",
@@ -301,8 +240,10 @@ export const featuredVehicles: Vehicle[] = [
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Подгряване на седалки",
       "Навигация",
-      "Парктроник"
+      "Парктроник",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 9999,
@@ -310,16 +251,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 11,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11764611602990623-vw-passat-2-0tdi-190hp-4-motion-keyless-go-automatic",
     "image": "/assets/automarket/vehicle-11-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-11-1.webp",
-      "/assets/automarket/vehicle-11-2.webp",
-      "/assets/automarket/vehicle-11-3.webp",
-      "/assets/automarket/vehicle-11-4.webp",
-      "/assets/automarket/vehicle-11-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11764611602990623-vw-passat-2-0tdi-190hp-4-motion-keyless-go-automatic",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "VW",
     "title": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
@@ -331,8 +266,10 @@ export const featuredVehicles: Vehicle[] = [
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Подгряване на седалки",
       "Навигация",
-      "Парктроник"
+      "Парктроник",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 12399,
@@ -340,16 +277,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 12,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11770373711900410-suzuki-swift-1-2-hybrid-83hp-automatic",
     "image": "/assets/automarket/vehicle-12-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-12-1.webp",
-      "/assets/automarket/vehicle-12-2.webp",
-      "/assets/automarket/vehicle-12-3.webp",
-      "/assets/automarket/vehicle-12-4.webp",
-      "/assets/automarket/vehicle-12-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11770373711900410-suzuki-swift-1-2-hybrid-83hp-automatic",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Suzuki",
     "title": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
@@ -360,6 +291,7 @@ export const featuredVehicles: Vehicle[] = [
     "fuel": "Бензин",
     "transmission": "Автоматик",
     "equipment": [
+      "Подгряване на седалки",
       "Парктроник"
     ],
     "condition": "used",
@@ -368,15 +300,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 13,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-21732197261233954-bmw-x3-2-0-x-drive-184hp",
     "image": "/assets/automarket/vehicle-13-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-13-1.webp",
-      "/assets/automarket/vehicle-13-2.webp",
-      "/assets/automarket/vehicle-13-3.webp",
-      "/assets/automarket/vehicle-13-4.webp",
-      "/assets/automarket/vehicle-13-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-21732197261233954-bmw-x3-2-0-x-drive-184hp",
     "category": "SUV",
     "body": "SUV",
     "make": "BMW",
@@ -398,15 +324,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 14,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-21781689983828599-vw-tiguan-2-0tdi-200hp-allspace-4-motion",
     "image": "/assets/automarket/vehicle-14-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-14-1.webp",
-      "/assets/automarket/vehicle-14-2.webp",
-      "/assets/automarket/vehicle-14-3.webp",
-      "/assets/automarket/vehicle-14-4.webp",
-      "/assets/automarket/vehicle-14-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-21781689983828599-vw-tiguan-2-0tdi-200hp-allspace-4-motion",
     "category": "SUV",
     "body": "SUV",
     "make": "VW",
@@ -428,15 +348,9 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 15,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-21784142258144582-mercedes-benz-glc-2-2cdi-170hp-4-matic-autonatic-navi",
     "image": "/assets/automarket/vehicle-15-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-15-1.webp",
-      "/assets/automarket/vehicle-15-2.webp",
-      "/assets/automarket/vehicle-15-3.webp",
-      "/assets/automarket/vehicle-15-4.webp",
-      "/assets/automarket/vehicle-15-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-21784142258144582-mercedes-benz-glc-2-2cdi-170hp-4-matic-autonatic-navi",
     "category": "SUV",
     "body": "SUV",
     "make": "Mercedes-Benz",
@@ -449,8 +363,10 @@ export const featuredVehicles: Vehicle[] = [
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Подгряване на седалки",
       "Навигация",
-      "Парктроник"
+      "Парктроник",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 21999,
@@ -458,16 +374,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 16,
+    "verification": "verified",
+    "evidenceUrl": "https://automarket.mobile.bg/obiava-11750340593495216-audi-a4-allroad-3-0tdi-272hp-automatic-quattro-digital",
     "image": "/assets/automarket/vehicle-16-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-16-1.webp",
-      "/assets/automarket/vehicle-16-2.webp",
-      "/assets/automarket/vehicle-16-3.webp",
-      "/assets/automarket/vehicle-16-4.webp",
-      "/assets/automarket/vehicle-16-5.webp"
-    ],
-    "sourceUrl": "https://automarket.mobile.bg/obiava-11750340593495216-audi-a4-allroad-3-0tdi-272hp-automatic-quattro-digital",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "Audi",
     "title": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
@@ -479,8 +389,11 @@ export const featuredVehicles: Vehicle[] = [
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Панорамен покрив",
+      "Подгряване на седалки",
       "Навигация",
-      "Парктроник"
+      "Парктроник",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 15999,
@@ -488,4 +401,11 @@ export const featuredVehicles: Vehicle[] = [
   }
 ];
 
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+const inventoryLocale = "bg-BG";
+const inventoryCurrency = "EUR";
+export const formatVehiclePrice = (amount: number) =>
+  new Intl.NumberFormat(inventoryLocale, {
+    style: 'currency',
+    currency: inventoryCurrency,
+    maximumFractionDigits: 0
+  }).format(amount);

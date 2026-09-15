@@ -1,55 +1,21 @@
 export type DayNightReview = {
 	id: string;
 	text: string;
-	avatar: `/assets/${string}`;
+	avatar: string;
 	name: string;
 	label: string;
+	rating: number;
 };
 
-export const daynightReviews = [
-  {
-    "name": "Автомобили",
-    "label": "Публикувани обяви",
-    "text": "Подбрани публикувани обяви; наличностите и условията се потвърждават с Иво Ауто.",
-    "id": "info-0",
-    "avatar": "/assets/ivo-auto/wordmark.svg"
-  },
-  {
-    "name": "Посещение",
-    "label": "Варна",
-    "text": "бул. „Цар Освободител“ 256",
-    "id": "info-1",
-    "avatar": "/assets/ivo-auto/wordmark.svg"
-  },
-  {
-    "name": "Телефон",
-    "label": "Контакт",
-    "text": "0878 720 035",
-    "id": "info-2",
-    "avatar": "/assets/ivo-auto/wordmark.svg"
-  },
-  {
-    "name": "Бартер",
-    "label": "Според обявата",
-    "text": "Попитайте за условията за конкретния автомобил.",
-    "id": "info-3",
-    "avatar": "/assets/ivo-auto/wordmark.svg"
-  },
-  {
-    "name": "Лизинг",
-    "label": "Според обявата",
-    "text": "Условията се потвърждават индивидуално с продавача.",
-    "id": "info-4",
-    "avatar": "/assets/ivo-auto/wordmark.svg"
-  },
-  {
-    "name": "Работно време",
-    "label": "Преди посещение",
-    "text": "Свържете се за работно време и оглед.",
-    "id": "info-5",
-    "avatar": "/assets/ivo-auto/wordmark.svg"
-  }
-] satisfies DayNightReview[];
-export const daynightReviewCount=daynightReviews.length;
-export const daynightReviewCountLabel='Полезна информация';
-export const daynightReviewLinkLabel='Контакт и условия';
+export const daynightReviews: DayNightReview[] = [];
+export const daynightReviewDisclosure = "В този независим преглед не са включени потвърдени клиентски отзиви." as const;
+export const daynightReviewCount = 0;
+export const daynightReviewCountLabel = "Няма потвърдени отзиви";
+export const daynightReviewLinkLabel = daynightReviewCountLabel;
+export const daynightReviewAverage = 0;
+export const daynightReviewDistribution = [5, 4, 3, 2, 1].map((rating) => ({
+	id: `${rating}-star`,
+	label: String(rating),
+	count: 0,
+	percent: '0%'
+}));

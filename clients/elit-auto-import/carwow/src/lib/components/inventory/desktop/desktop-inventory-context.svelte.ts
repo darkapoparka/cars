@@ -1,7 +1,8 @@
 import { createContext } from 'svelte';
 import { replaceState } from '$app/navigation';
 import { resolve } from '$app/paths';
-import { SvelteURLSearchParams } from 'svelte/reactivity';
+import { page } from '$app/state';
+import { readDesktopSort, serializeInventoryFilters } from '$lib/utils/inventory-url';
 import {
 	createInventoryFilterState,
 	type InventoryFilterState
@@ -81,6 +82,7 @@ export class DesktopInventoryFilters {
 		quickFilters?: InventoryQuickFiltersSource
 	) {
 		this.store = createInventoryFilterState(getVehicles, init);
+		this.sort = readDesktopSort(init?.get('sort') ?? null);
 		// Map each Модел option → the brands that stock it, so the menu can scope to
 		// the chosen Марка and stale model selections can be pruned when it changes.
 		const quickFilterGroups = typeof quickFilters === 'function' ? quickFilters() : quickFilters;
@@ -138,7 +140,11 @@ export class DesktopInventoryFilters {
 		pushSingle('transmission', s.transmission, s.transmission);
 		pushSingle('price', s.price, s.price);
 		pushSingle('mileage', s.mileage, s.mileage);
-		pushSingle('availability', s.availability, s.availability === 'incoming' ? 'Очакван внос' : 'Налични');
+		pushSingle(
+			'availability',
+			s.availability,
+			s.availability === 'incoming' ? 'Очакван внос' : 'Налични'
+		);
 		if (s.query) tags.push({ field: 'q', value: s.query, label: s.query });
 		return tags;
 	});
@@ -269,25 +275,9 @@ export class DesktopInventoryFilters {
 		else if (field === 'availability') s.availability = active ? '' : value;
 	}
 
-	/**
-	 * Mirror the active filters into the URL (replaceState, no nav). Brand/model/
-	 * feature are appended per-value (`?brand=Audi&brand=BMW`), singles are set,
-	 * `sort` is intentionally NOT serialized (mirrors the legacy runtime + mobile).
-	 */
+	/** Both layouts use the shared URL contract, including sort. */
 	syncUrl() {
-		const params = new SvelteURLSearchParams();
-		for (const brand of this.store.brand) params.append('brand', brand);
-		for (const model of this.store.model) params.append('model', model);
-		for (const body of this.store.body) params.append('body', body);
-		for (const feature of this.store.feature) params.append('feature', feature);
-		if (this.store.fuel) params.set('fuel', this.store.fuel);
-		if (this.store.transmission) params.set('transmission', this.store.transmission);
-		if (this.store.price) params.set('price', this.store.price);
-		if (this.store.mileage) params.set('mileage', this.store.mileage);
-		if (this.store.query) params.set('q', this.store.query);
-		if (this.store.condition) params.set('condition', this.store.condition);
-		if (this.store.availability) params.set('availability', this.store.availability);
-
+		const params = serializeInventoryFilters(this.store.criteria, this.sort, page.url.searchParams);
 		const query = params.toString();
 		const nextPath: InventoryFilterPath = query ? `/inventory?${query}` : '/inventory';
 		replaceState(resolve(nextPath), {});

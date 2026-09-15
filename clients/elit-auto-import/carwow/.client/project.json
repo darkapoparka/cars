@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "elit-auto-import",
   "templateKey": "carwow",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
   "createdAt": "2026-09-06T21:49:19.131Z",
-  "state": "local-qa-passed",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,31 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "evidence": "../qa-final/elit-auto-import/carwow/result.json",
-    "frameworkChecks": true,
-    "buildScope": "Final numeric framework check and production build passed after numeric, static and contact-copy corrections; targeted browser supplement passes.",
-    "checkedAt": "2026-09-08T03:40:50.039Z",
-    "limits": [
-      "Local demo only; no provider or form delivery verified.",
-      "Stock is a dated source-backed sample."
-    ],
-    "finalTargetedEvidence": "J:/cars/clients/elit-auto-import/qa-final/carwow-final-contact-copy.json",
-    "numericStockEvidence": "J:/cars/clients/elit-auto-import/qa-final/numeric-stock-proof.json",
-    "latestFrameworkEvidence": [
-      {
-        "path": "J:/cars/clients/elit-auto-import/qa-final/carwow-numeric-check.log",
-        "modifiedAt": "2026-09-08T03:14:25.089Z"
-      },
-      {
-        "path": "J:/cars/clients/elit-auto-import/qa-final/carwow-numeric-build.log",
-        "modifiedAt": "2026-09-08T03:14:50.727Z"
-      }
-    ],
-    "finalMatrixEvidence": "J:/cars/clients/elit-auto-import/qa-final/results.json"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -70,5 +49,22 @@
       "No dealer financing, buyback or trade-in service confirmed. Existing inquiry routes remain demo templates with copy limitations.",
       "Mileage field and seller description conflicts explicitly disclosed."
     ]
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "8161310561a20065116582293c4de1a41ed62329",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-14T21:33:03.854Z",
+    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }

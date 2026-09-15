@@ -103,13 +103,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>Владислав Варненчик · бул. „Цар Освободител“ 256</span>
+						<span>{daynightSite.locationLandmark}</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Отвори Google Maps до Иво Ауто"
+						aria-label={`Отвори Google Maps до ${daynightSite.shortName}`}
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,18 +120,18 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">Иво Ауто</span>
+							<span class="daynight-home-hero__location-map-label">{daynightSite.name}</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>Иво Ауто Варна</strong>
-							<span>гр. Варна, Владислав Варненчик, бул. „Цар Освободител“ 256</span>
+							<strong>{daynightSite.shortName} {daynightSite.city}</strong>
+							<span>{daynightSite.location}</span>
 							<em>Отвори Google Maps</em>
 						</span>
 					</button>
 				</div>
 				<h1 class="daynight-home-hero__title">
 					<span class="daynight-home-hero__title-text">
-						<span>Публикувани автомобили.</span>
+						<span>Проверени автомобили.</span>
 						<strong>Ясни условия.</strong>
 					</span>
 				</h1>

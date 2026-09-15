@@ -1,3 +1,4 @@
+import { daynightVehicles } from '$lib/data/daynight-vehicles';
 import { cars } from '$lib/data/daynight-vehicles';
 import { daynightSite } from '$lib/data/daynight-site';
 
@@ -135,7 +136,7 @@ export function load() {
 	return {
 		site: daynightSite,
 		stats: {
-			total: daynightSite.inventoryCount,
+			total: daynightVehicles.length,
 			dealers: 'Варна',
 			rating: '4.9/5',
 			reviews: '240+'

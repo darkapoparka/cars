@@ -103,13 +103,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>бул. Цар Освободител 289 · бул. Цар Освободител 289, срещу МАКАО</span>
+						<span>{daynightSite.locationLandmark}</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Отвори Google Maps до LEGEND AUTO"
+						aria-label={`Отвори Google Maps до ${daynightSite.shortName}`}
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,11 +120,11 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">LEGEND AUTO</span>
+							<span class="daynight-home-hero__location-map-label">{daynightSite.name}</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>LEGEND AUTO Варна</strong>
-							<span>гр. Варна, бул. Цар Освободител 289, срещу МАКАО</span>
+							<strong>{daynightSite.shortName} {daynightSite.city}</strong>
+							<span>{daynightSite.location}</span>
 							<em>Отвори Google Maps</em>
 						</span>
 					</button>

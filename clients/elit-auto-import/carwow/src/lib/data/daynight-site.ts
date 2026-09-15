@@ -1,28 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
+const phoneE164 = "+359887777887";
+const city = "Варна";
+const shortName = "ELIT AUTO";
+const district = "Варна";
+const street = "ул. „Прилеп“ 74А, м-т Пчелина";
+const location = "ул. „Прилеп“ 74А, м-т Пчелина";
+
 export const daynightSite = {
-	name: 'ELIT AUTO IMPORT EXPORT',
-	shortName: 'ELIT AUTO',
-	phone: '0887777887',
-	phoneLabel: '0887 777 887',
-	email: '',
-	location: 'гр. Варна, м-т Пчелина, ул. Прилеп 74А',
-	mapUrl: "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
-	mapLabel: 'ELIT AUTO IMPORT EXPORT, Варна, България',
-	sourceInventory: 'https://elitautoimport.mobile.bg/',
-	inventoryCount: 15,
-	logoLight: '/assets/elit/logo.png',
-	logoDark: '/assets/elit/logo.png',
+	name: "ELIT AUTO IMPORT EXPORT",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359887777887",
+	phoneLabel: "0887 777 887",
+	email: "",
+	location,
+	locationShort: "ул. „Прилеп“ 74А, м-т Пчелина",
+	locationLandmark: "ул. „Прилеп“ 74А, м-т Пчелина",
+	hoursLabel: "Работното време се уточнява по телефона.",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://elitautoimport.mobile.bg/",
+	logoLight: "/assets/elit/logo.png",
+	logoDark: "/assets/elit/logo.png",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
-	accountCta: 'Вход / Профил',
+	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: 'ELIT AUTO IMPORT EXPORT',
-	heroSubtitle: 'Внос от Европа, САЩ и Япония. Автомобили във Варна.',
+	heroTitle: "ELIT AUTO IMPORT EXPORT",
+	heroSubtitle: "Варна · Подбрани текущо рекламирани автомобили. Наличност, състояние, пробег и условия се потвърждават с продавача.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -34,6 +53,7 @@ export const publicNavItems = [
 	{ label: 'Продай', href: '/sell-your-car' },
 	{ label: 'Услуги', href: '/services' },
 	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
 	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
@@ -70,15 +90,10 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За ELIT AUTO', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За ELIT AUTO", href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{
-				label: 'Покупка без риск',
-				href: '/blog/kak-da-kupim-upotrebyavan-avtomobil'
-			},
+			{ label: 'Блог', href: '/blog' },
 			{ label: 'Условия', href: '/terms' }
 		]
 	},

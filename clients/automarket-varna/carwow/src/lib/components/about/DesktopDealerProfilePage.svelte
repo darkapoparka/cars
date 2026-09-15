@@ -6,11 +6,12 @@
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { featuredDayNightVehicles } from '$lib/data/daynight-vehicles';
-	import { daynightReviews } from '$lib/data/daynight-reviews';
+	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import { daynightSite } from '$lib/data/daynight-site';
-	import { daynightTeam } from '$lib/data/daynight-team';
+	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 
 	const highlights = [
 		'Проверени автомобили с реална наличност',
@@ -20,11 +21,9 @@
 	const vehicles = featuredDayNightVehicles.slice(0, 3);
 	const reviews = daynightReviews.slice(0, 3);
 	const team = daynightTeam.slice(0, 3);
-	const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-		`${daynightSite.mapLabel}, ${daynightSite.location}`
-	)}&output=embed`;
+	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const phoneLinkProps = {
-		href: `tel:${daynightSite.phone}`
+		href: daynightSite.phoneHref
 	} as const;
 	const mapLinkProps = {
 		href: daynightSite.mapUrl,
@@ -34,6 +33,16 @@
 </script>
 
 <div class="dealer-page">
+	<DesktopYellowRouteHero
+		headingId="dealer-profile-route-title"
+		title={`${daynightSite.shortName} ${daynightSite.city}`}
+		copy={`Автокъща в ${daynightSite.city} с подбрани автомобили, ясна информация за състоянието и съдействие до сделката.`}
+		primaryLabel="Виж наличните"
+		primaryHref="/inventory"
+		secondaryLabel="Свържете се"
+		secondaryHref="/contact"
+		compact
+	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
@@ -41,7 +50,7 @@
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
 				<li><a href={resolve('/about')}>За нас</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><span>Профил на Аутомаркет Варна</span></li>
+				<li><span>Профил на {daynightSite.shortName}</span></li>
 			</ul>
 		</div>
 	</section>
@@ -50,10 +59,10 @@
 		<div class="container">
 			<div class="dealer-profile-hero__grid">
 				<div class="dealer-profile-hero__content">
-					<p class="eyebrow">Автокъща във Варна</p>
-					<h1>Аутомаркет Варна Варна</h1>
+					<p class="eyebrow">Проверена автокъща</p>
+					<h1>{daynightSite.shortName} {daynightSite.city}</h1>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Автокъща в Варна с подбрани употребявани автомобили, ясна информация за състояние,
+						Автокъща в {daynightSite.city} с подбрани употребявани автомобили, ясна информация за състояние,
 						съдействие при документи и практични следващи стъпки след оглед.
 					</p>
 					<ul class="dealer-profile-hero__highlights">
@@ -72,12 +81,8 @@
 					</div>
 				</div>
 				<div class="dealer-profile-card">
-					<img
-						class="dealer-profile-card__logo"
-						src="/assets/automarket/cover.png"
-						alt=""
-					/>
-					<p class="dealer-profile-card__title mb-6">Аутомаркет Варна</p>
+					<img class="dealer-profile-card__logo" src={daynightSite.logoLight} alt="" />
+					<p class="dealer-profile-card__title mb-6">{daynightSite.shortName}</p>
 					<p class="text-secondary mb-18">{daynightSite.location}</p>
 					<a {...mapLinkProps} class="text-highlight">Виж локация</a>
 				</div>
@@ -125,7 +130,11 @@
 					</p>
 					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до Аутомаркет Варна Варна" height="330" />
+				<LazyMapEmbed
+					src={mapEmbedSrc}
+					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+					height="330"
+				/>
 			</div>
 		</div>
 	</section>
@@ -136,6 +145,7 @@
 				<h2>Екип</h2>
 				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">Виж екипа</a>
 			</div>
+			<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each team as member (member.slug)}
 					<a href={resolve('/team/[slug]', { slug: member.slug })} class="dealer-team-card">
@@ -153,7 +163,10 @@
 	<section class="py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Услуги и информация</h2>
+				<div>
+					<h2>Отзиви от клиенти</h2>
+					<p class="text-secondary">{daynightReviewDisclosure}</p>
+				</div>
 				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost"> Виж всички </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
@@ -170,6 +183,17 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.dealer-page > .background-light,
+		.dealer-profile-hero__content > h1 {
+			display: none;
+		}
+
+		.dealer-profile-hero {
+			padding-top: var(--sa-desktop-section-y-md);
+		}
+	}
+
 	.dealer-page,
 	.dealer-page * {
 		box-sizing: border-box;
@@ -181,8 +205,8 @@
 
 	.dealer-page {
 		color: #1c1c1c;
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 	}
 
@@ -208,16 +232,16 @@
 
 	.dealer-page h1 {
 		color: #111827;
-		font-size: clamp(36px, 4vw, 56px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 		text-align: center;
 	}
 
 	.dealer-page h2 {
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 	}
 
@@ -279,16 +303,16 @@
 	}
 
 	.h7 {
-		font-size: 18px;
-		font-weight: 500;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-medium);
 		line-height: var(--sa-leading-body);
 	}
 
 	.eyebrow {
 		margin-bottom: 12px;
 		color: var(--sa-blue);
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -315,16 +339,16 @@
 		margin: 0;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 		list-style: none;
 	}
 
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
-		font-weight: 400;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 22px;
 	}
 
@@ -422,7 +446,7 @@
 	.dealer-profile-card__title {
 		color: #111827;
 		font-size: var(--sa-text-xl);
-		font-weight: var(--sa-weight-semibold);
+		font-weight: var(--sa-weight-heading);
 		line-height: var(--sa-leading-tight);
 	}
 
@@ -452,18 +476,60 @@
 	.dealer-review-card span {
 		color: #6b7280;
 		display: block;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		margin-top: 4px;
 	}
 
 	@media (max-width: 991px) {
+		.container {
+			width: calc(100% - 32px);
+			padding: 0;
+		}
+		.pb-80 {
+			padding-bottom: 40px;
+		}
+		.py-80 {
+			padding-block: 32px;
+		}
+		.dealer-profile-hero__grid,
+		.dealer-about-grid {
+			gap: 24px;
+		}
+		.dealer-profile-card__logo {
+			width: 72px;
+			height: 72px;
+			margin-bottom: 12px;
+		}
+		.dealer-vehicle-card,
+		.dealer-team-card {
+			display: grid;
+			grid-template-columns: 96px minmax(0, 1fr);
+		}
+		.dealer-vehicle-card img,
+		.dealer-team-card img {
+			height: 100%;
+			aspect-ratio: auto;
+		}
+		.dealer-vehicle-card div,
+		.dealer-team-card div,
+		.dealer-review-card {
+			padding: 12px;
+		}
+		.dealer-vehicle-card__title,
+		.dealer-team-card__name {
+			font-size: var(--sa-text-lg);
+		}
+		.gap-24 {
+			gap: 16px;
+		}
+
 		.dealer-profile-hero__grid,
 		.dealer-about-grid {
 			grid-template-columns: 1fr;
 		}
 
 		.dealer-profile-hero__content h1 {
-			font-size: 34px;
+			font-size: var(--sa-type-page);
 			line-height: 1.12;
 		}
 
@@ -473,6 +539,53 @@
 
 		.md-grid-cols-1.grid.grid-cols-3 {
 			grid-template-columns: 1fr;
+		}
+		.dealer-page h1,
+		.dealer-page .dealer-profile-hero__content h1 {
+			font-size: var(--sa-mobile-type-page-title);
+			line-height: var(--sa-mobile-leading-heading);
+			overflow-wrap: anywhere;
+		}
+		.dealer-page h2 {
+			font-size: var(--sa-mobile-type-section-title);
+			line-height: 1.25;
+		}
+		.dealer-page .h7 {
+			font-size: var(--sa-mobile-type-body);
+			font-weight: var(--sa-weight-regular);
+			color: var(--sa-ink-soft);
+			line-height: var(--sa-leading-body);
+		}
+		.dealer-page .breadcrumb {
+			min-height: var(--sa-mobile-action-h);
+			padding-block: var(--sa-mobile-gap-xs);
+			gap: var(--sa-mobile-gap-sm);
+		}
+		.dealer-page .container {
+			min-width: 0;
+			width: calc(100% - 2 * var(--sa-mobile-gutter-wide));
+			padding: 0;
+		}
+		.dealer-page .container > *,
+		.dealer-page .grid > * {
+			min-width: 0;
+		}
+		.dealer-page .sa-cta {
+			max-width: 100%;
+			white-space: normal;
+			min-height: var(--sa-mobile-action-h);
+		}
+		.dealer-page .pb-80,
+		.dealer-page .pb-100 {
+			padding-bottom: var(--sa-space-8);
+		}
+		.dealer-page .py-80 {
+			padding-block: var(--sa-space-8);
+		}
+		.dealer-page .mb-32,
+		.dealer-page .mb-30,
+		.dealer-page .mb-24 {
+			margin-bottom: var(--sa-mobile-gap-lg);
 		}
 	}
 </style>

@@ -9,11 +9,12 @@
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { featuredDayNightVehicles } from '$lib/data/daynight-vehicles';
-	import { daynightReviews } from '$lib/data/daynight-reviews';
+	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import { daynightSite } from '$lib/data/daynight-site';
-	import type { DayNightTeamMember } from '$lib/data/daynight-team';
+	import { daynightTeamDisclosure, type DayNightTeamMember } from '$lib/data/daynight-team';
 
 	let {
 		member,
@@ -26,9 +27,7 @@
 	const otherMembers = $derived(members.filter((candidate) => candidate.slug !== member.slug));
 	const recommendedVehicles = featuredDayNightVehicles.slice(0, 3);
 	const reviews = daynightReviews.slice(0, 3);
-	const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-		`${daynightSite.mapLabel}, ${daynightSite.location}`
-	)}&output=embed`;
+	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const phoneLinkProps = $derived({ href: `tel:${member.phone}` });
 	const mapLinkProps = {
 		href: daynightSite.mapUrl,
@@ -38,6 +37,16 @@
 </script>
 
 <div class="team-member-page">
+	<DesktopYellowRouteHero
+		headingId="team-member-route-title"
+		title={member.name}
+		copy={member.role}
+		primaryLabel="Виж автомобилите"
+		primaryHref="/inventory"
+		secondaryLabel="Свържете се"
+		secondaryHref="/contact"
+		compact
+	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
@@ -57,13 +66,14 @@
 					<img src={member.image} alt={member.name} loading="eager" decoding="async" />
 				</div>
 				<div class="team-member-profile__content">
-					<p class="eyebrow">Профил на консултант</p>
+					<p class="eyebrow">Примерен профил</p>
 					<h1>{member.name}</h1>
+					<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
 					<p class="h5 text-highlight mb-18">{member.role}</p>
 					<p class="h7 text-secondary line-height-28 mb-22">{member.bio}</p>
 					<p class="h7 line-height-28 mb-30">{member.detail}</p>
 					<div class="team-member-profile__actions">
-						<a {...phoneLinkProps} class="sa-cta sa-cta-primary sa-cta-large">
+						<a {...phoneLinkProps} class="sa-cta-large sa-cta sa-cta-primary">
 							Обади се за оглед
 						</a>
 						{#if member.email}
@@ -83,7 +93,7 @@
 						{/if}
 						<div>
 							<span>Локация</span>
-							<a {...mapLinkProps}>Варна</a>
+							<a {...mapLinkProps}>{daynightSite.city}</a>
 						</div>
 					</div>
 				</div>
@@ -95,9 +105,7 @@
 		<div class="container">
 			<div class="title-section mb-30">
 				<h2>Препоръчани автомобили</h2>
-				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost sa-cta-compact">
-					Виж всички
-				</a>
+				<a href={resolve('/inventory')} class="sa-cta-compact sa-cta sa-cta-ghost"> Виж всички </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each recommendedVehicles as vehicle (vehicle.slug)}
@@ -117,10 +125,11 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Информация за покупката</h2>
-				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost sa-cta-compact">
-					Виж всички
-				</a>
+				<div>
+					<h2>Отзиви от клиенти</h2>
+					<p class="text-secondary">{daynightReviewDisclosure}</p>
+				</div>
+				<a href={resolve('/reviews')} class="sa-cta-compact sa-cta sa-cta-ghost"> Виж всички </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each reviews as review (review.id)}
@@ -138,7 +147,7 @@
 		<div class="container">
 			<div class="team-member-contact">
 				<div>
-					<p class="eyebrow">LEGEND AUTO Варна</p>
+					<p class="eyebrow">{daynightSite.shortName} {daynightSite.city}</p>
 					<h2>Запази час за оглед</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
 						Свържете се с екипа за актуална наличност, оглед, документи, бартер или финансиране.
@@ -147,7 +156,11 @@
 						{daynightSite.phoneCta}
 					</a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Карта до LEGEND AUTO Варна" height="320" />
+				<LazyMapEmbed
+					src={mapEmbedSrc}
+					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+					height="320"
+				/>
 			</div>
 		</div>
 	</section>
@@ -173,6 +186,17 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.team-member-page > .background-light,
+		.team-member-profile__content > h1 {
+			display: none;
+		}
+
+		.team-member-profile {
+			padding-top: var(--sa-desktop-section-y-md);
+		}
+	}
+
 	.team-member-page,
 	.team-member-page * {
 		box-sizing: border-box;
@@ -186,9 +210,9 @@
 
 	.team-member-page {
 		color: #1c1c1c;
-		font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
-		font-size: 16px;
-		font-weight: 400;
+		font-family: var(--sa-font);
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 	}
 
@@ -213,16 +237,16 @@
 	   32-48 -> 46.08, left). */
 	.team-member-page h1 {
 		color: #111827;
-		font-size: clamp(36px, 4vw, 56px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 		text-align: center;
 	}
 
 	.team-member-page h2 {
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 	}
 
@@ -272,7 +296,7 @@
 	}
 
 	.font-weight-600 {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.text-secondary {
@@ -288,22 +312,22 @@
 	}
 
 	.h7 {
-		font-size: 18px;
-		font-weight: 500;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-medium);
 		line-height: var(--sa-leading-body);
 	}
 
 	.h5 {
-		font-size: 20px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
 	.eyebrow {
 		margin-bottom: 12px;
 		color: var(--sa-red);
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -337,9 +361,9 @@
 		border-radius: 8px;
 		background: #fff;
 		color: #1c1c1c;
-		font-size: 18px;
+		font-size: var(--sa-text-lg);
 		padding: 0 24px;
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 	}
 
@@ -379,16 +403,16 @@
 		margin: 0;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 		list-style: none;
 	}
 
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
-		font-weight: 400;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 22px;
 	}
 
@@ -470,7 +494,7 @@
 	.team-review-card span {
 		color: #6b7280;
 		display: block;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		margin-bottom: 4px;
 	}
 
@@ -492,9 +516,9 @@
 	.team-teammate-card:hover,
 	.team-teammate-card:focus-visible {
 		border-color: var(--sa-line-strong);
-		box-shadow: var(--sa-shadow-sm);
-		transform: translateY(-2px);
-		outline: 0;
+		box-shadow: none;
+		outline: 2px solid var(--sa-line-strong);
+		outline-offset: 2px;
 	}
 
 	.team-vehicle-card img,
@@ -513,18 +537,134 @@
 
 	/* Renders desktop-narrow on phones (no MobileTeamMemberPage). */
 	@media (max-width: 991px) {
+		.container {
+			width: calc(100% - 32px);
+			padding: 0;
+		}
+		.pb-80,
+		.pb-100 {
+			padding-bottom: 40px;
+		}
+		.py-80 {
+			padding-block: 32px;
+		}
+		.team-member-profile__grid,
+		.team-member-contact {
+			gap: 20px;
+		}
+		.team-member-profile__media {
+			width: 96px;
+		}
+		.team-member-profile__media img {
+			aspect-ratio: 1;
+			border-radius: 12px;
+		}
+		.team-member-profile__content .h7 {
+			font-size: var(--sa-text-base);
+			line-height: 1.6;
+		}
+		.team-member-profile__facts {
+			gap: 12px;
+			margin-top: 20px;
+		}
+		.team-member-profile__facts div {
+			min-width: 0;
+			flex: 1 1 120px;
+			padding: 12px;
+		}
+		.team-vehicle-card,
+		.team-teammate-card {
+			display: grid;
+			grid-template-columns: 96px minmax(0, 1fr);
+		}
+		.team-vehicle-card img,
+		.team-teammate-card img {
+			height: 100%;
+			aspect-ratio: auto;
+		}
+		.team-vehicle-card div,
+		.team-teammate-card div,
+		.team-review-card {
+			padding: 12px;
+		}
+		.team-vehicle-card .h5,
+		.team-teammate-card .h5 {
+			font-size: var(--sa-text-lg);
+		}
+		.gap-24 {
+			gap: 16px;
+		}
+
 		.team-member-profile__grid,
 		.team-member-contact {
 			grid-template-columns: 1fr;
 		}
 
 		.team-member-profile__content h1 {
-			font-size: 34px;
+			font-size: var(--sa-type-page);
 			line-height: 1.12;
 		}
 
 		.md-grid-cols-1.grid.grid-cols-3 {
 			grid-template-columns: 1fr;
+		}
+		.team-member-page h1,
+		.team-member-page .team-member-profile__content h1 {
+			font-size: var(--sa-mobile-type-page-title);
+			line-height: var(--sa-mobile-leading-heading);
+			overflow-wrap: anywhere;
+		}
+		.team-member-page h2 {
+			font-size: var(--sa-mobile-type-section-title);
+			line-height: 1.25;
+		}
+		.team-member-page .h7 {
+			font-size: var(--sa-mobile-type-body);
+			font-weight: var(--sa-weight-regular);
+			color: var(--sa-ink-soft);
+			line-height: var(--sa-leading-body);
+		}
+		.team-member-page .breadcrumb {
+			min-height: var(--sa-mobile-action-h);
+			padding-block: var(--sa-mobile-gap-xs);
+			gap: var(--sa-mobile-gap-sm);
+		}
+		.team-member-page .container {
+			min-width: 0;
+			width: calc(100% - 2 * var(--sa-mobile-gutter-wide));
+			padding: 0;
+		}
+		.team-member-page .container > *,
+		.team-member-page .grid > * {
+			min-width: 0;
+		}
+		.team-member-page .sa-cta {
+			max-width: 100%;
+			white-space: normal;
+			min-height: var(--sa-mobile-action-h);
+		}
+		.team-member-page .pb-80,
+		.team-member-page .pb-100 {
+			padding-bottom: var(--sa-space-8);
+		}
+		.team-member-page .py-80 {
+			padding-block: var(--sa-space-8);
+		}
+		.team-member-page .mb-32,
+		.team-member-page .mb-30,
+		.team-member-page .mb-24 {
+			margin-bottom: var(--sa-mobile-gap-lg);
+		}
+		.team-member-page .team-member-contact {
+			min-height: 0;
+			padding-block: var(--sa-space-8);
+		}
+		.team-member-page .team-vehicle-card .text-highlight {
+			color: var(--sa-price);
+		}
+		.team-member-page .team-member-profile__content .h7 {
+			font-size: var(--sa-mobile-type-body);
+			font-weight: var(--sa-weight-regular);
 		}
 	}
 </style>

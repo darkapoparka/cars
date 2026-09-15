@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "elit-auto-import",
   "templateKey": "auto-best",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
   "createdAt": "2026-09-06T21:48:47.255Z",
-  "state": "local-qa-passed",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,24 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "evidence": "J:/cars/audits/2026-09-08/verify/elit-auto-import/auto-best/result.json",
-    "frameworkChecks": true,
-    "checkedAt": "2026-09-08T03:40:50.037Z",
-    "limits": [
-      "Local demo only; no provider or form delivery verified.",
-      "Stock is a dated source-backed sample."
-    ],
-    "latestFrameworkEvidence": [
-      {
-        "path": "J:/cars/clients/elit-auto-import/validate-auto-final.log",
-        "modifiedAt": "2026-09-06T22:07:24.864Z"
-      }
-    ],
-    "finalMatrixEvidence": "J:/cars/clients/elit-auto-import/qa-final/results.json"
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -63,5 +49,22 @@
       "No dealer financing, buyback or trade-in service confirmed. Existing inquiry routes remain demo templates with copy limitations.",
       "Mileage field and seller description conflicts explicitly disclosed."
     ]
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/"
+  },
+  "workflowCommit": "8161310561a20065116582293c4de1a41ed62329",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-14T21:32:39.071Z",
+    "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }

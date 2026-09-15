@@ -11,7 +11,7 @@
 		onLanguageToggle: () => void;
 	} = $props();
 
-	const locationShort = 'бул. Цар Освободител 289, Варна';
+	const locationShort = daynightSite.locationShort;
 
 	const socialLinkBase =
 		'site-chrome-topbar__social-link inline-grid size-9 place-items-center text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-80 focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-sa-surface/70 [&_img]:size-[22px] [&_svg]:size-[22px]';
@@ -20,7 +20,7 @@
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
-	const phoneHref = `tel:${daynightSite.phone}`;
+	const phoneHref = daynightSite.phoneHref;
 </script>
 
 <div
@@ -28,10 +28,10 @@
 >
 	<div class="mx-auto flex h-full w-full max-w-none items-center justify-between px-6">
 		<div class="site-chrome-topbar__contact flex min-w-0 items-center">
-				<a
-					class="site-chrome-topbar__inventory mr-4 shrink-0 border-r border-sa-surface/25 pr-4 leading-none text-sa-surface no-underline hover:text-sa-surface/90"
-					href={resolve('/inventory')}>{daynightSite.primaryCta}</a
-				>
+			<a
+				class="site-chrome-topbar__inventory mr-4 shrink-0 border-r border-sa-surface/25 pr-4 leading-none text-sa-surface no-underline hover:text-sa-surface/90"
+				href={resolve('/inventory')}>{daynightSite.primaryCta}</a
+			>
 			<a
 				{...mapLinkProps}
 				class="site-chrome-topbar__location flex min-w-0 items-center gap-1.5 leading-none text-sa-surface no-underline transition-opacity duration-150 ease-sa hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_svg]:size-4 [&_svg]:fill-current"
@@ -51,14 +51,16 @@
 			</a>
 		</div>
 		<div class="flex shrink-0 items-center gap-2.5">
-			<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">
-				<li>
-					
-				</li>
-				<li>
-					
-				</li>
-			</ul>
+			{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram}
+				<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">
+					{#if daynightSite.socialLinks.facebook}
+						<li><a href={daynightSite.socialLinks.facebook} aria-label="Facebook" target="_blank" rel="noopener" class={socialLinkBase + ' site-chrome-topbar__social-link--facebook'}><SiteChromeIcon name="facebook" /></a></li>
+					{/if}
+					{#if daynightSite.socialLinks.instagram}
+						<li><a href={daynightSite.socialLinks.instagram} aria-label="Instagram" target="_blank" rel="noopener" class={socialLinkBase + ' site-chrome-topbar__social-link--instagram'}><SiteChromeIcon name="instagram" /></a></li>
+					{/if}
+				</ul>
+			{/if}
 			<div class="relative border-l border-sa-surface/25 pl-3" id="language-select">
 				<button
 					class="site-chrome-topbar__language inline-flex h-8 min-w-0 cursor-pointer items-center justify-center gap-1 border-0 bg-transparent px-1 leading-none text-sa-surface transition-opacity duration-150 ease-sa hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_span]:text-white [&_svg]:size-3.5 [&_svg_path]:stroke-current"
@@ -112,8 +114,8 @@
 
 <style>
 	.site-chrome-topbar__inventory {
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: -0.01em;
 	}
 
@@ -124,22 +126,22 @@
 	}
 
 	.site-chrome-topbar__location {
-		font-size: 13px;
-		font-weight: 500;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-medium);
 		opacity: 1;
 	}
 
 	.site-chrome-topbar__phone {
-		font-size: 13px;
+		font-size: var(--sa-text-caption);
 		font-variant-numeric: tabular-nums;
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0.02em;
 	}
 
 	.site-chrome-topbar__dot {
 		color: #fff;
 		flex: none;
-		font-size: 15px;
+		font-size: var(--sa-text-base);
 		line-height: 1;
 		opacity: 0.4;
 		padding: 0 10px;
@@ -171,8 +173,8 @@
 	}
 
 	.site-chrome-topbar__language {
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0 !important;
 	}
 	.site-chrome-topbar__language span {

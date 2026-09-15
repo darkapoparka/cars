@@ -1,3 +1,17 @@
+import { featuredVehicles } from './inventory';
+
+// Visual examples only: these selections are not records of completed transactions.
+export const demoWorkflowShowcases = {
+  'trade-in': {
+    title: 'Наскоро продадени',
+    vehicles: [featuredVehicles[0], featuredVehicles[3], featuredVehicles[5]]
+  },
+  import: {
+    title: 'Последно внесени',
+    vehicles: [featuredVehicles[1], featuredVehicles[2], featuredVehicles[4]]
+  }
+};
+
 type DemoTeamMember = {
   id: string;
   name: string;
@@ -11,38 +25,46 @@ type DemoPartner = {
   image: string;
 };
 
-export const demoContentLabel = 'LEGEND AUTO';
+export const demoContentLabel = 'Демо съдържание';
 
-export const demoTeamIntro = 'За наличност, оглед и подробности: 0899 877 305.';
+export const demoTeamIntro =
+  'Примерни профили за визуален преглед. Имената и снимките ще бъдат заменени с реалния екип.';
 
 export const demoPartnerIntro =
   'Примерни автомобилни марки за визуален преглед. Те не представят потвърдени партньорства.';
 
 export const demoTeamMembers: DemoTeamMember[] = [
   {
-    "id": "contact-0",
-    "name": "Налични автомобили",
-    "role": "LEGEND AUTO · 0899 877 305",
-    "image": "/assets/legend-auto/vehicle-01-1.webp"
+    id: 'arlene-mccoy',
+    name: 'Arlene McCoy',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team1.jpg'
   },
   {
-    "id": "contact-1",
-    "name": "Оглед във Варна",
-    "role": "LEGEND AUTO · 0899 877 305",
-    "image": "/assets/legend-auto/vehicle-02-1.webp"
+    id: 'ronald-richards',
+    name: 'Ronald Richards',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team2.jpg'
   },
   {
-    "id": "contact-2",
-    "name": "Транспорт в страната",
-    "role": "LEGEND AUTO · 0899 877 305",
-    "image": "/assets/legend-auto/vehicle-03-1.webp"
+    id: 'leslie-alexander',
+    name: 'Leslie Alexander',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team3.jpg'
   },
   {
-    "id": "contact-3",
-    "name": "Контакт с автокъщата",
-    "role": "LEGEND AUTO · 0899 877 305",
-    "image": "/assets/legend-auto/vehicle-04-1.webp"
+    id: 'cody-fisher',
+    name: 'Cody Fisher',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team4.jpg'
   }
 ];
 
-export const demoPartners: DemoPartner[] = [];
+export const demoPartners: DemoPartner[] = [
+  { id: 'carlogo', name: 'CARLOGO', image: '/assets/images/partner/par1.png' },
+  { id: 'topcars', name: 'TOPCARS', image: '/assets/images/partner/par2.png' },
+  { id: 'vehicle-store', name: 'VEHICLE STORE', image: '/assets/images/partner/par3.png' },
+  { id: 'speedcare', name: 'SPEEDCARE', image: '/assets/images/partner/par4.png' },
+  { id: 'carservice', name: 'CARSERVICE', image: '/assets/images/partner/par5.png' },
+  { id: 'cartrade', name: 'CARTRADE', image: '/assets/images/partner/par6.png' }
+];

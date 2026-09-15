@@ -1,28 +1,47 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
+const phoneE164 = "+359878720035";
+const city = "Варна";
+const shortName = "Иво Ауто";
+const district = "Варна";
+const street = "бул. „Цар Освободител“ 256";
+const location = "бул. „Цар Освободител“ 256";
+
 export const daynightSite = {
-	name: 'Иво Ауто',
-	shortName: 'Иво Ауто',
-	phone: '0878720035',
-	phoneLabel: '0878 720 035',
-	email: '',
-	location: 'бул. „Цар Освободител“ 256, Варна',
-	mapUrl: 'https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0',
-	mapLabel: 'Иво Ауто, Варна, България',
-	sourceInventory: 'https://ivoauto-varna.mobile.bg/',
-	inventoryCount: 16,
-	logoLight: '/assets/ivo-auto/wordmark-light.svg',
-	logoDark: '/assets/ivo-auto/wordmark.svg',
+	name: "Иво Ауто",
+	shortName,
+	city,
+	region: city,
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "359878720035",
+	phoneLabel: "0878 720 035",
+	email: "",
+	location,
+	locationShort: "бул. „Цар Освободител“ 256",
+	locationLandmark: "бул. „Цар Освободител“ 256",
+	hoursLabel: "Свържете се за работно време и оглед.",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://ivoauto-varna.mobile.bg/",
+	logoLight: "/assets/ivo-auto/wordmark.svg",
+	logoDark: "/assets/ivo-auto/wordmark-light.svg",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
-	accountCta: 'Вход / Профил',
+	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: 'Иво Ауто',
-	heroSubtitle: 'Автомобили във Варна · бул. Цар Освободител 256',
+	heroTitle: "Иво Ауто",
+	heroSubtitle: "Варна · Подбрани публикувани обяви; наличностите и условията се потвърждават с Иво Ауто.",
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -34,6 +53,7 @@ export const publicNavItems = [
 	{ label: 'Продай', href: '/sell-your-car' },
 	{ label: 'Услуги', href: '/services' },
 	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
 	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
@@ -70,15 +90,10 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Иво Ауто', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: "За Иво Ауто", href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
-			{ label: 'Полезно', href: '/blog' },
-			{
-				label: 'Покупка без риск',
-				href: '/blog/kak-da-kupim-upotrebyavan-avtomobil'
-			},
+			{ label: 'Блог', href: '/blog' },
 			{ label: 'Условия', href: '/terms' }
 		]
 	},

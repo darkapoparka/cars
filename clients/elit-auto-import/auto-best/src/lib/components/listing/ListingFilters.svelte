@@ -1,7 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
-  import { listingFilterOptions, listingModelsForMake, parseListingFilters, type ListingFilters } from '$data/listing';
+  import { activeFilterCount as countFilters, bodyLabel, listingParams, listingHiddenFields, removeListingFilter, listingFilterOptions, listingModelsForMake, parseListingFilters, type ListingFilters } from '$data/listing';
   import Icon from '$components/ui/Icon.svelte';
   import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
   import QuickFilterSheet from './QuickFilterSheet.svelte';
@@ -16,20 +16,7 @@
 
   let { filters, openFilters, filtersOpen, onDraftChange }: Props = $props();
 
-  let activeFilterCount = $derived([
-    filters.make,
-    filters.model,
-    filters.body,
-    filters.fuel,
-    filters.transmission,
-    filters.version,
-    filters.condition,
-    filters.yearMin,
-    filters.yearMax,
-    filters.priceMin,
-    filters.priceMax,
-    filters.mileageMax
-  ].filter(Boolean).length + filters.equipment.length);
+  let activeFilterCount = $derived(countFilters(filters));
   let query = $derived(filters.q);
   let make = $derived(filters.make);
   let model = $derived(filters.model);
@@ -51,6 +38,7 @@
   ] as const;
   const activeChips = $derived.by(() => {
     const labels: Record<string, string> = {
+      body: bodyLabel(filters.body),
       condition: filters.condition === 'new' ? 'Нови' : 'Употребявани',
       price_min: `От ${filters.priceMin?.toLocaleString('bg-BG')} €`,
       price_max: `До ${filters.priceMax?.toLocaleString('bg-BG')} €`,
@@ -58,33 +46,17 @@
       year_max: `До ${filters.yearMax} г.`,
       mileage_max: `До ${filters.mileageMax?.toLocaleString('bg-BG')} км`
     };
-    return [...page.url.searchParams.entries()]
+    return [...listingParams(filters).entries()]
       .filter(([key, value]) => value && key !== 'sort' && ['q', 'make', 'model', 'body', 'fuel', 'transmission', 'version', 'condition', 'price_min', 'price_max', 'year_min', 'year_max', 'mileage_max', 'equipment'].includes(key))
       .map(([key, value]) => {
-        const params = new URLSearchParams(page.url.searchParams);
-        params.delete(key, value);
-        if (key === 'make') params.delete('model');
+        const params = removeListingFilter(filters, key, value);
         const search = params.toString();
         const href: '/listing-grid' | `/listing-grid?${string}` = search ? `/listing-grid?${search}` : '/listing-grid';
         return { key: `${key}-${value}`, label: labels[key] ?? value, href };
       });
   });
 
-  const primaryHiddenFields = (current: ListingFilters) => {
-    const fields: Array<[string, string]> = [
-      ['transmission', current.transmission],
-      ['version', current.version],
-      ['condition', current.condition],
-      ['year_min', current.yearMin ? String(current.yearMin) : ''],
-      ['year_max', current.yearMax ? String(current.yearMax) : ''],
-      ['price_min', current.priceMin ? String(current.priceMin) : ''],
-      ['price_max', current.priceMax ? String(current.priceMax) : ''],
-      ['mileage_max', current.mileageMax ? String(current.mileageMax) : ''],
-      ...current.equipment.map((item): [string, string] => ['equipment', item])
-    ];
-
-    return fields.filter(([, value]) => value);
-  };
+  const primaryHiddenFields = (current: ListingFilters) => listingHiddenFields(current, ['q', 'make', 'model', 'body', 'fuel', 'sort']);
 
   function updateDraft(event: Event) {
     const form = event.currentTarget as HTMLFormElement;
@@ -104,7 +76,7 @@
 <section class="dn-listing-filter-wrap" aria-label="Филтри за автомобили">
   <div class="container">
     <div class="dn-listing-filter">
-      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} /></div>
+      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} keywordPlaceholder="Търси в налични" /></div>
       <QuickFilterSheet id="dn-listing-sort-sheet">
       {#snippet children(openSort, sortOpen)}
       <form class="dn-listing-mobile-form" method="GET" action={resolve('/listing-grid')} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
@@ -124,7 +96,7 @@
           onclick={(event) => openFilters(event)}
         >
           <MobileNavIcon name="search" size={20} />
-          <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || 'Марка или модел'}</span>
+          <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || 'Търси в налични'}</span>
           <span class="dn-listing-filter__keyword-hint">Търсене по ключова дума <Icon name="arrow-right" size={16} /></span>
         </button>
         <button
@@ -172,7 +144,7 @@
           <span class="dn-listing-filter__label">Купе</span>
           <select name="body" aria-label="Купе" bind:value={body}>
             {#each listingFilterOptions.bodies as option (option)}
-              <option value={option}>{option || 'Всички'}</option>
+              <option value={option}>{bodyLabel(option) || 'Всички'}</option>
             {/each}
           </select>
         </label>
@@ -202,7 +174,13 @@
           </a>
         {/each}
         {#each quickFilters as item (item.field)}
-          <button type="button" aria-haspopup="dialog" aria-controls="dn-quick-filter" aria-expanded={quickOpen} onclick={(event) => openQuick(event, item.field, item.label)}>
+          <button
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="dn-quick-filter"
+            aria-expanded={quickOpen}
+            onclick={(event) => openQuick(event, item.field, item.label)}
+          >
             {item.label}<Icon name="chevron-down" size={14} />
           </button>
         {/each}

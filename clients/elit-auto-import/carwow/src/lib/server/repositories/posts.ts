@@ -28,6 +28,8 @@ const formKeys: ReadonlyArray<keyof PostFormInput> = postFormKeys;
 
 const fallbackPostImage = '/assets/images/blog/post-44.jpg';
 const daynightArticleCategories = new Set<DayNightArticleCategory>([
+	'Покупка',
+	'Продажба',
 	'Новини',
 	'Съвети',
 	'Финансиране',

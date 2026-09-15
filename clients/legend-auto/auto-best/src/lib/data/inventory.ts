@@ -11,10 +11,9 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  verification: 'sample' | 'verified';
+  evidenceUrl?: string;
   image: string;
-  gallery: string[];
-  description: string;
-  sourceUrl: string;
   category: string;
   body: string;
   make: string;
@@ -31,22 +30,13 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Equipment facets are limited to recurring features published in LEGEND AUTO's
-// current adverts for these model families (legendauto1.mobile.bg, checked 2026-08-30).
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11774263732166588-audi-q4-q4-e-tron-45-quattro-digital-termopompa-29000km",
     "image": "/assets/legend-auto/vehicle-01-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-01-1.webp",
-      "/assets/legend-auto/vehicle-01-2.webp",
-      "/assets/legend-auto/vehicle-01-3.webp",
-      "/assets/legend-auto/vehicle-01-4.webp",
-      "/assets/legend-auto/vehicle-01-5.webp"
-    ],
-    "description": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km. 2024 г., 29 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11774263732166588-audi-q4-q4-e-tron-45-quattro-digital-termopompa-29000km",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Audi",
     "title": "Audi Q4 Q4 e-tron 45 QUATTRO, DIGITAL, ТЕРМОПОМПА 29000km",
@@ -58,9 +48,9 @@ export const featuredVehicles: Vehicle[] = [
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "Подгряване на седалки",
       "Навигация",
       "Парктроник",
-      "Подгряване на седалки",
       "Безключов достъп"
     ],
     "condition": "used",
@@ -69,17 +59,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 2,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11784618839120443-seat-leon-2-0tdi",
     "image": "/assets/legend-auto/vehicle-02-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-02-1.webp",
-      "/assets/legend-auto/vehicle-02-2.webp",
-      "/assets/legend-auto/vehicle-02-3.webp",
-      "/assets/legend-auto/vehicle-02-4.webp",
-      "/assets/legend-auto/vehicle-02-5.webp"
-    ],
-    "description": "Seat Leon 2.0TDI. 2017 г., 200 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11784618839120443-seat-leon-2-0tdi",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Seat",
     "title": "Seat Leon 2.0TDI",
@@ -90,9 +73,9 @@ export const featuredVehicles: Vehicle[] = [
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
+      "Подгряване на седалки",
       "Навигация",
-      "Парктроник",
-      "Подгряване на седалки"
+      "Парктроник"
     ],
     "condition": "used",
     "priceEur": 7999,
@@ -100,17 +83,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 3,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-21785269571488349-vw-tiguan-2-0tdi-150-k-s-dsg-122000km-navigatsiya",
     "image": "/assets/legend-auto/vehicle-03-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-03-1.webp",
-      "/assets/legend-auto/vehicle-03-2.webp",
-      "/assets/legend-auto/vehicle-03-3.webp",
-      "/assets/legend-auto/vehicle-03-4.webp",
-      "/assets/legend-auto/vehicle-03-5.webp"
-    ],
-    "description": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ. 2019 г., 122 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-21785269571488349-vw-tiguan-2-0tdi-150-k-s-dsg-122000km-navigatsiya",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "VW",
     "title": "VW Tiguan 2.0TDI 150 к.с DSG 122000км НАВИГАЦИЯ",
@@ -130,17 +106,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 4,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11788186558085673-vw-passat-2-0tdi-dsg-navigatsiya-podgrev-na-sedalki",
     "image": "/assets/legend-auto/vehicle-04-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-04-1.webp",
-      "/assets/legend-auto/vehicle-04-2.webp",
-      "/assets/legend-auto/vehicle-04-3.webp",
-      "/assets/legend-auto/vehicle-04-4.webp",
-      "/assets/legend-auto/vehicle-04-5.webp"
-    ],
-    "description": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ. 2015 г., 220 000 км, дизел, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11788186558085673-vw-passat-2-0tdi-dsg-navigatsiya-podgrev-na-sedalki",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "VW",
     "title": "VW Passat 2.0TDI DSG НАВИГАЦИЯ .ПОДГРЕВ НА СЕДАЛКИ",
@@ -151,9 +120,9 @@ export const featuredVehicles: Vehicle[] = [
     "fuel": "Дизел",
     "transmission": "Автоматик",
     "equipment": [
+      "Подгряване на седалки",
       "Навигация",
       "Парктроник",
-      "Подгряване на седалки",
       "Безключов достъп"
     ],
     "condition": "used",
@@ -162,17 +131,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 5,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11788202283254523-vw-golf-1-9tdi-105k-s",
     "image": "/assets/legend-auto/vehicle-05-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-05-1.webp",
-      "/assets/legend-auto/vehicle-05-2.webp",
-      "/assets/legend-auto/vehicle-05-3.webp",
-      "/assets/legend-auto/vehicle-05-4.webp",
-      "/assets/legend-auto/vehicle-05-5.webp"
-    ],
-    "description": "VW Golf 1.9TDI 105к.с. 2005 г., 205 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11788202283254523-vw-golf-1-9tdi-105k-s",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "VW",
     "title": "VW Golf 1.9TDI 105к.с",
@@ -191,17 +153,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 6,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11782331844226239-toyota-yaris-1-5-hibrid-kamera-4l-100km",
     "image": "/assets/legend-auto/vehicle-06-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-06-1.webp",
-      "/assets/legend-auto/vehicle-06-2.webp",
-      "/assets/legend-auto/vehicle-06-3.webp",
-      "/assets/legend-auto/vehicle-06-4.webp",
-      "/assets/legend-auto/vehicle-06-5.webp"
-    ],
-    "description": "Toyota Yaris 1.5 Хибрид Камера 4л/100км. 2012 г., 169 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11782331844226239-toyota-yaris-1-5-hibrid-kamera-4l-100km",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Toyota",
     "title": "Toyota Yaris 1.5 Хибрид Камера 4л/100км",
@@ -220,17 +175,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 7,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-21787135215316819-toyota-rav4-2-5-hybrid-gaz-full-navigatsiya-kozhen-salon-full",
     "image": "/assets/legend-auto/vehicle-07-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-07-1.webp",
-      "/assets/legend-auto/vehicle-07-2.webp",
-      "/assets/legend-auto/vehicle-07-3.webp",
-      "/assets/legend-auto/vehicle-07-4.webp",
-      "/assets/legend-auto/vehicle-07-5.webp"
-    ],
-    "description": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL. 2022 г., 252 000 км, хибрид, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-21787135215316819-toyota-rav4-2-5-hybrid-gaz-full-navigatsiya-kozhen-salon-full",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Toyota",
     "title": "Toyota Rav4 2.5 HYBRID/ГАЗ FULL НАВИГАЦИЯ, КОЖЕН САЛОН, FULL",
@@ -241,9 +189,10 @@ export const featuredVehicles: Vehicle[] = [
     "fuel": "Хибрид",
     "transmission": "Автоматик",
     "equipment": [
+      "360° камера",
+      "Подгряване на седалки",
       "Навигация",
-      "Парктроник",
-      "Подгряване на седалки"
+      "Парктроник"
     ],
     "condition": "used",
     "priceEur": 26999,
@@ -251,17 +200,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 8,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11786699392982478-toyota-auris-2-0d4d",
     "image": "/assets/legend-auto/vehicle-08-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-08-1.webp",
-      "/assets/legend-auto/vehicle-08-2.webp",
-      "/assets/legend-auto/vehicle-08-3.webp",
-      "/assets/legend-auto/vehicle-08-4.webp",
-      "/assets/legend-auto/vehicle-08-5.webp"
-    ],
-    "description": "Toyota Auris 2.0D4D. 2009 г., 229 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11786699392982478-toyota-auris-2-0d4d",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Toyota",
     "title": "Toyota Auris 2.0D4D",
@@ -280,17 +222,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 9,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11787054081251501-skoda-scala-1-6tdi",
     "image": "/assets/legend-auto/vehicle-09-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-09-1.webp",
-      "/assets/legend-auto/vehicle-09-2.webp",
-      "/assets/legend-auto/vehicle-09-3.webp",
-      "/assets/legend-auto/vehicle-09-4.webp",
-      "/assets/legend-auto/vehicle-09-5.webp"
-    ],
-    "description": "Skoda Scala 1.6TDI. 2019 г., 180 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11787054081251501-skoda-scala-1-6tdi",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "Skoda",
     "title": "Skoda Scala 1.6TDI",
@@ -301,9 +236,9 @@ export const featuredVehicles: Vehicle[] = [
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
+      "Подгряване на седалки",
       "Навигация",
-      "Парктроник",
-      "Подгряване на седалки"
+      "Парктроник"
     ],
     "condition": "used",
     "priceEur": 11999,
@@ -311,17 +246,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 10,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11787771672265620-renault-zoe-52kw-78000km-sobstvena-bateriya",
     "image": "/assets/legend-auto/vehicle-10-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-10-1.webp",
-      "/assets/legend-auto/vehicle-10-2.webp",
-      "/assets/legend-auto/vehicle-10-3.webp",
-      "/assets/legend-auto/vehicle-10-4.webp",
-      "/assets/legend-auto/vehicle-10-5.webp"
-    ],
-    "description": "Renault Zoe 52kw 78000km Собствена батерия. 2020 г., 78 000 км, електрически, автоматик скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11787771672265620-renault-zoe-52kw-78000km-sobstvena-bateriya",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Renault",
     "title": "Renault Zoe 52kw 78000km Собствена батерия",
@@ -341,17 +269,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 11,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11777013326319103-renault-clio-1-2-benzin",
     "image": "/assets/legend-auto/vehicle-11-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-11-1.webp",
-      "/assets/legend-auto/vehicle-11-2.webp",
-      "/assets/legend-auto/vehicle-11-3.webp",
-      "/assets/legend-auto/vehicle-11-4.webp",
-      "/assets/legend-auto/vehicle-11-5.webp"
-    ],
-    "description": "Renault Clio 1.2 БЕНЗИН. 2014 г., 150 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11777013326319103-renault-clio-1-2-benzin",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Renault",
     "title": "Renault Clio 1.2 БЕНЗИН",
@@ -370,17 +291,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 12,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11764232323880460-peugeot-508-2-0hdi",
     "image": "/assets/legend-auto/vehicle-12-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-12-1.webp",
-      "/assets/legend-auto/vehicle-12-2.webp",
-      "/assets/legend-auto/vehicle-12-3.webp",
-      "/assets/legend-auto/vehicle-12-4.webp",
-      "/assets/legend-auto/vehicle-12-5.webp"
-    ],
-    "description": "Peugeot 508 2.0HDI. 2013 г., 232 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11764232323880460-peugeot-508-2-0hdi",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "Peugeot",
     "title": "Peugeot 508 2.0HDI",
@@ -399,17 +313,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 13,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11786966551654053-opel-astra-1-6",
     "image": "/assets/legend-auto/vehicle-13-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-13-1.webp",
-      "/assets/legend-auto/vehicle-13-2.webp",
-      "/assets/legend-auto/vehicle-13-3.webp",
-      "/assets/legend-auto/vehicle-13-4.webp",
-      "/assets/legend-auto/vehicle-13-5.webp"
-    ],
-    "description": "Opel Astra 1.6. 2017 г., 193 000 км, дизел, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11786966551654053-opel-astra-1-6",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "Opel",
     "title": "Opel Astra 1.6",
@@ -429,17 +336,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 14,
+    "verification": "verified",
+    "evidenceUrl": "https://legendauto1.mobile.bg/obiava-11725562013563390-opel-agila-1-3i-vnos-ot-italiya",
     "image": "/assets/legend-auto/vehicle-14-1.webp",
-    "gallery": [
-      "/assets/legend-auto/vehicle-14-1.webp",
-      "/assets/legend-auto/vehicle-14-2.webp",
-      "/assets/legend-auto/vehicle-14-3.webp",
-      "/assets/legend-auto/vehicle-14-4.webp",
-      "/assets/legend-auto/vehicle-14-5.webp"
-    ],
-    "description": "Opel Agila 1.3i Внос от Италия. 2008 г., 120 000 км, бензин, ръчна скоростна кутия. Публикувана оферта от LEGEND AUTO. Потвърдете наличността и характеристиките преди оглед.",
-    "sourceUrl": "https://legendauto1.mobile.bg/obiava-11725562013563390-opel-agila-1-3i-vnos-ot-italiya",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Opel",
     "title": "Opel Agila 1.3i Внос от Италия",
@@ -456,4 +356,11 @@ export const featuredVehicles: Vehicle[] = [
   }
 ];
 
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+const inventoryLocale = "bg-BG";
+const inventoryCurrency = "EUR";
+export const formatVehiclePrice = (amount: number) =>
+  new Intl.NumberFormat(inventoryLocale, {
+    style: 'currency',
+    currency: inventoryCurrency,
+    maximumFractionDigits: 0
+  }).format(amount);

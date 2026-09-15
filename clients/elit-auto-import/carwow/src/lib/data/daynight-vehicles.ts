@@ -1,4 +1,3 @@
-import { elitStock } from './elit-stock';
 import { currentDayNightListings, type CurrentDayNightListing } from './daynight-current-inventory';
 
 export type Car = {
@@ -35,7 +34,7 @@ export type Car = {
 
 const parseLocalizedNumber = (value: string) => {
 	const match = value.match(/\d[\d\s]*(?:[.,]\d+)?/);
-	return match ? Number(match[0].replace(/\s/g, '').replace(',', '.')) : 0;
+	return match ? Number(match[0].replaceAll(' ', '').replace(',', '.')) : 0;
 };
 
 const normalizeFuel = (fuel: string) =>
@@ -81,12 +80,10 @@ const getVehicleIdentity = (listing: CurrentDayNightListing) => {
 };
 
 const listingToVehicle = (listing: CurrentDayNightListing): Car => {
- const source = elitStock.find(v => v.id === listing.id)!;
-	const identity = { brand: source.make, model: source.model, shortTitle: source.title };
+	const identity = getVehicleIdentity(listing);
 	const year = Number(listing.date.match(/\b(?:19|20)\d{2}\b/)?.[0] ?? 0);
 	const mileageValue = Math.round(parseLocalizedNumber(listing.mileage));
 	const price = parseLocalizedNumber(listing.priceEur);
-	const priceBgnValue = parseLocalizedNumber(listing.priceBgn);
 	const fuel = normalizeFuel(listing.fuel);
 	const transmission = normalizeTransmission(listing.transmission);
 	const body = normalizeBody(listing.body);
@@ -124,18 +121,19 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		price,
 		priceEur: listing.priceEur,
 		priceBgn: listing.priceBgn,
-		monthly: 'Условия по запитване',
+		monthly: 'Финансиране по запитване',
 		image: listing.image,
-		gallery: source.images,
+		gallery: [listing.image],
 		badges: [
-			listing.status || availability,
+			availability,
+			...(listing.status && listing.status !== availability ? [listing.status] : []),
 			identity.model.includes('AMG') ? 'AMG' : listing.power
 		],
 		conditionLine,
-		description: source.description + " " + source.mileageNote,
+		description: `${identity.shortTitle}, ${year} г., ${fuel.toLocaleLowerCase('bg-BG')}, ${listing.mileage}, ${listing.power}, ${transmission.toLocaleLowerCase('bg-BG')}. ${conditionLine}`,
 		features,
 		highlights: [availability, listing.power, drive],
-		lot: `ELIT-${listing.id.slice(-6)}`,
+		lot: `DN-${listing.id.slice(-6)}`,
 		sourceUrl: listing.sourceUrl
 	};
 };

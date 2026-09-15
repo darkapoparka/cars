@@ -13,7 +13,7 @@
 
 <svelte:head>
   <title>Налични автомобили — {brand.name}</title>
-  <meta name="description" content={`Подбрани премиум автомобили, внос и условия за покупка в ${brand.city}.`} />
+  <meta name="description" content={`Подбрани премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
 </svelte:head>
 
 <VehicleSearchDialog filters={draftFilters}>

@@ -8,7 +8,9 @@ export interface LeadSiteConfig {
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
+  readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
+  readonly financingArtworkPath: string;
   readonly heroPath: string;
   readonly locale: string;
   readonly logoPath: string;
@@ -17,6 +19,9 @@ export interface LeadSiteConfig {
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
+  readonly sellCategoryAssets: Readonly<
+    Record<"car" | "motorbike" | "truck" | "van", string>
+  >;
   readonly shortName: string;
   readonly slug: string;
   readonly socialLinks?: Partial<
@@ -28,26 +33,36 @@ export interface LeadSiteConfig {
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
-  "accent": "#222222",
-  "address": "бул. „Цар Освободител“ 256",
-  "city": "Варна",
-  "contactUrl": "tel:+359878720035",
-  "country": "България",
-  "countryCode": "BG",
-  "currency": "EUR",
-  "email": "",
-  "heroPath": "/assets/ivo-auto/vehicle-01-1.webp",
-  "locale": "bg-BG",
-  "logoPath": "/assets/ivo-auto/wordmark.svg",
-  "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
-  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
-  "name": "Иво Ауто",
-  "phoneDisplay": "0878 720 035",
-  "phoneHref": "tel:+359878720035",
-  "shortName": "Иво Ауто",
-  "slug": "ivo-auto",
-  "socialLinks": {},
-  "staticDemoMode": true,
-  "tagline": "Автомобили във Варна. Наличност и условия по телефона."
+  accent: "#222222",
+  address: "бул. „Цар Освободител“ 256",
+  city: "Варна",
+  district: { bg: "Варна", en: "Варна" },
+  sellCategoryAssets: {
+    car: "/lead-sell-car-v1.png",
+    motorbike: "/lead-sell-motorcycle-v1.png",
+    truck: "/lead-sell-truck-v1.png",
+    van: "/lead-sell-van-v1.png",
+  },
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.png",
+  contactUrl: "tel:+359878720035",
+  country: "България",
+  countryCode: "BG",
+  currency: "EUR",
+  email: "",
+  heroPath: "/lead-hero.jpg",
+  locale: "bg-BG",
+  logoPath: "/assets/ivo-auto/wordmark.svg",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
+  name: "Иво Ауто",
+  phoneDisplay: "0878 720 035",
+  phoneHref: "tel:+359878720035",
+  shortName: "Иво Ауто",
+  slug: "ivo-auto",
+  socialLinks: {},
+  staticDemoMode: true,
+  tagline: "Подбрани публикувани обяви; наличностите и условията се потвърждават с Иво Ауто.",
 };
 // LEAD_SITE_CONFIG_END

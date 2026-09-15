@@ -38,12 +38,12 @@ export const DealerDesktopHeader = ({
         <div className="dealer-desktop-nav">
           <Link
             aria-label={isBg ? "Начало" : "Home"}
-            className="dealer-desktop-brand"
+            className="dealer-desktop-brand relative"
             href={homeHref ?? getLocalizedPublicPath(locale, "/")}
           >
             <Image
               alt=""
-              className="object-contain object-left brightness-0 invert"
+              className="object-contain object-left"
               fill
               priority
               sizes="220px"
@@ -103,4 +103,3 @@ export const DealerDesktopHeader = ({
     </>
   );
 };
-

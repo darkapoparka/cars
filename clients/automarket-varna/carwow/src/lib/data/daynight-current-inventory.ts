@@ -1,39 +1,37 @@
-// Public listing snapshot captured from https://automarket.mobile.bg/ on 2026-07-24.
-// Images are localized from the same verified dealer listings to prevent CDN hotlink failures.
+// Dealer listing snapshot normalized from the canonical Cars source pack.
 export type CurrentDayNightListing = {
-	id: string;
-	title: string;
-	sourceUrl: string;
-	priceEur: string;
-	priceBgn: string;
-	status: string;
-	date: string;
-	mileage: string;
-	color: string;
-	fuel: string;
-	power: string;
-	transmission: string;
-	body: string;
-	features: string[];
-	image: string;
- gallery: string[];
+  id: string;
+  title: string;
+  sourceUrl: string;
+  priceEur: string;
+  priceBgn: string;
+  status: string;
+  date: string;
+  mileage: string;
+  color: string;
+  fuel: string;
+  power: string;
+  transmission: string;
+  body: string;
+  features: string[];
+  image: string;
 };
 
-export const currentDayNightListings: CurrentDayNightListing[] = [
+export const currentDayNightListings = [
   {
     "id": "11785576029711434",
     "title": "Ford Focus 1.6D 115HP",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11785576029711434-ford-focus-1-6d-115hp",
     "priceEur": "5112 €",
-    "priceBgn": "9998.20 лв.",
-    "status": "Публикувана обява",
-    "date": "март 2014 г.",
-    "mileage": "249 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2014",
+    "mileage": "249 000 km",
     "color": "Светло сив",
     "fuel": "Дизел",
-    "power": "115 к.с.",
+    "power": "115 hp",
     "transmission": "Ръчна",
-    "body": "Комби",
+    "body": "Wagon",
     "features": [
       "4(5) Врати",
       "Auto Start Stop function",
@@ -72,29 +70,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-01-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-01-1.webp",
-      "/assets/automarket/vehicle-01-2.webp",
-      "/assets/automarket/vehicle-01-3.webp",
-      "/assets/automarket/vehicle-01-4.webp",
-      "/assets/automarket/vehicle-01-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-01-1.webp"
   },
   {
     "id": "11714813323555032",
     "title": "Opel Astra 1.4i 90HP",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11714813323555032-opel-astra-1-4i-90hp",
-    "priceEur": "2555,95 €",
-    "priceBgn": "4999.00 лв.",
-    "status": "Публикувана обява",
-    "date": "август 2006 г.",
-    "mileage": "208 000 км",
+    "priceEur": "2556 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2006",
+    "mileage": "208 000 km",
     "color": "Графит",
     "fuel": "Бензин",
-    "power": "90 к.с.",
+    "power": "90 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "4(5) Врати",
       "USB",
@@ -128,29 +119,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-02-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-02-1.webp",
-      "/assets/automarket/vehicle-02-2.webp",
-      "/assets/automarket/vehicle-02-3.webp",
-      "/assets/automarket/vehicle-02-4.webp",
-      "/assets/automarket/vehicle-02-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-02-1.webp"
   },
   {
     "id": "11776340911802527",
     "title": "Opel Corsa 1.2i 80HP GPL",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11776340911802527-opel-corsa-1-2i-80hp-gpl",
     "priceEur": "2999 €",
-    "priceBgn": "5865.53 лв.",
-    "status": "Публикувана обява",
-    "date": "ноември 2009 г.",
-    "mileage": "165 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2009",
+    "mileage": "165 000 km",
     "color": "Бял",
     "fuel": "Бензин",
-    "power": "80 к.с.",
+    "power": "80 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "2(3) Врати",
       "Аларма",
@@ -181,29 +165,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-03-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-03-1.webp",
-      "/assets/automarket/vehicle-03-2.webp",
-      "/assets/automarket/vehicle-03-3.webp",
-      "/assets/automarket/vehicle-03-4.webp",
-      "/assets/automarket/vehicle-03-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-03-1.webp"
   },
   {
     "id": "11749035353735625",
     "title": "Ford Fiesta 1.25i 82HP FACE LIFT",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11749035353735625-ford-fiesta-1-25i-82hp-face-lift",
     "priceEur": "3799 €",
-    "priceBgn": "7430.20 лв.",
-    "status": "Публикувана обява",
-    "date": "май 2012 г.",
-    "mileage": "227 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2012",
+    "mileage": "227 000 km",
     "color": "Бял",
     "fuel": "Бензин",
-    "power": "82 к.с.",
+    "power": "82 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "4(5) Врати",
       "Bluetooth \\ handsfree система",
@@ -234,29 +211,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-04-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-04-1.webp",
-      "/assets/automarket/vehicle-04-2.webp",
-      "/assets/automarket/vehicle-04-3.webp",
-      "/assets/automarket/vehicle-04-4.webp",
-      "/assets/automarket/vehicle-04-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-04-1.webp"
   },
   {
     "id": "11646385836417474",
     "title": "Honda Jazz 1.4 I-VTEC 99HP FACE LIFT",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11646385836417474-honda-jazz-1-4-i-vtec-99hp-face-lift",
-    "priceEur": "3885,31 €",
-    "priceBgn": "7599.01 лв.",
-    "status": "Публикувана обява",
-    "date": "август 2009 г.",
-    "mileage": "197 000 км",
+    "priceEur": "3885 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2009",
+    "mileage": "197 000 km",
     "color": "Жълт",
     "fuel": "Бензин",
-    "power": "99 к.с.",
+    "power": "99 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "4(5) Врати",
       "Аларма",
@@ -282,29 +252,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Тунинг",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-05-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-05-1.webp",
-      "/assets/automarket/vehicle-05-2.webp",
-      "/assets/automarket/vehicle-05-3.webp",
-      "/assets/automarket/vehicle-05-4.webp",
-      "/assets/automarket/vehicle-05-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-05-1.webp"
   },
   {
     "id": "11730904111658789",
     "title": "Opel Meriva 1.4 TURBO 120HP GPL",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11730904111658789-opel-meriva-1-4-turbo-120hp-gpl",
     "priceEur": "4499 €",
-    "priceBgn": "8799.28 лв.",
-    "status": "Публикувана обява",
-    "date": "септември 2012 г.",
-    "mileage": "156 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2012",
+    "mileage": "156 000 km",
     "color": "Бял",
     "fuel": "Бензин",
-    "power": "120 к.с.",
+    "power": "120 hp",
     "transmission": "Ръчна",
-    "body": "Миниван",
+    "body": "Minivan",
     "features": [
       "4(5) Врати",
       "Bluetooth \\ handsfree система",
@@ -335,29 +298,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Тунинг",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-06-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-06-1.webp",
-      "/assets/automarket/vehicle-06-2.webp",
-      "/assets/automarket/vehicle-06-3.webp",
-      "/assets/automarket/vehicle-06-4.webp",
-      "/assets/automarket/vehicle-06-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-06-1.webp"
   },
   {
     "id": "11664339654646848",
     "title": "VW Golf 1.6TDI 105HP DSG",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11664339654646848-vw-golf-1-6tdi-105hp-dsg",
     "priceEur": "4999 €",
-    "priceBgn": "9777.19 лв.",
-    "status": "Публикувана обява",
-    "date": "септември 2010 г.",
-    "mileage": "213 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2010",
+    "mileage": "213 000 km",
     "color": "Графит",
     "fuel": "Дизел",
-    "power": "105 к.с.",
+    "power": "105 hp",
     "transmission": "Автоматик",
-    "body": "Комби",
+    "body": "Wagon",
     "features": [
       "4(5) Врати",
       "USB",
@@ -395,29 +351,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-07-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-07-1.webp",
-      "/assets/automarket/vehicle-07-2.webp",
-      "/assets/automarket/vehicle-07-3.webp",
-      "/assets/automarket/vehicle-07-4.webp",
-      "/assets/automarket/vehicle-07-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-07-1.webp"
   },
   {
     "id": "21702843989932817",
     "title": "Nissan Qashqai 1.6i 117HP FACE LIFT",
     "sourceUrl": "https://automarket.mobile.bg/obiava-21702843989932817-nissan-qashqai-1-6i-117hp-face-lift",
     "priceEur": "5799 €",
-    "priceBgn": "11341.86 лв.",
-    "status": "Публикувана обява",
-    "date": "март 2011 г.",
-    "mileage": "223 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2011",
+    "mileage": "223 000 km",
     "color": "Бял",
     "fuel": "Бензин",
-    "power": "117 к.с.",
+    "power": "117 hp",
     "transmission": "Ръчна",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "Bluetooth \\ handsfree система",
@@ -455,29 +404,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Халогенни фарове",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-08-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-08-1.webp",
-      "/assets/automarket/vehicle-08-2.webp",
-      "/assets/automarket/vehicle-08-3.webp",
-      "/assets/automarket/vehicle-08-4.webp",
-      "/assets/automarket/vehicle-08-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-08-1.webp"
   },
   {
     "id": "21777122320477562",
     "title": "Dacia Duster 1.5DCI 110HP AWD E5A",
     "sourceUrl": "https://automarket.mobile.bg/obiava-21777122320477562-dacia-duster-1-5dci-110hp-awd-e5a",
     "priceEur": "5799 €",
-    "priceBgn": "11341.86 лв.",
-    "status": "Публикувана обява",
-    "date": "юли 2011 г.",
-    "mileage": "232 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2011",
+    "mileage": "232 000 km",
     "color": "Бял",
     "fuel": "Дизел",
-    "power": "110 к.с.",
+    "power": "110 hp",
     "transmission": "Ръчна",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -513,29 +455,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Тунинг",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-09-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-09-1.webp",
-      "/assets/automarket/vehicle-09-2.webp",
-      "/assets/automarket/vehicle-09-3.webp",
-      "/assets/automarket/vehicle-09-4.webp",
-      "/assets/automarket/vehicle-09-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-09-1.webp"
   },
   {
     "id": "21777123440688076",
     "title": "Mazda CX-3 1.5D SKYACTIV 105HP AWD AUTO",
     "sourceUrl": "https://automarket.mobile.bg/obiava-21777123440688076-mazda-cx-3-1-5d-skyactiv-105hp-awd-auto",
     "priceEur": "9999 €",
-    "priceBgn": "19556.34 лв.",
-    "status": "Публикувана обява",
-    "date": "юли 2016 г.",
-    "mileage": "155 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2016",
+    "mileage": "155 000 km",
     "color": "Бял",
     "fuel": "Дизел",
-    "power": "105 к.с.",
+    "power": "105 hp",
     "transmission": "Автоматик",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -588,29 +523,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-10-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-10-1.webp",
-      "/assets/automarket/vehicle-10-2.webp",
-      "/assets/automarket/vehicle-10-3.webp",
-      "/assets/automarket/vehicle-10-4.webp",
-      "/assets/automarket/vehicle-10-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-10-1.webp"
   },
   {
     "id": "11764611602990623",
     "title": "VW Passat 2.0TDI 190HP 4-Motion Keyless Go Automatic",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11764611602990623-vw-passat-2-0tdi-190hp-4-motion-keyless-go-automatic",
-    "priceEur": "12 399 €",
-    "priceBgn": "24250.34 лв.",
-    "status": "Публикувана обява",
-    "date": "април 2016 г.",
-    "mileage": "207 000 км",
+    "priceEur": "12 399 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2016",
+    "mileage": "207 000 km",
     "color": "Черен",
     "fuel": "Дизел",
-    "power": "190 к.с.",
+    "power": "190 hp",
     "transmission": "Автоматик",
-    "body": "Комби",
+    "body": "Wagon",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -664,29 +592,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-11-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-11-1.webp",
-      "/assets/automarket/vehicle-11-2.webp",
-      "/assets/automarket/vehicle-11-3.webp",
-      "/assets/automarket/vehicle-11-4.webp",
-      "/assets/automarket/vehicle-11-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-11-1.webp"
   },
   {
     "id": "11770373711900410",
     "title": "Suzuki Swift 1.2 HYBRID 83HP AUTOMATIC",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11770373711900410-suzuki-swift-1-2-hybrid-83hp-automatic",
-    "priceEur": "12 781 €",
-    "priceBgn": "24997.46 лв.",
-    "status": "Публикувана обява",
-    "date": "юни 2021 г.",
-    "mileage": "39 000 км",
+    "priceEur": "12 781 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2021",
+    "mileage": "39 000 km",
     "color": "Бордо",
     "fuel": "Бензин",
-    "power": "83 к.с.",
+    "power": "83 hp",
     "transmission": "Автоматик",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "4(5) Врати",
       "Auto Start Stop function",
@@ -732,29 +653,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-12-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-12-1.webp",
-      "/assets/automarket/vehicle-12-2.webp",
-      "/assets/automarket/vehicle-12-3.webp",
-      "/assets/automarket/vehicle-12-4.webp",
-      "/assets/automarket/vehicle-12-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-12-1.webp"
   },
   {
     "id": "21732197261233954",
     "title": "BMW X3 2.0 X-Drive 184HP",
     "sourceUrl": "https://automarket.mobile.bg/obiava-21732197261233954-bmw-x3-2-0-x-drive-184hp",
-    "priceEur": "12 526 €",
-    "priceBgn": "24498.73 лв.",
-    "status": "Публикувана обява",
-    "date": "март 2014 г.",
-    "mileage": "249 000 км",
+    "priceEur": "12 526 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2014",
+    "mileage": "249 000 km",
     "color": "Тъмно син мет.",
     "fuel": "Дизел",
-    "power": "184 к.с.",
+    "power": "184 hp",
     "transmission": "Автоматик",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -810,29 +724,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-13-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-13-1.webp",
-      "/assets/automarket/vehicle-13-2.webp",
-      "/assets/automarket/vehicle-13-3.webp",
-      "/assets/automarket/vehicle-13-4.webp",
-      "/assets/automarket/vehicle-13-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-13-1.webp"
   },
   {
     "id": "21781689983828599",
     "title": "VW Tiguan 2.0TDI 200HP ALLSPACE 4-Motion",
     "sourceUrl": "https://automarket.mobile.bg/obiava-21781689983828599-vw-tiguan-2-0tdi-200hp-allspace-4-motion",
-    "priceEur": "24 999 €",
-    "priceBgn": "48893.79 лв.",
-    "status": "Публикувана обява",
-    "date": "февруари 2023 г.",
-    "mileage": "147 000 км",
+    "priceEur": "24 999 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2023",
+    "mileage": "147 000 km",
     "color": "Бял",
     "fuel": "Дизел",
-    "power": "200 к.с.",
+    "power": "200 hp",
     "transmission": "Автоматик",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -886,29 +793,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-14-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-14-1.webp",
-      "/assets/automarket/vehicle-14-2.webp",
-      "/assets/automarket/vehicle-14-3.webp",
-      "/assets/automarket/vehicle-14-4.webp",
-      "/assets/automarket/vehicle-14-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-14-1.webp"
   },
   {
     "id": "21784142258144582",
     "title": "Mercedes-Benz GLC 2.2CDI 170HP 4-Matic Autonatic Navi",
     "sourceUrl": "https://automarket.mobile.bg/obiava-21784142258144582-mercedes-benz-glc-2-2cdi-170hp-4-matic-autonatic-navi",
-    "priceEur": "21 999 €",
-    "priceBgn": "43026.30 лв.",
-    "status": "Публикувана обява",
-    "date": "май 2016 г.",
-    "mileage": "165 000 км",
+    "priceEur": "21 999 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2016",
+    "mileage": "165 000 km",
     "color": "Бял",
     "fuel": "Дизел",
-    "power": "170 к.с.",
+    "power": "170 hp",
     "transmission": "Автоматик",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -965,29 +865,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/automarket/vehicle-15-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-15-1.webp",
-      "/assets/automarket/vehicle-15-2.webp",
-      "/assets/automarket/vehicle-15-3.webp",
-      "/assets/automarket/vehicle-15-4.webp",
-      "/assets/automarket/vehicle-15-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-15-1.webp"
   },
   {
     "id": "11750340593495216",
     "title": "Audi A4 Allroad 3.0TDI 272HP AUTOMATIC QUATTRO DIGITAL",
     "sourceUrl": "https://automarket.mobile.bg/obiava-11750340593495216-audi-a4-allroad-3-0tdi-272hp-automatic-quattro-digital",
-    "priceEur": "15 999 €",
-    "priceBgn": "31291.32 лв.",
-    "status": "Публикувана обява",
-    "date": "септември 2016 г.",
-    "mileage": "218 000 км",
+    "priceEur": "15 999 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2016",
+    "mileage": "218 000 km",
     "color": "Черен",
     "fuel": "Дизел",
-    "power": "272 к.с.",
+    "power": "272 hp",
     "transmission": "Автоматик",
-    "body": "Комби",
+    "body": "Wagon",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -1050,13 +943,6 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Централно заключване",
       "Шибедах"
     ],
-    "image": "/assets/automarket/vehicle-16-1.webp",
-    "gallery": [
-      "/assets/automarket/vehicle-16-1.webp",
-      "/assets/automarket/vehicle-16-2.webp",
-      "/assets/automarket/vehicle-16-3.webp",
-      "/assets/automarket/vehicle-16-4.webp",
-      "/assets/automarket/vehicle-16-5.webp"
-    ]
+    "image": "/assets/automarket/vehicle-16-1.webp"
   }
-];
+] satisfies CurrentDayNightListing[];

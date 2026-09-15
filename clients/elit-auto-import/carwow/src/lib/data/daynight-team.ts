@@ -1,3 +1,5 @@
+export const daynightTeamDisclosure = "Общ контакт на автокъщата, а не именуван или независимо потвърден профил на служител." as const;
+
 export type DayNightTeamMember = {
 	slug: string;
 	name: string;
@@ -9,7 +11,18 @@ export type DayNightTeamMember = {
 	detail: string;
 };
 
-export const daynightTeam: DayNightTeamMember[] = [{slug:'prodazhbi-showroom',name:'ELIT AUTO IMPORT EXPORT',role:'Контакт с автокъщата',phone:'0887777887',email:'',image:'/assets/elit/cover.png',bio:'Внос от Европа, САЩ и Япония. Автомобили във Варна.',detail:'Свържете се за наличност, оглед, доставка и проверка в сервиз по избор.'}];
+export const daynightTeam: DayNightTeamMember[] = [
+	{
+		slug: 'dealer-contact',
+		name: "ELIT AUTO",
+		role: "Запитвания за наличност и оглед",
+		phone: "0887 777 887",
+		email: "",
+		image: "/assets/elit/logo.png",
+		bio: "Свържете се с ELIT AUTO, за да потвърдите актуална наличност, данни за автомобила и възможност за оглед.",
+		detail: "Подбрани текущо рекламирани автомобили. Наличност, състояние, пробег и условия се потвърждават с продавача. Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
+	}
+];
 
 export const getDayNightTeamMemberBySlug = (slug: string) =>
 	daynightTeam.find((member) => member.slug === slug);

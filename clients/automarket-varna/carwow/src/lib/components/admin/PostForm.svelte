@@ -206,7 +206,7 @@
 
 				<label class="grid gap-2 text-sm font-medium">
 					Author
-					<Input name="author" value={valueFor('author', post?.author || 'Аутомаркет Варна')} />
+					<Input name="author" value={valueFor('author', post?.author || 'Аутомаркет')} />
 				</label>
 
 				<label class="grid gap-2 text-sm font-medium">

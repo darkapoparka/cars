@@ -3,13 +3,13 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    "id": "elit-21717056982373192",
-    "slug": "elit-21717056982373192",
+    "id": "am-1001",
+    "slug": "mercedes-benz-gl-450-2010-21717056982373192",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Mercedes-Benz GL 450",
-    "description": "Mercedes GL 450 4matic V8 Facelift ( X164 ) Автомобилът е внос от САЩ. Пробегът е в мили (114300 мили - 184000 км).  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-21717056982373192-mercedes-benz-gl-450",
+    "description": "Mercedes GL 450 4matic V8 Facelift ( X164 ) Автомобилът е внос от САЩ. Пробегът е в мили (114300 мили - 184000 км).  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 13500,
       "currency": "EUR"
@@ -42,10 +42,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "7 места",
+        "en": "7 места"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      }
+    ],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "GL 450",
@@ -59,23 +92,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Сив"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T10:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "elit-11700571967441521",
-    "slug": "elit-11700571967441521",
+    "id": "am-1010",
+    "slug": "volvo-s60-2013-11700571967441521",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Volvo S60",
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Volvo S60 Автомобилът в внос от Америка! Паркинг забележки! Пробегът е в мили (206500km)! В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус. Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11700571967441521-volvo-s60",
+    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Volvo S60 Автомобилът в внос от Америка! Паркинг забележки! Пробегът е в мили (206500km)! В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.",
     "price": {
       "amount": 10890.52,
       "currency": "EUR"
@@ -108,10 +142,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      },
+      {
+        "bg": "Датчик за светлина",
+        "en": "Датчик за светлина"
+      },
+      {
+        "bg": "Ел. Огледала",
+        "en": "Ел. Огледала"
+      }
+    ],
     "spec": {
       "make": "Volvo",
       "model": "S60",
@@ -125,23 +192,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Бял"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "elit-11529502627430878",
-    "slug": "elit-11529502627430878",
+    "id": "am-1011",
+    "slug": "toyota-prius-hybrid-2016-11529502627430878",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Toyota Prius  Hybrid",
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Пета еко категория Перфектен автомобил внос от Америка   абсолютно реални километри  камера Нови гуми всичко платено годишна винетка 2. 5 литра разход градско каране 3. 5 лира извънградско автомобила се ползва всеки ден - за оглед с предварителна уговорка Мы говорим по русски tel. /viber/whatsapp+359887777887 Пробегът е по данни на продавача. ДДС: вижте оригиналната обява. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11529502627430878-toyota-prius-hybrid",
+    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  Пета еко категория Перфектен автомобил внос от Америка   абсолютно реални километри  камера Нови гуми всичко платено годишна винетка 2. 5 литра разход градско каране 3. 5 лира извънградско автомобила се ползва всеки ден - за оглед с предварителна уговорка Мы говорим по русски tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 16105.69,
       "currency": "EUR"
@@ -174,10 +242,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      }
+    ],
     "spec": {
       "make": "Toyota",
       "model": "Prius  Hybrid",
@@ -191,23 +292,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Бял"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "elit-11694454110383951",
-    "slug": "elit-11694454110383951",
+    "id": "am-1012",
+    "slug": "subaru-xv-2-5-sport-4x4-2021-11694454110383951",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru XV 2.5 Sport 4x4",
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест). Euro 6!  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11694454110383951-subaru-xv-2-5-sport-4x4",
+    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест). Euro 6!  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 27800,
       "currency": "EUR"
@@ -240,10 +342,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "XV 2.5 Sport 4x4",
@@ -257,23 +392,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Жълт"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:57.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11694504370077664",
-    "slug": "elit-11694504370077664",
+    "id": "am-1013",
+    "slug": "subaru-xv-2-0-limited-4x4-2017-11694504370077664",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru XV 2.0 Limited 4x4",
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11694504370077664-subaru-xv-2-0-limited-4x4",
+    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 19000,
       "currency": "EUR"
@@ -306,10 +442,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "XV 2.0 Limited 4x4",
@@ -323,23 +492,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Черен"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:56.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11752520414621839",
-    "slug": "elit-11752520414621839",
+    "id": "am-1014",
+    "slug": "subaru-xv-2-0-premium-4x4-2017-11752520414621839",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru XV 2.0 Premium 4x4",
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 126000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11752520414621839-subaru-xv-2-0-premium-4x4",
+    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 126000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 17500,
       "currency": "EUR"
@@ -372,10 +542,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      },
+      {
+        "bg": "Въздушни възглавници - Странични",
+        "en": "Въздушни възглавници - Странични"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "XV 2.0 Premium 4x4",
@@ -389,23 +592,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Оранжев"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:55.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11671399519745199",
-    "slug": "elit-11671399519745199",
+    "id": "am-1002",
+    "slug": "subaru-xv-2-0-4-4-2017-11671399519745199",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru XV 2.0 бензин 4х4",
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11671399519745199-subaru-xv-2-0-benzin-4h4",
+    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 17100,
       "currency": "EUR"
@@ -438,10 +642,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "XV 2.0 бензин 4х4",
@@ -455,23 +692,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Сив"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:54.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11752522269460399",
-    "slug": "elit-11752522269460399",
+    "id": "am-1003",
+    "slug": "subaru-xv-2-0-limited-sti-2015-11752522269460399",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru XV 2.0 Limited STI",
-    "description": "Subaru XV Limited STI 2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 177000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11752522269460399-subaru-xv-2-0-limited-sti",
+    "description": "Subaru XV Limited STI 2. 0 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB20 Пробегът е в мили. 177000 км В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 13037.94,
       "currency": "EUR"
@@ -504,10 +742,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      },
+      {
+        "bg": "Въздушни възглавници - Предни",
+        "en": "Въздушни възглавници - Предни"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "XV 2.0 Limited STI",
@@ -521,23 +792,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Бял"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:53.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11690723101506266",
-    "slug": "elit-11690723101506266",
+    "id": "am-1004",
+    "slug": "subaru-outback-3-6r-limited-4-4-2017-11690723101506266",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru Outback 3.6R Limited 4х4",
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11690723101506266-subaru-outback-3-6r-limited-4h4",
+    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 25500,
       "currency": "EUR"
@@ -570,10 +842,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "Outback 3.6R Limited 4х4",
@@ -587,23 +892,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Черен"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:52.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11708792902908882",
-    "slug": "elit-11708792902908882",
+    "id": "am-1005",
+    "slug": "subaru-outback-3-6-touring-4x4-2017-11708792902908882",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru Outback 3.6 Touring 4x4",
-    "description": "Subaru Outback Touring 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Всички екстри за модела!  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, адаптивни лед фарове, Apple Carplay, Android auto, keyless (безключово палене), камера за задно виждане, парктроници, подгрев не седалките (предни и задни), подгрев на волана, шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11708792902908882-subaru-outback-3-6-touring-4x4",
+    "description": "Subaru Outback Touring 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Всички екстри за модела!  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, адаптивни лед фарове, Apple Carplay, Android auto, keyless (безключово палене), камера за задно виждане, парктроници, подгрев не седалките (предни и задни), подгрев на волана, шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 21500,
       "currency": "EUR"
@@ -636,10 +942,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "Outback 3.6 Touring 4x4",
@@ -653,23 +992,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Черен"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:51.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11706466498517805",
-    "slug": "elit-11706466498517805",
+    "id": "am-1006",
+    "slug": "subaru-outback-3-6-limited-4x4-2017-11706466498517805",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru Outback 3.6 Limited 4x4",
-    "description": "Subaru Outback Limited 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, ксенонови фарове, keyless (безключово палене), камера за задно виждане, парктроници, подгрев на седалките (предни и задни), шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11706466498517805-subaru-outback-3-6-limited-4x4",
+    "description": "Subaru Outback Limited 3. 6 бензин 4х4 МОТОРЪТ Е С ВЕРИГА Пробегът е в мили.  Дистроник, EyeSight Driver Assist Technology, датчици за мъртви зони, асистент за ленти, ксенонови фарове, keyless (безключово палене), камера за задно виждане, парктроници, подгрев на седалките (предни и задни), шибидах и други В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 21500,
       "currency": "EUR"
@@ -702,10 +1042,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "Outback 3.6 Limited 4x4",
@@ -719,23 +1092,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Червен"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:50.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11693118990022696",
-    "slug": "elit-11693118990022696",
+    "id": "am-1007",
+    "slug": "subaru-legacy-2-5-limited-4x4-2015-11693118990022696",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru Legacy 2.5 Limited 4x4",
-    "description": "подходящ за ГАЗ   2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11693118990022696-subaru-legacy-2-5-limited-4x4",
+    "description": "подходящ за ГАЗ   2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 13000,
       "currency": "EUR"
@@ -768,10 +1142,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "Legacy 2.5 Limited 4x4",
@@ -785,23 +1192,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Бял"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:49.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11655794958039551",
-    "slug": "elit-11655794958039551",
+    "id": "am-1008",
+    "slug": "subaru-legacy-2-5-4-4-2014-11655794958039551",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Subaru Legacy 2.5 бензин 4х4",
-    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Полето в обявата е в км, а описанието посочва мили. Потвърдете действителния пробег с продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11655794958039551-subaru-legacy-2-5-benzin-4h4",
+    "description": "ПРИ ЗАКУПУВАНЕ НА АВТОМОБИЛ ОТ НАС МОЖЕ ДА ВИ ГО ДОСТАВИМ ДО ВСЯКО НАСЕЛЕНО МЯСТО В СТРАНАТА СЪС СОБСТВЕН ТРАНСПОРТ ! ! !  2. 5 бензин 4х4 МОТОРЪТ Е С ВЕРИГА-FB25 Пробегът е в мили.  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ и Япония на бензинови автомобили от марката Subaru в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887",
     "price": {
       "amount": 11900,
       "currency": "EUR"
@@ -834,10 +1242,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      }
+    ],
     "spec": {
       "make": "Subaru",
       "model": "Legacy 2.5 бензин 4х4",
@@ -851,23 +1292,24 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Черен"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "publishedAt": "2026-09-07T09:59:48.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "elit-11722966256335346",
-    "slug": "elit-11722966256335346",
+    "id": "am-1009",
+    "slug": "mazda-6-2-5-skyactiv-2015-11722966256335346",
     "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
+    "dealerOrgId": "dealer-elit-auto-import",
     "status": "active",
     "title": "Mazda 6 2.5 Skyactiv",
-    "description": "Mazda 6 Skyactiv 2. 5 бензин (най-добрия бензинов мотор на Mazda) Доказуем пробег!  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+35988777788 Пробегът е по данни на продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-11722966256335346-mazda-6-2-5-skyactiv",
+    "description": "Mazda 6 Skyactiv 2. 5 бензин (най-добрия бензинов мотор на Mazda) Доказуем пробег!  В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус.  Автомобилът е внос от Америка, произведен е в Япония, без разлика от европейските модели. Постоянен внос от САЩ на бензинови автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+35988777788",
     "price": {
       "amount": 11913.1,
       "currency": "EUR"
@@ -900,10 +1342,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Безключово палене",
+        "en": "Безключово палене"
+      }
+    ],
     "spec": {
       "make": "Mazda",
       "model": "6 2.5 Skyactiv",
@@ -917,82 +1392,17 @@ export const mockListings: VehicleListing[] = [
       "colorExterior": "Сив"
     },
     "seller": {
-      "id": "dealer-elit-auto",
+      "id": "dealer-elit-auto-import",
       "type": "dealer",
       "displayName": "ELIT AUTO IMPORT EXPORT",
       "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:47.000Z",
-    "promoted": false
-  },
-  {
-    "id": "elit-21691652621240351",
-    "slug": "elit-21691652621240351",
-    "category": "car",
-    "dealerOrgId": "dealer-elit-auto",
-    "status": "active",
-    "title": "Hyundai Santa fe",
-    "description": "Hyundai Santa Fe 2. 0 GRDi 4х4 7 места В цената са калкулирани всички разходи(мито, ДДС, технотест).  Продажба с фактура и договор без разходи за нотариус Автомобилът е внос от Южна Корея. Постоянен внос от САЩ и Южна Корея на автомобили в перфектно техническо състояние и доказан пробег. Може да бъде проверен в сервиз по Ваш избор. Пакетни цени за търговци.  Мы говорим по-русски.  tel. /viber/whatsapp+359887777887 Пробегът е по данни на продавача. Цената е с включено ДДС. Оригинална обява: https://elitautoimport.mobile.bg/obiava-21691652621240351-hyundai-santa-fe",
-    "price": {
-      "amount": 14316.17,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/elit/21691652621240351-0.webp",
-        "alt": "Hyundai Santa fe"
-      },
-      {
-        "url": "/assets/elit/21691652621240351-1.webp",
-        "alt": "Hyundai Santa fe"
-      },
-      {
-        "url": "/assets/elit/21691652621240351-2.webp",
-        "alt": "Hyundai Santa fe"
-      },
-      {
-        "url": "/assets/elit/21691652621240351-3.webp",
-        "alt": "Hyundai Santa fe"
-      },
-      {
-        "url": "/assets/elit/21691652621240351-4.webp",
-        "alt": "Hyundai Santa fe"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
       "city": "Варна",
-      "region": "м-т Пчелина",
-      "country": "България"
+      "logoUrl": "/assets/elit/logo.png"
     },
-    "features": [],
-    "spec": {
-      "make": "Hyundai",
-      "model": "Santa fe",
-      "year": 2013,
-      "bodyType": "suv",
-      "fuelType": "diesel",
-      "transmission": "automatic",
-      "mileageValue": 58000,
-      "mileageUnit": "km",
-      "enginePowerHp": 150,
-      "colorExterior": "Светло сив"
-    },
-    "seller": {
-      "id": "dealer-elit-auto",
-      "type": "dealer",
-      "displayName": "ELIT AUTO IMPORT EXPORT",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:46.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

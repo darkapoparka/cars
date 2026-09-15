@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { chromium } from 'playwright';
+import { launchBrowser, previewUrl } from './browser.mjs';
 
-const base = process.env.BASE_URL || 'http://127.0.0.1:5173';
+const base = previewUrl();
 const output = 'artifacts/mobile-filter-smoke';
 await mkdir(output, { recursive: true });
-const browser = await chromium.launch();
+const browser = await launchBrowser();
 const results = [];
 try {
   for (const [width, height] of [[320, 677], [390, 844], [430, 932], [700, 390]]) {
@@ -91,9 +91,13 @@ try {
     assert.deepEqual(errors, []);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth), 0);
     results.push({ width, height, passed: true });
+    await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
     console.log(`PASS full-screen mobile filters, nested choices, draft and URL at ${width}x${height}`);
     await page.close();
   }
+} catch (error) {
+  results.push({ passed: false, error: error.stack });
+  throw error;
 } finally {
   await browser.close();
   await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2));

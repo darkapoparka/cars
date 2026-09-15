@@ -39,7 +39,7 @@ export function getAuth() {
 
 	if (!authInstance) {
 		authInstance = betterAuth({
-			appName: 'Аутомаркет Варна Admin',
+			appName: 'Аутомаркет Admin',
 			baseURL: env.BETTER_AUTH_URL?.trim() || undefined,
 			secret: getBetterAuthSecret(),
 			database: drizzleAdapter(createDb(), {

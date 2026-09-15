@@ -2,6 +2,7 @@
 	import geistCyrillicFont from '@fontsource-variable/geist/files/geist-cyrillic-wght-normal.woff2?url';
 	import geistLatinFont from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
 	import { onMount } from 'svelte';
+	import { initializeViewport } from '$lib/hooks/viewport.svelte';
 	import '$lib/styles/tokens.css';
 	import '$lib/styles/storefront.css';
 	// Native desktop chrome layer: re-emits the chrome's Tailwind utilities with
@@ -20,11 +21,12 @@
 	import ChatWidget from '$lib/components/chat/ChatWidget.svelte';
 	import JsonLdScript from '$lib/components/seo/JsonLdScript.svelte';
 	import { setStorefrontInventorySummaryContext } from '$lib/components/layout/storefront-inventory-summary-context';
-	import { getRouteBodyClasses, routeManagesOwnChrome } from '$lib/data/template-routes';
+	import { getRouteBodyClasses, routeManagesOwnChrome } from '$lib/config/storefront-routes';
 	import { GarageState, setGarageContext } from '$lib/state/garage.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 
 	let { children, data } = $props();
+	initializeViewport(() => data.initialViewport === 'mobile');
 	const garage = new GarageState();
 	const routeBodyClasses = $derived(getRouteBodyClasses(page.url.pathname));
 	const usesRouteManagedChrome = $derived(routeManagesOwnChrome(page.url.pathname));
@@ -57,25 +59,26 @@
 			'@type': 'AutoDealer',
 			name: daynightSite.name,
 			alternateName: daynightSite.shortName,
-			image: `${origin}/assets/elit/logo.png`,
-			logo: `${origin}/assets/elit/logo.png`,
+			image: `${origin}${daynightSite.logoLight}`,
+			logo: `${origin}${daynightSite.logoLight}`,
 			url: `${origin}/`,
-			telephone: '0887777887',
+			telephone: daynightSite.phone,
 			...(daynightSite.email ? { email: daynightSite.email } : {}),
 			address: {
 				'@type': 'PostalAddress',
-				streetAddress: 'гр. Варна, м-т Пчелина, ул. Прилеп 74А',
-				addressLocality: 'Варна',
-				addressRegion: 'Варна',
-				addressCountry: 'BG'
+				streetAddress: daynightSite.location,
+				addressLocality: daynightSite.city,
+				addressRegion: daynightSite.region,
+				addressCountry: daynightSite.countryCode
 			},
-			areaServed: 'BG',
+			areaServed: daynightSite.countryCode,
 			priceRange: '€€'
 		}).replaceAll('<', '\\u003c')
 	);
 
 	onMount(() => {
 		garage.hydrateFromStorage();
+		return () => garage.dispose();
 	});
 </script>
 
@@ -111,8 +114,10 @@
 {/if}
 
 <style>
-	:global(html) {
-		scrollbar-gutter: stable;
+	@media (min-width: 992px) {
+		:global(html) {
+			scrollbar-gutter: stable;
+		}
 	}
 
 	:global(html.daynight-scroll-locked .header-wrapper.header-sticky),
@@ -130,7 +135,7 @@
 		border-radius: 10px;
 		background: var(--sa-blue);
 		color: var(--sa-surface);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		text-decoration: none;
 		transform: translateY(-160%);
 		transition: transform 0.16s ease;

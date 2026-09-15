@@ -1,13 +1,16 @@
+import { template } from '$config/template';
+import { featuredVehicles } from '$data/inventory';
+import { blogPosts } from '$data/editorial';
 import type { RequestHandler } from './$types';
 
 const canonicalRoutes = [
   '/',
   '/listing-grid',
-  ...Array.from({ length: 8 }, (_, index) => `/listing-detail-v1/${index + 1}`),
+  ...featuredVehicles.map(vehicle => `/listing-detail-v1/${vehicle.id}`),
   '/about-us',
   '/contact',
   '/blog',
-  ...Array.from({ length: 9 }, (_, index) => `/blog-detail/${index + 1}`)
+  ...blogPosts.map(post => `/blog-detail/${post.id}`)
 ] as const;
 
 const escapeXml = (value: string) =>
@@ -25,7 +28,7 @@ const escapeXml = (value: string) =>
 
 export const GET: RequestHandler = ({ url }) => {
   const urls = canonicalRoutes
-    .map((pathname) => `  <url><loc>${escapeXml(new URL(pathname, url.origin).href)}</loc></url>`)
+    .map((pathname) => `  <url><loc>${escapeXml(new URL(pathname, template.canonicalOrigin || url.origin).href)}</loc></url>`)
     .join('\n');
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 

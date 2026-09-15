@@ -85,7 +85,7 @@ export const POST: RequestHandler = async ({ locals, request }) => {
 	const assistantTools = {
 		getInventory: tool({
 			description:
-				'Read Аутомаркет Варна inventory records by status or search query. Returns admin links, public links, specs, pricing, and QA issues.',
+				'Read Аутомаркет inventory records by status or search query. Returns admin links, public links, specs, pricing, and QA issues.',
 			inputSchema: z.object({
 				status: vehicleStatusSchema.default('all'),
 				query: z.string().trim().max(80).optional(),
@@ -95,7 +95,7 @@ export const POST: RequestHandler = async ({ locals, request }) => {
 		}),
 		getPosts: tool({
 			description:
-				'Read Аутомаркет Варна posts and news records by status, type, or search query. Returns admin/public links and editorial metadata.',
+				'Read Аутомаркет posts and news records by status, type, or search query. Returns admin/public links and editorial metadata.',
 			inputSchema: z.object({
 				status: postStatusSchema.default('all'),
 				type: postTypeSchema.default('all'),
