@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { mirrorRefreshTree } from './refresh-client.mjs';
+import { copyReferencedAssets, mirrorRefreshTree } from './refresh-client.mjs';
 
 const write = (root, relative, value = relative) => {
   const file = path.join(root, relative);
@@ -33,5 +33,29 @@ test('recursive refresh mirror removes stale nested source while preserving gene
   assert.ok(!fs.existsSync(path.join(target, 'src/routes/old-page.svelte')));
   assert.equal(fs.readFileSync(path.join(target, 'node_modules/keep.txt'), 'utf8'), 'cache');
   assert.equal(fs.readFileSync(path.join(target, '.svelte-kit/keep.txt'), 'utf8'), 'cache');
+  fs.rmSync(root, { recursive: true, force: true });
+});
+
+
+test('referenced dealer assets can come from the canonical client asset directory', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-refresh-assets-'));
+  const client = path.join(root, 'dealer');
+  const oldVariant = path.join(client, 'auto-best');
+  const candidate = path.join(root, 'candidate');
+  write(client, 'assets/refined-logo.webp', 'refined-logo-bytes');
+  write(candidate, 'src/lib/config/brand.ts', "export const brand = { logo: '/assets/dealer/refined-logo.webp' };\n");
+
+  const copied = copyReferencedAssets(
+    oldVariant,
+    candidate,
+    'auto-best',
+    ['src/lib/config/brand.ts']
+  );
+
+  assert.deepEqual(copied, ['assets/dealer/refined-logo.webp']);
+  assert.equal(
+    fs.readFileSync(path.join(candidate, 'static/assets/dealer/refined-logo.webp'), 'utf8'),
+    'refined-logo-bytes'
+  );
   fs.rmSync(root, { recursive: true, force: true });
 });

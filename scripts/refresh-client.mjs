@@ -70,14 +70,26 @@ function assetReferences(file) {
   for (const match of text.matchAll(/["'`](\/[^"'`?#]+\.(?:png|jpe?g|webp|svg|ico|avif))(?:\?[^"'`]*)?["'`]/gi)) refs.push(match[1]);
   return [...new Set(refs)];
 }
-function copyReferencedAssets(oldVariant, candidate, key, overlayFiles) {
+function canonicalAssetSource(oldVariant, publicPath) {
+  if (!publicPath?.startsWith('/')) return '';
+  const client = path.dirname(oldVariant), rel = publicPath.slice(1), parts = rel.split('/');
+  const candidates = [path.join(client, rel)];
+  if (parts[0] === 'assets' && parts.length > 2) {
+    candidates.push(path.join(client, 'assets', ...parts.slice(2)));
+    candidates.push(path.join(client, 'assets', path.basename(rel)));
+  }
+  return candidates.find((candidate) => exists(candidate)) || '';
+}
+export function copyReferencedAssets(oldVariant, candidate, key, overlayFiles) {
   const sourceRoot = publicRoot(key, oldVariant), targetRoot = publicRoot(key, candidate), copied = [];
   for (const relative of overlayFiles) {
     if (relative.includes(' (')) continue;
     const file = path.join(candidate, relative);
     for (const publicPath of assetReferences(file)) {
-      const rel = publicPath.replace(/^\//, ''), source = path.join(sourceRoot, rel), target = path.join(targetRoot, rel);
-      if (exists(source) && !exists(target)) { copy(source, target); copied.push(rel); }
+      const rel = publicPath.replace(/^\//, ''), publicSource = path.join(sourceRoot, rel);
+      const source = exists(publicSource) ? publicSource : canonicalAssetSource(oldVariant, publicPath);
+      const target = path.join(targetRoot, rel);
+      if (source && !exists(target)) { copy(source, target); copied.push(rel); }
     }
   }
   return copied;

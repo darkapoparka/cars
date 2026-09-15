@@ -13,8 +13,10 @@ const NAVARA = path.join(ROOT, 'clients/navara-car');
 const PROMOSALE = path.join(ROOT, 'clients/promosale-varna');
 const ELIQ = path.join(ROOT, 'clients/eliqauto');
 const KG_TEAM = path.join(ROOT, 'clients/kg-team-auto');
+const PERFECT = path.join(ROOT, 'clients/perfect-auto-varna');
 const profile = loadDealerProfile(NAVARA, 'navara-car');
 const promosaleProfile = loadDealerProfile(PROMOSALE, 'promosale-varna');
+const perfectProfile = loadDealerProfile(PERFECT, 'perfect-auto-varna');
 
 const hash = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const copy = (source, destination) => {
@@ -45,6 +47,30 @@ test('dealer phone arrays normalize to an international contact number', () => {
   assert.equal(kgTeam.business.phoneE164, '+359877346262');
   assert.equal(kgTeam.business.phoneHref, 'tel:+359877346262');
   assert.equal(kgTeam.business.phoneDisplay, '+359877346262');
+});
+
+test('canonical dealer logo assets replace a legacy boxed public logo', () => {
+  const { root } = temporaryCandidate('auto-best', [
+    'src/lib/config/brand.ts',
+    'src/lib/data/inventory.ts',
+    'src/lib/data/company.ts',
+    'src/lib/components/company/ShowroomMap.svelte',
+    'src/lib/components/home/Hero.svelte',
+    'src/routes/listing-detail-v1/[id]/+page.svelte'
+  ]);
+
+  applyRefreshAdapter({
+    key: 'auto-best',
+    oldVariant: path.join(PERFECT, 'auto-best'),
+    candidate: root,
+    profile: perfectProfile
+  });
+
+  const brand = fs.readFileSync(path.join(root, 'src/lib/config/brand.ts'), 'utf8');
+  assert.match(brand, /logo: "\/assets\/perfect-auto\/perfekt-auto-logo\.webp"/);
+  assert.match(brand, /logoOnDark: "\/assets\/perfect-auto\/perfekt-auto-logo-light\.webp"/);
+  assert.doesNotMatch(brand, /cover\.png/);
+  fs.rmSync(root, { recursive: true, force: true });
 });
 
 test('Auto Best refresh keeps approved hero artwork and restores Navara dealer data', () => {

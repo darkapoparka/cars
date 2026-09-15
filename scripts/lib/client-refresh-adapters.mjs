@@ -51,6 +51,24 @@ function publicAssetExists(variant, key, publicPath) {
     exists(path.join(publicRoot(key, variant), publicPath.slice(1))));
 }
 
+function canonicalAssetSource(variant, publicPath) {
+  if (!publicPath?.startsWith('/')) return '';
+  const client = path.dirname(variant);
+  const relative = publicPath.slice(1);
+  const parts = relative.split('/');
+  const candidates = [path.join(client, relative)];
+  if (parts[0] === 'assets' && parts.length > 2) {
+    candidates.push(path.join(client, 'assets', ...parts.slice(2)));
+    candidates.push(path.join(client, 'assets', path.basename(relative)));
+  }
+  return candidates.find((candidate) => exists(candidate)) || '';
+}
+
+function dealerAssetExists(variant, key, publicPath) {
+  return publicAssetExists(variant, key, publicPath) ||
+    Boolean(canonicalAssetSource(variant, publicPath));
+}
+
 function pickLogo(oldVariant, key, business, dark = false) {
   const candidates = dark
     ? [business.logoDark, business.logoLight, business.logo]
@@ -70,7 +88,7 @@ function pickLogo(oldVariant, key, business, dark = false) {
       : dark ? ['logoDark', 'logoLight'] : ['logoLight', 'logoDark'];
   candidates.push(...keys.map((name) => findScalar(config, name)));
   for (const candidate of candidates) {
-    if (publicAssetExists(oldVariant, key, candidate)) return candidate;
+    if (dealerAssetExists(oldVariant, key, candidate)) return candidate;
   }
   const root = publicRoot(key, oldVariant);
   const preferred = dark
