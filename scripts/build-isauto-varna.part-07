@@ -1,0 +1,51 @@
+          fetch-depth: 1
+
+      - name: Build deterministic package
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/package-dealer.mjs \\
+            --client ${SLUG} \\
+            --out runtime/dealer-packages/${SLUG} \\
+            --source-commit "$GITHUB_SHA" \\
+            --write
+
+      - name: Publish package branch
+        shell: bash
+        env:
+          GH_TOKEN: \${{ github.token }}
+          PACKAGE_BRANCH: publish/${SLUG}
+        run: |
+          set -euo pipefail
+          package="$GITHUB_WORKSPACE/runtime/dealer-packages/${SLUG}"
+          publish_dir="$RUNNER_TEMP/${SLUG}-publish"
+          mkdir -p "$publish_dir"
+          cd "$publish_dir"
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch --depth=1 origin "refs/heads/${PACKAGE_BRANCH}"; then
+            git checkout -B "$PACKAGE_BRANCH" FETCH_HEAD
+            find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          else
+            git checkout --orphan "$PACKAGE_BRANCH"
+          fi
+          cp -a "$package"/. .
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Package branch already matches canonical $GITHUB_SHA"
+            exit 0
+          fi
+          git commit -m "Publish ${SLUG} from canonical $GITHUB_SHA"
+          git push origin "HEAD:refs/heads/${PACKAGE_BRANCH}"
+`);
+
+console.log(json({
+  client: SLUG,
+  variants: ['auto-best', 'modern', 'carwow'],
+  inventoryCount: listings.length,
+  localizedImages: imageProvenance.map((item) => item.localizedAs),
+  social,
+  status: 'personalized'
+}).trim());
