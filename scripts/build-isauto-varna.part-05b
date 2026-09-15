@@ -25,7 +25,6 @@ await writeJson(`clients/${SLUG}/assets/provenance.json`, {
     ]
   },
   hero: { sourceUrl: HERO_SOURCE, localizedAs: [
-    'auto-best/static/assets/images/lead/isauto/hero.webp',
     'modern/apps/web/public/isauto/hero.webp',
     'carwow/static/assets/isauto/hero.webp'
   ] },
