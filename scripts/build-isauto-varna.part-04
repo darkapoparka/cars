@@ -1,0 +1,100 @@
+  readonly accent: string; readonly address: string; readonly city: string; readonly contactUrl: string; readonly country: string;
+  readonly countryCode: string; readonly currency: LeadSiteCurrency; readonly district: { readonly bg: string; readonly en: string };
+  readonly email: string; readonly financingArtworkPath: string; readonly heroPath: string; readonly locale: string; readonly logoPath: string;
+  readonly mapsEmbedUrl: string; readonly mapsUrl: string; readonly name: string; readonly phoneDisplay: string; readonly phoneHref: string;
+  readonly sellCategoryAssets: Readonly<Record<"car" | "motorbike" | "truck" | "van", string>>;
+  readonly shortName: string; readonly slug: string; readonly socialLinks?: Partial<Record<"youtube" | "instagram" | "facebook" | "tiktok", string>>;
+  readonly staticDemoMode: boolean; readonly tagline: string;
+}
+const mapQuery = encodeURIComponent('${ADDRESS}, Варна, България');
+export const leadSite: LeadSiteConfig = {
+  accent: "#d71920",
+  address: "${ADDRESS}", city: "Варна", district: { bg: "Бизнес парк Варна", en: "Business Park Varna" },
+  sellCategoryAssets: { car: "/lead-sell-car-v1.png", motorbike: "/lead-sell-motorcycle-v1.png", truck: "/lead-sell-truck-v1.png", van: "/lead-sell-van-v1.png" },
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.png",
+  contactUrl: "tel:${PHONE_E164}", country: "България", countryCode: "BG", currency: "EUR", email: "${EMAIL}",
+  heroPath: "/isauto/hero.webp", locale: "bg-BG", logoPath: "/isauto/logo-dark.png",
+  mapsEmbedUrl: \`https://www.google.com/maps?q=\${mapQuery}&z=16&output=embed\`,
+  mapsUrl: \`https://www.google.com/maps/search/?api=1&query=\${mapQuery}\`,
+  name: "IS AUTO Varna", phoneDisplay: "${PHONE_DISPLAY}", phoneHref: "tel:${PHONE_E164}", shortName: "IS AUTO", slug: "${SLUG}",
+  socialLinks: ${JSON.stringify(Object.fromEntries(Object.entries(social).filter(([, url]) => url !== SITE)))},
+  staticDemoMode: true,
+  tagline: "Нови и употребявани автомобили, внос и съдействие при покупка във Варна."
+};`);
+
+const modernPath = `clients/${SLUG}/modern/packages/marketplace-domain/testing/mock-data.ts`;
+let modernData = await readText(modernPath);
+const modernRecords = listings.map((item, index) => `  {
+    id: "${item.id}", slug: "${item.slug}", category: "car", dealerOrgId: "dealer-isauto-varna", status: "active",
+    title: "${item.year} ${item.title}",
+    description: "Публична обява на IS AUTO Varna, проверена на ${TODAY}. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
+    price: { amount: ${item.priceEur}, currency: "EUR" }, priceType: "fixed",
+    images: [{ url: "/isauto/inventory-${index + 1}.webp", alt: "${item.title.replaceAll('"', '\\"')} в IS AUTO Varna" }],
+    badges: ["used"${index < 3 ? ', "promoted"' : ''}],
+    location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
+    features: ${JSON.stringify(item.features.map((feature) => ({ bg: feature, en: feature })))},
+    spec: { make: "${item.make}", model: "${item.model}", trim: "${item.trim.replaceAll('"', '\\"')}", year: ${item.year}, bodyType: "${item.bodyCode}", fuelType: "${item.fuelCode}", transmission: "${item.transmissionCode}", mileageValue: ${item.mileageKm}, mileageUnit: "km" },
+    seller: { id: "dealer-isauto-varna", type: "dealer", displayName: "IS AUTO Varna", verificationStatus: "verified", city: "Варна" },
+    publishedAt: "2026-09-${String(16 - index).padStart(2, '0')}T08:00:00.000Z", promoted: ${index < 3}
+  }`).join(',\n');
+const arrayStart = modernData.indexOf('export const mockListings: VehicleListing[] = [');
+const arrayEnd = modernData.indexOf('\n\nconst matchesText =', arrayStart);
+if (arrayStart < 0 || arrayEnd < 0) throw new Error('Cannot locate modern mockListings array.');
+modernData = `${modernData.slice(0, arrayStart)}export const mockListings: VehicleListing[] = [\n${modernRecords}\n];${modernData.slice(arrayEnd)}`;
+modernData = modernData.replace(/const legacyListingSlugAliases:[\s\S]*?\n};/, 'const legacyListingSlugAliases: Readonly<Record<string, string>> = {};');
+modernData = modernData.replace(/export const mockSavedListingIds = \[[^\]]*\];/, 'export const mockSavedListingIds = ["is-1001", "is-1003", "is-1006"];');
+modernData = modernData.replace(/const sellerListingStatuses: Record<string, VehicleListing\["status"\]> = \{[\s\S]*?\n\};/, 'const sellerListingStatuses: Record<string, VehicleListing["status"]> = {\n  "is-1001": "active",\n  "is-1003": "pending_review",\n  "is-1006": "draft",\n};');
+const idMap = new Map([['am-1001','is-1001'],['am-1002','is-1002'],['am-1003','is-1003'],['am-1004','is-1004'],['am-1005','is-1005'],['am-1006','is-1006'],['am-1007','is-1001'],['am-1008','is-1003'],['am-1009','is-1002'],['am-1010','is-1002'],['am-1011','is-1005'],['am-1012','is-1003'],['am-1013','is-1006'],['am-1014','is-1002']]);
+for (const [from, to] of idMap) modernData = modernData.split(from).join(to);
+const titleMap = [
+  ['2020 BMW X5 M50d', '2021 Audi R8 Performance V10'], ['2022 Mercedes-Benz GLE 53 AMG Coupe', '2018 BMW M5'],
+  ['2020 Mercedes-Benz AMG GT 43', '2018 Audi A5 Sportback 2.0 TDI'], ['2018 Mercedes-Benz V 250d VIP Business', '2014 BMW X5 xDrive']
+];
+for (const [from, to] of titleMap) modernData = modernData.split(from).join(to);
+await writeText(modernPath, modernData);
+
+await writeText(`clients/${SLUG}/carwow/src/lib/data/daynight-site.ts`, `import { contactLinks } from '$lib/utils/contact-links';
+import { daynightReviewCount, daynightReviewCountLabel, daynightReviewLinkLabel } from './daynight-reviews';
+const phoneE164 = '${PHONE_E164}';
+const city = 'Варна';
+const shortName = 'IS AUTO';
+const district = 'Бизнес парк Варна';
+const street = 'сграда B6';
+const location = \`гр. \${city}, \${district}, \${street}\`;
+export const daynightSite = {
+  name: 'IS AUTO VARNA', shortName, city, region: city, countryCode: 'BG', locale: 'bg-BG', currency: 'EUR', phoneE164,
+  ...contactLinks(phoneE164), phone: '0899266666', phoneLabel: '${PHONE_DISPLAY}', email: '${EMAIL}', location,
+  locationShort: \`\${district}, \${city}\`, locationLandmark: \`\${district} · \${street}\`,
+  hoursLabel: 'Пн–Пт 09:00–18:00 · Сб 10:00–16:00',
+  mapEmbedSrc: \`https://www.google.com/maps?q=\${encodeURIComponent(location)}&z=16&output=embed\`,
+  mapUrl: \`https://www.google.com/maps/search/?api=1&query=\${encodeURIComponent(location)}\`, mapLabel: \`\${shortName}, \${location}\`,
+  sourceInventory: '${MOBILE}', logoLight: '/brand/isauto-logo-light.png', logoDark: '/brand/isauto-logo-dark.png',
+  primaryCta: 'Виж наличните автомобили', sellCarCta: 'Продай или замени автомобил', accountCta: 'Свържи се с екипа', phoneCta: 'Обади се за оглед',
+  heroTitle: 'IS AUTO VARNA', heroSubtitle: 'Подбрани автомобили и директен контакт с шоурума в Бизнес парк Варна',
+  reviewCount: daynightReviewCount, reviewCountLabel: daynightReviewCountLabel, reviewLinkLabel: daynightReviewLinkLabel
+} as const;
+export const publicNavItems = [
+  { label: 'Начало', href: '/' }, { label: 'Автомобили', href: '/inventory' }, { label: 'Продай или замени', href: '/sell-your-car' },
+  { label: 'Услуги', href: '/services' }, { label: 'За нас', href: '/about' }, { label: 'Контакти', href: '/contact' }
+] as const;
+export const publicNavGroups = [
+  { label: 'Начало', href: '/' },
+  { label: 'Автомобили', href: '/inventory', children: [
+    { label: 'Всички автомобили', href: '/inventory' }, { label: 'Карта', href: '/inventory/map' }, { label: 'Сравнение', href: '/compare' }, { label: 'Калкулатор', href: '/calculator' }
+  ] },
+  { label: 'Продай или замени', href: '/sell-your-car', children: [
+    { label: 'Продай или замени', href: '/sell-your-car' }, { label: 'Заявка за оценка', href: '/sell-your-car/request' }
+  ] },
+  { label: 'Услуги', href: '/services', children: [
+    { label: 'Дилърски услуги', href: '/services' }, { label: 'Финансиране', href: '/financing' }, { label: 'ЧЗВ', href: '/faq' }
+  ] },
+  { label: 'За нас', href: '/about', children: [
+    { label: 'За IS AUTO', href: '/about' }, { label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' }, { label: 'Условия', href: '/terms' }
+  ] },
+  { label: 'Контакти', href: '/contact' }
+] as const;
+export const footerNavItems = [
+  { label: 'Налични автомобили', href: '/inventory' }, { label: 'Карта на автомобили', href: '/inventory/map' },
+  { label: 'Финансиране', href: '/financing' }, { label: 'Калкулатор', href: '/calculator' },
+  { label: 'Продай или замени', href: '/sell-your-car' }, { label: 'Заявка за оценка', href: '/sell-your-car/request' },
+  { label: 'Услуги', href: '/services' }, { label: 'ЧЗВ', href: '/faq' }
