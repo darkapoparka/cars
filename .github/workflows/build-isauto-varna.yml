@@ -15,24 +15,35 @@ permissions:
 
 concurrency:
   group: build-isauto-varna-lead
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - name: Check out canonical repository
+      - name: Check out canonical build surface
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /AGENTS.md
+            /.gitignore
+            /catalog.json
+            /templates.lock.json
+            /docs/
+            /scripts/
+            /leads/bulgaria.json
+            /.github/workflows/
+            /clients/isauto-varna/
 
-      - name: Prepare assembly and current main
+      - name: Prepare assembly
         shell: bash
         run: |
           set -euo pipefail
-          git pull --ff-only origin main
           if compgen -G "scripts/build-isauto-varna.part-*" > /dev/null; then
             cat scripts/build-isauto-varna.part-* > scripts/build-isauto-varna.mjs
           fi
@@ -134,7 +145,7 @@ jobs:
           if compgen -G "scripts/build-isauto-varna.part-*" > /dev/null; then
             git rm -f scripts/build-isauto-varna.part-*
           fi
-          git add \
+          git add --sparse \
             scripts/build-isauto-varna.mjs \
             clients/isauto-varna \
             leads/bulgaria.json \
