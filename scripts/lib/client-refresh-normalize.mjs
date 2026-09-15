@@ -79,8 +79,23 @@ function normalizeBusiness(client, slug, rawFacts) {
   const locale = firstString(source.locale, countryCode === 'BG' ? 'bg-BG' : countryCode === 'AE' ? 'en-AE' : countryCode === 'US' ? 'en-US' : 'en-US');
   const currency = firstString(source.currency, countryCode === 'BG' ? 'EUR' : countryCode === 'AE' ? 'AED' : countryCode === 'US' ? 'USD' : 'EUR').toUpperCase();
   const distanceUnit = firstString(source.distanceUnit, source.mileageUnit, countryCode === 'US' ? 'mi' : 'km').toLowerCase();
-  const phoneHref = normalizePhoneHref(firstString(source.phoneHref, source.phoneE164, source.phone));
-  const phoneDisplay = firstString(source.phoneDisplay, source.phone, source.primaryPhone, phoneHref.replace(/^tel:/, ''));
+  const publishedPhones = [
+    ...asArray(source.phones),
+    ...asArray(source.phoneNumbers)
+  ];
+  const phoneHref = normalizePhoneHref(firstString(
+    source.phoneHref,
+    source.phoneE164,
+    source.phone,
+    publishedPhones[0]
+  ));
+  const phoneDisplay = firstString(
+    source.phoneDisplay,
+    source.phone,
+    source.primaryPhone,
+    publishedPhones[0],
+    phoneHref.replace(/^tel:/, '')
+  );
   const address = firstString(source.address, source.addressLine, source.location);
   const name = firstString(source.name, source.displayName, source.latinName, slug);
   const social = source.socialLinks && typeof source.socialLinks === 'object' ? source.socialLinks : {};

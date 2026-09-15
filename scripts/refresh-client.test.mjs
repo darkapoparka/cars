@@ -12,6 +12,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const NAVARA = path.join(ROOT, 'clients/navara-car');
 const PROMOSALE = path.join(ROOT, 'clients/promosale-varna');
 const ELIQ = path.join(ROOT, 'clients/eliqauto');
+const KG_TEAM = path.join(ROOT, 'clients/kg-team-auto');
 const profile = loadDealerProfile(NAVARA, 'navara-car');
 const promosaleProfile = loadDealerProfile(PROMOSALE, 'promosale-varna');
 
@@ -37,6 +38,13 @@ test('legacy ELIQ source normalizes the published dealer identity', () => {
   assert.equal(eliq.business.phoneDisplay, '0896 781 662');
   assert.match(eliq.business.logo, /eliq-auto-wordmark-header\.png$/);
   assert.equal(eliq.listings.length, 16);
+});
+
+test('dealer phone arrays normalize to an international contact number', () => {
+  const kgTeam = loadDealerProfile(KG_TEAM, 'kg-team-auto');
+  assert.equal(kgTeam.business.phoneE164, '+359877346262');
+  assert.equal(kgTeam.business.phoneHref, 'tel:+359877346262');
+  assert.equal(kgTeam.business.phoneDisplay, '+359877346262');
 });
 
 test('Auto Best refresh keeps approved hero artwork and restores Navara dealer data', () => {
