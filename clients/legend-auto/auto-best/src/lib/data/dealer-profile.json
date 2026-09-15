@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
     "accent": "#c42136",
-    "logo": "/assets/legend-auto/logo-original.png",
-    "logoLight": "/assets/legend-auto/logo-original.png",
-    "logoDark": "/assets/legend-auto/logo-original.png",
+    "logo": "/assets/legend-auto/legend-auto-logo.webp",
+    "logoLight": "/assets/legend-auto/legend-auto-logo.webp",
+    "logoDark": "/assets/legend-auto/legend-auto-logo-light.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -64,9 +64,9 @@
       "socialLinks": {},
       "socialNote": "No matched official social links were found on the dealer profile or targeted phone/name search.",
       "accent": "#c42136",
-      "logo": "/assets/legend-auto/logo-original.png",
+      "logo": "/assets/legend-auto/legend-auto-logo.webp",
       "logoSource": "https://cdn2.focus.bg/mobile/images/houseslogos/h14769822911961758.pic",
-      "logoNote": "Original low-resolution marketplace logo retained unchanged; red lettering on a light background. No invented logo.",
+      "logoNote": "Transparent high-resolution restoration derived from the published low-resolution marketplace mark; the exact LEGEND AUTO wording and red/black identity are retained. The restoration is not represented as dealer-approved artwork.",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
       "mapsEmbedUrl": "https://maps.google.com/maps?q=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
       "services": [
@@ -94,6 +94,13 @@
           "url": "https://legendauto1.mobile.bg/obiava-11759248121351820-peugeot-308-2-0hdi",
           "reason": "Advert lists 2000 hp, inconsistent with model; omitted pending dealer clarification."
         }
+      ],
+      "logoLight": "/assets/legend-auto/legend-auto-logo.webp",
+      "logoDark": "/assets/legend-auto/legend-auto-logo-light.webp",
+      "logoStatus": "Source-based high-resolution restoration for this preview",
+      "limitations": [
+        "The transparent logo is a source-based preview restoration of the published low-resolution mark, not dealer-approved replacement artwork.",
+        "The project uses a representative stock snapshot, not a live inventory feed."
       ]
     }
   },
@@ -1900,9 +1907,9 @@
     "socialLinks": {},
     "socialNote": "No matched official social links were found on the dealer profile or targeted phone/name search.",
     "accent": "#c42136",
-    "logo": "/assets/legend-auto/logo-original.png",
+    "logo": "/assets/legend-auto/legend-auto-logo.webp",
     "logoSource": "https://cdn2.focus.bg/mobile/images/houseslogos/h14769822911961758.pic",
-    "logoNote": "Original low-resolution marketplace logo retained unchanged; red lettering on a light background. No invented logo.",
+    "logoNote": "Transparent high-resolution restoration derived from the published low-resolution marketplace mark; the exact LEGEND AUTO wording and red/black identity are retained. The restoration is not represented as dealer-approved artwork.",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
     "services": [
@@ -1930,6 +1937,13 @@
         "url": "https://legendauto1.mobile.bg/obiava-11759248121351820-peugeot-308-2-0hdi",
         "reason": "Advert lists 2000 hp, inconsistent with model; omitted pending dealer clarification."
       }
+    ],
+    "logoLight": "/assets/legend-auto/legend-auto-logo.webp",
+    "logoDark": "/assets/legend-auto/legend-auto-logo-light.webp",
+    "logoStatus": "Source-based high-resolution restoration for this preview",
+    "limitations": [
+      "The transparent logo is a source-based preview restoration of the published low-resolution mark, not dealer-approved replacement artwork.",
+      "The project uses a representative stock snapshot, not a live inventory feed."
     ]
   },
   "sourceCount": 14

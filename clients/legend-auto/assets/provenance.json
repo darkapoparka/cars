@@ -10,9 +10,17 @@
     "publishedIdentityPreserved": true,
     "dealerApprovedRestoration": false,
     "sha256": {
-      "main": "1a757c670747a4a85a5c40f8a06dd141e8444c979fa27814487af5a5a0d67e76",
-      "darkBackground": "18ff79347cdca6161b3384984fe50f0127e3a020b02bbdf62cd50160d9baa409"
-    }
+      "sourceOriginal": "fb9c908054a78d5f643e4b491a2ff3ca38e7a6b3b34def2414203f8de7e65728",
+      "mainPng": "68b097859a976514927bb5d082df2c04f35370431afe89514db2ff6c0bc1ea4c",
+      "darkBackgroundPng": "0dc03166de2ed10c1e561d2f864e5f1719f453a9e3a89b2f907490e48deb8e3e",
+      "main": "21a489f06a5aad018dff02b62d1c9f30d1dc6af1502320bcd975fae34372efc3",
+      "darkBackground": "cf62d9f62a746add1d250acf435baf5ed01020c3cb602cde4e019852b51fe190"
+    },
+    "sourcePngFile": "legend-auto-logo.png",
+    "darkBackgroundSourcePngFile": "legend-auto-logo-light.png",
+    "pipeline": "image-generation-assisted transparent PNG master -> Sharp WebP (quality 92, alpha quality 100)",
+    "sourceArchiveNote": "The accepted transparent restoration was retained as WebP in the earlier pass; lossless PNG masters were restored from those accepted pixels before final WebP encoding.",
+    "svgDealerLogoUsed": false
   },
   "vehicles": [
     {

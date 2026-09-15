@@ -97,7 +97,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -197,7 +197,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -297,7 +297,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -397,7 +397,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -497,7 +497,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -596,7 +596,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -695,7 +695,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -794,7 +794,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -894,7 +894,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -993,7 +993,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1092,7 +1092,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1192,7 +1192,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1292,7 +1292,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1391,7 +1391,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "LEGEND AUTO",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/legend-auto/logo-original.png"
+      "logoUrl": "/assets/legend-auto/legend-auto-logo.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false

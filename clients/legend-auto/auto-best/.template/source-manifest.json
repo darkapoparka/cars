@@ -1506,7 +1506,7 @@
   ],
   "links": [],
   "bytes": 32819241,
-  "sourceCommit": "8161310561a20065116582293c4de1a41ed62329",
+  "sourceCommit": "09050ce20b2e7682bbfcc12bbf247d4161f73eb7",
   "sourceTree": "ad91f27e1774ad08b4b0bfd0c053e37bf1ffd4c5",
   "method": "Approved Cars snapshot plus explicit dealer data/assets overlay",
   "approvedTemplate": {
@@ -1595,7 +1595,9 @@
       "assets/legend-auto/vehicle-14-2.webp",
       "assets/legend-auto/vehicle-14-3.webp",
       "assets/legend-auto/vehicle-14-4.webp",
-      "assets/legend-auto/vehicle-14-5.webp"
+      "assets/legend-auto/vehicle-14-5.webp",
+      "assets/legend-auto/legend-auto-logo.webp",
+      "assets/legend-auto/legend-auto-logo-light.webp"
     ]
   }
 }
