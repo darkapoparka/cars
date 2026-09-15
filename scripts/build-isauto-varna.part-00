@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { createRequire } from 'node:module';
 
 const ROOT = process.cwd();
 const SLUG = 'isauto-varna';
@@ -87,7 +87,7 @@ async function exists(target) { return fs.access(target).then(() => true, () => 
 if (!(await exists(CLIENT))) throw new Error(`Missing ${CLIENT}; run scripts/new-client.mjs first.`);
 const sharpRoot = process.env.IS_AUTO_SHARP_ROOT;
 if (!sharpRoot) throw new Error('IS_AUTO_SHARP_ROOT is required.');
-const sharp = (await import(pathToFileURL(path.join(sharpRoot, 'node_modules/sharp/lib/index.js')).href)).default;
+const sharp = createRequire(path.join(sharpRoot, 'package.json'))('sharp');
 
 async function fetchResponse(url) {
   const response = await fetch(url, {
