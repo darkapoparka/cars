@@ -6,6 +6,10 @@ on:
       - main
     paths:
       - .github/workflows/publish-champion-package.yml
+      - clients/champion-auto-pro/**
+      - scripts/package-dealer.mjs
+      - catalog.json
+      - templates.lock.json
   workflow_dispatch:
 
 permissions:
