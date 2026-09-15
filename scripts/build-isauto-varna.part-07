@@ -41,6 +41,38 @@
           git push origin "HEAD:refs/heads/\${PACKAGE_BRANCH}"
 `);
 
+const unusedAutoBestMedia = [
+  'auto-best/static/assets/images/icon-box/car-list3.png',
+  'auto-best/static/assets/images/icon-box/car-list6.png',
+  'auto-best/static/assets/images/lead/day-night-stock-01.webp',
+  'auto-best/static/assets/images/lead/day-night-stock-02.webp',
+  'auto-best/static/assets/images/lead/day-night-stock-03.webp',
+  'auto-best/static/assets/images/lead/day-night-stock-04.webp',
+  'auto-best/static/assets/images/lead/day-night-stock-05.webp',
+  'auto-best/static/assets/images/lead/day-night-stock-06.webp',
+  'auto-best/static/assets/images/lead/isauto/hero.webp',
+  'auto-best/static/assets/images/partner/parner10.png',
+  'auto-best/static/assets/images/partner/parner7.png',
+  'auto-best/static/assets/images/partner/parner8.png',
+  'auto-best/static/assets/images/partner/parner9.png',
+  'auto-best/static/assets/images/partner/partner1.png',
+  'auto-best/static/assets/images/partner/partner2.png',
+  'auto-best/static/assets/images/partner/partner3.png',
+  'auto-best/static/assets/images/partner/partner4.png',
+  'auto-best/static/assets/images/partner/partner5.png',
+  'auto-best/static/assets/images/partner/partner6.png',
+  'auto-best/static/assets/images/template/auto-best-logo-light.svg',
+  'auto-best/static/assets/images/template/auto-best-logo.svg',
+  'auto-best/static/assets/images/template/body-wagon-v1.png'
+];
+for (const relative of unusedAutoBestMedia) {
+  await fs.rm(path.join(CLIENT, relative), { force: true });
+}
+const personalizedAssetCheckPath = path.join(CLIENT, 'auto-best/scripts/check-assets.mjs');
+let personalizedAssetCheck = await fs.readFile(personalizedAssetCheckPath, 'utf8');
+personalizedAssetCheck = personalizedAssetCheck.replace('const guardedMediaCount = 126;', 'const guardedMediaCount = 104;');
+await fs.writeFile(personalizedAssetCheckPath, personalizedAssetCheck, 'utf8');
+
 console.log(json({
   client: SLUG,
   variants: ['auto-best', 'modern', 'carwow'],
