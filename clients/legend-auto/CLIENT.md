@@ -2,7 +2,7 @@
 
 Prospect Fast Skin; no dealer approval or sale implied. Source: https://legendauto1.mobile.bg/ and local research captures. Phone 0899 877 305; бул. Цар Освободител 289, срещу МАКАО, Варна. Distinct from Avangard despite street-number overlap. Published hours: Monday–Saturday 09:00–17:30; Sunday closed.
 
-14 source-backed representative vehicles with original dealer photos and logo. Availability requires reconfirmation; no live stock integration. Exclusions and source inconsistencies are recorded in business-facts.json. No verified social channels, email, finance, buyback or import service claims added.
+14 source-backed representative vehicles with original dealer photos and a transparent high-resolution restoration derived from the published low-resolution logo; the restoration is not represented as dealer-approved artwork. Availability requires reconfirmation; no live stock integration. Exclusions and source inconsistencies are recorded in business-facts.json. No verified social channels, email, finance, buyback or import service claims added.
 
 Three independent templates, version 2026.09.06-refresh-1; Auto Best primary.
 

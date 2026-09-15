@@ -2,7 +2,7 @@
 
 Prospect demo, captured 2026-09-07. No sale, outreach, deployment or CRM registration is implied.
 
-Verified primary sources: https://ivoauto-varna.mobile.bg/ and its /contacts and /about pages. Phone 0878 720 035, second phone 0898 300 036. Address: бул. „Цар Освободител“ 256, Варна. Hours are not published. No independently verified official logo, website or social account was found; the transparent ИВО АУТО text wordmark is a temporary preview identity, not an official logo.
+Verified primary sources: https://ivoauto-varna.mobile.bg/ and its /contacts and /about pages. Phone 0878 720 035, second phone 0898 300 036. Address: бул. „Цар Освободител“ 256, Варна. Hours are not published. No independently verified official logo, website or social account was found. The transparent IVO AUTO graphite/amber mark is a professional demonstrative proposal for this preview and is not presented as an official dealer logo.
 
 All three independent copies come from the current J:/cars masters, version 2026.09.06-refresh-1, through new-client.mjs dry run, copy and hash verification. ASKO files were read-only implementation references, never clone sources or business facts.
 

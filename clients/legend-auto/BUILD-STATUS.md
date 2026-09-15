@@ -2,7 +2,7 @@
 
 Scope: auto-best, modern, carwow from current 2026.09.06-refresh-1 masters. Only this client directory is owned by this task. No Git repository at workspace root; destination absent before cloning, dry run verified.
 
-- Research: live home/contact/about and 16 detail pages captured. 14 included cars, 70 original photos. Celerio transmission and Peugeot 308 power conflicts excluded. Original low-resolution logo retained. About page supplies hours.
+- Research: live home/contact/about and 16 detail pages captured. 14 included cars, 70 original photos. Celerio transmission and Peugeot 308 power conflicts excluded. Original low-resolution logo retained as provenance; a transparent source-based restoration is used in the preview. About page supplies hours.
 - Auto Best: install and full validate passed. First 390/1440 QA reached entry/inventory/detail/contact/about with no page overflow or console errors. Gallery control, budget ranges, larger original photos and viewing copy subsequently corrected; final confirmation pending.
 - Modern: personalized; frozen install passed; Prisma/typecheck/build queued.
 - Carwow: personalized; install retry completed exit 0; Svelte autofixer/check/build and browser QA pending.

@@ -16,11 +16,11 @@
   "stockUrl": "https://ivoauto-varna.mobile.bg/",
   "website": null,
   "socialLinks": {},
-  "logo": "/assets/ivo-auto/wordmark.svg",
-  "logoLight": "/assets/ivo-auto/wordmark-light.svg",
-  "logoStatus": "Temporary text wordmark, not an official logo",
-  "accent": "#222222",
-  "accentNote": "Neutral temporary identity; official brand colours not verified",
+  "logo": "/assets/ivo-auto/ivo-auto-logo.webp",
+  "logoLight": "/assets/ivo-auto/ivo-auto-logo.webp",
+  "logoStatus": "Professional demonstrative logo proposal for this preview; no official dealer logo was found in the verified sources.",
+  "accent": "#c58a1f",
+  "accentNote": "The graphite and amber palette belongs to the demonstrative proposal and is not presented as verified official branding.",
   "services": [
     "Продажба на автомобили",
     "Бартер според обявата",
@@ -33,5 +33,12 @@
     "https://ivoauto-varna.mobile.bg/",
     "https://ivoauto-varna.mobile.bg/contacts",
     "https://ivoauto-varna.mobile.bg/about"
+  ],
+  "logoDark": "/assets/ivo-auto/ivo-auto-logo-light.webp",
+  "logoNote": "The transparent IVO AUTO mark is an image-generation-assisted proposal for the demo project and is not represented as official dealer branding.",
+  "accentDark": "#8f6114",
+  "limitations": [
+    "No official logo was found in the verified dealer sources; the transparent IVO AUTO mark is a clearly labelled professional proposal for this preview.",
+    "The project uses a representative snapshot of published listings, not a live inventory feed."
   ]
 }

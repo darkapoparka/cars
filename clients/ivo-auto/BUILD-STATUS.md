@@ -13,6 +13,6 @@ Framework logs (2026-09-08): qa-final/modern-typecheck.log, modern-build.log, ca
 Evidence: qa-final/results.json, per-variant screenshots and result.json, source-scan.json, final framework logs. Unchanged Auto Best evidence is reused for Priselci and Ivo Auto. Prior failed/cold-development snapshots remain historical; final evidence supersedes them.
 
 Focused Carwow evidence: focused.json, final-390-0.png and final-1440-3.png supersede initial header screenshots; desktop count excludes navigation /inventory/map. Numeric snapshot proof: numeric-stock-check.json.
-Visual review: header wordmarks, stock media and entry compositions checked at both widths. No layout redesign. Local previews were verified and stopped; restart using the assigned port and scripts/start-preview.ps1.
+Visual review: header branding, stock media and entry compositions checked at both widths. No layout redesign. Local previews were verified and stopped; restart using the assigned port and scripts/start-preview.ps1.
 
-Limits: dated 16-vehicle sample / 64 source photos; temporary text wordmark; unverified hours and socials; forms/provider flows not certified; gallery keyboard focus restoration was not separately verified. Source license notes retained. No external enquiry submitted.
+Limits: dated 16-vehicle sample / 64 source photos; demonstrative logo proposal with no verified official mark; unverified hours and socials; forms/provider flows not certified; gallery keyboard focus restoration was not separately verified. Source license notes retained. No external enquiry submitted.

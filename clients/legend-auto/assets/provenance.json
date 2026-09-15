@@ -1,9 +1,18 @@
 {
   "capturedAt": "2026-09-06T21:52:56.518Z",
   "logo": {
-    "file": "logo-original.png",
+    "sourceFile": "logo-original.png",
     "sourceUrl": "https://cdn2.focus.bg/mobile/images/houseslogos/h14769822911961758.pic",
-    "unchanged": true
+    "mainFile": "legend-auto-logo.webp",
+    "darkBackgroundFile": "legend-auto-logo-light.webp",
+    "restoredAt": "2026-09-15",
+    "method": "image-generation-assisted high-resolution transparent restoration",
+    "publishedIdentityPreserved": true,
+    "dealerApprovedRestoration": false,
+    "sha256": {
+      "main": "1a757c670747a4a85a5c40f8a06dd141e8444c979fa27814487af5a5a0d67e76",
+      "darkBackground": "18ff79347cdca6161b3384984fe50f0127e3a020b02bbdf62cd50160d9baa409"
+    }
   },
   "vehicles": [
     {
