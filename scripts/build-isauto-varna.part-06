@@ -45,7 +45,7 @@ for (const variant of ['auto-best', 'modern', 'carwow']) {
 
 const manifestPath = `clients/${SLUG}/dealer.json`;
 const manifest = JSON.parse(await readText(manifestPath));
-manifest.repository = 'darkapoparka/cars';
+manifest.repository = 'darkapoparka/cars-isautovarna';
 manifest.extraAssets = ['assets/provenance.json'];
 await writeJson(manifestPath, manifest);
 
