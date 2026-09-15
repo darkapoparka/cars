@@ -38,6 +38,9 @@ jobs:
             /scripts/
             /leads/bulgaria.json
             /.github/workflows/
+            /templates/auto-best/
+            /templates/modern/
+            /templates/carwow/
             /clients/isauto-varna/
 
       - name: Prepare assembly
