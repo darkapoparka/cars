@@ -1,0 +1,75 @@
+name: Publish Champion Auto Pro package branch
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-champion-package.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-champion-auto-pro-package
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out canonical source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            AGENTS.md
+            catalog.json
+            templates.lock.json
+            docs
+            scripts
+            clients/champion-auto-pro
+
+      - name: Build deterministic package
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/package-dealer.mjs \
+            --client champion-auto-pro \
+            --out runtime/dealer-packages/champion-auto-pro \
+            --source-commit "$GITHUB_SHA" \
+            --write
+
+      - name: Publish package branch
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGE_BRANCH: publish/champion-auto-pro
+        run: |
+          set -euo pipefail
+          package="$GITHUB_WORKSPACE/runtime/dealer-packages/champion-auto-pro"
+          publish_dir="$RUNNER_TEMP/champion-auto-pro-publish"
+          mkdir -p "$publish_dir"
+          cd "$publish_dir"
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch --depth=1 origin "refs/heads/${PACKAGE_BRANCH}"; then
+            git checkout -B "$PACKAGE_BRANCH" FETCH_HEAD
+            find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          else
+            git checkout --orphan "$PACKAGE_BRANCH"
+          fi
+          cp -a "$package"/. .
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Package branch already matches canonical $GITHUB_SHA"
+            exit 0
+          fi
+          git commit -m "Publish champion-auto-pro from canonical $GITHUB_SHA"
+          git push origin "HEAD:refs/heads/${PACKAGE_BRANCH}"
