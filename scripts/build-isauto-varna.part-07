@@ -41,6 +41,89 @@
           git push origin "HEAD:refs/heads/\${PACKAGE_BRANCH}"
 `);
 
+const modernDirectoryPath = `clients/${SLUG}/modern/packages/marketplace/mock-directory.ts`;
+let modernDirectory = await readText(modernDirectoryPath);
+const modernDirectoryTailIndex = modernDirectory.indexOf('const scaleOrganizationTypes');
+if (modernDirectoryTailIndex < 0) throw new Error('Cannot locate Modern directory scale fixtures.');
+let modernDirectoryTail = modernDirectory.slice(modernDirectoryTailIndex);
+for (const [from, to] of idMap) modernDirectoryTail = modernDirectoryTail.split(from).join(to);
+const modernDirectoryCore = `import {
+  type OrganizationDirectoryEntry,
+  type OrganizationDirectoryType,
+  type OrganizationInventoryAvailabilityKind,
+  organizationDirectoryEntriesSchema,
+} from "./directory";
+import { getMockListingById } from "./mock-data";
+
+const getRepresentativeVehicle = (
+  listingId: string,
+  availability: OrganizationInventoryAvailabilityKind
+) => {
+  const listing = getMockListingById(listingId);
+  const image = listing?.images[0];
+  if (!(listing && image)) {
+    throw new Error(\`Missing representative marketplace listing: \${listingId}\`);
+  }
+  return {
+    availability,
+    href: \`/listing/\${listing.slug}\`,
+    id: listing.id,
+    image: { alt: image.alt, url: image.url },
+    price: listing.price,
+    title: listing.title,
+  };
+};
+
+/** Verified public IS AUTO identity plus plainly labelled synthetic scale records. */
+export const mockOrganizationDirectoryCoreEntries =
+  organizationDirectoryEntriesSchema.parse([
+    {
+      brandCoverage: [
+        { authorizationVerified: false, brand: "Audi", relationship: "independent_importer" },
+        { authorizationVerified: false, brand: "BMW", relationship: "independent_importer" },
+      ],
+      claimStatus: "unclaimed",
+      contact: {
+        email: "${EMAIL}",
+        phone: "${PHONE_E164}",
+        websiteUrl: "${SITE}",
+      },
+      dealerOrgId: "dealer-isauto-varna",
+      description: "Публичен профил на IS AUTO Varna с шест автомобила от официалния сайт, локализирани за този демонстрационен проект.",
+      displayName: "IS AUTO Varna",
+      headquarters: { city: "Варна", countryCode: "BG" },
+      headline: "Подбрани автомобили в Бизнес парк Варна",
+      id: "directory-isauto-varna",
+      inventory: {
+        activeListingCount: 6,
+        inTransitCount: 0,
+        lastConfirmedAt: "${TODAY}T08:00:00.000Z",
+        localCount: 6,
+        orderableCount: 0,
+        sourceStockCount: 0,
+      },
+      orgType: "dealer",
+      profileImage: {
+        alt: "IS AUTO Varna в Бизнес парк Варна",
+        url: "/isauto/hero.webp",
+      },
+      representativeVehicles: [
+        getRepresentativeVehicle("is-1001", "local"),
+        getRepresentativeVehicle("is-1002", "local"),
+        getRepresentativeVehicle("is-1003", "local"),
+      ],
+      slug: "isauto-varna",
+      tradeLanes: [],
+      verification: {
+        businessVerified: true,
+        inventoryCurrent: true,
+        trustedSupplier: false,
+      },
+    },
+  ]);
+`;
+await writeText(modernDirectoryPath, `${modernDirectoryCore}\n${modernDirectoryTail}`);
+
 const unusedAutoBestMedia = [
   'auto-best/static/assets/images/icon-box/car-list3.png',
   'auto-best/static/assets/images/icon-box/car-list6.png',
