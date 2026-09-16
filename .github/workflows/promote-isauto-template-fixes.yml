@@ -1,0 +1,149 @@
+name: Promote IS AUTO template contract fixes
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/promote-isauto-template-fixes.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promote-isauto-template-fixes
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /templates.lock.json
+            /scripts/
+            /docs/evidence/
+            /templates/auto-best/
+            /templates/carwow/
+            /.github/workflows/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.23.0'
+      - name: Fetch validated template commits
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --no-tags https://github.com/darkapoparka/cars-template-auto-best.git "$RUNNER_TEMP/cars-template-auto-best"
+          git -C "$RUNNER_TEMP/cars-template-auto-best" checkout --detach 989ec3a1d80a8f19150d18eb81282ac7cd216d83
+          git clone --filter=blob:none --no-tags https://github.com/darkapoparka/cars-template-carwow.git "$RUNNER_TEMP/cars-template-carwow"
+          git -C "$RUNNER_TEMP/cars-template-carwow" checkout --detach 89f50c427863050abb7923152f05c091bb937d1e
+      - name: Record release evidence
+        run: |
+          set -euo pipefail
+          mkdir -p docs/evidence
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const verifiedAt = new Date().toISOString();
+          const releases = [
+            {
+              file: 'docs/evidence/auto-best-release-empty-video-2026-09-16.json',
+              repository: 'darkapoparka/cars-template-auto-best',
+              commit: '989ec3a1d80a8f19150d18eb81282ac7cd216d83',
+              release: 'empty-video-contract-2026-09-16',
+              runtime: { node: '22.23.0', npm: '10.9.8', lockfile: 'package-lock.json' },
+              checks: [
+                { command: 'npm ci --no-audit --no-fund', status: 'passed' },
+                { command: 'npm run validate', status: 'passed', evidenceRun: 'darkapoparka/cars-template-auto-best/actions/runs/35146697017' }
+              ],
+              notes: 'Master validation passed. Existing verified-video composition is unchanged; dealers without a verified channel and videos now omit the empty section.'
+            },
+            {
+              file: 'docs/evidence/carwow-release-category-density-2026-09-16.json',
+              repository: 'darkapoparka/cars-template-carwow',
+              commit: '89f50c427863050abb7923152f05c091bb937d1e',
+              release: 'desktop-category-density-2026-09-16',
+              runtime: { node: '24.x', npm: '11.x', lockfile: 'package-lock.json' },
+              checks: [
+                { command: 'npm ci --no-audit --no-fund', status: 'passed' },
+                { command: 'npm run check', status: 'passed' },
+                { command: 'npm run build', status: 'passed', evidenceRun: 'darkapoparka/cars-template-carwow/actions/runs/35146824017' }
+              ],
+              notes: 'Desktop keeps the complete eight-card template taxonomy, ordered with in-stock types first and honest zero-stock labels. Mobile composition is unchanged.'
+            }
+          ];
+          for (const item of releases) {
+            const evidence = {
+              schemaVersion: 1,
+              repository: item.repository,
+              commit: item.commit,
+              release: item.release,
+              approved: true,
+              verifiedAt,
+              runtime: item.runtime,
+              modes: { standalone: 'validated source and production build', mounted: 'requires-dealer-QA' },
+              checks: item.checks,
+              standalone: { mobile: true, desktop: true, widths: [390, 1440], notes: item.notes }
+            };
+            fs.writeFileSync(item.file, `${JSON.stringify(evidence, null, 2)}\n`);
+          }
+          NODE
+      - name: Promote reviewed releases
+        run: |
+          set -euo pipefail
+          node scripts/template-release.mjs promote \
+            --key auto-best \
+            --source-repo "$RUNNER_TEMP/cars-template-auto-best" \
+            --commit 989ec3a1d80a8f19150d18eb81282ac7cd216d83 \
+            --evidence docs/evidence/auto-best-release-empty-video-2026-09-16.json \
+            --write
+          node scripts/template-release.mjs promote \
+            --key carwow \
+            --source-repo "$RUNNER_TEMP/cars-template-carwow" \
+            --commit 89f50c427863050abb7923152f05c091bb937d1e \
+            --evidence docs/evidence/carwow-release-category-density-2026-09-16.json \
+            --write
+      - name: Stop inventing an IS AUTO YouTube channel
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from pathlib import Path
+          path = Path('scripts/build-isauto-varna.mjs')
+          text = path.read_text(encoding='utf-8')
+          old = "youtube: socialUrls.find((url) => /youtu(?:be\\.com|\\.be)/i.test(url)) ?? SITE,"
+          new = "youtube: socialUrls.find((url) => /youtu(?:be\\.com|\\.be)/i.test(url)) ?? '',"
+          if text.count(old) != 1:
+              raise SystemExit(f'expected one IS AUTO YouTube fallback, found {text.count(old)}')
+          path.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+          node --check scripts/build-isauto-varna.mjs
+          grep -Fq "youtube: socialUrls.find" scripts/build-isauto-varna.mjs
+          grep -Fq "?? ''," scripts/build-isauto-varna.mjs
+      - name: Verify promoted snapshots
+        run: |
+          set -euo pipefail
+          node scripts/template-release.mjs verify --key auto-best
+          node scripts/template-release.mjs verify --key carwow
+          git diff --check
+      - name: Commit reviewed promotion
+        run: |
+          set -euo pipefail
+          rm .github/workflows/promote-isauto-template-fixes.yml
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
+            echo 'main moved during promotion; refusing to overwrite' >&2
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            .github/workflows/promote-isauto-template-fixes.yml \
+            templates.lock.json \
+            templates/auto-best \
+            templates/carwow \
+            docs/evidence/auto-best-release-empty-video-2026-09-16.json \
+            docs/evidence/carwow-release-category-density-2026-09-16.json \
+            scripts/build-isauto-varna.mjs
+          git commit -m 'Promote complete dealer content contracts'
+          git push origin HEAD:main
