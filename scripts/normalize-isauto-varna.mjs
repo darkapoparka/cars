@@ -84,32 +84,62 @@ if (!modernPublicData.includes('const getMockListingBySlug = (slug: string) =>')
 }
 await fs.writeFile(MODERN_PUBLIC_DATA, modernPublicData.endsWith('\n') ? modernPublicData : `${modernPublicData}\n`, 'utf8');
 
-const modernTestImportFixes = [
-  {
-    relative: 'apps/web/lib/public-structured-data.test.ts',
-    legacy: 'import { getMockListingBySlug } from "@repo/marketplace";',
-    replacement: 'import { getMockListingBySlug } from "@repo/marketplace-domain/testing/mock-data";'
-  },
+const publicStructuredDataTest = path.join(
+  MODERN,
+  'apps',
+  'web',
+  'lib',
+  'public-structured-data.test.ts'
+);
+let publicStructuredData = await fs.readFile(publicStructuredDataTest, 'utf8');
+publicStructuredData = publicStructuredData.replace(
+  /import \{ getMockListingBySlug \} from "@repo\/(?:marketplace|marketplace-domain\/testing\/mock-data)";/,
+  'import { mockListings } from "@repo/marketplace-domain/testing/mock-data";'
+);
+publicStructuredData = publicStructuredData.replace(
+  'const listing = getMockListingBySlug("bmw-x5-m50d-sofia-2020");',
+  'const listing = mockListings.find((entry) => entry.slug === "bmw-x5-m50d-sofia-2020");'
+);
+if (
+  !publicStructuredData.includes('import { mockListings } from "@repo/marketplace-domain/testing/mock-data";') ||
+  publicStructuredData.includes('getMockListingBySlug')
+) {
+  throw new Error('Could not normalize Modern public structured-data test fixtures.');
+}
+await fs.writeFile(publicStructuredDataTest, publicStructuredData, 'utf8');
+
+const typedMockTests = [
   {
     relative: 'packages/marketplace-ui/lib/listing-truth.test.ts',
-    legacy: 'import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";',
-    replacement: 'import { getMockListingBySlug } from "@repo/marketplace-domain/testing/mock-data";\nimport type { VehicleListing } from "@repo/marketplace";'
+    call: 'const listing = getMockListingBySlug("bmw-x5-xdrive40d-berlin-2022");',
+    replacement: 'const listing = mockListings.find((entry) => entry.slug === "bmw-x5-xdrive40d-berlin-2022");'
   },
   {
     relative: 'packages/marketplace-ui/lib/vehicle-card-policy.test.ts',
-    legacy: 'import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";',
-    replacement: 'import { getMockListingBySlug } from "@repo/marketplace-domain/testing/mock-data";\nimport type { VehicleListing } from "@repo/marketplace";'
+    call: 'const listing = getMockListingBySlug(slug);',
+    replacement: 'const listing = mockListings.find((entry) => entry.slug === slug);'
   }
 ];
 
-for (const fix of modernTestImportFixes) {
+for (const fix of typedMockTests) {
   const target = path.join(MODERN, fix.relative);
-  const before = await fs.readFile(target, 'utf8');
-  const after = before.replace(fix.legacy, fix.replacement);
-  if (!after.includes(fix.replacement)) {
-    throw new Error(`Could not normalize Modern test import: ${fix.relative}`);
+  let content = await fs.readFile(target, 'utf8');
+  content = content.replace(
+    /import \{ getMockListingBySlug, type VehicleListing \} from "@repo\/marketplace";/,
+    'import { mockListings } from "@repo/marketplace-domain/testing/mock-data";\nimport type { VehicleListing } from "@repo/marketplace";'
+  );
+  content = content.replace(
+    /import \{ getMockListingBySlug \} from "@repo\/marketplace-domain\/testing\/mock-data";\r?\nimport type \{ VehicleListing \} from "@repo\/marketplace";/,
+    'import { mockListings } from "@repo/marketplace-domain/testing/mock-data";\nimport type { VehicleListing } from "@repo/marketplace";'
+  );
+  content = content.replace(fix.call, fix.replacement);
+  if (
+    !content.includes('import { mockListings } from "@repo/marketplace-domain/testing/mock-data";') ||
+    content.includes('getMockListingBySlug')
+  ) {
+    throw new Error(`Could not normalize Modern test fixture lookup: ${fix.relative}`);
   }
-  if (after !== before) await fs.writeFile(target, after, 'utf8');
+  await fs.writeFile(target, content, 'utf8');
 }
 
 const forbidden = [
@@ -135,4 +165,4 @@ async function scan(directory) {
 }
 
 await scan(path.join(CARWOW, 'src'));
-console.log('IS AUTO content normalized; Modern mock lookup and test imports made deterministic.');
+console.log('IS AUTO content normalized; Modern mock array lookups made deterministic.');
