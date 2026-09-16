@@ -1,4 +1,4 @@
-name: Patch IS AUTO repair script
+name: Patch IS AUTO presentation repair
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
           sparse-checkout: |
             scripts/repair-isauto-template-integrity.mjs
-      - name: Replace obsolete asset list with current template directories
+      - name: Restore protected Modern and Carwow presentation
         shell: bash
         run: |
           set -euo pipefail
@@ -30,31 +30,53 @@ jobs:
 
           target = Path('scripts/repair-isauto-template-integrity.mjs')
           text = target.read_text(encoding='utf-8').replace('\r\n', '\n')
-          start = text.index('const autoBestGenericArtwork = [')
-          end_marker = "await fs.rm(path.join(AUTO_BEST, 'static', 'auto-best-icon.svg'), { force: true });"
-          end = text.index(end_marker, start)
-          replacement = """const autoBestGenericDirectories = [
-            'assets/images/icon-box',
-            'assets/images/partner',
-            'assets/images/brand-curated',
-            'assets/images/template'
-          ];
-          for (const relative of autoBestGenericDirectories) {
-            const source = path.join(AUTO_BEST_TEMPLATE, 'static', relative);
-            if (await exists(source)) {
-              await copyDirectory(source, path.join(AUTO_BEST, 'static', relative));
-            }
-          }
-          """
-          target.write_text(text[:start] + replacement + text[end:], encoding='utf-8')
+
+          replacements = [
+              (
+                  "const AUTO_BEST_TEMPLATE = path.join(ROOT, 'templates', 'auto-best');\nconst CARWOW_TEMPLATE = path.join(ROOT, 'templates', 'carwow');",
+                  "const AUTO_BEST_TEMPLATE = path.join(ROOT, 'templates', 'auto-best');\nconst MODERN_TEMPLATE = path.join(ROOT, 'templates', 'modern');\nconst CARWOW_TEMPLATE = path.join(ROOT, 'templates', 'carwow');"
+              ),
+              (
+                  "const textExtensions = new Set(['.css', '.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);",
+                  "const textExtensions = new Set(['.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);"
+              ),
+              (
+                  "// ---------------------------------------------------------------------------\n// Modern: all public assets must include the /variant-2 mount prefix.\n// This fixes inventory cards and the hero artwork on cars/import/lease/sell routes.\n// ---------------------------------------------------------------------------\nconst modernLeadSite = path.join(MODERN, 'packages', 'marketplace', 'lead-site.ts');",
+                  "// ---------------------------------------------------------------------------\n// Modern: preserve every template stylesheet and the approved lead hero.\n// Dealer identity, inventory and raster logos remain the only overlay.\n// ---------------------------------------------------------------------------\nconst modernTemplateCssFiles = await walk(\n  MODERN_TEMPLATE,\n  (file) => path.extname(file).toLowerCase() === '.css'\n);\nfor (const source of modernTemplateCssFiles) {\n  const relative = path.relative(MODERN_TEMPLATE, source);\n  await copyFile(source, path.join(MODERN, relative));\n}\nawait fs.rm(path.join(MODERN, 'apps', 'web', 'public', 'isauto', 'hero.webp'), { force: true });\n\nconst modernLeadSite = path.join(MODERN, 'packages', 'marketplace', 'lead-site.ts');"
+              ),
+              (
+                  "await replaceInFile(modernLeadSite, (content) => content\n  .replaceAll('\"/isauto/', '\"/variant-2/isauto/')",
+                  "await replaceInFile(modernLeadSite, (content) => content\n  .replace(/heroPath:\\s*\"[^\"]+\"/, 'heroPath: \"/lead-hero.jpg\"')\n  .replaceAll('\"/isauto/', '\"/variant-2/isauto/')"
+              ),
+              (
+                  "for (const filename of ['logo-dark.png', 'logo-light.png', 'hero.webp']) {",
+                  "for (const filename of ['logo-dark.png', 'logo-light.png']) {"
+              ),
+              (
+                  "const carwowRuntimeRoots = [path.join(CARWOW, 'src'), path.join(CARWOW, 'static')];",
+                  "await fs.rm(path.join(CARWOW, 'static', 'assets', 'isauto', 'hero.webp'), { force: true });\n\nconst carwowRuntimeRoots = [path.join(CARWOW, 'src'), path.join(CARWOW, 'static')];"
+              ),
+              (
+                  ".replaceAll('/brand/daynight-og.svg', '/assets/isauto/hero.webp')\n      .replaceAll('brand/daynight-og.svg', 'assets/isauto/hero.webp')",
+                  ".replaceAll('/brand/daynight-og.svg', '/assets/daynight/hero/home-05-showroom-exterior.webp')\n      .replaceAll('brand/daynight-og.svg', 'assets/daynight/hero/home-05-showroom-exterior.webp')\n      .replaceAll('/assets/isauto/hero.webp', '/assets/daynight/hero/home-05-showroom-exterior.webp')\n      .replaceAll('assets/isauto/hero.webp', 'assets/daynight/hero/home-05-showroom-exterior.webp')"
+              )
+          ]
+
+          for old, new in replacements:
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'expected one repair-script match, found {count}: {old[:90]}')
+              text = text.replace(old, new)
+
+          target.write_text(text, encoding='utf-8')
           PY
           node --check scripts/repair-isauto-template-integrity.mjs
-      - name: Commit repair
+      - name: Commit presentation repair
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add scripts/repair-isauto-template-integrity.mjs
-          git commit -m 'Sync IS AUTO presentation assets from approved template'
+          git commit -m 'Restore approved Modern and Carwow presentation'
           git push origin HEAD:main
