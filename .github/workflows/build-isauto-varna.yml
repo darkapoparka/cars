@@ -67,7 +67,7 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Create canonical client from approved locks
+      - name: Create or refresh canonical client from approved locks
         shell: bash
         run: |
           set -euo pipefail
@@ -82,6 +82,10 @@ jobs:
               --client isauto-varna \
               --repository darkapoparka/cars-isautovarna \
               --preset standard
+          else
+            node scripts/refresh-client.mjs \
+              --client isauto-varna \
+              --write
           fi
 
       - name: Install isolated image tooling
@@ -103,6 +107,19 @@ jobs:
           node scripts/repair-isauto-template-integrity.mjs
           node scripts/refine-isauto-raster-logo.mjs
           node scripts/finalize-isauto-logo-assets.mjs
+          node --input-type=module <<'NODE'
+          import path from 'node:path';
+          import { assertTemplatePresentation } from './scripts/lib/client-refresh-presentation.mjs';
+          const root = process.cwd();
+          for (const key of ['auto-best', 'modern', 'carwow']) {
+            assertTemplatePresentation({
+              key,
+              template: path.join(root, 'templates', key),
+              candidate: path.join(root, 'clients', 'isauto-varna', key)
+            });
+          }
+          console.log('IS AUTO dealer overlays preserve all protected template presentation.');
+          NODE
 
       - name: Set up Node 22 for Auto Best
         uses: actions/setup-node@v4
