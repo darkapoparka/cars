@@ -37,7 +37,7 @@ jobs:
         run: |
           set -euo pipefail
           git clone --filter=blob:none --no-tags https://github.com/darkapoparka/cars-template-auto-best.git "$RUNNER_TEMP/cars-template-auto-best"
-          git -C "$RUNNER_TEMP/cars-template-auto-best" checkout --detach f1064337ae6bf781ea48b91a650af185486c71d2
+          git -C "$RUNNER_TEMP/cars-template-auto-best" checkout --detach a54af64f3d7b115e56f1fd016cadcb69de1472b8
           npm ci --no-audit --no-fund --prefix "$RUNNER_TEMP/cars-template-auto-best"
           npx --prefix "$RUNNER_TEMP/cars-template-auto-best" playwright install --with-deps chromium
           npm --prefix "$RUNNER_TEMP/cars-template-auto-best" run validate
