@@ -22,6 +22,15 @@ function publicAssetExists""",
 const RASTER_LOGO_EXTENSION = /\\.(?:png|webp)$/i;
 const isRasterLogo = (value) => typeof value === 'string' &&
   RASTER_LOGO_EXTENSION.test(value.split(/[?#]/, 1)[0]);
+const rasterLogoCandidates = (value) => {
+  const source = String(value || '');
+  if (!source) return [];
+  if (isRasterLogo(source)) return [source];
+  const match = source.match(/^(.*)\\.[^./?#]+([?#].*)?$/);
+  if (!match) return [];
+  const suffix = match[2] || '';
+  return [`${match[1]}.webp${suffix}`, `${match[1]}.png${suffix}`];
+};
 function requireRasterLogo(value, key, surface) {
   if (!isRasterLogo(value)) {
     throw new Error(`${key}: missing committed PNG/WebP logo for ${surface}; SVG, CSS and text fallbacks are not accepted.`);
@@ -42,12 +51,14 @@ replace_once(
     ? ['wordmark-light.svg', 'logo-on-dark.svg', 'logo-on-dark.png', 'logo-light.png', 'logo.png']
     : ['wordmark.svg', 'logo-on-light.svg', 'logo-on-light.png', 'logo.png'];""",
     """  for (const candidate of candidates) {
-    if (isRasterLogo(candidate) && dealerAssetExists(oldVariant, key, candidate)) return candidate;
+    for (const raster of rasterLogoCandidates(candidate)) {
+      if (dealerAssetExists(oldVariant, key, raster)) return raster;
+    }
   }
   const root = publicRoot(key, oldVariant);
   const preferred = dark
-    ? ['logo-on-dark.webp', 'logo-on-dark.png', 'logo-dark.webp', 'logo-dark.png', 'logo-light.webp', 'logo-light.png', 'logo.webp', 'logo.png']
-    : ['logo-on-light.webp', 'logo-on-light.png', 'logo-light.webp', 'logo-light.png', 'logo.webp', 'logo.png'];""",
+    ? ['wordmark-light.webp', 'wordmark-light.png', 'logo-on-dark.webp', 'logo-on-dark.png', 'logo-dark.webp', 'logo-dark.png', 'logo-light.webp', 'logo-light.png', 'wordmark.webp', 'wordmark.png', 'logo.webp', 'logo.png']
+    : ['wordmark.webp', 'wordmark.png', 'logo-on-light.webp', 'logo-on-light.png', 'logo-light.webp', 'logo-light.png', 'logo.webp', 'logo.png'];""",
 )
 
 replace_once(
@@ -110,6 +121,7 @@ replace_once(
     """  importListingFeed,
   pickLogo,
   isRasterLogo,
+  rasterLogoCandidates,
   requireRasterLogo,
   replaceModernListings""",
 )
@@ -221,6 +233,10 @@ test('dealer logos must be committed PNG or WebP assets', () => {
   assert.equal(refreshAdapterInternals.isRasterLogo('/dealer/logo.png'), true);
   assert.equal(refreshAdapterInternals.isRasterLogo('/dealer/logo.WEBP?rev=2'), true);
   assert.equal(refreshAdapterInternals.isRasterLogo('/dealer/logo.svg'), false);
+  assert.deepEqual(
+    refreshAdapterInternals.rasterLogoCandidates('/dealer/wordmark.svg'),
+    ['/dealer/wordmark.webp', '/dealer/wordmark.png']
+  );
   assert.equal(refreshAdapterInternals.isRasterLogo(''), false);
 });
 
