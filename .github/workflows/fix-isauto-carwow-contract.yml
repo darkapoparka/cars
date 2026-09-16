@@ -1,0 +1,75 @@
+name: Apply IS AUTO Carwow contract repair
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fix-isauto-carwow-contract.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Repair generated Carwow contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const buildPath = 'scripts/build-isauto-varna.mjs';
+          let build = fs.readFileSync(buildPath, 'utf8');
+          const siteLine = /(  sourceInventory: '\$\{MOBILE\}', logoLight: '\/brand\/isauto-logo-light\.png', logoDark: '\/brand\/isauto-logo-dark\.png',\r?\n)/;
+          if (!siteLine.test(build)) throw new Error('IS AUTO Carwow site line not found');
+          build = build.replace(siteLine, (line) => line +
+            "  socialLinks: ${JSON.stringify({ facebook: social.facebook, instagram: social.instagram, youtube: '', tiktok: '' })},\n");
+          fs.writeFileSync(buildPath, build);
+
+          const normalizePath = 'scripts/normalize-isauto-varna.mjs';
+          let normalize = fs.readFileSync(normalizePath, 'utf8');
+          const staleCleanup = /let about = await readFrom\(CARWOW,[\s\S]*?await writeTo\(CARWOW, 'src\/lib\/components\/layout\/DesktopDealerFooter\.svelte', footer\);\r?\n/;
+          if (!staleCleanup.test(normalize)) throw new Error('stale Carwow YouTube cleanup not found');
+          normalize = normalize.replace(staleCleanup, [
+            '// Keep the template-owned nullable YouTube contract intact. The shared components',
+            '// hide the link when youtubeChannelUrl is null; deleting the import would leave',
+            '// refreshed component markup out of sync with its data module.',
+            "for (const relative of [",
+            "  'src/lib/components/about/DesktopAboutPage.svelte',",
+            "  'src/lib/components/layout/DesktopDealerFooter.svelte'",
+            ']) {',
+            '  const content = await readFrom(CARWOW, relative);',
+            "  if (!content.includes(\"import { youtubeChannelUrl } from '$lib/data/daynight-videos';\")) {",
+            '    throw new Error(`Missing nullable YouTube data contract in ${relative}`);',
+            '  }',
+            '}',
+            ''
+          ].join('\n'));
+          fs.writeFileSync(normalizePath, normalize);
+          NODE
+          node --check scripts/build-isauto-varna.mjs
+          node --check scripts/normalize-isauto-varna.mjs
+          git diff --check
+      - name: Commit generator repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/fix-isauto-carwow-contract.yml
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
+            echo "main moved while applying IS AUTO repair; refusing to overwrite" >&2
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/build-isauto-varna.mjs scripts/normalize-isauto-varna.mjs .github/workflows/fix-isauto-carwow-contract.yml
+          git commit -m 'Keep IS AUTO Carwow social contract intact'
+          git push origin HEAD:main
