@@ -121,23 +121,17 @@ await copyFile(
   path.join(AUTO_BEST, 'src', 'lib', 'data', 'home.ts')
 );
 
-const autoBestGenericArtwork = [
-  'assets/images/icon-box/car-list3.png',
-  'assets/images/icon-box/car-list6.png',
-  'assets/images/partner/partner1.png',
-  'assets/images/partner/partner2.png',
-  'assets/images/partner/partner3.png',
-  'assets/images/partner/partner4.png',
-  'assets/images/partner/partner5.png',
-  'assets/images/partner/partner6.png',
-  'assets/images/partner/parner7.png',
-  'assets/images/partner/parner8.png',
-  'assets/images/partner/parner9.png',
-  'assets/images/partner/parner10.png',
-  'assets/images/template/body-wagon-v1.png'
+const autoBestGenericDirectories = [
+  'assets/images/icon-box',
+  'assets/images/partner',
+  'assets/images/brand-curated',
+  'assets/images/template'
 ];
-for (const relative of autoBestGenericArtwork) {
-  await copyFile(path.join(AUTO_BEST_TEMPLATE, 'static', relative), path.join(AUTO_BEST, 'static', relative));
+for (const relative of autoBestGenericDirectories) {
+  const source = path.join(AUTO_BEST_TEMPLATE, 'static', relative);
+  if (await exists(source)) {
+    await copyDirectory(source, path.join(AUTO_BEST, 'static', relative));
+  }
 }
 await fs.rm(path.join(AUTO_BEST, 'static', 'auto-best-icon.svg'), { force: true });
 
