@@ -39,10 +39,12 @@ jobs:
           count = text.count(old)
           if count != 1:
               raise SystemExit(f'expected one strict generated YouTube type, found {count}')
-          target.write_text(text.replace(old, new), encoding='utf-8')
+          updated = text.replace(old, new)
+          if updated.count(new) != 1:
+              raise SystemExit('optional YouTube type was not written exactly once')
+          target.write_text(updated, encoding='utf-8')
           PY
           node --check scripts/build-isauto-varna.mjs
-          grep -Fq "youtubeUrl: \`https://\${string}\` | '';" scripts/build-isauto-varna.mjs
           git diff --check
 
       - name: Commit repair
