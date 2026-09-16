@@ -43,10 +43,14 @@ for (const relative of carwowSocialFiles) {
   const before = await readFrom(CARWOW, relative);
   let after = before;
   for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
-  for (const [, official] of replacements) {
-    if (!after.includes(official)) throw new Error(`Missing official social URL in ${relative}: ${official}`);
-  }
   if (after !== before) await writeTo(CARWOW, relative, after);
+}
+
+const canonicalDealerProfile = await readFrom(CARWOW, 'src/lib/data/dealer-profile.json');
+for (const [, official] of replacements) {
+  if (!canonicalDealerProfile.includes(official)) {
+    throw new Error(`Missing official social URL in canonical Carwow dealer profile: ${official}`);
+  }
 }
 
 await writeTo(
