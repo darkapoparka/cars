@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const CLIENT = path.join(ROOT, 'clients', 'isauto-varna');
+const AUTO_BEST = path.join(CLIENT, 'auto-best');
 const CARWOW = path.join(CLIENT, 'carwow');
 const MODERN = path.join(CLIENT, 'modern');
 const MODERN_PUBLIC_DATA = path.join(
@@ -13,7 +14,19 @@ const MODERN_PUBLIC_DATA = path.join(
   'public-marketplace-data.ts'
 );
 
-const socialFiles = [
+async function readFrom(root, relative) {
+  return fs.readFile(path.join(root, relative), 'utf8');
+}
+
+async function writeTo(root, relative, content) {
+  await fs.writeFile(
+    path.join(root, relative),
+    content.endsWith('\n') ? content : `${content}\n`,
+    'utf8'
+  );
+}
+
+const carwowSocialFiles = [
   'src/lib/components/about/DesktopAboutPage.svelte',
   'src/lib/components/home/mobile/mobile-home-data.ts',
   'src/lib/components/layout/DayNightFooter.svelte',
@@ -26,40 +39,75 @@ const replacements = [
   ['https://www.instagram.com/daynight.auto.plovdiv/', 'https://www.instagram.com/is__auto/?hl=bg']
 ];
 
-async function read(relative) {
-  return fs.readFile(path.join(CARWOW, relative), 'utf8');
-}
-
-async function write(relative, content) {
-  await fs.writeFile(path.join(CARWOW, relative), content.endsWith('\n') ? content : `${content}\n`, 'utf8');
-}
-
-for (const relative of socialFiles) {
-  const before = await read(relative);
+for (const relative of carwowSocialFiles) {
+  const before = await readFrom(CARWOW, relative);
   let after = before;
   for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
   for (const [, official] of replacements) {
     if (!after.includes(official)) throw new Error(`Missing official social URL in ${relative}: ${official}`);
   }
-  if (after !== before) await write(relative, after);
+  if (after !== before) await writeTo(CARWOW, relative, after);
 }
 
-await write('src/lib/data/daynight-videos.ts', `// IS AUTO's official website publishes Facebook and Instagram links, but no verified YouTube channel.\n// Keep the inherited template video surface empty instead of presenting another dealer's media.\nexport const youtubeChannelUrl: string | null = null;\nexport const homeVideos = [] as const;\n`);
+await writeTo(
+  CARWOW,
+  'src/lib/data/daynight-videos.ts',
+  `// IS AUTO's official website publishes Facebook and Instagram links, but no verified YouTube channel.\n// Keep the inherited template video surface empty instead of presenting another dealer's media.\nexport const youtubeChannelUrl: string | null = null;\nexport const homeVideos = [] as const;\n`
+);
 
-const emptyVideoComponent = `<script lang="ts">\n\t// Intentionally empty: IS AUTO does not publish a verified YouTube channel.\n</script>\n`;
-await write('src/lib/components/home/desktop/DesktopHomeVideos.svelte', emptyVideoComponent);
-await write('src/lib/components/home/mobile/MobileHomeVideos.svelte', emptyVideoComponent);
+const emptyCarwowVideoComponent = `<script lang="ts">\n\t// Intentionally empty: IS AUTO does not publish a verified YouTube channel.\n</script>\n`;
+await writeTo(CARWOW, 'src/lib/components/home/desktop/DesktopHomeVideos.svelte', emptyCarwowVideoComponent);
+await writeTo(CARWOW, 'src/lib/components/home/mobile/MobileHomeVideos.svelte', emptyCarwowVideoComponent);
 
-let about = await read('src/lib/components/about/DesktopAboutPage.svelte');
+let about = await readFrom(CARWOW, 'src/lib/components/about/DesktopAboutPage.svelte');
 about = about.replace("\timport { youtubeChannelUrl } from '$lib/data/daynight-videos';\n", '');
 about = about.replace(/\n\t\t\t\t\t<a\s+href=\{youtubeChannelUrl\}[\s\S]*?<\/a\s*>/, '');
-await write('src/lib/components/about/DesktopAboutPage.svelte', about);
+await writeTo(CARWOW, 'src/lib/components/about/DesktopAboutPage.svelte', about);
 
-let footer = await read('src/lib/components/layout/DesktopDealerFooter.svelte');
+let footer = await readFrom(CARWOW, 'src/lib/components/layout/DesktopDealerFooter.svelte');
 footer = footer.replace("\timport { youtubeChannelUrl } from '$lib/data/daynight-videos';\n", '');
 footer = footer.replace(/\n\tconst youtubeLink = \{[\s\S]*?\n\t\} as const;\n/, '\n');
 footer = footer.replace(/\n\t\t\t\t\t<a \{\.\.\.youtubeLink\}[\s\S]*?<\/a\s*>/, '');
-await write('src/lib/components/layout/DesktopDealerFooter.svelte', footer);
+await writeTo(CARWOW, 'src/lib/components/layout/DesktopDealerFooter.svelte', footer);
+
+await writeTo(
+  AUTO_BEST,
+  'src/lib/data/videos.ts',
+  `export interface FeaturedVideo {\n  id: string;\n  title: string;\n  duration: string;\n  thumbnail: string;\n}\n\n// IS AUTO does not publish a verified YouTube channel. Do not inherit another dealer's videos.\nexport const featuredVideos: readonly FeaturedVideo[] = [];\n`
+);
+
+const emptyAutoBestVideoComponent = `<script lang="ts">\n  // Intentionally empty: IS AUTO does not publish a verified YouTube channel.\n</script>\n`;
+await writeTo(AUTO_BEST, 'src/lib/components/home/VideoSection.svelte', emptyAutoBestVideoComponent);
+
+for (const relative of [
+  'src/lib/components/company/AboutHero.svelte',
+  'src/lib/components/company/ContactIntent.svelte'
+]) {
+  const before = await readFrom(AUTO_BEST, relative);
+  const after = before.replace(
+    /\r?\n\s*\{ name: 'youtube', label: 'YouTube', href: brand\.youtubeUrl \},?/,
+    ''
+  );
+  if (after.includes("name: 'youtube'")) {
+    throw new Error(`Could not remove the unverified YouTube profile from ${relative}`);
+  }
+  if (after !== before) await writeTo(AUTO_BEST, relative, after);
+}
+
+const mobileMenuPath = 'src/lib/components/layout/MobileMenu.svelte';
+let mobileMenu = await readFrom(AUTO_BEST, mobileMenuPath);
+mobileMenu = mobileMenu.replace(
+  /\r?\n\s*<a \{\.\.\.\{ href: brand\.youtubeUrl \}\} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" \/><span>YouTube<\/span><\/a>/,
+  ''
+);
+mobileMenu = mobileMenu.replace(
+  'grid-template-columns: repeat(3, minmax(0, 1fr));',
+  'grid-template-columns: repeat(2, minmax(0, 1fr));'
+);
+if (mobileMenu.includes('href: brand.youtubeUrl')) {
+  throw new Error('Could not remove the unverified YouTube link from the Auto Best mobile menu.');
+}
+await writeTo(AUTO_BEST, mobileMenuPath, mobileMenu);
 
 let modernPublicData = await fs.readFile(MODERN_PUBLIC_DATA, 'utf8');
 const originalMarketplaceImport = /import \{\r?\n  buildVehicleTaxonomyOptions,\r?\n  curatedVehicleTaxonomy,\r?\n  getMockListingBySlug,\r?\n  getMockListings,\r?\n  leadSite,\r?\n  type MarketplaceSearchParams,\r?\n  mockListings,\r?\n  type VehicleCategory,\r?\n  type VehicleListing,\r?\n  type VehicleTaxonomyMakeOption,\r?\n\} from "@repo\/marketplace";/;
@@ -82,7 +130,11 @@ if (!modernPublicData.includes('const getMockListingBySlug = (slug: string) =>')
   const insertAt = importIndex + deterministicImports.length;
   modernPublicData = `${modernPublicData.slice(0, insertAt)}\n\nconst getMockListingBySlug = (slug: string) =>\n  mockListings.find((listing) => listing.slug === slug);${modernPublicData.slice(insertAt)}`;
 }
-await fs.writeFile(MODERN_PUBLIC_DATA, modernPublicData.endsWith('\n') ? modernPublicData : `${modernPublicData}\n`, 'utf8');
+await fs.writeFile(
+  MODERN_PUBLIC_DATA,
+  modernPublicData.endsWith('\n') ? modernPublicData : `${modernPublicData}\n`,
+  'utf8'
+);
 
 const publicStructuredDataTest = path.join(
   MODERN,
@@ -148,14 +200,17 @@ const forbidden = [
   'kristiankirilov1355',
   '6S3dLIgeAT8',
   'zG6rjLpT4u8',
-  'w_XaGmIWJFM'
+  'w_XaGmIWJFM',
+  'Най-желаната кола в България',
+  'Продадох най-новата Панамера',
+  'Каква е разликата в G-класите'
 ];
 
 async function scan(directory) {
   for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
     const target = path.join(directory, entry.name);
     if (entry.isDirectory()) await scan(target);
-    else if (/\.(?:svelte|ts|js|mjs)$/.test(entry.name)) {
+    else if (/\.(?:svelte|ts|tsx|js|mjs)$/.test(entry.name)) {
       const content = await fs.readFile(target, 'utf8');
       for (const value of forbidden) {
         if (content.includes(value)) throw new Error(`Inherited IS AUTO content remains in ${target}: ${value}`);
@@ -164,5 +219,5 @@ async function scan(directory) {
   }
 }
 
-await scan(path.join(CARWOW, 'src'));
-console.log('IS AUTO content normalized; Modern mock array lookups made deterministic.');
+await scan(CLIENT);
+console.log('IS AUTO content normalized across all variants; Modern mock array lookups made deterministic.');
