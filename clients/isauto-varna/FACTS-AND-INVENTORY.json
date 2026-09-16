@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-16",
+  "dealer": {
+    "slug": "isauto-varna",
+    "name": "IS AUTO Varna",
+    "shortName": "IS AUTO",
+    "country": "BG",
+    "city": "Varna",
+    "address": "Бизнес парк Варна, сграда B6"
+  },
+  "sources": {
+    "officialSite": "https://www.isauto.net/",
+    "contactPage": "https://www.isauto.net/contacts",
+    "mobileProfile": "https://isautovarna.mobile.bg/"
+  },
+  "inventory": [
+    {
+      "id": "is-1001",
+      "title": "Audi R8 Performance V10",
+      "year": 2021,
+      "mileageKm": 75000,
+      "fuel": "Бензин",
+      "transmission": "Автоматик",
+      "priceEur": 148224,
+      "priceBgn": "289 900.95 лв.",
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10",
+      "localizedImage": {
+        "autoBest": "auto-best/static/assets/images/lead/isauto/inventory-1.webp",
+        "modern": "modern/apps/web/public/isauto/inventory-1.webp",
+        "carwow": "carwow/static/assets/isauto/inventory-1.webp"
+      }
+    },
+    {
+      "id": "is-1002",
+      "title": "Audi Q7 50 TDI",
+      "year": 2022,
+      "mileageKm": 57500,
+      "fuel": "Дизел",
+      "transmission": "Автоматик",
+      "priceEur": 67439,
+      "priceBgn": "131 899.22 лв.",
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9",
+      "localizedImage": {
+        "autoBest": "auto-best/static/assets/images/lead/isauto/inventory-2.webp",
+        "modern": "modern/apps/web/public/isauto/inventory-2.webp",
+        "carwow": "carwow/static/assets/isauto/inventory-2.webp"
+      }
+    },
+    {
+      "id": "is-1003",
+      "title": "BMW M5",
+      "year": 2018,
+      "mileageKm": 61000,
+      "fuel": "Бензин",
+      "transmission": "Автоматик",
+      "priceEur": 71530,
+      "priceBgn": "139 900.52 лв.",
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8",
+      "localizedImage": {
+        "autoBest": "auto-best/static/assets/images/lead/isauto/inventory-3.webp",
+        "modern": "modern/apps/web/public/isauto/inventory-3.webp",
+        "carwow": "carwow/static/assets/isauto/inventory-3.webp"
+      }
+    },
+    {
+      "id": "is-1004",
+      "title": "BMW X5 xDrive",
+      "year": 2014,
+      "mileageKm": 196000,
+      "fuel": "Дизел",
+      "transmission": "Автоматик",
+      "priceEur": 24491,
+      "priceBgn": "47 900.23 лв.",
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7",
+      "localizedImage": {
+        "autoBest": "auto-best/static/assets/images/lead/isauto/inventory-4.webp",
+        "modern": "modern/apps/web/public/isauto/inventory-4.webp",
+        "carwow": "carwow/static/assets/isauto/inventory-4.webp"
+      }
+    },
+    {
+      "id": "is-1005",
+      "title": "BMW 750 M Performance",
+      "year": 2019,
+      "mileageKm": 167000,
+      "fuel": "Дизел",
+      "transmission": "Автоматик",
+      "priceEur": 61304,
+      "priceBgn": "119 900.20 лв.",
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3",
+      "localizedImage": {
+        "autoBest": "auto-best/static/assets/images/lead/isauto/inventory-5.webp",
+        "modern": "modern/apps/web/public/isauto/inventory-5.webp",
+        "carwow": "carwow/static/assets/isauto/inventory-5.webp"
+      }
+    },
+    {
+      "id": "is-1006",
+      "title": "Audi A5 Sportback 2.0 TDI",
+      "year": 2018,
+      "mileageKm": 175000,
+      "fuel": "Дизел",
+      "transmission": "Автоматик",
+      "priceEur": 19900,
+      "priceBgn": "38 921.02 лв.",
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745",
+      "localizedImage": {
+        "autoBest": "auto-best/static/assets/images/lead/isauto/inventory-6.webp",
+        "modern": "modern/apps/web/public/isauto/inventory-6.webp",
+        "carwow": "carwow/static/assets/isauto/inventory-6.webp"
+      }
+    }
+  ],
+  "caveat": "Dated official-site snapshot; not a live availability feed."
+}

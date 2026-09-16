@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-16",
+  "brand": {
+    "name": "IS AUTO",
+    "source": "https://www.isauto.net/",
+    "implementation": "Transparent raster wordmark refresh using the public IS AUTO name and red/black brand treatment; no boxed background.",
+    "files": [
+      "auto-best/static/assets/images/lead/isauto/logo-dark.png",
+      "auto-best/static/assets/images/lead/isauto/logo-light.png",
+      "modern/apps/web/public/isauto/logo-dark.png",
+      "modern/apps/web/public/isauto/logo-light.png",
+      "carwow/static/brand/isauto-logo-dark.png",
+      "carwow/static/brand/isauto-logo-light.png"
+    ]
+  },
+  "hero": {
+    "sourceUrl": "https://www.isauto.net/assets/home_top_image-6c0593ce5c4b33195567916b1cfd688ffce5c161da970f43e515f452d71c66d3.png",
+    "localizedAs": [
+      "modern/apps/web/public/isauto/hero.webp",
+      "carwow/static/assets/isauto/hero.webp"
+    ]
+  },
+  "inventory": [
+    {
+      "id": "is-1001",
+      "vehicle": "Audi R8 Performance V10",
+      "pageUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10",
+      "imageUrl": "https://www.isauto.net/uploads/itemphoto/000/000/123/image/4a1581b8b5c92102ea896caa94959584.jpg",
+      "localizedAs": [
+        "auto-best/static/assets/images/lead/isauto/inventory-1.webp",
+        "modern/apps/web/public/isauto/inventory-1.webp",
+        "carwow/static/assets/isauto/inventory-1.webp"
+      ],
+      "capturedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1002",
+      "vehicle": "Audi Q7 50 TDI",
+      "pageUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9",
+      "imageUrl": "https://www.isauto.net/uploads/itemphoto/000/000/105/image/590ee41f59fab00b0238b17bd14f491e.jpg",
+      "localizedAs": [
+        "auto-best/static/assets/images/lead/isauto/inventory-2.webp",
+        "modern/apps/web/public/isauto/inventory-2.webp",
+        "carwow/static/assets/isauto/inventory-2.webp"
+      ],
+      "capturedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1003",
+      "vehicle": "BMW M5",
+      "pageUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8",
+      "imageUrl": "https://www.isauto.net/uploads/itemphoto/000/000/085/image/647062206413b9c69b290ff5317693ca.jpg",
+      "localizedAs": [
+        "auto-best/static/assets/images/lead/isauto/inventory-3.webp",
+        "modern/apps/web/public/isauto/inventory-3.webp",
+        "carwow/static/assets/isauto/inventory-3.webp"
+      ],
+      "capturedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1004",
+      "vehicle": "BMW X5 xDrive",
+      "pageUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7",
+      "imageUrl": "https://www.isauto.net/uploads/itemphoto/000/000/069/image/7a9123aa9a0154990a130fb06b814dbb.jpg",
+      "localizedAs": [
+        "auto-best/static/assets/images/lead/isauto/inventory-4.webp",
+        "modern/apps/web/public/isauto/inventory-4.webp",
+        "carwow/static/assets/isauto/inventory-4.webp"
+      ],
+      "capturedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1005",
+      "vehicle": "BMW 750 M Performance",
+      "pageUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3",
+      "imageUrl": "https://www.isauto.net/uploads/itemphoto/000/000/033/image/0f92bd8701f29295322d8f56a0b24662.jpg",
+      "localizedAs": [
+        "auto-best/static/assets/images/lead/isauto/inventory-5.webp",
+        "modern/apps/web/public/isauto/inventory-5.webp",
+        "carwow/static/assets/isauto/inventory-5.webp"
+      ],
+      "capturedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1006",
+      "vehicle": "Audi A5 Sportback 2.0 TDI",
+      "pageUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745",
+      "imageUrl": "https://www.isauto.net/assets/icons/ios_splash_screens/12.9__iPad_Pro_landscape-d12cf3813a3ac0ac969b67e91a31a1995d44b8ac4683d1bd3f968498a0180514.png",
+      "localizedAs": [
+        "auto-best/static/assets/images/lead/isauto/inventory-6.webp",
+        "modern/apps/web/public/isauto/inventory-6.webp",
+        "carwow/static/assets/isauto/inventory-6.webp"
+      ],
+      "capturedAt": "2026-09-16"
+    }
+  ],
+  "usage": "Localized inside the three prospect variants; no external hotlinks are required at runtime."
+}

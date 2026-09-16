@@ -1,9 +1,13 @@
 {
   "schemaVersion": 1,
   "market": "Bulgaria",
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-16",
   "defaults": {
-    "templateChoices": ["auto-best", "modern", "carwow"],
+    "templateChoices": [
+      "auto-best",
+      "modern",
+      "carwow"
+    ],
     "researchOnly": true,
     "visualAudit": "not_performed_in_this_research",
     "contactHistory": "not_checked",
@@ -24,8 +28,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 86, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://excellent.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 86,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://excellent.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://excellent.mobile.bg/",
       "evidenceNote": "The prior research matched the business to marketplace profiles; its Google Website destination was excellent.cars.bg.",
       "opportunityHypothesis": "An independent branded catalogue and direct vehicle enquiry journey, using the demos already built.",
@@ -39,8 +53,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 68, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://avangard-auto.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 68,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://avangard-auto.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://avangard-auto.mobile.bg/",
       "evidenceNote": "Prior research found marketplace/social presence. Its recorded street number overlaps other dealers; avangardparts.com was not matched to this business.",
       "opportunityHypothesis": "Bring its catalogue and brand story together on an owned site.",
@@ -54,8 +78,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 66, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://championautopro.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 66,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://championautopro.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://championautopro.mobile.bg/",
       "evidenceNote": "The prior Google Website destination was its Mobile.bg profile. Champion Auto Pro was distinguished from Champion Auto at another address.",
       "opportunityHypothesis": "A premium/EV catalogue with clearer vehicle facts and viewing enquiries.",
@@ -69,8 +103,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 59, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://astracar.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 59,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://astracar.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://astracar.mobile.bg/",
       "evidenceNote": "Prior research identified advertised dealership/workshop activity and different showroom/workshop address descriptions.",
       "opportunityHypothesis": "Separate stock, workshop services and visit directions in one verified business presentation.",
@@ -84,8 +128,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 79, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://autolife.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 79,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://autolife.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://autolife.mobile.bg/",
       "evidenceNote": "The accessory shop autolife.bg was not established as this dealership's website.",
       "opportunityHypothesis": "Stock-first browsing with usable directions to the dealership.",
@@ -99,8 +153,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 63, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://priselci.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 63,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://priselci.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://priselci.mobile.bg/",
       "evidenceNote": "Recorded dealer address is in Varna; the business name must not be used to place it in Priselci village.",
       "opportunityHypothesis": "A simple family/value-car catalogue and clear visit/contact path.",
@@ -114,8 +178,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 53, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://ivoauto-varna.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 53,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://ivoauto-varna.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://ivoauto-varna.mobile.bg/",
       "evidenceNote": "Prior research recorded mixed stock including premium vehicles and no matched independent site.",
       "opportunityHypothesis": "A branded mixed-inventory showroom using existing demos.",
@@ -129,8 +203,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 46, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://automarket.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 46,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://automarket.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://automarket.mobile.bg/",
       "evidenceNote": "Its recorded address description uses a distance after a landmark, not house number 300.",
       "opportunityHypothesis": "Compact stock discovery and an accurate visit/directions flow.",
@@ -144,8 +228,19 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 42, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://elitautoimport.mobile.bg/", "caveat": "Prior category snapshot included at least one parts vehicle; 42 is not a sale-ready stock count."},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 42,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://elitautoimport.mobile.bg/",
+        "caveat": "Prior category snapshot included at least one parts vehicle; 42 is not a sale-ready stock count."
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://elitautoimport.mobile.bg/",
       "evidenceNote": "Prior research identified advertised US/Subaru import specialization.",
       "opportunityHypothesis": "Separate available cars, import services and unsuitable parts listings.",
@@ -159,8 +254,18 @@
       "country": "BG",
       "city": "Varna",
       "priority": "reuse-first",
-      "inventory": {"count": 33, "kind": "historical_marketplace_ads", "observedAt": "2026-09-07", "sourceUrl": "https://legendauto1.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_prior_bounded_search", "assessedAt": "2026-09-07", "confidence": "medium"},
+      "inventory": {
+        "count": 33,
+        "kind": "historical_marketplace_ads",
+        "observedAt": "2026-09-07",
+        "sourceUrl": "https://legendauto1.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_prior_bounded_search",
+        "assessedAt": "2026-09-07",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://legendauto1.mobile.bg/",
       "evidenceNote": "Recorded street number overlaps Avangard and a reserve dealer. Different profiles do not settle common ownership.",
       "opportunityHypothesis": "A distinctive branded showroom for its mixed catalogue.",
@@ -174,10 +279,23 @@
       "country": "BG",
       "city": "Sofia",
       "priority": "research-first",
-      "inventory": {"count": 67, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://valentinoauto.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 67,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://valentinoauto.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://valentinoauto.mobile.bg/",
-      "evidenceUrls": ["https://valentinoauto.mobile.bg/", "https://valentinoauto.bazar.bg/"],
+      "evidenceUrls": [
+        "https://valentinoauto.mobile.bg/",
+        "https://valentinoauto.bazar.bg/"
+      ],
       "evidenceNote": "Mobile.bg reports 67 car/SUV advertisements. Exact-name research surfaced marketplace profiles, without a matched independent dealership domain.",
       "opportunityHypothesis": "An owned catalogue and consistent dealer identity across a substantial mixed-price range.",
       "existingClientPath": null,
@@ -190,10 +308,23 @@
       "country": "BG",
       "city": "Plovdiv",
       "priority": "research-first",
-      "inventory": {"count": 54, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://success.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 54,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://success.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://success.mobile.bg/",
-      "evidenceUrls": ["https://success.mobile.bg/", "https://www.auto.bg/dealer/success"],
+      "evidenceUrls": [
+        "https://success.mobile.bg/",
+        "https://www.auto.bg/dealer/success"
+      ],
       "evidenceNote": "The inspected Mobile.bg category reports 54 ads; another marketplace showed a different snapshot total. Do not add the totals together.",
       "opportunityHypothesis": "A premium/mixed-stock catalogue with a direct viewing enquiry for each vehicle.",
       "existingClientPath": null,
@@ -206,10 +337,23 @@
       "country": "BG",
       "city": "Plovdiv",
       "priority": "research-first",
-      "inventory": {"count": 43, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://team-auto.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 43,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://team-auto.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://team-auto.mobile.bg/contacts",
-      "evidenceUrls": ["https://team-auto.mobile.bg/", "https://team-auto.mobile.bg/contacts"],
+      "evidenceUrls": [
+        "https://team-auto.mobile.bg/",
+        "https://team-auto.mobile.bg/contacts"
+      ],
       "evidenceNote": "43 ads are reported; the inspected marketplace contact page did not supply opening hours.",
       "opportunityHypothesis": "Owned stock browsing, verified hours and clearer appointment/directions information.",
       "existingClientPath": null,
@@ -222,10 +366,22 @@
       "country": "BG",
       "city": "Plovdiv",
       "priority": "research-first",
-      "inventory": {"count": 64, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://voivodovauto.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 64,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://voivodovauto.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://voivodovauto.mobile.bg/",
-      "evidenceUrls": ["https://voivodovauto.mobile.bg/"],
+      "evidenceUrls": [
+        "https://voivodovauto.mobile.bg/"
+      ],
       "evidenceNote": "The inspected category contains 64 ads. A standalone site was not matched in the limited exact-name research.",
       "opportunityHypothesis": "A searchable independent catalogue for a sizeable used-car selection.",
       "existingClientPath": null,
@@ -238,10 +394,22 @@
       "country": "BG",
       "city": "Plovdiv",
       "priority": "research-first",
-      "inventory": {"count": 44, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://icars.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 44,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://icars.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://icars.mobile.bg/",
-      "evidenceUrls": ["https://icars.mobile.bg/"],
+      "evidenceUrls": [
+        "https://icars.mobile.bg/"
+      ],
       "evidenceNote": "44 ads, including premium cars. Similar names exist in other cities/countries; icarsauto.mobile.bg and icars.pt must not be assumed to belong to this account.",
       "opportunityHypothesis": "A premium stock-led showroom with clear car-specific appointments.",
       "existingClientPath": null,
@@ -254,10 +422,23 @@
       "country": "BG",
       "city": "Burgas",
       "priority": "research-first",
-      "inventory": {"count": 40, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://fiveauto.mobile.bg/"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 40,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://fiveauto.mobile.bg/"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://fiveauto.mobile.bg/",
-      "evidenceUrls": ["https://fiveauto.mobile.bg/", "https://fiveauto.bazar.bg/"],
+      "evidenceUrls": [
+        "https://fiveauto.mobile.bg/",
+        "https://fiveauto.bazar.bg/"
+      ],
       "evidenceNote": "40 ads are reported, including premium vehicles. Marketplace profiles were found without a confidently matched independent site.",
       "opportunityHypothesis": "A more cohesive branded luxury/mixed-stock presentation and vehicle enquiry flow.",
       "existingClientPath": null,
@@ -270,15 +451,53 @@
       "country": "BG",
       "city": "Burgas",
       "priority": "research-first",
-      "inventory": {"count": 32, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://mg7group.mobile.bg/", "caveat": "Some listings are marked reserved/sold; filter before treating this as available stock."},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 32,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://mg7group.mobile.bg/",
+        "caveat": "Some listings are marked reserved/sold; filter before treating this as available stock."
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://mg7group.mobile.bg/",
-      "evidenceUrls": ["https://mg7group.mobile.bg/"],
+      "evidenceUrls": [
+        "https://mg7group.mobile.bg/"
+      ],
       "evidenceNote": "32 advertised entries, with availability labels requiring reconciliation. No standalone domain was matched in the bounded name search.",
       "opportunityHypothesis": "A branded premium catalogue with unambiguous available, reserved and sold states.",
       "existingClientPath": null,
       "recommendedEntryTemplate": "auto-best",
       "nextAction": "Count genuinely available cars, confirm domain ownership and qualify before spending on three demos."
+    },
+    {
+      "id": "bg-varna-isauto-varna",
+      "name": "IS AUTO Varna",
+      "country": "BG",
+      "city": "Varna",
+      "priority": "new-build",
+      "inventory": {
+        "count": 6,
+        "kind": "verified_official_site_sample",
+        "observedAt": "2026-09-16",
+        "sourceUrl": "https://www.isauto.net/"
+      },
+      "website": {
+        "url": "https://www.isauto.net/",
+        "status": "independent_site_found",
+        "assessedAt": "2026-09-16",
+        "confidence": "high"
+      },
+      "businessContactSource": "https://www.isauto.net/contacts",
+      "evidenceNote": "Official contact page confirms the Varna showroom at Business Park Varna, building B6, its phone, email and opening hours. Six official-site vehicle pages were localized for the prospect demo.",
+      "opportunityHypothesis": "A single direct dealership experience with three selectable design directions, consistent stock presentation and a clear Varna viewing/contact path.",
+      "existingClientPath": "clients/isauto-varna",
+      "recommendedEntryTemplate": "auto-best",
+      "nextAction": "Complete hosted route and responsive QA before any outreach. Reconfirm stock availability and private contact history; outreach remains unapproved."
     }
   ]
 }
