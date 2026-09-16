@@ -7,7 +7,7 @@ export const mockListings: VehicleListing[] = [
     title: "2021 Audi R8 Performance V10",
     description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
     price: { amount: 148224, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/isauto/inventory-1.webp", alt: "Audi R8 Performance V10 в IS AUTO Varna" }],
+    images: [{ url: "/variant-2/isauto/inventory-1.webp", alt: "Audi R8 Performance V10 в IS AUTO Varna" }],
     badges: ["used", "promoted"],
     location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
     features: [{"bg":"Bang & Olufsen","en":"Bang & Olufsen"},{"bg":"Керамични спирачки","en":"Керамични спирачки"},{"bg":"Carbon пакет","en":"Carbon пакет"}],
@@ -20,7 +20,7 @@ export const mockListings: VehicleListing[] = [
     title: "2022 Audi Q7 50 TDI",
     description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
     price: { amount: 67439, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/isauto/inventory-2.webp", alt: "Audi Q7 50 TDI в IS AUTO Varna" }],
+    images: [{ url: "/variant-2/isauto/inventory-2.webp", alt: "Audi Q7 50 TDI в IS AUTO Varna" }],
     badges: ["used", "promoted"],
     location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
     features: [{"bg":"Virtual cockpit","en":"Virtual cockpit"},{"bg":"Подгряване на седалки","en":"Подгряване на седалки"},{"bg":"4-зонов климатроник","en":"4-зонов климатроник"},{"bg":"360° камера","en":"360° камера"}],
@@ -33,7 +33,7 @@ export const mockListings: VehicleListing[] = [
     title: "2018 BMW M5",
     description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
     price: { amount: 71530, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/isauto/inventory-3.webp", alt: "BMW M5 в IS AUTO Varna" }],
+    images: [{ url: "/variant-2/isauto/inventory-3.webp", alt: "BMW M5 в IS AUTO Varna" }],
     badges: ["used", "promoted"],
     location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
     features: [{"bg":"xDrive","en":"xDrive"},{"bg":"Керамични спирачки","en":"Керамични спирачки"},{"bg":"Bowers & Wilkins","en":"Bowers & Wilkins"},{"bg":"Adaptive LED","en":"Adaptive LED"}],
@@ -46,7 +46,7 @@ export const mockListings: VehicleListing[] = [
     title: "2014 BMW X5 xDrive",
     description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
     price: { amount: 24491, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/isauto/inventory-4.webp", alt: "BMW X5 xDrive в IS AUTO Varna" }],
+    images: [{ url: "/variant-2/isauto/inventory-4.webp", alt: "BMW X5 xDrive в IS AUTO Varna" }],
     badges: ["used"],
     location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
     features: [{"bg":"xDrive","en":"xDrive"},{"bg":"Sport пакет","en":"Sport пакет"},{"bg":"Подгряване на седалки","en":"Подгряване на седалки"},{"bg":"Панорамен покрив","en":"Панорамен покрив"}],
@@ -59,7 +59,7 @@ export const mockListings: VehicleListing[] = [
     title: "2019 BMW 750 M Performance",
     description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
     price: { amount: 61304, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/isauto/inventory-5.webp", alt: "BMW 750 M Performance в IS AUTO Varna" }],
+    images: [{ url: "/variant-2/isauto/inventory-5.webp", alt: "BMW 750 M Performance в IS AUTO Varna" }],
     badges: ["used"],
     location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
     features: [{"bg":"M Performance","en":"M Performance"},{"bg":"Laser светлини","en":"Laser светлини"},{"bg":"Alcantara","en":"Alcantara"},{"bg":"Virtual cockpit","en":"Virtual cockpit"},{"bg":"Harman Kardon","en":"Harman Kardon"}],
@@ -72,7 +72,7 @@ export const mockListings: VehicleListing[] = [
     title: "2018 Audi A5 Sportback 2.0 TDI",
     description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
     price: { amount: 19900, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/isauto/inventory-6.webp", alt: "Audi A5 Sportback 2.0 TDI в IS AUTO Varna" }],
+    images: [{ url: "/variant-2/isauto/inventory-6.webp", alt: "Audi A5 Sportback 2.0 TDI в IS AUTO Varna" }],
     badges: ["used"],
     location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
     features: [{"bg":"S line","en":"S line"},{"bg":"Ambient осветление","en":"Ambient осветление"},{"bg":"Virtual cockpit","en":"Virtual cockpit"},{"bg":"Подгряване на седалки","en":"Подгряване на седалки"},{"bg":"Парктроник","en":"Парктроник"},{"bg":"F1 пера","en":"F1 пера"}],
@@ -164,89 +164,6 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
 };
 
 const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
-
-export const getMockListingById = (id: string) =>
-  mockListings.find((listing) => listing.id === id);
-
-const scoreRelatedListing = (
-  source: VehicleListing,
-  candidate: VehicleListing
-) =>
-  Number(candidate.category === source.category) * 4 +
-  Number(candidate.spec.make === source.spec.make) * 3 +
-  Number(candidate.location.city === source.location.city) * 2 +
-  Number(candidate.promoted);
-
-export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
-  mockListings
-    .filter(
-      (listing) => listing.status === "active" && listing.id !== source.id
-    )
-    .map((listing) => ({
-      listing,
-      score: scoreRelatedListing(source, listing),
-    }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(({ listing }) => listing);
-
-export const mockSavedListingIds = ["is-1001", "is-1003", "is-1006"];
-
-export const getMockSavedListings = () =>
-  mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
-
-export interface MockSavedSearch {
-  cadence: "instant" | "daily" | "weekly";
-  description: string;
-  filters: Partial<MarketplaceSearchParams>;
-  id: string;
-  lastRunAt: string;
-  newMatches: number;
-  title: string;
-}
-
-export const mockSavedSearches: MockSavedSearch[] = [
-  {
-    id: "saved-search-premium-suv",
-    title: "Premium SUVs under 100k",
-    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
-    filters: {
-      body: "suv",
-      category: "car",
-      priceMax: 100_000,
-      seller: "dealer",
-    },
-    cadence: "daily",
-    newMatches: 3,
-    lastRunAt: "2026-06-06T07:00:00.000Z",
-  },
-  {
-    id: "saved-search-lease-ev",
-    title: "Lease-ready EVs",
-    description: "Electric lease offers with automatic transmission.",
-    filters: {
-      category: "lease",
-      fuel: "electric",
-      transmission: "automatic",
-    },
-    cadence: "instant",
-    newMatches: 1,
-    lastRunAt: "2026-06-07T06:30:00.000Z",
-  },
-  {
-    id: "saved-search-family-varna",
-    title: "Family cars near Varna",
-    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
-    filters: {
-      category: "car",
-      location: "Varna",
-      mileageMax: 90_000,
-    },
-    cadence: "weekly",
-    newMatches: 0,
-    lastRunAt: "2026-06-03T08:00:00.000Z",
-  },
-];
 
 const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
   "is-1001": "active",

@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 
 	const DEFAULT_DESCRIPTION = `${daynightSite.shortName} предлага проверени автомобили, финансиране и съдействие при покупка в ${daynightSite.city}.`;
-	const DEFAULT_OG_IMAGE = '/brand/daynight-og.svg';
+	const DEFAULT_OG_IMAGE = '/assets/isauto/hero.webp';
 
 	let {
 		title,
@@ -59,7 +59,7 @@
 	{#if isDefaultOg}
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
-		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:type" content="image/webp" />
 		<meta property="og:image:alt" content={`${daynightSite.shortName} ${daynightSite.city}`} />
 	{/if}
 

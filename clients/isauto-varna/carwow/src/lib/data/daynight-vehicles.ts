@@ -33,8 +33,11 @@ export type Car = {
 };
 
 const parseLocalizedNumber = (value: string) => {
-	const match = value.match(/\d[\d\s]*(?:[.,]\d+)?/);
-	return match ? Number(match[0].replaceAll(' ', '').replace(',', '.')) : 0;
+  const normalized = value
+    .replace(/[\s\u00a0\u202f]/g, '')
+    .replace(',', '.')
+    .replace(/[^\d.-]/g, '');
+  return Number(normalized);
 };
 
 const normalizeFuel = (fuel: string) =>
