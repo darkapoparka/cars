@@ -15,6 +15,28 @@ for (const relative of retiredVideoAssets) {
   await fs.rm(path.join(autoBest, relative), { force: true });
 }
 
+const videosDataPath = path.join(autoBest, 'src', 'lib', 'data', 'videos.ts');
+const videosData = await fs.readFile(videosDataPath, 'utf8');
+if (
+  !videosData.includes('export const featuredVideos: readonly FeaturedVideo[] = [];') ||
+  /6S3dLIgeAT8|zG6rjLpT4u8|w_XaGmIWJFM|Най-желаната кола в България|Продадох най-новата Панамера|Каква е разликата в G-класите/.test(videosData)
+) {
+  throw new Error('Unverified inherited Auto Best video data remains in the IS AUTO build.');
+}
+
+const videoSectionPath = path.join(
+  autoBest,
+  'src',
+  'lib',
+  'components',
+  'home',
+  'VideoSection.svelte'
+);
+const videoSection = await fs.readFile(videoSectionPath, 'utf8');
+if (/featuredVideos|<iframe|dn-videos/.test(videoSection)) {
+  throw new Error('The inherited Auto Best video surface is still rendered for IS AUTO.');
+}
+
 const assetCheckPath = path.join(autoBest, 'scripts', 'check-assets.mjs');
 const before = await fs.readFile(assetCheckPath, 'utf8');
 const after = before.replace(
@@ -150,4 +172,4 @@ async function assertNoFragileMockImports(directory) {
 
 await assertNoFragileMockImports(modern);
 
-console.log('Retired Auto Best video assets removed; all Modern mock helper imports normalized.');
+console.log('Retired Auto Best video assets and UI removed; all Modern mock helper imports normalized.');
