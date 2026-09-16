@@ -75,14 +75,12 @@ if (originalMarketplaceImport.test(modernPublicData)) {
 }
 
 if (!modernPublicData.includes('const getMockListingBySlug = (slug: string) =>')) {
-  const insertionPoint = `${deterministicImports}\n`;
-  if (!modernPublicData.includes(insertionPoint)) {
+  const importIndex = modernPublicData.indexOf(deterministicImports);
+  if (importIndex < 0) {
     throw new Error('Could not locate the normalized Modern import insertion point.');
   }
-  modernPublicData = modernPublicData.replace(
-    insertionPoint,
-    `${insertionPoint}\nconst getMockListingBySlug = (slug: string) =>\n  mockListings.find((listing) => listing.slug === slug);\n`
-  );
+  const insertAt = importIndex + deterministicImports.length;
+  modernPublicData = `${modernPublicData.slice(0, insertAt)}\n\nconst getMockListingBySlug = (slug: string) =>\n  mockListings.find((listing) => listing.slug === slug);${modernPublicData.slice(insertAt)}`;
 }
 await fs.writeFile(MODERN_PUBLIC_DATA, modernPublicData.endsWith('\n') ? modernPublicData : `${modernPublicData}\n`, 'utf8');
 
