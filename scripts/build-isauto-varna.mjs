@@ -288,7 +288,7 @@ let autoBestAssetCheck = await fs.readFile(autoBestAssetCheckPath, 'utf8');
 autoBestAssetCheck = autoBestAssetCheck.replace('const guardedMediaCount = 117;', 'const guardedMediaCount = 126;');
 await fs.writeFile(autoBestAssetCheckPath, autoBestAssetCheck, 'utf8');
 
-const textExtensions = new Set(['.ts', '.tsx', '.js', '.mjs', '.svelte', '.json', '.md', '.css', '.html']);
+const textExtensions = new Set(['.ts', '.tsx', '.js', '.mjs', '.svelte', '.json', '.md', '.html']);
 const safeReplacements = [
   ['DAY & NIGHT AUTO GROUP', 'IS AUTO VARNA'], ['DAY NIGHT AUTO GROUP', 'IS AUTO VARNA'],
   ['Day & Night Auto Group', 'IS AUTO Varna'], ['Day Night Auto Group', 'IS AUTO Varna'],
