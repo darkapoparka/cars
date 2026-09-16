@@ -30,9 +30,9 @@
       "version": "1"
     }
   },
-  "sourceCommit": "78b63341c1d1bfd0828a744b5df6022b825eec3c",
+  "sourceCommit": "972cff9c54bf9a4ab4467357e013fe15f4d85a92",
   "packagingVersion": "1",
-  "payloadDigest": "f2e7d42498877b628cea4ff51ddea9c9c167e0577f519ef25ced20438925ac68",
+  "payloadDigest": "c535d3632a80388da3e1d0ec3e8d6ab68ff5c3a2de99bc41f88bc5cf30d0386a",
   "payload": [
     {
       "path": ".gitignore",
@@ -44,7 +44,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "eadde0d6cec0047591fb6f8c84d441f79fd85d1c8eb63a6a54bbcd500b895af0"
+      "sha256": "0b5850fb43f43650c8428ee370ba327f91fb3fa2dca80d547b4da9e0e57e001f"
     },
     {
       "path": "CLIENT.md",
@@ -56,11 +56,11 @@
     },
     {
       "path": "assets/provenance.json",
-      "sha256": "f7fed30dc8bc3c11ee363be25f8ac6cc4d0aaf1e1d8c7b62054ddb9402eacb71"
+      "sha256": "c0fc39090e5a75166ac5e7fda764434a721846ba9cd55f6de97ec990b914a29a"
     },
     {
       "path": "auto-best/.client/project.json",
-      "sha256": "35af9ded9f44a7ee8127bd9cdc30940306b239fa4518e7d2c4ae84b9e8962182"
+      "sha256": "592c3c70a59d07a5f3a509a78382de5025f407359b1a8f34e64041eb539756c2"
     },
     {
       "path": "auto-best/.gitattributes",
@@ -528,7 +528,7 @@
     },
     {
       "path": "auto-best/src/lib/components/home/VideoSection.svelte",
-      "sha256": "1888f9bca8fd37b46ab9fc37858fc1bd741dba98ed558b0db18c56e3a127aab9"
+      "sha256": "a7b288f21bce65306d4f7494f95663869a16f20b1c1a39b8a05efa47b73a3aca"
     },
     {
       "path": "auto-best/src/lib/components/layout/Footer.svelte",
@@ -624,7 +624,7 @@
     },
     {
       "path": "auto-best/src/lib/config/brand.ts",
-      "sha256": "4ffe4d90962b25d629ee8affaceaea706a7aa188d939e604b0067a0c6e207348"
+      "sha256": "ab5274fd828595e0bbf809e52b52860153e9f0a6aeaf706ba8514ce51c5d60c2"
     },
     {
       "path": "auto-best/src/lib/config/lead-site.ts",
@@ -1284,11 +1284,11 @@
     },
     {
       "path": "auto-best/static/dealer/logo-dark.png",
-      "sha256": "f4cb0d8d99de562c00e5c0874ff887a32cec335a84d78ca8ed570ce44f40d47d"
+      "sha256": "5b496fc8b0e344e0208766f729d1aab596f0aacb8b66959089c4f69710bff068"
     },
     {
       "path": "auto-best/static/dealer/logo-light.png",
-      "sha256": "897775888d9d1bfec0ade37fdaa42282a060daa501693b6ecb091858313bb73d"
+      "sha256": "d3e13255af8ca94c6a5f08c0849909de70caf0cff3ec5798473981a4a0f898df"
     },
     {
       "path": "auto-best/static/favicon.ico",
@@ -1320,7 +1320,7 @@
     },
     {
       "path": "carwow/.client/project.json",
-      "sha256": "84dd8e3884fcc30e160b8c8f34f90c4dfc66c16f76e04112646a7c9cd45b347f"
+      "sha256": "ae43494b2f8eaf01de69c9a71a1fbbdec32b56332fb60d98e82e962e82481443"
     },
     {
       "path": "carwow/.env.example",
@@ -1940,7 +1940,7 @@
     },
     {
       "path": "carwow/src/lib/components/home/desktop/DesktopHomeVehicleCategories.svelte",
-      "sha256": "1a77b86561d7e5c19789a94de447027ad7d31f2e2f2d8e5272c342e1a2931c88"
+      "sha256": "e8885642f409db3c357ad7c1159e874da9ce582773255e2380426d2ceb040af3"
     },
     {
       "path": "carwow/src/lib/components/home/desktop/DesktopHomeVideos.svelte",
@@ -6468,11 +6468,11 @@
     },
     {
       "path": "carwow/static/brand/isauto-logo-dark.png",
-      "sha256": "f4cb0d8d99de562c00e5c0874ff887a32cec335a84d78ca8ed570ce44f40d47d"
+      "sha256": "5b496fc8b0e344e0208766f729d1aab596f0aacb8b66959089c4f69710bff068"
     },
     {
       "path": "carwow/static/brand/isauto-logo-light.png",
-      "sha256": "897775888d9d1bfec0ade37fdaa42282a060daa501693b6ecb091858313bb73d"
+      "sha256": "d3e13255af8ca94c6a5f08c0849909de70caf0cff3ec5798473981a4a0f898df"
     },
     {
       "path": "carwow/static/dealer/inventory-1.webp",
@@ -6620,7 +6620,7 @@
     },
     {
       "path": "modern/.client/project.json",
-      "sha256": "4cab029267a99b1caa76b7d5e579db42f389fd101df65b2f47304cb139d7634a"
+      "sha256": "46714550f905f4585ce3470d97a530404ba4a2b48f54498eaf4d0a3c58dd85dc"
     },
     {
       "path": "modern/.cursorrules.example",
@@ -9532,11 +9532,11 @@
     },
     {
       "path": "modern/apps/web/public/isauto/logo-dark.png",
-      "sha256": "f4cb0d8d99de562c00e5c0874ff887a32cec335a84d78ca8ed570ce44f40d47d"
+      "sha256": "5b496fc8b0e344e0208766f729d1aab596f0aacb8b66959089c4f69710bff068"
     },
     {
       "path": "modern/apps/web/public/isauto/logo-light.png",
-      "sha256": "897775888d9d1bfec0ade37fdaa42282a060daa501693b6ecb091858313bb73d"
+      "sha256": "d3e13255af8ca94c6a5f08c0849909de70caf0cff3ec5798473981a4a0f898df"
     },
     {
       "path": "modern/apps/web/public/lead-car-left-v2.webp",
@@ -11688,7 +11688,7 @@
     },
     {
       "path": "modern/packages/marketplace/lead-site.ts",
-      "sha256": "ce27467d9e895037eefc755195067e49e44e807cc5850f258c9b11259dc6753a"
+      "sha256": "79d72aca774ca8a02c35e5a9743a983275abc038404598efc48ad2498fd5de24"
     },
     {
       "path": "modern/packages/marketplace/listing-core.test.ts",

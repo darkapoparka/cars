@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "client": "isauto-varna",
   "templateKey": "carwow",
-  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
   "createdAt": "2026-09-16T00:19:40.746Z",
   "state": "personalized-needs-hosted-qa",
   "selectedHome": "main",
@@ -32,15 +32,15 @@
   },
   "templateSource": {
     "repository": "darkapoparka/cars-template-carwow",
-    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
     "exportPolicy": "cars-source-v1"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "255d2414c6671d68062411b872c941515bcb116d",
+  "workflowCommit": "b42a6a4218fa6a7445d20728b61730e8d4341dfd",
   "businessFacts": "clients/isauto-varna/business-facts.json",
   "stock": "clients/isauto-varna/FACTS-AND-INVENTORY.json",
   "assetProvenance": "clients/isauto-varna/assets/provenance.json",
@@ -53,8 +53,8 @@
   ],
   "refresh": {
     "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "refreshedAt": "2026-09-16T20:07:31.775Z",
-    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "refreshedAt": "2026-09-16T21:01:47.327Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
     "mode": "fresh-template-plus-dealer-overlay"
   }
 }

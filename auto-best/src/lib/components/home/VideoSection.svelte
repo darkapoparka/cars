@@ -21,6 +21,7 @@
   }
 </script>
 
+{#if brand.youtubeUrl && featuredVideos.length > 0}
 <section class="dn-videos" aria-labelledby="videos-title">
   <div class="container">
       <div class="dn-videos__heading dn-home-section-heading dn-home-section-heading--banner dn-home-banner-frame dn-home-banner-copy">
@@ -77,6 +78,7 @@
     </div>
   </div>
 </section>
+{/if}
 
 <style>
   .dn-videos { padding: 32px 0; background: #fff; }
