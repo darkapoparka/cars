@@ -30,26 +30,26 @@ jobs:
 
           target = Path('scripts/normalize-isauto-varna.mjs')
           text = target.read_text(encoding='utf-8').replace('\r\n', '\n')
-          old = """  for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
-  for (const [, official] of replacements) {
-    if (!after.includes(official)) throw new Error(`Missing official social URL in ${relative}: ${official}`);
-  }
-  if (after !== before) await writeTo(CARWOW, relative, after);
-}
+          old = '''  for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
+            for (const [, official] of replacements) {
+              if (!after.includes(official)) throw new Error(`Missing official social URL in ${relative}: ${official}`);
+            }
+            if (after !== before) await writeTo(CARWOW, relative, after);
+          }
 
-await writeTo("""
-          new = """  for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
-  if (after !== before) await writeTo(CARWOW, relative, after);
-}
+          await writeTo('''
+          new = '''  for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
+            if (after !== before) await writeTo(CARWOW, relative, after);
+          }
 
-const canonicalDealerProfile = await readFrom(CARWOW, 'src/lib/data/dealer-profile.json');
-for (const [, official] of replacements) {
-  if (!canonicalDealerProfile.includes(official)) {
-    throw new Error(`Missing official social URL in canonical Carwow dealer profile: ${official}`);
-  }
-}
+          const canonicalDealerProfile = await readFrom(CARWOW, 'src/lib/data/dealer-profile.json');
+          for (const [, official] of replacements) {
+            if (!canonicalDealerProfile.includes(official)) {
+              throw new Error(`Missing official social URL in canonical Carwow dealer profile: ${official}`);
+            }
+          }
 
-await writeTo("""
+          await writeTo('''
           if text.count(old) != 1:
               raise SystemExit(f'expected one social assertion block, found {text.count(old)}')
           target.write_text(text.replace(old, new), encoding='utf-8')
