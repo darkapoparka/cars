@@ -9,10 +9,11 @@ const AUTO_BEST = path.join(CLIENT, 'auto-best');
 const MODERN = path.join(CLIENT, 'modern');
 const CARWOW = path.join(CLIENT, 'carwow');
 const AUTO_BEST_TEMPLATE = path.join(ROOT, 'templates', 'auto-best');
+const MODERN_TEMPLATE = path.join(ROOT, 'templates', 'modern');
 const CARWOW_TEMPLATE = path.join(ROOT, 'templates', 'carwow');
 const scratch = await fs.mkdtemp(path.join(os.tmpdir(), 'isauto-template-integrity-'));
 
-const textExtensions = new Set(['.css', '.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);
+const textExtensions = new Set(['.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);
 const mediaExtension = /\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)$/i;
 
 async function exists(target) {
@@ -162,11 +163,22 @@ if ((await readText(autoBestAppHtml)).includes('auto-best-icon.svg')) {
 }
 
 // ---------------------------------------------------------------------------
-// Modern: all public assets must include the /variant-2 mount prefix.
-// This fixes inventory cards and the hero artwork on cars/import/lease/sell routes.
+// Modern: preserve every template stylesheet and the approved lead hero.
+// Dealer identity, inventory and raster logos remain the only overlay.
 // ---------------------------------------------------------------------------
+const modernTemplateCssFiles = await walk(
+  MODERN_TEMPLATE,
+  (file) => path.extname(file).toLowerCase() === '.css'
+);
+for (const source of modernTemplateCssFiles) {
+  const relative = path.relative(MODERN_TEMPLATE, source);
+  await copyFile(source, path.join(MODERN, relative));
+}
+await fs.rm(path.join(MODERN, 'apps', 'web', 'public', 'isauto', 'hero.webp'), { force: true });
+
 const modernLeadSite = path.join(MODERN, 'packages', 'marketplace', 'lead-site.ts');
 await replaceInFile(modernLeadSite, (content) => content
+  .replace(/heroPath:\s*"[^"]+"/, 'heroPath: "/lead-hero.jpg"')
   .replaceAll('"/isauto/', '"/variant-2/isauto/')
   .replaceAll("'/isauto/", "'/variant-2/isauto/")
   .replaceAll('"/lead-sell-', '"/variant-2/lead-sell-')
@@ -206,7 +218,7 @@ for (let index = 1; index <= 6; index += 1) {
   const inventoryAsset = path.join(MODERN, 'apps', 'web', 'public', 'isauto', `inventory-${index}.webp`);
   if (!(await exists(inventoryAsset))) throw new Error(`Missing Modern inventory asset: ${inventoryAsset}`);
 }
-for (const filename of ['logo-dark.png', 'logo-light.png', 'hero.webp']) {
+for (const filename of ['logo-dark.png', 'logo-light.png']) {
   const target = path.join(MODERN, 'apps', 'web', 'public', 'isauto', filename);
   if (!(await exists(target))) throw new Error(`Missing Modern dealer asset: ${target}`);
 }
@@ -230,13 +242,17 @@ await replaceInFile(carwowVehicles, (content) => {
   return content.replace(parserPattern, parser);
 });
 
+await fs.rm(path.join(CARWOW, 'static', 'assets', 'isauto', 'hero.webp'), { force: true });
+
 const carwowRuntimeRoots = [path.join(CARWOW, 'src'), path.join(CARWOW, 'static')];
 for (const runtimeRoot of carwowRuntimeRoots) {
   await replaceInTree(runtimeRoot, (content) => {
     const hadSvgOg = content.includes('daynight-og.svg');
     let next = content
-      .replaceAll('/brand/daynight-og.svg', '/assets/isauto/hero.webp')
-      .replaceAll('brand/daynight-og.svg', 'assets/isauto/hero.webp')
+      .replaceAll('/brand/daynight-og.svg', '/assets/daynight/hero/home-05-showroom-exterior.webp')
+      .replaceAll('brand/daynight-og.svg', 'assets/daynight/hero/home-05-showroom-exterior.webp')
+      .replaceAll('/assets/isauto/hero.webp', '/assets/daynight/hero/home-05-showroom-exterior.webp')
+      .replaceAll('assets/isauto/hero.webp', 'assets/daynight/hero/home-05-showroom-exterior.webp')
       .replaceAll('/brand/daynight-logo-generated.png', '/brand/isauto-logo-dark.png')
       .replaceAll('brand/daynight-logo-generated.png', 'brand/isauto-logo-dark.png')
       .replaceAll('daynight-favicon.png', 'isauto-logo-dark.png');
