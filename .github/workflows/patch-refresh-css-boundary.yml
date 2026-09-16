@@ -1,4 +1,4 @@
-name: Patch refresh CSS boundary
+name: Patch IS AUTO logo refiner CSS boundary
 
 on:
   push:
@@ -20,28 +20,28 @@ jobs:
           ref: main
           fetch-depth: 0
           sparse-checkout: |
-            scripts/lib/client-refresh-adapters.mjs
-      - name: Keep dealer text replacement out of stylesheets
+            scripts/refine-isauto-raster-logo.mjs
+      - name: Keep identity cleanup out of template stylesheets
         shell: bash
         run: |
           set -euo pipefail
           python <<'PY'
           from pathlib import Path
-          target = Path('scripts/lib/client-refresh-adapters.mjs')
+          target = Path('scripts/refine-isauto-raster-logo.mjs')
           text = target.read_text(encoding='utf-8').replace('\r\n', '\n')
-          old = "const textExtensions = new Set(['.js', '.mjs', '.cjs', '.ts', '.tsx', '.svelte', '.css', '.html', '.json']);"
-          new = "const textExtensions = new Set(['.js', '.mjs', '.cjs', '.ts', '.tsx', '.svelte', '.html', '.json']);"
+          old = "const textExtensions = new Set(['.css', '.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);"
+          new = "const textExtensions = new Set(['.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);"
           if text.count(old) != 1:
               raise SystemExit(f'expected one textExtensions declaration, found {text.count(old)}')
           target.write_text(text.replace(old, new), encoding='utf-8')
           PY
-          node --check scripts/lib/client-refresh-adapters.mjs
+          node --check scripts/refine-isauto-raster-logo.mjs
       - name: Commit CSS boundary fix
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/lib/client-refresh-adapters.mjs
-          git commit -m 'Keep dealer refresh out of template CSS'
+          git add scripts/refine-isauto-raster-logo.mjs
+          git commit -m 'Keep IS AUTO logo refinement out of template CSS'
           git push origin HEAD:main
