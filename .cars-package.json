@@ -30,9 +30,9 @@
       "version": "1"
     }
   },
-  "sourceCommit": "96c9656e6faf1e4825c8fffccce22529ab7ffefb",
+  "sourceCommit": "0ba68fbd7c9ab6fb9bc0f6f99ddc782a544d4883",
   "packagingVersion": "1",
-  "payloadDigest": "9ec05fe7ddd74457070df77feb3261dc233ed8c939268aa49d0918053e96093b",
+  "payloadDigest": "d90ffea8aa2d4354bb1e0ffe08b3c4627c6e9e0c3faee088db8f6b4817da45a3",
   "payload": [
     {
       "path": ".gitignore",
@@ -44,7 +44,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "42b766fe14fc64403c55d478b920942dc06d84ddb852df23619123d7c413aa2a"
+      "sha256": "467234b65308fd593599fd63e7956665bc03375c3bb768a8dcf9bb9a680ca843"
     },
     {
       "path": "CLIENT.md",
@@ -56,7 +56,7 @@
     },
     {
       "path": "assets/provenance.json",
-      "sha256": "f7246fd0f3b5c7c28bba26428b2d05d1e6424a4519cc5a099cc74f38122d35dd"
+      "sha256": "79bef97d14344b55fec1572ea3eef725627b7651cbe3e4262d9667bad93d87e1"
     },
     {
       "path": "auto-best/.client/project.json",
@@ -1060,11 +1060,11 @@
     },
     {
       "path": "auto-best/static/assets/images/lead/isauto/logo-dark.png",
-      "sha256": "1e2e39269d32edcf73f3fe639e18a3faeea93071822d44d60bd2ae6e2dbd9cb5"
+      "sha256": "f4cb0d8d99de562c00e5c0874ff887a32cec335a84d78ca8ed570ce44f40d47d"
     },
     {
       "path": "auto-best/static/assets/images/lead/isauto/logo-light.png",
-      "sha256": "ea54c09421391b9734eaafb13eebd86357722409c9806ec5ee6897e7a00241b2"
+      "sha256": "897775888d9d1bfec0ade37fdaa42282a060daa501693b6ecb091858313bb73d"
     },
     {
       "path": "auto-best/static/assets/images/lead/pdp-finance-clean-mobile.webp",
@@ -6392,11 +6392,11 @@
     },
     {
       "path": "carwow/static/brand/isauto-logo-dark.png",
-      "sha256": "1e2e39269d32edcf73f3fe639e18a3faeea93071822d44d60bd2ae6e2dbd9cb5"
+      "sha256": "f4cb0d8d99de562c00e5c0874ff887a32cec335a84d78ca8ed570ce44f40d47d"
     },
     {
       "path": "carwow/static/brand/isauto-logo-light.png",
-      "sha256": "ea54c09421391b9734eaafb13eebd86357722409c9806ec5ee6897e7a00241b2"
+      "sha256": "897775888d9d1bfec0ade37fdaa42282a060daa501693b6ecb091858313bb73d"
     },
     {
       "path": "carwow/static/icons/apple-touch-icon.png",
@@ -9396,11 +9396,11 @@
     },
     {
       "path": "modern/apps/web/public/isauto/logo-dark.png",
-      "sha256": "1e2e39269d32edcf73f3fe639e18a3faeea93071822d44d60bd2ae6e2dbd9cb5"
+      "sha256": "f4cb0d8d99de562c00e5c0874ff887a32cec335a84d78ca8ed570ce44f40d47d"
     },
     {
       "path": "modern/apps/web/public/isauto/logo-light.png",
-      "sha256": "ea54c09421391b9734eaafb13eebd86357722409c9806ec5ee6897e7a00241b2"
+      "sha256": "897775888d9d1bfec0ade37fdaa42282a060daa501693b6ecb091858313bb73d"
     },
     {
       "path": "modern/apps/web/public/lead-car-left-v2.webp",
