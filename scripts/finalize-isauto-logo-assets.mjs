@@ -52,4 +52,4 @@ for (const target of runtimeDerivatives) {
 
 console.log('IS AUTO WebP logo derivatives archived outside runtime; transparent PNG remains the live logo.');
 
-// Rebuild trigger: run the CSS-safe three-variant build and production deployment.
+// Rebuild trigger: run after exporting the generated Auto Best contact type.
