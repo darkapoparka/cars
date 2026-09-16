@@ -225,3 +225,6 @@ async function scan(directory) {
 
 await scan(CLIENT);
 console.log('IS AUTO content normalized across all variants; Modern mock array lookups made deterministic.');
+
+// Enforce a readable light wordmark on Modern's dark header after personalization.
+await import('./fix-isauto-modern-logo-contrast.mjs');
