@@ -121,9 +121,63 @@ for (const relative of [
   await fs.writeFile(target, normalized, 'utf8');
 }
 
-// Keep getMockRelatedListings on the marketplace public API. Moving it to the
-// testing subpath breaks the Next.js production build because that subpath is
-// intentionally not a stable application import boundary.
+const listingPagePath = path.join(
+  modern,
+  'apps',
+  'web',
+  'app',
+  '[locale]',
+  'listing',
+  '[slug]',
+  'page.tsx'
+);
+let listingPage = await fs.readFile(listingPagePath, 'utf8');
+listingPage = listingPage.replace(/\r?\n  getMockRelatedListings,/, '');
+
+if (!listingPage.includes('const getIsAutoDemoRelatedListings')) {
+  const listingHelperAnchor = 'const getPersistedListing = async (';
+  const listingHelper = `const isAutoDemoListingSlugs = [
+  "audi-r8-performance-v10-2021",
+  "audi-q7-50-tdi-2022",
+  "bmw-m5-xdrive-2018",
+  "bmw-x5-xdrive-2014",
+  "bmw-750-m-performance-2019",
+  "audi-a5-sportback-20-tdi-2018",
+] as const;
+
+const getIsAutoDemoRelatedListings = (source: VehicleListing) =>
+  isAutoDemoListingSlugs
+    .filter((slug) => slug !== source.slug)
+    .flatMap((slug) => {
+      const candidate = getPublicDemoMarketplaceListing(slug);
+      return candidate ? [candidate] : [];
+    })
+    .slice(0, 3);
+
+`;
+
+  if (!listingPage.includes(listingHelperAnchor)) {
+    throw new Error('Could not locate the Modern listing helper insertion point.');
+  }
+
+  listingPage = listingPage.replace(
+    listingHelperAnchor,
+    `${listingHelper}${listingHelperAnchor}`
+  );
+}
+
+listingPage = listingPage.replace(
+  /getMockRelatedListings\(listing\)/g,
+  'getIsAutoDemoRelatedListings(listing)'
+);
+if (
+  listingPage.includes('getMockRelatedListings') ||
+  !listingPage.includes('getIsAutoDemoRelatedListings(listing)')
+) {
+  throw new Error('Could not remove the unstable Modern related-listings mock export.');
+}
+await fs.writeFile(listingPagePath, listingPage, 'utf8');
+
 const forbiddenMockImportPatterns = [
   /import\s+\{[^}]*\bgetMockListingById\b[^}]*\}\s+from\s+["']@repo\/marketplace["']/s,
   /import\s+\{[^}]*\bgetMockListingById\b[^}]*\}\s+from\s+["']\.\/mock-data["']/s
@@ -149,4 +203,4 @@ async function assertNoFragileMockImports(directory) {
 
 await assertNoFragileMockImports(modern);
 
-console.log('Retired Auto Best video assets and UI removed; targeted Modern mock lookups normalized.');
+console.log('Retired Auto Best video assets and UI removed; Modern related listings localized to the IS AUTO demo inventory.');
