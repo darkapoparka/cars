@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 
 	const DEFAULT_DESCRIPTION = `${daynightSite.shortName} предлага проверени автомобили, финансиране и съдействие при покупка в ${daynightSite.city}.`;
-	const DEFAULT_OG_IMAGE = '/assets/isauto/hero.webp';
+	const DEFAULT_OG_IMAGE = '/assets/daynight/hero/home-05-showroom-exterior.webp';
 
 	let {
 		title,
