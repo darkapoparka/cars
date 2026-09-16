@@ -8,6 +8,7 @@ on:
       - .github/workflows/build-isauto-varna.yml
       - scripts/build-isauto-varna.mjs
       - scripts/build-isauto-varna.part-*
+      - scripts/normalize-isauto-varna.mjs
   workflow_dispatch:
 
 permissions:
@@ -51,6 +52,7 @@ jobs:
             cat scripts/build-isauto-varna.part-* > scripts/build-isauto-varna.mjs
           fi
           node --check scripts/build-isauto-varna.mjs
+          node --check scripts/normalize-isauto-varna.mjs
 
       - name: Set up Node 24 for personalization
         uses: actions/setup-node@v4
@@ -87,6 +89,7 @@ jobs:
         run: |
           set -euo pipefail
           node scripts/build-isauto-varna.mjs
+          node scripts/normalize-isauto-varna.mjs
 
       - name: Set up Node 22 for Auto Best
         uses: actions/setup-node@v4
