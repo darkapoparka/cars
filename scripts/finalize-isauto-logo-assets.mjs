@@ -52,4 +52,4 @@ for (const target of runtimeDerivatives) {
 
 console.log('IS AUTO WebP logo derivatives archived outside runtime; transparent PNG remains the live logo.');
 
-// Rebuild trigger: preserve the approved Auto Best video composition.
+// Rebuild trigger: preserve approved component composition while retiring inherited video data.
