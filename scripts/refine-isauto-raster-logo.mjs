@@ -12,7 +12,7 @@ if (!sharpRoot) {
 }
 
 const sharp = createRequire(path.join(sharpRoot, 'package.json'))('sharp');
-const textExtensions = new Set(['.css', '.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);
+const textExtensions = new Set(['.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);
 
 async function exists(target) {
   return fs.access(target).then(() => true, () => false);
