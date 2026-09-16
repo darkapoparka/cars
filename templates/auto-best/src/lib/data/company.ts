@@ -11,7 +11,7 @@ type CompanyService = {
   cta: string;
 };
 
-type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
+export type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
 
 export type ContactTopic = {
   id: ContactTopicId;

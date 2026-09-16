@@ -6,6 +6,7 @@ import { ROOT, args, git, inside, json, validateManifest, writeJson } from './li
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
 import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
 import { applyRefreshAdapter } from './lib/client-refresh-adapters.mjs';
+import { assertTemplatePresentation } from './lib/client-refresh-presentation.mjs';
 
 const TEMPLATE_KEYS = ['auto-best', 'modern', 'import', 'carwow'];
 const exists = (file) => fs.existsSync(file);
@@ -286,7 +287,7 @@ function dirtyClientPaths(root,slug){return git(root,['status','--porcelain=v1',
 export async function planClientRefresh({root=ROOT,slug}){
   const client=inside(root,`clients/${slug}`,{mustExist:true}),dealerFile=path.join(client,'dealer.json');const manifest=manifestIdentity(root,slug,client,exists(dealerFile)?json(dealerFile):null),workflowCommit=git(root,['rev-parse','HEAD']);
   const runDir=inside(root,`runtime/client-refresh/${slug}/regen-${Date.now()}-${process.pid}`);fs.mkdirSync(runDir,{recursive:true});const facts=dealerFacts(client),profile=loadDealerProfile(client,slug),variants=[];
-  for(const vm of manifest.variants){const key=vm.key,oldVariant=path.join(client,key),release=verifyTemplate(root,key),candidate=path.join(runDir,'candidate',key);fs.mkdirSync(path.dirname(candidate),{recursive:true});await copySource(path.join(root,release.snapshotPath),candidate,{key});let overlay=applyRefreshAdapter({key,oldVariant,candidate,profile});overlay.push(...copyDealerDirectories(oldVariant,candidate,key,slug)); overlay.push(...copyReferencedAssets(oldVariant,candidate,key,overlay));resetProjectMetadata(oldVariant,candidate,release,slug,key,workflowCommit,vm.entry);rewriteSourceManifest(root,slug,key,candidate,release,workflowCommit,overlay);fs.writeFileSync(path.join(candidate,'AGENTS.md'),dealerGuidance({slug,variants:manifest.variants,workflowCommit,variant:key}));variants.push({key,release:{repository:release.repository,commit:release.commit,digest:release.digest},candidate,overlay});}
+  for(const vm of manifest.variants){const key=vm.key,oldVariant=path.join(client,key),release=verifyTemplate(root,key),candidate=path.join(runDir,'candidate',key);fs.mkdirSync(path.dirname(candidate),{recursive:true});await copySource(path.join(root,release.snapshotPath),candidate,{key});let overlay=applyRefreshAdapter({key,oldVariant,candidate,profile});overlay.push(...copyDealerDirectories(oldVariant,candidate,key,slug)); overlay.push(...copyReferencedAssets(oldVariant,candidate,key,overlay));assertTemplatePresentation({key,template:path.join(root,release.snapshotPath),candidate});resetProjectMetadata(oldVariant,candidate,release,slug,key,workflowCommit,vm.entry);rewriteSourceManifest(root,slug,key,candidate,release,workflowCommit,overlay);fs.writeFileSync(path.join(candidate,'AGENTS.md'),dealerGuidance({slug,variants:manifest.variants,workflowCommit,variant:key}));variants.push({key,release:{repository:release.repository,commit:release.commit,digest:release.digest},candidate,overlay});}
   const report={schemaVersion:2,slug,workflowCommit,manifest,dirtyBefore:dirtyClientPaths(root,slug),variants,runDir,ready:true};writeJson(path.join(runDir,'proposal.json'),report);return report;
 }
 export async function refreshClient({root=ROOT,slug,write=false}) {

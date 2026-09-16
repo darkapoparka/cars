@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-auto-best",
+  "commit": "a54af64f3d7b115e56f1fd016cadcb69de1472b8",
+  "release": "template-preservation-2026-09-16",
+  "approved": true,
+  "verifiedAt": "2026-09-16T17:55:58.392Z",
+  "runtime": {
+    "node": "22.23.0",
+    "npm": "10.9.8",
+    "lockfile": "package-lock.json"
+  },
+  "modes": {
+    "standalone": "verified by validation plus live-preview browser smoke",
+    "mounted": "requires-dealer-QA"
+  },
+  "checks": [
+    {
+      "command": "npm ci --no-audit --no-fund",
+      "status": "passed"
+    },
+    {
+      "command": "npm run validate",
+      "status": "passed"
+    },
+    {
+      "command": "BASE_URL=http://127.0.0.1:6461 npm run smoke",
+      "status": "passed",
+      "evidenceRun": "darkapoparka/cars/actions/runs/35129838519"
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "widths": [
+      390,
+      1440
+    ],
+    "notes": "Exact commit passed the full responsive, route, form, filter, focus and phase-4 browser matrix in Cars run 35129838519."
+  }
+}

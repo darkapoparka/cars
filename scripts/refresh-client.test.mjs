@@ -86,6 +86,14 @@ test('Auto Best refresh keeps approved hero artwork and restores Navara dealer d
     'src/routes/listing-detail-v1/[id]/+page.svelte'
   ]);
 
+  copy(
+    path.join(NAVARA, 'auto-best/src/lib/config/brand.ts'),
+    path.join(legacy, 'src/lib/config/brand.ts')
+  );
+  copy(
+    path.join(NAVARA, 'auto-best/static/navara/wordmark.png'),
+    path.join(legacy, 'static/navara/wordmark.png')
+  );
   const legacyArtwork = path.join(legacy, protectedFile);
   copy(path.join(template, protectedFile), legacyArtwork);
   fs.appendFileSync(legacyArtwork, '\n// Legacy dealer listing-photo hero override.\n');
@@ -109,6 +117,11 @@ test('Auto Best refresh keeps approved hero artwork and restores Navara dealer d
   assert.match(autoBestInventory, /"body": "SUV"/);
   const autoBestBrand = fs.readFileSync(path.join(root, 'src/lib/config/brand.ts'), 'utf8');
   assert.match(autoBestBrand, /Посещения с предварителна уговорка/);
+  assert.equal(
+    hash(path.join(root, 'src/lib/components/home/Hero.svelte')),
+    hash(path.join(template, 'src/lib/components/home/Hero.svelte')),
+    'dealer refresh must not modify the template-owned hero component'
+  );
   const autoBestHero = fs.readFileSync(path.join(root, 'src/lib/components/home/Hero.svelte'), 'utf8');
   assert.doesNotMatch(autoBestHero, /Студентски град/);
   assert.match(autoBestHero, /brand\.addressLine/);

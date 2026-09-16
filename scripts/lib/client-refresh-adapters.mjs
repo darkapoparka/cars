@@ -45,6 +45,24 @@ const publicRoot = (key, variant) =>
   key === 'modern' ? path.join(variant, 'apps/web/public') : path.join(variant, 'static');
 const findScalar = (text, key) =>
   text.match(new RegExp(`${key}\\s*:\\s*['"]([^'"]+)['"]`))?.[1] || '';
+const RASTER_LOGO_EXTENSION = /\.(?:png|webp)$/i;
+const isRasterLogo = (value) => typeof value === 'string' &&
+  RASTER_LOGO_EXTENSION.test(value.split(/[?#]/, 1)[0]);
+const rasterLogoCandidates = (value) => {
+  const source = String(value || '');
+  if (!source) return [];
+  if (isRasterLogo(source)) return [source];
+  const match = source.match(/^(.*)\.[^./?#]+([?#].*)?$/);
+  if (!match) return [];
+  const suffix = match[2] || '';
+  return [`${match[1]}.webp${suffix}`, `${match[1]}.png${suffix}`];
+};
+function requireRasterLogo(value, key, surface) {
+  if (!isRasterLogo(value)) {
+    throw new Error(`${key}: missing committed PNG/WebP logo for ${surface}; SVG, CSS and text fallbacks are not accepted.`);
+  }
+  return value;
+}
 
 function publicAssetExists(variant, key, publicPath) {
   return Boolean(publicPath?.startsWith('/') &&
@@ -88,12 +106,14 @@ function pickLogo(oldVariant, key, business, dark = false) {
       : dark ? ['logoDark', 'logoLight'] : ['logoLight', 'logoDark'];
   candidates.push(...keys.map((name) => findScalar(config, name)));
   for (const candidate of candidates) {
-    if (dealerAssetExists(oldVariant, key, candidate)) return candidate;
+    for (const raster of rasterLogoCandidates(candidate)) {
+      if (dealerAssetExists(oldVariant, key, raster)) return raster;
+    }
   }
   const root = publicRoot(key, oldVariant);
   const preferred = dark
-    ? ['wordmark-light.svg', 'logo-on-dark.svg', 'logo-on-dark.png', 'logo-light.png', 'logo.png']
-    : ['wordmark.svg', 'logo-on-light.svg', 'logo-on-light.png', 'logo.png'];
+    ? ['wordmark-light.webp', 'wordmark-light.png', 'logo-on-dark.webp', 'logo-on-dark.png', 'logo-dark.webp', 'logo-dark.png', 'logo-light.webp', 'logo-light.png', 'wordmark.webp', 'wordmark.png', 'logo.webp', 'logo.png']
+    : ['wordmark.webp', 'wordmark.png', 'logo-on-light.webp', 'logo-on-light.png', 'logo-light.webp', 'logo-light.png', 'logo.webp', 'logo.png'];
   for (const folder of ['', 'dealer', 'brand', 'navara', business.slug || '']) {
     for (const name of preferred) {
       const rel = [folder, name].filter(Boolean).join('/');
@@ -357,14 +377,13 @@ function patchAutoBestIdentity(candidate) {
 function patchAutoBest({ oldVariant, candidate, profile }) {
   const b = profile.business;
   const freshBrand = read(path.join(candidate, 'src/lib/config/brand.ts'));
-  const logo = pickLogo(oldVariant, 'auto-best', b, false) || findScalar(freshBrand, 'logo');
-  const logoDark = pickLogo(oldVariant, 'auto-best', b, true) || logo;
+  const logo = requireRasterLogo(pickLogo(oldVariant, 'auto-best', b, false), 'auto-best', 'light surfaces');
+  const logoDark = requireRasterLogo(pickLogo(oldVariant, 'auto-best', b, true) || logo, 'auto-best', 'dark surfaces');
   write(path.join(candidate, 'src/lib/config/brand.ts'), autoBestBrand(profile, logo, logoDark));
   write(path.join(candidate, 'src/lib/data/inventory.ts'), autoBestInventory(profile));
   write(path.join(candidate, 'src/lib/data/company.ts'), autoBestCompany(profile));
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'), `${JSON.stringify(profile, null, 2)}\n`);
   patchAutoBestMap(candidate, profile);
-  const heroFile = patchAutoBestHero(candidate);
   const identityFile = patchAutoBestIdentity(candidate);
   return [
     'src/lib/config/brand.ts',
@@ -372,7 +391,6 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
     'src/lib/data/company.ts',
     'src/lib/data/dealer-profile.json',
     'src/lib/components/company/ShowroomMap.svelte (address adapter)',
-    ...(heroFile ? [heroFile] : []),
     identityFile
   ];
 }
@@ -483,7 +501,7 @@ function patchModern({ oldVariant, candidate, profile }) {
   replaceModernListings(listingFile, profile);
   const file = path.join(candidate, 'packages/marketplace/lead-site.ts');
   let text = read(file);
-  const logo = pickLogo(oldVariant, 'modern', b, false) || findScalar(text, 'logoPath');
+  const logo = requireRasterLogo(pickLogo(oldVariant, 'modern', b, false), 'modern', 'primary surfaces');
   const values = {
     accent: b.accent,
     address: b.address,
@@ -575,10 +593,8 @@ function patchCarwowSite(candidate, oldVariant, profile) {
   let text = read(file);
   const oldSite = path.join(oldVariant, 'src/lib/data/daynight-site.ts');
   const old = exists(oldSite) ? read(oldSite) : '';
-  const logoLight = pickLogo(oldVariant, 'carwow', b, false) ||
-    findScalar(old, 'logoLight') || '/brand/daynight-logo.webp';
-  const logoDark = pickLogo(oldVariant, 'carwow', b, true) ||
-    findScalar(old, 'logoDark') || logoLight;
+  const logoLight = requireRasterLogo(pickLogo(oldVariant, 'carwow', b, false), 'carwow', 'light surfaces');
+  const logoDark = requireRasterLogo(pickLogo(oldVariant, 'carwow', b, true) || logoLight, 'carwow', 'dark surfaces');
   const constants = {
     phoneE164: b.phoneE164,
     city: b.city,
@@ -845,10 +861,8 @@ function patchImportDayNight(candidate, oldVariant, profile) {
   const file = path.join(candidate, 'src/lib/data/daynight.ts');
   let text = read(file);
   const freshText = text;
-  const logoDark = pickLogo(oldVariant, 'import', b, true) ||
-    findScalar(freshText, 'logoDark');
-  const logoLight = pickLogo(oldVariant, 'import', b, false) ||
-    findScalar(freshText, 'logoLight') || logoDark;
+  const logoDark = requireRasterLogo(pickLogo(oldVariant, 'import', b, true), 'import', 'dark surfaces');
+  const logoLight = requireRasterLogo(pickLogo(oldVariant, 'import', b, false) || logoDark, 'import', 'light surfaces');
   const makes = unique(profile.listings.map((item) => item.make));
   text = text.replace(/const makeNames = \[[\s\S]*?\] as const;/,
     `const makeNames = ${JSON.stringify(makes, null, 2)} as const;`);
@@ -1082,5 +1096,8 @@ export const refreshAdapterInternals = {
   carwowInventory,
   importListingFeed,
   pickLogo,
+  isRasterLogo,
+  rasterLogoCandidates,
+  requireRasterLogo,
   replaceModernListings
 };

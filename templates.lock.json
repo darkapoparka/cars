@@ -5,64 +5,47 @@
     "auto-best": {
       "repository": "darkapoparka/cars-template-auto-best",
       "status": "approved",
-      "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
-      "release": "promote-2026-09-13",
+      "commit": "a54af64f3d7b115e56f1fd016cadcb69de1472b8",
+      "release": "template-preservation-2026-09-16",
       "snapshotPath": "templates/auto-best",
-      "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+      "digest": "42c4184fd1d8c286a219a0b86ab08057c144e6de47d2ba92814dedd3d2c74c56",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
       "runtime": {
-        "npm": "10.9.4",
-        "lockfile": "package-lock.json",
-        "node": "22.22.0"
+        "node": "22.23.0",
+        "npm": "10.9.8",
+        "lockfile": "package-lock.json"
       },
       "modes": {
-        "mounted": "requires-dealer-QA",
-        "standalone": "verified bounded route matrix at 390/1440; journey finance calculator fill still strict-mode flaky (recorded separately, not a release gate)"
+        "standalone": "verified by validation plus live-preview browser smoke",
+        "mounted": "requires-dealer-QA"
       },
       "qa": {
-        "evidence": "docs/evidence/auto-best-release-2026-09-13.json",
-        "verifiedAt": "2026-09-13T21:43:14.613Z",
+        "evidence": "docs/evidence/auto-best-release-template-preservation-2026-09-16.json",
+        "verifiedAt": "2026-09-16T17:55:58.392Z",
         "checks": [
           {
-            "command": "npm ci",
+            "command": "npm ci --no-audit --no-fund",
             "status": "passed"
           },
           {
-            "command": "npm run check",
+            "command": "npm run validate",
+            "status": "passed"
+          },
+          {
+            "command": "BASE_URL=http://127.0.0.1:6461 npm run smoke",
             "status": "passed",
-            "warnings": 0,
-            "errors": 0
-          },
-          {
-            "command": "npm run build",
-            "status": "passed"
-          },
-          {
-            "command": "route-smoke core+detail+404 matrix at 390 and 1440",
-            "status": "passed"
-          },
-          {
-            "command": "responsive viewport matrix",
-            "status": "passed"
-          },
-          {
-            "command": "retained candidate tree equals committed upstream tree",
-            "status": "passed"
+            "evidenceRun": "darkapoparka/cars/actions/runs/35129838519"
           }
         ],
         "standalone": {
+          "mobile": true,
+          "desktop": true,
           "widths": [
             390,
             1440
           ],
-          "mobile": true,
-          "desktop": true,
-          "interactions": [
-            "route-smoke full PASS",
-            "hero media viewport load PASS",
-            "mobile menu isolation PASS"
-          ]
+          "notes": "Exact commit passed the full responsive, route, form, filter, focus and phase-4 browser matrix in Cars run 35129838519."
         }
       },
       "reason": "Reviewed release selected by the recorded technical QA.",
