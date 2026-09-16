@@ -52,4 +52,4 @@ for (const target of runtimeDerivatives) {
 
 console.log('IS AUTO WebP logo derivatives archived outside runtime; transparent PNG remains the live logo.');
 
-// Rebuild trigger: restore approved Modern and Carwow CSS and hero presentation.
+// Rebuild trigger: run the guarded build from the production-deploy-enabled main branch.
