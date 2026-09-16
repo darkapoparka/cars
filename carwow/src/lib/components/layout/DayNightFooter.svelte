@@ -8,12 +8,12 @@
 	const phoneHref = daynightSite.phoneHref;
 	const contactHref = '/contact';
 	const facebookLinkProps = {
-		href: 'https://www.facebook.com/61566304063141/',
+		href: 'https://www.facebook.com/isauto1',
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
 	const instagramLinkProps = {
-		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
+		href: 'https://www.instagram.com/is__auto/?hl=bg',
 		target: '_blank',
 		rel: 'noopener'
 	} as const;

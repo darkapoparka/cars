@@ -30,9 +30,9 @@
       "version": "1"
     }
   },
-  "sourceCommit": "58dfaaff43866c22aad3a083c625aaff1a8981cf",
+  "sourceCommit": "50a27e6252a3b8744f0e7ba59970d9c1bddfce68",
   "packagingVersion": "1",
-  "payloadDigest": "05784816e26ff074e45ae6524947dd598328b53c98f53c7c1d4b4e934454e401",
+  "payloadDigest": "6bef6959732eb17cfb57802c5f649f146a4353dd22eb8fee3a15cc2b82fe7dfb",
   "payload": [
     {
       "path": ".gitignore",
@@ -44,7 +44,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "462cad7bfd2b09f8d0c34cca0ddaf88b2bd9b4e088a3ccd8a6f7714ab7c5c93c"
+      "sha256": "9e34ec6d77682c278c896401328b24bf0053a65d981972e2afc7b305129d1db6"
     },
     {
       "path": "CLIENT.md",
@@ -1588,7 +1588,7 @@
     },
     {
       "path": "carwow/src/lib/components/about/DesktopAboutPage.svelte",
-      "sha256": "f0143c6484bc5ad3830e40dd91654988aa86cdea8ab74ec67430e4b3e338054e"
+      "sha256": "7e7454fbae72bc34021d3f142154ad177e4369b365e87c326cf901c935967fd8"
     },
     {
       "path": "carwow/src/lib/components/about/DesktopDealerProfilePage.svelte",
@@ -1832,7 +1832,7 @@
     },
     {
       "path": "carwow/src/lib/components/home/desktop/DesktopHomeVideos.svelte",
-      "sha256": "ce6fa03ad59cbf290e1b424a4fa68e7b0eac7a39057eb72725096c5235724165"
+      "sha256": "5d5e89014fc0167ffd2f86f00a09199601bc3db2ec9ea6a8610d891b4965269f"
     },
     {
       "path": "carwow/src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte",
@@ -1884,7 +1884,7 @@
     },
     {
       "path": "carwow/src/lib/components/home/mobile/MobileHomeVideos.svelte",
-      "sha256": "75b8c65b82344b49c6a02213330e32c37e0ff15fc2d42e0ff137f55e201bf106"
+      "sha256": "5d5e89014fc0167ffd2f86f00a09199601bc3db2ec9ea6a8610d891b4965269f"
     },
     {
       "path": "carwow/src/lib/components/home/mobile/home-search.svelte.ts",
@@ -1900,7 +1900,7 @@
     },
     {
       "path": "carwow/src/lib/components/home/mobile/mobile-home-data.ts",
-      "sha256": "23c8cc22293e582ea3deee81f05106c8049fca6957c1ae3f30451466ed97f318"
+      "sha256": "fafb4a98cbf3887077a3ae77347e25b1f8417084eb718f376f854ca908a773a1"
     },
     {
       "path": "carwow/src/lib/components/home/mobile/mobile-home-sheets.css",
@@ -2032,7 +2032,7 @@
     },
     {
       "path": "carwow/src/lib/components/layout/DayNightFooter.svelte",
-      "sha256": "15a28bf45a2b3908dc14fa64951722422ad4427a3ec9469d4edc7fd7a3a16cee"
+      "sha256": "6c5c6699541593aedf6c093e4378bbfc8591033a1cbd584aa91a7b1052e54afd"
     },
     {
       "path": "carwow/src/lib/components/layout/DayNightFooterIcon.svelte",
@@ -2040,7 +2040,7 @@
     },
     {
       "path": "carwow/src/lib/components/layout/DesktopDealerFooter.svelte",
-      "sha256": "1434f5bf1e31e941f1b850d86a7202128378acb60d18559f133535402ed4ca80"
+      "sha256": "31a8461553d36dc74e17d76ba0205e5755145a7bec9b38c5ccc4c6e67483885e"
     },
     {
       "path": "carwow/src/lib/components/layout/DesktopStylesheet.svelte",
@@ -2092,7 +2092,7 @@
     },
     {
       "path": "carwow/src/lib/components/layout/SiteChromeTopBar.svelte",
-      "sha256": "072d048d38d97fa070eb7d10cecb95ff977aa62ad64e0cdb0f8fa63dcdffdfe7"
+      "sha256": "f189accc648fa92b44b092a2d562909ab41614836263d9834a3f90adacccd670"
     },
     {
       "path": "carwow/src/lib/components/layout/SiteFooter.svelte",
@@ -2660,7 +2660,7 @@
     },
     {
       "path": "carwow/src/lib/data/daynight-videos.ts",
-      "sha256": "b48eac107867ccf0945b2182fbe3478b404041bca6f5b7c975e45cb8c115cdd4"
+      "sha256": "a45ddb86702141f0c56a3935a59629a5cc1f61e70777a406b259a65bd5582ef0"
     },
     {
       "path": "carwow/src/lib/data/editorial-guides.ts",
@@ -8968,7 +8968,7 @@
     },
     {
       "path": "modern/apps/web/lib/public-marketplace-data.ts",
-      "sha256": "0bf65d9db5fc2a629831a43c4e023f21ef2668f64e540ba6d8b2f95b3c04063d"
+      "sha256": "897f9784411f084be67d2027594b0a584640bc3897bdd72fa00d756106c60798"
     },
     {
       "path": "modern/apps/web/lib/public-marketplace-pagination.test.ts",
@@ -9008,7 +9008,7 @@
     },
     {
       "path": "modern/apps/web/lib/public-structured-data.test.ts",
-      "sha256": "ca4006ed6b08c19abe14dd45028a110394618c0ecc025488f89ebedcde856fa4"
+      "sha256": "8233454f8ef9c7bb24a827f32511bdb44ff767640e4b40c62375f9ee5b6851c6"
     },
     {
       "path": "modern/apps/web/lib/public-structured-data.ts",
@@ -10900,7 +10900,7 @@
     },
     {
       "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
-      "sha256": "d66369b6e1c5c17506f5ad58ce762556d32cfd1ba25a3da1de94c3666f478472"
+      "sha256": "7f8d9454ed17c892d3802fb1a269a2271e7958f5cd654ef22e013f3f957fa831"
     },
     {
       "path": "modern/packages/marketplace-domain/tsconfig.json",
@@ -11284,7 +11284,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/lib/listing-truth.test.ts",
-      "sha256": "021670889afc7ab1c94a165f83a0d6cc0d67868c2b71c85085b39403c3ecb3df"
+      "sha256": "e8d063600fc8a848b125a2254b7536f9725d98acdc4b0373c073301487d21e1c"
     },
     {
       "path": "modern/packages/marketplace-ui/lib/listing-truth.ts",
@@ -11400,7 +11400,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/lib/vehicle-card-policy.test.ts",
-      "sha256": "7ae26517b49415f44a3e9261c08c7523a0cd100528d159fdd794b4e396d849f3"
+      "sha256": "fe72ff4f4d48d991d50404d3918d676ce80340da72aa411c04295ec12d8251d4"
     },
     {
       "path": "modern/packages/marketplace-ui/lib/vehicle-card-policy.ts",

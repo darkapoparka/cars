@@ -54,7 +54,7 @@
 			<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">
 				<li>
 					<a
-						href="https://www.facebook.com/61566304063141/"
+						href="https://www.facebook.com/isauto1"
 						aria-label="Facebook"
 						target="_blank"
 						rel="noopener"
@@ -65,7 +65,7 @@
 				</li>
 				<li>
 					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
+						href="https://www.instagram.com/is__auto/?hl=bg"
 						aria-label="Instagram"
 						target="_blank"
 						rel="noopener"

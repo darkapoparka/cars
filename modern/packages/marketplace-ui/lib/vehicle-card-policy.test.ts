@@ -1,4 +1,5 @@
-import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";
+import { mockListings } from "@repo/marketplace-domain/testing/mock-data";
+import type { VehicleListing } from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   formatVehicleCardMoney,
@@ -10,7 +11,7 @@ import {
 } from "./vehicle-card-policy";
 
 const getListing = (slug: string): VehicleListing => {
-  const listing = getMockListingBySlug(slug);
+  const listing = mockListings.find((entry) => entry.slug === slug);
 
   if (!listing) {
     throw new Error(`Missing vehicle-card fixture: ${slug}`);

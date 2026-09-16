@@ -15,7 +15,6 @@
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
-	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
 	type AssetHref = `/variant-3/assets/${string}`;
 	const brands = [
 		{ brand: 'Audi', image: 'audi' },
@@ -88,25 +87,17 @@
 				<a href={daynightSite.phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
 				<div class="about-hero-socials">
 					<a
-						href="https://www.facebook.com/61566304063141/"
+						href="https://www.facebook.com/isauto1"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
 					>
 					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
+						href="https://www.instagram.com/is__auto/?hl=bg"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
 					>
-					<a
-						href={youtubeChannelUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="YouTube"
-					>
-						<img src={resolve('/variant-3/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" />
-					</a>
 				</div>
 			</nav>
 		</div>
