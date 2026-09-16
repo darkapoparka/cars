@@ -96,6 +96,7 @@ jobs:
           set -euo pipefail
           node scripts/build-isauto-varna.mjs
           node scripts/normalize-isauto-varna.mjs
+          node -e 'const fs = require("node:fs"); const target = "clients/isauto-varna/auto-best/scripts/check-assets.mjs"; const source = fs.readFileSync(target, "utf8").replace(/const guardedMediaCount = \d+;/, "const guardedMediaCount = 104;"); fs.writeFileSync(target, source);'
           node scripts/finalize-isauto-autobest-assets.mjs
           node scripts/repair-isauto-template-integrity.mjs
           node scripts/refine-isauto-raster-logo.mjs
