@@ -1,0 +1,66 @@
+name: Patch IS AUTO social normalizer
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/patch-isauto-social-normalizer.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          sparse-checkout: |
+            scripts/normalize-isauto-varna.mjs
+      - name: Validate socials at the canonical dealer profile
+        shell: bash
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from pathlib import Path
+
+          target = Path('scripts/normalize-isauto-varna.mjs')
+          text = target.read_text(encoding='utf-8').replace('\r\n', '\n')
+          old = """  for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
+  for (const [, official] of replacements) {
+    if (!after.includes(official)) throw new Error(`Missing official social URL in ${relative}: ${official}`);
+  }
+  if (after !== before) await writeTo(CARWOW, relative, after);
+}
+
+await writeTo("""
+          new = """  for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
+  if (after !== before) await writeTo(CARWOW, relative, after);
+}
+
+const canonicalDealerProfile = await readFrom(CARWOW, 'src/lib/data/dealer-profile.json');
+for (const [, official] of replacements) {
+  if (!canonicalDealerProfile.includes(official)) {
+    throw new Error(`Missing official social URL in canonical Carwow dealer profile: ${official}`);
+  }
+}
+
+await writeTo("""
+          if text.count(old) != 1:
+              raise SystemExit(f'expected one social assertion block, found {text.count(old)}')
+          target.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+          node --check scripts/normalize-isauto-varna.mjs
+      - name: Commit social normalizer fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/normalize-isauto-varna.mjs
+          git commit -m 'Validate IS AUTO socials from canonical profile'
+          git push origin HEAD:main
