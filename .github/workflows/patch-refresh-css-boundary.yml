@@ -1,4 +1,4 @@
-name: Patch IS AUTO generator CSS boundary
+name: Patch Auto Best generated contact type
 
 on:
   push:
@@ -20,28 +20,28 @@ jobs:
           ref: main
           fetch-depth: 0
           sparse-checkout: |
-            scripts/build-isauto-varna.mjs
-      - name: Keep dealer text replacement out of all template stylesheets
+            scripts/lib/client-refresh-adapters.mjs
+      - name: Export the contact topic ID used by shell data
         shell: bash
         run: |
           set -euo pipefail
           python <<'PY'
           from pathlib import Path
-          target = Path('scripts/build-isauto-varna.mjs')
+          target = Path('scripts/lib/client-refresh-adapters.mjs')
           text = target.read_text(encoding='utf-8').replace('\r\n', '\n')
-          old = "const textExtensions = new Set(['.ts', '.tsx', '.js', '.mjs', '.svelte', '.json', '.md', '.css', '.html']);"
-          new = "const textExtensions = new Set(['.ts', '.tsx', '.js', '.mjs', '.svelte', '.json', '.md', '.html']);"
+          old = "type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';"
+          new = "export type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';"
           if text.count(old) != 1:
-              raise SystemExit(f'expected one build textExtensions declaration, found {text.count(old)}')
+              raise SystemExit(f'expected one ContactTopicId declaration, found {text.count(old)}')
           target.write_text(text.replace(old, new), encoding='utf-8')
           PY
-          node --check scripts/build-isauto-varna.mjs
-      - name: Commit generator CSS boundary fix
+          node --check scripts/lib/client-refresh-adapters.mjs
+      - name: Commit generated data contract fix
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/build-isauto-varna.mjs
-          git commit -m 'Keep IS AUTO generator out of template CSS'
+          git add scripts/lib/client-refresh-adapters.mjs
+          git commit -m 'Export generated Auto Best contact topic type'
           git push origin HEAD:main
