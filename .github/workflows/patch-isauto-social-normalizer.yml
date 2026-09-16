@@ -1,4 +1,4 @@
-name: Patch IS AUTO content normalizer
+name: Patch IS AUTO Auto Best finalizer
 
 on:
   push:
@@ -20,35 +20,46 @@ jobs:
           ref: main
           fetch-depth: 0
           sparse-checkout: |
-            scripts/normalize-isauto-varna.mjs
-      - name: Keep the approved Auto Best video component intact
+            scripts/finalize-isauto-autobest-assets.mjs
+      - name: Preserve approved Auto Best video surface
         shell: bash
         run: |
           set -euo pipefail
           python <<'PY'
           from pathlib import Path
 
-          target = Path('scripts/normalize-isauto-varna.mjs')
-          lines = target.read_text(encoding='utf-8').replace('\r\n', '\n').splitlines()
-          prefixes = (
-              'const emptyAutoBestVideoComponent = ',
-              "await writeTo(AUTO_BEST, 'src/lib/components/home/VideoSection.svelte'"
+          target = Path('scripts/finalize-isauto-autobest-assets.mjs')
+          text = target.read_text(encoding='utf-8').replace('\r\n', '\n')
+          old = '''const videoSectionPath = path.join(
+            autoBest,
+            'src',
+            'lib',
+            'components',
+            'home',
+            'VideoSection.svelte'
+          );
+          const videoSection = await fs.readFile(videoSectionPath, 'utf8');
+          if (/featuredVideos|<iframe|dn-videos/.test(videoSection)) {
+            throw new Error('The inherited Auto Best video surface is still rendered for IS AUTO.');
+          }
+
+          '''
+          if text.count(old) != 1:
+              raise SystemExit(f'expected one obsolete VideoSection assertion, found {text.count(old)}')
+          text = text.replace(old, '')
+          text = text.replace(
+              "console.log('Retired Auto Best video assets and UI removed; Modern related listings and seller status fixtures repaired.');",
+              "console.log('Retired Auto Best video data/assets removed while approved component composition is preserved; Modern related listings and seller status fixtures repaired.');"
           )
-          kept = [line for line in lines if not line.startswith(prefixes)]
-          if len(lines) - len(kept) != 2:
-              raise SystemExit(f'expected to remove two VideoSection rewrite lines, removed {len(lines) - len(kept)}')
-          marker = "await writeTo(AUTO_BEST, 'src/lib/components/home/VideoSection.svelte'"
-          if any(marker in line for line in kept):
-              raise SystemExit('VideoSection rewrite remains')
-          target.write_text('\n'.join(kept) + '\n', encoding='utf-8')
+          target.write_text(text, encoding='utf-8')
           PY
-          node --check scripts/normalize-isauto-varna.mjs
-      - name: Commit content normalizer fix
+          node --check scripts/finalize-isauto-autobest-assets.mjs
+      - name: Commit finalizer fix
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/normalize-isauto-varna.mjs
-          git commit -m 'Keep approved Auto Best video composition'
+          git add scripts/finalize-isauto-autobest-assets.mjs
+          git commit -m 'Preserve approved Auto Best video surface'
           git push origin HEAD:main
