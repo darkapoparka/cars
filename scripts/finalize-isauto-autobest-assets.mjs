@@ -99,15 +99,55 @@ for (const relative of [
   await fs.writeFile(target, normalized, 'utf8');
 }
 
-const fragileMockImport = /import\s+\{[^}]*getMockListingBy(?:Id|Slug)[^}]*\}\s+from\s+["']\.\/mock-data["']/m;
-for (const relative of [
-  'packages/marketplace/mock-directory.ts',
-  'packages/marketplace/directory.test.ts'
-]) {
-  const source = await fs.readFile(path.join(modern, relative), 'utf8');
-  if (fragileMockImport.test(source)) {
-    throw new Error(`Fragile Modern mock-data helper import remains in ${relative}.`);
+const listingPagePath = path.join(
+  modern,
+  'apps',
+  'web',
+  'app',
+  '[locale]',
+  'listing',
+  '[slug]',
+  'page.tsx'
+);
+let listingPage = await fs.readFile(listingPagePath, 'utf8');
+listingPage = listingPage.replace(/\r?\n  getMockRelatedListings,/, '');
+if (!listingPage.includes('import { getMockRelatedListings } from "@repo/marketplace-domain/testing/mock-data";')) {
+  listingPage = listingPage.replace(
+    /} from "@repo\/marketplace";\r?\n/,
+    '} from "@repo/marketplace";\nimport { getMockRelatedListings } from "@repo/marketplace-domain/testing/mock-data";\n'
+  );
+}
+if (
+  !listingPage.includes('import { getMockRelatedListings } from "@repo/marketplace-domain/testing/mock-data";') ||
+  /import\s+\{[\s\S]*?getMockRelatedListings[\s\S]*?\}\s+from\s+["']@repo\/marketplace["']/.test(listingPage)
+) {
+  throw new Error('Could not normalize the Modern related-listings helper import.');
+}
+await fs.writeFile(listingPagePath, listingPage, 'utf8');
+
+const forbiddenMockImportPatterns = [
+  /import\s+\{[^}]*\bgetMock[A-Za-z0-9_]*\b[^}]*\}\s+from\s+["']@repo\/marketplace["']/s,
+  /import\s+\{[^}]*\bgetMock[A-Za-z0-9_]*\b[^}]*\}\s+from\s+["']\.\/mock-data["']/s
+];
+
+async function assertNoFragileMockImports(directory) {
+  for (const entry of await fs.readdir(directory, { withFileTypes: true })) {
+    if (entry.name === 'node_modules' || entry.name === '.next') continue;
+    const target = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      await assertNoFragileMockImports(target);
+      continue;
+    }
+    if (!/\.(?:ts|tsx|mts|cts)$/.test(entry.name)) continue;
+    const source = await fs.readFile(target, 'utf8');
+    for (const pattern of forbiddenMockImportPatterns) {
+      if (pattern.test(source)) {
+        throw new Error(`Fragile Modern mock helper import remains in ${target}.`);
+      }
+    }
   }
 }
 
-console.log('Retired Auto Best video assets removed; Modern mock lookups normalized.');
+await assertNoFragileMockImports(modern);
+
+console.log('Retired Auto Best video assets removed; all Modern mock helper imports normalized.');
