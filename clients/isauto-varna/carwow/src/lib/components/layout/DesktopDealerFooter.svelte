@@ -2,18 +2,12 @@
 	import { resolve } from '$app/paths';
 	import { ArrowUpRight, Mail, MapPin, Phone } from '@lucide/svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
-	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
 	import {
 		daynightFooterBottomLinks,
 		daynightDealerFooterGroups as groups
 	} from './daynight-footer-data';
 	const mapLink = {
 		href: daynightSite.mapUrl,
-		target: '_blank',
-		rel: 'noopener noreferrer'
-	} as const;
-	const youtubeLink = {
-		href: youtubeChannelUrl,
 		target: '_blank',
 		rel: 'noopener noreferrer'
 	} as const;
@@ -59,17 +53,14 @@
 				</a>
 				<div class="dealer-footer__socials" aria-label="Социални мрежи">
 					<a
-						href="https://www.facebook.com/61566304063141/"
+						href="https://www.facebook.com/isauto1"
 						aria-label="Facebook"
 						target="_blank"
 						rel="noopener noreferrer"
 						><img src="/assets/icons/input-facebook.svg" width="21" height="21" alt="" /></a
 					>
-					<a {...youtubeLink} aria-label="YouTube"
-						><img src="/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a
-					>
 					<a
-						href="https://www.instagram.com/daynight.auto.plovdiv/"
+						href="https://www.instagram.com/is__auto/?hl=bg"
 						aria-label="Instagram"
 						target="_blank"
 						rel="noopener noreferrer"

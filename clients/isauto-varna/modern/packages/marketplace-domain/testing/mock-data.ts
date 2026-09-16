@@ -165,11 +165,6 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
 
 const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
 
-export const getMockListingBySlug = (slug: string) => {
-  const resolvedSlug = legacyListingSlugAliases[slug] ?? slug;
-  return mockListings.find((listing) => listing.slug === resolvedSlug);
-};
-
 export const getMockListingById = (id: string) =>
   mockListings.find((listing) => listing.id === id);
 
