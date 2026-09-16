@@ -399,7 +399,7 @@ await writeText(`clients/${SLUG}/auto-best/src/lib/data/company.ts`, `import { b
 
 export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
 type CompanyService = { index: string; icon: CompanyServiceIcon; title: string; description: string; href: string; cta: string; };
-type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
+export type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
 export type ContactTopic = { id: ContactTopicId; label: string; title: string; description: string; mobileDescription?: string; };
 
 export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {
