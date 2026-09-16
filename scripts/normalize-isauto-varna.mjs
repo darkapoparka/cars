@@ -63,16 +63,18 @@ const emptyCarwowVideoComponent = `<script lang="ts">\n\t// Intentionally empty:
 await writeTo(CARWOW, 'src/lib/components/home/desktop/DesktopHomeVideos.svelte', emptyCarwowVideoComponent);
 await writeTo(CARWOW, 'src/lib/components/home/mobile/MobileHomeVideos.svelte', emptyCarwowVideoComponent);
 
-let about = await readFrom(CARWOW, 'src/lib/components/about/DesktopAboutPage.svelte');
-about = about.replace("\timport { youtubeChannelUrl } from '$lib/data/daynight-videos';\n", '');
-about = about.replace(/\n\t\t\t\t\t<a\s+href=\{youtubeChannelUrl\}[\s\S]*?<\/a\s*>/, '');
-await writeTo(CARWOW, 'src/lib/components/about/DesktopAboutPage.svelte', about);
-
-let footer = await readFrom(CARWOW, 'src/lib/components/layout/DesktopDealerFooter.svelte');
-footer = footer.replace("\timport { youtubeChannelUrl } from '$lib/data/daynight-videos';\n", '');
-footer = footer.replace(/\n\tconst youtubeLink = \{[\s\S]*?\n\t\} as const;\n/, '\n');
-footer = footer.replace(/\n\t\t\t\t\t<a \{\.\.\.youtubeLink\}[\s\S]*?<\/a\s*>/, '');
-await writeTo(CARWOW, 'src/lib/components/layout/DesktopDealerFooter.svelte', footer);
+// Keep the template-owned nullable YouTube contract intact. The shared components
+// hide the link when youtubeChannelUrl is null; deleting the import would leave
+// refreshed component markup out of sync with its data module.
+for (const relative of [
+  'src/lib/components/about/DesktopAboutPage.svelte',
+  'src/lib/components/layout/DesktopDealerFooter.svelte'
+]) {
+  const content = await readFrom(CARWOW, relative);
+  if (!content.includes("import { youtubeChannelUrl } from '$lib/data/daynight-videos';")) {
+    throw new Error(`Missing nullable YouTube data contract in ${relative}`);
+  }
+}
 
 await writeTo(
   AUTO_BEST,

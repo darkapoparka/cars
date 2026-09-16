@@ -524,6 +524,7 @@ export const daynightSite = {
   mapEmbedSrc: \`https://www.google.com/maps?q=\${encodeURIComponent(location)}&z=16&output=embed\`,
   mapUrl: \`https://www.google.com/maps/search/?api=1&query=\${encodeURIComponent(location)}\`, mapLabel: \`\${shortName}, \${location}\`,
   sourceInventory: '${MOBILE}', logoLight: '/brand/isauto-logo-light.png', logoDark: '/brand/isauto-logo-dark.png',
+  socialLinks: ${JSON.stringify({ facebook: social.facebook, instagram: social.instagram, youtube: '', tiktok: '' })},
   primaryCta: 'Виж наличните автомобили', sellCarCta: 'Продай или замени автомобил', accountCta: 'Свържи се с екипа', phoneCta: 'Обади се за оглед',
   heroTitle: 'IS AUTO VARNA', heroSubtitle: 'Подбрани автомобили и директен контакт с шоурума в Бизнес парк Варна',
   reviewCount: daynightReviewCount, reviewCountLabel: daynightReviewCountLabel, reviewLinkLabel: daynightReviewLinkLabel
