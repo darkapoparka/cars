@@ -56,7 +56,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "IS AUTO Varna в Бизнес парк Варна",
-        url: "/isauto/hero.webp",
+        url: "/variant-2/isauto/hero.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("is-1001", "local"),

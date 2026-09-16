@@ -30,9 +30,9 @@
       "version": "1"
     }
   },
-  "sourceCommit": "5a00dbb328bb514242fff89c6f29abeee9c7049d",
+  "sourceCommit": "96c9656e6faf1e4825c8fffccce22529ab7ffefb",
   "packagingVersion": "1",
-  "payloadDigest": "369e8b7eec8f841de381915bd894a8d8b0f0ec7b3684ba5e88125b193f14959f",
+  "payloadDigest": "9ec05fe7ddd74457070df77feb3261dc233ed8c939268aa49d0918053e96093b",
   "payload": [
     {
       "path": ".gitignore",
@@ -44,7 +44,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "cfdee20ace702582ce5ea537be9c21bb0e92a347c7dd6f7cc98fc2ff3dba385a"
+      "sha256": "42b766fe14fc64403c55d478b920942dc06d84ddb852df23619123d7c413aa2a"
     },
     {
       "path": "CLIENT.md",
@@ -304,7 +304,7 @@
     },
     {
       "path": "auto-best/scripts/check-assets.mjs",
-      "sha256": "21fb69d210d506ebd60ac53e77c5d746068e8bfa4cbed5981fa3f645a2a6ae2a"
+      "sha256": "e704d39777b608b3c0ea7a22d4c8df163590e12f5ed9bc3a06cb6b8e65d946f0"
     },
     {
       "path": "auto-best/scripts/check-domain.mjs",
@@ -364,7 +364,7 @@
     },
     {
       "path": "auto-best/src/app.html",
-      "sha256": "592f3c0564141003e40550aa73d22678976ae059a092aea05fb455fd213c6fae"
+      "sha256": "c6779cc884ece673c8c053717eda9d3b7db81b184c9159896bae662e4fddf362"
     },
     {
       "path": "auto-best/src/hooks.server.ts",
@@ -620,7 +620,7 @@
     },
     {
       "path": "auto-best/src/lib/data/home.ts",
-      "sha256": "c82728531a0d1508747c010779066b5c332c1f923244a70171fc682dc143764e"
+      "sha256": "de2bf9dc3fdccc814bb653e9df9ba60f4e76adb49426f2c1283aae7d550d2146"
     },
     {
       "path": "auto-best/src/lib/data/inventory.ts",
@@ -811,12 +811,20 @@
       "sha256": "65456e3ed0de84598f77ed8a58b3e10edffc4a898ee2f101e56ae5723840ce95"
     },
     {
+      "path": "auto-best/static/assets/images/icon-box/car-list3.png",
+      "sha256": "1a9d0ad2d3bbba6640f531135648418ca9cd2358e3b5687972896fb9ea17c9fe"
+    },
+    {
       "path": "auto-best/static/assets/images/icon-box/car-list4.png",
       "sha256": "f03f8f094494932d0a73c44741e9e8ee03d638ee78b04e166df0deef05d9a59b"
     },
     {
       "path": "auto-best/static/assets/images/icon-box/car-list5.png",
       "sha256": "91a9aa878a6ec639045ad5dc09525a2444078c7aa349f00805683d22ee9ab03b"
+    },
+    {
+      "path": "auto-best/static/assets/images/icon-box/car-list6.png",
+      "sha256": "e1a0894c839e8411c5f454d2696ed7b76371cf8446eecccc359afab5fa8847e1"
     },
     {
       "path": "auto-best/static/assets/images/icon-box/car-list7.png",
@@ -844,183 +852,183 @@
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-about-kristian-v1-light.webp",
-      "sha256": "abb5de01bda8c5c127b4e1cc3f99d62898591d70d4015f083692e76a61ef9797"
+      "sha256": "b3d58392c4f5285409be5cbf484c59b8c89fbd40932efbd96e0fb943ca617bb3"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-about-showroom-v1-light.webp",
-      "sha256": "f87497bee8ff23934855e0b392d849bbaedb33d5a0dc9192de2d3e0f7c44fc64"
+      "sha256": "6b26a7733ccd2a5a9f292c3781a6269861b7d16cc363a0666ae279888ff606a8"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-blog-hero-v2.webp",
-      "sha256": "eccef122cca7a984710910d1a9106b5a0bf627b1dcbdf8f682d205510def464c"
+      "sha256": "bb948611c607935f49a7e87a5af33e75e48725438ed56b55da52a8056cfb7530"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-collection-banner-v2.webp",
-      "sha256": "4714ec657a60ac185596035acfaff30b0e12123073e7272d3ebd4e9fd3682d5a"
+      "sha256": "d9f896f744abf519acbd28897c7eabd6e9082bddfa0174ff52506d01fdb09e75"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-contact-email-red-v1.webp",
-      "sha256": "6c5c1e61e6884d290420e17d1806b234b1835b2fc87fd8d34e47d0bb84234725"
+      "sha256": "fc14424f78e1a2961fef0cae0af6fa15184b44d21ec751565167a0b2119eca80"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-contact-email-v1-light.webp",
-      "sha256": "f87497bee8ff23934855e0b392d849bbaedb33d5a0dc9192de2d3e0f7c44fc64"
+      "sha256": "f08fef2a380c39a1ea8d9f99488187e1fbb795b7776d8e42dfa64666ef263a85"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-contact-hero-v2.webp",
-      "sha256": "c0df436759fdebd91b58d7294ae7f3e77e7948b002fe450dc5bf53da79b0b14a"
+      "sha256": "fe0e053b5c63bc3facd544378f5482f98005944803ba733c8f8b5cadd35ff80b"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-contact-kristian-phone-v1-light.webp",
-      "sha256": "abb5de01bda8c5c127b4e1cc3f99d62898591d70d4015f083692e76a61ef9797"
+      "sha256": "017f9ded454ab0ab948737e003354b25af9f5d3d4546d114496f0015d849218b"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-contact-phone-red-v1.webp",
-      "sha256": "abb5de01bda8c5c127b4e1cc3f99d62898591d70d4015f083692e76a61ef9797"
+      "sha256": "1b4934a5d0c1807c69f40e49144873215e7f2ae33f023904dbc43a86b4804b69"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-a45-v1.webp",
-      "sha256": "708d51ded03fb1d76da608a4f423c9a9b7bc1fa7859e90315c3dba701117d519"
+      "sha256": "dac81d872cf50c8142cd0ade045d80962ed2aa9acaefcb62cb2e2d835ff1f277"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-amggt-v1.webp",
-      "sha256": "74a349b913d7074af641786b3f48f5565d775af429b576c2a2d9800df4c59e6c"
+      "sha256": "42c3099748c113bbc36dc10c969f0a63b2074d43efac35e586422ae85158b329"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-e63-v1.webp",
-      "sha256": "bf897424c57ab72fdcbc6e536a1254468a82790eb21c43678264cbf5d0526beb"
+      "sha256": "18a7c8a7448e0abb5a361a8f83c5ac13c584182ba2396b98885aee2c0b53d111"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-gclass-v1.webp",
-      "sha256": "bddf518355c6fc42b963b2d5e027e516f7e36ce77470843d84f80df2f548d233"
+      "sha256": "18a3a6d3a1cf1153455add77153db987ed6a7240d99787be00981c8f995d1f6a"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-golf-v1.webp",
-      "sha256": "b69ceb63fb68299fe5e90ea6fd8c8057e4994d19c13c81f54f1959d2e0420bbc"
+      "sha256": "ae2508c29902b35c5ae02a738e60b3d6805ce9e6d7688e7c13fd0ae24b885888"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-graphite-v1.webp",
-      "sha256": "c7375e2eaed0fd0a49b449128e1f6a4605c7ce1f836c96f446225c26081838fc"
+      "sha256": "2e2a1144f12db5fcea849fb76434df8a00adc2b9589e7956d203e9abc8da05b5"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-m4-v1.webp",
-      "sha256": "708d51ded03fb1d76da608a4f423c9a9b7bc1fa7859e90315c3dba701117d519"
+      "sha256": "eee707e7a3a891a934e7346b5a33c9e77f3dd2128768458f09fe2d5a5150f627"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-m5-v1.webp",
-      "sha256": "74a349b913d7074af641786b3f48f5565d775af429b576c2a2d9800df4c59e6c"
+      "sha256": "891d287bb21fe52e43ddb4e8b204c2eb8645f7401974f671f1559a9b2599d19c"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-porsche-v1.webp",
-      "sha256": "bf897424c57ab72fdcbc6e536a1254468a82790eb21c43678264cbf5d0526beb"
+      "sha256": "740d09a56a3524ef81d76298cf0b3f1953c2f921395c0d05ac4d69c309f77d44"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-rs5-v1.webp",
-      "sha256": "bddf518355c6fc42b963b2d5e027e516f7e36ce77470843d84f80df2f548d233"
+      "sha256": "eaa9c59c37090f1571972836b8ead35c1a118089c7eae0e7c5c1af147b104e13"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-silver-v1.webp",
-      "sha256": "b69ceb63fb68299fe5e90ea6fd8c8057e4994d19c13c81f54f1959d2e0420bbc"
+      "sha256": "67094fedb8305304ba8b0d2842f5d2c7d47979ed1bb42fe51688ab3f77b765ff"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-cutout-urus-v1.webp",
-      "sha256": "c7375e2eaed0fd0a49b449128e1f6a4605c7ce1f836c96f446225c26081838fc"
+      "sha256": "1c7f0d9728f03a7f7fe07d78ef8f5019bcde844fed9c21e07ca4bb38b929d027"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-editorial-banner-v2.webp",
-      "sha256": "3bf172c28913be39a7a79fb5e0532e0f2da1c17e07451032672d6d99d2f4d52b"
+      "sha256": "54a9ab5cd4bbbfccbcde9f33e253524ef22b92942878b7f3074f2b80751a5c2a"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-graphite-color-v1.webp",
-      "sha256": "ac5bf6c29a9d961a79ed493aeaba60995f3662772d2aff4ecad23b0a83bc4666"
+      "sha256": "f83edea40a244b762716873ac4baeb6ac7aeea8ca3e27b143cf43761681c44ef"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-guide-import.webp",
-      "sha256": "8877062d20d1c5ef8c26cd5d5e26358d1f7ec571ec76228b6edfaee232747750"
+      "sha256": "e0f7e8bc80f0ad8e2ffe947183db974b8481673771d31888a4d5d017fcf0a9f0"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-guide-inspection.webp",
-      "sha256": "8877062d20d1c5ef8c26cd5d5e26358d1f7ec571ec76228b6edfaee232747750"
+      "sha256": "93ba31dffd89b4e014fad2465645908c5624e4a512a8b87f6a0fb2d37e7aae02"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-guide-leasing.webp",
-      "sha256": "8877062d20d1c5ef8c26cd5d5e26358d1f7ec571ec76228b6edfaee232747750"
+      "sha256": "8ed8b3cc3fef615277afdb02c7f8bd2c8ce43a5f4825fa29b45689c06d9c7a2f"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-guide-yellow-v1.webp",
-      "sha256": "7e28b8e776a37f843f50462d94537e38540b5901461d06a53bfc636d87cf9820"
+      "sha256": "c3c0376130deb45dd3a829dffcc5dc6376383c64610917973eddc5c5135b19ac"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-hero-graphite-v1.webp",
-      "sha256": "7e28b8e776a37f843f50462d94537e38540b5901461d06a53bfc636d87cf9820"
+      "sha256": "282ca58808b79a13d74aeffa072a0e42b7585dd4a5fda530f2aca310a3dc3d7c"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-hero-silver-v1.webp",
-      "sha256": "7e28b8e776a37f843f50462d94537e38540b5901461d06a53bfc636d87cf9820"
+      "sha256": "cd3c12b31c74c4b10c888c3a81019f40adf228134cb15ef9870b7043dc32c59f"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-home-black-v1.webp",
-      "sha256": "2da30f29f77d35110f65e4ab14e1f55ebb17e91af8efe57ad8488b19ca2e4167"
+      "sha256": "42b8af4cbf13328e558cc151a91517dc0c365551c7da48c8bc574f1c7337ccaf"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-home-hero-v3.webp",
-      "sha256": "eb2efe200c2d726c92467fe2aaf7183027fa80ec8e7b11da26fad418325d7690"
+      "sha256": "6496510def178620c33aa4403c7945b0dc9fa05e337aa489110b87d90686c135"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-import-banner-v1.webp",
-      "sha256": "7e28b8e776a37f843f50462d94537e38540b5901461d06a53bfc636d87cf9820"
+      "sha256": "745199db8d7ea1332d34b340dfedcdf64a09bb6cc5283ef7eff58e099d1af4f0"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-keys-yellow-v1.webp",
-      "sha256": "7e28b8e776a37f843f50462d94537e38540b5901461d06a53bfc636d87cf9820"
+      "sha256": "19bb9764b5194c5cde1e01b46302e525240bd074fb48a2bcb78be6c77c5a3b2c"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-logo.png",
-      "sha256": "65c952f08d84ad089d045d5b0e569409b41dec35de50d9fc20a79c8ff163ec72"
+      "sha256": "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-mobile-import-v1.webp",
-      "sha256": "16af0ccc4a2e7a2b29f5d5d6ad672147703cae69ee9150649c6daab91fdc1517"
+      "sha256": "e6484f58df263c72973f2eff88bcad923dc53c6c9d75e46205a48baa4d76cd2b"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-mobile-sell-v1.webp",
-      "sha256": "82b5a7f5c339edd4d8dfb58f899c09e4bff40396294c3e8dbeb4f9d981e4f9a1"
+      "sha256": "bfb59bc91685cb9108afed45500a933bc6c719a6262877f310c396ec06cfe9c1"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-portrait-color-v1.webp",
-      "sha256": "f14b3f69ab4d3803413cb0e5ae512e729953650b4a4979527aeeead257fbddef"
+      "sha256": "a01b8fd3df9084e1b5f70d7b26396acec6136c527e263c3eeb3c9beed32d5a97"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-sell-banner-v1.webp",
-      "sha256": "7e28b8e776a37f843f50462d94537e38540b5901461d06a53bfc636d87cf9820"
+      "sha256": "fcd8f4f35ca6e9814b8e6a038a90381e2df22457fe9b6375ba76b77b65bf9e62"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-sell-banner-v2.webp",
-      "sha256": "e1366d7047435c7d7a5bdf084301ae4de95c0bbcdcf2bae060a2d68451b51a3d"
+      "sha256": "393fe03e5694f948ff56bf2b124734119a371fcaa4125a62b560322136d23f7f"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-showroom-color-v1.webp",
-      "sha256": "1673ee2086f9fc6bd41396097639156b8888cc45255d0e69674d1d2889fe737d"
+      "sha256": "d1b6d0d6d3215e125a15b64f9c6d12bf459c8ab8c9d965beb94b01de99c5eb26"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-silver-color-v1.webp",
-      "sha256": "0e99784bbff991d7d6afbebe6d07de2ef042036752b562c733acfa8e5c8b461a"
+      "sha256": "c74fced7b50da9dc45b4d37c66250343cfdf91eaadc06139636d3bcb6c81582d"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-studio-cars-v1.webp",
-      "sha256": "8877062d20d1c5ef8c26cd5d5e26358d1f7ec571ec76228b6edfaee232747750"
+      "sha256": "23dd9e6f0cc391878bbc10a28479b5579a4905e333e3de587db8d503a1e3a2c3"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-studio-guide-v1.webp",
-      "sha256": "8877062d20d1c5ef8c26cd5d5e26358d1f7ec571ec76228b6edfaee232747750"
+      "sha256": "c01c841fab26485ffac3c5d8f23e046c07fb47afea7abf0e5893c0e4b0d3b9df"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-studio-keys-v1.webp",
-      "sha256": "8877062d20d1c5ef8c26cd5d5e26358d1f7ec571ec76228b6edfaee232747750"
+      "sha256": "993523b38286449b2e84cab96598203945fdbc84411aeed2afa40807c1267f1a"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-urus-front-v1.webp",
-      "sha256": "8de1b62b52b12bf482fc629efa18b0e8f04567d79919d53c040a366fa76f9777"
+      "sha256": "067acd750a9cc40c21c513b395661be16d66b9d1a1f971e1752ed1adda171f9b"
     },
     {
       "path": "auto-best/static/assets/images/lead/import-how-generated-v1.webp",
@@ -1091,12 +1099,52 @@
       "sha256": "b9b220c9ab29e91a90d4e6dbf8c458aaf15d9d750e4fd08b80017b212710e816"
     },
     {
+      "path": "auto-best/static/assets/images/partner/parner10.png",
+      "sha256": "c766fb50b11985cadfcd040a3f8b09861eac7bcd736818ad521c6a2ad54beb27"
+    },
+    {
       "path": "auto-best/static/assets/images/partner/parner11.png",
       "sha256": "8441496b7499d543d5e2dfebc9b4ec0b1a354cb51f3e2895cc1139ce81fdf0ce"
     },
     {
       "path": "auto-best/static/assets/images/partner/parner12.png",
       "sha256": "8cec077472ed19dec9e3a7f136f4de8ede5fe526383972364e71722dfb9bd6e7"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/parner7.png",
+      "sha256": "8f773623b38d2ed8f40655eece46ed49969957354e34df7dfb8e5806b44ab8fe"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/parner8.png",
+      "sha256": "5e0295c9b6b30f606f60ed3f3b8ec9c078d431fd2ac5064ef579d92a2487c107"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/parner9.png",
+      "sha256": "2423d254763c975bd21259f9f350e817f601318cfea1fdaa5f3649376eac1bcb"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/partner1.png",
+      "sha256": "fd0644a6659ed7b041a5a527b8cbe706e85a3d313f3c0cc2586ff4d91aa5b4e2"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/partner2.png",
+      "sha256": "72f825dd15c98d1c37d1960520587d7b2dcdb4308f569a3e674fffe1ae4dc36e"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/partner3.png",
+      "sha256": "894f4d69cf82bf7aac80b2315bd5c570c1171b3f3e7f881b40643fa572c2f950"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/partner4.png",
+      "sha256": "95e13967fff39b7ca18813314f66a18c61540fb2b780d93f2df8cacd539d9fce"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/partner5.png",
+      "sha256": "65fb90df18b8d8ac9c4cc1a683a73c5d34d436a268d257ae43945d286f37a8c2"
+    },
+    {
+      "path": "auto-best/static/assets/images/partner/partner6.png",
+      "sha256": "d496020efe2c13f27e3167ea3804f0f07fd316b8ec3672be7fde878c56559432"
     },
     {
       "path": "auto-best/static/assets/images/section/bg-12.jpg",
@@ -1117,6 +1165,10 @@
     {
       "path": "auto-best/static/assets/images/section/car-slide3.png",
       "sha256": "33b192810f31078c42ac072a65a7e4e3e14d12520bd7990b4870c21969de6f0a"
+    },
+    {
+      "path": "auto-best/static/assets/images/template/body-wagon-v1.png",
+      "sha256": "5d70b2a70636d8700570c199589c6a7d714a7dab6021a6aefd0f8123c6da259b"
     },
     {
       "path": "auto-best/static/assets/images/template/menu-editorial-import-v1.png",
@@ -1161,10 +1213,6 @@
     {
       "path": "auto-best/static/assets/images/template/service-sell-key-v1.png",
       "sha256": "bfe86fb2f41f000da35e04e3d67f03336657ec9b9a3a311b7981912d7c4eed3e"
-    },
-    {
-      "path": "auto-best/static/auto-best-icon.svg",
-      "sha256": "d1980d1ba924e291dad20f83e64964ed146504c0230608116e230caab512550b"
     },
     {
       "path": "auto-best/static/favicon.ico",
@@ -1540,7 +1588,7 @@
     },
     {
       "path": "carwow/src/app.html",
-      "sha256": "18581b292cfe31cbcb7bea668897f028b92767e61e61eefabea92baeec0323c2"
+      "sha256": "9384ee2505384e26c8e80263589e835633136e8a46f75b91d871f3cca527d96b"
     },
     {
       "path": "carwow/src/hooks.server.ts",
@@ -1764,7 +1812,7 @@
     },
     {
       "path": "carwow/src/lib/components/home/HomePageHead.svelte",
-      "sha256": "2989fbbe59590deea9e7d3a751d44e3f63cce8c5f8d330a5c02abf487ccf644a"
+      "sha256": "90338a7bd63cd4bd659ba1f677289fc913bfc9ae086247b722a00e3088f855e0"
     },
     {
       "path": "carwow/src/lib/components/home/HomeQuickFilterModalStyles.svelte",
@@ -2132,7 +2180,7 @@
     },
     {
       "path": "carwow/src/lib/components/seo/RouteSeo.svelte",
-      "sha256": "abe38df33ac914149b4969ff95ff94cb3c7ddadf33941fdc5e7f7235e217fe21"
+      "sha256": "cae4d19bd845a02decc54df68e976f691d24aa0c75ce0017e4ef11f2ff2cffcf"
     },
     {
       "path": "carwow/src/lib/components/services/DesktopServicesPage.svelte",
@@ -2644,7 +2692,7 @@
     },
     {
       "path": "carwow/src/lib/data/daynight-vehicles.ts",
-      "sha256": "ff6f21ecdb58a9bcff4837fe2c8f8edcc7db57c7d64759946dd2af712f75b6e8"
+      "sha256": "60468ae0dfe5530f78b276e0c515d5ebaff317bcdc52406388345a13edc26d70"
     },
     {
       "path": "carwow/src/lib/data/daynight-videos.ts",
@@ -2844,7 +2892,7 @@
     },
     {
       "path": "carwow/src/lib/styles/daynight-home-desktop.css",
-      "sha256": "b7422f876b38799626a8b08ec495e5ad21d945d10ef12a5754babe6d8442ffa6"
+      "sha256": "a4822151a20c48b76ff55ead1ff7082d97c327d94deaf3785ca209a9b83411d0"
     },
     {
       "path": "carwow/src/lib/styles/daynight-mobile.css",
@@ -3820,187 +3868,187 @@
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11774291387702102.webp",
-      "sha256": "2226ef4945f94caa63b543ce80028bf5f64c4ad9a5f07e8066bb4162d51b4a23"
+      "sha256": "914126f74b988ffbb3d6d2d16639a754ae1812b4f4e61ff81caa88ac815054d0"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11775198338574112.webp",
-      "sha256": "e6db37c7e7c5a5689ebed3cf8d143aa87bfe5085e14b45e0e6982b0692373444"
+      "sha256": "304bc82dbd33d4176a87b3fa55875ba458d0e912b120cdc7e0585ca298d68c80"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11775899765171119.webp",
-      "sha256": "acadc36b77be3a7416f3744c25962e7b4db04a02ff1795dc26c6f0b8162e3972"
+      "sha256": "eb6ae45a06a6e727558e213b2050d37bf5e179a016c9b2d6392f39f6e9562cdd"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11777018671764829.webp",
-      "sha256": "fe123303164289d75e9b200048a0f063259523219054116909158d3287f8221b"
+      "sha256": "ebdfc3d054521202e4def7d85a7cefa4a474a5a97de0886b3d5aa9e5d176321d"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11778085846169037.webp",
-      "sha256": "1909eafbb020871021bb316a3709d6e0eb9fc85f9d70e3cdfb7e8761615272eb"
+      "sha256": "6688ecf9611708fcc85ac9ed2ebf4589ad40d729326e228a33ee00083c3038a3"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11778179700610297.webp",
-      "sha256": "412bb91037f7a5541f00058c9d05b18ce9018a99a7e4371af8b4e4650d70dec4"
+      "sha256": "9513245dc513fc89484e426568f48578eba7360684bf6d287f70c726f3331314"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11778599312336917.webp",
-      "sha256": "06558b1d10f7325b47d78b3208f0a30ae05a2ff03f6d5108ad0e5f6298fb1dde"
+      "sha256": "9078d2a53c1640579cc9a48ffab0ecee8f18c4894266c699d8b7999745404297"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11779001443562014.webp",
-      "sha256": "e6db37c7e7c5a5689ebed3cf8d143aa87bfe5085e14b45e0e6982b0692373444"
+      "sha256": "40c9f25f3909845b78fbacce905ade0ac770968e631a15da07f88ede2e1b04e2"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11781282994167628.webp",
-      "sha256": "8b530203703442ffa0a930705b67382bce5ee948f35a93c7e9f8548fda82d728"
+      "sha256": "a95b127e77093f55d0178a2315f00dd88410eee912d3f8853ff4ac3e374c4706"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11781786688563618.webp",
-      "sha256": "f5870e2e008407a7524aaf9a6ad11fd28e56450d929083ee3a52c03414b7e3ae"
+      "sha256": "43cca3eab4df0d8894c9959c815b7820f3a706d099401ae2128df70b1738ecae"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11781790478711568.webp",
-      "sha256": "e56c82812e92912e89da1c640e66ed184932ae7c21bddf7fcdcdc3683d3a9768"
+      "sha256": "bdc7c70251c19490b2fd218620647c1abf25aa80c9f5fb59ccc86382baff9fc4"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11781969350224394.webp",
-      "sha256": "f77f833fbed2262ce6f7388c59efa360d842f92a8b651659908a86eed9dda011"
+      "sha256": "c56903e092c90c1c11495157349acd52d224b7a453131272171cd050cf0da0db"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11782122632841845.webp",
-      "sha256": "fa83c6bf8c9f63322eb4d7db77a696f0ef3fd41487563da658cd5de8fe28caf7"
+      "sha256": "f7528d9d392a770be545bbabade692e40b20d0cc000e4bfc80a7614be6ca244a"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11782329384140338.webp",
-      "sha256": "e6db37c7e7c5a5689ebed3cf8d143aa87bfe5085e14b45e0e6982b0692373444"
+      "sha256": "090cdb30f3e6f29bd91723b4ad4720d07fa0e409a12ca186d4a324b710bdacb7"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11782479430635636.webp",
-      "sha256": "56714a8e4f964612daa6c74e0dcd1b9d30b5af370911b1deb461cdfcc3c2e769"
+      "sha256": "4c7c33e724b5a5ba3db1f10d87322e867988dd9c6001d1e93499facbb920d4d0"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11782540302515038.webp",
-      "sha256": "6992105e3c4ea45d4b9de684be320b7505c3e79f8c767f708c9853825355b285"
+      "sha256": "62c8ed56bf479d6973ad81f979e642aa56a05a97426d2ca29a89ad24752eecfe"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11782541049698048.webp",
-      "sha256": "4ca18a7d7ed584a58ef391db7f63ac4d7812f058b695440bf81b38decfb054cc"
+      "sha256": "8a73e41b8672e44f51f88a83fd127f34eda606aa89e4de8f2cdb891d497473a0"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11783434857807146.webp",
-      "sha256": "3d793db9ec6c00402eea8d44c9affb88dad045a6d1295273504f6e0f5c933ab9"
+      "sha256": "49c96c21cc36eb17d1c4ea82a9c8a5f224b73c7ca79740b5bd77baf0d054800d"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11784130537689775.webp",
-      "sha256": "4f1a0b538423550495de5c00078d6c0148f317fca268bb0c3cde5361a5567eae"
+      "sha256": "f5b06ade02d2b089db7c1079a8edb5dfe760d9577958bf502e6ecffdf891e197"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11784224743668074.webp",
-      "sha256": "b85fad183d6463f4315342bbbc86330719a95faf8230791121c9528a9b4ecfe0"
+      "sha256": "ff630c8f22b7a8d967d4b8dd81dace1c07f0e94e45ef8620e8f92df1aafde9c2"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/11784380846697521.webp",
-      "sha256": "919f65f72699e2148041bcee10744427a4d74ae6317d03407088768d34131922"
+      "sha256": "cd087a908a1bffd74245d0688dff993d5bcba2a6e74a889b532954541f712965"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21758203454344162.webp",
-      "sha256": "b134b793e1469b7a1f2c9965ab86994f215121237d54862157b4b5816858c982"
+      "sha256": "17faae56d438156c3d17869c1cb2f2e1d8f895df7b9e5e03f01499acf1f940c4"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21762334502775312.webp",
-      "sha256": "e56c82812e92912e89da1c640e66ed184932ae7c21bddf7fcdcdc3683d3a9768"
+      "sha256": "be135488e28b46f6d620daa220a05f2f69e1e3fbdff873e122e4b86eb93bccb1"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21765900685685588.webp",
-      "sha256": "3d793db9ec6c00402eea8d44c9affb88dad045a6d1295273504f6e0f5c933ab9"
+      "sha256": "5a2896ecd5b5b977f2d4b0f36ec1f21f735c240d02c3452ace1410f3e383e090"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21775198700636300.webp",
-      "sha256": "7b5711caa62633e9eb4adbcac10ed4d3f0c6accc1ef74df6ed4c8b199a7b6b71"
+      "sha256": "b75b841ca34757271abb607c48956b34888e2eeef89d991edc413df13c60138f"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21777637702876978.webp",
-      "sha256": "9b50ccc9ec38df359e9e84b3f0109e204fe20f8b0180f07e33aa0a9e970a60ef"
+      "sha256": "81f54429efddc47c818ba9514e4dc07cf630395c4b0aed98ae1068faf129d7f5"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21780050061781136.webp",
-      "sha256": "56714a8e4f964612daa6c74e0dcd1b9d30b5af370911b1deb461cdfcc3c2e769"
+      "sha256": "ea039ef4871f3f31dea56a4afd554ccc260249428d6c051dd92cb488c4414586"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21781097577012835.webp",
-      "sha256": "280eaf10bcefef483e3cb6aaccb730a6112484f336c78e897c07e01dc7da4194"
+      "sha256": "1b8b03fe0ccb74ca812011b995401459963a38bfb3ac03a19be13b73c618e239"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21781186627237038.webp",
-      "sha256": "e56c82812e92912e89da1c640e66ed184932ae7c21bddf7fcdcdc3683d3a9768"
+      "sha256": "f3c5bf1778fe622c2adb90f4ebbfa482b9c364ae289357c7781de53bf71599c8"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21781366888650416.webp",
-      "sha256": "3d793db9ec6c00402eea8d44c9affb88dad045a6d1295273504f6e0f5c933ab9"
+      "sha256": "00bf120684716403e96629a16ff0f0cbba42d90904caebe13b8c45be9643165b"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21781787768273938.webp",
-      "sha256": "433d021e3ccaab1161019707a8a90099a37d2dad87c7bc9f119a12d453c7b66d"
+      "sha256": "6b9dd778779e91dd46543def05c2b841e56062b198f53833849cbfac9c8cfa9e"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21782329010196509.webp",
-      "sha256": "e6db37c7e7c5a5689ebed3cf8d143aa87bfe5085e14b45e0e6982b0692373444"
+      "sha256": "36a98adf4e1966b0310fe685d585ce9dd9da2bfeda39b20c8acf6e0ba25de0d7"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21782329865022942.webp",
-      "sha256": "56714a8e4f964612daa6c74e0dcd1b9d30b5af370911b1deb461cdfcc3c2e769"
+      "sha256": "a34ee373d60a45868a8f45b72f18895f0eda9baf27ab12fe766009b2e7b00f0d"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21782661898906066.webp",
-      "sha256": "f5870e2e008407a7524aaf9a6ad11fd28e56450d929083ee3a52c03414b7e3ae"
+      "sha256": "8fe2b3e01a752c0af165cc63619602e15c41868760a57919ab63706cba5e18ac"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21782920140707096.webp",
-      "sha256": "e56c82812e92912e89da1c640e66ed184932ae7c21bddf7fcdcdc3683d3a9768"
+      "sha256": "3bb86dc56a6c87c99ab345bd97cf1188bc9af72798094a8ffa9e234a08780bd5"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21783785043166128.webp",
-      "sha256": "b7016852213ce25107accf5c18bba456b31a69724951413ff41e31e533b74e21"
+      "sha256": "371189f377b920d1460c02da349a7de49471a1cc76cc9a95b0760265010816bc"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21784134153263153.webp",
-      "sha256": "433d021e3ccaab1161019707a8a90099a37d2dad87c7bc9f119a12d453c7b66d"
+      "sha256": "f80f967983bc7c58c7302dcc65263b4edbdba7dc675c613e1de4928778cb21c4"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21784136402983332.webp",
-      "sha256": "e6db37c7e7c5a5689ebed3cf8d143aa87bfe5085e14b45e0e6982b0692373444"
+      "sha256": "2918309b8e4033f6ae22c709c505fd16a19d4d81ea28cc758af0def8a8228b21"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21784223776383846.webp",
-      "sha256": "56714a8e4f964612daa6c74e0dcd1b9d30b5af370911b1deb461cdfcc3c2e769"
+      "sha256": "c80e62d6b7233de9f47b2fc5de7f2362ba4e909bf51bc4324d52195b3784bbe2"
     },
     {
       "path": "carwow/static/assets/daynight/inventory-current/21784728210405323.webp",
-      "sha256": "9f7369642e7f514fd8bf93610a9600b51ace98eb26f82005f49262daf4aacf1b"
+      "sha256": "0c8d37b6f21316a6e5227adcd5611bb3d8ad6e117f0fb4fe282852b9e08923bf"
     },
     {
       "path": "carwow/static/assets/daynight/inventory/inventory-banner-night-v1.png",
-      "sha256": "3f42e4783779707c206fa64552463122834f85d2f288b7de1c8458ed216f5a6f"
+      "sha256": "83e142a31a874c5a6cc9b7882169eb26c567eff76600108fde803cdd3b997a14"
     },
     {
       "path": "carwow/static/assets/daynight/inventory/inventory-banner-night-v1.webp",
-      "sha256": "fca53e7e3d1ddcf369022c157c9503c6fa45f76f8d5c7660cfc2e69cf425fddc"
+      "sha256": "48fc1150ffb8fca1c16fc1a3e4df2ed302b75ae4c0eea4ad64ac5c5312adcc5a"
     },
     {
       "path": "carwow/static/assets/daynight/inventory/inventory-banner-showroom-v2.png",
-      "sha256": "60f838d04d3c4ab89a649af9d51651f3bb78077747b2809efe07e1a60b0d848b"
+      "sha256": "f5d743c7695b56de1bd816a5308211394b72effbf213cec1cde2782268767d34"
     },
     {
       "path": "carwow/static/assets/daynight/inventory/inventory-banner-showroom-v2.webp",
-      "sha256": "37381450cd872045a799605efcf6d4cc452fef0901dd7a6fbf7ed2aab9590253"
+      "sha256": "b5b861a68cef8e90e753b27998405e784cf19af154861f6be4977336cda4c787"
     },
     {
       "path": "carwow/static/assets/daynight/inventory/inventory-cutout-black-suv-v1.webp",
-      "sha256": "d0354973df3ff58255a0f2a5d7e7c9d2d9d2f301cb1a711db7c12804c8b58cef"
+      "sha256": "71b4419832c9135e26fd8c11a2125b95a000f40d71d0f93c909980323f67a88c"
     },
     {
       "path": "carwow/static/assets/daynight/inventory/inventory-cutout-silver-crossover-v1.webp",
-      "sha256": "e42e52d7bac6af17d7b0c96c0205b359541e813b1b88069360b4346c6cfdfb7b"
+      "sha256": "8f416ff6f093cd6029f6c5e14596c160bf9b4d7ed5d6639a5b04de3fdb88f413"
     },
     {
       "path": "carwow/static/assets/icons/Alarm-white.svg",
@@ -6364,7 +6412,7 @@
     },
     {
       "path": "carwow/static/oferta.html",
-      "sha256": "b1d7722c4c030180aedf8fd0c14f932a6f233d7db302eddd25cf97bccbb63149"
+      "sha256": "7f549955daaf262952cfdfdeaaadd3efee9bcbb027fa6138250e619e11c1646b"
     },
     {
       "path": "carwow/static/sa-concept.html",
@@ -10888,7 +10936,7 @@
     },
     {
       "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
-      "sha256": "f725101dcb6bafb1e2deaf1e16587e0727772e18de09d25edb2470d43b6de78f"
+      "sha256": "3f79f466503da6628639e24364bf9e1c85637adef1edf9ce5d4e1e0c82e4ccc1"
     },
     {
       "path": "modern/packages/marketplace-domain/tsconfig.json",
@@ -11500,7 +11548,7 @@
     },
     {
       "path": "modern/packages/marketplace/lead-site.ts",
-      "sha256": "0d29ed80d51560f23b9e9d0f7fc94540a1b05056bbb5d0d4921a5604bf2b5202"
+      "sha256": "540f2069bb4c9bc2b0b6cda18deab909ef3bd68e064b821466a7c1691673cc3d"
     },
     {
       "path": "modern/packages/marketplace/listing-core.test.ts",
@@ -11520,7 +11568,7 @@
     },
     {
       "path": "modern/packages/marketplace/mock-directory.ts",
-      "sha256": "c9240d2123128b2e0add2493c31be054be79a8f96d1b107f65efffc12e52c038"
+      "sha256": "d2f142f8748d72e859851848bc3661a37c95d8de339b6b43751d6e608b84ea04"
     },
     {
       "path": "modern/packages/marketplace/organization-verification.test.ts",

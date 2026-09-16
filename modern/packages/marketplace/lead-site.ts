@@ -15,7 +15,7 @@ export const leadSite: LeadSiteConfig = {
   sellCategoryAssets: { car: "/variant-2/lead-sell-car-v1.png", motorbike: "/variant-2/lead-sell-motorcycle-v1.png", truck: "/variant-2/lead-sell-truck-v1.png", van: "/variant-2/lead-sell-van-v1.png" },
   financingArtworkPath: "/variant-2/images/services/leasing-red-suv-v2.png",
   contactUrl: "tel:+359899266666", country: "България", countryCode: "BG", currency: "EUR", email: "varna@isauto.net",
-  heroPath: "/isauto/hero.webp", locale: "bg-BG", logoPath: "/isauto/logo-dark.png",
+  heroPath: "/variant-2/isauto/hero.webp", locale: "bg-BG", logoPath: "/variant-2/isauto/logo-dark.png",
   mapsEmbedUrl: `https://www.google.com/maps?q=${mapQuery}&z=16&output=embed`,
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${mapQuery}`,
   name: "IS AUTO Varna", phoneDisplay: "0899 266 666", phoneHref: "tel:+359899266666", shortName: "IS AUTO", slug: "isauto-varna",
