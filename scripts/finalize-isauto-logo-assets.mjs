@@ -52,4 +52,4 @@ for (const target of runtimeDerivatives) {
 
 console.log('IS AUTO WebP logo derivatives archived outside runtime; transparent PNG remains the live logo.');
 
-// Rebuild trigger: use the normalized shared dealer profile and approved 2026-09-16 templates.
+// Rebuild trigger: enforce the approved template CSS boundary for the normalized dealer profile.
