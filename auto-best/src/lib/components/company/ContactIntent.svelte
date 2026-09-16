@@ -17,7 +17,6 @@
   const socialPlatforms = [
     { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
     { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
-    { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
   ] as const;
 </script>
 

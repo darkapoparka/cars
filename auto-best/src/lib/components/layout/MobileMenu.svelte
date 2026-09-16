@@ -50,7 +50,6 @@
         </nav>
         <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
           <a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>Instagram</span></a>
-          <a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>
           <a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>
         </div>
         <p class="dn-mobile-menu__address">{brand.addressLine}</p>
@@ -76,7 +75,7 @@
   a { text-decoration: none; }
   a:hover { background: var(--dn-line); }
   :is(a, button):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
-  .dn-mobile-menu__social { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
+  .dn-mobile-menu__social { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
   .dn-mobile-menu__social a { display: grid; justify-items: center; align-content: center; gap: var(--dn-space-1); min-height: var(--dn-control-hit-height); padding: var(--dn-space-2) var(--dn-space-half); border-radius: var(--dn-radius-sm); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-mobile-menu__address { margin: var(--dn-space-4) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); text-align: center; }
 </style>

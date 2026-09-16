@@ -1,4 +1,4 @@
-import { mockListings } from "@repo/marketplace";
+import { mockListings } from "@repo/marketplace-domain/testing/mock-data";
 import { describe, expect, it } from "vitest";
 import {
   getLocalizedVehicleCardLocationPart,

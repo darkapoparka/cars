@@ -30,9 +30,9 @@
       "version": "1"
     }
   },
-  "sourceCommit": "50a27e6252a3b8744f0e7ba59970d9c1bddfce68",
+  "sourceCommit": "5a00dbb328bb514242fff89c6f29abeee9c7049d",
   "packagingVersion": "1",
-  "payloadDigest": "6bef6959732eb17cfb57802c5f649f146a4353dd22eb8fee3a15cc2b82fe7dfb",
+  "payloadDigest": "369e8b7eec8f841de381915bd894a8d8b0f0ec7b3684ba5e88125b193f14959f",
   "payload": [
     {
       "path": ".gitignore",
@@ -44,7 +44,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "9e34ec6d77682c278c896401328b24bf0053a65d981972e2afc7b305129d1db6"
+      "sha256": "cfdee20ace702582ce5ea537be9c21bb0e92a347c7dd6f7cc98fc2ff3dba385a"
     },
     {
       "path": "CLIENT.md",
@@ -304,7 +304,7 @@
     },
     {
       "path": "auto-best/scripts/check-assets.mjs",
-      "sha256": "aa257ea0e73580c644fb5837e1f779d03ec2341389c42441a7210c92400261f2"
+      "sha256": "21fb69d210d506ebd60ac53e77c5d746068e8bfa4cbed5981fa3f645a2a6ae2a"
     },
     {
       "path": "auto-best/scripts/check-domain.mjs",
@@ -372,7 +372,7 @@
     },
     {
       "path": "auto-best/src/lib/components/company/AboutHero.svelte",
-      "sha256": "757cf53dda790044643d1f397b324c01a9fd324b7ae8d720e376c49f4b689b7f"
+      "sha256": "10a4386d6085132532eb35bcbd25fc50ee2005f68247c8e68bec6f65fc247a85"
     },
     {
       "path": "auto-best/src/lib/components/company/AboutPartners.svelte",
@@ -396,7 +396,7 @@
     },
     {
       "path": "auto-best/src/lib/components/company/ContactIntent.svelte",
-      "sha256": "1b217bb4dfe8d278269e7764ac4fe6a1f83250273043fda946846f7766b415a2"
+      "sha256": "5764375c1f2f3ad6f9970ef01d5d7557aa9285a84e210a2201e41cffebf8623e"
     },
     {
       "path": "auto-best/src/lib/components/company/ContactVehicle.svelte",
@@ -500,7 +500,7 @@
     },
     {
       "path": "auto-best/src/lib/components/home/VideoSection.svelte",
-      "sha256": "5defe22e01f678305aaca89ff1167816a567ccfe1243b47afca38d2b66364c3b"
+      "sha256": "faaa59bf577fbc7c92ac009e9d3cf950af6364fa63a01c6739478cec63d033fe"
     },
     {
       "path": "auto-best/src/lib/components/layout/Footer.svelte",
@@ -512,7 +512,7 @@
     },
     {
       "path": "auto-best/src/lib/components/layout/MobileMenu.svelte",
-      "sha256": "245ad1b972bbd77ab6bafe1809c788fc03b56b1751d148d83fbbe989a18ed50b"
+      "sha256": "cdddbc72d5e1afad90eb91c4e13251d4e729708330120d04d54fdfe3e29a5936"
     },
     {
       "path": "auto-best/src/lib/components/layout/MobileNavIcon.svelte",
@@ -652,7 +652,7 @@
     },
     {
       "path": "auto-best/src/lib/data/videos.ts",
-      "sha256": "57217c36b4b0e67a318f44b3f64eade67ea19b1d63541b88aa96605cd1615d1e"
+      "sha256": "e25f23795233b8de4da7dbe53a90c5bd2531ad3fb7b2012f473d2b31ceb205f0"
     },
     {
       "path": "auto-best/src/lib/styles/base.css",
@@ -1021,18 +1021,6 @@
     {
       "path": "auto-best/static/assets/images/lead/day-night-urus-front-v1.webp",
       "sha256": "8de1b62b52b12bf482fc629efa18b0e8f04567d79919d53c040a366fa76f9777"
-    },
-    {
-      "path": "auto-best/static/assets/images/lead/day-night-video-g-class.jpg",
-      "sha256": "305102ccebcabc2955d23eace048632d4ea869504cf6fbf4efea45594e38317b"
-    },
-    {
-      "path": "auto-best/static/assets/images/lead/day-night-video-panamera.jpg",
-      "sha256": "305102ccebcabc2955d23eace048632d4ea869504cf6fbf4efea45594e38317b"
-    },
-    {
-      "path": "auto-best/static/assets/images/lead/day-night-video-urus.jpg",
-      "sha256": "305102ccebcabc2955d23eace048632d4ea869504cf6fbf4efea45594e38317b"
     },
     {
       "path": "auto-best/static/assets/images/lead/import-how-generated-v1.webp",
@@ -8728,7 +8716,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/listing/[slug]/page.tsx",
-      "sha256": "77c89f52f404c4ed850db54b902af49ab1708be4cb8a1c228e21eab921eb3541"
+      "sha256": "c66d9f8a5410603cf8da017239c558f6ea72b905d5ebfd20168921682cfa5c64"
     },
     {
       "path": "modern/apps/web/app/[locale]/mobile-final-polish.css",
@@ -10900,7 +10888,7 @@
     },
     {
       "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
-      "sha256": "7f8d9454ed17c892d3802fb1a269a2271e7958f5cd654ef22e013f3f957fa831"
+      "sha256": "f725101dcb6bafb1e2deaf1e16587e0727772e18de09d25edb2470d43b6de78f"
     },
     {
       "path": "modern/packages/marketplace-domain/tsconfig.json",
@@ -11248,7 +11236,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/lib/inventory-search-suggestions.test.ts",
-      "sha256": "d0bfb144eeabc504df9d218422535833380d2edd5055f98f96e1912b6d17f1db"
+      "sha256": "5dcb500d8a9f225c0199b911cf8f8e89e0c541c0c514be03738b67803a9c71a9"
     },
     {
       "path": "modern/packages/marketplace-ui/lib/inventory-search-suggestions.ts",
@@ -11412,7 +11400,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/lib/vehicle-card-view-policy.test.ts",
-      "sha256": "f1a4d5312bd898e90a2a3aa4f80cecbe8497339fa5317c6a6c590f70f78f04b1"
+      "sha256": "6325850e8ae95b011b14ff2b4017ad62567a95610c3747905430b58105ae7c24"
     },
     {
       "path": "modern/packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
@@ -11444,7 +11432,7 @@
     },
     {
       "path": "modern/packages/marketplace/directory.test.ts",
-      "sha256": "f47f7a381afd2ad5571a5c56262edb0d3ec18236abe06895d049a5b00c6d30e8"
+      "sha256": "422889b0b3274cc731a39ce6cd184d8e836ad485547cea29b36dd89ee133c79a"
     },
     {
       "path": "modern/packages/marketplace/directory.ts",
@@ -11532,7 +11520,7 @@
     },
     {
       "path": "modern/packages/marketplace/mock-directory.ts",
-      "sha256": "c088f4c99da368211f35c7a15d7ee8488dda7961775a1531e2dd942ac1f45c79"
+      "sha256": "c9240d2123128b2e0add2493c31be054be79a8f96d1b107f65efffc12e52c038"
     },
     {
       "path": "modern/packages/marketplace/organization-verification.test.ts",
