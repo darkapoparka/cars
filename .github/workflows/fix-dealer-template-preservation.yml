@@ -51,7 +51,7 @@ jobs:
         run: |
           set -euo pipefail
           git clone --filter=blob:none --no-tags https://github.com/darkapoparka/cars-template-auto-best.git "$RUNNER_TEMP/cars-template-auto-best"
-          git -C "$RUNNER_TEMP/cars-template-auto-best" checkout --detach 9844552227fbd96e20632b13aaaabfb605b912ce
+          git -C "$RUNNER_TEMP/cars-template-auto-best" checkout --detach 345f75cd3b5bcadc5a4e919d33642cad8a0001b3
           npm ci --no-audit --no-fund --prefix "$RUNNER_TEMP/cars-template-auto-best"
           npx --prefix "$RUNNER_TEMP/cars-template-auto-best" playwright install --with-deps chromium
           npm --prefix "$RUNNER_TEMP/cars-template-auto-best" run validate
@@ -85,7 +85,7 @@ jobs:
           const evidence = {
             schemaVersion: 1,
             repository: 'darkapoparka/cars-template-auto-best',
-            commit: '9844552227fbd96e20632b13aaaabfb605b912ce',
+            commit: '345f75cd3b5bcadc5a4e919d33642cad8a0001b3',
             release: 'template-preservation-2026-09-16',
             approved: true,
             verifiedAt: new Date().toISOString(),
@@ -113,7 +113,7 @@ jobs:
           node scripts/template-release.mjs promote \
             --key auto-best \
             --source-repo "$RUNNER_TEMP/cars-template-auto-best" \
-            --commit 9844552227fbd96e20632b13aaaabfb605b912ce \
+            --commit 345f75cd3b5bcadc5a4e919d33642cad8a0001b3 \
             --evidence docs/evidence/auto-best-release-template-preservation-2026-09-16.json \
             --write
 
