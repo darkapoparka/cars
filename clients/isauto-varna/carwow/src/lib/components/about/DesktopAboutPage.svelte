@@ -15,6 +15,7 @@
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
+	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
 	type AssetHref = `/assets/${string}`;
 	const brands = [
 		{ brand: 'Audi', image: 'audi' },
@@ -85,20 +86,13 @@
 					><MapPin size={18} />{daynightSite.locationShort}</a
 				>
 				<a href={daynightSite.phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
-				<div class="about-hero-socials">
-					<a
-						href="https://www.facebook.com/isauto1"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Facebook"><SiteChromeIcon name="facebook" /></a
-					>
-					<a
-						href="https://www.instagram.com/is__auto/?hl=bg"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Instagram"><SiteChromeIcon name="instagram" /></a
-					>
-				</div>
+				{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram || youtubeChannelUrl}
+					<div class="about-hero-socials">
+						{#if daynightSite.socialLinks.facebook}<a href={daynightSite.socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><SiteChromeIcon name="facebook" /></a>{/if}
+						{#if daynightSite.socialLinks.instagram}<a href={daynightSite.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><SiteChromeIcon name="instagram" /></a>{/if}
+						{#if youtubeChannelUrl}<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" /></a>{/if}
+					</div>
+				{/if}
 			</nav>
 		</div>
 	</DesktopYellowRouteHero>
@@ -162,7 +156,7 @@
 					автомобил.
 				</p>
 				<p>
-					Разгледай автомобилите онлайн или ни посети в Бизнес парк Варна. Екипът ще уточни
+					Разгледай автомобилите онлайн или ни посети на {daynightSite.locationShort}. Екипът ще уточни
 					наличността, подробностите по автомобила и удобен час за оглед.
 				</p>
 				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
@@ -238,7 +232,7 @@
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>Бизнес парк Варна, {daynightSite.city}</strong>
+						<strong>{daynightSite.locationShort}</strong>
 						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}

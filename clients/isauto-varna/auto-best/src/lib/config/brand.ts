@@ -9,7 +9,7 @@ export type BrandConfig = {
   appointment: string;
   logo: `/${string}`;
   logoOnDark: `/${string}`;
-  youtubeUrl: `https://${string}`;
+  youtubeUrl: `https://${string}` | '';
   instagramUrl: `https://${string}`;
   facebookUrl: `https://${string}`;
 };
@@ -21,7 +21,7 @@ export const brand = {
   name: 'IS AUTO Varna',
   shortName: 'IS AUTO',
   city,
-  youtubeUrl: 'https://www.isauto.net/',
+  youtubeUrl: '',
   instagramUrl: 'https://www.instagram.com/is__auto/?hl=bg',
   facebookUrl: 'https://www.facebook.com/isauto1',
   phone: '0899 266 666',
@@ -29,6 +29,6 @@ export const brand = {
   addressLine,
   address: `${addressLine}, ${city}`,
   appointment: 'Понеделник–петък 09:00–18:00 · събота 10:00–16:00',
-  logo: '/assets/images/lead/isauto/logo-dark.png',
-  logoOnDark: '/assets/images/lead/isauto/logo-light.png'
+  logo: '/dealer/logo-dark.png',
+  logoOnDark: '/dealer/logo-light.png'
 } as const satisfies BrandConfig;

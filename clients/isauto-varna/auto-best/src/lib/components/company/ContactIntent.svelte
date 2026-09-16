@@ -33,7 +33,7 @@
     {#if vehicle && topic.id !== 'leasing'}
       <ContactVehicle {vehicle} />
     {/if}
-    <div class="dn-contact-selected">
+    <div class="dn-contact-selected" class:dn-contact-selected--description-only={topic.id === 'general'}>
       {#if topic.id !== 'general'}
         <h3>{topic.title}</h3>
       {/if}
@@ -94,7 +94,7 @@
     {#if topic.id === 'general'}
       <div class="dn-contact-visit">
         <p><Icon name="map-pin" size={24} /><span>{brand.address}</span></p>
-        <p><Icon name="clock" size={24} /><span>{brand.appointment}. Уговорете ден и час по телефона.</span></p>
+        <p class="dn-contact-visit__appointment"><Icon name="clock" size={24} /><span>{brand.appointment}. Уговорете ден и час по телефона.</span></p>
         <a class="dn-contact-button" href={directionsUrl} target="_blank" rel="noreferrer">Маршрут<Icon name="arrow-right" size={20} /></a>
       </div>
     {/if}
