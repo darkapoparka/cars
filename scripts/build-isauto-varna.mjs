@@ -324,7 +324,7 @@ await writeText(`clients/${SLUG}/auto-best/src/lib/config/brand.ts`, `export typ
   appointment: string;
   logo: \`/\${string}\`;
   logoOnDark: \`/\${string}\`;
-  youtubeUrl: \`https://\${string}\`;
+  youtubeUrl: \`https://\${string}\` | '';
   instagramUrl: \`https://\${string}\`;
   facebookUrl: \`https://\${string}\`;
 };
