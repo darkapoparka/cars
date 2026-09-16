@@ -5,10 +5,10 @@
     "auto-best": {
       "repository": "darkapoparka/cars-template-auto-best",
       "status": "approved",
-      "commit": "a54af64f3d7b115e56f1fd016cadcb69de1472b8",
-      "release": "template-preservation-2026-09-16",
+      "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+      "release": "empty-video-contract-2026-09-16",
       "snapshotPath": "templates/auto-best",
-      "digest": "42c4184fd1d8c286a219a0b86ab08057c144e6de47d2ba92814dedd3d2c74c56",
+      "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
       "runtime": {
@@ -17,12 +17,12 @@
         "lockfile": "package-lock.json"
       },
       "modes": {
-        "standalone": "verified by validation plus live-preview browser smoke",
+        "standalone": "validated source and production build",
         "mounted": "requires-dealer-QA"
       },
       "qa": {
-        "evidence": "docs/evidence/auto-best-release-template-preservation-2026-09-16.json",
-        "verifiedAt": "2026-09-16T17:55:58.392Z",
+        "evidence": "docs/evidence/auto-best-release-empty-video-2026-09-16.json",
+        "verifiedAt": "2026-09-16T20:31:39.213Z",
         "checks": [
           {
             "command": "npm ci --no-audit --no-fund",
@@ -30,12 +30,8 @@
           },
           {
             "command": "npm run validate",
-            "status": "passed"
-          },
-          {
-            "command": "BASE_URL=http://127.0.0.1:6461 npm run smoke",
             "status": "passed",
-            "evidenceRun": "darkapoparka/cars/actions/runs/35129838519"
+            "evidenceRun": "darkapoparka/cars-template-auto-best/actions/runs/35146697017"
           }
         ],
         "standalone": {
@@ -45,7 +41,7 @@
             390,
             1440
           ],
-          "notes": "Exact commit passed the full responsive, route, form, filter, focus and phase-4 browser matrix in Cars run 35129838519."
+          "notes": "Master validation passed. Existing verified-video composition is unchanged; dealers without a verified channel and videos now omit the empty section."
         }
       },
       "reason": "Reviewed release selected by the recorded technical QA.",
@@ -111,56 +107,47 @@
     "carwow": {
       "repository": "darkapoparka/cars-template-carwow",
       "status": "approved",
-      "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-      "release": "promote-2026-09-13",
+      "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+      "release": "desktop-category-density-2026-09-16",
       "snapshotPath": "templates/carwow",
-      "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+      "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "d769bb0558ad0228b92440fc3fd9ff81548bc890",
       "runtime": {
-        "npm": "10.9.4",
-        "lockfile": "package-lock.json",
-        "node": "22.22.0"
+        "node": "24.x",
+        "npm": "11.x",
+        "lockfile": "package-lock.json"
       },
       "modes": {
-        "mounted": "requires-dealer-QA",
-        "standalone": "verified bounded HTTP route matrix on vite preview; home-runtime console warnings on Windows webgpu ignored as non-blocking"
+        "standalone": "validated source and production build",
+        "mounted": "requires-dealer-QA"
       },
       "qa": {
-        "evidence": "docs/evidence/carwow-release-2026-09-13.json",
-        "verifiedAt": "2026-09-13T21:43:14.613Z",
+        "evidence": "docs/evidence/carwow-release-category-density-2026-09-16.json",
+        "verifiedAt": "2026-09-16T20:31:39.213Z",
         "checks": [
           {
-            "command": "npm ci",
+            "command": "npm ci --no-audit --no-fund",
             "status": "passed"
           },
           {
             "command": "npm run check",
-            "status": "passed",
-            "warnings": 0,
-            "errors": 0
+            "status": "passed"
           },
           {
             "command": "npm run build",
-            "status": "passed"
-          },
-          {
-            "command": "preview HTTP / /inventory /contact",
-            "status": "passed"
-          },
-          {
-            "command": "retained candidate tree equals committed upstream tree",
-            "status": "passed"
+            "status": "passed",
+            "evidenceRun": "darkapoparka/cars-template-carwow/actions/runs/35146824017"
           }
         ],
         "standalone": {
+          "mobile": true,
+          "desktop": true,
           "widths": [
             390,
             1440
           ],
-          "mobile": true,
-          "desktop": true,
-          "notes": "Committed SHA only; uncommitted carwow WIP not included"
+          "notes": "Desktop keeps the complete eight-card template taxonomy, ordered with in-stock types first and honest zero-stock labels. Mobile composition is unchanged."
         }
       },
       "reason": "Reviewed release selected by the recorded technical QA.",

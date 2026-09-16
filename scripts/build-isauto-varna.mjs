@@ -180,7 +180,7 @@ const socialUrls = [...homepageHtml.matchAll(/href=["']([^"']*(?:facebook\.com|i
   .map((match) => normalizeCandidate(match[1], SITE)).filter(Boolean);
 const social = {
   instagram: socialUrls.find((url) => /instagram\.com/i.test(url)) ?? 'https://www.instagram.com/is__auto/?hl=bg',
-  youtube: socialUrls.find((url) => /youtu(?:be\.com|\.be)/i.test(url)) ?? SITE,
+  youtube: socialUrls.find((url) => /youtu(?:be\.com|\.be)/i.test(url)) ?? '',
   facebook: socialUrls.find((url) => /facebook\.com/i.test(url)) ?? 'https://www.facebook.com/isauto1'
 };
 

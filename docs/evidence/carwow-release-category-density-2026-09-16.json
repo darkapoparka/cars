@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-carwow",
+  "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+  "release": "desktop-category-density-2026-09-16",
+  "approved": true,
+  "verifiedAt": "2026-09-16T20:31:39.213Z",
+  "runtime": {
+    "node": "24.x",
+    "npm": "11.x",
+    "lockfile": "package-lock.json"
+  },
+  "modes": {
+    "standalone": "validated source and production build",
+    "mounted": "requires-dealer-QA"
+  },
+  "checks": [
+    {
+      "command": "npm ci --no-audit --no-fund",
+      "status": "passed"
+    },
+    {
+      "command": "npm run check",
+      "status": "passed"
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "evidenceRun": "darkapoparka/cars-template-carwow/actions/runs/35146824017"
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "widths": [
+      390,
+      1440
+    ],
+    "notes": "Desktop keeps the complete eight-card template taxonomy, ordered with in-stock types first and honest zero-stock labels. Mobile composition is unchanged."
+  }
+}

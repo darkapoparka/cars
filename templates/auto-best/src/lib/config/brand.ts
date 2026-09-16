@@ -9,7 +9,7 @@ export type BrandConfig = {
   appointment: string;
   logo: `/${string}`;
   logoOnDark: `/${string}`;
-  youtubeUrl: `https://${string}`;
+  youtubeUrl: `https://${string}` | '';
   instagramUrl: `https://${string}`;
   facebookUrl: `https://${string}`;
 };
