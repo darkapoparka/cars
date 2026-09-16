@@ -1,0 +1,63 @@
+name: Wire IS AUTO logo contrast guard
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/wire-isauto-logo-contrast-guard.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  wire:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/normalize-isauto-varna.mjs
+            /scripts/fix-isauto-modern-logo-contrast.mjs
+            /.github/workflows/wire-isauto-logo-contrast-guard.yml
+
+      - name: Wire the contrast guard into every future build
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const target = 'scripts/normalize-isauto-varna.mjs';
+          const marker = "await import('./fix-isauto-modern-logo-contrast.mjs');";
+          let text = fs.readFileSync(target, 'utf8');
+          if (!text.includes(marker)) {
+            text = `${text.trimEnd()}\n\n// Enforce a readable light wordmark on Modern's dark header after personalization.\n${marker}\n`;
+            fs.writeFileSync(target, text, 'utf8');
+          }
+          if (fs.readFileSync(target, 'utf8').split(marker).length - 1 !== 1) {
+            throw new Error('IS AUTO contrast guard must be wired exactly once.');
+          }
+          NODE
+          node --check scripts/normalize-isauto-varna.mjs
+          node --check scripts/fix-isauto-modern-logo-contrast.mjs
+          git diff --check
+
+      - name: Commit the durable build guard
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
+            echo 'main moved during validation; refusing to overwrite' >&2
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/normalize-isauto-varna.mjs
+          git commit -m 'Enforce IS AUTO Modern logo contrast after generation'
+          git push origin HEAD:main
