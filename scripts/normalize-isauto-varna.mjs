@@ -4,9 +4,9 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const CLIENT = path.join(ROOT, 'clients', 'isauto-varna');
 const CARWOW = path.join(CLIENT, 'carwow');
+const MODERN = path.join(CLIENT, 'modern');
 const MODERN_PUBLIC_DATA = path.join(
-  CLIENT,
-  'modern',
+  MODERN,
   'apps',
   'web',
   'lib',
@@ -84,6 +84,34 @@ if (!modernPublicData.includes('const getMockListingBySlug = (slug: string) =>')
 }
 await fs.writeFile(MODERN_PUBLIC_DATA, modernPublicData.endsWith('\n') ? modernPublicData : `${modernPublicData}\n`, 'utf8');
 
+const modernTestImportFixes = [
+  {
+    relative: 'apps/web/lib/public-structured-data.test.ts',
+    legacy: 'import { getMockListingBySlug } from "@repo/marketplace";',
+    replacement: 'import { getMockListingBySlug } from "@repo/marketplace-domain/testing/mock-data";'
+  },
+  {
+    relative: 'packages/marketplace-ui/lib/listing-truth.test.ts',
+    legacy: 'import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";',
+    replacement: 'import { getMockListingBySlug } from "@repo/marketplace-domain/testing/mock-data";\nimport type { VehicleListing } from "@repo/marketplace";'
+  },
+  {
+    relative: 'packages/marketplace-ui/lib/vehicle-card-policy.test.ts',
+    legacy: 'import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";',
+    replacement: 'import { getMockListingBySlug } from "@repo/marketplace-domain/testing/mock-data";\nimport type { VehicleListing } from "@repo/marketplace";'
+  }
+];
+
+for (const fix of modernTestImportFixes) {
+  const target = path.join(MODERN, fix.relative);
+  const before = await fs.readFile(target, 'utf8');
+  const after = before.replace(fix.legacy, fix.replacement);
+  if (!after.includes(fix.replacement)) {
+    throw new Error(`Could not normalize Modern test import: ${fix.relative}`);
+  }
+  if (after !== before) await fs.writeFile(target, after, 'utf8');
+}
+
 const forbidden = [
   'daynight.auto.plovdiv',
   '61566304063141',
@@ -107,4 +135,4 @@ async function scan(directory) {
 }
 
 await scan(path.join(CARWOW, 'src'));
-console.log('IS AUTO content normalized; Modern mock lookup made deterministic.');
+console.log('IS AUTO content normalized; Modern mock lookup and test imports made deterministic.');
