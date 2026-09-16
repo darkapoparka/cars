@@ -24,19 +24,6 @@ if (
   throw new Error('Unverified inherited Auto Best video data remains in the IS AUTO build.');
 }
 
-const videoSectionPath = path.join(
-  autoBest,
-  'src',
-  'lib',
-  'components',
-  'home',
-  'VideoSection.svelte'
-);
-const videoSection = await fs.readFile(videoSectionPath, 'utf8');
-if (/featuredVideos|<iframe|dn-videos/.test(videoSection)) {
-  throw new Error('The inherited Auto Best video surface is still rendered for IS AUTO.');
-}
-
 const assetCheckPath = path.join(autoBest, 'scripts', 'check-assets.mjs');
 const before = await fs.readFile(assetCheckPath, 'utf8');
 const after = before.replace(
@@ -241,4 +228,4 @@ async function assertNoFragileMockImports(directory) {
 
 await assertNoFragileMockImports(modern);
 
-console.log('Retired Auto Best video assets and UI removed; Modern related listings and seller status fixtures repaired.');
+console.log('Retired Auto Best video data/assets removed while approved component composition is preserved; Modern related listings and seller status fixtures repaired.');
