@@ -137,7 +137,7 @@ jobs:
           npm run check
           npm run build
 
-      - name: Commit canonical lead to main
+      - name: Commit canonical lead to review branch
         id: source
         shell: bash
         run: |
@@ -155,18 +155,23 @@ jobs:
             printf 'Unexpected retained links after cleanup:\n%s\n' "$remaining_links" >&2
             exit 1
           fi
+          # The generator also prepares a follow-up workflow file. Do not put that file
+          # in this commit: GitHub Actions tokens cannot create or update workflow files.
+          rm -f .github/workflows/publish-isauto-package.yml
           git add --sparse -A scripts/build-isauto-varna.mjs
           git add --sparse -A clients/isauto-varna
           git add --sparse -A leads/bulgaria.json
-          git add --sparse -A .github/workflows/publish-isauto-package.yml
           if ! git diff --cached --quiet; then
             git commit -m "Build IS AUTO Varna three-variant lead"
             git pull --rebase origin main
-            git push origin HEAD:main
           fi
           source_sha="$(git rev-parse HEAD)"
+          branch_name="build/isauto-varna-${GITHUB_RUN_ID}"
+          git push origin "HEAD:refs/heads/${branch_name}"
           echo "source_sha=$source_sha" >> "$GITHUB_OUTPUT"
+          echo "branch_name=$branch_name" >> "$GITHUB_OUTPUT"
           echo "Canonical source commit: $source_sha"
+          echo "Review branch: $branch_name"
 
       - name: Build deterministic deployment package
         shell: bash
@@ -217,6 +222,7 @@ jobs:
           {
             echo "## IS AUTO Varna"
             echo "- Canonical source: ${{ steps.source.outputs.source_sha }}"
+            echo "- Review branch: ${{ steps.source.outputs.branch_name }}"
             echo "- Package branch: publish/isauto-varna"
             echo "- Package commit: ${{ steps.package.outputs.package_sha }}"
             echo "- Auto Best, Modern and Carwow builds passed before publication."
