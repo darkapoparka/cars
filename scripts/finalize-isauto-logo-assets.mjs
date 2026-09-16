@@ -110,9 +110,18 @@ const assetCheckBefore = await fs.readFile(assetCheck, 'utf8');
 if (!/const guardedMediaCount = \d+;/.test(assetCheckBefore)) {
   throw new Error('Could not locate Auto Best guardedMediaCount after dealer finalization.');
 }
+const dealerAssetReference =
+  "const publicAssetReference = /\\/(?:(?:assets|dealer)\\/[A-Za-z0-9._@%+~/-]+\\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|favicon\\.ico|auto-best-icon\\.svg)/gi;";
+const assetCheckWithDealerRefs = assetCheckBefore.replace(
+  /const publicAssetReference = [^\n]+;/,
+  dealerAssetReference
+);
+if (assetCheckWithDealerRefs === assetCheckBefore) {
+  throw new Error('Could not extend Auto Best publicAssetReference for /dealer assets.');
+}
 await fs.writeFile(
   assetCheck,
-  assetCheckBefore.replace(
+  assetCheckWithDealerRefs.replace(
     /const guardedMediaCount = \d+;/,
     `const guardedMediaCount = ${mediaFiles.length};`
   ),
