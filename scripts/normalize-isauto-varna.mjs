@@ -80,8 +80,6 @@ await writeTo(
   `export interface FeaturedVideo {\n  id: string;\n  title: string;\n  duration: string;\n  thumbnail: string;\n}\n\n// IS AUTO does not publish a verified YouTube channel. Do not inherit another dealer's videos.\nexport const featuredVideos: readonly FeaturedVideo[] = [];\n`
 );
 
-const emptyAutoBestVideoComponent = `<script lang="ts">\n  // Intentionally empty: IS AUTO does not publish a verified YouTube channel.\n</script>\n`;
-await writeTo(AUTO_BEST, 'src/lib/components/home/VideoSection.svelte', emptyAutoBestVideoComponent);
 
 for (const relative of [
   'src/lib/components/company/AboutHero.svelte',
