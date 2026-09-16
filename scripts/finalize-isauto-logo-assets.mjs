@@ -52,4 +52,4 @@ for (const target of runtimeDerivatives) {
 
 console.log('IS AUTO WebP logo derivatives archived outside runtime; transparent PNG remains the live logo.');
 
-// Rebuild trigger: run the guarded build from the production-deploy-enabled main branch.
+// Rebuild trigger: enforce the final post-refinement CSS boundary before production.
