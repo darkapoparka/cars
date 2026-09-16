@@ -147,7 +147,15 @@ jobs:
           if compgen -G "scripts/build-isauto-varna.part-*" > /dev/null; then
             git rm -f scripts/build-isauto-varna.part-*
           fi
-          git add --sparse \
+          # Build tools create ignored dependency/cache trees containing pnpm links.
+          # Remove only ignored output before asking Git to stage the new canonical source.
+          git clean -fdX -- clients/isauto-varna
+          remaining_links="$(find clients/isauto-varna -type l -print)"
+          if [ -n "$remaining_links" ]; then
+            printf 'Unexpected retained links after cleanup:\n%s\n' "$remaining_links" >&2
+            exit 1
+          fi
+          git add --sparse -A -- \
             scripts/build-isauto-varna.mjs \
             clients/isauto-varna \
             leads/bulgaria.json \
