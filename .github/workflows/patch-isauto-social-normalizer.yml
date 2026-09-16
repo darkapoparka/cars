@@ -1,4 +1,4 @@
-name: Patch IS AUTO social normalizer
+name: Patch IS AUTO content normalizer
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
           sparse-checkout: |
             scripts/normalize-isauto-varna.mjs
-      - name: Validate socials at the canonical dealer profile
+      - name: Keep the approved Auto Best video component intact
         shell: bash
         run: |
           set -euo pipefail
@@ -29,38 +29,26 @@ jobs:
           from pathlib import Path
 
           target = Path('scripts/normalize-isauto-varna.mjs')
-          text = target.read_text(encoding='utf-8').replace('\r\n', '\n')
-          old = '''  for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
-            for (const [, official] of replacements) {
-              if (!after.includes(official)) throw new Error(`Missing official social URL in ${relative}: ${official}`);
-            }
-            if (after !== before) await writeTo(CARWOW, relative, after);
-          }
-
-          await writeTo('''
-          new = '''  for (const [legacy, official] of replacements) after = after.replaceAll(legacy, official);
-            if (after !== before) await writeTo(CARWOW, relative, after);
-          }
-
-          const canonicalDealerProfile = await readFrom(CARWOW, 'src/lib/data/dealer-profile.json');
-          for (const [, official] of replacements) {
-            if (!canonicalDealerProfile.includes(official)) {
-              throw new Error(`Missing official social URL in canonical Carwow dealer profile: ${official}`);
-            }
-          }
-
-          await writeTo('''
-          if text.count(old) != 1:
-              raise SystemExit(f'expected one social assertion block, found {text.count(old)}')
-          target.write_text(text.replace(old, new), encoding='utf-8')
+          lines = target.read_text(encoding='utf-8').replace('\r\n', '\n').splitlines()
+          prefixes = (
+              'const emptyAutoBestVideoComponent = ',
+              "await writeTo(AUTO_BEST, 'src/lib/components/home/VideoSection.svelte'"
+          )
+          kept = [line for line in lines if not line.startswith(prefixes)]
+          if len(lines) - len(kept) != 2:
+              raise SystemExit(f'expected to remove two VideoSection rewrite lines, removed {len(lines) - len(kept)}')
+          marker = "await writeTo(AUTO_BEST, 'src/lib/components/home/VideoSection.svelte'"
+          if any(marker in line for line in kept):
+              raise SystemExit('VideoSection rewrite remains')
+          target.write_text('\n'.join(kept) + '\n', encoding='utf-8')
           PY
           node --check scripts/normalize-isauto-varna.mjs
-      - name: Commit social normalizer fix
+      - name: Commit content normalizer fix
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add scripts/normalize-isauto-varna.mjs
-          git commit -m 'Validate IS AUTO socials from canonical profile'
+          git commit -m 'Keep approved Auto Best video composition'
           git push origin HEAD:main
