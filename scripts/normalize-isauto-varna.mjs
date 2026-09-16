@@ -62,17 +62,29 @@ footer = footer.replace(/\n\t\t\t\t\t<a \{\.\.\.youtubeLink\}[\s\S]*?<\/a\s*>/, 
 await write('src/lib/components/layout/DesktopDealerFooter.svelte', footer);
 
 let modernPublicData = await fs.readFile(MODERN_PUBLIC_DATA, 'utf8');
-if (!modernPublicData.includes('from "@repo/marketplace-domain/testing/mock-data"')) {
-  const marketplaceImport = /import \{\r?\n  buildVehicleTaxonomyOptions,\r?\n  curatedVehicleTaxonomy,\r?\n  getMockListingBySlug,\r?\n  getMockListings,\r?\n  leadSite,\r?\n  type MarketplaceSearchParams,\r?\n  mockListings,\r?\n  type VehicleCategory,\r?\n  type VehicleListing,\r?\n  type VehicleTaxonomyMakeOption,\r?\n\} from "@repo\/marketplace";/;
-  if (!marketplaceImport.test(modernPublicData)) {
-    throw new Error('Could not find the expected Modern marketplace import block.');
+const originalMarketplaceImport = /import \{\r?\n  buildVehicleTaxonomyOptions,\r?\n  curatedVehicleTaxonomy,\r?\n  getMockListingBySlug,\r?\n  getMockListings,\r?\n  leadSite,\r?\n  type MarketplaceSearchParams,\r?\n  mockListings,\r?\n  type VehicleCategory,\r?\n  type VehicleListing,\r?\n  type VehicleTaxonomyMakeOption,\r?\n\} from "@repo\/marketplace";/;
+const priorNormalizedImports = /import \{\r?\n  getMockListingBySlug,\r?\n  getMockListings,\r?\n  mockListings,\r?\n\} from "@repo\/marketplace-domain\/testing\/mock-data";\r?\nimport \{\r?\n  buildVehicleTaxonomyOptions,\r?\n  curatedVehicleTaxonomy,\r?\n  leadSite,\r?\n  type MarketplaceSearchParams,\r?\n  type VehicleCategory,\r?\n  type VehicleListing,\r?\n  type VehicleTaxonomyMakeOption,\r?\n\} from "@repo\/marketplace";/;
+const deterministicImports = `import {\n  getMockListings,\n  mockListings,\n} from "@repo/marketplace-domain/testing/mock-data";\nimport {\n  buildVehicleTaxonomyOptions,\n  curatedVehicleTaxonomy,\n  leadSite,\n  type MarketplaceSearchParams,\n  type VehicleCategory,\n  type VehicleListing,\n  type VehicleTaxonomyMakeOption,\n} from "@repo/marketplace";`;
+
+if (originalMarketplaceImport.test(modernPublicData)) {
+  modernPublicData = modernPublicData.replace(originalMarketplaceImport, deterministicImports);
+} else if (priorNormalizedImports.test(modernPublicData)) {
+  modernPublicData = modernPublicData.replace(priorNormalizedImports, deterministicImports);
+} else if (!modernPublicData.includes('from "@repo/marketplace-domain/testing/mock-data"')) {
+  throw new Error('Could not find the expected Modern marketplace import block.');
+}
+
+if (!modernPublicData.includes('const getMockListingBySlug = (slug: string) =>')) {
+  const insertionPoint = `${deterministicImports}\n`;
+  if (!modernPublicData.includes(insertionPoint)) {
+    throw new Error('Could not locate the normalized Modern import insertion point.');
   }
   modernPublicData = modernPublicData.replace(
-    marketplaceImport,
-    `import {\n  getMockListingBySlug,\n  getMockListings,\n  mockListings,\n} from "@repo/marketplace-domain/testing/mock-data";\nimport {\n  buildVehicleTaxonomyOptions,\n  curatedVehicleTaxonomy,\n  leadSite,\n  type MarketplaceSearchParams,\n  type VehicleCategory,\n  type VehicleListing,\n  type VehicleTaxonomyMakeOption,\n} from "@repo/marketplace";`
+    insertionPoint,
+    `${insertionPoint}\nconst getMockListingBySlug = (slug: string) =>\n  mockListings.find((listing) => listing.slug === slug);\n`
   );
-  await fs.writeFile(MODERN_PUBLIC_DATA, modernPublicData.endsWith('\n') ? modernPublicData : `${modernPublicData}\n`, 'utf8');
 }
+await fs.writeFile(MODERN_PUBLIC_DATA, modernPublicData.endsWith('\n') ? modernPublicData : `${modernPublicData}\n`, 'utf8');
 
 const forbidden = [
   'daynight.auto.plovdiv',
@@ -97,4 +109,4 @@ async function scan(directory) {
 }
 
 await scan(path.join(CARWOW, 'src'));
-console.log('IS AUTO content normalized; Modern mock imports made deterministic.');
+console.log('IS AUTO content normalized; Modern mock lookup made deterministic.');
