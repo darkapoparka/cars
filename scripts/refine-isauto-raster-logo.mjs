@@ -6,6 +6,7 @@ const ROOT = process.cwd();
 const CLIENT = path.join(ROOT, 'clients', 'isauto-varna');
 const OFFICIAL_LOGO =
   'https://www.isauto.net/assets/logo-cf0718a1710eaf3a212a58eb9a20c0d17527708d0fcd27bb8bf5a2433907dbdd.png';
+const PIPELINE_VERSION = 'official-wordmark-v2';
 const sharpRoot = process.env.IS_AUTO_SHARP_ROOT;
 
 if (!sharpRoot) {
@@ -313,6 +314,7 @@ if (await exists(provenancePath)) {
     ...(provenance.brand ?? {}),
     source: 'https://www.isauto.net/',
     rasterSource: OFFICIAL_LOGO,
+    pipelineVersion: PIPELINE_VERSION,
     implementation:
       'The official IS AUTO website wordmark is converted into tightly framed transparent dark/light PNG masters with WebP archive derivatives. No SVG, CSS wordmark, generated text, App Store crop, or boxed background is used at runtime.'
   };
@@ -330,7 +332,7 @@ for (const destination of logoDestinations) {
 }
 
 console.log([
-  'IS AUTO official website identity finalized:',
+  `IS AUTO official website identity finalized (${PIPELINE_VERSION}):`,
   `- source: ${OFFICIAL_LOGO}`,
   `- dark PNG: ${darkGeometry.width}x${darkGeometry.height}, coverage ${darkGeometry.horizontalCoverage.toFixed(3)}x${darkGeometry.verticalCoverage.toFixed(3)}`,
   `- light PNG: ${lightGeometry.width}x${lightGeometry.height}, coverage ${lightGeometry.horizontalCoverage.toFixed(3)}x${lightGeometry.verticalCoverage.toFixed(3)}`,
