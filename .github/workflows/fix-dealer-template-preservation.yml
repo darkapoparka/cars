@@ -54,7 +54,24 @@ jobs:
           git -C "$RUNNER_TEMP/cars-template-auto-best" checkout --detach 90cc2d6a0616ad06fddcd4447a1229d4a14a1291
           npm ci --no-audit --no-fund --prefix "$RUNNER_TEMP/cars-template-auto-best"
           npx --prefix "$RUNNER_TEMP/cars-template-auto-best" playwright install --with-deps chromium
-          npm run quality --prefix "$RUNNER_TEMP/cars-template-auto-best"
+          npm --prefix "$RUNNER_TEMP/cars-template-auto-best" run validate
+          npm --prefix "$RUNNER_TEMP/cars-template-auto-best" run preview -- --host 127.0.0.1 --port 6461 > "$RUNNER_TEMP/auto-best-preview.log" 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill "$PREVIEW_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:6461/ >/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          if ! curl -fsS http://127.0.0.1:6461/ >/dev/null; then
+            cat "$RUNNER_TEMP/auto-best-preview.log" >&2
+            exit 1
+          fi
+          BASE_URL=http://127.0.0.1:6461 npm --prefix "$RUNNER_TEMP/cars-template-auto-best" run smoke
+          kill "$PREVIEW_PID" 2>/dev/null || true
+          wait "$PREVIEW_PID" 2>/dev/null || true
+          trap - EXIT
 
       - name: Record exact release evidence
         shell: bash
@@ -73,16 +90,17 @@ jobs:
             approved: true,
             verifiedAt: new Date().toISOString(),
             runtime: { node: run('node', ['--version']).replace(/^v/, ''), npm: run('npm', ['--version']), lockfile: 'package-lock.json' },
-            modes: { standalone: 'verified by full quality suite', mounted: 'requires-dealer-QA' },
+            modes: { standalone: 'verified by validation plus live-preview smoke', mounted: 'requires-dealer-QA' },
             checks: [
               { command: 'npm ci --no-audit --no-fund', status: 'passed' },
-              { command: 'npm run quality', status: 'passed' }
+              { command: 'npm run validate', status: 'passed' },
+              { command: 'BASE_URL=http://127.0.0.1:6461 npm run smoke', status: 'passed' }
             ],
             standalone: {
               mobile: true,
               desktop: true,
               widths: [390, 1440],
-              notes: 'Full validation plus retained mobile and desktop Playwright smoke suites.'
+              notes: 'Full validation plus retained mobile and desktop Playwright smoke suites against a live local preview.'
             }
           };
           fs.writeFileSync('docs/evidence/auto-best-release-template-preservation-2026-09-16.json', `${JSON.stringify(evidence, null, 2)}\n`);
