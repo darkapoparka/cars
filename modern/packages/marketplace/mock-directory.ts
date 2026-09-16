@@ -81,7 +81,7 @@ const scaleOrganizationTypes = [
 ] as const satisfies readonly OrganizationDirectoryType[];
 
 const scaleHeadquarters = [
-  { city: "Sofia", countryCode: "BG" },
+  { city: "Варна", countryCode: "BG" },
   { city: "Plovdiv", countryCode: "BG" },
   { city: "Varna", countryCode: "BG" },
   { city: "Hamburg", countryCode: "DE" },

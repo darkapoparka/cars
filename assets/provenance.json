@@ -4,7 +4,7 @@
   "brand": {
     "name": "IS AUTO",
     "source": "https://apps.apple.com/bg/app/isauto/id6446795247",
-    "implementation": "Official IS AUTO raster identity cleaned into transparent dark/light PNG runtime masters. WebP derivatives are preserved under clients/isauto-varna/assets/brand. No SVG dealer logo is used at runtime.",
+    "implementation": "Official IS AUTO raster identity cleaned into transparent dark/light PNG runtime masters. Auto Best publishes one /dealer/ PNG and WebP inventory contract; no SVG dealer logo is used at runtime.",
     "files": [
       "auto-best/static/assets/images/lead/isauto/logo-dark.png",
       "auto-best/static/assets/images/lead/isauto/logo-light.png",

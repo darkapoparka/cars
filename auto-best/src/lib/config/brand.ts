@@ -29,6 +29,6 @@ export const brand = {
   addressLine,
   address: `${addressLine}, ${city}`,
   appointment: 'Понеделник–петък 09:00–18:00 · събота 10:00–16:00',
-  logo: '/assets/images/lead/isauto/logo-dark.png',
-  logoOnDark: '/assets/images/lead/isauto/logo-light.png'
+  logo: '/dealer/logo-dark.png',
+  logoOnDark: '/dealer/logo-light.png'
 } as const satisfies BrandConfig;

@@ -2,12 +2,18 @@
 	import { resolve } from '$lib/utils/preview-paths';
 	import { ArrowUpRight, Mail, MapPin, Phone } from '@lucide/svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
+	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
 	import {
 		daynightFooterBottomLinks,
 		daynightDealerFooterGroups as groups
 	} from './daynight-footer-data';
 	const mapLink = {
 		href: daynightSite.mapUrl,
+		target: '_blank',
+		rel: 'noopener noreferrer'
+	} as const;
+	const youtubeLink = {
+		href: youtubeChannelUrl,
 		target: '_blank',
 		rel: 'noopener noreferrer'
 	} as const;
@@ -52,20 +58,29 @@
 					<MapPin size={19} /><span>{daynightSite.location}</span><ArrowUpRight size={15} />
 				</a>
 				<div class="dealer-footer__socials" aria-label="Социални мрежи">
+{#if daynightSite.socialLinks.facebook}
 					<a
-						href="https://www.facebook.com/isauto1"
+						href={daynightSite.socialLinks.facebook}
 						aria-label="Facebook"
 						target="_blank"
 						rel="noopener noreferrer"
 						><img src="/variant-3/assets/icons/input-facebook.svg" width="21" height="21" alt="" /></a
 					>
+					{/if}
+{#if youtubeChannelUrl}
+					<a {...youtubeLink} aria-label="YouTube"
+						><img src="/variant-3/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a
+					>
+					{/if}
+{#if daynightSite.socialLinks.instagram}
 					<a
-						href="https://www.instagram.com/is__auto/?hl=bg"
+						href={daynightSite.socialLinks.instagram}
 						aria-label="Instagram"
 						target="_blank"
 						rel="noopener noreferrer"
 						><img src="/variant-3/assets/icons/input-instagram.svg" width="21" height="21" alt="" /></a
 					>
+					{/if}
 				</div>
 			</div>
 		</div>

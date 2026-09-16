@@ -137,7 +137,7 @@ export function load() {
 		site: daynightSite,
 		stats: {
 			total: daynightVehicles.length,
-			dealers: 'София',
+			dealers: 'Варна',
 			rating: '4.9/5',
 			reviews: '240+'
 		},

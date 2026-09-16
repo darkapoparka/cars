@@ -398,7 +398,7 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
                 <span aria-hidden="true" className="px-1 text-white/40">
                   ·
                 </span>
-                {isBg ? "Бизнес парк Варна" : "Studentski grad"}
+                {isBg ? "Бизнес парк Варна" : "Бизнес парк Варна"}
               </p>
               <p className="mt-1 text-white/60 text-xs">{leadSite.address}</p>
             </div>

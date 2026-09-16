@@ -144,7 +144,7 @@
   line-height: var(--dn-leading-body);
 }
 
-.dn-contact-selected > p:first-child {
+.dn-contact-selected--description-only > p {
   margin-top: 0;
 }
 
@@ -668,7 +668,7 @@
 @media (min-width: 992px) {
   .dn-contact-section--general { padding-top: 48px; }
   .dn-contact-section--general > .container { width: min(1408px, 100%); padding-inline: 24px; }
-  .dn-app-shell main:has(> .dn-contact-hero--general) { position: relative; }
+  .dn-app-shell[data-contact-topic='general'] main { position: relative; }
   .dn-app-shell .dn-contact-hero--general .dn-contact-hero__action { display: none; }
   .dn-app-shell .dn-contact-hero-panel.dn-contact-intent--general {
     position: absolute;
@@ -701,7 +701,7 @@
   .dn-app-shell .dn-contact-hero-panel .dn-contact-visit { gap: 8px; margin-top: 6px; }
   .dn-app-shell .dn-contact-hero-panel .dn-contact-visit p { justify-content: center; font-size: var(--dn-text-body); line-height: var(--dn-leading-meta); }
   .dn-contact-hero-panel .dn-contact-visit p > .dn-icon { display: none; }
-  .dn-contact-hero-panel .dn-contact-visit p:nth-child(2) { display: none; }
+  .dn-app-shell .dn-contact-hero-panel .dn-contact-visit .dn-contact-visit__appointment { display: none; }
   .dn-app-shell .dn-contact-hero-panel .dn-contact-visit > a { justify-self: center; min-height: 44px; padding: 0 16px; gap: 12px; font-size: var(--dn-text-meta); background: #202329; color: #fff; }
   .dn-app-shell .dn-contact-hero-panel .dn-contact-visit > a:is(:hover, :focus-visible) { background: var(--dn-red); color: #fff; }
   .dn-app-shell .dn-contact-hero-panel .dn-contact-visit > a .dn-icon { color: inherit; }
@@ -903,7 +903,7 @@
   }
   .dn-app-shell .dn-contact-hero-panel.dn-contact-intent--general .dn-contact-intent__main {
     justify-content: center;
-    background: #171a1f;
+    background: var(--dn-theme-hero-surface);
     color: #fff;
   }
   .dn-app-shell .dn-contact-hero-panel.dn-contact-intent--general .dn-contact-card {
@@ -983,8 +983,8 @@
     height: 590px;
     min-height: 590px;
     background:
-      radial-gradient(circle at 50% 118%, rgba(196,1,1,.96) 0%, rgba(196,1,1,.38) 28%, transparent 55%),
-      linear-gradient(135deg, #15181d 0%, #202329 48%, #78000f 100%);
+      radial-gradient(circle at 50% 118%, rgb(var(--dn-theme-accent-rgb) / 96%) 0%, rgb(var(--dn-theme-accent-rgb) / 38%) 28%, transparent 55%),
+      linear-gradient(135deg, var(--dn-theme-hero-surface-deep) 0%, var(--dn-theme-hero-surface-mid) 48%, var(--dn-theme-hero-accent-deep) 100%);
   }
   .dn-app-shell .dn-contact-hero--general .dn-contact-hero__media { display: none !important; }
   .dn-app-shell .dn-contact-hero--general .dn-contact-hero__overlay {
@@ -1030,8 +1030,8 @@
 
 /* Neutral canvas beneath the red mobile workflow hero and white entry card. */
 @media (max-width: 767px) {
-  body:has(.dn-contact-hero--workflow),
-  .dn-app-shell:has(.dn-contact-hero--workflow),
+  body.dn-body--workflow,
+  .dn-app-shell[data-journey='workflow'],
   .dn-app-shell .dn-contact-section--workflow {
     background: var(--dn-mobile-canvas);
   }
@@ -1043,8 +1043,8 @@
     height: 540px;
     min-height: 540px;
     background:
-      radial-gradient(circle at 50% 88%, rgba(196,1,1,.16) 0%, transparent 34%),
-      #1d1f23;
+      radial-gradient(circle at 50% 88%, rgb(var(--dn-theme-accent-rgb) / 16%) 0%, transparent 34%),
+      var(--dn-theme-contact-surface);
   }
   .dn-app-shell .dn-contact-hero--general .dn-contact-hero__overlay {
     background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.18));
@@ -1129,7 +1129,7 @@
     height: 500px;
     min-height: 500px;
     overflow: visible;
-    background: linear-gradient(180deg, #202329 0%, #191c20 100%);
+    background: linear-gradient(180deg, var(--dn-theme-hero-surface-mid) 0%, var(--dn-theme-contact-surface-end) 100%);
   }
   .dn-contact-hero--general .dn-route-hero__layout { height: 500px; }
   .dn-app-shell .dn-contact-hero--general .dn-route-hero__copy { top: 150px; }
@@ -1247,7 +1247,7 @@
   .dn-contact-section--workflow {
     padding-bottom: 68px;
   }
-  html:has(.dn-contact-hero--workflow) {
+  html.dn-html--workflow {
     scroll-padding-bottom: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom) + 68px);
   }
 }
@@ -1256,18 +1256,3 @@
   .dn-contact-section--workflow .dn-contact-intent--workflow :is(.dn-contact-workflow-title, .dn-tradein-enquiry > h1) { font-size: var(--dn-text-subheading); }
 }
 
-/* Short viewports need help in the page flow so it cannot cover the support action. */
-@media (max-width: 767px) and (max-height: 700px) {
-  .dn-contact-section--workflow .dn-contact-intent--workflow :is(.dn-import-info-drawer, .dn-tradein-info-drawer) {
-    position: static;
-    transform: none;
-    margin: var(--dn-space-4) auto 0;
-  }
-  .dn-contact-section--workflow .dn-contact-intent--workflow :is(.dn-import-info-drawer__peek, .dn-tradein-info-drawer__peek) {
-    min-height: var(--dn-control-hit-height);
-    padding: var(--dn-space-2) var(--dn-space-4);
-    border-radius: var(--dn-pill);
-  }
-  .dn-contact-section--workflow .dn-contact-intent--workflow :is(.dn-import-info-drawer__handle, .dn-tradein-info-drawer__handle) { display: none; }
-  .dn-contact-section--workflow { padding-bottom: var(--dn-space-4); }
-}
