@@ -1,4 +1,4 @@
-name: Patch IS AUTO logo refiner CSS boundary
+name: Patch IS AUTO generator CSS boundary
 
 on:
   push:
@@ -20,28 +20,28 @@ jobs:
           ref: main
           fetch-depth: 0
           sparse-checkout: |
-            scripts/refine-isauto-raster-logo.mjs
-      - name: Keep identity cleanup out of template stylesheets
+            scripts/build-isauto-varna.mjs
+      - name: Keep dealer text replacement out of all template stylesheets
         shell: bash
         run: |
           set -euo pipefail
           python <<'PY'
           from pathlib import Path
-          target = Path('scripts/refine-isauto-raster-logo.mjs')
+          target = Path('scripts/build-isauto-varna.mjs')
           text = target.read_text(encoding='utf-8').replace('\r\n', '\n')
-          old = "const textExtensions = new Set(['.css', '.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);"
-          new = "const textExtensions = new Set(['.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx']);"
+          old = "const textExtensions = new Set(['.ts', '.tsx', '.js', '.mjs', '.svelte', '.json', '.md', '.css', '.html']);"
+          new = "const textExtensions = new Set(['.ts', '.tsx', '.js', '.mjs', '.svelte', '.json', '.md', '.html']);"
           if text.count(old) != 1:
-              raise SystemExit(f'expected one textExtensions declaration, found {text.count(old)}')
+              raise SystemExit(f'expected one build textExtensions declaration, found {text.count(old)}')
           target.write_text(text.replace(old, new), encoding='utf-8')
           PY
-          node --check scripts/refine-isauto-raster-logo.mjs
-      - name: Commit CSS boundary fix
+          node --check scripts/build-isauto-varna.mjs
+      - name: Commit generator CSS boundary fix
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/refine-isauto-raster-logo.mjs
-          git commit -m 'Keep IS AUTO logo refinement out of template CSS'
+          git add scripts/build-isauto-varna.mjs
+          git commit -m 'Keep IS AUTO generator out of template CSS'
           git push origin HEAD:main
