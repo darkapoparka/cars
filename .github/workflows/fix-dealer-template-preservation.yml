@@ -124,6 +124,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/apply-template-preservation-fix.py
+          python scripts/fix-preservation-test-fixtures.py
 
       - name: Verify workflow and refresh regressions
         shell: bash
@@ -142,6 +143,7 @@ jobs:
           set -euo pipefail
           rm .github/workflows/fix-dealer-template-preservation.yml
           rm scripts/apply-template-preservation-fix.py
+          rm scripts/fix-preservation-test-fixtures.py
           git fetch origin main
           if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
             echo "main moved during verification; refusing to overwrite concurrent work" >&2
@@ -152,6 +154,7 @@ jobs:
           git add \
             .github/workflows/fix-dealer-template-preservation.yml \
             scripts/apply-template-preservation-fix.py \
+            scripts/fix-preservation-test-fixtures.py \
             docs/evidence/auto-best-release-template-preservation-2026-09-16.json \
             templates.lock.json \
             templates/auto-best \
