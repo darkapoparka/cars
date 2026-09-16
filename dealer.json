@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "slug": "isauto-varna",
+  "dealerId": null,
+  "repository": "darkapoparka/cars-isautovarna",
+  "defaultBranch": "main",
+  "variants": [
+    {
+      "key": "auto-best",
+      "entry": "/",
+      "base": ""
+    },
+    {
+      "key": "modern",
+      "entry": "/variant-2/cars",
+      "base": "/variant-2"
+    },
+    {
+      "key": "carwow",
+      "entry": "/variant-3/",
+      "base": "/variant-3"
+    }
+  ],
+  "extraAssets": [
+    "assets/provenance.json"
+  ],
+  "packaging": {
+    "version": "1"
+  }
+}

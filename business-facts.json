@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "dealer": {
+    "slug": "isauto-varna",
+    "name": "IS AUTO Varna",
+    "shortName": "IS AUTO",
+    "country": "BG",
+    "city": "Varna",
+    "address": "Бизнес парк Варна, сграда B6"
+  },
+  "contact": {
+    "phone": "0899 266 666",
+    "phoneE164": "+359899266666",
+    "email": "varna@isauto.net",
+    "website": "https://www.isauto.net/",
+    "inventoryProfile": "https://isautovarna.mobile.bg/"
+  },
+  "openingHours": {
+    "weekdays": "09:00–18:00",
+    "saturday": "10:00–16:00",
+    "sunday": "closed"
+  },
+  "positioning": "New and used vehicles, vehicle sourcing/import, purchase consultation and support with registration, insurance and finance discussions.",
+  "sourceUrls": [
+    "https://www.isauto.net/",
+    "https://www.isauto.net/contacts",
+    "https://www.isauto.net/about-us/",
+    "https://isautovarna.mobile.bg/"
+  ],
+  "verifiedAt": "2026-09-16",
+  "notes": [
+    "This is an unpublished prospect demo; no commercial relationship or outreach is implied.",
+    "Inventory is a dated public sample, not a live feed. Availability, specification and price must be confirmed directly with the dealer.",
+    "Forms remain preview interactions unless a delivery backend is explicitly configured and tested."
+  ]
+}
