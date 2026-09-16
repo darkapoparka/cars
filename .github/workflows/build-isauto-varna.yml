@@ -155,11 +155,10 @@ jobs:
             printf 'Unexpected retained links after cleanup:\n%s\n' "$remaining_links" >&2
             exit 1
           fi
-          git add --sparse -A -- \
-            scripts/build-isauto-varna.mjs \
-            clients/isauto-varna \
-            leads/bulgaria.json \
-            .github/workflows/publish-isauto-package.yml
+          git add --sparse -A scripts/build-isauto-varna.mjs
+          git add --sparse -A clients/isauto-varna
+          git add --sparse -A leads/bulgaria.json
+          git add --sparse -A .github/workflows/publish-isauto-package.yml
           if ! git diff --cached --quiet; then
             git commit -m "Build IS AUTO Varna three-variant lead"
             git pull --rebase origin main
