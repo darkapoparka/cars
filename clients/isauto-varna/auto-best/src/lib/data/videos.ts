@@ -5,6 +5,5 @@ export interface FeaturedVideo {
   thumbnail: string;
 }
 
-// IS AUTO does not publish a verified YouTube channel.
-// Keep the template video surface empty rather than presenting another dealer's media.
+// IS AUTO does not publish a verified YouTube channel. Do not inherit another dealer's videos.
 export const featuredVideos: readonly FeaturedVideo[] = [];

@@ -10,7 +10,7 @@ import {
   organizationDirectoryProfileInputSchema,
   parseOrganizationDirectorySearchParams,
 } from "./directory";
-import { getMockListingById } from "./mock-data";
+import { mockListings } from "@repo/marketplace-domain/testing/mock-data";
 import {
   mockOrganizationDirectoryCoreEntries,
   mockOrganizationDirectoryEntries,
@@ -435,7 +435,7 @@ describe("organization directory search", () => {
       expect(organization.representativeVehicles.length).toBeLessThanOrEqual(3);
 
       for (const preview of organization.representativeVehicles) {
-        const listing = getMockListingById(preview.id);
+        const listing = mockListings.find((entry) => entry.id === preview.id);
         expect(listing).toBeDefined();
         expect(preview).toMatchObject({
           href: `/listing/${listing?.slug}`,

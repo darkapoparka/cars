@@ -4,13 +4,13 @@ import {
   type OrganizationInventoryAvailabilityKind,
   organizationDirectoryEntriesSchema,
 } from "./directory";
-import { getMockListingById } from "./mock-data";
+import { mockListings } from "@repo/marketplace-domain/testing/mock-data";
 
 const getRepresentativeVehicle = (
   listingId: string,
   availability: OrganizationInventoryAvailabilityKind
 ) => {
-  const listing = getMockListingById(listingId);
+  const listing = mockListings.find((entry) => entry.id === listingId);
   const image = listing?.images[0];
   if (!(listing && image)) {
     throw new Error(`Missing representative marketplace listing: ${listingId}`);
@@ -56,7 +56,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "IS AUTO Varna в Бизнес парк Варна",
-        url: "/isauto/hero.webp",
+        url: "/variant-2/isauto/hero.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("is-1001", "local"),
