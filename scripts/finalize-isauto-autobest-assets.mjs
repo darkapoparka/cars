@@ -121,6 +121,44 @@ for (const relative of [
   await fs.writeFile(target, normalized, 'utf8');
 }
 
+const modernMockDataPath = path.join(
+  modern,
+  'packages',
+  'marketplace-domain',
+  'testing',
+  'mock-data.ts'
+);
+let modernMockData = await fs.readFile(modernMockDataPath, 'utf8');
+const sellerStatusDeclaration = 'const sellerListingStatuses: Record<string, VehicleListing["status"]> = {';
+const sellerListingsAnchor = 'export const getMockSellerListings = () =>';
+
+if (!modernMockData.includes(sellerStatusDeclaration)) {
+  if (!modernMockData.includes(sellerListingsAnchor)) {
+    throw new Error('Could not locate the Modern seller-listing status repair point.');
+  }
+
+  const sellerStatusBlock = `const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
+  "is-1001": "active",
+  "is-1003": "pending_review",
+  "is-1006": "draft",
+};
+
+`;
+
+  modernMockData = modernMockData.replace(
+    sellerListingsAnchor,
+    `${sellerStatusBlock}${sellerListingsAnchor}`
+  );
+}
+
+if (
+  !modernMockData.includes(sellerStatusDeclaration) ||
+  !modernMockData.includes('status: sellerListingStatuses[listing.id] ?? listing.status')
+) {
+  throw new Error('The Modern seller-listing status map is incomplete after personalization.');
+}
+await fs.writeFile(modernMockDataPath, modernMockData, 'utf8');
+
 const listingPagePath = path.join(
   modern,
   'apps',
@@ -203,4 +241,4 @@ async function assertNoFragileMockImports(directory) {
 
 await assertNoFragileMockImports(modern);
 
-console.log('Retired Auto Best video assets and UI removed; Modern related listings localized to the IS AUTO demo inventory.');
+console.log('Retired Auto Best video assets and UI removed; Modern related listings and seller status fixtures repaired.');
