@@ -121,35 +121,12 @@ for (const relative of [
   await fs.writeFile(target, normalized, 'utf8');
 }
 
-const listingPagePath = path.join(
-  modern,
-  'apps',
-  'web',
-  'app',
-  '[locale]',
-  'listing',
-  '[slug]',
-  'page.tsx'
-);
-let listingPage = await fs.readFile(listingPagePath, 'utf8');
-listingPage = listingPage.replace(/\r?\n  getMockRelatedListings,/, '');
-if (!listingPage.includes('import { getMockRelatedListings } from "@repo/marketplace-domain/testing/mock-data";')) {
-  listingPage = listingPage.replace(
-    /} from "@repo\/marketplace";\r?\n/,
-    '} from "@repo/marketplace";\nimport { getMockRelatedListings } from "@repo/marketplace-domain/testing/mock-data";\n'
-  );
-}
-if (
-  !listingPage.includes('import { getMockRelatedListings } from "@repo/marketplace-domain/testing/mock-data";') ||
-  /import\s+\{[\s\S]*?getMockRelatedListings[\s\S]*?\}\s+from\s+["']@repo\/marketplace["']/.test(listingPage)
-) {
-  throw new Error('Could not normalize the Modern related-listings helper import.');
-}
-await fs.writeFile(listingPagePath, listingPage, 'utf8');
-
+// Keep getMockRelatedListings on the marketplace public API. Moving it to the
+// testing subpath breaks the Next.js production build because that subpath is
+// intentionally not a stable application import boundary.
 const forbiddenMockImportPatterns = [
-  /import\s+\{[^}]*\bgetMock[A-Za-z0-9_]*\b[^}]*\}\s+from\s+["']@repo\/marketplace["']/s,
-  /import\s+\{[^}]*\bgetMock[A-Za-z0-9_]*\b[^}]*\}\s+from\s+["']\.\/mock-data["']/s
+  /import\s+\{[^}]*\bgetMockListingById\b[^}]*\}\s+from\s+["']@repo\/marketplace["']/s,
+  /import\s+\{[^}]*\bgetMockListingById\b[^}]*\}\s+from\s+["']\.\/mock-data["']/s
 ];
 
 async function assertNoFragileMockImports(directory) {
@@ -164,7 +141,7 @@ async function assertNoFragileMockImports(directory) {
     const source = await fs.readFile(target, 'utf8');
     for (const pattern of forbiddenMockImportPatterns) {
       if (pattern.test(source)) {
-        throw new Error(`Fragile Modern mock helper import remains in ${target}.`);
+        throw new Error(`Fragile Modern mock listing lookup remains in ${target}.`);
       }
     }
   }
@@ -172,4 +149,4 @@ async function assertNoFragileMockImports(directory) {
 
 await assertNoFragileMockImports(modern);
 
-console.log('Retired Auto Best video assets and UI removed; all Modern mock helper imports normalized.');
+console.log('Retired Auto Best video assets and UI removed; targeted Modern mock lookups normalized.');
