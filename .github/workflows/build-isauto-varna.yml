@@ -12,6 +12,7 @@ on:
       - scripts/finalize-isauto-autobest-assets.mjs
       - scripts/repair-isauto-template-integrity.mjs
       - scripts/refine-isauto-raster-logo.mjs
+      - scripts/finalize-isauto-logo-assets.mjs
   workflow_dispatch:
 
 permissions:
@@ -59,6 +60,7 @@ jobs:
           node --check scripts/finalize-isauto-autobest-assets.mjs
           node --check scripts/repair-isauto-template-integrity.mjs
           node --check scripts/refine-isauto-raster-logo.mjs
+          node --check scripts/finalize-isauto-logo-assets.mjs
 
       - name: Set up Node 24 for personalization
         uses: actions/setup-node@v4
@@ -100,6 +102,7 @@ jobs:
           node scripts/finalize-isauto-autobest-assets.mjs
           node scripts/repair-isauto-template-integrity.mjs
           node scripts/refine-isauto-raster-logo.mjs
+          node scripts/finalize-isauto-logo-assets.mjs
 
       - name: Set up Node 22 for Auto Best
         uses: actions/setup-node@v4
