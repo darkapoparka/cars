@@ -2,7 +2,16 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const CARWOW = path.join(ROOT, 'clients', 'isauto-varna', 'carwow');
+const CLIENT = path.join(ROOT, 'clients', 'isauto-varna');
+const CARWOW = path.join(CLIENT, 'carwow');
+const MODERN_PUBLIC_DATA = path.join(
+  CLIENT,
+  'modern',
+  'apps',
+  'web',
+  'lib',
+  'public-marketplace-data.ts'
+);
 
 const socialFiles = [
   'src/lib/components/about/DesktopAboutPage.svelte',
@@ -52,6 +61,19 @@ footer = footer.replace(/\n\tconst youtubeLink = \{[\s\S]*?\n\t\} as const;\n/, 
 footer = footer.replace(/\n\t\t\t\t\t<a \{\.\.\.youtubeLink\}[\s\S]*?<\/a\s*>/, '');
 await write('src/lib/components/layout/DesktopDealerFooter.svelte', footer);
 
+let modernPublicData = await fs.readFile(MODERN_PUBLIC_DATA, 'utf8');
+if (!modernPublicData.includes('from "@repo/marketplace-domain/testing/mock-data"')) {
+  const marketplaceImport = /import \{\r?\n  buildVehicleTaxonomyOptions,\r?\n  curatedVehicleTaxonomy,\r?\n  getMockListingBySlug,\r?\n  getMockListings,\r?\n  leadSite,\r?\n  type MarketplaceSearchParams,\r?\n  mockListings,\r?\n  type VehicleCategory,\r?\n  type VehicleListing,\r?\n  type VehicleTaxonomyMakeOption,\r?\n\} from "@repo\/marketplace";/;
+  if (!marketplaceImport.test(modernPublicData)) {
+    throw new Error('Could not find the expected Modern marketplace import block.');
+  }
+  modernPublicData = modernPublicData.replace(
+    marketplaceImport,
+    `import {\n  getMockListingBySlug,\n  getMockListings,\n  mockListings,\n} from "@repo/marketplace-domain/testing/mock-data";\nimport {\n  buildVehicleTaxonomyOptions,\n  curatedVehicleTaxonomy,\n  leadSite,\n  type MarketplaceSearchParams,\n  type VehicleCategory,\n  type VehicleListing,\n  type VehicleTaxonomyMakeOption,\n} from "@repo/marketplace";`
+  );
+  await fs.writeFile(MODERN_PUBLIC_DATA, modernPublicData.endsWith('\n') ? modernPublicData : `${modernPublicData}\n`, 'utf8');
+}
+
 const forbidden = [
   'daynight.auto.plovdiv',
   '61566304063141',
@@ -75,4 +97,4 @@ async function scan(directory) {
 }
 
 await scan(path.join(CARWOW, 'src'));
-console.log('IS AUTO social links normalized; unverified inherited YouTube content removed.');
+console.log('IS AUTO content normalized; Modern mock imports made deterministic.');
