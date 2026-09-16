@@ -51,3 +51,5 @@ for (const target of runtimeDerivatives) {
 }
 
 console.log('IS AUTO WebP logo derivatives archived outside runtime; transparent PNG remains the live logo.');
+
+// Rebuild trigger: regenerate the published IS AUTO package from the approved 2026-09-16 templates.
