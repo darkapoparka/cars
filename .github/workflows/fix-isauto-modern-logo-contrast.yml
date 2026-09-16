@@ -1,0 +1,92 @@
+name: Fix IS AUTO Modern logo contrast
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/fix-isauto-modern-logo-contrast.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/build-isauto-varna.mjs
+            /scripts/refine-isauto-raster-logo.mjs
+            /clients/isauto-varna/modern/packages/marketplace/lead-site.ts
+            /.github/workflows/build-isauto-varna.yml
+            /.github/workflows/fix-isauto-modern-logo-contrast.yml
+
+      - name: Use the light wordmark on the Modern dark header
+        shell: bash
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from pathlib import Path
+
+          def replace_once(path: str, old: str, new: str) -> None:
+              target = Path(path)
+              text = target.read_text(encoding='utf-8')
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'{path}: expected one match, found {count}')
+              target.write_text(text.replace(old, new), encoding='utf-8')
+
+          replace_once(
+              'scripts/build-isauto-varna.mjs',
+              'logoPath: "/isauto/logo-dark.png"',
+              'logoPath: "/isauto/logo-light.png"'
+          )
+          replace_once(
+              'clients/isauto-varna/modern/packages/marketplace/lead-site.ts',
+              'logoPath: "/variant-2/isauto/logo-dark.png"',
+              'logoPath: "/variant-2/isauto/logo-light.png"'
+          )
+          replace_once(
+              'scripts/refine-isauto-raster-logo.mjs',
+              "const PIPELINE_VERSION = 'official-wordmark-v2';",
+              "const PIPELINE_VERSION = 'official-wordmark-v3-dark-surface-contrast';"
+          )
+          replace_once(
+              '.github/workflows/build-isauto-varna.yml',
+              "    if: github.actor != 'github-actions[bot]'",
+              "    if: github.actor != 'github-actions[bot]' || contains(github.event.head_commit.message, '[rebuild-isauto]')"
+          )
+          PY
+          node --check scripts/build-isauto-varna.mjs
+          node --check scripts/refine-isauto-raster-logo.mjs
+          grep -Fq 'logoPath: "/isauto/logo-light.png"' scripts/build-isauto-varna.mjs
+          grep -Fq 'logoPath: "/variant-2/isauto/logo-light.png"' clients/isauto-varna/modern/packages/marketplace/lead-site.ts
+          git diff --check
+
+      - name: Commit canonical contrast repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/fix-isauto-modern-logo-contrast.yml
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
+            echo 'main moved during validation; refusing to overwrite' >&2
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            scripts/build-isauto-varna.mjs \
+            scripts/refine-isauto-raster-logo.mjs \
+            clients/isauto-varna/modern/packages/marketplace/lead-site.ts \
+            .github/workflows/build-isauto-varna.yml \
+            .github/workflows/fix-isauto-modern-logo-contrast.yml
+          git commit -m '[rebuild-isauto] Use light wordmark on Modern dark header'
+          git push origin HEAD:main
