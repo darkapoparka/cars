@@ -9,7 +9,7 @@ const write = (file, value) => {
   fs.writeFileSync(file, value.replace(/\r?\n/g, '\n'));
 };
 const q = (value) => JSON.stringify(String(value ?? ''));
-const textExtensions = new Set(['.js', '.mjs', '.cjs', '.ts', '.tsx', '.svelte', '.css', '.html', '.json']);
+const textExtensions = new Set(['.js', '.mjs', '.cjs', '.ts', '.tsx', '.svelte', '.html', '.json']);
 function patchTextTree(root, replacements, ignoredDirectories = new Set()) {
   const changed = [];
   const visit = (current) => {
