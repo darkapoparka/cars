@@ -19,7 +19,7 @@ export const leadSite: LeadSiteConfig = {
   mapsEmbedUrl: `https://www.google.com/maps?q=${mapQuery}&z=16&output=embed`,
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${mapQuery}`,
   name: "IS AUTO Varna", phoneDisplay: "0899 266 666", phoneHref: "tel:+359899266666", shortName: "IS AUTO", slug: "isauto-varna",
-  socialLinks: {"instagram":"https://www.instagram.com/is__auto/?hl=bg","facebook":"https://www.facebook.com/isauto1"},
+  socialLinks: {"instagram":"https://www.instagram.com/is__auto/?hl=bg","youtube":"","facebook":"https://www.facebook.com/isauto1"},
   staticDemoMode: true,
   tagline: "Нови и употребявани автомобили, внос и съдействие при покупка във Варна."
 };
