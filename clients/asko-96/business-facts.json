@@ -28,7 +28,7 @@
     "Собствен лизинг",
     "Сервизно обслужване"
   ],
-  "logo": "/assets/asko96/asko96-logo.png",
+  "logo": "/assets/brand/logo-on-light.webp",
   "showroom": "/assets/asko96/asko96-showroom.jpg",
   "stockSnapshotDate": "2026-09-06",
   "stockCount": 16,
@@ -37,5 +37,16 @@
     "https://asko96.bg/en/home-2/",
     "https://asko96.mobile.bg/",
     "https://asko96.mobile.bg/contacts"
-  ]
+  ],
+  "workingLogoPath": "assets/asko96/asko96-logo.png",
+  "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
