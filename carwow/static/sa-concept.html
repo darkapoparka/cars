@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day Night Auto — концепт</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#d71920;--red-d:#a50f15;--blue:#111827;--blue-d:#1850b8;
+  --ink:#14161b;--muted:#6b7280;--line:#e7eaf0;--bg:#f4f6fa;--white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Manrope,sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Sora,Manrope,sans-serif;letter-spacing:-.022em;line-height:1.04}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 36px}
+
+/* top + header */
+.topbar{background:#101216;color:#aeb4c0;font-size:12.5px;font-weight:500}
+.tb{display:flex;justify-content:space-between;align-items:center;height:36px}
+.tb b{color:#fff}
+.hd{background:#fff;border-bottom:1px solid var(--line)}
+.hdr{display:flex;align-items:center;gap:40px;height:78px}
+.logo{font-family:Sora;font-weight:800;font-size:21px;letter-spacing:.04em;display:flex;align-items:center;gap:9px}
+.logo i{width:26px;height:26px;background:var(--red);border-radius:6px;display:inline-block;transform:rotate(45deg)}
+.logo b{color:var(--red)}
+.nav{display:flex;gap:26px;font-weight:600;font-size:14.5px;color:#3a414e;margin-left:8px}
+.nav a:hover{color:var(--blue)}
+.hd-cta{margin-left:auto;display:flex;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:10px;font-weight:700;font-size:14.5px;cursor:pointer;border:0}
+.btn.ghost{background:#fff;border:1px solid #d7dbe3;color:var(--ink)}
+.btn.red{background:var(--red);color:#fff}
+
+/* hero */
+.hero{position:relative;background:#0e0f13;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 520px at 78% -10%, rgba(17, 24, 39, .20), transparent 60%),
+  radial-gradient(700px 480px at 12% 120%, rgba(215, 25, 32, .14), transparent 60%),
+  linear-gradient(118deg,#16181f 0%,#0c0d11 70%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,9,12,.55),transparent 45%)}
+.hero-in{position:relative;z-index:2;padding:78px 36px 120px;max-width:1240px;margin:0 auto}
+.eyebrow{display:inline-block;color:#9fc0ff;font-weight:700;font-size:12.5px;letter-spacing:.16em;margin-bottom:18px}
+.hero h1{color:#fff;font-size:60px;font-weight:800;margin-bottom:18px}
+.lead{color:#c4cad6;font-size:18px;line-height:1.55;max-width:620px;font-weight:500;margin-bottom:34px}
+
+/* buy box */
+.buybox{background:var(--blue);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:16px;box-shadow:0 26px 60px rgba(8,28,78,.45);max-width:1010px}
+.toggle{display:inline-flex;background:rgba(255,255,255,.14);border-radius:999px;padding:4px;margin-bottom:14px}
+.toggle button{border:0;background:transparent;color:#dbe6ff;font-weight:700;font-size:14px;padding:9px 20px;border-radius:999px;cursor:pointer;font-family:Manrope}
+.toggle button.on{background:#fff;color:var(--ink)}
+.fields{display:grid;grid-template-columns:repeat(4,1fr) 168px;gap:10px}
+.field{background:#fff;border-radius:11px;padding:11px 14px;cursor:pointer;border:1px solid transparent;transition:border-color .15s}
+.field:hover{border-color:rgba(255,255,255,.6)}
+.field label{display:block;font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.02em;margin-bottom:3px}
+.field .v{font-weight:700;font-size:15.5px;display:flex;justify-content:space-between;align-items:center}
+.field .v i{color:#9aa3b2;font-style:normal;font-size:12px}
+.search{background:var(--red);color:#fff;border:0;border-radius:11px;font-weight:800;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;font-family:Manrope}
+.search:hover{background:var(--red-d)}
+
+/* trust strip */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust-in{display:flex;gap:54px;align-items:center;height:74px;font-size:14.5px;color:#4b5563;font-weight:600}
+.trust b{font-family:Sora;color:var(--ink);font-weight:800}
+
+/* inventory */
+.inv{padding:72px 0 88px;background:var(--bg)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:30px}
+.kick{display:block;color:var(--red);font-weight:800;font-size:12px;letter-spacing:.16em;margin-bottom:8px}
+.sec-head h2{font-size:34px;font-weight:800}
+.seeall{font-weight:700;font-size:15px;color:var(--ink);display:inline-flex;align-items:center;gap:8px;border-bottom:2px solid var(--ink);padding-bottom:3px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:transform .18s,box-shadow .18s;display:block}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(16,24,40,.13)}
+.card-img{position:relative;aspect-ratio:16/11;background:#e9edf3;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.badge{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-size:11px;font-weight:800;letter-spacing:.04em;padding:5px 10px;border-radius:7px}
+.fav{position:absolute;top:11px;right:11px;width:32px;height:32px;border:0;border-radius:9px;background:rgba(255,255,255,.92);cursor:pointer;font-size:15px;color:#475569}
+.card-body{padding:15px 16px 17px}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.brand{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:#94a0b4;text-transform:uppercase}
+.trans{font-size:12px;font-weight:600;color:var(--muted)}
+.card-title{font-size:17px;font-weight:700;margin-bottom:11px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chips span{background:var(--bg);border:1px solid var(--line);border-radius:7px;font-size:12px;font-weight:600;color:#475569;padding:5px 9px}
+.card-foot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:13px}
+.price{font-family:Sora;font-weight:800;font-size:21px;color:var(--blue)}
+.mo{font-size:12px;font-weight:600;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap tb"><span>Виж наличните автомобили на <b>Day Night Auto</b></span><span>BG &nbsp;·&nbsp; <b>0877 733 110</b></span></div></div>
+
+<header class="hd"><div class="wrap hdr">
+  <div class="logo"><i></i>DAY<b>AUTO</b></div>
+  <nav class="nav"><a>Начало</a><a>Автомобили</a><a>Продай</a><a>Услуги</a><a>За нас</a><a>Контакти</a></nav>
+  <div class="hd-cta"><a class="btn ghost">Вход / Профил</a><a class="btn red">＋ Продай автомобил</a></div>
+</div></header>
+
+<section class="hero"><div class="hero-in">
+  <span class="eyebrow">ДЕЙ НАЙТ АУТО · ПЛОВДИВ</span>
+  <h1>Намери своя следващ<br>автомобил.</h1>
+  <p class="lead">Над 50 проверени автомобила в наличност. Купи, продай или замени — с пълно съдействие по оглед, документи и финансиране.</p>
+  <div class="buybox">
+    <div class="toggle"><button class="on">Всички</button><button>Нови</button><button>Употребявани</button></div>
+    <div class="fields">
+      <div class="field"><label>Марка</label><div class="v">BMW <i>▾</i></div></div>
+      <div class="field"><label>Модел</label><div class="v">Всички <i>▾</i></div></div>
+      <div class="field"><label>Цена до</label><div class="v">25 000 € <i>▾</i></div></div>
+      <div class="field"><label>Пробег до</label><div class="v">150 000 км <i>▾</i></div></div>
+      <button class="search">🔍 Търси</button>
+    </div>
+  </div>
+</div></section>
+
+<div class="trust"><div class="wrap trust-in">
+  <div><b>54</b> налични автомобила</div>
+  <div><b>15</b> марки в наличност</div>
+  <div>на пазара от <b>2019</b></div>
+  <div><b>Финансиране</b> и лизинг на място</div>
+</div></div>
+
+<section class="inv"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="kick">НАЛИЧНОСТ</span><h2>Най-нови автомобили</h2></div>
+    <a class="seeall">Виж всички 54 &nbsp;→</a>
+  </div>
+  <div class="cards">
+    <a class="card">
+      <div class="card-img"><img src="https://mobistatic3.focus.bg/mobile/photosorg/017/1/11776804395836017_yX.webp" alt=""><span class="badge">ТОП</span><button class="fav">♡</button></div>
+      <div class="card-body">
+        <div class="card-top"><span class="brand">Chrysler</span><span class="trans">Автоматик</span></div>
+        <div class="card-title">Chrysler 300C · 2018</div>
+        <div class="chips"><span>105 000 км</span><span>Газ/Бензин</span><span>Топ състояние</span></div>
+        <div class="card-foot"><span class="price">17 000 €</span><span class="mo">от 536 лв./мес</span></div>
+      </div>
+    </a>
+    <a class="card">
+      <div class="card-img"><img src="https://cdn2.focus.bg/mobile/photosorg/637/1/11778156311318637_IP.webp" alt=""><span class="badge">VIP</span><button class="fav">♡</button></div>
+      <div class="card-body">
+        <div class="card-top"><span class="brand">BMW</span><span class="trans">Автоматик</span></div>
+        <div class="card-title">BMW i7 · 2023</div>
+        <div class="chips"><span>127 000 км</span><span>Електрически</span><span>Full Max</span></div>
+        <div class="card-foot"><span class="price">81 000 €</span><span class="mo">от 2 556 лв./мес</span></div>
+      </div>
+    </a>
+    <a class="card">
+      <div class="card-img"><img src="https://mobistatic2.focus.bg/mobile/photosorg/474/1/11776801987575474_ev.webp" alt=""><span class="badge">ТОП</span><button class="fav">♡</button></div>
+      <div class="card-body">
+        <div class="card-top"><span class="brand">BMW</span><span class="trans">Автоматик</span></div>
+        <div class="card-title">BMW 520i · 2006</div>
+        <div class="chips"><span>201 000 км</span><span>Бензин</span><span>Обслужен</span></div>
+        <div class="card-foot"><span class="price">4 500 €</span><span class="mo">от 142 лв./мес</span></div>
+      </div>
+    </a>
+    <a class="card">
+      <div class="card-img"><img src="https://mobistatic4.focus.bg/mobile/photosorg/910/2/21767728136566910_yk.webp" alt=""><span class="badge">M Pack</span><button class="fav">♡</button></div>
+      <div class="card-body">
+        <div class="card-top"><span class="brand">BMW</span><span class="trans">Автоматик</span></div>
+        <div class="card-title">BMW X4 2.0D · 2017</div>
+        <div class="chips"><span>171 000 км</span><span>Дизел</span><span>4x4</span></div>
+        <div class="card-foot"><span class="price">17 500 €</span><span class="mo">от 552 лв./мес</span></div>
+      </div>
+    </a>
+  </div>
+</div></section>
+</body>
+</html>

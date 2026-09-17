@@ -1,0 +1,42 @@
+.git/
+.github/
+.vercel/
+.svelte-kit/
+build/
+node_modules/
+
+# Repository operations, provenance, and project documentation are not runtime
+# build inputs. The deploy retains package/config files plus src/ and static/.
+.agency-os/
+docs/
+provenance/
+scripts/
+tests/
+AGENTS.md
+ASSET_PROVENANCE.md
+PRODUCT.md
+README.md
+REUSE_GUIDE.md
+SOURCE_LICENSE.md
+SVELTE_TASKS.md
+
+# Local verification output is never a deployment input.
+artifacts/
+playwright-report/
+test-results/
+coverage/
+.impeccable/
+*.log
+*.tsbuildinfo
+
+# Local secrets must come from the Vercel project environment.
+.env
+.env.*
+
+# Local-only generated and operating-system files.
+static/generated/
+vite.config.*.timestamp-*
+.DS_Store
+Thumbs.db
+document.documentElement.clientWidth*
+innerWidth
