@@ -1,6 +1,6 @@
 # Build, deployment and indexing
 
-IS AUTO uses the Vercel adapter configured in [svelte.config.js](../svelte.config.js). [vercel.json](../vercel.json) identifies the SvelteKit framework, `npm ci` install command and `npm run build` build command.
+Auto Best uses the Vercel adapter configured in [svelte.config.js](../svelte.config.js). [vercel.json](../vercel.json) identifies the SvelteKit framework, `npm ci` install command and `npm run build` build command.
 
 ## Build inputs and output
 

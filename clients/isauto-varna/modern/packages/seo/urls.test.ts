@@ -9,7 +9,7 @@ import {
 
 const HTTP_PROTOCOL_ERROR = /must use HTTP\(S\)/;
 
-describe("IS AUTO SEO URLs", () => {
+describe("Day & Night SEO URLs", () => {
   it("normalizes Bulgarian variants and falls back to the route default", () => {
     expect(normalizeSeoLocale("bg-BG")).toBe("bg");
     expect(normalizeSeoLocale("en_US")).toBe("en");

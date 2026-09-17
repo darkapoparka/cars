@@ -1,4 +1,4 @@
-# IS AUTO — desktop style guide
+# Day & Night — desktop style guide
 
 Updated 2026-09-06. Desktop refinement of the existing dealer site, with separate mobile compositions preserved. This guide governs new desktop styling; it does not certify every legacy route as migrated.
 

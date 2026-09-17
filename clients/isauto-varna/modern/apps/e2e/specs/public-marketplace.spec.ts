@@ -803,7 +803,7 @@ test.describe("public marketplace", () => {
 
     const legalBackAction = page
       .locator("main")
-      .getByRole("link", { name: "Към IS AUTO" });
+      .getByRole("link", { name: "Към Day & Night" });
     await expect(legalBackAction).toBeVisible();
     await expect(legalBackAction).toHaveClass(subtleButtonClassPattern);
 

@@ -1,6 +1,6 @@
 > Historical source document. It does not override AGENTS.md or the current architecture/design contracts.
 
-# IS AUTO — Svelte 5 De-Templating Migration Plan
+# Day Night Auto — Svelte 5 De-Templating Migration Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:subagent-driven-development` (recommended) or `superpowers:executing-plans` to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -710,14 +710,14 @@ git add -A && git commit -m "feat: shared reactive inventory filter store (mobil
 
 **Files (replace inline literals with imports from `$lib/data/daynight-site`):**
 
-- `src/lib/components/home/desktop/DesktopHomeFooter.svelte` (phone `0899 266 666`, address, email)
+- `src/lib/components/home/desktop/DesktopHomeFooter.svelte` (phone `0877 733 110`, address, email)
 - `src/lib/components/template/DesktopDashboardChangePassword.svelte` (`demo@getrich.local`)
-- `src/lib/components/template/DesktopDashboardProfile.svelte` (`0899266666`)
+- `src/lib/components/template/DesktopDashboardProfile.svelte` (`0877733110`)
 - Reference: `src/lib/data/daynight-site.ts` (already defines `phone`, `phoneLabel`, `email`, `location`)
 
 - [ ] **Step 1: Grep for stray literals**
 
-Run: `rg -n "0899 266 666|0899266666|office@daynightauto|Околовръстен" src/lib/components`
+Run: `rg -n "0877 733 110|0877733110|office@daynightauto|Околовръстен" src/lib/components`
 
 - [ ] **Step 2: Replace with `daynightSite.*`**
 

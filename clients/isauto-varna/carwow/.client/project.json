@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "isauto-varna",
   "templateKey": "carwow",
-  "templateVersion": "promote-2026-09-13",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
   "createdAt": "2026-09-16T00:19:40.746Z",
-  "state": "personalized-needs-hosted-qa",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -22,8 +22,8 @@
   "qa": {
     "desktop": false,
     "mobile": false,
-    "identity": true,
-    "contactPath": true
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -32,15 +32,15 @@
   },
   "templateSource": {
     "repository": "darkapoparka/cars-template-carwow",
-    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
     "exportPolicy": "cars-source-v1"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "57d4e828ec4cb1f109d8c0f55c1eaae721bf3c8b",
+  "workflowCommit": "a8993ba51d618e228db8998635a2c2a395762d25",
   "businessFacts": "clients/isauto-varna/business-facts.json",
   "stock": "clients/isauto-varna/FACTS-AND-INVENTORY.json",
   "assetProvenance": "clients/isauto-varna/assets/provenance.json",
@@ -50,5 +50,11 @@
     "Forms and calculators remain preview interactions until a backend is configured and tested.",
     "No customer reviews, completed sales or guaranteed finance outcomes are asserted.",
     "Desktop and mobile hosted visual QA remains false until the deployed routes are reviewed."
-  ]
+  ],
+  "refresh": {
+    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "refreshedAt": "2026-09-17T06:10:19.711Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

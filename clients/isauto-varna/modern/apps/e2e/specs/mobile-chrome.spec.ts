@@ -63,7 +63,7 @@ for (const width of [320, 360, 390, 430, 844]) {
       const chrome = page.locator('[data-slot="mobile-dealer-chrome"]:visible');
       await expect(chrome).toBeVisible();
       await page.waitForLoadState("networkidle");
-      const logo = chrome.locator('img[alt="IS AUTO Varna"]');
+      const logo = chrome.locator('img[alt="Day & Night Auto Group"]');
       const current = await logo.boundingBox();
       if (logoBox) {
         expect(current).toEqual(logoBox);
