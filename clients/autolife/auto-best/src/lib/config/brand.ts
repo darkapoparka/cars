@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "ГП4, разклон за с. Тополи",
   appointment: "За работно време се обадете предварително.",
-  logo: "/assets/autolife/wordmark.svg",
-  logoOnDark: "/assets/autolife/wordmark.svg"
+  logo: "/assets/brand/logo-on-light.webp",
+  logoOnDark: "/assets/brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;
