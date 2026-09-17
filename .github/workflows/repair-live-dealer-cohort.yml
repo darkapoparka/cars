@@ -1,0 +1,222 @@
+name: Repair live dealer cohort
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/repair-live-dealer-cohort.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-live-dealer-cohort
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        client:
+          - isauto-varna
+          - champion-auto-pro
+          - perfect-auto-varna
+          - kg-team-auto
+          - legend-auto
+          - ivo-auto
+          - asko-96
+          - outletcars-varna
+          - promosale-varna
+          - navara-car
+          - al-hamoor-al-thahabi
+          - texas-drive-auto
+          - eliqauto
+          - the-dealers-point
+          - f1rst-motors
+          - al-basma-motors
+          - elit-auto-import
+          - automarket-varna
+          - priselci
+          - autolife
+          - astracar
+          - avangard-auto
+          - excellent-cars
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out current templates and dealer source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /AGENTS.md
+            /catalog.json
+            /templates.lock.json
+            /docs/
+            /scripts/
+            /templates/auto-best/
+            /templates/modern/
+            /templates/carwow/
+            /templates/import/
+            /clients/index.json
+            /clients/${{ matrix.client }}/
+
+      - name: Set up Node and isolated image tooling
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Sharp without touching project lockfiles
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --prefix "$RUNNER_TEMP/cars-image-tools" sharp@0.35.1 --no-audit --no-fund
+
+      - name: Validate repair tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check scripts/repair-client.mjs
+          node --check scripts/refine-client-logo-assets.mjs
+          node --check scripts/enforce-client-logo-surfaces.mjs
+          node --check scripts/sanitize-client-preview-content.mjs
+          node --check scripts/refresh-client.mjs
+          node --check scripts/package-dealer.mjs
+
+      - name: Regenerate from approved templates and repair identity
+        shell: bash
+        env:
+          CARS_SHARP_ROOT: ${{ runner.temp }}/cars-image-tools
+        run: |
+          set -euo pipefail
+          node scripts/repair-client.mjs --client "${{ matrix.client }}"
+
+      - name: Verify protected composition and logo contract
+        shell: bash
+        env:
+          CLIENT: ${{ matrix.client }}
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import { assertTemplatePresentation } from './scripts/lib/client-refresh-presentation.mjs';
+          const root = process.cwd();
+          const client = process.env.CLIENT;
+          for (const key of ['auto-best', 'modern', 'carwow', 'import']) {
+            const candidate = path.join(root, 'clients', client, key);
+            if (!fs.existsSync(candidate)) continue;
+            assertTemplatePresentation({
+              key,
+              template: path.join(root, 'templates', key),
+              candidate
+            });
+          }
+          const required = [
+            'assets/brand/logo-on-light.png',
+            'assets/brand/logo-on-light.webp',
+            'assets/brand/logo-on-dark.png',
+            'assets/brand/logo-on-dark.webp'
+          ];
+          for (const relative of required) {
+            if (!fs.existsSync(path.join(root, 'clients', client, relative))) {
+              throw new Error(`${client}: missing ${relative}`);
+            }
+          }
+          console.log(`${client}: protected template composition and raster logo pair verified.`);
+          NODE
+          if grep -RIlE 'Implementation in progress|not a finished dealer website|Independent preview|No enquiry is delivered|No inquiry is delivered' \
+            "clients/${{ matrix.client }}/auto-best/src" \
+            "clients/${{ matrix.client }}/modern/apps/web" \
+            "clients/${{ matrix.client }}/carwow/src" \
+            "clients/${{ matrix.client }}/import/src" 2>/dev/null | grep -q .; then
+            echo "Internal implementation copy remains in a public source surface" >&2
+            exit 1
+          fi
+
+      - name: Preserve refreshed source on a repair branch
+        id: source
+        shell: bash
+        env:
+          CLIENT: ${{ matrix.client }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git clean -fdX -- "clients/${CLIENT}"
+          git add --sparse -A "clients/${CLIENT}"
+          if git diff --cached --quiet; then
+            git commit --allow-empty -m "Verify ${CLIENT} current-template repair"
+          else
+            git commit -m "Repair ${CLIENT} current templates and logo surfaces"
+          fi
+          source_sha="$(git rev-parse HEAD)"
+          repair_branch="repair/live-${CLIENT}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git push origin "HEAD:refs/heads/${repair_branch}"
+          echo "source_sha=${source_sha}" >> "$GITHUB_OUTPUT"
+          echo "repair_branch=${repair_branch}" >> "$GITHUB_OUTPUT"
+
+      - name: Build deterministic three-design package
+        shell: bash
+        env:
+          CLIENT: ${{ matrix.client }}
+        run: |
+          set -euo pipefail
+          rm -rf "runtime/dealer-packages/${CLIENT}"
+          node scripts/package-dealer.mjs \
+            --client "${CLIENT}" \
+            --out "runtime/dealer-packages/${CLIENT}" \
+            --source-commit "${{ steps.source.outputs.source_sha }}" \
+            --write
+
+      - name: Publish repaired package branch
+        id: package
+        shell: bash
+        env:
+          CLIENT: ${{ matrix.client }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          package="$GITHUB_WORKSPACE/runtime/dealer-packages/${CLIENT}"
+          publish_dir="$RUNNER_TEMP/${CLIENT}-publish"
+          package_branch="publish/${CLIENT}"
+          mkdir -p "$publish_dir"
+          cd "$publish_dir"
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch --depth=1 origin "refs/heads/${package_branch}"; then
+            git checkout -B "$package_branch" FETCH_HEAD
+            find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          else
+            git checkout --orphan "$package_branch"
+          fi
+          cp -a "$package"/. .
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Package already matches refreshed source."
+          else
+            git commit -m "Publish repaired ${CLIENT} from ${{ steps.source.outputs.source_sha }}"
+            git push origin "HEAD:refs/heads/${package_branch}"
+          fi
+          echo "package_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Dealer repair summary
+        shell: bash
+        run: |
+          {
+            echo "## ${{ matrix.client }}"
+            echo "- Source repair branch: ${{ steps.source.outputs.repair_branch }}"
+            echo "- Source commit: ${{ steps.source.outputs.source_sha }}"
+            echo "- Package branch: publish/${{ matrix.client }}"
+            echo "- Package commit: ${{ steps.package.outputs.package_sha }}"
+            echo "- Approved template composition retained."
+            echo "- Transparent light/dark raster logo pair installed."
+          } >> "$GITHUB_STEP_SUMMARY"
