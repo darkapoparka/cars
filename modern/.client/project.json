@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "client": "automarket-varna",
+  "templateKey": "modern",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+  "createdAt": "2026-09-06T21:48:54.386Z",
+  "state": "refreshed-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localUrl": "http://127.0.0.1:6657/cars",
+  "businessFacts": "../business-facts.json",
+  "stock": "../stock.json",
+  "stockCount": 16,
+  "mediaProvenance": "../assets/provenance.json",
+  "changedBoundaries": [
+    "wired dealer identity",
+    "stock and real photo galleries",
+    "source contact/map/SEO/PWA",
+    "unsupported source testimonials/socials/media replaced",
+    "brand accent tokens"
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:6657/cars",
+    "state": "stopped-after-verification"
+  },
+  "knownGaps": [
+    "Local demos only; no verified public preview or provider delivery.",
+    "Representative 2026-09-07 stock snapshot; reconfirm availability.",
+    "Low resolution official logo; hours/email/social accounts not established.",
+    "Map searches by dealer name and landmarks; exact entrance pin not verified.",
+    "Generic decorative template car graphics retained; not advertised stock."
+  ],
+  "personalization": {
+    "businessFacts": "../business-facts.json",
+    "stock": "../stock.json",
+    "stockCount": 16,
+    "sourceTemplateVersion": "2026.09.06-refresh-1"
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "8ec055d7956a6e5d77eb117339065e75834a1bcf",
+  "refresh": {
+    "previousTemplateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "refreshedAt": "2026-09-17T06:07:53.035Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
+}

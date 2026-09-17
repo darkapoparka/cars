@@ -1,0 +1,17 @@
+# Cars generated package exclusions
+**/node_modules/
+**/.vercel/
+**/.svelte-kit/
+**/.next*/
+**/.turbo/
+**/build/
+**/dist/
+**/.agency-os/
+**/.auth/
+**/.env*
+!**/.env.example
+!**/.env.sample
+!**/.env.template
+runtime/
+*.log
+*.tsbuildinfo
