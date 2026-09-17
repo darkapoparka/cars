@@ -1,1 +1,49 @@
-{"schemaVersion":1,"client":"f1rst-motors","templateKey":"carwow","templateVersion":"2026.09.08-repair-1","state":"personalized-unverified","selectedHome":"main","availableHomes":[{"id":"main","route":"/"}],"offeredHomes":[{"id":"main","route":"/"}],"publicUrl":null,"qa":{"desktop":false,"mobile":false,"identity":false,"contactPath":false},"crm":{"leadId":null,"demoProjectId":null,"registered":false}}
+{
+  "schemaVersion": 1,
+  "client": "f1rst-motors",
+  "templateKey": "carwow",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "state": "refreshed-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "f3abc763e1e323d755829bec9b47fb2cbe40c391",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.08-repair-1",
+    "refreshedAt": "2026-09-17T06:06:25.688Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
+}
