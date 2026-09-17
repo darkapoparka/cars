@@ -20,7 +20,13 @@
 	>
 		<svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
 			<path d="M4.25 10H15.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-			<path d="M10.75 5.5L15.25 10L10.75 14.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+			<path
+				d="M10.75 5.5L15.25 10L10.75 14.5"
+				stroke="currentColor"
+				stroke-width="1.8"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
 		</svg>
 	</a>
 </div>
@@ -44,8 +50,8 @@
 
 	.daynight-card-price__value {
 		color: #101828;
-		font-size: 28px;
-		font-weight: 800;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: -0.025em;
 		line-height: 0.98;
 		white-space: nowrap;
@@ -53,8 +59,8 @@
 
 	.daynight-card-price__monthly {
 		color: #667085;
-		font-size: 13px;
-		font-weight: 600;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-semibold);
 		letter-spacing: 0;
 		line-height: 1.2;
 		white-space: nowrap;
@@ -92,7 +98,9 @@
 	}
 
 	:global(
-		.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .card-box__price
+		.inventory-template-shell
+			.card-box.card-box-style-1[data-daynight-vehicle-card]
+			.card-box__price
 	) {
 		align-items: flex-end !important;
 		column-gap: 12px !important;
@@ -108,8 +116,8 @@
 			.daynight-card-price__value
 	) {
 		color: #101828 !important;
-		font-size: 28px !important;
-		font-weight: 800 !important;
+		font-size: var(--sa-text-panel-title) !important;
+		font-weight: var(--sa-weight-strong) !important;
 		letter-spacing: -0.025em !important;
 		line-height: 0.98 !important;
 	}
@@ -121,8 +129,8 @@
 			.daynight-card-price__monthly
 	) {
 		color: #667085 !important;
-		font-size: 13px !important;
-		font-weight: 600 !important;
+		font-size: var(--sa-text-caption) !important;
+		font-weight: var(--sa-weight-semibold) !important;
 		line-height: 1.2 !important;
 	}
 

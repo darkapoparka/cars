@@ -65,15 +65,15 @@
     text-align: center;
   }
 
-  .dn-about-demo-note { font-weight: 600; }
+  .dn-about-demo-note { font-weight: var(--dn-weight-semibold); }
 
   .dn-about-team__heading h2 {
     margin: 0;
     color: #111;
-    font-size: clamp(30px, 3vw, 42px);
-    font-weight: 650;
-    line-height: 1.1;
-    letter-spacing: -0.035em;
+    font-size: var(--dn-text-fluid-section);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-section);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-about-team__heading p {
@@ -126,8 +126,8 @@
     margin: 0;
     color: #151515;
     font-size: var(--dn-text-card);
-    font-weight: 650;
-    line-height: 1.25;
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
   }
 
   .dn-about-team-card p {
@@ -176,8 +176,8 @@
       background: var(--dn-mobile-canvas);
     }
     .dn-about-team__heading { justify-items: start; text-align: left; }
-    .dn-about-team__heading h2 { margin-top: 12px; font-size: 22px; }
-    .dn-about-team__heading p { margin-top: 8px; font-size: 14px; line-height: 1.5; }
+    .dn-about-team__heading h2 { margin-top: 12px; font-size: var(--dn-text-subheading); }
+    .dn-about-team__heading p { margin-top: 8px; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
     .dn-about-team-card { overflow: hidden; border-radius: 16px; background: #fff; }
 
     .dn-about-team > .container {
@@ -196,7 +196,7 @@
     }
 
     .dn-about-team-card h3 {
-      font-size: 16px;
+      font-size: var(--dn-text-body);
     }
 
     .dn-about-team-card p {
