@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
@@ -7,68 +8,68 @@
 		{
 			id: 'mileage',
 			icon: '/assets/icons/icon-gauge.svg',
-			label: 'Mileage:',
+			label: 'Пробег:',
 			value: vehicle.mileage
 		},
 		{
 			id: 'year',
 			icon: '/assets/icons/calendar.svg',
-			label: 'Year:',
+			label: 'Година:',
 			value: `${vehicle.year}`
 		},
 		{
 			id: 'fuel',
 			icon: '/assets/icons/gaspump.svg',
-			label: 'Fuel:',
+			label: 'Гориво:',
 			value: vehicle.fuel
 		},
 		{
 			id: 'color',
 			icon: '/assets/icons/palette.svg',
-			label: 'Color:',
+			label: 'Цвят:',
 			value: vehicle.color
 		},
 		{
 			id: 'location',
 			icon: '/assets/icons/MapPin.svg',
-			label: 'Location:',
-			value: 'Dallas'
+			label: 'Локация:',
+			value: `${daynightSite.city}`
 		},
 		{
 			id: 'interior',
 			icon: '/assets/icons/Seatbelt.svg',
-			label: 'Interior:',
-			value: 'Dark interior'
+			label: 'Интериор:',
+			value: 'Тъмен салон'
 		},
 		{
 			id: 'engine',
 			icon: '/assets/icons/Frame.svg',
-			label: 'Engine:',
+			label: 'Двигател:',
 			value: vehicle.engine
 		},
 		{
 			id: 'transmission',
 			icon: '/assets/icons/transmission-2.svg',
-			label: 'Transmission:',
+			label: 'Скоростна кутия:',
 			value: vehicle.transmission
 		},
 		{
 			id: 'vin',
 			icon: '/assets/icons/Barcode.svg',
 			label: 'VIN:',
-			value: 'ask at the viewing'
+			value: 'предоставя се при оглед'
 		},
 		{
 			id: 'lot',
 			icon: '/assets/icons/QrCode.svg',
-			label: 'Reference No.:',
+			label: 'Референтен №:',
 			value: vehicle.lot
 		}
 	]);
 </script>
 
 <div class="listing-details--sidebar-box mb-40">
-	<p class="h5 mb-4 capitalize">Vehicle overview</p>
+	<p class="h5 mb-4 capitalize">Преглед на автомобила</p>
 	<ul class="car-overview-list-style2">
 		{#each overviewItems as item (item.id)}
 			<li class="grid grid-cols-2">
@@ -92,12 +93,12 @@
 
 <style>
 	.car-overview-list-style2 :global(.h7) {
-		font-size: 16px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.45;
 	}
 
 	.car-overview-list-style2 > li > span {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 </style>

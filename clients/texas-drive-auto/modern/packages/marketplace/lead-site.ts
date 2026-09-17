@@ -8,11 +8,9 @@ export interface LeadSiteConfig {
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
-  readonly dealerFinance?: boolean;
-  readonly mileageUnit?: "km" | "mi";
-  readonly stockAsOf?: string;
-  readonly hours?: string;
+  readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
+  readonly financingArtworkPath: string;
   readonly heroPath: string;
   readonly locale: string;
   readonly logoPath: string;
@@ -21,6 +19,9 @@ export interface LeadSiteConfig {
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
+  readonly sellCategoryAssets: Readonly<
+    Record<"car" | "motorbike" | "truck" | "van", string>
+  >;
   readonly shortName: string;
   readonly slug: string;
   readonly socialLinks?: Partial<
@@ -32,30 +33,36 @@ export interface LeadSiteConfig {
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
-  "accent": "#bf111d",
-  "dealerFinance": false,
-  "mileageUnit": "mi",
-  "stockAsOf": "2026-09-08",
-  "hours": "Monday–Saturday 10 AM–6 PM; Sunday closed",
-  "address": "10511 Olympic Drive, Dallas, TX 75220",
-  "city": "Dallas",
-  "contactUrl": "tel:+12149723233",
-  "country": "United States",
-  "countryCode": "US",
-  "currency": "USD",
-  "email": "",
-  "heroPath": "/office.webp",
-  "locale": "en-US",
-  "logoPath": "/brand/logo-on-light.png",
-  "mapsEmbedUrl": "https://maps.google.com/maps?q=10511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220&hl=en&output=embed",
-  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=10511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220",
-  "name": "Texas Drive Auto",
-  "phoneDisplay": "(214) 972-3233",
-  "phoneHref": "tel:+12149723233",
-  "shortName": "Texas Drive Auto",
-  "slug": "texas-drive-auto",
-  "socialLinks": {},
-  "staticDemoMode": true,
-  "tagline": "Used-vehicle listing samples in Dallas. USD prices and miles. No dealer financing or payment plans."
+  accent: "#c40101",
+  address: "10511 Olympic Drive, Dallas, TX 75220",
+  city: "Dallas",
+  district: { bg: "Texas", en: "Texas" },
+  sellCategoryAssets: {
+    car: "/lead-sell-car-v1.png",
+    motorbike: "/lead-sell-motorcycle-v1.png",
+    truck: "/lead-sell-truck-v1.png",
+    van: "/lead-sell-van-v1.png",
+  },
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.png",
+  contactUrl: "tel:+12149723233",
+  country: "United States",
+  countryCode: "US",
+  currency: "USD",
+  email: "",
+  heroPath: "/lead-hero.jpg",
+  locale: "en-US",
+  logoPath: "/assets/brand/logo-on-dark.webp",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=Texas%20Drive%20Auto%2C%2010511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220&z=16&output=embed",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Texas%20Drive%20Auto%2C%2010511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220",
+  name: "Texas Drive Auto",
+  phoneDisplay: "(214) 972-3233",
+  phoneHref: "tel:+12149723233",
+  shortName: "Texas Drive Auto",
+  slug: "texas-drive-auto",
+  socialLinks: {},
+  staticDemoMode: true,
+  tagline: "Dated listing samples; confirm price and availability directly with the dealership.",
 };
 // LEAD_SITE_CONFIG_END

@@ -5,9 +5,7 @@ import { getDefaultDealerSlug } from '$lib/server/app-config';
 import { getDealerBySlug } from '$lib/server/repositories/dealers';
 import { getPublishedPostArticles } from '$lib/server/repositories/posts';
 
-export async function loadPublishedBlogArticles(
-	locals: App.Locals
-): Promise<DayNightArticle[]> {
+export async function loadPublishedBlogArticles(locals: App.Locals): Promise<DayNightArticle[]> {
 	if (!locals.db) {
 		return editorialGuides;
 	}
@@ -18,6 +16,6 @@ export async function loadPublishedBlogArticles(
 		return articles;
 	} catch (cmsError) {
 		console.error('Published blog content could not be loaded:', cmsError);
-		error(503, 'Posts are temporarily unavailable. Please try again later.');
+		error(503, 'Публикациите временно не са достъпни. Опитайте отново по-късно.');
 	}
 }

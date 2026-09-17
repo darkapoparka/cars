@@ -3,6 +3,7 @@ import type { VehicleListing } from "@repo/marketplace";
 import { Flag, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import { getListingContactAction } from "../lib/listing-truth";
+import { DealerMobileHeaderIcon } from "./dealer-mobile-header-icon";
 
 interface MobileContactBarProps {
   readonly contactHref?: string;
@@ -55,19 +56,31 @@ export const MobileContactBar = ({
   }
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] lg:hidden">
-      <div className="pointer-events-auto mx-auto flex max-w-lg gap-2">
+    <div
+      className={
+        directPhone
+          ? "pointer-events-none fixed right-4 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-40 lg:hidden"
+          : "pointer-events-none fixed inset-x-0 bottom-0 z-40 bg-card px-3 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] lg:hidden"
+      }
+    >
+      <div className="pointer-events-auto mx-auto flex max-w-lg items-center gap-2">
         <Button
           asChild
-          className="h-12 flex-1 gap-2 rounded-xl bg-zinc-950 font-semibold text-white shadow-none hover:bg-black active:bg-black"
+          className={
+            directPhone
+              ? "size-13 shrink-0 rounded-full bg-zinc-950 p-0 text-white shadow-[0_4px_12px_rgba(0,0,0,0.18)] hover:bg-black active:scale-95"
+              : "h-12 flex-1 gap-2 rounded-xl bg-zinc-950 font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.14)] transition-[background-color,transform,box-shadow] hover:bg-black active:scale-[0.99] active:bg-black"
+          }
         >
-          <Link href={contactHref}>
+          <Link aria-label={actionLabel} href={contactHref} title={actionLabel}>
             {directPhone ? (
-              <Phone aria-hidden="true" className="size-4" />
+              <DealerMobileHeaderIcon icon={Phone} kind="phone" />
             ) : (
               <MessageCircle aria-hidden="true" className="size-4" />
             )}
-            {actionLabel}
+            <span className={directPhone ? "sr-only" : undefined}>
+              {actionLabel}
+            </span>
           </Link>
         </Button>
         {reportHref ? (

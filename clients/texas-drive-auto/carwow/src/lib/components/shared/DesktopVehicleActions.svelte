@@ -10,20 +10,20 @@
 	const favorite = $derived(garage.isFavorite(slug));
 </script>
 
-<div class="desktop-vehicle-actions" role="group" aria-label={`Actions for ${title}`}>
+<div class="desktop-vehicle-actions" role="group" aria-label={`Действия за ${title}`}>
 	<button
 		type="button"
 		aria-pressed={compared}
-		aria-label={compared ? `Remove ${title} from comparison` : `Add ${title} to comparison`}
-		title={compared ? 'Remove from comparison' : 'Add to comparison'}
+		aria-label={compared ? `Премахни ${title} от сравнение` : `Добави ${title} за сравнение`}
+		title={compared ? 'Премахни от сравнение' : 'Добави за сравнение'}
 		onclick={() => garage.toggleCompare(slug)}
 		><ArrowLeftRight size={18} strokeWidth={2} aria-hidden="true" /></button
 	>
 	<button
 		type="button"
 		aria-pressed={favorite}
-		aria-label={favorite ? `Remove ${title} from favorites` : `Add ${title} to favorites`}
-		title={favorite ? 'Remove from favorites' : 'Add to favorites'}
+		aria-label={favorite ? `Премахни ${title} от любими` : `Добави ${title} в любими`}
+		title={favorite ? 'Премахни от любими' : 'Добави в любими'}
 		onclick={() => garage.toggleFavorite(slug)}
 		><Heart
 			size={18}

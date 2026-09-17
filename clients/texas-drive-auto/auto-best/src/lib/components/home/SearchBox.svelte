@@ -2,12 +2,12 @@
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleQuickSearch from './VehicleQuickSearch.svelte';
-  import { parseListingFilters } from '$data/listing';
+  import { emptyListingDraft, listingFiltersFromDraft } from '$data/listing-draft';
   import VehicleDiscoveryForm from '$components/listing/VehicleDiscoveryForm.svelte';
   import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
   import { resolveImportUrl } from '$data/company';
 
-  let desktopFilters = $state(parseListingFilters(new URLSearchParams()));
+  let desktopFilters = $state(listingFiltersFromDraft(emptyListingDraft()));
   let mode = $state<'buy' | 'import'>('buy');
   let importUrl = $state('');
   let importError = $state('');
@@ -25,16 +25,17 @@
   function validateImport(event: SubmitEvent) {
     if (resolveImportUrl(importUrl)) return;
     event.preventDefault();
-    importError = importUrl.trim() ? 'Enter a valid link starting with https:// or http://.' : 'Paste the link to your chosen listing.';
+    importError = importUrl.trim() ? 'Поставете валиден линк с https:// или http://.' : 'Поставете линк към обявата, която сте избрали.';
     importInput.focus();
   }
 </script>
 
-<section class="dn-search-wrap" aria-label="Vehicle search">
+<section class="dn-search-wrap" aria-label="Търсене на автомобил">
   <div class="container">
     <div class="dn-search">
-      <div class="dn-search__mobile-modes" role="tablist" aria-label="Main goal">
+      <div class="dn-search__mobile-modes dn-segmented-control" role="tablist" aria-label="Основна цел">
         <button
+          class="dn-segmented-option"
           bind:this={buyTab}
           id="home-buy-tab"
           type="button"
@@ -44,8 +45,9 @@
           tabindex={mode === 'buy' ? 0 : -1}
           onclick={() => mode = 'buy'}
           onkeydown={handleModeKey}
-        >Buy</button>
+        >Купи</button>
         <button
+          class="dn-segmented-option"
           bind:this={importTab}
           id="home-import-tab"
           type="button"
@@ -55,28 +57,29 @@
           tabindex={mode === 'import' ? 0 : -1}
           onclick={() => mode = 'import'}
           onkeydown={handleModeKey}
-        >Import questions</button>
+        >Внос</button>
       </div>
       <div id="home-buy-search" class={['dn-search__buy', { 'dn-search__buy--inactive': mode !== 'buy' }]} role="tabpanel" aria-labelledby="home-buy-tab">
         <VehicleQuickSearch />
         <a class="dn-search__mobile-all" href={resolve('/listing-grid')}>
-          <span>View all</span>
-          <Icon name="arrow-right" size={17} strokeWidth={2} />
+          <span>Виж всички</span>
+          <Icon name="arrow-right" size={15} strokeWidth={1.7} />
         </a>
       </div>
       <div id="home-import-search" class={['dn-search__import', { 'dn-search__import--active': mode === 'import' }]} role="tabpanel" aria-labelledby="home-import-tab">
         <form class="dn-search__import-form" method="GET" action={resolve('/contact#contact-intent')} novalidate onsubmit={validateImport}>
           <input type="hidden" name="topic" value="import" />
-          <label class="dn-search__import-field">
-            <Icon name="globe" size={20} strokeWidth={1.8} />
-            <span class="dn-sr-only">Listing link for an import question</span>
+          <label class="dn-search__import-field dn-entry-field">
+            <Icon name="globe" size={18} strokeWidth={1.5} />
+            <span class="dn-sr-only">Линк към обява за внос</span>
             <input
+              class="dn-entry-field__input"
               bind:this={importInput}
               bind:value={importUrl}
               type="url"
               inputmode="url"
               name="vehicle_url"
-              placeholder="Paste a listing link"
+              placeholder="Линк към обява"
               maxlength={2048}
               required
               autocomplete="off"
@@ -90,22 +93,22 @@
           {#if importError}
             <p id="home-import-error" class="dn-search__import-error" role="alert">{importError}</p>
           {/if}
-          <button class="dn-search__mobile-all" type="submit">Continue to contact details <Icon name="arrow-right" size={17} strokeWidth={2} /></button>
+          <button class="dn-search__mobile-all" type="submit">Заяви внос <Icon name="arrow-right" size={15} strokeWidth={1.7} /></button>
         </form>
       </div>
       <div class="dn-search__desktop-form">
         <VehicleSearchDialog filters={desktopFilters}>
           {#snippet children(openFilters, filtersOpen)}
-            <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} />
+            <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} enableSticky={false} />
           {/snippet}
         </VehicleSearchDialog>
       </div>
     </div>
 
   </div>
-  <nav class="dn-search__mobile-shortcuts" aria-label="Quick filters">
-    <a href={resolve('/listing-grid?price_max=7000')}>Up to $7,000</a>
-    <a href={resolve('/listing-grid?price_min=7001&price_max=9000')}>$7,001?$9,000</a>
+  <nav class="dn-search__mobile-shortcuts" aria-label="Бързи филтри">
+    <a href={resolve('/listing-grid?price_max=60000')}>До 60 000 €</a>
+    <a href={resolve('/listing-grid?price_min=60000&price_max=70000')}>60–70 000 €</a>
     <a href={resolve('/listing-grid?make=Audi')}>Audi</a>
     <a href={resolve('/listing-grid?make=Mercedes-Benz')}>Mercedes</a>
     <a href={resolve('/listing-grid?make=BMW')}>BMW</a>
@@ -115,6 +118,9 @@
 <style>
   .dn-search-wrap {
     --dn-home-search-top: var(--dn-route-hero-control-top);
+    --dn-discovery-width: min(var(--dn-content), calc(100% - 48px));
+    --dn-discovery-padding: 18px;
+    --dn-discovery-radius: 16px;
 
     position: relative;
     z-index: 20;
@@ -129,8 +135,9 @@
     position: relative;
     padding: 12px 16px 16px;
     border-radius: 18px;
-    background: #fff;
-    box-shadow: 0 16px 42px rgba(16, 24, 40, 0.16);
+    background: var(--dn-white);
+    border: 1px solid var(--dn-line);
+    color: var(--dn-ink);
   }
 
   .dn-search__mobile-modes,
@@ -144,10 +151,19 @@
     display: none;
   }
 
+  .dn-search :is(button, a):focus-visible {
+    outline: 3px solid var(--dn-focus);
+    outline-offset: 3px;
+  }
+
   @media (min-width: 992px) {
     .dn-search-wrap { margin-top: -220px; margin-bottom: 34px; }
     .dn-search-wrap > .container { width: var(--dn-discovery-width); }
-    .dn-search { padding: var(--dn-discovery-padding); border-radius: var(--dn-discovery-radius); box-shadow: 0 8px 28px rgb(16 24 40 / .06); }
+    .dn-search { padding: var(--dn-discovery-padding); border-radius: var(--dn-discovery-radius); }
+  }
+
+  @media (min-width: 1440px) {
+    .dn-search-wrap { --dn-discovery-width: min(1040px, calc(100vw - 560px)); }
   }
 
   @media (max-width: 1199px) {
@@ -169,6 +185,11 @@
   }
 
   @media (max-width: 767px) {
+    .dn-search__mobile-modes {
+      display: grid;
+      width: var(--dn-entry-segment-width);
+      justify-self: center;
+    }
     .dn-search__buy { display: contents; }
     .dn-search-wrap {
       margin-top: -52px;
@@ -180,52 +201,20 @@
     }
 
     .dn-search {
+      --dn-entry-height: var(--dn-control-height-default);
+      --dn-home-search-stack-gap: 7px;
+      --dn-home-mobile-cta-width: 156px;
+
       display: grid;
-      gap: 9px;
-      padding: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.84);
+      gap: var(--dn-home-search-stack-gap);
+      padding: 8px 10px;
+      border: 1px solid var(--dn-line);
       border-radius: 20px;
-      background: var(--dn-mobile-surface);
-      box-shadow: 0 18px 42px rgba(13, 18, 26, 0.2);
-    }
-
-    .dn-search__mobile-modes {
-      display: grid;
-      min-height: 50px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 4px;
-      padding: 3px;
-      border-radius: var(--dn-radius-button);
-      background: #eceef1;
-    }
-
-    .dn-search__mobile-modes button {
-      display: inline-flex;
-      min-width: 0;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      border: 0;
-      border-radius: var(--dn-radius-button);
-      background: transparent;
-      color: #5b626d;
-      font-size: 14px;
-      font-weight: 650;
-      cursor: pointer;
-    }
-
-    .dn-search__mobile-modes [aria-selected='true'] {
-      background: #171a20;
-      color: #fff;
+      background: var(--dn-white);
     }
 
     .dn-search :global(.dn-quick-search__trigger) {
-      min-height: 52px;
       margin: 0;
-      border: 0;
-      background: #f1f3f5;
-      color: #505762;
     }
 
     .dn-search__desktop-form,
@@ -237,57 +226,38 @@
     .dn-search__import-form {
       display: grid;
       min-width: 0;
-      gap: 10px;
+    }
+
+    .dn-search__import-form {
+      gap: var(--dn-home-search-stack-gap);
     }
 
     .dn-search__import-field {
       display: flex;
-      min-height: 52px;
       align-items: center;
       gap: 10px;
       padding: 0 16px;
-      border-radius: var(--dn-radius-button);
-      background: #f1f3f5;
-      color: #505762;
     }
 
-    .dn-search__import-field input {
-      width: 100%;
-      min-width: 0;
-      min-height: 52px;
-      padding: 0;
-      border: 0;
-      outline: none;
-      background: transparent;
-      color: #30363f;
-      font-size: 16px;
-    }
-
-    .dn-search__import-field input::placeholder {
-      color: #505762;
-      opacity: 1;
-    }
-
-    .dn-search__import-field:focus-within {
-      outline: 3px solid rgba(196, 1, 1, 0.18);
-      outline-offset: 2px;
+    .dn-search__import-field > :global(.dn-icon) {
+      color: var(--dn-muted);
     }
 
     .dn-search__import-error {
       margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
+      font-size: var(--dn-text-meta);
+      line-height: var(--dn-leading-body);
     }
 
     .dn-search__import-error {
-      color: #b00012;
+      color: var(--dn-red);
     }
 
     .dn-search__mobile-shortcuts {
       display: flex;
       gap: 8px;
       margin: 0;
-      padding: 14px 12px 0;
+      padding: 10px 12px 0;
       overflow-x: auto;
       background: var(--dn-mobile-canvas);
       scrollbar-width: none;
@@ -299,40 +269,59 @@
 
     .dn-search__mobile-shortcuts a {
       display: inline-flex;
-      min-height: 44px;
+      min-height: var(--dn-control-height-default);
       flex: 0 0 auto;
       align-items: center;
       padding: 0 15px;
       border-radius: var(--dn-radius-button);
       background: var(--dn-mobile-surface);
       color: #30363f;
-      font-size: 13px;
-      font-weight: 650;
+      font-size: var(--dn-control-size);
+      font-weight: var(--dn-control-weight);
       white-space: nowrap;
     }
 
     .dn-search__mobile-all {
+      position: relative;
+      z-index: 0;
+      isolation: isolate;
       display: flex;
       width: fit-content;
+      min-width: var(--dn-home-mobile-cta-width);
       max-width: 100%;
-      min-height: 44px;
+      min-height: var(--dn-entry-action-height);
       justify-self: center;
       align-items: center;
       justify-content: center;
       gap: 7px;
       margin-top: 0;
-      padding: 0 24px;
+      padding: 0 var(--dn-space-5);
       border: 0;
       border-radius: var(--dn-radius-button);
-      background: var(--dn-red);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 700;
+      background: transparent;
+      color: var(--dn-white);
+      font-size: var(--dn-control-size);
+      font-weight: var(--dn-cta-weight);
+      line-height: var(--dn-cta-leading);
       cursor: pointer;
     }
 
+    .dn-search__mobile-all::before {
+      position: absolute;
+      z-index: -1;
+      inset: 2px 0;
+      border-radius: inherit;
+      background: var(--dn-red);
+      content: '';
+      transition: background-color 160ms ease;
+    }
+
+    .dn-search__mobile-all:is(:hover, :focus-visible)::before {
+      background: var(--dn-red-hover);
+    }
+
     .dn-search__mobile-all:focus-visible {
-      outline: 3px solid rgba(196, 1, 1, 0.25);
+      outline: 3px solid var(--dn-focus);
       outline-offset: 2px;
     }
   }

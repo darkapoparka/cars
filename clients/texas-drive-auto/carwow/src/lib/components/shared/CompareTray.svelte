@@ -15,25 +15,25 @@
 </script>
 
 {#if vehicles.length || garage.formMessage}
-	<aside class="compare-tray" data-compare-tray aria-label="Vehicles selected for comparison">
+	<aside class="compare-tray" data-compare-tray aria-label="Избрани автомобили за сравнение">
 		{#if vehicles.length}
 			<div class="compare-tray__main">
 				<div class="compare-tray__heading">
 					<span class="compare-tray__icon" aria-hidden="true"><GitCompare size={17} /></span>
 					<div>
-						<strong>Compare</strong>
-						<span>{vehicles.length} of 3 vehicles</span>
+						<strong>Сравнение</strong>
+						<span>{vehicles.length} от 3 автомобила</span>
 					</div>
 				</div>
 
-				<div class="compare-tray__items" aria-label="Selected for comparison">
+				<div class="compare-tray__items" aria-label="Избрани за сравнение">
 					{#each vehicles as vehicle (vehicle.slug)}
 						<div class="compare-tray__item">
 							<img src={vehicle.image} alt="" loading="lazy" decoding="async" />
 							<span>{vehicle.shortTitle}</span>
 							<button
 								type="button"
-								aria-label={`Remove ${vehicle.shortTitle} from comparison`}
+								aria-label={`Премахни ${vehicle.shortTitle} от сравнение`}
 								onclick={() => garage.toggleCompare(vehicle.slug)}
 							>
 								<X size={15} strokeWidth={2.4} />
@@ -44,10 +44,10 @@
 
 				<div class="compare-tray__actions">
 					<a class="compare-tray__open" href={resolve('/compare')}>
-						Compare <ArrowRight size={16} strokeWidth={2.4} aria-hidden="true" />
+						Сравни <ArrowRight size={16} strokeWidth={2.4} aria-hidden="true" />
 					</a>
 					<button type="button" class="compare-tray__clear" onclick={() => garage.clearCompare()}>
-						Clear
+						Изчисти
 					</button>
 				</div>
 			</div>
@@ -99,14 +99,14 @@
 	}
 
 	.compare-tray__heading strong {
-		font-size: 13px;
-		font-weight: 800;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-heading);
 	}
 
 	.compare-tray__heading span:last-child {
 		color: #677284;
-		font-size: 11px;
-		font-weight: 600;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.compare-tray__icon {
@@ -144,8 +144,8 @@
 		background: #f7f9fb;
 		padding: 3px 4px 3px 5px;
 		color: #263244;
-		font-size: 11px;
-		font-weight: 700;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		white-space: nowrap;
 	}
 
@@ -207,8 +207,8 @@
 		gap: 5px;
 		border-radius: 999px;
 		padding: 0 12px;
-		font-size: 12px;
-		font-weight: 800;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		text-decoration: none;
 	}
 
@@ -229,8 +229,8 @@
 		border-top: 1px solid #e6ebf1;
 		padding: 8px 12px 9px;
 		color: #9f1020;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.35;
 	}
 

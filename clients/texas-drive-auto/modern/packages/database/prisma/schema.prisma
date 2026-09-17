@@ -143,7 +143,6 @@ enum PriceType {
 enum PriceCurrency {
   BGN
   EUR
-  USD
 }
 
 enum FuelType {

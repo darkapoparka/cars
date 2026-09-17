@@ -27,6 +27,7 @@ const getTabCopy = (locale?: string) => {
       ? "Раздели с информация за обявата"
       : "Listing information sections",
     details: isBg ? "Детайли" : "Details",
+    description: isBg ? "Описание" : "Description",
     equipment: isBg ? "Екстри" : "Extras",
     information: isBg ? "Информация" : "Information",
     overview: isBg ? "Обзор" : "Overview",
@@ -44,8 +45,8 @@ export const ListingDetailsTabs = ({
 }: ListingDetailsTabsProps) => {
   const copy = getTabCopy(locale);
   const mobileTabs: readonly { id: MobileListingTabId; label: string }[] = [
-    { id: "overview", label: copy.overview },
     { id: "details", label: copy.details },
+    { id: "overview", label: copy.description },
   ];
   const desktopTabs: readonly { id: DesktopListingTabId; label: string }[] = [
     { id: "overview", label: copy.overview },
@@ -69,7 +70,7 @@ export const ListingDetailsTabs = ({
     specifications,
   };
   const [mobileActiveTab, setMobileActiveTab] =
-    useState<MobileListingTabId>("overview");
+    useState<MobileListingTabId>("details");
   const [desktopActiveTab, setDesktopActiveTab] =
     useState<DesktopListingTabId>("overview");
   const mobileTabRefs = useRef<
@@ -135,10 +136,10 @@ export const ListingDetailsTabs = ({
 
   return (
     <>
-      <div className="mb-5 lg:hidden" data-slot="listing-details-tabs-mobile">
+      <div className="mb-4 lg:hidden" data-slot="listing-details-tabs-mobile">
         <div
           aria-label={copy.ariaLabel}
-          className="grid grid-cols-2 border-zinc-200 border-b"
+          className="mt-4 grid w-full grid-cols-2 rounded-xl bg-zinc-100 p-0.5"
           role="tablist"
         >
           {mobileTabs.map((tab) => {
@@ -148,10 +149,10 @@ export const ListingDetailsTabs = ({
               <button
                 aria-controls={`listing-mobile-panel-${tab.id}`}
                 aria-selected={isActive}
-                className={`relative inline-flex h-12 items-center justify-center px-3 text-[15px] transition-colors focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
+                className={`relative inline-flex h-10 min-w-0 items-center justify-center rounded-[10px] px-4 font-medium text-body transition-colors duration-150 after:absolute after:inset-x-0 after:-inset-y-0.5 after:content-[''] focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
                   isActive
-                    ? "font-semibold text-zinc-950 after:absolute after:inset-x-0 after:-bottom-px after:h-0.5 after:bg-[var(--lead-site-accent)] after:content-['']"
-                    : "font-medium text-zinc-500 active:bg-zinc-100 active:text-zinc-800"
+                    ? "bg-white text-zinc-950 shadow-sm"
+                    : "text-zinc-600 hover:text-zinc-950 active:bg-zinc-200"
                 }`}
                 id={`listing-mobile-tab-${tab.id}`}
                 key={tab.id}

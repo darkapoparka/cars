@@ -10,5 +10,4 @@
 	homeBrandStrip={data.homeBrandStrip}
 	desktopHome={data.desktopHome}
 	mobileHome={data.mobileHome}
-	initialViewport={data.initialViewport}
 />

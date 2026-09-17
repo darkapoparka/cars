@@ -125,7 +125,7 @@ export const POST: RequestHandler = async ({
 
 	if (!limit.allowed) {
 		return json(
-			{ message: 'Too many messages. Try again shortly.' },
+			{ message: 'Получихме твърде много съобщения. Опитайте отново след малко.' },
 			{ status: 429, headers: { 'retry-after': String(limit.retryAfterSec) } }
 		);
 	}

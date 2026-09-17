@@ -17,15 +17,24 @@
 
 	const searchPlaceholder = $derived(
 		layoutMode === 'sidebar'
-			? 'Search by make, model, year...'
-			: 'Search by make, model, year, fuel, features...'
+			? 'Търси по марка, модел, година...'
+			: 'Търси по марка, модел, година, гориво, екстри...'
 	);
 
 	// Typing filters live (the store derives the grid reactively); submit/Enter only
 	// closes any open popover and pushes the URL. The outer `.daynight-inventory-quick-form`
 	// is itself a <form>, so this control must NOT nest another form.
-	function submit() {
+	function openFromTrigger(event: MouseEvent) {
+		// Safari does not focus pointer-clicked buttons; give the dialog a real return target.
+		if (event.currentTarget instanceof HTMLElement)
+			event.currentTarget.focus({ preventScroll: true });
+		onOpen?.();
+	}
+
+	function submit(event?: MouseEvent) {
 		if (onOpen) {
+			if (event?.currentTarget instanceof HTMLElement)
+				event.currentTarget.focus({ preventScroll: true });
 			onOpen();
 			return;
 		}
@@ -43,7 +52,7 @@
 
 <div class="daynight-inventory-searchbar">
 	<div class="daynight-inventory-search">
-		<label class="daynight-inventory-searchbar__label" for={searchId}>Search</label>
+		<label class="daynight-inventory-searchbar__label" for={searchId}>Търсене</label>
 		{#if onOpen}
 			<button
 				id={searchId}
@@ -51,11 +60,11 @@
 				class="daynight-inventory-search__input daynight-inventory-search__trigger"
 				class:has-query={!!filters.store.query}
 				aria-label={filters.store.query
-					? `Search: ${filters.store.query}`
-					: 'Search vehicles'}
+					? `Търсене: ${filters.store.query}`
+					: 'Търсене на автомобили'}
 				aria-haspopup="dialog"
 				disabled={!hydrated}
-				onclick={onOpen}>{filters.store.query || searchPlaceholder}</button
+				onclick={openFromTrigger}>{filters.store.query || searchPlaceholder}</button
 			>
 		{:else}
 			<input
@@ -73,15 +82,15 @@
 		<button
 			class="daynight-inventory-searchbar__submit"
 			type="button"
-			aria-label="Search vehicles"
-			title="Search vehicles"
+			aria-label="Търси автомобили"
+			title="Търси автомобили"
 			aria-haspopup={onOpen ? 'dialog' : undefined}
 			disabled={onOpen && !hydrated}
 			data-daynight-inventory-search-action
 			onclick={submit}
 		>
 			<Search size={20} strokeWidth={2} aria-hidden="true" />
-			{#if !onOpen}<span>Search</span>{/if}
+			{#if !onOpen}<span>Търси</span>{/if}
 		</button>
 	</div>
 </div>
@@ -141,7 +150,7 @@
 		color: #8a94a0 !important;
 		font: inherit !important;
 		font-size: inherit !important;
-		font-weight: 500 !important;
+		font-weight: var(--sa-weight-medium) !important;
 		line-height: inherit !important;
 		opacity: 1;
 	}

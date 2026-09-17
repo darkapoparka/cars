@@ -11,14 +11,14 @@
 
 	async function shareVehicle() {
 		const url = globalThis.location?.href ?? resolve(`/inventory/${vehicle.slug}`);
-		const title = `${vehicle.shortTitle} - ${vehicle.priceLabel}`;
+		const title = `${vehicle.shortTitle} - ${vehicle.priceEur}`;
 
 		try {
 			if (navigator.share) {
 				await navigator.share({ title, text: vehicle.conditionLine, url });
 			} else if (navigator.clipboard) {
 				await navigator.clipboard.writeText(url);
-				shareState = 'Copied';
+				shareState = 'Копирано';
 				window.setTimeout(() => (shareState = ''), 1600);
 			}
 		} catch {
@@ -87,7 +87,7 @@
 <div class="title-section pdp-title-card__main">
 	<a href={resolve('/inventory')} class="pdp-nav-button pdp-nav-button--back">
 		{@render leftArrow()}
-		<span>Back</span>
+		<span>Назад</span>
 	</a>
 	<h1 class="daynight-pdp-title">{vehicle.shortTitle} {vehicle.year}</h1>
 	<div class="pdp-title-actions flex items-center justify-end gap-12">
@@ -95,8 +95,8 @@
 			href={resolve('/compare')}
 			class="btn-icon-circle hover-stroke-white"
 			class:is-active={isCompared}
-			title={isCompared ? 'View comparison' : 'Add and compare'}
-			aria-label={isCompared ? 'View comparison' : 'Add and compare'}
+			title={isCompared ? 'Виж сравнение' : 'Добави и виж сравнение'}
+			aria-label={isCompared ? 'Виж сравнение' : 'Добави и виж сравнение'}
 			onclick={() => {
 				if (!isCompared) garage.toggleCompare(vehicle.slug);
 			}}
@@ -108,8 +108,8 @@
 			type="button"
 			class="btn-icon-circle hover-stroke-white"
 			class:is-active={isSaved}
-			title={isSaved ? 'Remove from saved' : 'Save vehicle'}
-			aria-label={isSaved ? 'Remove from saved' : 'Save vehicle'}
+			title={isSaved ? 'Премахни от запазени' : 'Запази автомобила'}
+			aria-label={isSaved ? 'Премахни от запазени' : 'Запази автомобила'}
 			aria-pressed={isSaved}
 			onclick={() => garage.toggleFavorite(vehicle.slug)}
 		>
@@ -119,8 +119,8 @@
 		<button
 			type="button"
 			class="btn-icon-circle hover-fill-white"
-			title="Share vehicle"
-			aria-label="Share vehicle"
+			title="Сподели автомобила"
+			aria-label="Сподели автомобила"
 			onclick={shareVehicle}
 		>
 			{@render shareIcon()}
@@ -148,8 +148,8 @@
 		box-shadow: 0 4px 12px rgba(16, 24, 40, 0.045);
 		color: #242a33;
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 6px;
 		height: 40px;
 		justify-content: center;
@@ -172,7 +172,7 @@
 	}
 
 	.daynight-pdp-title {
-		font-size: 40px;
+		font-size: var(--sa-heading-section);
 		font-weight: var(--sa-weight-semibold);
 		line-height: 1.24;
 		margin: 0;
@@ -219,8 +219,8 @@
 		background: #1c1c1c;
 		padding: 7px 10px;
 		color: #fff;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		white-space: nowrap;
 	}
 

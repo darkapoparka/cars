@@ -238,7 +238,7 @@
 													<span
 														class="text-muted-foreground hidden truncate text-xs lg:block 2xl:hidden"
 													>
-														{vehicle.mileage_text || `${vehicle.mileage_value} mi`} / {vehicle.fuel ||
+														{vehicle.mileage_text || `${vehicle.mileage_value} км`} / {vehicle.fuel ||
 															'Fuel not set'}
 													</span>
 													<span class="text-muted-foreground block truncate text-xs md:hidden">
@@ -255,7 +255,7 @@
 												>{vehicle.year} / {vehicle.fuel || 'Fuel not set'}</span
 											>
 											<span class="text-muted-foreground block truncate text-xs">
-												{vehicle.mileage_text || `${vehicle.mileage_value} mi`}
+												{vehicle.mileage_text || `${vehicle.mileage_value} км`}
 											</span>
 										</Table.Cell>
 										<Table.Cell>

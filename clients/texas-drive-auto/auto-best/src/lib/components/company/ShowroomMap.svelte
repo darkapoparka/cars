@@ -1,8 +1,6 @@
 <script lang="ts">
   import { brand } from '$config/brand';
-  import { showroomCoordinates } from '$data/company';
-
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;
+  const mapEmbedUrl = "https://maps.google.com/maps?q=Texas%20Drive%20Auto%2C%2010511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220&z=16&output=embed";
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 </script>
 
@@ -10,7 +8,7 @@
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={`Map to ${brand.name}`}
+    title={"Map to" + ` ${brand.name}`}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
@@ -49,8 +47,8 @@
     background: rgba(255, 255, 255, .96);
     box-shadow: 0 8px 20px rgba(18, 25, 38, .12);
     color: var(--dn-ink);
-    font-size: 14px;
-    font-weight: 700;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
   }
 
   .dn-showroom-map__link:hover,
