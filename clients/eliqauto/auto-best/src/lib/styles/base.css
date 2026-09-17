@@ -1,8 +1,27 @@
+/* Resolve viewport variables on each form dialog, where the attachment updates them. */
+:where(.dn-entry-editor, .dn-tradein-dialog, .dn-enquiry) {
+  --dn-form-dialog-top: calc(var(--dn-dialog-viewport-top, 0px) + env(safe-area-inset-top, 0px));
+  --dn-form-dialog-height: calc(var(--dn-dialog-viewport-height, 100dvh) - env(safe-area-inset-top, 0px));
+}
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--dn-ink); background: #fff; font-family: var(--dn-font); font-size: var(--dn-text-body); line-height: var(--dn-leading-body); -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+body { margin: 0; color: var(--dn-ink); background: var(--dn-surface-raised); font-family: var(--dn-font); font-size: var(--dn-text-body); line-height: var(--dn-leading-body); -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
-button, input, select { font: inherit; }
+button, input, select, textarea { font: inherit; }
+button { font: var(--dn-control-font); }
+h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
+/* Shared by Buy/Import discovery and Sell/Import enquiry entry points. */
+.dn-segmented-control { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-1); padding: var(--dn-space-half); border-radius: var(--dn-pill); background: var(--dn-segment-surface); }
+.dn-segmented-control .dn-segmented-option { display: flex; min-width: 0; min-height: var(--dn-segment-height); align-items: center; justify-content: center; padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-pill); background: transparent; color: var(--dn-muted); font: var(--dn-tab-font); cursor: pointer; }
+.dn-segmented-control .dn-segmented-option:is(.active, [aria-selected='true']) { background: var(--dn-segment-selected); color: var(--dn-ink); }
+.dn-segmented-control .dn-segmented-option:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
+/* Entry fields carry more emphasis than the mode switch above them. */
+.dn-entry-field { min-height: var(--dn-entry-height); border: 1px solid var(--dn-entry-line); border-radius: var(--dn-pill); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-entry-font); }
+.dn-entry-field--multiline { border-radius: var(--dn-radius-control); }
+.dn-entry-field .dn-entry-field__input { width: 100%; min-width: 0; min-height: calc(var(--dn-entry-height) - 2px); margin: 0; padding: 0; border: 0; outline: none; background: transparent; color: var(--dn-ink); font: var(--dn-entry-font); }
+.dn-entry-field .dn-entry-field__input::placeholder { color: var(--dn-muted); opacity: 1; }
+.dn-entry-field input.dn-entry-field__input { text-overflow: ellipsis; }
+.dn-entry-field:is(:focus-visible, :focus-within) { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 /* Keep native select behavior, with a consistent inset and centered chevron. */
 .dn-app-shell select:not([multiple]):not([size]):where(:not(#listing-sort)) {
   appearance: none;
@@ -22,6 +41,6 @@ button, input, select { font: inherit; }
 
 img { display: block; max-width: 100%; }
 .container, .dn-container { width: min(var(--dn-content), calc(100% - 48px)); margin-inline: auto; }
-.dn-sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
+.dn-app-shell .dn-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
 .dn-app-shell :focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
 
