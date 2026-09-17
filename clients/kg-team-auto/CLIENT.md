@@ -2,7 +2,7 @@
 
 # K-G Team Auto — session 02 implementation
 
-Status: implementation in progress. These are actual independent applications copied from the assigned masters, not a generator or a completed launch.
+Status: Свържете се с автокъщата преди посещение и потвърдете наличността.
 
 ## Applications
 
