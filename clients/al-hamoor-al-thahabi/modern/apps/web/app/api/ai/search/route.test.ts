@@ -14,7 +14,7 @@ describe("assisted search route", () => {
           basePath: "/bg/cars",
           category: "car",
           locale: "bg",
-          query: "дизел автоматик до 30 000 лв в София",
+          query: "дизел автоматик до 30 000 лв в Sharjah",
         }),
         headers: { "content-type": "application/json" },
         method: "POST",

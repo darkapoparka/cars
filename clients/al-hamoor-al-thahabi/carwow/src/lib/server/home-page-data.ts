@@ -1,6 +1,6 @@
-import { cars, placeholderImageSlugs, type Car } from '$lib/data/daynight-vehicles';
+import { placeholderImageSlugs, type Car } from '$lib/data/daynight-vehicles';
 import { buildHomeBrandStripItems } from '$lib/data/home-brand-strip';
-import type { HomeInitialViewport, HomeMobileVehicle, HomePageHeadData } from '$lib/types/home';
+import type { HomeMobileVehicle, HomePageHeadData } from '$lib/types/home';
 
 function toMobileVehicle(car: Car): HomeMobileVehicle {
 	return {
@@ -32,7 +32,6 @@ function buildBodyTiles(vehicles: Car[]) {
 	}
 	return order
 		.map((body) => ({ body, count: count.get(body) ?? 0 }))
-		.filter((t) => t.count >= 3)
 		.sort((a, b) => b.count - a.count)
 		.slice(0, 6);
 }
@@ -133,7 +132,7 @@ function buildBudgetTiles(vehicles: Car[]) {
 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 		},
 		{
-			label: 'Any budget',
+			label: 'Без бюджет',
 			value: 'all',
 			image: '/assets/images/budget/open-budget-supercar-v2.webp',
 			caption: `Всички ${vehicles.length} коли`,
@@ -158,32 +157,27 @@ function buildBudgetTiles(vehicles: Car[]) {
 	}));
 }
 
-export function loadHomePageData(
-	home: HomePageHeadData = { title: 'Day Night Auto' },
-	initialViewport: HomeInitialViewport = 'desktop',
-	vehicles?: Car[]
-) {
-	// Production callers pass database-published vehicles. Only legacy/demo
-	// callers that omit inventory get the static fixture fallback.
-	const displayVehicles = vehicles ?? cars;
+export function buildFeaturedMobileVehicles(vehicles: Car[]): HomeMobileVehicle[] {
+	return buildFeaturedCars(vehicles).map(toMobileVehicle);
+}
 
+export function buildHomePageData(home: HomePageHeadData, vehicles: Car[]) {
 	return {
 		home,
-		initialViewport,
-		homeBrandStrip: buildHomeBrandStripItems(displayVehicles),
+		homeBrandStrip: buildHomeBrandStripItems(vehicles),
 		desktopHome: {
-			vehicles: displayVehicles
+			vehicles: vehicles
 		},
 		mobileHome: {
-			brands: buildBrandList(displayVehicles),
-			models: Array.from(new Set(displayVehicles.map((car) => car.model))).slice(0, 12),
-			modelOptions: buildModelOptions(displayVehicles),
-			bodyTypes: Array.from(new Set(displayVehicles.map((car) => car.body))).slice(0, 8),
-			featuredCars: buildFeaturedCars(displayVehicles).map(toMobileVehicle),
-			bodyTiles: buildBodyTiles(displayVehicles),
-			brandTiles: buildBrandTiles(displayVehicles),
-			budgetTiles: buildBudgetTiles(displayVehicles),
-			total: displayVehicles.length
+			brands: buildBrandList(vehicles),
+			models: Array.from(new Set(vehicles.map((car) => car.model))).slice(0, 12),
+			modelOptions: buildModelOptions(vehicles),
+			bodyTypes: Array.from(new Set(vehicles.map((car) => car.body))).slice(0, 8),
+			featuredCars: buildFeaturedMobileVehicles(vehicles),
+			bodyTiles: buildBodyTiles(vehicles),
+			brandTiles: buildBrandTiles(vehicles),
+			budgetTiles: buildBudgetTiles(vehicles),
+			total: vehicles.length
 		}
 	};
 }

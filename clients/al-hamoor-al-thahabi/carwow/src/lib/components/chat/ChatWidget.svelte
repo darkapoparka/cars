@@ -262,11 +262,7 @@
 
 	@media (max-width: 991px) {
 		.chat-widget {
-			position: relative;
-			right: auto;
-			bottom: auto;
-			padding: 12px 16px calc(88px + env(safe-area-inset-bottom));
-			background: var(--sa-surface);
+			display: none;
 		}
 		.chat-dialog {
 			inset: auto 12px 12px 12px;

@@ -42,38 +42,38 @@ export type DesktopHomeInventoryPill = {
 
 export const desktopHomeInventoryPills: readonly DesktopHomeInventoryPill[] = [
 	{
-		label: 'All',
+		label: 'Всички',
 		href: '/inventory',
 		icon: 'all',
 		isActive: true
 	},
 	{
-		label: 'Electric',
+		label: 'Електрически',
 		href: '/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8',
 		icon: 'electric'
 	},
 	{
-		label: 'Sedan',
+		label: 'Седан',
 		href: '/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD',
 		icon: 'sedan'
 	},
 	{
-		label: 'SUV',
+		label: 'Джип',
 		href: '/inventory?body=SUV',
 		icon: 'suv'
 	},
 	{
-		label: 'Wagon',
+		label: 'Комби',
 		href: '/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8',
 		icon: 'wagon'
 	},
 	{
-		label: 'Hatchback',
+		label: 'Хечбек',
 		href: '/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA',
 		icon: 'hatchback'
 	},
 	{
-		label: 'Body type',
+		label: 'Купе',
 		href: '/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5',
 		icon: 'coupe'
 	},
@@ -132,32 +132,32 @@ export function getDesktopHomeHeroQuickFields(
 	return [
 		{
 			name: 'brand',
-			label: 'Make',
-			placeholder: 'Make',
+			label: 'Марка',
+			placeholder: 'Марка',
 			options: [
-				{ value: '', label: 'All makes' },
+				{ value: '', label: 'Всички марки' },
 				...brandOptions.map((brand) => ({ value: brand, label: brand }))
 			]
 		},
 		{
 			name: 'model',
-			label: 'Model',
-			placeholder: 'Model',
+			label: 'Модел',
+			placeholder: 'Модел',
 			options: [
-				{ value: '', label: 'All models' },
+				{ value: '', label: 'Всички модели' },
 				...modelOptions.map((model) => ({ value: model, label: model }))
 			]
 		},
 		{
 			name: 'price',
-			label: 'Price',
-			placeholder: 'Price',
+			label: 'Цена',
+			placeholder: 'Цена',
 			options: priceOptions
 		},
 		{
 			name: 'mileage',
-			label: 'Mileage',
-			placeholder: 'Mileage',
+			label: 'Пробег',
+			placeholder: 'Пробег',
 			options: mileageOptions
 		}
 	];

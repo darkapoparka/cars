@@ -43,10 +43,10 @@
 	const contactContext = readContactIntent(initialSearchParams);
 	const initialImportFields = readImportIntent(initialSearchParams);
 	const initialEmail = initialSearchParams.get('email')?.trim() ?? '';
-	const initialSubject = initialImportFields.isImport ? 'Внос на автомобил' : contactContext.subject;
-	const importFields = $derived(
-		readImportIntent(appPage.url.searchParams)
-	);
+	const initialSubject = initialImportFields.isImport
+		? 'Внос на автомобил'
+		: contactContext.subject;
+	const importFields = $derived(readImportIntent(appPage.url.searchParams));
 	const isImportMode = $derived(importFields.isImport);
 
 	let name = $state('');
@@ -205,11 +205,11 @@
 			artwork={isImportMode ? 'cars' : 'contact'}
 			panel="light"
 			headingId="daynight-contact-title"
-			title={isImportMode ? 'Заявка за внос на автомобил' : 'Contact us'}
+			title={isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се с нас'}
 			copy={isImportMode
 				? 'Изпратете линк, модел или бюджет и ще Ви върнем конкретна следваща стъпка.'
 				: 'Оглед, документи, финансиране, бартер или въпрос за наличен автомобил.'}
-			primaryLabel="Prepare enquiry"
+			primaryLabel="Изпрати запитване"
 			primaryHref="/contact#contact-form"
 			secondaryLabel="Виж автомобили"
 			secondaryHref="/inventory"
@@ -227,14 +227,16 @@
 						loading="eager"
 						decoding="async"
 					/>
-					<span>Шоурум в София</span>
+					<span>Шоурум в {daynightSite.city}</span>
 				</div>
 
 				<div class="lg-grid-cols-1 grid grid-cols-2 gap-30">
 					<div class="contact-page-info">
 						<div class="daynight-contact-info-body">
 							<h2 class="daynight-contact-title h3">
-								{isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се със Day Night Auto'}
+								{isImportMode
+									? 'Заявка за внос на автомобил'
+									: `Свържете се със ${daynightSite.shortName}`}
 							</h2>
 							<p class="daynight-contact-intro text-body-style-2">
 								{isImportMode
@@ -244,7 +246,7 @@
 
 							<div class="daynight-contact-actions">
 								<a
-									href={`tel:${daynightSite.phone}`}
+									href={daynightSite.phoneHref}
 									class="daynight-contact-action sa-cta sa-cta-primary"
 								>
 									{@render phoneIcon()}
@@ -261,12 +263,12 @@
 
 							<div class="daynight-contact-details" aria-label="Данни за контакт">
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Address</p>
+									<p class="daynight-contact-detail-label">Адрес</p>
 									<p class="daynight-contact-detail-value">{daynightSite.location}</p>
 								</div>
 								<div class="daynight-contact-detail">
 									<p class="daynight-contact-detail-label">Телефон / Viber</p>
-									<a href={`tel:${daynightSite.phone}`} class="daynight-contact-detail-value">
+									<a href={daynightSite.phoneHref} class="daynight-contact-detail-value">
 										{daynightSite.phoneLabel}
 									</a>
 								</div>
@@ -275,7 +277,7 @@
 									<p class="daynight-contact-detail-value">Използвайте формата за запитване</p>
 								</div>
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Opening hours</p>
+									<p class="daynight-contact-detail-label">Работно време</p>
 									<p class="daynight-contact-detail-value">
 										{daynightSite.hoursLabel}
 									</p>
@@ -293,7 +295,10 @@
 						</p>
 
 						{#if !isImportMode && contactContext.vehicle}
-							<p class="mb-20">Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext.vehicle.year} · {contactContext.vehicle.lot}</p>
+							<p class="mb-20">
+								Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext
+									.vehicle.year} · {contactContext.vehicle.lot}
+							</p>
 						{/if}
 
 						<form
@@ -320,7 +325,7 @@
 							</div>
 							<div class="md-grid-cols-1 mb-22 grid grid-cols-2 gap-x-20 gap-y-24">
 								<div class="padding-0">
-									<p class="mb-8">Name</p>
+									<p class="mb-8">Име</p>
 									<input
 										class="active input-large"
 										id="contact-name"
@@ -346,7 +351,7 @@
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Email</p>
+									<p class="mb-8">Имейл</p>
 									<input
 										class="input-large"
 										name="email"
@@ -354,11 +359,11 @@
 										type="email"
 										bind:value={email}
 										placeholder="Имейл по желание"
-										aria-label="Email"
+										aria-label="Имейл"
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Phone</p>
+									<p class="mb-8">Телефон</p>
 									<input
 										placeholder="Въведете телефон"
 										class="input-large"
@@ -367,7 +372,7 @@
 										type="tel"
 										bind:value={phone}
 										required
-										aria-label="Phone"
+										aria-label="Телефон"
 									/>
 								</div>
 								{#if isImportMode}
@@ -386,7 +391,7 @@
 									</div>
 								{/if}
 								<div class="padding-0 col-span-2">
-									<p class="mb-8">{isImportMode ? 'Какво търсите' : 'Message'}</p>
+									<p class="mb-8">{isImportMode ? 'Какво търсите' : 'Съобщение'}</p>
 									<textarea
 										placeholder={isImportMode
 											? 'Марка, модел, бюджет, условия или допълнителни изисквания...'
@@ -397,7 +402,7 @@
 										id="message"
 										bind:value={message}
 										required={!isImportMode}
-										aria-label="Message"
+										aria-label="Съобщение"
 									></textarea>
 								</div>
 							</div>
@@ -410,7 +415,7 @@
 									? 'Изпращаме...'
 									: isImportMode
 										? 'Изпрати заявка'
-										: 'Prepare enquiry'}
+										: 'Изпрати запитване'}
 							</button>
 							{#if leadSubmitMessage}
 								<p
@@ -436,7 +441,7 @@
 				<div class="widget-gg-map radius-8 daynight-contact-map__frame flex overflow-hidden">
 					<iframe
 						{@attach deferredMapFrame(mapEmbedSrc, '180px')}
-						title="Карта до Day Night Auto София"
+						title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
 						data-map-src={mapEmbedSrc}
 						height="520"
 						style="border:0;width: 100%;"
@@ -444,8 +449,11 @@
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
 					></iframe>
-					<div class="daynight-contact-map__overlay" aria-label="Локация Day Night Auto">
-						<p class="daynight-contact-map__eyebrow">Day Night Auto</p>
+					<div
+						class="daynight-contact-map__overlay"
+						aria-label={`Локация ${daynightSite.shortName}`}
+					>
+						<p class="daynight-contact-map__eyebrow">{daynightSite.shortName}</p>
 						<p class="daynight-contact-map__address">{daynightSite.location}</p>
 						<a {...mapLinkAttributes}>Отвори в Google Maps</a>
 					</div>
@@ -463,8 +471,8 @@
 	.contact-page-root {
 		box-sizing: border-box;
 		color: #1c1c1c;
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 		letter-spacing: 0;
 	}
@@ -583,7 +591,7 @@
 	}
 
 	.font-weight-600 {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.text-highlight {
@@ -591,8 +599,8 @@
 	}
 
 	.h3 {
-		font-size: clamp(24px, 2.4vw, 32px);
-		font-weight: 700;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.16;
 	}
 
@@ -613,7 +621,7 @@
 		color: #111827;
 		font: inherit;
 		font-size: var(--sa-text-desktop-body);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		outline: 0;
 		padding: 0 16px;
 	}
@@ -628,7 +636,7 @@
 		color: #111827;
 		font: inherit;
 		font-size: var(--sa-text-desktop-body);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		outline: 0;
 		padding: 14px 16px;
 	}
@@ -709,8 +717,8 @@
 		background: #e4072f;
 		padding: 8px 12px;
 		color: #fff;
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0;
 		line-height: 1;
 	}
@@ -726,8 +734,8 @@
 		max-width: 560px;
 		margin: 0 0 10px;
 		letter-spacing: 0;
-		font-weight: 700;
-		font-size: 36px;
+		font-weight: var(--sa-weight-strong);
+		font-size: var(--sa-heading-section);
 		line-height: 1.16;
 		text-align: left;
 	}
@@ -735,8 +743,8 @@
 	.contact-page-form > .h3 {
 		margin-bottom: 10px;
 		letter-spacing: 0;
-		font-size: 29px;
-		font-weight: 700;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.16;
 	}
 
@@ -790,7 +798,7 @@
 		margin: 0;
 		color: #42526a;
 		font-size: var(--sa-text-desktop-dense);
-		font-weight: 500;
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.45;
 	}
 
@@ -866,18 +874,18 @@
 
 		.daynight-contact-primary .contact-page-form form > .grid > div > p {
 			color: #111827;
-			font-weight: 600;
+			font-weight: var(--sa-weight-semibold);
 		}
 
 		.daynight-contact-primary .contact-page-form input,
 		.daynight-contact-primary .contact-page-form textarea {
-			font-weight: 500;
+			font-weight: var(--sa-weight-medium);
 		}
 
 		.daynight-contact-primary .contact-page-form input::placeholder,
 		.daynight-contact-primary .contact-page-form textarea::placeholder {
 			color: #667085;
-			font-weight: 500;
+			font-weight: var(--sa-weight-medium);
 		}
 
 		.daynight-contact-primary .contact-page-form .daynight-contact-submit {
@@ -918,13 +926,13 @@
 
 		.daynight-contact-info-body .daynight-contact-title {
 			margin-bottom: 7px;
-			font-size: 32px;
+			font-size: var(--sa-type-page);
 			line-height: 1.16;
 		}
 
 		.daynight-contact-primary .contact-page .daynight-contact-info-body .daynight-contact-title {
 			margin-bottom: 7px;
-			font-size: 32px;
+			font-size: var(--sa-type-page);
 			line-height: 1.16;
 		}
 
@@ -958,22 +966,22 @@
 
 		.daynight-contact-primary .contact-page-form > .h3 {
 			margin-bottom: 7px;
-			font-size: 26px;
-			font-weight: 700;
+			font-size: var(--sa-text-2xl);
+			font-weight: var(--sa-weight-heading);
 			line-height: 1.16;
 		}
 
 		.contact-page-form > .h3 {
 			margin-bottom: 7px;
-			font-size: 26px;
-			font-weight: 700;
+			font-size: var(--sa-text-2xl);
+			font-weight: var(--sa-weight-heading);
 			line-height: 1.16;
 		}
 
 		.daynight-contact-primary .contact-page .contact-page-form > .h3 {
 			margin-bottom: 7px;
-			font-size: 26px;
-			font-weight: 700;
+			font-size: var(--sa-text-2xl);
+			font-weight: var(--sa-weight-heading);
 			line-height: 1.16;
 		}
 
@@ -1019,7 +1027,7 @@
 		}
 
 		.daynight-contact-info-body .daynight-contact-title {
-			font-size: 36px;
+			font-size: var(--sa-heading-section);
 		}
 
 		.daynight-contact-intro {
@@ -1087,8 +1095,8 @@
 	.daynight-contact-map__address {
 		margin: 0;
 		color: #111827;
-		font-size: 18px;
-		font-weight: 700;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0;
 		line-height: 1.24;
 	}
@@ -1096,7 +1104,7 @@
 	.daynight-contact-map__overlay a {
 		color: #cf2029;
 		font-size: var(--sa-text-desktop-dense);
-		font-weight: var(--sa-weight-semibold);
+		font-weight: var(--sa-button-font-weight);
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}

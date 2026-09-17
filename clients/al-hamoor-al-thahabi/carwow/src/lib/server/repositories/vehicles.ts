@@ -147,7 +147,7 @@ async function buildVehicleWrite(
 	const shortTitle = input.shortTitle?.trim() || `${input.brand} ${input.model}`.trim();
 	const title =
 		input.title?.trim() ||
-		`${shortTitle} ${input.year} г., ${input.fuel || 'vehicle'}, ${formatAmount(
+		`${shortTitle} ${input.year} г., ${input.fuel || 'автомобил'}, ${formatAmount(
 			input.mileageValue
 		)} км`;
 	const slug = await createUniqueSlug(

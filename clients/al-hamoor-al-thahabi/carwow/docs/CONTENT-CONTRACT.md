@@ -1,6 +1,6 @@
 # Public content contracts
 
-Applies to the independent `J:/cars/templates/carwow` master. The retained Day Night Auto identity is source/demo content, not proof that this is a genericized or publicly approved client site.
+Applies to the independent `darkapoparka/cars-template-carwow` master. The retained Day Night Auto identity is source/demo content, not proof that this is a genericized or publicly approved client site.
 
 ## Business details
 
