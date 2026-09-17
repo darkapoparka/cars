@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "astracar",
   "templateKey": "carwow",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
   "createdAt": "2026-09-06T21:49:19.143Z",
-  "state": "personalized-local-qa-passed",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -20,18 +20,10 @@
   ],
   "publicUrl": null,
   "qa": {
-    "desktop": true,
-    "mobile": true,
-    "identity": true,
-    "contactPath": true,
-    "verifiedAt": "2026-09-08T03:48:52.642Z",
-    "widths": [
-      390,
-      1440
-    ],
-    "browserEvidence": "J:/cars/clients/astracar/qa-final/FINAL.md",
-    "routeChecks": 16,
-    "interactionChecks": 2
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -52,5 +44,22 @@
     "Generic decorative source artwork and explicitly labelled sample administration remain.",
     "Original asset/license provenance retained; no new rights determination.",
     "Modern exact gallery-trigger focus restoration was not certified; inherited accessibility behavior remains."
-  ]
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "037e3e700de8723a6761d8c82e052885a681bf96",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-17T06:09:07.897Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

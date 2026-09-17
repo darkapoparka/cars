@@ -30,3 +30,8 @@ static/generated/
 # Operating-system metadata
 .DS_Store
 Thumbs.db
+
+.vercel
+
+# Local visual audit captures
+/.audit-output/

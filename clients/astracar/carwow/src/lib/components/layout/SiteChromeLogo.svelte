@@ -57,7 +57,6 @@
 	>
 		<img
 			class={logoImageClasses}
-            style:filter={tone === 'dark' ? 'invert(1)' : undefined}
 			src={desktopOnlyImagePlaceholder}
 			srcset={logoSrcset}
 			sizes={logoSizes}

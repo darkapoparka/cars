@@ -1,46 +1,46 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+  import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
+  import { vehicleArtwork } from '$data/vehicle-artwork';
   import { featuredVehicles } from '$data/inventory';
+  import { leadSite } from '$config/lead-site';
+
+  const vehicleCount = (count: number) => `${count} ${count === 1 ? 'автомобил' : 'автомобила'}`;
+
+  const allArtwork = { src: leadSite.artwork.home.collection, width: 1200, height: 668, crop: [0, 96, 1200, 500] as const };
 
   const budgetTiles = [
     {
-      label: 'До 10 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur <= 10000).length} автомобила`,
-      href: '/listing-grid?price_max=10000',
-      image: featuredVehicles[1].image
+      label: 'До 60 000 €',
+      detail: vehicleCount(featuredVehicles.filter((vehicle) => vehicle.priceEur <= 60000).length),
+      href: '/listing-grid?price_max=60000',
+      artwork: vehicleArtwork.graphite
     },
     {
-      label: '10–15 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 10000 && vehicle.priceEur <= 15000).length} автомобила`,
-      href: '/listing-grid?price_min=10000&price_max=15000',
-      image: featuredVehicles[0].image
+      label: '60–70 000 €',
+      detail: vehicleCount(featuredVehicles.filter((vehicle) => vehicle.priceEur > 60000 && vehicle.priceEur <= 70000).length),
+      href: '/listing-grid?price_min=60000&price_max=70000',
+      artwork: vehicleArtwork.silver
     },
     {
-      label: 'Над 15 000 €',
-      detail: `${featuredVehicles.filter((vehicle) => vehicle.priceEur > 15000).length} автомобила`,
-      href: '/listing-grid?price_min=15000',
-      image: featuredVehicles[6].image
-    },
-    {
-      label: 'Виж всички',
-      detail: `${featuredVehicles.length} автомобила`,
-      href: '/listing-grid',
-      image: featuredVehicles[2].image
+      label: 'Над 70 000 €',
+      detail: vehicleCount(featuredVehicles.filter((vehicle) => vehicle.priceEur > 70000).length),
+      href: '/listing-grid?price_min=70000',
+      artwork: vehicleArtwork.urus
     }
   ] as const;
 </script>
 
 <section class="dn-mobile-budget" aria-labelledby="mobile-budget-title">
   <div class="dn-mobile-section-heading">
-    <h2 id="mobile-budget-title">Изберете по бюджет</h2>
-
+    <h2 id="mobile-budget-title">По бюджет</h2>
   </div>
 
   <div class="dn-mobile-budget__grid">
     {#each budgetTiles as tile (tile.href)}
       <a class="dn-mobile-budget-card" href={resolve(tile.href)}>
         <span class="dn-mobile-budget-card__media">
-          <img src={tile.image} alt="" width="450" height="300" loading="lazy" decoding="async" />
+          <ArtworkRegion artwork={{ ...tile.artwork, crop: [0, 100, 1000, 460] }} />
         </span>
         <span class="dn-mobile-budget-card__copy">
           <strong>{tile.label}</strong>
@@ -48,101 +48,32 @@
         </span>
       </a>
     {/each}
+    <a class="dn-mobile-budget-card dn-mobile-budget-card--all" href={resolve('/listing-grid')}>
+      <span class="dn-mobile-budget-card__media">
+        <ArtworkRegion artwork={allArtwork} />
+      </span>
+      <span class="dn-mobile-budget-card__copy">
+        <strong>Всички</strong>
+        <small>{vehicleCount(featuredVehicles.length)}</small>
+      </span>
+    </a>
   </div>
 </section>
 
 <style>
-  .dn-mobile-budget {
-    display: none;
-  }
-
+  .dn-mobile-budget { display: none; }
   @media (max-width: 767px) {
-    .dn-mobile-budget {
-      display: grid;
-      gap: 12px;
-      padding: 24px 12px 4px;
-      background: var(--dn-mobile-canvas);
-    }
-
-    .dn-mobile-section-heading {
-      display: flex;
-      min-height: 44px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .dn-mobile-section-heading h2 {
-      margin: 0;
-      color: #171a20;
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.025em;
-    }
-
-    .dn-mobile-budget__grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .dn-mobile-budget-card {
-      display: grid;
-      min-width: 0;
-      grid-template-rows: 96px auto;
-      overflow: hidden;
-      border: 0;
-      border-radius: 14px;
-      background: var(--dn-mobile-surface);
-      color: #171a20;
-    }
-
-    .dn-mobile-budget-card:focus-visible {
-      outline: 3px solid rgba(196, 1, 1, 0.25);
-      outline-offset: 2px;
-    }
-
-    .dn-mobile-budget-card__media {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      background: #e1e4e8;
-    }
-
-    .dn-mobile-budget-card__media::after {
-      position: absolute;
-      inset: 38% 0 0;
-      background: linear-gradient(to bottom, transparent, rgba(10, 13, 18, 0.2));
-      content: '';
-    }
-
-    .dn-mobile-budget-card__media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .dn-mobile-budget-card__copy {
-      display: grid;
-      gap: 3px;
-      padding: 12px;
-    }
-
-    .dn-mobile-budget-card__copy strong {
-      overflow: hidden;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.2;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .dn-mobile-budget-card__copy small {
-      color: #626a75;
-      font-size: 12px;
-      font-weight: 550;
-      line-height: 1.3;
-    }
+    .dn-mobile-budget { display: grid; gap: 10px; padding: 20px 12px 4px; background: var(--dn-mobile-canvas); }
+    .dn-mobile-section-heading { min-height: 38px; }
+    .dn-mobile-section-heading h2 { margin: 0; color: var(--dn-ink); font-size: var(--dn-text-subheading); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+    .dn-mobile-budget__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    .dn-mobile-budget-card { display: grid; grid-template-columns: minmax(0, 1fr) 46%; min-width: 0; min-height: 102px; align-items: center; overflow: hidden; border: 1px solid #e3e6ea; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); }
+    .dn-mobile-budget-card:focus-visible { outline: 3px solid var(--dn-red); outline-offset: 3px; }
+    .dn-mobile-budget-card__media { grid-column: 2; grid-row: 1; display: flex; min-width: 0; height: 102px; align-items: center; justify-content: center; padding: 6px 8px 6px 0; }
+    .dn-mobile-budget-card__media :global(.dn-artwork-region) { width: 100%; }
+    .dn-mobile-budget-card__copy { grid-column: 1; grid-row: 1; display: flex; min-width: 0; flex-direction: column; gap: 4px; padding: 14px 4px 14px 15px; }
+    .dn-mobile-budget-card__copy strong { font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
+    .dn-mobile-budget-card__copy small { font-size: var(--dn-text-meta); line-height: var(--dn-leading-heading); opacity: .72; }
+    .dn-mobile-budget-card--all .dn-mobile-budget-card__media :global(.dn-artwork-region) { width: 106%; }
   }
 </style>

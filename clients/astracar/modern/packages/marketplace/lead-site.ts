@@ -8,7 +8,9 @@ export interface LeadSiteConfig {
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
+  readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
+  readonly financingArtworkPath: string;
   readonly heroPath: string;
   readonly locale: string;
   readonly logoPath: string;
@@ -17,6 +19,9 @@ export interface LeadSiteConfig {
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
+  readonly sellCategoryAssets: Readonly<
+    Record<"car" | "motorbike" | "truck" | "van", string>
+  >;
   readonly shortName: string;
   readonly slug: string;
   readonly socialLinks?: Partial<
@@ -28,26 +33,36 @@ export interface LeadSiteConfig {
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
-  "accent": "#30343b",
-  "address": "бул. „Цар Освободител“ 282",
-  "city": "Варна",
-  "contactUrl": "tel:+359899908040",
-  "country": "България",
-  "countryCode": "BG",
-  "currency": "EUR",
-  "email": "astracar_2006@abv.bg",
-  "heroPath": "/assets/astracar/vehicle-10-1.webp",
-  "locale": "bg-BG",
-  "logoPath": "/assets/astracar/astracar-logo.png",
-  "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D1%81%D1%82%D1%80%D0%B0%D0%BA%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed",
-  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%81%D1%82%D1%80%D0%B0%D0%BA%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
-  "name": "Астракар",
-  "phoneDisplay": "0899 908 040",
-  "phoneHref": "tel:+359899908040",
-  "shortName": "Астракар",
-  "slug": "astracar",
-  "socialLinks": {},
-  "staticDemoMode": true,
-  "tagline": "Автомобили, бартер и сервизно обслужване във Варна."
+  accent: "#30343b",
+  address: "бул. „Цар Освободител“ 282",
+  city: "Варна",
+  district: { bg: "Варна", en: "Варна" },
+  sellCategoryAssets: {
+    car: "/lead-sell-car-v1.png",
+    motorbike: "/lead-sell-motorcycle-v1.png",
+    truck: "/lead-sell-truck-v1.png",
+    van: "/lead-sell-van-v1.png",
+  },
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.png",
+  contactUrl: "tel:+359899908040",
+  country: "България",
+  countryCode: "BG",
+  currency: "EUR",
+  email: "astracar_2006@abv.bg",
+  heroPath: "/lead-hero.jpg",
+  locale: "bg-BG",
+  logoPath: "/assets/brand/logo-on-dark.webp",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=%D0%90%D1%81%D1%82%D1%80%D0%B0%D0%BA%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%81%D1%82%D1%80%D0%B0%D0%BA%D0%B0%D1%80%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20282%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  name: "Астракар",
+  phoneDisplay: "0899 908 040",
+  phoneHref: "tel:+359899908040",
+  shortName: "Астракар",
+  slug: "astracar",
+  socialLinks: {},
+  staticDemoMode: true,
+  tagline: "Подбрани публикувани обяви. Наличностите и условията се потвърждават с Астракар.",
 };
 // LEAD_SITE_CONFIG_END

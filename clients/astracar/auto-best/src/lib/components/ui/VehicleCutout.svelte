@@ -1,17 +1,19 @@
 <script lang="ts">
   import { vehicleArtwork, type Vehicle } from '$data/vehicle-artwork';
-  let { vehicle = 'silver', mobileVehicle, eager = false, framing = 'hero' }: {
+  let { vehicle = 'silver', mobileVehicle, eager = false, framing = 'hero', media }: {
     vehicle?: Vehicle;
     mobileVehicle?: Vehicle;
     eager?: boolean;
     framing?: 'hero' | 'banner';
+    media?: string;
   } = $props();
 
 </script>
 
 <picture>
-  {#if mobileVehicle}<source media="(max-width: 767px)" srcset={vehicleArtwork[mobileVehicle].src} />{/if}
-  <img class="dn-vehicle-cutout" class:dn-vehicle-cutout--banner-gclass={framing === 'banner' && vehicle === 'gclass'} data-view="side-profile" src={vehicleArtwork[vehicle].src} alt="" width="1000" height="667" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  {#if media}<source {media} srcset={vehicleArtwork[vehicle].src} />{/if}
+  {#if mobileVehicle && !media}<source media="(max-width: 767px)" srcset={vehicleArtwork[mobileVehicle].src} />{/if}
+  <img class="dn-vehicle-cutout" class:dn-vehicle-cutout--banner-gclass={framing === 'banner' && vehicle === 'gclass'} data-view="side-profile" src={media ? 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' : vehicleArtwork[vehicle].src} alt="" width="1000" height="667" loading={eager ? 'eager' : 'lazy'} decoding="async" />
 </picture>
 
 <style>
