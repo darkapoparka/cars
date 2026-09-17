@@ -26,10 +26,10 @@ const desktopSorts: Record<string, DesktopSortKey> = {
 	'mileage-asc': 'lowest-mileage'
 };
 export function readMobileSort(value: string | null): SortKey {
-	return mobileSorts[value ?? ''] ?? 'price-asc';
+	return value && Object.hasOwn(mobileSorts, value) ? mobileSorts[value] : 'price-asc';
 }
 export function readDesktopSort(value: string | null): DesktopSortKey {
-	return desktopSorts[value ?? ''] ?? 'best-match';
+	return value && Object.hasOwn(desktopSorts, value) ? desktopSorts[value] : 'best-match';
 }
 
 export function parseInventoryFilters(params: URLSearchParams): InventoryCriteria {

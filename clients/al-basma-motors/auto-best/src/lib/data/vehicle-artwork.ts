@@ -1,6 +1,37 @@
-const images = ['/dealer/stock/cmtl6wllu000up1mcmlq0al57/1.webp','/dealer/stock/cmtl6pxpd000qp1mcvd0b9ktz/1.webp','/dealer/stock/cmqev42oy00i8p13h9qatx95x/1.webp','/dealer/stock/cmtfwz86o011dp1we5d9fkdvp/1.webp','/dealer/stock/cmte58re000ykp1we0fkcsw8e/1.webp','/dealer/stock/cmtb7oa3k00rsp1weiw6cwm9m/1.webp','/dealer/stock/cmt6yyshu00ljp1wewaxpucal/1.webp','/dealer/stock/cmt4d2ajl00gsp1wehldp9v1e/1.webp','/dealer/stock/cmt4czt2400gqp1weg7ck3qba/1.webp','/dealer/stock/cms38d0r90058p1a10q2alud6/1.webp'] as const;
-const art = (src: string) => ({ src, width: 1200, height: 800, bounds: [0, 0, 1200, 800] as const });
-export const vehicleArtwork = { silver: art(images[0]), graphite: art(images[1]), gclass: art(images[7]), urus: art(images[8]), golf: art(images[0]), a45: art(images[1]), porsche: art(images[2]), amggt: art(images[3]), m5: art(images[4]), e63: art(images[6]), m4: art(images[5]), rs5: art(images[9]) } as const;
-export type Vehicle = keyof typeof vehicleArtwork;
-export const heroVehiclePairs = { home: ['gclass','urus'], inventory: ['golf','a45'], about: ['porsche','amggt'], blog: ['m5','e63'], contact: ['m4','rs5'] } as const satisfies Record<string, readonly [Vehicle, Vehicle]>;
-export type HeroVehiclePair = keyof typeof heroVehiclePairs;
+import { leadSite, type LeadHeroVehiclePair, type LeadVehicleArtwork } from '$config/lead-site';
+
+// Alpha bounds measured at opacity > 128; preserve natural proportions when aligning artwork.
+export const vehicleArtwork = {
+  silver: { src: leadSite.artwork.vehicleCutouts.silver, width: 1000, height: 667, bounds: [10, 154, 989, 516] },
+  graphite: { src: leadSite.artwork.vehicleCutouts.graphite, width: 1000, height: 667, bounds: [17, 162, 984, 476] },
+  gclass: { src: leadSite.artwork.vehicleCutouts.gclass, width: 1000, height: 667, bounds: [7, 112, 995, 542] },
+  urus: { src: leadSite.artwork.vehicleCutouts.urus, width: 1000, height: 667, bounds: [18, 156, 983, 495] },
+  golf: { src: leadSite.artwork.vehicleCutouts.golf, width: 1000, height: 667, bounds: [15, 150, 984, 507] },
+  a45: { src: leadSite.artwork.vehicleCutouts.a45, width: 1000, height: 667, bounds: [13, 146, 987, 511] },
+  porsche: { src: leadSite.artwork.vehicleCutouts.porsche, width: 1000, height: 667, bounds: [12, 169, 987, 480] },
+  amggt: { src: leadSite.artwork.vehicleCutouts.amggt, width: 1000, height: 667, bounds: [14, 169, 980, 473] },
+  m5: { src: leadSite.artwork.vehicleCutouts.m5, width: 1000, height: 667, bounds: [10, 165, 990, 482] },
+  e63: { src: leadSite.artwork.vehicleCutouts.e63, width: 1000, height: 667, bounds: [12, 168, 990, 482] },
+  m4: { src: leadSite.artwork.vehicleCutouts.m4, width: 1000, height: 667, bounds: [16, 161, 983, 484] },
+  rs5: { src: leadSite.artwork.vehicleCutouts.rs5, width: 1000, height: 667, bounds: [7, 166, 994, 488] }
+} as const;
+
+export type Vehicle = LeadVehicleArtwork;
+export const heroVehiclePairs = leadSite.artwork.heroVehiclePairs;
+export type HeroVehiclePair = LeadHeroVehiclePair;
+
+// Center the car itself; supporting objects can make the full composition asymmetric.
+export const mobileHeroArtwork = {
+  car: { src: leadSite.artwork.mobileHero.car, width: 600, height: 600, carCenter: 300 },
+  sell: { src: leadSite.artwork.mobileHero.sell, width: 1200, height: 438, carCenter: 641.5 },
+  import: { src: leadSite.artwork.mobileHero.import, width: 1200, height: 450, carCenter: 598 }
+} as const;
+
+export type MobileHeroScene = keyof typeof mobileHeroArtwork;
+
+// Viewports into the existing transparent artwork; no duplicate raster assets.
+export const mobileHeroRegions = {
+  sell: { src: mobileHeroArtwork.sell.src, width: 1200, height: 438, crop: [927, 140, 267, 291] },
+  import: { src: mobileHeroArtwork.import.src, width: 1200, height: 450, crop: [0, 152, 354, 259] },
+  home: { src: leadSite.artwork.mobileHero.home, width: 1200, height: 660, crop: [8, 110, 1170, 443] }
+} as const;
