@@ -1,3 +1,4 @@
+import { featuredVehicles } from '$data/inventory';
 import type { Handle } from '@sveltejs/kit';
 
 const securityHeaders: Readonly<Record<string, string>> = {
@@ -45,8 +46,8 @@ const getLegacyRedirect = (pathname: string) => {
   const exactRedirect = exactLegacyRedirects[normalizedPath];
   if (exactRedirect) return exactRedirect;
 
-  const legacyDetailMatch = normalizedPath.match(/^\/listing-detail-v[2-5]\/([1-8])$/);
-  return legacyDetailMatch ? `/listing-detail-v1/${legacyDetailMatch[1]}` : undefined;
+  const legacyDetailMatch = normalizedPath.match(/^\/listing-detail-v[2-5]\/([1-9]\d*)$/);
+  return legacyDetailMatch && featuredVehicles.some(vehicle => vehicle.id === Number(legacyDetailMatch[1])) ? `/listing-detail-v1/${legacyDetailMatch[1]}` : undefined;
 };
 
 const withSecurityHeaders = (response: Response) => {

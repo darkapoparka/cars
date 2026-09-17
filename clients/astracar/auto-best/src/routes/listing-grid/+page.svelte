@@ -13,12 +13,12 @@
 
 <svelte:head>
   <title>Налични автомобили — {brand.name}</title>
-  <meta name="description" content={`Подбрани автомобили, внос и лизинг по запитване в ${brand.city}.`} />
+  <meta name="description" content={`Подбрани премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
 </svelte:head>
 
 <VehicleSearchDialog filters={draftFilters}>
 {#snippet children(openFilters, filtersOpen)}
-<div class="dn-listing-stage">
+<div class="dn-listing-stage" data-layout="hero-discovery">
   <ListingHero count={data.vehicles.length} />
   <ListingFilters filters={data.filters} {openFilters} {filtersOpen} onDraftChange={(filters) => draftFilters = filters} />
 </div>

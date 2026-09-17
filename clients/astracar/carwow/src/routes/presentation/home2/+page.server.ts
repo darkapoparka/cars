@@ -1,3 +1,4 @@
+import { daynightVehicles } from '$lib/data/daynight-vehicles';
 import { cars } from '$lib/data/daynight-vehicles';
 import { daynightSite } from '$lib/data/daynight-site';
 
@@ -87,7 +88,7 @@ function featuredCars() {
 		cardImage: featuredCardImages[car.slug] ?? car.image,
 		price: car.priceEur,
 		badge: car.badges[0] ?? 'Checked',
-		saving: 'Публикувана обява'
+		saving: 'DayNight inspected'
 	}));
 }
 
@@ -135,7 +136,7 @@ export function load() {
 	return {
 		site: daynightSite,
 		stats: {
-			total: daynightSite.inventoryCount,
+			total: daynightVehicles.length,
 			dealers: 'Варна',
 			rating: '4.9/5',
 			reviews: '240+'

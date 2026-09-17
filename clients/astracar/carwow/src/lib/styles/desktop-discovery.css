@@ -53,7 +53,7 @@ body.daynight-home-page
 	background: var(--discovery-surface) !important;
 	background-image: none !important;
 	color: var(--discovery-ink) !important;
-	font: 500 14px/1.2 var(--sa-font, Arial, sans-serif) !important;
+	font: var(--sa-weight-medium) var(--sa-text-caption)/1.2 var(--sa-font, Arial, sans-serif) !important;
 	box-shadow: none !important;
 	transform: none !important;
 	text-decoration: none !important;

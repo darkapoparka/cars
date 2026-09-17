@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { daynightSite } from '$lib/data/daynight-site';
 	// Native 1:1 rebuild of the localized /financing (financing.html) desktop main
 	// content: breadcrumb + hero (advantages) + "Как работи" process steps + the
 	// "Полезно" blog cards + the FAQ accordion. The copy and data are kept verbatim;
@@ -12,10 +11,11 @@
 	//
 	// The FAQ accordion is a NATIVE Svelte accordion: open/close is driven by local
 	// $state (no template JS — the markup carries data-daynight-native-accordion so
-	// RouteAccordionBehavior skips it). Single-open behaviour mirrors the template;
+	// retained CSS hooks). Single-open behaviour matches the established page;
 	// the first item starts open, matching the baseline.
 
 	import { resolve } from '$app/paths';
+	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 
 	type AssetHref = `/assets/${string}`;
@@ -35,6 +35,7 @@
 	};
 
 	type BlogCard = {
+		href: '/faq' | '/calculator' | '/sell-your-car';
 		image: AssetHref;
 		category: string;
 		title: string;
@@ -80,7 +81,7 @@
 		{
 			number: '3',
 			title: 'Изберете подходяща оферта',
-			copy: 'Изберете автомобил от наличността, уточнете условията с екипа и запазете оглед в Варна.',
+			copy: `Изберете автомобил от наличността, уточнете условията с екипа и запазете оглед в ${daynightSite.city}.`,
 			href: '/inventory'
 		}
 	];
@@ -88,21 +89,24 @@
 	const blogCards: BlogCard[] = [
 		{
 			image: '/assets/images/blog/post-32.jpg',
+			href: '/faq',
 			category: 'СЪВЕТИ',
-			title: 'Как да купим употребяван автомобил без риск',
-			copy: 'Преглед, история и документи — стъпките, които спестяват скъпи грешки при покупка...'
+			title: 'Въпроси преди покупка',
+			copy: 'Отговори за оглед, документи и процеса на покупка.'
 		},
 		{
 			image: '/assets/images/blog/post-31.jpg',
+			href: '/calculator',
 			category: 'ФИНАНСИРАНЕ',
-			title: 'Лизинг или разсрочено плащане — кое е за вас?',
-			copy: 'Сравнение на вариантите за финансиране според бюджет, месечна вноска и срок...'
+			title: 'Калкулатор за финансиране',
+			copy: 'Ориентировъчна сметка според цена, първоначална вноска и срок.'
 		},
 		{
 			image: '/assets/images/blog/post-23.jpg',
+			href: '/sell-your-car',
 			category: 'ПОЛЕЗНО',
-			title: 'Бартер при покупка: как се оценява автомобилът ви',
-			copy: 'Какво гледа екипът при оценката и как бартерът намалява крайната сума за плащане...'
+			title: 'Продажба или бартер',
+			copy: 'Изпратете данни за вашия автомобил и обсъдете възможностите с екипа.'
 		}
 	];
 
@@ -183,7 +187,7 @@
 						<ul class="benefit-list mb-40">
 							{#each benefits as benefit (benefit.title)}
 								<li class="benefit-item">
-									<img class="benefit-check" src={asset('/assets/icons/check.svg')} alt="check" />
+									<img class="benefit-check" src={asset('/assets/icons/check.svg')} alt="" />
 									<div>
 										<p class="h5 mb-4 capitalize">{benefit.title}</p>
 										<p class="h7">{benefit.copy}</p>
@@ -198,7 +202,7 @@
 							</a>
 							<p class="hero-actions__call">
 								<span>Предпочитате разговор?</span>
-								<a class="text-underline" href={`tel:${daynightSite.phone}`}>Обадете се</a>
+								<a class="text-underline" href={daynightSite.phoneHref}>Обадете се</a>
 							</p>
 						</div>
 					</div>
@@ -238,20 +242,18 @@
 				<div class="mb-40">
 					<h2 class="mb-12 capitalize">Полезно при покупка с финансиране</h2>
 					<p class="text-secondary h7 line-height-28">
-						Съвети и насоки преди покупка — подбрани от екипа на Астракар.
+						Отговори, калкулатор и запитване за вашия автомобил.
 					</p>
 				</div>
 
 				<div class="blog-grid">
 					{#each blogCards as post (post.image)}
-						<a href={resolve('/blog/kak-da-kupim-upotrebyavan-avtomobil')} class="post-card">
+						<a href={resolve(post.href)} class="post-card">
 							<div class="post-card__image">
-								<img class="post-card__img" src={asset(post.image)} alt="news" />
+								<img class="post-card__img" src={asset(post.image)} alt="" />
 							</div>
 							<div class="post-card__content">
 								<div class="post-card__meta">
-									<span class="text-sm">Астракар</span>
-									<span class="text-sm">Август 2025</span>
 									<span class="post-card__category text-sm">{post.category}</span>
 								</div>
 								<p class="h4 post-card__title mb-12">{post.title}</p>
@@ -273,20 +275,14 @@
 						{#each faqs as faq (faq.id)}
 							{@const open = openId === faq.id}
 							<div class={['flat-toggle', { active: open }]}>
-								<div
+								<button
+									type="button"
 									class={['toggle-title', { active: open }]}
-									role="button"
-									tabindex="0"
 									aria-expanded={open}
+									aria-controls={`finance-faq-${faq.id}`}
 									onclick={() => toggleFaq(faq.id)}
-									onkeydown={(event) => {
-										if (event.key === 'Enter' || event.key === ' ') {
-											event.preventDefault();
-											toggleFaq(faq.id);
-										}
-									}}
 								>
-									<p class="h5 title">{faq.question}</p>
+									<span class="h5 title">{faq.question}</span>
 									<span class="icon">
 										<svg
 											width="24"
@@ -304,8 +300,8 @@
 											/>
 										</svg>
 									</span>
-								</div>
-								<div class="toggle-content">
+								</button>
+								<div id={`finance-faq-${faq.id}`} class="toggle-content">
 									{#each faq.answers as answer, index (answer)}
 										<p
 											class={[
@@ -347,8 +343,8 @@
 	   26px (verified), so it is set here on the root. */
 	.financing-page {
 		color: #1c1c1c;
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 		letter-spacing: 0;
 	}
@@ -489,19 +485,19 @@
 	   page shrinks. */
 	.h7 {
 		font-size: var(--sa-text-desktop-body);
-		font-weight: 500;
+		font-weight: var(--sa-weight-medium);
 		line-height: var(--sa-leading-body);
 	}
 
 	.h5 {
-		font-size: 18px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
 	.h4 {
-		font-size: 22px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-card-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.25;
 	}
 
@@ -512,8 +508,8 @@
 	   section h2 headings are left (start). */
 	.financing-page h2 {
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.08;
 	}
@@ -595,17 +591,18 @@
 	   on both the normal and active step), so only the radius/background/shadow render
 	   — adding a 1px border here would make every card 2px taller and shift the page. */
 	.step-box {
+		border: 1px solid var(--sa-line);
 		display: grid;
 		gap: 12px;
 		align-items: center;
 		border-radius: 12px;
 		background: #fff;
 		padding: 30px 24px;
-		box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+		box-shadow: none;
 	}
 
 	.step-box.active-step {
-		box-shadow: 0 18px 42px rgba(176, 0, 0, 0.12);
+		border-color: var(--sa-line-strong);
 	}
 
 	.step-number {
@@ -617,8 +614,8 @@
 		border-radius: 999px;
 		background: var(--sa-blue, #b00000);
 		color: #fff;
-		font-size: 32px;
-		font-weight: 700;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.step-title {
@@ -628,7 +625,7 @@
 	.step-box p.text-secondary {
 		margin: 0;
 		font-size: var(--sa-text-desktop-dense);
-		font-weight: 400;
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 	}
 
@@ -649,7 +646,7 @@
 		border-radius: 12px;
 		background: #fff;
 		color: #111827;
-		box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+		box-shadow: none;
 		text-decoration: none;
 	}
 
@@ -714,10 +711,18 @@
 		border: 1px solid #e4e8ef;
 		border-radius: 8px;
 		background: #fff;
-		box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+		box-shadow: none;
 	}
 
 	.toggle-title {
+		width: 100%;
+		margin: 0;
+		border: 0;
+		appearance: none;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		text-align: left;
 		position: relative;
 		display: flex;
 		min-height: 72px;

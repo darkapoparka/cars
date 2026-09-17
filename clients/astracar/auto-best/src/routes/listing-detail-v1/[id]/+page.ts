@@ -1,8 +1,9 @@
+import { listReturn } from '$data/journeys';
 import { error } from '@sveltejs/kit';
 import { featuredVehicles } from '$data/inventory';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = ({ params }) => {
+export const load: PageLoad = ({ params, url }) => {
   const isCanonicalId = /^[1-9]\d*$/.test(params.id);
   const vehicleId = Number(params.id);
 
@@ -27,5 +28,5 @@ export const load: PageLoad = ({ params }) => {
     })
     .slice(0, 3);
 
-  return { vehicle, recommendations };
+  return { returnTo: listReturn(url.searchParams.get('return'), '/listing-grid'), vehicle, recommendations };
 };

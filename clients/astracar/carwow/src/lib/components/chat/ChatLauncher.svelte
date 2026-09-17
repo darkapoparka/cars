@@ -1,6 +1,5 @@
 <script lang="ts">
-	import X from '@lucide/svelte/icons/x';
-	import { daynightSite } from '$lib/data/daynight-site';
+	import { MessageCircle, X } from '@lucide/svelte';
 
 	type Props = {
 		open: boolean;
@@ -14,20 +13,16 @@
 <button
 	class="chat-launcher"
 	type="button"
-	aria-label={open ? 'Close chat' : 'Open chat'}
+	aria-label={open ? 'Затвори чата' : 'Отвори чат с екипа'}
 	aria-expanded={open}
 	{onclick}
 >
 	{#if open}
 		<X aria-hidden="true" />
 	{:else}
-		<img
-			class="chat-launcher__mascot"
-			src={daynightSite.logoDark}
-			alt=""
-			aria-hidden="true"
-		/>
+		<MessageCircle aria-hidden="true" />
 	{/if}
+	<span class="chat-launcher__label">Чат с екипа</span>
 	{#if unreadCount > 0}
 		<span class="chat-launcher__badge">{unreadCount}</span>
 	{/if}
@@ -37,30 +32,39 @@
 	.chat-launcher {
 		position: relative;
 		display: grid;
-		width: 56px;
-		height: 56px;
+		width: 48px;
+		height: 48px;
 		place-items: center;
 		border: 1px solid rgba(255, 255, 255, 0.46);
 		border-radius: 50%;
-		background:
-			radial-gradient(circle at 32% 22%, rgba(255, 255, 255, 0.34), transparent 30%),
-			linear-gradient(145deg, #B00000 0%, #8A0000 52%, #000000 100%);
+		background: var(--sa-ink);
 		color: #fff;
-		box-shadow:
-			0 18px 42px rgba(15, 23, 42, 0.24),
-			inset 0 1px 0 rgba(255, 255, 255, 0.28);
+		box-shadow: none;
 		cursor: pointer;
 	}
 
-	.chat-launcher__mascot {
-		display: block;
-		width: 44px;
-		height: 44px;
-		max-width: none;
-		object-fit: contain;
-		pointer-events: none;
-		transform: none;
-		filter: drop-shadow(0 5px 7px rgba(5, 20, 54, 0.22));
+	.chat-launcher__label {
+		display: none;
+		color: inherit;
+	}
+	.chat-launcher:focus-visible {
+		outline: 2px solid var(--sa-ink);
+		outline-offset: 3px;
+	}
+	@media (max-width: 991px) {
+		.chat-launcher {
+			display: flex;
+			justify-content: center;
+			gap: 8px;
+			width: 100%;
+			border-radius: 8px;
+			background: var(--sa-red);
+			font: inherit;
+			font-weight: var(--sa-weight-semibold);
+		}
+		.chat-launcher__label {
+			display: inline;
+		}
 	}
 
 	.chat-launcher :global(svg) {
@@ -88,9 +92,8 @@
 		border-radius: 999px;
 		background: #e11d48;
 		color: #fff;
-		font-size: 11px;
-		font-weight: 800;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		line-height: 16px;
 	}
 </style>
-

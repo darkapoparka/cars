@@ -3,9 +3,7 @@
   import { brand } from '$config/brand';
   import { demoContentLabel, demoTeamIntro, demoTeamMembers } from '$data/demo-content';
   import Icon from '$components/ui/Icon.svelte';
-  import TeamSocialIcon from './TeamSocialIcon.svelte';
 
-  const socialIcons = ['facebook', 'twitter', 'linkedin', 'instagram'] as const;
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 </script>
 
@@ -28,13 +26,6 @@
               loading="lazy"
               decoding="async"
             />
-            <div class="dn-about-team-card__socials" data-team-glass-overlay="true" aria-hidden="true">
-              {#each socialIcons as socialIcon (socialIcon)}
-                <span>
-                  <TeamSocialIcon name={socialIcon} />
-                </span>
-              {/each}
-            </div>
           </div>
           <div class="dn-about-team-card__details">
             <div>
@@ -74,15 +65,15 @@
     text-align: center;
   }
 
-  .dn-about-demo-note { font-weight: 600; }
+  .dn-about-demo-note { font-weight: var(--dn-weight-semibold); }
 
   .dn-about-team__heading h2 {
     margin: 0;
     color: #111;
-    font-size: clamp(30px, 3vw, 42px);
-    font-weight: 650;
-    line-height: 1.1;
-    letter-spacing: -0.035em;
+    font-size: var(--dn-text-fluid-section);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-section);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-about-team__heading p {
@@ -115,43 +106,13 @@
     object-fit: cover;
   }
 
-  .dn-about-team-card__socials {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 210px;
-    height: 42px;
-    border-radius: 10px;
-    color: #24272c;
-    background: rgb(255 255 255 / 50%);
-    opacity: 0;
-    transform: translateX(-50%);
-    backdrop-filter: blur(4px);
-    transition: bottom 300ms ease, opacity 300ms ease;
-  }
 
-  .dn-about-team-card__socials span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 42px;
-    cursor: pointer;
-    transition: color 300ms ease;
-  }
 
-  .dn-about-team-card__socials span:hover {
-    color: var(--dn-red);
-  }
 
-  .dn-about-team-card:hover .dn-about-team-card__socials,
-  .dn-about-team-card:focus-within .dn-about-team-card__socials {
-    bottom: 20px;
-    opacity: 1;
-  }
+
+
+
+
 
   .dn-about-team-card__details {
     display: flex;
@@ -165,8 +126,8 @@
     margin: 0;
     color: #151515;
     font-size: var(--dn-text-card);
-    font-weight: 650;
-    line-height: 1.25;
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
   }
 
   .dn-about-team-card p {
@@ -186,8 +147,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
     border: 1px solid #dedede;
     border-radius: var(--dn-radius-button);
     color: #202020;
@@ -215,8 +176,8 @@
       background: var(--dn-mobile-canvas);
     }
     .dn-about-team__heading { justify-items: start; text-align: left; }
-    .dn-about-team__heading h2 { margin-top: 12px; font-size: 22px; }
-    .dn-about-team__heading p { margin-top: 8px; font-size: 14px; line-height: 1.5; }
+    .dn-about-team__heading h2 { margin-top: 12px; font-size: var(--dn-text-subheading); }
+    .dn-about-team__heading p { margin-top: 8px; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
     .dn-about-team-card { overflow: hidden; border-radius: 16px; background: #fff; }
 
     .dn-about-team > .container {
@@ -235,7 +196,7 @@
     }
 
     .dn-about-team-card h3 {
-      font-size: 16px;
+      font-size: var(--dn-text-body);
     }
 
     .dn-about-team-card p {
@@ -249,16 +210,10 @@
   }
 
   @media (hover: none) {
-    .dn-about-team-card__socials {
-      bottom: 12px;
-      width: min(180px, calc(100% - 24px));
-      opacity: 1;
-    }
+  
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .dn-about-team-card__socials {
-      transition: none;
-    }
+  
   }
 </style>
