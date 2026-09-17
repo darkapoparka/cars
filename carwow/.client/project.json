@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "client": "elit-auto-import",
+  "templateKey": "carwow",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "createdAt": "2026-09-06T21:49:19.131Z",
+  "state": "refreshed-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "preview": {
+    "url": "http://127.0.0.1:6663/",
+    "state": "stopped-after-verification"
+  },
+  "personalization": {
+    "businessFacts": "../business-facts.json",
+    "stock": "../stock.json",
+    "stockCount": 15,
+    "photosPerVehicle": 5,
+    "assetsProvenance": "../assets/provenance.json",
+    "officialLogo": true,
+    "sourceTemplateVersion": "2026.09.06-refresh-1",
+    "captureDate": "2026-09-07",
+    "notes": [
+      "Full source composition preserved; generic decorative vehicle cutouts retained.",
+      "No confirmed social profiles, email or opening hours.",
+      "No dealer financing, buyback or trade-in service confirmed. Existing inquiry routes remain demo templates with copy limitations.",
+      "Mileage field and seller description conflicts explicitly disclosed."
+    ]
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "9ede7949ae20a21f7a14c42c4456260cac8b0b0d",
+  "refresh": {
+    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "refreshedAt": "2026-09-17T06:07:24.876Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
+}
