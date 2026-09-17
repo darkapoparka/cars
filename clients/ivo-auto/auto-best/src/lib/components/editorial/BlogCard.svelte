@@ -22,7 +22,7 @@
     </span>
     <span class="dn-blog-card__body">
       <span class="dn-blog-card__meta">
-        <span>{brand.name}</span>
+        <span class="dn-blog-card__brand">{brand.name}</span>
         <span class="dn-blog-card__category">{post.category}</span>
       </span>
       <h2>{post.title}</h2>
@@ -56,7 +56,7 @@
   }
 
   .dn-blog-card__link:focus-visible {
-    outline: 3px solid rgba(196, 1, 1, .28);
+    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 28%);
     outline-offset: -3px;
   }
 
@@ -94,7 +94,7 @@
     line-height: var(--dn-leading-meta);
   }
 
-  .dn-blog-card__meta > span:first-child {
+  .dn-blog-card__brand {
     font-weight: var(--dn-weight-semibold);
   }
 
@@ -147,7 +147,7 @@
     .dn-blog-card__media img { height: 100%; }
     .dn-blog-card__body { min-height: 0; padding: 12px; }
     .dn-blog-card__meta { min-height: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-heading); }
-    .dn-blog-card__meta > span:first-child { display: none; }
+    .dn-blog-card__brand { display: none; }
     .dn-blog-card__category { padding-left: 0; }
     .dn-blog-card__category::before { display: none; }
     h2 { margin: 5px 0 6px; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
