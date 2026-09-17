@@ -31,7 +31,6 @@
 </div>
 
 <style>
-  @media (min-width: 992px) { :global(.dn-home-section-heading--compact) { --dn-home-heading-banner-height: 176px; } }
   .dn-home-page,
   .dn-home-slot {
     display: contents;
@@ -44,7 +43,7 @@
       align-items: center;
       justify-content: center;
       gap: var(--dn-home-copy-gap);
-      min-height: 44px;
+      min-height: var(--dn-control-height-default);
       text-align: center;
     }
 
@@ -73,10 +72,10 @@
       align-self: center;
       align-items: center;
       justify-content: center;
-      padding: 0 20px;
+      padding: 0 var(--dn-space-5);
       border: 1px solid transparent;
       border-radius: var(--dn-radius-button);
-      background: #fff;
+      background: var(--dn-surface-raised);
       color: #24272c;
       font: var(--dn-cta-font);
       letter-spacing: var(--dn-cta-tracking);
@@ -96,20 +95,20 @@
 
     .dn-home-page :global(.dn-home-section-heading--branded) {
       margin-bottom: 0;
-      border-radius: 20px;
-      background: #101114;
+      border-radius: var(--dn-radius-lg);
+      background: var(--dn-ink-deep);
       text-align: center;
     }
 
-    .dn-home-page :global(.dn-home-section-heading--branded > h2) { color: #fff; }
-    .dn-home-page :global(.dn-home-section-heading--branded > p) { color: #f0f1f3; }
+    .dn-home-page :global(.dn-home-section-heading--branded > h2) { color: var(--dn-white); }
+    .dn-home-page :global(.dn-home-section-heading--branded > p) { color: var(--dn-text-on-ink); }
     .dn-home-page :global(.dn-home-section-heading--red) { background: var(--dn-red); }
 
     .dn-home-page :global(.dn-home-banner-frame) {
       min-height: var(--dn-home-heading-banner-height);
       padding: var(--dn-home-banner-padding);
-      padding-top: calc(28px - var(--dn-home-banner-overlap) / 2);
-      padding-bottom: calc(28px + var(--dn-home-banner-overlap) / 2);
+      padding-top: calc(var(--dn-space-7) - var(--dn-home-banner-overlap) / 2);
+      padding-bottom: calc(var(--dn-space-7) + var(--dn-home-banner-overlap) / 2);
     }
     .dn-home-page :global(.dn-home-banner-copy) {
       display: flex;
@@ -124,14 +123,14 @@
     }
 
     .dn-home-page :global(.dn-home-section-action:hover) {
-      background: #e9edf1;
-      color: #171a20;
+      background: var(--dn-surface-hover);
+      color: var(--dn-ink-strong);
     }
 
     .dn-home-page :global(.dn-home-section-action:focus-visible) {
-      background: #e9edf1;
-      color: #171a20;
-      outline: 3px solid #8c959f;
+      background: var(--dn-surface-hover);
+      color: var(--dn-ink-strong);
+      outline: 3px solid var(--dn-line-emphasis);
       outline-offset: 3px;
     }
   }

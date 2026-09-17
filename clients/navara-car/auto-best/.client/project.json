@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "client": "navara-car",
   "templateKey": "auto-best",
-  "templateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+  "templateVersion": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
   "createdAt": "2026-09-08",
   "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
@@ -37,19 +37,19 @@
   },
   "templateSource": {
     "repository": "darkapoparka/cars-template-auto-best",
-    "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
-    "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+    "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+    "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
     "exportPolicy": "cars-source-v1"
   },
   "packaging": {
     "version": "1",
     "entry": "/"
   },
-  "workflowCommit": "c17ed6b1fb45a4f866ba2be802cab9c5d3ae5450",
+  "workflowCommit": "0a6a7cb5949a48ef232c9f2b307dc69aaf96c8da",
   "refresh": {
     "previousTemplateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
-    "refreshedAt": "2026-09-14T20:09:16.837Z",
-    "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
+    "refreshedAt": "2026-09-17T06:12:56.515Z",
+    "approvedTemplateCommit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
     "mode": "fresh-template-plus-dealer-overlay"
   }
 }
