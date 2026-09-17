@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D1%80%D1%84%D0%B5%D0%BA%D1%82%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20110%2C%20%D0%BA%D0%B2.%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed",
     "accent": "#a50f15",
-    "logo": "/assets/perfect-auto/cover.png",
-    "logoLight": "/assets/perfect-auto/cover.png",
-    "logoDark": "/assets/perfect-auto/cover.png",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -43,7 +43,7 @@
       "Оглед и тест драйв след предварителен контакт"
     ],
     "inventoryNotice": "Представителни обяви към 10.09.2026 г. Потвърдете наличността и условията по телефона.",
-    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
     "observedAt": "2026-09-10",
     "coordinates": null,
     "raw": {
@@ -67,7 +67,9 @@
       "socialLinks": {},
       "accent": "#a50f15",
       "accentDark": "#7e0b10",
-      "logo": "/assets/perfect-auto/cover.png",
+      "logo": "/assets/brand/logo-on-light.webp",
+      "logoLight": "/assets/brand/logo-on-dark.webp",
+      "logoDark": "/assets/brand/logo-on-light.webp",
       "showroom": null,
       "stockCount": 6,
       "stockSnapshotDate": "2026-09-10",
@@ -85,11 +87,19 @@
       ],
       "limitations": [
         "Работно време и имейл не са потвърдени от използваните текущи източници.",
-        "Публикуваният профилен знак е с ограничена резолюция.",
+        "Публикуваният профилен знак е използван като основа за прозрачна, по-четима демонстрационна версия.",
         "Проектът използва представителна извадка от текущи обяви, не live inventory feed."
       ],
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D1%80%D1%84%D0%B5%D0%BA%D1%82%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20110%2C%20%D0%BA%D0%B2.%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0",
-      "mapsEmbedUrl": "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed"
+      "mapsEmbedUrl": "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed",
+      "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+      "branding": {
+        "logoOnLight": "/assets/brand/logo-on-light.webp",
+        "logoOnDark": "/assets/brand/logo-on-dark.webp",
+        "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+      },
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp"
     }
   },
   "listings": [
@@ -585,7 +595,9 @@
     "socialLinks": {},
     "accent": "#a50f15",
     "accentDark": "#7e0b10",
-    "logo": "/assets/perfect-auto/cover.png",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
     "showroom": null,
     "stockCount": 6,
     "stockSnapshotDate": "2026-09-10",
@@ -603,11 +615,19 @@
     ],
     "limitations": [
       "Работно време и имейл не са потвърдени от използваните текущи източници.",
-      "Публикуваният профилен знак е с ограничена резолюция.",
+      "Публикуваният профилен знак е използван като основа за прозрачна, по-четима демонстрационна версия.",
       "Проектът използва представителна извадка от текущи обяви, не live inventory feed."
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D1%80%D1%84%D0%B5%D0%BA%D1%82%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20110%2C%20%D0%BA%D0%B2.%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0",
-    "mapsEmbedUrl": "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed"
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "branding": {
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+    },
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp"
   },
   "sourceCount": 6
 }

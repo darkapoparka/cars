@@ -63,7 +63,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": true
@@ -155,7 +155,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": true
@@ -255,7 +255,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": true
@@ -355,7 +355,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -451,7 +451,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -543,7 +543,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -609,7 +609,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -701,7 +701,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -801,7 +801,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -901,7 +901,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -997,7 +997,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -1089,7 +1089,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -1155,7 +1155,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
@@ -1247,7 +1247,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Перфект Ауто",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/perfect-auto/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-10T09:00:00.000Z",
     "promoted": false
