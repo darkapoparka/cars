@@ -1,0 +1,68 @@
+export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+
+export interface LeadSiteConfig {
+  readonly accent: string;
+  readonly address: string;
+  readonly city: string;
+  readonly contactUrl: string;
+  readonly country: string;
+  readonly countryCode: string;
+  readonly currency: LeadSiteCurrency;
+  readonly district: { readonly bg: string; readonly en: string };
+  readonly email: string;
+  readonly financingArtworkPath: string;
+  readonly heroPath: string;
+  readonly locale: string;
+  readonly logoPath: string;
+  readonly mapsEmbedUrl: string;
+  readonly mapsUrl: string;
+  readonly name: string;
+  readonly phoneDisplay: string;
+  readonly phoneHref: string;
+  readonly sellCategoryAssets: Readonly<
+    Record<"car" | "motorbike" | "truck" | "van", string>
+  >;
+  readonly shortName: string;
+  readonly slug: string;
+  readonly socialLinks?: Partial<
+    Record<"youtube" | "instagram" | "facebook" | "tiktok", string>
+  >;
+  readonly staticDemoMode: boolean;
+  readonly tagline: string;
+}
+
+// LEAD_SITE_CONFIG_START
+export const leadSite: LeadSiteConfig = {
+  accent: "#d7ae35",
+  address: "бул. „Ботевградско шосе“ 300",
+  city: "София",
+  district: { bg: "София", en: "София" },
+  sellCategoryAssets: {
+    car: "/variant-2/lead-sell-car-v1.png",
+    motorbike: "/variant-2/lead-sell-motorcycle-v1.png",
+    truck: "/variant-2/lead-sell-truck-v1.png",
+    van: "/variant-2/lead-sell-van-v1.png",
+  },
+  financingArtworkPath: "/variant-2/images/services/leasing-red-suv-v2.png",
+  contactUrl: "tel:+359899769696",
+  country: "България",
+  countryCode: "BG",
+  currency: "EUR",
+  email: "askogroup@abv.bg",
+  heroPath: "/variant-2/lead-hero.jpg",
+  locale: "bg-BG",
+  logoPath: "/variant-2/assets/brand/logo-on-dark.webp",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
+  name: "АСКО 96",
+  phoneDisplay: "0899 76 96 96",
+  phoneHref: "tel:+359899769696",
+  shortName: "АСКО 96",
+  slug: "asko-96",
+  socialLinks: {"facebook":"https://www.facebook.com/p/Asko96-100050328800477/","youtube":"https://www.youtube.com/@asko96bulgaria"},
+  staticDemoMode: true,
+  tagline: "Подбрани автомобили от публикуваните обяви. Наличностите и условията се потвърждават с АСКО 96.",
+};
+// LEAD_SITE_CONFIG_END

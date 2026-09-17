@@ -1,0 +1,55 @@
+/* Desktop action contract. Brand/status red and the mobile theme remain independent. */
+@media (min-width: 992px) {
+	:root {
+		--desktop-action: #171b1e;
+		--desktop-action-hover: #343a3e;
+		--desktop-action-text: #fff;
+		--desktop-secondary: #fff;
+		--desktop-panel: #ffffff;
+		--desktop-field: #f3f4f6;
+		--desktop-secondary-hover: var(--sa-yellow);
+		--desktop-control-border: #d9dde1;
+		--desktop-focus: #171b1e;
+	}
+
+	body .sa-cta.sa-cta-primary,
+	body .desktop-primary-action {
+		background: var(--desktop-action) !important;
+		border-color: var(--desktop-action) !important;
+		color: var(--desktop-action-text) !important;
+		border-radius: 8px;
+		box-shadow: none !important;
+		background-image: none !important;
+	}
+	body .sa-cta.sa-cta-primary:hover,
+	body .desktop-primary-action:hover {
+		background: var(--desktop-action-hover) !important;
+		border-color: var(--desktop-action-hover) !important;
+		color: var(--desktop-action-text) !important;
+	}
+	body .sa-cta.sa-cta-secondary,
+	body .sa-cta.sa-cta-ghost,
+	body .sa-cta.sa-cta-on-dark {
+		background: var(--desktop-secondary) !important;
+		border-color: var(--desktop-control-border) !important;
+		color: var(--desktop-action) !important;
+		box-shadow: none !important;
+		background-image: none !important;
+	}
+	body .sa-cta.sa-cta-secondary:hover,
+	body .sa-cta.sa-cta-ghost:hover,
+	body .sa-cta.sa-cta-on-dark:hover {
+		background: var(--desktop-secondary-hover) !important;
+		border-color: var(--desktop-secondary-hover) !important;
+		color: var(--desktop-action) !important;
+	}
+	body .sa-cta:focus-visible,
+	body .desktop-primary-action:focus-visible {
+		outline: 2px solid var(--desktop-focus) !important;
+		outline-offset: 3px !important;
+		box-shadow: none !important;
+	}
+	body .desktop-primary-action :is(span, svg, svg *) {
+		color: inherit !important;
+	}
+}
