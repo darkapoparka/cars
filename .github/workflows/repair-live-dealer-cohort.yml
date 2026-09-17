@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/repair-live-dealer-cohort.yml
+      - scripts/**
   workflow_dispatch:
 
 permissions:
