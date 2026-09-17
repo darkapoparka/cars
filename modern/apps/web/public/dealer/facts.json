@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "leadId": "ae-sharjah-al-basma-motors",
+  "name": "Al Basma Motors",
+  "shortName": "Al Basma",
+  "slug": "al-basma-motors",
+  "country": "United Arab Emirates",
+  "countryCode": "AE",
+  "city": "Sharjah",
+  "addressLine": "Showroom 61, Souq Al Haraj",
+  "address": "Showroom 61, Souq Al Haraj, Sharjah, UAE",
+  "phone": "+971543422222",
+  "phoneDisplay": "+971 54 342 2222",
+  "email": "admin@albasmamotors.com",
+  "website": "https://albasmamotors.com/",
+  "locale": "en-AE",
+  "currency": "AED",
+  "distanceUnit": "km",
+  "hours": null,
+  "appointment": "Contact the showroom before travelling",
+  "accent": "#454b50",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/albasmamotors",
+    "facebook": "https://www.facebook.com/albasmamotors"
+  },
+  "sourceUrls": [
+    "https://albasmamotors.com/contact",
+    "https://albasmamotors.com/cars",
+    "https://albasmamotors.com/terms"
+  ],
+  "observedAt": "2026-09-08T21:56:53.027Z",
+  "disclosure": "Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.",
+  "services": [
+    "Vehicle sales",
+    "Showroom enquiries",
+    "Export enquiries"
+  ],
+  "rights": {
+    "dealerApproval": false,
+    "publicRedistributionPermission": "not-established",
+    "use": "Unpublished internal reference concept; no deployment or outreach; not licensed for public release."
+  },
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE",
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE&z=16&hl=en&output=embed"
+}

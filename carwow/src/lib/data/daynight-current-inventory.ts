@@ -1,0 +1,191 @@
+// Dealer listing snapshot normalized from the canonical Cars source pack.
+export type CurrentDayNightListing = {
+  id: string;
+  title: string;
+  sourceUrl: string;
+  priceEur: string;
+  priceBgn: string;
+  status: string;
+  date: string;
+  mileage: string;
+  color: string;
+  fuel: string;
+  power: string;
+  transmission: string;
+  body: string;
+  features: string[];
+  image: string;
+};
+
+export const currentDayNightListings = [
+  {
+    "id": "cmtl6wllu000up1mcmlq0al57",
+    "title": "Lexus CT200h Platinum",
+    "sourceUrl": "https://albasmamotors.com/car/cmtl6wllu000up1mcmlq0al57",
+    "priceEur": "AED 64,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2018",
+    "mileage": "168,000 km",
+    "color": "Ultra White",
+    "fuel": "Hybrid",
+    "power": "",
+    "transmission": "Not published",
+    "body": "Hatchback",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmtl6wllu000up1mcmlq0al57/1.webp"
+  },
+  {
+    "id": "cmtl6pxpd000qp1mcvd0b9ktz",
+    "title": "Lexus IS300 Platinum",
+    "sourceUrl": "https://albasmamotors.com/car/cmtl6pxpd000qp1mcvd0b9ktz",
+    "priceEur": "AED 105,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2023",
+    "mileage": "40,000 km",
+    "color": "Ultra White",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "Sedan",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmtl6pxpd000qp1mcvd0b9ktz/1.webp"
+  },
+  {
+    "id": "cmqev42oy00i8p13h9qatx95x",
+    "title": "Lexus RC-F",
+    "sourceUrl": "https://albasmamotors.com/car/cmqev42oy00i8p13h9qatx95x",
+    "priceEur": "AED 150,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2020",
+    "mileage": "140,000 km",
+    "color": "Ultra White",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "Coupe",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmqev42oy00i8p13h9qatx95x/1.webp"
+  },
+  {
+    "id": "cmtfwz86o011dp1we5d9fkdvp",
+    "title": "Lexus IS350 F-Sport",
+    "sourceUrl": "https://albasmamotors.com/car/cmtfwz86o011dp1we5d9fkdvp",
+    "priceEur": "AED 140,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2024",
+    "mileage": "151,000 km",
+    "color": "Cloudburst Gray",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "Sedan",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmtfwz86o011dp1we5d9fkdvp/1.webp"
+  },
+  {
+    "id": "cmte58re000ykp1we0fkcsw8e",
+    "title": "Lexus GS250 Platinum",
+    "sourceUrl": "https://albasmamotors.com/car/cmte58re000ykp1we0fkcsw8e",
+    "priceEur": "AED 65,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2015",
+    "mileage": "52,000 km",
+    "color": "Ultra White",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "Sedan",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmte58re000ykp1we0fkcsw8e/1.webp"
+  },
+  {
+    "id": "cmtb7oa3k00rsp1weiw6cwm9m",
+    "title": "Lexus RC350 F-Sport",
+    "sourceUrl": "https://albasmamotors.com/car/cmtb7oa3k00rsp1weiw6cwm9m",
+    "priceEur": "AED 80,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2021",
+    "mileage": "120,000 km",
+    "color": "Royal Black",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "Coupe",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmtb7oa3k00rsp1weiw6cwm9m/1.webp"
+  },
+  {
+    "id": "cmt6yyshu00ljp1wewaxpucal",
+    "title": "Lexus ES350 F-Sport",
+    "sourceUrl": "https://albasmamotors.com/car/cmt6yyshu00ljp1wewaxpucal",
+    "priceEur": "AED 145,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2023",
+    "mileage": "77,000 km",
+    "color": "Iridium Silver",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "Sedan",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmt6yyshu00ljp1wewaxpucal/1.webp"
+  },
+  {
+    "id": "cmt4d2ajl00gsp1wehldp9v1e",
+    "title": "Lexus LX570 Signature",
+    "sourceUrl": "https://albasmamotors.com/car/cmt4d2ajl00gsp1wehldp9v1e",
+    "priceEur": "AED 175,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2016",
+    "mileage": "228,000 km",
+    "color": "Cloudburst Gray",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "SUV",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmt4d2ajl00gsp1wehldp9v1e/1.webp"
+  },
+  {
+    "id": "cmt4czt2400gqp1weg7ck3qba",
+    "title": "Lexus TX350 Platinum",
+    "sourceUrl": "https://albasmamotors.com/car/cmt4czt2400gqp1weg7ck3qba",
+    "priceEur": "AED 185,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2024",
+    "mileage": "53,000 km",
+    "color": "Ultra White",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "SUV",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cmt4czt2400gqp1weg7ck3qba/1.webp"
+  },
+  {
+    "id": "cms38d0r90058p1a10q2alud6",
+    "title": "Lexus RX350 Premier",
+    "sourceUrl": "https://albasmamotors.com/car/cms38d0r90058p1a10q2alud6",
+    "priceEur": "AED 165,000",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2024",
+    "mileage": "12,000 km",
+    "color": "Royal Black",
+    "fuel": "Petrol",
+    "power": "",
+    "transmission": "Not published",
+    "body": "SUV",
+    "features": [],
+    "image": "/variant-3/dealer/stock/cms38d0r90058p1a10q2alud6/1.webp"
+  }
+] satisfies CurrentDayNightListing[];

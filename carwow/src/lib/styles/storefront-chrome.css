@@ -1,0 +1,27 @@
+@import './storefront.css' reference;
+
+@source '../../routes/**/*.{svelte,ts}';
+@source '../components/**/*.{svelte,ts}';
+@source '../data/**/*.{ts}';
+
+[data-daynight-site-chrome],
+[data-daynight-footer] {
+	@media important {
+		@tailwind utilities;
+	}
+}
+
+[data-daynight-site-chrome] svg,
+[data-daynight-site-chrome] svg *,
+[data-daynight-footer] svg,
+[data-daynight-footer] svg * {
+	color: inherit;
+}
+
+@media (min-width: 1200px) {
+	[data-daynight-site-chrome],
+	[data-daynight-site-chrome] * {
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+}

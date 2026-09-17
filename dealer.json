@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-basma-motors",
+  "dealerId": "ae-sharjah-al-basma-motors",
+  "repository": "darkapoparka/cars-albasmamotors",
+  "defaultBranch": "main",
+  "language": "en",
+  "variants": [
+    {
+      "key": "auto-best",
+      "base": "",
+      "entry": "/"
+    },
+    {
+      "key": "modern",
+      "base": "/variant-2",
+      "entry": "/variant-2/cars"
+    },
+    {
+      "key": "carwow",
+      "base": "/variant-3",
+      "entry": "/variant-3/"
+    }
+  ],
+  "extraAssets": [],
+  "packaging": {
+    "version": "1"
+  },
+  "switcher": {
+    "language": "en",
+    "accent": "#2563eb"
+  }
+}
