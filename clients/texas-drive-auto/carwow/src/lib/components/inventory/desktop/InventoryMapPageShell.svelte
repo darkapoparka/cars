@@ -2,11 +2,11 @@
 	import { page as appPage } from '$app/state';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import SiteChrome from '$lib/components/layout/SiteChrome.svelte';
-	import StorefrontPageHead from '$lib/components/seo/StorefrontPageHead.svelte';
+	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
 	import DayNightFooter from '$lib/components/layout/DayNightFooter.svelte';
 	import DesktopHomeTrailingChrome from '$lib/components/home/desktop/DesktopHomeTrailingChrome.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
-	import type { MapInventoryTemplatePage } from '$lib/types/template-page';
+	import type { MapInventoryPageData } from '$lib/types/storefront-page';
 	import { provideDesktopInventoryContext } from './desktop-inventory-context.svelte';
 	import MapVehicleCard from './MapVehicleCard.svelte';
 	import SortDropdown from './SortDropdown.svelte';
@@ -14,12 +14,11 @@
 	// Native half-map styling: shared Auxero card/control bases + the inventory grid
 	// overrides extracted from the legacy template head CSS, re-rooted onto
 	// `.inventory-map-template-shell`. The half-map page layout itself is scoped below.
-	import './inventory-desktop-base.css';
-	import './inventory-desktop-template-head.css';
+	import './inventory-desktop.css';
 
 	type MapPanel = 'list' | 'grid';
 
-	let { page }: { page: MapInventoryTemplatePage } = $props();
+	let { page }: { page: MapInventoryPageData } = $props();
 
 	// Shared reactive source of truth for the listing side (search/sort/filters),
 	// hydrated from the deep-link query exactly like the grid page. Provided via
@@ -50,16 +49,12 @@
 	}
 </script>
 
-<StorefrontPageHead
-	title={page.title}
-	scriptSrcs={page.scriptSrcs}
-	description={page.description}
-/>
+<RouteSeo title={page.title} description={page.description} />
 <div id="wrapper" class="daynight-raw-template-shell inventory-map-template-shell">
 	<SiteChrome />
 
 	<main id="main-content" tabindex="-1" aria-labelledby="inventory-map-title">
-		<h1 id="inventory-map-title" class="sr-only">Available vehicles map</h1>
+		<h1 id="inventory-map-title" class="sr-only">Карта на наличните автомобили</h1>
 
 		<section class="inventory-map-section">
 			<div class="inventory-map-grid">
@@ -81,10 +76,10 @@
 												fill="#1C1C1C"
 											/>
 										</svg>
-										Filters</button
+										Филтри</button
 									>
 									<p class="md-hidden">
-										Available vehicles map · {filters.resultCount} vehicles
+										Карта на наличните автомобили · {filters.resultCount} автомобила
 									</p>
 								</div>
 							</div>
@@ -96,7 +91,7 @@
 									<button
 										class={isListPanelActive ? 'item-menu active' : 'item-menu'}
 										type="button"
-										aria-label="List view"
+										aria-label="Списъчен изглед"
 										aria-pressed={isListPanelActive}
 										onclick={() => showPanel('list')}
 									>
@@ -134,7 +129,7 @@
 									<button
 										class={isGridPanelActive ? 'item-menu active' : 'item-menu'}
 										type="button"
-										aria-label="Map view"
+										aria-label="Картов изглед"
 										aria-pressed={isGridPanelActive}
 										onclick={() => showPanel('grid')}
 									>
@@ -155,7 +150,7 @@
 							</div>
 							<div class="inventory-map-toolbar__cell inventory-map-toolbar__cell--sort">
 								<div class="flex h-full items-center justify-end gap-[8px]">
-									<p class="md-hidden">Sorting</p>
+									<p class="md-hidden">Сортиране</p>
 									<SortDropdown />
 								</div>
 							</div>
@@ -167,7 +162,7 @@
 								data-show="false"
 							>
 								<p class="inline gap-[4px]">
-									<span id="filterMatchesCount">{filters.resultCount} </span> vehicles
+									<span id="filterMatchesCount">{filters.resultCount} </span> автомобила
 								</p>
 								<div
 									class="divider-vertical-style2 inline-block h-[16px] align-middle"
@@ -177,7 +172,7 @@
 								<div id="filterTags" class="inline gap-[8px]"></div>
 
 								<button class="btn-clear-items" id="btnClearAll">
-									Clear
+									Изчисти
 									<img src="/assets/icons/X-White.svg" alt="X" />
 								</button>
 							</div>
@@ -206,7 +201,7 @@
 					id="map"
 					class="daynight-inventory-map-panel"
 					iframeClass="daynight-inventory-map-panel__iframe"
-					title="Map to Texas Drive Auto"
+					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
 					src={mapEmbedSrc}
 					width="100%"
 					height="100%"
@@ -225,12 +220,12 @@
 						></span>
 						<span class="daynight-inventory-map-panel__pin"></span>
 						<div class="daynight-inventory-map-panel__card">
-							<strong>Texas Drive Auto</strong>
+							<strong>{daynightSite.shortName} {daynightSite.city}</strong>
 							<span>{daynightSite.location}</span>
 						</div>
 					</div>
 					<a class="daynight-inventory-map-panel__open" {...mapLinkAttributes}>
-						Open in Google Maps
+						Отвори в Google Maps
 					</a>
 				</LazyMapEmbed>
 			</div>
@@ -247,7 +242,7 @@
 <style>
 	/* Half-map layout (replaces the legacy Bootstrap row/col grid). The listing card
 	   shell, sort dropdown, filter button, tab panels and applied-filter chips are
-	   styled by inventory-desktop-base.css + the extracted template-head rules. */
+	   styled by the canonical inventory-desktop.css family stylesheet. */
 	.inventory-map-section {
 		margin-inline: auto;
 		max-width: 1920px;
@@ -402,14 +397,14 @@
 	}
 
 	.daynight-inventory-map-panel__card strong {
-		font-size: 20px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 	}
 
 	.daynight-inventory-map-panel__card span {
 		color: #536176;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		line-height: 1.45;
 	}
 
@@ -420,8 +415,8 @@
 		box-shadow: 0 16px 40px rgba(25, 100, 216, 0.22);
 		color: #fff;
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		gap: 8px;
 		padding: 13px 18px;
 		position: absolute;

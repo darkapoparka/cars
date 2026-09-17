@@ -20,7 +20,7 @@ export type ListingFilters = {
   sort: ListingSort;
 };
 
-const bodyLabels: Record<string, string> = { SUV: 'SUV', Coupe: 'Body style', Wagon: 'Wagon', Sportback: 'Sportback', Sedan: 'Sedan', Crossover: 'Crossover', Hatchback: 'Hatchback', 'Pickup Truck': 'Pickup', Minivan: 'Minivan', Convertible: 'Convertible' };
+const bodyLabels: Record<string, string> = { SUV: 'SUV', Coupe: 'Купе', Wagon: 'Комби', Sportback: 'Спортбек', Sedan: 'Седан', Crossover: 'Кросоувър', Hatchback: 'Хечбек', 'Pickup Truck': 'Пикап', Minivan: 'Миниван', Convertible: 'Кабриолет' };
 export const bodyLabel = (body: string) => bodyLabels[body] ?? body;
 const availableValues = (key: 'make' | 'body' | 'fuel' | 'transmission') => ['', ...new Set(featuredVehicles.map(vehicle => vehicle[key]))];
 
@@ -52,17 +52,17 @@ export const listingFilterOptions = {
   bodies: availableValues('body'),
   fuels: availableValues('fuel'),
   transmissions: availableValues('transmission'),
-  versions: ['', 'quattro', 'Premium', 'xDrive', 'Leather', 'Standard'],
-  equipment: ['4x4', '360° camera', 'Panoramic roof', 'Heated seats', 'Navigation', 'Parking sensors', 'Keyless entry', 'Adaptive cruise control'] satisfies readonly VehicleEquipment[],
-  years: ['', ...new Set(featuredVehicles.map(v => String(v.yearNumber)).sort())],
-  prices: ['', '5000', '7000', '9000', '12000', '16000'],
-  mileages: ['', '100000', '125000', '150000', '175000', '200000'],
+  versions: ['', 'RS', 'AMG', 'M Sport', 'xDrive'],
+  equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'] satisfies readonly VehicleEquipment[],
+  years: ['', '2019', '2020', '2021', '2022', '2023', '2024'],
+  prices: ['', '50000', '55000', '60000', '70000', '80000', '90000', '100000'],
+  mileages: ['', '50000', '75000', '100000'],
   sorts: [
-    ['default', 'Featured'],
-    ['newest', 'Newest'],
-    ['price-asc', 'Price: low to high'],
-    ['price-desc', 'Price: high to low'],
-    ['mileage-asc', 'Lowest mileage']
+    ['default', 'Препоръчани'],
+    ['newest', 'Най-нови'],
+    ['price-asc', 'Цена: ниска към висока'],
+    ['price-desc', 'Цена: висока към ниска'],
+    ['mileage-asc', 'Най-нисък пробег']
   ] as const
 } as const;
 
@@ -98,7 +98,7 @@ export const parseListingFilters = (params: URLSearchParams): ListingFilters => 
   };
 };
 
-const normalize = (value: string) => value.toLocaleLowerCase('en-US').trim();
+const normalize = (value: string) => value.toLocaleLowerCase('bg-BG').trim();
 
 export const listingModelsForMake = (make: string) => {
   const normalizedMake = normalize(make);
@@ -147,17 +147,17 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
     if (filters.condition && vehicle.condition !== filters.condition) return false;
     if (filters.yearMin !== null && vehicle.yearNumber < filters.yearMin) return false;
     if (filters.yearMax !== null && vehicle.yearNumber > filters.yearMax) return false;
-    if (filters.priceMin !== null && vehicle.priceUsd < filters.priceMin) return false;
-    if (filters.priceMax !== null && vehicle.priceUsd > filters.priceMax) return false;
-    if (filters.mileageMax !== null && vehicle.mileageMiles > filters.mileageMax) return false;
+    if (filters.priceMin !== null && vehicle.priceEur < filters.priceMin) return false;
+    if (filters.priceMax !== null && vehicle.priceEur > filters.priceMax) return false;
+    if (filters.mileageMax !== null && vehicle.mileageKm > filters.mileageMax) return false;
     return true;
   });
 
   return [...filtered].sort((a, b) => {
     if (filters.sort === 'newest') return b.yearNumber - a.yearNumber;
-    if (filters.sort === 'price-asc') return a.priceUsd - b.priceUsd;
-    if (filters.sort === 'price-desc') return b.priceUsd - a.priceUsd;
-    if (filters.sort === 'mileage-asc') return a.mileageMiles - b.mileageMiles;
+    if (filters.sort === 'price-asc') return a.priceEur - b.priceEur;
+    if (filters.sort === 'price-desc') return b.priceEur - a.priceEur;
+    if (filters.sort === 'mileage-asc') return a.mileageKm - b.mileageKm;
     return a.id - b.id;
   });
 };

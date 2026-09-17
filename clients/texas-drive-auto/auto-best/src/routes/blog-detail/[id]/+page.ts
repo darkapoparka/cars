@@ -8,12 +8,12 @@ export const load: PageLoad = ({ params, url }) => {
   const postId = Number(params.id);
 
   if (!isCanonicalId || !Number.isSafeInteger(postId)) {
-    error(404, 'Article not found.');
+    error(404, 'Материалът не е намерен.');
   }
 
   const post = blogPosts.find((item) => item.id === postId);
   if (!post) {
-    error(404, 'Article not found.');
+    error(404, 'Материалът не е намерен.');
   }
 
   const related = blogPosts

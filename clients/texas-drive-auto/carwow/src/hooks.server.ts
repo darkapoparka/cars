@@ -1,9 +1,8 @@
 import crypto from 'node:crypto';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
-import { daynightSite } from '$lib/data/daynight-site';
 import { svelteKitHandler } from 'better-auth/svelte-kit';
-import { getRouteBodyClasses } from '$lib/data/template-routes';
+import { getRouteBodyClasses } from '$lib/config/storefront-routes';
 import { getAuth, hasAuthRuntimeConfig } from '$lib/server/auth/auth';
 import { getAuthSession } from '$lib/server/auth/session';
 import { createDb, hasDatabaseUrl } from '$lib/server/db/client';
@@ -55,18 +54,28 @@ export function injectBodyClasses(html: string, bodyClasses: string[]) {
 	)}`;
 }
 
-export const handle: Handle = async ({ event, resolve }) => {
-	// Local concept: do not activate inherited provider configuration or accept external-delivery submissions.
-	if (daynightSite.preview && !["GET", "HEAD", "OPTIONS"].includes(event.request.method)) {
-		return new Response(JSON.stringify({ message: "Preview only — nothing was sent or saved. Contact the dealer directly.", delivered: false, saved: false }), { status: 409, headers: { "content-type": "application/json", "cache-control": "no-store" } });
+function varyByDevice(response: Response) {
+	const vary = response.headers.get('vary') ?? '';
+	if (
+		response.headers.get('content-type')?.includes('text/html') &&
+		!vary
+			.toLowerCase()
+			.split(',')
+			.some((key) => key.trim() === 'user-agent')
+	) {
+		response.headers.set('Vary', [vary, 'User-Agent'].filter(Boolean).join(', '));
 	}
-	const hasDb = !daynightSite.preview && hasDatabaseUrl();
-	if (!hasDb && !daynightSite.preview) warnMissingProductionDatabaseUrl();
+	return response;
+}
+
+export const handle: Handle = async ({ event, resolve }) => {
+	const hasDb = hasDatabaseUrl();
+	if (!hasDb) warnMissingProductionDatabaseUrl();
 
 	event.locals.db = hasDb ? createDb() : null;
 	event.locals.staffProfile = null;
 
-	const { session, user } = daynightSite.preview ? { session: null, user: null } : await getAuthSession(event);
+	const { session, user } = await getAuthSession(event);
 	event.locals.session = session;
 	event.locals.user = user;
 
@@ -79,16 +88,17 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const resolveWithBodyClasses = (eventToResolve: RequestEvent) =>
 		resolve(eventToResolve, resolveOptions);
 
-	if (!daynightSite.preview && hasAuthRuntimeConfig()) {
-		return svelteKitHandler({
+	if (hasAuthRuntimeConfig()) {
+		const response = await svelteKitHandler({
 			event,
 			resolve: resolveWithBodyClasses,
 			auth: getAuth(),
 			building
 		});
+		return varyByDevice(response);
 	}
 
-	return resolveWithBodyClasses(event);
+	return varyByDevice(await resolveWithBodyClasses(event));
 };
 
 export const handleError: HandleServerError = ({ error, event, status, message }) => {

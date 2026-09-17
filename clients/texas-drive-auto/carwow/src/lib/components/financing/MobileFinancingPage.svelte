@@ -1,67 +1,60 @@
 <script lang="ts">
-	import {
-		BadgeCheck,
-		CarFront,
-		ClipboardCheck,
-		Clock,
-		Phone,
-		PhoneCall,
-		Send
-	} from '@lucide/svelte';
+	import { BadgeCheck, CarFront, ClipboardCheck, Clock, PhoneCall, Send } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
+	import MobileHeroBar from '$lib/components/shared/MobileHeroBar.svelte';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref = daynightSite.phoneHref;
 
 	const benefits = [
 		{
 			id: 'documents',
-			title: 'Paperwork questions',
-			copy: 'Ask what documents you need and how the title transfer works.',
+			title: 'Съдействие по документи',
+			copy: 'Екипът подготвя документите и съпровожда прехвърлянето от началото до края.',
 			icon: ClipboardCheck
 		},
 		{
 			id: 'terms',
-			title: 'Confirm purchase terms in advance',
-			copy: 'Confirm any outside funding terms directly with your chosen lender before a viewing.',
+			title: 'Ясни условия предварително',
+			copy: 'Ориентировъчна месечна вноска и условия още преди да дойдете за оглед.',
 			icon: BadgeCheck
 		},
 		{
 			id: 'fast',
-			title: 'Prepare an inquiry draft',
-			copy: 'Draft an inquiry with a vehicle and budget. Preview inquiries are not sent.',
+			title: 'Отнема няколко минути',
+			copy: 'Изпращате запитване с автомобил и бюджет - екипът ще Ви изпрати конкретни стъпки.',
 			icon: Clock
 		}
 	] as const;
 
 	const steps = [
-		'Draft an inquiry with your vehicle choice and purchase budget.',
-		'Ask your outside lender for any payment estimates and terms.',
-		'Ask about a viewing and the steps to complete your purchase.'
+		'Изпращаш запитване с автомобил и месечен бюджет.',
+		'Получаваш ориентировъчна вноска и условия.',
+		`Оглед в ${daynightSite.city} и финализиране с екипа.`
 	] as const;
 
 	const faqs = [
 		{
 			id: 'documents',
-			question: 'What documents are needed?',
+			question: 'Какви документи са нужни?',
 			answer:
-				'Ask the dealer about purchase paperwork and your outside lender about any separate funding documents.'
+				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото.'
 		},
 		{
 			id: 'trade-in',
-			question: 'Are trade-ins accepted?',
-			answer: 'Trade-in availability and valuation are not confirmed in this preview. Ask the dealer directly.'
+			question: 'Може ли с бартер?',
+			answer: 'Да — оценяваме текущия ви автомобил и стойността му намалява финансираната сума.'
 		},
 		{
 			id: 'speed',
-			question: 'How long would an outside lender’s approval take?',
+			question: 'Колко време отнема одобрението?',
 			answer:
-				'Response times are not confirmed in this preview. Ask the dealer about viewing availability and purchase terms.'
+				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават при огледа.'
 		}
 	] as const;
 </script>
 
-<div class="mobile-financing-app" aria-label="Funding information at Texas Drive Auto">
+<div class="mobile-financing-app">
 	<header class="mobile-financing-hero">
 		<img
 			class="mobile-financing-hero__bg"
@@ -69,19 +62,14 @@
 			alt=""
 			aria-hidden="true"
 		/>
-		<div class="mobile-financing-hero__bar">
-			<a href={resolve('/')} aria-label="Texas Drive Auto home">
-				<img src={resolve('/brand/daynight-logo-generated.png')} alt={daynightSite.shortName} />
-			</a>
-			<a class="mobile-financing-hero__phone" href={phoneHref} aria-label="Call">
-				<Phone size={19} strokeWidth={2.45} />
-			</a>
-		</div>
+		<MobileHeroBar showLocation={false} />
 
 		<div class="mobile-financing-hero__copy">
-			<span>Buyer-arranged funding</span>
-			<h1>No dealer financing or payment plans</h1>
-			<p>Buyer-arranged funding is separate. No dealer financing or payment plans are offered.</p>
+			<span>Финансиране</span>
+			<h1>Финансиране и разсрочено плащане</h1>
+			<p>
+				Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в {daynightSite.city}.
+			</p>
 		</div>
 
 		<div class="mobile-financing-actions">
@@ -90,14 +78,14 @@
 				href={resolve('/contact')}
 			>
 				<Send size={18} strokeWidth={2.5} />
-				<span>Send inquiry</span>
+				<span>Изпрати запитване</span>
 			</a>
 			<a
 				class="mobile-financing-action mobile-financing-action--secondary"
 				href={resolve('/inventory')}
 			>
 				<CarFront size={19} strokeWidth={2.5} />
-				<span>View vehicles</span>
+				<span>Виж автомобили</span>
 			</a>
 		</div>
 	</header>
@@ -105,8 +93,8 @@
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-benefits-title">
 			<div class="mobile-financing-heading">
-				<span>Benefits</span>
-				<h2 id="mobile-financing-benefits-title">Why choose us</h2>
+				<span>Предимства</span>
+				<h2 id="mobile-financing-benefits-title">Защо с нас</h2>
 			</div>
 
 			<div class="mobile-financing-cards">
@@ -125,8 +113,8 @@
 
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-process-title">
 			<div class="mobile-financing-heading">
-				<span>Process</span>
-				<h2 id="mobile-financing-process-title">How it works</h2>
+				<span>Процес</span>
+				<h2 id="mobile-financing-process-title">Как работи</h2>
 			</div>
 
 			<ol class="mobile-financing-steps">
@@ -142,8 +130,8 @@
 
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-faq-title">
 			<div class="mobile-financing-heading">
-				<span>Questions</span>
-				<h2 id="mobile-financing-faq-title">Frequently asked questions</h2>
+				<span>Въпроси</span>
+				<h2 id="mobile-financing-faq-title">Често задавани</h2>
 			</div>
 
 			<div class="mobile-financing-faq">
@@ -158,9 +146,9 @@
 
 		<section class="mobile-financing-cta" aria-labelledby="mobile-financing-cta-title">
 			<div>
-				<span>Next step</span>
-				<h2 id="mobile-financing-cta-title">Choose a vehicle and budget</h2>
-				<p>Response timing is unavailable in this preview.</p>
+				<span>Следваща стъпка</span>
+				<h2 id="mobile-financing-cta-title">Кажи автомобил и бюджет</h2>
+				<p>Екипът ще Ви изпрати конкретни следващи стъпки в рамките на работния ден.</p>
 				<a href={phoneHref}>
 					<PhoneCall size={18} strokeWidth={2.45} />
 					<span>{daynightSite.phoneLabel}</span>
@@ -206,7 +194,7 @@
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background: rgba(20, 100, 218, 0.86);
+		background: rgba(5, 7, 10, 0.88);
 		content: '';
 	}
 
@@ -221,36 +209,6 @@
 		object-position: center;
 	}
 
-	.mobile-financing-hero__bar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--sa-mobile-gap-md);
-	}
-
-	.mobile-financing-hero__bar img {
-		display: block;
-		width: 170px;
-		height: auto;
-	}
-
-	.mobile-financing-hero__phone {
-		display: grid;
-		width: var(--sa-mobile-pill-h);
-		height: var(--sa-mobile-pill-h);
-		flex: 0 0 auto;
-		place-items: center;
-		border-radius: 50%;
-		background: var(--sa-red);
-		color: #fff !important;
-	}
-
-	.mobile-financing-hero__phone :global(svg),
-	.mobile-financing-hero__phone :global(svg *) {
-		color: #fff !important;
-		stroke: #fff !important;
-	}
-
 	.mobile-financing-hero__copy {
 		display: grid;
 		gap: var(--sa-mobile-gap-xs);
@@ -262,7 +220,7 @@
 	.mobile-financing-cta > div > span {
 		color: rgba(255, 255, 255, 0.76);
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -271,7 +229,7 @@
 		margin: 0;
 		color: #fff;
 		font-size: var(--sa-text-2xl);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.07;
 	}
@@ -279,8 +237,8 @@
 	.mobile-financing-hero p {
 		margin: 0;
 		color: rgba(255, 255, 255, 0.88);
-		font-size: var(--sa-text-sm);
-		font-weight: 700;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.3;
 	}
 
@@ -298,8 +256,8 @@
 		gap: var(--sa-mobile-gap-xs);
 		border-radius: 8px;
 		color: #fff !important;
-		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1;
 		overflow: hidden;
 		padding: 0 8px;
@@ -349,7 +307,7 @@
 		margin: 0;
 		color: #111827;
 		font-size: var(--sa-text-xl);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.1;
 	}
@@ -384,14 +342,14 @@
 	.mobile-financing-card strong {
 		color: #111827;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.1;
 	}
 
 	.mobile-financing-card small {
-		color: #66707a;
+		color: #56616e;
 		font-size: var(--sa-text-xs);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.28;
 	}
 
@@ -423,13 +381,13 @@
 		background: var(--sa-blue);
 		color: #fff;
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 	}
 
 	.mobile-financing-steps span {
 		color: #111827;
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.25;
 	}
 
@@ -448,14 +406,14 @@
 	.mobile-financing-faq strong {
 		color: #111827;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.15;
 	}
 
 	.mobile-financing-faq small {
-		color: #66707a;
+		color: #56616e;
 		font-size: var(--sa-text-sm);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.35;
 	}
 
@@ -477,16 +435,16 @@
 	.mobile-financing-cta h2 {
 		margin: 0;
 		color: #fff;
-		font-size: var(--sa-text-xl);
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.1;
 	}
 
 	.mobile-financing-cta p {
 		margin: 0;
 		color: rgba(255, 255, 255, 0.86);
-		font-size: var(--sa-text-sm);
-		font-weight: 700;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.3;
 	}
 
@@ -500,8 +458,8 @@
 		background: #fff;
 		padding: 0 14px;
 		color: var(--sa-blue) !important;
-		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.mobile-financing-cta a span {
@@ -524,5 +482,62 @@
 		.mobile-financing-app {
 			display: block;
 		}
+	}
+
+	/* Mobile typography contract */
+	.mobile-financing-hero__copy span,
+	.mobile-financing-heading span,
+	.mobile-financing-cta > div > span {
+		font-size: var(--sa-mobile-type-micro);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-financing-hero h1 {
+		font-size: var(--sa-mobile-type-page-title);
+		font-weight: var(--sa-weight-heading);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-financing-hero p {
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-financing-action {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
+	}
+	.mobile-financing-heading h2,
+	.mobile-financing-cta h2 {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-financing-card strong,
+	.mobile-financing-faq strong {
+		font-size: var(--sa-mobile-type-card-title);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-financing-card small {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-financing-steps strong {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-financing-steps span {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-semibold);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-financing-faq small,
+	.mobile-financing-cta p {
+		font-size: var(--sa-mobile-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-financing-cta a {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 	}
 </style>

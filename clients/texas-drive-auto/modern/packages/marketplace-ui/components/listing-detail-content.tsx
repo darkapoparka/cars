@@ -2,11 +2,15 @@ import { Button } from "@repo/design-system/components/ui/button";
 import {
   buildMarketplaceSearchHref,
   getListingPath,
+  leadSite,
   type Money,
   type VehicleListing,
 } from "@repo/marketplace";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
+import { formatListingMonthlyEstimate } from "../lib/listing-financing";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { ListingDetailsTabs } from "./listing-details-tabs";
 import { ListingEquipment } from "./listing-equipment";
@@ -41,6 +45,10 @@ export const ListingDetailContent = ({
   trustEvidence: readonly ListingTrustEvidence[];
 }) => {
   const copy = getListingDetailCopy(locale);
+  const isBg = locale?.startsWith("bg") ?? false;
+  const monthlyEstimate = listing.monthlyEstimate;
+  const financingFallback = isBg ? "Лизинг и финансиране" : "Finance options";
+  const financingAmount = formatListingMonthlyEstimate(monthlyEstimate, locale);
 
   return (
     <>
@@ -60,18 +68,82 @@ export const ListingDetailContent = ({
             <h2 className="hidden font-semibold text-card-title lg:block">
               {copy.description}
             </h2>
-            <p className="whitespace-pre-line text-[15px] text-zinc-900 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose">
+            <p className="whitespace-pre-line font-normal text-compact-control text-zinc-600 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose lg:text-zinc-900">
               {listing.description}
             </p>
-            <p className="mt-3 max-w-2xl text-[13px] text-zinc-500 leading-5 lg:text-meta lg:text-muted-foreground">
-              {copy.sellerDescription}
-            </p>
+            {leadSite.staticDemoMode ? null : (
+              <p className="mt-4 max-w-2xl text-[13px] text-zinc-500 leading-5 lg:text-meta lg:text-muted-foreground">
+                {copy.sellerDescription}
+              </p>
+            )}
           </section>
         }
         specifications={
           <ListingSpecs listing={listing} locale={locale} variant="details" />
         }
       />
+
+      {listing.category === "car" ? (
+        <div className="pb-5 lg:hidden">
+          <Link
+            className="group relative flex min-h-[156px] w-full overflow-hidden rounded-xl bg-[var(--lead-site-accent)] p-4 text-white focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+            data-slot="listing-financing-card"
+            href={`${getLocalizedPublicPath(locale, "/lease")}?vehicle=${encodeURIComponent(listing.id)}`}
+          >
+            <Image
+              alt=""
+              className="object-cover object-center"
+              fill
+              sizes="(max-width: 1023px) calc(100vw - 32px), 0px"
+              src={leadSite.financingArtworkPath}
+            />
+            <span className="relative z-10 flex w-[48%] flex-col items-start gap-3">
+              <span className="relative block aspect-[1780/512] w-28">
+                <Image
+                  alt=""
+                  className="h-full w-full object-contain [clip-path:inset(0_68%_0_0)]"
+                  height={512}
+                  sizes="112px"
+                  src={leadSite.logoPath}
+                  width={1780}
+                />
+                <Image
+                  alt=""
+                  className="pointer-events-none absolute inset-0 h-full w-full object-contain brightness-0 invert [clip-path:inset(0_0_0_32%)]"
+                  height={512}
+                  sizes="112px"
+                  src={leadSite.logoPath}
+                  width={1780}
+                />
+              </span>
+              <span className="block font-semibold text-[20px] leading-6 tracking-tight">
+                {financingAmount ? (
+                  <>
+                    <span className="block">
+                      {isBg ? "Лизинг от" : "Finance from"}
+                    </span>
+                    <span className="block whitespace-nowrap">
+                      ~{financingAmount}
+                      <span className="font-medium text-[14px]">
+                        /{copy.month}
+                      </span>
+                    </span>
+                  </>
+                ) : (
+                  financingFallback
+                )}
+              </span>
+              <span className="mt-auto inline-flex items-center gap-1.5 font-medium text-[12px] leading-4">
+                {isBg ? "Виж условията" : "View options"}
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className="size-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </span>
+            </span>
+          </Link>
+        </div>
+      ) : null}
 
       {priceIntelligence ? (
         <div className="py-5 lg:py-8">
@@ -91,20 +163,28 @@ export const ListingDetailContent = ({
       ) : null}
 
       {relatedListings.length > 0 ? (
-        <section aria-labelledby="similar-heading" className="py-6 lg:py-8">
-          <div className="mb-3 flex items-center justify-between gap-3">
-            <h2 className="font-semibold text-card-title" id="similar-heading">
+        <section
+          aria-labelledby="similar-heading"
+          className="my-5 rounded-2xl bg-zinc-100 px-4 py-5 lg:my-0 lg:rounded-none lg:bg-transparent lg:px-0 lg:py-8"
+        >
+          <div className="mb-4 flex items-center justify-between gap-2">
+            <h2
+              className="whitespace-nowrap font-semibold text-[18px] tracking-tight min-[360px]:text-[19px]"
+              id="similar-heading"
+            >
               {copy.similarVehicles}
             </h2>
             <Button
               asChild
-              className="h-11 rounded-lg lg:h-9"
-              variant="secondary"
+              className="size-11 shrink-0 rounded-lg p-0 text-zinc-600 shadow-none hover:bg-white hover:text-zinc-950 lg:size-9"
+              variant="ghost"
             >
-              <Link href={backHref}>{copy.viewAll}</Link>
+              <Link aria-label={copy.viewAll} href={backHref}>
+                <ArrowRight aria-hidden="true" className="size-5" />
+              </Link>
             </Button>
           </div>
-          <div className="grid auto-cols-[82%] grid-flow-col gap-3 overflow-x-auto pb-2 [scrollbar-width:none] md:grid-flow-row md:grid-cols-3 md:overflow-visible md:pb-0 [&::-webkit-scrollbar]:hidden">
+          <div className="grid auto-cols-[80%] grid-flow-col gap-3 overflow-x-auto pb-1 [scrollbar-width:none] md:grid-flow-row md:grid-cols-3 md:overflow-visible md:pb-0 [&::-webkit-scrollbar]:hidden">
             {relatedListings.map((relatedListing) => (
               <RelatedListingCard
                 href={buildMarketplaceSearchHref(

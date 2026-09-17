@@ -57,7 +57,7 @@
 		/>
 		<div class="daynight-home-hero__stage">
 			<h1 id="daynight-home-hero-title" class="daynight-home-hero__title">
-				Browse vehicles and ask about buying or selling.
+				Разгледай. Купи. Продай. На едно място.
 			</h1>
 			<DesktopHomeSearchPanel
 				{vehicles}
@@ -103,13 +103,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>Studentski Grad · 18 Atanas Manchev St.</span>
+						<span>{daynightSite.locationLandmark}</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label="Open directions to Texas Drive Auto in Google Maps"
+						aria-label={`Отвори Google Maps до ${daynightSite.shortName}`}
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -120,23 +120,23 @@
 							<span class="daynight-home-hero__location-road daynight-home-hero__location-road--c"
 							></span>
 							<span class="daynight-home-hero__location-pin"></span>
-							<span class="daynight-home-hero__location-map-label">TEXAS DRIVE AUTO</span>
+							<span class="daynight-home-hero__location-map-label">{daynightSite.name}</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>Texas Drive Auto</strong>
-							<span>18 Atanas Manchev St., Studentski Grad, Dallas</span>
-							<em>Open Google Maps</em>
+							<strong>{daynightSite.shortName} {daynightSite.city}</strong>
+							<span>{daynightSite.location}</span>
+							<em>Отвори Google Maps</em>
 						</span>
 					</button>
 				</div>
 				<h1 class="daynight-home-hero__title">
 					<span class="daynight-home-hero__title-text">
-						<span>Ask about vehicle inspections.</span>
-						<strong>Ask about purchase terms.</strong>
+						<span>Проверени автомобили.</span>
+						<strong>Ясни условия.</strong>
 					</span>
 				</h1>
 				<p class="daynight-home-hero__subtitle">
-					Browse inventory by make, model, mileage, and budget.
+					Разгледай наличността по марка, модел, пробег и бюджет.
 				</p>
 			</div>
 		</div>

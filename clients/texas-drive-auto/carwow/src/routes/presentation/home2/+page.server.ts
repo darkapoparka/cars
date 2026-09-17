@@ -1,3 +1,4 @@
+import { daynightVehicles } from '$lib/data/daynight-vehicles';
 import { cars } from '$lib/data/daynight-vehicles';
 import { daynightSite } from '$lib/data/daynight-site';
 
@@ -31,25 +32,25 @@ const featuredCardImages: Record<string, string> = {
 };
 
 const fuelLabels: Record<string, string> = {
-	Gasoline: 'Petrol',
-	Diesel: 'Diesel',
-	Electric: 'Electric',
-	Hybrid: 'Hybrid',
-	'Gasoline/LPG': 'Petrol/LPG'
+	Бензин: 'Petrol',
+	Дизел: 'Diesel',
+	Електрически: 'Electric',
+	Хибриден: 'Hybrid',
+	'Бензин/Газ': 'Petrol/LPG'
 };
 
 const transmissionLabels: Record<string, string> = {
-	Automatic: 'Automatic',
-	Manual: 'Manual'
+	Автоматик: 'Automatic',
+	Ръчна: 'Manual'
 };
 
 const bodyLabels: Record<string, string> = {
-	Sedan: 'Saloons',
-	Wagon: 'Estate cars',
-	Hatchback: 'Hatchbacks',
-	Van: 'Vans',
-	Sedan: 'Luxury cars',
-	Coupe: 'Coupes'
+	Седан: 'Saloons',
+	Комби: 'Estate cars',
+	Хечбек: 'Hatchbacks',
+	Ван: 'Vans',
+	Лимузина: 'Luxury cars',
+	Купе: 'Coupes'
 };
 
 const brandLogoPaths: Record<string, string> = {
@@ -60,12 +61,12 @@ const brandLogoPaths: Record<string, string> = {
 };
 
 const bodyImagePaths: Record<string, string> = {
-	Sedan: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	Wagon: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
-	Hatchback: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
-	Van: '/assets/images/body-type/normalized/body-mpv-transparent.webp',
-	Sedan: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	Coupe: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
+	Седан: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	Комби: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
+	Хечбек: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+	Ван: '/assets/images/body-type/normalized/body-mpv-transparent.webp',
+	Лимузина: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	Купе: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
 	SUV: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 };
 
@@ -85,7 +86,7 @@ function featuredCars() {
 		summary: featuredSummaries[car.slug] ?? 'Verified Texas Drive Auto stock',
 		image: car.image,
 		cardImage: featuredCardImages[car.slug] ?? car.image,
-		price: car.priceLabel,
+		price: car.priceEur,
 		badge: car.badges[0] ?? 'Checked',
 		saving: 'DayNight inspected'
 	}));
@@ -94,27 +95,27 @@ function featuredCars() {
 function budgetTiles() {
 	const buckets = [
 		{
-			label: 'Under $10k',
+			label: 'Under €10k',
 			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
 			count: cars.filter((car) => car.price > 0 && car.price <= 10000).length
 		},
 		{
-			label: 'Under $20k',
+			label: 'Under €20k',
 			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
 			count: cars.filter((car) => car.price > 10000 && car.price <= 20000).length
 		},
 		{
-			label: 'Under $30k',
+			label: 'Under €30k',
 			image: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
 			count: cars.filter((car) => car.price > 20000 && car.price <= 30000).length
 		},
 		{
-			label: 'Under $50k',
+			label: 'Under €50k',
 			image: '/assets/images/body-type/normalized/body-suv-transparent.webp',
 			count: cars.filter((car) => car.price > 30000 && car.price <= 50000).length
 		},
 		{
-			label: 'Over $50k',
+			label: 'Over €50k',
 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
 			count: cars.filter((car) => car.price > 50000).length
 		},
@@ -135,7 +136,7 @@ export function load() {
 	return {
 		site: daynightSite,
 		stats: {
-			total: daynightSite.inventoryCount,
+			total: daynightVehicles.length,
 			dealers: 'Dallas',
 			rating: '4.9/5',
 			reviews: '240+'
@@ -149,7 +150,7 @@ export function load() {
 			'Premium',
 			'Hybrids',
 			'Big boot',
-			'Below $30k'
+			'Below €30k'
 		],
 		budgetTiles: budgetTiles(),
 		featuredCars: featuredCars(),

@@ -1,11 +1,11 @@
-import { daynightVehicles, type Car } from '$lib/data/daynight-vehicles';
+import type { Car } from '$lib/data/daynight-vehicles';
 import type {
 	InventoryGridDefinition,
 	InventoryListVehicle,
 	InventoryQuickFilterGroup,
 	InventoryQuickFilterOption
 } from '$lib/types/inventory';
-import type { InventoryTemplatePage, MapInventoryTemplatePage } from '$lib/types/template-page';
+import type { InventoryPageData, MapInventoryPageData } from '$lib/types/storefront-page';
 import { routeSeo } from './daynight-seo';
 
 export function toInventoryListVehicle(vehicle: Car): InventoryListVehicle {
@@ -23,7 +23,7 @@ export function toInventoryListVehicle(vehicle: Car): InventoryListVehicle {
 		body: vehicle.body,
 		color: vehicle.color,
 		price: vehicle.price,
-		priceLabel: vehicle.priceLabel,
+		priceEur: vehicle.priceEur,
 		monthly: vehicle.monthly,
 		image: vehicle.image,
 		gallery: vehicle.gallery,
@@ -66,14 +66,14 @@ function toOptions(values: string[]): InventoryQuickFilterOption[] {
 }
 
 const mileageOptions: InventoryQuickFilterOption[] = [
-	{ value: 'under-100000', label: 'Up to 100 000 miles' },
-	{ value: 'under-150000', label: 'Up to 150 000 miles' },
-	{ value: 'under-200000', label: 'Up to 200 000 miles' },
-	{ value: 'over-200000', label: 'Over 200 000 miles' }
+	{ value: 'under-100000', label: 'До 100 000 км' },
+	{ value: 'under-150000', label: 'До 150 000 км' },
+	{ value: 'under-200000', label: 'До 200 000 км' },
+	{ value: 'over-200000', label: 'Над 200 000 км' }
 ];
 
-// Each model carries the brands that stock it, so the Model menu can be
-// scoped to the chosen Make at runtime.
+// Each model carries the brands that stock it, so the Модел menu can be
+// scoped to the chosen Марка at runtime.
 function toModelOptions(vehicles: Car[]): InventoryQuickFilterOption[] {
 	const brandsByModel = new Map<string, Set<string>>();
 	for (const vehicle of vehicles) {
@@ -92,56 +92,56 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 	return [
 		{
 			name: 'brand',
-			label: 'Make',
-			placeholder: 'All makes',
+			label: 'Марка',
+			placeholder: 'Всички марки',
 			options: toOptions(vehicles.map((vehicle) => vehicle.brand))
 		},
 		{
 			name: 'model',
-			label: 'Model',
-			placeholder: 'All models',
+			label: 'Модел',
+			placeholder: 'Всички модели',
 			options: toModelOptions(vehicles)
 		},
 		{
 			name: 'price',
-			label: 'Price',
-			placeholder: 'All prices',
+			label: 'Цена',
+			placeholder: 'Всички цени',
 			options: [
-				{ value: 'under-10000', label: 'Up to 10 000 USD' },
-				{ value: 'under-20000', label: 'Up to 20 000 USD' },
-				{ value: 'under-30000', label: 'Up to 30 000 USD' },
-				{ value: 'under-50000', label: 'Up to 50 000 USD' },
-				{ value: 'over-50000', label: 'Over 50 000 USD' }
+				{ value: 'under-10000', label: 'До 10 000 EUR' },
+				{ value: 'under-20000', label: 'До 20 000 EUR' },
+				{ value: 'under-30000', label: 'До 30 000 EUR' },
+				{ value: 'under-50000', label: 'До 50 000 EUR' },
+				{ value: 'over-50000', label: 'Над 50 000 EUR' }
 			]
 		},
 		{
 			name: 'mileage',
-			label: 'Mileage',
-			placeholder: 'All mileage',
+			label: 'Пробег',
+			placeholder: 'Всички пробези',
 			options: mileageOptions
 		},
 		{
 			name: 'fuel',
-			label: 'Fuel',
-			placeholder: 'All fuel types',
+			label: 'Гориво',
+			placeholder: 'Всички горива',
 			options: toOptions(vehicles.map((vehicle) => vehicle.fuel))
 		},
 		{
 			name: 'transmission',
-			label: 'Transmission',
-			placeholder: 'All transmissions',
+			label: 'Скорости',
+			placeholder: 'Всички скорости',
 			options: toOptions(vehicles.map((vehicle) => vehicle.transmission))
 		},
 		{
 			name: 'body',
-			label: 'Body style',
-			placeholder: 'All body styles',
+			label: 'Каросерия',
+			placeholder: 'Всички каросерии',
 			options: toOptions(vehicles.map((vehicle) => vehicle.body))
 		},
 		{
 			name: 'feature',
-			label: 'Features',
-			placeholder: 'All features',
+			label: 'Екстри',
+			placeholder: 'Всички екстри',
 			options: toOptions(vehicles.flatMap((vehicle) => vehicle.features))
 		}
 	];
@@ -150,30 +150,24 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 // The grid is fully native (the reactive DesktopInventoryFilters store drives
 // every control) and ships no template scripts, so the payload is built purely
 // from Car data + route SEO.
-export async function loadInventoryTemplatePage(vehicles?: Car[]): Promise<InventoryTemplatePage> {
-	const publicVehicles = vehicles ?? daynightVehicles;
-
+export function buildInventoryPageData(vehicles: Car[]): InventoryPageData {
 	return {
 		kind: 'inventory',
 		...routeSeo('inventory'),
-		scriptSrcs: [],
 		gridDefinitions,
-		quickFilters: buildQuickFilters(publicVehicles),
-		vehicles: publicVehicles.map(toInventoryListVehicle)
+		quickFilters: buildQuickFilters(vehicles),
+		vehicles: vehicles.map(toInventoryListVehicle)
 	};
 }
 
 // Native half-map payload — the same quick filters + vehicles the grid carries
 // (they drive the shared reactive store), minus the grid layout definitions. The
 // map embed itself is masked in the visual gate.
-export async function loadInventoryMapPage(vehicles?: Car[]): Promise<MapInventoryTemplatePage> {
-	const publicVehicles = vehicles ?? daynightVehicles;
-
+export function buildInventoryMapPageData(vehicles: Car[]): MapInventoryPageData {
 	return {
 		kind: 'inventory-map',
 		...routeSeo('inventory/map'),
-		scriptSrcs: [],
-		quickFilters: buildQuickFilters(publicVehicles),
-		vehicles: publicVehicles.map(toInventoryListVehicle)
+		quickFilters: buildQuickFilters(vehicles),
+		vehicles: vehicles.map(toInventoryListVehicle)
 	};
 }

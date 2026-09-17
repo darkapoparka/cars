@@ -2,8 +2,8 @@
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 
-	const phoneHref = `tel:${daynightSite.phone}`;
-	const viberHref = `viber://chat?number=%2B359${daynightSite.phone.slice(1)}`;
+	const phoneHref = daynightSite.phoneHref;
+	const viberHref = daynightSite.viberHref;
 	const mapLinkProps = {
 		href: daynightSite.mapUrl,
 		target: '_blank',
@@ -16,7 +16,7 @@
 		<div class="listing-details--contact-dealer mb-28">
 			<img
 				src="/assets/images/avatar/contact-avatar.webp"
-				alt="Texas Drive Auto"
+				alt={`${daynightSite.shortName}`}
 				data-daynight-img="1"
 				decoding="async"
 				loading="eager"
@@ -24,7 +24,7 @@
 
 			<div class="content">
 				<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-8">
-					Texas Drive Auto
+					{daynightSite.shortName}
 				</a>
 
 				<div class="verify">
@@ -35,7 +35,7 @@
 						decoding="async"
 						loading="lazy"
 					/>
-					<p class="text-highlight text-sm">Dealership preview</p>
+					<p class="text-highlight text-sm">Проверена автокъща</p>
 				</div>
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 				</p>
 				<div class="flex flex-col gap-4">
 					<a {...mapLinkProps}>{daynightSite.location}</a>
-					<a {...mapLinkProps} class="text-underline text-highlight text-sm"> View location </a>
+					<a {...mapLinkProps} class="text-underline text-highlight text-sm"> Виж локация </a>
 				</div>
 			</li>
 		</ul>
@@ -78,7 +78,7 @@
 			</li>
 		</ul>
 
-		<a href={phoneHref} class="sa-cta sa-cta-primary sa-cta-compact mb-12 w-full">
+		<a href={phoneHref} class="sa-cta-compact mb-12 sa-cta w-full sa-cta-primary">
 			<img
 				src="/assets/icons/PhoneCall-2.svg"
 				alt=""
@@ -87,10 +87,10 @@
 				decoding="async"
 				loading="lazy"
 			/>
-			Call about a viewing
+			Обади се за оглед
 		</a>
 
-		<a href={viberHref} class="sa-cta sa-cta-ghost sa-cta-compact w-full">
+		<a href={viberHref} class="sa-cta-compact sa-cta w-full sa-cta-ghost">
 			<img
 				src="/assets/icons/ChatCircleDots.svg"
 				alt=""
@@ -99,7 +99,7 @@
 				decoding="async"
 				loading="lazy"
 			/>
-			Viber chat
+			Viber чат
 		</a>
 	</div>
 </div>

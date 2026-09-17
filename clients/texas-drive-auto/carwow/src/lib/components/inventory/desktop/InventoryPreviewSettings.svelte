@@ -17,10 +17,10 @@
 	} = $props();
 
 	const densityOptions = [
-		{ index: 0, label: '2 columns' },
-		{ index: 1, label: '3 columns' },
-		{ index: 2, label: '4 columns' },
-		{ index: 3, label: '5 columns' }
+		{ index: 0, label: '2 колони' },
+		{ index: 1, label: '3 колони' },
+		{ index: 2, label: '4 колони' },
+		{ index: 3, label: '5 колони' }
 	];
 
 	let open = $state(false);
@@ -38,19 +38,19 @@
 
 <div class="inventory-preview-settings" data-daynight-preview-settings>
 	{#if open}
-		<section class="inventory-preview-settings__panel" aria-label="View settings">
+		<section class="inventory-preview-settings__panel" aria-label="Настройки на изгледа">
 			<header>
 				<div>
-					<span>Demo settings</span>
-					<strong>Inventory preview</strong>
+					<span>Демо настройки</span>
+					<strong>Преглед на инвентара</strong>
 				</div>
-				<button type="button" aria-label="Close settings" onclick={close}>
+				<button type="button" aria-label="Затвори настройките" onclick={close}>
 					<X aria-hidden="true" size={18} strokeWidth={2.2} />
 				</button>
 			</header>
 
 			<div class="inventory-preview-settings__group">
-				<span>Layout</span>
+				<span>Подредба</span>
 				<div class="inventory-preview-settings__segmented">
 					<button
 						class:active={layoutMode === 'grid'}
@@ -59,7 +59,7 @@
 						onclick={() => onLayoutChange('grid')}
 					>
 						<LayoutGrid aria-hidden="true" size={17} />
-						Without sidebar
+						Без колона
 					</button>
 					<button
 						class:active={layoutMode === 'sidebar'}
@@ -68,13 +68,13 @@
 						onclick={() => onLayoutChange('sidebar')}
 					>
 						<PanelLeft aria-hidden="true" size={17} />
-						With sidebar
+						С колона
 					</button>
 				</div>
 			</div>
 
 			<div class="inventory-preview-settings__group">
-				<span>Cards per row</span>
+				<span>Карти на ред</span>
 				<div class="inventory-preview-settings__density">
 					{#each densityOptions as option (option.index)}
 						<button
@@ -90,14 +90,14 @@
 				</div>
 			</div>
 
-			<p>These controls are only for comparing demo variants.</p>
+			<p>Тези контроли са само за сравнение на демо вариантите.</p>
 		</section>
 	{/if}
 
 	<button
 		class="inventory-preview-settings__launcher"
 		type="button"
-		aria-label={open ? 'Close view settings' : 'View settings'}
+		aria-label={open ? 'Затвори настройките на изгледа' : 'Настройки на изгледа'}
 		aria-expanded={open}
 		onclick={() => (open = !open)}
 	>
@@ -169,15 +169,15 @@
 
 	.inventory-preview-settings__panel header span {
 		color: #b00000;
-		font-size: 11px;
-		font-weight: 800;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 	}
 
 	.inventory-preview-settings__panel header strong {
 		color: #101828;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		line-height: 1.3;
 	}
 
@@ -203,8 +203,8 @@
 
 	.inventory-preview-settings__group > span {
 		color: #667085;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.inventory-preview-settings__segmented {
@@ -226,8 +226,8 @@
 		cursor: pointer;
 		display: inline-flex;
 		font: inherit;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		height: 36px;
 		justify-content: center;
 	}
@@ -250,13 +250,13 @@
 
 	.inventory-preview-settings__density button {
 		background: #f2f4f7;
-		font-size: 14px;
+		font-size: var(--sa-button-font-size);
 	}
 
 	.inventory-preview-settings__panel p {
 		border-top: 1px solid #eaecf0;
 		color: #667085;
-		font-size: 11px;
+		font-size: var(--sa-type-body);
 		line-height: 1.45;
 		margin: 15px 0 0;
 		padding-top: 12px;
