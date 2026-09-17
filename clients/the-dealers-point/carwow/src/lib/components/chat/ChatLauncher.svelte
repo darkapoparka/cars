@@ -60,7 +60,7 @@
 			border-radius: 8px;
 			background: var(--sa-red);
 			font: inherit;
-			font-weight: 600;
+			font-weight: var(--sa-weight-semibold);
 		}
 		.chat-launcher__label {
 			display: inline;
@@ -92,8 +92,8 @@
 		border-radius: 999px;
 		background: #e11d48;
 		color: #fff;
-		font-size: 11px;
-		font-weight: 800;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		line-height: 16px;
 	}
 </style>
