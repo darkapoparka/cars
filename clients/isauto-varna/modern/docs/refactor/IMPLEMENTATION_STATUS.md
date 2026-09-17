@@ -1,10 +1,10 @@
-# IS AUTO Modern — refactor implementation status
+# Day & Night Modern — refactor implementation status
 
 This document records the implementation state of the codebase-wide maintainability refactor authorized for `gpt-web`.
 
 ## Preservation contract
 
-The refactor is architecture-only unless a behavior fix is explicitly noted. Preserve the approved IS AUTO mobile UI, routes, localization, static-demo behavior, inventory contracts, provider attribution, brand assets, and conversion flows. Do not merge this work into `main` until verification and rendered review are complete.
+The refactor is architecture-only unless a behavior fix is explicitly noted. Preserve the approved Day & Night mobile UI, routes, localization, static-demo behavior, inventory contracts, provider attribution, brand assets, and conversion flows. Do not merge this work into `main` until verification and rendered review are complete.
 
 The authoritative visual/behavior baseline is commit `7e70c0602ad64c7954ab4a070a210b7a12ba5d13`, the parent of the first refactor commit `cd13211c0ff03c800fd93931ebef7b55ab0ab5f8`. Parity review must compare refactored surfaces to this accepted post-polish baseline rather than to a later or otherwise divergent `main` snapshot.
 

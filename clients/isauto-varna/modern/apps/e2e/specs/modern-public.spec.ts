@@ -67,7 +67,7 @@ test("static showroom exposes no account links, fake delivery result, or analyti
   await expect(page.locator("#analytics-consent-bootstrap")).toHaveCount(0);
   await expect(page.locator('a[href*="/sign-in"]')).toHaveCount(0);
   const phone = page.locator('a[href^="tel:"]').first();
-  await expect(phone).toHaveAttribute("href", "tel:+359899266666");
+  await expect(phone).toHaveAttribute("href", "tel:+359877733110");
   await expect(
     page.locator('a[href*="google.com/maps"]').first()
   ).toHaveAttribute("target", "_blank");

@@ -1,18 +1,9 @@
 {
   "schemaVersion": 1,
   "key": "carwow",
-  "source": "/home/runner/work/cars/cars/templates/carwow",
-  "destination": "/home/runner/work/cars/cars/clients/isauto-varna/carwow",
-  "copiedAt": "2026-09-16T00:19:39.706Z",
+  "source": "templates/carwow",
+  "destination": "clients/isauto-varna/carwow",
   "sourceUrl": null,
-  "git": {
-    "root": "/home/runner/work/cars/cars",
-    "branch": "main",
-    "head": "57d4e828ec4cb1f109d8c0f55c1eaae721bf3c8b",
-    "remote": "https://github.com/darkapoparka/cars",
-    "status": "?? clients/isauto-varna/\n?? scripts/build-isauto-varna.mjs",
-    "headAfterCopy": "57d4e828ec4cb1f109d8c0f55c1eaae721bf3c8b"
-  },
   "files": [
     {
       "path": ".env.example",
@@ -786,8 +777,8 @@
     },
     {
       "path": "src/lib/components/home/desktop/DesktopHomeVehicleCategories.svelte",
-      "bytes": 9225,
-      "sha256": "152b5982dafcc23d97a58670783ec034dcc5e12964b6fc03b8f52eabf104e87b"
+      "bytes": 9301,
+      "sha256": "27f56439c9c96cad7184f5deb0f13c8f89c0a344a2c89ded6bd0182da30adf34"
     },
     {
       "path": "src/lib/components/home/desktop/DesktopHomeVideos.svelte",
@@ -6546,5 +6537,64 @@
     "docs/QA.md"
   ],
   "links": [],
-  "bytes": 124858193
+  "bytes": 124858269,
+  "sourceCommit": "f5842f7e4ec292da4d2fbb9f32d1b0c9ed375c8c",
+  "sourceTree": "7649dbf15a70ee624eeb9a07728275d3f3343aad",
+  "method": "Approved Cars snapshot plus explicit dealer data/assets overlay",
+  "approvedTemplate": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+    "exportPolicy": "cars-source-v1"
+  },
+  "refresh": {
+    "mode": "regenerate",
+    "overlay": [
+      "src/lib/data/daynight-current-inventory.ts",
+      "src/lib/data/daynight-site.ts",
+      "src/lib/data/dealer-profile.json",
+      "src/lib/data/daynight-reviews.ts",
+      "src/lib/data/daynight-team.ts",
+      "src/lib/data/daynight-blog.ts",
+      "src/lib/data/daynight-faq.ts",
+      "src/lib/components/layout/SiteChromeTopBar.svelte",
+      "src/lib/components/home/mobile/mobile-home-data.ts",
+      "src/lib/data/daynight-videos.ts",
+      "src/lib/components/layout/DesktopDealerFooter.svelte",
+      "src/lib/components/layout/DayNightFooter.svelte",
+      "src/lib/components/about/DesktopAboutPage.svelte",
+      "src/hooks.server.ts",
+      "src/lib/components/admin/AdminShell.svelte",
+      "src/lib/components/admin/PostForm.svelte",
+      "src/lib/components/layout/daynight-footer-data.ts",
+      "src/lib/data/daynight-vehicles.ts",
+      "src/lib/server/auth/auth.ts",
+      "src/lib/server/cms/schemas.ts",
+      "src/lib/server/db/schema.ts",
+      "src/lib/server/repositories/admin-assistant.ts",
+      "src/lib/server/repositories/posts.ts",
+      "src/lib/server/seed/daynight-catalog-seed.ts",
+      "src/routes/admin/assistant/+page.svelte",
+      "src/routes/admin/assistant/chat/+server.ts",
+      "src/routes/admin/listings/+page.svelte",
+      "src/routes/admin/posts/+page.svelte",
+      "src/routes/admin/settings/+page.svelte",
+      "src/routes/blog/[slug]/+page.server.ts",
+      "src/routes/presentation/home2/+page.server.ts",
+      "src/routes/presentation/home2/+page.svelte",
+      "src/routes/presentation/home3/+page.svelte",
+      "src/routes/team/[slug]/+page.server.ts",
+      "static/site.webmanifest",
+      "dealer/inventory-1.webp",
+      "dealer/inventory-2.webp",
+      "dealer/inventory-3.webp",
+      "dealer/inventory-4.webp",
+      "dealer/inventory-5.webp",
+      "dealer/inventory-6.webp",
+      "dealer/logo-dark.png",
+      "dealer/logo-light.png",
+      "assets/brand/logo-on-light.webp",
+      "assets/brand/logo-on-dark.webp"
+    ]
+  }
 }

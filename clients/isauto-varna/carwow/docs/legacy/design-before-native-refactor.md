@@ -1,10 +1,10 @@
 > Historical source document. It does not override AGENTS.md or the current architecture/design contracts.
 
-# IS AUTO Showroom / Spartak — Design & UI/UX Repair Contract
+# Day & Night Showroom / Spartak — Design & UI/UX Repair Contract
 
 Branch: `gpt-pro`
 
-This project is the IS AUTO showroom-style variant derived from Agency OS `showroom`.
+This project is the Day & Night showroom-style variant derived from Agency OS `showroom`.
 
 It has a useful architectural strength: the homepage can render materially different desktop and mobile presentations while sharing the same data. Preserve that. Its first send-readiness problems are not fancy design problems — they are content integrity and final visual polish.
 
@@ -42,7 +42,7 @@ Treat these as UI release blockers, not back-office details.
 
 Verify and fix:
 
-- IS AUTO name/logo;
+- Day & Night name/logo;
 - phone;
 - address/location;
 - email: no `demo@...` placeholder in public UI;

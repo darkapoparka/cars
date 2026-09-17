@@ -1,6 +1,6 @@
 # Developer documentation
 
-This reference explains the IS AUTO application, its visual system and the practical work of adapting it. Each topic has one primary document.
+This reference explains the Auto Best application, its visual system and the practical work of adapting it. Each topic has one primary document.
 
 | Document | Contents |
 | --- | --- |
@@ -8,6 +8,7 @@ This reference explains the IS AUTO application, its visual system and the pract
 | [Product](../PRODUCT.md) | Visitor journeys and feature scope |
 | [Template](../TEMPLATE.md) | Repository identity, defaults and source-version notes |
 | [Architecture](../ARCHITECTURE.md) | Rendering, ownership, state and application boundaries |
+| [Architecture refactor plan](ARCHITECTURE-REFACTOR-PLAN.md) | 14 September 2026 source audit, proposed boundaries, ordered implementation and acceptance gates |
 | [Styling](STYLING.md) | CSS structure, actual tokens, breakpoints and component treatments |
 | [Components](COMPONENTS.md) | Component responsibilities, inputs and main consumers |
 | [Data](DATA.md) | Brand, inventory, filters, editorial content and artwork records |

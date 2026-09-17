@@ -1,3 +1,5 @@
+import { leadSite } from '$config/lead-site';
+
 export interface FeaturedVideo {
   id: string;
   title: string;
@@ -5,5 +7,25 @@ export interface FeaturedVideo {
   thumbnail: string;
 }
 
-// IS AUTO does not publish a verified YouTube channel. Do not inherit another dealer's videos.
-export const featuredVideos: readonly FeaturedVideo[] = [];
+// Selected automotive videos from the owner-supplied channel, verified 2026-09-05.
+// This is a curated selection, not an automatically refreshed channel feed.
+export const featuredVideos: readonly FeaturedVideo[] = [
+  {
+    id: '6S3dLIgeAT8',
+    title: 'Най-желаната кола в България | Lamborghini Urus',
+    duration: '23:19',
+    thumbnail: leadSite.artwork.videos.urus
+  },
+  {
+    id: 'zG6rjLpT4u8',
+    title: 'Продадох най-новата Панамера',
+    duration: '14:33',
+    thumbnail: leadSite.artwork.videos.panamera
+  },
+  {
+    id: 'w_XaGmIWJFM',
+    title: 'Каква е разликата в G-класите',
+    duration: '23:03',
+    thumbnail: leadSite.artwork.videos.gclass
+  }
+];

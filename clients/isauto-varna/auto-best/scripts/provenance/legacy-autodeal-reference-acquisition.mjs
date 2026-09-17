@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 // Historical acquisition utility retained only for provenance. It targets the
 // older AutoDeal reference below; it is not evidence for the separately
-// retained IS AUTO manifest and is not an application build command.
+// retained Day & Night manifest and is not an application build command.
 const authorizationVariable = 'ALLOW_LEGACY_REFERENCE_ACQUISITION';
 const authorizationValue = 'I_UNDERSTAND_THIS_RECREATES_MIRROR';
 
