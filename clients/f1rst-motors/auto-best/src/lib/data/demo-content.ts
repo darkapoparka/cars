@@ -1,3 +1,17 @@
+import { featuredVehicles } from './inventory';
+
+// Visual examples only: these selections are not records of completed transactions.
+export const demoWorkflowShowcases = {
+  'trade-in': {
+    title: 'Наскоро продадени',
+    vehicles: [featuredVehicles[0], featuredVehicles[3], featuredVehicles[5]]
+  },
+  import: {
+    title: 'Последно внесени',
+    vehicles: [featuredVehicles[1], featuredVehicles[2], featuredVehicles[4]]
+  }
+};
+
 type DemoTeamMember = {
   id: string;
   name: string;

@@ -19,7 +19,7 @@ export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	server: {
 		host: '127.0.0.1',
-		port: 6517,
+		port: 6463,
 		strictPort: true,
 		watch: {
 			ignored: generatedWatchIgnores

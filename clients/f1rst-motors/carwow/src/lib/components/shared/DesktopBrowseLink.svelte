@@ -22,7 +22,7 @@
 		color: #171b1e;
 		display: inline-flex;
 		flex: 0 0 auto;
-		font: 600 15px/1.3 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-base)/1.3 var(--sa-font);
 		gap: 12px;
 		justify-content: center;
 		min-height: 44px;
