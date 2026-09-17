@@ -1,41 +1,35 @@
-# Product
+# Product overview
 
-<!-- impeccable:product-schema 1 -->
+Auto Best is a dealership website template for browsing vehicles and starting a conversation with the dealer. Its purpose is to provide a polished starting point for independently branded client sites.
 
-## Platform
+## Main visitor journeys
 
-Web.
+| Journey | Visitor experience |
+| --- | --- |
+| Find a car | Browse featured stock, choose a body type or make, search and refine the inventory |
+| Inspect a vehicle | View the photograph, price, data, description and equipment; return to the filtered list |
+| Arrange a viewing | Carry the selected vehicle into an inspection contact page or call directly |
+| Discuss finance | Adjust a deposit and term to see a principal-only illustration, then contact the dealer |
+| Import a vehicle | Start with a listing URL or preferences and prepare an import enquiry |
+| Sell or trade in | Describe the vehicle, optionally preview photos, then copy or share the enquiry |
+| Learn and visit | Read buying/import/finance articles, learn about the company and open its map/contact links |
 
-## Product
+## Interface character
 
-Day & Night Auto Group is a Bulgarian automotive inventory and direct-enquiry Sales Demo. It gives prospective buyers a fast path from discovery to a vehicle detail, phone call, viewing request, import enquiry, or leasing conversation.
+The design is automotive rather than dashboard-like: large vehicle images, rounded surfaces, clear prices, compact metadata and direct actions. Desktop uses a full navigation/mega-menu composition. Mobile uses a compact discovery interface, bottom navigation and native modal sheets. The current service illustrations and image-generated banners are part of that visual identity. Details are in [Styling](docs/STYLING.md).
 
-## Architecture
+## Content model
 
-The product is a native SvelteKit application. Server-rendered routes own their markup and URL state; typed modules own identity, inventory, company, and editorial data; reusable Svelte components own interaction and presentation. There is no mirrored HTML renderer, legacy Next.js client bundle, DOM-composition layer, or template route fallback.
+The template defaults to Bulgarian text, euro prices, kilometres and a Sofia-based sample identity. Inventory, navigation, services, articles and selected videos are local TypeScript records. Content can be changed independently of the core page layouts. The [Reuse guide](REUSE_GUIDE.md) identifies every main personalization area.
 
-## Public route surface
+## Implemented versus integrated
 
-- Homepage and inventory discovery.
-- URL-driven listing filters and sorting.
-- Eight typed vehicle-detail routes.
-- About, Contact, Blog, and nine typed article-detail routes.
-- A small documented redirect set for former public aliases.
+The template renders pages, filters inventory, maintains list-return context, calculates a simple principal illustration, opens maps/video players and prepares browser-local enquiry drafts. It does not provide inventory administration, an automatic stock feed, accounts, payments, reservations, automated valuation, finance approval, or confirmed email/CRM delivery.
 
-Unsupported dealer dashboards, accounts, listing submission, comparison, pricing, staff, and template-variant pages intentionally return 404.
+Photos selected in an enquiry are local previews, not server uploads. A browser share action hands content to an application chosen by the visitor. Google Maps and YouTube are external providers; they are separate from this application.
 
-## Truthful constraints
+## Template and client relationship
 
-- Inventory is representative demo data, not a live stock feed.
-- Vehicle availability, specifications, price, and financing terms must be confirmed with the business.
-- Contact uses verified direct actions; there is no fake form submission or account backend.
-- Team and partner content remains visibly identified as temporary demo presentation data until the owner supplies verified replacements.
-- No review, testimonial, author, date, finance guarantee, or operational claim may be invented.
+The master is improved once and copied for each dealer. A client copy keeps the design and behavior while replacing identity, contacts, services, stock, copy and relevant media. Existing copies do not automatically inherit later master changes.
 
-## Reuse boundary
-
-This is a branded lead project, not a reusable template. Its clean component/data/config boundaries can inform a separately authorized Agency OS template promotion. See `REUSE_GUIDE.md` and `SOURCE_LICENSE.md`.
-
-## Release standard
-
-An eligible release must pass architecture, type, production-build, runtime-asset, redirect/404, and browser interaction checks; match the approved desktop visual contract; preserve representative mobile behavior; and be deployed from the exact pushed `main` SHA.
+Sample inventory and source business content are presentation inputs, not claims about a new client. Source rights and media credits are documented separately in [SOURCE_LICENSE.md](SOURCE_LICENSE.md) and [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md).

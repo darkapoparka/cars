@@ -99,14 +99,14 @@
 	}
 
 	.compare-tray__heading strong {
-		font-size: 13px;
-		font-weight: 800;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-heading);
 	}
 
 	.compare-tray__heading span:last-child {
 		color: #677284;
-		font-size: 11px;
-		font-weight: 600;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.compare-tray__icon {
@@ -144,8 +144,8 @@
 		background: #f7f9fb;
 		padding: 3px 4px 3px 5px;
 		color: #263244;
-		font-size: 11px;
-		font-weight: 700;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		white-space: nowrap;
 	}
 
@@ -207,8 +207,8 @@
 		gap: 5px;
 		border-radius: 999px;
 		padding: 0 12px;
-		font-size: 12px;
-		font-weight: 800;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		text-decoration: none;
 	}
 
@@ -229,8 +229,8 @@
 		border-top: 1px solid #e6ebf1;
 		padding: 8px 12px 9px;
 		color: #9f1020;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.35;
 	}
 

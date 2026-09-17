@@ -149,7 +149,7 @@
 				<div class="min-w-0">
 					<Card.Description class="flex items-center gap-2">
 						<Bot aria-hidden="true" />
-						Day Night Auto operations assistant
+						Al Basma operations assistant
 					</Card.Description>
 					<Card.Title class="text-2xl font-semibold">CMS workbench</Card.Title>
 				</div>

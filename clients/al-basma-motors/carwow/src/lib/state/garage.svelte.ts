@@ -1,53 +1,35 @@
 import { createContext } from 'svelte';
-import { SvelteSet } from 'svelte/reactivity';
-import { daynightVehicles } from '$lib/data/daynight-vehicles';
+import { MAX_COMPARE_VEHICLES, normalizeGarageSlugs } from '$lib/utils/garage';
 
 const FAVORITES_KEY = 'daynight:favorites';
 const COMPARE_KEY = 'daynight:compare';
 
-// Start with an honest empty garage. The catalogue slugs are derived from the
-// current listings, so old demo seeds would make badges disagree with the
-// rendered favorites/compare surfaces.
-const DEFAULT_FAVORITES: string[] = [];
-const DEFAULT_COMPARE: string[] = [];
-
-function readStored(key: string, fallback: string[]): string[] {
-	if (typeof localStorage === 'undefined') return fallback;
-
+function readStored(key: string): string[] {
 	try {
-		const raw = localStorage.getItem(key);
-		if (!raw) return fallback;
-
-		const parsed = JSON.parse(raw);
-		return Array.isArray(parsed) ? parsed.filter((item) => typeof item === 'string') : fallback;
+		const raw = globalThis.localStorage?.getItem(key);
+		return raw ? normalizeGarageSlugs(JSON.parse(raw)) : [];
 	} catch {
-		return fallback;
+		// Storage access itself can throw in restricted browser contexts.
+		return [];
 	}
 }
 
 function writeStored(key: string, value: string[]) {
-	if (typeof localStorage === 'undefined') return;
-
 	try {
-		localStorage.setItem(key, JSON.stringify(value));
+		globalThis.localStorage?.setItem(key, JSON.stringify(value));
 	} catch {
-		// Ignore quota / privacy-mode write failures — favorites stay in-memory.
+		// Favorites stay in memory when browser storage is unavailable.
 	}
 }
 
 export class GarageState {
-	favorites = $state<string[]>(DEFAULT_FAVORITES);
-	compare = $state<string[]>(DEFAULT_COMPARE);
+	favorites = $state<string[]>([]);
+	compare = $state<string[]>([]);
 	formMessage = $state('');
-
+	#messageTimer: ReturnType<typeof setTimeout> | undefined;
 	hydrateFromStorage() {
-		const knownSlugs = new SvelteSet(daynightVehicles.map((vehicle) => vehicle.slug));
-		this.favorites = readStored(FAVORITES_KEY, DEFAULT_FAVORITES).filter((slug) =>
-			knownSlugs.has(slug)
-		);
-		this.compare = readStored(COMPARE_KEY, DEFAULT_COMPARE)
-			.filter((slug) => knownSlugs.has(slug))
-			.slice(-3);
+		this.favorites = readStored(FAVORITES_KEY);
+		this.compare = readStored(COMPARE_KEY).slice(0, MAX_COMPARE_VEHICLES);
 	}
 
 	toggleFavorite(slug: string) {
@@ -61,9 +43,9 @@ export class GarageState {
 		if (this.compare.includes(slug)) {
 			this.compare = this.compare.filter((item) => item !== slug);
 		} else {
-			if (this.compare.length >= 3) {
+			if (this.compare.length >= MAX_COMPARE_VEHICLES) {
 				this.setMessage(
-					'Можете да сравните до 3 автомобила. Премахнете един, за да добавите друг.'
+					`Можете да сравните до ${MAX_COMPARE_VEHICLES} автомобила. Премахнете един, за да добавите друг.`
 				);
 				return false;
 			}
@@ -72,7 +54,6 @@ export class GarageState {
 		writeStored(COMPARE_KEY, this.compare);
 		return true;
 	}
-
 	isFavorite(slug: string) {
 		return this.favorites.includes(slug);
 	}
@@ -84,16 +65,23 @@ export class GarageState {
 	clearCompare() {
 		this.compare = [];
 		writeStored(COMPARE_KEY, this.compare);
-		this.formMessage = '';
+		this.setMessage('');
 	}
 
 	setMessage(message: string) {
+		this.dispose();
 		this.formMessage = message;
 		if (message && typeof window !== 'undefined') {
-			window.setTimeout(() => {
-				if (this.formMessage === message) this.formMessage = '';
+			this.#messageTimer = setTimeout(() => {
+				this.#messageTimer = undefined;
+				this.formMessage = '';
 			}, 3600);
 		}
+	}
+
+	dispose() {
+		clearTimeout(this.#messageTimer);
+		this.#messageTimer = undefined;
 	}
 }
 
