@@ -79,7 +79,7 @@
 		ctaLabel = 'Виж всички типове',
 		showHeaderCta = true,
 		showBelowCta = false,
-		showEmptyCategories = false
+		showEmptyCategories = true
 	}: {
 		title?: string;
 		ctaLabel?: string;
@@ -90,7 +90,7 @@
 
 	let vehicleCategories = $derived(
 		showEmptyCategories
-			? allVehicleCategories
+			? [...allVehicleCategories].sort((left, right) => Number(right.count > 0) - Number(left.count > 0))
 			: allVehicleCategories.filter((category) => category.count > 0)
 	);
 </script>
