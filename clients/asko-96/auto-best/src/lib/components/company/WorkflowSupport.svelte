@@ -2,6 +2,7 @@
   import { asset } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import { brand } from '$config/brand';
+  import { leadSite } from '$config/lead-site';
 
   let { topic }: { topic: 'trade-in' | 'import' } = $props();
 </script>
@@ -10,11 +11,11 @@
   <div class="dn-workflow-support__copy">
     <h2 id="workflow-support-title">Имаш въпроси?</h2>
     <p>{topic === 'import' ? 'Помагаме с обявата и избора на автомобил.' : 'Помагаме с оценката и следващите стъпки.'}</p>
-    <a class="dn-workflow-support__call" href={brand.phoneHref} aria-label={`Обади се на ${brand.phone}`}>
-      Обади се <Icon name="arrow-right" size={18} />
+    <a class="dn-workflow-support__call" href={brand.phoneHref} aria-label={`Говори с екипа на ${brand.phone}`}>
+      Говори с екипа <Icon name="arrow-right" size={18} />
     </a>
   </div>
-  <img src={asset('/assets/images/lead/day-night-contact-phone-red-v1.webp')} alt="" width="900" height="1352" />
+  <img src={asset(leadSite.artwork.contactHero.support)} alt="" width="900" height="1352" />
 </aside>
 
 <style>
@@ -27,9 +28,7 @@
   a:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; border-radius: var(--dn-radius-sm); }
   img { position: absolute; z-index: 0; inset: 0 0 0 auto; width: 36%; height: 100%; object-fit: cover; object-position: center 20%; mask-image: linear-gradient(to right, transparent, black 28%); }
   @media (max-width: 767px) {
-    .dn-workflow-support__copy { padding-block: var(--dn-space-3); }
-    p { display: none; }
-    img { object-position: center 8%; }
+    .dn-workflow-support { display: none; }
   }
   @media (min-width: 768px) {
     .dn-workflow-support__copy { padding: var(--dn-space-6); }
