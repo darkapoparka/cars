@@ -4,7 +4,7 @@
   "brand": {
     "name": "IS AUTO",
     "source": "https://www.isauto.net/",
-    "implementation": "Transparent raster wordmark refresh using the public IS AUTO name and red/black brand treatment; no boxed background.",
+    "implementation": "Official IS AUTO raster identity cleaned into transparent dark/light PNG runtime masters. Auto Best publishes one /dealer/ PNG and WebP inventory contract; no SVG dealer logo is used at runtime.",
     "files": [
       "auto-best/static/assets/images/lead/isauto/logo-dark.png",
       "auto-best/static/assets/images/lead/isauto/logo-light.png",
@@ -12,6 +12,12 @@
       "modern/apps/web/public/isauto/logo-light.png",
       "carwow/static/brand/isauto-logo-dark.png",
       "carwow/static/brand/isauto-logo-light.png"
+    ],
+    "rasterSource": "https://www.isauto.net/assets/logo-cf0718a1710eaf3a212a58eb9a20c0d17527708d0fcd27bb8bf5a2433907dbdd.png",
+    "pipelineVersion": "official-wordmark-v4-full-white-surface-contrast",
+    "webpDerivatives": [
+      "assets/brand/isauto-logo-dark.webp",
+      "assets/brand/isauto-logo-light.webp"
     ]
   },
   "hero": {

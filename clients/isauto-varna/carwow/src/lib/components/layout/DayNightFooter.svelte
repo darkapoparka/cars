@@ -8,12 +8,12 @@
 	const phoneHref = daynightSite.phoneHref;
 	const contactHref = '/contact';
 	const facebookLinkProps = {
-		href: 'https://www.facebook.com/isauto1',
+		href: daynightSite.socialLinks.facebook,
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
 	const instagramLinkProps = {
-		href: 'https://www.instagram.com/is__auto/?hl=bg',
+		href: daynightSite.socialLinks.instagram,
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
