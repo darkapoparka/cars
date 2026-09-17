@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител 289",
   appointment: "Обадете се преди посещение",
-  logo: "/assets/avangard/wordmark.svg",
-  logoOnDark: "/assets/avangard/wordmark-light.svg"
+  logo: "/assets/brand/logo-on-light.webp",
+  logoOnDark: "/assets/brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;
