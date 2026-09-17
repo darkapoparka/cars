@@ -98,13 +98,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Refresh refuses dirty dealer input by design. Prepare and preserve the
-          # dealer facts plus canonical raster pair first, then regenerate cleanly.
+          # Refresh refuses dirty dealer input by design. Prepare and preserve every
+          # dealer-local fact/asset/content correction first, then regenerate cleanly.
           node scripts/sanitize-client-preview-content.mjs --client "$CLIENT"
           node scripts/refine-client-logo-assets.mjs --client "$CLIENT"
-          git add --sparse -A "clients/${CLIENT}/business-facts.json" "clients/${CLIENT}/assets/brand"
+          git add --sparse -A "clients/${CLIENT}"
           if ! git diff --cached --quiet; then
-            git commit -m "Prepare ${CLIENT} transparent logo surfaces"
+            git commit -m "Prepare ${CLIENT} dealer identity for regeneration"
           fi
 
           node scripts/refresh-client.mjs --client "$CLIENT" --write
