@@ -34,7 +34,7 @@ const article: DayNightArticle = {
 	author: "Информация за независим преглед",
 	image: '/assets/images/blog/post-20.jpg',
 	readMinutes: 2,
-	summary: ["Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.", "Unapproved, unpublished prospect concept. No dealer agreement or media permission evidenced."],
+	summary: ["Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.", "Свържете се с автокъщата преди посещение и потвърдете наличността. Unapproved, unpublished prospect concept. No dealer agreement or media permission evidenced."],
 	sections: [
 		{
 			heading: "Преди посещение",

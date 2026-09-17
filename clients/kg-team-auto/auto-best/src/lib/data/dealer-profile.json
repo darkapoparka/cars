@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=K-G%20Team%20Auto%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%93%20%D0%AE%D0%B3%2C%20%D0%9E%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D1%8A%D1%81%D1%82%D0%B5%D0%BD%20%D0%BF%D1%8A%D1%82%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%20%D0%A7%D0%B8%D0%B8%D1%80%D0%B8%D1%82%D0%B5",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=K-G%20Team%20Auto%2C%20%D0%98%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B0%D0%BB%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%BD%D0%B0%20%E2%80%93%20%D0%AE%D0%B3%2C%20%D0%9E%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D1%8A%D1%81%D1%82%D0%B5%D0%BD%20%D0%BF%D1%8A%D1%82%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%20%D0%A7%D0%B8%D0%B8%D1%80%D0%B8%D1%82%D0%B5&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "",
-    "logoLight": "",
-    "logoDark": "",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -38,7 +38,7 @@
     },
     "services": [],
     "inventoryNotice": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
-    "previewNotice": "Unapproved, unpublished prospect concept. No dealer agreement or media permission evidenced.",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността. Unapproved, unpublished prospect concept. No dealer agreement or media permission evidenced.",
     "observedAt": "2026-09-09",
     "coordinates": null,
     "raw": {
@@ -65,7 +65,19 @@
       "stockDisclosure": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
       "services": "A sampled listing advertises Swiss imports, test drives, registration assistance and transport. These are seller statements, not independently verified guarantees.",
       "finance": "No finance provider, rate, warranty or own-leasing arrangement verified.",
-      "privateContactHistory": "Not accessed. No outreach authorized."
+      "privateContactHistory": "Not accessed. No outreach authorized.",
+      "logo": "/assets/brand/logo-on-light.webp",
+      "workingLogoPath": "dealer/logo.webp",
+      "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+      "branding": {
+        "logoOnLight": "/assets/brand/logo-on-light.webp",
+        "logoOnDark": "/assets/brand/logo-on-dark.webp",
+        "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+      },
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "logoLight": "/assets/brand/logo-on-dark.webp",
+      "logoDark": "/assets/brand/logo-on-light.webp"
     }
   },
   "listings": [
@@ -1118,7 +1130,19 @@
     "stockDisclosure": "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
     "services": "A sampled listing advertises Swiss imports, test drives, registration assistance and transport. These are seller statements, not independently verified guarantees.",
     "finance": "No finance provider, rate, warranty or own-leasing arrangement verified.",
-    "privateContactHistory": "Not accessed. No outreach authorized."
+    "privateContactHistory": "Not accessed. No outreach authorized.",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "workingLogoPath": "dealer/logo.webp",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "branding": {
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+    },
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp"
   },
   "sourceCount": 10
 }

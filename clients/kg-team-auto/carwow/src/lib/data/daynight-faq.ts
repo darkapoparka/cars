@@ -37,7 +37,7 @@ export const daynightFaqGroups: readonly FaqGroup[] = [
         "answer": [
           {
             "class": "h7 text-secondary line-height-28",
-            "text": "Unapproved, unpublished prospect concept. No dealer agreement or media permission evidenced."
+            "text": "Свържете се с автокъщата преди посещение и потвърдете наличността. Unapproved, unpublished prospect concept. No dealer agreement or media permission evidenced."
           }
         ]
       }
