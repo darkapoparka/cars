@@ -1,4 +1,4 @@
-name: Fix IS AUTO Modern logo contrast
+name: Fix IS AUTO all-white surface logo
 
 on:
   push:
@@ -9,6 +9,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: fix-isauto-white-surface-logo
+  cancel-in-progress: true
 
 jobs:
   repair:
@@ -22,13 +26,11 @@ jobs:
           fetch-depth: 0
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            /scripts/build-isauto-varna.mjs
             /scripts/refine-isauto-raster-logo.mjs
-            /clients/isauto-varna/modern/packages/marketplace/lead-site.ts
             /.github/workflows/build-isauto-varna.yml
             /.github/workflows/fix-isauto-modern-logo-contrast.yml
 
-      - name: Use the light wordmark on the Modern dark header
+      - name: Generate a true all-white logo for red and dark surfaces
         shell: bash
         run: |
           set -euo pipefail
@@ -44,19 +46,24 @@ jobs:
               target.write_text(text.replace(old, new), encoding='utf-8')
 
           replace_once(
-              'scripts/build-isauto-varna.mjs',
-              'logoPath: "/isauto/logo-dark.png"',
-              'logoPath: "/isauto/logo-light.png"'
-          )
-          replace_once(
-              'clients/isauto-varna/modern/packages/marketplace/lead-site.ts',
-              'logoPath: "/variant-2/isauto/logo-dark.png"',
-              'logoPath: "/variant-2/isauto/logo-light.png"'
+              'scripts/refine-isauto-raster-logo.mjs',
+              "const PIPELINE_VERSION = 'official-wordmark-v2';",
+              "const PIPELINE_VERSION = 'official-wordmark-v4-full-white-surface-contrast';"
           )
           replace_once(
               'scripts/refine-isauto-raster-logo.mjs',
-              "const PIPELINE_VERSION = 'official-wordmark-v2';",
-              "const PIPELINE_VERSION = 'official-wordmark-v3-dark-surface-contrast';"
+              '      target = TARGET_RED;',
+              "      target = mode === 'light' ? TARGET_LIGHT : TARGET_RED;"
+          )
+          replace_once(
+              'scripts/refine-isauto-raster-logo.mjs',
+              "      'The official IS AUTO website wordmark is converted into tightly framed transparent dark/light PNG masters with WebP archive derivatives. No SVG, CSS wordmark, generated text, App Store crop, or boxed background is used at runtime.'",
+              "      'The official IS AUTO website wordmark is converted into tightly framed transparent raster masters: the light-surface version keeps the red/dark identity, while the red/dark-surface version is fully white for reliable contrast. PNG runtime assets and WebP derivatives are generated; no SVG, CSS wordmark, generated text, App Store crop, or boxed background is used.'"
+          )
+          replace_once(
+              'scripts/refine-isauto-raster-logo.mjs',
+              "const lightGeometry = await renderLogo(\n  'light',\n  lightMaster,\n  path.join(generatedRoot, 'isauto-logo-light.webp')\n);",
+              "const lightGeometry = await renderLogo(\n  'light',\n  lightMaster,\n  path.join(generatedRoot, 'isauto-logo-light.webp')\n);\n\nconst { data: lightPixels } = await sharp(lightMaster)\n  .ensureAlpha()\n  .raw()\n  .toBuffer({ resolveWithObject: true });\nfor (let index = 0; index < lightPixels.length; index += 4) {\n  const alpha = lightPixels[index + 3];\n  if (alpha < 8) continue;\n  if (lightPixels[index] < 245 || lightPixels[index + 1] < 245 || lightPixels[index + 2] < 245) {\n    throw new Error('IS AUTO light logo must contain only white visible pixels.');\n  }\n}"
           )
           replace_once(
               '.github/workflows/build-isauto-varna.yml',
@@ -64,10 +71,11 @@ jobs:
               "    if: github.actor != 'github-actions[bot]' || contains(github.event.head_commit.message, '[rebuild-isauto]')"
           )
           PY
-          node --check scripts/build-isauto-varna.mjs
+
           node --check scripts/refine-isauto-raster-logo.mjs
-          grep -Fq 'logoPath: "/isauto/logo-light.png"' scripts/build-isauto-varna.mjs
-          grep -Fq 'logoPath: "/variant-2/isauto/logo-light.png"' clients/isauto-varna/modern/packages/marketplace/lead-site.ts
+          grep -Fq "target = mode === 'light' ? TARGET_LIGHT : TARGET_RED;" scripts/refine-isauto-raster-logo.mjs
+          grep -Fq "IS AUTO light logo must contain only white visible pixels." scripts/refine-isauto-raster-logo.mjs
+          grep -Fq "contains(github.event.head_commit.message, '[rebuild-isauto]')" .github/workflows/build-isauto-varna.yml
           git diff --check
 
       - name: Commit canonical contrast repair
@@ -83,10 +91,8 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
-            scripts/build-isauto-varna.mjs \
             scripts/refine-isauto-raster-logo.mjs \
-            clients/isauto-varna/modern/packages/marketplace/lead-site.ts \
             .github/workflows/build-isauto-varna.yml \
             .github/workflows/fix-isauto-modern-logo-contrast.yml
-          git commit -m '[rebuild-isauto] Use light wordmark on Modern dark header'
+          git commit -m '[rebuild-isauto] Use full-white IS AUTO logo on red and dark surfaces'
           git push origin HEAD:main
