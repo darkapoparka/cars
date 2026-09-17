@@ -59,11 +59,11 @@ export function parseBudgetAmount(value: string): number | null {
 
 export function buildImportNotes(fields: ImportIntentFields, extraNotes = '') {
 	const lines = [
-		['Search', fields.query],
-		['Make', fields.make],
-		['Model', fields.model],
-		['Year from', fields.year],
-		['Budget', fields.budget],
+		['Търсене', fields.query],
+		['Марка', fields.make],
+		['Модел', fields.model],
+		['Година от', fields.year],
+		['Бюджет', fields.budget],
 		['Линк към обява', fields.sourceUrl]
 	]
 		.filter(([, value]) => value)

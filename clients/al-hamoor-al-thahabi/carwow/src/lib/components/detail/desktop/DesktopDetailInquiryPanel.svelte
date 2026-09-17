@@ -84,7 +84,7 @@
 	>
 		<div class="mb-8 grid grid-cols-1 gap-18">
 			<div>
-				<label class="mb-8" for="SendInquiryname">Name</label>
+				<label class="mb-8" for="SendInquiryname">Име</label>
 				<input
 					class="active input-large"
 					id="SendInquiryname"
@@ -97,7 +97,7 @@
 				/>
 			</div>
 			<div>
-				<label class="mb-8" for="SendInquiryemail">Email</label>
+				<label class="mb-8" for="SendInquiryemail">Имейл</label>
 				<input
 					class="input-large"
 					name="SendInquiryemail"
@@ -106,11 +106,11 @@
 					value=""
 					placeholder="Вашият имейл"
 					required
-					aria-label="Email"
+					aria-label="Имейл"
 				/>
 			</div>
 			<div>
-				<label class="mb-8" for="SendInquiryphone">Phone</label>
+				<label class="mb-8" for="SendInquiryphone">Телефон</label>
 				<input
 					placeholder="Телефон (по избор)"
 					class="input-large"
@@ -118,7 +118,7 @@
 					id="SendInquiryphone"
 					type="tel"
 					value=""
-					aria-label="Phone"
+					aria-label="Телефон"
 				/>
 			</div>
 
@@ -127,12 +127,12 @@
 				<select id="SendInquirysubject" name="SendInquirysubject">
 					<option>Наличност на автомобила</option>
 					<option>Цена и оглед</option>
-					<option>Buying options</option>
+					<option>Финансиране</option>
 				</select>
 			</div>
 
 			<div class="padding-0">
-				<label class="mb-6" for="message">Message</label>
+				<label class="mb-6" for="message">Съобщение</label>
 				<textarea
 					placeholder="Вашето съобщение"
 					rows="3"
@@ -140,16 +140,16 @@
 					class="message"
 					id="message"
 					required
-					aria-label="Message"
+					aria-label="Съобщение"
 				></textarea>
 			</div>
 		</div>
 		<button
 			type="submit"
-			class="sa-cta sa-cta-primary mb-18 w-full"
+			class="mb-18 sa-cta w-full sa-cta-primary"
 			disabled={inquirySubmitState === 'submitting'}
 		>
-			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Prepare enquiry'}
+			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}
 		</button>
 		{#if inquirySubmitMessage}
 			<p

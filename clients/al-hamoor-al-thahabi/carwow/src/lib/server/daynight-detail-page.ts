@@ -1,9 +1,9 @@
-import { placeholderImageSlugs, daynightVehicles, type Car } from '$lib/data/daynight-vehicles';
+import { placeholderImageSlugs, type Car } from '$lib/data/daynight-vehicles';
 import type {
 	DetailFeatureItem,
 	DetailFeatureTab,
-	DetailTemplatePage
-} from '$lib/types/template-page';
+	VehicleDetailPageData
+} from '$lib/types/storefront-page';
 import { vehicleSeo } from './daynight-seo';
 
 function slugifyFeature(label: string) {
@@ -21,7 +21,7 @@ function toFeatureItems(tabId: string, labels: string[]): DetailFeatureItem[] {
 }
 
 // Native PDP "Опознайте автомобила" feature tabs, built from real Car data.
-// "Description" is rendered by DesktopDetailFeatureTabs from vehicle.description;
+// "Описание" is rendered by DesktopDetailFeatureTabs from vehicle.description;
 // this adds the spec tabs: Екстри (vehicle.features) + Акценти (vehicle.highlights).
 // A tab is omitted when its source list is empty so no blank panel renders.
 export function buildDetailFeatureTabs(vehicle: Car): DetailFeatureTab[] {
@@ -31,7 +31,7 @@ export function buildDetailFeatureTabs(vehicle: Car): DetailFeatureTab[] {
 		const id = 'feature-tab-ekstri';
 		tabs.push({
 			id,
-			label: 'Features',
+			label: 'Екстри',
 			active: false,
 			features: toFeatureItems(id, vehicle.features)
 		});
@@ -68,10 +68,10 @@ function pickSimilarVehicles(current: Car, vehicles: Car[], count = 4) {
 		.map((entry) => entry.candidate);
 }
 
-export async function loadDetailTemplatePage(
+export function buildVehicleDetailPageData(
 	slug: string,
-	vehicles: Car[] = daynightVehicles
-): Promise<DetailTemplatePage | null> {
+	vehicles: Car[]
+): VehicleDetailPageData | null {
 	const vehicle = vehicles.find((candidate) => candidate.slug === slug);
 
 	if (!vehicle) {
@@ -83,7 +83,6 @@ export async function loadDetailTemplatePage(
 		slug,
 		vehicle,
 		...vehicleSeo(vehicle),
-		scriptSrcs: [],
 		detailFeatureTabs: buildDetailFeatureTabs(vehicle),
 		detailSimilarVehicles: pickSimilarVehicles(vehicle, vehicles)
 	};

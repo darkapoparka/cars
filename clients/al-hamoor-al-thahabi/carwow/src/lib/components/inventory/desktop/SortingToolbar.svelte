@@ -32,7 +32,7 @@
 	<div class="daynight-inventory-results-toolbar">
 		<div class="daynight-inventory-results-count-cell">
 			<p class="daynight-inventory-result-count">
-				<span id="filterMatchesCount">{count}</span> vehicles
+				<span id="filterMatchesCount">{count}</span> автомобила
 			</p>
 		</div>
 		<div class="inventory-toolbar-actions">
@@ -102,7 +102,7 @@
 		style:display={hasTags ? '' : 'none'}
 		onclick={clearAll}
 	>
-		Clear
+		Изчисти
 		<img src="/assets/icons/X-White.svg" alt="" aria-hidden="true" />
 	</button>
 </div>
@@ -125,12 +125,12 @@
 		min-height: 44px;
 	}
 	:global(.inventory-refined .daynight-inventory-result-count) {
-		font: 500 17px/1.4 var(--sa-font) !important;
+		font: var(--sa-weight-medium) var(--sa-text-control)/1.4 var(--sa-font) !important;
 		color: #454d55 !important;
 		margin: 0 !important;
 	}
 	:global(.inventory-refined .daynight-inventory-result-count span) {
-		font-weight: 750 !important;
+		font-weight: var(--sa-weight-strong) !important;
 		color: #161a1d;
 	}
 	.inventory-toolbar-actions {
