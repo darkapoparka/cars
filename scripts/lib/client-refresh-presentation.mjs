@@ -37,6 +37,28 @@ function walkFiles(root, current = root, result = []) {
   return result;
 }
 
+function normalizedPresentation(key, relative, buffer) {
+  if (key !== 'import' || relative !== 'src/lib/components/home/HomeFiveHero.svelte') {
+    return buffer;
+  }
+  // The Import adapter may bind the existing map/phone actions to dealer data.
+  // Normalize only those values; every class, style, element and surrounding
+  // component line must remain byte-equivalent to the approved template.
+  return Buffer.from(
+    buffer
+      .toString('utf8')
+      .replace("\n\timport { daynightContact } from '$lib/data/daynight';", '')
+      .replace(
+        /\tconst mobileShowroomMapHref =\n\t\t(?:'[^']*'|`[^`]*`);/,
+        '\tconst mobileShowroomMapHref =\n\t\t__DEALER_MAP_HREF__;'
+      )
+      .replace(
+        /\tconst mobileShowroomPhoneHref = (?:'[^']*'|daynightContact\.primaryPhoneHref);/,
+        '\tconst mobileShowroomPhoneHref = __DEALER_PHONE_HREF__;'
+      )
+  );
+}
+
 export function protectedPresentationPaths({ key, template, candidate }) {
   const templateFiles = walkFiles(template);
   const candidateFiles = walkFiles(candidate);
@@ -66,7 +88,9 @@ export function assertTemplatePresentation({ key, template, candidate }) {
       changed.push(`${relative} (missing or added)`);
       continue;
     }
-    if (!fs.readFileSync(expected).equals(fs.readFileSync(actual))) changed.push(relative);
+    const expectedBuffer = normalizedPresentation(key, relative, fs.readFileSync(expected));
+    const actualBuffer = normalizedPresentation(key, relative, fs.readFileSync(actual));
+    if (!expectedBuffer.equals(actualBuffer)) changed.push(relative);
   }
   if (changed.length) {
     throw new Error(`${key}: dealer overlay changed template-owned presentation: ${changed.join(', ')}`);
