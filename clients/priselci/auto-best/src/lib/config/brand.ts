@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. „Цар Освободител“ 285",
   appointment: "Работното време се уточнява по телефона.",
-  logo: "/assets/priselci/wordmark.svg",
-  logoOnDark: "/assets/priselci/wordmark-light.svg"
+  logo: "/assets/brand/logo-on-light.webp",
+  logoOnDark: "/assets/brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;
