@@ -27,8 +27,6 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /scripts/refine-isauto-raster-logo.mjs
-            /.github/workflows/build-isauto-varna.yml
-            /.github/workflows/fix-isauto-modern-logo-contrast.yml
 
       - name: Generate a true all-white logo for red and dark surfaces
         shell: bash
@@ -65,24 +63,17 @@ jobs:
               "const lightGeometry = await renderLogo(\n  'light',\n  lightMaster,\n  path.join(generatedRoot, 'isauto-logo-light.webp')\n);",
               "const lightGeometry = await renderLogo(\n  'light',\n  lightMaster,\n  path.join(generatedRoot, 'isauto-logo-light.webp')\n);\n\nconst { data: lightPixels } = await sharp(lightMaster)\n  .ensureAlpha()\n  .raw()\n  .toBuffer({ resolveWithObject: true });\nfor (let index = 0; index < lightPixels.length; index += 4) {\n  const alpha = lightPixels[index + 3];\n  if (alpha < 8) continue;\n  if (lightPixels[index] < 245 || lightPixels[index + 1] < 245 || lightPixels[index + 2] < 245) {\n    throw new Error('IS AUTO light logo must contain only white visible pixels.');\n  }\n}"
           )
-          replace_once(
-              '.github/workflows/build-isauto-varna.yml',
-              "    if: github.actor != 'github-actions[bot]'",
-              "    if: github.actor != 'github-actions[bot]' || contains(github.event.head_commit.message, '[rebuild-isauto]')"
-          )
           PY
 
           node --check scripts/refine-isauto-raster-logo.mjs
           grep -Fq "target = mode === 'light' ? TARGET_LIGHT : TARGET_RED;" scripts/refine-isauto-raster-logo.mjs
           grep -Fq "IS AUTO light logo must contain only white visible pixels." scripts/refine-isauto-raster-logo.mjs
-          grep -Fq "contains(github.event.head_commit.message, '[rebuild-isauto]')" .github/workflows/build-isauto-varna.yml
           git diff --check
 
       - name: Commit canonical contrast repair
         shell: bash
         run: |
           set -euo pipefail
-          rm .github/workflows/fix-isauto-modern-logo-contrast.yml
           git fetch origin main
           if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
             echo 'main moved during validation; refusing to overwrite' >&2
@@ -90,9 +81,6 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            scripts/refine-isauto-raster-logo.mjs \
-            .github/workflows/build-isauto-varna.yml \
-            .github/workflows/fix-isauto-modern-logo-contrast.yml
-          git commit -m '[rebuild-isauto] Use full-white IS AUTO logo on red and dark surfaces'
+          git add scripts/refine-isauto-raster-logo.mjs
+          git commit -m 'Generate full-white IS AUTO logo for red and dark surfaces'
           git push origin HEAD:main
