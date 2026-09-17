@@ -37,7 +37,7 @@ export const daynightFaqGroups: readonly FaqGroup[] = [
         "answer": [
           {
             "class": "h7 text-secondary line-height-28",
-            "text": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
+            "text": "Свържете се с автокъщата преди посещение и потвърдете наличността."
           }
         ]
       }
