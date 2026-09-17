@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "client": "perfect-auto-varna",
+  "templateKey": "modern",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+  "createdAt": "2026-09-09T21:56:08.901Z",
+  "state": "refreshed-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "content": {
+    "facts": "../business-facts.json",
+    "stock": "../stock.json",
+    "inventorySnapshot": true,
+    "dealerApproval": false,
+    "mediaRightsIndependentlyEstablished": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "66e6ed12e23c592c0002c412ee3cd3620d1ea147",
+  "refresh": {
+    "previousTemplateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "refreshedAt": "2026-09-17T06:02:04.221Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
+}

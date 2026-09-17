@@ -1,0 +1,15 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<rect width="24" height="24" rx="6" fill="url(#instagram-gradient)" />
+	<path d="M12 7.4C9.46 7.4 7.4 9.46 7.4 12C7.4 14.54 9.46 16.6 12 16.6C14.54 16.6 16.6 14.54 16.6 12C16.6 9.46 14.54 7.4 12 7.4ZM12 14.98C10.35 14.98 9.02 13.65 9.02 12C9.02 10.35 10.35 9.02 12 9.02C13.65 9.02 14.98 10.35 14.98 12C14.98 13.65 13.65 14.98 12 14.98Z" fill="white" />
+	<path d="M16.78 8.28C17.36 8.28 17.83 7.81 17.83 7.23C17.83 6.65 17.36 6.18 16.78 6.18C16.2 6.18 15.73 6.65 15.73 7.23C15.73 7.81 16.2 8.28 16.78 8.28Z" fill="white" />
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M7.05 3.75H16.95C18.77 3.75 20.25 5.23 20.25 7.05V16.95C20.25 18.77 18.77 20.25 16.95 20.25H7.05C5.23 20.25 3.75 18.77 3.75 16.95V7.05C3.75 5.23 5.23 3.75 7.05 3.75ZM7.05 5.37C6.12 5.37 5.37 6.12 5.37 7.05V16.95C5.37 17.88 6.12 18.63 7.05 18.63H16.95C17.88 18.63 18.63 17.88 18.63 16.95V7.05C18.63 6.12 17.88 5.37 16.95 5.37H7.05Z" fill="white" />
+	<defs>
+		<linearGradient id="instagram-gradient" x1="4" x2="20" y1="20" y2="4" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FFDC80" />
+			<stop offset="0.27" stop-color="#F77737" />
+			<stop offset="0.52" stop-color="#E4405F" />
+			<stop offset="0.77" stop-color="#C13584" />
+			<stop offset="1" stop-color="#5851DB" />
+		</linearGradient>
+	</defs>
+</svg>

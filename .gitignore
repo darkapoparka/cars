@@ -1,0 +1,21 @@
+**/node_modules/
+**/.next*/
+**/.svelte-kit/
+**/.vercel/
+**/.turbo/
+**/build/
+**/dist/
+**/.env*
+**/*.log
+**/*.tsbuildinfo
+**/test-results/
+**/playwright-report/
+runtime/
+# Cars generated package exclusions
+**/.agency-os/
+**/.auth/
+!**/.env.example
+!**/.env.sample
+!**/.env.template
+*.log
+*.tsbuildinfo
