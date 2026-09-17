@@ -8,9 +8,20 @@ const EXACT_PROTECTED_PATHS = {
     'src/lib/data/service-artwork.ts',
     'src/lib/data/vehicle-artwork.ts'
   ],
-  modern: ['apps/web/public/lead-hero.jpg'],
-  carwow: ['src/lib/components/home/desktop/DesktopHomeHero.svelte'],
-  import: ['static/assets/daynight/hero/home-05-showroom-exterior.webp']
+  modern: [
+    'apps/web/public/lead-hero.jpg'
+  ],
+  carwow: [
+    'src/lib/components/home/desktop/DesktopHomeHero.svelte',
+    'src/lib/components/home/desktop/DesktopHomeBrandStrip.svelte',
+    'src/lib/components/home/desktop/DesktopHomeInventoryPreview.svelte',
+    'src/lib/components/home/desktop/DesktopHomeVehicleCategories.svelte',
+    'src/lib/components/home/desktop/DesktopHomeWhyDayNight.svelte'
+  ],
+  import: [
+    'src/lib/components/home/HomeFiveHero.svelte',
+    'static/assets/daynight/hero/home-05-showroom-exterior.webp'
+  ]
 };
 const STYLE_EXTENSION = /\.(?:css|pcss|scss|sass)$/i;
 const HERO_ASSET = /(?:^|[\/_.-])(?:hero|banner|masthead)(?:[\/_.-]|$)/i;
