@@ -16,8 +16,23 @@
   "locale": "en-AE",
   "currency": "AED",
   "distanceUnit": "km",
-  "services": ["Vehicle sales", "Import/export enquiries", "Showroom enquiries"],
+  "services": [
+    "Vehicle sales",
+    "Import/export enquiries",
+    "Showroom enquiries"
+  ],
   "observedAt": "2026-09-09",
   "assetStatus": "Proposal refresh and concept stock artwork for unpublished owner review; not represented as official source artwork.",
-  "disclosure": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with The Dealers Point. Demo forms do not send messages."
+  "disclosure": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with The Dealers Point. Demo forms do not send messages.",
+  "previewNotice": "Contact the showroom before travelling and confirm availability.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logo": "/assets/brand/logo-on-light.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
