@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "client": "priselci",
+  "templateKey": "modern",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+  "createdAt": "2026-09-06T21:48:54.245Z",
+  "state": "refreshed-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "preview": {
+    "url": "http://127.0.0.1:6647/cars",
+    "status": "stopped-after-verification"
+  },
+  "businessFacts": "../business-facts.json",
+  "stock": "../stock.json",
+  "stockCount": 16,
+  "assetsProvenance": "../assets/provenance.json",
+  "knownGaps": [
+    "Local demo only; form/provider delivery unverified; no public URL.",
+    "Dated 2026-09-07 stock snapshot; availability and prices need seller confirmation.",
+    "Temporary wordmark, unverified official logo/hours/social profiles.",
+    "Retained service/account/legal/demo surfaces need owner review before public publication; generic decorative template car artwork is not stock.",
+    "Gallery keyboard focus restoration was not separately verified in this client."
+  ],
+  "finalizationChanges": [
+    "Configured social destinations only; no coming-soon promises",
+    "Legible wordmarks on dark mobile/desktop headers"
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "277299149310a1e37e9b108f5b9c94b3de32e230",
+  "refresh": {
+    "previousTemplateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "refreshedAt": "2026-09-17T06:08:08.342Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
+}
