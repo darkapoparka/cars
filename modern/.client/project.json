@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "client": "excellent-cars",
+  "templateKey": "modern",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+  "createdAt": "2026-09-06T21:48:54.233Z",
+  "state": "refreshed-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localPreviewUrl": "http://127.0.0.1:6622/cars",
+  "knownLimits": [
+    "Local prospect demo only; no public preview or CRM registration.",
+    "Stock and prices are the dated 2026-09-07 source snapshot, not a live feed.",
+    "No enquiry delivery, private account, chat backend or live import-feed integration verified.",
+    "Retained sample admin/team/partner routes are template demo surfaces, not evidence of real staff or partnerships.",
+    "Gallery opens, changes photos and closes; inherited keyboard focus restoration is imperfect (mobile returns to body, desktop to a different gallery trigger)."
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "0947d63589952acd2034750ceb657b78bd04a980",
+  "refresh": {
+    "previousTemplateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "refreshedAt": "2026-09-17T06:17:30.339Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
+}

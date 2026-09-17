@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "client": "excellent-cars",
+  "templateKey": "carwow",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "createdAt": "2026-09-06T21:49:19.129Z",
+  "state": "refreshed-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "localPreviewUrl": "http://127.0.0.1:6623/",
+  "knownLimits": [
+    "Local prospect demo only; no public preview or CRM registration.",
+    "Stock and prices are the dated 2026-09-07 source snapshot, not a live feed.",
+    "No enquiry delivery, private account, chat backend or live import-feed integration verified.",
+    "Retained sample admin/team/partner routes are template demo surfaces, not evidence of real staff or partnerships."
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "0947d63589952acd2034750ceb657b78bd04a980",
+  "refresh": {
+    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "refreshedAt": "2026-09-17T06:17:31.844Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
+}
