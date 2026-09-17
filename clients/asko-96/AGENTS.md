@@ -2,7 +2,7 @@
 
 This is an independent personalized dealer copy. Canonical editable source is Cars clients/asko-96/. The dedicated dealer repository is a publishing mirror. Make lasting fixes in canonical source or the versioned packaging layer and regenerate; preserve unmatched mirror fixes first. This copy is not a reusable template master.
 
-Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/cc82770c4cb62175b58248efb2662b7d61de114c/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/cc82770c4cb62175b58248efb2662b7d61de114c/docs/LEAD-PUBLISHING.md).
+Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/17b6758d1b8feb184882b0b65de69ffcd230598d/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/17b6758d1b8feb184882b0b65de69ffcd230598d/docs/LEAD-PUBLISHING.md).
 
 Preserve this dealer identity, exact repository/domain and offered designs. Apply sourced facts to real data modules; metadata alone does not change the application. Protect layout and interactions during an ordinary correction. Sample forms do not prove delivery. Audit requests are read-only; publication never authorizes outreach.
 
