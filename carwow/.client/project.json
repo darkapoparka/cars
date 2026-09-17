@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "client": "kg-team-auto",
+  "templateKey": "carwow",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "createdAt": "2026-09-08T21:59:54.872Z",
+  "state": "refreshed-needs-local-qa",
+  "selectedHome": "main",
+  "availableHomes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "offeredHomes": [],
+  "publicUrl": null,
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  },
+  "crm": {
+    "leadId": null,
+    "demoProjectId": null,
+    "registered": false
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "1acda41889620845e1116a35a1634f44c1e6fabb",
+  "refresh": {
+    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "refreshedAt": "2026-09-17T06:02:02.793Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
+}
