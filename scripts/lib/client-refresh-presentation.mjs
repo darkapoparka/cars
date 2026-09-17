@@ -40,11 +40,19 @@ function walkFiles(root, current = root, result = []) {
 export function protectedPresentationPaths({ key, template, candidate }) {
   const templateFiles = walkFiles(template);
   const candidateFiles = walkFiles(candidate);
+  const templateSet = new Set(templateFiles);
   const paths = new Set(EXACT_PROTECTED_PATHS[key] || []);
   for (const relative of [...templateFiles, ...candidateFiles]) {
     if (STYLE_EXTENSION.test(relative)) paths.add(relative);
-    if (MEDIA_EXTENSION.test(relative) && HERO_ASSET.test(relative)) paths.add(relative);
-    if (key === 'auto-best' && relative.startsWith('src/lib/components/home/') && relative.endsWith('.svelte')) paths.add(relative);
+    // Protect the approved template's own hero/banner media. Dealer inventory
+    // folders may contain files with "hero" in their names, but those additions
+    // are harmless unless template-owned components or data start referencing them.
+    if (templateSet.has(relative) && MEDIA_EXTENSION.test(relative) && HERO_ASSET.test(relative)) {
+      paths.add(relative);
+    }
+    if (key === 'auto-best' && relative.startsWith('src/lib/components/home/') && relative.endsWith('.svelte')) {
+      paths.add(relative);
+    }
   }
   return [...paths].sort();
 }
