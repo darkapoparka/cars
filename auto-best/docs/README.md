@@ -1,6 +1,6 @@
 # Developer documentation
 
-This reference explains the IS AUTO application, its visual system and the practical work of adapting it. Each topic has one primary document.
+This reference explains the Auto Best application, its visual system and the practical work of adapting it. Each topic has one primary document.
 
 | Document | Contents |
 | --- | --- |

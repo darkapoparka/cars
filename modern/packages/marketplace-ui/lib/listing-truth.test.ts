@@ -1,5 +1,4 @@
-import { mockListings } from "@repo/marketplace-domain/testing/mock-data";
-import type { VehicleListing } from "@repo/marketplace";
+import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   formatTruthDateTime,
@@ -17,7 +16,7 @@ import {
 } from "./listing-truth";
 
 const getImportedListing = (): VehicleListing => {
-  const listing = mockListings.find((entry) => entry.slug === "bmw-x5-xdrive40d-berlin-2022");
+  const listing = getMockListingBySlug("bmw-x5-xdrive40d-berlin-2022");
 
   if (!listing) {
     throw new Error("Imported BMW fixture is missing");

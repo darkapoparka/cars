@@ -1,6 +1,6 @@
 # Styling and visual system
 
-IS AUTO combines an image-led automotive layout, Onest typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
+Auto Best combines an image-led automotive layout, Onest typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
 
 ## CSS structure
 
@@ -42,7 +42,7 @@ A component may override a component token for a responsive mode, but the overri
 
 ## Color palette and dealer theme
 
-`tokens.css` contains generic fallback values so components remain renderable without a mounted dealer configuration. The active IS AUTO preview values live in the typed [`lead-site.ts`](../src/lib/config/lead-site.ts) configuration. `SiteShell.svelte` maps that configuration to semantic CSS custom properties; generic components consume those properties rather than embedding dealer literals or artwork paths.
+`tokens.css` contains generic fallback values so components remain renderable without a mounted dealer configuration. The active Day & Night preview values live in the typed [`lead-site.ts`](../src/lib/config/lead-site.ts) configuration. `SiteShell.svelte` maps that configuration to semantic CSS custom properties; generic components consume those properties rather than embedding dealer literals or artwork paths.
 
 | Lead-site role | Active value | CSS property consumed by components |
 | --- | --- | --- |

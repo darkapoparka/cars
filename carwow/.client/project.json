@@ -4,7 +4,7 @@
   "templateKey": "carwow",
   "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
   "createdAt": "2026-09-16T00:19:40.746Z",
-  "state": "personalized-needs-hosted-qa",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -22,8 +22,8 @@
   "qa": {
     "desktop": false,
     "mobile": false,
-    "identity": true,
-    "contactPath": true
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -40,7 +40,7 @@
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "58ffcd707d985b978e7e6755b3ee34ab3ccc230d",
+  "workflowCommit": "1ac3e2160fe17c4f3769bb15ed36808cd54975ac",
   "businessFacts": "clients/isauto-varna/business-facts.json",
   "stock": "clients/isauto-varna/FACTS-AND-INVENTORY.json",
   "assetProvenance": "clients/isauto-varna/assets/provenance.json",
@@ -53,7 +53,7 @@
   ],
   "refresh": {
     "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "refreshedAt": "2026-09-17T02:23:20.539Z",
+    "refreshedAt": "2026-09-17T06:00:08.389Z",
     "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
     "mode": "fresh-template-plus-dealer-overlay"
   }

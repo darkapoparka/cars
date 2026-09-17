@@ -1,6 +1,6 @@
 # Source lineage and notices
 
-This project is the reusable **IS AUTO** template, published as `darkapoparka/cars-template-auto-best`. It derives from the native SvelteKit work originally prepared for the IS AUTO automotive demo. The current project identity is distinct from that historical client identity.
+This project is the reusable **Auto Best** template, published as `darkapoparka/cars-template-auto-best`. It derives from the native SvelteKit work originally prepared for the Day & Night automotive demo. The current project identity is distinct from that historical client identity.
 
 ## Inherited source record
 
@@ -20,7 +20,7 @@ Use the underlying material only within its recorded permission scope. Do not re
 
 ## Acquisition history
 
-The preserved acquisition tooling identifies the AutoDeal reference at `autodealnextjs.vercel.app`. The capture manifest identifies the observed source `isautovarna.mobile.bg`. These are separate records and do not establish that one script produced the other capture. Neither is a runtime page-rendering dependency of the native SvelteKit application.
+The preserved acquisition tooling identifies the AutoDeal reference at `autodealnextjs.vercel.app`. The capture manifest identifies the observed source `daynight.mobile.bg`. These are separate records and do not establish that one script produced the other capture. Neither is a runtime page-rendering dependency of the native SvelteKit application.
 
 The standalone template repository was established on 10 September 2026 from the Cars workspace working tree. The mirror/page-composition runtime was retired; [provenance/mirror-manifest.json](provenance/mirror-manifest.json) retains capture metadata. The [provenance index](provenance/README.md) explains the records.
 

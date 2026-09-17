@@ -1,4 +1,4 @@
-# IS AUTO architecture audit and refactor plan
+# Auto Best architecture audit and refactor plan
 
 Date: 14 September 2026. Status: original audit complete; the Phase 3 CSS ownership slice and the R4/Phase 4 discovery-and-shell ownership slice were implemented and qualified on 15 September 2026. Other plan phases retain their original status.
 
@@ -14,7 +14,7 @@ Completed boundaries:
 - `VehicleDiscoveryForm.svelte`, `ListingFilters.svelte`, `ListingResults.svelte` and `VehicleCard.svelte` own their respective desktop/mobile geometry. `listing.css` retains only listing-route stage and hero composition.
 - `composition.css` retains shared shell/hero relationships and no longer identifies page semantics through incidental descendants.
 - Explicit classes, typed route props, `data-route`, `data-contact-topic`, `data-journey`, `data-mobile-bottom`, `data-slot` and `data-variant` replace positional and class-substring selectors.
-- `lead-site.ts` is the typed owner of IS AUTO palette values and lead artwork. `SiteShell.svelte` exposes those values through semantic CSS custom properties; generic components consume configuration rather than dealer paths or conditionals.
+- `lead-site.ts` is the typed owner of Day & Night palette values and lead artwork. `SiteShell.svelte` exposes those values through semantic CSS custom properties; generic components consume configuration rather than dealer paths or conditionals.
 - `check:css-policy` and the strengthened typography gate prevent fragile selectors, standalone-CSS `:global(...)`, unsupported `550`/`650` weights, typography `!important`, and dealer artwork/palette leakage.
 
 Qualification completed with `npm run validate`, `npm run smoke` and `npm run smoke:typography`. Svelte checking reported 0 errors and 0 warnings; the warning-free production build passed. A 48-state final capture covered Home, inventory, vehicle detail, Import, Sell/Barter, About, Contact and Blog at 375, 390, 430, 768, 1366 and 1440 px. The critical ownership comparison found zero computed-style differences for header, discovery, filters, results grid and vehicle-card geometry at 375, 1024 and 1440 px.
@@ -186,7 +186,7 @@ Introduce explicit model/version fields and separate pure vehicle operations fro
 
 Evidence: [brand.ts](../src/lib/config/brand.ts), [company.ts](../src/lib/data/company.ts), [app.html](../src/app.html), [detail page](../src/routes/listing-detail-v1/%5Bid%5D/+page.svelte), [RouteHeroArtwork.svelte](../src/lib/components/ui/RouteHeroArtwork.svelte), [Reuse guide](../REUSE_GUIDE.md).
 
-The template has an IS AUTO wordmark but inherited contact/social records, separate map coordinates and a separately selected favicon. The detail page has literal `IS AUTO` accessible copy. Some artwork is source-specific or contains text in its pixels. Service claims are repeated across metadata, navigation, footer, home actions and company data.
+The template has an Auto Best wordmark but inherited contact/social records, separate map coordinates and a separately selected favicon. The detail page has literal `Auto Best` accessible copy. Some artwork is source-specific or contains text in its pixels. Service claims are repeated across metadata, navigation, footer, home actions and company data.
 
 Complete the typed personalization map: identity/location/icons, services and editable campaign/SEO copy need documented owners. Keep source/sample content explicitly classified. Do not make decorative image filenames appear to be verified business evidence, and do not assume changing `brand.name` personalizes image pixels.
 

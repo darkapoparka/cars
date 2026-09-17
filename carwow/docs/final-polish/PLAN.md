@@ -1,4 +1,4 @@
-# D&N 6517 — IS AUTO Spartak — Complete Finalization Roadmap
+# D&N 6517 — Day & Night Spartak — Complete Finalization Roadmap
 
 ## How to use this roadmap
 

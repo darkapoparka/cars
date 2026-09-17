@@ -1,6 +1,6 @@
-# IS AUTO Spartak — Client-Demo Finalization
+# Day & Night Spartak — Client-Demo Finalization
 
-**Client:** IS AUTO Varna  
+**Client:** Day & Night Auto Group  
 **Variant:** Spartak-style full SvelteKit dealer application  
 **Approved application baseline:** `f245f31155551177104b82ecbf4e23029e697643`  
 **Execution model:** complete master plan + small selected batches
@@ -21,14 +21,14 @@ The documentation is deliberately comprehensive. It covers the entire remaining 
 
 ## Product goal
 
-Deliver a credible, responsive automotive proposal for **IS AUTO Varna** that helps a visitor recognize the dealer, discover vehicles, understand price/core facts, open details, and contact the dealer without broken controls, hidden content, or inconsistent mobile/desktop behavior.
+Deliver a credible, responsive automotive proposal for **Day & Night Auto Group** that helps a visitor recognize the dealer, discover vehicles, understand price/core facts, open details, and contact the dealer without broken controls, hidden content, or inconsistent mobile/desktop behavior.
 
 ## Strengths to preserve
 
 - The current mobile and desktop implementations are both strong and intentionally distinct.
 - Separate `MobileHome.svelte` and `DesktopHome.svelte` compositions preserve a curated hierarchy for each form factor.
 - Compare, favorites, inventory, detail, contact, and visual-regression tooling already exist.
-- The project has a clear IS AUTO identity and should receive controlled polish only.
+- The project has a clear Day & Night identity and should receive controlled polish only.
 
 ## Owner-confirmed work areas
 

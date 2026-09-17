@@ -4,8 +4,8 @@ The homepage brand cards use a curated, brand-authentic mix rather than forcing 
 
 | Brand | Local asset | Source record | Treatment |
 | --- | --- | --- | --- |
-| Land Rover | `static/assets/images/brand-curated/land-rover-classic.png` | Restored from the original IS AUTO template partner artwork | Classic green oval retained as supplied. The inherited source is not claimed as an official manufacturer download. |
-| Mercedes-Benz | `static/assets/images/brand-curated/mercedes-benz-star-chrome.webp` | Reused from the sibling IS AUTO import template | Chrome/silver star retained as supplied. The inherited source is not claimed as an official manufacturer download. |
+| Land Rover | `static/assets/images/brand-curated/land-rover-classic.png` | Restored from the original Auto Best template partner artwork | Classic green oval retained as supplied. The inherited source is not claimed as an official manufacturer download. |
+| Mercedes-Benz | `static/assets/images/brand-curated/mercedes-benz-star-chrome.webp` | Reused from the sibling Day & Night import template | Chrome/silver star retained as supplied. The inherited source is not claimed as an official manufacturer download. |
 | Audi | `static/assets/images/brand-curated/audi-rings-silver-cardog.svg` | Cardog Icons `core/optimized/Audi Logo.svg`, commit `05c4001e83a09a189721a0851546291f71f7e31c` | MIT-licensed multitone vector. The red Audi wordmark paths were removed and the viewBox was cropped to the rings for this compact navigation card. |
 
 Cardog source and license:

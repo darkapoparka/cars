@@ -4,7 +4,7 @@
   "brand": {
     "name": "IS AUTO",
     "source": "https://www.isauto.net/",
-    "implementation": "Official IS AUTO raster identity cleaned into transparent dark/light PNG runtime masters. Auto Best publishes one /dealer/ PNG and WebP inventory contract; no SVG dealer logo is used at runtime.",
+    "implementation": "The official IS AUTO website wordmark is converted into tightly framed transparent raster masters: the light-surface version keeps the red/dark identity, while the red/dark-surface version is fully white for reliable contrast. PNG runtime assets and WebP derivatives are generated; no SVG, CSS wordmark, generated text, App Store crop, or boxed background is used.",
     "files": [
       "auto-best/static/assets/images/lead/isauto/logo-dark.png",
       "auto-best/static/assets/images/lead/isauto/logo-light.png",
@@ -14,11 +14,7 @@
       "carwow/static/brand/isauto-logo-light.png"
     ],
     "rasterSource": "https://www.isauto.net/assets/logo-cf0718a1710eaf3a212a58eb9a20c0d17527708d0fcd27bb8bf5a2433907dbdd.png",
-    "pipelineVersion": "official-wordmark-v4-full-white-surface-contrast",
-    "webpDerivatives": [
-      "assets/brand/isauto-logo-dark.webp",
-      "assets/brand/isauto-logo-light.webp"
-    ]
+    "pipelineVersion": "official-wordmark-v4-full-white-surface-contrast"
   },
   "hero": {
     "sourceUrl": "https://www.isauto.net/assets/home_top_image-6c0593ce5c4b33195567916b1cfd688ffce5c161da970f43e515f452d71c66d3.png",

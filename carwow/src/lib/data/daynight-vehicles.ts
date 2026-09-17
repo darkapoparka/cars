@@ -33,11 +33,8 @@ export type Car = {
 };
 
 const parseLocalizedNumber = (value: string) => {
-  const normalized = value
-    .replace(/[\s\u00a0\u202f]/g, '')
-    .replace(',', '.')
-    .replace(/[^\d.-]/g, '');
-  return Number(normalized);
+	const match = value.match(/\d[\d\s]*(?:[.,]\d+)?/);
+	return match ? Number(match[0].replaceAll(' ', '').replace(',', '.')) : 0;
 };
 
 const normalizeFuel = (fuel: string) =>
@@ -102,7 +99,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 	const features = listing.features.length > 0 ? listing.features : ['Свържете се за оборудване'];
 	const conditionLine = isIncoming
 		? 'Очакван внос — свържете се за актуален срок и условия.'
-		: 'Наличен автомобил във Варна — свържете се за оглед.';
+		: 'Наличен автомобил в Варна — свържете се за оглед.';
 
 	return {
 		slug: `${slugBase}-${listing.id.slice(-6)}`,
@@ -136,7 +133,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		description: `${identity.shortTitle}, ${year} г., ${fuel.toLocaleLowerCase('bg-BG')}, ${listing.mileage}, ${listing.power}, ${transmission.toLocaleLowerCase('bg-BG')}. ${conditionLine}`,
 		features,
 		highlights: [availability, listing.power, drive],
-		lot: `IS-${listing.id.slice(-6)}`,
+		lot: `DN-${listing.id.slice(-6)}`,
 		sourceUrl: listing.sourceUrl
 	};
 };

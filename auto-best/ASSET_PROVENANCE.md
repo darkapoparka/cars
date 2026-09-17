@@ -6,7 +6,7 @@ Runtime media is stored under `static/`; its public URL omits that directory nam
 
 | Family | Main location / consumers | Notes |
 | --- | --- | --- |
-| Template identity | IS AUTO logo under `assets/images/template`; icon selected in `src/app.html` | Template branding |
+| Template identity | Auto Best logo under `assets/images/template`; icon selected in `src/app.html` | Template branding |
 | Vehicle photography | Inventory records and `assets/images/lead/day-night-stock-*` | Source/sample stock photos; some fixtures reuse images |
 | Hero cutouts | `vehicle-artwork.ts`, `HeroVehicles`, `VehicleCutout` | Generated vehicles with measured visible bounds |
 | Service/menu illustrations | `feature-artwork.ts`, `service-artwork.ts` | Generated conceptual service imagery |

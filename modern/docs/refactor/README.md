@@ -1,10 +1,10 @@
-# IS AUTO Modern — Refactor Program
+# Day & Night Modern — Refactor Program
 
 This directory is the implementation contract for the post-polish codebase refactor. The approved mobile and desktop experience is the regression baseline; the goal is to make the implementation easier to reason about without redesigning the product.
 
 ## Non-negotiables
 
-- Preserve routes, inventory data, brand assets, responsive behavior, static demo mode, and the accepted IS AUTO visual language.
+- Preserve routes, inventory data, brand assets, responsive behavior, static demo mode, and the accepted Day & Night visual language.
 - No framework migration, design-system replacement, dependency-upgrade sweep, backend rewrite, or feature expansion inside this program.
 - Keep `@repo/marketplace-domain` browser-safe and dependency-light.
 - Keep the workspace dependency graph acyclic and explicit.

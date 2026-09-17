@@ -1,36 +1,207 @@
 {
   "schemaVersion": 1,
-  "dealer": {
+  "observedAt": "2026-09-16",
+  "business": {
     "slug": "isauto-varna",
     "name": "IS AUTO Varna",
     "shortName": "IS AUTO",
-    "country": "BG",
-    "city": "Varna",
-    "address": "Бизнес парк Варна, сграда B6"
-  },
-  "contact": {
-    "phone": "0899 266 666",
+    "latinName": "IS AUTO Varna",
+    "city": "Варна",
+    "region": "Бизнес парк Варна",
+    "country": "България",
+    "countryCode": "BG",
+    "locale": "bg-BG",
+    "currency": "EUR",
+    "distanceUnit": "km",
+    "addressLine": "Бизнес парк Варна, сграда B6",
+    "address": "Бизнес парк Варна, сграда B6, Варна, България",
+    "phoneDisplay": "0899 266 666",
     "phoneE164": "+359899266666",
     "email": "varna@isauto.net",
+    "hours": "Понеделник–петък 09:00–18:00; събота 10:00–16:00; неделя почивен ден",
     "website": "https://www.isauto.net/",
-    "inventoryProfile": "https://isautovarna.mobile.bg/"
+    "inventoryUrl": "https://isautovarna.mobile.bg/",
+    "contactUrl": "https://www.isauto.net/contacts",
+    "accent": "#d71920",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/is__auto/?hl=bg",
+      "facebook": "https://www.facebook.com/isauto1"
+    },
+    "services": [
+      {
+        "id": "vehicles",
+        "title": "Нови и употребявани автомобили",
+        "description": "Публикувана селекция от автомобили на IS AUTO Varna."
+      },
+      {
+        "id": "import",
+        "title": "Внос и подбор",
+        "description": "Подбор и внос на автомобил по запитване."
+      },
+      {
+        "id": "support",
+        "title": "Съдействие при покупка",
+        "description": "Консултация и съдействие за регистрация, застраховане и финансиране."
+      }
+    ],
+    "inventoryNotice": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "workingLogoPath": "dealer/logo-dark.png",
+    "branding": {
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+    },
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp"
   },
-  "openingHours": {
-    "weekdays": "09:00–18:00",
-    "saturday": "10:00–16:00",
-    "sunday": "closed"
-  },
-  "positioning": "New and used vehicles, vehicle sourcing/import, purchase consultation and support with registration, insurance and finance discussions.",
-  "sourceUrls": [
-    "https://www.isauto.net/",
-    "https://www.isauto.net/contacts",
-    "https://www.isauto.net/about-us/",
-    "https://isautovarna.mobile.bg/"
-  ],
-  "verifiedAt": "2026-09-16",
-  "notes": [
-    "This is an unpublished prospect demo; no commercial relationship or outreach is implied.",
-    "Inventory is a dated public sample, not a live feed. Availability, specification and price must be confirmed directly with the dealer.",
-    "Forms remain preview interactions unless a delivery backend is explicitly configured and tested."
+  "vehicles": [
+    {
+      "id": "is-1001",
+      "sourceId": "is-1001",
+      "title": "Audi R8 Performance V10",
+      "make": "Audi",
+      "model": "R8",
+      "body": "Купе",
+      "bodyType": "coupe",
+      "year": 2021,
+      "mileageKm": 75000,
+      "fuel": "Бензин",
+      "fuelType": "gasoline",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "priceEur": 148224,
+      "currency": "EUR",
+      "condition": "used",
+      "availability": "Датирана обява — потвърдете наличността",
+      "images": [
+        "/dealer/inventory-1.webp"
+      ],
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10",
+      "observedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1002",
+      "sourceId": "is-1002",
+      "title": "Audi Q7 50 TDI",
+      "make": "Audi",
+      "model": "Q7",
+      "body": "SUV",
+      "bodyType": "suv",
+      "year": 2022,
+      "mileageKm": 57500,
+      "fuel": "Дизел",
+      "fuelType": "diesel",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "priceEur": 67439,
+      "currency": "EUR",
+      "condition": "used",
+      "availability": "Датирана обява — потвърдете наличността",
+      "images": [
+        "/dealer/inventory-2.webp"
+      ],
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9",
+      "observedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1003",
+      "sourceId": "is-1003",
+      "title": "BMW M5",
+      "make": "BMW",
+      "model": "M5",
+      "body": "Седан",
+      "bodyType": "sedan",
+      "year": 2018,
+      "mileageKm": 61000,
+      "fuel": "Бензин",
+      "fuelType": "gasoline",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "priceEur": 71530,
+      "currency": "EUR",
+      "condition": "used",
+      "availability": "Датирана обява — потвърдете наличността",
+      "images": [
+        "/dealer/inventory-3.webp"
+      ],
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8",
+      "observedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1004",
+      "sourceId": "is-1004",
+      "title": "BMW X5 xDrive",
+      "make": "BMW",
+      "model": "X5",
+      "body": "SUV",
+      "bodyType": "suv",
+      "year": 2014,
+      "mileageKm": 196000,
+      "fuel": "Дизел",
+      "fuelType": "diesel",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "priceEur": 24491,
+      "currency": "EUR",
+      "condition": "used",
+      "availability": "Датирана обява — потвърдете наличността",
+      "images": [
+        "/dealer/inventory-4.webp"
+      ],
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7",
+      "observedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1005",
+      "sourceId": "is-1005",
+      "title": "BMW 750 M Performance",
+      "make": "BMW",
+      "model": "750",
+      "body": "Седан",
+      "bodyType": "sedan",
+      "year": 2019,
+      "mileageKm": 167000,
+      "fuel": "Дизел",
+      "fuelType": "diesel",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "priceEur": 61304,
+      "currency": "EUR",
+      "condition": "used",
+      "availability": "Датирана обява — потвърдете наличността",
+      "images": [
+        "/dealer/inventory-5.webp"
+      ],
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3",
+      "observedAt": "2026-09-16"
+    },
+    {
+      "id": "is-1006",
+      "sourceId": "is-1006",
+      "title": "Audi A5 Sportback 2.0 TDI",
+      "make": "Audi",
+      "model": "A5 Sportback",
+      "body": "Хечбек",
+      "bodyType": "hatchback",
+      "year": 2018,
+      "mileageKm": 175000,
+      "fuel": "Дизел",
+      "fuelType": "diesel",
+      "transmission": "Автоматик",
+      "transmissionType": "automatic",
+      "priceEur": 19900,
+      "currency": "EUR",
+      "condition": "used",
+      "availability": "Датирана обява — потвърдете наличността",
+      "images": [
+        "/dealer/inventory-6.webp"
+      ],
+      "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745",
+      "observedAt": "2026-09-16"
+    }
   ]
 }

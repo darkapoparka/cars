@@ -1,6 +1,6 @@
 # Local development
 
-Run commands from the application directory containing `package.json`. IS AUTO is a single SvelteKit package; it does not require a monorepo task runner or another template to start.
+Run commands from the application directory containing `package.json`. Auto Best is a single SvelteKit package; it does not require a monorepo task runner or another template to start.
 
 ## Toolchain
 
