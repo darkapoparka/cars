@@ -40,7 +40,7 @@
     "version": "1",
     "entry": "/variant-2/cars"
   },
-  "workflowCommit": "1ac3e2160fe17c4f3769bb15ed36808cd54975ac",
+  "workflowCommit": "f5842f7e4ec292da4d2fbb9f32d1b0c9ed375c8c",
   "businessFacts": "clients/isauto-varna/business-facts.json",
   "stock": "clients/isauto-varna/FACTS-AND-INVENTORY.json",
   "assetProvenance": "clients/isauto-varna/assets/provenance.json",
@@ -53,7 +53,7 @@
   ],
   "refresh": {
     "previousTemplateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
-    "refreshedAt": "2026-09-17T06:00:06.899Z",
+    "refreshedAt": "2026-09-17T06:01:53.707Z",
     "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
     "mode": "fresh-template-plus-dealer-overlay"
   }
