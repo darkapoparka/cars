@@ -97,7 +97,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -197,7 +197,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -297,7 +297,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -397,7 +397,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -497,7 +497,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -597,7 +597,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -697,7 +697,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -797,7 +797,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -897,7 +897,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -997,7 +997,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1097,7 +1097,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1197,7 +1197,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1297,7 +1297,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1397,7 +1397,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутомаркет Варна",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/automarket/cover.png"
+      "logoUrl": "/assets/brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
