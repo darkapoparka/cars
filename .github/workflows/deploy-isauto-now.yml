@@ -37,20 +37,24 @@ jobs:
           vercel-args: --prod
           scope: team_RTNXBnClGWDdcYFFUW0BnqvJ
 
-      - name: Verify live production alias and corrected logo asset
+      - name: Verify live production alias and raster logo variants
         shell: bash
         run: |
           set -euo pipefail
           for attempt in $(seq 1 30); do
             html="$(curl -fsSL --max-time 20 https://cars-isautovarna.vercel.app/ || true)"
-            logo_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/dealer/logo-dark.png || true)"
+            dark_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/dealer/logo-dark.png || true)"
+            light_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/dealer/logo-light.png || true)"
+            modern_light_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/variant-2/isauto/logo-light.png || true)"
             if printf '%s' "$html" | grep -q '/dealer/logo-dark.png' && \
                printf '%s' "$html" | grep -q 'IS AUTO' && \
-               printf '%s' "$logo_headers" | grep -Eqi '^content-type: image/(png|webp)'; then
-              echo 'Production alias serves the corrected IS AUTO package and raster logo.'
+               printf '%s' "$dark_headers" | grep -Eqi '^content-type: image/(png|webp)' && \
+               printf '%s' "$light_headers" | grep -Eqi '^content-type: image/(png|webp)' && \
+               printf '%s' "$modern_light_headers" | grep -Eqi '^content-type: image/(png|webp)'; then
+              echo 'Production alias serves the refreshed IS AUTO package and both raster contrast variants.'
               exit 0
             fi
             sleep 4
           done
-          echo 'Production alias did not expose the corrected IS AUTO package.' >&2
+          echo 'Production alias did not expose the refreshed IS AUTO logo package.' >&2
           exit 1
