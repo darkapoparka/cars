@@ -82,6 +82,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          node --check scripts/seed-client-logo-hints.mjs
           node --check scripts/refine-client-logo-assets.mjs
           node --check scripts/enforce-client-logo-surfaces.mjs
           node --check scripts/sanitize-client-preview-content.mjs
@@ -100,6 +101,7 @@ jobs:
 
           # Refresh refuses dirty dealer input by design. Prepare and preserve every
           # dealer-local fact/asset/content correction first, then regenerate cleanly.
+          node scripts/seed-client-logo-hints.mjs --client "$CLIENT"
           node scripts/sanitize-client-preview-content.mjs --client "$CLIENT"
           node scripts/refine-client-logo-assets.mjs --client "$CLIENT"
           git add --sparse -A "clients/${CLIENT}"
