@@ -65,7 +65,7 @@ The exact filenames may evolve, but the dependency direction must remain one-way
 
 ## Styling rules
 
-- Keep existing Tailwind/design-system tokens and IS AUTO variables.
+- Keep existing Tailwind/design-system tokens and Day & Night variables.
 - Product-specific selectors should attach to explicit owners (`data-slot`, component class) instead of DOM position.
 - Avoid `nth-child`, `article + a`, and broad `:has()` selectors for primary layout ownership in touched code.
 - Mobile full-screen overlays own `100dvh`, one scroll container, safe-area footer padding, and 44px header actions.

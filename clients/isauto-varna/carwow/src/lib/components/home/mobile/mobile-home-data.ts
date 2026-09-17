@@ -11,27 +11,9 @@ export type FooterSocialLink = {
 export type BodyChipIcon = 'sedan' | 'suv' | 'wagon' | 'hatchback' | 'coupe' | 'mpv';
 
 export const footerSocialLinks: FooterSocialLink[] = [
-	{
-		label: 'Facebook',
-		href: 'https://www.facebook.com/isauto1',
-		title: 'Facebook',
-		icon: 'facebook',
-		external: true
-	},
-	{
-		label: 'Instagram',
-		href: 'https://www.instagram.com/is__auto/?hl=bg',
-		title: 'Instagram',
-		icon: 'instagram',
-		external: true
-	},
-	{
-		label: 'Mobile.bg',
-		href: daynightSite.sourceInventory,
-		title: 'Виж наличните автомобили в mobile.bg',
-		icon: 'mobilebg',
-		external: true
-	}
+	{"label":"Facebook","href":"https://www.facebook.com/isauto1","title":"Facebook","icon":"facebook","external":true},
+	{"label":"Instagram","href":"https://www.instagram.com/is__auto/?hl=bg","title":"Instagram","icon":"instagram","external":true},
+	{ label: "Mobile.bg", href: daynightSite.sourceInventory, title: "Виж наличните автомобили в mobile.bg", icon: "mobilebg", external: true }
 ];
 
 export const brandLogos: Record<string, string> = {

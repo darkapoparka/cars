@@ -1,10 +1,10 @@
 # Public content contracts
 
-Applies to the independent `darkapoparka/cars-template-carwow` master. The retained IS AUTO identity is source/demo content, not proof that this is a genericized or publicly approved client site.
+Applies to the independent `darkapoparka/cars-template-carwow` master. The retained Day Night Auto identity is source/demo content, not proof that this is a genericized or publicly approved client site.
 
 ## Business details
 
-`src/lib/data/daynight-site.ts` owns the address, address shorthand, contact number, map links and appointment wording. The existing source address is retained: София, Бизнес парк Варна, сграда B6. Do not substitute an industrial-zone label or change historical social handles to match a city name.
+`src/lib/data/daynight-site.ts` owns the address, address shorthand, contact number, map links and appointment wording. The existing source address is retained: София, Студентски град, ул. Атанас Манчев 18. Do not substitute an industrial-zone label or change historical social handles to match a city name.
 
 The previous schedules disagreed. Until the owner confirms actual days/hours, every current schedule surface uses `hoursLabel`: “Огледи с предварителна уговорка”. This is appointment guidance, not a verified opening-hours schedule. Do not publish numerical opening hours in structured data without confirmation.
 

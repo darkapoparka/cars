@@ -1,4 +1,4 @@
-import { mockListings } from "@repo/marketplace-domain/testing/mock-data";
+import { getMockListingBySlug } from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   createListingBreadcrumbStructuredData,
@@ -9,7 +9,7 @@ import {
 
 const baseUrl = "https://day-night.example";
 const httpUrlPattern = /^https?:\/\//;
-const listing = mockListings.find((entry) => entry.slug === "bmw-x5-m50d-sofia-2020");
+const listing = getMockListingBySlug("bmw-x5-m50d-sofia-2020");
 
 describe("public structured data contracts", () => {
   it("normalizes local media and rejects non-http structured-data URLs", () => {

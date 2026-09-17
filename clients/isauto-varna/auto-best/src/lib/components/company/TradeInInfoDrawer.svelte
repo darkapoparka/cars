@@ -1,7 +1,6 @@
 <script lang="ts">
   import { tick } from 'svelte';
   import Icon from '$components/ui/Icon.svelte';
-  import { brand } from '$config/brand';
 
   let dialog: HTMLDialogElement;
   let trigger: HTMLButtonElement;
@@ -118,8 +117,7 @@
       </section>
 
       <footer class="dn-tradein-info-actions">
-        <button type="button" onclick={closeDrawer}>Към автомобила <Icon name="arrow-right" size={18} /></button>
-        <a href={brand.phoneHref}><Icon name="phone" size={18} />Обади се</a>
+        <button type="button" onclick={closeDrawer}>Към заявката <Icon name="arrow-right" size={18} /></button>
       </footer>
     </div>
   </div>
@@ -236,11 +234,25 @@
   .dn-tradein-info-prepare strong { color: var(--dn-ink); }
   .dn-tradein-info-prepare p > span { color: var(--dn-muted); }
   .dn-tradein-info-sheet__header, .dn-tradein-info-sheet__grabber { flex-shrink: 0; }
-  .dn-tradein-info-actions { display: grid; grid-template-columns: 1fr 1fr; gap: var(--dn-space-3); padding-top: 0; }
-  .dn-tradein-info-actions :is(button, a) { display: flex; align-items: center; justify-content: center; gap: var(--dn-space-2); min-height: 44px; padding: var(--dn-space-3) var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-ink); font: inherit; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); text-decoration: none; cursor: pointer; }
-  .dn-tradein-info-actions button { background: var(--dn-red); color: var(--dn-white); border-color: transparent; }
+  .dn-tradein-info-actions { display: flex; justify-content: center; padding-top: 0; }
+  .dn-tradein-info-actions button {
+    display: inline-flex;
+    width: min(200px, 100%);
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dn-space-2);
+    padding: 0 var(--dn-space-5);
+    border: 0;
+    border-radius: var(--dn-radius-button);
+    background: var(--dn-red);
+    color: var(--dn-white);
+    font: var(--dn-control-font);
+    white-space: nowrap;
+    cursor: pointer;
+  }
   .dn-tradein-info-actions button:hover { background: var(--dn-red-hover); }
-  .dn-tradein-info-actions a:hover { background: var(--dn-surface); }
+  .dn-tradein-info-actions button:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 
   @media (max-width: 767px) {
     .dn-tradein-info-drawer {
@@ -277,16 +289,19 @@
     .dn-tradein-info-dialog {
       inset: auto 0 0;
       width: 100%;
-      max-height: calc(100dvh - max(24px, env(safe-area-inset-top)));
+      max-height: min(700px, calc(100dvh - max(84px, env(safe-area-inset-top))));
       margin: 0;
       border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
     }
     .dn-tradein-info-sheet {
-      max-height: calc(100dvh - max(24px, env(safe-area-inset-top)));
+      max-height: min(700px, calc(100dvh - max(84px, env(safe-area-inset-top))));
       border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
     }
     .dn-tradein-info-sheet__header { padding: var(--dn-space-1) var(--dn-space-4) var(--dn-space-3); }
-    .dn-tradein-info-sheet__body { gap: var(--dn-space-5); padding: 0 var(--dn-space-4) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
+    .dn-tradein-info-sheet__body { gap: var(--dn-space-4); padding: 0 var(--dn-space-4) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
+    .dn-tradein-info-group { gap: var(--dn-space-2); }
+    .dn-tradein-info-list, .dn-tradein-info-steps { gap: var(--dn-space-3); }
+    .dn-tradein-info-list > li { min-height: 0; }
   }
 
   .dn-tradein-info-process { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-ink); }
