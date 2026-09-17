@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: repair-live-dealer-cohort
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   repair:
@@ -82,7 +82,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          node --check scripts/repair-client.mjs
           node --check scripts/refine-client-logo-assets.mjs
           node --check scripts/enforce-client-logo-surfaces.mjs
           node --check scripts/sanitize-client-preview-content.mjs
@@ -93,9 +92,24 @@ jobs:
         shell: bash
         env:
           CARS_SHARP_ROOT: ${{ runner.temp }}/cars-image-tools
+          CLIENT: ${{ matrix.client }}
         run: |
           set -euo pipefail
-          node scripts/repair-client.mjs --client "${{ matrix.client }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Refresh refuses dirty dealer input by design. Prepare and preserve the
+          # dealer facts plus canonical raster pair first, then regenerate cleanly.
+          node scripts/sanitize-client-preview-content.mjs --client "$CLIENT"
+          node scripts/refine-client-logo-assets.mjs --client "$CLIENT"
+          git add --sparse -A "clients/${CLIENT}/business-facts.json" "clients/${CLIENT}/assets/brand"
+          if ! git diff --cached --quiet; then
+            git commit -m "Prepare ${CLIENT} transparent logo surfaces"
+          fi
+
+          node scripts/refresh-client.mjs --client "$CLIENT" --write
+          node scripts/enforce-client-logo-surfaces.mjs --client "$CLIENT"
+          node scripts/sanitize-client-preview-content.mjs --client "$CLIENT"
 
       - name: Verify protected composition and logo contract
         shell: bash
@@ -147,8 +161,6 @@ jobs:
           CLIENT: ${{ matrix.client }}
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git clean -fdX -- "clients/${CLIENT}"
           git add --sparse -A "clients/${CLIENT}"
           if git diff --cached --quiet; then
