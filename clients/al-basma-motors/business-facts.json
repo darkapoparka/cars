@@ -41,5 +41,17 @@
     "use": "Unpublished internal reference concept; no deployment or outreach; not licensed for public release."
   },
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE",
-  "mapsEmbedUrl": "https://maps.google.com/maps?q=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE&z=16&hl=en&output=embed"
+  "mapsEmbedUrl": "https://maps.google.com/maps?q=Showroom%2061%2C%20Souq%20Al%20Haraj%2C%20Sharjah%2C%20UAE&z=16&hl=en&output=embed",
+  "logo": "/assets/brand/logo-on-light.webp",
+  "workingLogoPath": "dealer/brand/logo-on-light.png",
+  "previewNotice": "Contact the showroom before travelling and confirm availability.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
