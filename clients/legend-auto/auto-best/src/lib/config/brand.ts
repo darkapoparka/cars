@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. Цар Освободител 289, срещу МАКАО",
   appointment: "Понеделник – събота: 09:00–17:30 · Неделя: почивен ден",
-  logo: "/assets/legend-auto/legend-auto-logo.webp",
-  logoOnDark: "/assets/legend-auto/legend-auto-logo-light.webp"
+  logo: "/assets/brand/logo-on-light.webp",
+  logoOnDark: "/assets/brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;
