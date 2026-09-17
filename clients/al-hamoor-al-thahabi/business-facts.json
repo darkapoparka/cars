@@ -28,7 +28,7 @@
     "https://uae.yallamotor.com/auto-companies/red-line-used-cars-tr-9099"
   ],
   "locationNote": "The YallaMotor dealer profile publishes showroom 353 in Sharjah; DubiCars vehicle cards are labelled Dubai. Confirm the selected vehicle's viewing location before travelling. No exact coordinate is asserted.",
-  "previewNotice": "Independent design preview. Dated listing samples, not a live stock feed. Confirm availability, price, vehicle condition and location directly. No dealership approval or form delivery is implied.",
+  "previewNotice": "Contact the showroom before travelling and confirm availability.",
   "sourceProfile": "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414",
   "tagline": "Used cars in Sharjah. Clear details. A direct conversation.",
   "accent": "#c13f38",
@@ -52,5 +52,15 @@
     "Business showroom in Sharjah is corroborated; individual DubiCars advertisements use Dubai labels. Every detail must show the viewing-location caveat.",
     "This English preview does not claim Arabic/RTL interface support. Arabic is retained only in original brand artwork.",
     "Hours, warranties, finance products/rates, reviews and staff are not verified and must not be fabricated."
-  ]
+  ],
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logo": "/assets/brand/logo-on-light.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
