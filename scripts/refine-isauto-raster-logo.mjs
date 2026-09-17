@@ -6,7 +6,7 @@ const ROOT = process.cwd();
 const CLIENT = path.join(ROOT, 'clients', 'isauto-varna');
 const OFFICIAL_LOGO =
   'https://www.isauto.net/assets/logo-cf0718a1710eaf3a212a58eb9a20c0d17527708d0fcd27bb8bf5a2433907dbdd.png';
-const PIPELINE_VERSION = 'official-wordmark-v2';
+const PIPELINE_VERSION = 'official-wordmark-v4-full-white-surface-contrast';
 const sharpRoot = process.env.IS_AUTO_SHARP_ROOT;
 
 if (!sharpRoot) {
@@ -130,7 +130,7 @@ function transparentOfficialMark(mode) {
       const alphaFromGreen = (255 - g) / (255 - TARGET_RED[1]);
       const alphaFromBlue = (255 - b) / (255 - TARGET_RED[2]);
       alpha = clamp(Math.max(alphaFromGreen, alphaFromBlue));
-      target = TARGET_RED;
+      target = mode === 'light' ? TARGET_LIGHT : TARGET_RED;
     } else {
       const average = (r + g + b) / 3;
       alpha = clamp((255 - average) / (255 - 28));
@@ -268,6 +268,18 @@ const lightGeometry = await renderLogo(
   path.join(generatedRoot, 'isauto-logo-light.webp')
 );
 
+const { data: lightPixels } = await sharp(lightMaster)
+  .ensureAlpha()
+  .raw()
+  .toBuffer({ resolveWithObject: true });
+for (let index = 0; index < lightPixels.length; index += 4) {
+  const alpha = lightPixels[index + 3];
+  if (alpha < 8) continue;
+  if (lightPixels[index] < 245 || lightPixels[index + 1] < 245 || lightPixels[index + 2] < 245) {
+    throw new Error('IS AUTO light logo must contain only white visible pixels.');
+  }
+}
+
 for (const destination of logoDestinations) {
   await ensureDir(path.dirname(destination.dark));
   await fs.copyFile(darkMaster, destination.dark);
@@ -316,7 +328,7 @@ if (await exists(provenancePath)) {
     rasterSource: OFFICIAL_LOGO,
     pipelineVersion: PIPELINE_VERSION,
     implementation:
-      'The official IS AUTO website wordmark is converted into tightly framed transparent dark/light PNG masters with WebP archive derivatives. No SVG, CSS wordmark, generated text, App Store crop, or boxed background is used at runtime.'
+      'The official IS AUTO website wordmark is converted into tightly framed transparent raster masters: the light-surface version keeps the red/dark identity, while the red/dark-surface version is fully white for reliable contrast. PNG runtime assets and WebP derivatives are generated; no SVG, CSS wordmark, generated text, App Store crop, or boxed background is used.'
   };
   await fs.writeFile(provenancePath, `${JSON.stringify(provenance, null, 2)}\n`, 'utf8');
 }
