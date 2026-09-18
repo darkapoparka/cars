@@ -2,7 +2,6 @@
 	import './mobileInventory.css';
 	import { page as appPage } from '$app/state';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
-	import { daynightSite } from '$lib/data/daynight-site';
 	import { afterNavigate, replaceState } from '$app/navigation';
 	import { resolve } from '$app/paths';
 	import {
@@ -545,7 +544,7 @@
 
 <div class="mobile-inventory">
 	<main id="main-content" tabindex="-1">
-		<h1 class="sr-only">Автомобили на склад — {daynightSite.name}</h1>
+		<h1 class="sr-only">Автомобили на склад — Ден и Нощ Ауто Груп</h1>
 		<MobileInventoryTop
 			{mode}
 			{query}
