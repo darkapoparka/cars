@@ -1,1 +1,54 @@
-export type DayNightArticleCategory='Buying'|'Viewing'|'Stock';export type DayNightArticleKind='news'|'guide';export type DayNightArticleSection={heading:string;paragraphs:string[]};export type DayNightArticle={slug:string;title:string;description:string;category:DayNightArticleCategory;kind:DayNightArticleKind;date:string;author:string;image:string;readMinutes:number;summary:string[];sections:DayNightArticleSection[];tags:string[];body:string[]};const article=(x:Omit<DayNightArticle,'body'>):DayNightArticle=>({...x,body:[x.description,...x.summary,...x.sections.flatMap(s=>s.paragraphs)]});export const daynightArticles=[article({slug:'confirm-current-stock',title:'Confirm current stock before visiting',description:'A simple checklist for a Lexus showroom enquiry.',category:'Stock',kind:'guide',date:'2026-09-09',author:'Al Basma Motors demo',image:'/dealer/stock/cmtl6wllu000up1mcmlq0al57/1.webp',readMinutes:2,summary:['Public stock can change.'],sections:[{heading:'Before travelling',paragraphs:['Share the listing and ask the showroom to confirm availability and price.']}],tags:['stock']}),article({slug:'prepare-viewing',title:'Prepare for a showroom viewing',description:'Questions to cover before a visit.',category:'Viewing',kind:'guide',date:'2026-09-09',author:'Al Basma Motors demo',image:'/dealer/stock/cmtl6pxpd000qp1mcvd0b9ktz/1.webp',readMinutes:2,summary:['Confirm the exact vehicle and timing.'],sections:[{heading:'Use the listing',paragraphs:['Ask about any condition, history or specification detail that is not published.']}],tags:['viewing']})];export const getDayNightArticleBySlug=(slug:string)=>daynightArticles.find(a=>a.slug===slug);export const getDayNightArticleIndex=(slug:string)=>daynightArticles.findIndex(a=>a.slug===slug);
+export type DayNightArticleCategory =
+	| 'Новини'
+	| 'Съвети'
+	| 'Финансиране'
+	| 'Документи'
+	| 'Марки'
+	| 'Покупка'
+	| 'Продажба';
+export type DayNightArticleKind = 'news' | 'guide';
+export type DayNightArticleSection = { heading: string; paragraphs: string[]; };
+export type DayNightArticle = {
+	slug: string;
+	title: string;
+	description: string;
+	category: DayNightArticleCategory;
+	kind: DayNightArticleKind;
+	date: string;
+	author: string;
+	image: string;
+	readMinutes: number;
+	summary: string[];
+	sections: DayNightArticleSection[];
+	tags: string[];
+	body: string[];
+};
+
+const article: DayNightArticle = {
+	slug: 'confirm-current-availability',
+	title: "How to confirm current availability at Al Basma",
+	description: "Use the listing reference and contact the dealership before travelling or making a decision.",
+	category: 'Съвети',
+	kind: 'guide',
+	date: "2026-09-08",
+	author: "Independent preview information",
+	image: '/assets/images/blog/post-20.jpg',
+	readMinutes: 2,
+	summary: ["Independent, unpublished design concept. Dated listing samples, not a live stock feed. Confirm price, specifications and availability directly with the showroom. Forms only prepare drafts; nothing is delivered.", "Contact the showroom before travelling and confirm availability."],
+	sections: [
+		{
+			heading: "Before visiting",
+			paragraphs: ["Call +971 54 342 2222 and identify the exact vehicle you are interested in."]
+		},
+		{
+			heading: "Confirm the published details",
+			paragraphs: ["Ask the dealership to confirm price, availability, mileage, documents, and viewing arrangements."]
+		}
+	],
+	tags: ["availability", "Sharjah"],
+	body: []
+};
+article.body = [article.description, ...article.summary, ...article.sections.flatMap((section) => section.paragraphs)];
+export const daynightArticles: DayNightArticle[] = [article];
+export const getDayNightArticleBySlug = (slug: string) => daynightArticles.find((item) => item.slug === slug);
+export const getDayNightArticleIndex = (slug: string) => daynightArticles.findIndex((item) => item.slug === slug);

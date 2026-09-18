@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { goto, replaceState } from '$app/navigation';
+	import { page } from '$app/state';
 	import DayNightSpecIcon from '$lib/components/shared/icons/DayNightSpecIcon.svelte';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 	import { shortFuel } from '$lib/utils/format';
@@ -13,6 +15,15 @@
 		class="mobile-inventory-card__link"
 		href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
 		aria-label={`Виж ${vehicle.shortTitle} ${vehicle.year}`}
+		onclick={(event) => {
+			if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+				return;
+			event.preventDefault();
+			replaceState('', { ...page.state, inventoryScrollY: window.scrollY });
+			void goto(resolve('/inventory/[slug]', { slug: vehicle.slug }), {
+				state: { inventoryReturn: page.url.pathname + page.url.search }
+			});
+		}}
 	>
 		<div class="mobile-inventory-card__media">
 			<img
@@ -27,11 +38,11 @@
 		</div>
 		<div class="mobile-inventory-card__body">
 			<div class="mobile-inventory-card__title">
-				<h3>{vehicle.shortTitle}</h3>
+				<h2>{vehicle.shortTitle}</h2>
 				<div class="mobile-inventory-card__price">
 					<span class="mobile-inventory-card__price-stack">
 						<strong>{vehicle.priceEur}</strong>
-						<span>{vehicle.monthly}</span>
+						{#if vehicle.monthly !== 'Финансиране по запитване'}<span>{vehicle.monthly}</span>{/if}
 					</span>
 					<span class="mobile-inventory-card__arrow" aria-hidden="true">
 						<svg viewBox="0 0 20 20" fill="none">
