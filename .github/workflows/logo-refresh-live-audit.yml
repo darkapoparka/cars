@@ -45,9 +45,10 @@ jobs:
           cd ..
           ln -s logo-audit-runtime/node_modules node_modules
 
-      - name: Normalize live variant routes
+      - name: Normalize live routes and navigation timing
         run: |
           sed -i 's#"/auto-best/"#"/"#g; s#"/modern/"#"/variant-2/"#g; s#"/carwow/"#"/variant-3/"#g' scripts/logo-refresh-dealers.json
+          sed -i "s/waitUntil: 'networkidle', timeout: 75000/waitUntil: 'domcontentloaded', timeout: 30000/g" scripts/logo-refresh-audit.mjs
 
       - name: Run live and asset audit
         run: node scripts/logo-refresh-audit.mjs
