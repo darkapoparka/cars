@@ -51,7 +51,7 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/variant-2/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/assets/brand/logo-universal.webp",
+  logoPath: "/variant-2/assets/brand/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed",
   mapsUrl:

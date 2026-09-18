@@ -2,7 +2,7 @@
 
 This is an independent personalized dealer copy. Canonical editable source is Cars clients/perfect-auto-varna/. The dedicated dealer repository is a publishing mirror. Make lasting fixes in canonical source or the versioned packaging layer and regenerate; preserve unmatched mirror fixes first. This copy is not a reusable template master.
 
-Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/ffec7499cd9a3bc3ee84ff1c1612ef1252c8ca15/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/ffec7499cd9a3bc3ee84ff1c1612ef1252c8ca15/docs/LEAD-PUBLISHING.md).
+Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/4197bc8c730391a1fce220f250e009465c589211/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/4197bc8c730391a1fce220f250e009465c589211/docs/LEAD-PUBLISHING.md).
 
 Preserve this dealer identity, exact repository/domain and offered designs. Apply sourced facts to real data modules; metadata alone does not change the application. Protect layout and interactions during an ordinary correction. Sample forms do not prove delivery. Audit requests are read-only; publication never authorizes outreach.
 
