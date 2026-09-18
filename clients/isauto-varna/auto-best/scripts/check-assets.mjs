@@ -5,8 +5,8 @@ import process from 'node:process';
 const root = process.cwd();
 const sourceRoot = path.join(root, 'src');
 const staticRoot = path.join(root, 'static');
-const guardedMediaCount = 113;
-// Preserve source identity/artwork for provenance; the default logo and icon are IS AUTO.
+const guardedMediaCount = 117;
+// Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
 const retainedSourceAssets = new Set(['/assets/images/template/service-sell-key-v1.png', '/assets/images/icon-box/car-list4.png', '/assets/images/icon-box/car-list7.png', '/assets/images/lead/day-night-guide-import.webp', '/assets/images/lead/day-night-guide-inspection.webp', '/assets/images/lead/day-night-guide-leasing.webp', '/assets/images/lead/day-night-home-hero-v3.webp', '/assets/images/lead/day-night-home-black-v1.webp', '/assets/images/lead/day-night-logo.png', '/favicon.ico', '/assets/images/section/car-slide1.png', '/assets/images/section/car-slide2.png', '/assets/images/section/car-slide3.png']);
 const sourceExtension = /\.(?:css|html|js|svelte|ts)$/i;
 const mediaExtension = /\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)$/i;

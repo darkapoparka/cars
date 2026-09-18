@@ -1,6 +1,6 @@
 # Mobile Drawer Contract
 
-This is an owner-approved preservation rule for IS AUTO mobile UI.
+This is an owner-approved preservation rule for Day & Night mobile UI.
 
 ## Use a full-screen overlay for decisions
 

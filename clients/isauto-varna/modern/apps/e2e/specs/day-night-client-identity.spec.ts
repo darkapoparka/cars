@@ -34,7 +34,7 @@ const retainedShowroomRoutes = [
   "/bg/listing/bmw-x5-m50d-sofia-2020",
 ] as const;
 
-test.describe("IS AUTO client identity", () => {
+test.describe("Day & Night client identity", () => {
   test("removes the platform-only public routes", async ({ page }) => {
     for (const route of removedPlatformRoutes) {
       const response = await page.goto(route, {
@@ -57,7 +57,7 @@ test.describe("IS AUTO client identity", () => {
     expect(sitemap).not.toMatch(removedSitemapSurfacePattern);
   });
 
-  test("keeps the showroom route family IS AUTO-only", async ({ page }) => {
+  test("keeps the showroom route family Day & Night-only", async ({ page }) => {
     await page.setViewportSize({ height: 844, width: 390 });
 
     for (const route of retainedShowroomRoutes) {
@@ -76,7 +76,7 @@ test.describe("IS AUTO client identity", () => {
     }
   });
 
-  test("keeps listing identity attached to IS AUTO without directory links", async ({
+  test("keeps listing identity attached to Day & Night without directory links", async ({
     page,
   }) => {
     await page.setViewportSize({ height: 900, width: 1440 });
@@ -85,7 +85,7 @@ test.describe("IS AUTO client identity", () => {
     });
 
     expect(response?.status()).toBe(200);
-    await expect(page.locator("body")).toContainText("IS AUTO Varna");
+    await expect(page.locator("body")).toContainText("Day & Night Auto Group");
     await expect(page.locator('a[href*="/dealers"]')).toHaveCount(0);
     await expect(page.locator("body")).not.toContainText(
       legacyPlatformNamePattern
@@ -132,6 +132,6 @@ test.describe("IS AUTO client identity", () => {
     await expect(firstListing).toBeVisible();
     await firstListing.click();
     await expect(page).toHaveURL(listingPathPattern);
-    await expect(page.locator("body")).toContainText("IS AUTO Varna");
+    await expect(page.locator("body")).toContainText("Day & Night Auto Group");
   });
 });

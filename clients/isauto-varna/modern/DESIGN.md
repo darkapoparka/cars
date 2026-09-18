@@ -1,6 +1,6 @@
-# IS AUTO Modern — Design System
+# Day & Night Modern — Design System
 
-This file records the incumbent visual and interaction system that has been proven in the rendered IS AUTO client demo. It is a preservation contract for future polish, not permission to redesign the product.
+This file records the incumbent visual and interaction system that has been proven in the rendered Day & Night client demo. It is a preservation contract for future polish, not permission to redesign the product.
 
 ## Mobile control density — September 13, 2026
 
@@ -43,13 +43,13 @@ The public experience should make four decisions easy, in this order:
 3. Trust the listing and dealer.
 4. Call, visit, request leasing/import help, sell a vehicle, or keep browsing.
 
-The interface is a compact showroom inventory and lead experience, not a multi-location marketplace, dealership-theme cliché, or generic SaaS dashboard. IS AUTO red is reserved for primary actions and the active bottom-navigation destination; selected quick pills use black. White, near-white, zinc gray, black text, and vehicle imagery carry the rest of the experience.
+The interface is a compact showroom inventory and lead experience, not a multi-location marketplace, dealership-theme cliché, or generic SaaS dashboard. Day & Night red is reserved for primary actions and the active bottom-navigation destination; selected quick pills use black. White, near-white, zinc gray, black text, and vehicle imagery carry the rest of the experience.
 
 ## Mobile browse anatomy
 
 The approved top-to-bottom composition is:
 
-1. One compact black showroom masthead with separate 44px circular vehicle-category and full-filter actions balancing the centered IS AUTO logo. The metallic white/red logo asset supplies the visual rationale for the dark surface; the category artwork does not need repeated text or a visible dropdown chevron.
+1. One compact black showroom masthead with separate 44px circular vehicle-category and full-filter actions balancing the centered Day & Night logo. The metallic white/red logo asset supplies the visual rationale for the dark surface; the category artwork does not need repeated text or a visible dropdown chevron.
 2. One full-width 52px white search control directly beneath the masthead actions. The search uses the same full-capsule radius as the search field inside its overlay and remains the dominant discovery action.
 3. One horizontally scrolling 44px quick-filter row for focused criteria such as price and year. Across Cars, Import, and the financing form, inactive quick-selection pills use `zinc-200`, hover/pressed uses `zinc-300`, and selected pills use zinc-950 black with semibold white text. Search fields and standalone capsule actions remain lighter because they are not selection pills. The always-visible full-filter action stays in the discovery row instead of being duplicated in this rail; category, search, filters, and every quick filter remain independent tap targets.
 4. Dense horizontal inventory cards separated by an 8px rhythm.
@@ -113,7 +113,7 @@ The dealer dock has five destinations: Cars, Import, Sell, Lease, and Menu. Each
 
 The document must reserve the dock height plus `env(safe-area-inset-bottom)` so the final card and actions remain visible. Menu opens the existing bottom drawer with explicit Call and Location actions followed by secondary pages. The drawer must lock background scroll, close on Escape or its visible close action, and return focus to Menu.
 
-The Menu sheet uses a white surface, the centered IS AUTO logo with dark wordmark, and a 44px gray close control. Its accessible title remains Menu. Its top sits 8px below the shared search capsule bottom (124px with the standard 12px top inset), just above the rounded page surface behind it. The body scrolls independently on short screens; tapping the logo closes Menu and opens Home. Call is the red primary action with the phone number visible; Location is a neutral action with the city. Secondary destinations are distinct 56px rounded gray buttons with consistent outline icons, semibold labels and 8px gaps. Preserve their button appearance; do not replace them with flat rows or separator lines. The real showroom address follows the buttons without a divider. The header stays outside the single scrollable body on short landscape screens. Menu styling is owned directly by `dealer-bottom-nav.tsx`, without CSS overrides in `mobile-final-polish.css`.
+The Menu sheet uses a white surface, the centered Day & Night logo with dark wordmark, and a 44px gray close control. Its accessible title remains Menu. Its top sits 8px below the shared search capsule bottom (124px with the standard 12px top inset), just above the rounded page surface behind it. The body scrolls independently on short screens; tapping the logo closes Menu and opens Home. Call is the red primary action with the phone number visible; Location is a neutral action with the city. Secondary destinations are distinct 56px rounded gray buttons with consistent outline icons, semibold labels and 8px gaps. Preserve their button appearance; do not replace them with flat rows or separator lines. The real showroom address follows the buttons without a divider. The header stays outside the single scrollable body on short landscape screens. Menu styling is owned directly by `dealer-bottom-nav.tsx`, without CSS overrides in `mobile-final-polish.css`.
 
 Next.js development indicators stay disabled for the public web app. They are not product UI and must never cover or intercept the Menu button or an overlay CTA during a local client presentation.
 
@@ -137,7 +137,7 @@ The current local pilot connects Auto.dev for United States dealer inventory thr
 - UI labels use sentence case and real Bulgarian copy.
 - Prices, years, mileage, and monthly values use tabular numerals where available.
 - Important mobile copy is not shrunk to solve layout pressure; wrap or truncate the correct secondary field instead.
-- IS AUTO red `#c40101` is for primary actions and active bottom navigation. Selected quick pills use zinc-950 black with white text, with zinc-800 hover/pressed states.
+- Day & Night red `#c40101` is for primary actions and active bottom navigation. Selected quick pills use zinc-950 black with white text, with zinc-800 hover/pressed states.
 - Prefer flat surfaces and spacing. Use either a subtle border or a restrained soft shadow when separation is required, not both by default.
 - Avoid gradients, glass effects, glow, hover lift, image zoom, decorative animation, and purple/indigo accents.
 

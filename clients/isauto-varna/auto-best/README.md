@@ -1,4 +1,4 @@
-# IS AUTO
+# Auto Best
 
 **Working branch: `main`.** Use one writer per checkout. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
 

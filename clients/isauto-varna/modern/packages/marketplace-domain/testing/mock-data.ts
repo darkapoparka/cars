@@ -3,84 +3,678 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    id: "is-1001", slug: "audi-r8-performance-v10-2021", category: "car", dealerOrgId: "dealer-isauto-varna", status: "active",
-    title: "2021 Audi R8 Performance V10",
-    description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
-    price: { amount: 148224, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/variant-2/isauto/inventory-1.webp", alt: "Audi R8 Performance V10 в IS AUTO Varna" }],
-    badges: ["used", "promoted"],
-    location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
-    features: [{"bg":"Bang & Olufsen","en":"Bang & Olufsen"},{"bg":"Керамични спирачки","en":"Керамични спирачки"},{"bg":"Carbon пакет","en":"Carbon пакет"}],
-    spec: { make: "Audi", model: "R8", trim: "Performance V10 · B&O · Ceramic · Carbon", year: 2021, bodyType: "coupe", fuelType: "gasoline", transmission: "automatic", mileageValue: 75000, mileageUnit: "km" },
-    seller: { id: "dealer-isauto-varna", type: "dealer", displayName: "IS AUTO Varna", verificationStatus: "verified", city: "Варна" },
-    publishedAt: "2026-09-16T08:00:00.000Z", promoted: true
+    "id": "am-1001",
+    "slug": "audi-r8-2021-is-1001",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "Audi R8 Performance V10",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 148224,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-1.webp",
+        "alt": "Audi R8 Performance V10"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "R8",
+      "year": 2021,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 75000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": true
   },
   {
-    id: "is-1002", slug: "audi-q7-50-tdi-2022", category: "car", dealerOrgId: "dealer-isauto-varna", status: "active",
-    title: "2022 Audi Q7 50 TDI",
-    description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
-    price: { amount: 67439, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/variant-2/isauto/inventory-2.webp", alt: "Audi Q7 50 TDI в IS AUTO Varna" }],
-    badges: ["used", "promoted"],
-    location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
-    features: [{"bg":"Virtual cockpit","en":"Virtual cockpit"},{"bg":"Подгряване на седалки","en":"Подгряване на седалки"},{"bg":"4-зонов климатроник","en":"4-зонов климатроник"},{"bg":"360° камера","en":"360° камера"}],
-    spec: { make: "Audi", model: "Q7", trim: "50 TDI · Virtual · 4-zone · Camera 360", year: 2022, bodyType: "suv", fuelType: "diesel", transmission: "automatic", mileageValue: 57500, mileageUnit: "km" },
-    seller: { id: "dealer-isauto-varna", type: "dealer", displayName: "IS AUTO Varna", verificationStatus: "verified", city: "Варна" },
-    publishedAt: "2026-09-15T08:00:00.000Z", promoted: true
+    "id": "am-1010",
+    "slug": "audi-q7-2022-is-1002",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "Audi Q7 50 TDI",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 67439,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-2.webp",
+        "alt": "Audi Q7 50 TDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "Q7",
+      "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 57500,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": true
   },
   {
-    id: "is-1003", slug: "bmw-m5-xdrive-2018", category: "car", dealerOrgId: "dealer-isauto-varna", status: "active",
-    title: "2018 BMW M5",
-    description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
-    price: { amount: 71530, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/variant-2/isauto/inventory-3.webp", alt: "BMW M5 в IS AUTO Varna" }],
-    badges: ["used", "promoted"],
-    location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
-    features: [{"bg":"xDrive","en":"xDrive"},{"bg":"Керамични спирачки","en":"Керамични спирачки"},{"bg":"Bowers & Wilkins","en":"Bowers & Wilkins"},{"bg":"Adaptive LED","en":"Adaptive LED"}],
-    spec: { make: "BMW", model: "M5", trim: "xDrive · Ceramic · Bowers & Wilkins · Adaptive LED", year: 2018, bodyType: "sedan", fuelType: "gasoline", transmission: "automatic", mileageValue: 61000, mileageUnit: "km" },
-    seller: { id: "dealer-isauto-varna", type: "dealer", displayName: "IS AUTO Varna", verificationStatus: "verified", city: "Варна" },
-    publishedAt: "2026-09-14T08:00:00.000Z", promoted: true
+    "id": "am-1011",
+    "slug": "bmw-m5-2018-is-1003",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "BMW M5",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 71530,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-3.webp",
+        "alt": "BMW M5"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "M5",
+      "year": 2018,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 61000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": true
   },
   {
-    id: "is-1004", slug: "bmw-x5-xdrive-2014", category: "car", dealerOrgId: "dealer-isauto-varna", status: "active",
-    title: "2014 BMW X5 xDrive",
-    description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
-    price: { amount: 24491, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/variant-2/isauto/inventory-4.webp", alt: "BMW X5 xDrive в IS AUTO Varna" }],
-    badges: ["used"],
-    location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
-    features: [{"bg":"xDrive","en":"xDrive"},{"bg":"Sport пакет","en":"Sport пакет"},{"bg":"Подгряване на седалки","en":"Подгряване на седалки"},{"bg":"Панорамен покрив","en":"Панорамен покрив"}],
-    spec: { make: "BMW", model: "X5", trim: "xDrive · Sport · Panoramic roof", year: 2014, bodyType: "suv", fuelType: "diesel", transmission: "automatic", mileageValue: 196000, mileageUnit: "km" },
-    seller: { id: "dealer-isauto-varna", type: "dealer", displayName: "IS AUTO Varna", verificationStatus: "verified", city: "Варна" },
-    publishedAt: "2026-09-13T08:00:00.000Z", promoted: false
+    "id": "am-1012",
+    "slug": "bmw-x5-2014-is-1004",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "BMW X5 xDrive",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 24491,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-4.webp",
+        "alt": "BMW X5 xDrive"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "X5",
+      "year": 2014,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 196000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "is-1005", slug: "bmw-750-m-performance-2019", category: "car", dealerOrgId: "dealer-isauto-varna", status: "active",
-    title: "2019 BMW 750 M Performance",
-    description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
-    price: { amount: 61304, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/variant-2/isauto/inventory-5.webp", alt: "BMW 750 M Performance в IS AUTO Varna" }],
-    badges: ["used"],
-    location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
-    features: [{"bg":"M Performance","en":"M Performance"},{"bg":"Laser светлини","en":"Laser светлини"},{"bg":"Alcantara","en":"Alcantara"},{"bg":"Virtual cockpit","en":"Virtual cockpit"},{"bg":"Harman Kardon","en":"Harman Kardon"}],
-    spec: { make: "BMW", model: "7 Series", trim: "750 · M Performance · Laser · Harman Kardon", year: 2019, bodyType: "sedan", fuelType: "diesel", transmission: "automatic", mileageValue: 167000, mileageUnit: "km" },
-    seller: { id: "dealer-isauto-varna", type: "dealer", displayName: "IS AUTO Varna", verificationStatus: "verified", city: "Варна" },
-    publishedAt: "2026-09-12T08:00:00.000Z", promoted: false
+    "id": "am-1013",
+    "slug": "bmw-750-2019-is-1005",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "BMW 750 M Performance",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 61304,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-5.webp",
+        "alt": "BMW 750 M Performance"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "750",
+      "year": 2019,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 167000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "is-1006", slug: "audi-a5-sportback-20-tdi-2018", category: "car", dealerOrgId: "dealer-isauto-varna", status: "active",
-    title: "2018 Audi A5 Sportback 2.0 TDI",
-    description: "Публична обява на IS AUTO Varna, проверена на 2026-09-16. Наличност, оборудване и финални условия се потвърждават директно с автокъщата.",
-    price: { amount: 19900, currency: "EUR" }, priceType: "fixed",
-    images: [{ url: "/variant-2/isauto/inventory-6.webp", alt: "Audi A5 Sportback 2.0 TDI в IS AUTO Varna" }],
-    badges: ["used"],
-    location: { city: "Варна", region: "Бизнес парк Варна", country: "България" },
-    features: [{"bg":"S line","en":"S line"},{"bg":"Ambient осветление","en":"Ambient осветление"},{"bg":"Virtual cockpit","en":"Virtual cockpit"},{"bg":"Подгряване на седалки","en":"Подгряване на седалки"},{"bg":"Парктроник","en":"Парктроник"},{"bg":"F1 пера","en":"F1 пера"}],
-    spec: { make: "Audi", model: "A5", trim: "Sportback · S line · Virtual · Ambient", year: 2018, bodyType: "coupe", fuelType: "diesel", transmission: "automatic", mileageValue: 175000, mileageUnit: "km" },
-    seller: { id: "dealer-isauto-varna", type: "dealer", displayName: "IS AUTO Varna", verificationStatus: "verified", city: "Варна" },
-    publishedAt: "2026-09-11T08:00:00.000Z", promoted: false
+    "id": "am-1014",
+    "slug": "audi-a5-sportback-2018-is-1006",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "Audi A5 Sportback 2.0 TDI",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 19900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-6.webp",
+        "alt": "Audi A5 Sportback 2.0 TDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "A5 Sportback",
+      "year": 2018,
+      "bodyType": "hatchback",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 175000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1002",
+    "slug": "audi-r8-2021-is-1001",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "Audi R8 Performance V10",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 148224,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-1.webp",
+        "alt": "Audi R8 Performance V10"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "R8",
+      "year": 2021,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 75000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1003",
+    "slug": "audi-q7-2022-is-1002",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "Audi Q7 50 TDI",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 67439,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-2.webp",
+        "alt": "Audi Q7 50 TDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "Q7",
+      "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 57500,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1004",
+    "slug": "bmw-m5-2018-is-1003",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "BMW M5",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 71530,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-3.webp",
+        "alt": "BMW M5"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "M5",
+      "year": 2018,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 61000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1005",
+    "slug": "bmw-x5-2014-is-1004",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "BMW X5 xDrive",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 24491,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-4.webp",
+        "alt": "BMW X5 xDrive"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "X5",
+      "year": 2014,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 196000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1006",
+    "slug": "bmw-750-2019-is-1005",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "BMW 750 M Performance",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 61304,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-5.webp",
+        "alt": "BMW 750 M Performance"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "750",
+      "year": 2019,
+      "bodyType": "sedan",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 167000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1007",
+    "slug": "audi-a5-sportback-2018-is-1006",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "Audi A5 Sportback 2.0 TDI",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 19900,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-6.webp",
+        "alt": "Audi A5 Sportback 2.0 TDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "A5 Sportback",
+      "year": 2018,
+      "bodyType": "hatchback",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 175000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1008",
+    "slug": "audi-r8-2021-is-1001",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "Audi R8 Performance V10",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 148224,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-1.webp",
+        "alt": "Audi R8 Performance V10"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "R8",
+      "year": 2021,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 75000,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1009",
+    "slug": "audi-q7-2022-is-1002",
+    "category": "car",
+    "dealerOrgId": "dealer-isauto-varna",
+    "status": "active",
+    "title": "Audi Q7 50 TDI",
+    "description": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+    "price": {
+      "amount": 67439,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/dealer/inventory-2.webp",
+        "alt": "Audi Q7 50 TDI"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Варна",
+      "region": "Бизнес парк Варна",
+      "country": "България"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "Q7",
+      "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 57500,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-isauto-varna",
+      "type": "dealer",
+      "displayName": "IS AUTO Varna",
+      "verificationStatus": "unverified",
+      "city": "Варна",
+      "logoUrl": "/assets/brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-16T09:00:00.000Z",
+    "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [
@@ -163,12 +757,102 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
     .sort(listingComparators[filters.sort]);
 };
 
-const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
+const legacyListingSlugAliases: Readonly<Record<string, string>> = {
+  "audi-q5-45-tfsi-quattro-stara-zagora-2021": "bmw-m4-competition-sofia-2021",
+};
+
+export const getMockListingBySlug = (slug: string) => {
+  const resolvedSlug = legacyListingSlugAliases[slug] ?? slug;
+  return mockListings.find((listing) => listing.slug === resolvedSlug);
+};
+
+export const getMockListingById = (id: string) =>
+  mockListings.find((listing) => listing.id === id);
+
+const scoreRelatedListing = (
+  source: VehicleListing,
+  candidate: VehicleListing
+) =>
+  Number(candidate.category === source.category) * 4 +
+  Number(candidate.spec.make === source.spec.make) * 3 +
+  Number(candidate.location.city === source.location.city) * 2 +
+  Number(candidate.promoted);
+
+export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
+  mockListings
+    .filter(
+      (listing) => listing.status === "active" && listing.id !== source.id
+    )
+    .map((listing) => ({
+      listing,
+      score: scoreRelatedListing(source, listing),
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(({ listing }) => listing);
+
+export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
+
+export const getMockSavedListings = () =>
+  mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
+
+export interface MockSavedSearch {
+  cadence: "instant" | "daily" | "weekly";
+  description: string;
+  filters: Partial<MarketplaceSearchParams>;
+  id: string;
+  lastRunAt: string;
+  newMatches: number;
+  title: string;
+}
+
+export const mockSavedSearches: MockSavedSearch[] = [
+  {
+    id: "saved-search-premium-suv",
+    title: "Premium SUVs under 100k",
+    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
+    filters: {
+      body: "suv",
+      category: "car",
+      priceMax: 100_000,
+      seller: "dealer",
+    },
+    cadence: "daily",
+    newMatches: 3,
+    lastRunAt: "2026-06-06T07:00:00.000Z",
+  },
+  {
+    id: "saved-search-lease-ev",
+    title: "Lease-ready EVs",
+    description: "Electric lease offers with automatic transmission.",
+    filters: {
+      category: "lease",
+      fuel: "electric",
+      transmission: "automatic",
+    },
+    cadence: "instant",
+    newMatches: 1,
+    lastRunAt: "2026-06-07T06:30:00.000Z",
+  },
+  {
+    id: "saved-search-family-varna",
+    title: "Family cars near Varna",
+    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
+    filters: {
+      category: "car",
+      location: "Varna",
+      mileageMax: 90_000,
+    },
+    cadence: "weekly",
+    newMatches: 0,
+    lastRunAt: "2026-06-03T08:00:00.000Z",
+  },
+];
 
 const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
-  "is-1001": "active",
-  "is-1003": "pending_review",
-  "is-1006": "draft",
+  "am-1001": "active",
+  "am-1003": "pending_review",
+  "am-1007": "draft",
 };
 
 export const getMockSellerListings = () =>
@@ -203,8 +887,8 @@ export const mockDealerLeads: MockDealerLead[] = [
     buyerName: "Nikolay Petrov",
     id: "lead-1001",
     intent: "finance",
-    listingId: "is-1001",
-    listingTitle: "2021 Audi R8 Performance V10",
+    listingId: "am-1001",
+    listingTitle: "2020 BMW X5 M50d",
     receivedAt: "2026-06-07T07:30:00.000Z",
     source: "listing",
     status: "new",
@@ -213,8 +897,8 @@ export const mockDealerLeads: MockDealerLead[] = [
     buyerName: "Elena Dimitrova",
     id: "lead-1002",
     intent: "test_drive",
-    listingId: "is-1003",
-    listingTitle: "2018 BMW M5",
+    listingId: "am-1003",
+    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
     receivedAt: "2026-06-06T15:20:00.000Z",
     source: "saved_search",
     status: "contacted",
@@ -223,8 +907,8 @@ export const mockDealerLeads: MockDealerLead[] = [
     buyerName: "Martin Georgiev",
     id: "lead-1003",
     intent: "availability",
-    listingId: "is-1003",
-    listingTitle: "2018 Audi A5 Sportback 2.0 TDI",
+    listingId: "am-1008",
+    listingTitle: "2020 Mercedes-Benz AMG GT 43",
     receivedAt: "2026-06-05T12:10:00.000Z",
     source: "dealer_profile",
     status: "qualified",
@@ -233,8 +917,8 @@ export const mockDealerLeads: MockDealerLead[] = [
     buyerName: "Iva Marinova",
     id: "lead-1004",
     intent: "trade_in",
-    listingId: "is-1005",
-    listingTitle: "2014 BMW X5 xDrive",
+    listingId: "am-1005",
+    listingTitle: "2018 Mercedes-Benz V 250d VIP Business",
     receivedAt: "2026-06-04T09:45:00.000Z",
     source: "listing",
     status: "closed",
@@ -280,8 +964,8 @@ export interface MockModerationReport {
 export const mockModerationReports: MockModerationReport[] = [
   {
     id: "report-1001",
-    listingId: "is-1003",
-    listingTitle: "2018 BMW M5",
+    listingId: "am-1003",
+    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
     reason: "incorrect_details",
     details:
       "Buyer says lease terms in the message thread do not match the listing price.",
@@ -294,7 +978,7 @@ export const mockModerationReports: MockModerationReport[] = [
   },
   {
     id: "report-1002",
-    listingId: "is-1006",
+    listingId: "am-1006",
     listingTitle: "2021 Range Rover Sport SVR",
     reason: "duplicate",
     details:
@@ -308,7 +992,7 @@ export const mockModerationReports: MockModerationReport[] = [
   },
   {
     id: "report-1003",
-    listingId: "is-1002",
+    listingId: "am-1002",
     listingTitle: "2021 Mercedes-Benz GLE 400d Coupe",
     reason: "seller_behavior",
     details:
@@ -322,8 +1006,8 @@ export const mockModerationReports: MockModerationReport[] = [
   },
   {
     id: "report-1004",
-    listingId: "is-1003",
-    listingTitle: "2018 Audi A5 Sportback 2.0 TDI",
+    listingId: "am-1008",
+    listingTitle: "2020 Mercedes-Benz AMG GT 43",
     reason: "prohibited_content",
     details:
       "Admin review flagged promotional copy that may overstate warranty coverage.",
@@ -420,7 +1104,7 @@ export const mockAuditLog: MockAuditLogEntry[] = [
     actor: "System",
     action: "listing.flagged",
     entityType: "listing",
-    entityId: "is-1006",
+    entityId: "am-1006",
     note: "Duplicate image match over threshold.",
     createdAt: "2026-06-07T06:45:00.000Z",
   },
@@ -552,7 +1236,7 @@ export interface MockActivePromotion {
 export const mockActivePromotions: MockActivePromotion[] = [
   {
     id: "promotion-1001",
-    listingId: "is-1001",
+    listingId: "am-1001",
     productId: "promo-search-top-7",
     status: "active",
     startsAt: "2026-06-05T08:00:00.000Z",
@@ -564,7 +1248,7 @@ export const mockActivePromotions: MockActivePromotion[] = [
   },
   {
     id: "promotion-1002",
-    listingId: "is-1003",
+    listingId: "am-1003",
     productId: "promo-lease-partner-30",
     status: "active",
     startsAt: "2026-06-01T08:00:00.000Z",
@@ -576,7 +1260,7 @@ export const mockActivePromotions: MockActivePromotion[] = [
   },
   {
     id: "promotion-1003",
-    listingId: "is-1003",
+    listingId: "am-1008",
     productId: "promo-category-featured-14",
     status: "scheduled",
     startsAt: "2026-06-10T08:00:00.000Z",
