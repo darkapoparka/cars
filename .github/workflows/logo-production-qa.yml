@@ -11,6 +11,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: logo-production-qa-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   capture:
     name: Capture shard ${{ matrix.shard }}
@@ -22,6 +26,10 @@ jobs:
         shard: [0, 1, 2, 3]
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            scripts/logo-production-qa.mjs
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
