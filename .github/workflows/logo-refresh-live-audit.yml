@@ -1,0 +1,48 @@
+name: Logo refresh live audit
+
+on:
+  push:
+    branches:
+      - logo-refresh-live-audit-2026-09-18
+    paths:
+      - .github/workflows/logo-refresh-live-audit.yml
+      - scripts/logo-refresh-audit.mjs
+      - scripts/logo-refresh-dealers.json
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install audit dependencies
+        run: |
+          mkdir -p .logo-audit-runtime
+          cd .logo-audit-runtime
+          npm init -y
+          npm install playwright@1.55.0 sharp@0.34.3
+          npx playwright install --with-deps chromium
+          echo "NODE_PATH=$PWD/node_modules" >> "$GITHUB_ENV"
+
+      - name: Run live and asset audit
+        run: node scripts/logo-refresh-audit.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Commit audit evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add qa-output
+          git commit -m "chore(qa): capture pre-change logo audit" || exit 0
+          git push
