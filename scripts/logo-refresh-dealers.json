@@ -1,0 +1,315 @@
+[
+  {
+    "project": "cars-priselci",
+    "repo": "darkapoparka/cars-priselci",
+    "asset_commit": "30055887099ae9d6db20beaa48f37316477b8360",
+    "strategy": "REFINE OFFICIAL LOGO",
+    "name": "Priselci",
+    "url": "https://cars-priselci.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-outletcarsvarna",
+    "repo": "darkapoparka/cars-outletcarsvarna",
+    "asset_commit": "6345e253e14e074cde5059c2630670fc049519ae",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Outlet Cars Varna",
+    "url": "https://cars-outletcarsvarna.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-promosalevarna",
+    "repo": "darkapoparka/cars-promosalevarna",
+    "asset_commit": "e667e0738e4eca2c0930033322578a09314f7f75",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "PromoSale Varna",
+    "url": "https://cars-promosalevarna.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-autolife",
+    "repo": "darkapoparka/cars-autolife",
+    "asset_commit": "e564aa8a8812dd302f4e97de303eb97b6596e2c1",
+    "strategy": "REFINE OFFICIAL LOGO",
+    "name": "Autolife",
+    "url": "https://cars-autolife.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-astracar",
+    "repo": "darkapoparka/cars-astracar",
+    "asset_commit": "25a9003fd105f999a06ae16650a95735c5404212",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "AstraCar",
+    "url": "https://cars-astracar.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-alhamooralthahabi",
+    "repo": "darkapoparka/cars-alhamooralthahabi",
+    "asset_commit": "aae5d2bee239c095d2eff25774135a5c4d83a81c",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Al Hamoor Al Thahabi",
+    "url": "https://cars-alhamooralthahabi.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-avangardauto",
+    "repo": "darkapoparka/cars-avangardauto",
+    "asset_commit": "385f069927fc57ed18eeafc9c0368656a6c6ea9b",
+    "strategy": "REFINE OFFICIAL LOGO",
+    "name": "Avangard Auto",
+    "url": "https://cars-avangardauto.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-f1rstmotors",
+    "repo": "darkapoparka/cars-f1rstmotors",
+    "asset_commit": "7f097598a9a1ceb7a9f1b5160ea1be96e3ae3fbe",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "F1rst Motors",
+    "url": "https://cars-f1rstmotors.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-albasmamotors",
+    "repo": "darkapoparka/cars-albasmamotors",
+    "asset_commit": "47931d3f049592ef4cbbd907fee51d9c15e2af31",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Al Basma Motors",
+    "url": "https://cars-albasmamotors.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-elitautoimport",
+    "repo": "darkapoparka/cars-elitautoimport",
+    "asset_commit": "9aec65b6fbd4f7d275aa955e0abcef52ff111375",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Elit Auto Import",
+    "url": "https://cars-elitautoimport.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-automarketvarna",
+    "repo": "darkapoparka/cars-automarketvarna",
+    "asset_commit": "dfbe663ba07a9671955782a4af9bdb962dfebd57",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Automarket Varna",
+    "url": "https://cars-automarketvarna.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-eliqauto",
+    "repo": "darkapoparka/cars-eliqauto",
+    "asset_commit": "2db4964c9aeb5a58774bd110065e3830f6253f12",
+    "strategy": "REFINE OFFICIAL LOGO",
+    "name": "ELIQ Auto",
+    "url": "https://cars-eliqauto.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-kgteamauto",
+    "repo": "darkapoparka/cars-kgteamauto",
+    "asset_commit": "8cf67e2548a00fd9f6cd6783ddb2f3d194d6b8d6",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "KG Team Auto",
+    "url": "https://cars-kgteamauto.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-championautopro",
+    "repo": "darkapoparka/cars-championautopro",
+    "asset_commit": "5e63d480bc4833a40c58175145a21afe577620f6",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Champion Auto Pro",
+    "url": "https://cars-championautopro.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "excellent-cars",
+    "repo": "darkapoparka/excellent-cars",
+    "asset_commit": "ed9d9b15a11300a676483a08036f25d141d32bf0",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Excellent Cars",
+    "url": "https://excellent-cars.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-perfectauto",
+    "repo": "darkapoparka/cars-perfectauto",
+    "asset_commit": "0eee7f01acf152a8c8392979dfaf762d07f7d3b3",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Perfect Auto",
+    "url": "https://cars-perfectauto.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-asko96",
+    "repo": "darkapoparka/cars-asko96",
+    "asset_commit": "40413c4cec58375f5bb890e681932579a43666ba",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "ASKO 96",
+    "url": "https://cars-asko96.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-texasdriveauto",
+    "repo": "darkapoparka/cars-texasdriveauto",
+    "asset_commit": "ce775992032efbd91daa247d93db1df2b774408b",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Texas Drive Auto",
+    "url": "https://cars-texasdriveauto.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "day-and-night-a",
+    "repo": "darkapoparka/day-and-night-autodeal",
+    "asset_commit": "8d43d32972ddf5b8e2e60cc3bc58e5cb9cda1026",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Day & Night Auto Group",
+    "url": "https://day-and-night-a.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-thedealerspoint",
+    "repo": "darkapoparka/cars-thedealerspoint",
+    "asset_commit": "3a29ca775604f562538fadbe31c5cbeced433c1a",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "The Dealers Point",
+    "url": "https://cars-thedealerspoint.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-ivoauto",
+    "repo": "darkapoparka/cars-ivoauto",
+    "asset_commit": "0be64d02119fbbaa54ff81e2099856b6788197a7",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Ivo Auto",
+    "url": "https://cars-ivoauto.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-navaracar",
+    "repo": "darkapoparka/cars-navaracar",
+    "asset_commit": "5cf05ddccec25fcd7196c885d9558328bef68890",
+    "strategy": "REFINE OFFICIAL LOGO",
+    "name": "Navara Car",
+    "url": "https://cars-navaracar.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-legendauto",
+    "repo": "darkapoparka/cars-legendauto",
+    "asset_commit": "39acae68b6c2377dc271f6e9346f053d9f07a71a",
+    "strategy": "USE GENERATED CANDIDATE",
+    "name": "Legend Auto",
+    "url": "https://cars-legendauto.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  },
+  {
+    "project": "cars-isautovarna",
+    "repo": "darkapoparka/cars",
+    "asset_commit": "fc3adf9fe19e514eca3fc4b2d9b78696e2127eb5",
+    "strategy": "REFINE OFFICIAL LOGO",
+    "name": "IS Auto Varna",
+    "root": "clients/is-auto-varna",
+    "url": "https://cars-isautovarna.vercel.app",
+    "routes": {
+      "auto-best": "/auto-best/",
+      "modern": "/modern/",
+      "carwow": "/carwow/"
+    }
+  }
+]
