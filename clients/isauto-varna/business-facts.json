@@ -23,9 +23,9 @@
     "inventoryUrl": "https://isautovarna.mobile.bg/",
     "contactUrl": "https://www.isauto.net/contacts",
     "accent": "#d71920",
-    "logo": "/dealer/logo-dark.png",
-    "logoLight": "/dealer/logo-dark.png",
-    "logoDark": "/dealer/logo-light.png",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
     "socialLinks": {
       "instagram": "https://www.instagram.com/is__auto/?hl=bg",
       "facebook": "https://www.facebook.com/isauto1"
@@ -48,7 +48,15 @@
       }
     ],
     "inventoryNotice": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
-    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "workingLogoPath": "dealer/logo-dark.png",
+    "branding": {
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+    },
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp"
   },
   "vehicles": [
     {
@@ -69,7 +77,9 @@
       "currency": "EUR",
       "condition": "used",
       "availability": "Датирана обява — потвърдете наличността",
-      "images": ["/dealer/inventory-1.webp"],
+      "images": [
+        "/dealer/inventory-1.webp"
+      ],
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10",
       "observedAt": "2026-09-16"
     },
@@ -91,7 +101,9 @@
       "currency": "EUR",
       "condition": "used",
       "availability": "Датирана обява — потвърдете наличността",
-      "images": ["/dealer/inventory-2.webp"],
+      "images": [
+        "/dealer/inventory-2.webp"
+      ],
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9",
       "observedAt": "2026-09-16"
     },
@@ -113,7 +125,9 @@
       "currency": "EUR",
       "condition": "used",
       "availability": "Датирана обява — потвърдете наличността",
-      "images": ["/dealer/inventory-3.webp"],
+      "images": [
+        "/dealer/inventory-3.webp"
+      ],
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8",
       "observedAt": "2026-09-16"
     },
@@ -135,7 +149,9 @@
       "currency": "EUR",
       "condition": "used",
       "availability": "Датирана обява — потвърдете наличността",
-      "images": ["/dealer/inventory-4.webp"],
+      "images": [
+        "/dealer/inventory-4.webp"
+      ],
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7",
       "observedAt": "2026-09-16"
     },
@@ -157,7 +173,9 @@
       "currency": "EUR",
       "condition": "used",
       "availability": "Датирана обява — потвърдете наличността",
-      "images": ["/dealer/inventory-5.webp"],
+      "images": [
+        "/dealer/inventory-5.webp"
+      ],
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3",
       "observedAt": "2026-09-16"
     },
@@ -179,7 +197,9 @@
       "currency": "EUR",
       "condition": "used",
       "availability": "Датирана обява — потвърдете наличността",
-      "images": ["/dealer/inventory-6.webp"],
+      "images": [
+        "/dealer/inventory-6.webp"
+      ],
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745",
       "observedAt": "2026-09-16"
     }
