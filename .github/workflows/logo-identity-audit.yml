@@ -1,0 +1,35 @@
+name: Logo identity candidate audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/logo-identity-audit.yml'
+      - 'docs/logo-refresh/2026-09-18/audit/logo-identity-audit.mjs'
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Sharp
+        run: npm install --no-save --no-package-lock sharp@0.35.1
+      - name: Render source and deployment candidates
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node docs/logo-refresh/2026-09-18/audit/logo-identity-audit.mjs
+      - name: Upload identity audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: logo-identity-audit
+          path: artifacts/logo-identity-audit
+          if-no-files-found: error
+          retention-days: 14
