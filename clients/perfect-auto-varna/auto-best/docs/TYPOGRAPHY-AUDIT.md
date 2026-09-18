@@ -2,6 +2,14 @@
 
 Scope: all live text in the reusable master, including shared navigation/footer, home discovery and services, inventory and filters, vehicle details and finance, company/contact pages, Sell/Import enquiry and help dialogs, editorial pages and error states. Baseline: `156421d278baee98344dc8565a35e1a163819dfc` on `main`, clean checkout. Local browser: this repository's Node 22 Vite server on port 6477.
 
+## Phase 3 closure - 15 September 2026
+
+This section supersedes the older verification caveats later in this historical audit. The live source now has one enforceable typography contract: all declarations use shared tokens or inheritance; supported weights are 400, 450, 500 and 600; no `550`/`650` values or typography-related `!important` declarations remain.
+
+Phase 3 also corrected the surrounding ownership causes rather than adding overrides. Header, discovery, filters, results and vehicle cards own their geometry; semantic classes/data attributes replace fragile selectors; and the typed `leadSite` configuration owns dealer palette and artwork decisions. `check:typography` and `check:css-policy` run inside `validate`.
+
+Final evidence: `npm run validate`, `npm run smoke` and `npm run smoke:typography` all passed. Svelte checking reported 0 errors and 0 warnings, the production build completed without CSS warnings, and the final eight-route visual matrix passed at 375, 390, 430, 768, 1366 and 1440 px. See [`../TYPOGRAPHY-TASKS.md`](../TYPOGRAPHY-TASKS.md) for the completed checklist and ownership map.
+
 ## Findings and resolution
 
 Owner refinement after the initial audit: entry segments now use 16px/500 pill options with white selection on pale gray, so the 18px/400 bordered input is more prominent. Primary actions remain 18px/500. Both workflow call links are now one shared text-link placement outside the card. The table below records the initial audit; [Styling](STYLING.md) is the current contract. `smoke:typography` asserts the revised input/tab hierarchy and external call-link placement.
