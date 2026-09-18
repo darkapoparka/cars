@@ -11,58 +11,69 @@ export const DAY_IMAGE_FALLBACK =
 			'</svg>'
 	);
 
-function applyFallback(img: HTMLImageElement) {
-	if (img.dataset.daynightImgFallback === '1') return;
-
+/** Idempotent for both explicit image attachments and a route's capture listener. */
+export function applyDayNightImageFallback(img: HTMLImageElement): void {
+	if (img.src === DAY_IMAGE_FALLBACK && !img.hasAttribute('srcset')) return;
 	img.dataset.daynightImgFallback = '1';
-	img.src = DAY_IMAGE_FALLBACK;
 	img.removeAttribute('srcset');
+	img.src = DAY_IMAGE_FALLBACK;
 	img.classList.add('daynight-img-fallback');
 }
 
-function installFallback(img: HTMLImageElement) {
-	if (img.dataset.daynightImgFallbackWatched === '1') {
-		return () => {};
+export function isBrokenDayNightImage(img: HTMLImageElement): boolean {
+	// A responsive image may not have selected its candidate yet. Do not mistake
+	// that pending state, an empty source, or a healthy transparent pixel for failure.
+	return (
+		img.complete &&
+		img.naturalWidth === 0 &&
+		Boolean(img.currentSrc || (!img.hasAttribute('srcset') && img.getAttribute('src')))
+	);
+}
+
+const watchers = new WeakMap<HTMLImageElement, { owners: number; dispose: () => void }>();
+function installFallback(img: HTMLImageElement): () => void {
+	let watcher = watchers.get(img);
+	if (!watcher) {
+		const handleError = () => applyDayNightImageFallback(img);
+		const handleLoad = () => {
+			if (isBrokenDayNightImage(img)) handleError();
+			else if (img.naturalWidth > 0 && img.currentSrc !== DAY_IMAGE_FALLBACK) {
+				delete img.dataset.daynightImgFallback;
+				img.classList.remove('daynight-img-fallback');
+			}
+		};
+		img.addEventListener('error', handleError);
+		img.addEventListener('load', handleLoad);
+		watcher = {
+			owners: 0,
+			dispose: () => {
+				img.removeEventListener('error', handleError);
+				img.removeEventListener('load', handleLoad);
+			}
+		};
+		watchers.set(img, watcher);
+		if (isBrokenDayNightImage(img)) handleError();
 	}
-
-	img.dataset.daynightImgFallbackWatched = '1';
-	const handleError = () => applyFallback(img);
-	const checkBroken = () => {
-		if (img.complete && img.naturalWidth === 0) {
-			applyFallback(img);
-		}
-	};
-	const timers = [0, 250, 1000, 2500].map((delay) => window.setTimeout(checkBroken, delay));
-	const frame = window.requestAnimationFrame(checkBroken);
-
-	img.addEventListener('error', handleError);
-	img.addEventListener('load', checkBroken);
-
-	if (typeof img.decode === 'function') {
-		img.decode().catch(checkBroken);
-	}
-
+	watcher.owners += 1;
+	let released = false;
 	return () => {
-		img.removeEventListener('error', handleError);
-		img.removeEventListener('load', checkBroken);
-		timers.forEach((timer) => window.clearTimeout(timer));
-		window.cancelAnimationFrame(frame);
+		if (released) return;
+		released = true;
+		if (--watcher.owners === 0) {
+			watcher.dispose();
+			watchers.delete(img);
+		}
 	};
 }
 
 export function daynightImageFallback(img: HTMLImageElement) {
-	return {
-		destroy: installFallback(img)
-	};
+	return { destroy: installFallback(img) };
 }
 
 export function enhanceDayNightImageFallbacks(
 	root: ParentNode = document,
 	selector = 'img[data-daynight-image-fallback]'
-) {
-	const cleanups = Array.from(root.querySelectorAll<HTMLImageElement>(selector)).map(
-		installFallback
-	);
-
+): () => void {
+	const cleanups = Array.from(root.querySelectorAll<HTMLImageElement>(selector), installFallback);
 	return () => cleanups.forEach((cleanup) => cleanup());
 }

@@ -13,7 +13,9 @@ body {
 	margin: 0;
 	background: var(--sa-surface, #fff);
 	color: var(--sa-ink, #0f1417);
-	font-family: var(--sa-font, ui-sans-serif, system-ui, sans-serif);
+	font-family: var(--sa-font);
+	font-size: var(--sa-type-body);
+	line-height: var(--sa-leading-normal);
 	font-optical-sizing: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -58,22 +60,34 @@ body {
 	display: none;
 }
 
-::-webkit-scrollbar {
-	width: 5px;
-	height: 5px;
+@media (min-width: 992px) {
+	::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #fff;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		background: transparent;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--sa-blue);
+	}
 }
 
-::-webkit-scrollbar-track {
-	background: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 8px;
-	background: transparent;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: var(--sa-blue);
+@media (max-width: 991px) {
+	html,
+	body {
+		scrollbar-width: none;
+	}
+	::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .fixed {

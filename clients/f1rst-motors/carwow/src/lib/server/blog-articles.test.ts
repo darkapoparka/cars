@@ -34,7 +34,9 @@ describe('public blog source', () => {
 		const log = vi.spyOn(console, 'error').mockImplementation(() => {});
 		try {
 			vi.mocked(getDealerBySlug).mockRejectedValue(new Error('CMS unavailable'));
-			await expect(loadPublishedBlogArticles({ db: {} } as App.Locals)).rejects.toMatchObject({ status: 503 });
+			await expect(loadPublishedBlogArticles({ db: {} } as App.Locals)).rejects.toMatchObject({
+				status: 503
+			});
 		} finally {
 			log.mockRestore();
 		}
