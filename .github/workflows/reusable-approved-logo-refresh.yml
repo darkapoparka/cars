@@ -1,0 +1,99 @@
+name: Reusable approved dealer logo refresh
+
+on:
+  workflow_call:
+    inputs:
+      dealer:
+        required: true
+        type: string
+      strategy:
+        required: true
+        type: string
+      rationale:
+        required: true
+        type: string
+      source:
+        required: true
+        type: string
+      accent:
+        required: false
+        default: '#f7d84a'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  implement-build-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Render transparent contextual pack and wire every variant
+        uses: darkapoparka/cars/.github/actions/approved-logo-refresh@main
+        with:
+          dealer: ${{ inputs.dealer }}
+          strategy: ${{ inputs.strategy }}
+          rationale: ${{ inputs.rationale }}
+          source: ${{ inputs.source }}
+          accent: ${{ inputs.accent }}
+      - name: Build Auto Best
+        if: ${{ hashFiles('auto-best/package-lock.json') != '' }}
+        working-directory: auto-best
+        run: |
+          npm ci --no-audit --no-fund
+          npm run check --if-present
+          npm run check:assets --if-present
+          npm run build
+      - name: Build Modern
+        if: ${{ hashFiles('modern/pnpm-lock.yaml') != '' }}
+        working-directory: modern
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.4.0 --activate
+          pnpm install --frozen-lockfile
+          pnpm --filter @repo/database build
+          pnpm --filter web build
+      - name: Build Import variant
+        if: ${{ hashFiles('import/package-lock.json') != '' }}
+        working-directory: import
+        run: |
+          npm ci --no-audit --no-fund
+          npm run check --if-present
+          npm run build
+      - name: Build Carwow
+        if: ${{ hashFiles('carwow/package-lock.json') != '' }}
+        working-directory: carwow
+        run: |
+          npm ci --no-audit --no-fund
+          npm run check --if-present
+          npm run build
+      - name: Commit exact tested implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for target in \
+            assets/brand \
+            logo-implementation.json \
+            auto-best/static/assets/brand \
+            auto-best/src \
+            modern/apps/web/public/assets/brand \
+            modern/apps/web \
+            modern/packages \
+            carwow/static/assets/brand \
+            carwow/src \
+            import/static/assets/brand \
+            import/src; do
+            if [ -e "$target" ]; then git add -A -- "$target"; fi
+          done
+          if git diff --cached --quiet; then
+            echo "No logo implementation changes produced." >&2
+            exit 1
+          fi
+          git commit -m "Implement approved transparent contextual logo pack [skip ci]"
+          git push origin HEAD:main
+          echo "Production source commit: $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
