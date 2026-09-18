@@ -1,0 +1,25 @@
+name: Export logo audit evidence
+
+on:
+  push:
+    branches:
+      - logo-refresh-live-audit-2026-09-18
+    paths:
+      - .github/workflows/export-logo-audit.yml
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: qa-output
+      - uses: actions/upload-artifact@v4
+        with:
+          name: logo-audit-pre-change
+          path: qa-output
+          if-no-files-found: error
+          retention-days: 7
