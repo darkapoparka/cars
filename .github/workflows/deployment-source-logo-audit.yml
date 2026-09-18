@@ -1,0 +1,39 @@
+name: Deployment source logo audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deployment-source-logo-audit.yml'
+      - 'docs/logo-refresh/2026-09-18/audit/deployment-source-audit.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            docs/logo-refresh/2026-09-18/audit/deployment-source-audit.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Sharp
+        run: npm install --no-save --no-package-lock sharp@0.35.1
+      - name: Resolve recorded sources and render exact candidates
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node docs/logo-refresh/2026-09-18/audit/deployment-source-audit.mjs
+      - name: Upload audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-source-logo-audit
+          path: artifacts/deployment-source-audit
+          if-no-files-found: error
+          retention-days: 14
