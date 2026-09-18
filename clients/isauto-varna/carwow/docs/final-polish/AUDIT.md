@@ -1,4 +1,4 @@
-# IS AUTO Spartak — Finalization Audit
+# Day & Night Spartak — Finalization Audit
 
 ## Audit status
 
@@ -22,7 +22,7 @@ This audit separates **owner-confirmed issues** from **verification requirements
 - The current mobile and desktop implementations are both strong and intentionally distinct.
 - Separate `MobileHome.svelte` and `DesktopHome.svelte` compositions preserve a curated hierarchy for each form factor.
 - Compare, favorites, inventory, detail, contact, and visual-regression tooling already exist.
-- The project has a clear IS AUTO identity and should receive controlled polish only.
+- The project has a clear Day & Night identity and should receive controlled polish only.
 
 ## Architecture evidence
 

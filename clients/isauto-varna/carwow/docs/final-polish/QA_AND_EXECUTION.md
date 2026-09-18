@@ -1,4 +1,4 @@
-# IS AUTO Spartak — Batch Execution and QA Contract
+# Day & Night Spartak — Batch Execution and QA Contract
 
 ## Absolute execution rule
 

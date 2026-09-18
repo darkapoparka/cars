@@ -1,18 +1,9 @@
 {
   "schemaVersion": 1,
   "key": "modern",
-  "source": "/home/runner/work/cars/cars/templates/modern",
-  "destination": "/home/runner/work/cars/cars/clients/isauto-varna/modern",
-  "copiedAt": "2026-09-16T00:19:38.744Z",
+  "source": "templates/modern",
+  "destination": "clients/isauto-varna/modern",
   "sourceUrl": null,
-  "git": {
-    "root": "/home/runner/work/cars/cars",
-    "branch": "main",
-    "head": "57d4e828ec4cb1f109d8c0f55c1eaae721bf3c8b",
-    "remote": "https://github.com/darkapoparka/cars",
-    "status": "?? clients/isauto-varna/\n?? scripts/build-isauto-varna.mjs",
-    "headAfterCopy": "57d4e828ec4cb1f109d8c0f55c1eaae721bf3c8b"
-  },
   "files": [
     {
       "path": ".cursorrules.example",
@@ -6856,5 +6847,56 @@
     "docs/QA.md"
   ],
   "links": [],
-  "bytes": 98543919
+  "bytes": 98543919,
+  "sourceCommit": "a71f8b7456ef03189cf749e3646d1b9358f0f539",
+  "sourceTree": "affe25a64cb2ecacf60a772c311ce7514dba7b02",
+  "method": "Approved Cars snapshot plus explicit dealer data/assets overlay",
+  "approvedTemplate": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "refresh": {
+    "mode": "regenerate",
+    "overlay": [
+      "packages/marketplace-domain/testing/mock-data.ts",
+      "packages/marketplace/lead-site.ts",
+      "packages/marketplace-domain/testing/dealer-profile.json",
+      "apps/web/app/[locale]/components/mobile-financing-policy.ts",
+      "apps/web/app/[locale]/contact/page.tsx",
+      "apps/web/app/[locale]/lease/lease-finance-policy.test.ts",
+      "apps/web/app/[locale]/sell/page.tsx",
+      "apps/web/app/api/ai/search/route.test.ts",
+      "apps/web/app/sitemap.test.ts",
+      "apps/web/lib/assisted-search.test.ts",
+      "apps/web/lib/public-app-url.test.ts",
+      "apps/web/lib/public-contact-readiness.test.ts",
+      "apps/web/lib/public-metadata.test.ts",
+      "apps/web/lib/public-support-submission.test.ts",
+      "packages/marketplace/directory.test.ts",
+      "packages/marketplace/inventory-csv.test.ts",
+      "packages/marketplace/listing-core.test.ts",
+      "packages/marketplace/mock-directory.ts",
+      "packages/marketplace-ui/components/marketplace-masthead.tsx",
+      "packages/marketplace-ui/lib/account-save-flow.test.ts",
+      "packages/marketplace-ui/lib/listing-truth.ts",
+      "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+      "packages/marketplace-ui/lib/marketplace-filter-config.ts",
+      "packages/marketplace-ui/lib/marketplace-filter-policy.test.ts",
+      "packages/marketplace-ui/lib/organization-directory-card-policy.test.ts",
+      "packages/marketplace-ui/lib/vehicle-card-view-policy.test.ts",
+      "packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+      "dealer/inventory-1.webp",
+      "dealer/inventory-2.webp",
+      "dealer/inventory-3.webp",
+      "dealer/inventory-4.webp",
+      "dealer/inventory-5.webp",
+      "dealer/inventory-6.webp",
+      "dealer/logo-dark.png",
+      "dealer/logo-light.png",
+      "assets/brand/logo-on-light.webp",
+      "assets/brand/logo-on-dark.webp"
+    ]
+  }
 }

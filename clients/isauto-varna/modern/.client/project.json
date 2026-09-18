@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "isauto-varna",
   "templateKey": "modern",
-  "templateVersion": "promote-2026-09-13",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
   "createdAt": "2026-09-16T00:19:39.705Z",
-  "state": "personalized-needs-hosted-qa",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -22,8 +22,8 @@
   "qa": {
     "desktop": false,
     "mobile": false,
-    "identity": true,
-    "contactPath": true
+    "identity": false,
+    "contactPath": false
   },
   "crm": {
     "leadId": null,
@@ -40,7 +40,7 @@
     "version": "1",
     "entry": "/variant-2/cars"
   },
-  "workflowCommit": "57d4e828ec4cb1f109d8c0f55c1eaae721bf3c8b",
+  "workflowCommit": "a71f8b7456ef03189cf749e3646d1b9358f0f539",
   "businessFacts": "clients/isauto-varna/business-facts.json",
   "stock": "clients/isauto-varna/FACTS-AND-INVENTORY.json",
   "assetProvenance": "clients/isauto-varna/assets/provenance.json",
@@ -50,5 +50,11 @@
     "Forms and calculators remain preview interactions until a backend is configured and tested.",
     "No customer reviews, completed sales or guaranteed finance outcomes are asserted.",
     "Desktop and mobile hosted visual QA remains false until the deployed routes are reviewed."
-  ]
+  ],
+  "refresh": {
+    "previousTemplateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "refreshedAt": "2026-09-18T23:02:09.153Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

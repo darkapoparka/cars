@@ -59,6 +59,6 @@ Split on 2026-09-10 from the live working tree at `J:/cars/templates/carwow`. Th
 
 ## Portfolio policy
 
-Cars owns portfolio choices: standard IS AUTO / Modern / Carwow, or IS AUTO / Import / Carwow. See [Cars integration](docs/CARS-INTEGRATION.md).
+Cars owns portfolio choices: standard Auto Best / Modern / Carwow, or Auto Best / Import / Carwow. See [Cars integration](docs/CARS-INTEGRATION.md).
 
 Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).

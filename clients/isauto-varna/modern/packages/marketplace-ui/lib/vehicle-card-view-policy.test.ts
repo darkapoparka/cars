@@ -1,4 +1,4 @@
-import { mockListings } from "@repo/marketplace-domain/testing/mock-data";
+import { mockListings } from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   getLocalizedVehicleCardLocationPart,
@@ -9,7 +9,7 @@ import {
 
 describe("vehicle card view policy", () => {
   it("localizes common locations without changing unknown values", () => {
-    expect(getLocalizedVehicleCardLocationPart("Sofia", "bg")).toBe("София");
+    expect(getLocalizedVehicleCardLocationPart("Варна", "bg")).toBe("Варна");
     expect(getLocalizedVehicleCardLocationPart("Tokyo", "bg")).toBe("Tokyo");
   });
 

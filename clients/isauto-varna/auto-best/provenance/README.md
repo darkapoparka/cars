@@ -6,7 +6,7 @@ Start with [Asset provenance](../ASSET_PROVENANCE.md) for the media families and
 
 ## Capture metadata
 
-`mirror-manifest.json` comes from the retired mirror payload. Its existing provenance record describes 150 routes and 479 resources, observed source `isautovarna.mobile.bg`, and acquisition timestamp `2026-08-13T05:09:17.976Z`. The separately retained acquisition script names the AutoDeal reference host. These are separate records, not proof of matching acquisition provenance.
+`mirror-manifest.json` comes from the retired mirror payload. Its existing provenance record describes 150 routes and 479 resources, observed source `daynight.mobile.bg`, and acquisition timestamp `2026-08-13T05:09:17.976Z`. The separately retained acquisition script names the AutoDeal reference host. These are separate records, not proof of matching acquisition provenance.
 
 Historical acquisition tooling under `scripts/provenance/`, where retained, is not needed to build or run the SvelteKit application. The application renders its own routes rather than serving the captured mirror.
 

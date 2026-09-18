@@ -1,4 +1,4 @@
-# Adapting IS AUTO for a dealer
+# Adapting Auto Best for a dealer
 
 The normal workflow is to clone the template, replace its business content and media, and keep the established page layouts and interactions. The result is an independent client project.
 
@@ -86,7 +86,7 @@ A real integration needs server-side validation, recipient configuration, reques
 
 Run the documented checks, then inspect home, inventory, a vehicle detail, About, Contact, an article and the offered sell/import/finance journeys at 390px and 1440px. Exercise a filter and return path, mobile menu dismissal, form review/copy behavior and actual contact destinations. [Testing](docs/TESTING.md) gives the commands.
 
-Search the retained source for `IS AUTO`, `IS AUTO`, `day-night`, the old phone/address, social handles and video IDs. Review rather than blindly replacing filenames: historical provenance may retain names, while active content must match the client. Visual inspection is necessary for image-baked identity.
+Search the retained source for `Auto Best`, `Day & Night`, `day-night`, the old phone/address, social handles and video IDs. Review rather than blindly replacing filenames: historical provenance may retain names, while active content must match the client. Visual inspection is necessary for image-baked identity.
 
 Keep the site in preview mode during preparation. Build and indexing configuration are in [Deployment](docs/DEPLOYMENT.md). Record the actual template commit used for the copy so later shared fixes can be selectively ported without overwriting client changes.
 

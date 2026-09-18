@@ -1,6 +1,6 @@
 # Product overview
 
-IS AUTO is a dealership website template for browsing vehicles and starting a conversation with the dealer. Its purpose is to provide a polished starting point for independently branded client sites.
+Auto Best is a dealership website template for browsing vehicles and starting a conversation with the dealer. Its purpose is to provide a polished starting point for independently branded client sites.
 
 ## Main visitor journeys
 

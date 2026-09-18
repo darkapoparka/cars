@@ -10,7 +10,7 @@ import {
   organizationDirectoryProfileInputSchema,
   parseOrganizationDirectorySearchParams,
 } from "./directory";
-import { mockListings } from "@repo/marketplace-domain/testing/mock-data";
+import { getMockListingById } from "./mock-data";
 import {
   mockOrganizationDirectoryCoreEntries,
   mockOrganizationDirectoryEntries,
@@ -61,7 +61,7 @@ describe("organization directory search", () => {
       parseOrganizationDirectorySearchParams({
         availability: "local",
         brand: [" BMW ", "Audi"],
-        city: " Sofia ",
+        city: " Варна ",
         country: " bg ",
         deliverTo: " bg ",
         importService: "transport",
@@ -76,7 +76,7 @@ describe("organization directory search", () => {
     ).toEqual({
       availability: "local",
       brand: "BMW",
-      city: "Sofia",
+      city: "Варна",
       country: "BG",
       deliverTo: "BG",
       importService: "transport",
@@ -128,7 +128,7 @@ describe("organization directory search", () => {
       createOrganizationDirectorySearchParams({
         availability: "local",
         brand: "BMW",
-        city: "Sofia",
+        city: "Варна",
         country: "BG",
         deliverTo: "BG",
         importService: "transport",
@@ -141,7 +141,7 @@ describe("organization directory search", () => {
         view: "list",
       }).toString()
     ).toBe(
-      "type=importer&availability=local&brand=BMW&city=Sofia&country=BG&origin=CN&deliverTo=BG&importService=transport&sort=inventory&official=true&verified=true&view=list"
+      "type=importer&availability=local&brand=BMW&city=Варна&country=BG&origin=CN&deliverTo=BG&importService=transport&sort=inventory&official=true&verified=true&view=list"
     );
   });
 
@@ -415,7 +415,7 @@ describe("organization directory search", () => {
         "Volkswagen",
         "Yamaha",
       ],
-      cities: ["Hamburg", "Plovdiv", "Ruse", "Sofia", "Stara Zagora", "Varna"],
+      cities: ["Hamburg", "Plovdiv", "Ruse", "Варна", "Stara Zagora", "Varna"],
       importServices: [
         "vehicle_sourcing",
         "inspection",
@@ -435,7 +435,7 @@ describe("organization directory search", () => {
       expect(organization.representativeVehicles.length).toBeLessThanOrEqual(3);
 
       for (const preview of organization.representativeVehicles) {
-        const listing = mockListings.find((entry) => entry.id === preview.id);
+        const listing = getMockListingById(preview.id);
         expect(listing).toBeDefined();
         expect(preview).toMatchObject({
           href: `/listing/${listing?.slug}`,
