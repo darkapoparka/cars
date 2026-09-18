@@ -34,7 +34,7 @@ export const daynightSite = {
 	mapLabel: `${shortName}, ${location}`,
 	sourceInventory: "https://asko96.mobile.bg/",
 	logoLight: "/variant-3/assets/brand/logo-on-dark.webp",
-	logoDark: "/variant-3/assets/brand/logo-on-light.webp",
+	logoDark: "/variant-3/assets/brand/logo-on-accent.webp",
 	socialLinks: {"facebook":"https://www.facebook.com/p/Asko96-100050328800477/","instagram":"","youtube":"https://www.youtube.com/@asko96bulgaria","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
