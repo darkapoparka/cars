@@ -27,6 +27,26 @@ async function walk(directory, predicate = () => true) {
 
 await ensureDir(archiveRoot);
 
+const generatedDarkPng = path.join(generatedRoot, 'isauto-logo-dark.png');
+const generatedLightPng = path.join(generatedRoot, 'isauto-logo-light.png');
+const generatedDarkWebp = path.join(generatedRoot, 'isauto-logo-dark.webp');
+const generatedLightWebp = path.join(generatedRoot, 'isauto-logo-light.webp');
+
+const brandPackRoots = [
+  path.join(CLIENT, 'assets', 'brand'),
+  path.join(AUTO_BEST, 'static', 'assets', 'brand'),
+  path.join(CLIENT, 'modern', 'apps', 'web', 'public', 'assets', 'brand'),
+  path.join(CLIENT, 'carwow', 'static', 'assets', 'brand')
+];
+for (const brandRoot of brandPackRoots) {
+  await ensureDir(brandRoot);
+  await fs.copyFile(generatedDarkPng, path.join(brandRoot, 'logo-master.png'));
+  await fs.copyFile(generatedDarkWebp, path.join(brandRoot, 'logo-on-light.webp'));
+  await fs.copyFile(generatedLightWebp, path.join(brandRoot, 'logo-on-dark.webp'));
+  await fs.copyFile(generatedLightWebp, path.join(brandRoot, 'logo-on-accent.webp'));
+  await fs.rm(path.join(brandRoot, 'logo-universal.webp'), { force: true });
+}
+
 for (const mode of ['dark', 'light']) {
   const generated = path.join(generatedRoot, `isauto-logo-${mode}.webp`);
   const archived = path.join(archiveRoot, `isauto-logo-${mode}.webp`);
@@ -68,11 +88,39 @@ const autoBestSourceFiles = await walk(
 for (const target of autoBestSourceFiles) {
   const before = await fs.readFile(target, 'utf8');
   const after = before
+    .replaceAll('/assets/images/lead/isauto/logo-dark.png', '/assets/brand/logo-on-light.webp')
+    .replaceAll('/assets/images/lead/isauto/logo-light.png', '/assets/brand/logo-on-dark.webp')
+    .replaceAll('/dealer/logo-dark.png', '/assets/brand/logo-on-light.webp')
+    .replaceAll('/dealer/logo-light.png', '/assets/brand/logo-on-dark.webp')
     .replaceAll('/assets/images/lead/isauto/', '/dealer/')
     .replaceAll('assets/images/lead/isauto/', 'dealer/');
   if (after !== before) await fs.writeFile(target, after, 'utf8');
 }
 await fs.rm(legacyAutoBestDealer, { recursive: true, force: true });
+
+for (const root of [
+  path.join(CLIENT, 'modern', 'apps'),
+  path.join(CLIENT, 'modern', 'packages')
+]) {
+  for (const target of await walk(root, (file) => /\.(?:js|jsx|mjs|ts|tsx)$/i.test(file))) {
+    const before = await fs.readFile(target, 'utf8');
+    let after = before
+      .replaceAll('/variant-2/isauto/logo-light.png', '/variant-2/assets/brand/logo-on-dark.webp')
+      .replaceAll('/variant-2/isauto/logo-dark.png', '/variant-2/assets/brand/logo-on-light.webp');
+    after = after.replace(/(logoPath\s*:\s*)["'][^"']+["']/g, '$1"/variant-2/assets/brand/logo-on-dark.webp"');
+    if (after !== before) await fs.writeFile(target, after, 'utf8');
+  }
+}
+for (const target of await walk(path.join(CLIENT, 'carwow', 'src'), (file) => /\.(?:js|mjs|svelte|ts)$/i.test(file))) {
+  const before = await fs.readFile(target, 'utf8');
+  let after = before
+    .replaceAll('/brand/isauto-logo-light.png', '/variant-3/assets/brand/logo-on-dark.webp')
+    .replaceAll('/brand/isauto-logo-dark.png', '/variant-3/assets/brand/logo-on-light.webp');
+  after = after
+    .replace(/(logoLight\s*:\s*)["'][^"']+["']/g, '$1"/variant-3/assets/brand/logo-on-dark.webp"')
+    .replace(/(logoDark\s*:\s*)["'][^"']+["']/g, '$1"/variant-3/assets/brand/logo-on-accent.webp"');
+  if (after !== before) await fs.writeFile(target, after, 'utf8');
+}
 
 // These media remain referenced by approved template-owned data and components,
 // even when a dealer has no verified videos or uses its own inventory records.
@@ -132,10 +180,11 @@ const provenancePath = path.join(CLIENT, 'assets', 'provenance.json');
 const provenance = JSON.parse(await fs.readFile(provenancePath, 'utf8'));
 provenance.brand = {
   ...(provenance.brand ?? {}),
-  implementation: 'Official IS AUTO raster identity cleaned into transparent dark/light PNG runtime masters. Auto Best publishes one /dealer/ PNG and WebP inventory contract; no SVG dealer logo is used at runtime.',
+  implementation: 'Official IS AUTO raster identity cleaned into transparent contextual raster assets. All three variants publish logo-master.png plus logo-on-light.webp, logo-on-dark.webp and logo-on-accent.webp; legacy PNG dealer files remain only as compatibility fallbacks.',
   webpDerivatives: [
-    'assets/brand/isauto-logo-dark.webp',
-    'assets/brand/isauto-logo-light.webp'
+    'assets/brand/logo-on-light.webp',
+    'assets/brand/logo-on-dark.webp',
+    'assets/brand/logo-on-accent.webp'
   ]
 };
 await fs.writeFile(provenancePath, `${JSON.stringify(provenance, null, 2)}\n`, 'utf8');
