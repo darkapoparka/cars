@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%98%D0%B2%D0%BE%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20256%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
     "accent": "#c58a1f",
-    "logo": "/assets/ivo-auto/ivo-auto-logo.webp",
-    "logoLight": "/assets/ivo-auto/ivo-auto-logo.webp",
-    "logoDark": "/assets/ivo-auto/ivo-auto-logo-light.webp",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -42,7 +42,7 @@
       "Лизинг според обявата"
     ],
     "inventoryNotice": "Подбрани публикувани обяви; наличностите и условията се потвърждават с Иво Ауто.",
-    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
     "observedAt": "2026-09-07",
     "coordinates": null,
     "raw": {
@@ -63,8 +63,8 @@
       "stockUrl": "https://ivoauto-varna.mobile.bg/",
       "website": null,
       "socialLinks": {},
-      "logo": "/assets/ivo-auto/ivo-auto-logo.webp",
-      "logoLight": "/assets/ivo-auto/ivo-auto-logo.webp",
+      "logo": "/assets/brand/logo-on-light.webp",
+      "logoLight": "/assets/brand/logo-on-dark.webp",
       "logoStatus": "Professional demonstrative logo proposal for this preview; no official dealer logo was found in the verified sources.",
       "accent": "#c58a1f",
       "accentNote": "The graphite and amber palette belongs to the demonstrative proposal and is not presented as verified official branding.",
@@ -81,13 +81,22 @@
         "https://ivoauto-varna.mobile.bg/contacts",
         "https://ivoauto-varna.mobile.bg/about"
       ],
-      "logoDark": "/assets/ivo-auto/ivo-auto-logo-light.webp",
+      "logoDark": "/assets/brand/logo-on-light.webp",
       "logoNote": "The transparent IVO AUTO mark is an image-generation-assisted proposal for the demo project and is not represented as official dealer branding.",
       "accentDark": "#8f6114",
       "limitations": [
         "No official logo was found in the verified dealer sources; the transparent IVO AUTO mark is a clearly labelled professional proposal for this preview.",
         "The project uses a representative snapshot of published listings, not a live inventory feed."
-      ]
+      ],
+      "workingLogoPath": "assets/ivo-auto/ivo-auto-logo.webp",
+      "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+      "branding": {
+        "logoOnLight": "/assets/brand/logo-on-light.webp",
+        "logoOnDark": "/assets/brand/logo-on-dark.webp",
+        "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+      },
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp"
     }
   },
   "listings": [
@@ -1170,8 +1179,8 @@
     "stockUrl": "https://ivoauto-varna.mobile.bg/",
     "website": null,
     "socialLinks": {},
-    "logo": "/assets/ivo-auto/ivo-auto-logo.webp",
-    "logoLight": "/assets/ivo-auto/ivo-auto-logo.webp",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
     "logoStatus": "Professional demonstrative logo proposal for this preview; no official dealer logo was found in the verified sources.",
     "accent": "#c58a1f",
     "accentNote": "The graphite and amber palette belongs to the demonstrative proposal and is not presented as verified official branding.",
@@ -1188,13 +1197,22 @@
       "https://ivoauto-varna.mobile.bg/contacts",
       "https://ivoauto-varna.mobile.bg/about"
     ],
-    "logoDark": "/assets/ivo-auto/ivo-auto-logo-light.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
     "logoNote": "The transparent IVO AUTO mark is an image-generation-assisted proposal for the demo project and is not represented as official dealer branding.",
     "accentDark": "#8f6114",
     "limitations": [
       "No official logo was found in the verified dealer sources; the transparent IVO AUTO mark is a clearly labelled professional proposal for this preview.",
       "The project uses a representative snapshot of published listings, not a live inventory feed."
-    ]
+    ],
+    "workingLogoPath": "assets/ivo-auto/ivo-auto-logo.webp",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "branding": {
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+    },
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp"
   },
   "sourceCount": 16
 }
