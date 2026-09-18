@@ -43,10 +43,10 @@
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "00fd48ea7861bf32dbb331c4a683628e1c09162f",
+  "workflowCommit": "6c756b766568db4b8aadb6cb4eb410500798e80f",
   "refresh": {
     "previousTemplateVersion": "2026.09.08-repair-1",
-    "refreshedAt": "2026-09-17T06:13:15.640Z",
+    "refreshedAt": "2026-09-18T23:04:47.043Z",
     "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
     "mode": "fresh-template-plus-dealer-overlay"
   }
