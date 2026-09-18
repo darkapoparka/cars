@@ -198,11 +198,11 @@
 	onkeydown={keepFocus}
 >
 	<div class="filter-dialog-header">
-		<h2 id="inventory-filter-title">{field ? field.label : 'Vehicle search'}</h2>
+		<h2 id="inventory-filter-title">{field ? field.label : 'Търсене на автомобили'}</h2>
 		<button
 			type="button"
 			class="filter-dialog-close"
-			aria-label="Close filters"
+			aria-label="Затвори филтрите"
 			onclick={() => dialog.close()}><X size={22} /></button
 		>
 	</div>
@@ -237,8 +237,8 @@
 			<label class="filter-dialog-search"
 				><Search size={20} /><input
 					type="search"
-					aria-label="Make, model or keyword"
-					placeholder="Make, model or keyword"
+					aria-label="Марка, модел или ключова дума"
+					placeholder="Марка, модел или ключова дума"
 					bind:value={query}
 				/></label
 			>
@@ -250,7 +250,7 @@
 							>
 							<details class="filter-dialog-multiselect">
 								<summary aria-labelledby={`modal-label-${group.name}`}
-									><span>{draft[group.name]?.length ? draft[group.name].join(', ') : 'All'}</span
+									><span>{draft[group.name]?.length ? draft[group.name].join(', ') : 'Всички'}</span
 									><ChevronDown size={16} /></summary
 								>
 								<div class="filter-dialog-multi-options">
@@ -272,7 +272,7 @@
 								value={draft[group.name]?.[0] ?? ''}
 								onchange={(event) => setValues(group.name, [event.currentTarget.value])}
 							>
-								<option value="">All</option>
+								<option value="">Всички</option>
 								{#each options(group) as option (option.value)}<option value={option.value}
 										>{option.label}</option
 									>{/each}
@@ -281,21 +281,21 @@
 					</div>
 				{/each}
 				<div class="filter-dialog-field">
-					<label class="filter-dialog-label" for="modal-availability">Listing samples</label>
+					<label class="filter-dialog-label" for="modal-availability">Наличност</label>
 					<select
 						id="modal-availability"
 						value={draft.availability?.[0] ?? ''}
 						onchange={(event) => setValues('availability', [event.currentTarget.value])}
 					>
-						<option value="">All</option><option value="available">Advertised</option><option
-							value="incoming">Awaiting confirmation</option
+						<option value="">Всички</option><option value="available">Налични</option><option
+							value="incoming">Очакван внос</option
 						>
 					</select>
 				</div>
 			</div>
 			{#if featureField}
 				<section class="filter-dialog-features" aria-labelledby="filter-extras-title">
-					<h3 id="filter-extras-title">Features</h3>
+					<h3 id="filter-extras-title">Екстри</h3>
 					<div class="filter-dialog-feature-grid">
 						{#each displayedFeatures as option (option.value)}
 							<label
@@ -366,7 +366,7 @@
 		flex-shrink: 0;
 	}
 	h2 {
-		font: 750 26px/1.2 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-2xl)/1.2 var(--sa-font);
 		letter-spacing: -0.6px;
 		margin: 0;
 	}
@@ -415,7 +415,7 @@
 		flex: 1;
 		height: 52px;
 		padding: 0;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		color: #141719;
 		box-shadow: none;
 	}
@@ -442,9 +442,9 @@
 	}
 	.filter-dialog-label {
 		display: block;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 20px;
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		color: #606871;
 		margin-bottom: 7px;
 	}
@@ -456,8 +456,8 @@
 		border: 1px solid var(--discovery-control-border);
 		border-radius: var(--discovery-control-radius);
 		padding: 0 12px;
-		font-size: 15px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		color: #141719;
 	}
 	summary {
@@ -489,7 +489,7 @@
 		align-items: center;
 		gap: 10px;
 		min-height: 38px;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		cursor: pointer;
 	}
 	.filter-dialog-features {
@@ -499,7 +499,7 @@
 		margin-top: 24px;
 	}
 	h3 {
-		font: 700 18px/1.3 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-lg)/1.3 var(--sa-font);
 		margin: 0 0 14px;
 	}
 	.filter-dialog-feature-grid {
@@ -521,8 +521,8 @@
 		background: #fff;
 		border: 1px solid var(--discovery-control-border);
 		border-radius: var(--discovery-control-radius);
-		font-size: 14px;
-		font-weight: 500;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.4;
 		cursor: pointer;
 	}
@@ -551,8 +551,8 @@
 		background: transparent;
 		border: 0;
 		padding: 12px 0;
-		font-size: 15px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		text-decoration: underline;
 		text-underline-offset: 4px;
 	}
@@ -567,8 +567,8 @@
 		border-radius: var(--discovery-control-radius);
 		background: var(--discovery-action);
 		color: #fff;
-		font-size: 16px;
-		font-weight: 700;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-strong);
 	}
 	.filter-dialog-apply:hover {
 		background: var(--discovery-action-hover);
@@ -592,7 +592,7 @@
 		min-height: 36px;
 		padding: 12px 0 0;
 		color: #31383e;
-		font-size: 14px;
-		font-weight: 600;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-semibold);
 	}
 </style>

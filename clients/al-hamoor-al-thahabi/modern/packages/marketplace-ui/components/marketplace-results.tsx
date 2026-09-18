@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@repo/design-system/lib/utils";
 import {
   buildMarketplaceSearchHref,
@@ -6,7 +8,9 @@ import {
   type MarketplaceSearchParams,
   type VehicleListing,
 } from "@repo/marketplace";
+import { useEffect } from "react";
 import { getAccountListingSaveFlowHref } from "../lib/account-save-flow";
+import { readInventoryReturn } from "../lib/inventory-return";
 import {
   getMarketplaceListingGridClassName,
   getMarketplaceResultsSectionClassName,
@@ -48,17 +52,42 @@ export const MarketplaceResults = ({
   viewMode: ListingViewMode;
 }) => {
   const useWideInventoryGrid = viewMode === "grid" && listings.length >= 4;
+  const singularLabel = isBg ? "автомобил" : "vehicle";
+  const pluralLabel = isBg ? "автомобила" : "vehicles";
+  useEffect(() => {
+    const saved = readInventoryReturn();
+    if (saved?.href !== location.pathname + location.search) {
+      return;
+    }
+    const frame = requestAnimationFrame(() =>
+      window.scrollTo(0, saved.scrollY)
+    );
+    return () => cancelAnimationFrame(frame);
+  }, []);
   const useDiscoveryInventoryGrid =
     desktopSearchVariant === "discovery" && viewMode === "grid";
   const priorityListingCount =
     useDiscoveryInventoryGrid || useWideInventoryGrid ? 4 : 3;
 
   return (
-    <section className={getMarketplaceResultsSectionClassName(desktopSearchVariant)}>
+    <section
+      className={getMarketplaceResultsSectionClassName(desktopSearchVariant)}
+    >
       <div className="min-w-0">
+        <p
+          aria-live="polite"
+          className={cn(
+            "mb-2 text-muted-foreground text-xs tabular-nums lg:hidden",
+            activeFilterCount === 0 && "sr-only"
+          )}
+        >
+          {totalListings} {totalListings === 1 ? singularLabel : pluralLabel}
+        </p>
         <ResultToolbar
           filters={filters}
-          hideDesktopSummary={shouldHideDesktopResultSummary(desktopSearchVariant)}
+          hideDesktopSummary={shouldHideDesktopResultSummary(
+            desktopSearchVariant
+          )}
           locale={locale}
           onOpenFilters={onOpenFilters}
           onViewModeChange={onViewModeChange}

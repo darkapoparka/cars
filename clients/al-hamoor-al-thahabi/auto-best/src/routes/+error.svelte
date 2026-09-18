@@ -7,22 +7,22 @@
 </script>
 
 <svelte:head>
-  <title>{isNotFound ? 'Page not found' : 'An error occurred'} — {brand.name}</title>
+  <title>{isNotFound ? 'Страницата не е намерена' : 'Възникна грешка'} — {brand.name}</title>
   <meta name="robots" content="noindex" />
 </svelte:head>
 
 <section class="dn-error" aria-labelledby="error-title">
   <div class="container">
     <p class="dn-kicker">{page.status}</p>
-    <h1 id="error-title">{isNotFound ? 'Page not found' : 'An unexpected error occurred'}</h1>
+    <h1 id="error-title">{isNotFound ? 'Страницата не е намерена' : 'Възникна неочаквана грешка'}</h1>
     <p>
       {isNotFound
-        ? 'The address may have changed or the page may no longer be part of the site.'
-        : 'Try again or contact the team for assistance.'}
+        ? 'Адресът може да е променен или страницата вече да не е част от сайта.'
+        : 'Опитайте отново или се свържете с екипа за съдействие.'}
     </p>
     <div class="dn-error__actions">
-      <a class="dn-error__primary" href={resolve('/listing-grid')}>Browse vehicles</a>
-      <a class="dn-error__secondary" href={resolve('/contact')}>Contact us</a>
+      <a class="dn-error__primary" href={resolve('/listing-grid')}>Разгледайте автомобилите</a>
+      <a class="dn-error__secondary" href={resolve('/contact')}>Свържете се с нас</a>
     </div>
   </div>
 </section>
@@ -44,10 +44,10 @@
 
   .dn-error h1 {
     margin: 0;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 650;
-    line-height: 1.08;
-    letter-spacing: -.035em;
+    font-size: var(--dn-text-fluid-hero);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-section);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-error p:not(.dn-kicker) {
@@ -73,8 +73,8 @@
     padding: 0 22px;
     border: 1px solid var(--dn-ink);
     border-radius: var(--dn-radius-button);
-    font-size: var(--dn-text-body);
-    font-weight: 650;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
   }
 
   .dn-error__actions .dn-error__primary {

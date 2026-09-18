@@ -15,6 +15,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { CSSProperties, ReactNode } from "react";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileFinancingInterceptor } from "./components/mobile-financing-interceptor";
 import { MobileVisibleViewport } from "./components/mobile-visible-viewport";
@@ -32,10 +33,8 @@ const publicSans = Inter({
 
 export const metadata: Metadata = {
   applicationName: leadSite.name,
-  robots: { index: false, follow: false },
   icons: {
-    icon: [{ type: "image/png", url: "/dealer/favicon.png" }],
-    apple: "/dealer/apple-touch-icon.png",
+    icon: [{ type: "image/png", url: leadSite.logoPath }],
   },
   metadataBase: new URL(getPublicWebBaseUrl()),
 };
@@ -60,6 +59,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
       lang={normalizedLocale}
       style={
         {
+          "--canvas": "oklch(0.945 0.006 264)",
           "--lead-site-accent": leadSite.accent,
           "--lead-site-accent-active":
             "color-mix(in srgb, var(--lead-site-accent) 68%, black)",
@@ -86,7 +86,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
         <MobileVisibleViewport />
         <ThemeProvider>
           {leadSite.staticDemoMode ? (
-            <TooltipProvider>{children}<aside className="bg-zinc-100 px-4 pt-4 pb-24 text-xs leading-5 text-zinc-600 lg:px-10 lg:pb-4">{leadSite.previewNotice} {leadSite.locationNote} {leadSite.priceNotice} Decorative illustrations are not stock photographs.</aside></TooltipProvider>
+            <TooltipProvider>{children}</TooltipProvider>
           ) : (
             <AnalyticsProvider
               locale={normalizedLocale}
@@ -96,7 +96,10 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
               <TooltipProvider>{children}</TooltipProvider>
             </AnalyticsProvider>
           )}
-          <MobileFinancingInterceptor locale={normalizedLocale} />
+          <MobileFinancingInterceptor
+            locale={normalizedLocale}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
+          />
           <Toaster />
         </ThemeProvider>
         {leadSite.staticDemoMode ||

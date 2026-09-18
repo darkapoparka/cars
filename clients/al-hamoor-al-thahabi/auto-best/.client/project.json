@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "al-hamoor-al-thahabi",
   "templateKey": "auto-best",
-  "templateVersion": "2026.09.08-polish-1",
+  "templateVersion": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
   "createdAt": "2026-09-08T21:50:37.373Z",
-  "state": "implemented-needs-local-qa",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -32,5 +32,22 @@
     "stockCount": 8,
     "localAssets": true,
     "qaOwner": "local-review"
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+    "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/"
+  },
+  "workflowCommit": "6c756b766568db4b8aadb6cb4eb410500798e80f",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.08-polish-1",
+    "refreshedAt": "2026-09-18T23:04:44.215Z",
+    "approvedTemplateCommit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }

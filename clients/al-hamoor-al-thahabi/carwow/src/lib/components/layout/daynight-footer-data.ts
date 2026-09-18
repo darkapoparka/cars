@@ -29,25 +29,25 @@ export type DayNightFooterLinkGroup = {
 
 export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'AL HAMOOR AL THAHABI USED CARS',
 		links: [
-			{ href: '/about', label: 'За Day Night Auto' },
+			{ href: '/about', label: 'За Al Hamoor Al Thahabi' },
 			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
-			{ href: '/team', label: 'Team' },
-			{ href: '/reviews', label: 'Reviews' },
-			{ href: '/blog', label: 'Guides' },
-			{ href: '/contact', label: 'Contact' }
+			{ href: '/team', label: 'Екип' },
+			{ href: '/reviews', label: 'Отзиви' },
+			{ href: '/blog', label: 'Блог' },
+			{ href: '/contact', label: 'Контакти' }
 		]
 	},
 	{
 		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
 		links: [
-			{ href: '/inventory', label: 'Advertised samples' },
-			{ href: '/financing', label: 'Buying options' },
-			{ href: '/calculator', label: 'Budget calculator' },
-			{ href: '/sell-your-car', label: 'Trade-in enquiry' },
-			{ href: '/compare', label: 'Compare' },
-			{ href: '/faq', label: 'FAQ' }
+			{ href: '/inventory', label: 'Налични автомобили' },
+			{ href: '/financing', label: 'Финансиране' },
+			{ href: '/calculator', label: 'Калкулатор' },
+			{ href: '/sell-your-car', label: 'Продай или замени' },
+			{ href: '/compare', label: 'Сравнение' },
+			{ href: '/faq', label: 'ЧЗВ' }
 		]
 	},
 	{
@@ -55,8 +55,8 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 		links: [
 			{ href: '/contact', label: 'Контакт за оглед' },
 			{ href: '/sell-your-car/request', label: 'Заявка за оценка' },
-			{ href: '/sell-your-car', label: 'Trade-in enquiry' },
-			{ href: '/faq', label: 'FAQ' }
+			{ href: '/sell-your-car', label: 'Продай или замени' },
+			{ href: '/faq', label: 'ЧЗВ' }
 		]
 	}
 ];
@@ -64,3 +64,29 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 export const daynightFooterBottomLinks: DayNightFooterLink[] = [
 	{ href: '/terms', label: 'Условия за ползване' }
 ];
+
+// Shared navigation for the desktop columns and mobile accordions.
+export const daynightDealerFooterGroups = [
+	{
+		title: 'Бързи връзки',
+		links: [
+			{ href: '/about', label: 'За нас' },
+			{ href: '/team', label: 'Нашият екип' },
+			{ href: '/services', label: 'Услуги' },
+			{ href: '/faq', label: 'Често задавани въпроси' },
+			{ href: '/blog', label: 'Блог' },
+			{ href: '/contact', label: 'Контакти' }
+		]
+	},
+	{
+		title: 'Покупка и продажба',
+		links: [
+			{ href: '/inventory', label: 'Намери автомобил' },
+			{ href: '/sell-your-car', label: 'Продай или замени' },
+			{ href: '/financing', label: 'Лизинг и финансиране' },
+			{ href: '/inventory/map', label: 'Карта на автомобилите' },
+			{ href: '/calculator', label: 'Калкулатор за финансиране' },
+			{ href: '/reviews', label: 'Отзиви от клиенти' }
+		]
+	}
+] as const;

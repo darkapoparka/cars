@@ -87,7 +87,7 @@
 <div class="title-section pdp-title-card__main">
 	<a href={resolve('/inventory')} class="pdp-nav-button pdp-nav-button--back">
 		{@render leftArrow()}
-		<span>Back</span>
+		<span>Назад</span>
 	</a>
 	<h1 class="daynight-pdp-title">{vehicle.shortTitle} {vehicle.year}</h1>
 	<div class="pdp-title-actions flex items-center justify-end gap-12">
@@ -148,8 +148,8 @@
 		box-shadow: 0 4px 12px rgba(16, 24, 40, 0.045);
 		color: #242a33;
 		display: inline-flex;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 6px;
 		height: 40px;
 		justify-content: center;
@@ -172,7 +172,7 @@
 	}
 
 	.daynight-pdp-title {
-		font-size: 40px;
+		font-size: var(--sa-heading-section);
 		font-weight: var(--sa-weight-semibold);
 		line-height: 1.24;
 		margin: 0;
@@ -219,8 +219,8 @@
 		background: #1c1c1c;
 		padding: 7px 10px;
 		color: #fff;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		white-space: nowrap;
 	}
 
