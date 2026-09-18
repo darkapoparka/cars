@@ -47,6 +47,16 @@
   ],
   "accent": "#527b21",
   "accentLight": "#98c93c",
-  "logo": "/assets/excellent/logo-header.png",
-  "logoLight": "/assets/excellent/logo-cars.jpg"
+  "logo": "/assets/brand/logo-on-light.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "workingLogoPath": "assets/excellent/logo-header.png",
+  "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
