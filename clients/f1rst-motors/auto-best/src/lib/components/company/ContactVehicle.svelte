@@ -16,8 +16,8 @@
   .dn-contact-vehicle { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--dn-line); color: inherit; }
   .dn-contact-vehicle img { width: 88px; height: 66px; flex-shrink: 0; object-fit: cover; border-radius: 8px; }
   .dn-contact-vehicle > span { display: grid; gap: 3px; flex: 1; min-width: 0; }
-  .dn-contact-vehicle small, .dn-contact-vehicle span span { font-size: 12px; color: #666d77; }
-  .dn-contact-vehicle strong { font-size: 15px; line-height: 1.35; }
+  .dn-contact-vehicle small, .dn-contact-vehicle span span { font-size: var(--dn-text-meta); color: #666d77; }
+  .dn-contact-vehicle strong { font-size: var(--dn-text-body); line-height: var(--dn-leading-meta); }
   .dn-contact-vehicle:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   .dn-contact-vehicle--hero { margin: 0; padding: 12px; border: 0; border-radius: 12px; background: #fff; color: var(--dn-ink); text-align: left; }
 </style>

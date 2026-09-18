@@ -1,1 +1,81 @@
-import{brand}from'$config/brand';export type CompanyServiceIcon='inspection'|'import'|'leasing'|'trade-in';type CompanyService={index:string;icon:CompanyServiceIcon;title:string;description:string;href:string;cta:string};type ContactTopicId='general'|'inspection'|'import'|'leasing'|'trade-in';export type ContactTopic={id:ContactTopicId;label:string;title:string;description:string;mobileDescription?:string};export const contactPreparation:Partial<Record<ContactTopicId,{title:string;items:string[]}>>={inspection:{title:'Prepare for the visit',items:['Vehicle or listing','Preferred day and time','Showroom confirmation']},'trade-in':{title:'Sell-my-car enquiry',items:['Make, model and year','Mileage and condition','Photos or listing link']}};export function resolveImportUrl(value:string|null){try{if(!value)return null;const u=new URL(value);return ['http:','https:'].includes(u.protocol)?u.href:null}catch{return null}}export const companyServices:CompanyService[]=[{index:'01',icon:'inspection',title:`Showroom viewing in ${brand.city}`,description:'Confirm the vehicle and appointment before travelling.',href:'/contact?topic=inspection',cta:'Arrange a viewing'},{index:'02',icon:'trade-in',title:'Sell your car',description:'The official site provides a sell-my-car enquiry path.',href:'/contact?topic=trade-in',cta:'Prepare an enquiry'},{index:'03',icon:'import',title:'Vehicle sourcing enquiry',description:'Ask the showroom about a specific rare or luxury vehicle requirement.',href:'/contact?topic=general',cta:'Contact the showroom'}];export const contactTopics:ContactTopic[]=[{id:'general',label:'General enquiry',title:'Talk to F1rst Motors',description:'Ask about current stock, sourcing or next steps.'},{id:'inspection',label:'Viewing',title:'Arrange a showroom visit',description:'Confirm the exact vehicle and visit time before travelling.'},{id:'import',label:'Sourcing',title:'Vehicle sourcing enquiry',description:'Describe the vehicle or specification you are looking for.'},{id:'leasing',label:'Payment',title:'Payment enquiry',description:'Ask about current payment options; this demo does not quote finance terms.'},{id:'trade-in',label:'Sell my car',title:'Sell-my-car enquiry',description:'Share your vehicle details for a direct conversation.'}];export const resolveContactTopic=(v:string|null)=>contactTopics.find(x=>x.id===v)??contactTopics[0];export const showroomCoordinates={latitude:25.14,longitude:55.21} as const;
+import { brand } from '$config/brand';
+
+export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
+type CompanyService = { index: string; icon: CompanyServiceIcon; title: string; description: string; href: string; cta: string; };
+export type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
+export type ContactTopic = { id: ContactTopicId; label: string; title: string; description: string; mobileDescription?: string; };
+
+export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {};
+export function resolveImportUrl(value: string | null): string | null {
+  const candidate = value?.trim();
+  if (!candidate || candidate.length > 2048) return null;
+  try {
+    const url = new URL(candidate);
+    return ['http:', 'https:'].includes(url.protocol) && !url.username && !url.password ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+export const companyServices: CompanyService[] = [
+  {
+    "index": "01",
+    "icon": "inspection",
+    "title": "Dealer service",
+    "description": "Contact the showroom before travelling and confirm availability. F1rst Motors terms state that site logos/images/content require prior written consent. The committed branding and stock illustrations are internal proposal concepts, not copied official assets.",
+    "href": "/contact?topic=inspection",
+    "cta": "Ask the dealer"
+  },
+  {
+    "index": "02",
+    "icon": "import",
+    "title": "Dealer service",
+    "description": "Contact the showroom before travelling and confirm availability. F1rst Motors terms state that site logos/images/content require prior written consent. The committed branding and stock illustrations are internal proposal concepts, not copied official assets.",
+    "href": "/contact?topic=import",
+    "cta": "Ask the dealer"
+  },
+  {
+    "index": "03",
+    "icon": "leasing",
+    "title": "Dealer service",
+    "description": "Contact the showroom before travelling and confirm availability. F1rst Motors terms state that site logos/images/content require prior written consent. The committed branding and stock illustrations are internal proposal concepts, not copied official assets.",
+    "href": "/contact?topic=leasing",
+    "cta": "Ask the dealer"
+  }
+];
+export const contactTopics: ContactTopic[] = [
+  {
+    "id": "general",
+    "label": "General question",
+    "title": "Contact the dealer",
+    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+  },
+  {
+    "id": "inspection",
+    "label": "Viewing",
+    "title": "Viewing in Dubai",
+    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+  },
+  {
+    "id": "import",
+    "label": "Import",
+    "title": "Import enquiry",
+    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+  },
+  {
+    "id": "leasing",
+    "label": "Financing",
+    "title": "Financing enquiry",
+    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+  },
+  {
+    "id": "trade-in",
+    "label": "Trade-in",
+    "title": "Trade-in enquiry",
+    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+  }
+];
+export const resolveContactTopic = (value: string | null) =>
+  contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
+export const showroomCoordinates = {"latitude":0,"longitude":0} as const;
+export const dealerAddress = brand.address;
