@@ -37,7 +37,9 @@ try {
       for (let id = 1; id <= 8; id++) {
         await page.goto(`${base}/listing-detail-v1/${id}`, { waitUntil: 'networkidle' });
         const title = await page.locator('h1').innerText();
-        const finance = page.locator('.dn-finance-calculator');
+        if (width < 768) await page.locator('.dn-detail-finance-trigger').click();
+        const finance = page.locator(width < 768 ? '.dn-detail-finance-dialog .dn-finance-calculator' : '.dn-detail-finance-inline .dn-finance-calculator');
+        await finance.waitFor({ state: 'visible' });
         const amountBefore = await finance.locator('dd').first().innerText();
         await finance.locator('input').fill('10000');
         await finance.locator('select').selectOption('24');

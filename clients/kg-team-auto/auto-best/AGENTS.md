@@ -2,7 +2,7 @@
 
 This is an independent personalized dealer copy. Canonical editable source is Cars clients/kg-team-auto/. The dedicated dealer repository is a publishing mirror. Make lasting fixes in canonical source or the versioned packaging layer and regenerate; preserve unmatched mirror fixes first. This copy is not a reusable template master.
 
-Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/93eda8f8494e2294ded3cd2ee53a237100a82e98/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/93eda8f8494e2294ded3cd2ee53a237100a82e98/docs/LEAD-PUBLISHING.md).
+Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/7787cbbf4bd1c3a9ede345bfe39c4f7a84626621/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/7787cbbf4bd1c3a9ede345bfe39c4f7a84626621/docs/LEAD-PUBLISHING.md).
 
 Preserve this dealer identity, exact repository/domain and offered designs. Apply sourced facts to real data modules; metadata alone does not change the application. Protect layout and interactions during an ordinary correction. Sample forms do not prove delivery. Audit requests are read-only; publication never authorizes outreach.
 
