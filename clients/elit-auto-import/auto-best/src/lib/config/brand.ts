@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "ул. „Прилеп“ 74А, м-т Пчелина",
   appointment: "Работното време се уточнява по телефона.",
-  logo: "/assets/elit/logo.png",
-  logoOnDark: "/assets/elit/logo.png"
+  logo: "/assets/brand/logo-on-light.webp",
+  logoOnDark: "/assets/brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;
