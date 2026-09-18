@@ -133,7 +133,7 @@
 <style>
 	@media (min-width: 992px) {
 		.site-chrome {
-			font: 400 16px/24px var(--sa-font);
+			font: var(--sa-weight-regular) var(--sa-text-base)/var(--sa-text-2xl) var(--sa-font);
 		}
 		.site-chrome :global([data-daynight-header-tool]) {
 			height: 48px !important;
@@ -306,7 +306,7 @@
 
 		.site-chrome :global(.site-chrome-nav-row #main-nav a) {
 			color: var(--sa-header-ink) !important;
-			font-size: 18px !important;
+			font-size: var(--sa-text-lg) !important;
 			padding-inline: 12px !important;
 		}
 

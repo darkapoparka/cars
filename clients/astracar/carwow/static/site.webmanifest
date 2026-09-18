@@ -1,16 +1,17 @@
 {
   "name": "Астракар",
   "short_name": "Астракар",
-  "description": "Астракар: автомобили, огледи и контакт във Варна.",
+  "description": "Day Night Auto: налични автомобили, огледи и контакт в София.",
   "lang": "bg",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#30343b",
+  "theme_color": "#d71920",
   "icons": [
     {
-      "src": "/assets/astracar/astracar-logo.png",
+      "src": "/brand/daynight-favicon.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

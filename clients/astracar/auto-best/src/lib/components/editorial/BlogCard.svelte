@@ -1,13 +1,14 @@
 <script lang="ts">
+  import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
   import { brand } from '$config/brand';
   import type { BlogPost } from '$data/editorial';
 
-  let { post, priority = false }: { post: BlogPost; priority?: boolean } = $props();
+  let { post, returnTo, priority = false }: { post: BlogPost; returnTo?: string; priority?: boolean } = $props();
 </script>
 
-<article class="dn-blog-card">
-  <a class="dn-blog-card__link" href={resolve('/blog-detail/[id]', { id: String(post.id) })} aria-label={post.title}>
+<article id={`article-${post.id}`} class="dn-blog-card">
+  <a class="dn-blog-card__link" href={withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo)} aria-label={post.title}>
     <span class="dn-blog-card__media">
       <img
         src={post.image}
@@ -21,7 +22,7 @@
     </span>
     <span class="dn-blog-card__body">
       <span class="dn-blog-card__meta">
-        <span>{brand.name}</span>
+        <span class="dn-blog-card__brand">{brand.name}</span>
         <span class="dn-blog-card__category">{post.category}</span>
       </span>
       <h2>{post.title}</h2>
@@ -55,7 +56,7 @@
   }
 
   .dn-blog-card__link:focus-visible {
-    outline: 3px solid rgba(196, 1, 1, .28);
+    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 28%);
     outline-offset: -3px;
   }
 
@@ -88,13 +89,13 @@
     display: flex;
     align-items: center;
     color: #4f5662;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
+    font-size: var(--dn-text-meta);
+    font-weight: var(--dn-weight-medium);
+    line-height: var(--dn-leading-meta);
   }
 
-  .dn-blog-card__meta > span:first-child {
-    font-weight: 700;
+  .dn-blog-card__brand {
+    font-weight: var(--dn-weight-semibold);
   }
 
   .dn-blog-card__category {
@@ -115,10 +116,10 @@
   h2 {
     margin: 9px 0 8px;
     color: #202329;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.35;
-    letter-spacing: 0;
+    font-size: var(--dn-text-lead);
+    font-weight: var(--dn-weight-medium);
+    line-height: var(--dn-leading-meta);
+    letter-spacing: var(--dn-tracking-normal);
     transition: color 180ms ease-out;
   }
 
@@ -145,12 +146,12 @@
     .dn-blog-card__media { height: 100%; min-height: 132px; }
     .dn-blog-card__media img { height: 100%; }
     .dn-blog-card__body { min-height: 0; padding: 12px; }
-    .dn-blog-card__meta { min-height: 0; font-size: 12px; line-height: 1.3; }
-    .dn-blog-card__meta > span:first-child { display: none; }
+    .dn-blog-card__meta { min-height: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-heading); }
+    .dn-blog-card__brand { display: none; }
     .dn-blog-card__category { padding-left: 0; }
     .dn-blog-card__category::before { display: none; }
-    h2 { margin: 5px 0 6px; font-size: 16px; font-weight: 600; line-height: 1.3; }
-    .dn-blog-card__text { margin-top: 0; font-size: 13px; line-height: 1.45; }
+    h2 { margin: 5px 0 6px; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
+    .dn-blog-card__text { margin-top: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   }
 
   @media (prefers-reduced-motion: reduce) {
