@@ -45,6 +45,10 @@ jobs:
           cd ..
           ln -s logo-audit-runtime/node_modules node_modules
 
+      - name: Normalize live variant routes
+        run: |
+          sed -i 's#"/auto-best/"#"/"#g; s#"/modern/"#"/variant-2/"#g; s#"/carwow/"#"/variant-3/"#g' scripts/logo-refresh-dealers.json
+
       - name: Run live and asset audit
         run: node scripts/logo-refresh-audit.mjs
         env:
