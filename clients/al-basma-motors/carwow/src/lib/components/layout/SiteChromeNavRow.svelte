@@ -22,7 +22,7 @@
 		onSearchToggle: () => void;
 	} = $props();
 
-	const phoneHref = `tel:${daynightSite.phone}`;
+	const phoneHref = daynightSite.phoneHref;
 	const logoSrcset = desktopOnlySrcset(daynightSite.logoLight, 570);
 	const logoSizes = desktopOnlySizes('190px');
 	const navToolClasses =
@@ -30,7 +30,7 @@
 	const homePhoneClasses =
 		'site-chrome-phone-btn inline-grid size-10 place-items-center rounded-sa-pill text-sa-surface no-underline transition-colors duration-150 ease-sa hover:bg-white/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_svg]:size-[22px]';
 	const badgeClasses =
-		'absolute top-px right-0 grid h-[17px] min-w-[17px] place-items-center rounded-sa-pill bg-sa-red px-1 text-[10px] leading-none font-bold text-sa-surface';
+		'absolute top-px right-0 grid h-[17px] min-w-[17px] place-items-center rounded-sa-pill bg-sa-red px-1 text-[length:var(--sa-text-xs)] leading-none font-bold text-sa-surface';
 </script>
 
 <div
@@ -82,7 +82,10 @@
 						title="Отвори търсене"
 						aria-expanded={searchOpen}
 						aria-controls="searchForm"
-						onclick={onSearchToggle}
+						onclick={(event) => {
+							event.currentTarget.focus({ preventScroll: true });
+							onSearchToggle();
+						}}
 					>
 						<SiteChromeIcon name="search" />
 					</button>

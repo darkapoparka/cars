@@ -132,7 +132,7 @@
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__status) {
 			border-radius: 7px !important;
-			font-size: 12px !important;
+			font-size: var(--sa-text-caption) !important;
 			min-height: 28px !important;
 			padding: 0 10px !important;
 		}
@@ -155,13 +155,13 @@
 			border: 1px solid rgba(255, 255, 255, 0.45) !important;
 			border-radius: 7px !important;
 			box-shadow: none !important;
-			font-size: 12px !important;
+			font-size: var(--sa-text-caption) !important;
 			min-height: 28px !important;
 			padding: 0 9px !important;
 		}
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__badge-link) {
-			font-size: 12px !important;
+			font-size: var(--sa-text-caption) !important;
 		}
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__content) {
@@ -172,8 +172,8 @@
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__title),
 		:global(body.daynight-home-page .daynight-home-inventory-card__title a) {
-			font-size: 18px !important;
-			font-weight: 700 !important;
+			font-size: var(--sa-text-lg) !important;
+			font-weight: var(--sa-weight-strong) !important;
 			height: 47px !important;
 			line-height: 1.3 !important;
 			max-height: 47px !important;
@@ -224,7 +224,7 @@
 
 		:global(body.daynight-home-page .daynight-home-inventory-card__specs li span) {
 			color: #475467 !important;
-			font-size: 13px !important;
+			font-size: var(--sa-text-caption) !important;
 			line-height: 18px !important;
 		}
 
@@ -237,13 +237,13 @@
 		}
 
 		:global(body.daynight-home-page .daynight-card-price__value) {
-			font-size: 24px !important;
-			font-weight: 750 !important;
+			font-size: var(--sa-text-2xl) !important;
+			font-weight: var(--sa-weight-strong) !important;
 		}
 
 		:global(body.daynight-home-page .daynight-card-price__monthly),
 		:global(body.daynight-home-page .daynight-card-price__link) {
-			font-size: 13px !important;
+			font-size: var(--sa-text-caption) !important;
 			line-height: 17px !important;
 		}
 	}
