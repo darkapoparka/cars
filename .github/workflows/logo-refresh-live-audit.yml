@@ -42,7 +42,8 @@ jobs:
           npm init -y
           npm install playwright@1.55.0 sharp@0.34.3
           npx playwright install --with-deps chromium
-          echo "NODE_PATH=$PWD/node_modules" >> "$GITHUB_ENV"
+          cd ..
+          ln -s logo-audit-runtime/node_modules node_modules
 
       - name: Run live and asset audit
         run: node scripts/logo-refresh-audit.mjs
