@@ -24,7 +24,7 @@
   .dn-hero__location { display: none; }
 
   @media (min-width: 992px) {
-    .dn-hero { background: #101114; }
+    .dn-hero { background: var(--dn-ink-deep); }
     .dn-hero__inner { height: 320px; padding-top: 0; }
     .dn-hero .dn-hero__copy { position: absolute; bottom: 24px; width: min(800px, calc(100% - 480px)); display: block; }
     .dn-hero__copy h1 { color: #fff; font-size: var(--dn-text-fluid-hero); line-height: var(--dn-leading-section); }

@@ -18,7 +18,7 @@
 
 <VehicleSearchDialog filters={draftFilters}>
 {#snippet children(openFilters, filtersOpen)}
-<div class="dn-listing-stage">
+<div class="dn-listing-stage" data-layout="hero-discovery">
   <ListingHero count={data.vehicles.length} />
   <ListingFilters filters={data.filters} {openFilters} {filtersOpen} onDraftChange={(filters) => draftFilters = filters} />
 </div>
