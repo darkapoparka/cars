@@ -99,5 +99,6 @@ if git diff --cached --quiet; then
   echo 'Logo implementation already matches the approved contract.'
 else
   git commit -m 'Complete contextual logo implementation and QA'
-  git push origin HEAD:main
+  target_branch="${GITHUB_REF_NAME:-$(git branch --show-current)}"
+  git push origin "HEAD:$target_branch"
 fi
