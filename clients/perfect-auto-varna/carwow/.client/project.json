@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "client": "perfect-auto-varna",
   "templateKey": "carwow",
-  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
   "createdAt": "2026-09-09T21:56:28.808Z",
   "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
@@ -39,19 +39,19 @@
   },
   "templateSource": {
     "repository": "darkapoparka/cars-template-carwow",
-    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
     "exportPolicy": "cars-source-v1"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "cc82770c4cb62175b58248efb2662b7d61de114c",
+  "workflowCommit": "f1080d5b6bbc58904e39842fb0ad863303c35dc9",
   "refresh": {
     "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "refreshedAt": "2026-09-14T21:24:14.256Z",
-    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+    "refreshedAt": "2026-09-18T23:02:07.598Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
     "mode": "fresh-template-plus-dealer-overlay"
   }
 }
