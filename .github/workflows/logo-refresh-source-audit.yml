@@ -1,0 +1,180 @@
+name: Logo refresh source audit
+
+on:
+  push:
+    branches:
+      - logo-refresh-source-audit-2026-09-18
+    paths:
+      - .github/workflows/logo-refresh-source-audit.yml
+
+concurrency:
+  group: logo-refresh-source-audit
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            .github/workflows/logo-refresh-source-audit.yml
+            qa-source-output
+          sparse-checkout-cone-mode: false
+
+      - name: Audit deployment sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf qa-source-output /tmp/logo-source-audit
+          mkdir -p qa-source-output /tmp/logo-source-audit
+          cat > /tmp/logo-repos.tsv <<'EOF'
+          cars-priselci	darkapoparka/cars-priselci	.
+          cars-outletcarsvarna	darkapoparka/cars-outletcarsvarna	.
+          cars-promosalevarna	darkapoparka/cars-promosalevarna	.
+          cars-autolife	darkapoparka/cars-autolife	.
+          cars-astracar	darkapoparka/cars-astracar	.
+          cars-alhamooralthahabi	darkapoparka/cars-alhamooralthahabi	.
+          cars-avangardauto	darkapoparka/cars-avangardauto	.
+          cars-f1rstmotors	darkapoparka/cars-f1rstmotors	.
+          cars-albasmamotors	darkapoparka/cars-albasmamotors	.
+          cars-elitautoimport	darkapoparka/cars-elitautoimport	.
+          cars-automarketvarna	darkapoparka/cars-automarketvarna	.
+          cars-eliqauto	darkapoparka/cars-eliqauto	.
+          cars-kgteamauto	darkapoparka/cars-kgteamauto	.
+          cars-championautopro	darkapoparka/cars-championautopro	.
+          excellent-cars	darkapoparka/excellent-cars	.
+          cars-perfectauto	darkapoparka/cars-perfectauto	.
+          cars-asko96	darkapoparka/cars-asko96	.
+          cars-texasdriveauto	darkapoparka/cars-texasdriveauto	.
+          day-and-night-a	darkapoparka/day-and-night-autodeal	.
+          cars-thedealerspoint	darkapoparka/cars-thedealerspoint	.
+          cars-ivoauto	darkapoparka/cars-ivoauto	.
+          cars-navaracar	darkapoparka/cars-navaracar	.
+          cars-legendauto	darkapoparka/cars-legendauto	.
+          cars-isautovarna	darkapoparka/cars	clients/is-auto-varna
+          EOF
+
+          while IFS=$'\t' read -r project repo subdir; do
+            echo "Auditing $project from $repo ($subdir)"
+            target="/tmp/logo-source-audit/$project"
+            git clone --depth 1 --filter=blob:none --sparse "https://github.com/$repo.git" "$target"
+            if [[ "$subdir" == "." ]]; then
+              git -C "$target" sparse-checkout set auto-best modern carwow assets scripts package.json package-lock.json pnpm-lock.yaml yarn.lock vercel.json 2>/dev/null || true
+              base="$target"
+            else
+              git -C "$target" sparse-checkout set "$subdir"
+              base="$target/$subdir"
+            fi
+            PROJECT="$project" REPO="$repo" BASE="$base" ROOT="$target" python3 - <<'PY'
+          import json, os, pathlib, re, subprocess
+
+          project = os.environ['PROJECT']
+          repo = os.environ['REPO']
+          base = pathlib.Path(os.environ['BASE'])
+          root = pathlib.Path(os.environ['ROOT'])
+          out = pathlib.Path('qa-source-output') / f'{project}.json'
+          out.parent.mkdir(parents=True, exist_ok=True)
+
+          def run(*args):
+              return subprocess.run(args, text=True, capture_output=True, check=False)
+
+          head = run('git', '-C', str(root), 'rev-parse', 'HEAD').stdout.strip()
+          files = []
+          if base.exists():
+              files = [p for p in base.rglob('*') if p.is_file() and '.git' not in p.parts and 'node_modules' not in p.parts]
+
+          logo_files = []
+          for p in files:
+              low = p.name.lower()
+              if not re.search(r'(logo|wordmark|brand|identity)', low):
+                  continue
+              if p.suffix.lower() not in {'.png', '.webp', '.jpg', '.jpeg', '.svg', '.avif'}:
+                  continue
+              rel = p.relative_to(base).as_posix()
+              item = {'path': rel, 'bytes': p.stat().st_size, 'extension': p.suffix.lower()}
+              if p.suffix.lower() in {'.png', '.webp', '.jpg', '.jpeg', '.avif'}:
+                  q = run('identify', '-format', '%w|%h|%[channels]|%[pixel:p{0,0}]', str(p))
+                  if q.returncode == 0:
+                      parts = q.stdout.split('|', 3)
+                      if len(parts) == 4:
+                          item.update({'width': int(parts[0]), 'height': int(parts[1]), 'channels': parts[2], 'corner': parts[3]})
+                  else:
+                      item['identifyError'] = q.stderr.strip()[:300]
+              logo_files.append(item)
+
+          text_exts = {'.svelte', '.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs', '.astro', '.html', '.css', '.json', '.md'}
+          svg_refs = []
+          raster_refs = []
+          for p in files:
+              if p.suffix.lower() not in text_exts or p.stat().st_size > 2_000_000:
+                  continue
+              try:
+                  text = p.read_text('utf-8')
+              except Exception:
+                  continue
+              rel = p.relative_to(base).as_posix()
+              for no, line in enumerate(text.splitlines(), 1):
+                  if re.search(r'(?i)(logo|wordmark|brand)[^\n]{0,180}\.svg|\.svg[^\n]{0,180}(logo|wordmark|brand)', line):
+                      svg_refs.append({'path': rel, 'line': no, 'text': line.strip()[:500]})
+                  if re.search(r'(?i)(logo|wordmark|brand)[^\n]{0,180}\.(png|webp)|\.(png|webp)[^\n]{0,180}(logo|wordmark|brand)', line):
+                      raster_refs.append({'path': rel, 'line': no, 'text': line.strip()[:500]})
+
+          required = ['logo-master.png', 'logo-universal.webp', 'logo-on-light.webp', 'logo-on-dark.webp', 'logo-on-accent.webp']
+          basenames = {}
+          for name in required + ['logo-on-yellow.webp']:
+              basenames[name] = sorted(x['path'] for x in logo_files if pathlib.PurePosixPath(x['path']).name.lower() == name)
+
+          package_files = []
+          for candidate in [base / 'package.json', base / 'auto-best/package.json', base / 'modern/package.json', base / 'carwow/package.json']:
+              if candidate.exists():
+                  try:
+                      data = json.loads(candidate.read_text('utf-8'))
+                      package_files.append({'path': candidate.relative_to(base).as_posix(), 'scripts': data.get('scripts', {})})
+                  except Exception as exc:
+                      package_files.append({'path': candidate.relative_to(base).as_posix(), 'error': str(exc)})
+
+          result = {
+              'project': project,
+              'repo': repo,
+              'base': str(base.relative_to(root)) if base != root else '.',
+              'headSha': head,
+              'requiredAssetPaths': basenames,
+              'missingRequiredBasenames': [name for name in required if not basenames[name]],
+              'logoFiles': sorted(logo_files, key=lambda x: x['path']),
+              'svgLogoReferences': svg_refs,
+              'rasterLogoReferences': raster_refs,
+              'packageFiles': package_files,
+          }
+          out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + '\n', 'utf-8')
+          PY
+          done < /tmp/logo-repos.tsv
+
+          python3 - <<'PY'
+          import json, pathlib
+          rows = []
+          for p in sorted(pathlib.Path('qa-source-output').glob('*.json')):
+              d = json.loads(p.read_text('utf-8'))
+              rows.append({
+                  'project': d['project'],
+                  'repo': d['repo'],
+                  'headSha': d['headSha'],
+                  'missingRequiredBasenames': d['missingRequiredBasenames'],
+                  'svgLogoReferenceCount': len(d['svgLogoReferences']),
+                  'logoFileCount': len(d['logoFiles']),
+              })
+          pathlib.Path('qa-source-output/summary.json').write_text(json.dumps(rows, indent=2) + '\n')
+          PY
+
+      - name: Commit source audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --sparse qa-source-output
+          git commit -m "chore(qa): audit logo sources across 24 projects" || exit 0
+          git push
