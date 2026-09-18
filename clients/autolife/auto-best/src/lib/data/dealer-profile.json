@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed",
     "accent": "#a46d24",
-    "logo": "/assets/autolife/wordmark.svg",
-    "logoLight": "/assets/autolife/wordmark.svg",
-    "logoDark": "/assets/autolife/wordmark.svg",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -41,7 +41,7 @@
       "Лизинг е отбелязан в обявите; доставчик и условия не са потвърдени"
     ],
     "inventoryNotice": "Представителна извадка от 16 публикувани обяви; наличност и цена се потвърждават по телефона.",
-    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
     "observedAt": "2026-09-07",
     "coordinates": {
       "latitude": 43.22861,
@@ -76,7 +76,7 @@
         "Продажба на автомобили",
         "Лизинг е отбелязан в обявите; доставчик и условия не са потвърдени"
       ],
-      "logo": "/assets/autolife/wordmark.svg",
+      "logo": "/assets/brand/logo-on-light.webp",
       "logoNote": "Temporary plain text wordmark. Source logo slot contains forecourt photograph, not isolated artwork. Original sign/forecourt photo retained.",
       "showroom": "/assets/autolife/cover.jpg",
       "stockSnapshotDate": "2026-09-07",
@@ -101,7 +101,18 @@
       "crm": {
         "registered": false
       },
-      "publicUrl": null
+      "publicUrl": null,
+      "workingLogoPath": "assets/autolife/wordmark.svg",
+      "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+      "branding": {
+        "logoOnLight": "/assets/brand/logo-on-light.webp",
+        "logoOnDark": "/assets/brand/logo-on-dark.webp",
+        "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+      },
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "logoLight": "/assets/brand/logo-on-dark.webp",
+      "logoDark": "/assets/brand/logo-on-light.webp"
     }
   },
   "listings": [
@@ -2341,7 +2352,7 @@
       "Продажба на автомобили",
       "Лизинг е отбелязан в обявите; доставчик и условия не са потвърдени"
     ],
-    "logo": "/assets/autolife/wordmark.svg",
+    "logo": "/assets/brand/logo-on-light.webp",
     "logoNote": "Temporary plain text wordmark. Source logo slot contains forecourt photograph, not isolated artwork. Original sign/forecourt photo retained.",
     "showroom": "/assets/autolife/cover.jpg",
     "stockSnapshotDate": "2026-09-07",
@@ -2366,7 +2377,18 @@
     "crm": {
       "registered": false
     },
-    "publicUrl": null
+    "publicUrl": null,
+    "workingLogoPath": "assets/autolife/wordmark.svg",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "branding": {
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+    },
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp"
   },
   "sourceCount": 16
 }
