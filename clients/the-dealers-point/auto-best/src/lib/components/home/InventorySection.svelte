@@ -7,10 +7,10 @@
 
 <section class="dn-section dn-inventory" aria-labelledby="featured-title">
   <div class="container dn-inventory-panel">
-    <div class="dn-inventory__heading dn-home-section-heading">
+    <div class="dn-inventory__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
       <h2 id="featured-title" class="dn-home-section-title">
         <span class="dn-heading-desktop">Избрани автомобили</span>
-        <span class="dn-heading-mobile">Избрани</span>
+        <span class="dn-heading-mobile">Избрани автомобили</span>
       </h2>
       <a class="dn-inventory__all dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили">
         <span class="dn-heading-desktop">Вижте всички автомобили</span>
@@ -28,6 +28,8 @@
 </section>
 
 <style>
+  
+
   .dn-inventory {
     background: #fff;
   }
@@ -53,11 +55,11 @@
   .dn-inventory__heading h2 {
     width: auto;
     margin: 0;
-    color: #171a20;
-    font-size: 42px;
-    font-weight: 650;
-    line-height: 1.12;
-    letter-spacing: -0.03em;
+    color: var(--dn-ink-strong);
+    font-size: var(--dn-text-section);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-section);
+    letter-spacing: var(--dn-tracking-heading);
     text-align: center;
   }
 
@@ -68,11 +70,11 @@
     justify-content: center;
     padding: 0 28px;
     border-radius: var(--dn-radius-button);
-    background: #c40101;
+    background: var(--dn-red);
     color: #fff;
-    font-size: var(--dn-text-lead);
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
+    line-height: var(--dn-leading-control);
     transition: background-color 180ms ease-out;
   }
 
@@ -87,20 +89,16 @@
   }
 
   .dn-inventory__all:focus-visible {
-    outline: 3px solid rgba(196, 1, 1, 0.24);
+    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 24%);
     outline-offset: 3px;
   }
 
   .dn-inventory__grid {
+    --dn-vehicle-card-title-lines: 1;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 30px;
     align-items: stretch;
-  }
-
-  .dn-inventory__grid :global(.dn-vehicle-card) {
-    width: 100%;
-    height: 100%;
   }
 
   @media (max-width: 1200px) {
@@ -122,7 +120,7 @@
 
     .dn-inventory__heading h2 {
       width: auto;
-      font-size: 2.25rem;
+      font-size: var(--dn-text-section-compact);
       text-align: center;
     }
 
@@ -134,7 +132,7 @@
 
   @media (max-width: 767px) {
     .dn-inventory {
-      padding: 24px 0 12px;
+      padding: var(--dn-space-6) 0 0;
       background: var(--dn-mobile-canvas);
     }
 
@@ -156,9 +154,9 @@
     }
 
     .dn-inventory__heading h2 {
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.15;
+      font-size: var(--dn-text-subheading);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
       text-align: left;
     }
 
@@ -170,24 +168,23 @@
       display: inline;
     }
 
-    .dn-inventory__all {
-      min-height: 44px;
-      padding: 0;
-      background: transparent;
-      color: #4f5661;
-      font-size: 14px;
-      font-weight: 650;
-    }
+    .dn-inventory__all { display: none; }
 
     .dn-inventory__grid {
+      --dn-vehicle-card-image-ratio: 16 / 9;
+      --dn-vehicle-card-content-padding: var(--dn-space-3);
+      --dn-vehicle-card-specs-gap: var(--dn-space-2);
+      --dn-vehicle-card-spec-icon-gap: var(--dn-space-1);
+      --dn-vehicle-card-spec-padding: calc(var(--dn-space-1) + var(--dn-space-half));
+      --dn-vehicle-card-price-gap: var(--dn-space-2);
       display: grid;
-      grid-auto-columns: min(286px, calc(100vw - 76px));
+      grid-auto-columns: var(--dn-home-carousel-card-width);
       grid-auto-flow: column;
       grid-template-columns: none;
-      gap: 10px;
+      gap: var(--dn-home-carousel-gap);
       overflow-x: auto;
-      padding: 0 12px 12px;
-      scroll-padding-left: 12px;
+      padding: 0 var(--dn-space-3) var(--dn-space-2);
+      scroll-padding-left: var(--dn-space-3);
       scroll-snap-type: x proximity;
       scrollbar-width: none;
     }
@@ -199,21 +196,20 @@
     .dn-inventory__grid :global(.dn-vehicle-card) {
       scroll-snap-align: start;
     }
-
-    .dn-inventory__grid :global(.dn-vehicle-card:nth-child(n + 5)) {
-      display: none;
-    }
   }
 
   @media (min-width: 992px) {
+    
+
     .dn-inventory {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      padding-top: var(--dn-home-section-space);
+      padding-bottom: var(--dn-home-section-space);
       background: #fff;
     }
 
     .dn-inventory-panel {
-      padding: 32px;
+      padding: 0;
+      background: transparent;
     }
 
     .dn-inventory__heading {
@@ -224,7 +220,7 @@
     }
 
     .dn-inventory__heading h2 {
-      font-size: 36px;
+      font-size: var(--dn-text-section-compact);
       text-align: left;
     }
 
@@ -234,7 +230,7 @@
       border-radius: 10px;
       background: transparent;
       color: #24272c;
-      font-size: 16px;
+      font-size: var(--dn-control-size);
       white-space: nowrap;
     }
 
@@ -247,6 +243,11 @@
     .dn-inventory__grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 24px;
+      position: relative;
+      margin-top: -24px;
+      padding: 24px;
+      border-radius: 16px;
+      background: var(--dn-home-panel);
     }
   }
 
@@ -262,7 +263,4 @@
     }
   }
 
-  @media (max-width: 767px) {
-    .dn-inventory__all { display: none; }
-  }
 </style>

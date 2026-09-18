@@ -7,6 +7,8 @@ import { Heart, Images } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { rememberInventoryReturn } from "../lib/inventory-return";
+import { mobileVehicleCardMediaClassName } from "../lib/mobile-vehicle-card-layout";
 import { getVehicleCardVariant } from "../lib/vehicle-card-policy";
 import type { VehicleCardProps } from "../lib/vehicle-card-types";
 import {
@@ -60,17 +62,21 @@ export const VehicleCard = ({
   return (
     <article
       className={cn(
-        "group flex overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
-        "lg:transition-colors lg:hover:border-foreground/30",
+        "group flex overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border",
+        "lg:transition-[border-color,box-shadow] lg:hover:border-foreground/25 lg:hover:shadow-sm",
+        !isDesktopComparison &&
+          "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
           "lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-0 xl:grid-cols-[15rem_minmax(0,1fr)]",
         isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
       )}
       data-presentation={presentation}
+      onClickCapture={() => rememberInventoryReturn(listingHref)}
     >
       <div
         className={cn(
-          "relative min-h-[7.5rem] w-[7.5rem] shrink-0 self-stretch overflow-hidden bg-secondary sm:w-36 lg:min-h-0 lg:w-full",
+          mobileVehicleCardMediaClassName,
+          "lg:min-h-0 lg:w-full lg:max-w-none",
           getVehicleCardMediaClassName(isCompact, isGrid, isDesktopComparison)
         )}
         data-slot="vehicle-card-media"
@@ -89,7 +95,7 @@ export const VehicleCard = ({
         >
           <Image
             alt={primaryImage?.alt ?? listing.title}
-            className="object-cover"
+            className="object-cover object-center lg:object-[center_60%]"
             fill
             loading={priority ? "eager" : "lazy"}
             onError={() => {

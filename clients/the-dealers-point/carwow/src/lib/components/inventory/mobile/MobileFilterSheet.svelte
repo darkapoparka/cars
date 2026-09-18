@@ -519,7 +519,7 @@
 			<MobileFilterOptions
 				ariaLabel="Цена"
 				allLabel="Всички цени"
-				allCount={vehiclesCount}
+				allCount={priceOptionCount('')}
 				allActive={!price}
 				options={priceOptions}
 				isSelected={(value) => price === value}

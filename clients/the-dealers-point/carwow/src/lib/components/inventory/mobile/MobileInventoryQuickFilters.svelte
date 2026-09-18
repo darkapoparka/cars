@@ -1,16 +1,9 @@
 <script lang="ts">
-	import { ArrowUpDown, Car, Fuel, Gauge, SlidersHorizontal } from '@lucide/svelte';
-	import { resolve } from '$app/paths';
-	import type { FilterSheetMode, SortKey } from '$lib/types/mobile-inventory';
-
-	type BrandLogoPath = `/assets/images/brand/${string}`;
+	import { Car, ChevronDown, Fuel, Gauge } from '@lucide/svelte';
+	import type { FilterSheetMode } from '$lib/types/mobile-inventory';
 
 	let {
 		vehiclesCount,
-		resultCount,
-		hasAdvancedFilters,
-		sort,
-		sortChipLabel,
 		selectedBrands,
 		brandSummary,
 		selectedModels,
@@ -22,16 +15,10 @@
 		bodySummary,
 		hasActiveFilters,
 		priceLabel,
-		brandLogoPath,
 		openFilterSheet,
-		clearFilters,
-		clearPrice
+		clearFilters
 	}: {
 		vehiclesCount: number;
-		resultCount: number;
-		hasAdvancedFilters: boolean;
-		sort: SortKey;
-		sortChipLabel: string;
 		selectedBrands: string[];
 		brandSummary: string;
 		selectedModels: string[];
@@ -43,39 +30,13 @@
 		bodySummary: string;
 		hasActiveFilters: boolean;
 		priceLabel: string;
-		brandLogoPath: (value: string) => BrandLogoPath | undefined;
 		openFilterSheet: (mode: FilterSheetMode) => void;
 		clearFilters: () => void;
-		clearPrice: () => void;
 	} = $props();
 </script>
 
-<div class="mobile-inventory-quick" aria-label="Бързи филтри">
-	<p class="mobile-inventory-count" role="status">
-		{resultCount}
-		{resultCount === 1 ? 'резултат' : 'резултата'}
-	</p>
+<div class="mobile-inventory-quick" role="group" aria-label="Бързи филтри">
 	<div class="mobile-inventory-pills">
-		<button
-			type="button"
-			class={hasAdvancedFilters
-				? 'mobile-inventory-filter-chip is-active'
-				: 'mobile-inventory-filter-chip'}
-			onclick={() => openFilterSheet('all')}
-		>
-			<SlidersHorizontal size={16} strokeWidth={2.25} />
-			<span class="mobile-inventory-pill-label">Филтри</span>
-		</button>
-		<button
-			type="button"
-			class={sort !== 'price-asc'
-				? 'mobile-inventory-sort-chip is-active'
-				: 'mobile-inventory-sort-chip'}
-			onclick={() => openFilterSheet('sort')}
-		>
-			<ArrowUpDown size={16} strokeWidth={2.25} />
-			<span class="mobile-inventory-pill-label">{sortChipLabel}</span>
-		</button>
 		<button
 			type="button"
 			class={selectedBrands.length
@@ -83,26 +44,15 @@
 				: 'mobile-inventory-make-chip'}
 			onclick={() => openFilterSheet('brand')}
 		>
-			{#if selectedBrands.length}
-				{@const logo = brandLogoPath(selectedBrands[0])}
-				{#if logo}
-					<img
-						class="mobile-inventory-brand-logo"
-						src={resolve(logo)}
-						alt=""
-						width="17"
-						height="17"
-						aria-hidden="true"
-					/>
-				{:else}
-					<Car size={17} strokeWidth={2.2} />
-				{/if}
-			{:else}
-				<Car size={17} strokeWidth={2.2} />
-			{/if}
 			<span class="mobile-inventory-pill-label">
 				{selectedBrands.length ? brandSummary : 'Марка'}
 			</span>
+			<ChevronDown
+				class="mobile-inventory-pill-chevron"
+				size={16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/>
 		</button>
 		<button
 			type="button"
@@ -111,10 +61,29 @@
 				: 'mobile-inventory-model-chip'}
 			onclick={() => openFilterSheet('model')}
 		>
-			<Car size={17} strokeWidth={2.2} />
 			<span class="mobile-inventory-pill-label">
 				{selectedModels.length ? modelSummary : 'Модел'}
 			</span>
+			<ChevronDown
+				class="mobile-inventory-pill-chevron"
+				size={16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/>
+		</button>
+		<button
+			type="button"
+			class="mobile-inventory-price-chip"
+			class:is-active={Boolean(priceLabel)}
+			onclick={() => openFilterSheet('price')}
+		>
+			<span class="mobile-inventory-pill-label">{priceLabel || 'Цена'}</span>
+			<ChevronDown
+				class="mobile-inventory-pill-chevron"
+				size={16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/>
 		</button>
 		<button
 			type="button"
@@ -123,6 +92,12 @@
 		>
 			<Fuel size={16} strokeWidth={2.25} />
 			<span class="mobile-inventory-pill-label">{fuel || 'Гориво'}</span>
+			<ChevronDown
+				class="mobile-inventory-pill-chevron"
+				size={16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/>
 		</button>
 		<button
 			type="button"
@@ -131,6 +106,12 @@
 		>
 			<Gauge size={16} strokeWidth={2.25} />
 			<span class="mobile-inventory-pill-label">{mileageLabel || 'Пробег'}</span>
+			<ChevronDown
+				class="mobile-inventory-pill-chevron"
+				size={16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/>
 		</button>
 		<button
 			type="button"
@@ -143,25 +124,24 @@
 			<span class="mobile-inventory-pill-label">
 				{selectedBodies.length ? bodySummary : 'Каросерия'}
 			</span>
+			<ChevronDown
+				class="mobile-inventory-pill-chevron"
+				size={16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/>
 		</button>
 		<button type="button" class={!hasActiveFilters ? 'is-active' : ''} onclick={clearFilters}>
 			<Car size={17} strokeWidth={2.2} />
 			<span class="mobile-inventory-pill-label"
 				>{hasActiveFilters ? `Изчисти (${vehiclesCount})` : `Всички ${vehiclesCount}`}</span
 			>
+			<ChevronDown
+				class="mobile-inventory-pill-chevron"
+				size={16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/>
 		</button>
-		{#if priceLabel}
-			<button type="button" class="is-active" onclick={clearPrice}>
-				<span class="mobile-inventory-pill-label">{priceLabel}</span>
-			</button>
-		{/if}
 	</div>
 </div>
-
-<style>
-	.mobile-inventory-count {
-		margin: 0 0 8px;
-		color: var(--sa-muted);
-		font-size: 13px;
-	}
-</style>
