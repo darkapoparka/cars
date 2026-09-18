@@ -27,7 +27,7 @@
     "Продажба на автомобили",
     "Лизинг е отбелязан в обявите; доставчик и условия не са потвърдени"
   ],
-  "logo": "/assets/autolife/wordmark.svg",
+  "logo": "/assets/brand/logo-on-light.webp",
   "logoNote": "Temporary plain text wordmark. Source logo slot contains forecourt photograph, not isolated artwork. Original sign/forecourt photo retained.",
   "showroom": "/assets/autolife/cover.jpg",
   "stockSnapshotDate": "2026-09-07",
@@ -52,5 +52,16 @@
   "crm": {
     "registered": false
   },
-  "publicUrl": null
+  "publicUrl": null,
+  "workingLogoPath": "assets/autolife/wordmark.svg",
+  "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
