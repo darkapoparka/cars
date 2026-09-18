@@ -25,7 +25,7 @@
     "Руски"
   ],
   "socialLinks": {},
-  "logo": "/assets/elit/logo.png",
+  "logo": "/assets/brand/logo-on-light.webp",
   "showroom": "/assets/elit/cover.png",
   "stockCount": 15,
   "capturedAt": "2026-09-07",
@@ -52,5 +52,16 @@
     "No published email or opening hours.",
     "Original monochrome raster logo has dark background; preserved without inventing a new logo.",
     "Advertised mileage unit conflicts retained in descriptions; no assertion of verified mileage."
-  ]
+  ],
+  "workingLogoPath": "assets/elit/logo.png",
+  "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
