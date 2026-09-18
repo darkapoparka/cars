@@ -19,7 +19,7 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -45,12 +45,48 @@ jobs:
           cd ..
           ln -s logo-audit-runtime/node_modules node_modules
 
-      - name: Normalize live routes and navigation timing
+      - name: Normalize routes and parallelize live audit
         run: |
           sed -i 's#"/auto-best/"#"/"#g; s#"/modern/"#"/variant-2/"#g; s#"/carwow/"#"/variant-3/"#g' scripts/logo-refresh-dealers.json
-          sed -i "s/waitUntil: 'networkidle', timeout: 75000/waitUntil: 'domcontentloaded', timeout: 30000/g" scripts/logo-refresh-audit.mjs
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/logo-refresh-audit.mjs')
+          text = p.read_text('utf-8')
+          text = text.replace("waitUntil: 'networkidle', timeout: 75000", "waitUntil: 'domcontentloaded', timeout: 15000")
+          text = text.replace('await page.waitForTimeout(3000);', 'await page.waitForTimeout(800);')
+          text = text.replace('await page.waitForTimeout(1200);', 'await page.waitForTimeout(350);')
+          start = text.index('const summary = {')
+          marker = "console.log('Audit complete.');"
+          end = text.index(marker, start) + len(marker)
+          replacement = r'''const summary = {
+            generatedAt: new Date().toISOString(),
+            purpose: 'Pre-change desktop/mobile live logo audit for the 24 handoff projects',
+            dealers: new Array(dealers.length)
+          };
+          let nextIndex = 0;
+          async function worker() {
+            while (true) {
+              const index = nextIndex++;
+              if (index >= dealers.length) return;
+              const dealer = dealers[index];
+              console.log(`[${index + 1}/${dealers.length}] ${dealer.project}`);
+              const item = { project: dealer.project, name: dealer.name, strategyFromHandoff: dealer.strategy };
+              try {
+                item.live = await auditDealer(browser, dealer);
+              } catch (error) {
+                item.liveError = String(error);
+              }
+              summary.dealers[index] = item;
+            }
+          }
+          await Promise.all(Array.from({ length: 4 }, () => worker()));
+          await browser.close();
+          await writeJson(path.join(out, 'audit.json'), summary);
+          console.log('Audit complete.');'''
+          p.write_text(text[:start] + replacement + text[end:], 'utf-8')
+          PY
 
-      - name: Run live and asset audit
+      - name: Run live audit
         run: node scripts/logo-refresh-audit.mjs
         env:
           GITHUB_TOKEN: ${{ github.token }}
