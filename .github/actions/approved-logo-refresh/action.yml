@@ -1,0 +1,38 @@
+name: Approved contextual logo refresh
+description: Render and wire one reviewed transparent raster logo pack
+inputs:
+  dealer:
+    required: true
+    description: Dealer slug
+  strategy:
+    required: true
+    description: REFINE OFFICIAL LOGO or USE GENERATED CANDIDATE
+  rationale:
+    required: true
+    description: Recorded identity decision rationale
+  source:
+    required: true
+    description: Approved repository-relative source asset
+  accent:
+    required: false
+    default: '#f7d84a'
+    description: Primary accent surface
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - name: Install isolated image tooling
+      shell: bash
+      run: npm install --prefix "$RUNNER_TEMP/cars-logo-tools" sharp@0.35.1 --no-audit --no-fund
+    - name: Render and wire reviewed pack
+      shell: bash
+      env:
+        DEALER_SLUG: ${{ inputs.dealer }}
+        IDENTITY_STRATEGY: ${{ inputs.strategy }}
+        IDENTITY_RATIONALE: ${{ inputs.rationale }}
+        LOGO_SOURCE: ${{ inputs.source }}
+        ACCENT_COLOR: ${{ inputs.accent }}
+        CARS_LOGO_SHARP_ROOT: ${{ runner.temp }}/cars-logo-tools
+      run: node "$GITHUB_ACTION_PATH/../../../docs/logo-refresh/2026-09-18/tools/refresh-deployment-repo.mjs"
