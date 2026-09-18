@@ -51,7 +51,7 @@ export const leadSite: LeadSiteConfig = {
   email: "sales@tdp.ae",
   heroPath: "/variant-2/lead-hero.jpg",
   locale: "en-AE",
-  logoPath: "/assets/brand/logo-universal.webp",
+  logoPath: "/variant-2/assets/brand/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=The%20Dealers%20Point%2C%20Plot%20No.%20364-0442%2C%20Al%20Quoz%20Industrial%20Area%201%2C%20Dubai%2C%20UAE&z=16&output=embed",
   mapsUrl:
