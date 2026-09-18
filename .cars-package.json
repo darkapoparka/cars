@@ -30,9 +30,9 @@
       "version": "1"
     }
   },
-  "sourceCommit": "da3181278d63488210c74ca483ca78a7c90c187f",
+  "sourceCommit": "92f59426d45ae92ab4b2dc6ff9e917fb3d303c83",
   "packagingVersion": "1",
-  "payloadDigest": "1917e814da5ae00040212e87ba7c79d5e8823c654dfdf7358a5ee7d511e59df7",
+  "payloadDigest": "b2f6a180aad0c09ca292ac0b57b49329a719d10cd8f033edb6f6f858c916c035",
   "payload": [
     {
       "path": ".gitignore",
@@ -44,7 +44,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "1e4d67658f66c53b853a10aee4728ae99b5248dd65ee0976056ade9ea85936d8"
+      "sha256": "a043d0517e13a3aa40318190e9ce038e4bc01d22c3ed09b6744e24145174cebc"
     },
     {
       "path": "CLIENT.md",
@@ -60,7 +60,7 @@
     },
     {
       "path": "auto-best/.client/project.json",
-      "sha256": "bae84dc38a6ddaabbef76ad99a9c6c4f89b914ec3e45e379371e2f95150992bc"
+      "sha256": "1e047b0f4c62b48335385fe55c59fd5fdb98d4f24aa1498e0eda6865f8b04bf7"
     },
     {
       "path": "auto-best/.gitattributes",
@@ -1348,7 +1348,7 @@
     },
     {
       "path": "carwow/.client/project.json",
-      "sha256": "22b8f4eb6fc6e762f4d4221e31d9000b9a942c8db975585158aca82f6a49e715"
+      "sha256": "e6904a681bd2137ea07026f1e32dcf10b14fe050508522b31e49ac707d3fd68a"
     },
     {
       "path": "carwow/.env.example",
@@ -6632,7 +6632,7 @@
     },
     {
       "path": "modern/.client/project.json",
-      "sha256": "691d8019294828b2eff7b29f38408686ac53ebd4625d96778d500a8851d4d04d"
+      "sha256": "d57f433df8d1b87634e61c93376c3107eeea31340e185ff912b441383b72ebf9"
     },
     {
       "path": "modern/.cursorrules.example",
