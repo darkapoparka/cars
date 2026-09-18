@@ -43,7 +43,10 @@ for (const [root, variant] of roots) {
 }
 NODE
 
-for root in assets/brand auto-best/static/assets/brand modern/apps/web/public/assets/brand carwow/static/assets/brand; do
+required_roots=(assets/brand auto-best/static/assets/brand carwow/static/assets/brand)
+if [ -d modern ]; then required_roots+=(modern/apps/web/public/assets/brand); fi
+if [ -d import ]; then required_roots+=(import/static/assets/brand); fi
+for root in "${required_roots[@]}"; do
   test -s "$root/logo-master.png"
   test -s "$root/logo-on-light.webp"
   test -s "$root/logo-on-dark.webp"
@@ -51,21 +54,37 @@ for root in assets/brand auto-best/static/assets/brand modern/apps/web/public/as
 done
 
 grep -RIlE 'logo(Light|OnDark)[[:space:]]*:' auto-best/src | xargs -r grep -H 'logo-on-dark.webp'
-grep -RIlE 'logoPath[[:space:]]*:' modern/packages modern/apps/web | xargs -r grep -H '/variant-2/assets/brand/logo-on-dark.webp'
-grep -RIlE 'logo(Light|Dark)[[:space:]]*:' carwow/src | xargs -r grep -H 'logo-on-'
+if [ -d modern ]; then
+  grep -RIlE 'logoPath[[:space:]]*:' modern/packages modern/apps/web | xargs -r grep -H '/variant-2/assets/brand/logo-on-dark.webp'
+fi
+if [ -d import ]; then
+  grep -RIlE 'logo(Light|Dark)[[:space:]]*:' import/src | xargs -r grep -H '/variant-2/assets/brand/logo-on-'
+fi
+grep -RIlE 'logo(Light|Dark)[[:space:]]*:' carwow/src | xargs -r grep -H '/variant-3/assets/brand/logo-on-'
 
 (
   cd auto-best
   npm ci
   npm run build
 )
-(
-  cd modern
-  corepack enable
-  pnpm install --frozen-lockfile
-  pnpm --filter @repo/database build
-  pnpm --filter web build
-)
+if [ -d modern ]; then
+  (
+    cd modern
+    corepack enable
+    pnpm install --frozen-lockfile
+    pnpm --filter @repo/database build
+    pnpm --filter web build
+  )
+elif [ -d import ]; then
+  (
+    cd import
+    npm ci
+    npm run build
+  )
+else
+  echo 'No supported variant-2 source (modern/import) found.' >&2
+  exit 1
+fi
 (
   cd carwow
   npm ci
