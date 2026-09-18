@@ -1,44 +1,45 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+  import { leadSite } from '$config/lead-site';
 
   const actions = [
     {
       title: 'Автомобили',
-      text: 'Разгледай наличните автомобили',
+      text: 'Разгледай всички',
       cta: 'Разгледай',
       href: '/listing-grid',
       tone: 'blue',
-      image: '/assets/images/lead/day-night-collection-banner-v2.webp',
+      image: leadSite.artwork.home.collection,
       width: 1200,
       height: 668
     },
     {
       title: 'Продай / Бартер',
-      text: 'Бърза оценка на твоя автомобил',
+      text: 'Бърза оценка',
       cta: 'Заяви оценка',
       href: '/contact?topic=trade-in',
       tone: 'red',
-      image: '/assets/images/lead/day-night-mobile-sell-v1.webp',
+      image: leadSite.artwork.home.sell,
       width: 1200,
       height: 438
     },
     {
       title: 'Внос по заявка',
-      text: 'Автомобил от Европа по твоите критерии',
+      text: 'Европа, САЩ, Канада',
       cta: 'Заяви внос',
       href: '/contact?topic=import',
       tone: 'ice',
-      image: '/assets/images/lead/day-night-mobile-import-v1.webp',
+      image: leadSite.artwork.home.import,
       width: 1200,
       height: 450
     },
     {
       title: 'На лизинг',
-      text: 'Гъвкави условия според бюджета',
+      text: 'Гъвкави условия',
       cta: 'Виж условия',
       href: '/contact?topic=leasing',
       tone: 'dark',
-      image: '/assets/images/template/menu-leasing-v2.png',
+      image: '/assets/images/template/menu-leasing-v2.webp',
       width: 1610,
       height: 977
     }
@@ -67,7 +68,7 @@
   @media (max-width: 767px) {
     .dn-mobile-core-actions {
       display: block;
-      padding: 12px 12px 8px;
+      padding: 8px 12px 4px;
       background: var(--dn-mobile-canvas);
     }
     .dn-mobile-core-actions__grid {
@@ -79,44 +80,47 @@
     .dn-mobile-core-card {
       position: relative;
       display: block;
-      min-height: 164px;
+      min-height: 158px;
       overflow: hidden;
       border-radius: 14px;
       color: #fff;
       isolation: isolate;
     }
 
-    .dn-mobile-core-card--blue { background: linear-gradient(145deg, #135da8 0%, #0d3d72 100%); }
-    .dn-mobile-core-card--red { background: linear-gradient(145deg, #d00832 0%, #9b001f 100%); }
-    .dn-mobile-core-card--ice { background: linear-gradient(145deg, #e8f4ff 0%, #c8e3f8 100%); color: #15202c; }
-    .dn-mobile-core-card--dark { background: linear-gradient(145deg, #23262b 0%, #111317 100%); }
+    .dn-mobile-core-card--blue { background: linear-gradient(145deg, var(--dn-theme-action-blue-start) 0%, var(--dn-theme-action-blue-end) 100%); }
+    .dn-mobile-core-card--red { background: linear-gradient(145deg, var(--dn-theme-action-red-start) 0%, var(--dn-theme-action-red-end) 100%); }
+    .dn-mobile-core-card--ice { background: linear-gradient(145deg, var(--dn-theme-action-ice-start) 0%, var(--dn-theme-action-ice-end) 100%); color: var(--dn-theme-action-ice-ink); }
+    .dn-mobile-core-card--dark { background: linear-gradient(145deg, var(--dn-theme-action-dark-start) 0%, var(--dn-theme-action-dark-end) 100%); }
 
     .dn-mobile-core-card__copy {
       position: relative;
       z-index: 3;
       display: flex;
-      min-height: 164px;
       flex-direction: column;
       align-items: flex-start;
-      padding: 13px 12px 96px;
+      padding: 11px 10px 0;
     }
 
     .dn-mobile-core-card strong {
-      max-width: none;
+      max-width: 100%;
       font-size: var(--dn-text-lead);
       font-weight: var(--dn-weight-semibold);
-      line-height: var(--dn-leading-heading);
+      line-height: var(--dn-leading-control);
       letter-spacing: var(--dn-tracking-heading);
-      white-space: normal;
+      white-space: nowrap;
     }
 
     .dn-mobile-core-card small {
-      max-width: 16ch;
-      margin-top: 6px;
+      display: block;
+      max-width: 100%;
+      margin-top: 3px;
+      overflow: hidden;
       font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-medium);
+      font-weight: var(--dn-weight-regular);
       line-height: var(--dn-leading-meta);
-      opacity: .9;
+      letter-spacing: var(--dn-tracking-normal);
+      opacity: .92;
+      white-space: nowrap;
     }
 
     .dn-mobile-core-card__art {
@@ -125,7 +129,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      height: 96px;
+      height: 86px;
       pointer-events: none;
     }
 
@@ -143,10 +147,28 @@
       transform: translateX(-50%);
     }
 
-    .dn-mobile-core-card--blue .dn-mobile-core-card__art img { width: 106%; }
-    .dn-mobile-core-card--red .dn-mobile-core-card__art img { width: 138%; }
-    .dn-mobile-core-card--ice .dn-mobile-core-card__art img { width: 136%; }
-    .dn-mobile-core-card--dark .dn-mobile-core-card__art img { width: 108%; }
+    .dn-mobile-core-card--blue .dn-mobile-core-card__art img { width: clamp(152px, 106%, 164px); }
+    .dn-mobile-core-card--red .dn-mobile-core-card__art img,
+    .dn-mobile-core-card--ice .dn-mobile-core-card__art img { width: clamp(206px, 128%, 220px); }
+    .dn-mobile-core-card--dark .dn-mobile-core-card__art img {
+      width: clamp(172px, 121%, 216px);
+      height: 121%;
+      bottom: -15px;
+    }
     .dn-mobile-core-card:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
+  }
+
+  @media (max-width: 340px) {
+    .dn-mobile-core-card__copy { padding-inline: 8px; }
+
+    .dn-mobile-core-card strong {
+      font-size: var(--dn-text-body);
+      letter-spacing: var(--dn-tracking-heading);
+    }
+
+    .dn-mobile-core-card small {
+      font-size: var(--dn-text-caption);
+      letter-spacing: var(--dn-tracking-normal);
+    }
   }
 </style>
