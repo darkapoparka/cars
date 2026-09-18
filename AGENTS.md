@@ -2,7 +2,7 @@
 
 This is an independent personalized dealer copy. Canonical editable source is Cars clients/navara-car/. The dedicated dealer repository is a publishing mirror. Make lasting fixes in canonical source or the versioned packaging layer and regenerate; preserve unmatched mirror fixes first. This copy is not a reusable template master.
 
-Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/05d7f4fbd3413be599d14373481cd35fb7dfabae/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/05d7f4fbd3413be599d14373481cd35fb7dfabae/docs/LEAD-PUBLISHING.md).
+Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/f2449a9c9a731bc8663c74779eb87d8106758e4b/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/f2449a9c9a731bc8663c74779eb87d8106758e4b/docs/LEAD-PUBLISHING.md).
 
 Preserve this dealer identity, exact repository/domain and offered designs. Apply sourced facts to real data modules; metadata alone does not change the application. Protect layout and interactions during an ordinary correction. Sample forms do not prove delivery. Audit requests are read-only; publication never authorizes outreach.
 
