@@ -37,8 +37,8 @@ jobs:
 
       - name: Install audit dependencies
         run: |
-          mkdir -p .logo-audit-runtime
-          cd .logo-audit-runtime
+          mkdir -p logo-audit-runtime
+          cd logo-audit-runtime
           npm init -y
           npm install playwright@1.55.0 sharp@0.34.3
           npx playwright install --with-deps chromium
