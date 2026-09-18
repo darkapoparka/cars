@@ -1,3 +1,17 @@
+import { featuredVehicles } from './inventory';
+
+// Visual examples only: these selections are not records of completed transactions.
+export const demoWorkflowShowcases = {
+  'trade-in': {
+    title: 'Наскоро продадени',
+    vehicles: [featuredVehicles[0], featuredVehicles[3], featuredVehicles[5]]
+  },
+  import: {
+    title: 'Последно внесени',
+    vehicles: [featuredVehicles[1], featuredVehicles[2], featuredVehicles[4]]
+  }
+};
+
 type DemoTeamMember = {
   id: string;
   name: string;
@@ -11,37 +25,46 @@ type DemoPartner = {
   image: string;
 };
 
-export const demoContentLabel = 'Астракар';
+export const demoContentLabel = 'Демо съдържание';
 
-export const demoTeamIntro = 'Продажба, бартер, лизинг и сервизно обслужване. Уточнете условията с екипа.';
+export const demoTeamIntro =
+  'Примерни профили за визуален преглед. Имената и снимките ще бъдат заменени с реалния екип.';
 
-export const demoPartnerIntro = 'Марки в подбраните обяви. Наличността се потвърждава с Астракар.';
+export const demoPartnerIntro =
+  'Примерни автомобилни марки за визуален преглед. Те не представят потвърдени партньорства.';
 
-export const demoTeamMembers = [
+export const demoTeamMembers: DemoTeamMember[] = [
   {
-    "id": "service-0",
-    "name": "Продажба на автомобили",
-    "role": "Уточнете условията по телефона",
-    "image": "/assets/astracar/vehicle-01-1.webp"
+    id: 'arlene-mccoy',
+    name: 'Arlene McCoy',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team1.jpg'
   },
   {
-    "id": "service-1",
-    "name": "Бартер",
-    "role": "Уточнете условията по телефона",
-    "image": "/assets/astracar/vehicle-02-1.webp"
+    id: 'ronald-richards',
+    name: 'Ronald Richards',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team2.jpg'
   },
   {
-    "id": "service-2",
-    "name": "Лизинг по запитване",
-    "role": "Уточнете условията по телефона",
-    "image": "/assets/astracar/vehicle-03-1.webp"
+    id: 'leslie-alexander',
+    name: 'Leslie Alexander',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team3.jpg'
   },
   {
-    "id": "service-3",
-    "name": "Сервизно обслужване",
-    "role": "Уточнете условията по телефона",
-    "image": "/assets/astracar/vehicle-04-1.webp"
+    id: 'cody-fisher',
+    name: 'Cody Fisher',
+    role: 'Консултант · демо',
+    image: '/assets/images/img-box/team4.jpg'
   }
 ];
 
-export const demoPartners: DemoPartner[] = [{id:'bmw',name:'BMW',image:'/assets/images/partner/parner12.png'},{id:'audi',name:'Audi',image:'/assets/images/partner/parner11.png'},{id:'mercedes',name:'Mercedes-Benz',image:'/assets/images/partner/parner8.png'}];
+export const demoPartners: DemoPartner[] = [
+  { id: 'carlogo', name: 'CARLOGO', image: '/assets/images/partner/par1.png' },
+  { id: 'topcars', name: 'TOPCARS', image: '/assets/images/partner/par2.png' },
+  { id: 'vehicle-store', name: 'VEHICLE STORE', image: '/assets/images/partner/par3.png' },
+  { id: 'speedcare', name: 'SPEEDCARE', image: '/assets/images/partner/par4.png' },
+  { id: 'carservice', name: 'CARSERVICE', image: '/assets/images/partner/par5.png' },
+  { id: 'cartrade', name: 'CARTRADE', image: '/assets/images/partner/par6.png' }
+];

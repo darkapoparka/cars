@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { buildVehicleContactHref } from '$lib/utils/contact-intent';
 	import { fromAction } from 'svelte/attachments';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
@@ -57,7 +58,11 @@
 
 {#snippet galleryActions()}
 	<div class="listing-details-item--content">
-		<a class="listing-details-item--button" href={resolve('/contact')} title="Заяви видео преглед">
+		<a
+			class="listing-details-item--button"
+			href={resolve(buildVehicleContactHref(vehicle, 'video'))}
+			title="Заяви видео преглед"
+		>
 			<img
 				src={resolve('/assets/icons/playcircle.svg')}
 				alt=""
@@ -68,7 +73,11 @@
 			/>
 			Заяви видео преглед
 		</a>
-		<a class="listing-details-item--button" href={resolve('/contact')} title="Заяви още снимки">
+		<a
+			class="listing-details-item--button"
+			href={resolve(buildVehicleContactHref(vehicle, 'photos'))}
+			title="Заяви още снимки"
+		>
 			<img
 				src={resolve('/assets/icons/view-all-photo.svg')}
 				alt=""

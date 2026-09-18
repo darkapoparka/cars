@@ -3,11 +3,14 @@ import { expect, test } from '@playwright/test';
 for (const width of [320, 390, 428]) {
 	test(`mobile inventory cards stay uncluttered at ${width}px`, async ({ page }) => {
 		await page.setViewportSize({ width, height: 844 });
-		await page.goto('/inventory');
+		await page.goto('/inventory', { waitUntil: 'networkidle' });
 		const card = page.locator('.mobile-inventory-card').first();
 		await expect(card).toBeVisible();
-		await expect(card.locator('h3')).toHaveText('Mercedes-Benz GLA 45 AMG');
-		await expect(card.locator('h3')).toHaveCSS('font-weight', '650');
+		await expect(card.getByRole('heading', { level: 2 })).toHaveText('Mercedes-Benz GLA 45 AMG');
+		const titleWeight = await card.evaluate((element) =>
+			getComputedStyle(element).getPropertyValue('--sa-weight-strong').trim()
+		);
+		await expect(card.getByRole('heading', { level: 2 })).toHaveCSS('font-weight', titleWeight);
 		await expect(card.locator('.mobile-inventory-card__price strong')).toHaveCSS(
 			'font-size',
 			'20px'
