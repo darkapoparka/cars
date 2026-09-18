@@ -30,7 +30,7 @@
     "Сервизно обслужване",
     "Съдействие за регистрация"
   ],
-  "logo": "/assets/astracar/astracar-logo.png",
+  "logo": "/assets/brand/logo-on-light.webp",
   "cover": "/assets/astracar/astracar-cover.jpg",
   "stockSnapshotDate": "2026-09-07",
   "stockCount": 15,
@@ -48,5 +48,16 @@
     "Cover is official brand artwork, not a showroom photograph.",
     "Excluded Opel Meriva at 11 EUR as ambiguous parts-priced advertisement.",
     "15 representative listings; not a live inventory sync."
-  ]
+  ],
+  "workingLogoPath": "assets/astracar/astracar-logo.png",
+  "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
