@@ -5,13 +5,14 @@
   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
   import { serviceArtwork } from '$data/service-artwork';
   import { featureArtwork } from '$data/feature-artwork';
+  import { leadSite } from '$config/lead-site';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
   let { group, variant = 'banners' }: { group: 'browse' | 'ownership' | 'all'; variant?: 'banners' | 'cards' } = $props();
 
   const actions = [
     {
       title: 'Вижте колекцията',
-      artwork: { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
+      artwork: { src: leadSite.artwork.home.collection, width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
       vehicle: 'urus',
       tone: 'black',
       mobileTitle: 'Автомобили',
@@ -24,7 +25,7 @@
     },
     {
       title: 'Продажба или бартер',
-      artwork: { src: '/assets/images/lead/day-night-sell-banner-v2.webp', width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
+      artwork: { src: leadSite.artwork.home.sellCompact, width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
       vehicle: 'gclass',
       tone: 'red',
       mobileTitle: 'Продай/Бартер',
@@ -133,8 +134,8 @@
   .dn-service-card__art, .mobile-copy, .dn-trust-card__icon, .dn-trust-card__mobile-art, .dn-trust-card__ownership-art { display: none; }
   .dn-trust-actions { padding: 24px 0 32px; background: #fff; }
   .dn-trust-actions__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-  .dn-trust-card { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 234px; padding: 28px; overflow: hidden; border-radius: 16px; background: #101114; color: #fff; }
-  .dn-trust-card--red { background: #b80024; }
+  .dn-trust-card { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 234px; padding: 28px; overflow: hidden; border-radius: 16px; background: var(--dn-ink-deep); color: #fff; }
+  .dn-trust-card--red { background: var(--dn-theme-campaign-accent); }
   .dn-trust-card__content { position: relative; display: flex; flex: 1; flex-direction: column; width: 52%; }
   .dn-trust-card h3 { margin: 0 0 12px; color: inherit; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
   .dn-trust-card h3 a { color: inherit; }
@@ -231,7 +232,7 @@
     .dn-trust-card .dn-trust-card__action :global(svg) { flex-shrink: 0; }
     .dn-trust-card:hover { background: var(--dn-surface); }
     .dn-trust-card .dn-trust-card__action:hover { background: transparent; color: var(--dn-ink); }
-    .dn-trust-card:has(a:focus-visible) { outline: 2px solid var(--dn-red); outline-offset: 3px; }
+    .dn-trust-card:focus-within { outline: 2px solid var(--dn-red); outline-offset: 3px; }
     .dn-trust-card a:focus-visible { outline: none; }
   }
   @media (max-width: 767px) {
@@ -245,12 +246,12 @@
     .dn-service-card .dn-trust-card__action { display: none; }
     .dn-service-card .dn-trust-card__content { position: static; flex: none; }
     .dn-service-card h3 a::after { position: absolute; inset: 0; border-radius: inherit; content: ''; }
-    .dn-service-card:has(a:focus-visible) { outline: 2px solid var(--dn-red); outline-offset: 3px; }
+    .dn-service-card:focus-within { outline: 2px solid var(--dn-red); outline-offset: 3px; }
     .dn-service-card a:focus-visible { outline: none; }
     .dn-service-card:hover { background: var(--dn-surface); }
     .dn-trust-actions[data-banner-group="ownership"] .dn-trust-actions__grid { grid-template-columns: minmax(0, 1fr); }
-    .dn-trust-card--ownership { min-height: 156px; padding: 20px; align-items: flex-start; background: #18191c; color: #fff; text-align: left; }
-    .dn-trust-card--ownership.dn-trust-card--red { background: #b80024; }
+    .dn-trust-card--ownership { min-height: 156px; padding: 20px; align-items: flex-start; background: var(--dn-theme-campaign-surface); color: #fff; text-align: left; }
+    .dn-trust-card--ownership.dn-trust-card--red { background: var(--dn-theme-campaign-accent); }
     .dn-trust-card--ownership .dn-trust-card__icon { display: none; }
     .dn-trust-card--ownership .dn-trust-card__content { width: 58%; }
     .dn-trust-card--ownership h3 { font-size: var(--dn-text-card); text-wrap: initial; line-height: var(--dn-leading-heading); }
