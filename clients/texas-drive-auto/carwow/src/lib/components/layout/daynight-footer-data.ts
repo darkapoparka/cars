@@ -31,36 +31,62 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
 		title: 'TEXAS DRIVE AUTO',
 		links: [
-			{ href: '/about', label: 'About Texas Drive Auto' },
-			{ href: '/about/daynight-auto-plovdiv', label: 'Dealership profile' },
-			{ href: '/team', label: 'Contact options' },
-			{ href: '/reviews', label: 'Reviews' },
-			{ href: '/blog', label: 'Blog' },
-			{ href: '/contact', label: 'Contact' }
+			{ href: '/about', label: 'За Texas Drive Auto' },
+			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
+			{ href: '/team', label: 'Екип' },
+			{ href: '/reviews', label: 'Отзиви' },
+			{ href: '/blog', label: 'Блог' },
+			{ href: '/contact', label: 'Контакти' }
 		]
 	},
 	{
-		title: 'SERVICES AND TOOLS',
+		title: 'УСЛУГИ И ИНСТРУМЕНТИ',
 		links: [
-			{ href: '/inventory', label: 'Vehicle inventory' },
-			{ href: '/financing', label: 'Buyer-arranged funding' },
-			{ href: '/calculator', label: 'Calculator' },
-			{ href: '/sell-your-car', label: 'Ask about selling or trading' },
-			{ href: '/compare', label: 'Compare' },
-			{ href: '/faq', label: 'FAQ' }
+			{ href: '/inventory', label: 'Налични автомобили' },
+			{ href: '/financing', label: 'Финансиране' },
+			{ href: '/calculator', label: 'Калкулатор' },
+			{ href: '/sell-your-car', label: 'Продай или замени' },
+			{ href: '/compare', label: 'Сравнение' },
+			{ href: '/faq', label: 'ЧЗВ' }
 		]
 	},
 	{
-		title: 'INQUIRIES',
+		title: 'ЗАПИТВАНИЯ',
 		links: [
-			{ href: '/contact', label: 'Contact for a viewing' },
-			{ href: '/sell-your-car/request', label: 'Request an appraisal' },
-			{ href: '/sell-your-car', label: 'Ask about selling or trading' },
-			{ href: '/faq', label: 'FAQ' }
+			{ href: '/contact', label: 'Контакт за оглед' },
+			{ href: '/sell-your-car/request', label: 'Заявка за оценка' },
+			{ href: '/sell-your-car', label: 'Продай или замени' },
+			{ href: '/faq', label: 'ЧЗВ' }
 		]
 	}
 ];
 
 export const daynightFooterBottomLinks: DayNightFooterLink[] = [
-	{ href: '/terms', label: 'Terms of use' }
+	{ href: '/terms', label: 'Условия за ползване' }
 ];
+
+// Shared navigation for the desktop columns and mobile accordions.
+export const daynightDealerFooterGroups = [
+	{
+		title: 'Бързи връзки',
+		links: [
+			{ href: '/about', label: 'За нас' },
+			{ href: '/team', label: 'Нашият екип' },
+			{ href: '/services', label: 'Услуги' },
+			{ href: '/faq', label: 'Често задавани въпроси' },
+			{ href: '/blog', label: 'Блог' },
+			{ href: '/contact', label: 'Контакти' }
+		]
+	},
+	{
+		title: 'Покупка и продажба',
+		links: [
+			{ href: '/inventory', label: 'Намери автомобил' },
+			{ href: '/sell-your-car', label: 'Продай или замени' },
+			{ href: '/financing', label: 'Лизинг и финансиране' },
+			{ href: '/inventory/map', label: 'Карта на автомобилите' },
+			{ href: '/calculator', label: 'Калкулатор за финансиране' },
+			{ href: '/reviews', label: 'Отзиви от клиенти' }
+		]
+	}
+] as const;

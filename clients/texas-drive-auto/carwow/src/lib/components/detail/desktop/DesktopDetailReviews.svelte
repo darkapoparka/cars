@@ -10,7 +10,7 @@
 </script>
 
 <div class="mb-16 flex items-center justify-between gap-16">
-	<h2 class="h4">Customer reviews unavailable in this preview</h2>
+	<h2 class="h4">Отзиви от клиенти</h2>
 </div>
 
 <p class="text-secondary mb-20">{daynightReviewDisclosure}</p>
@@ -57,9 +57,7 @@
 			{/each}
 		</div>
 		<div class="rating-box__button">
-			<a href="#reviewForm" class="sa-cta sa-cta-primary sa-cta-compact">
-				Add feedback
-			</a>
+			<a href="#reviewForm" class="sa-cta-compact sa-cta sa-cta-primary"> Добавете отзив </a>
 		</div>
 	</div>
 </div>
@@ -112,14 +110,14 @@
 </div>
 
 <div id="reviewForm">
-	<h2 class="h4 mb-8 capitalize">Add feedback</h2>
-	<p class="mb-20">Draft feedback using the contact form. Submission and publication are unavailable in this preview.</p>
+	<h2 class="h4 mb-8 capitalize">Добавете отзив</h2>
+	<p class="mb-20">Изпратете мнение през формата за контакт. Публикуването се уточнява с екипа.</p>
 
 	<a
 		href={resolve('/contact?intent=review')}
-		class="sa-cta sa-cta-primary sa-cta-compact"
-		title="Review verification and publication are unavailable in this preview."
+		class="sa-cta-compact sa-cta sa-cta-primary"
+		title="Отзивите се потвърждават от екипа преди публикуване."
 	>
-		Draft feedback
+		Изпратете отзив
 	</a>
 </div>

@@ -22,7 +22,7 @@
 		onSearchToggle: () => void;
 	} = $props();
 
-	const phoneHref = `tel:${daynightSite.phone}`;
+	const phoneHref = daynightSite.phoneHref;
 	const logoSrcset = desktopOnlySrcset(daynightSite.logoLight, 570);
 	const logoSizes = desktopOnlySizes('190px');
 	const navToolClasses =
@@ -30,7 +30,7 @@
 	const homePhoneClasses =
 		'site-chrome-phone-btn inline-grid size-10 place-items-center rounded-sa-pill text-sa-surface no-underline transition-colors duration-150 ease-sa hover:bg-white/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-surface/70 [&_svg]:size-[22px]';
 	const badgeClasses =
-		'absolute top-px right-0 grid h-[17px] min-w-[17px] place-items-center rounded-sa-pill bg-sa-red px-1 text-[10px] leading-none font-bold text-sa-surface';
+		'absolute top-px right-0 grid h-[17px] min-w-[17px] place-items-center rounded-sa-pill bg-sa-red px-1 text-[length:var(--sa-text-xs)] leading-none font-bold text-sa-surface';
 </script>
 
 <div
@@ -55,7 +55,7 @@
 						href={phoneHref}
 						class={homePhoneClasses}
 						data-daynight-header-tool="phone"
-						aria-label={`Call ${daynightSite.phoneLabel}`}
+						aria-label={`Обади се на ${daynightSite.phoneLabel}`}
 						title={daynightSite.phoneCta}
 					>
 						<SiteChromeIcon name="phone" />
@@ -78,11 +78,14 @@
 						]}
 						id="mobileSearchToggle"
 						data-daynight-header-tool="search"
-						aria-label="Open search"
-						title="Open search"
+						aria-label="Отвори търсене"
+						title="Отвори търсене"
 						aria-expanded={searchOpen}
 						aria-controls="searchForm"
-						onclick={onSearchToggle}
+						onclick={(event) => {
+							event.currentTarget.focus({ preventScroll: true });
+							onSearchToggle();
+						}}
 					>
 						<SiteChromeIcon name="search" />
 					</button>
@@ -90,7 +93,7 @@
 						href={resolve('/compare')}
 						class={navToolClasses}
 						data-daynight-header-tool="compare"
-						aria-label="Compare"
+						aria-label="Сравни"
 					>
 						<SiteChromeIcon name="compare" />
 						{#if compareBadge > 0}<span class={badgeClasses} aria-hidden="true">{compareBadge}</span
@@ -100,7 +103,7 @@
 						href={resolve('/favorites')}
 						class={navToolClasses}
 						data-daynight-header-tool="favorites"
-						aria-label="Saved vehicles"
+						aria-label="Запазени автомобили"
 					>
 						<SiteChromeIcon name="heart" />
 						{#if favoritesBadge > 0}<span class={badgeClasses} aria-hidden="true"

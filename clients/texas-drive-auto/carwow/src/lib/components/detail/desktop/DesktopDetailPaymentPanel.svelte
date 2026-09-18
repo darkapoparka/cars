@@ -10,9 +10,9 @@
 	let isVatDropdownOpen = $state(false);
 
 	const vatRows = $derived([
-		{ id: 'price', label: 'Price:', value: vehicle.secondaryPrice },
-		{ id: 'tax', label: 'Vehicle tax:', value: 'to be confirmed' },
-		{ id: 'total', label: 'Price including tax:', value: vehicle.secondaryPrice }
+		{ id: 'price', label: 'Цена:', value: vehicle.priceBgn },
+		{ id: 'tax', label: 'Данък върху МПС:', value: 'уточняват се' },
+		{ id: 'total', label: 'Цена с данък:', value: vehicle.priceBgn }
 	]);
 
 	function selectPaymentMode(mode: PaymentMode) {
@@ -44,7 +44,7 @@
 						onclick={() => selectPaymentMode('cash')}
 						onkeydown={(event) => handlePaymentKeydown(event, 'cash')}
 					>
-						Cash
+						В брой
 					</button>
 				</li>
 				<li class={activePaymentMode === 'finance' ? 'active' : undefined}>
@@ -54,7 +54,7 @@
 						onclick={() => selectPaymentMode('finance')}
 						onkeydown={(event) => handlePaymentKeydown(event, 'finance')}
 					>
-						Buyer-arranged funding
+						Финансиране
 					</button>
 				</li>
 			</ul>
@@ -62,11 +62,11 @@
 
 		<div class="content-tab visible">
 			<div class={['content-inner', activePaymentMode === 'cash' && 'active']}>
-				<p class="h5 mb-4">Price:</p>
+				<p class="h5 mb-4">Цена:</p>
 				<p class="pdp-payment-price mb-4">
-					<span class="pdp-payment-price__cash">{vehicle.priceLabel}</span>
+					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
 				</p>
-				<p class="text-secondary mb-16">Price before taxes and fees</p>
+				<p class="text-secondary mb-16">Цена без данъци и такси</p>
 
 				<p class="flex items-center gap-8">
 					<img
@@ -77,18 +77,18 @@
 						decoding="async"
 						loading="eager"
 					/>
-					<a href={resolve('/terms')} class="text-underline text-highlight">VAT status</a>
+					<a href={resolve('/terms')} class="text-underline text-highlight">Автомобил по ДДС</a>
 				</p>
 			</div>
 
 			<div class={['content-inner', activePaymentMode === 'finance' && 'active']}>
-				<p class="h5 mb-4">Price:</p>
+				<p class="h5 mb-4">Цена:</p>
 				<p class="pdp-payment-price pdp-payment-price--stacked mb-4">
-					<span class="pdp-payment-price__cash">{vehicle.priceLabel}</span>
+					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
 					<span class="pdp-payment-price__monthly">{vehicle.monthly}</span>
 				</p>
-				<p class="text-secondary mb-4">Buyer-arranged payment estimate before taxes and fees</p>
-				<p class="text-secondary mb-16">Buyer-arranged funding example: down payment · 72 mo. · 7.89% APR</p>
+				<p class="text-secondary mb-4">Вноска без данъци и такси</p>
+				<p class="text-secondary mb-16">Първоначална вноска · 72 мес. · 7.89% ГПР</p>
 
 				<div class={['core-dropdown flex items-center gap-8', isVatDropdownOpen && 'active']}>
 					<img
@@ -107,7 +107,7 @@
 						aria-controls="coreDropdownMenu"
 						onclick={toggleVatDropdown}
 					>
-						VAT status
+						Автомобил по ДДС
 					</button>
 					<div class="core-dropdown__menu" id="coreDropdownMenu">
 						<ul class="core-dropdown__list">
@@ -159,15 +159,15 @@
 
 	.pdp-payment-price__cash {
 		color: #1c1c1c;
-		font-size: 32px;
-		font-weight: 700;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.08;
 	}
 
 	.pdp-payment-price__monthly {
 		color: #4b5563;
-		font-size: 18px;
-		font-weight: 500;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.3;
 	}
 

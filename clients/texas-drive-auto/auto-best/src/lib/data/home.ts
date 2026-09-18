@@ -1,65 +1,53 @@
 import { featuredVehicles } from './inventory';
 import { bodyLabel } from './listing';
-import { brand } from '$config/brand';
+import { blogPosts } from './editorial';
+import { leadSite } from '$config/lead-site';
 
+// Visible vehicle bounds align mobile artwork; the opaque wagon uses its visible silhouette.
 const bodyArtwork = [
-  { label: 'Sedan', query: 'Sedan', image: '/assets/images/icon-box/car-list1.png', width: 150, height: 80 },
-  { label: 'Hatchback', query: 'Hatchback', image: '/assets/images/icon-box/car-list2.png', width: 140, height: 80 },
-  { label: 'Pickup', query: 'Pickup Truck', image: '/assets/images/icon-box/car-list3.png', width: 140, height: 80 },
-  { label: 'SUV', query: 'SUV', image: '/assets/images/icon-box/car-list4.png', width: 166, height: 96 },
-  { label: 'Crossover', query: 'Crossover', image: '/assets/images/icon-box/car-list5.png', width: 206, height: 95 },
-  { label: 'Minivan', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80 },
-  { label: 'Wagon', query: 'Wagon', image: '/assets/images/icon-box/car-list7.png', width: 140, height: 80 },
-  { label: 'Convertible', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 152, height: 92 },
-  { label: 'Body style', query: 'Coupe', image: '/assets/images/lead/day-night-cutout-porsche-v1.webp', width: 1000, height: 667 },
-  { label: 'Sportback', query: 'Sportback', image: '/assets/images/lead/day-night-cutout-amggt-v1.webp', width: 1000, height: 667 }
+  { label: 'Седан', query: 'Sedan', image: '/assets/images/icon-box/car-list1.png', width: 180, height: 80, bounds: [9, 11, 171, 70] },
+  { label: 'Хечбек', query: 'Hatchback', image: '/assets/images/icon-box/car-list2.png', width: 180, height: 80, bounds: [12, 8, 168, 71] },
+  { label: 'Пикап', query: 'Pickup Truck', image: '/assets/images/icon-box/car-list3.png', width: 180, height: 80, bounds: [11, 13, 170, 71] },
+  { label: 'SUV', query: 'SUV', image: leadSite.artwork.vehicleCutouts.urus, width: 1000, height: 667, bounds: [18, 156, 983, 495] },
+  { label: 'Кросоувър', query: 'Crossover', image: '/assets/images/icon-box/car-list5.png', width: 206, height: 95, bounds: [0, 0, 206, 95] },
+  { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80, bounds: [0, 0, 140, 80] },
+  { label: 'Комби', query: 'Wagon', image: '/assets/images/template/body-wagon-v1.png', width: 1832, height: 858, bounds: [22, 138, 1800, 716] },
+  { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 180, height: 80, bounds: [11, 15, 170, 63] },
+  { label: 'Купе', query: 'Coupe', image: leadSite.artwork.vehicleCutouts.porsche, width: 1000, height: 667, bounds: [12, 169, 987, 480] },
+  { label: 'Спортбек', query: 'Sportback', image: leadSite.artwork.vehicleCutouts.amggt, width: 1000, height: 667, bounds: [14, 169, 980, 473] }
 ] as const;
 
 const brandArtwork = [
-  { label: 'Land Rover', image: '/assets/images/partner/partner1.png' },
-  { label: 'Kia', image: '/assets/images/partner/partner2.png' },
-  { label: 'Toyota', image: '/assets/images/partner/partner3.png' },
-  { label: 'Jeep', image: '/assets/images/partner/partner4.png' },
-  { label: 'Nissan', image: '/assets/images/partner/partner5.png' },
-  { label: 'Ford', image: '/assets/images/partner/partner6.png' },
-  { label: 'Foton', image: '/assets/images/partner/parner7.png' },
-  { label: 'Mercedes-Benz', image: '/assets/images/partner/parner8.png' },
-  { label: 'Dongfeng', image: '/assets/images/partner/parner9.png' },
-  { label: 'Isuzu', image: '/assets/images/partner/parner10.png' },
-  { label: 'Audi', image: '/assets/images/partner/parner11.png' },
-  { label: 'BMW', image: '/assets/images/partner/parner12.png' }
+  { label: 'Land Rover', image: '/assets/images/brand-curated/land-rover-classic.png', width: 210, height: 183, bounds: [13, 43, 197, 140] },
+  { label: 'Kia', image: '/assets/images/partner/partner2.png', width: 210, height: 120, bounds: [3, 36, 207, 85] },
+  { label: 'Toyota', image: '/assets/images/partner/partner3.png', width: 160, height: 80, bounds: [8, 20, 152, 59] },
+  { label: 'Jeep', image: '/assets/images/partner/partner4.png', width: 210, height: 120, bounds: [20, 27, 190, 95] },
+  { label: 'Nissan', image: '/assets/images/partner/partner5.png', width: 216, height: 156, bounds: [36, 20, 177, 138] },
+  { label: 'Ford', image: '/assets/images/partner/partner6.png', width: 210, height: 120, bounds: [3, 24, 207, 96] },
+  { label: 'Foton', image: '/assets/images/partner/parner7.png', width: 184, height: 104, bounds: [42, 23, 142, 81] },
+  { label: 'Mercedes-Benz', image: '/assets/images/brand-curated/mercedes-benz-star-chrome.webp', width: 240, height: 180, bounds: [40, 10, 200, 170] },
+  { label: 'Dongfeng', image: '/assets/images/partner/parner9.png', width: 140, height: 80, bounds: [12, 10, 128, 70] },
+  { label: 'Isuzu', image: '/assets/images/partner/parner10.png', width: 140, height: 80, bounds: [11, 10, 129, 70] },
+  { label: 'Audi', image: '/assets/images/brand-curated/audi-rings-silver-cardog.svg', width: 424, height: 164, bounds: [0, 0, 424, 164] },
+  { label: 'BMW', image: '/assets/images/partner/parner12.png', width: 140, height: 80, bounds: [33, 3, 107, 77] }
 ] as const;
 
-export const bodyTypes = [...new Set(featuredVehicles.map(vehicle => vehicle.body))].map(query => {
-  const artwork = bodyArtwork.find(item => item.query === query) ?? bodyArtwork[0];
-  return { ...artwork, query, label: bodyLabel(query), count: featuredVehicles.filter(vehicle => vehicle.body === query).length };
-});
-export const brands = brandArtwork.filter(item => featuredVehicles.some(vehicle => vehicle.make === item.label))
-  .map(item => ({ ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length }));
+// Template discovery is independent of the current sample inventory.
+const enabledBodyTypes = new Set(['Sedan', 'Hatchback', 'Pickup Truck', 'SUV', 'Wagon', 'Convertible', 'Coupe', 'Sportback']);
+export const bodyTypes = bodyArtwork.filter(item => enabledBodyTypes.has(item.query)).map(item => ({
+  ...item, label: bodyLabel(item.query), count: featuredVehicles.filter(vehicle => vehicle.body === item.query).length
+}));
+export const brands = brandArtwork.map(item => ({
+  ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length
+}));
 
-export const editorial = [
-  {
-    title: `Visit Texas Drive Auto in ${brand.city}`,
-    text: `${brand.address}. ${brand.appointment}. Call to confirm the vehicle and your visit.`,
-    image: '/office.webp',
-    href: '/contact',
-    meta: 'Resources',
-    category: 'Guide'
-  },
-  {
-    title: 'What can we check before buying?',
-    text: 'Ask which vehicle history records and documents are available, and whether an independent inspection can be arranged before you decide.',
-    image: '/stock/127361925-1.webp',
-    href: '/blog-detail/1',
-    meta: 'Resources',
-    category: 'Guide'
-  },
-  {
-    title: 'Can a vehicle be imported to order?',
-    text: 'Custom import services are not confirmed in this preview. Ask whether any options are available for your model, budget and feature preferences.',
-    image: '/stock/127361904-1.webp',
-    href: '/blog-detail/2',
-    meta: 'Resources',
-    category: 'Guide'
-  }
-] as const;
+const editorialSummaries: Record<number, string> = {
+  1: 'История, документи и техническо състояние.',
+  2: 'Търсене, транспорт и подготовка за регистрация.',
+  3: 'Срок, първоначална вноска и обща цена.'
+};
+
+export const editorial = blogPosts.slice(0, 3).map(post => ({
+  title: post.title, text: editorialSummaries[post.id] ?? post.text, image: post.image,
+  href: `/blog-detail/${post.id}`, meta: 'Полезно', category: post.category
+}));

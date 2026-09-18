@@ -23,7 +23,7 @@ export function countOptions(values: string[]): CountOption[] {
 export function normalize(value: unknown) {
 	return String(value ?? '')
 		.trim()
-		.toLocaleLowerCase('en-US');
+		.toLocaleLowerCase('bg-BG');
 }
 
 export function splitParam(value: string | null) {
@@ -46,7 +46,7 @@ export function toggleValue(values: string[], value: string) {
 }
 
 export function formatVehicleCount(count: number) {
-	return count === 1 ? '1 vehicle' : `${count} vehicles`;
+	return count === 1 ? '1 автомобил' : `${count} автомобила`;
 }
 
 export function getImageHealthPriority(vehicle: InventoryListVehicle) {

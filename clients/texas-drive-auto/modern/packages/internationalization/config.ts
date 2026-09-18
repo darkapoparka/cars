@@ -2,7 +2,7 @@ export const locales = ["en", "bg"] as const;
 
 export type Locale = (typeof locales)[number];
 
-export const defaultLocale = "en" satisfies Locale;
+export const defaultLocale = "bg" satisfies Locale;
 
 export const marketplaceLocales = locales;
 
@@ -10,7 +10,7 @@ export type MarketplaceLocale = (typeof marketplaceLocales)[number];
 
 const intlLocales: Record<Locale, string> = {
   bg: "bg-BG",
-  en: "en-US",
+  en: "en-GB",
 };
 
 export const isLocale = (value: string): value is Locale =>

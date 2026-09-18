@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Native 1:1 rebuild of the localized /financing (financing.html) desktop main
-	// content: breadcrumb + hero (advantages) + "How it works" process steps + the
-	// "Helpful" blog cards + the FAQ accordion. The copy and data are kept verbatim;
+	// content: breadcrumb + hero (advantages) + "Как работи" process steps + the
+	// "Полезно" blog cards + the FAQ accordion. The copy and data are kept verbatim;
 	// the look that used to come from app.css + StorefrontTemplateContent's :global
 	// stylesheet is now reproduced as a SELF-CONTAINED scoped style block below,
 	// confirmed against getComputedStyle at 1440px (see the comments per section for
@@ -11,7 +11,7 @@
 	//
 	// The FAQ accordion is a NATIVE Svelte accordion: open/close is driven by local
 	// $state (no template JS — the markup carries data-daynight-native-accordion so
-	// RouteAccordionBehavior skips it). Single-open behaviour mirrors the template;
+	// retained CSS hooks). Single-open behaviour matches the established page;
 	// the first item starts open, matching the baseline.
 
 	import { resolve } from '$app/paths';
@@ -51,37 +51,37 @@
 
 	const benefits: Benefit[] = [
 		{
-			title: 'Questions about paperwork and title transfer',
-			copy: 'Ask what documents you need and how the title transfer works.'
+			title: 'Съдействие по документи и прехвърляне',
+			copy: 'Екипът подготвя документите и съпровожда прехвърлянето от началото до края.'
 		},
 		{
-			title: 'Confirm purchase terms in advance',
-			copy: 'No dealer financing or payment plans are offered. Arrange any outside funding separately.'
+			title: 'Ясни условия предварително',
+			copy: 'Получавате ориентировъчна месечна вноска и условия още преди да дойдете за оглед.'
 		},
 		{
-			title: 'Prepare your questions',
-			copy: 'Draft an inquiry with the vehicle and your budget. Preview inquiries are not sent.'
+			title: 'Отнема само няколко минути',
+			copy: 'Изпратете запитване с автомобила и бюджета - екипът ще Ви изпрати конкретни следващи стъпки.'
 		}
 	];
 
 	const steps: Step[] = [
 		{
 			number: '1',
-			title: 'Draft an inquiry',
-			copy: 'Note the vehicle you’re interested in and your purchase budget. This preview does not send inquiries or apply for credit.',
+			title: 'Изпратете запитване',
+			copy: 'Кажете кой автомобил ви интересува и какъв месечен бюджет е удобен — без ангажимент и без влияние върху решението ви.',
 			href: '/contact?intent=financing'
 		},
 		{
 			number: '2',
-			title: 'Review your purchase budget',
-			copy: 'Use the calculator for hypothetical outside funding estimates based on down payment and term. It is not a dealer financing offer.',
+			title: 'Търсете според месечния бюджет',
+			copy: 'Използвайте калкулатора, за да сравните първоначална вноска, срок и ориентировъчна месечна вноска.',
 			href: '/calculator',
 			active: true
 		},
 		{
 			number: '3',
-			title: 'Choose a vehicle',
-			copy: 'Choose a vehicle from inventory, then ask about purchase terms and viewing availability.',
+			title: 'Изберете подходяща оферта',
+			copy: `Изберете автомобил от наличността, уточнете условията с екипа и запазете оглед в ${daynightSite.city}.`,
 			href: '/inventory'
 		}
 	];
@@ -90,55 +90,55 @@
 		{
 			image: '/assets/images/blog/post-32.jpg',
 			href: '/faq',
-			category: 'TIPS',
-			title: 'Questions before buying',
-			copy: 'Questions to ask about viewings, paperwork, and the buying process.'
+			category: 'СЪВЕТИ',
+			title: 'Въпроси преди покупка',
+			copy: 'Отговори за оглед, документи и процеса на покупка.'
 		},
 		{
 			image: '/assets/images/blog/post-31.jpg',
 			href: '/calculator',
-			category: 'BUYER-ARRANGED FUNDING',
-			title: 'Buyer-arranged funding calculator',
-			copy: 'Hypothetical outside funding estimate based on price, down payment, and term.'
+			category: 'ФИНАНСИРАНЕ',
+			title: 'Калкулатор за финансиране',
+			copy: 'Ориентировъчна сметка според цена, първоначална вноска и срок.'
 		},
 		{
 			image: '/assets/images/blog/post-23.jpg',
 			href: '/sell-your-car',
-			category: 'HELPFUL INFO',
-			title: 'Selling or trading in a vehicle?',
-			copy: 'Ask whether vehicle purchases or trade-ins are accepted. Availability is not confirmed in this preview.'
+			category: 'ПОЛЕЗНО',
+			title: 'Продажба или бартер',
+			copy: 'Изпратете данни за вашия автомобил и обсъдете възможностите с екипа.'
 		}
 	];
 
 	const faqs: FaqItem[] = [
 		{
 			id: 'documents',
-			question: 'What documents would an outside lender require?',
+			question: 'Какви документи са нужни за финансиране?',
 			answers: [
-				'Ask your chosen outside lender about required documents. The dealership offers no financing or payment plans.',
-				'Any outside lender sets its own requirements. Buyer-arranged funding is separate from the dealership.'
+				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото и съдейства през целия процес.',
+				'Конкретните изисквания зависят от избрания финансов партньор и автомобила.'
 			],
 			active: true
 		},
 		{
 			id: 'owe-money',
-			question: 'Can I use a trade-in with outside funding?',
+			question: 'Мога ли да участвам с бартер при финансиране?',
 			answers: [
-				'Trade-in availability is not confirmed in this preview. Ask the dealer about trade-ins and your outside lender about any funding implications.'
+				'Да — оценяваме текущия ви автомобил и стойността му намалява финансираната сума. Условията се уточняват според автомобила, бюджета и документите.'
 			]
 		},
 		{
 			id: 'leasing',
-			question: 'What down payment would an outside lender require?',
+			question: 'Каква първоначална вноска е нужна?',
 			answers: [
-				'Ask your chosen outside lender about down payment requirements and terms. No dealer financing or payment plans are offered.'
+				'Зависи от автомобила и избраната схема. Екипът може да насочи към подходящ вариант и ориентировъчна месечна вноска още при запитването.'
 			]
 		},
 		{
 			id: 'benefits',
-			question: 'How long would an outside lender’s approval take?',
+			question: 'Колко време отнема одобрението?',
 			answers: [
-				'Ask your chosen outside lender about its review timeline. The dealership does not provide financing approval.'
+				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават окончателно при огледа и подготовката на документите.'
 			]
 		}
 	];
@@ -159,11 +159,11 @@
 	<main id="main-content" tabindex="-1" aria-labelledby="daynight-financing-title">
 		<DesktopYellowRouteHero
 			headingId="daynight-financing-title"
-			title="Buyer-arranged funding"
-			copy="Review your budget and any independently arranged funding before a viewing. Calculator results are hypothetical estimates."
-			primaryLabel="Send inquiry"
+			title="Финансиране"
+			copy="Сравнете бюджет, първоначална вноска и ориентировъчна месечна вноска преди оглед."
+			primaryLabel="Изпрати запитване"
 			primaryHref="/contact"
-			secondaryLabel="View vehicles"
+			secondaryLabel="Виж автомобили"
 			secondaryHref="/inventory"
 		/>
 
@@ -178,11 +178,11 @@
 						     exact 1:1 height match. -->
 						<p class="mb-12"></p>
 						<h2 class="mb-12 capitalize">
-							No dealer financing or payment plans
+							Финансиране и разсрочено плащане без излишни усложнения
 						</h2>
 						<p class="h7 line-height-28 text-secondary mb-42">
-							Any funding must be arranged independently — confirm
-							terms directly with your chosen outside lender.
+							Сравнете варианти за финансиране и ориентировъчна месечна вноска за минути — с ясни
+							условия и съдействие от екипа.
 						</p>
 						<ul class="benefit-list mb-40">
 							{#each benefits as benefit (benefit.title)}
@@ -198,11 +198,11 @@
 
 						<div class="hero-actions">
 							<a href={resolve('/contact')} class="btn-large-3 sa-cta sa-cta-primary">
-								Send inquiry
+								Изпрати запитване
 							</a>
 							<p class="hero-actions__call">
-								<span>Prefer to talk?</span>
-								<a class="text-underline" href={`tel:${daynightSite.phone}`}>Call</a>
+								<span>Предпочитате разговор?</span>
+								<a class="text-underline" href={daynightSite.phoneHref}>Обадете се</a>
 							</p>
 						</div>
 					</div>
@@ -215,9 +215,9 @@
 		<section class="background-light py-100">
 			<div class="container">
 				<div class="section-head">
-					<h2 class="mb-14 capitalize">Understanding buyer-arranged funding</h2>
+					<h2 class="mb-14 capitalize">Как работи финансирането</h2>
 					<p class="text-secondary h7 line-height-28">
-						Review your budget and any independently arranged funding before a viewing. Calculator results are hypothetical estimates.
+						Сравнете бюджет, първоначална вноска и ориентировъчна месечна вноска преди оглед.
 					</p>
 				</div>
 
@@ -240,9 +240,9 @@
 		<section class="bg-white py-100">
 			<div class="container">
 				<div class="mb-40">
-					<h2 class="mb-12 capitalize">Planning a purchase with outside funding</h2>
+					<h2 class="mb-12 capitalize">Полезно при покупка с финансиране</h2>
 					<p class="text-secondary h7 line-height-28">
-						Questions, hypothetical estimates, and a vehicle inquiry draft.
+						Отговори, калкулатор и запитване за вашия автомобил.
 					</p>
 				</div>
 
@@ -269,26 +269,20 @@
 		<!-- faq -->
 		<section class="background-light py-100">
 			<div class="container">
-				<h2 class="mb-40 text-center capitalize">Buyer-arranged funding FAQ</h2>
+				<h2 class="mb-40 text-center capitalize">Често задавани въпроси за финансирането</h2>
 				<div class="max-width-930 mx-auto w-full">
 					<div class="flat-accordion flex flex-col gap-18" data-daynight-native-accordion>
 						{#each faqs as faq (faq.id)}
 							{@const open = openId === faq.id}
 							<div class={['flat-toggle', { active: open }]}>
-								<div
+								<button
+									type="button"
 									class={['toggle-title', { active: open }]}
-									role="button"
-									tabindex="0"
 									aria-expanded={open}
+									aria-controls={`finance-faq-${faq.id}`}
 									onclick={() => toggleFaq(faq.id)}
-									onkeydown={(event) => {
-										if (event.key === 'Enter' || event.key === ' ') {
-											event.preventDefault();
-											toggleFaq(faq.id);
-										}
-									}}
 								>
-									<p class="h5 title">{faq.question}</p>
+									<span class="h5 title">{faq.question}</span>
 									<span class="icon">
 										<svg
 											width="24"
@@ -306,8 +300,8 @@
 											/>
 										</svg>
 									</span>
-								</div>
-								<div class="toggle-content">
+								</button>
+								<div id={`finance-faq-${faq.id}`} class="toggle-content">
 									{#each faq.answers as answer, index (answer)}
 										<p
 											class={[
@@ -349,8 +343,8 @@
 	   26px (verified), so it is set here on the root. */
 	.financing-page {
 		color: #1c1c1c;
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 		letter-spacing: 0;
 	}
@@ -491,19 +485,19 @@
 	   page shrinks. */
 	.h7 {
 		font-size: var(--sa-text-desktop-body);
-		font-weight: 500;
+		font-weight: var(--sa-weight-medium);
 		line-height: var(--sa-leading-body);
 	}
 
 	.h5 {
-		font-size: 18px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.35;
 	}
 
 	.h4 {
-		font-size: 22px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-card-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.25;
 	}
 
@@ -514,8 +508,8 @@
 	   section h2 headings are left (start). */
 	.financing-page h2 {
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: 0;
 		line-height: 1.08;
 	}
@@ -620,8 +614,8 @@
 		border-radius: 999px;
 		background: var(--sa-blue, #b00000);
 		color: #fff;
-		font-size: 32px;
-		font-weight: 700;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-strong);
 	}
 
 	.step-title {
@@ -631,7 +625,7 @@
 	.step-box p.text-secondary {
 		margin: 0;
 		font-size: var(--sa-text-desktop-dense);
-		font-weight: 400;
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 	}
 
@@ -721,6 +715,14 @@
 	}
 
 	.toggle-title {
+		width: 100%;
+		margin: 0;
+		border: 0;
+		appearance: none;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		text-align: left;
 		position: relative;
 		display: flex;
 		min-height: 72px;

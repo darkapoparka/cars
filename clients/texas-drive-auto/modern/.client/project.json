@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "texas-drive-auto",
   "templateKey": "modern",
-  "templateVersion": "2026.09.06-refresh-1",
+  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
   "createdAt": "2026-09-08T21:52:57.681Z",
-  "state": "in-progress",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -25,7 +25,6 @@
     "demoProjectId": null,
     "registered": false
   },
-  "updatedAt": "2026-09-08T23:02:53.031Z",
   "knownGaps": [
     "This is an in-progress implementation checkpoint, not completed or sendable.",
     "Five Texas listing photos and media redistribution permission remain unresolved.",
@@ -38,5 +37,22 @@
     "Prisma generation",
     "web typecheck/build",
     "390/1440 browser review"
-  ]
+  ],
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-2/cars"
+  },
+  "workflowCommit": "12701b6c1ac9a4b58f80035a88f96aa2f95fb968",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.06-refresh-1",
+    "refreshedAt": "2026-09-18T23:04:54.978Z",
+    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
+    "mode": "fresh-template-plus-dealer-overlay"
+  }
 }

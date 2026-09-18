@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import Check from '@lucide/svelte/icons/check';
 	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
@@ -16,7 +17,7 @@
 		showHeaderCta = true,
 		showBelowCta = false,
 		balancedActionCards = false,
-		ctaLabel = 'View all'
+		ctaLabel = 'Виж всички'
 	}: {
 		showReviews?: boolean;
 		showActionCards?: boolean;
@@ -51,43 +52,43 @@
 			id: 'buy-confidently',
 			modifier: 'inventory',
 			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp',
-			alt: 'Mercedes-Benz G-Class and Lamborghini Urus',
-			title: 'Explore your next vehicle',
-			balancedTitle: 'Buy a vehicle',
+			alt: 'Mercedes-Benz G-Class и Lamborghini Urus',
+			title: 'Купи автомобил уверено',
+			balancedTitle: 'Купи автомобил',
 			titleHref: '/inventory',
 			bullets: [
-				'Browse current inventory.',
-				'Filter by make, price, fuel type, and mileage.',
-				'Ask about viewing and inspection options.'
+				'Прегледайте актуалната наличност.',
+				'Филтрирайте по марка, цена, гориво и пробег.',
+				'Получете съдействие за оглед и проверка.'
 			],
 			balancedBullets: [
-				'View current inventory.',
-				'Filter by price and mileage.',
-				'Ask to schedule a viewing.'
+				'Вижте актуалната наличност.',
+				'Филтрирайте по цена и пробег.',
+				'Уговорете оглед с екипа.'
 			],
 			ctaHref: '/inventory',
-			ctaLabel: 'Browse vehicles'
+			ctaLabel: 'Разгледай автомобилите'
 		},
 		{
 			id: 'sell-or-trade',
 			modifier: 'sell',
 			image: '/assets/images/home-promos/urus-rear-v4.webp',
-			alt: 'Ask about selling or trading in',
-			title: 'Selling or trading in?',
-			balancedTitle: 'Ask about selling or trading',
+			alt: 'Продай или замени автомобил',
+			title: 'Продай или замени лесно',
+			balancedTitle: 'Продай или замени',
 			titleHref: '/sell-your-car',
 			bullets: [
-				'Add photos and vehicle details to your draft.',
-				'Prepare a question for Texas Drive Auto.',
-				'Ask whether selling or trading in is available and what the next steps are.'
+				'Изпратете снимки и данни за автомобила.',
+				`Получете обратна връзка от екипа на ${daynightSite.shortName}.`,
+				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [
-				'Add photos and details.',
-				'Response details are unavailable in this preview.',
-				'Ask whether selling or trading in is available.'
+				'Изпратете снимки и данни.',
+				'Получете отговор от екипа.',
+				'Обсъдете продажба или замяна.'
 			],
 			ctaHref: '/sell-your-car/request',
-			ctaLabel: 'Sell a vehicle'
+			ctaLabel: 'Продай автомобил'
 		}
 	];
 </script>
@@ -97,12 +98,12 @@
 	class:daynight-home-section--reviews-with-banner={showReviews}
 	class:daynight-home-section--actions={!showReviews && showActionCards}
 	class:daynight-home-section--balanced-actions={balancedActionCards}
-	aria-label={!showReviews && showActionCards ? 'Buy or sell' : undefined}
+	aria-label={!showReviews && showActionCards ? 'Купи или продай' : undefined}
 >
 	{#if showReviews}
 		<div class="daynight-home-container home-reviews-heading">
 			<DesktopSectionHeading
-				title="Customer reviews unavailable in this preview"
+				title="Отзиви от клиенти"
 				href={showHeaderCta ? resolve('/reviews') : undefined}
 				label={ctaLabel}
 			/>
@@ -195,7 +196,11 @@
 </section>
 
 <style>
-	.home-reviews-disclosure { margin: 12px 0 0; color: var(--sa-ink-soft); font: 500 var(--sa-text-sm)/1.5 var(--sa-font); }
+	.home-reviews-disclosure {
+		margin: 12px 0 0;
+		color: var(--sa-ink-soft);
+		font: var(--sa-weight-medium) var(--sa-text-sm)/1.5 var(--sa-font);
+	}
 	.home-action-button {
 		margin-top: 22px;
 		display: flex;
@@ -266,8 +271,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-action-card__title {
 		color: var(--banner-foreground) !important;
-		font-size: clamp(23px, 1.8vw, 28px);
-		font-weight: 700;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.025em;
 		line-height: 1.12;
 	}
@@ -278,8 +283,8 @@
 
 	:global(body.daynight-home-page) .daynight-home-action-card__list li {
 		color: var(--banner-foreground);
-		font-size: 14px;
-		font-weight: 550;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 8px;
 		line-height: 1.35;
 	}
@@ -308,8 +313,8 @@
 		box-shadow: none !important;
 		color: #fff !important;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 700;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		height: 44px;
 		justify-content: center;
 		margin-top: auto;
@@ -369,14 +374,14 @@
 	:global(body.daynight-home-page)
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__title) {
-		font-size: clamp(25px, 2.1vw, 29px);
+		font-size: var(--sa-text-panel-title);
 	}
 
 	:global(body.daynight-home-page)
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__list li) {
-		font-size: 15px;
-		font-weight: 500;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 1.4;
 	}
 
@@ -389,7 +394,7 @@
 		.daynight-home-section--balanced-actions
 		:global(.daynight-home-action-card__cta) {
 		align-self: flex-start;
-		font-size: 16px;
+		font-size: var(--sa-button-font-size);
 		justify-self: start;
 		margin: auto 0 0;
 	}
@@ -408,8 +413,8 @@
 		box-sizing: border-box;
 		color: #c91620;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 650;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		justify-content: center;
 		min-height: 42px;
 		padding: 0 18px;

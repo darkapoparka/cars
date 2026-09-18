@@ -38,15 +38,26 @@ export const marketplaceBodyTypesByCategory = {
   van: ["van", "minibus", "other"],
 } as const satisfies Record<VehicleCategory, readonly BodyType[]>;
 
-export const marketplaceCityOptions = ["Dallas"] as const;
+export const marketplaceCityOptions = [
+  "Dallas",
+  "Plovdiv",
+  "Varna",
+  "Burgas",
+  "Ruse",
+  "Stara Zagora",
+] as const;
 
-export const marketplacePriceRange = [0, 20_000] as const;
+export const marketplacePriceRange = [0, 200_000] as const;
 export const marketplaceYearRange = [1990, 2026] as const;
 export const marketplaceMileageRange = [0, 250_000] as const;
 
-export const marketplacePricePresets = [5_000, 7_000, 9_000, 16_000] as const;
-export const marketplaceYearPresets = [2007, 2012, 2014, 2018] as const;
-export const marketplaceMileagePresets = [50_000, 100_000, 150_000, 200_000] as const;
+export const marketplacePricePresets = [
+  40_000, 60_000, 100_000, 150_000,
+] as const;
+export const marketplaceYearPresets = [2018, 2020, 2022, 2024] as const;
+export const marketplaceMileagePresets = [
+  50_000, 100_000, 150_000, 200_000,
+] as const;
 
 export const marketplaceBodyFilterOptions: readonly {
   labelBg: string;
@@ -95,7 +106,10 @@ export const marketplaceTransmissionLabelsBg: Record<Transmission, string> = {
   semi_automatic: "Полуавтоматик",
 };
 
-export const marketplaceSortLabelsBg: Record<MarketplaceSearchParams["sort"], string> = {
+export const marketplaceSortLabelsBg: Record<
+  MarketplaceSearchParams["sort"],
+  string
+> = {
   recommended: "Препоръчани",
   newest: "Най-нови",
   price_asc: "Цена нагоре",
@@ -104,10 +118,12 @@ export const marketplaceSortLabelsBg: Record<MarketplaceSearchParams["sort"], st
   year_desc: "Най-нова година",
 };
 
-export const marketplaceCurrency = leadSite.staticDemoMode ? leadSite.currency : "BGN";
+export const marketplaceCurrency = leadSite.staticDemoMode
+  ? leadSite.currency
+  : "BGN";
 
 export const marketplaceSearchCurrency: MarketplaceSearchParams["currency"] =
-  leadSite.currency === "BGN" || leadSite.currency === "EUR" || leadSite.currency === "USD"
+  leadSite.currency === "BGN" || leadSite.currency === "EUR"
     ? leadSite.currency
     : undefined;
 

@@ -28,45 +28,45 @@ const formKeys: ReadonlyArray<keyof PostFormInput> = postFormKeys;
 
 const fallbackPostImage = '/assets/images/blog/post-44.jpg';
 const daynightArticleCategories = new Set<DayNightArticleCategory>([
-	'Buying',
-	'Selling',
-	'News',
-	'Tips',
-	'Buyer-arranged funding',
-	'Paperwork',
-	'Makes'
+	'Покупка',
+	'Продажба',
+	'Новини',
+	'Съвети',
+	'Финансиране',
+	'Документи',
+	'Марки'
 ]);
 const cyrillicSlugMap: Record<string, string> = {
-	a: 'a',
-	b: 'b',
-	v: 'v',
-	g: 'g',
-	d: 'd',
-	e: 'e',
-	zh: 'zh',
-	z: 'z',
-	i: 'i',
-	y: 'y',
-	k: 'k',
-	l: 'l',
-	m: 'm',
-	n: 'n',
-	o: 'o',
-	p: 'p',
-	r: 'r',
-	s: 's',
-	t: 't',
-	u: 'u',
-	f: 'f',
-	h: 'h',
-	ts: 'ts',
-	ch: 'ch',
-	sh: 'sh',
-	sht: 'sht',
-	a: 'a',
-	y: '',
-	yu: 'yu',
-	ya: 'ya'
+	а: 'a',
+	б: 'b',
+	в: 'v',
+	г: 'g',
+	д: 'd',
+	е: 'e',
+	ж: 'zh',
+	з: 'z',
+	и: 'i',
+	й: 'y',
+	к: 'k',
+	л: 'l',
+	м: 'm',
+	н: 'n',
+	о: 'o',
+	п: 'p',
+	р: 'r',
+	с: 's',
+	т: 't',
+	у: 'u',
+	ф: 'f',
+	х: 'h',
+	ц: 'ts',
+	ч: 'ch',
+	ш: 'sh',
+	щ: 'sht',
+	ъ: 'a',
+	ь: '',
+	ю: 'yu',
+	я: 'ya'
 };
 
 function readText(formData: FormData, key: keyof PostFormInput) {
@@ -108,7 +108,7 @@ function normalizePostCategory(
 		return trimmed as DayNightArticleCategory;
 	}
 
-	return type === 'news' ? 'News' : 'Tips';
+	return type === 'news' ? 'Новини' : 'Съвети';
 }
 
 function postKind(type: PostRow['type']): DayNightArticleKind {
@@ -246,7 +246,7 @@ export function postRowToDayNightArticle(post: PostRow): DayNightArticle {
 		summary: summary.length ? summary : [description],
 		sections: [
 			{
-				heading: post.category?.trim() || (post.type === 'news' ? 'News' : 'Helpful'),
+				heading: post.category?.trim() || (post.type === 'news' ? 'Новина' : 'Полезно'),
 				paragraphs: sectionParagraphs
 			}
 		],

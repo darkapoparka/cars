@@ -40,7 +40,10 @@ declare global {
 			user?: SafePageUser | null;
 			storefrontInventorySummary?: InventoryCountSummary | null;
 		}
-		// interface PageState {}
+		interface PageState {
+			inventoryReturn?: string;
+			inventoryScrollY?: number;
+		}
 		// interface Platform {}
 	}
 }
