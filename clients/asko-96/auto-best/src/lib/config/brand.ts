@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. „Ботевградско шосе“ 300",
   appointment: "Понеделник – петък: 09:00–18:30; Събота: 10:00–16:00; Неделя: почивен ден",
-  logo: "/assets/asko96/asko96-logo.png",
-  logoOnDark: "/assets/asko96/asko96-logo.png"
+  logo: "/assets/brand/logo-on-light.webp",
+  logoOnDark: "/assets/brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;
