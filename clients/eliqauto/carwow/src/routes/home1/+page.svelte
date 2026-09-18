@@ -10,7 +10,6 @@
 	homeBrandStrip={data.homeBrandStrip}
 	desktopHome={data.desktopHome}
 	mobileHome={data.mobileHome}
-	initialViewport={data.initialViewport}
 	heroToggle="segmented"
 	desktopComposition="home1"
 />

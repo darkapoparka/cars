@@ -15,8 +15,7 @@
 		showHeaderCta = true,
 		showBelowCta = false,
 		showHeading = true,
-		layout = 'section',
-		headerCtaPlacement = 'inline'
+		layout = 'section'
 	}: {
 		brands: HomeBrandStripItem[];
 		title?: string;
@@ -25,7 +24,6 @@
 		showBelowCta?: boolean;
 		showHeading?: boolean;
 		layout?: 'section' | 'strip';
-		headerCtaPlacement?: 'inline' | 'stacked';
 	} = $props();
 
 	const isStrip = $derived(layout === 'strip');
@@ -42,7 +40,13 @@
 	aria-label={headingVisible ? undefined : title}
 >
 	{#if headingVisible}
-		<div class="daynight-home-container home-browse-heading"><DesktopSectionHeading title={title} href={showHeaderCta ? resolve('/inventory') : undefined} label={ctaLabel} /></div>
+		<div class="daynight-home-container home-browse-heading">
+			<DesktopSectionHeading
+				{title}
+				href={showHeaderCta ? resolve('/inventory') : undefined}
+				label={ctaLabel}
+			/>
+		</div>
 	{/if}
 	<div class="daynight-home-section-content daynight-home-container">
 		<div class="daynight-brand-grid">
@@ -88,7 +92,9 @@
 </section>
 
 <style>
- .home-browse-heading { padding-top: 36px; }
+	.home-browse-heading {
+		padding-top: 36px;
+	}
 	/* Brand strip layout is owned by this Svelte section. */
 	.daynight-brand-grid,
 	.daynight-brand-grid__items {
@@ -125,8 +131,8 @@
 		box-sizing: border-box;
 		color: #c91620;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 650;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		justify-content: center;
 		min-height: 42px;
 		padding: 0 18px;
@@ -195,8 +201,8 @@
 
 	:global(body.daynight-home-page) .daynight-brand-grid .daynight-brand-card__name {
 		color: #151923 !important;
-		font-size: 18px !important;
-		font-weight: 650;
+		font-size: var(--sa-text-lg) !important;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.2;
 		margin: 0 0 3px;
 	}
@@ -228,7 +234,7 @@
 
 	:global(body.daynight-home-page) .daynight-brand-grid .daynight-brand-card__count {
 		color: #475569 !important;
-		font-size: 13px !important;
+		font-size: var(--sa-text-caption) !important;
 		line-height: 1.3;
 		margin: 0;
 		text-align: center;

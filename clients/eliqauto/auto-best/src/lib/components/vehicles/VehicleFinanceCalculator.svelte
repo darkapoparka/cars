@@ -3,9 +3,10 @@
   import { resolve } from '$app/paths';
   import { formatVehiclePrice } from '$data/inventory';
 
-  let { priceEur, vehicleId }: { priceEur: number; vehicleId: number } = $props();
+  let { priceEur, vehicleId, idPrefix = 'finance' }: { priceEur: number; vehicleId: number; idPrefix?: string } = $props();
 
   const financeTerms = [12, 24, 36, 48, 60] as const;
+  let disclaimerId = $derived(`${idPrefix}-disclaimer`);
   let downPaymentEur = $state(0);
   let termMonths = $state<(typeof financeTerms)[number]>(60);
 
@@ -35,7 +36,7 @@
           step="500"
           bind:value={downPaymentEur}
           onblur={normalizeDownPayment}
-          aria-describedby="finance-disclaimer"
+          aria-describedby={disclaimerId}
         />
         <b>€</b>
       </span>
@@ -43,7 +44,7 @@
 
     <label>
       <span>Срок</span>
-      <select bind:value={termMonths} aria-describedby="finance-disclaimer">
+      <select bind:value={termMonths} aria-describedby={disclaimerId}>
         {#each financeTerms as term (term)}
           <option value={term}>{term} месеца</option>
         {/each}
@@ -62,7 +63,7 @@
     </div>
   </dl>
 
-  <p id="finance-disclaimer" class="dn-finance-calculator__disclaimer">
+  <p id={disclaimerId} class="dn-finance-calculator__disclaimer">
     Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.
   </p>
 
@@ -75,17 +76,17 @@
   .dn-finance-calculator header h2 {
     margin: 0;
     color: #24272c;
-    font-size: 24px;
-    font-weight: 650;
-    line-height: 1.18;
-    letter-spacing: -.025em;
+    font-size: var(--dn-text-subheading);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
   }
 
   .dn-finance-calculator header p {
     margin: 8px 0 0;
     color: #666d77;
     font-size: var(--dn-text-meta);
-    line-height: 1.5;
+    line-height: var(--dn-leading-body);
   }
 
   .dn-finance-calculator__fields {
@@ -99,7 +100,7 @@
     gap: 7px;
     color: #555b64;
     font-size: var(--dn-text-meta);
-    font-weight: 600;
+    font-weight: var(--dn-weight-semibold);
   }
 
   .dn-finance-calculator__input { position: relative; }
@@ -123,7 +124,7 @@
     background: #fff;
     color: #24272c;
     font: inherit;
-    font-size: var(--dn-text-body);
+    font-size: var(--dn-control-size);
   }
 
   input { padding: 0 40px 0 13px; }
@@ -155,23 +156,23 @@
 
   .dn-finance-calculator__result dt {
     color: #707680;
-    font-size: 12px;
-    line-height: 1.35;
+    font-size: var(--dn-text-meta);
+    line-height: var(--dn-leading-meta);
   }
 
   .dn-finance-calculator__result dd {
     margin: 5px 0 0;
     color: #24272c;
     font-size: var(--dn-text-body);
-    font-weight: 700;
-    line-height: 1.3;
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
   }
 
   .dn-finance-calculator__disclaimer {
     margin: 10px 0 0;
     color: #747a83;
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: var(--dn-text-meta);
+    line-height: var(--dn-leading-body);
   }
 
   .dn-finance-calculator > a {
@@ -184,8 +185,8 @@
     border-radius: var(--dn-radius-button);
     background: var(--dn-red);
     color: #fff;
-    font-size: 17px;
-    font-weight: 650;
+    font-size: var(--dn-text-lead);
+    font-weight: var(--dn-weight-semibold);
     text-align: center;
   }
 
