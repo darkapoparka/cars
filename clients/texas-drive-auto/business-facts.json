@@ -14,5 +14,17 @@
   "hours": "Monday–Saturday 10 AM–6 PM; Sunday closed",
   "dealerFinance": false,
   "website": "https://www.texasdriveauto.com/",
-  "observedAt": "2026-09-09"
+  "observedAt": "2026-09-09",
+  "logo": "/assets/brand/logo-on-light.webp",
+  "workingLogoPath": "brand/logo-on-light.png",
+  "previewNotice": "Contact the showroom before travelling and confirm availability.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
