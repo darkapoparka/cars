@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. „Цар Освободител“ 256",
   appointment: "Свържете се за работно време и оглед.",
-  logo: "/assets/brand/logo-on-light.webp",
-  logoOnDark: "/assets/brand/logo-on-dark.webp"
+  logo: '/assets/brand/logo-on-light.webp',
+  logoOnDark: '/assets/brand/logo-on-dark.webp'
 } as const satisfies BrandConfig;
