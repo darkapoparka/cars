@@ -54,11 +54,13 @@ export const MobileImportSourceSearch = ({
 }: MobileImportSourceSearchProps) => {
   const copy = overlayCopy[locale];
   const [open, setOpen] = useState(false);
+  const [ready, setReady] = useState(false);
   const [sourceUrl, setSourceUrl] = useState(defaultSourceUrl);
   const inputRef = useRef<HTMLInputElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    setReady(true);
     setSourceUrl(defaultSourceUrl);
   }, [defaultSourceUrl]);
 
@@ -66,9 +68,11 @@ export const MobileImportSourceSearch = ({
     <>
       <search className="block">
         <button
+          aria-expanded={open}
           aria-haspopup="dialog"
           aria-label={copy.open}
-          className="flex h-[52px] w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] active:bg-zinc-200"
+          className="flex h-12 w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] active:bg-zinc-200"
+          disabled={!ready}
           onClick={() => setOpen(true)}
           ref={triggerRef}
           type="button"
@@ -78,7 +82,7 @@ export const MobileImportSourceSearch = ({
             name="search"
           />
           <span
-            className={`min-w-0 flex-1 truncate text-[15px] ${
+            className={`min-w-0 flex-1 truncate font-medium text-body ${
               sourceUrl ? "text-zinc-950" : "text-zinc-500"
             }`}
           >
@@ -153,7 +157,10 @@ export const MobileImportSourceSearch = ({
                 <Button
                   aria-label={copy.clear}
                   className="size-11 shrink-0 rounded-full bg-zinc-200 p-0 text-zinc-950 shadow-none hover:bg-zinc-300 active:bg-zinc-300"
-                  onClick={() => setSourceUrl("")}
+                  onClick={() => {
+                    setSourceUrl("");
+                    inputRef.current?.focus({ preventScroll: true });
+                  }}
                   size="icon"
                   type="button"
                   variant="ghost"

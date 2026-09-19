@@ -74,15 +74,19 @@
 	$effect(() => {
 		if (!open) return;
 
+		let disposed = false;
 		let raf = 0;
 		const focusAfterRender = async () => {
 			await tick();
-			raf = requestAnimationFrame(focusDrawer);
+			if (!disposed) raf = requestAnimationFrame(focusDrawer);
 		};
 
 		focusAfterRender();
 
-		return () => cancelAnimationFrame(raf);
+		return () => {
+			disposed = true;
+			cancelAnimationFrame(raf);
+		};
 	});
 
 	// Single keyboard strategy for both platforms (replaces the old stack of
