@@ -5,15 +5,15 @@
 	import { daynightFooterBottomLinks, daynightFooterLinkGroups } from './daynight-footer-data';
 	import DayNightFooterIcon from './DayNightFooterIcon.svelte';
 
-	const phoneHref = `tel:${daynightSite.phone}`;
+	const phoneHref = daynightSite.phoneHref;
 	const contactHref = '/contact';
 	const facebookLinkProps = {
-		href: 'https://www.facebook.com/61566304063141/',
+		href: daynightSite.socialLinks.facebook,
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
 	const instagramLinkProps = {
-		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
+		href: daynightSite.socialLinks.instagram,
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
@@ -30,12 +30,25 @@
 
 	const containerClasses = 'mx-auto w-full max-w-[1440px] px-[15px] max-[767px]:px-4';
 	const footerLinkClasses =
-		'relative inline-block !text-[16px] font-medium !leading-6 text-sa-surface/68 no-underline transition duration-150 ease-sa hover:text-sa-surface focus-visible:text-sa-surface';
+		'relative inline-block !text-[length:var(--sa-text-base)] font-medium !leading-6 text-sa-surface/68 no-underline transition duration-150 ease-sa hover:text-sa-surface focus-visible:text-sa-surface';
 	const socialLinkClasses =
 		'flex size-11 items-center justify-center rounded-sa-pill border border-sa-surface/20 text-sa-surface/70 no-underline transition duration-150 ease-sa hover:border-sa-surface hover:bg-sa-surface hover:text-sa-ink focus-visible:border-sa-surface focus-visible:bg-sa-surface focus-visible:text-sa-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue [&_svg]:size-5 [&_svg_circle]:stroke-current [&_svg_path]:stroke-current';
 </script>
 
 <DesktopDealerFooter />
+
+<footer class="compact-mobile-footer">
+	<img src={daynightSite.logoLight} alt={daynightSite.name} />
+	<a class="compact-mobile-footer__phone" href={phoneHref}>{daynightSite.phoneLabel}</a>
+	<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer">{daynightSite.location}</a
+	>
+	<nav aria-label="Връзки в долната част">
+		<a href={resolve('/inventory')}>Автомобили</a>
+		<a href={resolve('/contact')}>Контакти</a>
+		<a href={resolve('/terms')}>Условия</a>
+	</nav>
+	<small>© {new Date().getFullYear()} {daynightSite.shortName}</small>
+</footer>
 
 <footer
 	class="daynight-legacy-footer relative bg-sa-dark font-sa leading-[26px] tracking-normal text-sa-surface"
@@ -52,7 +65,7 @@
 							<a
 								href={resolve('/')}
 								class="inline-block no-underline"
-								aria-label="Texas Drive Auto home page"
+								aria-label={`${daynightSite.shortName} начална страница`}
 							>
 								<img
 									class="mb-[22px] block h-[54px] w-[190px] object-contain"
@@ -61,23 +74,23 @@
 								/>
 							</a>
 							<p class="m-0 mb-2 text-sa-sm leading-5 font-medium text-sa-surface/60 uppercase">
-								Viewings and questions
+								Огледи и консултация
 							</p>
 							<p class="m-0 mb-7 text-sa-surface/75">
-								Ask about scheduling a viewing.<br />Ask about availability and
-								paperwork.
+								Огледи с предварителна уговорка.<br />Наличност, финансиране, бартер и съдействие по
+								документи.
 							</p>
 						</div>
 						<form
 							class="relative mt-6 w-[min(100%,380px)] max-[1199px]:mt-5 max-[1199px]:ml-auto max-[1199px]:w-full max-[1199px]:max-w-full max-[767px]:mt-0 max-[767px]:ml-0"
 							action={resolve('/contact')}
 							method="get"
-							title="Interest in new listings"
+							title="Запиши се за нови оферти"
 						>
-							<label class="sr-only" for="footer-email">Email for new listings</label>
+							<label class="sr-only" for="footer-email">Имейл за нови оферти</label>
 							<input
 								type="email"
-								placeholder="Email for new listings"
+								placeholder="Имейл за нови оферти"
 								name="email"
 								id="footer-email"
 								autocomplete="email"
@@ -87,7 +100,7 @@
 							<button
 								type="submit"
 								class="absolute top-1 right-1 flex size-12 cursor-pointer items-center justify-center rounded-sa-pill border-0 bg-sa-surface text-sa-ink transition duration-150 ease-sa hover:bg-sa-blue hover:text-sa-surface focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue [&_svg]:size-6 [&_svg_path]:stroke-current"
-								aria-label="Draft interest in new listings"
+								aria-label="Изпрати интерес към нови оферти"
 							>
 								<DayNightFooterIcon name="search" />
 							</button>
@@ -136,8 +149,8 @@
 								{daynightSite.location}
 							</a>
 							<p class="m-0 mb-4 text-sa-sm leading-[22px] text-sa-surface/60">
-								Texas Drive Auto offers an inventory preview with draft inquiries and clear
-								next steps are unconfirmed in this preview.
+								{daynightSite.shortName} предлага актуална дигитална витрина с наличност, запитвания и
+								ясни следващи стъпки.
 							</p>
 							<ul class="m-0 mb-3 flex list-none flex-wrap gap-2 p-0">
 								<li>
@@ -163,8 +176,8 @@
 								<li>
 									<a
 										href={phoneHref}
-										title={`Contact ${daynightSite.shortName} by phone or Viber.`}
-										aria-label={`Contact ${daynightSite.shortName} by phone or Viber.`}
+										title={`Свържете се с ${daynightSite.shortName} по телефон или Viber.`}
+										aria-label={`Свържете се с ${daynightSite.shortName} по телефон или Viber.`}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="phone" />
@@ -173,8 +186,8 @@
 								<li>
 									<a
 										{...sourceInventoryLinkProps}
-										title="View available vehicles on mobile.bg"
-										aria-label="View available vehicles on mobile.bg"
+										title="Виж наличните автомобили в mobile.bg"
+										aria-label="Виж наличните автомобили в mobile.bg"
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="car-lot" />
@@ -183,8 +196,8 @@
 								<li>
 									<a
 										{...mapLinkProps}
-										title="Open the Texas Drive Auto location in Google Maps"
-										aria-label="Open the Texas Drive Auto location in Google Maps"
+										title={`Отвори локацията на ${daynightSite.shortName} в Google Maps`}
+										aria-label={`Отвори локацията на ${daynightSite.shortName} в Google Maps`}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="location" />
@@ -196,15 +209,15 @@
 							class="max-[1199px]:w-1/2 max-[767px]:mt-[18px] max-[767px]:w-full xl:translate-y-1"
 						>
 							<p class="m-0 mb-2 text-sa-sm leading-[22px] font-semibold text-sa-surface">
-								Have a question?
+								Имате въпрос?
 							</p>
 							<div class="flex items-center gap-3">
 								<a
 									href={resolve(contactHref)}
 									class="inline-flex min-h-11 items-center justify-center rounded-sa-xs border border-sa-surface/20 px-3.5 text-sa-base leading-none font-semibold text-sa-surface/75 no-underline transition duration-150 ease-sa hover:border-sa-blue hover:bg-sa-blue hover:text-sa-surface focus-visible:border-sa-blue focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue"
-									title="Contact Texas Drive Auto."
+									title={`Свържете се със ${daynightSite.shortName}.`}
 								>
-									Get in touch
+									Свържете се
 								</a>
 							</div>
 						</div>
@@ -222,8 +235,8 @@
 				<p class="m-0 text-sa-sm leading-[22px] text-sa-surface/60">
 					©2026 <a
 						class="text-sa-sm leading-[22px] text-sa-surface no-underline"
-						href={resolve('/')}>Texas Drive Auto</a
-					>. All rights reserved.
+						href={resolve('/')}>{daynightSite.shortName}</a
+					>. Всички права запазени.
 				</p>
 				<ul
 					class="m-0 flex list-none flex-wrap items-center p-0 max-[767px]:w-full max-[767px]:justify-start"
@@ -247,6 +260,52 @@
 </footer>
 
 <style>
+	.compact-mobile-footer {
+		display: none;
+	}
+	@media (max-width: 991px) {
+		:global(#wrapper:has(> .compact-mobile-footer)) {
+			padding-bottom: 0 !important;
+		}
+		.daynight-legacy-footer {
+			display: none;
+		}
+		.compact-mobile-footer {
+			display: grid;
+			gap: 12px;
+			background: var(--sa-dark);
+			color: #fff;
+			padding: 24px 16px calc(84px + env(safe-area-inset-bottom));
+		}
+		.compact-mobile-footer img {
+			width: 160px;
+			height: auto;
+		}
+		.compact-mobile-footer a {
+			color: inherit;
+			font-size: var(--sa-text-caption);
+			line-height: 1.5;
+		}
+		.compact-mobile-footer__phone {
+			font-size: var(--sa-button-font-size) !important;
+			font-weight: var(--sa-button-font-weight);
+		}
+		.compact-mobile-footer nav {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+		.compact-mobile-footer nav a {
+			display: inline-flex;
+			align-items: center;
+			min-height: 44px;
+		}
+		.compact-mobile-footer small {
+			color: #b5bbc3;
+			font-size: var(--sa-text-caption);
+		}
+	}
+
 	.footer-link-group summary {
 		min-height: 44px;
 		cursor: pointer;

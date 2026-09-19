@@ -6,6 +6,10 @@
   import { contactPreparation, type ContactTopic } from '$data/company';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
   import VehicleEnquiry from './VehicleEnquiry.svelte';
+  import TradeInEnquiry from './TradeInEnquiry.svelte';
+  import TradeInInfoDrawer from './TradeInInfoDrawer.svelte';
+  import ImportHowItWorks from './ImportHowItWorks.svelte';
+  import WorkflowSupport from './WorkflowSupport.svelte';
 
   let { topic, vehicle = null, importUrl = null }: { topic: ContactTopic; vehicle?: Vehicle | null; importUrl?: string | null } = $props();
   const preparation = $derived(contactPreparation[topic.id]);
@@ -17,27 +21,30 @@
   ] as const;
 </script>
 
-<div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'}>
+<div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-intent--tradein={topic.id === 'trade-in'} class:dn-contact-intent--import={topic.id === 'import'}>
   <div class="dn-contact-intent__main">
     {#if topic.id === 'trade-in' || topic.id === 'import'}
-      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Sale or trade-in inquiry' : topic.title}</h1>
+      <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? 'Продай или бартер' : topic.title}</h1>
+      {#if topic.id === 'import'}<p class="dn-contact-workflow-hint">Линк към обява или описание</p>{/if}
     {/if}
     <div class="dn-contact-intent__heading">
-      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Contact the team</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Call the team</span>{/if}</h2>
+      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Свържете се с екипа</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Обадете се на екипа</span>{/if}</h2>
     </div>
 
     {#if vehicle && topic.id !== 'leasing'}
       <ContactVehicle {vehicle} />
     {/if}
-    <div class="dn-contact-selected">
+    <div class="dn-contact-selected" class:dn-contact-selected--description-only={topic.id === 'general'}>
       {#if topic.id !== 'general'}
         <h3>{topic.title}</h3>
       {/if}
       <p>{#if topic.mobileDescription}<span class="dn-contact-description--wide">{topic.description}</span><span class="dn-contact-description--mobile">{topic.mobileDescription}</span>{:else}{topic.description}{/if}</p>
     </div>
 
-    {#if topic.id === 'trade-in' || topic.id === 'import'}
-      {#key topic.id}<VehicleEnquiry kind={topic.id} {importUrl} />{/key}
+    {#if topic.id === 'trade-in'}
+      <TradeInEnquiry />
+    {:else if topic.id === 'import'}
+      {#key topic.id}<VehicleEnquiry kind="import" {importUrl} />{/key}
     {:else if preparation}
       <div class="dn-contact-preparation">
         <h2>{preparation.title}</h2>
@@ -49,23 +56,16 @@
       </div>
     {/if}
 
-    {#if topic.id === 'import' && importUrl}
-      <div class="dn-contact-import" aria-label="Selected listing for import inquiry">
-        <strong>Listing for import inquiry</strong>
-        <a href={importUrl} target="_blank" rel="noopener noreferrer">{importUrl}<Icon name="arrow-right" size={18} /></a>
-        <p>Draft only — not sent. Contact us to ask about the listing and whether imports are available.</p>
-      </div>
-    {/if}
-
-    <a class="dn-contact-button dn-contact-button--primary" href={brand.phoneHref}>
-      <span class="dn-contact-call-label">Call · </span>{brand.phone}
+    {#if topic.id !== 'trade-in' && topic.id !== 'import'}
+    <a class="dn-contact-button dn-contact-button--call" href={brand.phoneHref}>
+      <span class="dn-contact-call-label">Обадете се · </span>{brand.phone}
     </a>
 
-    {#if topic.id !== 'trade-in' && topic.id !== 'import'}
-    <div class="dn-contact-social" role="group" aria-label="Social media">
-      <span>Social media</span>
+
+    <div class="dn-contact-social" role="group" aria-label="Социални мрежи">
+      <span>Социални мрежи</span>
       <div>
-        {#each socialPlatforms.filter((platform) => platform.href) as platform (platform.name)}
+        {#each socialPlatforms as platform (platform.name)}
           <a href={platform.href} target="_blank" rel="noopener noreferrer" aria-label={platform.label} title={platform.label}>
             <SocialBrandIcon name={platform.name} />
           </a>
@@ -76,74 +76,78 @@
   </div>
 
   {#if topic.id === 'trade-in' || topic.id === 'import'}
-    <a class="dn-contact-workflow-call dn-action--dark" href={brand.phoneHref}>
-      <Icon name="phone" size={18} strokeWidth={1.8} />
-      Call · {brand.phone}
-    </a>
+    <WorkflowSupport topic={topic.id} />
   {/if}
 
-  <aside class="dn-contact-card" aria-label="Showroom contact">
+  {#if topic.id === 'trade-in'}
+    <TradeInInfoDrawer />
+  {:else if topic.id === 'import'}
+    <ImportHowItWorks />
+  {/if}
+
+  {#if topic.id !== 'import' && topic.id !== 'trade-in'}
+  <aside class="dn-contact-card" aria-label="Контакти на шоурума">
     <div class="dn-contact-card__heading">
-      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Contact</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Visit the showroom</span>{/if}</h2>
-      <p class:dn-contact-mobile-copy={topic.id === 'general'}>View the address, ask about a visit, or call directly.</p>
+      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>Контакти</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">Посетете шоурума</span>{/if}</h2>
+      <p class:dn-contact-mobile-copy={topic.id === 'general'}>Изберете адрес, посещение или директно обаждане.</p>
     </div>
 
     {#if topic.id === 'general'}
       <div class="dn-contact-visit">
         <p><Icon name="map-pin" size={24} /><span>{brand.address}</span></p>
-        <p><Icon name="clock" size={24} /><span>{brand.appointment}. Call to ask about a date and time.</span></p>
-        <a class="dn-contact-button" href={directionsUrl} target="_blank" rel="noreferrer">Directions<Icon name="arrow-right" size={20} /></a>
+        <p class="dn-contact-visit__appointment"><Icon name="clock" size={24} /><span>{brand.appointment}. Уговорете ден и час по телефона.</span></p>
+        <a class="dn-contact-button" href={directionsUrl} target="_blank" rel="noreferrer">Маршрут<Icon name="arrow-right" size={20} /></a>
       </div>
     {/if}
 
-    <nav class="dn-contact-card__links" aria-label="Quick contact actions">
+    <nav class="dn-contact-card__links" aria-label="Бързи действия за контакт">
       <a
         class="dn-contact-card__link"
         href={directionsUrl}
         target="_blank"
         rel="noreferrer"
-        aria-label={`Open the address in Google Maps: ${brand.address}`}
+        aria-label={`Отворете адреса в Google Maps: ${brand.address}`}
       >
         <span class="dn-contact-card__icon"><Icon name="map-pin" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
-          <strong>Address</strong>
+          <strong>Адрес</strong>
           <span>{brand.address}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
-          <span role="tooltip">Open map</span>
+          <span role="tooltip">Отвори карта</span>
         </span>
       </a>
 
       <a
         class="dn-contact-card__link"
         href={brand.phoneHref}
-        aria-label={`Call to ask about a visit. ${brand.appointment}`}
+        aria-label={`Обадете се, за да уговорите посещение. ${brand.appointment}`}
       >
         <span class="dn-contact-card__icon"><Icon name="clock" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
-          <strong>Visits</strong>
+          <strong>Посещения</strong>
           <span>{brand.appointment}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
-          <span role="tooltip">Ask about a visit</span>
+          <span role="tooltip">Уговори посещение</span>
         </span>
       </a>
 
       <a
         class="dn-contact-card__link dn-contact-card__link--phone"
         href={brand.phoneHref}
-        aria-label={`Call ${brand.phone}`}
+        aria-label={`Обадете се на ${brand.phone}`}
       >
         <span class="dn-contact-card__icon"><Icon name="phone" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
-          <strong>Phone</strong>
+          <strong>Телефон</strong>
           <span>{brand.phone}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
-          <span role="tooltip">Call now</span>
+          <span role="tooltip">Позвъни сега</span>
         </span>
       </a>
     </nav>
@@ -151,19 +155,28 @@
     <div class="dn-contact-card__actions">
       <a class="dn-contact-card__call" href={brand.phoneHref}>
         <Icon name="phone" size={19} strokeWidth={1.8} />
-        Call
+        Обадете се
       </a>
       <a class="dn-contact-card__route" href={directionsUrl} target="_blank" rel="noreferrer">
         <Icon name="map-pin" size={19} strokeWidth={1.8} />
-        Directions
+        Маршрут
       </a>
     </div>
   </aside>
+  {/if}
 </div>
 
 <style>
+  .dn-contact-workflow-hint { display: none; margin: var(--dn-space-2) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); text-align: center; }
+  @media (max-width: 767px) { .dn-contact-workflow-hint { display: block; } }
+  .dn-contact-intent--workflow { row-gap: 0; }
   .dn-contact-description--mobile { display: none; }
   .dn-contact-desktop-copy, .dn-contact-visit { display: none; }
+  .dn-contact-intent--tradein { grid-template-columns: 1fr; width: min(920px, 100%); }
+  .dn-contact-intent--tradein .dn-contact-intent__main { position: relative; z-index: 1; width: 100%; }
+  .dn-contact-intent--import { grid-template-columns: 1fr; width: min(760px, 100%); }
+  .dn-contact-intent--import .dn-contact-intent__main { width: 100%; }
+
   @media (min-width: 992px) {
     .dn-contact-desktop-copy { display: inline; }
     .dn-contact-mobile-copy { display: none; }
@@ -173,82 +186,25 @@
     .dn-contact-intent--general .dn-contact-card__links,
     .dn-contact-intent--general .dn-contact-card__actions { display: none; }
     .dn-contact-visit { display: grid; gap: 18px; margin-top: 24px; }
-    .dn-contact-visit p { display: flex; align-items: flex-start; gap: 14px; margin: 0; color: #525a66; font-size: 16px; line-height: 1.5; }
+    .dn-contact-visit p { display: flex; align-items: flex-start; gap: 14px; margin: 0; color: #525a66; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
     .dn-contact-visit :global(svg) { flex-shrink: 0; color: var(--dn-red); }
     .dn-contact-visit > a { justify-self: start; gap: 10px; min-height: 52px; background: #eef0f2; color: #202329; }
     .dn-contact-visit > a:hover { background: #e3e6ea; }
     .dn-contact-visit > a:focus-visible { outline: 2px solid #202329; outline-offset: 3px; }
   }
-  .dn-contact-workflow-call { display: none; }
-
-  .dn-contact-intent--workflow .dn-contact-intent__main > .dn-contact-button {
-    min-height: 44px;
-    align-self: center;
-    width: auto;
-    margin-top: 14px;
-    padding: 8px 0;
-    background: transparent;
-    color: #525a66;
-    font-size: 14px;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
   @media (max-width: 767px) {
     .dn-contact-description--wide { display: none; }
     .dn-contact-description--mobile { display: inline; }
-    .dn-contact-intent--workflow .dn-contact-intent__main > .dn-contact-button { display: none; }
-    .dn-contact-workflow-call {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      justify-self: center;
-      gap: 8px;
-      min-height: 44px;
-      max-width: 100%;
-      margin-top: 16px;
-      padding: 10px 16px;
-      border-radius: var(--dn-radius-button);
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.3;
-      text-decoration: none;
-    }
   }
 
   .dn-contact-preparation { display: none; }
 
   @media (max-width: 991px) {
     .dn-contact-preparation { display: block; margin-top: 24px; }
-    .dn-contact-preparation h2 { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4; }
+    .dn-contact-preparation h2 { margin: 0; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
     .dn-contact-preparation ul { display: grid; gap: 12px; margin: 14px 0 0; padding-left: 20px; list-style: disc; }
-    .dn-contact-preparation li { padding-left: 4px; color: #525a66; font-size: 15px; line-height: 1.5; }
+    .dn-contact-preparation li { padding-left: 4px; color: #525a66; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
     .dn-contact-preparation li::marker { color: var(--dn-red); }
-  }
-
-  .dn-contact-import {
-    display: grid;
-    gap: 8px;
-    min-width: 0;
-    margin: 20px 0 0;
-    text-align: left;
-  }
-
-  .dn-contact-import > a {
-    display: flex;
-    min-height: 44px;
-    align-items: center;
-    gap: 12px;
-    color: var(--dn-red);
-    overflow-wrap: anywhere;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-
-  .dn-contact-import > p {
-    margin: 0;
-    color: #525a66;
-    font-size: 14px;
-    line-height: 1.5;
   }
 
 </style>

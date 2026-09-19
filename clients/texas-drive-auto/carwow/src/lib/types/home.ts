@@ -19,7 +19,7 @@ export type HomeMobileVehicle = {
 	fuel: string;
 	transmission: string;
 	image: string;
-	priceLabel: string;
+	priceEur: string;
 	badges: string[];
 	conditionLine: string;
 };

@@ -143,7 +143,7 @@ export const dealers = pgTable(
 		city: text('city'),
 		country_code: text('country_code').notNull().default('BG'),
 		timezone: text('timezone').notNull().default('Europe/Dallas'),
-		default_locale: text('default_locale').notNull().default('en-US'),
+		default_locale: text('default_locale').notNull().default('bg-BG'),
 		currency_code: text('currency_code').notNull().default('EUR'),
 		logo_light_url: text('logo_light_url'),
 		logo_dark_url: text('logo_dark_url'),

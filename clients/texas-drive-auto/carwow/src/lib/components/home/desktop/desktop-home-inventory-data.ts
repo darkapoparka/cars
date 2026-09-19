@@ -42,68 +42,68 @@ export type DesktopHomeInventoryPill = {
 
 export const desktopHomeInventoryPills: readonly DesktopHomeInventoryPill[] = [
 	{
-		label: 'All',
+		label: 'Всички',
 		href: '/inventory',
 		icon: 'all',
 		isActive: true
 	},
 	{
-		label: 'Electric',
+		label: 'Електрически',
 		href: '/inventory?fuel=%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8',
 		icon: 'electric'
 	},
 	{
-		label: 'Sedan',
+		label: 'Седан',
 		href: '/inventory?body=%D0%A1%D0%B5%D0%B4%D0%B0%D0%BD',
 		icon: 'sedan'
 	},
 	{
-		label: 'SUV',
+		label: 'Джип',
 		href: '/inventory?body=SUV',
 		icon: 'suv'
 	},
 	{
-		label: 'Wagon',
+		label: 'Комби',
 		href: '/inventory?body=%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8',
 		icon: 'wagon'
 	},
 	{
-		label: 'Hatchback',
+		label: 'Хечбек',
 		href: '/inventory?body=%D0%A5%D0%B5%D1%87%D0%B1%D0%B5%D0%BA',
 		icon: 'hatchback'
 	},
 	{
-		label: 'Coupe',
+		label: 'Купе',
 		href: '/inventory?body=%D0%9A%D1%83%D0%BF%D0%B5',
 		icon: 'coupe'
 	},
 	{
-		label: 'Up to 10 000 USD',
+		label: 'До 10 000 EUR',
 		href: '/inventory?price=under-10000',
 		icon: 'budget'
 	},
 	{
-		label: 'Up to 20 000 USD',
+		label: 'До 20 000 EUR',
 		href: '/inventory?price=under-20000',
 		icon: 'budget'
 	}
 ];
 
 const mileageOptions = [
-	{ value: '', label: 'All mileage' },
-	{ value: 'under-100000', label: 'Up to 100 000 miles' },
-	{ value: 'under-150000', label: 'Up to 150 000 miles' },
-	{ value: 'under-200000', label: 'Up to 200 000 miles' },
-	{ value: 'over-200000', label: 'Over 200 000 miles' }
+	{ value: '', label: 'Всички пробези' },
+	{ value: 'under-100000', label: 'До 100 000 км' },
+	{ value: 'under-150000', label: 'До 150 000 км' },
+	{ value: 'under-200000', label: 'До 200 000 км' },
+	{ value: 'over-200000', label: 'Над 200 000 км' }
 ];
 
 const priceOptions = [
-	{ value: '', label: 'All prices' },
-	{ value: 'under-10000', label: 'Up to 10 000 USD' },
-	{ value: 'under-20000', label: 'Up to 20 000 USD' },
-	{ value: 'under-30000', label: 'Up to 30 000 USD' },
-	{ value: 'under-50000', label: 'Up to 50 000 USD' },
-	{ value: 'over-50000', label: 'Over 50 000 USD' }
+	{ value: '', label: 'Всички цени' },
+	{ value: 'under-10000', label: 'До 10 000 EUR' },
+	{ value: 'under-20000', label: 'До 20 000 EUR' },
+	{ value: 'under-30000', label: 'До 30 000 EUR' },
+	{ value: 'under-50000', label: 'До 50 000 EUR' },
+	{ value: 'over-50000', label: 'Над 50 000 EUR' }
 ];
 
 function uniqueSorted(values: Iterable<string>) {
@@ -113,7 +113,7 @@ function uniqueSorted(values: Iterable<string>) {
 }
 
 function getVehicleCondition(vehicle: Pick<HomeDesktopVehicle, 'conditionLine'>): 'new' | 'used' {
-	return /new\s+import/i.test(vehicle.conditionLine) ? 'new' : 'used';
+	return /нов\s+внос/i.test(vehicle.conditionLine) ? 'new' : 'used';
 }
 
 export function getDesktopHomeInventoryPreview(vehicles: readonly HomeDesktopVehicle[]) {
@@ -132,32 +132,32 @@ export function getDesktopHomeHeroQuickFields(
 	return [
 		{
 			name: 'brand',
-			label: 'Make',
-			placeholder: 'Make',
+			label: 'Марка',
+			placeholder: 'Марка',
 			options: [
-				{ value: '', label: 'All makes' },
+				{ value: '', label: 'Всички марки' },
 				...brandOptions.map((brand) => ({ value: brand, label: brand }))
 			]
 		},
 		{
 			name: 'model',
-			label: 'Model',
-			placeholder: 'Model',
+			label: 'Модел',
+			placeholder: 'Модел',
 			options: [
-				{ value: '', label: 'All models' },
+				{ value: '', label: 'Всички модели' },
 				...modelOptions.map((model) => ({ value: model, label: model }))
 			]
 		},
 		{
 			name: 'price',
-			label: 'Price',
-			placeholder: 'Price',
+			label: 'Цена',
+			placeholder: 'Цена',
 			options: priceOptions
 		},
 		{
 			name: 'mileage',
-			label: 'Mileage',
-			placeholder: 'Mileage',
+			label: 'Пробег',
+			placeholder: 'Пробег',
 			options: mileageOptions
 		}
 	];

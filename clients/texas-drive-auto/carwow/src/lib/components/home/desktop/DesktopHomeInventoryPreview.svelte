@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
@@ -28,11 +29,11 @@
 	<div class="daynight-home-container home-browse-heading">
 		<DesktopSectionHeading
 			centered={!showHeaderCta}
-			title="Latest vehicles"
+			title="Най-нови автомобили"
 			href={showHeaderCta ? resolve('/inventory') : undefined}
-			label={`View all ${inventoryCount} vehicles`}
+			label={`Виж всички ${inventoryCount} автомобила`}
 			copy={showHeaderSubtitle
-				? 'Recently added listings from Texas Drive Auto’s inventory.'
+				? `Последно добавени предложения от наличността на ${daynightSite.shortName}.`
 				: undefined}
 		/>
 	</div>
@@ -48,7 +49,7 @@
 				<div class="inventory-browse-footer">
 					<DesktopBrowseLink
 						href={resolve('/inventory')}
-						label={`View all ${inventoryCount} vehicles`}
+						label={`Виж всички ${inventoryCount} автомобила`}
 					/>
 				</div>
 			{/if}

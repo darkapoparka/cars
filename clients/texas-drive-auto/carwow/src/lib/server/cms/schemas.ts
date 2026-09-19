@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { DEFAULT_IMPORT_ORIGIN } from '$lib/data/lead-content';
 
 const text = (max = 500) => z.string().trim().min(1).max(max);
 const optionalText = (max = 500) => z.string().trim().max(max).optional().nullable();
@@ -49,7 +50,7 @@ export const importRequestSchema = z
 		contact: text(180),
 		email: optionalEmail,
 		phone: optionalText(80),
-		originCountry: z.string().trim().length(2).default('CA'),
+		originCountry: z.string().trim().length(2).default(DEFAULT_IMPORT_ORIGIN),
 		destinationCountry: z.string().trim().length(2).default('BG'),
 		desiredMake: optionalText(120),
 		desiredModel: optionalText(120),
@@ -116,8 +117,8 @@ export const vehicleFormSchema = z.object({
 	status: vehicleStatusSchema.default('draft'),
 	condition: z.enum(vehicleConditions).default('used'),
 	price: z.coerce.number().int().nonnegative(),
-	priceLabel: z.string().trim().max(80).optional().nullable(),
-	secondaryPrice: z.string().trim().max(80).optional().nullable(),
+	priceEur: z.string().trim().max(80).optional().nullable(),
+	priceBgn: z.string().trim().max(80).optional().nullable(),
 	monthly: z.string().trim().max(120).optional().nullable(),
 	mileageValue: z.coerce.number().int().nonnegative(),
 	mileageText: z.string().trim().max(80).optional().nullable(),
@@ -170,7 +171,7 @@ export const dealerSettingsSchema = z.object({
 	city: z.string().trim().max(120).optional().nullable(),
 	countryCode: z.string().trim().min(2).max(2).default('BG'),
 	timezone: z.string().trim().max(80).default('Europe/Dallas'),
-	defaultLocale: z.string().trim().max(20).default('en-US'),
+	defaultLocale: z.string().trim().max(20).default('bg-BG'),
 	currencyCode: z.string().trim().min(3).max(3).default('EUR'),
 	logoLightUrl: z.string().trim().max(1000).optional().nullable(),
 	logoDarkUrl: z.string().trim().max(1000).optional().nullable(),

@@ -13,7 +13,7 @@
 <button
 	class="chat-launcher"
 	type="button"
-	aria-label={open ? 'Close chat' : 'Open chat'}
+	aria-label={open ? 'Затвори чата' : 'Отвори чат с екипа'}
 	aria-expanded={open}
 	{onclick}
 >
@@ -22,7 +22,7 @@
 	{:else}
 		<MessageCircle aria-hidden="true" />
 	{/if}
-	<span class="chat-launcher__label">Chat preview</span>
+	<span class="chat-launcher__label">Чат с екипа</span>
 	{#if unreadCount > 0}
 		<span class="chat-launcher__badge">{unreadCount}</span>
 	{/if}
@@ -60,7 +60,7 @@
 			border-radius: 8px;
 			background: var(--sa-red);
 			font: inherit;
-			font-weight: 600;
+			font-weight: var(--sa-weight-semibold);
 		}
 		.chat-launcher__label {
 			display: inline;
@@ -92,8 +92,8 @@
 		border-radius: 999px;
 		background: #e11d48;
 		color: #fff;
-		font-size: 11px;
-		font-weight: 800;
+		font-size: var(--sa-text-xs);
+		font-weight: var(--sa-weight-strong);
 		line-height: 16px;
 	}
 </style>

@@ -17,7 +17,7 @@
 		onSearchToggle: () => void;
 	} = $props();
 
-	const phoneHref = `tel:${daynightSite.phone}`;
+	const phoneHref = daynightSite.phoneHref;
 
 	const headerToolClasses =
 		'relative inline-grid size-11 cursor-pointer place-items-center rounded-sa-pill border border-[#dbe4ef] bg-[#f5f7fb] p-0 text-[#172642] no-underline transition-colors duration-150 ease-sa hover:border-[#b9cce5] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue/45 [&_svg]:size-[22px]';
@@ -41,7 +41,7 @@
 							href={phoneHref}
 							class={homePhoneClasses}
 							data-daynight-header-tool="phone"
-							aria-label={`Call ${daynightSite.phoneLabel}`}
+							aria-label={`Обади се на ${daynightSite.phoneLabel}`}
 							title={daynightSite.phoneCta}
 						>
 							<SiteChromeIcon name="phone" />
@@ -60,11 +60,14 @@
 							class={[headerToolClasses, searchOpen && 'border-[#b9cce5] bg-white text-sa-blue']}
 							id="searchToggle"
 							data-daynight-header-tool="search"
-							aria-label="Open search"
-							title="Open search"
+							aria-label="Отвори търсене"
+							title="Отвори търсене"
 							aria-expanded={searchOpen}
 							aria-controls="searchForm"
-							onclick={onSearchToggle}
+							onclick={(event) => {
+								event.currentTarget.focus({ preventScroll: true });
+								onSearchToggle();
+							}}
 						>
 							<SiteChromeIcon name="search" />
 						</button>
@@ -72,8 +75,8 @@
 							href={resolve('/compare')}
 							class={headerToolClasses}
 							data-daynight-header-tool="compare"
-							aria-label="Compare"
-							title="Compare"
+							aria-label="Сравни"
+							title="Сравни"
 						>
 							<SiteChromeIcon name="compare" />
 							{#if compareBadge > 0}<span class={badgeClasses} aria-hidden="true"
@@ -84,8 +87,8 @@
 							href={resolve('/favorites')}
 							class={headerToolClasses}
 							data-daynight-header-tool="favorites"
-							aria-label="Saved vehicles"
-							title="Saved vehicles"
+							aria-label="Запазени автомобили"
+							title="Запазени автомобили"
 						>
 							<SiteChromeIcon name="heart" />
 							{#if favoritesBadge > 0}<span class={badgeClasses} aria-hidden="true"

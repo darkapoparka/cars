@@ -38,10 +38,10 @@
 			'over-50000': '> 50k EUR'
 		},
 		mileage: {
-			'under-100000': '≤ 100k miles',
-			'under-150000': '≤ 150k miles',
-			'under-200000': '≤ 200k miles',
-			'over-200000': '> 200k miles'
+			'under-100000': '≤ 100k км',
+			'under-150000': '≤ 150k км',
+			'under-200000': '≤ 200k км',
+			'over-200000': '> 200k км'
 		}
 	};
 
@@ -52,9 +52,9 @@
 	let keywordQuery = $state('');
 	type HeroIntent = 'buy' | 'sell' | 'import';
 	const intents = [
-		{ value: 'buy', label: 'Buy' },
-		{ value: 'sell', label: 'Sell' },
-		{ value: 'import', label: 'Import inquiry' }
+		{ value: 'buy', label: 'Купи' },
+		{ value: 'sell', label: 'Продай' },
+		{ value: 'import', label: 'Внос' }
 	] as const;
 	let activeIntent = $state<HeroIntent>('buy');
 	let hydrated = $state(false);
@@ -135,10 +135,10 @@
 		}
 
 		const resetOption = activeQuickField.options[0];
-		const query = quickFilterQuery.trim().toLocaleLowerCase('en-US');
+		const query = quickFilterQuery.trim().toLocaleLowerCase('bg-BG');
 		const matches = activeQuickField.options
 			.slice(1)
-			.filter((option) => option.label.toLocaleLowerCase('en-US').includes(query));
+			.filter((option) => option.label.toLocaleLowerCase('bg-BG').includes(query));
 
 		return resetOption ? [resetOption, ...matches] : matches;
 	});
@@ -184,7 +184,9 @@
 		isQuickFieldScrollLocked = false;
 	}
 
-	function openQuickField(field: DesktopHomeQuickField) {
+	function openQuickField(field: DesktopHomeQuickField, event: MouseEvent) {
+		if (event.currentTarget instanceof HTMLElement)
+			event.currentTarget.focus({ preventScroll: true });
 		activeQuickFieldName = field.name;
 		quickFilterQuery = '';
 		lockQuickFieldScroll();
@@ -253,7 +255,7 @@
 		{/each}
 	{/if}
 	{#if showKeywordSearch}
-		<div class="hero-intent__tabs" role="tablist" aria-label="What would you like to do?">
+		<div class="hero-intent__tabs" role="tablist" aria-label="Какво искаш да направиш?">
 			{#each intents as intent, index (intent.value)}
 				<button
 					type="button"
@@ -276,7 +278,7 @@
 		>
 			{#if activeIntent === 'buy'}
 				<label class="hero-intent__label hero-intent__label--search" for="hero-buy-query"
-					>What vehicle are you looking for?</label
+					>Какъв автомобил търсиш?</label
 				>
 				<div class="hero-intent__row hero-intent__row--search">
 					<input
@@ -285,14 +287,14 @@
 						type="search"
 						name="q"
 						autocomplete="off"
-						placeholder="Make, model, or keyword"
+						placeholder="Марка, модел или ключова дума"
 						bind:value={keywordQuery}
 					/>
 					<button
 						class="hero-intent__submit"
 						type="submit"
-						aria-label={`Search among ${matchingVehicleCount} vehicles`}
-						title="Search vehicles"
+						aria-label={`Търси сред ${matchingVehicleCount} автомобила`}
+						title="Търси автомобили"
 					>
 						<Search size={20} strokeWidth={2} aria-hidden="true" />
 					</button>
@@ -308,7 +310,7 @@
 							aria-haspopup="dialog"
 							aria-expanded={activeQuickFieldName === field.name}
 							title={quickFullLabel(field)}
-							onclick={() => openQuickField(field)}
+							onclick={(event) => openQuickField(field, event)}
 						>
 							<span>{quickDisplayLabel(field)}</span>
 							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"
@@ -326,39 +328,39 @@
 			{:else if activeIntent === 'sell'}
 				<div class="hero-intent__row hero-intent__row--sell">
 					<label class="hero-intent__label" for="hero-sell-make"
-						>Make
+						>Марка
 						<input
 							id="hero-sell-make"
 							class="hero-intent__input"
 							type="text"
 							name="make"
-							placeholder="e.g. BMW"
+							placeholder="Напр. BMW"
 							required
 							maxlength="80"
 							bind:value={sellMake}
 						/>
 					</label>
 					<label class="hero-intent__label" for="hero-sell-model"
-						>Model
+						>Модел
 						<input
 							id="hero-sell-model"
 							class="hero-intent__input"
 							type="text"
 							name="model"
-							placeholder="e.g. 3 Series"
+							placeholder="Напр. Серия 3"
 							required
 							maxlength="120"
 							bind:value={sellModel}
 						/>
 					</label>
-					<button class="hero-intent__submit" type="submit">Continue</button>
+					<button class="hero-intent__submit" type="submit">Продължи</button>
 				</div>
 				<p class="hero-intent__hint">
-					Add your vehicle details to draft a valuation inquiry. Valuations are unavailable in this preview.
+					Добави данните за автомобила. Следващата стъпка е заявка за оценка.
 				</p>
 			{:else}
 				<input type="hidden" name="intent" value="import" />
-				<label class="hero-intent__label" for="hero-import-url">Vehicle listing link</label>
+				<label class="hero-intent__label" for="hero-import-url">Линк към обява за автомобил</label>
 				<div class="hero-intent__row">
 					<input
 						id="hero-import-url"
@@ -372,10 +374,10 @@
 						aria-describedby="hero-import-hint"
 						bind:value={importSourceUrl}
 					/>
-					<button class="hero-intent__submit" type="submit">Continue</button>
+					<button class="hero-intent__submit" type="submit">Продължи</button>
 				</div>
 				<p id="hero-import-hint" class="hero-intent__hint">
-					Found a vehicle abroad? Add the link to your draft inquiry. Import services are unconfirmed.
+					Хареса автомобил в чужбина? Добави линка към заявката си за внос.
 				</p>
 			{/if}
 		</div>
@@ -391,12 +393,12 @@
 				<div class="daynight-home-hero__search-intro">
 					{#if showSearchCopy}
 						<div class="daynight-home-hero__search-copy">
-							<strong>Search inventory</strong>
+							<strong>Търси в налични</strong>
 							<span>({matchingVehicleCount})</span>
 						</div>
 					{/if}
 					{#if showCondition}
-						<div class="daynight-home-hero__condition" role="group" aria-label="Vehicle type">
+						<div class="daynight-home-hero__condition" role="group" aria-label="Тип автомобил">
 							<div class="daynight-home-hero__condition-inner">
 								<button
 									type="button"
@@ -406,7 +408,7 @@
 									]}
 									data-vehicle-condition="all"
 									aria-pressed={activeCondition === 'all'}
-									onclick={() => setActiveCondition('all')}>All</button
+									onclick={() => setActiveCondition('all')}>Всички</button
 								>
 								<button
 									type="button"
@@ -416,7 +418,7 @@
 									]}
 									data-vehicle-condition="new"
 									aria-pressed={activeCondition === 'new'}
-									onclick={() => setActiveCondition('new')}>New</button
+									onclick={() => setActiveCondition('new')}>Нови</button
 								>
 								<button
 									type="button"
@@ -426,7 +428,7 @@
 									]}
 									data-vehicle-condition="used"
 									aria-pressed={activeCondition === 'used'}
-									onclick={() => setActiveCondition('used')}>Used</button
+									onclick={() => setActiveCondition('used')}>Употребявани</button
 								>
 							</div>
 						</div>
@@ -459,7 +461,7 @@
 					aria-haspopup="dialog"
 					aria-expanded={activeQuickFieldName === field.name}
 					title={quickFullLabel(field)}
-					onclick={() => openQuickField(field)}
+					onclick={(event) => openQuickField(field, event)}
 				>
 					<span data-daynight-quick-value="">{quickDisplayLabel(field)}</span>
 				</button>
@@ -475,7 +477,7 @@
 	<button
 		type="submit"
 		class={['daynight-home-hero__submit', iconOnly && 'daynight-home-hero__submit--icon']}
-		aria-label={`Search among ${matchingVehicleCount} ${matchingVehicleCount === 1 ? 'vehicle' : 'vehicles'}`}
+		aria-label={`Търси сред ${matchingVehicleCount} ${matchingVehicleCount === 1 ? 'автомобил' : 'автомобила'}`}
 	>
 		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 			<circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
@@ -483,8 +485,8 @@
 		</svg>
 		<span
 			>{matchingVehicleCount === 1
-				? 'Show 1 vehicle'
-				: `Show ${matchingVehicleCount} vehicles`}</span
+				? 'Покажи 1 автомобил'
+				: `Покажи ${matchingVehicleCount} автомобила`}</span
 		>
 	</button>
 {/snippet}
@@ -503,7 +505,7 @@
 		<button
 			type="button"
 			class="daynight-hero-filter-sheet__backdrop"
-			aria-label="Close"
+			aria-label="Затвори"
 			onclick={closeQuickField}
 		></button>
 		<div class="daynight-hero-filter-sheet__sheet">
@@ -512,7 +514,7 @@
 				<button
 					type="button"
 					class="daynight-hero-filter-sheet__close"
-					aria-label="Close"
+					aria-label="Затвори"
 					onclick={closeQuickField}>✕</button
 				>
 			</div>
@@ -529,8 +531,8 @@
 					type="text"
 					class="daynight-hero-filter-sheet__search"
 					autocomplete="off"
-					placeholder={`Search ${activeQuickField.label.toLocaleLowerCase('en-US')}...`}
-					aria-label={`Search ${activeQuickField.label.toLocaleLowerCase('en-US')}`}
+					placeholder={`Търси ${activeQuickField.label.toLocaleLowerCase('bg-BG')}...`}
+					aria-label={`Търси ${activeQuickField.label.toLocaleLowerCase('bg-BG')}`}
 					bind:value={quickFilterQuery}
 				/>
 			</div>
@@ -553,7 +555,7 @@
 				{/each}
 				{#if filteredQuickOptions.length === 1 && quickFilterQuery.trim()}
 					<p class="daynight-hero-filter-sheet__empty">
-						No results for “{quickFilterQuery}“
+						Няма резултат за „{quickFilterQuery}“
 					</p>
 				{/if}
 			</div>
@@ -610,9 +612,9 @@
 		color: #59616c;
 		cursor: pointer;
 		font: inherit;
-		font-size: 15px;
-		font-weight: 600;
-		min-height: 36px;
+		font-size: var(--sa-text-hero-tab);
+		font-weight: var(--sa-button-font-weight);
+		min-height: 44px;
 		padding: 0 18px;
 	}
 	.hero-intent__tabs button:hover {
@@ -636,8 +638,8 @@
 	.hero-intent__label {
 		color: var(--sa-ink);
 		display: grid;
-		font-size: 14px;
-		font-weight: 500;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-medium);
 		gap: 8px;
 		line-height: 20px;
 		margin: 0 0 8px;
@@ -662,7 +664,7 @@
 		box-shadow: none;
 		color: var(--sa-ink);
 		font: inherit;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		height: 46px;
 		line-height: 24px;
 		margin: 0;
@@ -683,8 +685,8 @@
 		cursor: pointer;
 		display: inline-flex;
 		font: inherit;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		gap: 8px;
 		height: 46px;
 		justify-content: center;
@@ -743,8 +745,8 @@
 		cursor: pointer;
 		display: flex;
 		font: inherit;
-		font-size: 15px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		gap: 8px;
 		justify-content: space-between;
 		min-height: 46px;
@@ -781,7 +783,7 @@
 	}
 	.hero-intent__hint {
 		color: #59616c;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		line-height: 20px;
 		margin: 12px 0 0;
 	}

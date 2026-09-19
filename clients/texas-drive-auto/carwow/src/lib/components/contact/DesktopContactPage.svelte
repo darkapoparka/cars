@@ -43,10 +43,10 @@
 	const contactContext = readContactIntent(initialSearchParams);
 	const initialImportFields = readImportIntent(initialSearchParams);
 	const initialEmail = initialSearchParams.get('email')?.trim() ?? '';
-	const initialSubject = initialImportFields.isImport ? 'Vehicle import questions' : contactContext.subject;
-	const importFields = $derived(
-		readImportIntent(appPage.url.searchParams)
-	);
+	const initialSubject = initialImportFields.isImport
+		? 'Внос на автомобил'
+		: contactContext.subject;
+	const importFields = $derived(readImportIntent(appPage.url.searchParams));
 	const isImportMode = $derived(importFields.isImport);
 
 	let name = $state('');
@@ -58,8 +58,8 @@
 	let leadSubmitState = $state<LeadSubmitState>('idle');
 	let leadSubmitMessage = $state('');
 
-	const leadErrorMessage = `Your inquiry was not sent. Try again or call/message on Viber at ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Your import inquiry was not sent. Try again or call/message on Viber at ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
 
 	function readFormValue(formData: FormData, name: string) {
 		const value = formData.get(name);
@@ -80,7 +80,7 @@
 
 		const formData = new FormData(form);
 		const customerName =
-			readFormValue(formData, 'name') || (isImportMode ? 'Website import inquiry' : '');
+			readFormValue(formData, 'name') || (isImportMode ? 'Заявка за внос от сайта' : '');
 		const subjectValue = readFormValue(formData, 'subject');
 		const emailValue = readFormValue(formData, 'email');
 		const phoneValue = readFormValue(formData, 'phone');
@@ -124,8 +124,8 @@
 		if (result.ok) {
 			leadSubmitState = 'success';
 			leadSubmitMessage = isImportMode
-				? 'Draft only — not sent'
-				: 'Draft only — not sent';
+				? 'Благодарим! Заявката за внос е изпратена и ще Ви изпратим конкретни варианти.'
+				: 'Благодарим! Ще се свържем с Вас възможно най-скоро.';
 			name = '';
 			subject = initialSubject;
 			email = '';
@@ -205,13 +205,13 @@
 			artwork={isImportMode ? 'cars' : 'contact'}
 			panel="light"
 			headingId="daynight-contact-title"
-			title={isImportMode ? 'Vehicle import inquiry' : 'Contact us'}
+			title={isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се с нас'}
 			copy={isImportMode
-				? 'Add a link, model, or budget to your draft inquiry.'
-				: 'Questions about viewings, paperwork, or available vehicles. No dealer financing or payment plans; buyer-arranged funding is separate.'}
-			primaryLabel="Send inquiry"
+				? 'Изпратете линк, модел или бюджет и ще Ви върнем конкретна следваща стъпка.'
+				: 'Оглед, документи, финансиране, бартер или въпрос за наличен автомобил.'}
+			primaryLabel="Изпрати запитване"
 			primaryHref="/contact#contact-form"
-			secondaryLabel="View vehicles"
+			secondaryLabel="Виж автомобили"
 			secondaryHref="/inventory"
 		/>
 		<section id="contact-form" class="daynight-contact-primary bg-white pb-84">
@@ -227,55 +227,57 @@
 						loading="eager"
 						decoding="async"
 					/>
-					<span>Showroom location</span>
+					<span>Шоурум в {daynightSite.city}</span>
 				</div>
 
 				<div class="lg-grid-cols-1 grid grid-cols-2 gap-30">
 					<div class="contact-page-info">
 						<div class="daynight-contact-info-body">
 							<h2 class="daynight-contact-title h3">
-								{isImportMode ? 'Vehicle import inquiry' : 'Contact Texas Drive Auto'}
+								{isImportMode
+									? 'Заявка за внос на автомобил'
+									: `Свържете се със ${daynightSite.shortName}`}
 							</h2>
 							<p class="daynight-contact-intro text-body-style-2">
 								{isImportMode
-									? 'Add a link, model, or budget. Import services are unconfirmed in this preview.'
-									: 'Ask about viewings, paperwork, registration, trade-in availability, or available vehicles. No dealer financing or payment plans; buyer-arranged funding is separate.'}
+									? 'Изпратете линк, модел или бюджет и ще Ви изпратим конкретни варианти за внос.'
+									: 'Свържете се за оглед, документи, регистрация, финансиране, бартер или въпрос за наличен автомобил.'}
 							</p>
 
 							<div class="daynight-contact-actions">
 								<a
-									href={`tel:${daynightSite.phone}`}
+									href={daynightSite.phoneHref}
 									class="daynight-contact-action sa-cta sa-cta-primary"
 								>
 									{@render phoneIcon()}
-									<span>Call / Viber</span>
+									<span>Обади се / Viber</span>
 								</a>
 								<a
 									{...mapLinkAttributes}
 									class="daynight-contact-action daynight-contact-action--map sa-cta sa-cta-ghost"
 								>
 									{@render mapIcon()}
-									<span>View map</span>
+									<span>Виж карта</span>
 								</a>
 							</div>
 
-							<div class="daynight-contact-details" aria-label="Contact details">
+							<div class="daynight-contact-details" aria-label="Данни за контакт">
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Address</p>
+									<p class="daynight-contact-detail-label">Адрес</p>
 									<p class="daynight-contact-detail-value">{daynightSite.location}</p>
 								</div>
 								<div class="daynight-contact-detail">
-									<p class="daynight-contact-detail-label">Phone / Viber</p>
-									<a href={`tel:${daynightSite.phone}`} class="daynight-contact-detail-value">
+									<p class="daynight-contact-detail-label">Телефон / Viber</p>
+									<a href={daynightSite.phoneHref} class="daynight-contact-detail-value">
 										{daynightSite.phoneLabel}
 									</a>
 								</div>
 								<div class="daynight-contact-detail">
-									<p class="daynight-contact-detail-label">Written inquiries</p>
-									<p class="daynight-contact-detail-value">Use the inquiry form</p>
+									<p class="daynight-contact-detail-label">Писмен контакт</p>
+									<p class="daynight-contact-detail-value">Използвайте формата за запитване</p>
 								</div>
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Business hours</p>
+									<p class="daynight-contact-detail-label">Работно време</p>
 									<p class="daynight-contact-detail-value">
 										{daynightSite.hoursLabel}
 									</p>
@@ -285,15 +287,18 @@
 					</div>
 
 					<div class="radius-20 contact-page-form bg-white">
-						<p class="h3 mb-12">{isImportMode ? 'Import inquiry details' : 'Ask about a vehicle'}</p>
+						<p class="h3 mb-12">{isImportMode ? 'Данни за внос' : 'Пишете ни за автомобил'}</p>
 						<p class="text-body-style-2 mb-32">
 							{isImportMode
-								? 'Enter your contact details and a listing link if you have already chosen a vehicle.'
-								: 'Draft a question about a vehicle, viewing, paperwork, or next steps.'}
+								? 'Попълнете контакт и линк към обява, ако вече сте избрали автомобил.'
+								: 'Пишете ни за автомобил, оглед, документи или следващи стъпки.'}
 						</p>
 
 						{#if !isImportMode && contactContext.vehicle}
-							<p class="mb-20">Vehicle: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext.vehicle.year} · {contactContext.vehicle.lot}</p>
+							<p class="mb-20">
+								Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext
+									.vehicle.year} · {contactContext.vehicle.lot}
+							</p>
 						{/if}
 
 						<form
@@ -307,7 +312,7 @@
 								aria-hidden="true"
 								style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"
 							>
-								<label for="contact-company-website">Leave this field blank</label>
+								<label for="contact-company-website">Не попълвайте това поле</label>
 								<input
 									id="contact-company-website"
 									name="companyWebsite"
@@ -320,59 +325,59 @@
 							</div>
 							<div class="md-grid-cols-1 mb-22 grid grid-cols-2 gap-x-20 gap-y-24">
 								<div class="padding-0">
-									<p class="mb-8">Name</p>
+									<p class="mb-8">Име</p>
 									<input
 										class="active input-large"
 										id="contact-name"
 										name="name"
 										type="text"
 										bind:value={name}
-										placeholder="Your name"
+										placeholder="Вашето име"
 										required={!isImportMode}
-										aria-label="Your name"
+										aria-label="Вашето име"
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Subject</p>
+									<p class="mb-8">Тема</p>
 									<input
 										class="input-large"
-										placeholder={isImportMode ? 'Vehicle import questions' : 'Vehicle, viewing...'}
+										placeholder={isImportMode ? 'Внос на автомобил' : 'Автомобил, бартер...'}
 										id="contact-subject"
 										name="subject"
 										type="text"
 										bind:value={subject}
 										required
-										aria-label="Inquiry subject"
+										aria-label="Тема на запитването"
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Email</p>
+									<p class="mb-8">Имейл</p>
 									<input
 										class="input-large"
 										name="email"
 										id="contact-email"
 										type="email"
 										bind:value={email}
-										placeholder="Email (optional)"
-										aria-label="Email"
+										placeholder="Имейл по желание"
+										aria-label="Имейл"
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Phone</p>
+									<p class="mb-8">Телефон</p>
 									<input
-										placeholder="Enter phone number"
+										placeholder="Въведете телефон"
 										class="input-large"
 										name="phone"
 										id="contact-phone"
 										type="tel"
 										bind:value={phone}
 										required
-										aria-label="Phone"
+										aria-label="Телефон"
 									/>
 								</div>
 								{#if isImportMode}
 									<div class="padding-0 col-span-2">
-										<p class="mb-8">Listing link</p>
+										<p class="mb-8">Линк към обява</p>
 										<input
 											class="input-large"
 											name="sourceUrl"
@@ -381,23 +386,23 @@
 											inputmode="url"
 											bind:value={sourceUrl}
 											placeholder="mobile.de, autoscout24..."
-											aria-label="Listing link"
+											aria-label="Линк към обява"
 										/>
 									</div>
 								{/if}
 								<div class="padding-0 col-span-2">
-									<p class="mb-8">{isImportMode ? 'What you’re looking for' : 'Message'}</p>
+									<p class="mb-8">{isImportMode ? 'Какво търсите' : 'Съобщение'}</p>
 									<textarea
 										placeholder={isImportMode
-											? 'Make, model, budget, preferences, or additional requirements...'
-											: 'Your message*'}
+											? 'Марка, модел, бюджет, условия или допълнителни изисквания...'
+											: 'Вашето съобщение*'}
 										rows="3"
 										name="message"
 										class="message"
 										id="message"
 										bind:value={message}
 										required={!isImportMode}
-										aria-label="Message"
+										aria-label="Съобщение"
 									></textarea>
 								</div>
 							</div>
@@ -407,10 +412,10 @@
 								disabled={leadSubmitState === 'submitting'}
 							>
 								{leadSubmitState === 'submitting'
-									? 'Sending...'
+									? 'Изпращаме...'
 									: isImportMode
-										? 'Submit request'
-										: 'Send inquiry'}
+										? 'Изпрати заявка'
+										: 'Изпрати запитване'}
 							</button>
 							{#if leadSubmitMessage}
 								<p
@@ -436,7 +441,7 @@
 				<div class="widget-gg-map radius-8 daynight-contact-map__frame flex overflow-hidden">
 					<iframe
 						{@attach deferredMapFrame(mapEmbedSrc, '180px')}
-						title="Map to Texas Drive Auto"
+						title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
 						data-map-src={mapEmbedSrc}
 						height="520"
 						style="border:0;width: 100%;"
@@ -444,10 +449,13 @@
 						loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"
 					></iframe>
-					<div class="daynight-contact-map__overlay" aria-label="Texas Drive Auto location">
-						<p class="daynight-contact-map__eyebrow">Texas Drive Auto</p>
+					<div
+						class="daynight-contact-map__overlay"
+						aria-label={`Локация ${daynightSite.shortName}`}
+					>
+						<p class="daynight-contact-map__eyebrow">{daynightSite.shortName}</p>
 						<p class="daynight-contact-map__address">{daynightSite.location}</p>
-						<a {...mapLinkAttributes}>Open in Google Maps</a>
+						<a {...mapLinkAttributes}>Отвори в Google Maps</a>
 					</div>
 				</div>
 			</div>
@@ -463,8 +471,8 @@
 	.contact-page-root {
 		box-sizing: border-box;
 		color: #1c1c1c;
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 		letter-spacing: 0;
 	}
@@ -583,7 +591,7 @@
 	}
 
 	.font-weight-600 {
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	.text-highlight {
@@ -591,8 +599,8 @@
 	}
 
 	.h3 {
-		font-size: clamp(24px, 2.4vw, 32px);
-		font-weight: 700;
+		font-size: var(--sa-type-page);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.16;
 	}
 
@@ -613,7 +621,7 @@
 		color: #111827;
 		font: inherit;
 		font-size: var(--sa-text-desktop-body);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		outline: 0;
 		padding: 0 16px;
 	}
@@ -628,7 +636,7 @@
 		color: #111827;
 		font: inherit;
 		font-size: var(--sa-text-desktop-body);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		outline: 0;
 		padding: 14px 16px;
 	}
@@ -709,8 +717,8 @@
 		background: #e4072f;
 		padding: 8px 12px;
 		color: #fff;
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0;
 		line-height: 1;
 	}
@@ -726,8 +734,8 @@
 		max-width: 560px;
 		margin: 0 0 10px;
 		letter-spacing: 0;
-		font-weight: 700;
-		font-size: 36px;
+		font-weight: var(--sa-weight-strong);
+		font-size: var(--sa-heading-section);
 		line-height: 1.16;
 		text-align: left;
 	}
@@ -735,8 +743,8 @@
 	.contact-page-form > .h3 {
 		margin-bottom: 10px;
 		letter-spacing: 0;
-		font-size: 29px;
-		font-weight: 700;
+		font-size: var(--sa-text-panel-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.16;
 	}
 
@@ -790,7 +798,7 @@
 		margin: 0;
 		color: #42526a;
 		font-size: var(--sa-text-desktop-dense);
-		font-weight: 500;
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.45;
 	}
 
@@ -866,18 +874,18 @@
 
 		.daynight-contact-primary .contact-page-form form > .grid > div > p {
 			color: #111827;
-			font-weight: 600;
+			font-weight: var(--sa-weight-semibold);
 		}
 
 		.daynight-contact-primary .contact-page-form input,
 		.daynight-contact-primary .contact-page-form textarea {
-			font-weight: 500;
+			font-weight: var(--sa-weight-medium);
 		}
 
 		.daynight-contact-primary .contact-page-form input::placeholder,
 		.daynight-contact-primary .contact-page-form textarea::placeholder {
 			color: #667085;
-			font-weight: 500;
+			font-weight: var(--sa-weight-medium);
 		}
 
 		.daynight-contact-primary .contact-page-form .daynight-contact-submit {
@@ -918,13 +926,13 @@
 
 		.daynight-contact-info-body .daynight-contact-title {
 			margin-bottom: 7px;
-			font-size: 32px;
+			font-size: var(--sa-type-page);
 			line-height: 1.16;
 		}
 
 		.daynight-contact-primary .contact-page .daynight-contact-info-body .daynight-contact-title {
 			margin-bottom: 7px;
-			font-size: 32px;
+			font-size: var(--sa-type-page);
 			line-height: 1.16;
 		}
 
@@ -958,22 +966,22 @@
 
 		.daynight-contact-primary .contact-page-form > .h3 {
 			margin-bottom: 7px;
-			font-size: 26px;
-			font-weight: 700;
+			font-size: var(--sa-text-2xl);
+			font-weight: var(--sa-weight-heading);
 			line-height: 1.16;
 		}
 
 		.contact-page-form > .h3 {
 			margin-bottom: 7px;
-			font-size: 26px;
-			font-weight: 700;
+			font-size: var(--sa-text-2xl);
+			font-weight: var(--sa-weight-heading);
 			line-height: 1.16;
 		}
 
 		.daynight-contact-primary .contact-page .contact-page-form > .h3 {
 			margin-bottom: 7px;
-			font-size: 26px;
-			font-weight: 700;
+			font-size: var(--sa-text-2xl);
+			font-weight: var(--sa-weight-heading);
 			line-height: 1.16;
 		}
 
@@ -1019,7 +1027,7 @@
 		}
 
 		.daynight-contact-info-body .daynight-contact-title {
-			font-size: 36px;
+			font-size: var(--sa-heading-section);
 		}
 
 		.daynight-contact-intro {
@@ -1087,8 +1095,8 @@
 	.daynight-contact-map__address {
 		margin: 0;
 		color: #111827;
-		font-size: 18px;
-		font-weight: 700;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-strong);
 		letter-spacing: 0;
 		line-height: 1.24;
 	}
@@ -1096,7 +1104,7 @@
 	.daynight-contact-map__overlay a {
 		color: #cf2029;
 		font-size: var(--sa-text-desktop-dense);
-		font-weight: var(--sa-weight-semibold);
+		font-weight: var(--sa-button-font-weight);
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}

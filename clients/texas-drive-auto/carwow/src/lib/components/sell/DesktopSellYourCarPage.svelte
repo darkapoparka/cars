@@ -23,7 +23,7 @@
 	type IntakeMode = 'plate' | 'vin';
 	type SellSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
-	const phoneHref: `tel:${string}` = `tel:+359${daynightSite.phone.slice(1)}`;
+	const phoneHref: `tel:${string}` = daynightSite.phoneHref;
 	const processIcons = [ClipboardPen, Camera, BadgeEuro, KeyRound];
 
 	let valuationDialog: HTMLDialogElement | undefined = $state();
@@ -82,7 +82,7 @@
 	let sellSubmitState = $state<SellSubmitState>('idle');
 	let sellSubmitMessage = $state('');
 
-	const sellErrorMessage = `Your request was not sent. Please try again or call ${daynightSite.phoneLabel}.`;
+	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
 
 	const leadPath = $derived.by((): SellRequestHref => {
 		const params = new SvelteURLSearchParams();
@@ -101,12 +101,12 @@
 
 	function buildNotes() {
 		return [
-			['Plate number', plate.trim().toUpperCase()],
+			['Рег. номер', plate.trim().toUpperCase()],
 			['VIN', vin.trim().toUpperCase()],
-			['Make', make.trim()],
-			['Model', model.trim()],
-			['Year', year.trim()],
-			['Mileage', mileage.trim()]
+			['Марка', make.trim()],
+			['Модел', model.trim()],
+			['Година', year.trim()],
+			['Километри', mileage.trim()]
 		]
 			.filter(([, value]) => value)
 			.map(([label, value]) => `${label}: ${value}`)
@@ -121,7 +121,7 @@
 		const contactValue = phone.trim();
 		if (!contactValue) {
 			sellSubmitState = 'error';
-			sellSubmitMessage = 'Please enter a phone number for your valuation inquiry draft.';
+			sellSubmitMessage = 'Моля, въведете телефон, за да Ви изпратим оценка и следваща стъпка.';
 			return;
 		}
 
@@ -129,7 +129,7 @@
 		sellSubmitMessage = '';
 
 		const result = await submitLead({
-			customerName: 'Website valuation inquiry',
+			customerName: 'Заявка за оценка от сайта',
 			contact: contactValue,
 			email: null,
 			phone: contactValue,
@@ -140,7 +140,7 @@
 
 		if (result.ok) {
 			sellSubmitState = 'success';
-			sellSubmitMessage = 'Draft only — not sent';
+			sellSubmitMessage = 'Заявката е изпратена. Екипът ще Ви изпрати оценка и следваща стъпка.';
 			return;
 		}
 
@@ -149,21 +149,21 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-sell" aria-label="Ask about selling or trading in">
+<main id="main-content" tabindex="-1" class="desktop-sell" aria-label="Продай или замени автомобил">
 	<DesktopYellowRouteHero
 		sectionId="sell-intake"
 		headingId="daynight-sell-title"
-		title="Sell your car"
+		title="Продай автомобила си"
 		panel="light"
 		compact
 	>
 		<div class="sell-intake-card">
-			<p>Considering selling or trading in? Add your vehicle details to draft an inquiry about available options.</p>
+			<p>Продажба или бартер? Изпрати данните за автомобила и ще се свържем с теб за оценка.</p>
 			<a
 				class="sell-action desktop-primary-action"
 				href={resolve(leadPath)}
 				onclick={openValuation}
-				aria-haspopup="dialog">Draft a valuation inquiry <ArrowRight size={18} /></a
+				aria-haspopup="dialog">Заяви оценка <ArrowRight size={18} /></a
 			>
 		</div>
 	</DesktopYellowRouteHero>
@@ -175,11 +175,11 @@
 		onkeydown={handleModalKeydown}
 	>
 		<div class="sell-modal__heading">
-			<h2 id="sell-modal-title">Request an appraisal</h2>
+			<h2 id="sell-modal-title">Заявка за оценка</h2>
 			<button
 				class="sell-modal__close"
 				type="button"
-				aria-label="Close"
+				aria-label="Затвори"
 				onclick={() => valuationDialog?.close()}><X size={22} /></button
 			>
 		</div>
@@ -192,14 +192,14 @@
 		>
 			<div class="desktop-sell-form__top">
 				<div class="desktop-sell-form__mode">
-					<div class="desktop-sell-form__switch" aria-label="Entry method">
+					<div class="desktop-sell-form__switch" aria-label="Начин на въвеждане">
 						<button
 							type="button"
 							class={[intakeMode === 'plate' && 'active']}
 							aria-pressed={intakeMode === 'plate'}
 							onclick={() => (intakeMode = 'plate')}
 						>
-							Plate number
+							Рег. номер
 						</button>
 						<button
 							type="button"
@@ -215,7 +215,7 @@
 
 			<div class="desktop-sell-form__grid">
 				<label class="desktop-sell-field desktop-sell-field--wide">
-					<span>{intakeMode === 'plate' ? 'License plate number' : 'VIN'}</span>
+					<span>{intakeMode === 'plate' ? 'Регистрационен номер' : 'VIN номер'}</span>
 					{#if intakeMode === 'plate'}
 						<input
 							name="plate"
@@ -229,17 +229,17 @@
 							name="vin"
 							type="text"
 							bind:value={vin}
-							placeholder="17-character VIN"
+							placeholder="17 символа VIN"
 							autocomplete="off"
 						/>
 					{/if}
 				</label>
 				<label class="desktop-sell-field">
-					<span>Make</span>
+					<span>Марка</span>
 					<input name="make" type="text" bind:value={make} placeholder="BMW" autocomplete="off" />
 				</label>
 				<label class="desktop-sell-field">
-					<span>Model</span>
+					<span>Модел</span>
 					<input
 						name="model"
 						type="text"
@@ -249,11 +249,11 @@
 					/>
 				</label>
 				<label class="desktop-sell-field">
-					<span>Year</span>
+					<span>Година</span>
 					<input name="year" type="text" inputmode="numeric" bind:value={year} placeholder="2019" />
 				</label>
 				<label class="desktop-sell-field">
-					<span>Mileage</span>
+					<span>Километри</span>
 					<input
 						name="mileage"
 						type="text"
@@ -263,7 +263,7 @@
 					/>
 				</label>
 				<label class="desktop-sell-field desktop-sell-field--wide">
-					<span>Contact phone *</span>
+					<span>Телефон за връзка *</span>
 					<input
 						name="phone"
 						type="tel"
@@ -275,7 +275,7 @@
 				</label>
 
 				<label class="desktop-sell-honeypot" aria-hidden="true">
-					<span>Company</span>
+					<span>Компания</span>
 					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
 				</label>
 			</div>
@@ -296,7 +296,7 @@
 					type="submit"
 					disabled={sellSubmitState === 'submitting'}
 				>
-					<span>{sellSubmitState === 'submitting' ? 'Sending...' : 'Create valuation draft'}</span>
+					<span>{sellSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати за оценка'}</span>
 				</button>
 			</div>
 		</form>
@@ -304,7 +304,7 @@
 
 	<section class="sell-process sell-section" aria-labelledby="sell-process-title">
 		<div class="sell-container">
-			<h2 id="sell-process-title" class="sell-section-title">How it works</h2>
+			<h2 id="sell-process-title" class="sell-section-title">Как работи</h2>
 			<ol class="sell-steps">
 				{#each desktopSellProcessSteps as step, index (step.title)}
 					{@const StepIcon = processIcons[index]}
@@ -323,15 +323,15 @@
 	<section class="sell-benefits" aria-labelledby="sell-benefits-title">
 		<div class="sell-container sell-benefits__layout">
 			<div class="sell-benefits__content">
-				<h2 id="sell-benefits-title">Selling<br />or trade-in questions.</h2>
+				<h2 id="sell-benefits-title">Продажба<br />или бартер.</h2>
 				<p class="sell-benefits__copy">
-					Considering selling your car or trading it toward an in-stock model? Ask about available options and
-					required paperwork.
+					Продай автомобила си или го замени с модел от нашата наличност. Оценяваме състоянието му и
+					ти съдействаме с документите.
 				</p>
 				<div class="sell-benefits__actions">
 					<DesktopBrowseLink
 						href={resolve('/inventory')}
-						label="Find your next car"
+						label="Избери следващия автомобил"
 						tone="dark"
 					/>
 				</div>
@@ -351,7 +351,7 @@
 
 	<section class="sell-faq sell-section" aria-labelledby="sell-faq-title">
 		<div class="sell-container sell-faq__content">
-			<h2 id="sell-faq-title" class="sell-section-title">Frequently asked questions</h2>
+			<h2 id="sell-faq-title" class="sell-section-title">Често задавани въпроси</h2>
 			<div class="sell-faq__items">
 				{#each desktopSellFaqItems as item (item.question)}
 					<details name="sell-faq">
@@ -365,13 +365,13 @@
 
 	<section class="sell-final" aria-labelledby="sell-final-title">
 		<div class="sell-container sell-final__layout">
-			<h2 id="sell-final-title" class="sell-section-title">Your next step</h2>
+			<h2 id="sell-final-title" class="sell-section-title">Твоята следваща стъпка</h2>
 			<div class="sell-final__actions">
 				<a
 					class="sell-action desktop-primary-action"
 					href={resolve(leadPath)}
 					onclick={openValuation}
-					aria-haspopup="dialog">Draft a valuation inquiry <ArrowRight size={18} /></a
+					aria-haspopup="dialog">Заяви оценка <ArrowRight size={18} /></a
 				>
 				<a class="sell-phone" href={phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
 			</div>
@@ -388,7 +388,7 @@
 		margin: 0 auto 20px;
 		max-width: 52ch;
 		color: var(--sa-ink);
-		font: 400 18px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-lg)/1.5 var(--sa-font);
 	}
 	.sell-modal {
 		width: min(640px, calc(100vw - 48px));
@@ -412,7 +412,7 @@
 		margin-bottom: 18px;
 	}
 	.desktop-sell .sell-modal__heading h2 {
-		font: 700 28px/1.2 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-panel-title)/1.2 var(--sa-font);
 		letter-spacing: -0.025em;
 		margin: 0;
 	}
@@ -491,8 +491,8 @@
 		background: transparent;
 		color: #59616c;
 		cursor: pointer;
-		font-size: var(--sa-text-body-sm);
-		font-weight: var(--sa-weight-label);
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		letter-spacing: var(--sa-tracking-tight);
 	}
 
@@ -541,7 +541,7 @@
 
 	.desktop-sell-field span {
 		color: #677283;
-		font-size: 12px;
+		font-size: var(--sa-text-caption);
 		font-weight: var(--sa-weight-label);
 		letter-spacing: 0;
 		line-height: var(--sa-leading-tight);
@@ -555,7 +555,7 @@
 		background: transparent !important;
 		box-shadow: none !important;
 		color: var(--sa-ink) !important;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		font-weight: var(--sa-weight-semibold);
 		line-height: var(--sa-leading-snug);
 		outline: 0 !important;
@@ -619,7 +619,7 @@
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
 		font-size: var(--sa-text-desktop-section-title);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.1;
 		letter-spacing: -0.025em;
 		margin: 0;
@@ -659,7 +659,7 @@
 		margin: 0 0 10px;
 		font-family: var(--sa-font);
 		font-size: var(--sa-text-desktop-card-title);
-		font-weight: 700;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.3;
 		letter-spacing: var(--sa-tracking-tight);
 	}
@@ -667,8 +667,8 @@
 		color: var(--sa-ink);
 		margin: 0 auto;
 		font-family: var(--sa-font);
-		font-size: var(--sa-text-desktop-dense);
-		font-weight: 400;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-regular);
 		line-height: 1.5;
 		max-width: 26ch;
 	}
@@ -692,8 +692,8 @@
 	}
 	.desktop-sell .sell-benefits h2 {
 		font-family: var(--sa-font);
-		font-size: clamp(40px, 3.4vw, 56px);
-		font-weight: 800;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.04;
 		letter-spacing: -0.04em;
 		margin: 0 0 16px;
@@ -706,7 +706,7 @@
 		flex-wrap: wrap;
 	}
 	.desktop-sell .sell-benefits__copy {
-		font: 400 18px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-lg)/1.5 var(--sa-font);
 		color: var(--sa-ink);
 		max-width: 440px;
 		margin: 0 0 24px;
@@ -744,7 +744,7 @@
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
 		font-size: var(--sa-text-desktop-body);
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		line-height: 1.4;
 	}
 	.sell-faq summary::-webkit-details-marker {
@@ -762,8 +762,8 @@
 		padding: 0 40px 22px 0;
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-type-body);
+		font-weight: var(--sa-weight-regular);
 		line-height: 1.6;
 	}
 	.sell-faq summary:hover {
@@ -780,7 +780,7 @@
 		gap: 32px;
 	}
 	.desktop-sell .sell-final .sell-section-title {
-		font-size: 30px;
+		font-size: var(--sa-text-panel-title);
 	}
 	.sell-final__actions {
 		display: flex;
@@ -797,8 +797,8 @@
 		background: var(--sa-red);
 		border-radius: 8px;
 		color: #fff;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		white-space: nowrap;
 	}
 	.sell-action:hover {
@@ -809,8 +809,8 @@
 		align-items: center;
 		gap: 10px;
 		color: var(--sa-ink);
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 		white-space: nowrap;
 	}
 	.desktop-sell :is(a, summary):focus-visible {

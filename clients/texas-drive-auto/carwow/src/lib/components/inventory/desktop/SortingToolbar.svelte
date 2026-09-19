@@ -32,29 +32,29 @@
 	<div class="daynight-inventory-results-toolbar">
 		<div class="daynight-inventory-results-count-cell">
 			<p class="daynight-inventory-result-count">
-				<span id="filterMatchesCount">{count}</span> vehicles
+				<span id="filterMatchesCount">{count}</span> автомобила
 			</p>
 		</div>
 		<div class="inventory-toolbar-actions">
 			<div class="daynight-inventory-sort-control">
 				<SortDropdown />
 			</div>
-			<div class="inventory-view-buttons" aria-label="Vehicle view">
+			<div class="inventory-view-buttons" aria-label="Изглед на автомобилите">
 				<button
 					type="button"
-					aria-label="Grid"
+					aria-label="Решетка"
 					aria-pressed={!listView}
 					onclick={() => onViewChange(false)}><LayoutGrid size={18} /></button
 				>
 				<button
 					type="button"
-					aria-label="List"
+					aria-label="Списък"
 					aria-pressed={listView}
 					onclick={() => onViewChange(true)}><List size={19} /></button
 				>
 				<button
 					type="button"
-					aria-label="Filters in left column"
+					aria-label="Филтри в лява колона"
 					aria-pressed={layoutMode === 'sidebar'}
 					onclick={onSidebarChange}><PanelLeft size={18} /></button
 				>
@@ -74,8 +74,8 @@
 	data-daynight-has-tags={hasTags ? 'true' : undefined}
 	aria-live="polite"
 	aria-label={hasTags
-		? `Active filters: ${filters.appliedTags.map((tag) => tag.label).join(', ')}`
-		: 'Active filters'}
+		? `Активни филтри: ${filters.appliedTags.map((tag) => tag.label).join(', ')}`
+		: 'Активни филтри'}
 	hidden={!hasTags}
 	style:display={hasTags ? '' : 'none'}
 >
@@ -86,7 +86,7 @@
 				type="button"
 				data-daynight-clear-field={tag.field}
 				data-daynight-clear-value={tag.value}
-				aria-label={`Remove filter ${tag.label}`}
+				aria-label={`Премахни филтър ${tag.label}`}
 				title={tag.label}
 				onclick={() => filters.removeTag(tag.field, tag.value)}
 			>
@@ -102,7 +102,7 @@
 		style:display={hasTags ? '' : 'none'}
 		onclick={clearAll}
 	>
-		Clear
+		Изчисти
 		<img src="/assets/icons/X-White.svg" alt="" aria-hidden="true" />
 	</button>
 </div>
@@ -125,12 +125,12 @@
 		min-height: 44px;
 	}
 	:global(.inventory-refined .daynight-inventory-result-count) {
-		font: 500 17px/1.4 var(--sa-font) !important;
+		font: var(--sa-weight-medium) var(--sa-text-control)/1.4 var(--sa-font) !important;
 		color: #454d55 !important;
 		margin: 0 !important;
 	}
 	:global(.inventory-refined .daynight-inventory-result-count span) {
-		font-weight: 750 !important;
+		font-weight: var(--sa-weight-strong) !important;
 		color: #161a1d;
 	}
 	.inventory-toolbar-actions {
