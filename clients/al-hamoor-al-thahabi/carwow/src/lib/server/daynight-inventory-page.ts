@@ -1,11 +1,11 @@
-import { daynightVehicles, type Car } from '$lib/data/daynight-vehicles';
+import type { Car } from '$lib/data/daynight-vehicles';
 import type {
 	InventoryGridDefinition,
 	InventoryListVehicle,
 	InventoryQuickFilterGroup,
 	InventoryQuickFilterOption
 } from '$lib/types/inventory';
-import type { InventoryTemplatePage, MapInventoryTemplatePage } from '$lib/types/template-page';
+import type { InventoryPageData, MapInventoryPageData } from '$lib/types/storefront-page';
 import { routeSeo } from './daynight-seo';
 
 export function toInventoryListVehicle(vehicle: Car): InventoryListVehicle {
@@ -92,19 +92,19 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 	return [
 		{
 			name: 'brand',
-			label: 'Make',
-			placeholder: 'All makes',
+			label: 'Марка',
+			placeholder: 'Всички марки',
 			options: toOptions(vehicles.map((vehicle) => vehicle.brand))
 		},
 		{
 			name: 'model',
-			label: 'Model',
-			placeholder: 'All models',
+			label: 'Модел',
+			placeholder: 'Всички модели',
 			options: toModelOptions(vehicles)
 		},
 		{
 			name: 'price',
-			label: 'Price',
+			label: 'Цена',
 			placeholder: 'Всички цени',
 			options: [
 				{ value: 'under-10000', label: 'До 10 000 EUR' },
@@ -116,19 +116,19 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 		},
 		{
 			name: 'mileage',
-			label: 'Mileage',
+			label: 'Пробег',
 			placeholder: 'Всички пробези',
 			options: mileageOptions
 		},
 		{
 			name: 'fuel',
-			label: 'Fuel',
+			label: 'Гориво',
 			placeholder: 'Всички горива',
 			options: toOptions(vehicles.map((vehicle) => vehicle.fuel))
 		},
 		{
 			name: 'transmission',
-			label: 'Transmission',
+			label: 'Скорости',
 			placeholder: 'Всички скорости',
 			options: toOptions(vehicles.map((vehicle) => vehicle.transmission))
 		},
@@ -140,7 +140,7 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 		},
 		{
 			name: 'feature',
-			label: 'Features',
+			label: 'Екстри',
 			placeholder: 'Всички екстри',
 			options: toOptions(vehicles.flatMap((vehicle) => vehicle.features))
 		}
@@ -150,30 +150,24 @@ function buildQuickFilters(vehicles: Car[]): InventoryQuickFilterGroup[] {
 // The grid is fully native (the reactive DesktopInventoryFilters store drives
 // every control) and ships no template scripts, so the payload is built purely
 // from Car data + route SEO.
-export async function loadInventoryTemplatePage(vehicles?: Car[]): Promise<InventoryTemplatePage> {
-	const publicVehicles = vehicles ?? daynightVehicles;
-
+export function buildInventoryPageData(vehicles: Car[]): InventoryPageData {
 	return {
 		kind: 'inventory',
 		...routeSeo('inventory'),
-		scriptSrcs: [],
 		gridDefinitions,
-		quickFilters: buildQuickFilters(publicVehicles),
-		vehicles: publicVehicles.map(toInventoryListVehicle)
+		quickFilters: buildQuickFilters(vehicles),
+		vehicles: vehicles.map(toInventoryListVehicle)
 	};
 }
 
 // Native half-map payload — the same quick filters + vehicles the grid carries
 // (they drive the shared reactive store), minus the grid layout definitions. The
 // map embed itself is masked in the visual gate.
-export async function loadInventoryMapPage(vehicles?: Car[]): Promise<MapInventoryTemplatePage> {
-	const publicVehicles = vehicles ?? daynightVehicles;
-
+export function buildInventoryMapPageData(vehicles: Car[]): MapInventoryPageData {
 	return {
 		kind: 'inventory-map',
 		...routeSeo('inventory/map'),
-		scriptSrcs: [],
-		quickFilters: buildQuickFilters(publicVehicles),
-		vehicles: publicVehicles.map(toInventoryListVehicle)
+		quickFilters: buildQuickFilters(vehicles),
+		vehicles: vehicles.map(toInventoryListVehicle)
 	};
 }

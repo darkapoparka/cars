@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "client": "al-hamoor-al-thahabi",
   "templateKey": "carwow",
-  "templateVersion": "2026.09.08-repair-1",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
   "createdAt": "2026-09-08T21:51:38.811Z",
-  "state": "implemented-needs-local-qa",
+  "state": "refreshed-needs-local-qa",
   "selectedHome": "main",
   "availableHomes": [
     {
@@ -32,5 +32,22 @@
     "stockCount": 8,
     "localAssets": true,
     "qaOwner": "local-review"
+  },
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+    "exportPolicy": "cars-source-v1"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
+  "workflowCommit": "66ae48d4f7cba2cc4574931fa4632a3423a7d469",
+  "refresh": {
+    "previousTemplateVersion": "2026.09.08-repair-1",
+    "refreshedAt": "2026-09-19T01:17:51.287Z",
+    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "mode": "fresh-template-plus-dealer-overlay"
   }
 }
