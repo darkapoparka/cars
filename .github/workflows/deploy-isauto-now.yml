@@ -43,15 +43,19 @@ jobs:
           set -euo pipefail
           for attempt in $(seq 1 30); do
             html="$(curl -fsSL --max-time 20 https://cars-isautovarna.vercel.app/ || true)"
-            dark_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/dealer/logo-dark.png || true)"
-            light_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/dealer/logo-light.png || true)"
-            modern_light_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/variant-2/isauto/logo-light.png || true)"
-            if printf '%s' "$html" | grep -q '/dealer/logo-dark.png' && \
+            light_surface_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/assets/brand/logo-on-light.webp || true)"
+            dark_surface_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/assets/brand/logo-on-dark.webp || true)"
+            modern_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/variant-2/assets/brand/logo-on-dark.webp || true)"
+            carwow_dark_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/variant-3/assets/brand/logo-on-dark.webp || true)"
+            carwow_accent_headers="$(curl -fsSIL --max-time 20 https://cars-isautovarna.vercel.app/variant-3/assets/brand/logo-on-accent.webp || true)"
+            if printf '%s' "$html" | grep -q '/assets/brand/logo-on-light.webp' && \
                printf '%s' "$html" | grep -q 'IS AUTO' && \
-               printf '%s' "$dark_headers" | grep -Eqi '^content-type: image/(png|webp)' && \
-               printf '%s' "$light_headers" | grep -Eqi '^content-type: image/(png|webp)' && \
-               printf '%s' "$modern_light_headers" | grep -Eqi '^content-type: image/(png|webp)'; then
-              echo 'Production alias serves the refreshed IS AUTO package and both raster contrast variants.'
+               printf '%s' "$light_surface_headers" | grep -Eqi '^content-type: image/(png|webp)' && \
+               printf '%s' "$dark_surface_headers" | grep -Eqi '^content-type: image/(png|webp)' && \
+               printf '%s' "$modern_headers" | grep -Eqi '^content-type: image/(png|webp)' && \
+               printf '%s' "$carwow_dark_headers" | grep -Eqi '^content-type: image/(png|webp)' && \
+               printf '%s' "$carwow_accent_headers" | grep -Eqi '^content-type: image/(png|webp)'; then
+              echo 'Production alias serves the contextual IS AUTO raster logo package across all three variants.'
               exit 0
             fi
             sleep 4
