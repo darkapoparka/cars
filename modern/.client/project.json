@@ -2,59 +2,21 @@
   "schemaVersion": 1,
   "client": "isauto-varna",
   "templateKey": "modern",
-  "templateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
-  "createdAt": "2026-09-16T00:19:39.705Z",
-  "state": "refreshed-needs-local-qa",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/cars"
-    }
-  ],
-  "offeredHomes": [
-    {
-      "id": "main",
-      "route": "/cars"
-    }
-  ],
-  "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
+  "templateVersion": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+  "state": "refreshed-awaiting-production-qa",
   "templateSource": {
     "repository": "darkapoparka/cars-template-modern",
-    "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
-    "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
-    "exportPolicy": "cars-source-v1"
+    "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+    "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-2/cars"
   },
-  "workflowCommit": "0a8be937f62e37fa865a2f64ec3779f9a5a91629",
-  "businessFacts": "clients/isauto-varna/business-facts.json",
-  "stock": "clients/isauto-varna/FACTS-AND-INVENTORY.json",
-  "assetProvenance": "clients/isauto-varna/assets/provenance.json",
-  "limitations": [
-    "Unpublished prospect demo; no agreement, outreach or CRM registration implied.",
-    "Dated public inventory sample, not a live feed; confirm availability and prices.",
-    "Forms and calculators remain preview interactions until a backend is configured and tested.",
-    "No customer reviews, completed sales or guaranteed finance outcomes are asserted.",
-    "Desktop and mobile hosted visual QA remains false until the deployed routes are reviewed."
-  ],
-  "refresh": {
-    "previousTemplateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
-    "refreshedAt": "2026-09-19T01:13:45.880Z",
-    "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
-    "mode": "fresh-template-plus-dealer-overlay"
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   }
 }

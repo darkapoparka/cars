@@ -3,58 +3,20 @@
   "client": "isauto-varna",
   "templateKey": "carwow",
   "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
-  "createdAt": "2026-09-16T00:19:40.746Z",
-  "state": "refreshed-needs-local-qa",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "offeredHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
+  "state": "refreshed-awaiting-production-qa",
   "templateSource": {
     "repository": "darkapoparka/cars-template-carwow",
     "commit": "89f50c427863050abb7923152f05c091bb937d1e",
-    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
-    "exportPolicy": "cars-source-v1"
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "0a8be937f62e37fa865a2f64ec3779f9a5a91629",
-  "businessFacts": "clients/isauto-varna/business-facts.json",
-  "stock": "clients/isauto-varna/FACTS-AND-INVENTORY.json",
-  "assetProvenance": "clients/isauto-varna/assets/provenance.json",
-  "limitations": [
-    "Unpublished prospect demo; no agreement, outreach or CRM registration implied.",
-    "Dated public inventory sample, not a live feed; confirm availability and prices.",
-    "Forms and calculators remain preview interactions until a backend is configured and tested.",
-    "No customer reviews, completed sales or guaranteed finance outcomes are asserted.",
-    "Desktop and mobile hosted visual QA remains false until the deployed routes are reviewed."
-  ],
-  "refresh": {
-    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "refreshedAt": "2026-09-19T01:13:47.270Z",
-    "approvedTemplateCommit": "89f50c427863050abb7923152f05c091bb937d1e",
-    "mode": "fresh-template-plus-dealer-overlay"
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   }
 }

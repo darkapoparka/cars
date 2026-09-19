@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "slug": "isauto-varna",
     "dealerId": null,
-    "repository": "darkapoparka/cars-isautovarna",
-    "defaultBranch": "main",
+    "repository": "darkapoparka/cars",
+    "defaultBranch": "publish/isauto-varna",
     "variants": [
       {
         "key": "auto-best",
@@ -24,15 +24,22 @@
       }
     ],
     "extraAssets": [
-      "assets/provenance.json"
+      "assets/provenance.json",
+      "branding",
+      "dealer-brand"
     ],
     "packaging": {
       "version": "1"
+    },
+    "templateRevisions": {
+      "auto-best": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+      "modern": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+      "carwow": "89f50c427863050abb7923152f05c091bb937d1e"
     }
   },
-  "sourceCommit": "9e943da3c631eddea8e4f580339a9e84b3bf99dd",
+  "sourceCommit": "36034750abf7b74b7ca2c33e5cbd44302e71b4c0",
   "packagingVersion": "1",
-  "payloadDigest": "5b7e9047fc96b6e3b4d5b3000a64f5e341eee53528524a7f969cc8335559b959",
+  "payloadDigest": "9aa6f6b1f21ce581bf6934cb00b94ada3e1a88018de257fcf65d2bd4740b90e6",
   "payload": [
     {
       "path": ".gitignore",
@@ -44,7 +51,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "e0112407dd47b3e23713f39472dd9a1903d727ca2fc0dfac3e589dac14f646f5"
+      "sha256": "7202a5f2bacff001c6d5ba6aa5306ed7918c9c14574733233701260fa79f46a6"
     },
     {
       "path": "CLIENT.md",
@@ -56,11 +63,11 @@
     },
     {
       "path": "assets/provenance.json",
-      "sha256": "df5417d5f0d56f878bf85c621a6a6ed9f5445d63b2871f22e47c65229c72266b"
+      "sha256": "f7246fd0f3b5c7c28bba26428b2d05d1e6424a4519cc5a099cc74f38122d35dd"
     },
     {
       "path": "auto-best/.client/project.json",
-      "sha256": "2da0fb4e52dae542222bf7d01765e5e531ef3cfe1804a2e0578ba026bcb2976e"
+      "sha256": "418fa3260ab547097fb6b86c2fb8e4fa6f7f49b88dcffc459bfaec789a5554dd"
     },
     {
       "path": "auto-best/.gitattributes",
@@ -532,7 +539,7 @@
     },
     {
       "path": "auto-best/src/lib/components/layout/Footer.svelte",
-      "sha256": "40255af30b94bd3d8e4bc09d8f9de331133f9678869a64b962fb4efd4f3497c6"
+      "sha256": "37c1fe5944ca6428c59081748b37d5a44ad29d1f203764ed30e08d21e64f7cd5"
     },
     {
       "path": "auto-best/src/lib/components/layout/Header.svelte",
@@ -624,7 +631,7 @@
     },
     {
       "path": "auto-best/src/lib/config/brand.ts",
-      "sha256": "e72df3ed6dc7ccf7e2654637dcadb63391be014111ffc8e4d90a785bbb5393cd"
+      "sha256": "039a789d0e1f2463f6a922519a50f2281b0a4429a0d01e736a812dafb915a2fc"
     },
     {
       "path": "auto-best/src/lib/config/lead-site.ts",
@@ -640,7 +647,7 @@
     },
     {
       "path": "auto-best/src/lib/data/dealer-profile.json",
-      "sha256": "85d8e44185c7bcc8ef44f158fd998ab422db0543abb32e45106761482b069d71"
+      "sha256": "57c0ea0fd8b92386c8f304f89a46910028bc5f39c4018c298d1d1d630204947c"
     },
     {
       "path": "auto-best/src/lib/data/demo-content.ts",
@@ -805,22 +812,6 @@
     {
       "path": "auto-best/src/routes/sitemap.xml/+server.ts",
       "sha256": "7dd76c7d4f8d3891672432fd5a645b611a673d41a1ebf759242ff81308ff98c8"
-    },
-    {
-      "path": "auto-best/static/assets/brand/logo-on-dark.png",
-      "sha256": "4bbb409ac23cf0bbdb3fcc0f6922f5fe6315563289510f47e3b145fd002686dd"
-    },
-    {
-      "path": "auto-best/static/assets/brand/logo-on-dark.webp",
-      "sha256": "a43a482bcde222e9592d1fb46ccf90a43bb37be736dd96f71cd988c4e39c52e1"
-    },
-    {
-      "path": "auto-best/static/assets/brand/logo-on-light.png",
-      "sha256": "7a567741f9826140c2ebe95452de3c5ab3e23a1c12d26f02f79a0b85f98bfbfe"
-    },
-    {
-      "path": "auto-best/static/assets/brand/logo-on-light.webp",
-      "sha256": "ef11767b156543369c674fe20372be3d1e1fc4df8bfa3e76324e065d0df16e55"
     },
     {
       "path": "auto-best/static/assets/images/blog/blog-1.jpg",
@@ -1052,7 +1043,7 @@
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-logo.png",
-      "sha256": "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889"
+      "sha256": "c542eea5a7903271e47547270114178293db7b574b1b0f4be093e6ae79f6d3ff"
     },
     {
       "path": "auto-best/static/assets/images/lead/day-night-mobile-import-v1.webp",
@@ -1287,6 +1278,18 @@
       "sha256": "d1980d1ba924e291dad20f83e64964ed146504c0230608116e230caab512550b"
     },
     {
+      "path": "auto-best/static/dealer-brand/logo-on-accent.webp",
+      "sha256": "b2f769f663b9678e8ccc31fd67e84b360bf5552ce93e9ad5043a5b3e8710fb98"
+    },
+    {
+      "path": "auto-best/static/dealer-brand/logo-on-dark.webp",
+      "sha256": "6df2c14c2f1e64b8544c96cd363c70a38530315cb080775a922386c446a7a23d"
+    },
+    {
+      "path": "auto-best/static/dealer-brand/logo-on-light.webp",
+      "sha256": "0a413af3e8835f255e604a0e4e2d2ab2c10d66f722beb96d078d18502e6b6bfb"
+    },
+    {
       "path": "auto-best/static/dealer/inventory-1.webp",
       "sha256": "2ed0bb6590dacb3f44b9e97a1abf72ddbdc5cc60480c9a4671b01f32f1dad1a5"
     },
@@ -1343,12 +1346,24 @@
       "sha256": "937eca34630c52b8838d646b39293cee5b2c0ff22e022192d74ff528adfb0d30"
     },
     {
+      "path": "branding/logo-contract.json",
+      "sha256": "62c6eecbc04f7b546502c074dd2b8343b501571fb73202418a993eb25ea50e8b"
+    },
+    {
+      "path": "branding/logo-master.png",
+      "sha256": "a53049644f4d1689ee04f601700b014a0cddbfb66c22e8b7cf116d6f28443831"
+    },
+    {
+      "path": "branding/logo-on-light.png",
+      "sha256": "c542eea5a7903271e47547270114178293db7b574b1b0f4be093e6ae79f6d3ff"
+    },
+    {
       "path": "business-facts.json",
-      "sha256": "26c7d0b698f2110f79acff027474719ae647e7f73b2a377f46c2ee019e4d5579"
+      "sha256": "3224e5f096f9f6ad7acc3c704b9e1b6b837f46fed28bd094b2f6a3fd29580109"
     },
     {
       "path": "carwow/.client/project.json",
-      "sha256": "26aaf4ca3aceed4e08c82e5c0d3daa7c032aff6c0518580799a5eeb5aac398c8"
+      "sha256": "b15968296c48ea4dae4b0f4051efb737e1adf5ac33557a39787e61c4a54a911e"
     },
     {
       "path": "carwow/.env.example",
@@ -1441,6 +1456,10 @@
     {
       "path": "carwow/docs/LEAD-BUILD.md",
       "sha256": "17dfe94ec507e1760786544d0496cc4f526440241b5dfa51e2050b5c16feb911"
+    },
+    {
+      "path": "carwow/docs/QA.md",
+      "sha256": "a05cc84685a96fd6d9bc9c27159b74f7e6368a529d5d16f450d4a770bd73ea99"
     },
     {
       "path": "carwow/docs/README.md",
@@ -1732,7 +1751,7 @@
     },
     {
       "path": "carwow/src/lib/components/about/DesktopDealerProfilePage.svelte",
-      "sha256": "12b88e71c7158e8985c39b59491a22ea523dbe64f4d58b08d50ac5dfac051faa"
+      "sha256": "2b3f4f53bb912addd52b96542c5c799e36785c7336699e3ba953e62204253f69"
     },
     {
       "path": "carwow/src/lib/components/about/MobileAboutPage.svelte",
@@ -1772,7 +1791,7 @@
     },
     {
       "path": "carwow/src/lib/components/blog/BlogArticlePage.svelte",
-      "sha256": "1a02ea7510b5129a816cc7a102196fa2bf6b0501349580be1081ecb7af1ec035"
+      "sha256": "668aaabb5bb6a47a0535908739f646d48e2ba1e63d5f77a50bc0eecc691d3931"
     },
     {
       "path": "carwow/src/lib/components/blog/BlogIndexPage.svelte",
@@ -1992,7 +2011,7 @@
     },
     {
       "path": "carwow/src/lib/components/home/mobile/MobileHeader.svelte",
-      "sha256": "ba1398e78665f631f844dc22d79b13342b04bfab72066e8c15938aae0acefe90"
+      "sha256": "8323d9601ac4385068fc0a26ce1732e2e807e77206fdfb6cd908279c60a851dc"
     },
     {
       "path": "carwow/src/lib/components/home/mobile/MobileHome.svelte",
@@ -2000,7 +2019,7 @@
     },
     {
       "path": "carwow/src/lib/components/home/mobile/MobileHomeDiscovery.svelte",
-      "sha256": "b8c9a61d5eab8bba8a987dfdeb75811ca8ed0956dc36c93cdb6391694758c2b7"
+      "sha256": "0528d10dfc5d816178766592f4ffe5207434435e3c3586a848f2407ebd77acd3"
     },
     {
       "path": "carwow/src/lib/components/home/mobile/MobileHomeFooter.svelte",
@@ -2224,7 +2243,7 @@
     },
     {
       "path": "carwow/src/lib/components/layout/SiteChromeNavRow.svelte",
-      "sha256": "083edb69eac600ceaef0b584e6c720ed20267ba1a9a8611add5a5c52d2c96c2c"
+      "sha256": "2dacd8319cf3188f96a5a5beb1c64feac0e3311f53941d6e00f356cc92593048"
     },
     {
       "path": "carwow/src/lib/components/layout/SiteChromePrimaryRow.svelte",
@@ -2240,7 +2259,7 @@
     },
     {
       "path": "carwow/src/lib/components/layout/SiteHeader.svelte",
-      "sha256": "349c817bccab08069e236d883ec96675757a47b80dc6c4bd71c9e302c446f217"
+      "sha256": "b8234a3af7770c6342c5cdd27b791c884040c6f79b2f30b6cb507cc289a66d0b"
     },
     {
       "path": "carwow/src/lib/components/layout/SiteNavigation.svelte",
@@ -2772,7 +2791,7 @@
     },
     {
       "path": "carwow/src/lib/data/daynight-blog.ts",
-      "sha256": "4151d281e6cce9182d7e5d3a959dd504831cf230c2894e160460cf15296cc2fe"
+      "sha256": "0fb782687eae74c6263cfc2b23831b1c1718505175ca91167bda014ceaf6d61b"
     },
     {
       "path": "carwow/src/lib/data/daynight-current-inventory.ts",
@@ -2780,7 +2799,7 @@
     },
     {
       "path": "carwow/src/lib/data/daynight-faq.ts",
-      "sha256": "ac493af737ea2713579786705dd8c91a5a280ee094c49a7c200973cde84ec3fd"
+      "sha256": "ebf646e6c889c0de887203e9bf2e02d6513c9de4aed9546b1545cd2a9e8fcc5a"
     },
     {
       "path": "carwow/src/lib/data/daynight-reviews.ts",
@@ -2788,11 +2807,11 @@
     },
     {
       "path": "carwow/src/lib/data/daynight-site.ts",
-      "sha256": "3ec33e270791e02c64117f2193f3edaf6da40d4837420e2b36a583f978469394"
+      "sha256": "7183d9aca2d88c57f375f307927f6d409805926d46638d41598235e2cb99ccad"
     },
     {
       "path": "carwow/src/lib/data/daynight-team.ts",
-      "sha256": "78c94c5621e0996b91137133ecddc191f6a35c9ba9ce313377585fbeb53cc1a4"
+      "sha256": "536771c08da4bebe681b61aaceeb852ba43e1691f3c67ce9425d1a8a1e312889"
     },
     {
       "path": "carwow/src/lib/data/daynight-vehicles.ts",
@@ -2804,7 +2823,7 @@
     },
     {
       "path": "carwow/src/lib/data/dealer-profile.json",
-      "sha256": "694941153af1098919eb789d0f9e50fd879902650b81364797de2dcbd1fc145e"
+      "sha256": "c4658598f132ed4fff45c3f1060471d35b676199d9c5e5e4acb13bb24ab4f2ab"
     },
     {
       "path": "carwow/src/lib/data/editorial-guides.ts",
@@ -3168,7 +3187,7 @@
     },
     {
       "path": "carwow/src/routes/+error.svelte",
-      "sha256": "32476af25bee94beedf04c55e9d9e185a095cb18ade39bfe20897cf821818f74"
+      "sha256": "19eb268f360a6ec51208b2ff525070e955c7e52d30783cf8fd9dd86c655223d8"
     },
     {
       "path": "carwow/src/routes/+layout.server.ts",
@@ -3176,7 +3195,7 @@
     },
     {
       "path": "carwow/src/routes/+layout.svelte",
-      "sha256": "89c6bef4fd92ba8de264067ea3edf5127e56924cb0d30ed976d1d334eb39261b"
+      "sha256": "f7e45a146545fe3a9b9e9be4b70fb0918cd87e79c64db8b32a4e9eec19fc463b"
     },
     {
       "path": "carwow/src/routes/+page.server.ts",
@@ -3573,22 +3592,6 @@
     {
       "path": "carwow/src/routes/terms/+page.svelte",
       "sha256": "a10f440ed418239d529fb73ef28bc2fe0bd830cc6b2e34a54570c8ede66381f7"
-    },
-    {
-      "path": "carwow/static/assets/brand/logo-on-dark.png",
-      "sha256": "4bbb409ac23cf0bbdb3fcc0f6922f5fe6315563289510f47e3b145fd002686dd"
-    },
-    {
-      "path": "carwow/static/assets/brand/logo-on-dark.webp",
-      "sha256": "a43a482bcde222e9592d1fb46ccf90a43bb37be736dd96f71cd988c4e39c52e1"
-    },
-    {
-      "path": "carwow/static/assets/brand/logo-on-light.png",
-      "sha256": "7a567741f9826140c2ebe95452de3c5ab3e23a1c12d26f02f79a0b85f98bfbfe"
-    },
-    {
-      "path": "carwow/static/assets/brand/logo-on-light.webp",
-      "sha256": "ef11767b156543369c674fe20372be3d1e1fc4df8bfa3e76324e065d0df16e55"
     },
     {
       "path": "carwow/static/assets/brands/youtube-logo-source.md",
@@ -6428,11 +6431,11 @@
     },
     {
       "path": "carwow/static/brand/daynight-logo-generated.png",
-      "sha256": "f12a9e087cb37a6c27fb0daaf65e272eccf2947a3e94beb5f49820e6e5c0f91d"
+      "sha256": "c542eea5a7903271e47547270114178293db7b574b1b0f4be093e6ae79f6d3ff"
     },
     {
       "path": "carwow/static/brand/daynight-logo-lockup.png",
-      "sha256": "9b073c5fd0ae981a1ae13cd7c3c9d144b9ed91a22c4430ef998922a2e6e93633"
+      "sha256": "c542eea5a7903271e47547270114178293db7b574b1b0f4be093e6ae79f6d3ff"
     },
     {
       "path": "carwow/static/brand/daynight-logo.webp",
@@ -6485,6 +6488,18 @@
     {
       "path": "carwow/static/brand/getrich-logo-light.png",
       "sha256": "bc05bb753291a47504e6e193074901b38bc9dca75cf23f0cc90f6471cdd83030"
+    },
+    {
+      "path": "carwow/static/dealer-brand/logo-on-accent.webp",
+      "sha256": "b2f769f663b9678e8ccc31fd67e84b360bf5552ce93e9ad5043a5b3e8710fb98"
+    },
+    {
+      "path": "carwow/static/dealer-brand/logo-on-dark.webp",
+      "sha256": "6df2c14c2f1e64b8544c96cd363c70a38530315cb080775a922386c446a7a23d"
+    },
+    {
+      "path": "carwow/static/dealer-brand/logo-on-light.webp",
+      "sha256": "0a413af3e8835f255e604a0e4e2d2ab2c10d66f722beb96d078d18502e6b6bfb"
     },
     {
       "path": "carwow/static/dealer/inventory-1.webp",
@@ -6627,12 +6642,24 @@
       "sha256": "fd8893eb1ee836b3547d54ffe5c74cf3956e3a7cc4f30bf9d6dbd0c4cbf48d03"
     },
     {
+      "path": "dealer-brand/logo-on-accent.webp",
+      "sha256": "b2f769f663b9678e8ccc31fd67e84b360bf5552ce93e9ad5043a5b3e8710fb98"
+    },
+    {
+      "path": "dealer-brand/logo-on-dark.webp",
+      "sha256": "6df2c14c2f1e64b8544c96cd363c70a38530315cb080775a922386c446a7a23d"
+    },
+    {
+      "path": "dealer-brand/logo-on-light.webp",
+      "sha256": "0a413af3e8835f255e604a0e4e2d2ab2c10d66f722beb96d078d18502e6b6bfb"
+    },
+    {
       "path": "dealer.json",
-      "sha256": "f9ba675fb0f5ff26ff704995409b624edee10dfdfe656e50327094673346321a"
+      "sha256": "832a58772435cb271ae1d1da12b20360af093bec7e69454bfd1f5778e9d2ed3a"
     },
     {
       "path": "modern/.client/project.json",
-      "sha256": "af3ae1ebeed676012384526abdbe52e089ced0b19c1e9a0762bec87281ed65d7"
+      "sha256": "000332eb16dad3b43ce9b41e78ee185919e9117af0cb73aaac80219171f05aeb"
     },
     {
       "path": "modern/.cursorrules.example",
@@ -6640,7 +6667,7 @@
     },
     {
       "path": "modern/.gitignore",
-      "sha256": "7ece94a11bb9d69821ad528081024e757902c40ffe86c163a7bb6fcebbc6b7f0"
+      "sha256": "12f7069ab1f8a066be4b72812accef16a31b2184d32f99285c1f9af0cc9f6ce1"
     },
     {
       "path": "modern/.node-version",
@@ -6844,7 +6871,7 @@
     },
     {
       "path": "modern/apps/api/app/global-error.tsx",
-      "sha256": "dccb1e7b9a1f300318ee5594a022ad0575de092424b6aa107245f390da5ece11"
+      "sha256": "7ad37534231dc643a0ae57b7a9b68a7761a099560e861bba2e762de8067cdc48"
     },
     {
       "path": "modern/apps/api/app/health/route.ts",
@@ -6864,7 +6891,7 @@
     },
     {
       "path": "modern/apps/api/app/layout.tsx",
-      "sha256": "759b2c8cd86cc7dc51ae8160fd3a9fa8e3f715d40e691112ba2e8365efe8d780"
+      "sha256": "9392e619451245c52cbaff0df5c12ce7d4ac013179da4acf4f8782eddaeb368d"
     },
     {
       "path": "modern/apps/api/app/opengraph-image.png",
@@ -6929,6 +6956,10 @@
     {
       "path": "modern/apps/api/lib/external-inventory-provider.ts",
       "sha256": "60e680979111abb56fe7b4eb884f1c1ef7e7b2ec13f23a77de74252fc5964b01"
+    },
+    {
+      "path": "modern/apps/api/lib/fonts.ts",
+      "sha256": "8523877c5888bf21fb59f0714734ad6e5f64f6fc414f075990e5160683350bff"
     },
     {
       "path": "modern/apps/api/lib/idempotent-webhook.ts",
@@ -7212,7 +7243,7 @@
     },
     {
       "path": "modern/apps/app/__tests__/workspace-route-states.test.tsx",
-      "sha256": "df23095c41bea9dca6844cd25d09e3db009079878745016d6206179629979304"
+      "sha256": "88b4b62ee5a2a0b452a38b794989d05f84ce0f440bbc240e5b58742eb0de6e8c"
     },
     {
       "path": "modern/apps/app/app/(authenticated)/account/page.tsx",
@@ -7664,7 +7695,7 @@
     },
     {
       "path": "modern/apps/app/app/global-error.tsx",
-      "sha256": "95c18518bd67edc92d005af3083b753d6449674e488fc7ece47471034ea248d5"
+      "sha256": "4ad2326dc7b325ca7081dd5d4030d45c97fa4c41d79079fc550aaf3fe1905317"
     },
     {
       "path": "modern/apps/app/app/icon.png",
@@ -7676,7 +7707,7 @@
     },
     {
       "path": "modern/apps/app/app/layout.tsx",
-      "sha256": "1a46d2be4b21259d6f36cd0a83ff113a5a48cbdb83b0cd536dffa4103eb0e009"
+      "sha256": "52f5e92bdde382660507bdf473b52edc7605ed33ba5083fa805bfb93b428b4f4"
     },
     {
       "path": "modern/apps/app/app/opengraph-image.png",
@@ -7705,6 +7736,10 @@
     {
       "path": "modern/apps/app/lib/bounded-json-body.ts",
       "sha256": "8943d3512e6adc2ff4cb32cb8082fafcda1817e9f7863d8c4bd9dbe1e2fb9f1a"
+    },
+    {
+      "path": "modern/apps/app/lib/fonts.ts",
+      "sha256": "8523877c5888bf21fb59f0714734ad6e5f64f6fc414f075990e5160683350bff"
     },
     {
       "path": "modern/apps/app/liveblocks.config.ts",
@@ -8228,7 +8263,7 @@
     },
     {
       "path": "modern/apps/e2e/specs/modern-mobile-completion.spec.ts",
-      "sha256": "08f5cb1ac164c3467096ea16645c81c878eda4f92a1236d2c8793666dff779cd"
+      "sha256": "beaf7d92bfce626baecf0656e9b01ebf478177507a33496207ddc8b1ac6beda0"
     },
     {
       "path": "modern/apps/e2e/specs/modern-mobile-service-help.spec.ts",
@@ -8292,11 +8327,11 @@
     },
     {
       "path": "modern/apps/storybook/.storybook/preview-head.html",
-      "sha256": "cb7cbf2e93cc81ae314a2b745d75c1b05ca20518c30e9a6573930affc1c79bff"
+      "sha256": "7fc1e26b2f134a039a9daf520172cf048b0fa003502ac63d6c65a6e81276c2b0"
     },
     {
       "path": "modern/apps/storybook/.storybook/preview.tsx",
-      "sha256": "feabfdf42106381912976f62855b8e6f10e9d144b4689a6317a569179cde6116"
+      "sha256": "d49d53a1b729e14b1773fc68498f51940e546fd4ecd540db437fbaa32054cc73"
     },
     {
       "path": "modern/apps/storybook/README.md",
@@ -8596,11 +8631,11 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/collections/chinese-ev-hybrids/page.tsx",
-      "sha256": "f56ac5c27b74435fa0d93238edee40e612a963f6840fd8516007fc234b2020ec"
+      "sha256": "4b601af791a5b5b7980ab4cc2f5f7dbe299874f29745af5e5e4c5479e379592b"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/assisted-search-panel.tsx",
-      "sha256": "ec20291388eaa87df4863de5f068973a64823ec73fbdadd48edafe44d2130845"
+      "sha256": "9b968c973eb5aebe3b3af5003f025e779efacdf2e8fb0db128ba3bf7860f339a"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/category-marketplace-page.tsx",
@@ -8608,7 +8643,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/components/footer.tsx",
-      "sha256": "8f9160c0458e69b879074212525dbcc9787efd13a223a8aaa0a1d6dc2c130a0c"
+      "sha256": "63236a159ce52791823e83e4c31f6b3e3a623dd99b610c8303402b80152a6839"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/inventory-states.tsx",
@@ -8620,11 +8655,11 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-about-contact.tsx",
-      "sha256": "45d562f446d41b2d1673ea6927baa0aaed8c23e9abb317513c32af724c3266b9"
+      "sha256": "111413bb6d3d801eb9c60a5065598ff06a506402df736df7ced5c85892a280eb"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-content-hub.tsx",
-      "sha256": "956b7baff1916e3bd31d09f6b56048690d2dbd62514929f3ca2c182fc55e5bb1"
+      "sha256": "d46766bff263eea09594211f409e542c77fbcdd6dcbb6dbcdbc388b5a14b4353"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-dealer-quick-actions.tsx",
@@ -8636,19 +8671,19 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-financing-form.tsx",
-      "sha256": "ac404589f4505ca256d1ada4ce0382af6ee3da58326c626beedb6c8964ceccea"
+      "sha256": "539706f3311485faf76fb412f00825e41b3b3f286849599b21458a27a56e7031"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-financing-interceptor.tsx",
-      "sha256": "dc6615bbcf32fd6df6177c880a1ec4112309de8a7090dae7c795ca53104e81e5"
+      "sha256": "d87a91c7497904a17bb165ae0b0ebea2b80264d562f0b480c479e193ab1fb990"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-financing-policy.test.ts",
-      "sha256": "18df16aa648ecf5423680a53125a4ead0a748ed12455713bd7331a2cccbfc2a9"
+      "sha256": "cc90ddf1d956acefceedaa91c24245a4f38a70f096c9f981331c2dd2f6965eb9"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-financing-policy.ts",
-      "sha256": "1d29320214f7939801cd6c85ff250b1ee598abe8e1ff2a51e332859f0f4dd8c1"
+      "sha256": "1a9774d833719b9c60cea83fd8285278058ac4213f57b2230c5fadf0eea27d2e"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-form-draft.ts",
@@ -8660,19 +8695,19 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-sell-category-field.tsx",
-      "sha256": "ab1fb2e0cd396539a59abbd743b7eb81f906112c8247b49083ccb85e1b37584e"
+      "sha256": "043fc2e2b490cac616bf99e06023b68e38cb12dcd96f528e5409ec9b3131c921"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-sell-how-it-works-drawer.tsx",
-      "sha256": "a14d02061f497ed1931202982bbe20d72721f371d38529bdb086a05360edf387"
+      "sha256": "8b3ee809dba783d2d5ea6d47ad274e26e2cc247393ec9723f1de2316046c9569"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-sell-vehicle-details-drawer.tsx",
-      "sha256": "eb500099b67dde2ebe861e3558458ccabf52ec606e1d6aacc81db69cd0707cc9"
+      "sha256": "ca2200f6f17a7ef1b014379bba6fb67814a46fa70b63efb92789a620002bf7e9"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-sell-vehicle-experience.tsx",
-      "sha256": "60db5a8134701e054c94fcdef99c51e46a277247a21678d896a7b570d11c51aa"
+      "sha256": "8ad3b74520ef50632a458abad1806dd13fc6b2eb4984874d13d93a33db7afa50"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-sell-vehicle-hero.tsx",
@@ -8688,7 +8723,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-service-help-drawer.tsx",
-      "sha256": "000e3934ed817908826d65ecbe797adb7376c21e97f5c8807e293f5f18279edf"
+      "sha256": "83f658173c0e28f506ba8d7c6a4d280c96722bbc1f7604bc0f9c7d8076e19907"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-service-help.tsx",
@@ -8696,11 +8731,11 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-vehicle-taxonomy-fields.tsx",
-      "sha256": "ba88d8a58ca98d25b46d36b59e0b59049acaa249ad3bc8b21b4e2b0338d49e93"
+      "sha256": "20c9d9fad9b2a6ecb1f3fdc380f4560b8a9b430334f7ca6a99eb385cd662674d"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-vehicle-taxonomy-picker.tsx",
-      "sha256": "e09654bdcc52db0cd68c972a95c880f04eccd900c66b743179e3bf025323809a"
+      "sha256": "9df12fc79a1f0735ebb377e866cd53d7d25a6850247394a16c4e945f536ace75"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/mobile-vehicle-taxonomy-policy.test.ts",
@@ -8716,11 +8751,11 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/components/public-contact-fields.tsx",
-      "sha256": "aa58c6ebaadb53e5b958e342b8cbd7b461bbcfac4ef54111f4d3e52f4cad7dfb"
+      "sha256": "bb2f5a93d30ec2947208cc4427133ad979be0035f2e60ee8299ccde0838302c1"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/public-contact-unavailable.tsx",
-      "sha256": "c846fcb79c3b41a3fa23abf814be4fe5c18f804173e75dd4c8e53f3971ea16fb"
+      "sha256": "a81a8576200b9a3132113453d47d13897294a67a7a7a86da404130f1c727e9dc"
     },
     {
       "path": "modern/apps/web/app/[locale]/components/public-inventory-list.tsx",
@@ -8744,11 +8779,11 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/contact/page.tsx",
-      "sha256": "d035edad019543018ec9e2908a08a99bd83020854c87db34460bc4e99ac23270"
+      "sha256": "5642521710f547f30110fb17dc2506c9786f1261892d6f75c8b92aab628768d6"
     },
     {
       "path": "modern/apps/web/app/[locale]/desktop-header.css",
-      "sha256": "9bf81a32b905170d19f89a48bb0bf48cab0285bd82add1c3e8a9ee1e2b342b52"
+      "sha256": "609cb59d76fd3b2fe3e4b481a5930c6c2d072d761200bfed02ddffc0d6edaf83"
     },
     {
       "path": "modern/apps/web/app/[locale]/error.tsx",
@@ -8756,7 +8791,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/guides/[slug]/page.tsx",
-      "sha256": "427be91b3d3c8e4965a39dd742a5680b3a6fa56a39d073852e9b9d209aef79cb"
+      "sha256": "71fe50e64220e45569974cf9fd10836444b4c40b1ebecfecbec3f1e193d338a6"
     },
     {
       "path": "modern/apps/web/app/[locale]/guides/page.tsx",
@@ -8768,23 +8803,23 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/imports/components/blank-import-request-link.tsx",
-      "sha256": "5106287a513eafb5f823bf88a5b99bdf89dd551f32824f4236d3d804e2781746"
+      "sha256": "f419c4b179519297d40e31dc66d5ad845f0772e7ef7ffcc49d2dfd42d0a0f18a"
     },
     {
       "path": "modern/apps/web/app/[locale]/imports/components/external-import-listings.tsx",
-      "sha256": "4d64d999a8d80217c23c8ca8754af016883a68f8a36f98062015bff72f9301ce"
+      "sha256": "dae184377974b377a7c6b5fdb0c6f366b14bdcd3dfb4456e54b5f0a7d7ca150b"
     },
     {
       "path": "modern/apps/web/app/[locale]/imports/components/import-origin-field.tsx",
-      "sha256": "0a4b4b87c52db321a218d5deeebad6dfc1823655985a9fc7f0ae181d21efc242"
+      "sha256": "337ae1b0e9c03c273484d4ef35b5799baa873543a3b06c24cb338026ca0ede72"
     },
     {
       "path": "modern/apps/web/app/[locale]/imports/components/import-request-fields.tsx",
-      "sha256": "35661e11d364acb12479aae9e425188d22c353b6033acc8bb81a0370efbd654c"
+      "sha256": "4a7f4c809c433603a9abf5541332db459c2a7f40c9f9669964c1338d777af763"
     },
     {
       "path": "modern/apps/web/app/[locale]/imports/components/import-request-form.tsx",
-      "sha256": "775034d1fad3707438497f554b8b7c6cd87e38b61e61a013582c17553b4b0cc2"
+      "sha256": "b541fb1bec26e43dc1fde88ca9df4c9e8f794465a9df7fd25f41e4f5a5e9d396"
     },
     {
       "path": "modern/apps/web/app/[locale]/imports/components/import-request-policy.ts",
@@ -8792,7 +8827,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/imports/components/mobile-import-source-search.tsx",
-      "sha256": "6591db7b9599c55f8d5f5e21b5c487c80adb461f95b081ebc856f6e62c23fd09"
+      "sha256": "432f28f29579d983e1a8e56600f6060e5a535e4d41cb882f37cf16aaa27d04f7"
     },
     {
       "path": "modern/apps/web/app/[locale]/imports/page.tsx",
@@ -8800,7 +8835,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/layout.tsx",
-      "sha256": "c7acfd94c2aed28bd888d78e0b4a1fa7b912ae37da65b08291a7bdeb98f16d17"
+      "sha256": "adcf50b165dbbc7f6a04a5650f10c72aa6de25eb975af21d8393818446e00b28"
     },
     {
       "path": "modern/apps/web/app/[locale]/lease/lease-car-selector.tsx",
@@ -8808,7 +8843,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/lease/lease-desktop-controls.tsx",
-      "sha256": "f4cb56873394337ffe0285a803e75a654432d678bc8c0d13b9fa2f645f4c3487"
+      "sha256": "ffbe568479db880aea57f39181650958592de458fb757ebeb6ba99eb74e206ce"
     },
     {
       "path": "modern/apps/web/app/[locale]/lease/lease-finance-policy.test.ts",
@@ -8828,11 +8863,11 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/lease/lease-mobile-selection.tsx",
-      "sha256": "6b98b408ed13caebdff88a07a1f1cb13880a771d162e319f6cac23ee2c67a027"
+      "sha256": "15feb2e5cd67f5457d12d240f5f67ecd6eb21e6e448e0a3518057ba01e14d765"
     },
     {
       "path": "modern/apps/web/app/[locale]/lease/lease-selected-vehicle.tsx",
-      "sha256": "7b4307a9b4b65b9622767910a3b8fb254f0b3ea7d8e09df57d29ef3c2e1ba07b"
+      "sha256": "308304a06f37fc745792477744f239ab06231e791bcc7fad33d2f6961631d202"
     },
     {
       "path": "modern/apps/web/app/[locale]/lease/lease-vehicle-selector.tsx",
@@ -8844,7 +8879,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/lease/page.tsx",
-      "sha256": "3ade5a1adad776a6bf1bc8da22b20724cddbb26e83790bd8c75eac43f0688e1e"
+      "sha256": "a5be7baec30345df4a0f0312f776c9f900843c0111e5c65eb1ca4db16e29fb08"
     },
     {
       "path": "modern/apps/web/app/[locale]/legal/[slug]/page.tsx",
@@ -8876,7 +8911,7 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/listing/[slug]/contact/page.tsx",
-      "sha256": "fda3495861ad02f666bca9d8ff85a5c09c4b0bf9ca094853ffd907ade007ea94"
+      "sha256": "b42179196452b21345b7497905d979b3210ea58f32283a0dcecac6e7fbee6915"
     },
     {
       "path": "modern/apps/web/app/[locale]/listing/[slug]/loading.tsx",
@@ -8904,11 +8939,11 @@
     },
     {
       "path": "modern/apps/web/app/[locale]/sell/page.tsx",
-      "sha256": "b4fb68a9aceb767705d6ff1ae1f3b482b10a93930c9a4918eb698df297df2b97"
+      "sha256": "65d1d7e2aa06e3638629cf1d2ac89a6861a1419a46d54bb7a8a6a7ef20e9d929"
     },
     {
       "path": "modern/apps/web/app/[locale]/styles.css",
-      "sha256": "3fd1fcdbf0c436b5192fc92952b90ac7d87fd6c36916b1ed0b8a63cbb60db3c7"
+      "sha256": "ea8567758cd808055df20c9103fb862e8b761a4ebcef871e807a24bb8e46b607"
     },
     {
       "path": "modern/apps/web/app/[locale]/trucks/loading.tsx",
@@ -8936,7 +8971,7 @@
     },
     {
       "path": "modern/apps/web/app/global-error.tsx",
-      "sha256": "b9e177d3d43d68c5478083ef967c3b6af885ddf4329c7659dd25add71059626c"
+      "sha256": "3734f104a8105022c911bc9845f37aaf0d8730f94fa212273de203bd4a4d35dc"
     },
     {
       "path": "modern/apps/web/app/not-found.tsx",
@@ -8988,11 +9023,15 @@
     },
     {
       "path": "modern/apps/web/lib/financing-contact-payload.test.ts",
-      "sha256": "7c0cf3083a93420f31950d569accd45df9d1a80214c30d616ce42323b922d28a"
+      "sha256": "2a174f50aaa076a44218dace6a650b4faa49950b637e4940eba9115c7813a9a4"
     },
     {
       "path": "modern/apps/web/lib/financing-contact-payload.ts",
       "sha256": "0dabfa5fce74e4b5d35f5d76b29cfb43f5d95c9abbee34c086eedf3f55a1c5ab"
+    },
+    {
+      "path": "modern/apps/web/lib/fonts.ts",
+      "sha256": "8523877c5888bf21fb59f0714734ad6e5f64f6fc414f075990e5160683350bff"
     },
     {
       "path": "modern/apps/web/lib/public-app-url.test.ts",
@@ -9124,7 +9163,7 @@
     },
     {
       "path": "modern/apps/web/lib/public-marketplace-data.ts",
-      "sha256": "0bf65d9db5fc2a629831a43c4e023f21ef2668f64e540ba6d8b2f95b3c04063d"
+      "sha256": "5a6daca1dabca82449ccd4aea00e6c9e21499dc4fc8843a81025089d7915968e"
     },
     {
       "path": "modern/apps/web/lib/public-marketplace-pagination.test.ts",
@@ -9184,7 +9223,7 @@
     },
     {
       "path": "modern/apps/web/lib/public-support-submission.ts",
-      "sha256": "b5b906c1afdeb9ba3fa83301cd982fd359f64982b10d23ecdfa1d8e326e6558e"
+      "sha256": "03deffaa2402590eb6e026cbc5887da00bacf88125ac60dc23c2e663f7a07461"
     },
     {
       "path": "modern/apps/web/lib/public-url.ts",
@@ -9219,24 +9258,20 @@
       "sha256": "f3263582a2d32da57aae00a79577f52d99c6376cd1b8538c528a04e72130f9ea"
     },
     {
-      "path": "modern/apps/web/public/assets/brand/logo-on-dark.png",
-      "sha256": "4bbb409ac23cf0bbdb3fcc0f6922f5fe6315563289510f47e3b145fd002686dd"
-    },
-    {
-      "path": "modern/apps/web/public/assets/brand/logo-on-dark.webp",
-      "sha256": "a43a482bcde222e9592d1fb46ccf90a43bb37be736dd96f71cd988c4e39c52e1"
-    },
-    {
-      "path": "modern/apps/web/public/assets/brand/logo-on-light.png",
-      "sha256": "7a567741f9826140c2ebe95452de3c5ab3e23a1c12d26f02f79a0b85f98bfbfe"
-    },
-    {
-      "path": "modern/apps/web/public/assets/brand/logo-on-light.webp",
-      "sha256": "ef11767b156543369c674fe20372be3d1e1fc4df8bfa3e76324e065d0df16e55"
-    },
-    {
       "path": "modern/apps/web/public/day-night-contact-hero-v1.png",
       "sha256": "26b6abe939e77552e9bdc28ebca64a0a5aefd23130775258fba29cadc8fe535c"
+    },
+    {
+      "path": "modern/apps/web/public/dealer-brand/logo-on-accent.webp",
+      "sha256": "b2f769f663b9678e8ccc31fd67e84b360bf5552ce93e9ad5043a5b3e8710fb98"
+    },
+    {
+      "path": "modern/apps/web/public/dealer-brand/logo-on-dark.webp",
+      "sha256": "6df2c14c2f1e64b8544c96cd363c70a38530315cb080775a922386c446a7a23d"
+    },
+    {
+      "path": "modern/apps/web/public/dealer-brand/logo-on-light.webp",
+      "sha256": "0a413af3e8835f255e604a0e4e2d2ab2c10d66f722beb96d078d18502e6b6bfb"
     },
     {
       "path": "modern/apps/web/public/dealer/inventory-1.webp",
@@ -9588,7 +9623,7 @@
     },
     {
       "path": "modern/apps/web/public/lead-logo.png",
-      "sha256": "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889"
+      "sha256": "c542eea5a7903271e47547270114178293db7b574b1b0f4be093e6ae79f6d3ff"
     },
     {
       "path": "modern/apps/web/public/lead-logo.svg",
@@ -9753,6 +9788,10 @@
     {
       "path": "modern/docs/MOBILE_DRAWER_CONTRACT.md",
       "sha256": "82a6a57dfe63d71952909ecfca67708d3234a36f79be50214bca85899a33c930"
+    },
+    {
+      "path": "modern/docs/QA.md",
+      "sha256": "bf635fca68c65848aac6a773bf6fee6cb2ec65a318b2ae6d79ee9d8082923ebf"
     },
     {
       "path": "modern/docs/README.md",
@@ -9956,11 +9995,15 @@
     },
     {
       "path": "modern/docs/refactor/README.md",
-      "sha256": "8252882e70bed7fdebf4f39653ab8f2d1e708c778403cf325019a53cdb917d20"
+      "sha256": "16013f20678f9e1fe0f68453e7ebf52c93103802854fcfb74d891d13f9f129f5"
     },
     {
       "path": "modern/docs/refactor/TARGET_ARCHITECTURE.md",
       "sha256": "ee3d51123c0d19588ff7dce38ec58b9fae9d75b46bf5d34d05df7111cd0b3af4"
+    },
+    {
+      "path": "modern/docs/refactor/TYPOGRAPHY-TASKS.md",
+      "sha256": "4a46c55eefad10bd6e7204db5932c73b5e41427f305689d46a27b90b1d0a8b57"
     },
     {
       "path": "modern/docs/roadmap.md",
@@ -10851,20 +10894,20 @@
       "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
     },
     {
-      "path": "modern/packages/design-system/lib/fonts.ts",
-      "sha256": "9e5bd228c6455496d5d9165147b121101475d3b805c34ec2722a0662aa636bbd"
+      "path": "modern/packages/design-system/lib/typography.ts",
+      "sha256": "986a9a5f8e345f963e0cd05de56471a488868cdf9cd8dc98c89687919af93149"
     },
     {
-      "path": "modern/packages/design-system/lib/public-fonts.ts",
-      "sha256": "7d87e0104c0aed090ea213b0ebce4381d3dd8bd6e254329ce9ba593a791e5101"
+      "path": "modern/packages/design-system/lib/utils.test.ts",
+      "sha256": "857478b78c4cf8f0e232bb59b57f02976e8cdaa94b5c9c1e38e61d59d540ac14"
     },
     {
       "path": "modern/packages/design-system/lib/utils.ts",
-      "sha256": "8e03ff0d825f2f22c5649b5e7963369c8139f8bd8c06566b03a73d5787546a1b"
+      "sha256": "6f336f63ea4d53b34132e178548750f54e20438bce2574819c5a508c82ed5155"
     },
     {
       "path": "modern/packages/design-system/package.json",
-      "sha256": "80f683e94b658c6e423f90d531f0c423a73dcb8d098de95a3bce97e46077f98d"
+      "sha256": "982092055603adcfd72119d5af9d92a82074d59796f4fad92ad7795cdbb4a5b2"
     },
     {
       "path": "modern/packages/design-system/postcss.config.mjs",
@@ -10876,7 +10919,7 @@
     },
     {
       "path": "modern/packages/design-system/styles/globals.css",
-      "sha256": "3ea886cab9d336e0cf6f378fac883d6346b3d437f1d7060528c29c0be8fb4928"
+      "sha256": "831e2d41da95069cc10b42e690e9ffa1acbb0a1580e900844c3406842a8d09a7"
     },
     {
       "path": "modern/packages/design-system/tsconfig.json",
@@ -11068,11 +11111,11 @@
     },
     {
       "path": "modern/packages/marketplace-domain/testing/dealer-profile.json",
-      "sha256": "3d7736b5765c696fbe6d2e19c9d8b0752d6ab93e8e8397a96740cb911beddceb"
+      "sha256": "57c0ea0fd8b92386c8f304f89a46910028bc5f39c4018c298d1d1d630204947c"
     },
     {
       "path": "modern/packages/marketplace-domain/testing/mock-data.ts",
-      "sha256": "8173d2a4e7ef074aefbfe4178f1f09313fda3698e92939d3d3c0a7302f620f28"
+      "sha256": "5ff777ff395ca84caecc7abe62bc6ea4ff5cf2bac364cbb3f76e4945514f86e5"
     },
     {
       "path": "modern/packages/marketplace-domain/tsconfig.json",
@@ -11100,7 +11143,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-bottom-nav.tsx",
-      "sha256": "75c9dd626b169e0c656d530f4fec419764fa85bbfd94f17ea068f340cccc1c71"
+      "sha256": "8f4e6d484d57f2a2107c90289a178b61a5c9fb029c46d89edf887a0a21a35ba0"
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-desktop-header.tsx",
@@ -11112,7 +11155,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
-      "sha256": "404e270230d1e89fbf81b23fd831e48e7455903814f2b11fdc7e9a3f094467ca"
+      "sha256": "c844bd8b8a7b27cf82925904022f798221e825ce9218eeeaec8089c1a6ac60af"
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-mobile-header-icon.tsx",
@@ -11124,7 +11167,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-social-links.tsx",
-      "sha256": "77e6d685da5c7f05f6c5fa960104e1cc5010a099cd137de1728fcbdc25a935ba"
+      "sha256": "0bc40716cb7fe0e109459de331eae629bb490c0abbb1fb02125ffd4b888ea96d"
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-ui-icon.tsx",
@@ -11132,7 +11175,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-vehicle-facts.tsx",
-      "sha256": "7cfe5ef1724fae74c33d38b1f0d00e270fd5a5300ed066eb0079d9b95880fa59"
+      "sha256": "2637faedb80a30c425f16cace25af888b76c973aff114f229a94c4a5ea34a8be"
     },
     {
       "path": "modern/packages/marketplace-ui/components/desktop-discovery-bar.tsx",
@@ -11140,11 +11183,11 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/desktop-discovery-search.tsx",
-      "sha256": "a5d0aa3351c471bb84c0623d196eb84d8b6fc2d4f6c2b680fe2cc96a96d986a8"
+      "sha256": "3bade050b12a4d05ba443e95f9e76670010fb24ae3b6197bf10f3787760f5ba7"
     },
     {
       "path": "modern/packages/marketplace-ui/components/desktop-filter-controls.tsx",
-      "sha256": "1b37c46ee37821947e4a2ed4eb295cbbe4277112dbd7943aa85ec087ec49c5f9"
+      "sha256": "ace8fd4938acd10caac1933d3dd1546caa50bbfbd63f7b724ec6d1acacb9ea66"
     },
     {
       "path": "modern/packages/marketplace-ui/components/desktop-filter-rail-ranges.tsx",
@@ -11152,11 +11195,11 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/desktop-lead-services.tsx",
-      "sha256": "0e19d2be952c2536259d2efbf938bd5bfec8a8eca1bcf827dcd2c40db2b48575"
+      "sha256": "d3c37ed78ff7a5a581ba414a423b8ef15591f973c89279b4f2d558b0bf6bbd3b"
     },
     {
       "path": "modern/packages/marketplace-ui/components/desktop-marketplace-controls.tsx",
-      "sha256": "d744683c6278e4642766e5909dcb3462f20a0fdec7b2c15c35a476562ef3f589"
+      "sha256": "20a464ef2bddd2dad3d40f449e87b4d1b5b4f23a11302b2b1cc90b16148f7a54"
     },
     {
       "path": "modern/packages/marketplace-ui/components/desktop-quick-filters.tsx",
@@ -11164,7 +11207,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/desktop-search-assistant.tsx",
-      "sha256": "b6351fa4c3029905e8936823eab47800de187720bb7706b26e8691b7be609a69"
+      "sha256": "c0853c841b712f18d36266369d39fab6cc373e7d6e0eb5de2dd3feb6b3a040bd"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-actions.tsx",
@@ -11176,11 +11219,11 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-detail-content.tsx",
-      "sha256": "d4880e386b35c3ab539f2d913fe0ad029cb3388e00aab195d5a993627d826473"
+      "sha256": "b6535f802999e78ed7708e51ef2922b341abdc5c8930adfc5243c6e2443896a7"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-detail-summary.tsx",
-      "sha256": "aaf9477c84d1298a065162810a48f1fbafa1a3d95e8f6750555d21d1d4334bb7"
+      "sha256": "64873791b653a6f84381b73eaa8a5f7bd6de5a039fe473da46b169ac80e4ae1d"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-detail.tsx",
@@ -11188,11 +11231,11 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-details-tabs.tsx",
-      "sha256": "5950a58460b19a9fe31732a2b214ca40a9e6ea982826c8f9697d0af9c73ea484"
+      "sha256": "e9a76ea0752cebd5bced56cf95ae587009176c6857364e0aadec6d8c04ac8702"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-equipment.tsx",
-      "sha256": "c987cdbf437761572b8a4b7f110f6681360702e4aa03fc3d916ccc72cfc5df0a"
+      "sha256": "fbf551743df55e049262d5c5ed19c12061bdb004c7ce2b8df96a4fa76e96b777"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-gallery-lightbox.tsx",
@@ -11200,11 +11243,11 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-gallery-primitives.tsx",
-      "sha256": "2e2537d064b4805e9504520ed864e39cae4d9ad4e84f2d4b63c66ed3dd711751"
+      "sha256": "02d57e25e33cbd0b5f46eeb4f1faf1a40720b3445561815dca9f97a300f6c76c"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-gallery.tsx",
-      "sha256": "b3d539361777371b462bf22fe2e9bbc347d712a875e8f4dc33854b9876493a53"
+      "sha256": "bd5109fdea3868abefaef3ab41c68547def8fd96ceb37ab565cb1e5d0a3015fc"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-location.tsx",
@@ -11212,23 +11255,23 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-price-intelligence.tsx",
-      "sha256": "d4ea76bf1683fdf3dfec6412d5e8f27b9223c509a4d61ea2a5c1db5225578d4f"
+      "sha256": "a19dbbb5a7e4059d89d8e2baa2bfd2be847b2b09f495ba2e224ff9b7c975ff4b"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-public-truth.tsx",
-      "sha256": "af31813e2a8050d493f9d7c399f74bcbde2ca916c66f536de323684cf43be6f8"
+      "sha256": "8eee44fac08cf221f65d50c41d4a24c9daf02b91879d61195f2841fb1c3aa693"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-specs.tsx",
-      "sha256": "73f7f677c6551357cce77fb6e62a3aaf7dc9d876d5d9e29efd7850fc3208f2b3"
+      "sha256": "3b35a276d80817a23d3fad7dcec16b113b1815f4e9c34b8b2aba95b0331d122a"
     },
     {
       "path": "modern/packages/marketplace-ui/components/listing-trust-panel.tsx",
-      "sha256": "a5971db4db67c2ddb4d228d5b943dbb838913c8b390437c639b9bd7841019a48"
+      "sha256": "d46875c9642a0a4daa8695d5401ddce0a6788836a4ff49faba6e8bf0f923afcd"
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-category-options.tsx",
-      "sha256": "b9aeb7cb720d340432d2fe400bbc1c356d3be9e74da5d82e2f2489b67d7ec63e"
+      "sha256": "b0312388d3e392f74bc84dac4b0161c76574464243c6f582f900d37f5467cc49"
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-category-picker.tsx",
@@ -11236,7 +11279,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-discovery-filter-body.tsx",
-      "sha256": "4d386b0379e5a831832c78eff7989ef0f7e964033dec624a0637747e672440c5"
+      "sha256": "7175593bb8ce08ea0813cb7cef63ecd65e4ada3f25f70b7aaf8b079f809eb6f3"
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-filter-options.tsx",
@@ -11252,15 +11295,15 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-masthead.tsx",
-      "sha256": "4d93884883c486ecb17403418f1773e038dfcc75e02141b37b04130cabc8ea35"
+      "sha256": "714aba0f2ba9a52223467fc37be45326b40bbf7019b2d44b8c285c3faaf7f208"
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-model-picker-options.tsx",
-      "sha256": "dab389c734566ed7fb77fe491b9ec060397d3224ae5f0d5f50666d251708a8ef"
+      "sha256": "57502bb9ba53130c3d23ef7c8ece69e110266c4333bf627b053fd2a53402adda"
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-model-picker.tsx",
-      "sha256": "952a7b8fe6fcb3205caa1d985f91d6bfea77b519387b13234d9e2596bd9df00d"
+      "sha256": "1926b733f3c552054773379907ff76db2b8dfc163bcd208184c76dfd71b26ba8"
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-pagination.tsx",
@@ -11272,11 +11315,11 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-results-empty-state.tsx",
-      "sha256": "16fb289eb9b8411af640480c78a13adffaaa9b1d555e44b29b271bdb64b23abd"
+      "sha256": "a885ebf8d1e0a8322de5631f70dcf7d422dcecc0f6e62663a260dc063757d091"
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-results.tsx",
-      "sha256": "c47246a21981c64a4d2d01c62e329481e4e2f05c069796cdafc9d20b50dc6ba0"
+      "sha256": "04a2d7fe8ac318c42ce1e28d749b04719706b8f315f4d071dca60280532c0b46"
     },
     {
       "path": "modern/packages/marketplace-ui/components/marketplace-shell.tsx",
@@ -11292,11 +11335,11 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/mobile-dealer-discovery-header.tsx",
-      "sha256": "7c167015eb135ed820efa7c223a02f9f365129b4c44a9155b64eac415bfd3529"
+      "sha256": "94d36bd78c3498b1f244461965d6f9ef2b261d61fe79a4aa24bdb5dd5b3ae2db"
     },
     {
       "path": "modern/packages/marketplace-ui/components/mobile-inventory-search.tsx",
-      "sha256": "06cf610af4ae5e9466b2da4f00b25a0c83af75ba813c56ef863c4597362ec17b"
+      "sha256": "69728cec4f1ba254f4030fc2e8ee755e595675716ca89990811811facb5b01d7"
     },
     {
       "path": "modern/packages/marketplace-ui/components/mobile-marketplace-drawer.ts",
@@ -11304,7 +11347,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/mobile-marketplace-overlay.tsx",
-      "sha256": "cdd09630d5833289b8d3866df2b69dad79689fd13c5b0b1e709404158527dcd7"
+      "sha256": "7ef6ace47f43aefd50dbca60ae54b2b2e2b81891870cf9993b6797fc192c74d3"
     },
     {
       "path": "modern/packages/marketplace-ui/components/mobile-pill-rail.tsx",
@@ -11312,15 +11355,15 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/numeric-range-filter.tsx",
-      "sha256": "d2d31aeba85424e2ec5edad7ee8436f553515a3d40f353612e4c24e04a22f571"
+      "sha256": "51d13502a9dc967aa9706237ad2612c25239ee3db94402c058550c92f63c9e1e"
     },
     {
       "path": "modern/packages/marketplace-ui/components/organization-directory-card-layouts.tsx",
-      "sha256": "d51e0d7d8a8e6363548f3479bc086b478120f721c334d68e26537018e0b9cead"
+      "sha256": "a7a690a301fa27730769c0aa50eabe8d9ace3c419b226cd14219fe5b3e01e5b6"
     },
     {
       "path": "modern/packages/marketplace-ui/components/organization-directory-card-primitives.tsx",
-      "sha256": "cd26cb82dd7e50a81b8cfe4a185f13baf83b720282962aca887d23484df02b28"
+      "sha256": "684b819030204d30a28bff0f68ec414d610f7ed144662cd90d379fc26f191aac"
     },
     {
       "path": "modern/packages/marketplace-ui/components/organization-directory-card.tsx",
@@ -11328,11 +11371,11 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/organization-directory-rail.tsx",
-      "sha256": "74b62c88fddac731ff9d377c2718f05825fd79643dbe57621c049f672598afb2"
+      "sha256": "e1237d9f620d2c43761040357bc4dd239b54a4f049ea2aa766513399b3c3ea6c"
     },
     {
       "path": "modern/packages/marketplace-ui/components/related-listing-card.tsx",
-      "sha256": "0c9c89beadbc799578db04f3ec580d1a613ae8da14b5472ac2e01e6a6a87c2dd"
+      "sha256": "36d095eb7b3d2494b3da98ca2f784594832370a20fc72711a505f938548b1328"
     },
     {
       "path": "modern/packages/marketplace-ui/components/seller-contact-panel.tsx",
@@ -11340,19 +11383,19 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/seller-identity-card.tsx",
-      "sha256": "6eb7e54095c2a5c31f6256f0f6b6067f9d879aad49ecd2b0a03b6f2844fd91f2"
+      "sha256": "b4eebd15db36640cf7dd79eac0de72293ce2ffbbb0d92a7de474cfd71ec79855"
     },
     {
       "path": "modern/packages/marketplace-ui/components/seller-transaction-card.tsx",
-      "sha256": "986236a735237dfe101b85febfe581a93d5908608333d035f7c26a302fb7de44"
+      "sha256": "ef2abf4ed122a7fae120b84f5e32480df8fe88bece3d1ceab6067c9cbdd64f88"
     },
     {
       "path": "modern/packages/marketplace-ui/components/vehicle-card-content.tsx",
-      "sha256": "cee21a59916ce29a57cc364608afbe39a7e2f4f03d91493da81f162b9fe05217"
+      "sha256": "958c01f52e148461a45a9bf279ed74da946a0d381830b4fa7125317e692126e1"
     },
     {
       "path": "modern/packages/marketplace-ui/components/vehicle-card.tsx",
-      "sha256": "e4a55854515c32bf29fde8a66d8fdb5c9e3489fe426f23a072074f5803004d6d"
+      "sha256": "6e09ac69a9c21a042100f8fc2c1c40eb349ea55041bcb1544561310206d7b0d9"
     },
     {
       "path": "modern/packages/marketplace-ui/components/vehicle-category-artwork.tsx",
@@ -11516,7 +11559,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/lib/mobile-form-control.ts",
-      "sha256": "feb380e33812c25d56ec2884e59dcad4d51ce646d70935b62f01c4ebaef20c18"
+      "sha256": "7426decef3fed2715affff8ea60f01fbc4b7bf7391a81c769044d099228f296e"
     },
     {
       "path": "modern/packages/marketplace-ui/lib/mobile-header-icon-action.ts",
@@ -11524,7 +11567,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/lib/mobile-quick-pill.ts",
-      "sha256": "ca1d8ee585c7820f076ca703e301c2d74ec4f6888d15ae5e3a8427a8ed8abccc"
+      "sha256": "21a71138072847707ce017624c53ca9f5df80f06c317c1eadeda0c58c75ea004"
     },
     {
       "path": "modern/packages/marketplace-ui/lib/mobile-vehicle-card-layout.ts",
@@ -11684,7 +11727,7 @@
     },
     {
       "path": "modern/packages/marketplace/lead-site.ts",
-      "sha256": "09578342d0dff776b894a8cb28c86b6d6b14e2708f25b878737f429b8f52f910"
+      "sha256": "5bc5ca1c98609be85416ee05a6af1b8468161e2db1baa22f878220ac6c6fefe9"
     },
     {
       "path": "modern/packages/marketplace/listing-core.test.ts",
@@ -12084,7 +12127,7 @@
     },
     {
       "path": "modern/pnpm-lock.yaml",
-      "sha256": "64bfc278d0555de3238b5837302a101280740209f5884039d607dbc721c5db84"
+      "sha256": "635e29a144bb7824a6fae6a547ead5acdaec3fca234f78c2864fe7735a9914f8"
     },
     {
       "path": "modern/pnpm-workspace.yaml",

@@ -160,7 +160,7 @@
 			<div class="divider mb-40"></div>
 			<div class="mb-40">
 				<div class="listing-details--contact-dealer mb-20">
-					<img src={daynightSite.logoLight} alt={daynightSite.shortName} />
+					<img src={daynightSite.logoDark} alt={daynightSite.shortName} />
 					<div class="content">
 						<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-4">
 							{daynightSite.shortName}

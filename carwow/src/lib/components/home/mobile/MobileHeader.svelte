@@ -15,7 +15,7 @@
 		href={resolve('/')}
 		aria-label={`${daynightSite.shortName} home`}
 	>
-		<img src={resolve(daynightSite.logoLight)} alt={daynightSite.shortName} />
+		<img src={resolve(banner ? daynightSite.logoLight : daynightSite.logoDark)} alt={daynightSite.shortName} />
 	</a>
 
 	<nav class="mobile-home-header__actions" aria-label="Бързи действия">

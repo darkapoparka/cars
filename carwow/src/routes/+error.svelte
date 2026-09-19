@@ -24,7 +24,7 @@
 <main id="main-content" class="daynight-error" aria-labelledby="daynight-error-title">
 	<div class="daynight-error__card">
 		<a class="daynight-error__brand" href={resolve('/')}>
-			<img src={resolve(daynightSite.logoLight)} alt={`${daynightSite.shortName}`} />
+			<img src={resolve(daynightSite.logoDark)} alt={`${daynightSite.shortName}`} />
 		</a>
 		<span class="daynight-error__code">{page.status}</span>
 		<h1 id="daynight-error-title">{heading}</h1>

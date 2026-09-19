@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IS%20AUTO%20Varna%2C%20%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%BF%D0%B0%D1%80%D0%BA%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D1%81%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%20B6%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=IS%20AUTO%20Varna%2C%20%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%BF%D0%B0%D1%80%D0%BA%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D1%81%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%20B6%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
     "accent": "#d71920",
-    "logo": "/assets/brand/logo-on-light.webp",
-    "logoLight": "/assets/brand/logo-on-dark.webp",
-    "logoDark": "/assets/brand/logo-on-light.webp",
+    "logo": "/dealer-brand/logo-on-light.webp",
+    "logoLight": "/dealer-brand/logo-on-light.webp",
+    "logoDark": "/dealer-brand/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "https://www.facebook.com/isauto1",
       "instagram": "https://www.instagram.com/is__auto/?hl=bg",
@@ -54,7 +54,7 @@
       }
     ],
     "inventoryNotice": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
-    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
     "observedAt": "2026-09-16",
     "coordinates": null,
     "raw": {
@@ -79,9 +79,9 @@
       "inventoryUrl": "https://isautovarna.mobile.bg/",
       "contactUrl": "https://www.isauto.net/contacts",
       "accent": "#d71920",
-      "logo": "/assets/brand/logo-on-light.webp",
-      "logoLight": "/assets/brand/logo-on-dark.webp",
-      "logoDark": "/assets/brand/logo-on-light.webp",
+      "logo": "/dealer/logo-dark.png",
+      "logoLight": "/dealer/logo-dark.png",
+      "logoDark": "/dealer/logo-light.png",
       "socialLinks": {
         "instagram": "https://www.instagram.com/is__auto/?hl=bg",
         "facebook": "https://www.facebook.com/isauto1"
@@ -104,15 +104,7 @@
         }
       ],
       "inventoryNotice": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
-      "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
-      "workingLogoPath": "dealer/logo-dark.png",
-      "branding": {
-        "logoOnLight": "/assets/brand/logo-on-light.webp",
-        "logoOnDark": "/assets/brand/logo-on-dark.webp",
-        "rasterPolicy": "transparent-png-webp-surface-pair-v1"
-      },
-      "logoOnLight": "/assets/brand/logo-on-light.webp",
-      "logoOnDark": "/assets/brand/logo-on-dark.webp"
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
     }
   },
   "listings": [
@@ -496,9 +488,9 @@
       "inventoryUrl": "https://isautovarna.mobile.bg/",
       "contactUrl": "https://www.isauto.net/contacts",
       "accent": "#d71920",
-      "logo": "/assets/brand/logo-on-light.webp",
-      "logoLight": "/assets/brand/logo-on-dark.webp",
-      "logoDark": "/assets/brand/logo-on-light.webp",
+      "logo": "/dealer/logo-dark.png",
+      "logoLight": "/dealer/logo-dark.png",
+      "logoDark": "/dealer/logo-light.png",
       "socialLinks": {
         "instagram": "https://www.instagram.com/is__auto/?hl=bg",
         "facebook": "https://www.facebook.com/isauto1"
@@ -521,15 +513,7 @@
         }
       ],
       "inventoryNotice": "Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
-      "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
-      "workingLogoPath": "dealer/logo-dark.png",
-      "branding": {
-        "logoOnLight": "/assets/brand/logo-on-light.webp",
-        "logoOnDark": "/assets/brand/logo-on-dark.webp",
-        "rasterPolicy": "transparent-png-webp-surface-pair-v1"
-      },
-      "logoOnLight": "/assets/brand/logo-on-light.webp",
-      "logoOnDark": "/assets/brand/logo-on-dark.webp"
+      "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
     },
     "vehicles": [
       {
@@ -678,5 +662,31 @@
       }
     ]
   },
-  "sourceCount": 6
+  "sourceCount": 6,
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealer": "isauto-varna",
+    "decision": "REFINE EXISTING IDENTITY",
+    "source": "Canonical Cars clients/isauto-varna/auto-best/static/dealer/logo-dark.png; existing raster identity retained",
+    "originalSha256": "a53049644f4d1689ee04f601700b014a0cddbfb66c22e8b7cf116d6f28443831",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "sha256": "0a413af3e8835f255e604a0e4e2d2ab2c10d66f722beb96d078d18502e6b6bfb",
+        "bytes": 8460
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "sha256": "6df2c14c2f1e64b8544c96cd363c70a38530315cb080775a922386c446a7a23d",
+        "bytes": 8390
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "sha256": "b2f769f663b9678e8ccc31fd67e84b360bf5552ce93e9ad5043a5b3e8710fb98",
+        "bytes": 5232
+      }
+    },
+    "preparedAt": "2026-09-19T04:58:51.741Z",
+    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+  }
 }

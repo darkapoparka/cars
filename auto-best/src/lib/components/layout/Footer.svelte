@@ -57,7 +57,7 @@
 <footer id="dn-site-footer" {@attach observeFooter} class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
-      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
+      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logoOnDark} alt={brand.name} width="220" height="58" /></a>
       <span class="dn-footer__tagline">Автомобили · Внос · Лизинг</span>
       <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
     </div>

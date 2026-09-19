@@ -179,7 +179,7 @@
 			aria-label={`Всички марки, ${brandCountLabel(total)}`}
 		>
 			<span class="mh-brandcard__icon mh-brandcard__icon--all" aria-hidden="true">
-				<img src={resolve(daynightSite.logoLight)} alt="" loading="lazy" />
+				<img src={resolve(daynightSite.logoDark)} alt="" loading="lazy" />
 			</span>
 			<span class="mh-brandcard__copy">
 				<span class="mh-brandcard__name">Всички</span>
