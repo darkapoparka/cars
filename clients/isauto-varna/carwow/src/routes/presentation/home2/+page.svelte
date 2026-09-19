@@ -100,7 +100,7 @@
 	<title>IS AUTO Marketplace | Home2</title>
 	<meta
 		name="description"
-		content="Browse, buy, sell and review verified cars from IS AUTO София."
+		content="Browse, buy, sell and review verified cars from IS AUTO Варна."
 	/>
 	<meta name="robots" content="noindex,nofollow" />
 </svelte:head>

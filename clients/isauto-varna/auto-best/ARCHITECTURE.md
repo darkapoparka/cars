@@ -1,6 +1,6 @@
 # Application architecture
 
-IS AUTO is one native SvelteKit application. Svelte owns the rendered interface; TypeScript modules provide its content and domain operations. There is no CMS, database, server-side enquiry delivery, or separate client page-building runtime.
+Auto Best is one native SvelteKit application. Svelte owns the rendered interface; TypeScript modules provide its content and domain operations. There is no CMS, database, server-side enquiry delivery, or separate client page-building runtime.
 
 ## Rendering and application shell
 

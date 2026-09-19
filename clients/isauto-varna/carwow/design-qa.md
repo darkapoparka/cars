@@ -19,7 +19,7 @@
 - Replaced the generic dark banner with a realistic showroom/forecourt image so the first viewport feels more like a real reseller site.
 - Added transparent foreground SUV and wagon cutouts so the cars point attention toward the buy/search box instead of sitting as one centered placeholder image.
 - Removed the fake showroom text/sign overlay after visual review; the building image now stays clean with no generated or CSS-applied branding.
-- Changed the hero headline to use the actual light DayNight wordmark asset, with accessible `IS AUTO VARNA` text, a compact `София, България` map-pin line above, and buyer-useful support text below.
+- Changed the hero headline to use the actual light DayNight wordmark asset, with accessible `DAY NIGHT AUTO GROUP` text, a compact `София, България` map-pin line above, and buyer-useful support text below.
 - Removed the old badge/trust chips and kept the hero focused on the headline, cars, and search action.
 - Kept the existing search controls and submit flow intact, with the search card restyled as a compact translucent DayNight-blue dealer search module centered between the two cars.
 - Let the header bands and desktop header content use the full viewport width with consistent side padding, so the logo and action buttons sit closer to the real page edges on wide screens.

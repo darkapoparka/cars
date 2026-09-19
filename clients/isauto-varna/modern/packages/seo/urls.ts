@@ -47,7 +47,7 @@ const parseHttpUrl = (value: string | URL): URL => {
   const url = value instanceof URL ? new URL(value) : new URL(value);
 
   if (url.protocol !== "http:" && url.protocol !== "https:") {
-    throw new TypeError("The IS AUTO canonical base URL must use HTTP(S).");
+    throw new TypeError("The Day & Night canonical base URL must use HTTP(S).");
   }
 
   return url;

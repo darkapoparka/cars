@@ -1,17 +1,17 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
-  import { page } from '$app/state';
   import type { Attachment } from 'svelte/attachments';
   import { trapDialogTab } from '$lib/ui/overlay';
   import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
   import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
-  let { closeMobile, attachMobileMenu, attachMobileCloseButton, listingHeader }: {
+  import type { HeaderPresentation } from '$data/shell';
+  let { closeMobile, attachMobileMenu, attachMobileCloseButton, active }: {
     closeMobile: (restoreFocus?: boolean) => Promise<void>;
     attachMobileMenu: Attachment<HTMLDialogElement>;
     attachMobileCloseButton: Attachment<HTMLButtonElement>;
-    listingHeader: boolean;
+    active: HeaderPresentation['mobileMenu'];
   } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 </script>
@@ -43,13 +43,14 @@
           <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)} aria-label={`Локация: ${brand.address}`}><MobileNavIcon name="location" size={20} /><span>Локация</span></a>
         </div>
         <nav aria-label="Мобилна навигация">
-          <a href={resolve('/listing-grid')} aria-current={listingHeader ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/blog')} aria-current={page.url.pathname.startsWith('/blog') ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/listing-grid')} aria-current={active.listing ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/blog')} aria-current={active.blog ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/about-us')} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
           <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
         </nav>
         <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
           <a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>Instagram</span></a>
+          <a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>
           <a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>
         </div>
         <p class="dn-mobile-menu__address">{brand.addressLine}</p>
@@ -75,7 +76,7 @@
   a { text-decoration: none; }
   a:hover { background: var(--dn-line); }
   :is(a, button):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
-  .dn-mobile-menu__social { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
+  .dn-mobile-menu__social { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
   .dn-mobile-menu__social a { display: grid; justify-items: center; align-content: center; gap: var(--dn-space-1); min-height: var(--dn-control-hit-height); padding: var(--dn-space-2) var(--dn-space-half); border-radius: var(--dn-radius-sm); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-mobile-menu__address { margin: var(--dn-space-4) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); text-align: center; }
 </style>

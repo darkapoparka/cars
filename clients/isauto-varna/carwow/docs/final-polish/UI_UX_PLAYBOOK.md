@@ -1,4 +1,4 @@
-# IS AUTO Spartak — UI/UX Playbook
+# Day & Night Spartak — UI/UX Playbook
 
 ## Role of this document
 
@@ -6,7 +6,7 @@ This playbook describes the desired quality bar. It does **not** authorize broad
 
 ## Product hierarchy
 
-1. Recognize IS AUTO Varna and the relevant dealer/location context.
+1. Recognize Day & Night Auto Group and the relevant dealer/location context.
 2. Discover or search vehicles.
 3. Understand image, title, price, and core facts.
 4. Open a detail or valid commercial/contact action.
