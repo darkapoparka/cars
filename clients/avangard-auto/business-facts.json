@@ -33,5 +33,17 @@
   "capturedAt": "2026-09-06T21:51:19.990Z",
   "stockSampleCount": 16,
   "accent": "#252a30",
-  "logoLimitation": "Official Mobile.bg logo is 66x40; Instagram logo 100x100. Original assets preserved. Light/dark text wordmarks in headers are temporary typography, not an official logo reconstruction."
+  "logoLimitation": "Official Mobile.bg logo is 66x40; Instagram logo 100x100. Original assets preserved. Light/dark text wordmarks in headers are temporary typography, not an official logo reconstruction.",
+  "logo": "/assets/brand/logo-on-light.webp",
+  "workingLogoPath": "assets/avangard/wordmark.svg",
+  "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+  "branding": {
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+  },
+  "logoOnLight": "/assets/brand/logo-on-light.webp",
+  "logoOnDark": "/assets/brand/logo-on-dark.webp",
+  "logoLight": "/assets/brand/logo-on-dark.webp",
+  "logoDark": "/assets/brand/logo-on-light.webp"
 }
