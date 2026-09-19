@@ -13,7 +13,7 @@ export const daynightSite = {
   hoursLabel: 'Пн–Пт 09:00–18:00 · Сб 10:00–16:00',
   mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
   mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`, mapLabel: `${shortName}, ${location}`,
-  sourceInventory: 'https://isautovarna.mobile.bg/', logoLight: '/brand/isauto-logo-light.png', logoDark: '/brand/isauto-logo-dark.png',
+  sourceInventory: 'https://isautovarna.mobile.bg/', logoLight: '/assets/brand/logo-on-dark.webp', logoDark: '/assets/brand/logo-on-accent.webp',
   primaryCta: 'Виж наличните автомобили', sellCarCta: 'Продай или замени автомобил', accountCta: 'Свържи се с екипа', phoneCta: 'Обади се за оглед',
   heroTitle: 'IS AUTO VARNA', heroSubtitle: 'Подбрани автомобили и директен контакт с шоурума в Бизнес парк Варна',
   reviewCount: daynightReviewCount, reviewCountLabel: daynightReviewCountLabel, reviewLinkLabel: daynightReviewLinkLabel
