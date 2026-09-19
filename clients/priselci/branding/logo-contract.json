@@ -1,26 +1,34 @@
 {
   "schemaVersion": 1,
   "dealer": "priselci",
-  "decision": "REFINE EXISTING IDENTITY",
-  "source": "Canonical Cars clients/priselci/assets/wordmark.svg; existing temporary text wordmark restored as raster, not an official-logo claim",
-  "originalSha256": "d3d14b52f90c92a818012b807c3e0d52bbf2f2101109c94d904badef1de0c392",
+  "decision": "USE GENERATED CANDIDATE",
+  "source": "Six generated PNG replacements explicitly requested by the owner in this conversation",
+  "generationId": "6e201d66-b334-4bbe-96a2-d44ae8096c8e",
+  "originalSha256": "0aa61981e64f20dbad7ba007aeba8fd913c1a680b9aff25e9b42fee4b3552adf",
+  "preparedAt": "2026-09-19T14:18:13.348Z",
   "assets": {
     "onLight": {
-      "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "dc062d7f13a3606d03a335d30f88fe16d52b4d890d7102e5bc97355807a803f3",
-      "bytes": 11436
+      "publicPath": "/dealer-brand/logo-on-light-20260919.webp",
+      "sha256": "c6427ddf1f5c073cd1a54333a305364ca8c3814295c3f9ec52428d69dd8667b8",
+      "bytes": 166952,
+      "width": 1200,
+      "height": 340
     },
     "onDark": {
-      "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "b44d63f5bac4a530e570913fd393c212bc4b17694f8853a13aa3da281cd36789",
-      "bytes": 8956
+      "publicPath": "/dealer-brand/logo-on-dark-20260919.webp",
+      "sha256": "ac80f7e7b14ecc7ad9ec63bfaba962c2381071d5f7f7da823a95b2ec84db029d",
+      "bytes": 142686,
+      "width": 1200,
+      "height": 340
     },
     "onAccent": {
-      "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "2957c44c2cc4994361f6e5f3ee4b60d5a04e92917ab2c817cca068a71cd9f1ae",
-      "bytes": 7116
+      "publicPath": "/dealer-brand/logo-on-accent-20260919.webp",
+      "sha256": "66efdb3939a34cd9462ba176bab05baf057afce50239d03bd98cc8e74b3edec8",
+      "bytes": 117068,
+      "width": 1200,
+      "height": 340
     }
   },
-  "preparedAt": "2026-09-19T04:58:44.129Z",
-  "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+  "rules": "Use committed transparent raster assets for light/dark/accent surfaces. No CSS inversion, clipping, temporary text logo or header plaque. Preserve template layout, inventory and three designs plus Admin.",
+  "identityStatus": "Owner-requested demonstration identity, not a claim of official dealership approval"
 }

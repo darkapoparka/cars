@@ -54,10 +54,10 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/dealer-brand/logo-on-dark.webp",
-  logoOnLight: "/dealer-brand/logo-on-light.webp",
-  logoOnDark: "/dealer-brand/logo-on-dark.webp",
-  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
+  logoPath: "/dealer-brand/logo-on-dark-20260919.webp",
+  logoOnLight: "/dealer-brand/logo-on-light-20260919.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark-20260919.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent-20260919.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed",
   mapsUrl:
