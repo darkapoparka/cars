@@ -80,7 +80,6 @@ export const publicNavGroups = [
 	{
 		label: 'Услуги',
 		href: '/services',
-		matchPrefixes: ['/services'],
 		children: [
 			{ label: 'Дилърски услуги', href: '/services' },
 			{ label: 'Финансиране', href: '/financing' },
