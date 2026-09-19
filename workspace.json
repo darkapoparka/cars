@@ -54,5 +54,8 @@
   "registry": "docs/DEPLOYMENT-INVENTORY.json",
   "machinePaths": {
     "win32": "J:/cars"
+  },
+  "independentClientsRoot": {
+    "win32": "I:/cars-clients"
   }
 }

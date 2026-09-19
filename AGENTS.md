@@ -64,3 +64,7 @@ The shared admin is a synthetic browser-local demo, not the private agency CRM. 
 Architecture changes follow [PREVIEW-ARCHITECTURE](docs/PREVIEW-ARCHITECTURE.md): shared source with hybrid delivery. Do not equate one workspace or one repository with one deployment, and do not move existing dealer URLs to an unproven shared runtime. The September local reconciliation is recorded in [RECONCILIATION](docs/workspace/2026-09-19/RECONCILIATION.md); retained recovery copies are not editable masters.
 
 New-lead creation remains three actual template copies in one canonical dealer folder, not a new shared-hosting architecture. Use the checked-in new-client command: it enforces the canonical synchronized main checkout, discovers upstream development, and installs a verified trio atomically. Do not bypass its guards with manual clones. Completed template work includes release review/promotion for future leads; unfinished drafts are not released. Do not make the owner track SHAs or manually synchronize source.
+
+## Independent dealer pilot
+
+For an explicitly requested new independent dealer, use scripts/create-independent-dealer.mjs and docs/INDEPENDENT-DEALERS.md. Its dedicated repository is the sole editable source in the registered independentClientsRoot. Do not also add its application tree under Cars/clients or regenerate over it with the legacy exporter. Existing dealers keep their recorded legacy source ownership until deliberately reconciled.
