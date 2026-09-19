@@ -1,124 +1,79 @@
 <script lang="ts">
   import { preserveScrollOffset } from '$lib/ui/overlay';
-  import { onDestroy } from 'svelte';
-  let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
-  onDestroy(() => releaseOffset?.(false));
+  import { onDestroy, type Snippet } from 'svelte';
   import { resolve } from '$app/paths';
-  import { bodyLabel, filterListingVehicles, listingFilterOptions, listingModelsForMake, listingVehicles, type ListingFilters } from '$data/listing';
-  import type { VehicleEquipment } from '$data/inventory';
+  import {
+    bodyLabel,
+    filterListingVehicles,
+    listingFilterOptions,
+    listingModelsForMake,
+    listingVehicles,
+    type ListingFilters
+  } from '$data/listing';
+  import {
+    cleanListingFormData,
+    emptyListingDraft,
+    listingDraftFromFilters,
+    listingDraftHasFilters,
+    listingFacetSummary,
+    listingFiltersFromDraft,
+    withListingMake,
+    type ListingDraft,
+    type ListingFacetField
+  } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
   import QuickFilterSheet from './QuickFilterSheet.svelte';
   import type { Attachment } from 'svelte/attachments';
-  import type { Snippet } from 'svelte';
 
   let { filters, children }: { filters: ListingFilters; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]> } = $props();
-  let draftQuery = $state('');
-  let draftMake = $state('');
-  let draftModel = $state('');
-  let draftBody = $state('');
-  let draftCondition = $state<ListingFilters['condition']>('');
-  let draftFuel = $state('');
-  let draftTransmission = $state('');
-  let draftVersion = $state('');
-  let draftEquipment = $state<VehicleEquipment[]>([]);
-  let draftYearMin = $state('');
-  let draftYearMax = $state('');
-  let draftPriceMin = $state('');
-  let draftPriceMax = $state('');
-  let draftMileageMax = $state('');
-  let draftModelOptions = $derived(listingModelsForMake(draftMake));
-  let hasInvalidPriceRange = $derived(Boolean(draftPriceMin && draftPriceMax && Number(draftPriceMin) > Number(draftPriceMax)));
-  let hasInvalidYearRange = $derived(Boolean(draftYearMin && draftYearMax && Number(draftYearMin) > Number(draftYearMax)));
-  let hasInvalidRange = $derived(hasInvalidPriceRange || hasInvalidYearRange);
-  let draftFilters = $derived<ListingFilters>({
-    q: draftQuery,
-    make: draftMake,
-    model: draftModel,
-    body: draftBody,
-    condition: draftCondition,
-    fuel: draftFuel,
-    transmission: draftTransmission,
-    version: draftVersion,
-    equipment: draftEquipment,
-    yearMin: draftYearMin ? Number(draftYearMin) : null,
-    yearMax: draftYearMax ? Number(draftYearMax) : null,
-    priceMin: draftPriceMin ? Number(draftPriceMin) : null,
-    priceMax: draftPriceMax ? Number(draftPriceMax) : null,
-    mileageMax: draftMileageMax ? Number(draftMileageMax) : null,
-    sort: filters.sort
-  });
+  let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
+  onDestroy(() => releaseOffset?.(false));
+
+  let draft = $state<ListingDraft>(emptyListingDraft());
+  let draftFilters = $derived(listingFiltersFromDraft(draft));
   let matchingVehicles = $derived(filterListingVehicles(listingVehicles, draftFilters));
-  let hasLiveFilters = $derived(Boolean(
-    draftQuery || draftMake || draftModel || draftBody || draftCondition || draftFuel || draftTransmission ||
-    draftVersion || draftEquipment.length || draftYearMin || draftYearMax || draftPriceMin || draftPriceMax || draftMileageMax
-  ));
+  let hasLiveFilters = $derived(listingDraftHasFilters(draft));
+  let hasInvalidPriceRange = $derived(Boolean(draft.priceMin && draft.priceMax && Number(draft.priceMin) > Number(draft.priceMax)));
+  let hasInvalidYearRange = $derived(Boolean(draft.yearMin && draft.yearMax && Number(draft.yearMin) > Number(draft.yearMax)));
+  let hasInvalidRange = $derived(hasInvalidPriceRange || hasInvalidYearRange);
+  let modelOptions = $derived(listingModelsForMake(draft.make));
   let filterDialog = $state<HTMLDialogElement>();
   let dialogSearch = $state<HTMLInputElement>();
   let filtersOpen = $state(false);
-
   let returnFocus: HTMLButtonElement | undefined;
+
   const attachFilterDialog: Attachment<HTMLDialogElement> = (node) => {
     filterDialog = node;
-    return () => {
-      if (filterDialog === node) filterDialog = undefined;
-    };
+    return () => { if (filterDialog === node) filterDialog = undefined; };
   };
-
   const attachDialogSearch: Attachment<HTMLInputElement> = (node) => {
     dialogSearch = node;
-    return () => {
-      if (dialogSearch === node) dialogSearch = undefined;
-    };
+    return () => { if (dialogSearch === node) dialogSearch = undefined; };
   };
 
   const initializeDraft = (current: ListingFilters = filters) => {
-    draftQuery = current.q;
-    draftMake = current.make;
-    draftModel = current.model;
-    draftBody = current.body;
-    draftCondition = current.condition;
-    draftFuel = current.fuel;
-    draftTransmission = current.transmission;
-    draftVersion = current.version;
-    draftEquipment = [...current.equipment];
-    draftYearMin = current.yearMin !== null ? String(current.yearMin) : '';
-    draftYearMax = current.yearMax !== null ? String(current.yearMax) : '';
-    draftPriceMin = current.priceMin !== null ? String(current.priceMin) : '';
-    draftPriceMax = current.priceMax !== null ? String(current.priceMax) : '';
-    draftMileageMax = current.mileageMax !== null ? String(current.mileageMax) : '';
+    draft = listingDraftFromFilters(current);
   };
 
-  const rangeSummary = (min: string, max: string, suffix: string) => min || max ? `${min || '—'} – ${max || '—'}${suffix}` : 'Без ограничение';
-  const mobileFields = $derived([
-    { field: 'make', label: 'Марка', value: draftMake || 'Всички марки' },
-    { field: 'model', label: 'Модел', value: draftModel || 'Всички модели' },
-    { field: 'body', label: 'Купе', value: bodyLabel(draftBody) || 'Всички купета' },
-    { field: 'price', label: 'Бюджет', value: rangeSummary(draftPriceMin, draftPriceMax, ' €') },
-    { field: 'year', label: 'Година', value: rangeSummary(draftYearMin, draftYearMax, '') },
-    { field: 'fuel', label: 'Гориво', value: draftFuel || 'Всяко гориво' },
-    { field: 'mileage_max', label: 'Пробег', value: draftMileageMax ? `До ${draftMileageMax} км` : 'Без ограничение' },
-    { field: 'transmission', label: 'Скорости', value: draftTransmission || 'Всички' },
-    { field: 'version', label: 'Версия', value: draftVersion || 'Всички' },
-    { field: 'condition', label: 'Състояние', value: draftCondition === 'new' ? 'Нови' : draftCondition === 'used' ? 'Употребявани' : 'Всички' },
-    { field: 'equipment', label: 'Екстри', value: draftEquipment.length ? `${draftEquipment.length} избрани` : 'Без предпочитания' }
-  ]);
+  const mobileFieldDefinitions = [
+    { field: 'make', label: 'Марка' },
+    { field: 'model', label: 'Модел' },
+    { field: 'body', label: 'Купе' },
+    { field: 'price', label: 'Бюджет' },
+    { field: 'year', label: 'Година' },
+    { field: 'fuel', label: 'Гориво' },
+    { field: 'mileage_max', label: 'Пробег' },
+    { field: 'transmission', label: 'Скорости' },
+    { field: 'version', label: 'Версия' },
+    { field: 'condition', label: 'Състояние' },
+    { field: 'equipment', label: 'Екстри' }
+  ] satisfies readonly { field: ListingFacetField; label: string }[];
+  let mobileFields = $derived(mobileFieldDefinitions.map(item => ({
+    ...item,
+    value: listingFacetSummary(item.field, draft)
+  })));
 
-  const resetDraft = () => {
-    draftQuery = '';
-    draftMake = '';
-    draftModel = '';
-    draftBody = '';
-    draftCondition = '';
-    draftFuel = '';
-    draftTransmission = '';
-    draftVersion = '';
-    draftEquipment = [];
-    draftYearMin = '';
-    draftYearMax = '';
-    draftPriceMin = '';
-    draftPriceMax = '';
-    draftMileageMax = '';
-  };
+  const resetDraft = () => { draft = emptyListingDraft(filters.sort); };
 
   const openFilters = (event: MouseEvent, field?: string) => {
     returnFocus = event.currentTarget as HTMLButtonElement;
@@ -131,53 +86,34 @@
       target?.focus();
     });
   };
-
-  const closeFilters = () => {
-    if (filterDialog?.open) filterDialog.close();
-  };
-
-  const handleDialogClick = (event: MouseEvent) => {
-    if (event.target === event.currentTarget) closeFilters();
-  };
-
-  const handleCancel = (event: Event) => {
-    event.preventDefault();
-    closeFilters();
-  };
-
+  const closeFilters = () => { if (filterDialog?.open) filterDialog.close(); };
+  const handleDialogClick = (event: MouseEvent) => { if (event.target === event.currentTarget) closeFilters(); };
+  const handleCancel = (event: Event) => { event.preventDefault(); closeFilters(); };
   const handleSearchKeydown = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      event.preventDefault();
-      closeFilters();
-    }
+    if (event.key === 'Escape') { event.preventDefault(); closeFilters(); }
   };
-
-  const handleDialogSubmit = () => {
-    closeFilters();
-  };
-
-  const handleClear = () => {
-    resetDraft();
-    closeFilters();
-  };
-
+  const handleDialogSubmit = () => { closeFilters(); };
+  const handleClear = () => { resetDraft(); closeFilters(); };
   const restorePage = () => {
     filtersOpen = false;
     releaseOffset?.();
-    if (returnFocus?.isConnected) returnFocus.focus();
+    const target = returnFocus;
+    let attempts = 0;
+    const restoreFocus = () => {
+      if (target?.isConnected) {
+        target.focus({ preventScroll: true });
+        if (target.matches(':focus')) return;
+      }
+      if (attempts++ < 60) requestAnimationFrame(restoreFocus);
+    };
+    setTimeout(() => requestAnimationFrame(restoreFocus), 0);
   };
-
-  const cleanFormData = (event: FormDataEvent) => {
-    for (const key of new Set(event.formData.keys())) {
-      const values = event.formData.getAll(key);
-      if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
-    }
-  };
+  const cleanFormData = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
 {@render children(openFilters, filtersOpen)}
 
-<QuickFilterSheet id="dn-dialog-choice" filters={draftFilters} onApply={initializeDraft} fullScreen>
+<QuickFilterSheet mode="draft" id="dn-dialog-choice" filters={draftFilters} onApply={initializeDraft} fullScreen>
 {#snippet children(openChoice, choiceOpen)}
 <dialog
   class="dn-listing-filter__dialog"
@@ -206,7 +142,7 @@
       <div class="dn-listing-filter__dialog-search" role="search">
         <label class="dn-sr-only" for="dn-listing-dialog-query">Търсене на автомобил</label>
         <Icon name="search" size={20} />
-        <input id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draftQuery} onkeydown={handleSearchKeydown} type="search" name="q" placeholder="Марка или модел" autocomplete="off" />
+        <input id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draft.q} onkeydown={handleSearchKeydown} type="search" name="q" placeholder="Марка или модел" autocomplete="off" />
         <button
           class="dn-listing-filter__inline-submit"
           type="submit"
@@ -227,7 +163,7 @@
         <div class="dn-listing-filter__core-grid">
           <label>
             <span class="dn-listing-filter__field-label">Марка</span>
-            <select name="make" aria-label="Марка" bind:value={draftMake} onchange={() => { draftModel = ''; }}>
+            <select name="make" aria-label="Марка" value={draft.make} onchange={(event) => { draft = withListingMake(draft, event.currentTarget.value); }}>
               {#each listingFilterOptions.makes as option (option)}
                 <option value={option}>{option || 'Марка'}</option>
               {/each}
@@ -235,15 +171,15 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Модел</span>
-            <select name="model" aria-label="Модел" bind:value={draftModel}>
-              {#each draftModelOptions as option (option)}
+            <select name="model" aria-label="Модел" bind:value={draft.model}>
+              {#each modelOptions as option (option)}
                 <option value={option}>{option || 'Модел'}</option>
               {/each}
             </select>
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Купе</span>
-            <select name="body" aria-label="Купе" bind:value={draftBody}>
+            <select name="body" aria-label="Купе" bind:value={draft.body}>
               {#each listingFilterOptions.bodies as option (option)}
                 <option value={option}>{bodyLabel(option) || 'Купе'}</option>
               {/each}
@@ -251,7 +187,7 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Състояние</span>
-            <select name="condition" aria-label="Състояние" bind:value={draftCondition}>
+            <select name="condition" aria-label="Състояние" bind:value={draft.condition}>
               <option value="">Състояние</option>
               <option value="new">Нови</option>
               <option value="used">Употребявани</option>
@@ -259,8 +195,8 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Цена от</span>
-            <select name="price_min" aria-label="Цена от" bind:value={draftPriceMin}>
-              {#if draftPriceMin && !listingFilterOptions.prices.some(value => value === draftPriceMin)}<option value={draftPriceMin}>{draftPriceMin}</option>{/if}
+            <select name="price_min" aria-label="Цена от" bind:value={draft.priceMin}>
+              {#if draft.priceMin && !listingFilterOptions.prices.some(value => value === draft.priceMin)}<option value={draft.priceMin}>{draft.priceMin}</option>{/if}
               {#each listingFilterOptions.prices as option (option)}
                 <option value={option}>{option ? `От ${new Intl.NumberFormat('bg-BG').format(Number(option))} €` : 'Цена от'}</option>
               {/each}
@@ -268,8 +204,8 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Цена до</span>
-            <select name="price_max" aria-label="Цена до" bind:value={draftPriceMax}>
-              {#if draftPriceMax && !listingFilterOptions.prices.some(value => value === draftPriceMax)}<option value={draftPriceMax}>{draftPriceMax}</option>{/if}
+            <select name="price_max" aria-label="Цена до" bind:value={draft.priceMax}>
+              {#if draft.priceMax && !listingFilterOptions.prices.some(value => value === draft.priceMax)}<option value={draft.priceMax}>{draft.priceMax}</option>{/if}
               {#each listingFilterOptions.prices as option (option)}
                 <option value={option}>{option ? `До ${new Intl.NumberFormat('bg-BG').format(Number(option))} €` : 'Цена до'}</option>
               {/each}
@@ -277,8 +213,8 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Година от</span>
-            <select name="year_min" aria-label="Година от" bind:value={draftYearMin}>
-              {#if draftYearMin && !listingFilterOptions.years.some(value => value === draftYearMin)}<option value={draftYearMin}>{draftYearMin}</option>{/if}
+            <select name="year_min" aria-label="Година от" bind:value={draft.yearMin}>
+              {#if draft.yearMin && !listingFilterOptions.years.some(value => value === draft.yearMin)}<option value={draft.yearMin}>{draft.yearMin}</option>{/if}
               {#each listingFilterOptions.years as option (option)}
                 <option value={option}>{option || 'Година от'}</option>
               {/each}
@@ -286,8 +222,8 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Година до</span>
-            <select name="year_max" aria-label="Година до" bind:value={draftYearMax}>
-              {#if draftYearMax && !listingFilterOptions.years.some(value => value === draftYearMax)}<option value={draftYearMax}>{draftYearMax}</option>{/if}
+            <select name="year_max" aria-label="Година до" bind:value={draft.yearMax}>
+              {#if draft.yearMax && !listingFilterOptions.years.some(value => value === draft.yearMax)}<option value={draft.yearMax}>{draft.yearMax}</option>{/if}
               {#each listingFilterOptions.years as option (option)}
                 <option value={option}>{option || 'Година до'}</option>
               {/each}
@@ -295,8 +231,8 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Пробег до</span>
-            <select name="mileage_max" aria-label="Пробег до" bind:value={draftMileageMax}>
-              {#if draftMileageMax && !listingFilterOptions.mileages.some(value => value === draftMileageMax)}<option value={draftMileageMax}>{draftMileageMax}</option>{/if}
+            <select name="mileage_max" aria-label="Пробег до" bind:value={draft.mileageMax}>
+              {#if draft.mileageMax && !listingFilterOptions.mileages.some(value => value === draft.mileageMax)}<option value={draft.mileageMax}>{draft.mileageMax}</option>{/if}
               {#each listingFilterOptions.mileages as option (option)}
                 <option value={option}>{option ? `До ${new Intl.NumberFormat('bg-BG').format(Number(option))} км` : 'Пробег до'}</option>
               {/each}
@@ -304,7 +240,7 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Гориво</span>
-            <select name="fuel" aria-label="Гориво" bind:value={draftFuel}>
+            <select name="fuel" aria-label="Гориво" bind:value={draft.fuel}>
               {#each listingFilterOptions.fuels as option (option)}
                 <option value={option}>{option || 'Гориво'}</option>
               {/each}
@@ -312,7 +248,7 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Скоростна кутия</span>
-            <select name="transmission" aria-label="Скоростна кутия" bind:value={draftTransmission}>
+            <select name="transmission" aria-label="Скоростна кутия" bind:value={draft.transmission}>
               {#each listingFilterOptions.transmissions as option (option)}
                 <option value={option}>{option || 'Скорости'}</option>
               {/each}
@@ -320,7 +256,7 @@
           </label>
           <label>
             <span class="dn-listing-filter__field-label">Пакет или версия</span>
-            <select name="version" aria-label="Пакет или версия" bind:value={draftVersion}>
+            <select name="version" aria-label="Пакет или версия" bind:value={draft.version}>
               {#each listingFilterOptions.versions as option (option)}
                 <option value={option}>{option || 'Версия'}</option>
               {/each}
@@ -333,7 +269,7 @@
           <div class="dn-listing-filter__equipment-grid">
             {#each listingFilterOptions.equipment as option (option)}
               <label class="dn-listing-filter__equipment-option">
-                <input type="checkbox" name="equipment" value={option} bind:group={draftEquipment} />
+                <input type="checkbox" name="equipment" value={option} bind:group={draft.equipment} />
                 <span>{option}</span>
               </label>
             {/each}

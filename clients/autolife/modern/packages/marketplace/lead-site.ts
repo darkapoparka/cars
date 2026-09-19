@@ -51,7 +51,7 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/assets/autolife/wordmark.svg",
+  logoPath: "/assets/brand/logo-on-dark.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=43.22861,27.8253778&z=15&output=embed",
   mapsUrl:
