@@ -285,7 +285,7 @@
   .dn-tradein-fields label > span { color: var(--dn-red); }
   .dn-tradein-fields small, .dn-tradein-notes small { color: #7a818b; font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
   .dn-tradein-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
-  .dn-tradein-fields input, .dn-tradein-notes textarea { display: block; width: 100%; min-height: 50px; margin-top: 7px; padding: 12px 13px; box-sizing: border-box; border: 1px solid #d5dae0; border-radius: 12px; background: #fff; color: #202329; font: inherit; font-size: var(--dn-control-size); font-weight: var(--dn-weight-regular); }
+  .dn-tradein-fields input, .dn-tradein-notes textarea { display: block; width: 100%; min-height: var(--dn-control-height-editor); margin-top: 7px; padding: var(--dn-space-2) var(--dn-space-3); box-sizing: border-box; border: 1px solid #d5dae0; border-radius: 12px; background: #fff; color: #202329; font: inherit; font-size: var(--dn-control-size); font-weight: var(--dn-weight-regular); }
   .dn-tradein-notes textarea { min-height: 96px; resize: vertical; }
   .dn-tradein-fields input:focus, .dn-tradein-notes textarea:focus { border-color: #202329; outline: 2px solid rgba(32,35,41,.12); outline-offset: 1px; }
   .dn-tradein-fields input::placeholder, .dn-tradein-notes textarea::placeholder { color: #8a919b; opacity: 1; }
@@ -327,20 +327,20 @@
   .dn-tradein-feedback { margin: 12px 0 0; padding: 11px 12px; border-radius: 10px; background: #f0f2f4; color: #424850; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   .dn-tradein-footer { display: flex; flex: 0 0 auto; align-items: center; gap: 10px; padding: 14px 24px; border-top: 1px solid #e7e9ec; background: #fff; }
   .dn-tradein-back { display: flex; min-height: 48px; align-items: center; gap: 5px; padding: 0 4px; border: 0; background: transparent; color: #30343a; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
-  .dn-tradein-primary { display: flex; min-height: 50px; flex: 1; align-items: center; justify-content: center; gap: 9px; padding: 11px 16px; border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); }
+  .dn-tradein-primary { display: flex; min-height: var(--dn-control-height-editor); flex: 1; align-items: center; justify-content: center; gap: 9px; padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); line-height: var(--dn-leading-control); }
   .dn-tradein-primary:disabled { opacity: .6; cursor: wait; }
 
-  :global(.dn-contact-intent:has(.dn-tradein-enquiry) .dn-contact-workflow-title),
-  :global(.dn-contact-intent:has(.dn-tradein-enquiry) .dn-contact-intent__heading),
-  :global(.dn-contact-intent:has(.dn-tradein-enquiry) .dn-contact-selected),
-  :global(.dn-contact-intent:has(.dn-tradein-enquiry) .dn-contact-intent__main > .dn-contact-button) { display: none; }
+  :global(.dn-contact-intent--tradein .dn-contact-workflow-title),
+  :global(.dn-contact-intent--tradein .dn-contact-intent__heading),
+  :global(.dn-contact-intent--tradein .dn-contact-selected),
+  :global(.dn-contact-intent--tradein .dn-contact-intent__main > .dn-contact-button) { display: none; }
 
   @media (min-width: 768px) {
-    :global(.dn-contact-intent:has(.dn-tradein-enquiry) .dn-contact-intent__main) { background: #fff; }
+    :global(.dn-contact-intent--tradein .dn-contact-intent__main) { background: #fff; }
   }
   @media (max-width: 767px) {
 
-    :global(.dn-contact-intent:has(.dn-tradein-enquiry) > .dn-contact-workflow-call) { display: none; }
+    :global(.dn-contact-intent--tradein > .dn-contact-workflow-call) { display: none; }
     .dn-tradein-enquiry > h1 { margin-inline: auto; font-size: var(--dn-text-heading); text-align: center; }
     .dn-tradein-reference-hint { text-align: center; }
     .dn-tradein-entry-segments { margin-top: 16px; }
@@ -353,11 +353,10 @@
     .dn-tradein-body { padding: 18px 16px 22px; }
     .dn-tradein-footer { padding: 11px 16px max(12px,env(safe-area-inset-bottom)); }
     .dn-tradein-contact-block .dn-tradein-fields { grid-template-columns: 1fr; }
-    .dn-tradein-primary { min-height: 52px; }
   }
 
   @media (max-width: 374px) {
-    :global(.dn-contact-intent:has(.dn-tradein-enquiry) .dn-contact-intent__main) { padding-inline: 16px; }
+    :global(.dn-contact-intent--tradein .dn-contact-intent__main) { padding-inline: 16px; }
     .dn-tradein-enquiry > h1 { font-size: var(--dn-text-heading); }
     .dn-tradein-pair { gap: 8px; }
   }

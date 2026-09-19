@@ -31,6 +31,7 @@ A filename does not prove a file is currently rendered. Component/data reference
 | [Mobile services](provenance/mobile-service-artwork-2026-09-06.md) | Mobile sell/import assets |
 | [Mobile cutout](provenance/mobile-service-cutout-2026-09-10.md) | Later mobile cutout treatment |
 | [Service cards](provenance/service-cards-2026-09-10.md) | Service-card imagery |
+| [Homepage brand marks](provenance/homepage-brand-marks-2026-09-15.md) | Curated Land Rover, Mercedes-Benz and Audi card assets, source limits and optical sizing |
 | [Menu services](provenance/menu-service-assets-2026-09-08.md) | Reception, import and leasing concepts |
 | [Editorial photos](provenance/editorial-photos-2026-09-08.md) | Photo sources and credits |
 | [Borderless editorial](provenance/borderless-editorial-2026-09-08.md) | Generated edits of photo inputs |
