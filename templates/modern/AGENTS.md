@@ -1,3 +1,3 @@
-# Managed modern snapshot
+# Managed Modern snapshot
 
-Reusable source belongs to [darkapoparka/cars-template-modern](https://github.com/darkapoparka/cars-template-modern). This copy is pinned to 2a7ede6621be8d2d606525776fccae2bdd6fc157 by [templates.lock.json](../../templates.lock.json). Follow [Cars instructions](../../AGENTS.md). Shared polish belongs upstream; use [template release](../../docs/TEMPLATE-PROMOTION.md) to update this snapshot. Dealer work belongs under clients/. Technical references in this copy retain source context and are not new task orders.
+Pinned to darkapoparka/cars-template-modern main commit 703feaeb060f28f6cd43308c0aa4ff1b0a670fe8. Shared changes belong upstream; dealer identity belongs under clients/.

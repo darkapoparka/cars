@@ -1,0 +1,139 @@
+{
+  "slug": "al-hamoor-al-thahabi",
+  "sourceCommit": "dccd112253ef4eb0fcf1071a06351859b4849f84",
+  "inventoryCount": 8,
+  "sourceCount": 8,
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealer": "al-hamoor-al-thahabi",
+    "decision": "USE GENERATED CANDIDATE",
+    "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+    "originalSha256": "6918488ad30a9d46195974ebe1b83fe56abc9de2d61151c22ade131019023b97",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "sha256": "3a945d87e9198790cc0cc15256bbfdec992a95c0d7df6a2edbc31f1f0ebe07e9",
+        "bytes": 147022
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "sha256": "3ae4cc8473042f99c7765d9eff354cf32a9456e032d86fd569613a7d3b727516",
+        "bytes": 146756
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "sha256": "4da527b2b824355184a81691f25b19771d9368f31f4f4c5047436bbf3372f3d5",
+        "bytes": 102912
+      }
+    },
+    "preparedAt": "2026-09-19T04:48:58.575Z",
+    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+  },
+  "variants": [
+    {
+      "key": "auto-best",
+      "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+      "overlay": [
+        "src/lib/config/brand.ts",
+        "src/lib/data/inventory.ts",
+        "src/lib/data/company.ts",
+        "src/lib/data/dealer-profile.json",
+        "src/lib/components/company/ShowroomMap.svelte (address adapter)",
+        "src/routes/listing-detail-v1/[id]/+page.svelte (dealer identity)",
+        "src\\lib\\components\\layout\\Footer.svelte"
+      ],
+      "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec"
+    },
+    {
+      "key": "modern",
+      "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+      "overlay": [
+        "packages/marketplace-domain/testing/mock-data.ts",
+        "packages/marketplace/lead-site.ts",
+        "packages/marketplace-domain/testing/dealer-profile.json",
+        "apps/web/app/api/ai/search/route.test.ts",
+        "apps/web/app/sitemap.test.ts",
+        "apps/web/app/[locale]/contact/page.tsx",
+        "apps/web/app/[locale]/lease/lease-finance-policy.test.ts",
+        "apps/web/app/[locale]/sell/page.tsx",
+        "apps/web/lib/assisted-search.test.ts",
+        "apps/web/lib/public-app-url.test.ts",
+        "apps/web/lib/public-contact-readiness.test.ts",
+        "apps/web/lib/public-metadata.test.ts",
+        "apps/web/lib/public-support-submission.test.ts",
+        "packages/marketplace/directory.test.ts",
+        "packages/marketplace/inventory-csv.test.ts",
+        "packages/marketplace/listing-core.test.ts",
+        "packages/marketplace/mock-directory.ts",
+        "packages/marketplace-ui/components/marketplace-masthead.tsx",
+        "packages/marketplace-ui/lib/account-save-flow.test.ts",
+        "packages/marketplace-ui/lib/listing-truth.ts",
+        "packages/marketplace-ui/lib/marketplace-control-copy.ts",
+        "packages/marketplace-ui/lib/marketplace-filter-config.ts",
+        "packages/marketplace-ui/lib/marketplace-filter-policy.test.ts",
+        "packages/marketplace-ui/lib/organization-directory-card-policy.test.ts",
+        "packages/marketplace-ui/lib/vehicle-card-view-policy.test.ts",
+        "packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
+        "packages/marketplace/lead-site.ts",
+        "packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+        "packages/marketplace-ui/components/listing-detail-content.tsx",
+        "packages/marketplace-ui/components/seller-identity-card.tsx",
+        "apps/web/lib/public-marketplace-data.ts",
+        "apps/web/app/[locale]/layout.tsx"
+      ],
+      "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01"
+    },
+    {
+      "key": "carwow",
+      "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+      "overlay": [
+        "src/lib/data/daynight-current-inventory.ts",
+        "src/lib/data/daynight-site.ts",
+        "src/lib/data/dealer-profile.json",
+        "src/lib/data/daynight-reviews.ts",
+        "src/lib/data/daynight-team.ts",
+        "src/lib/data/daynight-blog.ts",
+        "src/lib/data/daynight-faq.ts",
+        "src/lib/components/layout/SiteChromeTopBar.svelte",
+        "src/lib/components/home/mobile/mobile-home-data.ts",
+        "src/lib/data/daynight-videos.ts",
+        "src/lib/components/layout/DesktopDealerFooter.svelte",
+        "src/lib/components/layout/DayNightFooter.svelte",
+        "src/lib/components/about/DesktopAboutPage.svelte",
+        "src/hooks.server.ts",
+        "src/lib/components/admin/AdminShell.svelte",
+        "src/lib/components/admin/PostForm.svelte",
+        "src/lib/components/layout/daynight-footer-data.ts",
+        "src/lib/data/daynight-vehicles.ts",
+        "src/lib/server/auth/auth.ts",
+        "src/lib/server/cms/schemas.ts",
+        "src/lib/server/db/schema.ts",
+        "src/lib/server/repositories/admin-assistant.ts",
+        "src/lib/server/repositories/posts.ts",
+        "src/lib/server/seed/daynight-catalog-seed.ts",
+        "src/routes/admin/assistant/+page.svelte",
+        "src/routes/admin/assistant/chat/+server.ts",
+        "src/routes/admin/listings/+page.svelte",
+        "src/routes/admin/posts/+page.svelte",
+        "src/routes/admin/settings/+page.svelte",
+        "src/routes/blog/[slug]/+page.server.ts",
+        "src/routes/presentation/home2/+page.server.ts",
+        "src/routes/presentation/home2/+page.svelte",
+        "src/routes/presentation/home3/+page.svelte",
+        "src/routes/team/[slug]/+page.server.ts",
+        "static/site.webmanifest",
+        "src/lib/data/daynight-site.ts",
+        "src/lib/components/about/DesktopDealerProfilePage.svelte",
+        "src/lib/components/blog/BlogArticlePage.svelte",
+        "src/lib/components/home/mobile/MobileHeader.svelte",
+        "src/lib/components/home/mobile/MobileHomeDiscovery.svelte",
+        "src/lib/components/layout/SiteChromeNavRow.svelte",
+        "src/lib/components/layout/SiteHeader.svelte",
+        "src/routes/+error.svelte",
+        "src/routes/+layout.svelte"
+      ],
+      "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0"
+    }
+  ],
+  "preparedAt": "2026-09-19T04:49:18.522Z"
+}

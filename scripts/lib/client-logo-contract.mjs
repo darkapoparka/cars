@@ -1,0 +1,93 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { createHash } from 'node:crypto';
+
+const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
+const read = file => fs.readFileSync(file, 'utf8');
+const publicRoot = (key, root) => path.join(root, key === 'modern' ? 'apps/web/public' : 'static');
+const walk = (dir, files = []) => {
+  if (!fs.existsSync(dir)) return files;
+  for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (['node_modules', '.git'].includes(item.name)) continue;
+    const file = path.join(dir, item.name);
+    if (item.isDirectory()) walk(file, files);
+    else if (/\.(?:svelte|tsx?|css)$/.test(file)) files.push(file);
+  }
+  return files;
+};
+
+export function loadLogoContract(client) {
+  const file = path.join(client, 'branding/logo-contract.json');
+  if (!fs.existsSync(file)) return null;
+  const contract = JSON.parse(read(file));
+  for (const surface of ['onLight', 'onDark', 'onAccent']) {
+    const asset = contract.assets[surface];
+    if (!asset || !/^\/dealer-brand\/[^/]+\.webp$/.test(asset.publicPath)) throw Error(`Invalid ${surface} logo contract: ${file}`);
+    const bytes = fs.readFileSync(path.join(client, asset.publicPath.slice(1)));
+    if (sha256(bytes) !== asset.sha256) throw Error(`Approved ${surface} logo bytes changed without updating the contract: ${file}`);
+  }
+  return contract;
+}
+
+export function applyDealerLogoContract({ key, oldVariant, candidate, profile }) {
+  const contract = profile.logoContract ?? loadLogoContract(path.dirname(oldVariant));
+  if (!contract) return [];
+  const p = Object.fromEntries(Object.entries(contract.assets).map(([surface, asset]) => [surface, asset.publicPath]));
+  const changed = [];
+  const edit = (relative, transform) => {
+    const file = path.join(candidate, relative);
+    if (!fs.existsSync(file)) throw Error(`Missing logo consumer ${key}/${relative}`);
+    const before = read(file), after = transform(before);
+    if (before !== after) { fs.writeFileSync(file, after); changed.push(relative); }
+  };
+  const scalar = (text, name, value) => text.replace(new RegExp(`(\\b${name}\\s*:\\s*)['\"][^'\"]*['\"]`), (_, prefix) => prefix + JSON.stringify(value));
+  for (const asset of Object.values(contract.assets)) {
+    const source = path.join(path.dirname(oldVariant), asset.publicPath.slice(1));
+    const target = path.join(publicRoot(key, candidate), asset.publicPath.slice(1));
+    fs.mkdirSync(path.dirname(target), { recursive: true }); fs.copyFileSync(source, target);
+  }
+  if (key === 'auto-best') {
+    edit('src/lib/config/brand.ts', text => scalar(scalar(text, 'logo', p.onLight), 'logoOnDark', p.onDark));
+    for (const file of walk(path.join(candidate, 'src/lib/components')).filter(f => /Footer\.svelte$/.test(f))) {
+      const relative = path.relative(candidate, file);
+      edit(relative, text => text.replace(/brand\.logo\b/g, 'brand.logoOnDark'));
+    }
+  } else if (key === 'modern') {
+    edit('packages/marketplace/lead-site.ts', text => {
+      text = scalar(text, 'logoPath', p.onDark);
+      if (!text.includes('readonly logoOnLight:')) text = text.replace('readonly logoPath: string;', 'readonly logoPath: string;\n  readonly logoOnLight: string;\n  readonly logoOnDark: string;\n  readonly logoOnAccent: string;');
+      text = text.replace(/(\n\s*logoPath: [^\n]+\n)/, `$1  logoOnLight: ${JSON.stringify(p.onLight)},\n  logoOnDark: ${JSON.stringify(p.onDark)},\n  logoOnAccent: ${JSON.stringify(p.onAccent)},\n`);
+      return text;
+    });
+    edit('packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx', text => {
+      text = text.replace(',\n          light && "h-10 bg-black px-2.5"', '');
+      text = text.replace(/src=\{leadSite\.logoPath\}\s*style=\{[\s\S]*?\n            \}\n/, 'src={wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark}\n');
+      text = text.replace(/\n          \{wordmarkTone === "original" \? null : \([\s\S]*?\n          \)\}/, '');
+      if (/clipPath|brightness-0|\binvert\b/.test(text)) throw Error('Obsolete clipped Modern mobile logo survived');
+      return text;
+    });
+    edit('packages/marketplace-ui/components/listing-detail-content.tsx', text => {
+      const start = text.indexOf('<span className="relative block aspect-[1780/512] w-28">');
+      const end = text.indexOf('</span>', start);
+      if (start < 0 || end < 0) throw Error('Missing Modern financing logo anchor');
+      return text.slice(0, start) + '<span className="relative block aspect-[1780/512] w-28">\n                <Image alt={leadSite.name} className="h-full w-full object-contain" height={512} sizes="112px" src={leadSite.logoOnAccent} width={1780} />\n              </span>' + text.slice(end + 7);
+    });
+    for (const file of ['packages/marketplace-ui/components/seller-identity-card.tsx', 'apps/web/lib/public-marketplace-data.ts', 'apps/web/app/[locale]/layout.tsx']) {
+      edit(file, text => text.replaceAll('leadSite.logoPath', 'leadSite.logoOnLight').replace('type: "image/png", url: leadSite.logoOnLight', 'type: "image/webp", url: leadSite.logoOnLight'));
+    }
+  } else if (key === 'carwow') {
+    edit('src/lib/data/daynight-site.ts', text => scalar(scalar(text, 'logoLight', p.onDark), 'logoDark', p.onLight));
+    for (const file of walk(path.join(candidate, 'src'))) {
+      const relative = path.relative(candidate, file).replaceAll('\\', '/');
+      if (!/daynightSite\.logoLight/.test(read(file))) continue;
+      const name = path.basename(file);
+      const onLight = /^(DesktopDealerProfilePage|BlogArticlePage|MobileHomeDiscovery|SiteChromeNavRow)\.svelte$/.test(name) || relative === 'src/routes/+layout.svelte' || relative === 'src/routes/+error.svelte';
+      if (onLight) edit(relative, text => text.replaceAll('daynightSite.logoLight', 'daynightSite.logoDark'));
+      if (name === 'MobileHeader.svelte') edit(relative, text => text.replace('resolve(daynightSite.logoLight)', "resolve(banner ? daynightSite.logoLight : daynightSite.logoDark)"));
+      if (name === 'SiteHeader.svelte') edit(relative, text => text.replace("variant === 'home' ? daynightSite.logoLight : daynightSite.logoDark", 'daynightSite.logoDark'));
+    }
+  } else if (key === 'import') {
+    edit('src/lib/data/daynight.ts', text => scalar(scalar(text, 'logoLight', p.onDark), 'logoDark', p.onLight));
+  }
+  return changed;
+}

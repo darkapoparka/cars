@@ -4,6 +4,7 @@ import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { mobileResponsiveFormFocusClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import type { MobileFormDraft } from "../../components/mobile-form-draft";
 import { MobileVehicleTaxonomyFields } from "../../components/mobile-vehicle-taxonomy-fields";
+import { PublicContactFields } from "../../components/public-contact-fields";
 import { ImportOriginField } from "./import-origin-field";
 import {
   importRequestCopy,
@@ -12,12 +13,12 @@ import {
 
 export const ImportVehicleFields = ({
   defaultOrigin,
-  defaultSourceUrl,
+  sourceUrl,
   draft = {},
   locale,
 }: {
   defaultOrigin: string;
-  defaultSourceUrl: string;
+  sourceUrl: string;
   draft?: MobileFormDraft;
   locale: "bg" | "en";
 }) => {
@@ -38,37 +39,22 @@ export const ImportVehicleFields = ({
           placeholder={text.originPlaceholder}
         />
 
-        <div className="hidden gap-1.5 lg:grid">
-          <Label className="text-xs" htmlFor="import-source-url">
-            {text.sourceUrl}
-          </Label>
-          <Input
-            className={importRequestInputClassName}
-            defaultValue={defaultSourceUrl}
-            id="import-source-url"
-            inputMode="url"
-            maxLength={500}
-            name="sourceUrl"
-            placeholder={text.sourceUrlPlaceholder}
-            type="url"
-          />
-        </div>
-
         <MobileVehicleTaxonomyFields
           initialMake={draft.make}
           initialModel={draft.model}
           locale={locale}
-          makeLabel={text.make}
+          makeLabel={sourceUrl.trim() ? text.make : text.requiredMake}
           makePlaceholder={text.makePlaceholder}
-          modelLabel={text.model}
+          modelLabel={sourceUrl.trim() ? text.model : text.requiredModel}
           modelPlaceholder={text.modelPlaceholder}
+          required={!sourceUrl.trim()}
           variant="import"
         />
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-year">
+          <Label className="text-meta" htmlFor="import-year">
             {text.year}
           </Label>
           <Input
@@ -85,7 +71,7 @@ export const ImportVehicleFields = ({
         </div>
 
         <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-mileage">
+          <Label className="text-meta" htmlFor="import-mileage">
             {text.mileage}
           </Label>
           <Input
@@ -102,7 +88,7 @@ export const ImportVehicleFields = ({
         </div>
 
         <div className="col-span-2 grid gap-1.5 sm:col-span-1">
-          <Label className="text-xs" htmlFor="import-budget">
+          <Label className="text-meta" htmlFor="import-budget">
             {text.budget}
           </Label>
           <Input
@@ -117,7 +103,7 @@ export const ImportVehicleFields = ({
       </div>
 
       <div className="grid gap-1.5">
-        <Label className="text-xs" htmlFor="import-message">
+        <Label className="text-meta" htmlFor="import-message">
           {text.message}
         </Label>
         <Textarea
@@ -149,56 +135,13 @@ export const ImportContactFields = ({
       data-slot="import-contact-details"
     >
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-name">
-            {text.name}
-          </Label>
-          <Input
-            autoComplete="name"
-            className={importRequestInputClassName}
-            defaultValue={draft.name}
-            id="import-name"
-            maxLength={100}
-            minLength={2}
-            name="name"
-            placeholder={text.namePlaceholder}
-            required
-          />
-        </div>
-
-        <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-phone">
-            {text.phone}
-          </Label>
-          <Input
-            autoComplete="tel"
-            className={importRequestInputClassName}
-            defaultValue={draft.phone}
-            id="import-phone"
-            maxLength={40}
-            minLength={7}
-            name="phone"
-            placeholder={text.phonePlaceholder}
-            required
-            type="tel"
-          />
-        </div>
-
-        <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-email">
-            {text.email}
-          </Label>
-          <Input
-            autoComplete="email"
-            className={importRequestInputClassName}
-            defaultValue={draft.email}
-            id="import-email"
-            maxLength={254}
-            name="email"
-            placeholder={text.emailPlaceholder}
-            type="email"
-          />
-        </div>
+        <PublicContactFields
+          copy={text}
+          draft={draft}
+          idPrefix="import"
+          inputClassName={importRequestInputClassName}
+          labelClassName="text-meta"
+        />
       </div>
     </fieldset>
   );

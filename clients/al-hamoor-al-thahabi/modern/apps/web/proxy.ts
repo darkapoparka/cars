@@ -1,9 +1,9 @@
+import { defaultLocale, isLocale } from "@repo/internationalization/config";
 import {
   getLocaleCookieOptions,
   internationalizationMiddleware,
   LOCALE_COOKIE_NAME,
 } from "@repo/internationalization/proxy";
-import { leadSite } from "@repo/marketplace/lead-site";
 import { SecurityRequestDeniedError, secure } from "@repo/security";
 import {
   createPublicNoseconeOptions,
@@ -13,6 +13,7 @@ import {
 import { createNEMO } from "@rescale/nemo";
 import { type NextProxy, type NextRequest, NextResponse } from "next/server";
 import { env } from "@/env";
+import { getPublicLocales } from "@/lib/public-locale-policy";
 import { shouldFailClosedOnProtectionError } from "@/lib/public-proxy-policy";
 import { getCanonicalTaxonomyPathname } from "@/lib/public-route-normalization";
 
@@ -95,28 +96,28 @@ const composedMiddleware = createNEMO(
   }
 );
 
-const createEnglishLeadSiteRedirect = (
+const createLeadSiteLocaleRedirect = (
   request: NextRequest,
   headersResponse: Response
 ) => {
-  const isBulgarianLeadSitePath =
-    leadSite.staticDemoMode &&
-    (request.nextUrl.pathname === "/bg" ||
-      request.nextUrl.pathname.startsWith("/bg/"));
+  const pathLocale = request.nextUrl.pathname.split("/")[1] ?? "";
+  const isDisabledLocale =
+    isLocale(pathLocale) && !getPublicLocales().includes(pathLocale);
 
   if (
-    !isBulgarianLeadSitePath ||
+    !isDisabledLocale ||
     (request.method !== "GET" && request.method !== "HEAD")
   ) {
     return;
   }
 
-  const englishUrl = request.nextUrl.clone();
-  englishUrl.pathname = request.nextUrl.pathname.slice(3) || "/";
-  const redirectResponse = NextResponse.redirect(englishUrl, 308);
+  const defaultLocaleUrl = request.nextUrl.clone();
+  defaultLocaleUrl.pathname =
+    request.nextUrl.pathname.slice(pathLocale.length + 1) || "/";
+  const redirectResponse = NextResponse.redirect(defaultLocaleUrl, 308);
   redirectResponse.cookies.set(
     LOCALE_COOKIE_NAME,
-    "en",
+    defaultLocale,
     getLocaleCookieOptions()
   );
 
@@ -131,14 +132,13 @@ const createEnglishLeadSiteRedirect = (
 
 const publicProxy: NextProxy = async (request, event) => {
   const headersResponse = await securityHeaders();
-  if (leadSite.staticDemoMode) headersResponse.headers.set("X-Robots-Tag", "noindex, nofollow");
-  const englishLeadSiteRedirect = createEnglishLeadSiteRedirect(
+  const leadSiteLocaleRedirect = createLeadSiteLocaleRedirect(
     request,
     headersResponse
   );
 
-  if (englishLeadSiteRedirect) {
-    return englishLeadSiteRedirect;
+  if (leadSiteLocaleRedirect) {
+    return leadSiteLocaleRedirect;
   }
 
   const canonicalTaxonomyPathname = getCanonicalTaxonomyPathname(

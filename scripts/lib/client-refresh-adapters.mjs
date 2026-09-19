@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { applyDealerLogoContract } from './client-logo-contract.mjs';
 import { applyCarwowSafeContent, applyImportSafeContent } from './client-refresh-safe-content.mjs';
 
 const exists = (file) => fs.existsSync(file);
@@ -1080,12 +1081,10 @@ function patchImport({ oldVariant, candidate, profile }) {
   ];
 }
 
-export function applyRefreshAdapter({ key, oldVariant, candidate, profile }) {
-  if (key === 'auto-best') return patchAutoBest({ oldVariant, candidate, profile });
-  if (key === 'modern') return patchModern({ oldVariant, candidate, profile });
-  if (key === 'carwow') return patchCarwow({ oldVariant, candidate, profile });
-  if (key === 'import') return patchImport({ oldVariant, candidate, profile });
-  throw new Error(`No current refresh adapter for ${key}.`);
+export function applyRefreshAdapter(options) {
+  const adapter = { 'auto-best': patchAutoBest, modern: patchModern, carwow: patchCarwow, import: patchImport }[options.key];
+  if (!adapter) throw new Error('No current refresh adapter for '+options.key);
+  return [...adapter(options), ...applyDealerLogoContract(options)];
 }
 
 export const refreshAdapterInternals = {

@@ -1,18 +1,36 @@
-import { dealerFacts } from '$data/dealer';
 export type BrandConfig = {
-  name: string; shortName: string; city: string; addressLine: string; address: string;
-  phone: string; phoneHref: `tel:${string}`; appointment: string; logo: `/${string}`;
-  logoDark: `/${string}`; mapsUrl: string; mapsEmbedUrl: string; currency: string;
-  locale: string; distanceUnit: string; previewNotice: string; locationNote: string;
-  youtubeUrl: string | null; instagramUrl: string | null; facebookUrl: string | null;
+  name: string;
+  shortName: string;
+  city: string;
+  addressLine: string;
+  address: string;
+  phone: string;
+  phoneHref: `tel:${string}`;
+  appointment: string;
+  logo: `/${string}`;
+  logoOnDark: `/${string}`;
+  youtubeUrl: `https://${string}`;
+  instagramUrl: `https://${string}`;
+  facebookUrl: `https://${string}`;
 };
-export const brand: BrandConfig = {
-  name: dealerFacts.name, shortName: dealerFacts.shortName, city: dealerFacts.city,
-  addressLine: dealerFacts.address, address: dealerFacts.address,
-  phone: dealerFacts.phoneDisplay, phoneHref: dealerFacts.phoneHref as `tel:${string}`,
-  appointment: dealerFacts.hours, logo: '/dealer/logo-light.png', logoDark: '/dealer/logo-dark.png',
-  youtubeUrl: null, instagramUrl: null, facebookUrl: null,
-  mapsUrl: dealerFacts.mapsUrl, mapsEmbedUrl: dealerFacts.mapsEmbedUrl,
-  currency: dealerFacts.currency, locale: dealerFacts.locale, distanceUnit: dealerFacts.distanceUnit,
-  previewNotice: dealerFacts.previewNotice, locationNote: dealerFacts.locationNote
-};
+
+const name = "Al Hamoor Al Thahabi Used Cars";
+const shortName = "Al Hamoor Al Thahabi";
+const city = "Sharjah";
+const addressLine = "Souk Al Haraj, showroom 353, Sharjah";
+
+export const brand = {
+  name,
+  shortName,
+  city,
+  youtubeUrl: "https://www.youtube.com/",
+  instagramUrl: "https://www.instagram.com/",
+  facebookUrl: "https://www.facebook.com/",
+  phone: "+971 54 555 5204",
+  phoneHref: "tel:+971545555204",
+  addressLine,
+  address: "Souk Al Haraj, showroom 353, Sharjah",
+  appointment: "Please confirm opening hours and arrange your visit with the dealership.",
+  logo: "/dealer-brand/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark.webp"
+} as const satisfies BrandConfig;

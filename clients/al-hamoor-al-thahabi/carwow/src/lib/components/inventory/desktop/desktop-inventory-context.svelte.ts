@@ -29,17 +29,17 @@ export type InventoryShortcut = {
 };
 
 export const inventoryShortcuts: InventoryShortcut[] = [
-	{ label: 'All', clearsAll: true },
+	{ label: 'Всички', clearsAll: true },
 	{ label: 'Mercedes-Benz', field: 'brand', value: 'Mercedes-Benz' },
 	{ label: 'BMW', field: 'brand', value: 'BMW' },
 	{ label: 'Audi', field: 'brand', value: 'Audi' },
-	{ label: 'SUV', field: 'body', value: 'SUV' },
-	{ label: 'Sedan', field: 'body', value: 'Sedan' },
-	{ label: 'Body type', field: 'body', value: 'Body type' },
+	{ label: 'Джип', field: 'body', value: 'Джип' },
+	{ label: 'Седан', field: 'body', value: 'Седан' },
+	{ label: 'Купе', field: 'body', value: 'Купе' },
 	{ label: 'Ван', field: 'body', value: 'Ван' },
-	{ label: 'Advertised', field: 'availability', value: 'available' },
-	{ label: 'Diesel', field: 'fuel', value: 'Diesel' },
-	{ label: 'Petrol', field: 'fuel', value: 'Petrol' },
+	{ label: 'Налични', field: 'availability', value: 'available' },
+	{ label: 'Дизел', field: 'fuel', value: 'Дизел' },
+	{ label: 'Бензин', field: 'fuel', value: 'Бензин' },
 	{ label: 'До 50 000 EUR', field: 'price', value: 'under-50000' },
 	{ label: 'До 100 000 км', field: 'mileage', value: 'under-100000' }
 ];
@@ -143,7 +143,7 @@ export class DesktopInventoryFilters {
 		pushSingle(
 			'availability',
 			s.availability,
-			s.availability === 'incoming' ? 'Awaiting confirmation' : 'Advertised'
+			s.availability === 'incoming' ? 'Очакван внос' : 'Налични'
 		);
 		if (s.query) tags.push({ field: 'q', value: s.query, label: s.query });
 		return tags;

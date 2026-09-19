@@ -18,7 +18,7 @@ export type PriceType =
   | "lease_monthly"
   | "finance_estimate";
 
-export type PriceCurrency = "BGN" | "EUR" | "AED" | "USD" | "GBP";
+export type PriceCurrency = "BGN" | "EUR";
 
 export type CurrencyCode = string;
 
@@ -145,7 +145,7 @@ export interface VehicleSpec {
   enginePowerHp?: number;
   fuelType: FuelType;
   make: string;
-  mileageUnit: "km" | "mi";
+  mileageUnit: "km";
   mileageValue: number;
   model: string;
   transmission: Transmission;

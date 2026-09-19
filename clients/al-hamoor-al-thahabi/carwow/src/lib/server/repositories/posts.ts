@@ -29,11 +29,11 @@ const formKeys: ReadonlyArray<keyof PostFormInput> = postFormKeys;
 const fallbackPostImage = '/assets/images/blog/post-44.jpg';
 const daynightArticleCategories = new Set<DayNightArticleCategory>([
 	'Покупка',
-	'Vehicle enquiry',
+	'Продажба',
 	'Новини',
 	'Съвети',
-	'Buying options',
-	'Documents',
+	'Финансиране',
+	'Документи',
 	'Марки'
 ]);
 const cyrillicSlugMap: Record<string, string> = {
@@ -193,7 +193,7 @@ async function buildPostWrite(
 		cover_url: input.coverUrl || null,
 		category: input.category || null,
 		tags: splitTags(input.tags),
-		author: input.author || 'Day Night Auto',
+		author: input.author || 'Al Hamoor Al Thahabi',
 		read_minutes: input.readMinutes,
 		status: input.status,
 		published_at: publishedAt
@@ -238,7 +238,7 @@ export function postRowToDayNightArticle(post: PostRow): DayNightArticle {
 		category,
 		kind: postKind(post.type),
 		date: (post.published_at ?? post.updated_at ?? post.created_at).slice(0, 10),
-		author: post.author || 'Day Night Auto',
+		author: post.author || 'Al Hamoor Al Thahabi',
 		image: post.cover_url || fallbackPostImage,
 		readMinutes:
 			post.read_minutes ||
@@ -246,7 +246,7 @@ export function postRowToDayNightArticle(post: PostRow): DayNightArticle {
 		summary: summary.length ? summary : [description],
 		sections: [
 			{
-				heading: post.category?.trim() || (post.type === 'news' ? 'Новина' : 'Guides'),
+				heading: post.category?.trim() || (post.type === 'news' ? 'Новина' : 'Полезно'),
 				paragraphs: sectionParagraphs
 			}
 		],

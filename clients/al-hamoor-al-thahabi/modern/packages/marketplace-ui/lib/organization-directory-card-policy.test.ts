@@ -9,14 +9,14 @@ import type { OrganizationDirectoryCardData } from "./organization-directory-car
 
 const organization: OrganizationDirectoryCardData = {
   id: "dealer-1",
-  name: "Day Night Auto",
+  name: "Al Hamoor Al Thahabi",
   profileAction: { href: "/dealers/day-night", label: "Profile" },
   typeLabel: "Dealer",
 };
 
 describe("organization directory card policy", () => {
   it("builds stable initials", () => {
-    expect(getOrganizationInitials("Day Night Auto")).toBe("DN");
+    expect(getOrganizationInitials("Al Hamoor Al Thahabi")).toBe("DN");
     expect(getOrganizationInitials(" ")).toBe("AM");
   });
 

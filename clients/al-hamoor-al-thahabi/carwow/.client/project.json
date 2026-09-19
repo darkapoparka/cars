@@ -2,35 +2,21 @@
   "schemaVersion": 1,
   "client": "al-hamoor-al-thahabi",
   "templateKey": "carwow",
-  "templateVersion": "2026.09.08-repair-1",
-  "createdAt": "2026-09-08T21:51:38.811Z",
-  "state": "implemented-needs-local-qa",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "offeredHomes": [],
-  "publicUrl": null,
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "state": "refreshed-awaiting-production-qa",
+  "templateSource": {
+    "repository": "darkapoparka/cars-template-carwow",
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0"
+  },
+  "packaging": {
+    "version": "1",
+    "entry": "/variant-3/"
+  },
   "qa": {
     "desktop": false,
     "mobile": false,
     "identity": false,
     "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
-  "personalization": {
-    "businessFacts": "../business-facts.json",
-    "sourcePack": "../SOURCE-PACK.json",
-    "stock": "../stock.json",
-    "stockCount": 8,
-    "localAssets": true,
-    "qaOwner": "local-review"
   }
 }

@@ -18,44 +18,44 @@
 	const allVehicleCategories = [
 		{
 			id: 'electric',
-			title: 'Electric',
+			title: 'Електрически',
 			query: `fuel=${encodeURIComponent('Електрически')}`,
-			count: cars.filter((car) => car.fuel === 'Electric').length,
+			count: cars.filter((car) => car.fuel === 'Електрически').length,
 			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp'
 		},
 		{
 			id: 'suv',
-			title: 'SUV',
+			title: 'Джип',
 			query: 'body=SUV',
 			count: bodyCount('SUV'),
 			image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 		},
 		{
 			id: 'wagon',
-			title: 'Wagon',
+			title: 'Комби',
 			query: `body=${encodeURIComponent('Комби')}`,
-			count: bodyCount('Wagon'),
+			count: bodyCount('Комби'),
 			image: '/assets/images/body-type/generated/body-wagon-studio-card-v1.webp'
 		},
 		{
 			id: 'hatchback',
-			title: 'Hatchback',
+			title: 'Хечбек',
 			query: `body=${encodeURIComponent('Хечбек')}`,
-			count: bodyCount('Hatchback'),
+			count: bodyCount('Хечбек'),
 			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 		},
 		{
 			id: 'sedan',
-			title: 'Sedan',
+			title: 'Седан',
 			query: `body=${encodeURIComponent('Седан')}`,
-			count: bodyCount('Sedan'),
+			count: bodyCount('Седан'),
 			image: '/assets/images/body-type/generated/body-sedan-studio-card-v1.webp'
 		},
 		{
 			id: 'coupe',
-			title: 'Body type',
+			title: 'Купе',
 			query: `body=${encodeURIComponent('Купе')}`,
-			count: bodyCount('Body type'),
+			count: bodyCount('Купе'),
 			image: '/assets/images/body-type/generated/body-coupe-studio-card-v1.webp'
 		},
 		{
@@ -67,7 +67,7 @@
 		},
 		{
 			id: 'convertible',
-			title: 'Convertible',
+			title: 'Кабриолет',
 			query: `body=${encodeURIComponent('Кабрио')}`,
 			count: bodyCount('Кабрио'),
 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
@@ -79,26 +79,30 @@
 		ctaLabel = 'Виж всички типове',
 		showHeaderCta = true,
 		showBelowCta = false,
-		showEmptyCategories = false,
-		headerCtaPlacement = 'inline'
+		showEmptyCategories = true
 	}: {
 		title?: string;
 		ctaLabel?: string;
 		showHeaderCta?: boolean;
 		showBelowCta?: boolean;
 		showEmptyCategories?: boolean;
-		headerCtaPlacement?: 'inline' | 'stacked';
 	} = $props();
 
 	let vehicleCategories = $derived(
 		showEmptyCategories
-			? allVehicleCategories
+			? [...allVehicleCategories].sort((left, right) => Number(right.count > 0) - Number(left.count > 0))
 			: allVehicleCategories.filter((category) => category.count > 0)
 	);
 </script>
 
 <section class="daynight-home-section daynight-home-section--vehicle-types">
-	<div class="daynight-home-container home-browse-heading"><DesktopSectionHeading title={title} href={showHeaderCta ? resolve('/inventory') : undefined} label={ctaLabel} /></div>
+	<div class="daynight-home-container home-browse-heading">
+		<DesktopSectionHeading
+			{title}
+			href={showHeaderCta ? resolve('/inventory') : undefined}
+			label={ctaLabel}
+		/>
+	</div>
 	<div class="daynight-home-section-content daynight-home-container">
 		<div class="daynight-vehicle-types">
 			<div class="daynight-vehicle-types__grid">
@@ -140,7 +144,9 @@
 </section>
 
 <style>
- .home-browse-heading { padding-top: 36px; }
+	.home-browse-heading {
+		padding-top: 36px;
+	}
 	:global(body.daynight-home-page) .daynight-vehicle-types__grid {
 		gap: 16px !important;
 	}
@@ -191,15 +197,15 @@
 	}
 
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__title {
-		font-size: 20px !important;
-		font-weight: 650 !important;
+		font-size: var(--sa-text-xl) !important;
+		font-weight: var(--sa-weight-heading) !important;
 		line-height: 1.2 !important;
 		margin: 0 0 4px !important;
 	}
 
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__count {
 		color: #64748b !important;
-		font-size: 13px !important;
+		font-size: var(--sa-text-caption) !important;
 		line-height: 1.3 !important;
 		margin: 0 !important;
 	}
@@ -218,8 +224,8 @@
 		box-sizing: border-box;
 		color: #c91620;
 		display: inline-flex;
-		font-size: 15px;
-		font-weight: 650;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		justify-content: center;
 		min-height: 42px;
 		padding: 0 18px;

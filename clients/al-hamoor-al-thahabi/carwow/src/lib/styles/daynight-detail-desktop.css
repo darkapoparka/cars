@@ -33,9 +33,9 @@
 .daynight-detail {
 	background: #f4f6fa;
 	color: #1c1c1c;
-	font-family: var(--sa-font, 'Manrope', ui-sans-serif, system-ui, sans-serif);
-	font-size: 16px;
-	font-weight: 400;
+	font-family: var(--sa-font);
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-regular);
 	line-height: 26px;
 }
 
@@ -73,31 +73,31 @@
 .daynight-detail .h5,
 .daynight-detail .h6,
 .daynight-detail .h7 {
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 }
 
 .daynight-detail .h3 {
-	font-size: 32px;
+	font-size: var(--sa-type-page);
 	line-height: 1.25;
 }
 
 .daynight-detail .h4 {
-	font-size: 24px;
+	font-size: var(--sa-text-2xl);
 	line-height: 1.333;
 }
 
 .daynight-detail .h5 {
-	font-size: 20px;
+	font-size: var(--sa-text-xl);
 	line-height: 1.4;
 }
 
 .daynight-detail .h6 {
-	font-size: 20px;
+	font-size: var(--sa-text-xl);
 	line-height: 1.6;
 }
 
 .daynight-detail .h7 {
-	font-size: 18px;
+	font-size: var(--sa-text-lg);
 	line-height: 1.44;
 }
 
@@ -203,10 +203,10 @@
 }
 
 .daynight-detail .font-weight-500 {
-	font-weight: 500;
+	font-weight: var(--sa-weight-medium);
 }
 .daynight-detail .font-weight-600 {
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 }
 
 .daynight-detail .line-height-28 {
@@ -222,11 +222,11 @@
 	color: #4b4b4b;
 }
 .daynight-detail .text-sm {
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 1.45;
 }
 .daynight-detail .text-xs {
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 	line-height: 1.45;
 }
 .daynight-detail .text-highlight {
@@ -257,8 +257,8 @@
 	border: none;
 	border-radius: 12px;
 	cursor: pointer;
-	font-size: 16px;
-	font-weight: 600;
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-weight-semibold);
 	line-height: 1.2;
 	text-decoration: none;
 	transition: all 0.3s ease;
@@ -278,14 +278,14 @@
 }
 
 .daynight-detail .btn-medium {
-	font-size: 18px;
+	font-size: var(--sa-text-lg);
 	height: 48px;
 	padding: 12px 24px;
 }
 
 .daynight-detail .btn-large {
 	height: 52px;
-	font-size: 18px;
+	font-size: var(--sa-text-lg);
 	padding: 8px 28px;
 }
 
@@ -402,7 +402,7 @@
 }
 .daynight-detail .menu-tab-style4 li.active span {
 	color: #1c1c1c;
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 }
 .daynight-detail .menu-tab-style4 li.active::before {
 	width: 100%;
@@ -515,8 +515,8 @@
 	border-radius: 8px;
 	background-color: var(--sa-ink, #050505);
 	color: #fff;
-	font-size: var(--sa-text-desktop-action, 18px);
-	font-weight: 600;
+	font-size: var(--sa-button-font-size);
+	font-weight: var(--sa-button-font-weight);
 	line-height: 1.15;
 }
 .daynight-detail .listing-details-item--button:first-child {
@@ -616,7 +616,7 @@
 	justify-content: center;
 	padding: 8px 16px;
 	border-radius: 88px;
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
@@ -715,7 +715,7 @@
 	border-radius: 8px;
 	background: transparent;
 	box-shadow: 0 0 0 1px #e7e7e7;
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 26px;
 	outline: none;
 	transition: all 0.3s ease;
@@ -727,9 +727,9 @@
 .daynight-detail input[type='search']::placeholder,
 .daynight-detail textarea::placeholder {
 	color: #9fa1a4;
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 26px;
-	font-weight: 400;
+	font-weight: var(--sa-weight-regular);
 }
 .daynight-detail input.active,
 .daynight-detail input:focus,
@@ -776,7 +776,7 @@
 	align-items: center;
 	gap: 12px;
 	color: #1c1c1c;
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	cursor: pointer;
 }
 .daynight-detail .filter-checkbox input[type='checkbox'] {
@@ -850,9 +850,9 @@
 }
 .daynight-detail .rating-box__score {
 	color: #1c1c1c;
-	font-size: 68px;
+	font-size: var(--sa-text-desktop-hero-title);
 	line-height: 76px;
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 }
 .daynight-detail .rating-box__stars {
 	display: flex;
@@ -865,7 +865,7 @@
 .daynight-detail .rating-box__count {
 	margin: 0;
 	color: #4b4b4b;
-	font-size: 14px;
+	font-size: var(--sa-text-caption);
 }
 .daynight-detail .rating-box__distribution {
 	display: flex;
@@ -929,9 +929,9 @@
 	align-items: center;
 	justify-content: center;
 	background-color: #e7e7e7;
-	font-size: 24px;
+	font-size: var(--sa-text-2xl);
 	line-height: 32px;
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 }
 
 /* --- Map -------------------------------------------------------------------- */
@@ -984,9 +984,9 @@
 	justify-content: center;
 	padding: 4px 12px;
 	border-radius: 8px;
-	font-size: 13px;
+	font-size: var(--sa-text-caption);
 	line-height: 1.35;
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 }
 .daynight-detail .pdp-related .card-box .top .bg-primary-2.highlight,
 .daynight-detail .pdp-related .card-box .top .bg-primary-2.text-white {
@@ -1013,11 +1013,11 @@
 	background-color: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
-	font-size: 13px;
+	font-size: var(--sa-text-caption);
 	line-height: 1.35;
 }
 .daynight-detail .pdp-related .card-box .bottom .category > a {
-	font-size: 13px;
+	font-size: var(--sa-text-caption);
 	line-height: 1.35;
 }
 .daynight-detail .pdp-related .card-box:has(.card--img.daynight-img-fallback) .bottom .category,
@@ -1031,9 +1031,9 @@
 }
 .daynight-detail .pdp-related .card-box .content .card-box__title,
 .daynight-detail .pdp-related .card-box .content .card-box__title > a {
-	font-size: 20px;
+	font-size: var(--sa-text-xl);
 	line-height: 1.36;
-	font-weight: 600;
+	font-weight: var(--sa-weight-semibold);
 	transition: all 0.3s ease;
 }
 .daynight-detail .pdp-related .card-box .content .tag {
@@ -1043,16 +1043,16 @@
 }
 /* Price value/meta sizing [head-css, ungated -> reproduce since head-css drops] */
 .daynight-detail .pdp-related .daynight-card-price__value {
-	font-size: 24px;
-	font-weight: 700;
+	font-size: var(--sa-text-2xl);
+	font-weight: var(--sa-weight-strong);
 	line-height: 1.05;
 }
 .daynight-detail .pdp-related .daynight-card-price__monthly {
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 20px;
 }
 .daynight-detail .pdp-related .daynight-card-price__link {
 	color: #475569;
-	font-size: 16px;
+	font-size: var(--sa-text-base);
 	line-height: 20px;
 }

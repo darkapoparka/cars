@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-hamoor-al-thahabi",
+  "decision": "USE GENERATED CANDIDATE",
+  "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+  "originalSha256": "6918488ad30a9d46195974ebe1b83fe56abc9de2d61151c22ade131019023b97",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "3a945d87e9198790cc0cc15256bbfdec992a95c0d7df6a2edbc31f1f0ebe07e9",
+      "bytes": 147022
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3ae4cc8473042f99c7765d9eff354cf32a9456e032d86fd569613a7d3b727516",
+      "bytes": 146756
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4da527b2b824355184a81691f25b19771d9368f31f4f4c5047436bbf3372f3d5",
+      "bytes": 102912
+    }
+  },
+  "preparedAt": "2026-09-19T04:48:58.575Z",
+  "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+}

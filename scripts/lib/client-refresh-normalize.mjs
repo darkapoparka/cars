@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { loadLogoContract } from './client-logo-contract.mjs';
 
 const exists = (file) => fs.existsSync(file);
 const readText = (file) => fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '');
@@ -301,12 +302,14 @@ export function loadDealerProfile(client, slug) {
   const factsFile = path.join(client, 'business-facts.json');
   const rawFacts = exists(factsFile) ? readJson(factsFile) : {};
   const business = normalizeBusiness(client, slug, rawFacts);
+  const logoContract = loadLogoContract(client);
+  if (logoContract) { business.logo = logoContract.assets.onLight.publicPath; business.logoLight = logoContract.assets.onLight.publicPath; business.logoDark = logoContract.assets.onDark.publicPath; }
   const rawListings = loadInventory(client, rawFacts, slug);
   const listings = rawListings.map((item, index) => normalizeListing(item, index, business))
     .filter((item) => item.title && item.image);
   if (!business.name) throw new Error(`Dealer ${slug} has no reusable business name.`);
   if (!listings.length) throw new Error(`Dealer ${slug} has no reusable inventory with imagery.`);
-  return { schemaVersion: 1, slug, business, listings, rawFacts, sourceCount: rawListings.length };
+  return { schemaVersion: 1, slug, business, listings, rawFacts, sourceCount: rawListings.length, logoContract };
 }
 
 export const refreshNormalizeInternals = {

@@ -14,7 +14,9 @@ import {
   ShieldAlert,
   Ship,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { BlankImportRequestLink } from "./blank-import-request-link";
 
 interface ExternalImportListingsProps {
@@ -41,9 +43,7 @@ const getUnavailableCopy = (
       : "There are no connected listings for this country yet.";
   }
   if (data?.status === "disabled") {
-    return isBg
-      ? "Все още няма свързан каталог с обяви."
-      : "A listings catalogue has not been connected yet.";
+    return isBg ? "Внос по ваша заявка" : "Import a vehicle of your choice";
   }
   return isBg
     ? "Обявите временно не се зареждат."
@@ -151,7 +151,7 @@ const ExternalInventoryCard = ({
         target="_blank"
       >
         <CarFront aria-hidden="true" className="size-10 lg:size-12" />
-        <span className="absolute right-2 bottom-2 left-2 text-center font-medium text-[10px] text-zinc-500 leading-3">
+        <span className="absolute right-2 bottom-2 left-2 text-center font-medium text-micro text-zinc-500">
           {isBg ? "Снимки при източника" : "Photos at source"}
         </span>
         <span className="absolute top-2 right-2 grid size-7 place-items-center rounded-full bg-white/95 text-zinc-700 shadow-sm">
@@ -160,13 +160,13 @@ const ExternalInventoryCard = ({
       </a>
 
       <div
-        className="flex min-w-0 flex-col p-3 lg:p-3.5"
+        className="flex min-w-0 flex-col px-3 py-2.5 lg:p-3.5"
         data-slot="external-inventory-content"
       >
-        <h3 className="line-clamp-2 font-semibold text-base text-foreground leading-5 tracking-tight">
+        <h3 className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading lg:text-card-title-lg">
           {displayTitle}
         </h3>
-        <p className="mt-1 break-words font-bold text-lg tabular-nums leading-5 tracking-tight">
+        <p className="mt-1 break-words font-semibold text-price tabular-nums tracking-heading lg:text-price-lg">
           {getFormattedPrice(listing, locale)}
         </p>
 
@@ -177,7 +177,7 @@ const ExternalInventoryCard = ({
           {facts.map((fact) => (
             <li className="min-w-0" key={fact}>
               <Badge
-                className="h-6 w-full justify-start truncate rounded-md border-0 bg-zinc-100 px-2 font-medium text-[11px] text-zinc-700 tabular-nums"
+                className="h-7 w-full justify-start truncate rounded-md border-0 bg-zinc-100 px-2 font-medium text-meta text-zinc-700 tabular-nums"
                 title={fact}
                 variant="secondary"
               >
@@ -188,7 +188,7 @@ const ExternalInventoryCard = ({
         </ul>
 
         <p
-          className="mt-2 flex min-w-0 items-center gap-1.5 truncate text-[11px] text-muted-foreground leading-4"
+          className="mt-2 flex min-w-0 items-center gap-1.5 truncate text-meta text-muted-foreground"
           title={getLocationLabel(listing)}
         >
           <MapPin aria-hidden="true" className="size-3.5 shrink-0" />
@@ -196,11 +196,11 @@ const ExternalInventoryCard = ({
         </p>
 
         <div
-          className="mt-auto grid grid-cols-1 gap-2 pt-2 min-[360px]:grid-cols-2"
+          className="mt-auto grid grid-cols-[auto_minmax(0,1fr)] gap-1.5 pt-1.5 lg:grid-cols-2 lg:gap-2 lg:pt-2"
           data-slot="external-inventory-action-row"
         >
           <a
-            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2 font-semibold text-xs outline-none transition-colors hover:bg-control-hover focus-visible:ring-[3px] focus-visible:ring-ring/35 lg:h-9"
+            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2 font-semibold text-compact-control outline-none transition-colors hover:bg-control-hover focus-visible:ring-[3px] focus-visible:ring-ring/35 max-lg:min-h-11 max-lg:min-w-24 max-lg:rounded-[0.625rem] max-lg:border-transparent max-lg:bg-zinc-900 max-lg:px-3 max-lg:font-semibold max-lg:text-compact-control max-lg:text-white max-lg:active:bg-zinc-950 max-lg:hover:bg-zinc-950 lg:h-9"
             data-slot="external-inventory-source-action"
             href={listing.source.listingUrl}
             rel="nofollow sponsored noopener noreferrer"
@@ -210,7 +210,7 @@ const ExternalInventoryCard = ({
             <ExternalLink aria-hidden="true" className="size-3.5" />
           </a>
           <Link
-            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md bg-[var(--lead-site-accent)] px-2 font-semibold text-white text-xs outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] lg:h-9"
+            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md bg-[var(--lead-site-accent)] px-2 font-semibold text-compact-control text-white outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] max-lg:min-h-11 max-lg:rounded-[0.625rem] max-lg:px-3 max-lg:font-semibold max-lg:text-compact-control max-lg:active:bg-[var(--lead-site-accent-hover)] lg:h-9"
             data-slot="external-inventory-import-action"
             href={buildImportRequestHref(
               importsPath,
@@ -268,19 +268,36 @@ export const ExternalImportListings = ({
         > => feed.status !== "ok"
       ) ?? null;
 
+    const StateIcon =
+      unavailableFeed?.status === "disabled" ? Ship : ShieldAlert;
+
     return (
       <div
-        className="flex min-h-36 flex-col items-center justify-center rounded-xl bg-white px-5 py-6 text-center lg:min-h-44 lg:border lg:border-border lg:bg-card"
+        className="flex min-h-36 flex-col items-center justify-center overflow-hidden rounded-xl bg-card px-5 pb-5 text-center lg:min-h-44 lg:pb-6"
         data-provider-state={unavailableFeed?.status ?? "unavailable"}
       >
-        <ShieldAlert
-          aria-hidden="true"
-          className="size-5 text-muted-foreground"
-        />
-        <h2 className="mt-2 font-semibold text-sm" id={headingId}>
+        {unavailableFeed?.status === "disabled" ? (
+          <Image
+            alt=""
+            className="mb-2 h-38 w-[calc(100%+2.5rem)] max-w-none object-cover lg:mb-4 lg:h-64"
+            height={1024}
+            sizes="(max-width: 1023px) 100vw, 640px"
+            src="/images/services/import-banner-v2.png"
+            width={1536}
+          />
+        ) : (
+          <StateIcon
+            aria-hidden="true"
+            className="mt-6 size-5 text-muted-foreground"
+          />
+        )}
+        <h2
+          className="mt-2 font-semibold text-card-title tracking-heading lg:text-card-title-lg"
+          id={headingId}
+        >
           {getUnavailableCopy(unavailableFeed, isBg)}
         </h2>
-        <p className="mt-2 max-w-sm text-sm text-zinc-600 leading-5">
+        <p className="mt-2 max-w-sm text-body text-zinc-600">
           {isBg
             ? "Поставете линк горе или опишете автомобила, който търсите."
             : "Paste a link above or describe the vehicle you want."}
@@ -290,6 +307,7 @@ export const ExternalImportListings = ({
             defaultOrigin={selectedOrigin}
             href={blankRequestHref}
             isBg={isBg}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
           />
         ) : null}
       </div>
@@ -299,7 +317,7 @@ export const ExternalImportListings = ({
   if (listings.length === 0) {
     return (
       <div
-        className="rounded-xl bg-secondary p-7 text-center text-muted-foreground text-sm lg:border lg:border-border lg:bg-card"
+        className="rounded-xl bg-secondary p-7 text-center text-meta text-muted-foreground lg:border lg:border-border lg:bg-card"
         data-provider-state="empty"
       >
         <h2 className="font-medium" id={headingId}>
@@ -310,6 +328,7 @@ export const ExternalImportListings = ({
             defaultOrigin={selectedOrigin}
             href={blankRequestHref}
             isBg={isBg}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
           />
         ) : null}
       </div>
