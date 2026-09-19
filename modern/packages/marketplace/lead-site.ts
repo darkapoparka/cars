@@ -51,7 +51,7 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/variant-2/lead-hero.jpg",
   locale: "en-US",
-  logoPath: "/variant-2/assets/brand/logo-on-dark.webp",
+  logoPath: "/assets/brand/logo-universal.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Texas%20Drive%20Auto%2C%2010511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220&z=16&output=embed",
   mapsUrl:
