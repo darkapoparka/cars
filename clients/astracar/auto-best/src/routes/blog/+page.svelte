@@ -1,5 +1,6 @@
 <script lang="ts">
   import './blog.css';
+  import { page } from '$app/state';
   import BlogCard from '$components/editorial/BlogCard.svelte';
   import BlogHero from '$components/editorial/BlogHero.svelte';
   import { resolve } from '$app/paths';
@@ -23,7 +24,7 @@
     {#if data.posts.length}
       <div class="dn-blog-grid">
         {#each data.posts as post, index (post.id)}
-          <BlogCard {post} priority={index < 3} />
+          <BlogCard {post} returnTo={`${page.url.pathname}${page.url.search}#article-${post.id}`} priority={index < 3} />
         {/each}
       </div>
     {:else}

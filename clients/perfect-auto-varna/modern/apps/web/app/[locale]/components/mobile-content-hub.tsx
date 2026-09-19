@@ -190,12 +190,12 @@ export const MobileContentHub = ({
 
           <div className="px-4 pt-3 pb-2 lg:px-6">
             <div className="flex items-center justify-between gap-3">
-              <h1 className="font-semibold text-[19px] tracking-tight lg:text-2xl">
+              <h1 className="font-semibold text-section-title tracking-heading lg:text-section-title-lg">
                 {isBg ? "Съвети и статии" : "Guides and articles"}
               </h1>
               <output
                 aria-atomic="true"
-                className="text-[12px] text-muted-foreground tabular-nums"
+                className="text-micro text-muted-foreground tabular-nums"
               >
                 {visibleItems.length} {isBg ? "материала" : "items"}
               </output>
@@ -206,33 +206,42 @@ export const MobileContentHub = ({
             {visibleItems.map((item, index) => (
               <Link
                 className="group flex min-h-[124px] overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
+                data-slot="content-card"
                 href={`${localize(`/guides/${item.slug}`)}${serializeContentSearch({ query, filter })}`}
                 key={`${item.type}-${item.slug}`}
                 prefetch={false}
               >
-                <div className="relative w-[35%] min-w-[112px] shrink-0 overflow-hidden bg-zinc-200">
+                <div
+                  className="relative w-24 min-w-24 shrink-0 overflow-hidden bg-zinc-200 min-[360px]:w-[35%] min-[360px]:min-w-28"
+                  data-slot="content-card-media"
+                >
                   <Image
                     alt=""
                     className="object-cover"
                     fill
                     loading={index === 0 ? "eager" : "lazy"}
-                    sizes="(max-width: 768px) 140px, 260px"
+                    sizes="(max-width: 359px) 96px, (max-width: 768px) 140px, 260px"
                     src={item.image}
                   />
                 </div>
-                <div className="flex min-w-0 flex-1 flex-col px-3 py-2.5">
-                  <div className="flex items-center gap-1.5 font-semibold text-[10px] text-muted-foreground uppercase tracking-[0.09em]">
-                    <span className="truncate">{item.category}</span>
-                    <span aria-hidden="true">·</span>
-                    <span className="shrink-0">{item.meta}</span>
+                <div className="flex min-w-0 flex-1 flex-col px-2 py-2.5 min-[360px]:px-3">
+                  <div
+                    className="grid grid-cols-1 items-center gap-0 font-semibold text-micro text-muted-foreground uppercase tracking-label min-[360px]:flex min-[360px]:flex-wrap min-[360px]:gap-x-1.5"
+                    data-slot="content-card-meta"
+                  >
+                    <span className="whitespace-nowrap">{item.category}</span>
+                    <span className="whitespace-nowrap">{item.meta}</span>
                   </div>
-                  <h2 className="mt-1 line-clamp-3 font-semibold text-[16px] leading-5 tracking-tight lg:line-clamp-2">
+                  <h2 className="mt-1 line-clamp-3 font-semibold text-card-title tracking-heading lg:line-clamp-2 lg:text-card-title-lg">
                     {item.title}
                   </h2>
-                  <p className="mt-1 line-clamp-1 text-[12.5px] text-zinc-600 leading-[17px] lg:line-clamp-2">
+                  <p
+                    className="mt-1 hidden text-meta text-zinc-600 lg:line-clamp-2 min-[360px]:line-clamp-1"
+                    data-slot="content-card-description"
+                  >
                     {item.description}
                   </p>
-                  <span className="mt-auto inline-flex items-center gap-1 pt-1.5 font-semibold text-[12px]">
+                  <span className="mt-auto inline-flex items-center gap-1 pt-1.5 font-semibold text-compact-control">
                     {isBg ? "Прочети" : "Read"}
                     <ArrowRight aria-hidden="true" className="size-3.5" />
                   </span>
@@ -242,18 +251,18 @@ export const MobileContentHub = ({
           </div>
           {visibleItems.length === 0 ? (
             <div className="mx-4 mb-8 rounded-2xl bg-white px-5 py-10 text-center lg:mx-6">
-              <p className="font-semibold text-[17px]">
+              <p className="font-semibold text-card-title tracking-heading">
                 {isBg
                   ? "Няма материали с тези критерии"
                   : "No content matches these filters"}
               </p>
-              <p className="mt-1 text-[13px] text-zinc-600">
+              <p className="mt-1 text-meta text-zinc-600">
                 {isBg
                   ? "Променете търсенето или филтъра."
                   : "Change the search or filter."}
               </p>
               <button
-                className="mt-4 rounded-full bg-zinc-950 px-4 py-2.5 font-semibold text-sm text-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2"
+                className="mt-4 rounded-full bg-zinc-950 px-4 py-2.5 font-semibold text-compact-control text-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2"
                 disabled={!ready}
                 onClick={() => {
                   updateSearch({ query: "", filter: "all" });
@@ -279,7 +288,7 @@ export const MobileContentHub = ({
           <DrawerHeader className="shrink-0 px-4 pt-2 pb-3">
             <div className="grid grid-cols-[44px_minmax(0,1fr)_44px] items-center gap-2">
               <span />
-              <DrawerTitle className="text-center text-[17px]">
+              <DrawerTitle className="text-center text-card-title">
                 {isBg ? "Филтрирай материалите" : "Filter content"}
               </DrawerTitle>
               <DrawerClose
@@ -300,8 +309,8 @@ export const MobileContentHub = ({
                   aria-pressed={filter === value}
                   className={
                     filter === value
-                      ? "flex min-h-12 items-center justify-between rounded-xl bg-zinc-950 px-4 font-semibold text-[15px] text-white"
-                      : "flex min-h-12 items-center justify-between rounded-xl bg-zinc-100 px-4 font-semibold text-[15px] text-zinc-950"
+                      ? "flex min-h-12 items-center justify-between rounded-xl bg-zinc-950 px-4 font-semibold text-compact-control text-white"
+                      : "flex min-h-12 items-center justify-between rounded-xl bg-zinc-100 px-4 font-semibold text-compact-control text-zinc-950"
                   }
                   key={value}
                   onClick={() => selectFilter(value)}

@@ -11,10 +11,9 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  verification: 'sample' | 'verified';
+  evidenceUrl?: string;
   image: string;
-  gallery: string[];
-  sourceUrl: string;
-  description: string;
   category: string;
   body: string;
   make: string;
@@ -31,21 +30,13 @@ export type Vehicle = {
   href: `/listing-detail-v1/${number}`;
 };
 
-// Representative published listings captured 2026-09-07; availability requires confirmation.
 export const featuredVehicles: Vehicle[] = [
   {
     "id": 1,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11747499643415236-mini-cooper-1-6d-euro4",
     "image": "/assets/astracar/vehicle-01-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-01-1.webp",
-      "/assets/astracar/vehicle-01-2.webp",
-      "/assets/astracar/vehicle-01-3.webp",
-      "/assets/astracar/vehicle-01-4.webp",
-      "/assets/astracar/vehicle-01-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11747499643415236-mini-cooper-1-6d-euro4",
-    "description": "Mini Cooper 1.6D EURO4, 2009 г., дизел, 143 100 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Mini",
     "title": "Mini Cooper 1.6D EURO4",
@@ -64,17 +55,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 2,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-21755975324167565-renault-captur-0-9t-euro6b",
     "image": "/assets/astracar/vehicle-02-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-02-1.webp",
-      "/assets/astracar/vehicle-02-2.webp",
-      "/assets/astracar/vehicle-02-3.webp",
-      "/assets/astracar/vehicle-02-4.webp",
-      "/assets/astracar/vehicle-02-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-21755975324167565-renault-captur-0-9t-euro6b",
-    "description": "Renault Captur 0.9T EURO6B, 2017 г., бензин, 127 663 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Renault",
     "title": "Renault Captur 0.9T EURO6B",
@@ -94,17 +78,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 3,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11737822623289964-bmw-535-xdrive-full-eu5b",
     "image": "/assets/astracar/vehicle-03-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-03-1.webp",
-      "/assets/astracar/vehicle-03-2.webp",
-      "/assets/astracar/vehicle-03-3.webp",
-      "/assets/astracar/vehicle-03-4.webp",
-      "/assets/astracar/vehicle-03-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11737822623289964-bmw-535-xdrive-full-eu5b",
-    "description": "BMW 535 xDrive FULL EU5B, 2012 г., дизел, 177 390 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Седан",
+    "category": "Sedan",
     "body": "Sedan",
     "make": "BMW",
     "title": "BMW 535 xDrive FULL EU5B",
@@ -117,7 +94,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [
       "4x4",
       "Навигация",
-      "Парктроник"
+      "Парктроник",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 14600,
@@ -125,17 +103,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 4,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11763446260159317-audi-a3-2-0tdi-s-line-quattro",
     "image": "/assets/astracar/vehicle-04-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-04-1.webp",
-      "/assets/astracar/vehicle-04-2.webp",
-      "/assets/astracar/vehicle-04-3.webp",
-      "/assets/astracar/vehicle-04-4.webp",
-      "/assets/astracar/vehicle-04-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11763446260159317-audi-a3-2-0tdi-s-line-quattro",
-    "description": "Audi A3 2.0TDI S-LINE QUATTRO, 2006 г., дизел, 181 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Audi",
     "title": "Audi A3 2.0TDI S-LINE QUATTRO",
@@ -155,17 +126,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 5,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11752951085157214-audi-a5-2-0tfsi-euro5b",
     "image": "/assets/astracar/vehicle-05-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-05-1.webp",
-      "/assets/astracar/vehicle-05-2.webp",
-      "/assets/astracar/vehicle-05-3.webp",
-      "/assets/astracar/vehicle-05-4.webp",
-      "/assets/astracar/vehicle-05-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11752951085157214-audi-a5-2-0tfsi-euro5b",
-    "description": "Audi A5 2.0TFSI EURO5B, 2010 г., бензин, 165 170 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Купе",
+    "category": "Coupe",
     "body": "Coupe",
     "make": "Audi",
     "title": "Audi A5 2.0TFSI EURO5B",
@@ -185,17 +149,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 6,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11762018600091690-fiat-punto-1-4i-evo-euro4",
     "image": "/assets/astracar/vehicle-06-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-06-1.webp",
-      "/assets/astracar/vehicle-06-2.webp",
-      "/assets/astracar/vehicle-06-3.webp",
-      "/assets/astracar/vehicle-06-4.webp",
-      "/assets/astracar/vehicle-06-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11762018600091690-fiat-punto-1-4i-evo-euro4",
-    "description": "Fiat Punto 1.4i EVO EURO4, 2010 г., бензин, 139 800 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Fiat",
     "title": "Fiat Punto 1.4i EVO EURO4",
@@ -214,17 +171,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 7,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11755359473275644-audi-a3-1-6tdi-eu5b-sportbag",
     "image": "/assets/astracar/vehicle-07-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-07-1.webp",
-      "/assets/astracar/vehicle-07-2.webp",
-      "/assets/astracar/vehicle-07-3.webp",
-      "/assets/astracar/vehicle-07-4.webp",
-      "/assets/astracar/vehicle-07-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11755359473275644-audi-a3-1-6tdi-eu5b-sportbag",
-    "description": "Audi A3 1.6TDI EU5B SPORTBAG, 2015 г., дизел, 162 148 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Audi",
     "title": "Audi A3 1.6TDI EU5B SPORTBAG",
@@ -235,6 +185,7 @@ export const featuredVehicles: Vehicle[] = [
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
+      "Подгряване на седалки",
       "Навигация",
       "Парктроник"
     ],
@@ -244,17 +195,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 8,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11766248164423161-mini-cooper-1-6d-euro5",
     "image": "/assets/astracar/vehicle-08-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-08-1.webp",
-      "/assets/astracar/vehicle-08-2.webp",
-      "/assets/astracar/vehicle-08-3.webp",
-      "/assets/astracar/vehicle-08-4.webp",
-      "/assets/astracar/vehicle-08-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11766248164423161-mini-cooper-1-6d-euro5",
-    "description": "Mini Cooper 1.6D EURO5, 2010 г., дизел, 150 052 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Mini",
     "title": "Mini Cooper 1.6D EURO5",
@@ -271,17 +215,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 9,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11780761931333448-audi-a6-2-0tdi-euro5b",
     "image": "/assets/astracar/vehicle-09-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-09-1.webp",
-      "/assets/astracar/vehicle-09-2.webp",
-      "/assets/astracar/vehicle-09-3.webp",
-      "/assets/astracar/vehicle-09-4.webp",
-      "/assets/astracar/vehicle-09-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11780761931333448-audi-a6-2-0tdi-euro5b",
-    "description": "Audi A6 2.0TDI EURO5B, 2014 г., дизел, 159 400 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Комби",
+    "category": "Wagon",
     "body": "Wagon",
     "make": "Audi",
     "title": "Audi A6 2.0TDI EURO5B",
@@ -292,8 +229,10 @@ export const featuredVehicles: Vehicle[] = [
     "fuel": "Дизел",
     "transmission": "Ръчна",
     "equipment": [
+      "360° камера",
       "Навигация",
-      "Парктроник"
+      "Парктроник",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 8999,
@@ -301,17 +240,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 10,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-21780733368439452-bmw-x7-3-0d-xdrive-eu6d",
     "image": "/assets/astracar/vehicle-10-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-10-1.webp",
-      "/assets/astracar/vehicle-10-2.webp",
-      "/assets/astracar/vehicle-10-3.webp",
-      "/assets/astracar/vehicle-10-4.webp",
-      "/assets/astracar/vehicle-10-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-21780733368439452-bmw-x7-3-0d-xdrive-eu6d",
-    "description": "BMW X7 3.0d xDrive EU6D, 2020 г., дизел, 190 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "BMW",
     "title": "BMW X7 3.0d xDrive EU6D",
@@ -323,8 +255,12 @@ export const featuredVehicles: Vehicle[] = [
     "transmission": "Автоматик",
     "equipment": [
       "4x4",
+      "360° камера",
+      "Панорамен покрив",
+      "Подгряване на седалки",
       "Навигация",
-      "Парктроник"
+      "Парктроник",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 49000,
@@ -332,17 +268,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 11,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11773504878088103-citroen-c3-1-2i-euro5b",
     "image": "/assets/astracar/vehicle-11-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-11-1.webp",
-      "/assets/astracar/vehicle-11-2.webp",
-      "/assets/astracar/vehicle-11-3.webp",
-      "/assets/astracar/vehicle-11-4.webp",
-      "/assets/astracar/vehicle-11-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11773504878088103-citroen-c3-1-2i-euro5b",
-    "description": "Citroen C3 1.2i EURO5B, 2013 г., бензин, 136 574 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Хечбек",
+    "category": "Hatchback",
     "body": "Hatchback",
     "make": "Citroen",
     "title": "Citroen C3 1.2i EURO5B",
@@ -361,17 +290,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 12,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-21783183116609383-hyundai-ix35-1-6gdi-euro5",
     "image": "/assets/astracar/vehicle-12-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-12-1.webp",
-      "/assets/astracar/vehicle-12-2.webp",
-      "/assets/astracar/vehicle-12-3.webp",
-      "/assets/astracar/vehicle-12-4.webp",
-      "/assets/astracar/vehicle-12-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-21783183116609383-hyundai-ix35-1-6gdi-euro5",
-    "description": "Hyundai IX35 1.6GDI EURO5, 2012 г., бензин, 56 178 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Hyundai",
     "title": "Hyundai IX35 1.6GDI EURO5",
@@ -390,17 +312,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 13,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-21783791992541606-mercedes-benz-ml-350-3-0cdi-premium-eu6",
     "image": "/assets/astracar/vehicle-13-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-13-1.webp",
-      "/assets/astracar/vehicle-13-2.webp",
-      "/assets/astracar/vehicle-13-3.webp",
-      "/assets/astracar/vehicle-13-4.webp",
-      "/assets/astracar/vehicle-13-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-21783791992541606-mercedes-benz-ml-350-3-0cdi-premium-eu6",
-    "description": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6, 2010 г., дизел, 182 887 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Mercedes-Benz",
     "title": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
@@ -421,17 +336,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 14,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11782577422662538-peugeot-2008-1-2-puretech-eu6d",
     "image": "/assets/astracar/vehicle-14-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-14-1.webp",
-      "/assets/astracar/vehicle-14-2.webp",
-      "/assets/astracar/vehicle-14-3.webp",
-      "/assets/astracar/vehicle-14-4.webp",
-      "/assets/astracar/vehicle-14-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11782577422662538-peugeot-2008-1-2-puretech-eu6d",
-    "description": "Peugeot 2008 1.2 PureTech EU6D, 2022 г., бензин, 36 216 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Джип",
+    "category": "SUV",
     "body": "SUV",
     "make": "Peugeot",
     "title": "Peugeot 2008 1.2 PureTech EU6D",
@@ -442,8 +350,10 @@ export const featuredVehicles: Vehicle[] = [
     "fuel": "Бензин",
     "transmission": "Ръчна",
     "equipment": [
+      "360° камера",
       "Навигация",
-      "Парктроник"
+      "Парктроник",
+      "Безключов достъп"
     ],
     "condition": "used",
     "priceEur": 14000,
@@ -451,17 +361,10 @@ export const featuredVehicles: Vehicle[] = [
   },
   {
     "id": 15,
+    "verification": "verified",
+    "evidenceUrl": "https://astracar.mobile.bg/obiava-11782575631736534-citroen-jumpy-1-6hdi-l2h1eu6b",
     "image": "/assets/astracar/vehicle-15-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-15-1.webp",
-      "/assets/astracar/vehicle-15-2.webp",
-      "/assets/astracar/vehicle-15-3.webp",
-      "/assets/astracar/vehicle-15-4.webp",
-      "/assets/astracar/vehicle-15-5.webp"
-    ],
-    "sourceUrl": "https://astracar.mobile.bg/obiava-11782575631736534-citroen-jumpy-1-6hdi-l2h1eu6b",
-    "description": "Citroen Jumpy 1.6HDI L2H1EU6B, 2017 г., дизел, 186 586 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
-    "category": "Ван",
+    "category": "Minivan",
     "body": "Minivan",
     "make": "Citroen",
     "title": "Citroen Jumpy 1.6HDI L2H1EU6B",
@@ -480,4 +383,12 @@ export const featuredVehicles: Vehicle[] = [
     "href": "/listing-detail-v1/15"
   }
 ];
-export const formatVehiclePrice = (priceEur: number) => new Intl.NumberFormat('bg-BG').format(priceEur) + ' €';
+
+const inventoryLocale = "bg-BG";
+const inventoryCurrency = "EUR";
+export const formatVehiclePrice = (amount: number) =>
+  new Intl.NumberFormat(inventoryLocale, {
+    style: 'currency',
+    currency: inventoryCurrency,
+    maximumFractionDigits: 0
+  }).format(amount);

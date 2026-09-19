@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed",
     "accent": "#252a30",
-    "logo": "/assets/avangard/wordmark.svg",
-    "logoLight": "/assets/avangard/wordmark-light.svg",
-    "logoDark": "/assets/avangard/wordmark-light.svg",
+    "logo": "/dealer-brand/logo-on-light.webp",
+    "logoLight": "/dealer-brand/logo-on-light.webp",
+    "logoDark": "/dealer-brand/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "https://www.facebook.com/avangardautovarna/",
       "instagram": "https://www.instagram.com/avangard_auto_varna/",
@@ -2693,5 +2693,31 @@
     "accent": "#252a30",
     "logoLimitation": "Official Mobile.bg logo is 66x40; Instagram logo 100x100. Original assets preserved. Light/dark text wordmarks in headers are temporary typography, not an official logo reconstruction."
   },
-  "sourceCount": 16
+  "sourceCount": 16,
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealer": "avangard-auto",
+    "decision": "REFINE EXISTING IDENTITY",
+    "source": "Canonical Cars clients/avangard-auto/assets/wordmark.svg; existing temporary text wordmark restored as raster, not an official-logo claim",
+    "originalSha256": "d89639891d142b49a4f52e8978302ea2f23f6f5ba55ec47638bac38189ac7b70",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "sha256": "123da06ee689f2228b330b820dd5cdbe170e2194cae16139463e7609e66572c7",
+        "bytes": 28346
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "sha256": "2513d1d361262c0daf579bee19258759660be96e53528ec6193d4e89912f441b",
+        "bytes": 29960
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "sha256": "01db4585d5bd66b786f2c5474c7455adfa9c0b2e506a1c23ba95ad98a03525a9",
+        "bytes": 26072
+      }
+    },
+    "preparedAt": "2026-09-19T04:58:21.872Z",
+    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+  }
 }

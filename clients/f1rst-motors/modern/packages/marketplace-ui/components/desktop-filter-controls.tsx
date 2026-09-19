@@ -30,7 +30,7 @@ export const desktopQuickFilterRailItemClassName =
   "w-auto min-w-24 shrink-0 justify-between gap-2 px-4 has-[>svg]:px-4 min-[112rem]:px-[18px] min-[112rem]:has-[>svg]:px-[18px]";
 
 const desktopQuickFilterOptionClassName =
-  "min-h-12 justify-start rounded-xl border border-transparent bg-zinc-100 px-4 font-medium text-base text-zinc-900 tabular-nums shadow-none transition-colors duration-150 hover:border-zinc-300 hover:bg-zinc-200 active:bg-zinc-300 focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-offset-1";
+  "min-h-12 justify-start rounded-xl border border-transparent bg-zinc-100 px-4 font-medium text-body text-zinc-900 tabular-nums shadow-none transition-colors duration-150 hover:border-zinc-300 hover:bg-zinc-200 active:bg-zinc-300 focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-offset-1";
 
 export const getDesktopQuickFilterClassName = (
   active: boolean,
@@ -39,13 +39,13 @@ export const getDesktopQuickFilterClassName = (
   let surfaceClassName = "bg-control text-foreground hover:bg-control-hover";
   if (active) {
     surfaceClassName =
-      "bg-[var(--lead-site-accent)] text-white hover:bg-[var(--lead-site-accent-hover)]";
+      "border-zinc-950 bg-zinc-950 text-white hover:border-zinc-800 hover:bg-zinc-800";
   } else if (elevated) {
-    surfaceClassName = "bg-card text-foreground hover:bg-card/80";
+    surfaceClassName = "bg-white text-zinc-800";
   }
 
   return cn(
-    "h-11 rounded-full border-0 px-4 font-semibold text-base transition-colors duration-150 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
+    "h-10 rounded-full border border-zinc-300 bg-white px-4 font-semibold text-compact-control text-zinc-800 shadow-sm transition-[background-color,border-color,box-shadow,color] duration-150 hover:border-zinc-400 hover:bg-zinc-50 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
     surfaceClassName
   );
 };
@@ -235,10 +235,10 @@ export const DesktopQuickFilterDialog = ({
         <DialogHeader className="px-5 py-4 text-left">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <DialogTitle className="text-xl text-zinc-950 leading-7">
+              <DialogTitle className="text-dialog-title text-zinc-950">
                 {title}
               </DialogTitle>
-              <DialogDescription className="mt-1 text-base text-zinc-600 leading-6">
+              <DialogDescription className="mt-1 text-body text-zinc-600">
                 {localizeMarketplace(
                   isBg,
                   "Изберете една опция и приложете филтъра.",
@@ -299,7 +299,7 @@ export const DesktopQuickFilterDialog = ({
         </div>
         <DialogFooter className="bg-zinc-50 px-5 py-4 sm:justify-end">
           <Button
-            className="h-11 rounded-xl bg-[var(--lead-site-accent)] px-6 font-semibold text-base text-white hover:bg-[var(--lead-site-accent-hover)]"
+            className="h-11 rounded-xl bg-[var(--lead-site-accent)] px-6 font-semibold text-compact-control text-white hover:bg-[var(--lead-site-accent-hover)]"
             onClick={applySelection}
             type="button"
           >
@@ -443,10 +443,12 @@ export const DesktopQuickRangeDialog = ({
       >
         <DialogHeader className="px-5 py-3 text-left">
           <div className="flex items-center justify-between gap-4">
-            <DialogTitle className="text-lg text-zinc-950 leading-7">
+            <DialogTitle className="text-card-title-lg text-zinc-950">
               {title}
             </DialogTitle>
-            <DialogDescription className="sr-only">{description}</DialogDescription>
+            <DialogDescription className="sr-only">
+              {description}
+            </DialogDescription>
             <DialogClose asChild>
               <Button
                 aria-label={localizeMarketplace(isBg, "Затвори", "Close")}
@@ -484,7 +486,7 @@ export const DesktopQuickRangeDialog = ({
         </div>
         <DialogFooter className="flex-row justify-between bg-zinc-50 px-5 py-4 sm:justify-between">
           <Button
-            className="h-11 rounded-xl px-4 font-semibold text-base"
+            className="h-11 rounded-xl px-4 font-semibold text-compact-control"
             onClick={() => setDraftRange(range)}
             type="button"
             variant="ghost"
@@ -492,7 +494,7 @@ export const DesktopQuickRangeDialog = ({
             {localizeMarketplace(isBg, "Изчисти", "Clear")}
           </Button>
           <Button
-            className="h-11 rounded-xl bg-[var(--lead-site-accent)] px-6 font-semibold text-base text-white hover:bg-[var(--lead-site-accent-hover)]"
+            className="h-11 rounded-xl bg-[var(--lead-site-accent)] px-6 font-semibold text-compact-control text-white hover:bg-[var(--lead-site-accent-hover)]"
             onClick={applyRange}
             type="button"
           >

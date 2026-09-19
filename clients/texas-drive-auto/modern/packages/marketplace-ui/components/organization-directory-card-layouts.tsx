@@ -70,7 +70,7 @@ const OrganizationIdentityHeader = ({
         url={organization.logoUrl ?? organization.defaultAvatar?.src}
       />
       <div className="min-w-0 flex-1">
-        <h3 className="line-clamp-2 font-semibold text-card-title">
+        <h3 className="line-clamp-2 font-semibold text-card-title lg:text-card-title-lg">
           <Link
             className="rounded-sm text-foreground hover:underline hover:underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             href={organization.profileAction.href}
@@ -192,7 +192,7 @@ const OrganizationServiceList = ({
   return (
     <p
       className={cn(
-        "flex min-w-0 items-center gap-1.5 text-muted-foreground text-xs",
+        "flex min-w-0 items-center gap-1.5 text-meta text-muted-foreground",
         compactDesktop && "lg:hidden"
       )}
     >
@@ -287,7 +287,7 @@ const MobileOrganizationProfileCard = ({
       <DesktopOrganizationProfileImage organization={organization} />
       <div className="min-w-0 flex-1">
         <div className="flex min-w-0 items-center gap-1.5">
-          <h3 className="min-w-0 flex-1 break-words font-semibold text-card-title">
+          <h3 className="min-w-0 flex-1 break-words font-semibold text-card-title lg:text-card-title-lg">
             <Link
               className="rounded-sm text-foreground after:absolute after:inset-0 hover:underline hover:underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               href={organization.profileAction.href}
@@ -326,7 +326,7 @@ const MobileOrganizationProfileCard = ({
 
     <Link
       aria-label={`${organization.profileAction.label}: ${organization.name}`}
-      className="relative z-10 mt-3 inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-lg bg-control px-3 font-semibold text-sm transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="relative z-10 mt-3 inline-flex h-11 w-full items-center justify-center gap-1.5 rounded-lg bg-control px-3 font-semibold text-compact-control transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       href={organization.profileAction.href}
       prefetch={false}
     >
@@ -353,7 +353,7 @@ const DesktopOrganizationProfileCard = ({
     <div className="grid min-w-0 grid-cols-[4rem_minmax(0,1fr)] items-center gap-3">
       <DesktopOrganizationProfileImage organization={organization} />
       <div className="min-w-0 flex-1">
-        <h3 className="min-w-0 font-semibold text-card-title">
+        <h3 className="min-w-0 font-semibold text-card-title lg:text-card-title-lg">
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
@@ -372,7 +372,7 @@ const DesktopOrganizationProfileCard = ({
             >
               <p className="font-semibold text-sm">{organization.name}</p>
               {organization.locationLabel ? (
-                <p className="mt-1 flex items-center gap-1.5 text-xs opacity-80">
+                <p className="mt-1 flex items-center gap-1.5 text-meta opacity-80">
                   <MapPin aria-hidden="true" className="size-3.5 shrink-0" />
                   <span>{organization.locationLabel}</span>
                 </p>
@@ -381,7 +381,7 @@ const DesktopOrganizationProfileCard = ({
           </Tooltip>
         </h3>
         {organization.locationLabel ? (
-          <p className="mt-1 flex min-w-0 items-center gap-1 text-foreground/60 text-xs">
+          <p className="mt-1 flex min-w-0 items-center gap-1 text-foreground/60 text-meta">
             <MapPin aria-hidden="true" className="size-3.5 shrink-0" />
             <span className="truncate">{organization.locationLabel}</span>
           </p>
@@ -417,7 +417,7 @@ const DesktopOrganizationProfileCard = ({
       />
       <Link
         aria-label={`${organization.profileAction.label}: ${organization.name}`}
-        className="relative z-10 inline-flex h-10 shrink-0 items-center justify-center gap-1.5 rounded-lg bg-control px-3 font-semibold text-sm transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        className="relative z-10 inline-flex h-10 shrink-0 items-center justify-center gap-1.5 rounded-lg bg-control px-3 font-semibold text-compact-control transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         href={organization.profileAction.href}
         prefetch={false}
       >
@@ -435,14 +435,17 @@ const DesktopOrganizationListCard = ({
   signals,
   services,
   tradeLanes,
-}: Omit<OrganizationDirectoryLayoutProps, "badges" | "previewImages" | "priority"> & {
+}: Omit<
+  OrganizationDirectoryLayoutProps,
+  "badges" | "previewImages" | "priority"
+> & {
   signals: readonly OrganizationDirectorySignal[];
 }) => (
   <div className="hidden min-h-32 grid-cols-[4rem_minmax(14rem,1.35fr)_minmax(12rem,0.9fr)_minmax(15rem,1fr)_auto] items-center gap-4 p-4 lg:grid">
     <DesktopOrganizationProfileImage organization={organization} />
 
     <div className="min-w-0">
-      <h3 className="line-clamp-2 break-words font-semibold text-lg leading-5">
+      <h3 className="line-clamp-2 break-words font-semibold text-card-title-lg tracking-heading">
         <Link
           className="rounded-sm text-foreground after:absolute after:inset-0 hover:underline hover:underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           href={organization.profileAction.href}
@@ -457,7 +460,7 @@ const DesktopOrganizationListCard = ({
           label={organization.typeLabel}
         />
         {organization.locationLabel ? (
-          <span className="flex min-w-0 items-center gap-1 text-muted-foreground text-xs">
+          <span className="flex min-w-0 items-center gap-1 text-meta text-muted-foreground">
             <MapPin aria-hidden="true" className="size-3.5 shrink-0" />
             <span className="truncate">{organization.locationLabel}</span>
           </span>
@@ -472,16 +475,10 @@ const DesktopOrganizationListCard = ({
 
     <div className="min-w-0 space-y-2">
       {tradeLanes[0] ? (
-        <OrganizationScopeBadge
-          toLabel={labels.to}
-          tradeLane={tradeLanes[0]}
-        />
+        <OrganizationScopeBadge toLabel={labels.to} tradeLane={tradeLanes[0]} />
       ) : null}
       {signals.length ? (
-        <OrganizationSignalList
-          label={labels.credentials}
-          signals={signals}
-        />
+        <OrganizationSignalList label={labels.credentials} signals={signals} />
       ) : null}
     </div>
 
@@ -489,7 +486,7 @@ const DesktopOrganizationListCard = ({
       <DesktopOrganizationInventoryLine inventory={organization.inventory} />
       <OrganizationBrandList brands={brands} labels={labels} limit={4} />
       {services.length > 0 ? (
-        <p className="flex min-w-0 items-center gap-1.5 text-muted-foreground text-xs">
+        <p className="flex min-w-0 items-center gap-1.5 text-meta text-muted-foreground">
           <Warehouse aria-hidden="true" className="size-3.5 shrink-0" />
           <span className="truncate">{services.slice(0, 3).join(" · ")}</span>
         </p>
@@ -498,7 +495,7 @@ const DesktopOrganizationListCard = ({
 
     <Link
       aria-label={`${organization.profileAction.label}: ${organization.name}`}
-      className="relative z-10 inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg bg-control px-3 font-semibold text-sm transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="relative z-10 inline-flex h-9 shrink-0 items-center gap-1.5 rounded-lg bg-control px-3 font-semibold text-compact-control transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       href={organization.profileAction.href}
       prefetch={false}
     >

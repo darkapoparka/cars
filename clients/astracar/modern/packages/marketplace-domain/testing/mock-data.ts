@@ -3,13 +3,13 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    "id": "astracar-11747499643415236",
-    "slug": "astracar-11747499643415236",
+    "id": "am-1001",
+    "slug": "mini-cooper-1-6d-euro4-2009-11747499643415236",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Mini Cooper 1.6D EURO4",
-    "description": "Mini Cooper 1.6D EURO4, 2009 г., дизел, 143 100 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11747499643415236-mini-cooper-1-6d-euro4",
+    "description": "Mini Cooper 1.6D EURO4, 2009 г., дизел, 143 100 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 4000,
       "currency": "EUR"
@@ -42,10 +42,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "2(3) Врати",
+        "en": "2(3) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      }
+    ],
     "spec": {
       "make": "Mini",
       "model": "Cooper 1.6D EURO4",
@@ -63,19 +96,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T10:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "astracar-21755975324167565",
-    "slug": "astracar-21755975324167565",
+    "id": "am-1010",
+    "slug": "renault-captur-0-9t-euro6b-2017-21755975324167565",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Renault Captur 0.9T EURO6B",
-    "description": "Renault Captur 0.9T EURO6B, 2017 г., бензин, 127 663 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-21755975324167565-renault-captur-0-9t-euro6b",
+    "description": "Renault Captur 0.9T EURO6B, 2017 г., бензин, 127 663 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 9500,
       "currency": "EUR"
@@ -108,10 +142,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      }
+    ],
     "spec": {
       "make": "Renault",
       "model": "Captur 0.9T EURO6B",
@@ -129,19 +196,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:59.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "astracar-11737822623289964",
-    "slug": "astracar-11737822623289964",
+    "id": "am-1011",
+    "slug": "bmw-535-xdrive-full-eu5b-2012-11737822623289964",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "BMW 535 xDrive FULL EU5B",
-    "description": "BMW 535 xDrive FULL EU5B, 2012 г., дизел, 177 390 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11737822623289964-bmw-535-xdrive-full-eu5b",
+    "description": "BMW 535 xDrive FULL EU5B, 2012 г., дизел, 177 390 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 14600,
       "currency": "EUR"
@@ -174,10 +242,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
     "spec": {
       "make": "BMW",
       "model": "535 xDrive FULL EU5B",
@@ -195,19 +296,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:58.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-07T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "astracar-11763446260159317",
-    "slug": "astracar-11763446260159317",
+    "id": "am-1012",
+    "slug": "audi-a3-2-0tdi-s-line-quattro-2006-11763446260159317",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Audi A3 2.0TDI S-LINE QUATTRO",
-    "description": "Audi A3 2.0TDI S-LINE QUATTRO, 2006 г., дизел, 181 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11763446260159317-audi-a3-2-0tdi-s-line-quattro",
+    "description": "Audi A3 2.0TDI S-LINE QUATTRO, 2006 г., дизел, 181 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 4000,
       "currency": "EUR"
@@ -240,10 +342,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "2(3) Врати",
+        "en": "2(3) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бартер",
+        "en": "Бартер"
+      },
+      {
+        "bg": "Бордкомпютър",
+        "en": "Бордкомпютър"
+      },
+      {
+        "bg": "Въздушни възглавници - Задни",
+        "en": "Въздушни възглавници - Задни"
+      }
+    ],
     "spec": {
       "make": "Audi",
       "model": "A3 2.0TDI S-LINE QUATTRO",
@@ -261,19 +396,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:57.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-11752951085157214",
-    "slug": "astracar-11752951085157214",
+    "id": "am-1013",
+    "slug": "audi-a5-2-0tfsi-euro5b-2010-11752951085157214",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Audi A5 2.0TFSI EURO5B",
-    "description": "Audi A5 2.0TFSI EURO5B, 2010 г., бензин, 165 170 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11752951085157214-audi-a5-2-0tfsi-euro5b",
+    "description": "Audi A5 2.0TFSI EURO5B, 2010 г., бензин, 165 170 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 7900,
       "currency": "EUR"
@@ -306,10 +442,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "2(3) Врати",
+        "en": "2(3) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
     "spec": {
       "make": "Audi",
       "model": "A5 2.0TFSI EURO5B",
@@ -327,19 +496,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:56.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-11762018600091690",
-    "slug": "astracar-11762018600091690",
+    "id": "am-1014",
+    "slug": "fiat-punto-1-4i-evo-euro4-2010-11762018600091690",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Fiat Punto 1.4i EVO EURO4",
-    "description": "Fiat Punto 1.4i EVO EURO4, 2010 г., бензин, 139 800 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11762018600091690-fiat-punto-1-4i-evo-euro4",
+    "description": "Fiat Punto 1.4i EVO EURO4, 2010 г., бензин, 139 800 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 3900,
       "currency": "EUR"
@@ -372,10 +542,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      }
+    ],
     "spec": {
       "make": "Fiat",
       "model": "Punto 1.4i EVO EURO4",
@@ -393,19 +596,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:55.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-11755359473275644",
-    "slug": "astracar-11755359473275644",
+    "id": "am-1002",
+    "slug": "audi-a3-1-6tdi-eu5b-sportbag-2015-11755359473275644",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Audi A3 1.6TDI EU5B SPORTBAG",
-    "description": "Audi A3 1.6TDI EU5B SPORTBAG, 2015 г., дизел, 162 148 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11755359473275644-audi-a3-1-6tdi-eu5b-sportbag",
+    "description": "Audi A3 1.6TDI EU5B SPORTBAG, 2015 г., дизел, 162 148 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 8900,
       "currency": "EUR"
@@ -438,10 +642,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      }
+    ],
     "spec": {
       "make": "Audi",
       "model": "A3 1.6TDI EU5B SPORTBAG",
@@ -459,19 +696,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:54.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-11766248164423161",
-    "slug": "astracar-11766248164423161",
+    "id": "am-1003",
+    "slug": "mini-cooper-1-6d-euro5-2010-11766248164423161",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Mini Cooper 1.6D EURO5",
-    "description": "Mini Cooper 1.6D EURO5, 2010 г., дизел, 150 052 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11766248164423161-mini-cooper-1-6d-euro5",
+    "description": "Mini Cooper 1.6D EURO5, 2010 г., дизел, 150 052 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 4200,
       "currency": "EUR"
@@ -504,10 +742,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "2(3) Врати",
+        "en": "2(3) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      }
+    ],
     "spec": {
       "make": "Mini",
       "model": "Cooper 1.6D EURO5",
@@ -525,19 +796,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:53.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-11780761931333448",
-    "slug": "astracar-11780761931333448",
+    "id": "am-1004",
+    "slug": "audi-a6-2-0tdi-euro5b-2014-11780761931333448",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Audi A6 2.0TDI EURO5B",
-    "description": "Audi A6 2.0TDI EURO5B, 2014 г., дизел, 159 400 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11780761931333448-audi-a6-2-0tdi-euro5b",
+    "description": "Audi A6 2.0TDI EURO5B, 2014 г., дизел, 159 400 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 8999,
       "currency": "EUR"
@@ -570,10 +842,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      }
+    ],
     "spec": {
       "make": "Audi",
       "model": "A6 2.0TDI EURO5B",
@@ -591,19 +896,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:52.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-21780733368439452",
-    "slug": "astracar-21780733368439452",
+    "id": "am-1005",
+    "slug": "bmw-x7-3-0d-xdrive-eu6d-2020-21780733368439452",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "BMW X7 3.0d xDrive EU6D",
-    "description": "BMW X7 3.0d xDrive EU6D, 2020 г., дизел, 190 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. ДДС: виж оригиналната обява. Оригинална обява: https://astracar.mobile.bg/obiava-21780733368439452-bmw-x7-3-0d-xdrive-eu6d",
+    "description": "BMW X7 3.0d xDrive EU6D, 2020 г., дизел, 190 000 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 49000,
       "currency": "EUR"
@@ -636,10 +942,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "7 места",
+        "en": "7 места"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      }
+    ],
     "spec": {
       "make": "BMW",
       "model": "X7 3.0d xDrive EU6D",
@@ -657,19 +996,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:51.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-11773504878088103",
-    "slug": "astracar-11773504878088103",
+    "id": "am-1006",
+    "slug": "citroen-c3-1-2i-euro5b-2013-11773504878088103",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Citroen C3 1.2i EURO5B",
-    "description": "Citroen C3 1.2i EURO5B, 2013 г., бензин, 136 574 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11773504878088103-citroen-c3-1-2i-euro5b",
+    "description": "Citroen C3 1.2i EURO5B, 2013 г., бензин, 136 574 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 4600,
       "currency": "EUR"
@@ -702,10 +1042,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      },
+      {
+        "bg": "Антиблокираща система",
+        "en": "Антиблокираща система"
+      },
+      {
+        "bg": "Бартер",
+        "en": "Бартер"
+      }
+    ],
     "spec": {
       "make": "Citroen",
       "model": "C3 1.2i EURO5B",
@@ -723,19 +1096,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:50.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-21783183116609383",
-    "slug": "astracar-21783183116609383",
+    "id": "am-1007",
+    "slug": "hyundai-ix35-1-6gdi-euro5-2012-21783183116609383",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Hyundai IX35 1.6GDI EURO5",
-    "description": "Hyundai IX35 1.6GDI EURO5, 2012 г., бензин, 56 178 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-21783183116609383-hyundai-ix35-1-6gdi-euro5",
+    "description": "Hyundai IX35 1.6GDI EURO5, 2012 г., бензин, 56 178 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 7999,
       "currency": "EUR"
@@ -768,10 +1142,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      },
+      {
+        "bg": "audio\\video",
+        "en": "audio\\video"
+      },
+      {
+        "bg": "IN\\AUX изводи",
+        "en": "IN\\AUX изводи"
+      },
+      {
+        "bg": "Адаптивни предни светлини",
+        "en": "Адаптивни предни светлини"
+      },
+      {
+        "bg": "Аларма",
+        "en": "Аларма"
+      }
+    ],
     "spec": {
       "make": "Hyundai",
       "model": "IX35 1.6GDI EURO5",
@@ -789,19 +1196,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:49.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-21783791992541606",
-    "slug": "astracar-21783791992541606",
+    "id": "am-1008",
+    "slug": "mercedes-benz-ml-350-3-0cdi-premium-eu6-2010-21783791992541606",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
-    "description": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6, 2010 г., дизел, 182 887 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-21783791992541606-mercedes-benz-ml-350-3-0cdi-premium-eu6",
+    "description": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6, 2010 г., дизел, 182 887 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 9500,
       "currency": "EUR"
@@ -834,10 +1242,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      },
+      {
+        "bg": "Tiptronic",
+        "en": "Tiptronic"
+      },
+      {
+        "bg": "USB",
+        "en": "USB"
+      }
+    ],
     "spec": {
       "make": "Mercedes-Benz",
       "model": "ML 350 3.0CDI PREMIUM EU6",
@@ -855,19 +1296,20 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-07T09:59:48.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "astracar-11782577422662538",
-    "slug": "astracar-11782577422662538",
+    "id": "am-1009",
+    "slug": "peugeot-2008-1-2-puretech-eu6d-2022-11782577422662538",
     "category": "car",
     "dealerOrgId": "dealer-astracar",
     "status": "active",
     "title": "Peugeot 2008 1.2 PureTech EU6D",
-    "description": "Peugeot 2008 1.2 PureTech EU6D, 2022 г., бензин, 36 216 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11782577422662538-peugeot-2008-1-2-puretech-eu6d",
+    "description": "Peugeot 2008 1.2 PureTech EU6D, 2022 г., бензин, 36 216 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона.",
     "price": {
       "amount": 14000,
       "currency": "EUR"
@@ -900,10 +1342,43 @@ export const mockListings: VehicleListing[] = [
     ],
     "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
+      "region": "Варна",
       "country": "България"
     },
-    "features": [],
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4(5) Врати",
+        "en": "4(5) Врати"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      }
+    ],
     "spec": {
       "make": "Peugeot",
       "model": "2008 1.2 PureTech EU6D",
@@ -921,78 +1396,13 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Астракар",
       "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:47.000Z",
-    "promoted": false
-  },
-  {
-    "id": "astracar-11782575631736534",
-    "slug": "astracar-11782575631736534",
-    "category": "car",
-    "dealerOrgId": "dealer-astracar",
-    "status": "active",
-    "title": "Citroen Jumpy 1.6HDI L2H1EU6B",
-    "description": "Citroen Jumpy 1.6HDI L2H1EU6B, 2017 г., дизел, 186 586 км. Публикувана обява на Астракар. Наличността, оборудването и условията се потвърждават по телефона. Цената е с включено ДДС. Оригинална обява: https://astracar.mobile.bg/obiava-11782575631736534-citroen-jumpy-1-6hdi-l2h1eu6b",
-    "price": {
-      "amount": 8500,
-      "currency": "EUR"
-    },
-    "priceType": "fixed",
-    "images": [
-      {
-        "url": "/assets/astracar/vehicle-15-1.webp",
-        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
-      },
-      {
-        "url": "/assets/astracar/vehicle-15-2.webp",
-        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
-      },
-      {
-        "url": "/assets/astracar/vehicle-15-3.webp",
-        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
-      },
-      {
-        "url": "/assets/astracar/vehicle-15-4.webp",
-        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
-      },
-      {
-        "url": "/assets/astracar/vehicle-15-5.webp",
-        "alt": "Citroen Jumpy 1.6HDI L2H1EU6B"
-      }
-    ],
-    "badges": [
-      "used"
-    ],
-    "location": {
       "city": "Варна",
-      "region": "Цар Освободител 282",
-      "country": "България"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "features": [],
-    "spec": {
-      "make": "Citroen",
-      "model": "Jumpy 1.6HDI L2H1EU6B",
-      "year": 2017,
-      "bodyType": "van",
-      "fuelType": "diesel",
-      "transmission": "manual",
-      "mileageValue": 186586,
-      "mileageUnit": "km",
-      "enginePowerHp": 116,
-      "colorExterior": "Бял"
-    },
-    "seller": {
-      "id": "dealer-astracar",
-      "type": "dealer",
-      "displayName": "Астракар",
-      "verificationStatus": "unverified",
-      "city": "Варна"
-    },
-    "publishedAt": "2026-09-07T09:59:46.000Z",
+    "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

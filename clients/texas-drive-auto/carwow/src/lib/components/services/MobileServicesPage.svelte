@@ -5,7 +5,6 @@
 		CarFront,
 		ChevronRight,
 		ClipboardCheck,
-		Phone,
 		Repeat,
 		ShieldCheck,
 		X
@@ -14,54 +13,54 @@
 	import { submitLead } from '$lib/client/lead-submit';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
+	import MobileHeroBar from '$lib/components/shared/MobileHeroBar.svelte';
 
-	const phoneHref = `tel:+359${daynightSite.phone.slice(1)}`;
 	type ServiceSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const services = [
 		{
 			id: 'inspection',
-			label: 'Viewing',
-			title: 'Pre-purchase inspection',
-			kicker: 'Inspection and history questions',
-			cta: 'Request a viewing',
+			label: 'Оглед',
+			title: 'Проверка преди покупка',
+			kicker: 'Оглед и история',
+			cta: 'Заяви оглед',
 			href: '/contact',
 			icon: ShieldCheck,
-			points: ['Ask about vehicle history', 'In-person inspection', 'Next steps before a deposit']
+			points: ['Проверка на историята', 'Оглед на място', 'Следващи стъпки преди капаро']
 		},
 		{
 			id: 'documents',
-			label: 'Paperwork',
-			title: 'Registration and paperwork',
-			kicker: 'Purchase agreement and title transfer',
-			cta: 'Ask about paperwork',
+			label: 'Документи',
+			title: 'Регистрация и документи',
+			kicker: 'Договор и прехвърляне',
+			cta: 'Попитай за документи',
 			href: '/contact',
 			icon: ClipboardCheck,
-			points: ['Purchase agreement and invoice', 'Title transfer and plates', 'Final steps at vehicle handover']
+			points: ['Договор и фактура', 'Прехвърляне и номера', 'Финални стъпки при предаване']
 		},
 		{
 			id: 'trade',
-			label: 'Trade-in questions',
-			title: 'Ask about trade-ins or selling your car',
-			kicker: 'Vehicle appraisal questions',
-			cta: 'Draft a valuation inquiry',
+			label: 'Бартер',
+			title: 'Бартер или изкупуване',
+			kicker: 'Оценка на автомобил',
+			cta: 'Заяви оценка',
 			href: '/sell-your-car',
 			icon: Repeat,
 			points: [
-				'Ask about your vehicle’s value',
-				'Can a trade-in count toward a purchase?',
-				'Do you buy vehicles outright?'
+				'Оценка на Вашия автомобил',
+				'Приспадане към следваща покупка',
+				'Опция за директно изкупуване'
 			]
 		},
 		{
 			id: 'finance',
-			label: 'Buyer-arranged funding',
-			title: 'Buyer-arranged funding',
-			kicker: 'Buyer-arranged funding and budget',
-			cta: 'View details',
+			label: 'Финансиране',
+			title: 'Финансиране',
+			kicker: 'Лизинг и бюджет',
+			cta: 'Виж варианти',
 			href: '/financing',
 			icon: Banknote,
-			points: ['No dealer payment plans', 'Arrange funding independently', 'Compare against your budget']
+			points: ['Ориентировъчна месечна вноска', 'Съдействие с лизинг', 'Сравнение спрямо бюджет']
 		}
 	] as const;
 
@@ -98,7 +97,7 @@
 		const contactValue = servicePhone.trim();
 		if (!contactValue) {
 			serviceSubmitState = 'error';
-			serviceSubmitMessage = 'Please enter a phone number for your inquiry draft.';
+			serviceSubmitMessage = 'Моля, въведете телефон, за да уточним следващата стъпка.';
 			return;
 		}
 
@@ -106,14 +105,14 @@
 		serviceSubmitMessage = '';
 
 		const result = await submitLead({
-			customerName: 'Mobile service request',
+			customerName: 'Мобилна заявка за услуга',
 			contact: contactValue,
 			email: null,
 			phone: contactValue,
 			source: 'services-mobile',
 			message: [
-				`Service: ${activeService.title}`,
-				serviceVehicle.trim() ? `Vehicle: ${serviceVehicle.trim()}` : ''
+				`Услуга: ${activeService.title}`,
+				serviceVehicle.trim() ? `Автомобил: ${serviceVehicle.trim()}` : ''
 			]
 				.filter(Boolean)
 				.join('\n'),
@@ -130,11 +129,11 @@
 		serviceSubmitState = 'error';
 		serviceSubmitMessage =
 			result.error ||
-			`Your inquiry was not sent. Please call ${daynightSite.phoneLabel}.`;
+			`Не успяхме да изпратим запитването. Моля, обадете се на ${daynightSite.phoneLabel}.`;
 	}
 </script>
 
-<div class="mobile-services-app" aria-label="Texas Drive Auto services">
+<div class="mobile-services-app">
 	<header class="mobile-services-hero">
 		<img
 			class="mobile-services-hero__bg"
@@ -142,22 +141,12 @@
 			alt=""
 			aria-hidden="true"
 		/>
-		<div class="mobile-services-hero__bar">
-			<a href={resolve('/')} aria-label="Texas Drive Auto home">
-				<img
-					src={resolve('/brand/daynight-logo-generated.png')}
-					alt={daynightSite.shortName}
-				/>
-			</a>
-			<a class="mobile-services-hero__phone" href={phoneHref} aria-label="Call">
-				<Phone size={19} strokeWidth={2.45} />
-			</a>
-		</div>
+		<MobileHeroBar showLocation={false} />
 
 		<div class="mobile-services-hero__copy">
-			<span>Services</span>
-			<h1>Questions before and after purchase</h1>
-			<p>Ask about inspections, paperwork, registration, and trade-in availability. No dealer financing or payment plans.</p>
+			<span>Услуги</span>
+			<h1>Подкрепа преди и след покупка</h1>
+			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в {daynightSite.city}.</p>
 		</div>
 
 		<div class="mobile-services-hero__actions">
@@ -166,18 +155,18 @@
 				type="button"
 				onclick={() => openServiceDrawer('inspection')}
 			>
-				<span>Request service</span>
+				<span>Заяви услуга</span>
 				<ChevronRight size={18} strokeWidth={2.55} />
 			</button>
 			<a class="mobile-services-secondary" href={resolve('/inventory')}>
 				<CarFront size={18} strokeWidth={2.45} />
-				<span>View vehicles</span>
+				<span>Виж автомобили</span>
 			</a>
 		</div>
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mobile-services-chips" aria-label="Quick service links">
+		<nav class="mobile-services-chips" aria-label="Бързи услуги">
 			{#each quickActions as action (action.label)}
 				<button
 					type="button"
@@ -192,7 +181,7 @@
 
 		<section class="mobile-services-section" aria-labelledby="mobile-services-title">
 			<div class="mobile-services-heading">
-				<h2 id="mobile-services-title">How we can help</h2>
+				<h2 id="mobile-services-title">Как помагаме</h2>
 			</div>
 
 			<div class="mobile-services-list">
@@ -230,7 +219,7 @@
 						<span>{activeService.kicker}</span>
 						<h2 id="mobile-service-drawer-title">{activeService.title}</h2>
 					</div>
-					<button type="button" aria-label="Close" onclick={() => (serviceDrawerOpen = false)}>
+					<button type="button" aria-label="Затвори" onclick={() => (serviceDrawerOpen = false)}>
 						<X size={19} strokeWidth={2.5} />
 					</button>
 				</header>
@@ -246,8 +235,8 @@
 					<div class="mobile-service-sheet__success" role="status" aria-live="polite">
 						<BadgeCheck size={22} strokeWidth={2.45} />
 						<span>
-							<strong>Draft only — not sent</strong>
-							<small>This preview does not send requests or schedule follow-up.</small>
+							<strong>Заявката е подготвена</strong>
+							<small>Екипът ще се свърже с Вас за следващата стъпка.</small>
 						</span>
 					</div>
 				{:else}
@@ -256,12 +245,12 @@
 							class="mobile-service-sheet__field"
 							for={`mobile-service-vehicle-${activeService.id}`}
 						>
-							<span>Vehicle</span>
+							<span>Автомобил</span>
 							<input
 								id={`mobile-service-vehicle-${activeService.id}`}
 								type="text"
 								bind:value={serviceVehicle}
-								placeholder="Make, model, or listing link"
+								placeholder="Марка, модел или линк към обява"
 								autocomplete="off"
 							/>
 						</label>
@@ -269,7 +258,7 @@
 							class="mobile-service-sheet__field"
 							for={`mobile-service-phone-${activeService.id}`}
 						>
-							<span>Phone</span>
+							<span>Телефон</span>
 							<input
 								id={`mobile-service-phone-${activeService.id}`}
 								type="tel"
@@ -289,7 +278,7 @@
 							type="submit"
 							disabled={serviceSubmitState === 'submitting'}
 						>
-							<span>{serviceSubmitState === 'submitting' ? 'Sending...' : activeService.cta}</span
+							<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : activeService.cta}</span
 							>
 							<ChevronRight size={19} strokeWidth={2.6} />
 						</button>
@@ -360,36 +349,6 @@
 		opacity: 0.42;
 		object-fit: cover;
 		object-position: center right;
-	}
-
-	.mobile-services-hero__bar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--sa-mobile-gap-md);
-	}
-
-	.mobile-services-hero__bar img {
-		display: block;
-		width: 170px;
-		height: auto;
-	}
-
-	.mobile-services-hero__phone {
-		display: grid;
-		width: var(--sa-mobile-pill-h);
-		height: var(--sa-mobile-pill-h);
-		flex: 0 0 auto;
-		place-items: center;
-		border-radius: 50%;
-		background: var(--sa-red);
-		color: #fff !important;
-	}
-
-	.mobile-services-hero__phone :global(svg),
-	.mobile-services-hero__phone :global(svg *) {
-		color: #fff !important;
-		stroke: #fff !important;
 	}
 
 	.mobile-services-hero__copy {
@@ -588,7 +547,7 @@
 	}
 
 	.mobile-services-card small {
-		color: #66707a;
+		color: #56616e;
 		font-size: var(--sa-text-xs);
 		font-weight: 600;
 		line-height: 1.34;
@@ -630,7 +589,7 @@
 	.mobile-service-sheet header div:nth-child(2) > span {
 		color: var(--sa-blue);
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -663,7 +622,7 @@
 		padding: 10px;
 		color: #111827;
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.25;
 	}
 
@@ -695,7 +654,7 @@
 	.mobile-service-sheet__field span {
 		color: #74808c;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -711,7 +670,7 @@
 		background: transparent !important;
 		box-shadow: none !important;
 		color: var(--sa-ink) !important;
-		font: 700 var(--sa-text-base) / 1.18 var(--sa-font) !important;
+		font: var(--sa-weight-strong) var(--sa-text-base) / 1.18 var(--sa-font) !important;
 		outline: 0 !important;
 		padding: 0 !important;
 	}
@@ -729,8 +688,8 @@
 		border-radius: 11px;
 		background: var(--sa-red);
 		color: #fff !important;
-		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
 	}
 
 	.mobile-service-sheet__submit:disabled {
@@ -745,7 +704,7 @@
 		padding: 10px 11px;
 		color: #b42318;
 		font-size: var(--sa-text-xs);
-		font-weight: 800;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.35;
 	}
 
@@ -778,14 +737,14 @@
 
 	.mobile-service-sheet__success strong {
 		font-size: var(--sa-text-sm);
-		font-weight: 800;
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.12;
 	}
 
 	.mobile-service-sheet__success small {
 		color: #647084;
 		font-size: var(--sa-text-xs);
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 		line-height: 1.28;
 	}
 
@@ -793,5 +752,71 @@
 		.mobile-services-app {
 			display: block;
 		}
+	}
+
+	/* Mobile typography contract */
+	.mobile-services-hero__copy span,
+	.mobile-service-sheet header div:nth-child(2) > span,
+	.mobile-service-sheet__field span {
+		font-size: var(--sa-mobile-type-micro);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-services-hero h1 {
+		font-size: var(--sa-mobile-type-page-title);
+		font-weight: var(--sa-weight-display);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-services-hero p {
+		font-size: var(--sa-mobile-type-body);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-body);
+	}
+	.mobile-services-primary,
+	.mobile-services-secondary,
+	.mobile-services-chips button {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.mobile-services-heading h2,
+	.mobile-service-sheet h2 {
+		font-size: var(--sa-mobile-type-section-title);
+		font-weight: var(--sa-weight-strong);
+		line-height: var(--sa-mobile-leading-heading);
+	}
+	.mobile-services-card strong {
+		font-size: var(--sa-mobile-type-card-title);
+		font-weight: var(--sa-weight-strong);
+	}
+	.mobile-services-card small {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-service-sheet li {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-semibold);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-service-sheet__field input {
+		font: var(--sa-weight-regular) var(--sa-mobile-type-input) / var(--sa-mobile-leading-meta)
+			var(--sa-font) !important;
+	}
+	.mobile-service-sheet__submit {
+		font-size: var(--sa-button-font-size);
+		font-weight: var(--sa-button-font-weight);
+	}
+	.mobile-service-sheet__error {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-semibold);
+		line-height: var(--sa-mobile-leading-meta);
+	}
+	.mobile-service-sheet__success strong {
+		font-size: var(--sa-mobile-type-control-sm);
+		font-weight: var(--sa-weight-heading);
+	}
+	.mobile-service-sheet__success small {
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-medium);
+		line-height: var(--sa-mobile-leading-meta);
 	}
 </style>

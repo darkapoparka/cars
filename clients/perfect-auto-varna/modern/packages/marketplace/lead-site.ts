@@ -14,6 +14,9 @@ export interface LeadSiteConfig {
   readonly heroPath: string;
   readonly locale: string;
   readonly logoPath: string;
+  readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly name: string;
@@ -51,7 +54,10 @@ export const leadSite: LeadSiteConfig = {
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/assets/perfect-auto/perfekt-auto-logo.webp",
+  logoPath: "/dealer-brand/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed",
   mapsUrl:

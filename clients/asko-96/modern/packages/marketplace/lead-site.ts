@@ -14,6 +14,9 @@ export interface LeadSiteConfig {
   readonly heroPath: string;
   readonly locale: string;
   readonly logoPath: string;
+  readonly logoOnLight: string;
+  readonly logoOnDark: string;
+  readonly logoOnAccent: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly name: string;
@@ -51,7 +54,10 @@ export const leadSite: LeadSiteConfig = {
   email: "askogroup@abv.bg",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
-  logoPath: "/assets/asko96/asko96-logo.png",
+  logoPath: "/dealer-brand/logo-on-dark.webp",
+  logoOnLight: "/dealer-brand/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark.webp",
+  logoOnAccent: "/dealer-brand/logo-on-accent.webp",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed",
   mapsUrl:

@@ -1,6 +1,6 @@
 import { brand } from '$config/brand';
 
-export type BlogCategory = 'Vehicle viewing' | 'Import questions' | 'Buyer-arranged funding' | 'Guidance' | 'Trade-in inquiry';
+export type BlogCategory = 'Оглед' | 'Внос' | 'Лизинг' | 'Насоки' | 'Бартер';
 
 export type BlogPost = {
   id: number;
@@ -23,205 +23,205 @@ export type BlogFilters = {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Pre-purchase inspection',
-    text: 'Confirm vehicle history, documents and condition directly with the dealership.',
-    category: 'Vehicle viewing',
-    tag: 'Vehicle viewing',
+    title: 'Какво да проверите преди покупка?',
+    text: 'История, документи и техническо състояние се потвърждават директно с екипа.',
+    category: 'Оглед',
+    tag: 'Оглед',
     image: '/assets/images/blog/blog-1.jpg',
     sections: [
       {
-        title: 'Start with the history and documents',
+        title: 'Започнете с историята и документите',
         paragraphs: [
-          'Before your visit, ask for basic vehicle details and available service records. Compare vehicle identifiers in the documents with those on the vehicle, and note anything that needs clarification in person.'
+          'Преди срещата поискайте основните данни за автомобила и наличната сервизна история. Сравнете идентификационните данни в документите с тези върху автомобила и отбележете всичко, което трябва да бъде изяснено на място.'
         ]
       },
       {
-        title: 'Inspect the vehicle step by step',
+        title: 'Огледайте автомобила последователно',
         paragraphs: [
-          'Check the body, tires, interior and main systems, then take a test drive. If you are unsure about the vehicle’s condition, consult an independent mechanic before deciding to buy.'
+          'Проверете каросерията, гумите, интериора и работата на основните системи, след което направете пробно шофиране. Ако не сте сигурни в техническото състояние, включете независим специалист преди решение за покупка.'
         ]
       }
     ]
   },
   {
     id: 2,
-    title: 'Imports and documents',
-    text: 'Import services are not confirmed in this preview. Ask about availability, transportation and US registration requirements.',
-    category: 'Import questions',
-    tag: 'Documents',
+    title: 'Как протича вносът на автомобил?',
+    text: 'Обсъдете търсене, транспорт и подготовката за регистрация в България.',
+    category: 'Внос',
+    tag: 'Документи',
     image: '/assets/images/blog/blog-2.jpg',
     sections: [
       {
-        title: 'Set clear search criteria',
+        title: 'Определете точни критерии за търсенето',
         paragraphs: [
-          'Make and model are only the start. Specify the year, engine, features, acceptable mileage and total budget, including transportation and registration costs.'
+          'Марка и модел не са достатъчни. Уточнете година, двигател, оборудване, допустим пробег и общ бюджет, включително транспорт и подготовка за регистрация.'
         ]
       },
       {
-        title: 'Ask for clear documentation at every step',
+        title: 'Поискайте ясна следа на всяка стъпка',
         paragraphs: [
-          'Before committing, confirm the specific vehicle, its known condition, the documents included and any transportation arrangements. Verify final registration requirements against current official rules.'
+          'Преди ангажимент потвърдете кой е конкретният автомобил, какво е известно за състоянието му, кои документи го придружават и как ще бъде организиран транспортът. Финалните изисквания за регистрация трябва да се сверят с актуалните официални правила.'
         ]
       }
     ]
   },
   {
     id: 3,
-    title: 'Payment and outside funding',
-    text: 'Texas Drive Auto offers no dealer financing or payment plans. Any buyer-arranged funding is separate.',
-    category: 'Buyer-arranged funding',
-    tag: 'Buyer-arranged funding',
+    title: 'Как да сравните лизингови оферти?',
+    text: 'Попитайте за актуалните условия според избрания автомобил.',
+    category: 'Лизинг',
+    tag: 'Лизинг',
     image: '/assets/images/blog/blog-3.jpg',
     sections: [
       {
-        title: 'Compare the full cost',
+        title: 'Сравнявайте цялата оферта',
         paragraphs: [
-          'If you arrange funding independently, compare the term, down payment, total amount due, fees, insurance requirements and ownership terms—not just the monthly payment.'
+          'Гледайте не само месечната вноска, а срока, първоначалното плащане, общата дължима сума, таксите, застраховките и условията за собственост в края на договора.'
         ]
       },
       {
-        title: 'Build a realistic budget',
+        title: 'Подгответе реалистичен бюджет',
         paragraphs: [
-          'Allow for registration, maintenance and ongoing expenses. Ask for a written price breakdown for the specific vehicle before comparing options.'
+          'Оставете място за регистрация, обслужване и текущи разходи. Поискайте писмена индивидуална оферта за конкретния автомобил, преди да сравнявате различни варианти.'
         ]
       }
     ]
   },
   {
     id: 4,
-    title: 'How to choose a vehicle',
-    text: 'Discuss your preferred make, body style and budget with the dealership.',
-    category: 'Guidance',
-    tag: 'Selection',
+    title: 'Как да изберете автомобил',
+    text: 'Марка, купе и бюджет се уточняват с екипа според вашите критерии.',
+    category: 'Насоки',
+    tag: 'Избор',
     image: '/assets/images/blog/blog-4.jpg',
     sections: [
       {
-        title: 'Start with everyday use',
+        title: 'Започнете от ежедневната употреба',
         paragraphs: [
-          'Consider where you will drive, how many passengers and how much cargo you usually carry, and which features matter most. This helps narrow your list to suitable models.'
+          'Помислете къде ще се движи автомобилът, колко хора и багаж обичайно превозвате и кои удобства са наистина важни. Така списъкът с подходящи модели става по-кратък и смислен.'
         ]
       },
       {
-        title: 'Compare more than the purchase price',
+        title: 'Сравнете повече от покупната цена',
         paragraphs: [
-          'Fuel use, maintenance, tires, insurance and expected mileage all affect ownership costs. Choose the best fit for your needs, rather than simply the longest feature list.'
+          'Разходът, обслужването, гумите, застраховката и очакваният пробег влияят върху реалната цена на притежание. Изберете най-добрия баланс за вашия начин на използване, а не просто най-дългия списък с екстри.'
         ]
       }
     ]
   },
   {
     id: 5,
-    title: `Viewing at ${brand.city}`,
-    text: `Arrange a visit to ${brand.addressLine}.`,
-    category: 'Vehicle viewing',
+    title: `Оглед в ${brand.city}`,
+    text: `Уговорете посещение на ${brand.addressLine}.`,
+    category: 'Оглед',
     tag: brand.city,
     image: '/assets/images/blog/blog-5.jpg',
     sections: [
       {
-        title: 'Request a convenient time in advance',
+        title: 'Запазете удобно време предварително',
         paragraphs: [
-          'Contact the dealership to confirm visiting arrangements. Mention the vehicle you want to see and your main questions to make the visit useful.'
+          'Посещенията в шоурума са с предварителна уговорка. Посочете кой автомобил искате да видите и кои въпроси са най-важни за вас, за да бъде срещата конкретна и полезна.'
         ]
       },
       {
-        title: 'Allow time for a thorough inspection',
+        title: 'Дайте си време за спокоен оглед',
         paragraphs: [
-          'View the vehicle in daylight, try every seat, check practical details and write down your questions. Take time to clarify its condition and documents before deciding.'
+          'Прегледайте автомобила на дневна светлина, седнете на всички места, проверете практичните детайли и запишете въпросите си. Не е необходимо да вземате решение преди да сте изяснили състоянието и документите.'
         ]
       }
     ]
   },
   {
     id: 6,
-    title: 'Trade-in and appraisal questions',
-    text: 'Ask whether trade-ins are accepted and whether an individual appraisal is available.',
-    category: 'Trade-in inquiry',
-    tag: 'Trade-in inquiry',
+    title: 'Бартер и оценка',
+    text: 'Предложете автомобил за бартер и поискайте индивидуална оценка.',
+    category: 'Бартер',
+    tag: 'Бартер',
     image: '/assets/images/blog/blog-6.jpg',
     sections: [
       {
-        title: 'Prepare accurate vehicle details',
+        title: 'Подгответе точна информация за автомобила',
         paragraphs: [
-          'Provide the model, year, mileage, features, service history and known issues. Photos help start the conversation but do not replace an in-person inspection.'
+          'Модел, година, пробег, оборудване, сервизна история и известни забележки дават добра начална картина. Снимките помагат за предварителен разговор, но не заменят огледа на място.'
         ]
       },
       {
-        title: 'Consider the appraisal as part of the whole deal',
+        title: 'Разглеждайте оценката като част от цялата сделка',
         paragraphs: [
-          'If a trade-in is accepted, its value depends on condition, documents and current market demand. Compare both the trade-in offer and the terms for the vehicle you want to buy.'
+          'Крайната стойност зависи от състоянието, документите и текущото пазарно търсене. Сравнете не само оценката на стария автомобил, а и условията по автомобила, който искате да придобиете.'
         ]
       }
     ]
   },
   {
     id: 7,
-    title: 'Registration after import',
-    text: 'Import and registration assistance are not confirmed in this preview. Ask what support is available.',
-    category: 'Import questions',
-    tag: 'Documents',
+    title: 'Регистрация след внос',
+    text: 'Екипът ориентира за следващите стъпки след пристигане на автомобила.',
+    category: 'Внос',
+    tag: 'Документи',
     image: '/assets/images/blog/blog-7.jpg',
     sections: [
       {
-        title: 'Organize the available documents',
+        title: 'Подредете наличните документи',
         paragraphs: [
-          'Gather documents showing the vehicle’s origin and purchase, along with any transportation paperwork. Check names, vehicle identifiers and dates for discrepancies before starting registration.'
+          'Съберете документите за произход и придобиване на автомобила, както и всичко получено при транспорта. Проверете имената, идентификационните данни и датите за разминавания още преди започване на регистрацията.'
         ]
       },
       {
-        title: 'Check the current process',
+        title: 'Проверете актуалната процедура',
         paragraphs: [
-          'Requirements depend on the vehicle and its origin. Confirm current steps and required original documents with the relevant authorities or your chosen provider instead of relying on an outdated online checklist.'
+          'Изискванията зависят от произхода и конкретния автомобил. Потвърдете текущите стъпки и необходимите оригинали с компетентните институции или избран доставчик, вместо да разчитате на стар списък от интернет.'
         ]
       }
     ]
   },
   {
     id: 8,
-    title: 'What to ask during an inspection',
-    text: 'Confirm mileage, history, features and availability directly with the dealership.',
-    category: 'Vehicle viewing',
-    tag: 'Vehicle viewing',
+    title: 'Какво да попитате при оглед',
+    text: 'Пробег, история, оборудване и наличност се потвърждават на място.',
+    category: 'Оглед',
+    tag: 'Оглед',
     image: '/assets/images/blog/blog-8.jpg',
     sections: [
       {
-        title: 'Ask about history and current condition',
+        title: 'Попитайте за историята и текущото състояние',
         paragraphs: [
-          'Ask which service records are available, whether there are known repairs or issues, and which maintenance items were recently replaced. Request specific answers about the vehicle.'
+          'Уточнете каква сервизна информация е налична, има ли известни ремонти или забележки и кои консумативи са сменяни скоро. Поискайте конкретни отговори за конкретния автомобил.'
         ]
       },
       {
-        title: 'Check features and upcoming costs',
+        title: 'Проверете оборудването и следващите разходи',
         paragraphs: [
-          'Test the features that matter to you and ask what the listed price includes. Account for registration, initial maintenance, tires and insurance.'
+          'Потвърдете важните за вас функции на място и попитайте какво е включено в обявената цена. Добавете към сметката регистрация, първоначално обслужване, гуми и застраховки.'
         ]
       }
     ]
   },
   {
     id: 9,
-    title: 'After your purchase',
-    text: 'Ask about documents, maintenance needs and next steps after the sale.',
-    category: 'Guidance',
-    tag: 'Maintenance',
+    title: 'След покупката',
+    text: 'Свържете се за сервиз, документи и следващи стъпки след сделката.',
+    category: 'Насоки',
+    tag: 'Сервиз',
     image: '/assets/images/blog/blog-9.jpg',
     sections: [
       {
-        title: 'Keep your documents and track deadlines',
+        title: 'Съхранете документите и планирайте сроковете',
         paragraphs: [
-          'Organize the purchase agreement, payment records, service information and everything provided with the vehicle. Check official sources for current registration and insurance deadlines.'
+          'Подредете договора, платежните документи, сервизната информация и всичко предадено с автомобила. Проверете актуалните срокове за регистрация и застраховане по официален източник.'
         ]
       },
       {
-        title: 'Establish a maintenance baseline',
+        title: 'Направете добра отправна точка за поддръжката',
         paragraphs: [
-          'Record the current mileage and plan an initial mechanical inspection based on available history. This gives future maintenance a clear starting point.'
+          'Запишете текущия пробег и планирайте първоначален технически преглед според наличната история. Така следващото обслужване се основава на ясна информация, а не на предположения.'
         ]
       }
     ]
   }
 ];
 
-export const blogCategories: BlogCategory[] = ['Vehicle viewing', 'Import questions', 'Buyer-arranged funding', 'Guidance', 'Trade-in inquiry'];
+export const blogCategories: BlogCategory[] = ['Оглед', 'Внос', 'Лизинг', 'Насоки', 'Бартер'];
 
 const isBlogCategory = (value: string | null): value is BlogCategory =>
   Boolean(value && blogCategories.includes(value as BlogCategory));
@@ -231,7 +231,7 @@ export const parseBlogFilters = (params: URLSearchParams): BlogFilters => ({
   category: isBlogCategory(params.get('category')) ? params.get('category') as BlogCategory : ''
 });
 
-const normalize = (value: string) => value.trim().toLocaleLowerCase('en-US');
+const normalize = (value: string) => value.trim().toLocaleLowerCase('bg-BG');
 
 export const filterBlogPosts = (posts: BlogPost[], filters: BlogFilters) => {
   const query = normalize(filters.q);

@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
   appointment: "Работното време не е публикувано. Потвърдете по телефона преди посещение.",
-  logo: "/dealer/logo.webp",
-  logoOnDark: "/dealer/logo-light.webp"
+  logo: "/dealer-brand/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;

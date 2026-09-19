@@ -7,7 +7,7 @@ import {
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   type MobileFormDraft,
   readMobileFormDraft,
@@ -16,20 +16,25 @@ import { ImportRequestForm } from "./import-request-form";
 import { importRequestCopy } from "./import-request-policy";
 
 const actionClassName =
-  "mt-4 h-11 items-center justify-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-4 font-semibold text-[14px] text-white outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)]";
+  "mt-4 h-11 items-center justify-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-4 font-medium text-compact-control text-white outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] lg:font-semibold lg:text-sm";
 
 export function BlankImportRequestLink({
   fullWidth = false,
   defaultOrigin,
   href,
   isBg,
+  submissionAvailable,
 }: {
   fullWidth?: boolean;
   defaultOrigin: string;
   href: string;
   isBg: boolean;
+  submissionAvailable: boolean;
 }) {
   const [open, setOpen] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => setReady(true), []);
   const [draft, setDraft] = useState<MobileFormDraft>({});
   const formRef = useRef<HTMLFormElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -39,8 +44,10 @@ export function BlankImportRequestLink({
   return (
     <>
       <button
+        aria-expanded={open}
         aria-haspopup="dialog"
-        className={`${actionClassName} inline-flex lg:hidden ${fullWidth ? "!h-12 !justify-between !rounded-xl !text-[15px] w-full" : ""}`}
+        className={`${actionClassName} inline-flex lg:hidden ${fullWidth ? "!h-12 !justify-between !rounded-xl !text-compact-control w-full" : ""}`}
+        disabled={!ready}
         onClick={() => setOpen(true)}
         ref={triggerRef}
         type="button"
@@ -85,6 +92,7 @@ export function BlankImportRequestLink({
           formRef={formRef}
           locale={locale}
           privacyHref={getLocalizedPath(locale, "/legal/privacy")}
+          submissionAvailable={submissionAvailable}
         />
       </MobileMarketplaceOverlay>
     </>

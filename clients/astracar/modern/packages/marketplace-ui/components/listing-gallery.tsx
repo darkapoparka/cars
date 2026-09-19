@@ -1,7 +1,10 @@
 "use client";
 
 import { Badge } from "@repo/design-system/components/ui/badge";
-import { Dialog, DialogTrigger } from "@repo/design-system/components/ui/dialog";
+import {
+  Dialog,
+  DialogTrigger,
+} from "@repo/design-system/components/ui/dialog";
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleListingImage } from "@repo/marketplace";
 import { Car, Expand } from "lucide-react";
@@ -55,9 +58,7 @@ export const ListingGallery = ({
   };
 
   const selectPrevious = () =>
-    setSelectedIndex((current) =>
-      getPreviousGalleryIndex(current, imageCount)
-    );
+    setSelectedIndex((current) => getPreviousGalleryIndex(current, imageCount));
   const selectNext = () =>
     setSelectedIndex((current) => getNextGalleryIndex(current, imageCount));
 
@@ -102,7 +103,7 @@ export const ListingGallery = ({
               ) : (
                 <Image
                   alt={selectedImage.alt || title}
-                  className="object-cover lg:transition-transform lg:duration-200 lg:group-hover:scale-[1.01] lg:motion-reduce:transition-none lg:motion-reduce:group-hover:scale-100"
+                  className="object-cover object-[center_75%] lg:object-center lg:transition-transform lg:duration-200 lg:motion-reduce:transition-none lg:group-hover:scale-[1.01] lg:motion-reduce:group-hover:scale-100"
                   fetchPriority={selectedIndex === 0 ? "high" : "auto"}
                   fill
                   loading="eager"
@@ -118,7 +119,7 @@ export const ListingGallery = ({
                   unoptimized={unoptimized}
                 />
               )}
-              <span className="absolute right-3 bottom-7 inline-flex h-9 items-center gap-2 rounded-full bg-background px-3 font-medium text-foreground text-xs shadow-sm lg:bottom-3 lg:rounded-md lg:bg-background/90 lg:backdrop-blur">
+              <span className="absolute right-3 bottom-7 inline-flex h-9 items-center gap-2 rounded-full bg-background px-3 font-medium text-foreground text-micro shadow-sm lg:bottom-3 lg:rounded-md lg:bg-background/90 lg:backdrop-blur">
                 <Expand aria-hidden="true" className="size-4" />
                 <span className="hidden lg:inline">{copy.viewFullScreen}</span>
                 <span className="lg:hidden">{imageCount}</span>

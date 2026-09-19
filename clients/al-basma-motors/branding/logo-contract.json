@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-basma-motors",
+  "decision": "USE GENERATED CANDIDATE",
+  "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+  "originalSha256": "ac85d960fc592f393928f178df7107c70729f5fbb9befaf9524891de4702ee2f",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "a711de145806bfc28cb92424e93e21f1c1e5a2cc23b043f97f57b9c0b8035564",
+      "bytes": 148180
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4003fd1022280c2c8475e45f79d364cd0ad5f5423b99aa9c264e7dba3a5e5688",
+      "bytes": 153974
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "bfd49ac4bd80c61639950944de121eb6020b94ab71d554c1a31d9f36e3bc7f2b",
+      "bytes": 107692
+    }
+  },
+  "preparedAt": "2026-09-19T04:56:59.740Z",
+  "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+}

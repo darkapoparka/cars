@@ -1,40 +1,37 @@
-// Public listing snapshot captured from https://astracar.mobile.bg/ on 2026-07-24.
-// Images are localized from the same verified dealer listings to prevent CDN hotlink failures.
+// Dealer listing snapshot normalized from the canonical Cars source pack.
 export type CurrentDayNightListing = {
-	id: string;
-	title: string;
-	sourceUrl: string;
-	priceEur: string;
-	priceBgn: string;
-	status: string;
-	date: string;
-	mileage: string;
-	color: string;
-	fuel: string;
-	power: string;
-	transmission: string;
-	body: string;
-	features: string[];
-	image: string;
- gallery: string[];
- engine: string;
+  id: string;
+  title: string;
+  sourceUrl: string;
+  priceEur: string;
+  priceBgn: string;
+  status: string;
+  date: string;
+  mileage: string;
+  color: string;
+  fuel: string;
+  power: string;
+  transmission: string;
+  body: string;
+  features: string[];
+  image: string;
 };
 
-export const currentDayNightListings: CurrentDayNightListing[] = [
+export const currentDayNightListings = [
   {
     "id": "11747499643415236",
     "title": "Mini Cooper 1.6D EURO4",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11747499643415236-mini-cooper-1-6d-euro4",
     "priceEur": "4000 €",
-    "priceBgn": "7823,32 лв.",
-    "status": "Публикувана обява",
-    "date": "октомври 2009 г.",
-    "mileage": "143 100 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2009",
+    "mileage": "143 100 km",
     "color": "Зелен",
     "fuel": "Дизел",
-    "power": "109 к.с.",
+    "power": "109 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "2(3) Врати",
       "Bluetooth \\ handsfree система",
@@ -71,30 +68,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-01-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-01-1.webp",
-      "/assets/astracar/vehicle-01-2.webp",
-      "/assets/astracar/vehicle-01-3.webp",
-      "/assets/astracar/vehicle-01-4.webp",
-      "/assets/astracar/vehicle-01-5.webp"
-    ],
-    "engine": "1600 куб.см"
+    "image": "/assets/astracar/vehicle-01-1.webp"
   },
   {
     "id": "21755975324167565",
     "title": "Renault Captur 0.9T EURO6B",
     "sourceUrl": "https://astracar.mobile.bg/obiava-21755975324167565-renault-captur-0-9t-euro6b",
     "priceEur": "9500 €",
-    "priceBgn": "18 580,39 лв.",
-    "status": "Публикувана обява",
-    "date": "декември 2017 г.",
-    "mileage": "127 663 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2017",
+    "mileage": "127 663 km",
     "color": "Охра",
     "fuel": "Бензин",
-    "power": "90 к.с.",
+    "power": "90 hp",
     "transmission": "Ръчна",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "Auto Start Stop function",
@@ -140,30 +129,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-02-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-02-1.webp",
-      "/assets/astracar/vehicle-02-2.webp",
-      "/assets/astracar/vehicle-02-3.webp",
-      "/assets/astracar/vehicle-02-4.webp",
-      "/assets/astracar/vehicle-02-5.webp"
-    ],
-    "engine": "900 куб.см"
+    "image": "/assets/astracar/vehicle-02-1.webp"
   },
   {
     "id": "11737822623289964",
     "title": "BMW 535 xDrive FULL EU5B",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11737822623289964-bmw-535-xdrive-full-eu5b",
-    "priceEur": "14 600 €",
-    "priceBgn": "28 555,12 лв.",
-    "status": "Публикувана обява",
-    "date": "ноември 2012 г.",
-    "mileage": "177 390 км",
+    "priceEur": "14 600 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2012",
+    "mileage": "177 390 km",
     "color": "Тъмно сив",
     "fuel": "Дизел",
-    "power": "313 к.с.",
+    "power": "313 hp",
     "transmission": "Автоматик",
-    "body": "Седан",
+    "body": "Sedan",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -221,30 +202,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-03-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-03-1.webp",
-      "/assets/astracar/vehicle-03-2.webp",
-      "/assets/astracar/vehicle-03-3.webp",
-      "/assets/astracar/vehicle-03-4.webp",
-      "/assets/astracar/vehicle-03-5.webp"
-    ],
-    "engine": "3000 куб.см"
+    "image": "/assets/astracar/vehicle-03-1.webp"
   },
   {
     "id": "11763446260159317",
     "title": "Audi A3 2.0TDI S-LINE QUATTRO",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11763446260159317-audi-a3-2-0tdi-s-line-quattro",
     "priceEur": "4000 €",
-    "priceBgn": "7823,32 лв.",
-    "status": "Публикувана обява",
-    "date": "декември 2006 г.",
-    "mileage": "181 000 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2006",
+    "mileage": "181 000 km",
     "color": "Кафяв",
     "fuel": "Дизел",
-    "power": "140 к.с.",
+    "power": "140 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "2(3) Врати",
       "4x4",
@@ -275,30 +248,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-04-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-04-1.webp",
-      "/assets/astracar/vehicle-04-2.webp",
-      "/assets/astracar/vehicle-04-3.webp",
-      "/assets/astracar/vehicle-04-4.webp",
-      "/assets/astracar/vehicle-04-5.webp"
-    ],
-    "engine": "2000 куб.см"
+    "image": "/assets/astracar/vehicle-04-1.webp"
   },
   {
     "id": "11752951085157214",
     "title": "Audi A5 2.0TFSI EURO5B",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11752951085157214-audi-a5-2-0tfsi-euro5b",
     "priceEur": "7900 €",
-    "priceBgn": "15 451,06 лв.",
-    "status": "Публикувана обява",
-    "date": "април 2010 г.",
-    "mileage": "165 170 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2010",
+    "mileage": "165 170 km",
     "color": "Черен",
     "fuel": "Бензин",
-    "power": "180 к.с.",
+    "power": "180 hp",
     "transmission": "Автоматик",
-    "body": "Купе",
+    "body": "Coupe",
     "features": [
       "2(3) Врати",
       "Bluetooth \\ handsfree система",
@@ -343,30 +308,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-05-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-05-1.webp",
-      "/assets/astracar/vehicle-05-2.webp",
-      "/assets/astracar/vehicle-05-3.webp",
-      "/assets/astracar/vehicle-05-4.webp",
-      "/assets/astracar/vehicle-05-5.webp"
-    ],
-    "engine": "2000 куб.см"
+    "image": "/assets/astracar/vehicle-05-1.webp"
   },
   {
     "id": "11762018600091690",
     "title": "Fiat Punto 1.4i EVO EURO4",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11762018600091690-fiat-punto-1-4i-evo-euro4",
     "priceEur": "3900 €",
-    "priceBgn": "7627,74 лв.",
-    "status": "Публикувана обява",
-    "date": "февруари 2010 г.",
-    "mileage": "139 800 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2010",
+    "mileage": "139 800 km",
     "color": "Черен",
     "fuel": "Бензин",
-    "power": "78 к.с.",
+    "power": "78 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "4(5) Врати",
       "Bluetooth \\ handsfree система",
@@ -400,30 +357,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-06-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-06-1.webp",
-      "/assets/astracar/vehicle-06-2.webp",
-      "/assets/astracar/vehicle-06-3.webp",
-      "/assets/astracar/vehicle-06-4.webp",
-      "/assets/astracar/vehicle-06-5.webp"
-    ],
-    "engine": "1400 куб.см"
+    "image": "/assets/astracar/vehicle-06-1.webp"
   },
   {
     "id": "11755359473275644",
     "title": "Audi A3 1.6TDI EU5B SPORTBAG",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11755359473275644-audi-a3-1-6tdi-eu5b-sportbag",
     "priceEur": "8900 €",
-    "priceBgn": "17 406,89 лв.",
-    "status": "Публикувана обява",
-    "date": "февруари 2015 г.",
-    "mileage": "162 148 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2015",
+    "mileage": "162 148 km",
     "color": "Сив",
     "fuel": "Дизел",
-    "power": "105 к.с.",
+    "power": "105 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "4(5) Врати",
       "Auto Start Stop function",
@@ -467,30 +416,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-07-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-07-1.webp",
-      "/assets/astracar/vehicle-07-2.webp",
-      "/assets/astracar/vehicle-07-3.webp",
-      "/assets/astracar/vehicle-07-4.webp",
-      "/assets/astracar/vehicle-07-5.webp"
-    ],
-    "engine": "1600 куб.см"
+    "image": "/assets/astracar/vehicle-07-1.webp"
   },
   {
     "id": "11766248164423161",
     "title": "Mini Cooper 1.6D EURO5",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11766248164423161-mini-cooper-1-6d-euro5",
     "priceEur": "4200 €",
-    "priceBgn": "8214,49 лв.",
-    "status": "Публикувана обява",
-    "date": "октомври 2010 г.",
-    "mileage": "150 052 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2010",
+    "mileage": "150 052 km",
     "color": "Банан",
     "fuel": "Дизел",
-    "power": "112 к.с.",
+    "power": "112 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "2(3) Врати",
       "Bluetooth \\ handsfree система",
@@ -526,30 +467,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-08-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-08-1.webp",
-      "/assets/astracar/vehicle-08-2.webp",
-      "/assets/astracar/vehicle-08-3.webp",
-      "/assets/astracar/vehicle-08-4.webp",
-      "/assets/astracar/vehicle-08-5.webp"
-    ],
-    "engine": "1600 куб.см"
+    "image": "/assets/astracar/vehicle-08-1.webp"
   },
   {
     "id": "11780761931333448",
     "title": "Audi A6 2.0TDI EURO5B",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11780761931333448-audi-a6-2-0tdi-euro5b",
     "priceEur": "8999 €",
-    "priceBgn": "17 600,51 лв.",
-    "status": "Публикувана обява",
-    "date": "май 2014 г.",
-    "mileage": "159 400 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2014",
+    "mileage": "159 400 km",
     "color": "Светло сив",
     "fuel": "Дизел",
-    "power": "177 к.с.",
+    "power": "177 hp",
     "transmission": "Ръчна",
-    "body": "Комби",
+    "body": "Wagon",
     "features": [
       "360 camera \\ Задна камера",
       "4(5) Врати",
@@ -599,30 +532,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-09-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-09-1.webp",
-      "/assets/astracar/vehicle-09-2.webp",
-      "/assets/astracar/vehicle-09-3.webp",
-      "/assets/astracar/vehicle-09-4.webp",
-      "/assets/astracar/vehicle-09-5.webp"
-    ],
-    "engine": "2000 куб.см"
+    "image": "/assets/astracar/vehicle-09-1.webp"
   },
   {
     "id": "21780733368439452",
     "title": "BMW X7 3.0d xDrive EU6D",
     "sourceUrl": "https://astracar.mobile.bg/obiava-21780733368439452-bmw-x7-3-0d-xdrive-eu6d",
-    "priceEur": "49 000 €",
-    "priceBgn": "95 835,67 лв.",
-    "status": "Публикувана обява",
-    "date": "август 2020 г.",
-    "mileage": "190 000 км",
+    "priceEur": "49 000 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2020",
+    "mileage": "190 000 km",
     "color": "Тъмно сив",
     "fuel": "Дизел",
-    "power": "265 к.с.",
+    "power": "265 hp",
     "transmission": "Автоматик",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "360 camera \\ Задна камера",
       "4(5) Врати",
@@ -692,30 +617,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-10-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-10-1.webp",
-      "/assets/astracar/vehicle-10-2.webp",
-      "/assets/astracar/vehicle-10-3.webp",
-      "/assets/astracar/vehicle-10-4.webp",
-      "/assets/astracar/vehicle-10-5.webp"
-    ],
-    "engine": "3000 куб.см"
+    "image": "/assets/astracar/vehicle-10-1.webp"
   },
   {
     "id": "11773504878088103",
     "title": "Citroen C3 1.2i EURO5B",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11773504878088103-citroen-c3-1-2i-euro5b",
     "priceEur": "4600 €",
-    "priceBgn": "8996,82 лв.",
-    "status": "Публикувана обява",
-    "date": "септември 2013 г.",
-    "mileage": "136 574 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2013",
+    "mileage": "136 574 km",
     "color": "Бял",
     "fuel": "Бензин",
-    "power": "82 к.с.",
+    "power": "82 hp",
     "transmission": "Ръчна",
-    "body": "Хечбек",
+    "body": "Hatchback",
     "features": [
       "4(5) Врати",
       "Buy back",
@@ -748,30 +665,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-11-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-11-1.webp",
-      "/assets/astracar/vehicle-11-2.webp",
-      "/assets/astracar/vehicle-11-3.webp",
-      "/assets/astracar/vehicle-11-4.webp",
-      "/assets/astracar/vehicle-11-5.webp"
-    ],
-    "engine": "1200 куб.см"
+    "image": "/assets/astracar/vehicle-11-1.webp"
   },
   {
     "id": "21783183116609383",
     "title": "Hyundai IX35 1.6GDI EURO5",
     "sourceUrl": "https://astracar.mobile.bg/obiava-21783183116609383-hyundai-ix35-1-6gdi-euro5",
     "priceEur": "7999 €",
-    "priceBgn": "15 644,68 лв.",
-    "status": "Публикувана обява",
-    "date": "октомври 2012 г.",
-    "mileage": "56 178 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2012",
+    "mileage": "56 178 km",
     "color": "Светло сив",
     "fuel": "Бензин",
-    "power": "135 к.с.",
+    "power": "135 hp",
     "transmission": "Ръчна",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "Bluetooth \\ handsfree система",
@@ -812,30 +721,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-12-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-12-1.webp",
-      "/assets/astracar/vehicle-12-2.webp",
-      "/assets/astracar/vehicle-12-3.webp",
-      "/assets/astracar/vehicle-12-4.webp",
-      "/assets/astracar/vehicle-12-5.webp"
-    ],
-    "engine": "1600 куб.см"
+    "image": "/assets/astracar/vehicle-12-1.webp"
   },
   {
     "id": "21783791992541606",
     "title": "Mercedes-Benz ML 350 3.0CDI PREMIUM EU6",
     "sourceUrl": "https://astracar.mobile.bg/obiava-21783791992541606-mercedes-benz-ml-350-3-0cdi-premium-eu6",
     "priceEur": "9500 €",
-    "priceBgn": "18 580,39 лв.",
-    "status": "Публикувана обява",
-    "date": "април 2010 г.",
-    "mileage": "182 887 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2010",
+    "mileage": "182 887 km",
     "color": "Черен",
     "fuel": "Дизел",
-    "power": "211 к.с.",
+    "power": "211 hp",
     "transmission": "Автоматик",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "4(5) Врати",
       "4x4",
@@ -890,30 +791,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Централно заключване",
       "Шибедах"
     ],
-    "image": "/assets/astracar/vehicle-13-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-13-1.webp",
-      "/assets/astracar/vehicle-13-2.webp",
-      "/assets/astracar/vehicle-13-3.webp",
-      "/assets/astracar/vehicle-13-4.webp",
-      "/assets/astracar/vehicle-13-5.webp"
-    ],
-    "engine": "3000 куб.см"
+    "image": "/assets/astracar/vehicle-13-1.webp"
   },
   {
     "id": "11782577422662538",
     "title": "Peugeot 2008 1.2 PureTech EU6D",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11782577422662538-peugeot-2008-1-2-puretech-eu6d",
-    "priceEur": "14 000 €",
-    "priceBgn": "27 381,62 лв.",
-    "status": "Публикувана обява",
-    "date": "март 2022 г.",
-    "mileage": "36 216 км",
+    "priceEur": "14 000 €",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2022",
+    "mileage": "36 216 km",
     "color": "Тъмно сив",
     "fuel": "Бензин",
-    "power": "100 к.с.",
+    "power": "100 hp",
     "transmission": "Ръчна",
-    "body": "Джип",
+    "body": "SUV",
     "features": [
       "360 camera \\ Задна камера",
       "4(5) Врати",
@@ -963,30 +856,22 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хладилна жабка",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-14-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-14-1.webp",
-      "/assets/astracar/vehicle-14-2.webp",
-      "/assets/astracar/vehicle-14-3.webp",
-      "/assets/astracar/vehicle-14-4.webp",
-      "/assets/astracar/vehicle-14-5.webp"
-    ],
-    "engine": "1200 куб.см"
+    "image": "/assets/astracar/vehicle-14-1.webp"
   },
   {
     "id": "11782575631736534",
     "title": "Citroen Jumpy 1.6HDI L2H1EU6B",
     "sourceUrl": "https://astracar.mobile.bg/obiava-11782575631736534-citroen-jumpy-1-6hdi-l2h1eu6b",
     "priceEur": "8500 €",
-    "priceBgn": "16 624,56 лв.",
-    "status": "Публикувана обява",
-    "date": "декември 2017 г.",
-    "mileage": "186 586 км",
+    "priceBgn": "",
+    "status": "Dated listing sample — confirm availability",
+    "date": "2017",
+    "mileage": "186 586 km",
     "color": "Бял",
     "fuel": "Дизел",
-    "power": "116 к.с.",
+    "power": "116 hp",
     "transmission": "Ръчна",
-    "body": "Ван",
+    "body": "Minivan",
     "features": [
       "4(5) Врати",
       "Auto Start Stop function",
@@ -1024,14 +909,6 @@ export const currentDayNightListings: CurrentDayNightListing[] = [
       "Хомологация N1",
       "Централно заключване"
     ],
-    "image": "/assets/astracar/vehicle-15-1.webp",
-    "gallery": [
-      "/assets/astracar/vehicle-15-1.webp",
-      "/assets/astracar/vehicle-15-2.webp",
-      "/assets/astracar/vehicle-15-3.webp",
-      "/assets/astracar/vehicle-15-4.webp",
-      "/assets/astracar/vehicle-15-5.webp"
-    ],
-    "engine": "1600 куб.см"
+    "image": "/assets/astracar/vehicle-15-1.webp"
   }
-];
+] satisfies CurrentDayNightListing[];

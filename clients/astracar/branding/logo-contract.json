@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dealer": "astracar",
+  "decision": "USE GENERATED CANDIDATE",
+  "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+  "originalSha256": "577b88b43392506185890f29f333d07c0e733629aa8243b2ffb3fd8810dd1bac",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "ae767c83298d5954172ecbfba2d0ed4ac01463357ff9726a1eedf69ea8cdb4fc",
+      "bytes": 107590
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3eb55132d19dc4560e2d89812798c8f39ba7ebedd328079bf5625f8996ad786e",
+      "bytes": 116236
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ad8c9df4aacba28923709cfc5bc98987a62f037ac1fa313cef2072de74e2e2d5",
+      "bytes": 85766
+    }
+  },
+  "preparedAt": "2026-09-19T04:59:10.707Z",
+  "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+}

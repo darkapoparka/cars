@@ -2,6 +2,10 @@
 
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehicle-facts";
+import {
+  mobileVehicleCardContentClassName,
+  mobileVehicleCardMediaClassName,
+} from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import Image from "next/image";
 import { useState } from "react";
 import {
@@ -35,12 +39,12 @@ export function LeaseSelectedVehicle({
 
   return (
     <article
-      className={`relative grid min-h-[8.75rem] grid-cols-[7.5rem_minmax(0,1fr)] overflow-hidden rounded-xl bg-white ${onSelect ? "" : "mt-4"}`}
+      className={`relative flex overflow-hidden rounded-xl bg-card ${onSelect ? "" : "mt-4"}`}
       data-slot={
         onSelect ? "lease-vehicle-option" : "lease-selected-vehicle-card"
       }
     >
-      <div className="relative min-h-[8.75rem] overflow-hidden bg-zinc-100">
+      <div className={mobileVehicleCardMediaClassName}>
         {failedImageUrl === vehicle.imageUrl ? (
           <div className="absolute inset-0 grid place-items-center text-zinc-400">
             <DealerUiIcon className="size-9" name="car" />
@@ -48,7 +52,7 @@ export function LeaseSelectedVehicle({
         ) : (
           <Image
             alt={vehicle.imageAlt}
-            className="object-cover"
+            className="object-cover object-[center_85%] lg:object-[center_80%]"
             fill
             onError={() => setFailedImageUrl(vehicle.imageUrl)}
             sizes="240px"
@@ -56,34 +60,36 @@ export function LeaseSelectedVehicle({
           />
         )}
       </div>
-      <div className="flex min-w-0 flex-col justify-center gap-2 px-3 py-2.5">
+      <div className={mobileVehicleCardContentClassName}>
         <div className="min-w-0 space-y-0.5">
           <h2
-            className="line-clamp-2 font-medium text-[16px] text-zinc-950 leading-5 tracking-tight"
+            className="line-clamp-2 font-semibold text-card-title text-zinc-950 tracking-heading"
             data-slot="lease-selected-vehicle-title"
             title={vehicle.title}
           >
             {vehicle.title}
           </h2>
-          <p
-            className="font-bold text-[18px] text-zinc-950 tabular-nums leading-5 tracking-tight"
-            data-slot="lease-selected-vehicle-price"
-          >
-            {vehicle.priceLabel}
-          </p>
-          {vehicle.monthlyLabel ? (
+          <div className="min-w-0">
             <p
-              className="text-[12px] text-muted-foreground leading-4"
-              title={
-                locale === "bg"
-                  ? "Ориентировъчна месечна вноска"
-                  : "Estimated monthly payment"
-              }
+              className="font-semibold text-price text-zinc-950 tabular-nums tracking-heading"
+              data-slot="lease-selected-vehicle-price"
             >
-              {locale === "bg" ? "от " : "from "}
-              {vehicle.monthlyLabel}
+              {vehicle.priceLabel}
             </p>
-          ) : null}
+            {vehicle.monthlyLabel ? (
+              <p
+                className="text-meta text-muted-foreground"
+                title={
+                  locale === "bg"
+                    ? "Ориентировъчна месечна вноска"
+                    : "Estimated monthly payment"
+                }
+              >
+                {locale === "bg" ? "от " : "from "}
+                {vehicle.monthlyLabel}
+              </p>
+            ) : null}
+          </div>
         </div>
         <DealerVehicleFacts
           facts={facts.map(([id, value]) => ({ id, value }))}
@@ -92,7 +98,7 @@ export function LeaseSelectedVehicle({
       </div>
       {onSelect ? (
         <button
-          aria-label={`${vehicle.title}, ${vehicle.priceLabel}`}
+          aria-label={`${locale === "bg" ? "Изберете" : "Select"} ${vehicle.title}, ${vehicle.priceLabel}`}
           aria-pressed={selected}
           className="absolute inset-0 rounded-xl focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-[-2px] active:bg-black/5"
           data-vehicle-selected={selected}

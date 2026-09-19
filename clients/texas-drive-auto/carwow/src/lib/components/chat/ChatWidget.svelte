@@ -77,7 +77,7 @@
 			loaded = true;
 		} catch (error) {
 			errorMessage =
-				error instanceof Error ? error.message : 'Chat is temporarily unavailable. Try again.';
+				error instanceof Error ? error.message : 'Чатът временно не е наличен. Опитайте отново.';
 		} finally {
 			loading = false;
 		}
@@ -114,7 +114,7 @@
 			return true;
 		} catch (error) {
 			errorMessage =
-				error instanceof Error ? error.message : 'Message not sent. Try again.';
+				error instanceof Error ? error.message : 'Съобщението не беше изпратено. Опитайте пак.';
 			return false;
 		} finally {
 			sending = false;
@@ -149,7 +149,7 @@
 			return true;
 		} catch (error) {
 			errorMessage =
-				error instanceof Error ? error.message : 'Message not sent. Try again.';
+				error instanceof Error ? error.message : 'Съобщението не беше изпратено. Опитайте пак.';
 			return false;
 		} finally {
 			sending = false;
@@ -193,7 +193,7 @@
 		onclose={() => (open = false)}
 	>
 		{#if open}
-			<button type="button" class="chat-close" aria-label="Close chat" onclick={closeChat}
+			<button type="button" class="chat-close" aria-label="Затвори чата" onclick={closeChat}
 				><X size={20} /></button
 			>
 			<ChatThread
@@ -262,11 +262,7 @@
 
 	@media (max-width: 991px) {
 		.chat-widget {
-			position: relative;
-			right: auto;
-			bottom: auto;
-			padding: 12px 16px calc(88px + env(safe-area-inset-bottom));
-			background: var(--sa-surface);
+			display: none;
 		}
 		.chat-dialog {
 			inset: auto 12px 12px 12px;

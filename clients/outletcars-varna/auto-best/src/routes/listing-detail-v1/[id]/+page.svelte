@@ -7,8 +7,8 @@
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
-  import PdpImportBanner from '$components/vehicles/PdpImportBanner.svelte';
   import { brand } from '$config/brand';
+  import { leadSite } from '$config/lead-site';
   import { formatVehiclePrice, type Vehicle } from '$data/inventory';
   import type { PageData } from './$types';
 
@@ -197,20 +197,18 @@
 
             <section class="dn-detail-card dn-detail-finance-card" aria-label="Финансиране">
               <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label="Отворете финансирането за този автомобил">
-                <img class="dn-detail-finance-banner" src="/assets/images/lead/pdp-finance-clean-mobile.webp" alt="Финансиране за този автомобил" width="450" height="150" loading="lazy" decoding="async" />
+                <img class="dn-detail-finance-banner" src={leadSite.artwork.pdp.finance} alt="Финансиране за този автомобил" width="450" height="150" loading="lazy" decoding="async" />
               </button>
               <div class="dn-detail-finance-inline">
                 {#key data.vehicle.id}
-                  <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />
+                  <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} idPrefix="finance-inline" />
                 {/key}
               </div>
             </section>
 
-            <PdpImportBanner />
-
             <section class="dn-detail-card dn-detail-dealer" aria-label={brand.name}>
               <a class="dn-detail-dealer-banner" href={resolve(vehicleContactHref(data.vehicle.id))}>
-                <img src="/assets/images/lead/pdp-seller-clean-mobile.webp" alt={`${brand.name} — доверен дилър. Обсъдете автомобила.`} width="360" height="270" loading="lazy" decoding="async" />
+                <img src={leadSite.artwork.pdp.seller} alt={`${brand.name} — доверен дилър. Обсъдете автомобила.`} width="360" height="270" loading="lazy" decoding="async" />
               </a>
             </section>
 
@@ -258,7 +256,7 @@
         </button>
       </header>
       {#key data.vehicle.id}
-        <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} />
+        <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} idPrefix="finance-dialog" />
       {/key}
     </div>
   </dialog>

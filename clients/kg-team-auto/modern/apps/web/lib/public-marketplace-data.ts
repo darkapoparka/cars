@@ -233,7 +233,7 @@ const withLeadSiteDemoIdentity = (listing: VehicleListing): VehicleListing => ({
     city: leadSite.city,
     displayName: leadSite.name,
     id: `dealer-${leadSite.slug}`,
-    logoUrl: leadSite.logoPath,
+    logoUrl: leadSite.logoOnLight,
     type: "dealer",
     verificationStatus: "unverified",
   },

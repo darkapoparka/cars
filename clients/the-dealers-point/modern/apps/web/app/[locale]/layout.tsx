@@ -12,9 +12,10 @@ import { isLocale, locales, normalizeLocale } from "@repo/internationalization";
 import { leadSite } from "@repo/marketplace";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { CSSProperties, ReactNode } from "react";
+import { fonts } from "@/lib/fonts";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileFinancingInterceptor } from "./components/mobile-financing-interceptor";
 import { MobileVisibleViewport } from "./components/mobile-visible-viewport";
@@ -24,16 +25,10 @@ interface RootLayoutProperties {
   readonly params: Promise<{ locale: string }>;
 }
 
-const publicSans = Inter({
-  display: "swap",
-  subsets: ["cyrillic", "latin"],
-  variable: "--font-public-sans",
-});
-
 export const metadata: Metadata = {
   applicationName: leadSite.name,
   icons: {
-    icon: [{ type: "image/png", url: leadSite.logoPath }],
+    icon: [{ type: "image/webp", url: leadSite.logoOnLight }],
   },
   metadataBase: new URL(getPublicWebBaseUrl()),
 };
@@ -49,15 +44,12 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
 
   return (
     <html
-      className={cn(
-        publicSans.className,
-        publicSans.variable,
-        "touch-manipulation scroll-smooth subpixel-antialiased"
-      )}
+      className={cn(fonts, "scroll-smooth")}
       data-scroll-behavior="smooth"
       lang={normalizedLocale}
       style={
         {
+          "--canvas": "oklch(0.945 0.006 264)",
           "--lead-site-accent": leadSite.accent,
           "--lead-site-accent-active":
             "color-mix(in srgb, var(--lead-site-accent) 68%, black)",
@@ -94,7 +86,10 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
               <TooltipProvider>{children}</TooltipProvider>
             </AnalyticsProvider>
           )}
-          <MobileFinancingInterceptor locale={normalizedLocale} />
+          <MobileFinancingInterceptor
+            locale={normalizedLocale}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
+          />
           <Toaster />
         </ThemeProvider>
         {leadSite.staticDemoMode ||

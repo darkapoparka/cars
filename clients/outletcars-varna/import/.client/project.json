@@ -3,69 +3,20 @@
   "client": "outletcars-varna",
   "templateKey": "import",
   "templateVersion": "5ff9805ebe0211343e7a025465d8d71e306180fa",
-  "createdAt": "2026-09-09T19:15:50.552Z",
-  "state": "refreshed-needs-local-qa",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "offeredHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
-  "localPreview": {
-    "port": 6766,
-    "command": "npm run dev",
-    "url": "http://127.0.0.1:6766",
-    "requiresLocalServer": true
-  },
-  "content": {
-    "facts": "../business-facts.json",
-    "stock": "../stock.json",
-    "inventorySnapshot": true,
-    "dealerApproval": false,
-    "mediaRightsIndependentlyEstablished": false
-  },
-  "branding": {
-    "version": "transparent-v2",
-    "logoOnLight": "/dealer/logo-on-light-v2.svg",
-    "logoOnDark": "/dealer/logo-on-dark-v2.svg",
-    "favicon": "/dealer/favicon-v2.ico",
-    "generationId": "3ff25e57-faec-42ca-8bc6-565a4e4115f8",
-    "dealerApproval": false
-  },
+  "state": "refreshed-awaiting-production-qa",
   "templateSource": {
     "repository": "darkapoparka/cars-template-import",
     "commit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
-    "digest": "f50aa85ab7d399295072e6911e095271721ea147a81569ce52d1d4bfad7c32aa",
-    "exportPolicy": "cars-source-v1"
+    "digest": "f50aa85ab7d399295072e6911e095271721ea147a81569ce52d1d4bfad7c32aa"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-2/"
   },
-  "workflowCommit": "cc82770c4cb62175b58248efb2662b7d61de114c",
-  "refresh": {
-    "previousTemplateVersion": "5ff9805ebe0211343e7a025465d8d71e306180fa",
-    "refreshedAt": "2026-09-14T21:22:24.327Z",
-    "approvedTemplateCommit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
-    "mode": "fresh-template-plus-dealer-overlay"
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   }
 }

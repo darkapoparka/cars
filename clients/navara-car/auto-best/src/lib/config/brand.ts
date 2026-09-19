@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. „Цар Освободител“, Кайсиева градина, Варна",
   appointment: "Посещения с предварителна уговорка.",
-  logo: "/navara/wordmark.svg",
-  logoOnDark: "/navara/wordmark.svg"
+  logo: "/dealer-brand/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;

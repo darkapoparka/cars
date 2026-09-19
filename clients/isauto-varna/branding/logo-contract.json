@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dealer": "isauto-varna",
+  "decision": "REFINE EXISTING IDENTITY",
+  "source": "Canonical Cars clients/isauto-varna/auto-best/static/dealer/logo-dark.png; existing raster identity retained",
+  "originalSha256": "a53049644f4d1689ee04f601700b014a0cddbfb66c22e8b7cf116d6f28443831",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "0a413af3e8835f255e604a0e4e2d2ab2c10d66f722beb96d078d18502e6b6bfb",
+      "bytes": 8460
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "6df2c14c2f1e64b8544c96cd363c70a38530315cb080775a922386c446a7a23d",
+      "bytes": 8390
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b2f769f663b9678e8ccc31fd67e84b360bf5552ce93e9ad5043a5b3e8710fb98",
+      "bytes": 5232
+    }
+  },
+  "preparedAt": "2026-09-19T04:58:51.741Z",
+  "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+}

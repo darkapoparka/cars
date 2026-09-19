@@ -2,13 +2,13 @@
 
 | Property | Value |
 | --- | --- |
-| Name / key | IS AUTO / `auto-best` |
+| Name / key | Auto Best / `auto-best` |
 | Project repository | `darkapoparka/cars-template-auto-best` |
 | Application | One Svelte 5 / SvelteKit application |
 | Main entry | `/` |
 | Homepage variants | One retained homepage; legacy home URLs redirect to it |
 | Default presentation | Bulgarian, euro prices, kilometres |
-| Default identity | IS AUTO wordmark with source/sample contact and content data |
+| Default identity | Auto Best wordmark with source/sample contact and content data |
 | Runtime content | Typed local modules; no database required |
 | Build target | Vercel adapter |
 | Suggested development URL | `http://127.0.0.1:6461/` |

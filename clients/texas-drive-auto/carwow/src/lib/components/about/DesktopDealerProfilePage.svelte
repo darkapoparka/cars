@@ -6,6 +6,7 @@
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { featuredDayNightVehicles } from '$lib/data/daynight-vehicles';
 	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
@@ -13,16 +14,16 @@
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 
 	const highlights = [
-		'Ask about vehicle condition and availability',
-		'Ask about paperwork and registration; no dealer financing',
-		'Ask about trade-ins, appraisals, and independent inspections'
+		'Проверени автомобили с реална наличност',
+		'Съдействие за документи, регистрация и финансиране',
+		'Бартер, оценка и оглед в доверен сервиз'
 	] as const;
 	const vehicles = featuredDayNightVehicles.slice(0, 3);
 	const reviews = daynightReviews.slice(0, 3);
 	const team = daynightTeam.slice(0, 3);
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	const phoneLinkProps = {
-		href: `tel:${daynightSite.phone}`
+		href: daynightSite.phoneHref
 	} as const;
 	const mapLinkProps = {
 		href: daynightSite.mapUrl,
@@ -32,14 +33,24 @@
 </script>
 
 <div class="dealer-page">
+	<DesktopYellowRouteHero
+		headingId="dealer-profile-route-title"
+		title={`${daynightSite.shortName} ${daynightSite.city}`}
+		copy={`Автокъща в ${daynightSite.city} с подбрани автомобили, ясна информация за състоянието и съдействие до сделката.`}
+		primaryLabel="Виж наличните"
+		primaryHref="/inventory"
+		secondaryLabel="Свържете се"
+		secondaryHref="/contact"
+		compact
+	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Home</a></li>
+				<li><a href={resolve('/')}>Начало</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/about')}>About us</a></li>
+				<li><a href={resolve('/about')}>За нас</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><span>Texas Drive Auto profile</span></li>
+				<li><span>Профил на {daynightSite.shortName}</span></li>
 			</ul>
 		</div>
 	</section>
@@ -48,11 +59,11 @@
 		<div class="container">
 			<div class="dealer-profile-hero__grid">
 				<div class="dealer-profile-hero__content">
-					<p class="eyebrow">Dealership preview</p>
-					<h1>Texas Drive Auto</h1>
+					<p class="eyebrow">Проверена автокъща</p>
+					<h1>{daynightSite.shortName} {daynightSite.city}</h1>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						A used-car dealership preview where you can explore vehicles and ask about condition,
-						paperwork, and practical next steps after a viewing.
+						Автокъща в {daynightSite.city} с подбрани употребявани автомобили, ясна информация за състояние,
+						съдействие при документи и практични следващи стъпки след оглед.
 					</p>
 					<ul class="dealer-profile-hero__highlights">
 						{#each highlights as highlight (highlight)}
@@ -63,17 +74,17 @@
 						{/each}
 					</ul>
 					<div class="dealer-profile-hero__actions">
-						<a href={resolve('/inventory')} class="sa-cta sa-cta-secondary"> View inventory </a>
+						<a href={resolve('/inventory')} class="sa-cta sa-cta-secondary"> Виж наличните </a>
 						<a {...phoneLinkProps} class="sa-cta sa-cta-ghost">
 							{daynightSite.phoneLabel}
 						</a>
 					</div>
 				</div>
 				<div class="dealer-profile-card">
-					<img class="dealer-profile-card__logo" src="/brand/daynight-logo-generated.png" alt="" />
-					<p class="dealer-profile-card__title mb-6">Texas Drive Auto</p>
+					<img class="dealer-profile-card__logo" src={daynightSite.logoDark} alt="" />
+					<p class="dealer-profile-card__title mb-6">{daynightSite.shortName}</p>
 					<p class="text-secondary mb-18">{daynightSite.location}</p>
-					<a {...mapLinkProps} class="text-highlight">View location</a>
+					<a {...mapLinkProps} class="text-highlight">Виж локация</a>
 				</div>
 			</div>
 		</div>
@@ -82,8 +93,8 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Vehicle inventory</h2>
-				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> View all </a>
+				<h2>Налични автомобили</h2>
+				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> Виж всички </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each vehicles as vehicle (vehicle.slug)}
@@ -98,7 +109,7 @@
 								{vehicle.year}
 							</p>
 							<p class="text-secondary mb-10">{vehicle.mileage} · {vehicle.fuel}</p>
-							<p class="dealer-vehicle-card__price text-highlight">{vehicle.priceLabel}</p>
+							<p class="dealer-vehicle-card__price text-highlight">{vehicle.priceEur}</p>
 						</div>
 					</a>
 				{/each}
@@ -110,16 +121,20 @@
 		<div class="container">
 			<div class="dealer-about-grid">
 				<div>
-					<p class="eyebrow">About the dealership</p>
-					<h2>From choosing a vehicle to paperwork</h2>
+					<p class="eyebrow">За автокъщата</p>
+					<h2>Подреден процес от избора до документите</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Ask about comparing vehicles, requesting a viewing, checking paperwork,
-						registration, and trade-in availability. No dealer financing is offered. Confirm the details before
-						making a decision.
+						Екипът помага с сравнение на автомобили, запазване на оглед, проверка на документи,
+						регистрация, финансиране и бартер. Фокусът е клиентът да има реална информация преди
+						решение, без излишни обещания.
 					</p>
-					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Get in touch </a>
+					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>
 				</div>
-				<LazyMapEmbed src={mapEmbedSrc} title="Map to Texas Drive Auto" height="330" />
+				<LazyMapEmbed
+					src={mapEmbedSrc}
+					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+					height="330"
+				/>
 			</div>
 		</div>
 	</section>
@@ -127,8 +142,8 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Contact options</h2>
-				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">View contact options</a>
+				<h2>Екип</h2>
+				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">Виж екипа</a>
 			</div>
 			<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
@@ -149,10 +164,10 @@
 		<div class="container">
 			<div class="title-section mb-30">
 				<div>
-					<h2>Customer reviews unavailable in this preview</h2>
+					<h2>Отзиви от клиенти</h2>
 					<p class="text-secondary">{daynightReviewDisclosure}</p>
 				</div>
-				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost"> View all </a>
+				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost"> Виж всички </a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each reviews as review (review.id)}
@@ -168,6 +183,17 @@
 </div>
 
 <style>
+	@media (min-width: 992px) {
+		.dealer-page > .background-light,
+		.dealer-profile-hero__content > h1 {
+			display: none;
+		}
+
+		.dealer-profile-hero {
+			padding-top: var(--sa-desktop-section-y-md);
+		}
+	}
+
 	.dealer-page,
 	.dealer-page * {
 		box-sizing: border-box;
@@ -179,8 +205,8 @@
 
 	.dealer-page {
 		color: #1c1c1c;
-		font-size: 16px;
-		font-weight: 400;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-regular);
 		line-height: 26px;
 	}
 
@@ -206,16 +232,16 @@
 
 	.dealer-page h1 {
 		color: #111827;
-		font-size: clamp(36px, 4vw, 56px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 		text-align: center;
 	}
 
 	.dealer-page h2 {
 		color: #111827;
-		font-size: clamp(32px, 3.2vw, 48px);
-		font-weight: 700;
+		font-size: var(--sa-text-desktop-hero-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.08;
 	}
 
@@ -277,16 +303,16 @@
 	}
 
 	.h7 {
-		font-size: 18px;
-		font-weight: 500;
+		font-size: var(--sa-text-lg);
+		font-weight: var(--sa-weight-medium);
 		line-height: var(--sa-leading-body);
 	}
 
 	.eyebrow {
 		margin-bottom: 12px;
 		color: var(--sa-blue);
-		font-size: 13px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 1;
 		text-transform: uppercase;
 	}
@@ -313,16 +339,16 @@
 		margin: 0;
 		padding: 0;
 		color: #5f6877;
-		font-size: 14px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		line-height: 22px;
 		list-style: none;
 	}
 
 	.breadcrumb a,
 	.breadcrumb span {
-		font-size: 14px;
-		font-weight: 400;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
 		line-height: 22px;
 	}
 
@@ -420,7 +446,7 @@
 	.dealer-profile-card__title {
 		color: #111827;
 		font-size: var(--sa-text-xl);
-		font-weight: var(--sa-weight-semibold);
+		font-weight: var(--sa-weight-heading);
 		line-height: var(--sa-leading-tight);
 	}
 
@@ -450,7 +476,7 @@
 	.dealer-review-card span {
 		color: #6b7280;
 		display: block;
-		font-size: 14px;
+		font-size: var(--sa-text-caption);
 		margin-top: 4px;
 	}
 
@@ -491,7 +517,7 @@
 		}
 		.dealer-vehicle-card__title,
 		.dealer-team-card__name {
-			font-size: 18px;
+			font-size: var(--sa-text-lg);
 		}
 		.gap-24 {
 			gap: 16px;
@@ -503,7 +529,7 @@
 		}
 
 		.dealer-profile-hero__content h1 {
-			font-size: 34px;
+			font-size: var(--sa-type-page);
 			line-height: 1.12;
 		}
 
@@ -513,6 +539,53 @@
 
 		.md-grid-cols-1.grid.grid-cols-3 {
 			grid-template-columns: 1fr;
+		}
+		.dealer-page h1,
+		.dealer-page .dealer-profile-hero__content h1 {
+			font-size: var(--sa-mobile-type-page-title);
+			line-height: var(--sa-mobile-leading-heading);
+			overflow-wrap: anywhere;
+		}
+		.dealer-page h2 {
+			font-size: var(--sa-mobile-type-section-title);
+			line-height: 1.25;
+		}
+		.dealer-page .h7 {
+			font-size: var(--sa-mobile-type-body);
+			font-weight: var(--sa-weight-regular);
+			color: var(--sa-ink-soft);
+			line-height: var(--sa-leading-body);
+		}
+		.dealer-page .breadcrumb {
+			min-height: var(--sa-mobile-action-h);
+			padding-block: var(--sa-mobile-gap-xs);
+			gap: var(--sa-mobile-gap-sm);
+		}
+		.dealer-page .container {
+			min-width: 0;
+			width: calc(100% - 2 * var(--sa-mobile-gutter-wide));
+			padding: 0;
+		}
+		.dealer-page .container > *,
+		.dealer-page .grid > * {
+			min-width: 0;
+		}
+		.dealer-page .sa-cta {
+			max-width: 100%;
+			white-space: normal;
+			min-height: var(--sa-mobile-action-h);
+		}
+		.dealer-page .pb-80,
+		.dealer-page .pb-100 {
+			padding-bottom: var(--sa-space-8);
+		}
+		.dealer-page .py-80 {
+			padding-block: var(--sa-space-8);
+		}
+		.dealer-page .mb-32,
+		.dealer-page .mb-30,
+		.dealer-page .mb-24 {
+			margin-bottom: var(--sa-mobile-gap-lg);
 		}
 	}
 </style>

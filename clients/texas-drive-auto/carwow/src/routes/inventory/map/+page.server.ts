@@ -1,5 +1,5 @@
 import { getPublishedPublicInventory } from '$lib/server/repositories/public-inventory';
-import { loadInventoryMapPage } from '$lib/server/daynight-inventory-page';
+import { buildInventoryMapPageData } from '$lib/server/daynight-inventory-page';
 import type { PageServerLoad } from './$types';
 
 // Real native route for the half-map inventory view. Shadows the
@@ -9,6 +9,6 @@ export const load: PageServerLoad = async () => {
 	const vehicles = await getPublishedPublicInventory();
 
 	return {
-		page: await loadInventoryMapPage(vehicles)
+		page: await buildInventoryMapPageData(vehicles)
 	};
 };

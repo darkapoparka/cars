@@ -1,34 +1,19 @@
 <script lang="ts">
 	import { page as appPage } from '$app/state';
-	import StorefrontPageHead from '$lib/components/seo/StorefrontPageHead.svelte';
+	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
 	import MobileInventoryPage from '$lib/components/inventory/mobile/MobileInventoryPage.svelte';
-	import type { InventoryTemplatePage } from '$lib/types/template-page';
-	import type { HomeInitialViewport } from '$lib/types/home';
-	import { MOBILE_SHELL_MAX_WIDTH } from '$lib/hooks/is-mobile.svelte';
+	import type { InventoryPageData } from '$lib/types/storefront-page';
+	import { getViewportContext } from '$lib/hooks/viewport.svelte';
 	import { provideDesktopInventoryContext } from './desktop-inventory-context.svelte';
 	import InventoryDesktopPage from './InventoryDesktopPage.svelte';
 	import InventoryPreviewSettings from './InventoryPreviewSettings.svelte';
 
 	type InventoryLayoutMode = 'grid' | 'sidebar';
 
-	let {
-		page,
-		initialViewport
-	}: { page: InventoryTemplatePage; initialViewport: HomeInitialViewport } = $props();
-
-	// UA-based SSR: the server already rendered only the layout the device needs
-	// (decided from the request User-Agent), so phones never ship/hydrate the
-	// desktop inventory shell + its inline template head styles. Hydration starts
-	// from the same guess (no mismatch); bind:innerWidth corrects a wrong UA guess
-	// after mount. 991px matches the CSS breakpoint where the layouts swap.
-	let viewportWidth = $state<number | undefined>();
-	const isMobileViewport = $derived(
-		viewportWidth === undefined
-			? initialViewport === 'mobile'
-			: viewportWidth <= MOBILE_SHELL_MAX_WIDTH
-	);
-	const showMobileInventory = $derived(isMobileViewport);
-	const showDesktopInventory = $derived(!isMobileViewport);
+	let { page }: { page: InventoryPageData } = $props();
+	const viewport = getViewportContext();
+	const showMobileInventory = $derived(viewport.mobile);
+	const showDesktopInventory = $derived(!viewport.mobile);
 
 	// Reactive source of truth for the desktop grid + every filter control,
 	// hydrated from the deep-link query (home hero -> /inventory?brand=...&model=...).
@@ -77,13 +62,7 @@
 	}
 </script>
 
-<svelte:window bind:innerWidth={viewportWidth} />
-
-<StorefrontPageHead
-	title={page.title}
-	scriptSrcs={showDesktopInventory ? page.scriptSrcs : []}
-	description={page.description}
-/>
+<RouteSeo title={page.title} description={page.description} />
 {#if showMobileInventory}
 	<MobileInventoryPage vehicles={page.vehicles} />
 {/if}

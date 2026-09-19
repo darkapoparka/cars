@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dealer": "automarket-varna",
+  "decision": "USE GENERATED CANDIDATE",
+  "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+  "originalSha256": "1ae61c019cd55f41b89e6a47bfa93e788b12bddce7f5dfe50b8d624d2a3841e8",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "7af239008b510f97e800eeb3dad1e13d685a761d4cf085a5ddbd26ebaf291057",
+      "bytes": 117676
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "8b99f27afd47cc3f0a8196e742537c8e81285d6d539b82890611a27b65185793",
+      "bytes": 121004
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "3ab7ba4a316b242551cd192a9801baba37015e21087b2c68c83d216eda564c8a",
+      "bytes": 85436
+    }
+  },
+  "preparedAt": "2026-09-19T04:59:17.896Z",
+  "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+}

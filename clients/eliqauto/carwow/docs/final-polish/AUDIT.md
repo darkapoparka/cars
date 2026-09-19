@@ -57,6 +57,7 @@ A current design/behavior that must remain unchanged unless a selected task expl
 ## Audit-to-task traceability
 
 Every implementation item must have:
+
 - a task ID in `tasks.md`;
 - exact routes/viewports;
 - allowed files;

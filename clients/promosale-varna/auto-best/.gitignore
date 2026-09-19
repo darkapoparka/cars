@@ -32,3 +32,6 @@ static/generated/
 Thumbs.db
 
 .vercel
+
+# Local visual audit captures
+/.audit-output/

@@ -107,7 +107,7 @@ test("production inventory follows the configured data mode without a database",
     })
   ).toBeVisible();
   await expect(page).toHaveTitle(
-    "Обявата не е налична | IS AUTO Varna"
+    "Обявата не е налична | Day & Night Auto Group"
   );
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
     "content",

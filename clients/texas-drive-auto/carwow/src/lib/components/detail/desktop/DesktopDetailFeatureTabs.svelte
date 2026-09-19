@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
-	import type { DetailFeatureTab } from '$lib/types/template-page';
+	import type { DetailFeatureTab } from '$lib/types/storefront-page';
 
 	let { vehicle, tabs }: { vehicle: DayNightVehicle; tabs: DetailFeatureTab[] } = $props();
 
 	const DESCRIPTION_TAB_ID = '__description__';
 
-	// Description leads as the default tab, followed by the feature groups.
+	// Описание leads as the default tab, followed by the feature groups.
 	const navTabs = $derived([
-		{ id: DESCRIPTION_TAB_ID, label: 'Description' },
+		{ id: DESCRIPTION_TAB_ID, label: 'Описание' },
 		...tabs.map((tab) => ({ id: tab.id, label: tab.label }))
 	]);
 
@@ -72,7 +72,7 @@
 		display: inline;
 	}
 
-	/* Bigger, clearer PDP info tabs (Description + feature groups). */
+	/* Bigger, clearer PDP info tabs (Описание + feature groups). */
 	.pdp-info-tabs :global(.menu-tab-style4 li) {
 		padding-bottom: 14px;
 	}
@@ -82,9 +82,9 @@
 	}
 
 	.pdp-info-tabs :global(.menu-tab-style4 li span) {
-		font-size: 18px;
+		font-size: var(--sa-text-lg);
 		line-height: 1.4;
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		color: #4b4b4b;
 		transition: color 0.2s ease;
 	}

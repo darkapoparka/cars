@@ -141,8 +141,8 @@
 		content: 'x';
 		display: inline-flex;
 		flex: 0 0 auto;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-strong);
 		height: 18px;
 		justify-content: center;
 		line-height: 1;

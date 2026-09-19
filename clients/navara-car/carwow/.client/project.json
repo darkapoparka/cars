@@ -2,54 +2,21 @@
   "schemaVersion": 1,
   "client": "navara-car",
   "templateKey": "carwow",
-  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-  "createdAt": "2026-09-08",
-  "state": "refreshed-needs-local-qa",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "offeredHomes": [],
-  "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
-  "sourceCommit": "a3b9ec746fd2ff4f7fa075021afc90be5ff9f302",
-  "sourceTree": "d4a08817e87cf84d08c4db1c08a515937245f2dd",
-  "branding": {
-    "updatedAt": "2026-09-08",
-    "kind": "owner-requested-image-generated-refresh",
-    "asset": "/navara/wordmark.svg",
-    "generationId": "6f04e7f5-5407-4e05-96b9-3b41140c0f20",
-    "dealerApproved": false,
-    "verification": "../../BRANDING.md"
-  },
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "state": "refreshed-awaiting-production-qa",
   "templateSource": {
     "repository": "darkapoparka/cars-template-carwow",
-    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
-    "exportPolicy": "cars-source-v1"
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "c17ed6b1fb45a4f866ba2be802cab9c5d3ae5450",
-  "refresh": {
-    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "refreshedAt": "2026-09-14T20:09:43.314Z",
-    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "mode": "fresh-template-plus-dealer-overlay"
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   }
 }

@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "Морска гара Варна, Варна, България",
   appointment: "Пон.–пет. 09:30–18:30; съб. 10:00–14:00; нед. почивен ден",
-  logo: "/dealer/logo.png",
-  logoOnDark: "/dealer/logo-light.png"
+  logo: "/dealer-brand/logo-on-light.webp",
+  logoOnDark: "/dealer-brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;

@@ -68,7 +68,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -139,7 +140,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -214,7 +216,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": true
@@ -289,7 +292,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -360,7 +364,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -431,7 +436,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -502,7 +508,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -573,7 +580,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -644,7 +652,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -715,7 +724,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -786,7 +796,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -861,7 +872,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -936,7 +948,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
@@ -1007,7 +1020,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "Навара кар",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false

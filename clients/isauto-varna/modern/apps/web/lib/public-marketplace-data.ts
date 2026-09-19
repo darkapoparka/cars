@@ -11,21 +11,17 @@ import {
 } from "@repo/database/marketplace";
 import { getVehicleTaxonomyOptions } from "@repo/database/vehicle-taxonomy";
 import {
-  getMockListings,
-  mockListings,
-} from "@repo/marketplace-domain/testing/mock-data";
-import {
   buildVehicleTaxonomyOptions,
   curatedVehicleTaxonomy,
+  getMockListingBySlug,
+  getMockListings,
   leadSite,
   type MarketplaceSearchParams,
+  mockListings,
   type VehicleCategory,
   type VehicleListing,
   type VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
-
-const getMockListingBySlug = (slug: string) =>
-  mockListings.find((listing) => listing.slug === slug);
 import { log } from "@repo/observability/log";
 import { cache } from "react";
 import { getCurrentPublicDataMode } from "./public-data-policy";
@@ -237,7 +233,7 @@ const withLeadSiteDemoIdentity = (listing: VehicleListing): VehicleListing => ({
     city: leadSite.city,
     displayName: leadSite.name,
     id: `dealer-${leadSite.slug}`,
-    logoUrl: leadSite.logoPath,
+    logoUrl: leadSite.logoOnLight,
     type: "dealer",
     verificationStatus: "unverified",
   },

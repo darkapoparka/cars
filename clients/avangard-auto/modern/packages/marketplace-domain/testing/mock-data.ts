@@ -92,7 +92,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -187,7 +188,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -282,7 +284,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": true
@@ -377,7 +380,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -472,7 +476,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -567,7 +572,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -662,7 +668,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -757,7 +764,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -852,7 +860,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -947,7 +956,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1042,7 +1052,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1137,7 +1148,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1232,7 +1244,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false
@@ -1327,7 +1340,8 @@ export const mockListings: VehicleListing[] = [
       "type": "dealer",
       "displayName": "AVANGARD AUTO",
       "verificationStatus": "unverified",
-      "city": "Варна"
+      "city": "Варна",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-06T09:00:00.000Z",
     "promoted": false

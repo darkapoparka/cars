@@ -40,7 +40,8 @@
         "src/lib/data/dealer-profile.json",
         "src/lib/components/company/ShowroomMap.svelte (address adapter)",
         "src/routes/listing-detail-v1/[id]/+page.svelte (dealer identity)",
-        "src\\lib\\components\\layout\\Footer.svelte"
+        "src\\lib\\components\\layout\\Footer.svelte",
+        "static/assets/images/lead/day-night-logo.png"
       ],
       "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec"
     },
@@ -74,12 +75,12 @@
         "packages/marketplace-ui/lib/organization-directory-card-policy.test.ts",
         "packages/marketplace-ui/lib/vehicle-card-view-policy.test.ts",
         "packages/marketplace-ui/lib/vehicle-card-view-policy.ts",
-        "packages/marketplace/lead-site.ts",
         "packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
         "packages/marketplace-ui/components/listing-detail-content.tsx",
         "packages/marketplace-ui/components/seller-identity-card.tsx",
         "apps/web/lib/public-marketplace-data.ts",
-        "apps/web/app/[locale]/layout.tsx"
+        "apps/web/app/[locale]/layout.tsx",
+        "apps/web/public/lead-logo.png"
       ],
       "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01"
     },
@@ -122,7 +123,6 @@
         "src/routes/presentation/home3/+page.svelte",
         "src/routes/team/[slug]/+page.server.ts",
         "static/site.webmanifest",
-        "src/lib/data/daynight-site.ts",
         "src/lib/components/about/DesktopDealerProfilePage.svelte",
         "src/lib/components/blog/BlogArticlePage.svelte",
         "src/lib/components/home/mobile/MobileHeader.svelte",
@@ -130,7 +130,9 @@
         "src/lib/components/layout/SiteChromeNavRow.svelte",
         "src/lib/components/layout/SiteHeader.svelte",
         "src/routes/+error.svelte",
-        "src/routes/+layout.svelte"
+        "src/routes/+layout.svelte",
+        "static/brand/daynight-logo-generated.png",
+        "static/brand/daynight-logo-lockup.png"
       ],
       "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0"
     }

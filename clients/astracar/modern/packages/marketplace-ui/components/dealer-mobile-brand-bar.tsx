@@ -3,6 +3,7 @@ import { leadSite } from "@repo/marketplace";
 import { MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerMobileHeaderIcon } from "./dealer-mobile-header-icon";
@@ -13,8 +14,12 @@ export const DealerMobileBrandBar = ({
   tone = "dark",
   wordmarkTone = "original",
   onNavigate,
+  leadingAction,
+  trailingAction,
 }: {
   readonly isBg: boolean;
+  readonly leadingAction?: ReactNode;
+  readonly trailingAction?: ReactNode;
   readonly locale?: string;
   readonly tone?: "clean" | "dark" | "light";
   readonly wordmarkTone?: "original" | "light" | "dark";
@@ -31,20 +36,22 @@ export const DealerMobileBrandBar = ({
         !clean && (light ? "text-zinc-950" : "text-white"),
         clean
           ? "flex h-11 justify-center"
-          : "grid h-[54px] grid-cols-[44px_minmax(0,1fr)_44px]"
+          : "grid h-11 grid-cols-[44px_minmax(0,1fr)_44px]"
       )}
     >
-      {clean ? null : (
-        <a
-          aria-label={isBg ? "Отвори местоположението" : "Open location"}
-          className={mobileHeaderIconActionClassName}
-          href={leadSite.mapsUrl}
-          rel="noreferrer"
-          target="_blank"
-        >
-          <DealerMobileHeaderIcon icon={MapPin} kind="location" />
-        </a>
-      )}
+      {clean
+        ? null
+        : (leadingAction ?? (
+            <a
+              aria-label={isBg ? "Отвори местоположението" : "Open location"}
+              className={mobileHeaderIconActionClassName}
+              href={leadSite.mapsUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <DealerMobileHeaderIcon icon={MapPin} kind="location" />
+            </a>
+          ))}
 
       <Link
         aria-label={isBg ? "Начало" : "Home"}
@@ -63,23 +70,23 @@ export const DealerMobileBrandBar = ({
             height={512}
             priority
             sizes="(max-width: 1023px) 144px, 0px"
-            src={leadSite.logoPath}
-            style={{ filter: light || clean || wordmarkTone === "dark" ? "invert(1)" : undefined }}
+            src={wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark}
             width={1780}
           />
-
         </span>
       </Link>
 
-      {clean ? null : (
-        <a
-          aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-          className={mobileHeaderIconActionClassName}
-          href={leadSite.phoneHref}
-        >
-          <DealerMobileHeaderIcon icon={Phone} kind="phone" />
-        </a>
-      )}
+      {clean
+        ? null
+        : (trailingAction ?? (
+            <a
+              aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
+              className={mobileHeaderIconActionClassName}
+              href={leadSite.phoneHref}
+            >
+              <DealerMobileHeaderIcon icon={Phone} kind="phone" />
+            </a>
+          ))}
     </div>
   );
 };

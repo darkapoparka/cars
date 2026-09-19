@@ -22,12 +22,20 @@
       "entry": "/variant-3/"
     }
   ],
-  "extraAssets": [],
+  "extraAssets": [
+    "branding",
+    "dealer-brand"
+  ],
   "packaging": {
     "version": "1"
   },
   "switcher": {
     "language": "en",
     "accent": "#2563eb"
+  },
+  "templateRevisions": {
+    "auto-best": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+    "modern": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+    "carwow": "89f50c427863050abb7923152f05c091bb937d1e"
   }
 }

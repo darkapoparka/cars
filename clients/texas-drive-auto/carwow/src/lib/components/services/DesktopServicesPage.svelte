@@ -13,43 +13,43 @@
 	const services = [
 		{
 			id: 'inspection',
-			title: 'Pre-purchase inspection',
-			summary: 'Ask about an independent inspection and available vehicle history information before deciding.',
+			title: 'Проверка преди покупка',
+			summary: 'Организираме преглед на автомобила, история и реално състояние преди решение.',
 			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'documents',
-			title: 'Paperwork and registration',
-			summary: 'Ask which title, registration, and insurance steps are required after a purchase.',
+			title: 'Документи и регистрация',
+			summary: 'Съдействаме с талони, регистрация, застраховки и нужните стъпки след сделка.',
 			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'financing',
-			title: 'Buyer-arranged funding',
-			summary: 'Texas Drive Auto offers no dealer financing or payment plans. Buyer-arranged funding is separate.',
+			title: 'Финансиране',
+			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'trade-in',
-			title: 'Trade-in and valuation questions',
-			summary: 'Trade-in availability is not confirmed in this preview. Ask whether your vehicle can be considered.',
+			title: 'Бартер и оценка',
+			summary: 'Оценяваме текущия автомобил и го включваме като част от покупката.',
 			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'sourcing',
-			title: 'Vehicle search request',
-			summary: 'Share your preferred make, budget, and features, and ask whether vehicle sourcing is available.',
+			title: 'Търсене по задание',
+			summary: 'Уточняваме марка, бюджет и оборудване, после търсим подходящ автомобил.',
 			image: '/assets/images/services/service-card-sourcing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'delivery',
-			title: 'Delivery and pickup questions',
-			summary: 'Delivery is not confirmed in this preview. Ask about pickup arrangements and any available transport options.',
+			title: 'Доставка и предаване',
+			summary: 'Координираме транспорт, предаване и последните практически детайли.',
 			image: '/assets/images/services/service-card-delivery-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		}
@@ -97,9 +97,9 @@
 
 	function buildServiceNotes() {
 		return [
-			['Service', selectedServiceItem.title],
-			['Vehicle', vehicle.trim()],
-			['Message', message.trim()]
+			['Услуга', selectedServiceItem.title],
+			['Автомобил', vehicle.trim()],
+			['Съобщение', message.trim()]
 		]
 			.filter(([, value]) => value)
 			.map(([label, value]) => `${label}: ${value}`)
@@ -114,7 +114,7 @@
 		const contactValue = phone.trim();
 		if (!contactValue) {
 			serviceSubmitState = 'error';
-			serviceSubmitMessage = 'Please enter a phone number for your inquiry draft.';
+			serviceSubmitMessage = 'Моля, въведете телефон, за да уточним следващата стъпка.';
 			return;
 		}
 
@@ -122,7 +122,7 @@
 		serviceSubmitMessage = '';
 
 		const result = await submitLead({
-			customerName: name.trim() || 'Website service inquiry',
+			customerName: name.trim() || 'Заявка за услуга от сайта',
 			contact: contactValue,
 			email: null,
 			phone: contactValue,
@@ -134,26 +134,31 @@
 		if (result.ok) {
 			serviceSubmitState = 'success';
 			serviceSubmitMessage =
-				'Draft only — not sent';
+				'Запитването е изпратено. Екипът ще се свърже с Вас за следващата стъпка.';
 			return;
 		}
 
 		serviceSubmitState = 'error';
 		serviceSubmitMessage =
 			result.error ||
-			`Your inquiry was not sent. Please call ${daynightSite.phoneLabel}.`;
+			`Не успяхме да изпратим запитването. Моля, обадете се на ${daynightSite.phoneLabel}.`;
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-services" aria-label="Texas Drive Auto services">
+<main
+	id="main-content"
+	tabindex="-1"
+	class="desktop-services"
+	aria-label={`Услуги ${daynightSite.shortName}`}
+>
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
-		title="Services for your car"
+		title="Услуги за твоя автомобил"
 		panel="light"
 		compact
 	>
 		<div class="services-chooser">
-			<h2 id="services-choice-title">What do you need?</h2>
+			<h2 id="services-choice-title">Какво ти е необходимо?</h2>
 			<nav class="services-shortcuts" aria-labelledby="services-choice-title">
 				{#each services as service (service.id)}
 					<a
@@ -163,23 +168,21 @@
 				{/each}
 			</nav>
 			<p class="services-help">
-				Not sure which service you need? <a href={`tel:+359${daynightSite.phone.slice(1)}`}
-					>Call us</a
-				>
+				Не знаеш коя услуга ти трябва? <a href={daynightSite.phoneHref}>Обади ни се</a>
 			</p>
 		</div>
 	</DesktopYellowRouteHero>
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Service questions for Texas Drive Auto</h2>
+			<h2 class="desktop-services-sr-only">Конкретни услуги от {daynightSite.shortName}</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}
 					<a
 						class="desktop-services-card"
 						href={resolve(serviceRequestPath(service.id))}
-						aria-label={`Request service: ${service.title}`}
+						aria-label={`Заяви услуга: ${service.title}`}
 						onclick={(event) => chooseService(service.id, event)}
 					>
 						<span
@@ -193,7 +196,7 @@
 							<h3>{service.title}</h3>
 							<p>{service.summary}</p>
 							<span class="desktop-services-card__cta" aria-hidden="true">
-								<span>Select a service</span><ArrowRight size={18} />
+								<span>Избери услугата</span><ArrowRight size={18} />
 							</span>
 						</div>
 					</a>
@@ -205,10 +208,10 @@
 	<section class="desktop-services-request" id="services-request">
 		<div class="desktop-services-request__shell container">
 			<div class="desktop-services-request__copy">
-				<h2>Let’s discuss<br />the details.</h2>
+				<h2>Да уточним<br />детайлите.</h2>
 				<p>
-					Enter your phone number and tell us about the vehicle. This preview saves no request and sends nothing. Prepare questions about the service,
-					paperwork, and timing.
+					Остави телефон и ни разкажи за автомобила. Ще се свържем с теб, за да обсъдим услугата,
+					документите и удобен срок.
 				</p>
 			</div>
 
@@ -220,28 +223,28 @@
 			>
 				<input type="hidden" name="intent" value="services" />
 				<label class="desktop-services-honeypot" aria-hidden="true">
-					<span>Company</span>
+					<span>Компания</span>
 					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
 				</label>
 
 				<div class="desktop-services-form__grid">
 					<label class="desktop-services-field">
-						<span>Name</span>
-						<input name="name" type="text" bind:value={name} placeholder="Full name" />
+						<span>Име</span>
+						<input name="name" type="text" bind:value={name} placeholder="Име и фамилия" />
 					</label>
 					<label class="desktop-services-field">
-						<span>Phone</span>
+						<span>Телефон</span>
 						<input
 							name="phone"
 							type="tel"
 							bind:value={phone}
-							placeholder="Phone number"
+							placeholder="Телефон за връзка"
 							autocomplete="tel"
 							required
 						/>
 					</label>
 					<label class="desktop-services-field" for="desktop-services-service">
-						<span>Service</span>
+						<span>Услуга</span>
 						<select id="desktop-services-service" name="service" bind:value={selectedService}>
 							{#each services as service (service.id)}
 								<option value={service.id}>{service.title}</option>
@@ -249,21 +252,21 @@
 						</select>
 					</label>
 					<label class="desktop-services-field">
-						<span>Vehicle</span>
+						<span>Автомобил</span>
 						<input
 							name="vehicle"
 							type="text"
 							bind:value={vehicle}
-							placeholder="Make, model, or listing link"
+							placeholder="Марка, модел или линк към обява"
 						/>
 					</label>
 					<label class="desktop-services-field desktop-services-field--wide">
-						<span>Message</span>
+						<span>Съобщение</span>
 						<textarea
 							name="message"
 							bind:value={message}
 							rows="2"
-							placeholder="What would you like to discuss?"
+							placeholder="Какво искате да уточним?"
 						></textarea>
 					</label>
 				</div>
@@ -284,7 +287,7 @@
 					type="submit"
 					disabled={serviceSubmitState === 'submitting'}
 				>
-					<span>{serviceSubmitState === 'submitting' ? 'Sending...' : 'Send inquiry'}</span>
+					<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}</span>
 				</button>
 			</form>
 		</div>
@@ -308,19 +311,19 @@
 		border-radius: 8px;
 		background: var(--desktop-field);
 		color: var(--sa-ink);
-		font: 500 14px/1.35 var(--sa-font);
+		font: var(--sa-weight-medium) var(--sa-text-caption)/1.35 var(--sa-font);
 	}
 	.services-shortcuts a:hover {
 		background: var(--desktop-secondary-hover);
 		border-color: var(--desktop-secondary-hover);
 	}
 	.desktop-services .services-help {
-		font: 400 14px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
 		margin: 14px 0 0;
 		color: var(--sa-ink);
 	}
 	.desktop-services .services-help a {
-		font-weight: 600;
+		font-weight: var(--sa-button-font-weight);
 		text-decoration: underline;
 		text-underline-offset: 3px;
 	}
@@ -347,7 +350,7 @@
 		text-align: center;
 	}
 	.desktop-services .services-chooser h2 {
-		font: 600 18px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);
 		color: var(--sa-ink);
 		margin: 0;
 		letter-spacing: 0;
@@ -398,13 +401,13 @@
 		flex: 1;
 	}
 	.desktop-services-card h3 {
-		font: 700 var(--sa-text-desktop-card-title)/1.25 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-desktop-card-title)/1.25 var(--sa-font);
 		letter-spacing: 0;
 		margin: 0 0 8px;
 		color: #fff;
 	}
 	.desktop-services-card p {
-		font: 400 15px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
 		color: #d9dcde;
 		margin: 0;
 	}
@@ -416,7 +419,8 @@
 		color: #15191b;
 		background: #fff;
 		border-radius: 8px;
-		font: 600 14px/1.4 var(--sa-font);
+		font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
+			var(--sa-font);
 		padding: 10px 16px;
 		margin-top: 20px;
 		min-height: 44px;
@@ -448,13 +452,13 @@
 		border-radius: 16px;
 	}
 	.desktop-services-request__copy h2 {
-		font: 800 clamp(36px, 3.4vw, 52px)/1.06 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-desktop-hero-title)/1.06 var(--sa-font);
 		letter-spacing: -0.04em;
 		margin: 0 0 20px;
 		color: var(--sa-ink);
 	}
 	.desktop-services-request__copy p {
-		font: 400 18px/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-lg)/1.5 var(--sa-font);
 		color: var(--sa-ink);
 		margin: 0;
 		max-width: 34ch;
@@ -480,7 +484,7 @@
 		grid-column: span 2;
 	}
 	.desktop-services-field span {
-		font: 600 14px/1.4 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-caption)/1.4 var(--sa-font);
 		color: var(--sa-ink);
 	}
 	.desktop-services-field :is(input, select, textarea) {
@@ -490,7 +494,7 @@
 		border-radius: 8px;
 		background: #f7f8fa !important;
 		color: var(--sa-ink) !important;
-		font: 400 16px/1.4 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font);
 		box-shadow: none !important;
 	}
 	.desktop-services-field :is(input, select) {
@@ -513,7 +517,7 @@
 		justify-self: end;
 		border: 0;
 		--sa-cta-height: 46px;
-		--sa-cta-font-size: 16px;
+		--sa-cta-font-size: var(--sa-button-font-size);
 		padding-inline: 24px;
 	}
 	.desktop-services-form__message {
@@ -522,7 +526,7 @@
 		border-radius: 8px;
 		background: #fff1f1;
 		color: #b42318;
-		font: 400 16px/1.4 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font);
 	}
 	.desktop-services-form__message[data-state='success'] {
 		background: #ecfdf3;

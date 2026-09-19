@@ -1,1 +1,46 @@
-export type FaqAnswerParagraph={readonly class:string;readonly text:string};export type FaqItem={readonly id:string;readonly question:string;readonly toggleClass:string;readonly answer:readonly FaqAnswerParagraph[]};export type FaqGroup={readonly id:string;readonly containerClass:string;readonly headingClass:string;readonly heading:string;readonly items:readonly FaqItem[]};const answer=(text:string)=>[{class:'h7 text-secondary line-height-28',text}] as const;export const daynightFaqGroups:readonly FaqGroup[]=[{id:'showroom',containerClass:'container mb-60',headingClass:'h3 mb-20 text-center capitalize',heading:'Showroom enquiries',items:[{id:'availability',question:'Is this stock live?',toggleClass:'flat-toggle bg-white',answer:answer('No. This concept uses a dated public sample. Confirm availability and price directly with The Dealers Point.')},{id:'viewing',question:'How do I arrange a viewing?',toggleClass:'flat-toggle',answer:answer('Contact the showroom and identify the exact vehicle before travelling.')},{id:'import-export',question:'Can I ask about import or export?',toggleClass:'flat-toggle bg-white',answer:answer('The published business describes import/export activity. Ask for current vehicle-specific terms directly.')}]}];
+export type FaqAnswerParagraph = { readonly class: string; readonly text: string; };
+export type FaqItem = { readonly id: string; readonly question: string; readonly toggleClass: string; readonly answer: readonly FaqAnswerParagraph[]; };
+export type FaqGroup = { readonly id: string; readonly containerClass: string; readonly headingClass: string; readonly heading: string; readonly items: readonly FaqItem[]; };
+export const daynightFaqGroups: readonly FaqGroup[] = [
+  {
+    "id": "dealer-information",
+    "containerClass": "container",
+    "headingClass": "h3 mb-20 text-center capitalize",
+    "heading": "Dealer information",
+    "items": [
+      {
+        "id": "availability",
+        "question": "Is every vehicle currently available?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with The Dealers Point. Demo forms do not send messages."
+          }
+        ]
+      },
+      {
+        "id": "viewing",
+        "question": "How do I arrange a viewing?",
+        "toggleClass": "flat-toggle",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Contact Dealers Point on +971 55 187 5094 before visiting Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE."
+          }
+        ]
+      },
+      {
+        "id": "forms",
+        "question": "Does this preview submit a reservation?",
+        "toggleClass": "flat-toggle bg-white",
+        "answer": [
+          {
+            "class": "h7 text-secondary line-height-28",
+            "text": "Proposal refresh and concept stock artwork for unpublished owner review; not represented as official source artwork."
+          }
+        ]
+      }
+    ]
+  }
+];

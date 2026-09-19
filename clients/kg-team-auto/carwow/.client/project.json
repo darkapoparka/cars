@@ -2,44 +2,21 @@
   "schemaVersion": 1,
   "client": "kg-team-auto",
   "templateKey": "carwow",
-  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-  "createdAt": "2026-09-08T21:59:54.872Z",
-  "state": "refreshed-needs-local-qa",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "offeredHomes": [],
-  "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "state": "refreshed-awaiting-production-qa",
   "templateSource": {
     "repository": "darkapoparka/cars-template-carwow",
-    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
-    "exportPolicy": "cars-source-v1"
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "93eda8f8494e2294ded3cd2ee53a237100a82e98",
-  "refresh": {
-    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "refreshedAt": "2026-09-15T03:31:52.811Z",
-    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "mode": "fresh-template-plus-dealer-overlay"
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   }
 }

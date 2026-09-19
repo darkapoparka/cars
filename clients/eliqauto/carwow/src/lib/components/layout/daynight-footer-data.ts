@@ -29,9 +29,9 @@ export type DayNightFooterLinkGroup = {
 
 export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
-		title: 'DAY NIGHT AUTO GROUP',
+		title: 'ELIQ AUTO',
 		links: [
-			{ href: '/about', label: 'За Day Night Auto' },
+			{ href: '/about', label: 'За ELIQ AUTO' },
 			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
 			{ href: '/team', label: 'Екип' },
 			{ href: '/reviews', label: 'Отзиви' },
@@ -64,3 +64,29 @@ export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 export const daynightFooterBottomLinks: DayNightFooterLink[] = [
 	{ href: '/terms', label: 'Условия за ползване' }
 ];
+
+// Shared navigation for the desktop columns and mobile accordions.
+export const daynightDealerFooterGroups = [
+	{
+		title: 'Бързи връзки',
+		links: [
+			{ href: '/about', label: 'За нас' },
+			{ href: '/team', label: 'Нашият екип' },
+			{ href: '/services', label: 'Услуги' },
+			{ href: '/faq', label: 'Често задавани въпроси' },
+			{ href: '/blog', label: 'Блог' },
+			{ href: '/contact', label: 'Контакти' }
+		]
+	},
+	{
+		title: 'Покупка и продажба',
+		links: [
+			{ href: '/inventory', label: 'Намери автомобил' },
+			{ href: '/sell-your-car', label: 'Продай или замени' },
+			{ href: '/financing', label: 'Лизинг и финансиране' },
+			{ href: '/inventory/map', label: 'Карта на автомобилите' },
+			{ href: '/calculator', label: 'Калкулатор за финансиране' },
+			{ href: '/reviews', label: 'Отзиви от клиенти' }
+		]
+	}
+] as const;

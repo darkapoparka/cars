@@ -3,13 +3,13 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    "id": "tx-127361913",
-    "slug": "2008-acura-tl-127361913",
+    "id": "am-1001",
+    "slug": "acura-tl-2008-127361913",
     "category": "car",
     "dealerOrgId": "dealer-texas-drive-auto",
     "status": "active",
     "title": "2008 Acura TL",
-    "description": "Dated Texas Drive Auto listing sample observed 2026-09-08. 3.2L V6; Automatic 5-Speed; FWD. Odometer 176,729 miles. Advertised price USD 4,500, excluding taxes, title and licensing; confirm final price, condition and availability directly. Title status is not independently verified. No dealer financing or payment plans. Source: https://www.texasdriveauto.com/details/used-2008-acura-tl/127361913",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
     "price": {
       "amount": 4500,
       "currency": "USD"
@@ -18,7 +18,7 @@ export const mockListings: VehicleListing[] = [
     "images": [
       {
         "url": "/stock/127361913-1.webp",
-        "alt": "2008 Acura TL — published dealer listing photograph"
+        "alt": "2008 Acura TL"
       }
     ],
     "badges": [
@@ -29,26 +29,15 @@ export const mockListings: VehicleListing[] = [
       "region": "Texas",
       "country": "United States"
     },
-    "features": [
-      {
-        "bg": "3.2L V6",
-        "en": "3.2L V6"
-      },
-      {
-        "bg": "FWD",
-        "en": "FWD"
-      }
-    ],
     "spec": {
       "make": "Acura",
       "model": "TL",
-      "trim": "",
       "year": 2008,
       "bodyType": "sedan",
       "fuelType": "gasoline",
       "transmission": "automatic",
-      "mileageValue": 176729,
-      "mileageUnit": "mi",
+      "mileageValue": 284418,
+      "mileageUnit": "km",
       "colorExterior": "Gray"
     },
     "seller": {
@@ -57,19 +46,19 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Texas Drive Auto",
       "verificationStatus": "unverified",
       "city": "Dallas",
-      "logoUrl": "/brand/logo-on-light.png"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-08T00:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "tx-128538336",
-    "slug": "2012-audi-q5-128538336",
+    "id": "am-1010",
+    "slug": "audi-q5-2012-128538336",
     "category": "car",
     "dealerOrgId": "dealer-texas-drive-auto",
     "status": "active",
     "title": "2012 Audi Q5 2.0T quattro Premium Plus",
-    "description": "Dated Texas Drive Auto listing sample observed 2026-09-08. 2.0L Turbo I4; Automatic 8-Speed; AWD. Odometer 104,710 miles. Advertised price USD 6,500, excluding taxes, title and licensing; confirm final price, condition and availability directly. Title status is not independently verified. No dealer financing or payment plans. Source: https://www.texasdriveauto.com/details/used-2012-audi-q5/128538336",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
     "price": {
       "amount": 6500,
       "currency": "USD"
@@ -78,7 +67,7 @@ export const mockListings: VehicleListing[] = [
     "images": [
       {
         "url": "/media/photo-unavailable.svg",
-        "alt": "Listing photograph not yet available"
+        "alt": "2012 Audi Q5 2.0T quattro Premium Plus"
       }
     ],
     "badges": [
@@ -89,16 +78,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Texas",
       "country": "United States"
     },
-    "features": [
-      {
-        "bg": "2.0L Turbo I4",
-        "en": "2.0L Turbo I4"
-      },
-      {
-        "bg": "AWD",
-        "en": "AWD"
-      }
-    ],
     "spec": {
       "make": "Audi",
       "model": "Q5",
@@ -107,8 +86,8 @@ export const mockListings: VehicleListing[] = [
       "bodyType": "suv",
       "fuelType": "other",
       "transmission": "automatic",
-      "mileageValue": 104710,
-      "mileageUnit": "mi"
+      "mileageValue": 168514,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-texas-drive-auto",
@@ -116,19 +95,19 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Texas Drive Auto",
       "verificationStatus": "unverified",
       "city": "Dallas",
-      "logoUrl": "/brand/logo-on-light.png"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-08T00:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "tx-127361925",
-    "slug": "2013-audi-q5-127361925",
+    "id": "am-1011",
+    "slug": "audi-q5-2013-127361925",
     "category": "car",
     "dealerOrgId": "dealer-texas-drive-auto",
     "status": "active",
     "title": "2013 Audi Q5 2.0T quattro Premium Plus",
-    "description": "Dated Texas Drive Auto listing sample observed 2026-09-08. 2.0L Flex Fuel Turbo I4; Automatic 8-Speed; AWD. Odometer 114,512 miles. Advertised price USD 6,990, excluding taxes, title and licensing; confirm final price, condition and availability directly. Title status is not independently verified. No dealer financing or payment plans. Source: https://www.texasdriveauto.com/details/used-2013-audi-q5/127361925",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
     "price": {
       "amount": 6990,
       "currency": "USD"
@@ -137,7 +116,7 @@ export const mockListings: VehicleListing[] = [
     "images": [
       {
         "url": "/stock/127361925-1.webp",
-        "alt": "2013 Audi Q5 — published dealer listing photograph"
+        "alt": "2013 Audi Q5 2.0T quattro Premium Plus"
       }
     ],
     "badges": [
@@ -148,16 +127,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Texas",
       "country": "United States"
     },
-    "features": [
-      {
-        "bg": "2.0L Flex Fuel Turbo I4",
-        "en": "2.0L Flex Fuel Turbo I4"
-      },
-      {
-        "bg": "AWD",
-        "en": "AWD"
-      }
-    ],
     "spec": {
       "make": "Audi",
       "model": "Q5",
@@ -166,8 +135,8 @@ export const mockListings: VehicleListing[] = [
       "bodyType": "suv",
       "fuelType": "other",
       "transmission": "automatic",
-      "mileageValue": 114512,
-      "mileageUnit": "mi",
+      "mileageValue": 184289,
+      "mileageUnit": "km",
       "colorExterior": "White"
     },
     "seller": {
@@ -176,19 +145,19 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Texas Drive Auto",
       "verificationStatus": "unverified",
       "city": "Dallas",
-      "logoUrl": "/brand/logo-on-light.png"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-08T00:00:00.000Z",
-    "promoted": false
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": true
   },
   {
-    "id": "tx-127361924",
-    "slug": "2018-audi-a4-127361924",
+    "id": "am-1012",
+    "slug": "audi-a4-2018-127361924",
     "category": "car",
     "dealerOrgId": "dealer-texas-drive-auto",
     "status": "active",
     "title": "2018 Audi A4 Premium",
-    "description": "Dated Texas Drive Auto listing sample observed 2026-09-08. 2.0L; Automatic 7-Speed; FWD. Odometer 128,956 miles. Advertised price USD 8,990, excluding taxes, title and licensing; confirm final price, condition and availability directly. Title status is not independently verified. No dealer financing or payment plans. Source: https://www.texasdriveauto.com/details/used-2018-audi-a4/127361924",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
     "price": {
       "amount": 8990,
       "currency": "USD"
@@ -197,7 +166,7 @@ export const mockListings: VehicleListing[] = [
     "images": [
       {
         "url": "/media/photo-unavailable.svg",
-        "alt": "Listing photograph not yet available"
+        "alt": "2018 Audi A4 Premium"
       }
     ],
     "badges": [
@@ -208,16 +177,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Texas",
       "country": "United States"
     },
-    "features": [
-      {
-        "bg": "2.0L",
-        "en": "2.0L"
-      },
-      {
-        "bg": "FWD",
-        "en": "FWD"
-      }
-    ],
     "spec": {
       "make": "Audi",
       "model": "A4",
@@ -226,8 +185,8 @@ export const mockListings: VehicleListing[] = [
       "bodyType": "sedan",
       "fuelType": "other",
       "transmission": "automatic",
-      "mileageValue": 128956,
-      "mileageUnit": "mi"
+      "mileageValue": 207535,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-texas-drive-auto",
@@ -235,19 +194,19 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Texas Drive Auto",
       "verificationStatus": "unverified",
       "city": "Dallas",
-      "logoUrl": "/brand/logo-on-light.png"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-08T00:00:00.000Z",
+    "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "tx-127361904",
-    "slug": "2014-bmw-x5-127361904",
+    "id": "am-1013",
+    "slug": "bmw-x5-2014-127361904",
     "category": "car",
     "dealerOrgId": "dealer-texas-drive-auto",
     "status": "active",
     "title": "2014 BMW X5 xDrive35i",
-    "description": "Dated Texas Drive Auto listing sample observed 2026-09-08. 3.0L Twin Turbo I6; Automatic 8-Speed; AWD. Odometer 177,873 miles. Advertised price USD 7,990, excluding taxes, title and licensing; confirm final price, condition and availability directly. Title status is not independently verified. No dealer financing or payment plans. Source: https://www.texasdriveauto.com/details/used-2014-bmw-x5/127361904",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
     "price": {
       "amount": 7990,
       "currency": "USD"
@@ -256,7 +215,7 @@ export const mockListings: VehicleListing[] = [
     "images": [
       {
         "url": "/stock/127361904-1.webp",
-        "alt": "2014 BMW X5 — published dealer listing photograph"
+        "alt": "2014 BMW X5 xDrive35i"
       }
     ],
     "badges": [
@@ -267,16 +226,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Texas",
       "country": "United States"
     },
-    "features": [
-      {
-        "bg": "3.0L Twin Turbo I6",
-        "en": "3.0L Twin Turbo I6"
-      },
-      {
-        "bg": "AWD",
-        "en": "AWD"
-      }
-    ],
     "spec": {
       "make": "BMW",
       "model": "X5",
@@ -285,8 +234,8 @@ export const mockListings: VehicleListing[] = [
       "bodyType": "suv",
       "fuelType": "other",
       "transmission": "automatic",
-      "mileageValue": 177873,
-      "mileageUnit": "mi"
+      "mileageValue": 286259,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-texas-drive-auto",
@@ -294,19 +243,19 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Texas Drive Auto",
       "verificationStatus": "unverified",
       "city": "Dallas",
-      "logoUrl": "/brand/logo-on-light.png"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-08T00:00:00.000Z",
+    "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "tx-127361891",
-    "slug": "2014-buick-enclave-127361891",
+    "id": "am-1014",
+    "slug": "buick-enclave-2014-127361891",
     "category": "car",
     "dealerOrgId": "dealer-texas-drive-auto",
     "status": "active",
     "title": "2014 Buick Enclave Leather",
-    "description": "Dated Texas Drive Auto listing sample observed 2026-09-08. 3.6L V6; Automatic 6-Speed; AWD. Odometer 162,632 miles. Advertised price USD 6,990, excluding taxes, title and licensing; confirm final price, condition and availability directly. Title status is not independently verified. No dealer financing or payment plans. Source: https://www.texasdriveauto.com/details/used-2014-buick-enclave/127361891",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
     "price": {
       "amount": 6990,
       "currency": "USD"
@@ -315,7 +264,7 @@ export const mockListings: VehicleListing[] = [
     "images": [
       {
         "url": "/media/photo-unavailable.svg",
-        "alt": "Listing photograph not yet available"
+        "alt": "2014 Buick Enclave Leather"
       }
     ],
     "badges": [
@@ -326,26 +275,16 @@ export const mockListings: VehicleListing[] = [
       "region": "Texas",
       "country": "United States"
     },
-    "features": [
-      {
-        "bg": "3.6L V6",
-        "en": "3.6L V6"
-      },
-      {
-        "bg": "AWD",
-        "en": "AWD"
-      }
-    ],
     "spec": {
       "make": "Buick",
       "model": "Enclave",
       "trim": "Leather",
       "year": 2014,
-      "bodyType": "suv",
+      "bodyType": "other",
       "fuelType": "other",
       "transmission": "automatic",
-      "mileageValue": 162632,
-      "mileageUnit": "mi"
+      "mileageValue": 261731,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-texas-drive-auto",
@@ -353,19 +292,19 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Texas Drive Auto",
       "verificationStatus": "unverified",
       "city": "Dallas",
-      "logoUrl": "/brand/logo-on-light.png"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-08T00:00:00.000Z",
+    "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "tx-127361933",
-    "slug": "2007-cadillac-cts-127361933",
+    "id": "am-1002",
+    "slug": "cadillac-cts-2007-127361933",
     "category": "car",
     "dealerOrgId": "dealer-texas-drive-auto",
     "status": "active",
     "title": "2007 Cadillac CTS HI FEATURE V6",
-    "description": "Dated Texas Drive Auto listing sample observed 2026-09-08. 3.6L V6; Automatic 5-Speed; RWD. Odometer 119,529 miles. Advertised price USD 4,990, excluding taxes, title and licensing; confirm final price, condition and availability directly. Title status is not independently verified. No dealer financing or payment plans. Source: https://www.texasdriveauto.com/details/used-2007-cadillac-cts/127361933",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
     "price": {
       "amount": 4990,
       "currency": "USD"
@@ -374,7 +313,7 @@ export const mockListings: VehicleListing[] = [
     "images": [
       {
         "url": "/media/photo-unavailable.svg",
-        "alt": "Listing photograph not yet available"
+        "alt": "2007 Cadillac CTS HI FEATURE V6"
       }
     ],
     "badges": [
@@ -385,16 +324,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Texas",
       "country": "United States"
     },
-    "features": [
-      {
-        "bg": "3.6L V6",
-        "en": "3.6L V6"
-      },
-      {
-        "bg": "RWD",
-        "en": "RWD"
-      }
-    ],
     "spec": {
       "make": "Cadillac",
       "model": "CTS",
@@ -403,8 +332,8 @@ export const mockListings: VehicleListing[] = [
       "bodyType": "sedan",
       "fuelType": "other",
       "transmission": "automatic",
-      "mileageValue": 119529,
-      "mileageUnit": "mi"
+      "mileageValue": 192363,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-texas-drive-auto",
@@ -412,19 +341,19 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Texas Drive Auto",
       "verificationStatus": "unverified",
       "city": "Dallas",
-      "logoUrl": "/brand/logo-on-light.png"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-08T00:00:00.000Z",
+    "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
   },
   {
-    "id": "tx-127361883",
-    "slug": "2018-cadillac-escalade-127361883",
+    "id": "am-1003",
+    "slug": "cadillac-escalade-2018-127361883",
     "category": "car",
     "dealerOrgId": "dealer-texas-drive-auto",
     "status": "active",
     "title": "2018 Cadillac Escalade Standard",
-    "description": "Dated Texas Drive Auto listing sample observed 2026-09-08. 6.2L V8; Automatic 10-Speed; 4X4. Odometer 99,315 miles. Advertised price USD 15,990, excluding taxes, title and licensing; confirm final price, condition and availability directly. Title status is not independently verified. No dealer financing or payment plans. Source: https://www.texasdriveauto.com/details/used-2018-cadillac-escalade/127361883",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
     "price": {
       "amount": 15990,
       "currency": "USD"
@@ -433,7 +362,7 @@ export const mockListings: VehicleListing[] = [
     "images": [
       {
         "url": "/media/photo-unavailable.svg",
-        "alt": "Listing photograph not yet available"
+        "alt": "2018 Cadillac Escalade Standard"
       }
     ],
     "badges": [
@@ -444,16 +373,6 @@ export const mockListings: VehicleListing[] = [
       "region": "Texas",
       "country": "United States"
     },
-    "features": [
-      {
-        "bg": "6.2L V8",
-        "en": "6.2L V8"
-      },
-      {
-        "bg": "4X4",
-        "en": "4X4"
-      }
-    ],
     "spec": {
       "make": "Cadillac",
       "model": "Escalade",
@@ -462,8 +381,8 @@ export const mockListings: VehicleListing[] = [
       "bodyType": "suv",
       "fuelType": "other",
       "transmission": "automatic",
-      "mileageValue": 99315,
-      "mileageUnit": "mi"
+      "mileageValue": 159832,
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-texas-drive-auto",
@@ -471,12 +390,307 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Texas Drive Auto",
       "verificationStatus": "unverified",
       "city": "Dallas",
-      "logoUrl": "/brand/logo-on-light.png"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    "publishedAt": "2026-09-08T00:00:00.000Z",
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1004",
+    "slug": "acura-tl-2008-127361913",
+    "category": "car",
+    "dealerOrgId": "dealer-texas-drive-auto",
+    "status": "active",
+    "title": "2008 Acura TL",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+    "price": {
+      "amount": 4500,
+      "currency": "USD"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/stock/127361913-1.webp",
+        "alt": "2008 Acura TL"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States"
+    },
+    "spec": {
+      "make": "Acura",
+      "model": "TL",
+      "year": 2008,
+      "bodyType": "sedan",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 284418,
+      "mileageUnit": "km",
+      "colorExterior": "Gray"
+    },
+    "seller": {
+      "id": "dealer-texas-drive-auto",
+      "type": "dealer",
+      "displayName": "Texas Drive Auto",
+      "verificationStatus": "unverified",
+      "city": "Dallas",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1005",
+    "slug": "audi-q5-2012-128538336",
+    "category": "car",
+    "dealerOrgId": "dealer-texas-drive-auto",
+    "status": "active",
+    "title": "2012 Audi Q5 2.0T quattro Premium Plus",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+    "price": {
+      "amount": 6500,
+      "currency": "USD"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/media/photo-unavailable.svg",
+        "alt": "2012 Audi Q5 2.0T quattro Premium Plus"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "Q5",
+      "trim": "2.0T quattro Premium Plus",
+      "year": 2012,
+      "bodyType": "suv",
+      "fuelType": "other",
+      "transmission": "automatic",
+      "mileageValue": 168514,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-texas-drive-auto",
+      "type": "dealer",
+      "displayName": "Texas Drive Auto",
+      "verificationStatus": "unverified",
+      "city": "Dallas",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1006",
+    "slug": "audi-q5-2013-127361925",
+    "category": "car",
+    "dealerOrgId": "dealer-texas-drive-auto",
+    "status": "active",
+    "title": "2013 Audi Q5 2.0T quattro Premium Plus",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+    "price": {
+      "amount": 6990,
+      "currency": "USD"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/stock/127361925-1.webp",
+        "alt": "2013 Audi Q5 2.0T quattro Premium Plus"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "Q5",
+      "trim": "2.0T quattro Premium Plus",
+      "year": 2013,
+      "bodyType": "suv",
+      "fuelType": "other",
+      "transmission": "automatic",
+      "mileageValue": 184289,
+      "mileageUnit": "km",
+      "colorExterior": "White"
+    },
+    "seller": {
+      "id": "dealer-texas-drive-auto",
+      "type": "dealer",
+      "displayName": "Texas Drive Auto",
+      "verificationStatus": "unverified",
+      "city": "Dallas",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1007",
+    "slug": "audi-a4-2018-127361924",
+    "category": "car",
+    "dealerOrgId": "dealer-texas-drive-auto",
+    "status": "active",
+    "title": "2018 Audi A4 Premium",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+    "price": {
+      "amount": 8990,
+      "currency": "USD"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/media/photo-unavailable.svg",
+        "alt": "2018 Audi A4 Premium"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States"
+    },
+    "spec": {
+      "make": "Audi",
+      "model": "A4",
+      "trim": "Premium",
+      "year": 2018,
+      "bodyType": "sedan",
+      "fuelType": "other",
+      "transmission": "automatic",
+      "mileageValue": 207535,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-texas-drive-auto",
+      "type": "dealer",
+      "displayName": "Texas Drive Auto",
+      "verificationStatus": "unverified",
+      "city": "Dallas",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1008",
+    "slug": "bmw-x5-2014-127361904",
+    "category": "car",
+    "dealerOrgId": "dealer-texas-drive-auto",
+    "status": "active",
+    "title": "2014 BMW X5 xDrive35i",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+    "price": {
+      "amount": 7990,
+      "currency": "USD"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/stock/127361904-1.webp",
+        "alt": "2014 BMW X5 xDrive35i"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States"
+    },
+    "spec": {
+      "make": "BMW",
+      "model": "X5",
+      "trim": "xDrive35i",
+      "year": 2014,
+      "bodyType": "suv",
+      "fuelType": "other",
+      "transmission": "automatic",
+      "mileageValue": 286259,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-texas-drive-auto",
+      "type": "dealer",
+      "displayName": "Texas Drive Auto",
+      "verificationStatus": "unverified",
+      "city": "Dallas",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-08T09:00:00.000Z",
+    "promoted": false
+  },
+  {
+    "id": "am-1009",
+    "slug": "buick-enclave-2014-127361891",
+    "category": "car",
+    "dealerOrgId": "dealer-texas-drive-auto",
+    "status": "active",
+    "title": "2014 Buick Enclave Leather",
+    "description": "Dated listing samples; confirm price and availability directly with the dealership.",
+    "price": {
+      "amount": 6990,
+      "currency": "USD"
+    },
+    "priceType": "fixed",
+    "images": [
+      {
+        "url": "/media/photo-unavailable.svg",
+        "alt": "2014 Buick Enclave Leather"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "Dallas",
+      "region": "Texas",
+      "country": "United States"
+    },
+    "spec": {
+      "make": "Buick",
+      "model": "Enclave",
+      "trim": "Leather",
+      "year": 2014,
+      "bodyType": "other",
+      "fuelType": "other",
+      "transmission": "automatic",
+      "mileageValue": 261731,
+      "mileageUnit": "km"
+    },
+    "seller": {
+      "id": "dealer-texas-drive-auto",
+      "type": "dealer",
+      "displayName": "Texas Drive Auto",
+      "verificationStatus": "unverified",
+      "city": "Dallas",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
   }
-];
+]
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [
@@ -510,15 +724,15 @@ const createListingPredicates = (
   (listing) =>
     !filters.origin ||
     listing.supply?.origin.countryCode === filters.origin ||
-    (filters.origin === "US" &&
-      (listing.location.country === "United States" ||
-        listing.location.country === "US")),
+    (filters.origin === "BG" &&
+      (listing.location.country === "Bulgaria" ||
+        listing.location.country === "България")),
   (listing) =>
     !filters.deliverTo ||
     listing.supply?.delivery.eligibleCountryCodes.includes(filters.deliverTo) ||
-    (filters.deliverTo === "US" &&
-      (listing.location.country === "United States" ||
-        listing.location.country === "US")),
+    (filters.deliverTo === "BG" &&
+      (listing.location.country === "Bulgaria" ||
+        listing.location.country === "България")),
   (listing) => !filters.currency || listing.price.currency === filters.currency,
   (listing) =>
     filters.priceMin === undefined || listing.price.amount >= filters.priceMin,
@@ -559,7 +773,9 @@ export const getMockListings = (filters: MarketplaceSearchParams) => {
     .sort(listingComparators[filters.sort]);
 };
 
-const legacyListingSlugAliases: Readonly<Record<string, string>> = {};
+const legacyListingSlugAliases: Readonly<Record<string, string>> = {
+  "audi-q5-45-tfsi-quattro-stara-zagora-2021": "bmw-m4-competition-sofia-2021",
+};
 
 export const getMockListingBySlug = (slug: string) => {
   const resolvedSlug = legacyListingSlugAliases[slug] ?? slug;
@@ -591,7 +807,7 @@ export const getMockRelatedListings = (source: VehicleListing, limit = 3) =>
     .slice(0, limit)
     .map(({ listing }) => listing);
 
-export const mockSavedListingIds = [] as string[];
+export const mockSavedListingIds = ["am-1001", "am-1003", "am-1008"];
 
 export const getMockSavedListings = () =>
   mockListings.filter((listing) => mockSavedListingIds.includes(listing.id));
@@ -606,9 +822,54 @@ export interface MockSavedSearch {
   title: string;
 }
 
-export const mockSavedSearches: MockSavedSearch[] = [];
+export const mockSavedSearches: MockSavedSearch[] = [
+  {
+    id: "saved-search-premium-suv",
+    title: "Premium SUVs under 100k",
+    description: "BMW, Audi, and Toyota SUVs with verified sellers.",
+    filters: {
+      body: "suv",
+      category: "car",
+      priceMax: 100_000,
+      seller: "dealer",
+    },
+    cadence: "daily",
+    newMatches: 3,
+    lastRunAt: "2026-06-06T07:00:00.000Z",
+  },
+  {
+    id: "saved-search-lease-ev",
+    title: "Lease-ready EVs",
+    description: "Electric lease offers with automatic transmission.",
+    filters: {
+      category: "lease",
+      fuel: "electric",
+      transmission: "automatic",
+    },
+    cadence: "instant",
+    newMatches: 1,
+    lastRunAt: "2026-06-07T06:30:00.000Z",
+  },
+  {
+    id: "saved-search-family-varna",
+    title: "Family cars near Varna",
+    description: "Low-mileage vehicles in Varna and nearby coastal cities.",
+    filters: {
+      category: "car",
+      location: "Varna",
+      mileageMax: 90_000,
+    },
+    cadence: "weekly",
+    newMatches: 0,
+    lastRunAt: "2026-06-03T08:00:00.000Z",
+  },
+];
 
-const sellerListingStatuses: Record<string, VehicleListing["status"]> = {};
+const sellerListingStatuses: Record<string, VehicleListing["status"]> = {
+  "am-1001": "active",
+  "am-1003": "pending_review",
+  "am-1007": "draft",
+};
 
 export const getMockSellerListings = () =>
   mockListings
@@ -637,7 +898,48 @@ export interface MockDealerLead {
   status: "new" | "contacted" | "qualified" | "closed";
 }
 
-export const mockDealerLeads: MockDealerLead[] = [];
+export const mockDealerLeads: MockDealerLead[] = [
+  {
+    buyerName: "Nikolay Petrov",
+    id: "lead-1001",
+    intent: "finance",
+    listingId: "am-1001",
+    listingTitle: "2020 BMW X5 M50d",
+    receivedAt: "2026-06-07T07:30:00.000Z",
+    source: "listing",
+    status: "new",
+  },
+  {
+    buyerName: "Elena Dimitrova",
+    id: "lead-1002",
+    intent: "test_drive",
+    listingId: "am-1003",
+    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
+    receivedAt: "2026-06-06T15:20:00.000Z",
+    source: "saved_search",
+    status: "contacted",
+  },
+  {
+    buyerName: "Martin Georgiev",
+    id: "lead-1003",
+    intent: "availability",
+    listingId: "am-1008",
+    listingTitle: "2020 Mercedes-Benz AMG GT 43",
+    receivedAt: "2026-06-05T12:10:00.000Z",
+    source: "dealer_profile",
+    status: "qualified",
+  },
+  {
+    buyerName: "Iva Marinova",
+    id: "lead-1004",
+    intent: "trade_in",
+    listingId: "am-1005",
+    listingTitle: "2018 Mercedes-Benz V 250d VIP Business",
+    receivedAt: "2026-06-04T09:45:00.000Z",
+    source: "listing",
+    status: "closed",
+  },
+];
 
 export const getMockDealerStats = () => {
   const inventory = getMockDealerInventory();
@@ -675,7 +977,64 @@ export interface MockModerationReport {
   status: "new" | "reviewing" | "resolved" | "dismissed";
 }
 
-export const mockModerationReports: MockModerationReport[] = [];
+export const mockModerationReports: MockModerationReport[] = [
+  {
+    id: "report-1001",
+    listingId: "am-1003",
+    listingTitle: "2022 Mercedes-Benz GLE 53 AMG Coupe",
+    reason: "incorrect_details",
+    details:
+      "Buyer says lease terms in the message thread do not match the listing price.",
+    reporter: "Elena Dimitrova",
+    source: "buyer_report",
+    status: "new",
+    severity: "high",
+    flags: ["Lease price mismatch", "Recent edit", "High intent lead"],
+    createdAt: "2026-06-07T09:20:00.000Z",
+  },
+  {
+    id: "report-1002",
+    listingId: "am-1006",
+    listingTitle: "2021 Range Rover Sport SVR",
+    reason: "duplicate",
+    details:
+      "System found matching photos and mileage on another active dealer listing.",
+    reporter: "System",
+    source: "system_flag",
+    status: "reviewing",
+    severity: "medium",
+    flags: ["Photo reuse", "Similar VIN pattern"],
+    createdAt: "2026-06-07T06:45:00.000Z",
+  },
+  {
+    id: "report-1003",
+    listingId: "am-1002",
+    listingTitle: "2021 Mercedes-Benz GLE 400d Coupe",
+    reason: "seller_behavior",
+    details:
+      "Reporter says seller asked to move payment to an unverified channel.",
+    reporter: "Nikolay Petrov",
+    source: "buyer_report",
+    status: "new",
+    severity: "high",
+    flags: ["Payment risk", "Private seller"],
+    createdAt: "2026-06-06T17:30:00.000Z",
+  },
+  {
+    id: "report-1004",
+    listingId: "am-1008",
+    listingTitle: "2020 Mercedes-Benz AMG GT 43",
+    reason: "prohibited_content",
+    details:
+      "Admin review flagged promotional copy that may overstate warranty coverage.",
+    reporter: "Admin review",
+    source: "admin_review",
+    status: "dismissed",
+    severity: "low",
+    flags: ["Copy review"],
+    createdAt: "2026-06-05T12:10:00.000Z",
+  },
+];
 
 export interface MockTrustReview {
   city: string;
@@ -689,7 +1048,52 @@ export interface MockTrustReview {
   submittedAt: string;
 }
 
-export const mockTrustReviews: MockTrustReview[] = [];
+export const mockTrustReviews: MockTrustReview[] = [
+  {
+    entityId: "dealer-black-sea-ev",
+    entityName: "Black Sea EV",
+    entityType: "dealer",
+    city: "Varna",
+    status: "pending",
+    riskLevel: "medium",
+    linkedListings: 1,
+    documents: ["Business registration", "VAT certificate", "Dealer address"],
+    submittedAt: "2026-06-07T08:00:00.000Z",
+  },
+  {
+    entityId: "seller-124",
+    entityName: "Private seller",
+    entityType: "seller",
+    city: "Plovdiv",
+    status: "pending",
+    riskLevel: "high",
+    linkedListings: 1,
+    documents: ["ID check", "Phone verification"],
+    submittedAt: "2026-06-06T16:15:00.000Z",
+  },
+  {
+    entityId: "dealer-trakia-auto",
+    entityName: "Trakia Auto",
+    entityType: "dealer",
+    city: "Stara Zagora",
+    status: "verified",
+    riskLevel: "low",
+    linkedListings: 1,
+    documents: ["Business registration", "Dealer address"],
+    submittedAt: "2026-06-05T10:30:00.000Z",
+  },
+  {
+    entityId: "seller-882",
+    entityName: "Private seller",
+    entityType: "seller",
+    city: "Varna",
+    status: "verified",
+    riskLevel: "low",
+    linkedListings: 1,
+    documents: ["ID check", "Phone verification"],
+    submittedAt: "2026-06-04T14:40:00.000Z",
+  },
+];
 
 export interface MockAuditLogEntry {
   action: string;
@@ -701,7 +1105,35 @@ export interface MockAuditLogEntry {
   note: string;
 }
 
-export const mockAuditLog: MockAuditLogEntry[] = [];
+export const mockAuditLog: MockAuditLogEntry[] = [
+  {
+    id: "audit-1001",
+    actor: "Admin",
+    action: "report.opened",
+    entityType: "report",
+    entityId: "report-1001",
+    note: "Moved Tesla lease report to new queue.",
+    createdAt: "2026-06-07T09:25:00.000Z",
+  },
+  {
+    id: "audit-1002",
+    actor: "System",
+    action: "listing.flagged",
+    entityType: "listing",
+    entityId: "am-1006",
+    note: "Duplicate image match over threshold.",
+    createdAt: "2026-06-07T06:45:00.000Z",
+  },
+  {
+    id: "audit-1003",
+    actor: "Trust ops",
+    action: "dealer.verified",
+    entityType: "dealer",
+    entityId: "dealer-trakia-auto",
+    note: "Business registry and address checks passed.",
+    createdAt: "2026-06-06T11:15:00.000Z",
+  },
+];
 
 export const getMockAdminStats = () => {
   const openReports = mockModerationReports.filter(
@@ -734,7 +1166,39 @@ export interface MockDealerPlan {
   support: "standard" | "priority" | "managed";
 }
 
-export const mockDealerPlans: MockDealerPlan[] = [{"id":"unconfigured-demo","name":"Billing not configured","description":"No dealer subscription or paid service is configured in this private preview. This is not an offer.","monthlyPrice":{"amount":0,"currency":"USD"},"listingLimit":0,"leadCredits":0,"promotionCredits":0,"support":"standard"}];
+export const mockDealerPlans: MockDealerPlan[] = [
+  {
+    id: "dealer-starter",
+    name: "Starter",
+    description: "For small dealers testing AutoMarket inventory.",
+    monthlyPrice: { amount: 99, currency: "EUR" },
+    listingLimit: 20,
+    leadCredits: 25,
+    promotionCredits: 0,
+    support: "standard",
+  },
+  {
+    id: "dealer-growth",
+    name: "Growth",
+    description: "More active listings, included leads, and promotion credits.",
+    monthlyPrice: { amount: 249, currency: "EUR" },
+    listingLimit: 80,
+    leadCredits: 120,
+    promotionCredits: 4,
+    support: "priority",
+    current: true,
+  },
+  {
+    id: "dealer-scale",
+    name: "Scale",
+    description: "High-volume inventory with managed marketplace support.",
+    monthlyPrice: { amount: 599, currency: "EUR" },
+    listingLimit: 250,
+    leadCredits: 400,
+    promotionCredits: 12,
+    support: "managed",
+  },
+];
 
 export interface MockPromotionProduct {
   description: string;
@@ -745,7 +1209,32 @@ export interface MockPromotionProduct {
   price: Money;
 }
 
-export const mockPromotionProducts: MockPromotionProduct[] = [];
+export const mockPromotionProducts: MockPromotionProduct[] = [
+  {
+    id: "promo-search-top-7",
+    label: "Top search boost",
+    description: "Promoted placement in relevant search results for 7 days.",
+    placement: "search_top",
+    durationDays: 7,
+    price: { amount: 39, currency: "EUR" },
+  },
+  {
+    id: "promo-category-featured-14",
+    label: "Category featured",
+    description: "Featured card in category browse pages for 14 days.",
+    placement: "category_featured",
+    durationDays: 14,
+    price: { amount: 79, currency: "EUR" },
+  },
+  {
+    id: "promo-lease-partner-30",
+    label: "Lease partner slot",
+    description: "Finance and lease partner placement for eligible inventory.",
+    placement: "lease_partner",
+    durationDays: 30,
+    price: { amount: 149, currency: "EUR" },
+  },
+];
 
 export interface MockActivePromotion {
   clicks: number;
@@ -760,7 +1249,44 @@ export interface MockActivePromotion {
   status: "scheduled" | "active" | "ended";
 }
 
-export const mockActivePromotions: MockActivePromotion[] = [];
+export const mockActivePromotions: MockActivePromotion[] = [
+  {
+    id: "promotion-1001",
+    listingId: "am-1001",
+    productId: "promo-search-top-7",
+    status: "active",
+    startsAt: "2026-06-05T08:00:00.000Z",
+    endsAt: "2026-06-12T08:00:00.000Z",
+    spend: { amount: 39, currency: "EUR" },
+    impressions: 4200,
+    clicks: 184,
+    leads: 8,
+  },
+  {
+    id: "promotion-1002",
+    listingId: "am-1003",
+    productId: "promo-lease-partner-30",
+    status: "active",
+    startsAt: "2026-06-01T08:00:00.000Z",
+    endsAt: "2026-07-01T08:00:00.000Z",
+    spend: { amount: 149, currency: "EUR" },
+    impressions: 6100,
+    clicks: 246,
+    leads: 12,
+  },
+  {
+    id: "promotion-1003",
+    listingId: "am-1008",
+    productId: "promo-category-featured-14",
+    status: "scheduled",
+    startsAt: "2026-06-10T08:00:00.000Z",
+    endsAt: "2026-06-24T08:00:00.000Z",
+    spend: { amount: 79, currency: "EUR" },
+    impressions: 0,
+    clicks: 0,
+    leads: 0,
+  },
+];
 
 export interface MockDealerBillingAccount {
   currentPlanId: string;
@@ -769,11 +1295,20 @@ export interface MockDealerBillingAccount {
   monthlySpend: Money;
   paymentMethod: string;
   renewalDate: string;
-  status: "active" | "past_due" | "trialing" | "not_configured";
+  status: "active" | "past_due" | "trialing";
   usedLeadCredits: number;
 }
 
-export const mockDealerBillingAccount: MockDealerBillingAccount = {"currentPlanId":"unconfigured-demo","status":"not_configured","renewalDate":"","paymentMethod":"No payment method configured","invoiceBalance":{"amount":0,"currency":"USD"},"monthlySpend":{"amount":0,"currency":"USD"},"includedLeadCredits":0,"usedLeadCredits":0};
+export const mockDealerBillingAccount: MockDealerBillingAccount = {
+  currentPlanId: "dealer-growth",
+  status: "active",
+  renewalDate: "2026-07-01T00:00:00.000Z",
+  paymentMethod: "Visa ending 4242",
+  invoiceBalance: { amount: 0, currency: "EUR" },
+  monthlySpend: { amount: 267, currency: "EUR" },
+  includedLeadCredits: 120,
+  usedLeadCredits: 74,
+};
 
 export const getMockCurrentDealerPlan = () =>
   mockDealerPlans.find(
@@ -802,6 +1337,6 @@ export const getMockMonetizationStats = () => {
       mockDealerBillingAccount.includedLeadCredits -
       mockDealerBillingAccount.usedLeadCredits,
     promotionLeads: totalLeads,
-    promotionSpend: { amount: totalSpend, currency: "USD" } satisfies Money,
+    promotionSpend: { amount: totalSpend, currency: "EUR" } satisfies Money,
   };
 };

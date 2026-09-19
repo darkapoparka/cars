@@ -10,9 +10,9 @@
   <div class="container">
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
-      <p>Ask about the dated vehicle samples and viewing availability in {brand.city}. Import, trade-in and appraisal services are not verified in this preview. No dealer financing or payment plans; buyer-arranged funding is separate.</p>
+      <p>Подбираме автомобили според вашите критерии, организираме оглед в {brand.city} и обсъждаме внос, бартер или собствен лизинг директно с екипа.</p>
       <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
-        Browse vehicles <Icon name="arrow-right" size={18} />
+        Вижте автомобилите <Icon name="arrow-right" size={18} />
       </a>
     </div>
 

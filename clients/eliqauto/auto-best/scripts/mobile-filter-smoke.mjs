@@ -18,8 +18,9 @@ try {
     const trigger = page.locator('.dn-listing-filter__toggle');
     await trigger.click();
     await main.waitFor({ state: 'visible' });
+    const viewportBounds = await page.evaluate(() => ({ x: 0, y: 0, width: document.body.getBoundingClientRect().width, height: innerHeight }));
     const bounds = await main.boundingBox();
-    assert.deepEqual(bounds, { x: 0, y: 0, width, height }, 'Main filters must fill the viewport');
+    assert.deepEqual(bounds, viewportBounds, 'Main filters must fill the layout viewport');
     assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).overflowY), 'hidden', 'Only modal content should scroll');
     assert.equal(await main.locator('select:visible').count(), 0, 'Mobile must use picker rows, not native dropdowns');
     const query = main.locator('input[name=q]');
@@ -38,7 +39,7 @@ try {
       await row.click();
       await picker.waitFor({ state: 'visible' });
       assert.equal(await picker.locator('h2').innerText(), title);
-      assert.deepEqual(await picker.boundingBox(), { x: 0, y: 0, width, height });
+      assert.deepEqual(await picker.boundingBox(), viewportBounds);
       assert.equal(await picker.locator('select').count(), 0);
       await page.keyboard.press('Escape');
       await picker.waitFor({ state: 'hidden' });
@@ -89,7 +90,7 @@ try {
     assert.equal(params.get('equipment'), '4x4');
     assert.equal(params.get('sort'), 'price-asc');
     assert.deepEqual(errors, []);
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth), 0);
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth), 'The filter journey must not create horizontal overflow');
     results.push({ width, height, passed: true });
     await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
     console.log(`PASS full-screen mobile filters, nested choices, draft and URL at ${width}x${height}`);

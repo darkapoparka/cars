@@ -1034,6 +1034,8 @@ function patchImportHeroBindings(candidate) {
     /const mobileShowroomPhoneHref = '[^']*';/,
     'const mobileShowroomPhoneHref = daynightContact.primaryPhoneHref;'
   );
+  text = text.replace(/\{isEnglish \? 'Plovdiv, South Industrial Zone' : 'Пловдив, Индустриална зона - Юг'\}/g, '{daynightContact.addressLabel}');
+  text = text.replace(/\{isEnglish\s*\? 'Plovdiv, South Industrial Zone'\s*: 'Пловдив, Южна Индустриална зона'\}/g, '{daynightContact.addressLabel}');
   write(file, text);
   return 'src/lib/components/home/HomeFiveHero.svelte (dealer contact binding)';
 }

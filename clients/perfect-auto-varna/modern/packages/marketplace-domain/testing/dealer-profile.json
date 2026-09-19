@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D1%80%D1%84%D0%B5%D0%BA%D1%82%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20110%2C%20%D0%BA%D0%B2.%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed",
     "accent": "#a50f15",
-    "logo": "/assets/perfect-auto/cover.png",
-    "logoLight": "/assets/perfect-auto/cover.png",
-    "logoDark": "/assets/perfect-auto/cover.png",
+    "logo": "/dealer-brand/logo-on-light.webp",
+    "logoLight": "/dealer-brand/logo-on-light.webp",
+    "logoDark": "/dealer-brand/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -67,7 +67,9 @@
       "socialLinks": {},
       "accent": "#a50f15",
       "accentDark": "#7e0b10",
-      "logo": "/assets/perfect-auto/cover.png",
+      "logo": "/assets/perfect-auto/perfekt-auto-logo.webp",
+      "logoLight": "/assets/perfect-auto/perfekt-auto-logo.webp",
+      "logoDark": "/assets/perfect-auto/perfekt-auto-logo-light.webp",
       "showroom": null,
       "stockCount": 6,
       "stockSnapshotDate": "2026-09-10",
@@ -85,7 +87,7 @@
       ],
       "limitations": [
         "Работно време и имейл не са потвърдени от използваните текущи източници.",
-        "Публикуваният профилен знак е с ограничена резолюция.",
+        "Публикуваният профилен знак е използван като основа за прозрачна, по-четима демонстрационна версия.",
         "Проектът използва представителна извадка от текущи обяви, не live inventory feed."
       ],
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D1%80%D1%84%D0%B5%D0%BA%D1%82%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20110%2C%20%D0%BA%D0%B2.%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0",
@@ -585,7 +587,9 @@
     "socialLinks": {},
     "accent": "#a50f15",
     "accentDark": "#7e0b10",
-    "logo": "/assets/perfect-auto/cover.png",
+    "logo": "/assets/perfect-auto/perfekt-auto-logo.webp",
+    "logoLight": "/assets/perfect-auto/perfekt-auto-logo.webp",
+    "logoDark": "/assets/perfect-auto/perfekt-auto-logo-light.webp",
     "showroom": null,
     "stockCount": 6,
     "stockSnapshotDate": "2026-09-10",
@@ -603,11 +607,37 @@
     ],
     "limitations": [
       "Работно време и имейл не са потвърдени от използваните текущи източници.",
-      "Публикуваният профилен знак е с ограничена резолюция.",
+      "Публикуваният профилен знак е използван като основа за прозрачна, по-четима демонстрационна версия.",
       "Проектът използва представителна извадка от текущи обяви, не live inventory feed."
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%9F%D0%B5%D1%80%D1%84%D0%B5%D0%BA%D1%82%20%D0%90%D1%83%D1%82%D0%BE%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20110%2C%20%D0%BA%D0%B2.%20%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=бул.%20Цар%20Освободител%20110,%20кв.%20Победа%20Варна&output=embed"
   },
-  "sourceCount": 6
+  "sourceCount": 6,
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealer": "perfect-auto-varna",
+    "decision": "USE GENERATED CANDIDATE",
+    "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+    "originalSha256": "dcf91986ab63400a2bfce44cb3aae7035108388181f016cdb1f498f6e228b382",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "sha256": "f14f8fd14fcb86890633c6548ca774a2a7a7639493a09b21d4113db4f57adfd0",
+        "bytes": 127756
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "sha256": "529cbc115327200b2d154fe6bc0ca1c75687ecac4b0f2cca7770a1151e24cf58",
+        "bytes": 125774
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "sha256": "2c8b639a77d77c1c5038b0201308e418125621165949a0a5ca0e85ce8409aefc",
+        "bytes": 97152
+      }
+    },
+    "preparedAt": "2026-09-19T05:01:01.376Z",
+    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+  }
 }

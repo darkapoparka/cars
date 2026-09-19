@@ -37,7 +37,7 @@ function walkFiles(root, current = root, result = []) {
   return result;
 }
 
-function normalizedPresentation(key, relative, buffer) {
+function normalizedPresentation(key, relative, buffer, profile) {
   if (key !== 'import' || relative !== 'src/lib/components/home/HomeFiveHero.svelte') {
     return buffer;
   }
@@ -45,11 +45,13 @@ function normalizedPresentation(key, relative, buffer) {
   // Normalize only those values; every class, style, element and surrounding
   // component line must remain byte-equivalent to the approved template.
   return Buffer.from(
-    buffer
-      .toString('utf8')
+    [profile?.business?.shortName, profile?.business?.name].filter(Boolean).sort((a,b)=>b.length-a.length).reduce((text,name)=>text.split(name).join('Day Night Auto'), buffer.toString('utf8'))
+      .replace(/\{isEnglish \? 'Plovdiv, South Industrial Zone' : 'Пловдив, Индустриална зона - Юг'\}/g, '{__DEALER_ADDRESS__}')
+      .replace(/\{isEnglish\s*\? 'Plovdiv, South Industrial Zone'\s*: 'Пловдив, Южна Индустриална зона'\}/g, '{__DEALER_ADDRESS__}')
+      .replaceAll('{daynightContact.addressLabel}', '{__DEALER_ADDRESS__}')
       .replace("\n\timport { daynightContact } from '$lib/data/daynight';", '')
       .replace(
-        /\tconst mobileShowroomMapHref =\n\t\t(?:'[^']*'|`[^`]*`);/,
+        /\tconst mobileShowroomMapHref\s*=\s*(?:'[^']*'|`[^`]*`);/,
         '\tconst mobileShowroomMapHref =\n\t\t__DEALER_MAP_HREF__;'
       )
       .replace(
@@ -79,7 +81,7 @@ export function protectedPresentationPaths({ key, template, candidate }) {
   return [...paths].sort();
 }
 
-export function assertTemplatePresentation({ key, template, candidate }) {
+export function assertTemplatePresentation({ key, template, candidate, profile }) {
   const changed = [];
   for (const relative of protectedPresentationPaths({ key, template, candidate })) {
     const expected = path.join(template, relative);
@@ -88,8 +90,8 @@ export function assertTemplatePresentation({ key, template, candidate }) {
       changed.push(`${relative} (missing or added)`);
       continue;
     }
-    const expectedBuffer = normalizedPresentation(key, relative, fs.readFileSync(expected));
-    const actualBuffer = normalizedPresentation(key, relative, fs.readFileSync(actual));
+    const expectedBuffer = normalizedPresentation(key, relative, fs.readFileSync(expected), profile);
+    const actualBuffer = normalizedPresentation(key, relative, fs.readFileSync(actual), profile);
     if (!expectedBuffer.equals(actualBuffer)) changed.push(relative);
   }
   if (changed.length) {

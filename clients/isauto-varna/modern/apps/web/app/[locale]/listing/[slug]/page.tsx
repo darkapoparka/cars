@@ -4,6 +4,7 @@ import {
   formatMoney,
   getCategoryPath,
   getListingPath,
+  getMockRelatedListings,
   leadSite,
   parseMarketplaceSearchParams,
   type VehicleListing,
@@ -65,24 +66,6 @@ const getListingDescription = (listing: VehicleListing, locale: string) =>
 const getAbsoluteUrl = (path: string): string =>
   getCanonicalUrl(path, { baseUrl: getPublicWebBaseUrl() });
 
-const isAutoDemoListingSlugs = [
-  "audi-r8-performance-v10-2021",
-  "audi-q7-50-tdi-2022",
-  "bmw-m5-xdrive-2018",
-  "bmw-x5-xdrive-2014",
-  "bmw-750-m-performance-2019",
-  "audi-a5-sportback-20-tdi-2018",
-] as const;
-
-const getIsAutoDemoRelatedListings = (source: VehicleListing) =>
-  isAutoDemoListingSlugs
-    .filter((slug) => slug !== source.slug)
-    .flatMap((slug) => {
-      const candidate = getPublicDemoMarketplaceListing(slug);
-      return candidate ? [candidate] : [];
-    })
-    .slice(0, 3);
-
 const getPersistedListing = async (
   slug: string,
   destinationCountryCode?: string
@@ -113,7 +96,7 @@ const getRelatedListings = async (
 
   if (dataMode !== "database") {
     return dataMode === "demo"
-      ? getIsAutoDemoRelatedListings(listing)
+      ? getMockRelatedListings(listing)
           .filter(
             (relatedListing) =>
               !destinationCountryCode ||

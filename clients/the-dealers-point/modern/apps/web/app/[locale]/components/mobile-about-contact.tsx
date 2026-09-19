@@ -9,7 +9,7 @@ import Link from "next/link";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
 
 const cardClassName =
-  "flex items-center gap-3 rounded-2xl bg-zinc-100 p-4 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:bg-zinc-200";
+  "flex items-center gap-3 rounded-2xl bg-card p-4 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:bg-zinc-200";
 
 export function MobileAboutContact({
   locale,
@@ -21,7 +21,7 @@ export function MobileAboutContact({
   const isBg = locale === "bg";
   return (
     <div
-      className="min-h-[calc(100dvh-4rem)] bg-white lg:hidden"
+      className="min-h-[calc(100dvh-4rem)] bg-background lg:hidden"
       data-slot="mobile-about-contact"
     >
       <MobileDealerServiceHero
@@ -40,11 +40,11 @@ export function MobileAboutContact({
         locale={locale}
         tone="contact"
       >
-        <h1 className="flex h-full items-center justify-center px-1 text-center font-semibold text-[26px] text-white leading-8 tracking-tight">
+        <h1 className="flex h-full items-center justify-center px-1 text-center font-semibold text-page-title text-white tracking-heading">
           {isBg ? "За нас и контакти" : "About and contact"}
         </h1>
       </MobileDealerServiceHero>
-      <div className="relative -mt-3 rounded-t-2xl bg-white px-4 pt-4 pb-6">
+      <div className="relative -mt-3 rounded-t-2xl bg-background px-4 pt-4 pb-6">
         <div className="grid gap-2">
           <a className={cardClassName} href={leadSite.phoneHref}>
             <DealerUiIcon
@@ -52,10 +52,10 @@ export function MobileAboutContact({
               name="phone"
             />
             <span className="min-w-0 flex-1">
-              <span className="block text-[14px] text-zinc-600 leading-5">
+              <span className="block text-meta text-zinc-600">
                 {isBg ? "Обадете ни се" : "Call us"}
               </span>
-              <span className="mt-1 block font-semibold text-[21px] text-zinc-950 tabular-nums leading-7">
+              <span className="mt-1 block font-semibold text-price text-zinc-950 tabular-nums">
                 {leadSite.phoneDisplay}
               </span>
             </span>
@@ -75,10 +75,10 @@ export function MobileAboutContact({
               name="location"
             />
             <span className="min-w-0 flex-1">
-              <span className="block font-semibold text-[16px] leading-6">
+              <span className="block font-semibold text-card-title tracking-heading">
                 {isBg ? "Посетете шоурума" : "Visit the showroom"}
               </span>
-              <span className="mt-1 block text-[14px] text-zinc-600 leading-5">
+              <span className="mt-1 block text-meta text-zinc-600">
                 {leadSite.address}, {leadSite.city}
               </span>
             </span>
@@ -89,7 +89,7 @@ export function MobileAboutContact({
           </a>
         </div>
         <section className="mt-5">
-          <h2 className="mb-3 font-semibold text-[18px] leading-6">
+          <h2 className="mb-3 font-semibold text-card-title-lg tracking-heading">
             {isBg ? "С какво можем да помогнем" : "How we can help"}
           </h2>
           <div className="grid gap-2">
@@ -112,7 +112,7 @@ export function MobileAboutContact({
                     className="size-[22px] shrink-0 text-zinc-600"
                     name={iconName}
                   />
-                  <span className="min-w-0 flex-1 font-medium text-[15px] leading-6">
+                  <span className="min-w-0 flex-1 font-medium text-compact-control">
                     {service.title}
                   </span>
                   <DealerUiIcon

@@ -46,6 +46,14 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
     const target = path.join(publicRoot(key, candidate), asset.publicPath.slice(1));
     fs.mkdirSync(path.dirname(target), { recursive: true }); fs.copyFileSync(source, target);
   }
+  const brandRoot = path.join(path.dirname(oldVariant), 'branding');
+  const lightPng = path.join(brandRoot, 'logo-on-light.png');
+  const masterPng = fs.existsSync(lightPng) ? lightPng : path.join(brandRoot, 'logo-master.png');
+  const aliases = key === 'carwow' ? ['brand/daynight-logo-generated.png', 'brand/daynight-logo-lockup.png'] : key === 'modern' ? ['lead-logo.png'] : key === 'auto-best' ? ['assets/images/lead/day-night-logo.png'] : [];
+  for (const alias of aliases) {
+    const target = path.join(publicRoot(key, candidate), alias); fs.mkdirSync(path.dirname(target), { recursive: true }); fs.copyFileSync(masterPng, target);
+    changed.push((key === 'modern' ? 'apps/web/public/' : 'static/') + alias);
+  }
   if (key === 'auto-best') {
     edit('src/lib/config/brand.ts', text => scalar(scalar(text, 'logo', p.onLight), 'logoOnDark', p.onDark));
     for (const file of walk(path.join(candidate, 'src/lib/components')).filter(f => /Footer\.svelte$/.test(f))) {
@@ -55,6 +63,7 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
   } else if (key === 'modern') {
     edit('packages/marketplace/lead-site.ts', text => {
       text = scalar(text, 'logoPath', p.onDark);
+      text = text.replace(/^  logoOn(?:Light|Dark|Accent): [^\n]*\n/gm, '');
       if (!text.includes('readonly logoOnLight:')) text = text.replace('readonly logoPath: string;', 'readonly logoPath: string;\n  readonly logoOnLight: string;\n  readonly logoOnDark: string;\n  readonly logoOnAccent: string;');
       text = text.replace(/(\n\s*logoPath: [^\n]+\n)/, `$1  logoOnLight: ${JSON.stringify(p.onLight)},\n  logoOnDark: ${JSON.stringify(p.onDark)},\n  logoOnAccent: ${JSON.stringify(p.onAccent)},\n`);
       return text;

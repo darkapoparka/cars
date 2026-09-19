@@ -56,8 +56,7 @@ export const DealerMobileBrandBar = ({
       <Link
         aria-label={isBg ? "Начало" : "Home"}
         className={cn(
-          "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2",
-          light && "h-10 bg-black px-2.5"
+          "mx-auto flex min-h-11 min-w-0 items-center rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2"
         )}
         href={getLocalizedPublicPath(locale, "/")}
         onClick={onNavigate}
@@ -71,31 +70,9 @@ export const DealerMobileBrandBar = ({
             height={512}
             priority
             sizes="(max-width: 1023px) 144px, 0px"
-            src={leadSite.logoPath}
-            style={
-              wordmarkTone === "original"
-                ? undefined
-                : { clipPath: "inset(0 68% 0 0)" }
-            }
+            src={wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark}
             width={1780}
           />
-          {wordmarkTone === "original" ? null : (
-            <Image
-              alt=""
-              aria-hidden="true"
-              className={cn(
-                "pointer-events-none absolute inset-0 h-full w-full object-contain [clip-path:inset(0_0_0_32%)]",
-                wordmarkTone === "light"
-                  ? "brightness-0 invert"
-                  : "brightness-0"
-              )}
-              height={512}
-              priority
-              sizes="(max-width: 1023px) 144px, 0px"
-              src={leadSite.logoPath}
-              width={1780}
-            />
-          )}
         </span>
       </Link>
 

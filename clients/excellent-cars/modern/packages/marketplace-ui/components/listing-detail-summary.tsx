@@ -53,7 +53,7 @@ export const DesktopListingSummaryHeader = ({
         </ListingBackLink>
       </Button>
       <div className="min-w-0 flex-1 basis-72">
-        <h1 className="text-pretty break-words font-semibold text-page-title tracking-tight">
+        <h1 className="text-pretty break-words font-semibold text-page-title tracking-heading lg:text-page-title-lg">
           {listing.title}
         </h1>
         <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-meta text-muted-foreground">
@@ -153,7 +153,7 @@ export const MobileListingSummary = ({
     <section className="pt-4 pb-1 lg:hidden" data-slot="listing-mobile-summary">
       <div className="border-zinc-200 border-b pb-3">
         <div className="flex min-w-0 items-baseline justify-between gap-2">
-          <p className="min-w-0 break-words font-semibold text-price-lg tabular-nums tracking-tight">
+          <p className="min-w-0 break-words font-semibold text-price tabular-nums tracking-heading lg:text-price-lg">
             {formatMoney(primaryPrice, locale)}
           </p>
           {monthlyAmount ? (
@@ -172,7 +172,7 @@ export const MobileListingSummary = ({
         ) : null}
       </div>
 
-      <h1 className="mt-3 text-pretty break-words font-medium text-[length:var(--text-section-title)] text-zinc-950 leading-[var(--text-section-title--line-height)]">
+      <h1 className="mt-3 text-pretty break-words font-semibold text-section-title text-zinc-950 tracking-heading">
         {listing.title}
       </h1>
       {showPhysicalLocation ? (

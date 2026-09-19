@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0&output=embed",
     "accent": "#a50f15",
-    "logo": "/assets/automarket/cover.png",
-    "logoLight": "/assets/automarket/cover.png",
-    "logoDark": "/assets/automarket/cover.png",
+    "logo": "/dealer-brand/logo-on-light.webp",
+    "logoLight": "/dealer-brand/logo-on-light.webp",
+    "logoDark": "/dealer-brand/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -2505,5 +2505,31 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%E2%80%94%20300%20%D0%BC%20%D0%B2%D0%B4%D1%8F%D1%81%D0%BD%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B4%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0%2C%20%D0%BF%D0%BE%D1%81%D0%BE%D0%BA%D0%B0%20%D0%BB%D0%B5%D1%82%D0%B8%D1%89%D0%B5%D1%82%D0%BE",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D1%83%D1%82%D0%BE%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20%D0%94%D0%BE%D0%BC%20%D0%BD%D0%B0%20%D0%9A%D0%B0%D0%BC%D0%B8%D0%BE%D0%BD%D0%B0&output=embed"
   },
-  "sourceCount": 16
+  "sourceCount": 16,
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealer": "automarket-varna",
+    "decision": "USE GENERATED CANDIDATE",
+    "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+    "originalSha256": "1ae61c019cd55f41b89e6a47bfa93e788b12bddce7f5dfe50b8d624d2a3841e8",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "sha256": "7af239008b510f97e800eeb3dad1e13d685a761d4cf085a5ddbd26ebaf291057",
+        "bytes": 117676
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "sha256": "8b99f27afd47cc3f0a8196e742537c8e81285d6d539b82890611a27b65185793",
+        "bytes": 121004
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "sha256": "3ab7ba4a316b242551cd192a9801baba37015e21087b2c68c83d216eda564c8a",
+        "bytes": 85436
+      }
+    },
+    "preparedAt": "2026-09-19T04:59:17.896Z",
+    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+  }
 }

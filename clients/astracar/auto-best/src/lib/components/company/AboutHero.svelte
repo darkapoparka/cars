@@ -29,7 +29,7 @@
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
       <h1 id="about-title">За нас</h1>
-      <p class="dn-about-hero__lead">Автомобили в {brand.city} · Внос · Лизинг по запитване</p>
+      <p class="dn-about-hero__lead">Автомобили в {brand.city} · Внос · Собствен лизинг</p>
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={resolve('/listing-grid')}>
       <span>Вижте автомобилите</span>
@@ -50,7 +50,7 @@
 
 <style>
   .dn-about-socials { display: flex; flex-direction: column; align-items: center; gap: 10px; align-self: center; }
-  .dn-about-socials > span { color: #c9cbd0; font-size: 14px; line-height: 1.5; }
+  .dn-about-socials > span { color: #c9cbd0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   .dn-about-socials__links { display: flex; gap: 16px; }
   .dn-about-socials a { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border: 1px solid #686c73; border-radius: 50%; color: #fff; }
   .dn-about-socials a:hover { background: #fff; border-color: #fff; color: #1d1f23; }

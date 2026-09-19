@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F&output=embed",
     "accent": "#d7ae35",
-    "logo": "/assets/asko96/asko96-logo.png",
-    "logoLight": "/assets/asko96/asko96-logo.png",
-    "logoDark": "/assets/asko96/asko96-logo.png",
+    "logo": "/dealer-brand/logo-on-light.webp",
+    "logoLight": "/dealer-brand/logo-on-light.webp",
+    "logoDark": "/dealer-brand/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "https://www.facebook.com/p/Asko96-100050328800477/",
       "instagram": "",
@@ -1132,5 +1132,31 @@
       "https://asko96.mobile.bg/contacts"
     ]
   },
-  "sourceCount": 16
+  "sourceCount": 16,
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealer": "asko-96",
+    "decision": "USE GENERATED CANDIDATE",
+    "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+    "originalSha256": "f71f4869c0f88d3c3e8f11677a91d432f6b8fc7561014a4990baf0b78b43c3fd",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "sha256": "d4ada78e14c425468dd1149dae2c052b0f6c0601a3ef17b4165d1293d654eaa8",
+        "bytes": 111010
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "sha256": "71a4ab99b7d35b9b758b1a008b6ed9f8d3ecc4a3b1a0792c3d72afd281b19d02",
+        "bytes": 116600
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "sha256": "1ac0cc1bb0ddce0274a918558754129ba846d5c90e81e060347afc5ac08d02a5",
+        "bytes": 79400
+      }
+    },
+    "preparedAt": "2026-09-19T04:59:03.076Z",
+    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+  }
 }

@@ -47,6 +47,6 @@ Local static-demo review requires the environment in docs/QA.md. Provider servic
 Split on 2026-09-10 from the live working tree at `J:/cars/templates/modern`. The split deliberately captured local working-tree changes, including changes newer than the `cars` repository HEAD. Historical root instructions were archived under `docs/legacy/from-cars-2026-09-10/`; use them only for provenance, never as current operating instructions.
 
 ## Portfolio policy
-Cars owns portfolio choices: standard IS AUTO / Modern / Carwow, or IS AUTO / Import / Carwow. See [Cars integration](docs/CARS-INTEGRATION.md).
+Cars owns portfolio choices: standard Auto Best / Modern / Carwow, or Auto Best / Import / Carwow. See [Cars integration](docs/CARS-INTEGRATION.md).
 
 Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).

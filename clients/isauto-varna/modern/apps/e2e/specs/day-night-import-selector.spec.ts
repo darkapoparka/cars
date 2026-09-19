@@ -53,7 +53,7 @@ const expectHealthyLeadPage = async (page: Page, errors: PublicPageErrors) => {
   expect(errors.pageErrors).toEqual([]);
 };
 
-test.describe("IS AUTO homepage import selector", () => {
+test.describe("Day & Night homepage import selector", () => {
   test("handoff states and metadata stay actionable", async ({ page }) => {
     const errors = collectPublicPageErrors(page);
     const emptyResponse = await page.goto("/bg?q=__no_day_night_match__");
@@ -125,7 +125,7 @@ test.describe("IS AUTO homepage import selector", () => {
     );
     await expect(
       page.locator('[data-slot="listing-dealership-card"] img')
-    ).toHaveAttribute("alt", "IS AUTO Varna");
+    ).toHaveAttribute("alt", "Day & Night Auto Group");
     await expectHealthyLeadPage(page, errors);
   });
 
@@ -742,7 +742,7 @@ test.describe("IS AUTO homepage import selector", () => {
     await phoneAction.hover();
     await expect(
       page.locator('[data-slot="lead-phone-tooltip"]')
-    ).toContainText("0899 266 666");
+    ).toContainText("0877 733 110");
     await expect(
       page.locator('[data-slot="lead-phone-tooltip-action"]')
     ).toHaveAttribute("href", telephoneHrefPattern);

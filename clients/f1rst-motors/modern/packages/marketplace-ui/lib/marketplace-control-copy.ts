@@ -388,7 +388,7 @@ const countryNameFormatters = {
 } as const;
 
 const cityLabelsBg: Record<string, string> = {
-  Sofia: "София",
+  Dubai: "Dubai",
   Plovdiv: "Пловдив",
   Varna: "Варна",
   Burgas: "Бургас",

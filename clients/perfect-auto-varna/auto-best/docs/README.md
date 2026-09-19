@@ -8,6 +8,7 @@ This reference explains the Auto Best application, its visual system and the pra
 | [Product](../PRODUCT.md) | Visitor journeys and feature scope |
 | [Template](../TEMPLATE.md) | Repository identity, defaults and source-version notes |
 | [Architecture](../ARCHITECTURE.md) | Rendering, ownership, state and application boundaries |
+| [Architecture refactor plan](ARCHITECTURE-REFACTOR-PLAN.md) | 14 September 2026 source audit, proposed boundaries, ordered implementation and acceptance gates |
 | [Styling](STYLING.md) | CSS structure, actual tokens, breakpoints and component treatments |
 | [Components](COMPONENTS.md) | Component responsibilities, inputs and main consumers |
 | [Data](DATA.md) | Brand, inventory, filters, editorial content and artwork records |

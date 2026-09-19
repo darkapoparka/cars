@@ -9,7 +9,7 @@ import {
 
 describe("vehicle card view policy", () => {
   it("localizes common locations without changing unknown values", () => {
-    expect(getLocalizedVehicleCardLocationPart("Sofia", "bg")).toBe("София");
+    expect(getLocalizedVehicleCardLocationPart("Dallas", "bg")).toBe("Dallas");
     expect(getLocalizedVehicleCardLocationPart("Tokyo", "bg")).toBe("Tokyo");
   });
 

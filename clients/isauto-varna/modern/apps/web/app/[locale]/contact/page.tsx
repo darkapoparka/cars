@@ -163,8 +163,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `${leadSite.name} в София — автомобили в наличност, внос по заявка и собствен лизинг.`
-      : `${leadSite.name} in Sofia — vehicles in stock, import on request, and in-house leasing.`,
+      ? `${leadSite.name} в Варна — автомобили в наличност, внос по заявка и собствен лизинг.`
+      : `${leadSite.name} in Варна — vehicles in stock, import on request, and in-house leasing.`,
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
@@ -291,7 +291,7 @@ export default async function ContactPage({
                   ) : null}
                   {sellContext.notes ? (
                     <div className="mt-5 border-border border-t pt-4">
-                      <p className="text-muted-foreground text-xs">
+                      <p className="text-meta text-muted-foreground">
                         {copy.sellDetailsLabel}
                       </p>
                       <p className="mt-1 max-h-24 overflow-auto whitespace-pre-wrap break-words text-sm leading-6">

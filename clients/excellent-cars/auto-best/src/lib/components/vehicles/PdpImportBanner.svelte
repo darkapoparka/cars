@@ -1,6 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import { leadSite } from '$config/lead-site';
 
   let dialog: HTMLDialogElement;
   let trigger: HTMLButtonElement;
@@ -12,7 +13,7 @@
 
 <section class="dn-pdp-import" aria-label="Внос по заявка">
   <button bind:this={trigger} class="dn-pdp-import__banner" type="button" onclick={() => dialog.showModal()} aria-haspopup="dialog" aria-label="Как работи вносът?">
-    <img src="/assets/images/lead/import-how-generated-v1.webp" alt="Как работи вносът? Обява или критерии · 3 бързи стъпки" width="900" height="300" loading="lazy" decoding="async" />
+    <img src={leadSite.artwork.pdp.importGuide} alt="Как работи вносът? Обява или критерии · 3 бързи стъпки" width="900" height="300" loading="lazy" decoding="async" />
   </button>
 </section>
 
@@ -32,7 +33,7 @@
 
 <style>
   .dn-pdp-import { min-width: 0; }
-  .dn-pdp-import__banner { display: block; width: 100%; padding: 0; overflow: hidden; border: 0; border-radius: 16px; background: #171a1f; cursor: pointer; }
+  .dn-pdp-import__banner { display: block; width: 100%; padding: 0; overflow: hidden; border: 0; border-radius: 16px; background: var(--dn-theme-hero-surface); cursor: pointer; }
   .dn-pdp-import__banner img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; object-fit: cover; }
   .dn-pdp-import__banner:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   .dn-pdp-import-dialog { width: min(520px, calc(100% - 32px)); max-width: none; margin: auto; padding: 0; border: 0; border-radius: 22px; background: transparent; color: #202329; }

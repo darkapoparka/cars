@@ -7,7 +7,7 @@
 <button
 	class="progress-wrap active-progress"
 	type="button"
-	aria-label="Back to home"
+	aria-label="Към началото"
 	onclick={scrollTop}
 >
 	<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "key": "modern",
+  "approvedTemplate": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+    "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+    "exportPolicy": "cars-source-v1"
+  },
+  "refresh": {
+    "mode": "regenerate",
+    "overlay": [
+      "packages/marketplace/lead-site.ts",
+      "packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+      "packages/marketplace-ui/components/listing-detail-content.tsx",
+      "packages/marketplace-ui/components/seller-identity-card.tsx",
+      "apps/web/lib/public-marketplace-data.ts",
+      "apps/web/app/[locale]/layout.tsx"
+    ]
+  },
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealer": "day-and-night-auto-group",
+    "decision": "USE GENERATED CANDIDATE",
+    "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip; restored wheel/Cyrillic identity in place of the broken generic outline",
+    "originalSha256": "03440decd74ac1404039813c6060a69c20ed3e3c2e0392628e232b7dbd05b1d1",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "sha256": "04bf9a0cd31cd72992a8ad4687292554121f7aab84c9195dc971efebd4119e2f",
+        "bytes": 131860
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "sha256": "019719775d6f0bc08136bfc8140dc725c12abd39915276fe43abab29da145e51",
+        "bytes": 143022
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "sha256": "6d130eedafa3938bcae1221474ab6c84c72df4b7c673f6416714d3911f77b22a",
+        "bytes": 90256
+      }
+    },
+    "preparedAt": "2026-09-19T04:59:54.918Z"
+  }
+}

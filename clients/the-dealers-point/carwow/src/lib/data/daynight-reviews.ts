@@ -1,1 +1,21 @@
-export type DayNightReview={id:string;text:string;avatar:`/assets/${string}`;name:string;label:string;rating:number};export const daynightReviews:DayNightReview[]=[];export const daynightReviewDisclosure='No customer reviews are imported into this demo.';export const daynightReviewCount=0;export const daynightReviewCountLabel='0 verified reviews';export const daynightReviewLinkLabel='No reviews imported';export const daynightReviewAverage=0;export const daynightReviewDistribution=[5,4,3,2,1].map(r=>({id:`${r}-star`,label:String(r),count:0,percent:'0%'}));
+export type DayNightReview = {
+	id: string;
+	text: string;
+	avatar: string;
+	name: string;
+	label: string;
+	rating: number;
+};
+
+export const daynightReviews: DayNightReview[] = [];
+export const daynightReviewDisclosure = "No verified customer reviews are included in this independent preview." as const;
+export const daynightReviewCount = 0;
+export const daynightReviewCountLabel = "No verified reviews";
+export const daynightReviewLinkLabel = daynightReviewCountLabel;
+export const daynightReviewAverage = 0;
+export const daynightReviewDistribution = [5, 4, 3, 2, 1].map((rating) => ({
+	id: `${rating}-star`,
+	label: String(rating),
+	count: 0,
+	percent: '0%'
+}));

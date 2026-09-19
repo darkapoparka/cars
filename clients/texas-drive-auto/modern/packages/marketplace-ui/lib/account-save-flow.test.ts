@@ -30,14 +30,14 @@ describe("account listing save flow", () => {
     const filters = parseMarketplaceSearchParams({
       category: "van",
       fuel: "diesel",
-      location: "Sofia",
+      location: "Dallas",
       priceMax: 40_000,
     });
 
     expect(
       getAccountSavedSearchFlowHref("https://app.automarket.bg", filters)
     ).toBe(
-      "https://app.automarket.bg/search?category=van&location=Sofia&priceMax=40000&currency=BGN&fuel=diesel"
+      "https://app.automarket.bg/search?category=van&location=Dallas&priceMax=40000&currency=BGN&fuel=diesel"
     );
   });
 });

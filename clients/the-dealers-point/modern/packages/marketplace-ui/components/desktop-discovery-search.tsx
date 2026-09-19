@@ -19,6 +19,7 @@ import {
   type VehicleCategory,
   withCategory,
 } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { ChevronDown, Search, X } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useState } from "react";
@@ -77,7 +78,7 @@ export const DesktopCategoryPickerTrigger = ({
       <span className="min-w-0">
         <span
           className={cn(
-            "block font-semibold text-xs leading-none",
+            "block font-semibold text-meta",
             open ? "text-white/80" : "text-foreground"
           )}
         >
@@ -133,14 +134,14 @@ export const DesktopCategoryPickerContent = ({
     <DialogHeader className="px-5 py-4 text-left">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <DialogTitle className="text-xl text-zinc-950 leading-7">
+          <DialogTitle className="text-dialog-title text-zinc-950">
             {localizeMarketplace(
               isBg,
               "Изберете тип превозно средство",
               "Choose vehicle category"
             )}
           </DialogTitle>
-          <DialogDescription className="mt-1 text-base text-zinc-600 leading-6">
+          <DialogDescription className="mt-1 text-body text-zinc-600">
             {localizeMarketplace(
               isBg,
               "Категорията определя наличностите и филтрите в търсенето.",
@@ -221,6 +222,7 @@ export const DesktopCategoryPickerContent = ({
 
 export const DesktopDiscoverySearch = ({
   assistantSlot,
+  searchListings,
   categoryCounts,
   compact,
   filters,
@@ -231,6 +233,7 @@ export const DesktopDiscoverySearch = ({
   setQuery,
 }: {
   assistantSlot?: ReactNode;
+  searchListings?: readonly InventorySearchListing[];
   categoryCounts?: DesktopCategoryInventoryCount[];
   compact: boolean;
   filters: MarketplaceSearchParams;
@@ -292,6 +295,7 @@ export const DesktopDiscoverySearch = ({
           compact={compact}
           isBg={isBg}
           label={localizeMarketplace(isBg, "Търсене", "Search")}
+          listings={searchListings}
           locale={locale}
           onOpenChange={(open) => {
             setSearchMenuOpen(open);

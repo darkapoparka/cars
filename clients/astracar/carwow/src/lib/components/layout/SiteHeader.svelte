@@ -29,9 +29,9 @@
 
 <header class={cn('site-header', variant === 'home' && 'site-header--home')}>
 	<div class="site-header__inner">
-		<a class="site-header__logo" href={resolve('/')} aria-label="Астракар home">
+		<a class="site-header__logo" href={resolve('/')} aria-label={`${daynightSite.shortName} home`}>
 			<img
-				src={variant === 'home' ? daynightSite.logoLight : daynightSite.logoDark}
+				src={daynightSite.logoDark}
 				alt={daynightSite.name}
 			/>
 		</a>

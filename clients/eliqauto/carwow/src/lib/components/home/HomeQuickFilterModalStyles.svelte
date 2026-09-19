@@ -66,8 +66,8 @@
 
 	:global(.daynight-hero-filter-sheet__title) {
 		margin: 0;
-		font-size: 20px;
-		font-weight: var(--sa-weight-semibold);
+		font-size: var(--sa-text-xl);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.25;
 		color: #101828;
 	}
@@ -80,7 +80,7 @@
 		border-radius: 50%;
 		background: #f5f7fb;
 		color: #475467;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		line-height: 1;
 		cursor: pointer;
 	}
@@ -119,8 +119,8 @@
 		box-shadow: none !important;
 		box-sizing: border-box;
 		color: #101828;
-		font-size: 16px;
-		font-weight: 500;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		height: 46px;
 		line-height: 1.35;
 		outline: 0 !important;
@@ -132,7 +132,7 @@
 
 	:global(.daynight-hero-filter-sheet__search::placeholder) {
 		color: #98a2b3;
-		font-weight: 500;
+		font-weight: var(--sa-weight-medium);
 		opacity: 1;
 	}
 
@@ -163,7 +163,7 @@
 		color: #101828;
 		cursor: pointer;
 		display: flex;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 		gap: 12px;
 		justify-content: flex-start;
 		line-height: 1.4;
@@ -201,7 +201,7 @@
 	:global(.daynight-hero-filter-sheet__row.is-selected) {
 		background: #eef4ff;
 		color: #101828;
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 	}
 
 	:global(.daynight-hero-filter-sheet__row.is-selected::before) {
@@ -225,7 +225,7 @@
 		border-bottom: 1px solid #f1f3f7;
 		border-radius: 8px;
 		color: #667085;
-		font-weight: 600;
+		font-weight: var(--sa-weight-semibold);
 		margin-bottom: 6px;
 	}
 
@@ -237,14 +237,14 @@
 	:global(.daynight-hero-filter-sheet__tick) {
 		color: #b00000;
 		display: none;
-		font-weight: 700;
+		font-weight: var(--sa-weight-strong);
 	}
 
 	:global(.daynight-hero-filter-sheet__empty) {
 		margin: 0;
 		padding: 18px 16px;
 		color: #98a2b3;
-		font-size: 16px;
+		font-size: var(--sa-text-base);
 	}
 
 	:global(.daynight-hero-filter-sheet__actions) {
@@ -270,8 +270,8 @@
 	:global(.daynight-hero-filter-sheet__clear) {
 		background: transparent;
 		color: #667085;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		text-decoration: none;
 	}
 
@@ -279,8 +279,8 @@
 		background: #b00000;
 		border-radius: 9px;
 		color: #fff;
-		font-size: 16px;
-		font-weight: 600;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-semibold);
 		min-height: 42px;
 		padding: 0 22px;
 		transition:

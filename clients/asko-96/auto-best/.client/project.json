@@ -2,67 +2,21 @@
   "schemaVersion": 1,
   "client": "asko-96",
   "templateKey": "auto-best",
-  "templateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
-  "createdAt": "2026-09-06T20:48:48.418Z",
-  "state": "refreshed-needs-local-qa",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "offeredHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
-  "businessName": "АСКО 96",
-  "stockSnapshotDate": "2026-09-06",
-  "stockCount": 16,
-  "changes": [
-    "Official ASKO96 wordmark/logo, gold accents with readable foregrounds, verified phone/address/hours/map and social channels",
-    "16 source-backed ASKO96 stock listings and local photos, tailored make/fuel/year/price filters and budgets",
-    "Official showroom/stock editorial imagery, three verified official YouTube videos",
-    "Existing staff and partner demo cards carry verified services and stock brands within retained layout"
-  ],
-  "knownGaps": [
-    "Local review only; not deployed or registered in CRM; no external messages sent",
-    "Original decorative hero/cutout car artwork retained to preserve template composition; it does not represent actual ASKO96 inventory",
-    "Source detail design uses one stock image per vehicle; all actual inventory photographs displayed belong to ASKO96 adverts",
-    "Stock is a dated curated snapshot; availability, specifications and finance conditions require dealer confirmation",
-    "Enquiry wizard prepares an unsent summary and optional device sharing; no server delivery is configured",
-    "External maps and video playback depend on provider/browser access; channel IDs and map destination verified",
-    "Full official logo retained in secondary placements includes its source 28-year medal; main navigation uses official wordmark"
-  ],
+  "templateVersion": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+  "state": "refreshed-awaiting-production-qa",
   "templateSource": {
     "repository": "darkapoparka/cars-template-auto-best",
-    "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
-    "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
-    "exportPolicy": "cars-source-v1"
+    "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+    "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec"
   },
   "packaging": {
     "version": "1",
     "entry": "/"
   },
-  "workflowCommit": "cc82770c4cb62175b58248efb2662b7d61de114c",
-  "refresh": {
-    "previousTemplateVersion": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
-    "refreshedAt": "2026-09-14T21:24:45.073Z",
-    "approvedTemplateCommit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
-    "mode": "fresh-template-plus-dealer-overlay"
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   }
 }

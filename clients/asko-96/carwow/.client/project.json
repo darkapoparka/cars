@@ -2,66 +2,21 @@
   "schemaVersion": 1,
   "client": "asko-96",
   "templateKey": "carwow",
-  "templateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-  "createdAt": "2026-09-06T20:49:20.390Z",
-  "state": "refreshed-needs-local-qa",
-  "selectedHome": "main",
-  "availableHomes": [
-    {
-      "id": "main",
-      "route": "/"
-    }
-  ],
-  "offeredHomes": [
-    "/"
-  ],
-  "publicUrl": null,
-  "qa": {
-    "desktop": false,
-    "mobile": false,
-    "identity": false,
-    "contactPath": false
-  },
-  "crm": {
-    "leadId": null,
-    "demoProjectId": null,
-    "registered": false
-  },
-  "localUrl": "http://127.0.0.1:6613/",
-  "businessName": "АСКО 96",
-  "stockSnapshot": "2026-09-06",
-  "stockCount": 16,
-  "changes": [
-    "Official ASKO96 wordmark and full-logo favicon; gold accent and readable surface variants",
-    "16 real source-backed vehicle listings, 52 photos and galleries; unknown features explicitly referred to dealer",
-    "Real ASKO showroom, contacts, hours, maps, Facebook and three verified ASKO YouTube videos",
-    "Source fabricated testimonials replaced with factual service cards; fictitious team names/photos replaced by contact/service topics",
-    "Forms and chat identified as local demos; no credentials copied or backend configured",
-    "Source stock mega menu and hidden financing phone replaced with current ASKO content"
-  ],
-  "knownGaps": [
-    "Local visual demo only; no public deployment or message delivery configured. No external form submissions or messages sent.",
-    "Inventory is a selected published snapshot; ASKO must confirm availability, equipment and financial terms. Citroen fuel follows the source listing verbatim.",
-    "Generic decorative Audi/BMW hero cutouts and body/budget illustrations remain from template; they are not presented as ASKO inventory. Real listing photos are ASKO.",
-    "Main and offered public routes verified. Historical legacy/presentation/admin sample routes and unreferenced source assets remain in retained template codebase; they are not offered as lead homepage variants.",
-    "Viber links derive from the verified phone; account availability and actual phone/message delivery not tested.",
-    "Browser emulation at390/1440 is local QA, not physical-device or hosted acceptance."
-  ],
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "state": "refreshed-awaiting-production-qa",
   "templateSource": {
     "repository": "darkapoparka/cars-template-carwow",
-    "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
-    "exportPolicy": "cars-source-v1"
+    "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+    "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0"
   },
   "packaging": {
     "version": "1",
     "entry": "/variant-3/"
   },
-  "workflowCommit": "cc82770c4cb62175b58248efb2662b7d61de114c",
-  "refresh": {
-    "previousTemplateVersion": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "refreshedAt": "2026-09-14T21:25:04.364Z",
-    "approvedTemplateCommit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-    "mode": "fresh-template-plus-dealer-overlay"
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
   }
 }

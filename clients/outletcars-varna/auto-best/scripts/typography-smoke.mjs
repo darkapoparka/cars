@@ -15,7 +15,7 @@ async function entryHierarchy(field, segments, action) {
   const input = await field.boundingBox();
   for(const control of [segments, action]) {
     const box = await control.boundingBox();
-    assert(box.width < input.width && box.height < input.height, 'Entry controls must be narrower and shorter than the input');
+    assert(box.width < input.width && box.height <= input.height, 'Entry controls must be narrower and no taller than the input');
     assert(Math.abs((box.x + box.width / 2) - (input.x + input.width / 2)) < 1, 'Entry controls must stay centered with the input');
   }
 }
@@ -39,12 +39,36 @@ try {
           assert.equal((await typeOf(buy)).size,16);
           assert.equal((await typeOf(buy)).weight,500);
           const entry = await typeOf(page.locator('.dn-quick-search__trigger'));
-          assert(entry.size > (await typeOf(buy)).size && entry.size === 18 && entry.weight === 400 && entry.height >= 52);
+          assert(entry.size > (await typeOf(buy)).size && entry.size === 18 && entry.weight === 400 && entry.height === 44);
           assert.equal(await buy.evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(255, 255, 255)');
+          const homeCard = page.locator('.dn-search');
+          const homeChips = page.locator('.dn-search__mobile-shortcuts');
+          const buyCardBox = await homeCard.boundingBox();
+          const buyChipsBox = await homeChips.boundingBox();
+          const buyCta = page.locator('#home-buy-search .dn-search__mobile-all');
+          const buyCtaType = await typeOf(buyCta);
+          const buyCtaBox = await buyCta.boundingBox();
+          assert(buyCtaType.size === 16 && buyCtaType.weight === 500 && buyCtaType.height === 44 && buyCtaBox.width === 156);
+          assert.equal(await buyCta.evaluate(e=>parseFloat(getComputedStyle(e,'::before').height)),40);
+          assert.equal((await page.locator('.dn-quick-search__trigger > .dn-icon').first().boundingBox()).width,18);
+          assert.equal((await page.locator('.dn-quick-search__mobile-filter .dn-icon').boundingBox()).width,18);
+          const buyLabelColor = await page.locator('.dn-quick-search__label-mobile').evaluate(e=>getComputedStyle(e).color);
           await buy.focus(); await page.keyboard.press('ArrowRight');
           assert.equal(await page.getByRole('tab',{name:'Внос',exact:true}).getAttribute('aria-selected'),'true');
           const homeImport=await typeOf(page.locator('.dn-search__import-field input'));
           assert.equal(homeImport.size,18);
+          const importCta = page.locator('.dn-search__import-form .dn-search__mobile-all');
+          const importCtaType = await typeOf(importCta);
+          const importCardBox = await homeCard.boundingBox();
+          const importChipsBox = await homeChips.boundingBox();
+          const importCtaBox = await importCta.boundingBox();
+          assert(importCtaType.size === 16 && importCtaType.weight === 500 && importCtaType.height === 44 && importCtaBox.width === 156);
+          assert.equal(await importCta.evaluate(e=>parseFloat(getComputedStyle(e,'::before').height)),40);
+          assert.equal((await page.locator('.dn-search__import-field > .dn-icon').boundingBox()).width,18);
+          assert(Math.abs(importCardBox.height-buyCardBox.height)<.5 && Math.abs(importChipsBox.y-buyChipsBox.y)<.5, 'Home mode switch must not move the card or following content');
+          assert(Math.abs(importCtaBox.width-buyCtaBox.width)<.5 && Math.abs(importCtaBox.y-buyCtaBox.y)<.5, 'Home mode CTAs must keep stable geometry');
+          const importPlaceholderColor = await page.locator('.dn-search__import-field input').evaluate(e=>getComputedStyle(e,'::placeholder').color);
+          assert.equal(buyLabelColor,importPlaceholderColor);
           await readable(page,`${width}-home-import`);
           await page.keyboard.press('ArrowLeft');
           assert.equal(await buy.getAttribute('aria-selected'),'true');
@@ -63,22 +87,30 @@ try {
         }
         await page.goto(`${base}/contact?topic=trade-in`,{waitUntil:'networkidle'});
         const start = page.locator('.dn-tradein-start');
-        const primary = await typeOf(start), call = await typeOf(page.locator('.dn-workflow-support__call'));
-        assert(primary.size > call.size && primary.size === 18 && primary.weight === 500);
+        const primary = await typeOf(start);
+        assert(primary.size === 18 && primary.weight === 500);
         assert.equal(primary.height,44);
-        assert((await typeOf(page.locator('.dn-tradein-reference'))).height > primary.height);
+        assert.equal((await typeOf(page.locator('.dn-tradein-reference'))).height, width < 768 ? 44 : 48);
         assert.equal((await typeOf(page.locator('.dn-tradein-entry-segments'))).height,44);
         await entryHierarchy(page.locator('.dn-tradein-reference'),page.locator('.dn-tradein-entry-segments'),start);
         assert.equal(await page.locator('.dn-contact-intent__main .dn-workflow-support__call').count(),0);
         assert.equal(await page.locator('.dn-workflow-showcase').count(),0);
-        assert.match(await page.locator('.dn-workflow-support__call').getAttribute('href'),/^tel:/);
-        assert.equal(await page.locator('.dn-workflow-support__call').evaluate(e=>getComputedStyle(e).textDecorationLine),'none');
-        const cardBounds=await page.locator('.dn-contact-intent__main').boundingBox();
-        const callBounds=await page.locator('.dn-workflow-support__call').boundingBox();
-        assert(callBounds.y >= cardBounds.y + cardBounds.height, 'Call must sit below the entry card');
+        if (width < 768) {
+          assert.equal(await page.locator('.dn-workflow-support').isVisible(), false, 'Mobile keeps the support banner out of the primary flow');
+        } else {
+          const call = await typeOf(page.locator('.dn-workflow-support__call'));
+          assert(primary.size > call.size);
+          assert.match(await page.locator('.dn-workflow-support__call').getAttribute('href'),/^tel:/);
+          assert.equal(await page.locator('.dn-workflow-support__call').evaluate(e=>getComputedStyle(e).textDecorationLine),'none');
+          const cardBounds=await page.locator('.dn-contact-intent__main').boundingBox();
+          const callBounds=await page.locator('.dn-workflow-support__call').boundingBox();
+          assert(callBounds.y >= cardBounds.y + cardBounds.height, 'Call must sit below the entry card');
+        }
         await readable(page,`${width}-sell`);
         await start.click();
         const sell = page.locator('.dn-tradein-dialog');
+        assert.equal((await typeOf(sell.locator('.dn-tradein-fields input').first())).height,48);
+        assert.equal((await typeOf(sell.locator('.dn-tradein-primary'))).height,48);
         await sell.locator('.dn-tradein-primary').click();
         assert.equal(await sell.locator('[name="make"]').evaluate(e=>e===document.activeElement),true);
         for(const [field,value] of Object.entries({make:'Audi',model:'A6 Avant',year:'2020',mileage:'85000'})) await sell.locator(`[name="${field}"]`).fill(value);
@@ -103,6 +135,7 @@ try {
           assert.equal(await reference.evaluate(e=>e===document.activeElement),true);
         }
         await reference.click();
+        assert.equal((await typeOf(editor.locator('[name="entry-value"]'))).height,48);
         await editor.locator('[name="entry-value"]').fill('mobile.bg/obiava-123456789');
         await readable(page,`${width}-sell-reference-editor`);
         await editor.getByRole('button',{name:'Запази',exact:true}).click();
@@ -152,7 +185,16 @@ try {
         assert.equal(await sell.locator('[name="make"]').evaluate(e=>e===document.activeElement),true);
         await page.keyboard.press('Escape');
         await page.locator('.dn-tradein-info-drawer__peek').click();
-        await readable(page,`${width}-sell-help`); await page.keyboard.press('Escape');
+        const sellHelp=page.locator('.dn-tradein-info-dialog');
+        const sellHelpReturn=sellHelp.getByRole('button',{name:'Към заявката',exact:true});
+        assert.equal((await typeOf(sellHelpReturn)).height,44);
+        const sellHelpReturnBox=await sellHelpReturn.boundingBox();
+        assert(sellHelpReturnBox && sellHelpReturnBox.width <= 201, 'Sell help return action stays compact');
+        assert.equal(await sellHelp.getByRole('link').count(),0);
+        if(width<768) assert((await sellHelp.boundingBox()).y >= 83, 'Sell help remains a bottom sheet');
+        await readable(page,`${width}-sell-help`);
+        await sellHelpReturn.click();
+        assert.equal(await page.locator('.dn-tradein-info-drawer__peek').evaluate(e=>e===document.activeElement),true);
 
         await page.goto(`${base}/contact?topic=import`,{waitUntil:'networkidle'});
         const importStart=page.getByRole('button',{name:/^Заяви внос/});
@@ -172,9 +214,10 @@ try {
         const importField=await typeOf(importEntry);
         const importMode=await typeOf(page.getByRole('button',{name:'Линк',exact:true}));
         assert(importField.size > importMode.size && importField.size === 18 && importField.weight === 400);
-        assert((await typeOf(page.locator('.dn-enquiry-import-field'))).height >= 52);
+        assert.equal((await typeOf(page.locator('.dn-enquiry-import-field'))).height, width < 768 ? 44 : 48);
         await importStart.click();
         assert(await editor.isVisible());
+        assert.equal((await typeOf(editor.locator('[name="entry-value"]'))).height,48);
         await editor.locator('[name="entry-value"]').fill('javascript:alert(1)');
         await editor.getByRole('button',{name:'Запази',exact:true}).click();
         assert(await editor.getByRole('alert').isVisible());
@@ -185,6 +228,8 @@ try {
         await importStart.click();
         const enquiry=page.locator('.dn-enquiry');
         assert.equal(await enquiry.getAttribute('open'),'');
+        assert.equal((await typeOf(enquiry.locator('.dn-enquiry-fields input').first())).height,48);
+        assert.equal((await typeOf(enquiry.locator('.dn-enquiry-footer .dn-enquiry-primary'))).height,48);
         await readable(page,`${width}-import-fields`);
         await enquiry.locator('.dn-enquiry-footer .dn-enquiry-primary').click();
         await readable(page,`${width}-import-contact`);
@@ -220,7 +265,49 @@ try {
         await page.getByRole('button',{name:'Линк',exact:true}).click();
         assert.equal(await importEntry.innerText(),'https://example.com/car');
         await readable(page,`${width}-import`);
+        await page.locator('.dn-import-info-drawer__peek').click();
+        const importHelp=page.locator('.dn-import-info-dialog');
+        const importHelpReturn=importHelp.getByRole('button',{name:'Към заявката',exact:true});
+        assert.equal((await typeOf(importHelpReturn)).height,44);
+        const importHelpReturnBox=await importHelpReturn.boundingBox();
+        assert(importHelpReturnBox && importHelpReturnBox.width <= 201, 'Import help return action stays compact');
+        assert.equal(await importHelp.getByRole('link').count(),0);
+        if(width<768) assert((await importHelp.boundingBox()).y >= 83, 'Import help remains a bottom sheet');
+        await readable(page,`${width}-import-help`);
+        await importHelpReturn.click();
+        assert.equal(await page.locator('.dn-import-info-drawer__peek').evaluate(e=>e===document.activeElement),true);
         assert.deepEqual(errors,[]);
+      } finally { await page.close(); }
+    });
+  }
+
+  for (const height of [667,712,844]) {
+    await suite.check(`mobile workflow dock 385x${height}`, async () => {
+      const page = await browser.newPage({ viewport: { width: 385, height }, reducedMotion: 'reduce' });
+      try {
+        for (const topic of ['trade-in','import']) {
+          await page.goto(`${base}/contact?topic=${topic}`, { waitUntil: 'networkidle' });
+          const drawer = page.locator(topic === 'import' ? '.dn-import-info-drawer__peek' : '.dn-tradein-info-drawer__peek');
+          const dialog = page.locator(topic === 'import' ? '.dn-import-info-dialog' : '.dn-tradein-info-dialog');
+          const action = page.getByRole('button', { name: topic === 'import' ? /^Заяви внос/ : /^Заяви оценка/ });
+          const [drawerBox, navBox, actionBox] = await Promise.all([
+            drawer.boundingBox(), page.locator('.dn-mobile-bottom-nav').boundingBox(), action.boundingBox()
+          ]);
+          assert(drawerBox && navBox && actionBox);
+          assert(drawerBox.y + drawerBox.height <= navBox.y + 1, `${topic}: drawer must stay above bottom nav`);
+          assert(Math.abs(actionBox.width - 220) < 1 && Math.abs(actionBox.height - 44) < 1, `${topic}: compact CTA geometry`);
+          assert.equal(await page.locator('.dn-workflow-support').isVisible(), false, `${topic}: mobile support banner stays out of the primary flow`);
+          await drawer.click();
+          const dialogBox=await dialog.boundingBox();
+          assert(dialogBox && dialogBox.y >= 83, `${topic}: sheet keeps visible top breathing room`);
+          assert.equal(await page.locator('.dn-mobile-bottom-nav').evaluate(e => getComputedStyle(e).visibility), 'hidden');
+          const returnAction=dialog.getByRole('button',{name:'Към заявката',exact:true});
+          const returnBox=await returnAction.boundingBox();
+          assert(returnBox && returnBox.height === 44 && returnBox.width <= 201, `${topic}: sheet return action stays compact`);
+          assert.equal(await dialog.getByRole('link').count(),0, `${topic}: sheet does not repeat header contact actions`);
+          await returnAction.click();
+          assert.equal(await drawer.evaluate(e=>e===document.activeElement),true);
+        }
       } finally { await page.close(); }
     });
   }

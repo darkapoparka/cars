@@ -1,1 +1,81 @@
-import{brand}from'$config/brand';export type CompanyServiceIcon='inspection'|'import'|'leasing'|'trade-in';type CompanyService={index:string;icon:CompanyServiceIcon;title:string;description:string;href:string;cta:string};type ContactTopicId='general'|'inspection'|'import'|'leasing'|'trade-in';export type ContactTopic={id:ContactTopicId;label:string;title:string;description:string;mobileDescription?:string};export const contactPreparation:Partial<Record<ContactTopicId,{title:string;items:string[]}>>={inspection:{title:'Prepare for the visit',items:['Vehicle or listing','Preferred day and time','Showroom confirmation']},import:{title:'Import/export enquiry',items:['Vehicle or specification','Destination/origin market','Questions for the showroom']}};export function resolveImportUrl(value:string|null){try{if(!value)return null;const u=new URL(value);return ['http:','https:'].includes(u.protocol)?u.href:null}catch{return null}}export const companyServices:CompanyService[]=[{index:'01',icon:'inspection',title:`Showroom viewing in ${brand.city}`,description:'Confirm the car and visit time before travelling.',href:'/contact?topic=inspection',cta:'Arrange a viewing'},{index:'02',icon:'import',title:'Import / export enquiries',description:'Ask for current vehicle-specific import/export terms.',href:'/contact?topic=import',cta:'Ask the showroom'},{index:'03',icon:'trade-in',title:'Vehicle sales',description:'Browse the dated public stock sample and confirm live availability.',href:'/listing-grid',cta:'Browse cars'}];export const contactTopics:ContactTopic[]=[{id:'general',label:'General enquiry',title:'Talk to The Dealers Point',description:'Ask about current stock, price or next steps.'},{id:'inspection',label:'Viewing',title:'Arrange a viewing',description:'Confirm the exact vehicle and appointment before travelling.'},{id:'import',label:'Import / export',title:'Import / export enquiry',description:'Ask about current vehicle-specific import/export options.'},{id:'leasing',label:'Payment',title:'Payment enquiry',description:'Ask about current payment options; this demo does not quote finance terms.'},{id:'trade-in',label:'Your vehicle',title:'Vehicle enquiry',description:'Share vehicle details for a direct showroom conversation.'}];export const resolveContactTopic=(v:string|null)=>contactTopics.find(x=>x.id===v)??contactTopics[0];export const showroomCoordinates={latitude:25.13,longitude:55.22} as const;
+import { brand } from '$config/brand';
+
+export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
+type CompanyService = { index: string; icon: CompanyServiceIcon; title: string; description: string; href: string; cta: string; };
+export type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
+export type ContactTopic = { id: ContactTopicId; label: string; title: string; description: string; mobileDescription?: string; };
+
+export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {};
+export function resolveImportUrl(value: string | null): string | null {
+  const candidate = value?.trim();
+  if (!candidate || candidate.length > 2048) return null;
+  try {
+    const url = new URL(candidate);
+    return ['http:', 'https:'].includes(url.protocol) && !url.username && !url.password ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+export const companyServices: CompanyService[] = [
+  {
+    "index": "01",
+    "icon": "inspection",
+    "title": "Dealer service",
+    "description": "Proposal refresh and concept stock artwork for unpublished owner review; not represented as official source artwork.",
+    "href": "/contact?topic=inspection",
+    "cta": "Ask the dealer"
+  },
+  {
+    "index": "02",
+    "icon": "import",
+    "title": "Dealer service",
+    "description": "Proposal refresh and concept stock artwork for unpublished owner review; not represented as official source artwork.",
+    "href": "/contact?topic=import",
+    "cta": "Ask the dealer"
+  },
+  {
+    "index": "03",
+    "icon": "leasing",
+    "title": "Dealer service",
+    "description": "Proposal refresh and concept stock artwork for unpublished owner review; not represented as official source artwork.",
+    "href": "/contact?topic=leasing",
+    "cta": "Ask the dealer"
+  }
+];
+export const contactTopics: ContactTopic[] = [
+  {
+    "id": "general",
+    "label": "General question",
+    "title": "Contact the dealer",
+    "description": "Contact Dealers Point to confirm availability, details, and the next step."
+  },
+  {
+    "id": "inspection",
+    "label": "Viewing",
+    "title": "Viewing in Dubai",
+    "description": "Contact Dealers Point to confirm availability, details, and the next step."
+  },
+  {
+    "id": "import",
+    "label": "Import",
+    "title": "Import enquiry",
+    "description": "Contact Dealers Point to confirm availability, details, and the next step."
+  },
+  {
+    "id": "leasing",
+    "label": "Financing",
+    "title": "Financing enquiry",
+    "description": "Contact Dealers Point to confirm availability, details, and the next step."
+  },
+  {
+    "id": "trade-in",
+    "label": "Trade-in",
+    "title": "Trade-in enquiry",
+    "description": "Contact Dealers Point to confirm availability, details, and the next step."
+  }
+];
+export const resolveContactTopic = (value: string | null) =>
+  contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
+export const showroomCoordinates = {"latitude":0,"longitude":0} as const;
+export const dealerAddress = brand.address;

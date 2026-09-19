@@ -69,7 +69,7 @@
       },
       "qa": {
         "evidence": "docs/dealer-finalization/2026-09-19/TEMPLATE-QA.json",
-        "verifiedAt": "2026-09-19T04:52:24.534Z",
+        "verifiedAt": "2026-09-19T05:06:15.027Z",
         "checks": [
           {
             "name": "Existing Vercel production build at exact upstream commit",

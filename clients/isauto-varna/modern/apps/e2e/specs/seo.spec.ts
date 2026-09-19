@@ -149,7 +149,7 @@ test.describe("SEO contracts", () => {
       "Страницата не е намерена"
     );
     await expect(page).toHaveTitle(
-      "Страницата не е намерена | IS AUTO Varna"
+      "Страницата не е намерена | Day & Night Auto Group"
     );
     expect(consoleErrors.join("\n")).not.toMatch(hydrationErrorPattern);
   });

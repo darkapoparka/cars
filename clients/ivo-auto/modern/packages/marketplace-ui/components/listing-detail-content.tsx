@@ -65,14 +65,14 @@ export const ListingDetailContent = ({
             className="py-1 lg:rounded-xl lg:bg-control lg:px-5 lg:py-6"
             data-slot="listing-description"
           >
-            <h2 className="hidden font-semibold text-card-title lg:block">
+            <h2 className="hidden font-semibold text-card-title-lg lg:block">
               {copy.description}
             </h2>
             <p className="whitespace-pre-line font-normal text-compact-control text-zinc-600 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose lg:text-zinc-900">
               {listing.description}
             </p>
             {leadSite.staticDemoMode ? null : (
-              <p className="mt-4 max-w-2xl text-[13px] text-zinc-500 leading-5 lg:text-meta lg:text-muted-foreground">
+              <p className="mt-4 max-w-2xl text-meta text-zinc-500 lg:text-muted-foreground">
                 {copy.sellerDescription}
               </p>
             )}
@@ -99,24 +99,9 @@ export const ListingDetailContent = ({
             />
             <span className="relative z-10 flex w-[48%] flex-col items-start gap-3">
               <span className="relative block aspect-[1780/512] w-28">
-                <Image
-                  alt=""
-                  className="h-full w-full object-contain [clip-path:inset(0_68%_0_0)]"
-                  height={512}
-                  sizes="112px"
-                  src={leadSite.logoPath}
-                  width={1780}
-                />
-                <Image
-                  alt=""
-                  className="pointer-events-none absolute inset-0 h-full w-full object-contain brightness-0 invert [clip-path:inset(0_0_0_32%)]"
-                  height={512}
-                  sizes="112px"
-                  src={leadSite.logoPath}
-                  width={1780}
-                />
+                <Image alt={leadSite.name} className="h-full w-full object-contain" height={512} sizes="112px" src={leadSite.logoOnAccent} width={1780} />
               </span>
-              <span className="block font-semibold text-[20px] leading-6 tracking-tight">
+              <span className="block font-semibold text-dialog-title tracking-heading">
                 {financingAmount ? (
                   <>
                     <span className="block">
@@ -124,7 +109,7 @@ export const ListingDetailContent = ({
                     </span>
                     <span className="block whitespace-nowrap">
                       ~{financingAmount}
-                      <span className="font-medium text-[14px]">
+                      <span className="font-medium text-meta">
                         /{copy.month}
                       </span>
                     </span>
@@ -133,7 +118,7 @@ export const ListingDetailContent = ({
                   financingFallback
                 )}
               </span>
-              <span className="mt-auto inline-flex items-center gap-1.5 font-medium text-[12px] leading-4">
+              <span className="mt-auto inline-flex items-center gap-1.5 font-medium text-meta">
                 {isBg ? "Виж условията" : "View options"}
                 <ArrowUpRight
                   aria-hidden="true"
@@ -169,7 +154,7 @@ export const ListingDetailContent = ({
         >
           <div className="mb-4 flex items-center justify-between gap-2">
             <h2
-              className="whitespace-nowrap font-semibold text-[18px] tracking-tight min-[360px]:text-[19px]"
+              className="whitespace-nowrap font-semibold text-section-title tracking-heading"
               id="similar-heading"
             >
               {copy.similarVehicles}

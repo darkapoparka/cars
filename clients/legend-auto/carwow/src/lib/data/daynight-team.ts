@@ -18,7 +18,7 @@ export const daynightTeam: DayNightTeamMember[] = [
 		role: "Запитвания за наличност и оглед",
 		phone: "0899 877 305",
 		email: "",
-		image: "/assets/legend-auto/legend-auto-logo.webp",
+		image: "/dealer-brand/logo-on-light.webp",
 		bio: "Свържете се с LEGEND AUTO, за да потвърдите актуална наличност, данни за автомобила и възможност за оглед.",
 		detail: "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата. Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
 	}

@@ -472,7 +472,7 @@
 					<div>
 						<p>{isEnglish ? 'Promosale Varna showroom' : 'Promosale Varna шоурум'}</p>
 						<h2 id="daynight-mobile-location-title">
-							{isEnglish ? 'Plovdiv, South Industrial Zone' : 'Пловдив, Индустриална зона - Юг'}
+							{daynightContact.addressLabel}
 						</h2>
 					</div>
 					<button
@@ -495,9 +495,7 @@
 				<div class="daynight-mobile-location-address">
 					<span>{isEnglish ? 'Showroom address' : 'Адрес на шоурума'}</span>
 					<strong
-						>{isEnglish
-							? 'Plovdiv, South Industrial Zone'
-							: 'Пловдив, Южна Индустриална зона'}</strong
+						>{daynightContact.addressLabel}</strong
 					>
 					<p>
 						{isEnglish

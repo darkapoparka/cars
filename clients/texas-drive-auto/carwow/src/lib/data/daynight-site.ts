@@ -1,75 +1,112 @@
+import { contactLinks } from '$lib/utils/contact-links';
 import {
 	daynightReviewCount,
 	daynightReviewCountLabel,
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
-const location = '10511 Olympic Drive, Dallas, TX 75220';
+const phoneE164 = "+12149723233";
+const city = "Dallas";
+const shortName = "Texas Drive Auto";
+const district = "Texas";
+const street = "10511 Olympic Drive, Dallas, TX 75220";
+const location = "10511 Olympic Drive, Dallas, TX 75220";
+
 export const daynightSite = {
-name:'Texas Drive Auto',shortName:'Texas Drive Auto',phone:'+12149723233',phoneLabel:'(214) 972-3233',email:'',location,locationShort:'Dallas, TX',hoursLabel:'Monday–Saturday 10 AM–6 PM; Sunday closed',mapEmbedSrc:'https://www.google.com/maps?q='+encodeURIComponent(location)+'&z=16&output=embed',mapUrl:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(location),mapLabel:'Texas Drive Auto, Dallas, Texas',sourceInventory:'https://www.texasdriveauto.com/cars-for-sale',inventoryCount:8,logoLight:'/brand/logo-on-dark.png',logoDark:'/brand/logo-on-light.png',primaryCta:'Browse listing samples',sellCarCta:'Purchase questions',accountCta:'Contact the dealer',phoneCta:'Call before visiting',heroTitle:'TEXAS DRIVE AUTO',heroSubtitle:'Dated used-vehicle listing samples in Dallas. Advertised USD prices and original miles; confirm availability directly.',reviewCount:daynightReviewCount,reviewCountLabel:daynightReviewCountLabel,reviewLinkLabel:daynightReviewLinkLabel,dealerFinance:false,currency:'USD',mileageUnit:'mi',stockAsOf:'2026-09-08',preview:true
+	name: "Texas Drive Auto",
+	shortName,
+	city,
+	region: city,
+	countryCode: "US",
+	locale: "en-US",
+	currency: "USD",
+	phoneE164,
+	...contactLinks(phoneE164),
+	phone: "12149723233",
+	phoneLabel: "(214) 972-3233",
+	email: "",
+	location,
+	locationShort: "10511 Olympic Drive, Dallas, TX 75220",
+	locationLandmark: "10511 Olympic Drive, Dallas, TX 75220",
+	hoursLabel: "Monday–Saturday 10 AM–6 PM; Sunday closed",
+	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
+	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
+	mapLabel: `${shortName}, ${location}`,
+	sourceInventory: "https://www.texasdriveauto.com/",
+	logoLight: "/dealer-brand/logo-on-dark.webp",
+	logoDark: "/dealer-brand/logo-on-light.webp",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
+	primaryCta: 'Виж наличните автомобили',
+	sellCarCta: 'Продай автомобил',
+	accountCta: 'Свържи се с екипа',
+	phoneCta: 'Обади се за оглед',
+	heroTitle: "Texas Drive Auto",
+	heroSubtitle: "Dallas · Dated listing samples; confirm price and availability directly with the dealership.",
+	reviewCount: daynightReviewCount,
+	reviewCountLabel: daynightReviewCountLabel,
+	reviewLinkLabel: daynightReviewLinkLabel
 } as const;
 
 export const publicNavItems = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Vehicles', href: '/inventory' },
-	{ label: 'Sell', href: '/sell-your-car' },
-	{ label: 'Services', href: '/services' },
-	{ label: 'About us', href: '/about' },
-	{ label: 'Blog', href: '/blog' },
-	{ label: 'Contact', href: '/contact' }
+	{ label: 'Начало', href: '/' },
+	{ label: 'Автомобили', href: '/inventory' },
+	{ label: 'Продай', href: '/sell-your-car' },
+	{ label: 'Услуги', href: '/services' },
+	{ label: 'За нас', href: '/about' },
+	{ label: 'Блог', href: '/blog' },
+	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
 export const publicNavGroups = [
-	{ label: 'Home', href: '/' },
+	{ label: 'Начало', href: '/' },
 	{
-		label: 'Vehicles',
+		label: 'Автомобили',
 		href: '/inventory',
 		children: [
-			{ label: 'All vehicles', href: '/inventory' },
-			{ label: 'Map', href: '/inventory/map' },
-			{ label: 'Compare', href: '/compare' },
-			{ label: 'Calculator', href: '/calculator' }
+			{ label: 'Всички автомобили', href: '/inventory' },
+			{ label: 'Карта', href: '/inventory/map' },
+			{ label: 'Сравнение', href: '/compare' },
+			{ label: 'Калкулатор', href: '/calculator' }
 		]
 	},
 	{
-		label: 'Sell',
+		label: 'Продай',
 		href: '/sell-your-car',
 		children: [
-			{ label: 'Ask about selling or trading', href: '/sell-your-car' },
-			{ label: 'Request an appraisal', href: '/sell-your-car/request' }
+			{ label: 'Продай или замени', href: '/sell-your-car' },
+			{ label: 'Заявка за оценка', href: '/sell-your-car/request' }
 		]
 	},
 	{
-		label: 'Services',
+		label: 'Услуги',
 		href: '/services',
 		children: [
-			{ label: 'Dealership services', href: '/services' },
-			{ label: 'Buyer-arranged funding', href: '/financing' },
-			{ label: 'FAQ', href: '/faq' }
+			{ label: 'Дилърски услуги', href: '/services' },
+			{ label: 'Финансиране', href: '/financing' },
+			{ label: 'ЧЗВ', href: '/faq' }
 		]
 	},
 	{
-		label: 'About us',
+		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'About Texas Drive Auto', href: '/about' },
-			{ label: 'Dealership profile', href: '/about/daynight-auto-plovdiv' },
-			{ label: 'Contact options', href: '/team' },
-			{ label: 'Reviews', href: '/reviews' },
-			{ label: 'Blog', href: '/blog' },
-			{ label: 'Terms', href: '/terms' }
+			{ label: "About Texas Drive Auto", href: '/about' },
+			{ label: 'Екип', href: '/team' },
+			{ label: 'Отзиви', href: '/reviews' },
+			{ label: 'Блог', href: '/blog' },
+			{ label: 'Условия', href: '/terms' }
 		]
 	},
-	{ label: 'Contact', href: '/contact' }
+	{ label: 'Контакти', href: '/contact' }
 ] as const;
 
 export const footerNavItems = [
-	{ label: 'Vehicle inventory', href: '/inventory' },
-	{ label: 'Vehicle map', href: '/inventory/map' },
-	{ label: 'Buyer-arranged funding', href: '/financing' },
-	{ label: 'Calculator', href: '/calculator' },
-	{ label: 'Ask about selling or trading', href: '/sell-your-car' },
-	{ label: 'Request an appraisal', href: '/sell-your-car/request' },
-	{ label: 'Services', href: '/services' },
-	{ label: 'FAQ', href: '/faq' }
+	{ label: 'Налични автомобили', href: '/inventory' },
+	{ label: 'Карта на автомобили', href: '/inventory/map' },
+	{ label: 'Финансиране', href: '/financing' },
+	{ label: 'Калкулатор', href: '/calculator' },
+	{ label: 'Продай или замени', href: '/sell-your-car' },
+	{ label: 'Заявка за оценка', href: '/sell-your-car/request' },
+	{ label: 'Услуги', href: '/services' },
+	{ label: 'ЧЗВ', href: '/faq' }
 ] as const;

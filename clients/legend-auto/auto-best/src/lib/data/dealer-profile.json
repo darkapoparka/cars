@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0&output=embed",
     "accent": "#c42136",
-    "logo": "/assets/legend-auto/legend-auto-logo.webp",
-    "logoLight": "/assets/legend-auto/legend-auto-logo.webp",
-    "logoDark": "/assets/legend-auto/legend-auto-logo-light.webp",
+    "logo": "/dealer-brand/logo-on-light.webp",
+    "logoLight": "/dealer-brand/logo-on-light.webp",
+    "logoDark": "/dealer-brand/logo-on-dark.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -1946,5 +1946,31 @@
       "The project uses a representative stock snapshot, not a live inventory feed."
     ]
   },
-  "sourceCount": 14
+  "sourceCount": 14,
+  "logoContract": {
+    "schemaVersion": 1,
+    "dealer": "legend-auto",
+    "decision": "USE GENERATED CANDIDATE",
+    "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+    "originalSha256": "4bca7a37fd15fbdedf8eb32533866dcf0f6060a31f1a65be7393bfdc890f56f4",
+    "assets": {
+      "onLight": {
+        "publicPath": "/dealer-brand/logo-on-light.webp",
+        "sha256": "393c8f05cb6020c8e4435a742ad89a5d9dfdf5543ed67bc78003931ed35d7029",
+        "bytes": 90992
+      },
+      "onDark": {
+        "publicPath": "/dealer-brand/logo-on-dark.webp",
+        "sha256": "3306a5e66871d4527cf4de4cfc4b752ebebc346d44c0ecf0c8ffae3626cd61cf",
+        "bytes": 91176
+      },
+      "onAccent": {
+        "publicPath": "/dealer-brand/logo-on-accent.webp",
+        "sha256": "275cb5fa30d746abbb2c5086163588481405d50394441dce60065af5501fb28a",
+        "bytes": 67918
+      }
+    },
+    "preparedAt": "2026-09-19T05:00:11.612Z",
+    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+  }
 }

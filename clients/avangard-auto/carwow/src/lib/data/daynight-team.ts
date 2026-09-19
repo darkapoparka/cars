@@ -18,7 +18,7 @@ export const daynightTeam: DayNightTeamMember[] = [
 		role: "Запитвания за наличност и оглед",
 		phone: "0877 800 921",
 		email: "",
-		image: "/assets/avangard/wordmark-light.svg",
+		image: "/dealer-brand/logo-on-light.webp",
 		bio: "Свържете се с AVANGARD AUTO, за да потвърдите актуална наличност, данни за автомобила и възможност за оглед.",
 		detail: "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата. Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."
 	}

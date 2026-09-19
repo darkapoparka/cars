@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dealer": "perfect-auto-varna",
+  "decision": "USE GENERATED CANDIDATE",
+  "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+  "originalSha256": "dcf91986ab63400a2bfce44cb3aae7035108388181f016cdb1f498f6e228b382",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f14f8fd14fcb86890633c6548ca774a2a7a7639493a09b21d4113db4f57adfd0",
+      "bytes": 127756
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "529cbc115327200b2d154fe6bc0ca1c75687ecac4b0f2cca7770a1151e24cf58",
+      "bytes": 125774
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "2c8b639a77d77c1c5038b0201308e418125621165949a0a5ca0e85ce8409aefc",
+      "bytes": 97152
+    }
+  },
+  "preparedAt": "2026-09-19T05:01:01.376Z",
+  "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+}

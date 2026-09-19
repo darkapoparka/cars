@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "client": "day-and-night-auto-group",
+  "templateKey": "carwow",
+  "templateVersion": "89f50c427863050abb7923152f05c091bb937d1e",
+  "state": "refreshed-awaiting-production-qa",
+  "qa": {
+    "desktop": false,
+    "mobile": false,
+    "identity": false,
+    "contactPath": false
+  }
+}

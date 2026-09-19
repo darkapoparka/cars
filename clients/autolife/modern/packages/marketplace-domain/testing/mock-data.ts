@@ -93,7 +93,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -189,7 +189,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -285,7 +285,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": true
@@ -381,7 +381,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -477,7 +477,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -573,7 +573,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -669,7 +669,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -765,7 +765,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -861,7 +861,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -957,7 +957,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1053,7 +1053,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1149,7 +1149,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1245,7 +1245,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false
@@ -1341,7 +1341,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "Аутолайф",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/assets/autolife/wordmark.svg"
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
     "publishedAt": "2026-09-07T09:00:00.000Z",
     "promoted": false

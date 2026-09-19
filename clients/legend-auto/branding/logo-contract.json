@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dealer": "legend-auto",
+  "decision": "USE GENERATED CANDIDATE",
+  "source": "Owner-supplied dealer-logo-candidates-2026-09-18.zip",
+  "originalSha256": "4bca7a37fd15fbdedf8eb32533866dcf0f6060a31f1a65be7393bfdc890f56f4",
+  "assets": {
+    "onLight": {
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "393c8f05cb6020c8e4435a742ad89a5d9dfdf5543ed67bc78003931ed35d7029",
+      "bytes": 90992
+    },
+    "onDark": {
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "3306a5e66871d4527cf4de4cfc4b752ebebc346d44c0ecf0c8ffae3626cd61cf",
+      "bytes": 91176
+    },
+    "onAccent": {
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "275cb5fa30d746abbb2c5086163588481405d50394441dce60065af5501fb28a",
+      "bytes": 67918
+    }
+  },
+  "preparedAt": "2026-09-19T05:00:11.612Z",
+  "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+}

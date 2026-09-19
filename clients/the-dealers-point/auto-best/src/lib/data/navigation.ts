@@ -1,1 +1,162 @@
-import{brand}from'$config/brand';import{featuredVehicles}from'$data/inventory';export type NavigationHref='/'|'/about-us'|`/about-us#${string}`|`/blog-detail/${number}`|'/blog'|`/blog?${string}`|'/contact'|`/contact?${string}`|'/listing-grid'|`/listing-grid?${string}`|`tel:${string}`;export type InternalNavigationHref=Exclude<NavigationHref,`tel:${string}`>;export type NavigationLink={id:string;label:string;href:NavigationHref};export type NavigationGroup={id:string;title:string;links:NavigationLink[]};export type NavigationFeature={id:string;title:string;detail:string;image:string;href:InternalNavigationHref};export type MegaMenu={title:string;description:string;features:NavigationFeature[];groups:NavigationGroup[];cta:Omit<NavigationLink,'href'>&{href:InternalNavigationHref;detail:string}};export type NavigationItem=Omit<NavigationLink,'href'>&{href:InternalNavigationHref;menu?:MegaMenu};const first=featuredVehicles[0]!;const second=featuredVehicles[1]??first;const art=(i:number)=>(featuredVehicles[i%featuredVehicles.length]??first).image;export const navigation:NavigationItem[]=[{id:'home',label:'Home',href:'/'},{id:'vehicles',label:'Cars',href:'/listing-grid',menu:{title:'Cars',description:'Browse the dated showroom sample by body type, year or price.',features:[{id:'cars-1',title:first.title,detail:first.mileage,image:art(0),href:'/listing-grid'},{id:'cars-2',title:second.title,detail:second.mileage,image:art(1),href:'/listing-grid?sort=newest'}],groups:[{id:'browse',title:'Browse',links:[{id:'all',label:'All cars',href:'/listing-grid'},{id:'newest',label:'Newest model years',href:'/listing-grid?sort=newest'},{id:'used',label:'Used cars',href:'/listing-grid?condition=used'}]}],cta:{id:'cars-cta',label:'View all cars',href:'/listing-grid',detail:'Confirm current details directly with the showroom.'}}},{id:'about',label:'About',href:'/about-us',menu:{title:brand.name,description:`Showroom information and direct contact in ${brand.city}.`,features:[{id:'about-1',title:'Showroom',detail:brand.address,image:art(2),href:'/about-us'},{id:'about-2',title:'Arrange a viewing',detail:'Confirm the vehicle before travelling.',image:art(3),href:'/contact?topic=inspection'}],groups:[{id:'company',title:'Company',links:[{id:'overview',label:`About ${brand.shortName}`,href:'/about-us'},{id:'contact',label:'Contact',href:'/contact'},{id:'phone',label:brand.phone,href:brand.phoneHref}]}],cta:{id:'about-cta',label:'Contact the showroom',href:'/contact',detail:'Ask about availability, price or a visit.'}}},{id:'guides',label:'Guides',href:'/blog',menu:{title:'Buying guides',description:'Short, neutral guidance for preparing a vehicle enquiry.',features:[{id:'guide-1',title:'Confirm current stock',detail:'Public listings can change.',image:art(4),href:'/blog-detail/1'},{id:'guide-2',title:'Prepare a showroom visit',detail:'Take the listing and your questions.',image:art(5),href:'/blog-detail/2'}],groups:[{id:'guides-list',title:'Guides',links:[{id:'all-guides',label:'All guides',href:'/blog'},{id:'viewing-guide',label:'Viewing',href:'/blog?category=Viewing'},{id:'stock-guide',label:'Stock',href:'/blog?category=Stock'}]}],cta:{id:'guides-cta',label:'View guides',href:'/blog',detail:'Dated sample content for demo review.'}}},{id:'contact',label:'Contact',href:'/contact'}];
+import { brand } from '$config/brand';
+import type { Vehicle } from '$data/vehicle-artwork';
+import { editorialArtwork, featureArtwork, type FeatureArtwork } from '$data/feature-artwork';
+
+export type NavigationHref =
+  | '/'
+  | '/about-us'
+  | `/about-us#${string}`
+  | `/blog-detail/${number}`
+  | '/blog'
+  | `/blog?${string}`
+  | '/contact'
+  | `/contact?${string}`
+  | '/listing-grid'
+  | `/listing-grid?${string}`
+  | `tel:${string}`;
+
+export type InternalNavigationHref = Exclude<NavigationHref, `tel:${string}`>;
+
+export type NavigationLink = {
+  id: string;
+  label: string;
+  href: NavigationHref;
+};
+
+export type NavigationGroup = {
+  id: string;
+  title: string;
+  links: NavigationLink[];
+};
+
+export type NavigationFeature = {
+  id: string;
+  title: string;
+  detail: string;
+  tone?: 'red' | 'ink';
+  media?: 'photo';
+  href: InternalNavigationHref;
+} & ({ vehicle: Vehicle; artwork?: never } | { artwork: FeatureArtwork; vehicle?: never });
+
+export type MegaMenu = {
+  title: string;
+  description: string;
+  features: NavigationFeature[];
+  groups: NavigationGroup[];
+  cta: Omit<NavigationLink, 'href'> & { href: InternalNavigationHref; detail: string };
+};
+
+export type NavigationItem = Omit<NavigationLink, 'href'> & {
+  href: InternalNavigationHref;
+  menu?: MegaMenu;
+};
+
+export const navigation: NavigationItem[] = [
+  { id: 'home', label: 'Начало', href: '/' },
+  {
+    id: 'vehicles',
+    label: 'Автомобили',
+    href: '/listing-grid',
+    menu: {
+      title: 'Автомобили',
+      description: 'Разгледайте наличностите по състояние, тип купе или марка.',
+      features: [
+        { id: 'vehicles-suv', vehicle: 'gclass', title: 'SUV', detail: 'Простор и комфорт', href: '/listing-grid?body=SUV' },
+        { id: 'vehicles-wagon', vehicle: 'graphite', title: 'Комби', detail: 'Място за всеки ден', href: '/listing-grid?body=Wagon' },
+        { id: 'vehicles-coupe', vehicle: 'porsche', title: 'Купе', detail: 'Спортен характер', href: '/listing-grid?body=Coupe' }
+      ],
+      groups: [
+        {
+          id: 'vehicles-browse',
+          title: 'Разгледайте',
+          links: [
+            { id: 'vehicles-all', label: 'Всички автомобили', href: '/listing-grid' },
+            { id: 'vehicles-new', label: 'Най-нови предложения', href: '/listing-grid?sort=newest' },
+            { id: 'vehicles-used', label: 'Употребявани', href: '/listing-grid?condition=used' }
+          ]
+        },
+        {
+          id: 'vehicles-body',
+          title: 'По тип купе',
+          links: [
+            { id: 'vehicles-body-suv', label: 'SUV', href: '/listing-grid?body=SUV' },
+            { id: 'vehicles-body-sedan', label: 'Комби', href: '/listing-grid?body=Wagon' },
+            { id: 'vehicles-body-coupe', label: 'Купе', href: '/listing-grid?body=Coupe' }
+          ]
+        }
+      ],
+      cta: { id: 'vehicles-cta', label: 'Вижте всички автомобили', href: '/listing-grid', detail: 'Филтрирайте по тип, гориво и състояние.' }
+    }
+  },
+  {
+    id: 'about',
+    label: 'За нас',
+    href: '/about-us',
+    menu: {
+      title: brand.name,
+      description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
+      features: [
+        { id: 'about-showroom', tone: 'ink', artwork: featureArtwork.showroom, title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, href: '/about-us' },
+        { id: 'about-import', artwork: featureArtwork.import, tone: 'red', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', href: '/contact?topic=import' },
+        { id: 'about-leasing', tone: 'ink', artwork: featureArtwork.finance, title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', href: '/contact?topic=leasing' }
+      ],
+      groups: [
+        {
+          id: 'about-company',
+          title: 'Компания',
+          links: [
+            { id: 'about-company-overview', label: `За ${brand.shortName}`, href: '/about-us' },
+            { id: 'about-company-process', label: 'Как работим', href: '/about-us#process' },
+            { id: 'about-company-contact', label: 'Контакти', href: '/contact' }
+          ]
+        },
+        {
+          id: 'about-contact',
+          title: 'Свържете се',
+          links: [
+            { id: 'about-contact-inspection', label: 'Запазете оглед', href: '/contact?topic=inspection' },
+            { id: 'about-contact-address', label: 'Адрес и посещение', href: '/contact' },
+            { id: 'about-contact-phone', label: brand.phone, href: brand.phoneHref }
+          ]
+        }
+      ],
+      cta: { id: 'about-cta', label: 'Свържете се с екипа', href: '/contact', detail: 'Наличност, оглед, внос и собствен лизинг.' }
+    }
+  },
+  {
+    id: 'guides',
+    label: 'Полезно',
+    href: '/blog',
+    menu: {
+      title: 'Статии и съвети',
+      description: 'Практична информация за избора, проверката и финансирането на автомобил.',
+      features: [
+        { id: 'guides-inspection', media: 'photo', artwork: editorialArtwork.inspection, title: 'Какво да проверите преди покупка?', detail: 'История, документи и състояние.', href: '/blog-detail/1' },
+        { id: 'guides-import', media: 'photo', artwork: editorialArtwork.import, tone: 'red', title: 'Как протича вносът на автомобил?', detail: 'Основните стъпки преди регистрация.', href: '/blog-detail/2' },
+        { id: 'guides-leasing', media: 'photo', tone: 'ink', artwork: editorialArtwork.finance, title: 'Как да сравните лизингови оферти?', detail: 'Какво да уточните преди финансиране.', href: '/blog-detail/3' }
+      ],
+      groups: [
+        {
+          id: 'guides-library',
+          title: 'Статии',
+          links: [
+            { id: 'guides-all', label: 'Всички статии', href: '/blog' },
+            { id: 'guides-choice', label: 'Избор на автомобил', href: '/blog?q=избор' },
+            { id: 'guides-finance', label: 'Лизинг и условия', href: '/blog?category=Лизинг' }
+          ]
+        },
+        {
+          id: 'guides-help',
+          title: 'Помощ',
+          links: [
+            { id: 'guides-import-help', label: 'Внос в България', href: '/blog?category=Внос' },
+            { id: 'guides-contact', label: 'Контакти', href: '/contact' },
+            { id: 'guides-ask', label: 'Попитайте екипа', href: '/contact' }
+          ]
+        }
+      ],
+      cta: { id: 'guides-cta', label: 'Вижте всички статии', href: '/blog', detail: 'Насоки за избор, покупка, лизинг и внос.' }
+    }
+  },
+  { id: 'contact', label: 'Контакти', href: '/contact' }
+];
