@@ -4,7 +4,7 @@
   "brand": {
     "name": "IS AUTO",
     "source": "https://www.isauto.net/",
-    "implementation": "The official IS AUTO website wordmark is converted into tightly framed transparent raster masters: the light-surface version keeps the red/dark identity, while the red/dark-surface version is fully white for reliable contrast. PNG runtime assets and WebP derivatives are generated; no SVG, CSS wordmark, generated text, App Store crop, or boxed background is used.",
+    "implementation": "Transparent raster wordmark refresh using the public IS AUTO name and red/black brand treatment; no boxed background.",
     "files": [
       "auto-best/static/assets/images/lead/isauto/logo-dark.png",
       "auto-best/static/assets/images/lead/isauto/logo-light.png",
@@ -12,9 +12,7 @@
       "modern/apps/web/public/isauto/logo-light.png",
       "carwow/static/brand/isauto-logo-dark.png",
       "carwow/static/brand/isauto-logo-light.png"
-    ],
-    "rasterSource": "https://www.isauto.net/assets/logo-cf0718a1710eaf3a212a58eb9a20c0d17527708d0fcd27bb8bf5a2433907dbdd.png",
-    "pipelineVersion": "official-wordmark-v4-full-white-surface-contrast"
+    ]
   },
   "hero": {
     "sourceUrl": "https://www.isauto.net/assets/home_top_image-6c0593ce5c4b33195567916b1cfd688ffce5c161da970f43e515f452d71c66d3.png",
