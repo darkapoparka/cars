@@ -57,3 +57,15 @@ Inspect the deployment whose Git commit equals the exported commit. READY is bui
 A protected review pilot may use a Vercel temporary share link for scoped browser verification. Record its expiry and `temporary-share-link` access separately; it does not establish a permanently public lead-delivery URL. Do not weaken unrelated project protection to make a QA status appear public. See the [Promosale pilot evidence](WORKFLOW-MIGRATION-2026-09-12.md).
 
 Update the technical registry with canonical source SHA, template SHAs, export SHA, packaging version, project/team, deployment ID, exact URL, timestamp and evidence. Regenerate readable list/dashboard views from the reviewed saved registry using `node scripts/index-deployments.mjs --views-only`. Use `--write` only when intentionally rescanning reconciled local dealer source. Keep old verification as dated history.
+
+## Shared Admin demo and regression checks
+
+The shared switcher in `scripts/publishing/preview-switcher.js` retains three numbered designs and adds **Admin dashboard**. It opens `https://cars-admin-blue.vercel.app/` in a separate tab with `noopener noreferrer`; it is not Design 4 and does not replace a dealer route. Package from the shared switcher rather than maintaining per-dealer snippets. Do not copy the Admin application into every dealer package. This is a public demonstration with sample browser-local data, not Agency OS or a connected client backend.
+
+On every release verify all three mounted designs at desktop/mobile widths, one visible Admin link, unchanged 1/3–3/3 numbering, Escape/focus behavior, actual new-tab opening, and the committed light/dark/accent logo bytes. Preserve the logo contract after any legacy asset copying.
+
+## Safe documentation-only build skipping
+
+The tested Vercel ignored-build command is exported as `safeIgnoreBuildCommand` from `scripts/publishing/ignored-build.mjs`. It fits the 256-character setting limit. Only a confirmed documentation-only Git diff returns 0 (skip); missing commit values, absent `.git`, and Git errors return 1 (build). Do not install an unguarded `git diff` command: Services source archives may have no Git checkout.
+
+Run `node --test scripts/publishing-ignore-build.test.mjs` after changing this rule. A source commit, a successful build, an assigned production alias, and browser acceptance are separate facts; record all four.

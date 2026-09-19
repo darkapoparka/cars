@@ -1,0 +1,1915 @@
+{
+  "verifiedAt": "2026-09-19T13:33:52.553Z",
+  "status": "technical-verification-passed",
+  "adminDemo": "https://cars-admin-blue.vercel.app/",
+  "counts": {
+    "dealers": 24,
+    "designs": 72,
+    "logoAssetMatches": 216,
+    "browserChecks": 144,
+    "adminActualNewTabs": 24,
+    "adminViewsAtThreeWidths": 21,
+    "buildRulesFixed": 24,
+    "newDeployments": 2
+  },
+  "upstream": {
+    "auto-best": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+    "modern": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+    "carwow": "89f50c427863050abb7923152f05c091bb937d1e",
+    "import": "5ff9805ebe0211343e7a025465d8d71e306180fa"
+  },
+  "deployments": [
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "url": "https://cars-alhamooralthahabi.vercel.app/",
+      "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+      "deployment": "dpl_8YRgVfUPWtDEhx8qKhAd9GpFykw4",
+      "readyState": "READY",
+      "gitCommit": "a16950e1520ccb052d00feaec0e5d9d42126b231",
+      "expectedCommit": "a16950e1520ccb052d00feaec0e5d9d42126b231",
+      "aliasDeployment": "dpl_8YRgVfUPWtDEhx8qKhAd9GpFykw4",
+      "aliasName": "cars-alhamooralthahabi.vercel.app",
+      "aliasProject": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+      "passed": true
+    },
+    {
+      "slug": "asko-96",
+      "url": "https://cars-asko96.vercel.app/",
+      "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+      "deployment": "dpl_7VwtqmvoQ4cUDQ1Lbr1Juy3uyCx2",
+      "readyState": "READY",
+      "gitCommit": "cdde9b4f3d5c195d8fd546b5b866c9b6fe1cf00a",
+      "expectedCommit": "cdde9b4f3d5c195d8fd546b5b866c9b6fe1cf00a",
+      "aliasDeployment": "dpl_7VwtqmvoQ4cUDQ1Lbr1Juy3uyCx2",
+      "aliasName": "cars-asko96.vercel.app",
+      "aliasProject": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+      "passed": true
+    },
+    {
+      "slug": "al-basma-motors",
+      "url": "https://cars-albasmamotors.vercel.app/",
+      "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+      "deployment": "dpl_9gGjQiNhkkWNYLFkqD82WJFFKczX",
+      "readyState": "READY",
+      "gitCommit": "b2467a35dfb700630f9bd67b6c7ef308fcc31d7d",
+      "expectedCommit": "b2467a35dfb700630f9bd67b6c7ef308fcc31d7d",
+      "aliasDeployment": "dpl_9gGjQiNhkkWNYLFkqD82WJFFKczX",
+      "aliasName": "cars-albasmamotors.vercel.app",
+      "aliasProject": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+      "passed": true
+    },
+    {
+      "slug": "automarket-varna",
+      "url": "https://cars-automarketvarna.vercel.app/",
+      "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+      "deployment": "dpl_D67BguC4Rsb6SawohFUn238apJKh",
+      "readyState": "READY",
+      "gitCommit": "b908214f47a89078b4e3deadc67d4df4381afaad",
+      "expectedCommit": "b908214f47a89078b4e3deadc67d4df4381afaad",
+      "aliasDeployment": "dpl_D67BguC4Rsb6SawohFUn238apJKh",
+      "aliasName": "cars-automarketvarna.vercel.app",
+      "aliasProject": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+      "passed": true
+    },
+    {
+      "slug": "astracar",
+      "url": "https://cars-astracar.vercel.app/",
+      "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+      "deployment": "dpl_9cnpjSfQv7CapTpdQzYqQQdMib77",
+      "readyState": "READY",
+      "gitCommit": "05b1188f52bc9d2139b3f4efb4d7d18a993afc8d",
+      "expectedCommit": "05b1188f52bc9d2139b3f4efb4d7d18a993afc8d",
+      "aliasDeployment": "dpl_9cnpjSfQv7CapTpdQzYqQQdMib77",
+      "aliasName": "cars-astracar.vercel.app",
+      "aliasProject": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+      "passed": true
+    },
+    {
+      "slug": "autolife",
+      "url": "https://cars-autolife.vercel.app/",
+      "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+      "deployment": "dpl_GyNhsJ7aq5anF7qehivam3R6CgMu",
+      "readyState": "READY",
+      "gitCommit": "5500bf1a9af02051b9e8bbbd4b3e661203bdad41",
+      "expectedCommit": "5500bf1a9af02051b9e8bbbd4b3e661203bdad41",
+      "aliasDeployment": "dpl_GyNhsJ7aq5anF7qehivam3R6CgMu",
+      "aliasName": "cars-autolife.vercel.app",
+      "aliasProject": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+      "passed": true
+    },
+    {
+      "slug": "champion-auto-pro",
+      "url": "https://cars-championautopro.vercel.app/",
+      "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+      "deployment": "dpl_2HkaQRR1Gxiojauf8vYbWYE3t8SD",
+      "readyState": "READY",
+      "gitCommit": "556f524861ae47c11c680516d92d0e1c8a91c140",
+      "expectedCommit": "556f524861ae47c11c680516d92d0e1c8a91c140",
+      "aliasDeployment": "dpl_2HkaQRR1Gxiojauf8vYbWYE3t8SD",
+      "aliasName": "cars-championautopro.vercel.app",
+      "aliasProject": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+      "passed": true
+    },
+    {
+      "slug": "avangard-auto",
+      "url": "https://cars-avangardauto.vercel.app/",
+      "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+      "deployment": "dpl_8GFCKbDqeU32oAKY5Xm7fFkXULzf",
+      "readyState": "READY",
+      "gitCommit": "749c67c49546c8dc046c73fea45a82a8a9e77858",
+      "expectedCommit": "749c67c49546c8dc046c73fea45a82a8a9e77858",
+      "aliasDeployment": "dpl_8GFCKbDqeU32oAKY5Xm7fFkXULzf",
+      "aliasName": "cars-avangardauto.vercel.app",
+      "aliasProject": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+      "passed": true
+    },
+    {
+      "slug": "eliqauto",
+      "url": "https://cars-eliqauto.vercel.app/",
+      "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+      "deployment": "dpl_D1FqberKFQSx3s4ZjYXmiSXeXK7U",
+      "readyState": "READY",
+      "gitCommit": "206dee230046503000dadb9e4c655794691418ee",
+      "expectedCommit": "206dee230046503000dadb9e4c655794691418ee",
+      "aliasDeployment": "dpl_D1FqberKFQSx3s4ZjYXmiSXeXK7U",
+      "aliasName": "cars-eliqauto.vercel.app",
+      "aliasProject": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+      "passed": true
+    },
+    {
+      "slug": "elit-auto-import",
+      "url": "https://cars-elitautoimport.vercel.app/",
+      "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+      "deployment": "dpl_AdotaNsUe8KRvqBsq6qrRW4gfs7v",
+      "readyState": "READY",
+      "gitCommit": "6e4d9b6e6be506419a6e0168fd2c094768973388",
+      "expectedCommit": "6e4d9b6e6be506419a6e0168fd2c094768973388",
+      "aliasDeployment": "dpl_AdotaNsUe8KRvqBsq6qrRW4gfs7v",
+      "aliasName": "cars-elitautoimport.vercel.app",
+      "aliasProject": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+      "passed": true
+    },
+    {
+      "slug": "f1rst-motors",
+      "url": "https://cars-f1rstmotors.vercel.app/",
+      "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+      "deployment": "dpl_EWAsJwDmMqug4FCjqn7UWqSnMnhU",
+      "readyState": "READY",
+      "gitCommit": "b2c755ddd92c7dfef24446b587557bc806031bda",
+      "expectedCommit": "b2c755ddd92c7dfef24446b587557bc806031bda",
+      "aliasDeployment": "dpl_EWAsJwDmMqug4FCjqn7UWqSnMnhU",
+      "aliasName": "cars-f1rstmotors.vercel.app",
+      "aliasProject": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+      "passed": true
+    },
+    {
+      "slug": "excellent-cars",
+      "url": "https://excellent-cars.vercel.app/",
+      "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+      "deployment": "dpl_C76rNiQAtgoP9QedWBWKBvT3VTE3",
+      "readyState": "READY",
+      "gitCommit": "2905f7cfc1ef53d6863a9d8333f8a8557f30bc99",
+      "expectedCommit": "2905f7cfc1ef53d6863a9d8333f8a8557f30bc99",
+      "aliasDeployment": "dpl_C76rNiQAtgoP9QedWBWKBvT3VTE3",
+      "aliasName": "excellent-cars.vercel.app",
+      "aliasProject": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+      "passed": true
+    },
+    {
+      "slug": "ivo-auto",
+      "url": "https://cars-ivoauto.vercel.app/",
+      "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+      "deployment": "dpl_6VAPff3wrVy8CK5EoeAyyFQkq8HQ",
+      "readyState": "READY",
+      "gitCommit": "5e8446c3622123f2ae59fb737ea6b0f3d0320cf7",
+      "expectedCommit": "5e8446c3622123f2ae59fb737ea6b0f3d0320cf7",
+      "aliasDeployment": "dpl_6VAPff3wrVy8CK5EoeAyyFQkq8HQ",
+      "aliasName": "cars-ivoauto.vercel.app",
+      "aliasProject": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+      "passed": true
+    },
+    {
+      "slug": "kg-team-auto",
+      "url": "https://cars-kgteamauto.vercel.app/",
+      "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+      "deployment": "dpl_9Vv4GjGVENB4XpGys4MHMVU77dsH",
+      "readyState": "READY",
+      "gitCommit": "419c6d20eccecb18ce41adaf61b3f4554f554491",
+      "expectedCommit": "419c6d20eccecb18ce41adaf61b3f4554f554491",
+      "aliasDeployment": "dpl_9Vv4GjGVENB4XpGys4MHMVU77dsH",
+      "aliasName": "cars-kgteamauto.vercel.app",
+      "aliasProject": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+      "passed": true
+    },
+    {
+      "slug": "legend-auto",
+      "url": "https://cars-legendauto.vercel.app/",
+      "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+      "deployment": "dpl_4MdoJq6z4LrVEaRX1nsVV2y4iPAb",
+      "readyState": "READY",
+      "gitCommit": "0a801955421a31548f584a5d180b4486ea72cff0",
+      "expectedCommit": "0a801955421a31548f584a5d180b4486ea72cff0",
+      "aliasDeployment": "dpl_4MdoJq6z4LrVEaRX1nsVV2y4iPAb",
+      "aliasName": "cars-legendauto.vercel.app",
+      "aliasProject": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+      "passed": true
+    },
+    {
+      "slug": "navara-car",
+      "url": "https://cars-navaracar.vercel.app/",
+      "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+      "deployment": "dpl_2pHyS9oKSh7U3ioy4sKbK34NMpti",
+      "readyState": "READY",
+      "gitCommit": "f943c9680db3f6a3b22277cebbcdc82f97bee46a",
+      "expectedCommit": "f943c9680db3f6a3b22277cebbcdc82f97bee46a",
+      "aliasDeployment": "dpl_2pHyS9oKSh7U3ioy4sKbK34NMpti",
+      "aliasName": "cars-navaracar.vercel.app",
+      "aliasProject": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+      "passed": true
+    },
+    {
+      "slug": "priselci",
+      "url": "https://cars-priselci.vercel.app/",
+      "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+      "deployment": "dpl_6hEcRNo9nmtQUCGEG7Y3H3icJ3aV",
+      "readyState": "READY",
+      "gitCommit": "4efc240e43d807cdecbc5b5cf2de0cdb93f0011d",
+      "expectedCommit": "4efc240e43d807cdecbc5b5cf2de0cdb93f0011d",
+      "aliasDeployment": "dpl_6hEcRNo9nmtQUCGEG7Y3H3icJ3aV",
+      "aliasName": "cars-priselci.vercel.app",
+      "aliasProject": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+      "passed": true
+    },
+    {
+      "slug": "promosale-varna",
+      "url": "https://cars-promosalevarna.vercel.app/",
+      "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+      "deployment": "dpl_GmjS62SfAM4kBLnLGjCmDC5DnJvJ",
+      "readyState": "READY",
+      "gitCommit": "1d42ac543fbeab824648370d17c346eb0c34c785",
+      "expectedCommit": "1d42ac543fbeab824648370d17c346eb0c34c785",
+      "aliasDeployment": "dpl_GmjS62SfAM4kBLnLGjCmDC5DnJvJ",
+      "aliasName": "cars-promosalevarna.vercel.app",
+      "aliasProject": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+      "passed": true
+    },
+    {
+      "slug": "texas-drive-auto",
+      "url": "https://cars-texasdriveauto.vercel.app/",
+      "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+      "deployment": "dpl_AAEFDXPSffjTGYaKa8JgcPLmUN18",
+      "readyState": "READY",
+      "gitCommit": "9cca15544772de89bc23c2d15767fe7791a29e91",
+      "expectedCommit": "9cca15544772de89bc23c2d15767fe7791a29e91",
+      "aliasDeployment": "dpl_AAEFDXPSffjTGYaKa8JgcPLmUN18",
+      "aliasName": "cars-texasdriveauto.vercel.app",
+      "aliasProject": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+      "passed": true
+    },
+    {
+      "slug": "the-dealers-point",
+      "url": "https://cars-thedealerspoint.vercel.app/",
+      "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+      "deployment": "dpl_FcdD6xN94QTZhGwaH4uYAWQkcTHy",
+      "readyState": "READY",
+      "gitCommit": "23da7ef143fa23eacb695725e3003fc551196ce3",
+      "expectedCommit": "23da7ef143fa23eacb695725e3003fc551196ce3",
+      "aliasDeployment": "dpl_FcdD6xN94QTZhGwaH4uYAWQkcTHy",
+      "aliasName": "cars-thedealerspoint.vercel.app",
+      "aliasProject": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+      "passed": true
+    },
+    {
+      "slug": "outletcars-varna",
+      "url": "https://cars-outletcarsvarna.vercel.app/",
+      "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+      "deployment": "dpl_8qfE78ZNpWTj2N1RWnXUZbrRX3SP",
+      "readyState": "READY",
+      "gitCommit": "ad68e9505bb6a90720100b13565348c709dade87",
+      "expectedCommit": "ad68e9505bb6a90720100b13565348c709dade87",
+      "aliasDeployment": "dpl_8qfE78ZNpWTj2N1RWnXUZbrRX3SP",
+      "aliasName": "cars-outletcarsvarna.vercel.app",
+      "aliasProject": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+      "passed": true
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "url": "https://cars-perfectauto.vercel.app/",
+      "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+      "deployment": "dpl_FyMWwg4ggjLQweY2yYtUDUBVTGBx",
+      "readyState": "READY",
+      "gitCommit": "9da7beb0e8ef1c416d93622521e38003e40aa8d2",
+      "expectedCommit": "9da7beb0e8ef1c416d93622521e38003e40aa8d2",
+      "aliasDeployment": "dpl_FyMWwg4ggjLQweY2yYtUDUBVTGBx",
+      "aliasName": "cars-perfectauto.vercel.app",
+      "aliasProject": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+      "passed": true
+    },
+    {
+      "slug": "dayandnight",
+      "url": "https://day-and-night-a.vercel.app/",
+      "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+      "deployment": "dpl_3ddm5ThL3qwHCAQKoVcGG1uTmUgu",
+      "readyState": "READY",
+      "gitCommit": "613e7a06ef745d91a786ce587c2a6931dd4e449f",
+      "expectedCommit": "613e7a06ef745d91a786ce587c2a6931dd4e449f",
+      "aliasDeployment": "dpl_3ddm5ThL3qwHCAQKoVcGG1uTmUgu",
+      "aliasName": "day-and-night-a.vercel.app",
+      "aliasProject": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+      "passed": true
+    },
+    {
+      "slug": "isauto-varna",
+      "url": "https://cars-isautovarna.vercel.app/",
+      "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+      "deployment": "dpl_Dsn693jzxTqzZtTfRhqzHwjHebw4",
+      "readyState": "READY",
+      "gitCommit": "a99428c8b9d57bee48e904256c27177be4e0ed0f",
+      "expectedCommit": "a99428c8b9d57bee48e904256c27177be4e0ed0f",
+      "aliasDeployment": "dpl_Dsn693jzxTqzZtTfRhqzHwjHebw4",
+      "aliasName": "cars-isautovarna.vercel.app",
+      "aliasProject": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+      "passed": true
+    }
+  ],
+  "source": [
+    {
+      "slug": "al-basma-motors",
+      "repository": "darkapoparka/cars-albasmamotors",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "b2467a35dfb700630f9bd67b6c7ef308fcc31d7d",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "repository": "darkapoparka/cars-alhamooralthahabi",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "a16950e1520ccb052d00feaec0e5d9d42126b231",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "asko-96",
+      "repository": "darkapoparka/cars-asko96",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "cdde9b4f3d5c195d8fd546b5b866c9b6fe1cf00a",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "astracar",
+      "repository": "darkapoparka/cars-astracar",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "05b1188f52bc9d2139b3f4efb4d7d18a993afc8d",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "automarket-varna",
+      "repository": "darkapoparka/cars-automarketvarna",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "b908214f47a89078b4e3deadc67d4df4381afaad",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "autolife",
+      "repository": "darkapoparka/cars-autolife",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "5500bf1a9af02051b9e8bbbd4b3e661203bdad41",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "avangard-auto",
+      "repository": "darkapoparka/cars-avangardauto",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "749c67c49546c8dc046c73fea45a82a8a9e77858",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "champion-auto-pro",
+      "repository": "darkapoparka/cars-championautopro",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "556f524861ae47c11c680516d92d0e1c8a91c140",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "eliqauto",
+      "repository": "darkapoparka/cars-eliqauto",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "206dee230046503000dadb9e4c655794691418ee",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "elit-auto-import",
+      "repository": "darkapoparka/cars-elitautoimport",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "6e4d9b6e6be506419a6e0168fd2c094768973388",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "excellent-cars",
+      "repository": "darkapoparka/excellent-cars",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "2905f7cfc1ef53d6863a9d8333f8a8557f30bc99",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "f1rst-motors",
+      "repository": "darkapoparka/cars-f1rstmotors",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "b2c755ddd92c7dfef24446b587557bc806031bda",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "ivo-auto",
+      "repository": "darkapoparka/cars-ivoauto",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "5e8446c3622123f2ae59fb737ea6b0f3d0320cf7",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "kg-team-auto",
+      "repository": "darkapoparka/cars-kgteamauto",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "419c6d20eccecb18ce41adaf61b3f4554f554491",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "legend-auto",
+      "repository": "darkapoparka/cars-legendauto",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "0a801955421a31548f584a5d180b4486ea72cff0",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "navara-car",
+      "repository": "darkapoparka/cars-navaracar",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "f943c9680db3f6a3b22277cebbcdc82f97bee46a",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "priselci",
+      "repository": "darkapoparka/cars-priselci",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "4efc240e43d807cdecbc5b5cf2de0cdb93f0011d",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "promosale-varna",
+      "repository": "darkapoparka/cars-promosalevarna",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "import",
+          "commit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+          "latest": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "1d42ac543fbeab824648370d17c346eb0c34c785",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "the-dealers-point",
+      "repository": "darkapoparka/cars-thedealerspoint",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "23da7ef143fa23eacb695725e3003fc551196ce3",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "texas-drive-auto",
+      "repository": "darkapoparka/cars-texasdriveauto",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "9cca15544772de89bc23c2d15767fe7791a29e91",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "outletcars-varna",
+      "repository": "darkapoparka/cars-outletcarsvarna",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "import",
+          "commit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+          "latest": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "ad68e9505bb6a90720100b13565348c709dade87",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "isauto-varna",
+      "repository": "darkapoparka/cars",
+      "branch": "publish/isauto-varna",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "a99428c8b9d57bee48e904256c27177be4e0ed0f",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "dayandnight",
+      "repository": "darkapoparka/day-and-night-autodeal",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "613e7a06ef745d91a786ce587c2a6931dd4e449f",
+      "admin": true,
+      "passed": true
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "repository": "darkapoparka/cars-perfectauto",
+      "branch": "main",
+      "templates": [
+        {
+          "key": "auto-best",
+          "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "latest": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+          "matches": true
+        },
+        {
+          "key": "modern",
+          "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "latest": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "matches": true
+        },
+        {
+          "key": "carwow",
+          "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+          "latest": "89f50c427863050abb7923152f05c091bb937d1e",
+          "matches": true
+        }
+      ],
+      "commit": "9da7beb0e8ef1c416d93622521e38003e40aa8d2",
+      "admin": true,
+      "passed": true
+    }
+  ],
+  "adminViews": [
+    {
+      "width": 1440,
+      "route": "/",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "route": "/?view=assistant",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "route": "/?view=enquiries",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "route": "/?view=calendar",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "route": "/?view=inventory",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "route": "/?view=website",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "route": "/?view=settings",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "/?view=assistant",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "/?view=enquiries",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "/?view=calendar",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "/?view=inventory",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "/?view=website",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "route": "/?view=settings",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 320,
+      "route": "/",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 320,
+      "route": "/?view=assistant",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 320,
+      "route": "/?view=enquiries",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 320,
+      "route": "/?view=calendar",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 320,
+      "route": "/?view=inventory",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 320,
+      "route": "/?view=website",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    },
+    {
+      "width": 320,
+      "route": "/?view=settings",
+      "errors": [],
+      "status": 200,
+      "overflow": false,
+      "passed": true
+    }
+  ],
+  "settings": [
+    {
+      "slug": "al-basma-motors",
+      "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:12:31.822Z"
+    },
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:12:40.646Z"
+    },
+    {
+      "slug": "asko-96",
+      "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:12:51.799Z"
+    },
+    {
+      "slug": "astracar",
+      "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:13:02.349Z"
+    },
+    {
+      "slug": "autolife",
+      "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:13:09.838Z"
+    },
+    {
+      "slug": "automarket-varna",
+      "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:13:17.295Z"
+    },
+    {
+      "slug": "avangard-auto",
+      "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:13:25.337Z"
+    },
+    {
+      "slug": "champion-auto-pro",
+      "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:13:32.826Z"
+    },
+    {
+      "slug": "eliqauto",
+      "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:13:40.887Z"
+    },
+    {
+      "slug": "elit-auto-import",
+      "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:13:48.029Z"
+    },
+    {
+      "slug": "excellent-cars",
+      "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:13:54.956Z"
+    },
+    {
+      "slug": "f1rst-motors",
+      "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:01.711Z"
+    },
+    {
+      "slug": "ivo-auto",
+      "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:08.568Z"
+    },
+    {
+      "slug": "kg-team-auto",
+      "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:15.789Z"
+    },
+    {
+      "slug": "legend-auto",
+      "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:23.177Z"
+    },
+    {
+      "slug": "navara-car",
+      "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:30.596Z"
+    },
+    {
+      "slug": "priselci",
+      "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:37.291Z"
+    },
+    {
+      "slug": "promosale-varna",
+      "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:44.003Z"
+    },
+    {
+      "slug": "texas-drive-auto",
+      "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:50.603Z"
+    },
+    {
+      "slug": "the-dealers-point",
+      "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:14:57.343Z"
+    },
+    {
+      "slug": "outletcars-varna",
+      "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:15:04.203Z"
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:15:11.387Z"
+    },
+    {
+      "slug": "dayandnight",
+      "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:15:19.110Z"
+    },
+    {
+      "slug": "isauto-varna",
+      "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+      "before": "git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" \"$VERCEL_GIT_COMMIT_SHA\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md'",
+      "after": "p=$VERCEL_GIT_PREVIOUS_SHA;c=$VERCEL_GIT_COMMIT_SHA; [ -n \"$p\" ] && [ -n \"$c\" ] && git diff --quiet \"$p\" \"$c\" -- . ':!docs/**' ':!audits/**' ':!evidence/**' ':!qa/**' ':!README.md' ':!AGENTS.md' ':!CLIENT.md' ':!DEPLOYMENT.md' && exit 0; exit 1",
+      "changed": true,
+      "verified": true,
+      "otherSettingsPreserved": true,
+      "checkedAt": "2026-09-19T13:15:28.331Z"
+    }
+  ],
+  "promotions": [
+    {
+      "slug": "promosale-varna",
+      "commit": "1d42ac543fbeab824648370d17c346eb0c34c785",
+      "deployment": "dpl_GmjS62SfAM4kBLnLGjCmDC5DnJvJ",
+      "rows": [
+        {
+          "key": "auto-best",
+          "width": 1440,
+          "entry": "/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "1/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "import",
+          "width": 1440,
+          "entry": "/variant-2/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "2/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "width": 1440,
+          "entry": "/variant-3/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "3/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "width": 390,
+          "entry": "/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "1/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "import",
+          "width": 390,
+          "entry": "/variant-2/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "2/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "width": 390,
+          "entry": "/variant-3/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "3/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "width": 320,
+          "entry": "/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "1/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "import",
+          "width": 320,
+          "entry": "/variant-2/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "2/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "width": 320,
+          "entry": "/variant-3/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "3/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        }
+      ],
+      "assets": [
+        {
+          "key": "auto-best",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "surface": "onAccent",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onAccent",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onAccent",
+          "passed": true
+        }
+      ],
+      "previousDeployment": "dpl_8Pwoy5jEboJ8EdXHmTCAxA35HuNQ",
+      "candidatePassed": true,
+      "publicAssets": [
+        {
+          "key": "auto-best",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "surface": "onAccent",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onAccent",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onAccent",
+          "passed": true
+        }
+      ],
+      "promoted": true,
+      "aliasVerified": true,
+      "completedAt": "2026-09-19T13:27:06.858Z"
+    },
+    {
+      "slug": "outletcars-varna",
+      "commit": "ad68e9505bb6a90720100b13565348c709dade87",
+      "deployment": "dpl_8qfE78ZNpWTj2N1RWnXUZbrRX3SP",
+      "rows": [
+        {
+          "key": "auto-best",
+          "width": 1440,
+          "entry": "/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "1/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "import",
+          "width": 1440,
+          "entry": "/variant-2/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "2/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "width": 1440,
+          "entry": "/variant-3/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "3/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "width": 390,
+          "entry": "/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "1/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "import",
+          "width": 390,
+          "entry": "/variant-2/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "2/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "width": 390,
+          "entry": "/variant-3/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "3/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "width": 320,
+          "entry": "/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "1/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "import",
+          "width": 320,
+          "entry": "/variant-2/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "2/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "width": 320,
+          "entry": "/variant-3/",
+          "errors": [],
+          "status": 200,
+          "overflow": false,
+          "adminCount": 1,
+          "links": 4,
+          "count": "3/3",
+          "adminTarget": "_blank",
+          "panelFits": true,
+          "escape": true,
+          "passed": true
+        }
+      ],
+      "assets": [
+        {
+          "key": "auto-best",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "surface": "onAccent",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onAccent",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onAccent",
+          "passed": true
+        }
+      ],
+      "previousDeployment": "dpl_C1AxUPPmB4NJUb3SRFRXuRZHcZjp",
+      "candidatePassed": true,
+      "publicAssets": [
+        {
+          "key": "auto-best",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "auto-best",
+          "surface": "onAccent",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "import",
+          "surface": "onAccent",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onLight",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onDark",
+          "passed": true
+        },
+        {
+          "key": "carwow",
+          "surface": "onAccent",
+          "passed": true
+        }
+      ],
+      "promoted": true,
+      "aliasVerified": true,
+      "completedAt": "2026-09-19T13:27:51.275Z"
+    }
+  ],
+  "safety": {
+    "existingDomainsPreserved": true,
+    "mainCheckoutAndUserIndexUntouched": true,
+    "noDeploymentDeletion": true,
+    "noBillingChange": true,
+    "noFolderReorganization": true,
+    "sharedAdminNotPrivateAgencyCRM": true,
+    "adminNotConnectedToLiveDealerBackends": true
+  },
+  "runtimeEvidence": "J:\\cars\\runtime\\admin-logo-resume-20260919T1304"
+}
