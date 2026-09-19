@@ -81,7 +81,7 @@ These dealers already have a recognizable source identity and should normally re
 | `cars-ivoauto` | `darkapoparka/cars-ivoauto` | `0be64d02119fbbaa54ff81e2099856b6788197a7` | Inspect and implement/verify all surfaces |
 | `cars-navaracar` | `darkapoparka/cars-navaracar` | `5cf05ddccec25fcd7196c885d9558328bef68890` | Inspect and implement/verify all surfaces |
 | `cars-legendauto` | `darkapoparka/cars-legendauto` | `39acae68b6c2377dc271f6e9346f053d9f07a71a` | Inspect and implement/verify all surfaces |
-| `cars-isautovarna` | `darkapoparka/cars` | `fc3adf9fe19e514eca3fc4b2d9b78696e2127eb5` | Resolve its unlinked Vercel source, then inspect and verify |
+| `cars-isautovarna` | `darkapoparka/cars` → `publish/isauto-varna` | `e7abc6a842038d385acb96828e772c0e0676ae23` | Canonical source is `clients/isauto-varna`; deployment package is `publish/isauto-varna`. Vercel project must be Git-linked to this branch; legacy CLI/token workflows are fallback only. |
 
 ## Day & Night example asset contract
 
