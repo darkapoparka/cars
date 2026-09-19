@@ -1,4 +1,6 @@
 import { brand } from '$config/brand';
+import type { Vehicle } from '$data/vehicle-artwork';
+import { editorialArtwork, featureArtwork, type FeatureArtwork } from '$data/feature-artwork';
 
 export type NavigationHref =
   | '/'
@@ -31,9 +33,10 @@ export type NavigationFeature = {
   id: string;
   title: string;
   detail: string;
-  image: string;
+  tone?: 'red' | 'ink';
+  media?: 'photo';
   href: InternalNavigationHref;
-};
+} & ({ vehicle: Vehicle; artwork?: never } | { artwork: FeatureArtwork; vehicle?: never });
 
 export type MegaMenu = {
   title: string;
@@ -58,9 +61,9 @@ export const navigation: NavigationItem[] = [
       title: 'Автомобили',
       description: 'Разгледайте наличностите по състояние, тип купе или марка.',
       features: [
-        { id: 'vehicles-suv', title: 'SUV', detail: 'Простор и комфорт', image: '/assets/images/section/car-slide1.png', href: '/listing-grid?body=SUV' },
-        { id: 'vehicles-crossover', title: 'Комби', detail: 'Място за всеки ден', image: '/assets/images/section/car-slide2.png', href: '/listing-grid?body=Wagon' },
-        { id: 'vehicles-premium-suv', title: 'Премиум SUV', detail: 'Премиум изпълнение', image: '/assets/images/section/car-slide3.png', href: '/listing-grid?body=SUV' }
+        { id: 'vehicles-suv', vehicle: 'gclass', title: 'SUV', detail: 'Простор и комфорт', href: '/listing-grid?body=SUV' },
+        { id: 'vehicles-wagon', vehicle: 'graphite', title: 'Комби', detail: 'Място за всеки ден', href: '/listing-grid?body=Wagon' },
+        { id: 'vehicles-coupe', vehicle: 'porsche', title: 'Купе', detail: 'Спортен характер', href: '/listing-grid?body=Coupe' }
       ],
       groups: [
         {
@@ -93,9 +96,9 @@ export const navigation: NavigationItem[] = [
       title: brand.name,
       description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
       features: [
-        { id: 'about-showroom', title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, image: '/assets/images/lead/day-night-stock-01.webp', href: '/about-us' },
-        { id: 'about-import', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', image: '/assets/images/lead/day-night-stock-03.webp', href: '/contact?topic=import' },
-        { id: 'about-leasing', title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', image: '/assets/images/lead/day-night-stock-06.webp', href: '/contact?topic=leasing' }
+        { id: 'about-showroom', tone: 'ink', artwork: featureArtwork.showroom, title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, href: '/about-us' },
+        { id: 'about-import', artwork: featureArtwork.import, tone: 'red', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', href: '/contact?topic=import' },
+        { id: 'about-leasing', tone: 'ink', artwork: featureArtwork.finance, title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', href: '/contact?topic=leasing' }
       ],
       groups: [
         {
@@ -125,17 +128,17 @@ export const navigation: NavigationItem[] = [
     label: 'Полезно',
     href: '/blog',
     menu: {
-      title: 'Полезно',
+      title: 'Статии и съвети',
       description: 'Практична информация за избора, проверката и финансирането на автомобил.',
       features: [
-        { id: 'guides-inspection', title: 'Проверка преди покупка', detail: 'История, документи и състояние.', image: '/assets/images/lead/day-night-guide-inspection.webp', href: '/blog-detail/1' },
-        { id: 'guides-import', title: 'Внос и документи', detail: 'Основните стъпки преди регистрация.', image: '/assets/images/lead/day-night-guide-import.webp', href: '/blog-detail/2' },
-        { id: 'guides-leasing', title: 'Лизинг и условия', detail: 'Какво да уточните преди финансиране.', image: '/assets/images/lead/day-night-guide-leasing.webp', href: '/blog-detail/3' }
+        { id: 'guides-inspection', media: 'photo', artwork: editorialArtwork.inspection, title: 'Какво да проверите преди покупка?', detail: 'История, документи и състояние.', href: '/blog-detail/1' },
+        { id: 'guides-import', media: 'photo', artwork: editorialArtwork.import, tone: 'red', title: 'Как протича вносът на автомобил?', detail: 'Основните стъпки преди регистрация.', href: '/blog-detail/2' },
+        { id: 'guides-leasing', media: 'photo', tone: 'ink', artwork: editorialArtwork.finance, title: 'Как да сравните лизингови оферти?', detail: 'Какво да уточните преди финансиране.', href: '/blog-detail/3' }
       ],
       groups: [
         {
           id: 'guides-library',
-          title: 'Ръководства',
+          title: 'Статии',
           links: [
             { id: 'guides-all', label: 'Всички статии', href: '/blog' },
             { id: 'guides-choice', label: 'Избор на автомобил', href: '/blog?q=избор' },

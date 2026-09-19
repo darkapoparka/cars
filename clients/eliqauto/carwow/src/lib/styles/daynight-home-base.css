@@ -1,12 +1,13 @@
 /* Home baseline: preserve the original home typography while limiting these defaults to the active home route. The shared SiteChrome header owns its own typography and is excluded. Route styles stay loaded after client navigation, so this reset must never target other pages. */
-:where(body.daynight-home-page) *:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+:where(body.daynight-home-page)
+	*:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: var(--sa-font, ui-sans-serif, system-ui, sans-serif);
-	font-size: 16px;
+	font-family: var(--sa-font);
+	font-size: var(--sa-text-base);
 	line-height: 26px;
-	font-weight: 400;
+	font-weight: var(--sa-weight-regular);
 	color: #1c1c1c;
 	font-style: normal;
 	font-optical-sizing: auto;
@@ -19,62 +20,86 @@
    element rules — without these they collapse to the `*` 16px/26px/400 baseline.
    Component class rules (higher specificity) still win where they set their own
    values, exactly as with app.css. */
-:where(body.daynight-home-page) img:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+:where(body.daynight-home-page)
+	img:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
 	max-width: 100%;
 	height: auto;
 }
 
-:where(body.daynight-home-page) .h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h7:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
-	font-weight: 600;
+:where(body.daynight-home-page)
+	.h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h7:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-weight: var(--sa-weight-semibold);
 }
 
-:where(body.daynight-home-page) h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
-	font-size: 68px;
+:where(body.daynight-home-page)
+	h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h1:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: var(--sa-text-desktop-hero-title);
 	line-height: 76px;
 }
 
-:where(body.daynight-home-page) h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
-	font-size: 40px;
+:where(body.daynight-home-page)
+	h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h2:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: var(--sa-heading-section);
 	line-height: 48px;
 }
 
-:where(body.daynight-home-page) h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
-	font-size: 32px;
+:where(body.daynight-home-page)
+	h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h3:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: var(--sa-type-page);
 	line-height: 1.25;
 }
 
-:where(body.daynight-home-page) h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
-	font-size: 24px;
+:where(body.daynight-home-page)
+	h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h4:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: var(--sa-text-2xl);
 	line-height: 1.333;
 }
 
-:where(body.daynight-home-page) h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
-	font-size: 20px;
+:where(body.daynight-home-page)
+	h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h5:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: var(--sa-text-xl);
 	line-height: 1.4;
 }
 
-:where(body.daynight-home-page) h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
-:where(body.daynight-home-page) .h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
-	font-size: 20px;
+:where(body.daynight-home-page)
+	h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)),
+:where(body.daynight-home-page)
+	.h6:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: var(--sa-text-xl);
 	line-height: 1.6;
 }
 
-:where(body.daynight-home-page) .h7:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
-	font-size: 18px;
+:where(body.daynight-home-page)
+	.h7:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+	font-size: var(--sa-text-lg);
 	line-height: 1.44;
 }
 
@@ -82,7 +107,8 @@
    only exists on >=992px, so this is a no-op on phones. app.css gave it
    overflow:hidden to contain the absolutely-positioned hero cutouts and stop
    horizontal scroll. */
-:where(body.daynight-home-page) #wrapper:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
+:where(body.daynight-home-page)
+	#wrapper:not(:where([data-daynight-site-chrome], [data-daynight-site-chrome] *)) {
 	overflow: hidden !important;
 	position: relative;
 	width: 100%;
