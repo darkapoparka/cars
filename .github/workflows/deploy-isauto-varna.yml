@@ -1,9 +1,6 @@
-name: Deploy IS AUTO Varna production
+name: Manual fallback deploy IS AUTO Varna
 
 on:
-  push:
-    branches:
-      - publish/isauto-varna
   workflow_dispatch:
 
 permissions:
