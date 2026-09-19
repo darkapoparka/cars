@@ -2,7 +2,7 @@
 
 This is an independent personalized dealer copy. Canonical editable source is Cars clients/autolife/. The dedicated dealer repository is a publishing mirror. Make lasting fixes in canonical source or the versioned packaging layer and regenerate; preserve unmatched mirror fixes first. This copy is not a reusable template master.
 
-Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/be98fbe6f1e862b4f5f3485e2c77b94d82f97b07/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/be98fbe6f1e862b4f5f3485e2c77b94d82f97b07/docs/LEAD-PUBLISHING.md).
+Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/2eb9aea6e9904476b53421c8ce42f350229c5b9d/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/2eb9aea6e9904476b53421c8ce42f350229c5b9d/docs/LEAD-PUBLISHING.md).
 
 Preserve this dealer identity, exact repository/domain and offered designs. Apply sourced facts to real data modules; metadata alone does not change the application. Protect layout and interactions during an ordinary correction. Sample forms do not prove delivery. Audit requests are read-only; publication never authorizes outreach.
 
