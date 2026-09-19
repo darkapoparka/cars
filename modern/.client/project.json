@@ -58,10 +58,10 @@
     "version": "1",
     "entry": "/variant-2/cars"
   },
-  "workflowCommit": "513396a992f9332b511f8fceeced9abe81b29caf",
+  "workflowCommit": "6e7b6207f5add08f8990d6b9f68ea06c46a727d5",
   "refresh": {
     "previousTemplateVersion": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
-    "refreshedAt": "2026-09-18T23:03:31.408Z",
+    "refreshedAt": "2026-09-17T06:12:02.239Z",
     "approvedTemplateCommit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
     "mode": "fresh-template-plus-dealer-overlay"
   }
