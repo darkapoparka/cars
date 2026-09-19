@@ -33,9 +33,9 @@
       "accent": "#2563eb"
     }
   },
-  "sourceCommit": "19d6876f5249bc9b6598eea35d017f3679b96f92",
+  "sourceCommit": "7c76a5098e1a523afe7b81a27681e45ce0308c78",
   "packagingVersion": "1",
-  "payloadDigest": "2ecb7855544f4d7a79fdef7a48aad516ccf5fcd3d8e11292c541261e29a13949",
+  "payloadDigest": "bbf7e21a487a10de1dda04c7304885df65dfa72e3ba874d580bc3589f2976081",
   "payload": [
     {
       "path": ".gitignore",
@@ -47,7 +47,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "935c5af7d892234d336731f45d17a6f8e28127760103e1b0cd5ef835afdd92dc"
+      "sha256": "36e3fad4d97364ca08d417ff9ff1d57de222ce4c6662e9b1df5ebfb0e3f127da"
     },
     {
       "path": "CLIENT.md",
@@ -55,7 +55,7 @@
     },
     {
       "path": "auto-best/.client/project.json",
-      "sha256": "9cfeaf7cb3583b15aa0b3b94672880515283dc135aa9ebe13c4753b86820d427"
+      "sha256": "4845387b61459491c5308734d250f8630638b9476c385328570118c82f9da3f0"
     },
     {
       "path": "auto-best/.gitattributes",
@@ -1707,7 +1707,7 @@
     },
     {
       "path": "auto-best/static/preview-switcher.js",
-      "sha256": "2187664f4a858b136cb7b0a69610ea5a18aa3a1f1ad811b4054e901a9ff7b626"
+      "sha256": "d644ce405a73c0f322012dcdfb02cf4b7df278110c563262621d8f07ae3f60da"
     },
     {
       "path": "auto-best/svelte.config.js",
@@ -1731,7 +1731,7 @@
     },
     {
       "path": "carwow/.client/project.json",
-      "sha256": "4663f3687b51c2f305303d5dbbba2feb5e819e1a7e08ed8c807c3b47face711a"
+      "sha256": "52f28ab77c5cc6673fb3142be8d51676d26e4569edb970249f87230f333db1f5"
     },
     {
       "path": "carwow/.env.example",
@@ -7403,7 +7403,7 @@
     },
     {
       "path": "modern/.client/project.json",
-      "sha256": "b73b638209b4fbf68be6938a80f0f47174473f0d9f5b4499965b9a6d5d504823"
+      "sha256": "5bde508af2d2cc7740f1b70c67011111916214170d8e93f3e07d53292df416b6"
     },
     {
       "path": "modern/.cursorrules.example",
