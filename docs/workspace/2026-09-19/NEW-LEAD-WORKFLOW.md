@@ -35,3 +35,9 @@ No existing dealer application, template UI, logo, production alias, hosting pla
 The two previously pending redesigned-logo deliveries were checked at the provider: Priselci still resolves to dpl_6hEcRNo9nmtQUCGEG7Y3H3icJ3aV (4efc240e), and IS Auto to dpl_Dsn693jzxTqzZtTfRhqzHwjHebw4 (a99428c8). They are not described as the newest six-logo release. The logo agent's [delivery record](../../logo-refresh/2026-09-19/six-generated/DELIVERY.md) remains the source for that rollout, separate from workflow readiness.
 
 Logs and byte-level evidence are retained under ignored runtime/new-lead-* paths. Generated test directories were isolated; no fake prospect was deployed during this maintenance.
+
+## Real command verification after push
+
+At 2026-09-19T16:05:17.166Z, both standard and Import `new-client --dry-run` commands passed from committed and pushed main `750cf2f59e4787114086b507a3ce5e8dbd62b69e`. They used the actual four template snapshots and fresh GitHub reads, not injected test data. Local/remote Cars commits matched; every selected approved template also matched its current upstream GitHub main. Combined with the provider checks above, all four selected releases matched both the current GitHub template heads and deployed template aliases at verification time. Neither dry run created a client folder or any deployment.
+
+The source-copy and failure-recovery tests exercise both full trios in isolated fixtures; the real dry runs verify selection and source integrity, not a newly personalized dealer build. This separates the verified workflow from the still-required per-dealer application/visual checks.
