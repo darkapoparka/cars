@@ -29,7 +29,9 @@ Each entry has repository, immutable commit, optional release label, snapshot pa
 
 Normalization preserves binary bytes and changes text CRLF to LF for consistent Windows/Git comparison. The export excludes credentials, dependencies, caches, deployment/CRM bindings and executable inherited agent instructions, retaining source, lockfiles, licenses and provenance. Snapshot AGENTS identifies managed ownership. See `scripts/lib/workflow.mjs` for the versioned policy.
 
-The lead workflow discovers available updates automatically and verifies the selected lock before copying. Discovery can prompt release review; it never silently changes the selected version. No owner reminder to manually copy files is required.
+The new-client command discovers current upstream main automatically and verifies the selected lock before copying. Discovery is bounded and noninteractive; a failed network read is not accepted as proof of current source. Reproducible `next-env.d.ts` and `packages/database/generated/` output is excluded consistently from both fingerprinting and copying; source and schema files remain retained. Discovery can prompt release review; it never silently changes the selected version. No owner reminder to manually copy files is required.
+
+A completed shared-template task should finish its tested, scoped main commit/push and Cars release promotion together, rather than leave the owner to remember a manual copy. Do not promote unfinished work or update existing dealers silently. The agent handles commit IDs and provenance; the owner's normal request remains simply to build the next dealer with the updated designs.
 
 ## Client trial improvements
 

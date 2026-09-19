@@ -1,71 +1,116 @@
-import fs from 'node:fs/promises';
+import fs from 'node:fs';
 import path from 'node:path';
 import { copySource } from './copy-source.mjs';
 import { verifyTemplate } from './template-release.mjs';
-import { resolveIdentity, git, validateManifest } from './lib/workflow.mjs';
+import { ROOT, POLICY, args, json, inside, fingerprint, resolveIdentity, validateManifest, excluded } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
+import { gitRead, repositoryIdentity } from './workspace-doctor.mjs';
 
-const root=await fs.realpath(path.resolve(import.meta.dirname,'..'));
-if(process.argv.includes('--help')) {
-  console.log('Usage: node scripts/new-client.mjs --client SLUG --repository OWNER/REPO [--preset standard|import] [--templates auto-best,modern,carwow] [--dealer-id ID] [--dry-run]\nUses approved release locks; refuses duplicate identities, drift and occupied destinations.');
-  process.exit(0);
+// Verify this checkout, not every other repository's unrelated unfinished work.
+export function assertMainCheckout(root, { readGit = gitRead, platform = process.platform } = {}) {
+  const config = json(path.join(root, 'workspace.json'));
+  const declared = config.machinePaths?.[platform];
+  if (platform === 'win32' && !declared) throw new Error('Missing canonical Windows checkout in workspace.json; use J:/cars.');
+  const physical = value => platform === 'win32' ? fs.realpathSync(value).toLowerCase() : fs.realpathSync(value);
+  if (declared && physical(declared) !== physical(root)) throw new Error('Use the canonical Cars checkout: ' + declared);
+  if (repositoryIdentity(readGit(root, ['config', '--get', 'remote.origin.url'])) !== 'darkapoparka/cars') throw new Error('Wrong Cars origin; use the canonical workspace.');
+  if (readGit(root, ['branch', '--show-current']) !== 'main') throw new Error('New dealers must be created on main; do not create a branch or worktree.');
+  const head = readGit(root, ['rev-parse', 'HEAD']);
+  const remoteHead = readGit(root, ['ls-remote', '--exit-code', 'origin', 'refs/heads/main']).split(/\s+/)[0];
+  if (!/^[a-f0-9]{40}$/.test(remoteHead) || head !== remoteHead) throw new Error('Cars main is not synchronized with GitHub. Preserve local work, reconcile/push main, then retry in this same checkout.');
+  return { head, remoteHead, checkedAt: new Date().toISOString() };
 }
-const catalog=JSON.parse(await fs.readFile(path.join(root,'catalog.json'),'utf8'));
-const argv=process.argv.slice(2), options={};
-for(let i=0;i<argv.length;i++) {
-  const arg=argv[i];
-  if(['--dry-run'].includes(arg)) options[arg.slice(2)]=true;
-  else if(['--client','--templates','--preset','--repository','--dealer-id'].includes(arg) && argv[i+1] && !argv[i+1].startsWith('--')) options[arg.slice(2)]=argv[++i];
-  else throw new Error(`Unknown or incomplete argument: ${arg}`);
+
+export function planNewClient({ root = ROOT, client, repository, preset = 'standard', templates, dealerId = null, readGit = gitRead }) {
+  root = fs.realpathSync(root);
+  if (!['standard', 'import'].includes(preset)) throw new Error('Use --preset standard or import.');
+  if (resolveIdentity(root, client, dealerId).exists) throw new Error('Existing dealer identity: continue its canonical source; do not clone a duplicate.');
+  const catalog = json(path.join(root, 'catalog.json'));
+  const keys = (templates || (preset === 'import' ? 'auto-best,import,carwow' : 'auto-best,modern,carwow')).split(',').map(x => x.trim().toLowerCase()).filter(Boolean);
+  const selected = keys.map(key => { const item = catalog.templates.find(t => t.key === key || t.aliases.includes(key)); if (!item) throw new Error('Unknown template: ' + key); return item; });
+  if (new Set(selected.map(t => t.key)).size !== 3 || selected.length !== 3) throw new Error('Select exactly three distinct designs.');
+  const manifest = validateManifest({ schemaVersion: 1, slug: client, dealerId, repository, defaultBranch: 'main', variants: selected.map((t, i) => ({ key: t.key, entry: i === 0 ? '/' : i === 1 ? (t.key === 'modern' ? '/variant-2/cars' : '/variant-2/') : '/variant-3/', base: i === 0 ? '' : `/variant-${i + 1}` })), extraAssets: [], packaging: { version: '1' } });
+  const registryPath = path.join(root, 'docs/DEPLOYMENT-INVENTORY.json');
+  const existingRepository = fs.existsSync(registryPath) && json(registryPath).dealers?.find(d => d.repository?.toLowerCase() === manifest.repository.toLowerCase());
+  if (existingRepository) throw new Error('Publishing repository already belongs to ' + existingRepository.slug + '; reuse its canonical dealer.');
+  const checkout = assertMainCheckout(root, { readGit });
+  const inputs = ['templates.lock.json', 'catalog.json', 'workspace.json', 'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/dealer-guidance.mjs', 'scripts/workspace-doctor.mjs'];
+  const changed = readGit(root, ['diff', '--name-only', 'HEAD', '--', ...inputs]);
+  if (changed) throw new Error('Commit the reviewed workflow/release inputs before cloning: ' + changed);
+  const clientRoot = inside(root, 'clients/' + client);
+  if (fs.existsSync(clientRoot)) throw new Error('Client destination is occupied: ' + clientRoot);
+  const plans = selected.map(template => {
+    const release = verifyTemplate(root, template.key);
+    const expectedPath = 'templates/' + template.key;
+    if (template.path !== expectedPath || release.snapshotPath !== expectedPath || release.repository !== 'darkapoparka/cars-template-' + template.key) throw new Error('Template catalog/lock identity mismatch: ' + template.key);
+    const dirty = readGit(root, ['diff', '--name-only', 'HEAD', '--', expectedPath]).split('\n').filter(Boolean).filter(p => !excluded(p.slice(expectedPath.length + 1)));
+    if (dirty.length) throw new Error('Commit the reviewed template snapshot before cloning: ' + template.key);
+    const developmentHead = readGit(root, ['ls-remote', '--exit-code', 'https://github.com/' + release.repository + '.git', 'refs/heads/main']).split(/\s+/)[0];
+    if (!/^[a-f0-9]{40}$/.test(developmentHead)) throw new Error('Cannot verify current upstream main: ' + template.key);
+    return { template: template.key, release, source: inside(root, expectedPath, { mustExist: true }), destination: path.join(clientRoot, template.key), homes: template.homes, developmentHead, updateAvailable: developmentHead !== release.commit, releasePolicy: 'latest-reviewed-release; newer development is not silently promoted' };
+  });
+  return { root, client, dealerId, clientRoot, manifest, checkout, plans, state: 'needs-personalization' };
 }
-if(!options.client || !/^[a-z0-9][a-z0-9-]{0,63}$/.test(options.client)) throw new Error('Use --client with a lowercase client slug, e.g. asko96.');
-if(options.preset&&!['standard','import'].includes(options.preset))throw new Error('Use --preset standard or import.');
-const identity=resolveIdentity(root,options.client,options['dealer-id']);
-if(identity.exists)throw new Error(`Existing dealer identity: ${identity.slug}. Continue its canonical source; do not clone a duplicate.`);
-const requested=(options.templates||(options.preset==='import'?'auto-best,import,carwow':'auto-best,modern,carwow')).split(',').map(x=>x.trim().toLowerCase()).filter(Boolean);
-const selected=requested.map(value=>{
-  const template=catalog.templates.find(t=>t.key===value || t.aliases.includes(value));
-  if(!template)throw new Error(`Unknown template: ${value}`);
-  return template;
-});
-if(new Set(selected.map(x=>x.key)).size!==selected.length)throw new Error('Aliases selected the same template twice.');
-const manifest=validateManifest({schemaVersion:1,slug:options.client,dealerId:options['dealer-id']||null,repository:options.repository,defaultBranch:'main',variants:selected.map((t,i)=>({key:t.key,entry:i===0?'/':i===1?(t.key==='modern'?'/variant-2/cars':'/variant-2/'):'/variant-3/',base:i===0?'':`/variant-${i+1}`})),extraAssets:[],packaging:{version:'1'}});
-const workflowCommit=git(root,['rev-parse','HEAD']);
-const clientRoot=path.join(root,'clients',options.client), plans=[];
-// Check every existing ancestor before writing, including client folders that could be junctions.
-async function assertLocalAncestor(candidate) {
-  let current=candidate;
-  while(!(await fs.lstat(current).then(()=>true).catch(()=>false)))current=path.dirname(current);
-  const physical=await fs.realpath(current);
-  if(physical!==root&&!physical.startsWith(root+path.sep))throw new Error(`Path escapes Cars through an ancestor: ${candidate}`);
-}
-await assertLocalAncestor(clientRoot);
-for(const template of selected) {
-  const release=verifyTemplate(root,template.key);
-  const source=await fs.realpath(path.join(root,template.path));
-  if(!source.startsWith(path.join(root,'templates')+path.sep))throw new Error('Template source escaped the local library.');
-  const destination=path.join(clientRoot,template.key);
-  if(await fs.lstat(destination).then(()=>true).catch(()=>false))throw new Error(`Destination already exists; continuing must edit it deliberately, not overwrite it: ${destination}`);
-  plans.push({template:template.key,version:release.release||release.commit,release,source,destination,readiness:template.readiness,homes:template.homes,personalization:'required',crmRegistration:'not-performed'});
-}
-console.log(JSON.stringify({mode:options['dry-run']?'dry-run':'copy',client:options.client,plans},null,2));
-if(!options['dry-run']) {
-  await fs.mkdir(clientRoot,{recursive:false});
-  await fs.writeFile(path.join(clientRoot,'dealer.json'),JSON.stringify(manifest,null,2)+'\n');
-  await fs.writeFile(path.join(clientRoot,'AGENTS.md'),dealerGuidance({slug:options.client,variants:manifest.variants,workflowCommit}));
-  for(const plan of plans) {
-    await copySource(plan.source,plan.destination,{key:plan.template});
-    // A second integrity check catches an upstream writer racing the copy.
-    verifyTemplate(root,plan.template);
-    const metadata={schemaVersion:1,client:options.client,templateKey:plan.template,templateVersion:plan.version,createdAt:new Date().toISOString(),state:'needs-personalization',selectedHome:plan.homes[0].id,availableHomes:plan.homes,offeredHomes:[],publicUrl:null,qa:{desktop:false,mobile:false,identity:false,contactPath:false},crm:{leadId:null,demoProjectId:null,registered:false}};
-    metadata.templateSource={repository:plan.release.repository,commit:plan.release.commit,digest:plan.release.digest,exportPolicy:plan.release.exportPolicy};
-    metadata.packaging={version:'1',entry:manifest.variants.find(v=>v.key===plan.template).entry};
-    metadata.workflowCommit=workflowCommit;
-    await fs.mkdir(path.join(plan.destination,'.client'),{recursive:true});
-    await fs.writeFile(path.join(plan.destination,'.client/project.json'),JSON.stringify(metadata,null,2));
-    await fs.writeFile(path.join(plan.destination,'AGENTS.md'),dealerGuidance({slug:options.client,variants:manifest.variants,workflowCommit,variant:plan.template}));
-    console.log(`Created ${plan.destination}`);
+
+export async function createNewClient(plan, { readGit = gitRead, copy = copySource } = {}) {
+  const { root, clientRoot, client, manifest, plans } = plan;
+  if (path.resolve(clientRoot) !== inside(root, 'clients/' + client) || manifest.slug !== client) throw new Error('Invalid canonical client plan.');
+  validateManifest(manifest);
+  if (JSON.stringify(plans.map(p => p.template)) !== JSON.stringify(manifest.variants.map(v => v.key))) throw new Error('Plan variants differ from the dealer manifest.');
+  const lockPath = inside(root, 'runtime/locks/new-client');
+  fs.mkdirSync(path.dirname(lockPath), { recursive: true });
+  try { fs.mkdirSync(lockPath); } catch (error) { if (error.code === 'EEXIST') throw new Error('Another new-client operation owns ' + lockPath + '; inspect its owner before retrying.'); throw error; }
+  fs.writeFileSync(path.join(lockPath, 'owner.json'), JSON.stringify({ pid: process.pid, client, startedAt: new Date().toISOString() }));
+  let staging;
+  try {
+    if (assertMainCheckout(root, { readGit }).head !== plan.checkout.head) throw new Error('Cars main advanced after planning; regenerate the plan.');
+    if (resolveIdentity(root, client, plan.dealerId).exists) throw new Error('Dealer identity appeared after planning; no copy will be installed.');
+    const parent = inside(root, 'runtime/new-clients'); fs.mkdirSync(parent, { recursive: true });
+    staging = fs.mkdtempSync(path.join(parent, client + '-'));
+    const stagedClient = path.join(staging, 'dealer'); fs.mkdirSync(stagedClient);
+    const writeJson = (file, value) => fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n');
+    writeJson(path.join(stagedClient, 'dealer.json'), manifest);
+    fs.writeFileSync(path.join(stagedClient, 'AGENTS.md'), dealerGuidance({ slug: client, variants: manifest.variants, workflowCommit: plan.checkout.head }));
+    for (const item of plans) {
+      if (JSON.stringify(verifyTemplate(root, item.template)) !== JSON.stringify(item.release)) throw new Error('Template release changed after planning: ' + item.template);
+      const destination = path.join(stagedClient, item.template);
+      await copy(item.source, destination, { key: item.template, exportPolicy: POLICY });
+      if (fingerprint(destination).digest !== item.release.digest) throw new Error('Copied source differs from the approved release: ' + item.template);
+      const copied = json(path.join(destination, '.template/source-manifest.json'));
+      copied.destination = item.destination; copied.exportPolicy = POLICY; copied.approvedTemplate = item.release; copied.workflowCommit = plan.checkout.head;
+      writeJson(path.join(destination, '.template/source-manifest.json'), copied);
+      const metadata = { schemaVersion: 1, client, templateKey: item.template, templateVersion: item.release.commit, createdAt: new Date().toISOString(), state: 'needs-personalization', selectedHome: item.homes[0].id, availableHomes: item.homes, offeredHomes: [], publicUrl: null, qa: { desktop: false, mobile: false, identity: false, contactPath: false }, crm: { leadId: null, demoProjectId: null, registered: false }, templateSource: { repository: item.release.repository, commit: item.release.commit, digest: item.release.digest, exportPolicy: POLICY }, packaging: { version: '1', entry: manifest.variants.find(v => v.key === item.template).entry }, workflowCommit: plan.checkout.head };
+      fs.mkdirSync(path.join(destination, '.client'), { recursive: true });
+      writeJson(path.join(destination, '.client/project.json'), metadata);
+      fs.writeFileSync(path.join(destination, 'AGENTS.md'), dealerGuidance({ slug: client, variants: manifest.variants, workflowCommit: plan.checkout.head, variant: item.template }));
+    }
+    fs.writeFileSync(path.join(stagedClient, 'CLIENT.md'), `# ${client}\n\nStatus: needs personalization, not ready for outreach.\n\nUse one sourced fact/inventory/approved raster-logo pack across all three apps. Preserve template heroes, banners, layout and interactions. Record unknown facts. Follow docs/WORKFLOW.md and docs/LEAD-PUBLISHING.md in Cars.\n\nThree applications, one canonical dealer folder, one publishing repository on main, one Vercel project and one shared Admin demo link. No CRM/provider record was created by this helper.\n`);
+    if (assertMainCheckout(root, { readGit }).head !== plan.checkout.head) throw new Error('Cars main changed during copying; the staged candidate is preserved, not installed.');
+    for (const item of plans) {
+      if (JSON.stringify(verifyTemplate(root, item.template)) !== JSON.stringify(item.release) || fingerprint(path.join(stagedClient, item.template)).digest !== item.release.digest) throw new Error('Source or copied candidate changed during creation: ' + item.template);
+    }
+    if (resolveIdentity(root, client, plan.dealerId).exists) throw new Error('Dealer destination appeared during copying; existing work was not overwritten.');
+    inside(root, 'clients/' + client); // Recheck ancestor links before installation.
+    fs.renameSync(stagedClient, clientRoot);
+    writeJson(path.join(staging, 'creation.json'), { createdAt: new Date().toISOString(), clientRoot, workflowCommit: plan.checkout.head, state: 'needs-personalization', templates: plans.map(p => ({ key: p.template, commit: p.release.commit, digest: p.release.digest })) });
+    return { clientRoot, state: 'needs-personalization', applications: plans.length, receipt: path.join(staging, 'creation.json') };
+  } catch (error) {
+    if (staging) fs.writeFileSync(path.join(staging, 'failure.json'), JSON.stringify({ error: error.message, clientRoot, retainedCandidate: path.join(staging, 'dealer'), failedAt: new Date().toISOString() }, null, 2));
+    throw error;
+  } finally {
+    // Remove only this invocation's small ownership marker, never a source tree.
+    fs.unlinkSync(path.join(lockPath, 'owner.json')); fs.rmdirSync(lockPath);
   }
-  const brief=path.join(clientRoot,'CLIENT.md');
-  if(!(await fs.access(brief).then(()=>true).catch(()=>false))) await fs.writeFile(brief,`# ${options.client}\n\nStatus: prospect; no sale or outreach is implied.\n\n## Verified facts\n\nCollect business name, logo, colors, contact details, services, sample inventory and public source URLs before personalizing.\n\n## Projects\n\n${plans.map(p=>`- ${p.template}: needs personalization; selected homepage and QA in ${p.template}/.client/project.json`).join('\n')}\n\n## Agency OS\n\nCheck the existing lead and demo records before registering this copy. No CRM record was created by the clone helper.\n`);
 }
+
+async function main() {
+  if (process.argv.includes('--help')) {
+    console.log('Usage: node scripts/new-client.mjs --client SLUG --repository OWNER/REPO [--preset standard|import] [--templates auto-best,modern,carwow] [--dealer-id ID] [--dry-run]\nUses the canonical synchronized main checkout, reports current upstream heads, copies exact approved releases and installs all three designs together. No branches, worktrees, provider actions or overwrites.');
+    return;
+  }
+  const o = args(process.argv.slice(2), ['client', 'repository', 'preset', 'templates', 'dealer-id'], ['dry-run']);
+  const plan = planNewClient({ client: o.client, repository: o.repository, preset: o.preset, templates: o.templates, dealerId: o['dealer-id'] });
+  console.log(JSON.stringify({ mode: o['dry-run'] ? 'dry-run' : 'copy', ...plan }, null, 2));
+  if (!o['dry-run']) console.log(JSON.stringify(await createNewClient(plan), null, 2));
+}
+if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) main().catch(error => { console.error(error.message); process.exitCode = 1; });

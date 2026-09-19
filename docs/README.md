@@ -42,3 +42,5 @@ Current source/branch disposition: [main consolidation, 13 September 2026](MAIN-
 Latest operational verification: [workspace and public admin rollout, 19 September 2026](workspace/2026-09-19/REPORT.md). The technical registry owns current public URLs; historical handoffs do not override it.
 
 Current organization and synchronization: [19 September completion](workspace/2026-09-19/ORGANIZATION.md). Architecture decisions: [shared source with hybrid delivery](PREVIEW-ARCHITECTURE.md).
+
+New-lead command verification and failure-recovery checks: [19 September workflow finalization](workspace/2026-09-19/NEW-LEAD-WORKFLOW.md). The everyday procedure remains [WORKFLOW](WORKFLOW.md).

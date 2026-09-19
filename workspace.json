@@ -51,5 +51,8 @@
     "mode": "synthetic-browser-local"
   },
   "scratch": "runtime/",
-  "registry": "docs/DEPLOYMENT-INVENTORY.json"
+  "registry": "docs/DEPLOYMENT-INVENTORY.json",
+  "machinePaths": {
+    "win32": "J:/cars"
+  }
 }

@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {gitRead} from './workspace-doctor.mjs';
 import {ROOT,POLICY,args,json,writeJson,git,inside,fingerprint,exportCommit} from './lib/workflow.mjs';
 
 export function verifyTemplate(root,key){
@@ -49,7 +50,7 @@ async function main(){const [command,...argv]=process.argv.slice(2);if(!command|
  const o=args(argv,['key','source-repo','commit','evidence','expected-digest'],['write']);
  if(command==='status')console.log(JSON.stringify(releaseStatus(ROOT),null,2));
  else if(command==='verify'){const keys=o.key?[o.key]:Object.keys(json(path.join(ROOT,'templates.lock.json')).templates);for(const key of keys)console.log(JSON.stringify({key,...verifyTemplate(ROOT,key)}));}
- else if(command==='discover'){for(const[key,e]of Object.entries(json(path.join(ROOT,'templates.lock.json')).templates)){const head=git(ROOT,['ls-remote',`https://github.com/${e.repository}.git`,'refs/heads/main']).split(/\s/)[0];console.log(JSON.stringify({key,approvedCommit:e.commit,developmentHead:head,updateAvailable:e.commit!==head,action:'Review in standalone template; no automatic promotion.'}));}}
+ else if(command==='discover'){for(const[key,e]of Object.entries(json(path.join(ROOT,'templates.lock.json')).templates)){const head=gitRead(ROOT,['ls-remote','--exit-code',`https://github.com/${e.repository}.git`,'refs/heads/main']).split(/\s/)[0];console.log(JSON.stringify({key,approvedCommit:e.commit,developmentHead:head,updateAvailable:e.commit!==head,action:'Review in standalone template; no automatic promotion.'}));}}
  else if(command==='promote')console.log(JSON.stringify(promoteTemplate({key:o.key,sourceRepo:o['source-repo'],commit:o.commit,evidence:o.evidence,expectedDigest:o['expected-digest'],write:!!o.write}),null,2));else throw new Error(`Unknown command ${command}`);
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});

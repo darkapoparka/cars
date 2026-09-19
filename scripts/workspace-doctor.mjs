@@ -12,7 +12,7 @@ export function fetchCredentialArgs(platform, helpers) {
 // Reports state only. Never pulls, checks out, stages, moves or deletes source.
 export function gitRead(cwd, args) {
   let credentialArgs = [];
-  if (args[0] === 'fetch' && process.platform === 'win32') {
+  if (['fetch', 'ls-remote'].includes(args[0]) && process.platform === 'win32') {
     const helpers = spawnSync('git', ['-C', cwd, 'config', '--get-all', 'credential.helper'], { encoding:'utf8', timeout:5000, windowsHide:true });
     credentialArgs = fetchCredentialArgs(process.platform, helpers.stdout || '');
   }

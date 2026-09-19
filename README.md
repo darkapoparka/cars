@@ -8,6 +8,12 @@ Open [Cars.code-workspace](Cars.code-workspace) to group **six repositories**: C
 
 Keep these projects. A reviewed template commit is promoted into Cars; new leads use that pinned release. Existing dealers stay independent until you request an update. You do not need to remember a manual copy step: the lead workflow checks releases and refuses unapproved or changed snapshots.
 
+## The everyday result
+
+Building a new lead still clones actual template code, then personalizes it. Standard output: `clients/<slug>/auto-best`, `modern`, and `carwow`. An Import trio uses `import` instead of `modern`. All three publish together to one dealer GitHub repository on `main`, one Vercel project and one preview URL, with the shared Admin link. No multi-tenant migration is needed to use this workflow.
+
+Work in the existing Cars and template folders. The clone command enforces synchronized main and the recorded Windows checkout, reports newer upstream development, and installs the three verified copies together. A completed template update is reviewed/promoted into Cars before new leads consume it; uncommitted drafts are never implicitly released.
+
 ## Everyday requests
 
 - In `cars-template-carwow`: “Polish the mobile inventory in this template. Preserve unrelated work and show the result.”
@@ -38,7 +44,7 @@ Before creating a new approved dealer, substitute its verified identity:
 node scripts/new-client.mjs --client example-dealer --repository darkapoparka/cars-exampledealer --preset standard --dry-run
 ```
 
-The dry run checks identity, destinations and release integrity. Remove `--dry-run` only for the requested new dealer. Use `--preset import` for the intentional Import trio. A refusal for an unreconciled template is a release hold, not a request to overwrite local work.
+The dry run also checks canonical checkout, synchronized GitHub main, committed workflow inputs, identity, destinations, current upstream heads and release integrity. It does not create a client folder. Remove `--dry-run` only for the requested new dealer. Use `--preset import` for the intentional Import trio. A refusal for an unreconciled template is a release hold, not a request to overwrite local work.
 
 For existing local source:
 

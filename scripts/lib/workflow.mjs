@@ -28,6 +28,8 @@ export function inside(root,relative,{mustExist=false}={}){
 const omitted=new Set(['.git','.github','.vercel','.netlify','.agency-os','.auth','.codex','.claude','.agents','.openai','.template','.client','node_modules','.svelte-kit','.next','.turbo','.vite','.cache','.pnpm-store','dist','build','coverage','runtime','artifacts','audits','qa','test-results','playwright-report','blob-report','.vscode','.idea']);
 export function excluded(relative){
  const parts=relative.replaceAll('\\','/').split('/'),name=parts.at(-1);
+ // Reproducible Next.js/Prisma build outputs are not template source. Never exclude arbitrary generated source directories.
+ if(name==='next-env.d.ts'||/(?:^|\/)packages\/database\/generated(?:\/|$)/.test(parts.join('/')))return true;
  return parts.some(p=>omitted.has(p)||p.startsWith('.next-'))||/^(AGENTS(?:\.override)?|CLAUDE)\.md$/i.test(name)||(/^\.env/.test(name)&&!/^\.env\.(example|sample|template)$/.test(name))||/\.(log|tsbuildinfo|pem|key|pfx|pid)$/i.test(name)||/(credentials|service-account|license-certificate|purchase-code)/i.test(name)&&! /\.(?:[cm]?[jt]sx?|svelte|vue|py|sh|ps1)$/i.test(name);
 }
 // Normalize text line endings, never binary bytes. Git snapshots and Windows checkouts compare identically.
