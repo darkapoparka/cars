@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed",
     "accent": "#30343b",
-    "logo": "/assets/elit/logo.png",
-    "logoLight": "/assets/elit/logo.png",
-    "logoDark": "/assets/elit/logo.png",
+    "logo": "/assets/brand/logo-on-light.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -43,7 +43,7 @@
       "Проверка в сервиз по избор на клиента"
     ],
     "inventoryNotice": "Подбрани текущо рекламирани автомобили. Наличност, състояние, пробег и условия се потвърждават с продавача.",
-    "previewNotice": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
     "observedAt": "2026-09-07",
     "coordinates": null,
     "raw": {
@@ -73,7 +73,7 @@
         "Руски"
       ],
       "socialLinks": {},
-      "logo": "/assets/elit/logo.png",
+      "logo": "/assets/brand/logo-on-light.webp",
       "showroom": "/assets/elit/cover.png",
       "stockCount": 15,
       "capturedAt": "2026-09-07",
@@ -100,7 +100,18 @@
         "No published email or opening hours.",
         "Original monochrome raster logo has dark background; preserved without inventing a new logo.",
         "Advertised mileage unit conflicts retained in descriptions; no assertion of verified mileage."
-      ]
+      ],
+      "workingLogoPath": "assets/elit/logo.png",
+      "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+      "branding": {
+        "logoOnLight": "/assets/brand/logo-on-light.webp",
+        "logoOnDark": "/assets/brand/logo-on-dark.webp",
+        "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+      },
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "logoLight": "/assets/brand/logo-on-dark.webp",
+      "logoDark": "/assets/brand/logo-on-light.webp"
     }
   },
   "listings": [
@@ -2275,7 +2286,7 @@
       "Руски"
     ],
     "socialLinks": {},
-    "logo": "/assets/elit/logo.png",
+    "logo": "/assets/brand/logo-on-light.webp",
     "showroom": "/assets/elit/cover.png",
     "stockCount": 15,
     "capturedAt": "2026-09-07",
@@ -2302,7 +2313,18 @@
       "No published email or opening hours.",
       "Original monochrome raster logo has dark background; preserved without inventing a new logo.",
       "Advertised mileage unit conflicts retained in descriptions; no assertion of verified mileage."
-    ]
+    ],
+    "workingLogoPath": "assets/elit/logo.png",
+    "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "branding": {
+      "logoOnLight": "/assets/brand/logo-on-light.webp",
+      "logoOnDark": "/assets/brand/logo-on-dark.webp",
+      "rasterPolicy": "transparent-png-webp-surface-pair-v1"
+    },
+    "logoOnLight": "/assets/brand/logo-on-light.webp",
+    "logoOnDark": "/assets/brand/logo-on-dark.webp",
+    "logoLight": "/assets/brand/logo-on-dark.webp",
+    "logoDark": "/assets/brand/logo-on-light.webp"
   },
   "sourceCount": 15
 }
