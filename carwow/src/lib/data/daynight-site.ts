@@ -34,7 +34,7 @@ export const daynightSite = {
 	mapLabel: `${shortName}, ${location}`,
 	sourceInventory: "https://www.isauto.net/",
 	logoLight: "/variant-3/assets/brand/logo-on-dark.webp",
-	logoDark: "/variant-3/assets/brand/logo-on-accent.webp",
+	logoDark: "/variant-3/assets/brand/logo-on-light.webp",
 	socialLinks: {"facebook":"https://www.facebook.com/isauto1","instagram":"https://www.instagram.com/is__auto/?hl=bg","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
