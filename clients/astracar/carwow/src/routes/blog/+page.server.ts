@@ -1,11 +1,11 @@
-import { daynightArticles } from '$lib/data/daynight-blog';
 import { loadPublishedBlogArticles } from '$lib/server/blog-articles';
 import { routeSeo } from '$lib/server/daynight-seo';
 import type { PageServerLoad } from './$types';
 
+export const prerender = false;
+
 export const load: PageServerLoad = async ({ locals, url }) => {
-	const publishedArticles = await loadPublishedBlogArticles(locals);
-	const articles = publishedArticles ?? daynightArticles;
+	const articles = await loadPublishedBlogArticles(locals);
 
 	return {
 		articles,

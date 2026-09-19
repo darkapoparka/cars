@@ -170,7 +170,7 @@
 <div class="mobile-filter-sheet" data-mode={filterSheetMode}>
 	<header>
 		<div>
-			<span>{filterSheetEyebrow}</span>
+			<span>{filterSheetEyebrow} · избор до „Покажи“</span>
 			<strong id="mobile-filter-title">{resultCountLabel}</strong>
 		</div>
 		<button type="button" aria-label="Затвори" data-mobile-drawer-initial-focus onclick={onClose}>
@@ -519,7 +519,7 @@
 			<MobileFilterOptions
 				ariaLabel="Цена"
 				allLabel="Всички цени"
-				allCount={vehiclesCount}
+				allCount={priceOptionCount('')}
 				allActive={!price}
 				options={priceOptions}
 				isSelected={(value) => price === value}

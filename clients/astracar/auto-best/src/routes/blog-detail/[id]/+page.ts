@@ -1,8 +1,9 @@
+import { listReturn } from '$data/journeys';
 import { error } from '@sveltejs/kit';
 import { blogCategories, blogPosts } from '$data/editorial';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = ({ params }) => {
+export const load: PageLoad = ({ params, url }) => {
   const isCanonicalId = /^[1-9]\d*$/.test(params.id);
   const postId = Number(params.id);
 
@@ -27,5 +28,5 @@ export const load: PageLoad = ({ params }) => {
 
   const tags = [...new Set(blogPosts.map((item) => item.tag))];
 
-  return { post, related, categories, tags };
+  return { returnTo: listReturn(url.searchParams.get('return'), '/blog'), post, related, categories, tags };
 };

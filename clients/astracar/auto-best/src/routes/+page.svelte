@@ -1,7 +1,7 @@
 <script lang="ts">
   import Hero from '$components/home/Hero.svelte';
   import SearchBox from '$components/home/SearchBox.svelte';
-  import MobileBudget from '$components/home/MobileBudget.svelte';
+  import MobileCoreActions from '$components/home/MobileCoreActions.svelte';
   import BodyTypes from '$components/home/BodyTypes.svelte';
   import InventorySection from '$components/home/InventorySection.svelte';
   import BrandSection from '$components/home/BrandSection.svelte';
@@ -13,22 +13,21 @@
 </script>
 
 <svelte:head>
-  <title>{brand.name} — Автомобили в {brand.city}</title>
-  <meta name="description" content={`Автомобили, внос и лизинг по запитване в ${brand.city}.`} />
+  <title>{brand.name} — Премиум автомобили в {brand.city}</title>
+  <meta name="description" content={`Премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
 </svelte:head>
 
 <div class="dn-home-page">
   <div class="dn-home-slot dn-home-slot--hero"><Hero /></div>
   <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
+  <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
   <div class="dn-home-slot dn-home-slot--browse-actions"><TrustActions group="browse" /></div>
-  <div class="dn-home-slot dn-home-slot--budget"><MobileBudget /></div>
-  <div class="dn-home-slot dn-home-slot--body"><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--inventory"><InventorySection /></div>
+  <div class="dn-home-slot dn-home-slot--body"><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--brands"><BrandSection /></div>
-  <div class="dn-home-slot dn-home-slot--editorial"><Editorial /></div>
   <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" /></div>
+  <div class="dn-home-slot dn-home-slot--editorial"><Editorial /></div>
   <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
-  <div class="dn-home-slot dn-home-slot--services"><TrustActions group="all" variant="cards" /></div>
 </div>
 
 <style>
@@ -39,48 +38,54 @@
 
   @media (min-width: 992px) {
     .dn-home-page :global(.dn-home-section-heading) {
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      column-gap: 32px;
-      row-gap: 8px;
-      min-height: 44px;
+      justify-content: center;
+      gap: var(--dn-home-copy-gap);
+      min-height: var(--dn-control-height-default);
+      text-align: center;
     }
 
     .dn-home-page :global(.dn-home-section-title) {
       margin: 0;
-      font-size: 32px;
-      font-weight: 650;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      text-align: left;
+      font-size: var(--dn-home-heading-size);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
+      letter-spacing: var(--dn-tracking-heading);
+      text-align: center;
+      text-wrap: balance;
     }
 
     .dn-home-page :global(.dn-home-section-heading > p) {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: var(--dn-text-body);
+      line-height: var(--dn-leading-body);
+      max-width: 60ch;
+      text-align: center;
     }
 
     .dn-home-page :global(.dn-home-section-action) {
       display: inline-flex;
       flex-shrink: 0;
       min-height: 44px;
-      grid-row: 1;
-      align-self: start;
+      align-self: center;
       align-items: center;
       justify-content: center;
-      padding: 0 20px;
+      padding: 0 var(--dn-space-5);
       border: 1px solid transparent;
       border-radius: var(--dn-radius-button);
-      background: #fff;
+      background: var(--dn-surface-raised);
       color: #24272c;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.3;
+      font: var(--dn-cta-font);
+      letter-spacing: var(--dn-cta-tracking);
       white-space: nowrap;
+      margin-top: var(--dn-home-copy-gap);
       transition: background-color 160ms ease, color 160ms ease;
     }
 
-    .dn-home-page :global(.dn-body-types__all) {
+    .dn-home-page :global(.dn-body-types__all),
+    .dn-home-page :global(.dn-brand-hero__cta) {
       border-color: #e1e4e8;
     }
 
@@ -88,15 +93,44 @@
       grid-row: 3;
     }
 
+    .dn-home-page :global(.dn-home-section-heading--branded) {
+      margin-bottom: 0;
+      border-radius: var(--dn-radius-lg);
+      background: var(--dn-ink-deep);
+      text-align: center;
+    }
+
+    .dn-home-page :global(.dn-home-section-heading--branded > h2) { color: var(--dn-white); }
+    .dn-home-page :global(.dn-home-section-heading--branded > p) { color: var(--dn-text-on-ink); }
+    .dn-home-page :global(.dn-home-section-heading--red) { background: var(--dn-red); }
+
+    .dn-home-page :global(.dn-home-banner-frame) {
+      min-height: var(--dn-home-heading-banner-height);
+      padding: var(--dn-home-banner-padding);
+      padding-top: calc(var(--dn-space-7) - var(--dn-home-banner-overlap) / 2);
+      padding-bottom: calc(var(--dn-space-7) + var(--dn-home-banner-overlap) / 2);
+    }
+    .dn-home-page :global(.dn-home-banner-copy) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--dn-home-copy-gap);
+    }
+    .dn-home-page :global(.dn-home-banner-copy > .dn-home-section-action) {
+      margin-top: calc(var(--dn-home-cta-gap) - var(--dn-home-copy-gap));
+      align-self: center;
+    }
+
     .dn-home-page :global(.dn-home-section-action:hover) {
-      background: #e9edf1;
-      color: #171a20;
+      background: var(--dn-surface-hover);
+      color: var(--dn-ink-strong);
     }
 
     .dn-home-page :global(.dn-home-section-action:focus-visible) {
-      background: #e9edf1;
-      color: #171a20;
-      outline: 3px solid #8c959f;
+      background: var(--dn-surface-hover);
+      color: var(--dn-ink-strong);
+      outline: 3px solid var(--dn-line-emphasis);
       outline-offset: 3px;
     }
   }
@@ -116,6 +150,11 @@
 
     .dn-home-slot {
       display: contents;
+    }
+
+    .dn-home-slot--browse-actions,
+    .dn-home-slot--ownership-actions {
+      display: none;
     }
   }
 </style>
