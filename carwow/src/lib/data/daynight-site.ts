@@ -33,8 +33,8 @@ export const daynightSite = {
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
 	sourceInventory: "https://www.isauto.net/",
-	logoLight: "/variant-3/assets/brand/logo-on-dark.webp",
-	logoDark: "/variant-3/assets/brand/logo-on-accent.webp",
+	logoLight: '/variant-3/brand/isauto-logo-dark.png',
+	logoDark: '/variant-3/brand/isauto-logo-light.png',
 	socialLinks: {"facebook":"https://www.facebook.com/isauto1","instagram":"https://www.instagram.com/is__auto/?hl=bg","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
@@ -80,6 +80,7 @@ export const publicNavGroups = [
 	{
 		label: 'Услуги',
 		href: '/services',
+		matchPrefixes: ['/services'],
 		children: [
 			{ label: 'Дилърски услуги', href: '/services' },
 			{ label: 'Финансиране', href: '/financing' },
