@@ -40,3 +40,5 @@ Workflow changes update their authoritative document and relevant tests in the s
 Current source/branch disposition: [main consolidation, 13 September 2026](MAIN-CONSOLIDATION-2026-09-13.md). All active source branches have been consolidated into main; older migration descriptions are dated evidence.
 
 Latest operational verification: [workspace and public admin rollout, 19 September 2026](workspace/2026-09-19/REPORT.md). The technical registry owns current public URLs; historical handoffs do not override it.
+
+Current organization and synchronization: [19 September completion](workspace/2026-09-19/ORGANIZATION.md). Architecture decisions: [shared source with hybrid delivery](PREVIEW-ARCHITECTURE.md).

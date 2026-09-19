@@ -63,7 +63,7 @@ A READY deployment or manually supplied Git metadata is not proof that the actua
 
 For the existing 24 demos, keep one dealer publishing repository and one Vercel project each. This preserves prospect URLs and independent rollback. A push to a correctly linked production main branch is the normal single deployment trigger. Do not also send the same commit through a CLI upload. Unlinked/CLI-only projects need an explicitly verified source mapping before repair.
 
-For a much larger prospect campaign, the recommended next architecture is a shared, tenant-aware preview service with reusable template renderers and per-dealer public configuration/assets. Each prospect still gets a branded stable path or custom subdomain. It does not require a full application clone and separate admin build for every unqualified lead. Keep today's dealer URLs untouched during a canary migration. Paid/custom clients can retain dedicated projects and an authenticated, isolated backend.
+The direction is **shared source with hybrid delivery**, not an unconditional move to one Vercel project. Prove configuration-driven rendering with a small multi-tenant pilot for uniform new prospects; keep existing URLs and use dedicated projects where custom code or independent rollback is needed. A shared service may use more than one template/runtime deployment. Follow [PREVIEW-ARCHITECTURE](PREVIEW-ARCHITECTURE.md) for the content boundary, topology options, isolation tests and measured rollout gate.
 
 This shared-preview platform is a future migration, not an implementation claim. Do not create a new Vercel project per design or assume that a shared project can issue arbitrary dealername.vercel.app hostnames. Confirm domain ownership and routing before introducing new prospect domains.
 
@@ -87,3 +87,7 @@ Official references (checked 19 September 2026):
 Agency OS remains the private agency operations system. Cars owns automotive template releases, public dealer configuration, preview/publication tooling and the shared dealership admin demo. Future clinics/restaurants should have equivalent vertical modules, not copies of private agency CRM data.
 
 Later integration should exchange a stable public lead ID, vertical, template release, deployment URL and delivery state through an authenticated service boundary. Keep outreach history, personal customer records, credentials and internal notes private. A public tenant query string is never authorization. Backend/production admin integration requires real authentication, tenant-scoped access controls, audit logging and explicit deployment configuration before it is sold as a live CRM.
+
+## Latest organization receipt
+
+The [19 September organization receipt](workspace/2026-09-19/ORGANIZATION.md) records the in-place main synchronization, nine archived image-evidence folders with compatible old paths, full workflow test results, and the two still-pending redesigned-logo deployments. The workspace map and editor folder list are validated together by `node scripts/check-workflow.mjs`.

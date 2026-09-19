@@ -41,8 +41,11 @@
   "otherObservedDirectories": [
     {
       "path": "C:/Users/radev/cars-daynight-logo-review",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/cars-daynight-logo-review",
+      "files": 8,
+      "bytes": 2528000
     },
     {
       "path": "C:/Users/radev/cars-isauto-fix",
@@ -61,8 +64,11 @@
     },
     {
       "path": "C:/Users/radev/cars-logo-qa",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/cars-logo-qa",
+      "files": 5,
+      "bytes": 2518671
     },
     {
       "path": "C:/Users/radev/cars-logo-refresh-20260918",
@@ -71,8 +77,11 @@
     },
     {
       "path": "C:/Users/radev/cars-logo-review",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/cars-logo-review",
+      "files": 8,
+      "bytes": 416611
     },
     {
       "path": "C:/Users/radev/cars-logo-rollout-2026-09-17",
@@ -106,28 +115,43 @@
     },
     {
       "path": "C:/Users/radev/carwow-mobile-final-audit",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/carwow-mobile-final-audit",
+      "files": 25,
+      "bytes": 5204922
     },
     {
       "path": "C:/Users/radev/carwow-mobile-implemented-20260918",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/carwow-mobile-implemented-20260918",
+      "files": 8,
+      "bytes": 7056668
     },
     {
       "path": "C:/Users/radev/carwow-mobile-review-20260918",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/carwow-mobile-review-20260918",
+      "files": 23,
+      "bytes": 3530942
     },
     {
       "path": "C:/Users/radev/carwow-mobile-standardized-20260918",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/carwow-mobile-standardized-20260918",
+      "files": 25,
+      "bytes": 3216067
     },
     {
       "path": "C:/Users/radev/carwow-mobile-tuning-20260918",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/carwow-mobile-tuning-20260918",
+      "files": 10,
+      "bytes": 1695476
     },
     {
       "path": "C:/Users/radev/daynight-cars-build-20260917",
@@ -141,8 +165,11 @@
     },
     {
       "path": "C:/Users/radev/daynight-logo-review",
-      "classification": "unreconciled-review-build-or-recovery-folder",
-      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+      "classification": "archived-image-evidence-with-compatibility-junction",
+      "action": "Original path is a verified junction to the ignored canonical archive; no duplicate image tree remains.",
+      "canonicalArchive": "J:/cars/runtime/archive/2026-09-19/daynight-logo-review",
+      "files": 9,
+      "bytes": 921961
     },
     {
       "path": "C:/Users/radev/daynight-showcase-build-20260917",
@@ -180,6 +207,11 @@
     "sourceFoldersDeleted": 0,
     "existingServersStopped": 0,
     "workspace": "J:/cars/Cars.code-workspace",
-    "newGeneratedOutput": "J:/cars/runtime/"
-  }
+    "newGeneratedOutput": "J:/cars/runtime/",
+    "imageEvidenceFoldersConsolidated": 9,
+    "imageFilesVerified": 121,
+    "imageBytesRelocated": 27089318,
+    "currentReport": "docs/workspace/2026-09-19/ORGANIZATION.md"
+  },
+  "latestOrganizationAt": "2026-09-19T15:25:33.104Z"
 }

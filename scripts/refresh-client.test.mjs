@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
-import { applyRefreshAdapter } from './lib/client-refresh-adapters.mjs';
+import { applyRefreshAdapter as runRefreshAdapter } from './lib/client-refresh-adapters.mjs';
 import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -26,10 +26,32 @@ const copy = (source, destination) => {
 const copyRelative = (sourceRoot, destinationRoot, relative) =>
   copy(path.join(sourceRoot, relative), path.join(destinationRoot, relative));
 
+function applyRefreshAdapter(options) {
+  const result = runRefreshAdapter(options);
+  const contract = options.profile.logoContract;
+  if (contract) {
+    const publicDir = options.key === 'modern' ? 'apps/web/public' : 'static';
+    for (const asset of Object.values(contract.assets)) {
+      assert.equal(hash(path.join(options.candidate, publicDir, asset.publicPath.slice(1))), asset.sha256, 'Every contextual logo must match the approved contract after refresh');
+    }
+  }
+  return result;
+}
+
 function temporaryCandidate(templateKey, files) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), `cars-refresh-${templateKey}-`));
   const template = path.join(ROOT, 'templates', templateKey);
-  for (const relative of files) copyRelative(template, root, relative);
+  const requiredConsumers = {
+    modern: [
+      'packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx',
+      'packages/marketplace-ui/components/listing-detail-content.tsx',
+      'packages/marketplace-ui/components/seller-identity-card.tsx',
+      'apps/web/lib/public-marketplace-data.ts',
+      'apps/web/app/[locale]/layout.tsx'
+    ],
+    import: ['src/lib/components/home/HomeFiveHeader.svelte']
+  };
+  for (const relative of new Set([...files, ...(requiredConsumers[templateKey] ?? [])])) copyRelative(template, root, relative);
   return { root, template };
 }
 
@@ -38,7 +60,7 @@ test('legacy ELIQ source normalizes the published dealer identity', () => {
   assert.equal(eliq.business.name, 'ELIQ AUTO');
   assert.equal(eliq.business.city, 'Пазарджик');
   assert.equal(eliq.business.phoneDisplay, '0896 781 662');
-  assert.match(eliq.business.logo, /eliq-auto-wordmark-header\.png$/);
+  assert.equal(eliq.business.logo, eliq.logoContract.assets.onLight.publicPath);
   assert.equal(eliq.listings.length, 16);
 });
 
@@ -67,15 +89,23 @@ test('canonical dealer logo assets replace a legacy boxed public logo', () => {
   });
 
   const brand = fs.readFileSync(path.join(root, 'src/lib/config/brand.ts'), 'utf8');
-  assert.match(brand, /logo: "\/assets\/perfect-auto\/perfekt-auto-logo\.webp"/);
-  assert.match(brand, /logoOnDark: "\/assets\/perfect-auto\/perfekt-auto-logo-light\.webp"/);
+  assert.ok(brand.includes('logo: "/dealer-brand/logo-on-light.webp"'));
+  assert.ok(brand.includes('logoOnDark: "/dealer-brand/logo-on-dark.webp"'));
   assert.doesNotMatch(brand, /cover\.png/);
   fs.rmSync(root, { recursive: true, force: true });
 });
 
 test('Auto Best refresh keeps approved hero artwork and restores Navara dealer data', () => {
   const protectedFile = 'src/lib/data/vehicle-artwork.ts';
-  const legacy = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-refresh-navara-legacy-'));
+  const legacyClient = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-refresh-navara-legacy-'));
+  const legacy = path.join(legacyClient, 'auto-best');
+  for (const asset of Object.values(profile.logoContract.assets)) {
+    copy(path.join(NAVARA, asset.publicPath.slice(1)), path.join(legacyClient, asset.publicPath.slice(1)));
+  }
+  for (const name of ['logo-master.png', 'logo-on-light.png']) {
+    const source = path.join(NAVARA, 'branding', name);
+    if (fs.existsSync(source)) copy(source, path.join(legacyClient, 'branding', name));
+  }
   const { root, template } = temporaryCandidate('auto-best', [
     protectedFile,
     'src/lib/config/brand.ts',
@@ -127,7 +157,7 @@ test('Auto Best refresh keeps approved hero artwork and restores Navara dealer d
   assert.match(autoBestHero, /brand\.addressLine/);
   assert.doesNotMatch(fs.readFileSync(path.join(root, 'src/routes/listing-detail-v1/[id]/+page.svelte'), 'utf8'), /Auto Best/);
   fs.rmSync(root, { recursive: true, force: true });
-  fs.rmSync(legacy, { recursive: true, force: true });
+  fs.rmSync(legacyClient, { recursive: true, force: true });
 });
 
 test('Modern refresh preserves the approved hero while retaining stable fixture IDs', () => {
