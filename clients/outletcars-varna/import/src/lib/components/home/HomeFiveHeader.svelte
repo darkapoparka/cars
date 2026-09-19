@@ -152,7 +152,7 @@
 													<div class="daynight-mega__content">
 														<div class="daynight-mega__vehicle-panel">
 															<div class="sub-menu--listing-nav daynight-mega__vehicles">
-																{#each item.megaMenu.vehicles as vehicle (vehicle.href)}
+																{#each item.megaMenu.vehicles as vehicle, vehicleIndex (`${vehicle.href}:${vehicle.label}:${vehicleIndex}`)}
 																	<a
 																		class="daynight-mega-car"
 																		href={resolve(vehicle.href as '/')}

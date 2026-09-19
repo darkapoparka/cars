@@ -1,3 +1,4 @@
+import { ensureImportMenuKeys } from './import-menu-keys.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
@@ -1068,6 +1069,9 @@ function patchImport({ oldVariant, candidate, profile }) {
   const safeContent = applyImportSafeContent({ candidate, profile });
   const changed = patchImportText(candidate, profile);
   const heroBinding = patchImportHeroBindings(candidate);
+  const menuHeader = path.join(candidate, 'src/lib/components/home/HomeFiveHeader.svelte');
+  write(menuHeader, ensureImportMenuKeys(read(menuHeader)));
+  changed.push('src/lib/components/home/HomeFiveHeader.svelte');
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'),
     `${JSON.stringify(profile, null, 2)}\n`);
   return [
