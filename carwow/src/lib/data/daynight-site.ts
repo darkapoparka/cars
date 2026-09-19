@@ -34,7 +34,7 @@ export const daynightSite = {
 	mapLabel: `${shortName}, ${location}`,
 	sourceInventory: "https://ivoauto-varna.mobile.bg/",
 	logoLight: "/variant-3/assets/brand/logo-on-dark.webp",
-	logoDark: "/variant-3/assets/brand/logo-on-light.webp",
+	logoDark: "/variant-3/assets/brand/logo-on-accent.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
