@@ -28,7 +28,8 @@ interface RootLayoutProperties {
 export const metadata: Metadata = {
   applicationName: leadSite.name,
   icons: {
-    icon: [{ type: "image/webp", url: leadSite.logoOnLight }],
+    icon: [{ type: "image/png", url: leadSite.logoOnLight.replace(/[^/]+$/, "favicon-20260919.png") }],
+    apple: [{ url: leadSite.logoOnLight.replace(/[^/]+$/, "favicon-20260919.png") }],
   },
   metadataBase: new URL(getPublicWebBaseUrl()),
 };
