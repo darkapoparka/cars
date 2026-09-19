@@ -229,6 +229,9 @@ test('Modern keeps the locale loop guard, static-demo-only validation and tracin
   assert.match(proxy, /if \(leadSite.staticDemoMode\)/);
   assert.match(proxy, /request.headers.get\("x-dealer-locale-rewrite"\) === "1"/);
   assert.match(proxy, /requestHeaders.set\("x-dealer-locale-rewrite", "1"\)/);
+  assert.match(proxy, /defaultLocale as dealerDefaultLocale/);
+  assert.match(proxy, /const locale = dealerDefaultLocale/);
+  assert.doesNotMatch(proxy, /path\.replace\([^\n]+"\/bg"/);
   assert.match(proxy, /request.nextUrl.search/);
   const env = await fs.readFile(path.join(options.destination, 'modern/apps/web/env.ts'), 'utf8');
   assert.match(env, /if \(!leadSite.staticDemoMode\) assertRuntimeEnvironmentContract/);

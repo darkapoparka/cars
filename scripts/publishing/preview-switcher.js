@@ -49,10 +49,11 @@
   });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !panel.hidden) {
-      close(true);
       event.preventDefault();
+      event.stopImmediatePropagation();
+      close(true);
     }
-  });
+  }, true);
   shadow.querySelectorAll('a').forEach((link) => link.addEventListener('click', (event) => {
     if (event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
       event.preventDefault();

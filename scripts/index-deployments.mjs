@@ -24,6 +24,7 @@ export function indexDeployments(root=ROOT) {
   for(const entry of fs.readdirSync(path.join(root,'clients'),{withFileTypes:true}).filter(e=>e.isDirectory())) {
     if(previous.aliases?.[entry.name])continue;
     const slug=entry.name,dir=path.join(root,'clients',slug),prior=records.get(slug)||{},manifest=read(path.join(dir,'dealer.json'));
+    if(prior.sourceOwnership==='independent-repository') throw new Error('Duplicate Cars source for independently owned dealer: '+slug);
     if(manifest)validateIndexedManifest(manifest,prior);
     const facts=read(path.join(dir,'business-facts.json'));
     const keys=supported.filter(v=>fs.existsSync(path.join(dir,v,'package.json')));
@@ -38,7 +39,7 @@ export function indexDeployments(root=ROOT) {
     if(['not-deployed','research-only'].includes(record.delivery.state)){record.delivery={...record.delivery,legacyState:record.delivery.state,state:'unknown',note:record.delivery.note||'Historical source inventory; hosting has not been refreshed by indexing.'};}
     records.set(slug,record);
   }
-  for(const d of records.values())if(!fs.existsSync(path.join(root,d.localPath||'clients/'+d.slug)))d.localPresent=false;
+  for(const d of records.values())if(d.sourceOwnership!=='independent-repository'&&!fs.existsSync(path.join(root,d.localPath||'clients/'+d.slug)))d.localPresent=false;
   return{...previous,schemaVersion:2,model:'One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.',dealers:[...records.values()].sort((a,b)=>a.slug.localeCompare(b.slug))};
 }
 export function validateRegistry(registry,root=null) {
@@ -46,7 +47,8 @@ export function validateRegistry(registry,root=null) {
  for(const d of registry.dealers){if(slugs.has(d.slug))throw new Error('Duplicate dealer slug '+d.slug);slugs.add(d.slug);if(d.repository){if(repositories.has(d.repository))throw new Error('Repository reused by '+d.slug+' and '+repositories.get(d.repository));repositories.set(d.repository,d.slug);}
   const keys=d.variants.map(v=>v.key);if(new Set(keys).size!==keys.length)throw new Error('Duplicate variant '+d.slug);
   if(d.evidence?.ownerReview?.state==='passed'&&!d.evidence.ownerReview.reviewedBy)throw new Error('Owner review needs owner attribution: '+d.slug);
-  if(root&&fs.existsSync(path.join(root,d.localPath,'dealer.json'))){const m=validateIndexedManifest(json(path.join(root,d.localPath,'dealer.json')),d);if(d.repository!==m.repository)throw new Error('Registry manifest identity drift: '+d.slug);for(const v of m.variants)if(!d.variants.some(x=>x.key===v.key&&x.entry===v.entry))throw new Error('Registry variant/entry drift: '+d.slug);}
+  if(d.sourceOwnership==='independent-repository'){if(d.localPath!==null||d.canonicalSourceRepository!==d.repository)throw new Error('Independent source cannot also live in Cars: '+d.slug);validateManifest({schemaVersion:1,slug:d.slug,repository:d.repository,defaultBranch:'main',variants:d.variants,packaging:{version:'1'}});}
+  if(root&&d.sourceOwnership!=='independent-repository'&&fs.existsSync(path.join(root,d.localPath,'dealer.json'))){const m=validateIndexedManifest(json(path.join(root,d.localPath,'dealer.json')),d);if(d.repository!==m.repository)throw new Error('Registry manifest identity drift: '+d.slug);for(const v of m.variants)if(!d.variants.some(x=>x.key===v.key&&x.entry===v.entry))throw new Error('Registry variant/entry drift: '+d.slug);}
  }
  for(const[alias,target]of Object.entries(registry.aliases||{}))if(alias===target||!slugs.has(target))throw new Error('Unresolved registry alias '+alias);
  return true;
@@ -54,9 +56,9 @@ export function validateRegistry(registry,root=null) {
 export function registryViews(registry) {
  const esc=v=>String(v??'unknown').replaceAll('|','/').replaceAll('\n',' ');
  const lines=['# Dealer deployment inventory','','Generated from [DEPLOYMENT-INVENTORY.json](DEPLOYMENT-INVENTORY.json). Source, build, deployment, browser verification and owner review remain separate. This file is not a live Vercel audit.','','| Dealer | Source | Offered designs / routes | Deployment evidence | Browser / owner review |','| --- | --- | --- | --- | --- |'];
- for(const d of registry.dealers){const route=d.variants.map(v=>v.key+(v.entry?' '+v.entry:' (entry unrecorded)')).join(' / ')||'Research only';lines.push('| '+[esc(d.name),d.localPresent&&d.variants.every(v=>v.localPresent!==false)?'[Local source](../'+d.localPath+'/)':d.canonicalSourceRef==='main'?'[Source on main](https://github.com/darkapoparka/cars/tree/main/'+d.localPath+'/)':'Preserved source evidence',esc(route),d.delivery.url?'['+esc(d.delivery.state)+']('+d.delivery.url+')':esc(d.evidence?.deployment?.state),esc(d.evidence?.browser?.state)+' / '+esc(d.evidence?.ownerReview?.state)].join(' | ')+' |');}
+ for(const d of registry.dealers){const route=d.variants.map(v=>v.key+(v.entry?' '+v.entry:' (entry unrecorded)')).join(' / ')||'Research only';lines.push('| '+[esc(d.name),d.sourceOwnership==='independent-repository'?(d.evidence?.source?.remoteVerified?'[Independent source](https://github.com/'+d.repository+'/tree/main/)':'Independent source — GitHub publication pending'):d.localPresent&&d.variants.every(v=>v.localPresent!==false)?'[Local source](../'+d.localPath+'/)':d.canonicalSourceRef==='main'?'[Source on main](https://github.com/darkapoparka/cars/tree/main/'+d.localPath+'/)':'Preserved source evidence',esc(route),d.delivery.url?'['+esc(d.delivery.state)+']('+d.delivery.url+')':esc(d.evidence?.deployment?.state),esc(d.evidence?.browser?.state)+' / '+esc(d.evidence?.ownerReview?.state)].join(' | ')+' |');}
  lines.push('','[Registry contract](REGISTRY.md) · [Owner review](MANUAL-REVIEW.md)','');
- const projects=registry.dealers.map(d=>({slug:d.slug,name:d.name,path:d.localPath,variants:d.variants.map(v=>v.key),sourceState:d.localPresent&&d.variants.every(v=>v.localPresent!==false)?'source-present':d.canonicalSourceRef==='main'?'source-on-main':'source-not-local',reviewState:d.evidence?.ownerReview?.state||'unknown',...(d.id?{leadId:d.id}:{})}));
+ const projects=registry.dealers.map(d=>({slug:d.slug,name:d.name,path:d.sourceOwnership==='independent-repository'?d.checkoutPath:d.localPath,variants:d.variants.map(v=>v.key),sourceState:d.sourceOwnership==='independent-repository'?'independent-source':d.localPresent&&d.variants.every(v=>v.localPresent!==false)?'source-present':d.canonicalSourceRef==='main'?'source-on-main':'source-not-local',reviewState:d.evidence?.ownerReview?.state||'unknown',...(d.id?{leadId:d.id}:{})}));
  return{deployments:lines.join('\n'),index:{schemaVersion:2,source:'docs/DEPLOYMENT-INVENTORY.json',projects,campaignCandidatesWithoutFolders:registry.campaignCandidatesWithoutFolders||[]}};
 }
 export function writeRegistryViews(root=ROOT) {

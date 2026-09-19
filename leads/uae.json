@@ -1,9 +1,13 @@
 {
   "schemaVersion": 1,
   "market": "United Arab Emirates",
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-19T19:58:02.941Z",
   "defaults": {
-    "templateChoices": ["auto-best", "modern", "carwow"],
+    "templateChoices": [
+      "auto-best",
+      "modern",
+      "carwow"
+    ],
     "researchOnly": true,
     "visualAudit": "not_performed_in_this_research",
     "contactHistory": "not_checked",
@@ -24,10 +28,23 @@
       "country": "AE",
       "city": "Sharjah",
       "priority": "research-first",
-      "inventory": {"count": 34, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-aayan-used-cars-2515"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 34,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-aayan-used-cars-2515"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://www.dubicars.com/dealers/sharjah-al-aayan-used-cars-2515",
-      "evidenceUrls": ["https://www.dubicars.com/dealers/sharjah-al-aayan-used-cars-2515", "https://auto.ae/alaayancars/"],
+      "evidenceUrls": [
+        "https://www.dubicars.com/dealers/sharjah-al-aayan-used-cars-2515",
+        "https://auto.ae/alaayancars/"
+      ],
       "evidenceNote": "The retrieved English DubiCars dealer page reports 34 results. Exact-name research surfaced marketplace profiles without a confidently matched independent domain; other profiles show different totals.",
       "opportunityHypothesis": "An owned dealership catalogue with consistent available-stock information and a car-specific enquiry path.",
       "existingClientPath": null,
@@ -40,10 +57,22 @@
       "country": "AE",
       "city": "Sharjah",
       "priority": "research-first",
-      "inventory": {"count": 46, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-fareed-used-cars-2655"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 46,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-fareed-used-cars-2655"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://www.dubicars.com/dealers/sharjah-al-fareed-used-cars-2655",
-      "evidenceUrls": ["https://www.dubicars.com/dealers/sharjah-al-fareed-used-cars-2655"],
+      "evidenceUrls": [
+        "https://www.dubicars.com/dealers/sharjah-al-fareed-used-cars-2655"
+      ],
       "evidenceNote": "The dealer profile reports 46 results. A similarly named result at a different Dubai marketplace URL was not assumed to be a separate business or the same account.",
       "opportunityHypothesis": "A standalone mixed-stock showroom and direct vehicle enquiries rather than a marketplace-only public identity.",
       "existingClientPath": null,
@@ -56,10 +85,23 @@
       "country": "AE",
       "city": "Sharjah",
       "priority": "audit-first",
-      "inventory": {"count": 50, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-basma-motors-3322"},
-      "website": {"url": "https://albasmamotors.com/", "status": "present_needs_visual_audit", "assessedAt": "2026-09-08", "confidence": "high_for_presence_only"},
+      "inventory": {
+        "count": 50,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-basma-motors-3322"
+      },
+      "website": {
+        "url": "https://albasmamotors.com/",
+        "status": "present_needs_visual_audit",
+        "assessedAt": "2026-09-08",
+        "confidence": "high_for_presence_only"
+      },
       "businessContactSource": "https://www.dubicars.com/dealers/sharjah-al-basma-motors-3322",
-      "evidenceUrls": ["https://albasmamotors.com/", "https://www.dubicars.com/dealers/sharjah-al-basma-motors-3322"],
+      "evidenceUrls": [
+        "https://albasmamotors.com/",
+        "https://www.dubicars.com/dealers/sharjah-al-basma-motors-3322"
+      ],
       "evidenceNote": "An independent dealership site exists and the marketplace reports 50 results. Limited extracted website text and an environment-blocked browser request do not establish poor UX or a broken site.",
       "opportunityHypothesis": "Assess whether a more stock-led mobile showroom would improve the existing journey; this remains an unverified redesign hypothesis.",
       "existingClientPath": null,
@@ -72,10 +114,23 @@
       "country": "AE",
       "city": "Dubai",
       "priority": "audit-first",
-      "inventory": {"count": 32, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://www.dubicars.com/dealers/dubai-the-dealers-point-2898"},
-      "website": {"url": "https://www.tdp.ae/", "status": "present_with_content_observations", "assessedAt": "2026-09-08", "confidence": "medium"},
+      "inventory": {
+        "count": 32,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://www.dubicars.com/dealers/dubai-the-dealers-point-2898"
+      },
+      "website": {
+        "url": "https://www.tdp.ae/",
+        "status": "present_with_content_observations",
+        "assessedAt": "2026-09-08",
+        "confidence": "medium"
+      },
       "businessContactSource": "https://www.tdp.ae/",
-      "evidenceUrls": ["https://www.tdp.ae/", "https://www.dubicars.com/dealers/dubai-the-dealers-point-2898"],
+      "evidenceUrls": [
+        "https://www.tdp.ae/",
+        "https://www.dubicars.com/dealers/dubai-the-dealers-point-2898"
+      ],
       "evidenceNote": "The marketplace reports 32 results. Extracted homepage arrival cards repeatedly show an ask-price label; this is a content observation, not proof of a visual defect or a mistake in the dealer's pricing policy.",
       "opportunityHypothesis": "More consistent stock, price/request-price information and car-specific enquiries across the owned site and marketplace presence.",
       "existingClientPath": null,
@@ -89,10 +144,23 @@
       "city": "Dubai",
       "priority": "premium-review",
       "userNominated": true,
-      "inventory": {"count": 59, "kind": "retrieved_dealer_available_count", "retrievedAt": "2026-09-08", "sourceUrl": "https://f1rstmotors.com/cars"},
-      "website": {"url": "https://f1rstmotors.com/", "status": "present_needs_visual_audit", "assessedAt": "2026-09-08", "confidence": "high_for_presence_only"},
+      "inventory": {
+        "count": 59,
+        "kind": "retrieved_dealer_available_count",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://f1rstmotors.com/cars"
+      },
+      "website": {
+        "url": "https://f1rstmotors.com/",
+        "status": "present_needs_visual_audit",
+        "assessedAt": "2026-09-08",
+        "confidence": "high_for_presence_only"
+      },
       "businessContactSource": "https://f1rstmotors.com/",
-      "evidenceUrls": ["https://f1rstmotors.com/", "https://f1rstmotors.com/cars"],
+      "evidenceUrls": [
+        "https://f1rstmotors.com/",
+        "https://f1rstmotors.com/cars"
+      ],
       "evidenceNote": "The user nominated this business for a redesign review. Its independent luxury inventory page reports 59 available cars and already offers catalogue functionality. No independent visual-quality conclusion was reached in this research.",
       "opportunityHypothesis": "A restrained, mobile-first luxury showroom concept emphasizing vehicle photography and a clear appointment/enquiry path, subject to comparison with the existing site.",
       "existingClientPath": null,
@@ -105,10 +173,22 @@
       "country": "AE",
       "city": "Sharjah",
       "priority": "reserve",
-      "inventory": {"count": 25, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414"},
-      "website": {"url": null, "status": "not_found_in_bounded_search", "assessedAt": "2026-09-08", "confidence": "low"},
+      "inventory": {
+        "count": 25,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414"
+      },
+      "website": {
+        "url": null,
+        "status": "not_found_in_bounded_search",
+        "assessedAt": "2026-09-08",
+        "confidence": "low"
+      },
       "businessContactSource": "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414",
-      "evidenceUrls": ["https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414"],
+      "evidenceUrls": [
+        "https://www.dubicars.com/dealers/sharjah-al-hamoor-al-thahabi-used-cars-1414"
+      ],
       "evidenceNote": "The Sharjah dealer-profile URL reports 25 results; some listing location labels differ. The account needs location verification and is below the initial 30-ad screening target.",
       "opportunityHypothesis": "Potential independent stock catalogue, but qualify business scale and actual showroom identity first.",
       "existingClientPath": null,
@@ -121,15 +201,55 @@
       "country": "AE",
       "city": "Dubai",
       "priority": "reserve",
-      "inventory": {"count": 24, "kind": "retrieved_marketplace_ads", "retrievedAt": "2026-09-08", "sourceUrl": "https://www.dubicars.com/dealers/dubai-car-finder-360-3252"},
-      "website": {"url": "https://www.carfinder360.com/en", "status": "present_needs_visual_audit", "assessedAt": "2026-09-08", "confidence": "high_for_presence_only"},
+      "inventory": {
+        "count": 24,
+        "kind": "retrieved_marketplace_ads",
+        "retrievedAt": "2026-09-08",
+        "sourceUrl": "https://www.dubicars.com/dealers/dubai-car-finder-360-3252"
+      },
+      "website": {
+        "url": "https://www.carfinder360.com/en",
+        "status": "present_needs_visual_audit",
+        "assessedAt": "2026-09-08",
+        "confidence": "high_for_presence_only"
+      },
       "businessContactSource": "https://www.carfinder360.com/en",
-      "evidenceUrls": ["https://www.carfinder360.com/en", "https://www.dubicars.com/dealers/dubai-car-finder-360-3252"],
+      "evidenceUrls": [
+        "https://www.carfinder360.com/en",
+        "https://www.dubicars.com/dealers/dubai-car-finder-360-3252"
+      ],
       "evidenceNote": "24 marketplace results and an independent website with existing enquiry/finance journeys. Neither substantial enough stock nor a website deficiency has been established for the main campaign gate.",
       "opportunityHypothesis": "Review only if a concrete catalogue/mobile opportunity appears; do not propose features already present as if they were missing.",
       "existingClientPath": null,
       "recommendedEntryTemplate": "carwow",
       "nextAction": "Keep on reserve, verify unique available stock and audit the existing journey before any speculative build."
+    },
+    {
+      "id": "ae-sharjah-al-reef-used-cars",
+      "name": "Al Reef Used Cars",
+      "country": "AE",
+      "city": "Sharjah",
+      "priority": "user-requested-pilot",
+      "inventory": {
+        "count": null,
+        "kind": "not-verified",
+        "note": "Pilot uses six illustrative vehicles; no current dealer inventory claim."
+      },
+      "website": {
+        "url": "https://www.alreefusedcars.com/",
+        "status": "present",
+        "assessedAt": "2026-09-19"
+      },
+      "businessContactSource": "https://www.alreefusedcars.com/contact-us/",
+      "evidenceUrls": [
+        "https://www.alreefusedcars.com/contact-us/"
+      ],
+      "evidenceNote": "Official public contact details and original logo used for an independent three-design agency concept. No endorsement or outreach implied.",
+      "existingClientPath": null,
+      "technicalRegistrySlug": "al-reef-used-cars",
+      "sourceOwnership": "independent-repository",
+      "recommendedEntryTemplate": "auto-best",
+      "nextAction": "Owner review of the independent demo; future changes belong in the same dealer repository."
     }
   ]
 }

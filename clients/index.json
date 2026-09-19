@@ -55,6 +55,19 @@
       "leadId": "ae-sharjah-al-hamoor-al-thahabi"
     },
     {
+      "slug": "al-reef-used-cars",
+      "name": "Al Reef Used Cars",
+      "path": "I:/cars-clients/al-reef-used-cars",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "independent-source",
+      "reviewState": "unknown",
+      "leadId": "ae-sharjah-al-reef-used-cars"
+    },
+    {
       "slug": "amh-cars-bhm",
       "name": "amh-cars-bhm",
       "path": "clients/amh-cars-bhm",

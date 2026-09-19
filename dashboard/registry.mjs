@@ -12,7 +12,10 @@ export function registryProjects(root) {
     const commit=source.commit||dealer.canonicalSourceCommit||null;
     const location=commit?'recorded-commit':dealer.localPresent?'local':'branch-only';
     const branch=commit?commit.slice(0,12):dealer.branchSources?.[0]?.branch||'unrecorded';
-    const url=commit?`https://github.com/darkapoparka/cars/tree/${commit}/clients/${dealer.slug}`:null;
+    const independent=dealer.sourceOwnership==='independent-repository';
+    const url=independent
+      ? (commit&&source.remoteVerified?`https://github.com/${dealer.repository}/tree/${commit}`:null)
+      : commit?`https://github.com/darkapoparka/cars/tree/${commit}/clients/${dealer.slug}`:null;
     const browser=dealer.evidence?.browser||{state:'unknown'};
     const evidence=dealer.evidence||{};
     const checked=Object.values(evidence).filter(v=>v?.state&&v.state!=='unknown').length;

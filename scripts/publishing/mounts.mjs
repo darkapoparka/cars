@@ -192,6 +192,8 @@ function mountModern(files) {
   edit(files, 'modern/apps/web/proxy.ts', (text) => {
     const leadSiteImport = 'import { leadSite } from "@repo/marketplace";';
     if (!text.includes(leadSiteImport)) text = `${leadSiteImport}\n${text}`;
+    const localeImport = 'import { defaultLocale as dealerDefaultLocale } from "@repo/internationalization";';
+    if (!text.includes(localeImport)) text = `${localeImport}\n${text}`;
     if (text.includes('x-dealer-locale-rewrite')) {
       if (!text.includes('NextResponse.rewrite') || !text.includes('/variant-2')) throw new Error('Unknown Modern locale rewrite shape');
       return text;
@@ -199,8 +201,10 @@ function mountModern(files) {
     const anchor = 'const publicProxy: NextProxy = async (request, event) => {\n  const headersResponse = await securityHeaders();\n';
     const block = `  if (leadSite.staticDemoMode) {
     const path = request.nextUrl.pathname.replace(/^\\/variant-2(?=\\/|$)/, "") || "/";
-    if (request.headers.get("x-dealer-locale-rewrite") === "1" || /^\\/bg(?:\\/|$)/.test(path)) return headersResponse;
-    const localePath = /^\\/(bg|en)(\\/|$)/.test(path) ? path.replace(/^\\/en(?=\\/|$)/, "/bg") : \`/bg\${path === "/" ? "" : path}\`;
+    const locale = dealerDefaultLocale;
+    if (request.headers.get("x-dealer-locale-rewrite") === "1" || path === "/" + locale || path.startsWith("/" + locale + "/")) return headersResponse;
+    const barePath = path.replace(/^\\/(bg|en)(?=\\/|$)/, "");
+    const localePath = "/" + locale + (barePath === "/" ? "" : barePath);
     const url = new URL(\`/variant-2\${localePath}\${request.nextUrl.search}\`, request.url);
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set("x-dealer-locale-rewrite", "1");
