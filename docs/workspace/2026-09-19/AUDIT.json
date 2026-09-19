@@ -12541,6 +12541,132 @@
         }
       ],
       "safeForUnattendedWrites": false
+    },
+    "finalFreshHealth": {
+      "checkedAt": "2026-09-19T13:17:19.726Z",
+      "readOnlyWorkingTrees": true,
+      "repositories": [
+        {
+          "key": "cars",
+          "role": "integration",
+          "path": "J:\\cars",
+          "expectedRepository": "darkapoparka/cars",
+          "issues": [
+            "uncommitted-work",
+            "behind-fetched-main"
+          ],
+          "branch": "main",
+          "head": "cd526d2181ab878f1abd83a67a640c817379714d",
+          "repositoryMatches": true,
+          "changedEntries": 2047,
+          "remoteHead": "110b3776b7a4af625c247addb6398c83868df4e8",
+          "ahead": 0,
+          "behind": 191,
+          "lastFetchAt": "2026-09-19T13:17:10.494Z",
+          "remoteFreshness": "fetched-this-run",
+          "sparse": true
+        },
+        {
+          "key": "auto-best",
+          "role": "template-master",
+          "path": "J:\\template-repos\\cars-template-auto-best",
+          "expectedRepository": "darkapoparka/cars-template-auto-best",
+          "issues": [
+            "fetch-failed"
+          ],
+          "branch": "main",
+          "head": "b61327ef7eb0c9b8b3db5f200a80ba581e7fdc49",
+          "repositoryMatches": true,
+          "fetchError": "fatal: bad object refs/codex/turn-diffs/checkpoints/32f6feeddf6450240086ae53c5bedf337916303fb0008e26ec397bdd124a0359/d0cdc31ac114645c00f6298d1c46f7a6ac4e014cd305a26c82ec079174053e71/1789266988346/27baf5b5-74da-4284-bdaf-e66838d7da6e\nerror: https://github.com/darkapoparka/cars-template-auto-best.git ",
+          "changedEntries": 0,
+          "remoteHead": "b61327ef7eb0c9b8b3db5f200a80ba581e7fdc49",
+          "ahead": 0,
+          "behind": 0,
+          "lastFetchAt": "2026-09-19T13:17:11.764Z",
+          "remoteFreshness": "fetch-failed-cached-tracking-ref-only",
+          "sparse": false
+        },
+        {
+          "key": "modern",
+          "role": "template-master",
+          "path": "J:\\template-repos\\cars-template-modern",
+          "expectedRepository": "darkapoparka/cars-template-modern",
+          "issues": [
+            "uncommitted-work",
+            "unpublished-local-commits"
+          ],
+          "branch": "main",
+          "head": "1cbe6bb327a4653cf3c7c69ddd78a93c5e2903a3",
+          "repositoryMatches": true,
+          "changedEntries": 14,
+          "remoteHead": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+          "ahead": 6,
+          "behind": 0,
+          "lastFetchAt": "2026-09-19T13:17:13.806Z",
+          "remoteFreshness": "fetched-this-run",
+          "sparse": false
+        },
+        {
+          "key": "carwow",
+          "role": "template-master",
+          "path": "J:\\template-repos\\cars-template-carwow",
+          "expectedRepository": "darkapoparka/cars-template-carwow",
+          "issues": [
+            "uncommitted-work",
+            "behind-fetched-main"
+          ],
+          "branch": "main",
+          "head": "26eb9d3d4d488eac09882f03e36588d712850c1a",
+          "repositoryMatches": true,
+          "changedEntries": 19,
+          "remoteHead": "89f50c427863050abb7923152f05c091bb937d1e",
+          "ahead": 0,
+          "behind": 3,
+          "lastFetchAt": "2026-09-19T13:17:14.982Z",
+          "remoteFreshness": "fetched-this-run",
+          "sparse": false
+        },
+        {
+          "key": "import",
+          "role": "template-master",
+          "path": "J:\\template-repos\\cars-template-import",
+          "expectedRepository": "darkapoparka/cars-template-import",
+          "issues": [
+            "uncommitted-work"
+          ],
+          "branch": "main",
+          "head": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+          "repositoryMatches": true,
+          "changedEntries": 362,
+          "remoteHead": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+          "ahead": 0,
+          "behind": 0,
+          "lastFetchAt": "2026-09-19T13:17:16.119Z",
+          "remoteFreshness": "fetched-this-run",
+          "sparse": false
+        },
+        {
+          "key": "admin",
+          "role": "admin-demo",
+          "path": "J:\\cars-admin",
+          "expectedRepository": "darkapoparka/cars-admin",
+          "issues": [
+            "behind-fetched-main",
+            "unpublished-local-commits"
+          ],
+          "branch": "main",
+          "head": "b0baba6285d82d5cacc196c780535e7e1dc9b7d3",
+          "repositoryMatches": true,
+          "changedEntries": 0,
+          "remoteHead": "c6d1b94df6e5804aaec9164179e97b5bdf620332",
+          "ahead": 4,
+          "behind": 3,
+          "lastFetchAt": "2026-09-19T13:17:19.446Z",
+          "remoteFreshness": "fetched-this-run",
+          "sparse": false
+        }
+      ],
+      "safeForUnattendedWrites": false
     }
   },
   "storage": {
@@ -12580,6 +12706,14 @@
       "activeDocuments": 11,
       "skills": 3,
       "commandHelp": "passed"
+    },
+    "finalWorkflowTests": {
+      "passed": 38,
+      "failed": 0,
+      "excluded": [
+        "refresh-client.test.mjs requires full dealer/template integration fixtures"
+      ],
+      "scope": "Same self-contained selection plus Windows credential-chooser regression"
     }
   }
 }

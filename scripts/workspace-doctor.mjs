@@ -3,9 +3,20 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
+// Resolve only Windows Git's first-run chooser; never replace a deliberately configured helper.
+export function fetchCredentialArgs(platform, helpers) {
+  return platform === 'win32' && helpers.trim() === 'helper-selector'
+    ? ['-c','credential.helper=','-c','credential.helper=manager','-c','credential.interactive=false'] : [];
+}
+
 // Reports state only. Never pulls, checks out, stages, moves or deletes source.
 export function gitRead(cwd, args) {
-  const result = spawnSync('git', ['-C', cwd, ...args], {
+  let credentialArgs = [];
+  if (args[0] === 'fetch' && process.platform === 'win32') {
+    const helpers = spawnSync('git', ['-C', cwd, 'config', '--get-all', 'credential.helper'], { encoding:'utf8', timeout:5000, windowsHide:true });
+    credentialArgs = fetchCredentialArgs(process.platform, helpers.stdout || '');
+  }
+  const result = spawnSync('git', ['-C', cwd, ...credentialArgs, ...args], {
     encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, timeout: 30000,
     env: { ...process.env, GIT_OPTIONAL_LOCKS: '0', GIT_TERMINAL_PROMPT: '0', GCM_INTERACTIVE: 'Never' }, windowsHide: true,
   });

@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { gitRead, inspectRepository, repositoryIdentity } from './workspace-doctor.mjs';
+import { gitRead, inspectRepository, repositoryIdentity, fetchCredentialArgs } from './workspace-doctor.mjs';
 
 const expected = 'darkapoparka/cars';
 function fixture(t) {
@@ -74,4 +74,11 @@ test('failed fetch retains local findings and never claims fresh remote evidence
   assert.equal(result.ahead,0); assert.equal(result.behind,0);
   assert.deepEqual(fs.readFileSync(path.join(f.dir,'.git/index')),before);
   assert.equal(fs.readFileSync(path.join(f.dir,'sample.txt'),'utf8'),'preserve pending edits');
+});
+
+test('Windows chooser resolution is per-command and respects other configured helpers',()=>{
+ const flags=fetchCredentialArgs('win32','helper-selector\n');
+ assert.deepEqual(flags,['-c','credential.helper=','-c','credential.helper=manager','-c','credential.interactive=false']);
+ for(const helper of ['manager','custom-helper','helper-selector\ncustom-helper',''])assert.deepEqual(fetchCredentialArgs('win32',helper),[]);
+ assert.deepEqual(fetchCredentialArgs('linux','helper-selector'),[]);
 });

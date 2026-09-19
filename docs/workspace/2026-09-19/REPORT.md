@@ -36,7 +36,7 @@ The technical registry now includes canonical Day and Night and IS Auto records.
 - node scripts/check-live-fab.mjs checks all registered live previews; --dealer SLUG checks one. It uses the sibling Cars Admin Playwright installation, writes only evidence under runtime, never submits forms or deploys, and exits nonzero on failed checks.
 - AGENTS, the root README, documentation index, local setup and publishing procedure now point to the same workspace/admin contract. Older admin handoffs are marked historical rather than left to claim that the live admin is still blocked.
 
-Eight workspace-doctor tests, three legacy-reference safety tests, two registry-only view tests and six existing workflow tests cover this change; final command results are recorded with the commit verification. The existing workflow still owns release promotion, packaging, verified dealer facts, approved PNG/WebP logos and preserving template heroes/banners/section layout.
+Nine workspace-doctor tests, three legacy-reference safety tests, two registry-only view tests and six existing workflow tests cover this change; final command results are recorded with the commit verification. The existing workflow still owns release promotion, packaging, verified dealer facts, approved PNG/WebP logos and preserving template heroes/banners/section layout.
 
 ## Important outstanding conditions
 
@@ -66,8 +66,10 @@ The occupied Cars checkout is intentionally not fast-forwarded by this change. T
 
 ## Final code checks
 
-All 37 self-contained workflow tests passed against the exact candidate script tree assembled from current GitHub main plus this scoped change. The active documentation/skill/command check passed (11 documents, three skills). The 19 focused checks are included in that scope, not additional tests.
+All 38 self-contained workflow tests passed against the exact candidate script tree assembled from current GitHub main plus this scoped change. The active documentation/skill/command check passed (11 documents, three skills). The 20 focused checks are included in that scope, not additional tests.
 
-The initial all-files test invocation in the source-light validation directory reported missing fixtures: the copy test needed its dated temporary-fixture parent, and the older refresh-client integration test directly reads full real dealer/template source and assets. The temporary parent was supplied; the passing 37-test run intentionally excludes that data-dependent integration file. This is not a claim that the full template/application integration suite passed. No dealer/template tree was copied or modified to manufacture a passing result.
+The initial all-files test invocation in the source-light validation directory reported missing fixtures: the copy test needed its dated temporary-fixture parent, and the older refresh-client integration test directly reads full real dealer/template source and assets. The temporary parent was supplied; the passing 38-test run intentionally excludes that data-dependent integration file. This is not a claim that the full template/application integration suite passed. No dealer/template tree was copied or modified to manufacture a passing result.
 
 [FOLDERS.json](FOLDERS.json) records six canonical repositories and observed Cars-related user-root working/evidence folders. Those old folders remain preserved until unique content and running-process ownership are reconciled; the workspace grouping does not claim physical cleanup or recovered disk space.
+
+The final Windows fetch check used existing Git Credential Manager only for commands whose sole configured helper was the first-run chooser. No global Git settings, custom credential helpers, or hooks were changed. The final isolated suite passed 38/38; current per-repository synchronization findings are retained in AUDIT.json.

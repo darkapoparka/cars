@@ -25,7 +25,7 @@ Before writing or publishing, run the existing Git status checks and:
 
     node scripts/workspace-doctor.mjs --fetch
 
-The doctor verifies the six repository identities, main branches, changed entries and ahead/behind counts. Without --fetch it only reports cached tracking refs; it does not establish current remote state. --check provides a nonzero exit for a workspace with issues. It never pulls, resets, cleans, stashes, stages, stops processes or moves files. A failed fetch retains the local findings and is explicitly marked as cached, not freshly verified.
+The doctor verifies the six repository identities, main branches, changed entries and ahead/behind counts. Without --fetch it only reports cached tracking refs; it does not establish current remote state. --check provides a nonzero exit for a workspace with issues. It never pulls, resets, cleans, stashes, stages, stops processes or moves files. A failed fetch retains the local findings and is explicitly marked as cached, not freshly verified. On Windows, when the only configured helper is the first-run helper-selector, a fetch selects the existing Git Credential Manager for that command only. Global/repository settings, custom helpers and Git hooks are not changed; missing credentials remain a reported error, not an interactive login.
 
 Resolve issues in the checkout you need. An unrelated template's unfinished draft does not prevent using an already approved Cars snapshot. Do not perform unattended writes across all six repositories when the report has blockers.
 
