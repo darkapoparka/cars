@@ -61,3 +61,29 @@
   }));
   document.body.append(host);
 })();
+
+/* Cars client-admin demo link v1. Keep the three design routes unchanged. */
+(() => {
+  const host = document.querySelector('dealer-design-switcher, excellent-design-switcher');
+  const root = host?.shadowRoot;
+  const panel = root?.querySelector('nav');
+  if (!panel || root.querySelector('[data-cars-admin]')) return;
+  const url = new URL('https://cars-admin-blue.vercel.app/');
+  const dealer = location.hostname.split('.')[0];
+  if (/^[a-z0-9-]{1,64}$/.test(dealer)) url.searchParams.set('dealer', dealer);
+  const link = document.createElement('a');
+  link.dataset.carsAdmin = 'v1';
+  link.href = url.href;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', 'Admin dashboard — demo, opens in a new tab');
+  link.append(document.createTextNode('Admin dashboard'));
+  const arrow = document.createElement('span');
+  arrow.textContent = '↗';
+  arrow.setAttribute('aria-hidden', 'true');
+  link.append(arrow);
+  link.style.cssText = 'border-top:1px solid #e5e7eb;border-radius:0 0 10px 10px;margin-top:6px;padding-top:14px;color:#2563eb;font-weight:600';
+  panel.append(link);
+  panel.style.maxHeight = 'max(120px, calc(100dvh - 260px))';
+  panel.style.overflowY = 'auto';
+})();
