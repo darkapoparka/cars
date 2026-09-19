@@ -2,15 +2,19 @@
   import { lockPageScroll } from '$lib/ui/overlay';
   import { afterNavigate } from '$app/navigation';
   import { resolve } from '$app/paths';
-  import { page } from '$app/state';
   import { onDestroy, tick } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import Icon from '$components/ui/Icon.svelte';
+  import NavigationFeatureCard from './NavigationFeatureCard.svelte';
+  import ActionLink from '$components/ui/ActionLink.svelte';
   import MobileMenu from './MobileMenu.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
-  import { vehicleContactHref, selectedVehicle } from '$data/journeys';
+  import { vehicleContactHref } from '$data/journeys';
   import { brand } from '$config/brand';
   import { navigation, type InternalNavigationHref, type MegaMenu, type NavigationHref, type NavigationItem } from '$data/navigation';
+  import type { HeaderPresentation } from '$data/shell';
+
+  let { presentation, mobileFooterVisible = false }: { presentation: HeaderPresentation; mobileFooterVisible?: boolean } = $props();
 
   let mega = $state<MegaMenu | null>(null);
   let megaItemId = $state('');
@@ -22,20 +26,13 @@
   let megaPanel: HTMLDivElement | undefined;
   let megaTrigger: HTMLAnchorElement | undefined;
   let releaseScroll: (() => void) | undefined;
-  const compactDetailHeader = $derived(
-    page.url.pathname.startsWith('/blog-detail/') || page.url.pathname.startsWith('/listing-detail-v1/')
-  );
-  const detailVehicle = $derived(page.status === 200 && page.url.pathname.startsWith('/listing-detail-v1/') ? selectedVehicle(page.params.id ?? null) : null);
-  const vehicleDetailHeader = $derived(Boolean(detailVehicle));
-  const mobileSurfaceHeader = $derived(page.url.pathname === '/');
-  const listingHeader = $derived(page.url.pathname === '/listing-grid');
-  const homeOverlayHeader = $derived(page.url.pathname === '/');
-  const mobileTopic = $derived(page.url.searchParams.get('topic'));
-  const mobileMenuSection = $derived(
-    page.url.pathname.startsWith('/about-us') ||
-    page.url.pathname.startsWith('/blog') ||
-    (page.url.pathname.startsWith('/contact') && mobileTopic !== 'trade-in' && mobileTopic !== 'import')
-  );
+  const compactDetailHeader = $derived(presentation.compactDetailHeader);
+  const detailVehicle = $derived(presentation.detailVehicle);
+  const vehicleDetailHeader = $derived(presentation.vehicleDetailHeader);
+  const mobileSurfaceHeader = $derived(presentation.mobileSurfaceHeader);
+  const listingHeader = $derived(presentation.listingHeader);
+  const homeOverlayHeader = $derived(presentation.homeOverlayHeader);
+  const contactOverlayHeader = $derived(presentation.contactOverlayHeader);
 
   const isInternalHref = (href: NavigationHref): href is InternalNavigationHref => href.startsWith('/');
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
@@ -74,8 +71,8 @@
         if (node.isConnected && !node.contains(document.activeElement)) closeMega();
       });
     };
-    const handlePointerLeave = () => {
-      if (!node.contains(document.activeElement)) queueDismiss();
+    const handlePointerLeave = (event: PointerEvent) => {
+      if (event.pointerType === 'mouse') closeMega();
     };
     const handleFocusOut = (event: FocusEvent) => {
       if (!(event.relatedTarget instanceof Node) || !node.contains(event.relatedTarget)) queueDismiss();
@@ -89,22 +86,8 @@
     };
   };
 
-  const isActive = (item: NavigationItem) => {
-    const path = page.url.pathname;
-    if (item.href === '/') return path === '/';
-    if (item.href === '/listing-grid') return path.startsWith('/listing');
-    if (item.href === '/blog') return path.startsWith('/blog');
-    return path === item.href || path.startsWith(`${item.href}/`);
-  };
-
-  const isExactDestination = (item: NavigationItem) => {
-    const destination = new URL(resolve(item.href), page.url);
-    return (
-      destination.pathname === page.url.pathname &&
-      destination.search === page.url.search &&
-      destination.hash === page.url.hash
-    );
-  };
+  const isActive = (item: NavigationItem) => presentation.navigation[item.id]?.active ?? false;
+  const isExactDestination = (item: NavigationItem) => presentation.navigation[item.id]?.current ?? false;
 
   const openMega = (item: NavigationItem, trigger?: HTMLAnchorElement) => {
     mega = item.menu ?? null;
@@ -199,16 +182,20 @@
   });
 </script>
 
-<svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); }} />
+<svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); if (window.innerWidth < 992) closeMega(); }} />
+
+{#if mega}
+  <button class="dn-mega-backdrop" tabindex="-1" aria-label="Затворете навигацията" onclick={closeMega}></button>
+{/if}
 
 <div
   class="dn-header-fixed"
   class:dn-header-fixed--compact={compactDetailHeader}
+  class:dn-header-fixed--vehicle-detail={vehicleDetailHeader}
   class:dn-header-fixed--mobile-surface={mobileSurfaceHeader}
   class:dn-header-fixed--home-overlay={homeOverlayHeader}
-  class:dn-header-fixed--contact-overlay={page.url.pathname === '/contact'}
+  class:dn-header-fixed--contact-overlay={contactOverlayHeader}
   class:dn-header-fixed--listing={listingHeader}
-  {@attach attachMegaDismissBoundary}
 >
   <header
     class:dn-header--mega-open={Boolean(mega)}
@@ -221,17 +208,22 @@
         <ul class="dn-topbar__list">
           <li><Icon name="map-pin" size={18} strokeWidth={1.75} /><span>{brand.address}</span></li>
           <li><Icon name="phone" size={18} strokeWidth={1.75} /><a {...phoneLinkAttributes}>{brand.phone}</a></li>
-          <li><Icon name="clock" size={18} strokeWidth={1.75} /><span>{brand.appointment}</span></li>
+          <li class="dn-topbar__item--appointment"><Icon name="clock" size={18} strokeWidth={1.75} /><span>{brand.appointment}</span></li>
         </ul>
       </div>
     </div>
 
-    <div class="dn-header__lower">
+    <div class="dn-header__lower" {@attach attachMegaDismissBoundary}>
       <div class="container">
         <div class="dn-header__inner">
           <div class="dn-logo-box">
             <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
-              <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+              <picture>
+                {#if mobileSurfaceHeader || contactOverlayHeader}
+                  <source media="(max-width: 991px)" srcset={brand.logoOnDark} />
+                {/if}
+                <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
+              </picture>
             </a>
           </div>
 
@@ -263,10 +255,7 @@
                       <div class="dn-mega__feature-panel">
                         <div class="dn-mega__features">
                           {#each mega.features as feature (feature.id)}
-                            <a class="dn-mega__feature" href={resolve(feature.href)}>
-                              <img src={feature.image} alt="" width="800" height="450" loading="eager" />
-                              <span><strong>{feature.title}</strong><small>{feature.detail}</small></span>
-                            </a>
+                            <NavigationFeatureCard {feature} />
                           {/each}
                         </div>
                       </div>
@@ -286,8 +275,7 @@
                           {/each}
                         </nav>
                         <div class="dn-mega__side-action">
-                          <a href={resolve(mega.cta.href)}>{mega.cta.label}</a>
-                          <p>{mega.cta.detail}</p>
+                          <ActionLink class="dn-mega__cta" href={mega.cta.href}>{mega.cta.label}</ActionLink>
                         </div>
                       </div>
                     </div>
@@ -298,14 +286,14 @@
           </nav>
 
           <div class="dn-header-actions">
-            <a class="dn-header-action dn-header-action--secondary" href={resolve('/contact')}>
+            <ActionLink class="dn-header-action dn-header-action--secondary" href="/contact">
               <Icon name="mail" size={17} strokeWidth={1.8} />
               <span>Запитване</span>
-            </a>
-            <a class="dn-header-action dn-header-action--primary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>
+            </ActionLink>
+            <ActionLink class="dn-header-action dn-header-action--primary" href={detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'}>
               <Icon name="calendar" size={17} strokeWidth={1.8} />
               <span>Запазете оглед</span>
-            </a>
+            </ActionLink>
           </div>
 
           <div class="dn-mobile-controls">
@@ -338,7 +326,7 @@
     </div>
 
     {#if mobileOpen}
-      <MobileMenu {closeMobile} {attachMobileMenu} {attachMobileCloseButton} {listingHeader} />
+      <MobileMenu {closeMobile} {attachMobileMenu} {attachMobileCloseButton} active={presentation.mobileMenu} />
     {/if}
   </header>
 
@@ -352,41 +340,41 @@
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" aria-label="Основни действия">
+      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} aria-label="Основни действия">
         <a
-          class:active={page.url.pathname === '/'}
+          class:active={presentation.mobileNavigation.home}
           href={resolve('/')}
-          aria-current={page.url.pathname === '/' ? 'page' : undefined}
+          aria-current={presentation.mobileNavigation.home ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="home" /></span>
           <span>Начало</span>
         </a>
         <a
-          class:active={page.url.pathname.startsWith('/listing')}
+          class:active={presentation.mobileNavigation.listing}
           href={resolve('/listing-grid')}
-          aria-current={page.url.pathname.startsWith('/listing') ? 'page' : undefined}
+          aria-current={presentation.mobileNavigation.listing ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="cars" /></span>
           <span>Коли</span>
         </a>
         <a
-          class:active={page.url.pathname === '/contact' && mobileTopic === 'trade-in'}
+          class:active={presentation.mobileNavigation.tradeIn}
           href={resolve('/contact?topic=trade-in')}
-          aria-current={page.url.pathname === '/contact' && mobileTopic === 'trade-in' ? 'page' : undefined}
+          aria-current={presentation.mobileNavigation.tradeIn ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="sell" /></span>
           <span>Продай</span>
         </a>
         <a
-          class:active={page.url.pathname === '/contact' && mobileTopic === 'import'}
+          class:active={presentation.mobileNavigation.import}
           href={resolve('/contact?topic=import')}
-          aria-current={page.url.pathname === '/contact' && mobileTopic === 'import' ? 'page' : undefined}
+          aria-current={presentation.mobileNavigation.import ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="import" /></span>
           <span>Внос</span>
         </a>
         <button
-          class:active={mobileMenuSection}
+          class:active={presentation.mobileNavigation.menu}
           type="button"
           aria-controls="dn-mobile-menu"
           aria-expanded={mobileOpen}
@@ -401,6 +389,83 @@
 </div>
 
 <style>
+  .dn-header-fixed { position: relative; z-index: 1000; background: #fff; }
+  .dn-header { position: relative; background: #fff; }
+  .dn-topbar { min-height: 54px; display: flex; align-items: center; background: #fff; color: #30343a; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
+  .dn-topbar__inner { display: flex; align-items: center; }
+  .dn-topbar__list { width: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 28px; margin: 0; padding: 0; list-style: none; }
+  .dn-topbar__item--appointment { margin-left: auto; }
+  .dn-topbar__list li { display: inline-flex; align-items: center; gap: 8px; }
+  .dn-topbar__list li :global(.dn-icon) { color: #666c74; }
+  .dn-topbar__list a { display: inline-flex; min-height: 44px; align-items: center; color: #30343a; font-weight: var(--dn-control-weight); }
+  .dn-topbar__list a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
+  .dn-header__lower { background: #fff; border-top: 1px solid rgba(20,23,29,.06); border-bottom: 1px solid rgba(20,23,29,.06); }
+  .dn-header__inner { min-height: 94px; display: grid; grid-template-columns: 270px minmax(420px,1fr) auto; align-items: center; gap: 20px; }
+  .dn-logo { display: inline-flex; min-height: 44px; align-items: center; }
+  .dn-logo picture { display: flex; align-items: center; }
+  .dn-logo img { width: auto; max-width: 230px; height: 64px; object-fit: contain; }
+  .dn-nav { display: flex; justify-content: center; }
+  .dn-nav__list { display: flex; align-items: center; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  .dn-nav__list > li > a { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: var(--dn-radius-control); color: #24272c; font-size: var(--dn-text-lead); font-weight: var(--dn-control-weight); letter-spacing: var(--dn-tracking-heading); line-height: var(--dn-leading-body); transition: background-color 160ms ease, color 160ms ease; }
+  .dn-nav__list > li.dn-nav__item--current > a, .dn-nav__list > li > a:hover { background: #f2f3f5; }
+  .dn-header-actions { display: flex; align-items: center; gap: 10px; }
+  .dn-header-actions :global(.dn-header-action) { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 0 16px; border-radius: var(--dn-radius-button); }
+  .dn-header-actions :global(.dn-header-action svg) { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .dn-header-actions :global(.dn-header-action--secondary) { background: #202329; color: #fff; }
+  .dn-header-actions :global(.dn-header-action--primary) { background: var(--dn-red); color: #fff; }
+  .dn-header-actions :global(.dn-header-action--primary:hover) { background: var(--dn-red-hover); color: #fff; }
+  .dn-mobile-toggle { display: none; width: 44px; height: 44px; border: 0; border-radius: var(--dn-radius-button); background: #f2f3f5; }
+  .dn-mobile-toggle > :global(svg) { display: block; margin: auto; }
+
+  .dn-mega-backdrop { position: fixed; inset: 0; z-index: 999; border: 0; padding: 0; background: var(--dn-menu-backdrop); cursor: default; }
+  .dn-header .dn-mega { position: absolute; top: 100%; left: 0; right: 0; z-index: 30; display: grid; min-height: var(--dn-menu-panel-height); grid-template-columns: minmax(0,2.25fr) minmax(300px,.95fr); gap: 32px; padding: 16px max(32px, calc((100% - var(--dn-menu-content)) / 2)) 24px; border-radius: 0 0 16px 16px; background: var(--dn-white); }
+  .dn-mega__feature-panel { min-width: 0; }
+  .dn-mega__features { display: grid; height: 100%; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+  .dn-mega__side { min-width: 0; display: flex; flex-direction: column; }
+  .dn-nav__list > li > a:focus-visible,
+  .dn-header :global(.dn-mega a:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: 3px; }
+  .dn-nav__list > li > a[aria-expanded='true'] { background: var(--dn-surface); }
+  .dn-mega__groups { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px 24px; }
+  .dn-mega__group strong { display: block; margin-bottom: 8px; font-size: var(--dn-text-lead); font-weight: var(--dn-menu-heading-weight); }
+  .dn-mega__group a { display: block; padding: 4px 0; color: var(--dn-muted); font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
+  .dn-mega__group a:hover { color: var(--dn-red); }
+  .dn-mega__side-action { margin-top: auto; padding-top: 12px; }
+  .dn-mega__side-action > :global(.dn-mega__cta) { width: 100%; min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; }
+
+  @media (min-width: 992px) {
+    .dn-header:not(.dn-header--compact) .dn-header__inner { min-height: 84px; }
+    .dn-topbar, .dn-topbar__inner { min-height: 44px; }
+    .dn-header:not(.dn-header--compact) .dn-logo img { height: 56px; }
+  }
+
+  @media (min-width: 992px) and (max-width: 1359px) {
+    .dn-header__inner { grid-template-columns: 190px minmax(0, 1fr) auto; gap: 12px; }
+    .dn-logo img { max-width: 190px; }
+    .dn-nav__list { gap: 2px; }
+    .dn-nav__list > li > a { padding-inline: 8px; font-size: var(--dn-text-body); white-space: nowrap; }
+    .dn-header-actions :global(.dn-header-action) { padding-inline: 14px; white-space: nowrap; }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .dn-mega__features { gap: 12px; }
+  }
+
+  @media (max-width: 1199px) {
+    .dn-header__inner { grid-template-columns: 210px 1fr auto; }
+    .dn-nav__list > li > a { padding-inline: 11px; font-size: var(--dn-text-lead); }
+    .dn-header-actions :global(.dn-header-action--secondary) { display: none; }
+    .dn-header .dn-mega { padding-inline: 32px; }
+  }
+
+  @media (max-width: 991px) {
+    .dn-topbar, .dn-nav, .dn-header-actions { display: none; }
+    .dn-header__lower { background: #fff; border-top: 1px solid rgba(20,23,29,.06); border-bottom: 1px solid rgba(20,23,29,.06); }
+    .dn-header__inner { min-height: 68px; display: flex; justify-content: space-between; gap: 12px; }
+    .dn-logo img { height: 42px; max-width: 148px; }
+    .dn-mobile-toggle { display: block; }
+    .dn-mega-backdrop, .dn-header .dn-mega { display: none; }
+  }
+
   @media (min-width: 992px) {
     .dn-nav__link--disclosure::after {
       width: 7px;
@@ -493,7 +558,7 @@
     .dn-header-fixed--contact-overlay .dn-header__lower { background: transparent; border: 0; }
     .dn-header-fixed--contact-overlay .dn-mobile-control,
     .dn-header-fixed--contact-overlay .dn-mobile-toggle { background: rgba(15,17,20,.7); color: #fff; border: 1px solid rgba(255,255,255,.3); }
-    .dn-header-fixed--contact-overlay .dn-mobile-control--call { border-color: var(--dn-red); background: var(--dn-red); }
+    .dn-header-fixed--contact-overlay .dn-mobile-control--call { border-color: var(--dn-ink); background: var(--dn-ink); }
 
     .dn-header-fixed--compact .dn-header__inner {
       min-height: 68px;
@@ -516,7 +581,7 @@
     }
 
     .dn-mobile-control--call {
-      background: var(--dn-red);
+      background: var(--dn-ink);
       color: #fff;
     }
 
@@ -538,6 +603,13 @@
       grid-template-columns: repeat(5, minmax(0, 1fr));
       padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right));
       padding-top: 3px;
+      transition: transform 180ms ease, opacity 150ms ease;
+    }
+
+    .dn-mobile-bottom-nav--footer-visible {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(100%);
     }
 
     .dn-mobile-bottom-nav a,
@@ -548,7 +620,7 @@
       min-height: 52px;
       place-items: center;
       align-content: center;
-      grid-template-rows: 26px 16px;
+      grid-template-rows: 26px auto;
       gap: 2px;
       padding: 4px 1px;
       border: 0;
@@ -556,15 +628,20 @@
       background: transparent;
       color: #4f5662;
       font: inherit;
-      font-size: 12px;
-      font-weight: 650;
-      line-height: 1.15;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-regular);
+      line-height: var(--dn-leading-control);
       cursor: pointer;
     }
 
     .dn-mobile-bottom-nav a.active,
     .dn-mobile-bottom-nav button.active {
-      color: var(--dn-red);
+      color: var(--dn-ink);
+      font-weight: var(--dn-weight-semibold);
+    }
+
+    .dn-mobile-bottom-nav :is(a.active, button.active) :global(.dn-icon *) {
+      stroke-width: 2;
     }
 
     .dn-mobile-bottom-nav__icon {
@@ -602,23 +679,23 @@
     .dn-mobile-detail-bar a {
       display: inline-flex;
       min-width: 0;
-      min-height: 50px;
+      min-height: 44px;
       align-items: center;
       justify-content: center;
       gap: 7px;
       border-radius: var(--dn-radius-button);
-      font-size: 15px;
-      font-weight: 700;
+      font-size: var(--dn-text-body);
+      font-weight: var(--dn-control-weight);
       text-align: center;
     }
 
     .dn-mobile-detail-bar__secondary {
-      background: #1f2329;
+      background: var(--dn-red);
       color: #fff;
     }
 
     .dn-mobile-detail-bar__primary {
-      background: var(--dn-red);
+      background: var(--dn-ink);
       color: #fff;
     }
   }
@@ -637,6 +714,16 @@
 
     .dn-header-fixed--listing .dn-topbar,
     .dn-header-fixed--listing .dn-header__lower {
+      display: none;
+    }
+
+    .dn-header-fixed--vehicle-detail {
+      height: 0;
+      min-height: 0;
+      background: transparent;
+    }
+
+    .dn-header-fixed--vehicle-detail .dn-header {
       display: none;
     }
 
@@ -668,8 +755,8 @@
     }
 
     .dn-header--mobile-surface .dn-mobile-control--call {
-      border-color: var(--dn-red);
-      background: var(--dn-red);
+      border-color: var(--dn-ink);
+      background: var(--dn-ink);
     }
 
 
@@ -694,8 +781,8 @@
     }
 
     .dn-header-fixed--home-overlay .dn-mobile-control--call {
-      border-color: var(--dn-red);
-      background: var(--dn-red);
+      border-color: var(--dn-ink);
+      background: var(--dn-ink);
     }
   }
 

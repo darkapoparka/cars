@@ -68,8 +68,8 @@
 			body.daynight-home-page .daynight-home-shell--home1 .daynight-home-section-banner__copy h2
 		) {
 			color: #111827 !important;
-			font-size: clamp(24px, 2.1vw, 32px) !important;
-			font-weight: 650 !important;
+			font-size: var(--sa-type-page) !important;
+			font-weight: var(--sa-weight-heading) !important;
 			letter-spacing: -0.02em !important;
 			line-height: 1.15 !important;
 			text-shadow: none !important;
@@ -83,8 +83,8 @@
 			border-radius: 0 !important;
 			box-shadow: none !important;
 			color: #c91620 !important;
-			font-size: 15px !important;
-			font-weight: 650 !important;
+			font-size: var(--sa-button-font-size) !important;
+			font-weight: var(--sa-button-font-weight) !important;
 			min-height: 36px !important;
 			padding: 0 !important;
 			text-decoration: none !important;
@@ -146,8 +146,8 @@
 				.daynight-brand-grid
 				.daynight-brand-card__name
 		) {
-			font-size: 17px !important;
-			font-weight: 650 !important;
+			font-size: var(--sa-text-control) !important;
+			font-weight: var(--sa-weight-semibold) !important;
 		}
 
 		:global(
@@ -157,7 +157,7 @@
 				.daynight-brand-card__count
 		) {
 			color: #64748b !important;
-			font-size: 13px !important;
+			font-size: var(--sa-text-caption) !important;
 		}
 
 		:global(body.daynight-home-page .daynight-home-shell--home1 .daynight-vehicle-types__grid) {
@@ -200,8 +200,8 @@
 		:global(
 			body.daynight-home-page .daynight-home-shell--home1 .daynight-vehicle-type-card__title
 		) {
-			font-size: 20px !important;
-			font-weight: 650 !important;
+			font-size: var(--sa-text-xl) !important;
+			font-weight: var(--sa-weight-heading) !important;
 			line-height: 1.25 !important;
 		}
 
@@ -209,7 +209,7 @@
 			body.daynight-home-page .daynight-home-shell--home1 .daynight-vehicle-type-card__count
 		) {
 			color: #64748b !important;
-			font-size: 13px !important;
+			font-size: var(--sa-text-caption) !important;
 			line-height: 1.35 !important;
 		}
 
@@ -242,7 +242,7 @@
 
 		:global(body.daynight-home-page .daynight-home-shell--home1 .daynight-home-metric__label) {
 			color: #d1d5db !important;
-			font-size: 16px !important;
+			font-size: var(--sa-text-base) !important;
 		}
 	}
 </style>

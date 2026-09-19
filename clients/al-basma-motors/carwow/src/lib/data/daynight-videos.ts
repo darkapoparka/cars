@@ -1,1 +1,10 @@
-export const youtubeChannelUrl='https://albasmamotors.com/';export const homeVideos=[] as const;
+export type DayNightVideo = {
+	id: string;
+	title: string;
+	duration: string;
+	thumbnail: string;
+	url: string;
+};
+
+export const youtubeChannelUrl = "";
+export const homeVideos: DayNightVideo[] = [];
