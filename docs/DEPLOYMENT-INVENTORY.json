@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-19T19:57:50.641Z",
+  "updatedAt": "2026-09-19T20:03:43.455Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.",
@@ -565,13 +565,14 @@
         "url": "https://cars-alreefusedcars.vercel.app/",
         "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
         "projectName": "cars-alreefusedcars",
-        "deploymentId": "dpl_CUn9wywk647fvkwMdPpMFYd8zWRt",
-        "commit": "68bdd79458f233b0af9327fe7f73336866f4408a",
+        "deploymentId": "dpl_6nitkaAfDfACBPmfyyT4VX48EF3c",
+        "commit": "8fd44decc13d3ef2033180f3ddc68dc4fd6b9187",
         "defaultBranch": "main",
         "gitRepository": "darkapoparka/cars-alreefusedcars",
         "gitIntegration": "linked",
-        "checkedAt": "2026-09-19T19:57:08.490Z",
-        "note": "Independent UAE demo: 3 designs plus shared Admin; six illustrative cars, not verified dealership stock."
+        "checkedAt": "2026-09-19T20:03:43.455Z",
+        "note": "Latest Git deployment includes evidence-only changes; application tree matches the initial 42/42-tested release. Latest 9/9 entry/FAB checks passed.",
+        "applicationSourceCommit": "68bdd79458f233b0af9327fe7f73336866f4408a"
       },
       "evidence": {
         "source": {
@@ -592,9 +593,10 @@
         },
         "deployment": {
           "state": "passed",
-          "deploymentId": "dpl_CUn9wywk647fvkwMdPpMFYd8zWRt",
-          "commit": "68bdd79458f233b0af9327fe7f73336866f4408a",
-          "url": "https://cars-alreefusedcars.vercel.app/"
+          "deploymentId": "dpl_6nitkaAfDfACBPmfyyT4VX48EF3c",
+          "commit": "8fd44decc13d3ef2033180f3ddc68dc4fd6b9187",
+          "url": "https://cars-alreefusedcars.vercel.app/",
+          "checkedAt": "2026-09-19T20:03:43.455Z"
         },
         "browser": {
           "state": "passed",
@@ -606,13 +608,39 @@
           ],
           "scope": "Primary page rendering, exact design routes, mobile focus/Admin, asset hashes and fail-closed demo writes",
           "report": "https://github.com/darkapoparka/cars-alreefusedcars/blob/8fd44decc13d3ef2033180f3ddc68dc4fd6b9187/docs/DELIVERY.json",
-          "checkedAt": "2026-09-19T19:57:08.490Z"
+          "checkedAt": "2026-09-19T19:57:08.490Z",
+          "latestDeploymentSmoke": {
+            "deploymentId": "dpl_6nitkaAfDfACBPmfyyT4VX48EF3c",
+            "commit": "8fd44decc13d3ef2033180f3ddc68dc4fd6b9187",
+            "checks": 9,
+            "passed": 9,
+            "checkedAt": "2026-09-19T20:03:43.455Z",
+            "applicationTreeIdenticalTo": "68bdd79458f233b0af9327fe7f73336866f4408a"
+          }
         },
         "ownerReview": {
           "state": "unknown"
         }
       },
-      "handoff": "https://github.com/darkapoparka/cars-alreefusedcars/blob/main/docs/HANDOFF.md"
+      "handoff": "https://github.com/darkapoparka/cars-alreefusedcars/blob/main/docs/HANDOFF.md",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T20:03:43.455Z",
+          "previousDelivery": {
+            "state": "live-verified",
+            "url": "https://cars-alreefusedcars.vercel.app/",
+            "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+            "projectName": "cars-alreefusedcars",
+            "deploymentId": "dpl_CUn9wywk647fvkwMdPpMFYd8zWRt",
+            "commit": "68bdd79458f233b0af9327fe7f73336866f4408a",
+            "defaultBranch": "main",
+            "gitRepository": "darkapoparka/cars-alreefusedcars",
+            "gitIntegration": "linked",
+            "checkedAt": "2026-09-19T19:57:08.490Z",
+            "note": "Independent UAE demo: 3 designs plus shared Admin; six illustrative cars, not verified dealership stock."
+          }
+        }
+      ]
     },
     {
       "slug": "amh-cars-bhm",

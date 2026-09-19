@@ -1,0 +1,133 @@
+{
+  "checkedAt": "2026-09-19T20:03:43.468Z",
+  "repository": "darkapoparka/cars-alreefusedcars",
+  "branch": "main",
+  "sourceCommit": "68bdd79458f233b0af9327fe7f73336866f4408a",
+  "documentationCommit": "8fd44decc13d3ef2033180f3ddc68dc4fd6b9187",
+  "url": "https://cars-alreefusedcars.vercel.app/",
+  "latestDeploymentId": "dpl_6nitkaAfDfACBPmfyyT4VX48EF3c",
+  "initialVerifiedDeploymentId": "dpl_CUn9wywk647fvkwMdPpMFYd8zWRt",
+  "localBrowser": {
+    "passed": 42,
+    "failed": 0
+  },
+  "initialProductionBrowser": {
+    "passed": 42,
+    "failed": 0
+  },
+  "latestProductionSmoke": {
+    "passed": 9,
+    "failed": 0,
+    "checks": [
+      {
+        "entry": "/",
+        "width": 1440,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      },
+      {
+        "entry": "/variant-2/cars",
+        "width": 1440,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      },
+      {
+        "entry": "/variant-3/",
+        "width": 1440,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      },
+      {
+        "entry": "/",
+        "width": 390,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      },
+      {
+        "entry": "/variant-2/cars",
+        "width": 390,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      },
+      {
+        "entry": "/variant-3/",
+        "width": 390,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      },
+      {
+        "entry": "/",
+        "width": 320,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      },
+      {
+        "entry": "/variant-2/cars",
+        "width": 320,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      },
+      {
+        "entry": "/variant-3/",
+        "width": 320,
+        "status": 200,
+        "links": 4,
+        "admin": "https://cars-admin-blue.vercel.app/?dealer=cars-alreefusedcars",
+        "overflow": false,
+        "focused": true,
+        "pass": true
+      }
+    ]
+  },
+  "productionAssets": {
+    "passed": 33,
+    "failed": 0
+  },
+  "publicWriteRejection": {
+    "passed": 3,
+    "failed": 0
+  },
+  "dealerGuardTests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "carsWorkflowTests": {
+    "passed": 79,
+    "failed": 0
+  },
+  "centralAppDuplicate": false,
+  "registryOwnedSource": "independent-repository",
+  "applicationDiffBetweenVerifiedDeployments": []
+}

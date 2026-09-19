@@ -31,3 +31,7 @@ The existing 24 legacy dealers, template masters and their deployment aliases we
 The final full Cars workflow suite passed 79/79 tests with no exclusions, including independent registry and dashboard-link regressions. The 12-document/three-skill workspace check passed. These tooling checks are separate from the dealer's six guard tests and 42 public browser checks.
 
 The saved technical registry validates and its views were regenerated without rescanning old dealer drafts. A separate full local-manifest comparison reports an existing Exclusive Auto Varna draft repository-identity mismatch; it was not modified as part of this pilot and is not a failure of the new independent record.
+
+## Final production identity
+
+Git also built the evidence-only commit 8fd44decc13d3ef2033180f3ddc68dc4fd6b9187 as dpl_6nitkaAfDfACBPmfyyT4VX48EF3c. It is READY on the same public alias. A Git comparison confirmed no application, asset, script or deployment-configuration differences from the initial verified release, and 9/9 fresh entry/FAB checks passed on the final alias. The current registry points to this deployment. [Final proof](AL-REEF-DELIVERY.json) separates the original 42-check run from the final same-application smoke check. No further dealer-source push is needed to record this observation.
