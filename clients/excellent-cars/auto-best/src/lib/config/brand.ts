@@ -31,6 +31,6 @@ export const brand = {
   addressLine,
   address: "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
   appointment: "Понеделник – петък: 08:30–19:00; Събота: 09:00–18:00; Неделя: почивен ден",
-  logo: "/assets/excellent/logo-header.png",
-  logoOnDark: "/assets/excellent/logo-cars.jpg"
+  logo: "/assets/brand/logo-on-light.webp",
+  logoOnDark: "/assets/brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;
