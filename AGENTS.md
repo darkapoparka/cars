@@ -2,7 +2,7 @@
 
 This is an independent personalized dealer copy. Canonical editable source is Cars clients/f1rst-motors/. The dedicated dealer repository is a publishing mirror. Make lasting fixes in canonical source or the versioned packaging layer and regenerate; preserve unmatched mirror fixes first. This copy is not a reusable template master.
 
-Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/634fab290c26cc200ed96481868b680c59cf4fae/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/634fab290c26cc200ed96481868b680c59cf4fae/docs/LEAD-PUBLISHING.md).
+Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/796cfcde8cdc556d12074194590f43118ee7b6b1/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/796cfcde8cdc556d12074194590f43118ee7b6b1/docs/LEAD-PUBLISHING.md).
 
 Preserve this dealer identity, exact repository/domain and offered designs. Apply sourced facts to real data modules; metadata alone does not change the application. Protect layout and interactions during an ordinary correction. Sample forms do not prove delivery. Audit requests are read-only; publication never authorizes outreach.
 
