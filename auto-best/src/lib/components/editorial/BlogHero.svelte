@@ -1,7 +1,6 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
-  import { leadSite } from '$config/lead-site';
   import { blogCategories, blogFilterHref, type BlogFilters } from '$data/editorial';
 
   let { filters }: { filters: BlogFilters } = $props();
@@ -11,7 +10,7 @@
   <HeroVehicles pair="blog" />
   <img
     class="dn-blog-hero__media"
-    src={leadSite.artwork.blogHero}
+    src="/assets/images/lead/day-night-blog-hero-v2.webp"
     alt=""
     width="1920"
     height="1080"

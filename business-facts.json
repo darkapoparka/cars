@@ -24,7 +24,7 @@
     "Лизинг",
     "Доставка от чужбина"
   ],
-  "logo": "/assets/brand/logo-on-light.webp",
+  "logo": "/assets/champion/logo.png",
   "showroom": "/assets/champion/cover.jpg",
   "stockSnapshotDate": "2026-09-07",
   "stockCount": 16,
@@ -38,16 +38,5 @@
     "No verified email or social profile linked from marketplace.",
     "No reputation or finance approval claims reproduced.",
     "Representative inventory snapshot, not live feed."
-  ],
-  "workingLogoPath": "assets/champion/logo.png",
-  "previewNotice": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
-  "branding": {
-    "logoOnLight": "/assets/brand/logo-on-light.webp",
-    "logoOnDark": "/assets/brand/logo-on-dark.webp",
-    "rasterPolicy": "transparent-png-webp-surface-pair-v1"
-  },
-  "logoOnLight": "/assets/brand/logo-on-light.webp",
-  "logoOnDark": "/assets/brand/logo-on-dark.webp",
-  "logoLight": "/assets/brand/logo-on-dark.webp",
-  "logoDark": "/assets/brand/logo-on-light.webp"
+  ]
 }

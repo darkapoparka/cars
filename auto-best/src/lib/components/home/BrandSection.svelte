@@ -1,17 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import { brands } from '$data/home';
-  const mobileBrands = new Set(
-    [...brands.filter((brand) => brand.count > 0), ...brands.filter((brand) => brand.count <= 0)]
-      .slice(0, 3)
-      .map((brand) => brand.label)
-  );
-  const logoWidth = (brand: (typeof brands)[number], opticalHeight: number, maxWidth: number) => Math.round(Math.min(
-    maxWidth,
-    opticalHeight * (brand.bounds[2] - brand.bounds[0]) / (brand.bounds[3] - brand.bounds[1])
-  ));
-  const mobileLogoWidth = (brand: (typeof brands)[number]) => logoWidth(brand, 46, 84);
-  const desktopLogoWidth = (brand: (typeof brands)[number]) => logoWidth(brand, 60, 116);
+  const mobileBrands = new Set(brands.filter(brand => brand.count > 0).slice(0, 3).map(brand => brand.label));
   let expanded = $state(false);
 </script>
 
@@ -31,14 +21,14 @@
         {#each brands as brand (brand.label)}
           <a class="dn-brand-card" class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`)}>
             <span class="dn-brand-card__image">
-              <span class="dn-brand-card__frame" style:--logo-mobile-width={`${mobileLogoWidth(brand)}px`} style:--logo-desktop-width={`${desktopLogoWidth(brand)}px`} style:--logo-ratio={`${brand.bounds[2] - brand.bounds[0]} / ${brand.bounds[3] - brand.bounds[1]}`} style:--logo-image-width={`${brand.width / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-left={`${-brand.bounds[0] / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-top={`${-brand.bounds[1] / (brand.bounds[3] - brand.bounds[1]) * 100}%`}><img src={brand.image} alt={`${brand.label} лого`} loading="lazy" decoding="async" width={brand.width} height={brand.height} /></span>
+              <span class="dn-brand-card__frame" style:--logo-width={`${Math.min(84, 44 * (brand.bounds[2] - brand.bounds[0]) / (brand.bounds[3] - brand.bounds[1]))}px`} style:--logo-ratio={`${brand.bounds[2] - brand.bounds[0]} / ${brand.bounds[3] - brand.bounds[1]}`} style:--logo-image-width={`${brand.width / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-left={`${-brand.bounds[0] / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-top={`${-brand.bounds[1] / (brand.bounds[3] - brand.bounds[1]) * 100}%`}><img src={brand.image} alt={`${brand.label} лого`} loading="lazy" decoding="async" width={brand.width} height={brand.height} /></span>
             </span>
             <strong>{brand.label}</strong>
           </a>
         {/each}
       <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="brands-grid" onclick={() => expanded = !expanded}>
         <span class="dn-brand-all-glyph" aria-hidden="true">
-          <span class="dn-brand-all-glyph__accent"></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
         </span>
         <strong>{expanded ? 'Покажи по-малко' : 'Всички марки'}</strong>
       </button>
@@ -49,11 +39,11 @@
 </section>
 
 <style>
-  .dn-brand-card__frame { display: block; position: relative; width: var(--logo-mobile-width); aspect-ratio: var(--logo-ratio); overflow: hidden; }
+  .dn-brand-card__frame { display: contents; }
   .dn-discovery-toggle { display: none; }
   @media (max-width: 767px) {
     .dn-discovery-toggle { display: flex; width: 100%; min-height: 44px; align-items: center; justify-content: center; margin-top: 10px; border: 1px solid #d9dde1; border-radius: var(--dn-radius-button); background: #eceef0; color: #24272c; font: inherit; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
-    .dn-discovery-toggle:focus-visible { outline: 3px solid var(--dn-line-emphasis); outline-offset: 3px; }
+    .dn-discovery-toggle:focus-visible { outline: 3px solid #8c959f; outline-offset: 3px; }
   }
 
   .dn-brand-section { padding: 32px 0; background: #fff; }
@@ -67,11 +57,11 @@
   .dn-brand-grid { display: grid; grid-template-columns: repeat(var(--brand-columns), minmax(0, 1fr)); gap: 16px; margin-top: 0; }
   .dn-brand-card { display: block; min-width: 0; padding: 16px 12px; border: 0; border-radius: 16px; background: #fff; color: #24272c; text-align: center; transform: none; transition: box-shadow 180ms ease-out; }
   .dn-brand-card__image { display: flex; width: 100%; height: 52px; align-items: center; justify-content: center; margin-bottom: 12px; }
-  .dn-brand-card__image img { position: absolute; width: var(--logo-image-width); max-width: none; height: auto; left: var(--logo-left); top: var(--logo-top); }
+  .dn-brand-card__image img { width: 100%; height: 52px; object-fit: contain; }
   .dn-brand-card strong { display: block; margin: 0; color: #24272c; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
   .dn-brand-card:hover, .dn-brand-card:focus-visible { box-shadow: var(--dn-card-hover-shadow); }
-  .dn-brand-hero__cta:hover { background: var(--dn-surface-hover); }
-  a:focus-visible { outline: 3px solid var(--dn-line-emphasis); outline-offset: 3px; }
+  .dn-brand-hero__cta:hover { background: #e9edf1; }
+  a:focus-visible { outline: 3px solid #8c959f; outline-offset: 3px; }
 
   @media (min-width: 768px) and (max-width: 1199px) {
     .dn-brand-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -81,33 +71,33 @@
   @media (min-width: 992px) {
     .dn-brand-hero { padding: 0; }
     .dn-brand-panel { position: relative; margin-top: calc(-1 * var(--dn-home-banner-overlap)); padding: 24px; border-radius: var(--dn-radius); }
-    .dn-brand-card__image { height: 72px; }
-    .dn-brand-card__frame { width: var(--logo-desktop-width); }
+    .dn-brand-card__image, .dn-brand-card__image img { height: 72px; }
     .dn-brand-card strong { font-size: var(--dn-text-lead); line-height: var(--dn-leading-body); }
   }
 
   @media (max-width: 767px) {
-    .dn-brand-section { padding: var(--dn-space-5) 0 var(--dn-space-2); background: var(--dn-mobile-canvas); }
+    .dn-brand-section { padding: 12px 0 12px; background: var(--dn-mobile-canvas); }
     .dn-brand-shell { padding-inline: 0; border-radius: 0; background: transparent; }
     .dn-brand-hero { padding: 0; }
     .dn-brand-hero__copy { gap: 16px; }
-    .dn-brand-hero h2 { color: var(--dn-ink-strong); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+    .dn-brand-hero h2 { color: #171a20; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
     .dn-heading-desktop { display: none; }
     .dn-brand-hero__cta { display: none; min-height: 44px; padding: 0; border: 0; background: transparent; color: #4f5661; font-size: var(--dn-cta-size); }
     .dn-heading-mobile { display: inline; }
     .dn-brand-panel { margin-top: 8px; padding: 0; border-radius: 0; background: transparent; }
     .dn-brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-    .dn-brand-card { display: grid; min-height: 108px; grid-template-rows: 58px auto; padding: 8px 6px 10px; border-radius: 14px; background: var(--dn-mobile-surface); }
-    .dn-brand-card__image { height: 54px; align-self: center; margin: 0; }
-    .dn-brand-card__frame { width: var(--logo-mobile-width); }
-    .dn-brand-all-glyph { display: grid; width: 54px; height: 54px; align-self: center; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 auto; padding: 9px; border-radius: 16px; background: #f1f3f5; }
+    .dn-brand-card { min-height: 108px; padding: 10px 6px; border-radius: 14px; background: var(--dn-mobile-surface); }
+    .dn-brand-card__image { height: 48px; margin-bottom: 6px; }
+    .dn-brand-card__frame { display: block; position: relative; width: var(--logo-width); aspect-ratio: var(--logo-ratio); overflow: hidden; }
+    .dn-brand-card__image img { position: absolute; width: var(--logo-image-width); max-width: none; height: auto; left: var(--logo-left); top: var(--logo-top); }
+    .dn-brand-all-glyph { display: grid; width: 54px; height: 54px; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 auto 7px; padding: 9px; border-radius: 16px; background: #f1f3f5; }
     .dn-brand-all-glyph span { border-radius: 50%; background: #cdd2d8; }
-    .dn-brand-all-glyph__accent { background: var(--dn-red); }
+    .dn-brand-all-glyph span:first-child { background: var(--dn-red); }
     .dn-brand-card--secondary { display: none; }
-    .dn-brand-card strong { align-self: end; font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
+    .dn-brand-card strong { font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
     .dn-brand-card--additional { order: 2; }
-    .dn-discovery-toggle { order: 1; display: grid; min-height: 108px; grid-template-rows: 58px auto; margin: 0; padding: 8px 6px 10px; border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); font-size: var(--dn-control-size); }
-    .dn-discovery-toggle strong { display: block; align-self: end; line-height: var(--dn-leading-control); font-weight: var(--dn-weight-semibold); }
+    .dn-discovery-toggle { order: 1; display: block; min-height: 108px; margin: 0; padding: 10px 6px; border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); font-size: var(--dn-control-size); }
+    .dn-discovery-toggle strong { display: block; line-height: var(--dn-leading-control); font-weight: var(--dn-weight-semibold); }
   }
 
   @media (prefers-reduced-motion: reduce) {

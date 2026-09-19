@@ -123,7 +123,7 @@
   .dn-entry-editor-fields { overflow-y: auto; overscroll-behavior: contain; padding: var(--dn-space-3) var(--dn-space-6) var(--dn-space-6); }
   label { display: block; margin-bottom: var(--dn-space-2); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); }
   label span { color: var(--dn-muted); font-weight: var(--dn-weight-regular); }
-  input, textarea { display: block; width: 100%; min-height: var(--dn-entry-height); padding: var(--dn-space-2) var(--dn-space-3); border: 1px solid var(--dn-entry-line); border-radius: var(--dn-radius-control); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-entry-font); }
+  input, textarea { display: block; width: 100%; min-height: var(--dn-entry-height); padding: var(--dn-space-3); border: 1px solid var(--dn-entry-line); border-radius: var(--dn-radius-control); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-entry-font); }
   textarea { resize: vertical; }
   input { border-radius: var(--dn-pill); text-overflow: ellipsis; }
   p { margin: var(--dn-space-2) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
@@ -136,7 +136,6 @@
   .dn-entry-editor-save:hover { background: var(--dn-red-hover); }
   .dn-entry-editor :is(button,input,textarea):focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
   @media (max-width: 767px) {
-    .dn-entry-editor-trigger { height: var(--dn-entry-action-height); min-height: var(--dn-entry-action-height); }
     .dn-entry-editor { inset: var(--dn-form-dialog-top) 0 auto; width: 100%; height: var(--dn-form-dialog-height); max-height: var(--dn-form-dialog-height); margin: 0; border-radius: 0; }
     form, .dn-entry-editor-fields { flex: 1; min-height: 0; }
     header { padding-inline: var(--dn-space-4); }

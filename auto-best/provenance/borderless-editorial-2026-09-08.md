@@ -6,7 +6,7 @@ Mode: built-in ImageGen, photo edits. Original Pexels photographs remain in the 
 
 Input photograph: `J:/cars/templates/auto-best/static/assets/images/blog/blog-1.jpg`
 
-Saved asset: `J:/cars/templates/auto-best/static/assets/images/template/menu-editorial-inspection-v1.webp`
+Saved asset: `J:/cars/templates/auto-best/static/assets/images/template/menu-editorial-inspection-v1.png`
 
 Generated original: `C:/Users/radev/.codex/generated_images/01a081af-ffdf-73b0-a758-891be43192df/exec-6b412121-4246-4b7a-a4e7-7fcee1e6cf74.png`
 
@@ -22,7 +22,7 @@ No text, no question titles, no captions, no additional logos, no watermark, no 
 
 Input photograph: `J:/cars/templates/auto-best/static/assets/images/blog/blog-2.jpg`
 
-Saved asset: `J:/cars/templates/auto-best/static/assets/images/template/menu-editorial-import-v1.webp`
+Saved asset: `J:/cars/templates/auto-best/static/assets/images/template/menu-editorial-import-v1.png`
 
 Generated original: `C:/Users/radev/.codex/generated_images/01a081af-ffdf-73b0-a758-891be43192df/exec-37eb2b2a-380a-4db1-b549-44d2c17aaf16.png`
 
@@ -38,7 +38,7 @@ No text, no question titles, no captions, no additional logos, no watermark, no 
 
 Input photograph: `J:/cars/templates/auto-best/static/assets/images/blog/blog-3.jpg`
 
-Saved asset: `J:/cars/templates/auto-best/static/assets/images/template/menu-editorial-leasing-v1.webp`
+Saved asset: `J:/cars/templates/auto-best/static/assets/images/template/menu-editorial-leasing-v1.png`
 
 Generated original: `C:/Users/radev/.codex/generated_images/01a081af-ffdf-73b0-a758-891be43192df/exec-58c9f909-d629-4be6-a54f-0ff7471d5f55.png`
 

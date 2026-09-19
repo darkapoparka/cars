@@ -13,16 +13,13 @@
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --threshold error",
     "check:architecture": "node scripts/check-architecture.mjs",
-    "check:css-policy": "node scripts/check-css-policy.mjs",
     "check:assets": "node scripts/check-assets.mjs",
-    "check:tokens": "node scripts/check-tokens.mjs",
     "check:typography": "node scripts/check-typography.mjs",
-    "validate": "npm run check:architecture && npm run check:css-policy && npm run check:tokens && npm run check:typography && npm run check:assets && npm run check:domain && npm run check && npm run build",
+    "validate": "npm run check:architecture && npm run check:typography && npm run check:assets && npm run check:domain && npm run check && npm run build",
     "quality": "npm run validate && npm run smoke",
-    "smoke": "node scripts/sveltekit-smoke.mjs && node scripts/enquiry-smoke.mjs && node scripts/mobile-filter-smoke.mjs && node scripts/desktop-discovery-smoke.mjs && npm run smoke:phase4",
+    "smoke": "node scripts/sveltekit-smoke.mjs && node scripts/enquiry-smoke.mjs && node scripts/mobile-filter-smoke.mjs && node scripts/desktop-discovery-smoke.mjs",
     "smoke:typography": "node scripts/typography-smoke.mjs",
-    "check:domain": "node scripts/check-domain.mjs",
-    "smoke:phase4": "node scripts/phase4-smoke.mjs"
+    "check:domain": "node scripts/check-domain.mjs"
   },
   "dependencies": {
     "@fontsource-variable/onest": "5.3.1"

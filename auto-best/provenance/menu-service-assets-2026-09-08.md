@@ -1,6 +1,6 @@
 # Menu service asset prompts — 8 September 2026
 
-Generated with the built-in ImageGen tool. Style reference: `static/assets/images/lead/day-night-studio-guide-v1.webp`. These are conceptual service illustrations, not actual premises, stock or contract documents. Initial renders contained a baked checkerboard; they were not shipped. A second built-in edit replaced that with opaque card-colored backgrounds. No alpha transparency is claimed. Generated PNG originals remain unchanged at their source locations; runtime menu assets are WebP quality 97/method 6 derivatives at the same dimensions for faster delivery.
+Generated with the built-in ImageGen tool. Style reference: `static/assets/images/lead/day-night-studio-guide-v1.webp`. These are conceptual service illustrations, not actual premises, stock or contract documents. Initial renders contained a baked checkerboard; they were not shipped. A second built-in edit replaced that with opaque card-colored backgrounds. No alpha transparency is claimed. No raster manipulation was performed after generation; final PNGs are copied unchanged.
 
 ## showroom
 

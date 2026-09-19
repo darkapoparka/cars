@@ -3,10 +3,9 @@
   import { resolve } from '$app/paths';
   import { formatVehiclePrice } from '$data/inventory';
 
-  let { priceEur, vehicleId, idPrefix = 'finance' }: { priceEur: number; vehicleId: number; idPrefix?: string } = $props();
+  let { priceEur, vehicleId }: { priceEur: number; vehicleId: number } = $props();
 
   const financeTerms = [12, 24, 36, 48, 60] as const;
-  let disclaimerId = $derived(`${idPrefix}-disclaimer`);
   let downPaymentEur = $state(0);
   let termMonths = $state<(typeof financeTerms)[number]>(60);
 
@@ -36,7 +35,7 @@
           step="500"
           bind:value={downPaymentEur}
           onblur={normalizeDownPayment}
-          aria-describedby={disclaimerId}
+          aria-describedby="finance-disclaimer"
         />
         <b>€</b>
       </span>
@@ -44,7 +43,7 @@
 
     <label>
       <span>Срок</span>
-      <select bind:value={termMonths} aria-describedby={disclaimerId}>
+      <select bind:value={termMonths} aria-describedby="finance-disclaimer">
         {#each financeTerms as term (term)}
           <option value={term}>{term} месеца</option>
         {/each}
@@ -63,7 +62,7 @@
     </div>
   </dl>
 
-  <p id={disclaimerId} class="dn-finance-calculator__disclaimer">
+  <p id="finance-disclaimer" class="dn-finance-calculator__disclaimer">
     Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.
   </p>
 

@@ -1,11 +1,10 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
-  import type { Attachment } from 'svelte/attachments';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import { brand } from '$config/brand';
 
-  let { showActions = true, showMobileFooter = false, observeFooter }: { showActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
+  let { showActions = true, showMobileFooter = false }: { showActions?: boolean; showMobileFooter?: boolean } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const actions = [
@@ -54,7 +53,7 @@
   </section>
 {/if}
 
-<footer id="dn-site-footer" {@attach observeFooter} class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
+<footer id="dn-site-footer" class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
       <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logo} alt={brand.name} width="220" height="58" /></a>
@@ -82,12 +81,12 @@
       <a href={resolve('/contact')} class="dn-footer__contact-link">
         <Icon name="map-pin" size={18} />
         <span>{brand.address}</span>
-        <span class="dn-footer__contact-arrow"><Icon name="arrow-right" size={16} /></span>
+        <Icon name="arrow-right" size={16} />
       </a>
       <p class="dn-footer__appointment">{brand.appointment}</p>
     </div>
   </div>
-  <div class="container dn-footer__bottom"><span class="dn-footer__copyright">© {new Date().getFullYear()} {brand.name}</span><span class="dn-footer__descriptor">Автомобили · Внос · Лизинг</span></div>
+  <div class="container dn-footer__bottom"><span>© {new Date().getFullYear()} {brand.name}</span><span>Автомобили · Внос · Лизинг</span></div>
 </footer>
 
 <style>
@@ -124,7 +123,7 @@
   .dn-footer__call { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: var(--dn-space-2); padding: var(--dn-space-3) var(--dn-space-6); border-radius: var(--dn-radius-button); background: var(--dn-red); color: var(--dn-white); font: var(--dn-cta-font); }
   .dn-footer .dn-footer__call:hover { background: var(--dn-red-hover); color: var(--dn-white); }
   .dn-footer__contact-link { display: grid; grid-template-columns: 18px minmax(0, 1fr) 24px; min-height: var(--dn-control-hit-height); align-items: center; gap: var(--dn-space-3); margin-top: var(--dn-space-3); padding-block: var(--dn-space-2); color: var(--dn-ink); font: var(--dn-control-font); }
-  .dn-footer__contact-arrow { display: grid; justify-self: center; place-items: center; transform: rotate(-45deg); color: var(--dn-muted); }
+  .dn-footer__contact-link :global(svg:last-child) { justify-self: center; transform: rotate(-45deg); color: var(--dn-muted); }
   .dn-footer__appointment { margin: var(--dn-space-1) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-footer__bottom { display: flex; justify-content: space-between; gap: var(--dn-space-4); margin-top: 32px; padding-top: var(--dn-space-4); border-top: 1px solid var(--dn-line); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
 
@@ -133,19 +132,17 @@
   }
   @media (max-width: 767px) {
     .dn-footer-actions, .dn-footer--mobile-hidden { display: none; }
-    .dn-footer { padding-block: var(--dn-space-5) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
+    .dn-footer { padding-block: var(--dn-space-6) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
     .dn-footer > .container { width: calc(100% - 40px); }
-    .dn-footer__grid { grid-template-columns: minmax(0, 1fr); gap: var(--dn-space-3); }
-    .dn-footer__logo img { width: 160px; height: 42px; }
+    .dn-footer__grid { grid-template-columns: minmax(0, 1fr); gap: var(--dn-space-4); }
+    .dn-footer__logo img { width: 166px; height: 44px; }
     .dn-footer__tagline { margin-top: 0; }
     .dn-footer__intro p, .dn-footer__vehicles, .dn-footer nav strong { display: none; }
-    .dn-footer__contact h2 { max-width: 300px; margin-bottom: var(--dn-space-3); }
+    .dn-footer__contact h2 { max-width: 300px; }
     .dn-footer__call { width: 100%; }
-    .dn-footer__contact-link { margin-top: var(--dn-space-2); padding-block: var(--dn-space-1); }
-    .dn-footer__appointment { margin-top: 0; }
-    .dn-footer__company { display: flex; flex-wrap: wrap; gap: var(--dn-space-1) var(--dn-space-6); }
+    .dn-footer__company { display: flex; flex-wrap: wrap; gap: var(--dn-space-2) var(--dn-space-6); }
     .dn-footer__company a { color: var(--dn-ink); }
-    .dn-footer__bottom { margin-top: var(--dn-space-2); padding-top: var(--dn-space-3); }
-    .dn-footer__descriptor { display: none; }
+    .dn-footer__bottom { margin-top: var(--dn-space-3); }
+    .dn-footer__bottom > span:last-child { display: none; }
   }
 </style>

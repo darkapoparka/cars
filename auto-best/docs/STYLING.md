@@ -4,60 +4,51 @@ Auto Best combines an image-led automotive layout, Onest typography, rounded sur
 
 ## CSS structure
 
-[app.css](../src/app.css) imports three global sheets in this order:
+[app.css](../src/app.css) imports four global sheets in this order:
 
 | Sheet | Contents |
 | --- | --- |
-| [tokens.css](../src/lib/styles/tokens.css) | Generic fallbacks, foundation values, semantic aliases and shared component tokens |
+| [tokens.css](../src/lib/styles/tokens.css) | Semantic colors, typography, radii and shared layout dimensions |
 | [base.css](../src/lib/styles/base.css) | Native element defaults, controls and shared utility classes |
-| [composition.css](../src/lib/styles/composition.css) | Shared shell, hero and cross-component layout relationships |
+| [navigation.css](../src/lib/styles/navigation.css) | Shared navigation foundations |
+| [composition.css](../src/lib/styles/composition.css) | Hero geometry, shell relationships, responsive layout and cross-component adjustments |
 
-Svelte component `<style>` blocks own internal presentation. The explicit Phase 3 owners are:
+Svelte component `<style>` blocks own internal presentation. Route sheets such as `contact/contact.css`, `listing-grid/listing.css` and the detail `detail.css` files own page composition and route-specific component adaptations. Route CSS is imported from the corresponding page and is global CSS; its selectors therefore use route/component prefixes.
 
-- `Header.svelte`: top bar, desktop/mobile header, navigation and mega-menu geometry.
-- `VehicleDiscoveryForm.svelte`: discovery/search geometry and breakpoints.
-- `ListingFilters.svelte`: visible filters, mobile filter sheet and sorting controls.
-- `ListingResults.svelte`: result-grid and empty-state geometry.
-- `VehicleCard.svelte`: vehicle-card sizing and responsive variants.
+`Footer.svelte` owns the footer and its optional service links, including their responsive styles. The footer uses the shared white surface, dark logo variant (`brand.logo`), regular navigation type and red phone CTA. Mobile keeps the contact block and company links; desktop includes both navigation columns. The shell's footer visibility/padding relationship remains in `composition.css`.
 
-Route sheets such as `contact/contact.css`, `listing-grid/listing.css` and the detail `detail.css` files own page-stage composition and route-specific adaptations. Standalone `.css` files are already global CSS and must use ordinary selectors; Svelte `:global(...)` belongs only inside a component style block. Do not reintroduce a giant route or desktop stylesheet to bypass component ownership.
-
-Semantic UI identity uses named classes, typed props and explicit attributes such as `data-route`, `data-contact-topic`, `data-journey`, `data-mobile-bottom`, `data-slot` and `data-variant`. Selectors must not depend on element order, generated class names or class substrings. `check:css-policy` enforces these boundaries and also keeps dealer artwork/palette values in the typed lead-site configuration.
-
-Svelte adds a scoping class to component selectors, which changes specificity. Moving a selector unchanged between a component and a global sheet can therefore change the result. Use `:global(...)` only when a component intentionally styles child-component output. See the [Svelte scoped styles reference](https://svelte.dev/docs/svelte/scoped-styles).
-
-`Footer.svelte` owns the footer and its optional service links, including their responsive styles. The shell's footer visibility and bottom-offset relationships remain shared composition concerns.
+Svelte adds a scoping class to component selectors, which changes specificity. Moving a selector unchanged from a component to a global sheet can change the result. Explicit `:global(...)` selectors are used where an owner styles child-component output. See the [Svelte scoped styles reference](https://svelte.dev/docs/svelte/scoped-styles).
 
 The `dn-` class prefix is inherited naming, not a runtime dependency on the original dealer. Renaming it is unnecessary for a client skin.
 
-## Token architecture
+## Color palette
 
-`tokens.css` is the single source of truth for reusable visual values. It follows the same reference-and-alias model used by Style Dictionary and the DTCG format, while staying as CSS because this template currently has one delivery platform and does not need a token build dependency.
+These are the shared token defaults, not a list of every local campaign color:
 
-- **Foundation tokens** own raw colors, spacing, font sizes, weights and the 40/44/48px control-height scale.
-- **Semantic aliases** name reusable roles such as canvas, raised surface, hover surface, strong ink and emphasized lines.
-- **Component tokens** describe stable relationships for Home, navigation, entry workflows and other shared patterns. They reference foundation or semantic tokens instead of copying values.
-
-A component may override a component token for a responsive mode, but the override should reference another shared token. Campaign gradients, artwork crops, provider-specific embeds and genuinely one-off geometry can stay local. `check:tokens` verifies unique global declarations, alias references, cycles, unresolved source usage and the shared control-height contract.
-
-## Color palette and dealer theme
-
-`tokens.css` contains generic fallback values so components remain renderable without a mounted dealer configuration. The active Day & Night preview values live in the typed [`lead-site.ts`](../src/lib/config/lead-site.ts) configuration. `SiteShell.svelte` maps that configuration to semantic CSS custom properties; generic components consume those properties rather than embedding dealer literals or artwork paths.
-
-| Lead-site role | Active value | CSS property consumed by components |
+| Token | Value | Role |
 | --- | --- | --- |
-| Accent | `#c40101` | `--dn-red` |
-| Accent hover | `#a90000` | `--dn-red-hover` |
-| Workflow canvas | `#a90f1c` | `--dn-workflow-canvas` |
-| Hero surface | `#171a1f` | `--dn-theme-hero-surface` |
-| Campaign surface / accent | `#18191c` / `#b80024` | `--dn-theme-campaign-surface` / `--dn-theme-campaign-accent` |
-| Blog hero | `#f0c84b` | `--dn-theme-blog-hero-surface` |
+| `--dn-red` | `#c40101` | Primary red actions and branded sections |
+| `--dn-red-hover` | `#a90000` | Red hover state |
+| `--dn-ink` | `#14171d` | Main dark text/surfaces |
+| `--dn-ink-hover` | `#292e36` | Dark hover state |
+| `--dn-muted` | `#626873` | Supporting text |
+| `--dn-line` | `#e7e8eb` | Subtle control/separation lines |
+| `--dn-surface` | `#f6f7f9` | Neutral shared surface |
+| `--dn-home-panel` | `#f1f3f5` | Homepage content panels |
+| `--dn-mobile-canvas` | `#f4f5f7` | Mobile page background |
+| `--dn-mobile-surface` | `#fff` | Mobile cards and controls |
+| `--dn-focus` | `#0b57d0` | Visible keyboard focus |
 
-The mobile service grid keeps its approved four-tone family through `leadSite.theme.actionTones`: blue inventory, red Sell/Barter, pale-blue Import and charcoal Leasing. Components reference `--dn-theme-action-*` properties, so the current appearance is preserved without dealer-specific literals in generic component CSS.
+The approved mobile service grid is deliberately not monochrome: inventory is blue, sell/trade-in red, import pale blue and leasing charcoal. Its working-preview component uses these local gradients:
 
-All `/assets/images/lead/` paths are owned by `lead-site.ts`, including route heroes, workflow banners, vehicle cutouts, sample inventory, videos and PDP artwork. Data and presentation modules may add dimensions, crops or semantic keys, but they must obtain the source path from configuration. `check:css-policy` rejects lead artwork paths elsewhere in `src/`.
+| Card | Gradient |
+| --- | --- |
+| Inventory | `#135da8` to `#0d3d72` |
+| Sell / trade-in | `#d00832` to `#9b001f` |
+| Import | `#e8f4ff` to `#c8e3f8` |
+| Leasing | `#23262b` to `#111317` |
 
-Shared neutral interface values such as ink, muted text, lines, raised surfaces and focus color remain generic tokens. A client theme should change the typed dealer roles and artwork mapping, not search-and-replace colors throughout component styles.
+Those colors belong to that campaign family. Changing the brand red alone does not recolor baked image text, all artwork, or every local gradient.
 
 ## Typography
 
@@ -69,7 +60,6 @@ The root layout imports `@fontsource-variable/onest`. `--dn-font` is `Onest Vari
 | `--dn-text-badge` | `0.875rem` | Compact badges |
 | `--dn-text-meta` | `0.875rem` | Supporting metadata |
 | `--dn-text-body` | `1rem` | Body copy, inputs and ordinary controls |
-| `--dn-text-control-prominent` | `1.0625rem` | Spacious desktop discovery values and dense PDP values |
 | `--dn-text-lead` | `1.125rem` | Introductory copy, primary actions and prominent entry fields |
 | `--dn-text-card` | `1.25rem` | Card headings |
 | `--dn-text-subheading` | `1.5rem` | Subheadings |
@@ -81,13 +71,13 @@ The root layout imports `@fontsource-variable/onest`. `--dn-font` is `Onest Vari
 
 All live-text typography values belong to `tokens.css`. Components and route sheets select semantic roles; they must not introduce numeric font sizes, font weights, line heights, tracking, or local font shorthands. `check:typography`, included in `validate`, enforces this boundary. Fluid section, hero and display roles also live in tokens. Responsive layouts may select a smaller heading role, but must not shrink ordinary controls below the control role to make them fit.
 
-Use regular 400 for prose, the interpolated UI weight 450 where dense black interface text needs less visual harshness, medium 500 for navigation/actions and semibold 600 for headings and emphasis. Primary actions use `--dn-cta-font` (18px/500 at the default root size); ordinary controls use `--dn-control-font` (16px/500). Both use 1.3 line-height. `--dn-tab-font` supplies quieter 16px/500 entry tabs. The shared `.dn-segmented-control` / `.dn-segmented-option` style owns Buy/Import, Sale/Trade-in and Link/Info controls: 44px total height, pill geometry, pale surface, white selected option and keyboard focus. The 40px options and 2px outer inset form the 44px shell. On mobile, collapsed Home/Sell/Import entry triggers and their red entry CTAs also use a 44px shell; full editor inputs use a compact 48px frame. Components retain their existing tab/group behavior.
+Use regular 400 for prose, medium 500 for navigation/actions and semibold 600 for headings and emphasis. Primary actions use `--dn-cta-font` (18px/500 at the default root size); ordinary controls use `--dn-control-font` (16px/500). Both use 1.3 line-height. `--dn-tab-font` supplies quieter 16px/500 entry tabs. The shared `.dn-segmented-control` / `.dn-segmented-option` style owns Buy/Import, Sale/Trade-in and Link/Info controls: 44px total height, pill geometry, pale surface, white selected option and keyboard focus. The 40px options and 2px outer inset remain smaller than the 52px entry fields. Entry CTAs use the shared 44px `--dn-entry-action-height` while retaining the 18px CTA type. Components retain their existing tab/group behavior.
 
-The entry field is the strongest editable element. `.dn-entry-field` and `.dn-entry-field__input` own its shared border, surface, focus and `--dn-entry-font` (18px/400). Full editor inputs and desktop entry triggers use the 48px editor frame; mobile collapsed Home/Sell/Import triggers use a 44px frame while keeping the same type and focus treatment. The multiline modifier uses the control radius. Home search and both import entry modes consume this same style; do not add smaller local font or border overrides. `ContactIntent` renders one secondary white phone button below the Sell/Import card, outside `.dn-contact-intent__main`, using the ordinary control type, pill radius and 44px action height. Enquiry components do not duplicate that entry call action.
+The entry field is the strongest editable element. `.dn-entry-field` and `.dn-entry-field__input` own its shared border, surface, focus and `--dn-entry-font` (18px/400), with a 52px minimum frame height. The multiline modifier uses the control radius. Home search and both import entry modes consume this same style; do not add smaller local font or border overrides. `ContactIntent` renders one secondary white phone button below the Sell/Import card, outside `.dn-contact-intent__main`, using the ordinary control type, pill radius and 44px action height. Enquiry components do not duplicate that entry call action.
 
 Sell/Import entry fields fill their card width. `EnquiryEntryField.svelte` renders an input-shaped button with a single-line saved value and opens a native dialog to edit a listing link, VIN, or description and budget. The editor is a bottom sheet on mobile and a centered dialog on desktop. Save applies the draft; Cancel, Escape and backdrop dismissal discard it and restore focus. Switching Link/Info preserves each value and the card height. The red CTA continues the existing enquiry flow; an empty Import entry opens its editor first.
 
-The centered mode switch uses `--dn-entry-segment-width` (up to 240px with a narrow-screen inset), and the red CTA uses `--dn-entry-action-width` (up to 220px). These controls remain narrower than the entry field; on mobile the segment shell, collapsed trigger and CTA share the 44px control shell, while the desktop trigger remains taller. Mobile entry titles have one short helper line underneath; the Sell/Import fields have no decorative leading icon.
+The centered mode switch uses `--dn-entry-segment-width` (up to 240px with a narrow-screen inset), and the red CTA uses `--dn-entry-action-width` (up to 220px). These controls remain narrower and shorter than the entry field. Mobile entry titles have one short helper line underneath; the Sell/Import fields have no decorative leading icon.
 
 Body copy is 16px with 1.5 leading; long editorial prose uses 1.65. Labels, supporting metadata, helper text and the mobile dock use the 14px meta role. Nonessential video duration text may use the 12px caption role. Mobile section headings use 24px and service titles use 18px. Make controls and cards reflow around the type instead of adding smaller local overrides. Include `textarea` in native font inheritance.
 
@@ -102,20 +92,17 @@ Sell/Trade-in accepts an optional listing URL or 17-character VIN before opening
 | `--dn-radius` | 16px |
 | `--dn-radius-lg` | 20px |
 | `--dn-radius-button` | `--dn-pill`, 999px |
-| `--dn-control-height-compact` | 40px |
-| `--dn-control-height-default` | 44px |
-| `--dn-control-height-editor` | 48px |
 | `--dn-content` | 1360px |
 | `--dn-menu-content` | 1320px |
 | `--dn-home-section-space` | 32px |
 | `--dn-home-heading-banner-height` | 176px |
 | `--dn-home-banner-overlap` | 24px |
 | `--dn-mobile-nav-height` | 56px |
-| `--dn-mobile-detail-bar-height` | 60px |
+| `--dn-mobile-detail-bar-height` | 67px |
 
-The shared spacing scale runs from 2px through 32px and supplies repeated relationships such as banner padding, overlap and control insets. It is not a mandate to tokenize every coordinate: artwork placement, local 14px card corners and one-off responsive geometry remain with their component owner.
+There is no universal spacing-scale engine. Existing layouts use small 8–12px gaps, 12–24px internal padding and larger section spacing where appropriate. Mobile cards also use local 14px corners; drawers commonly use 24px top corners. Keep the owning value rather than inventing an additional global token for a one-off adjustment.
 
-The control family is rounded: pill actions, rounded input surfaces and compact circular icon buttons. Entry tabs and entry-card primary actions use a 44px hit height with explicit text labels. Primary actions and single-line inputs inside the full multi-step enquiry dialogs use the shared 48px editor height. The import link/criteria field is separate from its primary action, so a small icon does not have to communicate the entire request action. Other controls retain their owning geometry and expand when text wraps.
+The control family is rounded: pill actions, rounded input surfaces and compact circular icon buttons. Entry tabs have at least a 44px hit height. Sell and import primary actions have at least 52px height and explicit text labels. The import link/criteria field is separate from its primary action, so a small icon does not have to communicate the entire request action. Other controls retain their owning geometry and expand when text wraps.
 
 Inventory filter chips (including removable active filters), results filters/sorting, the header phone link and mobile footer contact links have a minimum 44px hit height. Keep vehicle-card dimensions and their 8px mobile inventory / 10px carousel gaps independent from control sizing. Metadata badges are labels inside the card link, not separate touch targets. Tablet service cards extend the action link over the card; verify the actual hit area before resizing its text. Vehicle-card keyboard focus uses the opaque `--dn-focus` color and an inset outline so the card's clipped corners do not hide it.
 
@@ -154,7 +141,7 @@ Vehicle cards prioritize photograph, title and price over metadata. Mobile year/
 
 ## Detail, sell and import
 
-Vehicle detail uses route-specific gallery, information tabs, price/contact actions and supporting finance/seller content. The current working preview includes image-generated financing and seller banners; the separate import explainer belongs to the import journey rather than the vehicle page. Their text is already part of the image: changing alt text does not change the displayed words. Use the approved image as an image, with its existing interactive wrapper.
+Vehicle detail uses route-specific gallery, information tabs, price/contact actions and supporting finance/import/seller content. The current working preview includes image-generated financing and seller banners. Their text is already part of the image: changing alt text does not change the displayed words. Use the approved image as an image, with its existing interactive wrapper.
 
 Sell/trade-in and import have related entry geometry but distinct workflows. Their informational drawers are native dialogs with dark sheets, light text, rounded top corners and viewport-level backdrops. They are not ordinary boxes attached inside the entry card. Their backgrounds, sheet surfaces and backdrop treatments have separate CSS owners.
 

@@ -1,17 +1,17 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+  import { page } from '$app/state';
   import type { Attachment } from 'svelte/attachments';
   import { trapDialogTab } from '$lib/ui/overlay';
   import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
   import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
-  import type { HeaderPresentation } from '$data/shell';
-  let { closeMobile, attachMobileMenu, attachMobileCloseButton, active }: {
+  let { closeMobile, attachMobileMenu, attachMobileCloseButton, listingHeader }: {
     closeMobile: (restoreFocus?: boolean) => Promise<void>;
     attachMobileMenu: Attachment<HTMLDialogElement>;
     attachMobileCloseButton: Attachment<HTMLButtonElement>;
-    active: HeaderPresentation['mobileMenu'];
+    listingHeader: boolean;
   } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 </script>
@@ -43,9 +43,9 @@
           <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)} aria-label={`Локация: ${brand.address}`}><MobileNavIcon name="location" size={20} /><span>Локация</span></a>
         </div>
         <nav aria-label="Мобилна навигация">
-          <a href={resolve('/listing-grid')} aria-current={active.listing ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/blog')} aria-current={active.blog ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/about-us')} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/listing-grid')} aria-current={listingHeader ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/blog')} aria-current={page.url.pathname.startsWith('/blog') ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
+          <a href={resolve('/about-us')} aria-current={page.url.pathname === '/about-us' ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
           <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
         </nav>
         <div class="dn-mobile-menu__social" aria-label="Социални мрежи">

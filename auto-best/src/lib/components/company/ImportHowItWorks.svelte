@@ -1,6 +1,7 @@
 <script lang="ts">
   import { tick } from 'svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import { brand } from '$config/brand';
 
   let dialog: HTMLDialogElement;
   let trigger: HTMLButtonElement;
@@ -8,6 +9,7 @@
   let dragStart = 0;
   let dragOffset = $state(0);
   let dragging = $state(false);
+  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
 
   async function openDrawer() {
     dragOffset = 0;
@@ -119,9 +121,14 @@
         </ol>
       </section>
 
-      <footer class="dn-import-info-actions">
-        <button type="button" onclick={closeDrawer}>Към заявката <Icon name="arrow-right" size={18} /></button>
-      </footer>
+      <section class="dn-import-info-contact" aria-label="Контакт">
+        <strong>{brand.phone}</strong>
+        <span>{brand.addressLine}, {brand.city} · {brand.appointment}</span>
+        <div class="dn-import-info-contact__actions">
+          <a href={brand.phoneHref}><Icon name="phone" size={18} />Обади се</a>
+          <a href={directionsUrl} target="_blank" rel="noreferrer"><Icon name="map-pin" size={18} />Маршрут</a>
+        </div>
+      </section>
     </div>
   </div>
 </dialog>
@@ -231,25 +238,26 @@
   .dn-import-info-list p > span { display: block; margin-top: var(--dn-space-half); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-import-info-steps { display: grid; gap: var(--dn-space-4); margin: 0; padding: 0; background: transparent; list-style: none; }
   .dn-import-info-steps li { display: block; }  .dn-import-info-list li > span, .dn-import-info-steps li > span { margin-inline-end: var(--dn-space-2); font-variant-numeric: tabular-nums; color: var(--dn-ink); font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); }
-  .dn-import-info-actions { display: flex; justify-content: center; padding-top: 0; }
-  .dn-import-info-actions button {
+  .dn-import-info-contact { display: grid; gap: var(--dn-space-1); padding: 0; text-align: center; }
+  .dn-import-info-contact > strong { color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
+  .dn-import-info-contact > span { color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
+  .dn-import-info-contact__actions { display: grid; grid-template-columns: 1fr 1fr; gap: var(--dn-space-2); margin-top: var(--dn-space-2); }
+  .dn-import-info-contact__actions a {
     display: inline-flex;
-    width: min(200px, 100%);
     min-height: 44px;
     align-items: center;
     justify-content: center;
     gap: var(--dn-space-2);
-    padding: 0 var(--dn-space-5);
-    border: 0;
+    padding: var(--dn-space-2) var(--dn-space-3);
     border-radius: var(--dn-radius-button);
-    background: var(--dn-red);
-    color: var(--dn-white);
-    font: var(--dn-control-font);
-    white-space: nowrap;
-    cursor: pointer;
+    font-size: var(--dn-control-size);
+    font-weight: var(--dn-control-weight);
+    text-decoration: none;
   }
-  .dn-import-info-actions button:hover { background: var(--dn-red-hover); }
-  .dn-import-info-actions button:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
+  .dn-import-info-contact__actions a:first-child { background: var(--dn-red); color: var(--dn-white); }
+  .dn-import-info-contact__actions a:first-child:hover { background: var(--dn-red-hover); }
+  .dn-import-info-contact__actions a:last-child:hover { background: var(--dn-surface); }
+  .dn-import-info-contact__actions a:last-child { border: 1px solid var(--dn-line); background: transparent; color: var(--dn-ink); }
 
   .dn-import-info-prepare { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-mobile-canvas); color: var(--dn-ink); gap: var(--dn-space-3); }
   .dn-import-info-prepare h3 { color: var(--dn-ink); }
@@ -289,19 +297,16 @@
     .dn-import-info-dialog {
       inset: auto 0 0;
       width: 100%;
-      max-height: min(700px, calc(100dvh - max(84px, env(safe-area-inset-top))));
+      max-height: calc(100dvh - max(24px, env(safe-area-inset-top)));
       margin: 0;
       border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
     }
     .dn-import-info-sheet {
-      max-height: min(700px, calc(100dvh - max(84px, env(safe-area-inset-top))));
+      max-height: calc(100dvh - max(24px, env(safe-area-inset-top)));
       border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0;
     }
     .dn-import-info-sheet__header { padding: var(--dn-space-1) var(--dn-space-4) var(--dn-space-3); }
-    .dn-import-info-sheet__body { gap: var(--dn-space-4); padding: 0 var(--dn-space-4) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
-    .dn-import-info-group { gap: var(--dn-space-2); }
-    .dn-import-info-list, .dn-import-info-steps { gap: var(--dn-space-3); }
-    .dn-import-info-list > li { min-height: 0; }
+    .dn-import-info-sheet__body { gap: var(--dn-space-5); padding: 0 var(--dn-space-4) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
   }
 
   .dn-import-info-process { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-ink); }

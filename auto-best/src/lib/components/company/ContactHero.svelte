@@ -5,7 +5,6 @@
   import Icon from '$components/ui/Icon.svelte';
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
   import { brand } from '$config/brand';
-  import { leadSite } from '$config/lead-site';
   import type { ContactTopic } from '$data/company';
 
   let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
@@ -22,13 +21,13 @@
   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} mobileScene={topic.id === 'trade-in' ? 'sell' : topic.id === 'import' ? 'import' : 'car'} />
   <picture>
     {#if topic.id === 'trade-in'}
-      <source media="(max-width: 991px)" srcset={leadSite.artwork.contactHero.sellMobile} />
+      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-sell-banner-v1.webp" />
     {:else if topic.id === 'import'}
-      <source media="(max-width: 991px)" srcset={leadSite.artwork.contactHero.importMobile} />
+      <source media="(max-width: 991px)" srcset="/assets/images/lead/day-night-import-banner-v1.webp" />
     {/if}
   <img
     class="dn-contact-hero__media"
-    src={leadSite.artwork.contactHero.desktop}
+    src="/assets/images/lead/day-night-contact-hero-v2.webp"
     alt=""
     width="1920"
     height="1080"

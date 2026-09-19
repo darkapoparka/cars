@@ -2,11 +2,10 @@
   import BrowseAllCard from './BrowseAllCard.svelte';
   import { resolve } from '$app/paths';
   import { editorial } from '$data/home';
-  import { leadSite } from '$config/lead-site';
 </script>
 
 <section class="dn-editorial" aria-labelledby="editorial-title">
-  <div class="dn-editorial__banner" style:--dn-editorial-banner={`url("${leadSite.artwork.editorialBanner}")`}>
+  <div class="dn-editorial__banner">
     <div class="container">
       <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
         <h2 id="editorial-title" class="dn-home-section-title">
@@ -70,7 +69,7 @@
     margin: 0 12px;
     padding: 82px 0 0;
     border-radius: 24px;
-    background-image: var(--dn-editorial-banner);
+    background-image: url('/assets/images/lead/day-night-editorial-banner-v2.webp');
     background-position: center 64%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,7 +115,7 @@
     justify-content: center;
     padding: 0 28px;
     border-radius: var(--dn-radius-button);
-    background: var(--dn-red);
+    background: #c40101;
     color: #fff;
     font-size: var(--dn-cta-size);
     font-weight: var(--dn-cta-weight);
@@ -165,7 +164,7 @@
   }
 
   .dn-editorial-item__link:focus-visible {
-    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 28%);
+    outline: 3px solid rgba(196, 1, 1, 0.28);
     outline-offset: -3px;
   }
 
@@ -195,7 +194,7 @@
     align-items: center;
     padding: 6px 12px;
     border-radius: var(--dn-pill);
-    background: var(--dn-red);
+    background: #c40101;
     color: #fff;
     font-size: var(--dn-text-meta);
     font-weight: var(--dn-weight-semibold);
@@ -234,7 +233,7 @@
 
   .dn-editorial-item:hover h3,
   .dn-editorial-item:focus-within h3 {
-    color: var(--dn-red);
+    color: #c40101;
   }
 
   .dn-editorial-item__summary {
@@ -299,7 +298,7 @@
 
   @media (max-width: 767px) {
     .dn-editorial {
-      padding: var(--dn-space-5) 0 var(--dn-space-2);
+      padding: 24px 0 18px;
       background: var(--dn-mobile-canvas);
     }
 
@@ -327,7 +326,7 @@
 
     .dn-editorial__heading h2 {
       margin: 0;
-      color: var(--dn-ink-strong);
+      color: #171a20;
       font-size: var(--dn-text-subheading);
       font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-heading);
@@ -374,7 +373,7 @@
 
     .dn-editorial-item {
       scroll-snap-align: start;
-      border-radius: 16px;
+      border-radius: 14px;
       background: var(--dn-mobile-surface);
       box-shadow: none;
     }
@@ -382,7 +381,7 @@
     .dn-editorial-item__media {
       height: auto;
       aspect-ratio: 16 / 9;
-      border-radius: 16px 16px 0 0;
+      border-radius: 14px 14px 0 0;
     }
 
     .dn-editorial-item__content {
@@ -433,7 +432,7 @@
 
     .dn-editorial__heading h2 {
       font-size: var(--dn-text-section-compact);
-      color: var(--dn-ink-strong);
+      color: #171a20;
       text-align: left;
       margin: 0;
     }

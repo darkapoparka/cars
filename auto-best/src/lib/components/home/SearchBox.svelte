@@ -2,12 +2,12 @@
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleQuickSearch from './VehicleQuickSearch.svelte';
-  import { emptyListingDraft, listingFiltersFromDraft } from '$data/listing-draft';
+  import { parseListingFilters } from '$data/listing';
   import VehicleDiscoveryForm from '$components/listing/VehicleDiscoveryForm.svelte';
   import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
   import { resolveImportUrl } from '$data/company';
 
-  let desktopFilters = $state(listingFiltersFromDraft(emptyListingDraft()));
+  let desktopFilters = $state(parseListingFilters(new URLSearchParams()));
   let mode = $state<'buy' | 'import'>('buy');
   let importUrl = $state('');
   let importError = $state('');
@@ -63,14 +63,14 @@
         <VehicleQuickSearch />
         <a class="dn-search__mobile-all" href={resolve('/listing-grid')}>
           <span>Виж всички</span>
-          <Icon name="arrow-right" size={15} strokeWidth={1.7} />
+          <Icon name="arrow-right" size={17} strokeWidth={2} />
         </a>
       </div>
       <div id="home-import-search" class={['dn-search__import', { 'dn-search__import--active': mode === 'import' }]} role="tabpanel" aria-labelledby="home-import-tab">
         <form class="dn-search__import-form" method="GET" action={resolve('/contact#contact-intent')} novalidate onsubmit={validateImport}>
           <input type="hidden" name="topic" value="import" />
           <label class="dn-search__import-field dn-entry-field">
-            <Icon name="globe" size={18} strokeWidth={1.5} />
+            <Icon name="globe" size={20} strokeWidth={1.8} />
             <span class="dn-sr-only">Линк към обява за внос</span>
             <input
               class="dn-entry-field__input"
@@ -93,7 +93,7 @@
           {#if importError}
             <p id="home-import-error" class="dn-search__import-error" role="alert">{importError}</p>
           {/if}
-          <button class="dn-search__mobile-all" type="submit">Заяви внос <Icon name="arrow-right" size={15} strokeWidth={1.7} /></button>
+          <button class="dn-search__mobile-all" type="submit">Заяви внос <Icon name="arrow-right" size={17} strokeWidth={2} /></button>
         </form>
       </div>
       <div class="dn-search__desktop-form">
@@ -118,9 +118,6 @@
 <style>
   .dn-search-wrap {
     --dn-home-search-top: var(--dn-route-hero-control-top);
-    --dn-discovery-width: min(var(--dn-content), calc(100% - 48px));
-    --dn-discovery-padding: 18px;
-    --dn-discovery-radius: 16px;
 
     position: relative;
     z-index: 20;
@@ -162,10 +159,6 @@
     .dn-search { padding: var(--dn-discovery-padding); border-radius: var(--dn-discovery-radius); }
   }
 
-  @media (min-width: 1440px) {
-    .dn-search-wrap { --dn-discovery-width: min(1040px, calc(100vw - 560px)); }
-  }
-
   @media (max-width: 1199px) {
     .dn-search-wrap > .container {
       width: calc(100% - 48px);
@@ -201,13 +194,9 @@
     }
 
     .dn-search {
-      --dn-entry-height: var(--dn-control-height-default);
-      --dn-home-search-stack-gap: 7px;
-      --dn-home-mobile-cta-width: 156px;
-
       display: grid;
-      gap: var(--dn-home-search-stack-gap);
-      padding: 8px 10px;
+      gap: 9px;
+      padding: 10px;
       border: 1px solid var(--dn-line);
       border-radius: 20px;
       background: var(--dn-white);
@@ -226,10 +215,7 @@
     .dn-search__import-form {
       display: grid;
       min-width: 0;
-    }
-
-    .dn-search__import-form {
-      gap: var(--dn-home-search-stack-gap);
+      gap: 10px;
     }
 
     .dn-search__import-field {
@@ -237,10 +223,6 @@
       align-items: center;
       gap: 10px;
       padding: 0 16px;
-    }
-
-    .dn-search__import-field > :global(.dn-icon) {
-      color: var(--dn-muted);
     }
 
     .dn-search__import-error {
@@ -257,7 +239,7 @@
       display: flex;
       gap: 8px;
       margin: 0;
-      padding: 10px 12px 0;
+      padding: 14px 12px 0;
       overflow-x: auto;
       background: var(--dn-mobile-canvas);
       scrollbar-width: none;
@@ -269,7 +251,7 @@
 
     .dn-search__mobile-shortcuts a {
       display: inline-flex;
-      min-height: var(--dn-control-height-default);
+      min-height: 44px;
       flex: 0 0 auto;
       align-items: center;
       padding: 0 15px;
@@ -282,12 +264,8 @@
     }
 
     .dn-search__mobile-all {
-      position: relative;
-      z-index: 0;
-      isolation: isolate;
       display: flex;
       width: fit-content;
-      min-width: var(--dn-home-mobile-cta-width);
       max-width: 100%;
       min-height: var(--dn-entry-action-height);
       justify-self: center;
@@ -295,29 +273,14 @@
       justify-content: center;
       gap: 7px;
       margin-top: 0;
-      padding: 0 var(--dn-space-5);
+      padding: 0 24px;
       border: 0;
       border-radius: var(--dn-radius-button);
-      background: transparent;
-      color: var(--dn-white);
-      font-size: var(--dn-control-size);
-      font-weight: var(--dn-cta-weight);
-      line-height: var(--dn-cta-leading);
-      cursor: pointer;
-    }
-
-    .dn-search__mobile-all::before {
-      position: absolute;
-      z-index: -1;
-      inset: 2px 0;
-      border-radius: inherit;
       background: var(--dn-red);
-      content: '';
-      transition: background-color 160ms ease;
-    }
-
-    .dn-search__mobile-all:is(:hover, :focus-visible)::before {
-      background: var(--dn-red-hover);
+      color: #fff;
+      font-size: var(--dn-cta-size);
+      font-weight: var(--dn-cta-weight);
+      cursor: pointer;
     }
 
     .dn-search__mobile-all:focus-visible {

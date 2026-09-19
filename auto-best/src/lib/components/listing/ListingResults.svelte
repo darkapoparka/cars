@@ -30,9 +30,9 @@
   };
 </script>
 
-<section class="dn-listing-results" data-slot="listing-results" aria-labelledby="listing-results-title">
+<section class="dn-listing-results" aria-labelledby="listing-results-title">
   <div class="container">
-    <h1 id="listing-results-title" class="dn-sr-only">Налични автомобили</h1>
+    <h2 id="listing-results-title" class="dn-sr-only">Налични автомобили</h2>
     <div class="dn-listing-results__heading">
       <div class="dn-listing-results__tools">
         <button class="dn-listing-results__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
@@ -173,7 +173,7 @@
   }
 
   .dn-listing-sort select:focus-visible {
-    outline: 2px solid var(--dn-red);
+    outline: 2px solid #c40101;
     outline-offset: 2px;
   }
 
@@ -184,22 +184,11 @@
     align-items: stretch;
   }
 
-  .dn-listing-empty {
-    display: grid;
-    min-height: 300px;
-    place-items: center;
-    align-content: center;
-    gap: 10px;
-    padding: 44px;
-    border-radius: 20px;
-    background: #fff;
-    text-align: center;
+  .dn-listing-results__grid :global(.dn-vehicle-card) {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
   }
-  .dn-listing-empty h3,
-  .dn-listing-empty p { margin: 0; }
-  .dn-listing-empty h3 { font-size: var(--dn-text-heading); font-weight: var(--dn-weight-semibold); }
-  .dn-listing-empty p { color: #707680; }
-  .dn-listing-empty .dn-button { margin-top: 12px; }
 
   @media (min-width: 992px) and (max-width: 1279px) {
     .dn-listing-results__grid {

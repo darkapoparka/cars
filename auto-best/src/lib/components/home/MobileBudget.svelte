@@ -3,11 +3,10 @@
   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
   import { vehicleArtwork } from '$data/vehicle-artwork';
   import { featuredVehicles } from '$data/inventory';
-  import { leadSite } from '$config/lead-site';
 
   const vehicleCount = (count: number) => `${count} ${count === 1 ? 'автомобил' : 'автомобила'}`;
 
-  const allArtwork = { src: leadSite.artwork.home.collection, width: 1200, height: 668, crop: [0, 96, 1200, 500] as const };
+  const allArtwork = { src: '/assets/images/lead/day-night-collection-banner-v2.webp', width: 1200, height: 668, crop: [0, 96, 1200, 500] as const };
 
   const budgetTiles = [
     {

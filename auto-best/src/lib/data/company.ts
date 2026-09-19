@@ -2,7 +2,7 @@ import { brand } from '$config/brand';
 
 export type CompanyServiceIcon = 'inspection' | 'import' | 'leasing' | 'trade-in';
 type CompanyService = { index: string; icon: CompanyServiceIcon; title: string; description: string; href: string; cta: string; };
-export type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
+type ContactTopicId = 'general' | 'inspection' | 'import' | 'leasing' | 'trade-in';
 export type ContactTopic = { id: ContactTopicId; label: string; title: string; description: string; mobileDescription?: string; };
 
 export const contactPreparation: Partial<Record<ContactTopicId, { title: string; items: string[] }>> = {};
@@ -22,7 +22,7 @@ export const companyServices: CompanyService[] = [
     "index": "01",
     "icon": "inspection",
     "title": "Услуга",
-    "description": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
     "href": "/contact?topic=inspection",
     "cta": "Попитайте автокъщата"
   },
@@ -30,7 +30,7 @@ export const companyServices: CompanyService[] = [
     "index": "02",
     "icon": "import",
     "title": "Услуга",
-    "description": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
     "href": "/contact?topic=import",
     "cta": "Попитайте автокъщата"
   },
@@ -38,7 +38,7 @@ export const companyServices: CompanyService[] = [
     "index": "03",
     "icon": "leasing",
     "title": "Услуга",
-    "description": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
     "href": "/contact?topic=leasing",
     "cta": "Попитайте автокъщата"
   },
@@ -46,7 +46,7 @@ export const companyServices: CompanyService[] = [
     "index": "04",
     "icon": "trade-in",
     "title": "Услуга",
-    "description": "Свържете се с автокъщата преди посещение и потвърдете наличността.",
+    "description": "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.",
     "href": "/contact?topic=trade-in",
     "cta": "Попитайте автокъщата"
   }

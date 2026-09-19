@@ -15,7 +15,7 @@
   let { vehicle, returnTo, showPrice = false, priority = false, layout = 'default' }: Props = $props();
 </script>
 
-<article id={`vehicle-${vehicle.id}`} data-variant={layout} class:dn-vehicle-card--listing={layout === 'listing'} class:dn-vehicle-card--showcase={layout === 'showcase'} class="dn-vehicle-card">
+<article id={`vehicle-${vehicle.id}`} class:dn-vehicle-card--listing={layout === 'listing'} class:dn-vehicle-card--showcase={layout === 'showcase'} class="dn-vehicle-card">
   <a class="dn-vehicle-card__link" href={withListReturn(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }), returnTo)} aria-label={`Вижте ${vehicle.title}`}>
     <div class="dn-vehicle-card__visual">
       {#if layout !== 'showcase'}
@@ -40,11 +40,7 @@
 
     <div class="dn-vehicle-card__content">
       {#if layout !== 'showcase'}<div class="dn-vehicle-card__category"><p>{vehicle.category}</p></div>{/if}
-      {#if layout === 'listing'}
-        <h2 class="dn-vehicle-card__name" title={vehicle.title}>{vehicle.title}</h2>
-      {:else}
-        <h3 class="dn-vehicle-card__name" title={vehicle.title}>{vehicle.title}</h3>
-      {/if}
+      <h3 class="dn-vehicle-card__name" title={vehicle.title}>{vehicle.title}</h3>
       {#if layout === 'showcase'}
         <p class="dn-vehicle-card__summary">{vehicle.year} · {vehicle.fuel}</p>
       {/if}
@@ -95,9 +91,7 @@
   .dn-vehicle-card__mobile-meta { display: none; }
   .dn-vehicle-card {
     display: flex;
-    width: 100%;
     min-width: 0;
-    height: 100%;
     overflow: hidden;
     flex-direction: column;
     border: 0;
@@ -169,7 +163,7 @@
   }
 
   .dn-vehicle-card__badge--year {
-    background: var(--dn-red);
+    background: #c40101;
   }
 
   .dn-vehicle-card__image {
@@ -225,7 +219,7 @@
   }
 
   .dn-vehicle-card__link:focus-visible .dn-vehicle-card__name {
-    color: var(--dn-red);
+    color: #c40101;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -235,7 +229,7 @@
     }
 
     .dn-vehicle-card__link:hover .dn-vehicle-card__name {
-      color: var(--dn-red);
+      color: #c40101;
     }
   }
 
@@ -371,7 +365,7 @@
       display: block;
       font-size: var(--dn-text-lead);
       font-weight: var(--dn-weight-medium);
-      line-height: var(--dn-leading-control);
+      line-height: var(--dn-leading-body);
       white-space: nowrap;
       text-overflow: ellipsis;
       -webkit-line-clamp: 1;

@@ -59,7 +59,6 @@
       overflow: hidden;
       pointer-events: none;
     }
-    .dn-hero-vehicles--mobile[data-pair='home'] { top: 60px; }
     .dn-hero-vehicles__car { display: none; }
     .dn-hero-vehicles__front { display: block; position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 160px; height: 160px; object-fit: contain; }
     .dn-hero-vehicles__support { display: block; position: absolute; bottom: 4px; width: clamp(56px, 18vw, 70px); }

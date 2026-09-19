@@ -1,18 +1,11 @@
 <script lang="ts">
   import Icon from '$components/ui/Icon.svelte';
+  import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
   import { resolve } from '$app/paths';
   import { featuredVehicles } from '$data/inventory';
   import { bodyLabel, filterListingVehicles, listingFilterOptions, listingModelsForMake } from '$data/listing';
-  import {
-    cleanListingFormData,
-    emptyListingDraft,
-    formatListingNumber,
-    listingDraftHasFilters,
-    listingFiltersFromDraft,
-    listingModelAfterMakeChange,
-    type ListingDraft
-  } from '$data/listing-draft';
   import type { Attachment } from 'svelte/attachments';
+
 
   type MobileFilterView = 'main' | 'make' | 'model' | 'body' | 'price' | 'fuel' | 'mileage' | 'year';
   type MobileFilterOption = { value: string; label: string };
@@ -31,19 +24,25 @@
   let searchOpen = $state(false);
   let mobileView = $state<MobileFilterView>('main');
   let modelOptions = $derived(listingModelsForMake(make));
-  let quickDraft = $derived<ListingDraft>({
-    ...emptyListingDraft(),
+  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, {
     q: query,
     make,
     model,
     body,
-    priceMax,
     fuel,
-    mileageMax,
-    yearMin
-  });
-  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, listingFiltersFromDraft(quickDraft)));
-  let hasFilters = $derived(listingDraftHasFilters(quickDraft));
+    transmission: '',
+    version: '',
+    equipment: [],
+    condition: '',
+    yearMin: yearMin ? Number(yearMin) : null,
+    yearMax: null,
+    priceMin: null,
+    priceMax: priceMax ? Number(priceMax) : null,
+    mileageMax: mileageMax ? Number(mileageMax) : null,
+    sort: 'default'
+  }));
+  let hasFilters = $derived(Boolean(query || make || model || body || priceMax || fuel || mileageMax || yearMin));
+  const formatNumber = (value: string) => new Intl.NumberFormat('bg-BG').format(Number(value));
   let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || 'Всички марки');
   let mobileMenuTitle = $derived.by(() => {
     if (mobileView === 'make') return 'Марка';
@@ -66,27 +65,34 @@
     return '';
   });
   let mobileMenuOptions = $derived.by<MobileFilterOption[]>(() => {
-    if (mobileView === 'make') return listingFilterOptions.makes.map(value => ({ value, label: value || 'Всички марки' }));
-    if (mobileView === 'model') return modelOptions.map(value => ({ value, label: value || 'Всички модели' }));
-    if (mobileView === 'body') return listingFilterOptions.bodies.map(value => ({ value, label: bodyLabel(value) || 'Всички купета' }));
-    if (mobileView === 'price') return listingFilterOptions.prices.map(value => ({ value, label: value ? `До ${formatListingNumber(value)} €` : 'Всеки бюджет' }));
-    if (mobileView === 'fuel') return listingFilterOptions.fuels.map(value => ({ value, label: value || 'Всяко гориво' }));
-    if (mobileView === 'mileage') return listingFilterOptions.mileages.map(value => ({ value, label: value ? `До ${formatListingNumber(value)} км` : 'Всеки пробег' }));
-    if (mobileView === 'year') return listingFilterOptions.years.map(value => ({ value, label: value ? `От ${value}` : 'Всяка година' }));
+    if (mobileView === 'make') return listingFilterOptions.makes.map((value) => ({ value, label: value || 'Всички марки' }));
+    if (mobileView === 'model') return modelOptions.map((value) => ({ value, label: value || 'Всички модели' }));
+    if (mobileView === 'body') return listingFilterOptions.bodies.map((value) => ({ value, label: bodyLabel(value) || 'Всички купета' }));
+    if (mobileView === 'price') return listingFilterOptions.prices.map((value) => ({ value, label: value ? `До ${formatNumber(value)} €` : 'Всеки бюджет' }));
+    if (mobileView === 'fuel') return listingFilterOptions.fuels.map((value) => ({ value, label: value || 'Всяко гориво' }));
+    if (mobileView === 'mileage') return listingFilterOptions.mileages.map((value) => ({ value, label: value ? `До ${formatNumber(value)} км` : 'Всеки пробег' }));
+    if (mobileView === 'year') return listingFilterOptions.years.map((value) => ({ value, label: value ? `От ${value}` : 'Всяка година' }));
     return [];
   });
-
-  const attachDialog: Attachment<HTMLDialogElement> = node => {
+  const attachDialog: Attachment<HTMLDialogElement> = (node) => {
     dialog = node;
-    return () => { if (dialog === node) dialog = undefined; };
+    return () => {
+      if (dialog === node) dialog = undefined;
+    };
   };
-  const attachTrigger: Attachment<HTMLButtonElement> = node => {
+
+  const attachTrigger: Attachment<HTMLButtonElement> = (node) => {
     trigger = node;
-    return () => { if (trigger === node) trigger = undefined; };
+    return () => {
+      if (trigger === node) trigger = undefined;
+    };
   };
-  const attachSearchInput: Attachment<HTMLInputElement> = node => {
+
+  const attachSearchInput: Attachment<HTMLInputElement> = (node) => {
     searchInput = node;
-    return () => { if (searchInput === node) searchInput = undefined; };
+    return () => {
+      if (searchInput === node) searchInput = undefined;
+    };
   };
 
   const openSearch = () => {
@@ -95,25 +101,35 @@
     dialog?.showModal();
     if (window.matchMedia('(min-width: 768px)').matches) requestAnimationFrame(() => searchInput?.focus());
   };
-  const closeSearch = () => { if (dialog?.open) dialog.close(); };
+
+  const closeSearch = () => {
+    if (dialog?.open) dialog.close();
+  };
+
   const resetSearch = () => {
-    const cleared = emptyListingDraft();
-    query = cleared.q;
-    make = cleared.make;
-    model = cleared.model;
-    body = cleared.body;
-    priceMax = cleared.priceMax;
-    fuel = cleared.fuel;
-    mileageMax = cleared.mileageMax;
-    yearMin = cleared.yearMin;
+    query = '';
+    make = '';
+    model = '';
+    body = '';
+    priceMax = '';
+    fuel = '';
+    mileageMax = '';
+    yearMin = '';
     mobileView = 'main';
   };
-  const openMobileMenu = (view: Exclude<MobileFilterView, 'main'>) => { mobileView = view; };
-  const returnToMobileOverview = () => { mobileView = mobileView === 'model' ? 'make' : 'main'; };
+
+  const openMobileMenu = (view: Exclude<MobileFilterView, 'main'>) => {
+    mobileView = view;
+  };
+
+  const returnToMobileOverview = () => {
+    mobileView = mobileView === 'model' ? 'make' : 'main';
+  };
+
   const selectMobileOption = (value: string) => {
     if (mobileView === 'make') {
-      model = listingModelAfterMakeChange(make, value, model);
       make = value;
+      model = '';
       mobileView = value ? 'model' : 'main';
       return;
     }
@@ -125,12 +141,17 @@
     if (mobileView === 'year') yearMin = value;
     mobileView = 'main';
   };
-  const handleDialogClick = (event: MouseEvent) => { if (event.target === event.currentTarget) closeSearch(); };
+
+  const handleDialogClick = (event: MouseEvent) => {
+    if (event.target === event.currentTarget) closeSearch();
+  };
+
   const handleCancel = (event: Event) => {
     event.preventDefault();
     if (mobileView === 'main') closeSearch();
     else returnToMobileOverview();
   };
+
   const handleKeydown = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       event.preventDefault();
@@ -138,12 +159,19 @@
       else returnToMobileOverview();
     }
   };
+
   const restoreTriggerFocus = () => {
     searchOpen = false;
     mobileView = 'main';
     trigger?.focus();
   };
-  const cleanFormData = (event: FormDataEvent) => cleanListingFormData(event.formData);
+
+  const cleanFormData = (event: FormDataEvent) => {
+    for (const key of new Set(event.formData.keys())) {
+      const values = event.formData.getAll(key);
+      if (values.every((value) => typeof value === 'string' && !value.trim())) event.formData.delete(key);
+    }
+  };
 </script>
 
 <button
@@ -156,11 +184,11 @@
   aria-label="Търсете марка, модел или ключова дума"
   onclick={openSearch}
 >
-  <Icon name="search" size={18} strokeWidth={1.5} />
+  <MobileNavIcon name="search" size={20} />
   <span class="dn-quick-search__label-full">Търсете марка, модел или ключова дума</span>
   <span class="dn-quick-search__label-mobile" aria-hidden="true">Марка или модел</span>
   <span class="dn-quick-search__hint" aria-hidden="true">Бързо търсене</span>
-  <span class="dn-quick-search__mobile-filter" aria-hidden="true"><Icon name="adjustments" size={18} strokeWidth={1.4} /></span>
+  <span class="dn-quick-search__mobile-filter" aria-hidden="true"><MobileNavIcon name="filters" size={20} /></span>
 </button>
 
 <dialog
@@ -212,7 +240,7 @@
           bind:value={query}
           type="search"
           name="q"
-          placeholder="Марка, модел или тип"
+          placeholder="Например Audi, BMW или SUV"
           autocomplete="off"
           aria-describedby="quick-search-status"
           onkeydown={handleKeydown}
@@ -253,7 +281,7 @@
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('price')}>
             <strong>Бюджет</strong>
-            <span>{priceMax ? `До ${formatListingNumber(priceMax)} €` : 'Всеки бюджет'}</span>
+            <span>{priceMax ? `До ${formatNumber(priceMax)} €` : 'Всеки бюджет'}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
@@ -265,7 +293,7 @@
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('mileage')}>
             <strong>Пробег</strong>
-            <span>{mileageMax ? `До ${formatListingNumber(mileageMax)} км` : 'Всеки пробег'}</span>
+            <span>{mileageMax ? `До ${formatNumber(mileageMax)} км` : 'Всеки пробег'}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
@@ -417,7 +445,7 @@
   }
 
   .dn-quick-search__close:focus-visible {
-    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 20%);
+    outline: 3px solid rgba(196, 1, 1, 0.2);
     outline-offset: -3px;
   }
 
@@ -440,16 +468,12 @@
 
     .dn-quick-search__label-mobile {
       display: inline;
-      color: var(--dn-muted);
-    }
-
-    .dn-quick-search__trigger :global(.dn-icon) {
-      color: var(--dn-muted);
     }
 
     .dn-quick-search__mobile-filter {
       display: grid;
       place-items: center;
+      color: #30363f;
     }
 
     .dn-quick-search__hint {
@@ -521,7 +545,7 @@
     }
 
     .dn-quick-search__back:focus-visible {
-      outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 18%);
+      outline: 3px solid rgba(196, 1, 1, 0.18);
       outline-offset: -3px;
     }
 
@@ -608,7 +632,7 @@
 
     .dn-quick-search__filter-row:focus-visible {
       border-color: var(--dn-red);
-      outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 18%);
+      outline: 3px solid rgba(196, 1, 1, 0.18);
       outline-offset: -3px;
     }
 
@@ -646,12 +670,12 @@
     }
 
     .dn-quick-search__option:focus-visible {
-      outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 20%);
+      outline: 3px solid rgba(196, 1, 1, 0.2);
       outline-offset: -3px;
     }
 
     .dn-quick-search__option--selected {
-      background: var(--dn-ink-strong);
+      background: #171a20;
       color: #fff;
     }
 

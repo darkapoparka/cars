@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--dn-theme-hero-surface-deep);
+  background: #15181d;
   color: #fff;
   padding-top: 0 !important;
 }
