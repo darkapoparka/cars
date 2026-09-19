@@ -1,18 +1,9 @@
 {
   "schemaVersion": 1,
   "key": "auto-best",
-  "source": "M:\\codex\\agency-os-projects\\leads\\automotive\\day-night-auto-group\\autodeal-best-day-night",
-  "destination": "J:\\cars\\templates\\auto-best",
-  "copiedAt": "2026-09-06T14:14:49.865Z",
-  "sourceUrl": "http://127.0.0.1:5173/",
-  "git": {
-    "root": "M:/codex/agency-os-projects/leads/automotive/day-night-auto-group/autodeal-best-day-night",
-    "branch": "main",
-    "head": "ab92ce9671fb1b56afa38f693755b41aee9c28b0",
-    "remote": "https://github.com/darkapoparka/day-and-night-autodeal.git",
-    "status": "M ASSET_PROVENANCE.md\n M SVELTE_TASKS.md\n M scripts/check-assets.mjs\n M scripts/sveltekit-smoke.mjs\n M src/app.css\n M src/lib/components/company/AboutHero.svelte\n M src/lib/components/company/AboutProcess.svelte\n M src/lib/components/company/ContactHero.svelte\n M src/lib/components/company/ContactIntent.svelte\n M src/lib/components/company/VehicleEnquiry.svelte\n M src/lib/components/editorial/BlogHero.svelte\n M src/lib/components/home/BodyTypes.svelte\n M src/lib/components/home/BrandSection.svelte\n M src/lib/components/home/Editorial.svelte\n M src/lib/components/home/Hero.svelte\n M src/lib/components/home/InventorySection.svelte\n M src/lib/components/home/MobileBudget.svelte\n M src/lib/components/home/SearchBox.svelte\n M src/lib/components/home/TrustActions.svelte\n M src/lib/components/home/VideoSection.svelte\n M src/lib/components/layout/Header.svelte\n M src/lib/components/listing/ListingFilters.svelte\n M src/lib/components/listing/ListingHero.svelte\n M src/lib/components/listing/QuickFilterSheet.svelte\n M src/lib/data/company.ts\n M src/routes/+page.svelte\n M src/routes/about-us/about.css\n M src/routes/blog/blog.css\n M src/routes/contact/contact.css\n M src/routes/listing-grid/listing.css\n?? provenance/browse-campaign-pair-2026-09-06.md\n?? provenance/collection-lineup-2026-09-06.md\n?? provenance/hero-vehicle-pairs-2026-09-06.md\n?? provenance/superseded-collection-lineup/\n?? provenance/superseded-hero-art/\n?? provenance/three-quarter-cutouts-2026-09-06/\n?? provenance/vehicle-cutouts-2026-09-06.md\n?? provenance/vehicle-side-profile-prompts-2026-09-06.json\n?? provenance/vehicle-side-profiles-2026-09-06.md\n?? src/lib/components/home/BrowseAllCard.svelte\n?? src/lib/components/ui/HeroVehicles.svelte\n?? src/lib/components/ui/VehicleCutout.svelte\n?? src/lib/data/vehicle-artwork.ts\n?? static/assets/images/lead/day-night-collection-banner-v2.webp\n?? static/assets/images/lead/day-night-cutout-a45-v1.webp\n?? static/assets/images/lead/day-night-cutout-amggt-v1.webp\n?? static/assets/images/lead/day-night-cutout-e63-v1.webp\n?? static/assets/images/lead/day-night-cutout-gclass-v1.webp\n?? static/assets/images/lead/day-night-cutout-golf-v1.webp\n?? static/assets/images/lead/day-night-cutout-graphite-v1.webp\n?? static/assets/images/lead/day-night-cutout-m4-v1.webp\n?? static/assets/images/lead/day-night-cutout-m5-v1.webp\n?? static/assets/images/lead/day-night-cutout-porsche-v1.webp\n?? static/assets/images/lead/day-night-cutout-rs5-v1.webp\n?? static/assets/images/lead/day-night-cutout-silver-v1.webp\n?? static/assets/images/lead/day-night-cutout-urus-v1.webp\n?? static/assets/images/lead/day-night-home-black-v1.webp\n?? static/assets/images/lead/day-night-sell-banner-v2.webp\n?? static/assets/images/lead/day-night-urus-front-v1.webp",
-    "headAfterCopy": "ab92ce9671fb1b56afa38f693755b41aee9c28b0"
-  },
+  "source": "templates/auto-best",
+  "destination": "clients/f1rst-motors/auto-best",
+  "sourceUrl": null,
   "files": [
     {
       "path": ".gitattributes",
@@ -21,8 +12,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 562,
-      "sha256": "fc366628445d07863dfc09f8664220b3a91b9c7e196dd7ddb924d7e5008a5a22"
+      "bytes": 618,
+      "sha256": "c2d97b53ccab40d4c3968c88d784b2d29b67c680ad404320d68b9ec643f5ce7e"
     },
     {
       "path": ".vercelignore",
@@ -30,34 +21,119 @@
       "sha256": "28c742b5673ffd02fd48cfb0091c623cea98e72819496141cfdc15d7dc5dfb0c"
     },
     {
+      "path": "ARCHITECTURE.md",
+      "bytes": 7053,
+      "sha256": "7ae7418e691e8b6b7a2db27156c502a6cf4ac7e4c725c0f124ca8f15dc9eb1db"
+    },
+    {
       "path": "ASSET_PROVENANCE.md",
-      "bytes": 24444,
-      "sha256": "27f8a80bbde149c9374e1657a8a2c67d998ca948d2d364280cb6bfe8cbfa7b06"
-    },
-    {
-      "path": "docs/architecture/.migration-marker",
-      "bytes": 193,
-      "sha256": "1ba90a1069331d8f5283fb546b7fe73f3596eae28b440f484c4727a92d43cb86"
-    },
-    {
-      "path": "docs/architecture/README.md",
-      "bytes": 7199,
-      "sha256": "f9e23d4789779ed27286e51e874f0d7974eabd7db7a94e2213a121dfe59a2140"
-    },
-    {
-      "path": "package-lock.json",
-      "bytes": 78666,
-      "sha256": "9e9d03327224086f01ec6de7d0d5b85816aabe92fd354f504825ad306db1f90d"
-    },
-    {
-      "path": "package.json",
-      "bytes": 1204,
-      "sha256": "23e0195643d89f623756eb984ae3e726609b131550865442cda0cbacb30eeefd"
+      "bytes": 4486,
+      "sha256": "8cecdc4c12104f4f855c947b0a835f0906a223ca787f73de907ca4e5f83a958a"
     },
     {
       "path": "PRODUCT.md",
-      "bytes": 2128,
-      "sha256": "4a671507afa97f22465acee1bc19dd863655e395b6430c743da955bc2b4a8f60"
+      "bytes": 3002,
+      "sha256": "1172a50e4132f14497f44b0e56f98d3c32f655099d976e0da7053e3860731e45"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3895,
+      "sha256": "8d3fbd6a51fc3b8c3908bfd2ca44d623d536999e58b915e47f14fbcaeba25efa"
+    },
+    {
+      "path": "REUSE_GUIDE.md",
+      "bytes": 8241,
+      "sha256": "77b90c5222b622ae67b182a177185015abfe4958b2a197633b7658771cba8708"
+    },
+    {
+      "path": "SOURCE_LICENSE.md",
+      "bytes": 2916,
+      "sha256": "786f992365fbb9a846686e47d5854ae636c082cedc828d5c19c7134de04ad8bb"
+    },
+    {
+      "path": "TEMPLATE.md",
+      "bytes": 2590,
+      "sha256": "7427fd6a45d0ea87cb1dfef2627a4418bafbf014c8113ab6cfaabcf69ee980d2"
+    },
+    {
+      "path": "TYPOGRAPHY-TASKS.md",
+      "bytes": 6595,
+      "sha256": "37223766e0cc1ef4c1d7bd9cca18bf3f7a4e1d9b1c33ab6624f604f1082bfab6"
+    },
+    {
+      "path": "docs/ARCHITECTURE-REFACTOR-PLAN.md",
+      "bytes": 66401,
+      "sha256": "552bf2300ee5d681e90c83bf4cebbcc3b7d614a22f350e985772db70bd94c6a0"
+    },
+    {
+      "path": "docs/CARS-INTEGRATION.md",
+      "bytes": 3748,
+      "sha256": "15b96d9f817042a1670ea597d85c51ea58ccf7652a20b4dee999f19d033c7ab0"
+    },
+    {
+      "path": "docs/COMPONENTS.md",
+      "bytes": 7077,
+      "sha256": "dbd8aa3ee1745636342ff74002bcd98d2923f8613b185989dd173797618195db"
+    },
+    {
+      "path": "docs/DATA.md",
+      "bytes": 8962,
+      "sha256": "7238d4420ccde5b62b495e50f99ee5b91f3d4ab03e8fb947ac105550a93ffa1d"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "bytes": 3744,
+      "sha256": "2fbee08947bc66110a7649df3c0a1a7695db65ae7f36c9084c1e87a12f9db560"
+    },
+    {
+      "path": "docs/DEVELOPMENT.md",
+      "bytes": 4232,
+      "sha256": "aec769801eecd38c8ef2e27c3e8a589a3c0e30e90971855f869d5a3ab7d4d079"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 1830,
+      "sha256": "a4b213c2ee6cb203897fbce2917d13ed1473ab86be87cd3d7bc8f3dc09fa0013"
+    },
+    {
+      "path": "docs/ROUTES.md",
+      "bytes": 6185,
+      "sha256": "b74db71dee0311d26096ac20a17a8accd132989f80540f994be17977dd4f63f2"
+    },
+    {
+      "path": "docs/STYLING.md",
+      "bytes": 19247,
+      "sha256": "0e14625ba1e779a97b7bc9e103e633acb1c30b735855521d272494c88cb5c505"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "bytes": 8837,
+      "sha256": "c7c45586fb7bdb797eda1b3e803bf208fb26087f046bee515355e4cd91661b80"
+    },
+    {
+      "path": "docs/TYPOGRAPHY-AUDIT.md",
+      "bytes": 6130,
+      "sha256": "f06ead2fc607bd9702508485f8b346748a8b3ddf8179dead3cb125fd9458f7ed"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 76333,
+      "sha256": "8a2ad0669f68a2e162fe10260f91179f7e5e56d4ee4e42d3e3c69de4d9004732"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1657,
+      "sha256": "9169eed1ba808237f2e62673937e9a8f80886be5b6f54c55464108eb8ff1c9fe"
+    },
+    {
+      "path": "provenance/README.md",
+      "bytes": 1504,
+      "sha256": "babeebcfb25830cc235dc1f9851b5c1e71fddef480e1341382e9a8e2fa8c8838"
+    },
+    {
+      "path": "provenance/borderless-editorial-2026-09-08.md",
+      "bytes": 6558,
+      "sha256": "53feecb26c9f5b1213a24ce39ec26fc292dad918cd200d24ca706ddbfa8c4cbe"
     },
     {
       "path": "provenance/browse-campaign-pair-2026-09-06.md",
@@ -65,9 +141,19 @@
       "sha256": "6392fcab3d9f7067d4de05ce0137316d54631bfb0a9b8287ee30c25217308b8c"
     },
     {
+      "path": "provenance/cardog-icons-LICENSE.txt",
+      "bytes": 1063,
+      "sha256": "5396ce2a6fda733be07dab1b9be9014947fa445cfc24c63838138c57129ee39e"
+    },
+    {
       "path": "provenance/collection-lineup-2026-09-06.md",
       "bytes": 2761,
       "sha256": "d8c633efec6273b5be3bb1fc8d13046eb536cab5502d66a51eb4aa2fae6160ad"
+    },
+    {
+      "path": "provenance/editorial-photos-2026-09-08.md",
+      "bytes": 1913,
+      "sha256": "146cc58c09bf46441d7985fa4389098e40775b1cde2d4e9b45cd95c291eb9793"
     },
     {
       "path": "provenance/hero-vehicle-pairs-2026-09-06.md",
@@ -75,9 +161,19 @@
       "sha256": "3b6f123f61b9a941671ed29550151eb442307431b98652c98cf6ea1f8df2e1f9"
     },
     {
+      "path": "provenance/homepage-brand-marks-2026-09-15.md",
+      "bytes": 1594,
+      "sha256": "8600593d23577b0977a7c8598292e3ee6ce8c1c0d1427541c48d1f867dd5d8fa"
+    },
+    {
       "path": "provenance/hugeicons-LICENSE.txt",
       "bytes": 1338,
       "sha256": "50714aa0930b7ec52a08c79f608bf360841e9ef2ade5917ccc6551695570057f"
+    },
+    {
+      "path": "provenance/menu-service-assets-2026-09-08.md",
+      "bytes": 8431,
+      "sha256": "b0a524ebb529f5a05d412a1c68244737a6ea169aca4283012ae837732c0abb22"
     },
     {
       "path": "provenance/mirror-manifest.json",
@@ -85,19 +181,49 @@
       "sha256": "4534b039345912e60ca0f634ada4882ba9e9e166f5f5b8b50bd5a0fb089f4d62"
     },
     {
+      "path": "provenance/mobile-service-artwork-2026-09-06.md",
+      "bytes": 2682,
+      "sha256": "c27560abf0a5c225a3960400db401fe842d3a49f04e0454688d8260973170490"
+    },
+    {
+      "path": "provenance/mobile-service-cutout-2026-09-10.md",
+      "bytes": 1337,
+      "sha256": "e26ff756dd31b3313ee6c62a255fa5662b7d11a5f3642eea53f5adb3804e1631"
+    },
+    {
       "path": "provenance/phosphor-icons-LICENSE.txt",
       "bytes": 1092,
       "sha256": "ddbe6082ec3cf979db47e5af549d2849c5d6182b3e005ef91ce1dbb9eb122f11"
     },
     {
-      "path": "provenance/README.md",
-      "bytes": 1026,
-      "sha256": "6339af1ad39ee64136cd3637fab9f4bd70abc5a7ce14341e4dad6068491552c9"
+      "path": "provenance/service-cards-2026-09-10.md",
+      "bytes": 2116,
+      "sha256": "31030564e8571ce834317228c1ef957b7d604e9725ada483f70acdd6e24ec8ef"
     },
     {
       "path": "provenance/simple-icons-LICENSE.md",
       "bytes": 6569,
       "sha256": "9046848b63a5c92bff14e4accca80bd987e0623b74adf9226ce5198d312b79d5"
+    },
+    {
+      "path": "provenance/superseded-blog-photos/blog-1.jpg",
+      "bytes": 93721,
+      "sha256": "9d966adf2526f203358198b996a12d48ac52bf24196c873ed362934e908b3b38"
+    },
+    {
+      "path": "provenance/superseded-blog-photos/blog-2.jpg",
+      "bytes": 34864,
+      "sha256": "416e29858a644e2b74493fe7e9f50446617b10253138b2571087e607c9e01d99"
+    },
+    {
+      "path": "provenance/superseded-blog-photos/blog-3.jpg",
+      "bytes": 94447,
+      "sha256": "6f62633d268becc0babcb341e49735adb2069bdbd315ee6ed6f05402dcdd580e"
+    },
+    {
+      "path": "provenance/superseded-brand-banner/bg-6.jpg",
+      "bytes": 199583,
+      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
     },
     {
       "path": "provenance/superseded-collection-lineup/day-night-collection-lineup-v1.webp",
@@ -113,6 +239,11 @@
       "path": "provenance/superseded-hero-art/day-night-contact-detail-v1.webp",
       "bytes": 57966,
       "sha256": "fb1b9a24c1935e8458bee71a330cedc0766fe9d686fbfc21c1c4ac74cafae2d3"
+    },
+    {
+      "path": "provenance/superseded-menu-art/showroom-charcoal-red-v1.png",
+      "bytes": 1604234,
+      "sha256": "53f28a8e98f514aa1c7547842d2a1fe5de8107a67e5fc3e53d995fd0e8f7ab74"
     },
     {
       "path": "provenance/three-quarter-cutouts-2026-09-06/day-night-cutout-gclass-v1.webp",
@@ -135,6 +266,41 @@
       "sha256": "3d7d4882c635941a0430e67fb83b52a391b6d64a5cf3ef30726afa4eae981428"
     },
     {
+      "path": "provenance/unused-media/README.md",
+      "bytes": 1107,
+      "sha256": "6c3f4eeeb7269611fa3192da8da1a83ddd9a5f563d039f5fdd9c21fbb7739282"
+    },
+    {
+      "path": "provenance/unused-media/all-card-centered-v2.webp",
+      "bytes": 7660,
+      "sha256": "8f98f0e5066186f22fcd1e0e4bd52078ed75373324066e97f016f264850300c1"
+    },
+    {
+      "path": "provenance/unused-media/coupe-card-small.webp",
+      "bytes": 4702,
+      "sha256": "668fd46197d8ca2fe778dd1fbd082702a40a77b94338f43adcbdd24355f5d6d6"
+    },
+    {
+      "path": "provenance/unused-media/finance-clean-mobile.webp",
+      "bytes": 6290,
+      "sha256": "2d6f005f94bcde9ed5a72bb1e536236f6a61b8c4e8df36602061d1586c61903d"
+    },
+    {
+      "path": "provenance/unused-media/finance-promo-test.png",
+      "bytes": 19128,
+      "sha256": "0b7e8f65654a89c70cff4a8488c057aacdc96a527ff14fd6e48896507c11ec1a"
+    },
+    {
+      "path": "provenance/unused-media/suv-card-small.webp",
+      "bytes": 4494,
+      "sha256": "24f7c8aafa767122ee307feed6b47679ca9e325dffd7c6d8893e25b881c34ebd"
+    },
+    {
+      "path": "provenance/unused-media/wagon-card-small.webp",
+      "bytes": 4848,
+      "sha256": "a3e4c53d57bd7fc9984a4d4a53ceec3fcbd4512ff6daa5e539f81a54244d79ef"
+    },
+    {
       "path": "provenance/vehicle-cutouts-2026-09-06.md",
       "bytes": 4927,
       "sha256": "98852c6449dbbfe5548492a1f90c681585c77f90bc0c2948c9642b7a6c0b886f"
@@ -150,14 +316,9 @@
       "sha256": "cb405da2c931a2772c0f21e149fe285b1804c78cf7eb858cfa50ffb2968264aa"
     },
     {
-      "path": "README.md",
-      "bytes": 4992,
-      "sha256": "ecf340d0bf7999fac58132551327239a6fa9194b5874ae151d634a259034b790"
-    },
-    {
-      "path": "REUSE_GUIDE.md",
-      "bytes": 2294,
-      "sha256": "a12cc36c04621533c330e1065baeeea86f513a3f2574ea0266ce7c5a9ba0f4b6"
+      "path": "scripts/browser.mjs",
+      "bytes": 508,
+      "sha256": "8e457412485a459f3ad793fb9fbe2902d8b681e6481c40a93517d8929c5a21ba"
     },
     {
       "path": "scripts/check-architecture.mjs",
@@ -166,23 +327,58 @@
     },
     {
       "path": "scripts/check-assets.mjs",
-      "bytes": 3818,
-      "sha256": "5684df078304b3b0fd9002b1b2d544fdc371fb2384749a5d30408aa44c6ca987"
+      "bytes": 4604,
+      "sha256": "a005979368eb270223c587f9ad8805aa495135a1fb79c565bb2aac06ee4d0706"
+    },
+    {
+      "path": "scripts/check-css-policy.mjs",
+      "bytes": 2442,
+      "sha256": "611992d220839ba74a6d6e359623ec27f8c720c312f81c42b51500f12eb211c7"
+    },
+    {
+      "path": "scripts/check-domain.mjs",
+      "bytes": 7562,
+      "sha256": "24ad403874e852e626ea5665f39498172109b2ae3f362ecb316b5f04f8053ce7"
+    },
+    {
+      "path": "scripts/check-tokens.mjs",
+      "bytes": 4526,
+      "sha256": "6843f6880686e1aa4ab1acc75d2da0deaa5b5e71d12117538e560c85ea5995b1"
+    },
+    {
+      "path": "scripts/check-typography.mjs",
+      "bytes": 2391,
+      "sha256": "25061629577da06097d5c1782aed292651d7148d4ec777adb838e869a06b9809"
     },
     {
       "path": "scripts/desktop-discovery-smoke.mjs",
-      "bytes": 6471,
-      "sha256": "542418452d5144404f4a8d4b98e1722092522795e421c1769484d808e86faf75"
+      "bytes": 7542,
+      "sha256": "c05b4afccd3949d8ffe6eb35fd4b6328e86d3b671014343124d6c7c6a95b98bc"
     },
     {
       "path": "scripts/enquiry-smoke.mjs",
-      "bytes": 8537,
-      "sha256": "8c721e4ba503826e52899ce3398c1e1258537fd9dfcf6a70d8e6f7e0815cc06a"
+      "bytes": 9227,
+      "sha256": "898a48831b363e47e6003bf0a44a571926044243e3a0d55b65aae3127695da87"
+    },
+    {
+      "path": "scripts/home-hierarchy-smoke.mjs",
+      "bytes": 2734,
+      "sha256": "ebb8177a190f72b60bceb67a2c173994ca35805e38c0c18d447d7acb2fe7ca91"
+    },
+    {
+      "path": "scripts/journey-smoke.mjs",
+      "bytes": 8379,
+      "sha256": "9b2f380fe7da1843b97659c5a8d945228413d9d180c42c6bbe5c03640c3450da"
     },
     {
       "path": "scripts/mobile-filter-smoke.mjs",
-      "bytes": 6403,
-      "sha256": "6ef2cc5ddbc378f8f049c30207790948a59862878831550d7347ad59a6814b7b"
+      "bytes": 6675,
+      "sha256": "b230564e08cb9b9357b12a8a0a15aed8c4cac77cda8fc9469fc6008b5ed8da87"
+    },
+    {
+      "path": "scripts/phase4-smoke.mjs",
+      "bytes": 14993,
+      "sha256": "33b223d27ba5755421f7ae50b55701b4e1f2a7726508917fe284544a33848965"
     },
     {
       "path": "scripts/provenance/legacy-autodeal-reference-acquisition.mjs",
@@ -195,69 +391,94 @@
       "sha256": "a0c8d53864bbd4fb9108be6dee3abb21be361f951f1b305c062792a93216c090"
     },
     {
-      "path": "scripts/sveltekit-smoke.mjs",
-      "bytes": 153314,
-      "sha256": "f006e2f2312223f6962bde636b0c7c2eba9e386d2ce4766fe5d507dba5c5abc8"
+      "path": "scripts/route-smoke.mjs",
+      "bytes": 4190,
+      "sha256": "bcf566a8c744796f7a82e677115021e5e309f677859d6f04854192527c6bb47a"
     },
     {
-      "path": "SOURCE_LICENSE.md",
-      "bytes": 2263,
-      "sha256": "c77be97a4d764a3cb369bb2789458a1c89ca38e54b4238da39f2b29841f3964f"
+      "path": "scripts/smoke-report.mjs",
+      "bytes": 1050,
+      "sha256": "d5a437d9024c7f3e6e057d591287e172c2b0da54f83b29c3f3eae99fcdf668c3"
+    },
+    {
+      "path": "scripts/sveltekit-smoke.mjs",
+      "bytes": 74,
+      "sha256": "d4c9caca12493734621dd9ab94de59f329cdbc537197f2bf9ef386d537bc8949"
+    },
+    {
+      "path": "scripts/typography-smoke.mjs",
+      "bytes": 22399,
+      "sha256": "9e22ea98f48369ff1b4dab56ddc2891034392873c15c754a916ac8709852f8e0"
     },
     {
       "path": "src/app.css",
-      "bytes": 28611,
-      "sha256": "b2a86ca5f010df5e0aa385c02ab7d4fc79c9db9712bfd67b714734afe88e872d"
+      "bytes": 197,
+      "sha256": "3860a042f0aedf154f6c990f53c3b34484f575f1fb9e29c187d2a56c1de2dbc7"
     },
     {
       "path": "src/app.html",
-      "bytes": 404,
-      "sha256": "3bac60bfee8d1682bb7ec04e4255a070e8a327bcecc3350b6b705b9a651dc07c"
+      "bytes": 431,
+      "sha256": "1affc4ce39acc8f2db2434bc5dcb685942de47f48fea6fce2673f2235f3b4006"
     },
     {
       "path": "src/hooks.server.ts",
-      "bytes": 2243,
-      "sha256": "0317247034a0396c8a8540f6188725f7f8e4a6ffb09460e0d3f9e64fc3bb1edd"
+      "bytes": 2379,
+      "sha256": "e3c4bfe840fe00c02f506804450989cf983f2ffa2b9dda76f83aed21693faa10"
     },
     {
       "path": "src/lib/components/company/AboutHero.svelte",
-      "bytes": 2917,
-      "sha256": "0f1334953b01b7245fcebff055341f7eb5836b2c91805cee5701c986f565cc73"
+      "bytes": 2889,
+      "sha256": "757cf53dda790044643d1f397b324c01a9fd324b7ae8d720e376c49f4b689b7f"
     },
     {
       "path": "src/lib/components/company/AboutPartners.svelte",
-      "bytes": 3050,
-      "sha256": "d364d18635bdd04a26cd66015fb68ac3e90a874c4be7565a60f657d9b5fca57c"
+      "bytes": 3195,
+      "sha256": "c62dec5e045c6076dae1febd613f7524cb9af6a332d840593a51777e66452d38"
     },
     {
       "path": "src/lib/components/company/AboutProcess.svelte",
-      "bytes": 1583,
-      "sha256": "14ece1003bd74e971f50399fef19bee0ff8f8471c35e908c170e25f2120fc4c1"
+      "bytes": 1606,
+      "sha256": "625f3723146e2e85d959c875e6c36439d9d04f726200f9f12a59de7b3aacf60f"
     },
     {
       "path": "src/lib/components/company/AboutServiceIcon.svelte",
       "bytes": 16297,
-      "sha256": "d81137b45db0b31759ea99832c5c29c4ef3aec54207453adbaea13533a0209b4"
+      "sha256": "fbc60449be9ca9221a7f40aee2512d7c5f9c9e41656a6e910b3084697d7c362e"
     },
     {
       "path": "src/lib/components/company/AboutTeam.svelte",
-      "bytes": 6639,
-      "sha256": "ad243036f9079c5e1ae2c5da36a1b7457d1b1d6874707e6f9ce91f2535365a37"
+      "bytes": 5340,
+      "sha256": "f80c187b29141cb032e29ead309abe1fcf1fc7fa09f0701cf3682ca19d88e4f7"
     },
     {
       "path": "src/lib/components/company/ContactHero.svelte",
-      "bytes": 2961,
-      "sha256": "4e32c31b9b023438bd15c9a078a04b573117c69957c00d12f0f39365d6bb7765"
+      "bytes": 3920,
+      "sha256": "ecb70537f3a2e4bed78be89c80cc624cb604f6f6e098371af898695ece449ce0"
     },
     {
       "path": "src/lib/components/company/ContactIntent.svelte",
-      "bytes": 10452,
-      "sha256": "476b552987e88b74cd4e2a4311064da42ef9adac96382462b7abd1ddf5c8870b"
+      "bytes": 10290,
+      "sha256": "a83ef60e51b4d7141c19d344fa21a6b15fc35aab3f06418297b99b4c30fbdda1"
+    },
+    {
+      "path": "src/lib/components/company/ContactVehicle.svelte",
+      "bytes": 1561,
+      "sha256": "87b1c13369222b344f759183b3d1913a544f7440d331206ee3837dbd61773771"
+    },
+    {
+      "path": "src/lib/components/company/EnquiryEntryField.svelte",
+      "bytes": 9848,
+      "sha256": "093be323a6a9417f047a4b3233841044b04608b5dea9fd5b9ab08e872a39fb00"
+    },
+    {
+      "path": "src/lib/components/company/ImportHowItWorks.svelte",
+      "bytes": 12346,
+      "sha256": "dd58ae9c8cbcdec2689854d6c5ab6b3ced9df8117de4d179100def5d9d914361"
     },
     {
       "path": "src/lib/components/company/ShowroomMap.svelte",
-      "bytes": 2072,
-      "sha256": "707692a5f7a1d33d5971aec6d35bff7ee8d6fbdaa302d739221c5d45366b1622"
+      "bytes": 2032,
+      "sha256": "599da9be80a9c14687ebbdb37e6621063511132ebe5183da6a2e011d118a64a3"
     },
     {
       "path": "src/lib/components/company/SocialBrandIcon.svelte",
@@ -270,84 +491,119 @@
       "sha256": "da897ba1ec38b32a2435f6763a5ab2a70b8eaff8f09ba949459f56d4b815c74a"
     },
     {
+      "path": "src/lib/components/company/TradeInEnquiry.svelte",
+      "bytes": 28220,
+      "sha256": "1302571faef227054df095c93118f62d34435d13a1b0545f7ce1457a4e4bae68"
+    },
+    {
+      "path": "src/lib/components/company/TradeInInfoDrawer.svelte",
+      "bytes": 12412,
+      "sha256": "14d1b75b04147bcf9d515b5edd47e873487274a122a6f925b275f55d115c9de3"
+    },
+    {
       "path": "src/lib/components/company/VehicleEnquiry.svelte",
-      "bytes": 23816,
-      "sha256": "9516c054d7d630df8aefbcb451ca7814e2e2fae7bcf3201864fd9c1c09a6037a"
+      "bytes": 28594,
+      "sha256": "e74785d5a6678e4582bb10e1671ee8fac5108745ce0daeff1c3eb0d0d6bf0c6d"
+    },
+    {
+      "path": "src/lib/components/company/WorkflowShowcase.svelte",
+      "bytes": 1935,
+      "sha256": "6269ff4673fc8d5ab055203fdfc16e3e6c260b21d62773377861cf01a377eb13"
+    },
+    {
+      "path": "src/lib/components/company/WorkflowSupport.svelte",
+      "bytes": 2518,
+      "sha256": "278e3a1a31ce4a33f2cbd2d2b58083b4ac301766512091da3bc99b9d4380dd9b"
+    },
+    {
+      "path": "src/lib/components/editorial/ArticleSupport.svelte",
+      "bytes": 1530,
+      "sha256": "4ad4b16d01029d776354f15db2eaa7d585de4cb0a7a2f5cb4b313ce41c21ba16"
     },
     {
       "path": "src/lib/components/editorial/BlogCard.svelte",
-      "bytes": 3934,
-      "sha256": "488d7e18e0536a528b2544b54c878a0bea548c212787d79faaf26309ec77fa71"
+      "bytes": 4356,
+      "sha256": "fdfc0db7b8e8894f67980a37477f22e904a44fb9b6937f222046bc9378477f2d"
     },
     {
       "path": "src/lib/components/editorial/BlogHero.svelte",
-      "bytes": 2317,
-      "sha256": "322b1450672c95ce3a75ca4aa82c697c4949f699753bd904e98b1d6afd4d4c62"
+      "bytes": 2293,
+      "sha256": "ae2148bef53af8ef7e651983881f5d7667c9791ac0e961dd103f95adf998fd4b"
     },
     {
       "path": "src/lib/components/home/BodyTypes.svelte",
-      "bytes": 7096,
-      "sha256": "b8602d394120d5f3a6dc4fd19380cf9ec3c31f6c485f301f8c4f31c15da2b248"
+      "bytes": 10494,
+      "sha256": "a42385f31e21584cca0c0dcbadc583af8232d3fee8085165a6a9ee1e54bf8205"
     },
     {
       "path": "src/lib/components/home/BrandSection.svelte",
-      "bytes": 10070,
-      "sha256": "f4593770ed49690ffdda7d506ac866f78ae9d9a65f9bbd1141ad899e499e7d6b"
+      "bytes": 9088,
+      "sha256": "93bc112d437979e08543ed8fd2fa0bc2fbfd067ab4f49d2ca6ff2356091c2f30"
     },
     {
       "path": "src/lib/components/home/BrowseAllCard.svelte",
-      "bytes": 2263,
-      "sha256": "9f647078b0034ffcc059a4187138835bccd5fe6ce44c1ce3cc228d7750f28a74"
+      "bytes": 2495,
+      "sha256": "87894f6706e802a900739a9763fd28a50aebedcee160bd9d918e6d7f04639d72"
     },
     {
       "path": "src/lib/components/home/Editorial.svelte",
-      "bytes": 12103,
-      "sha256": "772467b05e8cfdd7ae4aca0943df52d3f42e8e645557616fc1a87b536765d32b"
+      "bytes": 11183,
+      "sha256": "c06d508d743eba3486e39b611e6607ed8583b7bf88c2cc5c73f8cf463dcd6623"
     },
     {
       "path": "src/lib/components/home/Hero.svelte",
-      "bytes": 3084,
-      "sha256": "b0a6316fc17828b6fa5a535ca137aa10168f8e4f364f4704b0360ba802246649"
+      "bytes": 1965,
+      "sha256": "7288ecf4356faeb7cbafb514eae04e5ac509b1fb8b6cf340cf3df12d6ca1ada8"
     },
     {
       "path": "src/lib/components/home/InventorySection.svelte",
-      "bytes": 6346,
-      "sha256": "644b009d9ffb3918e42c8f0ead9fac0404c23f2d67c3de60120fa199cb50ab18"
+      "bytes": 6767,
+      "sha256": "5718f439af27bd4a7133099c849eaf98f2692d75010c211e41c64d797d70b92c"
     },
     {
       "path": "src/lib/components/home/MobileBudget.svelte",
-      "bytes": 3955,
-      "sha256": "46cffaeec6e414b5d14e89ac93c115a5ac47323f71f48aa209facb9435f0fc27"
+      "bytes": 4083,
+      "sha256": "e06286ce7b7baefc324423c5f4e63029a916bb3bb0af49c12bbd4fac9a043929"
+    },
+    {
+      "path": "src/lib/components/home/MobileCoreActions.svelte",
+      "bytes": 5308,
+      "sha256": "19dccd07b7edd298f96972bde7afa7e14ebcd2cb0b27ce70bed26558ec06a909"
     },
     {
       "path": "src/lib/components/home/SearchBox.svelte",
-      "bytes": 10497,
-      "sha256": "7f0bfd4b6595b2e96dac50dc8ae569caa3847979b6c5aa1271f67460351e198a"
+      "bytes": 10350,
+      "sha256": "980827c72d660e6c4ff68f828af7946c818f2af3d8232f76ecb346e1ba78687b"
     },
     {
       "path": "src/lib/components/home/TrustActions.svelte",
-      "bytes": 13637,
-      "sha256": "14ea68355f2e1bbe572a2828eba753f57ad041214ef0e196ee150d11a687f8fc"
+      "bytes": 20471,
+      "sha256": "f06cc3059ee16fc0900e4faebc4d6c2ad3a8ea15fabc9cc18d795608be938b8a"
     },
     {
       "path": "src/lib/components/home/VehicleQuickSearch.svelte",
-      "bytes": 24152,
-      "sha256": "e2d552436161dbe509f3062aa9e587cc174242edfa50feb0ac165b1cb5d40fda"
+      "bytes": 22373,
+      "sha256": "0707d75b76e50bf4dd9df82b3e0ff2d9ab5d1e5b1913a903a06edb78ddc07d62"
     },
     {
       "path": "src/lib/components/home/VideoSection.svelte",
-      "bytes": 9591,
-      "sha256": "257108cd36b445a31b8e7a284702545fe6f83f668783ae47e0f076dfe9e12972"
+      "bytes": 10316,
+      "sha256": "a7b288f21bce65306d4f7494f95663869a16f20b1c1a39b8a05efa47b73a3aca"
     },
     {
       "path": "src/lib/components/layout/Footer.svelte",
-      "bytes": 3638,
-      "sha256": "4661ed2a2d7c2a8875e8e2adb95df6631fbdf79ce33c16c5a0a29c6f06e6a567"
+      "bytes": 9414,
+      "sha256": "40255af30b94bd3d8e4bc09d8f9de331133f9678869a64b962fb4efd4f3497c6"
     },
     {
       "path": "src/lib/components/layout/Header.svelte",
-      "bytes": 29984,
-      "sha256": "bc3b46d1c24f5af9eeda806bf10624e8ead7823649efa6f359a14ecc8bed7d3d"
+      "bytes": 31020,
+      "sha256": "7206e3c421f7c703c71db83f75186d9926f2253f035bcf6d33d0d34402abcfe1"
+    },
+    {
+      "path": "src/lib/components/layout/MobileMenu.svelte",
+      "bytes": 7447,
+      "sha256": "c4f534c2d36b3bda7279559874885984132b5c0ac852e575267c0ff95d8431fb"
     },
     {
       "path": "src/lib/components/layout/MobileNavIcon.svelte",
@@ -355,14 +611,19 @@
       "sha256": "fc4711462bbbee641954eaaf01abec68d3b33664c1ab665a1c4f80cd6b763cf9"
     },
     {
+      "path": "src/lib/components/layout/NavigationFeatureCard.svelte",
+      "bytes": 3298,
+      "sha256": "0a7c2de5f92b74a86368825bd76c5389bd16d66e923c3294e81c4923c16425a4"
+    },
+    {
       "path": "src/lib/components/layout/SiteShell.svelte",
-      "bytes": 463,
-      "sha256": "c3be99729f6e921a1e795c046776bae1c8b7faa45583a5e7dc9466ac488ecd0a"
+      "bytes": 3081,
+      "sha256": "d9e2cd2877bbba993c43ac59877f16cd694cc275f860ad3a17e8c24fdff26512"
     },
     {
       "path": "src/lib/components/listing/ListingFilters.svelte",
-      "bytes": 10730,
-      "sha256": "79b6b4fb028ae29dc5772f6b2dac37b94b1b5aafa7c530d09d49d8774d75db45"
+      "bytes": 20083,
+      "sha256": "a5c44ca8384d0a69caac95fc9c9e73a95d9c597d1ee54cde2615ba91de7d0dbd"
     },
     {
       "path": "src/lib/components/listing/ListingHero.svelte",
@@ -371,33 +632,58 @@
     },
     {
       "path": "src/lib/components/listing/ListingResults.svelte",
-      "bytes": 10190,
-      "sha256": "dd7940a029219e5c6cbb62ffeaa6932d0d9295df193a5308dc9776bbfa89a6ec"
+      "bytes": 8678,
+      "sha256": "ce7dedb86bb1ac57ed1c5c69e024e88ef297ad266beb130ab6541379122ac396"
     },
     {
       "path": "src/lib/components/listing/QuickFilterSheet.svelte",
-      "bytes": 14005,
-      "sha256": "4c4ded372d764ae1d5132af28f72bc537e5b499feaa8867f95db5f9b8ae2f253"
+      "bytes": 12966,
+      "sha256": "ed8f2ca7831c23994f28a06ce683ca9c3d974e87c10750df704d8dffa5b45d7c"
     },
     {
       "path": "src/lib/components/listing/VehicleDiscoveryForm.svelte",
-      "bytes": 12175,
-      "sha256": "e402c55fda3dc0242b484c1dcb6935f9495e6db2dfeddd0fcea37df24cfa5aed"
+      "bytes": 12267,
+      "sha256": "0c54f0569d32bd8c64fa72893640e5c4b5874ed8eaa6fb514bba5274cbd94904"
     },
     {
       "path": "src/lib/components/listing/VehicleSearchDialog.svelte",
-      "bytes": 28082,
-      "sha256": "abc9d4bcdf15aacee47659a9efa92f859058b8f8f433d4017411d48481a93e37"
+      "bytes": 25294,
+      "sha256": "7c62762aea27e22340deb24738bcd6709d8b4700041f13102a3703004e414f80"
+    },
+    {
+      "path": "src/lib/components/ui/ActionLink.svelte",
+      "bytes": 514,
+      "sha256": "9d392a5e4edaee0140d68b4a91dd09535e5f994618525237849b54dcfd03d181"
+    },
+    {
+      "path": "src/lib/components/ui/ArtworkRegion.svelte",
+      "bytes": 889,
+      "sha256": "5250ec0d23da23411966d7a5590584b898a6d27a2fc6b60d622618f169b6afb3"
+    },
+    {
+      "path": "src/lib/components/ui/FeatureArtwork.svelte",
+      "bytes": 790,
+      "sha256": "30bf7bb7a58a9256d29453fae484c91ad7dc5dd774a4c300dee25e77faeab6b9"
     },
     {
       "path": "src/lib/components/ui/HeroVehicles.svelte",
-      "bytes": 3133,
-      "sha256": "49ace952ea6c3e1b42f78eb8aed3c131575712080259a82a634d3170d7758842"
+      "bytes": 4680,
+      "sha256": "0d4ab9d179924f69dd6c8eead151380630d281b1d21198f0bef8b7b494e6be99"
     },
     {
       "path": "src/lib/components/ui/Icon.svelte",
-      "bytes": 3839,
-      "sha256": "b831854b6452271e8ab6138de7f40ae9814744704fe06d40c45b9eeb3308f0c8"
+      "bytes": 4051,
+      "sha256": "d03f7c78a63ea7ea8364347bb7af1db236f11a92f8ea35e4b9f09c41b216c422"
+    },
+    {
+      "path": "src/lib/components/ui/RouteHeroArtwork.svelte",
+      "bytes": 2949,
+      "sha256": "178365db12a7d42259f524e9ad53ed37b4e23d13b0ec79082473b40e54f8e7df"
+    },
+    {
+      "path": "src/lib/components/ui/VehicleCutout.svelte",
+      "bytes": 1312,
+      "sha256": "14fa8935f094a8e9c52e23fb6ed6f96c0043a36eaf473778bff8872ba7c2758b"
     },
     {
       "path": "src/lib/components/ui/icons/OriginalActionIcon.svelte",
@@ -405,104 +691,164 @@
       "sha256": "029bd306547c967824db32dd05f13daf128ea3fc0d7388c3bbe7979da2ac0e6f"
     },
     {
-      "path": "src/lib/components/ui/RouteHeroArtwork.svelte",
-      "bytes": 4264,
-      "sha256": "6e739089e1b12b6ba0fa2ac76878eb71a6e83a6982510d86bf612cc87b3baaf5"
-    },
-    {
-      "path": "src/lib/components/ui/VehicleCutout.svelte",
-      "bytes": 1128,
-      "sha256": "17f681988e8df2945c3723554688c7f6fd658b56eac94193058996fc08c29369"
+      "path": "src/lib/components/vehicles/PdpImportBanner.svelte",
+      "bytes": 4139,
+      "sha256": "d409cadd9a89e774d74301992ffb72a9e7461c0a32fde64dc2595fbf497591d0"
     },
     {
       "path": "src/lib/components/vehicles/VehicleCard.svelte",
-      "bytes": 9425,
-      "sha256": "9efabd72156d2d2539936a7c31cbc27900e5a31c44b6bd51b1f99f8e246ed2d5"
+      "bytes": 11877,
+      "sha256": "1773ea2ba6726aae5497c993519d057d23af749629ed7909cb94613225362f58"
     },
     {
       "path": "src/lib/components/vehicles/VehicleFinanceCalculator.svelte",
-      "bytes": 5103,
-      "sha256": "5a04ca9e0b8dae1ffaf505af48bc9a498767bfd892fc1127edd8e20cb973d9cb"
+      "bytes": 5476,
+      "sha256": "b6969a5ca61be6c88a0dbe35703824e47abac8b843b6140dfd78c26acdced856"
     },
     {
       "path": "src/lib/config/brand.ts",
-      "bytes": 704,
-      "sha256": "2d8aaf30e7a898a7022271f4d9ecc846c33719fe7cb32d84cb6d51780385db59"
+      "bytes": 1141,
+      "sha256": "4b3fa8f4719a305cfec8c82e538fd33dfdf4fc76622baa55b995ec04cf2c033e"
+    },
+    {
+      "path": "src/lib/config/lead-site.ts",
+      "bytes": 7742,
+      "sha256": "7d256f099ebea8c7e7581256ce5a3cbf6f4e9f9148cdd2ca3ea71324e6106e6b"
+    },
+    {
+      "path": "src/lib/config/template.ts",
+      "bytes": 1396,
+      "sha256": "e8a3aee2bbc54c251d427f806c2a5a1ea3012ca270d7812fc14d9796233f8f04"
     },
     {
       "path": "src/lib/data/company.ts",
-      "bytes": 5138,
-      "sha256": "4a4b3b10ad6deaf7af61bd5de17c556759057aee79e8cd7d792dac95749376a3"
+      "bytes": 5142,
+      "sha256": "9e8c0e903d84dfc1aa139b93472b9629afab8307feed0b6febc3df8583351d57"
     },
     {
       "path": "src/lib/data/demo-content.ts",
-      "bytes": 1856,
-      "sha256": "19ac138545f9704bf02ffe69701146730a86be51d760af43846558dcd02f3a8d"
+      "bytes": 2320,
+      "sha256": "e639246508ea46950d68d20043e66cb09a03cea23570ec547b28a5c9f5f23580"
     },
     {
       "path": "src/lib/data/editorial.ts",
-      "bytes": 13543,
-      "sha256": "bdb313d9d89f0945fb2c5069edddefb38ae806b85edc0d3b1202533b0ad18ae1"
+      "bytes": 13619,
+      "sha256": "fef3057b11f80a03f0692dcf88458befa6904784165b83296f2b7993ed2e3b28"
+    },
+    {
+      "path": "src/lib/data/feature-artwork.ts",
+      "bytes": 1422,
+      "sha256": "b225352de39b85ba5c1f10bfd399784da96a6d46bfa9cd8a41fee40ab09594b8"
     },
     {
       "path": "src/lib/data/home.ts",
-      "bytes": 3268,
-      "sha256": "e1677636876aee70b586f139014718976e2b357cd197402da00d4bdf5f098476"
+      "bytes": 4439,
+      "sha256": "53ff6c5e1ec55ca86caaba858ff1ef0f3c95614131b84a6f4ab6217b6a73f61d"
     },
     {
       "path": "src/lib/data/inventory.ts",
-      "bytes": 5600,
-      "sha256": "6f014cbec675c463debb411c68b46efc5a7f60ecc6f2c3139da02daa8417f466"
+      "bytes": 5579,
+      "sha256": "8a7ab2d0c25f69b897e1d07221acf959c58d6b9533bc1b23f75da91bcfb5098d"
+    },
+    {
+      "path": "src/lib/data/journeys.ts",
+      "bytes": 1172,
+      "sha256": "90335c2fa1f65537f69cb65b4c569aa1ea1f70fdec42d83400109ff005a54418"
+    },
+    {
+      "path": "src/lib/data/listing-draft.ts",
+      "bytes": 8290,
+      "sha256": "6b2655e36d4475bd470936fa501d2cca25ed6eb687b0608f396e784f68dcfee8"
     },
     {
       "path": "src/lib/data/listing.ts",
-      "bytes": 6038,
-      "sha256": "f1a2832e64576c14d56d98dd36f1ce3ee6aae605f3e3322dc041157d27e192d1"
+      "bytes": 7626,
+      "sha256": "10a2f06a0b27f63627154b31165e48bfe2cd83d90c8c2c1cc6791586aa16cf1b"
     },
     {
       "path": "src/lib/data/navigation.ts",
-      "bytes": 7161,
-      "sha256": "6afa51239090b8a7bb7127881ae8ee57117980701bc8c9c75fd638628ea6b63f"
+      "bytes": 7561,
+      "sha256": "399acb14af21a176a681855405b1d730e03513e51b00609e56a875472d26b874"
+    },
+    {
+      "path": "src/lib/data/service-artwork.ts",
+      "bytes": 646,
+      "sha256": "c283848d1deeee5af6e2864bb05f5cea285586c7de34fbbbf10322058c39e040"
+    },
+    {
+      "path": "src/lib/data/shell.ts",
+      "bytes": 4499,
+      "sha256": "298e58d025f5556c2d1a2dd58aa1d6d06910256be80e8650e6d253d30e3aceef"
     },
     {
       "path": "src/lib/data/vehicle-artwork.ts",
-      "bytes": 2170,
-      "sha256": "6ce8cfa51af3ba5391d72049fca12778840ba3fde087a7f5b2e362de00eea6db"
+      "bytes": 2635,
+      "sha256": "2837423cc37e398597b38753832124d5d69492e8edd7b4b008f5a915adfc9175"
+    },
+    {
+      "path": "src/lib/data/vehicle-reference.ts",
+      "bytes": 588,
+      "sha256": "73dabd354608a9ba46cf64c9cb3817d3372d478240ad019e3ab4f0d270afdb96"
     },
     {
       "path": "src/lib/data/videos.ts",
-      "bytes": 908,
-      "sha256": "57217c36b4b0e67a318f44b3f64eade67ea19b1d63541b88aa96605cd1615d1e"
+      "bytes": 900,
+      "sha256": "ed4a634d13a6888151d6e3d91bbff8af01e2a10b00f6ebc8c8b27129e4e196bd"
+    },
+    {
+      "path": "src/lib/styles/base.css",
+      "bytes": 3845,
+      "sha256": "0bc6021ce0880f30e9e86e4e8fec58909ae456877a2c0bfe3117795a271a5aad"
+    },
+    {
+      "path": "src/lib/styles/composition.css",
+      "bytes": 12390,
+      "sha256": "822bd184a4069bd19ab26b9c4395fece8b8d766272c85143446869887fd2f060"
+    },
+    {
+      "path": "src/lib/styles/tokens.css",
+      "bytes": 6087,
+      "sha256": "3c66290e54c362e4bd7861ba73cc6e82588a912a6244314ccb872ed8cd8847a9"
+    },
+    {
+      "path": "src/lib/ui/dialog-viewport.ts",
+      "bytes": 839,
+      "sha256": "5640482c3ead076dc6fb87ec3758400cafd48bd94299df95195cb220d5821c8d"
+    },
+    {
+      "path": "src/lib/ui/overlay.ts",
+      "bytes": 1606,
+      "sha256": "d5a281c89331c5a3960b0ede102bbd07e74651d90dc97dd7cb37bf7ff4184658"
     },
     {
       "path": "src/routes/+error.svelte",
-      "bytes": 2945,
-      "sha256": "66be7df827725c56e1e1ca5a4eabe79ee7c98fb86aee359c45f1230ec78e1bfc"
+      "bytes": 3034,
+      "sha256": "211654eddaea5dd067b787780fa226fcb14f042381ad475355720eb516caf46d"
     },
     {
       "path": "src/routes/+layout.svelte",
-      "bytes": 693,
-      "sha256": "771aa7e400dc3d954fa8ca7902262b1dc1828cc8249fed4c23258e311d8b96fd"
+      "bytes": 1146,
+      "sha256": "6580720b2c0cddefa04080abf1b285039d2e93c4930caa118bf32743f7c19fa9"
     },
     {
       "path": "src/routes/+page.svelte",
-      "bytes": 3793,
-      "sha256": "1bef5b2a5e7d6a4a9f051a8a588787aa30a2926ed5ead37f1d3b30c934fc8660"
+      "bytes": 5508,
+      "sha256": "42ab81bb6d34cb21e225e9c80a847bb329e1b6dd168c6e34e528ed8f2bdb0ee3"
     },
     {
       "path": "src/routes/about-us/+page.svelte",
-      "bytes": 1161,
-      "sha256": "39916dbda7377aee664025c4c299707a2c9a76bd6eed3f2ca8ce5216017adb6f"
+      "bytes": 1376,
+      "sha256": "7cd73d617c0f8891c54725000375a938c5f90f4a15283a9eb74414ffcbdac5c4"
     },
     {
       "path": "src/routes/about-us/about.css",
-      "bytes": 7544,
-      "sha256": "c75224b45705f1442f8ddb413ee811d7f643e5ecd60973fd4ce1c7808a192bfb"
+      "bytes": 11662,
+      "sha256": "6ab42318662a88b86a4327f8811c5f75423bd2b41f49104466c63befe0d0a07f"
     },
     {
       "path": "src/routes/blog/+page.svelte",
-      "bytes": 1456,
-      "sha256": "6600e8406ae4e9139aa959ef8e94c70108daf9a23ab6ae0da4fc5a8bb405753f"
+      "bytes": 1594,
+      "sha256": "4894cdbb91dd40adebe4edff8112f38d7ed34b666c16b4174db98672c59cc142"
     },
     {
       "path": "src/routes/blog/+page.ts",
@@ -511,58 +857,58 @@
     },
     {
       "path": "src/routes/blog/blog.css",
-      "bytes": 4349,
-      "sha256": "c28b6a338e0fb4193ad2816924b96f3018f7e4cd4619a5167ea125c69b7c1f2e"
+      "bytes": 4629,
+      "sha256": "140c2a9699db787556fee5ac44162f6f2ad1821bf25d9ecc9284572fbbcc21b1"
     },
     {
       "path": "src/routes/blog-detail/[id]/+page.svelte",
-      "bytes": 5014,
-      "sha256": "5a745497bb54bcce5fe6bf4e3766f9ff67284ea1e432ffcc0e08eb32eb5121df"
+      "bytes": 2654,
+      "sha256": "05d33f9f915328737c4b5e3efc9b282a54f1b91b39f1f8549f32c34fd3d5c773"
     },
     {
       "path": "src/routes/blog-detail/[id]/+page.ts",
-      "bytes": 1016,
-      "sha256": "e6d4315fcd1ead985c50d148939747a404beb4146af681e65463f333f1be747a"
+      "bytes": 1151,
+      "sha256": "cc50e581298c156b69536cca86f524cd1892f32fb6c70d759110b6ef5e6a67e3"
     },
     {
       "path": "src/routes/blog-detail/[id]/detail.css",
-      "bytes": 9353,
-      "sha256": "5d9c2739d0a4b081043f2d0ed4e93e80460fd9917627f540fa35d578df734305"
+      "bytes": 10021,
+      "sha256": "2cd3777cee5600b35e84316928579b1f3fd2f6a08f481c9a4f648dcc41e8ebce"
     },
     {
       "path": "src/routes/contact/+page.svelte",
-      "bytes": 1430,
-      "sha256": "2ba55cf3c788ed71bdc5aabd6d66e36efb4c3d29a62d326c196add4112eeb8b5"
+      "bytes": 2352,
+      "sha256": "80ac65fbc6c51a33c5fb75b65b7c6e2a527714ed7355567428218b4fe5e7d3c6"
     },
     {
       "path": "src/routes/contact/+page.ts",
-      "bytes": 348,
-      "sha256": "38f9f4d3d8b9ec495b35880712aec6af3c017e1e6774aec8f47abfd0d46fa6be"
+      "bytes": 536,
+      "sha256": "bd4679d70a64c7e0931b44893882cd0cbb907fb030e649aed99c1c9be620e2d0"
     },
     {
       "path": "src/routes/contact/contact.css",
-      "bytes": 19232,
-      "sha256": "4aca418e7c39f6cb4d50ee3ecf5326bd73b02486825abfec0a399cbb93ce8088"
+      "bytes": 40648,
+      "sha256": "fb29a32460d894f05dbb3a1dbd5a0d994aa774be7a5f85549d47a07b04e35772"
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/+page.svelte",
-      "bytes": 10436,
-      "sha256": "5254c56c4feac37563bacb3de2ba4661804816dd1f90ae91d541445e2829a6f7"
+      "bytes": 12529,
+      "sha256": "a811f3a2f3548dbdf430fece8910ae37da994c4caa5391c51e334fe5fff5ee62"
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/+page.ts",
-      "bytes": 1064,
-      "sha256": "7a418df9ce58a5bd1b7bc9631aa3d033af90a81992d5f468867be55aa86e90fc"
+      "bytes": 1161,
+      "sha256": "e60a37b1b2a0e3f9a796eaeab69227b08d3baee94d83f7754f14d6489ee32eb9"
     },
     {
       "path": "src/routes/listing-detail-v1/[id]/detail.css",
-      "bytes": 15492,
-      "sha256": "4bb2e567c2037aeb529660ddf641fccfdf8d5110d0b03b0e3a363fccd7a3a38b"
+      "bytes": 21216,
+      "sha256": "7b0c45a02d58a4cae4a277c0cea491fb6a71eca87883024ef2e4e3b3c41492cb"
     },
     {
       "path": "src/routes/listing-grid/+page.svelte",
-      "bytes": 1259,
-      "sha256": "81d1308316251af7088e2681345cf7139cab5f519c0784df5f2e93db83992e7a"
+      "bytes": 1263,
+      "sha256": "2c595c82953a1007e2a8604acea9333e3c28ddd5e20cc63b05474d3b51f17f11"
     },
     {
       "path": "src/routes/listing-grid/+page.ts",
@@ -571,33 +917,33 @@
     },
     {
       "path": "src/routes/listing-grid/listing.css",
-      "bytes": 13059,
-      "sha256": "c76c77afd19c0e71499e6a4b3d474a1c7a953281968cbc922c160a74ee7423d3"
+      "bytes": 1263,
+      "sha256": "08eb84001e48381700ae10139cef79eb6c0c6a421e622d28c775d4c35534e722"
     },
     {
       "path": "src/routes/robots.txt/+server.ts",
-      "bytes": 356,
-      "sha256": "fc9004659301978e40f393420ea59e6883a4639850a87a11b36f4c5f573b5ea7"
+      "bytes": 506,
+      "sha256": "9c5fc11c75f12be15652debba869867d7b233454e4b46a412c4ce3cbd3aaa330"
     },
     {
       "path": "src/routes/sitemap.xml/+server.ts",
-      "bytes": 1085,
-      "sha256": "588d606eb64a6eb49c82a32c1dd230590a6d9fe4d7766109e4a2e8fdde606574"
+      "bytes": 1269,
+      "sha256": "b9ca9b73f8529d06bd6100ec3343695d1ab3f6e6e9514603ee5a6eefc8a7f884"
     },
     {
       "path": "static/assets/images/blog/blog-1.jpg",
-      "bytes": 93721,
-      "sha256": "9d966adf2526f203358198b996a12d48ac52bf24196c873ed362934e908b3b38"
+      "bytes": 120060,
+      "sha256": "29ec6a2981cec738233476cb87bcd78b91068861bb399a03e89ddbb9791808e3"
     },
     {
       "path": "static/assets/images/blog/blog-2.jpg",
-      "bytes": 34864,
-      "sha256": "416e29858a644e2b74493fe7e9f50446617b10253138b2571087e607c9e01d99"
+      "bytes": 251224,
+      "sha256": "b9a5e2b334bc31ce8c618e55302a1573be632c8ae327a4738a4b4a68edb83824"
     },
     {
       "path": "static/assets/images/blog/blog-3.jpg",
-      "bytes": 94447,
-      "sha256": "6f62633d268becc0babcb341e49735adb2069bdbd315ee6ed6f05402dcdd580e"
+      "bytes": 109943,
+      "sha256": "c038c1b2f777617ea2003e76a8a1412b9099e483d30e236317a44294879a2765"
     },
     {
       "path": "static/assets/images/blog/blog-4.jpg",
@@ -628,6 +974,21 @@
       "path": "static/assets/images/blog/blog-9.jpg",
       "bytes": 92539,
       "sha256": "5d999d7e8820fdbe68f01ddf262951579cb931e5ddfcc8af4cd99ff8a0e29a8b"
+    },
+    {
+      "path": "static/assets/images/brand-curated/audi-rings-silver-cardog.svg",
+      "bytes": 34961,
+      "sha256": "adeeab3ef123ed56167ab6c3338a11a2f41c083ddee5ac21f614d664d055504a"
+    },
+    {
+      "path": "static/assets/images/brand-curated/land-rover-classic.png",
+      "bytes": 7939,
+      "sha256": "fd0644a6659ed7b041a5a527b8cbe706e85a3d313f3c0cc2586ff4d91aa5b4e2"
+    },
+    {
+      "path": "static/assets/images/brand-curated/mercedes-benz-star-chrome.webp",
+      "bytes": 6918,
+      "sha256": "af60248f26fdb7032a0c74c29f24ee771afd22d35b020c0c1ac07e295ef2ef60"
     },
     {
       "path": "static/assets/images/icon-box/car-list1.png",
@@ -860,6 +1221,16 @@
       "sha256": "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889"
     },
     {
+      "path": "static/assets/images/lead/day-night-mobile-import-v1.webp",
+      "bytes": 115430,
+      "sha256": "e6484f58df263c72973f2eff88bcad923dc53c6c9d75e46205a48baa4d76cd2b"
+    },
+    {
+      "path": "static/assets/images/lead/day-night-mobile-sell-v1.webp",
+      "bytes": 121030,
+      "sha256": "bfb59bc91685cb9108afed45500a933bc6c719a6262877f310c396ec06cfe9c1"
+    },
+    {
       "path": "static/assets/images/lead/day-night-portrait-color-v1.webp",
       "bytes": 98582,
       "sha256": "a01b8fd3df9084e1b5f70d7b26396acec6136c527e263c3eeb3c9beed32d5a97"
@@ -950,6 +1321,21 @@
       "sha256": "deb043717b97a0b6704e650baf65588960660c5e72f178608b7077516dee08d7"
     },
     {
+      "path": "static/assets/images/lead/import-how-generated-v1.webp",
+      "bytes": 24548,
+      "sha256": "847b484ff43a848f276552667eeedcc55a5b598df30dfdd271b505d0eaffb024"
+    },
+    {
+      "path": "static/assets/images/lead/pdp-finance-clean-mobile.webp",
+      "bytes": 6290,
+      "sha256": "2d6f005f94bcde9ed5a72bb1e536236f6a61b8c4e8df36602061d1586c61903d"
+    },
+    {
+      "path": "static/assets/images/lead/pdp-seller-clean-mobile.webp",
+      "bytes": 5754,
+      "sha256": "6b270f664015c76cb336f4743ce8576eb4d40d1516328edc2e475117319572e6"
+    },
+    {
       "path": "static/assets/images/partner/par1.png",
       "bytes": 2164,
       "sha256": "943421922f5a231b07e4fcd74ed331e00333afe2e87dd071e48492ae347fce88"
@@ -985,11 +1371,6 @@
       "sha256": "c766fb50b11985cadfcd040a3f8b09861eac7bcd736818ad521c6a2ad54beb27"
     },
     {
-      "path": "static/assets/images/partner/parner11.png",
-      "bytes": 1241,
-      "sha256": "8441496b7499d543d5e2dfebc9b4ec0b1a354cb51f3e2895cc1139ce81fdf0ce"
-    },
-    {
       "path": "static/assets/images/partner/parner12.png",
       "bytes": 1261,
       "sha256": "8cec077472ed19dec9e3a7f136f4de8ede5fe526383972364e71722dfb9bd6e7"
@@ -1000,19 +1381,9 @@
       "sha256": "8f773623b38d2ed8f40655eece46ed49969957354e34df7dfb8e5806b44ab8fe"
     },
     {
-      "path": "static/assets/images/partner/parner8.png",
-      "bytes": 908,
-      "sha256": "5e0295c9b6b30f606f60ed3f3b8ec9c078d431fd2ac5064ef579d92a2487c107"
-    },
-    {
       "path": "static/assets/images/partner/parner9.png",
       "bytes": 1409,
       "sha256": "2423d254763c975bd21259f9f350e817f601318cfea1fdaa5f3649376eac1bcb"
-    },
-    {
-      "path": "static/assets/images/partner/partner1.png",
-      "bytes": 7939,
-      "sha256": "fd0644a6659ed7b041a5a527b8cbe706e85a3d313f3c0cc2586ff4d91aa5b4e2"
     },
     {
       "path": "static/assets/images/partner/partner2.png",
@@ -1050,11 +1421,6 @@
       "sha256": "442c996e79c246489c92f48a1483f31dcf63a02fcee27237a86ce845540369da"
     },
     {
-      "path": "static/assets/images/section/bg-6.jpg",
-      "bytes": 199583,
-      "sha256": "afac6790d7d82fe9e0669c87efa04b983b2b642108b12928e73d07d98be87fd1"
-    },
-    {
       "path": "static/assets/images/section/car-slide1.png",
       "bytes": 41257,
       "sha256": "ed153a8fb949ed980c8858a318a011eed0652bb1ca61acb2e17839e20db0cd72"
@@ -1070,14 +1436,89 @@
       "sha256": "33b192810f31078c42ac072a65a7e4e3e14d12520bd7990b4870c21969de6f0a"
     },
     {
+      "path": "static/assets/images/template/auto-best-logo-light.svg",
+      "bytes": 343,
+      "sha256": "038fcc1ab44b7af2ba8719a2b5595c105a16d26e44327226854f6fbeda26fd37"
+    },
+    {
+      "path": "static/assets/images/template/auto-best-logo.svg",
+      "bytes": 349,
+      "sha256": "0b20919423b9be485eb84453345a45535f87e59a1b8eb054f802833061478975"
+    },
+    {
+      "path": "static/assets/images/template/body-wagon-v1.png",
+      "bytes": 1151143,
+      "sha256": "5d70b2a70636d8700570c199589c6a7d714a7dab6021a6aefd0f8123c6da259b"
+    },
+    {
+      "path": "static/assets/images/template/menu-editorial-import-v1.webp",
+      "bytes": 351258,
+      "sha256": "18f45f5fa23febc80cb54eca94dc1fdcb3766c4624b035f232bbd64e96f4be0c"
+    },
+    {
+      "path": "static/assets/images/template/menu-editorial-inspection-v1.webp",
+      "bytes": 228264,
+      "sha256": "a26751b4f82d759b8755f754f36ecc5a2044ef2e2662766f06400191ff3a6241"
+    },
+    {
+      "path": "static/assets/images/template/menu-editorial-leasing-v1.webp",
+      "bytes": 185432,
+      "sha256": "e64946b41173b5d7c97ac78ba43d568bfba0d28527577c41573c78b121718012"
+    },
+    {
+      "path": "static/assets/images/template/menu-import-v2.webp",
+      "bytes": 179466,
+      "sha256": "c4c6e543fcd55a16a424af5e0ce9716d7c6a1baeb14960aa107cc83194893719"
+    },
+    {
+      "path": "static/assets/images/template/menu-leasing-v2.webp",
+      "bytes": 211126,
+      "sha256": "c537597b81b9d7265e95d94e1ef6c20b0dc750162deb8bc83afb2f35c461e7cf"
+    },
+    {
+      "path": "static/assets/images/template/menu-showroom-v2.webp",
+      "bytes": 106458,
+      "sha256": "68beae2f9d80e2a2a380d17e819906f36276e9e4d425328baa9c2333b950d79d"
+    },
+    {
+      "path": "static/assets/images/template/service-car-v1.webp",
+      "bytes": 213776,
+      "sha256": "5c43de5e6a024e07451be4c7789502bc49a1eef0696f78ccecd3576591354c87"
+    },
+    {
+      "path": "static/assets/images/template/service-import-v1.webp",
+      "bytes": 294334,
+      "sha256": "354cdde3c4c0720c0dbb06c64e578489076998d8f90658e29223c294758674b1"
+    },
+    {
+      "path": "static/assets/images/template/service-leasing-v1.webp",
+      "bytes": 306466,
+      "sha256": "a325321d5551f5c283b31e56de0c7faeb08f1d0a5b7bbad1c7f962fc59f9c489"
+    },
+    {
+      "path": "static/assets/images/template/service-sell-euros-v1.webp",
+      "bytes": 390972,
+      "sha256": "7bb887cc539229ca22f147d01f16f715cfab5e62389d868a986848a1f1d86a8f"
+    },
+    {
+      "path": "static/assets/images/template/service-sell-key-v1.png",
+      "bytes": 1599155,
+      "sha256": "bfe86fb2f41f000da35e04e3d67f03336657ec9b9a3a311b7981912d7c4eed3e"
+    },
+    {
+      "path": "static/auto-best-icon.svg",
+      "bytes": 203,
+      "sha256": "d1980d1ba924e291dad20f83e64964ed146504c0230608116e230caab512550b"
+    },
+    {
       "path": "static/favicon.ico",
       "bytes": 520,
       "sha256": "17479d0354ba5cede84e623dbb0ceb77b638784a9535ea829e5ac9969c5a94eb"
     },
     {
       "path": "svelte.config.js",
-      "bytes": 404,
-      "sha256": "12c428bb7348c6beb2af9f896b9d4607510b2e3a8bb22b6b68a9ad2fd809fe69"
+      "bytes": 392,
+      "sha256": "97adc7415c35ade60d5f963d610c472433f8c2f960373ddfff33c887e329fe0f"
     },
     {
       "path": "tsconfig.json",
@@ -1091,31 +1532,53 @@
     },
     {
       "path": "vite.config.ts",
-      "bytes": 270,
-      "sha256": "986e839ded781587bab66ca8793d66da71ca99a1b3c455dd08b9d3e435f0db93"
+      "bytes": 256,
+      "sha256": "937eca34630c52b8838d646b39293cee5b2c0ff22e022192d74ff528adfb0d30"
     }
   ],
   "excluded": [
-    ".agency-os",
-    ".git",
     ".github",
-    ".svelte-kit",
-    ".vercel",
+    ".template",
     "AGENTS.md",
-    "artifacts",
-    "node_modules",
-    "SVELTE_TASKS.md"
+    "docs/AGENTS.md",
+    "docs/audits",
+    "scripts/AGENTS.md",
+    "src/AGENTS.md"
   ],
   "links": [],
-  "bytes": 7822988,
-  "configurationSupplement": {
-    "at": "2026-09-06T14:52:29.899Z",
-    "files": [
-      ".gitattributes",
-      ".gitignore",
-      ".vercelignore"
-    ]
+  "bytes": 17556897,
+  "sourceCommit": "22b3fd19f572b15815dd93668f1e5507e275ef48",
+  "sourceTree": "2ea03508cea82e8b811b1ddfab0c6cc3fa20ae52",
+  "method": "Approved Cars snapshot plus explicit dealer data/assets overlay",
+  "approvedTemplate": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+    "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+    "exportPolicy": "cars-source-v1"
   },
-  "refreshedAt": "2026-09-06T20:48:34.194Z",
-  "refreshEvidence": "../../audits/2026-09-06/asko96-build"
+  "refresh": {
+    "mode": "regenerate",
+    "overlay": [
+      "src/lib/config/brand.ts",
+      "src/lib/data/inventory.ts",
+      "src/lib/data/company.ts",
+      "src/lib/data/dealer-profile.json",
+      "src/lib/components/company/ShowroomMap.svelte (address adapter)",
+      "src/routes/listing-detail-v1/[id]/+page.svelte (dealer identity)",
+      "dealer/logo-dark.svg",
+      "dealer/logo-light.svg",
+      "dealer/stock/1.svg",
+      "dealer/stock/10.svg",
+      "dealer/stock/2.svg",
+      "dealer/stock/3.svg",
+      "dealer/stock/4.svg",
+      "dealer/stock/5.svg",
+      "dealer/stock/6.svg",
+      "dealer/stock/7.svg",
+      "dealer/stock/8.svg",
+      "dealer/stock/9.svg",
+      "assets/brand/logo-on-light.webp",
+      "assets/brand/logo-on-dark.webp"
+    ]
+  }
 }

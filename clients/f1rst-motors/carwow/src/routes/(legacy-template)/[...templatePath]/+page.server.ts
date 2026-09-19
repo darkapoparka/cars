@@ -1,29 +1,10 @@
 import { error, redirect } from '@sveltejs/kit';
-import {
-	getLegacyDashboardRedirectTarget,
-	isLegacyCatchAllTemplateRoute
-} from '$lib/server/legacy-template-route-policy';
-import { loadTemplateRoutePage } from '$lib/server/template-route-page';
-import { routeSeo } from '$lib/server/daynight-seo';
+import { resolveLegacyDashboardRedirect } from '$lib/server/legacy-redirects';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ params }) => {
-	const routePath = params.templatePath ?? '';
-	const dashboardRedirectTarget = getLegacyDashboardRedirectTarget(routePath);
-
-	if (dashboardRedirectTarget) {
-		throw redirect(303, dashboardRedirectTarget);
-	}
-
-	if (!isLegacyCatchAllTemplateRoute(routePath)) {
-		error(404, 'Template route not found');
-	}
-
-	const page = await loadTemplateRoutePage(routePath);
-
-	if (!page) {
-		error(404, 'Template route not found');
-	}
-
-	return { page: { ...page, ...routeSeo(page.routePath) } };
+/** Keep historical staff bookmarks; unknown URLs use the normal SvelteKit error page. */
+export const load: PageServerLoad = ({ params }) => {
+	const target = resolveLegacyDashboardRedirect(params.templatePath ?? '');
+	if (target) redirect(303, target);
+	error(404, 'Page not found');
 };
