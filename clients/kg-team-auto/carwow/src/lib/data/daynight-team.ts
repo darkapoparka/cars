@@ -18,9 +18,9 @@ export const daynightTeam: DayNightTeamMember[] = [
 		role: "Запитвания за наличност и оглед",
 		phone: "+359877346262",
 		email: "",
-		image: "/dealer/logo-light.png",
+		image: "/assets/brand/logo-on-light.webp",
 		bio: "Свържете се с K-G Team Auto, за да потвърдите актуална наличност, данни за автомобила и възможност за оглед.",
-		detail: "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача. Unapproved, unpublished prospect concept. No dealer agreement or media permission evidenced."
+		detail: "Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача. Свържете се с автокъщата преди посещение и потвърдете наличността. Unapproved, unpublished prospect concept. No dealer agreement or media permission evidenced."
 	}
 ];
 
