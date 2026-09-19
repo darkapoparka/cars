@@ -1,0 +1,185 @@
+{
+  "checkedAt": "2026-09-19T13:11:53.852Z",
+  "canonicalRepositories": [
+    {
+      "key": "cars",
+      "path": "J:\\cars",
+      "repository": "darkapoparka/cars",
+      "role": "integration"
+    },
+    {
+      "key": "auto-best",
+      "path": "J:\\template-repos\\cars-template-auto-best",
+      "repository": "darkapoparka/cars-template-auto-best",
+      "role": "template-master"
+    },
+    {
+      "key": "modern",
+      "path": "J:\\template-repos\\cars-template-modern",
+      "repository": "darkapoparka/cars-template-modern",
+      "role": "template-master"
+    },
+    {
+      "key": "carwow",
+      "path": "J:\\template-repos\\cars-template-carwow",
+      "repository": "darkapoparka/cars-template-carwow",
+      "role": "template-master"
+    },
+    {
+      "key": "import",
+      "path": "J:\\template-repos\\cars-template-import",
+      "repository": "darkapoparka/cars-template-import",
+      "role": "template-master"
+    },
+    {
+      "key": "admin",
+      "path": "J:\\cars-admin",
+      "repository": "darkapoparka/cars-admin",
+      "role": "admin-demo"
+    }
+  ],
+  "otherObservedDirectories": [
+    {
+      "path": "C:/Users/radev/cars-daynight-logo-review",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-isauto-fix",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-isauto-logo-contrast",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-isauto-logo-contrast2",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-logo-qa",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-logo-refresh-20260918",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-logo-review",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-logo-rollout-2026-09-17",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-logo-rollout-20260918",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-logo-rollout-transfer",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-qa",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/cars-vercel-audit-2026-09-17",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/carwow-89f50c-files",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/carwow-mobile-final-audit",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/carwow-mobile-implemented-20260918",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/carwow-mobile-review-20260918",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/carwow-mobile-standardized-20260918",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/carwow-mobile-tuning-20260918",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/daynight-cars-build-20260917",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/daynight-carwow-refresh-20260917",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/daynight-logo-review",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/daynight-showcase-build-20260917",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/daynight-three-variant-build-20260918",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/isauto-preview",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/isauto-production-deploy",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/isauto-publish",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    },
+    {
+      "path": "C:/Users/radev/isauto-tools",
+      "classification": "unreconciled-review-build-or-recovery-folder",
+      "action": "preserve; inspect unique files and process ownership before relocation or deletion"
+    }
+  ],
+  "actions": {
+    "repositoriesMoved": 0,
+    "sourceFoldersDeleted": 0,
+    "existingServersStopped": 0,
+    "workspace": "J:/cars/Cars.code-workspace",
+    "newGeneratedOutput": "J:/cars/runtime/"
+  }
+}

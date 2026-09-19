@@ -12,7 +12,7 @@ Read the dealer's `dealer.json`, variant metadata, brief and [registry](DEPLOYME
 | 2 | Modern at `/variant-2/cars` | Import at `/variant-2/` |
 | 3 | Carwow at `/variant-3/` | Carwow at `/variant-3/` |
 
-One dealer owns one private publishing repository and one Vercel project. All designs share one origin and a visible accessible right-side design button. Navigation loads only the selected app. Keep the complete Modern workspace.
+One dealer owns one private publishing repository and one Vercel project. All designs share one origin and a visible accessible right-side design button. Navigation loads only the selected app. The FAB also links to the one shared public Cars Admin demo, not a fourth design or a per-dealer admin copy. Follow the [workspace/admin contract](WORKSPACE.md#one-dealer-url-three-designs-one-shared-admin). Keep the complete Modern workspace.
 
 ## Prepare a repeatable payload
 
@@ -52,8 +52,8 @@ Use `--branch codex/<pilot-name>` for an authorized preview pilot. This creates 
 
 Verify the current account/team, existing project and Git binding. Configure one project for the combined Services deployment when creating a new dealer. Push once through the linked repository; do not also launch a duplicate CLI deployment.
 
-Inspect the deployment whose Git commit equals the exported commit. READY is build/provider evidence. Confirm its actual URL, public access without login, every offered entry/journey, and the deployed switcher at mobile and desktop according to [QA](QA.md). Never send external test enquiries. Only then record public browser verification; agent QA does not mark owner review complete.
+Inspect the deployment whose Git commit equals the exported commit. READY is build/provider evidence. For CLI uploads, manually supplied Git metadata is not source proof: compare the actual served switcher to reviewed source and confirm which deployment owns the prospect alias. Confirm its actual URL, public access without login, every offered entry/journey, and the deployed switcher at mobile and desktop according to [QA](QA.md). Never send external test enquiries. Only then record public browser verification; agent QA does not mark owner review complete.
 
 A protected review pilot may use a Vercel temporary share link for scoped browser verification. Record its expiry and `temporary-share-link` access separately; it does not establish a permanently public lead-delivery URL. Do not weaken unrelated project protection to make a QA status appear public. See the [Promosale pilot evidence](WORKFLOW-MIGRATION-2026-09-12.md).
 
-Update the technical registry with canonical source SHA, template SHAs, export SHA, packaging version, project/team, deployment ID, exact URL, timestamp and evidence. Regenerate the readable list/dashboard views using `node scripts/index-deployments.mjs --write`. Keep old verification as dated history.
+Update the technical registry with canonical source SHA, template SHAs, export SHA, packaging version, project/team, deployment ID, exact URL, timestamp and evidence. Regenerate readable list/dashboard views from the reviewed saved registry using `node scripts/index-deployments.mjs --views-only`. Use `--write` only when intentionally rescanning reconciled local dealer source. Keep old verification as dated history.

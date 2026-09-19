@@ -1,3 +1,5 @@
+> Historical handoff: deployment availability, repository access and FAB rollout status below were superseded by the [verified 19 September workspace/admin audit](../../workspace/2026-09-19/REPORT.md). Preserve this file as dated evidence; use the current report and technical registry for live status.
+
 # Client-facing Cars Admin — delivery handoff
 
 Date: 2026-09-19. This is a separate client-facing dealership demo, NOT the private agency leads dashboard.

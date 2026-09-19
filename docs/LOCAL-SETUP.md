@@ -1,10 +1,14 @@
 # Local setup and web collaboration
 
-Use the existing Cars project at `J:/cars` and standalone template projects at `J:/template-repos/cars-template-*`. Do not create nested Git repositories inside Cars snapshots. Use the saved project directly for Cars work.
+Use the existing Cars project at `J:/cars` and standalone template projects at `J:/template-repos/cars-template-*`. Do not create nested Git repositories inside Cars snapshots. Use the saved project directly for Cars work. Open [Cars.code-workspace](../Cars.code-workspace) for the six-repository view, including J:/cars-admin. See [WORKSPACE](WORKSPACE.md) before relocating anything.
 
 Cars scripts require Node 22.22+ or Node 24, Git and PowerShell for Windows launchers. Templates retain their own runtimes/lockfiles: Auto Best uses Node 22, Modern Node 22.22+ below 23 and pnpm 11.4.0; check each locked Carwow/Import release. The installed global pnpm is not automatically the app's pinned version. Use the app's Corepack/packageManager entry.
 
 Check authenticated GitHub and Vercel access using the connected plugins or `gh auth status` and the documented Vercel CLI. Never put credentials in repository files. A disconnected plugin can be reported while authenticated Git/CLI continues the requested work. Existing Git-to-Vercel links remain the sole deployment trigger for a pushed commit.
+
+## Check synchronization before edits
+
+Run node scripts/workspace-doctor.mjs --fetch. Fetch refreshes tracking refs only; it does not update working files. Never build or upload from a behind-main checkout as though it were current. Preserve and reconcile local work with its writer before advancing HEAD. The doctor does not pull, reset, clean, stage or stop processes. Its default without --fetch uses cached tracking refs.
 
 ## Codex instructions and skills
 

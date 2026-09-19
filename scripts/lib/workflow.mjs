@@ -48,9 +48,11 @@ export function exportCommit(repo,commit,destination,{prefix=''}={}){
  for(let i=0;i<files.length;i+=48){const batch=files.slice(i,i+48),bytes=git(repo,['cat-file','--batch'],{input:batch.map(f=>f.blob).join('\n')+'\n',encoding:null});let offset=0;for(const f of batch){const end=bytes.indexOf(10,offset),header=bytes.subarray(offset,end).toString(),size=Number(header.split(' ')[2]);if(!Number.isFinite(size))throw new Error(`Cannot read ${f.path}`);const content=bytes.subarray(end+1,end+1+size);offset=end+size+2;const target=inside(destination,f.path);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,content);if(f.mode==='100755'&&process.platform!=='win32')fs.chmodSync(target,0o755);}}
  return fingerprint(destination);
 }
-export function validateManifest(m){
+export function validateManifest(m,{allowLegacyPublishingReference=false}={}){
  if(m.schemaVersion!==1||!/^[a-z0-9][a-z0-9-]{0,63}$/.test(m.slug||''))throw new Error('Invalid dealer manifest identity.');
- if(!/^[\w.-]+\/(?:cars-[a-z0-9]+|excellent-cars|day-and-night-[\w-]+)$/.test(m.repository||''))throw new Error('Record the exact owner/repository identity.');
+ // Inventory may represent an explicitly recorded legacy reference; publishing remains strict by default.
+ const legacyReference=allowLegacyPublishingReference===true&&m.repository==='darkapoparka/cars'&&m.defaultBranch===`publish/${m.slug}`;
+ if(!legacyReference&&!/^[\w.-]+\/(?:cars-[a-z0-9]+|excellent-cars|day-and-night-[\w-]+)$/.test(m.repository||''))throw new Error('Record the exact owner/repository identity.');
  const keys=m.variants?.map(v=>v.key)||[],standard=['auto-best','modern','carwow'],imported=['auto-best','import','carwow'];
  if(![standard,imported].some(a=>JSON.stringify(a)===JSON.stringify(keys)))throw new Error('Supported trios: auto-best,modern,carwow or auto-best,import,carwow (ordered).');
  const routes=keys[1]==='modern'?['/','/variant-2/cars','/variant-3/']:['/','/variant-2/','/variant-3/'];

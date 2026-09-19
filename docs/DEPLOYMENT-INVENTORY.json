@@ -1,12 +1,13 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-14T20:38:30.000Z",
+  "updatedAt": "2026-09-19T12:59:42.569Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.",
   "aliases": {
     "asko96": "asko-96",
-    "tesi-car": "tesi-car-varna"
+    "tesi-car": "tesi-car-varna",
+    "dayandnight": "day-and-night-auto-group"
   },
   "dealers": [
     {
@@ -94,42 +95,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-albasmamotors.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-albasmamotors.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-albasmamotors.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-albasmamotors.vercel.app/",
         "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
         "projectName": "cars-albasmamotors",
+        "deploymentId": "dpl_9gGjQiNhkkWNYLFkqD82WJFFKczX",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-albasmamotors",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": "ae-sharjah-al-basma-motors",
       "aliases": [],
@@ -138,7 +159,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -147,13 +169,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+          "deploymentId": "dpl_9gGjQiNhkkWNYLFkqD82WJFFKczX",
           "url": "https://cars-albasmamotors.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -173,7 +206,51 @@
         "leadId": "ae-sharjah-al-basma-motors"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-albasmamotors.vercel.app/",
+            "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+            "projectName": "cars-albasmamotors",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+              "url": "https://cars-albasmamotors.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "al-fareed-used-cars",
@@ -260,42 +337,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "implemented-needs-local-qa",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-alhamooralthahabi.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "implemented-needs-local-qa",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-alhamooralthahabi.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "implemented-needs-local-qa",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-alhamooralthahabi.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-alhamooralthahabi.vercel.app/",
         "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
         "projectName": "cars-alhamooralthahabi",
+        "deploymentId": "dpl_8YRgVfUPWtDEhx8qKhAd9GpFykw4",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-alhamooralthahabi",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": "ae-sharjah-al-hamoor-al-thahabi",
       "aliases": [],
@@ -304,7 +401,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -313,13 +411,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+          "deploymentId": "dpl_8YRgVfUPWtDEhx8qKhAd9GpFykw4",
           "url": "https://cars-alhamooralthahabi.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -339,7 +448,51 @@
         "leadId": "ae-sharjah-al-hamoor-al-thahabi"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-alhamooralthahabi.vercel.app/",
+            "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+            "projectName": "cars-alhamooralthahabi",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+              "url": "https://cars-alhamooralthahabi.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "amh-cars-bhm",
@@ -481,42 +634,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-asko96.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-asko96.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-asko96.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-asko96.vercel.app/",
         "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
         "projectName": "cars-asko96",
+        "deploymentId": "dpl_7VwtqmvoQ4cUDQ1Lbr1Juy3uyCx2",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-asko96",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -525,7 +698,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -534,13 +708,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+          "deploymentId": "dpl_7VwtqmvoQ4cUDQ1Lbr1Juy3uyCx2",
           "url": "https://cars-asko96.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -559,7 +744,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-asko96.vercel.app/",
+            "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+            "projectName": "cars-asko96",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+              "url": "https://cars-asko96.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "astracar",
@@ -569,42 +798,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-astracar.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-astracar.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-astracar.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-astracar.vercel.app/",
         "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
         "projectName": "cars-astracar",
+        "deploymentId": "dpl_9cnpjSfQv7CapTpdQzYqQQdMib77",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-astracar",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -613,7 +862,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -622,13 +872,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+          "deploymentId": "dpl_9cnpjSfQv7CapTpdQzYqQQdMib77",
           "url": "https://cars-astracar.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -647,7 +908,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-astracar.vercel.app/",
+            "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+            "projectName": "cars-astracar",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+              "url": "https://cars-astracar.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "autobedrijf-spinder",
@@ -947,42 +1252,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-autolife.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-autolife.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-autolife.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-autolife.vercel.app/",
         "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
         "projectName": "cars-autolife",
+        "deploymentId": "dpl_GyNhsJ7aq5anF7qehivam3R6CgMu",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-autolife",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -991,7 +1316,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -1000,13 +1326,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+          "deploymentId": "dpl_GyNhsJ7aq5anF7qehivam3R6CgMu",
           "url": "https://cars-autolife.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -1025,7 +1362,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-autolife.vercel.app/",
+            "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+            "projectName": "cars-autolife",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+              "url": "https://cars-autolife.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "automarket-varna",
@@ -1035,42 +1416,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-automarketvarna.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-automarketvarna.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-automarketvarna.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-automarketvarna.vercel.app/",
         "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
         "projectName": "cars-automarketvarna",
+        "deploymentId": "dpl_D67BguC4Rsb6SawohFUn238apJKh",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-automarketvarna",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -1079,7 +1480,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -1088,13 +1490,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+          "deploymentId": "dpl_D67BguC4Rsb6SawohFUn238apJKh",
           "url": "https://cars-automarketvarna.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -1113,7 +1526,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-automarketvarna.vercel.app/",
+            "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+            "projectName": "cars-automarketvarna",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+              "url": "https://cars-automarketvarna.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "avangard-auto",
@@ -1123,42 +1580,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-avangardauto.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-avangardauto.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-avangardauto.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-avangardauto.vercel.app/",
         "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
         "projectName": "cars-avangardauto",
+        "deploymentId": "dpl_8GFCKbDqeU32oAKY5Xm7fFkXULzf",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-avangardauto",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -1167,7 +1644,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -1176,13 +1654,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+          "deploymentId": "dpl_8GFCKbDqeU32oAKY5Xm7fFkXULzf",
           "url": "https://cars-avangardauto.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -1201,7 +1690,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-avangardauto.vercel.app/",
+            "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+            "projectName": "cars-avangardauto",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+              "url": "https://cars-avangardauto.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "avtoborsa-mania",
@@ -1538,42 +2071,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-championautopro.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-championautopro.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "personalized-local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-championautopro.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-championautopro.vercel.app/",
         "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
         "projectName": "cars-championautopro",
+        "deploymentId": "dpl_2HkaQRR1Gxiojauf8vYbWYE3t8SD",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-championautopro",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -1582,7 +2135,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -1591,13 +2145,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+          "deploymentId": "dpl_2HkaQRR1Gxiojauf8vYbWYE3t8SD",
           "url": "https://cars-championautopro.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -1616,7 +2181,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-championautopro.vercel.app/",
+            "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+            "projectName": "cars-championautopro",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+              "url": "https://cars-championautopro.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "chernomore-varna",
@@ -1803,43 +2412,81 @@
       "packagingVersion": null
     },
     {
-      "slug": "dayandnight",
-      "name": "dayandnight",
-      "localPath": "clients/dayandnight",
-      "localPresent": true,
+      "slug": "day-and-night-auto-group",
+      "name": "Day and Night Auto Group",
+      "id": null,
+      "localPath": "clients/day-and-night-auto-group",
+      "localPresent": false,
+      "aliases": [
+        "dayandnight"
+      ],
       "variants": [
         {
-          "key": "rencar",
-          "state": "visual-reskin-draft",
+          "key": "auto-best",
+          "entry": "/",
+          "base": "",
+          "state": "refreshed-awaiting-production-qa",
+          "localPresent": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
           "qaRecorded": false,
-          "publicUrl": null,
-          "entry": null,
-          "templateSource": null,
-          "localPresent": true
+          "publicUrl": "https://day-and-night-a.vercel.app/"
+        },
+        {
+          "key": "modern",
+          "entry": "/variant-2/cars",
+          "base": "/variant-2",
+          "state": "refreshed-awaiting-production-qa",
+          "localPresent": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "qaRecorded": false,
+          "publicUrl": "https://day-and-night-a.vercel.app/variant-2/cars"
+        },
+        {
+          "key": "carwow",
+          "entry": "/variant-3/",
+          "base": "/variant-3",
+          "state": "refreshed-awaiting-production-qa",
+          "localPresent": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "qaRecorded": false,
+          "publicUrl": "https://day-and-night-a.vercel.app/variant-3/"
         }
       ],
       "branchSources": [],
+      "repository": "darkapoparka/day-and-night-autodeal",
+      "packagingVersion": "1",
       "delivery": {
-        "state": "existing-separate-designs",
-        "repositories": [
-          "https://github.com/darkapoparka/day-and-night-autodeal",
-          "https://github.com/darkapoparka/day-and-night-modern",
-          "https://github.com/darkapoparka/day-and-night-spartak"
-        ],
-        "projects": [
-          "day-and-night-a",
-          "day-and-night-modern"
-        ],
-        "note": "Original Auto Best, Modern and Carwow sources remain on M:. Canonical combined three-design delivery is pending. Rencar is a separate incomplete visual trial."
+        "state": "live-navigation-verified",
+        "url": "https://day-and-night-a.vercel.app/",
+        "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+        "projectName": "day-and-night-a",
+        "deploymentId": "dpl_3ddm5ThL3qwHCAQKoVcGG1uTmUgu",
+        "defaultBranch": "main",
+        "gitRepository": "darkapoparka/day-and-night-autodeal",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
-      "id": null,
-      "aliases": [],
-      "repository": null,
-      "packagingVersion": null,
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -1848,27 +2495,40 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "unknown"
+          "state": "live-verified",
+          "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+          "deploymentId": "dpl_3ddm5ThL3qwHCAQKoVcGG1uTmUgu",
+          "url": "https://day-and-night-a.vercel.app/",
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
         }
       },
-      "legacyIndex": {
-        "slug": "dayandnight",
-        "name": "dayandnight",
-        "path": "clients/dayandnight",
-        "variants": [
-          "rencar"
-        ],
-        "sourceState": "existing-apps",
-        "reviewState": "pending-owner-review"
-      },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "unknown"
+          }
+        }
+      ],
+      "evidenceHistory": []
     },
     {
       "slug": "depue-auto-sales",
@@ -1944,42 +2604,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "personalized-qa-pending",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-eliqauto.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "personalized-qa-pending",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-eliqauto.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "personalized-qa-pending",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-eliqauto.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-eliqauto.vercel.app/",
         "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
         "projectName": "cars-eliqauto",
+        "deploymentId": "dpl_D1FqberKFQSx3s4ZjYXmiSXeXK7U",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-eliqauto",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -1988,7 +2668,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -1997,13 +2678,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+          "deploymentId": "dpl_D1FqberKFQSx3s4ZjYXmiSXeXK7U",
           "url": "https://cars-eliqauto.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -2022,7 +2714,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-eliqauto.vercel.app/",
+            "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+            "projectName": "cars-eliqauto",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+              "url": "https://cars-eliqauto.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "elit-auto-import",
@@ -2032,42 +2768,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-elitautoimport.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-elitautoimport.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-elitautoimport.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-elitautoimport.vercel.app/",
         "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
         "projectName": "cars-elitautoimport",
+        "deploymentId": "dpl_AdotaNsUe8KRvqBsq6qrRW4gfs7v",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-elitautoimport",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -2076,7 +2832,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -2085,13 +2842,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+          "deploymentId": "dpl_AdotaNsUe8KRvqBsq6qrRW4gfs7v",
           "url": "https://cars-elitautoimport.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -2110,7 +2878,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-elitautoimport.vercel.app/",
+            "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+            "projectName": "cars-elitautoimport",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+              "url": "https://cars-elitautoimport.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "europa-varna",
@@ -2304,45 +3116,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "local-demo-verified",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://excellent-cars.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "local-demo-verified",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://excellent-cars.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "local-demo-verified",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://excellent-cars.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "repository": "https://github.com/darkapoparka/excellent-cars",
-        "project": "excellent-cars",
+        "state": "live-navigation-verified",
         "url": "https://excellent-cars.vercel.app/",
-        "verifiedAt": "2026-09-10",
-        "source": "J:/excellent-cars",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
         "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
         "projectName": "excellent-cars",
+        "deploymentId": "dpl_C76rNiQAtgoP9QedWBWKBvT3VTE3",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/excellent-cars",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -2351,7 +3180,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -2360,13 +3190,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+          "deploymentId": "dpl_C76rNiQAtgoP9QedWBWKBvT3VTE3",
           "url": "https://excellent-cars.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -2385,7 +3226,54 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "repository": "https://github.com/darkapoparka/excellent-cars",
+            "project": "excellent-cars",
+            "url": "https://excellent-cars.vercel.app/",
+            "verifiedAt": "2026-09-10",
+            "source": "J:/excellent-cars",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+            "projectName": "excellent-cars",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+              "url": "https://excellent-cars.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "exclusive-auto-varna",
@@ -2671,42 +3559,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-f1rstmotors.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-f1rstmotors.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-f1rstmotors.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-f1rstmotors.vercel.app/",
         "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
         "projectName": "cars-f1rstmotors",
+        "deploymentId": "dpl_EWAsJwDmMqug4FCjqn7UWqSnMnhU",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-f1rstmotors",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -2715,7 +3623,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -2724,20 +3633,75 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+          "deploymentId": "dpl_EWAsJwDmMqug4FCjqn7UWqSnMnhU",
           "url": "https://cars-f1rstmotors.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
         }
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-f1rstmotors.vercel.app/",
+            "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+            "projectName": "cars-f1rstmotors",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+              "url": "https://cars-f1rstmotors.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "fadi-cars",
@@ -3614,58 +4578,79 @@
       "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
     },
     {
-      "slug": "ivo-auto",
-      "name": "Иво Ауто",
-      "localPath": "clients/ivo-auto",
-      "localPresent": true,
+      "slug": "isauto-varna",
+      "name": "IS Auto Varna",
+      "id": null,
+      "localPath": "clients/isauto-varna",
+      "localPresent": false,
+      "aliases": [],
       "variants": [
         {
           "key": "auto-best",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "base": "",
+          "state": "refreshed-awaiting-production-qa",
+          "localPresent": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "qaRecorded": false,
+          "publicUrl": "https://cars-isautovarna.vercel.app/"
         },
         {
           "key": "modern",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "base": "/variant-2",
+          "state": "refreshed-awaiting-production-qa",
+          "localPresent": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "qaRecorded": false,
+          "publicUrl": "https://cars-isautovarna.vercel.app/variant-2/cars"
         },
         {
           "key": "carwow",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "base": "/variant-3",
+          "state": "refreshed-awaiting-production-qa",
+          "localPresent": false,
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "qaRecorded": false,
+          "publicUrl": "https://cars-isautovarna.vercel.app/variant-3/"
         }
       ],
       "branchSources": [],
-      "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
-        "url": "https://cars-ivoauto.vercel.app/",
-        "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
-        "projectName": "cars-ivoauto",
-        "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
-      },
-      "id": null,
-      "aliases": [],
-      "repository": "darkapoparka/cars-ivoauto",
+      "repository": "darkapoparka/cars",
       "packagingVersion": "1",
+      "delivery": {
+        "state": "live-navigation-verified",
+        "url": "https://cars-isautovarna.vercel.app/",
+        "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+        "projectName": "cars-isautovarna",
+        "deploymentId": "dpl_Dsn693jzxTqzZtTfRhqzHwjHebw4",
+        "defaultBranch": null,
+        "gitRepository": null,
+        "gitIntegration": "unlinked-cli",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval. Legacy manifest references Cars publish/isauto-varna; canonical editable source is Cars main. Dedicated publishing repo was not found through GitHub; do not invent a main Git link."
+      },
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -3674,13 +4659,149 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
-          "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
-          "url": "https://cars-ivoauto.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "state": "live-verified",
+          "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+          "deploymentId": "dpl_Dsn693jzxTqzZtTfRhqzHwjHebw4",
+          "url": "https://cars-isautovarna.vercel.app/",
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
+        },
+        "ownerReview": {
           "state": "unknown"
+        }
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "unknown"
+          }
+        }
+      ],
+      "publishingException": {
+        "canonicalSourceRepository": "darkapoparka/cars",
+        "canonicalSourceRef": "main",
+        "legacyManifestRepository": "darkapoparka/cars",
+        "legacyManifestRef": "publish/isauto-varna",
+        "automation": "manual-verified-deployment",
+        "requiredRepair": "Create or establish a verified dedicated main publishing mirror before linking Git; preserve this project and public URL."
+      },
+      "evidenceHistory": []
+    },
+    {
+      "slug": "ivo-auto",
+      "name": "Иво Ауто",
+      "localPath": "clients/ivo-auto",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "auto-best",
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-ivoauto.vercel.app/",
+          "entry": "/",
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
+        },
+        {
+          "key": "modern",
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-ivoauto.vercel.app/variant-2/cars",
+          "entry": "/variant-2/cars",
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
+        },
+        {
+          "key": "carwow",
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-ivoauto.vercel.app/variant-3/",
+          "entry": "/variant-3/",
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "live-navigation-verified",
+        "url": "https://cars-ivoauto.vercel.app/",
+        "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+        "projectName": "cars-ivoauto",
+        "deploymentId": "dpl_6VAPff3wrVy8CK5EoeAyyFQkq8HQ",
+        "defaultBranch": "main",
+        "gitRepository": "darkapoparka/cars-ivoauto",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": "darkapoparka/cars-ivoauto",
+      "packagingVersion": "1",
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "live-verified",
+          "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+          "deploymentId": "dpl_6VAPff3wrVy8CK5EoeAyyFQkq8HQ",
+          "url": "https://cars-ivoauto.vercel.app/",
+          "checkedAt": "2026-09-19T12:40:08.629Z"
+        },
+        "browser": {
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -3699,7 +4820,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-ivoauto.vercel.app/",
+            "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+            "projectName": "cars-ivoauto",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+              "url": "https://cars-ivoauto.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "kapitol-varna",
@@ -3878,42 +5043,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "needs-personalization",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-kgteamauto.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "needs-personalization",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-kgteamauto.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "needs-personalization",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-kgteamauto.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-kgteamauto.vercel.app/",
         "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
         "projectName": "cars-kgteamauto",
+        "deploymentId": "dpl_9Vv4GjGVENB4XpGys4MHMVU77dsH",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-kgteamauto",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": "bg-plovdiv-kg-team-auto",
       "aliases": [],
@@ -3922,7 +5107,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -3931,13 +5117,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+          "deploymentId": "dpl_9Vv4GjGVENB4XpGys4MHMVU77dsH",
           "url": "https://cars-kgteamauto.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -3957,7 +5154,51 @@
         "leadId": "bg-plovdiv-kg-team-auto"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-kgteamauto.vercel.app/",
+            "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+            "projectName": "cars-kgteamauto",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+              "url": "https://cars-kgteamauto.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "kris-car-plovdiv",
@@ -4151,42 +5392,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-legendauto.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-legendauto.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "local-qa-passed",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-legendauto.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-legendauto.vercel.app/",
         "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
         "projectName": "cars-legendauto",
+        "deploymentId": "dpl_4MdoJq6z4LrVEaRX1nsVV2y4iPAb",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-legendauto",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -4195,7 +5456,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -4204,13 +5466,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+          "deploymentId": "dpl_4MdoJq6z4LrVEaRX1nsVV2y4iPAb",
           "url": "https://cars-legendauto.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -4229,7 +5502,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-legendauto.vercel.app/",
+            "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+            "projectName": "cars-legendauto",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+              "url": "https://cars-legendauto.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "lux-auto-bg",
@@ -4854,59 +6171,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "refreshed-needs-local-qa",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-navaracar.vercel.app/",
           "entry": "/",
           "templateSource": {
             "repository": "darkapoparka/cars-template-auto-best",
-            "commit": "5f75fc22f7da9f7b494f0327fdd43fc0211673fd",
-            "digest": "93e189dfe9e7ffbcc0b5d23b6bd4cf7499b2a249c77321fe890e97773f01e21a",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
             "exportPolicy": "cars-source-v1"
           },
-          "localPresent": true
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "refreshed-needs-local-qa",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-navaracar.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
           "templateSource": {
             "repository": "darkapoparka/cars-template-modern",
-            "commit": "2a7ede6621be8d2d606525776fccae2bdd6fc157",
-            "digest": "86323ebc81b7570c9c23681e28d1a29174035469ecc819f762859fae8f9f1add",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
             "exportPolicy": "cars-source-v1"
           },
-          "localPresent": true
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "refreshed-needs-local-qa",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-navaracar.vercel.app/variant-3/",
           "entry": "/variant-3/",
           "templateSource": {
             "repository": "darkapoparka/cars-template-carwow",
-            "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a",
-            "digest": "e898026152c87ac4bed932d86b6ce63ec14adf491cf4f784d2f4406b0b8404ae",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
             "exportPolicy": "cars-source-v1"
           },
-          "localPresent": true
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "ready",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-navaracar.vercel.app/",
         "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
         "projectName": "cars-navaracar",
+        "deploymentId": "dpl_2pHyS9oKSh7U3ioy4sKbK34NMpti",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z",
-        "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
-        "deploymentId": "dpl_J9ecCizS7h64kXiCC5zQdd7g7sqW"
+        "gitRepository": "darkapoparka/cars-navaracar",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -4915,7 +6235,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -4924,18 +6245,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "passed",
+          "state": "live-verified",
           "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+          "deploymentId": "dpl_2pHyS9oKSh7U3ioy4sKbK34NMpti",
           "url": "https://cars-navaracar.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z",
-          "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
-          "deploymentId": "dpl_J9ecCizS7h64kXiCC5zQdd7g7sqW"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "passed",
-          "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
-          "checkedAt": "2026-09-14T20:37:51.728Z",
-          "matrix": "3 variants × 4 routes × 390/1440; FAB, identity, assets, console and overflow passed"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -4954,7 +6281,58 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "ready",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-navaracar.vercel.app/",
+            "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+            "projectName": "cars-navaracar",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z",
+            "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
+            "deploymentId": "dpl_J9ecCizS7h64kXiCC5zQdd7g7sqW"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "passed",
+              "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+              "url": "https://cars-navaracar.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z",
+              "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
+              "deploymentId": "dpl_J9ecCizS7h64kXiCC5zQdd7g7sqW"
+            },
+            "browser": {
+              "state": "passed",
+              "commit": "99d5eff12b505dee4bde61c0e2e409023510c319",
+              "checkedAt": "2026-09-14T20:37:51.728Z",
+              "matrix": "3 variants × 4 routes × 390/1440; FAB, identity, assets, console and overflow passed"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "neuhoff-auto-sales",
@@ -5383,42 +6761,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-outletcarsvarna.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "import",
-          "state": "ready-for-local-review",
+          "state": "refreshed-awaiting-production-qa",
           "entry": "/variant-2/",
-          "publicUrl": null,
-          "templateSource": null,
-          "qaRecorded": true,
-          "localPresent": true
+          "publicUrl": "https://cars-outletcarsvarna.vercel.app/variant-2/",
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-import",
+            "commit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+            "digest": "f50aa85ab7d399295072e6911e095271721ea147a81569ce52d1d4bfad7c32aa",
+            "exportPolicy": "cars-source-v1"
+          },
+          "qaRecorded": false,
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-outletcarsvarna.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-outletcarsvarna.vercel.app/",
         "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
         "projectName": "cars-outletcarsvarna",
+        "deploymentId": "dpl_C1AxUPPmB4NJUb3SRFRXuRZHcZjp",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-outletcarsvarna",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -5427,7 +6825,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -5436,20 +6835,75 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+          "deploymentId": "dpl_C1AxUPPmB4NJUb3SRFRXuRZHcZjp",
           "url": "https://cars-outletcarsvarna.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
         }
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-outletcarsvarna.vercel.app/",
+            "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+            "projectName": "cars-outletcarsvarna",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+              "url": "https://cars-outletcarsvarna.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "perfect-auto-varna",
@@ -5459,42 +6913,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-perfectauto.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-perfectauto.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-perfectauto.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-perfectauto.vercel.app/",
         "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
         "projectName": "cars-perfectauto",
+        "deploymentId": "dpl_FyMWwg4ggjLQweY2yYtUDUBVTGBx",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-perfectauto",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -5503,7 +6977,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -5512,20 +6987,75 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+          "deploymentId": "dpl_FyMWwg4ggjLQweY2yYtUDUBVTGBx",
           "url": "https://cars-perfectauto.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
         }
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-perfectauto.vercel.app/",
+            "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+            "projectName": "cars-perfectauto",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+              "url": "https://cars-perfectauto.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "plus-auto-ruse",
@@ -5719,42 +7249,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-priselci.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-priselci.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "local-review-ready",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-priselci.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-priselci.vercel.app/",
         "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
         "projectName": "cars-priselci",
+        "deploymentId": "dpl_6hEcRNo9nmtQUCGEG7Y3H3icJ3aV",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-priselci",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -5763,7 +7313,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -5772,13 +7323,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+          "deploymentId": "dpl_6hEcRNo9nmtQUCGEG7Y3H3icJ3aV",
           "url": "https://cars-priselci.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -5797,7 +7359,51 @@
         "reviewState": "pending-owner-review"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-priselci.vercel.app/",
+            "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+            "projectName": "cars-priselci",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+              "url": "https://cars-priselci.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "promosale-varna",
@@ -5807,60 +7413,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-promosalevarna.vercel.app/",
           "entry": "/",
           "templateSource": {
             "repository": "darkapoparka/cars-template-auto-best",
-            "commit": "4e4d2b5b544a654a6bf2942afee633bf10b398c9"
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
           },
-          "localPresent": true
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "import",
-          "state": "ready-for-local-review",
+          "state": "refreshed-awaiting-production-qa",
           "entry": "/variant-2/",
-          "publicUrl": null,
+          "publicUrl": "https://cars-promosalevarna.vercel.app/variant-2/",
           "templateSource": {
             "repository": "darkapoparka/cars-template-import",
-            "commit": "724d3f825dcd738a2058db9ef01aedb78114ae65"
+            "commit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+            "digest": "f50aa85ab7d399295072e6911e095271721ea147a81569ce52d1d4bfad7c32aa",
+            "exportPolicy": "cars-source-v1"
           },
-          "qaRecorded": true,
-          "localPresent": true
+          "qaRecorded": false,
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "ready-for-local-review",
-          "qaRecorded": true,
-          "publicUrl": null,
+          "state": "refreshed-awaiting-production-qa",
+          "qaRecorded": false,
+          "publicUrl": "https://cars-promosalevarna.vercel.app/variant-3/",
           "entry": "/variant-3/",
           "templateSource": {
             "repository": "darkapoparka/cars-template-carwow",
-            "commit": "26eb9d3d4d488eac09882f03e36588d712850c1a"
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
           },
-          "localPresent": true
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
+        "state": "live-navigation-verified",
         "url": "https://cars-promosalevarna.vercel.app/",
-        "deploymentId": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
-        "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
-        "branch": "codex/workflow-pilot-20260912",
-        "access": {
-          "mode": "temporary-share-link",
-          "publicWithoutShareLink": false,
-          "expiresAt": "2026-09-13T17:20:37Z",
-          "note": "Direct deployment URL redirects to Vercel login. Temporary sharing was verified in new browser contexts without account login. Protection settings and production were not changed; the token stays in ignored runtime only."
-        },
-        "verifiedAt": "2026-09-12T18:22:31.486Z",
         "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
         "projectName": "cars-promosalevarna",
+        "deploymentId": "dpl_8Pwoy5jEboJ8EdXHmTCAxA35HuNQ",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh."
+        "gitRepository": "darkapoparka/cars-promosalevarna",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -5869,9 +7477,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
-          "canonicalPath": "clients/promosale-varna",
-          "payloadDigest": "1678f44e7ce95deecc3444c5d7780a36b28774a42372e473094db605bce527a7"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "checked",
@@ -5904,26 +7511,24 @@
           "providerBuild": "READY for the exact exported commit"
         },
         "deployment": {
-          "state": "live-discovered",
-          "id": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
-          "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+          "state": "live-verified",
           "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+          "deploymentId": "dpl_8Pwoy5jEboJ8EdXHmTCAxA35HuNQ",
           "url": "https://cars-promosalevarna.vercel.app/",
-          "target": "preview",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "passed",
-          "accessMode": "temporary-share-link",
-          "publicWithoutShareLink": false,
-          "verifiedAt": "2026-09-12T18:22:31.486Z",
-          "evidence": "docs/evidence/promosale-browser-2026-09-12.json",
-          "routes": 24,
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
           "widths": [
+            1440,
             390,
-            1440
+            320
           ],
-          "switcherWidth": 320
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -5935,9 +7540,31 @@
           "state": "unknown",
           "legacyState": "not-deployed",
           "note": "Historical source inventory; hosting has not been refreshed by indexing."
+        },
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "url": "https://cars-promosalevarna.vercel.app/",
+            "deploymentId": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
+            "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+            "branch": "codex/workflow-pilot-20260912",
+            "access": {
+              "mode": "temporary-share-link",
+              "publicWithoutShareLink": false,
+              "expiresAt": "2026-09-13T17:20:37Z",
+              "note": "Direct deployment URL redirects to Vercel login. Temporary sharing was verified in new browser contexts without account login. Protection settings and production were not changed; the token stays in ignored runtime only."
+            },
+            "verifiedAt": "2026-09-12T18:22:31.486Z",
+            "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+            "projectName": "cars-promosalevarna",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh."
+          }
         }
       ],
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
       "exportedCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
       "vercel": {
         "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
@@ -5953,7 +7580,75 @@
         "browserState": "not-rechecked-by-this-pilot",
         "unchangedByPilot": true
       },
-      "canonicalSourceRef": "main"
+      "canonicalSourceRef": "main",
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+              "canonicalPath": "clients/promosale-varna",
+              "payloadDigest": "1678f44e7ce95deecc3444c5d7780a36b28774a42372e473094db605bce527a7"
+            },
+            "personalization": {
+              "state": "checked",
+              "scope": "Existing source pack preserved; six listings and 54 image checks passed; inventory was not requalified live."
+            },
+            "build": {
+              "state": "passed",
+              "sourceCommit": "b66b7a1c1ad5c0dcf0a1a340f390ef6f483265d0",
+              "exportedCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+              "variants": [
+                {
+                  "key": "auto-best",
+                  "node": "22.23.2",
+                  "check": "0 errors / 0 warnings",
+                  "build": "passed; final package app inputs equal tested candidate after LF normalization"
+                },
+                {
+                  "key": "import",
+                  "node": "24.21.0",
+                  "check": "0 errors / 0 warnings",
+                  "build": "passed; final package app inputs equal tested candidate after LF normalization"
+                },
+                {
+                  "key": "carwow",
+                  "node": "24.21.0",
+                  "check": "0 errors / 4 existing CSS warnings",
+                  "build": "final package build passed"
+                }
+              ],
+              "providerBuild": "READY for the exact exported commit"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "id": "dpl_8REYyKrnMSz76tQdfrE4C45HbSpP",
+              "gitCommit": "0a2c84804d656f3882e01343ceeeef8d7337f06a",
+              "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+              "url": "https://cars-promosalevarna.vercel.app/",
+              "target": "preview",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "passed",
+              "accessMode": "temporary-share-link",
+              "publicWithoutShareLink": false,
+              "verifiedAt": "2026-09-12T18:22:31.486Z",
+              "evidence": "docs/evidence/promosale-browser-2026-09-12.json",
+              "routes": 24,
+              "widths": [
+                390,
+                1440
+              ],
+              "switcherWidth": 320
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "rqs-auto-team",
@@ -6768,42 +8463,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "in-progress",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-texasdriveauto.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "in-progress",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-texasdriveauto.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "in-progress",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-texasdriveauto.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-texasdriveauto.vercel.app/",
         "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
         "projectName": "cars-texasdriveauto",
+        "deploymentId": "dpl_AAEFDXPSffjTGYaKa8JgcPLmUN18",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-texasdriveauto",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": "us-tx-dallas-texas-drive-auto",
       "aliases": [],
@@ -6812,7 +8527,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -6821,13 +8537,24 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+          "deploymentId": "dpl_AAEFDXPSffjTGYaKa8JgcPLmUN18",
           "url": "https://cars-texasdriveauto.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
@@ -6847,7 +8574,51 @@
         "leadId": "us-tx-dallas-texas-drive-auto"
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-texasdriveauto.vercel.app/",
+            "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+            "projectName": "cars-texasdriveauto",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+              "url": "https://cars-texasdriveauto.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "the-dealers-point",
@@ -6857,42 +8628,62 @@
       "variants": [
         {
           "key": "auto-best",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-thedealerspoint.vercel.app/",
           "entry": "/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-auto-best",
+            "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+            "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": ""
         },
         {
           "key": "modern",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-thedealerspoint.vercel.app/variant-2/cars",
           "entry": "/variant-2/cars",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-modern",
+            "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+            "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-2"
         },
         {
           "key": "carwow",
-          "state": "personalized-unverified",
+          "state": "refreshed-awaiting-production-qa",
           "qaRecorded": false,
-          "publicUrl": null,
+          "publicUrl": "https://cars-thedealerspoint.vercel.app/variant-3/",
           "entry": "/variant-3/",
-          "templateSource": null,
-          "localPresent": true
+          "templateSource": {
+            "repository": "darkapoparka/cars-template-carwow",
+            "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+            "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+            "exportPolicy": "cars-source-v1"
+          },
+          "localPresent": true,
+          "base": "/variant-3"
         }
       ],
       "branchSources": [],
       "delivery": {
-        "state": "live-discovered",
-        "legacyState": "not-deployed",
-        "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+        "state": "live-navigation-verified",
         "url": "https://cars-thedealerspoint.vercel.app/",
         "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
         "projectName": "cars-thedealerspoint",
+        "deploymentId": "dpl_FcdD6xN94QTZhGwaH4uYAWQkcTHy",
         "defaultBranch": "main",
-        "checkedAt": "2026-09-14T20:38:30.000Z"
+        "gitRepository": "darkapoparka/cars-thedealerspoint",
+        "gitIntegration": "linked",
+        "checkedAt": "2026-09-19T12:40:08.629Z",
+        "note": "Anonymous three-design + shared admin navigation passed at 1440, 390 and 320 px. Not a full visual/logo/contact-flow approval."
       },
       "id": null,
       "aliases": [],
@@ -6901,7 +8692,8 @@
       "evidence": {
         "source": {
           "state": "committed",
-          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+          "commit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+          "scope": "Canonical Cars source snapshot; not proof of an uploaded CLI build"
         },
         "personalization": {
           "state": "unknown"
@@ -6910,20 +8702,75 @@
           "state": "unknown"
         },
         "deployment": {
-          "state": "live-discovered",
+          "state": "live-verified",
           "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+          "deploymentId": "dpl_FcdD6xN94QTZhGwaH4uYAWQkcTHy",
           "url": "https://cars-thedealerspoint.vercel.app/",
-          "checkedAt": "2026-09-14T20:38:30.000Z"
+          "checkedAt": "2026-09-19T12:40:08.629Z"
         },
         "browser": {
-          "state": "unknown"
+          "state": "navigation-verified",
+          "scope": "FAB link destinations, new-tab shared admin, panel bounds, touch targets, Escape/focus and route availability only",
+          "checks": 9,
+          "widths": [
+            1440,
+            390,
+            320
+          ],
+          "checkedAt": "2026-09-19T12:59:42.569Z",
+          "report": "docs/workspace/2026-09-19/AUDIT.json",
+          "fullVisualReview": "not-performed-in-this-audit"
         },
         "ownerReview": {
           "state": "unknown"
         }
       },
       "canonicalSourceRef": "main",
-      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+      "canonicalSourceCommit": "488b5d1d78127c46fdcb94299b485f9b17a2616b",
+      "deliveryHistory": [
+        {
+          "recordedAt": "2026-09-19T12:40:08.629Z",
+          "previousDelivery": {
+            "state": "live-discovered",
+            "legacyState": "not-deployed",
+            "note": "Existing GitHub-linked Vercel identity discovered live; preserve during refresh.",
+            "url": "https://cars-thedealerspoint.vercel.app/",
+            "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+            "projectName": "cars-thedealerspoint",
+            "defaultBranch": "main",
+            "checkedAt": "2026-09-14T20:38:30.000Z"
+          }
+        }
+      ],
+      "evidenceHistory": [
+        {
+          "recordedAt": "2026-09-19T12:59:42.569Z",
+          "previousEvidence": {
+            "source": {
+              "state": "committed",
+              "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+            },
+            "personalization": {
+              "state": "unknown"
+            },
+            "build": {
+              "state": "unknown"
+            },
+            "deployment": {
+              "state": "live-discovered",
+              "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+              "url": "https://cars-thedealerspoint.vercel.app/",
+              "checkedAt": "2026-09-14T20:38:30.000Z"
+            },
+            "browser": {
+              "state": "unknown"
+            },
+            "ownerReview": {
+              "state": "unknown"
+            }
+          }
+        }
+      ]
     },
     {
       "slug": "todorov-auto",
@@ -7506,5 +9353,86 @@
     "date": "2026-09-12",
     "priorIndexTree": "3c7c20cc3e7708490ed8505b03fecde7790948fe",
     "note": "Prior stable lead IDs, aliases, candidate descriptions and recovery states preserved; historical allocation is not an active task order."
+  },
+  "historicalSources": [
+    {
+      "slug": "dayandnight",
+      "name": "dayandnight",
+      "localPath": "clients/dayandnight",
+      "localPresent": true,
+      "variants": [
+        {
+          "key": "rencar",
+          "state": "visual-reskin-draft",
+          "qaRecorded": false,
+          "publicUrl": null,
+          "entry": null,
+          "templateSource": null,
+          "localPresent": true
+        }
+      ],
+      "branchSources": [],
+      "delivery": {
+        "state": "existing-separate-designs",
+        "repositories": [
+          "https://github.com/darkapoparka/day-and-night-autodeal",
+          "https://github.com/darkapoparka/day-and-night-modern",
+          "https://github.com/darkapoparka/day-and-night-spartak"
+        ],
+        "projects": [
+          "day-and-night-a",
+          "day-and-night-modern"
+        ],
+        "note": "Original Auto Best, Modern and Carwow sources remain on M:. Canonical combined three-design delivery is pending. Rencar is a separate incomplete visual trial."
+      },
+      "id": null,
+      "aliases": [],
+      "repository": null,
+      "packagingVersion": null,
+      "evidence": {
+        "source": {
+          "state": "committed",
+          "commit": "fea0b554f3938fa91bcaf90d447f0062ee184735"
+        },
+        "personalization": {
+          "state": "unknown"
+        },
+        "build": {
+          "state": "unknown"
+        },
+        "deployment": {
+          "state": "unknown"
+        },
+        "browser": {
+          "state": "unknown"
+        },
+        "ownerReview": {
+          "state": "unknown"
+        }
+      },
+      "legacyIndex": {
+        "slug": "dayandnight",
+        "name": "dayandnight",
+        "path": "clients/dayandnight",
+        "variants": [
+          "rencar"
+        ],
+        "sourceState": "existing-apps",
+        "reviewState": "pending-owner-review"
+      },
+      "canonicalSourceRef": "main",
+      "canonicalSourceCommit": "fea0b554f3938fa91bcaf90d447f0062ee184735",
+      "archivedFromRegistryAt": "2026-09-19T12:38:08.746Z",
+      "reason": "Rencar trial retained on disk and in history; active three-design source is clients/day-and-night-auto-group.",
+      "supersededBy": "day-and-night-auto-group"
+    }
+  ],
+  "sharedAdmin": {
+    "repository": "darkapoparka/cars-admin",
+    "projectId": "prj_wT1EN9RKpyy4WiKJRuD38KWpRRgW",
+    "url": "https://cars-admin-blue.vercel.app/",
+    "mode": "synthetic-browser-local-demo",
+    "checkedAt": "2026-09-19T13:01:25.706Z",
+    "responsiveRouteChecks": 21
   }
 }

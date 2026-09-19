@@ -13,6 +13,7 @@ Start with [Cars quick start](../README.md). Read the procedure for the current 
 | Framework, rendered and hosted verification | [QA](QA.md) |
 | Technical evidence and generated views | [REGISTRY](REGISTRY.md), [DEPLOYMENTS](DEPLOYMENTS.md) |
 | One writer, Git preservation and handoffs | [COORDINATION](COORDINATION.md) |
+| Six-repository workspace, shared admin, hosting scale and Agency OS boundary | [WORKSPACE](WORKSPACE.md) |
 | Local tools, skill discovery and web entry | [LOCAL-SETUP](LOCAL-SETUP.md) |
 | Public research and qualification | [Lead index](../leads/README.md), [coverage](../leads/COVERAGE.md) |
 | Owner decisions | [MANUAL-REVIEW](MANUAL-REVIEW.md) |
@@ -37,3 +38,5 @@ The full file inventory and original index snapshots for this migration are loca
 
 Workflow changes update their authoritative document and relevant tests in the same commit. Run `node scripts/check-workflow.mjs` and the focused Node workflow tests.
 Current source/branch disposition: [main consolidation, 13 September 2026](MAIN-CONSOLIDATION-2026-09-13.md). All active source branches have been consolidated into main; older migration descriptions are dated evidence.
+
+Latest operational verification: [workspace and public admin rollout, 19 September 2026](workspace/2026-09-19/REPORT.md). The technical registry owns current public URLs; historical handoffs do not override it.

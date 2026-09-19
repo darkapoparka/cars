@@ -1,0 +1,43 @@
+{
+  "folders": [
+    {
+      "name": "Cars - dealers and publishing",
+      "path": "."
+    },
+    {
+      "name": "Template - Auto Best",
+      "path": "../template-repos/cars-template-auto-best"
+    },
+    {
+      "name": "Template - Modern",
+      "path": "../template-repos/cars-template-modern"
+    },
+    {
+      "name": "Template - Carwow",
+      "path": "../template-repos/cars-template-carwow"
+    },
+    {
+      "name": "Template - Import",
+      "path": "../template-repos/cars-template-import"
+    },
+    {
+      "name": "Cars Admin - shared public demo",
+      "path": "../cars-admin"
+    }
+  ],
+  "settings": {
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/.next*": true,
+      "**/.svelte-kit": true,
+      "**/runtime": true,
+      "**/.vercel": true
+    },
+    "files.watcherExclude": {
+      "**/node_modules/**": true,
+      "**/.next*/**": true,
+      "**/.svelte-kit/**": true,
+      "**/runtime/**": true
+    }
+  }
+}

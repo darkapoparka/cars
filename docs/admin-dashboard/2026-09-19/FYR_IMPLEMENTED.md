@@ -1,3 +1,5 @@
+> Historical handoff: deployment availability, repository access and FAB rollout status below were superseded by the [verified 19 September workspace/admin audit](../../workspace/2026-09-19/REPORT.md). Preserve this file as dated evidence; use the current report and technical registry for live status.
+
 # Fyr interface implemented — 19 September 2026
 
 ## Actual application delivery

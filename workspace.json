@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "workingBranch": "main",
+  "repositories": [
+    {
+      "key": "cars",
+      "name": "Cars - dealers and publishing",
+      "path": ".",
+      "repository": "darkapoparka/cars",
+      "role": "integration"
+    },
+    {
+      "key": "auto-best",
+      "name": "Template - Auto Best",
+      "path": "../template-repos/cars-template-auto-best",
+      "repository": "darkapoparka/cars-template-auto-best",
+      "role": "template-master"
+    },
+    {
+      "key": "modern",
+      "name": "Template - Modern",
+      "path": "../template-repos/cars-template-modern",
+      "repository": "darkapoparka/cars-template-modern",
+      "role": "template-master"
+    },
+    {
+      "key": "carwow",
+      "name": "Template - Carwow",
+      "path": "../template-repos/cars-template-carwow",
+      "repository": "darkapoparka/cars-template-carwow",
+      "role": "template-master"
+    },
+    {
+      "key": "import",
+      "name": "Template - Import",
+      "path": "../template-repos/cars-template-import",
+      "repository": "darkapoparka/cars-template-import",
+      "role": "template-master"
+    },
+    {
+      "key": "admin",
+      "name": "Cars Admin - shared public demo",
+      "path": "../cars-admin",
+      "repository": "darkapoparka/cars-admin",
+      "role": "admin-demo"
+    }
+  ],
+  "adminDemo": {
+    "url": "https://cars-admin-blue.vercel.app/",
+    "projectId": "prj_wT1EN9RKpyy4WiKJRuD38KWpRRgW",
+    "mode": "synthetic-browser-local"
+  },
+  "scratch": "runtime/",
+  "registry": "docs/DEPLOYMENT-INVENTORY.json"
+}

@@ -4,7 +4,9 @@
 
 Open **Cars** for a new dealer, dealer fixes, research, the project registry or publication. Open the appropriate **cars-template-…** project to improve reusable frontend UI or code.
 
-Keep the five projects. A reviewed template commit is promoted into Cars; new leads use that pinned release. Existing dealers stay independent until you request an update. You do not need to remember a manual copy step: the lead workflow checks releases and refuses unapproved or changed snapshots.
+Open [Cars.code-workspace](Cars.code-workspace) to group **six repositories**: Cars, four template masters and Cars Admin. The [workspace map](docs/WORKSPACE.md) defines ownership and the shared admin boundary.
+
+Keep these projects. A reviewed template commit is promoted into Cars; new leads use that pinned release. Existing dealers stay independent until you request an update. You do not need to remember a manual copy step: the lead workflow checks releases and refuses unapproved or changed snapshots.
 
 ## Everyday requests
 
@@ -14,7 +16,7 @@ Keep the five projects. A reviewed template commit is promoted into Cars; new le
 - In Cars: “Continue Promosale Varna; keep its Auto Best, Import and Carwow designs.”
 - In Cars: “Audit [dealer] only.” This does not publish or contact anyone.
 
-Each dealer has **one source folder, three applications, one publishing repository, one Vercel project and one public origin**. The design button switches applications. New names use `cars-<dealerkey>`; recorded exceptions such as `excellent-cars` keep their identity.
+Each dealer has **one source folder, three applications, one publishing repository, one Vercel project and one public origin**. The design button switches applications and links to the shared client-facing admin demo; it is not a fourth design. New names use `cars-<dealerkey>`; recorded exceptions such as `excellent-cars` keep their identity.
 
 ## Start here
 

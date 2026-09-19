@@ -272,13 +272,15 @@
       "reviewState": "unknown"
     },
     {
-      "slug": "dayandnight",
-      "name": "dayandnight",
-      "path": "clients/dayandnight",
+      "slug": "day-and-night-auto-group",
+      "name": "Day and Night Auto Group",
+      "path": "clients/day-and-night-auto-group",
       "variants": [
-        "rencar"
+        "auto-best",
+        "modern",
+        "carwow"
       ],
-      "sourceState": "source-present",
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {
@@ -519,6 +521,18 @@
         "carwow"
       ],
       "sourceState": "source-present",
+      "reviewState": "unknown"
+    },
+    {
+      "slug": "isauto-varna",
+      "name": "IS Auto Varna",
+      "path": "clients/isauto-varna",
+      "variants": [
+        "auto-best",
+        "modern",
+        "carwow"
+      ],
+      "sourceState": "source-on-main",
       "reviewState": "unknown"
     },
     {

@@ -18,3 +18,7 @@ Do not store tokens, environment values, private notes, contact history, deal va
 ## Consolidated source
 
 `canonicalSourceRef: "main"` and `canonicalSourceCommit` identify preserved source. Old branch evidence moves to `sourceHistory` with its immutable commit; it is not an active work location. `localPresent` is a separate machine observation and may be false in a sparse checkout. Generated views link absent local source to GitHub main.
+
+## Regenerate views without rescanning source
+
+Use `node scripts/index-deployments.mjs --views-only` after updating the registry from exact committed source and provider/browser evidence. This validates the saved registry and regenerates `docs/DEPLOYMENTS.md` and `clients/index.json` only. It never reads dealer manifests, rewrites the registry, or downgrades approved template metadata from a stale checkout. Run the workspace doctor and reconcile source before using the normal scanning `--write` command.

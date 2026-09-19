@@ -4,6 +4,11 @@ import {ROOT,json,writeJson,validateManifest,git} from './lib/workflow.mjs';
 
 const supported=['auto-best','modern','import','carwow','rencar','autodeal','showroom','boxcar','motoria','nusavo'];
 const read = file => fs.existsSync(file) ? json(file) : null;
+export function validateIndexedManifest(manifest,record){
+ const legacy=record?.publishingException;
+ const allowed=record?.delivery?.gitIntegration==='unlinked-cli'&&record.canonicalSourceRef==='main'&&legacy?.canonicalSourceRepository==='darkapoparka/cars'&&legacy.canonicalSourceRef==='main'&&legacy.legacyManifestRepository===manifest.repository&&legacy.legacyManifestRef===manifest.defaultBranch;
+ return validateManifest(manifest,{allowLegacyPublishingReference:allowed});
+}
 export function indexDeployments(root=ROOT) {
   const previous=read(path.join(root,'docs/DEPLOYMENT-INVENTORY.json'))||{schemaVersion:2,aliases:{},dealers:[]};
   const records=new Map(previous.dealers.map(d=>[d.slug,structuredClone(d)]));
@@ -19,7 +24,7 @@ export function indexDeployments(root=ROOT) {
   for(const entry of fs.readdirSync(path.join(root,'clients'),{withFileTypes:true}).filter(e=>e.isDirectory())) {
     if(previous.aliases?.[entry.name])continue;
     const slug=entry.name,dir=path.join(root,'clients',slug),prior=records.get(slug)||{},manifest=read(path.join(dir,'dealer.json'));
-    if(manifest)validateManifest(manifest);
+    if(manifest)validateIndexedManifest(manifest,prior);
     const facts=read(path.join(dir,'business-facts.json'));
     const keys=supported.filter(v=>fs.existsSync(path.join(dir,v,'package.json')));
     const ordered=[...keys,...(prior.variants||[]).map(v=>v.key).filter(k=>!keys.includes(k))];
@@ -41,7 +46,7 @@ export function validateRegistry(registry,root=null) {
  for(const d of registry.dealers){if(slugs.has(d.slug))throw new Error('Duplicate dealer slug '+d.slug);slugs.add(d.slug);if(d.repository){if(repositories.has(d.repository))throw new Error('Repository reused by '+d.slug+' and '+repositories.get(d.repository));repositories.set(d.repository,d.slug);}
   const keys=d.variants.map(v=>v.key);if(new Set(keys).size!==keys.length)throw new Error('Duplicate variant '+d.slug);
   if(d.evidence?.ownerReview?.state==='passed'&&!d.evidence.ownerReview.reviewedBy)throw new Error('Owner review needs owner attribution: '+d.slug);
-  if(root&&fs.existsSync(path.join(root,d.localPath,'dealer.json'))){const m=validateManifest(json(path.join(root,d.localPath,'dealer.json')));if(d.repository!==m.repository)throw new Error('Registry manifest identity drift: '+d.slug);for(const v of m.variants)if(!d.variants.some(x=>x.key===v.key&&x.entry===v.entry))throw new Error('Registry variant/entry drift: '+d.slug);}
+  if(root&&fs.existsSync(path.join(root,d.localPath,'dealer.json'))){const m=validateIndexedManifest(json(path.join(root,d.localPath,'dealer.json')),d);if(d.repository!==m.repository)throw new Error('Registry manifest identity drift: '+d.slug);for(const v of m.variants)if(!d.variants.some(x=>x.key===v.key&&x.entry===v.entry))throw new Error('Registry variant/entry drift: '+d.slug);}
  }
  for(const[alias,target]of Object.entries(registry.aliases||{}))if(alias===target||!slugs.has(target))throw new Error('Unresolved registry alias '+alias);
  return true;
@@ -54,9 +59,18 @@ export function registryViews(registry) {
  const projects=registry.dealers.map(d=>({slug:d.slug,name:d.name,path:d.localPath,variants:d.variants.map(v=>v.key),sourceState:d.localPresent&&d.variants.every(v=>v.localPresent!==false)?'source-present':d.canonicalSourceRef==='main'?'source-on-main':'source-not-local',reviewState:d.evidence?.ownerReview?.state||'unknown',...(d.id?{leadId:d.id}:{})}));
  return{deployments:lines.join('\n'),index:{schemaVersion:2,source:'docs/DEPLOYMENT-INVENTORY.json',projects,campaignCandidatesWithoutFolders:registry.campaignCandidatesWithoutFolders||[]}};
 }
+export function writeRegistryViews(root=ROOT) {
+ const registry=json(path.join(root,'docs/DEPLOYMENT-INVENTORY.json'));
+ validateRegistry(registry);
+ const views=registryViews(registry);
+ fs.writeFileSync(path.join(root,'docs/DEPLOYMENTS.md'),views.deployments);
+ writeJson(path.join(root,'clients/index.json'),views.index);
+ return registry;
+}
 function main(){
- if(process.argv.includes('--help')){console.log('Usage: node scripts/index-deployments.mjs [--write | --check]\nDefault: preview local indexing; write: preserve registry evidence and regenerate views; check: validate without mutation.');return;}
- const options=process.argv.slice(2);if(options.some(x=>!['--write','--check'].includes(x))||options.length>1)throw new Error('Use --write or --check.');
+ if(process.argv.includes('--help')){console.log('Usage: node scripts/index-deployments.mjs [--write | --check | --views-only]\nDefault: preview local indexing; write: preserve registry evidence and regenerate views; check: validate without mutation; views-only: regenerate views from saved registry without scanning potentially stale dealer files.');return;}
+ const options=process.argv.slice(2);if(options.some(x=>!['--write','--check','--views-only'].includes(x))||options.length>1)throw new Error('Use --write, --check or --views-only.');
+ if(options.includes('--views-only')){const registry=writeRegistryViews();console.log(JSON.stringify({mode:'--views-only',dealers:registry.dealers.length,source:'saved-registry',dealerFilesScanned:false}));return;}
  const inventory=indexDeployments();validateRegistry(inventory,ROOT);
  const views=registryViews(inventory);
  if(options.includes('--check')){

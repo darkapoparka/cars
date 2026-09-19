@@ -13,10 +13,10 @@ export function inspectSkills(root=ROOT){
  if(skills.length!==3)throw new Error('Expected the three scoped Cars skills.');return skills;
 }
 export function checkWorkflow(root=ROOT,{help=true}={}){
- const docs=['README.md','AGENTS.md','docs/README.md','docs/WORKFLOW.md','docs/TEMPLATE-PROMOTION.md','docs/LEAD-PUBLISHING.md','docs/QA.md','docs/COORDINATION.md','docs/REGISTRY.md','docs/LOCAL-SETUP.md'];
+ const docs=['README.md','AGENTS.md','docs/README.md','docs/WORKFLOW.md','docs/TEMPLATE-PROMOTION.md','docs/LEAD-PUBLISHING.md','docs/QA.md','docs/COORDINATION.md','docs/REGISTRY.md','docs/LOCAL-SETUP.md','docs/WORKSPACE.md'];
  const skills=inspectSkills(root),failures=[...docs.map(f=>path.join(root,f)),...skills.map(s=>s.path)].flatMap(checkLinks);
  const lock=json(path.join(root,'templates.lock.json'));for(const key of ['auto-best','modern','carwow','import']){const e=lock.templates[key];if(e?.repository!==`darkapoparka/cars-template-${key}`||e.snapshotPath!==`templates/${key}`)failures.push('Invalid lock identity '+key);if(e.status==='approved'&&!/^[a-f0-9]{40}$/.test(e.commit||''))failures.push('Approved release lacks immutable commit '+key);}
- if(help)for(const script of ['new-client','template-release','package-dealer','export-dealer','index-deployments','verify-dealer-preview']){const r=spawnSync(process.execPath,[path.join(root,'scripts',script+'.mjs'),'--help'],{encoding:'utf8',windowsHide:true,timeout:15000});if(r.status!==0||!r.stdout.includes('Usage:'))failures.push(`Command help failed: ${script}: ${r.stderr}`);}
+ if(help)for(const script of ['new-client','template-release','package-dealer','export-dealer','index-deployments','verify-dealer-preview','workspace-doctor','check-live-fab']){const r=spawnSync(process.execPath,[path.join(root,'scripts',script+'.mjs'),'--help'],{encoding:'utf8',windowsHide:true,timeout:15000});if(r.status!==0||!r.stdout.includes('Usage:'))failures.push(`Command help failed: ${script}: ${r.stderr}`);}
  if(failures.length)throw new Error(failures.join('\n'));return{activeDocuments:docs.length,skills:skills.map(({name,path})=>({name,path})),commandHelp:help?'passed':'not-run',discovery:'Repository-scoped .agents/skills validated; app-server skills/list supplies host discovery proof.'};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename){try{console.log(JSON.stringify(checkWorkflow(),null,2));}catch(e){console.error(e.message);process.exitCode=1;}}
