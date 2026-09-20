@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-20T03:22:40.495Z",
+  "status": "generator-protections-implemented; native-template-adoption-not-performed",
+  "cars": {
+    "repository": "darkapoparka/cars",
+    "branch": "main",
+    "checkout": "J:/cars",
+    "baseCommit": "8d8b2b622f194a452d6c7b84a8b387f8235b0dd7",
+    "changedPaths": [
+      ".github/workflows/publish-champion-package.yml",
+      "scripts/create-independent-dealer.mjs",
+      "scripts/package-dealer.mjs",
+      "scripts/lib/dealer-locale.mjs",
+      "scripts/dealer-locale.test.mjs",
+      "scripts/independent-locale-generation.test.mjs",
+      "scripts/package-dealer.test.mjs",
+      "scripts/workflow-publish-scope.test.mjs",
+      "docs/INDEPENDENT-DEALERS.md",
+      "docs/independent-dealers/2026-09-20-LOCALE-GATE.md",
+      "docs/independent-dealers/2026-09-20-LOCALE-GATE.json"
+    ],
+    "reviewedFileHashes": {
+      ".github/workflows/publish-champion-package.yml": "5987fed3ed8848a42304a4eec4530d26875f02599179c7c9dcac24decf180bcb",
+      "scripts/create-independent-dealer.mjs": "19b42f9fc0e3a8c3d511139e6491b743d765d4b6699be902514d3c048f72ad30",
+      "scripts/package-dealer.mjs": "fbe2ca4b6eb9847e52390b09aa52b5b77c267f9584889a235031243e94027718",
+      "scripts/lib/dealer-locale.mjs": "5eaf508e7e194f0518c8cd8abb142ee780daee1a6ffa6f559b9bbf6cf340f742",
+      "scripts/dealer-locale.test.mjs": "8cab5ac288113a944dd0d26604a26716f2f60b07f866a37dc9659a9011586dcf",
+      "scripts/independent-locale-generation.test.mjs": "280d9df61e801bd25cd8ebc896a8456629dc36dee3689c5f8e9db92f31ad8dae",
+      "scripts/package-dealer.test.mjs": "b87130024a09e1c067912207e11aa30940d8380bea537b6f8b299ed6ef6bb278",
+      "scripts/workflow-publish-scope.test.mjs": "6c2edb9b83146f51008f8d25e544bb641525f207b863c089edeb2056acd0a233",
+      "docs/INDEPENDENT-DEALERS.md": "a1f85b653387d44abaea1e08aeeca3903ac9ae3d2eca198731966e494d912001",
+      "docs/independent-dealers/2026-09-20-LOCALE-GATE.md": "17400207225a2573705cd7e744b74414f9bc815235cfcfdae784c8006114f2aa"
+    }
+  },
+  "alreef": {
+    "repository": "darkapoparka/cars-alreefusedcars",
+    "branch": "main",
+    "checkout": "I:/cars-clients/al-reef-used-cars",
+    "applicationCommit": "f0ac5db2fb87d2167260607dbad338636556101b",
+    "applicationDeployment": "dpl_2ZstyWXeU2AJJgWYCvojjVJTdFkT",
+    "publishedCommit": "41ddc34893a8cfcf0219d80a248aead5fbc0c435",
+    "productionDeployment": "dpl_3VER6ig3NxL3oF7fkc1CGH8ydGnw",
+    "productionAlias": "https://cars-alreefusedcars.vercel.app",
+    "deploymentState": "READY",
+    "source": "git",
+    "sourceFilesVerified": 366,
+    "sourceHashMismatches": [],
+    "workingTreeStatus": ""
+  },
+  "preservation": {
+    "preexistingCarsFiles": 4540,
+    "mismatches": [],
+    "templatePinsChanged": false,
+    "registryChanged": false,
+    "championPublishingJobBodyUnchanged": true
+  },
+  "unchangedTemplatePins": {
+    "auto-best": {
+      "repository": "darkapoparka/cars-template-auto-best",
+      "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+      "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars-template-modern",
+      "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+      "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars-template-carwow",
+      "commit": "89f50c427863050abb7923152f05c091bb937d1e",
+      "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0"
+    }
+  },
+  "rawEvidenceRoot": "I:/cars-clients/al-reef-used-cars/runtime/phase3/20260920-finalize",
+  "checks": {
+    "workflowValidation": {
+      "passed": true,
+      "report": "post-review-workflow-check.log"
+    },
+    "workflowTests": {
+      "passed": 137,
+      "failed": 0,
+      "skipped": 0,
+      "command": "node --test --test-concurrency=1 scripts/*.test.mjs",
+      "report": "post-review-workflow-tests.log"
+    },
+    "alreefRootTests": {
+      "passed": 21,
+      "failed": 0,
+      "report": "release-tests-final.log"
+    },
+    "modernTests": {
+      "passed": 57,
+      "files": 8,
+      "failed": 0,
+      "report": "modern-unit.log"
+    },
+    "applicationBuildsAndChecks": [
+      {
+        "name": "auto-check",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:03:07.886Z",
+        "endedAt": "2026-09-20T03:03:15.811Z",
+        "report": "auto-check.log"
+      },
+      {
+        "name": "auto-build",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:03:15.812Z",
+        "endedAt": "2026-09-20T03:03:22.800Z",
+        "report": "auto-build.log"
+      },
+      {
+        "name": "auto-output",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:03:22.801Z",
+        "endedAt": "2026-09-20T03:03:22.880Z",
+        "report": "auto-output.log"
+      },
+      {
+        "name": "modern-typecheck",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:03:22.881Z",
+        "endedAt": "2026-09-20T03:03:40.472Z",
+        "report": "modern-typecheck.log"
+      },
+      {
+        "name": "modern-build",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:03:40.472Z",
+        "endedAt": "2026-09-20T03:04:01.748Z",
+        "report": "modern-build.log"
+      },
+      {
+        "name": "carwow-check",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:04:01.748Z",
+        "endedAt": "2026-09-20T03:04:17.001Z",
+        "report": "carwow-check.log"
+      },
+      {
+        "name": "carwow-build",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:04:17.001Z",
+        "endedAt": "2026-09-20T03:04:42.096Z",
+        "report": "carwow-build.log"
+      },
+      {
+        "name": "carwow-output",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:04:42.096Z",
+        "endedAt": "2026-09-20T03:04:42.163Z",
+        "report": "carwow-output.log"
+      },
+      {
+        "name": "release-guards-final",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:04:42.164Z",
+        "endedAt": "2026-09-20T03:04:42.741Z",
+        "report": "release-guards-final.log"
+      },
+      {
+        "name": "release-tests-final",
+        "exitCode": 0,
+        "startedAt": "2026-09-20T03:04:42.741Z",
+        "endedAt": "2026-09-20T03:04:43.616Z",
+        "report": "release-tests-final.log"
+      }
+    ],
+    "productionHttp": {
+      "passed": 12,
+      "failed": 0,
+      "report": "production-http/RESULTS.json"
+    },
+    "localRestoredHttp": {
+      "passed": 12,
+      "failed": 0,
+      "report": "local-restored-http/RESULTS.json"
+    },
+    "preferences": {
+      "passed": 4,
+      "failed": 0,
+      "report": "production-preferences/RESULTS.json"
+    },
+    "storageFallbacks": {
+      "passed": 18,
+      "failed": 0,
+      "report": "production-storage/RESULTS.json"
+    },
+    "preferenceRaces": {
+      "passed": 24,
+      "failed": 0,
+      "report": "production-races/RESULTS.json"
+    },
+    "visibility": {
+      "passed": 44,
+      "failed": 0,
+      "report": "production-visibility/RESULTS.json"
+    },
+    "publicRoutes": {
+      "checks": 342,
+      "passed": 342,
+      "failed": 0,
+      "byDesign": {
+        "auto-best": 78,
+        "modern": 120,
+        "carwow": 144
+      },
+      "reports": [
+        "retry-routes-auto-best-320/RESULTS.json",
+        "isolated-routes-auto-best-390/RESULTS.json",
+        "retry-routes-auto-best-1440/RESULTS.json",
+        "isolated-routes-modern-320/RESULTS.json",
+        "isolated-routes-modern-390/RESULTS.json",
+        "isolated-routes-modern-1440/RESULTS.json",
+        "isolated-routes-carwow-320/RESULTS.json",
+        "isolated-routes-carwow-390/RESULTS.json",
+        "isolated-routes-carwow-1440/RESULTS.json"
+      ]
+    },
+    "journeys": {
+      "checks": 766,
+      "passed": 762,
+      "skipped": 4,
+      "failed": 0,
+      "meaning": "Unique current cases; the explicit focused retry resolves the two crashed cases. Original failed attempts remain below.",
+      "reports": [
+        "production-journeys/RESULTS.json",
+        "production-journeys-390/RESULTS.json",
+        "production-retry-modern-bg-390-sell/RESULTS.json"
+      ],
+      "skips": [
+        {
+          "name": "carwow en 320 finance / detail calculator numeric validation",
+          "status": "skipped",
+          "reason": "Carwow DesktopDetailFinanceCalculator is desktop-only; mobile financing information fallback asserted above."
+        },
+        {
+          "name": "carwow bg 320 finance / detail calculator numeric validation",
+          "status": "skipped",
+          "reason": "Carwow DesktopDetailFinanceCalculator is desktop-only; mobile financing information fallback asserted above."
+        },
+        {
+          "name": "carwow en 390 finance / detail calculator numeric validation",
+          "status": "skipped",
+          "reason": "Carwow DesktopDetailFinanceCalculator is desktop-only; mobile financing information fallback asserted above."
+        },
+        {
+          "name": "carwow bg 390 finance / detail calculator numeric validation",
+          "status": "skipped",
+          "reason": "Carwow DesktopDetailFinanceCalculator is desktop-only; mobile financing information fallback asserted above."
+        }
+      ]
+    },
+    "dealerSmoke": {
+      "passed": 42,
+      "failed": 0,
+      "report": "isolated-qa-dealer/RESULTS.json"
+    },
+    "branding": {
+      "passed": 128,
+      "failed": 0,
+      "assetChecksPassed": 27,
+      "report": "isolated-qa-branding/RESULTS.json"
+    },
+    "admin": {
+      "checks": 14,
+      "confirmedEnglishOnly": 14,
+      "report": "isolated-qa-admin-locale/RESULTS.json"
+    }
+  },
+  "retainedUnsuccessfulAttempts": [
+    {
+      "report": "final-workflow-tests.log",
+      "outcome": "failed",
+      "detail": "Default-parallel run reported out-of-memory, VirtualAlloc and spawn failures; subsequently passed with serial test scheduling."
+    },
+    {
+      "report": "production-journeys-390/RESULTS.json",
+      "outcome": "272 passed, 2 failed, 2 skipped",
+      "detail": "Chrome page crashed on Modern bg Sell. Separate focused retry passed the four corresponding Sell checks."
+    },
+    {
+      "report": "production-qa-locales/RESULTS.json",
+      "outcome": "interrupted with navigation timeouts",
+      "detail": "Stopped the owned QA browser; report is not passing evidence."
+    },
+    {
+      "report": "isolated-routes-auto-best-320.log",
+      "outcome": "failed",
+      "detail": "Retained first shard attempt; fresh retry report used for final coverage."
+    },
+    {
+      "report": "isolated-routes-auto-best-1440.log",
+      "outcome": "failed/interrupted",
+      "detail": "Owned stuck Chrome process stopped; fresh retry report used for final coverage."
+    }
+  ],
+  "notPerformed": [
+    "Native template runtime/catalog adoption",
+    "Publishing unreviewed standalone template commits",
+    "Advancing template pins",
+    "Enabling native locale generation",
+    "Regenerating or reconciling the Al Reef Phase 3 canary",
+    "Any second dealer or fleet rollout"
+  ],
+  "deliberatelyDisabled": [
+    "Arabic and RTL",
+    "Admin translation",
+    "Real enquiry, CRM, database, AI, payment and notification writes"
+  ],
+  "warnings": [
+    "Carwow svelte-check reported 0 errors and 3 warnings in one unchanged source file."
+  ],
+  "reportHashes": {
+    "retry-routes-auto-best-320/RESULTS.json": "d6df220d0c59c98ab1900be8c033a2345137cc6623191e0e076dc832ed3d06f8",
+    "isolated-routes-auto-best-390/RESULTS.json": "2d79cd62e3c2076bf6aacb123b697e3713865b4d6d3a79790057b755f87e77e8",
+    "retry-routes-auto-best-1440/RESULTS.json": "9dac980dc71201355b016a284fb09188e0250e1f7b0176508cd7fb5c4464625a",
+    "isolated-routes-modern-320/RESULTS.json": "1b083821000f070cbc6ab3055c89fe756ad20fcee6d475a219688ad0903c852d",
+    "isolated-routes-modern-390/RESULTS.json": "bf37caeccd6e9f21dd6345a708f5d7aaece16a91634693aadf891bd7061eaec5",
+    "isolated-routes-modern-1440/RESULTS.json": "b0983f011c0bc7fd9a9c9d16acb24eab49ab73d07b2d27c660fa591551a8a83e",
+    "isolated-routes-carwow-320/RESULTS.json": "8e7297b29684df01e4bd63c5ceff744f078434fc2faffb9afafc0c4e272e9dd4",
+    "isolated-routes-carwow-390/RESULTS.json": "4ff6aaf67d897a8cdc48c00e6b35c64032bc0c6ccf35890a8ff94d4a6a882093",
+    "isolated-routes-carwow-1440/RESULTS.json": "1f1bc09f252ba421083691ec8d2093cfd71669712feb4395220c25c77d070c0d",
+    "production-journeys/RESULTS.json": "c2c9a3fc5039968aee5640bc626501333801d8f82ab75014fa50eb2365461a29",
+    "production-journeys-390/RESULTS.json": "2106ecde741cae4df7e7cf3ea33812135e949807487d2ffcda3f9d523593cbea",
+    "production-retry-modern-bg-390-sell/RESULTS.json": "6e9ec2af2c3cc50affe2d029a96c3037a3d5b90049b27f490805b36aa8153b9f",
+    "final-check-workflow.log": "cb5491a5b5b0cd1a707f3c350a61161dbd977de4fb904a4a382cc37210cabdd3",
+    "final-workflow-tests-serial.log": "0eaeb720208813b03801f485d17b3e70f8a42ea5aa09f1fca4b99b8840ef6992",
+    "release-tests-final.log": "43213a7b9fefaac0f43169031604ebfd06b9617a4c6e0ea1ecc2ef8ddc0e2bc4",
+    "modern-unit.log": "5c9f8da5568ccbd4e5b125f7a96c13742f284e06e9b9b74233d6696a35234f96",
+    "production-http/RESULTS.json": "0488a31ff18e74ca38537a33dd1a398c737ed1e5d43353e3ca4297b7beebc9bb",
+    "local-restored-http/RESULTS.json": "91d49da7b258608cbfe345f70d30063b48f4530799c8517c0e3a5ad6f8c92d15",
+    "production-preferences/RESULTS.json": "78e825ec9cdd45165a32d7be277de42ad11f23548d3c3f307c46e6d9d81a0feb",
+    "production-storage/RESULTS.json": "1c0a978062be1e2abcdee2c390c0d185d3a1fb599a0f01974057e890d95dd6e2",
+    "production-races/RESULTS.json": "c44bdfd5d458ccb4dd748f15f3e226ee3ee19c9d084e915edab8b9517d14a4cc",
+    "production-visibility/RESULTS.json": "7e09b2188350368099076f6c6084c4a909adbed055ecac008e8625105fadce30",
+    "isolated-qa-dealer/RESULTS.json": "dda0f2c7d916a065743dbf31e4ff6afe7e352312ea4774dca57d06cb52c4b5d7",
+    "isolated-qa-branding/RESULTS.json": "184722b49b711e88a7112a99744d06a6477e78dc293f5e7b307b4dec7c641946",
+    "isolated-qa-admin-locale/RESULTS.json": "270cf834af32908ffdfc52b4dc530a012fd4122f4c458297a4662b4bba8fddf8",
+    "final-workflow-tests.log": "5712e8670bb3eb1b6734b7069f76ac903b3dabb4bafbcb3fe3c1b893646aa1a8",
+    "production-qa-locales/RESULTS.json": "f4a75a7792a15d157cc29ee4c57dda3ea0f3156bc285357af4926d5f131c3d14",
+    "isolated-routes-auto-best-320.log": "b4ba1d0a31dd64a8a6d219ef52325fc4c22a151cd732fce299e2657efa090e46",
+    "isolated-routes-auto-best-1440.log": "049b05607bbbc9cf408b4db4d68fa76e7f57a0677463730cd660705e39a0882a",
+    "post-review-workflow-check.log": "cb5491a5b5b0cd1a707f3c350a61161dbd977de4fb904a4a382cc37210cabdd3",
+    "post-review-workflow-tests.log": "a49be36a71df9e16c4fce17b3860de0b007603b562c3a9056b5a3d0546b5e6df"
+  },
+  "finalReviewedChecksAt": "2026-09-20T03:25:10.354Z"
+}

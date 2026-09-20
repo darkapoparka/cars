@@ -25,3 +25,31 @@ A build whose remote repository could not be created, deployment was blocked, or
 ## Completed example
 
 [Al Reef Used Cars, Sharjah](independent-dealers/2026-09-19/AL-REEF.md) proves the independent repository flow: one permanent checkout, three designs, a Git-linked Vercel preview, shared Admin, explicit illustrative inventory, agent instructions and enforced asset/presentation checks. Cars stores its registration and delivery evidence, not its application source.
+
+
+## Localization release preflight — 20 September 2026
+
+`--locale-config FILE` validates an explicit, bounded JSON request and reports the intended language-prefixed entries. It is a **blocked preflight**, not native template adoption. A declaration does not prove complete catalogs or working localized routes. A blocked dry run exits 2; `--write` refuses the request before creating a staging directory or installing a dealer.
+
+The input has exactly these fields:
+
+```json
+{
+  "schemaVersion": 1,
+  "dealerId": "example-dealer",
+  "defaultLocale": "en",
+  "enabledLocales": ["en", "bg"],
+  "dealerCountry": "GB",
+  "inventoryCurrency": "GBP"
+}
+```
+
+These are illustrative values, not approved business facts. `dealerId` must match `--dealer-id` or the requested client slug. Country, default language and inventory currency are independent explicit inputs. Arabic/RTL and unknown languages remain unavailable; selecting a country cannot enable a language.
+
+Packaging v1 still has a single-default-locale Modern transform. The packager now refuses a localization declaration or detected native locale source before applying that transform, even when a caller supplies a retained file map. Existing localized independent dealers must not be sent through this legacy packager.
+
+Generation also checks its own packaging inputs for uncommitted changes and rechecks the workflow head, approved template pins, source bytes, prepared bytes, dealer identity, repository identity and destination before installation. These checks preserve other writers instead of quietly installing a stale candidate.
+
+Shared packager, catalog, template-pin and workflow-file changes no longer automatically publish Champion Auto Pro. Its existing publisher remains available for an explicit manual run or a change to its own client source. The publishing job and package-branch identity are unchanged.
+
+The [dated localization gate handoff](independent-dealers/2026-09-20-LOCALE-GATE.md) records actual release evidence and work that is still not performed. No template pin or existing dealer application is updated by this preflight.

@@ -5,11 +5,8 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/publish-champion-package.yml
+      # Shared tooling/pin updates are not authorization to publish this dealer.
       - clients/champion-auto-pro/**
-      - scripts/package-dealer.mjs
-      - catalog.json
-      - templates.lock.json
   workflow_dispatch:
 
 permissions:

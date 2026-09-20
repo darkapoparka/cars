@@ -313,3 +313,19 @@ test('package text is normalized, origin-qualified assets stay mounted and tampe
   await put(options.destination,'carwow/src/lib/seo.ts','tampered');
   assert.throws(()=>verifyPackage(options.destination),/Package payload changed/);
 });
+
+
+test('native localization is rejected before legacy mounting or destination writes', async t => {
+  const options = await fixture(t);
+  const before = await tree(options.source);
+  for (const prepare of [planDealerPackage, packageDealer]) {
+    await assert.rejects(() => prepare({ ...options, manifest: { ...options.manifest, localization: { enabledLocales: ['en', 'bg'] } } }), { code: 'NATIVE_LOCALE_PACKAGER_REQUIRED' });
+    assert.deepEqual(await tree(options.source), before);
+    assert.equal(await fs.access(options.destination).then(() => true, () => false), false);
+  }
+  await put(options.source, 'localization/core.ts', '// Preserve native locale routing and preferences');
+  const withNative = await tree(options.source);
+  await assert.rejects(() => packageDealer({ ...options, canonicalFiles: new Map() }), { code: 'NATIVE_LOCALE_PACKAGER_REQUIRED' });
+  assert.deepEqual(await tree(options.source), withNative);
+  assert.equal(await fs.access(options.destination).then(() => true, () => false), false);
+});

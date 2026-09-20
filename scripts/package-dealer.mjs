@@ -6,6 +6,7 @@ import { pathToFileURL } from 'node:url';
 import { applyMounts } from './publishing/mounts.mjs';
 import { git, gitFiles } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
+import { assertLegacyLocaleCompatible } from './lib/dealer-locale.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -146,7 +147,11 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   validatePackagingManifest(manifest);
   if (!/^[a-f\d]{40}(?:[a-f\d]{24})?$/i.test(sourceCommit ?? '')) throw new Error('sourceCommit must be the full source Git commit SHA');
   const resolvedSource = await fs.realpath(path.resolve(source));
-  const files = canonicalFiles ? new Map(canonicalFiles) : await collectSource(resolvedSource, manifest);
+  // Refuse before copying or applying the default-locale legacy mount transform.
+  const retained = canonicalFiles ? new Map(canonicalFiles) : undefined;
+  assertLegacyLocaleCompatible({ manifest, files: retained, source: resolvedSource });
+  const files = retained ?? await collectSource(resolvedSource, manifest);
+  assertLegacyLocaleCompatible({ manifest, files });
   for(const [name,content] of files)files.set(name,normalized(content));
   await applyMounts(files, manifest);
   const ignore=(files.get('.gitignore')?.toString('utf8')||'').split(/\r?\n/).filter(Boolean);
