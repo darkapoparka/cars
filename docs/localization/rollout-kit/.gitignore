@@ -1,0 +1,4 @@
+# Compiled fixtures are intentional, required inputs for standalone npm test.
+!dist/
+!dist/**
+node_modules/

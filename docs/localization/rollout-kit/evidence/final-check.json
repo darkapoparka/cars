@@ -1,0 +1,33 @@
+{
+  "status": "sandbox-candidate-tested-not-installed",
+  "date": "2026-09-20",
+  "environment": {
+    "node": "v22.16.0",
+    "typescript": "Version 5.8.3"
+  },
+  "command": "npm run check",
+  "exitCode": 0,
+  "tests": 113,
+  "passed": 113,
+  "failed": 0,
+  "skipped": 0,
+  "validResolutionComparisonCasesWithinOneTest": 4050,
+  "candidateTypecheck": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
+  },
+  "referenceTypecheck": "Unchanged deployed reference compiled with noUncheckedIndexedAccess=false; candidate retains the stronger checks",
+  "patchApplyCheckInSingleFileFixture": true,
+  "candidateSha256": "1f35a80d6efcd450ac30dc810fa7b09d02f7a35d9593abe430de866a00bf45bb",
+  "originalSourceSha256": "9b6d9abc2fc7d5019e275cf6082e2e58d5814f118e45ee0460e4c3abd3e2581d",
+  "retainedInitialFailure": "reference-build-first-attempt.txt: stronger new index-access checking was incorrectly inherited by the unchanged historical reference; separate reference configuration now uses its existing mode",
+  "notDone": [
+    "Application source integration",
+    "Standalone template adaptation",
+    "Svelte/Next framework builds of candidate",
+    "Candidate browser/production acceptance",
+    "New translations or RTL acceptance",
+    "New commit, push or deployment in this turn"
+  ]
+}

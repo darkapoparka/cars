@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-20",
+  "scope": "Fresh tests of unchanged Al Reef checkout, not the sandbox adoption candidate",
+  "checkout": "I:/cars-clients/al-reef-used-cars",
+  "commit": "41ddc34893a8cfcf0219d80a248aead5fbc0c435",
+  "commands": [
+    "npm run check",
+    "node --test --test-concurrency=1 scripts/check-dealer.test.mjs scripts/locale-policy.test.mjs scripts/locale-copy-audit.test.mjs"
+  ],
+  "exitCode": 0,
+  "tests": 21,
+  "passed": 21,
+  "failed": 0,
+  "skipped": 0,
+  "dealerGuard": {
+    "assets": 33,
+    "protectedFiles": 208,
+    "styleBlocks": 154
+  },
+  "brandingGuard": {
+    "assets": 75,
+    "consumerRules": 16
+  },
+  "sourceChanges": false,
+  "fullBuildsThisTurn": false,
+  "fullBrowserMatrixThisTurn": false
+}

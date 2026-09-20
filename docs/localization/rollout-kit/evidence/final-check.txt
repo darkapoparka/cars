@@ -1,0 +1,703 @@
+
+> cars-portable-locale-adoption-candidate@0.1.0 check
+> npm run build && node tools/build-core.mjs --check && npm test
+
+
+> cars-portable-locale-adoption-candidate@0.1.0 build
+> tsc -p tsconfig.json && node tools/build-core.mjs && tsc -p tsconfig.candidate.json && tsc -p tsconfig.reference.json && node tools/build-patch.mjs
+
+{"status":"generated","path":"/mnt/data/locale-rollout-kit/candidate/alreef-core.ts","enabledLocales":["en","bg"],"installed":false}
+{"status":"review-artifacts-generated","installed":false,"candidateSha256":"1f35a80d6efcd450ac30dc810fa7b09d02f7a35d9593abe430de866a00bf45bb"}
+{"status":"checked","path":"/mnt/data/locale-rollout-kit/candidate/alreef-core.ts","enabledLocales":["en","bg"],"installed":false}
+
+> cars-portable-locale-adoption-candidate@0.1.0 test
+> node --test --test-concurrency=1 test/*.test.mjs
+
+TAP version 13
+# Subtest: the emitter preserves the existing typed API and FAB boundary
+ok 1 - the emitter preserves the existing typed API and FAB boundary
+  ---
+  duration_ms: 2.689656
+  type: 'test'
+  ...
+# Subtest: a candidate language cannot silently enable incomplete current app adapters
+ok 2 - a candidate language cannot silently enable incomplete current app adapters
+  ---
+  duration_ms: 0.472957
+  type: 'test'
+  ...
+# Subtest: emitter fails rather than guessing an absent or duplicated source boundary
+ok 3 - emitter fails rather than guessing an absent or duplicated source boundary
+  ---
+  duration_ms: 0.273805
+  type: 'test'
+  ...
+# Subtest: complete catalogs are measured without inventing linguistic or browser approval
+ok 4 - complete catalogs are measured without inventing linguistic or browser approval
+  ---
+  duration_ms: 0.597596
+  type: 'test'
+  ...
+# Subtest: planned ar exports untranslated review tasks rather than English fallbacks
+ok 5 - planned ar exports untranslated review tasks rather than English fallbacks
+  ---
+  duration_ms: 0.23123
+  type: 'test'
+  ...
+# Subtest: planned de exports untranslated review tasks rather than English fallbacks
+ok 6 - planned de exports untranslated review tasks rather than English fallbacks
+  ---
+  duration_ms: 0.175255
+  type: 'test'
+  ...
+# Subtest: planned uk exports untranslated review tasks rather than English fallbacks
+ok 7 - planned uk exports untranslated review tasks rather than English fallbacks
+  ---
+  duration_ms: 0.177699
+  type: 'test'
+  ...
+# Subtest: planned tr exports untranslated review tasks rather than English fallbacks
+ok 8 - planned tr exports untranslated review tasks rather than English fallbacks
+  ---
+  duration_ms: 0.193373
+  type: 'test'
+  ...
+# Subtest: planned ro exports untranslated review tasks rather than English fallbacks
+ok 9 - planned ro exports untranslated review tasks rather than English fallbacks
+  ---
+  duration_ms: 0.254296
+  type: 'test'
+  ...
+# Subtest: planned el exports untranslated review tasks rather than English fallbacks
+ok 10 - planned el exports untranslated review tasks rather than English fallbacks
+  ---
+  duration_ms: 0.28393
+  type: 'test'
+  ...
+# Subtest: placeholder substitution cannot lose repeated, added or renamed parameters
+ok 11 - placeholder substitution cannot lose repeated, added or renamed parameters
+  ---
+  duration_ms: 0.299083
+  type: 'test'
+  ...
+# Subtest: not-ui records are not exported as translation tasks
+ok 12 - not-ui records are not exported as translation tasks
+  ---
+  duration_ms: 0.109035
+  type: 'test'
+  ...
+# Subtest: duplicate keys and corrupt source identity fail explicitly
+ok 13 - duplicate keys and corrupt source identity fail explicitly
+  ---
+  duration_ms: 0.172171
+  type: 'test'
+  ...
+# Subtest: missing common keys count as missing translations
+ok 14 - missing common keys count as missing translations
+  ---
+  duration_ms: 0.079441
+  type: 'test'
+  ...
+# Subtest: empty or sentinel translations are never complete
+ok 15 - empty or sentinel translations are never complete
+  ---
+  duration_ms: 0.127754
+  type: 'test'
+  ...
+# Subtest: unknown language aliases are rejected rather than confused with country codes
+ok 16 - unknown language aliases are rejected rather than confused with country codes
+  ---
+  duration_ms: 0.115255
+  type: 'test'
+  ...
+# Subtest: candidate retains the deployed policy for valid locale-resolution combinations
+ok 17 - candidate retains the deployed policy for valid locale-resolution combinations
+  ---
+  duration_ms: 39.741971
+  type: 'test'
+  ...
+# Subtest: public API routes, formatting and active languages remain compatible
+ok 18 - public API routes, formatting and active languages remain compatible
+  ---
+  duration_ms: 12.925389
+  type: 'test'
+  ...
+# Subtest: valid save/dismiss responses retain current cookies, status, URL and cache headers
+ok 19 - valid save/dismiss responses retain current cookies, status, URL and cache headers
+  ---
+  duration_ms: 29.215578
+  type: 'test'
+  ...
+# Subtest: the existing FAB extraction can run without cookies, Requests, Responses or a server
+ok 20 - the existing FAB extraction can run without cookies, Requests, Responses or a server
+  ---
+  duration_ms: 1.638954
+  type: 'test'
+  ...
+# Subtest: registered languages are metadata, not automatic release switches
+ok 21 - registered languages are metadata, not automatic release switches
+  ---
+  duration_ms: 2.503664
+  type: 'test'
+  ...
+# Subtest: country vocabulary retains 249 unique codes including Madagascar
+ok 22 - country vocabulary retains 249 unique codes including Madagascar
+  ---
+  duration_ms: 0.200624
+  type: 'test'
+  ...
+# Subtest: configuration rejects schema
+ok 23 - configuration rejects schema
+  ---
+  duration_ms: 0.206984
+  type: 'test'
+  ...
+# Subtest: configuration rejects missing id
+ok 24 - configuration rejects missing id
+  ---
+  duration_ms: 0.083947
+  type: 'test'
+  ...
+# Subtest: configuration rejects numeric id
+ok 25 - configuration rejects numeric id
+  ---
+  duration_ms: 0.109045
+  type: 'test'
+  ...
+# Subtest: configuration rejects missing prompt version
+ok 26 - configuration rejects missing prompt version
+  ---
+  duration_ms: 0.133031
+  type: 'test'
+  ...
+# Subtest: configuration rejects missing suggestion map
+ok 27 - configuration rejects missing suggestion map
+  ---
+  duration_ms: 0.182056
+  type: 'test'
+  ...
+# Subtest: configuration rejects dealer id
+ok 28 - configuration rejects dealer id
+  ---
+  duration_ms: 0.07881
+  type: 'test'
+  ...
+# Subtest: configuration rejects name
+ok 29 - configuration rejects name
+  ---
+  duration_ms: 0.223859
+  type: 'test'
+  ...
+# Subtest: configuration rejects empty enabled
+ok 30 - configuration rejects empty enabled
+  ---
+  duration_ms: 0.314717
+  type: 'test'
+  ...
+# Subtest: configuration rejects duplicate enabled
+ok 31 - configuration rejects duplicate enabled
+  ---
+  duration_ms: 0.130668
+  type: 'test'
+  ...
+# Subtest: configuration rejects unknown locale
+ok 32 - configuration rejects unknown locale
+  ---
+  duration_ms: 0.069626
+  type: 'test'
+  ...
+# Subtest: configuration rejects default disabled
+ok 33 - configuration rejects default disabled
+  ---
+  duration_ms: 0.062114
+  type: 'test'
+  ...
+# Subtest: configuration rejects country missing
+ok 34 - configuration rejects country missing
+  ---
+  duration_ms: 0.05254
+  type: 'test'
+  ...
+# Subtest: configuration rejects country invalid
+ok 35 - configuration rejects country invalid
+  ---
+  duration_ms: 0.047112
+  type: 'test'
+  ...
+# Subtest: configuration rejects currency invalid
+ok 36 - configuration rejects currency invalid
+  ---
+  duration_ms: 0.051809
+  type: 'test'
+  ...
+# Subtest: configuration rejects currency missing
+ok 37 - configuration rejects currency missing
+  ---
+  duration_ms: 0.662444
+  type: 'test'
+  ...
+# Subtest: configuration rejects wrong locale formatter
+ok 38 - configuration rejects wrong locale formatter
+  ---
+  duration_ms: 0.098309
+  type: 'test'
+  ...
+# Subtest: configuration rejects expiry
+ok 39 - configuration rejects expiry
+  ---
+  duration_ms: 0.067512
+  type: 'test'
+  ...
+# Subtest: configuration rejects expiry too long
+ok 40 - configuration rejects expiry too long
+  ---
+  duration_ms: 0.055193
+  type: 'test'
+  ...
+# Subtest: configuration rejects cookie token
+ok 41 - configuration rejects cookie token
+  ---
+  duration_ms: 0.049915
+  type: 'test'
+  ...
+# Subtest: configuration rejects suggest disabled
+ok 42 - configuration rejects suggest disabled
+  ---
+  duration_ms: 0.126491
+  type: 'test'
+  ...
+# Subtest: configuration rejects suggest bad country
+ok 43 - configuration rejects suggest bad country
+  ---
+  duration_ms: 0.079621
+  type: 'test'
+  ...
+# Subtest: configuration and nested records cannot be mutated by another dealer
+ok 44 - configuration and nested records cannot be mutated by another dealer
+  ---
+  duration_ms: 0.352784
+  type: 'test'
+  ...
+# Subtest: explicit URL wins for mount /
+ok 45 - explicit URL wins for mount /
+  ---
+  duration_ms: 0.58055
+  type: 'test'
+  ...
+# Subtest: explicit URL wins for mount /variant-2
+ok 46 - explicit URL wins for mount /variant-2
+  ---
+  duration_ms: 0.227215
+  type: 'test'
+  ...
+# Subtest: explicit URL wins for mount /variant-3
+ok 47 - explicit URL wins for mount /variant-3
+  ---
+  duration_ms: 0.167674
+  type: 'test'
+  ...
+# Subtest: cookie, quality-weighted header, trusted suggestion and default precedence
+ok 48 - cookie, quality-weighted header, trusted suggestion and default precedence
+  ---
+  duration_ms: 0.542171
+  type: 'test'
+  ...
+# Subtest: language negotiation: bg;q=0,en;q=0.6
+ok 49 - language negotiation: bg;q=0,en;q=0.6
+  ---
+  duration_ms: 0.213533
+  type: 'test'
+  ...
+# Subtest: language negotiation: bg;q=1.1,en;q=0.5
+ok 50 - language negotiation: bg;q=1.1,en;q=0.5
+  ---
+  duration_ms: 0.164859
+  type: 'test'
+  ...
+# Subtest: language negotiation: bg;q=NaN,en
+ok 51 - language negotiation: bg;q=NaN,en
+  ---
+  duration_ms: 0.10572
+  type: 'test'
+  ...
+# Subtest: language negotiation: bg;q=0.1234,en;q=0.1
+ok 52 - language negotiation: bg;q=0.1234,en;q=0.1
+  ---
+  duration_ms: 0.093702
+  type: 'test'
+  ...
+# Subtest: language negotiation: bg;q=0.9;q=0.1,en
+ok 53 - language negotiation: bg;q=0.9;q=0.1,en
+  ---
+  duration_ms: 0.084628
+  type: 'test'
+  ...
+# Subtest: language negotiation: en;q=0.5,bg;q=0.5
+ok 54 - language negotiation: en;q=0.5,bg;q=0.5
+  ---
+  duration_ms: 0.123577
+  type: 'test'
+  ...
+# Subtest: language negotiation: bg-BG;q=0.7,en;q=0.5
+ok 55 - language negotiation: bg-BG;q=0.7,en;q=0.5
+  ---
+  duration_ms: 0.094784
+  type: 'test'
+  ...
+# Subtest: language negotiation: *
+ok 56 - language negotiation: *
+  ---
+  duration_ms: 0.103907
+  type: 'test'
+  ...
+# Subtest: language negotiation: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ok 57 - language negotiation: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  ---
+  duration_ms: 0.083547
+  type: 'test'
+  ...
+# Subtest: language negotiation: ar,de,uk,tr,ro,el
+ok 58 - language negotiation: ar,de,uk,tr,ro,el
+  ---
+  duration_ms: 0.07947
+  type: 'test'
+  ...
+# Subtest: no cookie, locale or currency leaks between three independent dealer policies
+ok 59 - no cookie, locale or currency leaks between three independent dealer policies
+  ---
+  duration_ms: 18.608262
+  type: 'test'
+  ...
+# Subtest: nonfinite values and disabled-language price formatting fail explicitly
+ok 60 - nonfinite values and disabled-language price formatting fail explicitly
+  ---
+  duration_ms: 0.338924
+  type: 'test'
+  ...
+# Subtest: mounted route is idempotent: /
+ok 61 - mounted route is idempotent: /
+  ---
+  duration_ms: 0.493358
+  type: 'test'
+  ...
+# Subtest: mounted route is idempotent: /contact?topic=trade-in\#form
+ok 62 - mounted route is idempotent: /contact?topic=trade-in\#form
+  ---
+  duration_ms: 0.111779
+  type: 'test'
+  ...
+# Subtest: mounted route is idempotent: /variant-2/en/cars?q=golf\#results
+ok 63 - mounted route is idempotent: /variant-2/en/cars?q=golf\#results
+  ---
+  duration_ms: 0.098038
+  type: 'test'
+  ...
+# Subtest: mounted route is idempotent: /variant-3/inventory/demo-1
+ok 64 - mounted route is idempotent: /variant-3/inventory/demo-1
+  ---
+  duration_ms: 0.104949
+  type: 'test'
+  ...
+# Subtest: mounted route is idempotent: /variant-3
+ok 65 - mounted route is idempotent: /variant-3
+  ---
+  duration_ms: 0.09888
+  type: 'test'
+  ...
+# Subtest: mounted route is idempotent: /variant-2
+ok 66 - mounted route is idempotent: /variant-2
+  ---
+  duration_ms: 0.083537
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: /api/leads
+ok 67 - does not localize resource or external link: /api/leads
+  ---
+  duration_ms: 0.17132
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: /assets/car.webp
+ok 68 - does not localize resource or external link: /assets/car.webp
+  ---
+  duration_ms: 0.093612
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: /preview-switcher.js
+ok 69 - does not localize resource or external link: /preview-switcher.js
+  ---
+  duration_ms: 0.07273
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: /variant-2/_next/a.js
+ok 70 - does not localize resource or external link: /variant-2/_next/a.js
+  ---
+  duration_ms: 0.11175
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: https://outside.example/
+ok 71 - does not localize resource or external link: https://outside.example/
+  ---
+  duration_ms: 0.07262
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: tel:+971547707080
+ok 72 - does not localize resource or external link: tel:+971547707080
+  ---
+  duration_ms: 0.119801
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: mailto:test@example.com
+ok 73 - does not localize resource or external link: mailto:test@example.com
+  ---
+  duration_ms: 0.078529
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: \#form
+ok 74 - does not localize resource or external link: \#form
+  ---
+  duration_ms: 0.064578
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: ?topic=import
+ok 75 - does not localize resource or external link: ?topic=import
+  ---
+  duration_ms: 0.069565
+  type: 'test'
+  ...
+# Subtest: does not localize resource or external link: //cdn.example/image.png
+ok 76 - does not localize resource or external link: //cdn.example/image.png
+  ---
+  duration_ms: 0.068765
+  type: 'test'
+  ...
+# Subtest: enabled list controls routes, while regular short application routes remain usable
+ok 77 - enabled list controls routes, while regular short application routes remain usable
+  ---
+  duration_ms: 0.253364
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "//outside.example"
+ok 78 - rejects unsafe or unsupported return path: "//outside.example"
+  ---
+  duration_ms: 0.14493
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/\\\\outside"
+ok 79 - rejects unsafe or unsupported return path: "/\\\\outside"
+  ---
+  duration_ms: 0.07908
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/%2f%2foutside"
+ok 80 - rejects unsafe or unsupported return path: "/%2f%2foutside"
+  ---
+  duration_ms: 0.166753
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/%5coutside"
+ok 81 - rejects unsafe or unsupported return path: "/%5coutside"
+  ---
+  duration_ms: 0.205682
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/%252foutside"
+ok 82 - rejects unsafe or unsupported return path: "/%252foutside"
+  ---
+  duration_ms: 0.11187
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/%61pi/leads"
+ok 83 - rejects unsafe or unsupported return path: "/%61pi/leads"
+  ---
+  duration_ms: 0.09884
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/en/../../api/leads"
+ok 84 - rejects unsafe or unsupported return path: "/en/../../api/leads"
+  ---
+  duration_ms: 0.095685
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/ar/cars"
+ok 85 - rejects unsafe or unsupported return path: "/ar/cars"
+  ---
+  duration_ms: 0.093471
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/contact\\u0000"
+ok 86 - rejects unsafe or unsupported return path: "/contact\\u0000"
+  ---
+  duration_ms: 0.083016
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/contact"
+ok 87 - rejects unsafe or unsupported return path: "/contact"
+  ---
+  duration_ms: 0.136147
+  type: 'test'
+  ...
+# Subtest: rejects unsafe or unsupported return path: "/contact%"
+ok 88 - rejects unsafe or unsupported return path: "/contact%"
+  ---
+  duration_ms: 0.114403
+  type: 'test'
+  ...
+# Subtest: safe return path keeps URLs inside query values and hashes intact
+ok 89 - safe return path keeps URLs inside query values and hashes intact
+  ---
+  duration_ms: 0.184039
+  type: 'test'
+  ...
+# Subtest: invalid, old and ambiguous cookie values do not select a language
+ok 90 - invalid, old and ambiguous cookie values do not select a language
+  ---
+  duration_ms: 0.350701
+  type: 'test'
+  ...
+# Subtest: save is host-only, HttpOnly, Secure, bounded and private
+ok 91 - save is host-only, HttpOnly, Secure, bounded and private
+  ---
+  duration_ms: 19.506163
+  type: 'test'
+  ...
+# Subtest: dismissal changes only prompt completion, not country/language or URL
+ok 92 - dismissal changes only prompt completion, not country/language or URL
+  ---
+  duration_ms: 0.735915
+  type: 'test'
+  ...
+# Subtest: HTTP localhost keeps host-only cookies without incorrectly forcing Secure
+ok 93 - HTTP localhost keeps host-only cookies without incorrectly forcing Secure
+  ---
+  duration_ms: 0.737408
+  type: 'test'
+  ...
+# Subtest: JavaScript-disabled native form returns a validated 303
+ok 94 - JavaScript-disabled native form returns a validated 303
+  ---
+  duration_ms: 0.704347
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: external origin
+ok 95 - preference handler fails closed: external origin
+  ---
+  duration_ms: 0.617676
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: cross site
+ok 96 - preference handler fails closed: cross site
+  ---
+  duration_ms: 0.359365
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: null origin
+ok 97 - preference handler fails closed: null origin
+  ---
+  duration_ms: 0.229107
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: unexpected type
+ok 98 - preference handler fails closed: unexpected type
+  ---
+  duration_ms: 0.323971
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: unsupported locale
+ok 99 - preference handler fails closed: unsupported locale
+  ---
+  duration_ms: 0.565577
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: unknown country
+ok 100 - preference handler fails closed: unknown country
+  ---
+  duration_ms: 0.639269
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: business write
+ok 101 - preference handler fails closed: business write
+  ---
+  duration_ms: 0.522241
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: unknown field
+ok 102 - preference handler fails closed: unknown field
+  ---
+  duration_ms: 0.436342
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: external return
+ok 103 - preference handler fails closed: external return
+  ---
+  duration_ms: 0.375339
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: API return
+ok 104 - preference handler fails closed: API return
+  ---
+  duration_ms: 1.082421
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: oversize body
+ok 105 - preference handler fails closed: oversize body
+  ---
+  duration_ms: 0.541531
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: oversize declared
+ok 106 - preference handler fails closed: oversize declared
+  ---
+  duration_ms: 0.239253
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: bad length
+ok 107 - preference handler fails closed: bad length
+  ---
+  duration_ms: 0.210379
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: malformed json
+ok 108 - preference handler fails closed: malformed json
+  ---
+  duration_ms: 0.276419
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: array json
+ok 109 - preference handler fails closed: array json
+  ---
+  duration_ms: 0.205352
+  type: 'test'
+  ...
+# Subtest: preference handler fails closed: duplicate form keys
+ok 110 - preference handler fails closed: duplicate form keys
+  ---
+  duration_ms: 0.385604
+  type: 'test'
+  ...
+# Subtest: GET preference endpoint is not a write
+ok 111 - GET preference endpoint is not a write
+  ---
+  duration_ms: 0.250359
+  type: 'test'
+  ...
+# Subtest: streaming body is bounded even without a content-length header
+ok 112 - streaming body is bounded even without a content-length header
+  ---
+  duration_ms: 0.665729
+  type: 'test'
+  ...
+# Subtest: invalid UTF-8 is rejected instead of silently replacing bytes
+ok 113 - invalid UTF-8 is rejected instead of silently replacing bytes
+  ---
+  duration_ms: 0.418815
+  type: 'test'
+  ...
+1..113
+# tests 113
+# suites 0
+# pass 113
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 316.851781

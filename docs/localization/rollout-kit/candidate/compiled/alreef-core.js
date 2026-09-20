@@ -1,0 +1,289 @@
+// Generated adoption candidate. Framework and production acceptance are still required.
+/**
+ * Framework-neutral locale routing and preference policy.
+ * No DOM, filesystem, geolocation service, business writes or visitor-global state.
+ * Registering a language here does NOT release it in any application.
+ */
+export const languageRegistry = Object.freeze({
+    en: Object.freeze({ name: 'English', direction: 'ltr', formatLocale: 'en' }),
+    bg: Object.freeze({ name: 'Български', direction: 'ltr', formatLocale: 'bg-BG' }),
+    ar: Object.freeze({ name: 'العربية', direction: 'rtl', formatLocale: 'ar-AE' }),
+    de: Object.freeze({ name: 'Deutsch', direction: 'ltr', formatLocale: 'de-DE' }),
+    uk: Object.freeze({ name: 'Українська', direction: 'ltr', formatLocale: 'uk-UA' }),
+    tr: Object.freeze({ name: 'Türkçe', direction: 'ltr', formatLocale: 'tr-TR' }),
+    ro: Object.freeze({ name: 'Română', direction: 'ltr', formatLocale: 'ro-RO' }),
+    el: Object.freeze({ name: 'Ελληνικά', direction: 'ltr', formatLocale: 'el-GR' })
+});
+export const isKnownLanguage = (value) => typeof value === 'string' && Object.hasOwn(languageRegistry, value);
+export const countries = Object.freeze(('AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW').split(' '));
+export const isCountry = (value) => typeof value === 'string' && countries.includes(value);
+export function createLocaleRouting(input) {
+    if (!input || input.schemaVersion !== 1 || typeof input.dealerId !== 'string' || !/^[a-z0-9][a-z0-9-]{0,127}$/.test(input.dealerId)) {
+        throw new Error('Invalid locale configuration identity');
+    }
+    if (typeof input.dealerName !== 'string' || !input.dealerName.trim())
+        throw new Error('Missing dealer name');
+    if (!Array.isArray(input.enabledLocales) || !input.enabledLocales.length ||
+        new Set(input.enabledLocales).size !== input.enabledLocales.length ||
+        input.enabledLocales.some(value => !isKnownLanguage(value)) ||
+        !input.enabledLocales.includes(input.defaultLocale))
+        throw new Error('Invalid enabled/default languages');
+    if (!isCountry(input.dealerCountry))
+        throw new Error('Invalid dealer country');
+    if (!/^[A-Z]{3}$/.test(input.inventoryCurrency) || !Intl.supportedValuesOf('currency').includes(input.inventoryCurrency)) {
+        throw new Error('Invalid inventory currency');
+    }
+    if (!Number.isSafeInteger(input.preferenceMaxAge) || input.preferenceMaxAge < 1 || input.preferenceMaxAge > 31536000) {
+        throw new Error('Preference expiry must be between one second and one year');
+    }
+    if (typeof input.promptVersion !== 'string' || !/^[a-zA-Z0-9_-]{1,32}$/.test(input.promptVersion))
+        throw new Error('Invalid prompt version');
+    const enabledLocales = Object.freeze([...input.enabledLocales]);
+    for (const locale of enabledLocales) {
+        const format = input.formatLocales?.[locale];
+        if (typeof format !== 'string' || new Intl.Locale(format).language !== locale) {
+            throw new Error('Each enabled language needs its own explicit formatting locale: ' + locale);
+        }
+    }
+    if (!input.suggestedLanguages || typeof input.suggestedLanguages !== 'object' || Array.isArray(input.suggestedLanguages))
+        throw new Error('Suggestions must be an explicit map');
+    const suggestions = { ...input.suggestedLanguages };
+    for (const [country, locale] of Object.entries(suggestions)) {
+        if (!isCountry(country) || !input.enabledLocales.includes(locale))
+            throw new Error('Invalid country/language suggestion');
+    }
+    const directions = Object.freeze(Object.fromEntries(enabledLocales.map(locale => [locale, languageRegistry[locale].direction])));
+    const languageNames = Object.freeze(Object.fromEntries(enabledLocales.map(locale => [locale, languageRegistry[locale].name])));
+    const contract = Object.freeze({
+        ...input, enabledLocales, directions, languageNames,
+        formatLocales: Object.freeze({ ...input.formatLocales }),
+        suggestedLanguages: Object.freeze(suggestions),
+        disabledLocales: Object.freeze(Object.keys(languageRegistry).filter(locale => !enabledLocales.includes(locale)))
+    });
+    const isLocale = (value) => typeof value === 'string' && enabledLocales.includes(value);
+    const intlLocale = (locale) => {
+        if (!isLocale(locale))
+            throw new Error('Language is not enabled');
+        return contract.formatLocales[locale];
+    };
+    const formatPrice = (value, locale) => {
+        if (!Number.isFinite(value))
+            throw new Error('Price must be finite');
+        return new Intl.NumberFormat(intlLocale(locale), {
+            style: 'currency', currency: contract.inventoryCurrency, currencyDisplay: 'code', maximumFractionDigits: 0
+        }).format(value);
+    };
+    function routeParts(pathname) {
+        const base = pathname.match(/^\/variant-[23](?=\/|$)/)?.[0] ?? '';
+        const rest = pathname.slice(base.length) || '/';
+        const first = rest.split('/')[1] ?? '';
+        const locale = isLocale(first) ? first : null;
+        return { base, locale, path: locale ? rest.slice(first.length + 1) || '/' : rest, first };
+    }
+    function isResource(pathname) {
+        const { path } = routeParts(pathname);
+        return /^\/(?:api|_app|_next|assets|dealer-brand|dealer-inventory|brand|images|fonts|ingest)(?:\/|$)/.test(path) || /\.[a-z0-9]{1,12}$/i.test(path);
+    }
+    function unsupportedLocale(pathname) {
+        const { first, locale } = routeParts(pathname);
+        return !locale && /^[a-z]{2}(?:-[a-z0-9]{2,8})*$/i.test(first);
+    }
+    function localeHref(href, locale, defaultBase = '') {
+        if (!isLocale(locale))
+            throw new Error('Cannot link to a disabled language');
+        if (!['', '/variant-2', '/variant-3'].includes(defaultBase))
+            throw new Error('Invalid design mount');
+        if (!href.startsWith('/') || href.startsWith('//') || /[\\\u0000-\u001f\u007f]/.test(href))
+            return href;
+        const split = href.search(/[?#]/);
+        const pathname = split < 0 ? href : href.slice(0, split);
+        const suffix = split < 0 ? '' : href.slice(split);
+        if (isResource(pathname))
+            return href;
+        const parsed = routeParts(pathname);
+        const base = parsed.base || defaultBase;
+        return `${base}/${locale}${parsed.path === '/' ? '' : parsed.path}${suffix}`;
+    }
+    function safeReturnPath(value, origin) {
+        if (typeof value !== 'string' || value.length > 2048 || !value.startsWith('/') || value.startsWith('//') || /[\\\u0000-\u001f\u007f]/.test(value))
+            return null;
+        try {
+            const url = new URL(value, origin);
+            // Reject encoded path separators, controls and nested escaping, not legitimate query values.
+            if (url.origin !== origin || /%(?:2f|5c|25|0[0-9a-f]|1[0-9a-f]|7f)/i.test(url.pathname))
+                return null;
+            const decoded = decodeURIComponent(url.pathname);
+            if (isResource(decoded) || unsupportedLocale(decoded))
+                return null;
+            return url.pathname + url.search + url.hash;
+        }
+        catch {
+            return null;
+        }
+    }
+    return Object.freeze({ contract, countries, isCountry, isLocale, intlLocale, formatPrice, routeParts, isResource, unsupportedLocale, localeHref, safeReturnPath });
+}
+const defaultLocaleConfiguration = {
+    "schemaVersion": 1,
+    "dealerId": "ae-sharjah-al-reef-used-cars",
+    "dealerName": "Al Reef Used Cars",
+    "defaultLocale": "en",
+    "enabledLocales": [
+        "en",
+        "bg"
+    ],
+    "dealerCountry": "AE",
+    "inventoryCurrency": "AED",
+    "formatLocales": {
+        "en": "en-AE",
+        "bg": "bg-BG"
+    },
+    "preferenceMaxAge": 15552000,
+    "promptVersion": "v1",
+    "suggestedLanguages": {
+        "BG": "bg"
+    }
+};
+const defaultRouting = createLocaleRouting(defaultLocaleConfiguration);
+export const localeContract = defaultRouting.contract;
+export const { isLocale, intlLocale, formatPrice, routeParts, isResource, unsupportedLocale, localeHref, safeReturnPath } = defaultRouting;
+/** Reject ambiguous duplicate preferences instead of guessing a cookie path's precedence. */
+export function cookieValue(header, name) {
+    if (!header || header.length > 16384)
+        return null;
+    const matches = header.split(';').map(value => value.trim()).filter(value => value.startsWith(`${name}=`));
+    if (matches.length !== 1)
+        return null;
+    try {
+        return decodeURIComponent(matches[0].slice(name.length + 1));
+    }
+    catch {
+        return null;
+    }
+}
+export function privateHeaders(locale) {
+    const headers = new Headers({ 'Cache-Control': 'private, no-store', 'CDN-Cache-Control': 'no-store', 'Vercel-CDN-Cache-Control': 'no-store' });
+    if (locale)
+        headers.set('Content-Language', locale);
+    return headers;
+}
+/** Create a dealer policy, not a visitor singleton. Each resolution returns a new state. */
+export function createLocalePolicy(configuration) {
+    const routing = createLocaleRouting(configuration);
+    const { contract, isLocale, safeReturnPath, localeHref, routeParts } = routing;
+    function preferredLanguage(header) {
+        if (!header || header.length > 4096)
+            return null;
+        const choices = header.split(',').map((part, index) => {
+            const [tag = '', ...parameters] = part.trim().toLowerCase().split(';');
+            const weights = parameters.map(value => value.trim()).filter(value => value.startsWith('q='));
+            const q = weights.length === 0 ? 1 : weights.length === 1 && /^q=(?:0(?:\.\d{0,3})?|1(?:\.0{0,3})?)$/.test(weights[0]) ? Number(weights[0].slice(2)) : NaN;
+            return { locale: tag.split('-')[0], q, index };
+        }).filter((choice) => isLocale(choice.locale) && Number.isFinite(choice.q) && choice.q > 0 && choice.q <= 1)
+            .sort((a, b) => b.q - a.q || a.index - b.index);
+        return choices[0]?.locale ?? null;
+    }
+    function resolveLocale(input) {
+        const savedLocale = cookieValue(input.cookie, 'cars_locale');
+        const savedCountry = cookieValue(input.cookie, 'cars_country');
+        const trustedCountry = isCountry(input.trustedCountry) ? input.trustedCountry : null;
+        const suggestedCountry = trustedCountry ?? contract.dealerCountry;
+        const queryLocale = input.url.searchParams.get('lang');
+        const explicit = routeParts(input.url.pathname).locale ?? (isLocale(queryLocale) ? queryLocale : null);
+        const accepted = preferredLanguage(input.acceptLanguage);
+        const countryLanguage = trustedCountry ? contract.suggestedLanguages[trustedCountry] : undefined;
+        const suggestedLanguage = isLocale(countryLanguage) ? countryLanguage : null;
+        const source = explicit ? 'url' : isLocale(savedLocale) ? 'cookie' : accepted ? 'header' : suggestedLanguage ? 'country' : 'default';
+        const locale = explicit ?? (isLocale(savedLocale) ? savedLocale : accepted ?? suggestedLanguage ?? contract.defaultLocale);
+        return {
+            locale, source, country: isCountry(savedCountry) ? savedCountry : suggestedCountry, suggestedCountry,
+            promptDismissed: cookieValue(input.cookie, 'cars_prompt') === contract.promptVersion
+        };
+    }
+    async function preferenceResponse(request) {
+        const url = new URL(request.url);
+        const headers = privateHeaders();
+        headers.set('Content-Type', 'application/json; charset=utf-8');
+        const fail = (status) => new Response(JSON.stringify({ error: 'invalid_preference_request' }), { status, headers });
+        if (request.method !== 'POST') {
+            headers.set('Allow', 'POST');
+            return fail(405);
+        }
+        if (request.headers.get('origin') !== url.origin || request.headers.get('sec-fetch-site') === 'cross-site')
+            return fail(403);
+        const type = request.headers.get('content-type')?.split(';')[0]?.trim().toLowerCase();
+        if (type !== 'application/x-www-form-urlencoded' && type !== 'application/json')
+            return fail(415);
+        const declared = request.headers.get('content-length');
+        if (declared !== null && !/^\d+$/.test(declared))
+            return fail(400);
+        if (declared !== null && Number(declared) > 4096)
+            return fail(413);
+        const reader = request.body?.getReader();
+        if (!reader)
+            return fail(400);
+        let bytes = 0;
+        const chunks = [];
+        try {
+            while (true) {
+                const { value, done } = await reader.read();
+                if (done)
+                    break;
+                bytes += value.length;
+                if (bytes > 4096) {
+                    await reader.cancel();
+                    return fail(413);
+                }
+                chunks.push(value);
+            }
+        }
+        catch {
+            return fail(400);
+        }
+        finally {
+            reader.releaseLock();
+        }
+        const body = new Uint8Array(bytes);
+        let offset = 0;
+        for (const chunk of chunks) {
+            body.set(chunk, offset);
+            offset += chunk.length;
+        }
+        let data;
+        try {
+            const text = new TextDecoder('utf-8', { fatal: true }).decode(body);
+            if (type === 'application/json')
+                data = JSON.parse(text);
+            else {
+                const params = new URLSearchParams(text);
+                if ([...params.keys()].some(key => params.getAll(key).length !== 1))
+                    return fail(400);
+                data = Object.fromEntries(params);
+            }
+            if (!data || typeof data !== 'object' || Array.isArray(data) || Object.keys(data).some(key => !['action', 'locale', 'country', 'returnTo'].includes(key)))
+                return fail(400);
+        }
+        catch {
+            return fail(400);
+        }
+        if (data.action !== 'save' && data.action !== 'dismiss')
+            return fail(400);
+        const returnTo = safeReturnPath(data.returnTo, url.origin);
+        if (!returnTo || !isLocale(data.locale) || !isCountry(data.country))
+            return fail(400);
+        const options = `; Path=/; Max-Age=${contract.preferenceMaxAge}; SameSite=Lax; HttpOnly${url.protocol === 'https:' ? '; Secure' : ''}`;
+        headers.append('Set-Cookie', `cars_prompt=${contract.promptVersion}${options}`);
+        if (data.action === 'save') {
+            headers.append('Set-Cookie', `cars_locale=${data.locale}${options}`);
+            headers.append('Set-Cookie', `cars_country=${data.country}${options}`);
+        }
+        const destination = data.action === 'save' ? localeHref(returnTo, data.locale) : returnTo;
+        if (type === 'application/json')
+            return new Response(JSON.stringify({ destination }), { status: 200, headers });
+        headers.set('Location', destination);
+        return new Response(null, { status: 303, headers });
+    }
+    return Object.freeze({ ...routing, preferredLanguage, resolveLocale, preferenceResponse });
+}
+const defaultRequestPolicy = createLocalePolicy(defaultLocaleConfiguration);
+export const { preferredLanguage, resolveLocale, preferenceResponse } = defaultRequestPolicy;

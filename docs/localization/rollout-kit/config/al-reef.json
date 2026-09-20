@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-reef-used-cars",
+  "dealerName": "Al Reef Used Cars",
+  "defaultLocale": "en",
+  "enabledLocales": ["en", "bg"],
+  "dealerCountry": "AE",
+  "inventoryCurrency": "AED",
+  "formatLocales": {"en": "en-AE", "bg": "bg-BG"},
+  "preferenceMaxAge": 15552000,
+  "promptVersion": "v1",
+  "suggestedLanguages": {"BG": "bg"}
+}

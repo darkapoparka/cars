@@ -11,6 +11,7 @@ Start with [Cars quick start](../README.md). Read the procedure for the current 
 | Template keys, aliases and local ports | [catalog](../catalog.json) |
 | Packaging, remote reconciliation and publication | [LEAD-PUBLISHING](LEAD-PUBLISHING.md) |
 | Framework, rendered and hosted verification | [QA](QA.md) |
+| Native localization and country/language rollout | [Execution prompt](prompts/LOCALIZATION-ROLLOUT.md), [stored implementation candidate](localization/README.md) |
 | Technical evidence and generated views | [REGISTRY](REGISTRY.md), [DEPLOYMENTS](DEPLOYMENTS.md) |
 | One writer, Git preservation and handoffs | [COORDINATION](COORDINATION.md) |
 | Six-repository workspace, shared admin, hosting scale and Agency OS boundary | [WORKSPACE](WORKSPACE.md) |

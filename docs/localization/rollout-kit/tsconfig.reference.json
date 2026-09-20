@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "evidence",
+    "outDir": "evidence/compiled-original",
+    "declaration": false,
+    "noUncheckedIndexedAccess": false
+  },
+  "include": [
+    "evidence/original-core.ts"
+  ]
+}

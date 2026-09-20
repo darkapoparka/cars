@@ -1,0 +1,12 @@
+
+> cars-portable-locale-adoption-candidate@0.1.0 check
+> npm run build && node tools/build-core.mjs --check && npm test
+
+
+> cars-portable-locale-adoption-candidate@0.1.0 build
+> tsc -p tsconfig.json && node tools/build-core.mjs && tsc -p tsconfig.candidate.json && tsc -p tsconfig.reference.json && node tools/build-patch.mjs
+
+{"status":"generated","path":"/mnt/data/locale-rollout-kit/candidate/alreef-core.ts","enabledLocales":["en","bg"],"installed":false}
+evidence/original-core.ts(32,52): error TS18048: 'first' is possibly 'undefined'.
+evidence/original-core.ts(64,22): error TS18048: 'tag' is possibly 'undefined'.
+evidence/original-core.ts(103,16): error TS2532: Object is possibly 'undefined'.

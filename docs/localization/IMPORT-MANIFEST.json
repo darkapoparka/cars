@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "storedAt": "2026-09-20T11:28:14.470Z",
+  "sourceArchive": "cars-localization-rollout-kit.zip",
+  "sourceArchiveSha256": "8b25142c9198337878b34277bb4b103c8b77c8429797ae2f07f0ef6fb7fc42e2",
+  "destination": "docs/localization/rollout-kit",
+  "sourceFiles": [
+    {
+      "path": "NEXT-SESSION.md",
+      "bytes": 11407,
+      "sha256": "7c502236ef4768260d0a518fda60248d9569e5b703c118a2a06f3c2e21e8f002"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8694,
+      "sha256": "c173f32e7fb7022147d318cdc9724b994b9ebcd1950880eeb748e9c899c96d0e"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 2629,
+      "sha256": "19d8333944bfb9ab77adda016774c72983e41d0e2eb8681f67cca4b68c89ebaf"
+    },
+    {
+      "path": "candidate/alreef-core.patch",
+      "bytes": 26405,
+      "sha256": "bced1e3e852ef4ed32d6e2b843a00efd676b421563b8c0548767065b28958723"
+    },
+    {
+      "path": "candidate/alreef-core.ts",
+      "bytes": 16660,
+      "sha256": "1f35a80d6efcd450ac30dc810fa7b09d02f7a35d9593abe430de866a00bf45bb"
+    },
+    {
+      "path": "candidate/change-manifest.json",
+      "bytes": 1097,
+      "sha256": "672a3cc3bc115ebbcbb8e5c7564e32bbfe12eea560ce4de4f3ef5c77ca70c26d"
+    },
+    {
+      "path": "candidate/compiled/alreef-core.js",
+      "bytes": 16018,
+      "sha256": "82c20c80bd6031b0b295ecbdda6e765ddfd27f6ac49780cbee7ba61f861c0a80"
+    },
+    {
+      "path": "config/al-reef.json",
+      "bytes": 368,
+      "sha256": "17d0cb393553843eab9eceae48fa878043216a12ad4c12d12eca9edc2673093e"
+    },
+    {
+      "path": "dist/policy.d.ts",
+      "bytes": 6041,
+      "sha256": "cb1312b0d9e385762e49fe606ea88cc2158d4f3dd4dbe28db5699cb62134bf1b"
+    },
+    {
+      "path": "dist/policy.js",
+      "bytes": 15042,
+      "sha256": "aaca3288e98fecd55bdcdb1244e5e210bab0a588699b0457d3b3bf95615be2a3"
+    },
+    {
+      "path": "evidence/compiled-original/original-core.js",
+      "bytes": 9122,
+      "sha256": "35691fe42c64241c77120bc9bb702a81010f5d772c935791cdb31fde59293f89"
+    },
+    {
+      "path": "evidence/final-check.json",
+      "bytes": 1336,
+      "sha256": "54a24179dba5dd5d4bb6560d3648bb32cbaf9a19144a60013569969489cd0c24"
+    },
+    {
+      "path": "evidence/final-check.txt",
+      "bytes": 21095,
+      "sha256": "924c90f9ccd941940b237917c3a3d1fd15ec1f7f7217dabf3bb82bac30b9fa53"
+    },
+    {
+      "path": "evidence/fleet-audit.json",
+      "bytes": 73298,
+      "sha256": "ca35a7fe1a2c9e63772fd73b5625c5548d269c0c028e19a9a6713a71e16c1989"
+    },
+    {
+      "path": "evidence/original-core.ts",
+      "bytes": 9205,
+      "sha256": "9b6d9abc2fc7d5019e275cf6082e2e58d5814f118e45ee0460e4c3abd3e2581d"
+    },
+    {
+      "path": "evidence/policy-tests-initial.txt",
+      "bytes": 15506,
+      "sha256": "cc78d60d0c0ccc16d75e628f8c9a8cd10e8375ca4116a08da4b910709097d3f1"
+    },
+    {
+      "path": "evidence/reference-build-first-attempt.txt",
+      "bytes": 703,
+      "sha256": "4a25605fbdefe9aa6ebb7f0214ecb4d72f96d9b697ffd0cd68035c30e1f66c0e"
+    },
+    {
+      "path": "evidence/tests.txt",
+      "bytes": 20359,
+      "sha256": "c740f21f42d40859e748fc40537af3e09c74c444f07d1cc8c23ccac6ac5640a1"
+    },
+    {
+      "path": "evidence/unchanged-pilot-checks.json",
+      "bytes": 737,
+      "sha256": "03eaa2589dc722e243efe170725382adbb425b3dbbe8018ca0a83e082e5b2ced"
+    },
+    {
+      "path": "package.json",
+      "bytes": 637,
+      "sha256": "3533cac57efc64eae6de8feadd573bca9a40b01b8c90b7e1938dcb3a557a4570"
+    },
+    {
+      "path": "src/policy.ts",
+      "bytes": 15577,
+      "sha256": "e0adcfd9ca1efaf30c1410540cdbef25d2144bf9dc447971f0ce3b38cc5928c0"
+    },
+    {
+      "path": "test/catalog-and-emitter.test.mjs",
+      "bytes": 4207,
+      "sha256": "86948f6c15f4d674d15ff06056e6aecf10e9b19714d9f7c3e8fe19aec3eca891"
+    },
+    {
+      "path": "test/compatibility.test.mjs",
+      "bytes": 3258,
+      "sha256": "81e0812c97d07cb61519cdd274ed293aa975fa1a3c47175702f99a4e8761d1fa"
+    },
+    {
+      "path": "test/policy.test.mjs",
+      "bytes": 12440,
+      "sha256": "64177f99030e49cdf91cbb1a1ea55bdfa1728bc5a232c2c1992304b6891736e9"
+    },
+    {
+      "path": "tools/build-core.mjs",
+      "bytes": 2830,
+      "sha256": "013b4eab41ab9edeb4895f87fb16c068ba2e9978e0c2d999c779945f2414b5b6"
+    },
+    {
+      "path": "tools/build-patch.mjs",
+      "bytes": 2416,
+      "sha256": "5b246d0a3a899d0cd36b35d2f1ccf250b97f5827581fa134fb40beb57545499a"
+    },
+    {
+      "path": "tools/catalog-audit.mjs",
+      "bytes": 3718,
+      "sha256": "e2d8280670400c5cb372fd3f6d6e81fe9777a0170b3d2909c048a09539d63af8"
+    },
+    {
+      "path": "tsconfig.candidate.json",
+      "bytes": 203,
+      "sha256": "d0ce782ca2747fc287b25ccaa8fa0399459fcbb89e0f2e1087d3d7c2919576b2"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 434,
+      "sha256": "da2113cf24a941faebe590e9c5e5853e2559a7eacef768adb639810907105b86"
+    },
+    {
+      "path": "tsconfig.reference.json",
+      "bytes": 250,
+      "sha256": "ca57abcf7f8e2cfd2a10cb8587c00e9bd6fbc2f6a914862bfb711c41a850b01f"
+    }
+  ],
+  "externalDuplicates": [
+    {
+      "file": "CARS-LOCALIZATION-NEXT-SESSION.md",
+      "identicalArchiveMember": "NEXT-SESSION.md",
+      "migratedTo": "docs/prompts/LOCALIZATION-ROLLOUT.md"
+    },
+    {
+      "file": "CARS-LOCALE-FLEET-AUDIT.json",
+      "identicalArchiveMember": "evidence/fleet-audit.json"
+    }
+  ],
+  "reviewedAdaptations": [
+    "README.md: stored paths and historical-status clarification",
+    "NEXT-SESSION.md: direct pointer to canonical repository prompt",
+    "SHA256SUMS: refreshed for stored files",
+    ".gitignore: retain compiled fixtures needed by tests",
+    ".gitattributes: preserve exact LF fixtures",
+    "package-lock.json: pinned TypeScript dependency resolved for reproducible npm ci"
+  ],
+  "applicationPatchApplied": false,
+  "templateDeploymentPerformed": false,
+  "currentFileCount": 33,
+  "unmodifiedImportedFiles": 27
+}

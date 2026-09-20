@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-09-20T11:31:14.496Z",
+  "repository": "darkapoparka/cars",
+  "branch": "main",
+  "checkout": "J:/cars",
+  "baseCommit": "8642db0591b2132957a9d7b50dca10d713b44a76",
+  "scope": "Store the handoff and extracted implementation candidate in Git; no template or dealer application changes.",
+  "entryPoint": "docs/prompts/LOCALIZATION-ROLLOUT.md",
+  "kitDirectory": "docs/localization/rollout-kit",
+  "discovery": [
+    "AGENTS.md",
+    "docs/README.md",
+    "docs/localization/README.md"
+  ],
+  "versions": {
+    "node": "v24.21.0",
+    "typescript": "5.8.3"
+  },
+  "tests": [
+    {
+      "command": "npm run check",
+      "cwd": "docs/localization/rollout-kit",
+      "result": "passed",
+      "tests": 113,
+      "failures": 0,
+      "skips": 0,
+      "details": "Includes strict TypeScript compilation, candidate/reference compilation, generated-core drift check and 4,050 differential cases inside one test."
+    },
+    {
+      "command": "node scripts/check-workflow.mjs",
+      "result": "passed"
+    },
+    {
+      "command": "node --test --test-concurrency=1 scripts/*.test.mjs",
+      "result": "passed",
+      "tests": 137,
+      "failures": 0,
+      "skips": 0
+    }
+  ],
+  "kitFiles": 33,
+  "kitChecksumEntries": 32,
+  "originalImportedFiles": 30,
+  "importedFilesUnchanged": 27,
+  "approvedDocumentationChanges": [
+    "README.md",
+    "NEXT-SESSION.md",
+    "SHA256SUMS"
+  ],
+  "preservedPreExistingFiles": 4540,
+  "preservationMismatches": [],
+  "applicationPatchApplied": false,
+  "templateOrDealerDeploymentPerformed": false,
+  "attachmentsRequired": false,
+  "logs": [
+    {
+      "path": "runtime/localization-handoff-storage/npm-install.log",
+      "sha256": "d0f2d35c570bd13c8c8d869f5afaf5ac2e6c8785d5bb47e10239aed93c521fd8"
+    },
+    {
+      "path": "runtime/localization-handoff-storage/kit-check.log",
+      "sha256": "cb530ca27136ae12c00d0b3a82a34162489c50e94bf7ea0ba1c86dfb5d4d8d12"
+    },
+    {
+      "path": "runtime/localization-handoff-storage/workflow-check.log",
+      "sha256": "cb5491a5b5b0cd1a707f3c350a61161dbd977de4fb904a4a382cc37210cabdd3"
+    },
+    {
+      "path": "runtime/localization-handoff-storage/workflow-tests.log",
+      "sha256": "45b4bbd46bb01a5ba23fb62d515a7ac321831692ddfd2c06bb5381996bc8d05a"
+    }
+  ],
+  "note": "Historical fleet and pilot evidence inside the kit was preserved, not rerun as application acceptance. Read source history for the storage commit; reverify current main before integration."
+}

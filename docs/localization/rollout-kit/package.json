@@ -1,0 +1,18 @@
+{
+  "name": "cars-portable-locale-adoption-candidate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tested adoption candidate, not an installed or deployed Cars template release",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node tools/build-core.mjs && tsc -p tsconfig.candidate.json && tsc -p tsconfig.reference.json && node tools/build-patch.mjs",
+    "test": "node --test --test-concurrency=1 test/*.test.mjs",
+    "check": "npm run build && node tools/build-core.mjs --check && npm test"
+  },
+  "engines": {
+    "node": ">=22.16"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}

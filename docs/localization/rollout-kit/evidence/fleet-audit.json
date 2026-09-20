@@ -1,0 +1,2320 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "localizedEntrySummaryObservedAt": "2026-09-20T03:53:49.446Z",
+  "source": "Normalized transcription of fresh authorized Remote Desktop Commander GET results; registry supplied the named scope. Not a raw HTTP archive.",
+  "registry": "darkapoparka/cars:docs/DEPLOYMENT-INVENTORY.json",
+  "registryCommit": "8642db0591b2132957a9d7b50dca10d713b44a76",
+  "scope": "25 registered deployed automotive dealer projects, not the entire Vercel account",
+  "method": {
+    "localized": "Three actual design entries per dealer times en/bg, with the opposite Accept-Language; status and SSR markers only",
+    "legacy": "Each of the 75 existing unprefixed design entries requested separately; all returned HTTP 200",
+    "writes": "No preference POST, business submission or deployment performed by the fleet audit"
+  },
+  "summary": {
+    "dealers": 25,
+    "legacyEntryRequests": 75,
+    "legacyHttp200": 75,
+    "localizedEntryRequests": 150,
+    "localizedHttp404": 100,
+    "localizedHttp200": 50,
+    "localizedRequestsMeetingPilotEntryContract": 6,
+    "dealersMeetingPilotEntryContract": 1,
+    "otherDealers": 24,
+    "networkErrors": 0,
+    "modernTrioDealers": 23,
+    "importTrioDealers": 2
+  },
+  "limits": [
+    "SSR markers are not proof of visible first-visit popup, persistence, complete catalogs or browser fit.",
+    "Legacy HTTP 200 is availability evidence only, not language correctness.",
+    "Only the exact recorded requests were checked; no wildcard fleet certification.",
+    "Registry deployment IDs were not treated as current production proof.",
+    "Al Reef broader acceptance is separate previously committed evidence."
+  ],
+  "currentAlReefDeployment": {
+    "source": "Fresh Vercel get_deployment response in this execution",
+    "state": "READY",
+    "gitSha": "41ddc34893a8cfcf0219d80a248aead5fbc0c435",
+    "id": "dpl_3VER6ig3NxL3oF7fkc1CGH8ydGnw",
+    "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+    "alias": "cars-alreefusedcars.vercel.app"
+  },
+  "dealers": [
+    {
+      "slug": "al-basma-motors",
+      "project": "cars-albasmamotors",
+      "repository": "darkapoparka/cars-albasmamotors",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/al-basma-motors",
+      "alias": "https://cars-albasmamotors.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-albasmamotors.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-albasmamotors.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-albasmamotors.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-albasmamotors.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-albasmamotors.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-albasmamotors.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "project": "cars-alhamooralthahabi",
+      "repository": "darkapoparka/cars-alhamooralthahabi",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/al-hamoor-al-thahabi",
+      "alias": "https://cars-alhamooralthahabi.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-alhamooralthahabi.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-alhamooralthahabi.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-alhamooralthahabi.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-alhamooralthahabi.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-alhamooralthahabi.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-alhamooralthahabi.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "al-reef-used-cars",
+      "project": "cars-alreefusedcars",
+      "repository": "darkapoparka/cars-alreefusedcars",
+      "sourceOwnership": "independent-repository",
+      "checkout": "I:/cars-clients/al-reef-used-cars",
+      "alias": "https://cars-alreefusedcars.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-alreefusedcars.vercel.app/en",
+          "status": 200,
+          "htmlLanguage": "en",
+          "contentLanguage": "en",
+          "ssrPreferenceDialogMarker": true,
+          "ssrManualSelectorMarker": true
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-alreefusedcars.vercel.app/bg",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": "bg",
+          "ssrPreferenceDialogMarker": true,
+          "ssrManualSelectorMarker": true
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-alreefusedcars.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "en",
+          "contentLanguage": "en",
+          "ssrPreferenceDialogMarker": true,
+          "ssrManualSelectorMarker": true
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-alreefusedcars.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": "bg",
+          "ssrPreferenceDialogMarker": true,
+          "ssrManualSelectorMarker": true
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-alreefusedcars.vercel.app/variant-3/en",
+          "status": 200,
+          "htmlLanguage": "en",
+          "contentLanguage": "en",
+          "ssrPreferenceDialogMarker": true,
+          "ssrManualSelectorMarker": true
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-alreefusedcars.vercel.app/variant-3/bg",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": "bg",
+          "ssrPreferenceDialogMarker": true,
+          "ssrManualSelectorMarker": true
+        }
+      ],
+      "status": "existing-en-bg-pilot-entry-contract-observed"
+    },
+    {
+      "slug": "asko-96",
+      "project": "cars-asko96",
+      "repository": "darkapoparka/cars-asko96",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/asko-96",
+      "alias": "https://cars-asko96.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-asko96.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-asko96.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-asko96.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-asko96.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "astracar",
+      "project": "cars-astracar",
+      "repository": "darkapoparka/cars-astracar",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/astracar",
+      "alias": "https://cars-astracar.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-astracar.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-astracar.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-astracar.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-astracar.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-astracar.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-astracar.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "autolife",
+      "project": "cars-autolife",
+      "repository": "darkapoparka/cars-autolife",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/autolife",
+      "alias": "https://cars-autolife.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-autolife.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-autolife.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-autolife.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-autolife.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-autolife.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-autolife.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "automarket-varna",
+      "project": "cars-automarketvarna",
+      "repository": "darkapoparka/cars-automarketvarna",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/automarket-varna",
+      "alias": "https://cars-automarketvarna.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-automarketvarna.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-automarketvarna.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-automarketvarna.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-automarketvarna.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-automarketvarna.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-automarketvarna.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "avangard-auto",
+      "project": "cars-avangardauto",
+      "repository": "darkapoparka/cars-avangardauto",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/avangard-auto",
+      "alias": "https://cars-avangardauto.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-avangardauto.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-avangardauto.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "champion-auto-pro",
+      "project": "cars-championautopro",
+      "repository": "darkapoparka/cars-championautopro",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/champion-auto-pro",
+      "alias": "https://cars-championautopro.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-championautopro.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-championautopro.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-championautopro.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-championautopro.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-championautopro.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-championautopro.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "day-and-night-auto-group",
+      "project": "day-and-night-a",
+      "repository": "darkapoparka/day-and-night-autodeal",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/day-and-night-auto-group",
+      "alias": "https://day-and-night-a.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://day-and-night-a.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://day-and-night-a.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://day-and-night-a.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "eliqauto",
+      "project": "cars-eliqauto",
+      "repository": "darkapoparka/cars-eliqauto",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/eliqauto",
+      "alias": "https://cars-eliqauto.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-eliqauto.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-eliqauto.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-eliqauto.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-eliqauto.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-eliqauto.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-eliqauto.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "elit-auto-import",
+      "project": "cars-elitautoimport",
+      "repository": "darkapoparka/cars-elitautoimport",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/elit-auto-import",
+      "alias": "https://cars-elitautoimport.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-elitautoimport.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-elitautoimport.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "excellent-cars",
+      "project": "excellent-cars",
+      "repository": "darkapoparka/excellent-cars",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/excellent-cars",
+      "alias": "https://excellent-cars.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://excellent-cars.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://excellent-cars.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://excellent-cars.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://excellent-cars.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://excellent-cars.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://excellent-cars.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "f1rst-motors",
+      "project": "cars-f1rstmotors",
+      "repository": "darkapoparka/cars-f1rstmotors",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/f1rst-motors",
+      "alias": "https://cars-f1rstmotors.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-f1rstmotors.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-f1rstmotors.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-f1rstmotors.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-f1rstmotors.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-f1rstmotors.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-f1rstmotors.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "isauto-varna",
+      "project": "cars-isautovarna",
+      "repository": "darkapoparka/cars",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/isauto-varna",
+      "alias": "https://cars-isautovarna.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-isautovarna.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-isautovarna.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-isautovarna.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-isautovarna.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-isautovarna.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-isautovarna.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "ivo-auto",
+      "project": "cars-ivoauto",
+      "repository": "darkapoparka/cars-ivoauto",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/ivo-auto",
+      "alias": "https://cars-ivoauto.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-ivoauto.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-ivoauto.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-ivoauto.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-ivoauto.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-ivoauto.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-ivoauto.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "kg-team-auto",
+      "project": "cars-kgteamauto",
+      "repository": "darkapoparka/cars-kgteamauto",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/kg-team-auto",
+      "alias": "https://cars-kgteamauto.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-kgteamauto.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-kgteamauto.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-kgteamauto.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-kgteamauto.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-kgteamauto.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-kgteamauto.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "legend-auto",
+      "project": "cars-legendauto",
+      "repository": "darkapoparka/cars-legendauto",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/legend-auto",
+      "alias": "https://cars-legendauto.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-legendauto.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-legendauto.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-legendauto.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-legendauto.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-legendauto.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-legendauto.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "navara-car",
+      "project": "cars-navaracar",
+      "repository": "darkapoparka/cars-navaracar",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/navara-car",
+      "alias": "https://cars-navaracar.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-navaracar.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-navaracar.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-navaracar.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-navaracar.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-navaracar.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-navaracar.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "outletcars-varna",
+      "project": "cars-outletcarsvarna",
+      "repository": "darkapoparka/cars-outletcarsvarna",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/outletcars-varna",
+      "alias": "https://cars-outletcarsvarna.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "import",
+          "base": "/variant-2",
+          "entry": "/variant-2/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-outletcarsvarna.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-outletcarsvarna.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "import",
+          "requestedLanguage": "en",
+          "url": "https://cars-outletcarsvarna.vercel.app/variant-2/en",
+          "status": 404,
+          "htmlLanguage": null,
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "import",
+          "requestedLanguage": "bg",
+          "url": "https://cars-outletcarsvarna.vercel.app/variant-2/bg",
+          "status": 404,
+          "htmlLanguage": null,
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-outletcarsvarna.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-outletcarsvarna.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "project": "cars-perfectauto",
+      "repository": "darkapoparka/cars-perfectauto",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/perfect-auto-varna",
+      "alias": "https://cars-perfectauto.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-perfectauto.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-perfectauto.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-perfectauto.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-perfectauto.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-perfectauto.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-perfectauto.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "priselci",
+      "project": "cars-priselci",
+      "repository": "darkapoparka/cars-priselci",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/priselci",
+      "alias": "https://cars-priselci.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-priselci.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-priselci.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-priselci.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-priselci.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-priselci.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-priselci.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "promosale-varna",
+      "project": "cars-promosalevarna",
+      "repository": "darkapoparka/cars-promosalevarna",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/promosale-varna",
+      "alias": "https://cars-promosalevarna.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "import",
+          "base": "/variant-2",
+          "entry": "/variant-2/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-promosalevarna.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-promosalevarna.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "import",
+          "requestedLanguage": "en",
+          "url": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "status": 404,
+          "htmlLanguage": null,
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "import",
+          "requestedLanguage": "bg",
+          "url": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "status": 404,
+          "htmlLanguage": null,
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "texas-drive-auto",
+      "project": "cars-texasdriveauto",
+      "repository": "darkapoparka/cars-texasdriveauto",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/texas-drive-auto",
+      "alias": "https://cars-texasdriveauto.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-texasdriveauto.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-texasdriveauto.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-texasdriveauto.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-texasdriveauto.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-texasdriveauto.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-texasdriveauto.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    },
+    {
+      "slug": "the-dealers-point",
+      "project": "cars-thedealerspoint",
+      "repository": "darkapoparka/cars-thedealerspoint",
+      "sourceOwnership": "cars-canonical",
+      "checkout": "J:/cars/clients/the-dealers-point",
+      "alias": "https://cars-thedealerspoint.vercel.app/",
+      "variants": [
+        {
+          "key": "auto-best",
+          "base": "",
+          "entry": "/",
+          "legacyStatus": 200
+        },
+        {
+          "key": "modern",
+          "base": "/variant-2",
+          "entry": "/variant-2/cars",
+          "legacyStatus": 200
+        },
+        {
+          "key": "carwow",
+          "base": "/variant-3",
+          "entry": "/variant-3/",
+          "legacyStatus": 200
+        }
+      ],
+      "localizedChecks": [
+        {
+          "design": "auto-best",
+          "requestedLanguage": "en",
+          "url": "https://cars-thedealerspoint.vercel.app/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "auto-best",
+          "requestedLanguage": "bg",
+          "url": "https://cars-thedealerspoint.vercel.app/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "en",
+          "url": "https://cars-thedealerspoint.vercel.app/variant-2/en/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "modern",
+          "requestedLanguage": "bg",
+          "url": "https://cars-thedealerspoint.vercel.app/variant-2/bg/cars",
+          "status": 200,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "en",
+          "url": "https://cars-thedealerspoint.vercel.app/variant-3/en",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        },
+        {
+          "design": "carwow",
+          "requestedLanguage": "bg",
+          "url": "https://cars-thedealerspoint.vercel.app/variant-3/bg",
+          "status": 404,
+          "htmlLanguage": "bg",
+          "contentLanguage": null,
+          "ssrPreferenceDialogMarker": false,
+          "ssrManualSelectorMarker": false
+        }
+      ],
+      "status": "shared-locale-experience-not-rolled-out"
+    }
+  ]
+}

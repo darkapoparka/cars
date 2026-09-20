@@ -16,6 +16,7 @@ Cars is the integration workspace for dealer demos. The owner's current request 
 | --- | --- |
 | New dealer or dealer correction | [WORKFLOW](docs/WORKFLOW.md), `cars-lead-build` skill |
 | Shared template polish | Open the standalone template; read its AGENTS and relevant technical reference |
+| Localization / country-language rollout | [Execution prompt](docs/prompts/LOCALIZATION-ROLLOUT.md), [stored candidate and evidence](docs/localization/README.md); all inputs are in Git, no chat attachments needed |
 | Review/promote an upstream release | [TEMPLATE-PROMOTION](docs/TEMPLATE-PROMOTION.md), `cars-template-release` skill |
 | Package/publish one dealer | [LEAD-PUBLISHING](docs/LEAD-PUBLISHING.md), `cars-publish` skill |
 | Audit or status | Inspect relevant source/evidence; remain read-only unless fixes are requested |
