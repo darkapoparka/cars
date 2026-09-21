@@ -40,6 +40,8 @@ describe('native Carwow locale adapter', () => {
 			path: '/inventory'
 		});
 		expect(dealerLabel('en', 'city')).toBe('Sofia');
+		expect(dealerLabel('bg', 'city')).toBe('София');
+		expect(dealerLabel('en', 'address')).toBe('18 Atanas Manchev Street, Studentski Grad, Sofia');
 		expect(stockValue('en', 'Mercedes-Benz')).toBe('Mercedes-Benz');
 		expect(stockValue('en', '80 000 км')).toBe('80,000 km');
 	});

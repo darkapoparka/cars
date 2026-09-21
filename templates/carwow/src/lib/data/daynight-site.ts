@@ -12,6 +12,22 @@ const district = 'Студентски град';
 const street = 'ул. Атанас Манчев 18';
 const location = `гр. ${city}, ${district}, ${street}`;
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Sofia',
+		locationShort: 'Studentski Grad, Sofia',
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Sofia'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
 	name: 'DAY NIGHT AUTO GROUP',
 	shortName,

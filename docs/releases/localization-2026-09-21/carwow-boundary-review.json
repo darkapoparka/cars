@@ -1,0 +1,1083 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-carwow",
+  "previousCommit": "6164980ad0a80b9627ad94b99f0322fc931a93bd",
+  "commit": "42970ab5724cb32da17e75879a2fca470629aebe",
+  "exactChangedFiles": [
+    "src/lib/data/daynight-site.ts",
+    "src/lib/locale/config.ts",
+    "src/lib/locale/locale.test.ts",
+    "src/lib/locale/messages.ts"
+  ],
+  "diffSha256": "14e0b299f6c0a7c194d26858b5719adc15393792062ece6136dc4eecc4695166",
+  "sourceDigest": "9ac83d2b96c2c2e9e19d262c22cc2b81b05072bac783c6cf4f6d8bd111968344",
+  "deployment": {
+    "id": "dpl_DZHeudEhJWCRuw8wKxv9AtFpj41j",
+    "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+    "state": "READY",
+    "sourceCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+    "publicAlias": "https://cars-template-carwow.vercel.app/"
+  },
+  "verification": {
+    "logs": {
+      "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+      "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+      "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+      "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+    },
+    "preferenceAudit": {
+      "report": {
+        "schemaVersion": 1,
+        "startedAt": "2026-09-21T10:11:59.587Z",
+        "checkedAt": "2026-09-21T10:12:01.665Z",
+        "baseUrl": "https://cars-template-carwow.vercel.app/",
+        "mount": "",
+        "sourceCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+        "scope": "Preference-only HTTP regression audit. No redirect following, business writes, whole-UI or browser acceptance.",
+        "checks": 16,
+        "passed": 16,
+        "failed": 0,
+        "results": [
+          {
+            "name": "normalized-return save json /x/..//invalid.example/path",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save form /x/..//invalid.example/path",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss json /x/..//invalid.example/path",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss form /x/..//invalid.example/path",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save json /%2e%2e//invalid.example/",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save form /%2e%2e//invalid.example/",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss json /%2e%2e//invalid.example/",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss form /%2e%2e//invalid.example/",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save json /..//invalid.example/path?x=1",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save form /..//invalid.example/path?x=1",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss json /..//invalid.example/path?x=1",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss form /..//invalid.example/path?x=1",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "valid save json",
+            "passed": true,
+            "status": 200,
+            "location": null,
+            "destination": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "cookies": [
+              "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+              "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+              "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+            ],
+            "cacheControl": "private, no-store",
+            "bodySha256": "6e4b7cff833bc4dc76160aeaf6d0b77c0529e8d3e11e54686ca666b1fc9ec92a",
+            "failures": []
+          },
+          {
+            "name": "valid save form",
+            "passed": true,
+            "status": 303,
+            "location": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "destination": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "cookies": [
+              "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+              "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+              "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+            ],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "failures": []
+          },
+          {
+            "name": "valid dismiss json",
+            "passed": true,
+            "status": 200,
+            "location": null,
+            "destination": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "cookies": [
+              "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+            ],
+            "cacheControl": "private, no-store",
+            "bodySha256": "8b6bd0812cb2f04d9ca230f232825a472e524279bb3a852ce3939a0561abdbc6",
+            "failures": []
+          },
+          {
+            "name": "valid dismiss form",
+            "passed": true,
+            "status": 303,
+            "location": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "destination": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "cookies": [
+              "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+            ],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "failures": []
+          }
+        ]
+      },
+      "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a"
+    },
+    "browserAudit": {
+      "report": {
+        "schemaVersion": 1,
+        "sourceCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+        "baseUrl": "https://cars-template-carwow.vercel.app/",
+        "widths": [
+          320,
+          390,
+          1440
+        ],
+        "locales": [
+          "en",
+          "bg"
+        ],
+        "checks": 20,
+        "passed": 20,
+        "failed": 0,
+        "checkedAt": "2026-09-21T10:11:59.547Z",
+        "results": [
+          {
+            "name": "en 320 /",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 4255,
+              "overflow": 0,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 320 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en/contact?topic=trade-in",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 3495,
+              "overflow": 0,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 320 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en/locale-settings",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 6558,
+              "overflow": 0,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "en 390 /",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 4255,
+              "overflow": 0,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 390 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en/contact?topic=trade-in",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 3495,
+              "overflow": 0,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 390 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en/locale-settings",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 6558,
+              "overflow": 0,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "en 1440 /",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 6200,
+              "overflow": -5,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 1440 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en/contact?topic=trade-in",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 4242,
+              "overflow": -5,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 1440 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en/locale-settings",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 6558,
+              "overflow": -5,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "en 390 no-js",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/en/locale-settings",
+            "state": {
+              "lang": "en",
+              "preferenceForm": true
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 320 /",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 4367,
+              "overflow": 0,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 320 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg/contact?topic=trade-in",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 3640,
+              "overflow": 0,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 320 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg/locale-settings",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 6807,
+              "overflow": 0,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 390 /",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 4367,
+              "overflow": 0,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 390 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg/contact?topic=trade-in",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 3640,
+              "overflow": 0,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 390 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg/locale-settings",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 6807,
+              "overflow": 0,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 1440 /",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 6509,
+              "overflow": -5,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 1440 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg/contact?topic=trade-in",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 1299,
+              "overflow": -5,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 1440 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg/locale-settings",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 6807,
+              "overflow": -5,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 390 no-js",
+            "passed": true,
+            "url": "https://cars-template-carwow.vercel.app/bg/locale-settings",
+            "state": {
+              "lang": "bg",
+              "preferenceForm": true
+            },
+            "failures": []
+          }
+        ]
+      },
+      "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604"
+    },
+    "catalogs": {
+      "catalogs": [
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "src/lib/locale/catalog.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 1616,
+          "contentDigest": "e22cb59071b640e170133991e34dc0ee091a636649ae2026b901c1f1b55c8380"
+        }
+      ],
+      "declaredCatalogParityPassed": true,
+      "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+    },
+    "checks": [
+      {
+        "name": "catalog-completeness",
+        "evidenceSha256": "95ec0acba49a95efaadbe355ac643af23db3604a40bdade50c0450bd5a28398e",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "catalog-completeness",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "048bbc04e112d1f09d84444c7a11f4f488cb8a2319f4d45c7b15af5c9555faa9",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "hardcoded-ui",
+        "evidenceSha256": "b77b3d99eaf9647cbc9cd3db0b951e13afbadd3ec8dd2c9712b6415bd40fb679",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "hardcoded-ui",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "aea1919b19ba7dae5b279a9226b0ac80c6a532a8a9a937cbf1a889458087cd9a",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "native-routing",
+        "evidenceSha256": "9c0bdb4f711e8726f8d8ea0f7f398b58ca7aaf48c293d5a1b6bdebdf87532ff2",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "native-routing",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "690bc3b373aa96756d2e0895e57e6b7543dd0319d01d8c47c02d80add77bceeb",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "standalone-journeys",
+        "evidenceSha256": "1b9670f67def17440ead656a5a1cd4d8a1b2ada2460f898e99a0feea91cff24f",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "standalone-journeys",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "72f5a576ee7b5ea1bccba9e09a0ed597d443e9fa25490ee35d2cc5b1258430b0",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "mounted-journeys",
+        "evidenceSha256": "579996c25f2bd5a473a1b3abdae4580fa5c54b8445c72730515123e35fa9d037",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "mounted-journeys",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "c5d70b6dcb1e504d7ced4a9b4a5e232f92d83e5441ed028cdc87e26abc509d9b",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "public-journeys",
+        "evidenceSha256": "5ac95883aca7adc00864818d613cca936ef3500a811777d145809714876ea25f",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "public-journeys",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "89bfd5059719530d7903ab1859d92a4cb7da05fabdcb6fbd8d592b32df68f62d",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "preferences-no-js",
+        "evidenceSha256": "f48cbb4937091231006174b3c7304191c179ae48b20beed9ac0ffdd225574ccc",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "preferences-no-js",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "c885e72da83a3891e55478a3e04b22d7769436f3a8a4af35bebc9a4f39c0613f",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "preferences-storage-disabled",
+        "evidenceSha256": "49e783ad3b7f44a9f5d2766d1e7f7272fd388771bdebf70fb3086db727c0db52",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "preferences-storage-disabled",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "18609b5c74bc6fca3e69c93d76b07e482754d56a6fc7fc9fdac0a30151af24c3",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "preferences-races",
+        "evidenceSha256": "85ec71fecdc11067f9d6ac45d7ee2092ac2783ce8702e65c5bca75fcf576f2b0",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "preferences-races",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "6bf261f784e511e6676c9f8f85300f938e237559bd3107d5106d2b47b95cf480",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "request-isolation",
+        "evidenceSha256": "511c6cc524f298981ac37c56df8218953cdc0ab636ba894decb30a9a3ea03229",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "request-isolation",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "768cdd6f72689acb4227cb38a2acb38ef96007bfb21b5c1f31d24f74bdbbb166",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "security-write-blocking",
+        "evidenceSha256": "e2dacf034014de583ee5ebb64d10f6962b3642e0bd5dff8c6da0db4a451f14ee",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "security-write-blocking",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "d65be25426e76bcf5e952c236cc83c4ff57d1de40bc9cf09f0cefa6428ec652a",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "assets-preserved",
+        "evidenceSha256": "4b211a00d034d5711fe7b52bd77db8ba038522f5e80c331d0c14b1be21ea7d12",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "assets-preserved",
+          "currentCommit": "42970ab5724cb32da17e75879a2fca470629aebe",
+          "exactChangedFiles": [
+            "src/lib/data/daynight-site.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/locale.test.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "957db09b10050677d0247b53af6fa1b3bed04babe26f81855a0fd7d07ef1ea04",
+          "currentVerification": {
+            "logs": {
+              "carwow-check-localization.log": "e7ff1b7c1e915c21c85bcc3edde48eb9d8d00760321f59b7afa5ca66e6033899",
+              "carwow-test-localization.log": "01309e174740101d26fa4cd2a94fce5055358e4f67fab12fd2873759c2dfb55f",
+              "carwow-check.log": "2c08e64d09400a769920927de7cbae3f3d1602505bf0138367c3ff97e54ab4fa",
+              "carwow-build.log": "e2c17cb29b4751453b61e830aaaaff22323399f16a5c3848355caca5764bab38"
+            },
+            "preferenceAudit": {
+              "sha256": "b09cb8475191429a36c87c76eab0e79cbc4ef3b0feb15d62ed1ccc9d26a99e7a",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "097c16076a3a4f617b74feecfd35b0e7d0eb1e65619ddf79e4f5f05e55602604",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      }
+    ]
+  },
+  "decision": "approved-bounded-dealer-copy-release",
+  "reviewedAt": "2026-09-21T10:12:04.219Z"
+}

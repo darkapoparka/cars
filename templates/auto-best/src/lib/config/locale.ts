@@ -16,6 +16,22 @@ export const dealerLocaleConfiguration = {
   suggestedLanguages: { BG: 'bg' }
 } as const satisfies LocaleConfiguration<'en' | 'bg'>;
 
-/** Dealer-owned display fields paired with EN/BG catalogs; not visitor preferences. */
+/** Dealer-owned display fields. Client packages replace this bounded bilingual object. */
+export const dealerLocalizedText = {
+  en: {
+    city: 'Sofia',
+    addressLine: '18 Atanas Manchev Street, Studentski Grad',
+    address: '18 Atanas Manchev Street, Studentski Grad, Sofia',
+    appointment: 'Visits by appointment'
+  },
+  bg: {
+    city: brand.city,
+    addressLine: brand.addressLine,
+    address: brand.address,
+    appointment: brand.appointment
+  }
+} as const;
+
+/** Retained as source-review metadata; runtime labels come from dealerLocalizedText. */
 export const dealerTextKeys = { city: 'dealer.city', addressLine: 'dealer.addressLine', address: 'dealer.address', appointment: 'dealer.appointment' } as const;
 export const dealerTextValues = { city: brand.city, addressLine: brand.addressLine, address: brand.address, appointment: brand.appointment } as const;

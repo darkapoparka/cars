@@ -1,9 +1,9 @@
 {
   "repository": "darkapoparka/cars-template-auto-best",
-  "commit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+  "commit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
   "approved": true,
-  "release": "native-en-bg-localization-2026-09-21",
-  "verifiedAt": "2026-09-21T07:46:00.595Z",
+  "release": "native-en-bg-localization-2026-09-21-dealer-copy-boundary",
+  "verifiedAt": "2026-09-21T10:12:01.946Z",
   "runtime": {
     "node": "22.x",
     "npm": "11.x",
@@ -17,13 +17,14 @@
     {
       "name": "exact production deployment",
       "status": "passed",
-      "deploymentId": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622"
+      "deploymentId": "dpl_4bZKPB8K7nr3y9oKwenzqSHCDtZj"
     },
     {
       "name": "public preference and write-blocking audit",
       "status": "passed",
       "passed": 16,
-      "failed": 0
+      "failed": 0,
+      "evidenceSha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f"
     },
     {
       "name": "native EN/BG catalog parity and acceptance evidence",
@@ -33,6 +34,16 @@
           "keys": 958,
           "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
         }
+      ]
+    },
+    {
+      "name": "bounded dealer-owned bilingual release review",
+      "status": "passed",
+      "evidenceSha256": "4c544020c265e6bbf5fe3a595e23118a7de721b959cad9de93015b5ecaf32ea5",
+      "changedFiles": [
+        "src/lib/config/locale.ts",
+        "src/lib/locale/config.ts",
+        "src/lib/locale/messages.ts"
       ]
     }
   ],
@@ -49,7 +60,7 @@
     "schemaVersion": 1,
     "adapter": "native-v1",
     "repository": "darkapoparka/cars-template-auto-best",
-    "commit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+    "commit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
     "locales": [
       "en",
       "bg"
@@ -59,8 +70,8 @@
       390,
       1440
     ],
-    "verifiedAt": "2026-09-21T07:46:00.595Z",
-    "evidenceSha256": "1e36a506fb5a1aa20b78d461ca59edaf25330cb733dd685c09d54e211847fd08",
+    "verifiedAt": "2026-09-21T10:12:01.946Z",
+    "evidenceSha256": "4c544020c265e6bbf5fe3a595e23118a7de721b959cad9de93015b5ecaf32ea5",
     "catalogs": [
       {
         "format": "typescript-pair",
@@ -69,74 +80,74 @@
         "bg": "bg"
       }
     ],
-    "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+    "sourceDigest": "dc9c6c219521a5f9cf4d0c2a75cafd996643dfcd30dc23117f7cc07613787fb1",
     "deployment": {
-      "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+      "id": "dpl_4bZKPB8K7nr3y9oKwenzqSHCDtZj",
       "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
       "state": "READY",
-      "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+      "sourceCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
       "publicAlias": "https://cars-template-auto-best.vercel.app/"
     },
     "checks": [
       {
         "name": "catalog-completeness",
         "status": "passed",
-        "evidenceSha256": "d4b23a4a7c9cd1b7ea6ef5d74a861491fad47265b9a16ba46257a81e45f1d74c"
+        "evidenceSha256": "10ab11af878181137ced732ebca5e064eaa3ed1c8823a86a75ef032168239208"
       },
       {
         "name": "hardcoded-ui",
         "status": "passed",
-        "evidenceSha256": "8b226f799911eae6b95bbaed49e3a252bfc2cc813cad8b612285a7a8d5464d00"
+        "evidenceSha256": "583e8a9cc66a5f267cb364db1421767646b6a5e3b31bad3ac6e140d9a628f182"
       },
       {
         "name": "native-routing",
         "status": "passed",
-        "evidenceSha256": "fa4e45ce3421fda1b6dccd36df552605bf41e6ccabae75368e17dcf4170588f7"
+        "evidenceSha256": "9376695089b63d92fd80f5bfc6d6aa0e2407c748427036e1d3d8f7cdafcae887"
       },
       {
         "name": "standalone-journeys",
         "status": "passed",
-        "evidenceSha256": "e1f8215a33fb5b3d5e6bcadea0f1f4ee39e6edf66a73fbfbedb47f4ba8cb523c"
+        "evidenceSha256": "be00f4cd5fe83d4860433f1745c330ba5760bbfd34c9e5337954ed61fab7c2da"
       },
       {
         "name": "mounted-journeys",
         "status": "passed",
-        "evidenceSha256": "018620650a4b70fdbfe7b3548cb2ce364e1aca081948de2efa2bdeab750f50fa"
+        "evidenceSha256": "4688317b33597797d36421448ff3cca8beff35bc331be82268b24d7c9948d4b7"
       },
       {
         "name": "public-journeys",
         "status": "passed",
-        "evidenceSha256": "39866c4af9a5c588ea65a2c838c4b3a8daf99ec8ac0d855d21a3eba1a0876f13"
+        "evidenceSha256": "777ecab9f65ece4ffecbe20df8125675185085b597362fc300cfb28edb9e7ce8"
       },
       {
         "name": "preferences-no-js",
         "status": "passed",
-        "evidenceSha256": "7396f5ec57dd784d63bafd5f307a8150d01f1a3552c0720176090cc9021f7df4"
+        "evidenceSha256": "f2fad702cbeb6b18f428738b0b68a72e6b17744aaf4eea25cae4ffaf8c2132b1"
       },
       {
         "name": "preferences-storage-disabled",
         "status": "passed",
-        "evidenceSha256": "734150c7c84bb70984a871e02a8d7c719326c563c2f9aee12dca317f88bb5b2f"
+        "evidenceSha256": "e14eb996b57fa38fd41219843033602eb27882c50e13b6a6c082539332183ba2"
       },
       {
         "name": "preferences-races",
         "status": "passed",
-        "evidenceSha256": "f8c89a32939055ff3a2621ddf04a508bdf68694ad8fa1db366b6ea4070a6f8a4"
+        "evidenceSha256": "15dad3eef0a9ad4b9ad1db1d0f872bf1799636144f91328eb44bcf065accf999"
       },
       {
         "name": "request-isolation",
         "status": "passed",
-        "evidenceSha256": "40d92ad9ab42c77c5761d618bb2df10b73b6c997e9bebd2a17b9f95cfbf3bb01"
+        "evidenceSha256": "938b45422ff59c6f999f601d75be973a80538211975471d48ce57531443ab31a"
       },
       {
         "name": "security-write-blocking",
         "status": "passed",
-        "evidenceSha256": "127a99c58e594ffe4f9c4a93865285a9128d44b04f27dfc43c84b894df408a21"
+        "evidenceSha256": "7410b1616d36c7bd56f32bab5b8ef4eafe312d47ec55e3ae6857245f12f5c123"
       },
       {
         "name": "assets-preserved",
         "status": "passed",
-        "evidenceSha256": "1e5486a1ee2d7d708586db45ad03d3c71a6f8e84f2e7634d1d896115636c8832"
+        "evidenceSha256": "6244c07edb3107da67599417c5df7af8d3172543ca7a38a1c47763eaf9817ef9"
       }
     ]
   }

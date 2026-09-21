@@ -1,0 +1,1070 @@
+{
+  "schemaVersion": 1,
+  "repository": "darkapoparka/cars-template-auto-best",
+  "previousCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+  "commit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+  "exactChangedFiles": [
+    "src/lib/config/locale.ts",
+    "src/lib/locale/config.ts",
+    "src/lib/locale/messages.ts"
+  ],
+  "diffSha256": "3bbcc1ff36fe431b253cde8bce3ca898af395db78b2c85a84c16e9e6e18c7f32",
+  "sourceDigest": "dc9c6c219521a5f9cf4d0c2a75cafd996643dfcd30dc23117f7cc07613787fb1",
+  "deployment": {
+    "id": "dpl_4bZKPB8K7nr3y9oKwenzqSHCDtZj",
+    "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+    "state": "READY",
+    "sourceCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+    "publicAlias": "https://cars-template-auto-best.vercel.app/"
+  },
+  "verification": {
+    "logs": {
+      "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+      "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+      "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+      "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+    },
+    "preferenceAudit": {
+      "report": {
+        "schemaVersion": 1,
+        "startedAt": "2026-09-21T10:11:40.547Z",
+        "checkedAt": "2026-09-21T10:11:42.578Z",
+        "baseUrl": "https://cars-template-auto-best.vercel.app/",
+        "mount": "",
+        "sourceCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+        "scope": "Preference-only HTTP regression audit. No redirect following, business writes, whole-UI or browser acceptance.",
+        "checks": 16,
+        "passed": 16,
+        "failed": 0,
+        "results": [
+          {
+            "name": "normalized-return save json /x/..//invalid.example/path",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save form /x/..//invalid.example/path",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss json /x/..//invalid.example/path",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss form /x/..//invalid.example/path",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save json /%2e%2e//invalid.example/",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save form /%2e%2e//invalid.example/",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss json /%2e%2e//invalid.example/",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss form /%2e%2e//invalid.example/",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save json /..//invalid.example/path?x=1",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return save form /..//invalid.example/path?x=1",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss json /..//invalid.example/path?x=1",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "normalized-return dismiss form /..//invalid.example/path?x=1",
+            "passed": true,
+            "status": 400,
+            "location": null,
+            "destination": null,
+            "cookies": [],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+            "failures": []
+          },
+          {
+            "name": "valid save json",
+            "passed": true,
+            "status": 200,
+            "location": null,
+            "destination": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "cookies": [
+              "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+              "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+              "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+            ],
+            "cacheControl": "private, no-store",
+            "bodySha256": "6e4b7cff833bc4dc76160aeaf6d0b77c0529e8d3e11e54686ca666b1fc9ec92a",
+            "failures": []
+          },
+          {
+            "name": "valid save form",
+            "passed": true,
+            "status": 303,
+            "location": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "destination": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "cookies": [
+              "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+              "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+              "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+            ],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "failures": []
+          },
+          {
+            "name": "valid dismiss json",
+            "passed": true,
+            "status": 200,
+            "location": null,
+            "destination": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "cookies": [
+              "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+            ],
+            "cacheControl": "private, no-store",
+            "bodySha256": "8b6bd0812cb2f04d9ca230f232825a472e524279bb3a852ce3939a0561abdbc6",
+            "failures": []
+          },
+          {
+            "name": "valid dismiss form",
+            "passed": true,
+            "status": 303,
+            "location": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "destination": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+            "cookies": [
+              "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+            ],
+            "cacheControl": "private, no-store",
+            "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "failures": []
+          }
+        ]
+      },
+      "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f"
+    },
+    "browserAudit": {
+      "report": {
+        "schemaVersion": 1,
+        "sourceCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+        "baseUrl": "https://cars-template-auto-best.vercel.app/",
+        "widths": [
+          320,
+          390,
+          1440
+        ],
+        "locales": [
+          "en",
+          "bg"
+        ],
+        "checks": 20,
+        "passed": 20,
+        "failed": 0,
+        "checkedAt": "2026-09-21T10:11:40.508Z",
+        "results": [
+          {
+            "name": "en 320 /",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 4587,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 320 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en/contact?topic=trade-in",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 3184,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 320 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en/locale-settings",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 6116,
+              "overflow": -15,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "en 390 /",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 4587,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 390 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en/contact?topic=trade-in",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 3184,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 390 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en/locale-settings",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 6116,
+              "overflow": -15,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "en 1440 /",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 5597,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 1440 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en/contact?topic=trade-in",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 4082,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "en 1440 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en/locale-settings",
+            "state": {
+              "lang": "en",
+              "bodyTextLength": 6802,
+              "overflow": -15,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "en 390 no-js",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/en/locale-settings",
+            "state": {
+              "lang": "en",
+              "preferenceForm": true
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 320 /",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 4703,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 320 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg/contact?topic=trade-in",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 3274,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 320 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg/locale-settings",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 6298,
+              "overflow": -15,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 390 /",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 4703,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 390 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg/contact?topic=trade-in",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 3274,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 390 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg/locale-settings",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 6298,
+              "overflow": -15,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 1440 /",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 5818,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 1440 /contact?topic=trade-in",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg/contact?topic=trade-in",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 4305,
+              "overflow": -15,
+              "preferenceForm": false,
+              "preferenceAction": null
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 1440 /locale-settings",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg/locale-settings",
+            "state": {
+              "lang": "bg",
+              "bodyTextLength": 7083,
+              "overflow": -15,
+              "preferenceForm": true,
+              "preferenceAction": "/api/preferences"
+            },
+            "failures": []
+          },
+          {
+            "name": "bg 390 no-js",
+            "passed": true,
+            "url": "https://cars-template-auto-best.vercel.app/bg/locale-settings",
+            "state": {
+              "lang": "bg",
+              "preferenceForm": true
+            },
+            "failures": []
+          }
+        ]
+      },
+      "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854"
+    },
+    "catalogs": {
+      "catalogs": [
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "src/lib/locale/catalog.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 958,
+          "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+        }
+      ],
+      "declaredCatalogParityPassed": true,
+      "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+    },
+    "checks": [
+      {
+        "name": "catalog-completeness",
+        "evidenceSha256": "10ab11af878181137ced732ebca5e064eaa3ed1c8823a86a75ef032168239208",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "catalog-completeness",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "d4b23a4a7c9cd1b7ea6ef5d74a861491fad47265b9a16ba46257a81e45f1d74c",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "hardcoded-ui",
+        "evidenceSha256": "583e8a9cc66a5f267cb364db1421767646b6a5e3b31bad3ac6e140d9a628f182",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "hardcoded-ui",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "8b226f799911eae6b95bbaed49e3a252bfc2cc813cad8b612285a7a8d5464d00",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "native-routing",
+        "evidenceSha256": "9376695089b63d92fd80f5bfc6d6aa0e2407c748427036e1d3d8f7cdafcae887",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "native-routing",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "fa4e45ce3421fda1b6dccd36df552605bf41e6ccabae75368e17dcf4170588f7",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "standalone-journeys",
+        "evidenceSha256": "be00f4cd5fe83d4860433f1745c330ba5760bbfd34c9e5337954ed61fab7c2da",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "standalone-journeys",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "e1f8215a33fb5b3d5e6bcadea0f1f4ee39e6edf66a73fbfbedb47f4ba8cb523c",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "mounted-journeys",
+        "evidenceSha256": "4688317b33597797d36421448ff3cca8beff35bc331be82268b24d7c9948d4b7",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "mounted-journeys",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "018620650a4b70fdbfe7b3548cb2ce364e1aca081948de2efa2bdeab750f50fa",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "public-journeys",
+        "evidenceSha256": "777ecab9f65ece4ffecbe20df8125675185085b597362fc300cfb28edb9e7ce8",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "public-journeys",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "39866c4af9a5c588ea65a2c838c4b3a8daf99ec8ac0d855d21a3eba1a0876f13",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "preferences-no-js",
+        "evidenceSha256": "f2fad702cbeb6b18f428738b0b68a72e6b17744aaf4eea25cae4ffaf8c2132b1",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "preferences-no-js",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "7396f5ec57dd784d63bafd5f307a8150d01f1a3552c0720176090cc9021f7df4",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "preferences-storage-disabled",
+        "evidenceSha256": "e14eb996b57fa38fd41219843033602eb27882c50e13b6a6c082539332183ba2",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "preferences-storage-disabled",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "734150c7c84bb70984a871e02a8d7c719326c563c2f9aee12dca317f88bb5b2f",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "preferences-races",
+        "evidenceSha256": "15dad3eef0a9ad4b9ad1db1d0f872bf1799636144f91328eb44bcf065accf999",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "preferences-races",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "f8c89a32939055ff3a2621ddf04a508bdf68694ad8fa1db366b6ea4070a6f8a4",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "request-isolation",
+        "evidenceSha256": "938b45422ff59c6f999f601d75be973a80538211975471d48ce57531443ab31a",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "request-isolation",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "40d92ad9ab42c77c5761d618bb2df10b73b6c997e9bebd2a17b9f95cfbf3bb01",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "security-write-blocking",
+        "evidenceSha256": "7410b1616d36c7bd56f32bab5b8ef4eafe312d47ec55e3ae6857245f12f5c123",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "security-write-blocking",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "127a99c58e594ffe4f9c4a93865285a9128d44b04f27dfc43c84b894df408a21",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      },
+      {
+        "name": "assets-preserved",
+        "evidenceSha256": "6244c07edb3107da67599417c5df7af8d3172543ca7a38a1c47763eaf9817ef9",
+        "evidence": {
+          "schemaVersion": 1,
+          "check": "assets-preserved",
+          "currentCommit": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+          "exactChangedFiles": [
+            "src/lib/config/locale.ts",
+            "src/lib/locale/config.ts",
+            "src/lib/locale/messages.ts"
+          ],
+          "previousAcceptedEvidenceSha256": "1e5486a1ee2d7d708586db45ad03d3c71a6f8e84f2e7634d1d896115636c8832",
+          "currentVerification": {
+            "logs": {
+              "auto-best-check-locales.log": "023c577cd676f77facda3a76820586caf986d7dd241a7cfd04422734c151ccf5",
+              "auto-best-test-locales.log": "1c22640cbe07603d874114fccc5c7937905a127ff80249eeb267ab78efa06e20",
+              "auto-best-check.log": "0faa81b09e73ed62290947406b92556e5c3d3e2dea3045bd1dca07b5661431c8",
+              "auto-best-build.log": "08cf8c0ab86d834ea1d04bad826d7ca068d2db193e3af458cb85235420591471"
+            },
+            "preferenceAudit": {
+              "sha256": "f02b68a4c42fb8e2c74445235e81edfc7558678358aed221e425bd4e83ec0c3f",
+              "checks": 16,
+              "passed": 16,
+              "failed": 0
+            },
+            "browserAudit": {
+              "sha256": "aa9eb1b155d5412f826da5aebd7fae31aa25645cdc6af35c6ed52b2c4c80e854",
+              "checks": 20,
+              "passed": 20,
+              "failed": 0,
+              "widths": [
+                320,
+                390,
+                1440
+              ],
+              "locales": [
+                "en",
+                "bg"
+              ]
+            }
+          },
+          "conclusion": "The exact post-release delta is restricted to bounded dealer-owned bilingual data and its direct test. Current localization, type/build, browser and public preference checks passed; the prior exact-source acceptance remains the baseline for untouched surfaces."
+        }
+      }
+    ]
+  },
+  "decision": "approved-bounded-dealer-copy-release",
+  "reviewedAt": "2026-09-21T10:12:01.945Z"
+}

@@ -1,5 +1,5 @@
 import type { LocaleConfiguration } from './policy';
-import { daynightSite } from '../data/daynight-site';
+import { daynightDealerText, daynightSite } from '../data/daynight-site';
 /** Dealer facts are independent of each visitor's preferences. */
 export const dealerLocaleConfiguration = {
 	schemaVersion: 1,
@@ -14,6 +14,9 @@ export const dealerLocaleConfiguration = {
 	promptVersion: 'v1',
 	suggestedLanguages: { BG: 'bg' }
 } as const satisfies LocaleConfiguration<'en' | 'bg'>;
+export const dealerLocalizedText = daynightDealerText;
+
+/** Retained as source-review metadata; runtime labels come from dealerLocalizedText. */
 export const dealerTextValues = {
 	city: daynightSite.city,
 	locationShort: daynightSite.locationShort,

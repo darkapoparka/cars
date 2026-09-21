@@ -1,5 +1,5 @@
-import { dealerTextValues, dealerTextKeys } from './config';
-import { en, bg, sourceKeys, dealerSourceKeys, ambiguousAliases } from './catalog';
+import { dealerLocalizedText } from './config';
+import { en, bg, sourceKeys, ambiguousAliases } from './catalog';
 import { localeContract, intlLocale, type Locale } from './core';
 export type MessageKey = keyof typeof en;
 export type MessageParameters = Record<string, string | number>;
@@ -72,13 +72,12 @@ export function vehicleCount(locale: Locale, count: number): string {
 		count: new Intl.NumberFormat(intlLocale(locale)).format(count)
 	});
 }
-export type DealerTextField = keyof typeof dealerTextValues;
+export type DealerTextField = keyof typeof dealerLocalizedText.en;
 export function dealerLabel(locale: Locale, field: DealerTextField): string {
-	const source = dealerTextValues[field],
-		key = dealerTextKeys[field];
-	if ((dealerSourceKeys as Record<string, MessageKey>)[source] !== key)
-		throw new Error(`Dealer field ${field} requires matching EN/BG dealer-owned copy`);
-	return (locale === 'bg' ? bg : en)[key];
+	const value = dealerLocalizedText[locale][field];
+	if (typeof value !== 'string' || !value.trim())
+		throw new Error(`Dealer field ${field} requires reviewed EN/BG dealer-owned copy`);
+	return value;
 }
 /** Reviewed stock taxonomy only; brands/models and raw business values remain intact. */
 export function specificationText<T>(locale: Locale, value: T): T {
