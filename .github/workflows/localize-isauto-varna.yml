@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: '24.8.0'
 
-      - name: Preserve non-main dealer publication branches
+      - name: Support canonical package publication branches
         id: release
         shell: bash
         run: |
@@ -55,14 +55,28 @@ jobs:
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           const file = 'scripts/rollout-localized-client.mjs';
-          const source = fs.readFileSync(file, 'utf8');
-          const oldLine = "  manifest.defaultBranch = 'main';";
-          const newLine = "  manifest.defaultBranch = oldManifest.defaultBranch || 'main';";
-          if (!source.includes(newLine)) {
-            if (!source.includes(oldLine)) throw new Error('Cannot locate localization default-branch assignment');
-            fs.writeFileSync(file, source.replace(oldLine, newLine));
+          let source = fs.readFileSync(file, 'utf8');
+          const replacements = [
+            [
+              "  manifest.defaultBranch = 'main';",
+              "  manifest.defaultBranch = oldManifest.defaultBranch || 'main';"
+            ],
+            [
+              '  return validateManifest(manifest);',
+              "  return validateManifest(manifest, { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });"
+            ],
+            [
+              '  const oldManifest = validateManifest(json(dealerFile));',
+              "  const oldManifest = validateManifest(json(dealerFile), { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });"
+            ]
+          ];
+          for (const [oldLine, newLine] of replacements) {
+            if (source.includes(newLine)) continue;
+            if (!source.includes(oldLine)) throw new Error(`Cannot locate localization compatibility line: ${oldLine}`);
+            source = source.replace(oldLine, newLine);
           }
-          const test = `import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport fs from 'node:fs';\n\ntest('localized packages preserve the registered publication branch', () => {\n  const source = fs.readFileSync(new URL('./rollout-localized-client.mjs', import.meta.url), 'utf8');\n  assert.match(source, /manifest\\.defaultBranch = oldManifest\\.defaultBranch \\|\\| 'main';/);\n});\n`;
+          fs.writeFileSync(file, source);
+          const test = `import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport fs from 'node:fs';\n\ntest('localized packages preserve registered publication branches and canonical Cars package identities', () => {\n  const source = fs.readFileSync(new URL('./rollout-localized-client.mjs', import.meta.url), 'utf8');\n  assert.match(source, /manifest\\.defaultBranch = oldManifest\\.defaultBranch \\|\\| 'main';/);\n  assert.match(source, /return validateManifest\\(manifest, \\{ allowLegacyPublishingReference: repository === 'darkapoparka\\/cars' \\}\\);/);\n  assert.match(source, /const oldManifest = validateManifest\\(json\\(dealerFile\\), \\{ allowLegacyPublishingReference: repository === 'darkapoparka\\/cars' \\}\\);/);\n});\n`;
           fs.writeFileSync('scripts/rollout-localized-client-branch.test.mjs', test);
           NODE
           node --test scripts/rollout-localized-client-branch.test.mjs
@@ -71,7 +85,7 @@ jobs:
           git add --sparse scripts/rollout-localized-client.mjs scripts/rollout-localized-client-branch.test.mjs
           if ! git diff --cached --quiet; then
             git diff --cached --check
-            git commit -m 'Preserve dealer publication branch in localization rollout'
+            git commit -m 'Support canonical package branches in localization rollout'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
