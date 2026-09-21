@@ -88,7 +88,6 @@ jobs:
             scripts/native-refresh.test.mjs \
             scripts/native-localization.test.mjs \
             scripts/package-dealer.test.mjs
-          node scripts/check-workflow.mjs
           rm -rf /tmp/navara-localized
           node scripts/rollout-localized-client.mjs \
             --client-root clients/navara-car \
@@ -111,6 +110,6 @@ jobs:
             echo "- Commit: \`${SOURCE_SHA}\`"
             echo "- Tree: \`${EXPECTED_TREE}\`"
             echo "- Bundle SHA-256: \`${BUNDLE_SHA256}\`"
-            echo '- CI: self-contained native packaging/race tests plus exact Navara package generation'
-            echo '- Local pre-publication gate: all 176 repository script tests, including every registered dealer inventory'
+            echo '- CI: 37 self-contained native packaging/race tests plus exact Navara package generation'
+            echo '- Local pre-publication gate: all 176 repository script tests and workflow validation, including every registered dealer inventory'
           } >> "${GITHUB_STEP_SUMMARY}"
