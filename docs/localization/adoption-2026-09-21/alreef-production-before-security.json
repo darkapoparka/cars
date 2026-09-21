@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-09-21T02:02:39.161Z",
+  "checkedAt": "2026-09-21T02:02:42.866Z",
+  "baseUrl": "https://cars-alreefusedcars.vercel.app/",
+  "mount": "",
+  "sourceCommit": "41ddc34893a8cfcf0219d80a248aead5fbc0c435",
+  "scope": "Preference-only HTTP regression audit. No redirect following, business writes, whole-UI or browser acceptance.",
+  "checks": 16,
+  "passed": 4,
+  "failed": 12,
+  "results": [
+    {
+      "name": "normalized-return save json /x/..//invalid.example/path",
+      "passed": false,
+      "status": 200,
+      "location": null,
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "a448b07b2dfb8fa2fa2a0c121c064fd55ffd0cd6cae316227d0fbba7cf975ca5",
+      "failures": [
+        "Expected HTTP 400; received 200",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return save form /x/..//invalid.example/path",
+      "passed": false,
+      "status": 303,
+      "location": "//invalid.example/path",
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": [
+        "Expected HTTP 400; received 303",
+        "Rejected request must not redirect",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return dismiss json /x/..//invalid.example/path",
+      "passed": false,
+      "status": 200,
+      "location": null,
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "a448b07b2dfb8fa2fa2a0c121c064fd55ffd0cd6cae316227d0fbba7cf975ca5",
+      "failures": [
+        "Expected HTTP 400; received 200",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return dismiss form /x/..//invalid.example/path",
+      "passed": false,
+      "status": 303,
+      "location": "//invalid.example/path",
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": [
+        "Expected HTTP 400; received 303",
+        "Rejected request must not redirect",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return save json /%2e%2e//invalid.example/",
+      "passed": false,
+      "status": 200,
+      "location": null,
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "ba8f2c7d6b48a8e18f12f54cdff5d480bcf6caa8efabb014493f1676ddf63448",
+      "failures": [
+        "Expected HTTP 400; received 200",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return save form /%2e%2e//invalid.example/",
+      "passed": false,
+      "status": 303,
+      "location": "//invalid.example/",
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": [
+        "Expected HTTP 400; received 303",
+        "Rejected request must not redirect",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return dismiss json /%2e%2e//invalid.example/",
+      "passed": false,
+      "status": 200,
+      "location": null,
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "ba8f2c7d6b48a8e18f12f54cdff5d480bcf6caa8efabb014493f1676ddf63448",
+      "failures": [
+        "Expected HTTP 400; received 200",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return dismiss form /%2e%2e//invalid.example/",
+      "passed": false,
+      "status": 303,
+      "location": "//invalid.example/",
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": [
+        "Expected HTTP 400; received 303",
+        "Rejected request must not redirect",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return save json /..//invalid.example/path?x=1",
+      "passed": false,
+      "status": 200,
+      "location": null,
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "7b26d9b1179b0e48b803694822c853e62aad604324555c00a33e0c5295e7c422",
+      "failures": [
+        "Expected HTTP 400; received 200",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return save form /..//invalid.example/path?x=1",
+      "passed": false,
+      "status": 303,
+      "location": "//invalid.example/path?x=1",
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": [
+        "Expected HTTP 400; received 303",
+        "Rejected request must not redirect",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return dismiss json /..//invalid.example/path?x=1",
+      "passed": false,
+      "status": 200,
+      "location": null,
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "7b26d9b1179b0e48b803694822c853e62aad604324555c00a33e0c5295e7c422",
+      "failures": [
+        "Expected HTTP 400; received 200",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "normalized-return dismiss form /..//invalid.example/path?x=1",
+      "passed": false,
+      "status": 303,
+      "location": "//invalid.example/path?x=1",
+      "destination": null,
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": [
+        "Expected HTTP 400; received 303",
+        "Rejected request must not redirect",
+        "Unexpected preference cookie values or dismissal persisted a choice"
+      ]
+    },
+    {
+      "name": "valid save json",
+      "passed": true,
+      "status": 200,
+      "location": null,
+      "destination": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "6e4b7cff833bc4dc76160aeaf6d0b77c0529e8d3e11e54686ca666b1fc9ec92a",
+      "failures": []
+    },
+    {
+      "name": "valid save form",
+      "passed": true,
+      "status": 303,
+      "location": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "destination": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": []
+    },
+    {
+      "name": "valid dismiss json",
+      "passed": true,
+      "status": 200,
+      "location": null,
+      "destination": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "8b6bd0812cb2f04d9ca230f232825a472e524279bb3a852ce3939a0561abdbc6",
+      "failures": []
+    },
+    {
+      "name": "valid dismiss form",
+      "passed": true,
+      "status": 303,
+      "location": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "destination": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": []
+    }
+  ]
+}

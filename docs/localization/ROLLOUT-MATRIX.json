@@ -1,0 +1,1473 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-21T02:23:53.996Z",
+  "namedDealerCount": 25,
+  "namedDesignCount": 75,
+  "scopeSource": "docs/prompts/LOCALIZATION-ROLLOUT.md",
+  "workflowRelease": "033ed99caea4f7a5c318853f75e42f3f2f533dd0",
+  "templateAudit": "docs/localization/adoption-2026-09-21/TEMPLATE-AUDIT.json",
+  "templatePinsPromoted": false,
+  "portfolioComplete": false,
+  "acceptedReconciledDealers": [
+    "al-reef-used-cars"
+  ],
+  "registry": {
+    "path": "docs/DEPLOYMENT-INVENTORY.json",
+    "updatedThisSession": false,
+    "state": "blocked-tool-safety-status",
+    "detail": "A fresh selected-row registry inspection was blocked. No alternative route was used to read or rewrite it. This matrix does not assert unverified registry values for the other dealers."
+  },
+  "authorization": {
+    "nextCanary": "navara-car",
+    "additionalDealersMayProceed": false,
+    "reason": "Reviewed releases and Navara acceptance have not passed; stop the batch."
+  },
+  "additionalLanguagesEnabledByThisSession": false,
+  "realBusinessWritesEnabledByThisSession": false,
+  "dealers": [
+    {
+      "slug": "al-basma-motors",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=al-basma-motors]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=al-hamoor-al-thahabi]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "al-reef-used-cars",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=al-reef-used-cars]",
+        "state": "verified",
+        "ownership": "independent",
+        "path": "I:/cars-clients/al-reef-used-cars",
+        "repository": "darkapoparka/cars-alreefusedcars",
+        "commit": "9495be2ade60032ec4272cb991dd4731b460a887",
+        "applicationDigest": "8ac19e90236397679db92d5c35327a5575757be00b8bee9f42cc939942cee7ed"
+      },
+      "checks": {
+        "http": {
+          "checks": 12,
+          "passed": 12,
+          "failed": 0
+        },
+        "preferences": {
+          "checks": 4,
+          "passed": 4,
+          "failed": 0
+        },
+        "storage": {
+          "checks": 18,
+          "passed": 18,
+          "failed": 0
+        },
+        "races": {
+          "checks": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "journeys": {
+          "checks": 766,
+          "passed": 762,
+          "failed": 0,
+          "blocked": 0,
+          "skipped": 4
+        },
+        "preferenceSecurity": {
+          "passed": 16,
+          "failed": 0
+        },
+        "branding": {
+          "passed": 128,
+          "failed": 0,
+          "exactPublicAssetChecks": 27,
+          "exactPublicAssetsPassed": 27
+        }
+      },
+      "committedRelease": "9495be2ade60032ec4272cb991dd4731b460a887",
+      "deployedRelease": {
+        "id": "dpl_72koBuKSnobyVC6cYM7LNQCtvuys",
+        "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+        "source": "git",
+        "sourceCommit": "9495be2ade60032ec4272cb991dd4731b460a887",
+        "branch": "main",
+        "state": "READY",
+        "publicAlias": "https://cars-alreefusedcars.vercel.app/",
+        "uniqueUrl": "https://cars-alreefusedcars-88v5aocgg-tyj5.vercel.app",
+        "aliasError": null,
+        "verifiedWith": "Connected Vercel get_deployment and GitHub main; exact public alias checked again after QA"
+      },
+      "publicVerification": {
+        "state": "passed-with-recorded-intentional-skips",
+        "evidence": "docs/localization/adoption-2026-09-21/ALREEF-PUBLIC-ACCEPTANCE.json"
+      },
+      "rollback": {
+        "sourceCommit": "41ddc34893a8cfcf0219d80a248aead5fbc0c435",
+        "deploymentId": "dpl_3VER6ig3NxL3oF7fkc1CGH8ydGnw",
+        "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+        "publicAlias": "https://cars-alreefusedcars.vercel.app/",
+        "assetDigest": "da8b72be17be83e89a0f43ae1305cbf3880a49b93e6f1b3bfcaad7121fcfcd41",
+        "manifest": "darkapoparka/cars-alreefusedcars@9495be2ade60032ec4272cb991dd4731b460a887:docs/localization/ROLLBACK-2026-09-21.json"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "security-reconciled-publicly-verified",
+          "committedRelease": "9495be2ade60032ec4272cb991dd4731b460a887",
+          "deployedRelease": "9495be2ade60032ec4272cb991dd4731b460a887",
+          "publicVerification": "passed-with-recorded-intentional-skips"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "security-reconciled-publicly-verified",
+          "committedRelease": "9495be2ade60032ec4272cb991dd4731b460a887",
+          "deployedRelease": "9495be2ade60032ec4272cb991dd4731b460a887",
+          "publicVerification": "passed-with-recorded-intentional-skips"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "security-reconciled-publicly-verified",
+          "committedRelease": "9495be2ade60032ec4272cb991dd4731b460a887",
+          "deployedRelease": "9495be2ade60032ec4272cb991dd4731b460a887",
+          "publicVerification": "passed-with-recorded-intentional-skips"
+        }
+      ],
+      "blockers": [],
+      "sourceWritten": true,
+      "publishedThisSession": true,
+      "adoption": "Phase 2-preserving security reconciliation, not new template adoption"
+    },
+    {
+      "slug": "asko-96",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=asko-96]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "astracar",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=astracar]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "autolife",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=autolife]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "automarket-varna",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=automarket-varna]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "avangard-auto",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=avangard-auto]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "champion-auto-pro",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=champion-auto-pro]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "day-and-night-auto-group",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=day-and-night-auto-group]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "eliqauto",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=eliqauto]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "elit-auto-import",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=elit-auto-import]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "excellent-cars",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=excellent-cars]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "f1rst-motors",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=f1rst-motors]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "isauto-varna",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=isauto-varna]",
+        "state": "legacy-mapping-verified-read-only",
+        "path": "J:/cars/clients/isauto-varna",
+        "localManifestExists": true,
+        "repository": "darkapoparka/cars",
+        "branch": "publish/isauto-varna",
+        "observedGitTree": "679268b164bfc8ce2be2525c0aaf03d7f0a65dcb"
+      },
+      "checks": {
+        "state": "mapping-only",
+        "dedicatedRepositoryCreated": false,
+        "gitConnectionCreated": false,
+        "replacementProjectCreated": false
+      },
+      "committedRelease": null,
+      "deployedRelease": {
+        "id": "dpl_Dsn693jzxTqzZtTfRhqzHwjHebw4",
+        "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+        "state": "READY",
+        "source": "cli",
+        "metadataCommit": "a99428c8b9d57bee48e904256c27177be4e0ed0f",
+        "metadataBranch": "publish/isauto-varna",
+        "requestedAliasResolved": "cars-isautovarna.vercel.app",
+        "limitation": "CLI Git metadata is not exact current canonical payload acceptance."
+      },
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required",
+        "Keep the actual legacy CLI mapping; verify canonical payload/public-alias binding before any publication"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "ivo-auto",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=ivo-auto]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "kg-team-auto",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=kg-team-auto]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "legend-auto",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=legend-auto]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "navara-car",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=navara-car]",
+        "state": "fingerprinted-with-working-edits-preserved",
+        "ownership": "Cars-canonical",
+        "path": "J:/cars/clients/navara-car",
+        "carsCommit": "033ed99caea4f7a5c318853f75e42f3f2f533dd0",
+        "digest": "6a977f60aee93f4700dab2260c76e12e7399f2f241ccd1d45eab7472ff1df772",
+        "repository": "darkapoparka/cars-navaracar"
+      },
+      "checks": {
+        "state": "partial-preservation-only",
+        "publishedLogoVariants": {
+          "matched": 9,
+          "checked": 9
+        },
+        "evidence": "docs/localization/adoption-2026-09-21/NAVARA-PRESERVATION.json",
+        "mirrorOnlySourceFixClassification": "not-complete"
+      },
+      "committedRelease": null,
+      "deployedRelease": {
+        "id": "dpl_E19XauTUZuYXedGtmFBaSjEJRbmb",
+        "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+        "state": "READY",
+        "source": "git",
+        "publicAlias": "https://cars-navaracar.vercel.app/",
+        "sourceCommit": "6eae1503e1f4c8e0fa768e5d71d440cdc84adfe1",
+        "purpose": "Existing legacy baseline, not localization adoption"
+      },
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "read-only baseline recorded; reverify before change",
+        "evidence": "docs/localization/adoption-2026-09-21/NAVARA-PRESERVATION.json"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required",
+        "Preserve and classify every mirror-only source fix before canonical refresh/export"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "outletcars-varna",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=outletcars-varna]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "import",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Import normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=perfect-auto-varna]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "priselci",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=priselci]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "promosale-varna",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=promosale-varna]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "import",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Import normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "texas-drive-auto",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=texas-drive-auto]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    },
+    {
+      "slug": "the-dealers-point",
+      "source": {
+        "registryReference": "docs/DEPLOYMENT-INVENTORY.json:dealers[slug=the-dealers-point]",
+        "state": "not-revalidated-this-session"
+      },
+      "checks": {
+        "state": "not-run"
+      },
+      "committedRelease": null,
+      "deployedRelease": null,
+      "publicVerification": {
+        "state": "not-run"
+      },
+      "rollback": {
+        "state": "required-before-any-update"
+      },
+      "designs": [
+        {
+          "design": 1,
+          "template": "auto-best",
+          "mount": "",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 2,
+          "template": "modern",
+          "mount": "/variant-2",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        },
+        {
+          "design": 3,
+          "template": "carwow",
+          "mount": "/variant-3",
+          "state": "not-started-blocked",
+          "committedRelease": null,
+          "deployedRelease": null,
+          "publicVerification": "not-run"
+        }
+      ],
+      "blockers": [
+        "Auto Best native source is not released/accepted",
+        "Modern normalized-return security failure",
+        "Real native trio acceptance and reviewed pins required"
+      ],
+      "sourceWritten": false,
+      "publishedThisSession": false
+    }
+  ]
+}

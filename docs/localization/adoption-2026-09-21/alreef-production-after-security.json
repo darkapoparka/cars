@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-09-21T02:13:33.656Z",
+  "checkedAt": "2026-09-21T02:13:37.926Z",
+  "baseUrl": "https://cars-alreefusedcars.vercel.app/",
+  "mount": "",
+  "sourceCommit": "9495be2ade60032ec4272cb991dd4731b460a887",
+  "scope": "Preference-only HTTP regression audit. No redirect following, business writes, whole-UI or browser acceptance.",
+  "checks": 16,
+  "passed": 16,
+  "failed": 0,
+  "results": [
+    {
+      "name": "normalized-return save json /x/..//invalid.example/path",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return save form /x/..//invalid.example/path",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return dismiss json /x/..//invalid.example/path",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return dismiss form /x/..//invalid.example/path",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return save json /%2e%2e//invalid.example/",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return save form /%2e%2e//invalid.example/",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return dismiss json /%2e%2e//invalid.example/",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return dismiss form /%2e%2e//invalid.example/",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return save json /..//invalid.example/path?x=1",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return save form /..//invalid.example/path?x=1",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return dismiss json /..//invalid.example/path?x=1",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "normalized-return dismiss form /..//invalid.example/path?x=1",
+      "passed": true,
+      "status": 400,
+      "location": null,
+      "destination": null,
+      "cookies": [],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e8497276f712aaab20fc8a2749e7e9d9ba1ffe843d7e33af4ac263ebcb7c557e",
+      "failures": []
+    },
+    {
+      "name": "valid save json",
+      "passed": true,
+      "status": 200,
+      "location": null,
+      "destination": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "6e4b7cff833bc4dc76160aeaf6d0b77c0529e8d3e11e54686ca666b1fc9ec92a",
+      "failures": []
+    },
+    {
+      "name": "valid save form",
+      "passed": true,
+      "status": 303,
+      "location": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "destination": "/bg/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_locale=bg; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure",
+        "cars_country=DE; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": []
+    },
+    {
+      "name": "valid dismiss json",
+      "passed": true,
+      "status": 200,
+      "location": null,
+      "destination": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "8b6bd0812cb2f04d9ca230f232825a472e524279bb3a852ce3939a0561abdbc6",
+      "failures": []
+    },
+    {
+      "name": "valid dismiss form",
+      "passed": true,
+      "status": 303,
+      "location": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "destination": "/en/contact?topic=trade-in&reference=https%3A%2F%2Finvalid.example%2Foffer#form",
+      "cookies": [
+        "cars_prompt=v1; Path=/; Max-Age=15552000; SameSite=Lax; HttpOnly; Secure"
+      ],
+      "cacheControl": "private, no-store",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "failures": []
+    }
+  ]
+}
