@@ -89,14 +89,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git diff --no-index --name-status \
-            "$GITHUB_WORKSPACE/navara-source" \
-            "$GITHUB_WORKSPACE/navara-localized" \
-            > "$GITHUB_WORKSPACE/navara-localization-files.txt" || test $? -eq 1
-          git diff --no-index --stat \
-            "$GITHUB_WORKSPACE/navara-source" \
-            "$GITHUB_WORKSPACE/navara-localized" \
-            > "$GITHUB_WORKSPACE/navara-localization-stat.txt" || test $? -eq 1
+          rsync -ani --delete --exclude='.git/' \
+            "$GITHUB_WORKSPACE/navara-source/" \
+            "$GITHUB_WORKSPACE/navara-localized/" \
+            > "$GITHUB_WORKSPACE/navara-localization-files.txt"
+          {
+            echo "source_files=$(find "$GITHUB_WORKSPACE/navara-source" -path '*/.git' -prune -o -type f -print | wc -l)"
+            echo "output_files=$(find "$GITHUB_WORKSPACE/navara-localized" -type f -print | wc -l)"
+            echo "source_bytes=$(du -sb --exclude=.git "$GITHUB_WORKSPACE/navara-source" | cut -f1)"
+            echo "output_bytes=$(du -sb "$GITHUB_WORKSPACE/navara-localized" | cut -f1)"
+            echo "delta_lines=$(wc -l < "$GITHUB_WORKSPACE/navara-localization-files.txt")"
+          } > "$GITHUB_WORKSPACE/navara-localization-stat.txt"
 
       - name: Publish generated source branch
         shell: bash
