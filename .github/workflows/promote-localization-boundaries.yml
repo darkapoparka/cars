@@ -1,0 +1,236 @@
+name: Promote localization boundary releases
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/promote-localization-boundaries.yml'
+      - 'scripts/promote-localization-boundaries.mjs'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promote-localization-boundaries-main
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    env:
+      AUTO_BEST_COMMIT: a5f3684483a509e556a5912a8d2c7b8ed03f9c5b
+      AUTO_BEST_DEPLOYMENT_ID: dpl_4bZKPB8K7nr3y9oKwenzqSHCDtZj
+      AUTO_BEST_PROJECT_ID: prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX
+      AUTO_BEST_PUBLIC_ALIAS: https://cars-template-auto-best.vercel.app/
+      CARWOW_COMMIT: 42970ab5724cb32da17e75879a2fca470629aebe
+      CARWOW_DEPLOYMENT_ID: dpl_DZHeudEhJWCRuw8wKxv9AtFpj41j
+      CARWOW_PROJECT_ID: prj_MrJ6NCi6r5wuMlo1k697mUk1AENj
+      CARWOW_PUBLIC_ALIAS: https://cars-template-carwow.vercel.app/
+      LOCALIZATION_PROMOTION_LOG_DIR: ${{ github.workspace }}/runtime/localization-boundary-promotion
+      AUTO_BEST_SOURCE_DIR: ${{ github.workspace }}/runtime/upstream/cars-template-auto-best
+      CARWOW_SOURCE_DIR: ${{ github.workspace }}/runtime/upstream/cars-template-carwow
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Capture immutable Cars base
+        run: echo "CARS_BASE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Checkout exact template releases
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p runtime/upstream "$LOCALIZATION_PROMOTION_LOG_DIR"
+          git clone --no-tags https://github.com/darkapoparka/cars-template-auto-best.git "$AUTO_BEST_SOURCE_DIR"
+          git -C "$AUTO_BEST_SOURCE_DIR" checkout --detach "$AUTO_BEST_COMMIT"
+          test "$(git -C "$AUTO_BEST_SOURCE_DIR" rev-parse HEAD)" = "$AUTO_BEST_COMMIT"
+          git clone --no-tags https://github.com/darkapoparka/cars-template-carwow.git "$CARWOW_SOURCE_DIR"
+          git -C "$CARWOW_SOURCE_DIR" checkout --detach "$CARWOW_COMMIT"
+          test "$(git -C "$CARWOW_SOURCE_DIR" rev-parse HEAD)" = "$CARWOW_COMMIT"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.22.0'
+          cache: npm
+          cache-dependency-path: runtime/upstream/cars-template-auto-best/package-lock.json
+
+      - name: Verify Auto Best localization release
+        shell: bash
+        working-directory: runtime/upstream/cars-template-auto-best
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run check:locales 2>&1 | tee "$LOCALIZATION_PROMOTION_LOG_DIR/auto-best-check-locales.log"
+          npm run test:locales 2>&1 | tee "$LOCALIZATION_PROMOTION_LOG_DIR/auto-best-test-locales.log"
+          npm run check 2>&1 | tee "$LOCALIZATION_PROMOTION_LOG_DIR/auto-best-check.log"
+          npm run build 2>&1 | tee "$LOCALIZATION_PROMOTION_LOG_DIR/auto-best-build.log"
+          npx playwright install --with-deps chromium
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+          cache: npm
+          cache-dependency-path: runtime/upstream/cars-template-carwow/package-lock.json
+
+      - name: Verify Carwow localization release
+        shell: bash
+        working-directory: runtime/upstream/cars-template-carwow
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run check:localization 2>&1 | tee "$LOCALIZATION_PROMOTION_LOG_DIR/carwow-check-localization.log"
+          npm run test:localization 2>&1 | tee "$LOCALIZATION_PROMOTION_LOG_DIR/carwow-test-localization.log"
+          npm run check 2>&1 | tee "$LOCALIZATION_PROMOTION_LOG_DIR/carwow-check.log"
+          npm run build 2>&1 | tee "$LOCALIZATION_PROMOTION_LOG_DIR/carwow-build.log"
+          npx playwright install --with-deps chromium
+
+      - name: Create bounded public browser auditor
+        shell: bash
+        run: |
+          cat > runtime/template-browser-audit.mjs <<'EOF'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import { pathToFileURL } from 'node:url';
+
+          const [moduleRoot, baseUrl, sourceCommit, output] = process.argv.slice(2);
+          if (!moduleRoot || !baseUrl || !/^[a-f0-9]{40}$/.test(sourceCommit || '') || !output) {
+            throw new Error('Usage: browser-audit MODULE_ROOT BASE_URL SOURCE_COMMIT OUTPUT');
+          }
+          const load = async (name) => import(pathToFileURL(path.join(moduleRoot, 'node_modules', name, 'index.mjs')).href);
+          let playwright;
+          try { playwright = await load('playwright'); }
+          catch { playwright = await load('@playwright/test'); }
+          const { chromium } = playwright;
+          const widths = [320, 390, 1440];
+          const locales = ['en', 'bg'];
+          const routes = ['', '/contact?topic=trade-in'];
+          const results = [];
+          const base = new URL(baseUrl);
+          const browser = await chromium.launch({ headless: true });
+          const record = (name, passed, details = {}) => results.push({ name, passed, ...details });
+          try {
+            for (const locale of locales) {
+              for (const width of widths) {
+                for (const route of routes) {
+                  const context = await browser.newContext({
+                    viewport: { width, height: width < 600 ? 844 : 1000 },
+                    locale: locale === 'bg' ? 'bg-BG' : 'en-GB'
+                  });
+                  const page = await context.newPage();
+                  const pageErrors = [];
+                  page.on('pageerror', error => pageErrors.push(error.message));
+                  const url = new URL(`/${locale}${route}`, base).href;
+                  try {
+                    const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+                    await page.waitForTimeout(400);
+                    const state = await page.evaluate(() => {
+                      const form = document.querySelector('form[action*="/api/preferences"]');
+                      return {
+                        lang: document.documentElement.lang,
+                        bodyTextLength: document.body?.innerText.trim().length || 0,
+                        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+                        preferenceForm: Boolean(form),
+                        preferenceAction: form?.getAttribute('action') || null
+                      };
+                    });
+                    const failures = [];
+                    if (!response || response.status() >= 400) failures.push(`HTTP ${response?.status() ?? 'missing'}`);
+                    if (!state.lang.toLowerCase().startsWith(locale)) failures.push(`lang=${state.lang}`);
+                    if (state.bodyTextLength < 200) failures.push(`bodyTextLength=${state.bodyTextLength}`);
+                    if (state.overflow > 2) failures.push(`horizontalOverflow=${state.overflow}`);
+                    if (route === '' && width === 390 && !state.preferenceForm) failures.push('missing SSR preference form');
+                    if (pageErrors.length) failures.push(`pageErrors=${pageErrors.join(' | ')}`);
+                    record(`${locale} ${width} ${route || '/'}`, failures.length === 0, { url, state, failures });
+                  } catch (error) {
+                    record(`${locale} ${width} ${route || '/'}`, false, { url, error: error.message });
+                  } finally {
+                    await context.close();
+                  }
+                }
+              }
+              const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+              const page = await noJs.newPage();
+              const url = new URL(`/${locale}`, base).href;
+              try {
+                const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+                const state = await page.evaluate(() => ({
+                  lang: document.documentElement.lang,
+                  preferenceForm: Boolean(document.querySelector('form[action*="/api/preferences"]'))
+                }));
+                const failures = [];
+                if (!response || response.status() >= 400) failures.push(`HTTP ${response?.status() ?? 'missing'}`);
+                if (!state.lang.toLowerCase().startsWith(locale)) failures.push(`lang=${state.lang}`);
+                if (!state.preferenceForm) failures.push('missing no-JS preference form');
+                record(`${locale} 390 no-js`, failures.length === 0, { url, state, failures });
+              } catch (error) {
+                record(`${locale} 390 no-js`, false, { url, error: error.message });
+              } finally {
+                await noJs.close();
+              }
+            }
+          } finally {
+            await browser.close();
+          }
+          const report = {
+            schemaVersion: 1,
+            sourceCommit,
+            baseUrl: base.href,
+            widths,
+            locales,
+            checks: results.length,
+            passed: results.filter(item => item.passed).length,
+            failed: results.filter(item => !item.passed).length,
+            checkedAt: new Date().toISOString(),
+            results
+          };
+          fs.mkdirSync(path.dirname(output), { recursive: true });
+          fs.writeFileSync(output, JSON.stringify(report, null, 2) + '\n');
+          console.log(JSON.stringify({ output, checks: report.checks, passed: report.passed, failed: report.failed }));
+          if (report.failed) process.exitCode = 1;
+          EOF
+
+      - name: Audit exact production aliases
+        shell: bash
+        run: |
+          set -euo pipefail
+          node runtime/template-browser-audit.mjs "$AUTO_BEST_SOURCE_DIR" "$AUTO_BEST_PUBLIC_ALIAS" "$AUTO_BEST_COMMIT" "$LOCALIZATION_PROMOTION_LOG_DIR/auto-best-browser-audit.json"
+          node scripts/localization-preferences-audit.mjs --base-url "$AUTO_BEST_PUBLIC_ALIAS" --source-commit "$AUTO_BEST_COMMIT" --output "$LOCALIZATION_PROMOTION_LOG_DIR/auto-best-preference-audit.json"
+          node runtime/template-browser-audit.mjs "$CARWOW_SOURCE_DIR" "$CARWOW_PUBLIC_ALIAS" "$CARWOW_COMMIT" "$LOCALIZATION_PROMOTION_LOG_DIR/carwow-browser-audit.json"
+          node scripts/localization-preferences-audit.mjs --base-url "$CARWOW_PUBLIC_ALIAS" --source-commit "$CARWOW_COMMIT" --output "$LOCALIZATION_PROMOTION_LOG_DIR/carwow-preference-audit.json"
+
+      - name: Promote exact releases into Cars
+        run: node scripts/promote-localization-boundaries.mjs
+
+      - name: Verify native packaging and refresh invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/template-release.mjs verify
+          node --test --test-concurrency=1 \
+            scripts/dealer-locale.test.mjs \
+            scripts/native-localization.test.mjs \
+            scripts/native-refresh.test.mjs \
+            scripts/independent-locale-generation.test.mjs
+
+      - name: Commit promoted snapshots and evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add \
+            templates/auto-best \
+            templates/carwow \
+            templates.lock.json \
+            docs/releases/localization-2026-09-21/auto-best-release.json \
+            docs/releases/localization-2026-09-21/carwow-release.json \
+            docs/releases/localization-2026-09-21/auto-best-boundary-review.json \
+            docs/releases/localization-2026-09-21/carwow-boundary-review.json
+          git diff --cached --check
+          test -n "$(git status --short)"
+          git commit -m "Promote dealer-owned bilingual template boundaries"
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$CARS_BASE_SHA"
+          git push origin HEAD:main
