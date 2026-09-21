@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: deploy-corrected-localized-dealer-fleet
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   matrix:
@@ -46,10 +46,12 @@ jobs:
               slug: dealer.slug,
               repository: dealer.repository || dealer.delivery?.gitRepository,
               projectId: dealer.delivery?.projectId,
-              publicAlias: dealer.delivery?.url
+              publicAlias: dealer.delivery?.url,
+              localPresent: dealer.localPresent === true
             }));
           const missing = [...requested].filter((slug) => !rows.some((row) => row.slug === slug));
           const invalid = rows.filter((row) =>
+            !row.localPresent ||
             !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(row.repository || '') ||
             !/^prj_[A-Za-z0-9]+$/.test(row.projectId || '') ||
             !/^https:\/\//.test(row.publicAlias || '')
@@ -57,7 +59,7 @@ jobs:
           if (missing.length || invalid.length || rows.length !== requested.size) {
             throw new Error(`Unresolved production fleet. Missing=${missing.join(',')} invalid=${invalid.map((row) => row.slug).join(',')} rows=${rows.length}`);
           }
-          const value = JSON.stringify({ include: rows });
+          const value = JSON.stringify({ include: rows.map(({ localPresent, ...row }) => row) });
           fs.appendFileSync(process.env.GITHUB_OUTPUT, `dealers=${value}\n`);
           console.log(value);
           NODE
@@ -75,7 +77,7 @@ jobs:
       VERCEL_PROJECT_ID: ${{ matrix.projectId }}
       PUBLIC_ALIAS: ${{ matrix.publicAlias }}
     steps:
-      - name: Check out canonical Cars release source
+      - name: Check out canonical Cars release and registered dealer source
         uses: actions/checkout@v4
         with:
           path: cars
@@ -88,24 +90,7 @@ jobs:
             /scripts/
             /templates/
             /docs/
-            /clients/isauto-varna/
-
-      - name: Check out registered dealer source
-        if: matrix.slug != 'isauto-varna'
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ matrix.repository }}
-          ref: main
-          path: client
-          fetch-depth: 1
-
-      - name: Stage registered IS AUTO source
-        if: matrix.slug == 'isauto-varna'
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p "$GITHUB_WORKSPACE/client"
-          cp -a "$GITHUB_WORKSPACE/cars/clients/isauto-varna/." "$GITHUB_WORKSPACE/client/"
+            /clients/${{ matrix.slug }}/
 
       - uses: actions/setup-node@v4
         with:
@@ -117,10 +102,12 @@ jobs:
           GITHUB_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
+          client_root="$GITHUB_WORKSPACE/cars/clients/${{ matrix.slug }}"
+          test -s "$client_root/dealer.json"
           rm -rf "$RUNNER_TEMP/localized-client" "$RUNNER_TEMP/evidence"
           mkdir -p "$RUNNER_TEMP/evidence"
           node "$GITHUB_WORKSPACE/cars/scripts/rollout-localized-client.mjs" \
-            --client-root "$GITHUB_WORKSPACE/client" \
+            --client-root "$client_root" \
             --slug "${{ matrix.slug }}" \
             --repository "${{ matrix.repository }}" \
             --output "$RUNNER_TEMP/localized-client" \
