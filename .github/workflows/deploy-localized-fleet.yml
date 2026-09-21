@@ -46,12 +46,10 @@ jobs:
               slug: dealer.slug,
               repository: dealer.repository || dealer.delivery?.gitRepository,
               projectId: dealer.delivery?.projectId,
-              publicAlias: dealer.delivery?.url,
-              localPresent: dealer.localPresent === true
+              publicAlias: dealer.delivery?.url
             }));
           const missing = [...requested].filter((slug) => !rows.some((row) => row.slug === slug));
           const invalid = rows.filter((row) =>
-            !row.localPresent ||
             !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(row.repository || '') ||
             !/^prj_[A-Za-z0-9]+$/.test(row.projectId || '') ||
             !/^https:\/\//.test(row.publicAlias || '')
@@ -59,7 +57,7 @@ jobs:
           if (missing.length || invalid.length || rows.length !== requested.size) {
             throw new Error(`Unresolved production fleet. Missing=${missing.join(',')} invalid=${invalid.map((row) => row.slug).join(',')} rows=${rows.length}`);
           }
-          const value = JSON.stringify({ include: rows.map(({ localPresent, ...row }) => row) });
+          const value = JSON.stringify({ include: rows });
           fs.appendFileSync(process.env.GITHUB_OUTPUT, `dealers=${value}\n`);
           console.log(value);
           NODE
