@@ -26,12 +26,16 @@ const EXACT_PROTECTED_PATHS = {
 const STYLE_EXTENSION = /\.(?:css|pcss|scss|sass)$/i;
 const HERO_ASSET = /(?:^|[\/_.-])(?:hero|banner|masthead)(?:[\/_.-]|$)/i;
 const MEDIA_EXTENSION = /\.(?:avif|jpe?g|png|webp)$/i;
+const OMITTED_PRESENTATION_DIRS = new Set(['node_modules', '.git', '.svelte-kit', '.next', '.turbo', 'build', 'dist', 'runtime', 'coverage', 'playwright-report', 'test-results']);
 
 function walkFiles(root, current = root, result = []) {
   if (!fs.existsSync(current)) return result;
   for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
     const target = path.join(current, entry.name);
-    if (entry.isDirectory()) walkFiles(root, target, result);
+    if (entry.isDirectory()) {
+      if (OMITTED_PRESENTATION_DIRS.has(entry.name) || entry.name.startsWith('.next')) continue;
+      walkFiles(root, target, result);
+    }
     else if (entry.isFile()) result.push(path.relative(root, target).replaceAll('\\', '/'));
   }
   return result;

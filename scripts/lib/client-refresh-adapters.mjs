@@ -2,6 +2,7 @@ import { ensureImportMenuKeys } from './import-menu-keys.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { applyDealerLogoContract } from './client-logo-contract.mjs';
+import { dealerLocalizedCopy } from './dealer-localized-copy.mjs';
 import { applyCarwowSafeContent, applyImportSafeContent } from './client-refresh-safe-content.mjs';
 
 const exists = (file) => fs.existsSync(file);
@@ -43,6 +44,21 @@ function replaceExportConstBlock(text, name, replacement) {
   if (end < 0) throw new Error(`Cannot locate end of export const ${name}`);
   return text.slice(0, start) + replacement + text.slice(end + marker.length);
 }
+function updateDealerCatalog(candidate, updates) {
+  const file = path.join(candidate, 'localization/dealer.reviewed.json');
+  const rows = JSON.parse(read(file));
+  const remaining = new Set(Object.keys(updates));
+  for (const row of rows) {
+    const update = updates[row.key];
+    if (!update) continue;
+    Object.assign(row, update);
+    remaining.delete(row.key);
+  }
+  if (remaining.size) throw new Error('Missing dealer catalog rows: ' + [...remaining].join(', '));
+  write(file, JSON.stringify(rows, null, 2) + '\n');
+  return 'localization/dealer.reviewed.json';
+}
+
 const publicRoot = (key, variant) =>
   key === 'modern' ? path.join(variant, 'apps/web/public') : path.join(variant, 'static');
 const findScalar = (text, key) =>
@@ -131,6 +147,30 @@ function localeLanguage(profile) {
 function textFor(profile, bg, en) {
   return localeLanguage(profile) === 'bg' ? bg : en;
 }
+
+function patchNativeLocaleConfiguration(text, profile) {
+  const business = profile.business;
+  const defaultLocale = localeLanguage(profile);
+  const englishFormatLocale = business.countryCode === 'BG'
+    ? 'en-GB'
+    : (String(business.locale || '').startsWith('en-') ? business.locale : 'en-GB');
+  const suggestedLanguages = {
+    BG: 'bg',
+    GB: 'en',
+    US: 'en',
+    [business.countryCode]: defaultLocale
+  };
+  return text
+    .replace(/(dealerId:\s*)['"][^'"]*['"]/, `$1${q(business.slug)}`)
+    .replace(/(defaultLocale:\s*)['"][^'"]*['"]/, `$1${q(defaultLocale)}`)
+    .replace(/(dealerCountry:\s*)['"][^'"]*['"]/, `$1${q(business.countryCode || 'BG')}`)
+    .replace(/(inventoryCurrency:\s*)['"][^'"]*['"]/, `$1${q(business.currency || 'EUR')}`)
+    .replace(/formatLocales:\s*\{[^}]*\}/,
+      `formatLocales: { en: ${q(englishFormatLocale)}, bg: 'bg-BG' }`)
+    .replace(/suggestedLanguages:\s*\{[^}]*\}/,
+      `suggestedLanguages: ${JSON.stringify(suggestedLanguages)}`);
+}
+
 function mileageKm(listing) {
   return Math.max(0, Math.round(
     listing.mileageUnit === 'mi' ? listing.mileageValue * 1.609344 : listing.mileageValue
@@ -382,6 +422,19 @@ function patchAutoBestIdentity(candidate) {
   return 'src/routes/listing-detail-v1/[id]/+page.svelte (dealer identity)';
 }
 
+function patchAutoBestLocale(candidate, profile) {
+  const b = profile.business;
+  const copy = dealerLocalizedCopy(profile);
+  const catalogFile = updateDealerCatalog(candidate, {
+    'dealer.city': { source: b.city, en: copy.en.city, bg: copy.bg.city, disposition: 'translate', notes: 'Dealer-owned city copy generated from the reviewed Cars dealer profile.' },
+    'dealer.addressLine': { source: b.addressLine || b.address, en: copy.en.addressLine, bg: copy.bg.addressLine, disposition: 'translate', notes: 'Dealer-owned address line; physical location and destination remain unchanged.' },
+    'dealer.address': { source: b.address || b.addressLine, en: copy.en.address, bg: copy.bg.address, disposition: 'translate', notes: 'Dealer-owned full address; physical location and destination remain unchanged.' },
+    'dealer.appointment': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Dealer-owned appointment and opening-hours guidance.' }
+  });
+  const file = path.join(candidate, 'src/lib/config/locale.ts');
+  write(file, patchNativeLocaleConfiguration(read(file), profile));
+  return ['src/lib/config/locale.ts', catalogFile];
+}
 function patchAutoBest({ oldVariant, candidate, profile }) {
   const b = profile.business;
   const freshBrand = read(path.join(candidate, 'src/lib/config/brand.ts'));
@@ -392,9 +445,11 @@ function patchAutoBest({ oldVariant, candidate, profile }) {
   write(path.join(candidate, 'src/lib/data/company.ts'), autoBestCompany(profile));
   write(path.join(candidate, 'src/lib/data/dealer-profile.json'), `${JSON.stringify(profile, null, 2)}\n`);
   patchAutoBestMap(candidate, profile);
+  const localeFiles = patchAutoBestLocale(candidate, profile);
   const identityFile = patchAutoBestIdentity(candidate);
   return [
     'src/lib/config/brand.ts',
+    ...localeFiles,
     'src/lib/data/inventory.ts',
     'src/lib/data/company.ts',
     'src/lib/data/dealer-profile.json',
@@ -505,6 +560,7 @@ function patchModernDealerText(candidate, profile) {
 
 function patchModern({ oldVariant, candidate, profile }) {
   const b = profile.business;
+  const localized = dealerLocalizedCopy(profile);
   const listingFile = path.join(candidate, 'packages/marketplace-domain/testing/mock-data.ts');
   replaceModernListings(listingFile, profile);
   const file = path.join(candidate, 'packages/marketplace/lead-site.ts');
@@ -526,14 +582,31 @@ function patchModern({ oldVariant, candidate, profile }) {
     name: b.name,
     phoneDisplay: b.phoneDisplay,
     phoneHref: b.phoneHref,
+    publicDefaultLocale: localeLanguage(profile),
     shortName: b.shortName,
     slug: b.slug,
     staticDemoMode: true,
     tagline: b.inventoryNotice
   };
   for (const [key, value] of Object.entries(values)) text = replaceLeadScalar(text, key, value);
+  const localizedCopy = {
+    bg: {
+      address: localized.bg.address,
+      city: localized.bg.city,
+      country: localized.bg.country,
+      tagline: localized.bg.tagline
+    },
+    en: {
+      address: localized.en.address,
+      city: localized.en.city,
+      country: localized.en.country,
+      tagline: localized.en.tagline
+    }
+  };
+  text = text.replace(/  localizedCopy: \{[\s\S]*?\n  \},\n  accent:/,
+    `  localizedCopy: ${JSON.stringify(localizedCopy, null, 2)},\n  accent:`);
   text = text.replace(/^\s*district:\s*\{[^\n]+\},/m,
-    `  district: { bg: ${q(b.region || b.city)}, en: ${q(b.region || b.city)} },`);
+    `  district: { bg: ${q(localized.bg.region)}, en: ${q(localized.en.region)} },`);
   text = text.replace(/\s*socialLinks:\s*\{[\s\S]*?\n\s*\},\n\s*staticDemoMode:/m,
     `\n  socialLinks: ${JSON.stringify(Object.fromEntries(Object.entries(b.socialLinks || {}).filter(([, value]) => value)))},\n  staticDemoMode:`);
   write(file, text);
@@ -597,61 +670,33 @@ export const currentDayNightListings = ${JSON.stringify(items, null, 2)} satisfi
 
 function patchCarwowSite(candidate, oldVariant, profile) {
   const b = profile.business;
+  const localized = dealerLocalizedCopy(profile);
+  const sourceCopy = localized[localeLanguage(profile)];
   const file = path.join(candidate, 'src/lib/data/daynight-site.ts');
   let text = read(file);
-  const oldSite = path.join(oldVariant, 'src/lib/data/daynight-site.ts');
-  const old = exists(oldSite) ? read(oldSite) : '';
   const logoLight = requireRasterLogo(pickLogo(oldVariant, 'carwow', b, false), 'carwow', 'light surfaces');
   const logoDark = requireRasterLogo(pickLogo(oldVariant, 'carwow', b, true) || logoLight, 'carwow', 'dark surfaces');
-  const constants = {
-    phoneE164: b.phoneE164,
-    city: b.city,
-    shortName: b.shortName || b.name,
-    district: b.region || b.city,
-    street: b.addressLine || b.address
-  };
-  for (const [name, value] of Object.entries(constants)) {
-    text = text.replace(new RegExp(`const ${name} = '[^']*';`), `const ${name} = ${q(value)};`);
-  }
-  text = text.replace(/const location = `[^`]*`;/,
-    `const location = ${q(b.address || b.addressLine || b.city)};`);
-  const scalar = {
-    name: b.name,
-    countryCode: b.countryCode,
-    locale: b.locale,
-    currency: b.currency,
-    phone: b.phoneE164.replace(/\D/g, ''),
-    phoneLabel: b.phoneDisplay,
-    email: b.email,
-    hoursLabel: b.hours,
-    sourceInventory: b.inventoryUrl,
-    logoLight,
-    logoDark,
-    heroTitle: b.name,
-    heroSubtitle: `${b.city} · ${b.inventoryNotice}`
-  };
-  for (const [key, value] of Object.entries(scalar)) {
-    text = text.replace(new RegExp(`(^\\s*${key}:\\s*)'[^']*'`, 'm'), `$1${q(value)}`);
-  }
-  text = text
-    .replace(/^\s*locationShort:\s*`[^`]*`,/m, `\tlocationShort: ${q(b.addressLine || b.city)},`)
-    .replace(/^\s*locationLandmark:\s*`[^`]*`,/m, `\tlocationLandmark: ${q(b.address || b.addressLine || b.city)},`);
-  const socialLinks = {
-    facebook: b.socialLinks?.facebook || '',
-    instagram: b.socialLinks?.instagram || '',
-    youtube: b.socialLinks?.youtube || '',
-    tiktok: b.socialLinks?.tiktok || ''
-  };
-  if (!text.includes('\tsocialLinks:')) {
-    text = text.replace('\n\tprimaryCta:', `\n\tsocialLinks: ${JSON.stringify(socialLinks)},\n\tprimaryCta:`);
-  }
-  text = text.replace(/\n\s*\{ label: 'Профил на автокъщата', href: '\/about\/daynight-auto-plovdiv' \},/, '');
-  text = text.replace("{ label: 'За Day Night Auto', href: '/about' }",
-    `{ label: ${q(textFor(profile, `За ${b.shortName || b.name}`, `About ${b.shortName || b.name}`))}, href: '/about' }`);
+  const constants = { phoneE164: b.phoneE164, city: sourceCopy.city, shortName: b.shortName || b.name, district: sourceCopy.region || sourceCopy.city, street: sourceCopy.addressLine };
+  for (const [name, value] of Object.entries(constants)) text = text.replace(new RegExp(`const ${name} = '[^']*';`), `const ${name} = ${q(value)};`);
+  text = text.replace(/const location = `[^`]*`;/, `const location = ${q(sourceCopy.address)};`);
+  const scalar = { name: b.name, countryCode: b.countryCode, locale: b.locale, currency: b.currency, phone: b.phoneE164.replace(/\D/g, ''), phoneLabel: b.phoneDisplay, email: b.email, hoursLabel: b.hours, sourceInventory: b.inventoryUrl, logoLight, logoDark, heroTitle: b.name, heroSubtitle: `${sourceCopy.city} · ${b.inventoryNotice}` };
+  for (const [key, value] of Object.entries(scalar)) text = text.replace(new RegExp(`(^\s*${key}:\s*)'[^']*'`, 'm'), `$1${q(value)}`);
+  text = text.replace(/^\s*locationShort:[^\r\n]*$/m, `\tlocationShort: ${q(sourceCopy.locationShort)},`).replace(/^\s*locationLandmark:[^\r\n]*$/m, `\tlocationLandmark: ${q(sourceCopy.addressLine)},`);
+  const socialLinks = { facebook: b.socialLinks?.facebook || '', instagram: b.socialLinks?.instagram || '', youtube: b.socialLinks?.youtube || '', tiktok: b.socialLinks?.tiktok || '' };
+  if (!text.includes('\tsocialLinks:')) text = text.replace('\n\tprimaryCta:', `\n\tsocialLinks: ${JSON.stringify(socialLinks)},\n\tprimaryCta:`);
+  else text = text.replace(/\n\s*socialLinks:\s*\{[\s\S]*?\n\s*\},\n\s*primaryCta:/m, `\n\tsocialLinks: ${JSON.stringify(socialLinks)},\n\tprimaryCta:`);
+  text = text.replace(/\n\s*\{ label: '[^']*', href: '\/about\/daynight-auto-plovdiv' \},/, '');
   write(file, text);
-  return { logoLight, logoDark };
+  const catalogFile = updateDealerCatalog(candidate, {
+    'dealer.city': { source: sourceCopy.city, en: localized.en.city, bg: localized.bg.city, disposition: 'translate', notes: 'Dealer-owned city copy generated from the reviewed Cars dealer profile.' },
+    'dealer.locationShort': { source: sourceCopy.locationShort, en: localized.en.locationShort, bg: localized.bg.locationShort, disposition: 'translate', notes: 'Dealer-owned short location label.' },
+    'dealer.addressLine': { source: sourceCopy.addressLine, en: localized.en.addressLine, bg: localized.bg.addressLine, disposition: 'translate', notes: 'Dealer-owned address line; physical location and destination remain unchanged.' },
+    'dealer.address': { source: sourceCopy.address, en: localized.en.address, bg: localized.bg.address, disposition: 'translate', notes: 'Dealer-owned full address; physical location and destination remain unchanged.' },
+    'dealer.name': { source: b.name, en: localized.en.name, bg: localized.bg.name, disposition: localized.en.name === localized.bg.name ? 'invariant' : 'translate', notes: 'Dealer-owned proper name.' },
+    'dealer.shortName': { source: b.shortName || b.name, en: b.shortName || b.name, bg: b.shortName || b.name, disposition: 'invariant', notes: 'Dealer-owned short proper name.' }
+  });
+  return { logoLight, logoDark, catalogFile };
 }
-
 function replaceRange(text, startMarker, endMarker, replacement, label) {
   const start = text.indexOf(startMarker);
   const end = text.indexOf(endMarker, start);
@@ -815,6 +860,12 @@ function patchDealerTextFiles(candidate, profile) {
     .map((file) => path.relative(candidate, file).replaceAll('\\', '/'));
 }
 
+function patchCarwowLocale(candidate, profile) {
+  const file = path.join(candidate, 'src/lib/locale/config.ts');
+  write(file, patchNativeLocaleConfiguration(read(file), profile));
+  return 'src/lib/locale/config.ts';
+}
+
 function patchCarwowManifest(candidate, profile) {
   const file = path.join(candidate, 'static/site.webmanifest');
   if (!exists(file)) return [];
@@ -829,6 +880,7 @@ function patchCarwow({ oldVariant, candidate, profile }) {
   const inventory = path.join(candidate, 'src/lib/data/daynight-current-inventory.ts');
   write(inventory, carwowInventory(profile));
   const siteAssets = patchCarwowSite(candidate, oldVariant, profile);
+  const localeFile = patchCarwowLocale(candidate, profile);
   const safeContent = applyCarwowSafeContent({ candidate, profile, logo: siteAssets.logoLight || siteAssets.logoDark });
   const dealerSurfaces = patchCarwowDealerSurfaces(candidate, profile);
   const changed = patchDealerTextFiles(candidate, profile);
@@ -836,6 +888,8 @@ function patchCarwow({ oldVariant, candidate, profile }) {
   return [
     'src/lib/data/daynight-current-inventory.ts',
     'src/lib/data/daynight-site.ts',
+    siteAssets.catalogFile,
+    localeFile,
     'src/lib/data/dealer-profile.json',
     ...safeContent,
     ...dealerSurfaces,
@@ -894,8 +948,10 @@ function importListingFeed(profile) {
 
 function patchImportDayNight(candidate, oldVariant, profile) {
   const b = profile.business;
+  const localized = dealerLocalizedCopy(profile);
   const file = path.join(candidate, 'src/lib/data/daynight.ts');
   const dealerFile = path.join(candidate, 'src/lib/config/dealer.ts');
+  const dealerCopyFile = path.join(candidate, 'src/lib/config/dealer-copy.ts');
   let text = read(file);
   let dealerText = read(dealerFile);
   const logoDark = requireRasterLogo(pickLogo(oldVariant, 'import', b, true), 'import', 'dark surfaces');
@@ -988,6 +1044,24 @@ function patchImportDayNight(candidate, oldVariant, profile) {
   if (/^#[0-9a-f]{6}$/i.test(b.accent || '')) {
     dealerText = dealerText.replace(/(\taccent:\s*)'#[0-9a-f]{6}'/i, `$1${q(b.accent)}`);
   }
+  const dealerCopy = {
+    bg: {
+      appointment: localized.bg.appointment,
+      city: localized.bg.city,
+      country: localized.bg.country,
+      address: localized.bg.address,
+      tagline: localized.bg.tagline
+    },
+    en: {
+      appointment: localized.en.appointment,
+      city: localized.en.city,
+      country: localized.en.country,
+      address: localized.en.address,
+      tagline: localized.en.tagline
+    }
+  };
+  write(dealerCopyFile,
+    `export const dealerCopy = ${JSON.stringify(dealerCopy, null, 2)} as const;\n`);
   write(dealerFile, dealerText);
   write(file, text);
   return { logoDark, logoLight };
@@ -1142,6 +1216,7 @@ function patchImport({ oldVariant, candidate, profile }) {
     'src/lib/data/daynight-listings.json',
     'src/lib/data/daynight.ts',
     'src/lib/config/dealer.ts',
+    'src/lib/config/dealer-copy.ts',
     'src/lib/data/vehicles.ts',
     'src/lib/data/dealers.ts',
     'src/lib/data/agents.ts',

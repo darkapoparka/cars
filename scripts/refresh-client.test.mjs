@@ -42,6 +42,14 @@ function temporaryCandidate(templateKey, files) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), `cars-refresh-${templateKey}-`));
   const template = path.join(ROOT, 'templates', templateKey);
   const requiredConsumers = {
+    'auto-best': [
+      'localization/dealer.reviewed.json',
+      'src/lib/config/locale.ts'
+    ],
+    carwow: [
+      'localization/dealer.reviewed.json',
+      'src/lib/locale/config.ts'
+    ],
     modern: [
       'packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx',
       'packages/marketplace-ui/components/listing-detail-content.tsx',
@@ -216,7 +224,8 @@ test('Carwow refresh keeps current hero composition and removes sample dealer id
 
   assert.equal(hash(path.join(root, hero)), hash(path.join(template, hero)));
   const site = fs.readFileSync(path.join(root, 'src/lib/data/daynight-site.ts'), 'utf8');
-  assert.match(site, /name: "Навара кар"/);
+  assert.match(site, /name:\s*['"][^'"]+['"]/);
+  assert.ok(site.toLocaleLowerCase('bg-BG').includes(profile.business.name.toLocaleLowerCase('bg-BG')));
   assert.doesNotMatch(site, /Day Night Auto/i);
   const inventory = fs.readFileSync(path.join(root, 'src/lib/data/daynight-current-inventory.ts'), 'utf8');
   assert.match(inventory, /Nissan Micra 1\.0 N-Sport/);
