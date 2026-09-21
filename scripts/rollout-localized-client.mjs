@@ -148,14 +148,14 @@ function normalizeManifest(oldManifest, profile, releases, slug, repository) {
     accent: /^#[0-9a-f]{6}$/i.test(profile.business.accent || '') ? profile.business.accent : (manifest.switcher?.accent || '#2563eb')
   };
   manifest.templateRevisions = Object.fromEntries(manifest.variants.map(({ key }) => [key, releases[key].commit]));
-  return validateManifest(manifest);
+  return validateManifest(manifest, { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });
 }
 
 async function build({ clientRoot, slug, output, repository }) {
   const source = fs.realpathSync(clientRoot);
   const dealerFile = path.join(source, 'dealer.json');
   if (!exists(dealerFile)) throw new Error(`Missing dealer manifest: ${dealerFile}`);
-  const oldManifest = validateManifest(json(dealerFile));
+  const oldManifest = validateManifest(json(dealerFile), { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });
   if (oldManifest.slug !== slug) throw new Error(`Dealer manifest slug differs: ${oldManifest.slug}`);
   if (oldManifest.repository !== repository) throw new Error(`Dealer repository differs: ${oldManifest.repository}`);
   if (!Array.isArray(oldManifest.variants) || oldManifest.variants.length !== 3) throw new Error('Expected the registered three-design package');
