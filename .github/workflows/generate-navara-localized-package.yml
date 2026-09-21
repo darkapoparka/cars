@@ -20,8 +20,9 @@ jobs:
     env:
       CARS_RELEASE_SHA: cc4fd13f00a995c8a4dcdd353a2baecd1c6a3d4d
       OUTPUT_BRANCH: generated/navara-native-en-bg-v2
+      CLIENT_SOURCE: ${{ github.workspace }}/cars-release/clients/navara-car
     steps:
-      - name: Checkout exact Cars release boundary
+      - name: Checkout exact Cars release boundary and client source
         uses: actions/checkout@v4
         with:
           ref: ${{ env.CARS_RELEASE_SHA }}
@@ -32,15 +33,9 @@ jobs:
             /scripts/
             /templates/
             /docs/releases/
+            /clients/navara-car/
             /templates.lock.json
             /package.json
-
-      - name: Checkout Navara publication source
-        uses: actions/checkout@v4
-        with:
-          ref: publish/navara-car
-          path: navara-source
-          fetch-depth: 1
 
       - uses: actions/setup-node@v4
         with:
@@ -52,7 +47,7 @@ jobs:
           set -euo pipefail
           rm -rf "$GITHUB_WORKSPACE/navara-localized"
           node "$GITHUB_WORKSPACE/cars-release/scripts/rollout-localized-client.mjs" \
-            --client-root "$GITHUB_WORKSPACE/navara-source" \
+            --client-root "$CLIENT_SOURCE" \
             --slug navara-car \
             --repository darkapoparka/cars-navaracar \
             --output "$GITHUB_WORKSPACE/navara-localized" \
@@ -89,14 +84,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          rsync -ani --delete --exclude='.git/' \
-            "$GITHUB_WORKSPACE/navara-source/" \
+          rsync -ani --delete \
+            "$CLIENT_SOURCE/" \
             "$GITHUB_WORKSPACE/navara-localized/" \
             > "$GITHUB_WORKSPACE/navara-localization-files.txt"
           {
-            echo "source_files=$(find "$GITHUB_WORKSPACE/navara-source" -path '*/.git' -prune -o -type f -print | wc -l)"
+            echo "source_files=$(find "$CLIENT_SOURCE" -type f -print | wc -l)"
             echo "output_files=$(find "$GITHUB_WORKSPACE/navara-localized" -type f -print | wc -l)"
-            echo "source_bytes=$(du -sb --exclude=.git "$GITHUB_WORKSPACE/navara-source" | cut -f1)"
+            echo "source_bytes=$(du -sb "$CLIENT_SOURCE" | cut -f1)"
             echo "output_bytes=$(du -sb "$GITHUB_WORKSPACE/navara-localized" | cut -f1)"
             echo "delta_lines=$(wc -l < "$GITHUB_WORKSPACE/navara-localization-files.txt")"
           } > "$GITHUB_WORKSPACE/navara-localization-stat.txt"
