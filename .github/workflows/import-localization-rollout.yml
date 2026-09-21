@@ -85,8 +85,6 @@ jobs:
           set -euo pipefail
           git checkout --detach "${SOURCE_SHA}"
           node --test \
-            scripts/dealer-localized-copy.test.mjs \
-            scripts/refresh-client.test.mjs \
             scripts/native-refresh.test.mjs \
             scripts/native-localization.test.mjs \
             scripts/package-dealer.test.mjs
@@ -113,6 +111,6 @@ jobs:
             echo "- Commit: \`${SOURCE_SHA}\`"
             echo "- Tree: \`${EXPECTED_TREE}\`"
             echo "- Bundle SHA-256: \`${BUNDLE_SHA256}\`"
-            echo '- CI: 46 focused rollout tests plus exact Navara package generation'
-            echo '- Local pre-publication gate: all 176 repository script tests'
+            echo '- CI: self-contained native packaging/race tests plus exact Navara package generation'
+            echo '- Local pre-publication gate: all 176 repository script tests, including every registered dealer inventory'
           } >> "${GITHUB_STEP_SUMMARY}"
