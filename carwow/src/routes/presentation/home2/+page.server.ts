@@ -25,23 +25,10 @@ const featuredSummaries: Record<string, string> = {
 
 const featuredCardImages: Record<string, string> = {
 	'mercedes-benz-gle-coupe-400d-2021-68018':
-		'/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp',
-	'bmw-i7-2023-full-maxx': '/variant-3/assets/images/megamenu/bmw-i7.webp',
+		'/assets/images/body-type/normalized/body-suv-transparent.webp',
+	'bmw-i7-2023-full-maxx': '/assets/images/megamenu/bmw-i7.webp',
 	'mercedes-benz-amg-gt-53-2020-00956':
-		'/variant-3/assets/images/body-type/normalized/body-coupe-transparent.webp'
-};
-
-const fuelLabels: Record<string, string> = {
-	Бензин: 'Petrol',
-	Дизел: 'Diesel',
-	Електрически: 'Electric',
-	Хибриден: 'Hybrid',
-	'Бензин/Газ': 'Petrol/LPG'
-};
-
-const transmissionLabels: Record<string, string> = {
-	Автоматик: 'Automatic',
-	Ръчна: 'Manual'
+		'/assets/images/body-type/normalized/body-coupe-transparent.webp'
 };
 
 const bodyLabels: Record<string, string> = {
@@ -54,20 +41,20 @@ const bodyLabels: Record<string, string> = {
 };
 
 const brandLogoPaths: Record<string, string> = {
-	Citroen: '/variant-3/assets/images/brand/oem/citroen.svg',
-	'Land Rover': '/variant-3/assets/images/brand/oem/land-rover.svg',
-	Opel: '/variant-3/assets/images/brand/oem/opel.svg',
-	Porsche: '/variant-3/assets/images/brand/oem/porsche.webp'
+	Citroen: '/assets/images/brand/oem/citroen.svg',
+	'Land Rover': '/assets/images/brand/oem/land-rover.svg',
+	Opel: '/assets/images/brand/oem/opel.svg',
+	Porsche: '/assets/images/brand/oem/porsche.webp'
 };
 
 const bodyImagePaths: Record<string, string> = {
-	Седан: '/variant-3/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	Комби: '/variant-3/assets/images/body-type/normalized/body-wagon-transparent.webp',
-	Хечбек: '/variant-3/assets/images/body-type/normalized/body-hatchback-transparent.webp',
-	Ван: '/variant-3/assets/images/body-type/normalized/body-mpv-transparent.webp',
-	Лимузина: '/variant-3/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	Купе: '/variant-3/assets/images/body-type/normalized/body-coupe-transparent.webp',
-	SUV: '/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp'
+	Седан: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	Комби: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
+	Хечбек: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+	Ван: '/assets/images/body-type/normalized/body-mpv-transparent.webp',
+	Лимузина: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	Купе: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
+	SUV: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 };
 
 function featuredCars() {
@@ -82,7 +69,9 @@ function featuredCars() {
 	return [...primary, ...fallback].slice(0, 3).map((car) => ({
 		slug: car.slug,
 		title: car.shortTitle,
-		subtitle: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
+		year: car.year,
+		fuel: car.fuel,
+		transmission: car.transmission,
 		summary: featuredSummaries[car.slug] ?? 'Verified IS AUTO stock',
 		image: car.image,
 		cardImage: featuredCardImages[car.slug] ?? car.image,
@@ -96,32 +85,32 @@ function budgetTiles() {
 	const buckets = [
 		{
 			label: 'Under €10k',
-			image: '/variant-3/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
 			count: cars.filter((car) => car.price > 0 && car.price <= 10000).length
 		},
 		{
 			label: 'Under €20k',
-			image: '/variant-3/assets/images/body-type/normalized/body-sedan-transparent.webp',
+			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
 			count: cars.filter((car) => car.price > 10000 && car.price <= 20000).length
 		},
 		{
 			label: 'Under €30k',
-			image: '/variant-3/assets/images/body-type/normalized/body-wagon-transparent.webp',
+			image: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
 			count: cars.filter((car) => car.price > 20000 && car.price <= 30000).length
 		},
 		{
 			label: 'Under €50k',
-			image: '/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp',
+			image: '/assets/images/body-type/normalized/body-suv-transparent.webp',
 			count: cars.filter((car) => car.price > 30000 && car.price <= 50000).length
 		},
 		{
 			label: 'Over €50k',
-			image: '/variant-3/assets/images/body-type/normalized/body-coupe-transparent.webp',
+			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
 			count: cars.filter((car) => car.price > 50000).length
 		},
 		{
 			label: 'Open budget',
-			image: '/variant-3/assets/images/budget/open-budget-supercar-v2.webp',
+			image: '/assets/images/budget/open-budget-supercar-v2.webp',
 			count: cars.length
 		}
 	];
@@ -165,7 +154,7 @@ export function load() {
 				body: bodyLabels[body] ?? body,
 				count,
 				image:
-					bodyImagePaths[body] ?? '/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp'
+					bodyImagePaths[body] ?? '/assets/images/body-type/normalized/body-suv-transparent.webp'
 			}))
 	};
 }

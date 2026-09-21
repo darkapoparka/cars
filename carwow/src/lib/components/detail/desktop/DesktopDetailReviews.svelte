@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightReviewAverage, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
 	import {
@@ -10,10 +13,10 @@
 </script>
 
 <div class="mb-16 flex items-center justify-between gap-16">
-	<h2 class="h4">Отзиви от клиенти</h2>
+	<h2 class="h4">{i18n.t('copy.93b3d88de23a')}</h2>
 </div>
 
-<p class="text-secondary mb-20">{daynightReviewDisclosure}</p>
+<p class="text-secondary mb-20">{i18n.text(daynightReviewDisclosure)}</p>
 
 <div class="rating-box mb-40">
 	<div class="rating-box__content">
@@ -23,7 +26,7 @@
 				<div class="rating-box__stars">
 					{#each desktopDetailStarIndexes as starIndex (starIndex)}
 						<img
-							src="/variant-3/assets/icons/star-2.svg"
+							src={i18n.asset('/assets/icons/star-2.svg')}
 							alt=""
 							aria-hidden="true"
 							data-daynight-img="1"
@@ -32,7 +35,9 @@
 						/>
 					{/each}
 				</div>
-				<p class="rating-box__count">({daynightSite.reviewCountLabel})</p>
+				<p class="rating-box__count">
+					({i18n.t('reviews.sampleCount', { count: daynightSite.reviewCountLabel.split(' ')[0] })})
+				</p>
 			</div>
 		</div>
 		<div class="rating-box__distribution">
@@ -41,7 +46,7 @@
 					<p class="rating-box__bar-label">
 						<span class="text">{rating.label}</span>
 						<img
-							src="/variant-3/assets/icons/star-2.svg"
+							src={i18n.asset('/assets/icons/star-2.svg')}
 							alt=""
 							aria-hidden="true"
 							data-daynight-img="1"
@@ -57,7 +62,9 @@
 			{/each}
 		</div>
 		<div class="rating-box__button">
-			<a href="#reviewForm" class="sa-cta-compact sa-cta sa-cta-primary"> Добавете отзив </a>
+			<a href="#reviewForm" class="sa-cta-compact sa-cta sa-cta-primary">
+				{i18n.t('copy.e096f5f9573d')}
+			</a>
 		</div>
 	</div>
 </div>
@@ -69,8 +76,8 @@
 				{#if review.avatar}
 					<div class="comment-box__avatar">
 						<img
-							src={review.avatar}
-							alt={review.name}
+							src={i18n.asset(review.avatar)}
+							alt={i18n.text(review.name)}
 							data-daynight-img="1"
 							decoding="async"
 							loading="lazy"
@@ -79,15 +86,15 @@
 				{/if}
 				<div>
 					<div class="text-secondary mb-8 flex items-center gap-4">
-						<p class="h5">{review.name}</p>
+						<p class="h5">{i18n.text(review.name)}</p>
 						<span class="text-secondary text-sm">-</span>
-						<span class="text-secondary text-sm">{review.label}</span>
+						<span class="text-secondary text-sm">{i18n.text(review.label)}</span>
 					</div>
 
 					<div class="flex items-center">
 						{#each desktopDetailStarIndexes.slice(0, review.rating) as starIndex (starIndex)}
 							<img
-								src="/variant-3/assets/icons/star-2.svg"
+								src={i18n.asset('/assets/icons/star-2.svg')}
 								alt=""
 								aria-hidden="true"
 								data-daynight-img="1"
@@ -98,26 +105,26 @@
 					</div>
 				</div>
 			</div>
-			<p class="text-secondary">{review.text}</p>
+			<p class="text-secondary">{i18n.text(review.text)}</p>
 		</div>
 	{/each}
 
 	<p>
-		<a href={resolve('/reviews')} class="text-underline font-weight-600 capitalize">
-			{daynightSite.reviewLinkLabel}
+		<a href={i18n.href(resolve('/reviews'))} class="text-underline font-weight-600 capitalize">
+			{i18n.t('reviews.viewSamples', { count: daynightSite.reviewCountLabel.split(' ')[0] })}
 		</a>
 	</p>
 </div>
 
 <div id="reviewForm">
-	<h2 class="h4 mb-8 capitalize">Добавете отзив</h2>
-	<p class="mb-20">Изпратете мнение през формата за контакт. Публикуването се уточнява с екипа.</p>
+	<h2 class="h4 mb-8 capitalize">{i18n.t('copy.e096f5f9573d')}</h2>
+	<p class="mb-20">{i18n.t('copy.36ae34022405')}</p>
 
 	<a
-		href={resolve('/contact?intent=review')}
+		href={i18n.href(resolve('/contact?intent=review'))}
 		class="sa-cta-compact sa-cta sa-cta-primary"
-		title="Отзивите се потвърждават от екипа преди публикуване."
+		title={i18n.t('copy.da2ef4dff29f')}
 	>
-		Изпратете отзив
+		{i18n.t('copy.64468baea324')}
 	</a>
 </div>

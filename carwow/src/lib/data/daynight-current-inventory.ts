@@ -33,7 +33,7 @@ export const currentDayNightListings = [
     "transmission": "Автоматик",
     "body": "Купе",
     "features": [],
-    "image": "/variant-3/dealer/inventory-1.webp"
+    "image": "/dealer/inventory-1.webp"
   },
   {
     "id": "is-1002",
@@ -50,7 +50,7 @@ export const currentDayNightListings = [
     "transmission": "Автоматик",
     "body": "SUV",
     "features": [],
-    "image": "/variant-3/dealer/inventory-2.webp"
+    "image": "/dealer/inventory-2.webp"
   },
   {
     "id": "is-1003",
@@ -67,7 +67,7 @@ export const currentDayNightListings = [
     "transmission": "Автоматик",
     "body": "Седан",
     "features": [],
-    "image": "/variant-3/dealer/inventory-3.webp"
+    "image": "/dealer/inventory-3.webp"
   },
   {
     "id": "is-1004",
@@ -84,7 +84,7 @@ export const currentDayNightListings = [
     "transmission": "Автоматик",
     "body": "SUV",
     "features": [],
-    "image": "/variant-3/dealer/inventory-4.webp"
+    "image": "/dealer/inventory-4.webp"
   },
   {
     "id": "is-1005",
@@ -101,7 +101,7 @@ export const currentDayNightListings = [
     "transmission": "Автоматик",
     "body": "Седан",
     "features": [],
-    "image": "/variant-3/dealer/inventory-5.webp"
+    "image": "/dealer/inventory-5.webp"
   },
   {
     "id": "is-1006",
@@ -118,6 +118,6 @@ export const currentDayNightListings = [
     "transmission": "Автоматик",
     "body": "Хечбек",
     "features": [],
-    "image": "/variant-3/dealer/inventory-6.webp"
+    "image": "/dealer/inventory-6.webp"
   }
 ] satisfies CurrentDayNightListing[];

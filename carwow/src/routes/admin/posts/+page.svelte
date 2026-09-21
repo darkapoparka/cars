@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import Edit3 from '@lucide/svelte/icons/edit-3';
 	import ExternalLink from '@lucide/svelte/icons/external-link';
 	import MoreHorizontal from '@lucide/svelte/icons/more-horizontal';

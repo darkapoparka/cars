@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
 	import BarChart3 from '@lucide/svelte/icons/bar-chart-3';
 	import Gauge from '@lucide/svelte/icons/gauge';

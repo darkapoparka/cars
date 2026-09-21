@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { getDayNightVehicleCondition } from '$lib/data/daynight-vehicles';
 	import { getOptionalGarageContext } from '$lib/state/garage.svelte';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
@@ -45,7 +48,7 @@
 >
 	<div class="top">
 		{#if badge}
-			<p class="{badgeClass} highlight text-white">{badge}</p>
+			<p class="{badgeClass} highlight text-white">{i18n.spec(badge)}</p>
 		{:else}
 			<p></p>
 		{/if}
@@ -55,9 +58,9 @@
 				class={['daynight-card-compare', { 'is-active': isCompared }]}
 				aria-pressed={isCompared}
 				aria-label={isCompared
-					? `Премахни ${vehicle.shortTitle} от сравнение`
-					: `Добави ${vehicle.shortTitle} за сравнение`}
-				title={isCompared ? 'Премахни от сравнение' : 'Добави за сравнение'}
+					? i18n.t('pattern.934f8811d407', { v0: vehicle.shortTitle })
+					: i18n.t('pattern.eb6671a2dbc8', { v0: vehicle.shortTitle })}
+				title={isCompared ? i18n.t('copy.5b40a58e1ce4') : i18n.t('copy.040cc31a724d')}
 				onclick={() => garage.toggleCompare(vehicle.slug)}
 			>
 				<svg
@@ -88,9 +91,9 @@
 				class={['heart', { 'is-active': isFavorite }]}
 				aria-pressed={isFavorite}
 				aria-label={isFavorite
-					? `Премахни ${vehicle.shortTitle} от любими`
-					: `Добави ${vehicle.shortTitle} в любими`}
-				title={isFavorite ? 'Премахни от любими' : 'Добави в любими'}
+					? i18n.t('pattern.b232837ea72c', { v0: vehicle.shortTitle })
+					: i18n.t('pattern.43ac23a14f61', { v0: vehicle.shortTitle })}
+				title={isFavorite ? i18n.t('copy.26b1f78b8a15') : i18n.t('copy.95edb020a66d')}
 				onclick={() => garage.toggleFavorite(vehicle.slug)}
 			>
 				<svg
@@ -117,26 +120,29 @@
 	</div>
 	<div class="bottom">
 		<p class="category text-white">
-			<a href={resolve('/inventory/[slug]', { slug: vehicle.slug })} class="text-xs text-white">
-				{vehicle.transmission}</a
+			<a
+				href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
+				class="text-xs text-white"
+			>
+				{i18n.spec(vehicle.transmission)}</a
 			>
 		</p>
 		<div class="flex items-center gap-[8px]">
 			<p class="category text-white uppercase">
-				<img src="/variant-3/assets/icons/picture.svg" alt="" aria-hidden="true" />
+				<img src={i18n.asset('/assets/icons/picture.svg')} alt="" aria-hidden="true" />
 				8
 			</p>
 			<p class="category text-white uppercase">
-				<img src="/variant-3/assets/icons/play.svg" alt="" aria-hidden="true" />
+				<img src={i18n.asset('/assets/icons/play.svg')} alt="" aria-hidden="true" />
 				1
 			</p>
 		</div>
 	</div>
 	<div class="image">
-		<a href={resolve('/inventory/[slug]', { slug: vehicle.slug })}>
+		<a href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}>
 			<img
 				class="card--img"
-				src={vehicle.image}
+				src={i18n.asset(vehicle.image)}
 				alt={vehicle.shortTitle}
 				loading="lazy"
 				decoding="async"
@@ -145,9 +151,13 @@
 	</div>
 	<div class="content">
 		<p class="h6 card-box__title mb-[4px]">
-			<a href={resolve('/inventory/[slug]', { slug: vehicle.slug })}>{vehicle.title}</a>
+			<a href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
+				>{vehicle.shortTitle}, {vehicle.year}, {i18n.spec(vehicle.fuel)}, {i18n.distance(
+					vehicle.mileage
+				)}</a
+			>
 		</p>
-		<p class="text-secondary clamp-1 clamp mb-[8px]">{vehicle.conditionLine}</p>
+		<p class="text-secondary clamp-1 clamp mb-[8px]">{i18n.spec(vehicle.conditionLine)}</p>
 		<VehicleMetaRow {vehicle} styleClass="style3 mb-[14px]" />
 		<p class="h6 card-box__price mb-[10px] flex items-center justify-between gap-[8px]">
 			<span class="daynight-card-price__value">{displayPrice}</span>

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	// Native 1:1 rebuild of the localized /compare (compare.html) main content:
 	// breadcrumb + heading + the vehicle comparison table. The compare LOGIC and data
 	// (garage-or-default trio, spec rows) are preserved verbatim — only the styling
@@ -9,17 +12,16 @@
 	// (--sa-*); template neutrals stay literal for an exact visual match. The legacy
 	// /assets chevron img is replaced with @lucide/svelte's ChevronRight, like FaqContent.
 
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { ChevronRight, GitCompare } from '@lucide/svelte';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import type { Car } from '$lib/data/daynight-vehicles';
 	import { resolveGarageVehicles, MAX_COMPARE_VEHICLES } from '$lib/utils/garage';
 	import GarageUnavailable from '$lib/components/shared/GarageUnavailable.svelte';
 	let { catalogue }: { catalogue: Car[] } = $props();
-	import { daynightSite } from '$lib/data/daynight-site';
 	import { getGarageContext } from '$lib/state/garage.svelte';
 
-	type AssetHref = `/variant-3/assets/${string}`;
+	type AssetHref = `/assets/${string}`;
 
 	const garage = getGarageContext();
 
@@ -31,20 +33,24 @@
 	}
 
 	function icon(name: string): AssetHref {
-		return `/variant-3/assets/icons/${name}.svg`;
+		return `/assets/icons/${name}.svg`;
 	}
 
 	const specRows: { icon: string; label: string; value: (vehicle: Car) => string }[] = [
-		{ icon: 'mileage', label: 'Пробег', value: (vehicle) => vehicle.mileage },
-		{ icon: 'years', label: 'Година', value: (vehicle) => String(vehicle.year) },
-		{ icon: 'fuel', label: 'Гориво', value: (vehicle) => vehicle.fuel },
-		{ icon: 'transmission', label: 'Скоростна кутия', value: (vehicle) => vehicle.transmission },
-		{ icon: 'auto', label: 'Каросерия', value: (vehicle) => vehicle.body },
-		{ icon: 'engine', label: 'Двигател', value: (vehicle) => vehicle.engine },
-		{ icon: 'icon-gauge', label: 'Мощност', value: (vehicle) => vehicle.power },
-		{ icon: 'color', label: 'Цвят', value: (vehicle) => vehicle.color },
-		{ icon: 'location', label: 'Локация', value: () => daynightSite.location },
-		{ icon: 'QrCode', label: 'Реф. номер', value: (vehicle) => vehicle.lot }
+		{ icon: 'mileage', label: i18n.t('copy.69cc064f0636'), value: (vehicle) => vehicle.mileage },
+		{ icon: 'years', label: i18n.t('copy.38867d861fa9'), value: (vehicle) => String(vehicle.year) },
+		{ icon: 'fuel', label: i18n.t('copy.b52d6c364219'), value: (vehicle) => vehicle.fuel },
+		{
+			icon: 'transmission',
+			label: i18n.t('copy.27a8a60bdb2f'),
+			value: (vehicle) => vehicle.transmission
+		},
+		{ icon: 'auto', label: i18n.t('copy.45e7e8a38730'), value: (vehicle) => vehicle.body },
+		{ icon: 'engine', label: i18n.t('copy.bc63cd3bdaa8'), value: (vehicle) => vehicle.engine },
+		{ icon: 'icon-gauge', label: i18n.t('copy.a5d8dfdda082'), value: (vehicle) => vehicle.power },
+		{ icon: 'color', label: i18n.t('copy.4d96be14813d'), value: (vehicle) => vehicle.color },
+		{ icon: 'location', label: i18n.t('copy.cb9410729d40'), value: () => i18n.dealer('address') },
+		{ icon: 'QrCode', label: i18n.t('copy.405a5e6c8370'), value: (vehicle) => vehicle.lot }
 	];
 </script>
 
@@ -55,12 +61,12 @@
 	/>
 	<DesktopYellowRouteHero
 		headingId="compare-route-title"
-		title="Сравнение на автомобили"
-		copy="Сравнете пробег, гориво, оборудване и цена преди оглед."
+		title={i18n.t('copy.dac519153648')}
+		copy={i18n.t('copy.3b5a987fafed')}
 		panel="light"
-		primaryLabel="Добави автомобили"
+		primaryLabel={i18n.text('Добави автомобили')}
 		primaryHref="/inventory"
-		secondaryLabel="Запазени автомобили"
+		secondaryLabel={i18n.t('copy.2ff1cef08851')}
 		secondaryHref="/favorites"
 	/>
 	<!-- breadcrumb -->
@@ -68,19 +74,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>{i18n.t('copy.bb593f6846bd')}</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Сравнение</span>
+					<span>{i18n.t('copy.c2a9007babf2')}</span>
 				</li>
 			</ul>
 		</div>
@@ -92,49 +98,51 @@
 		<div class="tf-spacing-style3"></div>
 
 		<div class="container">
-			<h1 class="mb-12 text-center capitalize">Сравнение на автомобили</h1>
+			<h1 class="mb-12 text-center capitalize">{i18n.t('copy.dac519153648')}</h1>
 			<p class="text-secondary h7 line-height-28 mb-40 text-center">
-				Сравнете пробег, гориво, оборудване и цена преди оглед.
+				{i18n.t('copy.3b5a987fafed')}
 			</p>
 
 			{#if vehicles.length}
-				<ul class="compare-selection" aria-label="Управление на избраните автомобили">
+				<ul class="compare-selection" aria-label={i18n.t('copy.e3f3835faafd')}>
 					{#each vehicles as vehicle (vehicle.slug)}
 						<li>
-							<a href={resolve(vehicleHref(vehicle.slug))}>{vehicle.shortTitle}</a>
+							<a href={i18n.href(resolve(vehicleHref(vehicle.slug)))}>{vehicle.shortTitle}</a>
 							<div>
 								<button
 									type="button"
-									aria-label={`Премахни ${vehicle.shortTitle}`}
-									onclick={() => garage.toggleCompare(vehicle.slug)}>Премахни</button
+									aria-label={i18n.t('pattern.7f568ba51064', { v0: vehicle.shortTitle })}
+									onclick={() => garage.toggleCompare(vehicle.slug)}
+									>{i18n.t('copy.ef021211270d')}</button
 								>
 								<a
-									href={resolve('/inventory')}
+									href={i18n.href(resolve('/inventory'))}
 									onclick={() => garage.toggleCompare(vehicle.slug)}
-									aria-label={`Замени ${vehicle.shortTitle}`}>Замени</a
+									aria-label={i18n.t('pattern.63909f303fec', { v0: vehicle.shortTitle })}
+									>{i18n.t('copy.3f8f4fc6cbe8')}</a
 								>
 							</div>
 						</li>
 					{/each}
 				</ul>
 				<p class="compare-scroll-hint" id="compare-scroll-hint">
-					Плъзнете таблицата наляво и надясно, за да видите всички автомобили.
+					{i18n.t('copy.a59396f743f1')}
 				</p>
 				{#if vehicles.length < MAX_COMPARE_VEHICLES}<a
 						class="compare-add"
-						href={resolve('/inventory')}>Добави автомобил за сравнение</a
+						href={i18n.href(resolve('/inventory'))}>{i18n.t('copy.f7a160fcd3ab')}</a
 					>{/if}
 				<!-- Keyboard users must be able to focus and scroll this overflow region. -->
 				<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 				<div
 					class="card-details"
 					role="region"
-					aria-label="Таблица за сравнение"
+					aria-label={i18n.t('copy.ecfbae1d7de0')}
 					aria-describedby="compare-scroll-hint"
 					tabindex="0"
 				>
 					<table class="card-details--table" style:--vehicle-count={vehicles.length}>
-						<caption class="sr-only">Характеристики на избраните автомобили</caption>
+						<caption class="sr-only">{i18n.t('copy.24897c7372e5')}</caption>
 						<tbody>
 							<tr>
 								<td></td>
@@ -142,18 +150,20 @@
 									<td>
 										<div class="top relative">
 											<a
-												href={resolve(vehicleHref(vehicle.slug))}
-												aria-label={`Виж ${vehicle.shortTitle}`}
+												href={i18n.href(resolve(vehicleHref(vehicle.slug)))}
+												aria-label={i18n.t('pattern.db06e7c6718a', { v0: vehicle.shortTitle })}
 											>
 												<img
 													class="radius-16 image mb-10"
-													src={vehicle.image}
+													src={i18n.asset(vehicle.image)}
 													alt={vehicle.shortTitle}
 													loading="lazy"
 												/>
 											</a>
 											<p class="h4 text-center">
-												<a href={resolve(vehicleHref(vehicle.slug))}>{vehicle.shortTitle}</a>
+												<a href={i18n.href(resolve(vehicleHref(vehicle.slug)))}
+													>{vehicle.shortTitle}</a
+												>
 											</p>
 											<p class="text-secondary text-center">{vehicle.priceEur}</p>
 										</div>
@@ -164,12 +174,12 @@
 								<tr>
 									<td>
 										<div class={['gap-8', 'flex', 'items-center']}>
-											<img src={icon(row.icon)} alt="" aria-hidden="true" />
+											<img src={i18n.asset(icon(row.icon))} alt="" aria-hidden="true" />
 											<span>{row.label}:</span>
 										</div>
 									</td>
 									{#each vehicles as vehicle (vehicle.slug)}
-										<td>{row.value(vehicle)}</td>
+										<td>{i18n.stock(row.value(vehicle))}</td>
 									{/each}
 								</tr>
 							{/each}
@@ -179,10 +189,11 @@
 			{:else}
 				<div class="compare-empty" role="status">
 					<div class="compare-empty__mark" aria-hidden="true"><GitCompare size={26} /></div>
-					<h3>Няма избрани автомобили</h3>
-					<p>Добавете до 3 автомобила от наличността, за да сравните параметрите им.</p>
-					<a class="compare-empty__cta sa-cta sa-cta-primary" href={resolve('/inventory')}
-						>Разгледай автомобилите</a
+					<h3>{i18n.t('copy.7bd5fc2ea3e4')}</h3>
+					<p>{i18n.t('copy.1a065b83e2b2')}</p>
+					<a
+						class="compare-empty__cta sa-cta sa-cta-primary"
+						href={i18n.href(resolve('/inventory'))}>{i18n.t('copy.c79b6820c344')}</a
 					>
 				</div>
 			{/if}

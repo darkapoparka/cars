@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import DesktopVehicleActions from '$lib/components/shared/DesktopVehicleActions.svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { fromAction } from 'svelte/attachments';
 	import { getDayNightVehicleCondition, type DayNightVehicle } from '$lib/data/daynight-vehicles';
 	import {
@@ -35,17 +38,17 @@
 	data-daynight-year={vehicle.year}
 >
 	<div class="daynight-home-inventory-card__top">
-		<p class="daynight-home-inventory-card__status">{vehicle.badges[0] ?? 'VIP'}</p>
+		<p class="daynight-home-inventory-card__status">{i18n.spec(vehicle.badges[0] ?? 'VIP')}</p>
 		<DesktopVehicleActions slug={vehicle.slug} title={vehicle.shortTitle} />
 	</div>
 	<div class="daynight-home-inventory-card__media">
 		<a
-			href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
-			aria-label={`Виж ${vehicle.shortTitle}`}
+			href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
+			aria-label={i18n.t('pattern.db06e7c6718a', { v0: vehicle.shortTitle })}
 		>
 			<img
 				class="daynight-home-inventory-card__image"
-				src={desktopOnlyImagePlaceholder}
+				src={i18n.asset(desktopOnlyImagePlaceholder)}
 				srcset={desktopOnlySrcset(vehicle.image, 900)}
 				sizes={desktopOnlySizes('25vw')}
 				alt={vehicle.shortTitle}
@@ -58,15 +61,16 @@
 		<div class="daynight-home-inventory-card__badges">
 			<p class="daynight-home-inventory-card__badge">
 				<a
-					href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
+					href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
 					class="daynight-home-inventory-card__badge-link"
-					aria-label={`${vehicle.transmission} - ${vehicle.shortTitle}`}>{vehicle.transmission}</a
+					aria-label={`${i18n.spec(vehicle.transmission)} - ${vehicle.shortTitle}`}
+					>{i18n.spec(vehicle.transmission)}</a
 				>
 			</p>
 			{#if visiblePhotoCount}
 				<div class="daynight-home-inventory-card__tag-row">
 					<p class="daynight-home-inventory-card__badge">
-						<img src="/variant-3/assets/icons/picture.svg" alt="" aria-hidden="true" />
+						<img src={i18n.asset('/assets/icons/picture.svg')} alt="" aria-hidden="true" />
 						{visiblePhotoCount}
 					</p>
 				</div>
@@ -75,30 +79,34 @@
 	</div>
 	<div class="daynight-home-inventory-card__content">
 		<p class="daynight-home-inventory-card__title">
-			<a href={resolve('/inventory/[slug]', { slug: vehicle.slug })} title={vehicle.title}
-				>{vehicle.shortTitle}</a
+			<a
+				href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
+				title={vehicle.shortTitle}>{vehicle.shortTitle}</a
 			>
 		</p>
 		<ul class="daynight-home-inventory-card__specs">
 			<li>
-				<img src="/variant-3/assets/icons/icon-gauge.svg" alt="" aria-hidden="true" /><span
-					>{vehicle.mileage}</span
+				<img src={i18n.asset('/assets/icons/icon-gauge.svg')} alt="" aria-hidden="true" /><span
+					>{i18n.distance(vehicle.mileage)}</span
 				>
 			</li>
 			<li>
-				<img src="/variant-3/assets/icons/calendar.svg" alt="" aria-hidden="true" /><span>{vehicle.year}</span
+				<img src={i18n.asset('/assets/icons/calendar.svg')} alt="" aria-hidden="true" /><span
+					>{vehicle.year}</span
 				>
 			</li>
 			<li>
-				<img src="/variant-3/assets/icons/gaspump.svg" alt="" aria-hidden="true" /><span>{vehicle.fuel}</span>
+				<img src={i18n.asset('/assets/icons/gaspump.svg')} alt="" aria-hidden="true" /><span
+					>{i18n.spec(vehicle.fuel)}</span
+				>
 			</li>
 		</ul>
 		<p class="daynight-home-inventory-card__price">
 			<span class="daynight-card-price__value">{vehicle.priceEur}</span>
 			<span class="daynight-card-price__meta"
-				><span class="daynight-card-price__monthly">{vehicle.monthly}</span><a
-					href={resolve('/financing')}
-					class="daynight-card-price__link">Финансиране</a
+				><span class="daynight-card-price__monthly">{i18n.spec(vehicle.monthly)}</span><a
+					href={i18n.href(resolve('/financing'))}
+					class="daynight-card-price__link">{i18n.t('copy.6e55eeb12cce')}</a
 				></span
 			>
 		</p>

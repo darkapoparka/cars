@@ -1,6 +1,10 @@
 <script lang="ts">
+	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { ChevronLeft, GitCompare, Heart, MapPin, PhoneCall, Share } from '@lucide/svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import DayNightSpecIcon, {
 		type DayNightSpecIconName
@@ -37,10 +41,10 @@
 	// Every supplied photo remains reachable; thumbnails load lazily.
 	const visiblePhotos = $derived(photos);
 	const specs = $derived<{ icon: DayNightSpecIconName; label: string; value: string }[]>([
-		{ icon: 'year', label: 'Година', value: String(vehicle.year) },
-		{ icon: 'mileage', label: 'Пробег', value: vehicle.mileage },
-		{ icon: 'fuel', label: 'Гориво', value: vehicle.fuel },
-		{ icon: 'transmission', label: 'Скорости', value: vehicle.transmission }
+		{ icon: 'year', label: i18n.t('copy.38867d861fa9'), value: String(vehicle.year) },
+		{ icon: 'mileage', label: i18n.t('copy.69cc064f0636'), value: vehicle.mileage },
+		{ icon: 'fuel', label: i18n.t('copy.b52d6c364219'), value: vehicle.fuel },
+		{ icon: 'transmission', label: i18n.t('copy.4172507e5ff2'), value: vehicle.transmission }
 	]);
 	const detailSpecs = $derived([
 		['Каросерия', vehicle.body],
@@ -50,9 +54,9 @@
 		['Лот', vehicle.lot]
 	]);
 	const tabs = [
-		{ key: 'info', label: 'Инфо' },
-		{ key: 'data', label: 'Данни' },
-		{ key: 'extras', label: 'Екстри' }
+		{ key: 'info', label: i18n.t('copy.3319b9b01f2a') },
+		{ key: 'data', label: i18n.t('copy.fe6c3e755371') },
+		{ key: 'extras', label: i18n.t('copy.03868a05f1d2') }
 	] as const;
 	const COLLAPSED_SNAP_RATIO = 0.58;
 	const FULL_SNAP_OFFSET = 52;
@@ -198,18 +202,18 @@
 	id="main-content"
 	tabindex="-1"
 	class="mobile-detail"
-	aria-label="Детайли за автомобил"
+	aria-label={i18n.t('copy.c8735abd6a36')}
 	style={mediaHeightPx === null ? undefined : `--pdp-media-h: ${mediaHeightPx}px`}
 >
 	<section
 		class="mobile-detail__media"
-		aria-label="Основна снимка"
+		aria-label={i18n.t('copy.541005550fd7')}
 		ontouchstart={handleMediaTouchStart}
 		ontouchend={handleMediaTouchEnd}
 	>
 		<img
 			class="mobile-detail__media-photo"
-			src={activePhotoSrc}
+			src={i18n.asset(activePhotoSrc)}
 			alt={vehicle.shortTitle}
 			decoding="async"
 			data-daynight-image-fallback
@@ -220,7 +224,9 @@
 		<div class="mobile-detail__topbar">
 			<a
 				class="mobile-detail__nav-button mobile-detail__nav-button--back"
-				href={resolve((returnToInventory ?? '/inventory') as '/inventory' | `/inventory?${string}`)}
+				href={i18n.href(
+					resolve((returnToInventory ?? '/inventory') as '/inventory' | `/inventory?${string}`)
+				)}
 				onclick={(event) => {
 					if (
 						!returnToInventory ||
@@ -233,17 +239,18 @@
 					event.preventDefault();
 					window.history.back();
 				}}
-				aria-label="Назад към автомобили"
+				aria-label={i18n.t('copy.3757cafef939')}
 			>
 				<ChevronLeft size={22} strokeWidth={2.35} />
 			</a>
 			<div class="mobile-detail__topbar-right">
+				<LocaleTrigger />
 				<button
 					class="mobile-detail__nav-button mobile-detail__nav-button--save"
 					class:is-saved={isSaved}
 					type="button"
 					aria-pressed={isSaved}
-					aria-label={isSaved ? 'Премахни от запазени' : 'Запази'}
+					aria-label={isSaved ? i18n.t('copy.5ad0c819e20a') : i18n.t('copy.e2185951cab4')}
 					onclick={() => garage.toggleFavorite(vehicle.slug)}
 				>
 					<Heart size={19} strokeWidth={2.15} />
@@ -253,7 +260,7 @@
 					class:is-saved={isCompared}
 					type="button"
 					aria-pressed={isCompared}
-					aria-label={isCompared ? 'Премахни от сравнение' : 'Добави за сравнение'}
+					aria-label={isCompared ? i18n.t('copy.5b40a58e1ce4') : i18n.t('copy.040cc31a724d')}
 					onclick={() => garage.toggleCompare(vehicle.slug)}
 				>
 					<GitCompare size={19} strokeWidth={2.15} />
@@ -261,7 +268,7 @@
 				<button
 					class="mobile-detail__nav-button mobile-detail__nav-button--share"
 					type="button"
-					aria-label="Сподели"
+					aria-label={i18n.t('copy.afaad4bb15ea')}
 					onclick={shareVehicle}
 				>
 					<Share size={19} strokeWidth={2.15} />
@@ -270,17 +277,17 @@
 		</div>
 
 		{#if photos.length > 1}
-			<div class="mobile-detail__thumbs" aria-label="Снимки">
+			<div class="mobile-detail__thumbs" aria-label={i18n.t('copy.c241f6db6702')}>
 				{#each visiblePhotos as photo, index (photo)}
 					<button
 						type="button"
 						class:is-active={index === activePhoto}
-						aria-label={`Снимка ${index + 1}`}
+						aria-label={i18n.t('pattern.3618c715ff4b', { v0: index + 1 })}
 						aria-pressed={index === activePhoto}
 						onclick={() => (activePhoto = index)}
 					>
 						<img
-							src={photo}
+							src={i18n.asset(photo)}
 							alt=""
 							loading="lazy"
 							decoding="async"
@@ -309,7 +316,7 @@
 	>
 		<Drawer.Content
 			class="mobile-detail-sheet"
-			aria-label="Информация за автомобила"
+			aria-label={i18n.t('copy.16bd59020ef1')}
 			data-expanded={sheetExpanded}
 			data-full={sheetFull}
 		>
@@ -319,20 +326,20 @@
 
 			<header class="mobile-detail-sheet__head">
 				<span class="mobile-detail-sheet__brand">{vehicle.brand}</span>
-				<small class="mobile-detail-sheet__price-monthly">{vehicle.monthly}</small>
+				<small class="mobile-detail-sheet__price-monthly">{i18n.spec(vehicle.monthly)}</small>
 				<h1 class="mobile-detail-sheet__title">{vehicle.shortTitle}</h1>
 				<div class="mobile-detail-sheet__price">
 					<strong class="mobile-detail-sheet__price-eur">{vehicle.priceEur}</strong>
-					<span class="mobile-detail-sheet__price-bgn">{vehicle.priceBgn}</span>
+					<span class="mobile-detail-sheet__price-bgn">{i18n.stock(vehicle.priceBgn)}</span>
 				</div>
 			</header>
 
 			<div class="mobile-detail-sheet__actions">
-				<a class="is-primary" href={phoneHref}>
+				<a class="is-primary" href={i18n.href(phoneHref)}>
 					<PhoneCall size={18} strokeWidth={2.4} />
-					Обади се
+					{i18n.t('copy.d40e5119596a')}
 				</a>
-				<a class="is-viber" href={viberHref}>
+				<a class="is-viber" href={i18n.href(viberHref)}>
 					<svg
 						class="mobile-detail-sheet__viber-mark"
 						viewBox="0 0 72.215 76.207"
@@ -368,14 +375,14 @@
 							/>
 						</g>
 					</svg>
-					Viber
+					{i18n.t('copy.2db2c27ad99b')}
 				</a>
 			</div>
 
 			<div
 				class="mobile-detail-tabs"
 				role="tablist"
-				aria-label="Детайли"
+				aria-label={i18n.t('copy.9fe99394ade9')}
 				data-active-tab={activeTab}
 			>
 				{#each tabs as tab (tab.key)}
@@ -390,7 +397,7 @@
 						onkeydown={(event) => handleTabKeydown(event, tab.key)}
 						onclick={() => selectTab(tab.key)}
 					>
-						<span class="mobile-detail-tabs__label">{tab.label}</span>
+						<span class="mobile-detail-tabs__label">{i18n.text(tab.label)}</span>
 					</button>
 				{/each}
 			</div>
@@ -405,60 +412,60 @@
 			>
 				{#if activeTab === 'info'}
 					<section class="mobile-detail__section">
-						<h2>Описание</h2>
-						<p class="mobile-detail__section-lead">{vehicle.conditionLine}</p>
-						<p>{vehicle.description.replace(vehicle.conditionLine, '').trim()}</p>
+						<h2>{i18n.t('copy.b3680f2cba5f')}</h2>
+						<p class="mobile-detail__section-lead">{i18n.spec(vehicle.conditionLine)}</p>
+						<p>{i18n.vehicleDescription(vehicle)}</p>
 					</section>
 				{:else if activeTab === 'data'}
-					<div class="mobile-detail__spec-grid" aria-label="Основни данни">
+					<div class="mobile-detail__spec-grid" aria-label={i18n.t('copy.e802379d67a7')}>
 						{#each specs as spec (spec.label)}
 							<div>
 								<span class="mobile-detail__spec-icon">
 									<DayNightSpecIcon name={spec.icon} size={18} />
 								</span>
-								<span>{spec.label}</span>
-								<strong>{spec.value}</strong>
+								<span>{i18n.text(spec.label)}</span>
+								<strong>{i18n.stock(spec.value)}</strong>
 							</div>
 						{/each}
 					</div>
 
 					<section class="mobile-detail__section">
-						<h2>Детайли</h2>
+						<h2>{i18n.t('copy.9fe99394ade9')}</h2>
 						<dl>
 							{#each detailSpecs as [label, value] (label)}
 								<div>
-									<dt>{label}</dt>
-									<dd>{value}</dd>
+									<dt>{i18n.text(label)}</dt>
+									<dd>{i18n.stock(value)}</dd>
 								</div>
 							{/each}
 						</dl>
 					</section>
 				{:else if activeTab === 'extras'}
 					<section class="mobile-detail__section">
-						<h2>Екстри</h2>
+						<h2>{i18n.t('copy.03868a05f1d2')}</h2>
 						<ul>
 							{#each vehicle.features as feature (feature)}
-								<li>{feature}</li>
+								<li>{i18n.stock(feature)}</li>
 							{/each}
 						</ul>
 					</section>
 				{/if}
 
 				<div class="mobile-detail-sheet__offer">
-					<strong>{daynightSite.shortName} предлага</strong>
+					<strong>{daynightSite.shortName} {i18n.t('copy.141175ab8799')}</strong>
 					<ul class="mobile-detail-sheet__offer-list">
-						<li>Финансиране и лизинг</li>
-						<li>Бартер и замяна</li>
-						<li>Съдействие с документите</li>
-						<li>Оглед в {daynightSite.city}</li>
+						<li>{i18n.t('copy.3b22026080de')}</li>
+						<li>{i18n.t('copy.a9ed6f93af52')}</li>
+						<li>{i18n.t('copy.7b866172a592')}</li>
+						<li>{i18n.t('copy.854a88fc921d')} {i18n.dealer('city')}</li>
 					</ul>
 				</div>
 
-				<a class="mobile-detail-sheet__dealer" href={resolve('/contact')}>
+				<a class="mobile-detail-sheet__dealer" href={i18n.href(resolve('/contact'))}>
 					<MapPin size={17} strokeWidth={2.3} />
 					<div>
 						<strong>{daynightSite.shortName}</strong>
-						<span>{daynightSite.mapLabel}</span>
+						<span>{daynightSite.shortName}, {i18n.dealer('address')}</span>
 					</div>
 				</a>
 			</div>
@@ -468,7 +475,7 @@
 	{#if garage.formMessage}
 		<div class="mobile-detail__toast" role="alert">{garage.formMessage}</div>
 	{:else if shareState}
-		<div class="mobile-detail__toast" role="status">{shareState}</div>
+		<div class="mobile-detail__toast" role="status">{i18n.text(shareState)}</div>
 	{/if}
 </main>
 
@@ -549,6 +556,11 @@
 		pointer-events: none;
 	}
 
+	.mobile-detail__topbar-right :global(.cars-locale-trigger) {
+		background: var(--sa-surface);
+		color: var(--sa-ink);
+		pointer-events: auto;
+	}
 	.mobile-detail__topbar-right {
 		display: flex;
 		align-items: center;

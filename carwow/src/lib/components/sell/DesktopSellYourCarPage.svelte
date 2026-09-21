@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import {
 		ArrowRight,
@@ -11,7 +14,7 @@
 		KeyRound
 	} from '@lucide/svelte';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
@@ -82,7 +85,7 @@
 	let sellSubmitState = $state<SellSubmitState>('idle');
 	let sellSubmitMessage = $state('');
 
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const sellErrorMessage = i18n.t('pattern.221e4bec1477', { v0: daynightSite.phoneLabel });
 
 	const leadPath = $derived.by((): SellRequestHref => {
 		const params = new SvelteURLSearchParams();
@@ -149,21 +152,21 @@
 	}
 </script>
 
-<main id="main-content" tabindex="-1" class="desktop-sell" aria-label="Продай или замени автомобил">
+<main id="main-content" tabindex="-1" class="desktop-sell" aria-label={i18n.t('copy.16f6e02ba3a6')}>
 	<DesktopYellowRouteHero
 		sectionId="sell-intake"
 		headingId="daynight-sell-title"
-		title="Продай автомобила си"
+		title={i18n.t('copy.42b0d511b828')}
 		panel="light"
 		compact
 	>
 		<div class="sell-intake-card">
-			<p>Продажба или бартер? Изпрати данните за автомобила и ще се свържем с теб за оценка.</p>
+			<p>{i18n.t('copy.2366c40c8e45')}</p>
 			<a
 				class="sell-action desktop-primary-action"
-				href={resolve(leadPath)}
+				href={i18n.href(resolve(leadPath))}
 				onclick={openValuation}
-				aria-haspopup="dialog">Заяви оценка <ArrowRight size={18} /></a
+				aria-haspopup="dialog">{i18n.t('copy.d915896778d0')} <ArrowRight size={18} /></a
 			>
 		</div>
 	</DesktopYellowRouteHero>
@@ -175,11 +178,11 @@
 		onkeydown={handleModalKeydown}
 	>
 		<div class="sell-modal__heading">
-			<h2 id="sell-modal-title">Заявка за оценка</h2>
+			<h2 id="sell-modal-title">{i18n.t('copy.f5b4c3abf039')}</h2>
 			<button
 				class="sell-modal__close"
 				type="button"
-				aria-label="Затвори"
+				aria-label={i18n.t('copy.1ef1a425356f')}
 				onclick={() => valuationDialog?.close()}><X size={22} /></button
 			>
 		</div>
@@ -192,14 +195,14 @@
 		>
 			<div class="desktop-sell-form__top">
 				<div class="desktop-sell-form__mode">
-					<div class="desktop-sell-form__switch" aria-label="Начин на въвеждане">
+					<div class="desktop-sell-form__switch" aria-label={i18n.t('copy.b440f50af2be')}>
 						<button
 							type="button"
 							class={[intakeMode === 'plate' && 'active']}
 							aria-pressed={intakeMode === 'plate'}
 							onclick={() => (intakeMode = 'plate')}
 						>
-							Рег. номер
+							{i18n.t('copy.d0668ae19a5f')}
 						</button>
 						<button
 							type="button"
@@ -207,7 +210,7 @@
 							aria-pressed={intakeMode === 'vin'}
 							onclick={() => (intakeMode = 'vin')}
 						>
-							VIN
+							{i18n.t('copy.5e0211b12d1e')}
 						</button>
 					</div>
 				</div>
@@ -215,46 +218,68 @@
 
 			<div class="desktop-sell-form__grid">
 				<label class="desktop-sell-field desktop-sell-field--wide">
-					<span>{intakeMode === 'plate' ? 'Регистрационен номер' : 'VIN номер'}</span>
+					<span
+						>{intakeMode === 'plate'
+							? i18n.t('copy.cabeddcf59bc')
+							: i18n.t('copy.5b86a75cae06')}</span
+					>
 					{#if intakeMode === 'plate'}
 						<input
+							{@attach i18n.validation}
 							name="plate"
 							type="text"
 							bind:value={plate}
-							placeholder="PB 1234 AB"
+							placeholder={i18n.t('copy.2f42adde453e')}
 							autocomplete="off"
 						/>
 					{:else}
 						<input
+							{@attach i18n.validation}
 							name="vin"
 							type="text"
 							bind:value={vin}
-							placeholder="17 символа VIN"
+							placeholder={i18n.t('copy.541194c2c29b')}
 							autocomplete="off"
 						/>
 					{/if}
 				</label>
 				<label class="desktop-sell-field">
-					<span>Марка</span>
-					<input name="make" type="text" bind:value={make} placeholder="BMW" autocomplete="off" />
-				</label>
-				<label class="desktop-sell-field">
-					<span>Модел</span>
+					<span>{i18n.t('copy.b7fccee005ae')}</span>
 					<input
-						name="model"
+						{@attach i18n.validation}
+						name="make"
 						type="text"
-						bind:value={model}
-						placeholder="320d"
+						bind:value={make}
+						placeholder={i18n.t('copy.c76b5628a9d1')}
 						autocomplete="off"
 					/>
 				</label>
 				<label class="desktop-sell-field">
-					<span>Година</span>
-					<input name="year" type="text" inputmode="numeric" bind:value={year} placeholder="2019" />
+					<span>{i18n.t('copy.37858c8efede')}</span>
+					<input
+						{@attach i18n.validation}
+						name="model"
+						type="text"
+						bind:value={model}
+						placeholder={i18n.t('copy.27834433ab09')}
+						autocomplete="off"
+					/>
 				</label>
 				<label class="desktop-sell-field">
-					<span>Километри</span>
+					<span>{i18n.t('copy.38867d861fa9')}</span>
 					<input
+						{@attach i18n.validation}
+						name="year"
+						type="text"
+						inputmode="numeric"
+						bind:value={year}
+						placeholder="2019"
+					/>
+				</label>
+				<label class="desktop-sell-field">
+					<span>{i18n.t('copy.02bfe7db4ca8')}</span>
+					<input
+						{@attach i18n.validation}
 						name="mileage"
 						type="text"
 						inputmode="numeric"
@@ -263,8 +288,9 @@
 					/>
 				</label>
 				<label class="desktop-sell-field desktop-sell-field--wide">
-					<span>Телефон за връзка *</span>
+					<span>{i18n.t('copy.4b1bbe552018')}</span>
 					<input
+						{@attach i18n.validation}
 						name="phone"
 						type="tel"
 						bind:value={phone}
@@ -275,8 +301,14 @@
 				</label>
 
 				<label class="desktop-sell-honeypot" aria-hidden="true">
-					<span>Компания</span>
-					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
+					<span>{i18n.t('copy.64d92044a1ff')}</span>
+					<input
+						{@attach i18n.validation}
+						type="text"
+						tabindex="-1"
+						autocomplete="off"
+						bind:value={companyWebsite}
+					/>
 				</label>
 			</div>
 
@@ -287,7 +319,7 @@
 					role={sellSubmitState === 'error' ? 'alert' : 'status'}
 					aria-live="polite"
 				>
-					{sellSubmitMessage}
+					{i18n.text(sellSubmitMessage)}
 				</p>
 			{/if}
 			<div class="desktop-sell-form__footer">
@@ -296,7 +328,11 @@
 					type="submit"
 					disabled={sellSubmitState === 'submitting'}
 				>
-					<span>{sellSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати за оценка'}</span>
+					<span
+						>{sellSubmitState === 'submitting'
+							? i18n.t('copy.acfcd771108c')
+							: i18n.t('copy.52ebbadc0a49')}</span
+					>
 				</button>
 			</div>
 		</form>
@@ -304,7 +340,7 @@
 
 	<section class="sell-process sell-section" aria-labelledby="sell-process-title">
 		<div class="sell-container">
-			<h2 id="sell-process-title" class="sell-section-title">Как работи</h2>
+			<h2 id="sell-process-title" class="sell-section-title">{i18n.t('copy.4dbb828642ef')}</h2>
 			<ol class="sell-steps">
 				{#each desktopSellProcessSteps as step, index (step.title)}
 					{@const StepIcon = processIcons[index]}
@@ -312,8 +348,8 @@
 						<div class="sell-step__marker" aria-hidden="true">
 							<StepIcon size={32} strokeWidth={1.8} />
 						</div>
-						<h3>{step.title}</h3>
-						<p>{step.copy}</p>
+						<h3>{i18n.text(step.title)}</h3>
+						<p>{i18n.text(step.copy)}</p>
 					</li>
 				{/each}
 			</ol>
@@ -323,23 +359,26 @@
 	<section class="sell-benefits" aria-labelledby="sell-benefits-title">
 		<div class="sell-container sell-benefits__layout">
 			<div class="sell-benefits__content">
-				<h2 id="sell-benefits-title">Продажба<br />или бартер.</h2>
+				<h2 id="sell-benefits-title">
+					{i18n.t('copy.cd439691f0b5')}<br />{i18n.t('copy.eaee03477c62')}
+				</h2>
 				<p class="sell-benefits__copy">
-					Продай автомобила си или го замени с модел от нашата наличност. Оценяваме състоянието му и
-					ти съдействаме с документите.
+					{i18n.t('copy.8ba53636a71e')}
 				</p>
 				<div class="sell-benefits__actions">
 					<DesktopBrowseLink
-						href={resolve('/inventory')}
-						label="Избери следващия автомобил"
+						href={i18n.href(resolve('/inventory'))}
+						label={i18n.t('copy.81babd3cb409')}
 						tone="dark"
 					/>
 				</div>
 			</div>
 			<img
 				class="sell-benefits__image"
-				src={resolve(
-					'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp'
+				src={i18n.asset(
+					resolve(
+						'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp'
+					)
 				)}
 				alt=""
 				width="1400"
@@ -351,12 +390,14 @@
 
 	<section class="sell-faq sell-section" aria-labelledby="sell-faq-title">
 		<div class="sell-container sell-faq__content">
-			<h2 id="sell-faq-title" class="sell-section-title">Често задавани въпроси</h2>
+			<h2 id="sell-faq-title" class="sell-section-title">{i18n.t('copy.6a4ec0f53189')}</h2>
 			<div class="sell-faq__items">
 				{#each desktopSellFaqItems as item (item.question)}
 					<details name="sell-faq">
-						<summary><span>{item.question}</span><Plus size={20} strokeWidth={2} /></summary>
-						<p>{item.answer}</p>
+						<summary
+							><span>{i18n.text(item.question)}</span><Plus size={20} strokeWidth={2} /></summary
+						>
+						<p>{i18n.text(item.answer)}</p>
 					</details>
 				{/each}
 			</div>
@@ -365,15 +406,17 @@
 
 	<section class="sell-final" aria-labelledby="sell-final-title">
 		<div class="sell-container sell-final__layout">
-			<h2 id="sell-final-title" class="sell-section-title">Твоята следваща стъпка</h2>
+			<h2 id="sell-final-title" class="sell-section-title">{i18n.t('copy.7999a975d756')}</h2>
 			<div class="sell-final__actions">
 				<a
 					class="sell-action desktop-primary-action"
-					href={resolve(leadPath)}
+					href={i18n.href(resolve(leadPath))}
 					onclick={openValuation}
-					aria-haspopup="dialog">Заяви оценка <ArrowRight size={18} /></a
+					aria-haspopup="dialog">{i18n.t('copy.d915896778d0')} <ArrowRight size={18} /></a
 				>
-				<a class="sell-phone" href={phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
+				<a class="sell-phone" href={i18n.href(phoneHref)}
+					><Phone size={18} />{daynightSite.phoneLabel}</a
+				>
 			</div>
 		</div>
 	</section>

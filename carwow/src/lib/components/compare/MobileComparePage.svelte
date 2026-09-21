@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { GitCompare, Plus, X } from '@lucide/svelte';
 	import { getGarageContext } from '$lib/state/garage.svelte';
 	import type { Car } from '$lib/data/daynight-vehicles';
@@ -13,25 +17,28 @@
 	const selection = $derived(resolveGarageVehicles(garage.compare, catalogue));
 	const vehicles = $derived(selection.available);
 	const rows: { label: string; value: (car: Car) => string }[] = [
-		{ label: 'Година', value: (car) => String(car.year) },
-		{ label: 'Пробег', value: (car) => car.mileage },
-		{ label: 'Гориво', value: (car) => car.fuel },
-		{ label: 'Скорости', value: (car) => car.transmission },
-		{ label: 'Мощност', value: (car) => car.power },
-		{ label: 'Каросерия', value: (car) => car.body },
-		{ label: 'Двигател', value: (car) => car.engine },
-		{ label: 'Цвят', value: (car) => car.color }
+		{ label: i18n.t('copy.38867d861fa9'), value: (car) => String(car.year) },
+		{ label: i18n.t('copy.69cc064f0636'), value: (car) => car.mileage },
+		{ label: i18n.t('copy.b52d6c364219'), value: (car) => car.fuel },
+		{ label: i18n.t('copy.4172507e5ff2'), value: (car) => car.transmission },
+		{ label: i18n.t('copy.a5d8dfdda082'), value: (car) => car.power },
+		{ label: i18n.t('copy.45e7e8a38730'), value: (car) => car.body },
+		{ label: i18n.t('copy.bc63cd3bdaa8'), value: (car) => car.engine },
+		{ label: i18n.t('copy.4d96be14813d'), value: (car) => car.color }
 	];
 </script>
 
 <div class="mobile-compare">
 	<main id="main-content" tabindex="-1">
 		<div class="page-title">
-			<h1>Сравнение</h1>
+			<LocaleTrigger />
+			<h1>{i18n.t('copy.c2a9007babf2')}</h1>
 			<span
 				role="status"
-				aria-label={`${vehicles.length} от ${MAX_COMPARE_VEHICLES} избрани автомобила`}
-				>{vehicles.length} / {MAX_COMPARE_VEHICLES}</span
+				aria-label={i18n.t('pattern.614e1057bbf5', {
+					v0: vehicles.length,
+					v1: MAX_COMPARE_VEHICLES
+				})}>{vehicles.length} / {MAX_COMPARE_VEHICLES}</span
 			>
 		</div>
 		<GarageUnavailable
@@ -41,46 +48,49 @@
 		<div class="actions">
 			<button type="button" aria-haspopup="dialog" onclick={() => (selectorOpen = true)}>
 				<Plus size={20} />
-				{vehicles.length < MAX_COMPARE_VEHICLES ? 'Добави автомобил' : 'Промени избора'}
+				{vehicles.length < MAX_COMPARE_VEHICLES
+					? i18n.t('copy.99c9a2be0863')
+					: i18n.t('copy.997c9c2ef3e7')}
 			</button>
-			{#if vehicles.length > 2}<span>Плъзнете за третия автомобил</span>{/if}
+			{#if vehicles.length > 2}<span>{i18n.t('copy.18ddc8aab1b1')}</span>{/if}
 		</div>
 		{#if vehicles.length}
 			<!-- Keyboard focus allows horizontal scrolling of selected cars. -->
 			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-			<section class="cars" aria-label="Избрани автомобили за сравнение" tabindex="0">
+			<section class="cars" aria-label={i18n.t('copy.3e9ae27f936c')} tabindex="0">
 				{#each vehicles as car (car.slug)}
 					<article>
 						<div class="photo">
 							<a
-								href={resolve('/inventory/[slug]', { slug: car.slug })}
-								aria-label={`Виж ${car.shortTitle}`}><img src={car.image} alt={car.shortTitle} /></a
+								href={i18n.href(resolve('/inventory/[slug]', { slug: car.slug }))}
+								aria-label={i18n.t('pattern.db06e7c6718a', { v0: car.shortTitle })}
+								><img src={i18n.asset(car.image)} alt={car.shortTitle} /></a
 							>
 							<button
 								type="button"
-								aria-label={`Премахни ${car.shortTitle}`}
+								aria-label={i18n.t('pattern.7f568ba51064', { v0: car.shortTitle })}
 								onclick={() => garage.toggleCompare(car.slug)}><X size={18} /></button
 							>
 						</div>
 						<div class="identity">
-							<a href={resolve('/inventory/[slug]', { slug: car.slug })}>{car.shortTitle}</a><strong
-								>{car.priceEur}</strong
-							>
+							<a href={i18n.href(resolve('/inventory/[slug]', { slug: car.slug }))}
+								>{car.shortTitle}</a
+							><strong>{car.priceEur}</strong>
 						</div>
 						<dl>
 							{#each rows as row (row.label)}<div>
 									<dt>{row.label}</dt>
-									<dd>{row.value(car) || '—'}</dd>
+									<dd>{i18n.stock(row.value(car)) || '—'}</dd>
 								</div>{/each}
 						</dl>
 					</article>
 				{/each}
 			</section>
 		{:else}
-			<section class="empty" aria-label="Няма избрани автомобили">
+			<section class="empty" aria-label={i18n.t('copy.7bd5fc2ea3e4')}>
 				<GitCompare size={28} aria-hidden="true" />
-				<h2>Кои автомобили сравнявате?</h2>
-				<p>Изберете до {MAX_COMPARE_VEHICLES} автомобила, за да сравните характеристиките им.</p>
+				<h2>{i18n.t('copy.835d8a803e2d')}</h2>
+				<p>{i18n.t('copy.2b0c336dc467')} {MAX_COMPARE_VEHICLES} {i18n.t('copy.d0cd0ccb32b1')}</p>
 			</section>
 		{/if}
 	</main>
@@ -101,6 +111,7 @@
 		padding-bottom: calc(80px + env(safe-area-inset-bottom));
 	}
 	.page-title {
+		flex-wrap: wrap;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

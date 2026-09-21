@@ -1,16 +1,20 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	let { slugs, onRemove }: { slugs: string[]; onRemove: (slug: string) => void } = $props();
 </script>
 
 {#if slugs.length}
-	<aside class="garage-unavailable" aria-label="Недостъпни обяви">
+	<aside class="garage-unavailable" aria-label={i18n.t('copy.8f2bae53d2a6')}>
 		<p>
 			{slugs.length === 1
-				? 'Една от избраните обяви вече не е налична.'
-				: `${slugs.length} от избраните обяви вече не са налични.`} Запазеният избор не е изтрит автоматично.
+				? i18n.t('copy.9ecc445a515d')
+				: i18n.t('pattern.bd45345b7bd9', { v0: slugs.length })}
+			{i18n.t('copy.e48b2f10684f')}
 		</p>
 		<button type="button" onclick={() => slugs.forEach(onRemove)}
-			>Премахни недостъпните ({slugs.length})</button
+			>{i18n.t('copy.aca42cd2a807')}{slugs.length})</button
 		>
 	</aside>
 {/if}

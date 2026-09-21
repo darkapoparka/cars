@@ -1,25 +1,25 @@
 import type { SortKey } from '$lib/types/mobile-inventory';
 
-type BrandLogoPath = `/variant-3/assets/images/brand/${string}`;
+type BrandLogoPath = `/assets/images/brand/${string}`;
 
 export const brandLogos: Partial<Record<string, BrandLogoPath>> = {
-	Audi: '/variant-3/assets/images/brand/mobile/audi.svg',
-	BMW: '/variant-3/assets/images/brand/mobile/bmw.svg',
-	Chevrolet: '/variant-3/assets/images/brand/mobile/chevrolet.svg',
-	Chrysler: '/variant-3/assets/images/brand/mobile/chrysler.svg',
-	Citroen: '/variant-3/assets/images/brand/mobile/citroen.svg',
-	Ford: '/variant-3/assets/images/brand/mobile/ford.svg',
-	Honda: '/variant-3/assets/images/brand/mobile/honda.svg',
-	Jaguar: '/variant-3/assets/images/brand/mobile/jaguar.svg',
-	'Land Rover': '/variant-3/assets/images/brand/mobile/land-rover.svg',
-	Mazda: '/variant-3/assets/images/brand/mobile/mazda.svg',
-	'Mercedes-Benz': '/variant-3/assets/images/brand/brand-2.webp',
-	Opel: '/variant-3/assets/images/brand/mobile/opel.svg',
-	Peugeot: '/variant-3/assets/images/brand/mobile/peugeot.svg',
-	Porsche: '/variant-3/assets/images/brand/mobile/porsche.svg',
-	Skoda: '/variant-3/assets/images/brand/mobile/skoda.svg',
-	VW: '/variant-3/assets/images/brand/mobile/volkswagen.svg',
-	Volvo: '/variant-3/assets/images/brand/mobile/volvo.svg'
+	Audi: '/assets/images/brand/mobile/audi.svg',
+	BMW: '/assets/images/brand/mobile/bmw.svg',
+	Chevrolet: '/assets/images/brand/mobile/chevrolet.svg',
+	Chrysler: '/assets/images/brand/mobile/chrysler.svg',
+	Citroen: '/assets/images/brand/mobile/citroen.svg',
+	Ford: '/assets/images/brand/mobile/ford.svg',
+	Honda: '/assets/images/brand/mobile/honda.svg',
+	Jaguar: '/assets/images/brand/mobile/jaguar.svg',
+	'Land Rover': '/assets/images/brand/mobile/land-rover.svg',
+	Mazda: '/assets/images/brand/mobile/mazda.svg',
+	'Mercedes-Benz': '/assets/images/brand/brand-2.webp',
+	Opel: '/assets/images/brand/mobile/opel.svg',
+	Peugeot: '/assets/images/brand/mobile/peugeot.svg',
+	Porsche: '/assets/images/brand/mobile/porsche.svg',
+	Skoda: '/assets/images/brand/mobile/skoda.svg',
+	VW: '/assets/images/brand/mobile/volkswagen.svg',
+	Volvo: '/assets/images/brand/mobile/volvo.svg'
 };
 
 export const sortOptions: { value: SortKey; label: string }[] = [

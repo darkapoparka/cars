@@ -71,7 +71,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "importer",
       profileImage: {
         alt: "Vehicle import facility in Hamburg",
-        url: "/variant-2/images/directory/hamburg-importer-profile.webp",
+        url: "/images/directory/hamburg-importer-profile.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("am-1009", "source_stock"),
@@ -135,7 +135,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "importer",
       profileImage: {
         alt: "Electric vehicle sourcing and logistics facility",
-        url: "/variant-2/images/directory/china-ev-importer-profile.webp",
+        url: "/images/directory/china-ev-importer-profile.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("am-1014", "orderable"),
@@ -203,7 +203,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "Premium vehicle showroom in Варна",
-        url: "/variant-2/images/directory/sofia-premium-cars-profile.webp",
+        url: "/images/directory/sofia-premium-cars-profile.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("am-1001", "local"),
@@ -249,7 +249,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "Coastal electric vehicle specialist near Varna",
-        url: "/variant-2/images/directory/black-sea-ev-profile.webp",
+        url: "/images/directory/black-sea-ev-profile.webp",
       },
       representativeVehicles: [getRepresentativeVehicle("am-1003", "local")],
       slug: "black-sea-ev",
@@ -294,7 +294,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "Commercial van stock outside a dealership",
-        url: "/variant-2/images/avatars/organization-03.webp",
+        url: "/images/avatars/organization-03.webp",
       },
       representativeVehicles: [getRepresentativeVehicle("am-1005", "local")],
       slug: "pro-vans-bulgaria",
@@ -339,7 +339,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "distributor",
       profileImage: {
         alt: "Vehicle logistics truck at a distribution facility",
-        url: "/variant-2/images/avatars/organization-04.webp",
+        url: "/images/avatars/organization-04.webp",
       },
       representativeVehicles: [getRepresentativeVehicle("am-1006", "local")],
       slug: "danube-trucks",
@@ -384,7 +384,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "dealer",
       profileImage: {
         alt: "Vehicle outside a modern regional showroom",
-        url: "/variant-2/images/avatars/organization-01.webp",
+        url: "/images/avatars/organization-01.webp",
       },
       representativeVehicles: [getRepresentativeVehicle("am-1008", "local")],
       slug: "trakia-auto",
@@ -434,7 +434,7 @@ export const mockOrganizationDirectoryCoreEntries =
       orgType: "manufacturer",
       profileImage: {
         alt: "Vehicle on an illustrative production line",
-        url: "/variant-2/images/avatars/organization-07.webp",
+        url: "/images/avatars/organization-07.webp",
       },
       representativeVehicles: [
         getRepresentativeVehicle("am-1004", "orderable"),
@@ -543,7 +543,7 @@ const createScaleOrganization = (index: number): OrganizationDirectoryEntry => {
       ? {
           profileImage: {
             alt: `Generic vehicle business artwork for directory scale demo ${fixtureNumber}`,
-            url: `/variant-2/images/avatars/organization-0${(index % 7) + 1}.webp`,
+            url: `/images/avatars/organization-0${(index % 7) + 1}.webp`,
           },
         }
       : {}),

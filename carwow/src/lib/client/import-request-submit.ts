@@ -1,4 +1,4 @@
-import { resolve } from '$lib/utils/preview-paths';
+import { resolve } from '$app/paths';
 import {
 	postIntake,
 	invalidIntakeResponse,
@@ -45,7 +45,7 @@ export async function submitImportRequest(
 	payload: ImportRequestSubmitPayload,
 	options: IntakeOptions = {}
 ): Promise<ImportRequestSubmitResult> {
-	const result = await postIntake(resolve('/variant-3/api/import-requests'), payload, options);
+	const result = await postIntake(resolve('/api/import-requests'), payload, options);
 	if (!result.ok) return result;
 	const { body } = result;
 	if (

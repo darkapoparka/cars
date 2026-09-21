@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	// Native self-contained rebuild of the /blog (blog-standard.html) desktop main
 	// content: centered intro + the 2-column innerpage layout
 	// (featured post-style-2 overlay card + post-style-6 card grid on the left,
@@ -10,7 +13,7 @@
 	// Brand colours route through tokens (--sa-*); template neutrals stay literal for
 	// an exact visual match.
 
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { Search, X } from '@lucide/svelte';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
@@ -127,7 +130,7 @@
 	}
 
 	function formatArticleDate(value: string) {
-		return new Intl.DateTimeFormat('bg-BG', {
+		return new Intl.DateTimeFormat(i18n.locale === 'bg' ? 'bg-BG' : 'en-GB', {
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric'
@@ -168,15 +171,15 @@
 
 {#snippet articleMeta(article: DayNightArticle)}
 	<div class="blog-meta">
-		{#if article.author}<span>от {article.author}</span>{/if}
+		{#if article.author}<span>{i18n.t('copy.5f201355756a')} {article.author}</span>{/if}
 		<span>{formatArticleDate(article.date)}</span>
-		<span class="blog-meta__category">{article.category}</span>
+		<span class="blog-meta__category">{i18n.text(article.category)}</span>
 	</div>
 {/snippet}
 
 {#snippet featuredCard(article: DayNightArticle)}
 	<a
-		href={resolve('/blog/[slug]', { slug: article.slug })}
+		href={i18n.href(resolve('/blog/[slug]', { slug: article.slug }))}
 		class="blog-featured-card"
 		data-daynight-article-card
 		data-daynight-category={article.category}
@@ -187,71 +190,78 @@
 		<div class="blog-featured-card__image">
 			<img
 				class="post--img"
-				src={article.image}
-				alt={article.title}
+				src={i18n.asset(article.image)}
+				alt={i18n.text(article.title)}
 				loading="eager"
 				decoding="async"
 			/>
 		</div>
 		<div class="blog-featured-card__content">
 			{@render articleMeta(article)}
-			<h2 class="h3 mb-8">{article.title}</h2>
-			<p class="text-secondary">{article.description}</p>
+			<h2 class="h3 mb-8">{i18n.text(article.title)}</h2>
+			<p class="text-secondary">{i18n.text(article.description)}</p>
 		</div>
 	</a>
 {/snippet}
 
 {#snippet blogHeroControls()}
 	<div class="blog-hero-controls">
-		<nav class="blog-category-switch" aria-label="Категории">
-			<a href={resolve('/blog')} class={!hasActiveFilters ? 'active' : ''}>Всички</a>
+		<nav class="blog-category-switch" aria-label={i18n.t('copy.05f6c615a351')}>
+			<a href={i18n.href(resolve('/blog'))} class={!hasActiveFilters ? 'active' : ''}
+				>{i18n.t('copy.117d98cb652c')}</a
+			>
 			{#each categoryOptions as option (option.value)}
 				<a
-					href={resolve(
-						filterHref({ category: isActiveFilter('category', option.value) ? '' : option.value })
+					href={i18n.href(
+						resolve(
+							filterHref({ category: isActiveFilter('category', option.value) ? '' : option.value })
+						)
 					)}
 					class:active={isActiveFilter('category', option.value)}
 				>
-					{option.label}
+					{i18n.text(option.label)}
 				</a>
 			{/each}
 		</nav>
 		<form action={resolve('/blog')} class="blog-hero-search" method="get">
-			<label class="sr-only" for="blog-hero-search">Търсене в публикациите</label>
+			<label class="sr-only" for="blog-hero-search">{i18n.t('copy.c744f13b5bc2')}</label>
 			<div class="blog-hero-search__field">
 				<input
+					{@attach i18n.validation}
 					id="blog-hero-search"
 					name="q"
 					type="search"
-					placeholder="Търси съвет, модел или тема..."
+					placeholder={i18n.t('copy.da85f2b76310')}
 					value={filters.q}
 				/>
-				<button type="submit" aria-label="Търси"><Search size={20} /></button>
+				<button type="submit" aria-label={i18n.t('copy.6517beda9674')}><Search size={20} /></button>
 			</div>
 			{#each searchHiddenFilters() as [name, value] (name)}
-				<input type="hidden" {name} {value} />
+				<input {@attach i18n.validation} type="hidden" {name} {value} />
 			{/each}
 		</form>
 		<div class="blog-quick-row">
-			<nav class="blog-quick-topics" aria-label="Бързи теми">
+			<nav class="blog-quick-topics" aria-label={i18n.t('copy.318780093288')}>
 				{#each heroTagOptions as option (option.value)}
 					<a
-						href={resolve(
-							filterHref({ tag: isActiveFilter('tag', option.value) ? '' : option.value })
+						href={i18n.href(
+							resolve(filterHref({ tag: isActiveFilter('tag', option.value) ? '' : option.value }))
 						)}
 						class:active={isActiveFilter('tag', option.value)}
 					>
-						{option.label}<span>{option.count}</span>
+						{i18n.text(option.label)}<span>{option.count}</span>
 					</a>
 				{/each}
 			</nav>
 			<div class="blog-filter-status" aria-live="polite">
 				<span
 					>{visibleArticles.length}
-					{visibleArticles.length === 1 ? 'публикация' : 'публикации'}</span
+					{visibleArticles.length === 1
+						? i18n.t('copy.53e0a90d4d5b')
+						: i18n.t('copy.320493d7cb5d')}</span
 				>
-				{#if hasActiveFilters}<a href={resolve('/blog')} class="blog-clear-filters"
-						><X size={16} />Изчисти</a
+				{#if hasActiveFilters}<a href={i18n.href(resolve('/blog'))} class="blog-clear-filters"
+						><X size={16} />{i18n.t('copy.fc38aced5a1d')}</a
 					>{/if}
 			</div>
 		</div>
@@ -260,7 +270,7 @@
 
 {#snippet articleCard(article: DayNightArticle)}
 	<a
-		href={resolve('/blog/[slug]', { slug: article.slug })}
+		href={i18n.href(resolve('/blog/[slug]', { slug: article.slug }))}
 		class="post-style-6 overflow-hidden"
 		data-daynight-article-card
 		data-daynight-category={article.category}
@@ -271,16 +281,16 @@
 		<div class="image">
 			<img
 				class="post--img flex"
-				src={article.image}
-				alt={article.title}
+				src={i18n.asset(article.image)}
+				alt={i18n.text(article.title)}
 				loading="lazy"
 				decoding="async"
 			/>
 		</div>
 		<div class="content">
 			{@render articleMeta(article)}
-			<h2 class="h4 title mb-12">{article.title}</h2>
-			<p class="clamp clamp-2 text-secondary">{article.description}</p>
+			<h2 class="h4 title mb-12">{i18n.text(article.title)}</h2>
+			<p class="clamp clamp-2 text-secondary">{i18n.text(article.description)}</p>
 		</div>
 	</a>
 {/snippet}
@@ -288,7 +298,7 @@
 <div class="blog-page">
 	<DesktopYellowRouteHero
 		headingId="blog-route-title"
-		title="Съвети за покупка и продажба"
+		title={i18n.t('copy.9651258a1b3e')}
 		panel="light"
 		deckWidth="wide"
 		children={blogHeroControls}
@@ -296,49 +306,58 @@
 	<section class="pb-100">
 		<div class="container">
 			<div class="blog-page-title">
-				<p class="eyebrow">Блог</p>
-				<h1>Съвети за покупка и продажба</h1>
+				<p class="eyebrow">{i18n.t('copy.c31cdbd07e6c')}</p>
+				<h1>{i18n.t('copy.9651258a1b3e')}</h1>
 				<p class="h7 text-secondary line-height-28">
-					Огледи, сравнение на обяви и подготовка за продажба.
+					{i18n.t('copy.5d440bd06811')}
 				</p>
 			</div>
 
 			{#if !articles.length}
 				<div class="blog-empty" data-daynight-blog-empty>
-					<h2>Все още няма публикувани статии.</h2>
-					<p>Имате въпрос за покупка или продажба на автомобил?</p>
-					<a class="sa-cta sa-cta-primary" href={resolve('/contact')}>Свържете се с нас</a>
+					<h2>{i18n.t('copy.16352908518e')}</h2>
+					<p>{i18n.t('copy.66b85c422167')}</p>
+					<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
+						>{i18n.t('copy.ef106e677853')}</a
+					>
 				</div>
 			{:else}
 				<div class="blog-index-layout">
-					<div class="blog-controls" role="search" aria-label="Търсене и категории">
+					<div class="blog-controls" role="search" aria-label={i18n.t('copy.fc474f46be32')}>
 						<form action={resolve('/blog')} class="widget-search mb-34 w-full" method="get">
-							<label class="sr-only" for="blog-search">Търсене в публикациите</label>
+							<label class="sr-only" for="blog-search">{i18n.t('copy.c744f13b5bc2')}</label>
 							<input
+								{@attach i18n.validation}
 								class="input-normal"
 								type="search"
 								name="q"
 								id="blog-search"
-								placeholder="Търсене в публикациите..."
+								placeholder={i18n.t('copy.d51833ea37eb')}
 								value={filters.q}
 							/>
 							{#each searchHiddenFilters() as [name, value] (name)}
-								<input type="hidden" {name} {value} />
+								<input {@attach i18n.validation} type="hidden" {name} {value} />
 							{/each}
-							<button type="submit" class="widget-search-btn" aria-label="Търси">
+							<button
+								type="submit"
+								class="widget-search-btn"
+								aria-label={i18n.t('copy.6517beda9674')}
+							>
 								<Search size={22} />
 							</button>
 						</form>
 						<ul class="widget-categories blog-mobile-categories">
 							<li>
-								<a href={resolve('/blog')} class={!hasActiveFilters ? 'active' : ''}>Всички</a>
+								<a href={i18n.href(resolve('/blog'))} class={!hasActiveFilters ? 'active' : ''}
+									>{i18n.t('copy.117d98cb652c')}</a
+								>
 							</li>
 							{#each categoryOptions as option (option.value)}
 								<li>
 									<a
-										href={resolve(filterHref({ category: option.value }))}
+										href={i18n.href(resolve(filterHref({ category: option.value })))}
 										class={isActiveFilter('category', option.value) ? 'active' : ''}
-										>{option.label}</a
+										>{i18n.spec(option.label)}</a
 									>
 								</li>
 							{/each}
@@ -370,7 +389,7 @@
 
 							{#if !visibleArticles.length}
 								<p class="h5 text-secondary daynight-blog-empty mb-40">
-									Няма публикации по избраните филтри.
+									{i18n.t('copy.35c9f823a4d2')}
 								</p>
 							{/if}
 						</div>

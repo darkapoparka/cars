@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { ArrowRight, GitCompare, X } from '@lucide/svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { getDayNightVehicleBySlug } from '$lib/data/daynight-vehicles';
 	import { getGarageContext } from '$lib/state/garage.svelte';
 
@@ -15,25 +18,25 @@
 </script>
 
 {#if vehicles.length || garage.formMessage}
-	<aside class="compare-tray" data-compare-tray aria-label="Избрани автомобили за сравнение">
+	<aside class="compare-tray" data-compare-tray aria-label={i18n.t('copy.3e9ae27f936c')}>
 		{#if vehicles.length}
 			<div class="compare-tray__main">
 				<div class="compare-tray__heading">
 					<span class="compare-tray__icon" aria-hidden="true"><GitCompare size={17} /></span>
 					<div>
-						<strong>Сравнение</strong>
-						<span>{vehicles.length} от 3 автомобила</span>
+						<strong>{i18n.t('copy.c2a9007babf2')}</strong>
+						<span>{vehicles.length} {i18n.t('copy.dda0fb97bec1')}</span>
 					</div>
 				</div>
 
-				<div class="compare-tray__items" aria-label="Избрани за сравнение">
+				<div class="compare-tray__items" aria-label={i18n.t('copy.afb4dab4d617')}>
 					{#each vehicles as vehicle (vehicle.slug)}
 						<div class="compare-tray__item">
-							<img src={vehicle.image} alt="" loading="lazy" decoding="async" />
+							<img src={i18n.asset(vehicle.image)} alt="" loading="lazy" decoding="async" />
 							<span>{vehicle.shortTitle}</span>
 							<button
 								type="button"
-								aria-label={`Премахни ${vehicle.shortTitle} от сравнение`}
+								aria-label={i18n.t('pattern.934f8811d407', { v0: vehicle.shortTitle })}
 								onclick={() => garage.toggleCompare(vehicle.slug)}
 							>
 								<X size={15} strokeWidth={2.4} />
@@ -43,11 +46,12 @@
 				</div>
 
 				<div class="compare-tray__actions">
-					<a class="compare-tray__open" href={resolve('/compare')}>
-						Сравни <ArrowRight size={16} strokeWidth={2.4} aria-hidden="true" />
+					<a class="compare-tray__open" href={i18n.href(resolve('/compare'))}>
+						{i18n.t('copy.52f6ad9e2fd8')}
+						<ArrowRight size={16} strokeWidth={2.4} aria-hidden="true" />
 					</a>
 					<button type="button" class="compare-tray__clear" onclick={() => garage.clearCompare()}>
-						Изчисти
+						{i18n.t('copy.fc38aced5a1d')}
 					</button>
 				</div>
 			</div>

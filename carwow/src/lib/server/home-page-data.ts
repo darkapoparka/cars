@@ -105,36 +105,36 @@ function buildBudgetTiles(vehicles: Car[]) {
 			label: 'До 10 000 EUR',
 			value: 'under-10000',
 			limit: 10000,
-			image: '/variant-3/assets/images/body-type/normalized/body-hatchback-transparent.webp'
+			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 		},
 		{
 			label: 'До 20 000 EUR',
 			value: 'under-20000',
 			limit: 20000,
-			image: '/variant-3/assets/images/body-type/normalized/body-sedan-transparent.webp'
+			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp'
 		},
 		{
 			label: 'До 30 000 EUR',
 			value: 'under-30000',
 			limit: 30000,
-			image: '/variant-3/assets/images/body-type/normalized/body-wagon-transparent.webp'
+			image: '/assets/images/body-type/normalized/body-wagon-transparent.webp'
 		},
 		{
 			label: 'До 50 000 EUR',
 			value: 'under-50000',
 			limit: 50000,
-			image: '/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp'
+			image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 		},
 		{
 			label: 'Над 50 000 EUR',
 			value: 'over-50000',
 			min: 50000,
-			image: '/variant-3/assets/images/body-type/normalized/body-coupe-transparent.webp'
+			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 		},
 		{
 			label: 'Без бюджет',
 			value: 'all',
-			image: '/variant-3/assets/images/budget/open-budget-supercar-v2.webp',
+			image: '/assets/images/budget/open-budget-supercar-v2.webp',
 			caption: `Всички ${vehicles.length} коли`,
 			variant: 'open' as const
 		}

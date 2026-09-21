@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { daynightSite } from '$lib/data/daynight-site';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import BarChart3 from '@lucide/svelte/icons/bar-chart-3';
 	import Activity from '@lucide/svelte/icons/activity';
 	import CarFront from '@lucide/svelte/icons/car-front';
@@ -149,7 +149,7 @@
 						Inventory, leads, imports, and content are managed from this workspace.
 					</p>
 				</div>
-				<form method="POST" action="/variant-3/admin/logout">
+				<form method="POST" action={resolve('/admin/logout')}>
 					<Button
 						variant="ghost"
 						class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground w-full justify-start"

@@ -1,4 +1,8 @@
 <script lang="ts">
+	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import {
 		ArrowUpDown,
 		MapPin,
@@ -32,31 +36,39 @@
 
 	const phoneHref = daynightSite.phoneHref;
 	const viberHref = daynightSite.viberHref;
-	const searchLabel = $derived(query.trim() ? `Търсене: ${query.trim()}` : 'Отвори търсене');
+	const searchLabel = $derived(
+		query.trim() ? i18n.t('pattern.769c3ae47eea', { v0: query.trim() }) : 'Отвори търсене'
+	);
 </script>
 
 <section class="mobile-inventory-top">
+	<div class="mobile-inventory-locale"><LocaleTrigger /></div>
 	{#if mode === 'map'}
 		<div class="mobile-map-card">
 			<div>
 				<MapPin size={18} strokeWidth={2.4} />
 				<div>
 					<strong>{daynightSite.shortName}</strong>
-					<span>{daynightSite.location}</span>
+					<span>{i18n.dealer('address')}</span>
 				</div>
 			</div>
 			<div class="mobile-map-card__actions">
-				<a class="is-primary" href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer">
+				<a
+					class="is-primary"
+					href={i18n.href(daynightSite.mapUrl)}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<MapPin size={17} strokeWidth={2.4} />
-					Карта
+					{i18n.t('copy.2751c9100018')}
 				</a>
-				<a href={phoneHref}>
+				<a href={i18n.href(phoneHref)}>
 					<PhoneCall size={17} strokeWidth={2.4} />
-					Обади се
+					{i18n.t('copy.d40e5119596a')}
 				</a>
-				<a href={viberHref}>
+				<a href={i18n.href(viberHref)}>
 					<MessageCircle size={17} strokeWidth={2.4} />
-					Viber
+					{i18n.t('copy.2db2c27ad99b')}
 				</a>
 			</div>
 		</div>
@@ -67,7 +79,7 @@
 			id="mobile-inventory-search"
 			class="mobile-inventory-search"
 			type="button"
-			aria-label={searchLabel}
+			aria-label={i18n.text(searchLabel)}
 			aria-haspopup="dialog"
 			onclick={onOpenSearch}
 		>
@@ -77,7 +89,7 @@
 						? 'mobile-inventory-search__label is-filled'
 						: 'mobile-inventory-search__label'}
 				>
-					{query || 'Търси коли'}
+					{query || i18n.t('copy.ec1da1ebf306')}
 				</span>
 				<span class="mobile-inventory-search__icon" aria-hidden="true">
 					<Search size={19} strokeWidth={2.55} />
@@ -88,8 +100,10 @@
 			class="mobile-inventory-tool"
 			class:is-active={activeFilterCount > 0}
 			type="button"
-			aria-label={activeFilterCount ? 'Филтри: ' + activeFilterCount + ' активни' : 'Филтри'}
-			title="Филтри"
+			aria-label={activeFilterCount
+				? i18n.t('copy.96494f4159ef') + activeFilterCount + i18n.t('copy.91313b277ed8')
+				: i18n.t('copy.182fd6b7e7e5')}
+			title={i18n.t('copy.182fd6b7e7e5')}
 			aria-haspopup="dialog"
 			onclick={onOpenFilters}
 		>
@@ -102,8 +116,8 @@
 			class="mobile-inventory-tool"
 			class:is-active={sortActive}
 			type="button"
-			aria-label={'Сортиране: ' + sortLabel}
-			title={'Сортиране: ' + sortLabel}
+			aria-label={i18n.t('copy.6fb79ad30738') + i18n.text(sortLabel)}
+			title={i18n.t('copy.6fb79ad30738') + i18n.text(sortLabel)}
 			aria-haspopup="dialog"
 			onclick={onOpenSort}
 		>

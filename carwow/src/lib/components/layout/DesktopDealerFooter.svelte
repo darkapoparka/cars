@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { ArrowUpRight, Mail, MapPin, Phone } from '@lucide/svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
@@ -23,9 +26,12 @@
 	<div class="dealer-footer__container">
 		<div class="dealer-footer__grid">
 			<div class="dealer-footer__brand">
-				<a href={resolve('/')} aria-label={`${daynightSite.shortName} — начална страница`}>
+				<a
+					href={i18n.href(resolve('/'))}
+					aria-label={i18n.t('pattern.8ebcb1ddc43b', { v0: daynightSite.shortName })}
+				>
 					<img
-						src={daynightSite.logoLight}
+						src={i18n.asset(daynightSite.logoLight)}
 						width="220"
 						height="68"
 						alt={`${daynightSite.name}`}
@@ -33,62 +39,77 @@
 					/>
 				</a>
 				<div class="dealer-footer__hours">
-					<p>Работно време:</p>
-					<span>{daynightSite.hoursLabel}</span>
+					<p>{i18n.t('copy.3e6e7a7f7865')}</p>
+					<span>{i18n.text(daynightSite.hoursLabel)}</span>
 				</div>
 			</div>
 			{#each groups as group (group.title)}
-				<nav aria-label={group.title}>
-					<h2>{group.title}</h2>
+				<nav aria-label={i18n.text(group.title)}>
+					<h2>{i18n.text(group.title)}</h2>
 					<ul>
 						{#each group.links as link (link.href)}
-							<li><a href={resolve(link.href)}>{link.label}</a></li>
+							<li><a href={i18n.href(resolve(link.href))}>{i18n.text(link.label)}</a></li>
 						{/each}
 					</ul>
 				</nav>
 			{/each}
 			<div class="dealer-footer__contact">
-				<a class="dealer-footer__contact-row" href={daynightSite.phoneHref}>
+				<a class="dealer-footer__contact-row" href={i18n.href(daynightSite.phoneHref)}>
 					<Phone size={19} /><strong>{daynightSite.phoneLabel}</strong><ArrowUpRight size={15} />
 				</a>
-				<a class="dealer-footer__contact-row" href={resolve('/contact')}>
-					<Mail size={19} /><span>Онлайн запитване</span><ArrowUpRight size={15} />
+				<a class="dealer-footer__contact-row" href={i18n.href(resolve('/contact'))}>
+					<Mail size={19} /><span>{i18n.t('copy.4057740852de')}</span><ArrowUpRight size={15} />
 				</a>
 				<a class="dealer-footer__contact-row" {...mapLink}>
-					<MapPin size={19} /><span>{daynightSite.location}</span><ArrowUpRight size={15} />
+					<MapPin size={19} /><span>{i18n.dealer('address')}</span><ArrowUpRight size={15} />
 				</a>
-				<div class="dealer-footer__socials" aria-label="Социални мрежи">
-{#if daynightSite.socialLinks.facebook}
+				<div class="dealer-footer__socials" aria-label={i18n.t('copy.d8063ad6e38b')}>
+					{#if daynightSite.socialLinks.facebook}
 					<a
 						href={daynightSite.socialLinks.facebook}
-						aria-label="Facebook"
+						aria-label={i18n.t('copy.d41f5b4977ee')}
 						target="_blank"
 						rel="noopener noreferrer"
-						><img src="/variant-3/assets/icons/input-facebook.svg" width="21" height="21" alt="" /></a
+						><img
+							src={i18n.asset('/assets/icons/input-facebook.svg')}
+							width="21"
+							height="21"
+							alt=""
+						/></a
 					>
 					{/if}
-{#if youtubeChannelUrl}
-					<a {...youtubeLink} aria-label="YouTube"
-						><img src="/variant-3/assets/icons/youtube-footer.svg" width="21" height="21" alt="" /></a
+					{#if youtubeChannelUrl}
+					<a {...youtubeLink} aria-label={i18n.t('copy.fb7accfff8c6')}
+						><img
+							src={i18n.asset('/assets/icons/youtube-footer.svg')}
+							width="21"
+							height="21"
+							alt=""
+						/></a
 					>
 					{/if}
-{#if daynightSite.socialLinks.instagram}
+					{#if daynightSite.socialLinks.instagram}
 					<a
 						href={daynightSite.socialLinks.instagram}
-						aria-label="Instagram"
+						aria-label={i18n.t('copy.bad57ef7837c')}
 						target="_blank"
 						rel="noopener noreferrer"
-						><img src="/variant-3/assets/icons/input-instagram.svg" width="21" height="21" alt="" /></a
+						><img
+							src={i18n.asset('/assets/icons/input-instagram.svg')}
+							width="21"
+							height="21"
+							alt=""
+						/></a
 					>
 					{/if}
 				</div>
 			</div>
 		</div>
 		<div class="dealer-footer__bottom">
-			<p>©2026 {daynightSite.name}. Всички права запазени.</p>
-			<nav aria-label="Правна информация">
+			<p>©2026 {daynightSite.name}{i18n.t('copy.cef751176d99')}</p>
+			<nav aria-label={i18n.t('copy.1b6309d00ace')}>
 				{#each daynightFooterBottomLinks as link (link.label)}
-					<a href={resolve(link.href)}>{link.label}</a>
+					<a href={i18n.href(resolve(link.href))}>{i18n.text(link.label)}</a>
 				{/each}
 			</nav>
 		</div>

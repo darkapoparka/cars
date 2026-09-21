@@ -1,8 +1,11 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import type { HomeDesktopVehicle } from '$lib/types/home';
 	import DesktopHomeInventoryCard from './DesktopHomeInventoryCard.svelte';
 	import DesktopHomeInventoryTabs from './DesktopHomeInventoryTabs.svelte';
@@ -29,11 +32,11 @@
 	<div class="daynight-home-container home-browse-heading">
 		<DesktopSectionHeading
 			centered={!showHeaderCta}
-			title="Най-нови автомобили"
-			href={showHeaderCta ? resolve('/inventory') : undefined}
-			label={`Виж всички ${inventoryCount} автомобила`}
+			title={i18n.t('copy.db6bde014aa2')}
+			href={i18n.href(showHeaderCta ? resolve('/inventory') : undefined)}
+			label={i18n.t('pattern.9c26c426b746', { v0: inventoryCount })}
 			copy={showHeaderSubtitle
-				? `Последно добавени предложения от наличността на ${daynightSite.shortName}.`
+				? i18n.t('pattern.27fbcd82a4a3', { v0: daynightSite.shortName })
 				: undefined}
 		/>
 	</div>
@@ -48,8 +51,8 @@
 			{#if !showHeaderCta}
 				<div class="inventory-browse-footer">
 					<DesktopBrowseLink
-						href={resolve('/inventory')}
-						label={`Виж всички ${inventoryCount} автомобила`}
+						href={i18n.href(resolve('/inventory'))}
+						label={i18n.t('pattern.9c26c426b746', { v0: inventoryCount })}
 					/>
 				</div>
 			{/if}

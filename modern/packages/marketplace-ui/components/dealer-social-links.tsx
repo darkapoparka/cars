@@ -1,6 +1,7 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import type { LeadSiteConfig } from "@repo/marketplace";
 import { Music2 } from "lucide-react";
-import Image from "next/image";
+import Image from "./public-image";
 
 const socialPlatforms = [
   { key: "instagram", label: "Instagram" },
@@ -25,7 +26,7 @@ function SocialBrandIcon({
           aria-hidden="true"
           className="size-[19px]"
           height={19}
-          src="/variant-2/images/social/instagram-white.svg"
+          src="/images/social/instagram-white.svg"
           width={19}
         />
       </span>
@@ -43,7 +44,7 @@ function SocialBrandIcon({
         }
         height={platform === "youtube" ? 36 : 28}
         sizes={platform === "youtube" ? "42px" : "28px"}
-        src={`/variant-2/images/social/${platform}.png`}
+        src={`/images/social/${platform}.png`}
         width={platform === "youtube" ? 42 : 28}
       />
     </span>
@@ -74,7 +75,7 @@ export function DealerSocialLinks({
           <a
             aria-label={`${label} — ${isBg ? "отваря нов раздел" : "opens in a new tab"}`}
             className="flex min-h-16 min-w-0 flex-col items-center justify-center gap-1.5 rounded-xl bg-zinc-100 px-2 py-3 font-medium text-meta text-zinc-950 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
-            href={links?.[key]}
+            href={withBasePath(links?.[key])}
             key={key}
             rel="noopener noreferrer"
             target="_blank"

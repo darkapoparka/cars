@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { mobileImageSrc } from '$lib/data/mobile-media';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { ArrowUpRight, Play, X } from '@lucide/svelte';
@@ -25,16 +28,16 @@
 	<header class="mobile-home-videos__head">
 		<div>
 			<span class="mobile-home-videos__eyebrow">
-				<img src="/variant-3/assets/brands/youtube-mark.png" alt="" aria-hidden="true" />
-				<span>YouTube</span>
+				<img src={i18n.asset('/assets/brands/youtube-mark.png')} alt="" aria-hidden="true" />
+				<span>{i18n.t('copy.fb7accfff8c6')}</span>
 			</span>
-			<h2 id="mobile-home-videos-title">Гледай {daynightSite.shortName}</h2>
+			<h2 id="mobile-home-videos-title">{i18n.t('copy.a904a6145b85')} {daynightSite.shortName}</h2>
 		</div>
 		<a
-			href={youtubeChannelUrl}
+			href={i18n.href(youtubeChannelUrl)}
 			target="_blank"
 			rel="noopener noreferrer"
-			aria-label="Всички видеа в YouTube"
+			aria-label={i18n.t('copy.3831a2a9c9e6')}
 		>
 			<ArrowUpRight size={20} strokeWidth={2.4} />
 		</a>
@@ -46,8 +49,10 @@
 				<div class="mobile-video-card__media">
 					{#if activeVideo === video.id}
 						<iframe
-							src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0&playsinline=1&hl=bg`}
-							title={video.title}
+							src={i18n.asset(
+								`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0&playsinline=1&hl=bg`
+							)}
+							title={i18n.text(video.title)}
 							allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
 							allowfullscreen
 							referrerpolicy="strict-origin-when-cross-origin"
@@ -56,7 +61,7 @@
 							class="mobile-video-card__close"
 							type="button"
 							onclick={stop}
-							aria-label={`Затвори видеото: ${video.title}`}
+							aria-label={i18n.t('pattern.a582794b4e06', { v0: i18n.text(video.title) })}
 						>
 							<X size={18} strokeWidth={2.5} />
 						</button>
@@ -65,10 +70,10 @@
 							class="mobile-video-card__play"
 							type="button"
 							onclick={(event) => play(video.id, event)}
-							aria-label={`Пусни видеото: ${video.title}`}
+							aria-label={i18n.t('pattern.23e9e4cc63e8', { v0: i18n.text(video.title) })}
 						>
 							<img
-								src={mobileImageSrc(video.thumbnail)}
+								src={i18n.asset(mobileImageSrc(video.thumbnail))}
 								alt=""
 								width="720"
 								height="404"
@@ -80,7 +85,7 @@
 								><Play size={20} fill="currentColor" /></span
 							>
 							<span class="mobile-video-card__duration">{video.duration}</span>
-							<strong>{video.title}</strong>
+							<strong>{i18n.spec(video.title)}</strong>
 						</button>
 					{/if}
 				</div>
@@ -89,13 +94,13 @@
 
 		<a
 			class="mobile-video-card mobile-video-card--all"
-			href={youtubeChannelUrl}
+			href={i18n.href(youtubeChannelUrl)}
 			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<span class="mobile-video-card--all__icon"><Play size={27} fill="currentColor" /></span>
-			<strong>Всички видеа</strong>
-			<span>Към канала <ArrowUpRight size={16} strokeWidth={2.4} /></span>
+			<strong>{i18n.t('copy.48ed41283c9d')}</strong>
+			<span>{i18n.t('copy.8735575e19e1')} <ArrowUpRight size={16} strokeWidth={2.4} /></span>
 		</a>
 	</div>
 </section>

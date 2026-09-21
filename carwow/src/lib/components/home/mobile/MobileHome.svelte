@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { ChevronRight, Search, Settings2 } from '@lucide/svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { onMount } from 'svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import type { HomeMobileData } from '$lib/types/home';
@@ -40,22 +43,22 @@
 	onMount(() => enhanceDayNightImageFallbacks());
 	const quickFilters: QuickFilter[] = [
 		{
-			label: 'Дизел',
+			label: i18n.t('copy.c82ce2919043'),
 			icon: 'car-line',
 			href: `${inventoryPath}?fuel=${encodeURIComponent('Дизел')}`
 		},
 		{
-			label: 'Бензин',
+			label: i18n.t('copy.e656f39de92d'),
 			icon: 'car-line',
 			href: `${inventoryPath}?fuel=${encodeURIComponent('Бензин')}`
 		},
 		{
-			label: 'Автоматик',
+			label: i18n.t('copy.ac707141d786'),
 			icon: Settings2,
 			href: `${inventoryPath}?transmission=${encodeURIComponent('Автоматик')}`
 		},
 		{
-			label: 'Електрически',
+			label: i18n.t('copy.2f5800eb33f6'),
 			icon: 'car-line',
 			href: `${inventoryPath}?fuel=${encodeURIComponent('Електрически')}`
 		}
@@ -104,7 +107,7 @@
 			<div
 				class={`mh-hero__modes${heroToggle === 'segmented' ? ' mh-hero__modes--segmented' : ''}`}
 				role="group"
-				aria-label="Избери действие"
+				aria-label={i18n.t('copy.69b5266fcf70')}
 			>
 				<button
 					type="button"
@@ -112,7 +115,7 @@
 					aria-pressed={heroMode === 'buy'}
 					onclick={() => (heroMode = 'buy')}
 				>
-					Купи
+					{i18n.t('copy.f6c6952d4d23')}
 				</button>
 				<button
 					type="button"
@@ -120,12 +123,12 @@
 					aria-pressed={heroMode === 'import'}
 					onclick={() => (heroMode = 'import')}
 				>
-					Внос
+					{i18n.t('copy.995bfafd0b63')}
 				</button>
 			</div>
 			<button class="mh-hero__search" type="button" onclick={openSearch}>
 				<span class="mh-hero__search-label">
-					{heroMode === 'buy' ? 'Търси марка, модел, цена…' : 'Какъв автомобил търсиш?'}
+					{heroMode === 'buy' ? i18n.t('copy.5e985723597f') : i18n.t('copy.d028fe65890c')}
 				</span>
 				<span class="mh-hero__search-go" aria-hidden="true">
 					{#if heroMode === 'buy'}
@@ -136,8 +139,11 @@
 				</span>
 			</button>
 			{#if heroMode === 'buy'}
-				<a class="mobile-hero-pill mh-hero__all mh-hero__all--browse" href={inventoryHref}>
-					<span>Виж всички ({total})</span>
+				<a
+					class="mobile-hero-pill mh-hero__all mh-hero__all--browse"
+					href={i18n.href(inventoryHref)}
+				>
+					<span>{i18n.t('copy.9b2d5cddac16')}{total})</span>
 					<ChevronRight size={12} strokeWidth={2.8} aria-hidden="true" />
 				</a>
 			{:else}
@@ -146,7 +152,7 @@
 					type="button"
 					onclick={openSearch}
 				>
-					<span>Заяви внос</span>
+					<span>{i18n.t('copy.ee4d0f651884')}</span>
 					<ChevronRight size={12} strokeWidth={2.8} aria-hidden="true" />
 				</button>
 			{/if}
@@ -154,16 +160,16 @@
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mh-quick" aria-label="Бързи филтри">
+		<nav class="mh-quick" aria-label={i18n.t('copy.427bd0c4b0b6')}>
 			{#each quickFilters as item (item.label)}
-				<a class="mh-quick__pill" href={resolve(item.href)}>
+				<a class="mh-quick__pill" href={i18n.href(resolve(item.href))}>
 					{#if item.icon === 'car-line'}
 						{@render quickCarIcon()}
 					{:else}
 						{@const Icon = item.icon}
 						<Icon size={16} strokeWidth={2.2} aria-hidden="true" />
 					{/if}
-					<span>{item.label}</span>
+					<span>{i18n.text(item.label)}</span>
 				</a>
 			{/each}
 		</nav>

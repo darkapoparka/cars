@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { mobileImageSrc } from '$lib/data/mobile-media';
 	import { ChevronRight } from '@lucide/svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { shortFuel } from '$lib/utils/format';
 	import type { HomeMobileData } from '$lib/types/home';
@@ -51,29 +54,31 @@
 			? bodyHref(body)
 			: `${importRequestPath}?intent=import&query=${encodeURIComponent(body)}`;
 	const bodyCountLabel = (count: number) =>
-		count === 0 ? 'Внос по заявка' : count === 1 ? '1 кола' : `${count} коли`;
+		count === 0 ? i18n.text('Внос по заявка') : i18n.count(count);
 	const budgetHref = (budget: string): InventoryHref =>
 		`${inventoryPath}?price=${encodeURIComponent(budget)}`;
 	const budgetCardHref = (budget: string) =>
 		budget === 'all' ? inventoryPath : budgetHref(budget);
 	const brandCountLabel = (count: number) =>
-		count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Внос по заявка';
+		count > 0 ? i18n.count(count) : i18n.text('Внос по заявка');
 </script>
 
 <section class="mh-section mh-section--budget" aria-labelledby="mh-budget-title">
 	<div class="mh-section__head">
-		<h2 id="mh-budget-title">По цена</h2>
-		<a href={inventoryHref}>Всички <ChevronRight size={13} strokeWidth={2.6} /></a>
+		<h2 id="mh-budget-title">{i18n.t('copy.6a46dc837411')}</h2>
+		<a href={i18n.href(inventoryHref)}
+			>{i18n.t('copy.117d98cb652c')} <ChevronRight size={13} strokeWidth={2.6} /></a
+		>
 	</div>
 	<div class="mh-budget-grid">
 		{#each budgetTiles as tile (tile.value)}
 			<a
 				class={`mh-budget-card${tile.variant === 'open' ? ' mh-budget-card--open' : ''}`}
-				href={resolve(budgetCardHref(tile.value))}
+				href={i18n.href(resolve(budgetCardHref(tile.value)))}
 			>
 				<span class="mh-budget-card__media">
 					<img
-						src={mobileImageSrc(tile.image)}
+						src={i18n.asset(mobileImageSrc(tile.image))}
 						alt=""
 						loading="lazy"
 						decoding="async"
@@ -83,14 +88,19 @@
 				</span>
 				<span class="mh-budget-card__copy">
 					<strong
-						>{tile.label
+						>{i18n
+							.text(tile.label)
 							.replace('EUR', '€')
 							.replace(
 								/ (\d[\d ]* €)$/,
 								(_, amount: string) => ' ' + amount.replaceAll(' ', '\u00a0')
 							)}</strong
 					>
-					<span>{tile.caption ?? `${tile.count} коли`}</span>
+					<span
+						>{tile.caption
+							? i18n.t('action.showCount', { count: total })
+							: i18n.t('pattern.171282cd2618', { v0: tile.count })}</span
+					>
 				</span>
 			</a>
 		{/each}
@@ -99,16 +109,18 @@
 
 <section class="mh-section mh-section--featured" aria-labelledby="mh-featured-title">
 	<div class="mh-section__head">
-		<h2 id="mh-featured-title">Избрани</h2>
-		<a href={inventoryHref}>Всички <ChevronRight size={13} strokeWidth={2.6} /></a>
+		<h2 id="mh-featured-title">{i18n.t('copy.95213ebbf364')}</h2>
+		<a href={i18n.href(inventoryHref)}
+			>{i18n.t('copy.117d98cb652c')} <ChevronRight size={13} strokeWidth={2.6} /></a
+		>
 	</div>
 	<div class="mh-carlist">
 		{#each featuredCars as car (car.slug)}
 			<article class="mh-car">
-				<a class="mh-car__link" href={resolve('/inventory/[slug]', { slug: car.slug })}>
+				<a class="mh-car__link" href={i18n.href(resolve('/inventory/[slug]', { slug: car.slug }))}>
 					<span class="mh-car__media">
 						<img
-							src={car.image}
+							src={i18n.asset(car.image)}
 							alt={car.shortTitle}
 							loading="lazy"
 							decoding="async"
@@ -116,13 +128,15 @@
 							use:daynightImageFallback
 						/>
 						{#if car.badges[0]}
-							<span class="mh-car__badge">{car.badges[0]}</span>
+							<span class="mh-car__badge">{i18n.spec(car.badges[0])}</span>
 						{/if}
 					</span>
 					<span class="mh-car__copy">
 						<span class="mh-car__brand">{car.brand}</span>
 						<strong class="mh-car__title">{car.model}</strong>
-						<span class="mh-car__meta">{car.year} · {shortFuel(car.fuel)} · {car.mileage}</span>
+						<span class="mh-car__meta"
+							>{car.year} · {shortFuel(car.fuel, i18n.locale)} · {i18n.distance(car.mileage)}</span
+						>
 					</span>
 					<span class="mh-car__foot">
 						<span class="mh-car__price">{car.priceEur}</span>
@@ -138,7 +152,7 @@
 
 <section class="mh-section mh-section--brands" aria-labelledby="mh-brand-title">
 	<div class="mh-section__head mh-section__head--solo">
-		<h2 id="mh-brand-title">Марки</h2>
+		<h2 id="mh-brand-title">{i18n.t('copy.83755da980c3')}</h2>
 	</div>
 	<div class="mh-brand-grid">
 		{#each brandTiles as tile (tile.brand)}
@@ -146,18 +160,20 @@
 				class="mh-brandcard"
 				data-brand={tile.brand}
 				aria-label={`${tile.label}, ${brandCountLabel(tile.count)}`}
-				title={tile.count === 0 ? 'Внос по заявка' : undefined}
-				href={resolve(
-					tile.count > 0
-						? brandHref(tile.brand)
-						: `/contact?intent=import&make=${encodeURIComponent(tile.brand)}`
+				title={tile.count === 0 ? i18n.t('copy.fc333acc2c86') : undefined}
+				href={i18n.href(
+					resolve(
+						tile.count > 0
+							? brandHref(tile.brand)
+							: `/contact?intent=import&make=${encodeURIComponent(tile.brand)}`
+					)
 				)}
 			>
 				<span class="mh-brandcard__icon">
 					{#if brandLogos[tile.brand]}
 						<img
 							class="mh-brandcard__logo"
-							src={mobileImageSrc(brandLogos[tile.brand])}
+							src={i18n.asset(mobileImageSrc(brandLogos[tile.brand]))}
 							alt=""
 							loading="lazy"
 						/>
@@ -175,41 +191,43 @@
 		{/each}
 		<a
 			class="mh-brandcard mh-brandcard--all"
-			href={inventoryHref}
-			aria-label={`Всички марки, ${brandCountLabel(total)}`}
+			href={i18n.href(inventoryHref)}
+			aria-label={i18n.t('pattern.ff2eb139b89f', { v0: brandCountLabel(total) })}
 		>
 			<span class="mh-brandcard__icon mh-brandcard__icon--all" aria-hidden="true">
-				<img src={resolve(daynightSite.logoDark)} alt="" loading="lazy" />
+				<img src={i18n.asset(resolve(daynightSite.logoDark))} alt="" loading="lazy" />
 			</span>
 			<span class="mh-brandcard__copy">
-				<span class="mh-brandcard__name">Всички</span>
+				<span class="mh-brandcard__name">{i18n.t('copy.117d98cb652c')}</span>
 				<span class="mh-brandcard__count" aria-hidden="true">({total})</span>
 			</span>
 		</a>
 	</div>
-	<p class="mh-brand-note">(?) Внос по заявка</p>
+	<p class="mh-brand-note">{i18n.t('copy.191a991823ef')}</p>
 </section>
 
 <MobileHomeServices kind="sell" />
 
 <section class="mh-section" aria-labelledby="mh-type-title">
 	<div class="mh-section__head">
-		<h2 id="mh-type-title">По тип</h2>
-		<a href={inventoryHref}>Всички <ChevronRight size={13} strokeWidth={2.6} /></a>
+		<h2 id="mh-type-title">{i18n.t('copy.79f235b9790c')}</h2>
+		<a href={i18n.href(inventoryHref)}
+			>{i18n.t('copy.117d98cb652c')} <ChevronRight size={13} strokeWidth={2.6} /></a
+		>
 	</div>
 	<div class="mh-type-grid">
 		{#each bodyTiles as tile (tile.body)}
-			<a class="mh-cat" href={resolve(bodyCardHref(tile.body, tile.count))}>
+			<a class="mh-cat" href={i18n.href(resolve(bodyCardHref(tile.body, tile.count)))}>
 				<span class="mh-cat__media">
 					<img
 						class="mh-cat__image"
-						src={mobileImageSrc(bodyPhoto(tile.body))}
+						src={i18n.asset(mobileImageSrc(bodyPhoto(tile.body)))}
 						alt=""
 						loading="lazy"
 					/>
 				</span>
 				<span class="mh-cat__foot">
-					<span class="mh-cat__label">{bodyLabel(tile.body)}</span>
+					<span class="mh-cat__label">{i18n.spec(bodyLabel(tile.body))}</span>
 					<span class="mh-cat__count">{bodyCountLabel(tile.count)}</span>
 				</span>
 			</a>

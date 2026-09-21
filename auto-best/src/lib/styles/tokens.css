@@ -53,9 +53,11 @@
   --dn-space-6: 24px;
   --dn-space-7: 28px;
   --dn-space-8: 32px;
-  --dn-control-height-compact: 40px;
+  --dn-control-height-compact: 44px;
   --dn-control-height-default: 44px;
-  --dn-control-height-editor: 48px;
+  --dn-control-height-editor: 44px;
+  --dn-compact-control-visual-height: var(--dn-control-height-default);
+  --dn-compact-control-inset: calc((var(--dn-control-height-default) - var(--dn-compact-control-visual-height)) / 2);
   --dn-weight-regular: 400;
   --dn-weight-ui: 450;
   --dn-weight-semibold: 600;
@@ -71,6 +73,7 @@
   --dn-radius: 16px;
   --dn-radius-lg: 20px;
   --dn-route-hero-compact: 520px;
+  --dn-mobile-entry-hero-height: 252px;
   --dn-route-hero-controls: 560px;
   --dn-route-hero-height: 660px;
   --dn-route-hero-content-top: 256px;
@@ -139,24 +142,58 @@
   --dn-control-weight: var(--dn-weight-medium);
   --dn-control-font: var(--dn-control-weight) var(--dn-control-size) / var(--dn-leading-control) var(--dn-font);
   --dn-body-font: var(--dn-weight-regular) var(--dn-text-body) / var(--dn-leading-body) var(--dn-font);
-  --dn-tab-font: var(--dn-weight-medium) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-tab-font: var(--dn-weight-medium) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
   --dn-entry-font: var(--dn-weight-regular) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
   --dn-cta-size: var(--dn-text-lead);
   --dn-cta-weight: var(--dn-weight-medium);
   --dn-cta-leading: var(--dn-leading-control);
   --dn-cta-tracking: var(--dn-tracking-normal);
   --dn-cta-font: var(--dn-cta-weight) var(--dn-cta-size) / var(--dn-cta-leading) var(--dn-font);
+  --dn-compact-control-font: var(--dn-cta-font);
+
+  /* Mobile overlays use the default frame; desktop overlays can opt into the expanded editor frame. */
+  --dn-selection-surface: color-mix(in srgb, var(--dn-red) 4%, var(--dn-white));
+  --dn-selection-line: color-mix(in srgb, var(--dn-red) 28%, var(--dn-white));
+  --dn-overlay-header-padding: max(var(--dn-space-3), env(safe-area-inset-top)) var(--dn-space-4) var(--dn-space-3);
+  --dn-overlay-gutter: var(--dn-space-4);
+  --dn-overlay-gap: var(--dn-space-2);
+  --dn-overlay-row-radius: var(--dn-radius-control);
+  --dn-overlay-control-height-compact: var(--dn-control-height-default);
+  --dn-overlay-control-height-expanded: var(--dn-control-height-default);
+  --dn-overlay-control-height: var(--dn-overlay-control-height-compact);
+  --dn-overlay-field-font: var(--dn-entry-font);
+  --dn-overlay-option-font: var(--dn-compact-control-font);
+  --dn-overlay-action-font: var(--dn-cta-font);
 
   /* Shared entry and segmented-control aliases. */
-  --dn-entry-height: var(--dn-control-height-editor);
+  --dn-entry-height: var(--dn-control-height-default);
   --dn-entry-surface: var(--dn-home-panel);
   --dn-entry-line: var(--dn-line-strong);
   --dn-control-hit-height: var(--dn-control-height-default);
-  --dn-segment-height: var(--dn-control-height-compact);
+  --dn-segment-height: var(--dn-control-height-default);
   --dn-entry-action-height: var(--dn-control-height-default);
+  --dn-entry-action-gap: var(--dn-space-2);
+  --dn-entry-icon-gap: var(--dn-space-3);
+  --dn-compact-control-padding-inline: var(--dn-space-4);
+  --dn-entry-action-padding-inline: var(--dn-space-5);
+  --dn-control-icon-size: 18px;
+  --dn-entry-action-icon-size: var(--dn-control-icon-size);
   --dn-entry-segment-width: min(240px, calc(100% - var(--dn-space-6)));
   --dn-entry-action-width: min(220px, 100%);
   --dn-segment-surface: var(--dn-home-panel);
   --dn-segment-selected: var(--dn-surface-raised);
 }
 
+
+:root {
+  /* Native locale dialog roles; existing template typography remains unchanged. */
+  --dn-locale-eyebrow: 0.6875rem;
+  --dn-locale-hint-mobile: 0.8125rem;
+  --dn-locale-page-body: 0.9375rem;
+  --dn-locale-heading-mobile: 1.375rem;
+  --dn-locale-page-title: 1.625rem;
+  --dn-locale-close: 1.75rem;
+  --dn-locale-leading-prose: 1.6;
+  --dn-locale-tracking: 0.06em;
+  --dn-weight-bold: 700;
+}

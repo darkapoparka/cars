@@ -1,14 +1,14 @@
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleCategory } from "@repo/marketplace";
-import Image from "next/image";
+import Image from "./public-image";
 
 type ArtworkCategory = Exclude<VehicleCategory, "lease">;
 
 const categoryArtworkPaths: Record<ArtworkCategory, string> = {
-  car: "/variant-2/images/categories/day-night-category-car-v2.png",
-  motorbike: "/variant-2/images/categories/day-night-category-motorbike-v1.png",
-  truck: "/variant-2/images/categories/day-night-category-truck-v1.png",
-  van: "/variant-2/images/categories/day-night-category-van-v1.png",
+  car: "/images/categories/day-night-category-car-v2.png",
+  motorbike: "/images/categories/day-night-category-motorbike-v1.png",
+  truck: "/images/categories/day-night-category-truck-v1.png",
+  van: "/images/categories/day-night-category-van-v1.png",
 };
 
 export const VehicleCategoryArtwork = ({

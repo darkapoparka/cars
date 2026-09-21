@@ -1,37 +1,22 @@
 import { cars } from '$lib/data/daynight-vehicles';
 
-const fuelLabels: Record<string, string> = {
-	Бензин: 'Petrol',
-	'Газ/Бензин': 'Petrol/LPG',
-	'Бензин/Газ': 'Petrol/LPG',
-	Дизел: 'Diesel',
-	Електрически: 'Electric',
-	Хибриден: 'Hybrid'
-};
-
-const transmissionLabels: Record<string, string> = {
-	Автоматик: 'Automatic',
-	Ръчна: 'Manual',
-	Ръчни: 'Manual'
-};
-
 const brandLogoPaths: Record<string, string> = {
-	Audi: '/variant-3/assets/images/brand/mobile/audi.svg',
-	BMW: '/variant-3/assets/images/brand/mobile/bmw.svg',
-	Chevrolet: '/variant-3/assets/images/brand/mobile/chevrolet.svg',
-	Chrysler: '/variant-3/assets/images/brand/mobile/chrysler.svg',
-	Citroen: '/variant-3/assets/images/brand/mobile/citroen.svg',
-	Ford: '/variant-3/assets/images/brand/mobile/ford.svg',
-	Honda: '/variant-3/assets/images/brand/mobile/honda.svg',
-	Jaguar: '/variant-3/assets/images/brand/mobile/jaguar.svg',
-	'Land Rover': '/variant-3/assets/images/brand/mobile/land-rover.svg',
-	Mazda: '/variant-3/assets/images/brand/mobile/mazda.svg',
-	Opel: '/variant-3/assets/images/brand/mobile/opel.svg',
-	Peugeot: '/variant-3/assets/images/brand/mobile/peugeot.svg',
-	Porsche: '/variant-3/assets/images/brand/mobile/porsche.svg',
-	Skoda: '/variant-3/assets/images/brand/mobile/skoda.svg',
-	Volvo: '/variant-3/assets/images/brand/mobile/volvo.svg',
-	VW: '/variant-3/assets/images/brand/mobile/volkswagen.svg'
+	Audi: '/assets/images/brand/mobile/audi.svg',
+	BMW: '/assets/images/brand/mobile/bmw.svg',
+	Chevrolet: '/assets/images/brand/mobile/chevrolet.svg',
+	Chrysler: '/assets/images/brand/mobile/chrysler.svg',
+	Citroen: '/assets/images/brand/mobile/citroen.svg',
+	Ford: '/assets/images/brand/mobile/ford.svg',
+	Honda: '/assets/images/brand/mobile/honda.svg',
+	Jaguar: '/assets/images/brand/mobile/jaguar.svg',
+	'Land Rover': '/assets/images/brand/mobile/land-rover.svg',
+	Mazda: '/assets/images/brand/mobile/mazda.svg',
+	Opel: '/assets/images/brand/mobile/opel.svg',
+	Peugeot: '/assets/images/brand/mobile/peugeot.svg',
+	Porsche: '/assets/images/brand/mobile/porsche.svg',
+	Skoda: '/assets/images/brand/mobile/skoda.svg',
+	Volvo: '/assets/images/brand/mobile/volvo.svg',
+	VW: '/assets/images/brand/mobile/volkswagen.svg'
 };
 
 const bodyLabels: Record<string, string> = {
@@ -45,14 +30,14 @@ const bodyLabels: Record<string, string> = {
 };
 
 const bodyImagePaths: Record<string, string> = {
-	SUV: '/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp',
-	Седан: '/variant-3/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	Комби: '/variant-3/assets/images/body-type/normalized/body-wagon-transparent.webp',
-	Хечбек: '/variant-3/assets/images/body-type/normalized/body-hatchback-transparent.webp',
-	Ван: '/variant-3/assets/images/body-type/normalized/body-mpv-transparent.webp',
-	Лимузина: '/variant-3/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	Купе: '/variant-3/assets/images/body-type/normalized/body-coupe-transparent.webp',
-	Кабрио: '/variant-3/assets/images/body-type/normalized/body-coupe-transparent.webp'
+	SUV: '/assets/images/body-type/normalized/body-suv-transparent.webp',
+	Седан: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	Комби: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
+	Хечбек: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+	Ван: '/assets/images/body-type/normalized/body-mpv-transparent.webp',
+	Лимузина: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	Купе: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
+	Кабрио: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 };
 
 const featuredSlugs = [
@@ -62,9 +47,9 @@ const featuredSlugs = [
 ];
 
 const fallbackFeatureImages = [
-	'/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp',
-	'/variant-3/assets/images/megamenu/bmw-i7.webp',
-	'/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp'
+	'/assets/images/body-type/normalized/body-suv-transparent.webp',
+	'/assets/images/megamenu/bmw-i7.webp',
+	'/assets/images/body-type/normalized/body-suv-transparent.webp'
 ];
 
 function pickFeaturedCars() {
@@ -84,10 +69,12 @@ function pickFeaturedCars() {
 				: index === 1
 					? 'BMW i5 eDrive40 M Sport'
 					: 'Porsche Macan T',
-		meta: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
+		year: car.year,
+		fuel: car.fuel,
+		transmission: car.transmission,
 		image: fallbackFeatureImages[index] ?? car.image,
 		cash: index === 0 ? '£41,990' : index === 1 ? '£53,990' : '£69,990',
-		lease: index === 0 ? '£499 / month' : index === 1 ? '£599 / month' : '£779 / month',
+		lease: index === 0 ? '£499' : index === 1 ? '£599' : '£779',
 		badge: 'DayNight inspected'
 	}));
 }
@@ -140,35 +127,35 @@ export function load() {
 		budgetTiles: [
 			{
 				label: 'Under £10k',
-				count: `${Math.max(148, countBetween(0, 10000))} cars`,
-				image: '/variant-3/assets/images/body-type/normalized/body-hatchback-transparent.webp'
+				count: Math.max(148, countBetween(0, 10000)),
+				image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 			},
 			{
 				label: 'Under £20k',
-				count: `${Math.max(326, countBetween(10000, 20000))} cars`,
-				image: '/variant-3/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+				count: Math.max(326, countBetween(10000, 20000)),
+				image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
 				tone: 'blue'
 			},
 			{
 				label: 'Under £30k',
-				count: `${Math.max(412, countBetween(20000, 30000))} cars`,
-				image: '/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp'
+				count: Math.max(412, countBetween(20000, 30000)),
+				image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 			},
 			{
 				label: 'Under £40k',
-				count: `${Math.max(276, countBetween(30000, 40000))} cars`,
-				image: '/variant-3/assets/images/body-type/normalized/body-sedan-transparent.webp',
+				count: Math.max(276, countBetween(30000, 40000)),
+				image: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
 				tone: 'dark'
 			},
 			{
 				label: 'Under £50k',
-				count: `${Math.max(184, countBetween(40000, 50000))} cars`,
-				image: '/variant-3/assets/images/body-type/normalized/body-coupe-transparent.webp'
+				count: Math.max(184, countBetween(40000, 50000)),
+				image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 			},
 			{
 				label: 'Over £50k',
-				count: '112 cars',
-				image: '/variant-3/assets/images/budget/open-budget-supercar-v2.webp',
+				count: 112,
+				image: '/assets/images/budget/open-budget-supercar-v2.webp',
 				tone: 'red'
 			}
 		],
@@ -176,19 +163,19 @@ export function load() {
 		newsCards: [
 			{
 				title: 'Skoda Enyaq review',
-				image: '/variant-3/assets/images/blog/post-31.jpg'
+				image: '/assets/images/blog/post-31.jpg'
 			},
 			{
 				title: 'New Hyundai Santa Fe',
-				image: '/variant-3/assets/images/blog/post-32.jpg'
+				image: '/assets/images/blog/post-32.jpg'
 			},
 			{
 				title: 'EV charging guide',
-				image: '/variant-3/assets/images/blog/post-30.jpg'
+				image: '/assets/images/blog/post-30.jpg'
 			},
 			{
 				title: 'New Audi A5 review',
-				image: '/variant-3/assets/images/blog/post-34.jpg'
+				image: '/assets/images/blog/post-34.jpg'
 			}
 		],
 		brands: [...brandCounts.entries()]
@@ -206,7 +193,7 @@ export function load() {
 				body: bodyLabels[body] ?? body,
 				count,
 				image:
-					bodyImagePaths[body] ?? '/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp'
+					bodyImagePaths[body] ?? '/assets/images/body-type/normalized/body-suv-transparent.webp'
 			}))
 	};
 }

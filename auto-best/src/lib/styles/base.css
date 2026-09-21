@@ -9,10 +9,21 @@ body { margin: 0; color: var(--dn-ink); background: var(--dn-surface-raised); fo
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
 button { font: var(--dn-control-font); }
+/* One browser-independent frame for close, back and clear icon controls. */
+.dn-icon-button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: var(--dn-control-hit-height); height: var(--dn-control-hit-height); min-width: var(--dn-control-hit-height); min-height: var(--dn-control-hit-height); padding: 0; appearance: none; border: 0; border-radius: var(--dn-pill); background-clip: content-box; color: inherit; cursor: pointer; touch-action: manipulation; }
+.dn-icon-button > svg { display: block; width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); flex: none; pointer-events: none; }
+.dn-app-shell .dn-compact-control { position: relative; z-index: 0; isolation: isolate; display: inline-flex; min-height: var(--dn-entry-action-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-compact-control-surface, var(--dn-white)); color: var(--dn-compact-control-ink, var(--dn-ink)); font: var(--dn-compact-control-font); text-decoration: none; white-space: nowrap; transition: background-color 160ms ease-out; }
+.dn-app-shell .dn-entry-action { display: flex; width: var(--dn-entry-action-width); padding: 0 var(--dn-entry-action-padding-inline); }
+.dn-app-shell .dn-entry-action > svg { width: var(--dn-entry-action-icon-size); height: var(--dn-entry-action-icon-size); flex: none; }
+.dn-app-shell .dn-quick-pill { flex: 0 0 auto; padding: 0 var(--dn-compact-control-padding-inline); }
+.dn-app-shell .dn-compact-primary { --dn-compact-control-surface: var(--dn-red); --dn-compact-control-ink: var(--dn-white); font-weight: var(--dn-cta-weight); }
+.dn-app-shell .dn-compact-primary:is(:hover, :focus-visible) { --dn-compact-control-surface: var(--dn-red-hover); }
+.dn-app-shell .dn-compact-pill { --dn-compact-control-surface: var(--dn-white); --dn-compact-control-ink: #30363f; }
+.dn-app-shell .dn-compact-pill:is(:hover, :focus-visible) { --dn-compact-control-surface: var(--dn-surface-hover); }
 h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
 /* Shared by Buy/Import discovery and Sell/Import enquiry entry points. */
-.dn-segmented-control { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-1); padding: var(--dn-space-half); border-radius: var(--dn-pill); background: var(--dn-segment-surface); }
-.dn-segmented-control .dn-segmented-option { display: flex; min-width: 0; min-height: var(--dn-segment-height); align-items: center; justify-content: center; padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-pill); background: transparent; color: var(--dn-muted); font: var(--dn-tab-font); cursor: pointer; }
+.dn-segmented-control { display: grid; min-height: var(--dn-control-height-default); grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-half); padding: 0; border-radius: var(--dn-pill); background: var(--dn-segment-surface); }
+.dn-segmented-control .dn-segmented-option { display: flex; min-width: 0; min-height: var(--dn-segment-height); align-items: center; justify-content: center; padding: 0 var(--dn-space-3); border: 0; border-radius: var(--dn-pill); background: transparent; color: var(--dn-muted); font: var(--dn-tab-font); cursor: pointer; }
 .dn-segmented-control .dn-segmented-option:is(.active, [aria-selected='true']) { background: var(--dn-segment-selected); color: var(--dn-ink); }
 .dn-segmented-control .dn-segmented-option:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 /* Entry fields carry more emphasis than the mode switch above them. */

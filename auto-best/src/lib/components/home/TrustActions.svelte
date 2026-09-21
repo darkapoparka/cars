@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleCutout from '$components/ui/VehicleCutout.svelte';
@@ -64,15 +67,15 @@
   const visibleActions = $derived(group === 'all' ? actions : group === 'browse' ? actions.slice(0, 2) : actions.slice(2));
 </script>
 
-<section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Покупка и продажба' : 'Внос и лизинг'}>
+<section class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? i18n.t("m_5dfe5d699973") : group === 'browse' ? i18n.t("m_d064a1978f8f") : i18n.t("m_5526464e7543")}>
   <div class="container">
-    <h2 class="dn-sr-only">{variant === 'cards' ? 'Как можем да помогнем' : group === 'browse' ? 'Покупка и продажба' : 'Внос и лизинг'}</h2>
+    <h2 class="dn-sr-only">{variant === 'cards' ? i18n.t("m_5dfe5d699973") : group === 'browse' ? i18n.t("m_d064a1978f8f") : i18n.t("m_5526464e7543")}</h2>
     <div class="dn-trust-actions__panel">
       {#if variant === 'cards'}
         <div class="dn-services-heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
-          <h2 class="dn-home-section-title">Как можем да помогнем</h2>
+          <h2 class="dn-home-section-title">{i18n.t("m_5dfe5d699973")}</h2>
           
-          <a class="dn-home-section-action" href={resolve('/contact')}>Свържете се с нас</a>
+          <a class="dn-home-section-action" href={i18n.href(resolve('/contact'))}>{i18n.t("m_d7def4b82f7c")}</a>
         </div>
       {/if}
       <div class="dn-trust-actions__grid">
@@ -112,14 +115,14 @@
             <div class="dn-trust-card__content">
               <h3 id={`trust-${variant}-${action.icon}`}>
                 {#if variant === 'banners'}
-                  <a class="desktop-copy" href={resolve(action.href)}>{action.title}</a><span class="mobile-copy">{action.mobileTitle}</span>
+                  <a class="desktop-copy" href={i18n.href(resolve(action.href))}>{i18n.text(action.title)}</a><span class="mobile-copy">{i18n.text(action.mobileTitle)}</span>
                 {:else}
-                  <a href={resolve(action.href)}><span class="desktop-copy">{action.title}</span><span class="mobile-copy">{action.icon === 'finance' ? 'Лизинг' : action.icon === 'contact' ? 'Внос' : action.icon === 'value' ? 'Продай кола' : action.mobileTitle}</span></a>
+                  <a href={i18n.href(resolve(action.href))}><span class="desktop-copy">{i18n.text(action.title)}</span><span class="mobile-copy">{action.icon === 'finance' ? i18n.t("m_b231bc0b36a1") : action.icon === 'contact' ? i18n.t("m_2cff9baabf56") : action.icon === 'value' ? i18n.t("m_b7457efd1311") : i18n.text(action.mobileTitle)}</span></a>
                 {/if}
               </h3>
-              <p>{#if variant === 'banners'}{#each action.bannerDescription as line (line)}<span class="dn-trust-card__description-line">{`${line} `}</span>{/each}{:else}{action.description}{/if}</p>
-              <a class="dn-trust-card__action" href={resolve(action.href)} aria-labelledby={`trust-${variant}-${action.icon} trust-action-${variant}-${action.icon}`}>
-                <span id={`trust-action-${variant}-${action.icon}`}><span class="desktop-copy">{action.cta}</span><span class="mobile-copy">{variant === 'cards' && action.icon === 'value' ? 'Оценка' : variant === 'cards' && action.icon === 'finance' ? 'Условия' : action.mobileCta}</span></span>
+              <p>{#if variant === 'banners'}{#each action.bannerDescription as line (line)}<span class="dn-trust-card__description-line">{`${i18n.text(line)} `}</span>{/each}{:else}{i18n.text(action.description)}{/if}</p>
+              <a class="dn-trust-card__action" href={i18n.href(resolve(action.href))} aria-labelledby={`trust-${variant}-${action.icon} trust-action-${variant}-${action.icon}`}>
+                <span id={`trust-action-${variant}-${action.icon}`}><span class="desktop-copy">{i18n.text(action.cta)}</span><span class="mobile-copy">{variant === 'cards' && action.icon === 'value' ? i18n.t("m_fec2ceaccc07") : variant === 'cards' && action.icon === 'finance' ? i18n.t("m_908b6d3a8368") : i18n.text(action.mobileCta)}</span></span>
                 <Icon name="arrow-right" size={16} strokeWidth={1.8} />
               </a>
             </div>

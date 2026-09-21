@@ -17,7 +17,7 @@
 		<div class="admin-login-context">
 			<img
 				class="admin-login-banner-image"
-				src="/variant-3/assets/images/admin/cms-login-banner.png"
+				src="/assets/images/admin/cms-login-banner.png"
 				alt=""
 				aria-hidden="true"
 			/>

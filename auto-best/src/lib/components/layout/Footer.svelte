@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import type { Attachment } from 'svelte/attachments';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
@@ -8,39 +12,39 @@
   let { showActions = true, showMobileFooter = false, observeFooter }: { showActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
-  const actions = [
+  const actions = $derived([
     {
-      title: 'Подбрани автомобили',
-      description: 'Разгледайте актуалната селекция',
+      title: i18n.t("m_dce64d6d5cf9"),
+      description: i18n.t("m_26c39003300b"),
       href: '/listing-grid',
       icon: 'car'
     },
     {
-      title: `Оглед в ${brand.city}`,
-      description: 'С предварителна уговорка',
+      title: i18n.t("m_a760c609372f", { p0: i18n.dealer('city') }),
+      description: i18n.t("m_e27d6b64cb71"),
       href: '/contact?topic=inspection',
       icon: 'contact'
     },
     {
-      title: 'Собствен лизинг',
-      description: 'Попитайте за актуалните условия',
+      title: i18n.t("m_73322af42813"),
+      description: i18n.t("m_83f82e8f7941"),
       href: '/contact?topic=leasing',
       icon: 'finance'
     },
     {
-      title: 'Внос по заявка',
-      description: 'Уточнете критериите с екипа',
+      title: i18n.t("m_fc333acc2c86"),
+      description: i18n.t("m_505d84ec9e70"),
       href: '/contact?topic=import',
       icon: 'value'
     }
-  ] as const;
+  ] as const);
 </script>
 
 {#if showActions}
-  <section class="dn-footer-actions" aria-label="Следващи стъпки">
+  <section class="dn-footer-actions" aria-label={i18n.t("m_920d4a55469d")}>
     <div class="container dn-footer-actions__grid">
       {#each actions as action (action.href)}
-        <a href={resolve(action.href)}>
+        <a href={i18n.href(resolve(action.href))}>
           <span class="dn-footer-actions__icon" aria-hidden="true">
             <OriginalActionIcon name={action.icon} />
           </span>
@@ -57,37 +61,37 @@
 <footer id="dn-site-footer" {@attach observeFooter} class={['dn-footer', { 'dn-footer--mobile-hidden': !showMobileFooter }]}>
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
-      <a class="dn-footer__logo" href={resolve('/')}><img src={brand.logoOnDark} alt={brand.name} width="220" height="58" /></a>
-      <span class="dn-footer__tagline">Автомобили · Внос · Лизинг</span>
-      <p>Подбрани премиум автомобили, внос и собствен лизинг с директен контакт с екипа.</p>
+      <a class="dn-footer__logo" href={i18n.href(resolve('/'))}><img src={brand.logoOnDark} alt={brand.name} width="220" height="58" /></a>
+      <span class="dn-footer__tagline">{i18n.t("m_5cf2001dbaf7")}</span>
+      <p>{i18n.t("m_9785a63caa9d")}</p>
     </div>
-    <nav class="dn-footer__vehicles" aria-label="Автомобили">
-      <strong>Автомобили</strong>
-      <a href={resolve('/listing-grid')}>Всички автомобили</a>
-      <a href={resolve('/listing-grid?condition=used')}>Употребявани</a>
-      <a href={resolve('/listing-grid?sort=newest')}>Най-нови предложения</a>
+    <nav class="dn-footer__vehicles" aria-label={i18n.t("m_9e499e4cdaf4")}>
+      <strong>{i18n.t("m_9e499e4cdaf4")}</strong>
+      <a href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_13b5d43d1176")}</a>
+      <a href={i18n.href(resolve('/listing-grid?condition=used'))}>{i18n.t("m_2b705510e73a")}</a>
+      <a href={i18n.href(resolve('/listing-grid?sort=newest'))}>{i18n.t("m_615eaa5f897b")}</a>
     </nav>
-    <nav class="dn-footer__company" aria-label="Компания">
-      <strong>Компания</strong>
-      <a href={resolve('/about-us')}>За нас</a>
-      <a href={resolve('/blog')}>Полезно</a>
-      <a href={resolve('/contact')}>Контакти</a>
+    <nav class="dn-footer__company" aria-label={i18n.t("m_de4743c87973")}>
+      <strong>{i18n.t("m_de4743c87973")}</strong>
+      <a href={i18n.href(resolve('/about-us'))}>{i18n.t("m_b4b580a9ad8c")}</a>
+      <a href={i18n.href(resolve('/blog'))}>{i18n.t("m_572cd72feb9a")}</a>
+      <a href={i18n.href(resolve('/contact'))}>{i18n.t("m_2b5c3d26721a")}</a>
     </nav>
-    <div class="dn-footer__contact" aria-label="Контакт с екипа">
-      <h2>Имате въпроси?</h2>
+    <div class="dn-footer__contact" aria-label={i18n.t("m_fa39abdd21f5")}>
+      <h2>{i18n.t("m_822db82e0dc3")}</h2>
       <a {...phoneLinkAttributes} class="dn-footer__call">
         <Icon name="phone" size={18} />
         <span>{brand.phone}</span>
       </a>
-      <a href={resolve('/contact')} class="dn-footer__contact-link">
+      <a href={i18n.href(resolve('/contact'))} class="dn-footer__contact-link">
         <Icon name="map-pin" size={18} />
-        <span>{brand.address}</span>
+        <span>{i18n.dealer('address')}</span>
         <span class="dn-footer__contact-arrow"><Icon name="arrow-right" size={16} /></span>
       </a>
-      <p class="dn-footer__appointment">{brand.appointment}</p>
+      <p class="dn-footer__appointment">{i18n.dealer('appointment')}</p>
     </div>
   </div>
-  <div class="container dn-footer__bottom"><span class="dn-footer__copyright">© {new Date().getFullYear()} {brand.name}</span><span class="dn-footer__descriptor">Автомобили · Внос · Лизинг</span></div>
+  <div class="container dn-footer__bottom"><span class="dn-footer__copyright">© {new Date().getFullYear()} {brand.name}</span><span class="dn-footer__descriptor">{i18n.t("m_5cf2001dbaf7")}</span></div>
 </footer>
 
 <style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import PostForm from '$lib/components/admin/PostForm.svelte';
 	import AdminShell from '$lib/components/admin/AdminShell.svelte';

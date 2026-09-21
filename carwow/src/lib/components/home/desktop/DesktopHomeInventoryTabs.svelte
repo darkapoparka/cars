@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { desktopHomeInventoryPills } from './desktop-home-inventory-data';
 	import '$lib/styles/desktop-discovery.css';
 </script>
@@ -8,10 +11,10 @@
 	{#each desktopHomeInventoryPills as pill (pill.href)}
 		<a
 			class={['daynight-home-inventory__pill desktop-discovery-chip', pill.isActive && 'is-active']}
-			href={resolve(pill.href)}
+			href={i18n.href(resolve(pill.href))}
 			aria-current={pill.isActive ? 'page' : undefined}
 		>
-			<span>{pill.label}</span>
+			<span>{i18n.text(pill.label)}</span>
 		</a>
 	{/each}
 </div>

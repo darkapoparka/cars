@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import Ban from '@lucide/svelte/icons/ban';
 	import Search from '@lucide/svelte/icons/search';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';

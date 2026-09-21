@@ -1,4 +1,11 @@
 <script lang="ts">
+  import { containDialogTab } from '$lib/locale/focus';
+  import { specificationLabel } from '$lib/i18n/presentation';
+
+  import { getI18n } from '$lib/locale/context';
+  import { templateMessage } from '$lib/i18n/presentation';
+  const i18n = getI18n();
+
   import { preserveScrollOffset } from '$lib/ui/overlay';
   import { onDestroy, type Snippet } from 'svelte';
   import { resolve } from '$app/paths';
@@ -16,6 +23,7 @@
     listingDraftFromFilters,
     listingDraftHasFilters,
     listingFacetSummary,
+    listingFacetTitle,
     listingFiltersFromDraft,
     withListingMake,
     type ListingDraft,
@@ -31,7 +39,7 @@
 
   let draft = $state<ListingDraft>(emptyListingDraft());
   let draftFilters = $derived(listingFiltersFromDraft(draft));
-  let matchingVehicles = $derived(filterListingVehicles(listingVehicles, draftFilters));
+  let matchingVehicles = $derived(filterListingVehicles(listingVehicles, draftFilters, i18n.locale));
   let hasLiveFilters = $derived(listingDraftHasFilters(draft));
   let hasInvalidPriceRange = $derived(Boolean(draft.priceMin && draft.priceMax && Number(draft.priceMin) > Number(draft.priceMax)));
   let hasInvalidYearRange = $derived(Boolean(draft.yearMin && draft.yearMax && Number(draft.yearMin) > Number(draft.yearMax)));
@@ -68,10 +76,20 @@
     { field: 'condition', label: 'Състояние' },
     { field: 'equipment', label: 'Екстри' }
   ] satisfies readonly { field: ListingFacetField; label: string }[];
-  let mobileFields = $derived(mobileFieldDefinitions.map(item => ({
-    ...item,
-    value: listingFacetSummary(item.field, draft)
-  })));
+  let mobileFields = $derived(mobileFieldDefinitions.map(item => {
+    const active = item.field === 'price' ? Boolean(draft.priceMin || draft.priceMax)
+      : item.field === 'year' ? Boolean(draft.yearMin || draft.yearMax)
+      : item.field === 'mileage_max' ? Boolean(draft.mileageMax)
+      : item.field === 'equipment' ? draft.equipment.length > 0
+      : Boolean(draft[item.field]);
+    const range = item.field === 'price' || item.field === 'year' || item.field === 'mileage_max';
+    return {
+      ...item,
+      active,
+      value: active || item.field === 'equipment' ? listingFacetSummary(item.field, draft, i18n.locale)
+        : i18n.t(range ? 'inventory.range.unlimited' : 'm_a52ace420f21')
+    };
+  }));
 
   const resetDraft = () => { draft = emptyListingDraft(filters.sort); };
 
@@ -115,7 +133,7 @@
 
 <QuickFilterSheet mode="draft" id="dn-dialog-choice" filters={draftFilters} onApply={initializeDraft} fullScreen>
 {#snippet children(openChoice, choiceOpen)}
-<dialog
+<dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)}
   class="dn-listing-filter__dialog"
   id="dn-listing-filter-dialog"
   aria-labelledby="dn-listing-filter-title"
@@ -127,150 +145,150 @@
   <form
     class="dn-listing-filter__dialog-panel"
     method="GET"
-    action={resolve('/listing-grid')}
+    action={i18n.href(resolve('/listing-grid'))}
     onsubmit={handleDialogSubmit}
     onformdata={cleanFormData}
   >
     <header class="dn-listing-filter__dialog-header">
-      <h2 id="dn-listing-filter-title">Търсене на автомобили</h2>
-      <button class="dn-listing-filter__close" type="button" aria-label="Затвори филтрите" onclick={closeFilters}>
-        <Icon name="x" size={22} />
+      <h2 id="dn-listing-filter-title">{i18n.t("m_32729e44de2d")}</h2>
+      <button class="dn-listing-filter__close dn-icon-button" type="button" aria-label={i18n.t("m_2b3fff4a027c")} onclick={closeFilters}>
+        <Icon name="x" size={18} />
       </button>
     </header>
 
     <div class="dn-listing-filter__dialog-content">
       <div class="dn-listing-filter__dialog-search" role="search">
-        <label class="dn-sr-only" for="dn-listing-dialog-query">Търсене на автомобил</label>
-        <Icon name="search" size={20} />
-        <input id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draft.q} onkeydown={handleSearchKeydown} type="search" name="q" placeholder="Марка или модел" autocomplete="off" />
+        <label class="dn-sr-only" for="dn-listing-dialog-query">{i18n.t("m_0ae7a3ecbc83")}</label>
+        <Icon name="search" size={18} />
+        <input {@attach i18n.validation} id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draft.q} onkeydown={handleSearchKeydown} type="search" name="q" placeholder={i18n.t("m_cb8bed4ff8b8")} autocomplete="off" />
         <button
           class="dn-listing-filter__inline-submit"
           type="submit"
           disabled={matchingVehicles.length === 0 || hasInvalidRange}
-          aria-label={matchingVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${matchingVehicles.length} автомобила`}
+          aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}
         >
-          Покажи {matchingVehicles.length}
-          <Icon name="arrow-right" size={17} strokeWidth={2} />
+          {templateMessage(i18n, "Show {p0}", { p0: matchingVehicles.length })}
+          <Icon name="arrow-right" size={18} strokeWidth={2} />
         </button>
       </div>
 
       <div class="dn-mobile-filter-fields">
         {#each mobileFields as item (item.field)}
-          <button type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen} onclick={event => openChoice(event, item.field, item.label)}><strong>{item.label}</strong><span>{item.value}</span><Icon name="arrow-right" size={17} /></button>
+          <button type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen} onclick={event => openChoice(event, item.field, item.label)}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
         {/each}
       </div>
       <div class="dn-listing-filter__filter-groups">
         <div class="dn-listing-filter__core-grid">
           <label>
-            <span class="dn-listing-filter__field-label">Марка</span>
-            <select name="make" aria-label="Марка" value={draft.make} onchange={(event) => { draft = withListingMake(draft, event.currentTarget.value); }}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_ccdd25d4230f")}</span>
+            <select {@attach i18n.validation} name="make" aria-label={i18n.t("m_ccdd25d4230f")} value={draft.make} onchange={(event) => { draft = withListingMake(draft, event.currentTarget.value); }}>
               {#each listingFilterOptions.makes as option (option)}
-                <option value={option}>{option || 'Марка'}</option>
+                <option value={option}>{option || i18n.t("m_ccdd25d4230f")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Модел</span>
-            <select name="model" aria-label="Модел" bind:value={draft.model}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_5e2c614c23f0")}</span>
+            <select {@attach i18n.validation} name="model" aria-label={i18n.t("m_5e2c614c23f0")} bind:value={draft.model}>
               {#each modelOptions as option (option)}
-                <option value={option}>{option || 'Модел'}</option>
+                <option value={option}>{option || i18n.t("m_5e2c614c23f0")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Купе</span>
-            <select name="body" aria-label="Купе" bind:value={draft.body}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_191c24bf12d5")}</span>
+            <select {@attach i18n.validation} name="body" aria-label={i18n.t("m_191c24bf12d5")} bind:value={draft.body}>
               {#each listingFilterOptions.bodies as option (option)}
-                <option value={option}>{bodyLabel(option) || 'Купе'}</option>
+                <option value={option}>{specificationLabel(bodyLabel(option), i18n.locale) || i18n.t("m_191c24bf12d5")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Състояние</span>
-            <select name="condition" aria-label="Състояние" bind:value={draft.condition}>
-              <option value="">Състояние</option>
-              <option value="new">Нови</option>
-              <option value="used">Употребявани</option>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_39b36d38d6eb")}</span>
+            <select {@attach i18n.validation} name="condition" aria-label={i18n.t("m_39b36d38d6eb")} bind:value={draft.condition}>
+              <option value="">{i18n.t("m_39b36d38d6eb")}</option>
+              <option value="new">{i18n.t("m_18fdd549b2ed")}</option>
+              <option value="used">{i18n.t("m_2b705510e73a")}</option>
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Цена от</span>
-            <select name="price_min" aria-label="Цена от" bind:value={draft.priceMin}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_94470b41eead")}</span>
+            <select {@attach i18n.validation} name="price_min" aria-label={i18n.t("m_94470b41eead")} bind:value={draft.priceMin}>
               {#if draft.priceMin && !listingFilterOptions.prices.some(value => value === draft.priceMin)}<option value={draft.priceMin}>{draft.priceMin}</option>{/if}
               {#each listingFilterOptions.prices as option (option)}
-                <option value={option}>{option ? `От ${new Intl.NumberFormat('bg-BG').format(Number(option))} €` : 'Цена от'}</option>
+                <option value={option}>{option ? i18n.t("m_d7f76d3f0f5a", { p0: new Intl.NumberFormat(i18n.locale).format(Number(option)) }) : i18n.t("m_94470b41eead")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Цена до</span>
-            <select name="price_max" aria-label="Цена до" bind:value={draft.priceMax}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_363c4f34635c")}</span>
+            <select {@attach i18n.validation} name="price_max" aria-label={i18n.t("m_363c4f34635c")} bind:value={draft.priceMax}>
               {#if draft.priceMax && !listingFilterOptions.prices.some(value => value === draft.priceMax)}<option value={draft.priceMax}>{draft.priceMax}</option>{/if}
               {#each listingFilterOptions.prices as option (option)}
-                <option value={option}>{option ? `До ${new Intl.NumberFormat('bg-BG').format(Number(option))} €` : 'Цена до'}</option>
+                <option value={option}>{option ? i18n.t("m_a04d91558e9c", { p0: new Intl.NumberFormat(i18n.locale).format(Number(option)) }) : i18n.t("m_363c4f34635c")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Година от</span>
-            <select name="year_min" aria-label="Година от" bind:value={draft.yearMin}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_349ee8568241")}</span>
+            <select {@attach i18n.validation} name="year_min" aria-label={i18n.t("m_349ee8568241")} bind:value={draft.yearMin}>
               {#if draft.yearMin && !listingFilterOptions.years.some(value => value === draft.yearMin)}<option value={draft.yearMin}>{draft.yearMin}</option>{/if}
               {#each listingFilterOptions.years as option (option)}
-                <option value={option}>{option || 'Година от'}</option>
+                <option value={option}>{option || i18n.t("m_349ee8568241")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Година до</span>
-            <select name="year_max" aria-label="Година до" bind:value={draft.yearMax}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_07339ff9faf8")}</span>
+            <select {@attach i18n.validation} name="year_max" aria-label={i18n.t("m_07339ff9faf8")} bind:value={draft.yearMax}>
               {#if draft.yearMax && !listingFilterOptions.years.some(value => value === draft.yearMax)}<option value={draft.yearMax}>{draft.yearMax}</option>{/if}
               {#each listingFilterOptions.years as option (option)}
-                <option value={option}>{option || 'Година до'}</option>
+                <option value={option}>{option || i18n.t("m_07339ff9faf8")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Пробег до</span>
-            <select name="mileage_max" aria-label="Пробег до" bind:value={draft.mileageMax}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_5679c2543732")}</span>
+            <select {@attach i18n.validation} name="mileage_max" aria-label={i18n.t("m_5679c2543732")} bind:value={draft.mileageMax}>
               {#if draft.mileageMax && !listingFilterOptions.mileages.some(value => value === draft.mileageMax)}<option value={draft.mileageMax}>{draft.mileageMax}</option>{/if}
               {#each listingFilterOptions.mileages as option (option)}
-                <option value={option}>{option ? `До ${new Intl.NumberFormat('bg-BG').format(Number(option))} км` : 'Пробег до'}</option>
+                <option value={option}>{option ? i18n.t("m_243dcf897937", { p0: new Intl.NumberFormat(i18n.locale).format(Number(option)) }) : i18n.t("m_5679c2543732")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Гориво</span>
-            <select name="fuel" aria-label="Гориво" bind:value={draft.fuel}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_a80f942f4112")}</span>
+            <select {@attach i18n.validation} name="fuel" aria-label={i18n.t("m_a80f942f4112")} bind:value={draft.fuel}>
               {#each listingFilterOptions.fuels as option (option)}
-                <option value={option}>{option || 'Гориво'}</option>
+                <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_a80f942f4112")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Скоростна кутия</span>
-            <select name="transmission" aria-label="Скоростна кутия" bind:value={draft.transmission}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_3e10134259ab")}</span>
+            <select {@attach i18n.validation} name="transmission" aria-label={i18n.t("m_3e10134259ab")} bind:value={draft.transmission}>
               {#each listingFilterOptions.transmissions as option (option)}
-                <option value={option}>{option || 'Скорости'}</option>
+                <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_3e10134259ab")}</option>
               {/each}
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">Пакет или версия</span>
-            <select name="version" aria-label="Пакет или версия" bind:value={draft.version}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_1f46b4649491")}</span>
+            <select {@attach i18n.validation} name="version" aria-label={i18n.t("m_1f46b4649491")} bind:value={draft.version}>
               {#each listingFilterOptions.versions as option (option)}
-                <option value={option}>{option || 'Версия'}</option>
+                <option value={option}>{option || i18n.t("m_3f19fe84a2de")}</option>
               {/each}
             </select>
           </label>
         </div>
 
         <section class="dn-listing-filter__filter-group dn-listing-filter__filter-group--equipment" aria-labelledby="dn-listing-filter-equipment-title">
-          <h3 id="dn-listing-filter-equipment-title">Екстри</h3>
+          <h3 id="dn-listing-filter-equipment-title">{i18n.t("m_5697d03daef4")}</h3>
           <div class="dn-listing-filter__equipment-grid">
             {#each listingFilterOptions.equipment as option (option)}
               <label class="dn-listing-filter__equipment-option">
-                <input type="checkbox" name="equipment" value={option} bind:group={draft.equipment} />
-                <span>{option}</span>
+                <input {@attach i18n.validation} type="checkbox" name="equipment" value={option} bind:group={draft.equipment} />
+                <span>{specificationLabel(option, i18n.locale)}</span>
               </label>
             {/each}
           </div>
@@ -281,12 +299,13 @@
     <footer class="dn-listing-filter__dialog-footer">
       {#if hasInvalidRange}
         <p class="dn-listing-filter__range-error" role="alert">
-          {hasInvalidPriceRange ? 'Минималната цена трябва да е по-ниска от максималната.' : 'Началната година трябва да е преди крайната.'}
+          {hasInvalidPriceRange ? i18n.t("m_2157bc34d38a") : i18n.t("m_e35acfc7ae2e")}
         </p>
       {/if}
-      {#if hasLiveFilters}<a class="dn-listing-filter__clear" href={resolve('/listing-grid')} onclick={handleClear}>Изчисти</a>{/if}
-      <button class="dn-listing-filter__dialog-submit" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite">
-        <span>{matchingVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${matchingVehicles.length} автомобила`}</span>
+      {#if hasLiveFilters}<a class="dn-listing-filter__clear" href={i18n.href(resolve('/listing-grid'))} onclick={handleClear}>{i18n.t("action.clearShort")}</a>{/if}
+      <button class="dn-listing-filter__dialog-submit" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite" aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}>
+        <span class="dn-listing-filter__submit-full">{matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}</span>
+        <span class="dn-listing-filter__submit-compact">{i18n.t("action.showCount", { count: matchingVehicles.length })}</span>
         <Icon name="search" size={18} />
       </button>
       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
@@ -297,6 +316,7 @@
 </QuickFilterSheet>
 
 <style>
+  .dn-listing-filter__submit-compact { display: none; }
   .dn-mobile-filter-fields { display: none; }
   label {
     display: block;
@@ -304,14 +324,14 @@
   }
   input[type='search'], select {
     width: 100%;
-    height: 52px;
-    padding: 0 15px;
+    height: var(--dn-control-height-default);
+    padding: 0 var(--dn-space-4);
     border: 1px solid #dfe2e6;
     border-radius: var(--dn-radius-control);
     outline: 0;
     background: #f5f6f7;
     color: #202329;
-    font: var(--dn-body-font);
+    font: var(--dn-entry-font);
   }
   input::placeholder {
     color: #737984;
@@ -362,8 +382,9 @@
 
   .dn-listing-filter__dialog-header {
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
-    gap: 18px;
+    gap: var(--dn-space-3);
     padding: 24px 28px 10px;
     background: #fff;
   }
@@ -376,20 +397,7 @@
     letter-spacing: var(--dn-tracking-heading);
   }
 
-  .dn-listing-filter__close {
-    display: inline-grid;
-    width: 44px;
-    height: 44px;
-    flex: 0 0 auto;
-    margin-left: auto;
-    place-items: center;
-    padding: 0;
-    border: 1px solid #dfe2e6;
-    border-radius: var(--dn-radius-button);
-    background: #f1f2f4;
-    color: #202329;
-    cursor: pointer;
-  }
+  .dn-listing-filter__close { margin-left: auto; border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: #202329; }
 
   .dn-listing-filter__close:hover,
   .dn-listing-filter__close:focus-visible {
@@ -420,12 +428,12 @@
   .dn-listing-filter__dialog-search {
     position: relative;
     display: flex !important;
-    flex: 0 0 60px;
+    flex: 0 0 var(--dn-control-height-default);
     align-items: center;
-    gap: 13px;
-    height: 60px;
+    gap: var(--dn-entry-icon-gap);
+    height: var(--dn-control-height-default);
     margin-bottom: 22px;
-    padding: 5px 5px 5px 18px;
+    padding: 0 var(--dn-space-4);
     border: 1px solid #d8dce2;
     border-radius: var(--dn-pill);
     background: #f5f6f7;
@@ -446,22 +454,22 @@
     outline: 0;
     background: transparent;
     box-shadow: none;
-    font-size: var(--dn-control-size);
+    font: var(--dn-overlay-field-font);
   }
 
   .dn-listing-filter__inline-submit {
     display: inline-flex;
-    height: 48px;
+    height: var(--dn-control-height-default);
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
-    gap: 7px;
-    padding: 0 24px;
+    gap: var(--dn-entry-action-gap);
+    padding: 0 var(--dn-space-6);
     border: 0;
     border-radius: var(--dn-radius-button);
     background: #202329;
     color: #fff;
-    font: var(--dn-control-font);
+    font: var(--dn-compact-control-font);
     cursor: pointer;
     transition: background-color 150ms ease-out;
   }
@@ -511,21 +519,17 @@
   }
 
   .dn-listing-filter__core-grid select {
-    height: 58px;
-    padding-inline: 16px;
+    height: var(--dn-control-height-default);
+    padding-inline: var(--dn-space-4);
     border-radius: var(--dn-radius-control);
-    font-size: var(--dn-control-size);
-  }
-
-  @media (min-width: 768px) {
-    .dn-listing-filter__core-grid select { height: 48px; }
+    font: var(--dn-entry-font);
   }
 
   .dn-listing-filter__filter-group--equipment {
     min-width: 0;
     margin-top: 18px;
     padding: 22px;
-    border-radius: 14px;
+    border-radius: var(--dn-overlay-row-radius);
     background: #f5f6f7;
   }
 
@@ -540,22 +544,20 @@
   .dn-listing-filter__equipment-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
+    gap: var(--dn-overlay-gap);
     margin-top: 16px;
   }
 
   .dn-listing-filter__equipment-option {
     display: flex !important;
-    min-height: 48px;
+    min-height: var(--dn-control-height-default);
     align-items: center;
-    gap: 10px;
+    gap: var(--dn-overlay-gap);
     padding: 10px 14px;
     border-radius: var(--dn-radius-control);
     background: #fff;
     color: #353a42;
-    font-size: var(--dn-text-meta);
-    font-weight: var(--dn-weight-semibold);
-    line-height: var(--dn-leading-heading);
+    font: var(--dn-overlay-option-font);
     cursor: pointer;
     transition: background-color 150ms ease-out, color 150ms ease-out;
   }
@@ -565,11 +567,12 @@
   }
 
   .dn-listing-filter__equipment-option:has(input:checked) {
-    background: #202329;
-    color: #fff;
+    background: var(--dn-selection-surface);
+    color: var(--dn-ink);
+    box-shadow: inset 0 0 0 1px var(--dn-selection-line);
   }
 
-  .dn-listing-filter__equipment-option:focus-within {
+  .dn-listing-filter__equipment-option:has(input:focus-visible) {
     outline: 3px solid rgba(32, 35, 41, 0.24);
     outline-offset: 2px;
   }
@@ -604,10 +607,10 @@
   .dn-listing-filter__dialog-submit {
     display: inline-flex;
     min-width: 230px;
-    height: 54px;
+    height: var(--dn-overlay-control-height);
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: var(--dn-overlay-gap);
     padding: 0 28px;
     border: 0;
     border-radius: var(--dn-radius-button);
@@ -642,14 +645,17 @@
   @media (max-width: 767px) {
     :global(html:has(.dn-listing-filter__dialog[open])) { overflow: hidden; }
     .dn-listing-filter__inline-submit, .dn-listing-filter__filter-groups { display: none; }
-    .dn-mobile-filter-fields { display: grid; gap: 8px; }
-    .dn-mobile-filter-fields button { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 52px; padding: 12px 16px; border: 0; border-radius: 14px; background: #f1f2f4; color: #24272c; text-align: left; font: var(--dn-control-font); cursor: pointer; }
-    .dn-mobile-filter-fields strong { flex: 0 0 auto; font-weight: var(--dn-weight-semibold); }
-    .dn-mobile-filter-fields span { flex: 1; min-width: 0; text-align: right; color: #656b74; overflow-wrap: anywhere; }
-    .dn-mobile-filter-fields :global(svg) { flex: 0 0 17px; color: #656b74; }
-    .dn-listing-filter__dialog-submit :global(svg) { display: none; }
+    .dn-mobile-filter-fields { display: grid; gap: var(--dn-overlay-gap); }
+    .dn-mobile-filter-fields button { display: flex; align-items: center; gap: var(--dn-entry-action-gap); width: 100%; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: #24272c; text-align: left; font: var(--dn-overlay-option-font); cursor: pointer; }
+    .dn-mobile-filter-fields strong { flex: 0 0 auto; font-weight: var(--dn-weight-medium); }
+    .dn-mobile-filter-fields span { flex: 1; min-width: 0; text-align: right; color: var(--dn-muted); font: var(--dn-entry-font); overflow-wrap: anywhere; }
+    .dn-mobile-filter-fields span[data-active="true"] { color: var(--dn-ink); }
+    .dn-mobile-filter-fields :global(svg) { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); flex: 0 0 var(--dn-control-icon-size); color: #656b74; }
+    .dn-listing-filter__dialog-submit :global(svg),
+    .dn-listing-filter__submit-full { display: none; }
+    .dn-listing-filter__submit-compact { display: inline; }
     .dn-listing-filter__dialog-footer { flex: 0 0 auto; }
-    .dn-listing-filter__clear { white-space: nowrap; }
+    .dn-listing-filter__clear { display: inline-flex; align-items: center; min-height: var(--dn-overlay-control-height); font: var(--dn-overlay-option-font); white-space: nowrap; }
 
     .dn-listing-filter__dialog {
       width: 100%;
@@ -668,7 +674,7 @@
     .dn-listing-filter__dialog-header {
       position: relative;
       align-items: center;
-      padding: max(12px, env(safe-area-inset-top)) 16px 10px;
+      padding: var(--dn-overlay-header-padding);
     }
 
     .dn-listing-filter__dialog-header h2 {
@@ -677,27 +683,27 @@
 
     .dn-listing-filter__dialog-content {
       flex: 1;
-      padding: 18px 16px 24px;
+      padding: 0 var(--dn-overlay-gutter) var(--dn-space-6);
     }
 
     .dn-listing-filter__dialog-search {
-      height: 58px;
-      flex-basis: 58px;
+      height: var(--dn-overlay-control-height);
+      flex-basis: var(--dn-overlay-control-height);
       margin-bottom: 16px;
-      padding-inline: 16px;
+      padding: 0 var(--dn-space-4);
     }
 
     .dn-listing-filter__dialog-search input[type='search'] {
-      font-size: var(--dn-control-size);
+      font: var(--dn-overlay-field-font);
     }
 
     .dn-listing-filter__core-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: var(--dn-overlay-gap);
     }
 
     .dn-listing-filter__core-grid select {
-      height: 56px;
+      height: var(--dn-control-height-default);
     }
 
     .dn-listing-filter__filter-group--equipment {
@@ -710,9 +716,8 @@
     }
 
     .dn-listing-filter__dialog-footer {
-      min-height: 84px;
-      gap: 16px;
-      padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+      gap: var(--dn-space-4);
+      padding: var(--dn-space-3) var(--dn-overlay-gutter) calc(var(--dn-space-4) + env(safe-area-inset-bottom));
     }
 
     .dn-listing-filter__dialog-footer .dn-listing-filter__clear {

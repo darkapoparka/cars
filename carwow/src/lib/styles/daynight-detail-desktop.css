@@ -753,7 +753,7 @@
 	border: none;
 	border-radius: 12px;
 	background-color: #fff;
-	background-image: url('/variant-3/assets/icons/chevron-down-black.svg');
+	background-image: url('/assets/icons/chevron-down-black.svg');
 	background-repeat: no-repeat;
 	background-position: right 14px center;
 	box-shadow: 0 0 0 1px #e7e7e7;
@@ -800,16 +800,16 @@
 	top: 3px;
 	width: 15px;
 	height: 15px;
-	background-image: url('/variant-3/assets/icons/checkbox-2.svg');
+	background-image: url('/assets/icons/checkbox-2.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
 }
 .daynight-detail .filter-checkbox.style-2 input[type='checkbox']:checked + span::before {
-	background-image: url('/variant-3/assets/icons/checked.svg');
+	background-image: url('/assets/icons/checked.svg');
 }
 .daynight-detail .filter-checkbox input[type='checkbox']:checked + span::before {
-	background-image: url('/variant-3/assets/icons/checked-2.svg');
+	background-image: url('/assets/icons/checked-2.svg');
 }
 
 /* --- Finance calculator form -------------------------------------------------

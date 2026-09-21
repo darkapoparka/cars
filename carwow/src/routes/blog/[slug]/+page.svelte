@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
 	import BlogArticlePage from '$lib/components/blog/BlogArticlePage.svelte';
 	import PublicStorefrontRoute from '$lib/components/layout/PublicStorefrontRoute.svelte';
 	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
@@ -8,8 +10,8 @@
 </script>
 
 <RouteSeo
-	title={data.seo.title}
-	description={data.seo.description}
+	title={i18n.text(data.article.title)}
+	description={i18n.text(data.article.description)}
 	ogImage={data.article.image}
 	ogType="article"
 />

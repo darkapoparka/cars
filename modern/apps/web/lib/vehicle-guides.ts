@@ -16,7 +16,7 @@ export const vehicleGuides: readonly VehicleGuide[] = [
   {
     slug: "buying-used-car-bulgaria",
     categoryId: "buying",
-    image: "/variant-2/images/directory/sofia-premium-cars-profile.webp",
+    image: "/images/directory/sofia-premium-cars-profile.webp",
     title: {
       bg: "Покупка на употребяван автомобил в България",
       en: "Buying a used car in Bulgaria",
@@ -45,7 +45,7 @@ export const vehicleGuides: readonly VehicleGuide[] = [
   {
     slug: "ev-hybrid-ownership-checklist",
     categoryId: "ev",
-    image: "/variant-2/images/directory/black-sea-ev-profile.webp",
+    image: "/images/directory/black-sea-ev-profile.webp",
     title: {
       bg: "Проверки при електромобил или хибрид",
       en: "EV and hybrid ownership checklist",
@@ -77,7 +77,7 @@ export const vehicleGuides: readonly VehicleGuide[] = [
   {
     slug: "dealer-listing-transparency",
     categoryId: "listings",
-    image: "/variant-2/day-night-contact-hero-v1.png",
+    image: "/day-night-contact-hero-v1.webp",
     title: {
       bg: "Как да оцените дилърска обява",
       en: "How to assess a dealer listing",

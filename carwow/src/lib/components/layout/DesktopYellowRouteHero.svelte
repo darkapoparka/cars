@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { Snippet } from 'svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import {
 		desktopOnlyImagePlaceholder,
 		desktopOnlySizes,
@@ -44,9 +47,9 @@
 	} = $props();
 
 	const leftCarSrc =
-		'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
+		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
 	const rightCarSrc =
-		'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
+		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
 </script>
 
 <section
@@ -68,9 +71,9 @@
 					class={`daynight-yellow-route-hero__contact-art daynight-yellow-route-hero__contact-art--${side}`}
 				>
 					<img
-						src={desktopOnlyImagePlaceholder}
+						src={i18n.asset(desktopOnlyImagePlaceholder)}
 						srcset={desktopOnlySrcset(
-							resolve('/variant-3/assets/daynight-contact/contact-support-cutouts.webp'),
+							resolve('/assets/daynight-contact/contact-support-cutouts.webp'),
 							1536
 						)}
 						sizes={desktopOnlySizes('48vw')}
@@ -84,7 +87,7 @@
 		{:else}
 			<img
 				class="daynight-yellow-route-hero__car daynight-yellow-route-hero__car--left"
-				src={resolve(leftCarSrc)}
+				src={i18n.asset(resolve(leftCarSrc))}
 				alt=""
 				width="1400"
 				height="933"
@@ -93,7 +96,7 @@
 			/>
 			<img
 				class="daynight-yellow-route-hero__car daynight-yellow-route-hero__car--right"
-				src={resolve(rightCarSrc)}
+				src={i18n.asset(resolve(rightCarSrc))}
 				alt=""
 				width="1400"
 				height="933"
@@ -121,14 +124,14 @@
 					<div class="daynight-yellow-route-hero__actions">
 						<a
 							class="daynight-yellow-route-hero__primary sa-cta sa-cta-primary"
-							href={resolve(primaryHref)}
+							href={i18n.href(resolve(primaryHref))}
 						>
 							{primaryLabel}
 						</a>
 						{#if secondaryLabel && secondaryHref}
 							<a
 								class="daynight-yellow-route-hero__secondary sa-cta sa-cta-ghost"
-								href={resolve(secondaryHref)}
+								href={i18n.href(resolve(secondaryHref))}
 							>
 								{secondaryLabel}
 							</a>

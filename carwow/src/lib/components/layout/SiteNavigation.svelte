@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { routeParts } from '$lib/locale/core';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import { publicNavItems } from '$lib/data/daynight-site';
 
@@ -12,17 +16,17 @@
 		'flex h-[58px] items-center gap-1.5 px-3 !text-[length:var(--sa-text-lg)] !font-semibold !leading-sa-nav text-sa-surface no-underline transition-none hover:bg-transparent hover:text-sa-surface focus-visible:bg-transparent focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-sa-surface/50 group-focus-within/menu-item:bg-transparent group-focus-within/menu-item:text-sa-surface max-[1180px]:px-2.5 max-[1180px]:!text-sa-base';
 </script>
 
-<nav id="main-nav" class={navClasses} aria-label="Основна навигация">
+<nav id="main-nav" class={navClasses} aria-label={i18n.t('copy.123e2803c10b')}>
 	<ul id="menu-primary-menu" class={menuClasses}>
 		{#each desktopNavItems as item (item.href)}
 			<li class={topItemClasses}>
 				<a
 					class={topLinkClasses}
-					href={resolve(item.href)}
-					aria-current={page.url.pathname === item.href ||
-					(item.href !== '/' && page.url.pathname.startsWith(`${item.href}/`))
+					href={i18n.href(resolve(item.href))}
+					aria-current={routeParts(page.url.pathname).path === item.href ||
+					(item.href !== '/' && routeParts(page.url.pathname).path.startsWith(`${item.href}/`))
 						? 'page'
-						: undefined}>{item.label}</a
+						: undefined}>{i18n.text(item.label)}</a
 				>
 			</li>
 		{/each}

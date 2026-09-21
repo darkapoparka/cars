@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { mobileImageSrc } from '$lib/data/mobile-media';
 	import MobileActionCardContent from '$lib/components/shared/mobile/MobileActionCardContent.svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 
 	type PromoKind = 'sell' | 'import' | 'all';
 	let { kind = 'all' }: { kind?: PromoKind } = $props();
@@ -9,21 +12,21 @@
 	const promos = [
 		{
 			kind: 'sell',
-			title: 'Продай / Бартер',
-			cta: 'Заяви оценка',
+			title: i18n.t('copy.1fdf9944227c'),
+			cta: i18n.t('copy.d915896778d0'),
 			href: '/sell-your-car' as const,
 			tone: 'dark',
 			image:
-				'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp'
+				'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp'
 		},
 		{
 			kind: 'import',
-			title: 'Внос от Европа',
-			cta: 'Заяви внос',
+			title: i18n.t('copy.f78f182894b4'),
+			cta: i18n.t('copy.ee4d0f651884'),
 			href: '/contact?intent=import' as const,
 			tone: 'red',
 			image:
-				'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-left-hero-1200.webp'
+				'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-left-hero-1200.webp'
 		}
 	] as const;
 
@@ -39,9 +42,9 @@
 	);
 </script>
 
-<section class="mobile-home-promos" aria-label={sectionLabel}>
+<section class="mobile-home-promos" aria-label={i18n.text(sectionLabel)}>
 	{#each visiblePromos as promo (promo.href)}
-		<a class="mobile-home-promo" href={resolve(promo.href)}>
+		<a class="mobile-home-promo" href={i18n.href(resolve(promo.href))}>
 			<MobileActionCardContent
 				title={promo.title}
 				image={mobileImageSrc(resolve(promo.image))}

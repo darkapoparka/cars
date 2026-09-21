@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	import type { HomeDesktopVehicle } from '$lib/types/home';
 	import {
@@ -17,9 +20,9 @@
 	} = $props();
 
 	const leftCarSrc =
-		'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
+		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
 	const rightCarSrc =
-		'/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
+		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
 
 	function openMap() {
 		window.open(daynightSite.mapUrl, '_blank', 'noopener,noreferrer');
@@ -33,7 +36,7 @@
 	>
 		<img
 			class="daynight-home-hero__car daynight-home-hero__car--left"
-			src={desktopOnlyImagePlaceholder}
+			src={i18n.asset(desktopOnlyImagePlaceholder)}
 			srcset={desktopOnlySrcset(leftCarSrc, 1400)}
 			sizes={desktopOnlySizes('36vw')}
 			alt=""
@@ -45,7 +48,7 @@
 		/>
 		<img
 			class="daynight-home-hero__car daynight-home-hero__car--right"
-			src={desktopOnlyImagePlaceholder}
+			src={i18n.asset(desktopOnlyImagePlaceholder)}
 			srcset={desktopOnlySrcset(rightCarSrc, 1400)}
 			sizes={desktopOnlySizes('36vw')}
 			alt=""
@@ -57,7 +60,7 @@
 		/>
 		<div class="daynight-home-hero__stage">
 			<h1 id="daynight-home-hero-title" class="daynight-home-hero__title">
-				Разгледай. Купи. Продай. На едно място.
+				{i18n.t('copy.701fdf103815')}
 			</h1>
 			<DesktopHomeSearchPanel
 				{vehicles}
@@ -72,9 +75,9 @@
 		<div class="daynight-home-hero__visual" aria-hidden="true">
 			<img
 				class="daynight-home-hero__photo"
-				src={desktopOnlyImagePlaceholder}
+				src={i18n.asset(desktopOnlyImagePlaceholder)}
 				srcset={desktopOnlySrcset(
-					'/variant-3/assets/images/home2/daynight-hero-cutoff-imagegen-v1.webp',
+					'/assets/images/home2/daynight-hero-cutoff-imagegen-v1.webp',
 					1983
 				)}
 				sizes={desktopOnlySizes('100vw')}
@@ -103,13 +106,13 @@
 							/>
 							<circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8" />
 						</svg>
-						<span>{daynightSite.locationLandmark}</span>
+						<span>{i18n.dealer('addressLine')}</span>
 					</button>
 					<button
 						type="button"
 						id="daynight-home-hero-map-preview"
 						class="daynight-home-hero__location-preview"
-						aria-label={`Отвори Google Maps до ${daynightSite.shortName}`}
+						aria-label={i18n.t('pattern.0f1d67aa9e06', { v0: daynightSite.shortName })}
 						onclick={openMap}
 					>
 						<span class="daynight-home-hero__location-map" aria-hidden="true">
@@ -123,20 +126,20 @@
 							<span class="daynight-home-hero__location-map-label">{daynightSite.name}</span>
 						</span>
 						<span class="daynight-home-hero__location-preview-copy">
-							<strong>{daynightSite.shortName} {daynightSite.city}</strong>
-							<span>{daynightSite.location}</span>
-							<em>Отвори Google Maps</em>
+							<strong>{daynightSite.shortName} {i18n.dealer('city')}</strong>
+							<span>{i18n.dealer('address')}</span>
+							<em>{i18n.t('copy.d18c10af8d31')}</em>
 						</span>
 					</button>
 				</div>
 				<h1 class="daynight-home-hero__title">
 					<span class="daynight-home-hero__title-text">
-						<span>Проверени автомобили.</span>
-						<strong>Ясни условия.</strong>
+						<span>{i18n.t('copy.a7527162fd17')}</span>
+						<strong>{i18n.t('copy.e96bc0675bcf')}</strong>
 					</span>
 				</h1>
 				<p class="daynight-home-hero__subtitle">
-					Разгледай наличността по марка, модел, пробег и бюджет.
+					{i18n.t('copy.d1a357a5a9a6')}
 				</p>
 			</div>
 		</div>

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "slug": "isauto-varna",
-  "dealerId": null,
+  "dealerId": "isauto-varna",
   "repository": "darkapoparka/cars",
   "defaultBranch": "publish/isauto-varna",
   "variants": [
@@ -27,11 +27,27 @@
     "dealer-brand"
   ],
   "packaging": {
-    "version": "1"
+    "version": "2"
   },
   "templateRevisions": {
-    "auto-best": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
-    "modern": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
-    "carwow": "89f50c427863050abb7923152f05c091bb937d1e"
+    "auto-best": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
+    "modern": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+    "carwow": "42970ab5724cb32da17e75879a2fca470629aebe"
+  },
+  "language": "bg",
+  "localization": {
+    "schemaVersion": 1,
+    "dealerId": "isauto-varna",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "en",
+      "bg"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "switcher": {
+    "language": "bg",
+    "accent": "#d71920"
   }
 }

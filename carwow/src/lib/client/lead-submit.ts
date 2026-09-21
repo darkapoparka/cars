@@ -1,4 +1,4 @@
-import { resolve } from '$lib/utils/preview-paths';
+import { resolve } from '$app/paths';
 import {
 	postIntake,
 	invalidIntakeResponse,
@@ -37,7 +37,7 @@ export async function submitLead(
 	payload: LeadSubmitPayload,
 	options: IntakeOptions = {}
 ): Promise<LeadSubmitResult> {
-	const result = await postIntake(resolve('/variant-3/api/leads'), payload, options);
+	const result = await postIntake(resolve('/api/leads'), payload, options);
 	if (!result.ok) return result;
 	const { body } = result;
 	if (!hasResponseId(body, 'leadId') || !hasResponseId(body, 'conversationId'))

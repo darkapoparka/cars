@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
 	import {
 		BadgeCheck,
 		Banknote,
@@ -9,7 +11,7 @@
 		ShieldCheck,
 		X
 	} from '@lucide/svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { submitLead } from '$lib/client/lead-submit';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
@@ -111,8 +113,8 @@
 			phone: contactValue,
 			source: 'services-mobile',
 			message: [
-				`Услуга: ${activeService.title}`,
-				serviceVehicle.trim() ? `Автомобил: ${serviceVehicle.trim()}` : ''
+				i18n.t('pattern.19603562a56a', { v0: activeService.title }),
+				serviceVehicle.trim() ? i18n.t('pattern.b3d5d0ee75f3', { v0: serviceVehicle.trim() }) : ''
 			]
 				.filter(Boolean)
 				.join('\n'),
@@ -128,8 +130,7 @@
 
 		serviceSubmitState = 'error';
 		serviceSubmitMessage =
-			result.error ||
-			`Не успяхме да изпратим запитването. Моля, обадете се на ${daynightSite.phoneLabel}.`;
+			result.error || i18n.t('pattern.092b5d19f038', { v0: daynightSite.phoneLabel });
 	}
 </script>
 
@@ -137,16 +138,16 @@
 	<header class="mobile-services-hero">
 		<img
 			class="mobile-services-hero__bg"
-			src={resolve('/variant-3/assets/images/services/support-hero-v1.webp')}
+			src={i18n.asset(resolve('/assets/images/services/support-hero-v1.webp'))}
 			alt=""
 			aria-hidden="true"
 		/>
 		<MobileHeroBar showLocation={false} />
 
 		<div class="mobile-services-hero__copy">
-			<span>Услуги</span>
-			<h1>Подкрепа преди и след покупка</h1>
-			<p>Оглед, документи, регистрация, финансиране и бартер от екипа в {daynightSite.city}.</p>
+			<span>{i18n.t('copy.d6f31e4be09f')}</span>
+			<h1>{i18n.t('copy.2e8d567a2072')}</h1>
+			<p>{i18n.t('copy.9245f1bfc535')} {i18n.dealer('city')}.</p>
 		</div>
 
 		<div class="mobile-services-hero__actions">
@@ -155,18 +156,18 @@
 				type="button"
 				onclick={() => openServiceDrawer('inspection')}
 			>
-				<span>Заяви услуга</span>
+				<span>{i18n.t('copy.df4fb2d6674a')}</span>
 				<ChevronRight size={18} strokeWidth={2.55} />
 			</button>
-			<a class="mobile-services-secondary" href={resolve('/inventory')}>
+			<a class="mobile-services-secondary" href={i18n.href(resolve('/inventory'))}>
 				<CarFront size={18} strokeWidth={2.45} />
-				<span>Виж автомобили</span>
+				<span>{i18n.t('copy.2042bdf14638')}</span>
 			</a>
 		</div>
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mobile-services-chips" aria-label="Бързи услуги">
+		<nav class="mobile-services-chips" aria-label={i18n.t('copy.eec7d104fb1f')}>
 			{#each quickActions as action (action.label)}
 				<button
 					type="button"
@@ -174,14 +175,14 @@
 					aria-haspopup="dialog"
 					aria-expanded={activeServiceId === action.id}
 				>
-					<span>{action.label}</span>
+					<span>{i18n.text(action.label)}</span>
 				</button>
 			{/each}
 		</nav>
 
 		<section class="mobile-services-section" aria-labelledby="mobile-services-title">
 			<div class="mobile-services-heading">
-				<h2 id="mobile-services-title">Как помагаме</h2>
+				<h2 id="mobile-services-title">{i18n.t('copy.c35c0f968714')}</h2>
 			</div>
 
 			<div class="mobile-services-list">
@@ -197,8 +198,8 @@
 							<Icon size={22} strokeWidth={2.45} />
 						</div>
 						<span>
-							<strong>{service.title}</strong>
-							<small>{service.kicker}</small>
+							<strong>{i18n.text(service.title)}</strong>
+							<small>{i18n.text(service.kicker)}</small>
 						</span>
 						<ChevronRight size={18} strokeWidth={2.55} />
 					</button>
@@ -216,10 +217,14 @@
 						<DrawerIcon size={22} strokeWidth={2.45} />
 					</div>
 					<div>
-						<span>{activeService.kicker}</span>
-						<h2 id="mobile-service-drawer-title">{activeService.title}</h2>
+						<span>{i18n.text(activeService.kicker)}</span>
+						<h2 id="mobile-service-drawer-title">{i18n.text(activeService.title)}</h2>
 					</div>
-					<button type="button" aria-label="Затвори" onclick={() => (serviceDrawerOpen = false)}>
+					<button
+						type="button"
+						aria-label={i18n.t('copy.1ef1a425356f')}
+						onclick={() => (serviceDrawerOpen = false)}
+					>
 						<X size={19} strokeWidth={2.5} />
 					</button>
 				</header>
@@ -227,7 +232,7 @@
 					{#each activeService.points as point (point)}
 						<li>
 							<BadgeCheck size={18} strokeWidth={2.4} />
-							<span>{point}</span>
+							<span>{i18n.text(point)}</span>
 						</li>
 					{/each}
 				</ul>
@@ -235,8 +240,8 @@
 					<div class="mobile-service-sheet__success" role="status" aria-live="polite">
 						<BadgeCheck size={22} strokeWidth={2.45} />
 						<span>
-							<strong>Заявката е подготвена</strong>
-							<small>Екипът ще се свърже с Вас за следващата стъпка.</small>
+							<strong>{i18n.t('copy.467884700d51')}</strong>
+							<small>{i18n.t('copy.52b8feeeb000')}</small>
 						</span>
 					</div>
 				{:else}
@@ -245,12 +250,13 @@
 							class="mobile-service-sheet__field"
 							for={`mobile-service-vehicle-${activeService.id}`}
 						>
-							<span>Автомобил</span>
+							<span>{i18n.t('copy.e549eadf1b38')}</span>
 							<input
+								{@attach i18n.validation}
 								id={`mobile-service-vehicle-${activeService.id}`}
 								type="text"
 								bind:value={serviceVehicle}
-								placeholder="Марка, модел или линк към обява"
+								placeholder={i18n.t('copy.7558220498f7')}
 								autocomplete="off"
 							/>
 						</label>
@@ -258,8 +264,9 @@
 							class="mobile-service-sheet__field"
 							for={`mobile-service-phone-${activeService.id}`}
 						>
-							<span>Телефон</span>
+							<span>{i18n.t('copy.822f9fd9ba2d')}</span>
 							<input
+								{@attach i18n.validation}
 								id={`mobile-service-phone-${activeService.id}`}
 								type="tel"
 								bind:value={servicePhone}
@@ -270,7 +277,7 @@
 						</label>
 						{#if serviceSubmitMessage}
 							<p class="mobile-service-sheet__error" role="alert" aria-live="polite">
-								{serviceSubmitMessage}
+								{i18n.text(serviceSubmitMessage)}
 							</p>
 						{/if}
 						<button
@@ -278,7 +285,10 @@
 							type="submit"
 							disabled={serviceSubmitState === 'submitting'}
 						>
-							<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : activeService.cta}</span
+							<span
+								>{serviceSubmitState === 'submitting'
+									? i18n.t('copy.acfcd771108c')
+									: activeService.cta}</span
 							>
 							<ChevronRight size={19} strokeWidth={2.6} />
 						</button>

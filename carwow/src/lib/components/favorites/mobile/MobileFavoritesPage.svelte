@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { Car, Heart } from '@lucide/svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import DayNightSpecIcon from '$lib/components/shared/icons/DayNightSpecIcon.svelte';
 	import { shortFuel } from '$lib/utils/format';
 	import { getGarageContext } from '$lib/state/garage.svelte';
@@ -24,7 +27,9 @@
 	const vehicles = $derived(selection.available);
 
 	const countLabel = $derived(
-		vehicles.length === 1 ? '1 запазен автомобил' : `${vehicles.length} запазени автомобила`
+		vehicles.length === 1
+			? i18n.text('1 запазен автомобил')
+			: i18n.t('pattern.0041639e21e7', { v0: vehicles.length })
 	);
 
 	function remove(slug: string) {
@@ -36,10 +41,12 @@
 	<MobileHeader banner />
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-favorites-top">
-			<a class="mobile-favorites-top__back" href={resolve('/')}>← Към сайта</a>
+			<a class="mobile-favorites-top__back" href={i18n.href(resolve('/'))}
+				>{i18n.t('copy.e33e61c8ac17')}</a
+			>
 
-			<h1>Запазени</h1>
-			<p>{vehicles.length ? countLabel : 'Запазвайте автомобили, за да ги намерите тук.'}</p>
+			<h1>{i18n.t('copy.655f65ef3f03')}</h1>
+			<p>{vehicles.length ? countLabel : i18n.t('copy.4333744b4e24')}</p>
 		</section>
 
 		<section class="mobile-favorites-results" aria-live="polite">
@@ -53,18 +60,18 @@
 						<article class="mobile-favorites-card">
 							<a
 								class="mobile-favorites-card__link"
-								href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
+								href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
 							>
 								<div class="mobile-favorites-card__media">
 									<img
-										src={vehicle.image}
+										src={i18n.asset(vehicle.image)}
 										alt={vehicle.shortTitle}
 										loading="lazy"
 										decoding="async"
 										data-daynight-image-fallback
 										use:daynightImageFallback
 									/>
-									<span>{vehicle.badges[0] ?? 'Наличен'}</span>
+									<span>{i18n.spec(vehicle.badges[0] ?? i18n.t('copy.e9ba59c46d94'))}</span>
 								</div>
 								<div class="mobile-favorites-card__body">
 									<div class="mobile-favorites-card__title">
@@ -74,13 +81,13 @@
 										</div>
 										<div class="mobile-favorites-card__price">
 											<strong>{vehicle.priceEur}</strong>
-											<span>{vehicle.monthly}</span>
+											<span>{i18n.spec(vehicle.monthly)}</span>
 										</div>
 									</div>
-									<ul aria-label="Основни данни">
+									<ul aria-label={i18n.t('copy.e802379d67a7')}>
 										<li>
 											<DayNightSpecIcon name="mileage" size={15} />
-											{vehicle.mileage}
+											{i18n.distance(vehicle.mileage)}
 										</li>
 										<li>
 											<DayNightSpecIcon name="year" size={15} />
@@ -88,11 +95,11 @@
 										</li>
 										<li>
 											<DayNightSpecIcon name="fuel" size={15} />
-											{shortFuel(vehicle.fuel)}
+											{shortFuel(vehicle.fuel, i18n.locale)}
 										</li>
 										<li>
 											<DayNightSpecIcon name="transmission" size={15} />
-											{vehicle.transmission}
+											{i18n.spec(vehicle.transmission)}
 										</li>
 									</ul>
 								</div>
@@ -100,7 +107,7 @@
 							<button
 								type="button"
 								class="mobile-favorites-card__fav"
-								aria-label={`Премахни ${vehicle.shortTitle} от запазени`}
+								aria-label={i18n.t('pattern.d0c266345abc', { v0: vehicle.shortTitle })}
 								onclick={() => remove(vehicle.slug)}
 							>
 								<Heart size={18} strokeWidth={2.3} />
@@ -111,11 +118,11 @@
 			{:else}
 				<div class="mobile-favorites-empty">
 					<Heart size={28} strokeWidth={2.2} />
-					<h2>Нямате запазени автомобили</h2>
-					<p>Докоснете сърцето в обявата, за да добавите автомобил към запазените.</p>
-					<a href={resolve('/inventory')}>
+					<h2>{i18n.t('copy.8837bdcba905')}</h2>
+					<p>{i18n.t('copy.234f03898b8f')}</p>
+					<a href={i18n.href(resolve('/inventory'))}>
 						<Car size={17} strokeWidth={2.2} />
-						Разгледай автомобилите
+						{i18n.t('copy.c79b6820c344')}
 					</a>
 				</div>
 			{/if}

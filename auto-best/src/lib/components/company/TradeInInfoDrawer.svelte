@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { trapDialogTab } from '$lib/ui/overlay';
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { tick } from 'svelte';
   import Icon from '$components/ui/Icon.svelte';
 
@@ -67,12 +71,12 @@
     onpointerup={endPeekDrag}
   >
     <span class="dn-tradein-info-drawer__handle" aria-hidden="true"></span>
-    <span>Как протича оценката</span>
+    <span>{i18n.t("m_15f4f5be4ade")}</span>
     <Icon name="chevron-down" size={16} />
   </button>
 </div>
 
-<dialog
+<dialog onkeydown={trapDialogTab}
   class="dn-tradein-info-dialog"
   bind:this={dialog}
   aria-labelledby="tradein-info-title"
@@ -83,7 +87,7 @@
     <button
       class="dn-tradein-info-sheet__grabber"
       type="button"
-      aria-label="Плъзни надолу, за да затвориш"
+      aria-label={i18n.t("m_be060a506520")}
       onpointerdown={startSheetDrag}
       onpointermove={moveSheetDrag}
       onpointerup={endSheetDrag}
@@ -91,33 +95,33 @@
     ><span></span></button>
 
     <header class="dn-tradein-info-sheet__header">
-      <h2 id="tradein-info-title" tabindex="-1" bind:this={heading}>Как протича оценката</h2>
-      <button class="dn-tradein-info-sheet__close" type="button" aria-label="Затвори" onclick={closeDrawer}>
-        <Icon name="x" size={21} />
+      <h2 id="tradein-info-title" tabindex="-1" bind:this={heading}>{i18n.t("m_15f4f5be4ade")}</h2>
+      <button class="dn-tradein-info-sheet__close dn-icon-button" type="button" aria-label={i18n.t("m_7d9eb7acb13e")} onclick={closeDrawer}>
+        <Icon name="x" size={18} />
       </button>
     </header>
 
     <div class="dn-tradein-info-sheet__body">
       <section class="dn-tradein-info-group dn-tradein-info-prepare" aria-labelledby="tradein-prepare-title">
-        <h3 id="tradein-prepare-title">Какво да подготвиш</h3>
+        <h3 id="tradein-prepare-title">{i18n.t("m_23809ef4ac0b")}</h3>
         <ol class="dn-tradein-info-list">
-          <li><span aria-hidden="true">1.</span><p><strong>Данни за автомобила</strong><span>Марка, модел, година и пробег.</span></p></li>
-          <li><span aria-hidden="true">2.</span><p><strong>Снимки и състояние</strong><span>Отвън, отвътре и забележки.</span></p></li>
-          <li><span aria-hidden="true">3.</span><p><strong>Желана цена</strong><span>По желание — това не е оценка.</span></p></li>
+          <li><span aria-hidden="true">1.</span><p><strong>{i18n.t("m_0f15110a1c1d")}</strong><span>{i18n.t("m_29ddaf947e7e")}</span></p></li>
+          <li><span aria-hidden="true">2.</span><p><strong>{i18n.t("m_3a10ff4055b4")}</strong><span>{i18n.t("m_c7daea9bff26")}</span></p></li>
+          <li><span aria-hidden="true">3.</span><p><strong>{i18n.t("m_dceb61c9ef43")}</strong><span>{i18n.t("m_31e7e145d1ab")}</span></p></li>
         </ol>
       </section>
 
       <section class="dn-tradein-info-group dn-tradein-info-process" aria-labelledby="tradein-next-title">
-        <h3 id="tradein-next-title">Как продължаваме</h3>
+        <h3 id="tradein-next-title">{i18n.t("m_f388d3f655d4")}</h3>
         <ol class="dn-tradein-info-steps">
-          <li><span aria-hidden="true">1.</span><p><strong>Попълваш и преглеждаш данните.</strong></p></li>
-          <li><span aria-hidden="true">2.</span><p><strong>Споделяш ги или се обаждаш.</strong></p></li>
-          <li><span aria-hidden="true">3.</span><p><strong>Обсъждаме автомобила и условията.</strong></p></li>
+          <li><span aria-hidden="true">1.</span><p><strong>{i18n.t("m_c04a33c821e7")}</strong></p></li>
+          <li><span aria-hidden="true">2.</span><p><strong>{i18n.t("m_39dffe73a926")}</strong></p></li>
+          <li><span aria-hidden="true">3.</span><p><strong>{i18n.t("m_40e24d85be1c")}</strong></p></li>
         </ol>
       </section>
 
       <footer class="dn-tradein-info-actions">
-        <button type="button" onclick={closeDrawer}>Към заявката <Icon name="arrow-right" size={18} /></button>
+        <button type="button" onclick={closeDrawer}>{i18n.t("m_ed51f4a53cda")} <Icon name="arrow-right" size={18} /></button>
       </footer>
     </div>
   </div>
@@ -193,20 +197,9 @@
     background: var(--dn-white);
     color: var(--dn-ink);
   }
-  .dn-tradein-info-sheet__header h2 { margin: 0; color: var(--dn-ink); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+  .dn-tradein-info-sheet__header h2 { min-width: 0; white-space: nowrap; margin: 0; color: var(--dn-ink); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
   .dn-tradein-info-sheet__header h2:focus { outline: none; }
-  .dn-tradein-info-sheet__close {
-    display: grid;
-    width: 44px;
-    height: 44px;
-    flex: 0 0 44px;
-    place-items: center;
-    border: 0;
-    border-radius: 50%;
-    background: var(--dn-surface);
-    color: var(--dn-ink);
-    cursor: pointer;
-  }
+  .dn-tradein-info-sheet__close { border: 0; border-radius: 50%; background: var(--dn-surface); color: var(--dn-ink); }
   .dn-tradein-info-sheet__body {
     display: grid;
     min-height: 0;
@@ -255,6 +248,7 @@
   .dn-tradein-info-actions button:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 
   @media (max-width: 767px) {
+    .dn-tradein-info-sheet__header h2 { font-size: var(--dn-text-card); }
     .dn-tradein-info-drawer {
       position: fixed;
       left: 50%;

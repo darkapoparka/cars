@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IS%20AUTO%20Varna%2C%20%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%BF%D0%B0%D1%80%D0%BA%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D1%81%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%20B6%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=IS%20AUTO%20Varna%2C%20%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%BF%D0%B0%D1%80%D0%BA%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D1%81%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%20B6%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed",
     "accent": "#d71920",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/logo-on-light-20260919.webp",
+    "logoLight": "/dealer-brand/logo-on-light-20260919.webp",
+    "logoDark": "/dealer-brand/logo-on-dark-20260919.webp",
     "socialLinks": {
       "facebook": "https://www.facebook.com/isauto1",
       "instagram": "https://www.instagram.com/is__auto/?hl=bg",
@@ -79,9 +79,9 @@
       "inventoryUrl": "https://isautovarna.mobile.bg/",
       "contactUrl": "https://www.isauto.net/contacts",
       "accent": "#d71920",
-      "logo": "/variant-3/dealer/logo-dark.png",
-      "logoLight": "/variant-3/dealer/logo-dark.png",
-      "logoDark": "/variant-3/dealer/logo-light.png",
+      "logo": "/dealer/logo-dark.png",
+      "logoLight": "/dealer/logo-dark.png",
+      "logoDark": "/dealer/logo-light.png",
       "socialLinks": {
         "instagram": "https://www.instagram.com/is__auto/?hl=bg",
         "facebook": "https://www.facebook.com/isauto1"
@@ -133,9 +133,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/variant-3/dealer/inventory-1.webp"
+        "/dealer/inventory-1.webp"
       ],
-      "image": "/variant-3/dealer/inventory-1.webp",
+      "image": "/dealer/inventory-1.webp",
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10",
       "observedAt": "2026-09-16",
       "availability": "Датирана обява — потвърдете наличността",
@@ -161,7 +161,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-1.webp"
+          "/dealer/inventory-1.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10",
         "observedAt": "2026-09-16"
@@ -192,9 +192,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/variant-3/dealer/inventory-2.webp"
+        "/dealer/inventory-2.webp"
       ],
-      "image": "/variant-3/dealer/inventory-2.webp",
+      "image": "/dealer/inventory-2.webp",
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9",
       "observedAt": "2026-09-16",
       "availability": "Датирана обява — потвърдете наличността",
@@ -220,7 +220,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-2.webp"
+          "/dealer/inventory-2.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9",
         "observedAt": "2026-09-16"
@@ -251,9 +251,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/variant-3/dealer/inventory-3.webp"
+        "/dealer/inventory-3.webp"
       ],
-      "image": "/variant-3/dealer/inventory-3.webp",
+      "image": "/dealer/inventory-3.webp",
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8",
       "observedAt": "2026-09-16",
       "availability": "Датирана обява — потвърдете наличността",
@@ -279,7 +279,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-3.webp"
+          "/dealer/inventory-3.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8",
         "observedAt": "2026-09-16"
@@ -310,9 +310,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/variant-3/dealer/inventory-4.webp"
+        "/dealer/inventory-4.webp"
       ],
-      "image": "/variant-3/dealer/inventory-4.webp",
+      "image": "/dealer/inventory-4.webp",
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7",
       "observedAt": "2026-09-16",
       "availability": "Датирана обява — потвърдете наличността",
@@ -338,7 +338,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-4.webp"
+          "/dealer/inventory-4.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7",
         "observedAt": "2026-09-16"
@@ -369,9 +369,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/variant-3/dealer/inventory-5.webp"
+        "/dealer/inventory-5.webp"
       ],
-      "image": "/variant-3/dealer/inventory-5.webp",
+      "image": "/dealer/inventory-5.webp",
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3",
       "observedAt": "2026-09-16",
       "availability": "Датирана обява — потвърдете наличността",
@@ -397,7 +397,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-5.webp"
+          "/dealer/inventory-5.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3",
         "observedAt": "2026-09-16"
@@ -428,9 +428,9 @@
       "drivetrain": "",
       "features": [],
       "images": [
-        "/variant-3/dealer/inventory-6.webp"
+        "/dealer/inventory-6.webp"
       ],
-      "image": "/variant-3/dealer/inventory-6.webp",
+      "image": "/dealer/inventory-6.webp",
       "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745",
       "observedAt": "2026-09-16",
       "availability": "Датирана обява — потвърдете наличността",
@@ -456,7 +456,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-6.webp"
+          "/dealer/inventory-6.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745",
         "observedAt": "2026-09-16"
@@ -488,9 +488,9 @@
       "inventoryUrl": "https://isautovarna.mobile.bg/",
       "contactUrl": "https://www.isauto.net/contacts",
       "accent": "#d71920",
-      "logo": "/variant-3/dealer/logo-dark.png",
-      "logoLight": "/variant-3/dealer/logo-dark.png",
-      "logoDark": "/variant-3/dealer/logo-light.png",
+      "logo": "/dealer/logo-dark.png",
+      "logoLight": "/dealer/logo-dark.png",
+      "logoDark": "/dealer/logo-light.png",
       "socialLinks": {
         "instagram": "https://www.instagram.com/is__auto/?hl=bg",
         "facebook": "https://www.facebook.com/isauto1"
@@ -535,7 +535,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-1.webp"
+          "/dealer/inventory-1.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-r8-perfomance-v10-bang-olufsen-audi-keramik-carbon-10",
         "observedAt": "2026-09-16"
@@ -559,7 +559,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-2.webp"
+          "/dealer/inventory-2.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-q7-50tdi-virtual-podgrev-4-zoni-kamera360-9",
         "observedAt": "2026-09-16"
@@ -583,7 +583,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-3.webp"
+          "/dealer/inventory-3.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-m5-keramika-xdrive-m-sport-bowers-wilk-adaptiveled-8",
         "observedAt": "2026-09-16"
@@ -607,7 +607,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-4.webp"
+          "/dealer/inventory-4.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-x5-xdrive-sport-podgrev-panorama-6-1-7",
         "observedAt": "2026-09-16"
@@ -631,7 +631,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-5.webp"
+          "/dealer/inventory-5.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/bmw-750-m-perfomance-laser-alkantar-virtual-harman-kardon-3",
         "observedAt": "2026-09-16"
@@ -655,7 +655,7 @@
         "condition": "used",
         "availability": "Датирана обява — потвърдете наличността",
         "images": [
-          "/variant-3/dealer/inventory-6.webp"
+          "/dealer/inventory-6.webp"
         ],
         "sourceUrl": "https://www.isauto.net/avtomobili-i-djipove/audi-a5-sportback-2-0tdi-sline-ambient-virtual-podgrev-pdc-f1-745",
         "observedAt": "2026-09-16"
@@ -666,27 +666,35 @@
   "logoContract": {
     "schemaVersion": 1,
     "dealer": "isauto-varna",
-    "decision": "REFINE EXISTING IDENTITY",
-    "source": "Canonical Cars clients/isauto-varna/auto-best/static/dealer/logo-dark.png; existing raster identity retained",
-    "originalSha256": "a53049644f4d1689ee04f601700b014a0cddbfb66c22e8b7cf116d6f28443831",
+    "decision": "USE GENERATED CANDIDATE",
+    "source": "Six generated PNG replacements explicitly requested by the owner in this conversation",
+    "generationId": "e089ff50-e449-458b-b280-320fd3f0cfcb",
+    "originalSha256": "8d907fe4157cf55a819db5c1ee2ca8b2609d996b80a162be721fc6bd119f35b2",
+    "preparedAt": "2026-09-19T14:18:13.348Z",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "0a413af3e8835f255e604a0e4e2d2ab2c10d66f722beb96d078d18502e6b6bfb",
-        "bytes": 8460
+        "publicPath": "/dealer-brand/logo-on-light-20260919.webp",
+        "sha256": "d093167bf017992b76864055e909e36e3fe173aaedcfa077f00a1225277c29e4",
+        "bytes": 121156,
+        "width": 1200,
+        "height": 349
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "6df2c14c2f1e64b8544c96cd363c70a38530315cb080775a922386c446a7a23d",
-        "bytes": 8390
+        "publicPath": "/dealer-brand/logo-on-dark-20260919.webp",
+        "sha256": "7be72f265ad997e6f7f86ee3af9f8f2ae1d24f188acd45a14bdc201f0f054eb4",
+        "bytes": 102470,
+        "width": 1200,
+        "height": 349
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "b2f769f663b9678e8ccc31fd67e84b360bf5552ce93e9ad5043a5b3e8710fb98",
-        "bytes": 5232
+        "publicPath": "/dealer-brand/logo-on-accent-20260919.webp",
+        "sha256": "2dc87ac83d577192b82b7297369d716ef8fe6528506275cff9206395e2a6537f",
+        "bytes": 85534,
+        "width": 1200,
+        "height": 349
       }
     },
-    "preparedAt": "2026-09-19T04:58:51.741Z",
-    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+    "rules": "Use committed transparent raster assets for light/dark/accent surfaces. No CSS inversion, clipping, temporary text logo or header plaque. Preserve template layout, inventory and three designs plus Admin.",
+    "identityStatus": "Owner-requested demonstration identity, not a claim of official dealership approval"
   }
 }

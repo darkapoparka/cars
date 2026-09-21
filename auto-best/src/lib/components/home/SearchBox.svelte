@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleQuickSearch from './VehicleQuickSearch.svelte';
@@ -30,10 +33,10 @@
   }
 </script>
 
-<section class="dn-search-wrap" aria-label="Търсене на автомобил">
+<section class="dn-search-wrap" aria-label={i18n.t("m_0ae7a3ecbc83")}>
   <div class="container">
     <div class="dn-search">
-      <div class="dn-search__mobile-modes dn-segmented-control" role="tablist" aria-label="Основна цел">
+      <div class="dn-search__mobile-modes dn-segmented-control" role="tablist" aria-label={i18n.t("m_a78ab3107899")}>
         <button
           class="dn-segmented-option"
           bind:this={buyTab}
@@ -45,7 +48,7 @@
           tabindex={mode === 'buy' ? 0 : -1}
           onclick={() => mode = 'buy'}
           onkeydown={handleModeKey}
-        >Купи</button>
+        >{i18n.t("m_64e3cb0e4960")}</button>
         <button
           class="dn-segmented-option"
           bind:this={importTab}
@@ -57,29 +60,29 @@
           tabindex={mode === 'import' ? 0 : -1}
           onclick={() => mode = 'import'}
           onkeydown={handleModeKey}
-        >Внос</button>
+        >{i18n.t("m_2cff9baabf56")}</button>
       </div>
       <div id="home-buy-search" class={['dn-search__buy', { 'dn-search__buy--inactive': mode !== 'buy' }]} role="tabpanel" aria-labelledby="home-buy-tab">
         <VehicleQuickSearch />
-        <a class="dn-search__mobile-all" href={resolve('/listing-grid')}>
-          <span>Виж всички</span>
-          <Icon name="arrow-right" size={15} strokeWidth={1.7} />
+        <a class="dn-search__mobile-all dn-compact-control dn-entry-action dn-compact-primary" href={i18n.href(resolve('/listing-grid'))}>
+          <span>{i18n.t("m_30a64216eaea")}</span>
+          <Icon name="arrow-right" size={18} strokeWidth={1.7} />
         </a>
       </div>
       <div id="home-import-search" class={['dn-search__import', { 'dn-search__import--active': mode === 'import' }]} role="tabpanel" aria-labelledby="home-import-tab">
-        <form class="dn-search__import-form" method="GET" action={resolve('/contact#contact-intent')} novalidate onsubmit={validateImport}>
+        <form class="dn-search__import-form" method="GET" action={i18n.href(resolve('/contact#contact-intent'))} novalidate onsubmit={validateImport}>
           <input type="hidden" name="topic" value="import" />
           <label class="dn-search__import-field dn-entry-field">
             <Icon name="globe" size={18} strokeWidth={1.5} />
-            <span class="dn-sr-only">Линк към обява за внос</span>
-            <input
+            <span class="dn-sr-only">{i18n.t("m_409235f690e6")}</span>
+            <input {@attach i18n.validation}
               class="dn-entry-field__input"
               bind:this={importInput}
               bind:value={importUrl}
               type="url"
               inputmode="url"
               name="vehicle_url"
-              placeholder="Линк към обява"
+              placeholder={i18n.t("m_fbee9a117fb4")}
               maxlength={2048}
               required
               autocomplete="off"
@@ -91,9 +94,9 @@
             />
           </label>
           {#if importError}
-            <p id="home-import-error" class="dn-search__import-error" role="alert">{importError}</p>
+            <p id="home-import-error" class="dn-search__import-error" role="alert">{i18n.text(importError)}</p>
           {/if}
-          <button class="dn-search__mobile-all" type="submit">Заяви внос <Icon name="arrow-right" size={15} strokeWidth={1.7} /></button>
+          <button class="dn-search__mobile-all dn-compact-control dn-entry-action dn-compact-primary" type="submit">{i18n.t("action.importShort")} <Icon name="arrow-right" size={18} strokeWidth={1.7} /></button>
         </form>
       </div>
       <div class="dn-search__desktop-form">
@@ -106,12 +109,12 @@
     </div>
 
   </div>
-  <nav class="dn-search__mobile-shortcuts" aria-label="Бързи филтри">
-    <a href={resolve('/listing-grid?price_max=60000')}>До 60 000 €</a>
-    <a href={resolve('/listing-grid?price_min=60000&price_max=70000')}>60–70 000 €</a>
-    <a href={resolve('/listing-grid?make=Audi')}>Audi</a>
-    <a href={resolve('/listing-grid?make=Mercedes-Benz')}>Mercedes</a>
-    <a href={resolve('/listing-grid?make=BMW')}>BMW</a>
+  <nav class="dn-search__mobile-shortcuts" aria-label={i18n.t("m_dea1661dff21")}>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?price_max=60000'))}>{i18n.t("m_502e576bacf3")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?price_min=60000&price_max=70000'))}>{i18n.t("m_8d9512ccead1")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=Audi'))}>{i18n.t("m_ab31803df6d5")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=Mercedes-Benz'))}>{i18n.t("m_3d0e65dfe82d")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=BMW'))}>{i18n.t("m_c76b5628a9d1")}</a>
   </nav>
 </section>
 
@@ -202,13 +205,11 @@
 
     .dn-search {
       --dn-entry-height: var(--dn-control-height-default);
-      --dn-home-search-stack-gap: 7px;
-      --dn-home-mobile-cta-width: 156px;
-
+      --dn-home-search-stack-gap: var(--dn-space-2);
       display: grid;
       gap: var(--dn-home-search-stack-gap);
-      padding: 8px 10px;
-      border: 1px solid var(--dn-line);
+      padding: var(--dn-space-3) var(--dn-space-4);
+      border: 0;
       border-radius: 20px;
       background: var(--dn-white);
     }
@@ -235,7 +236,7 @@
     .dn-search__import-field {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: var(--dn-entry-icon-gap);
       padding: 0 16px;
     }
 
@@ -255,7 +256,7 @@
 
     .dn-search__mobile-shortcuts {
       display: flex;
-      gap: 8px;
+      gap: var(--dn-entry-action-gap);
       margin: 0;
       padding: 10px 12px 0;
       overflow-x: auto;
@@ -267,58 +268,10 @@
       display: none;
     }
 
-    .dn-search__mobile-shortcuts a {
-      display: inline-flex;
-      min-height: var(--dn-control-height-default);
-      flex: 0 0 auto;
-      align-items: center;
-      padding: 0 15px;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-mobile-surface);
-      color: #30363f;
-      font-size: var(--dn-control-size);
-      font-weight: var(--dn-control-weight);
-      white-space: nowrap;
-    }
+    .dn-search__mobile-shortcuts a { flex: 0 0 auto; }
 
-    .dn-search__mobile-all {
-      position: relative;
-      z-index: 0;
-      isolation: isolate;
-      display: flex;
-      width: fit-content;
-      min-width: var(--dn-home-mobile-cta-width);
-      max-width: 100%;
-      min-height: var(--dn-entry-action-height);
-      justify-self: center;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      margin-top: 0;
-      padding: 0 var(--dn-space-5);
-      border: 0;
-      border-radius: var(--dn-radius-button);
-      background: transparent;
-      color: var(--dn-white);
-      font-size: var(--dn-control-size);
-      font-weight: var(--dn-cta-weight);
-      line-height: var(--dn-cta-leading);
-      cursor: pointer;
-    }
+    .dn-search__mobile-all { display: inline-flex; max-width: 100%; justify-self: center; margin-top: 0; }
 
-    .dn-search__mobile-all::before {
-      position: absolute;
-      z-index: -1;
-      inset: 2px 0;
-      border-radius: inherit;
-      background: var(--dn-red);
-      content: '';
-      transition: background-color 160ms ease;
-    }
-
-    .dn-search__mobile-all:is(:hover, :focus-visible)::before {
-      background: var(--dn-red-hover);
-    }
 
     .dn-search__mobile-all:focus-visible {
       outline: 3px solid var(--dn-focus);

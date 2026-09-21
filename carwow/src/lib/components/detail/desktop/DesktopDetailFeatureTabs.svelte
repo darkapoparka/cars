@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 	import type { DetailFeatureTab } from '$lib/types/storefront-page';
 
@@ -8,7 +11,7 @@
 
 	// Описание leads as the default tab, followed by the feature groups.
 	const navTabs = $derived([
-		{ id: DESCRIPTION_TAB_ID, label: 'Описание' },
+		{ id: DESCRIPTION_TAB_ID, label: i18n.t('copy.b3680f2cba5f') },
 		...tabs.map((tab) => ({ id: tab.id, label: tab.label }))
 	]);
 
@@ -33,7 +36,7 @@
 						aria-pressed={tab.id === activeTabId}
 						onclick={() => selectTab(tab.id)}
 					>
-						<span>{tab.label}</span>
+						<span>{i18n.text(tab.label)}</span>
 					</button>
 				</li>
 			{/each}
@@ -42,7 +45,7 @@
 
 	<div class="content-tab">
 		<div class={['content-inner', activeTabId === DESCRIPTION_TAB_ID && 'active']}>
-			<p class="text-secondary pdp-info-tabs__description">{vehicle.description}</p>
+			<p class="text-secondary pdp-info-tabs__description">{i18n.vehicleDescription(vehicle)}</p>
 		</div>
 		{#each tabs as tab (tab.id)}
 			<div class={['content-inner', tab.id === activeTabId && 'active']}>
@@ -50,13 +53,13 @@
 					{#each tab.features as feature (feature.id)}
 						<li class="flex items-center gap-8">
 							<img
-								src="/variant-3/assets/icons/check.svg"
+								src={i18n.asset('/assets/icons/check.svg')}
 								alt=""
 								aria-hidden="true"
 								decoding="async"
 								loading="lazy"
 							/>
-							{feature.label}
+							{i18n.stock(feature.label)}
 						</li>
 					{/each}
 				</ul>

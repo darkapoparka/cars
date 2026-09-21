@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import {
 		desktopOnlyImagePlaceholder,
@@ -50,14 +53,14 @@
 
 {#snippet logoLink()}
 	<a
-		href={resolve('/')}
+		href={i18n.href(resolve('/'))}
 		class={logoLinkClasses}
 		aria-label={daynightSite.shortName}
 		data-logo-role={role}
 	>
 		<img
 			class={logoImageClasses}
-			src={desktopOnlyImagePlaceholder}
+			src={i18n.asset(desktopOnlyImagePlaceholder)}
 			srcset={logoSrcset}
 			sizes={logoSizes}
 			{alt}

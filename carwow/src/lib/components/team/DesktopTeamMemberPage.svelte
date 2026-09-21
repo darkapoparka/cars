@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	// Native 1:1 rebuild of the localized /team/[slug] (sale-agents-details.html)
 	// desktop content: breadcrumb + consultant profile (photo + bio + contact facts)
 	// + recommended vehicles + reviews + contact + "more of the team". Self-contained
@@ -7,7 +10,7 @@
 	// on the prod build. Brand blue routes through --sa-blue; template neutrals stay
 	// literal. Runes-only, no :global except the lucide breadcrumb chevron sizing.
 
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
@@ -39,22 +42,22 @@
 <div class="team-member-page">
 	<DesktopYellowRouteHero
 		headingId="team-member-route-title"
-		title={member.name}
-		copy={member.role}
-		primaryLabel="Виж автомобилите"
+		title={i18n.text(member.name)}
+		copy={i18n.text(member.role)}
+		primaryLabel={i18n.t('copy.f20a4411e8d6')}
 		primaryHref="/inventory"
-		secondaryLabel="Свържете се"
+		secondaryLabel={i18n.t('copy.f36755515677')}
 		secondaryHref="/contact"
 		compact
 	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/team')}>Екип</a></li>
+				<li><a href={i18n.href(resolve('/team'))}>{i18n.t('copy.3906a7e1f4c1')}</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><span>{member.name}</span></li>
+				<li><span>{i18n.text(member.name)}</span></li>
 			</ul>
 		</div>
 	</section>
@@ -63,37 +66,44 @@
 		<div class="container">
 			<div class="team-member-profile__grid">
 				<div class="team-member-profile__media">
-					<img src={member.image} alt={member.name} loading="eager" decoding="async" />
+					<img
+						src={i18n.asset(member.image)}
+						alt={i18n.text(member.name)}
+						loading="eager"
+						decoding="async"
+					/>
 				</div>
 				<div class="team-member-profile__content">
-					<p class="eyebrow">Примерен профил</p>
-					<h1>{member.name}</h1>
-					<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
-					<p class="h5 text-highlight mb-18">{member.role}</p>
-					<p class="h7 text-secondary line-height-28 mb-22">{member.bio}</p>
-					<p class="h7 line-height-28 mb-30">{member.detail}</p>
+					<p class="eyebrow">{i18n.t('copy.d07c480520f4')}</p>
+					<h1>{i18n.text(member.name)}</h1>
+					<p class="text-secondary mb-18">{i18n.text(daynightTeamDisclosure)}</p>
+					<p class="h5 text-highlight mb-18">{i18n.text(member.role)}</p>
+					<p class="h7 text-secondary line-height-28 mb-22">{i18n.text(member.bio)}</p>
+					<p class="h7 line-height-28 mb-30">{i18n.text(member.detail)}</p>
 					<div class="team-member-profile__actions">
 						<a {...phoneLinkProps} class="sa-cta-large sa-cta sa-cta-primary">
-							Обади се за оглед
+							{i18n.t('copy.30ebf6dff086')}
 						</a>
 						{#if member.email}
-							<a href={`mailto:${member.email}`} class="sa-cta sa-cta-ghost"> Изпрати имейл </a>
+							<a href={i18n.href(`mailto:${member.email}`)} class="sa-cta sa-cta-ghost">
+								{i18n.t('copy.9becbe288ced')}
+							</a>
 						{/if}
 					</div>
 					<div class="team-member-profile__facts">
 						<div>
-							<span>Телефон</span>
+							<span>{i18n.t('copy.822f9fd9ba2d')}</span>
 							<a {...phoneLinkProps}>{member.phone}</a>
 						</div>
 						{#if member.email}
 							<div>
-								<span>Имейл</span>
-								<a href={`mailto:${member.email}`}>{member.email}</a>
+								<span>{i18n.t('copy.de9f803f65b3')}</span>
+								<a href={i18n.href(`mailto:${member.email}`)}>{member.email}</a>
 							</div>
 						{/if}
 						<div>
-							<span>Локация</span>
-							<a {...mapLinkProps}>{daynightSite.city}</a>
+							<span>{i18n.t('copy.cb9410729d40')}</span>
+							<a {...mapLinkProps}>{i18n.dealer('city')}</a>
 						</div>
 					</div>
 				</div>
@@ -104,16 +114,28 @@
 	<section class="pb-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Препоръчани автомобили</h2>
-				<a href={resolve('/inventory')} class="sa-cta-compact sa-cta sa-cta-ghost"> Виж всички </a>
+				<h2>{i18n.t('copy.dc77ba9f1946')}</h2>
+				<a href={i18n.href(resolve('/inventory'))} class="sa-cta-compact sa-cta sa-cta-ghost">
+					{i18n.t('copy.5701bc5c6a95')}
+				</a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each recommendedVehicles as vehicle (vehicle.slug)}
-					<a href={resolve('/inventory/[slug]', { slug: vehicle.slug })} class="team-vehicle-card">
-						<img src={vehicle.image} alt={vehicle.shortTitle} loading="lazy" decoding="async" />
+					<a
+						href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
+						class="team-vehicle-card"
+					>
+						<img
+							src={i18n.asset(vehicle.image)}
+							alt={vehicle.shortTitle}
+							loading="lazy"
+							decoding="async"
+						/>
 						<div>
 							<p class="h5 mb-8">{vehicle.shortTitle} {vehicle.year}</p>
-							<p class="text-secondary mb-10">{vehicle.mileage} · {vehicle.fuel}</p>
+							<p class="text-secondary mb-10">
+								{i18n.distance(vehicle.mileage)} · {i18n.spec(vehicle.fuel)}
+							</p>
 							<p class="h5 text-highlight">{vehicle.priceEur}</p>
 						</div>
 					</a>
@@ -126,17 +148,19 @@
 		<div class="container">
 			<div class="title-section mb-30">
 				<div>
-					<h2>Отзиви от клиенти</h2>
-					<p class="text-secondary">{daynightReviewDisclosure}</p>
+					<h2>{i18n.t('copy.93b3d88de23a')}</h2>
+					<p class="text-secondary">{i18n.text(daynightReviewDisclosure)}</p>
 				</div>
-				<a href={resolve('/reviews')} class="sa-cta-compact sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={i18n.href(resolve('/reviews'))} class="sa-cta-compact sa-cta sa-cta-ghost">
+					{i18n.t('copy.5701bc5c6a95')}
+				</a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each reviews as review (review.id)}
 					<article class="team-review-card">
-						<p class="h7 line-height-28 mb-18">{review.text}</p>
-						<strong>{review.name}</strong>
-						<span>{review.label}</span>
+						<p class="h7 line-height-28 mb-18">{i18n.text(review.text)}</p>
+						<strong>{i18n.text(review.name)}</strong>
+						<span>{i18n.text(review.label)}</span>
 					</article>
 				{/each}
 			</div>
@@ -147,18 +171,21 @@
 		<div class="container">
 			<div class="team-member-contact">
 				<div>
-					<p class="eyebrow">{daynightSite.shortName} {daynightSite.city}</p>
-					<h2>Запази час за оглед</h2>
+					<p class="eyebrow">{daynightSite.shortName} {i18n.dealer('city')}</p>
+					<h2>{i18n.t('copy.574526bbf0aa')}</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Свържете се с екипа за актуална наличност, оглед, документи, бартер или финансиране.
+						{i18n.t('copy.47b0592fe3f1')}
 					</p>
 					<a {...phoneLinkProps} class="sa-cta sa-cta-primary">
-						{daynightSite.phoneCta}
+						{i18n.text(daynightSite.phoneCta)}
 					</a>
 				</div>
 				<LazyMapEmbed
-					src={mapEmbedSrc}
-					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+					src={i18n.asset(mapEmbedSrc)}
+					title={i18n.t('pattern.69c703e84da6', {
+						v0: daynightSite.shortName,
+						v1: i18n.dealer('city')
+					})}
 					height="320"
 				/>
 			</div>
@@ -168,14 +195,22 @@
 	{#if otherMembers.length}
 		<section class="pb-100">
 			<div class="container">
-				<h2 class="mb-30">Още от екипа</h2>
+				<h2 class="mb-30">{i18n.t('copy.7fd4c8669d55')}</h2>
 				<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 					{#each otherMembers as teammate (teammate.slug)}
-						<a href={resolve('/team/[slug]', { slug: teammate.slug })} class="team-teammate-card">
-							<img src={teammate.image} alt={teammate.name} loading="lazy" decoding="async" />
+						<a
+							href={i18n.href(resolve('/team/[slug]', { slug: teammate.slug }))}
+							class="team-teammate-card"
+						>
+							<img
+								src={i18n.asset(teammate.image)}
+								alt={i18n.text(teammate.name)}
+								loading="lazy"
+								decoding="async"
+							/>
 							<div>
-								<p class="h5 mb-4">{teammate.name}</p>
-								<p class="text-secondary">{teammate.role}</p>
+								<p class="h5 mb-4">{i18n.text(teammate.name)}</p>
+								<p class="text-secondary">{i18n.text(teammate.role)}</p>
 							</div>
 						</a>
 					{/each}

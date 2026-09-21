@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import type { HomeBrandStripItem } from '$lib/data/home-brand-strip';
 	import {
 		desktopOnlyImagePlaceholder,
@@ -10,8 +13,8 @@
 
 	let {
 		brands,
-		title = 'Марки в наличност',
-		ctaLabel = 'Виж всички марки',
+		title = i18n.t('copy.3e94445966d1'),
+		ctaLabel = i18n.t('copy.bb31879737a7'),
 		showHeaderCta = true,
 		showBelowCta = false,
 		showHeading = true,
@@ -43,7 +46,7 @@
 		<div class="daynight-home-container home-browse-heading">
 			<DesktopSectionHeading
 				{title}
-				href={showHeaderCta ? resolve('/inventory') : undefined}
+				href={i18n.href(showHeaderCta ? resolve('/inventory') : undefined)}
 				label={ctaLabel}
 			/>
 		</div>
@@ -54,17 +57,19 @@
 				{#each brands as brand (brand.id)}
 					<div class="daynight-brand-grid__item">
 						<a
-							href={resolve(
-								`/inventory?brand=${encodeURIComponent(brand.brand)}` as `/inventory?brand=${string}`
+							href={i18n.href(
+								resolve(
+									`/inventory?brand=${encodeURIComponent(brand.brand)}` as `/inventory?brand=${string}`
+								)
 							)}
 							class="daynight-brand-card"
 							data-brand-id={brand.id}
-							aria-label={`${brand.name}, ${brand.countLabel}`}
+							aria-label={`${brand.name}, ${Number.isFinite(Number.parseInt(brand.countLabel)) ? i18n.count(Number.parseInt(brand.countLabel)) : i18n.text(brand.countLabel)}`}
 						>
 							<span class="daynight-brand-card__logo" aria-hidden="true">
 								<img
 									class="daynight-brand-card__image"
-									src={desktopOnlyImagePlaceholder}
+									src={i18n.asset(desktopOnlyImagePlaceholder)}
 									srcset={desktopOnlySrcset(brand.image, 200)}
 									sizes={desktopOnlySizes('64px')}
 									alt=""
@@ -74,7 +79,11 @@
 								<p class="daynight-brand-card__name">
 									{brand.name}
 								</p>
-								<p class="daynight-brand-card__count">{brand.countLabel}</p>
+								<p class="daynight-brand-card__count">
+									{Number.isFinite(Number.parseInt(brand.countLabel))
+										? i18n.count(Number.parseInt(brand.countLabel))
+										: i18n.text(brand.countLabel)}
+								</p>
 							{/if}
 						</a>
 					</div>
@@ -83,8 +92,8 @@
 		</div>
 		{#if showBelowCta && !isStrip}
 			<div class="daynight-home-browse-cta">
-				<a href={resolve('/inventory')} class="daynight-home-browse-cta__link">
-					{ctaLabel}
+				<a href={i18n.href(resolve('/inventory'))} class="daynight-home-browse-cta__link">
+					{i18n.text(ctaLabel)}
 				</a>
 			</div>
 		{/if}

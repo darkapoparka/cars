@@ -17,27 +17,27 @@ export const footerSocialLinks: FooterSocialLink[] = [
 ];
 
 export const brandLogos: Record<string, string> = {
-	Audi: '/variant-3/assets/images/brand/brand-3.png',
-	BMW: '/variant-3/assets/images/brand/brand-1.webp',
-	Chevrolet: '/variant-3/assets/images/brand/mobile/chevrolet.svg',
-	Chrysler: '/variant-3/assets/images/brand/mobile/chrysler.svg',
-	Citroen: '/variant-3/assets/images/brand/oem/citroen.svg',
-	Ford: '/variant-3/assets/images/brand/mobile/ford.svg',
-	Honda: '/variant-3/assets/images/brand/mobile/honda.svg',
-	Hyundai: '/variant-3/assets/images/brand/brand-8.png',
-	Jaguar: '/variant-3/assets/images/brand/mobile/jaguar.svg',
-	Kia: '/variant-3/assets/images/brand/brand-9.png',
-	'Land Rover': '/variant-3/assets/images/brand/oem/land-rover.svg',
-	Mazda: '/variant-3/assets/images/brand/brand-10.png',
-	'Mercedes-Benz': '/variant-3/assets/images/brand/brand-2.webp',
-	Opel: '/variant-3/assets/images/brand/oem/opel.svg',
-	Peugeot: '/variant-3/assets/images/brand/mobile/peugeot.svg',
-	Porsche: '/variant-3/assets/images/brand/oem/porsche.webp',
-	Skoda: '/variant-3/assets/images/brand/mobile/skoda.svg',
-	Toyota: '/variant-3/assets/images/brand/brand-5.webp',
-	Tesla: '/variant-3/assets/images/brand/brand-12.png',
-	Volvo: '/variant-3/assets/images/brand/mobile/volvo.svg',
-	VW: '/variant-3/assets/images/brand/mobile/volkswagen.svg'
+	Audi: '/assets/images/brand/brand-3.png',
+	BMW: '/assets/images/brand/brand-1.webp',
+	Chevrolet: '/assets/images/brand/mobile/chevrolet.svg',
+	Chrysler: '/assets/images/brand/mobile/chrysler.svg',
+	Citroen: '/assets/images/brand/oem/citroen.svg',
+	Ford: '/assets/images/brand/mobile/ford.svg',
+	Honda: '/assets/images/brand/mobile/honda.svg',
+	Hyundai: '/assets/images/brand/brand-8.png',
+	Jaguar: '/assets/images/brand/mobile/jaguar.svg',
+	Kia: '/assets/images/brand/brand-9.png',
+	'Land Rover': '/assets/images/brand/oem/land-rover.svg',
+	Mazda: '/assets/images/brand/brand-10.png',
+	'Mercedes-Benz': '/assets/images/brand/brand-2.webp',
+	Opel: '/assets/images/brand/oem/opel.svg',
+	Peugeot: '/assets/images/brand/mobile/peugeot.svg',
+	Porsche: '/assets/images/brand/oem/porsche.webp',
+	Skoda: '/assets/images/brand/mobile/skoda.svg',
+	Toyota: '/assets/images/brand/brand-5.webp',
+	Tesla: '/assets/images/brand/brand-12.png',
+	Volvo: '/assets/images/brand/mobile/volvo.svg',
+	VW: '/assets/images/brand/mobile/volkswagen.svg'
 };
 
 const brandFallbackMarks: Record<string, string> = {
@@ -52,12 +52,12 @@ const brandFallbackMarks: Record<string, string> = {
 };
 
 const bodyTypeArt = {
-	suv: '/variant-3/assets/images/body-type/normalized/body-suv-transparent.webp',
-	hatch: '/variant-3/assets/images/body-type/normalized/body-hatchback-transparent.webp',
-	wagon: '/variant-3/assets/images/body-type/normalized/body-wagon-transparent.webp',
-	sedan: '/variant-3/assets/images/body-type/normalized/body-sedan-transparent.webp',
-	coupe: '/variant-3/assets/images/body-type/normalized/body-coupe-transparent.webp',
-	mpv: '/variant-3/assets/images/body-type/normalized/body-mpv-transparent.webp'
+	suv: '/assets/images/body-type/normalized/body-suv-transparent.webp',
+	hatch: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
+	wagon: '/assets/images/body-type/normalized/body-wagon-transparent.webp',
+	sedan: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
+	coupe: '/assets/images/body-type/normalized/body-coupe-transparent.webp',
+	mpv: '/assets/images/body-type/normalized/body-mpv-transparent.webp'
 } as const;
 
 export const brandMark = (brand: string) =>

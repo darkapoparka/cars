@@ -34,7 +34,7 @@ export const editorialGuides: DayNightArticle[] = [
 		'kak-da-kupim-upotrebyavan-avtomobil',
 		'Оглед на употребяван автомобил: откъде да започнете',
 		'Практичен ред за оглед — от въпросите по телефона до проверката в сервиз.',
-		'/variant-3/assets/images/blog/post-18.jpg',
+		'/assets/images/blog/post-18.jpg',
 		'Покупка',
 		['оглед', 'покупка'],
 		[
@@ -65,7 +65,7 @@ export const editorialGuides: DayNightArticle[] = [
 		'vaprosi-predi-ogled',
 		'Какво да попитате, преди да пътувате за оглед',
 		'Кратък списък с въпроси и снимки, които могат да спестят напразно пътуване.',
-		'/variant-3/assets/images/blog/post-20.jpg',
+		'/assets/images/blog/post-20.jpg',
 		'Покупка',
 		['обяви', 'оглед'],
 		[
@@ -96,7 +96,7 @@ export const editorialGuides: DayNightArticle[] = [
 		'sravnyavane-na-avtomobilni-obyavi',
 		'Как да сравните три обяви, без да се изгубите в екстрите',
 		'Подредете важните разлики: версия, състояние, история и оборудване.',
-		'/variant-3/assets/images/blog/post-32.jpg',
+		'/assets/images/blog/post-32.jpg',
 		'Покупка',
 		['сравнение', 'обяви'],
 		[
@@ -127,7 +127,7 @@ export const editorialGuides: DayNightArticle[] = [
 		'testovo-shofirane-kakvo-da-proverite',
 		'Тестово шофиране: какво да проверите предварително',
 		'Подгответе маршрут и въпроси, за да използвате времето зад волана смислено.',
-		'/variant-3/assets/images/blog/post-31.jpg',
+		'/assets/images/blog/post-31.jpg',
 		'Покупка',
 		['тестово шофиране', 'оглед'],
 		[
@@ -158,7 +158,7 @@ export const editorialGuides: DayNightArticle[] = [
 		'kak-da-podgotvim-avtomobil-za-prodazhba',
 		'Подготовка за продажба: какво да съберете преди обявата',
 		'Документи, оборудване и ясна информация за състоянието в един подреден пакет.',
-		'/variant-3/assets/images/blog/post-30.jpg',
+		'/assets/images/blog/post-30.jpg',
 		'Продажба',
 		['продажба', 'подготовка'],
 		[
@@ -189,7 +189,7 @@ export const editorialGuides: DayNightArticle[] = [
 		'snimki-na-avtomobil-za-obyava',
 		'Снимки за автомобилна обява: полезният комплект кадри',
 		'Покажете автомобила ясно, с последователни снимки и видими забележки.',
-		'/variant-3/assets/images/blog/post-23.jpg',
+		'/assets/images/blog/post-23.jpg',
 		'Продажба',
 		['снимки', 'обяви'],
 		[

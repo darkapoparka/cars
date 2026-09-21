@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	// Native 1:1 rebuild of the localized /financing (financing.html) desktop main
 	// content: breadcrumb + hero (advantages) + "Как работи" process steps + the
 	// "Полезно" blog cards + the FAQ accordion. The copy and data are kept verbatim;
@@ -14,11 +17,11 @@
 	// retained CSS hooks). Single-open behaviour matches the established page;
 	// the first item starts open, matching the baseline.
 
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 
-	type AssetHref = `/variant-3/assets/${string}`;
+	type AssetHref = `/assets/${string}`;
 	type AppHref = `/${string}`;
 
 	type Benefit = {
@@ -51,69 +54,69 @@
 
 	const benefits: Benefit[] = [
 		{
-			title: 'Съдействие по документи и прехвърляне',
-			copy: 'Екипът подготвя документите и съпровожда прехвърлянето от началото до края.'
+			title: i18n.t('copy.79b339166440'),
+			copy: i18n.t('copy.d877e56c2971')
 		},
 		{
-			title: 'Ясни условия предварително',
-			copy: 'Получавате ориентировъчна месечна вноска и условия още преди да дойдете за оглед.'
+			title: i18n.t('copy.f469b9b95adf'),
+			copy: i18n.t('copy.116e691d658b')
 		},
 		{
-			title: 'Отнема само няколко минути',
-			copy: 'Изпратете запитване с автомобила и бюджета - екипът ще Ви изпрати конкретни следващи стъпки.'
+			title: i18n.t('copy.0b7265e4135d'),
+			copy: i18n.t('copy.4ac759b649e1')
 		}
 	];
 
 	const steps: Step[] = [
 		{
 			number: '1',
-			title: 'Изпратете запитване',
-			copy: 'Кажете кой автомобил ви интересува и какъв месечен бюджет е удобен — без ангажимент и без влияние върху решението ви.',
+			title: i18n.t('copy.f8892f58b6e6'),
+			copy: i18n.t('copy.ed3663a0c3ed'),
 			href: '/contact?intent=financing'
 		},
 		{
 			number: '2',
-			title: 'Търсете според месечния бюджет',
-			copy: 'Използвайте калкулатора, за да сравните първоначална вноска, срок и ориентировъчна месечна вноска.',
+			title: i18n.t('copy.bf89c686cb17'),
+			copy: i18n.t('copy.838e3369c616'),
 			href: '/calculator',
 			active: true
 		},
 		{
 			number: '3',
-			title: 'Изберете подходяща оферта',
-			copy: `Изберете автомобил от наличността, уточнете условията с екипа и запазете оглед в ${daynightSite.city}.`,
+			title: i18n.t('copy.b34c6f8e1804'),
+			copy: i18n.t('pattern.41a4afc32f79', { v0: i18n.dealer('city') }),
 			href: '/inventory'
 		}
 	];
 
 	const blogCards: BlogCard[] = [
 		{
-			image: '/variant-3/assets/images/blog/post-32.jpg',
+			image: '/assets/images/blog/post-32.jpg',
 			href: '/faq',
 			category: 'СЪВЕТИ',
-			title: 'Въпроси преди покупка',
-			copy: 'Отговори за оглед, документи и процеса на покупка.'
+			title: i18n.t('copy.93f65ad820a6'),
+			copy: i18n.t('copy.666ba208a679')
 		},
 		{
-			image: '/variant-3/assets/images/blog/post-31.jpg',
+			image: '/assets/images/blog/post-31.jpg',
 			href: '/calculator',
 			category: 'ФИНАНСИРАНЕ',
-			title: 'Калкулатор за финансиране',
-			copy: 'Ориентировъчна сметка според цена, първоначална вноска и срок.'
+			title: i18n.t('copy.bbc120ea0e49'),
+			copy: i18n.t('copy.ea99e4be2a1b')
 		},
 		{
-			image: '/variant-3/assets/images/blog/post-23.jpg',
+			image: '/assets/images/blog/post-23.jpg',
 			href: '/sell-your-car',
 			category: 'ПОЛЕЗНО',
-			title: 'Продажба или бартер',
-			copy: 'Изпратете данни за вашия автомобил и обсъдете възможностите с екипа.'
+			title: i18n.t('copy.8724cead6f8c'),
+			copy: i18n.t('copy.716317ad5fdc')
 		}
 	];
 
 	const faqs: FaqItem[] = [
 		{
 			id: 'documents',
-			question: 'Какви документи са нужни за финансиране?',
+			question: i18n.t('copy.44108aa2740d'),
 			answers: [
 				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото и съдейства през целия процес.',
 				'Конкретните изисквания зависят от избрания финансов партньор и автомобила.'
@@ -122,21 +125,21 @@
 		},
 		{
 			id: 'owe-money',
-			question: 'Мога ли да участвам с бартер при финансиране?',
+			question: i18n.t('copy.958fc8e87d4b'),
 			answers: [
 				'Да — оценяваме текущия ви автомобил и стойността му намалява финансираната сума. Условията се уточняват според автомобила, бюджета и документите.'
 			]
 		},
 		{
 			id: 'leasing',
-			question: 'Каква първоначална вноска е нужна?',
+			question: i18n.t('copy.0d258472897a'),
 			answers: [
 				'Зависи от автомобила и избраната схема. Екипът може да насочи към подходящ вариант и ориентировъчна месечна вноска още при запитването.'
 			]
 		},
 		{
 			id: 'benefits',
-			question: 'Колко време отнема одобрението?',
+			question: i18n.t('copy.4474fb966c84'),
 			answers: [
 				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават окончателно при огледа и подготовката на документите.'
 			]
@@ -159,11 +162,11 @@
 	<main id="main-content" tabindex="-1" aria-labelledby="daynight-financing-title">
 		<DesktopYellowRouteHero
 			headingId="daynight-financing-title"
-			title="Финансиране"
-			copy="Сравнете бюджет, първоначална вноска и ориентировъчна месечна вноска преди оглед."
-			primaryLabel="Изпрати запитване"
+			title={i18n.t('copy.6e55eeb12cce')}
+			copy={i18n.t('copy.0f3b634f9d05')}
+			primaryLabel={i18n.t('copy.8d4343e23a1b')}
 			primaryHref="/contact"
-			secondaryLabel="Виж автомобили"
+			secondaryLabel={i18n.t('copy.2042bdf14638')}
 			secondaryHref="/inventory"
 		/>
 
@@ -178,31 +181,36 @@
 						     exact 1:1 height match. -->
 						<p class="mb-12"></p>
 						<h2 class="mb-12 capitalize">
-							Финансиране и разсрочено плащане без излишни усложнения
+							{i18n.t('copy.dc0691bac607')}
 						</h2>
 						<p class="h7 line-height-28 text-secondary mb-42">
-							Сравнете варианти за финансиране и ориентировъчна месечна вноска за минути — с ясни
-							условия и съдействие от екипа.
+							{i18n.t('copy.59d5a57effe1')}
 						</p>
 						<ul class="benefit-list mb-40">
 							{#each benefits as benefit (benefit.title)}
 								<li class="benefit-item">
-									<img class="benefit-check" src={asset('/variant-3/assets/icons/check.svg')} alt="" />
+									<img
+										class="benefit-check"
+										src={i18n.asset(asset('/assets/icons/check.svg'))}
+										alt=""
+									/>
 									<div>
-										<p class="h5 mb-4 capitalize">{benefit.title}</p>
-										<p class="h7">{benefit.copy}</p>
+										<p class="h5 mb-4 capitalize">{i18n.text(benefit.title)}</p>
+										<p class="h7">{i18n.text(benefit.copy)}</p>
 									</div>
 								</li>
 							{/each}
 						</ul>
 
 						<div class="hero-actions">
-							<a href={resolve('/contact')} class="btn-large-3 sa-cta sa-cta-primary">
-								Изпрати запитване
+							<a href={i18n.href(resolve('/contact'))} class="btn-large-3 sa-cta sa-cta-primary">
+								{i18n.t('copy.8d4343e23a1b')}
 							</a>
 							<p class="hero-actions__call">
-								<span>Предпочитате разговор?</span>
-								<a class="text-underline" href={daynightSite.phoneHref}>Обадете се</a>
+								<span>{i18n.t('copy.f19e5140b626')}</span>
+								<a class="text-underline" href={i18n.href(daynightSite.phoneHref)}
+									>{i18n.t('copy.6074fafcd633')}</a
+								>
 							</p>
 						</div>
 					</div>
@@ -215,9 +223,9 @@
 		<section class="background-light py-100">
 			<div class="container">
 				<div class="section-head">
-					<h2 class="mb-14 capitalize">Как работи финансирането</h2>
+					<h2 class="mb-14 capitalize">{i18n.t('copy.c9d0b1a1223f')}</h2>
 					<p class="text-secondary h7 line-height-28">
-						Сравнете бюджет, първоначална вноска и ориентировъчна месечна вноска преди оглед.
+						{i18n.t('copy.0f3b634f9d05')}
 					</p>
 				</div>
 
@@ -225,10 +233,10 @@
 					{#each steps as step (step.number)}
 						<div class={['step-box', { 'active-step': step.active }]}>
 							<p class="step-number">{step.number}</p>
-							<a href={resolve(step.href)} class="step-title h4 text-center capitalize">
-								{step.title}
+							<a href={i18n.href(resolve(step.href))} class="step-title h4 text-center capitalize">
+								{i18n.text(step.title)}
 							</a>
-							<p class="text-secondary text-center">{step.copy}</p>
+							<p class="text-secondary text-center">{i18n.text(step.copy)}</p>
 						</div>
 					{/each}
 				</div>
@@ -240,24 +248,24 @@
 		<section class="bg-white py-100">
 			<div class="container">
 				<div class="mb-40">
-					<h2 class="mb-12 capitalize">Полезно при покупка с финансиране</h2>
+					<h2 class="mb-12 capitalize">{i18n.t('copy.4ddb14fa1a9a')}</h2>
 					<p class="text-secondary h7 line-height-28">
-						Отговори, калкулатор и запитване за вашия автомобил.
+						{i18n.t('copy.454ca9fadaee')}
 					</p>
 				</div>
 
 				<div class="blog-grid">
 					{#each blogCards as post (post.image)}
-						<a href={resolve(post.href)} class="post-card">
+						<a href={i18n.href(resolve(post.href))} class="post-card">
 							<div class="post-card__image">
-								<img class="post-card__img" src={asset(post.image)} alt="" />
+								<img class="post-card__img" src={i18n.asset(asset(post.image))} alt="" />
 							</div>
 							<div class="post-card__content">
 								<div class="post-card__meta">
-									<span class="post-card__category text-sm">{post.category}</span>
+									<span class="post-card__category text-sm">{i18n.spec(post.category)}</span>
 								</div>
-								<p class="h4 post-card__title mb-12">{post.title}</p>
-								<p class="clamp-2 text-secondary">{post.copy}</p>
+								<p class="h4 post-card__title mb-12">{i18n.text(post.title)}</p>
+								<p class="clamp-2 text-secondary">{i18n.text(post.copy)}</p>
 							</div>
 						</a>
 					{/each}
@@ -269,7 +277,7 @@
 		<!-- faq -->
 		<section class="background-light py-100">
 			<div class="container">
-				<h2 class="mb-40 text-center capitalize">Често задавани въпроси за финансирането</h2>
+				<h2 class="mb-40 text-center capitalize">{i18n.t('copy.2a3dc21126f7')}</h2>
 				<div class="max-width-930 mx-auto w-full">
 					<div class="flat-accordion flex flex-col gap-18" data-daynight-native-accordion>
 						{#each faqs as faq (faq.id)}
@@ -282,7 +290,7 @@
 									aria-controls={`finance-faq-${faq.id}`}
 									onclick={() => toggleFaq(faq.id)}
 								>
-									<span class="h5 title">{faq.question}</span>
+									<span class="h5 title">{i18n.text(faq.question)}</span>
 									<span class="icon">
 										<svg
 											width="24"
@@ -311,7 +319,7 @@
 												{ 'mb-8': faq.answers.length > 1 && index === 0 }
 											]}
 										>
-											{answer}
+											{i18n.text(answer)}
 										</p>
 									{/each}
 								</div>

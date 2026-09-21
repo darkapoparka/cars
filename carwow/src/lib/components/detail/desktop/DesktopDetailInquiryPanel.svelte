@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { submitLead } from '$lib/client/lead-submit';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
@@ -11,7 +14,7 @@
 	let inquirySubmitState = $state<LeadSubmitState>('idle');
 	let inquirySubmitMessage = $state('');
 
-	const inquiryErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const inquiryErrorMessage = i18n.t('pattern.46349c35d9b3', { v0: daynightSite.phoneLabel });
 
 	function readFormValue(formData: FormData, name: string) {
 		const value = formData.get(name);
@@ -38,9 +41,9 @@
 		const message = readFormValue(formData, 'message');
 		const wantsPriceUpdates = formData.get('price_updates') === 'yes';
 		const fullMessage = [
-			`Автомобил: ${vehicle.title}`,
-			`Референтен номер: ${vehicle.lot}`,
-			`Тема: ${subject}`,
+			i18n.t('pattern.b3d5d0ee75f3', { v0: vehicle.title }),
+			i18n.t('pattern.89371a38f8f7', { v0: vehicle.lot }),
+			i18n.t('pattern.18c57a42d0c1', { v0: subject }),
 			message,
 			wantsPriceUpdates ? 'Клиентът иска известия за цената.' : ''
 		]
@@ -73,7 +76,7 @@
 </script>
 
 <div class="listing-details--sidebar-box">
-	<p class="h5 mb-16 capitalize">Запитване за автомобила</p>
+	<p class="h5 mb-16 capitalize">{i18n.t('copy.f90249ddd169')}</p>
 
 	<form
 		action="#"
@@ -84,63 +87,67 @@
 	>
 		<div class="mb-8 grid grid-cols-1 gap-18">
 			<div>
-				<label class="mb-8" for="SendInquiryname">Име</label>
+				<label class="mb-8" for="SendInquiryname">{i18n.t('copy.7848bd195104')}</label>
 				<input
+					{@attach i18n.validation}
 					class="active input-large"
 					id="SendInquiryname"
 					name="SendInquiryname"
 					type="text"
 					value=""
-					placeholder="Вашето име"
+					placeholder={i18n.t('copy.62170ed5140f')}
 					required
-					aria-label="Вашето име"
+					aria-label={i18n.t('copy.62170ed5140f')}
 				/>
 			</div>
 			<div>
-				<label class="mb-8" for="SendInquiryemail">Имейл</label>
+				<label class="mb-8" for="SendInquiryemail">{i18n.t('copy.de9f803f65b3')}</label>
 				<input
+					{@attach i18n.validation}
 					class="input-large"
 					name="SendInquiryemail"
 					id="SendInquiryemail"
 					type="email"
 					value=""
-					placeholder="Вашият имейл"
+					placeholder={i18n.t('copy.75b14640a4f5')}
 					required
-					aria-label="Имейл"
+					aria-label={i18n.t('copy.de9f803f65b3')}
 				/>
 			</div>
 			<div>
-				<label class="mb-8" for="SendInquiryphone">Телефон</label>
+				<label class="mb-8" for="SendInquiryphone">{i18n.t('copy.822f9fd9ba2d')}</label>
 				<input
-					placeholder="Телефон (по избор)"
+					{@attach i18n.validation}
+					placeholder={i18n.t('copy.9b514468f1cc')}
 					class="input-large"
 					name="SendInquiryphone"
 					id="SendInquiryphone"
 					type="tel"
 					value=""
-					aria-label="Телефон"
+					aria-label={i18n.t('copy.822f9fd9ba2d')}
 				/>
 			</div>
 
 			<div>
-				<label class="mb-8" for="SendInquirysubject">Тема</label>
-				<select id="SendInquirysubject" name="SendInquirysubject">
-					<option>Наличност на автомобила</option>
-					<option>Цена и оглед</option>
-					<option>Финансиране</option>
+				<label class="mb-8" for="SendInquirysubject">{i18n.t('copy.682f961a0751')}</label>
+				<select {@attach i18n.validation} id="SendInquirysubject" name="SendInquirysubject">
+					<option>{i18n.t('copy.b0353fe35224')}</option>
+					<option>{i18n.t('copy.5e56aa9e8586')}</option>
+					<option>{i18n.t('copy.6e55eeb12cce')}</option>
 				</select>
 			</div>
 
 			<div class="padding-0">
-				<label class="mb-6" for="message">Съобщение</label>
+				<label class="mb-6" for="message">{i18n.t('copy.5afae14709c7')}</label>
 				<textarea
-					placeholder="Вашето съобщение"
+					{@attach i18n.validation}
+					placeholder={i18n.t('copy.e5de35a7b139')}
 					rows="3"
 					name="message"
 					class="message"
 					id="message"
 					required
-					aria-label="Съобщение"
+					aria-label={i18n.t('copy.5afae14709c7')}
 				></textarea>
 			</div>
 		</div>
@@ -149,7 +156,9 @@
 			class="mb-18 sa-cta w-full sa-cta-primary"
 			disabled={inquirySubmitState === 'submitting'}
 		>
-			{inquirySubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}
+			{inquirySubmitState === 'submitting'
+				? i18n.t('copy.acfcd771108c')
+				: i18n.t('copy.8d4343e23a1b')}
 		</button>
 		{#if inquirySubmitMessage}
 			<p
@@ -161,20 +170,18 @@
 				role={inquirySubmitState === 'error' ? 'alert' : 'status'}
 				aria-live="polite"
 			>
-				{inquirySubmitMessage}
+				{i18n.text(inquirySubmitMessage)}
 			</p>
 		{/if}
 		<label class="filter-checkbox style-2 mb-6">
-			<input type="checkbox" name="price_updates" value="yes" />
-			<span class="text-sm"
-				>Да, искам да получавам известия за цената и полезна информация за този автомобил.</span
-			>
+			<input {@attach i18n.validation} type="checkbox" name="price_updates" value="yes" />
+			<span class="text-sm">{i18n.t('copy.c751b521a267')}</span>
 		</label>
 
 		<p class="text-secondary text-xs">
-			Използвайки услугата, приемате нашето
-			<a href={resolve('/terms')} class="text-underline text-highlight text-xs">
-				Споразумение с потребителите.
+			{i18n.t('copy.9f1e68c1e08e')}
+			<a href={i18n.href(resolve('/terms'))} class="text-underline text-highlight text-xs">
+				{i18n.t('copy.3ed43348ee8d')}
 			</a>
 		</p>
 	</form>

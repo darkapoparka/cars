@@ -45,7 +45,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": true
@@ -93,7 +93,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": true
@@ -141,7 +141,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": true
@@ -189,7 +189,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -237,7 +237,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -285,7 +285,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -333,7 +333,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -381,7 +381,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -429,7 +429,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -477,7 +477,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -525,7 +525,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -573,7 +573,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -621,7 +621,7 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
@@ -669,12 +669,12 @@ export const mockListings: VehicleListing[] = [
       "displayName": "IS AUTO Varna",
       "verificationStatus": "unverified",
       "city": "Варна",
-      "logoUrl": "/dealer-brand/logo-on-light.webp"
+      "logoUrl": "/dealer-brand/logo-on-light-20260919.webp"
     },
     "publishedAt": "2026-09-16T09:00:00.000Z",
     "promoted": false
   }
-]
+];
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [

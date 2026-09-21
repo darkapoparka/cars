@@ -32,7 +32,7 @@ const article: DayNightArticle = {
 	kind: 'guide',
 	date: "2026-09-16",
 	author: "Информация за независим преглед",
-	image: '/variant-3/assets/images/blog/post-20.jpg',
+	image: '/assets/images/blog/post-20.jpg',
 	readMinutes: 2,
 	summary: ["Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.", "Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация."],
 	sections: [

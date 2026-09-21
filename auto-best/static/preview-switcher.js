@@ -1,8 +1,20 @@
 /* Cars packaging v1. Configuration is embedded by package-dealer.mjs. */
 (() => {
   if (document.querySelector('dealer-design-switcher, excellent-design-switcher')) return;
-  const config = {"language":"bg","labels":{"design":"Дизайн","choose":"Избор на дизайн","title":"Изберете визия за сайта"},"variants":[{"key":"auto-best","base":"","entry":"/"},{"key":"modern","base":"/variant-2","entry":"/variant-2/cars"},{"key":"carwow","base":"/variant-3","entry":"/variant-3/"}]};
-  const choices = config.variants;
+  const config = {"language":"bg","labels":{"design":"Дизайн","choose":"Избор на дизайн","title":"Изберете визия за сайта","admin":"Админ панел (демо на английски)","adminLabel":"Админ панел — демо само на английски, отваря се в нов раздел"},"accent":"#d71920","localization":{"defaultLocale":"bg","enabledLocales":["en","bg"],"messages":{"en":{"design":"Design","choose":"Choose a design","title":"Choose a design for the site","admin":"Admin dashboard (English demo)","adminLabel":"Admin dashboard — English-only demo, opens in a new tab"},"bg":{"design":"Дизайн","choose":"Избор на дизайн","title":"Изберете визия за сайта","admin":"Админ панел (демо на английски)","adminLabel":"Админ панел — демо само на английски, отваря се в нов раздел"}}},"variants":[{"key":"auto-best","base":"","entry":"/"},{"key":"modern","base":"/variant-2","entry":"/variant-2/cars"},{"key":"carwow","base":"/variant-3","entry":"/variant-3/"}]};
+  const mount = config.variants.find(({ base }) => base && (location.pathname === base || location.pathname.startsWith(`${base}/`)))?.base || '';
+  if (config.localization) {
+    const requested = location.pathname.slice(mount.length).split('/')[1];
+    const documentLanguage = document.documentElement.lang;
+    const enabled = config.localization.enabledLocales;
+    config.language = enabled.includes(requested) ? requested : enabled.includes(documentLanguage) ? documentLanguage : config.localization.defaultLocale;
+    config.labels = config.localization.messages[config.language];
+  }
+  const choices = config.variants.map(choice => {
+    if (!config.localization) return choice;
+    const tail = choice.entry.slice(choice.base.length);
+    return { ...choice, entry: `${choice.base}/${config.language}${tail === '/' ? '' : tail}` };
+  });
   const index = choices.findIndex(({ base }) => base && (location.pathname === base || location.pathname.startsWith(`${base}/`)));
   const active = index < 0 ? 0 : index;
   const host = document.createElement('dealer-design-switcher');
@@ -15,6 +27,7 @@
     @media(min-width:992px){:host{right:24px;bottom:100px}}
   </style><nav id="choices" hidden><p></p></nav><button type="button" aria-expanded="false" aria-controls="choices"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M10 9v12"/></svg><span class="label" aria-hidden="true"></span><span class="count" aria-hidden="true"></span></button>`;
   host.lang = config.language;
+  if (config.localization) { host.dataset.adminLabel = config.labels.adminLabel; host.dataset.adminText = config.labels.admin; }
   if (config.accent) host.style.setProperty('--dealer-switcher-accent', config.accent);
   const button = shadow.querySelector('button');
   const panel = shadow.querySelector('nav');
@@ -49,10 +62,11 @@
   });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !panel.hidden) {
-      close(true);
       event.preventDefault();
+      event.stopImmediatePropagation();
+      close(true);
     }
-  });
+  }, true);
   shadow.querySelectorAll('a').forEach((link) => link.addEventListener('click', (event) => {
     if (event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
       event.preventDefault();
@@ -76,8 +90,8 @@
   link.href = url.href;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
-  link.setAttribute('aria-label', 'Admin dashboard — demo, opens in a new tab');
-  link.append(document.createTextNode('Admin dashboard'));
+  link.setAttribute('aria-label', host.dataset.adminLabel || 'Admin dashboard — demo, opens in a new tab');
+  link.append(document.createTextNode(host.dataset.adminText || 'Admin dashboard'));
   const arrow = document.createElement('span');
   arrow.textContent = '↗';
   arrow.setAttribute('aria-hidden', 'true');

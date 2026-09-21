@@ -64,12 +64,17 @@ For the built preview, use that preview URL instead. `scripts/browser.mjs` contr
 | `scripts/route-smoke.mjs` | Routes/status codes, images, page errors, overflow and responsive layout |
 | `scripts/journey-smoke.mjs` | Listing/article returns, vehicle contact context, discovery and menu interaction |
 | `scripts/enquiry-smoke.mjs` | Enquiry entry, steps, review, local photos and sharing/copy behavior |
-| `scripts/mobile-filter-smoke.mjs` | Mobile filter draft, nested choices, application and empty results |
+| `scripts/mobile-filter-smoke.mjs` | Bulgarian returning-visitor filter draft, nested choices, application, empty results and result-label containment |
+| `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, icon size, single-line mobile inventory titles, filter footer, detail touch targets, short-viewport editors and configured settings title |
 | `scripts/desktop-discovery-smoke.mjs` | Desktop discovery and sticky-control behavior |
 | `scripts/phase4-smoke.mjs` | URL/filter preservation, nested and outer draft ownership, pending desktop values, shell transitions, menu focus, duplicate IDs and 767/768/991/992 boundaries |
 | `scripts/typography-smoke.mjs` | Entry/segment/CTA hierarchy, keyboard tab switching, link/VIN/description editor save and discard, stable card height, sell/import validation and review, reference edits and clearing, manual fallback, copied text, Escape/focus return, control reflow and screenshots |
 
 Additional mobile/accessibility/resilience and visual-comparison tools exist in the newer local working source but are not package scripts in this standalone baseline. Do not assume a fresh clone includes them.
+
+## Focused mobile polish checks
+
+With `BASE_URL` set to the current build, run `node scripts/mobile-polish-smoke.mjs`. It covers 320, 390, 430 and 1440px in Bulgarian and English. The filter suite and this focused suite set explicit returning-visitor preferences; first-visit prompt behavior belongs to `scripts/qa-locale-preferences.mjs`. The mobile checks inspect control geometry as well as document overflow, because clipped labels and shrinking icons can occur without widening the page. Generated screenshots and results are saved under `artifacts/mobile-polish-smoke/`.
 
 ## Phase 4 regression contract
 
@@ -111,3 +116,17 @@ The standalone source and current working preview have different enquiry/finance
 Check relative file links, headings, code paths and npm script names against the checkout. Ensure examples describe implemented APIs and Markdown is UTF-8. Application screenshots and a production rebuild are unnecessary when the diff changes only documentation and no build inputs.
 
 Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](CARS-INTEGRATION.md).
+
+## Native locale release checks
+
+`npm run check:locales` verifies deterministic catalog output. `npm run check:locale-source` audits literal rendered/accessibility copy and static key/alias calls. `npm run test:locales` includes compiler, policy, source-audit and negative fixtures. Both catalog and source audits run before a production build.
+
+With `BASE_URL` set to an owned built preview, `npm run smoke:locales` runs the EN/BG route, HTTP, legacy, preference, storage, race, journey and completion suites serially. `scripts/run-locale-qa.mjs` supports named output labels and explicit suite selection. Source snapshots and logs distinguish tested source from later edits; see [localization coverage](localization/COVERAGE.md).
+
+The existing discovery/enquiry suites use `locale-smoke-fixture.mjs` to seed a returning Bulgarian visitor; first-visit behavior is independently tested by the locale suites. They retain their original behavioral assertions while accepting native localized URL prefixes and current control copy. General smoke success does not replace EN/BG or public-deployment acceptance.
+
+## Overlay control regression checks
+
+Run `node scripts/check-overlay.mjs` for scroll-lock release order, duplicate cleanup and exact scroll restoration. With `BASE_URL` set to the intended local preview, run `node scripts/overlay-controls-smoke.mjs`; run again with `OVERLAY_ENGINE=webkit` for the installed WebKit engine. Missing browsers are errors, not silent skips.
+
+The matrix covers BG/EN at 320, 390, 430, 768 and 1440px, with short 420px viewports for form/filter controls. It checks the token-derived 44px interaction shell and 40px visible circle, SVG centering within 0.5 CSS pixels, native appearance, icon size, reachable Close/Save actions, nested dialog dismissal, focus return and discarded editor drafts. Existing route, discovery, enquiry, phase4, typography and localization suites remain separate. Desktop Chrome and Windows WebKit emulation do not replace physical iOS/Android keyboard and safe-area testing.

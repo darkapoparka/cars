@@ -1,3 +1,4 @@
+import { appPath, returningContext, returningPage } from './locale-smoke-fixture.mjs';
 import assert from 'node:assert/strict';
 import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
@@ -8,7 +9,7 @@ const suite = await smokeReport(output, base);
 const browser = await launchBrowser();
 try {
   for (const width of [390, 1440]) {
-    const page = await browser.newPage({ viewport: { width, height: 900 } });
+    const page = await returningPage(browser, { viewport: { width, height: 900 } });
     page.setDefaultTimeout(8000);
     await suite.check(`list and article return ${width}`, async () => {
       await page.goto(`${base}/listing-grid?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
@@ -18,7 +19,7 @@ try {
       await first.click({ position: { x: 5, y: 5 } });
       await page.waitForURL('**/listing-detail-v1/**');
       await page.locator(width < 768 ? '.dn-detail-mobile-back' : '.dn-detail-title-card a').click();
-      await page.waitForURL(url => url.pathname === '/listing-grid');
+      await page.waitForURL(url => appPath(url) === '/listing-grid');
       assert.equal(new URL(page.url()).searchParams.get('make'), 'BMW');
       assert.equal(new URL(page.url()).searchParams.get('sort'), 'price-asc');
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card__link').first().getAttribute('aria-label'), title);
@@ -27,11 +28,11 @@ try {
       await page.locator('.dn-blog-card__link').first().click();
       await page.waitForURL('**/blog-detail/**');
       await page.locator('.dn-blog-detail__back').click();
-      await page.waitForURL(url => url.pathname === '/blog');
+      await page.waitForURL(url => appPath(url) === '/blog');
       assert.equal(new URL(page.url()).searchParams.get('category'), 'Внос');
       assert(new URL(page.url()).hash.startsWith('#article-'));
       await page.goto(`${base}/listing-detail-v1/4?return=https://example.com`, { waitUntil: 'networkidle' });
-      assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/listing-grid');
+      assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/bg/listing-grid');
     });
     await suite.check(`vehicle context and finance ${width}`, async () => {
       for (let id = 1; id <= 8; id++) {
@@ -43,6 +44,7 @@ try {
         const amountBefore = await finance.locator('dd').first().innerText();
         await finance.locator('input').fill('10000');
         await finance.locator('select').selectOption('24');
+        await page.waitForFunction(({ node, before }) => node.textContent.trim() !== before, { node: await finance.locator('dd').first().elementHandle(), before: amountBefore });
         assert.notEqual(await finance.locator('dd').first().innerText(), amountBefore);
         await finance.locator('input').focus();
         await page.keyboard.press('Tab');
@@ -50,10 +52,10 @@ try {
         assert.notEqual(ring.style, 'none'); assert.notEqual(ring.width, '0px');
         assert.equal(await page.locator('.dn-detail-gallery__count').count(), 0);
         await finance.locator('a').click();
-        await page.waitForURL(url => url.pathname === '/contact');
+        await page.waitForURL(url => appPath(url) === '/contact');
         assert.equal(new URL(page.url()).searchParams.get('vehicle'), String(id));
         assert.equal(await page.locator('.dn-contact-vehicle strong').innerText(), title);
-        assert.equal(await page.locator('.dn-contact-vehicle').getAttribute('href'), `/listing-detail-v1/${id}`);
+        assert.equal(await page.locator('.dn-contact-vehicle').getAttribute('href'), `/bg/listing-detail-v1/${id}`);
       }
       await page.goto(`${base}/contact?topic=leasing&vehicle=999`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-contact-vehicle').count(), 0);
@@ -73,7 +75,7 @@ try {
     await page.close();
   }
   await suite.check('mobile menu isolation, focus and resize', async () => {
-    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    const page = await returningPage(browser, { viewport: { width: 390, height: 844 } });
     try {
       await page.goto(base, { waitUntil: 'networkidle' });
       await page.keyboard.press('Tab');
@@ -98,7 +100,7 @@ try {
   await suite.check('hero media only loads for its viewport', async () => {
     const evidence = [];
     for (const width of [390, 1024, 1440]) {
-      const page = await browser.newPage({ viewport: { width, height: 900 } });
+      const page = await returningPage(browser, { viewport: { width, height: 900 } });
       const media = [];
       page.on('request', request => { if (request.url().includes('/assets/')) media.push(request.url()); });
       try {

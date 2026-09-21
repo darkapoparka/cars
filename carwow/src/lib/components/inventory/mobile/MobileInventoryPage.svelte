@@ -1,9 +1,12 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import './mobileInventory.css';
 	import { page as appPage } from '$app/state';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 	import { afterNavigate, replaceState } from '$app/navigation';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import {
 		parseInventoryFilters,
 		readMobileSort,
@@ -35,7 +38,6 @@
 	} from './mobile-inventory-filter-data';
 	import {
 		countOptions,
-		formatVehicleCount,
 		normalize,
 		selectionSummary,
 		sortVehicles,
@@ -117,9 +119,18 @@
 	const mileageLabel = $derived(
 		mileageOptions.find((option) => option.value === mileage)?.label ?? ''
 	);
-	const brandSummary = $derived(selectionSummary(selectedBrands.map(brandShortName), 'марки'));
-	const modelSummary = $derived(selectionSummary(selectedModels, 'модела'));
-	const bodySummary = $derived(selectionSummary(selectedBodies, 'каросерии'));
+	const brandSummary = $derived(
+		selectionSummary(selectedBrands.map(brandShortName), i18n.t('inventory.selection.brands'))
+	);
+	const modelSummary = $derived(
+		selectionSummary(selectedModels, i18n.t('inventory.selection.models'))
+	);
+	const bodySummary = $derived(
+		selectionSummary(
+			selectedBodies.map((value) => i18n.spec(value)),
+			i18n.t('inventory.selection.bodies')
+		)
+	);
 	const fuelSummary = $derived(fuel);
 	const sortOverviewLabel = $derived(
 		sort === 'price-asc' ? '' : (sortOptions.find((option) => option.value === sort)?.label ?? '')
@@ -194,10 +205,10 @@
 	const filteredVehicles = $derived(
 		vehicles.filter((vehicle) => vehicleMatches(vehicle, criteria))
 	);
-	const resultCountLabel = $derived(formatVehicleCount(filteredVehicles.length));
+	const resultCountLabel = $derived(i18n.count(filteredVehicles.length));
 	const filterSheetActionLabel = $derived(
 		filterSheetMode === 'all' || filterSheetMode === 'search'
-			? `Покажи ${filteredVehicles.length}`
+			? i18n.t('pattern.32b486687c93', { v0: filteredVehicles.length })
 			: 'Към филтри'
 	);
 	const sortedVehicles = $derived(sortVehicles(filteredVehicles, sort));
@@ -224,9 +235,11 @@
 			new URL(window.location.href).searchParams
 		);
 		replaceState(
-			resolve(
-				`${mode === 'map' ? '/inventory/map' : '/inventory'}${params.size ? `?${params}` : ''}`
-			),
+			i18n.href(
+				resolve(
+					`${mode === 'map' ? '/inventory/map' : '/inventory'}${params.size ? `?${params}` : ''}`
+				)
+			) + appPage.url.hash,
 			appPage.state
 		);
 	}
@@ -544,7 +557,7 @@
 
 <div class="mobile-inventory">
 	<main id="main-content" tabindex="-1">
-		<h1 class="sr-only">Автомобили на склад — Ден и Нощ Ауто Груп</h1>
+		<h1 class="sr-only">{i18n.t('copy.c89eae536028')}</h1>
 		<MobileInventoryTop
 			{mode}
 			{query}
@@ -575,7 +588,8 @@
 			/>
 			<div class="mobile-inventory-summary">
 				<p role="status">{resultCountLabel}</p>
-				{#if hasActiveFilters}<button type="button" onclick={clearFilters}>Изчисти филтрите</button
+				{#if hasActiveFilters}<button type="button" onclick={clearFilters}
+						>{i18n.t('copy.2992c6ed4fad')}</button
 					>{/if}
 			</div>
 			<MobileInventoryResults vehicles={sortedVehicles} onClearFilters={clearFilters} />

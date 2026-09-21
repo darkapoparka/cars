@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
 const monorepoRoot = resolve(import.meta.dirname, "..", "..");
 
 export const config: NextConfig = {
-  outputFileTracingRoot: resolve(monorepoRoot, ".."),
+  outputFileTracingRoot: monorepoRoot,
   transpilePackages: ["@repo/observability"],
   turbopack: {
     root: monorepoRoot,

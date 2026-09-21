@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { resolve } from '$lib/utils/preview-paths';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import { resolve } from '$app/paths';
 	import { buildVehicleContactHref } from '$lib/utils/contact-intent';
 	import { fromAction } from 'svelte/attachments';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
@@ -26,7 +29,7 @@
 		(vehicle.gallery.length ? vehicle.gallery : [vehicle.image]).map((src, index) => ({
 			id: `thumb-${index}-${src}`,
 			src,
-			alt: `${vehicle.shortTitle} снимка ${index + 1}`
+			alt: i18n.t('pattern.23db4593e0c8', { v0: vehicle.shortTitle, v1: index + 1 })
 		}))
 	);
 
@@ -60,33 +63,33 @@
 	<div class="listing-details-item--content">
 		<a
 			class="listing-details-item--button"
-			href={resolve(buildVehicleContactHref(vehicle, 'video'))}
-			title="Заяви видео преглед"
+			href={i18n.href(resolve(buildVehicleContactHref(vehicle, 'video')))}
+			title={i18n.t('copy.b049176e32b8')}
 		>
 			<img
-				src={resolve('/variant-3/assets/icons/playcircle.svg')}
+				src={i18n.asset(resolve('/assets/icons/playcircle.svg'))}
 				alt=""
 				aria-hidden="true"
 				data-daynight-img="1"
 				decoding="async"
 				loading="eager"
 			/>
-			Заяви видео преглед
+			{i18n.t('copy.b049176e32b8')}
 		</a>
 		<a
 			class="listing-details-item--button"
-			href={resolve(buildVehicleContactHref(vehicle, 'photos'))}
-			title="Заяви още снимки"
+			href={i18n.href(resolve(buildVehicleContactHref(vehicle, 'photos')))}
+			title={i18n.t('copy.3740e205bf31')}
 		>
 			<img
-				src={resolve('/variant-3/assets/icons/view-all-photo.svg')}
+				src={i18n.asset(resolve('/assets/icons/view-all-photo.svg'))}
 				alt=""
 				aria-hidden="true"
 				data-daynight-img="1"
 				decoding="async"
 				loading="eager"
 			/>
-			Заяви още снимки
+			{i18n.t('copy.3740e205bf31')}
 		</a>
 	</div>
 {/snippet}
@@ -119,7 +122,7 @@
 				<div class="listing-details-item main-item relative">
 					<img
 						class="img-main"
-						src={imageSrc(slide.src)}
+						src={i18n.asset(imageSrc(slide.src))}
 						alt={slide.alt}
 						data-daynight-img="1"
 						data-daynight-image-fallback
@@ -136,7 +139,7 @@
 	<button
 		type="button"
 		class="swiper-button navigation-prev swiper-listing-details-main-prev"
-		aria-label="Предишна снимка"
+		aria-label={i18n.t('copy.ced707e1d6b4')}
 		disabled={!hasMultipleSlides}
 		onclick={showPreviousSlide}
 	>
@@ -145,7 +148,7 @@
 	<button
 		type="button"
 		class="swiper-button navigation-next swiper-listing-details-main-next"
-		aria-label="Следваща снимка"
+		aria-label={i18n.t('copy.a311f294dbfd')}
 		disabled={!hasMultipleSlides}
 		onclick={showNextSlide}
 	>
@@ -160,12 +163,12 @@
 				<button
 					type="button"
 					class={['listing-details-thumb', index === activeSlideIndex && 'is-active']}
-					aria-label={`Покажи снимка ${index + 1}`}
+					aria-label={i18n.t('pattern.5f6ee03d7d59', { v0: index + 1 })}
 					aria-current={index === activeSlideIndex ? 'true' : undefined}
 					onclick={() => setActiveSlide(index)}
 				>
 					<img
-						src={imageSrc(thumb.src)}
+						src={i18n.asset(imageSrc(thumb.src))}
 						alt={thumb.alt}
 						data-daynight-img="1"
 						data-daynight-image-fallback

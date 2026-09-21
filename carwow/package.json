@@ -8,8 +8,8 @@
 	},
 	"scripts": {
 		"dev": "node scripts/dev-local.mjs",
-		"build": "vite build",
-		"build:deploy": "npm run check:backend-env && vite build",
+		"build": "node scripts/build-locales.mjs --check && vite build",
+		"build:deploy": "npm run check:localization && npm run check:backend-env && vite build",
 		"build:preview-node": "node scripts/build-node-preview.mjs",
 		"preview": "vite preview",
 		"preview:node": "node scripts/preview-node.mjs",
@@ -48,7 +48,9 @@
 		"check:architecture": "node scripts/check-architecture.mjs && npm run check:typography",
 		"check:typography": "node scripts/check-typography.mjs",
 		"test:tooling": "node --test scripts/lib/*.test.mjs",
-		"audit:mobile": "node scripts/audit-mobile.mjs"
+		"audit:mobile": "node scripts/audit-mobile.mjs",
+		"check:localization": "node scripts/build-locales.mjs --check && node scripts/check-localization.mjs",
+		"test:localization": "node --experimental-strip-types --test scripts/locale-policy.test.mjs scripts/locale-catalog.test.mjs"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.4",

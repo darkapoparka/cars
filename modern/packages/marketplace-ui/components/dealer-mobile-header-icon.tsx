@@ -5,18 +5,18 @@ import {
   type LucideIcon,
   Truck,
 } from "lucide-react";
-import Image from "next/image";
+import Image from "./public-image";
 
 const artworkPaths = {
-  car: "/variant-2/images/services/header-car-v1.png",
-  bike: "/variant-2/images/services/header-motorbike-silver-v1.png",
-  truck: "/variant-2/images/services/header-truck-silver-v1.png",
-  van: "/variant-2/images/services/header-van-silver-v1.png",
-  guides: "/variant-2/images/services/header-guides-v1.png",
-  filters: "/variant-2/images/services/header-filters-v1.png",
-  info: "/variant-2/images/services/header-info-v1.png",
-  location: "/variant-2/images/services/header-location-v1.png",
-  phone: "/variant-2/images/services/header-phone-v4.png",
+  car: "/images/services/header-car-v1.png",
+  bike: "/images/services/header-motorbike-silver-v1.png",
+  truck: "/images/services/header-truck-silver-v1.png",
+  van: "/images/services/header-van-silver-v1.png",
+  guides: "/images/services/header-guides-v1.png",
+  filters: "/images/services/header-filters-v1.png",
+  info: "/images/services/header-info-v1.png",
+  location: "/images/services/header-location-v1.png",
+  phone: "/images/services/header-phone-v4.png",
 };
 
 // Balance the visible silhouettes, including each image's transparent margins.

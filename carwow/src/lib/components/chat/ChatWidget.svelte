@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { onMount, tick } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { X } from '@lucide/svelte';
@@ -68,7 +71,7 @@
 		errorMessage = '';
 
 		try {
-			const response = await fetch('/variant-3/api/chat/conversations', {
+			const response = await fetch('/api/chat/conversations', {
 				headers: { accept: 'application/json' }
 			});
 			const body = await readResponse(response);
@@ -99,7 +102,7 @@
 		errorMessage = '';
 
 		try {
-			const response = await fetch('/variant-3/api/chat/conversations', {
+			const response = await fetch('/api/chat/conversations', {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
@@ -128,7 +131,7 @@
 		errorMessage = '';
 
 		try {
-			const response = await fetch(`/variant-3/api/chat/conversations/${conversation.id}/messages`, {
+			const response = await fetch(`/api/chat/conversations/${conversation.id}/messages`, {
 				method: 'POST',
 				headers: {
 					accept: 'application/json',
@@ -163,7 +166,7 @@
 		const suffix = lastMessage ? `?after=${encodeURIComponent(lastMessage.createdAt)}` : '';
 
 		try {
-			const response = await fetch(`/variant-3/api/chat/conversations/${conversation.id}/messages${suffix}`, {
+			const response = await fetch(`/api/chat/conversations/${conversation.id}/messages${suffix}`, {
 				headers: { accept: 'application/json' }
 			});
 			const body = await response.json().catch(() => null);
@@ -193,8 +196,11 @@
 		onclose={() => (open = false)}
 	>
 		{#if open}
-			<button type="button" class="chat-close" aria-label="Затвори чата" onclick={closeChat}
-				><X size={20} /></button
+			<button
+				type="button"
+				class="chat-close"
+				aria-label={i18n.t('copy.34ad9a7e17d8')}
+				onclick={closeChat}><X size={20} /></button
 			>
 			<ChatThread
 				{conversation}

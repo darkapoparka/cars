@@ -26,7 +26,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
   {
     slug: "premium-used-car-checklist",
     categoryId: "buying",
-    image: "/variant-2/images/directory/sofia-premium-cars-profile.webp",
+    image: "/images/directory/sofia-premium-cars-profile.webp",
     published: "2026-09-08",
     category: { bg: "Покупка", en: "Buying" },
     readTime: { bg: "5 мин четене", en: "5 min read" },
@@ -71,7 +71,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
   {
     slug: "import-costs-and-timing",
     categoryId: "import",
-    image: "/variant-2/images/import/day-night-mobile-terminal-v2.webp",
+    image: "/images/import/day-night-mobile-terminal-v2.webp",
     published: "2026-09-04",
     category: { bg: "Внос", en: "Import" },
     readTime: { bg: "4 мин четене", en: "4 min read" },
@@ -119,7 +119,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
   {
     slug: "financing-offer-questions",
     categoryId: "finance",
-    image: "/variant-2/images/lease/day-night-mobile-studio-v2.webp",
+    image: "/images/lease/day-night-mobile-studio-v2.webp",
     published: "2026-08-29",
     category: { bg: "Финансиране", en: "Finance" },
     readTime: { bg: "4 мин четене", en: "4 min read" },

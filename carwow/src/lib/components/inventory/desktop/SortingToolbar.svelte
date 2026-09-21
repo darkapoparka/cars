@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import SortDropdown from './SortDropdown.svelte';
 	import { getDesktopInventoryContext } from './desktop-inventory-context.svelte';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
@@ -32,29 +35,30 @@
 	<div class="daynight-inventory-results-toolbar">
 		<div class="daynight-inventory-results-count-cell">
 			<p class="daynight-inventory-result-count">
-				<span id="filterMatchesCount">{count}</span> автомобила
+				<span id="filterMatchesCount">{count}</span>
+				{i18n.t('copy.afc67636f9b8')}
 			</p>
 		</div>
 		<div class="inventory-toolbar-actions">
 			<div class="daynight-inventory-sort-control">
 				<SortDropdown />
 			</div>
-			<div class="inventory-view-buttons" aria-label="Изглед на автомобилите">
+			<div class="inventory-view-buttons" aria-label={i18n.t('copy.d9a447dbf135')}>
 				<button
 					type="button"
-					aria-label="Решетка"
+					aria-label={i18n.t('copy.bd643b94f7b8')}
 					aria-pressed={!listView}
 					onclick={() => onViewChange(false)}><LayoutGrid size={18} /></button
 				>
 				<button
 					type="button"
-					aria-label="Списък"
+					aria-label={i18n.t('copy.09e0f0b857b9')}
 					aria-pressed={listView}
 					onclick={() => onViewChange(true)}><List size={19} /></button
 				>
 				<button
 					type="button"
-					aria-label="Филтри в лява колона"
+					aria-label={i18n.t('copy.5b28513cafb7')}
 					aria-pressed={layoutMode === 'sidebar'}
 					onclick={onSidebarChange}><PanelLeft size={18} /></button
 				>
@@ -74,8 +78,10 @@
 	data-daynight-has-tags={hasTags ? 'true' : undefined}
 	aria-live="polite"
 	aria-label={hasTags
-		? `Активни филтри: ${filters.appliedTags.map((tag) => tag.label).join(', ')}`
-		: 'Активни филтри'}
+		? i18n.t('pattern.f073ac9807ac', {
+				v0: filters.appliedTags.map((tag) => i18n.spec(tag.label)).join(', ')
+			})
+		: i18n.t('copy.bf7b7d17770e')}
 	hidden={!hasTags}
 	style:display={hasTags ? '' : 'none'}
 >
@@ -86,12 +92,17 @@
 				type="button"
 				data-daynight-clear-field={tag.field}
 				data-daynight-clear-value={tag.value}
-				aria-label={`Премахни филтър ${tag.label}`}
-				title={tag.label}
+				aria-label={i18n.t('pattern.d5de9d8f05c6', { v0: i18n.spec(tag.label) })}
+				title={i18n.spec(tag.label)}
 				onclick={() => filters.removeTag(tag.field, tag.value)}
 			>
-				<span class="select-item__label">{tag.label}</span>
-				<img src="/variant-3/assets/icons/X.svg" alt="" aria-hidden="true" class="filter-icon" />
+				<span class="select-item__label">{i18n.spec(tag.label)}</span>
+				<img
+					src={i18n.asset('/assets/icons/X.svg')}
+					alt=""
+					aria-hidden="true"
+					class="filter-icon"
+				/>
 			</button>
 		{/each}
 	</div>
@@ -102,8 +113,8 @@
 		style:display={hasTags ? '' : 'none'}
 		onclick={clearAll}
 	>
-		Изчисти
-		<img src="/variant-3/assets/icons/X-White.svg" alt="" aria-hidden="true" />
+		{i18n.t('copy.fc38aced5a1d')}
+		<img src={i18n.asset('/assets/icons/X-White.svg')} alt="" aria-hidden="true" />
 	</button>
 </div>
 

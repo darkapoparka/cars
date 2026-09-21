@@ -1,5 +1,6 @@
-import { localPath } from '$lib/utils/preview-paths';
 import crypto from 'node:crypto';
+import { sequence } from '@sveltejs/kit/hooks';
+import { localeHandle } from '$lib/locale/server';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
 import { svelteKitHandler } from 'better-auth/svelte-kit';
@@ -69,7 +70,7 @@ function varyByDevice(response: Response) {
 	return response;
 }
 
-export const handle: Handle = async ({ event, resolve }) => {
+const applicationHandle: Handle = async ({ event, resolve }) => {
 	const hasDb = hasDatabaseUrl();
 	if (!hasDb) warnMissingProductionDatabaseUrl();
 
@@ -80,7 +81,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	event.locals.session = session;
 	event.locals.user = user;
 
-	const bodyClasses = getRouteBodyClasses(localPath(event.url.pathname));
+	const bodyClasses = getRouteBodyClasses(event.url.pathname);
 	const resolveOptions = bodyClasses.length
 		? {
 				transformPageChunk: ({ html }: { html: string }) => injectBodyClasses(html, bodyClasses)
@@ -120,3 +121,5 @@ export const handleError: HandleServerError = ({ error, event, status, message }
 		errorId
 	};
 };
+
+export const handle = sequence(localeHandle, applicationHandle);

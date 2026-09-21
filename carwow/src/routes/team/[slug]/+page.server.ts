@@ -1,3 +1,4 @@
+import { localeHref, routeParts } from '$lib/locale/core';
 import { error, redirect } from '@sveltejs/kit';
 import { getDayNightTeamMemberBySlug, daynightTeam } from '$lib/data/daynight-team';
 import type { EntryGenerator, PageServerLoad } from './$types';
@@ -14,10 +15,17 @@ export const entries: EntryGenerator = () => [
 	...Object.keys(legacyTeamSlugRedirects).map((slug) => ({ slug }))
 ];
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, locals, url }) => {
 	const redirectTarget = legacyTeamSlugRedirects[params.slug];
 	if (redirectTarget) {
-		redirect(308, `/variant-3/team/${redirectTarget}`);
+		redirect(
+			308,
+			localeHref(
+				`/team/${redirectTarget}`,
+				locals.localeState.locale,
+				routeParts(url.pathname).base
+			)
+		);
 	}
 
 	const member = getDayNightTeamMemberBySlug(params.slug);

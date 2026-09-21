@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { blogPostTitle, blogPostSummary } from '$data/editorial';
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
   import { brand } from '$config/brand';
@@ -8,7 +12,7 @@
 </script>
 
 <article id={`article-${post.id}`} class="dn-blog-card">
-  <a class="dn-blog-card__link" href={withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo)} aria-label={post.title}>
+  <a class="dn-blog-card__link" href={i18n.href(withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo))} aria-label={blogPostTitle(post, i18n.locale)}>
     <span class="dn-blog-card__media">
       <img
         src={post.image}
@@ -23,10 +27,10 @@
     <span class="dn-blog-card__body">
       <span class="dn-blog-card__meta">
         <span class="dn-blog-card__brand">{brand.name}</span>
-        <span class="dn-blog-card__category">{post.category}</span>
+        <span class="dn-blog-card__category">{i18n.text(post.category)}</span>
       </span>
-      <h2>{post.title}</h2>
-      <span class="dn-blog-card__text">{post.text}</span>
+      <h2>{blogPostTitle(post, i18n.locale)}</h2>
+      <span class="dn-blog-card__text">{blogPostSummary(post, i18n.locale)}</span>
     </span>
   </a>
 </article>

@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import { brand } from '$config/brand';
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
 </script>
@@ -8,10 +12,10 @@
   <div class="container dn-hero__inner dn-route-hero__layout">
     <div class="dn-hero__copy dn-route-hero__copy">
       <h1 id="home-hero-title">
-        <span class="dn-hero__title-desktop">Изберете своя автомобил</span>
-        <span class="dn-hero__title-mobile">Намери автомобил</span>
+        <span class="dn-hero__title-desktop">{i18n.t("m_bb7c0e3ca487")}</span>
+        <span class="dn-hero__title-mobile">{i18n.t("m_f92c64344e85")}</span>
       </h1>
-      <p class="dn-hero__location">{brand.addressLine} · Оглед по уговорка</p>
+      <p class="dn-hero__location">{i18n.t("m_46b43b69d985", { p0: i18n.dealer('addressLine') })}</p>
     </div>
   </div>
 </section>

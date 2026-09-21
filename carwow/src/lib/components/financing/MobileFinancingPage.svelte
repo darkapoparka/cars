@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { BadgeCheck, CarFront, ClipboardCheck, Clock, PhoneCall, Send } from '@lucide/svelte';
-	import { resolve } from '$lib/utils/preview-paths';
+	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileHeroBar from '$lib/components/shared/MobileHeroBar.svelte';
 
@@ -9,20 +12,20 @@
 	const benefits = [
 		{
 			id: 'documents',
-			title: 'Съдействие по документи',
-			copy: 'Екипът подготвя документите и съпровожда прехвърлянето от началото до края.',
+			title: i18n.t('copy.29621c9732c5'),
+			copy: i18n.t('copy.d877e56c2971'),
 			icon: ClipboardCheck
 		},
 		{
 			id: 'terms',
-			title: 'Ясни условия предварително',
-			copy: 'Ориентировъчна месечна вноска и условия още преди да дойдете за оглед.',
+			title: i18n.t('copy.f469b9b95adf'),
+			copy: i18n.t('copy.507e8a82b2d3'),
 			icon: BadgeCheck
 		},
 		{
 			id: 'fast',
-			title: 'Отнема няколко минути',
-			copy: 'Изпращате запитване с автомобил и бюджет - екипът ще Ви изпрати конкретни стъпки.',
+			title: i18n.t('copy.0ad21a92df5d'),
+			copy: i18n.t('copy.46037c6690f4'),
 			icon: Clock
 		}
 	] as const;
@@ -30,26 +33,24 @@
 	const steps = [
 		'Изпращаш запитване с автомобил и месечен бюджет.',
 		'Получаваш ориентировъчна вноска и условия.',
-		`Оглед в ${daynightSite.city} и финализиране с екипа.`
+		i18n.t('pattern.f5d5a8cdecf8', { v0: i18n.dealer('city') })
 	] as const;
 
 	const faqs = [
 		{
 			id: 'documents',
-			question: 'Какви документи са нужни?',
-			answer:
-				'Обикновено са достатъчни лична карта и основни данни за дохода; за фирми — фирмени документи. Екипът подготвя останалото.'
+			question: i18n.t('copy.98063165245b'),
+			answer: i18n.t('copy.13fe60b23995')
 		},
 		{
 			id: 'trade-in',
-			question: 'Може ли с бартер?',
-			answer: 'Да — оценяваме текущия ви автомобил и стойността му намалява финансираната сума.'
+			question: i18n.t('copy.bbfd3c2b88fa'),
+			answer: i18n.t('copy.f6a3581874eb')
 		},
 		{
 			id: 'speed',
-			question: 'Колко време отнема одобрението?',
-			answer:
-				'Обикновено получавате обратна връзка в рамките на работния ден. Условията се потвърждават при огледа.'
+			question: i18n.t('copy.4474fb966c84'),
+			answer: i18n.t('copy.f77466769c0b')
 		}
 	] as const;
 </script>
@@ -58,34 +59,35 @@
 	<header class="mobile-financing-hero">
 		<img
 			class="mobile-financing-hero__bg"
-			src={resolve('/variant-3/assets/images/pages/daynight-services-consultation-v1.webp')}
+			src={i18n.asset(resolve('/assets/images/pages/daynight-services-consultation-v1.webp'))}
 			alt=""
 			aria-hidden="true"
 		/>
 		<MobileHeroBar showLocation={false} />
 
 		<div class="mobile-financing-hero__copy">
-			<span>Финансиране</span>
-			<h1>Финансиране и разсрочено плащане</h1>
+			<span>{i18n.t('copy.6e55eeb12cce')}</span>
+			<h1>{i18n.t('copy.1159c710a449')}</h1>
 			<p>
-				Ясни условия, ориентировъчна месечна вноска и съдействие от екипа в {daynightSite.city}.
+				{i18n.t('copy.a322d01e60db')}
+				{i18n.dealer('city')}.
 			</p>
 		</div>
 
 		<div class="mobile-financing-actions">
 			<a
 				class="mobile-financing-action mobile-financing-action--primary"
-				href={resolve('/contact')}
+				href={i18n.href(resolve('/contact'))}
 			>
 				<Send size={18} strokeWidth={2.5} />
-				<span>Изпрати запитване</span>
+				<span>{i18n.t('copy.8d4343e23a1b')}</span>
 			</a>
 			<a
 				class="mobile-financing-action mobile-financing-action--secondary"
-				href={resolve('/inventory')}
+				href={i18n.href(resolve('/inventory'))}
 			>
 				<CarFront size={19} strokeWidth={2.5} />
-				<span>Виж автомобили</span>
+				<span>{i18n.t('copy.2042bdf14638')}</span>
 			</a>
 		</div>
 	</header>
@@ -93,8 +95,8 @@
 	<main id="main-content" tabindex="-1">
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-benefits-title">
 			<div class="mobile-financing-heading">
-				<span>Предимства</span>
-				<h2 id="mobile-financing-benefits-title">Защо с нас</h2>
+				<span>{i18n.t('copy.ac2c6671d0e7')}</span>
+				<h2 id="mobile-financing-benefits-title">{i18n.t('copy.26520e5569c9')}</h2>
 			</div>
 
 			<div class="mobile-financing-cards">
@@ -103,8 +105,8 @@
 					<article class="mobile-financing-card">
 						<div><Icon size={22} strokeWidth={2.45} /></div>
 						<span>
-							<strong>{benefit.title}</strong>
-							<small>{benefit.copy}</small>
+							<strong>{i18n.text(benefit.title)}</strong>
+							<small>{i18n.text(benefit.copy)}</small>
 						</span>
 					</article>
 				{/each}
@@ -113,15 +115,15 @@
 
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-process-title">
 			<div class="mobile-financing-heading">
-				<span>Процес</span>
-				<h2 id="mobile-financing-process-title">Как работи</h2>
+				<span>{i18n.t('copy.b35d7b341a43')}</span>
+				<h2 id="mobile-financing-process-title">{i18n.t('copy.4dbb828642ef')}</h2>
 			</div>
 
 			<ol class="mobile-financing-steps">
 				{#each steps as step, index (step)}
 					<li>
 						<strong>{index + 1}</strong>
-						<span>{step}</span>
+						<span>{i18n.text(step)}</span>
 						<BadgeCheck size={18} strokeWidth={2.45} />
 					</li>
 				{/each}
@@ -130,15 +132,15 @@
 
 		<section class="mobile-financing-section" aria-labelledby="mobile-financing-faq-title">
 			<div class="mobile-financing-heading">
-				<span>Въпроси</span>
-				<h2 id="mobile-financing-faq-title">Често задавани</h2>
+				<span>{i18n.t('copy.4becb28f5901')}</span>
+				<h2 id="mobile-financing-faq-title">{i18n.t('copy.15e54f77a807')}</h2>
 			</div>
 
 			<div class="mobile-financing-faq">
 				{#each faqs as faq (faq.id)}
 					<article>
-						<strong>{faq.question}</strong>
-						<small>{faq.answer}</small>
+						<strong>{i18n.text(faq.question)}</strong>
+						<small>{i18n.text(faq.answer)}</small>
 					</article>
 				{/each}
 			</div>
@@ -146,10 +148,10 @@
 
 		<section class="mobile-financing-cta" aria-labelledby="mobile-financing-cta-title">
 			<div>
-				<span>Следваща стъпка</span>
-				<h2 id="mobile-financing-cta-title">Кажи автомобил и бюджет</h2>
-				<p>Екипът ще Ви изпрати конкретни следващи стъпки в рамките на работния ден.</p>
-				<a href={phoneHref}>
+				<span>{i18n.t('copy.5cb92f9a0abd')}</span>
+				<h2 id="mobile-financing-cta-title">{i18n.t('copy.2bd6509f8599')}</h2>
+				<p>{i18n.t('copy.74a3091119f8')}</p>
+				<a href={i18n.href(phoneHref)}>
 					<PhoneCall size={18} strokeWidth={2.45} />
 					<span>{daynightSite.phoneLabel}</span>
 				</a>

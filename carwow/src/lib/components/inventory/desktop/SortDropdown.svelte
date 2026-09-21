@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { getDesktopInventoryContext } from './desktop-inventory-context.svelte';
 	import { desktopSortOptions, type DesktopSortKey } from './desktop-inventory-sort';
 
@@ -66,8 +69,12 @@
 		title={buttonLabel ? `${buttonLabel}: ${selectedLabel}` : undefined}
 		onclick={toggleDropdown}
 	>
-		<span class="core-dropdown__selected">{triggerLabel}</span>
-		<img src="/variant-3/assets/icons/chevron-down-primary.svg" alt="chevron" class="core-dropdown__icon" />
+		<span class="core-dropdown__selected">{i18n.spec(triggerLabel)}</span>
+		<img
+			src={i18n.asset('/assets/icons/chevron-down-primary.svg')}
+			alt={i18n.t('copy.b55ac8822fb0')}
+			class="core-dropdown__icon"
+		/>
 	</button>
 	<div class="core-dropdown__menu" id="coreDropdownMenu">
 		<ul class="core-dropdown__list">
@@ -81,7 +88,7 @@
 						data-value={option.value}
 						onclick={() => selectOption(option.value)}
 					>
-						{option.label}
+						{i18n.spec(option.label)}
 					</button>
 				</li>
 			{/each}

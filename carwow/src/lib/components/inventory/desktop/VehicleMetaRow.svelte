@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 
 	let { vehicle, styleClass }: { vehicle: InventoryListVehicle; styleClass: string } = $props();
@@ -6,15 +9,19 @@
 
 <ul class="tag {styleClass}">
 	<li>
-		<img src="/variant-3/assets/icons/icon-gauge.svg" alt="" aria-hidden="true" /><span
-			>{vehicle.mileage}</span
+		<img src={i18n.asset('/assets/icons/icon-gauge.svg')} alt="" aria-hidden="true" /><span
+			>{i18n.distance(vehicle.mileage)}</span
 		>
 	</li>
 	<li>
-		<img src="/variant-3/assets/icons/calendar.svg" alt="" aria-hidden="true" /><span>{vehicle.year}</span>
+		<img src={i18n.asset('/assets/icons/calendar.svg')} alt="" aria-hidden="true" /><span
+			>{vehicle.year}</span
+		>
 	</li>
 	<li>
-		<img src="/variant-3/assets/icons/gaspump.svg" alt="" aria-hidden="true" /><span>{vehicle.fuel}</span>
+		<img src={i18n.asset('/assets/icons/gaspump.svg')} alt="" aria-hidden="true" /><span
+			>{i18n.spec(vehicle.fuel)}</span
+		>
 	</li>
 </ul>
 

@@ -16,7 +16,6 @@ import {
   Info,
   LockKeyhole,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { type ReactNode, useState } from "react";
 import { localizeMarketplace } from "../lib/marketplace-filter-config";
@@ -27,6 +26,7 @@ import {
 } from "./desktop-discovery-search";
 import { getDesktopQuickFilterClassName } from "./desktop-quick-filters";
 import type { MarketplaceMode } from "./marketplace-masthead";
+import Image from "./public-image";
 
 type ApplyFilters = (filters: Partial<MarketplaceSearchParams>) => void;
 
@@ -42,7 +42,7 @@ export const LeadSiteSearchCutouts = () => (
       height={216}
       priority
       sizes="(min-width: 1792px) 352px, 0px"
-      src="/variant-2/lead-car-left-v4.webp"
+      src="/lead-car-left-v4.webp"
       width={704}
     />
     <Image
@@ -51,7 +51,7 @@ export const LeadSiteSearchCutouts = () => (
       height={216}
       priority
       sizes="(min-width: 1792px) 352px, 0px"
-      src="/variant-2/lead-car-right-v5.webp"
+      src="/lead-car-right-v5.webp"
       width={704}
     />
   </div>
@@ -146,20 +146,20 @@ export const LeadImportFlag = ({
 
 const leadSellCategories = [
   {
-    asset: "/variant-2/lead-sell-car-v1.png",
+    asset: "/lead-sell-car-v1.png",
     id: "car",
     labelBg: "Автомобил",
     labelEn: "Car",
   },
-  { asset: "/variant-2/lead-sell-van-v1.png", id: "van", labelBg: "Бус", labelEn: "Van" },
+  { asset: "/lead-sell-van-v1.png", id: "van", labelBg: "Бус", labelEn: "Van" },
   {
-    asset: "/variant-2/lead-sell-motorcycle-v1.png",
+    asset: "/lead-sell-motorcycle-v1.png",
     id: "motorbike",
     labelBg: "Мотоциклет",
     labelEn: "Motorbike",
   },
   {
-    asset: "/variant-2/lead-sell-truck-v1.png",
+    asset: "/lead-sell-truck-v1.png",
     id: "truck",
     labelBg: "Камион",
     labelEn: "Truck",
@@ -217,7 +217,7 @@ const DesktopSellSurface = ({
     </label>
     <div className="m-1.5 grid place-items-center">
       <Button
-        className="h-12 rounded-xl bg-[var(--lead-site-accent)] px-6 text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+        className="h-12 rounded-xl bg-brand px-6 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
         type="submit"
       >
         {localizeMarketplace(isBg, "Продължи", "Continue")}
@@ -391,7 +391,7 @@ const DesktopImportSurface = ({
       </Popover>
       <div className="m-1.5 grid place-items-center">
         <Button
-          className="h-12 cursor-pointer rounded-xl bg-[var(--lead-site-accent)] px-5 font-semibold text-base text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+          className="h-12 cursor-pointer rounded-xl bg-brand px-5 font-semibold text-base text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
           type="submit"
         >
           <ArrowRight aria-hidden="true" className="size-4" />
