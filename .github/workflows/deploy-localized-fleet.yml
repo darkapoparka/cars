@@ -1,0 +1,263 @@
+name: Deploy corrected localized dealer fleet
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deploy-localized-fleet.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-corrected-localized-dealer-fleet
+  cancel-in-progress: false
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      dealers: ${{ steps.dealers.outputs.dealers }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /docs/DEPLOYMENT-INVENTORY.json
+      - id: dealers
+        name: Resolve production dealer fleet
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('node:fs');
+          const inventory = JSON.parse(fs.readFileSync('docs/DEPLOYMENT-INVENTORY.json', 'utf8'));
+          const requested = new Set([
+            'al-basma-motors','al-hamoor-al-thahabi','asko-96','astracar','autolife',
+            'automarket-varna','avangard-auto','champion-auto-pro','day-and-night-auto-group',
+            'eliqauto','elit-auto-import','excellent-cars','f1rst-motors','isauto-varna',
+            'ivo-auto','kg-team-auto','legend-auto','navara-car','outletcars-varna',
+            'perfect-auto-varna','priselci','promosale-varna','texas-drive-auto','the-dealers-point'
+          ]);
+          const rows = inventory.dealers
+            .filter((dealer) => requested.has(dealer.slug))
+            .map((dealer) => ({
+              slug: dealer.slug,
+              repository: dealer.repository || dealer.delivery?.gitRepository,
+              projectId: dealer.delivery?.projectId,
+              publicAlias: dealer.delivery?.url
+            }));
+          const missing = [...requested].filter((slug) => !rows.some((row) => row.slug === slug));
+          const invalid = rows.filter((row) =>
+            !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(row.repository || '') ||
+            !/^prj_[A-Za-z0-9]+$/.test(row.projectId || '') ||
+            !/^https:\/\//.test(row.publicAlias || '')
+          );
+          if (missing.length || invalid.length || rows.length !== requested.size) {
+            throw new Error(`Unresolved production fleet. Missing=${missing.join(',')} invalid=${invalid.map((row) => row.slug).join(',')} rows=${rows.length}`);
+          }
+          const value = JSON.stringify({ include: rows });
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `dealers=${value}\n`);
+          console.log(value);
+          NODE
+
+  deploy:
+    needs: matrix
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.matrix.outputs.dealers) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      VERCEL_ORG_ID: team_RTNXBnClGWDdcYFFUW0BnqvJ
+      VERCEL_PROJECT_ID: ${{ matrix.projectId }}
+      PUBLIC_ALIAS: ${{ matrix.publicAlias }}
+    steps:
+      - name: Check out canonical Cars release source
+        uses: actions/checkout@v4
+        with:
+          path: cars
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.gitignore
+            /package.json
+            /templates.lock.json
+            /scripts/
+            /templates/
+            /docs/
+            /clients/isauto-varna/
+
+      - name: Check out registered dealer source
+        if: matrix.slug != 'isauto-varna'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.repository }}
+          ref: main
+          path: client
+          fetch-depth: 1
+
+      - name: Stage registered IS AUTO source
+        if: matrix.slug == 'isauto-varna'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$GITHUB_WORKSPACE/client"
+          cp -a "$GITHUB_WORKSPACE/cars/clients/isauto-varna/." "$GITHUB_WORKSPACE/client/"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+
+      - name: Generate sealed native EN/BG package
+        shell: bash
+        env:
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/localized-client" "$RUNNER_TEMP/evidence"
+          mkdir -p "$RUNNER_TEMP/evidence"
+          node "$GITHUB_WORKSPACE/cars/scripts/rollout-localized-client.mjs" \
+            --client-root "$GITHUB_WORKSPACE/client" \
+            --slug "${{ matrix.slug }}" \
+            --repository "${{ matrix.repository }}" \
+            --output "$RUNNER_TEMP/localized-client" \
+            | tee "$RUNNER_TEMP/evidence/rollout.json"
+
+      - name: Validate package identity, release pins and Carwow catalog safety
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="$RUNNER_TEMP/localized-client" \
+          EXPECTED_SLUG="${{ matrix.slug }}" \
+          EXPECTED_REPOSITORY="${{ matrix.repository }}" \
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const root = process.env.ROOT;
+          const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dealer.json'), 'utf8'));
+          const contract = JSON.parse(fs.readFileSync(path.join(root, 'localization/contract.json'), 'utf8'));
+          const adoption = JSON.parse(fs.readFileSync(path.join(root, 'localization/adoption.json'), 'utf8'));
+          const lock = JSON.parse(fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'cars/templates.lock.json'), 'utf8'));
+          if (manifest.slug !== process.env.EXPECTED_SLUG) throw new Error(`Dealer slug changed: ${manifest.slug}`);
+          if (manifest.repository !== process.env.EXPECTED_REPOSITORY) throw new Error(`Dealer repository changed: ${manifest.repository}`);
+          if (manifest.packaging?.version !== '2') throw new Error('Expected packaging version 2');
+          if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Expected complete EN/BG locale contract');
+          if (adoption.packagingVersion !== '2' || adoption.dealerId !== contract.dealerId) throw new Error('Invalid localization adoption receipt');
+          for (const variant of manifest.variants) {
+            const expected = lock.templates?.[variant.key]?.commit;
+            if (!expected) throw new Error(`Missing release pin for ${variant.key}`);
+            if (manifest.templateRevisions?.[variant.key] !== expected) throw new Error(`Manifest release mismatch for ${variant.key}`);
+            if (adoption.releases?.[variant.key]?.commit !== expected) throw new Error(`Adoption release mismatch for ${variant.key}`);
+          }
+          const carwowReviews = path.join(root, 'carwow/src/lib/data/daynight-reviews.ts');
+          if (fs.existsSync(carwowReviews)) {
+            const source = fs.readFileSync(carwowReviews, 'utf8');
+            if (source.includes('No verified customer reviews are included in this independent preview.')) {
+              throw new Error('Generated Carwow review disclosure still bypasses the localization catalog');
+            }
+            if (!source.includes('Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения.')) {
+              throw new Error('Generated Carwow review disclosure is missing the reviewed catalog-backed copy');
+            }
+          }
+          fs.writeFileSync(path.join(process.env.RUNNER_TEMP, 'evidence/validated-manifest.json'), JSON.stringify(manifest, null, 2));
+          NODE
+          test -s "$RUNNER_TEMP/localized-client/vercel.json"
+          test -s "$RUNNER_TEMP/localized-client/scripts/build-native-service.mjs"
+
+      - name: Deploy corrected package to existing Vercel production project
+        shell: bash
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${VERCEL_TOKEN:-}" ]; then
+            echo 'VERCEL_TOKEN is not configured.' >&2
+            exit 1
+          fi
+          mkdir -p "$RUNNER_TEMP/localized-client/.vercel"
+          printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > "$RUNNER_TEMP/localized-client/.vercel/project.json"
+          cd "$RUNNER_TEMP/localized-client"
+          npx --yes vercel@59.19.1 deploy \
+            --prod \
+            --yes \
+            --force \
+            --archive=tgz \
+            --token="$VERCEL_TOKEN" \
+            | tee "$RUNNER_TEMP/evidence/vercel-deploy.log"
+
+      - name: Verify production localization on every design entry
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="$RUNNER_TEMP/localized-client" BASE_URL="$PUBLIC_ALIAS" node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const manifest = JSON.parse(fs.readFileSync(path.join(process.env.ROOT, 'dealer.json'), 'utf8'));
+          const baseUrl = process.env.BASE_URL.replace(/\/$/, '');
+          const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+          const localePath = (variant, locale) => {
+            const base = (variant.base || '').replace(/\/$/, '');
+            const entry = variant.entry || `${base}/`;
+            let suffix = entry.startsWith(base) ? entry.slice(base.length) : entry;
+            if (!suffix.startsWith('/')) suffix = `/${suffix}`;
+            if (suffix === '/') suffix = '';
+            return `${base}/${locale}${suffix}`.replace(/\/+/g, '/');
+          };
+          const request = async (url) => {
+            try {
+              const response = await fetch(url, {
+                redirect: 'follow',
+                signal: AbortSignal.timeout(30000),
+                headers: { 'user-agent': 'cars-localization-production-verifier/1.0', 'accept-language': 'en' }
+              });
+              return { status: response.status, url: response.url, text: await response.text() };
+            } catch (error) {
+              return { status: 0, url, text: '', error: String(error) };
+            }
+          };
+          const routes = manifest.variants.flatMap((variant) => ['en', 'bg'].map((locale) => ({
+            key: variant.key,
+            locale,
+            pathname: localePath(variant, locale)
+          })));
+          let evidence = null;
+          for (let attempt = 1; attempt <= 48; attempt += 1) {
+            const root = await request(`${baseUrl}/`);
+            const checks = [];
+            for (const route of routes) {
+              const result = await request(`${baseUrl}${route.pathname}`);
+              const language = new RegExp(`<html[^>]*\\blang=["']?${route.locale}\\b`, 'i').test(result.text);
+              checks.push({ ...route, status: result.status, finalUrl: result.url, language, error: result.error || null });
+            }
+            const localeUi = /data-locale-(dialog|trigger)|locale-preferences-title|cars-locale-dialog/.test(root.text)
+              && root.text.includes('English')
+              && root.text.includes('Български');
+            evidence = {
+              attempt,
+              checkedAt: new Date().toISOString(),
+              root: { status: root.status, finalUrl: root.url, localeUi, error: root.error || null },
+              routes: checks
+            };
+            if (root.status === 200 && localeUi && checks.every((check) => check.status === 200 && check.language)) break;
+            if (attempt < 48) await sleep(10000);
+          }
+          fs.writeFileSync(path.join(process.env.RUNNER_TEMP, 'evidence/live-verification.json'), JSON.stringify(evidence, null, 2));
+          if (!evidence || evidence.root.status !== 200 || !evidence.root.localeUi || evidence.routes.some((check) => check.status !== 200 || !check.language)) {
+            console.error(JSON.stringify(evidence, null, 2));
+            process.exit(1);
+          }
+          console.log(JSON.stringify(evidence, null, 2));
+          NODE
+
+      - name: Upload rollout evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: corrected-localization-${{ matrix.slug }}
+          path: ${{ runner.temp }}/evidence
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 14
