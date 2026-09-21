@@ -1,0 +1,103 @@
+name: Import sealed localization rollout
+
+on:
+  push:
+    branches:
+      - automation/localization-import-20260921
+    paths:
+      - .github/workflows/import-localization-rollout.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: localization-rollout-import
+  cancel-in-progress: false
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BUNDLE_BLOB_SHA: e72dc3d7899d219a61925b8ebf1da356dfb16469
+      BUNDLE_SHA256: 845216c0c3f62e06ec3f6c4fccfef4c722fb4efc6f63a29a478e7809ac28d9aa
+      SOURCE_SHA: 69ca2e8aeef943746408b11f772ce565931d3e29
+      EXPECTED_PARENT: 050e7c6b6c9e54d0c10423dfb6db7ef1d960c778
+      EXPECTED_TREE: 603d418619696ee40d8a0757406d8358b1b10714
+    steps:
+      - name: Checkout repository boundary
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Download and verify sealed Git bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL \
+            -H "Authorization: Bearer ${{ github.token }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/git/blobs/${BUNDLE_BLOB_SHA}" \
+            | jq -r '.content' \
+            | tr -d '\n' \
+            | base64 --decode \
+            > /tmp/localization-rollout.bundle
+          echo "${BUNDLE_SHA256}  /tmp/localization-rollout.bundle" | sha256sum --check --strict
+          git bundle verify /tmp/localization-rollout.bundle
+          git fetch /tmp/localization-rollout.bundle \
+            refs/bundles/localization-rollout:refs/remotes/localization/source
+
+      - name: Verify immutable commit boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse refs/remotes/localization/source)" = "${SOURCE_SHA}"
+          test "$(git rev-parse "${SOURCE_SHA}^")" = "${EXPECTED_PARENT}"
+          test "$(git show -s --format=%T "${SOURCE_SHA}")" = "${EXPECTED_TREE}"
+          expected_paths=$(printf '%s\n' \
+            scripts/dealer-localized-copy.test.mjs \
+            scripts/lib/client-refresh-adapters.mjs \
+            scripts/lib/client-refresh-presentation.mjs \
+            scripts/lib/dealer-localized-copy.mjs \
+            scripts/refresh-client.test.mjs | sort)
+          actual_paths=$(git diff-tree --no-commit-id --name-only -r "${SOURCE_SHA}" | sort)
+          test "${actual_paths}" = "${expected_paths}"
+          git diff-tree --check "${SOURCE_SHA}^" "${SOURCE_SHA}"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.8.0
+
+      - name: Test exact rollout commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout --detach "${SOURCE_SHA}"
+          node --test scripts/*.test.mjs
+          node scripts/check-workflow.mjs
+          rm -rf /tmp/navara-localized
+          node scripts/rollout-localized-client.mjs \
+            --client-root clients/navara-car \
+            --slug navara-car \
+            --repository darkapoparka/cars-navaracar \
+            --output /tmp/navara-localized \
+            > /tmp/navara-report.json
+          node -e "const fs=require('fs'); const p=JSON.parse(fs.readFileSync('/tmp/navara-report.json','utf8')); const c=JSON.parse(fs.readFileSync('/tmp/navara-localized/localization/contract.json','utf8')); if(JSON.stringify(c.enabledLocales)!==JSON.stringify(['en','bg'])) throw new Error('Expected EN/BG package'); if(!p.packageDigest) throw new Error('Missing package digest'); console.log(p.packageDigest);"
+
+      - name: Fast-forward main without overwriting concurrent work
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "${EXPECTED_PARENT}"
+          git push origin "${SOURCE_SHA}:refs/heads/main"
+          {
+            echo '## Localization rollout source published'
+            echo
+            echo "- Commit: \`${SOURCE_SHA}\`"
+            echo "- Tree: \`${EXPECTED_TREE}\`"
+            echo "- Bundle SHA-256: \`${BUNDLE_SHA256}\`"
+            echo '- Tests: all repository script tests plus Navara package generation'
+          } >> "${GITHUB_STEP_SUMMARY}"
