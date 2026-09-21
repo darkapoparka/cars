@@ -133,7 +133,8 @@ function promote(configuration, logDirectory) {
     throw new Error(`${configuration.key}: unexpected release delta\nExpected: ${configuration.expectedChanges.join(', ')}\nActual: ${changedFiles.join(', ')}`);
   }
 
-  const exported = fs.mkdtempSync(path.join(os.tmpdir(), `cars-${configuration.key}-release-`));
+  const exportArea = fs.mkdtempSync(path.join(os.tmpdir(), `cars-${configuration.key}-release-`));
+  const exported = path.join(exportArea, 'snapshot');
   const fingerprint = exportCommit(sourceDirectory, commit, exported);
   const priorEvidence = readJson(path.join(ROOT, configuration.evidencePath));
   if (priorEvidence.commit !== prior.commit || priorEvidence.nativeLocalization?.sourceDigest !== prior.digest) {
@@ -245,7 +246,7 @@ function promote(configuration, logDirectory) {
     expectedDigest: prior.digest,
     write: true
   });
-  fs.rmSync(exported, { recursive: true, force: true });
+  fs.rmSync(exportArea, { recursive: true, force: true });
   return { key: configuration.key, commit, digest: result.after, changes: result.changes.length, boundarySha256 };
 }
 
