@@ -21,18 +21,19 @@ jobs:
       CARS_RELEASE_SHA: cc4fd13f00a995c8a4dcdd353a2baecd1c6a3d4d
       OUTPUT_BRANCH: generated/navara-native-en-bg-v2
     steps:
-      - name: Checkout workflow controller
-        uses: actions/checkout@v4
-        with:
-          path: controller
-          fetch-depth: 1
-
-      - name: Checkout exact Cars release
+      - name: Checkout exact Cars release boundary
         uses: actions/checkout@v4
         with:
           ref: ${{ env.CARS_RELEASE_SHA }}
           path: cars-release
           fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /templates/
+            /docs/releases/
+            /templates.lock.json
+            /package.json
 
       - name: Checkout Navara publication source
         uses: actions/checkout@v4
