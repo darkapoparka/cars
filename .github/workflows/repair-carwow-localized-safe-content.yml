@@ -11,8 +11,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: repair-carwow-localized-safe-content
-  cancel-in-progress: true
+  group: repair-carwow-localized-safe-content-v2
+  cancel-in-progress: false
 
 jobs:
   repair:
