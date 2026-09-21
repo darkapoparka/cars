@@ -131,7 +131,7 @@ function normalizeManifest(oldManifest, profile, releases, slug, repository) {
   manifest.slug = slug;
   manifest.dealerId = manifest.dealerId || slug;
   manifest.repository = repository;
-  manifest.defaultBranch = 'main';
+  manifest.defaultBranch = oldManifest.defaultBranch || 'main';
   manifest.language = defaultLocale;
   manifest.packaging = { version: '2' };
   manifest.localization = {
