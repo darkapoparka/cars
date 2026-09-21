@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import os from 'node:os';
+import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { copySource } from './copy-source.mjs';
 import { verifyTemplate } from './template-release.mjs';
@@ -17,6 +18,88 @@ const exists = (file) => fs.existsSync(file);
 const skip = new Set(['.git', 'node_modules', '.vercel', '.next', '.svelte-kit', '.turbo', 'build', 'dist', 'runtime', 'coverage', 'test-results', 'playwright-report']);
 const rootFiles = ['.gitignore', 'README.md', 'CLIENT.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json'];
 
+const generatedLocaleFiles = ['src/lib/locale/catalog.ts', 'localization/generated-manifest.json'];
+
+function run(command, commandArgs, { cwd, shell = false } = {}) {
+  const result = spawnSync(command, commandArgs, {
+    cwd,
+    shell,
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe']
+  });
+  if (result.error || result.status !== 0) {
+    const detail = [result.stdout, result.stderr].filter(Boolean).join('\n').trim();
+    throw new Error(`${command} ${commandArgs.join(' ')} failed in ${cwd}: ${result.error?.message || result.status}${detail ? `\n${detail}` : ''}`);
+  }
+  return String(result.stdout || '').trim();
+}
+
+const formatterPackages = ['prettier', 'prettier-plugin-svelte', 'prettier-plugin-tailwindcss', 'svelte', 'tailwindcss'];
+
+function formatterVersions(candidate) {
+  const lockFile = path.join(candidate, 'package-lock.json');
+  if (!exists(lockFile)) throw new Error(`Missing Carwow package lock: ${lockFile}`);
+  const packages = json(lockFile).packages || {};
+  return Object.fromEntries(formatterPackages.map((name) => {
+    const version = packages[`node_modules/${name}`]?.version;
+    if (!/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(version || '')) throw new Error(`Cannot resolve the exact ${name} version`);
+    return [name, version];
+  }));
+}
+
+function validFormattingTooling(toolRoot, versions) {
+  try {
+    return Object.entries(versions).every(([name, version]) =>
+      json(path.join(toolRoot, 'node_modules', name, 'package.json')).version === version
+    );
+  } catch {
+    return false;
+  }
+}
+
+function ensureFormattingTooling(versions) {
+  const key = Object.entries(versions).map(([name, version]) => `${name}-${version}`).join('_').replace(/[^A-Za-z0-9_.-]+/g, '-');
+  const toolRoot = path.join(os.tmpdir(), `cars-localization-format-${key}`);
+  if (validFormattingTooling(toolRoot, versions)) return toolRoot;
+
+  const staging = `${toolRoot}-${process.pid}-${Date.now()}`;
+  fs.rmSync(staging, { recursive: true, force: true });
+  fs.mkdirSync(staging, { recursive: true });
+  fs.writeFileSync(path.join(staging, 'package.json'), `${JSON.stringify({ private: true }, null, 2)}\n`);
+  const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+  const specifications = Object.entries(versions).map(([name, version]) => `${name}@${version}`);
+  run(npm, ['install', '--ignore-scripts', '--no-audit', '--no-fund', '--package-lock=false', ...specifications], {
+    cwd: staging,
+    shell: process.platform === 'win32'
+  });
+  fs.rmSync(toolRoot, { recursive: true, force: true });
+  fs.renameSync(staging, toolRoot);
+  if (!validFormattingTooling(toolRoot, versions)) throw new Error('Installed localization formatting toolchain differs from the pinned lockfile');
+  return toolRoot;
+}
+function finalizeLocaleArtifacts(candidate) {
+  const script = path.join(candidate, 'scripts', 'build-locales.mjs');
+  if (!exists(script)) return [];
+  const source = fs.readFileSync(script, 'utf8');
+  const temporaryNodeModules = path.join(candidate, 'node_modules');
+  if (exists(temporaryNodeModules)) throw new Error(`Candidate unexpectedly contains node_modules: ${candidate}`);
+
+  try {
+    if (/from ['"]prettier['"]/.test(source)) {
+      const tooling = ensureFormattingTooling(formatterVersions(candidate));
+      fs.symlinkSync(path.join(tooling, 'node_modules'), temporaryNodeModules, process.platform === 'win32' ? 'junction' : 'dir');
+    }
+    run(process.execPath, [script], { cwd: candidate });
+    run(process.execPath, [script, '--check'], { cwd: candidate });
+  } finally {
+    if (exists(temporaryNodeModules)) {
+      if (fs.lstatSync(temporaryNodeModules).isSymbolicLink()) fs.unlinkSync(temporaryNodeModules);
+      else fs.rmSync(temporaryNodeModules, { recursive: true, force: true });
+    }
+  }
+
+  return generatedLocaleFiles.filter((relative) => exists(path.join(candidate, relative)));
+}
 function copyTree(source, target) {
   const stat = fs.lstatSync(source);
   if (stat.isSymbolicLink()) throw new Error(`Refusing source symlink: ${source}`);
@@ -99,6 +182,7 @@ async function build({ clientRoot, slug, output, repository }) {
       changed.push(...copyDealerDirectories(oldVariant, candidate, key, slug));
       changed.push(...copyReferencedAssets(oldVariant, candidate, key, changed));
       changed.push(...applyDealerLogoContract({ key, oldVariant, candidate, profile }));
+      changed.push(...finalizeLocaleArtifacts(candidate));
       assertTemplatePresentation({ key, template: snapshot, candidate, profile });
       variants.push({
         key,
