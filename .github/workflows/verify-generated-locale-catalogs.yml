@@ -1,0 +1,121 @@
+name: Verify generated dealer locale catalogs
+
+on:
+  push:
+    branches:
+      - automation/verify-generated-locale-catalogs-20260921
+    paths:
+      - .github/workflows/verify-generated-locale-catalogs.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-generated-locale-catalogs
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SOURCE_SHA: d833b9f4824237b26d3ac80ea9eca08f3f264379
+    steps:
+      - name: Checkout exact rollout source
+        uses: actions/checkout@v4
+        with:
+          ref: d833b9f4824237b26d3ac80ea9eca08f3f264379
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /templates/
+            /clients/navara-car/
+            /docs/
+            /*.json
+
+      - name: Set up Node 24 for packaging
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.8.0
+
+      - name: Run native packaging gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          node --test \
+            scripts/native-refresh.test.mjs \
+            scripts/native-localization.test.mjs \
+            scripts/package-dealer.test.mjs
+          rm -rf /tmp/navara-localized
+          node scripts/rollout-localized-client.mjs \
+            --client-root clients/navara-car \
+            --slug navara-car \
+            --repository darkapoparka/cars-navaracar \
+            --output /tmp/navara-localized \
+            > /tmp/navara-report.json
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const root = '/tmp/navara-localized';
+          const report = JSON.parse(fs.readFileSync('/tmp/navara-report.json', 'utf8'));
+          const manifest = JSON.parse(fs.readFileSync(`${root}/dealer.json`, 'utf8'));
+          const contract = JSON.parse(fs.readFileSync(`${root}/localization/contract.json`, 'utf8'));
+          const adoption = JSON.parse(fs.readFileSync(`${root}/localization/adoption.json`, 'utf8'));
+          if (manifest.packaging?.version !== '2') throw new Error('Expected packaging v2');
+          if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Expected EN/BG locales');
+          if (adoption.packagingVersion !== '2' || adoption.dealerId !== contract.dealerId) throw new Error('Invalid adoption seal');
+          if (!report.packageDigest) throw new Error('Missing package digest');
+          for (const relative of [
+            'auto-best/src/lib/locale/catalog.ts',
+            'auto-best/localization/generated-manifest.json',
+            'carwow/src/lib/locale/catalog.ts',
+            'carwow/localization/generated-manifest.json'
+          ]) {
+            if (!fs.existsSync(`${root}/${relative}`)) throw new Error(`Missing generated locale artifact: ${relative}`);
+          }
+          console.log(JSON.stringify({ digest: report.packageDigest, variants: manifest.variants.map(({ key }) => key) }));
+          NODE
+
+      - name: Set up Node 22 for Auto Best
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.23.0
+
+      - name: Build generated Auto Best package
+        working-directory: /tmp/navara-localized/auto-best
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+          node scripts/build-locales.mjs --check
+          npm run build
+
+      - name: Set up Node 24 for Carwow
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.8.0
+
+      - name: Build generated Carwow package
+        working-directory: /tmp/navara-localized/carwow
+        shell: bash
+        env:
+          DAY_LOCALE_BASE: /variant-3
+        run: |
+          set -euo pipefail
+          npm ci
+          node scripts/build-locales.mjs --check
+          npm run build
+
+      - name: Record verification
+        shell: bash
+        run: |
+          {
+            echo '## Generated dealer locale catalogs verified'
+            echo
+            echo "- Cars source: \`${SOURCE_SHA}\`"
+            echo '- Package: Navara EN/BG packaging v2'
+            echo '- Auto Best: generated-catalog check and production build passed'
+            echo '- Carwow: generated-catalog check and production build passed under Node 24'
+          } >> "$GITHUB_STEP_SUMMARY"
