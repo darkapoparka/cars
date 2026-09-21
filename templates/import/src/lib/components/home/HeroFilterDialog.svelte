@@ -1,9 +1,16 @@
 <script lang="ts">
+	import { assetHref } from '$lib/utils/assets';
+	import { nativeMessage } from '$lib/i18n/native';
+	import { page } from '$app/state';
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
 	import type { HomeFiveHeroSelect, HomeFiveHeroSelectOption } from '$lib/auxero/home-five';
-	import * as Dialog from '$lib/components/ui/dialog';
-	import { Check, ChevronDown, Search, X } from '@lucide/svelte';
-	import type { Attachment } from 'svelte/attachments';
-
+	import type { Component } from 'svelte';
+	import Modal from '$lib/components/common/Modal.svelte';
+	import Action from '$lib/components/common/Action.svelte';
+	import Check from '@lucide/svelte/icons/check';
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
+	import Search from '@lucide/svelte/icons/search';
 	let {
 		select,
 		selected = $bindable([]),
@@ -15,7 +22,9 @@
 		emptyHint = '',
 		dialogTitle = '',
 		dialogDescription = '',
-		searchPlaceholder = ''
+		searchPlaceholder = '',
+		compact = false,
+		icon: Icon
 	}: {
 		select: HomeFiveHeroSelect;
 		selected?: string[];
@@ -28,656 +37,349 @@
 		dialogTitle?: string;
 		dialogDescription?: string;
 		searchPlaceholder?: string;
+		compact?: boolean;
+		icon?: Component<{ size?: number; strokeWidth?: number }>;
 	} = $props();
-
 	let open = $state(false);
 	let query = $state('');
-	let dialogSearchInput: HTMLInputElement | null = null;
-
-	const triggerId = $derived(`${select.id}-popover-trigger`);
-	const opts = $derived(options ?? select.options);
-	const dialogSize = $derived(opts.length <= 4 ? 'compact' : opts.length <= 6 ? 'medium' : 'large');
-	const matches = (option: HomeFiveHeroSelectOption) => {
-		const needle = query.trim().toLowerCase();
-		if (!needle) return true;
-		return (
-			option.label.toLowerCase().includes(needle) ||
-			(option.shortLabel ?? '').toLowerCase().includes(needle)
-		);
-	};
-	const visibleOptions = $derived(searchable ? opts.filter(matches) : opts);
-
-	const labelFor = (value: string) => {
-		const option = opts.find((candidate) => candidate.value === value);
-		return option?.shortLabel ?? option?.label ?? value;
-	};
-	const summary = $derived.by(() => {
-		if (!selected.length) return select.defaultLabel;
-		if (selected.length === 1) return labelFor(selected[0]);
-		return isEnglish ? `${selected.length} selected` : `${selected.length} избрани`;
-	});
-	const resolvedDialogDescription = $derived(
-		dialogDescription ||
-			(isEnglish
-				? mode === 'multi'
-					? 'Choose one or more options.'
-					: 'Choose one option.'
-				: mode === 'multi'
-					? 'Избери една или повече опции.'
-					: 'Избери една опция.')
-	);
-
-	const isOn = (value: string) => selected.includes(value);
-	const toggle = (value: string) => {
-		if (mode === 'single') {
-			selected = selected[0] === value ? [] : [value];
-			close();
-			return;
+	let searchInput = $state<HTMLInputElement | null>(null);
+	function focusSearch(event: Event) {
+		if (searchable && searchInput) {
+			event.preventDefault();
+			searchInput.focus({ preventScroll: true });
 		}
-		selected = isOn(value) ? selected.filter((entry) => entry !== value) : [...selected, value];
-	};
-	const clear = () => {
-		selected = [];
-	};
-
+	}
+	const id = $props.id();
+	const opts = $derived((options ?? select.options).filter((option) => option.value));
+	const visibleOptions = $derived(
+		opts.filter(
+			(option) =>
+				!searchable ||
+				(option.label + ' ' + (option.shortLabel ?? ''))
+					.toLocaleLowerCase()
+					.includes(query.trim().toLocaleLowerCase())
+		)
+	);
+	const summary = $derived(
+		selected.length === 0
+			? select.defaultLabel
+			: selected.length === 1
+				? (opts.find((option) => option.value === selected[0])?.shortLabel ??
+					opts.find((option) => option.value === selected[0])?.label ??
+					selected[0])
+				: selected.length + (isEnglish ? ' selected' : nt('ui50'))
+	);
 	function setOpen(value: boolean) {
-		const shouldRestoreFocus = open && !value;
 		open = value;
-		if (!value) {
-			query = '';
-			if (shouldRestoreFocus) {
-				queueMicrotask(() => document.getElementById(triggerId)?.focus());
-			}
-		}
+		if (!value) query = '';
 	}
-
-	function close() {
-		setOpen(false);
+	function toggle(value: string) {
+		selected =
+			mode === 'single'
+				? selected.includes(value)
+					? []
+					: [value]
+				: selected.includes(value)
+					? selected.filter((item) => item !== value)
+					: [...selected, value];
+		if (mode === 'single') setOpen(false);
 	}
-
-	const captureDialogSearch: Attachment<HTMLInputElement> = (element) => {
-		dialogSearchInput = element;
-		return () => {
-			if (dialogSearchInput === element) dialogSearchInput = null;
-		};
-	};
-	const focusDialogSearch = (event: Event) => {
-		if (!searchable || !dialogSearchInput) return;
-		event.preventDefault();
-		queueMicrotask(() => dialogSearchInput?.focus());
-	};
-
-	const doneLabel = $derived(
-		selected.length
-			? `${isEnglish ? 'Done' : 'Готово'} (${selected.length})`
-			: isEnglish
-				? 'Done'
-				: 'Готово'
-	);
 </script>
 
-{#snippet fieldContents()}
-	<span class="hfp__label">{select.title}</span>
-	<span class={['hfp__value', !selected.length && 'hfp__value--placeholder']}>{summary}</span>
-	<span class="hfp__chev"><ChevronDown size={18} strokeWidth={2.25} aria-hidden="true" /></span>
-{/snippet}
-
-{#snippet pickerContents()}
-	{#if searchable}
-		<div class="hfp__search">
-			<Search size={17} strokeWidth={2.1} aria-hidden="true" />
-			<!-- svelte-ignore a11y_autofocus -->
-			<input
-				type="search"
-				autocomplete="off"
-				placeholder={searchPlaceholder ||
-					(isEnglish
-						? `Search ${select.title.toLowerCase()}…`
-						: `Търси ${select.title.toLowerCase()}…`)}
-				aria-label={searchPlaceholder || (isEnglish ? 'Search options' : 'Търси в опциите')}
-				bind:value={query}
-				autofocus
-				{@attach captureDialogSearch}
-			/>
-		</div>
-	{/if}
-
-	<div class="hfp__results" aria-live="polite">
-		{#if visibleOptions.length === 0}
-			<p class="hfp__hint">{emptyHint || (isEnglish ? 'No matches' : 'Няма съвпадения')}</p>
-		{:else if variant === 'grid'}
-			<div class="hfp__grid">
-				{#each visibleOptions as option (option.value)}
-					<button
-						type="button"
-						class="hfp__chip"
-						aria-pressed={isOn(option.value)}
-						onclick={() => toggle(option.value)}
-					>
-						{#if option.image}
-							<img src={option.image} alt="" aria-hidden="true" loading="lazy" decoding="async" />
-						{:else}
-							<span class="hfp__mono">{(option.shortLabel ?? option.label).charAt(0)}</span>
-						{/if}
-						<span class="hfp__chiplabel">{option.shortLabel ?? option.label}</span>
-					</button>
-				{/each}
-			</div>
-		{:else}
-			<div class="hfp__list">
-				{#each visibleOptions as option (option.value)}
-					<button
-						type="button"
-						class="hfp__row"
-						aria-pressed={isOn(option.value)}
-						onclick={() => toggle(option.value)}
-					>
-						<span class="hfp__rowlabel">{option.label}</span>
-						{#if option.countLabel}<small>{option.countLabel}</small>{/if}
-						<span class="hfp__tick"><Check size={16} strokeWidth={2.6} aria-hidden="true" /></span>
-					</button>
-				{/each}
-			</div>
-		{/if}
-	</div>
-
-	{#if mode === 'multi'}
-		<div class="hfp__foot hfp__foot--dialog">
-			<button type="button" class="hfp__clear" onclick={clear} disabled={!selected.length}>
-				{isEnglish ? 'Clear' : 'Изчисти'}
-			</button>
-			<button type="button" class="hfp__done" onclick={close}>{doneLabel}</button>
-		</div>
-	{/if}
-{/snippet}
-
-<div class={['hfp', open && 'hfp--open', variant === 'grid' && 'hfp--grid']}>
-	<!-- Hidden inputs keep the existing GET form contract (name → value pairs) intact. -->
-	{#if selected.length === 0}
-		<input type="hidden" name={select.name} value="" />
-	{:else}
-		{#each selected as value (value)}
-			<input type="hidden" name={select.name} {value} />
-		{/each}
-	{/if}
-
-	<Dialog.Root bind:open={() => open, setOpen}>
-		<Dialog.Trigger>
-			{#snippet child({ props })}
-				<button {...props} id={triggerId} class="hfp__field" aria-expanded={open}>
-					{@render fieldContents()}
-				</button>
-			{/snippet}
-		</Dialog.Trigger>
-		<Dialog.Content
-			class={`hfp-dialog__content hfp-dialog__content--${dialogSize}`}
-			overlayClass="hfp-dialog__overlay"
-			showCloseButton={false}
-			onOpenAutoFocus={focusDialogSearch}
+<div class="hfp" class:hfp--open={open}>
+	{#each selected as value (value)}<input type="hidden" name={select.name} {value} />{/each}
+	<button
+		type="button"
+		class="hfp__field"
+		class:hfp__field--compact={compact}
+		class:hfp__field--selected={selected.length > 0}
+		aria-haspopup="dialog"
+		aria-expanded={open}
+		aria-label={select.title + ': ' + summary}
+		onclick={() => setOpen(true)}
+	>
+		{#if compact && Icon}<span class="hfp__field-icon" aria-hidden="true"
+				><Icon size={18} strokeWidth={1.75} /></span
+			>{/if}
+		{#if !compact}<span class="hfp__label">{select.title}</span>{/if}
+		<span class="hfp__value" class:hfp__value--placeholder={!selected.length}
+			>{compact && !selected.length ? select.title : summary}</span
 		>
-			<div class="hfp-dialog__head">
-				<div>
-					<Dialog.Title class="hfp-dialog__title">{dialogTitle || select.title}</Dialog.Title>
-					<Dialog.Description class="hfp-dialog__description">
-						{resolvedDialogDescription}
-					</Dialog.Description>
-				</div>
-				<Dialog.Close>
-					{#snippet child({ props })}
-						<button
-							{...props}
-							class="hfp-dialog__close"
-							aria-label={isEnglish ? 'Close selection' : 'Затвори избора'}
-						>
-							<X size={20} strokeWidth={2.2} aria-hidden="true" />
-						</button>
-					{/snippet}
-				</Dialog.Close>
-			</div>
-			<div class="hfp-dialog__body">{@render pickerContents()}</div>
-		</Dialog.Content>
-	</Dialog.Root>
+		<ChevronDown size={20} aria-hidden="true" />
+	</button>
 </div>
+<Modal
+	bind:open={() => open, setOpen}
+	title={dialogTitle || select.title}
+	description={dialogDescription || undefined}
+	wide={variant === 'grid' && opts.length > 6}
+	bodyTone="muted"
+	onOpenAutoFocus={focusSearch}
+>
+	<div class="hfp-picker">
+		{#if searchable}
+			<label class="hfp__search" for={id + '-search'}>
+				<Search size={20} aria-hidden="true" />
+				<span class="sr-only"
+					>{searchPlaceholder || (isEnglish ? 'Search options' : nt('ui46'))}</span
+				>
+				<input
+					id={id + '-search'}
+					bind:this={searchInput}
+					type="search"
+					autocomplete="off"
+					bind:value={query}
+					placeholder={searchPlaceholder || (isEnglish ? 'Search options' : nt('ui46'))}
+				/>
+			</label>
+		{/if}
+		<div class:hfp__grid={variant === 'grid'} class:hfp__list={variant === 'list'}>
+			{#each visibleOptions as option (option.value)}
+				<button
+					type="button"
+					class="hfp__option"
+					class:hfp__chip={variant === 'grid'}
+					class:hfp__row={variant === 'list'}
+					aria-pressed={selected.includes(option.value)}
+					onclick={() => toggle(option.value)}
+				>
+					{#if variant === 'grid'}
+						{#if option.image}<img
+								src={assetHref(option.image)}
+								alt=""
+								width="56"
+								height="40"
+								loading="lazy"
+							/>{:else}<span class="hfp__mono" aria-hidden="true"
+								>{(option.shortLabel ?? option.label).charAt(0)}</span
+							>{/if}
+					{/if}
+					<span class="hfp__option-label"
+						>{variant === 'grid' ? (option.shortLabel ?? option.label) : option.label}</span
+					>
+					{#if option.countLabel}<small>{option.countLabel}</small>{/if}
+					<span class="hfp__tick" aria-hidden="true"><Check size={18} /></span>
+				</button>
+			{:else}<p class="hfp__hint" role="status">
+					{emptyHint || (isEnglish ? 'No matching options' : nt('ui47'))}
+				</p>{/each}
+		</div>
+	</div>
+	{#snippet footer()}
+		<div class="hfp__foot">
+			<Action variant="secondary" disabled={!selected.length} onclick={() => (selected = [])}
+				>{isEnglish ? 'Clear' : nt('ui48')}</Action
+			>
+			<Action onclick={() => setOpen(false)}
+				>{isEnglish ? 'Done' : nt('ui49')}{selected.length
+					? ' (' + selected.length + ')'
+					: ''}</Action
+			>
+		</div>
+	{/snippet}
+</Modal>
 
 <style>
 	.hfp {
-		position: relative;
-		flex: 1 1 0;
-		min-width: 120px;
+		min-width: 0;
 	}
-
 	.hfp__field {
-		position: relative;
 		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
 		width: 100%;
-		min-height: 62px;
+		min-height: calc(var(--bc-control-height-standard) + var(--bc-space-6));
 		align-content: center;
-		gap: 3px;
-		border: 1px solid transparent;
+		gap: var(--bc-space-1) var(--bc-space-3);
+		border: 1px solid var(--picker-field-border, var(--bc-border-strong));
 		border-radius: var(--bc-radius-control);
-		background: var(--bc-popover-bg);
-		padding: 9px 38px 8px 12px;
-		font: inherit;
+		background: var(--picker-field-background, var(--bc-white));
+		color: var(--bc-ink);
+		padding: var(--bc-space-3) var(--bc-space-4);
 		text-align: left;
-		cursor: pointer;
-		transition:
-			border-color 0.16s ease,
-			box-shadow 0.16s ease;
 	}
-
-	.hfp__field:hover {
-		border-color: var(--bc-popover-border-hover);
-	}
-
+	.hfp__field:hover,
 	.hfp--open .hfp__field {
-		border-color: var(--bc-popover-accent);
-		box-shadow: 0 0 0 3px var(--bc-popover-accent-ring);
+		border-color: var(--bc-accent);
 	}
-
-	.hfp__field:focus-visible {
-		outline: 2px solid var(--bc-popover-focus);
-		outline-offset: 2px;
+	.hfp__field--selected {
+		border-color: var(--bc-accent);
+		background: var(--bc-surface);
 	}
-
 	.hfp__label {
-		overflow: hidden;
-		color: var(--bc-popover-muted);
-		font-size: 11px;
-		font-weight: 700;
-		line-height: 1.15;
-		letter-spacing: 0.02em;
-		text-transform: uppercase;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+		grid-column: 1;
+		color: var(--bc-copy);
+		font-size: var(--bc-text-label);
+		line-height: var(--bc-leading-label);
 	}
-
 	.hfp__value {
+		grid-column: 1;
 		overflow: hidden;
-		color: var(--bc-ink);
-		font-size: 15px;
-		font-weight: 700;
-		line-height: 1.2;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+		font-size: var(--bc-text-entry);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-filter);
 	}
-
 	.hfp__value--placeholder {
-		color: var(--bc-popover-muted);
-		font-weight: 600;
+		font-weight: var(--bc-weight-control);
 	}
-
-	.hfp__chev {
-		position: absolute;
-		top: 50%;
-		right: 12px;
-		display: flex;
-		color: var(--bc-popover-icon);
-		transform: translateY(-50%);
-		transition: transform 0.18s ease;
+	.hfp__field :global(svg) {
+		grid-column: 2;
+		grid-row: 1 / 3;
+		align-self: center;
+		color: var(--bc-copy);
 	}
-
-	.hfp--open .hfp__chev {
-		color: var(--bc-popover-icon-active);
-		transform: translateY(-50%) rotate(180deg);
-	}
-
-	:global(.hfp-dialog__overlay) {
-		position: fixed;
-		inset: 0;
-		z-index: 60;
-		background: rgb(9 12 15 / 0.62);
-		backdrop-filter: blur(3px);
-	}
-
-	:global(.hfp-dialog__content) {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		z-index: 70;
-		display: flex;
-		width: min(720px, calc(100vw - 32px));
-		max-width: min(720px, calc(100vw - 32px));
-		max-height: min(760px, calc(100vh - 48px));
-		flex-direction: column;
-		gap: 0;
-		overflow: hidden;
-		border: 1px solid var(--bc-popover-border);
-		border-radius: 16px;
-		background: var(--bc-popover-bg);
-		padding: 0;
-		color: var(--bc-ink);
-		box-shadow: 0 30px 90px rgb(0 0 0 / 0.35);
-		transform: translate(-50%, -50%);
-	}
-
-	:global(.hfp-dialog__content--medium) {
-		width: min(600px, calc(100vw - 32px));
-		max-width: min(600px, calc(100vw - 32px));
-	}
-
-	:global(.hfp-dialog__content--compact) {
-		width: min(480px, calc(100vw - 32px));
-		max-width: min(480px, calc(100vw - 32px));
-	}
-
-	.hfp-dialog__head {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 24px;
-		padding: 24px 24px 20px;
-	}
-
-	:global(.hfp-dialog__title) {
-		color: var(--bc-ink);
-		font-size: 24px;
-		font-weight: 650;
-		line-height: 1.2;
-		letter-spacing: 0;
-	}
-
-	:global(.hfp-dialog__description) {
-		max-width: 58ch;
-		margin-top: 7px;
-		color: var(--bc-popover-muted);
-		font-size: 14.5px;
-		font-weight: 400;
-		line-height: 1.5;
-	}
-
-	:global(.hfp-dialog__close) {
+	.hfp-picker {
 		display: grid;
-		width: 40px;
-		height: 40px;
-		flex: 0 0 40px;
-		place-items: center;
-		border: 0;
-		border-radius: 10px;
-		background: var(--bc-popover-clear-bg);
-		color: var(--bc-ink);
-		cursor: pointer;
-		transition:
-			background-color 0.16s ease,
-			color 0.16s ease;
+		gap: var(--bc-space-4);
+		padding: var(--bc-space-5);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-card);
+		background: var(--bc-surface-raised);
 	}
-
-	:global(.hfp-dialog__close:hover) {
-		background: var(--bc-popover-accent);
-		color: var(--bc-white);
-	}
-
-	:global(.hfp-dialog__close:focus-visible) {
-		outline: 2px solid var(--bc-popover-focus);
-		outline-offset: 2px;
-	}
-
-	.hfp-dialog__body {
-		--hfp-option-hover: color-mix(in srgb, var(--bc-popover-chip-bg) 94%, var(--bc-ink));
-		display: flex;
-		min-height: 0;
-		flex: 1 1 auto;
-		flex-direction: column;
-		padding: 20px 24px 0;
-	}
-
-	.hfp-dialog__body .hfp__results {
-		min-height: 0;
-		flex: 1 1 auto;
-	}
-
-	.hfp-dialog__body .hfp__grid {
-		max-height: min(420px, calc(100vh - 310px));
-	}
-
-	.hfp-dialog__body .hfp__list {
-		max-height: min(412px, calc(100vh - 310px));
-	}
-
 	.hfp__search {
 		display: flex;
 		align-items: center;
-		gap: 9px;
-		margin-bottom: 11px;
-		border-radius: 10px;
-		background: var(--bc-popover-surface);
-		padding: 0 12px;
-		height: 44px;
-		color: var(--bc-subtle);
+		gap: var(--bc-space-3);
+		min-height: var(--bc-route-pill-height);
+		padding-inline: var(--bc-space-4);
+		background: var(--bc-white);
+		border: 1px solid var(--bc-route-pill-border);
+		border-radius: var(--bc-radius-control);
+		color: var(--bc-muted);
 	}
-
-	.hfp__search:focus-within {
-		box-shadow: 0 0 0 2px rgb(185 22 28 / 0.24);
-	}
-
 	.hfp__search input {
+		min-width: 0;
 		width: 100%;
-		height: auto;
-		border: 0;
-		border-radius: 0;
+		min-height: var(--bc-route-pill-height);
 		background: transparent;
-		box-shadow: none !important;
-		padding: 0;
+		border: 0;
 		color: var(--bc-ink);
-		font: inherit;
-		font-size: 15px;
-		font-weight: 400;
-		outline: 0 !important;
-		appearance: none;
-		-webkit-appearance: none;
+		font-size: var(--bc-text-filter);
 	}
-
-	.hfp__search input::-webkit-search-cancel-button,
-	.hfp__search input::-webkit-search-decoration {
-		appearance: none;
-		-webkit-appearance: none;
-	}
-
 	.hfp__grid {
 		display: grid;
-		max-height: 286px;
-		gap: 8px;
-		grid-template-columns: repeat(3, 1fr);
-		overflow-y: auto;
-		scrollbar-width: thin;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--bc-space-3);
 	}
-
-	.hfp__chip {
-		display: flex;
-		min-height: 76px;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 7px;
-		border: 1.5px solid transparent;
-		border-radius: 11px;
-		background: var(--bc-popover-chip-bg);
-		padding: 6px;
-		color: var(--bc-popover-chip-ink);
-		font: inherit;
-		font-size: 13px;
-		font-weight: 500;
-		text-align: center;
-		cursor: pointer;
-		transition:
-			background-color 0.14s ease,
-			border-color 0.14s ease;
-	}
-
-	.hfp__chip:hover:not([aria-pressed='true']) {
-		background: var(--hfp-option-hover);
-	}
-
-	.hfp__chip[aria-pressed='true'] {
-		border-color: var(--bc-popover-accent);
-		background: var(--bc-popover-accent-soft);
-	}
-
-	.hfp__chip:focus-visible,
-	.hfp__row:focus-visible {
-		border-color: var(--bc-popover-focus);
-		outline: 2px solid var(--bc-popover-focus);
-		outline-offset: 2px;
-	}
-
-	.hfp__chip img {
-		max-width: 42px;
-		max-height: 26px;
-		object-fit: contain;
-	}
-
-	.hfp__mono {
-		display: grid;
-		width: 34px;
-		height: 30px;
-		place-items: center;
-		border-radius: 8px;
-		background: var(--bc-popover-mono-bg);
-		color: var(--bc-white);
-		font-size: 15px;
-		font-weight: 650;
-	}
-
-	.hfp__chiplabel {
-		max-width: 100%;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-
 	.hfp__list {
 		display: grid;
-		max-height: 300px;
-		gap: 4px;
-		overflow-y: auto;
-		scrollbar-width: thin;
+		gap: var(--bc-space-2);
 	}
-
+	.hfp__option {
+		position: relative;
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-control);
+		background: var(--bc-surface);
+		color: var(--bc-ink);
+		font-size: var(--bc-text-filter);
+		line-height: var(--bc-leading-filter);
+		text-align: left;
+	}
+	.hfp__option:hover {
+		border-color: var(--bc-border-strong);
+		background: var(--bc-surface-hover);
+	}
+	.hfp__option[aria-pressed='true'] {
+		background: var(--bc-surface-hover);
+		border-color: var(--bc-accent);
+		box-shadow: inset 0 0 0 1px var(--bc-accent);
+	}
+	.hfp__chip {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: calc(var(--bc-route-pill-height) * 2);
+		gap: var(--bc-space-2);
+		padding: var(--bc-space-4);
+		text-align: center;
+	}
+	.hfp__chip img {
+		width: 56px;
+		height: 40px;
+		object-fit: contain;
+	}
+	.hfp__mono {
+		font-size: var(--bc-text-h4);
+		font-weight: var(--bc-weight-heading);
+	}
 	.hfp__row {
 		display: flex;
-		width: 100%;
 		align-items: center;
-		gap: 10px;
-		border: 1.5px solid transparent;
-		border-radius: 10px;
-		background: var(--bc-popover-chip-bg);
-		padding: 12px 13px;
-		color: var(--bc-popover-chip-ink);
-		font: inherit;
-		font-size: 15px;
-		font-weight: 500;
-		line-height: 1.3;
-		text-align: left;
-		cursor: pointer;
-		transition:
-			background-color 0.14s ease,
-			border-color 0.14s ease;
+		gap: var(--bc-space-3);
+		min-height: var(--bc-route-pill-height);
+		padding: var(--bc-space-3) var(--bc-space-4);
 	}
-
-	.hfp__row:hover:not([aria-pressed='true']) {
-		background: var(--hfp-option-hover);
+	.hfp__row .hfp__option-label {
+		flex: 1;
 	}
-
-	.hfp__row[aria-pressed='true'] {
-		border-color: var(--bc-popover-accent);
-		background: var(--bc-popover-accent-soft);
-	}
-
-	.hfp__rowlabel {
-		flex: 1 1 auto;
-	}
-
-	.hfp__row small {
-		color: var(--bc-popover-muted);
-		font-size: 12.5px;
-		font-weight: 400;
-		line-height: 1;
-	}
-
 	.hfp__tick {
 		display: flex;
-		color: var(--bc-popover-icon-active);
+		color: var(--bc-accent);
 		opacity: 0;
 	}
-
-	.hfp__row[aria-pressed='true'] .hfp__tick {
+	.hfp__chip .hfp__tick {
+		position: absolute;
+		top: var(--bc-space-2);
+		right: var(--bc-space-2);
+	}
+	.hfp__option[aria-pressed='true'] .hfp__tick {
 		opacity: 1;
 	}
-
-	.hfp__hint {
-		margin: 6px 2px;
-		color: var(--bc-popover-hint);
-		font-size: 14px;
-		font-weight: 400;
+	small {
+		color: var(--bc-muted);
+		font-size: var(--bc-text-label);
 	}
-
+	.hfp__hint {
+		margin: 0;
+		color: var(--bc-copy);
+	}
 	.hfp__foot {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
-		gap: 8px;
-		margin-top: 10px;
-		padding-top: 10px;
+		gap: var(--bc-space-3);
+	}
+	@media (max-width: 479px) {
+		.hfp__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
 	}
 
-	.hfp__foot button {
-		border: 0;
-		border-radius: 8px;
-		min-height: 44px;
-		padding: 0 17px;
-		font: inherit;
-		font-size: 15px;
-		font-weight: 500;
-		line-height: 1.2;
-		cursor: pointer;
-	}
-
-	.hfp__foot button:focus-visible {
-		outline: 2px solid var(--bc-popover-focus);
+	/* The search wrapper, not its inset input, owns the visible focus ring. */
+	.hfp__search:focus-within {
+		outline: 2px solid var(--bc-focus);
 		outline-offset: 2px;
 	}
-
-	.hfp__foot button:disabled {
-		cursor: default;
-		opacity: 0.48;
+	.hfp__search input:focus-visible {
+		outline: none !important;
+		box-shadow: none !important;
 	}
 
-	.hfp__foot--dialog {
-		margin: 16px -24px 0;
-		padding: 16px 24px;
+	.hfp__field--compact {
+		display: flex;
+		align-items: center;
+		gap: var(--bc-space-3);
+		min-height: var(--bc-control-height-primary);
+		height: var(--bc-control-height-primary);
+		padding: 0 var(--bc-space-3);
+		border-color: var(--bc-border-strong);
+		background: var(--bc-surface-raised);
+		border-radius: var(--bc-radius-md);
 	}
-
-	.hfp__clear {
-		background: var(--bc-popover-clear-bg);
-		color: var(--bc-popover-clear-ink);
+	.hfp__field--compact .hfp__value {
+		flex: 1;
+		font-size: var(--bc-text-filter);
 	}
-
-	.hfp__done {
-		background: var(--bc-ink);
-		color: var(--bc-white);
+	.hfp__field-icon {
+		display: inline-flex;
+		flex: 0 0 auto;
 	}
-
-	@media (max-width: 767.98px) {
-		.hfp {
-			min-width: 100%;
-		}
-
-		:global(.hfp-dialog__content) {
-			width: calc(100vw - 20px);
-			max-width: calc(100vw - 20px);
-			max-height: calc(100dvh - 20px);
-		}
-
-		.hfp-dialog__head {
-			padding: 20px 18px 16px;
-		}
-
-		.hfp-dialog__body {
-			padding: 16px 18px 0;
-		}
-
-		.hfp__foot--dialog {
-			margin-inline: -18px;
-			padding-inline: 18px;
-		}
+	.hfp__field--compact :global(svg) {
+		flex: 0 0 auto;
+	}
+	.hfp__field--compact.hfp__field--selected {
+		border-color: var(--bc-accent);
+		background: var(--bc-surface);
 	}
 </style>

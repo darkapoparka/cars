@@ -171,3 +171,26 @@ Stock images use photo framing; decorative cutouts use proportion-preserving con
 Existing focus rings, selected states and disabled states communicate different things. Hover effects should stay secondary to the static composition, and mobile scrolling should not rely on hover. Respect the existing reduced-motion media queries. Native modal placement, page scroll handling and the dock interaction need to be considered together when changing drawer styling.
 
 For a visual adjustment, find the winning rule in the component/route/global cascade and edit that owner. Keep the current appearance for architecture-only changes. [Testing](TESTING.md) lists the representative viewports and interaction checks.
+
+## Compact mobile control contract
+
+Compact mobile controls use one 44px interaction shell; do not add a 42px size. Search and editable entry fields paint the complete 44px field surface. Quick-filter pills, Home/Sell/Import entry CTAs and icon-only buttons retain the same 44px interaction shell but paint a 40px surface through the shared 2px inset. This keeps touch geometry consistent without making every pill look as heavy as an input.
+
+dn-compact-control owns 16px control typography, 20.8px line height and an 8px content gap. dn-entry-action additionally owns the 220px maximum width, 20px inline inset and 15px arrow icon. dn-quick-pill owns the 16px inline inset. Search fields use the stronger 18px entry role, 18px icons and the shared 12px entry-icon gap. Flex alignment centres the line box and icon; do not add component-specific pixel nudges.
+
+## Expanded overlay control proportions
+
+Mobile search and filter overlays use `--dn-overlay-control-height` at 44px through the default control token. Centered desktop overlays opt into `--dn-overlay-control-height-expanded` at 48px, while editor input fields remain 48px through `--dn-entry-height`. Field/action typography remains 18px and option/secondary-action typography remains 16px. Longer option labels may grow vertically; do not shrink their text to fit.
+
+The home search dialog resets `--dn-entry-height` at its own boundary so its editable search field remains 48px; mobile filter rows and actions use the 44px overlay frame. Height and typography must be verified together. `scripts/overlay-proportions-smoke.mjs` checks the 44px mobile overlay controls, 48px editor fields and EN/BG text fit.
+
+Overlay gutters, row gaps and row corners use `--dn-overlay-gutter`, `--dn-overlay-gap` and `--dn-overlay-row-radius`, each aliased to the existing foundation scale. Collapsed filters show concise unrestricted values; active values use ink emphasis and wrap without truncation.
+
+### Owner-approved mobile listing title contract — 20 September 2026
+Mobile listing cards retain their font sizes, use natural content rows with token-based gaps, and keep titles on one line with visual ellipsis. Full model text remains in the DOM/accessibility tree and detail destination. This supersedes the earlier two-line mobile-card assertion; desktop presentation is unchanged. Locale acceptance covers both languages and all eight retained cards.
+
+## Shared icon-only controls and modal behavior
+
+Use `dn-icon-button` from `base.css` for close, back and clear controls. It owns a token-derived 44px interaction shell with a 40px visible circle, non-shrinking SVG centering and an explicit native-appearance reset. `dn-compact-control` applies the same 44px shell and 40px visible pill to quick filters and Home, Sell and Import entry actions; `dn-entry-action` and `dn-quick-pill` select their shared width and padding roles. Components own contextual surface, ink, position and responsive visibility.
+
+`src/lib/ui/focus.ts` owns modal Tab containment; `trapDialogTab` adapts native dialog events. Disabled, hidden, inert, negative-tabindex and child-dialog controls are excluded. Focus wrapping scrolls the active control into view; closing restores the opener without scrolling the underlying page. Scroll locks release only after their last owner, even when close and unmount both run.

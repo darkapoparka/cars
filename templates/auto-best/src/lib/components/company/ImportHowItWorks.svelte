@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { trapDialogTab } from '$lib/ui/overlay';
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { tick } from 'svelte';
   import Icon from '$components/ui/Icon.svelte';
 
@@ -64,18 +68,18 @@
     type="button"
     bind:this={trigger}
     aria-haspopup="dialog"
-    aria-label="Как протича вносът"
+    aria-label={i18n.t("m_0dc54277231e")}
     onclick={openDrawer}
     onpointerdown={startPeekDrag}
     onpointerup={endPeekDrag}
   >
     <span class="dn-import-info-drawer__handle" aria-hidden="true"></span>
-    <span>Как протича вносът</span>
+    <span>{i18n.t("m_15f4f5be4ade")}</span>
     <Icon name="chevron-down" size={16} />
   </button>
 </div>
 
-<dialog
+<dialog onkeydown={trapDialogTab}
   class="dn-import-info-dialog"
   bind:this={dialog}
   aria-labelledby="import-info-title"
@@ -86,7 +90,7 @@
     <button
       class="dn-import-info-sheet__grabber"
       type="button"
-      aria-label="Плъзни надолу, за да затвориш"
+      aria-label={i18n.t("m_be060a506520")}
       onpointerdown={startSheetDrag}
       onpointermove={moveSheetDrag}
       onpointerup={endSheetDrag}
@@ -94,33 +98,33 @@
     ><span></span></button>
 
     <header class="dn-import-info-sheet__header">
-      <h2 id="import-info-title" tabindex="-1" bind:this={heading}>Как протича вносът</h2>
-      <button class="dn-import-info-sheet__close" type="button" aria-label="Затвори" onclick={closeDrawer}>
-        <Icon name="x" size={21} />
+      <h2 id="import-info-title" tabindex="-1" bind:this={heading}>{i18n.t("m_0dc54277231e")}</h2>
+      <button class="dn-import-info-sheet__close dn-icon-button" type="button" aria-label={i18n.t("m_7d9eb7acb13e")} onclick={closeDrawer}>
+        <Icon name="x" size={18} />
       </button>
     </header>
 
     <div class="dn-import-info-sheet__body">
       <section class="dn-import-info-group dn-import-info-prepare" aria-labelledby="import-prepare-title">
-        <h3 id="import-prepare-title">Какво да подготвиш</h3>
+        <h3 id="import-prepare-title">{i18n.t("m_23809ef4ac0b")}</h3>
         <ol class="dn-import-info-list">
-          <li><span aria-hidden="true">1.</span><p><strong>Обява или модел</strong><span>Линк, марка или модел.</span></p></li>
-          <li><span aria-hidden="true">2.</span><p><strong>Бюджет</strong><span>Ориентировъчна сума.</span></p></li>
-          <li><span aria-hidden="true">3.</span><p><strong>Предпочитания</strong><span>Година, двигател, екстри.</span></p></li>
+          <li><span aria-hidden="true">1.</span><p><strong>{i18n.t("m_cb657904a3c8")}</strong><span>{i18n.t("m_69c046d0d68a")}</span></p></li>
+          <li><span aria-hidden="true">2.</span><p><strong>{i18n.t("m_84e960d40ad5")}</strong><span>{i18n.t("m_088c620063d9")}</span></p></li>
+          <li><span aria-hidden="true">3.</span><p><strong>{i18n.t("m_71d928c81483")}</strong><span>{i18n.t("m_d94e043d8dcf")}</span></p></li>
         </ol>
       </section>
 
       <section class="dn-import-info-group dn-import-info-process" aria-labelledby="import-next-title">
-        <h3 id="import-next-title">Как продължаваме</h3>
+        <h3 id="import-next-title">{i18n.t("m_f388d3f655d4")}</h3>
         <ol class="dn-import-info-steps">
-          <li><span aria-hidden="true">1.</span><p><strong>Преглеждаш и споделяш запитването.</strong></p></li>
-          <li><span aria-hidden="true">2.</span><p><strong>Уточняваме автомобила и бюджета.</strong></p></li>
-          <li><span aria-hidden="true">3.</span><p><strong>Уговаряме следващата стъпка.</strong></p></li>
+          <li><span aria-hidden="true">1.</span><p><strong>{i18n.t("m_e1acf5864937")}</strong></p></li>
+          <li><span aria-hidden="true">2.</span><p><strong>{i18n.t("m_66f7d8b839bb")}</strong></p></li>
+          <li><span aria-hidden="true">3.</span><p><strong>{i18n.t("m_8f02b9b0cf35")}</strong></p></li>
         </ol>
       </section>
 
       <footer class="dn-import-info-actions">
-        <button type="button" onclick={closeDrawer}>Към заявката <Icon name="arrow-right" size={18} /></button>
+        <button type="button" onclick={closeDrawer}>{i18n.t("m_ed51f4a53cda")} <Icon name="arrow-right" size={18} /></button>
       </footer>
     </div>
   </div>
@@ -196,20 +200,9 @@
     padding: var(--dn-space-1) var(--dn-space-5) var(--dn-space-4);
     background: var(--dn-white);
   }
-  .dn-import-info-sheet__header h2 { margin: 0; color: var(--dn-ink); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+  .dn-import-info-sheet__header h2 { min-width: 0; white-space: nowrap; margin: 0; color: var(--dn-ink); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
   .dn-import-info-sheet__header h2:focus { outline: none; }
-  .dn-import-info-sheet__close {
-    display: grid;
-    width: 44px;
-    height: 44px;
-    flex: 0 0 44px;
-    place-items: center;
-    border: 0;
-    border-radius: 50%;
-    background: var(--dn-surface);
-    color: var(--dn-ink);
-    cursor: pointer;
-  }
+  .dn-import-info-sheet__close { border: 0; border-radius: 50%; background: var(--dn-surface); color: var(--dn-ink); }
   .dn-import-info-sheet__body {
     display: grid;
     min-height: 0;
@@ -257,6 +250,7 @@
   .dn-import-info-prepare p > span { color: var(--dn-muted); }
   .dn-import-info-sheet__header, .dn-import-info-sheet__grabber { flex-shrink: 0; }
   @media (max-width: 767px) {
+    .dn-import-info-sheet__header h2 { font-size: var(--dn-text-card); }
     .dn-import-info-drawer {
       position: fixed;
       left: 50%;

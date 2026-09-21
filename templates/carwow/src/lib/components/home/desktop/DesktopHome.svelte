@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { HomeBrandStripItem } from '$lib/data/home-brand-strip';
 	import type { HomeDesktopData } from '$lib/types/home';
 	import SiteChrome from '$lib/components/layout/SiteChrome.svelte';
@@ -25,11 +28,14 @@
 				showHeaderSubtitle={false}
 			/>
 			<DesktopHomeReviews showReviews={false} balancedActionCards />
-			<DesktopHomeVehicleCategories title="Избери тип автомобил" ctaLabel="Всички типове" />
+			<DesktopHomeVehicleCategories
+				title={i18n.t('copy.26557fae2714')}
+				ctaLabel={i18n.text('Всички типове')}
+			/>
 			<DesktopHomeBrandStrip
 				brands={brandStrip.slice(0, 12)}
-				title="Избери марка"
-				ctaLabel="Всички марки"
+				title={i18n.t('copy.de22b27028ed')}
+				ctaLabel={i18n.t('copy.0adfd4e68815')}
 			/>
 			<DesktopHomeWhyDayNight showMetrics={false} variant="campaign-grid" />
 			<DesktopHomeVideos />
@@ -37,7 +43,7 @@
 				showActionCards={false}
 				showHeaderCta={true}
 				showBelowCta={false}
-				ctaLabel="Виж всички отзиви"
+				ctaLabel={i18n.text('Виж всички отзиви')}
 			/>
 		</main>
 		<DesktopHomeFooter />

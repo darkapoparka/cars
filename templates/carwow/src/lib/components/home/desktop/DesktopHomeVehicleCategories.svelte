@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import { resolve } from '$app/paths';
 	import { cars } from '$lib/data/daynight-vehicles';
@@ -11,63 +14,63 @@
 	const bodyCount = (body: string) => cars.filter((car) => car.body === body).length;
 
 	const formatCount = (count: number) =>
-		count > 0 ? `${count} ${count === 1 ? 'автомобил' : 'автомобила'}` : 'Няма наличност';
+		count > 0 ? i18n.count(count) : i18n.text('Няма наличност');
 
 	// Counts come from live inventory; the canonical desktop can expose the full taxonomy
 	// while keeping zero-stock categories honest and visually quiet.
 	const allVehicleCategories = [
 		{
 			id: 'electric',
-			title: 'Електрически',
+			title: i18n.t('copy.2f5800eb33f6'),
 			query: `fuel=${encodeURIComponent('Електрически')}`,
 			count: cars.filter((car) => car.fuel === 'Електрически').length,
 			image: '/assets/images/body-type/normalized/body-sedan-transparent.webp'
 		},
 		{
 			id: 'suv',
-			title: 'Джип',
+			title: i18n.t('copy.c3afa6b1101c'),
 			query: 'body=SUV',
 			count: bodyCount('SUV'),
 			image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 		},
 		{
 			id: 'wagon',
-			title: 'Комби',
+			title: i18n.t('copy.3a5801952ee8'),
 			query: `body=${encodeURIComponent('Комби')}`,
 			count: bodyCount('Комби'),
 			image: '/assets/images/body-type/generated/body-wagon-studio-card-v1.webp'
 		},
 		{
 			id: 'hatchback',
-			title: 'Хечбек',
+			title: i18n.t('copy.04a0ade45bf6'),
 			query: `body=${encodeURIComponent('Хечбек')}`,
 			count: bodyCount('Хечбек'),
 			image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 		},
 		{
 			id: 'sedan',
-			title: 'Седан',
+			title: i18n.t('copy.37327507b148'),
 			query: `body=${encodeURIComponent('Седан')}`,
 			count: bodyCount('Седан'),
 			image: '/assets/images/body-type/generated/body-sedan-studio-card-v1.webp'
 		},
 		{
 			id: 'coupe',
-			title: 'Купе',
+			title: i18n.t('copy.4554631dfefd'),
 			query: `body=${encodeURIComponent('Купе')}`,
 			count: bodyCount('Купе'),
 			image: '/assets/images/body-type/generated/body-coupe-studio-card-v1.webp'
 		},
 		{
 			id: 'van',
-			title: 'Ван',
+			title: i18n.t('copy.ea1d9f17bdef'),
 			query: `body=${encodeURIComponent('Ван')}`,
 			count: bodyCount('Ван'),
 			image: '/assets/images/body-type/generated/body-mpv-studio-card-v1.webp'
 		},
 		{
 			id: 'convertible',
-			title: 'Кабриолет',
+			title: i18n.t('copy.1983c8d39bf3'),
 			query: `body=${encodeURIComponent('Кабрио')}`,
 			count: bodyCount('Кабрио'),
 			image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
@@ -75,8 +78,8 @@
 	];
 
 	let {
-		title = 'Автомобили по тип',
-		ctaLabel = 'Виж всички типове',
+		title = i18n.t('copy.c5b39ab615ea'),
+		ctaLabel = i18n.t('copy.b026ee3ab143'),
 		showHeaderCta = true,
 		showBelowCta = false,
 		showEmptyCategories = true
@@ -90,7 +93,9 @@
 
 	let vehicleCategories = $derived(
 		showEmptyCategories
-			? [...allVehicleCategories].sort((left, right) => Number(right.count > 0) - Number(left.count > 0))
+			? [...allVehicleCategories].sort(
+					(left, right) => Number(right.count > 0) - Number(left.count > 0)
+				)
 			: allVehicleCategories.filter((category) => category.count > 0)
 	);
 </script>
@@ -99,7 +104,7 @@
 	<div class="daynight-home-container home-browse-heading">
 		<DesktopSectionHeading
 			{title}
-			href={showHeaderCta ? resolve('/inventory') : undefined}
+			href={i18n.href(showHeaderCta ? resolve('/inventory') : undefined)}
 			label={ctaLabel}
 		/>
 	</div>
@@ -109,20 +114,20 @@
 				{#each vehicleCategories as category (category.id)}
 					<div class="daynight-vehicle-types__item">
 						<a
-							href="{resolve('/inventory')}?{category.query}"
+							href={i18n.href(`${resolve('/inventory')}?${category.query}`)}
 							class={`daynight-vehicle-type-card${category.count === 0 ? ' daynight-vehicle-type-card--empty' : ''}`}
 						>
 							<div class="daynight-vehicle-type-card__image">
 								<img
-									src={desktopOnlyImagePlaceholder}
+									src={i18n.asset(desktopOnlyImagePlaceholder)}
 									srcset={desktopOnlySrcset(category.image, 600)}
 									sizes={desktopOnlySizes('220px')}
-									alt={category.title}
+									alt={i18n.text(category.title)}
 								/>
 							</div>
 							<div class="daynight-vehicle-type-card__content">
 								<p class="daynight-vehicle-type-card__title">
-									{category.title}
+									{i18n.text(category.title)}
 								</p>
 								<p class="daynight-vehicle-type-card__count">
 									{formatCount(category.count)}
@@ -135,8 +140,8 @@
 		</div>
 		{#if showBelowCta}
 			<div class="daynight-home-browse-cta">
-				<a href={resolve('/inventory')} class="daynight-home-browse-cta__link">
-					{ctaLabel}
+				<a href={i18n.href(resolve('/inventory'))} class="daynight-home-browse-cta__link">
+					{i18n.text(ctaLabel)}
 				</a>
 			</div>
 		{/if}

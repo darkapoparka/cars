@@ -1,0 +1,1098 @@
+{
+  "schemaVersion": 1,
+  "adapter": "native-v1",
+  "template": "modern",
+  "repository": "darkapoparka/cars-template-modern",
+  "commit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+  "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+  "verifiedAt": "2026-09-21T07:46:00.595Z",
+  "deployment": {
+    "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+    "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+    "state": "READY",
+    "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+    "publicAlias": "https://cars-template-modern.vercel.app/"
+  },
+  "publicAudit": {
+    "path": "runtime/localization-rollout-20260921/public-audits/modern-preferences.json",
+    "sha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+    "summary": null
+  },
+  "sourceEvidence": [
+    {
+      "path": "docs/localization/ACCEPTANCE.json",
+      "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+      "bytes": 19231
+    },
+    {
+      "path": "docs/localization/PRESERVATION.json",
+      "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+      "bytes": 7536
+    },
+    {
+      "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+      "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+      "bytes": 19520
+    },
+    {
+      "path": "docs/localization/PUBLICATION-2026-09-20.json",
+      "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+      "bytes": 9593
+    },
+    {
+      "path": "docs/localization/SOURCE-MANIFEST.json",
+      "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+      "bytes": 122669
+    },
+    {
+      "path": "docs/localization/HANDOFF.md",
+      "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+      "bytes": 16696
+    }
+  ],
+  "catalogAudit": {
+    "catalogs": [
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "packages/internationalization/preferences-messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        "keys": 23,
+        "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "packages/internationalization/public-messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        "keys": 27,
+        "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+      },
+      {
+        "descriptor": {
+          "format": "typescript-rows",
+          "path": "packages/marketplace/content/inventory-copy.ts",
+          "export": "inventoryCopy"
+        },
+        "keys": 28,
+        "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+      }
+    ],
+    "declaredCatalogParityPassed": true,
+    "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+  },
+  "checks": {
+    "catalog-completeness": {
+      "name": "catalog-completeness",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "0101923f0db18920d540df167ca2ab03ad008770df45b596db0919b1ca96181c"
+    },
+    "hardcoded-ui": {
+      "name": "hardcoded-ui",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "18f3592e042d54fd7e2fa13005c2ec8d3870be896dcdaf7706239b3f68a40b58"
+    },
+    "native-routing": {
+      "name": "native-routing",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "82f707fc45e2c3aab50c09790de5f3ddc6ccb6eab43c8d43c33eb3f987b2c602"
+    },
+    "standalone-journeys": {
+      "name": "standalone-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "57afbabdbd76638dd95a792b3409da6669834e589b86f9799c38aac2d3a8c7bf"
+    },
+    "mounted-journeys": {
+      "name": "mounted-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "223cf1cdb6fe54add8ed6af4b4761c1de9be5244709b1d54c20102efba81b028"
+    },
+    "public-journeys": {
+      "name": "public-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "5fa344d7b7d61099a2d718c3a5cc95d6fd26d871c459b995ccfc4b2d2ef41738"
+    },
+    "preferences-no-js": {
+      "name": "preferences-no-js",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "e74750125e71eeec3bd57bb32c68a1a9898a8471b01c1e629eef67f0d58e03e6"
+    },
+    "preferences-storage-disabled": {
+      "name": "preferences-storage-disabled",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "c9d1d25644d7d8c975ee36f19cf430cf0f61fadd2bdef5ea91c71eebb2e453df"
+    },
+    "preferences-races": {
+      "name": "preferences-races",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "5473e41bed7e506d381b8ff531b961c90e0a9f71d532447ea98f5053653e55a3"
+    },
+    "request-isolation": {
+      "name": "request-isolation",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "fbfb9c926c0b92da8609452c8b570d5882dbca6068b1547941bf5ae84baad4cd"
+    },
+    "security-write-blocking": {
+      "name": "security-write-blocking",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "539b715342baf50d6c6523fbe4e19bf56d9a94b20bc7ace473d15b6bfbe9ba56"
+    },
+    "assets-preserved": {
+      "name": "assets-preserved",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+        "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+        "deployment": {
+          "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        },
+        "publicAuditSha256": "78bd6231d31360d096cc10c26014f36b54b9cbe16cf13e1069e6967c3ebd5372",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/ACCEPTANCE.json",
+            "sha256": "bda5b7b6f3fb1d8a7bd02041151c3ce5b6b5add55f2f034d96ccdfa9b5f061e5",
+            "bytes": 19231
+          },
+          {
+            "path": "docs/localization/PRESERVATION.json",
+            "sha256": "98242b695a94d5b59f5a63251d7487f493b17f1f0eaef2ba29e30aa2d3f748df",
+            "bytes": 7536
+          },
+          {
+            "path": "docs/localization/PUBLIC-VERIFICATION-2026-09-20.json",
+            "sha256": "01c1b0402f3b10209b8b669cb94cbc2a05fb9ccf8279950363492d5be5c78b0d",
+            "bytes": 19520
+          },
+          {
+            "path": "docs/localization/PUBLICATION-2026-09-20.json",
+            "sha256": "c8934cf7f2076e6e3e5031d24ccd3148fbbb30e93cb84ab73eeb57403b0d4dc1",
+            "bytes": 9593
+          },
+          {
+            "path": "docs/localization/SOURCE-MANIFEST.json",
+            "sha256": "dfad627d177e8a2ba279db77d6471e73d633f7f847825a44cdcea7900149c914",
+            "bytes": 122669
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+            "bytes": 16696
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/preferences-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 23,
+              "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "packages/internationalization/public-messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 27,
+              "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+            },
+            {
+              "descriptor": {
+                "format": "typescript-rows",
+                "path": "packages/marketplace/content/inventory-copy.ts",
+                "export": "inventoryCopy"
+              },
+              "keys": 28,
+              "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "aa21cdd3184082134b9f3d2fc37d295761c8fa72cfbfb0989414c70e4350d924"
+    }
+  }
+}

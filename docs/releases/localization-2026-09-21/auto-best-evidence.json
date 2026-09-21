@@ -1,0 +1,786 @@
+{
+  "schemaVersion": 1,
+  "adapter": "native-v1",
+  "template": "auto-best",
+  "repository": "darkapoparka/cars-template-auto-best",
+  "commit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+  "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+  "verifiedAt": "2026-09-21T07:46:00.595Z",
+  "deployment": {
+    "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+    "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+    "state": "READY",
+    "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+    "publicAlias": "https://cars-template-auto-best.vercel.app/"
+  },
+  "publicAudit": {
+    "path": "runtime/localization-rollout-20260921/public-audits/auto-best-preferences.json",
+    "sha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+    "summary": null
+  },
+  "sourceEvidence": [
+    {
+      "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+      "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+      "bytes": 6586
+    },
+    {
+      "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+      "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+      "bytes": 20019
+    },
+    {
+      "path": "docs/localization/evidence/provenance.json",
+      "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+      "bytes": 2995
+    },
+    {
+      "path": "docs/localization/HANDOFF.md",
+      "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+      "bytes": 5126
+    },
+    {
+      "path": "docs/localization/COVERAGE.md",
+      "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+      "bytes": 5040
+    }
+  ],
+  "catalogAudit": {
+    "catalogs": [
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "src/lib/locale/catalog.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        "keys": 958,
+        "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+      }
+    ],
+    "declaredCatalogParityPassed": true,
+    "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+  },
+  "checks": {
+    "catalog-completeness": {
+      "name": "catalog-completeness",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "d4b23a4a7c9cd1b7ea6ef5d74a861491fad47265b9a16ba46257a81e45f1d74c"
+    },
+    "hardcoded-ui": {
+      "name": "hardcoded-ui",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "8b226f799911eae6b95bbaed49e3a252bfc2cc813cad8b612285a7a8d5464d00"
+    },
+    "native-routing": {
+      "name": "native-routing",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "fa4e45ce3421fda1b6dccd36df552605bf41e6ccabae75368e17dcf4170588f7"
+    },
+    "standalone-journeys": {
+      "name": "standalone-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "e1f8215a33fb5b3d5e6bcadea0f1f4ee39e6edf66a73fbfbedb47f4ba8cb523c"
+    },
+    "mounted-journeys": {
+      "name": "mounted-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "018620650a4b70fdbfe7b3548cb2ce364e1aca081948de2efa2bdeab750f50fa"
+    },
+    "public-journeys": {
+      "name": "public-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "39866c4af9a5c588ea65a2c838c4b3a8daf99ec8ac0d855d21a3eba1a0876f13"
+    },
+    "preferences-no-js": {
+      "name": "preferences-no-js",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "7396f5ec57dd784d63bafd5f307a8150d01f1a3552c0720176090cc9021f7df4"
+    },
+    "preferences-storage-disabled": {
+      "name": "preferences-storage-disabled",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "734150c7c84bb70984a871e02a8d7c719326c563c2f9aee12dca317f88bb5b2f"
+    },
+    "preferences-races": {
+      "name": "preferences-races",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "f8c89a32939055ff3a2621ddf04a508bdf68694ad8fa1db366b6ea4070a6f8a4"
+    },
+    "request-isolation": {
+      "name": "request-isolation",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "40d92ad9ab42c77c5761d618bb2df10b73b6c997e9bebd2a17b9f95cfbf3bb01"
+    },
+    "security-write-blocking": {
+      "name": "security-write-blocking",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "127a99c58e594ffe4f9c4a93865285a9128d44b04f27dfc43c84b894df408a21"
+    },
+    "assets-preserved": {
+      "name": "assets-preserved",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+        "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+        "deployment": {
+          "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        },
+        "publicAuditSha256": "a0159f8e3b8d6beffd76ab27ca322d43e0fb06b7b931e29a95dc61739198dfaa",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/release-candidate-2026-09-21.json",
+            "sha256": "b2b8a4e2c9bbdd435c586ba8387fdd781ba5ba2d28c1943fb8f65ce5b1cbaf1b",
+            "bytes": 6586
+          },
+          {
+            "path": "docs/localization/evidence/mobile-copy-2026-09-20.json",
+            "sha256": "207893cd731b73463c35537e3ff5c3c1f0b55b21ac7f50d343d86f520bfc4487",
+            "bytes": 20019
+          },
+          {
+            "path": "docs/localization/evidence/provenance.json",
+            "sha256": "3c83a7f979f19c820358139caeb6c8d48a10c73f9c293bbfe7d5a7b13b467efc",
+            "bytes": 2995
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "2aed75774f24507a10bbbe47d16661ea124a512bd9bab16eaf89a98426d76d82",
+            "bytes": 5126
+          },
+          {
+            "path": "docs/localization/COVERAGE.md",
+            "sha256": "100b54b8211e421dffb78a411cd26053eee0e58124761e137781e521b06b3cf2",
+            "bytes": 5040
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/catalog.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 958,
+              "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "1e5486a1ee2d7d708586db45ad03d3c71a6f8e84f2e7634d1d896115636c8832"
+    }
+  }
+}

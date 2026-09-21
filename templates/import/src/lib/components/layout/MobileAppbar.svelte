@@ -1,13 +1,22 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import { MapPin, PhoneCall, MessageCircle } from '@lucide/svelte';
-	import { daynightAssets, daynightContact } from '$lib/data/daynight';
+	import { assetHref } from '$lib/utils/assets';
+	import { nativeMessage } from '$lib/i18n/native';
+
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
+	import { linkHref as resolve } from '$lib/utils/links';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
+	import MessageCircle from '@lucide/svelte/icons/message-circle';
+	import { site } from '$lib/config/site';
+	import { page } from '$app/state';
 	import type { Snippet } from 'svelte';
+	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
 
 	let {
-		actionsLabel = 'Контакт',
+		actionsLabel = nt('ui137'),
 		children,
-		logoAlt = 'Day Night Auto',
+		logoAlt = site.identity.name,
 		surface = 'transparent',
 		onMap
 	}: {
@@ -17,32 +26,60 @@
 		surface?: 'dark' | 'transparent';
 		onMap?: () => void;
 	} = $props();
+	const english = $derived(page.data.locale === 'en');
 </script>
 
 <!-- Keep contact actions in a fixed order across routes. The map callback
      preserves existing location drawers without changing the button geometry. -->
 <header class:bc-mobile-appbar--dark={surface === 'dark'} class="bc-mobile-appbar">
-	<a class="bc-mobile-appbar__brand" href={resolve('/')} aria-label="Day Night Auto начало">
-		<img src={daynightAssets.logoLight} alt={logoAlt} width="1744" height="512" />
+	<a
+		class="bc-mobile-appbar__brand"
+		href={resolve(english ? '/?lang=en' : '/')}
+		aria-label={site.identity.name + (english ? ' home' : ' начало')}
+	>
+		<img
+			src={assetHref(surface === 'dark' ? site.identity.logoOnDark : site.identity.logo)}
+			alt={logoAlt}
+			width="1744"
+			height="512"
+		/>
 	</a>
 	<div class="bc-mobile-appbar__actions" role="group" aria-label={actionsLabel}>
 		{#if children}{@render children()}{:else}
-			{#if onMap}<button type="button" onclick={onMap} aria-label="Карта" aria-haspopup="dialog"
-					><MapPin size={18} strokeWidth={2.35} aria-hidden="true" /></button
+			{#if onMap}
+				<MobileIconAction
+					label={english ? 'Map' : 'Карта'}
+					tone={surface === 'dark' ? 'dark' : 'light'}
+					haspopup="dialog"
+					onclick={onMap}
 				>
-			{:else}<a
-					href={'https://www.google.com/maps/search/?api=1&query=' +
-						encodeURIComponent(daynightContact.addressLabel)}
+					<MapPin size={18} strokeWidth={2.35} aria-hidden="true" />
+				</MobileIconAction>
+			{:else}
+				<MobileIconAction
+					label={english ? 'Map' : 'Карта'}
+					tone={surface === 'dark' ? 'dark' : 'light'}
+					href={site.contact.mapHref}
 					target="_blank"
 					rel="noreferrer"
-					aria-label="Карта"><MapPin size={18} strokeWidth={2.35} aria-hidden="true" /></a
-				>{/if}
-			<a href={daynightContact.primaryPhoneHref} aria-label="Обади се"
-				><PhoneCall size={18} strokeWidth={2.35} aria-hidden="true" /></a
+				>
+					<MapPin size={18} strokeWidth={2.35} aria-hidden="true" />
+				</MobileIconAction>
+			{/if}
+			<MobileIconAction
+				label={english ? 'Call' : 'Обади се'}
+				tone={surface === 'dark' ? 'dark' : 'light'}
+				href={site.contact.phoneHref}
 			>
-			<a href={daynightContact.viberHref} aria-label="Пиши ни"
-				><MessageCircle size={18} strokeWidth={2.35} aria-hidden="true" /></a
+				<PhoneCall size={18} strokeWidth={2.35} aria-hidden="true" />
+			</MobileIconAction>
+			<MobileIconAction
+				label={english ? 'Message' : 'Пиши ни'}
+				tone={surface === 'dark' ? 'dark' : 'light'}
+				href={site.contact.messageHref}
 			>
+				<MessageCircle size={18} strokeWidth={2.35} aria-hidden="true" />
+			</MobileIconAction>
 		{/if}
 	</div>
 </header>
@@ -105,78 +142,6 @@
 		flex: 0 0 auto;
 		align-items: center;
 		gap: var(--bc-space-2);
-	}
-
-	.bc-mobile-appbar__actions :global(a),
-	.bc-mobile-appbar__actions :global(label),
-	.bc-mobile-appbar__actions :global(button) {
-		position: relative;
-		display: flex;
-		width: var(--bc-control-height-standard);
-		height: var(--bc-control-height-standard);
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		border-radius: var(--bc-radius-pill);
-		background: transparent;
-		box-shadow: none;
-		color: var(--bc-ink);
-		cursor: pointer;
-		isolation: isolate;
-		padding: 0;
-		text-decoration: none !important;
-		transition: color 0.18s ease;
-	}
-
-	.bc-mobile-appbar__actions :global(a::before),
-	.bc-mobile-appbar__actions :global(label::before),
-	.bc-mobile-appbar__actions :global(button::before) {
-		position: absolute;
-		z-index: -1;
-		width: var(--bc-control-height-secondary);
-		height: var(--bc-control-height-secondary);
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
-		box-shadow: inset 0 0 0 1px rgba(28, 28, 28, 0.12);
-		content: '';
-		transition: background-color 0.18s ease;
-	}
-
-	.bc-mobile-appbar__actions :global(.bc-mobile-appbar__action--primary::before) {
-		background: var(--bc-accent-bright-soft);
-		box-shadow: none;
-	}
-
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(a),
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(label),
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(button) {
-		color: var(--bc-white);
-	}
-
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(a::before),
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(label::before),
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(button::before) {
-		background: var(--bc-ink);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
-	}
-
-	.bc-mobile-appbar__actions :global(a:focus-visible),
-	.bc-mobile-appbar__actions :global(label:focus-visible),
-	.bc-mobile-appbar__actions :global(button:focus-visible) {
-		outline: 2px solid rgba(28, 28, 28, 0.64);
-		outline-offset: 2px;
-	}
-
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(a:focus-visible),
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(label:focus-visible),
-	.bc-mobile-appbar--dark .bc-mobile-appbar__actions :global(button:focus-visible) {
-		outline-color: rgba(255, 255, 255, 0.86);
-	}
-
-	.bc-mobile-appbar__actions :global(svg),
-	.bc-mobile-appbar__actions :global(svg *) {
-		color: currentColor;
-		stroke: currentColor;
 	}
 
 	@media (max-width: 374px) {

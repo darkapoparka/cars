@@ -1,4 +1,9 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { tick } from 'svelte';
   import { brand } from '$config/brand';
   import { featuredVideos } from '$data/videos';
@@ -25,12 +30,12 @@
 <section class="dn-videos" aria-labelledby="videos-title">
   <div class="container">
       <div class="dn-videos__heading dn-home-section-heading dn-home-section-heading--banner dn-home-banner-frame dn-home-banner-copy">
-        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__wordmark"><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={40} /></span>YouTube</span></h2>
+        <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__wordmark"><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={40} /></span>{i18n.t("m_fb7accfff8c6")}</span></h2>
         
-        <a class="dn-videos__channel dn-home-section-action" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
-          <span class="dn-videos__channel-label">Към канала</span>
+        <a class="dn-videos__channel dn-home-section-action" href={i18n.href(brand.youtubeUrl)} target="_blank" rel="noopener noreferrer">
+          <span class="dn-videos__channel-label">{i18n.t("m_19f3fcdf5d1c")}</span>
           <Icon name="arrow-right" size={16} />
-          <span class="dn-sr-only"> в YouTube (нов раздел)</span>
+          <span class="dn-sr-only"> {i18n.t("m_fd19f28ff04b")}</span>
         </a>
       </div>
 
@@ -43,11 +48,11 @@
                 class="dn-video-card__play"
                 type="button"
                 hidden={activeVideo === video.id}
-                aria-label={`Пуснете видеото: ${video.title}`}
+                aria-label={i18n.t("m_c55e478d087b", { p0: i18n.text(video.title) })}
                 onclick={(event) => play(video.id, event)}
               >
                 <img src={video.thumbnail} alt="" width="720" height="404" loading="lazy" decoding="async" />
-                <span class="dn-video-card__title" aria-hidden="true"><span>{video.title}</span></span>
+                <span class="dn-video-card__title" aria-hidden="true"><span>{i18n.text(video.title)}</span></span>
                 <span class="dn-video-card__play-icon" aria-hidden="true">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
                 </span>
@@ -56,23 +61,23 @@
               {#if activeVideo === video.id}
                 <iframe
                   src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0&playsinline=1`}
-                  title={video.title}
+                  title={i18n.text(video.title)}
                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   allowfullscreen
                   referrerpolicy="strict-origin-when-cross-origin"
                   {@attach (element) => { element.focus(); }}
                 ></iframe>
-                <button class="dn-video-card__close" type="button" onclick={stop} aria-label={`Затворете видеото: ${video.title}`}><Icon name="x" size={20} /></button>
+                <button class="dn-video-card__close dn-icon-button" type="button" onclick={stop} aria-label={i18n.t("m_1d77cbbb4297", { p0: i18n.text(video.title) })}><Icon name="x" size={18} /></button>
               {/if}
             </div>
-            <h3 class="dn-sr-only">{video.title}</h3>
+            <h3 class="dn-sr-only">{i18n.text(video.title)}</h3>
           </article>
         {/each}
-        <a class="dn-videos__all-card" href={brand.youtubeUrl} target="_blank" rel="noopener noreferrer">
+        <a class="dn-videos__all-card" href={i18n.href(brand.youtubeUrl)} target="_blank" rel="noopener noreferrer">
           <span class="dn-videos__all-icon"><SocialBrandIcon name="youtube" size={32} /></span>
-          <strong>Всички видеа</strong>
-          <span class="dn-videos__all-arrow">Към канала<Icon name="arrow-right" size={18} /></span>
-          <span class="dn-sr-only">Отваря се в нов раздел</span>
+          <strong>{i18n.t("m_86f33bfbd1c5")}</strong>
+          <span class="dn-videos__all-arrow">{i18n.t("m_19f3fcdf5d1c")}<Icon name="arrow-right" size={18} /></span>
+          <span class="dn-sr-only">{i18n.t("m_c6b9550bc423")}</span>
         </a>
       </div>
     </div>
@@ -101,7 +106,7 @@
   .dn-video-card__play:hover .dn-video-card__play-icon { background: #24272c; }
   .dn-video-card__duration { position: absolute; bottom: 10px; right: 10px; padding: 3px 6px; border-radius: 4px; background: var(--dn-ink-strong); color: #fff; font-size: var(--dn-text-caption); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
   .dn-video-card iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .dn-video-card__close { position: absolute; top: 8px; right: 8px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid #525a66; border-radius: 50%; background: var(--dn-ink-strong); color: #fff; cursor: pointer; }
+  .dn-video-card__close { position: absolute; top: 8px; right: 8px; border: 1px solid #525a66; border-radius: 50%; background: var(--dn-ink-strong); color: #fff; }
   .dn-videos__channel:hover { background: var(--dn-surface-hover); color: var(--dn-ink-strong); }
   .dn-video-card__close:hover { background: #343941; }
   a:focus-visible, button:focus-visible, iframe:focus-visible { outline: 3px solid var(--dn-red); outline-offset: -3px; }

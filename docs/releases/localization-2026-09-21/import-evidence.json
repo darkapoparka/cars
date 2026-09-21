@@ -1,0 +1,916 @@
+{
+  "schemaVersion": 1,
+  "adapter": "native-v1",
+  "template": "import",
+  "repository": "darkapoparka/cars-template-import",
+  "commit": "3db790795ade0d645348de71f510fb40ee427c28",
+  "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+  "verifiedAt": "2026-09-21T07:46:00.595Z",
+  "deployment": {
+    "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+    "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+    "state": "READY",
+    "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+    "publicAlias": "https://cars-template-import.vercel.app/"
+  },
+  "publicAudit": {
+    "path": "runtime/localization-rollout-20260921/public-audits/import-preferences.json",
+    "sha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+    "summary": null
+  },
+  "sourceEvidence": [
+    {
+      "path": "docs/localization/evidence/acceptance.json",
+      "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+      "bytes": 58624
+    },
+    {
+      "path": "docs/localization/evidence/production.json",
+      "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+      "bytes": 8869
+    },
+    {
+      "path": "docs/localization/evidence/runtime-source.json",
+      "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+      "bytes": 283817
+    },
+    {
+      "path": "docs/localization/evidence/source-selection.json",
+      "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+      "bytes": 87620
+    },
+    {
+      "path": "docs/localization/evidence/preferences-320.png",
+      "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+      "bytes": 73625
+    },
+    {
+      "path": "docs/localization/evidence/preferences-1440.png",
+      "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+      "bytes": 190941
+    },
+    {
+      "path": "docs/localization/HANDOFF.md",
+      "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+      "bytes": 8933
+    }
+  ],
+  "catalogAudit": {
+    "catalogs": [
+      {
+        "descriptor": {
+          "format": "typescript-pair",
+          "path": "src/lib/locale/messages.ts",
+          "en": "en",
+          "bg": "bg"
+        },
+        "keys": 15,
+        "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+      }
+    ],
+    "declaredCatalogParityPassed": true,
+    "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+  },
+  "checks": {
+    "catalog-completeness": {
+      "name": "catalog-completeness",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "8cc9cd0239d132798c293095c9bc8dadd1ffe766553cda5d27892e5f27c64e23"
+    },
+    "hardcoded-ui": {
+      "name": "hardcoded-ui",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "12f5d46fefde8ff89732c79371f4f8103a587ea96d05afb28f13fbc5ca01f3ef"
+    },
+    "native-routing": {
+      "name": "native-routing",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "40eb64abf6e2aea430463bc3135e4148a3a33abe08576471d70b4695efe37870"
+    },
+    "standalone-journeys": {
+      "name": "standalone-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "1565290fd0163575e8663cb47dbcc9e93a7412f26de1fbee8468ffcd076963bd"
+    },
+    "mounted-journeys": {
+      "name": "mounted-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "b4e2731668deec7d4687254e87e93b88e696dbbe6cafc33c8b47cd26c526a406"
+    },
+    "public-journeys": {
+      "name": "public-journeys",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "065e9a0d9a6244c3e356eec4b725aa5d5f639e4a0cd82c646efa97e2be863eae"
+    },
+    "preferences-no-js": {
+      "name": "preferences-no-js",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "feea6381735276d8669e5e3b7f95873c1e5d1cd6ddb113ea4b673f614bd7a04c"
+    },
+    "preferences-storage-disabled": {
+      "name": "preferences-storage-disabled",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "03eaefa6ccb8969c973d56787274deb310f24158cc3fd2714db00a8e7ad9db13"
+    },
+    "preferences-races": {
+      "name": "preferences-races",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "5c0543bc062c2dc5d013e5a815870bbd3a93114e7d2a40cf703f662aa97b783f"
+    },
+    "request-isolation": {
+      "name": "request-isolation",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "30962d849a9cd720b17c9da17b0007b87deef58a2abcf5c5df0c7e1f46e674f6"
+    },
+    "security-write-blocking": {
+      "name": "security-write-blocking",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "3f97c29ad68749fb7e436c7fb05907a4877a7170129221894e910412c78217f9"
+    },
+    "assets-preserved": {
+      "name": "assets-preserved",
+      "status": "passed",
+      "basis": {
+        "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+        "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+        "deployment": {
+          "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        },
+        "publicAuditSha256": "14beb75150f321045d60a3ee0eb9630a8ed8010ccd38be6512c93561cd3dd54b",
+        "sourceEvidence": [
+          {
+            "path": "docs/localization/evidence/acceptance.json",
+            "sha256": "66026dd3aeba75c55f048ea836a125ed3174d5056d0be77660bfaee799bb1f43",
+            "bytes": 58624
+          },
+          {
+            "path": "docs/localization/evidence/production.json",
+            "sha256": "4e9259d62cdf40c8653491709ad01d0be3871bb2b6a20e6fb0648d46dad80283",
+            "bytes": 8869
+          },
+          {
+            "path": "docs/localization/evidence/runtime-source.json",
+            "sha256": "434e97ff83d14b25a359cd547fce5ae496776b4f3b1160fe1fc5ec619eb417aa",
+            "bytes": 283817
+          },
+          {
+            "path": "docs/localization/evidence/source-selection.json",
+            "sha256": "80f9302c4ebd795bfba211a9a8e6e706d63bb7aca170494e3a0cea1efc9f0098",
+            "bytes": 87620
+          },
+          {
+            "path": "docs/localization/evidence/preferences-320.png",
+            "sha256": "ef01afa469dba8c54a12974656a06e6c65b48e011c8118645705ee26ffb0d56a",
+            "bytes": 73625
+          },
+          {
+            "path": "docs/localization/evidence/preferences-1440.png",
+            "sha256": "88d606cd846888af605e961e375e3499666835f4b11123a007b448100f1ebebf",
+            "bytes": 190941
+          },
+          {
+            "path": "docs/localization/HANDOFF.md",
+            "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+            "bytes": 8933
+          }
+        ],
+        "catalogAudit": {
+          "catalogs": [
+            {
+              "descriptor": {
+                "format": "typescript-pair",
+                "path": "src/lib/locale/messages.ts",
+                "en": "en",
+                "bg": "bg"
+              },
+              "keys": 15,
+              "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+            }
+          ],
+          "declaredCatalogParityPassed": true,
+          "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+        }
+      },
+      "evidenceSha256": "d628fe42f5abc4a5876b38d79b4c2a58c171cd1c1d917af9d52a843d152b196c"
+    }
+  }
+}

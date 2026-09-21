@@ -28,7 +28,7 @@
 		<Card.Root>
 			<Card.Header class="border-b">
 				<img
-					class="ring-border aspect-square w-full rounded-lg object-cover ring-1"
+					class="aspect-square w-full rounded-lg object-cover ring-1 ring-border"
 					src={data.agent.image}
 					alt=""
 				/>
@@ -45,15 +45,15 @@
 			<Card.Content class="grid gap-4 p-4">
 				<div class="grid grid-cols-3 gap-3 text-sm">
 					<div>
-						<p class="text-muted-foreground m-0 text-xs">Open leads</p>
+						<p class="m-0 text-xs text-muted-foreground">Open leads</p>
 						<p class="m-0 font-semibold tabular-nums">{formatNumber(data.agent.openInquiries)}</p>
 					</div>
 					<div>
-						<p class="text-muted-foreground m-0 text-xs">Sales</p>
+						<p class="m-0 text-xs text-muted-foreground">Sales</p>
 						<p class="m-0 font-semibold tabular-nums">{formatNumber(data.agent.sales)}</p>
 					</div>
 					<div>
-						<p class="text-muted-foreground m-0 text-xs">Rating</p>
+						<p class="m-0 text-xs text-muted-foreground">Rating</p>
 						<p class="m-0 font-semibold tabular-nums">{data.agent.rating}</p>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 					<div class="grid gap-2 sm:grid-cols-[1fr_auto]">
 						<select
 							name="status"
-							class="border-input bg-background focus-visible:ring-ring h-10 rounded-lg border px-3 text-sm capitalize outline-none focus-visible:ring-3"
+							class="h-10 rounded-lg border border-input bg-background px-3 text-sm capitalize outline-none focus-visible:ring-3 focus-visible:ring-ring"
 						>
 							{#each statuses as statusName (statusName)}
 								<option value={statusName} selected={data.agent.status === statusName}>
@@ -74,7 +74,7 @@
 					<Input name="note" value={data.agent.note} />
 				</form>
 			</Card.Content>
-			<Card.Footer class="text-muted-foreground justify-between border-t text-xs">
+			<Card.Footer class="justify-between border-t text-xs text-muted-foreground">
 				<span>Updated {formatDate(data.agent.updatedAt)}</span>
 				<Button href="/admin/agents" variant="ghost" size="sm">Back</Button>
 			</Card.Footer>
@@ -103,18 +103,18 @@
 								<Table.Row>
 									<Table.Cell>
 										<p class="m-0 font-medium">{inquiry.contactName}</p>
-										<p class="text-muted-foreground m-0 text-xs">{inquiry.contactEmail}</p>
+										<p class="m-0 text-xs text-muted-foreground">{inquiry.contactEmail}</p>
 									</Table.Cell>
 									<Table.Cell>
 										<p class="m-0 font-medium">{inquiry.vehicleTitle ?? inquiry.source}</p>
-										<p class="text-muted-foreground m-0 text-xs">{inquiry.message}</p>
+										<p class="m-0 text-xs text-muted-foreground">{inquiry.message}</p>
 									</Table.Cell>
 									<Table.Cell>
 										<Badge variant={statusVariant(inquiry.status)} class="capitalize">
 											{formatStatus(inquiry.status)}
 										</Badge>
 									</Table.Cell>
-									<Table.Cell class="text-muted-foreground hidden text-xs lg:table-cell">
+									<Table.Cell class="hidden text-xs text-muted-foreground lg:table-cell">
 										{formatDate(inquiry.createdAt)}
 									</Table.Cell>
 								</Table.Row>

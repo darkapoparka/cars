@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
 	import { ArrowRight } from '@lucide/svelte';
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
@@ -92,7 +94,7 @@
 
 		event.preventDefault();
 		selectedService = id;
-		void goto(resolve(serviceRequestPath(id)), { keepFocus: true });
+		void goto(i18n.href(resolve(serviceRequestPath(id))), { keepFocus: true });
 	}
 
 	function buildServiceNotes() {
@@ -140,8 +142,7 @@
 
 		serviceSubmitState = 'error';
 		serviceSubmitMessage =
-			result.error ||
-			`Не успяхме да изпратим запитването. Моля, обадете се на ${daynightSite.phoneLabel}.`;
+			result.error || i18n.t('pattern.092b5d19f038', { v0: daynightSite.phoneLabel });
 	}
 </script>
 
@@ -149,40 +150,44 @@
 	id="main-content"
 	tabindex="-1"
 	class="desktop-services"
-	aria-label={`Услуги ${daynightSite.shortName}`}
+	aria-label={i18n.t('pattern.eb6cae93a699', { v0: daynightSite.shortName })}
 >
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
-		title="Услуги за твоя автомобил"
+		title={i18n.t('copy.d700ec2758ef')}
 		panel="light"
 		compact
 	>
 		<div class="services-chooser">
-			<h2 id="services-choice-title">Какво ти е необходимо?</h2>
+			<h2 id="services-choice-title">{i18n.t('copy.c4eb9ace64ee')}</h2>
 			<nav class="services-shortcuts" aria-labelledby="services-choice-title">
 				{#each services as service (service.id)}
 					<a
-						href={resolve(serviceRequestPath(service.id))}
-						onclick={(event) => chooseService(service.id, event)}>{service.title}</a
+						href={i18n.href(resolve(serviceRequestPath(service.id)))}
+						onclick={(event) => chooseService(service.id, event)}>{i18n.text(service.title)}</a
 					>
 				{/each}
 			</nav>
 			<p class="services-help">
-				Не знаеш коя услуга ти трябва? <a href={daynightSite.phoneHref}>Обади ни се</a>
+				{i18n.t('copy.bade5f3f4082')}
+				<a href={i18n.href(daynightSite.phoneHref)}>{i18n.t('copy.2384a5f73657')}</a>
 			</p>
 		</div>
 	</DesktopYellowRouteHero>
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от {daynightSite.shortName}</h2>
+			<h2 class="desktop-services-sr-only">
+				{i18n.t('copy.397d7e3473ba')}
+				{daynightSite.shortName}
+			</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}
 					<a
 						class="desktop-services-card"
-						href={resolve(serviceRequestPath(service.id))}
-						aria-label={`Заяви услуга: ${service.title}`}
+						href={i18n.href(resolve(serviceRequestPath(service.id)))}
+						aria-label={i18n.t('pattern.98f83adf5270', { v0: i18n.text(service.title) })}
 						onclick={(event) => chooseService(service.id, event)}
 					>
 						<span
@@ -190,13 +195,18 @@
 							aria-hidden="true"
 							style:--service-card-position={service.imagePosition}
 						>
-							<img src={resolve(service.image)} alt="" aria-hidden="true" loading="lazy" />
+							<img
+								src={i18n.asset(resolve(service.image))}
+								alt=""
+								aria-hidden="true"
+								loading="lazy"
+							/>
 						</span>
 						<div class="desktop-services-card__content">
-							<h3>{service.title}</h3>
-							<p>{service.summary}</p>
+							<h3>{i18n.text(service.title)}</h3>
+							<p>{i18n.text(service.summary)}</p>
 							<span class="desktop-services-card__cta" aria-hidden="true">
-								<span>Избери услугата</span><ArrowRight size={18} />
+								<span>{i18n.t('copy.b3b1d6656697')}</span><ArrowRight size={18} />
 							</span>
 						</div>
 					</a>
@@ -208,10 +218,9 @@
 	<section class="desktop-services-request" id="services-request">
 		<div class="desktop-services-request__shell container">
 			<div class="desktop-services-request__copy">
-				<h2>Да уточним<br />детайлите.</h2>
+				<h2>{i18n.t('copy.9042389747b0')}<br />{i18n.t('copy.6a83ad41f94f')}</h2>
 				<p>
-					Остави телефон и ни разкажи за автомобила. Ще се свържем с теб, за да обсъдим услугата,
-					документите и удобен срок.
+					{i18n.t('copy.09f7bdbf30aa')}
 				</p>
 			</div>
 
@@ -221,52 +230,72 @@
 				method="get"
 				onsubmit={handleServiceSubmit}
 			>
-				<input type="hidden" name="intent" value="services" />
+				<input {@attach i18n.validation} type="hidden" name="intent" value="services" />
 				<label class="desktop-services-honeypot" aria-hidden="true">
-					<span>Компания</span>
-					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
+					<span>{i18n.t('copy.64d92044a1ff')}</span>
+					<input
+						{@attach i18n.validation}
+						type="text"
+						tabindex="-1"
+						autocomplete="off"
+						bind:value={companyWebsite}
+					/>
 				</label>
 
 				<div class="desktop-services-form__grid">
 					<label class="desktop-services-field">
-						<span>Име</span>
-						<input name="name" type="text" bind:value={name} placeholder="Име и фамилия" />
+						<span>{i18n.t('copy.7848bd195104')}</span>
+						<input
+							{@attach i18n.validation}
+							name="name"
+							type="text"
+							bind:value={name}
+							placeholder={i18n.t('copy.a3203bcb4cff')}
+						/>
 					</label>
 					<label class="desktop-services-field">
-						<span>Телефон</span>
+						<span>{i18n.t('copy.822f9fd9ba2d')}</span>
 						<input
+							{@attach i18n.validation}
 							name="phone"
 							type="tel"
 							bind:value={phone}
-							placeholder="Телефон за връзка"
+							placeholder={i18n.t('copy.b4a2956e4ac2')}
 							autocomplete="tel"
 							required
 						/>
 					</label>
 					<label class="desktop-services-field" for="desktop-services-service">
-						<span>Услуга</span>
-						<select id="desktop-services-service" name="service" bind:value={selectedService}>
+						<span>{i18n.t('copy.629f17f3b66f')}</span>
+						<select
+							{@attach i18n.validation}
+							id="desktop-services-service"
+							name="service"
+							bind:value={selectedService}
+						>
 							{#each services as service (service.id)}
-								<option value={service.id}>{service.title}</option>
+								<option value={service.id}>{i18n.text(service.title)}</option>
 							{/each}
 						</select>
 					</label>
 					<label class="desktop-services-field">
-						<span>Автомобил</span>
+						<span>{i18n.t('copy.e549eadf1b38')}</span>
 						<input
+							{@attach i18n.validation}
 							name="vehicle"
 							type="text"
 							bind:value={vehicle}
-							placeholder="Марка, модел или линк към обява"
+							placeholder={i18n.t('copy.7558220498f7')}
 						/>
 					</label>
 					<label class="desktop-services-field desktop-services-field--wide">
-						<span>Съобщение</span>
+						<span>{i18n.t('copy.5afae14709c7')}</span>
 						<textarea
+							{@attach i18n.validation}
 							name="message"
 							bind:value={message}
 							rows="2"
-							placeholder="Какво искате да уточним?"
+							placeholder={i18n.t('copy.c72dac4e6b0f')}
 						></textarea>
 					</label>
 				</div>
@@ -278,7 +307,7 @@
 						role={serviceSubmitState === 'error' ? 'alert' : 'status'}
 						aria-live="polite"
 					>
-						{serviceSubmitMessage}
+						{i18n.text(serviceSubmitMessage)}
 					</p>
 				{/if}
 
@@ -287,7 +316,11 @@
 					type="submit"
 					disabled={serviceSubmitState === 'submitting'}
 				>
-					<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}</span>
+					<span
+						>{serviceSubmitState === 'submitting'
+							? i18n.t('copy.acfcd771108c')
+							: i18n.t('copy.8d4343e23a1b')}</span
+					>
 				</button>
 			</form>
 		</div>

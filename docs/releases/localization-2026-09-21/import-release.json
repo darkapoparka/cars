@@ -1,0 +1,143 @@
+{
+  "repository": "darkapoparka/cars-template-import",
+  "commit": "3db790795ade0d645348de71f510fb40ee427c28",
+  "approved": true,
+  "release": "native-en-bg-localization-2026-09-21",
+  "verifiedAt": "2026-09-21T07:46:00.595Z",
+  "runtime": {
+    "node": "22.x",
+    "npm": "11.x",
+    "lockfile": "package-lock.json"
+  },
+  "modes": {
+    "standalone": "exact Git/Vercel source verified at 320, 390 and 1440",
+    "mounted": "native adapter and isolated mounted fixtures verified; dealer publication still requires dealer QA"
+  },
+  "checks": [
+    {
+      "name": "exact production deployment",
+      "status": "passed",
+      "deploymentId": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c"
+    },
+    {
+      "name": "public preference and write-blocking audit",
+      "status": "passed",
+      "passed": 16,
+      "failed": 0
+    },
+    {
+      "name": "native EN/BG catalog parity and acceptance evidence",
+      "status": "passed",
+      "catalogs": [
+        {
+          "keys": 15,
+          "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+        }
+      ]
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "widths": [
+      320,
+      390,
+      1440
+    ]
+  },
+  "nativeLocalization": {
+    "schemaVersion": 1,
+    "adapter": "native-v1",
+    "repository": "darkapoparka/cars-template-import",
+    "commit": "3db790795ade0d645348de71f510fb40ee427c28",
+    "locales": [
+      "en",
+      "bg"
+    ],
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "verifiedAt": "2026-09-21T07:46:00.595Z",
+    "evidenceSha256": "c52499e0417dc1dab877f411e364bbef73e756131489e54ca0529a2e520dbaf3",
+    "catalogs": [
+      {
+        "format": "typescript-pair",
+        "path": "src/lib/locale/messages.ts",
+        "en": "en",
+        "bg": "bg"
+      }
+    ],
+    "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+    "deployment": {
+      "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+      "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+      "state": "READY",
+      "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+      "publicAlias": "https://cars-template-import.vercel.app/"
+    },
+    "checks": [
+      {
+        "name": "catalog-completeness",
+        "status": "passed",
+        "evidenceSha256": "8cc9cd0239d132798c293095c9bc8dadd1ffe766553cda5d27892e5f27c64e23"
+      },
+      {
+        "name": "hardcoded-ui",
+        "status": "passed",
+        "evidenceSha256": "12f5d46fefde8ff89732c79371f4f8103a587ea96d05afb28f13fbc5ca01f3ef"
+      },
+      {
+        "name": "native-routing",
+        "status": "passed",
+        "evidenceSha256": "40eb64abf6e2aea430463bc3135e4148a3a33abe08576471d70b4695efe37870"
+      },
+      {
+        "name": "standalone-journeys",
+        "status": "passed",
+        "evidenceSha256": "1565290fd0163575e8663cb47dbcc9e93a7412f26de1fbee8468ffcd076963bd"
+      },
+      {
+        "name": "mounted-journeys",
+        "status": "passed",
+        "evidenceSha256": "b4e2731668deec7d4687254e87e93b88e696dbbe6cafc33c8b47cd26c526a406"
+      },
+      {
+        "name": "public-journeys",
+        "status": "passed",
+        "evidenceSha256": "065e9a0d9a6244c3e356eec4b725aa5d5f639e4a0cd82c646efa97e2be863eae"
+      },
+      {
+        "name": "preferences-no-js",
+        "status": "passed",
+        "evidenceSha256": "feea6381735276d8669e5e3b7f95873c1e5d1cd6ddb113ea4b673f614bd7a04c"
+      },
+      {
+        "name": "preferences-storage-disabled",
+        "status": "passed",
+        "evidenceSha256": "03eaefa6ccb8969c973d56787274deb310f24158cc3fd2714db00a8e7ad9db13"
+      },
+      {
+        "name": "preferences-races",
+        "status": "passed",
+        "evidenceSha256": "5c0543bc062c2dc5d013e5a815870bbd3a93114e7d2a40cf703f662aa97b783f"
+      },
+      {
+        "name": "request-isolation",
+        "status": "passed",
+        "evidenceSha256": "30962d849a9cd720b17c9da17b0007b87deef58a2abcf5c5df0c7e1f46e674f6"
+      },
+      {
+        "name": "security-write-blocking",
+        "status": "passed",
+        "evidenceSha256": "3f97c29ad68749fb7e436c7fb05907a4877a7170129221894e910412c78217f9"
+      },
+      {
+        "name": "assets-preserved",
+        "status": "passed",
+        "evidenceSha256": "d628fe42f5abc4a5876b38d79b4c2a58c171cd1c1d917af9d52a843d152b196c"
+      }
+    ]
+  }
+}

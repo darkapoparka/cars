@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import '$lib/styles/desktop-discovery.css';
 	import { onMount } from 'svelte';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
@@ -32,7 +35,7 @@
 </script>
 
 <div class="inventory-filter-triggers" class:inventory-filter-triggers--sidebar={sidebar}>
-	{#if sidebar}<h2>Филтри</h2>{/if}
+	{#if sidebar}<h2>{i18n.t('copy.182fd6b7e7e5')}</h2>{/if}
 	{#each visible as field (field.name)}
 		{@const selected = inventory.getFieldValues(field.name)}
 		<button
@@ -44,10 +47,12 @@
 		>
 			<span
 				>{selected.length === 1
-					? (field.options.find((option) => option.value === selected[0])?.label ?? field.label)
+					? i18n.spec(
+							field.options.find((option) => option.value === selected[0])?.label ?? field.label
+						)
 					: selected.length
-						? `${field.label} (${selected.length})`
-						: field.label}</span
+						? `${i18n.text(field.label)} (${selected.length})`
+						: i18n.text(field.label)}</span
 			><ChevronDown size={16} />
 		</button>
 	{/each}
@@ -57,7 +62,9 @@
 		class="all-filters"
 		aria-haspopup="dialog"
 		onclick={(event) => openFromTrigger(event)}
-		><SlidersHorizontal size={18} /><span>{sidebar ? 'Всички филтри' : 'Още филтри'}</span></button
+		><SlidersHorizontal size={18} /><span
+			>{sidebar ? i18n.t('copy.dadecddc582b') : i18n.t('copy.1d58508bde13')}</span
+		></button
 	>
 </div>
 

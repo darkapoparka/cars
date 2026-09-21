@@ -1,3 +1,4 @@
+import { localeFromUrl } from '$lib/locale/core';
 import {
 	homeFiveBrandCardsForLocale,
 	homeFiveComparePairsFromVehicles,
@@ -20,7 +21,7 @@ import { inventoryMobileDataFromState } from '$lib/auxero/inventory-mobile';
 import { getInventoryState } from '$lib/server/inventory-state';
 import { posts } from '$lib/data/blog';
 import { vehicles } from '$lib/data/vehicles';
-import { getMessages, resolveLocale } from '$lib/i18n/messages';
+import { getMessages } from '$lib/i18n/messages';
 import { extractAuxeroRuntimeHtml, renderAuxeroPageDocument } from '$lib/server/auxero-page';
 
 const escapeHeadAttribute = (value: string) =>
@@ -32,7 +33,7 @@ const escapeHeadAttribute = (value: string) =>
 const unavailableFeaturedPhotos = new Set(['11774283016080050', '11775140982675572']);
 
 export const buildHomeFivePageData = ({ request, url }: { request: Request; url: URL }) => {
-	const locale = resolveLocale(url.searchParams.get('lang'));
+	const locale = localeFromUrl(url);
 	const activeHeroMode = resolveHomeFiveHeroActionMode(url.searchParams.get('intent'));
 	const messages = getMessages(locale);
 	const inventoryState = getInventoryState('listing-grid4-columns.html', {

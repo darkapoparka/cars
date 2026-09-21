@@ -1,0 +1,354 @@
+{
+	"recordedAt": "2026-09-20T16:48:47.957Z",
+	"repository": "darkapoparka/cars-template-import",
+	"branch": "main",
+	"applicationCommit": "b2b99376ccdd7accd6486366220032afbd90d1e3",
+	"runtimeSha256": "6065cf3b1b7f3d7bce1274895f1c5f99d7ec6e156f81e0382063fc8cb7896fe6",
+	"verifiedFiles": 1540,
+	"deployment": {
+		"id": "dpl_GFCgAQo9Ef6Zzxtx138MxvE6s4bN",
+		"url": "https://cars-template-import-mrcerd3m0-tyj5.vercel.app",
+		"alias": "https://cars-template-import.vercel.app",
+		"state": "READY",
+		"source": "git",
+		"projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+		"teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+		"readyAt": "2026-09-20T16:39:47.755Z"
+	},
+	"browser": {
+		"stats": {
+			"startTime": "2026-09-20T16:43:54.593Z",
+			"duration": 46958.19,
+			"expected": 15,
+			"skipped": 0,
+			"unexpected": 0,
+			"flaky": 0
+		},
+		"cases": [
+			{
+				"title": "native constraints use the page language in an opposite-language browser: en",
+				"file": "localization-validation.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "native constraints use the page language in an opposite-language browser: bg",
+				"file": "localization-validation.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "native route families en 390",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "native route families bg 390",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "preferences save dismiss reload and focus 320",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "preferences save dismiss reload and focus 390",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "preferences save dismiss reload and focus 1440",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "stale save cannot navigate after close and reopen",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "no JavaScript preferences and contact are native forms",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "explicit URL works with blocked storage and conflicting preferences",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "language/country and cookies cannot leak between requests",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "both import modes and sell wizard validate without business writes",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "blocked cookies still allow explicit language and independent country selection",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "client locale navigation and back update language, copy, SEO and links without reload",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			},
+			{
+				"title": "only offered public routes reroute; resource and admin boundaries remain separate",
+				"file": "localization.e2e.ts",
+				"status": "expected"
+			}
+		]
+	},
+	"http": {
+		"utc": "2026-09-20T16:43:47.606Z",
+		"origin": "https://cars-template-import.vercel.app",
+		"sourceCommit": "b2b99376ccdd7accd6486366220032afbd90d1e3",
+		"deploymentId": "dpl_GFCgAQo9Ef6Zzxtx138MxvE6s4bN",
+		"requests": [
+			{
+				"path": "/en",
+				"status": 200,
+				"language": "en",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/en/inventory",
+				"status": 200,
+				"language": "en",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/en/import",
+				"status": 200,
+				"language": "en",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/en/sell-your-car",
+				"status": 200,
+				"language": "en",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/en/financing",
+				"status": 200,
+				"language": "en",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/en/calculator",
+				"status": 200,
+				"language": "en",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/en/contact?topic=trade-in",
+				"status": 200,
+				"language": "en",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/en/locale-settings",
+				"status": 200,
+				"language": "en",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/bg",
+				"status": 200,
+				"language": "bg",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/bg/inventory",
+				"status": 200,
+				"language": "bg",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/bg/import",
+				"status": 200,
+				"language": "bg",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/bg/sell-your-car",
+				"status": 200,
+				"language": "bg",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/bg/financing",
+				"status": 200,
+				"language": "bg",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/bg/calculator",
+				"status": 200,
+				"language": "bg",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/bg/contact?topic=trade-in",
+				"status": 200,
+				"language": "bg",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/bg/locale-settings",
+				"status": 200,
+				"language": "bg",
+				"cache": "private, no-store",
+				"edgeCache": "MISS",
+				"selector": true,
+				"documentLanguage": true,
+				"preview": "noindex, nofollow"
+			},
+			{
+				"path": "/en/inventory/missing-synthetic",
+				"status": 404,
+				"cache": "private, no-store"
+			},
+			{
+				"path": "/bg/blog/missing-synthetic",
+				"status": 404,
+				"cache": "private, no-store"
+			},
+			{
+				"path": "/ar/contact",
+				"status": 404,
+				"cache": "private, no-store"
+			},
+			{
+				"path": "/en/api/inventory/count",
+				"status": 404,
+				"cache": "public, max-age=0, must-revalidate"
+			},
+			{
+				"path": "/contact?topic=trade-in",
+				"status": 307,
+				"location": "/bg/contact?topic=trade-in"
+			},
+			{
+				"path": "/assets/vehicle-placeholder.svg",
+				"status": 200,
+				"cache": "public, max-age=0, must-revalidate"
+			}
+		],
+		"preferenceChecks": [
+			{
+				"kind": "save",
+				"status": 200,
+				"destination": "/bg/contact?topic=trade-in#main-content",
+				"cookieNames": ["cars_prompt", "cars_locale", "cars_country"],
+				"secureHostOnlyCookies": true
+			},
+			{
+				"kind": "dismiss",
+				"status": 200,
+				"acceptsLanguageOrCountry": false
+			},
+			{
+				"kind": "cross-origin",
+				"status": 403,
+				"writesCookies": false
+			},
+			{
+				"kind": "disabled-language",
+				"status": 400,
+				"writesCookies": false
+			},
+			{
+				"kind": "business-fields",
+				"status": 400,
+				"writesCookies": false
+			},
+			{
+				"kind": "external-return",
+				"status": 400,
+				"writesCookies": false
+			},
+			{
+				"kind": "duplicate-json",
+				"status": 400,
+				"writesCookies": false
+			},
+			{
+				"kind": "oversize",
+				"status": 413,
+				"writesCookies": false
+			}
+		],
+		"status": "passed"
+	},
+	"preservedDraftFiles": 140,
+	"notes": [
+		"Vercel consumes Vercel-CDN-Cache-Control; public acceptance asserts the returned Cache-Control and CDN behavior.",
+		"The invalid localized API path returns a generic non-personalized text/plain 404, with no visitor state or preference cookies.",
+		"No CLI deployment, new project, Cars pin update or dealer rollout."
+	]
+}

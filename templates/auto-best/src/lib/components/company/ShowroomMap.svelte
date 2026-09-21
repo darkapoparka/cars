@@ -1,4 +1,8 @@
 <script lang="ts">
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { brand } from '$config/brand';
   import { showroomCoordinates } from '$data/company';
 
@@ -10,11 +14,11 @@
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={`Карта до ${brand.name}`}
+    title={i18n.t("m_cd07db46b2c6", { p0: brand.name })}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
-  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Отворете в Google Maps</a>
+  <a class="dn-showroom-map__link" href={i18n.href(directionsUrl)} target="_blank" rel="noreferrer">{i18n.t("m_7f22a6352074")}</a>
 </div>
 
 <style>

@@ -2,6 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
+  showroomCoordinates: { latitude: number; longitude: number };
   addressLine: string;
   address: string;
   phone: string;
@@ -23,6 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
+  showroomCoordinates: { latitude: 42.648551, longitude: 23.341905 },
   youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
   instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
   facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',

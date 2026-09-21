@@ -1,0 +1,110 @@
+.header {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header {
+    position: relative;
+    z-index: 40;
+    display: block;
+    width: 100%;
+    margin: 0;
+    color: var(--inverse-foreground);
+    background: linear-gradient(110deg, var(--inverse-control), var(--inverse));
+    border-bottom: 1px solid var(--inverse-border);
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    width: min(92%, var(--layout-wide-max));
+    min-height: 5rem;
+    margin-inline: auto;
+  }
+  .brand {
+    position: relative;
+    display: block;
+    width: 12rem;
+    height: 2.75rem;
+    border-radius: var(--radius-sm);
+  }
+  .segments {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .segments a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding-inline: 0.875rem;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-medium);
+    color: var(--inverse-muted);
+    border-radius: var(--radius-sm);
+    transition:
+      color var(--duration-interaction),
+      background-color var(--duration-interaction);
+  }
+  .segments a:hover {
+    color: var(--inverse-foreground);
+    background: var(--inverse-control);
+  }
+  .segments a[aria-current="page"] {
+    color: var(--inverse-foreground);
+    text-decoration: underline;
+    text-decoration-color: var(--inverse-muted);
+    text-underline-offset: 0.5rem;
+  }
+  .contact {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .contact a {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding-inline: 0.875rem;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--duration-interaction);
+  }
+  .contact a:hover {
+    background: var(--inverse-control);
+  }
+  .contact .showroom {
+    padding-inline: 1rem;
+    color: var(--inverse-foreground);
+    background: transparent;
+    border: 1px solid var(--inverse-border);
+  }
+  .contact .showroom:hover {
+    background: var(--inverse-control);
+  }
+  .header a:focus-visible {
+    outline: 2px solid var(--inverse-foreground);
+    outline-offset: 3px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1359px) {
+  .nav {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+  .segments {
+    gap: 0.25rem;
+  }
+  .segments a {
+    padding-inline: 0.5rem;
+  }
+  .contact a[href^="tel:"] span {
+    display: none;
+  }
+}

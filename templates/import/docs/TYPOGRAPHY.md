@@ -1,49 +1,30 @@
 # Typography contract
 
-The customer template uses the self-hosted Sofia Sans family for body text,
-form fields, controls, and data. Sofia Sans SemiCondensed carries headings.
-Keep these faces when extending the template; the admin UI owns its separate
-Geist setup. Public-page tabs must not reference an unloaded admin font.
+Public copy uses self-hosted Sofia Sans. Headings use Sofia Sans SemiCondensed. Keep the admin font configuration isolated.
 
-Source of truth: `src/lib/styles/daynight.css`. Tailwind heading utilities in
-`daynight.tailwind.css` alias the same size, leading, and weight roles.
+Design values live in src/lib/styles/tokens.css. Action, MobileModeTabs, HeroFilterDialog and forms.css own their typography and geometry. Do not apply a heading weight to ordinary controls, or shrink action text through page-level CSS.
 
-| Role                   | Size / leading     | Weight    | Use                                                                  |
-| ---------------------- | ------------------ | --------- | -------------------------------------------------------------------- |
-| Quick filter           | 18px / 24px        | 400       | Homepage and inventory horizontal filter pills                       |
-| Compact search trigger | 20px / 27px        | 400       | Inventory header search label in a 44px control                      |
-| Search                 | 18px / 24px        | 400       | Search triggers, inputs, VIN/link entry and manual-entry label       |
-| Mode tab               | 18px / 24px        | 400 / 600 | Inactive / active Buy, Import, and Sell entry tabs                   |
-| Help action            | 16px / 22px        | 400       | How-it-works controls                                                |
-| Control                | 16px / 22px        | 400       | Filter options, tabs, editable form values                           |
-| Primary action         | 18px / 24px        | 600       | Submit, continue and main CTA labels                                 |
-| Body                   | 16px / 24px mobile | 400       | Instructions, descriptions and supporting copy                       |
-| Article prose          | 18px / 1.65        | 400       | Long-form reading, maximum measure 68ch                              |
-| Card title             | 18px / 24px        | 600       | Compact cards and subsection titles                                  |
-| Section title          | 22px / 28px mobile | 600       | Drawers and mobile sections                                          |
-| Page title             | 28px / 32px mobile | 600–700   | Page-level hierarchy; display headings retain their responsive scale |
-| Field label            | 14px / 20px        | 600       | Form labels and group names                                          |
-| Metadata               | 13px / 18px        | 400       | Dates, counts, legal copy and navigation captions                    |
-| Compact vehicle data   | 12px / 16px        | 400       | Specs, brand and monthly estimate in the 50/50 inventory card        |
+| Role                             | Desktop                 | Mobile                                               | Weight                  |
+| -------------------------------- | ----------------------- | ---------------------------------------------------- | ----------------------- |
+| Standard action                  | 20px                    | 18px                                                 | 400                     |
+| Compact action                   | 18px                    | 18px                                                 | 400                     |
+| Main navigation                  | 20px                    | Existing bottom-nav caption scale                    | 400                     |
+| Mode tabs                        | 22px                    | 20px                                                 | 400, including selected |
+| Picker value                     | 20px                    | 20px where this picker is used                       | 400, including selected |
+| Options and form values          | 18px                    | 18px                                                 | 400                     |
+| Field labels                     | 16px                    | 16px                                                 | 400                     |
+| Instructions / compact body copy | 16px                    | 16px                                                 | 400                     |
+| Prose / prominent copy           | 18px                    | 18px                                                 | 400                     |
+| Section headings                 | Responsive 32–36px      | Public section scale or established 22px drawer role | 600                     |
+| Metadata                         | 13px                    | 13px                                                 | 400                     |
+| Compact vehicle specifications   | Existing metadata scale | 12px / 16px                                          | 400                     |
 
-The shipped font files provide 400, 600 and 700 weights. Use the weight tokens
-rather than requesting intermediate or extra-bold faces that are not supplied.
-The normal control weight and accent state distinguish an option from a heading;
-do not make every pill bold to imply that it is clickable.
+Actions use --bc-weight-action; inputs and options use --bc-weight-control. Headings and prices retain emphasis. Selected controls use their underline, border, colour or checkmark rather than changing text weight or width.
 
-Preserve the existing 44–48px control heights. Horizontal option rails can scroll;
-do not shrink their text to fit more choices. Inventory cards keep their 50/50
-image/content split, one-line title, and price/monthly estimate on the same row.
-The internal spec grid gives mileage slightly more width. Ellipsis is suitable
-for long model names and exceptional spec values, not ordinary price pairs.
+Actions remain at least 44px high; primary actions, option rows and social links use 48px targets. Small visual icons do not mean small hit areas. Do not shrink text to squeeze more controls into a row: use wrapping or the established horizontal rail.
 
-Placeholders inherit the input's typography explicitly: the legacy stylesheet
-otherwise assigns them a separate size. Never disable browser zoom to compensate
-for small fields. CSS pixel sizes here describe the web template, not native iOS
-point-size requirements. Mobile body text is not a smaller version of desktop
-body text; density comes from spacing and content hierarchy.
+Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them with native selects to simplify implementation. The all-filters dialog has one scrolling body and a persistent action footer.
 
-Check changed roles at 360–390px and 1440px, including actual input placeholders,
-selected pills, long text, overlays and focus. A matching input-element font does
-not prove that its visible placeholder matches. Read the pseudo-element styles
-and inspect the rendered result.
+Placeholders inherit input typography. A search input inside a decorated wrapper uses a visible focus ring on that wrapper. Verify selected states, placeholder styles and keyboard focus in the browser.
+
+Test matching roles across home, inventory, About, Contact and conversion routes at 390px and 1440px, plus intermediate-width reflow. The typography-contact test suite checks action size and weight, picker selection, social links and Contact alignment. Existing suites cover selection persistence, drawers, navigation and focus.

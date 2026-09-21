@@ -57,7 +57,7 @@
 		<div class="daynight-users-card__head">
 			<div class="daynight-users-card__title">
 				<p class="h4 mb-6">Users and roles</p>
-				<p class="h7 text-secondary mb-0">{users.footerText}</p>
+				<p class="h7 mb-0 text-secondary">{users.footerText}</p>
 			</div>
 			<span class="daynight-users-count">{totalUsers} users</span>
 		</div>
@@ -137,7 +137,7 @@
 							</div>
 							<div class="daynight-users-person__copy">
 								<p class="cart-item__title clamp-1 clamp mb-4">{row.name}</p>
-								<p class="text-secondary clamp-1 clamp mb-0">{row.description}</p>
+								<p class="clamp-1 clamp mb-0 text-secondary">{row.description}</p>
 							</div>
 						</div>
 						<div class="cart-item__price daynight-users-cell">
@@ -189,7 +189,7 @@
 		<section class="dashboard-box daynight-users-notes daynight-users-box bg-white">
 			<div class="daynight-users-notes__head">
 				<p class="h4 mb-6">Бележки за достъп по роли</p>
-				<p class="h7 text-secondary mb-0">
+				<p class="h7 mb-0 text-secondary">
 					Operational guidance for admin, agent, and customer access.
 				</p>
 			</div>
@@ -197,7 +197,7 @@
 				{#each notes as note (note.title)}
 					<article class="daynight-users-note">
 						<p class="h6 mb-8">{note.title}</p>
-						<p class="h7 text-secondary mb-0">{note.text}</p>
+						<p class="h7 mb-0 text-secondary">{note.text}</p>
 					</article>
 				{/each}
 			</div>

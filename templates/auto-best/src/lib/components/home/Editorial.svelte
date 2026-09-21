@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import BrowseAllCard from './BrowseAllCard.svelte';
   import { resolve } from '$app/paths';
   import { editorial } from '$data/home';
@@ -10,11 +13,11 @@
     <div class="container">
       <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
         <h2 id="editorial-title" class="dn-home-section-title">
-          <span class="dn-heading-desktop">Полезно при избор на автомобил</span>
-          <span class="dn-heading-mobile">Полезно при избора</span>
+          <span class="dn-heading-desktop">{i18n.t("m_7badc636af8e")}</span>
+          <span class="dn-heading-mobile">{i18n.t("m_5062eeb4b9d4")}</span>
         </h2>
         
-        <a class="dn-editorial__cta dn-home-section-action" href={resolve('/blog')}>Вижте всички статии</a>
+        <a class="dn-editorial__cta dn-home-section-action" href={i18n.href(resolve('/blog'))}>{i18n.t("m_e74ad5f53e46")}</a>
       </div>
     </div>
   </div>
@@ -24,7 +27,7 @@
       <div class="dn-editorial__layout">
         {#each editorial as item (item.title)}
           <article class="dn-editorial-item">
-            <a class="dn-editorial-item__link" href={resolve(item.href as '/blog')} aria-label={item.title}>
+            <a class="dn-editorial-item__link" href={i18n.href(resolve(item.href as '/blog'))} aria-label={i18n.text(item.title)}>
               <span class="dn-editorial-item__media">
                 <img
                   src={item.image}
@@ -34,20 +37,20 @@
                   width="720"
                   height="440"
                 />
-                <span class="dn-editorial-item__badge">{item.meta}</span>
+                <span class="dn-editorial-item__badge">{i18n.text(item.meta)}</span>
               </span>
 
               <span class="dn-editorial-item__content">
-                <span class="dn-editorial-item__meta" aria-label="Категория">
-                  <span>{item.category}</span>
+                <span class="dn-editorial-item__meta" aria-label={i18n.t("m_292c06f0045a")}>
+                  <span>{i18n.text(item.category)}</span>
                 </span>
-                <h3>{item.title}</h3>
-                <span class="dn-editorial-item__summary">{item.text}</span>
+                <h3>{i18n.text(item.title)}</h3>
+                <span class="dn-editorial-item__summary">{i18n.text(item.text)}</span>
               </span>
             </a>
           </article>
         {/each}
-        <BrowseAllCard href="/blog" label="Още полезно" detail="Съвети за избор, оглед и внос" action="Прочети всички" />
+        <BrowseAllCard href="/blog" label={i18n.t("m_59c130d97440")} detail={i18n.t("m_268514fcb5da")} action={i18n.t("m_98172b05314e")} />
       </div>
     </div>
   </div>

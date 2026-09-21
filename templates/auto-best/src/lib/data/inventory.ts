@@ -1,3 +1,5 @@
+import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
+import { templateText } from '$lib/locale/messages';
 import { leadSite } from '$config/lead-site';
 
 export type VehicleCondition = 'new' | 'used';
@@ -55,4 +57,4 @@ export const featuredVehicles: Vehicle[] = inventoryRecords.map(record => ({
   href: `/listing-detail-v1/${record.id}`
 }));
 
-export const formatVehiclePrice = (priceEur: number) => `${new Intl.NumberFormat('bg-BG').format(priceEur)} €`;
+export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');

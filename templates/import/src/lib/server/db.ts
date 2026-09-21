@@ -297,12 +297,12 @@ export const buildDayNightInquiryRecord = (
 			vehicle?.agentSlug ??
 			agentSlugFromRoute(routePath) ??
 			fallbackAgent,
-		contactEmail: input.contactEmail?.trim() || daynightContact.emailLabel,
-		contactName: input.contactName?.trim() || 'Day Night Auto website lead',
-		contactPhone: input.contactPhone?.trim() || daynightContact.primaryPhoneLabel,
+		contactEmail: input.contactEmail?.trim() ?? '',
+		contactName: input.contactName?.trim() ?? '',
+		contactPhone: input.contactPhone?.trim() ?? '',
 		createdAt: stamp(),
 		id: randomUUID(),
-		message: input.message?.trim() || 'Website inquiry queued for Day Night Auto follow-up.',
+		message: input.message?.trim() ?? '',
 		routePath,
 		source: input.source ?? 'website',
 		status: input.status ?? 'new',

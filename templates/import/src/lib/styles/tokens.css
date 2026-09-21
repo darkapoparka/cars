@@ -1,0 +1,315 @@
+:root {
+	--bc-page-width: 1440px;
+	--bc-route-pill-height: 48px;
+	--bc-route-pill-font: 18px;
+	--bc-route-pill-border: #b4bcc6;
+	color-scheme: light;
+
+	--bc-font-body:
+		'Sofia Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		sans-serif;
+	--bc-font-heading:
+		'Sofia Sans SemiCondensed', 'Sofia Sans', ui-sans-serif, system-ui, -apple-system,
+		BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--bc-font-dashboard: var(--bc-font-body);
+
+	--bc-text-display: clamp(3rem, 4.4vw, 4.5rem);
+	--bc-leading-display: 1.04;
+	--bc-text-h1: clamp(2.5rem, 3.8vw, 4.25rem);
+	--bc-leading-h1: 1.08;
+	--bc-text-h2: clamp(2rem, 3vw, 3rem);
+	--bc-leading-h2: 1.12;
+	--bc-text-h3: clamp(1.75rem, 2.2vw, 2.375rem);
+	--bc-leading-h3: 1.16;
+	--bc-text-h4: 1.5rem;
+	--bc-leading-h4: 1.3;
+	--bc-text-h5: 1.25rem;
+	--bc-leading-h5: 1.35;
+	--bc-text-h6: 1.125rem;
+	--bc-leading-h6: 1.4;
+	--bc-text-h7: 1rem;
+	--bc-leading-h7: 1.5;
+	--bc-text-body: 16px;
+	/* Role scale: controls are readable at their existing tap-target height.
+	   Use only the 400/600/700 weights shipped by the Sofia Sans font assets. */
+	--bc-text-control: 1.125rem;
+	--bc-leading-control: 1.375;
+	--bc-text-filter: 1.125rem;
+	--bc-leading-filter: 1.333333;
+	--bc-text-search: 1.125rem;
+	--bc-text-search-trigger: 1.25rem;
+	--bc-leading-search: 1.333333;
+	--bc-text-prose: 1.125rem;
+	--bc-leading-prose: 1.65;
+	--bc-weight-body: 400;
+	--bc-weight-control: 400;
+	--bc-weight-action: 400;
+	--bc-text-mode-tab: 1.25rem;
+	--bc-text-entry: 1.25rem;
+	--bc-weight-heading: 600;
+	--bc-weight-emphasis: 700;
+	--bc-leading-body: 1.625;
+	--bc-text-body-lg: 18px;
+	--bc-leading-body-lg: 1.55;
+	--bc-text-cta: 18px;
+	--bc-leading-cta: 1.333333;
+	--bc-text-meta: 13px;
+	--bc-leading-meta: 1.4;
+	--bc-text-label: 1rem;
+	--bc-leading-label: 1.35;
+	--bc-text-price: clamp(1.75rem, 2.2vw, 2rem);
+	--bc-leading-price: 1.05;
+	--bc-tracking-tight: -0.025em;
+	--bc-tracking-display: -0.035em;
+
+	--bc-bg: #ffffff;
+	--bc-bg-strong: #eef1f4;
+	--bc-ink: #17191c;
+	--bc-ink-soft: #1c1c1c;
+	--bc-copy: #4f5965;
+	--bc-muted: #626d7c;
+	--bc-muted-light: #9fa1a4;
+	--bc-subtle: #697078;
+	--bc-white: #ffffff;
+
+	--bc-surface: #f5f7f9;
+	--bc-surface-soft: #f8fafc;
+	--bc-surface-hover: #eef1f4;
+	--bc-surface-raised: #ffffff;
+	--bc-border: #d8dde3;
+	--bc-border-strong: #c8cdd3;
+	--bc-hero-control-border: rgba(28, 28, 28, 0.42);
+	--bc-hero-action-surface: rgba(255, 255, 255, 0.85);
+	--bc-hero-action-border: rgba(255, 255, 255, 0.62);
+
+	--bc-control: var(--bc-surface);
+	--bc-control-hover: var(--bc-surface-hover);
+	--bc-control-active: var(--bc-border);
+	--bc-hover-surface: var(--bc-surface);
+	--bc-hover-surface-strong: var(--bc-surface-hover);
+	--bc-hover-border: var(--bc-accent);
+	--bc-hover-accent: var(--bc-accent-hover);
+	--bc-hover-accent-strong: var(--bc-accent-hover);
+	--bc-hover-accent-soft: #f3f4f6;
+	--bc-hover-accent-ink: #ffffff;
+	--bc-hover-quiet-ink: #1c1c1c;
+
+	--bc-accent: #b9161c;
+	--bc-accent-hover: #8f1016;
+	--bc-brand: var(--bc-accent);
+	--bc-brand-hover: var(--bc-accent-hover);
+	--bc-z-header: 100;
+	--bc-z-popover: 1100;
+	--bc-z-overlay: 1400;
+	--bc-z-dialog: 1401;
+	--bc-desktop-header-height: 94px;
+	--bc-form-gap: 16px;
+	--bc-desktop-section-title: clamp(2rem, 2.5vw, 2.25rem);
+	--bc-text-navigation: 1.25rem;
+	--bc-accent-soft: var(--bc-surface);
+	--bc-accent-contrast: #ffffff;
+	--bc-accent-alt: var(--bc-accent-hover);
+	--bc-accent-bright: #ee1d24;
+	--bc-accent-bright-soft: var(--bc-surface);
+	--bc-accent-olive: var(--bc-accent);
+	--bc-focus: var(--bc-accent);
+	--bc-focus-contrast: #ffffff;
+	--bc-sun: #e5b21a;
+	--bc-night: #42474c;
+	--bc-stone: #d8d5cf;
+
+	--bc-success: #0f9f7a;
+	--bc-warning: #f4bd0e;
+	--bc-danger: #e85347;
+
+	--bc-card-bg: var(--bc-surface);
+	--bc-card-hover: var(--bc-surface-hover);
+	--bc-card-ink: var(--bc-ink);
+	--bc-card-muted: var(--bc-muted);
+	--bc-card-media: var(--bc-surface-soft);
+	--bc-card-chip: var(--bc-white);
+	--bc-card-chip-border: var(--bc-border);
+	--bc-card-pill: rgb(28 28 28 / 0.78);
+	--bc-card-pill-hover: rgb(28 28 28 / 0.88);
+
+	--bc-popover-bg: #ffffff;
+	--bc-popover-border: #ececec;
+	--bc-popover-border-hover: var(--bc-accent);
+	--bc-popover-accent: var(--bc-accent);
+	--bc-popover-accent-soft: #f3f4f6;
+	--bc-popover-accent-ring: rgb(227 6 47 / 0.18);
+	--bc-popover-focus: var(--bc-accent-hover);
+	--bc-popover-muted: #5f5f5f;
+	--bc-popover-muted-strong: #7c7c7c;
+	--bc-popover-icon: #8f969e;
+	--bc-popover-icon-active: var(--bc-accent-hover);
+	--bc-popover-surface: #f5f6f7;
+	--bc-popover-chip-bg: #f3f4f6;
+	--bc-popover-chip-hover: #ffffff;
+	--bc-popover-chip-border-hover: var(--bc-accent);
+	--bc-popover-chip-ink: #1c1c1c;
+	--bc-popover-subtle: #737b84;
+	--bc-popover-hint: #69717a;
+	--bc-popover-footer-line: #eceff1;
+	--bc-popover-clear-bg: #f1f2f4;
+	--bc-popover-clear-ink: #1c1c1c;
+	--bc-popover-mono-bg: #1c1c1c;
+	--bc-popover-shadow: 0 26px 54px rgb(12 18 24 / 0.22);
+
+	--bc-filter-field-border: #e1e4e7;
+	--bc-filter-field-hover-border: var(--bc-accent);
+	--bc-filter-field-hover-bg: #ffffff;
+	--bc-filter-ring: rgb(227 6 47 / 0.16);
+	--bc-filter-label: #69717a;
+	--bc-filter-backdrop: rgb(13 19 26 / 0.58);
+	--bc-filter-panel-border: #dfe3e7;
+	--bc-filter-panel-shadow: 0 18px 38px rgb(12 18 24 / 0.16);
+	--bc-filter-modal-border: #e7e9ec;
+	--bc-filter-modal-shadow: 0 28px 70px rgb(10 15 20 / 0.35);
+	--bc-filter-heading: #111111;
+	--bc-filter-close-border: #e5e7eb;
+	--bc-filter-close-bg: #f3f4f6;
+	--bc-filter-close-ink: #69717a;
+	--bc-filter-close-hover-bg: var(--bc-accent-hover);
+	--bc-filter-modal-row-ink: #151515;
+	--bc-filter-modal-row-hover: #ffffff;
+	--bc-filter-modal-row-selected: #f3f4f6;
+	--bc-filter-control-border: #c8cdd3;
+	--bc-filter-chip-count-active: var(--bc-accent-hover);
+	--bc-filter-done-hover: #2e2e2e;
+	--bc-filter-clear-hover: #eceff2;
+
+	--bc-dashboard-bg: #f2f3f5;
+	--bc-dashboard-surface: #ffffff;
+	--bc-dashboard-sidebar: #ffffff;
+	--bc-dashboard-border: #e0e3e7;
+	--bc-dashboard-border-strong: #c8cdd3;
+	--bc-dashboard-text: #1c1c1c;
+	--bc-dashboard-heading: #1c1c1c;
+	--bc-dashboard-muted: #69717a;
+	--bc-dashboard-card-hover: #f4f4f4;
+	--bc-dashboard-card-radius: 14px;
+	--bc-dashboard-action-bg: #f3f4f5;
+	--bc-dashboard-action-hover: #e9ecef;
+	--bc-dashboard-icon-bg: #f3f4f6;
+	--bc-dashboard-status-bg: #f3f4f6;
+	--bc-dashboard-status-text: var(--bc-accent-hover);
+
+	--bc-showcase-bg: var(--bc-surface);
+	--bc-showcase-dark: #101010;
+	--bc-showcase-dark-soft: #1c1c1c;
+	--bc-showcase-dark-panel: #050505;
+	--bc-showcase-ink: var(--bc-ink);
+	--bc-showcase-muted: var(--bc-muted);
+	--bc-showcase-line: var(--bc-border);
+	--bc-showcase-icon-bg: var(--bc-surface);
+	--bc-showcase-card-hover: var(--bc-surface-soft);
+
+	--bc-container-narrow: 760px;
+	--bc-container-page: 1320px;
+	--bc-container-wide: 1920px;
+	--bc-page-x: 14px;
+	--bc-page-y: 32px;
+	--bc-section-sm: clamp(32px, 4vw, 54px);
+	--bc-section-md: clamp(48px, 6vw, 76px);
+	--bc-section-lg: clamp(64px, 8vw, 104px);
+	--bc-card-padding: 20px;
+	--bc-control-x: 16px;
+	--bc-control-y: 11px;
+	/* Interaction hierarchy: compact utilities stay compact while primary actions
+	   receive progressively more visual and physical weight. */
+	--bc-control-height-compact: 36px;
+	--bc-control-height-secondary: 40px;
+	--bc-control-height-chip: 44px;
+	--bc-control-height-standard: 44px;
+	--bc-control-height-primary: 48px;
+	--bc-control-height-hero: 56px;
+	--bc-mobile-entry-inset: 2px;
+	--bc-mobile-entry-gap: 10px;
+
+	/* Shared responsive UI primitives. Route components consume these instead of
+	   inventing spacing, type, neutral colors, control heights and radii. */
+	--bc-space-1: 4px;
+	--bc-space-2: 8px;
+	--bc-space-3: 12px;
+	--bc-space-4: 16px;
+	--bc-space-5: 20px;
+	--bc-space-6: 24px;
+	--bc-space-7: 28px;
+	--bc-space-8: 32px;
+	--bc-mobile-gutter: 14px;
+	--bc-mobile-dark: #090a0b;
+	--bc-dark-surface: #101113;
+	--bc-dark-border: #202326;
+	--bc-dark-hover: #25282b;
+	--bc-muted-on-dark: #bdc1c1;
+	--bc-footer-bg: #1c1c1c;
+	--bc-footer-panel: #242426;
+	--bc-footer-border: #3b3b3e;
+	--bc-footer-icon-border: #49494e;
+	--bc-footer-muted: #b5bac2;
+	--bc-footer-link: #ccd0d5;
+	--bc-footer-ink: #f7f7f7;
+	--bc-dark-muted: #c4c7cb;
+	--bc-mobile-appbar-height: 56px;
+	--bc-mobile-nav-height: 70px;
+	--bc-mobile-content-max: 480px;
+	--bc-mobile-nav-icon-size: 28px;
+	--bc-mobile-icon-action-hit-size: var(--bc-control-height-standard);
+	--bc-mobile-icon-action-surface-size: var(--bc-control-height-secondary);
+	--bc-mobile-sheet-max-width: 520px;
+	--bc-mobile-sheet-max-height: 780px;
+	--bc-mobile-sheet-header-height: 52px;
+	--bc-mobile-menu-row-height: var(--bc-control-height-primary);
+	--bc-mobile-menu-icon-size: 24px;
+	--bc-mobile-menu-feature-height: 68px;
+	--bc-mobile-stat-height: 30px;
+	--bc-mobile-page-title: 28px;
+	--bc-mobile-page-title-leading: 32px;
+	--bc-mobile-section-title: 22px;
+	--bc-mobile-section-title-leading: 28px;
+	--bc-mobile-card-title: 1.125rem;
+	--bc-mobile-card-title-leading: 24px;
+	--bc-mobile-body: var(--bc-text-body);
+	--bc-mobile-body-leading: 24px;
+	--bc-mobile-label: var(--bc-text-label);
+	--bc-mobile-label-leading: 20px;
+	--bc-mobile-meta: var(--bc-text-meta);
+	--bc-mobile-meta-leading: 18px;
+	--bc-mobile-stat: 0.75rem;
+	--bc-mobile-stat-leading: 16px;
+	--bc-mobile-card-price: 1.25rem;
+	--bc-mobile-price: 22px;
+	--bc-mobile-price-leading: 28px;
+	--bc-accent-tint: rgb(185 22 28 / 0.12);
+
+	--bc-radius-xs: 4px;
+	--bc-radius-sm: 6px;
+	--bc-radius-md: 8px;
+	--bc-radius-lg: 12px;
+	--bc-radius-control: var(--bc-radius-lg);
+	--bc-radius-card: 12px;
+	--bc-radius-panel: 16px;
+	--bc-radius-section: 20px;
+	--bc-radius-modal: 24px;
+	--bc-radius-pill: 999px;
+
+	--bc-shadow-sticky: 0 -8px 20px rgb(23 25 28 / 0.08);
+	--bc-shadow-subtle: 0 1px 3px rgb(28 28 28 / 0.08);
+	--bc-shadow-card: 0 4px 12px rgb(28 28 28 / 0.08);
+	--bc-shadow-panel: 0 12px 34px rgb(28 28 28 / 0.12);
+	--bc-shadow-modal: 0 24px 80px rgb(28 28 28 / 0.16);
+
+	--bc-motion-fast: 150ms ease;
+	--bc-motion-hover: 140ms ease;
+	--bc-motion-standard: 220ms ease;
+	--bc-motion-drawer: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Desktop actions are larger, not heavier. Mobile keeps its established scale. */
+@media (min-width: 768px) {
+	:root {
+		--bc-text-cta: 1.25rem;
+		--bc-text-mode-tab: 1.375rem;
+	}
+}

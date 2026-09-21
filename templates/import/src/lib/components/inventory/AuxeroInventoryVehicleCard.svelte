@@ -95,7 +95,7 @@
 			<h2 class="h6 card-box__title mb-4">
 				<a href={resolve('/inventory/[slug]', { slug: card.slug })}>{card.title}</a>
 			</h2>
-			<p class="text-secondary clamp-1 clamp mb-8">
+			<p class="clamp-1 clamp mb-8 text-secondary">
 				{card.description || daynightContact.appointmentNote}
 			</p>
 			{@render cardMeta(card, 'tag style3 mb-14')}

@@ -1,4 +1,8 @@
 <script lang="ts">
+	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { Search } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
@@ -12,20 +16,28 @@
 <header class="mobile-home-header" class:mobile-home-header--banner={banner}>
 	<a
 		class="mobile-home-header__brand"
-		href={resolve('/')}
+		href={i18n.href(resolve('/'))}
 		aria-label={`${daynightSite.shortName} home`}
 	>
-		<img src={resolve(daynightSite.logoLight)} alt={daynightSite.shortName} />
+		<img src={i18n.asset(resolve(daynightSite.logoLight))} alt={daynightSite.shortName} />
 	</a>
 
-	<nav class="mobile-home-header__actions" aria-label="Бързи действия">
-		<a class="mobile-home-header__icon" href={resolve(searchHref)} aria-label="Търсене">
+	<nav class="mobile-home-header__actions" aria-label={i18n.t('copy.2cd6b212c3e5')}>
+		<LocaleTrigger />
+		<a
+			class="mobile-home-header__icon"
+			href={i18n.href(resolve(searchHref))}
+			aria-label={i18n.t('copy.bfc95eff30e5')}
+		>
 			<Search size={19} strokeWidth={2.4} />
 		</a>
 	</nav>
 </header>
 
 <style>
+	.mobile-home-header__brand img {
+		max-width: min(170px, calc(100vw - 184px));
+	}
 	.mobile-home-header {
 		position: fixed;
 		z-index: 60;
@@ -46,6 +58,7 @@
 	}
 
 	.mobile-home-header--banner {
+		color: #fff;
 		background: #08090b;
 		border-bottom: 0;
 		backdrop-filter: none;

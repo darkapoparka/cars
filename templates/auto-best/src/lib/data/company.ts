@@ -58,8 +58,8 @@ export const companyServices: CompanyService[] = [
   {
     index: '01',
     icon: 'inspection',
-    title: `Оглед в ${brand.city}`,
-    description: `Посещение в ${brand.city} с предварителна уговорка.`,
+    title: 'Viewing in {dealerCity}',
+    description: 'Visits in {dealerCity} by appointment.',
     href: '/contact?topic=inspection',
     cta: 'Запазете оглед'
   },
@@ -94,12 +94,12 @@ export const contactTopics: ContactTopic[] = [
     id: 'general',
     label: 'Общ въпрос',
     title: 'Разговор с екипа',
-    description: `За наличност, следващи стъпки или друг въпрос за ${brand.name}.`
+    description: 'For availability, next steps or any other question about {dealerName}.'
   },
   {
     id: 'inspection',
     label: 'Оглед',
-    title: `Оглед в ${brand.city}`,
+    title: 'Viewing in {dealerCity}',
     description: 'Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.'
   },
   {
@@ -127,7 +127,4 @@ export const contactTopics: ContactTopic[] = [
 export const resolveContactTopic = (value: string | null) =>
   contactTopics.find((topic) => topic.id === value) ?? contactTopics[0];
 
-export const showroomCoordinates = {
-  latitude: 42.648551,
-  longitude: 23.341905
-} as const;
+export const showroomCoordinates = brand.showroomCoordinates;

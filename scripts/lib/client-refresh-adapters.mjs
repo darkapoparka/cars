@@ -167,10 +167,15 @@ function autoBestEquipment(features) {
 function autoBestBrand(profile, logo, logoDark) {
   const b = profile.business;
   const social = b.socialLinks || {};
+  const showroomCoordinates = b.coordinates &&
+    Number.isFinite(b.coordinates.latitude) && Number.isFinite(b.coordinates.longitude)
+    ? b.coordinates
+    : { latitude: 0, longitude: 0 };
   return `export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
+  showroomCoordinates: { latitude: number; longitude: number };
   addressLine: string;
   address: string;
   phone: string;
@@ -178,7 +183,7 @@ function autoBestBrand(profile, logo, logoDark) {
   appointment: string;
   logo: \`/\${string}\`;
   logoOnDark: \`/\${string}\`;
-  youtubeUrl: \`https://\${string}\`;
+  youtubeUrl: \`https://\${string}\` | '';
   instagramUrl: \`https://\${string}\`;
   facebookUrl: \`https://\${string}\`;
 };
@@ -192,6 +197,7 @@ export const brand = {
   name,
   shortName,
   city,
+  showroomCoordinates: ${JSON.stringify(showroomCoordinates)},
   youtubeUrl: ${q(social.youtube || 'https://www.youtube.com/')},
   instagramUrl: ${q(social.instagram || 'https://www.instagram.com/')},
   facebookUrl: ${q(social.facebook || 'https://www.facebook.com/')},
@@ -653,15 +659,32 @@ function replaceRange(text, startMarker, endMarker, replacement, label) {
   return text.slice(0, start) + replacement + text.slice(end);
 }
 
-function wrapSvelteBlock(text, needle, condition, label) {
+function replaceElementContaining(text, needle, openTag, closeTag, replacement, label) {
   const at = text.indexOf(needle);
   if (at < 0) throw new Error(`Cannot locate ${label}`);
-  const start = text.lastIndexOf('\n\t\t\t\t\t<a', at);
+  const start = text.lastIndexOf(openTag, at);
+  const close = text.indexOf(closeTag, at);
+  if (start < 0 || close < 0) throw new Error(`Cannot bound ${label}`);
+  return text.slice(0, start) + replacement + text.slice(close + closeTag.length);
+}
+
+function wrapSvelteBlock(text, needle, condition, label) {
+  const at = text.indexOf(needle);
+  if (at < 0) {
+    if (text.includes(condition.href)) return text;
+    throw new Error(`Cannot locate ${label}`);
+  }
+  const marker = `{#if ${condition.when}}`;
+  const markerAt = text.lastIndexOf(marker, at);
+  if (markerAt >= 0 && text.indexOf('{/if}', markerAt) > at) return text;
+  const tagStart = text.lastIndexOf('<a', at);
+  const lineStart = text.lastIndexOf('\n', tagStart) + 1;
   const close = text.indexOf('</a', at);
   const end = text.indexOf('>', close) + 1;
-  if (start < 0 || close < 0 || end <= 0) throw new Error(`Cannot bound ${label}`);
-  const block = text.slice(start + 1, end).replace(needle, condition.href);
-  return text.slice(0, start + 1) + `{#if ${condition.when}}\n${block}\n\t\t\t\t\t{/if}` + text.slice(end);
+  if (tagStart < 0 || close < 0 || end <= 0) throw new Error(`Cannot bound ${label}`);
+  const indent = text.slice(lineStart, tagStart);
+  const block = text.slice(tagStart, end).replace(needle, condition.href);
+  return text.slice(0, lineStart) + `${indent}${marker}\n${indent}${block}\n${indent}{/if}` + text.slice(end);
 }
 
 function patchCarwowDealerSurfaces(candidate, profile) {
@@ -672,22 +695,32 @@ function patchCarwowDealerSurfaces(candidate, profile) {
   const topbarFile = path.join(candidate, 'src/lib/components/layout/SiteChromeTopBar.svelte');
   if (exists(topbarFile)) {
     let value = read(topbarFile).replace(
-      'const locationShort = `Студентски град, ${daynightSite.city}`;',
-      'const locationShort = daynightSite.locationShort;'
+      /const locationShort =[\s\S]*?;\n\n\tconst socialLinkBase/,
+      'const locationShort = daynightSite.locationShort;\n\n\tconst socialLinkBase'
     );
-    const start = '\t\t\t<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">';
-    const end = '\n\t\t\t<div class="relative border-l border-sa-surface/25 pl-3" id="language-select">';
-    const socialMarkup = `\t\t\t{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram}
-\t\t\t\t<ul class="m-0 flex list-none items-center gap-1.5 p-0" aria-label="Социални канали">
+    if (!value.includes('daynightSite.socialLinks.facebook')) {
+      const socialMarkup = `{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram}
+\t\t\t\t<ul
+\t\t\t\t\tclass="m-0 flex list-none items-center gap-1.5 p-0"
+\t\t\t\t\taria-label={i18n.t('copy.47c4dea54022')}
+\t\t\t\t>
 \t\t\t\t\t{#if daynightSite.socialLinks.facebook}
-\t\t\t\t\t\t<li><a href={daynightSite.socialLinks.facebook} aria-label="Facebook" target="_blank" rel="noopener" class={socialLinkBase + ' site-chrome-topbar__social-link--facebook'}><SiteChromeIcon name="facebook" /></a></li>
+\t\t\t\t\t\t<li><a href={daynightSite.socialLinks.facebook} aria-label={i18n.t('copy.d41f5b4977ee')} target="_blank" rel="noopener" class={socialLinkBase + ' site-chrome-topbar__social-link--facebook'}><SiteChromeIcon name="facebook" /></a></li>
 \t\t\t\t\t{/if}
 \t\t\t\t\t{#if daynightSite.socialLinks.instagram}
-\t\t\t\t\t\t<li><a href={daynightSite.socialLinks.instagram} aria-label="Instagram" target="_blank" rel="noopener" class={socialLinkBase + ' site-chrome-topbar__social-link--instagram'}><SiteChromeIcon name="instagram" /></a></li>
+\t\t\t\t\t\t<li><a href={daynightSite.socialLinks.instagram} aria-label={i18n.t('copy.bad57ef7837c')} target="_blank" rel="noopener" class={socialLinkBase + ' site-chrome-topbar__social-link--instagram'}><SiteChromeIcon name="instagram" /></a></li>
 \t\t\t\t\t{/if}
 \t\t\t\t</ul>
 \t\t\t{/if}`;
-    value = replaceRange(value, start, end, socialMarkup, 'Carwow topbar social block');
+      value = replaceElementContaining(
+        value,
+        'href="https://www.facebook.com/61566304063141/"',
+        '<ul',
+        '</ul>',
+        socialMarkup,
+        'Carwow topbar social block'
+      );
+    }
     write(topbarFile, value);
     changed.push('src/lib/components/layout/SiteChromeTopBar.svelte');
   }
@@ -719,14 +752,8 @@ function patchCarwowDealerSurfaces(candidate, profile) {
       { when: 'daynightSite.socialLinks.facebook', href: 'href={daynightSite.socialLinks.facebook}' }, 'desktop footer Facebook');
     value = wrapSvelteBlock(value, 'href="https://www.instagram.com/daynight.auto.plovdiv/"',
       { when: 'daynightSite.socialLinks.instagram', href: 'href={daynightSite.socialLinks.instagram}' }, 'desktop footer Instagram');
-    const youtubeAt = value.indexOf('<a {...youtubeLink}');
-    if (youtubeAt >= 0) {
-      const close = value.indexOf('</a', youtubeAt);
-      const end = value.indexOf('>', close) + 1;
-      const start = value.lastIndexOf('\n\t\t\t\t\t<a', youtubeAt);
-      const block = value.slice(start + 1, end);
-      value = value.slice(0, start + 1) + `{#if youtubeChannelUrl}\n${block}\n\t\t\t\t\t{/if}` + value.slice(end);
-    }
+    value = wrapSvelteBlock(value, '<a {...youtubeLink}',
+      { when: 'youtubeChannelUrl', href: '<a {...youtubeLink}' }, 'desktop footer YouTube');
     write(dealerFooterFile, value);
     changed.push('src/lib/components/layout/DesktopDealerFooter.svelte');
   }
@@ -745,16 +772,23 @@ function patchCarwowDealerSurfaces(candidate, profile) {
     let value = read(aboutFile)
       .replace('Разгледай автомобилите онлайн или ни посети в Студентски град.', 'Разгледай автомобилите онлайн или ни посети на {daynightSite.locationShort}.')
       .replace('<strong>Студентски град, {daynightSite.city}</strong>', '<strong>{daynightSite.locationShort}</strong>');
-    const start = '\t\t\t\t<div class="about-hero-socials">';
-    const end = '\n\t\t\t</nav>';
-    const replacement = `\t\t\t\t{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram || youtubeChannelUrl}
+    if (!value.includes('daynightSite.socialLinks.facebook')) {
+      const replacement = `{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram || youtubeChannelUrl}
 \t\t\t\t\t<div class="about-hero-socials">
-\t\t\t\t\t\t{#if daynightSite.socialLinks.facebook}<a href={daynightSite.socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><SiteChromeIcon name="facebook" /></a>{/if}
-\t\t\t\t\t\t{#if daynightSite.socialLinks.instagram}<a href={daynightSite.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><SiteChromeIcon name="instagram" /></a>{/if}
-\t\t\t\t\t\t{#if youtubeChannelUrl}<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" /></a>{/if}
+\t\t\t\t\t\t{#if daynightSite.socialLinks.facebook}<a href={daynightSite.socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('copy.d41f5b4977ee')}><SiteChromeIcon name="facebook" /></a>{/if}
+\t\t\t\t\t\t{#if daynightSite.socialLinks.instagram}<a href={daynightSite.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('copy.bad57ef7837c')}><SiteChromeIcon name="instagram" /></a>{/if}
+\t\t\t\t\t\t{#if youtubeChannelUrl}<a href={i18n.href(youtubeChannelUrl)} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('copy.fb7accfff8c6')}><img src={i18n.asset(resolve('/assets/icons/youtube-footer.svg'))} alt="" width="22" height="22" /></a>{/if}
 \t\t\t\t\t</div>
 \t\t\t\t{/if}`;
-    value = replaceRange(value, start, end, replacement, 'Carwow about social block');
+      value = replaceElementContaining(
+        value,
+        'href="https://www.facebook.com/61566304063141/"',
+        '<div class="about-hero-socials">',
+        '</div>',
+        replacement,
+        'Carwow about social block'
+      );
+    }
     write(aboutFile, value);
     changed.push('src/lib/components/about/DesktopAboutPage.svelte');
   }
@@ -861,8 +895,9 @@ function importListingFeed(profile) {
 function patchImportDayNight(candidate, oldVariant, profile) {
   const b = profile.business;
   const file = path.join(candidate, 'src/lib/data/daynight.ts');
+  const dealerFile = path.join(candidate, 'src/lib/config/dealer.ts');
   let text = read(file);
-  const freshText = text;
+  let dealerText = read(dealerFile);
   const logoDark = requireRasterLogo(pickLogo(oldVariant, 'import', b, true), 'import', 'dark surfaces');
   const logoLight = requireRasterLogo(pickLogo(oldVariant, 'import', b, false) || logoDark, 'import', 'light surfaces');
   const makes = unique(profile.listings.map((item) => item.make));
@@ -875,7 +910,9 @@ function patchImportDayNight(candidate, oldVariant, profile) {
     marketplacePhoneHref: b.phoneHref,
     emailLabel: b.email || textFor(profile, 'Онлайн запитване', 'Online enquiry'),
     emailHref: b.email ? `mailto:${b.email}` : (b.contactUrl || b.inventoryUrl),
-    viberHref: '',
+    viberHref: b.phoneE164
+      ? `viber://chat?number=${encodeURIComponent(b.phoneE164)}`
+      : (b.contactUrl || b.inventoryUrl),
     facebookHref: b.socialLinks?.facebook || '',
     instagramHref: b.socialLinks?.instagram || '',
     tiktokHref: b.socialLinks?.tiktok || '',
@@ -885,10 +922,10 @@ function patchImportDayNight(candidate, oldVariant, profile) {
     appointmentNote: b.hours,
     mapEmbedUrl: b.mapsEmbedUrl
   };
-  text = replaceExportConstBlock(text, 'daynightContact',
+  dealerText = replaceExportConstBlock(dealerText, 'daynightContact',
     `export const daynightContact = ${JSON.stringify(contact, null, 2)} as const;`);
-  let hostname = '';
-  try { hostname = new URL(b.website || b.inventoryUrl).hostname; } catch {}
+  let hostname = `${b.slug}.example.invalid`;
+  try { hostname = new URL(b.website || b.inventoryUrl).hostname || hostname; } catch {}
   const brand = {
     name: b.name,
     displayName: b.name.toUpperCase(),
@@ -897,16 +934,17 @@ function patchImportDayNight(candidate, oldVariant, profile) {
     tagline: b.tagline || `${b.name} · ${b.city}`,
     legalNote: `${b.inventoryNotice} ${b.previewNotice}`.trim()
   };
-  text = replaceExportConstBlock(text, 'daynightBrand',
+  dealerText = replaceExportConstBlock(dealerText, 'daynightBrand',
     `export const daynightBrand = ${JSON.stringify(brand, null, 2)} as const;`);
-  let assetsStart = text.indexOf('export const daynightAssets =');
-  let assetsEnd = text.indexOf(' as const;', assetsStart);
+  let assetsStart = dealerText.indexOf('export const daynightAssets =');
+  let assetsEnd = dealerText.indexOf(' as const;', assetsStart);
   if (assetsStart < 0 || assetsEnd < 0) throw new Error('Cannot locate Import daynightAssets');
-  let assets = text.slice(assetsStart, assetsEnd + ' as const;'.length);
+  let assets = dealerText.slice(assetsStart, assetsEnd + ' as const;'.length);
   assets = assets
     .replace(/logoDark:\s*'[^']*'/, `logoDark: ${q(logoDark)}`)
     .replace(/logoLight:\s*'[^']*'/, `logoLight: ${q(logoLight)}`);
-  text = text.slice(0, assetsStart) + assets + text.slice(assetsEnd + ' as const;'.length);
+  dealerText = dealerText.slice(0, assetsStart) + assets +
+    dealerText.slice(assetsEnd + ' as const;'.length);
   const consultant = [
     {
       slug: `${b.slug}-sales`,
@@ -929,6 +967,28 @@ function patchImportDayNight(candidate, oldVariant, profile) {
   ];
   text = replaceExportConstBlock(text, 'daynightConsultants',
     `export const daynightConsultants = ${JSON.stringify(consultant, null, 2)} as const;`);
+  const defaultLocale = localeLanguage(profile);
+  const englishFormatLocale = b.countryCode === 'BG'
+    ? 'en-GB'
+    : (String(b.locale || '').startsWith('en-') ? b.locale : 'en-GB');
+  const suggestedLanguages = {
+    BG: 'bg',
+    GB: 'en',
+    US: 'en',
+    [b.countryCode]: defaultLocale
+  };
+  dealerText = dealerText
+    .replace(/(\tdefault:\s*)'[^']*'/, `$1${q(defaultLocale)}`)
+    .replace(/(\tcurrency:\s*)'[^']*'/, `$1${q(b.currency || 'EUR')}`)
+    .replace(/(\tcountry:\s*)'[^']*'/, `$1${q(b.countryCode || 'BG')}`)
+    .replace(/\tformatLocales:\s*\{[^\n]*\},/,
+      `\tformatLocales: { en: ${q(englishFormatLocale)}, bg: 'bg-BG' },`)
+    .replace(/\tsuggestedLanguages:\s*\{[^\n]*\},/,
+      `\tsuggestedLanguages: ${JSON.stringify(suggestedLanguages)},`);
+  if (/^#[0-9a-f]{6}$/i.test(b.accent || '')) {
+    dealerText = dealerText.replace(/(\taccent:\s*)'#[0-9a-f]{6}'/i, `$1${q(b.accent)}`);
+  }
+  write(dealerFile, dealerText);
   write(file, text);
   return { logoDark, logoLight };
 }
@@ -1021,6 +1081,10 @@ function patchImportHeroBindings(candidate) {
   const file = path.join(candidate, 'src/lib/components/home/HomeFiveHero.svelte');
   if (!exists(file)) return null;
   let text = read(file);
+  if (
+    text.includes('const mobileShowroomMapHref = site.contact.mapHref;') &&
+    text.includes('const mobileShowroomPhoneHref = site.contact.phoneHref;')
+  ) return null;
   if (!text.includes("import { daynightContact } from '$lib/data/daynight';")) {
     text = text.replace(
       "import { resolve } from '$app/paths';",
@@ -1077,6 +1141,7 @@ function patchImport({ oldVariant, candidate, profile }) {
   return [
     'src/lib/data/daynight-listings.json',
     'src/lib/data/daynight.ts',
+    'src/lib/config/dealer.ts',
     'src/lib/data/vehicles.ts',
     'src/lib/data/dealers.ts',
     'src/lib/data/agents.ts',

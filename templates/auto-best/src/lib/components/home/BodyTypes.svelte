@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { specificationLabel } from '$lib/i18n/presentation';
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import { bodyTypes } from '$data/home';
 
@@ -19,18 +23,18 @@
   <div class="container dn-body-types__panel">
     <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
       <h2 id="body-types-title" class="dn-home-section-title">
-        <span class="dn-heading-desktop">Изберете по тип купе</span>
-        <span class="dn-heading-mobile">По тип купе</span>
+        <span class="dn-heading-desktop">{i18n.t("m_555a44ad25a6")}</span>
+        <span class="dn-heading-mobile">{i18n.t("m_ef0ecd6a2ade")}</span>
       </h2>
-      <a class="dn-body-types__all dn-home-section-action" href={resolve('/listing-grid')}>
-        <span class="dn-heading-desktop">Вижте всички автомобили</span>
+      <a class="dn-body-types__all dn-home-section-action" href={i18n.href(resolve('/listing-grid'))}>
+        <span class="dn-heading-desktop">{i18n.t("m_7d6647b063a2")}</span>
       </a>
     </div>
 
     <div class="dn-body-types__viewport">
-      <div class="dn-body-types__rail" id="body-types-grid" aria-label="Автомобили по тип купе">
+      <div class="dn-body-types__rail" id="body-types-grid" aria-label={i18n.t("m_b94720bac36c")}>
         {#each bodyTypes as item (item.query)}
-          <a class="dn-body-type" class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`)}>
+          <a class="dn-body-type" class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`))}>
             <span class="dn-body-type__image">
               <span class="dn-body-type__frame"
                 style:--body-aspect={`${item.bounds[2] - item.bounds[0]} / ${item.bounds[3] - item.bounds[1]}`}
@@ -49,8 +53,8 @@
               </span>
             </span>
             <span class="dn-body-type__content">
-              <strong class="dn-body-type__title">{item.label}</strong>
-              <small class="dn-body-type__subtitle">{item.count} {item.count === 1 ? 'автомобил' : 'автомобила'}</small>
+              <strong class="dn-body-type__title">{specificationLabel(item.label, i18n.locale)}</strong>
+              <small class="dn-body-type__subtitle">{item.count} {item.count === 1 ? i18n.t("m_2b2961a431b2") : i18n.t("m_1f58b1e965af")}</small>
             </span>
           </a>
         {/each}
@@ -58,7 +62,7 @@
           <span class="dn-body-all-glyph" aria-hidden="true">
             <span class="dn-body-all-glyph__accent"></span><span></span><span></span><span></span>
           </span>
-          <strong>{expanded ? 'Покажи по-малко' : 'Всички типове'}</strong>
+          <strong>{expanded ? i18n.t("m_211232676e95") : i18n.t("m_3cd085e8c069")}</strong>
         </button>
       </div>
     </div>

@@ -1,0 +1,50 @@
+[
+	{
+		"key": "dealer.city",
+		"source": "София",
+		"bg": "София",
+		"en": "Sofia",
+		"disposition": "translate",
+		"notes": "Dealer-owned address transliteration; physical location unchanged."
+	},
+	{
+		"key": "dealer.addressLine",
+		"source": "Студентски град · ул. Атанас Манчев 18",
+		"bg": "Студентски град · ул. Атанас Манчев 18",
+		"en": "Studentski Grad · 18 Atanas Manchev Street",
+		"disposition": "translate",
+		"notes": "Dealer-owned address transliteration; physical location unchanged."
+	},
+	{
+		"key": "dealer.address",
+		"source": "гр. София, Студентски град, ул. Атанас Манчев 18",
+		"bg": "гр. София, Студентски град, ул. Атанас Манчев 18",
+		"en": "18 Atanas Manchev Street, Studentski Grad, Sofia",
+		"disposition": "translate",
+		"notes": "Dealer-owned address transliteration; physical location unchanged."
+	},
+	{
+		"key": "dealer.locationShort",
+		"source": "Студентски град, София",
+		"bg": "Студентски град, София",
+		"en": "Studentski Grad, Sofia",
+		"disposition": "translate",
+		"notes": "Dealer-owned location transliteration."
+	},
+	{
+		"key": "dealer.name",
+		"source": "DAY NIGHT AUTO GROUP",
+		"en": "DAY NIGHT AUTO GROUP",
+		"bg": "DAY NIGHT AUTO GROUP",
+		"disposition": "invariant",
+		"notes": "Dealer-owned proper name."
+	},
+	{
+		"key": "dealer.shortName",
+		"source": "Day Night Auto",
+		"en": "Day Night Auto",
+		"bg": "Day Night Auto",
+		"disposition": "invariant",
+		"notes": "Dealer-owned proper name."
+	}
+]

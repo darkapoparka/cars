@@ -73,7 +73,7 @@
 										{/if}
 									</span>
 									<p class="h5">{brand.name}</p>
-									<p class="text-muted text-sm">{brand.count}</p>
+									<p class="text-sm text-muted">{brand.count}</p>
 								</a>
 							</div>
 						{/each}

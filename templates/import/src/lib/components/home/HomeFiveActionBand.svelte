@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
+	import { assetHref } from '$lib/utils/assets';
+	import { linkHref as resolve } from '$lib/utils/links';
 	import type { HomePageCopy } from '$lib/i18n/messages';
-	import { ArrowRight } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	let {
 		copy,
@@ -54,7 +55,7 @@
 		{#if variant === 'selection'}{firstTitle}{:else if variant === 'consultation'}{secondTitle}{:else}{firstTitle}
 			· {secondTitle}{/if}
 	</h2>
-	<div class="container">
+	<div class="site-container">
 		<div class="daynight-action-grid wow fadeInUp" data-wow-delay="0.1s">
 			{#if variant !== 'consultation'}
 				<a
@@ -72,9 +73,11 @@
 					</div>
 					<img
 						class="daynight-action-card__img daynight-action-card__img--specialist"
-						src={ownership
-							? '/assets/daynight/banners/home-gclass-v1.png'
-							: '/assets/daynight/banners/home-selection-v2.webp'}
+						src={assetHref(
+							ownership
+								? '/assets/daynight/banners/home-gclass-v1.png'
+								: '/assets/daynight/banners/home-selection-v2.webp'
+						)}
 						alt=""
 						width={ownership ? 1881 : 1536}
 						height={ownership ? 836 : 512}
@@ -99,9 +102,11 @@
 					</div>
 					<img
 						class="daynight-action-card__img daynight-action-card__img--consultant"
-						src={ownership
-							? '/assets/daynight/banners/home-urus-v1.png'
-							: '/assets/daynight/banners/home-consultation-v2.webp'}
+						src={assetHref(
+							ownership
+								? '/assets/daynight/banners/home-urus-v1.png'
+								: '/assets/daynight/banners/home-consultation-v2.webp'
+						)}
 						alt=""
 						width={ownership ? 2172 : 1536}
 						height={ownership ? 724 : 512}
@@ -142,6 +147,7 @@
 	}
 
 	.daynight-action-card {
+		text-decoration: none;
 		align-items: stretch;
 		border: 1px solid transparent;
 		border-radius: 8px;
@@ -237,8 +243,8 @@
 		margin-top: 14px;
 		padding: 0 24px;
 		border-radius: var(--bc-radius-control);
-		font-size: 18px;
-		font-weight: 600;
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-action);
 		gap: 10px;
 		letter-spacing: 0;
 		line-height: 1.1;

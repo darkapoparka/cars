@@ -1,5 +1,5 @@
+import { localeFromUrl } from '$lib/locale/core';
 import { templatePolicies, type TemplatePolicyKey } from '$lib/data/template-policies';
-import { resolveLocale } from '$lib/i18n/messages';
 import { renderAuxeroPageDocument } from './auxero-page';
 import { auxeroPublicShellData } from './auxero-public-shell';
 export const loadTemplatePolicy = (
@@ -15,6 +15,6 @@ export const loadTemplatePolicy = (
 		auxeroFullPage: true,
 		policy: templatePolicies[key],
 		pageDocument,
-		...auxeroPublicShellData(pageDocument, resolveLocale(url.searchParams.get('lang')), '/' + key)
+		...auxeroPublicShellData(pageDocument, localeFromUrl(url), '/' + key)
 	};
 };

@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import Hero from '$components/home/Hero.svelte';
   import SearchBox from '$components/home/SearchBox.svelte';
   import MobileCoreActions from '$components/home/MobileCoreActions.svelte';
@@ -13,8 +17,8 @@
 </script>
 
 <svelte:head>
-  <title>{brand.name} — Премиум автомобили в {brand.city}</title>
-  <meta name="description" content={`Премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
+  <title>{i18n.t("m_9cc31a8ba082", { p0: brand.name, p1: i18n.dealer('city') })}</title>
+  <meta name="description" content={i18n.t("m_ed2d6b74bc69", { p0: i18n.dealer('city') })} />
 </svelte:head>
 
 <div class="dn-home-page">

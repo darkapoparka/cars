@@ -1,6 +1,25 @@
 <script lang="ts">
-	import { ArrowLeft, ArrowRight, Check, X } from '@lucide/svelte';
-	import { resolve } from '$app/paths';
+	import { optionLabel } from '$lib/i18n/options';
+	import { nativeMessage } from '$lib/i18n/native';
+
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
+	import { submitIntake } from '$lib/browser/submit-intake';
+	import { receiptMessage, type InquiryReceipt } from '$lib/domain/inquiry';
+	import { page } from '$app/state';
+	import { pushState } from '$app/navigation';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Check from '@lucide/svelte/icons/check';
+	import X from '@lucide/svelte/icons/x';
+	import { browser } from '$app/environment';
+	import {
+		readSessionDraft,
+		saveSessionDraft,
+		clearSessionDraft
+	} from '$lib/browser/session-draft';
+	import { site } from '$lib/config/site';
+	import { onMount, tick } from 'svelte';
 
 	type WizardInitial = {
 		make?: string;
@@ -15,10 +34,12 @@
 	let {
 		initial,
 		manualEntry = false,
+		embedded = false,
 		onclose
 	}: {
 		initial?: WizardInitial;
 		manualEntry?: boolean;
+		embedded?: boolean;
 		onclose?: () => void;
 	} = $props();
 
@@ -34,9 +55,18 @@
 	];
 	let step = $state<0 | 1>(0);
 	let submitted = $state(false);
+	let receipt = $state<InquiryReceipt | null>(null);
 	let submitting = $state(false);
 	let submitError = $state('');
+	let validationMessage = $state('');
+	let draftReady = $state(false);
 	let bodyElement = $state<HTMLElement>();
+	let wizardRoot = $state<HTMLDivElement | null>(null);
+	const draftKey = () =>
+		`template:sell:v2:${site.identity.origin}:${manualEntry ? 'manual' : 'vin'}`;
+	const historyId = `daynight-sell-wizard-${Math.random().toString(36).slice(2)}`;
+	let historyEntryActive = false;
+	let closeAfterHistory = false;
 
 	// svelte-ignore state_referenced_locally
 	let vin = $state(initial?.vin ?? '');
@@ -55,19 +85,113 @@
 	let location = $state('София');
 	let notes = $state('');
 
+	const clearDraft = () => {
+		clearSessionDraft(draftKey());
+	};
+
+	const requestClose = () => {
+		if (!browser || embedded || !historyEntryActive) {
+			onclose?.();
+			return;
+		}
+		closeAfterHistory = true;
+		historyEntryActive = false;
+		history.back();
+	};
+
+	const handleHistoryBack = () => {
+		if (closeAfterHistory) {
+			closeAfterHistory = false;
+			onclose?.();
+			return;
+		}
+		if (!historyEntryActive) return;
+		historyEntryActive = false;
+		validationMessage = '';
+		if (!submitted && step > 0) {
+			step = 0;
+			queueMicrotask(() => {
+				pushState('', { ...page.state, __daynightWizard: historyId });
+				historyEntryActive = true;
+			});
+			return;
+		}
+		onclose?.();
+	};
+
+	onMount(() => {
+		if (!browser) return;
+		try {
+			clearSessionDraft('daynight-sell-car-draft-v1-manual');
+			clearSessionDraft('daynight-sell-car-draft-v1-vin');
+			const draft = readSessionDraft(draftKey());
+			if (!draft) return;
+			if (draft.step === 0 || draft.step === 1) step = draft.step;
+			if (typeof draft.vin === 'string') vin = draft.vin;
+			if (typeof draft.make === 'string') make = draft.make;
+			if (typeof draft.model === 'string') model = draft.model;
+			if (typeof draft.year === 'string') year = draft.year;
+			if (typeof draft.mileage === 'string') mileage = draft.mileage;
+			if (typeof draft.phone === 'string') phone = draft.phone;
+			if (typeof draft.price === 'string') price = draft.price;
+			if (typeof draft.location === 'string') location = draft.location;
+			if (typeof draft.notes === 'string') notes = draft.notes;
+		} catch {
+			clearDraft();
+		} finally {
+			draftReady = true;
+		}
+	});
+
+	onMount(() => {
+		if (embedded) return;
+		pushState('', { ...page.state, __daynightWizard: historyId });
+		historyEntryActive = true;
+		window.addEventListener('popstate', handleHistoryBack);
+		return () => window.removeEventListener('popstate', handleHistoryBack);
+	});
+
+	$effect(() => {
+		if (!browser || !draftReady || submitted) return;
+		saveSessionDraft(draftKey(), { step, vin, make, model, year, mileage, price });
+	});
+
 	const vehicleTitle = $derived(
 		[make.trim(), model.trim(), year.trim()].filter(Boolean).join(' · ') ||
 			vin.trim() ||
-			'Автомобил'
+			nt('ui167')
 	);
 	const canContinue = $derived(
 		step === 0
 			? vin.trim().length >= 5 || (make.trim().length > 1 && model.trim().length > 1)
 			: phone.trim().length >= 6
 	);
-	const scrollTop = () => bodyElement?.scrollTo({ top: 0, behavior: 'smooth' });
+	const scrollTop = () =>
+		bodyElement?.scrollTo({
+			top: 0,
+			behavior:
+				browser && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+		});
+
+	const focusFirstInvalid = async () => {
+		let selector: string;
+		if (step === 0) {
+			validationMessage = manualEntry ? nt('ui189') : nt('ui190');
+			selector = manualEntry
+				? make.trim().length < 2
+					? '.sell-brand-rail button'
+					: '#sell-flow-model'
+				: '#sell-flow-vin';
+		} else {
+			validationMessage = nt('ui191');
+			selector = '#sell-flow-phone';
+		}
+		await tick();
+		wizardRoot?.querySelector<HTMLElement>(selector)?.focus({ preventScroll: false });
+	};
 
 	function goBack() {
+		validationMessage = '';
 		if (step === 1) {
 			step = 0;
 			submitError = '';
@@ -76,7 +200,12 @@
 	}
 
 	async function goNext() {
-		if (!canContinue || submitting) return;
+		if (submitting) return;
+		if (!canContinue) {
+			await focusFirstInvalid();
+			return;
+		}
+		validationMessage = '';
 		if (step === 0) {
 			step = 1;
 			submitError = '';
@@ -87,78 +216,83 @@
 		submitting = true;
 		submitError = '';
 		try {
-			const response = await fetch(resolve('/api/inventory/submissions'), {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					source: 'sell-your-car',
-					routePath: '/sell-your-car',
-					vin: vin.trim(),
-					title: vehicleTitle,
-					mileage: mileage.trim(),
-					expectedPrice: price.trim(),
-					phone: phone.trim(),
-					message: [location.trim() && `Град: ${location.trim()}`, notes.trim()]
-						.filter(Boolean)
-						.join('\n')
-				})
+			receipt = await submitIntake('/api/inventory/submissions', {
+				source: 'sell-your-car',
+				routePath: '/sell-your-car',
+				vin: vin.trim(),
+				title: vehicleTitle,
+				mileage: mileage.trim(),
+				expectedPrice: price.trim(),
+				phone: phone.trim(),
+				message: [location.trim() && `Град: ${location.trim()}`, notes.trim()]
+					.filter(Boolean)
+					.join('\n')
 			});
-			const result = await response.json();
-			if (!response.ok || !result.ok || !result.data?.submission?.id)
-				throw new Error('submission-failed');
+			clearDraft();
 			submitted = true;
 		} catch {
-			submitError = 'Заявката не е изпратена. Опитай отново или се свържи по телефона.';
+			submitError = nt('ui192');
 		} finally {
 			submitting = false;
 		}
 	}
 </script>
 
-<div class="sell-flow">
+<div class="sell-flow" class:sell-flow--embedded={embedded} bind:this={wizardRoot}>
 	{#if submitted}
 		<section class="sell-flow__success" role="status">
 			<span class="sell-flow__success-icon"><Check size={25} strokeWidth={2.5} /></span>
-			<h2>Заявката е приета</h2>
-			<p>Демо заявката е запазена временно. Не е изпратено съобщение до търговец.</p>
-			<button type="button" onclick={() => onclose?.()}>Готово</button>
+			<h2>{nt('ui164')}</h2>
+			<p>{receipt ? receiptMessage(receipt, page.data.locale === 'en') : ''}</p>
+			<button type="button" onclick={requestClose}>{nt('ui49')}</button>
 		</section>
 	{:else}
 		<header class="sell-flow__header">
-			<button type="button" class="sell-flow__close" aria-label="Затвори" onclick={onclose}>
+			<button type="button" class="sell-flow__close" aria-label={nt('ui33')} onclick={requestClose}>
 				<X size={21} strokeWidth={2.3} />
 			</button>
 			<div>
-				<span>Етап {step + 1} от 2</span>
-				<h2>{step === 0 ? 'Автомобил' : 'Контакт'}</h2>
+				<span>{nt('ui165')} {step + 1} {nt('ui166')}</span>
+				<h2>{step === 0 ? nt('ui167') : nt('ui137')}</h2>
 			</div>
 			<span class="sell-flow__header-spacer" aria-hidden="true"></span>
 		</header>
 
-		<div class="sell-flow__progress" aria-label={`Стъпка ${step + 1} от 2`}>
+		<div
+			class="sell-flow__progress"
+			role="progressbar"
+			aria-valuemin={0}
+			aria-valuemax={2}
+			aria-valuenow={step + 1}
+			aria-label={`${nt('ui165')} ${step + 1} ${nt('ui166')}`}
+		>
 			<span style={`width:${step === 0 ? '50%' : '100%'}`}></span>
 		</div>
 		<div class="sell-flow__body" bind:this={bodyElement}>
 			{#if step === 0}
 				<section class="sell-flow__section" aria-labelledby="sell-flow-car-title">
 					<div class="sell-flow__intro">
-						<h3 id="sell-flow-car-title">Кой автомобил продавате?</h3>
+						<h3 id="sell-flow-car-title">{nt('ui168')}</h3>
 						<p>
-							{manualEntry
-								? 'Марка и модел са достатъчни за начало.'
-								: 'Провери VIN и добави основните данни.'}
+							{manualEntry ? nt('ui169') : nt('ui170')}
 						</p>
 					</div>
 
 					{#if !manualEntry}
 						<label class="sell-field sell-field--wide">
 							<span>VIN</span>
-							<input bind:value={vin} type="text" placeholder="WBA..." autocomplete="off" />
+							<input
+								id="sell-flow-vin"
+								bind:value={vin}
+								type="text"
+								placeholder="WBA..."
+								autocomplete="off"
+							/>
 						</label>
 					{/if}
 
 					<fieldset class="sell-fieldset">
-						<legend>Марка</legend>
+						<legend>{nt('ui171')}</legend>
 						<div class="sell-brand-rail">
 							{#each makeOptions as option (option)}
 								<button
@@ -167,18 +301,24 @@
 									aria-pressed={make === option}
 									onclick={() => (make = option)}
 								>
-									{option}
+									{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}
 								</button>
 							{/each}
 						</div>
 					</fieldset>
 					<div class="sell-field-grid">
 						<label class="sell-field">
-							<span>Модел</span>
-							<input bind:value={model} type="text" placeholder="X5" autocomplete="off" />
+							<span>{nt('ui172')}</span>
+							<input
+								id="sell-flow-model"
+								bind:value={model}
+								type="text"
+								placeholder="X5"
+								autocomplete="off"
+							/>
 						</label>
 						<label class="sell-field">
-							<span>Година</span>
+							<span>{nt('ui173')}</span>
 							<input
 								bind:value={year}
 								type="text"
@@ -190,25 +330,26 @@
 					</div>
 
 					<label class="sell-field sell-field--wide">
-						<span>Пробег</span>
-						<input bind:value={mileage} type="text" inputmode="numeric" placeholder="120 000 км" />
+						<span>{nt('ui75')}</span>
+						<input bind:value={mileage} type="text" inputmode="numeric" placeholder={nt('ui174')} />
 					</label>
 				</section>
 			{:else}
 				<section class="sell-flow__section" aria-labelledby="sell-flow-contact-title">
 					<div class="sell-flow__intro">
-						<h3 id="sell-flow-contact-title">Къде да изпратим оценката?</h3>
-						<p>Само телефонът е задължителен.</p>
+						<h3 id="sell-flow-contact-title">{nt('ui175')}</h3>
+						<p>{nt('ui176')}</p>
 					</div>
 					<div class="sell-summary">
-						<span>Автомобил</span>
+						<span>{nt('ui167')}</span>
 						<strong>{vehicleTitle}</strong>
-						<button type="button" onclick={goBack}>Редактирай</button>
+						<button type="button" onclick={goBack}>{nt('ui177')}</button>
 					</div>
 
 					<label class="sell-field sell-field--wide">
-						<span>Телефон *</span>
+						<span>{nt('ui178')}</span>
 						<input
+							id="sell-flow-phone"
 							bind:value={phone}
 							type="tel"
 							inputmode="tel"
@@ -220,18 +361,17 @@
 
 					<div class="sell-field-grid">
 						<label class="sell-field">
-							<span>Очаквана цена</span>
+							<span>{nt('ui179')}</span>
 							<input bind:value={price} type="text" inputmode="numeric" placeholder="EUR" />
 						</label>
 						<label class="sell-field">
-							<span>Град</span>
+							<span>{nt('ui180')}</span>
 							<input bind:value={location} type="text" autocomplete="address-level2" />
 						</label>
 					</div>
 					<label class="sell-field sell-field--wide sell-field--notes">
-						<span>Бележка (по желание)</span>
-						<textarea bind:value={notes} rows="3" placeholder="Състояние, ремонти или друго важно"
-						></textarea>
+						<span>{nt('ui181')}</span>
+						<textarea bind:value={notes} rows="3" placeholder={nt('ui182')}></textarea>
 					</label>
 
 					{#if submitError}<p class="sell-flow__error" role="alert">{submitError}</p>{/if}
@@ -239,19 +379,19 @@
 			{/if}
 		</div>
 
+		{#if validationMessage}<p class="sell-flow__error sell-flow__error--validation" role="alert">
+				{validationMessage}
+			</p>{/if}
+
 		<footer class="sell-flow__footer">
 			{#if step === 1}
 				<button type="button" class="sell-flow__back" onclick={goBack} disabled={submitting}>
-					<ArrowLeft size={18} strokeWidth={2.4} /> Назад
+					<ArrowLeft size={18} strokeWidth={2.4} />
+					{nt('ui183')}
 				</button>
 			{/if}
-			<button
-				type="button"
-				class="sell-flow__next"
-				onclick={goNext}
-				disabled={!canContinue || submitting}
-			>
-				{submitting ? 'Изпращане…' : step === 0 ? 'Продължи' : 'Изпрати за оценка'}
+			<button type="button" class="sell-flow__next" onclick={goNext} disabled={submitting}>
+				{submitting ? nt('ui184') : step === 0 ? nt('ui185') : nt('ui186')}
 				<ArrowRight size={18} strokeWidth={2.4} />
 			</button>
 		</footer>
@@ -264,49 +404,32 @@
 		grid-template-rows: auto auto minmax(0, 1fr) auto;
 		height: 100%;
 		min-height: 0;
-		background: #f3f5f7;
 		color: var(--bc-ink);
 	}
+	.sell-flow__error--validation {
+		margin: 0 var(--bc-mobile-gutter) var(--bc-space-2);
+	}
+
 	.sell-flow__header {
 		display: grid;
-		grid-template-columns: 44px minmax(0, 1fr) 44px;
 		align-items: center;
-		gap: 10px;
-		padding: 12px 14px 9px;
-		background: #08090b;
-		color: #fff;
 	}
 	.sell-flow__header > div {
 		display: grid;
-		gap: 2px;
 		text-align: center;
 	}
 	.sell-flow__header h2 {
 		margin: 0;
-		font-size: var(--bc-mobile-section-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-section-title-leading);
 	}
 	.sell-flow__header span {
-		color: rgba(255, 255, 255, 0.68);
-		font-size: 12px;
 		font-weight: 600;
 	}
 	.sell-flow__close {
 		display: grid;
-		width: 44px;
-		height: 44px;
 		place-items: center;
 		border: 0;
-		border-radius: 12px;
-		background: rgba(255, 255, 255, 0.08);
-		color: #fff;
 		padding: 0;
 		cursor: pointer;
-	}
-	.sell-flow__progress {
-		height: 3px;
-		background: #24272b;
 	}
 	.sell-flow__progress span {
 		display: block;
@@ -318,7 +441,6 @@
 		min-height: 0;
 		overflow-y: auto;
 		overscroll-behavior: contain;
-		padding: 14px var(--bc-mobile-gutter) 20px;
 		scrollbar-width: none;
 	}
 	.sell-flow__body::-webkit-scrollbar {
@@ -326,32 +448,21 @@
 	}
 	.sell-flow__section {
 		display: grid;
-		gap: 12px;
 	}
 	.sell-flow__intro {
 		display: grid;
-		gap: 3px;
 	}
 	.sell-flow__intro h3,
 	.sell-flow__intro p {
 		margin: 0;
 	}
-	.sell-flow__intro h3 {
-		font-size: var(--bc-mobile-section-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-section-title-leading);
-	}
 	.sell-flow__intro p {
 		color: var(--bc-muted);
-		font-size: var(--bc-mobile-body);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-body-leading);
 	}
 	.sell-field,
 	.sell-fieldset {
 		display: grid;
 		min-width: 0;
-		gap: 5px;
 		margin: 0;
 		border: 0;
 		padding: 0;
@@ -359,19 +470,13 @@
 	.sell-field > span,
 	.sell-fieldset legend {
 		color: var(--bc-copy);
-		font-size: var(--bc-mobile-label);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-label-leading);
 		padding: 0;
 	}
 	.sell-field input,
 	.sell-field textarea {
 		width: 100%;
 		min-width: 0;
-		border: 1px solid var(--bc-border) !important;
-		border-radius: 12px !important;
-		background: #fff !important;
-		box-shadow: none !important;
+		box-shadow: none;
 		color: var(--bc-ink);
 		font-family: inherit;
 		font-size: var(--bc-text-control);
@@ -379,14 +484,8 @@
 		line-height: var(--bc-leading-control);
 		outline: 0;
 	}
-	.sell-field input {
-		height: 48px;
-		padding: 0 12px !important;
-	}
 	.sell-field textarea {
-		min-height: 78px;
 		resize: none;
-		padding: 10px 12px !important;
 	}
 	.sell-field input::placeholder,
 	.sell-field textarea::placeholder {
@@ -395,7 +494,7 @@
 	}
 	.sell-field input:focus,
 	.sell-field textarea:focus {
-		border-color: var(--bc-accent) !important;
+		border-color: var(--bc-accent);
 	}
 	.sell-field-grid {
 		display: grid;
@@ -404,7 +503,6 @@
 	}
 	.sell-brand-rail {
 		display: flex;
-		gap: 7px;
 		overflow-x: auto;
 		padding: 1px 0 3px;
 		scrollbar-width: none;
@@ -414,31 +512,21 @@
 		display: none;
 	}
 	.sell-brand-rail button {
-		min-height: 40px;
 		flex: 0 0 auto;
-		border: 1px solid var(--bc-border);
-		border-radius: 11px;
-		background: #fff;
 		color: var(--bc-ink);
 		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-control);
-		padding: 0 13px;
 		cursor: pointer;
 		white-space: nowrap;
 		line-height: var(--bc-leading-control);
 	}
 	.sell-brand-rail button.active {
 		border-color: var(--bc-accent);
-		background: var(--bc-accent);
-		color: #fff;
 	}
 	.sell-summary {
 		position: relative;
 		display: grid;
 		gap: 2px;
-		border: 1px solid var(--bc-border);
-		border-radius: 12px;
-		background: #fff;
 		padding: 10px 88px 10px 12px;
 	}
 	.sell-summary span {
@@ -460,7 +548,6 @@
 		min-height: 36px;
 		border: 0;
 		border-radius: 9px;
-		background: var(--bc-surface-hover);
 		color: var(--bc-ink);
 		font-size: var(--bc-mobile-label);
 		font-weight: var(--bc-weight-heading);
@@ -482,9 +569,6 @@
 		display: grid;
 		grid-template-columns: auto minmax(0, 1fr);
 		gap: 8px;
-		border-top: 1px solid var(--bc-border);
-		background: #fff;
-		padding: 10px var(--bc-mobile-gutter) calc(10px + env(safe-area-inset-bottom));
 	}
 	.sell-flow__footer > .sell-flow__next:only-child {
 		grid-column: 1 / -1;
@@ -492,31 +576,25 @@
 	.sell-flow__back,
 	.sell-flow__next {
 		display: inline-flex;
-		min-height: 48px;
 		align-items: center;
 		justify-content: center;
 		gap: 6px;
-		border-radius: 12px;
 		font-size: var(--bc-text-cta);
-		font-weight: var(--bc-weight-heading);
+		font-weight: var(--bc-weight-action);
 		cursor: pointer;
 		line-height: var(--bc-leading-cta);
 	}
 	.sell-flow__back {
 		border: 0;
-		background: var(--bc-surface-hover);
 		color: var(--bc-ink);
 		padding: 0 13px;
 	}
 	.sell-flow__next {
 		border: 0;
-		background: var(--bc-accent);
 		color: #fff;
 		padding: 0 16px;
 	}
 	.sell-flow__next:disabled {
-		background: #cfd4da;
-		color: #7a8490;
 		cursor: not-allowed;
 	}
 	.sell-flow__success {
@@ -560,8 +638,8 @@
 		border-radius: 12px;
 		background: var(--bc-accent);
 		color: #fff;
-		font-size: 14px;
-		font-weight: var(--bc-weight-heading);
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-action);
 		cursor: pointer;
 	}
 	.sell-flow button:focus-visible,
@@ -647,21 +725,21 @@
 	}
 	.sell-field input,
 	.sell-field textarea {
-		border: 0 !important;
-		border-radius: 10px !important;
-		background: var(--bc-white) !important;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
 	}
 	.sell-field input {
 		height: 44px;
-		padding: 0 11px !important;
+		padding: 0 11px;
 	}
 	.sell-field textarea {
 		min-height: 70px;
-		padding: 9px 11px !important;
+		padding: 9px 11px;
 	}
 	.sell-field input:focus,
 	.sell-field textarea:focus {
-		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent) !important;
+		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent);
 	}
 	.sell-brand-rail {
 		gap: 6px;
@@ -705,5 +783,51 @@
 	.sell-flow__next:disabled {
 		background: var(--bc-border);
 		color: var(--bc-muted);
+	}
+
+	.sell-flow--embedded {
+		height: auto;
+		min-height: 500px;
+		background: var(--bc-surface-raised);
+	}
+	.sell-flow--embedded .sell-flow__header {
+		display: block;
+		padding: 0 0 var(--bc-space-4);
+		background: transparent;
+	}
+	.sell-flow--embedded .sell-flow__header > div {
+		text-align: left;
+	}
+	.sell-flow--embedded .sell-flow__header h2 {
+		font-size: var(--bc-text-h4);
+	}
+	.sell-flow--embedded .sell-flow__close,
+	.sell-flow--embedded .sell-flow__header-spacer {
+		display: none;
+	}
+	.sell-flow--embedded .sell-flow__progress {
+		margin: 0;
+	}
+	.sell-flow--embedded .sell-flow__body {
+		padding: var(--bc-space-5) 0;
+		background: transparent;
+		overflow: visible;
+	}
+	.sell-flow--embedded .sell-flow__section,
+	.sell-flow--embedded .sell-field-grid {
+		gap: var(--bc-form-gap);
+	}
+	.sell-flow--embedded .sell-field input,
+	.sell-flow--embedded .sell-field textarea {
+		border: 1px solid var(--bc-border-strong);
+		border-radius: var(--bc-radius-control);
+	}
+	.sell-flow--embedded .sell-flow__footer {
+		padding: var(--bc-space-4) 0 0;
+		background: transparent;
+	}
+	.sell-flow--embedded .sell-flow__success {
+		min-height: 320px;
+		padding: 0;
 	}
 </style>

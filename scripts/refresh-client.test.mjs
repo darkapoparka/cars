@@ -49,7 +49,10 @@ function temporaryCandidate(templateKey, files) {
       'apps/web/lib/public-marketplace-data.ts',
       'apps/web/app/[locale]/layout.tsx'
     ],
-    import: ['src/lib/components/home/HomeFiveHeader.svelte']
+    import: [
+      'src/lib/components/home/HomeFiveHeader.svelte',
+      'src/lib/config/dealer.ts'
+    ]
   };
   for (const relative of new Set([...files, ...(requiredConsumers[templateKey] ?? [])])) copyRelative(template, root, relative);
   return { root, template };
@@ -154,7 +157,7 @@ test('Auto Best refresh keeps approved hero artwork and restores Navara dealer d
   );
   const autoBestHero = fs.readFileSync(path.join(root, 'src/lib/components/home/Hero.svelte'), 'utf8');
   assert.doesNotMatch(autoBestHero, /Студентски град/);
-  assert.match(autoBestHero, /brand\.addressLine/);
+  assert.match(autoBestHero, /i18n\.dealer\(['"]addressLine['"]\)/);
   assert.doesNotMatch(fs.readFileSync(path.join(root, 'src/routes/listing-detail-v1/[id]/+page.svelte'), 'utf8'), /Auto Best/);
   fs.rmSync(root, { recursive: true, force: true });
   fs.rmSync(legacyClient, { recursive: true, force: true });
@@ -260,6 +263,12 @@ test('Import refresh retains the approved structural hero and replaces sample st
   assert.equal(feed.count, promosaleProfile.listings.length);
   assert.match(feed.listings[0].title, /Mercedes-Benz EQE/);
   assert.match(feed.listings[0].image, /^\/dealer\/inventory\//);
+  const dealer = fs.readFileSync(path.join(root, 'src/lib/config/dealer.ts'), 'utf8');
+  assert.match(dealer, /Promosale Varna/);
+  assert.doesNotMatch(dealer, /Day Night Auto/i);
+  assert.match(dealer, /viber:\/\/chat\?number=/);
+  assert.match(dealer, /default: "bg"/);
+  assert.match(dealer, /country: "BG"/);
   const data = fs.readFileSync(path.join(root, 'src/lib/data/daynight.ts'), 'utf8');
   assert.match(data, /Promosale Varna/);
   assert.doesNotMatch(data, /Day Night Auto/i);
@@ -270,8 +279,9 @@ test('Import refresh retains the approved structural hero and replaces sample st
     path.join(root, 'src/lib/components/home/HomeFiveHero.svelte'),
     'utf8'
   );
-  assert.match(heroSource, /daynightContact\.addressLabel/);
-  assert.match(heroSource, /daynightContact\.primaryPhoneHref/);
+  assert.match(heroSource, /site\.contact\.mapHref/);
+  assert.match(heroSource, /site\.contact\.phoneHref/);
+  assert.doesNotMatch(heroSource, /import \{ daynightContact \}/);
   assert.doesNotMatch(heroSource, /Day Night Auto%20Plovdiv|0877733110/);
   fs.rmSync(root, { recursive: true, force: true });
 });

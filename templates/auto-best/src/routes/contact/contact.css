@@ -56,7 +56,13 @@
   background: var(--dn-red-hover);
 }
 
-.dn-contact-button--call { background: var(--dn-ink); color: var(--dn-white); }
+.dn-contact-call-icon { display: none; }
+.dn-contact-call-number { white-space: nowrap; }
+@media (max-width: 767px) {
+  .dn-contact-button--call .dn-contact-call-label { display: none; }
+  .dn-contact-call-icon { display: inline-flex; flex-shrink: 0; }
+}
+.dn-contact-button--call { gap: var(--dn-space-2); background: var(--dn-ink); color: var(--dn-white); }
 .dn-contact-button--call:is(:hover, :focus-visible) { background: var(--dn-ink-hover); }
 
 .dn-contact-hero__action {
@@ -1255,4 +1261,3 @@
 @media (max-width: 374px) {
   .dn-contact-section--workflow .dn-contact-intent--workflow :is(.dn-contact-workflow-title, .dn-tradein-enquiry > h1) { font-size: var(--dn-text-subheading); }
 }
-

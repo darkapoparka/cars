@@ -1,49 +1,54 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import { Calendar, Cog, Fuel, Gauge } from '@lucide/svelte';
+	import { assetHref } from '$lib/utils/assets';
+	import { nativeMessage } from '$lib/i18n/native';
+	import { page } from '$app/state';
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
+	import { imageFallback } from '$lib/browser/image-fallback';
+	import { linkHref as resolve } from '$lib/utils/links';
+	import Calendar from '@lucide/svelte/icons/calendar';
+	import CarFront from '@lucide/svelte/icons/car-front';
+	import Cog from '@lucide/svelte/icons/cog';
+	import Fuel from '@lucide/svelte/icons/fuel';
+	import Gauge from '@lucide/svelte/icons/gauge';
 
-	type MobileVehicleCardData = {
-		slug: string;
-		image: string;
-		title: string;
-		brand: string;
-		priceLabel: string;
-		monthlyLabel: string;
-		mileageLabel: string;
-		year: string | number;
-		fuel: string;
-		transmission: string;
-		tag?: string;
-	};
+	import type { VehicleCardSummary as MobileVehicleCardData } from '$lib/domain/vehicle-card';
 
 	let {
 		card,
 		image = card.image,
-		fallbackImage = '/assets/images/card/card-48.jpg'
-	}: { card: MobileVehicleCardData; image?: string; fallbackImage?: string } = $props();
+		priority = false
+	}: { card: MobileVehicleCardData; image?: string; priority?: boolean } = $props();
 
-	const useFallbackImage = (event: Event) => {
-		const element = event.currentTarget as HTMLImageElement;
-		if (!element.src.endsWith(fallbackImage)) element.src = fallbackImage;
-	};
+	let imageFailed = $state(false);
 </script>
 
 <a
 	class="mobile-vehicle-card"
-	href={resolve('/inventory/[slug]', { slug: card.slug })}
+	href={resolve('/inventory/' + encodeURIComponent(card.slug))}
 	aria-label={card.title}
 >
-	<div class="mobile-vehicle-card__image">
-		<img
-			src={image}
-			alt={card.title}
-			width="660"
-			height="440"
-			loading="lazy"
-			decoding="async"
-			onerror={useFallbackImage}
-		/>
-		{#if card.tag}<span>{card.tag}</span>{/if}
+	<div class="mobile-vehicle-card__image" class:image-failed={imageFailed}>
+		{#if imageFailed}
+			<div class="mobile-vehicle-card__placeholder" role="img" aria-label={nt('ui34') + card.title}>
+				<CarFront size={28} strokeWidth={1.8} aria-hidden="true" />
+				<span>{nt('ui35')}</span>
+			</div>
+		{:else}
+			<img
+				use:imageFallback
+				src={assetHref(image)}
+				alt={card.title}
+				width="660"
+				height="440"
+				sizes="(max-width: 767px) 50vw, 330px"
+				loading={priority ? 'eager' : 'lazy'}
+				fetchpriority={priority ? 'high' : 'auto'}
+				decoding="async"
+				onerror={() => (imageFailed = true)}
+			/>
+		{/if}
+		{#if card.tag}<span class="mobile-vehicle-card__tag">{card.tag}</span>{/if}
 	</div>
 	<div class="mobile-vehicle-card__body">
 		<p>{card.brand}</p>
@@ -93,7 +98,7 @@
 		object-fit: cover;
 	}
 
-	.mobile-vehicle-card__image span {
+	.mobile-vehicle-card__tag {
 		position: absolute;
 		display: inline-flex;
 		align-items: center;
@@ -108,6 +113,26 @@
 		font-weight: var(--bc-weight-body);
 		line-height: var(--bc-mobile-stat-leading);
 		text-transform: uppercase;
+	}
+
+	.mobile-vehicle-card__placeholder {
+		position: absolute;
+		inset: 0;
+		display: grid;
+		place-content: center;
+		justify-items: center;
+		gap: var(--bc-space-2);
+		background: var(--bc-surface-soft);
+		color: var(--bc-muted);
+		padding: var(--bc-space-3);
+		text-align: center;
+	}
+
+	.mobile-vehicle-card__placeholder span {
+		max-width: 14ch;
+		font-size: var(--bc-mobile-meta);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-meta-leading);
 	}
 
 	.mobile-vehicle-card__body {
@@ -160,6 +185,7 @@
 		color: var(--bc-muted);
 		font-size: var(--bc-mobile-stat);
 		font-weight: var(--bc-weight-body);
+		font-variant-numeric: tabular-nums;
 		line-height: var(--bc-mobile-stat-leading);
 		white-space: nowrap;
 	}
@@ -227,6 +253,37 @@
 		line-height: var(--bc-mobile-stat-leading);
 		font-weight: var(--bc-weight-body);
 	}
+	@media (hover: none) and (pointer: coarse) {
+		.mobile-vehicle-card:active {
+			background: var(--bc-surface-hover);
+		}
+
+		.mobile-vehicle-card:active .mobile-vehicle-card__image img {
+			opacity: 0.96;
+		}
+	}
+
+	@media (max-width: 340px) {
+		.mobile-vehicle-card__prices {
+			gap: 6px;
+			margin-bottom: 10px;
+		}
+
+		.mobile-vehicle-card__body small {
+			font-size: 11px;
+			line-height: 14px;
+		}
+
+		.mobile-vehicle-card__body ul {
+			gap: 3px;
+		}
+
+		.mobile-vehicle-card__body li {
+			min-height: 27px;
+			padding: 3px;
+		}
+	}
+
 	@media (max-width: 430px) {
 		.mobile-vehicle-card__body li :global(svg) {
 			display: none;

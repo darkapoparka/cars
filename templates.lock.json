@@ -5,43 +5,150 @@
     "auto-best": {
       "repository": "darkapoparka/cars-template-auto-best",
       "status": "approved",
-      "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
-      "release": "empty-video-contract-2026-09-16",
+      "commit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+      "release": "native-en-bg-localization-2026-09-21",
       "snapshotPath": "templates/auto-best",
-      "digest": "cbe89c0c4e891816428f9820c5bbd33d32f7623c7ce123b6f43d3dd159f27cec",
+      "digest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
       "runtime": {
-        "node": "22.23.0",
-        "npm": "10.9.8",
+        "node": "22.x",
+        "npm": "11.x",
         "lockfile": "package-lock.json"
       },
       "modes": {
-        "standalone": "validated source and production build",
-        "mounted": "requires-dealer-QA"
+        "standalone": "exact Git/Vercel source verified at 320, 390 and 1440",
+        "mounted": "native adapter and isolated mounted fixtures verified; dealer publication still requires dealer QA"
       },
       "qa": {
-        "evidence": "docs/evidence/auto-best-release-empty-video-2026-09-16.json",
-        "verifiedAt": "2026-09-16T20:31:39.213Z",
+        "evidence": "docs/releases/localization-2026-09-21/auto-best-release.json",
+        "verifiedAt": "2026-09-21T07:46:00.595Z",
         "checks": [
           {
-            "command": "npm ci --no-audit --no-fund",
-            "status": "passed"
+            "name": "exact production deployment",
+            "status": "passed",
+            "deploymentId": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622"
           },
           {
-            "command": "npm run validate",
+            "name": "public preference and write-blocking audit",
             "status": "passed",
-            "evidenceRun": "darkapoparka/cars-template-auto-best/actions/runs/35146697017"
+            "passed": 16,
+            "failed": 0
+          },
+          {
+            "name": "native EN/BG catalog parity and acceptance evidence",
+            "status": "passed",
+            "catalogs": [
+              {
+                "keys": 958,
+                "contentDigest": "b6e1f6b71c30d15ef976254a6e181deda5501b096b65820bdfbab1efbf4191fd"
+              }
+            ]
           }
         ],
         "standalone": {
           "mobile": true,
           "desktop": true,
           "widths": [
+            320,
+            390,
+            1440
+          ]
+        },
+        "nativeLocalization": {
+          "schemaVersion": 1,
+          "adapter": "native-v1",
+          "repository": "darkapoparka/cars-template-auto-best",
+          "commit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+          "locales": [
+            "en",
+            "bg"
+          ],
+          "widths": [
+            320,
             390,
             1440
           ],
-          "notes": "Master validation passed. Existing verified-video composition is unchanged; dealers without a verified channel and videos now omit the empty section."
+          "verifiedAt": "2026-09-21T07:46:00.595Z",
+          "evidenceSha256": "1e36a506fb5a1aa20b78d461ca59edaf25330cb733dd685c09d54e211847fd08",
+          "catalogs": [
+            {
+              "format": "typescript-pair",
+              "path": "src/lib/locale/catalog.ts",
+              "en": "en",
+              "bg": "bg"
+            }
+          ],
+          "sourceDigest": "b8d50d86eef40351a9024916a00f3917683332829d5ead39e73348385b2ca56f",
+          "deployment": {
+            "id": "dpl_7cKeL45CLxgKoXhJ6wyJE4ZNi622",
+            "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+            "state": "READY",
+            "sourceCommit": "82c270b95f710f7f06548742c3cdb7cc729894e8",
+            "publicAlias": "https://cars-template-auto-best.vercel.app/"
+          },
+          "checks": [
+            {
+              "name": "catalog-completeness",
+              "status": "passed",
+              "evidenceSha256": "d4b23a4a7c9cd1b7ea6ef5d74a861491fad47265b9a16ba46257a81e45f1d74c"
+            },
+            {
+              "name": "hardcoded-ui",
+              "status": "passed",
+              "evidenceSha256": "8b226f799911eae6b95bbaed49e3a252bfc2cc813cad8b612285a7a8d5464d00"
+            },
+            {
+              "name": "native-routing",
+              "status": "passed",
+              "evidenceSha256": "fa4e45ce3421fda1b6dccd36df552605bf41e6ccabae75368e17dcf4170588f7"
+            },
+            {
+              "name": "standalone-journeys",
+              "status": "passed",
+              "evidenceSha256": "e1f8215a33fb5b3d5e6bcadea0f1f4ee39e6edf66a73fbfbedb47f4ba8cb523c"
+            },
+            {
+              "name": "mounted-journeys",
+              "status": "passed",
+              "evidenceSha256": "018620650a4b70fdbfe7b3548cb2ce364e1aca081948de2efa2bdeab750f50fa"
+            },
+            {
+              "name": "public-journeys",
+              "status": "passed",
+              "evidenceSha256": "39866c4af9a5c588ea65a2c838c4b3a8daf99ec8ac0d855d21a3eba1a0876f13"
+            },
+            {
+              "name": "preferences-no-js",
+              "status": "passed",
+              "evidenceSha256": "7396f5ec57dd784d63bafd5f307a8150d01f1a3552c0720176090cc9021f7df4"
+            },
+            {
+              "name": "preferences-storage-disabled",
+              "status": "passed",
+              "evidenceSha256": "734150c7c84bb70984a871e02a8d7c719326c563c2f9aee12dca317f88bb5b2f"
+            },
+            {
+              "name": "preferences-races",
+              "status": "passed",
+              "evidenceSha256": "f8c89a32939055ff3a2621ddf04a508bdf68694ad8fa1db366b6ea4070a6f8a4"
+            },
+            {
+              "name": "request-isolation",
+              "status": "passed",
+              "evidenceSha256": "40d92ad9ab42c77c5761d618bb2df10b73b6c997e9bebd2a17b9f95cfbf3bb01"
+            },
+            {
+              "name": "security-write-blocking",
+              "status": "passed",
+              "evidenceSha256": "127a99c58e594ffe4f9c4a93865285a9128d44b04f27dfc43c84b894df408a21"
+            },
+            {
+              "name": "assets-preserved",
+              "status": "passed",
+              "evidenceSha256": "1e5486a1ee2d7d708586db45ad03d3c71a6f8e84f2e7634d1d896115636c8832"
+            }
+          ]
         }
       },
       "reason": "Reviewed release selected by the recorded technical QA.",
@@ -52,40 +159,172 @@
     "modern": {
       "repository": "darkapoparka/cars-template-modern",
       "status": "approved",
-      "commit": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
-      "release": "promote-2026-09-13",
+      "commit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+      "release": "native-en-bg-localization-2026-09-21",
       "snapshotPath": "templates/modern",
-      "digest": "c797702248c546478d02496c93dd2b1452f2db8a9ceba36ee1383282e49c7e01",
+      "digest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "f64006130523375e440d48e4c4be6ec1b830d46a",
       "runtime": {
-        "node": "22.22.0",
+        "node": "22.x",
         "pnpm": "11.4.0",
         "lockfile": "pnpm-lock.yaml"
       },
       "modes": {
-        "mounted": "requires-dealer-QA",
-        "standalone": "verified bounded HTTP route matrix on next start"
+        "standalone": "exact Git/Vercel source verified at 320, 390 and 1440",
+        "mounted": "native adapter and isolated mounted fixtures verified; dealer publication still requires dealer QA"
       },
       "qa": {
-        "evidence": "docs/dealer-finalization/2026-09-19/TEMPLATE-QA.json",
-        "verifiedAt": "2026-09-19T05:06:15.027Z",
+        "evidence": "docs/releases/localization-2026-09-21/modern-release.json",
+        "verifiedAt": "2026-09-21T07:46:00.595Z",
         "checks": [
           {
-            "name": "Existing Vercel production build at exact upstream commit",
-            "status": "passed"
+            "name": "exact production deployment",
+            "status": "passed",
+            "deploymentId": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S"
           },
           {
-            "name": "Standalone 1440/390 render, no page errors or horizontal overflow",
-            "status": "passed"
+            "name": "public preference and write-blocking audit",
+            "status": "passed",
+            "passed": 16,
+            "failed": 0
+          },
+          {
+            "name": "native EN/BG catalog parity and acceptance evidence",
+            "status": "passed",
+            "catalogs": [
+              {
+                "keys": 23,
+                "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+              },
+              {
+                "keys": 27,
+                "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+              },
+              {
+                "keys": 28,
+                "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+              }
+            ]
           }
         ],
         "standalone": {
+          "mobile": true,
           "desktop": true,
-          "mobile": true
+          "widths": [
+            320,
+            390,
+            1440
+          ]
+        },
+        "nativeLocalization": {
+          "schemaVersion": 1,
+          "adapter": "native-v1",
+          "repository": "darkapoparka/cars-template-modern",
+          "commit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+          "locales": [
+            "en",
+            "bg"
+          ],
+          "widths": [
+            320,
+            390,
+            1440
+          ],
+          "verifiedAt": "2026-09-21T07:46:00.595Z",
+          "evidenceSha256": "8d2f88998e934eb296cfa7ce9e1eaa300e9fc8d76d9ceab3c7094a1222f1e002",
+          "catalogs": [
+            {
+              "format": "typescript-pair",
+              "path": "packages/internationalization/preferences-messages.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            {
+              "format": "typescript-pair",
+              "path": "packages/internationalization/public-messages.ts",
+              "en": "en",
+              "bg": "bg"
+            },
+            {
+              "format": "typescript-rows",
+              "path": "packages/marketplace/content/inventory-copy.ts",
+              "export": "inventoryCopy"
+            }
+          ],
+          "sourceDigest": "edb83d6831b60575c1f00215802e8535385f8b4845b5115083e8fc6218e98799",
+          "deployment": {
+            "id": "dpl_87NGwXyCrHkvXZjxscEZYWpkXN8S",
+            "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+            "state": "READY",
+            "sourceCommit": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
+            "publicAlias": "https://cars-template-modern.vercel.app/"
+          },
+          "checks": [
+            {
+              "name": "catalog-completeness",
+              "status": "passed",
+              "evidenceSha256": "0101923f0db18920d540df167ca2ab03ad008770df45b596db0919b1ca96181c"
+            },
+            {
+              "name": "hardcoded-ui",
+              "status": "passed",
+              "evidenceSha256": "18f3592e042d54fd7e2fa13005c2ec8d3870be896dcdaf7706239b3f68a40b58"
+            },
+            {
+              "name": "native-routing",
+              "status": "passed",
+              "evidenceSha256": "82f707fc45e2c3aab50c09790de5f3ddc6ccb6eab43c8d43c33eb3f987b2c602"
+            },
+            {
+              "name": "standalone-journeys",
+              "status": "passed",
+              "evidenceSha256": "57afbabdbd76638dd95a792b3409da6669834e589b86f9799c38aac2d3a8c7bf"
+            },
+            {
+              "name": "mounted-journeys",
+              "status": "passed",
+              "evidenceSha256": "223cf1cdb6fe54add8ed6af4b4761c1de9be5244709b1d54c20102efba81b028"
+            },
+            {
+              "name": "public-journeys",
+              "status": "passed",
+              "evidenceSha256": "5fa344d7b7d61099a2d718c3a5cc95d6fd26d871c459b995ccfc4b2d2ef41738"
+            },
+            {
+              "name": "preferences-no-js",
+              "status": "passed",
+              "evidenceSha256": "e74750125e71eeec3bd57bb32c68a1a9898a8471b01c1e629eef67f0d58e03e6"
+            },
+            {
+              "name": "preferences-storage-disabled",
+              "status": "passed",
+              "evidenceSha256": "c9d1d25644d7d8c975ee36f19cf430cf0f61fadd2bdef5ea91c71eebb2e453df"
+            },
+            {
+              "name": "preferences-races",
+              "status": "passed",
+              "evidenceSha256": "5473e41bed7e506d381b8ff531b961c90e0a9f71d532447ea98f5053653e55a3"
+            },
+            {
+              "name": "request-isolation",
+              "status": "passed",
+              "evidenceSha256": "fbfb9c926c0b92da8609452c8b570d5882dbca6068b1547941bf5ae84baad4cd"
+            },
+            {
+              "name": "security-write-blocking",
+              "status": "passed",
+              "evidenceSha256": "539b715342baf50d6c6523fbe4e19bf56d9a94b20bc7ace473d15b6bfbe9ba56"
+            },
+            {
+              "name": "assets-preserved",
+              "status": "passed",
+              "evidenceSha256": "aa21cdd3184082134b9f3d2fc37d295761c8fa72cfbfb0989414c70e4350d924"
+            }
+          ]
         }
       },
-      "reason": "Latest existing production template, source commit and standalone desktop/mobile verified for owner-requested dealer refresh.",
+      "reason": "Reviewed release selected by the recorded technical QA.",
       "observedWorkingDigest": "146abad20859356a4058659ed0c2451d7f51181b08ef598136b058f7bbed305f",
       "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
       "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md"
@@ -93,10 +332,10 @@
     "carwow": {
       "repository": "darkapoparka/cars-template-carwow",
       "status": "approved",
-      "commit": "89f50c427863050abb7923152f05c091bb937d1e",
-      "release": "desktop-category-density-2026-09-16",
+      "commit": "6164980ad0a80b9627ad94b99f0322fc931a93bd",
+      "release": "native-en-bg-localization-2026-09-21",
       "snapshotPath": "templates/carwow",
-      "digest": "e15675d154661843e977491c7fdce988b44fdcf82c7eb8315da6c8c01eae16c0",
+      "digest": "123f91a50b36c30a7f794f55a77397e8f7ffcfc82d7502da53dace849ac6f43e",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "d769bb0558ad0228b92440fc3fd9ff81548bc890",
       "runtime": {
@@ -105,35 +344,138 @@
         "lockfile": "package-lock.json"
       },
       "modes": {
-        "standalone": "validated source and production build",
-        "mounted": "requires-dealer-QA"
+        "standalone": "exact Git/Vercel source verified at 320, 390 and 1440",
+        "mounted": "native adapter and isolated mounted fixtures verified; dealer publication still requires dealer QA"
       },
       "qa": {
-        "evidence": "docs/evidence/carwow-release-category-density-2026-09-16.json",
-        "verifiedAt": "2026-09-16T20:31:39.213Z",
+        "evidence": "docs/releases/localization-2026-09-21/carwow-release.json",
+        "verifiedAt": "2026-09-21T07:46:00.595Z",
         "checks": [
           {
-            "command": "npm ci --no-audit --no-fund",
-            "status": "passed"
-          },
-          {
-            "command": "npm run check",
-            "status": "passed"
-          },
-          {
-            "command": "npm run build",
+            "name": "exact production deployment",
             "status": "passed",
-            "evidenceRun": "darkapoparka/cars-template-carwow/actions/runs/35146824017"
+            "deploymentId": "dpl_FNmuPh3bYn2mbukuZCqzxKpG29jQ"
+          },
+          {
+            "name": "public preference and write-blocking audit",
+            "status": "passed",
+            "passed": 16,
+            "failed": 0
+          },
+          {
+            "name": "native EN/BG catalog parity and acceptance evidence",
+            "status": "passed",
+            "catalogs": [
+              {
+                "keys": 1616,
+                "contentDigest": "e22cb59071b640e170133991e34dc0ee091a636649ae2026b901c1f1b55c8380"
+              }
+            ]
           }
         ],
         "standalone": {
           "mobile": true,
           "desktop": true,
           "widths": [
+            320,
+            390,
+            1440
+          ]
+        },
+        "nativeLocalization": {
+          "schemaVersion": 1,
+          "adapter": "native-v1",
+          "repository": "darkapoparka/cars-template-carwow",
+          "commit": "6164980ad0a80b9627ad94b99f0322fc931a93bd",
+          "locales": [
+            "en",
+            "bg"
+          ],
+          "widths": [
+            320,
             390,
             1440
           ],
-          "notes": "Desktop keeps the complete eight-card template taxonomy, ordered with in-stock types first and honest zero-stock labels. Mobile composition is unchanged."
+          "verifiedAt": "2026-09-21T07:46:00.595Z",
+          "evidenceSha256": "d1939dc28bb29d92a5c649807c9e644e1a50a3282c0d047675a3895213091791",
+          "catalogs": [
+            {
+              "format": "typescript-pair",
+              "path": "src/lib/locale/catalog.ts",
+              "en": "en",
+              "bg": "bg"
+            }
+          ],
+          "sourceDigest": "123f91a50b36c30a7f794f55a77397e8f7ffcfc82d7502da53dace849ac6f43e",
+          "deployment": {
+            "id": "dpl_FNmuPh3bYn2mbukuZCqzxKpG29jQ",
+            "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+            "state": "READY",
+            "sourceCommit": "6164980ad0a80b9627ad94b99f0322fc931a93bd",
+            "publicAlias": "https://cars-template-carwow.vercel.app/"
+          },
+          "checks": [
+            {
+              "name": "catalog-completeness",
+              "status": "passed",
+              "evidenceSha256": "048bbc04e112d1f09d84444c7a11f4f488cb8a2319f4d45c7b15af5c9555faa9"
+            },
+            {
+              "name": "hardcoded-ui",
+              "status": "passed",
+              "evidenceSha256": "aea1919b19ba7dae5b279a9226b0ac80c6a532a8a9a937cbf1a889458087cd9a"
+            },
+            {
+              "name": "native-routing",
+              "status": "passed",
+              "evidenceSha256": "690bc3b373aa96756d2e0895e57e6b7543dd0319d01d8c47c02d80add77bceeb"
+            },
+            {
+              "name": "standalone-journeys",
+              "status": "passed",
+              "evidenceSha256": "72f5a576ee7b5ea1bccba9e09a0ed597d443e9fa25490ee35d2cc5b1258430b0"
+            },
+            {
+              "name": "mounted-journeys",
+              "status": "passed",
+              "evidenceSha256": "c5d70b6dcb1e504d7ced4a9b4a5e232f92d83e5441ed028cdc87e26abc509d9b"
+            },
+            {
+              "name": "public-journeys",
+              "status": "passed",
+              "evidenceSha256": "89bfd5059719530d7903ab1859d92a4cb7da05fabdcb6fbd8d592b32df68f62d"
+            },
+            {
+              "name": "preferences-no-js",
+              "status": "passed",
+              "evidenceSha256": "c885e72da83a3891e55478a3e04b22d7769436f3a8a4af35bebc9a4f39c0613f"
+            },
+            {
+              "name": "preferences-storage-disabled",
+              "status": "passed",
+              "evidenceSha256": "18609b5c74bc6fca3e69c93d76b07e482754d56a6fc7fc9fdac0a30151af24c3"
+            },
+            {
+              "name": "preferences-races",
+              "status": "passed",
+              "evidenceSha256": "6bf261f784e511e6676c9f8f85300f938e237559bd3107d5106d2b47b95cf480"
+            },
+            {
+              "name": "request-isolation",
+              "status": "passed",
+              "evidenceSha256": "768cdd6f72689acb4227cb38a2acb38ef96007bfb21b5c1f31d24f74bdbbb166"
+            },
+            {
+              "name": "security-write-blocking",
+              "status": "passed",
+              "evidenceSha256": "d65be25426e76bcf5e952c236cc83c4ff57d1de40bc9cf09f0cefa6428ec652a"
+            },
+            {
+              "name": "assets-preserved",
+              "status": "passed",
+              "evidenceSha256": "957db09b10050677d0247b53af6fa1b3bed04babe26f81855a0fd7d07ef1ea04"
+            }
+          ]
         }
       },
       "reason": "Reviewed release selected by the recorded technical QA.",
@@ -144,109 +486,148 @@
     "import": {
       "repository": "darkapoparka/cars-template-import",
       "status": "approved",
-      "commit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
-      "release": "promote-2026-09-13",
+      "commit": "3db790795ade0d645348de71f510fb40ee427c28",
+      "release": "native-en-bg-localization-2026-09-21",
       "snapshotPath": "templates/import",
-      "digest": "f50aa85ab7d399295072e6911e095271721ea147a81569ce52d1d4bfad7c32aa",
+      "digest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "3c24db073b0b1a3bf26c64ed5336921117658e29",
       "runtime": {
-        "lockfile": "package-lock.json",
-        "node": "22.22.0",
-        "npm": "10.9.4"
+        "node": "22.x",
+        "npm": "11.x",
+        "lockfile": "package-lock.json"
       },
       "modes": {
-        "mounted": "requires-dealer-QA",
-        "standalone": "verified bounded HTTP route matrix on vite preview"
+        "standalone": "exact Git/Vercel source verified at 320, 390 and 1440",
+        "mounted": "native adapter and isolated mounted fixtures verified; dealer publication still requires dealer QA"
       },
       "qa": {
-        "evidence": "docs/evidence/import-release-2026-09-13.json",
-        "verifiedAt": "2026-09-13T21:40:58.720Z",
+        "evidence": "docs/releases/localization-2026-09-21/import-release.json",
+        "verifiedAt": "2026-09-21T07:46:00.595Z",
         "checks": [
           {
+            "name": "exact production deployment",
             "status": "passed",
-            "command": "npm ci"
+            "deploymentId": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c"
           },
           {
+            "name": "public preference and write-blocking audit",
             "status": "passed",
-            "errors": 0,
-            "warnings": 0,
-            "command": "npm run check"
+            "passed": 16,
+            "failed": 0
           },
           {
+            "name": "native EN/BG catalog parity and acceptance evidence",
             "status": "passed",
-            "command": "npm run build"
-          },
-          {
-            "status": "passed",
-            "command": "preview HTTP route matrix / inventory contact import sell-your-car financing at 390 and 1440 request labels"
+            "catalogs": [
+              {
+                "keys": 15,
+                "contentDigest": "06dead7dfa79c57f0872d960d112141262b5a5ca4998d76523cc6351d101ab6f"
+              }
+            ]
           }
         ],
         "standalone": {
           "mobile": true,
+          "desktop": true,
           "widths": [
+            320,
+            390,
+            1440
+          ]
+        },
+        "nativeLocalization": {
+          "schemaVersion": 1,
+          "adapter": "native-v1",
+          "repository": "darkapoparka/cars-template-import",
+          "commit": "3db790795ade0d645348de71f510fb40ee427c28",
+          "locales": [
+            "en",
+            "bg"
+          ],
+          "widths": [
+            320,
             390,
             1440
           ],
-          "desktop": true,
-          "routes": [
+          "verifiedAt": "2026-09-21T07:46:00.595Z",
+          "evidenceSha256": "c52499e0417dc1dab877f411e364bbef73e756131489e54ca0529a2e520dbaf3",
+          "catalogs": [
             {
-              "width": 390,
-              "routes": [
-                {
-                  "status": 200,
-                  "route": "/"
-                },
-                {
-                  "status": 200,
-                  "route": "/inventory"
-                },
-                {
-                  "status": 200,
-                  "route": "/contact"
-                },
-                {
-                  "status": 200,
-                  "route": "/import"
-                },
-                {
-                  "status": 200,
-                  "route": "/sell-your-car"
-                },
-                {
-                  "status": 200,
-                  "route": "/financing"
-                }
-              ]
+              "format": "typescript-pair",
+              "path": "src/lib/locale/messages.ts",
+              "en": "en",
+              "bg": "bg"
+            }
+          ],
+          "sourceDigest": "cb81f9180c26c5d77fee6ccb95c6502a818b1e8991c95508177dd017ffc23e99",
+          "deployment": {
+            "id": "dpl_CntvZtC8ub5XBWKuNAbchvxfGf8c",
+            "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+            "state": "READY",
+            "sourceCommit": "3db790795ade0d645348de71f510fb40ee427c28",
+            "publicAlias": "https://cars-template-import.vercel.app/"
+          },
+          "checks": [
+            {
+              "name": "catalog-completeness",
+              "status": "passed",
+              "evidenceSha256": "8cc9cd0239d132798c293095c9bc8dadd1ffe766553cda5d27892e5f27c64e23"
             },
             {
-              "width": 1440,
-              "routes": [
-                {
-                  "status": 200,
-                  "route": "/"
-                },
-                {
-                  "status": 200,
-                  "route": "/inventory"
-                },
-                {
-                  "status": 200,
-                  "route": "/contact"
-                },
-                {
-                  "status": 200,
-                  "route": "/import"
-                },
-                {
-                  "status": 200,
-                  "route": "/sell-your-car"
-                },
-                {
-                  "status": 200,
-                  "route": "/financing"
-                }
-              ]
+              "name": "hardcoded-ui",
+              "status": "passed",
+              "evidenceSha256": "12f5d46fefde8ff89732c79371f4f8103a587ea96d05afb28f13fbc5ca01f3ef"
+            },
+            {
+              "name": "native-routing",
+              "status": "passed",
+              "evidenceSha256": "40eb64abf6e2aea430463bc3135e4148a3a33abe08576471d70b4695efe37870"
+            },
+            {
+              "name": "standalone-journeys",
+              "status": "passed",
+              "evidenceSha256": "1565290fd0163575e8663cb47dbcc9e93a7412f26de1fbee8468ffcd076963bd"
+            },
+            {
+              "name": "mounted-journeys",
+              "status": "passed",
+              "evidenceSha256": "b4e2731668deec7d4687254e87e93b88e696dbbe6cafc33c8b47cd26c526a406"
+            },
+            {
+              "name": "public-journeys",
+              "status": "passed",
+              "evidenceSha256": "065e9a0d9a6244c3e356eec4b725aa5d5f639e4a0cd82c646efa97e2be863eae"
+            },
+            {
+              "name": "preferences-no-js",
+              "status": "passed",
+              "evidenceSha256": "feea6381735276d8669e5e3b7f95873c1e5d1cd6ddb113ea4b673f614bd7a04c"
+            },
+            {
+              "name": "preferences-storage-disabled",
+              "status": "passed",
+              "evidenceSha256": "03eaefa6ccb8969c973d56787274deb310f24158cc3fd2714db00a8e7ad9db13"
+            },
+            {
+              "name": "preferences-races",
+              "status": "passed",
+              "evidenceSha256": "5c0543bc062c2dc5d013e5a815870bbd3a93114e7d2a40cf703f662aa97b783f"
+            },
+            {
+              "name": "request-isolation",
+              "status": "passed",
+              "evidenceSha256": "30962d849a9cd720b17c9da17b0007b87deef58a2abcf5c5df0c7e1f46e674f6"
+            },
+            {
+              "name": "security-write-blocking",
+              "status": "passed",
+              "evidenceSha256": "3f97c29ad68749fb7e436c7fb05907a4877a7170129221894e910412c78217f9"
+            },
+            {
+              "name": "assets-preserved",
+              "status": "passed",
+              "evidenceSha256": "d628fe42f5abc4a5876b38d79b4c2a58c171cd1c1d917af9d52a843d152b196c"
             }
           ]
         }

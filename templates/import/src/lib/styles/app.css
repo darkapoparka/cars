@@ -1,0 +1,77 @@
+/* One utility generation entry. Preflight is intentionally not global while legacy previews remain. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+@import './daynight.css';
+@import './forms.css';
+@import './daynight.tailwind.css';
+@import './ui-theme.css';
+@import 'tw-animate-css';
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+	button,
+	[role='button'],
+	summary {
+		cursor: pointer;
+	}
+	button:disabled {
+		cursor: not-allowed;
+	}
+	img {
+		max-width: 100%;
+	}
+}
+
+.site-shell {
+	background: var(--bc-bg);
+	color: var(--bc-ink);
+}
+:where(.site-shell a) {
+	color: inherit;
+}
+.site-shell main {
+	min-height: 55vh;
+}
+.site-container {
+	width: min(calc(100% - var(--bc-page-x) * 2), var(--bc-container-page));
+	margin-inline: auto;
+}
+.site-section {
+	padding-block: var(--bc-section-sm);
+}
+.site-stack {
+	display: grid;
+	gap: var(--bc-space-6);
+	min-width: 0;
+}
+.site-heading {
+	margin: 0;
+	font: var(--bc-weight-heading) var(--bc-desktop-section-title)/1.2 var(--bc-font-heading);
+	letter-spacing: var(--bc-tracking-tight);
+}
+.site-muted {
+	color: var(--bc-muted);
+}
+.site-desktop-only {
+	display: block;
+}
+.site-mobile-only {
+	display: none;
+}
+@media (max-width: 767.98px) {
+	.site-heading {
+		font-size: 1.75rem;
+	}
+	.site-desktop-only {
+		display: none;
+	}
+	.site-mobile-only {
+		display: block;
+	}
+}

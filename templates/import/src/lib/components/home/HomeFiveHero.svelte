@@ -1,30 +1,37 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
+	import { assetHref } from '$lib/utils/assets';
+	import { nativeMessage } from '$lib/i18n/native';
+
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
+	import { site } from '$lib/config/site';
+	import { page } from '$app/state';
+	import { pushState } from '$app/navigation';
+	import { beforeNavigate, goto } from '$app/navigation';
+	import { linkHref as resolve } from '$lib/utils/links';
 	import type {
 		HomeFiveHeroAction,
 		HomeFiveHeroActionMode,
 		HomeFiveHeroData,
 		HomeFiveHeroSelect
 	} from '$lib/auxero/home-five';
-	import {
-		ArrowRight,
-		MapPin,
-		Navigation,
-		PhoneCall,
-		Search,
-		SlidersHorizontal,
-		X
-	} from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import Navigation from '@lucide/svelte/icons/navigation';
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
+	import Search from '@lucide/svelte/icons/search';
+	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
+	import X from '@lucide/svelte/icons/x';
 	import { onMount, tick } from 'svelte';
 	import InventoryAdvancedFilters from '$lib/components/inventory/InventoryAdvancedFilters.svelte';
 	import InventoryMobilePage from '$lib/components/inventory/InventoryMobilePage.svelte';
+	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import HeroFilterDialog from './HeroFilterDialog.svelte';
 
 	let { hero }: { hero?: HomeFiveHeroData } = $props();
 
-	const mobileShowroomMapHref =
-		'https://www.google.com/maps/search/?api=1&query=Day Night Auto%20Plovdiv%20South%20Industrial%20Zone';
-	const mobileShowroomPhoneHref = 'tel:0877733110';
+	const mobileShowroomMapHref = site.contact.mapHref;
+	const mobileShowroomPhoneHref = site.contact.phoneHref;
 	const inventoryFilterHref = (name: string, value: string) =>
 		`/inventory?${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 	const isEnglish = $derived(hero?.searchSubmitPrefix === 'Show');
@@ -63,11 +70,11 @@
 	const mileageFilter = $derived({
 		id: 'home-mileage',
 		name: 'mileageTo',
-		title: isEnglish ? 'Mileage' : 'Пробег',
-		defaultLabel: isEnglish ? 'Mileage' : 'Пробег',
+		title: isEnglish ? 'Mileage' : nt('ui75'),
+		defaultLabel: isEnglish ? 'Mileage' : nt('ui75'),
 		options: [50000, 100000, 150000, 200000, 250000].map((value) => ({
 			value: String(value),
-			label: `${isEnglish ? 'Up to' : 'До'} ${value.toLocaleString('bg-BG')} km`
+			label: `${isEnglish ? 'Up to' : nt('ui76')} ${value.toLocaleString('bg-BG')} km`
 		}))
 	});
 
@@ -87,31 +94,30 @@
 	const modelOptions = $derived(modelOptionsForBrands(brandSelection));
 
 	const mobileSearchPlaceholder = $derived(
-		activeMobileAction?.placeholder ??
-			(isEnglish ? 'Search brand, model, price...' : 'Търси марка, модел, цена...')
+		activeMobileAction?.placeholder ?? (isEnglish ? 'Search brand, model, price...' : nt('ui77'))
 	);
 	const mobileHeading = $derived(
-		activeMobileAction?.mobileHeading ?? (isEnglish ? 'Find your car.' : 'Намери автомобила си.')
+		activeMobileAction?.mobileHeading ?? (isEnglish ? 'Find your car.' : nt('ui78'))
 	);
 	const mobileModeHeading = $derived.by(() => {
 		if (activeMobileAction?.mode === 'import') {
-			return isEnglish ? 'Import a car' : 'Внеси автомобил';
+			return isEnglish ? 'Import a car' : nt('ui79');
 		}
 
 		if (activeMobileAction?.mode === 'sell') {
-			return isEnglish ? 'Sell your car' : 'Продай автомобил';
+			return isEnglish ? 'Sell your car' : nt('ui80');
 		}
 
-		return isEnglish ? 'Buy a car' : 'Купи автомобил';
+		return isEnglish ? 'Buy a car' : nt('ui81');
 	});
 	const mobileSearchDrawerTitle = $derived(
-		activeMobileAction?.drawerTitle ?? (isEnglish ? 'Find a car' : 'Намери автомобил')
+		activeMobileAction?.drawerTitle ?? (isEnglish ? 'Find a car' : nt('ui82'))
 	);
-	const mobileSearchDrawerClose = $derived(isEnglish ? 'Close search' : 'Затвори търсенето');
+	const mobileSearchDrawerClose = $derived(isEnglish ? 'Close search' : nt('ui83'));
 	const mobileAllLabel = $derived(
-		activeMobileAction?.secondaryLabel ?? (isEnglish ? 'Browse all' : 'Разгледай всички')
+		activeMobileAction?.secondaryLabel ?? (isEnglish ? 'Browse all' : nt('ui84'))
 	);
-	const mobileShowAllCommand = $derived(isEnglish ? 'Show all' : 'Покажи всички');
+	const mobileShowAllCommand = $derived(isEnglish ? 'Show all' : nt('ui85'));
 	const mobileActionTabs = $derived.by(() =>
 		(hero?.actions ?? []).filter((action) => action.mode !== 'sell')
 	);
@@ -131,11 +137,11 @@
 					{ href: '/inventory?status=Available', label: 'In stock' }
 				]
 			: [
-					{ href: '/inventory?maxPrice=10000', label: 'До 10 000' },
-					{ href: '/inventory?maxPrice=20000', label: 'До 20 000' },
-					{ href: '/inventory?maxPrice=30000', label: 'До 30 000' },
-					{ href: '/inventory?status=New%20listing', label: 'Нови обяви' },
-					{ href: '/inventory?status=Available', label: 'Налични' }
+					{ href: '/inventory?maxPrice=10000', label: nt('ui86') },
+					{ href: '/inventory?maxPrice=20000', label: nt('ui87') },
+					{ href: '/inventory?maxPrice=30000', label: nt('ui88') },
+					{ href: '/inventory?status=New%20listing', label: nt('ui89') },
+					{ href: '/inventory?status=Available', label: nt('ui90') }
 				]
 	);
 	const quickLinksForMode = (mode: string) => {
@@ -145,15 +151,15 @@
 						{ href: '/calculator', label: 'Import calculator' },
 						{ href: '/services', label: 'Import process' },
 						{ href: '/agents', label: 'Consultant' },
-						{ href: '/contact', label: 'Ask Day Night Auto' },
+						{ href: '/contact', label: 'Ask ' + site.identity.name },
 						{ href: '/inventory', label: 'Available cars' }
 					]
 				: [
-						{ href: '/calculator', label: 'Калкулатор' },
-						{ href: '/services', label: 'Процес по внос' },
-						{ href: '/agents', label: 'Консултант' },
-						{ href: '/contact', label: 'Попитай Day Night Auto' },
-						{ href: '/inventory', label: 'Налични коли' }
+						{ href: '/calculator', label: nt('ui91') },
+						{ href: '/services', label: nt('ui92') },
+						{ href: '/agents', label: nt('ui93') },
+						{ href: '/contact', label: nt('ui94') + site.identity.name },
+						{ href: '/inventory', label: nt('ui95') }
 					];
 		}
 
@@ -163,15 +169,15 @@
 						{ href: '/sell-your-car', label: 'Valuation form' },
 						{ href: '/services', label: 'Selling process' },
 						{ href: '/agents', label: 'Consultant' },
-						{ href: '/contact', label: 'Ask Day Night Auto' },
+						{ href: '/contact', label: 'Ask ' + site.identity.name },
 						{ href: '/inventory', label: 'Available cars' }
 					]
 				: [
-						{ href: '/sell-your-car', label: 'Оценка' },
-						{ href: '/services', label: 'Как продаваме' },
-						{ href: '/agents', label: 'Консултант' },
-						{ href: '/contact', label: 'Попитай Day Night Auto' },
-						{ href: '/inventory', label: 'Налични коли' }
+						{ href: '/sell-your-car', label: nt('ui96') },
+						{ href: '/services', label: nt('ui97') },
+						{ href: '/agents', label: nt('ui93') },
+						{ href: '/contact', label: nt('ui94') + site.identity.name },
+						{ href: '/inventory', label: nt('ui95') }
 					];
 		}
 
@@ -183,6 +189,12 @@
 	// removes the whole drawer-vs-keyboard problem and the open animation entirely.
 	let mobileSearchOpen = $state(false);
 	let mobileSearchInput = $state<HTMLInputElement | null>(null);
+	let mobileSearchWasOpen = false;
+	let mobileSearchHistoryActive = false;
+	let mobileSearchClosePending = false;
+	let mobileSearchPendingHref: string | null = null;
+	let mobileSearchTrigger: HTMLElement | null = null;
+	const mobileSearchHistoryId = `daynight-home-search-${Math.random().toString(36).slice(2)}`;
 	let inventorySearchOpen = $state(false);
 	let desktopSearchOpen = $state(false);
 	const openDesktopSearch = () => {
@@ -208,6 +220,82 @@
 	const closeMobileSearch = () => {
 		mobileSearchOpen = false;
 	};
+
+	const finishMobileSearchClose = () => {
+		const href = mobileSearchPendingHref;
+		mobileSearchPendingHref = null;
+		const trigger = mobileSearchTrigger;
+		mobileSearchTrigger = null;
+		if (href) {
+			window.setTimeout(() => void goto(href), 0);
+		} else {
+			void tick().then(() => trigger?.focus({ preventScroll: true }));
+		}
+	};
+
+	const handleMobileSearchPopState = () => {
+		if (mobileSearchClosePending) {
+			mobileSearchClosePending = false;
+			finishMobileSearchClose();
+			return;
+		}
+		if (!mobileSearchOpen || !mobileSearchHistoryActive) return;
+		mobileSearchHistoryActive = false;
+		mobileSearchWasOpen = false;
+		mobileSearchOpen = false;
+		finishMobileSearchClose();
+	};
+
+	const submitMobileSearch = (event: SubmitEvent) => {
+		event.preventDefault();
+		const form = event.currentTarget as HTMLFormElement;
+		const target = new URL(form.action, window.location.href);
+		for (const [key, value] of new FormData(form).entries()) {
+			if (typeof value !== 'string') continue;
+			const normalized = value.trim();
+			if (normalized) target.searchParams.set(key, normalized);
+			else target.searchParams.delete(key);
+		}
+		mobileSearchPendingHref = `${target.pathname}${target.search}${target.hash}`;
+		mobileSearchOpen = false;
+	};
+
+	onMount(() => {
+		window.addEventListener('popstate', handleMobileSearchPopState);
+		return () => window.removeEventListener('popstate', handleMobileSearchPopState);
+	});
+
+	$effect(() => {
+		if (typeof window === 'undefined') return;
+		if (mobileSearchOpen && !mobileSearchWasOpen) {
+			mobileSearchWasOpen = true;
+			mobileSearchTrigger =
+				document.activeElement instanceof HTMLElement ? document.activeElement : null;
+			if (!mobileSearchHistoryActive) {
+				pushState('', { ...page.state, __daynightHomeSearch: mobileSearchHistoryId });
+				mobileSearchHistoryActive = true;
+			}
+			return;
+		}
+		if (!mobileSearchOpen && mobileSearchWasOpen) {
+			mobileSearchWasOpen = false;
+			if (mobileSearchHistoryActive) {
+				mobileSearchHistoryActive = false;
+				mobileSearchClosePending = true;
+				history.back();
+			} else if (!mobileSearchClosePending) {
+				finishMobileSearchClose();
+			}
+		}
+	});
+
+	beforeNavigate((navigation) => {
+		if (!mobileSearchOpen || navigation.type === 'popstate' || !navigation.to) return;
+		navigation.cancel();
+		mobileSearchPendingHref = `${navigation.to.url.pathname}${navigation.to.url.search}${navigation.to.url.hash}`;
+		mobileSearchOpen = false;
+	});
+
 	// While the overlay is open: focus the input (ready to type), lock background scroll,
 	// and close on Escape. Cleanup restores everything when it closes.
 	$effect(() => {
@@ -232,64 +320,16 @@
 		};
 	});
 
-	// The location sheet stays hand-rolled (no input → no keyboard problem). Keep its
-	// drag-to-dismiss; it no longer shares state with the search sheet.
-	let mobileLocationDragOffset = $state(0);
-	let locationDragActive = false;
-	let locationDragStartY = 0;
-	const closeMobileLocation = () => {
-		locationDragActive = false;
-		mobileLocationDragOffset = 0;
-		const toggle = document.getElementById(
-			'daynight-mobile-location-toggle'
-		) as HTMLInputElement | null;
-		if (toggle) toggle.checked = false;
-	};
-	const canStartLocationDrag = (event: PointerEvent) => {
-		const target = event.target as HTMLElement | null;
-		if (!target) return false;
-		if (target.closest('a, button, input, label, select, textarea')) return false;
-		return Boolean(
-			target.closest(
-				'.daynight-mobile-location-sheet__handle, .daynight-mobile-location-sheet__panel header'
-			)
-		);
-	};
-	const startLocationDrag = (event: PointerEvent) => {
-		if (!canStartLocationDrag(event)) return;
-		locationDragActive = true;
-		locationDragStartY = event.clientY;
-		mobileLocationDragOffset = 0;
-		try {
-			(event.currentTarget as HTMLElement).setPointerCapture?.(event.pointerId);
-		} catch {
-			// Some browser/device pairs reject capture during synthetic pointer paths.
-		}
-		event.preventDefault();
-	};
-	const moveLocationDrag = (event: PointerEvent) => {
-		if (!locationDragActive) return;
-		const offset = Math.max(0, event.clientY - locationDragStartY);
-		mobileLocationDragOffset = Math.min(offset, window.innerHeight * 0.75);
-		event.preventDefault();
-	};
-	const finishLocationDrag = (event: PointerEvent) => {
-		if (!locationDragActive) return;
-		const panel = event.currentTarget as HTMLElement;
-		const offset = mobileLocationDragOffset;
-		const threshold = Math.min(128, panel.offsetHeight * 0.28);
-		locationDragActive = false;
-		mobileLocationDragOffset = 0;
-		try {
-			panel.releasePointerCapture?.(event.pointerId);
-		} catch {
-			// Capture may already be released when the pointer is cancelled.
-		}
-		if (offset >= threshold) closeMobileLocation();
-	};
+	let mobileLocationOpen = $state(false);
+	onMount(() => {
+		const openLocation = () => (mobileLocationOpen = true);
+		window.addEventListener('daynight:open-mobile-location', openLocation);
+		return () => window.removeEventListener('daynight:open-mobile-location', openLocation);
+	});
+
 	const modeAllText = (action: { mode: string; secondaryLabel?: string }) =>
 		action.mode === 'buy' && hero
-			? `${isEnglish ? 'View all' : 'Виж всички'} (${hero.totalMatches})`
+			? `${isEnglish ? 'View all' : nt('ui98')} (${hero.totalMatches})`
 			: (action.secondaryLabel ?? mobileAllLabel);
 	const drawerSubmitLabel = (tab: HomeFiveHeroAction) =>
 		tab.mode === 'buy' ? mobileShowAllCommand : tab.submitLabel;
@@ -298,11 +338,10 @@
 			? `${hero.searchSubmitPrefix} ${hero.totalMatches} ${hero.searchSubmitSuffix}`
 			: tab.submitLabel;
 	const desktopIntentTitle = $derived(
-		activeAction?.drawerTitle ?? (isEnglish ? 'Find a car' : 'Намери автомобил')
+		activeAction?.drawerTitle ?? (isEnglish ? 'Find a car' : nt('ui82'))
 	);
 	const desktopIntentPlaceholder = $derived(
-		activeAction?.placeholder ??
-			(isEnglish ? 'Search brand, model, price...' : 'Търси марка, модел, цена...')
+		activeAction?.placeholder ?? (isEnglish ? 'Search brand, model, price...' : nt('ui77'))
 	);
 
 	// The hero reads as a single static block — the three intents live in the
@@ -380,15 +419,8 @@
 {/if}
 {#if hero}
 	<div class="daynight-mobile-home" data-daynight-search-form={activeMobileAction?.mode ?? 'buy'}>
-		<input
-			id="daynight-mobile-location-toggle"
-			class="daynight-mobile-location-toggle"
-			type="checkbox"
-			tabindex="-1"
-			aria-hidden="true"
-		/>
 		<section class="daynight-mobile-hero" aria-label={mobileHeading}>
-			<div class="container">
+			<div class="site-container">
 				<div class="daynight-mobile-hero__copy">
 					<h1>{mobileModeHeading}</h1>
 				</div>
@@ -447,42 +479,13 @@
 			</div>
 		</section>
 
-		<div class="daynight-mobile-location-sheet">
-			<button
-				type="button"
-				class="daynight-mobile-location-sheet__backdrop"
-				aria-label={isEnglish ? 'Close location picker' : 'Затвори избор на локация'}
-				onclick={closeMobileLocation}
-			></button>
-			<div
-				id="daynight-mobile-location-panel"
-				class="daynight-mobile-location-sheet__panel"
-				style={`--daynight-mobile-location-drag-y: ${mobileLocationDragOffset}px`}
-				role="dialog"
-				aria-modal="true"
-				aria-labelledby="daynight-mobile-location-title"
-				tabindex="-1"
-				onpointerdown={startLocationDrag}
-				onpointermove={moveLocationDrag}
-				onpointerup={finishLocationDrag}
-				onpointercancel={finishLocationDrag}
-			>
-				<span class="daynight-mobile-location-sheet__handle"></span>
-				<header>
-					<div>
-						<p>{isEnglish ? 'Day Night Auto showroom' : 'Day Night Auto шоурум'}</p>
-						<h2 id="daynight-mobile-location-title">
-							{isEnglish ? 'Plovdiv, South Industrial Zone' : 'Пловдив, Индустриална зона - Юг'}
-						</h2>
-					</div>
-					<button
-						type="button"
-						aria-label={isEnglish ? 'Close' : 'Затвори'}
-						onclick={closeMobileLocation}
-					>
-						<X size={20} strokeWidth={2.2} aria-hidden="true" />
-					</button>
-				</header>
+		<MobileSheet
+			bind:open={mobileLocationOpen}
+			title={site.contact.address}
+			description={site.identity.name}
+			contentClass="daynight-home-location-sheet"
+		>
+			<div class="daynight-home-location-content">
 				<div class="daynight-mobile-location-map" aria-hidden="true">
 					<span class="daynight-mobile-location-map__road road-a"></span>
 					<span class="daynight-mobile-location-map__road road-b"></span>
@@ -490,33 +493,27 @@
 					<span class="daynight-mobile-location-map__pin">
 						<MapPin size={24} strokeWidth={2.4} aria-hidden="true" />
 					</span>
-					<span class="daynight-mobile-location-map__badge">Day Night Auto</span>
+					<span class="daynight-mobile-location-map__badge">{site.identity.name}</span>
 				</div>
 				<div class="daynight-mobile-location-address">
-					<span>{isEnglish ? 'Showroom address' : 'Адрес на шоурума'}</span>
-					<strong
-						>{isEnglish
-							? 'Plovdiv, South Industrial Zone'
-							: 'Пловдив, Южна Индустриална зона'}</strong
-					>
+					<span>{isEnglish ? 'Showroom address' : nt('ui59')}</span>
+					<strong>{site.contact.address}</strong>
 					<p>
-						{isEnglish
-							? 'Vehicle viewings are by appointment. Call before visiting.'
-							: 'Огледите са след уговорка. Обади се преди посещение.'}
+						{isEnglish ? 'Vehicle viewings are by appointment. Call before visiting.' : nt('ui60')}
 					</p>
 				</div>
 				<div class="daynight-mobile-location-actions">
-					<a href={mobileShowroomMapHref} target="_blank" rel="noreferrer">
+					<a href={resolve(mobileShowroomMapHref)} target="_blank" rel="noreferrer">
 						<Navigation size={18} strokeWidth={2.25} aria-hidden="true" />
-						{isEnglish ? 'Open map' : 'Отвори карта'}
+						{isEnglish ? 'Open map' : nt('ui44')}
 					</a>
-					<a href={mobileShowroomPhoneHref}>
+					<a href={resolve(mobileShowroomPhoneHref)}>
 						<PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />
-						{isEnglish ? 'Call showroom' : 'Обади се'}
+						{isEnglish ? 'Call showroom' : nt('ui37')}
 					</a>
 				</div>
 			</div>
-		</div>
+		</MobileSheet>
 
 		{#if mobileSearchOpen && activeMobileAction}
 			<!-- Full-screen search overlay (replaces the old bottom drawer): the input is
@@ -547,6 +544,7 @@
 					class="daynight-home-search-drawer__form"
 					action={resolve(activeMobileAction.actionHref)}
 					method="get"
+					onsubmit={submitMobileSearch}
 				>
 					<div class="daynight-home-search-drawer__field">
 						<Search size={20} strokeWidth={2.15} aria-hidden="true" />
@@ -578,7 +576,7 @@
 													{#if select.name === 'brand' && option.image}
 														<span class="daynight-mobile-brand-chip__logo">
 															<img
-																src={option.image}
+																src={assetHref(option.image)}
 																alt=""
 																aria-hidden="true"
 																loading="lazy"
@@ -595,7 +593,7 @@
 									</section>
 								{/each}
 								<section class="daynight-home-search-drawer__group">
-									<p>{isEnglish ? 'Fuel' : 'Гориво'}</p>
+									<p>{isEnglish ? 'Fuel' : nt('ui61')}</p>
 									<div>
 										{#each hero.advancedFilters[0]?.options.slice(0, 6) ?? [] as option (option.value)}
 											<a href={resolve(inventoryFilterHref('fuel', option.value) as '/inventory')}>
@@ -624,7 +622,7 @@
 
 	{#if mobileActionTabs.length}
 		<section class="daynight-mobile-home-quick" aria-label={hero.heading}>
-			<div class="container">
+			<div class="site-container">
 				<nav class="daynight-mobile-home-quick__scroller bc-quick bc-quick--{mobileMode}">
 					{#if mobileMode === 'buy'}
 						<button
@@ -632,7 +630,7 @@
 							class="daynight-mobile-home-quick__filter"
 							aria-haspopup="dialog"
 							aria-expanded={mobileSearchOpen || inventorySearchOpen}
-							aria-label={isEnglish ? 'Open filters' : 'Отвори филтри'}
+							aria-label={isEnglish ? 'Open filters' : nt('ui62')}
 							onclick={openMobileSearch}
 						>
 							<SlidersHorizontal size={18} strokeWidth={2.2} aria-hidden="true" />
@@ -666,7 +664,7 @@
 			<div class="daynight-hero-cars" aria-hidden="true">
 				<img
 					class="daynight-hero-car daynight-hero-car--left"
-					src="/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp"
+					src={assetHref('/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp')}
 					alt=""
 					width="820"
 					height="420"
@@ -676,7 +674,7 @@
 				/>
 				<img
 					class="daynight-hero-car daynight-hero-car--right"
-					src="/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp"
+					src={assetHref('/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp')}
 					alt=""
 					width="820"
 					height="420"
@@ -711,7 +709,7 @@
 				<div class="daynight-hero-search-panel">
 					<nav
 						class="flat-tabs daynight-intent-switch"
-						aria-label={isEnglish ? 'Choose what you want to do' : 'Избери какво искаш да направиш'}
+						aria-label={isEnglish ? 'Choose what you want to do' : nt('ui63')}
 					>
 						<div class="overflow-x-auto">
 							<ul
@@ -749,18 +747,16 @@
 										}
 									}}
 									aria-haspopup="dialog"
-									aria-label={isEnglish
-										? 'Search make, model or keyword'
-										: 'Търси марка, модел или ключова дума'}
-									placeholder={isEnglish
-										? 'Make, model or keyword'
-										: 'Марка, модел или ключова дума'}
+									aria-label={isEnglish ? 'Search make, model or keyword' : nt('ui64')}
+									placeholder={isEnglish ? 'Make, model or keyword' : nt('ui65')}
 								/>
 								<button
 									class="hero-keyword-submit"
 									type={hero?.inventorySearch ? 'button' : 'submit'}
 									onclick={hero?.inventorySearch ? openDesktopSearch : undefined}
-									><Search size={19} aria-hidden="true" />{isEnglish ? 'Search' : 'Търси'}</button
+									><Search size={19} aria-hidden="true" />{isEnglish
+										? 'Search'
+										: nt('ui66')}</button
 								>
 							</div>
 						</div>
@@ -775,11 +771,11 @@
 									mode="multi"
 									variant="grid"
 									searchable
-									dialogTitle={isEnglish ? 'Choose make' : 'Избери марка'}
+									dialogTitle={isEnglish ? 'Choose make' : nt('ui67')}
 									dialogDescription={isEnglish
 										? 'Choose one or more makes. The model list updates automatically.'
-										: 'Избери една или повече марки. Списъкът с модели се обновява автоматично.'}
-									searchPlaceholder={isEnglish ? 'Search makes…' : 'Търси марка…'}
+										: nt('ui68')}
+									searchPlaceholder={isEnglish ? 'Search makes…' : nt('ui69')}
 									{isEnglish}
 								/>
 							{/if}
@@ -793,8 +789,8 @@
 									variant="list"
 									searchable
 									{isEnglish}
-									dialogTitle={isEnglish ? 'Choose model' : 'Избери модел'}
-									searchPlaceholder={isEnglish ? 'Search models…' : 'Търси модел…'}
+									dialogTitle={isEnglish ? 'Choose model' : nt('ui70')}
+									searchPlaceholder={isEnglish ? 'Search models…' : nt('ui71')}
 								/>
 							{/if}
 
@@ -804,10 +800,10 @@
 									bind:selected={priceSelection}
 									mode="single"
 									variant="list"
-									dialogTitle={isEnglish ? 'Choose maximum price' : 'Избери максимална цена'}
+									dialogTitle={isEnglish ? 'Choose maximum price' : nt('ui72')}
 									dialogDescription={isEnglish
 										? 'Show vehicles within the selected budget.'
-										: 'Покажи автомобили до избрания бюджет.'}
+										: nt('ui73')}
 									{isEnglish}
 								/>
 							{/if}
@@ -817,7 +813,7 @@
 								mode="single"
 								variant="list"
 								{isEnglish}
-								dialogTitle={isEnglish ? 'Choose maximum mileage' : 'Избери максимален пробег'}
+								dialogTitle={isEnglish ? 'Choose maximum mileage' : nt('ui74')}
 							/>
 						{:else}
 							<label class="search-cars__intent-field">
@@ -834,7 +830,7 @@
 								type="submit"
 								class="search-cars__search search-cars__search--intent md-w-full flex items-center justify-center gap-8"
 							>
-								<img src="/assets/icons/search.svg" alt="search" />
+								<img src={assetHref('/assets/icons/search.svg')} alt="" aria-hidden="true" />
 								{activeSubmitLabel}
 							</button>
 						{/if}
@@ -870,7 +866,7 @@
 							<div class="search-cars__features">
 								<p class="h3 search-cars__features-title flex items-center gap-8">
 									{hero.checksTitle}
-									<img src="/assets/icons/minus.svg" alt="minus" />
+									<img src={assetHref('/assets/icons/minus.svg')} alt="" aria-hidden="true" />
 								</p>
 								<div class="search-cars__features-grid">
 									{#each hero.features as feature, index (feature)}
@@ -944,8 +940,8 @@
 		background: var(--bc-accent);
 		color: white;
 		font: inherit;
-		font-size: 17px;
-		font-weight: 600;
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-action);
 		cursor: pointer;
 		white-space: nowrap;
 	}
@@ -1423,7 +1419,7 @@
 	}
 
 	@media (max-width: 767.98px) {
-		:global(body.auxero-template-home-05-html.auxero-template-home-05-html) {
+		.daynight-mobile-home {
 			--daynight-mobile-hero-top: var(--bc-mobile-dark);
 			--daynight-mobile-hero-bg: var(--bc-mobile-dark);
 			--daynight-mobile-hero-bottom: var(--bc-mobile-dark);
@@ -1458,21 +1454,13 @@
 			color: var(--daynight-mobile-ink, var(--bc-white));
 		}
 
-		.daynight-mobile-location-toggle {
-			position: fixed;
-			width: 1px;
-			height: 1px;
-			opacity: 0;
-			pointer-events: none;
-		}
-
 		.daynight-mobile-hero {
 			padding: 10px 0 var(--bc-space-8);
 			background: transparent;
 		}
 
-		.daynight-mobile-hero :global(.container),
-		.daynight-mobile-home-quick :global(.container) {
+		.daynight-mobile-hero :global(.site-container),
+		.daynight-mobile-home-quick :global(.site-container) {
 			width: 100%;
 			max-width: 480px;
 			padding-right: 16px;
@@ -1543,7 +1531,7 @@
 			background: transparent;
 			box-shadow: none;
 			color: var(--bc-white);
-			font-weight: var(--bc-weight-heading);
+			font-weight: var(--bc-weight-control);
 		}
 
 		.daynight-mobile-hero__tab.active::after {
@@ -1706,94 +1694,13 @@
 			height: 16px;
 		}
 
-		.daynight-mobile-location-sheet {
-			position: fixed;
-			inset: 0;
-			z-index: 1200;
-			display: block;
-			visibility: hidden;
-			pointer-events: none;
+		:global(.daynight-home-location-sheet) {
+			background: var(--bc-bg-strong);
 		}
 
-		.daynight-mobile-location-sheet__backdrop {
-			position: absolute;
-			inset: 0;
-			border: 0;
-			background: rgba(0, 0, 0, 0.34);
-			padding: 0;
-		}
-
-		.daynight-mobile-location-sheet__panel {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
+		.daynight-home-location-content {
 			display: grid;
 			gap: 12px;
-			border-radius: 22px 22px 0 0;
-			background: var(--bc-bg);
-			padding: 10px 16px max(20px, env(safe-area-inset-bottom));
-			box-shadow: none;
-			color: var(--bc-ink);
-			transform: translateY(var(--daynight-mobile-location-drag-y, 0px));
-		}
-
-		:global(.daynight-mobile-location-toggle:checked ~ .daynight-mobile-location-sheet) {
-			visibility: visible;
-			pointer-events: auto;
-		}
-
-		.daynight-mobile-location-sheet__handle {
-			justify-self: center;
-			width: 42px;
-			height: 4px;
-			border-radius: 999px;
-			background: var(--bc-border);
-			touch-action: none;
-		}
-
-		.daynight-mobile-location-sheet__panel header {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 14px;
-			touch-action: none;
-		}
-
-		.daynight-mobile-location-sheet__panel header p,
-		.daynight-mobile-location-sheet__panel header h2 {
-			margin: 0;
-			letter-spacing: 0;
-		}
-
-		.daynight-mobile-location-sheet__panel header p {
-			color: var(--bc-accent);
-			font-size: var(--bc-mobile-label);
-			font-weight: var(--bc-weight-heading);
-			line-height: var(--bc-mobile-label-leading);
-			text-transform: uppercase;
-		}
-
-		.daynight-mobile-location-sheet__panel header h2 {
-			color: var(--bc-ink);
-			font-size: var(--bc-mobile-section-title);
-			font-weight: var(--bc-weight-heading);
-			line-height: var(--bc-mobile-section-title-leading);
-		}
-
-		.daynight-mobile-location-sheet__panel header button {
-			display: flex;
-			width: var(--bc-control-height-standard);
-			height: var(--bc-control-height-standard);
-			align-items: center;
-			justify-content: center;
-			flex: 0 0 var(--bc-control-height-standard);
-			border: 0;
-			border-radius: 999px;
-			background: var(--bc-surface);
-			color: var(--bc-ink);
-			cursor: pointer;
-			padding: 0;
 		}
 
 		.daynight-mobile-location-map {
@@ -2008,12 +1915,6 @@
 
 		.daynight-home-search-overlay__scroll::-webkit-scrollbar {
 			display: none;
-		}
-
-		/* Lock background scroll while the location sheet is open (the search overlay
-		   locks body scroll from script). */
-		:global(body:has(.daynight-mobile-location-toggle:checked)) {
-			overflow: hidden;
 		}
 
 		.daynight-home-search-drawer__title {
