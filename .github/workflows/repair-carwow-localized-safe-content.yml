@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: repair-carwow-localized-safe-content
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   repair:
@@ -24,6 +24,10 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/workflows/repair-carwow-localized-safe-content.yml
+            /scripts/
 
       - uses: actions/setup-node@v4
         with:
@@ -87,7 +91,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git rm .github/workflows/repair-carwow-localized-safe-content.yml
-          git add scripts/lib/client-refresh-safe-content.mjs scripts/client-refresh-safe-content.test.mjs
+          git add --sparse scripts/lib/client-refresh-safe-content.mjs scripts/client-refresh-safe-content.test.mjs
           git diff --cached --check
           git commit -m 'Keep generated Carwow review copy catalog-safe' -m 'Use the reviewed template source for generated empty-review disclosures and cover Bulgarian and international dealer fixtures.'
           git pull --rebase origin main
