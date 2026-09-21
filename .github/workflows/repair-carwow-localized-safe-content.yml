@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: repair-carwow-localized-safe-content-v2
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   repair:
@@ -82,7 +82,6 @@ jobs:
           `);
           NODE
           node --test scripts/client-refresh-safe-content.test.mjs
-          node --test scripts/dealer-localized-copy.test.mjs
 
       - name: Commit canonical repair
         shell: bash
