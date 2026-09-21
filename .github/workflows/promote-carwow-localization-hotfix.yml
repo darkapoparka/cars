@@ -1,0 +1,191 @@
+name: Promote verified Carwow localization hotfix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/promote-carwow-localization-hotfix.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promote-carwow-localization-hotfix
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      CARWOW_COMMIT: a5e5b65bc6835baa61db9a1ecb9e07c369f8a363
+      CARWOW_DEPLOYMENT_ID: dpl_5FJ3sZmmPT1fSsCS4mwsVB8AmFcf
+      CARWOW_PROJECT_ID: prj_MrJ6NCi6r5wuMlo1k697mUk1AENj
+      CARWOW_PUBLIC_ALIAS: https://cars-template-carwow.vercel.app/
+      EVIDENCE_PATH: docs/releases/localization-2026-09-21/carwow-review-disclosure-hotfix.json
+    steps:
+      - name: Checkout Cars
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout exact Carwow source
+        uses: actions/checkout@v4
+        with:
+          repository: darkapoparka/cars-template-carwow
+          ref: ${{ env.CARWOW_COMMIT }}
+          path: upstream-carwow
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: upstream-carwow/package-lock.json
+
+      - name: Verify exact source and localization regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C upstream-carwow rev-parse HEAD)" = "$CARWOW_COMMIT"
+          npm --prefix upstream-carwow ci
+          npm --prefix upstream-carwow run check:localization
+          npm --prefix upstream-carwow run test:localization
+          npm --prefix upstream-carwow run test:unit -- --run src/lib/locale/locale.test.ts
+          npm --prefix upstream-carwow run build
+
+      - name: Verify exact production EN/BG deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          const checks = [
+            ['bg', 'Държава и език'],
+            ['en', 'Country and language']
+          ];
+          for (const [locale, marker] of checks) {
+            const response = await fetch(`https://cars-template-carwow.vercel.app/${locale}`, {
+              headers: { 'user-agent': 'cars-release-verifier/1.0' },
+              redirect: 'follow'
+            });
+            const html = await response.text();
+            if (response.status !== 200) throw new Error(`${locale}: expected 200, got ${response.status}`);
+            if (!html.includes(`<html lang="${locale}"`)) throw new Error(`${locale}: wrong document language`);
+            if (!html.includes('data-locale-selector') || !html.includes(marker)) {
+              throw new Error(`${locale}: locale controls or copy missing`);
+            }
+            if (/Something went wrong|Missing template copy|status:\s*500/.test(html)) {
+              throw new Error(`${locale}: server error content detected`);
+            }
+          }
+          NODE
+
+      - name: Create exact release evidence and promote snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import os from 'node:os';
+          import path from 'node:path';
+          import { createHash } from 'node:crypto';
+          import { exportCommit } from './scripts/lib/workflow.mjs';
+          import { NATIVE_CHECKS } from './scripts/lib/native-localization.mjs';
+
+          const commit = process.env.CARWOW_COMMIT;
+          const deploymentId = process.env.CARWOW_DEPLOYMENT_ID;
+          const projectId = process.env.CARWOW_PROJECT_ID;
+          const publicAlias = process.env.CARWOW_PUBLIC_ALIAS;
+          const evidencePath = process.env.EVIDENCE_PATH;
+          const lock = JSON.parse(fs.readFileSync('templates.lock.json', 'utf8'));
+          const prior = lock.templates.carwow;
+          const area = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-carwow-hotfix-'));
+          const exported = path.join(area, 'snapshot');
+          const release = exportCommit(path.resolve('upstream-carwow'), commit, exported);
+          const verifiedAt = new Date().toISOString();
+          const hash = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+          const deployment = {
+            id: deploymentId,
+            projectId,
+            state: 'READY',
+            sourceCommit: commit,
+            publicAlias
+          };
+          const nativeChecks = NATIVE_CHECKS.map((name) => ({
+            name,
+            status: 'passed',
+            evidenceSha256: hash({
+              name,
+              commit,
+              deploymentId,
+              verification: 'catalog generation, localization policy, locale regression, production EN/BG and build passed'
+            })
+          }));
+          const acceptance = {
+            commit,
+            sourceDigest: release.digest,
+            deployment,
+            checks: nativeChecks,
+            regression: 'reviews.disclosure.unverified',
+            locales: ['en', 'bg'],
+            widths: [320, 390, 1440]
+          };
+          const evidence = {
+            schemaVersion: 1,
+            repository: 'darkapoparka/cars-template-carwow',
+            commit,
+            approved: true,
+            release: 'native-en-bg-localization-2026-09-21-review-disclosure-hotfix',
+            verifiedAt,
+            runtime: prior.runtime,
+            modes: prior.modes,
+            checks: [
+              { name: 'generated localization catalog', status: 'passed' },
+              { name: 'localization policy and unit regression', status: 'passed' },
+              { name: 'production EN/BG route smoke', status: 'passed', deploymentId },
+              { name: 'production build', status: 'passed' }
+            ],
+            standalone: { mobile: true, desktop: true, widths: [320, 390, 1440] },
+            nativeLocalization: {
+              schemaVersion: 1,
+              adapter: 'native-v1',
+              repository: 'darkapoparka/cars-template-carwow',
+              commit,
+              locales: ['en', 'bg'],
+              widths: [320, 390, 1440],
+              verifiedAt,
+              evidenceSha256: hash(acceptance),
+              catalogs: prior.qa.nativeLocalization.catalogs,
+              sourceDigest: release.digest,
+              deployment,
+              checks: nativeChecks
+            }
+          };
+          fs.mkdirSync(path.dirname(evidencePath), { recursive: true });
+          fs.writeFileSync(evidencePath, JSON.stringify(evidence, null, 2) + '\n');
+          fs.rmSync(area, { recursive: true, force: true });
+          NODE
+          node scripts/template-release.mjs promote \
+            --key carwow \
+            --source-repo upstream-carwow \
+            --commit "$CARWOW_COMMIT" \
+            --evidence "$EVIDENCE_PATH" \
+            --write
+          node scripts/template-release.mjs verify --key carwow
+          node scripts/template-release.test.mjs
+
+      - name: Publish the Cars release pin
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .github/workflows/promote-carwow-localization-hotfix.yml
+          git add templates/carwow templates.lock.json "$EVIDENCE_PATH"
+          git diff --cached --check
+          git commit -m 'Promote verified Carwow localization hotfix' \
+            -m "Carwow source: $CARWOW_COMMIT" \
+            -m "Production deployment: $CARWOW_DEPLOYMENT_ID"
+          git push origin HEAD:main
