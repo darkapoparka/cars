@@ -69,9 +69,12 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
       return text;
     });
     edit('packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx', text => {
-      text = text.replace(',\n          light && "h-10 bg-black px-2.5"', '');
-      text = text.replace(/src=\{leadSite\.logoPath\}\s*style=\{[\s\S]*?\n            \}\n/, 'src={wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark}\n');
-      text = text.replace(/\n          \{wordmarkTone === "original" \? null : \([\s\S]*?\n          \)\}/, '');
+      const source = 'wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark';
+      text = text.replace(/,\r?\n\s*light && "h-10 bg-black px-2\.5"/, '');
+      const clippedPrimary = /src=\{leadSite\.logoPath\}(?:\s*style=\{[\s\S]*?\r?\n\s*\})?/;
+      if (clippedPrimary.test(text)) text = text.replace(clippedPrimary, 'src={' + source + '}');
+      else if (!text.includes('src={' + source + '}')) throw Error('Missing Modern mobile logo source');
+      text = text.replace(/\r?\n\s*\{wordmarkTone === "original" \? null : \([\s\S]*?\r?\n\s*\)\}/, '');
       if (/clipPath|brightness-0|\binvert\b/.test(text)) throw Error('Obsolete clipped Modern mobile logo survived');
       return text;
     });
