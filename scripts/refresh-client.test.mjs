@@ -200,6 +200,36 @@ test('Modern refresh preserves the approved hero while retaining stable fixture 
   fs.rmSync(root, { recursive: true, force: true });
 });
 
+test('Modern refresh accepts a previously generated CRLF JSON fixture', () => {
+  const fixture = 'packages/marketplace-domain/testing/mock-data.ts';
+  const { root } = temporaryCandidate('modern', [
+    'apps/web/public/lead-hero.jpg',
+    'packages/marketplace/lead-site.ts',
+    fixture,
+    'packages/marketplace-ui/components/marketplace-masthead.tsx'
+  ]);
+  const generatedFixture = fs.readFileSync(path.join(NAVARA, 'modern', fixture), 'utf8');
+  fs.writeFileSync(path.join(root, fixture), generatedFixture.replace(/\r?\n/g, '\r\n'));
+  const before = fs.readFileSync(path.join(root, fixture), 'utf8');
+  assert.match(before, /\r\n/);
+  assert.match(before, /"id": "am-1001"/);
+  assert.match(before, /\]\r\n\r\nconst matchesText/);
+
+  applyRefreshAdapter({
+    key: 'modern',
+    oldVariant: path.join(NAVARA, 'modern'),
+    candidate: root,
+    profile
+  });
+
+  const listings = fs.readFileSync(path.join(root, fixture), 'utf8');
+  assert.match(listings, /"id": "am-1001"/);
+  assert.match(listings, /"id": "am-1009"/);
+  assert.match(listings, /\]\n\nconst matchesText/);
+  assert.equal(listings.includes('\r'), false);
+  fs.rmSync(root, { recursive: true, force: true });
+});
+
 test('Carwow refresh keeps current hero composition and removes sample dealer identity', () => {
   const hero = 'src/lib/components/home/desktop/DesktopHomeHero.svelte';
   const { root, template } = temporaryCandidate('carwow', [

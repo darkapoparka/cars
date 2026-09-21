@@ -507,21 +507,84 @@ function modernListing(item, index, id, profile) {
   };
 }
 
+function arrayExpressionEnd(text, open, label) {
+  let depth = 0;
+  let quote = '';
+  let escaped = false;
+  let lineComment = false;
+  let blockComment = false;
+
+  for (let index = open; index < text.length; index += 1) {
+    const character = text[index];
+    const next = text[index + 1];
+
+    if (lineComment) {
+      if (character === '\n') lineComment = false;
+      continue;
+    }
+    if (blockComment) {
+      if (character === '*' && next === '/') {
+        blockComment = false;
+        index += 1;
+      }
+      continue;
+    }
+    if (quote) {
+      if (escaped) {
+        escaped = false;
+        continue;
+      }
+      if (character === '\\') {
+        escaped = true;
+        continue;
+      }
+      if (character === quote) quote = '';
+      continue;
+    }
+    if (character === '/' && next === '/') {
+      lineComment = true;
+      index += 1;
+      continue;
+    }
+    if (character === '/' && next === '*') {
+      blockComment = true;
+      index += 1;
+      continue;
+    }
+    if (character === '"' || character === "'" || character.charCodeAt(0) === 96) {
+      quote = character;
+      continue;
+    }
+    if (character === '[') depth += 1;
+    else if (character === ']') {
+      depth -= 1;
+      if (depth === 0) return index;
+    }
+  }
+
+  throw new Error('Cannot locate the closing array for ' + label);
+}
+
 function replaceModernListings(file, profile) {
   let text = read(file);
-  const startMarker = 'export const mockListings: VehicleListing[] = [';
-  const endMarker = '\n];\n\nconst matchesText';
-  const start = text.indexOf(startMarker);
-  const end = text.indexOf(endMarker, start);
-  if (start < 0 || end < 0) throw new Error(`Cannot locate modern mockListings in ${file}`);
-  const currentBlock = text.slice(start, end);
-  const ids = unique([...currentBlock.matchAll(/\n  \{\n    id:\s*"([^"]+)"/g)]
-    .map((match) => match[1]));
-  if (!ids.length) throw new Error(`No stable modern listing IDs found in ${file}`);
+  const declaration = /export const mockListings\s*:\s*VehicleListing\[\]\s*=\s*\[/m.exec(text);
+  if (!declaration) throw new Error('Cannot locate modern mockListings in ' + file);
+  const start = declaration.index;
+  const arrayStart = start + declaration[0].lastIndexOf('[');
+  const arrayEnd = arrayExpressionEnd(text, arrayStart, 'modern mockListings in ' + file);
+  const currentBlock = text.slice(arrayStart + 1, arrayEnd);
+  const ids = unique([
+    ...currentBlock.matchAll(
+      /(?:^|\r?\n)([ \t]+)\{\r?\n\1[ \t]+(?:"id"|id)\s*:\s*["']([^"']+)["']/g
+    )
+  ].map((match) => match[2]));
+  if (!ids.length) throw new Error('No stable modern listing IDs found in ' + file);
   const listings = ids.map((id, index) =>
     modernListing(profile.listings[index % profile.listings.length], index, id, profile));
-  const replacement = `export const mockListings: VehicleListing[] = ${JSON.stringify(listings, null, 2)}`;
-  text = `${text.slice(0, start)}${replacement}${text.slice(end + 3)}`;
+  const newline = text.includes('\r\n') ? '\r\n' : '\n';
+  const serialized = JSON.stringify(listings, null, 2).replaceAll('\n', newline);
+  const replacement = 'export const mockListings: VehicleListing[] = ' + serialized;
+  text = text.slice(0, start) + replacement + text.slice(arrayEnd + 1);
   write(file, text);
 }
 
