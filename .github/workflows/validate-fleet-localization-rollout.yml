@@ -1,0 +1,98 @@
+name: Validate fleet localization rollout
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/validate-fleet-localization-rollout.yml'
+      - 'scripts/rollout-localized-client.mjs'
+      - 'templates.lock.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-fleet-localization-rollout
+  cancel-in-progress: true
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      dealers: ${{ steps.dealers.outputs.dealers }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: dealers
+        name: Resolve registered dealer repositories
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const inventory = JSON.parse(fs.readFileSync('docs/DEPLOYMENT-INVENTORY.json', 'utf8'));
+          const requested = new Set([
+            'al-basma-motors','al-hamoor-al-thahabi','al-reef-used-cars','asko-96','astracar',
+            'autolife','automarket-varna','avangard-auto','champion-auto-pro','day-and-night-auto-group',
+            'eliqauto','elit-auto-import','excellent-cars','f1rst-motors','isauto-varna','ivo-auto',
+            'kg-team-auto','legend-auto','navara-car','outletcars-varna','perfect-auto-varna','priselci',
+            'promosale-varna','texas-drive-auto','the-dealers-point'
+          ]);
+          const rows = inventory.dealers
+            .filter((dealer) => requested.has(dealer.slug))
+            .map((dealer) => ({
+              slug: dealer.slug,
+              repository: dealer.repository || dealer.delivery?.gitRepository,
+              projectId: dealer.delivery?.projectId || null,
+              publicAlias: dealer.delivery?.url || null
+            }));
+          const missing = [...requested].filter((slug) => !rows.some((row) => row.slug === slug));
+          const invalid = rows.filter((row) => !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(row.repository || ''));
+          if (missing.length || invalid.length) {
+            throw new Error(`Unresolved fleet records. Missing=${missing.join(',')} invalid=${invalid.map((row) => row.slug).join(',')}`);
+          }
+          const value = JSON.stringify({ include: rows });
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `dealers=${value}\n`);
+          console.log(value);
+          NODE
+
+  package:
+    needs: matrix
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix: ${{ fromJSON(needs.matrix.outputs.dealers) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: cars
+          fetch-depth: 0
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.repository }}
+          ref: main
+          path: client
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+      - name: Build and seal native EN/BG package
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/reports"
+          node cars/scripts/rollout-localized-client.mjs \
+            --client-root "$GITHUB_WORKSPACE/client" \
+            --slug "${{ matrix.slug }}" \
+            --repository "${{ matrix.repository }}" \
+            --output "$RUNNER_TEMP/localized-client" \
+            | tee "$RUNNER_TEMP/reports/${{ matrix.slug }}.json"
+          test -s "$RUNNER_TEMP/localized-client/localization/contract.json"
+          test -s "$RUNNER_TEMP/localized-client/localization/adoption.json"
+          node -e "const m=require(process.argv[1]); if(m.packaging?.version!=='2'||m.localization?.enabledLocales?.sort().join(',')!=='bg,en') process.exit(1)" "$RUNNER_TEMP/localized-client/dealer.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: localization-candidate-${{ matrix.slug }}
+          path: ${{ runner.temp }}/reports
+          if-no-files-found: warn
+          retention-days: 7
