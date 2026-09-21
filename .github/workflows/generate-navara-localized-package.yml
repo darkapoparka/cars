@@ -1,0 +1,126 @@
+name: Generate exact Navara localization package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/generate-navara-localized-package.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-navara-localized-package
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      CARS_RELEASE_SHA: cc4fd13f00a995c8a4dcdd353a2baecd1c6a3d4d
+      OUTPUT_BRANCH: generated/navara-native-en-bg-v2
+    steps:
+      - name: Checkout workflow controller
+        uses: actions/checkout@v4
+        with:
+          path: controller
+          fetch-depth: 1
+
+      - name: Checkout exact Cars release
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.CARS_RELEASE_SHA }}
+          path: cars-release
+          fetch-depth: 1
+
+      - name: Checkout Navara publication source
+        uses: actions/checkout@v4
+        with:
+          ref: publish/navara-car
+          path: navara-source
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+
+      - name: Generate exact package
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf "$GITHUB_WORKSPACE/navara-localized"
+          node "$GITHUB_WORKSPACE/cars-release/scripts/rollout-localized-client.mjs" \
+            --client-root "$GITHUB_WORKSPACE/navara-source" \
+            --slug navara-car \
+            --repository darkapoparka/cars-navaracar \
+            --output "$GITHUB_WORKSPACE/navara-localized" \
+            | tee "$GITHUB_WORKSPACE/navara-localization-report.json"
+
+      - name: Validate generated native contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const root = path.join(process.env.GITHUB_WORKSPACE, 'navara-localized');
+          const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dealer.json'), 'utf8'));
+          const contract = JSON.parse(fs.readFileSync(path.join(root, 'localization/contract.json'), 'utf8'));
+          const adoption = JSON.parse(fs.readFileSync(path.join(root, 'localization/adoption.json'), 'utf8'));
+          const expected = {
+            'auto-best': 'a5f3684483a509e556a5912a8d2c7b8ed03f9c5b',
+            modern: 'e8c1bca793b6350948f0a1b44d6e50b661ac0111',
+            carwow: '42970ab5724cb32da17e75879a2fca470629aebe'
+          };
+          if (manifest.packaging?.version !== '2') throw new Error('Expected packaging v2');
+          if (manifest.repository !== 'darkapoparka/cars-navaracar') throw new Error('Repository identity changed');
+          if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Expected complete EN/BG contract');
+          if (adoption.packagingVersion !== '2' || adoption.dealerId !== contract.dealerId) throw new Error('Invalid adoption receipt');
+          for (const [key, commit] of Object.entries(expected)) {
+            if (manifest.templateRevisions?.[key] !== commit || adoption.releases?.[key]?.commit !== commit) {
+              throw new Error(`Unexpected ${key} release`);
+            }
+          }
+          NODE
+
+      - name: Record exact source delta
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --no-index --name-status \
+            "$GITHUB_WORKSPACE/navara-source" \
+            "$GITHUB_WORKSPACE/navara-localized" \
+            > "$GITHUB_WORKSPACE/navara-localization-files.txt" || test $? -eq 1
+          git diff --no-index --stat \
+            "$GITHUB_WORKSPACE/navara-source" \
+            "$GITHUB_WORKSPACE/navara-localized" \
+            > "$GITHUB_WORKSPACE/navara-localization-stat.txt" || test $? -eq 1
+
+      - name: Publish generated source branch
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cd "$GITHUB_WORKSPACE/navara-localized"
+          git init -b "$OUTPUT_BRANCH"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git diff --cached --check
+          git commit -m "Generate Navara native EN/BG package" -m "Cars release: $CARS_RELEASE_SHA"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin "HEAD:refs/heads/$OUTPUT_BRANCH"
+
+      - name: Upload generated package evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: navara-native-en-bg-v2
+          path: |
+            navara-localized
+            navara-localization-report.json
+            navara-localization-files.txt
+            navara-localization-stat.txt
+          include-hidden-files: true
+          retention-days: 1
