@@ -105,7 +105,7 @@ jobs:
           const { chromium } = playwright;
           const widths = [320, 390, 1440];
           const locales = ['en', 'bg'];
-          const routes = ['', '/contact?topic=trade-in'];
+          const routes = ['', '/contact?topic=trade-in', '/locale-settings'];
           const results = [];
           const base = new URL(baseUrl);
           const browser = await chromium.launch({ headless: true });
@@ -140,7 +140,7 @@ jobs:
                     if (!state.lang.toLowerCase().startsWith(locale)) failures.push(`lang=${state.lang}`);
                     if (state.bodyTextLength < 200) failures.push(`bodyTextLength=${state.bodyTextLength}`);
                     if (state.overflow > 2) failures.push(`horizontalOverflow=${state.overflow}`);
-                    if (route === '' && width === 390 && !state.preferenceForm) failures.push('missing SSR preference form');
+                    if (route === '/locale-settings' && width === 390 && !state.preferenceForm) failures.push('missing SSR preference form');
                     if (pageErrors.length) failures.push(`pageErrors=${pageErrors.join(' | ')}`);
                     record(`${locale} ${width} ${route || '/'}`, failures.length === 0, { url, state, failures });
                   } catch (error) {
@@ -152,7 +152,7 @@ jobs:
               }
               const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
               const page = await noJs.newPage();
-              const url = new URL(`/${locale}`, base).href;
+              const url = new URL(`/${locale}/locale-settings`, base).href;
               try {
                 const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
                 const state = await page.evaluate(() => ({
@@ -188,7 +188,10 @@ jobs:
           fs.mkdirSync(path.dirname(output), { recursive: true });
           fs.writeFileSync(output, JSON.stringify(report, null, 2) + '\n');
           console.log(JSON.stringify({ output, checks: report.checks, passed: report.passed, failed: report.failed }));
-          if (report.failed) process.exitCode = 1;
+          if (report.failed) {
+            console.error(JSON.stringify(report.results.filter(item => !item.passed), null, 2));
+            process.exitCode = 1;
+          }
           EOF
 
       - name: Audit exact production aliases
