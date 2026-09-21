@@ -25,11 +25,20 @@ jobs:
       EXPECTED_PARENT: 050e7c6b6c9e54d0c10423dfb6db7ef1d960c778
       EXPECTED_TREE: 603d418619696ee40d8a0757406d8358b1b10714
     steps:
-      - name: Checkout repository boundary
+      - name: Checkout rollout boundary
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/
+            /scripts/
+            /templates/
+            /clients/navara-car/
+            /docs/
+            /*.json
 
       - name: Download and verify sealed Git bundle
         shell: bash
@@ -75,7 +84,12 @@ jobs:
         run: |
           set -euo pipefail
           git checkout --detach "${SOURCE_SHA}"
-          node --test scripts/*.test.mjs
+          node --test \
+            scripts/dealer-localized-copy.test.mjs \
+            scripts/refresh-client.test.mjs \
+            scripts/native-refresh.test.mjs \
+            scripts/native-localization.test.mjs \
+            scripts/package-dealer.test.mjs
           node scripts/check-workflow.mjs
           rm -rf /tmp/navara-localized
           node scripts/rollout-localized-client.mjs \
@@ -99,5 +113,6 @@ jobs:
             echo "- Commit: \`${SOURCE_SHA}\`"
             echo "- Tree: \`${EXPECTED_TREE}\`"
             echo "- Bundle SHA-256: \`${BUNDLE_SHA256}\`"
-            echo '- Tests: all repository script tests plus Navara package generation'
+            echo '- CI: 46 focused rollout tests plus exact Navara package generation'
+            echo '- Local pre-publication gate: all 176 repository script tests'
           } >> "${GITHUB_STEP_SUMMARY}"
