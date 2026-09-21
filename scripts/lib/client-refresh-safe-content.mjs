@@ -24,9 +24,7 @@ export function applyCarwowSafeContent({ candidate, profile, logo }) {
 };
 
 export const daynightReviews: DayNightReview[] = [];
-export const daynightReviewDisclosure = ${q(english
-    ? 'No verified customer reviews are included in this independent preview.'
-    : 'В този независим преглед не са включени потвърдени клиентски отзиви.')} as const;
+export const daynightReviewDisclosure = ${q('Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения.')} as const;
 export const daynightReviewCount = 0;
 export const daynightReviewCountLabel = ${q(english ? 'No verified reviews' : 'Няма потвърдени отзиви')};
 export const daynightReviewLinkLabel = daynightReviewCountLabel;
