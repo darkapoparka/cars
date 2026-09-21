@@ -234,6 +234,18 @@ jobs:
           git diff --cached --check
           test -n "$(git status --short)"
           git commit -m "Promote dealer-owned bilingual template boundaries"
-          git fetch origin main
-          test "$(git rev-parse origin/main)" = "$CARS_BASE_SHA"
-          git push origin HEAD:main
+          # Preserve unrelated main commits. Rebase only this bounded promotion
+          # commit; conflicts fail closed and nothing is force-pushed.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if test "$(git rev-parse origin/main)" != "$(git rev-parse HEAD^)"; then
+              git rebase origin/main
+            fi
+            unexpected="$(git diff-tree --no-commit-id --name-only -r HEAD | grep -Ev '^(templates/(auto-best|carwow)/|templates\.lock\.json|docs/releases/localization-2026-09-21/(auto-best|carwow)-(release|boundary-review)\.json) || true)"
+            test -z "$unexpected" || { echo "Unexpected promoted path(s): $unexpected" >&2; exit 1; }
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          echo "Main kept moving after three safe rebase attempts" >&2
+          exit 1
