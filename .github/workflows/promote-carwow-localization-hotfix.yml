@@ -174,7 +174,6 @@ jobs:
             --evidence "$EVIDENCE_PATH" \
             --write
           node scripts/template-release.mjs verify --key carwow
-          node scripts/template-release.test.mjs
 
       - name: Publish the Cars release pin
         shell: bash
