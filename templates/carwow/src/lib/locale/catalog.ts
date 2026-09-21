@@ -1828,6 +1828,8 @@ export const en = {
 	'presentation.7790b0eccb53': 'Over £50k',
 	'presentation.98af33ee2105': 'Below £30k',
 	'presentation.used': 'Used',
+	'reviews.disclosure.unverified':
+		'This independent preview does not include confirmed customer reviews.',
 	'dealer.city': 'Sofia',
 	'dealer.addressLine': 'Studentski Grad · 18 Atanas Manchev Street',
 	'dealer.address': '18 Atanas Manchev Street, Studentski Grad, Sofia',
@@ -3682,6 +3684,8 @@ export const bg = {
 	'presentation.7790b0eccb53': 'Над 50 000 £',
 	'presentation.98af33ee2105': 'Под 30 000 £',
 	'presentation.used': 'Употребявани',
+	'reviews.disclosure.unverified':
+		'? ???? ????????? ??????? ?? ?? ???????? ?????????? ????????? ??????.',
 	'dealer.city': 'София',
 	'dealer.addressLine': 'Студентски град · ул. Атанас Манчев 18',
 	'dealer.address': 'гр. София, Студентски град, ул. Атанас Манчев 18',
@@ -7093,6 +7097,10 @@ export const sourceKeys = {
 	'Below £30k': 'presentation.98af33ee2105',
 	'Под 30 000 £': 'presentation.98af33ee2105',
 	Used: 'presentation.used',
+	'? ???? ????????? ??????? ?? ?? ???????? ?????????? ????????? ??????.':
+		'reviews.disclosure.unverified',
+	'This independent preview does not include confirmed customer reviews.':
+		'reviews.disclosure.unverified',
 	'Студентски град · ул. Атанас Манчев 18': 'dealer.addressLine',
 	'Studentski Grad · 18 Atanas Manchev Street': 'dealer.addressLine',
 	'гр. София, Студентски град, ул. Атанас Манчев 18': 'dealer.address',

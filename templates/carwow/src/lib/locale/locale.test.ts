@@ -58,6 +58,13 @@ describe('native Carwow locale adapter', () => {
 		])
 			expect(localeHref(value, 'en')).toBe(value);
 	});
+	it('localizes the no-verified-reviews dealer disclosure', () => {
+		const disclosure = '? ???? ????????? ??????? ?? ?? ???????? ?????????? ????????? ??????.';
+		expect(templateText('bg', disclosure)).toBe(disclosure);
+		expect(templateText('en', disclosure)).toBe(
+			'This independent preview does not include confirmed customer reviews.'
+		);
+	});
 	it('fails on unknown immutable copy and missing parameters', () => {
 		expect(() => templateText('en', 'unreviewed interface message')).toThrow();
 		expect(() => message('en', 'locale.suggestion')).toThrow('Missing parameter');
