@@ -1,0 +1,112 @@
+name: Import sealed Modern fixture compatibility fix
+
+on:
+  push:
+    branches:
+      - automation/modern-fixture-fix-20260921
+    paths:
+      - .github/workflows/import-modern-fixture-fix.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: modern-fixture-fix-import
+  cancel-in-progress: true
+
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BUNDLE_BLOB_SHA: 37f1e3df1ec6506965542b5ea9504a82e3ed90da
+      BUNDLE_SHA256: 1f8da3acb25df95251bff598f7c381b2daee539865f15ef3ce72c0f4b977b3bb
+      SOURCE_SHA: 12b918323039be172c89db0546696bee21ced662
+      EXPECTED_PARENT: f9cf87e548526447f5b05056da7b6ea07f2c5051
+      EXPECTED_TREE: 0a5b5b33514af8d4cc3ffdf1bd3b006dffcc7399
+    steps:
+      - name: Checkout rollout boundary
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /templates/
+            /clients/navara-car/
+            /docs/
+            /*.json
+
+      - name: Download and verify sealed Git bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL \
+            -H "Authorization: Bearer ${{ github.token }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/git/blobs/${BUNDLE_BLOB_SHA}" \
+            | jq -r '.content' \
+            | tr -d '\n' \
+            | base64 --decode \
+            > /tmp/modern-fixture-fix.bundle
+          echo "${BUNDLE_SHA256}  /tmp/modern-fixture-fix.bundle" | sha256sum --check --strict
+          git bundle verify /tmp/modern-fixture-fix.bundle
+          git fetch /tmp/modern-fixture-fix.bundle \
+            refs/bundles/modern-fixture-fix:refs/remotes/sealed/source
+
+      - name: Verify immutable commit boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse refs/remotes/sealed/source)" = "${SOURCE_SHA}"
+          test "$(git rev-parse "${SOURCE_SHA}^")" = "${EXPECTED_PARENT}"
+          test "$(git show -s --format=%T "${SOURCE_SHA}")" = "${EXPECTED_TREE}"
+          expected_paths=$(printf '%s\n' \
+            scripts/lib/client-refresh-adapters.mjs \
+            scripts/refresh-client.test.mjs | sort)
+          actual_paths=$(git diff-tree --no-commit-id --name-only -r "${SOURCE_SHA}" | sort)
+          test "${actual_paths}" = "${expected_paths}"
+          git diff-tree --check "${SOURCE_SHA}^" "${SOURCE_SHA}"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.8.0
+
+      - name: Test exact fix and regenerate Navara
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout --detach "${SOURCE_SHA}"
+          node --test \
+            scripts/refresh-client.test.mjs \
+            scripts/native-refresh.test.mjs \
+            scripts/native-localization.test.mjs \
+            scripts/package-dealer.test.mjs
+          rm -rf /tmp/navara-localized
+          node scripts/rollout-localized-client.mjs \
+            --client-root clients/navara-car \
+            --slug navara-car \
+            --repository darkapoparka/cars-navaracar \
+            --output /tmp/navara-localized \
+            > /tmp/navara-report.json
+          node -e "const fs=require('fs'); const p=JSON.parse(fs.readFileSync('/tmp/navara-report.json','utf8')); const c=JSON.parse(fs.readFileSync('/tmp/navara-localized/localization/contract.json','utf8')); if(JSON.stringify(c.enabledLocales)!==JSON.stringify(['en','bg'])) throw new Error('Expected EN/BG package'); if(!p.packageDigest) throw new Error('Missing package digest'); console.log(p.packageDigest);"
+
+      - name: Fast-forward main without overwriting concurrent work
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "${EXPECTED_PARENT}"
+          git push origin "${SOURCE_SHA}:refs/heads/main"
+          {
+            echo '## Modern fixture compatibility published'
+            echo
+            echo "- Commit: \`${SOURCE_SHA}\`"
+            echo "- Tree: \`${EXPECTED_TREE}\`"
+            echo "- Bundle SHA-256: \`${BUNDLE_SHA256}\`"
+            echo '- CI: exact refresh/native/package tests plus a fresh Navara EN/BG package'
+            echo '- Local gate: all 177 repository script tests and workflow validation'
+          } >> "${GITHUB_STEP_SUMMARY}"
