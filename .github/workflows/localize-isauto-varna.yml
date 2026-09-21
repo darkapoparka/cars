@@ -1,0 +1,192 @@
+name: Localize and deploy IS AUTO Varna
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/localize-isauto-varna.yml'
+      - 'templates.lock.json'
+      - 'scripts/rollout-localized-client.mjs'
+      - 'clients/isauto-varna/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: localize-isauto-varna-production
+  cancel-in-progress: true
+
+jobs:
+  localize:
+    if: github.actor != 'github-actions[bot]' || contains(github.event.head_commit.message, '[localize-isauto]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      OUTPUT_BRANCH: publish/isauto-varna
+      VERCEL_ORG_ID: team_RTNXBnClGWDdcYFFUW0BnqvJ
+      VERCEL_PROJECT_ID: prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv
+    steps:
+      - name: Check out canonical Cars source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.gitignore
+            /package.json
+            /templates.lock.json
+            /scripts/
+            /templates/
+            /docs/
+            /clients/isauto-varna/
+            /.github/workflows/localize-isauto-varna.yml
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+
+      - name: Preserve non-main dealer publication branches
+        id: release
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const file = 'scripts/rollout-localized-client.mjs';
+          const source = fs.readFileSync(file, 'utf8');
+          const oldLine = "  manifest.defaultBranch = 'main';";
+          const newLine = "  manifest.defaultBranch = oldManifest.defaultBranch || 'main';";
+          if (!source.includes(newLine)) {
+            if (!source.includes(oldLine)) throw new Error('Cannot locate localization default-branch assignment');
+            fs.writeFileSync(file, source.replace(oldLine, newLine));
+          }
+          const test = `import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport fs from 'node:fs';\n\ntest('localized packages preserve the registered publication branch', () => {\n  const source = fs.readFileSync(new URL('./rollout-localized-client.mjs', import.meta.url), 'utf8');\n  assert.match(source, /manifest\\.defaultBranch = oldManifest\\.defaultBranch \\|\\| 'main';/);\n});\n`;
+          fs.writeFileSync('scripts/rollout-localized-client-branch.test.mjs', test);
+          NODE
+          node --test scripts/rollout-localized-client-branch.test.mjs
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --sparse scripts/rollout-localized-client.mjs scripts/rollout-localized-client-branch.test.mjs
+          if ! git diff --cached --quiet; then
+            git diff --cached --check
+            git commit -m 'Preserve dealer publication branch in localization rollout'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          echo "cars_release_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Generate sealed native EN/BG package
+        shell: bash
+        env:
+          GITHUB_SHA: ${{ steps.release.outputs.cars_release_sha }}
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/isauto-localized"
+          node scripts/rollout-localized-client.mjs \
+            --client-root "$GITHUB_WORKSPACE/clients/isauto-varna" \
+            --slug isauto-varna \
+            --repository darkapoparka/cars \
+            --output "$RUNNER_TEMP/isauto-localized" \
+            | tee "$RUNNER_TEMP/isauto-localization-report.json"
+
+      - name: Validate localization contract and release pins
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="$RUNNER_TEMP/isauto-localized" node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const root = process.env.ROOT;
+          const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dealer.json'), 'utf8'));
+          const contract = JSON.parse(fs.readFileSync(path.join(root, 'localization/contract.json'), 'utf8'));
+          const adoption = JSON.parse(fs.readFileSync(path.join(root, 'localization/adoption.json'), 'utf8'));
+          const lock = JSON.parse(fs.readFileSync('templates.lock.json', 'utf8'));
+          if (manifest.packaging?.version !== '2') throw new Error('Expected packaging v2');
+          if (manifest.slug !== 'isauto-varna' || manifest.repository !== 'darkapoparka/cars') throw new Error('IS AUTO identity changed');
+          if (manifest.defaultBranch !== 'publish/isauto-varna') throw new Error('IS AUTO publication branch changed');
+          if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Expected complete EN/BG contract');
+          if (adoption.packagingVersion !== '2' || adoption.dealerId !== contract.dealerId) throw new Error('Invalid adoption receipt');
+          for (const variant of manifest.variants) {
+            const expected = lock.templates?.[variant.key]?.commit;
+            if (!expected || manifest.templateRevisions?.[variant.key] !== expected || adoption.releases?.[variant.key]?.commit !== expected) {
+              throw new Error(`Unexpected ${variant.key} release`);
+            }
+          }
+          NODE
+          test -f "$RUNNER_TEMP/isauto-localized/vercel.json"
+          test -f "$RUNNER_TEMP/isauto-localized/scripts/build-native-service.mjs"
+
+      - name: Publish localized deployment package
+        id: package
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          source_dir="$RUNNER_TEMP/isauto-localized"
+          publish_dir="$RUNNER_TEMP/isauto-publish"
+          rm -rf "$publish_dir"
+          mkdir -p "$publish_dir"
+          cd "$publish_dir"
+          git init
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git fetch --depth=1 origin "refs/heads/${OUTPUT_BRANCH}"; then
+            git checkout -B "$OUTPUT_BRANCH" FETCH_HEAD
+            find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          else
+            git checkout --orphan "$OUTPUT_BRANCH"
+          fi
+          cp -a "$source_dir"/. .
+          git add -A
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish IS AUTO native EN/BG package' -m 'Cars release: ${{ steps.release.outputs.cars_release_sha }}'
+            git push origin "HEAD:refs/heads/${OUTPUT_BRANCH}"
+          fi
+          echo "package_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy package to existing Vercel production project
+        uses: amondnet/vercel-action@v25
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ env.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ env.VERCEL_PROJECT_ID }}
+          vercel-args: --prod
+          scope: ${{ env.VERCEL_ORG_ID }}
+          working-directory: ${{ runner.temp }}/isauto-localized
+
+      - name: Verify production localization surface
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 30); do
+            html="$(curl -fsSL --max-time 25 https://cars-isautovarna.vercel.app/ || true)"
+            if printf '%s' "$html" | grep -q 'IS AUTO' && \
+               printf '%s' "$html" | grep -q 'Български' && \
+               printf '%s' "$html" | grep -q 'English'; then
+              curl -fsSL --max-time 25 https://cars-isautovarna.vercel.app/variant-2/cars >/dev/null
+              curl -fsSL --max-time 25 https://cars-isautovarna.vercel.app/variant-3/ >/dev/null
+              echo 'IS AUTO production serves the native EN/BG package on all three design entries.'
+              exit 0
+            fi
+            sleep 5
+          done
+          echo 'Production alias did not expose the native EN/BG package.' >&2
+          exit 1
+
+      - name: Upload rollout evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isauto-native-en-bg-v2
+          path: |
+            ${{ runner.temp }}/isauto-localization-report.json
+            ${{ runner.temp }}/isauto-localized/localization
+            ${{ runner.temp }}/isauto-localized/dealer.json
+          include-hidden-files: true
+          retention-days: 7
