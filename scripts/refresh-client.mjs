@@ -8,6 +8,8 @@ import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
 import { applyRefreshAdapter } from './lib/client-refresh-adapters.mjs';
 import { assertTemplatePresentation } from './lib/client-refresh-presentation.mjs';
 import { applyDealerLogoContract } from './lib/client-logo-contract.mjs';
+import { refreshNativeClient, planNativeClientRefresh } from './lib/native-refresh.mjs';
+import { nativeLocaleSources } from './lib/dealer-locale.mjs';
 
 const TEMPLATE_KEYS = ['auto-best', 'modern', 'import', 'carwow'];
 const exists = (file) => fs.existsSync(file);
@@ -285,13 +287,24 @@ export function mirrorRefreshTree(source, target) {
 }
 function dirtyClientPaths(root,slug){return git(root,['status','--porcelain=v1','--untracked-files=all','--',`clients/${slug}`]).split(/\r?\n/).filter(Boolean);}
 
-export async function planClientRefresh({root=ROOT,slug}){
+export async function planClientRefresh(options){
+  const {root=ROOT,slug,localeConfig}=options;
+  const manifestPath=inside(root,`clients/${slug}/dealer.json`);
+  const selected=exists(manifestPath)?json(manifestPath):null;
+  if(localeConfig || selected?.packaging?.version==='2') return planNativeClientRefresh({...options,root,slug});
+  const selectedKeys=selected?.variants.map(v=>v.key)||TEMPLATE_KEYS.filter(key=>exists(path.join(root,'clients',slug,key)));
+  if(selectedKeys.some(key=>nativeLocaleSources(new Map(),path.join(root,'templates',key)).length)) throw new Error('Native template releases require explicit dealer locale configuration and reviewed native overlay');
   const client=inside(root,`clients/${slug}`,{mustExist:true}),dealerFile=path.join(client,'dealer.json');const manifest=manifestIdentity(root,slug,client,exists(dealerFile)?json(dealerFile):null),workflowCommit=git(root,['rev-parse','HEAD']);
   const runDir=inside(root,`runtime/client-refresh/${slug}/regen-${Date.now()}-${process.pid}`);fs.mkdirSync(runDir,{recursive:true});const facts=dealerFacts(client),profile=loadDealerProfile(client,slug),variants=[];
   for(const vm of manifest.variants){const key=vm.key,oldVariant=path.join(client,key),release=verifyTemplate(root,key),candidate=path.join(runDir,'candidate',key);fs.mkdirSync(path.dirname(candidate),{recursive:true});await copySource(path.join(root,release.snapshotPath),candidate,{key});let overlay=applyRefreshAdapter({key,oldVariant,candidate,profile});overlay.push(...copyDealerDirectories(oldVariant,candidate,key,slug)); overlay.push(...copyReferencedAssets(oldVariant,candidate,key,overlay));overlay.push(...applyDealerLogoContract({key,oldVariant,candidate,profile}));assertTemplatePresentation({key,template:path.join(root,release.snapshotPath),candidate,profile});resetProjectMetadata(oldVariant,candidate,release,slug,key,workflowCommit,vm.entry);rewriteSourceManifest(root,slug,key,candidate,release,workflowCommit,overlay);fs.writeFileSync(path.join(candidate,'AGENTS.md'),dealerGuidance({slug,variants:manifest.variants,workflowCommit,variant:key}));variants.push({key,release:{repository:release.repository,commit:release.commit,digest:release.digest},candidate,overlay});}
   const report={schemaVersion:2,slug,workflowCommit,manifest,dirtyBefore:dirtyClientPaths(root,slug),variants,runDir,ready:true};writeJson(path.join(runDir,'proposal.json'),report);return report;
 }
-export async function refreshClient({root=ROOT,slug,write=false}) {
+export async function refreshClient(options) {
+  const {root=ROOT,slug,write=false,localeConfig,overlayFile}=options;
+  const existingFile=inside(root,`clients/${slug}/dealer.json`);
+  const existing=exists(existingFile)?json(existingFile):null;
+  if(localeConfig || existing?.packaging?.version==='2') return refreshNativeClient({...options,root,slug,write});
+  if(existing?.variants.some(({key})=>nativeLocaleSources(new Map(),path.join(root,'clients',slug,key)).length)) throw new Error('Native dealer source must use the native reviewed-overlay refresh path');
   const before=dirtyClientPaths(root,slug);
   if(write&&before.length) throw new Error(`Dealer source is dirty before refresh (${before.length} paths). Preserve or reconcile it first.`);
   const plan=await planClientRefresh({root,slug});
@@ -313,7 +326,7 @@ export async function refreshClient({root=ROOT,slug,write=false}) {
     throw error;
   }
 }
-async function main(){if(process.argv.includes('--help')){console.log('Usage: node scripts/refresh-client.mjs --client SLUG [--write]\nRegenerates existing variants from approved Cars snapshots, reapplies only dealer identity/content/inventory/assets, keeps template UI/hero/artwork, and preserves publishing identity.');return;}const o=args(process.argv.slice(2),['client'],['write']);if(!o.client)throw new Error('Use --client SLUG.');console.log(JSON.stringify(await refreshClient({slug:o.client,write:!!o.write}),null,2));}
+async function main(){if(process.argv.includes('--help')){console.log('Usage: node scripts/refresh-client.mjs --client SLUG [--locale-config JSON --native-overlay localization/dealer-overlay.json] [--write]\nRegenerates existing variants from approved Cars snapshots, reapplies only dealer identity/content/inventory/assets, keeps template UI/hero/artwork, and preserves publishing identity.');return;}const o=args(process.argv.slice(2),['client','locale-config','native-overlay','rollback-receipt'],['write']);if(!o.client)throw new Error('Use --client SLUG.');console.log(JSON.stringify(await refreshClient({slug:o.client,write:!!o.write,...(o['locale-config']?{localeConfig:json(path.resolve(o['locale-config']))}:{}),...(o['native-overlay']?{overlayFile:o['native-overlay']}:{}),...(o['rollback-receipt']?{rollbackReceipt:json(path.resolve(o['rollback-receipt']))}:{})}),null,2));}
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch((error)=>{console.error(error.stack||error.message);process.exitCode=1;});
 
 export { copyDealerDirectories };

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-21T01:46:06.492Z",
+  "template": "carwow",
+  "localHead": "17422cd3a31a9251da35f72d30c3111a6641e9ec",
+  "localHeadUnchanged": true,
+  "handoff": {
+    "path": "J:/template-repos/cars-template-carwow/docs/localization/HANDOFF.md",
+    "sha256": "c8c0bc738939fac057c742d930031358b8fcf3406b1c212e799cd1f0025404b9",
+    "workingTreeStatus": ""
+  },
+  "scope": "Read-only public HTTP route-language checks, including conflicting Accept-Language. Not source/deployment binding, visual, complete catalog or security acceptance.",
+  "checks": 6,
+  "passed": 6,
+  "failed": 0,
+  "results": [
+    {
+      "requested": "https://cars-template-carwow.vercel.app/en",
+      "url": "https://cars-template-carwow.vercel.app/en",
+      "status": 200,
+      "lang": "en",
+      "title": "Checked cars and easy contact | DAY NIGHT AUTO GROUP",
+      "bodySha256": "e7be93c5aa1cb5718b894a7fca68b77a7f49f28371fa15e61a6ae77befe9b902",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-carwow.vercel.app/en/contact?topic=trade-in",
+      "url": "https://cars-template-carwow.vercel.app/en/contact?topic=trade-in",
+      "status": 200,
+      "lang": "en",
+      "title": "Sell or trade in your car | DAY NIGHT AUTO GROUP",
+      "bodySha256": "00cd859e338a8b0f86edafe2755fdb3f5b9575ae5339a03c54b49289177458d0",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-carwow.vercel.app/en/locale-settings",
+      "url": "https://cars-template-carwow.vercel.app/en/locale-settings",
+      "status": 200,
+      "lang": "en",
+      "title": "Country and language — DAY NIGHT AUTO GROUP",
+      "bodySha256": "577d42ccb219e97b802c4789c920848b176e8447d4deaec3bfcccccd0dfb649a",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-carwow.vercel.app/bg",
+      "url": "https://cars-template-carwow.vercel.app/bg",
+      "status": 200,
+      "lang": "bg",
+      "title": "Проверени автомобили и бърз контакт | DAY NIGHT AUTO GROUP",
+      "bodySha256": "8e53d4a81c180998fa6b394c47bd8d989b3f772b90f6a0ceb0df0ca4d4e9ce97",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-carwow.vercel.app/bg/contact?topic=trade-in",
+      "url": "https://cars-template-carwow.vercel.app/bg/contact?topic=trade-in",
+      "status": 200,
+      "lang": "bg",
+      "title": "Продажба или бартер на автомобил | DAY NIGHT AUTO GROUP",
+      "bodySha256": "05fdd020be82081f19eb14ef5d4ceb2e0892e7914010dc0b679a57ad4c2b5e9d",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-carwow.vercel.app/bg/locale-settings",
+      "url": "https://cars-template-carwow.vercel.app/bg/locale-settings",
+      "status": 200,
+      "lang": "bg",
+      "title": "Държава и език — DAY NIGHT AUTO GROUP",
+      "bodySha256": "69b8885e8d6ee7dc186f314f91ec2e9680980c75140689eb8df0c9dad5329c62",
+      "passed": true
+    }
+  ]
+}

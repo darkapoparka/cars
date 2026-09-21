@@ -7,6 +7,8 @@ import { applyMounts } from './publishing/mounts.mjs';
 import { git, gitFiles } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
 import { assertLegacyLocaleCompatible } from './lib/dealer-locale.mjs';
+import { NATIVE_PACKAGING_VERSION, assertNativeAdoption } from './lib/native-localization.mjs';
+import { adoptNativeSource, applyNativeMounts } from './publishing/native-mounts.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -39,10 +41,10 @@ function safeRelative(value, label) {
 export function validatePackagingManifest(manifest) {
   if (manifest?.schemaVersion !== 1 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manifest.slug ?? '')) throw new Error('Invalid dealer manifest schemaVersion or slug');
   if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(manifest.repository ?? '')) throw new Error('Manifest repository must be owner/name');
-  if (manifest.packaging?.version !== PACKAGING_VERSION) throw new Error(`Unsupported packaging version: ${manifest.packaging?.version}`);
+  if (![PACKAGING_VERSION, NATIVE_PACKAGING_VERSION].includes(manifest.packaging?.version)) throw new Error(`Unsupported packaging version: ${manifest.packaging?.version}`);
   const variants = manifest.variants;
   const middle = variants?.[1]?.key;
-  if (!Array.isArray(variants) || variants.length !== 3 || variants[0].key !== 'auto-best' || !['modern', 'import'].includes(middle) || variants[2].key !== 'carwow') throw new Error('Packaging v1 requires auto-best + modern/import + carwow in that order');
+  if (!Array.isArray(variants) || variants.length !== 3 || variants[0].key !== 'auto-best' || !['modern', 'import'].includes(middle) || variants[2].key !== 'carwow') throw new Error('Packaging requires auto-best + modern/import + carwow in that order');
   const required = [{ base: '', entry: '/' }, { base: '/variant-2', entry: middle === 'modern' ? '/variant-2/cars' : '/variant-2/' }, { base: '/variant-3', entry: '/variant-3/' }];
   for (const [index, variant] of variants.entries()) {
     if (variant.base !== required[index].base || variant.entry !== required[index].entry) throw new Error(`Unsupported ${variant.key} mount or entry`);
@@ -50,7 +52,7 @@ export function validatePackagingManifest(manifest) {
   if (manifest.extraAssets !== undefined && !Array.isArray(manifest.extraAssets)) throw new Error('extraAssets must be an array of relative paths');
   for (const asset of manifest.extraAssets ?? []) {
     safeRelative(asset, 'extra asset');
-    if (asset.split('/').some((part) => OMITTED.has(part) || part.startsWith('.env') || part.startsWith('.next')) || variants.some(({ key }) => asset === key || asset.startsWith(`${key}/`)) || ['scripts', 'dealer.json', 'vercel.json', '.cars-package.json', 'AGENTS.md'].includes(asset.split('/')[0])) {
+    if (asset.split('/').some((part) => OMITTED.has(part) || part.startsWith('.env') || part.startsWith('.next')) || variants.some(({ key }) => asset === key || asset.startsWith(`${key}/`)) || ['scripts', 'dealer.json', 'vercel.json', '.cars-package.json', 'AGENTS.md', 'localization'].includes(asset.split('/')[0])) {
       throw new Error(`Protected or redundant extra asset path: ${asset}`);
     }
   }
@@ -64,6 +66,10 @@ function omitted(name, relative) {
   if (/^(?:AGENTS(?:\.override)?|CLAUDE)\.md$/i.test(name) && relative !== 'AGENTS.md') return true;
   if (relative.split('/').includes('.client') && name !== '.client' && name !== 'project.json') return true;
   return false;
+}
+
+function sourceMapDigest(files) {
+  return sha256(JSON.stringify([...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, content]) => [name, sha256(normalized(content))])));
 }
 
 async function collectSource(source, manifest) {
@@ -86,7 +92,7 @@ async function collectSource(source, manifest) {
     await walk(key);
   }
   for (const entry of (await fs.readdir(source, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name, 'en'))) {
-    if (ROOT_FILES.has(entry.name) || /^(?:LICEN[CS]E|COPYING|NOTICE|PROVENANCE)(?:\.[\w-]+)?$/i.test(entry.name) || entry.name === 'scripts' || entry.name === '.client') await walk(entry.name);
+    if (ROOT_FILES.has(entry.name) || /^(?:LICEN[CS]E|COPYING|NOTICE|PROVENANCE)(?:\.[\w-]+)?$/i.test(entry.name) || entry.name === 'scripts' || entry.name === '.client' || (manifest.packaging.version === NATIVE_PACKAGING_VERSION && entry.name === 'localization')) await walk(entry.name);
   }
   for (const asset of manifest.extraAssets ?? []) {
     if (!(await exists(path.join(source, asset)))) throw new Error(`Declared extra asset is missing: ${asset}`);
@@ -103,22 +109,24 @@ function retainedAtCommit(relative, manifest) {
   return relative === 'dealer.json' || manifest.variants.some(v => v.key === first)
     || ROOT_FILES.has(first) || /^(?:LICEN[CS]E|COPYING|NOTICE|PROVENANCE)(?:\.[\w-]+)?$/i.test(first)
     || ['scripts', '.client'].includes(first)
+    || (manifest.packaging.version === NATIVE_PACKAGING_VERSION && first === 'localization')
     || (manifest.extraAssets ?? []).some(p => relative === p || relative.startsWith(p + '/'));
 }
 
 function vercelConfiguration(manifest) {
   const middle = manifest.variants[1].key;
   const middleService = middle === 'modern' ? 'modern' : 'importer';
+  const native = manifest.packaging.version === NATIVE_PACKAGING_VERSION;
   return {
     $schema: 'https://openapi.vercel.sh/vercel.json',
     services: {
-      autobest: { root: 'auto-best', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: 'npm run build && node ../scripts/fix-svelte-service-output.mjs' },
+      autobest: { root: 'auto-best', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs auto-best' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs' },
       [middleService]: middle === 'modern' ? {
         root: 'modern/apps/web', framework: 'nextjs',
         installCommand: 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -c "pnpm install --frozen-lockfile"',
-        buildCommand: 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -c "pnpm --filter @repo/database build && pnpm --filter web build"',
-      } : { root: 'import', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: 'npm run build && node ../scripts/fix-svelte-service-output.mjs /variant-2' },
-      carwow: { root: 'carwow', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: 'npm run build && node ../scripts/fix-svelte-service-output.mjs /variant-3' },
+        buildCommand: native ? 'node ../../../scripts/build-native-service.mjs modern' : 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -c "pnpm --filter @repo/database build && pnpm --filter web build"',
+      } : { root: 'import', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs import' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs /variant-2' },
+      carwow: { root: 'carwow', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs carwow' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs /variant-3' },
     },
     headers: [{ source: '/(.*)', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] }],
     redirects: [{ source: '/variant-2', destination: manifest.variants[1].entry, permanent: false }, { source: '/variant-3', destination: '/variant-3/', permanent: false }],
@@ -126,51 +134,65 @@ function vercelConfiguration(manifest) {
   };
 }
 
-function switcherConfiguration(manifest) {
-  const language = manifest.switcher?.language ?? manifest.language ?? 'bg';
+function switcherConfiguration(manifest, nativeMessages) {
+  const native = manifest.packaging.version === NATIVE_PACKAGING_VERSION;
+  const language = native ? manifest.localization.defaultLocale : manifest.switcher?.language ?? manifest.language ?? 'bg';
   const words = {
     bg: { design: 'Дизайн', choose: 'Избор на дизайн', title: 'Изберете визия за сайта' },
     en: { design: 'Design', choose: 'Choose a design', title: 'Choose a design for the site' },
   };
-  const labels = manifest.switcher?.labels ?? words[language.split('-')[0]];
+  if (native && (!nativeMessages || !['en', 'bg'].every(locale => ['design', 'choose', 'title', 'admin', 'adminLabel'].every(key => typeof nativeMessages[locale]?.[key] === 'string' && nativeMessages[locale][key].trim())))) throw new Error('Native design/Admin messages must be complete in EN/BG');
+  const labels = native ? nativeMessages[language] : manifest.switcher?.labels ?? words[language.split('-')[0]];
   if (!labels || !['design', 'choose', 'title'].every((key) => typeof labels[key] === 'string' && labels[key].length > 0)) throw new Error(`Provide switcher labels for language: ${language}`);
   const accent = manifest.switcher?.accent;
   if (accent !== undefined && !/^#[\da-f]{6}$/i.test(accent)) throw new Error('Switcher accent must be a six-digit hex color');
-  return { language, labels, ...(accent ? { accent } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({ key, base, entry })) };
+  return { language, labels, ...(accent ? { accent } : {}), ...(native ? { localization: { defaultLocale: language, enabledLocales: manifest.localization.enabledLocales, messages: nativeMessages } } : {}), variants: manifest.variants.map(({ key, base, entry }) => ({ key, base, entry })) };
 }
 
 function fallbackGuidance(manifest) {
   return `# ${manifest.slug} dealer package\n\nThis repository is a derived deployment package. Canonical dealer source lives under clients/${manifest.slug} in the Cars repository. Read dealer.json and .cars-package.json for identity and provenance. Make source changes in Cars and regenerate the package; do not silently edit generated mounting code or template masters.\n\nAll three designs share one Vercel project. Preserve retained lockfiles, source layouts, licensing and provenance. Run each app's documented checks and test every mounted entry, inventory, detail, contact and enquiry destination at 390 and 1440 px. Check the design switcher at 320 px, including Escape and focus return. A build is not public-preview proof. Publishing does not authorize outreach.\n`;
 }
 
-async function prepare({ source, manifest, sourceCommit, guidance, canonicalFiles }) {
+async function prepare({ source, manifest, sourceCommit, guidance, canonicalFiles, nativeReleases }) {
+  manifest = structuredClone(manifest);
   validatePackagingManifest(manifest);
   if (!/^[a-f\d]{40}(?:[a-f\d]{24})?$/i.test(sourceCommit ?? '')) throw new Error('sourceCommit must be the full source Git commit SHA');
   const resolvedSource = await fs.realpath(path.resolve(source));
-  // Refuse before copying or applying the default-locale legacy mount transform.
-  const retained = canonicalFiles ? new Map(canonicalFiles) : undefined;
-  assertLegacyLocaleCompatible({ manifest, files: retained, source: resolvedSource });
-  const files = retained ?? await collectSource(resolvedSource, manifest);
-  assertLegacyLocaleCompatible({ manifest, files });
-  for(const [name,content] of files)files.set(name,normalized(content));
-  await applyMounts(files, manifest);
+  const native = manifest.packaging.version === NATIVE_PACKAGING_VERSION;
+  const retained = canonicalFiles ? new Map([...canonicalFiles].map(([name, bytes]) => [name, Buffer.from(bytes)])) : undefined;
+  if (!native) assertLegacyLocaleCompatible({ manifest, files: retained, source: resolvedSource });
+  const sourceFiles = await collectSource(resolvedSource, manifest);
+  const inputDigest = sourceMapDigest(sourceFiles);
+  const manifestInput = await fs.readFile(path.join(resolvedSource, 'dealer.json')).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
+  let files = retained ?? new Map(sourceFiles);
+  for (const [name, content] of files) { safeRelative(name, 'retained file'); files.set(name, normalized(Buffer.from(content))); }
+  if (native) {
+    if (nativeReleases) files = adoptNativeSource(files, manifest, nativeReleases);
+    else { assertNativeAdoption(files, manifest); files = applyNativeMounts(files, manifest); assertNativeAdoption(files, manifest); }
+  } else {
+    assertLegacyLocaleCompatible({ manifest, files });
+    if (nativeReleases) throw new Error('Native releases require packaging version 2');
+    await applyMounts(files, manifest);
+  }
   const ignore=(files.get('.gitignore')?.toString('utf8')||'').split(/\r?\n/).filter(Boolean);
   const generatedIgnores=['# Cars generated package exclusions','**/node_modules/','**/.vercel/','**/.svelte-kit/','**/.next*/','**/.turbo/','**/build/','**/dist/','**/.agency-os/','**/.auth/','**/.env*','!**/.env.example','!**/.env.sample','!**/.env.template','runtime/','*.log','*.tsbuildinfo'];
   files.set('.gitignore',Buffer.from([...new Set([...ignore,...generatedIgnores])].join('\n')+'\n'));
   files.set('vercel.json', Buffer.from(json(vercelConfiguration(manifest))));
   files.set('.vercelignore', Buffer.from('.git\n**/node_modules\n**/.next*\n**/.svelte-kit\n**/.vercel\n**/.turbo\n**/.env*\n**/*.log\n**/*.tsbuildinfo\n**/build\n**/dist\nruntime\nqa\nqa-final\nevidence\n'));
   files.set('scripts/fix-svelte-service-output.mjs', await fs.readFile(new URL('./publishing/fix-svelte-service-output.mjs', import.meta.url)));
+  if (native) files.set('scripts/build-native-service.mjs', await fs.readFile(new URL('./publishing/build-native-service.mjs', import.meta.url)));
   const switcher = await fs.readFile(new URL('./publishing/preview-switcher.js', import.meta.url), 'utf8');
-  files.set('auto-best/static/preview-switcher.js', Buffer.from(switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest)).replace(/</g, '\\u003c'))));
+  const nativeMessages = native ? JSON.parse(await fs.readFile(new URL('./publishing/switcher-messages.json', import.meta.url), 'utf8')) : undefined;
+  files.set('auto-best/static/preview-switcher.js', Buffer.from(switcher.replace('__CARS_SWITCHER_CONFIG__', () => JSON.stringify(switcherConfiguration(manifest, nativeMessages)).replace(/</g, '\\u003c'))));
   files.set('dealer.json', Buffer.from(json(manifest)));
   if (guidance !== undefined && (typeof guidance !== 'string' || !guidance.trim())) throw new Error('guidance must be nonempty portable Markdown');
   if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest)));
   const hashes = () => [...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, content]) => ({ path: name, sha256: sha256(normalized(content)) }));
   const payload = hashes();
   const payloadDigest = sha256(JSON.stringify(payload));
-  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: PACKAGING_VERSION, payloadDigest, payload })));
+  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, payloadDigest, payload })));
   const digest = sha256(JSON.stringify(hashes()));
-  return { resolvedSource, files, digest, packagingVersion: PACKAGING_VERSION };
+  return { resolvedSource, files, digest, inputDigest, manifestInput, manifest, packagingVersion: manifest.packaging.version };
 }
 
 async function validateDestination(source, destination) {
@@ -191,17 +213,34 @@ export async function planDealerPackage(options) {
   return { destination, files: [...prepared.files.keys()].sort(), digest: prepared.digest, packagingVersion: prepared.packagingVersion };
 }
 
+async function verifyPreparedSource(prepared) {
+  if (sourceMapDigest(await collectSource(prepared.resolvedSource, prepared.manifest)) !== prepared.inputDigest) throw new Error('Canonical source changed during package preparation');
+  const currentManifest = await fs.readFile(path.join(prepared.resolvedSource, 'dealer.json')).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
+  if (Boolean(currentManifest) !== Boolean(prepared.manifestInput) || (currentManifest && !currentManifest.equals(prepared.manifestInput))) throw new Error('Dealer manifest changed during package preparation');
+}
+
 /** Create one fresh derived directory. No source file, Git index or ref is modified. */
 export async function packageDealer(options) {
   const prepared = await prepare(options);
   const destination = await validateDestination(prepared.resolvedSource, options.destination);
   await fs.mkdir(path.dirname(destination), { recursive: true });
-  // Exclusive mkdir also closes the race after the existence check.
+  // A testable boundary; every input is rechecked after caller activity. The CLI exposes no callback.
+  if (options.beforeInstall) await options.beforeInstall();
+  await verifyPreparedSource(prepared);
+  // Exclusive mkdir also closes the destination race.
   await fs.mkdir(destination);
-  for (const [name, content] of [...prepared.files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)) {
-    const target = path.join(destination, name);
-    await fs.mkdir(path.dirname(target), { recursive: true });
-    await fs.writeFile(target, content, { flag: 'wx' });
+  try {
+    for (const [name, content] of [...prepared.files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)) {
+      const target = path.join(destination, name);
+      await fs.mkdir(path.dirname(target), { recursive: true });
+      await fs.writeFile(target, content, { flag: 'wx' });
+    }
+    await verifyPreparedSource(prepared);
+  } catch (error) {
+    // Retain our incomplete output for diagnosis, but never leave it at a ready destination.
+    const failed = `${destination}.failed-${process.pid}-${Date.now()}`;
+    await fs.rename(destination, failed).catch(() => {});
+    throw error;
   }
   return { destination, files: [...prepared.files.keys()].sort(), digest: prepared.digest, packagingVersion: prepared.packagingVersion };
 }

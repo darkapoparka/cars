@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-21T01:44:30.346Z",
+  "template": "import",
+  "localHead": "521fab0be30501c888a3617db9987d36c918e8a1",
+  "localHeadUnchanged": true,
+  "handoff": {
+    "path": "J:/template-repos/cars-template-import/docs/localization/HANDOFF.md",
+    "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+    "workingTreeStatus": ""
+  },
+  "scope": "Read-only public HTTP route-language checks, including conflicting Accept-Language. Not source/deployment binding, visual, complete catalog or security acceptance.",
+  "checks": 6,
+  "passed": 6,
+  "failed": 0,
+  "results": [
+    {
+      "requested": "https://cars-template-import.vercel.app/en",
+      "url": "https://cars-template-import.vercel.app/en",
+      "status": 200,
+      "lang": "en",
+      "title": "Day Night Auto Group — Cars and vehicle sourcing",
+      "bodySha256": "2221dd7522f0aeae6cc11451d92c0ff01bcb341f33e111c4c84d7c0f2832d2eb",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-import.vercel.app/en/contact?topic=trade-in",
+      "url": "https://cars-template-import.vercel.app/en/contact?topic=trade-in",
+      "status": 200,
+      "lang": "en",
+      "title": "Contact DAY NIGHT AUTO GROUP — Day Night Auto Group",
+      "bodySha256": "543877332010a1518c5d3a3445d9fe91f050e3a25127a9d1bbaa93a19adced0c",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-import.vercel.app/en/locale-settings",
+      "url": "https://cars-template-import.vercel.app/en/locale-settings",
+      "status": 200,
+      "lang": "en",
+      "title": "Country and language",
+      "bodySha256": "4726a9dd2525edbcc51cbac808354a8c8c91880efdf7023dfa8feef96a5b1613",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-import.vercel.app/bg",
+      "url": "https://cars-template-import.vercel.app/bg",
+      "status": 200,
+      "lang": "bg",
+      "title": "Day Night Auto Group — Автомобили и внос по заявка",
+      "bodySha256": "edb241dac2c3c2e0d381b9231bfe9e595734ea0168de94642c1d6b5323310b66",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-import.vercel.app/bg/contact?topic=trade-in",
+      "url": "https://cars-template-import.vercel.app/bg/contact?topic=trade-in",
+      "status": 200,
+      "lang": "bg",
+      "title": "Свържете се с DAY NIGHT AUTO GROUP — Day Night Auto Group",
+      "bodySha256": "18de22a200df8ef3466f1f8e7be0257ae08ce413bc515ec494604ec411e4a99a",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-import.vercel.app/bg/locale-settings",
+      "url": "https://cars-template-import.vercel.app/bg/locale-settings",
+      "status": 200,
+      "lang": "bg",
+      "title": "Държава и език",
+      "bodySha256": "e5e175d26c9a65049c19062617c0420cd9799d13adb996dc1738c5b5bd027e6d",
+      "passed": true
+    }
+  ]
+}

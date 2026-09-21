@@ -3,6 +3,8 @@ import path from 'node:path';
 import { planNewClient, assertMainCheckout } from './new-client.mjs';
 import { copySource } from './copy-source.mjs';
 import { packageDealer } from './package-dealer.mjs';
+import { verifyPackage } from './export-dealer.mjs';
+import { NATIVE_PACKAGING_VERSION, nativeReleaseReadiness } from './lib/native-localization.mjs';
 import { ROOT, POLICY, args, fingerprint, json, writeJson, resolveIdentity } from './lib/workflow.mjs';
 import { gitRead } from './workspace-doctor.mjs';
 import { verifyTemplate } from './template-release.mjs';
@@ -10,6 +12,7 @@ import { normalizeDealerLocale, readDealerLocale, planDealerLocale, assertLegacy
 
 const independentInputs = ['scripts/create-independent-dealer.mjs', 'scripts/lib/dealer-locale.mjs', 'scripts/package-dealer.mjs',
   'scripts/publishing/mounts.mjs', 'scripts/publishing/preview-paths.ts.txt', 'scripts/publishing/preview-switcher.js', 'scripts/publishing/fix-svelte-service-output.mjs',
+  'scripts/lib/catalog-literal.mjs', 'scripts/lib/native-localization.mjs', 'scripts/publishing/native-mounts.mjs', 'scripts/publishing/build-native-service.mjs', 'scripts/publishing/switcher-messages.json', 'scripts/export-dealer.mjs',
   'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/dealer-guidance.mjs',
   'scripts/workspace-doctor.mjs', 'templates.lock.json', 'catalog.json', 'workspace.json'];
 
@@ -42,11 +45,15 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
   assertIndependentWorkflowInputs(root, readGit);
   const target = resolveIndependentTarget(parent, client);
   const nativeSources = plan.plans.flatMap(item => nativeLocaleSources(new Map(), item.source).map(file => item.template + '/' + file));
-  const localization = requestedLocale ? planDealerLocale(requestedLocale, plan.manifest) : { status: nativeSources.length ? 'blocked-native-source' : 'unverified-legacy-defaults', appliedChanges: [], nativeSources };
+  const nativeReleases = Object.fromEntries(plan.plans.map(item => [item.template, item.release]));
+  const readiness = requestedLocale ? nativeReleaseReadiness(plan.manifest.variants, nativeReleases) : null;
+  const localization = requestedLocale ? { ...planDealerLocale(requestedLocale, plan.manifest),
+    ...(readiness.ready ? { status: 'native-ready-needs-dealer-qa', blockers: [] } : { blockers: readiness.blockers })
+  } : { status: nativeSources.length ? 'blocked-native-source' : 'unverified-legacy-defaults', appliedChanges: [], nativeSources };
   const summary = { localization, mode: write ? 'create' : 'dry-run', sourceOwnership: 'independent-repository', repository, target, workflowCommit: plan.checkout.head, templates: plan.plans.map(p => ({ key: p.template, repository: p.release.repository, commit: p.release.commit, digest: p.release.digest, newerDevelopmentAvailable: p.updateAvailable })) };
   if (!write) return summary;
-  if (requestedLocale || nativeSources.length) throw new LocalePackagingError(nativeSources);
-  for (const item of plan.plans) assertLegacyLocaleCompatible({ manifest: plan.manifest, source: item.source });
+  if (requestedLocale ? !readiness.ready : nativeSources.length) throw new LocalePackagingError(readiness?.blockers || nativeSources);
+  if (!requestedLocale) for (const item of plan.plans) assertLegacyLocaleCompatible({ manifest: plan.manifest, source: item.source });
   const runtime = path.join(parent, '.runtime'); fs.mkdirSync(runtime, { recursive: true });
   const lock = path.join(runtime, 'create-independent.lock');
   fs.mkdirSync(lock);
@@ -55,7 +62,10 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
   try {
     stage = fs.mkdtempSync(path.join(runtime, client + '-seed-'));
     const seed = path.join(stage, 'seed'); fs.mkdirSync(seed);
-    const manifest = { ...plan.manifest, sourceOwnership: 'independent-repository', language: 'en', switcher: { language: 'en', accent: '#c40101' }, templateRevisions: Object.fromEntries(plan.plans.map(p => [p.template, p.release.commit])) };
+    const language = requestedLocale?.defaultLocale || 'en';
+    const manifest = { ...plan.manifest, sourceOwnership: 'independent-repository', language, switcher: { language, accent: '#c40101' },
+      ...(requestedLocale ? { localization: requestedLocale, packaging: { ...plan.manifest.packaging, version: NATIVE_PACKAGING_VERSION } } : {}),
+      templateRevisions: Object.fromEntries(plan.plans.map(p => [p.template, p.release.commit])) };
     writeJson(path.join(seed, 'dealer.json'), manifest);
     for (const item of plan.plans) {
       const dest = path.join(seed, item.template);
@@ -63,10 +73,9 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
       if (fingerprint(dest).digest !== item.release.digest) throw new Error('Template copy mismatch: ' + item.template);
     }
     const candidate = path.join(stage, 'ready');
-    await packageSource({ source: seed, destination: candidate, manifest, sourceCommit: plan.checkout.head, guidance: independentGuidance(client, repository) });
+    await packageSource({ source: seed, destination: candidate, manifest, sourceCommit: plan.checkout.head, guidance: independentGuidance(client, repository), ...(requestedLocale ? { nativeReleases } : {}) });
+    verifyPackage(candidate);
     const generated = json(path.join(candidate, '.cars-package.json'));
-    writeJson(path.join(candidate, 'docs/workflow/GENERATION.json'), { ...summary, createdAt: new Date().toISOString(), meaning: 'Approved template source and initial mount transformation, not a finished dealer build', packagingVersion: generated.packagingVersion, initialMountedDigest: generated.payloadDigest });
-    fs.renameSync(path.join(candidate, '.cars-package.json'), path.join(candidate, 'docs/workflow/INITIAL-PACKAGE.json'));
     if (assertMainCheckout(root, { readGit }).head !== plan.checkout.head) throw new Error('Cars main changed during preparation');
     assertIndependentWorkflowInputs(root, readGit);
     for (const item of plan.plans) {
@@ -77,6 +86,9 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
     const registryPath = path.join(root, 'docs/DEPLOYMENT-INVENTORY.json');
     if (fs.existsSync(registryPath) && json(registryPath).dealers?.some(item => item.repository?.toLowerCase() === repository.toLowerCase())) throw new Error('Publishing repository was registered during preparation; existing source was preserved');
     resolveIndependentTarget(parent, client);
+    verifyPackage(candidate);
+    writeJson(path.join(candidate, 'docs/workflow/GENERATION.json'), { ...summary, createdAt: new Date().toISOString(), meaning: 'Approved template source and initial mount transformation, not a finished dealer build', packagingVersion: generated.packagingVersion, initialMountedDigest: generated.payloadDigest });
+    fs.renameSync(path.join(candidate, '.cars-package.json'), path.join(candidate, 'docs/workflow/INITIAL-PACKAGE.json'));
     fs.renameSync(candidate, target);
     writeJson(path.join(stage, 'creation.json'), summary);
     return { ...summary, state: 'needs-personalization', receipt: path.join(stage, 'creation.json') };
@@ -86,7 +98,7 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
 
 async function main() {
   if (process.argv.includes('--help')) {
-    console.log('Usage: node scripts/create-independent-dealer.mjs --client SLUG --repository OWNER/REPO [--preset standard|import] [--dealer-id ID] [--locale-config FILE] [--write] (locale requests are preflight-only until native template/packager releases pass review)');
+    console.log('Usage: node scripts/create-independent-dealer.mjs --client SLUG --repository OWNER/REPO [--preset standard|import] [--dealer-id ID] [--locale-config FILE] [--write] (native generation requires exact reviewed EN/BG releases for all selected designs)');
     return;
   }
   const options = args(process.argv.slice(2), ['client', 'repository', 'preset', 'dealer-id', 'locale-config'], ['write']);

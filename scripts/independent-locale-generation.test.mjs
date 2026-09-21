@@ -4,7 +4,10 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { createIndependentDealer } from './create-independent-dealer.mjs';
-import { fingerprint, POLICY } from './lib/workflow.mjs';
+import { fingerprint, POLICY, sha256 } from './lib/workflow.mjs';
+import { packageDigest } from './export-dealer.mjs';
+import { packageDealer } from './package-dealer.mjs';
+import { nativeFixture } from './test-fixtures/native-source.mjs';
 
 const locale = { schemaVersion: 1, dealerId: 'fixture-cars', defaultLocale: 'en', enabledLocales: ['en', 'bg'], dealerCountry: 'AE', inventoryCurrency: 'AED' };
 function fixture(t) {
@@ -40,7 +43,8 @@ function fixture(t) {
   const packageFixture = async ({ source, destination, guidance }) => {
     fs.cpSync(source, destination, { recursive: true });
     fs.writeFileSync(path.join(destination, 'AGENTS.md'), guidance);
-    fs.writeFileSync(path.join(destination, '.cars-package.json'), JSON.stringify({ packagingVersion: '1', payloadDigest: fingerprint(destination).digest }));
+    const payload = packageDigest(destination).files;
+    fs.writeFileSync(path.join(destination, '.cars-package.json'), JSON.stringify({ packagingVersion: '1', payloadDigest: sha256(JSON.stringify(payload)), payload }));
   };
   const run = options => createIndependentDealer({ root, client: 'fixture-cars', repository: 'darkapoparka/cars-fixture', readGit, packageSource: packageFixture, ...options });
   return { root, parent, target: path.join(parent, 'fixture-cars'), put, lock, state, readGit, packageFixture, run };
@@ -108,4 +112,48 @@ test('an independently occupied target appearing during preparation is preserved
   } }), /Existing independent dealer checkout/);
   assert.deepEqual(fs.readdirSync(f.target), ['owner.txt']);
   assert.equal(fs.readFileSync(path.join(f.target, 'owner.txt'), 'utf8'), 'other writer');
+});
+
+function useNativeTemplates(f, middle = 'modern') {
+  const native = nativeFixture(path.join(f.root, 'native-fixture'), middle, 'fixture-cars');
+  const templates = native.manifest.variants.map(({ key }) => ({ key, path: `templates/${key}`, aliases: [], homes: [{ id: 'home' }] }));
+  f.put('catalog.json', { templates }); f.lock.templates = {};
+  for (const { key } of templates) {
+    const target = path.join(f.root, 'templates', key);
+    fs.rmSync(target, { recursive: true, force: true });
+    fs.cpSync(path.join(native.source, key), target, { recursive: true });
+    f.lock.templates[key] = { ...native.releases[key], snapshotPath: `templates/${key}`, exportPolicy: POLICY };
+  }
+  f.put('templates.lock.json', f.lock);
+  return native;
+}
+for (const middle of ['modern', 'import']) test(`independent native ${middle} generation runs the real packager and retains exact source pins`, async t => {
+  const f = fixture(t), native = useNativeTemplates(f, middle), before = fingerprint(path.join(f.root, 'templates'));
+  const result = await f.run({ preset: middle === 'import' ? 'import' : 'standard', localeConfig: locale, write: true, packageSource: packageDealer });
+  assert.equal(result.localization.status, 'native-ready-needs-dealer-qa');
+  assert.equal(result.state, 'needs-personalization');
+  const manifest = JSON.parse(fs.readFileSync(path.join(f.target, 'dealer.json')));
+  assert.equal(manifest.packaging.version, '2'); assert.deepEqual(manifest.localization, locale);
+  assert.deepEqual(manifest.templateRevisions, native.manifest.templateRevisions);
+  assert.deepEqual(fingerprint(path.join(f.root, 'templates')), before);
+  assert.equal(fs.existsSync(path.join(f.root, 'clients/fixture-cars')), false);
+  assert.ok(fs.existsSync(path.join(f.target, 'localization/adoption.json')));
+  assert.ok(fs.existsSync(path.join(f.target, 'scripts/build-native-service.mjs')));
+});
+test('native independent generation rejects changed acceptance after preparation', async t => {
+  const f = fixture(t); useNativeTemplates(f);
+  await assert.rejects(f.run({ localeConfig: locale, write: true, packageSource: async options => {
+    await packageDealer(options);
+    f.lock.templates.modern.qa.nativeLocalization.checks[0].status = 'failed';
+    f.put('templates.lock.json', f.lock);
+  } }), /Template release changed/);
+  assert.equal(fs.existsSync(f.target), false);
+});
+test('native independent generation rejects a modified prepared payload', async t => {
+  const f = fixture(t); useNativeTemplates(f);
+  await assert.rejects(f.run({ localeConfig: locale, write: true, packageSource: async options => {
+    await packageDealer(options);
+    fs.appendFileSync(path.join(options.destination, 'modern/apps/web/proxy.ts'), '// competing modification\n');
+  } }), /Package payload changed/);
+  assert.equal(fs.existsSync(f.target), false);
 });

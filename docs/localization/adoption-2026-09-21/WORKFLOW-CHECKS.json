@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-21T02:05:01.347Z",
+  "workflowValidation": "passed",
+  "workflowTests": {
+    "passed": 174,
+    "failed": 0,
+    "skipped": 0
+  },
+  "portableKit": {
+    "passed": 125,
+    "failed": 0,
+    "skipped": 0
+  },
+  "concurrencyRegression": {
+    "failingBefore": 2,
+    "suiteAfter": "passed",
+    "scope": "Uncommitted/changing workflow inputs, with competing-write preservation during rollback"
+  },
+  "fixtureScope": "Isolated synthetic standard and Import trios; successful generation, refresh, sealing, idempotence, asset preservation and negative cases. Not real-template mounted-browser acceptance.",
+  "realTemplateTrioAcceptance": "blocked",
+  "templatePinsChanged": false,
+  "logs": [
+    {
+      "path": "runtime/localization-resume-20260921/workflow-final-check.log",
+      "sha256": "cb5491a5b5b0cd1a707f3c350a61161dbd977de4fb904a4a382cc37210cabdd3"
+    },
+    {
+      "path": "runtime/localization-resume-20260921/workflow-final-tests.log",
+      "sha256": "97ed9e751ecdac110fcbfb089b1d5175a9b5761d3bf1a5673849c2565382116a"
+    },
+    {
+      "path": "runtime/localization-resume-20260921/portable-kit-check.log",
+      "sha256": "13f16faf63473de65e95bf1fec812c426e90ed09c8f83ff0b94aae65a5221384"
+    },
+    {
+      "path": "runtime/localization-resume-20260921/refresh-workflow-before.log",
+      "sha256": "cbc389272d4bcf090dbf6d474149e0eb9d7eb5b3dc5730d2efa8a21df8eae7bb"
+    },
+    {
+      "path": "runtime/localization-resume-20260921/refresh-workflow-after.log",
+      "sha256": "f4b928e2bf024376704ff10b832244c1d008a56d901948cd892171ef9a3cd6e6"
+    }
+  ],
+  "omittedPrototype": "Untested additional promotion transaction prototype is outside active scripts and was not integrated."
+}

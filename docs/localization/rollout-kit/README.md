@@ -84,3 +84,9 @@ The existing pilot and these decisions were checked against SvelteKit request-lo
 - https://www.w3.org/International/questions/qa-html-dir
 
 IP-derived country is approximate and should be offered as a suggestion, never an identity or authorization signal. Explicit URL language must not be overridden by that suggestion. Arabic needs actual translations and bidi/RTL presentation acceptance, not only a registry entry or `dir` flag.
+
+## 21 September 2026 normalization correction
+
+The stored policy now rejects protocol-relative pathnames created by WHATWG dot-segment normalization, not only unsafe raw input. The candidate core, compiled mirror and exact-base patch were regenerated together. The added normalized-return regressions and the complete kit check passed **125 tests**. Earlier `evidence/final-check*` files remain historical receipts for the earlier candidate, not acceptance of this correction.
+
+Current application rollout observations live in `../adoption-2026-09-21/TEMPLATE-AUDIT.json`; native Cars packaging and its limits are documented in `../NATIVE-ADOPTION.md`. This kit is still not automatic template approval or a complete portfolio rollout. The checksum manifest includes the new regression file and updated source/candidate hashes.

@@ -75,7 +75,9 @@ export function planDealerLocale(input, manifest) {
 
 const nativeFiles = ['localization/core.ts', 'localization/contract.json', 'localization/generated-manifest.json',
   'src/lib/locale/core.ts', 'packages/internationalization/core.ts',
-  'auto-best/src/lib/locale/core.ts', 'carwow/src/lib/locale/core.ts', 'modern/packages/internationalization/core.ts'];
+  'src/lib/locale/policy.ts', 'packages/internationalization/policy.ts',
+  'auto-best/src/lib/locale/core.ts', 'carwow/src/lib/locale/core.ts', 'import/src/lib/locale/core.ts',
+  'modern/packages/internationalization/core.ts', 'modern/packages/internationalization/policy.ts'];
 
 export function nativeLocaleSources(files = new Map(), source) {
   return nativeFiles.filter(name => {

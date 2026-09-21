@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-21T01:44:23.842Z",
+  "template": "modern",
+  "localHead": "8fcb7f30960673ad8f20c5866671d410bdaf248a",
+  "localHeadUnchanged": true,
+  "handoff": {
+    "path": "J:/template-repos/cars-template-modern/docs/localization/HANDOFF.md",
+    "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+    "workingTreeStatus": ""
+  },
+  "scope": "Read-only public HTTP route-language checks, including conflicting Accept-Language. Not source/deployment binding, visual, complete catalog or security acceptance.",
+  "checks": 6,
+  "passed": 6,
+  "failed": 0,
+  "results": [
+    {
+      "requested": "https://cars-template-modern.vercel.app/en/cars",
+      "url": "https://cars-template-modern.vercel.app/en/cars",
+      "status": 200,
+      "lang": "en",
+      "title": "Cars at Day &amp; Night Auto Group | Day &amp; Night Auto Group",
+      "bodySha256": "18a5bdb653c9f744ad0e9cb9cd042d833abe2995e79d651966274f033b7e9e3b",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-modern.vercel.app/en/contact?topic=trade-in",
+      "url": "https://cars-template-modern.vercel.app/en/contact?topic=trade-in",
+      "status": 200,
+      "lang": "en",
+      "title": "About and contact | Day &amp; Night | Day &amp; Night Auto Group",
+      "bodySha256": "bf65bc24ae929bd01b8124cbe8764b7e4b0f2fa12d4096edbe6fa153d4d2abe4",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-modern.vercel.app/en/locale-settings",
+      "url": "https://cars-template-modern.vercel.app/en/locale-settings",
+      "status": 200,
+      "lang": "en",
+      "title": "Country and language",
+      "bodySha256": "46c663514b36227908852c5f3b57e112a40b6d5d896c5600a1babca5618cd0d0",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-modern.vercel.app/bg/cars",
+      "url": "https://cars-template-modern.vercel.app/bg/cars",
+      "status": 200,
+      "lang": "bg",
+      "title": "Автомобили от Day &amp; Night Auto Group | Day &amp; Night Auto Group",
+      "bodySha256": "4f87d993355b58e8186ea8e3382180bc969d836eab19e3c5ba2cd28f4b445966",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-modern.vercel.app/bg/contact?topic=trade-in",
+      "url": "https://cars-template-modern.vercel.app/bg/contact?topic=trade-in",
+      "status": 200,
+      "lang": "bg",
+      "title": "За нас и контакти | Day &amp; Night | Day &amp; Night Auto Group",
+      "bodySha256": "803f336c61d1a097589456c55bc4a653ac18683726dc69e9eaf79c586e4e461d",
+      "passed": true
+    },
+    {
+      "requested": "https://cars-template-modern.vercel.app/bg/locale-settings",
+      "url": "https://cars-template-modern.vercel.app/bg/locale-settings",
+      "status": 200,
+      "lang": "bg",
+      "title": "Държава и език",
+      "bodySha256": "64cf4bd43510bbcca2acf11137850e54ab4aa45e3576a00bf04639abf0147067",
+      "passed": true
+    }
+  ]
+}

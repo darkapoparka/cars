@@ -110,7 +110,9 @@ export function createLocaleRouting(input) {
         try {
             const url = new URL(value, origin);
             // Reject encoded path separators, controls and nested escaping, not legitimate query values.
-            if (url.origin !== origin || /%(?:2f|5c|25|0[0-9a-f]|1[0-9a-f]|7f)/i.test(url.pathname))
+            // Dot-segment normalization may expose a network-path redirect after raw-input validation.
+            if (url.origin !== origin || !url.pathname.startsWith('/') || url.pathname.startsWith('//') ||
+                /%(?:2f|5c|25|0[0-9a-f]|1[0-9a-f]|7f)/i.test(url.pathname))
                 return null;
             const decoded = decodeURIComponent(url.pathname);
             if (isResource(decoded) || unsupportedLocale(decoded))

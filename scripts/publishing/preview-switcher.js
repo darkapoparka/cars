@@ -2,7 +2,19 @@
 (() => {
   if (document.querySelector('dealer-design-switcher, excellent-design-switcher')) return;
   const config = __CARS_SWITCHER_CONFIG__;
-  const choices = config.variants;
+  const mount = config.variants.find(({ base }) => base && (location.pathname === base || location.pathname.startsWith(`${base}/`)))?.base || '';
+  if (config.localization) {
+    const requested = location.pathname.slice(mount.length).split('/')[1];
+    const documentLanguage = document.documentElement.lang;
+    const enabled = config.localization.enabledLocales;
+    config.language = enabled.includes(requested) ? requested : enabled.includes(documentLanguage) ? documentLanguage : config.localization.defaultLocale;
+    config.labels = config.localization.messages[config.language];
+  }
+  const choices = config.variants.map(choice => {
+    if (!config.localization) return choice;
+    const tail = choice.entry.slice(choice.base.length);
+    return { ...choice, entry: `${choice.base}/${config.language}${tail === '/' ? '' : tail}` };
+  });
   const index = choices.findIndex(({ base }) => base && (location.pathname === base || location.pathname.startsWith(`${base}/`)));
   const active = index < 0 ? 0 : index;
   const host = document.createElement('dealer-design-switcher');
@@ -15,6 +27,7 @@
     @media(min-width:992px){:host{right:24px;bottom:100px}}
   </style><nav id="choices" hidden><p></p></nav><button type="button" aria-expanded="false" aria-controls="choices"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M10 9v12"/></svg><span class="label" aria-hidden="true"></span><span class="count" aria-hidden="true"></span></button>`;
   host.lang = config.language;
+  if (config.localization) { host.dataset.adminLabel = config.labels.adminLabel; host.dataset.adminText = config.labels.admin; }
   if (config.accent) host.style.setProperty('--dealer-switcher-accent', config.accent);
   const button = shadow.querySelector('button');
   const panel = shadow.querySelector('nav');
@@ -77,8 +90,8 @@
   link.href = url.href;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
-  link.setAttribute('aria-label', 'Admin dashboard — demo, opens in a new tab');
-  link.append(document.createTextNode('Admin dashboard'));
+  link.setAttribute('aria-label', host.dataset.adminLabel || 'Admin dashboard — demo, opens in a new tab');
+  link.append(document.createTextNode(host.dataset.adminText || 'Admin dashboard'));
   const arrow = document.createElement('span');
   arrow.textContent = '↗';
   arrow.setAttribute('aria-hidden', 'true');

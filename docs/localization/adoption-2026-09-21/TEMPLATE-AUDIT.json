@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-21T02:03:30.043Z",
+  "scope": "Independent source/provider, read-only source checks and targeted public route/preference probes. Handoff browser counts are not inherited as coordinator acceptance.",
+  "templates": {
+    "auto-best": {
+      "repository": "darkapoparka/cars-template-auto-best",
+      "sourceCommit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+      "deployedRelease": {
+        "commit": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
+        "deploymentId": "dpl_DqnBohMvrXVkSSuZtYKf9YtST8Ud",
+        "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+        "state": "READY",
+        "publicAlias": "https://cars-template-auto-best.vercel.app/",
+        "source": "git",
+        "observedWith": "Connected GitHub main and Vercel get_deployment; not inferred from HTML"
+      },
+      "handoff": {
+        "path": "J:/template-repos/cars-template-auto-best/docs/localization/HANDOFF.md",
+        "missing": true
+      },
+      "checks": {
+        "publicRoutes": {
+          "passed": 0,
+          "failed": 6
+        },
+        "publicPreferences": {
+          "state": "not-applicable-to-unpublished-native-source"
+        },
+        "workingSource": {
+          "catalogDrift": "passed",
+          "sourceCopyAudit": "passed",
+          "limitation": "Working tree only. Not committed/deployed acceptance or proof of zero dynamic hardcoded copy."
+        }
+      },
+      "state": "blocked-unpublished-native-source",
+      "promoted": false,
+      "approval": false,
+      "templateCheckoutWritten": false,
+      "issue": null
+    },
+    "modern": {
+      "repository": "darkapoparka/cars-template-modern",
+      "sourceCommit": "8fcb7f30960673ad8f20c5866671d410bdaf248a",
+      "deployedRelease": {
+        "commit": "8fcb7f30960673ad8f20c5866671d410bdaf248a",
+        "deploymentId": "dpl_4HKFwpeafQyjAU4XvSmoDGCnkeNh",
+        "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+        "state": "READY",
+        "publicAlias": "https://cars-template-modern.vercel.app/",
+        "source": "git",
+        "observedWith": "Connected GitHub main and Vercel get_deployment; not inferred from HTML"
+      },
+      "handoff": {
+        "path": "J:/template-repos/cars-template-modern/docs/localization/HANDOFF.md",
+        "sha256": "a09768b07ae26856a8c387e52ecc0b2f027932cee5078ca3c8eec9dcea468873",
+        "workingTreeStatus": ""
+      },
+      "checks": {
+        "publicRoutes": {
+          "passed": 6,
+          "failed": 0
+        },
+        "publicPreferences": {
+          "passed": 4,
+          "failed": 12
+        },
+        "sourceContracts": {
+          "state": "passed",
+          "limitation": "Contract and declared-catalog checks; full mounted native/browser acceptance remains required."
+        }
+      },
+      "state": "blocked-normalized-return-redirect",
+      "promoted": false,
+      "approval": false,
+      "templateCheckoutWritten": false,
+      "issue": "https://github.com/darkapoparka/cars-template-modern/issues/2"
+    },
+    "import": {
+      "repository": "darkapoparka/cars-template-import",
+      "sourceCommit": "521fab0be30501c888a3617db9987d36c918e8a1",
+      "deployedRelease": {
+        "commit": "521fab0be30501c888a3617db9987d36c918e8a1",
+        "deploymentId": "dpl_Eks9aLuvTyrR6bdEBQ2k1VJAzcSV",
+        "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+        "state": "READY",
+        "publicAlias": "https://cars-template-import.vercel.app/",
+        "source": "git",
+        "observedWith": "Connected GitHub main and Vercel get_deployment; not inferred from HTML"
+      },
+      "handoff": {
+        "path": "J:/template-repos/cars-template-import/docs/localization/HANDOFF.md",
+        "sha256": "728de7395f573bda37ac18fdd540a8f684de32b8dfd036b55fd9dd610fe9521c",
+        "workingTreeStatus": ""
+      },
+      "checks": {
+        "publicRoutes": {
+          "passed": 6,
+          "failed": 0
+        },
+        "publicPreferences": {
+          "passed": 4,
+          "failed": 12
+        }
+      },
+      "state": "blocked-normalized-return-redirect",
+      "promoted": false,
+      "approval": false,
+      "templateCheckoutWritten": false,
+      "issue": "https://github.com/darkapoparka/cars-template-import/issues/1"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars-template-carwow",
+      "sourceCommit": "17422cd3a31a9251da35f72d30c3111a6641e9ec",
+      "deployedRelease": {
+        "commit": "17422cd3a31a9251da35f72d30c3111a6641e9ec",
+        "deploymentId": "dpl_2cVCV2BeNnuVKYFpZh3QNszvn3u5",
+        "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+        "state": "READY",
+        "publicAlias": "https://cars-template-carwow.vercel.app/",
+        "source": "git",
+        "observedWith": "Connected GitHub main and Vercel get_deployment; not inferred from HTML"
+      },
+      "handoff": {
+        "path": "J:/template-repos/cars-template-carwow/docs/localization/HANDOFF.md",
+        "sha256": "c8c0bc738939fac057c742d930031358b8fcf3406b1c212e799cd1f0025404b9",
+        "workingTreeStatus": ""
+      },
+      "checks": {
+        "publicRoutes": {
+          "passed": 6,
+          "failed": 0
+        },
+        "publicPreferences": {
+          "passed": 16,
+          "failed": 0
+        },
+        "workingSource": {
+          "catalogDrift": "passed",
+          "localizationGuard": "passed",
+          "policyAndCatalogTests": 109
+        }
+      },
+      "state": "targeted-checks-passed-not-promoted",
+      "promoted": false,
+      "approval": false,
+      "templateCheckoutWritten": false,
+      "issue": null,
+      "applicationCommit": "6e2bb94f85e0140846ce8c11e09b89330c3fdbf8",
+      "testedFollowupCommit": "4c5db243f07fa13831894e762203a75366e5a44d",
+      "applicationComparison": {
+        "state": "identical",
+        "command": "git diff --stat 6e2bb94f85e0140846ce8c11e09b89330c3fdbf8 17422cd3a31a9251da35f72d30c3111a6641e9ec -- src static localization svelte.config.js package.json package-lock.json",
+        "output": ""
+      },
+      "auditedLast": true
+    }
+  },
+  "receipts": [
+    {
+      "path": "auto-best-http-routes.json",
+      "sha256": "e4697c8499c8e21ce3b5589b82b49d4cad58c57424d1cc8e9111fe7feffd9dec"
+    },
+    {
+      "path": "modern-http-routes.json",
+      "sha256": "1e1a48c7f7ae894dab4de20176994ce8354ca995cc47ebb8fbffc93be4013875"
+    },
+    {
+      "path": "modern-preferences.json",
+      "sha256": "a58290e38adfdb0570027ef3918d32b701fa4ecfba85415802f0f6e1b0a119d1"
+    },
+    {
+      "path": "import-http-routes.json",
+      "sha256": "03d566a4c5972caa49c9c8d10fdc3db0bdb7ac138e57bc9f788065cdcefb045f"
+    },
+    {
+      "path": "import-preferences.json",
+      "sha256": "4b22c73038c57e8081db6f9d6f1b97a44ad8eddfb923922c892755741ba701f4"
+    },
+    {
+      "path": "carwow-http-routes.json",
+      "sha256": "e9aa95a8c09a07703bb61a503082a2b190d6ad5ba72a07c70168aa925c1c02dc"
+    },
+    {
+      "path": "carwow-preferences.json",
+      "sha256": "7eb1ba14aac48e792f6d1847b9801f743c01160add3b6a656e0356ae56145b8d"
+    }
+  ],
+  "releasePinsChanged": false,
+  "additionalLanguagesEnabled": false,
+  "realBusinessWritesPerformed": false,
+  "portfolioComplete": false,
+  "limits": [
+    "No full new real-template standard/Import trio browser acceptance.",
+    "No independent human linguistic approval.",
+    "No dealer-wide completion from these template checks."
+  ]
+}
