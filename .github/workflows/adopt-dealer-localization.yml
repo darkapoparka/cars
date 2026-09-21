@@ -48,7 +48,15 @@ jobs:
         run: |
           set -euo pipefail
           CARS="$RUNNER_TEMP/cars"
-          git clone --no-tags --filter=blob:none https://github.com/darkapoparka/cars.git "$CARS"
+          rm -rf "$CARS"
+          git clone --no-tags --filter=blob:none --no-checkout https://github.com/darkapoparka/cars.git "$CARS"
+          git -C "$CARS" sparse-checkout init --no-cone
+          cat > "$CARS/.git/info/sparse-checkout" <<'EOF'
+          /scripts/
+          /templates/
+          /docs/
+          /*.json
+          EOF
           ready=false
           for attempt in $(seq 1 40); do
             git -C "$CARS" fetch origin main
