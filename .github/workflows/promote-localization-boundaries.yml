@@ -241,7 +241,7 @@ jobs:
             if test "$(git rev-parse origin/main)" != "$(git rev-parse HEAD^)"; then
               git rebase origin/main
             fi
-            unexpected="$(git diff-tree --no-commit-id --name-only -r HEAD | grep -Ev '^(templates/(auto-best|carwow)/|templates\.lock\.json|docs/releases/localization-2026-09-21/(auto-best|carwow)-(release|boundary-review)\.json)$' || true)"
+            unexpected="$(git diff-tree --no-commit-id --name-only -r HEAD | grep -Ev '^(templates/(auto-best|carwow)/.*|templates\.lock\.json|docs/releases/localization-2026-09-21/(auto-best|carwow)-(release|boundary-review)\.json)$' || true)"
             test -z "$unexpected" || { echo "Unexpected promoted path(s): $unexpected" >&2; exit 1; }
             if git push origin HEAD:main; then
               exit 0
