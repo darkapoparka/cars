@@ -120,7 +120,13 @@ async function main() {
     fs.mkdirSync(cars, { recursive: true });
     run('git', ['init', '--quiet'], { cwd: cars });
     run('git', ['remote', 'add', 'origin', 'https://github.com/darkapoparka/cars.git'], { cwd: cars });
-    run('git', ['fetch', '--depth', '1', 'origin', carsCommit], { cwd: cars });
+    run('git', ['config', 'core.sparseCheckout', 'true'], { cwd: cars });
+    fs.mkdirSync(path.join(cars, '.git', 'info'), { recursive: true });
+    fs.writeFileSync(
+      path.join(cars, '.git', 'info', 'sparse-checkout'),
+      '/scripts/\n/templates/\n/docs/\n/*.json\n'
+    );
+    run('git', ['fetch', '--no-tags', '--filter=blob:none', '--depth', '1', 'origin', carsCommit], { cwd: cars });
     run('git', ['checkout', '--quiet', '--detach', 'FETCH_HEAD'], { cwd: cars });
     const resolvedCarsCommit = run('git', ['rev-parse', 'HEAD'], { cwd: cars, capture: true });
     if (resolvedCarsCommit !== carsCommit) fail(`resolved Cars commit differs: ${resolvedCarsCommit}`);
