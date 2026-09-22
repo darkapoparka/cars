@@ -74,13 +74,6 @@ export const DealerMobileBrandBar = ({
             src={wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark}
             width={1780}
           />
-              height={512}
-              priority
-              sizes="(max-width: 1023px) 144px, 0px"
-              src={wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark}
-              width={1780}
-            />
-          )}
         </span>
       </Link>
 

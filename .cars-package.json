@@ -53,9 +53,9 @@
       "accent": "#d71920"
     }
   },
-  "sourceCommit": "b98514210fc6b758c86562b37ce0113bab3464a4",
+  "sourceCommit": "165b456d022308425b0e83da5cf0e70895c6f6c7",
   "packagingVersion": "2",
-  "payloadDigest": "33178801a6dbbebae052c1abe3ee2cfb36f741f4b50cd297d4d34637c7471595",
+  "payloadDigest": "4c647161620d7097558e5286e2d635188fbf151b50ec2eda332022a0b1e04fa8",
   "payload": [
     {
       "path": ".gitignore",
@@ -67,7 +67,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "fd20a793f63ca232c7a4c271fb9a7862ad0a5a8bff4e70547b36618adba349d3"
+      "sha256": "b5e4a73bc87456adffc93689bbf0b1d5b87b9885656d769063fa409ecd121b64"
     },
     {
       "path": "CLIENT.md",
@@ -7087,7 +7087,7 @@
     },
     {
       "path": "localization/adoption.json",
-      "sha256": "544bad9561c48586dadb80a6c58402e6f5e9dfb99a9f692bf3f6e2e37e25c3f6"
+      "sha256": "e3ef6ad09cbf57307cb6e7de8af9d324092b0fa76087172a5ad1922962a2239e"
     },
     {
       "path": "localization/contract.json",
@@ -12059,7 +12059,7 @@
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
-      "sha256": "64ccdf6ee111588483897c07a83af33c5f8b00b13f78d60062d0d1d1ab5e4fc9"
+      "sha256": "0626352071a202a05aae94f85669d63a91815344d152509b207b8c24c934ecd1"
     },
     {
       "path": "modern/packages/marketplace-ui/components/dealer-mobile-header-icon.tsx",
