@@ -1,5 +1,5 @@
 name: Deploy corrected localized dealer fleet
-# Full production promotion requested 2026-09-22.
+# Full production promotion retriggered 2026-09-22 after project-ID inventory repair.
 
 on:
   workflow_dispatch:
