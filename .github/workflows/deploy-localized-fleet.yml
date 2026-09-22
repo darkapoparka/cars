@@ -1,4 +1,5 @@
 name: Deploy corrected localized dealer fleet
+# Full production promotion requested 2026-09-22.
 
 on:
   workflow_dispatch:
