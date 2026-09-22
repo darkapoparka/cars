@@ -10,6 +10,7 @@ const allowedServices = new Set(['auto-best', 'modern', 'import', 'carwow']);
 const shaPattern = /^[a-f0-9]{40}$/;
 const markerPath = path.join(packageRoot, '.cars-localization-bootstrap.json');
 const lockPath = path.join(packageRoot, '.cars-localization-bootstrap.lock');
+const sourceCommit = process.env.VERCEL_GIT_COMMIT_SHA || process.env.GITHUB_SHA || '';
 const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
 
@@ -38,6 +39,7 @@ function markerReady() {
     const contract = readJson(path.join(packageRoot, 'localization', 'contract.json'));
     return marker.schemaVersion === 1 &&
       marker.carsCommit === carsCommit &&
+      marker.sourceCommit === sourceCommit &&
       marker.repository === manifest.repository &&
       manifest.packaging?.version === '2' &&
       JSON.stringify([...(contract.enabledLocales || [])].sort()) === '["bg","en"]' &&
@@ -100,16 +102,17 @@ async function acquireLock() {
 async function main() {
   if (!allowedServices.has(service)) fail('usage: node scripts/vercel-localize-client.mjs SERVICE CARS_COMMIT');
   if (!shaPattern.test(carsCommit || '')) fail('Cars commit must be an exact 40-character SHA');
+  if (sourceCommit && !shaPattern.test(sourceCommit)) fail('Dealer source commit must be an exact 40-character SHA');
   const sourceManifest = readJson(path.join(packageRoot, 'dealer.json'));
   if (!sourceManifest.variants?.some(({ key }) => key === service)) fail(`service ${service} is not part of this dealer package`);
   if (markerReady()) {
-    console.log(`Native localization package already prepared from Cars ${carsCommit}.`);
+    console.log(`Native localization package already prepared from Cars ${carsCommit} and dealer ${sourceCommit || 'working tree'}.`);
     return;
   }
 
   const ownsLock = await acquireLock();
   if (!ownsLock) {
-    console.log(`Native localization package prepared by another service from Cars ${carsCommit}.`);
+    console.log(`Native localization package prepared by another service from Cars ${carsCommit} and dealer ${sourceCommit || 'working tree'}.`);
     return;
   }
 
@@ -141,7 +144,7 @@ async function main() {
       cwd: cars,
       env: {
         ...process.env,
-        GITHUB_SHA: process.env.VERCEL_GIT_COMMIT_SHA || process.env.GITHUB_SHA || ''
+        GITHUB_SHA: sourceCommit
       }
     });
 
@@ -164,13 +167,14 @@ async function main() {
     fs.writeFileSync(markerPath, `${JSON.stringify({
       schemaVersion: 1,
       carsCommit,
+      sourceCommit,
       repository: generated.repository,
       slug: generated.slug,
       enabledLocales: contract.enabledLocales,
       preparedAt: new Date().toISOString()
     }, null, 2)}\n`);
     if (!markerReady()) fail('installed package failed its post-copy validation');
-    console.log(`Prepared native EN/BG package for ${generated.slug} from Cars ${carsCommit}.`);
+    console.log(`Prepared native EN/BG package for ${generated.slug} from Cars ${carsCommit} and dealer ${sourceCommit || 'working tree'}.`);
   } finally {
     fs.rmSync(workspace, { recursive: true, force: true });
     fs.rmSync(lockPath, { recursive: true, force: true });
