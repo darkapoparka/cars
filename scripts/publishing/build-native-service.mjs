@@ -10,6 +10,8 @@ export function nativeBuildPlan(key) {
     environment: { NEXT_PUBLIC_BASE_PATH: '/variant-2' },
     steps: [
       ['npx', '--yes', '--package=node@22.23.2', '--package=pnpm@11.4.0', '-c',
+        'pnpm install --frozen-lockfile --prod=false'],
+      ['npx', '--yes', '--package=node@22.23.2', '--package=pnpm@11.4.0', '-c',
         'pnpm --filter @repo/database build && pnpm --filter web build']
     ]
   };
@@ -18,7 +20,11 @@ export function nativeBuildPlan(key) {
   return { key, root: key, base: bases[key],
     environment: key === 'import' ? { TEMPLATE_BASE_PATH: bases[key] }
       : key === 'carwow' ? { DAY_LOCALE_BASE: bases[key] } : {},
-    steps: [['npm', 'run', 'build'], ['node', '../scripts/fix-svelte-service-output.mjs', ...(bases[key] ? [bases[key]] : [])]]
+    steps: [
+      ['npm', 'ci', '--include=dev'],
+      ['npm', 'run', 'build'],
+      ['node', '../scripts/fix-svelte-service-output.mjs', ...(bases[key] ? [bases[key]] : [])]
+    ]
   };
 }
 export function runNativeBuild(key, { packageRoot = path.resolve(import.meta.dirname, '..'), run = spawnSync } = {}) {
