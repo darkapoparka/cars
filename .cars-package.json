@@ -53,9 +53,9 @@
       "accent": "#d71920"
     }
   },
-  "sourceCommit": "f63da24d645402df7b683aa60b56085bb36cbf1f",
+  "sourceCommit": "b98514210fc6b758c86562b37ce0113bab3464a4",
   "packagingVersion": "2",
-  "payloadDigest": "d6543d1b05e200298824865436748e3c76b7b6900fc7bd8e1ee2fc134450b8fe",
+  "payloadDigest": "33178801a6dbbebae052c1abe3ee2cfb36f741f4b50cd297d4d34637c7471595",
   "payload": [
     {
       "path": ".gitignore",
@@ -67,7 +67,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "2e5eb686bd1921260ce90f8f5190614bb64b512a1f0c23d136b4ed154bc2ede3"
+      "sha256": "fd20a793f63ca232c7a4c271fb9a7862ad0a5a8bff4e70547b36618adba349d3"
     },
     {
       "path": "CLIENT.md",
