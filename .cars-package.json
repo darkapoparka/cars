@@ -53,9 +53,9 @@
       "accent": "#d71920"
     }
   },
-  "sourceCommit": "165b456d022308425b0e83da5cf0e70895c6f6c7",
+  "sourceCommit": "5100bce8ed4cad5835f292bddd44af006e174b57",
   "packagingVersion": "2",
-  "payloadDigest": "4c647161620d7097558e5286e2d635188fbf151b50ec2eda332022a0b1e04fa8",
+  "payloadDigest": "6e576031613a20d0c1eada02d9b75c01f350540d80cd279f0acf882e4e2705bb",
   "payload": [
     {
       "path": ".gitignore",
@@ -67,7 +67,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "b5e4a73bc87456adffc93689bbf0b1d5b87b9885656d769063fa409ecd121b64"
+      "sha256": "5f96201ece802a5579eb0d2fd47dbef02d7aa68f3fb00ae8020f340961c9ba51"
     },
     {
       "path": "CLIENT.md",
@@ -13299,7 +13299,7 @@
     },
     {
       "path": "scripts/build-native-service.mjs",
-      "sha256": "99a3303d94ddd0dea92aee3e351a6a06e77d7e60caa28f2f235873f6c43b6d30"
+      "sha256": "30f2035e7ca097a18eaadc9e7cc3c7700318d549338e3ed5315c0de5409a0c37"
     },
     {
       "path": "scripts/fix-svelte-service-output.mjs",
