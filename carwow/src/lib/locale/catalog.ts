@@ -1828,6 +1828,8 @@ export const en = {
 	'presentation.7790b0eccb53': 'Over £50k',
 	'presentation.98af33ee2105': 'Below £30k',
 	'presentation.used': 'Used',
+	'reviews.disclosure.unverified':
+		'This independent preview does not include confirmed customer reviews.',
 	'dealer.city': 'Varna',
 	'dealer.addressLine': 'Varna Business Park, Building B6',
 	'dealer.address': 'Varna Business Park, Building B6, Varna, Bulgaria',
@@ -3682,6 +3684,8 @@ export const bg = {
 	'presentation.7790b0eccb53': 'Над 50 000 £',
 	'presentation.98af33ee2105': 'Под 30 000 £',
 	'presentation.used': 'Употребявани',
+	'reviews.disclosure.unverified':
+		'? ???? ????????? ??????? ?? ?? ???????? ?????????? ????????? ??????.',
 	'dealer.city': 'Варна',
 	'dealer.addressLine': 'Бизнес парк Варна, сграда B6',
 	'dealer.address': 'Бизнес парк Варна, сграда B6, Варна, България',
@@ -7093,6 +7097,10 @@ export const sourceKeys = {
 	'Below £30k': 'presentation.98af33ee2105',
 	'Под 30 000 £': 'presentation.98af33ee2105',
 	Used: 'presentation.used',
+	'? ???? ????????? ??????? ?? ?? ???????? ?????????? ????????? ??????.':
+		'reviews.disclosure.unverified',
+	'This independent preview does not include confirmed customer reviews.':
+		'reviews.disclosure.unverified',
 	Варна: 'dealer.city',
 	Varna: 'dealer.city',
 	'Бизнес парк Варна, сграда B6': 'dealer.addressLine',

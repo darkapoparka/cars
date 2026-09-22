@@ -34,7 +34,7 @@
     "templateRevisions": {
       "auto-best": "a5f3684483a509e556a5912a8d2c7b8ed03f9c5b",
       "modern": "e8c1bca793b6350948f0a1b44d6e50b661ac0111",
-      "carwow": "42970ab5724cb32da17e75879a2fca470629aebe"
+      "carwow": "a5e5b65bc6835baa61db9a1ecb9e07c369f8a363"
     },
     "language": "bg",
     "localization": {
@@ -53,9 +53,9 @@
       "accent": "#d71920"
     }
   },
-  "sourceCommit": "a1abdc4eab1a7da513d5ed6ebc59d417b007dd3e",
+  "sourceCommit": "f63da24d645402df7b683aa60b56085bb36cbf1f",
   "packagingVersion": "2",
-  "payloadDigest": "35d3c286087a80fa63efce2f8b9b03ee008fac46b239e338f7c3379717cbb88a",
+  "payloadDigest": "d6543d1b05e200298824865436748e3c76b7b6900fc7bd8e1ee2fc134450b8fe",
   "payload": [
     {
       "path": ".gitignore",
@@ -67,7 +67,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "3e179e5ef66a3828bde324384e8f7e6426d80982129748766cf1bf0dd122da4a"
+      "sha256": "2e5eb686bd1921260ce90f8f5190614bb64b512a1f0c23d136b4ed154bc2ede3"
     },
     {
       "path": "CLIENT.md",
@@ -1843,11 +1843,11 @@
     },
     {
       "path": "carwow/localization/generated-manifest.json",
-      "sha256": "3ac7d7c3eafa079d2eee2672f4a83c2cd98f669b39a73541750f557b55624ca3"
+      "sha256": "6c49bbdd9c1f064e0299cd93287ffaa3c16608da697ce094750b85dc012a168d"
     },
     {
       "path": "carwow/localization/template.reviewed.json",
-      "sha256": "0951d92f8a48efe5f3cc0f42f8ee72142f75803f7b4e0578e0114d9d86c42be5"
+      "sha256": "de070ecca8c70eccf6904a4e887198f6e933398bb7f3e87ad284e248dcd8acec"
     },
     {
       "path": "carwow/package-lock.json",
@@ -3131,7 +3131,7 @@
     },
     {
       "path": "carwow/src/lib/data/daynight-reviews.ts",
-      "sha256": "d7c27acb11feb57dcda16fa738c8f2aacaa1878358e2e11da0d85eeb6da41642"
+      "sha256": "a3ceddb2784078bcb8dbd075c745ccdcac181fcda124cd535961ca724585e7ac"
     },
     {
       "path": "carwow/src/lib/data/daynight-site.ts",
@@ -3187,7 +3187,7 @@
     },
     {
       "path": "carwow/src/lib/locale/catalog.ts",
-      "sha256": "0333e7cbbfab812d05f48b1385e5d99ac52e7a2f09dc186e7d9d8752e2b888c0"
+      "sha256": "878283ccdb4c5f58d9f3f378758f7e7851711ca56d8455068939b1beb721b819"
     },
     {
       "path": "carwow/src/lib/locale/config.ts",
@@ -3211,7 +3211,7 @@
     },
     {
       "path": "carwow/src/lib/locale/locale.test.ts",
-      "sha256": "b7dd94d8042ded272468819c60724f8480236b0f811ee47d5dace5ff84421f4e"
+      "sha256": "f3ddee84975ae6cd0c78d6073302d91231bf677eb7a85708d5d8bd6ba6632da8"
     },
     {
       "path": "carwow/src/lib/locale/messages.ts",
@@ -7083,11 +7083,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "8852fc5c60212ab188b757dbdadf67c97d197360a1b52786f266d855b75b3ba9"
+      "sha256": "294d8de57bfc22cecf93193e0d4fda8733b76b8099d558b005764875ce3c5010"
     },
     {
       "path": "localization/adoption.json",
-      "sha256": "251acbd8b6f0d397b141be1eabdecfe4c78b6adb47e1925c721d6d1535b2afc8"
+      "sha256": "544bad9561c48586dadb80a6c58402e6f5e9dfb99a9f692bf3f6e2e37e25c3f6"
     },
     {
       "path": "localization/contract.json",
