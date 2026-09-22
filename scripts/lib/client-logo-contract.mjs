@@ -29,6 +29,19 @@ export function loadLogoContract(client) {
   return contract;
 }
 
+export function stripModernAlternateWordmark(text) {
+  const marker = '{wordmarkTone === "original" ? null : (';
+  if (!text.includes(marker)) return text;
+  const next = text.replace(
+    /\r?\n\s*\{wordmarkTone === "original" \? null : \([\s\S]*?\r?\n\s*\)\}(?=\r?\n\s*<\/span>)/,
+    ''
+  );
+  if (next === text || next.includes(marker)) {
+    throw new Error('Could not remove the complete Modern alternate wordmark expression');
+  }
+  return next;
+}
+
 export function applyDealerLogoContract({ key, oldVariant, candidate, profile }) {
   const contract = profile.logoContract ?? loadLogoContract(path.dirname(oldVariant));
   if (!contract) return [];
@@ -74,7 +87,7 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
       const clippedPrimary = /src=\{leadSite\.logoPath\}(?:\s*style=\{[\s\S]*?\r?\n\s*\})?/;
       if (clippedPrimary.test(text)) text = text.replace(clippedPrimary, 'src={' + source + '}');
       else if (!text.includes('src={' + source + '}')) throw Error('Missing Modern mobile logo source');
-      text = text.replace(/\r?\n\s*\{wordmarkTone === "original" \? null : \([\s\S]*?\r?\n\s*\)\}/, '');
+      text = stripModernAlternateWordmark(text);
       if (/clipPath|brightness-0|\binvert\b/.test(text)) throw Error('Obsolete clipped Modern mobile logo survived');
       return text;
     });
