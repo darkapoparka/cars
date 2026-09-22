@@ -1,0 +1,145 @@
+name: Promote localized dealer package
+
+on:
+  workflow_call:
+    inputs:
+      dealer_slug:
+        required: true
+        type: string
+      dealer_repository:
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promote-localized-${{ inputs.dealer_slug }}
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      DEALER_SLUG: ${{ inputs.dealer_slug }}
+      DEALER_REPOSITORY: ${{ inputs.dealer_repository }}
+      CARS_COMMIT: 4b43d7f15cf89868312b2ab9562a4abc5e043ab7
+    steps:
+      - name: Check out registered dealer repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Capture immutable dealer source
+        shell: bash
+        run: echo "SOURCE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+
+      - name: Check out exact reviewed Cars release
+        shell: bash
+        run: |
+          set -euo pipefail
+          CARS="$RUNNER_TEMP/cars-release"
+          rm -rf "$CARS"
+          git init "$CARS"
+          git -C "$CARS" remote add origin https://github.com/darkapoparka/cars.git
+          git -C "$CARS" config core.sparseCheckout true
+          printf '%s\n' \
+            '/package.json' \
+            '/templates.lock.json' \
+            '/scripts/' \
+            '/templates/' \
+            '/docs/' \
+            "/clients/$DEALER_SLUG/" \
+            > "$CARS/.git/info/sparse-checkout"
+          git -C "$CARS" fetch --no-tags --filter=blob:none --depth=1 origin "$CARS_COMMIT"
+          git -C "$CARS" checkout --detach FETCH_HEAD
+          test "$(git -C "$CARS" rev-parse HEAD)" = "$CARS_COMMIT"
+          test -s "$CARS/clients/$DEALER_SLUG/dealer.json"
+
+      - name: Generate sealed native EN/BG package
+        shell: bash
+        run: |
+          set -euo pipefail
+          CARS="$RUNNER_TEMP/cars-release"
+          rm -rf "$RUNNER_TEMP/localized"
+          node "$CARS/scripts/rollout-localized-client.mjs" \
+            --client-root "$CARS/clients/$DEALER_SLUG" \
+            --slug "$DEALER_SLUG" \
+            --repository "$DEALER_REPOSITORY" \
+            --output "$RUNNER_TEMP/localized" \
+            | tee "$RUNNER_TEMP/localization-rollout-report.json"
+
+      - name: Validate identity, locale contract and reviewed release pins
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="$RUNNER_TEMP/localized" CARS="$RUNNER_TEMP/cars-release" node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const root = process.env.ROOT;
+          const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dealer.json'), 'utf8'));
+          const contract = JSON.parse(fs.readFileSync(path.join(root, 'localization/contract.json'), 'utf8'));
+          const adoption = JSON.parse(fs.readFileSync(path.join(root, 'localization/adoption.json'), 'utf8'));
+          const lock = JSON.parse(fs.readFileSync(path.join(process.env.CARS, 'templates.lock.json'), 'utf8'));
+          if (manifest.slug !== process.env.DEALER_SLUG) throw new Error(`Dealer slug changed: ${manifest.slug}`);
+          if (manifest.repository !== process.env.DEALER_REPOSITORY) throw new Error(`Dealer repository changed: ${manifest.repository}`);
+          if (manifest.packaging?.version !== '2') throw new Error('Expected packaging version 2');
+          if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Expected complete EN/BG locale contract');
+          if (adoption.packagingVersion !== '2' || adoption.dealerId !== contract.dealerId) throw new Error('Invalid localization adoption seal');
+          for (const variant of manifest.variants) {
+            const release = lock.templates?.[variant.key];
+            if (!release?.commit || release.qa?.nativeLocalization?.commit !== release.commit) {
+              throw new Error(`Unreviewed localization release: ${variant.key}`);
+            }
+            if (manifest.templateRevisions?.[variant.key] !== release.commit) throw new Error(`Manifest release mismatch: ${variant.key}`);
+            if (adoption.releases?.[variant.key]?.commit !== release.commit) throw new Error(`Adoption release mismatch: ${variant.key}`);
+          }
+          const reviews = path.join(root, 'carwow/src/lib/data/daynight-reviews.ts');
+          if (fs.existsSync(reviews)) {
+            const source = fs.readFileSync(reviews, 'utf8');
+            if (source.includes('No verified customer reviews are included in this independent preview.')) {
+              throw new Error('Carwow review disclosure bypasses the locale catalog');
+            }
+          }
+          NODE
+
+      - name: Publish guarded dealer source update
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$SOURCE_SHA" || { echo 'Dealer main changed during generation' >&2; exit 1; }
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            "$RUNNER_TEMP/localized/" "$GITHUB_WORKSPACE/"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'Dealer already matches the reviewed localized package.'
+            exit 0
+          fi
+          git commit -m 'Promote current native EN/BG localization' -m "Cars source: $CARS_COMMIT"
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$SOURCE_SHA" || { echo 'Dealer main changed before publication' >&2; exit 1; }
+          git push origin HEAD:main
+
+      - name: Upload promotion evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: localization-promotion-${{ inputs.dealer_slug }}
+          path: |
+            ${{ runner.temp }}/localization-rollout-report.json
+            ${{ runner.temp }}/localized/dealer.json
+            ${{ runner.temp }}/localized/localization/contract.json
+            ${{ runner.temp }}/localized/localization/adoption.json
+          if-no-files-found: warn
+          retention-days: 14
