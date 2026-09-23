@@ -203,7 +203,10 @@ test('Modern refresh preserves the approved hero while retaining stable fixture 
   assert.match(leadSite, /name: "Навара кар"/);
   assert.match(leadSite, /heroPath: "\/lead-hero\.jpg"/);
   const mobileBrand = fs.readFileSync(path.join(root, 'packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx'), 'utf8');
-  assert.match(mobileBrand, /src=\{wordmarkTone === "light" \? leadSite\.logoOnDark : wordmarkTone === "dark" \|\| light \? leadSite\.logoOnLight : leadSite\.logoOnDark\}/);
+  assert.match(mobileBrand, /const useOnLight = wordmarkTone === "dark" \|\| \(wordmarkTone === "original" && light\);/);
+  assert.match(mobileBrand, /const logoSource = useOnLight \? leadSite\.logoOnLight : leadSite\.logoOnDark;/);
+  assert.match(mobileBrand, /src=\{logoSource\}/);
+  assert.doesNotMatch(mobileBrand, /src=\{wordmarkTone ===/);
   assert.doesNotMatch(mobileBrand, /clipPath|brightness-0|\binvert\b/);
   const masthead = fs.readFileSync(path.join(root, 'packages/marketplace-ui/components/marketplace-masthead.tsx'), 'utf8');
   assert.doesNotMatch(masthead, /Студентски град|Studentski grad/);
