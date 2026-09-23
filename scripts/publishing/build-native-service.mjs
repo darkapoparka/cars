@@ -17,11 +17,15 @@ export function nativeBuildPlan(key) {
   };
   const bases = { 'auto-best': '', import: '/variant-2', carwow: '/variant-3' };
   if (!Object.hasOwn(bases, key)) throw new Error('Unknown native build service');
+  const generatedLocaleStep = ['auto-best', 'carwow'].includes(key)
+    ? [['node', 'scripts/build-locales.mjs']]
+    : [];
   return { key, root: key, base: bases[key],
     environment: key === 'import' ? { TEMPLATE_BASE_PATH: bases[key] }
       : key === 'carwow' ? { DAY_LOCALE_BASE: bases[key] } : {},
     steps: [
       ['npm', 'ci', '--include=dev'],
+      ...generatedLocaleStep,
       ['npm', 'run', 'build'],
       ['node', '../scripts/fix-svelte-service-output.mjs', ...(bases[key] ? [bases[key]] : [])]
     ]

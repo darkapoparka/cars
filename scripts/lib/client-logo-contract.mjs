@@ -85,8 +85,19 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
       const source = 'wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark';
       text = text.replace(/,\r?\n\s*light && "h-10 bg-black px-2\.5"/, '');
       const clippedPrimary = /src=\{leadSite\.logoPath\}(?:\s*style=\{[\s\S]*?\r?\n\s*\})?/;
-      if (clippedPrimary.test(text)) text = text.replace(clippedPrimary, 'src={' + source + '}');
-      else if (!text.includes('src={' + source + '}')) throw Error('Missing Modern mobile logo source');
+      if (clippedPrimary.test(text)) text = text.replace(clippedPrimary, 'src={logoSource}');
+      else if (text.includes('src={' + source + '}')) text = text.replace('src={' + source + '}', 'src={logoSource}');
+      else if (!text.includes('src={logoSource}')) throw Error('Missing Modern mobile logo source');
+      const useOnLightDeclaration = '  const useOnLight = wordmarkTone === "dark" || (wordmarkTone === "original" && light);';
+      const logoSourceDeclaration = '  const logoSource = useOnLight ? leadSite.logoOnLight : leadSite.logoOnDark;';
+      const hasUseOnLightDeclaration = text.includes(useOnLightDeclaration);
+      const hasLogoSourceDeclaration = text.includes(logoSourceDeclaration);
+      if (hasUseOnLightDeclaration !== hasLogoSourceDeclaration) throw Error('Incomplete Modern mobile logo declarations');
+      if (!hasLogoSourceDeclaration) {
+        const anchor = '  const clean = tone === "clean";';
+        if (!text.includes(anchor)) throw Error('Missing Modern mobile logo declaration anchor');
+        text = text.replace(anchor, `${anchor}\n${useOnLightDeclaration}\n${logoSourceDeclaration}`);
+      }
       text = stripModernAlternateWordmark(text);
       if (/clipPath|brightness-0|\binvert\b/.test(text)) throw Error('Obsolete clipped Modern mobile logo survived');
       return text;

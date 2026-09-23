@@ -122,6 +122,20 @@ test('native build plan uses each framework mount and propagates a build failure
   assert.deepEqual(nativeBuildPlan('modern').environment, { NEXT_PUBLIC_BASE_PATH: '/variant-2' });
   assert.deepEqual(nativeBuildPlan('import').environment, { TEMPLATE_BASE_PATH: '/variant-2' });
   assert.deepEqual(nativeBuildPlan('carwow').environment, { DAY_LOCALE_BASE: '/variant-3' });
+  assert.deepEqual(nativeBuildPlan('auto-best').steps.slice(0, 3), [
+    ['npm', 'ci', '--include=dev'],
+    ['node', 'scripts/build-locales.mjs'],
+    ['npm', 'run', 'build']
+  ]);
+  assert.deepEqual(nativeBuildPlan('carwow').steps.slice(0, 3), [
+    ['npm', 'ci', '--include=dev'],
+    ['node', 'scripts/build-locales.mjs'],
+    ['npm', 'run', 'build']
+  ]);
+  assert.deepEqual(nativeBuildPlan('import').steps.slice(0, 2), [
+    ['npm', 'ci', '--include=dev'],
+    ['npm', 'run', 'build']
+  ]);
   assert.throws(() => nativeBuildPlan('modern && publish'), /Unknown/);
   runNativeBuild('modern', { packageRoot: f.source, run: (...args) => { calls.push(args); return { status: 0 }; } });
   assert.equal(calls[0][2].env.NEXT_PUBLIC_BASE_PATH, '/variant-2');
