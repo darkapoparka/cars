@@ -425,6 +425,11 @@ function patchAutoBestIdentity(candidate) {
 function patchAutoBestLocale(candidate, profile) {
   const b = profile.business;
   const copy = dealerLocalizedCopy(profile);
+  const dealerTextFields = ['city', 'addressLine', 'address', 'appointment'];
+  const dealerText = Object.fromEntries(['en', 'bg'].map((locale) => [
+    locale,
+    Object.fromEntries(dealerTextFields.map((field) => [field, copy[locale][field]]))
+  ]));
   const catalogFile = updateDealerCatalog(candidate, {
     'dealer.city': { source: b.city, en: copy.en.city, bg: copy.bg.city, disposition: 'translate', notes: 'Dealer-owned city copy generated from the reviewed Cars dealer profile.' },
     'dealer.addressLine': { source: b.addressLine || b.address, en: copy.en.addressLine, bg: copy.bg.addressLine, disposition: 'translate', notes: 'Dealer-owned address line; physical location and destination remain unchanged.' },
@@ -432,7 +437,12 @@ function patchAutoBestLocale(candidate, profile) {
     'dealer.appointment': { source: b.hours, en: copy.en.appointment, bg: copy.bg.appointment, disposition: 'translate', notes: 'Dealer-owned appointment and opening-hours guidance.' }
   });
   const file = path.join(candidate, 'src/lib/config/locale.ts');
-  write(file, patchNativeLocaleConfiguration(read(file), profile));
+  const configured = patchNativeLocaleConfiguration(read(file), profile);
+  write(file, replaceExportConstBlock(
+    configured,
+    'dealerLocalizedText',
+    `export const dealerLocalizedText = ${JSON.stringify(dealerText, null, 2)} as const;`
+  ));
   return ['src/lib/config/locale.ts', catalogFile];
 }
 function patchAutoBest({ oldVariant, candidate, profile }) {

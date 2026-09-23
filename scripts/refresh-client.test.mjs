@@ -158,6 +158,13 @@ test('Auto Best refresh keeps approved hero artwork and restores Navara dealer d
   assert.match(autoBestInventory, /"body": "SUV"/);
   const autoBestBrand = fs.readFileSync(path.join(root, 'src/lib/config/brand.ts'), 'utf8');
   assert.match(autoBestBrand, /Посещения с предварителна уговорка/);
+  const autoBestLocale = fs.readFileSync(path.join(root, 'src/lib/config/locale.ts'), 'utf8');
+  assert.match(autoBestLocale, /"city": "Varna"/,
+    'English dealer-facing copy must use the client profile instead of Auto Best sample defaults');
+  assert.match(autoBestLocale, /"city": "Варна"/,
+    'Bulgarian dealer-facing copy must retain the reviewed native city name');
+  assert.doesNotMatch(autoBestLocale, /city:\s*'Sofia'/,
+    'a refreshed Varna client must not retain the Auto Best sample English fallback');
   assert.equal(
     hash(path.join(root, 'src/lib/components/home/Hero.svelte')),
     hash(path.join(template, 'src/lib/components/home/Hero.svelte')),
