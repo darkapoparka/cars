@@ -2,7 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { packageDealer, validatePackagingManifest } from '../package-dealer.mjs';
 import { verifyPackage } from '../export-dealer.mjs';
-import { verifyTemplate } from '../template-release.mjs';
+import { verifyTemplate, selectedTemplateSource } from '../template-release.mjs';
+import { materializeTemplateSource } from './template-source.mjs';
 import { ROOT, git, inside, json, writeJson, filesAt, sha256, normalized, fingerprint } from './workflow.mjs';
 import { normalizeDealerLocale } from './dealer-locale.mjs';
 import { nativePath, nativeReleaseReadiness, auditNativeCatalogs } from './native-localization.mjs';
@@ -76,21 +77,29 @@ export async function planNativeClientRefresh({ root = ROOT, slug, localeConfig,
   manifest.packaging = { ...manifest.packaging, version: '2' };
   manifest.language = manifest.localization.defaultLocale;
   manifest.templateRevisions = {};
-  for (const { key } of manifest.variants) { releases[key] = verifyTemplate(root, key); manifest.templateRevisions[key] = releases[key].commit; }
+  manifest.templateSources = {};
+  const sourceRefs = {};
+  for (const { key } of manifest.variants) {
+    releases[key] = verifyTemplate(root, key);
+    sourceRefs[key] = selectedTemplateSource(releases[key]);
+    manifest.templateRevisions[key] = sourceRefs[key].revision;
+    manifest.templateSources[key] = sourceRefs[key];
+  }
   validatePackagingManifest(manifest);
   const readiness = nativeReleaseReadiness(manifest.variants, releases);
   if (!readiness.ready) throw new Error(readiness.blockers.join('\n'));
   const overlayPath = inside(client, overlayFile || 'localization/dealer-overlay.json', { mustExist: true });
   const overlayBytes = fs.readFileSync(overlayPath), overlay = JSON.parse(overlayBytes);
+  const parent = inside(root, `runtime/client-refresh/${slug}`); fs.mkdirSync(parent, { recursive: true });
+  const runDir = fs.mkdtempSync(path.join(parent, 'native-'));
   const files = new Map([...prior].filter(([name]) => !manifest.variants.some(v => name.startsWith(v.key + '/'))));
   for (const { key } of manifest.variants) {
-    const directory = inside(root, releases[key].snapshotPath, { mustExist: true });
+    const directory = path.join(runDir, 'templates', key);
+    await materializeTemplateSource({ root, key, release: releases[key], source: sourceRefs[key], destination: directory });
     for (const item of fingerprint(directory).files) files.set(`${key}/${item.path}`, fs.readFileSync(path.join(directory, item.path)));
   }
   applyOverlay({ files, prior, overlay, manifest, releases, client });
   files.set('dealer.json', Buffer.from(JSON.stringify(manifest, null, 2) + '\n'));
-  const parent = inside(root, `runtime/client-refresh/${slug}`); fs.mkdirSync(parent, { recursive: true });
-  const runDir = fs.mkdtempSync(path.join(parent, 'native-'));
   const seed = path.join(runDir, 'source'), candidate = path.join(runDir, 'candidate');
   writeMap(seed, files);
   await packageDealer({ source: seed, destination: candidate, manifest, sourceCommit: workflowCommit, nativeReleases: releases,

@@ -12,11 +12,11 @@ A source repository, a local folder, a Vercel project and a deployment are diffe
 
 ## Source ownership and folder contract
 
-Use the six paths in [WORKSPACE](WORKSPACE.md) and workspace.json. Cars owns client manifests, approved snapshots, public research and publishing. Each standalone template remains its editable master. Cars Admin remains separate. Agency OS stays private.
+Use the paths in [WORKSPACE](WORKSPACE.md) and workspace.json. Cars owns four editable template masters, exact release selections, client manifests, public research and publishing. Former standalone folders are retained recovery/history holdings. Cars Admin remains separate. Agency OS stays private.
 
 New work uses the existing main checkout, never another session clone or a branch per dealer. Generated packages, scratch scripts and captures go in ignored runtime. A retained recovery copy is not an editable master. Preserve unique drafts before removing any old folder. Do not relocate running template repositories.
 
-The existing clone-to-dealer workflow is supported now: approved template snapshot, factual dealer adaptation, scoped source commit, reviewed publishing export, one Git-triggered release, hosted verification. Shared hosting is not required to make that workflow reliable.
+The existing clone-to-dealer workflow is supported now: approved immutable template source, factual dealer adaptation, scoped source commit, reviewed publishing export, one Git-triggered release, hosted verification. Shared hosting is not required to make that workflow reliable.
 
 ## Reusable content contract
 

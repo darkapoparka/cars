@@ -44,11 +44,27 @@ export function gitFiles(repo,commit,{prefix='',filter=relative=>!excluded(relat
  const raw=git(repo,['ls-tree','-r','-z',commit,...(prefix?['--',prefix]:[])],{encoding:null}).toString('utf8');
  return raw.split('\0').filter(Boolean).map(line=>{const[meta,p]=line.split('\t'),[mode,type,blob]=meta.split(' ');return{mode,type,blob,path:prefix?p.slice(prefix.replace(/\/$/,'').length+1):p};}).filter(f=>filter(f.path)).map(f=>{if(f.type!=='blob'||!['100644','100755'].includes(f.mode))throw new Error(`Unsupported tracked link/submodule: ${f.path}`);return f;});
 }
-export function exportCommit(repo,commit,destination,{prefix=''}={}){
+function readGitBlobs(repo,files,visit){
+ for(let i=0;i<files.length;i+=48){
+  const batch=files.slice(i,i+48),bytes=git(repo,['cat-file','--batch'],{input:batch.map(f=>f.blob).join('\n')+'\n',encoding:null});
+  let offset=0;
+  for(const f of batch){
+   const end=bytes.indexOf(10,offset),header=bytes.subarray(offset,end).toString(),size=Number(header.split(' ')[2]);
+   if(end<0||!Number.isFinite(size))throw new Error(`Cannot read ${f.path}`);
+   const content=bytes.subarray(end+1,end+1+size);offset=end+size+2;visit(f,content);
+  }
+ }
+}
+export function fingerprintCommit(repo,commit,{prefix='',filter=relative=>!excluded(relative)}={}){
+ const fingerprints=[];
+ readGitBlobs(repo,gitFiles(repo,commit,{prefix,filter}),(file,content)=>fingerprints.push({path:file.path,sha256:sha256(normalized(content))}));
+ return{digest:sha256(JSON.stringify(fingerprints)),files:fingerprints};
+}
+export function exportCommit(repo,commit,destination,{prefix='',filter=relative=>!excluded(relative)}={}) {
  if(fs.existsSync(destination))throw new Error(`Destination already exists: ${destination}`);
- const files=gitFiles(repo,commit,{prefix});fs.mkdirSync(destination,{recursive:true});
- for(let i=0;i<files.length;i+=48){const batch=files.slice(i,i+48),bytes=git(repo,['cat-file','--batch'],{input:batch.map(f=>f.blob).join('\n')+'\n',encoding:null});let offset=0;for(const f of batch){const end=bytes.indexOf(10,offset),header=bytes.subarray(offset,end).toString(),size=Number(header.split(' ')[2]);if(!Number.isFinite(size))throw new Error(`Cannot read ${f.path}`);const content=bytes.subarray(end+1,end+1+size);offset=end+size+2;const target=inside(destination,f.path);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,content);if(f.mode==='100755'&&process.platform!=='win32')fs.chmodSync(target,0o755);}}
- return fingerprint(destination);
+ const files=gitFiles(repo,commit,{prefix,filter});fs.mkdirSync(destination,{recursive:true});
+ readGitBlobs(repo,files,(file,content)=>{const target=inside(destination,file.path);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,content);if(file.mode==='100755'&&process.platform!=='win32')fs.chmodSync(target,0o755);});
+ return fingerprint(destination,{filter});
 }
 export function validateManifest(m,{allowLegacyPublishingReference=false}={}){
  if(m.schemaVersion!==1||!/^[a-z0-9][a-z0-9-]{0,63}$/.test(m.slug||''))throw new Error('Invalid dealer manifest identity.');

@@ -3,7 +3,8 @@ import os from 'node:os';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import { copySource } from './copy-source.mjs';
-import { verifyTemplate } from './template-release.mjs';
+import { verifyTemplate, selectedTemplateSource } from './template-release.mjs';
+import { materializeTemplateSource } from './lib/template-source.mjs';
 import { packageDealer } from './package-dealer.mjs';
 import { verifyPackage } from './export-dealer.mjs';
 import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
@@ -12,7 +13,7 @@ import { assertTemplatePresentation } from './lib/client-refresh-presentation.mj
 import { applyDealerLogoContract } from './lib/client-logo-contract.mjs';
 import { copyDealerDirectories, copyReferencedAssets } from './refresh-client.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
-import { ROOT, args, git, json, validateManifest, writeJson, sha256, fingerprint } from './lib/workflow.mjs';
+import { ROOT, POLICY, args, git, json, validateManifest, writeJson, sha256, fingerprint } from './lib/workflow.mjs';
 
 const exists = (file) => fs.existsSync(file);
 const skip = new Set(['.git', 'node_modules', '.vercel', '.next', '.svelte-kit', '.turbo', 'build', 'dist', 'runtime', 'coverage', 'test-results', 'playwright-report']);
@@ -147,12 +148,15 @@ function normalizeManifest(oldManifest, profile, releases, slug, repository) {
     language: defaultLocale,
     accent: /^#[0-9a-f]{6}$/i.test(profile.business.accent || '') ? profile.business.accent : (manifest.switcher?.accent || '#2563eb')
   };
-  manifest.templateRevisions = Object.fromEntries(manifest.variants.map(({ key }) => [key, releases[key].commit]));
+  manifest.templateRevisions = Object.fromEntries(manifest.variants.map(({ key }) => [key, selectedTemplateSource(releases[key]).revision]));
+  manifest.templateSources = Object.fromEntries(manifest.variants.map(({ key }) => [key, selectedTemplateSource(releases[key])]));
   return validateManifest(manifest, { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });
 }
 
 async function build({ clientRoot, slug, output, repository }) {
   const source = fs.realpathSync(clientRoot);
+  const destination = path.resolve(output);
+  if (exists(destination)) throw new Error(`Rollout output already exists; use a new package directory: ${destination}`);
   const dealerFile = path.join(source, 'dealer.json');
   if (!exists(dealerFile)) throw new Error(`Missing dealer manifest: ${dealerFile}`);
   const oldManifest = validateManifest(json(dealerFile), { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });
@@ -166,7 +170,6 @@ async function build({ clientRoot, slug, output, repository }) {
   const carsCommit = required(git(ROOT, ['rev-parse', 'HEAD']), 'Cars source commit', /^[a-f0-9]{40}$/);
   const area = fs.mkdtempSync(path.join(os.tmpdir(), `cars-localization-${slug}-`));
   const seed = path.join(area, 'source');
-  const destination = path.resolve(output);
   fs.mkdirSync(seed, { recursive: true });
 
   try {
@@ -175,9 +178,11 @@ async function build({ clientRoot, slug, output, repository }) {
       const key = variant.key;
       const oldVariant = path.join(source, key);
       if (!exists(oldVariant)) throw new Error(`${slug}: missing existing ${key} source`);
-      const snapshot = path.join(ROOT, releases[key].snapshotPath);
+      const sourceRef = selectedTemplateSource(releases[key]);
+      const snapshot = path.join(area, 'templates', key);
+      await materializeTemplateSource({ root: ROOT, key, release: releases[key], source: sourceRef, destination: snapshot });
       const candidate = path.join(seed, key);
-      await copySource(snapshot, candidate, { key });
+      await copySource(snapshot, candidate, { key, exportPolicy: POLICY });
       const changed = applyRefreshAdapter({ key, oldVariant, candidate, profile });
       changed.push(...copyDealerDirectories(oldVariant, candidate, key, slug));
       changed.push(...copyReferencedAssets(oldVariant, candidate, key, changed));
@@ -186,7 +191,7 @@ async function build({ clientRoot, slug, output, repository }) {
       assertTemplatePresentation({ key, template: snapshot, candidate, profile });
       variants.push({
         key,
-        commit: releases[key].commit,
+        source: sourceRef,
         digest: releases[key].digest,
         changed: [...new Set(changed)].sort()
       });
@@ -203,7 +208,6 @@ async function build({ clientRoot, slug, output, repository }) {
     }
     writeJson(path.join(seed, 'dealer.json'), manifest);
 
-    fs.rmSync(destination, { recursive: true, force: true });
     await packageDealer({
       source: seed,
       destination,

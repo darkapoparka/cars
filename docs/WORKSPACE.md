@@ -2,22 +2,24 @@
 
 This is the active folder/repository map. Historical handoffs record what was true on their date; they do not override current verified delivery records.
 
-## Open one workspace, keep six repositories
+## One template home in Cars
 
-Open **Cars.code-workspace** from the Cars root. It groups all six projects without copying source, moving running applications, creating worktrees, changing branches, or changing global editor settings. workspace.json is the machine-readable map.
+Open **Cars.code-workspace**. Cars contains all four editable masters and canonical dealer sources. Cars Admin is the separate shared public demo. workspace.json is the machine-readable map.
 
-| Role | Canonical Windows path | Repository |
+| Role | Canonical path | Repository |
 | --- | --- | --- |
-| Dealer source, release snapshots, packaging, public lead research | J:/cars | darkapoparka/cars |
-| Auto Best master | J:/template-repos/cars-template-auto-best | darkapoparka/cars-template-auto-best |
-| Modern master | J:/template-repos/cars-template-modern | darkapoparka/cars-template-modern |
-| Carwow master | J:/template-repos/cars-template-carwow | darkapoparka/cars-template-carwow |
-| Import master | J:/template-repos/cars-template-import | darkapoparka/cars-template-import |
-| Shared client-facing admin demonstration | J:/cars-admin | darkapoparka/cars-admin |
+| Templates, dealer source, tools and public lead research | J:/cars | darkapoparka/cars |
+| Auto Best master | J:/cars/templates/auto-best | darkapoparka/cars |
+| Modern master | J:/cars/templates/modern | darkapoparka/cars |
+| Carwow master | J:/cars/templates/carwow | darkapoparka/cars |
+| Import master | J:/cars/templates/import | darkapoparka/cars |
+| Shared public admin demo | J:/cars-admin | darkapoparka/cars-admin |
 
-The four template masters already share one physical folder. Keep that location rather than rename it while dev servers and other agents use it. Cars/templates contains managed, pinned release snapshots, not four more editable template repositories. Cars/clients contains canonical personalized sources. Dealer publishing repositories are derived deployment outputs, not additional competing masters.
+The September 24 consolidation moved active template ownership into Cars. The four existing template Vercel projects use Cars main and their respective templates/ roots. Former standalone folders under J:/template-repos are recovery/history holdings. Preserve unique files before any separately reviewed cleanup; do not develop templates there.
 
-Review/build/transfer folders under C:/Users/radev are not automatically source-of-truth checkouts. New scratch files, browser captures, exported packages and deployment responses belong under the owning repository's ignored runtime directory. The [dated folder inventory](workspace/2026-09-19/FOLDERS.json) records the observed paths and preservation status. Existing scratch folders may contain unique work. Do not bulk-delete or relocate them, or classify them as disposable solely by their name.
+Existing clients/<slug>/ folders remain canonical dealer source. Dedicated dealer repositories publish derived packages. An explicitly registered independent dealer keeps its own canonical repository. Follow that recorded ownership instead of making a second editable copy.
+
+**runtime/** holds generated packages, review candidates, logs and screenshots. Routine frontend edits and previews use templates/<key>. Identify candidate previews by their actual source path and stop them when their review finishes. Never treat an old runtime server as the current master. No folder is safe to delete merely because its name contains runtime, backup or old.
 
 ## Main-only, without overwriting another writer
 
@@ -25,9 +27,9 @@ Before writing or publishing, run the existing Git status checks and:
 
     node scripts/workspace-doctor.mjs --fetch
 
-The doctor verifies the six repository identities, main branches, changed entries and ahead/behind counts. Without --fetch it only reports cached tracking refs; it does not establish current remote state. --check provides a nonzero exit for a workspace with issues. It never pulls, resets, cleans, stashes, stages, stops processes or moves files. A failed fetch retains the local findings and is explicitly marked as cached, not freshly verified. On Windows, when the only configured helper is the first-run helper-selector, a fetch selects the existing Git Credential Manager for that command only. Global/repository settings, custom helpers and Git hooks are not changed; missing credentials remain a reported error, not an interactive login.
+The doctor verifies the Cars/Admin repository identities and four in-Cars template paths, main branches, changed entries and ahead/behind counts. Without --fetch it only reports cached tracking refs; it does not establish current remote state. --check provides a nonzero exit for a workspace with issues. It never pulls, resets, cleans, stashes, stages, stops processes or moves files. A failed fetch retains the local findings and is explicitly marked as cached, not freshly verified. On Windows, when the only configured helper is the first-run helper-selector, a fetch selects the existing Git Credential Manager for that command only. Global/repository settings, custom helpers and Git hooks are not changed; missing credentials remain a reported error, not an interactive login.
 
-Resolve issues in the checkout you need. An unrelated template's unfinished draft does not prevent using an already approved Cars snapshot. Do not perform unattended writes across all six repositories when the report has blockers.
+Resolve issues in the checkout you need. An unrelated template's unfinished draft does not prevent using an already approved immutable Cars release. Do not perform unattended writes across unrelated repositories when the report has blockers.
 
 Fetch does not update local files. A behind-main checkout with local work needs reconciliation with its writer, not a blind pull or reset. Preserve modified/untracked files and their exact base first, compare against current remote main, retain unique edits, and advance only when there is no loss. A clean checkout can be fast-forwarded after verifying its identity. A scoped commit made with a separate index must be based on current remote main and pushed without force; explicitly record when the occupied local checkout still has an older HEAD.
 
@@ -35,7 +37,7 @@ Fetch does not update local files. A behind-main checkout with local work needs 
 
 Use [WORKFLOW](WORKFLOW.md), [TEMPLATE-PROMOTION](TEMPLATE-PROMOTION.md) and [LEAD-PUBLISHING](LEAD-PUBLISHING.md); do not invent another clone script or hand-copy the newest-looking directory.
 
-A template release is an approved exact commit plus verified snapshot integrity. It is not whichever loose folder or deployment was opened most recently. A template update does not silently update existing dealers. New dealers use the approved release; existing dealers receive an explicit reviewed refresh.
+A template release is an approved exact Cars commit, template subtree and verified source digest. It is not whichever loose folder or deployment was opened most recently. A template update does not silently update existing dealers. New dealers use the approved release; existing dealers receive an explicit reviewed refresh.
 
 Preserve template heroes, banners, section order and full brand/body-type discovery. Personalize verified business copy, contacts, socials, accent and approved logo assets. Keep original recognizable identities when suitable; retain approved PNG masters and transparent WebP outputs, including light/dark/accent variants. Do not replace them with fabricated CSS/text/SVG wordmarks. SVG interface icons are not dealership logos. No logo file-extension check substitutes for inspecting contrast, crop, background and mobile readability. Keep licensing and provenance.
 

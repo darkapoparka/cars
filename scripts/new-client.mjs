@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { copySource } from './copy-source.mjs';
-import { verifyTemplate } from './template-release.mjs';
+import { verifyTemplate, selectedTemplateSource, templateDevelopmentState } from './template-release.mjs';
+import { materializeTemplateSource } from './lib/template-source.mjs';
 import { ROOT, POLICY, args, json, inside, fingerprint, resolveIdentity, validateManifest, excluded } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
 import { gitRead, repositoryIdentity } from './workspace-doctor.mjs';
@@ -34,21 +35,27 @@ export function planNewClient({ root = ROOT, client, repository, preset = 'stand
   const existingRepository = fs.existsSync(registryPath) && json(registryPath).dealers?.find(d => d.repository?.toLowerCase() === manifest.repository.toLowerCase());
   if (existingRepository) throw new Error('Publishing repository already belongs to ' + existingRepository.slug + '; reuse its canonical dealer.');
   const checkout = assertMainCheckout(root, { readGit });
-  const inputs = ['templates.lock.json', 'catalog.json', 'workspace.json', 'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/dealer-guidance.mjs', 'scripts/workspace-doctor.mjs'];
+  const inputs = ['templates.lock.json', 'catalog.json', 'workspace.json', 'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/template-source.mjs', 'scripts/lib/dealer-guidance.mjs', 'scripts/workspace-doctor.mjs'];
   const changed = readGit(root, ['diff', '--name-only', 'HEAD', '--', ...inputs]);
   if (changed) throw new Error('Commit the reviewed workflow/release inputs before cloning: ' + changed);
   const clientRoot = inside(root, 'clients/' + client);
   if (fs.existsSync(clientRoot)) throw new Error('Client destination is occupied: ' + clientRoot);
   const plans = selected.map(template => {
     const release = verifyTemplate(root, template.key);
+    const source = selectedTemplateSource(release);
     const expectedPath = 'templates/' + template.key;
-    if (template.path !== expectedPath || release.snapshotPath !== expectedPath || release.repository !== 'darkapoparka/cars-template-' + template.key) throw new Error('Template catalog/lock identity mismatch: ' + template.key);
+    const carsSource = release.source?.repository === 'darkapoparka/cars' && source.path === expectedPath;
+    const standaloneSource = !release.source && release.repository === 'darkapoparka/cars-template-' + template.key;
+    if (template.path !== expectedPath || release.snapshotPath !== expectedPath || !(carsSource || standaloneSource)) throw new Error('Template catalog/lock identity mismatch: ' + template.key);
     const dirty = readGit(root, ['diff', '--name-only', 'HEAD', '--', expectedPath]).split('\n').filter(Boolean).filter(p => !excluded(p.slice(expectedPath.length + 1)));
-    if (dirty.length) throw new Error('Commit the reviewed template snapshot before cloning: ' + template.key);
-    const developmentHead = readGit(root, ['ls-remote', '--exit-code', 'https://github.com/' + release.repository + '.git', 'refs/heads/main']).split(/\s+/)[0];
+    if (dirty.length && !carsSource) throw new Error('Commit the reviewed template snapshot before cloning: ' + template.key);
+    const developmentHead = readGit(root, ['ls-remote', '--exit-code', 'https://github.com/' + source.repository + '.git', 'refs/heads/main']).split(/\s+/)[0];
     if (!/^[a-f0-9]{40}$/.test(developmentHead)) throw new Error('Cannot verify current upstream main: ' + template.key);
-    return { template: template.key, release, source: inside(root, expectedPath, { mustExist: true }), destination: path.join(clientRoot, template.key), homes: template.homes, developmentHead, updateAvailable: developmentHead !== release.commit, releasePolicy: 'latest-reviewed-release; newer development is not silently promoted' };
+    const development = templateDevelopmentState(root, template.key, release, developmentHead, { readGit });
+    return { template: template.key, release, sourceRef: source, source: inside(root, expectedPath, { mustExist: true }), destination: path.join(clientRoot, template.key), homes: template.homes, ...development, releasePolicy: 'latest-reviewed-release; newer development is not silently promoted' };
   });
+  manifest.templateRevisions = Object.fromEntries(plans.map(p => [p.template, p.sourceRef.revision]));
+  manifest.templateSources = Object.fromEntries(plans.map(p => [p.template, p.sourceRef]));
   return { root, client, dealerId, clientRoot, manifest, checkout, plans, state: 'needs-personalization' };
 }
 
@@ -74,12 +81,12 @@ export async function createNewClient(plan, { readGit = gitRead, copy = copySour
     for (const item of plans) {
       if (JSON.stringify(verifyTemplate(root, item.template)) !== JSON.stringify(item.release)) throw new Error('Template release changed after planning: ' + item.template);
       const destination = path.join(stagedClient, item.template);
-      await copy(item.source, destination, { key: item.template, exportPolicy: POLICY });
+      await materializeTemplateSource({ root, key: item.template, release: item.release, source: item.sourceRef, destination, copy });
       if (fingerprint(destination).digest !== item.release.digest) throw new Error('Copied source differs from the approved release: ' + item.template);
       const copied = json(path.join(destination, '.template/source-manifest.json'));
       copied.destination = item.destination; copied.exportPolicy = POLICY; copied.approvedTemplate = item.release; copied.workflowCommit = plan.checkout.head;
       writeJson(path.join(destination, '.template/source-manifest.json'), copied);
-      const metadata = { schemaVersion: 1, client, templateKey: item.template, templateVersion: item.release.commit, createdAt: new Date().toISOString(), state: 'needs-personalization', selectedHome: item.homes[0].id, availableHomes: item.homes, offeredHomes: [], publicUrl: null, qa: { desktop: false, mobile: false, identity: false, contactPath: false }, crm: { leadId: null, demoProjectId: null, registered: false }, templateSource: { repository: item.release.repository, commit: item.release.commit, digest: item.release.digest, exportPolicy: POLICY }, packaging: { version: '1', entry: manifest.variants.find(v => v.key === item.template).entry }, workflowCommit: plan.checkout.head };
+      const metadata = { schemaVersion: 1, client, templateKey: item.template, templateVersion: item.sourceRef.revision, createdAt: new Date().toISOString(), state: 'needs-personalization', selectedHome: item.homes[0].id, availableHomes: item.homes, offeredHomes: [], publicUrl: null, qa: { desktop: false, mobile: false, identity: false, contactPath: false }, crm: { leadId: null, demoProjectId: null, registered: false }, templateSource: { ...item.sourceRef, exportPolicy: POLICY }, packaging: { version: '1', entry: manifest.variants.find(v => v.key === item.template).entry }, workflowCommit: plan.checkout.head };
       fs.mkdirSync(path.join(destination, '.client'), { recursive: true });
       writeJson(path.join(destination, '.client/project.json'), metadata);
       fs.writeFileSync(path.join(destination, 'AGENTS.md'), dealerGuidance({ slug: client, variants: manifest.variants, workflowCommit: plan.checkout.head, variant: item.template }));
@@ -92,7 +99,7 @@ export async function createNewClient(plan, { readGit = gitRead, copy = copySour
     if (resolveIdentity(root, client, plan.dealerId).exists) throw new Error('Dealer destination appeared during copying; existing work was not overwritten.');
     inside(root, 'clients/' + client); // Recheck ancestor links before installation.
     fs.renameSync(stagedClient, clientRoot);
-    writeJson(path.join(staging, 'creation.json'), { createdAt: new Date().toISOString(), clientRoot, workflowCommit: plan.checkout.head, state: 'needs-personalization', templates: plans.map(p => ({ key: p.template, commit: p.release.commit, digest: p.release.digest })) });
+    writeJson(path.join(staging, 'creation.json'), { createdAt: new Date().toISOString(), clientRoot, workflowCommit: plan.checkout.head, state: 'needs-personalization', templates: plans.map(p => ({ key: p.template, source: p.sourceRef })) });
     return { clientRoot, state: 'needs-personalization', applications: plans.length, receipt: path.join(staging, 'creation.json') };
   } catch (error) {
     if (staging) fs.writeFileSync(path.join(staging, 'failure.json'), JSON.stringify({ error: error.message, clientRoot, retainedCandidate: path.join(staging, 'dealer'), failedAt: new Date().toISOString() }, null, 2));

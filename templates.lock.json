@@ -3,12 +3,12 @@
   "exportPolicy": "cars-source-v1",
   "templates": {
     "auto-best": {
-      "repository": "darkapoparka/cars-template-auto-best",
+      "repository": "darkapoparka/cars",
       "status": "approved",
-      "commit": "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
-      "release": "fleet-ui-and-localization-2026-09-24",
+      "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+      "release": "cars-subtree-8fb6751d9457-2026-09-24",
       "snapshotPath": "templates/auto-best",
-      "digest": "630ef7a807063600dfa518cf28ebe4a006ea36308bf0b358185b132eaacb1fbf",
+      "digest": "a78d2cfe451551cbb4636e1e64d386d45a13db2b710f8fa8b0dc444929e61be3",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "1a32dc2b994d78c794e2d19bfd2d24c7adc48807",
       "runtime": {
@@ -17,34 +17,36 @@
         "lockfile": "package-lock.json"
       },
       "modes": {
-        "standalone": "exact commit validated and production alias verified at 320, 390 and 1440",
-        "mounted": "production-equivalent base-path build and EN/BG SSR probes passed; dealer publication still requires dealer QA"
+        "standalone": "Exact Cars subtree build, mobile/desktop browser QA and production alias verified.",
+        "mounted": "Native v2 mounted contracts verified; dealer publication remains an explicit per-dealer migration."
       },
       "qa": {
-        "evidence": "docs/releases/fleet-2026-09-24/auto-best-release.json",
-        "verifiedAt": "2026-09-24T09:39:33.0640471Z",
+        "evidence": "docs/releases/cars-source-2026-09-24/auto-best-release.json",
+        "verifiedAt": "2026-09-24T18:41:21.202Z",
         "checks": [
           {
-            "name": "exact immutable validation",
+            "name": "exact-immutable-source",
             "status": "passed",
-            "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+            "evidenceSha256": "e3c7f444a890f08aa52b24c3ae48d4f6c21adae5c60fc6d7055f711ac66e549d",
+            "evidence": "runtime/refactor-20260924/template-qa/committed-8fb6751d9457.json"
           },
           {
-            "name": "exact production deployment",
+            "name": "production-build-and-localization",
             "status": "passed",
-            "deploymentId": "dpl_GXXC1vmjWSfcLTJu7YXHijv7sfUf"
+            "evidenceSha256": "cef41061d2ad6dc7b34a364e8108ae5a570462f356accf3f333b2278b05695c0",
+            "evidence": "runtime/refactor-20260924/template-qa/browser-results.json"
           },
           {
-            "name": "standalone browser matrix",
+            "name": "production-binding-ready",
             "status": "passed",
-            "passed": 24,
-            "total": 24,
-            "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+            "evidenceSha256": "a809edd301663dc57415b3b14c6d99910376d08491cf22aba02d12440a2d4ecb",
+            "evidence": "runtime/refactor-20260924/deployments/template-bindings-postcutover.json"
           },
           {
-            "name": "mounted build and EN/BG route probes",
+            "name": "fresh-public-routes",
             "status": "passed",
-            "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+            "evidenceSha256": "645bdaceebf89173c0a25696e5d34e4881e13eb893aee71d2c191c818f89f14d",
+            "evidence": "runtime/refactor-20260924/deployments/template-routes-postcutover.json"
           }
         ],
         "standalone": {
@@ -59,8 +61,8 @@
         "nativeLocalization": {
           "schemaVersion": 1,
           "adapter": "native-v1",
-          "repository": "darkapoparka/cars-template-auto-best",
-          "commit": "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+          "repository": "darkapoparka/cars",
+          "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
           "locales": [
             "en",
             "bg"
@@ -70,8 +72,8 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-24T09:39:33.0640471Z",
-          "evidenceSha256": "0c94f64fbc8da5ab137853b1e40906861c27ada6c3143204a5485a69a180452a",
+          "verifiedAt": "2026-09-24T18:41:21.202Z",
+          "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -80,90 +82,114 @@
               "bg": "bg"
             }
           ],
-          "sourceDigest": "630ef7a807063600dfa518cf28ebe4a006ea36308bf0b358185b132eaacb1fbf",
+          "sourceDigest": "a78d2cfe451551cbb4636e1e64d386d45a13db2b710f8fa8b0dc444929e61be3",
           "deployment": {
-            "id": "dpl_GXXC1vmjWSfcLTJu7YXHijv7sfUf",
+            "id": "dpl_9fF4w5PjmW6peqSGw5j4qHWNw99X",
             "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
             "state": "READY",
-            "sourceCommit": "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+            "sourceCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
             "publicAlias": "https://cars-template-auto-best.vercel.app/"
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             }
-          ]
+          ],
+          "sourcePath": "templates/auto-best",
+          "sourceTree": "44d9fc532b332e8c4cb5fd7abfc585e28d978539"
         }
       },
-      "reason": "Reviewed release selected by the recorded technical QA.",
+      "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
       "observedWorkingDigest": "ab83f2cef085900a3cadec24df13d2455a0a4bf0fb2ebef8a26711789219f439",
       "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
-      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md"
+      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "path": "templates/auto-best",
+        "tree": "44d9fc532b332e8c4cb5fd7abfc585e28d978539",
+        "digest": "a78d2cfe451551cbb4636e1e64d386d45a13db2b710f8fa8b0dc444929e61be3"
+      },
+      "legacySource": {
+        "repository": "darkapoparka/cars-template-auto-best",
+        "revision": "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+        "path": "",
+        "tree": null,
+        "digest": "630ef7a807063600dfa518cf28ebe4a006ea36308bf0b358185b132eaacb1fbf",
+        "evidence": "docs/releases/fleet-2026-09-24/auto-best-release.json",
+        "nativeDeployment": {
+          "id": "dpl_GXXC1vmjWSfcLTJu7YXHijv7sfUf",
+          "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+          "state": "READY",
+          "sourceCommit": "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+          "publicAlias": "https://cars-template-auto-best.vercel.app/"
+        }
+      }
     },
     "modern": {
-      "repository": "darkapoparka/cars-template-modern",
+      "repository": "darkapoparka/cars",
       "status": "approved",
-      "commit": "3f77bf25456a608bdaaab84cb60e97fccda063f2",
-      "release": "fleet-ui-and-localization-2026-09-24",
+      "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+      "release": "cars-subtree-8fb6751d9457-2026-09-24",
       "snapshotPath": "templates/modern",
-      "digest": "115a01de44984d280c7e5c9ceaca2599e9b23d95ec7bb879c741fcf2ce4f1265",
+      "digest": "50d3f5a6739af15b2517f592fed79ff6ef7699f1e5433e16ff90c3eeb0c9339f",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "f64006130523375e440d48e4c4be6ec1b830d46a",
       "runtime": {
@@ -172,34 +198,36 @@
         "lockfile": "pnpm-lock.yaml"
       },
       "modes": {
-        "standalone": "exact commit validated and production alias verified at 320, 390 and 1440",
-        "mounted": "production-equivalent base-path build and EN/BG SSR probes passed; dealer publication still requires dealer QA"
+        "standalone": "Exact Cars subtree build, mobile/desktop browser QA and production alias verified.",
+        "mounted": "Native v2 mounted contracts verified; dealer publication remains an explicit per-dealer migration."
       },
       "qa": {
-        "evidence": "docs/releases/fleet-2026-09-24/modern-release.json",
-        "verifiedAt": "2026-09-24T09:39:33.0640471Z",
+        "evidence": "docs/releases/cars-source-2026-09-24/modern-release.json",
+        "verifiedAt": "2026-09-24T18:41:21.202Z",
         "checks": [
           {
-            "name": "exact immutable validation",
+            "name": "exact-immutable-source",
             "status": "passed",
-            "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+            "evidenceSha256": "e3c7f444a890f08aa52b24c3ae48d4f6c21adae5c60fc6d7055f711ac66e549d",
+            "evidence": "runtime/refactor-20260924/template-qa/committed-8fb6751d9457.json"
           },
           {
-            "name": "exact production deployment",
+            "name": "production-build-and-localization",
             "status": "passed",
-            "deploymentId": "dpl_5LEeXtzPtrWyeKNExJcvbqzshCgx"
+            "evidenceSha256": "cef41061d2ad6dc7b34a364e8108ae5a570462f356accf3f333b2278b05695c0",
+            "evidence": "runtime/refactor-20260924/template-qa/browser-results.json"
           },
           {
-            "name": "standalone browser matrix",
+            "name": "production-binding-ready",
             "status": "passed",
-            "passed": 24,
-            "total": 24,
-            "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+            "evidenceSha256": "a809edd301663dc57415b3b14c6d99910376d08491cf22aba02d12440a2d4ecb",
+            "evidence": "runtime/refactor-20260924/deployments/template-bindings-postcutover.json"
           },
           {
-            "name": "mounted build and EN/BG route probes",
+            "name": "fresh-public-routes",
             "status": "passed",
-            "evidenceSha256": "90ee1f76e48a2d89cfa28a9d1ec9cbbfb372bbdbb221c2ee73e1e346112d387c"
+            "evidenceSha256": "645bdaceebf89173c0a25696e5d34e4881e13eb893aee71d2c191c818f89f14d",
+            "evidence": "runtime/refactor-20260924/deployments/template-routes-postcutover.json"
           }
         ],
         "standalone": {
@@ -214,8 +242,8 @@
         "nativeLocalization": {
           "schemaVersion": 1,
           "adapter": "native-v1",
-          "repository": "darkapoparka/cars-template-modern",
-          "commit": "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+          "repository": "darkapoparka/cars",
+          "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
           "locales": [
             "en",
             "bg"
@@ -225,8 +253,8 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-24T09:39:33.0640471Z",
-          "evidenceSha256": "dc4375071bd03317e5b61c54f0823c5ca11acc56c21ba3d81050ecb3a08bb4ea",
+          "verifiedAt": "2026-09-24T18:41:21.202Z",
+          "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -246,90 +274,114 @@
               "export": "inventoryCopy"
             }
           ],
-          "sourceDigest": "115a01de44984d280c7e5c9ceaca2599e9b23d95ec7bb879c741fcf2ce4f1265",
+          "sourceDigest": "50d3f5a6739af15b2517f592fed79ff6ef7699f1e5433e16ff90c3eeb0c9339f",
           "deployment": {
-            "id": "dpl_5LEeXtzPtrWyeKNExJcvbqzshCgx",
+            "id": "dpl_7CMxfiWyo8CacszXemvVhdjmjMgW",
             "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
             "state": "READY",
-            "sourceCommit": "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+            "sourceCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
             "publicAlias": "https://cars-template-modern.vercel.app/"
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "90ee1f76e48a2d89cfa28a9d1ec9cbbfb372bbdbb221c2ee73e1e346112d387c"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "90ee1f76e48a2d89cfa28a9d1ec9cbbfb372bbdbb221c2ee73e1e346112d387c"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             }
-          ]
+          ],
+          "sourcePath": "templates/modern",
+          "sourceTree": "dadbc3c20d06f230bc958e6f6233f674c8755ae7"
         }
       },
-      "reason": "Reviewed release selected by the recorded technical QA.",
+      "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
       "observedWorkingDigest": "146abad20859356a4058659ed0c2451d7f51181b08ef598136b058f7bbed305f",
       "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
-      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md"
+      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "path": "templates/modern",
+        "tree": "dadbc3c20d06f230bc958e6f6233f674c8755ae7",
+        "digest": "50d3f5a6739af15b2517f592fed79ff6ef7699f1e5433e16ff90c3eeb0c9339f"
+      },
+      "legacySource": {
+        "repository": "darkapoparka/cars-template-modern",
+        "revision": "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+        "path": "",
+        "tree": null,
+        "digest": "115a01de44984d280c7e5c9ceaca2599e9b23d95ec7bb879c741fcf2ce4f1265",
+        "evidence": "docs/releases/fleet-2026-09-24/modern-release.json",
+        "nativeDeployment": {
+          "id": "dpl_5LEeXtzPtrWyeKNExJcvbqzshCgx",
+          "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+          "state": "READY",
+          "sourceCommit": "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+          "publicAlias": "https://cars-template-modern.vercel.app/"
+        }
+      }
     },
     "carwow": {
-      "repository": "darkapoparka/cars-template-carwow",
+      "repository": "darkapoparka/cars",
       "status": "approved",
-      "commit": "d9de303ffa732234c21e2a57c73d7109e870cbeb",
-      "release": "fleet-ui-and-localization-2026-09-24",
+      "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+      "release": "cars-subtree-8fb6751d9457-2026-09-24",
       "snapshotPath": "templates/carwow",
-      "digest": "d4e33c6eef43e015c6d596e5e6e6b2298bfdd0320001cee0e06614e7a0bf2263",
+      "digest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "d769bb0558ad0228b92440fc3fd9ff81548bc890",
       "runtime": {
@@ -338,34 +390,36 @@
         "lockfile": "package-lock.json"
       },
       "modes": {
-        "standalone": "exact commit validated and production alias verified at 320, 390 and 1440",
-        "mounted": "production-equivalent base-path build and EN/BG SSR probes passed; dealer publication still requires dealer QA"
+        "standalone": "Exact Cars subtree build, mobile/desktop browser QA and production alias verified.",
+        "mounted": "Native v2 mounted contracts verified; dealer publication remains an explicit per-dealer migration."
       },
       "qa": {
-        "evidence": "docs/releases/fleet-2026-09-24/carwow-release.json",
-        "verifiedAt": "2026-09-24T09:39:33.0640471Z",
+        "evidence": "docs/releases/cars-source-2026-09-24/carwow-release.json",
+        "verifiedAt": "2026-09-24T18:41:21.202Z",
         "checks": [
           {
-            "name": "exact immutable validation",
+            "name": "exact-immutable-source",
             "status": "passed",
-            "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+            "evidenceSha256": "e3c7f444a890f08aa52b24c3ae48d4f6c21adae5c60fc6d7055f711ac66e549d",
+            "evidence": "runtime/refactor-20260924/template-qa/committed-8fb6751d9457.json"
           },
           {
-            "name": "exact production deployment",
+            "name": "production-build-and-localization",
             "status": "passed",
-            "deploymentId": "dpl_3HezU5KHrcLfMS9r1SaHeWtrEYHC"
+            "evidenceSha256": "cef41061d2ad6dc7b34a364e8108ae5a570462f356accf3f333b2278b05695c0",
+            "evidence": "runtime/refactor-20260924/template-qa/browser-results.json"
           },
           {
-            "name": "standalone browser matrix",
+            "name": "production-binding-ready",
             "status": "passed",
-            "passed": 24,
-            "total": 24,
-            "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+            "evidenceSha256": "a809edd301663dc57415b3b14c6d99910376d08491cf22aba02d12440a2d4ecb",
+            "evidence": "runtime/refactor-20260924/deployments/template-bindings-postcutover.json"
           },
           {
-            "name": "mounted build and EN/BG route probes",
+            "name": "fresh-public-routes",
             "status": "passed",
-            "evidenceSha256": "ad0bd9fd13fd335601d90fc757c55c201b07a0bf1db50066f1a13fef7794314b"
+            "evidenceSha256": "645bdaceebf89173c0a25696e5d34e4881e13eb893aee71d2c191c818f89f14d",
+            "evidence": "runtime/refactor-20260924/deployments/template-routes-postcutover.json"
           }
         ],
         "standalone": {
@@ -380,8 +434,8 @@
         "nativeLocalization": {
           "schemaVersion": 1,
           "adapter": "native-v1",
-          "repository": "darkapoparka/cars-template-carwow",
-          "commit": "d9de303ffa732234c21e2a57c73d7109e870cbeb",
+          "repository": "darkapoparka/cars",
+          "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
           "locales": [
             "en",
             "bg"
@@ -391,8 +445,8 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-24T09:39:33.0640471Z",
-          "evidenceSha256": "31da35ee8cb71d6cb22bf69a224dcfd66db984400a956f37039e4624d324d3a6",
+          "verifiedAt": "2026-09-24T18:41:21.202Z",
+          "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -401,90 +455,114 @@
               "bg": "bg"
             }
           ],
-          "sourceDigest": "d4e33c6eef43e015c6d596e5e6e6b2298bfdd0320001cee0e06614e7a0bf2263",
+          "sourceDigest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420",
           "deployment": {
-            "id": "dpl_3HezU5KHrcLfMS9r1SaHeWtrEYHC",
+            "id": "dpl_CP4e821dwwQSJbyD4EgzatmhkMgT",
             "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
             "state": "READY",
-            "sourceCommit": "d9de303ffa732234c21e2a57c73d7109e870cbeb",
+            "sourceCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
             "publicAlias": "https://cars-template-carwow.vercel.app/"
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "ad0bd9fd13fd335601d90fc757c55c201b07a0bf1db50066f1a13fef7794314b"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "ad0bd9fd13fd335601d90fc757c55c201b07a0bf1db50066f1a13fef7794314b"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             }
-          ]
+          ],
+          "sourcePath": "templates/carwow",
+          "sourceTree": "af47a659d305d81523f5af97ef66d15dd0aa1f38"
         }
       },
-      "reason": "Reviewed release selected by the recorded technical QA.",
+      "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
       "observedWorkingDigest": "1843f29b24815119fcb1d360379988fdac1b637068045eb7aa2f30cd775f2641",
       "baselineCarsCommit": "a2f2975a0aa362dce2c66472f202dd0548dc8b1b",
-      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md"
+      "reconciliationEvidence": "docs/WORKFLOW-MIGRATION-2026-09-12.md",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "path": "templates/carwow",
+        "tree": "af47a659d305d81523f5af97ef66d15dd0aa1f38",
+        "digest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420"
+      },
+      "legacySource": {
+        "repository": "darkapoparka/cars-template-carwow",
+        "revision": "d9de303ffa732234c21e2a57c73d7109e870cbeb",
+        "path": "",
+        "tree": null,
+        "digest": "d4e33c6eef43e015c6d596e5e6e6b2298bfdd0320001cee0e06614e7a0bf2263",
+        "evidence": "docs/releases/fleet-2026-09-24/carwow-release.json",
+        "nativeDeployment": {
+          "id": "dpl_3HezU5KHrcLfMS9r1SaHeWtrEYHC",
+          "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+          "state": "READY",
+          "sourceCommit": "d9de303ffa732234c21e2a57c73d7109e870cbeb",
+          "publicAlias": "https://cars-template-carwow.vercel.app/"
+        }
+      }
     },
     "import": {
-      "repository": "darkapoparka/cars-template-import",
+      "repository": "darkapoparka/cars",
       "status": "approved",
-      "commit": "c961de569012d04316f9da95f228d10622be87fe",
-      "release": "fleet-ui-and-localization-2026-09-24",
+      "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+      "release": "cars-subtree-8fb6751d9457-2026-09-24",
       "snapshotPath": "templates/import",
-      "digest": "31e3b2bbecdf7c3b562ed71dd1fb942f2dba46b94e1dc80bfd1d5498760a1ce3",
+      "digest": "404a881a054a05bc6f7c5f8738ede307a34ce8723b1c3da335d65632f0bc94b0",
       "exportPolicy": "cars-source-v1",
       "observedUpstreamCommit": "3c24db073b0b1a3bf26c64ed5336921117658e29",
       "runtime": {
@@ -493,34 +571,36 @@
         "lockfile": "package-lock.json"
       },
       "modes": {
-        "standalone": "exact commit validated and production alias verified at 320, 390 and 1440",
-        "mounted": "production-equivalent base-path build and EN/BG SSR probes passed; dealer publication still requires dealer QA"
+        "standalone": "Exact Cars subtree build, mobile/desktop browser QA and production alias verified.",
+        "mounted": "Native v2 mounted contracts verified; dealer publication remains an explicit per-dealer migration."
       },
       "qa": {
-        "evidence": "docs/releases/fleet-2026-09-24/import-release.json",
-        "verifiedAt": "2026-09-24T09:39:33.0640471Z",
+        "evidence": "docs/releases/cars-source-2026-09-24/import-release.json",
+        "verifiedAt": "2026-09-24T18:41:21.202Z",
         "checks": [
           {
-            "name": "exact immutable validation",
+            "name": "exact-immutable-source",
             "status": "passed",
-            "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+            "evidenceSha256": "e3c7f444a890f08aa52b24c3ae48d4f6c21adae5c60fc6d7055f711ac66e549d",
+            "evidence": "runtime/refactor-20260924/template-qa/committed-8fb6751d9457.json"
           },
           {
-            "name": "exact production deployment",
+            "name": "production-build-and-localization",
             "status": "passed",
-            "deploymentId": "dpl_DMgCzaDRtNYwDzvLuHkEsKGQ9QLn"
+            "evidenceSha256": "cef41061d2ad6dc7b34a364e8108ae5a570462f356accf3f333b2278b05695c0",
+            "evidence": "runtime/refactor-20260924/template-qa/browser-results.json"
           },
           {
-            "name": "standalone browser matrix",
+            "name": "production-binding-ready",
             "status": "passed",
-            "passed": 24,
-            "total": 24,
-            "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+            "evidenceSha256": "a809edd301663dc57415b3b14c6d99910376d08491cf22aba02d12440a2d4ecb",
+            "evidence": "runtime/refactor-20260924/deployments/template-bindings-postcutover.json"
           },
           {
-            "name": "mounted build and EN/BG route probes",
+            "name": "fresh-public-routes",
             "status": "passed",
-            "evidenceSha256": "90a94402c4be8d2036edd0633a12a5be2dffa94324009c0cfad47dd6cc299a8b"
+            "evidenceSha256": "645bdaceebf89173c0a25696e5d34e4881e13eb893aee71d2c191c818f89f14d",
+            "evidence": "runtime/refactor-20260924/deployments/template-routes-postcutover.json"
           }
         ],
         "standalone": {
@@ -535,8 +615,8 @@
         "nativeLocalization": {
           "schemaVersion": 1,
           "adapter": "native-v1",
-          "repository": "darkapoparka/cars-template-import",
-          "commit": "c961de569012d04316f9da95f228d10622be87fe",
+          "repository": "darkapoparka/cars",
+          "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
           "locales": [
             "en",
             "bg"
@@ -546,8 +626,8 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-24T09:39:33.0640471Z",
-          "evidenceSha256": "8fe3a235492d08f1c4b9278638529938ca47f35cb125d6c87fd4f9caaf44a96a",
+          "verifiedAt": "2026-09-24T18:41:21.202Z",
+          "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -556,79 +636,103 @@
               "bg": "bg"
             }
           ],
-          "sourceDigest": "31e3b2bbecdf7c3b562ed71dd1fb942f2dba46b94e1dc80bfd1d5498760a1ce3",
+          "sourceDigest": "404a881a054a05bc6f7c5f8738ede307a34ce8723b1c3da335d65632f0bc94b0",
           "deployment": {
-            "id": "dpl_DMgCzaDRtNYwDzvLuHkEsKGQ9QLn",
+            "id": "dpl_8wnuqEWnJuLDKZPoEfg2B3LxQoGo",
             "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
             "state": "READY",
-            "sourceCommit": "c961de569012d04316f9da95f228d10622be87fe",
+            "sourceCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
             "publicAlias": "https://cars-template-import.vercel.app/"
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "90a94402c4be8d2036edd0633a12a5be2dffa94324009c0cfad47dd6cc299a8b"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "90a94402c4be8d2036edd0633a12a5be2dffa94324009c0cfad47dd6cc299a8b"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499"
+              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
             }
-          ]
+          ],
+          "sourcePath": "templates/import",
+          "sourceTree": "fc244d2b3302756affaec8aa57d2b9021ba1e7cf"
         }
       },
-      "reason": "Reviewed release selected by the recorded technical QA."
+      "reason": "Reviewed immutable Cars template source; dealer adoption is explicit.",
+      "source": {
+        "repository": "darkapoparka/cars",
+        "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "path": "templates/import",
+        "tree": "fc244d2b3302756affaec8aa57d2b9021ba1e7cf",
+        "digest": "404a881a054a05bc6f7c5f8738ede307a34ce8723b1c3da335d65632f0bc94b0"
+      },
+      "legacySource": {
+        "repository": "darkapoparka/cars-template-import",
+        "revision": "c961de569012d04316f9da95f228d10622be87fe",
+        "path": "",
+        "tree": null,
+        "digest": "31e3b2bbecdf7c3b562ed71dd1fb942f2dba46b94e1dc80bfd1d5498760a1ce3",
+        "evidence": "docs/releases/fleet-2026-09-24/import-release.json",
+        "nativeDeployment": {
+          "id": "dpl_DMgCzaDRtNYwDzvLuHkEsKGQ9QLn",
+          "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+          "state": "READY",
+          "sourceCommit": "c961de569012d04316f9da95f228d10622be87fe",
+          "publicAlias": "https://cars-template-import.vercel.app/"
+        }
+      }
     }
   }
 }

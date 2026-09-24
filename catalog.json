@@ -42,8 +42,9 @@
         "static"
       ],
       "note": "Desktop/mobile source refresh with neutral Auto Best logo. Source contact/video content and sample stock retained; personalization still required.",
-      "upstreamRepository": "darkapoparka/cars-template-auto-best",
-      "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
+      "versionRole": "Historical label; templates.lock.json owns the selected immutable Cars source.",
+      "legacyRepository": "darkapoparka/cars-template-auto-best",
+      "sourceRepository": "darkapoparka/cars"
     },
     {
       "key": "modern",
@@ -76,8 +77,9 @@
         "apps/web/app"
       ],
       "note": "Compact stock-first storefront. Full workspace retained, independently installed and verified on 6462 in existing static demo mode. Prisma generation and web typecheck passed; provider services remain unconfigured.",
-      "upstreamRepository": "darkapoparka/cars-template-modern",
-      "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
+      "versionRole": "Historical label; templates.lock.json owns the selected immutable Cars source.",
+      "legacyRepository": "darkapoparka/cars-template-modern",
+      "sourceRepository": "darkapoparka/cars"
     },
     {
       "key": "carwow",
@@ -113,8 +115,9 @@
         "static"
       ],
       "note": "Internal inspiration nickname, not Carwow affiliation. Yellow desktop and compact mobile compositions are intentional. Use the Cars launcher to avoid the inherited dev script's fixed port 6517.",
-      "upstreamRepository": "darkapoparka/cars-template-carwow",
-      "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
+      "versionRole": "Historical label; templates.lock.json owns the selected immutable Cars source.",
+      "legacyRepository": "darkapoparka/cars-template-carwow",
+      "sourceRepository": "darkapoparka/cars"
     },
     {
       "key": "import",
@@ -150,8 +153,9 @@
         "static"
       ],
       "note": "Dark Day & Night source baseline with buy/import/sell journeys. Related to showroom; not an entirely independent template family.",
-      "upstreamRepository": "darkapoparka/cars-template-import",
-      "versionRole": "Legacy provenance label; templates.lock.json owns approved commit/digest."
+      "versionRole": "Historical label; templates.lock.json owns the selected immutable Cars source.",
+      "legacyRepository": "darkapoparka/cars-template-import",
+      "sourceRepository": "darkapoparka/cars"
     },
     {
       "key": "showroom",
@@ -406,5 +410,5 @@
     }
   ],
   "releaseAuthority": "templates.lock.json",
-  "ownership": "Standalone cars-template repositories own reusable source; Cars templates are approved managed snapshots or preserved reconciliation holdings."
+  "ownership": "Cars templates/<key> are the editable masters. templates.lock.json selects immutable releases; former standalone repositories are recovery/history sources."
 }

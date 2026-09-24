@@ -1,38 +1,41 @@
-# Template releases and Cars snapshots
+# Template releases from Cars
 
-The authoritative reusable sources are the four `darkapoparka/cars-template-*` repositories. Their `main` branches are development heads. [templates.lock.json](../templates.lock.json) is the sole approval/version lock for Cars snapshots; [catalog.json](../catalog.json) owns keys, aliases, preview ports and discovery information, not a second approval list.
+The editable masters are `templates/{auto-best,modern,carwow,import}` in `darkapoparka/cars`. Work on Cars main. `templates.lock.json` selects an immutable commit and subtree for dealer creation and explicit updates. Editing a template changes neither that selection nor existing dealers.
 
-## Release flow
+## Develop and select a release
 
-Polish in the standalone template project. Read its technical instructions, preserve concurrent work, review the changed UI, run suitable checks and commit only the approved change. Cars-only refinements must be compared and ported upstream selectively before replacement. Never promote an arbitrary newest commit or commit unfinished local UI to satisfy a release command.
+1. Edit the actual template under Cars; retain its runtime, lockfile, technical structure and relevant QA.
+2. Preview directly from `templates/<key>` using `scripts/start-preview.ps1`. Check mobile and desktop, then commit and push the reviewed source to Cars main.
+3. Inspect the source candidate and review its evidence:
 
 ```powershell
-node scripts/template-release.mjs discover
 node scripts/template-release.mjs status
-node scripts/template-release.mjs promote --key import --source-repo J:/template-repos/cars-template-import --commit <40-character-sha>
+node scripts/template-release.mjs discover
+node scripts/template-release.mjs approve --key carwow --commit <40-character-Cars-SHA>
 ```
 
-The proposal fetches upstream refs, confirms repository/commit identity, exports immutable Git blobs using `cars-source-v1`, computes SHA-256 content digests and lists changes under `runtime/template-releases/`. It reports uncommitted upstream work separately and does not include it. A changed Cars snapshot is refused. Initial reconciliation requires a recorded baseline digest, not a bypass for unexplained drift.
-
-Verify the exact candidate with its retained runtime/lockfile, relevant checks, and standalone browser evidence at mobile and desktop. QA JSON records `repository`, `commit`, `approved: true`, `verifiedAt`, `runtime`, passed `checks`, `standalone.mobile` and `standalone.desktop`. Record mounted support separately in `modes`; template checks do not prove a dealer mount.
+`approve` without evidence reports the exact repository, revision, subtree, Git tree and normalized digest. It creates no template copy and updates no dealer. With exact-source QA it can select the release:
 
 ```powershell
-node scripts/template-release.mjs promote --key import --source-repo J:/template-repos/cars-template-import --commit <same-sha> --evidence docs/releases/<evidence>.json --write
-node scripts/template-release.mjs verify --key import
+node scripts/template-release.mjs approve --key carwow --commit <same-SHA> --evidence docs/releases/<review>.json
+node scripts/template-release.mjs approve --key carwow --commit <same-SHA> --evidence docs/releases/<review>.json --write
+node scripts/template-release.mjs verify --key carwow
 ```
 
-The write rechecks drift and replaces only reviewed retained source paths, preserves excluded dependency/runtime/local metadata and keeps a recoverable previous copy in runtime. It updates snapshot and lock as one operation with rollback on errors. Review and commit the snapshot, evidence and lock together. Existing `clients/` copies are unchanged.
+The CLI fetches Cars main first. Evidence must bind `repository`, `commit`, `sourcePath`, `sourceTree` and `sourceDigest`; record `approved: true`, `verifiedAt`, `runtime`, passed `checks`, and `standalone.mobile` / `standalone.desktop`. Record mounted support separately in `modes`. Source approval does not by itself establish dealer deployment or owner visual acceptance.
 
-## Lock contract
+All current templates contain native EN/BG localization. Their release evidence must also include exact-source `nativeLocalization` acceptance, including the required catalog, routing, preference, isolation, security, mounted and public checks plus the matching public deployment. Prior standalone QA cannot be relabeled as proof for a new Cars commit. Missing evidence is a release hold to resolve through verification, not an extra owner permission step.
 
-Each entry has repository, immutable commit, optional release label, snapshot path, normalized content digest, export policy, runtime, supported modes and commit-bound QA evidence. Unreconciled holdings use `status: reconciliation-required` and `commit: null`; observed upstream heads are evidence, not approved releases. New-client refuses such entries.
+The write changes only the release lock. Commit the lock and its review evidence together. The copier exports that exact Git subtree even if the working template has newer development edits. A malformed source locator is rejected; it cannot fall back to loose working files. Neither approval nor copying publishes a dealer.
 
-Normalization preserves binary bytes and changes text CRLF to LF for consistent Windows/Git comparison. The export excludes credentials, dependencies, caches, deployment/CRM bindings and executable inherited agent instructions, retaining source, lockfiles, licenses and provenance. Snapshot AGENTS identifies managed ownership. See `scripts/lib/workflow.mjs` for the versioned policy.
+## Existing dealers
 
-The new-client command discovers current upstream main automatically and verifies the selected lock before copying. Discovery is bounded and noninteractive; a failed network read is not accepted as proof of current source. Reproducible `next-env.d.ts` and `packages/database/generated/` output is excluded consistently from both fingerprinting and copying; source and schema files remain retained. Discovery can prompt release review; it never silently changes the selected version. No owner reminder to manually copy files is required.
+A requested update compares old template source, current dealer source and the selected new source. Preserve the dealer's facts, inventory, logos, assets, contacts, mounted paths and unique code. Review conflicts and preview the candidate before installation; follow [publishing](LEAD-PUBLISHING.md) for its existing private repository and Vercel project. Keep old pins until the candidate actually passes and is adopted.
 
-A completed shared-template task should finish its tested, scoped main commit/push and Cars release promotion together, rather than leave the owner to remember a manual copy. Do not promote unfinished work or update existing dealers silently. The agent handles commit IDs and provenance; the owner's normal request remains simply to build the next dealer with the updated designs.
+## Migration and historical sources
 
-## Client trial improvements
+Former `cars-template-*` repositories and older lock entries remain readable so an existing dealer's original base can be recovered. They are not active masters. The legacy `promote --source-repo ...` command remains for reviewed recovery of old snapshots and refuses to overwrite a Cars-owned source entry. Routine new releases use `approve` above.
 
-Extract the reusable change into the authoritative standalone template while preserving the dealer copy. Remove dealer identity from the reusable change, verify it, then follow this release flow. Do not copy an entire dealer over a template or sync templates over existing dealers. The [Rencar reference](reference/RENCAR-PROMOTION.md) preserves its older, separate trial procedure.
+Retain previous release evidence and exact legacy revisions during migration. Snapshot drift on an old lock means the working template and old approved selection differ; do not copy files over the current master to make the warning disappear. Local build results, source identity, production deployment and full native acceptance are separate evidence.
+
+Normalization preserves binary bytes and compares text with LF line endings. The `cars-source-v1` policy excludes credentials, dependency/build caches and inherited agent instructions while retaining source, lockfiles, licenses and provenance. Agents handle source IDs and evidence; the owner's everyday request remains “use the updated templates for this lead.”

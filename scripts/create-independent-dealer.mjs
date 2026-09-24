@@ -8,12 +8,13 @@ import { NATIVE_PACKAGING_VERSION, nativeReleaseReadiness } from './lib/native-l
 import { ROOT, POLICY, args, fingerprint, json, writeJson, resolveIdentity } from './lib/workflow.mjs';
 import { gitRead } from './workspace-doctor.mjs';
 import { verifyTemplate } from './template-release.mjs';
+import { materializeTemplateSource } from './lib/template-source.mjs';
 import { normalizeDealerLocale, readDealerLocale, planDealerLocale, assertLegacyLocaleCompatible, nativeLocaleSources, LocalePackagingError } from './lib/dealer-locale.mjs';
 
 const independentInputs = ['scripts/create-independent-dealer.mjs', 'scripts/lib/dealer-locale.mjs', 'scripts/package-dealer.mjs',
   'scripts/publishing/mounts.mjs', 'scripts/publishing/preview-paths.ts.txt', 'scripts/publishing/preview-switcher.js', 'scripts/publishing/fix-svelte-service-output.mjs',
   'scripts/lib/catalog-literal.mjs', 'scripts/lib/native-localization.mjs', 'scripts/publishing/native-mounts.mjs', 'scripts/publishing/build-native-service.mjs', 'scripts/publishing/switcher-messages.json', 'scripts/export-dealer.mjs',
-  'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/dealer-guidance.mjs',
+  'scripts/new-client.mjs', 'scripts/copy-source.mjs', 'scripts/template-release.mjs', 'scripts/lib/workflow.mjs', 'scripts/lib/template-source.mjs', 'scripts/lib/dealer-guidance.mjs',
   'scripts/workspace-doctor.mjs', 'templates.lock.json', 'catalog.json', 'workspace.json'];
 
 export function assertIndependentWorkflowInputs(root, readGit = gitRead) {
@@ -50,7 +51,7 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
   const localization = requestedLocale ? { ...planDealerLocale(requestedLocale, plan.manifest),
     ...(readiness.ready ? { status: 'native-ready-needs-dealer-qa', blockers: [] } : { blockers: readiness.blockers })
   } : { status: nativeSources.length ? 'blocked-native-source' : 'unverified-legacy-defaults', appliedChanges: [], nativeSources };
-  const summary = { localization, mode: write ? 'create' : 'dry-run', sourceOwnership: 'independent-repository', repository, target, workflowCommit: plan.checkout.head, templates: plan.plans.map(p => ({ key: p.template, repository: p.release.repository, commit: p.release.commit, digest: p.release.digest, newerDevelopmentAvailable: p.updateAvailable })) };
+  const summary = { localization, mode: write ? 'create' : 'dry-run', sourceOwnership: 'independent-repository', repository, target, workflowCommit: plan.checkout.head, templates: plan.plans.map(p => ({ key: p.template, source: p.sourceRef, newerDevelopmentAvailable: p.updateAvailable })) };
   if (!write) return summary;
   if (requestedLocale ? !readiness.ready : nativeSources.length) throw new LocalePackagingError(readiness?.blockers || nativeSources);
   if (!requestedLocale) for (const item of plan.plans) assertLegacyLocaleCompatible({ manifest: plan.manifest, source: item.source });
@@ -65,11 +66,12 @@ export async function createIndependentDealer({ root = ROOT, client, repository,
     const language = requestedLocale?.defaultLocale || 'en';
     const manifest = { ...plan.manifest, sourceOwnership: 'independent-repository', language, switcher: { language, accent: '#c40101' },
       ...(requestedLocale ? { localization: requestedLocale, packaging: { ...plan.manifest.packaging, version: NATIVE_PACKAGING_VERSION } } : {}),
-      templateRevisions: Object.fromEntries(plan.plans.map(p => [p.template, p.release.commit])) };
+      templateRevisions: Object.fromEntries(plan.plans.map(p => [p.template, p.sourceRef.revision])),
+      templateSources: Object.fromEntries(plan.plans.map(p => [p.template, p.sourceRef])) };
     writeJson(path.join(seed, 'dealer.json'), manifest);
     for (const item of plan.plans) {
       const dest = path.join(seed, item.template);
-      await copy(item.source, dest, { key: item.template, exportPolicy: POLICY });
+      await materializeTemplateSource({ root, key: item.template, release: item.release, source: item.sourceRef, destination: dest, copy });
       if (fingerprint(dest).digest !== item.release.digest) throw new Error('Template copy mismatch: ' + item.template);
     }
     const candidate = path.join(stage, 'ready');

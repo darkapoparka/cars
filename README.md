@@ -1,58 +1,39 @@
 # Cars
 
-**Working branch: `main`.** Use one writer per checkout. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
+Work in **J:/cars**, on **main**. The four editable template masters live here:
 
-Open **Cars** for a new dealer, dealer fixes, research, the project registry or publication. Open the appropriate **cars-template-…** project to improve reusable frontend UI or code.
-
-Open [Cars.code-workspace](Cars.code-workspace) to group **six repositories**: Cars, four template masters and Cars Admin. The [workspace map](docs/WORKSPACE.md) defines ownership and the shared admin boundary.
-
-Keep these projects. A reviewed template commit is promoted into Cars; new leads use that pinned release. Existing dealers stay independent until you request an update. You do not need to remember a manual copy step: the lead workflow checks releases and refuses unapproved or changed snapshots.
-
-## The everyday result
-
-Building a new lead still clones actual template code, then personalizes it. Standard output: `clients/<slug>/auto-best`, `modern`, and `carwow`. An Import trio uses `import` instead of `modern`. All three publish together to one dealer GitHub repository on `main`, one Vercel project and one preview URL, with the shared Admin link. No multi-tenant migration is needed to use this workflow.
-
-Work in the existing Cars and template folders. The clone command enforces synchronized main and the recorded Windows checkout, reports newer upstream development, and installs the three verified copies together. A completed template update is reviewed/promoted into Cars before new leads consume it; uncommitted drafts are never implicitly released.
-
-## Everyday requests
-
-- In `cars-template-carwow`: “Polish the mobile inventory in this template. Preserve unrelated work and show the result.”
-- In Cars: “Review the latest Carwow release and promote it when the checks pass.”
-- In Cars: “Build [dealer] with the standard three designs using verified facts.”
-- In Cars: “Continue Promosale Varna; keep its Auto Best, Import and Carwow designs.”
-- In Cars: “Audit [dealer] only.” This does not publish or contact anyone.
-
-Each dealer has **one source folder, three applications, one publishing repository, one Vercel project and one public origin**. The design button switches applications and links to the shared client-facing admin demo; it is not a fourth design. New names use `cars-<dealerkey>`; recorded exceptions such as `excellent-cars` keep their identity.
-
-## Start here
-
-[Workflow](docs/WORKFLOW.md) · [Template releases](docs/TEMPLATE-PROMOTION.md) · [Publishing](docs/LEAD-PUBLISHING.md) · [Projects and evidence](docs/DEPLOYMENTS.md) · [Documentation index](docs/README.md)
-
-Use Node 22.22+ or Node 24 for Cars tooling. Each app retains its own documented Node version and lockfile. Git, GitHub CLI (or a connected GitHub plugin), PowerShell for local launchers, and authorized Vercel access are needed for their respective operations. See [local setup](docs/LOCAL-SETUP.md).
-
-```powershell
-node scripts/template-release.mjs status
-node scripts/template-release.mjs discover
-node scripts/index-deployments.mjs --check
-node scripts/check-workflow.mjs
-node --test scripts/*.test.mjs
+```text
+templates/auto-best/
+templates/modern/
+templates/carwow/
+templates/import/
+clients/<dealer>/          # one dealer, three personalized applications
+scripts/                  # creation, explicit updates and publication
+runtime/                  # generated packages, logs and QA evidence; ignored by Git
 ```
 
-Before creating a new approved dealer, substitute its verified identity:
+Open [Cars.code-workspace](Cars.code-workspace). It includes Cars and the separate shared Cars Admin demo. The old `J:/template-repos/cars-template-*` folders are retained recovery/history sources. Frontend work now belongs in `templates/<key>`.
+
+## Everyday workflow
+
+1. Improve a template in `templates/<key>`, preview it there, test, commit and push to Cars main. Select its tested version for reuse through [template releases](docs/TEMPLATE-PROMOTION.md).
+2. Build a lead from three selected templates. Standard: Auto Best, Modern, Carwow. Import replaces Modern when appropriate. Add one sourced business/inventory pack and real or generated raster branding through the existing content boundaries.
+3. Publish all three designs to that lead's existing private GitHub repository and one Vercel project. Give the lead one public URL with three design choices and the shared Admin demo link.
+4. When requested, update an existing dealer deliberately. Compare its old template, current dealer source and new template; preserve its branding, listings, assets and custom work; preview the result before installing and publishing it.
+
+Template edits never automatically roll out to dealers. Each dealer can stay on its working version until its update is reviewed. When a lead chooses a design, finalize that design in the same dealer project and retain its identity and deployment history.
+
+## Commands
 
 ```powershell
+node scripts/workspace-doctor.mjs --fetch
+node scripts/template-release.mjs status
+./scripts/start-preview.ps1 -Template carwow -Port 6463
 node scripts/new-client.mjs --client example-dealer --repository darkapoparka/cars-exampledealer --preset standard --dry-run
 ```
 
-The dry run also checks canonical checkout, synchronized GitHub main, committed workflow inputs, identity, destinations, current upstream heads and release integrity. It does not create a client folder. Remove `--dry-run` only for the requested new dealer. Use `--preset import` for the intentional Import trio. A refusal for an unreconciled template is a release hold, not a request to overwrite local work.
+Preview ports must be free; the launcher reports the actual source path and process. Use the new-client command without `--dry-run` for an authorized build with the real dealer identity. It copies the selected immutable release, not an unfinished working folder. Current release holds are reported explicitly.
 
-For existing local source:
+Cars owns canonical source for existing `clients/<slug>` dealers; their dedicated repositories are publishing mirrors. Explicitly registered independent dealers retain their own source repository, as recorded in the registry. Do not create a second editable copy of either kind.
 
-```powershell
-./scripts/start-client.ps1 -List
-./scripts/start-client.ps1 -Client promosale-varna -Plan
-```
-
-Progress belongs in the dealer's `dealer.json`, per-variant `.client/project.json`, client brief and technical registry. QA records exact commits, routes and dates. Owner review remains in [MANUAL-REVIEW](docs/MANUAL-REVIEW.md).
-
-The three repository skills live in [.agents/skills](.agents/skills/): `cars-lead-build`, `cars-template-release`, `cars-publish`. [Web collaboration](docs/LOCAL-SETUP.md#web-collaboration) has the short GitHub read-entry instruction. See [migration evidence](docs/WORKFLOW-MIGRATION-2026-09-12.md) for the preservation record and remaining release holds.
+Read [AGENTS](AGENTS.md) for preservation rules, [WORKFLOW](docs/WORKFLOW.md) for dealer work, [publishing](docs/LEAD-PUBLISHING.md) for delivery, and [projects](docs/DEPLOYMENTS.md) for recorded URLs. [WORKSPACE](docs/WORKSPACE.md) explains ownership; [documentation](docs/README.md) routes deeper references. Agency OS integration can follow later; private CRM and outreach data stay outside this public repository.

@@ -3,21 +3,105 @@ import path from 'node:path';
 import {gitRead} from './workspace-doctor.mjs';
 import { nativeLocaleSources } from './lib/dealer-locale.mjs';
 import { validateNativeRelease } from './lib/native-localization.mjs';
-import {ROOT,POLICY,args,json,writeJson,git,inside,fingerprint,exportCommit} from './lib/workflow.mjs';
+import {ROOT,POLICY,args,json,writeJson,git,inside,fingerprint,fingerprintCommit,exportCommit,gitFiles} from './lib/workflow.mjs';
+import { isCarsTemplateSource } from './lib/template-source.mjs';
 
 export function verifyTemplate(root,key){
  const lock=json(path.join(root,'templates.lock.json')),entry=lock.templates[key];
  if(!entry)throw new Error(`No release lock for ${key}. Run template-release status.`);
  if(entry.status!=='approved')throw new Error(`${key}: ${entry.status}. Reconcile and verify a release before building new leads.`);
  if(!/^[a-f0-9]{40}$/.test(entry.commit||'')||entry.exportPolicy!==POLICY)throw new Error(`${key}: invalid commit or export policy.`);
- const actual=fingerprint(inside(root,entry.snapshotPath,{mustExist:true}));
- if(actual.digest!==entry.digest)throw new Error(`${key}: snapshot drift (expected ${entry.digest}, found ${actual.digest}). Preserve edits; do not overwrite.`);
+ const source=entry.source;
+ if(source){
+  if(!isCarsTemplateSource(source)||source.path!==`templates/${key}`||source.path!==entry.snapshotPath||source.repository!==entry.repository||source.revision!==entry.commit||source.digest!==entry.digest)throw new Error(`${key}: invalid Cars subtree source descriptor.`);
+  if(git(root,['merge-base','--is-ancestor',source.revision,'HEAD'],{allowFailure:true})===null)throw new Error(`${key}: Cars source revision is not committed on main.`);
+  const actualTree=git(root,['rev-parse',`${source.revision}:${source.path}`]);
+  if(actualTree!==source.tree)throw new Error(`${key}: Cars subtree tree mismatch (expected ${source.tree}, found ${actualTree}).`);
+  const actual=fingerprintCommit(root,source.revision,{prefix:source.path});
+  if(actual.digest!==entry.digest)throw new Error(`${key}: immutable Cars source digest mismatch (expected ${entry.digest}, found ${actual.digest}).`);
+  inside(root,entry.snapshotPath,{mustExist:true});
+ }else{
+  if(entry.repository!==`darkapoparka/cars-template-${key}`)throw new Error(`${key}: missing exact Cars source descriptor or invalid legacy repository.`);
+  const actual=fingerprint(inside(root,entry.snapshotPath,{mustExist:true}));
+  if(actual.digest!==entry.digest)throw new Error(`${key}: snapshot drift (expected ${entry.digest}, found ${actual.digest}). Preserve edits; do not overwrite.`);
+ }
  return entry;
 }
-export function releaseStatus(root){const lock=json(path.join(root,'templates.lock.json'));return Object.entries(lock.templates).map(([key,e])=>{let integrity='unchecked';try{const actual=fingerprint(inside(root,e.snapshotPath,{mustExist:true}));integrity=actual.digest===e.digest?'matches':'drift';}catch(error){integrity=error.message;}return{key,status:e.status,repository:e.repository,commit:e.commit,snapshot:e.snapshotPath,integrity};});}
+export function selectedTemplateSource(entry){
+ if(entry?.source)return entry.source;
+ return {repository:entry?.repository,revision:entry?.commit,path:'',tree:null,digest:entry?.digest};
+}
+export function templateDevelopmentState(root,key,entry,developmentHead,{readGit=gitRead}={}){
+ const source=selectedTemplateSource(entry);
+ if(source.repository==='darkapoparka/cars'){
+  const developmentTree=readGit(root,['rev-parse',`${developmentHead}:${source.path}`]);
+  return{developmentHead,developmentTree,updateAvailable:developmentTree!==source.tree};
+ }
+ return{developmentHead,developmentTree:null,updateAvailable:developmentHead!==source.revision};
+}
+export function releaseStatus(root){
+ const lock=json(path.join(root,'templates.lock.json'));
+ return Object.entries(lock.templates).map(([key,entry])=>{
+  let integrity='unchecked',working='unchecked';
+  try{verifyTemplate(root,key);integrity='matches';}catch(error){integrity=error.message;}
+  try{working=fingerprint(inside(root,entry.snapshotPath,{mustExist:true})).digest===entry.digest?'matches-approved-source':'development-changes';}catch(error){working=error.message;}
+  return{key,status:entry.status,repository:entry.repository,commit:entry.commit,source:entry.source||null,snapshot:entry.snapshotPath,integrity,working};
+ });
+}
+
+// Select a reviewed commit already published from Cars. No template folder is copied or replaced.
+export function approveCarsTemplate({root=ROOT,key,commit,evidence,write=false}) {
+ if(!['auto-best','modern','carwow','import'].includes(key))throw new Error('Select one of the four Cars templates.');
+ if(!/^[a-f0-9]{40}$/.test(commit||''))throw new Error('Supply an immutable 40-character Cars commit SHA.');
+ const remote=git(root,['remote','get-url','origin']).replace(/\.git$/,'').replace(/^git@github.com:/,'https://github.com/');
+ if(remote!=='https://github.com/darkapoparka/cars'||git(root,['branch','--show-current'])!=='main')throw new Error('Approve template releases from the Cars main checkout.');
+ for(const ref of ['HEAD','refs/remotes/origin/main']) {
+  if(git(root,['merge-base','--is-ancestor',commit,ref],{allowFailure:true})===null)throw new Error(`Template source is not published on Cars main: ${ref}`);
+ }
+ const lockFile=path.join(root,'templates.lock.json'),before=fs.readFileSync(lockFile),lock=JSON.parse(before),prior=lock.templates[key];
+ if(!prior)throw new Error(`No existing release entry for ${key}.`);
+ const prefix=`templates/${key}`,actual=fingerprintCommit(root,commit,{prefix});
+ if(!actual.files.some(f=>f.path==='package.json'))throw new Error(`${key}: missing template application at the selected commit.`);
+ const source={repository:'darkapoparka/cars',revision:commit,path:prefix,
+  tree:git(root,['rev-parse',`${commit}:${prefix}`]),digest:actual.digest};
+ const report={key,source,previousSource:selectedTemplateSource(prior),write,files:actual.files.length,
+  changesWorkingFiles:false,changesDealers:false};
+ if(!evidence) {
+  if(write)throw new Error('Writing requires exact-source QA in --evidence.');
+  return {...report,ready:false,reason:'Supply exact-source QA evidence to approve this release.'};
+ }
+ const evidenceFile=inside(root,path.relative(root,path.resolve(evidence)),{mustExist:true});
+ const qa=json(evidenceFile);
+ if(qa.repository!==source.repository||qa.commit!==commit||qa.sourcePath!==prefix||
+    qa.sourceTree!==source.tree||qa.sourceDigest!==source.digest||qa.approved!==true||
+    !Number.isFinite(Date.parse(qa.verifiedAt))||!qa.runtime||!qa.checks?.length||
+    qa.checks.some(c=>c.status!=='passed')||!qa.standalone?.mobile||!qa.standalone?.desktop) {
+  throw new Error('Evidence must bind passed checks and mobile/desktop QA to this exact Cars commit, subtree and digest.');
+ }
+ const entry={...prior,status:'approved',repository:source.repository,commit,source,snapshotPath:prefix,
+  digest:source.digest,exportPolicy:POLICY,release:qa.release||null,
+  reason:'Reviewed immutable Cars template source; dealer adoption is explicit.',
+  runtime:qa.runtime,modes:qa.modes||{standalone:'verified',mounted:'requires-dealer-QA'},
+  qa:{evidence:path.relative(root,evidenceFile).replaceAll('\\','/'),verifiedAt:qa.verifiedAt,
+    checks:qa.checks,standalone:qa.standalone,...(qa.nativeLocalization?{nativeLocalization:qa.nativeLocalization}:{})}};
+ if(!prior.source&&!prior.legacySource)entry.legacySource={...selectedTemplateSource(prior),
+  evidence:prior.qa?.evidence||null,nativeDeployment:prior.qa?.nativeLocalization?.deployment||null};
+ const sourceFiles=new Map(gitFiles(root,commit,{prefix}).map(f=>[f.path,Buffer.alloc(0)]));
+ if(nativeLocaleSources(sourceFiles).length||qa.nativeLocalization)validateNativeRelease(key,entry);
+ if(write) {
+  if(!fs.readFileSync(lockFile).equals(before))throw new Error('Release lock changed during review; preserve the newer selection.');
+  lock.templates[key]=entry;
+  const temp=path.join(path.dirname(lockFile),`.templates-lock-${process.pid}-${Date.now()}.tmp`);
+  try {fs.writeFileSync(temp,JSON.stringify(lock,null,2)+'\n',{flag:'wx'});fs.renameSync(temp,lockFile);}
+  finally {if(fs.existsSync(temp))fs.unlinkSync(temp);}
+ }
+ return {...report,ready:true,release:entry};
+}
+
 
 export function promoteTemplate({root=ROOT,key,sourceRepo,commit,evidence,expectedDigest,write=false}){
  const lockPath=path.join(root,'templates.lock.json'),initialLock=fs.readFileSync(lockPath),lock=JSON.parse(initialLock),prior=lock.templates[key];if(!prior)throw new Error(`Unknown template ${key}`);
+ if(prior.source?.repository==='darkapoparka/cars')throw new Error('Cars subtree sources are edited in place; use the source review and lock approval workflow instead of snapshot promotion.');
  const repo=fs.realpathSync(sourceRepo),remote=git(repo,['config','--get','remote.origin.url']).replace(/\.git$/,'').replace(/^git@github.com:/,'https://github.com/');
  if(remote!==`https://github.com/${prior.repository}`)throw new Error('Upstream repository identity mismatch.');
  if(!/^[a-f0-9]{40}$/.test(commit||''))throw new Error('Supply --commit with the exact 40-character SHA.');
@@ -54,11 +138,12 @@ export function promoteTemplate({root=ROOT,key,sourceRepo,commit,evidence,expect
  }catch(error){for(const change of applied.reverse()){const target=inside(destination,change.path),saved=inside(backup,change.path);if(fs.existsSync(saved))fs.copyFileSync(saved,target);else if(fs.existsSync(target))fs.unlinkSync(target);}fs.writeFileSync(lockPath,originalLock);if(originalAgent)fs.writeFileSync(agentPath,originalAgent);else if(fs.existsSync(agentPath))fs.unlinkSync(agentPath);throw error;}
  } finally { fs.rmdirSync(promotionLock); }
 }
-async function main(){const [command,...argv]=process.argv.slice(2);if(!command||command==='--help'){console.log('Usage: node scripts/template-release.mjs status | verify [--key KEY] | discover | promote --key KEY --source-repo PATH --commit SHA [--expected-digest HASH] [--evidence FILE --write]\nDiscovery reports development heads; only promote changes snapshots.');return;}
+async function main(){const [command,...argv]=process.argv.slice(2);if(!command||command==='--help'){console.log('Usage: node scripts/template-release.mjs status | verify [--key KEY] | discover | approve --key KEY --commit SHA [--evidence FILE --write] | promote --key KEY --source-repo PATH --commit SHA [--expected-digest HASH] [--evidence FILE --write]\nApprove selects an exact Cars subtree without copying templates or updating dealers. Promote is for legacy standalone recovery.');return;}
  const o=args(argv,['key','source-repo','commit','evidence','expected-digest'],['write']);
  if(command==='status')console.log(JSON.stringify(releaseStatus(ROOT),null,2));
  else if(command==='verify'){const keys=o.key?[o.key]:Object.keys(json(path.join(ROOT,'templates.lock.json')).templates);for(const key of keys)console.log(JSON.stringify({key,...verifyTemplate(ROOT,key)}));}
- else if(command==='discover'){for(const[key,e]of Object.entries(json(path.join(ROOT,'templates.lock.json')).templates)){const head=gitRead(ROOT,['ls-remote','--exit-code',`https://github.com/${e.repository}.git`,'refs/heads/main']).split(/\s/)[0];console.log(JSON.stringify({key,approvedCommit:e.commit,developmentHead:head,updateAvailable:e.commit!==head,action:'Review in standalone template; no automatic promotion.'}));}}
+ else if(command==='discover'){const entries=Object.entries(json(path.join(ROOT,'templates.lock.json')).templates),needsCars=entries.some(([,e])=>e.source?.repository==='darkapoparka/cars');if(needsCars)gitRead(ROOT,['fetch','origin','main']);for(const[key,e]of entries){const repository=e.source?.repository||e.repository,revision=e.source?.revision||e.commit;const head=gitRead(ROOT,['ls-remote','--exit-code',`https://github.com/${repository}.git`,'refs/heads/main']).split(/\s/)[0],development=templateDevelopmentState(ROOT,key,e,head);console.log(JSON.stringify({key,approvedCommit:revision,...development,action:e.source?'Review the Cars subtree and approve its exact source after QA.':'Review in standalone template; no automatic promotion.'}));}}
+ else if(command==='approve'){gitRead(ROOT,['fetch','origin','refs/heads/main:refs/remotes/origin/main']);console.log(JSON.stringify(approveCarsTemplate({key:o.key,commit:o.commit,evidence:o.evidence,write:!!o.write}),null,2));}
  else if(command==='promote')console.log(JSON.stringify(promoteTemplate({key:o.key,sourceRepo:o['source-repo'],commit:o.commit,evidence:o.evidence,expectedDigest:o['expected-digest'],write:!!o.write}),null,2));else throw new Error(`Unknown command ${command}`);
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename)main().catch(e=>{console.error(e.message);process.exitCode=1;});

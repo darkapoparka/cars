@@ -1,11 +1,12 @@
 # Cars workspace instructions
 
-Cars is the integration workspace for dealer demos. The owner's current request takes precedence over workflow guidance; use judgment for routine implementation choices and finish the authorized scope.
+Cars owns the four reusable templates and dealer demos. The owner's current request takes precedence over workflow guidance; use judgment for routine implementation choices and finish the authorized scope.
 
 ## Ownership
 
-- Shared frontend/code improvements belong to the authoritative standalone repositories at `J:/template-repos/cars-template-{auto-best,modern,carwow,import}`.
-- `templates/<key>` holds managed release snapshots selected by `templates.lock.json`. Unreconciled copies are frozen holdings, not approved releases. Never maintain another master here.
+- The four editable masters are `J:/cars/templates/{auto-best,modern,carwow,import}` in `darkapoparka/cars` on `main`. Make shared frontend/code improvements here.
+- `templates.lock.json` selects tested, immutable Cars commits and template subtrees for dealer creation and explicit updates. Development edits do not automatically change any dealer.
+- Former repositories under `J:/template-repos/cars-template-*` are retained migration/recovery sources, not active masters. Preserve their history and any unique files; do not resume frontend work there.
 - `clients/<slug>/` is canonical editable dealer source, with all selected designs together. Dedicated dealer repositories are publishing mirrors; preserve unmatched mirror fixes before exporting.
 - Use this Cars checkout at `J:/cars`. Keep its current `main` checkout and unrelated work intact; do not create another Cars worktree or sibling session copy. Derived packages and evidence go in ignored `runtime/`.
 - `docs/DEPLOYMENT-INVENTORY.json` owns technical project/deployment records. Regional `leads/*.json` owns public research. Agency OS remains the private CRM authority; never put sales notes, credentials or CRM exports in this public repository.
@@ -15,9 +16,9 @@ Cars is the integration workspace for dealer demos. The owner's current request 
 | Request | Read / use |
 | --- | --- |
 | New dealer or dealer correction | [WORKFLOW](docs/WORKFLOW.md), `cars-lead-build` skill |
-| Shared template polish | Open the standalone template; read its AGENTS and relevant technical reference |
+| Shared template polish | Edit `templates/<key>` in Cars; read its AGENTS and relevant technical reference |
 | Localization / country-language rollout | [Execution prompt](docs/prompts/LOCALIZATION-ROLLOUT.md), [stored candidate and evidence](docs/localization/README.md); all inputs are in Git, no chat attachments needed |
-| Review/promote an upstream release | [TEMPLATE-PROMOTION](docs/TEMPLATE-PROMOTION.md), `cars-template-release` skill |
+| Review/select a template release | [TEMPLATE-PROMOTION](docs/TEMPLATE-PROMOTION.md), `cars-template-release` skill |
 | Package/publish one dealer | [LEAD-PUBLISHING](docs/LEAD-PUBLISHING.md), `cars-publish` skill |
 | Audit or status | Inspect relevant source/evidence; remain read-only unless fixes are requested |
 | Research | [Lead index](leads/README.md) and [coverage](leads/COVERAGE.md) |
@@ -58,13 +59,13 @@ The owner chose a main-only workflow on 13 September 2026. Use the saved checkou
 An explicitly requested temporary branch/worktree must be integrated, verified and removed before the task is called complete. If blocked, record its exact repository, ref, commit, paths and next action in the handoff. Do not leave unfinished source discoverable only through a task title or old branch. Source consolidation preserves work; template release, owner visual acceptance and dealer deployment keep their separate checks.
 ## Workspace and admin delivery
 
-Read [WORKSPACE](docs/WORKSPACE.md) for the six-repository map, main synchronization, shared public admin, hosting scale and Agency OS boundary. Open Cars.code-workspace instead of making more template copies. Use node scripts/workspace-doctor.mjs --fetch before writing; resolve blockers in the checkout being used without disturbing other writers. New scratch/evidence belongs in ignored runtime/.
+Read [WORKSPACE](docs/WORKSPACE.md) for the Cars template/dealer map, main synchronization, shared public admin and Agency OS boundary. Open Cars.code-workspace: Cars contains all four masters; Cars Admin is separate. Use node scripts/workspace-doctor.mjs --fetch before writing; resolve blockers in the checkout being used without disturbing other writers. Ignored runtime/ holds generated packages, logs and evidence, never another editable template master. Routine template previews start from templates/<key>.
 
 The shared admin is a synthetic browser-local demo, not the private agency CRM. Keep three design choices plus one admin link, preserve existing routes, and replace older CRM links instead of adding a fifth. Verify the actual public alias and served switcher; READY or hand-set Git metadata alone does not prove uploaded source. Do not duplicate deployment triggers or upload from a stale checkout.
 
 Architecture changes follow [PREVIEW-ARCHITECTURE](docs/PREVIEW-ARCHITECTURE.md): shared source with hybrid delivery. Do not equate one workspace or one repository with one deployment, and do not move existing dealer URLs to an unproven shared runtime. The September local reconciliation is recorded in [RECONCILIATION](docs/workspace/2026-09-19/RECONCILIATION.md); retained recovery copies are not editable masters.
 
-New-lead creation remains three actual template copies in one canonical dealer folder, not a new shared-hosting architecture. Use the checked-in new-client command: it enforces the canonical synchronized main checkout, discovers upstream development, and installs a verified trio atomically. Do not bypass its guards with manual clones. Completed template work includes release review/promotion for future leads; unfinished drafts are not released. Do not make the owner track SHAs or manually synchronize source.
+New-lead creation remains three actual template copies in one canonical dealer folder. Use the checked-in new-client command: it checks synchronized main and the selected release and installs a verified trio atomically. Completed template work includes exact-source release review for future leads; unfinished drafts are not released. Existing dealers update only when requested, preserving logos, inventory, assets and custom changes. Do not make the owner track SHAs or manually synchronize source.
 
 ## Independent dealer pilot
 

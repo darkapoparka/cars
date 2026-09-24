@@ -112,14 +112,19 @@ export function auditNativeCatalogs(files, key, descriptors) {
 export function validateNativeRelease(key, release) {
   const review = release?.qa?.nativeLocalization;
   const fail = reason => { throw new LocalePackagingError([`${key}: ${reason}`]); };
-  if (release?.status !== 'approved' || release.repository !== `darkapoparka/cars-template-${key}` || !commitPattern.test(release.commit || '') || !hashPattern.test(release.digest || '')) fail('invalid selected release');
-  if (!review || review.schemaVersion !== 1 || review.adapter !== 'native-v1' || review.commit !== release.commit || review.repository !== release.repository) fail('no exact-commit native acceptance');
+  const source = release?.source;
+  const carsSourceValid = source?.repository === 'darkapoparka/cars' && source.repository === release?.repository && source.path === `templates/${key}` && source.path === release?.snapshotPath && source.revision === release?.commit && commitPattern.test(source.revision || '') && source.digest === release?.digest && commitPattern.test(source.tree || '');
+  const standaloneSource = !source && release?.repository === `darkapoparka/cars-template-${key}`;
+  const selectedRepository = carsSourceValid ? source.repository : release?.repository;
+  const selectedRevision = carsSourceValid ? source.revision : release?.commit;
+  if (release?.status !== 'approved' || !(carsSourceValid || standaloneSource) || !commitPattern.test(release.commit || '') || !hashPattern.test(release.digest || '')) fail('invalid selected release');
+  if (!review || review.schemaVersion !== 1 || review.adapter !== 'native-v1' || review.commit !== selectedRevision || review.repository !== selectedRepository || (carsSourceValid && (review.sourcePath !== source.path || review.sourceTree !== source.tree))) fail('no exact-commit native acceptance');
   if (JSON.stringify([...(review.locales || [])].sort()) !== '["bg","en"]' || ![320, 390, 1440].every(w => review.widths?.includes(w))) fail('missing EN/BG viewport acceptance');
   if (!hashPattern.test(review.evidenceSha256 || '') || !Number.isFinite(Date.parse(review.verifiedAt))) fail('missing hashed acceptance evidence');
   const checks = new Map((review.checks || []).map(c => [c.name, c]));
   if (checks.size !== review.checks?.length || NATIVE_CHECKS.some(name => checks.get(name)?.status !== 'passed' || !hashPattern.test(checks.get(name)?.evidenceSha256 || ''))) fail('failing, missing or unhashed native check');
   const deployment = review.deployment;
-  if (review.sourceDigest !== release.digest || !deployment || deployment.state !== 'READY' || deployment.sourceCommit !== release.commit || !/^dpl_[A-Za-z0-9]+$/.test(deployment.id || '') || !/^prj_[A-Za-z0-9]+$/.test(deployment.projectId || '')) fail('missing exact-source deployed release verification');
+  if (review.sourceDigest !== release.digest || !deployment || deployment.state !== 'READY' || deployment.sourceCommit !== selectedRevision || !/^dpl_[A-Za-z0-9]+$/.test(deployment.id || '') || !/^prj_[A-Za-z0-9]+$/.test(deployment.projectId || '')) fail('missing exact-source deployed release verification');
   try {
     const alias = new URL(deployment.publicAlias);
     if (alias.protocol !== 'https:' || alias.username || alias.password || alias.pathname !== '/' || alias.search || alias.hash) fail('invalid verified public alias');
@@ -140,6 +145,10 @@ export function nativeContract(manifest) {
   const contract = normalizeDealerLocale(manifest.localization, manifest.dealerId || manifest.slug);
   if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Native v2 adoption requires complete EN/BG; additional languages stay hidden');
   if (!manifest.templateRevisions || manifest.variants.some(v => !commitPattern.test(manifest.templateRevisions[v.key] || ''))) throw new Error('Native adoption requires exact template revisions');
+  if (manifest.templateSources && manifest.variants.some(({ key }) => {
+    const source = manifest.templateSources[key];
+    return !source || !/^[\w.-]+\/[\w.-]+$/.test(source.repository || '') || !commitPattern.test(source.revision || '') || source.revision !== manifest.templateRevisions[key] || typeof source.path !== 'string' || source.path.includes('..') || !hashPattern.test(source.digest || '') || (source.tree !== null && source.tree !== undefined && !commitPattern.test(source.tree));
+  })) throw new Error('Native adoption has an invalid exact template source locator');
   return contract;
 }
 export function nativeInputDigest(files, manifest) {
@@ -153,11 +162,15 @@ export function sealNativeAdoption(files, manifest, releases) {
   const selected = {};
   for (const { key } of manifest.variants) {
     const release = releases[key], review = validateNativeRelease(key, release);
-    if (release.commit !== manifest.templateRevisions[key]) throw new Error(`${key}: native release differs from selected revision`);
+    const selectedRevision = release.source?.revision || release.commit;
+    if (selectedRevision !== manifest.templateRevisions[key]) throw new Error(`${key}: native release differs from selected revision`);
+    if (release.source && JSON.stringify(manifest.templateSources?.[key]) !== JSON.stringify(release.source)) throw new Error(`${key}: native source locator differs from selected release`);
     auditNativeCatalogs(files, key, review.catalogs);
     selected[key] = { status: 'approved', repository: release.repository, commit: release.commit, digest: release.digest,
+      ...(release.source ? { source: release.source, snapshotPath: release.snapshotPath } : {}),
       qa: { nativeLocalization: {
         schemaVersion: 1, adapter: review.adapter, repository: review.repository, commit: review.commit,
+        ...(review.sourcePath ? { sourcePath: review.sourcePath } : {}), ...(review.sourceTree ? { sourceTree: review.sourceTree } : {}),
         locales: review.locales, widths: review.widths, verifiedAt: review.verifiedAt,
         evidenceSha256: review.evidenceSha256, catalogs: review.catalogs, sourceDigest: review.sourceDigest,
         deployment: Object.fromEntries(['id', 'projectId', 'state', 'sourceCommit', 'publicAlias'].map(name => [name, review.deployment[name]])),
@@ -180,7 +193,9 @@ export function assertNativeAdoption(files, manifest) {
   if (JSON.stringify(Object.keys(receipt.releases || {}).sort()) !== JSON.stringify(manifest.variants.map(v => v.key).sort())) throw new Error('Native release set differs from the dealer trio');
   for (const { key } of manifest.variants) {
     const release = receipt.releases[key], review = validateNativeRelease(key, release);
-    if (release.commit !== manifest.templateRevisions[key]) throw new Error(`${key}: stale native revision`);
+    const selectedRevision = release.source?.revision || release.commit;
+    if (selectedRevision !== manifest.templateRevisions[key]) throw new Error(`${key}: stale native revision`);
+    if (release.source && JSON.stringify(manifest.templateSources?.[key]) !== JSON.stringify(release.source)) throw new Error(`${key}: stale native source locator`);
     auditNativeCatalogs(files, key, review.catalogs);
   }
   const actual = nativeInputDigest(files, manifest);

@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { copySource } from './copy-source.mjs';
-import { verifyTemplate } from './template-release.mjs';
+import { verifyTemplate, selectedTemplateSource } from './template-release.mjs';
+import { materializeTemplateSource } from './lib/template-source.mjs';
 import { ROOT, args, git, inside, json, validateManifest, writeJson } from './lib/workflow.mjs';
 import { dealerGuidance } from './lib/dealer-guidance.mjs';
 import { loadDealerProfile } from './lib/client-refresh-normalize.mjs';
@@ -242,12 +243,13 @@ function patchImport({ oldVariant, candidate, facts }) {
 function resetProjectMetadata(oldVariant, candidate, release, slug, key, workflowCommit, entry) {
   const projectFile=path.join(oldVariant,'.client/project.json'); const project=exists(projectFile)?json(projectFile):{};
   const prior=project.templateSource?.commit||project.templateVersion||null;
-  const next={...project,schemaVersion:1,client:slug,templateKey:key,templateVersion:release.commit,state:'refreshed-needs-local-qa',publicUrl:null,qa:{desktop:false,mobile:false,identity:false,contactPath:false},templateSource:{repository:release.repository,commit:release.commit,digest:release.digest,exportPolicy:release.exportPolicy},packaging:{...(project.packaging||{}),version:'1',entry},workflowCommit,refresh:{previousTemplateVersion:prior,refreshedAt:new Date().toISOString(),approvedTemplateCommit:release.commit,mode:'fresh-template-plus-dealer-overlay'}};
+  const source=selectedTemplateSource(release);
+  const next={...project,schemaVersion:1,client:slug,templateKey:key,templateVersion:source.revision,state:'refreshed-needs-local-qa',publicUrl:null,qa:{desktop:false,mobile:false,identity:false,contactPath:false},templateSource:{...source,exportPolicy:release.exportPolicy},packaging:{...(project.packaging||{}),version:'1',entry},workflowCommit,refresh:{previousTemplateVersion:prior,refreshedAt:new Date().toISOString(),approvedTemplateCommit:source.revision,mode:'fresh-template-plus-dealer-overlay'}};
   delete next.verification;delete next.previewUrl;delete next.runtime;delete next.updatedAt;
   fs.mkdirSync(path.join(candidate,'.client'),{recursive:true});writeJson(path.join(candidate,'.client/project.json'),next);
 }
 function rewriteSourceManifest(root,slug,key,candidate,release,workflowCommit,overlay){
-  const file=path.join(candidate,'.template/source-manifest.json');const value=json(file);value.source=`templates/${key}`;value.destination=`clients/${slug}/${key}`;value.sourceCommit=workflowCommit;value.sourceTree=git(root,['rev-parse',`${workflowCommit}:templates/${key}`]);value.method='Approved Cars snapshot plus explicit dealer data/assets overlay';value.approvedTemplate={repository:release.repository,commit:release.commit,digest:release.digest,exportPolicy:release.exportPolicy};value.refresh={mode:'regenerate',overlay};delete value.git;delete value.copiedAt;writeJson(file,value);
+  const file=path.join(candidate,'.template/source-manifest.json');const value=json(file),source=selectedTemplateSource(release);value.source=source.path||`templates/${key}`;value.destination=`clients/${slug}/${key}`;value.sourceCommit=source.revision;value.sourceTree=source.tree;value.workflowCommit=workflowCommit;value.method='Approved immutable template source plus explicit dealer data/assets overlay';value.approvedTemplate={...source,exportPolicy:release.exportPolicy};value.refresh={mode:'regenerate',overlay};delete value.git;delete value.copiedAt;writeJson(file,value);
 }
 const REFRESH_CACHE_NAMES = new Set([
   'node_modules', '.svelte-kit', '.next', '.turbo', '.vercel', 'dist', 'build'
@@ -296,7 +298,14 @@ export async function planClientRefresh(options){
   if(selectedKeys.some(key=>nativeLocaleSources(new Map(),path.join(root,'templates',key)).length)) throw new Error('Native template releases require explicit dealer locale configuration and reviewed native overlay');
   const client=inside(root,`clients/${slug}`,{mustExist:true}),dealerFile=path.join(client,'dealer.json');const manifest=manifestIdentity(root,slug,client,exists(dealerFile)?json(dealerFile):null),workflowCommit=git(root,['rev-parse','HEAD']);
   const runDir=inside(root,`runtime/client-refresh/${slug}/regen-${Date.now()}-${process.pid}`);fs.mkdirSync(runDir,{recursive:true});const facts=dealerFacts(client),profile=loadDealerProfile(client,slug),variants=[];
-  for(const vm of manifest.variants){const key=vm.key,oldVariant=path.join(client,key),release=verifyTemplate(root,key),candidate=path.join(runDir,'candidate',key);fs.mkdirSync(path.dirname(candidate),{recursive:true});await copySource(path.join(root,release.snapshotPath),candidate,{key});let overlay=applyRefreshAdapter({key,oldVariant,candidate,profile});overlay.push(...copyDealerDirectories(oldVariant,candidate,key,slug)); overlay.push(...copyReferencedAssets(oldVariant,candidate,key,overlay));overlay.push(...applyDealerLogoContract({key,oldVariant,candidate,profile}));assertTemplatePresentation({key,template:path.join(root,release.snapshotPath),candidate,profile});resetProjectMetadata(oldVariant,candidate,release,slug,key,workflowCommit,vm.entry);rewriteSourceManifest(root,slug,key,candidate,release,workflowCommit,overlay);fs.writeFileSync(path.join(candidate,'AGENTS.md'),dealerGuidance({slug,variants:manifest.variants,workflowCommit,variant:key}));variants.push({key,release:{repository:release.repository,commit:release.commit,digest:release.digest},candidate,overlay});}
+  for(const vm of manifest.variants){
+    const key=vm.key,oldVariant=path.join(client,key),release=verifyTemplate(root,key),sourceRef=selectedTemplateSource(release);
+    const baseline=path.join(runDir,'baseline',key),candidate=path.join(runDir,'candidate',key);fs.mkdirSync(path.dirname(candidate),{recursive:true});
+    await materializeTemplateSource({root,key,release,source:sourceRef,destination:baseline});
+    await copySource(baseline,candidate,{key,exportPolicy:release.exportPolicy});
+    let overlay=applyRefreshAdapter({key,oldVariant,candidate,profile});overlay.push(...copyDealerDirectories(oldVariant,candidate,key,slug)); overlay.push(...copyReferencedAssets(oldVariant,candidate,key,overlay));overlay.push(...applyDealerLogoContract({key,oldVariant,candidate,profile}));
+    assertTemplatePresentation({key,template:baseline,candidate,profile});resetProjectMetadata(oldVariant,candidate,release,slug,key,workflowCommit,vm.entry);rewriteSourceManifest(root,slug,key,candidate,release,workflowCommit,overlay);fs.writeFileSync(path.join(candidate,'AGENTS.md'),dealerGuidance({slug,variants:manifest.variants,workflowCommit,variant:key}));variants.push({key,release:{source:sourceRef,digest:release.digest},candidate,overlay});
+  }
   const report={schemaVersion:2,slug,workflowCommit,manifest,dirtyBefore:dirtyClientPaths(root,slug),variants,runDir,ready:true};writeJson(path.join(runDir,'proposal.json'),report);return report;
 }
 export async function refreshClient(options) {
