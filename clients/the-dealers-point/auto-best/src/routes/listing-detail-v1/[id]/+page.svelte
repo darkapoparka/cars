@@ -1,4 +1,11 @@
 <script lang="ts">
+  import { trapDialogTab } from '$lib/ui/overlay';
+  import { specificationLabel, formatMileage } from '$lib/i18n/presentation';
+
+  import { getI18n } from '$lib/locale/context';
+  import { templateMessage } from '$lib/i18n/presentation';
+  const i18n = getI18n();
+
   import './detail.css';
   import { vehicleContactHref } from '$data/journeys';
   import { bodyLabel } from '$data/listing';
@@ -16,9 +23,9 @@
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const detailTabs = [
-    { id: 'overview', label: 'Данни' },
-    { id: 'description', label: 'Описание' },
-    { id: 'equipment', label: 'Екстри' }
+    { id: 'overview', label: 'Details', message: 'm_56bd72e87e53' },
+    { id: 'description', label: 'Description', message: 'm_3ef61560aafe' },
+    { id: 'equipment', label: 'Features', message: 'm_0c229ca25b6c' }
   ] as const;
   type DetailTab = (typeof detailTabs)[number]['id'];
   let activeTabsByVehicle = $state<Record<number, DetailTab>>({});
@@ -63,17 +70,17 @@
     document.getElementById(`detail-tab-${nextTab}`)?.focus();
   }
 
-  const conditionLabel = (condition: Vehicle['condition']) => condition === 'new' ? 'Нов' : 'Употребяван';
+  const conditionLabel = (condition: Vehicle['condition']) => condition === 'new' ? i18n.t("m_18fdd549b2ed") : i18n.t("m_ae7d8dfac9ff");
 
   const overview = $derived([
-    { label: 'Марка', value: data.vehicle.make },
-    { label: 'Категория', value: bodyLabel(data.vehicle.body) },
-    { label: 'Състояние', value: conditionLabel(data.vehicle.condition) },
-    { label: 'Година', value: data.vehicle.year },
-    { label: 'Пробег', value: data.vehicle.mileage },
-    { label: 'Гориво', value: data.vehicle.fuel },
-    { label: 'Скоростна кутия', value: data.vehicle.transmission },
-    { label: 'Локация', value: brand.city }
+    { label: i18n.t("m_ccdd25d4230f"), value: data.vehicle.make },
+    { label: i18n.t("m_292c06f0045a"), value: specificationLabel(bodyLabel(data.vehicle.body), i18n.locale) },
+    { label: i18n.t("m_39b36d38d6eb"), value: conditionLabel(data.vehicle.condition) },
+    { label: i18n.t("m_89f6832560de"), value: data.vehicle.year },
+    { label: i18n.t("m_ffe44a017911"), value: formatMileage(data.vehicle.mileageKm, i18n.locale) },
+    { label: i18n.t("m_a80f942f4112"), value: specificationLabel(data.vehicle.fuel, i18n.locale) },
+    { label: i18n.t("inventory.spec.transmission"), value: specificationLabel(data.vehicle.transmission, i18n.locale) },
+    { label: i18n.t("m_15b61974b270"), value: i18n.dealer('city') }
   ]);
 </script>
 
@@ -81,7 +88,7 @@
   <title>{data.vehicle.title} — {brand.name}</title>
   <meta
     name="description"
-    content={`${data.vehicle.title}, ${data.vehicle.year}, ${data.vehicle.mileage}. Наличен автомобил от ${brand.name} в ${brand.city}.`}
+    content={i18n.t("m_14ac5499924c", { p0: data.vehicle.title, p1: data.vehicle.year, p2: formatMileage(data.vehicle.mileageKm, i18n.locale), p3: brand.name, p4: i18n.dealer('city') })}
   />
 </svelte:head>
 
@@ -91,21 +98,21 @@
         <div class="dn-detail-layout">
           <div class="dn-detail-main">
             <header class="dn-detail-card dn-detail-title-card">
-              <a href={data.returnTo}>
+              <a href={i18n.href(data.returnTo)}>
                 <Icon name="arrow-left" size={18} strokeWidth={1.8} />
-                Назад
+                {i18n.t("m_76900f1bfd16")}
               </a>
               <h1 id="vehicle-title">{data.vehicle.title}</h1>
             </header>
 
             <div class="dn-detail-card dn-detail-media-card">
               <figure class="dn-detail-gallery">
-                <a class="dn-detail-mobile-back" href={data.returnTo} aria-label="Назад към автомобилите">
+                <a class="dn-detail-mobile-back" href={i18n.href(data.returnTo)} aria-label={i18n.t("m_82331f7533ac")}>
                   <Icon name="arrow-left" size={20} strokeWidth={2} />
                 </a>
                 <div class="dn-detail-mobile-actions">
-                  <a {...phoneLinkAttributes} aria-label={`Обадете се на ${brand.phone}`}><Icon name="phone" size={20} strokeWidth={1.9} /></a>
-                  <button type="button" onclick={shareVehicle} aria-label={shareCopied ? 'Линкът е копиран' : 'Споделете автомобила'}>
+                  <a {...phoneLinkAttributes} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}><Icon name="phone" size={20} strokeWidth={1.9} /></a>
+                  <button type="button" onclick={shareVehicle} aria-label={shareCopied ? i18n.t("m_bd845e0879a3") : i18n.t("m_d8977651889f")}>
                     <Icon name="share" size={20} strokeWidth={1.9} />
                   </button>
                 </div>
@@ -120,8 +127,8 @@
               </figure>
             </div>
 
-            <section class="dn-detail-card dn-detail-info-card" aria-label="Информация за автомобила">
-              <div class="dn-detail-tabs" role="tablist" aria-label="Информация за автомобила">
+            <section class="dn-detail-card dn-detail-info-card" aria-label={i18n.t("m_ba3e721d1725")}>
+              <div class="dn-detail-tabs" role="tablist" aria-label={i18n.t("m_ba3e721d1725")}>
                 {#each detailTabs as tab (tab.id)}
                   <button
                     id={`detail-tab-${tab.id}`}
@@ -133,7 +140,7 @@
                     class={activeDetailTab === tab.id ? 'active' : undefined}
                     onclick={() => selectDetailTab(tab.id)}
                     onkeydown={(event) => handleDetailTabKeydown(event, tab.id)}
-                  >{tab.label}</button>
+                  >{i18n.t(tab.message)}</button>
                 {/each}
               </div>
 
@@ -156,19 +163,18 @@
                   aria-labelledby="detail-tab-description"
                 >
                   <p>
-                    {data.vehicle.title} е част от актуалната селекция на {brand.name}. Свържете се с
-                    екипа за потвърдени данни за състоянието, наличността и следващите стъпки.
+                    {templateMessage(i18n, "{p0} is an illustrative demo vehicle on this {p1} website concept. Contact the showroom to confirm current availability, condition and details.", { p0: data.vehicle.title, p1: brand.name })}
                   </p>
-                  <a class="dn-detail-inline-action" href={resolve(vehicleContactHref(data.vehicle.id))}>
+                  <a class="dn-detail-inline-action" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
                     <Icon name="message" size={22} strokeWidth={1.7} />
-                    Поискайте информация
+                    {i18n.t("m_aaff7e78a8ea")}
                   </a>
                 </div>
               {:else}
                 <div id="detail-panel-equipment" role="tabpanel" aria-labelledby="detail-tab-equipment">
                   <ul class="dn-detail-equipment">
                     {#each data.vehicle.equipment as feature (feature)}
-                      <li><span aria-hidden="true"></span>{feature}</li>
+                      <li><span aria-hidden="true"></span>{specificationLabel(feature, i18n.locale)}</li>
                     {/each}
                   </ul>
                 </div>
@@ -177,27 +183,27 @@
 
             <section class="dn-detail-card dn-detail-location-card" id="location" aria-labelledby="location-title">
               <div class="dn-detail-location-card__header">
-                <h2 id="location-title">Локация</h2>
-                <p><Icon name="map-pin" size={20} strokeWidth={1.7} />{brand.address}</p>
+                <h2 id="location-title">{i18n.t("m_15b61974b270")}</h2>
+                <p><Icon name="map-pin" size={20} strokeWidth={1.7} />{i18n.dealer('address')}</p>
               </div>
               <ShowroomMap />
             </section>
           </div>
 
-          <aside class="dn-detail-sidebar" aria-label="Информация за автомобила">
+          <aside class="dn-detail-sidebar" aria-label={i18n.t("m_ba3e721d1725")}>
             <section class="dn-detail-card dn-detail-summary">
-              <p class="dn-detail-summary__label">Цена</p>
-              <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur)}</p>
-              <p class="dn-detail-summary__availability">Наличността и условията се потвърждават от екипа.</p>
+              <p class="dn-detail-summary__label">{i18n.t("m_93c91c851e7a")}</p>
+              <p class="dn-detail-summary__price">{formatVehiclePrice(data.vehicle.priceEur, i18n.locale)}</p>
+              <p class="dn-detail-summary__availability">{i18n.t("m_663f512d0d8e")}</p>
               <div class="dn-detail-summary__actions">
-                <a class="dn-detail-button dn-detail-button--call" {...phoneLinkAttributes}>Обадете се</a>
-                <a class="dn-detail-button dn-detail-button--enquiry" href={resolve(vehicleContactHref(data.vehicle.id))}>Заявете оглед</a>
+                <a class="dn-detail-button dn-detail-button--call" {...phoneLinkAttributes}>{i18n.t("m_5c9190347136")}</a>
+                <a class="dn-detail-button dn-detail-button--enquiry" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>{i18n.t("m_be4b2e6f02d6")}</a>
               </div>
             </section>
 
-            <section class="dn-detail-card dn-detail-finance-card" aria-label="Финансиране">
-              <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label="Отворете финансирането за този автомобил">
-                <img class="dn-detail-finance-banner" src={leadSite.artwork.pdp.finance} alt="Финансиране за този автомобил" width="450" height="150" loading="lazy" decoding="async" />
+            <section class="dn-detail-card dn-detail-finance-card" aria-label={i18n.t("m_b444d04a5c5c")}>
+              <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
+                <img class="dn-detail-finance-banner" src={leadSite.artwork.pdp.finance} alt={i18n.t("m_cab8c52c9be4")} width="450" height="150" loading="lazy" decoding="async" />
               </button>
               <div class="dn-detail-finance-inline">
                 {#key data.vehicle.id}
@@ -207,8 +213,8 @@
             </section>
 
             <section class="dn-detail-card dn-detail-dealer" aria-label={brand.name}>
-              <a class="dn-detail-dealer-banner" href={resolve(vehicleContactHref(data.vehicle.id))}>
-                <img src={leadSite.artwork.pdp.seller} alt={`${brand.name} — доверен дилър. Обсъдете автомобила.`} width="360" height="270" loading="lazy" decoding="async" />
+              <a class="dn-detail-dealer-banner" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
+                <img src={leadSite.artwork.pdp.seller} alt={templateMessage(i18n, "{p0} — contact the showroom to confirm vehicle details.", { p0: brand.name })} width="360" height="270" loading="lazy" decoding="async" />
               </a>
             </section>
 
@@ -218,18 +224,18 @@
         <section class="dn-detail-related" aria-labelledby="related-title">
           <div class="dn-detail-related__header">
             <div>
-              <h2 id="related-title">Подбрани автомобили</h2>
-              <p>Още предложения от актуалната селекция</p>
+              <h2 id="related-title">{i18n.t("m_0122bd9951a2")}</h2>
+              <p>{i18n.t("m_70f001dd6767")}</p>
             </div>
-            <a class="dn-detail-related__all" href={resolve('/listing-grid')}>Вижте всички автомобили</a>
+            <a class="dn-detail-related__all" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_7d6647b063a2")}</a>
           </div>
           <div class="dn-detail-related__list">
             {#each data.recommendations as vehicle (vehicle.id)}
-              <a class="dn-detail-related-card" href={resolve(vehicle.href as '/listing-detail-v1/1')}>
+              <a class="dn-detail-related-card" href={i18n.href(resolve(vehicle.href as '/listing-detail-v1/1'))}>
                 <img src={vehicle.image} alt="" width="420" height="280" decoding="async" />
                 <span>
                   <strong>{vehicle.title}</strong>
-                  <b>{formatVehiclePrice(vehicle.priceEur)}</b>
+                  <b>{formatVehiclePrice(vehicle.priceEur, i18n.locale)}</b>
                 </span>
               </a>
             {/each}
@@ -238,7 +244,7 @@
       </div>
     </section>
 
-  <dialog
+  <dialog onkeydown={trapDialogTab}
     class="dn-detail-finance-dialog"
     id="dn-detail-finance-dialog"
     bind:this={financeDialog}
@@ -248,11 +254,11 @@
     <div class="dn-detail-finance-sheet">
       <header class="dn-detail-finance-sheet__header">
         <div>
-          <span>За {data.vehicle.title}</span>
-          <h2 id="dn-detail-finance-dialog-title">Финансиране</h2>
+          <span>{i18n.t("m_76e1b210c1a4", { p0: data.vehicle.title })}</span>
+          <h2 id="dn-detail-finance-dialog-title">{i18n.t("m_b444d04a5c5c")}</h2>
         </div>
-        <button type="button" onclick={closeFinance} aria-label="Затворете калкулатора">
-          <Icon name="x" size={20} strokeWidth={1.8} />
+        <button class="dn-icon-button" type="button" onclick={closeFinance} aria-label={i18n.t("m_aafd23be5f4a")}>
+          <Icon name="x" size={18} strokeWidth={1.8} />
         </button>
       </header>
       {#key data.vehicle.id}

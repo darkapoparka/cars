@@ -1,7 +1,9 @@
 import { listPublicVehicles } from '$lib/server/public-vehicles';
 import { json } from '@sveltejs/kit';
 import { getInventoryState } from '$lib/server/inventory-state';
-import { inventoryDesktopDataFromState } from '$lib/auxero/inventory-desktop';
+import { inventoryDesktopDataFromState } from '$lib/server/inventory-options';
+import { inventoryCardsFromVehicles } from '$lib/domain/vehicle-card';
+import { inventoryText } from '$lib/content/inventory-localized';
 import type { RequestHandler } from './$types';
 
 const preferredFeatures = [
@@ -19,18 +21,22 @@ const featureRank = (feature: string) => {
 	return index === -1 ? preferredFeatures.length : index;
 };
 
-export const GET: RequestHandler = ({ url }) => {
+export const GET: RequestHandler = ({ url, locals }) => {
 	const state = getInventoryState('listing-grid4-columns.html', { searchParams: url.searchParams });
-	const desktop = inventoryDesktopDataFromState(state, 'bg');
+	const locale = locals.localeState.locale;
+	const desktop = inventoryDesktopDataFromState(state, locale);
 	return json(
 		{
 			count: state.selected.length,
+			...(url.searchParams.get('preview') === '1'
+				? { cards: inventoryCardsFromVehicles(state.selected.slice(0, 4), locale) }
+				: {}),
 			filters: desktop.filters,
 			features: [...new Set(listPublicVehicles().flatMap((vehicle) => vehicle.features))]
 				.sort((a, b) => featureRank(a) - featureRank(b) || a.localeCompare(b, 'bg'))
 				.map((value) => ({
 					value,
-					label: value.replaceAll('$lib', '/').replaceAll('IN/', 'IN / ')
+					label: inventoryText(locale, value).replaceAll('$lib', '/').replaceAll('IN/', 'IN / ')
 				})),
 			models: desktop.filters.find((filter) => filter.name === 'model')?.options ?? []
 		},

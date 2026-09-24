@@ -1,4 +1,5 @@
 import { currentDayNightListings, type CurrentDayNightListing } from './daynight-current-inventory';
+import { formatEuroPriceLabel } from '$lib/utils/format';
 
 export type Car = {
 	slug: string;
@@ -119,7 +120,7 @@ const listingToVehicle = (listing: CurrentDayNightListing): Car => {
 		drive,
 		color: listing.color,
 		price,
-		priceEur: listing.priceEur,
+		priceEur: formatEuroPriceLabel(listing.priceEur),
 		priceBgn: listing.priceBgn,
 		monthly: 'Финансиране по запитване',
 		image: listing.image,

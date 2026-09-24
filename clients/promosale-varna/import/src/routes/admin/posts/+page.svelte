@@ -53,10 +53,10 @@
 					</div>
 					<div>
 						<h2 class="m-0 text-base font-semibold">{post.title}</h2>
-						<p class="text-muted-foreground m-0 mt-1 line-clamp-3 text-sm">{post.excerpt}</p>
+						<p class="m-0 mt-1 line-clamp-3 text-sm text-muted-foreground">{post.excerpt}</p>
 					</div>
 				</Card.Content>
-				<Card.Footer class="text-muted-foreground justify-between border-t text-xs">
+				<Card.Footer class="justify-between border-t text-xs text-muted-foreground">
 					<span>{post.date}</span>
 					<Button href={`/blog/${encodeURIComponent(post.slug)}`} variant="ghost" size="sm">
 						View

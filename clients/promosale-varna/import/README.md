@@ -22,10 +22,14 @@ Improve this repository only when the task is a **shared template improvement**.
 
 `npm ci`
 
-Preview command: `npm run dev -- --host 127.0.0.1 --port 6464 --strictPort`
+Preview command: `npm run dev -- --host 127.0.0.1 --port 6790 --strictPort`
 
 Entry route: `/`
 
 See `TEMPLATE.md` for template-specific boundaries and `docs/LEAD-BUILD.md` for the complete lead workflow. Historical pre-split root docs are preserved under `docs/legacy/from-cars-2026-09-10/` for provenance only; they do not override the current instructions.
 
 Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).
+
+## Implemented architecture and checks
+
+See [Architecture](docs/ARCHITECTURE.md) for native public routing, token ownership, dealer configuration and the deliberately retained legacy/demo boundary. Run `npm run verify`, `npm run build` and `npm run test:e2e` for source qualification. Current implementation evidence and remaining release gates are in [Localization handoff](docs/localization/HANDOFF.md).

@@ -1,13 +1,23 @@
-/** Each owner releases its lock once, including navigation/unmount cleanup. */
+import { containDialogTab } from './focus';
+
+type ScrollLock = { owners: number; value: string; priority: string };
+const scrollLocks = new WeakMap<HTMLElement, ScrollLock>();
+
+/** Nested owners may release in either order; restore only after the last one. */
 export function lockPageScroll() {
   const body = document.body;
-  const previous = body.style.overflow;
-  body.style.overflow = 'hidden';
+  const lock = scrollLocks.get(body) ?? { owners: 0, value: body.style.getPropertyValue('overflow'), priority: body.style.getPropertyPriority('overflow') };
+  scrollLocks.set(body, lock);
+  lock.owners += 1;
+  body.style.setProperty('overflow', 'hidden');
   let released = false;
   return () => {
     if (released) return;
     released = true;
-    body.style.overflow = previous;
+    if (--lock.owners > 0) return;
+    scrollLocks.delete(body);
+    if (lock.value) body.style.setProperty('overflow', lock.value, lock.priority);
+    else body.style.removeProperty('overflow');
   };
 }
 
@@ -21,16 +31,11 @@ export function preserveScrollOffset(property: `--${string}`) {
     released = true;
     if (previous) document.body.style.setProperty(property, previous);
     else document.body.style.removeProperty(property);
-    if (restoreScroll) window.scrollTo(0, y);
+    if (restoreScroll) window.scrollTo({ top: y, behavior: 'instant' });
   };
 }
 
-/** Keep keyboard cycling inside a modal instead of moving to browser chrome. */
+/** Event-handler adapter for native dialogs. */
 export function trapDialogTab(event: KeyboardEvent) {
-  if (event.key !== 'Tab' || !(event.currentTarget instanceof HTMLDialogElement)) return;
-  const nodes = [...event.currentTarget.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex="0"]')]
-    .filter(node => node.getClientRects().length && !node.closest('[hidden]'));
-  const first = nodes[0], last = nodes.at(-1);
-  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
-  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+  if (event.currentTarget instanceof HTMLDialogElement) containDialogTab(event, event.currentTarget);
 }

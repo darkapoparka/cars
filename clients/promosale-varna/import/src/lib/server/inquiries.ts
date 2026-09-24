@@ -1,4 +1,3 @@
-import { daynightContact } from '$lib/data/daynight';
 import {
 	buildDayNightInquiryRecord,
 	createDayNightInquiryRecord,
@@ -8,6 +7,7 @@ import {
 } from './db';
 import { normalizeDayNightRole, type DayNightRole } from './roles';
 import { hasInquiryDatabase } from './inquiry-config';
+import { runtimeConfig } from './runtime-config';
 import {
 	insertStoredInquiry,
 	patchStoredInquiry,
@@ -42,9 +42,11 @@ export const normalizeInquiryStatus = (value: string | undefined) => {
 };
 
 export const createInquiry = async (input: DayNightInquiryInput) => {
+	if (runtimeConfig().inquiryStorage === 'unavailable')
+		throw new Error('Inquiry storage is unavailable');
 	const values = {
 		assignedAgentSlug: input.agentSlug,
-		contactEmail: input.email ?? daynightContact.emailLabel,
+		contactEmail: input.email ?? '',
 		contactName: input.name,
 		contactPhone: input.phone,
 		message: input.message,
@@ -63,6 +65,8 @@ export const createInquiry = async (input: DayNightInquiryInput) => {
 };
 
 export const updateInquiry = async (input: DayNightInquiryUpdateInput) => {
+	if (runtimeConfig().inquiryStorage === 'unavailable')
+		throw new Error('Inquiry storage is unavailable');
 	const patch = {
 		assignedAgentSlug: input.assignedAgentSlug,
 		message: input.message,

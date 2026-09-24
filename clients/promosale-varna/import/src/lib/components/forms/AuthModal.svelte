@@ -17,7 +17,7 @@
 
 					<form action="#">
 						<div class="resutl mb-20">
-							<p class="text-secondary mb-4">Use your Promosale Varna account credentials.</p>
+							<p class="mb-4 text-secondary">Use your Promosale Varna account credentials.</p>
 						</div>
 
 						<label for="email-login" class="mb-20 px-2">
@@ -61,7 +61,7 @@
 						</button>
 
 						<p
-							class="open-modal text-secondary flex cursor-pointer justify-center gap-8 text-sm"
+							class="open-modal flex cursor-pointer justify-center gap-8 text-sm text-secondary"
 							data-modal-id="#SignUpModal"
 						>
 							Not registered yet?
@@ -99,7 +99,7 @@
 						</button>
 
 						<p
-							class="open-modal text-secondary flex cursor-pointer justify-center gap-8 text-sm"
+							class="open-modal flex cursor-pointer justify-center gap-8 text-sm text-secondary"
 							data-modal-id="#SignUpModal"
 						>
 							Not registered yet?
@@ -171,7 +171,7 @@
 							Create a new account
 						</button>
 
-						<p class="text-secondary mb-20 flex justify-center gap-8 text-sm">
+						<p class="mb-20 flex justify-center gap-8 text-sm text-secondary">
 							Already have an account?
 							<span
 								class="open-modal text-underline font-weight-600 cursor-pointer text-sm"
@@ -181,7 +181,7 @@
 
 						<div class="mb-20 flex items-center justify-center gap-20">
 							<p class="divider w-full text-sm"></p>
-							<p class="text-secondary min-w-max text-center text-sm">or sign up with</p>
+							<p class="min-w-max text-center text-sm text-secondary">or sign up with</p>
 							<p class="divider w-full text-sm"></p>
 						</div>
 

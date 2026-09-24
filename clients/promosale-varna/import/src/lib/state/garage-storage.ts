@@ -25,7 +25,11 @@ export const writeStoredStringList = (
 ) => {
 	if (!storage) return;
 
-	storage.setItem(key, JSON.stringify(value));
+	try {
+		storage.setItem(key, JSON.stringify(value));
+	} catch {
+		/* Browser persistence is optional. */
+	}
 };
 
 export const readGarageFavorites = (storage: Storage | undefined) =>
@@ -100,11 +104,15 @@ export const writeGarageCompareSlots = (
 ) => {
 	if (!storage) return;
 
-	storage.setItem(
-		garageCompareSlotsKey,
-		JSON.stringify({
-			compare: cleanSlugs,
-			slots
-		})
-	);
+	try {
+		storage.setItem(
+			garageCompareSlotsKey,
+			JSON.stringify({
+				compare: cleanSlugs,
+				slots
+			})
+		);
+	} catch {
+		/* Browser persistence is optional. */
+	}
 };

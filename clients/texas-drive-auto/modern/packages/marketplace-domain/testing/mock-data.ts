@@ -690,7 +690,7 @@ export const mockListings: VehicleListing[] = [
     "publishedAt": "2026-09-08T09:00:00.000Z",
     "promoted": false
   }
-]
+];
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [
@@ -746,6 +746,13 @@ const createListingPredicates = (
     filters.mileageMax === undefined ||
     listing.spec.mileageValue <= filters.mileageMax,
   (listing) => !filters.fuel || listing.spec.fuelType === filters.fuel,
+  (listing) =>
+    filters.powerMin === undefined ||
+    (listing.spec.enginePowerHp !== undefined &&
+      listing.spec.enginePowerHp >= filters.powerMin),
+  (listing) =>
+    !filters.extra ||
+    Boolean(listing.features?.some((feature) => feature.en === filters.extra)),
   (listing) =>
     !filters.transmission || listing.spec.transmission === filters.transmission,
   (listing) => !filters.body || listing.spec.bodyType === filters.body,

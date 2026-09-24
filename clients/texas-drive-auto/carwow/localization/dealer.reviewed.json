@@ -1,0 +1,50 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Dallas",
+    "bg": "Далас",
+    "en": "Dallas",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "10511 Olympic Drive, Dallas, TX 75220",
+    "bg": "10511 Olympic Drive, Dallas, TX 75220",
+    "en": "10511 Olympic Drive, Dallas, TX 75220",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.address",
+    "source": "10511 Olympic Drive, Dallas, TX 75220",
+    "bg": "10511 Olympic Drive, Dallas, TX 75220",
+    "en": "10511 Olympic Drive, Dallas, TX 75220",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.locationShort",
+    "source": "Texas, Dallas",
+    "bg": "Далас",
+    "en": "Texas, Dallas",
+    "disposition": "translate",
+    "notes": "Dealer-owned short location label."
+  },
+  {
+    "key": "dealer.name",
+    "source": "Texas Drive Auto",
+    "en": "Texas Drive Auto",
+    "bg": "Texas Drive Auto",
+    "disposition": "invariant",
+    "notes": "Dealer-owned proper name."
+  },
+  {
+    "key": "dealer.shortName",
+    "source": "Texas Drive Auto",
+    "en": "Texas Drive Auto",
+    "bg": "Texas Drive Auto",
+    "disposition": "invariant",
+    "notes": "Dealer-owned short proper name."
+  }
+]

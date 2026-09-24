@@ -1,0 +1,109 @@
+/* Shared desktop inventory dialog controls. Mobile uses its own sheet composition. */
+.desktop-filter-dialog .filter-fields {
+	display: grid;
+	flex: none;
+	gap: var(--bc-space-3);
+	margin-bottom: var(--bc-space-5);
+}
+
+.desktop-filter-dialog .filter-options {
+	min-height: 0;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	scrollbar-width: thin;
+	/* Allow keyboard focus rings inside the scrolling region. */
+	padding: var(--bc-space-1);
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-content: start;
+	gap: var(--bc-space-2) var(--bc-space-6);
+}
+
+.desktop-filter-dialog .filter-control {
+	display: flex;
+	align-items: center;
+	gap: var(--bc-space-3);
+	min-height: var(--bc-control-height-hero);
+	padding: var(--bc-space-3) var(--bc-space-4);
+	border: 1px solid transparent;
+	border-radius: var(--bc-radius-md);
+	background: var(--bc-bg-strong);
+	color: var(--bc-ink);
+	font: var(--bc-weight-control) var(--bc-text-entry)/var(--bc-leading-control) var(--bc-font-body);
+}
+
+.desktop-filter-dialog .filter-control:hover {
+	border-color: var(--bc-border-strong);
+}
+.desktop-filter-dialog .filter-control:focus-within,
+.desktop-filter-dialog .filter-control:focus-visible {
+	border-color: var(--bc-accent);
+	outline: 3px solid var(--bc-accent-tint);
+	outline-offset: 0;
+}
+.desktop-filter-dialog .filter-control:focus-within > svg {
+	color: var(--bc-accent);
+}
+.desktop-filter-dialog .filter-control input:not([type='checkbox']) {
+	min-width: 0;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+}
+.desktop-filter-dialog .filter-control input:not([type='checkbox']):focus-visible {
+	/* The enclosing control owns the ring, including the global keyboard-focus override. */
+	outline: none !important;
+	box-shadow: none !important;
+}
+.desktop-filter-dialog .filter-control input::placeholder {
+	color: var(--bc-copy);
+	opacity: 1;
+}
+.desktop-filter-dialog .filter-control input[type='number'] {
+	appearance: textfield;
+}
+.desktop-filter-dialog .filter-control input[type='number']::-webkit-inner-spin-button,
+.desktop-filter-dialog .filter-control input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+@media (min-width: 768px) {
+	.desktop-filter-dialog .filter-choice {
+		min-width: 0;
+		position: relative;
+		min-height: var(--bc-control-height-hero);
+		padding: var(--bc-space-3);
+		border: 1px solid transparent;
+		border-radius: var(--bc-radius-md);
+		background: var(--bc-surface);
+		font-size: var(--bc-text-entry);
+		line-height: var(--bc-leading-control);
+		font-weight: var(--bc-weight-control);
+	}
+	.desktop-filter-dialog .filter-choice:hover {
+		border-color: var(--bc-border-strong);
+		background: var(--bc-surface-hover);
+	}
+	.desktop-filter-dialog .filter-choice:has(:checked) {
+		border-color: var(--bc-accent);
+		background: color-mix(in srgb, var(--bc-accent) 8%, var(--bc-surface-raised));
+		font-weight: var(--bc-weight-control);
+	}
+	.desktop-filter-dialog .filter-choice img {
+		width: 44px;
+		height: 30px;
+	}
+	.desktop-filter-dialog .filter-choice__check:has(:checked) {
+		border-color: var(--bc-accent);
+		background: var(--bc-accent);
+	}
+	.desktop-filter-dialog .filter-choice > span:last-child {
+		min-width: 0;
+		overflow-wrap: anywhere;
+	}
+}

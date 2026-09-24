@@ -1,3 +1,7 @@
+import { message } from '$lib/locale/messages';
+import { routeParts, localeHref } from '$lib/locale/core';
+import { sequence } from '@sveltejs/kit/hooks';
+import { localeHandle } from '$lib/locale/server';
 import { featuredVehicles } from '$data/inventory';
 import type { Handle } from '@sveltejs/kit';
 
@@ -58,17 +62,21 @@ const withSecurityHeaders = (response: Response) => {
   return response;
 };
 
-export const handle: Handle = async ({ event, resolve }) => {
-  const destination = getLegacyRedirect(event.url.pathname);
+const applicationHandle: Handle = async ({ event, resolve }) => {
+ if (!['GET','HEAD','OPTIONS'].includes(event.request.method)) return new Response(JSON.stringify({ error: message(event.locals.localeState.locale, 'm_75e9c43d5461') }), { status: 403, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
+
+  const destination = getLegacyRedirect(routeParts(event.url.pathname).path);
 
   if (destination) {
     return withSecurityHeaders(
       new Response(null, {
         status: 308,
-        headers: { location: `${destination}${event.url.search}` }
+        headers: { location: localeHref(destination + event.url.search, event.locals.localeState.locale) }
       })
     );
   }
 
   return withSecurityHeaders(await resolve(event));
 };
+
+export const handle = sequence(localeHandle, applicationHandle);

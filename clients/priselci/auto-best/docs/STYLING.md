@@ -81,13 +81,13 @@ The root layout imports `@fontsource-variable/onest`. `--dn-font` is `Onest Vari
 
 All live-text typography values belong to `tokens.css`. Components and route sheets select semantic roles; they must not introduce numeric font sizes, font weights, line heights, tracking, or local font shorthands. `check:typography`, included in `validate`, enforces this boundary. Fluid section, hero and display roles also live in tokens. Responsive layouts may select a smaller heading role, but must not shrink ordinary controls below the control role to make them fit.
 
-Use regular 400 for prose, the interpolated UI weight 450 where dense black interface text needs less visual harshness, medium 500 for navigation/actions and semibold 600 for headings and emphasis. Primary actions use `--dn-cta-font` (18px/500 at the default root size); ordinary controls use `--dn-control-font` (16px/500). Both use 1.3 line-height. `--dn-tab-font` supplies quieter 16px/500 entry tabs. The shared `.dn-segmented-control` / `.dn-segmented-option` style owns Buy/Import, Sale/Trade-in and Link/Info controls: 44px total height, pill geometry, pale surface, white selected option and keyboard focus. The 40px options and 2px outer inset form the 44px shell. On mobile, collapsed Home/Sell/Import entry triggers and their red entry CTAs also use a 44px shell; full editor inputs use a compact 48px frame. Components retain their existing tab/group behavior.
+Use regular 400 for prose, the interpolated UI weight 450 where dense black interface text needs less visual harshness, medium 500 for navigation/actions and semibold 600 for headings and emphasis. Prominent full-width overlay actions use `--dn-cta-font` (18px/500 at the default root size); ordinary compact controls use `--dn-control-font` (16px/500). Both use 1.3 line-height. `--dn-tab-font` supplies quieter 16px/500 entry tabs. The shared `.dn-segmented-control` / `.dn-segmented-option` style owns Buy/Import, Sale/Trade-in and Link/Info controls: a 44px interaction shell, 40px options, pill geometry, pale surface, white selected option and keyboard focus. On mobile, collapsed Home/Sell/Import entry triggers and their red entry CTAs use the 44px interaction shell while preserving their distinct field and compact-action typography. Single-line editor inputs use the same 44px field frame. Components retain their existing tab/group behavior.
 
-The entry field is the strongest editable element. `.dn-entry-field` and `.dn-entry-field__input` own its shared border, surface, focus and `--dn-entry-font` (18px/400). Full editor inputs and desktop entry triggers use the 48px editor frame; mobile collapsed Home/Sell/Import triggers use a 44px frame while keeping the same type and focus treatment. The multiline modifier uses the control radius. Home search and both import entry modes consume this same style; do not add smaller local font or border overrides. `ContactIntent` renders one secondary white phone button below the Sell/Import card, outside `.dn-contact-intent__main`, using the ordinary control type, pill radius and 44px action height. Enquiry components do not duplicate that entry call action.
+The entry field is the strongest editable element. `.dn-entry-field` and `.dn-entry-field__input` own its shared surface, focus and `--dn-entry-font` (18px/400). Single-line editor inputs, collapsed Home/Sell/Import triggers and overlay search fields use the 44px field frame. The home and mobile overlay search surfaces are intentionally borderless; Sell/Import reference fields retain their approved line. The multiline modifier uses the control radius and may grow naturally. `ContactIntent` renders one secondary white phone button below the Sell/Import card, outside `.dn-contact-intent__main`, using the ordinary control type, pill radius and 44px action height. Enquiry components do not duplicate that entry call action.
 
 Sell/Import entry fields fill their card width. `EnquiryEntryField.svelte` renders an input-shaped button with a single-line saved value and opens a native dialog to edit a listing link, VIN, or description and budget. The editor is a bottom sheet on mobile and a centered dialog on desktop. Save applies the draft; Cancel, Escape and backdrop dismissal discard it and restore focus. Switching Link/Info preserves each value and the card height. The red CTA continues the existing enquiry flow; an empty Import entry opens its editor first.
 
-The centered mode switch uses `--dn-entry-segment-width` (up to 240px with a narrow-screen inset), and the red CTA uses `--dn-entry-action-width` (up to 220px). These controls remain narrower than the entry field; on mobile the segment shell, collapsed trigger and CTA share the 44px control shell, while the desktop trigger remains taller. Mobile entry titles have one short helper line underneath; the Sell/Import fields have no decorative leading icon.
+The centered mode switch uses `--dn-entry-segment-width` (up to 240px with a narrow-screen inset), and the red CTA uses `--dn-entry-action-width` (up to 180px). These controls remain narrower than the entry field. The segment is a 44px shell with 40px options; the CTA is a 44px interaction shell with a 40px painted pill. Mobile entry titles have one short helper line underneath; the Sell/Import fields have no decorative leading icon.
 
 Body copy is 16px with 1.5 leading; long editorial prose uses 1.65. Labels, supporting metadata, helper text and the mobile dock use the 14px meta role. Nonessential video duration text may use the 12px caption role. Mobile section headings use 24px and service titles use 18px. Make controls and cards reflow around the type instead of adding smaller local overrides. Include `textarea` in native font inheritance.
 
@@ -104,7 +104,7 @@ Sell/Trade-in accepts an optional listing URL or 17-character VIN before opening
 | `--dn-radius-button` | `--dn-pill`, 999px |
 | `--dn-control-height-compact` | 40px |
 | `--dn-control-height-default` | 44px |
-| `--dn-control-height-editor` | 48px |
+| `--dn-control-height-editor` | aliases `--dn-control-height-default` (44px) |
 | `--dn-content` | 1360px |
 | `--dn-menu-content` | 1320px |
 | `--dn-home-section-space` | 32px |
@@ -115,13 +115,13 @@ Sell/Trade-in accepts an optional listing URL or 17-character VIN before opening
 
 The shared spacing scale runs from 2px through 32px and supplies repeated relationships such as banner padding, overlap and control insets. It is not a mandate to tokenize every coordinate: artwork placement, local 14px card corners and one-off responsive geometry remain with their component owner.
 
-The control family is rounded: pill actions, rounded input surfaces and compact circular icon buttons. Entry tabs and entry-card primary actions use a 44px hit height with explicit text labels. Primary actions and single-line inputs inside the full multi-step enquiry dialogs use the shared 48px editor height. The import link/criteria field is separate from its primary action, so a small icon does not have to communicate the entire request action. Other controls retain their owning geometry and expand when text wraps.
+The control family is rounded: pill actions, rounded input surfaces and compact circular icon buttons. Interaction size and painted size are separate. Entry tabs use a 44px shell with 40px options; quick pills and compact entry CTAs use a 44px target with a 40px painted surface; search and single-line editor fields paint the full 44px field. Full-width mobile overlay actions retain their deliberate 48–54px role, and option or overview rows use a 52px minimum where their two-column content needs more breathing room. The import link/criteria field is separate from its primary action. Multiline fields and wrapping options may grow naturally.
 
 Inventory filter chips (including removable active filters), results filters/sorting, the header phone link and mobile footer contact links have a minimum 44px hit height. Keep vehicle-card dimensions and their 8px mobile inventory / 10px carousel gaps independent from control sizing. Metadata badges are labels inside the card link, not separate touch targets. Tablet service cards extend the action link over the card; verify the actual hit area before resizing its text. Vehicle-card keyboard focus uses the opaque `--dn-focus` color and an inset outline so the card's clipped corners do not hide it.
 
 ## Responsive composition
 
-Mobile inventory cards use one 18px/500 title row with an ellipsis; the full name remains in the link's accessible label, the title attribute and the detail page. The right-hand column uses 14px vertical / 12px horizontal padding, four rows (24/20/20/22px), and 6px gaps, giving the current cards a consistent 132px height. Metadata uses 14px text in compact 20px badges. Fuel/transmission badges omit decorative icons on phones; desktop badges retain them. Mobile photos fill their entire image column with `object-fit: cover`, with no letterboxing. Keep the 8px gap between inventory cards. The keyboard-only focus border is drawn above the photograph and badges so the complete card remains visibly selected; normal tapping does not display this border.
+Mobile inventory cards group a regular-weight make label with an 18px model title that may wrap to two lines. The full vehicle name remains in the accessible link label and title attribute. Content grows with the name rather than relying on a fixed card height. Year and mileage share a plain text row; fuel/transmission retain compact badges without decorative icons on phones. Photos fill the image column with object-fit: cover. Keep the 8px gap between cards and the keyboard focus border above the photograph.
 
 Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars otherwise change the available page and fixed-navigation width when moving between long pages (Home) and short pages (Sell/Import). Overlay scrollbars on touch devices retain their normal behavior.
 
@@ -150,7 +150,7 @@ Additional 359/374/380px and 1199px rules handle particular text, grid and contr
 
 Mobile inventory starts with a rounded search field and compact filter/sort controls, followed by one horizontal quick-filter rail. Make and model stay together in that rail. Active chips expose removal; selectors retain a dropdown affordance. The filter sheet contains the deeper options.
 
-Vehicle cards prioritize photograph, title and price over metadata. Mobile year/mileage badges and fuel/transmission icon treatments remain secondary. Card links cover the intended card area, not only a tiny title. Desktop grids adapt through intermediate widths rather than imposing the mobile card structure everywhere.
+Vehicle cards prioritize photograph, model and price. Make labels use the regular metadata role and darker neutral ink, with a small gap above the model. Model titles omit an exact repeated make prefix; differently named model families retain their full title. The whole card is one link. Desktop grids adapt through intermediate widths, with aligned specification and price rows. Shared card hover shadows stay shallow, and article/discovery focus indicators use the focus token.
 
 ## Detail, sell and import
 
@@ -171,3 +171,26 @@ Stock images use photo framing; decorative cutouts use proportion-preserving con
 Existing focus rings, selected states and disabled states communicate different things. Hover effects should stay secondary to the static composition, and mobile scrolling should not rely on hover. Respect the existing reduced-motion media queries. Native modal placement, page scroll handling and the dock interaction need to be considered together when changing drawer styling.
 
 For a visual adjustment, find the winning rule in the component/route/global cascade and edit that owner. Keep the current appearance for architecture-only changes. [Testing](TESTING.md) lists the representative viewports and interaction checks.
+
+## Role-based mobile control contract
+
+Mobile controls do not share one universal visible size. Search and editable entry fields paint the complete 44px field surface with the 18px entry type role. Segmented options paint a 40px surface inside a 44px shell and use 16px tab type. Quick-filter pills and Home/Sell/Import entry CTAs use the same 44px interaction shell with a 40px painted surface, 16px control type and an 8px content gap. `dn-entry-action` additionally owns the 180px maximum width, 20px inline inset and 15px arrow icon. `dn-quick-pill` owns the 16px inline inset.
+
+Search fields use 18px icons and the shared entry-icon gap. Icon-only controls use a 44px target with a 40px painted circle, while each component chooses an icon size appropriate to its visual role. Grid/flex geometry centres icons; do not add device-specific translations or route-specific offsets.
+
+## Overlay control proportions
+
+Home and listing overlay search fields match their opener role: 44px field, 18px type and no decorative border. Home overview rows are 52px with 16px labels, 14px values and 17px arrows. Home option cards are 52px with compact 14px copy and the approved dark selected state. Listing overview rows are 52px with 16px copy; the listing submit action is 54px. Nested picker choices are 52px, while Clear/Apply actions remain 48px. Single-line editor inputs are 44px.
+
+These dimensions are semantic role tokens or deliberate component geometry; they are not a mandate to flatten all controls. Longer localized option labels may grow vertically instead of shrinking type. `scripts/overlay-proportions-smoke.mjs` verifies the role matrix in BG and EN at 320, 390 and 430px.
+
+Overlay gutters, row gaps and row corners reuse the foundation spacing/radius system. Collapsed filters use concise unrestricted values such as “Всеки бюджет”, “Всеки пробег” and “Всяка година”; active values use ink emphasis and wrap without truncation.
+
+### Owner-approved mobile listing title contract — 20 September 2026
+Mobile listing cards retain their font sizes, use natural content rows with token-based gaps, and keep titles on one line with visual ellipsis. Full model text remains in the DOM/accessibility tree and detail destination. This supersedes the earlier two-line mobile-card assertion; desktop presentation is unchanged. Locale acceptance covers both languages and all eight retained cards.
+
+## Shared icon-only controls and modal behavior
+
+Use `dn-icon-button` from `base.css` for close, back and clear controls. It owns a token-derived 44px interaction shell with a 40px visible circle, non-shrinking SVG centering and an explicit native-appearance reset. `dn-compact-control` applies the same 44px shell and 40px visible pill to quick filters and Home, Sell and Import entry actions; `dn-entry-action` and `dn-quick-pill` select their shared width and padding roles. Components own contextual surface, ink, position and responsive visibility.
+
+`src/lib/ui/focus.ts` owns modal Tab containment; `trapDialogTab` adapts native dialog events. Disabled, hidden, inert, negative-tabindex and child-dialog controls are excluded. Focus wrapping scrolls the active control into view; closing restores the opener without scrolling the underlying page. Scroll locks release only after their last owner, even when close and unmount both run.

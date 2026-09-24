@@ -311,7 +311,7 @@
 							{#if listing?.previewImage}
 								<div class="grid gap-2">
 									<Label>Current preview</Label>
-									<div class="border-border overflow-hidden rounded-lg border">
+									<div class="overflow-hidden rounded-lg border border-border">
 										<img
 											src={listing.previewImage}
 											alt={`${listing.title} preview`}
@@ -325,7 +325,7 @@
 									<Label>Gallery on record</Label>
 									<div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
 										{#each currentGalleryImages as image (image)}
-											<div class="border-border overflow-hidden rounded-lg border">
+											<div class="overflow-hidden rounded-lg border border-border">
 												<img
 													src={image}
 													alt={`${listing?.title ?? 'Vehicle'} gallery`}
@@ -338,17 +338,17 @@
 															name="selectedPreviewImage"
 															value={image}
 															checked={listing?.previewImage === image}
-															class="accent-primary size-4"
+															class="size-4 accent-primary"
 														/>
 														<span>Use as preview</span>
 													</label>
 													{#if sourceValue === 'admin-listing'}
-														<label class="text-muted-foreground flex items-center gap-2">
+														<label class="flex items-center gap-2 text-muted-foreground">
 															<input
 																type="checkbox"
 																name="removeGalleryImages"
 																value={image}
-																class="accent-primary size-4"
+																class="size-4 accent-primary"
 															/>
 															<span>Remove from record</span>
 														</label>
@@ -393,12 +393,12 @@
 													{document.originalName}
 												</a>
 												{#if sourceValue === 'admin-listing'}
-													<label class="text-muted-foreground flex items-center gap-2 text-xs">
+													<label class="flex items-center gap-2 text-xs text-muted-foreground">
 														<input
 															type="checkbox"
 															name="removeDocumentIds"
 															value={document.id}
-															class="accent-primary size-4"
+															class="size-4 accent-primary"
 														/>
 														<span>Remove</span>
 													</label>
@@ -434,14 +434,14 @@
 							<div class="grid gap-3 sm:grid-cols-2">
 								{#each featureOptions as feature (feature)}
 									<label
-										class="border-border flex items-center gap-2 rounded-lg border p-3 text-sm"
+										class="flex items-center gap-2 rounded-lg border border-border p-3 text-sm"
 									>
 										<input
 											type="checkbox"
 											name="features"
 											value={feature}
 											checked={checkedFeatures.has(feature)}
-											class="accent-primary size-4"
+											class="size-4 accent-primary"
 										/>
 										<span>{feature}</span>
 									</label>
@@ -464,7 +464,7 @@
 									<div class="flex flex-wrap items-center justify-between gap-3">
 										<div>
 											<p class="text-sm font-medium">Publishing readiness</p>
-											<p class="text-muted-foreground text-xs">
+											<p class="text-xs text-muted-foreground">
 												{completeness.score}% complete - {formatStatus(completeness.level)}
 											</p>
 										</div>
@@ -472,9 +472,9 @@
 											{completeness.missing.length ? 'Needs work' : 'Ready'}
 										</Badge>
 									</div>
-									<div class="bg-muted h-2 overflow-hidden rounded-full">
+									<div class="h-2 overflow-hidden rounded-full bg-muted">
 										<div
-											class="bg-primary h-full rounded-full"
+											class="h-full rounded-full bg-primary"
 											style={`width: ${completeness.score}%`}
 										></div>
 									</div>
@@ -493,7 +493,7 @@
 									id="status"
 									name="status"
 									bind:value={values.status}
-									class="border-input bg-background focus-visible:border-ring focus-visible:ring-ring/50 h-10 rounded-lg border px-3 text-sm outline-none focus-visible:ring-3"
+									class="h-10 rounded-lg border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
 								>
 									{#each statusOptions as option (option.value)}
 										<option value={option.value}>{option.label}</option>
@@ -541,9 +541,9 @@
 							<span class="text-muted-foreground">Completeness</span>
 							<span class="font-medium">{completeness.score}%</span>
 						</div>
-						<div class="bg-muted h-2 overflow-hidden rounded-full">
+						<div class="h-2 overflow-hidden rounded-full bg-muted">
 							<div
-								class="bg-primary h-full rounded-full"
+								class="h-full rounded-full bg-primary"
 								style={`width: ${completeness.score}%`}
 							></div>
 						</div>
@@ -585,7 +585,7 @@
 						<span>{listing?.documentCount ?? 0}</span>
 					</div>
 					<Separator />
-					<div class="text-muted-foreground flex items-start gap-2">
+					<div class="flex items-start gap-2 text-muted-foreground">
 						<FileText class="mt-0.5 size-4 shrink-0" aria-hidden="true" />
 						<p>
 							Uploaded files are stored under <span class="font-mono">static/uploads/cms</span>.

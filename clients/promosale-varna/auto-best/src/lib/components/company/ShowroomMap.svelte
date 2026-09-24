@@ -1,18 +1,24 @@
 <script lang="ts">
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { brand } from '$config/brand';
-  const mapEmbedUrl = "https://maps.google.com/maps?q=Promosale%20Varna%2C%20%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%B0%20%D0%B3%D0%B0%D1%80%D0%B0%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&z=16&output=embed";
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+
+  const mapAddress = $derived(i18n.dealer('address'));
+  const mapEmbedUrl = $derived(`https://maps.google.com/maps?q=${encodeURIComponent(mapAddress)}&z=16&hl=${i18n.locale}&output=embed`);
+  const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`);
 </script>
 
 <div class="dn-showroom-map">
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={"Карта до" + ` ${brand.name}`}
+    title={i18n.t("m_cd07db46b2c6", { p0: brand.name })}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
-  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Отворете в Google Maps</a>
+  <a class="dn-showroom-map__link" href={i18n.href(directionsUrl)} target="_blank" rel="noreferrer">{i18n.t("m_7f22a6352074")}</a>
 </div>
 
 <style>

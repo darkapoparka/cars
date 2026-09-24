@@ -1,13 +1,20 @@
-// See https://svelte.dev/docs/kit/types#app.d.ts
-// for information about these interfaces
 declare global {
 	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		// interface PageState {}
-		// interface Platform {}
+		interface Locals {
+			localeState: import('$lib/locale/core').LocaleState;
+		}
+		interface PageData {
+			nativeSite?: boolean;
+		}
+		interface PageState {
+			__bcMobileSheet?: string;
+			__daynightHomeSearch?: string;
+			__daynightInventoryOverlay?: string;
+			__daynightWizard?: string;
+			daynightInventoryProgress?: { cardSetKey: string; count: number };
+			bcMobileSheet?: string;
+			inventoryOverlay?: string;
+		}
 	}
 }
-
 export {};

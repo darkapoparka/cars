@@ -1,90 +1,35 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import { Mail, MapPin, MessageCircle, Navigation, PhoneCall, Plus, X } from '@lucide/svelte';
+	import { dealerCopy } from '$lib/config/dealer-copy';
+	import { nativeMessage } from '$lib/i18n/native';
+
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
+	import { page } from '$app/state';
+	import Mail from '@lucide/svelte/icons/mail';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import MessageCircle from '@lucide/svelte/icons/message-circle';
+	import Navigation from '@lucide/svelte/icons/navigation';
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
+	import Plus from '@lucide/svelte/icons/plus';
+	import { linkHref } from '$lib/utils/links';
+	import { daynightContact } from '$lib/config/dealer';
 	import type { AuxeroContactFormData, AuxeroContactPageInfo } from '$lib/auxero/contact';
-	import { daynightContact } from '$lib/data/daynight';
 	import MobileAppbar from '$lib/components/layout/MobileAppbar.svelte';
-	import InquiryForm from '$lib/components/forms/InquiryForm.svelte';
-	import type { InquiryFormField } from '$lib/components/forms/types';
-
-	let { form, info }: { form: AuxeroContactFormData; info: AuxeroContactPageInfo } = $props();
+	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
+	import LeadForm from '$lib/components/common/LeadForm.svelte';
+	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
+	let {
+		form,
+		info,
+		embedded = false
+	}: { form: AuxeroContactFormData; info: AuxeroContactPageInfo; embedded?: boolean } = $props();
 	let formOpen = $state(false);
-	let formTrigger: HTMLButtonElement | null = null;
-
-	const fields: InquiryFormField[] = $derived([
-		...form.fields.map((field) => ({
-			...field,
-			kind: 'input' as const,
-			required: true,
-			wrapperClass: 'daynight-contact-mobile-form__field'
-		})),
-		{
-			className: 'daynight-contact-mobile-form__message',
-			id: 'contact-mobile-message',
-			kind: 'textarea' as const,
-			label: form.messageLabel,
-			name: 'message',
-			placeholder: form.messagePlaceholder,
-			required: true,
-			rows: 3,
-			wrapperClass: 'daynight-contact-mobile-form__field'
-		}
-	]);
-
-	const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-		daynightContact.addressLabel
-	)}`;
-	const hrefAttributes = (href: string) => ({
-		href: href.startsWith('/') ? resolve(href as '/') : href
-	});
-	const focusableSelector =
-		'button, input:not([type="hidden"]), textarea, select, a[href], [tabindex]:not([tabindex="-1"])';
-
-	function openForm(event: MouseEvent) {
-		if (event.currentTarget instanceof HTMLButtonElement) formTrigger = event.currentTarget;
+	const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(daynightContact.addressLabel)}`;
+	const hrefAttributes = (href: string) => ({ href: linkHref(href) });
+	const openForm = () => {
 		formOpen = true;
-		setTimeout(() => {
-			document
-				.querySelector<HTMLInputElement>('.daynight-contact-mobile-form input')
-				?.focus({ preventScroll: true });
-		}, 40);
-	}
-
-	function closeForm() {
-		formOpen = false;
-		requestAnimationFrame(() => formTrigger?.focus());
-	}
-
-	function handleWindowKeydown(event: KeyboardEvent) {
-		if (!formOpen) return;
-		if (event.key === 'Escape') {
-			event.preventDefault();
-			closeForm();
-			return;
-		}
-		if (event.key !== 'Tab') return;
-
-		const panel = document.querySelector<HTMLElement>('.daynight-contact-mobile-sheet__panel');
-		const focusable = panel
-			? [...panel.querySelectorAll<HTMLElement>(focusableSelector)].filter(
-					(element) => !element.hasAttribute('disabled')
-				)
-			: [];
-		if (!focusable.length) return;
-
-		const first = focusable[0];
-		const last = focusable[focusable.length - 1];
-		if (event.shiftKey && document.activeElement === first) {
-			event.preventDefault();
-			last.focus();
-		} else if (!event.shiftKey && document.activeElement === last) {
-			event.preventDefault();
-			first.focus();
-		}
-	}
+	};
 </script>
-
-<svelte:window onkeydown={handleWindowKeydown} />
 
 <div
 	class="daynight-contact-mobile"
@@ -93,44 +38,45 @@
 >
 	<MobileAppbar surface="dark" />
 
-	<main class="daynight-contact-mobile__main">
+	<svelte:element this={embedded ? 'section' : 'main'} class="daynight-contact-mobile__main">
 		<section class="daynight-contact-mobile__hero" aria-labelledby="contact-mobile-title">
 			<div>
-				<p>{info.eyebrow}</p>
-				<h1 id="contact-mobile-title">{info.title}</h1>
-				<span>{info.description}</span>
+				<h1 id="contact-mobile-title">{page.data.locale === 'en' ? 'Contact us' : 'Контакти'}</h1>
+				<span>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}</span>
 			</div>
 		</section>
-		<nav class="daynight-contact-mobile__actions" aria-label="Бърз контакт">
+		<nav class="daynight-contact-mobile__actions" aria-label={nt('ui36')}>
 			<a {...hrefAttributes(info.phoneHref)}
-				><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />Обади се</a
+				><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui37')}</a
 			>
 			<a {...hrefAttributes(daynightContact.viberHref)}
-				><MessageCircle size={18} strokeWidth={2.25} aria-hidden="true" />Пиши ни</a
+				><MessageCircle size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui38')}</a
 			>
 			<button
 				type="button"
 				onclick={openForm}
-				aria-label="Отвори форма за контакт"
+				aria-label={nt('ui39')}
 				aria-haspopup="dialog"
 				aria-expanded={formOpen}
-				><Plus size={18} strokeWidth={2.35} aria-hidden="true" />Форма</button
+				><Plus size={18} strokeWidth={2.35} aria-hidden="true" />{nt('ui40')}</button
 			>
 		</nav>
 
-		<section class="daynight-contact-mobile__info" aria-label="Данни за контакт">
+		<SocialLinks />
+
+		<section class="daynight-contact-mobile__info" aria-label={nt('ui41')}>
 			<article>
 				<span><MapPin size={18} strokeWidth={2.25} aria-hidden="true" /></span>
 				<div>
 					<p>{info.officeLabel}</p>
-					<strong>{daynightContact.addressLabel}</strong>
-					<small>{info.workNote}</small>
+					<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
+					<small>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}</small>
 				</div>
 			</article>
 			<article>
 				<span><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" /></span>
 				<div>
-					<p>Телефон</p>
+					<p>{nt('ui23')}</p>
 					<a {...hrefAttributes(info.phoneHref)}>{info.phoneLabel}</a>
 					{#if info.secondaryPhoneHref !== info.phoneHref || info.secondaryPhoneLabel !== info.phoneLabel}
 						<a {...hrefAttributes(info.secondaryPhoneHref)}>{info.secondaryPhoneLabel}</a>
@@ -140,13 +86,13 @@
 			<article>
 				<span><Mail size={18} strokeWidth={2.25} aria-hidden="true" /></span>
 				<div>
-					<p>Онлайн запитване</p>
+					<p>{nt('ui42')}</p>
 					<a {...hrefAttributes(info.emailHref)}>{info.emailLabel}</a>
 				</div>
 			</article>
 		</section>
 
-		<section class="daynight-contact-mobile__map-card" aria-label="Локация">
+		<section class="daynight-contact-mobile__map-card" aria-label={nt('ui19')}>
 			<div class="daynight-contact-mobile__map-preview" aria-hidden="true">
 				<span class="road road-a"></span>
 				<span class="road road-b"></span>
@@ -154,58 +100,22 @@
 				<span class="pin"><MapPin size={24} strokeWidth={2.45} /></span>
 			</div>
 			<div>
-				<p>Огледи с уговорка</p>
-				<strong>{daynightContact.addressLabel}</strong>
+				<p>{nt('ui43')}</p>
+				<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
 				<a {...hrefAttributes(mapHref)} target="_blank" rel="noreferrer">
-					Отвори карта
+					{nt('ui44')}
 					<Navigation size={17} strokeWidth={2.3} aria-hidden="true" />
 				</a>
 			</div>
 		</section>
-	</main>
+	</svelte:element>
 
-	<div
-		id="contact-mobile-form-sheet"
-		class="daynight-contact-mobile-sheet"
-		role="dialog"
-		aria-modal="true"
-		aria-labelledby="contact-mobile-form-title"
-		aria-hidden={!formOpen}
+	<MobileSheet bind:open={formOpen} title={form.title}
+		><LeadForm
+			english={page.data.locale === 'en'}
+			source={page.url.searchParams.get('topic') === 'trade-in' ? 'trade-in' : 'contact'}
+		/></MobileSheet
 	>
-		<button
-			type="button"
-			onclick={closeForm}
-			class="daynight-contact-mobile-sheet__backdrop"
-			aria-label="Затвори формата"
-			tabindex="-1"
-		></button>
-
-		<div class="daynight-contact-mobile-sheet__panel">
-			<span class="daynight-contact-mobile-sheet__handle" aria-hidden="true"></span>
-			<header class="daynight-contact-mobile-sheet__header">
-				<div>
-					<p>Promosale Varna</p>
-					<h2 id="contact-mobile-form-title">{form.title}</h2>
-				</div>
-				<button type="button" onclick={closeForm} aria-label="Затвори">
-					<X size={20} strokeWidth={2.3} aria-hidden="true" />
-				</button>
-			</header>
-
-			<div class="daynight-contact-mobile-sheet__body">
-				<InquiryForm
-					{fields}
-					buttonClass="daynight-contact-mobile-form__submit"
-					formClass="daynight-contact-mobile-form"
-					gridClass="daynight-contact-mobile-form__grid"
-					idPrefix="mobile-contact"
-					showEmptyStatus={false}
-					statusClass="daynight-contact-mobile-form__status"
-					submitLabel={form.submitLabel}
-				/>
-			</div>
-		</div>
-	</div>
 </div>
 
 <style>
@@ -228,11 +138,12 @@
 		position: relative;
 		display: grid;
 		min-height: 164px;
-		align-content: end;
+		align-content: center;
+		text-align: center;
 		overflow: hidden;
 		border-radius: var(--bc-radius-card);
 		background:
-			linear-gradient(90deg, rgba(23, 31, 19, 0.95), rgba(23, 31, 19, 0.72)),
+			linear-gradient(90deg, rgb(9 10 11 / 0.9), rgb(9 10 11 / 0.7)),
 			url('/assets/daynight/proof-studio-import-handoff.webp') 58% center / cover;
 		color: var(--bc-white);
 		padding: var(--bc-space-4);
@@ -242,22 +153,13 @@
 		display: grid;
 		gap: 5px;
 		max-width: 310px;
+		margin-inline: auto;
 	}
 
-	.daynight-contact-mobile__hero p,
 	.daynight-contact-mobile__hero h1,
 	.daynight-contact-mobile__hero span {
 		margin: 0;
 		letter-spacing: 0;
-	}
-
-	.daynight-contact-mobile__hero p {
-		color: var(--bc-white);
-		opacity: 0.86;
-		font-size: var(--bc-mobile-label);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-label-leading);
-		text-transform: uppercase;
 	}
 
 	.daynight-contact-mobile__hero h1 {
@@ -295,7 +197,7 @@
 		color: var(--bc-ink);
 		cursor: pointer;
 		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-heading);
+		font-weight: var(--bc-weight-action);
 		line-height: var(--bc-leading-control);
 		padding: 0 var(--bc-space-2);
 		text-decoration: none !important;
@@ -527,244 +429,7 @@
 		transform: translateX(-50%);
 	}
 
-	.daynight-contact-mobile-sheet {
-		position: fixed;
-		inset: 0;
-		z-index: 1200;
-		visibility: hidden;
-		pointer-events: none;
-	}
-
-	.daynight-contact-mobile[data-form-open='true'] .daynight-contact-mobile-sheet {
-		visibility: visible;
-		pointer-events: auto;
-	}
-
-	.daynight-contact-mobile-sheet__backdrop {
-		position: absolute;
-		inset: 0;
-		display: block;
-		border: 0;
-		background: rgba(28, 28, 28, 0.36);
-		cursor: pointer;
-		font: inherit;
-		opacity: 0;
-		padding: 0;
-		transition: opacity 180ms ease;
-	}
-
-	.daynight-contact-mobile[data-form-open='true']
-		.daynight-contact-mobile-sheet
-		.daynight-contact-mobile-sheet__backdrop {
-		opacity: 1;
-	}
-
-	.daynight-contact-mobile-sheet__panel {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		display: grid;
-		max-height: min(88dvh, 720px);
-		gap: var(--bc-space-3);
-		grid-template-rows: max-content max-content minmax(0, 1fr);
-		overflow: hidden;
-		border-top: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-panel) var(--bc-radius-panel) 0 0;
-		background: var(--bc-bg-strong);
-		color: var(--bc-ink);
-		padding: var(--bc-space-2) var(--bc-space-4) max(var(--bc-space-5), env(safe-area-inset-bottom));
-		transform: translateY(100%);
-		transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.daynight-contact-mobile[data-form-open='true']
-		.daynight-contact-mobile-sheet
-		.daynight-contact-mobile-sheet__panel {
-		transform: translateY(0);
-	}
-
-	:global(body:has(.daynight-contact-mobile[data-form-open='true'])) {
-		overflow: hidden;
-	}
-
-	.daynight-contact-mobile-sheet__handle {
-		display: block;
-		width: 42px;
-		height: 5px;
-		justify-self: center;
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-border);
-	}
-
-	.daynight-contact-mobile-sheet__header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--bc-space-3);
-	}
-
-	.daynight-contact-mobile-sheet__header div {
-		min-width: 0;
-	}
-
-	.daynight-contact-mobile-sheet__header p,
-	.daynight-contact-mobile-sheet__header h2 {
-		margin: 0;
-		letter-spacing: 0;
-	}
-
-	.daynight-contact-mobile-sheet__header p {
-		margin-bottom: 2px;
-		color: var(--bc-accent);
-		font-size: var(--bc-mobile-label);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-label-leading);
-		text-transform: uppercase;
-	}
-
-	.daynight-contact-mobile-sheet__header h2 {
-		color: var(--bc-ink);
-		font-size: var(--bc-mobile-section-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-section-title-leading);
-	}
-
-	.daynight-contact-mobile-sheet__header button {
-		display: flex;
-		width: var(--bc-control-height-standard);
-		height: var(--bc-control-height-standard);
-		align-items: center;
-		justify-content: center;
-		flex: 0 0 var(--bc-control-height-standard);
-		border: 0;
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-surface);
-		color: var(--bc-ink);
-		cursor: pointer;
-		font: inherit;
-		padding: 0;
-	}
-
-	.daynight-contact-mobile-sheet__header button:focus-visible {
-		outline: 2px solid var(--bc-accent);
-		outline-offset: 2px;
-	}
-
-	.daynight-contact-mobile-sheet__body {
-		min-height: 0;
-		overflow-y: auto;
-		padding-right: 1px;
-		scrollbar-width: none;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.daynight-contact-mobile-sheet__body::-webkit-scrollbar {
-		display: none;
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form) {
-		display: grid;
-		gap: var(--bc-space-3);
-		min-width: 0;
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form__grid) {
-		display: grid;
-		gap: var(--bc-space-2);
-		min-width: 0;
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form__field) {
-		min-width: 0;
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form p) {
-		margin: 0 0 6px;
-		color: var(--bc-ink);
-		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-leading-control);
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form input),
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form textarea) {
-		display: block;
-		width: 100%;
-		border: 1px solid var(--bc-border) !important;
-		border-radius: var(--bc-radius-control) !important;
-		background: var(--bc-white) !important;
-		box-shadow: none !important;
-		color: var(--bc-ink);
-		font-size: var(--bc-text-body) !important;
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-card-title-leading) !important;
-		outline: 0;
-		padding: 0 var(--bc-space-3) !important;
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form input) {
-		height: var(--bc-control-height-primary) !important;
-		font-weight: var(--bc-weight-body);
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form textarea) {
-		min-height: 98px !important;
-		padding-top: var(--bc-space-3) !important;
-		resize: vertical;
-		font-weight: var(--bc-weight-body);
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form input::placeholder),
-	.daynight-contact-mobile-sheet__body
-		:global(.daynight-contact-mobile-form textarea::placeholder) {
-		color: var(--bc-muted-light);
-		opacity: 1;
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form input:focus),
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form textarea:focus) {
-		border-color: var(--bc-accent) !important;
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form__submit) {
-		display: flex;
-		width: 100%;
-		min-height: var(--bc-control-height-primary);
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-accent) !important;
-		color: var(--bc-white) !important;
-		cursor: pointer;
-		font-size: var(--bc-mobile-card-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-card-title-leading);
-	}
-
-	.daynight-contact-mobile-sheet__body
-		:global(.daynight-contact-mobile-form__submit:focus-visible) {
-		background: var(--bc-accent-hover) !important;
-		color: var(--bc-white) !important;
-		outline: 0;
-	}
-
 	@media (hover: hover) and (pointer: fine) {
-		.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form__submit:hover) {
-			background: var(--bc-accent-hover) !important;
-			color: var(--bc-white) !important;
-			outline: 0;
-		}
-	}
-
-	.daynight-contact-mobile-sheet__body :global(.daynight-contact-mobile-form__status) {
-		margin: -2px 0 0;
-		color: var(--bc-copy);
-		font-size: var(--bc-mobile-body);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-body-leading);
 	}
 
 	@media (max-width: 359px) {

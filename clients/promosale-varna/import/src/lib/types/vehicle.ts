@@ -27,6 +27,7 @@ export type Vehicle = {
 	tag?: string;
 	tagTone?: 'lime' | 'violet' | 'dark';
 	image: string;
+	mediaKind?: 'listing' | 'illustration' | 'unavailable';
 	images: string[];
 	gallery: string[];
 	dealerSlug: string;

@@ -12,27 +12,43 @@ const district = "Dubai";
 const street = "Plot No. 364-0442, Al Quoz Industrial Area 1";
 const location = "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Dubai',
+	locationShort: "Dubai",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Dubai'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "The Dealers Point",
+	name: 'THE DEALERS POINT',
 	shortName,
 	city,
 	region: city,
-	countryCode: "AE",
-	locale: "en-AE",
-	currency: "AED",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "971551875094",
-	phoneLabel: "+971 55 187 5094",
-	email: "sales@tdp.ae",
+	phone: '971551875094',
+	phoneLabel: '+971 55 187 5094',
+	email: '',
 	location,
-	locationShort: "Plot No. 364-0442, Al Quoz Industrial Area 1",
-	locationLandmark: "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE",
-	hoursLabel: "Contact the dealership before visiting.",
+	locationShort: `${district}, ${city}`,
+	locationLandmark: "Plot No. 364-0442, Al Quoz Industrial Area 1",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://www.tdp.ae/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "The Dealers Point",
-	heroSubtitle: "Dubai · Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with The Dealers Point. Demo forms do not send messages.",
+	heroTitle: 'THE DEALERS POINT',
+	heroSubtitle: 'Dubai - Премиум автомобили в Dubai с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "About Dealers Point", href: '/about' },
+			{ label: 'За Dealers Point', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

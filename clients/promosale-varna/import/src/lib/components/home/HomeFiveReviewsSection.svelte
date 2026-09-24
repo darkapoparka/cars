@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { site } from '$lib/config/site';
 	import { resolve } from '$app/paths';
 	import type { HomeFiveReview } from '$lib/auxero/home-five';
 	import { loadAuxeroSwiper, type AuxeroSwiperInstance } from '$lib/auxero/swiper-loader';
 	import { daynightAssets } from '$lib/data/daynight';
 	import type { HomePageCopy } from '$lib/i18n/messages';
-	import { ArrowRight } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import { onMount, tick } from 'svelte';
 	import HomeSectionCta from './HomeSectionCta.svelte';
 
@@ -130,7 +131,7 @@
 									<img
 										class="daynight-review-more-card__brand"
 										src={daynightAssets.logoLight}
-										alt="Promosale Varna"
+										alt={site.identity.name}
 										width="220"
 										height="58"
 										loading="lazy"

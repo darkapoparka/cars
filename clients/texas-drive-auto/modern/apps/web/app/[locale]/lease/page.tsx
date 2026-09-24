@@ -14,16 +14,20 @@ import {
   leadSite,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import { DesktopActionPanel } from "@repo/marketplace-ui/components/desktop-action-panel";
 import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
-import { BadgeCheck } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getPublicMarketplaceListings } from "@/lib/public-marketplace-data";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
+import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
+import leasePageStyles from "./lease-page.module.css";
 import { LeaseVehicleSelector } from "./lease-vehicle-selector";
 
 interface LeasePageProps {
@@ -36,8 +40,7 @@ const leadingYearPattern = /^\d{4}\s+/;
 const pageCopy = {
   bg: {
     badge: `Финансиране от ${leadSite.shortName}`,
-    description:
-      "Изберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.",
+    formTitle: "Условия на лизинга",
     faqTitle: "Често задавани въпроси",
     faqs: [
       {
@@ -64,8 +67,7 @@ const pageCopy = {
   },
   en: {
     badge: `Financing from ${leadSite.shortName}`,
-    description:
-      "Choose a vehicle from our inventory and contact us for a tailored offer. The terms are confirmed for the vehicle and your individual profile.",
+    formTitle: "Financing preferences",
     faqTitle: "Frequently asked questions",
     faqs: [
       {
@@ -113,6 +115,7 @@ export default async function LeasePage({
   params,
   searchParams,
 }: LeasePageProps) {
+  requirePublicSitePath("/lease");
   const [{ locale }, query] = await Promise.all([params, searchParams]);
   const initialVehicleId =
     typeof query.vehicle === "string" ? query.vehicle : "";
@@ -134,7 +137,9 @@ export default async function LeasePage({
     detailHref: localize(getListingPath(listing)),
     fuelLabel: formatFuelType(listing.spec.fuelType, normalizedLocale),
     id: listing.id,
-    imageAlt: listing.images[0]?.alt || listing.title,
+    imageAlt:
+      localizeListingCopy(listing, normalizedLocale).images[0]?.alt ||
+      listing.title,
     imageUrl: listing.images[0]?.url || "/lead-hero.jpg",
     mileageLabel: formatMileage(listing.spec.mileageValue, normalizedLocale),
     ...(listing.monthlyEstimate
@@ -147,6 +152,7 @@ export default async function LeasePage({
       : {}),
     priceLabel: formatMoney(listing.price, normalizedLocale),
     priceAmount: listing.price.amount,
+    priceCurrency: listing.price.currency,
     fuelType: listing.spec.fuelType,
     year: listing.spec.year,
     title: listing.title.replace(leadingYearPattern, ""),
@@ -167,63 +173,60 @@ export default async function LeasePage({
       showMobileFooter={false}
     >
       <main className="lg:min-h-[38rem]">
+        <DealerDesktopHero
+          title={
+            normalizedLocale === "bg"
+              ? "Финансиране на автомобил"
+              : "Vehicle financing"
+          }
+          variant="service"
+        >
+          <div
+            className={cn(
+              marketplaceDiscoveryFrameClassName,
+              "py-0 max-lg:px-0",
+              desktopStyles.content,
+              desktopStyles.heroContent
+            )}
+            data-slot="lease-content-frame"
+          >
+            <section className="relative isolate" data-slot="lease-hero">
+              <div
+                className="relative flex items-center justify-center"
+                data-slot="lease-hero-content"
+              >
+                <DesktopActionPanel
+                  className={cn(
+                    "w-full overflow-hidden bg-card p-0",
+                    leasePageStyles.financePanel
+                  )}
+                  data-slot="lease-finance-card"
+                >
+                  {vehicles.length === 0 && (
+                    <h1 className="sr-only lg:hidden">{copy.title}</h1>
+                  )}
+                  <LeaseVehicleSelector
+                    contactHref={localize("/contact")}
+                    desktopTitle={copy.formTitle}
+                    faqs={copy.faqs}
+                    key={initialVehicleId}
+                    locale={normalizedLocale}
+                    phoneHref={leadSite.phoneHref}
+                    vehicles={vehicles}
+                  />
+                </DesktopActionPanel>
+              </div>
+            </section>
+          </div>
+        </DealerDesktopHero>
         <div
           className={cn(
             marketplaceDiscoveryFrameClassName,
-            "py-0 max-lg:px-0 lg:py-9"
+            "py-0 max-lg:px-0",
+            desktopStyles.content
           )}
-          data-slot="lease-content-frame"
+          data-slot="lease-faq-frame"
         >
-          <section
-            className="relative isolate lg:min-h-[32rem] lg:overflow-hidden lg:rounded-xl lg:border lg:border-border lg:shadow-panel"
-            data-slot="lease-hero"
-          >
-            <Image
-              alt=""
-              className="hidden object-cover object-[62%_center] lg:block lg:object-center"
-              fill
-              priority
-              sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/lease/day-night-financing-hero-v1.webp"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 hidden bg-black/25 lg:block"
-            />
-
-            <div
-              className="relative z-10 flex items-center justify-center lg:min-h-[32rem] lg:p-8"
-              data-slot="lease-hero-content"
-            >
-              <div
-                className="w-full max-w-5xl overflow-hidden bg-card p-0 lg:rounded-xl lg:border lg:border-border/80 lg:p-7 lg:shadow-2xl lg:shadow-black/25"
-                data-slot="lease-finance-card"
-              >
-                <div className="mx-auto hidden w-fit items-center gap-2 rounded-full bg-secondary px-3 py-1.5 font-medium text-micro lg:flex">
-                  <BadgeCheck aria-hidden="true" className="size-4" />
-                  {copy.badge}
-                </div>
-                <h1 className="sr-only mx-auto mt-4 max-w-3xl text-balance text-center font-semibold text-page-title tracking-tight sm:text-page-title-lg lg:not-sr-only">
-                  {copy.title}
-                </h1>
-                <p className="mx-auto mt-2 hidden max-w-2xl text-center text-body text-muted-foreground lg:block">
-                  {copy.description}
-                </p>
-
-                <LeaseVehicleSelector
-                  contactHref={localize("/contact")}
-                  faqs={copy.faqs}
-                  initialVehicleId={initialVehicleId}
-                  key={initialVehicleId}
-                  locale={normalizedLocale}
-                  phoneDisplay={leadSite.phoneDisplay}
-                  phoneHref={leadSite.phoneHref}
-                  vehicles={vehicles}
-                />
-              </div>
-            </div>
-          </section>
-
           <section
             className="mx-auto mt-8 hidden w-full max-w-4xl sm:mt-10 lg:block"
             data-slot="lease-faq"

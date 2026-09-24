@@ -12,27 +12,43 @@ const district = "Texas";
 const street = "10511 Olympic Drive, Dallas, TX 75220";
 const location = "10511 Olympic Drive, Dallas, TX 75220";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Dallas',
+	locationShort: "Texas, Dallas",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Dallas'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "Texas Drive Auto",
+	name: 'TEXAS DRIVE AUTO',
 	shortName,
 	city,
 	region: city,
-	countryCode: "US",
-	locale: "en-US",
-	currency: "USD",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "12149723233",
-	phoneLabel: "(214) 972-3233",
-	email: "",
+	phone: '12149723233',
+	phoneLabel: '(214) 972-3233',
+	email: '',
 	location,
-	locationShort: "10511 Olympic Drive, Dallas, TX 75220",
+	locationShort: `${district}, ${city}`,
 	locationLandmark: "10511 Olympic Drive, Dallas, TX 75220",
-	hoursLabel: "Monday–Saturday 10 AM–6 PM; Sunday closed",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://www.texasdriveauto.com/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "Texas Drive Auto",
-	heroSubtitle: "Dallas · Dated listing samples; confirm price and availability directly with the dealership.",
+	heroTitle: 'TEXAS DRIVE AUTO',
+	heroSubtitle: 'Dallas - Премиум автомобили в Dallas с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "About Texas Drive Auto", href: '/about' },
+			{ label: 'За Texas Drive Auto', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

@@ -1,4 +1,7 @@
 import { brand } from '$config/brand';
+import type { Locale } from '$lib/locale/core';
+import { templateText, dealerLabel } from '$lib/locale/messages';
+import { formatTemplate } from '$lib/i18n/presentation';
 
 export type BlogCategory = 'Оглед' | 'Внос' | 'Лизинг' | 'Насоки' | 'Бартер';
 
@@ -223,6 +226,15 @@ export const blogPosts: BlogPost[] = [
 
 export const blogCategories: BlogCategory[] = ['Оглед', 'Внос', 'Лизинг', 'Насоки', 'Бартер'];
 
+/** Display the immutable template guide copy without changing loaded posts or category values. */
+export const blogPostTitle = (post: BlogPost, locale: Locale): string => post.id === 5
+  ? formatTemplate(locale, 'Viewing in {p0}', { p0: dealerLabel(locale, 'city') })
+  : templateText(locale, post.title);
+
+export const blogPostSummary = (post: BlogPost, locale: Locale): string => post.id === 5
+  ? formatTemplate(locale, 'Уговорете посещение на {p0}.', { p0: dealerLabel(locale, 'addressLine') })
+  : templateText(locale, post.text);
+
 const isBlogCategory = (value: string | null): value is BlogCategory =>
   Boolean(value && blogCategories.includes(value as BlogCategory));
 
@@ -233,12 +245,12 @@ export const parseBlogFilters = (params: URLSearchParams): BlogFilters => ({
 
 const normalize = (value: string) => value.trim().toLocaleLowerCase('bg-BG');
 
-export const filterBlogPosts = (posts: BlogPost[], filters: BlogFilters) => {
+export const filterBlogPosts = (posts: BlogPost[], filters: BlogFilters, locale: Locale = 'bg') => {
   const query = normalize(filters.q);
   return posts.filter((post) => {
     if (filters.category && post.category !== filters.category) return false;
     if (!query) return true;
-    return normalize(`${post.title} ${post.text} ${post.category} ${post.tag}`).includes(query);
+    return normalize(`${post.title} ${post.text} ${post.category} ${post.tag} ${blogPostTitle(post, locale)} ${blogPostSummary(post, locale)} ${templateText(locale, post.category)} ${templateText(locale, post.tag)}`).includes(query);
   });
 };
 

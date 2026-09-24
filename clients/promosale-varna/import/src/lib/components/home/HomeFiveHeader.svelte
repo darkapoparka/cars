@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { page } from '$app/state';
 	import type { HomeFiveHeaderData, HomeFiveHeaderNavigationItem } from '$lib/auxero/home-five';
-	import { Globe2, MapPin, Phone } from '@lucide/svelte';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import Phone from '@lucide/svelte/icons/phone';
 	import MobileAppbar from '$lib/components/layout/MobileAppbar.svelte';
+	import LocaleSettingsMenu from '$lib/components/layout/LocaleSettingsMenu.svelte';
 	import SiteSearchModal from '$lib/components/layout/SiteSearchModal.svelte';
 
 	let {
@@ -23,7 +24,6 @@
 	const logoIntrinsicHeight = 235;
 	const routeNavMegaSuppressionClass = 'daynight-route-nav-click';
 	let megaMenuSuppressionReadyToClear = false;
-	let languageOpen = $state(false);
 	let searchOpen = $state(false);
 
 	const navItemClass = (item: HomeFiveHeaderNavigationItem) =>
@@ -39,20 +39,8 @@
 	const hrefAttributes = (href: string) => ({
 		href: href.startsWith('/') ? resolve(href as '/') : href
 	});
-	const languageCode = (option: string) =>
-		option === 'English' || option === 'Английски' ? 'en' : 'bg';
-	const languageHref = (option: string) => {
-		// This temporary URL builder is not retained as component state.
-		// eslint-disable-next-line svelte/prefer-svelte-reactivity
-		const params = new URLSearchParams(page.url.searchParams);
-		params.set('lang', languageCode(option));
-		return `${page.url.pathname}?${params.toString()}`;
-	};
 	const openMobileLocation = () => {
-		const toggle = document.getElementById(
-			'daynight-mobile-location-toggle'
-		) as HTMLInputElement | null;
-		if (toggle && !toggle.checked) toggle.click();
+		window.dispatchEvent(new Event('daynight:open-mobile-location'));
 	};
 	const clearMegaMenuSuppression = () => {
 		if (!megaMenuSuppressionReadyToClear) return;
@@ -248,41 +236,7 @@
 							>
 								<Phone size={21} strokeWidth={1.8} aria-hidden="true" />
 							</a>
-							<div
-								class={['core-dropdown language-select', languageOpen && 'active']}
-								id="language-select"
-							>
-								<button
-									class="core-dropdown__button daynight-header-icon-button daynight-desktop-action"
-									type="button"
-									aria-haspopup="menu"
-									aria-expanded={languageOpen}
-									aria-label={`${header.language.current} — смени езика`}
-									title={header.language.current}
-									onclick={() => (languageOpen = !languageOpen)}
-									onkeydown={(event) => {
-										if (event.key === 'Escape') languageOpen = false;
-									}}
-								>
-									<Globe2 size={21} strokeWidth={1.8} aria-hidden="true" />
-								</button>
-								<div class="core-dropdown__menu" id="coreDropdownMenu" role="menu">
-									<ul class="core-dropdown__list" role="none">
-										{#each header.language.options as option (option)}
-											<li class="cursor-pointer text-sm" role="none">
-												<a
-													href={resolve(languageHref(option) as '/')}
-													role="menuitem"
-													aria-current={option === header.language.current ? 'true' : undefined}
-													onclick={() => (languageOpen = false)}
-												>
-													{option}
-												</a>
-											</li>
-										{/each}
-									</ul>
-								</div>
-							</div>
+							<LocaleSettingsMenu />
 						</div>
 
 						<div class="header-button mobile-hidden-header-button flex items-center gap-20">
@@ -590,28 +544,6 @@
 		margin-block: -4px;
 	}
 
-	:global(.language-select .core-dropdown__button),
-	:global(.language-select .core-dropdown__list li) {
-		font-size: 14px;
-		font-weight: 400;
-		letter-spacing: 0;
-		line-height: 20px;
-	}
-
-	:global(.language-select .core-dropdown__list li a) {
-		display: flex;
-		min-height: 36px;
-		align-items: center;
-		padding: 8px 14px;
-		color: #262626;
-		text-decoration: none;
-	}
-
-	:global(.language-select .core-dropdown__list li a:is(:hover, :focus-visible)) {
-		background: #f3f4f6;
-		color: var(--bc-accent);
-	}
-
 	.daynight-mobile-call,
 	.daynight-mobile-map {
 		display: none;
@@ -640,20 +572,6 @@
 		color: #ffffff;
 	}
 
-	:global(.daynight-desktop-utilities .language-select .core-dropdown__button) {
-		width: 44px !important;
-		height: 44px !important;
-		min-height: 44px;
-		border: 0 !important;
-		background: transparent !important;
-		color: rgb(255 255 255 / 0.82) !important;
-		padding: 0 !important;
-	}
-
-	:global(.daynight-desktop-utilities .language-select .core-dropdown__label) {
-		color: inherit !important;
-	}
-
 	/* The Auxero inner-page stylesheet exposes the alternate header logo at
 	   tablet widths. Keep the shell's primary logo as the single brand mark;
 	   this selector does not affect the logo inside the mobile navigation. */
@@ -675,18 +593,6 @@
 	.bg-sign-in:is(:hover, :focus-visible) {
 		background: transparent !important;
 		color: #ffffff !important;
-	}
-
-	:global(#language-select:not(.active) #coreDropdownMenu) {
-		opacity: 0 !important;
-		pointer-events: none !important;
-		transform: translateY(-10px) !important;
-		transition: none !important;
-		visibility: hidden !important;
-	}
-
-	:global(#language-select.active #coreDropdownMenu) {
-		pointer-events: auto !important;
 	}
 
 	:global(

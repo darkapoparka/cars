@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { resolve } from '$app/paths';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
@@ -14,19 +17,19 @@
 		readonly closing?: string;
 	};
 
-	const intro = `Информацията в този сайт има информативен характер. Актуалните цени, наличност и условия за финансиране се потвърждават директно със ${daynightSite.shortName} преди сделка.`;
+	const intro = i18n.t('pattern.79d2281d044b', { v0: daynightSite.shortName });
 	const usageNotice =
 		'Използвайки сайта, потребителят приема, че обявите и описанията подлежат на проверка на място и не представляват публична оферта.';
 	const photosNotice =
 		'Снимките и описанията илюстрират конкретния автомобил, а състоянието и оборудването се потвърждават при оглед.';
-	const accuracyNotice = `${daynightSite.shortName} полага усилия съдържанието да е точно и актуално, но не носи отговорност за непълноти или технически грешки в обявите.`;
+	const accuracyNotice = i18n.t('pattern.a6ad855e84d0', { v0: daynightSite.shortName });
 	const stockNotice =
 		'Възможно е автомобил да бъде продаден или резервиран, преди обявата да бъде обновена, затова препоръчваме предварително потвърждение на наличността.';
-	const updatesNotice = `${daynightSite.shortName} може да актуализира услугите и условията по всяко време, като валидна е версията, публикувана към момента на ползване на сайта. `;
+	const updatesNotice = i18n.t('pattern.7d03f40e614b', { v0: daynightSite.shortName });
 
 	const sharedListItems = [
 		'Финансиране, разсрочено плащане и бартер се предлагат при условия, договорени индивидуално за всеки клиент.',
-		`Огледът и тестът се организират предварително по уговорка в ${daynightSite.city}.`,
+		i18n.t('pattern.6931048dac8e', { v0: i18n.dealer('city') }),
 		'Техническите характеристики са по данни на производителя и предходния собственик и подлежат на проверка при оглед.'
 	];
 
@@ -34,7 +37,7 @@
 		{
 			id: 'section1',
 			navLabel: '1. Условия',
-			title: '1. Условия',
+			title: i18n.t('copy.c7deb409b8de'),
 			paragraphs: [
 				{ text: intro, spaced: true },
 				{ text: usageNotice, spaced: true },
@@ -44,25 +47,25 @@
 		{
 			id: 'section2',
 			navLabel: '2. Ограничения',
-			title: '2. Ограничения',
+			title: i18n.t('copy.1fa57ef2fb0f'),
 			paragraphs: [{ text: accuracyNotice }]
 		},
 		{
 			id: 'section3',
 			navLabel: '3. Наличност',
-			title: '3. Наличност',
+			title: i18n.t('copy.b1bdd96ff84c'),
 			paragraphs: [{ text: stockNotice }]
 		},
 		{
 			id: 'section4',
 			navLabel: '4. Промени в условията',
-			title: '4. Промени в условията',
+			title: i18n.t('copy.f131ff1ad271'),
 			paragraphs: [{ text: updatesNotice }]
 		},
 		{
 			id: 'section5',
 			navLabel: '5. Уточнения',
-			title: '5. Уточнения',
+			title: i18n.t('copy.56968ec0c7d2'),
 			paragraphs: [],
 			listItems: sharedListItems
 		}
@@ -72,31 +75,31 @@
 <div class="terms-page">
 	<DesktopYellowRouteHero
 		headingId="terms-route-title"
-		title="Условия за ползване"
-		copy={`Информация за ползването на сайта, обявите, наличността и условията на ${daynightSite.shortName}.`}
+		title={i18n.t('copy.e07ecdfd3f88')}
+		copy={i18n.t('pattern.e9297efb228d', { v0: daynightSite.shortName })}
 		panel="light"
-		primaryLabel="Свържете се"
+		primaryLabel={i18n.t('copy.f36755515677')}
 		primaryHref="/contact"
-		secondaryLabel="Виж автомобилите"
+		secondaryLabel={i18n.t('copy.f20a4411e8d6')}
 		secondaryHref="/inventory"
 	/>
-	<section class="breadcrumb-band" aria-label="Навигационна пътека">
+	<section class="breadcrumb-band" aria-label={i18n.t('copy.e8bbb51d260a')}>
 		<div class="terms-container">
 			<ol class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
-					<img src="/assets/icons/right.svg" alt="" />
+					<img src={i18n.asset('/assets/icons/right.svg')} alt="" />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>{i18n.t('copy.bb593f6846bd')}</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
-					<img src="/assets/icons/right.svg" alt="" />
+					<img src={i18n.asset('/assets/icons/right.svg')} alt="" />
 				</li>
 				<li>
-					<span>Условия за ползване</span>
+					<span>{i18n.t('copy.e07ecdfd3f88')}</span>
 				</li>
 			</ol>
 		</div>
@@ -104,15 +107,15 @@
 
 	<section class="terms-main">
 		<div class="terms-container">
-			<h1>Условия за ползване</h1>
+			<h1>{i18n.t('copy.e07ecdfd3f88')}</h1>
 			<div class="heading-spacer"></div>
 
 			<div class="terms-layout" id="scrollContainer">
-				<nav class="terms-nav-container" aria-label="Съдържание">
+				<nav class="terms-nav-container" aria-label={i18n.t('copy.981745deeba3')}>
 					<ol class="terms-nav" id="sidebarSticky">
 						{#each sections as section (section.id)}
 							<li>
-								<a href="#{section.id}">{section.navLabel}</a>
+								<a href="#{section.id}">{i18n.text(section.navLabel)}</a>
 							</li>
 						{/each}
 					</ol>
@@ -121,11 +124,11 @@
 				<div class="terms-content">
 					{#each sections as section (section.id)}
 						<section class="terms-section" id={section.id} aria-labelledby={`${section.id}-title`}>
-							<h2 id={`${section.id}-title`}>{section.title}</h2>
+							<h2 id={`${section.id}-title`}>{i18n.text(section.title)}</h2>
 
 							{#each section.paragraphs as paragraph (paragraph.text)}
 								<p class={['terms-body', paragraph.spaced && 'terms-body--spaced']}>
-									{paragraph.text}
+									{i18n.text(paragraph.text)}
 								</p>
 							{/each}
 
@@ -133,14 +136,14 @@
 								<ul class="terms-list">
 									{#each section.listItems as item (item)}
 										<li class="terms-body terms-body--spaced">
-											{item}
+											{i18n.text(item)}
 										</li>
 									{/each}
 								</ul>
 							{/if}
 
 							{#if section.closing}
-								<p class="terms-body">{section.closing}</p>
+								<p class="terms-body">{i18n.text(section.closing)}</p>
 							{/if}
 						</section>
 					{/each}

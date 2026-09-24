@@ -6,15 +6,13 @@
 		HomeFiveHeroData,
 		HomeFiveHeroSelect
 	} from '$lib/auxero/home-five';
-	import {
-		ArrowRight,
-		MapPin,
-		Navigation,
-		PhoneCall,
-		Search,
-		SlidersHorizontal,
-		X
-	} from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import Navigation from '@lucide/svelte/icons/navigation';
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
+	import Search from '@lucide/svelte/icons/search';
+	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
+	import X from '@lucide/svelte/icons/x';
 	import { onMount, tick } from 'svelte';
 	import HeroFilterDialog from '../home/HeroFilterDialog.svelte';
 

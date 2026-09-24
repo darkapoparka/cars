@@ -1,91 +1,69 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
+	import { linkHref as resolve } from '$lib/utils/links';
 	import { onMount } from 'svelte';
-	import {
-		ArrowRight,
-		Calculator,
-		CarFront,
-		GitCompare,
-		Heart,
-		Info,
-		MessageCircle,
-		PhoneCall,
-		UserRound,
-		Wrench,
-		X
-	} from '@lucide/svelte';
 	import { HugeiconsIcon } from '@hugeicons/svelte';
+	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
+	import MobileNavigationMenu from '$lib/components/layout/MobileNavigationMenu.svelte';
 	import {
 		Car01Icon,
+		Globe02Icon,
 		Home03Icon,
 		Menu01Icon,
-		SaleTag01Icon,
-		Globe02Icon
+		SaleTag01Icon
 	} from '@hugeicons/core-free-icons';
 
 	let { pathname = '/' }: { pathname?: string } = $props();
 
-	const mainItems = [
-		{
-			href: '/',
-			label: 'Начало',
-			icon: Home03Icon,
-			exact: true
-		},
-		{
-			href: '/inventory',
-			label: 'Коли',
-			icon: Car01Icon,
-			exact: false,
-			tone: 'commerce'
-		},
+	const english = $derived(page.data.locale === 'en');
+	const menuLabel = $derived(english ? 'Menu' : 'Меню');
+	const localHref = (href: string) => href + (english ? '?lang=en' : '');
+	const mainItems = $derived([
+		{ href: '/', label: english ? 'Home' : 'Начало', icon: Home03Icon, exact: true },
+		{ href: '/inventory', label: english ? 'Cars' : 'Коли', icon: Car01Icon, exact: false },
 		{
 			href: '/sell-your-car',
-			label: 'Продай',
+			label: english ? 'Sell' : 'Продай',
 			icon: SaleTag01Icon,
-			exact: false,
-			tone: 'commerce'
+			exact: false
 		},
-		{
-			href: '/import',
-			label: 'Внос',
-			icon: Globe02Icon,
-			exact: false,
-			tone: 'commerce'
-		}
-	] as const;
-
-	const menuSections = [
-		{
-			title: 'Автомобили',
-			links: [
-				{ href: '/inventory', label: 'Всички коли', icon: CarFront },
-				{ href: '/import', label: 'Подбрани автомобили', icon: Wrench },
-				{ href: '/compare', label: 'Сравни автомобили', icon: GitCompare },
-				{ href: '/account/favorites', label: 'Любими автомобили', icon: Heart },
-				{ href: '/calculator', label: 'Калкулатор за внос', icon: Calculator }
-			]
-		},
-		{
-			title: 'Promosale Varna',
-			links: [
-				{ href: '/about', label: 'За нас', icon: Info },
-				{ href: '/contact', label: 'Контакти', icon: PhoneCall },
-				{ href: '/account/messages', label: 'Съобщения', icon: MessageCircle },
-				{ href: '/account', label: 'Вход / профил', icon: UserRound }
-			]
-		}
-	] as const;
+		{ href: '/import', label: english ? 'Import' : 'Внос', icon: Globe02Icon, exact: false }
+	] as const);
 
 	const isActive = (href: string, exact = false) =>
 		exact ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
 	let menuOpen = $state(false);
 	let navigationReady = $state(false);
+	let pendingNavigationHref = $state<string | null>(null);
+	let menuButton: HTMLButtonElement | null = null;
+	let pendingLocaleOpen: Promise<HTMLElement | undefined> | null = null;
+	let resolvePendingLocaleOpen: ((opener: HTMLElement | undefined) => void) | null = null;
 
 	onMount(() => {
 		navigationReady = true;
 	});
+
+	const finishPendingNavigation = () => {
+		const href = pendingNavigationHref;
+		pendingNavigationHref = null;
+		if (resolvePendingLocaleOpen) {
+			resolvePendingLocaleOpen(menuButton ?? undefined);
+			resolvePendingLocaleOpen = null;
+			pendingLocaleOpen = null;
+		}
+		if (href) window.setTimeout(() => void goto(resolve(href as '/')), 0);
+	};
+
+	const beforeLocaleOpen = (): Promise<HTMLElement | undefined> => {
+		if (!menuOpen) return Promise.resolve(menuButton ?? undefined);
+		if (pendingLocaleOpen) return pendingLocaleOpen;
+		pendingLocaleOpen = new Promise((resolve) => {
+			resolvePendingLocaleOpen = resolve;
+		});
+		menuOpen = false;
+		return pendingLocaleOpen;
+	};
 
 	const handleNavigationClick = async (event: MouseEvent, href: string) => {
 		if (event.defaultPrevented || event.button !== 0) return;
@@ -105,41 +83,32 @@
 		}
 
 		event.preventDefault();
-		menuOpen = false;
+		if (menuOpen) {
+			pendingNavigationHref = href;
+			menuOpen = false;
+			return;
+		}
 		await goto(resolve(href as '/'));
 	};
 
 	const itemClass = (item: (typeof mainItems)[number]) =>
-		[
-			'mobile-bottom-nav__item',
-			'tone' in item && item.tone === 'commerce' && 'mobile-bottom-nav__item--commerce',
-			isActive(item.href, item.exact) && 'active'
-		]
+		['mobile-bottom-nav__item', isActive(item.href, item.exact) && 'active']
 			.filter(Boolean)
 			.join(' ');
 </script>
 
 <nav
 	class="mobile-bottom-nav"
-	aria-label="Мобилна навигация"
+	aria-label={english ? 'Mobile navigation' : 'Мобилна навигация'}
 	data-daynight-stylekit-nav-ready={navigationReady ? 'true' : undefined}
 >
-	<input
-		id="mobile-bottom-menu-toggle"
-		class="mobile-menu-toggle"
-		type="checkbox"
-		bind:checked={menuOpen}
-		aria-label="Отвори меню"
-		aria-controls="mobile-bottom-menu"
-		aria-expanded={menuOpen}
-	/>
 	<div class="mobile-bottom-nav__inner">
 		{#each mainItems as item (item.href)}
 			<a
 				class={itemClass(item)}
-				href={resolve(item.href as '/')}
+				href={resolve(localHref(item.href) as '/')}
 				aria-current={isActive(item.href, item.exact) ? 'page' : undefined}
-				onclick={(event) => handleNavigationClick(event, item.href)}
+				onclick={(event) => handleNavigationClick(event, localHref(item.href))}
 			>
 				<span class="mobile-bottom-nav__icon" aria-hidden="true">
 					<HugeiconsIcon icon={item.icon} size={24} color="currentColor" strokeWidth={1.8} />
@@ -147,106 +116,35 @@
 				<span class="mobile-bottom-nav__label">{item.label}</span>
 			</a>
 		{/each}
-		<!-- The checkbox input above is the real control and carries the
-		     aria-controls/expanded/haspopup state; a <label> must not (invalid ARIA). -->
-		<label for="mobile-bottom-menu-toggle" class="mobile-bottom-nav__menu-trigger">
-			<span class="mobile-bottom-nav__icon mobile-bottom-nav__icon--menu" aria-hidden="true">
+		<button
+			bind:this={menuButton}
+			type="button"
+			class="mobile-bottom-nav__menu-trigger"
+			class:active={menuOpen}
+			aria-label={menuLabel}
+			aria-haspopup="dialog"
+			aria-expanded={menuOpen}
+			onclick={() => (menuOpen = true)}
+		>
+			<span class="mobile-bottom-nav__icon" aria-hidden="true">
 				<HugeiconsIcon icon={Menu01Icon} size={24} color="currentColor" strokeWidth={1.8} />
 			</span>
-			<span class="mobile-bottom-nav__label">Меню</span>
-		</label>
+			<span class="mobile-bottom-nav__label">{menuLabel}</span>
+		</button>
 	</div>
 </nav>
 
-<div
-	class="mobile-menu-sheet"
-	id="mobile-bottom-menu"
-	role="dialog"
-	aria-modal="true"
-	aria-labelledby="mobile-bottom-menu-title"
+<MobileSheet
+	bind:open={menuOpen}
+	title={menuLabel}
+	contentClass="mobile-menu-sheet__panel"
+	onclose={finishPendingNavigation}
 >
-	<label
-		class="mobile-menu-sheet__backdrop"
-		for="mobile-bottom-menu-toggle"
-		aria-label="Затвори менюто"
-	></label>
-	<div class="mobile-menu-sheet__panel">
-		<span class="mobile-menu-sheet__handle" aria-hidden="true"></span>
-
-		<div class="mobile-menu-sheet__header">
-			<div>
-				<p>Promosale Varna</p>
-				<strong id="mobile-bottom-menu-title">Меню</strong>
-			</div>
-			<label
-				for="mobile-bottom-menu-toggle"
-				class="mobile-menu-sheet__close"
-				aria-label="Затвори менюто"
-			>
-				<X size={22} strokeWidth={2.3} aria-hidden="true" />
-			</label>
-		</div>
-
-		<a
-			class="mobile-menu-sheet__sell"
-			href={resolve('/sell-your-car')}
-			onclick={(event) => handleNavigationClick(event, '/sell-your-car')}
-		>
-			<div class="mobile-menu-sheet__sell-copy">
-				<strong>Продай автомобил</strong>
-				<small>Безплатна оценка за минута</small>
-			</div>
-			<span class="mobile-menu-sheet__sell-arrow" aria-hidden="true">
-				<ArrowRight size={18} strokeWidth={2.35} />
-			</span>
-			<img
-				class="mobile-menu-sheet__sell-consultant"
-				src="/assets/daynight/home2/home2-action-consultant.webp"
-				alt=""
-				aria-hidden="true"
-				loading="lazy"
-			/>
-		</a>
-
-		<div class="mobile-menu-sheet__actions">
-			<a href={resolve('/contact')} onclick={(event) => handleNavigationClick(event, '/contact')}>
-				<PhoneCall size={18} strokeWidth={2.1} />
-				Обади се
-			</a>
-			<a href={resolve('/contact')} onclick={(event) => handleNavigationClick(event, '/contact')}>
-				<MessageCircle size={18} strokeWidth={2.1} />
-				Пиши ни
-			</a>
-		</div>
-
-		<div class="mobile-menu-sheet__sections">
-			{#each menuSections as section (section.title)}
-				<section>
-					<h2>{section.title}</h2>
-					<div class="mobile-menu-sheet__links">
-						{#each section.links as link (link.href)}
-							{@const Icon = link.icon}
-							<a
-								class:active={isActive(link.href)}
-								href={resolve(link.href as '/')}
-								aria-current={isActive(link.href) ? 'page' : undefined}
-								onclick={(event) => handleNavigationClick(event, link.href)}
-							>
-								<Icon size={19} strokeWidth={2} />
-								<span>{link.label}</span>
-							</a>
-						{/each}
-					</div>
-				</section>
-			{/each}
-		</div>
-	</div>
-</div>
+	<MobileNavigationMenu {pathname} onnavigate={handleNavigationClick} {beforeLocaleOpen} />
+</MobileSheet>
 
 <style>
-	.mobile-menu-toggle,
-	.mobile-bottom-nav,
-	.mobile-menu-sheet {
+	.mobile-bottom-nav {
 		display: none;
 	}
 
@@ -257,33 +155,13 @@
 
 		.mobile-bottom-nav,
 		.mobile-bottom-nav *,
-		.mobile-menu-sheet,
-		.mobile-menu-sheet * {
+		:global(.mobile-menu-sheet__panel),
+		:global(.mobile-menu-sheet__panel *) {
 			font-family: var(--bc-font-body);
 		}
 
 		:global(.progress-wrap) {
 			display: none !important;
-		}
-
-		:global(body:has(#mobile-bottom-menu-toggle:checked)) {
-			overflow: hidden;
-		}
-
-		.mobile-menu-toggle {
-			position: fixed;
-			right: max(var(--bc-space-1), calc((100vw - 480px) / 2 + var(--bc-space-1)));
-			bottom: calc(5px + env(safe-area-inset-bottom));
-			z-index: 1001;
-			display: block;
-			width: calc((min(100vw, 480px) - 8px) / 5);
-			height: var(--bc-control-height-hero);
-			margin: 0;
-			border: 0;
-			opacity: 0;
-			cursor: pointer;
-			padding: 0;
-			pointer-events: none;
 		}
 
 		.mobile-bottom-nav {
@@ -293,17 +171,18 @@
 			left: 0;
 			z-index: 999;
 			display: block;
-			padding: var(--bc-space-1) 0 calc(var(--bc-space-1) + env(safe-area-inset-bottom));
+			height: calc(var(--bc-mobile-nav-height) + env(safe-area-inset-bottom));
+			border-top: 1px solid rgb(28 28 28 / 0.16);
 			background: var(--bc-white);
-			border-top: 1px solid rgba(28, 28, 28, 0.16);
-			box-shadow: none;
+			padding-bottom: env(safe-area-inset-bottom);
 		}
 
 		.mobile-bottom-nav__inner {
 			display: grid;
+			width: 100%;
+			height: var(--bc-mobile-nav-height);
+			max-width: var(--bc-mobile-content-max);
 			grid-template-columns: repeat(5, minmax(0, 1fr));
-			gap: 0;
-			max-width: 480px;
 			margin: 0 auto;
 			padding: 0 var(--bc-space-1);
 		}
@@ -313,40 +192,33 @@
 			position: relative;
 			display: flex;
 			min-width: 0;
-			min-height: var(--bc-control-height-hero);
+			height: 100%;
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			gap: 4px;
+			gap: var(--bc-space-1);
 			border: 0;
 			border-radius: 0;
 			background: transparent;
 			appearance: none;
 			color: var(--bc-muted);
-			font-size: var(--bc-mobile-stat);
-			font-weight: 600;
-			line-height: var(--bc-mobile-stat-leading);
 			cursor: pointer;
-			padding: 4px 0;
+			padding: 0;
 			text-align: center;
 			text-decoration: none;
 			transition:
-				background-color 0.18s ease,
-				color 0.18s ease;
+				background-color var(--bc-motion-hover),
+				color var(--bc-motion-hover);
 		}
 
 		.mobile-bottom-nav__icon {
-			display: flex;
-			width: 28px;
-			height: 28px;
-			align-items: center;
-			justify-content: center;
+			display: grid;
+			width: var(--bc-mobile-nav-icon-size);
+			height: var(--bc-mobile-nav-icon-size);
+			place-items: center;
 			border-radius: var(--bc-radius-pill);
 			color: inherit;
 			line-height: 0;
-			transition:
-				background-color 0.18s ease,
-				color 0.18s ease;
 		}
 
 		.mobile-bottom-nav__label {
@@ -356,386 +228,48 @@
 			line-height: var(--bc-mobile-meta-leading);
 		}
 
-		.mobile-bottom-nav a.mobile-bottom-nav__item--commerce {
-			color: var(--bc-muted);
-		}
-
-		.mobile-bottom-nav a.mobile-bottom-nav__item--commerce .mobile-bottom-nav__label {
-			font-weight: 600;
-		}
-
 		.mobile-bottom-nav a.active,
-		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked) .mobile-bottom-nav__menu-trigger {
-			background: transparent;
-			color: var(--bc-accent);
-		}
-
-		.mobile-bottom-nav a.active .mobile-bottom-nav__icon,
-		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked)
-			.mobile-bottom-nav__menu-trigger
-			.mobile-bottom-nav__icon {
-			background: transparent;
+		.mobile-bottom-nav__menu-trigger.active {
 			color: var(--bc-accent);
 		}
 
 		.mobile-bottom-nav a.active .mobile-bottom-nav__label,
-		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked)
-			.mobile-bottom-nav__menu-trigger
-			.mobile-bottom-nav__label {
-			font-weight: 700;
+		.mobile-bottom-nav__menu-trigger.active .mobile-bottom-nav__label {
+			font-weight: var(--bc-weight-heading);
 		}
 
 		.mobile-bottom-nav a:focus-visible,
-		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:focus-visible)
-			.mobile-bottom-nav__menu-trigger {
+		.mobile-bottom-nav__menu-trigger:focus-visible {
 			background: var(--bc-surface);
 			color: var(--bc-ink);
-			outline: 2px solid var(--bc-ink);
-			outline-offset: -2px;
+			outline-offset: -2px !important;
 		}
 
-		#mobile-bottom-menu-toggle:checked {
-			pointer-events: none;
+		.mobile-bottom-nav :global(svg),
+		.mobile-bottom-nav :global(svg *) {
+			color: currentColor;
+			stroke: currentColor;
+		}
+
+		:global(.mobile-menu-sheet__panel.bc-mobile-sheet__content) {
+			background: var(--bc-bg);
+		}
+
+		:global(.mobile-menu-sheet__panel .bc-mobile-sheet__body) {
+			display: grid;
+			gap: var(--bc-space-3);
+			padding-bottom: var(--bc-space-2);
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.mobile-bottom-nav a:hover,
 			.mobile-bottom-nav__menu-trigger:hover {
-				background: transparent;
 				color: var(--bc-ink);
 			}
 
-			.mobile-bottom-nav a:hover .mobile-bottom-nav__icon,
-			.mobile-bottom-nav__menu-trigger:hover .mobile-bottom-nav__icon {
-				background: transparent;
-				color: var(--bc-accent);
-			}
-
-			.mobile-bottom-nav a.active:hover .mobile-bottom-nav__icon,
-			.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked)
-				.mobile-bottom-nav__menu-trigger:hover
-				.mobile-bottom-nav__icon {
-				background: transparent;
+			.mobile-bottom-nav a.active:hover,
+			.mobile-bottom-nav__menu-trigger.active:hover {
 				color: var(--bc-accent-hover);
-			}
-		}
-
-		.mobile-bottom-nav :global(svg) {
-			flex: 0 0 auto;
-			color: inherit;
-		}
-
-		.mobile-menu-sheet {
-			--mobile-menu-backdrop-opacity: 0;
-			--mobile-menu-panel-y: 100%;
-
-			position: fixed;
-			inset: 0;
-			z-index: 1000;
-			display: block;
-			visibility: hidden;
-			pointer-events: none;
-		}
-
-		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked) ~ .mobile-menu-sheet {
-			--mobile-menu-backdrop-opacity: 1;
-			--mobile-menu-panel-y: 0;
-
-			visibility: visible;
-			pointer-events: auto;
-		}
-
-		.mobile-menu-sheet__backdrop {
-			position: absolute;
-			inset: 0;
-			border: 0;
-			background: rgba(28, 28, 28, 0.36);
-			appearance: none;
-			cursor: pointer;
-			opacity: var(--mobile-menu-backdrop-opacity);
-			padding: 0;
-			transition: opacity 180ms ease;
-		}
-
-		.mobile-menu-sheet__panel {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			display: grid;
-			gap: var(--bc-space-3);
-			width: 100%;
-			max-height: min(90dvh, 760px);
-			overflow-y: auto;
-			scrollbar-width: none;
-			overscroll-behavior: contain;
-			margin: 0;
-			padding: var(--bc-space-2) var(--bc-mobile-gutter)
-				calc(var(--bc-space-4) + env(safe-area-inset-bottom));
-			border: 0;
-			border-top: 1px solid var(--bc-border);
-			border-radius: var(--bc-radius-panel) var(--bc-radius-panel) 0 0;
-			background: var(--bc-bg);
-			box-shadow: none;
-			transform: translateY(var(--mobile-menu-panel-y));
-			transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
-		}
-
-		.mobile-menu-sheet__panel::-webkit-scrollbar {
-			display: none;
-		}
-
-		.mobile-bottom-nav:has(#mobile-bottom-menu-toggle:checked)
-			~ .mobile-menu-sheet
-			.mobile-menu-sheet__panel {
-			transform: translateY(0) !important;
-		}
-
-		.mobile-menu-sheet__handle {
-			display: block;
-			width: 42px;
-			height: 5px;
-			justify-self: center;
-			border-radius: var(--bc-radius-pill);
-			background: var(--bc-border);
-		}
-
-		.mobile-menu-sheet__header {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: var(--bc-space-3);
-		}
-
-		.mobile-menu-sheet__header p,
-		.mobile-menu-sheet__header strong {
-			margin: 0;
-			color: var(--bc-ink);
-			letter-spacing: 0;
-		}
-
-		.mobile-menu-sheet__header p {
-			color: var(--bc-muted);
-			font-size: var(--bc-mobile-meta);
-			font-weight: var(--bc-weight-body);
-			line-height: var(--bc-mobile-meta-leading);
-			text-transform: uppercase;
-		}
-
-		.mobile-menu-sheet__header strong {
-			display: block;
-			font-size: var(--bc-mobile-section-title);
-			font-weight: var(--bc-weight-heading);
-			line-height: var(--bc-mobile-section-title-leading);
-		}
-
-		.mobile-menu-sheet__close {
-			display: flex;
-			width: var(--bc-control-height-standard);
-			height: var(--bc-control-height-standard);
-			align-items: center;
-			justify-content: center;
-			border: 0;
-			border-radius: var(--bc-radius-pill);
-			background: var(--bc-surface);
-			appearance: none;
-			color: var(--bc-ink);
-			cursor: pointer;
-			padding: 0;
-		}
-
-		.mobile-menu-sheet__sell {
-			position: relative;
-			isolation: isolate;
-			display: flex;
-			min-height: 68px;
-			align-items: center;
-			justify-content: space-between;
-			gap: 14px;
-			overflow: hidden;
-			border-radius: var(--bc-radius-control);
-			background: var(--bc-ink);
-			padding: 12px 128px 12px 14px;
-			color: var(--bc-white);
-			transition:
-				background-color 0.18s ease,
-				color 0.18s ease;
-		}
-
-		.mobile-menu-sheet__sell::after {
-			position: absolute;
-			inset: 0;
-			z-index: -1;
-			background: linear-gradient(90deg, rgba(28, 28, 28, 0) 54%, rgba(17, 17, 17, 0.42) 100%);
-			content: '';
-		}
-
-		.mobile-menu-sheet__sell:focus-visible {
-			background: var(--bc-ink);
-			color: var(--bc-white);
-		}
-
-		@media (hover: hover) and (pointer: fine) {
-			.mobile-menu-sheet__sell:hover {
-				background: var(--bc-ink);
-				color: var(--bc-white);
-			}
-		}
-
-		.mobile-menu-sheet__sell-copy {
-			position: relative;
-			z-index: 1;
-			display: grid;
-			gap: 2px;
-			min-width: 0;
-		}
-
-		.mobile-menu-sheet__sell strong,
-		.mobile-menu-sheet__sell small {
-			display: block;
-			min-width: 0;
-			overflow-wrap: anywhere;
-		}
-
-		.mobile-menu-sheet__sell strong {
-			color: var(--bc-white);
-			font-size: var(--bc-text-control);
-			font-weight: var(--bc-weight-control);
-			line-height: var(--bc-leading-control);
-		}
-
-		.mobile-menu-sheet__sell small {
-			color: rgba(255, 255, 255, 0.8);
-			font-size: var(--bc-mobile-meta);
-			font-weight: var(--bc-weight-body);
-			line-height: var(--bc-mobile-meta-leading);
-		}
-
-		.mobile-menu-sheet__sell-arrow {
-			position: absolute;
-			top: 50%;
-			right: 12px;
-			z-index: 2;
-			display: flex;
-			width: 30px;
-			height: 30px;
-			align-items: center;
-			justify-content: center;
-			border-radius: var(--bc-radius-pill);
-			background: var(--bc-white);
-			color: var(--bc-ink);
-			transform: translateY(-50%);
-		}
-
-		.mobile-menu-sheet__sell-arrow :global(svg) {
-			flex: 0 0 auto;
-			color: currentColor;
-			stroke: currentColor;
-		}
-
-		.mobile-menu-sheet__sell-consultant {
-			position: absolute;
-			right: 38px;
-			bottom: -11px;
-			z-index: 0;
-			display: block;
-			width: 82px;
-			height: 82px;
-			object-fit: contain;
-			object-position: right bottom;
-			opacity: 0.96;
-			pointer-events: none;
-			user-select: none;
-		}
-
-		.mobile-menu-sheet__actions {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: var(--bc-space-3);
-		}
-
-		.mobile-menu-sheet__actions a {
-			display: flex;
-			min-height: var(--bc-control-height-primary);
-			align-items: center;
-			justify-content: center;
-			gap: var(--bc-space-2);
-			border: 1px solid var(--bc-border);
-			border-radius: var(--bc-radius-control);
-			background: var(--bc-white);
-			color: var(--bc-ink);
-			font-size: var(--bc-text-control);
-			font-weight: var(--bc-weight-control);
-			line-height: var(--bc-leading-control);
-		}
-
-		.mobile-menu-sheet__actions a:first-child {
-			border-color: var(--bc-accent);
-			background: var(--bc-accent);
-			color: var(--bc-accent-contrast);
-		}
-
-		.mobile-menu-sheet__actions a:focus-visible {
-			background: var(--bc-ink);
-			color: var(--bc-white);
-		}
-
-		@media (hover: hover) and (pointer: fine) {
-			.mobile-menu-sheet__actions a:hover {
-				background: var(--bc-ink);
-				color: var(--bc-white);
-			}
-		}
-
-		.mobile-menu-sheet__sections {
-			display: grid;
-			gap: 13px;
-		}
-
-		.mobile-menu-sheet__sections section {
-			display: grid;
-			gap: var(--bc-space-2);
-		}
-
-		.mobile-menu-sheet__sections h2 {
-			margin: 0;
-			color: var(--bc-muted);
-			font-size: var(--bc-mobile-meta);
-			font-weight: var(--bc-weight-body);
-			letter-spacing: 0;
-			line-height: var(--bc-mobile-meta-leading);
-			text-transform: uppercase;
-		}
-
-		.mobile-menu-sheet__links {
-			display: grid;
-			gap: var(--bc-space-2);
-		}
-
-		.mobile-menu-sheet__links a {
-			display: flex;
-			min-height: var(--bc-control-height-primary);
-			align-items: center;
-			gap: var(--bc-space-3);
-			border-radius: var(--bc-radius-control);
-			background: var(--bc-card-bg);
-			padding: 0 13px;
-			color: var(--bc-ink);
-			font-size: var(--bc-text-control);
-			font-weight: var(--bc-weight-control);
-			line-height: var(--bc-leading-control);
-		}
-
-		.mobile-menu-sheet__links a.active,
-		.mobile-menu-sheet__links a:focus-visible {
-			background: var(--bc-surface-hover);
-			color: var(--bc-ink);
-		}
-
-		@media (hover: hover) and (pointer: fine) {
-			.mobile-menu-sheet__links a:hover {
-				background: var(--bc-surface-hover);
-				color: var(--bc-ink);
 			}
 		}
 	}

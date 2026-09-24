@@ -1,6 +1,10 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import { Calendar, Cog, Fuel } from '@lucide/svelte';
+	import { assetHref } from '$lib/utils/assets';
+	import { imageFallback } from '$lib/browser/image-fallback';
+	import { linkHref as resolve } from '$lib/utils/links';
+	import Calendar from '@lucide/svelte/icons/calendar';
+	import Cog from '@lucide/svelte/icons/cog';
+	import Fuel from '@lucide/svelte/icons/fuel';
 	import type { HomeFiveVehicleCardData } from '$lib/auxero/home-five';
 	import type { VehicleCardCopy } from '$lib/i18n/messages';
 	import { getGarageContext } from '$lib/state/garage.svelte';
@@ -57,13 +61,19 @@
 	<div class="image">
 		<a href={resolve(`/inventory/${encodeURIComponent(vehicle.slug)}`)}>
 			<img
+				use:imageFallback
 				class="card--img"
-				src={vehicle.image}
+				src={assetHref(vehicle.image)}
 				alt={vehicle.title}
 				width="660"
 				height="440"
 				loading="lazy"
 				decoding="async"
+				onerror={(event) => {
+					const image = event.currentTarget as HTMLImageElement;
+					if (!image.src.endsWith('/assets/vehicle-placeholder.svg'))
+						image.src = '/assets/vehicle-placeholder.svg';
+				}}
 			/>
 		</a>
 	</div>
@@ -125,6 +135,45 @@
 </div>
 
 <style>
+	.top {
+		position: absolute;
+		inset: 0 0 auto;
+		z-index: 1;
+	}
+	.top .highlight {
+		position: absolute;
+		margin: 0;
+	}
+	.top .heart {
+		position: absolute;
+		top: var(--bc-space-2);
+		right: var(--bc-space-2);
+	}
+	.image {
+		position: relative;
+		flex: 0 0 auto;
+	}
+	.image > a {
+		display: block;
+		height: 100%;
+	}
+	.card--img {
+		display: block;
+	}
+	.card-box__title,
+	.daynight-card-price {
+		margin: 0;
+	}
+	.daynight-card-specs {
+		list-style: none;
+		padding: 0;
+	}
+	.daynight-card-specs li {
+		display: flex;
+	}
+	.daynight-card-price__finance-link {
+		text-decoration: none;
+	}
 	.daynight-card-title-full {
 		display: contents;
 	}
@@ -134,6 +183,12 @@
 	}
 
 	.card-box-style-1 {
+		position: relative;
+		min-width: 0;
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-card);
+		overflow: hidden;
+		background: var(--bc-card-bg);
 		display: flex;
 		flex-direction: column;
 		height: 100%;

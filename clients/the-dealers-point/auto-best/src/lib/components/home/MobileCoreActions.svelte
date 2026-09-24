@@ -1,6 +1,10 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
-  import { leadSite } from '$config/lead-site';
+  import FeatureArtwork from '$components/ui/FeatureArtwork.svelte';
+  import { mobileActionArtwork } from '$data/feature-artwork';
 
   const actions = [
     {
@@ -9,9 +13,7 @@
       cta: 'Разгледай',
       href: '/listing-grid',
       tone: 'blue',
-      image: leadSite.artwork.home.collection,
-      width: 1200,
-      height: 668
+      artwork: mobileActionArtwork.collection
     },
     {
       title: 'Продай / Бартер',
@@ -19,9 +21,7 @@
       cta: 'Заяви оценка',
       href: '/contact?topic=trade-in',
       tone: 'red',
-      image: leadSite.artwork.home.sell,
-      width: 1200,
-      height: 438
+      artwork: mobileActionArtwork.sell
     },
     {
       title: 'Внос по заявка',
@@ -29,9 +29,7 @@
       cta: 'Заяви внос',
       href: '/contact?topic=import',
       tone: 'ice',
-      image: leadSite.artwork.home.import,
-      width: 1200,
-      height: 450
+      artwork: mobileActionArtwork.import
     },
     {
       title: 'На лизинг',
@@ -39,23 +37,21 @@
       cta: 'Виж условия',
       href: '/contact?topic=leasing',
       tone: 'dark',
-      image: '/assets/images/template/menu-leasing-v2.webp',
-      width: 1610,
-      height: 977
+      artwork: mobileActionArtwork.finance
     }
   ] as const;
 </script>
 
-<section class="dn-mobile-core-actions" aria-label="Основни услуги">
+<section class="dn-mobile-core-actions" aria-label={i18n.t("m_23b41588e19b")}>
   <div class="dn-mobile-core-actions__grid">
     {#each actions as action (action.href)}
-      <a class={`dn-mobile-core-card dn-mobile-core-card--${action.tone}`} href={resolve(action.href)}>
+      <a class={`dn-mobile-core-card dn-mobile-core-card--${action.tone}`} href={i18n.href(resolve(action.href))}>
         <span class="dn-mobile-core-card__copy">
-          <strong>{action.title}</strong>
-          <small>{action.text}</small>
+          <strong>{i18n.text(action.title)}</strong>
+          <small>{i18n.text(action.text)}</small>
         </span>
         <span class="dn-mobile-core-card__art" aria-hidden="true">
-          <img src={action.image} alt="" width={action.width} height={action.height} loading="lazy" decoding="async" />
+          <FeatureArtwork artwork={action.artwork} />
         </span>
       </a>
     {/each}
@@ -90,7 +86,7 @@
     .dn-mobile-core-card--blue { background: linear-gradient(145deg, var(--dn-theme-action-blue-start) 0%, var(--dn-theme-action-blue-end) 100%); }
     .dn-mobile-core-card--red { background: linear-gradient(145deg, var(--dn-theme-action-red-start) 0%, var(--dn-theme-action-red-end) 100%); }
     .dn-mobile-core-card--ice { background: linear-gradient(145deg, var(--dn-theme-action-ice-start) 0%, var(--dn-theme-action-ice-end) 100%); color: var(--dn-theme-action-ice-ink); }
-    .dn-mobile-core-card--dark { background: linear-gradient(145deg, var(--dn-theme-action-dark-start) 0%, var(--dn-theme-action-dark-end) 100%); }
+    .dn-mobile-core-card--dark { background: var(--dn-theme-hero-surface); }
 
     .dn-mobile-core-card__copy {
       position: relative;
@@ -98,7 +94,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 11px 10px 0;
+      padding: var(--dn-space-3) var(--dn-space-3) 0;
     }
 
     .dn-mobile-core-card strong {
@@ -126,35 +122,15 @@
     .dn-mobile-core-card__art {
       position: absolute;
       z-index: 1;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 86px;
+      inset-inline: var(--dn-space-2);
+      bottom: var(--dn-space-3);
+      height: 80px;
+      display: flex;
+      align-items: flex-end;
       pointer-events: none;
     }
 
-    .dn-mobile-core-card__art img {
-      position: absolute;
-      bottom: -2px;
-      left: 50%;
-      display: block;
-      width: 100%;
-      max-width: none;
-      height: 100%;
-      object-fit: contain;
-      object-position: center bottom;
-      filter: drop-shadow(0 10px 14px rgb(0 0 0 / .22));
-      transform: translateX(-50%);
-    }
-
-    .dn-mobile-core-card--blue .dn-mobile-core-card__art img { width: clamp(152px, 106%, 164px); }
-    .dn-mobile-core-card--red .dn-mobile-core-card__art img,
-    .dn-mobile-core-card--ice .dn-mobile-core-card__art img { width: clamp(206px, 128%, 220px); }
-    .dn-mobile-core-card--dark .dn-mobile-core-card__art img {
-      width: clamp(172px, 121%, 216px);
-      height: 121%;
-      bottom: -15px;
-    }
+    .dn-mobile-core-card--dark .dn-mobile-core-card__art { mix-blend-mode: lighten; }
     .dn-mobile-core-card:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   }
 

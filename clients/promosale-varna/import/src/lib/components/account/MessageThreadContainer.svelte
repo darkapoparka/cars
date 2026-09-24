@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { MoreHorizontal, Paperclip, Search, Send } from '@lucide/svelte';
+	import MoreHorizontal from '@lucide/svelte/icons/ellipsis';
+	import Paperclip from '@lucide/svelte/icons/paperclip';
+	import Search from '@lucide/svelte/icons/search';
+	import Send from '@lucide/svelte/icons/send';
 	import type { AuxeroMessageThreadData } from '$lib/auxero/messages';
 
 	let { thread }: { thread: AuxeroMessageThreadData } = $props();
