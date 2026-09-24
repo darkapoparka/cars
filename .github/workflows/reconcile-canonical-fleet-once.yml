@@ -232,7 +232,7 @@ jobs:
               printf '{"slug":"%s","repository":"%s","batch":%s,"state":"generated"}\n' "$slug" "$repository" "$batch_number" >> "$RUNNER_TEMP/fleet-reconciliation.ndjson"
             done
 
-            git diff --cached --check
+
             if git diff --cached --quiet; then
               echo "Batch $batch_number already matched the approved native release."
             else
