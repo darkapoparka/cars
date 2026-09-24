@@ -162,7 +162,23 @@ jobs:
 
               for protected in business-facts.json stock.json inventory.json; do
                 if test -f "$evidence/$protected.before"; then
-                  cmp "$evidence/$protected.before" "$output/$protected"
+                  BEFORE="$evidence/$protected.before" AFTER="$output/$protected" node <<'NODE'
+          const fs = require('node:fs');
+          const normalize = (value) => Array.isArray(value)
+            ? value.map(normalize)
+            : value && typeof value === 'object'
+              ? Object.fromEntries(
+                  Object.entries(value)
+                    .sort(([a], [b]) => a.localeCompare(b))
+                    .map(([key, entry]) => [key, normalize(entry)])
+                )
+              : value;
+          const before = normalize(JSON.parse(fs.readFileSync(process.env.BEFORE, 'utf8')));
+          const after = normalize(JSON.parse(fs.readFileSync(process.env.AFTER, 'utf8')));
+          if (JSON.stringify(before) !== JSON.stringify(after)) {
+            throw new Error(process.env.BEFORE + ': dealer data changed semantically');
+          }
+          NODE
                 fi
               done
               if test -f "$evidence/branding.before.sha256"; then
