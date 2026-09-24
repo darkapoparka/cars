@@ -19,17 +19,17 @@ export const dealerLocaleConfiguration = {
 
 /** Dealer-owned display fields. Client packages replace this bounded bilingual object. */
 export const dealerLocalizedText = {
-  en: {
-    city: 'Sofia',
-    addressLine: '18 Atanas Manchev Street, Studentski Grad',
-    address: '18 Atanas Manchev Street, Studentski Grad, Sofia',
-    appointment: 'Visits by appointment'
+  "en": {
+    "city": "Varna",
+    "addressLine": "Varna Business Park, Building B6",
+    "address": "Varna Business Park, Building B6, Varna, Bulgaria",
+    "appointment": "Monday–Friday 09:00–18:00; Saturday 10:00–16:00; Sunday closed"
   },
-  bg: {
-    city: brand.city,
-    addressLine: brand.addressLine,
-    address: brand.address,
-    appointment: brand.appointment
+  "bg": {
+    "city": "Варна",
+    "addressLine": "Бизнес парк Варна, сграда B6",
+    "address": "Бизнес парк Варна, сграда B6, Варна, България",
+    "appointment": "Понеделник–петък 09:00–18:00; събота 10:00–16:00; неделя почивен ден"
   }
 } as const;
 

@@ -25,7 +25,7 @@
   ] as const;
 </script>
 
-<div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-hero-panel={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-intent--tradein={topic.id === 'trade-in'} class:dn-contact-intent--import={topic.id === 'import'}>
+<div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-intent--tradein={topic.id === 'trade-in'} class:dn-contact-intent--import={topic.id === 'import'}>
   <div class="dn-contact-intent__main">
     {#if topic.id === 'trade-in' || topic.id === 'import'}
       <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? i18n.t("m_cd386206fba4") : i18n.text(topic.title)}</h1>
@@ -69,9 +69,9 @@
 
     <div class="dn-contact-social" role="group" aria-label={i18n.t("m_b16446d4331a")}>
       <span>{i18n.t("m_b16446d4331a")}</span>
-      <div>
+      <div class="dn-social-profile-links">
         {#each socialPlatforms.filter(profile => profile.href) as platform (platform.name)}
-          <a href={i18n.href(platform.href)} target="_blank" rel="noopener noreferrer" aria-label={platform.label} title={platform.label}>
+          <a class="dn-social-profile-link" href={i18n.href(platform.href)} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('m_c0b8af66cd54', { p0: platform.label })} title={platform.label}>
             <SocialBrandIcon name={platform.name} />
           </a>
         {/each}
@@ -96,14 +96,6 @@
       <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>{i18n.t("m_2b5c3d26721a")}</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">{i18n.t("m_931269cbffaa")}</span>{/if}</h2>
       <p class:dn-contact-mobile-copy={topic.id === 'general'}>{i18n.t("m_bfe8e24333da")}</p>
     </div>
-
-    {#if topic.id === 'general'}
-      <div class="dn-contact-visit">
-        <p><Icon name="map-pin" size={24} /><span>{i18n.dealer('address')}</span></p>
-        <p class="dn-contact-visit__appointment"><Icon name="clock" size={24} /><span>{i18n.t("m_f8452cbad37b", { p0: i18n.dealer('appointment') })}</span></p>
-        <a class="dn-contact-button" href={i18n.href(directionsUrl)} target="_blank" rel="noreferrer">{i18n.t("m_c95356784006")}<Icon name="arrow-right" size={20} /></a>
-      </div>
-    {/if}
 
     <nav class="dn-contact-card__links" aria-label={i18n.t("m_ab09149748e6")}>
       <a
@@ -176,7 +168,7 @@
   @media (max-width: 767px) { .dn-contact-workflow-hint { display: block; } }
   .dn-contact-intent--workflow { row-gap: 0; }
   .dn-contact-description--mobile { display: none; }
-  .dn-contact-desktop-copy, .dn-contact-visit { display: none; }
+  .dn-contact-desktop-copy { display: none; }
   .dn-contact-intent--tradein { grid-template-columns: 1fr; width: min(920px, 100%); }
   .dn-contact-intent--tradein .dn-contact-intent__main { position: relative; z-index: 1; width: 100%; }
   .dn-contact-intent--import { grid-template-columns: 1fr; width: min(760px, 100%); }
@@ -185,17 +177,7 @@
   @media (min-width: 992px) {
     .dn-contact-desktop-copy { display: inline; }
     .dn-contact-mobile-copy { display: none; }
-    .dn-contact-intent--general { width: 100%; align-items: stretch; }
-    .dn-contact-intent--general .dn-contact-intent__main,
-    .dn-contact-intent--general .dn-contact-card { padding: 32px; }
-    .dn-contact-intent--general .dn-contact-card__links,
-    .dn-contact-intent--general .dn-contact-card__actions { display: none; }
-    .dn-contact-visit { display: grid; gap: 18px; margin-top: 24px; }
-    .dn-contact-visit p { display: flex; align-items: flex-start; gap: 14px; margin: 0; color: #525a66; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
-    .dn-contact-visit :global(svg) { flex-shrink: 0; color: var(--dn-red); }
-    .dn-contact-visit > a { justify-self: start; gap: 10px; min-height: 52px; background: #eef0f2; color: #202329; }
-    .dn-contact-visit > a:hover { background: #e3e6ea; }
-    .dn-contact-visit > a:focus-visible { outline: 2px solid #202329; outline-offset: 3px; }
+    .dn-contact-intent--general { display: none; }
   }
   @media (max-width: 767px) {
     .dn-contact-description--wide { display: none; }

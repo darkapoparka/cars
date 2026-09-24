@@ -215,6 +215,7 @@
           <li><Icon name="map-pin" size={18} strokeWidth={1.75} /><span>{i18n.dealer('address')}</span></li>
           <li><Icon name="phone" size={18} strokeWidth={1.75} /><a {...phoneLinkAttributes}>{brand.phone}</a></li>
           <li class="dn-topbar__item--appointment"><Icon name="clock" size={18} strokeWidth={1.75} /><span>{i18n.dealer('appointment')}</span></li>
+          <li class="dn-topbar__settings"><LocaleTrigger /></li>
         </ul>
       </div>
     </div>
@@ -292,14 +293,13 @@
           </nav>
 
           <div class="dn-header-actions">
-            <LocaleTrigger />
             <ActionLink class="dn-header-action dn-header-action--secondary" href="/contact">
               <Icon name="mail" size={17} strokeWidth={1.8} />
               <span>{i18n.t("m_0e3416f5f251")}</span>
             </ActionLink>
             <ActionLink class="dn-header-action dn-header-action--primary" href={detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'}>
               <Icon name="calendar" size={17} strokeWidth={1.8} />
-              <span>{i18n.t("m_be4b2e6f02d6")}</span>
+              <span>{i18n.t('action.viewingShort')}</span>
             </ActionLink>
           </div>
 
@@ -407,7 +407,7 @@
   .dn-topbar__list a { display: inline-flex; min-height: 44px; align-items: center; color: #30343a; font-weight: var(--dn-control-weight); }
   .dn-topbar__list a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   .dn-header__lower { background: #fff; border-top: 1px solid rgba(20,23,29,.06); border-bottom: 1px solid rgba(20,23,29,.06); }
-  .dn-header__inner { min-height: 94px; display: grid; grid-template-columns: 270px minmax(420px,1fr) auto; align-items: center; gap: 20px; }
+  .dn-header__inner { min-height: 94px; display: grid; grid-template-columns: minmax(160px, 1fr) auto minmax(160px, 1fr); align-items: center; gap: 20px; }
   .dn-logo { display: inline-flex; min-height: 44px; align-items: center; }
   .dn-logo picture { display: flex; align-items: center; }
   .dn-logo img { width: auto; max-width: 230px; height: 64px; object-fit: contain; }
@@ -440,13 +440,18 @@
   .dn-mega__side-action > :global(.dn-mega__cta) { width: 100%; min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; }
 
   @media (min-width: 992px) {
+    .dn-header-actions { justify-self: end; white-space: nowrap; }
+    .dn-topbar__list { gap: var(--dn-space-4); font-size: var(--dn-text-meta); }
+    .dn-topbar__settings { flex-shrink: 0; }
+    .dn-topbar__settings :global(.cars-locale-trigger) { border-color: transparent; border-radius: var(--dn-radius-control); font-size: var(--dn-text-meta); }
+    .dn-topbar__settings :global(.cars-locale-trigger:hover) { background: var(--dn-surface); opacity: 1; }
     .dn-header:not(.dn-header--compact) .dn-header__inner { min-height: 84px; }
     .dn-topbar, .dn-topbar__inner { min-height: 44px; }
     .dn-header:not(.dn-header--compact) .dn-logo img { height: 56px; }
   }
 
   @media (min-width: 992px) and (max-width: 1359px) {
-    .dn-header__inner { grid-template-columns: 190px minmax(0, 1fr) auto; gap: 12px; }
+    .dn-header__inner { gap: 12px; }
     .dn-logo img { max-width: 190px; }
     .dn-nav__list { gap: 2px; }
     .dn-nav__list > li > a { padding-inline: 8px; font-size: var(--dn-text-body); white-space: nowrap; }
@@ -458,7 +463,7 @@
   }
 
   @media (max-width: 1199px) {
-    .dn-header__inner { grid-template-columns: 160px minmax(0, 1fr) auto; gap: var(--dn-space-2); }
+    .dn-header__inner { gap: var(--dn-space-2); }
     .dn-logo img { max-width: 160px; }
     .dn-nav { min-width: 0; }
     .dn-nav__list > li > a { padding-inline: var(--dn-space-2); font-size: var(--dn-text-body); }

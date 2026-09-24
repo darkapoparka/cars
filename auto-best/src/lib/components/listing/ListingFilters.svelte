@@ -86,7 +86,7 @@
 <section class="dn-listing-filter-wrap" data-slot="listing-filters" aria-label={i18n.t("m_6f8428de4166")}>
   <div class="container">
     <div class="dn-listing-filter">
-      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} keywordPlaceholder="Търси в налични" /></div>
+      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} /></div>
       <QuickFilterSheet mode="url" id="dn-listing-sort-sheet">
       {#snippet children(openSort, sortOpen)}
       <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
@@ -408,16 +408,14 @@
   }
 
   @media (min-width: 992px) {
-    .dn-listing-filter-wrap { top: 320px; margin-top: 0; }
+    .dn-listing-filter-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); top: var(--dn-route-hero-control-top); margin-top: 0; }
     .dn-listing-filter-wrap > .container { width: var(--dn-discovery-width); }
     .dn-listing-filter { border-radius: var(--dn-discovery-radius); box-shadow: 0 12px 32px rgb(32 35 41 / 6%); }
     .dn-listing-filter__search-field { min-height: var(--dn-discovery-search-height); }
     .dn-listing-filter__facets { gap: var(--dn-discovery-gap); }
   }
 
-  @media (min-width: 1440px) {
-    .dn-listing-filter-wrap { --dn-discovery-width: min(1040px, calc(100vw - 560px)); }
-  }
+
 
   @media (max-width: 767px) {
     .dn-listing-filter-wrap {

@@ -103,6 +103,7 @@ export const MarketplaceResults = ({
             filters={filters}
             locale={locale}
             onApply={onApply}
+            onOpenFilters={onOpenFilters}
             onViewModeChange={onViewModeChange}
             totalListings={totalListings}
             viewMode={viewMode}
@@ -149,7 +150,7 @@ export const MarketplaceResults = ({
                   listing={listing}
                   locale={locale}
                   presentation={
-                    isDealershipSite ? "showroom" : regularPresentation
+                    isDealershipSite ? "discovery" : regularPresentation
                   }
                   priority={index < priorityListingCount}
                   saveHref={getAccountListingSaveFlowHref(appBaseUrl, listing)}

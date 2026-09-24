@@ -9,8 +9,6 @@
   import ContactVehicle from './ContactVehicle.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
-  import { brand } from '$config/brand';
-  import { leadSite } from '$config/lead-site';
   import type { ContactTopic } from '$data/company';
 
   let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
@@ -25,23 +23,6 @@
 
 <section class="dn-contact-hero dn-route-hero" class:dn-route-hero--studio={topic.id !== 'general'} class:dn-route-hero--charcoal={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} mobileScene={topic.id === 'trade-in' ? 'sell' : topic.id === 'import' ? 'import' : 'car'} />
-  <picture>
-    {#if topic.id === 'trade-in'}
-      <source media="(max-width: 991px)" srcset={leadSite.artwork.contactHero.sellMobile} />
-    {:else if topic.id === 'import'}
-      <source media="(max-width: 991px)" srcset={leadSite.artwork.contactHero.importMobile} />
-    {/if}
-  <img
-    class="dn-contact-hero__media"
-    src={leadSite.artwork.contactHero.desktop}
-    alt=""
-    width="1920"
-    height="1080"
-    fetchpriority="high"
-    decoding="async"
-  />
-  </picture>
-  <div class="dn-contact-hero__overlay" aria-hidden="true"></div>
   <div class="container dn-contact-hero__content dn-route-hero__layout">
     <div class="dn-contact-hero__copy dn-route-hero__copy">
       <h1 id="contact-title"><span class="dn-contact-hero__desktop-title">{topic.id === 'general' ? i18n.t("m_d7def4b82f7c") : topic.id === 'trade-in' ? i18n.t("m_3d25686c3130") : i18n.text(topic.title)}</span><span class="dn-contact-hero__mobile-title">{topic.id === 'general' ? i18n.t("m_2b5c3d26721a") : topic.id === 'trade-in' ? i18n.t("m_3d25686c3130") : i18n.text(topic.title)}</span></h1>

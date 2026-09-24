@@ -4,6 +4,7 @@
   const i18n = getI18n();
 
   import { resolve } from '$app/paths';
+  import Icon from '$components/ui/Icon.svelte';
   import { bodyTypes } from '$data/home';
 
   const mobileBodyTypes = new Set<string>(
@@ -19,19 +20,19 @@
   let expanded = $state(false);
 </script>
 
-<section class="dn-section dn-body-types" aria-labelledby="body-types-title">
+<section class="dn-section dn-body-types dn-home-content-section" aria-labelledby="body-types-title">
   <div class="container dn-body-types__panel">
-    <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+    <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--light dn-home-section-heading--ice dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
       <h2 id="body-types-title" class="dn-home-section-title">
         <span class="dn-heading-desktop">{i18n.t("m_555a44ad25a6")}</span>
         <span class="dn-heading-mobile">{i18n.t("m_ef0ecd6a2ade")}</span>
       </h2>
-      <a class="dn-body-types__all dn-home-section-action" href={i18n.href(resolve('/listing-grid'))}>
-        <span class="dn-heading-desktop">{i18n.t("m_7d6647b063a2")}</span>
+      <a class="dn-body-types__all dn-home-section-action" href={i18n.href(resolve('/listing-grid'))} aria-label={i18n.t("m_7d6647b063a2")}>
+        <span class="dn-heading-desktop dn-home-action-label">{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></span>
       </a>
     </div>
 
-    <div class="dn-body-types__viewport">
+    <div class="dn-body-types__viewport dn-home-section-panel">
       <div class="dn-body-types__rail" id="body-types-grid" aria-label={i18n.t("m_b94720bac36c")}>
         {#each bodyTypes as item (item.query)}
           <a class="dn-body-type" class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`))}>
@@ -143,7 +144,7 @@
   }
 
   .dn-body-type:focus-visible {
-    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 28%);
+    outline: 3px solid var(--dn-focus);
     outline-offset: 2px;
   }
 
@@ -208,7 +209,8 @@
     }
 
     .dn-body-type {
-      background: #fff;
+      background: var(--dn-surface-raised);
+      box-shadow: var(--dn-card-shadow);
     }
 
     .dn-body-types {
@@ -223,14 +225,6 @@
 
     .dn-body-types__heading h2 {
       font-size: var(--dn-text-heading);
-    }
-
-    .dn-body-types__viewport {
-      position: relative;
-      margin: calc(-1 * var(--dn-home-banner-overlap)) 0 0;
-      padding: 24px;
-      border-radius: var(--dn-radius);
-      background: var(--dn-home-panel);
     }
 
     .dn-body-types__rail {
@@ -377,4 +371,3 @@
     .dn-body-type--secondary { display: none; }
   }
 </style>
-

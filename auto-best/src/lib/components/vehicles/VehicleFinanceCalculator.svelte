@@ -5,7 +5,7 @@
 
   import { vehicleContactHref } from '$data/journeys';
   import { resolve } from '$app/paths';
-  import { formatVehiclePrice } from '$data/inventory';
+  import { formatPrice } from '$lib/locale/core';
 
   let { priceEur, vehicleId, idPrefix = 'finance' }: { priceEur: number; vehicleId: number; idPrefix?: string } = $props();
 
@@ -37,7 +37,7 @@
           type="number"
           min="0"
           max={priceEur}
-          step="500"
+          step="1"
           bind:value={downPaymentEur}
           onblur={normalizeDownPayment}
           aria-describedby={disclaimerId}
@@ -59,11 +59,11 @@
   <dl class="dn-finance-calculator__result" aria-live="polite">
     <div>
       <dt>{i18n.t("m_e43dbb778995")}</dt>
-      <dd>{formatVehiclePrice(financedPrincipal, i18n.locale)}</dd>
+      <dd>{formatPrice(financedPrincipal, i18n.locale)}</dd>
     </div>
     <div>
       <dt>{i18n.t("m_25604ed836cb")}</dt>
-      <dd>{formatVehiclePrice(principalPerMonth, i18n.locale)}</dd>
+      <dd>{formatPrice(principalPerMonth, i18n.locale)}</dd>
     </div>
   </dl>
 

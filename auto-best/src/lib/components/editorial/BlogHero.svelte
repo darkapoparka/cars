@@ -4,24 +4,13 @@
 
   import { resolve } from '$app/paths';
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
-  import { leadSite } from '$config/lead-site';
   import { blogCategories, blogFilterHref, type BlogFilters } from '$data/editorial';
 
   let { filters }: { filters: BlogFilters } = $props();
 </script>
 
-<section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--yellow" aria-labelledby="blog-title">
+<section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--neutral" aria-labelledby="blog-title">
   <HeroVehicles pair="blog" />
-  <img
-    class="dn-blog-hero__media"
-    src={leadSite.artwork.blogHero}
-    alt=""
-    width="1920"
-    height="1080"
-    fetchpriority="high"
-    decoding="async"
-  />
-  <div class="dn-blog-hero__overlay" aria-hidden="true"></div>
   <div class="container dn-blog-hero__inner dn-route-hero__layout">
     <div class="dn-blog-hero__copy dn-route-hero__copy">
       <h1 id="blog-title">{i18n.t("m_572cd72feb9a")}</h1>
