@@ -1,4 +1,6 @@
 import { featuredVehicles, type Vehicle, type VehicleCondition, type VehicleEquipment } from './inventory';
+import type { Locale } from '$lib/locale/core';
+import { specificationLabel } from '$lib/i18n/presentation';
 
 export type ListingSort = 'default' | 'newest' | 'price-asc' | 'price-desc' | 'mileage-asc';
 
@@ -109,7 +111,7 @@ export const listingModelsForMake = (make: string) => {
   return ['', ...new Set(models)];
 };
 
-export const vehicleMatchesQuery = (vehicle: Vehicle, query: string) => {
+export const vehicleMatchesQuery = (vehicle: Vehicle, query: string, locale: Locale = 'en') => {
   const normalizedQuery = normalize(query);
   if (!normalizedQuery) return true;
 
@@ -122,11 +124,12 @@ export const vehicleMatchesQuery = (vehicle: Vehicle, query: string) => {
     vehicle.mileage,
     vehicle.fuel,
     vehicle.transmission,
-    ...vehicle.equipment
+    ...vehicle.equipment,
+    ...[vehicle.body, vehicle.category, vehicle.fuel, vehicle.transmission, ...vehicle.equipment].map(value => specificationLabel(value, locale))
   ].join(' ')).includes(normalizedQuery);
 };
 
-export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: ListingFilters) => {
+export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: ListingFilters, locale: Locale = 'en') => {
   const query = normalize(filters.q);
   const model = normalize(filters.model);
   const make = normalize(filters.make);
@@ -136,7 +139,7 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
   const version = normalize(filters.version);
 
   const filtered = vehicles.filter((vehicle) => {
-    if (query && !vehicleMatchesQuery(vehicle, query)) return false;
+    if (query && !vehicleMatchesQuery(vehicle, query, locale)) return false;
     if (make && normalize(vehicle.make) !== make) return false;
     if (model && !normalize(vehicle.title).includes(model)) return false;
     if (body && normalize(vehicle.body) !== body && !normalize(vehicle.category).includes(body)) return false;

@@ -7,19 +7,21 @@ import ts from 'typescript';
 // Compile the real pure domain modules, with the same TypeScript compiler as the app.
 const out = path.resolve('artifacts/domain');
 await mkdir(out, { recursive: true });
-const modules = [
-  ['src/lib/config/lead-site.ts', 'lead-site'],
-  ['src/lib/data/inventory.ts', 'inventory'],
-  ['src/lib/data/listing.ts', 'listing'],
-  ['src/lib/data/listing-draft.ts', 'listing-draft'],
-  ['src/lib/data/journeys.ts', 'journeys']
-];
-for (const [input, name] of modules) {
-  const source = await readFile(input, 'utf8');
-  const code = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 } }).outputText
-    .replace(/from '\.\/(inventory|listing)'/g, "from './$1.mjs'")
-    .replace(/from '\$config\/lead-site'/g, "from './lead-site.mjs'");
-  await writeFile(`${out}/${name}.mjs`, code);
+const modules = [["src/lib/config/lead-site.ts","lead-site"],["src/lib/data/inventory.ts","inventory"],["src/lib/data/listing.ts","listing"],["src/lib/data/listing-draft.ts","listing-draft"],["src/lib/data/journeys.ts","journeys"],["src/lib/config/brand.ts","brand"],["src/lib/locale/policy.ts","locale-policy"],["src/lib/locale/config.ts","locale-config"],["src/lib/config/locale.ts","dealer-locale-config"],["src/lib/locale/core.ts","locale-core"],["src/lib/locale/catalog.ts","locale-catalog"],["src/lib/locale/messages.ts","locale-messages"],["src/lib/i18n/presentation.ts","locale-presentation"]];
+const moduleOutputs = new Map(modules.map(([file,name]) => [path.resolve(file), name]));
+for (const [input,name] of modules) {
+  let code = ts.transpileModule(await readFile(input,'utf8'), {compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
+  const tree=ts.createSourceFile(input,code,ts.ScriptTarget.Latest,true,ts.ScriptKind.JS);
+  const edits=[];
+  for(const statement of tree.statements)if((ts.isImportDeclaration(statement)||ts.isExportDeclaration(statement))&&statement.moduleSpecifier){
+    const specifier=statement.moduleSpecifier.text;
+    let target=specifier.startsWith('$lib/')?path.resolve('src/lib',specifier.slice(5)):specifier.startsWith('$config/')?path.resolve('src/lib/config',specifier.slice(8)):path.resolve(path.dirname(input),specifier);
+    if(!target.endsWith('.ts'))target+='.ts';
+    const output=moduleOutputs.get(target);if(!output)throw new Error('Unregistered pure-domain dependency: '+specifier+' in '+input);
+    edits.push({start:statement.moduleSpecifier.getStart(tree),end:statement.moduleSpecifier.end,text:JSON.stringify('./'+output+'.mjs')});
+  }
+  for(const edit of edits.sort((a,b)=>b.start-a.start))code=code.slice(0,edit.start)+edit.text+code.slice(edit.end);
+  await writeFile(out+'/'+name+'.mjs',code);
 }
 const inventory = await import(pathToFileURL(`${out}/inventory.mjs`));
 const listing = await import(pathToFileURL(`${out}/listing.mjs`));

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { CarFront, Check, FileText, Link2, MessageCircle, Truck, X } from '@lucide/svelte';
 	import { leadInfoContent } from '$lib/data/lead-content';
 	let {
@@ -24,12 +27,17 @@
 <section class="lead-explainer" aria-labelledby={titleId}>
 	<header class="lead-explainer__header">
 		<h2 id={titleId}>{content.title}</h2>
-		<button class="lead-explainer__close" type="button" onclick={onClose} aria-label="Затвори">
+		<button
+			class="lead-explainer__close"
+			type="button"
+			onclick={onClose}
+			aria-label={i18n.t('copy.1ef1a425356f')}
+		>
 			<X size={21} strokeWidth={2} aria-hidden="true" />
 		</button>
 	</header>
 	<div class="lead-explainer__body">
-		<ol class="lead-explainer__steps" aria-label="Стъпки">
+		<ol class="lead-explainer__steps" aria-label={i18n.t('copy.d5245846014b')}>
 			{#each content.steps as step (step.title)}
 				{@const Icon = icons[step.icon]}
 				<li>
@@ -37,8 +45,8 @@
 						><Icon size={22} strokeWidth={1.8} /></span
 					>
 					<div>
-						<h3>{step.title}</h3>
-						<p>{step.copy}</p>
+						<h3>{i18n.text(step.title)}</h3>
+						<p>{i18n.text(step.copy)}</p>
 					</div>
 				</li>
 			{/each}
@@ -46,7 +54,8 @@
 	</div>
 	<footer class="lead-explainer__footer">
 		<button class="lead-explainer__done" type="button" onclick={onClose}>
-			Разбрах <Check size={18} strokeWidth={2.2} aria-hidden="true" />
+			{i18n.t('copy.67207ace9d7a')}
+			<Check size={18} strokeWidth={2.2} aria-hidden="true" />
 		</button>
 	</footer>
 </section>

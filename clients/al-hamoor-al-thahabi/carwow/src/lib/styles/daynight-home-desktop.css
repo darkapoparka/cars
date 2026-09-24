@@ -5964,10 +5964,10 @@ body.daynight-home-page .daynight-home-container {
 	box-sizing: border-box;
 	margin-left: auto !important;
 	margin-right: auto !important;
-	max-width: 1440px;
+	max-width: 1320px;
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	width: min(calc(100% - 30px), 1440px);
+	width: min(calc(100% - 96px), 1320px);
 }
 
 body.daynight-home-page .daynight-home-section-content {

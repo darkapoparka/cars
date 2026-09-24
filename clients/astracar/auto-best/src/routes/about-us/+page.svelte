@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import './about.css';
   import { template } from '$config/template';
   import AboutHero from '$components/company/AboutHero.svelte';
@@ -10,8 +14,8 @@
 </script>
 
 <svelte:head>
-  <title>За нас — {brand.name}</title>
-  <meta name="description" content={`${brand.name} — премиум автомобили, внос по заявка, собствен лизинг, бартер и огледи с предварителна уговорка в ${brand.city}.`} />
+  <title>{i18n.t("m_147bdce9883d", { p0: brand.name })}</title>
+  <meta name="description" content={i18n.t("m_36dad5f20b15", { p0: brand.name, p1: i18n.dealer('city') })} />
 </svelte:head>
 
 <AboutHero />
@@ -23,8 +27,8 @@
   <div class="container">
     <div class="dn-about-showroom__card">
       <div class="dn-about-showroom__heading">
-        <h2 id="about-showroom-title">Посетете шоурума</h2>
-        <p>{brand.address} · {brand.appointment}</p>
+        <h2 id="about-showroom-title">{i18n.t("m_931269cbffaa")}</h2>
+        <p>{i18n.dealer('address')} · {i18n.dealer('appointment')}</p>
       </div>
       <ShowroomMap />
     </div>

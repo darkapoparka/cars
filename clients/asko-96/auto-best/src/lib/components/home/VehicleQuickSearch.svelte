@@ -1,4 +1,11 @@
 <script lang="ts">
+  import { trapDialogTab } from '$lib/ui/overlay';
+  import { specificationLabel } from '$lib/i18n/presentation';
+
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import Icon from '$components/ui/Icon.svelte';
   import { resolve } from '$app/paths';
   import { featuredVehicles } from '$data/inventory';
@@ -42,18 +49,18 @@
     mileageMax,
     yearMin
   });
-  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, listingFiltersFromDraft(quickDraft)));
+  let filteredVehicles = $derived(filterListingVehicles(featuredVehicles, listingFiltersFromDraft(quickDraft), i18n.locale));
   let hasFilters = $derived(listingDraftHasFilters(quickDraft));
-  let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || 'Всички марки');
+  let makeModelSummary = $derived([make, model].filter(Boolean).join(' ') || i18n.t("m_a52ace420f21"));
   let mobileMenuTitle = $derived.by(() => {
-    if (mobileView === 'make') return 'Марка';
-    if (mobileView === 'model') return make || 'Модел';
-    if (mobileView === 'body') return 'Купе';
-    if (mobileView === 'price') return 'Бюджет';
-    if (mobileView === 'fuel') return 'Гориво';
-    if (mobileView === 'mileage') return 'Пробег';
-    if (mobileView === 'year') return 'Година';
-    return 'Филтри';
+    if (mobileView === 'make') return i18n.t("m_ccdd25d4230f");
+    if (mobileView === 'model') return make || i18n.t("m_5e2c614c23f0");
+    if (mobileView === 'body') return i18n.t("m_191c24bf12d5");
+    if (mobileView === 'price') return i18n.t("m_84e960d40ad5");
+    if (mobileView === 'fuel') return i18n.t("m_a80f942f4112");
+    if (mobileView === 'mileage') return i18n.t("m_ffe44a017911");
+    if (mobileView === 'year') return i18n.t("m_89f6832560de");
+    return i18n.t("m_546ebb8eb993");
   });
   let mobileMenuValue = $derived.by(() => {
     if (mobileView === 'make') return make;
@@ -66,13 +73,13 @@
     return '';
   });
   let mobileMenuOptions = $derived.by<MobileFilterOption[]>(() => {
-    if (mobileView === 'make') return listingFilterOptions.makes.map(value => ({ value, label: value || 'Всички марки' }));
-    if (mobileView === 'model') return modelOptions.map(value => ({ value, label: value || 'Всички модели' }));
-    if (mobileView === 'body') return listingFilterOptions.bodies.map(value => ({ value, label: bodyLabel(value) || 'Всички купета' }));
-    if (mobileView === 'price') return listingFilterOptions.prices.map(value => ({ value, label: value ? `До ${formatListingNumber(value)} €` : 'Всеки бюджет' }));
-    if (mobileView === 'fuel') return listingFilterOptions.fuels.map(value => ({ value, label: value || 'Всяко гориво' }));
-    if (mobileView === 'mileage') return listingFilterOptions.mileages.map(value => ({ value, label: value ? `До ${formatListingNumber(value)} км` : 'Всеки пробег' }));
-    if (mobileView === 'year') return listingFilterOptions.years.map(value => ({ value, label: value ? `От ${value}` : 'Всяка година' }));
+    if (mobileView === 'make') return listingFilterOptions.makes.map(value => ({ value, label: value || i18n.t("m_28c0e12158d9") }));
+    if (mobileView === 'model') return modelOptions.map(value => ({ value, label: value || i18n.t("m_4a7bb1458685") }));
+    if (mobileView === 'body') return listingFilterOptions.bodies.map(value => ({ value, label: specificationLabel(bodyLabel(value), i18n.locale) || i18n.t("m_6c177524dfb8") }));
+    if (mobileView === 'price') return listingFilterOptions.prices.map(value => ({ value, label: value ? i18n.t("m_a04d91558e9c", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_53d34bf6c934") }));
+    if (mobileView === 'fuel') return listingFilterOptions.fuels.map(value => ({ value, label: specificationLabel(value, i18n.locale) || i18n.t("m_e8be76e05426") }));
+    if (mobileView === 'mileage') return listingFilterOptions.mileages.map(value => ({ value, label: value ? i18n.t("m_243dcf897937", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_960884c7b030") }));
+    if (mobileView === 'year') return listingFilterOptions.years.map(value => ({ value, label: value ? i18n.t("m_a8f4bf044ac3", { p0: value }) : i18n.t("m_562ec6e12633") }));
     return [];
   });
 
@@ -153,17 +160,17 @@
   aria-haspopup="dialog"
   aria-controls="dn-quick-search-dialog"
   aria-expanded={searchOpen}
-  aria-label="Търсете марка, модел или ключова дума"
+  aria-label={i18n.t("m_6d382243bfbe")}
   onclick={openSearch}
 >
   <Icon name="search" size={18} strokeWidth={1.5} />
-  <span class="dn-quick-search__label-full">Търсете марка, модел или ключова дума</span>
-  <span class="dn-quick-search__label-mobile" aria-hidden="true">Марка или модел</span>
-  <span class="dn-quick-search__hint" aria-hidden="true">Бързо търсене</span>
+  <span class="dn-quick-search__label-full">{i18n.t("m_6d382243bfbe")}</span>
+  <span class="dn-quick-search__label-mobile" aria-hidden="true">{i18n.t("m_cb8bed4ff8b8")}</span>
+  <span class="dn-quick-search__hint" aria-hidden="true">{i18n.t("m_933643dcad14")}</span>
   <span class="dn-quick-search__mobile-filter" aria-hidden="true"><Icon name="adjustments" size={18} strokeWidth={1.4} /></span>
 </button>
 
-<dialog
+<dialog onkeydown={trapDialogTab}
   class="dn-quick-search__dialog"
   id="dn-quick-search-dialog"
   {@attach attachDialog}
@@ -175,22 +182,22 @@
   <div class="dn-quick-search__panel">
     <header class="dn-quick-search__header">
       {#if mobileView === 'main'}
-        <button class="dn-quick-search__reset" type="button" disabled={!hasFilters} onclick={resetSearch}>Нулирай</button>
+        <button class="dn-quick-search__reset" type="button" disabled={!hasFilters} onclick={resetSearch}>{i18n.t("m_128a282f10ea")}</button>
       {:else}
         <button
-          class="dn-quick-search__back"
+          class="dn-quick-search__back dn-icon-button"
           type="button"
-          aria-label={mobileView === 'model' ? 'Назад към марките' : 'Назад към филтрите'}
+          aria-label={mobileView === 'model' ? i18n.t("m_d73ca16bbc17") : i18n.t("m_a779c56e526e")}
           onclick={returnToMobileOverview}
         >
           <Icon name="arrow-left" size={21} strokeWidth={1.8} />
         </button>
       {/if}
       <h2 id="quick-search-title">
-        <span class="dn-quick-search__title-desktop">Търсене на автомобил</span>
+        <span class="dn-quick-search__title-desktop">{i18n.t("m_0ae7a3ecbc83")}</span>
         <span class="dn-quick-search__title-mobile">{mobileMenuTitle}</span>
       </h2>
-      <button class="dn-quick-search__close" type="button" aria-label="Затворете търсенето" onclick={closeSearch}>
+      <button class="dn-quick-search__close dn-icon-button" type="button" aria-label={i18n.t("m_fab9fcfc48bf")} onclick={closeSearch}>
         <Icon name="x" size={22} strokeWidth={1.8} />
       </button>
     </header>
@@ -198,21 +205,21 @@
     <form
       class={['dn-quick-search__form', { 'dn-quick-search__form--mobile-hidden': mobileView !== 'main' }]}
       method="GET"
-      action={resolve('/listing-grid')}
+      action={i18n.href(resolve('/listing-grid'))}
       onsubmit={closeSearch}
       onformdata={cleanFormData}
     >
-      <label class="dn-sr-only" for="quick-search-input">Марка, модел или ключова дума</label>
+      <label class="dn-sr-only" for="quick-search-input">{i18n.t("m_13fd09148700")}</label>
       <div class="dn-quick-search__input-wrap dn-entry-field">
-        <Icon name="search" size={21} strokeWidth={1.8} />
-        <input
+        <Icon name="search" size={18} strokeWidth={1.8} />
+        <input {@attach i18n.validation}
           id="quick-search-input"
           class="dn-entry-field__input"
           {@attach attachSearchInput}
           bind:value={query}
           type="search"
           name="q"
-          placeholder="Марка, модел или тип"
+          placeholder={i18n.t("m_08c6b6889e71")}
           autocomplete="off"
           aria-describedby="quick-search-status"
           onkeydown={handleKeydown}
@@ -227,7 +234,7 @@
       {#if yearMin}<input type="hidden" name="year_min" value={yearMin} />{/if}
     </form>
 
-    <form class="dn-quick-search__mobile-filters" method="GET" action={resolve('/listing-grid')} onsubmit={closeSearch} onformdata={cleanFormData}>
+    <form class="dn-quick-search__mobile-filters" method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={closeSearch} onformdata={cleanFormData}>
       {#if query.trim()}<input type="hidden" name="q" value={query.trim()} />{/if}
       {#if make}<input type="hidden" name="make" value={make} />{/if}
       {#if model}<input type="hidden" name="model" value={model} />{/if}
@@ -240,38 +247,38 @@
       {#if mobileView === 'main'}
         <div class="dn-quick-search__filter-rows">
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('make')}>
-            <strong>Марка и модел</strong>
-            <span>{makeModelSummary}</span>
+            <strong>{i18n.t("m_ffd178a2d771")}</strong>
+            <span data-active={Boolean(make || model)}>{makeModelSummary}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('body')}>
-            <strong>Купе</strong>
-            <span>{bodyLabel(body) || 'Всички купета'}</span>
+            <strong>{i18n.t("m_191c24bf12d5")}</strong>
+            <span data-active={Boolean(body)}>{body ? specificationLabel(bodyLabel(body), i18n.locale) : i18n.t("m_a52ace420f21")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('price')}>
-            <strong>Бюджет</strong>
-            <span>{priceMax ? `До ${formatListingNumber(priceMax)} €` : 'Всеки бюджет'}</span>
+            <strong>{i18n.t("m_84e960d40ad5")}</strong>
+            <span data-active={Boolean(priceMax)}>{priceMax ? i18n.t("m_a04d91558e9c", { p0: formatListingNumber(priceMax, i18n.locale) }) : i18n.t("m_53d34bf6c934")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('fuel')}>
-            <strong>Гориво</strong>
-            <span>{fuel || 'Всяко гориво'}</span>
+            <strong>{i18n.t("m_a80f942f4112")}</strong>
+            <span data-active={Boolean(fuel)}>{fuel ? specificationLabel(fuel, i18n.locale) : i18n.t("m_a52ace420f21")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('mileage')}>
-            <strong>Пробег</strong>
-            <span>{mileageMax ? `До ${formatListingNumber(mileageMax)} км` : 'Всеки пробег'}</span>
+            <strong>{i18n.t("m_ffe44a017911")}</strong>
+            <span data-active={Boolean(mileageMax)}>{mileageMax ? i18n.t("m_243dcf897937", { p0: formatListingNumber(mileageMax, i18n.locale) }) : i18n.t("m_960884c7b030")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('year')}>
-            <strong>Година</strong>
-            <span>{yearMin ? `От ${yearMin}` : 'Всяка година'}</span>
+            <strong>{i18n.t("m_89f6832560de")}</strong>
+            <span data-active={Boolean(yearMin)}>{yearMin ? i18n.t("m_a8f4bf044ac3", { p0: yearMin }) : i18n.t("m_562ec6e12633")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
         </div>
@@ -294,7 +301,7 @@
 
       <footer class="dn-quick-search__mobile-footer">
         <button type="submit" disabled={filteredVehicles.length === 0} aria-live="polite">
-          {filteredVehicles.length === 1 ? 'Покажи 1 автомобил' : `Покажи ${filteredVehicles.length} автомобила`}
+          {filteredVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: filteredVehicles.length })}
         </button>
       </footer>
     </form>
@@ -302,9 +309,9 @@
     <span class="dn-sr-only" id="quick-search-status" role="status" aria-live="polite">
       {query.trim()
         ? filteredVehicles.length === 1
-          ? '1 съвпадение'
-          : `${filteredVehicles.length} съвпадения`
-        : 'Въведете марка, модел или ключова дума.'}
+          ? i18n.t("m_8e7d9c401501")
+          : i18n.t("m_127d0c5730b9", { p0: filteredVehicles.length })
+        : i18n.t("m_9be515240808")}
     </span>
 
   </div>
@@ -397,18 +404,10 @@
   }
 
   .dn-quick-search__close {
-    display: inline-flex;
-    width: 46px;
-    height: 46px;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
     border: 0;
     border-radius: var(--dn-radius-button);
     background: #e9ecef;
     color: #24272c;
-    cursor: pointer;
   }
 
   .dn-quick-search__close:hover,
@@ -431,6 +430,7 @@
     align-items: center;
     gap: var(--dn-space-3);
     padding: 0 var(--dn-space-4);
+    border: 0;
   }
 
   @media (max-width: 767px) {
@@ -473,7 +473,7 @@
     .dn-quick-search__header {
       display: grid;
       min-height: 64px;
-      grid-template-columns: 64px minmax(0, 1fr) 64px;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
       gap: 0;
       padding: 6px 12px;
       background: #fff;
@@ -501,12 +501,11 @@
     }
 
     .dn-quick-search__back {
-      display: inline-flex;
-      width: 46px;
-      height: 46px;
+      display: inline-grid;
+      width: var(--dn-control-hit-height);
+      height: var(--dn-control-hit-height);
       align-items: center;
       justify-content: center;
-      padding: 0;
       border: 0;
       border-radius: var(--dn-radius-button);
       background: #e9ecef;

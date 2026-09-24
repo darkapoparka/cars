@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { HomeBrandStripItem } from '$lib/data/home-brand-strip';
 	import { getViewportContext } from '$lib/hooks/viewport.svelte';
 	import DesktopStylesheet from '$lib/components/layout/DesktopStylesheet.svelte';
@@ -43,7 +46,7 @@
 
 <DesktopStylesheet
 	id="daynight-home-desktop-css"
-	href={desktopHomeCss}
+	href={i18n.href(desktopHomeCss)}
 	placement="before-component-styles"
 />
 

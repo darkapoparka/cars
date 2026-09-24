@@ -1,0 +1,50 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Sharjah",
+    "bg": "Шарджа",
+    "en": "Sharjah",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "Souk Al Haraj, showroom 353, Sharjah",
+    "bg": "Souk Al Haraj, Шоурум 353, Sharjah",
+    "en": "Souk Al Haraj, showroom 353, Sharjah",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.address",
+    "source": "Souk Al Haraj, showroom 353, Sharjah",
+    "bg": "Souk Al Haraj, Шоурум 353, Sharjah",
+    "en": "Souk Al Haraj, showroom 353, Sharjah",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.locationShort",
+    "source": "Sharjah",
+    "bg": "Шарджа",
+    "en": "Sharjah",
+    "disposition": "translate",
+    "notes": "Dealer-owned short location label."
+  },
+  {
+    "key": "dealer.name",
+    "source": "Al Hamoor Al Thahabi Used Cars",
+    "en": "Al Hamoor Al Thahabi",
+    "bg": "Al Hamoor Al Thahabi Used Cars",
+    "disposition": "translate",
+    "notes": "Dealer-owned proper name."
+  },
+  {
+    "key": "dealer.shortName",
+    "source": "Al Hamoor Al Thahabi",
+    "en": "Al Hamoor Al Thahabi",
+    "bg": "Al Hamoor Al Thahabi",
+    "disposition": "invariant",
+    "notes": "Dealer-owned short proper name."
+  }
+]

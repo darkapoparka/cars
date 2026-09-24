@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { page } from '$app/state';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
@@ -17,13 +20,13 @@
 	let inputs = $derived(readFinanceInputs(page.url.searchParams));
 	const estimate = $derived(calculateFinance(inputs));
 	const amount = (value: number | undefined) =>
-		value === undefined ? '—' : formatFinanceEur(value);
+		value === undefined ? '—' : formatFinanceEur(value, i18n.locale);
 
 	const budgetBoxes = $derived(
 		(inventorySummary()?.budgetBuckets ?? []).map((tier) => ({
 			...tier,
-			label: tier.label.replace('EUR', '€'),
-			countLabel: `${tier.count} ${tier.count === 1 ? 'автомобил' : 'автомобила'}`
+			label: i18n.text(tier.label).replace('EUR', '€'),
+			countLabel: i18n.count(tier.count)
 		}))
 	);
 
@@ -35,46 +38,42 @@
 
 	const faqItems: readonly FaqItem[] = [
 		{
-			question: 'Какво представлява финансирането?',
+			question: i18n.t('copy.fb449cddaa9d'),
 			open: true,
 			paragraphs: [
 				'Финансирането позволява да платите автомобила на месечни вноски за избран срок. Вноската зависи от цената, първоначалната вноска, срока и лихвения процент — калкулаторът дава ориентировъчна сметка преди разговор с екипа.',
 				'Голяма част от покупките на автомобили у нас се финансират — разсроченото плащане прави месечната вноска постижима, вместо да се плаща цялата цена наведнъж.',
-				`Екипът на ${daynightSite.shortName} съдейства с варианти за финансиране, лизинг и собствено разсрочено плащане според автомобила и бюджета. Получавате ориентировъчни условия предварително и избирате най-подходящия вариант.`
+				i18n.t('pattern.bcb798bd5315', { v0: daynightSite.shortName })
 			]
 		},
 		{
-			question: 'Как се изчислява месечната вноска?',
+			question: i18n.t('copy.d343055368d4'),
 			paragraphs: [
 				'Месечната вноска се изчислява от цената на автомобила минус първоначалната вноска и бартера, разпределена за избрания срок, плюс лихва и такси. Променете стойностите в калкулатора и сметката се обновява веднага.'
 			]
 		},
 		{
-			question: 'Бюджет и цена на автомобила?',
+			question: i18n.t('copy.75ad6102d816'),
 			paragraphs: [
 				'Изберете бюджет, който оставя резерв за регистрация, застраховка и поддръжка. Калкулаторът помага да сравните различни срокове и първоначални вноски преди запитване.'
 			]
 		},
 		{
-			question: 'Първоначална вноска?',
-			paragraphs: [
-				`Първоначалната вноска намалява финансираната сума и месечната вноска. По-висока първоначална вноска обикновено означава по-добри условия — екипът на ${daynightSite.shortName} предлага варианти според бюджета.`
-			]
+			question: i18n.t('copy.ef5c83a90772'),
+			paragraphs: [i18n.t('pattern.3cd2c73f1d51', { v0: daynightSite.shortName })]
 		},
 		{
-			question: 'Бартер / замяна?',
-			paragraphs: [
-				`Можете да дадете настоящия си автомобил като бартер — оценката му се приспада от цената и намалява финансираната сума. ${daynightSite.shortName} прави оглед и ясна оценка преди сделката.`
-			]
+			question: i18n.t('copy.b1b1f6eb5338'),
+			paragraphs: [i18n.t('pattern.92d3cb1a0cb4', { v0: daynightSite.shortName })]
 		},
 		{
-			question: 'Данъци и такси?',
+			question: i18n.t('copy.0044167867b0'),
 			paragraphs: [
 				'Към цената се добавят такси за прехвърляне, регистрация и застраховка. Калкулаторът показва ориентировъчна стойност — точните суми се уточняват при огледа според конкретния автомобил.'
 			]
 		},
 		{
-			question: 'Лихвен процент?',
+			question: i18n.t('copy.a0b03815edeb'),
 			paragraphs: [
 				'Лихвеният процент зависи от финансиращата институция, срока и профила на клиента. Стойността в калкулатора е ориентировъчна — екипът съдейства с конкретни оферти от партньорски банки и лизинг.'
 			]
@@ -98,12 +97,12 @@
 <div class="calculator-page">
 	<DesktopYellowRouteHero
 		headingId="calculator-route-title"
-		title="Калкулатор за месечна вноска"
-		copy="Ориентировъчна сметка за бюджет, първоначална вноска и месечна вноска."
+		title={i18n.t('copy.50394aea8413')}
+		copy={i18n.t('copy.69a264fc6c2e')}
 		panel="light"
-		primaryLabel="Виж автомобилите"
+		primaryLabel={i18n.t('copy.f20a4411e8d6')}
 		primaryHref="/inventory"
-		secondaryLabel="За финансирането"
+		secondaryLabel={i18n.t('copy.291cd221f7a7')}
 		secondaryHref="/financing"
 	/>
 	<!-- breadcrumb -->
@@ -111,19 +110,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>{i18n.t('copy.bb593f6846bd')}</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Калкулатор</span>
+					<span>{i18n.t('copy.5f94825a0683')}</span>
 				</li>
 			</ul>
 		</div>
@@ -135,26 +134,32 @@
 		<div class="tf-spacing-style3"></div>
 
 		<div class="container">
-			<h1 class="mb-12 text-center">Калкулатор за месечна вноска</h1>
+			<h1 class="mb-12 text-center">{i18n.t('copy.50394aea8413')}</h1>
 			<p class="text-secondary h7 line-height-28 mb-40 text-center">
-				Ориентировъчна сметка за бюджет, първоначална вноска и месечна вноска.
+				{i18n.t('copy.69a264fc6c2e')}
 			</p>
 
 			<div class="finance-layout lg-grid-cols-1 grid grid-cols-2 gap-40">
 				<div class="border-box">
-					<h2 class="h3 mb-28">Изчислете ориентировъчна месечна вноска</h2>
+					<h2 class="h3 mb-28">{i18n.t('copy.2a690bab83aa')}</h2>
 					<output class="finance-mobile-result" aria-live="polite"
-						><span>Ориентировъчна вноска</span><strong
-							>{amount(estimate.valid ? estimate.monthly : undefined)}<small>/месец</small></strong
+						><span>{i18n.t('copy.afcb270f6522')}</span><strong
+							>{amount(estimate.valid ? estimate.monthly : undefined)}<small
+								>{i18n.t('copy.8f01f06405c1')}</small
+							></strong
 						><span
-							>Лихва {inputs.annualRate}% · такси {inputs.feePercent}% · {inputs.months} месеца</span
+							>{i18n.t('copy.04d0903db792')}
+							{inputs.annualRate}{i18n.t('copy.725e91903e7d')}
+							{inputs.feePercent}% · {inputs.months}
+							{i18n.t('copy.7b0d1dc69a2c')}</span
 						></output
 					>
 					<form class="calculate-form" onsubmit={(event) => event.preventDefault()}>
 						<div class="grid grid-cols-1 gap-15">
 							<div>
-								<label class="mb-8" for="calculatePrice">Цена на автомобила (€)</label>
+								<label class="mb-8" for="calculatePrice">{i18n.t('copy.a6dcd022e308')}</label>
 								<input
+									{@attach i18n.validation}
 									class="active input-large"
 									id="calculatePrice"
 									name="calculatePrice"
@@ -167,8 +172,9 @@
 							</div>
 
 							<div>
-								<label class="mb-8" for="КалкулаторPayment">Първоначална вноска (€)</label>
+								<label class="mb-8" for="КалкулаторPayment">{i18n.t('copy.194d2d978886')}</label>
 								<input
+									{@attach i18n.validation}
 									class="input-large"
 									id="КалкулаторPayment"
 									name="КалкулаторPayment"
@@ -184,9 +190,11 @@
 
 							<div>
 								<label class="mb-8" for="КалкулаторInterestRate"
-									>Срок <span class="text-muted">(месеци)</span></label
+									>{i18n.t('copy.b200273ada24')}
+									<span class="text-muted">{i18n.t('copy.ed25af35da94')}</span></label
 								>
 								<input
+									{@attach i18n.validation}
 									id="КалкулаторInterestRate"
 									name="КалкулаторInterestRate"
 									class="input-large"
@@ -203,8 +211,9 @@
 							</div>
 
 							<div>
-								<label class="mb-8" for="КалкулаторTrade">Бартер / замяна (€; 0 без бартер)</label>
+								<label class="mb-8" for="КалкулаторTrade">{i18n.t('copy.64e6f5b976c8')}</label>
 								<input
+									{@attach i18n.validation}
 									class="input-large"
 									id="КалкулаторTrade"
 									placeholder="0 €"
@@ -219,8 +228,11 @@
 								/>
 							</div>
 							<div>
-								<label class="mb-8" for="КалкулаторInterestRate2">Годишна лихва (%)</label>
+								<label class="mb-8" for="КалкулаторInterestRate2"
+									>{i18n.t('copy.162834b010ed')}</label
+								>
 								<input
+									{@attach i18n.validation}
 									class="input-large"
 									id="КалкулаторInterestRate2"
 									name="КалкулаторInterestRate2"
@@ -234,8 +246,9 @@
 								/>
 							</div>
 							<div>
-								<label class="mb-8" for="КалкулаторTax">Финансирани такси (% от цената)</label>
+								<label class="mb-8" for="КалкулаторTax">{i18n.t('copy.1e11c3e83224')}</label>
 								<input
+									{@attach i18n.validation}
 									class="input-large"
 									id="КалкулаторTax"
 									name="КалкулаторTax"
@@ -251,65 +264,65 @@
 						</div>
 					</form>
 					<p id="finance-assumptions" class="h7 text-secondary finance-assumptions">
-						* Примерни входни стойности, не оферта. Сметката е в евро с равни месечни вноски и
-						фиксирана годишна лихва. Таксите са процент от цената и се финансират. Други разходи и
-						застраховки не са включени; условията се потвърждават по запитване.
+						{i18n.t('copy.69f7449d4a86')}
 					</p>
 				</div>
 
 				<div class="border-box">
-					<h2 class="h3 mb-8">Ориентировъчна месечна вноска*</h2>
-					{#if !estimate.valid}<p role="alert">{estimate.error}</p>{/if}
+					<h2 class="h3 mb-8">{i18n.t('copy.2ee0a3a8621f')}</h2>
+					{#if !estimate.valid}<p role="alert">{i18n.text(estimate.error)}</p>{/if}
 					<p class="mb-10">
 						<span class="text-56 font-weight-600"
 							>{amount(estimate.valid ? estimate.monthly : undefined)}</span
-						><span class="h3 font-weight-600">/месец</span>
+						><span class="h3 font-weight-600 finance-month-label"
+							>{i18n.t('copy.8f01f06405c1')}</span
+						>
 					</p>
 					<p class="h5 mb-28 capitalize">
 						{estimate.valid
-							? `за срок от ${estimate.months} месеца`
-							: 'Проверете въведените стойности'}
+							? i18n.t('pattern.3cb44817256b', { v0: estimate.months })
+							: i18n.t('copy.5c24b2d70592')}
 					</p>
 					<div class="divider mb-28 w-full"></div>
 
-					<p class="h4 mb-20">Обобщение на сметката</p>
+					<p class="h4 mb-20">{i18n.t('copy.305d5af67e41')}</p>
 
 					<div class="mb-28 flex flex-col gap-18">
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Цена на автомобила</span>
+							<span class="h7 text-secondary">{i18n.t('copy.26bcf5569e27')}</span>
 							<span class="h7">{amount(estimate.valid ? estimate.price : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Първоначална вноска</span>
+							<span class="h7 text-secondary">{i18n.t('copy.b35bad0ce861')}</span>
 							<span class="h7">{amount(estimate.valid ? -estimate.deposit : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Бартер / замяна</span>
+							<span class="h7 text-secondary">{i18n.t('copy.a7d24fe7ce6d')}</span>
 							<span class="h7">{amount(estimate.valid ? -estimate.tradeIn : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Обща лихва за срока</span>
+							<span class="h7 text-secondary">{i18n.t('copy.b6438615d69f')}</span>
 							<span class="h7">{amount(estimate.valid ? estimate.interest : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Финансирани такси</span>
+							<span class="h7 text-secondary">{i18n.t('copy.c44936898884')}</span>
 							<span class="h7">{amount(estimate.valid ? estimate.fees : undefined)}</span>
 						</p>
 						<p class="flex justify-between gap-8">
-							<span class="h7 text-secondary">Други такси</span>
-							<span class="h7">не са включени</span>
+							<span class="h7 text-secondary">{i18n.t('copy.226042aa65fa')}</span>
+							<span class="h7">{i18n.t('copy.3e2db25056be')}</span>
 						</p>
 					</div>
 
 					<div class="divider mb-28 w-full"></div>
 
 					<div class="mb-16 flex justify-between gap-8">
-						<p class="h4">Общо с вноска и бартер</p>
+						<p class="h4">{i18n.t('copy.918da06273e3')}</p>
 						<p class="h4">{amount(estimate.valid ? estimate.total : undefined)}</p>
 					</div>
 
 					<div class="flex justify-between gap-8">
-						<p class="h4">Месечна вноска</p>
+						<p class="h4">{i18n.t('copy.13d38238a0a6')}</p>
 						<p class="h4">{amount(estimate.valid ? estimate.monthly : undefined)}</p>
 					</div>
 				</div>
@@ -318,7 +331,7 @@
 
 		<div class="tf-spacing"></div>
 
-		<h2 class="mb-40 text-center capitalize">Разгледай по бюджет</h2>
+		<h2 class="mb-40 text-center capitalize">{i18n.t('copy.7ba875c23c0a')}</h2>
 
 		<div class="container">
 			<div
@@ -327,7 +340,7 @@
 				{#each budgetBoxes as box (box.value)}
 					<div class="price-box">
 						<a
-							href={resolve(`/inventory?price=${box.value}`)}
+							href={i18n.href(resolve(`/inventory?price=${box.value}`))}
 							class="h7 font-weight-500 text-underline mb-8"
 						>
 							{box.countLabel}
@@ -338,7 +351,9 @@
 			</div>
 
 			<div class="flex justify-center">
-				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={i18n.href(resolve('/inventory'))} class="sa-cta sa-cta-ghost">
+					{i18n.t('copy.5701bc5c6a95')}
+				</a>
 			</div>
 		</div>
 	</section>
@@ -346,7 +361,7 @@
 
 	<section class="background-light py-100">
 		<div class="container">
-			<h2 class="mb-40 text-center">Често задавани въпроси</h2>
+			<h2 class="mb-40 text-center">{i18n.t('copy.6a4ec0f53189')}</h2>
 			<div class="max-width-930 mx-auto w-full">
 				<div
 					class="flat-accordion max-width-930 flex flex-col gap-18"
@@ -362,7 +377,7 @@
 								aria-controls={`calculator-faq-${itemIndex}`}
 								onclick={() => toggleFaq(item.question)}
 							>
-								<p class="h5 title">{item.question}</p>
+								<p class="h5 title">{i18n.text(item.question)}</p>
 								<span class="icon">
 									<svg
 										width="24"
@@ -388,7 +403,7 @@
 											? 'h7 text-secondary line-height-28 mb-8'
 											: 'h7 text-secondary line-height-28'}
 									>
-										{paragraph}
+										{i18n.text(paragraph)}
 									</p>
 								{/each}
 							</div>
@@ -401,6 +416,11 @@
 </div>
 
 <style>
+	.finance-month-label {
+		display: inline-block;
+		overflow-wrap: anywhere;
+		max-width: 100%;
+	}
 	.finance-mobile-result {
 		display: none;
 	}

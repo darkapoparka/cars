@@ -12,27 +12,43 @@ const district = "София";
 const street = "бул. „Ботевградско шосе“ 300";
 const location = "бул. „Ботевградско шосе“ 300";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'София',
+	locationShort: "София",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, София'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "АСКО 96",
+	name: 'АСКО 96',
 	shortName,
 	city,
 	region: city,
-	countryCode: "BG",
-	locale: "bg-BG",
-	currency: "EUR",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "359899769696",
-	phoneLabel: "0899 76 96 96",
-	email: "askogroup@abv.bg",
+	phone: '359899769696',
+	phoneLabel: '0899 76 96 96',
+	email: '',
 	location,
-	locationShort: "бул. „Ботевградско шосе“ 300",
+	locationShort: `${district}, ${city}`,
 	locationLandmark: "бул. „Ботевградско шосе“ 300",
-	hoursLabel: "Понеделник – петък: 09:00–18:30; Събота: 10:00–16:00; Неделя: почивен ден",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://asko96.mobile.bg/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"https://www.facebook.com/p/Asko96-100050328800477/","instagram":"","youtube":"https://www.youtube.com/@asko96bulgaria","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "АСКО 96",
-	heroSubtitle: "София · Подбрани автомобили от публикуваните обяви. Наличностите и условията се потвърждават с АСКО 96.",
+	heroTitle: 'АСКО 96',
+	heroSubtitle: 'София - Премиум автомобили в София с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "За АСКО 96", href: '/about' },
+			{ label: 'За АСКО 96', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

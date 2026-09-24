@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { getDayNightVehicleAvailability } from '$lib/data/daynight-vehicles';
 	import SiteChrome from '$lib/components/layout/SiteChrome.svelte';
 	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
@@ -23,8 +26,8 @@
 		JSON.stringify({
 			'@context': 'https://schema.org',
 			'@type': 'Car',
-			name: vehicle.title,
-			image: vehicle.image,
+			name: vehicle.shortTitle,
+			image: new URL(i18n.asset(vehicle.image), appState.url.origin).href,
 			brand: { '@type': 'Brand', name: vehicle.brand },
 			model: vehicle.model,
 			vehicleModelDate: vehicle.year,
@@ -37,8 +40,8 @@
 						}
 					}
 				: {}),
-			fuelType: vehicle.fuel,
-			vehicleTransmission: vehicle.transmission,
+			fuelType: i18n.spec(vehicle.fuel),
+			vehicleTransmission: i18n.spec(vehicle.transmission),
 			offers: {
 				'@type': 'Offer',
 				price: vehicle.price,
@@ -57,15 +60,15 @@
 </script>
 
 <RouteSeo
-	title={page.title}
-	description={page.description}
+	title={vehicle.shortTitle + ' | ' + daynightSite.shortName}
+	description={i18n.vehicleDescription(vehicle)}
 	ogImage={vehicle.image}
 	ogType="product"
 />
 <svelte:head>
 	<svelte:element this={'script'} type="application/ld+json">{vehicleJsonLd}</svelte:element>
 </svelte:head>
-<DesktopStylesheet id="daynight-detail-desktop-css" href={desktopDetailCss} />
+<DesktopStylesheet id="daynight-detail-desktop-css" href={i18n.href(desktopDetailCss)} />
 {#if viewport.mobile}
 	<MobileDetailPage vehicle={page.vehicle} />
 {:else}
