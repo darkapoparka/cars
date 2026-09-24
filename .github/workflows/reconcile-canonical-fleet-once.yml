@@ -182,8 +182,43 @@ jobs:
                 fi
               done
               if test -f "$evidence/branding.before.sha256"; then
-                (cd "$output" && find assets/branding -type f -print0 | sort -z | xargs -0 -r sha256sum) > "$evidence/branding.after.sha256"
-                cmp "$evidence/branding.before.sha256" "$evidence/branding.after.sha256"
+                BEFORE="$source/assets/branding" AFTER="$output/assets/branding" node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const list = (root, relative = '') => fs.readdirSync(path.join(root, relative), { withFileTypes: true })
+            .flatMap((entry) => {
+              const next = relative ? `${relative}/${entry.name}` : entry.name;
+              return entry.isDirectory() ? list(root, next) : [next];
+            })
+            .sort();
+          const normalizeObject = (value) => Array.isArray(value)
+            ? value.map(normalizeObject)
+            : value && typeof value === 'object'
+              ? Object.fromEntries(
+                  Object.entries(value)
+                    .sort(([a], [b]) => a.localeCompare(b))
+                    .map(([key, entry]) => [key, normalizeObject(entry)])
+                )
+              : value;
+          const normalize = (file, bytes) => {
+            if (file.endsWith('.json')) return JSON.stringify(normalizeObject(JSON.parse(bytes.toString('utf8'))));
+            if (bytes.includes(0)) return bytes;
+            const text = bytes.toString('utf8');
+            return Buffer.from(text, 'utf8').equals(bytes) ? text.replaceAll('\r\n', '\n') : bytes;
+          };
+          if (!fs.existsSync(process.env.AFTER)) throw new Error('Generated branding directory is missing');
+          const beforeFiles = list(process.env.BEFORE);
+          const afterFiles = list(process.env.AFTER);
+          if (JSON.stringify(beforeFiles) !== JSON.stringify(afterFiles)) throw new Error('Branding file set changed');
+          for (const file of beforeFiles) {
+            const before = normalize(file, fs.readFileSync(path.join(process.env.BEFORE, file)));
+            const after = normalize(file, fs.readFileSync(path.join(process.env.AFTER, file)));
+            const equal = Buffer.isBuffer(before) && Buffer.isBuffer(after)
+              ? before.equals(after)
+              : typeof before === 'string' && typeof after === 'string' && before === after;
+            if (!equal) throw new Error(file + ': branding content changed');
+          }
+          NODE
               fi
               if grep -R -n -E 'variant-3/variant-3|variant-2/variant-3' "$output" --exclude-dir=node_modules --exclude='*.map'; then
                 echo "$slug: double-prefixed asset source remains" >&2
