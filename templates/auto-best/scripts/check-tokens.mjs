@@ -34,30 +34,30 @@ for (const token of tokenDeclarations) {
 }
 
 const expectedControlScale = new Map([
-  ['--dn-control-height-compact', '44px'],
+  ['--dn-control-height-compact', '40px'],
   ['--dn-control-height-default', '44px'],
-  ['--dn-control-height-editor', '44px'],
-  ['--dn-control-icon-size', '18px']
+  ['--dn-control-icon-size', '18px'],
+  ['--dn-entry-action-icon-size', '15px']
 ]);
 for (const [name, value] of expectedControlScale) {
   if (globalTokens.get(name) !== value) errors.push(`${tokenPath}: ${name} must remain ${value}.`);
 }
 
 const expectedAliases = new Map([
-  ['--dn-compact-control-visual-height', 'var(--dn-control-height-default)'],
+  ['--dn-compact-control-visual-height', 'var(--dn-control-height-compact)'],
   ['--dn-compact-control-inset', 'calc((var(--dn-control-height-default) - var(--dn-compact-control-visual-height)) / 2)'],
+  ['--dn-control-height-editor', 'var(--dn-control-height-default)'],
   ['--dn-overlay-control-height-compact', 'var(--dn-control-height-default)'],
-  ['--dn-overlay-control-height-expanded', 'var(--dn-control-height-default)'],
+  ['--dn-overlay-control-height-expanded', 'var(--dn-control-height-editor)'],
   ['--dn-overlay-control-height', 'var(--dn-overlay-control-height-compact)'],
   ['--dn-overlay-field-font', 'var(--dn-entry-font)'],
-  ['--dn-overlay-option-font', 'var(--dn-compact-control-font)'],
+  ['--dn-overlay-option-font', 'var(--dn-control-font)'],
   ['--dn-overlay-action-font', 'var(--dn-cta-font)'],
-  ['--dn-entry-height', 'var(--dn-control-height-default)'],
+  ['--dn-entry-height', 'var(--dn-control-height-editor)'],
   ['--dn-control-hit-height', 'var(--dn-control-height-default)'],
-  ['--dn-segment-height', 'var(--dn-control-height-default)'],
+  ['--dn-segment-height', 'var(--dn-control-height-compact)'],
   ['--dn-entry-action-height', 'var(--dn-control-height-default)'],
-  ['--dn-entry-action-icon-size', 'var(--dn-control-icon-size)'],
-  ['--dn-compact-control-font', 'var(--dn-cta-font)'],
+  ['--dn-compact-control-font', 'var(--dn-control-font)'],
   ['--dn-entry-action-gap', 'var(--dn-space-2)'],
   ['--dn-entry-icon-gap', 'var(--dn-space-3)'],
   ['--dn-compact-control-padding-inline', 'var(--dn-space-4)'],

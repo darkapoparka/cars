@@ -3,7 +3,7 @@
 	import type { HomeFiveNewsPost } from '$lib/auxero/home-five';
 	import { daynightAssets } from '$lib/data/daynight';
 	import type { HomePageCopy } from '$lib/i18n/messages';
-	import { ArrowRight } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	// Clean Svelte 5 + Tailwind v4 rebuild of the "Съвети от Day Night Auto" news band:
 	//   • Dark-green band header (title left, green "Виж всички" pill right). The title

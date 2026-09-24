@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getI18n } from '$lib/locale/context';
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import LocaleSettingsMenu from '$lib/components/layout/LocaleSettingsMenu.svelte';
 	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
 	const i18n = getI18n();
 	import { daynightSite } from '$lib/data/daynight-site';
@@ -132,7 +132,7 @@
 			</nav>
 
 			<div class="home2-nav__actions" aria-label={i18n.t('copy.1810407f5ab7')}>
-				<LocaleTrigger />
+				<LocaleSettingsMenu />
 				<a href={i18n.endpoint('/admin/login')}>
 					<CircleUserRound size={27} strokeWidth={3} />
 					<span>{i18n.t('copy.c189840cf7e2')}</span>

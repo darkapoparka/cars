@@ -1,11 +1,8 @@
 name: Commit IS AUTO raster logo variants
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/fix-isauto-modern-logo-contrast.yml"
+  # Dealer publishing and historical repair runs require explicit dispatch.
+  workflow_dispatch:
 
 permissions:
   contents: write

@@ -1,0 +1,5 @@
+
+> cars-template-import@0.0.1 check:architecture
+> node scripts/check-architecture.mjs
+
+Architecture checks passed: 56 native route modules, 166 reachable modules, one Tailwind generation entry.

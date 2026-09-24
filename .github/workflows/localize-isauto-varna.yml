@@ -1,13 +1,7 @@
 name: Localize and deploy IS AUTO Varna
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/localize-isauto-varna.yml'
-      - 'templates.lock.json'
-      - 'scripts/rollout-localized-client.mjs'
-      - 'clients/isauto-varna/**'
+  # Dealer publishing and historical repair runs require explicit dispatch.
   workflow_dispatch:
 
 permissions:

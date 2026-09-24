@@ -1,18 +1,7 @@
 name: Build IS AUTO Varna lead
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/build-isauto-varna.yml
-      - scripts/build-isauto-varna.mjs
-      - scripts/build-isauto-varna.part-*
-      - scripts/normalize-isauto-varna.mjs
-      - scripts/finalize-isauto-autobest-assets.mjs
-      - scripts/repair-isauto-template-integrity.mjs
-      - scripts/refine-isauto-raster-logo.mjs
-      - scripts/finalize-isauto-logo-assets.mjs
+  # Dealer publishing and historical repair runs require explicit dispatch.
   workflow_dispatch:
 
 permissions:

@@ -1,16 +1,18 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	import { site } from '$lib/config/site';
 	import { resolve } from '$app/paths';
 	import type { HomeFiveNewsPost } from '$lib/auxero/home-five';
 	import { daynightAssets } from '$lib/data/daynight';
 	import type { HomePageCopy } from '$lib/i18n/messages';
-	import { ArrowRight } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import HomeSectionCta from './HomeSectionCta.svelte';
 
 	let { copy, posts }: { copy: HomePageCopy; posts: HomeFiveNewsPost[] } = $props();
 
 	let cards = $derived(posts.slice(0, 3));
 	const readAllBlogTitle = $derived(
-		copy.newsTitle === 'Day Night Auto notes' ? 'Read all blog posts' : 'Виж всички статии'
+		page.data.locale === 'en' ? 'Read all blog posts' : 'Виж всички статии'
 	);
 	const brandedNewsTitle = $derived(/daynight/i.test(copy.newsTitle));
 	const brandFirstNewsTitle = $derived(copy.newsTitle.toLowerCase().startsWith('daynight'));
@@ -28,7 +30,7 @@
 								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
 								<img
 									src={daynightAssets.logoDark}
-									alt="Day Night Auto"
+									alt={site.identity.name}
 									width="220"
 									height="58"
 									loading="lazy"
@@ -46,7 +48,7 @@
 								<source media="(max-width: 767px)" srcset={daynightAssets.logoLight} />
 								<img
 									src={daynightAssets.logoDark}
-									alt="Day Night Auto"
+									alt={site.identity.name}
 									width="220"
 									height="58"
 									loading="lazy"

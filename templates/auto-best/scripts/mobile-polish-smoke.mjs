@@ -22,14 +22,15 @@ async function fits(locator) {
 }
 async function compactControl(locator, { icon = false } = {}) {
   const result = await locator.evaluate(el => {
-    const box = el.getBoundingClientRect(), style = getComputedStyle(el);
+    const box = el.getBoundingClientRect(), style = getComputedStyle(el), pseudo = getComputedStyle(el, '::before');
     const svg = el.querySelector('svg')?.getBoundingClientRect();
-    const visibleHeight = box.height;
+    const hasSurface = pseudo.content !== 'none';
+    const visibleHeight = hasSurface ? box.height - parseFloat(pseudo.top) - parseFloat(pseudo.bottom) : box.height;
     return { width: box.width, height: box.height, visibleHeight, fontSize: style.fontSize,
       lineHeight: style.lineHeight, gap: style.gap, iconWidth: svg?.width,
       iconDy: svg ? svg.y + svg.height / 2 - box.y - box.height / 2 : null };
   });
-  assert.equal(result.height, 44); assert.equal(result.visibleHeight, 44);
+  assert.equal(result.height, 44); assert.equal(result.visibleHeight, 40);
   assert.equal(result.fontSize, '16px'); assert.equal(result.lineHeight, '20.8px');
   assert.equal(result.gap, '8px');
   if (icon) { assert.equal(result.iconWidth, 15); assert(Math.abs(result.iconDy) <= .5); }
@@ -58,7 +59,7 @@ try {
                 return { width: icon.width, dy: icon.y + icon.height / 2 - box.y - box.height / 2 };
               }) };
           });
-          assert.equal(search.height, 44); assert.equal(search.font, '18px'); assert.equal(search.gap, '12px');
+          assert.equal(search.height, 44); assert.equal(search.font, '18px'); assert.equal(search.gap, '11px');
           assert(search.icons.every(icon => icon.width === 18 && Math.abs(icon.dy) <= .5));
           await compactControl(page.locator('.dn-search__mobile-all:visible').first(), { icon: true });
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);

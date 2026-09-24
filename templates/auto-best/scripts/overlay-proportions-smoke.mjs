@@ -41,14 +41,14 @@ try {
         await page.evaluate(() => document.fonts.ready);
         if (flow === 'home') {
           await page.locator('.dn-quick-search__trigger').click();
-          await frame(page.locator('.dn-quick-search__input-wrap'), 48, 18);
+          await frame(page.locator('.dn-quick-search__input-wrap'), 44, 18);
           assert.equal(await page.locator('#quick-search-input').evaluate(el => getComputedStyle(el).fontSize), '18px');
-          await frame(page.locator('.dn-quick-search__filter-row').first(), 44, 16);
-          assert.equal(await page.locator('.dn-quick-search__filter-row > span').first().evaluate(el => getComputedStyle(el).fontSize), '16px');
-          await frame(page.locator('.dn-quick-search__mobile-footer button'), 44, 18);
+          await frame(page.locator('.dn-quick-search__filter-row').first(), 52, 16);
+          assert.equal(await page.locator('.dn-quick-search__filter-row > span').first().evaluate(el => getComputedStyle(el).fontSize), '14px');
+          await frame(page.locator('.dn-quick-search__mobile-footer button'), 50, 18);
           await page.screenshot({ path: `${output}/${locale}-${width}-home.png` });
           await page.locator('.dn-quick-search__filter-row').first().click();
-          await frame(page.locator('.dn-quick-search__option').first(), 44, 16, true);
+          await frame(page.locator('.dn-quick-search__option').first(), 52, 14, true);
           await page.keyboard.press('Escape');
           await page.keyboard.press('Escape');
         } else if (flow === 'listing') {
@@ -71,7 +71,7 @@ try {
         } else {
           await page.locator('.dn-entry-editor-trigger').first().click();
           const editor = page.locator('.dn-entry-editor[open]');
-          await frame(editor.locator('input').first(), 48, 18);
+          await frame(editor.locator('input').first(), 44, 18);
           await frame(editor.locator('.dn-entry-editor-cancel'), 44, 16);
           await frame(editor.locator('.dn-entry-editor-save'), 44, 18);
           await page.screenshot({ path: `${output}/${locale}-${width}-editor.png` });
@@ -84,8 +84,8 @@ try {
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
         assert.deepEqual(errors, []);
         return {
-          locale, width, flow, overlayFrame: 44, homeAndEditorField: 48,
-          fieldFont: 18, optionFont: 16, actionFont: 18
+          locale, width, flow, fieldFrame: 44, overviewRow: flow === 'home' ? 52 : 44,
+          fieldFont: 18, optionFont: 16, compactOptionFont: 14, actionFont: 18
         };
       } finally { await page.close(); }
     });

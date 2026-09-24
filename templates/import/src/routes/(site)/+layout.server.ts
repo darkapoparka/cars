@@ -12,7 +12,11 @@ export const load: LayoutServerLoad = ({ url, locals }) => {
 		nativeSite: true,
 		site: {
 			...site,
-			contact: { ...site.contact, appointment: dealerCopy[locals.localeState.locale].appointment }
+			contact: {
+				...site.contact,
+				appointment: dealerCopy[locals.localeState.locale].appointment,
+				address: dealerCopy[locals.localeState.locale].address
+			}
 		},
 		localeState: locals.localeState,
 		locale: locals.localeState.locale,

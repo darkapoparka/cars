@@ -12,7 +12,7 @@ import { templatePolicies } from '$lib/data/template-policies';
 import { describe, it, expect } from 'vitest';
 import { nativeBg, nativeEn } from './native';
 import { en, bg } from '$lib/locale/messages';
-import { contentBg, contentEn, localizedCopy } from '$lib/content/localized';
+import { contentBg, contentEn, contentText, localizedCopy } from '$lib/content/localized';
 import { inventoryCopy, inventorySourceKeys } from '$lib/content/inventory-localized';
 import { cleanDayNightDescription } from '$lib/data/daynight';
 import feed from '$lib/data/daynight-listings.json';
@@ -57,6 +57,35 @@ describe('native bilingual coverage and stable business values', () => {
 		expect(localizedCopy(data, 'en')).toEqual({ ...data, title: 'Contact' });
 		expect(data.title).toBe('Контакт');
 	});
+	it('localizes bounded generated dealer copy while preserving dealer facts', () => {
+		expect(contentText('en', 'Как да потвърдите актуална наличност в OUTLETCARS.BG')).toBe(
+			'How to confirm current availability at OUTLETCARS.BG'
+		);
+		expect(
+			contentText(
+				'en',
+				'Свържете се с автокъщата на 0898 921 010 и посочете точния автомобил преди посещение.'
+			)
+		).toBe(
+			'Contact the dealership on 0898 921 010 and identify the exact vehicle before visiting.'
+		);
+		expect(contentText('en', 'Информация за автокъщата')).toBe('Dealer information');
+		expect(
+			contentText(
+				'en',
+				'Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.'
+			)
+		).toBe(
+			'Independent demonstration preview. Forms do not send messages or create a reservation.'
+		);
+		expect(contentText('bg', 'Как да потвърдите актуална наличност в OUTLETCARS.BG')).toBe(
+			'Как да потвърдите актуална наличност в OUTLETCARS.BG'
+		);
+		expect(() => contentText('en', 'Непознат дилърски текст')).toThrow(
+			'Missing English editorial catalog entry'
+		);
+	});
+
 	it('changes only import enum display labels, keeping parsed values identical', () => {
 		const params = new URLSearchParams('origin=DE&fuel=Бензин&transmission=Автомат&maxPrice=30000');
 		const criteria = importCriteriaFromParams(params);

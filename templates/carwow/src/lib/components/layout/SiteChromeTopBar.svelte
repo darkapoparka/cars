@@ -4,7 +4,7 @@
 
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import LocaleSettingsMenu from './LocaleSettingsMenu.svelte';
 	import SiteChromeIcon from './SiteChromeIcon.svelte';
 
 	const locationShort = i18n.t('pattern.a30bd281e873', { v0: i18n.dealer('city') });
@@ -74,7 +74,7 @@
 					</a>
 				</li>
 			</ul>
-			<LocaleTrigger compact={false} />
+			<LocaleSettingsMenu />
 		</div>
 	</div>
 </div>
@@ -139,14 +139,6 @@
 		width: 22px;
 	}
 
-	.site-chrome-topbar__language {
-		font-size: var(--sa-text-caption);
-		font-weight: var(--sa-weight-strong);
-		letter-spacing: 0 !important;
-	}
-	.site-chrome-topbar__language span {
-		font: inherit;
-	}
 	@media (min-width: 1200px) {
 		.site-chrome-topbar__social-link {
 			height: 28px !important;
@@ -155,9 +147,6 @@
 		.site-chrome-topbar__social-link :global(img) {
 			height: 18px !important;
 			width: 18px !important;
-		}
-		.site-chrome-topbar__language {
-			height: 28px !important;
 		}
 	}
 </style>

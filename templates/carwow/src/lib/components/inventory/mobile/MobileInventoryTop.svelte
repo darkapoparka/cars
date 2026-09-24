@@ -1,5 +1,4 @@
 <script lang="ts">
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
@@ -42,7 +41,6 @@
 </script>
 
 <section class="mobile-inventory-top">
-	<div class="mobile-inventory-locale"><LocaleTrigger /></div>
 	{#if mode === 'map'}
 		<div class="mobile-map-card">
 			<div>

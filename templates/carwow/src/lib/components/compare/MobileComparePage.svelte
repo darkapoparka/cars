@@ -1,5 +1,4 @@
 <script lang="ts">
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
@@ -31,7 +30,6 @@
 <div class="mobile-compare">
 	<main id="main-content" tabindex="-1">
 		<div class="page-title">
-			<LocaleTrigger />
 			<h1>{i18n.t('copy.c2a9007babf2')}</h1>
 			<span
 				role="status"

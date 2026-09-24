@@ -24,7 +24,7 @@
 			<DesktopHomeHero vehicles={data.vehicles} variant="cutouts" />
 			<DesktopHomeInventoryPreview
 				vehicles={data.vehicles}
-				showHeaderCta={false}
+				showHeaderCta={true}
 				showHeaderSubtitle={false}
 			/>
 			<DesktopHomeReviews showReviews={false} balancedActionCards />
@@ -59,7 +59,7 @@
 				.daynight-home-hero__stage
 				> form
 		) {
-			max-width: 640px !important;
+			max-width: 680px !important;
 			width: 100% !important;
 		}
 
@@ -618,7 +618,7 @@
 			justify-content: flex-start;
 			margin: 0 auto;
 			max-width: 1180px;
-			padding: 18px 24px 24px;
+			padding: 32px 24px 48px;
 			position: relative;
 			width: min(1180px, calc(100% - 48px));
 			z-index: 3;
@@ -630,7 +630,7 @@
 			font-size: var(--sa-text-desktop-hero-title) !important;
 			font-weight: var(--sa-weight-heading) !important;
 			letter-spacing: -0.055em !important;
-			line-height: 0.96 !important;
+			line-height: 1.08 !important;
 			margin: 0 0 24px !important;
 			max-width: 900px !important;
 			padding: 0 !important;

@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { Phone, Mail, MapPin, ArrowUpRight, Plus } from '@lucide/svelte';
+	import Phone from '@lucide/svelte/icons/phone';
+	import Mail from '@lucide/svelte/icons/mail';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
+	import Plus from '@lucide/svelte/icons/plus';
 	import { daynightContact } from '$lib/data/daynight';
 	import { resolve } from '$app/paths';
 	import type { HomeFiveFooterData, HomeFiveFooterSocial } from '$lib/auxero/home-five';

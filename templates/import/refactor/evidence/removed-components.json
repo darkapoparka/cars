@@ -1,0 +1,504 @@
+{
+	"date": "2026-09-19",
+	"method": "TypeScript AST reachability from all route modules, hooks, tests and library entry; generated UI excluded; sole source glob reads explicitly named template HTML only; no scripts/test string references to candidate names.",
+	"files": [
+		{
+			"file": "src/lib/components/about/AboutBrandsSection.svelte",
+			"lines": 109,
+			"bytes": 2650,
+			"sha256": "f4b2bcbdd6c6a32308f366f4236c17bf002f94e3e578e2d93eb0c35828356420"
+		},
+		{
+			"file": "src/lib/components/about/AboutConsultantsSection.svelte",
+			"lines": 362,
+			"bytes": 7716,
+			"sha256": "f6f92e980196c1749170b6ec67197f1fb6c44b45972cfe6a59980aa47a93a096"
+		},
+		{
+			"file": "src/lib/components/about/AboutContent.svelte",
+			"lines": 117,
+			"bytes": 3843,
+			"sha256": "ae26f15de1d45efbea63eb6349c6392285f8a365e79d6d344c4038f402452192"
+		},
+		{
+			"file": "src/lib/components/about/AboutIntroSection.svelte",
+			"lines": 52,
+			"bytes": 1314,
+			"sha256": "aa3aea4f1ce97fb8b8f9f521719605e33b1f201c07b1cc4612d89e1f91a577e6"
+		},
+		{
+			"file": "src/lib/components/about/AboutLocationSection.svelte",
+			"lines": 475,
+			"bytes": 10828,
+			"sha256": "589c27a15894cac97b5516bcff8147c6e1f756cc65233b658284e80bdd218e08"
+		},
+		{
+			"file": "src/lib/components/about/AboutMobileSurface.svelte",
+			"lines": 554,
+			"bytes": 13556,
+			"sha256": "dacaa154ef51f5c566262857583f099e32d8cb2b904d6884f097f773e64c0281"
+		},
+		{
+			"file": "src/lib/components/about/AboutSectionHeader.svelte",
+			"lines": 38,
+			"bytes": 718,
+			"sha256": "2dd0c68cb844ec93d635b330b82501b778ded4e9858af8ae24340732b7eb268d"
+		},
+		{
+			"file": "src/lib/components/about/AboutTemplatePage.svelte",
+			"lines": 43,
+			"bytes": 1062,
+			"sha256": "41b6b467dc820b290c4d89ef6e2cc0cf0460e5651f6e85d496b45f22b0e5b016"
+		},
+		{
+			"file": "src/lib/components/about/AboutVideosSection.svelte",
+			"lines": 8,
+			"bytes": 247,
+			"sha256": "2061aa35cc470ecd27a466b4b5f6d61b0ab8c49f1bc11220eeed5358c57fa541"
+		},
+		{
+			"file": "src/lib/components/account/AccountFavoritesGrid.svelte",
+			"lines": 24,
+			"bytes": 803,
+			"sha256": "0c079143debe162226ce77bd6d013f2123130ddeccf8abdd49673e5e5c40c9d6"
+		},
+		{
+			"file": "src/lib/components/account/AccountFavoritesMobilePage.svelte",
+			"lines": 512,
+			"bytes": 12471,
+			"sha256": "98072bf408217d5ae3e534d1983bc9d4acbb0d3af888573ffe7c447d05878568"
+		},
+		{
+			"file": "src/lib/components/account/AccountFavoritesTemplatePage.svelte",
+			"lines": 61,
+			"bytes": 1531,
+			"sha256": "47b2987999102bdab696e24f25b8486d8a50d2dcc4375dcf99bd29792ec94fb4"
+		},
+		{
+			"file": "src/lib/components/account/AuxeroFavoriteVehicleCard.svelte",
+			"lines": 141,
+			"bytes": 4123,
+			"sha256": "7ced4cc45cedb6b84f455ed05796fba3c13de0a66668b585c1c0889086bdcf9a"
+		},
+		{
+			"file": "src/lib/components/account/UserManagementTable.svelte",
+			"lines": 621,
+			"bytes": 14277,
+			"sha256": "3ef4c461a7c8f9f0f237e08ff8a5ac92c99ff625e0c163791af76d07f6934008"
+		},
+		{
+			"file": "src/lib/components/account/UserManagementTemplatePage.svelte",
+			"lines": 37,
+			"bytes": 951,
+			"sha256": "e43c9a9b745d7123abf7d7ab5e5b73f7d143c2dbfc196c714f747d3e5721d247"
+		},
+		{
+			"file": "src/lib/components/blog/BlogDetailMainContent.svelte",
+			"lines": 83,
+			"bytes": 1973,
+			"sha256": "9ef8b3eb32341dbe08006ce588c8d58f80eef27acdee296994ab6d9e09dd5979"
+		},
+		{
+			"file": "src/lib/components/blog/BlogDetailRelatedCard.svelte",
+			"lines": 8,
+			"bytes": 200,
+			"sha256": "d5bc5a7379db4a5cc2afecbc3cd93efdbdcb035adf4d92267cacec5436c00bbf"
+		},
+		{
+			"file": "src/lib/components/blog/BlogDetailSidebar.svelte",
+			"lines": 80,
+			"bytes": 2480,
+			"sha256": "efecd4865734de347dd043db93df17450256b31c6a9829ae9551f52a2c3315c4"
+		},
+		{
+			"file": "src/lib/components/blog/BlogDetailTemplatePage.svelte",
+			"lines": 186,
+			"bytes": 4265,
+			"sha256": "9dc593a43ea9a0685699bf004bcda57286389c11b06e31d4002e9155a79d5962"
+		},
+		{
+			"file": "src/lib/components/blog/BlogListCard.svelte",
+			"lines": 104,
+			"bytes": 2238,
+			"sha256": "9e832ae4583b7d2f27a7992fed00c90512694b67d101bdc94388f0385fda49b7"
+		},
+		{
+			"file": "src/lib/components/blog/BlogListGrid.svelte",
+			"lines": 30,
+			"bytes": 654,
+			"sha256": "d00f0c6c513c44e31af93c5aefd7996faf26355eee164e90af39ddd7203583b8"
+		},
+		{
+			"file": "src/lib/components/blog/BlogTemplatePage.svelte",
+			"lines": 77,
+			"bytes": 1756,
+			"sha256": "05355712fcfd1f33fd8a690b484b1080d39f74007867673fedcb72dd637888fb"
+		},
+		{
+			"file": "src/lib/components/calculator/CalculatorEstimator.svelte",
+			"lines": 225,
+			"bytes": 6968,
+			"sha256": "2cd9ff81fa81fe873d3e792b39e19167da93d411f3aac2b7c8a9eab750806d2a"
+		},
+		{
+			"file": "src/lib/components/calculator/CalculatorMobilePage.svelte",
+			"lines": 917,
+			"bytes": 23639,
+			"sha256": "3803281af10a89100dd5877ee4b25a42930e4bd4a01d357cc6c7f207273dbabc"
+		},
+		{
+			"file": "src/lib/components/calculator/CalculatorTemplatePage.svelte",
+			"lines": 125,
+			"bytes": 3717,
+			"sha256": "70e7432b95a1f1e68998b2b47eee70f72fc1c9b859299f4c403aa507a50973cd"
+		},
+		{
+			"file": "src/lib/components/common/CenteredRouteHero.svelte",
+			"lines": 220,
+			"bytes": 5353,
+			"sha256": "2392721043d3690711f386c5ea61d459ffb77e82f4c4fef59fe7b396737c71f2"
+		},
+		{
+			"file": "src/lib/components/common/PageBanner.svelte",
+			"lines": 181,
+			"bytes": 4119,
+			"sha256": "110860a97ebde0c596e25173ab6c665999967a56c1a4c7fbcd1f4d8a3e1c0113"
+		},
+		{
+			"file": "src/lib/components/common/RouteHeroCopy.svelte",
+			"lines": 63,
+			"bytes": 1258,
+			"sha256": "ef5cec40d8cdc5f5b560490d347c88a83ee4222adf825400a382f71eb5d3ed8f"
+		},
+		{
+			"file": "src/lib/components/common/RouteHeroMedia.svelte",
+			"lines": 106,
+			"bytes": 2626,
+			"sha256": "527855658d18fa4464ea73c7fb03768d93f183a6af993a1b33a4f2aaf6821e96"
+		},
+		{
+			"file": "src/lib/components/common/RouteQuickNav.svelte",
+			"lines": 106,
+			"bytes": 2171,
+			"sha256": "edfd492dfdcde24918b78bddc9a2cab131a81e8adb756a9767e952fafb6e764b"
+		},
+		{
+			"file": "src/lib/components/common/ServiceCard.svelte",
+			"lines": 227,
+			"bytes": 4924,
+			"sha256": "9b4f6eb7d6a57a643b4ae8ea2745387cd8d37ce75a45b8b5ed5e781118c8ff40"
+		},
+		{
+			"file": "src/lib/components/compare/CompareCleanPage.svelte",
+			"lines": 313,
+			"bytes": 12933,
+			"sha256": "38e7eb1f38bea6c413b03f33d6432ebe47d62a8d8f62709779a39eabbd34c65e"
+		},
+		{
+			"file": "src/lib/components/contact/ContactFormCard.svelte",
+			"lines": 225,
+			"bytes": 5161,
+			"sha256": "4ebf53378084586d3a74b2243c446d12acbd552c04e7b3625dcceb14781d42a2"
+		},
+		{
+			"file": "src/lib/components/contact/ContactTemplatePage.svelte",
+			"lines": 333,
+			"bytes": 9017,
+			"sha256": "ae5f58818263f010a847fa8e7b46c1dbcd35c47a745d24db7878db9461eee5ed"
+		},
+		{
+			"file": "src/lib/components/detail/AuxeroVehicleDetail.svelte",
+			"lines": 205,
+			"bytes": 7532,
+			"sha256": "6afd3f026fe0e0cfcebdaef91eda24d49b4696541e416fe22f86064a15b2ef67"
+		},
+		{
+			"file": "src/lib/components/detail/AuxeroVehicleDetailGallery.svelte",
+			"lines": 202,
+			"bytes": 5739,
+			"sha256": "be74a6200aeaf455d4d861e6fbcc416a2203e49240f8a9fcedd95079fffc73a9"
+		},
+		{
+			"file": "src/lib/components/detail/AuxeroVehicleDetailSidebar.svelte",
+			"lines": 473,
+			"bytes": 13174,
+			"sha256": "4d88a4d4fcabd9359d709d100b7b6453e5aa9fce8503996d3854c8c8f27a4e7c"
+		},
+		{
+			"file": "src/lib/components/detail/AuxeroVehicleDetailStaticContent.svelte",
+			"lines": 463,
+			"bytes": 13228,
+			"sha256": "ff4e8fed6e71be758447c7a49f50cae4e1882afa579c5d51c9ebe1748c2be235"
+		},
+		{
+			"file": "src/lib/components/detail/AuxeroVehicleFeatureTabs.svelte",
+			"lines": 125,
+			"bytes": 3433,
+			"sha256": "ef5e333c93bc6de643b2577068584ff548104805867ebeb0683bd0fd01592340"
+		},
+		{
+			"file": "src/lib/components/detail/AuxeroVehicleMobileIsland.svelte",
+			"lines": 44,
+			"bytes": 894,
+			"sha256": "15fb523ebddf7ee35a1ba4a6f5a02ef9379829edaf025e3c91fc0400818159e8"
+		},
+		{
+			"file": "src/lib/components/detail/AuxeroVehicleOverview.svelte",
+			"lines": 18,
+			"bytes": 557,
+			"sha256": "9a691e0f8300d6006d1a8aab8d6afa8eb00f8aa29da0461a08bd2216c7c7711f"
+		},
+		{
+			"file": "src/lib/components/detail/AuxeroVehicleTrustChecks.svelte",
+			"lines": 116,
+			"bytes": 2478,
+			"sha256": "5827b8f049a0b8181e3ff15ac4f7910905393c90aec7f274ba7e89ed2079a44c"
+		},
+		{
+			"file": "src/lib/components/detail/VehicleDetailTemplatePage.svelte",
+			"lines": 650,
+			"bytes": 18030,
+			"sha256": "9301a215a0c1739192bc9dab65004107607610b16cc6837d82d1f56bb42b8e48"
+		},
+		{
+			"file": "src/lib/components/faqs/FaqAccordion.svelte",
+			"lines": 19,
+			"bytes": 463,
+			"sha256": "46fbd80cb6d0b364857cb368577e3c8acefa75c81d042d088fe88153b4654485"
+		},
+		{
+			"file": "src/lib/components/faqs/FaqAccordionItem.svelte",
+			"lines": 87,
+			"bytes": 2489,
+			"sha256": "343959862604ce042b7bd663381cc1144059789e0c7608c1a716bb67f60c0946"
+		},
+		{
+			"file": "src/lib/components/faqs/FaqsCleanPage.svelte",
+			"lines": 82,
+			"bytes": 2769,
+			"sha256": "c80e102e2d3ae91fc6b2d7d9e642e85e5ded5fd963b532785a7504b176c4fc36"
+		},
+		{
+			"file": "src/lib/components/faqs/FaqsContent.svelte",
+			"lines": 38,
+			"bytes": 976,
+			"sha256": "62f4a78d127b7b99d89a93843ac630045fe05d214f3f0338d80bf09836a7b0bf"
+		},
+		{
+			"file": "src/lib/components/faqs/FaqsTemplatePage.svelte",
+			"lines": 45,
+			"bytes": 1117,
+			"sha256": "06692c10b359ba0a022fc859e0ac9c5dd47ea21f23d4a124b3e3e03a1b2d5a9f"
+		},
+		{
+			"file": "src/lib/components/financing/FinancingTemplatePage.svelte",
+			"lines": 482,
+			"bytes": 13202,
+			"sha256": "d9e9210124f3137554aa2b559514a839b1a283b51b03037717fb90ddf02123e9"
+		},
+		{
+			"file": "src/lib/components/forms/InquiryForm.svelte",
+			"lines": 126,
+			"bytes": 3529,
+			"sha256": "9616b08b6b3d3a9e737a144b5ffa70f4d6d264370eabdea9f28cc2c9e3dc90b8"
+		},
+		{
+			"file": "src/lib/components/forms/types.ts",
+			"lines": 35,
+			"bytes": 746,
+			"sha256": "98ce383ce74e8690c5878fbebd5b2fb105106a527998f044b2942f3513760484"
+		},
+		{
+			"file": "src/lib/components/home/HomeFivePromoBanner.svelte",
+			"lines": 290,
+			"bytes": 6680,
+			"sha256": "3d64fb145718870b66590df87f1472326461f197b67fc3030bf0a8195fea88fd"
+		},
+		{
+			"file": "src/lib/components/home/HomeFiveTemplatePage.svelte",
+			"lines": 387,
+			"bytes": 10872,
+			"sha256": "74c25d2ec251a807caa0285bf11a714e98f494eedd541d38fd3567ac93645210"
+		},
+		{
+			"file": "src/lib/components/home2/HomeTwoBrowsePaths.svelte",
+			"lines": 450,
+			"bytes": 9099,
+			"sha256": "d43fbe81ff3d258b99ea70b46ca71a977d57fca5fcef3ce0aa1ca2f226b35b2d"
+		},
+		{
+			"file": "src/lib/components/home2/HomeTwoDeals.svelte",
+			"lines": 399,
+			"bytes": 8408,
+			"sha256": "ab187ec71d130cde73f29a92c2066cd40006aa7cab62a6a1a8c26a33a0b38a99"
+		},
+		{
+			"file": "src/lib/components/home2/HomeTwoExploreMore.svelte",
+			"lines": 466,
+			"bytes": 10450,
+			"sha256": "35bdb24feeed24788dbe0e0998861de42018954a8744436d8d8b8beb18232c50"
+		},
+		{
+			"file": "src/lib/components/home2/HomeTwoHeader.svelte",
+			"lines": 267,
+			"bytes": 6213,
+			"sha256": "66fbd395c63a84892df330f1ba5e84cf9dbb42b7a9e55ded2c8e93199ec16bb1"
+		},
+		{
+			"file": "src/lib/components/home2/HomeTwoHero.svelte",
+			"lines": 303,
+			"bytes": 6104,
+			"sha256": "9262335dbfbcc96acab9d5120b775fbf45789dbfd3291d381f2f48098daca7ab"
+		},
+		{
+			"file": "src/lib/components/home2/HomeTwoTemplatePage.svelte",
+			"lines": 141,
+			"bytes": 3544,
+			"sha256": "1cb699f593029c34ef00005465484f3c1db5147a32b375191b7d1c324e7dfb73"
+		},
+		{
+			"file": "src/lib/components/home2/HomeTwoTrustSection.svelte",
+			"lines": 251,
+			"bytes": 5171,
+			"sha256": "d0bd02909481320bfdae6a943531c56dc8e1f59b6a26f7bfe25fb2ad48cc703e"
+		},
+		{
+			"file": "src/lib/components/inventory/AuxeroInventoryActiveFilters.svelte",
+			"lines": 43,
+			"bytes": 1319,
+			"sha256": "0988ee81240bbfdfe0d6cc22d4f0b0c219ac7cdde91d3b74837302c275c32fed"
+		},
+		{
+			"file": "src/lib/components/inventory/AuxeroInventoryContent.svelte",
+			"lines": 51,
+			"bytes": 1417,
+			"sha256": "57a74726c7e884d201a8695caaa439fc09b8ac17ca560a627f0692d08132a730"
+		},
+		{
+			"file": "src/lib/components/inventory/AuxeroInventoryDesktopSurface.svelte",
+			"lines": 2960,
+			"bytes": 82300,
+			"sha256": "1e902ed9bdeb2962c8136bc12658d79c7d5d9c39f89c59f442d276929c355fca"
+		},
+		{
+			"file": "src/lib/components/inventory/AuxeroInventoryFilterPopover.svelte",
+			"lines": 1138,
+			"bytes": 27692,
+			"sha256": "105b77cf5dff44df736b660c5387027a4f0467393f069365c7a67baf1dc6fc21"
+		},
+		{
+			"file": "src/lib/components/inventory/AuxeroInventoryMapFallback.svelte",
+			"lines": 41,
+			"bytes": 1237,
+			"sha256": "f92aa0521af03424a69fba5a04624970c52343d9f641ce8ca72a3fb29d1519fb"
+		},
+		{
+			"file": "src/lib/components/inventory/AuxeroInventorySidebarFilterGroup.svelte",
+			"lines": 198,
+			"bytes": 4082,
+			"sha256": "d3a193998053ef71496dced2096754d9724a8e053755feed413260e10fa69dd9"
+		},
+		{
+			"file": "src/lib/components/inventory/InventoryTemplatePage.svelte",
+			"lines": 209,
+			"bytes": 5767,
+			"sha256": "cd1374ec57e34149479d7fe3b346833162130ea9c06a811d548155c9eecb70dc"
+		},
+		{
+			"file": "src/lib/components/layout/ScrollTop.svelte",
+			"lines": 40,
+			"bytes": 725,
+			"sha256": "517c9c7578942c68c034fab305a11c09ccd12a39ad3ccf458a1abd9042a239b9"
+		},
+		{
+			"file": "src/lib/components/reviews/AuxeroReviewCard.svelte",
+			"lines": 49,
+			"bytes": 1205,
+			"sha256": "9f10949bf6c7ac19cd88cef8b3e4089295bc7b33d23ccbfddaac3062b3167c67"
+		},
+		{
+			"file": "src/lib/components/reviews/AuxeroReviewsGrid.svelte",
+			"lines": 16,
+			"bytes": 432,
+			"sha256": "66343595d1bbe497395c750c9afa614991c79d09e02d61e02ceaa8fd6406fc48"
+		},
+		{
+			"file": "src/lib/components/reviews/ReviewsCleanPage.svelte",
+			"lines": 91,
+			"bytes": 3047,
+			"sha256": "5efe63e79fdda75819d662a5de587e1390ef439136065a939a0cf248fa2547a4"
+		},
+		{
+			"file": "src/lib/components/reviews/ReviewsTemplatePage.svelte",
+			"lines": 103,
+			"bytes": 2772,
+			"sha256": "cb3e2132c8cd306b1b6983394411c21bc88740ccad96d0750f9999dffb9072b4"
+		},
+		{
+			"file": "src/lib/components/sell-your-car/SellCarForm.svelte",
+			"lines": 25,
+			"bytes": 654,
+			"sha256": "0fb851361a01d0c0123cf56b4064f3d45a0f493e7cc90deb9bb4d29bc6b48ccf"
+		},
+		{
+			"file": "src/lib/components/sell-your-car/SellYourCarTemplatePage.svelte",
+			"lines": 212,
+			"bytes": 5662,
+			"sha256": "01ad2e9571779f1cd014c9aa55da5641bc504c0ff9987d49b9cfd7011ff5062e"
+		},
+		{
+			"file": "src/lib/components/services/ImportBrowseControls.svelte",
+			"lines": 489,
+			"bytes": 13399,
+			"sha256": "846176541dea7e92cdf4767bee620343f4cf3b69336311ec2f3a262ff126e853"
+		},
+		{
+			"file": "src/lib/components/services/ImportRequestTemplatePage.svelte",
+			"lines": 194,
+			"bytes": 4686,
+			"sha256": "4bfc0753bfb3a4a08c673e183089f41da36a153e4e43f68210a2fcb8c8bd197e"
+		},
+		{
+			"file": "src/lib/components/services/ServiceFormCard.svelte",
+			"lines": 104,
+			"bytes": 2684,
+			"sha256": "558fdf52c1e697f3b76f452662fec2d178e51da3b8ebadee9e40d6dec739bcaf"
+		},
+		{
+			"file": "src/lib/components/services/ServicesContent.svelte",
+			"lines": 363,
+			"bytes": 10025,
+			"sha256": "de90f722f7dc729b5b41efa5757e966fb13c76224d32a457d568a5995d0e880f"
+		},
+		{
+			"file": "src/lib/components/services/ServicesTemplatePage.svelte",
+			"lines": 45,
+			"bytes": 1159,
+			"sha256": "452e08ff5ac4e08c082fd60c5679b8cc343f77e610a996162fb231eb37dbf8fe"
+		},
+		{
+			"file": "src/lib/components/terms/PolicyTemplatePage.svelte",
+			"lines": 101,
+			"bytes": 2506,
+			"sha256": "97a394679f2f36b1917f51b1a7f6321a270b58bb4f8167ae75444383625e9850"
+		},
+		{
+			"file": "src/lib/components/terms/TermsCleanPage.svelte",
+			"lines": 144,
+			"bytes": 5226,
+			"sha256": "de0005b493a8a2e5da3db60784db64988d3fd91337964a714d9a6fd905ed60a7"
+		},
+		{
+			"file": "src/lib/components/terms/TermsContent.svelte",
+			"lines": 256,
+			"bytes": 6080,
+			"sha256": "ffe496053ffd604062a8db78af9a2555c02d398c04f1881517848b40a2f8aea6"
+		},
+		{
+			"file": "src/lib/components/terms/TermsTemplatePage.svelte",
+			"lines": 45,
+			"bytes": 1119,
+			"sha256": "7868f75bfd9131bfa835b3c28d4838c3f0899008713f370269ff20ef001632d8"
+		}
+	]
+}

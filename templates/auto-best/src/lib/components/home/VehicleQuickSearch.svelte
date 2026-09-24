@@ -190,7 +190,7 @@
           aria-label={mobileView === 'model' ? i18n.t("m_d73ca16bbc17") : i18n.t("m_a779c56e526e")}
           onclick={returnToMobileOverview}
         >
-          <Icon name="arrow-left" size={18} strokeWidth={1.8} />
+          <Icon name="arrow-left" size={21} strokeWidth={1.8} />
         </button>
       {/if}
       <h2 id="quick-search-title">
@@ -198,7 +198,7 @@
         <span class="dn-quick-search__title-mobile">{mobileMenuTitle}</span>
       </h2>
       <button class="dn-quick-search__close dn-icon-button" type="button" aria-label={i18n.t("m_fab9fcfc48bf")} onclick={closeSearch}>
-        <Icon name="x" size={18} strokeWidth={1.8} />
+        <Icon name="x" size={22} strokeWidth={1.8} />
       </button>
     </header>
 
@@ -249,37 +249,37 @@
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('make')}>
             <strong>{i18n.t("m_ffd178a2d771")}</strong>
             <span data-active={Boolean(make || model)}>{makeModelSummary}</span>
-            <Icon name="arrow-right" size={18} strokeWidth={1.8} />
+            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('body')}>
             <strong>{i18n.t("m_191c24bf12d5")}</strong>
             <span data-active={Boolean(body)}>{body ? specificationLabel(bodyLabel(body), i18n.locale) : i18n.t("m_a52ace420f21")}</span>
-            <Icon name="arrow-right" size={18} strokeWidth={1.8} />
+            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('price')}>
             <strong>{i18n.t("m_84e960d40ad5")}</strong>
-            <span data-active={Boolean(priceMax)}>{priceMax ? i18n.t("m_a04d91558e9c", { p0: formatListingNumber(priceMax, i18n.locale) }) : i18n.t("inventory.range.unlimited")}</span>
-            <Icon name="arrow-right" size={18} strokeWidth={1.8} />
+            <span data-active={Boolean(priceMax)}>{priceMax ? i18n.t("m_a04d91558e9c", { p0: formatListingNumber(priceMax, i18n.locale) }) : i18n.t("m_53d34bf6c934")}</span>
+            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('fuel')}>
             <strong>{i18n.t("m_a80f942f4112")}</strong>
             <span data-active={Boolean(fuel)}>{fuel ? specificationLabel(fuel, i18n.locale) : i18n.t("m_a52ace420f21")}</span>
-            <Icon name="arrow-right" size={18} strokeWidth={1.8} />
+            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('mileage')}>
             <strong>{i18n.t("m_ffe44a017911")}</strong>
-            <span data-active={Boolean(mileageMax)}>{mileageMax ? i18n.t("m_243dcf897937", { p0: formatListingNumber(mileageMax, i18n.locale) }) : i18n.t("inventory.range.unlimited")}</span>
-            <Icon name="arrow-right" size={18} strokeWidth={1.8} />
+            <span data-active={Boolean(mileageMax)}>{mileageMax ? i18n.t("m_243dcf897937", { p0: formatListingNumber(mileageMax, i18n.locale) }) : i18n.t("m_960884c7b030")}</span>
+            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
           <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('year')}>
             <strong>{i18n.t("m_89f6832560de")}</strong>
-            <span data-active={Boolean(yearMin)}>{yearMin ? i18n.t("m_a8f4bf044ac3", { p0: yearMin }) : i18n.t("inventory.range.unlimited")}</span>
-            <Icon name="arrow-right" size={18} strokeWidth={1.8} />
+            <span data-active={Boolean(yearMin)}>{yearMin ? i18n.t("m_a8f4bf044ac3", { p0: yearMin }) : i18n.t("m_562ec6e12633")}</span>
+            <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
         </div>
       {:else}
@@ -292,8 +292,7 @@
                 aria-pressed={mobileMenuValue === option.value}
                 onclick={() => selectMobileOption(option.value)}
               >
-                <span>{option.label}</span>
-                <span class="dn-quick-search__selection-mark" aria-hidden="true">✓</span>
+                {option.label}
               </button>
             {/each}
           </div>
@@ -324,7 +323,7 @@
     width: 100%;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    gap: var(--dn-entry-icon-gap);
+    gap: 11px;
     margin: 0 0 12px;
     padding: 0 16px;
     text-align: left;
@@ -356,7 +355,6 @@
   }
 
   .dn-quick-search__dialog {
-    --dn-entry-height: var(--dn-control-height-default);
     width: min(1120px, calc(100vw - 48px));
     height: min(820px, calc(100dvh - 64px));
     max-width: none;
@@ -405,7 +403,12 @@
     display: none;
   }
 
-  .dn-quick-search__close { border: 0; border-radius: var(--dn-radius-button); background: #e9ecef; color: #24272c; }
+  .dn-quick-search__close {
+    border: 0;
+    border-radius: var(--dn-radius-button);
+    background: #e9ecef;
+    color: #24272c;
+  }
 
   .dn-quick-search__close:hover,
   .dn-quick-search__close:focus-visible {
@@ -427,6 +430,7 @@
     align-items: center;
     gap: var(--dn-space-3);
     padding: 0 var(--dn-space-4);
+    border: 0;
   }
 
   @media (max-width: 767px) {
@@ -483,7 +487,7 @@
 
     .dn-quick-search__reset {
       display: inline-flex;
-      min-height: var(--dn-control-hit-height);
+      min-height: 44px;
       align-items: center;
       justify-content: flex-start;
       padding: 0;
@@ -491,10 +495,24 @@
       background: transparent;
       color: var(--dn-red);
       cursor: pointer;
-      font: var(--dn-overlay-option-font);
+      font: inherit;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-semibold);
     }
 
-    .dn-quick-search__back { display: inline-flex; border: 0; border-radius: var(--dn-radius-button); background: #e9ecef; color: #24272c; transition: background-color 140ms ease-out; }
+    .dn-quick-search__back {
+      display: inline-grid;
+      width: var(--dn-control-hit-height);
+      height: var(--dn-control-hit-height);
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: var(--dn-radius-button);
+      background: #e9ecef;
+      color: #24272c;
+      cursor: pointer;
+      transition: background-color 140ms ease-out;
+    }
 
     .dn-quick-search__back:hover,
     .dn-quick-search__back:focus-visible {
@@ -524,7 +542,7 @@
     }
 
     .dn-quick-search__form {
-      padding: var(--dn-space-1) var(--dn-overlay-gutter) var(--dn-overlay-gap);
+      padding: 4px 16px 10px;
     }
 
     .dn-quick-search__form--mobile-hidden {
@@ -541,44 +559,43 @@
     .dn-quick-search__filter-rows {
       display: grid;
       min-height: 0;
-      gap: var(--dn-overlay-gap);
-      padding: 0 var(--dn-overlay-gutter) var(--dn-space-3);
+      gap: 8px;
+      padding: 0 16px 10px;
       overflow-y: auto;
       overscroll-behavior: contain;
     }
 
     .dn-quick-search__filter-row {
       display: grid;
-      min-height: var(--dn-overlay-control-height);
+      min-height: 52px;
       width: 100%;
       grid-template-columns: auto minmax(0, 1fr) auto;
       align-items: center;
-      gap: var(--dn-overlay-gap);
-      padding: var(--dn-space-2) var(--dn-overlay-gutter);
+      gap: 10px;
+      padding: 0 14px;
       border: 1px solid transparent;
-      border-radius: var(--dn-overlay-row-radius);
-      background: var(--dn-home-panel);
+      border-radius: 14px;
+      background: #f1f2f4;
       color: #191c22;
       cursor: pointer;
-      font: var(--dn-overlay-option-font);
+      font: inherit;
       text-align: left;
       transition: background-color 140ms ease-out, border-color 140ms ease-out;
     }
 
     .dn-quick-search__filter-row strong {
-      font-size: var(--dn-text-lead);
-      font-weight: var(--dn-weight-medium);
+      font-size: var(--dn-text-body);
+      font-weight: var(--dn-weight-semibold);
     }
 
     .dn-quick-search__filter-row > span {
       overflow: hidden;
       color: #626975;
-      font: var(--dn-entry-font);
+      font-size: var(--dn-text-meta);
       text-align: right;
-      overflow-wrap: anywhere;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
-
-    .dn-quick-search__filter-row > span[data-active="true"] { color: var(--dn-ink); }
 
     .dn-quick-search__filter-row :global(.dn-icon) {
       color: #626975;
@@ -597,7 +614,7 @@
     .dn-quick-search__option-menu {
       min-height: 0;
       flex: 1;
-      padding: var(--dn-space-half) var(--dn-overlay-gutter) var(--dn-space-4);
+      padding: 2px 16px 16px;
       overflow-y: auto;
       overscroll-behavior: contain;
     }
@@ -605,23 +622,21 @@
     .dn-quick-search__option-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--dn-overlay-gap);
+      gap: 10px;
     }
 
     .dn-quick-search__option {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--dn-overlay-gap);
-      text-align: left;
-      min-height: var(--dn-overlay-control-height);
-      padding: var(--dn-space-2) var(--dn-space-3);
+      min-height: 52px;
+      padding: 8px 12px;
       border: 1px solid transparent;
-      border-radius: var(--dn-overlay-row-radius);
-      background: var(--dn-home-panel);
+      border-radius: 14px;
+      background: #f1f2f4;
       color: #24272c;
       cursor: pointer;
-      font: var(--dn-overlay-option-font);
+      font: inherit;
+      font-size: var(--dn-text-meta);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
       transition: background-color 140ms ease-out, color 140ms ease-out;
     }
 
@@ -635,30 +650,26 @@
     }
 
     .dn-quick-search__option--selected {
-      background: var(--dn-selection-surface);
-      border-color: var(--dn-selection-line);
-      color: var(--dn-ink);
+      background: var(--dn-ink-strong);
+      color: #fff;
     }
-
-    .dn-quick-search__selection-mark { visibility: hidden; color: var(--dn-red); flex-shrink: 0; }
-    .dn-quick-search__option--selected .dn-quick-search__selection-mark { visibility: visible; }
 
     .dn-quick-search__mobile-footer {
       margin-top: auto;
       flex: 0 0 auto;
-      padding: var(--dn-space-3) var(--dn-overlay-gutter) calc(var(--dn-space-4) + env(safe-area-inset-bottom));
+      padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
       background: #fff;
     }
 
     .dn-quick-search__mobile-footer button {
       width: 100%;
-      min-height: var(--dn-overlay-control-height);
+      min-height: 50px;
       border: 0;
       border-radius: var(--dn-radius-button);
       background: var(--dn-red);
       color: #fff;
       cursor: pointer;
-      font: var(--dn-overlay-action-font);
+      font: var(--dn-cta-font);
     }
 
     .dn-quick-search__mobile-footer button:disabled {

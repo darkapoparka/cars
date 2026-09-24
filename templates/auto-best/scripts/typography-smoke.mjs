@@ -37,10 +37,10 @@ try {
         await page.evaluate(() => document.fonts.ready);
         if (width < 768) {
           const buy = page.getByRole('tab',{name:'Покупка',exact:true});
-          assert.equal((await typeOf(buy)).size,18);
+          assert.equal((await typeOf(buy)).size,16);
           assert.equal((await typeOf(buy)).weight,500);
           const entry = await typeOf(page.locator('.dn-quick-search__trigger'));
-          assert(entry.size === (await typeOf(buy)).size && entry.size === 18 && entry.weight === 400 && entry.height === 44);
+          assert(entry.size > (await typeOf(buy)).size && entry.size === 18 && entry.weight === 400 && entry.height === 44);
           assert.equal(await buy.evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(255, 255, 255)');
           const homeCard = page.locator('.dn-search');
           const homeChips = page.locator('.dn-search__mobile-shortcuts');
@@ -49,8 +49,9 @@ try {
           const buyCta = page.locator('#home-buy-search .dn-search__mobile-all');
           const buyCtaType = await typeOf(buyCta);
           const buyCtaBox = await buyCta.boundingBox();
-          assert(buyCtaType.size === 18 && buyCtaType.weight === 500 && buyCtaType.height === 44 && buyCtaBox.width === 220);
-          assert.equal(await buyCta.evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(196, 1, 1)');
+          assert(buyCtaType.size === 16 && buyCtaType.weight === 500 && buyCtaType.height === 44 && buyCtaBox.width === 180);
+          assert.equal(await buyCta.evaluate(e=>parseFloat(getComputedStyle(e,'::before').height)),40);
+          assert.equal(await buyCta.evaluate(e=>getComputedStyle(e,'::before').backgroundColor),'rgb(196, 1, 1)');
           assert.equal((await page.locator('.dn-quick-search__trigger > .dn-icon').first().boundingBox()).width,18);
           assert.equal((await page.locator('.dn-quick-search__mobile-filter .dn-icon').boundingBox()).width,18);
           const buyLabelColor = await page.locator('.dn-quick-search__label-mobile').evaluate(e=>getComputedStyle(e).color);
@@ -63,8 +64,9 @@ try {
           const importCardBox = await homeCard.boundingBox();
           const importChipsBox = await homeChips.boundingBox();
           const importCtaBox = await importCta.boundingBox();
-          assert(importCtaType.size === 18 && importCtaType.weight === 500 && importCtaType.height === 44 && importCtaBox.width === 220);
-          assert.equal(await importCta.evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(196, 1, 1)');
+          assert(importCtaType.size === 16 && importCtaType.weight === 500 && importCtaType.height === 44 && importCtaBox.width === 180);
+          assert.equal(await importCta.evaluate(e=>parseFloat(getComputedStyle(e,'::before').height)),40);
+          assert.equal(await importCta.evaluate(e=>getComputedStyle(e,'::before').backgroundColor),'rgb(196, 1, 1)');
           assert.equal((await page.locator('.dn-search__import-field > .dn-icon').boundingBox()).width,18);
           assert(Math.abs(importCardBox.height-buyCardBox.height)<.5 && Math.abs(importChipsBox.y-buyChipsBox.y)<.5, 'Home mode switch must not move the card or following content');
           assert(Math.abs(importCtaBox.width-buyCtaBox.width)<.5 && Math.abs(importCtaBox.y-buyCtaBox.y)<.5, 'Home mode CTAs must keep stable geometry');
@@ -89,7 +91,7 @@ try {
         await page.goto(`${base}/contact?topic=trade-in`,{waitUntil:'networkidle'});
         const start = page.locator('.dn-tradein-start');
         const primary = await typeOf(start);
-        assert(primary.size === 18 && primary.weight === 500);
+        assert(primary.size === 16 && primary.weight === 500);
         assert.equal(primary.height,44);
         assert.equal((await typeOf(page.locator('.dn-tradein-reference'))).height,44);
         assert.equal((await typeOf(page.locator('.dn-tradein-entry-segments'))).height,44);
@@ -202,7 +204,7 @@ try {
 
         await page.goto(`${base}/contact?topic=import`,{waitUntil:'networkidle'});
         const importStart=page.locator('.dn-enquiry-import-go');
-        assert.equal((await typeOf(importStart)).size,18);
+        assert.equal((await typeOf(importStart)).size,16);
         assert.equal((await typeOf(importStart)).height,44);
         assert.equal((await typeOf(page.locator('.dn-enquiry-import-segments'))).height,44);
         await entryHierarchy(page.locator('.dn-enquiry-import-field'),page.locator('.dn-enquiry-import-segments'),importStart);
@@ -217,8 +219,8 @@ try {
         const importEntry=page.locator('#enquiry-entry');
         const importField=await typeOf(importEntry);
         const importMode=await typeOf(page.getByRole('button',{name:'Линк',exact:true}));
-        assert(importField.size === 18 && importField.weight === 400);
-        assert(importMode.size === 18 && importMode.weight === 500);
+        assert(importField.size > importMode.size && importField.size === 18 && importField.weight === 400);
+        assert(importMode.size === 16 && importMode.weight === 500);
         assert.equal((await typeOf(page.locator('.dn-enquiry-import-field'))).height,44);
         await importStart.click();
         assert(await editor.isVisible());
@@ -300,7 +302,7 @@ try {
           ]);
           assert(drawerBox && navBox && actionBox);
           assert(drawerBox.y + drawerBox.height <= navBox.y + 1, `${topic}: drawer must stay above bottom nav`);
-          assert(Math.abs(actionBox.width - 220) < 1 && Math.abs(actionBox.height - 44) < 1, `${topic}: compact CTA geometry`);
+          assert(Math.abs(actionBox.width - 180) < 1 && Math.abs(actionBox.height - 44) < 1, `${topic}: compact CTA geometry`);
           assert.equal(await page.locator('.dn-workflow-support').isVisible(), false, `${topic}: mobile support banner stays out of the primary flow`);
           await drawer.click();
           const dialogBox=await dialog.boundingBox();

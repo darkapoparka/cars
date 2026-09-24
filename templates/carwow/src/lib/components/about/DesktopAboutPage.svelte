@@ -120,6 +120,36 @@
 		</div>
 	</DesktopYellowRouteHero>
 
+	<section class="about-section" aria-labelledby="about-story-title">
+		<div class="about-container about-story">
+			<img
+				class="about-story__image"
+				src={i18n.asset(resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp'))}
+				alt={i18n.t('pattern.52479dcffce2', { v0: daynightSite.shortName })}
+				width="1200"
+				height="800"
+				loading="lazy"
+			/>
+			<div>
+				<h2 id="about-story-title">
+					{i18n.t('copy.8e364ad977c2')}<br />{i18n.t('copy.26f103de55d7')}
+				</h2>
+				<p>
+					{daynightSite.shortName}
+					{i18n.t('copy.6e5947b6b2ee')}
+					{i18n.dealer('city')}{i18n.t('copy.c2bf91e6c61c')}
+				</p>
+				<p>
+					{i18n.t('copy.054350d6d3b9')}
+				</p>
+				<DesktopBrowseLink
+					href={i18n.href(resolve('/contact'))}
+					label={i18n.t('copy.0a896165cc28')}
+				/>
+			</div>
+		</div>
+	</section>
+
 	<section class="about-section about-team" aria-labelledby="about-team-title">
 		<div class="about-container">
 			<div class="about-section-heading">
@@ -160,36 +190,6 @@
 				<a class="about-reviews-link about-text-link" href={i18n.href(resolve('/reviews'))}
 					>{i18n.t('copy.93b3d88de23a')} <ArrowRight size={18} /></a
 				>
-			</div>
-		</div>
-	</section>
-
-	<section class="about-section" aria-labelledby="about-story-title">
-		<div class="about-container about-story">
-			<img
-				class="about-story__image"
-				src={i18n.asset(resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp'))}
-				alt={i18n.t('pattern.52479dcffce2', { v0: daynightSite.shortName })}
-				width="1200"
-				height="800"
-				loading="lazy"
-			/>
-			<div>
-				<h2 id="about-story-title">
-					{i18n.t('copy.8e364ad977c2')}<br />{i18n.t('copy.26f103de55d7')}
-				</h2>
-				<p>
-					{daynightSite.shortName}
-					{i18n.t('copy.6e5947b6b2ee')}
-					{i18n.dealer('city')}{i18n.t('copy.c2bf91e6c61c')}
-				</p>
-				<p>
-					{i18n.t('copy.054350d6d3b9')}
-				</p>
-				<DesktopBrowseLink
-					href={i18n.href(resolve('/contact'))}
-					label={i18n.t('copy.0a896165cc28')}
-				/>
 			</div>
 		</div>
 	</section>
@@ -379,7 +379,7 @@
 		margin-inline: auto;
 	}
 	.about-section {
-		padding: 40px 0;
+		padding: 56px 0;
 	}
 	.about-page h2 {
 		font: var(--sa-weight-strong) var(--sa-text-desktop-section-title)/1.1 var(--sa-font);
@@ -401,9 +401,9 @@
 	}
 	.about-story {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 40px;
-		background: #25292b;
+		grid-template-columns: 1.1fr 1fr;
+		gap: 56px;
+		background: #f5f5f2;
 		border-radius: 16px;
 		overflow: hidden;
 		align-items: center;
@@ -411,7 +411,7 @@
 	.about-story__image {
 		width: 100%;
 		height: 100%;
-		min-height: 380px;
+		min-height: 440px;
 		object-fit: cover;
 		object-position: center bottom;
 		border-radius: 0;
@@ -430,10 +430,11 @@
 		padding: 36px 36px 36px 0;
 	}
 	.about-story h2 {
-		color: #fff;
+		color: var(--sa-ink);
+		font-size: var(--sa-text-desktop-hero-title);
 	}
 	.about-story p {
-		color: #d9dcde;
+		color: #59616a;
 		font-size: var(--sa-type-body);
 		margin-top: 16px;
 	}
@@ -559,8 +560,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 		border-radius: 12px;
-		background: #e9ecee;
-		padding: 28px;
+		background: #fff;
+		border: 1px solid #dfe2e4;
+		padding: 32px;
 	}
 	.about-support-card h3 {
 		font: var(--sa-weight-strong) var(--sa-text-card-title)/1.3 var(--sa-font);

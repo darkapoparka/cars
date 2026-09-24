@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { ArrowRight } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import type { HomeFiveComparePair, HomeFiveCompareVehicle } from '$lib/auxero/home-five';
 	import type { HomePageCopy } from '$lib/i18n/messages';
 

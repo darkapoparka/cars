@@ -54,6 +54,11 @@ export const DealerBottomNav = ({
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const preferences = useLocalePreferences();
+  const localeSettingsHref = withBasePath(
+    `${getLocalizedPublicPath(locale, "/locale-settings")}?returnTo=${encodeURIComponent(
+      preferences?.returnTo ?? getLocalizedPublicPath(locale, "/cars")
+    )}`
+  );
   const localeRequested = useRef(false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
@@ -285,9 +290,7 @@ export const DealerBottomNav = ({
             <a
               className="mt-4 flex min-h-11 items-center rounded-xl border px-4 font-medium"
               data-locale-trigger
-              href={withBasePath(
-                getLocalizedPublicPath(locale, "/locale-settings")
-              )}
+              href={localeSettingsHref}
               onClick={(event) => {
                 if (
                   preferences &&

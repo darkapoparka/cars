@@ -14,7 +14,10 @@
 	// an exact visual match.
 
 	import { resolve } from '$app/paths';
-	import { Search, X } from '@lucide/svelte';
+	import MobileBlogIndex from './MobileBlogIndex.svelte';
+	import { getViewportContext } from '$lib/hooks/viewport.svelte';
+	const viewport = getViewportContext();
+	import { ArrowUpRight, Search, X } from '@lucide/svelte';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
 	import type { DayNightArticle, DayNightArticleCategory } from '$lib/data/daynight-blog';
@@ -200,6 +203,9 @@
 			{@render articleMeta(article)}
 			<h2 class="h3 mb-8">{i18n.text(article.title)}</h2>
 			<p class="text-secondary">{i18n.text(article.description)}</p>
+			<span class="blog-read-link"
+				>{i18n.t('copy.3240a0799690')} <ArrowUpRight size={18} aria-hidden="true" /></span
+			>
 		</div>
 	</a>
 {/snippet}
@@ -237,7 +243,7 @@
 				<button type="submit" aria-label={i18n.t('copy.6517beda9674')}><Search size={20} /></button>
 			</div>
 			{#each searchHiddenFilters() as [name, value] (name)}
-				<input {@attach i18n.validation} type="hidden" {name} {value} />
+				<input type="hidden" {name} {value} />
 			{/each}
 		</form>
 		<div class="blog-quick-row">
@@ -295,110 +301,122 @@
 	</a>
 {/snippet}
 
-<div class="blog-page">
-	<DesktopYellowRouteHero
-		headingId="blog-route-title"
-		title={i18n.t('copy.9651258a1b3e')}
-		panel="light"
-		deckWidth="wide"
-		children={blogHeroControls}
+{#if viewport.mobile}
+	<MobileBlogIndex
+		articles={visibleArticles}
+		{filters}
+		{filterHref}
+		categories={[
+			{ value: i18n.t('copy.807eb4d2438b'), label: i18n.t('copy.807eb4d2438b') },
+			...categoryOptions.filter((option) => option.value !== 'Новини')
+		]}
 	/>
-	<section class="pb-100">
-		<div class="container">
-			<div class="blog-page-title">
-				<p class="eyebrow">{i18n.t('copy.c31cdbd07e6c')}</p>
-				<h1>{i18n.t('copy.9651258a1b3e')}</h1>
-				<p class="h7 text-secondary line-height-28">
-					{i18n.t('copy.5d440bd06811')}
-				</p>
-			</div>
-
-			{#if !articles.length}
-				<div class="blog-empty" data-daynight-blog-empty>
-					<h2>{i18n.t('copy.16352908518e')}</h2>
-					<p>{i18n.t('copy.66b85c422167')}</p>
-					<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
-						>{i18n.t('copy.ef106e677853')}</a
-					>
+{:else}
+	<div class="blog-page">
+		<DesktopYellowRouteHero
+			headingId="blog-route-title"
+			title={i18n.t('copy.9651258a1b3e')}
+			panel="light"
+			deckWidth="wide"
+			children={blogHeroControls}
+		/>
+		<section class="pb-100">
+			<div class="container">
+				<div class="blog-page-title">
+					<p class="eyebrow">{i18n.t('copy.c31cdbd07e6c')}</p>
+					<h1>{i18n.t('copy.9651258a1b3e')}</h1>
+					<p class="h7 text-secondary line-height-28">
+						{i18n.t('copy.5d440bd06811')}
+					</p>
 				</div>
-			{:else}
-				<div class="blog-index-layout">
-					<div class="blog-controls" role="search" aria-label={i18n.t('copy.fc474f46be32')}>
-						<form action={resolve('/blog')} class="widget-search mb-34 w-full" method="get">
-							<label class="sr-only" for="blog-search">{i18n.t('copy.c744f13b5bc2')}</label>
-							<input
-								{@attach i18n.validation}
-								class="input-normal"
-								type="search"
-								name="q"
-								id="blog-search"
-								placeholder={i18n.t('copy.d51833ea37eb')}
-								value={filters.q}
-							/>
-							{#each searchHiddenFilters() as [name, value] (name)}
-								<input {@attach i18n.validation} type="hidden" {name} {value} />
-							{/each}
-							<button
-								type="submit"
-								class="widget-search-btn"
-								aria-label={i18n.t('copy.6517beda9674')}
-							>
-								<Search size={22} />
-							</button>
-						</form>
-						<ul class="widget-categories blog-mobile-categories">
-							<li>
-								<a href={i18n.href(resolve('/blog'))} class={!hasActiveFilters ? 'active' : ''}
-									>{i18n.t('copy.117d98cb652c')}</a
+
+				{#if !articles.length}
+					<div class="blog-empty" data-daynight-blog-empty>
+						<h2>{i18n.t('copy.16352908518e')}</h2>
+						<p>{i18n.t('copy.66b85c422167')}</p>
+						<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
+							>{i18n.t('copy.ef106e677853')}</a
+						>
+					</div>
+				{:else}
+					<div class="blog-index-layout">
+						<div class="blog-controls" role="search" aria-label={i18n.t('copy.fc474f46be32')}>
+							<form action={resolve('/blog')} class="widget-search mb-34 w-full" method="get">
+								<label class="sr-only" for="blog-search">{i18n.t('copy.c744f13b5bc2')}</label>
+								<input
+									{@attach i18n.validation}
+									class="input-normal"
+									type="search"
+									name="q"
+									id="blog-search"
+									placeholder={i18n.t('copy.d51833ea37eb')}
+									value={filters.q}
+								/>
+								{#each searchHiddenFilters() as [name, value] (name)}
+									<input type="hidden" {name} {value} />
+								{/each}
+								<button
+									type="submit"
+									class="widget-search-btn"
+									aria-label={i18n.t('copy.6517beda9674')}
 								>
-							</li>
-							{#each categoryOptions as option (option.value)}
+									<Search size={22} />
+								</button>
+							</form>
+							<ul class="widget-categories blog-mobile-categories">
 								<li>
-									<a
-										href={i18n.href(resolve(filterHref({ category: option.value })))}
-										class={isActiveFilter('category', option.value) ? 'active' : ''}
-										>{i18n.spec(option.label)}</a
+									<a href={i18n.href(resolve('/blog'))} class={!hasActiveFilters ? 'active' : ''}
+										>{i18n.t('copy.117d98cb652c')}</a
 									>
 								</li>
-							{/each}
-						</ul>
-					</div>
+								{#each categoryOptions as option (option.value)}
+									<li>
+										<a
+											href={i18n.href(resolve(filterHref({ category: option.value })))}
+											class={isActiveFilter('category', option.value) ? 'active' : ''}
+											>{i18n.text(option.label)}</a
+										>
+									</li>
+								{/each}
+							</ul>
+						</div>
 
-					<div class="innerpage__content">
-						<div data-daynight-blog-index>
-							{#if featuredArticle}
-								<div class="blog-magazine">
-									{@render featuredCard(featuredArticle)}
-									{#if cardArticles.length}
-										<div class="blog-magazine__side">
-											{#each cardArticles.slice(0, 2) as article (article.slug)}
-												{@render articleCard(article)}
-											{/each}
-										</div>
-									{/if}
-								</div>
-							{/if}
+						<div class="innerpage__content">
+							<div data-daynight-blog-index>
+								{#if featuredArticle}
+									<div class="blog-magazine">
+										{@render featuredCard(featuredArticle)}
+										{#if cardArticles.length}
+											<div class="blog-magazine__side">
+												{#each cardArticles.slice(0, 2) as article (article.slug)}
+													{@render articleCard(article)}
+												{/each}
+											</div>
+										{/if}
+									</div>
+								{/if}
 
-							{#if cardArticles.length > 2}
-								<div class="blog-card-grid">
-									{#each cardArticles.slice(2) as article (article.slug)}
-										{@render articleCard(article)}
-									{/each}
-								</div>
-							{/if}
+								{#if cardArticles.length > 2}
+									<div class="blog-card-grid">
+										{#each cardArticles.slice(2) as article (article.slug)}
+											{@render articleCard(article)}
+										{/each}
+									</div>
+								{/if}
 
-							{#if !visibleArticles.length}
-								<p class="h5 text-secondary daynight-blog-empty mb-40">
-									{i18n.t('copy.35c9f823a4d2')}
-								</p>
-							{/if}
+								{#if !visibleArticles.length}
+									<p class="h5 text-secondary daynight-blog-empty mb-40">
+										{i18n.t('copy.35c9f823a4d2')}
+									</p>
+								{/if}
+							</div>
 						</div>
 					</div>
-				</div>
-			{/if}
-		</div>
-	</section>
-</div>
+				{/if}
+			</div>
+		</section>
+	</div>
+{/if}
 
 <style>
 	.blog-hero-search {
@@ -453,19 +471,18 @@
 	.blog-category-switch {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		width: min(100%, 360px);
+		width: 100%;
 		margin-inline: auto;
-		padding: 4px;
-		border-radius: 8px;
-		background: var(--desktop-field, var(--sa-fill));
+		padding: 0;
+		border-bottom: 1px solid var(--desktop-control-border);
 	}
 
 	.blog-category-switch a {
 		display: inline-flex;
-		min-height: 36px;
+		min-height: 48px;
 		align-items: center;
 		justify-content: center;
-		border-radius: 6px;
+		border-bottom: 3px solid transparent;
 		color: var(--sa-muted);
 		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.2 var(--sa-font);
 	}
@@ -476,8 +493,8 @@
 	}
 
 	.blog-category-switch a.active {
-		background: var(--desktop-action);
-		color: #fff;
+		border-bottom-color: var(--desktop-action);
+		color: var(--desktop-action) !important;
 	}
 
 	.blog-quick-row {
@@ -489,6 +506,7 @@
 
 	.blog-quick-topics {
 		display: flex;
+		flex-wrap: wrap;
 		min-width: 0;
 		align-items: center;
 		gap: 8px;
@@ -500,10 +518,8 @@
 		min-height: 36px;
 		align-items: center;
 		gap: 6px;
-		padding: 0 12px;
-		border: 1px solid var(--desktop-control-border);
-		border-radius: 8px;
-		background: #fff;
+		padding: 0 4px;
+		border-bottom: 1px solid var(--desktop-control-border);
 		color: var(--sa-ink);
 		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.2 var(--sa-font);
 	}
@@ -752,8 +768,8 @@
 
 	.blog-magazine {
 		display: grid;
-		grid-template-columns: minmax(0, 1.7fr) minmax(320px, 0.8fr);
-		gap: 24px;
+		grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr);
+		gap: 32px;
 		min-height: 500px;
 		margin-bottom: 24px;
 		align-items: stretch;
@@ -767,12 +783,12 @@
 	.blog-magazine__side {
 		display: grid;
 		grid-template-rows: repeat(2, minmax(0, 1fr));
-		gap: 24px;
+		gap: 32px;
 	}
 
-	.blog-magazine__side .post-style-6 {
+	.blog-page .blog-magazine__side .post-style-6 {
 		display: grid;
-		grid-template-columns: minmax(150px, 0.82fr) minmax(0, 1fr);
+		grid-template-columns: minmax(140px, 0.75fr) minmax(0, 1fr);
 		height: 100%;
 		min-height: 238px;
 		overflow: hidden;
@@ -781,6 +797,9 @@
 	.blog-magazine__side .post-style-6 .post--img {
 		height: 100%;
 		aspect-ratio: auto;
+	}
+	.blog-magazine__side .post-style-6 .image {
+		height: 100%;
 	}
 
 	.blog-magazine__side .post-style-6 .content {
@@ -805,15 +824,15 @@
 		object-fit: cover;
 	}
 
-	.blog-featured-card,
-	.post-style-6 {
+	.blog-page .blog-featured-card,
+	.blog-page .post-style-6 {
 		display: block;
 		overflow: hidden;
-		border: 0;
-		border-radius: 16px;
+		border: 1px solid #e2e4e5;
+		border-radius: 12px;
 		background: #fff;
 		color: #111827;
-		box-shadow: 0 8px 24px rgb(15 23 42 / 7%);
+		box-shadow: none;
 		text-decoration: none;
 		transition:
 			transform 160ms ease,
@@ -834,7 +853,21 @@
 	}
 
 	.blog-featured-card__content {
-		padding: 24px;
+		padding: 28px;
+	}
+	.blog-read-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		margin-top: 20px;
+		font: var(--sa-weight-semibold) var(--sa-text-caption)/1.4 var(--sa-font);
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.blog-page .blog-featured-card,
+		.blog-page .post-style-6 {
+			transition: none;
+			transform: none;
+		}
 	}
 
 	.blog-featured-card__content > p {

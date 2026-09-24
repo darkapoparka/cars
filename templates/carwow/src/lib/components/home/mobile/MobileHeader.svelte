@@ -1,5 +1,4 @@
 <script lang="ts">
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
@@ -23,7 +22,6 @@
 	</a>
 
 	<nav class="mobile-home-header__actions" aria-label={i18n.t('copy.2cd6b212c3e5')}>
-		<LocaleTrigger />
 		<a
 			class="mobile-home-header__icon"
 			href={i18n.href(resolve(searchHref))}

@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
+
+	import '$lib/styles/mobile-filter-pill.css';
 	import {
 		BadgeCheck,
 		Banknote,
-		CarFront,
+		Search,
+		ArrowRight,
 		ChevronRight,
 		ClipboardCheck,
 		Repeat,
@@ -15,37 +18,41 @@
 	import { submitLead } from '$lib/client/lead-submit';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
-	import MobileHeroBar from '$lib/components/shared/MobileHeroBar.svelte';
+	import { page } from '$app/state';
+	import { SvelteURLSearchParams } from 'svelte/reactivity';
 
 	type ServiceSubmitState = 'idle' | 'submitting' | 'success' | 'error';
 
 	const services = [
 		{
 			id: 'inspection',
-			label: 'Оглед',
-			title: 'Проверка преди покупка',
-			kicker: 'Оглед и история',
-			cta: 'Заяви оглед',
+			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
+			label: i18n.t('copy.fc2859b8e05d'),
+			title: i18n.t('copy.5614ec1dae85'),
+			kicker: i18n.t('copy.af6caa8fdb12'),
+			cta: i18n.t('copy.6f6938ed9245'),
 			href: '/contact',
 			icon: ShieldCheck,
 			points: ['Проверка на историята', 'Оглед на място', 'Следващи стъпки преди капаро']
 		},
 		{
 			id: 'documents',
-			label: 'Документи',
-			title: 'Регистрация и документи',
-			kicker: 'Договор и прехвърляне',
-			cta: 'Попитай за документи',
+			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
+			label: i18n.t('copy.b7ce7bc1a709'),
+			title: i18n.t('copy.d57ca774a015'),
+			kicker: i18n.t('copy.761559355d8b'),
+			cta: i18n.t('copy.d4fa552cc769'),
 			href: '/contact',
 			icon: ClipboardCheck,
 			points: ['Договор и фактура', 'Прехвърляне и номера', 'Финални стъпки при предаване']
 		},
 		{
 			id: 'trade',
-			label: 'Бартер',
-			title: 'Бартер или изкупуване',
-			kicker: 'Оценка на автомобил',
-			cta: 'Заяви оценка',
+			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
+			label: i18n.t('copy.48b06561777d'),
+			title: i18n.t('copy.99a18e4bc162'),
+			kicker: i18n.t('copy.93bf202d3c3c'),
+			cta: i18n.t('copy.d915896778d0'),
 			href: '/sell-your-car',
 			icon: Repeat,
 			points: [
@@ -56,10 +63,11 @@
 		},
 		{
 			id: 'finance',
-			label: 'Финансиране',
-			title: 'Финансиране',
-			kicker: 'Лизинг и бюджет',
-			cta: 'Виж варианти',
+			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
+			label: i18n.t('copy.6e55eeb12cce'),
+			title: i18n.t('copy.6e55eeb12cce'),
+			kicker: i18n.t('copy.69dd492f65ec'),
+			cta: i18n.t('copy.ffd3375d7165'),
 			href: '/financing',
 			icon: Banknote,
 			points: ['Ориентировъчна месечна вноска', 'Съдействие с лизинг', 'Сравнение спрямо бюджет']
@@ -69,6 +77,29 @@
 	type ServiceId = (typeof services)[number]['id'];
 
 	const quickActions = services.map(({ id, label }) => ({ id, label }));
+	const query = $derived(page.url.searchParams.get('q')?.trim() ?? '');
+	const category = $derived(page.url.searchParams.get('category') ?? '');
+	const visibleServices = $derived(
+		services.filter((service) => {
+			const text = [service.title, service.label, service.kicker, ...service.points]
+				.join(' ')
+				.toLocaleLowerCase('bg-BG');
+			return (
+				(!category || category === service.id) &&
+				query
+					.toLocaleLowerCase('bg-BG')
+					.split(/\s+/)
+					.filter(Boolean)
+					.every((term) => text.includes(term))
+			);
+		})
+	);
+	function categoryHref(next: string): '/services' | `/services?${string}` {
+		const params = new SvelteURLSearchParams();
+		if (query) params.set('q', query);
+		if (next) params.set('category', next);
+		return params.size ? `/services?${params.toString()}` : '/services';
+	}
 
 	let activeServiceId = $state<ServiceId | null>(null);
 	let serviceDrawerOpen = $state(false);
@@ -135,74 +166,88 @@
 </script>
 
 <div class="mobile-services-app">
-	<header class="mobile-services-hero">
-		<img
-			class="mobile-services-hero__bg"
-			src={i18n.asset(resolve('/assets/images/services/support-hero-v1.webp'))}
-			alt=""
-			aria-hidden="true"
-		/>
-		<MobileHeroBar showLocation={false} />
-
-		<div class="mobile-services-hero__copy">
-			<span>{i18n.t('copy.d6f31e4be09f')}</span>
-			<h1>{i18n.t('copy.2e8d567a2072')}</h1>
-			<p>{i18n.t('copy.9245f1bfc535')} {i18n.dealer('city')}.</p>
-		</div>
-
-		<div class="mobile-services-hero__actions">
-			<button
-				class="mobile-services-primary"
-				type="button"
-				onclick={() => openServiceDrawer('inspection')}
+	<h1 class="sr-only">{i18n.t('copy.d700ec2758ef')}</h1>
+	<header class="mobile-services-top">
+		<form
+			action={resolve('/services')}
+			method="get"
+			role="search"
+			aria-label={i18n.t('copy.4856f3f99f34')}
+		>
+			<label class="sr-only" for="mobile-services-search">{i18n.t('copy.4856f3f99f34')}</label>
+			<div class="mobile-services-search">
+				<input
+					{@attach i18n.validation}
+					id="mobile-services-search"
+					name="q"
+					type="search"
+					value={query}
+					placeholder={i18n.t('copy.cfe080b319da')}
+					enterkeyhint="search"
+				/>
+				<button type="submit" aria-label={i18n.t('copy.6517beda9674')}
+					><Search size={20} aria-hidden="true" /></button
+				>
+			</div>
+			{#if category}<input type="hidden" name="category" value={category} />{/if}
+		</form>
+		<nav class="mobile-services-chips" aria-label={i18n.t('copy.58a9f990eb56')}>
+			<a
+				href={i18n.href(resolve(categoryHref('')))}
+				class="mobile-filter-pill"
+				class:active={!category}
+				aria-current={!category ? 'true' : undefined}>{i18n.t('copy.117d98cb652c')}</a
 			>
-				<span>{i18n.t('copy.df4fb2d6674a')}</span>
-				<ChevronRight size={18} strokeWidth={2.55} />
-			</button>
-			<a class="mobile-services-secondary" href={i18n.href(resolve('/inventory'))}>
-				<CarFront size={18} strokeWidth={2.45} />
-				<span>{i18n.t('copy.2042bdf14638')}</span>
-			</a>
-		</div>
+			{#each quickActions as action (action.id)}
+				<a
+					href={i18n.href(resolve(categoryHref(action.id)))}
+					class="mobile-filter-pill"
+					class:active={category === action.id}
+					aria-current={category === action.id ? 'true' : undefined}>{i18n.text(action.label)}</a
+				>
+			{/each}
+		</nav>
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mobile-services-chips" aria-label={i18n.t('copy.eec7d104fb1f')}>
-			{#each quickActions as action (action.label)}
-				<button
-					type="button"
-					onclick={() => openServiceDrawer(action.id)}
-					aria-haspopup="dialog"
-					aria-expanded={activeServiceId === action.id}
-				>
-					<span>{i18n.text(action.label)}</span>
-				</button>
-			{/each}
-		</nav>
-
-		<section class="mobile-services-section" aria-labelledby="mobile-services-title">
-			<div class="mobile-services-heading">
-				<h2 id="mobile-services-title">{i18n.t('copy.c35c0f968714')}</h2>
-			</div>
-
+		<div class="mobile-services-status">
+			<span role="status"
+				>{visibleServices.length}
+				{visibleServices.length === 1
+					? i18n.t('copy.3e823bba937c')
+					: i18n.t('copy.3a39ce4ddb25')}</span
+			>
+			{#if query || category}<a href={i18n.href(resolve('/services'))}
+					><X size={14} aria-hidden="true" />{i18n.t('copy.fc38aced5a1d')}</a
+				>{/if}
+		</div>
+		<section aria-label={i18n.t('copy.d6f31e4be09f')}>
 			<div class="mobile-services-list">
-				{#each services as service (service.title)}
-					{@const Icon = service.icon}
+				{#each visibleServices as service (service.id)}
 					<button
 						class="mobile-services-card"
 						type="button"
 						onclick={() => openServiceDrawer(service.id)}
 						aria-haspopup="dialog"
+						aria-label={service.title}
 					>
-						<div>
-							<Icon size={22} strokeWidth={2.45} />
-						</div>
-						<span>
+						<img src={i18n.asset(resolve(service.image))} alt="" decoding="async" />
+						<span class="mobile-services-card__copy">
 							<strong>{i18n.text(service.title)}</strong>
 							<small>{i18n.text(service.kicker)}</small>
+							<span class="mobile-services-card__action"
+								>{i18n.text(service.cta)}<ArrowRight size={17} aria-hidden="true" /></span
+							>
 						</span>
-						<ChevronRight size={18} strokeWidth={2.55} />
 					</button>
+				{:else}
+					<div class="mobile-services-empty">
+						<h2>{i18n.t('copy.cfc52b87b24d')}</h2>
+						<p>{i18n.t('copy.944ad9ecd0b4')}</p>
+						<a href={i18n.href(resolve('/services'))}
+							>{i18n.t('copy.2faf9bdd1af7')}<ArrowRight size={18} aria-hidden="true" /></a
+						>
+					</div>
 				{/each}
 			</div>
 		</section>
@@ -232,7 +277,7 @@
 					{#each activeService.points as point (point)}
 						<li>
 							<BadgeCheck size={18} strokeWidth={2.4} />
-							<span>{i18n.text(point)}</span>
+							<span>{point}</span>
 						</li>
 					{/each}
 				</ul>
@@ -331,241 +376,187 @@
 		stroke: currentColor !important;
 	}
 
-	.mobile-services-hero {
-		position: relative;
+	.mobile-services-top {
+		position: sticky;
+		top: 0;
+		z-index: 5;
 		display: grid;
-		gap: var(--sa-mobile-gap-md);
-		overflow: hidden;
-		background: var(--sa-blue);
-		padding: calc(env(safe-area-inset-top) + 12px) var(--sa-mobile-gutter-wide) 15px;
-		color: #fff;
-		isolation: isolate;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 8px;
+		padding: calc(8px + env(safe-area-inset-top)) var(--sa-mobile-gutter) 8px;
+		background: #fff;
 	}
-
-	.mobile-services-hero::after {
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		background: rgba(176, 0, 0, 0.88);
-		content: '';
-	}
-
-	.mobile-services-hero__bg {
-		position: absolute;
-		inset: 0;
-		z-index: -2;
-		width: 100%;
-		height: 100%;
-		opacity: 0.42;
-		object-fit: cover;
-		object-position: center right;
-	}
-
-	.mobile-services-hero__copy {
-		display: grid;
-		gap: var(--sa-mobile-gap-xs);
-		max-width: 320px;
-	}
-
-	.mobile-services-hero__copy span {
-		font-size: var(--sa-text-xs);
-		font-weight: 800;
-		line-height: 1;
-		text-transform: uppercase;
-	}
-
-	.mobile-services-hero__copy span {
-		color: rgba(255, 255, 255, 0.76);
-	}
-
-	.mobile-services-hero h1 {
-		margin: 0;
-		color: #fff;
-		font-size: var(--sa-text-2xl);
-		font-weight: 800;
-		letter-spacing: 0;
-		line-height: 1.07;
-	}
-
-	.mobile-services-hero p {
-		margin: 0;
-		color: rgba(255, 255, 255, 0.87);
-		font-size: var(--sa-text-sm);
-		font-weight: 700;
-		line-height: 1.3;
-	}
-
-	.mobile-services-hero__actions {
-		display: grid;
-		grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-		gap: var(--sa-mobile-gap-sm);
-	}
-
-	.mobile-services-primary,
-	.mobile-services-secondary {
-		display: inline-flex;
-		min-width: 0;
-		min-height: var(--sa-mobile-action-h);
+	.mobile-services-search {
+		display: flex;
 		align-items: center;
-		justify-content: center;
-		gap: var(--sa-mobile-gap-xs);
-		border-radius: 8px;
-		font-size: var(--sa-text-xs);
-		font-weight: 800;
-		line-height: 1;
-		overflow: hidden;
-		padding: 0 8px;
-		white-space: nowrap;
+		gap: 8px;
+		min-height: 52px;
+		padding: 4px 4px 4px 17px;
+		border: 1px solid var(--sa-line);
+		border-radius: var(--sa-r-pill);
+		background: #eef1f6;
 	}
-
-	.mobile-services-primary {
-		background: var(--sa-red);
-		color: #fff !important;
-	}
-
-	.mobile-services-secondary {
-		border: 1px solid rgba(255, 255, 255, 0.34);
-		background: rgba(255, 255, 255, 0.1);
-		color: #fff !important;
-	}
-
-	.mobile-services-primary *,
-	.mobile-services-secondary * {
-		color: #fff !important;
-	}
-
-	.mobile-services-primary span,
-	.mobile-services-secondary span,
-	.mobile-services-primary :global(svg),
-	.mobile-services-primary :global(svg *),
-	.mobile-services-secondary :global(svg),
-	.mobile-services-secondary :global(svg *) {
-		color: #fff !important;
-		stroke: #fff !important;
-	}
-
-	.mobile-services-primary span,
-	.mobile-services-secondary span {
+	.mobile-services-search input {
 		min-width: 0;
-		overflow: hidden;
-		line-height: 1.2;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+		flex: 1;
+		border: 0;
+		outline: 0;
+		background: transparent;
+		color: var(--sa-ink);
+		font: var(--sa-weight-medium) var(--sa-text-base)/1.2 var(--sa-font);
+		padding: 0;
 	}
-
-	.mobile-services-app main {
+	.mobile-services-search input::placeholder {
+		color: #56616e;
+		opacity: 1;
+	}
+	.mobile-services-search button {
 		display: grid;
-		gap: var(--sa-mobile-page-gap);
-		padding: 12px var(--sa-mobile-gutter) calc(84px + env(safe-area-inset-bottom));
+		place-items: center;
+		flex: 0 0 44px;
+		width: 44px;
+		height: 44px;
+		border: 0;
+		border-radius: 50%;
+		background: var(--sa-ink);
+		color: #fff;
+		padding: 0;
+		cursor: pointer;
 	}
-
-	.mobile-services-chips {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: var(--sa-mobile-gap-sm);
+	.mobile-services-search button :global(svg) {
+		color: #fff;
+		stroke: #fff;
 	}
-
-	.mobile-services-chips button {
-		display: inline-flex;
-		min-height: var(--sa-mobile-pill-h);
-		align-items: center;
-		justify-content: center;
-		border-radius: 12px;
-		background: var(--sa-fill);
-		padding: 0 12px;
-		color: #1f2937 !important;
-		font-size: var(--sa-text-sm);
-		font-weight: 800;
-		white-space: nowrap;
-	}
-
-	.mobile-services-chips button[aria-expanded='true'] {
-		background: #e7efff;
-		color: var(--sa-blue) !important;
-	}
-
-	.mobile-services-chips button:focus-visible,
-	.mobile-services-card:focus-visible,
-	.mobile-services-primary:focus-visible,
-	.mobile-services-secondary:focus-visible,
-	.mobile-service-sheet__submit:focus-visible,
-	.mobile-service-sheet header button:focus-visible {
-		outline: 2px solid rgba(176, 0, 0, 0.48);
+	.mobile-services-search:focus-within {
+		outline: 2px solid var(--sa-red);
 		outline-offset: 2px;
 	}
-
-	.mobile-services-chips button span {
-		color: inherit !important;
-		line-height: 1.2;
+	.mobile-services-chips {
+		display: flex;
+		gap: 6px;
+		overflow-x: auto;
+		scrollbar-width: none;
+		margin: 0 calc(-1 * var(--sa-mobile-gutter));
+		padding: 2px var(--sa-mobile-gutter);
 	}
-
-	.mobile-services-section,
+	.mobile-services-chips::-webkit-scrollbar {
+		display: none;
+	}
+	.mobile-services-chips a.active {
+		background: #fce8ed;
+		color: var(--sa-red);
+	}
+	.mobile-services-app main {
+		padding: 0 var(--sa-mobile-gutter) calc(88px + env(safe-area-inset-bottom));
+	}
+	.mobile-services-status {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 34px;
+		color: #56616e;
+		font-size: var(--sa-text-caption);
+	}
+	.mobile-services-status a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 34px;
+		gap: 4px;
+		color: var(--sa-red);
+		font-weight: var(--sa-button-font-weight);
+		text-decoration: none;
+	}
 	.mobile-services-list {
 		display: grid;
-		gap: var(--sa-mobile-section-gap);
+		gap: 10px;
 	}
-
-	.mobile-services-heading {
-		display: grid;
-		gap: 0;
-	}
-
-	.mobile-services-heading h2,
-	.mobile-service-sheet h2 {
-		margin: 0;
-		color: #111827;
-		font-size: var(--sa-text-xl);
-		font-weight: 800;
-		letter-spacing: 0;
-		line-height: 1.1;
-	}
-
 	.mobile-services-card {
 		display: grid;
-		grid-template-columns: 42px minmax(0, 1fr) 20px;
-		min-height: 78px;
-		align-items: center;
-		gap: var(--sa-mobile-gap-sm);
-		border-radius: 12px;
-		background: var(--sa-fill);
-		padding: 10px 12px;
-		text-align: left;
+		grid-template-columns: 96px minmax(0, 1fr);
 		width: 100%;
+		min-height: 108px;
+		overflow: hidden;
+		padding: 0;
+		border: 0;
+		border-radius: 14px;
+		background: #eef1f6;
+		color: var(--sa-ink);
+		font-family: var(--sa-font);
+		text-align: left;
+		cursor: pointer;
 	}
-
-	.mobile-services-card > div {
-		display: grid;
-		width: var(--sa-mobile-pill-h);
-		height: var(--sa-mobile-pill-h);
-		place-items: center;
-		border-radius: 50%;
-		background: #fff;
-		color: var(--sa-blue);
+	.mobile-services-card > img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
-
-	.mobile-services-card span {
-		display: grid;
+	.mobile-services-card__copy {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		gap: 4px;
 		min-width: 0;
+		padding: 10px 12px;
 	}
-
 	.mobile-services-card strong {
-		color: #111827;
 		font-size: var(--sa-text-base);
-		font-weight: 800;
-		line-height: 1.1;
+		line-height: 1.25;
+		font-weight: var(--sa-weight-heading);
 	}
-
 	.mobile-services-card small {
+		font-size: var(--sa-text-caption);
+		line-height: 1.35;
 		color: #56616e;
-		font-size: var(--sa-text-xs);
-		font-weight: 600;
-		line-height: 1.34;
 	}
-
-	.mobile-services-card > :global(svg) {
-		color: #6b7280;
-		justify-self: end;
+	.mobile-services-card__action {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 6px;
+		margin-top: 4px;
+		padding-top: 0;
+		color: var(--sa-red);
+		font-size: var(--sa-button-font-size);
+		line-height: 1.3;
+		font-weight: var(--sa-button-font-weight);
+	}
+	.mobile-services-card__action :global(svg) {
+		flex-shrink: 0;
+	}
+	.mobile-services-empty {
+		padding: 36px 12px;
+		text-align: center;
+	}
+	.mobile-services-empty h2 {
+		font-size: var(--sa-text-xl);
+		margin: 0 0 8px;
+	}
+	.mobile-services-empty p {
+		font-size: var(--sa-type-body);
+		margin: 0 0 16px;
+		color: #56616e;
+	}
+	.mobile-services-empty a {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		min-height: 44px;
+		padding: 0 16px;
+		border-radius: var(--sa-r-pill);
+		background: var(--sa-red);
+		color: #fff;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-button-font-weight);
+		text-decoration: none;
+	}
+	.mobile-services-app a:focus-visible,
+	.mobile-services-app button:focus-visible {
+		outline: 2px solid var(--sa-red);
+		outline-offset: -2px;
+	}
+	.mobile-service-sheet h2 {
+		margin: 0;
+		color: var(--sa-ink);
 	}
 
 	.mobile-service-sheet {
@@ -765,42 +756,15 @@
 	}
 
 	/* Mobile typography contract */
-	.mobile-services-hero__copy span,
 	.mobile-service-sheet header div:nth-child(2) > span,
 	.mobile-service-sheet__field span {
 		font-size: var(--sa-mobile-type-micro);
 		font-weight: var(--sa-weight-semibold);
 	}
-	.mobile-services-hero h1 {
-		font-size: var(--sa-mobile-type-page-title);
-		font-weight: var(--sa-weight-display);
-		line-height: var(--sa-mobile-leading-heading);
-	}
-	.mobile-services-hero p {
-		font-size: var(--sa-mobile-type-body);
-		font-weight: var(--sa-weight-medium);
-		line-height: var(--sa-mobile-leading-body);
-	}
-	.mobile-services-primary,
-	.mobile-services-secondary,
-	.mobile-services-chips button {
-		font-size: var(--sa-mobile-type-control-sm);
-		font-weight: var(--sa-weight-semibold);
-	}
-	.mobile-services-heading h2,
 	.mobile-service-sheet h2 {
 		font-size: var(--sa-mobile-type-section-title);
-		font-weight: var(--sa-weight-strong);
+		font-weight: var(--sa-weight-heading);
 		line-height: var(--sa-mobile-leading-heading);
-	}
-	.mobile-services-card strong {
-		font-size: var(--sa-mobile-type-card-title);
-		font-weight: var(--sa-weight-strong);
-	}
-	.mobile-services-card small {
-		font-size: var(--sa-mobile-type-meta);
-		font-weight: var(--sa-weight-medium);
-		line-height: var(--sa-mobile-leading-meta);
 	}
 	.mobile-service-sheet li {
 		font-size: var(--sa-mobile-type-control-sm);

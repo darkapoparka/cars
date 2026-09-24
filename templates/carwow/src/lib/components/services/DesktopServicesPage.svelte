@@ -1,7 +1,16 @@
 <script lang="ts">
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
-	import { ArrowRight } from '@lucide/svelte';
+
+	import {
+		ArrowRight,
+		ScanSearch,
+		FileCheck2,
+		Wallet,
+		ArrowLeftRight,
+		Search,
+		Truck
+	} from '@lucide/svelte';
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
@@ -15,43 +24,49 @@
 	const services = [
 		{
 			id: 'inspection',
-			title: 'Проверка преди покупка',
-			summary: 'Организираме преглед на автомобила, история и реално състояние преди решение.',
+			icon: ScanSearch,
+			title: i18n.t('copy.5614ec1dae85'),
+			summary: i18n.t('copy.d3fa00dce963'),
 			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'documents',
-			title: 'Документи и регистрация',
-			summary: 'Съдействаме с талони, регистрация, застраховки и нужните стъпки след сделка.',
+			icon: FileCheck2,
+			title: i18n.t('copy.f1da90a0a436'),
+			summary: i18n.t('copy.a612933622e4'),
 			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'financing',
-			title: 'Финансиране',
-			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
+			icon: Wallet,
+			title: i18n.t('copy.6e55eeb12cce'),
+			summary: i18n.t('copy.4bb935a12b5e'),
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'trade-in',
-			title: 'Бартер и оценка',
-			summary: 'Оценяваме текущия автомобил и го включваме като част от покупката.',
+			icon: ArrowLeftRight,
+			title: i18n.t('copy.d7a5831e8826'),
+			summary: i18n.t('copy.3396cccc2803'),
 			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'sourcing',
-			title: 'Търсене по задание',
-			summary: 'Уточняваме марка, бюджет и оборудване, после търсим подходящ автомобил.',
+			icon: Search,
+			title: i18n.t('copy.48ebd7529fe3'),
+			summary: i18n.t('copy.a16ad0426974'),
 			image: '/assets/images/services/service-card-sourcing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'delivery',
-			title: 'Доставка и предаване',
-			summary: 'Координираме транспорт, предаване и последните практически детайли.',
+			icon: Truck,
+			title: i18n.t('copy.1f9c7e5286a7'),
+			summary: i18n.t('copy.0e290359d369'),
 			image: '/assets/images/services/service-card-delivery-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		}
@@ -164,8 +179,12 @@
 				{#each services as service (service.id)}
 					<a
 						href={i18n.href(resolve(serviceRequestPath(service.id)))}
-						onclick={(event) => chooseService(service.id, event)}>{i18n.text(service.title)}</a
+						onclick={(event) => chooseService(service.id, event)}
 					>
+						<service.icon size={22} strokeWidth={1.7} aria-hidden="true" />
+						<span>{i18n.text(service.title)}</span>
+						<ArrowRight size={16} class="services-shortcut-arrow" aria-hidden="true" />
+					</a>
 				{/each}
 			</nav>
 			<p class="services-help">
@@ -230,7 +249,7 @@
 				method="get"
 				onsubmit={handleServiceSubmit}
 			>
-				<input {@attach i18n.validation} type="hidden" name="intent" value="services" />
+				<input type="hidden" name="intent" value="services" />
 				<label class="desktop-services-honeypot" aria-hidden="true">
 					<span>{i18n.t('copy.64d92044a1ff')}</span>
 					<input
@@ -331,20 +350,32 @@
 	.services-shortcuts {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-auto-rows: 1fr;
 		gap: 10px;
 		margin: 18px 0;
 	}
 	.services-shortcuts a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 44px;
-		padding: 8px;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		align-content: space-between;
+		gap: 12px;
+		min-height: 116px;
+		padding: 16px;
 		border: 1px solid var(--desktop-control-border);
 		border-radius: 8px;
-		background: var(--desktop-field);
+		background: #fff;
 		color: var(--sa-ink);
 		font: var(--sa-weight-medium) var(--sa-text-caption)/1.35 var(--sa-font);
+		text-align: left;
+	}
+	.services-shortcuts a > :global(svg:first-child) {
+		grid-column: 1 / -1;
+	}
+	.services-shortcuts a span {
+		min-height: 2.7em;
+	}
+	.services-shortcuts a > :global(.services-shortcut-arrow) {
+		align-self: end;
 	}
 	.services-shortcuts a:hover {
 		background: var(--desktop-secondary-hover);
@@ -380,7 +411,7 @@
 	}
 	.services-chooser {
 		padding: 24px;
-		text-align: center;
+		text-align: left;
 	}
 	.desktop-services .services-chooser h2 {
 		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);

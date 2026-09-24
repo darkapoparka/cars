@@ -173,8 +173,6 @@
 
 		.site-chrome :global(.site-chrome-topbar a),
 		.site-chrome :global(.site-chrome-topbar__dot),
-		.site-chrome :global(.site-chrome-topbar__language),
-		.site-chrome :global(.site-chrome-topbar__language span),
 		.site-chrome :global(.site-chrome-topbar svg),
 		.site-chrome :global(.site-chrome-topbar svg *) {
 			color: var(--sa-header-ink) !important;

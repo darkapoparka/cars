@@ -7,6 +7,38 @@ export function formatPrice(value: number, options: Intl.NumberFormatOptions = {
 	}).format(value);
 }
 
+const euroPriceFormatter = new Intl.NumberFormat('bg-BG', {
+	useGrouping: 'always',
+	minimumFractionDigits: 0,
+	maximumFractionDigits: 2
+});
+const euroPriceWithCentsFormatter = new Intl.NumberFormat('bg-BG', {
+	useGrouping: 'always',
+	minimumFractionDigits: 2,
+	maximumFractionDigits: 2
+});
+
+/** Public car prices use Bulgarian separators and retain any cents. */
+export function formatEuroPrice(value: number, locale: 'en' | 'bg' = 'bg'): string {
+	if (locale === 'en')
+		return new Intl.NumberFormat('en-GB', {
+			style: 'currency',
+			currency: 'EUR',
+			minimumFractionDigits: Number.isInteger(value) ? 0 : 2,
+			maximumFractionDigits: 2
+		}).format(value);
+	const formatter = Number.isInteger(value) ? euroPriceFormatter : euroPriceWithCentsFormatter;
+	return `${formatter.format(value).replaceAll('\u00a0', ' ')} €`;
+}
+
+/** Keep the displayed amount: the database's numeric sort price may omit cents. */
+export function formatEuroPriceLabel(label: string): string {
+	const match = label.match(/^\s*(\d[\d\s]*)(?:[.,](\d{1,2}))?\s*€?\s*$/);
+	if (!match) return label;
+	const amount = Number(`${match[1].replace(/\s/g, '')}.${match[2] ?? '0'}`);
+	return Number.isFinite(amount) ? formatEuroPrice(amount) : label;
+}
+
 export function formatTemplatePrice(value: number) {
 	return `$${new Intl.NumberFormat('de-DE', {
 		minimumFractionDigits: 2,

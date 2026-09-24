@@ -1,11 +1,8 @@
 name: Wire IS AUTO logo contrast guard
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/wire-isauto-logo-contrast-guard.yml"
+  # Dealer publishing and historical repair runs require explicit dispatch.
+  workflow_dispatch:
 
 permissions:
   contents: write

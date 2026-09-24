@@ -67,7 +67,7 @@
                   referrerpolicy="strict-origin-when-cross-origin"
                   {@attach (element) => { element.focus(); }}
                 ></iframe>
-                <button class="dn-video-card__close dn-icon-button" type="button" onclick={stop} aria-label={i18n.t("m_1d77cbbb4297", { p0: i18n.text(video.title) })}><Icon name="x" size={18} /></button>
+                <button class="dn-video-card__close dn-icon-button" type="button" onclick={stop} aria-label={i18n.t("m_1d77cbbb4297", { p0: i18n.text(video.title) })}><Icon name="x" size={20} /></button>
               {/if}
             </div>
             <h3 class="dn-sr-only">{i18n.text(video.title)}</h3>

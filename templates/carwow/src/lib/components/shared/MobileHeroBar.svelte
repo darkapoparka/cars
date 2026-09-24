@@ -1,5 +1,4 @@
 <script lang="ts">
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
@@ -29,7 +28,6 @@
 		/>
 	</a>
 	<div class="mobile-hero-bar__actions">
-		<LocaleTrigger />
 		{#if showLocation}
 			{#if onLocation}
 				<button

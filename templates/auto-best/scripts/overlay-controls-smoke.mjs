@@ -21,6 +21,8 @@ async function centered(button) {
       appearance: style.appearance, visualWidth: box.width - horizontalPadding,
       hitToken: parseFloat(root.getPropertyValue('--dn-control-hit-height')),
       visualToken: parseFloat(root.getPropertyValue('--dn-compact-control-visual-height')),
+      iconToken: parseFloat(root.getPropertyValue('--dn-control-icon-size')),
+      tokenSizedIcon: el.classList.contains('dn-overlay-close'),
       svgWidth: icon?.width, intendedWidth: Number(svg?.getAttribute('width')),
       dx: icon ? icon.x + icon.width / 2 - box.x - box.width / 2 : null,
       dy: icon ? icon.y + icon.height / 2 - box.y - box.height / 2 : null,
@@ -32,10 +34,27 @@ async function centered(button) {
   assert.equal(geometry.visualWidth, geometry.visualToken, JSON.stringify(geometry));
   assert(geometry.dx !== null && Math.abs(geometry.dx) <= .5 && Math.abs(geometry.dy) <= .5,
     JSON.stringify(geometry));
-  assert.equal(geometry.svgWidth, geometry.intendedWidth, 'Icons must not shrink');
+  assert.equal(geometry.svgWidth, geometry.tokenSizedIcon ? geometry.iconToken : geometry.intendedWidth,
+    'Icons must use their declared component size or the shared overlay token');
   assert.equal(geometry.appearance, 'none');
   assert(geometry.inViewport, 'Close control must remain reachable');
   return geometry;
+}
+async function mobileHeaderGeometry(header) {
+  return header.evaluate(el => {
+    const box = el.getBoundingClientRect(), style = getComputedStyle(el);
+    const title = el.querySelector('h2')?.getBoundingClientRect();
+    const titleStyle = el.querySelector('h2') ? getComputedStyle(el.querySelector('h2')) : null;
+    const close = el.querySelector('.dn-overlay-close')?.getBoundingClientRect();
+    return {
+      shared: el.classList.contains('dn-mobile-overlay-header'),
+      height: box.height, padding: style.padding, gap: style.gap,
+      titleTop: title ? title.top - box.top : null, titleHeight: title?.height,
+      titleFont: titleStyle?.fontSize, titleLine: titleStyle?.lineHeight,
+      closeTop: close ? close.top - box.top : null, closeRight: close ? box.right - close.right : null,
+      closeWidth: close?.width, closeHeight: close?.height
+    };
+  });
 }
 try {
   for (const locale of ['bg', 'en']) for (const width of [320, 390, 430, 768, 1440]) {
@@ -69,12 +88,18 @@ try {
       const trigger = page.locator(width < 768 ? '.dn-listing-filter__toggle' : '.dn-listing-results__filters');
       await trigger.click();
       const close = page.locator('.dn-listing-filter__close');
+      const mainHeader = await mobileHeaderGeometry(page.locator('.dn-listing-filter__dialog-header'));
       const evidence = [await centered(close)];
       await page.screenshot({ path: `${output}/${locale}-${width}-filters.png` });
       if (width < 768) {
         const facet = page.locator('.dn-mobile-filter-fields button').first();
         await facet.click();
         const picker = page.locator('#dn-dialog-choice');
+        const nestedHeader = await mobileHeaderGeometry(picker.locator('header'));
+        assert.equal(mainHeader.shared, true, 'Main mobile overlay must use the shared header primitive');
+        assert.equal(nestedHeader.shared, true, 'Nested mobile overlay must use the shared header primitive');
+        assert.deepEqual(nestedHeader, mainHeader, 'Main and nested overlay headers must align exactly');
+        evidence.push({ headerAlignment: { main: mainHeader, nested: nestedHeader } });
         evidence.push(await centered(picker.locator('.close')));
         await picker.locator('input[type=search]').fill('Audi');
         evidence.push(await centered(picker.locator('.clear-search')));

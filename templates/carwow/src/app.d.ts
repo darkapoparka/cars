@@ -44,6 +44,7 @@ declare global {
 			storefrontInventorySummary?: InventoryCountSummary | null;
 		}
 		interface PageState {
+			blogReturn?: string;
 			inventoryReturn?: string;
 			inventoryScrollY?: number;
 		}

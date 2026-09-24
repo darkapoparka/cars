@@ -69,7 +69,7 @@
 				<span><MapPin size={18} strokeWidth={2.25} aria-hidden="true" /></span>
 				<div>
 					<p>{info.officeLabel}</p>
-					<strong>{daynightContact.addressLabel}</strong>
+					<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
 					<small>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}</small>
 				</div>
 			</article>
@@ -101,7 +101,7 @@
 			</div>
 			<div>
 				<p>{nt('ui43')}</p>
-				<strong>{daynightContact.addressLabel}</strong>
+				<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
 				<a {...hrefAttributes(mapHref)} target="_blank" rel="noreferrer">
 					{nt('ui44')}
 					<Navigation size={17} strokeWidth={2.3} aria-hidden="true" />

@@ -1,0 +1,314 @@
+{
+	"checkedAt": "2026-09-19T11:25:05.182Z",
+	"policy": "Only verified HTTP404/410 primary photos without an existing illustrative fallback are marked unavailable. No different vehicle photo is substituted.",
+	"classifiedUnavailable": [
+		"11775140982675572",
+		"11776435520256611",
+		"21767709109743680",
+		"11771333081390334",
+		"21771333780797065",
+		"11778678187411931",
+		"21776170866294842",
+		"11763644207447577",
+		"21766071200434258",
+		"21778687568946937",
+		"21773157731018688",
+		"11767007851370136"
+	],
+	"results": [
+		{
+			"id": "21764342419542174",
+			"title": "BMW X5 40i M Sport Shadow Line",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/174/2/21764342419542174_Iy.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21778067767337633",
+			"title": "Audi SQ5 30T Black Optic",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/633/2/21778067767337633_KW.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21778068579001193",
+			"title": "BMW X4 M Competition",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/193/2/21778068579001193_Ju.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11774283016080050",
+			"title": "Audi A7 55TFSI Technik Black Optic",
+			"url": "https://mobistatic2.focus.bg/mobile/photosorg/050/1/11774283016080050_Vp.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21779200396408437",
+			"title": "Audi Q8 55TFSI Technik Black Optic",
+			"url": "https://mobistatic2.focus.bg/mobile/photosorg/437/2/21779200396408437_G3.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21779117876725419",
+			"title": "Mercedes-Benz GLC 300 4M AMG Package",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/419/2/21779117876725419_MG.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21754658377544573",
+			"title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/573/2/21754658377544573_w7.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11775140982675572",
+			"title": "BMW 850 GC xDrive Shadow Line",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/572/1/11775140982675572_Gb.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11776435520256611",
+			"title": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/611/1/11776435520256611_Xk.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21775141376627460",
+			"title": "BMW X3 30e xDrive",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/460/2/21775141376627460_BG.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11775058343987884",
+			"title": "Mercedes-Benz E 53 AMG Night Package",
+			"url": "https://mobistatic2.focus.bg/mobile/photosorg/884/1/11775058343987884_Tu.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21775058692833860",
+			"title": "Mercedes-Benz GLC 300 4M AMG Package",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/860/2/21775058692833860_vu.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "21767709109743680",
+			"title": "BMW X7 40i M Sport Shadow Line",
+			"url": "https://mobistatic1.focus.bg/mobile/photosorg/680/2/21767709109743680_2l.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21779118142363481",
+			"title": "BMW X5 40i Black Vermilion",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/481/2/21779118142363481_XR.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11752855706606008",
+			"title": "BMW M3 V8 M DCT",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/008/1/11752855706606008_pf.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11771333081390334",
+			"title": "Mercedes-Benz GLE 450 AMG Package",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/334/1/11771333081390334_yQ.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11765974647599990",
+			"title": "Mercedes-Benz GLS 450 4M AMG Night Package",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/990/1/11765974647599990_k7.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11777282776427940",
+			"title": "Mercedes-Benz GLS 450 4M AMG Package",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/940/1/11777282776427940_Rn.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21750419064369634",
+			"title": "BMW X6 M50i xDrive Shadow Line",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/634/2/21750419064369634_hl.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21771333780797065",
+			"title": "BMW X5 40i M Sport Shadow Line",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/065/2/21771333780797065_R7.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11753712237624672",
+			"title": "BMW M3 Cabrio M DCT",
+			"url": "https://mobistatic1.focus.bg/mobile/photosorg/672/1/11753712237624672_NC.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11778678187411931",
+			"title": "BMW 740 Завиващ заден мост",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/931/1/11778678187411931_di.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11766312659396823",
+			"title": "BMW 540 М Performance",
+			"url": "https://mobistatic1.focus.bg/mobile/photosorg/823/1/11766312659396823_JS.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11768743659815066",
+			"title": "Audi A7 55 TFSI Technik Black Optic",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/066/1/11768743659815066_ZZ.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21776170866294842",
+			"title": "Audi Q5 45 TFSI Black Optic",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/842/2/21776170866294842_2j.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11778673403376363",
+			"title": "BMW 540 xDrive M Package",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/363/1/11778673403376363_9H.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11763643904637405",
+			"title": "Audi A7 55TFSI Technik Black Optic",
+			"url": "https://mobistatic2.focus.bg/mobile/photosorg/405/1/11763643904637405_zi.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "21741178468686255",
+			"title": "Mercedes-Benz GLC 63 AMG Night Package",
+			"url": "https://mobistatic2.focus.bg/mobile/photosorg/255/2/21741178468686255_48.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11763644207447577",
+			"title": "Mercedes-Benz E 400 4M AMG Night Package",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/577/1/11763644207447577_rP.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21766071200434258",
+			"title": "Audi Q8 55TFSI Technik Bang 3D",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/258/2/21766071200434258_aP.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "21773157986388911",
+			"title": "Mercedes-Benz GLE 53 4MATIC Night Package",
+			"url": "https://mobistatic4.focus.bg/mobile/photosorg/911/2/21773157986388911_pm.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11749215138987423",
+			"title": "Mercedes-Benz C 63 AMG Carbon Package",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/423/1/11749215138987423_xb.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "21778687568946937",
+			"title": "Mazda CX-9 2.5 AWD Signature",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/937/2/21778687568946937_hp.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11767025411907633",
+			"title": "Mercedes-Benz S 63 AMG V8 4M Cabrio",
+			"url": "https://mobistatic1.focus.bg/mobile/photosorg/633/1/11767025411907633_TT.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "21778680309999893",
+			"title": "BMW X5 xdrive 40i M-Sport",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/893/2/21778680309999893_LC.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11754658166143409",
+			"title": "Mercedes-Benz GLE 450 4M AMG Night Package",
+			"url": "https://mobistatic1.focus.bg/mobile/photosorg/409/1/11754658166143409_Fy.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "21774441560152385",
+			"title": "Audi SQ7 40T 507кс Black Optic",
+			"url": "https://mobistatic3.focus.bg/mobile/photosorg/385/2/21774441560152385_as.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11776954420532353",
+			"title": "BMW XM",
+			"url": "https://mobistatic2.focus.bg/mobile/photosorg/353/1/11776954420532353_gj.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11776954900527170",
+			"title": "Porsche Taycan 4S Performance Plus 94kw",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/170/1/11776954900527170_oO.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "11750263785365646",
+			"title": "Porsche Boxster S Sport Chrono",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/646/1/11750263785365646_Th.webp",
+			"status": 200,
+			"type": "image/webp"
+		},
+		{
+			"id": "21773157731018688",
+			"title": "Audi Q5 45TFSI S Line Black Optic",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/688/2/21773157731018688_7R.webp",
+			"status": 404,
+			"type": "text/html"
+		},
+		{
+			"id": "11767007851370136",
+			"title": "Mercedes-Benz GLE 450 4M AMG Package",
+			"url": "https://cdn2.focus.bg/mobile/photosorg/136/1/11767007851370136_QY.webp",
+			"status": 404,
+			"type": "text/html"
+		}
+	]
+}

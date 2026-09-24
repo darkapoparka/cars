@@ -104,9 +104,8 @@
 		<p class="daynight-home-inventory-card__price">
 			<span class="daynight-card-price__value">{vehicle.priceEur}</span>
 			<span class="daynight-card-price__meta"
-				><span class="daynight-card-price__monthly">{i18n.spec(vehicle.monthly)}</span><a
-					href={i18n.href(resolve('/financing'))}
-					class="daynight-card-price__link">{i18n.t('copy.6e55eeb12cce')}</a
+				><a href={i18n.href(resolve('/financing'))} class="daynight-card-price__link"
+					>{i18n.spec(vehicle.monthly)}</a
 				></span
 			>
 		</p>
@@ -236,7 +235,13 @@
 			line-height: 18px !important;
 		}
 
-		:global(body.daynight-home-page .daynight-home-inventory-card__price) {
+		:global(
+			body.daynight-home-page .daynight-home-shell--original .daynight-home-inventory-card__price
+		) {
+			display: flex !important;
+			flex-direction: column !important;
+			align-items: flex-start !important;
+			gap: 6px !important;
 			border-top: 1px solid #eaecf0 !important;
 			column-gap: 12px !important;
 			margin: 0 !important;
@@ -249,10 +254,14 @@
 			font-weight: var(--sa-weight-strong) !important;
 		}
 
-		:global(body.daynight-home-page .daynight-card-price__monthly),
 		:global(body.daynight-home-page .daynight-card-price__link) {
 			font-size: var(--sa-text-caption) !important;
 			line-height: 17px !important;
+		}
+		:global(body.daynight-home-page .daynight-home-shell--original .daynight-card-price__meta) {
+			position: static !important;
+			text-align: left !important;
+			align-items: flex-start !important;
 		}
 	}
 </style>

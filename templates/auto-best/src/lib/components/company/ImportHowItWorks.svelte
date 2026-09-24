@@ -100,7 +100,7 @@
     <header class="dn-import-info-sheet__header">
       <h2 id="import-info-title" tabindex="-1" bind:this={heading}>{i18n.t("m_0dc54277231e")}</h2>
       <button class="dn-import-info-sheet__close dn-icon-button" type="button" aria-label={i18n.t("m_7d9eb7acb13e")} onclick={closeDrawer}>
-        <Icon name="x" size={18} />
+        <Icon name="x" size={21} />
       </button>
     </header>
 

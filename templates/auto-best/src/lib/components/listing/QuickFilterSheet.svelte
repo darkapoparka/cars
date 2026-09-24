@@ -99,13 +99,13 @@ import { localeContract } from '$lib/locale/core';
 
 <dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)} {id} class={['dn-quick-sheet', { searchable, 'full-screen': fullScreen, standalone: props.mode === 'url' }]} aria-labelledby={`${id}-title`} {@attach attachDialog} onclose={restore} onclick={event => { if (event.target === event.currentTarget) dialog.close(); }}>
   <form method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={(event) => cleanListingFormData(event.formData)} onsubmit={submit}>
-    <header>
+    <header class:dn-mobile-overlay-header={fullScreen}>
       <h2 id={`${id}-title`} tabindex="-1" {@attach attachHeading}>{title}</h2>
-      <button type="button" class="close dn-icon-button" aria-label={i18n.t("m_84305a580997")} onclick={() => dialog.close()}><Icon name="x" size={18} /></button>
+      <button type="button" class="close dn-icon-button dn-overlay-close" aria-label={i18n.t("m_84305a580997")} onclick={() => dialog.close()}><Icon name="x" /></button>
     </header>
     {#if searchable}
       <div class="search-wrap">
-        <div class="search-field">
+        <div class:dn-mobile-overlay-search={fullScreen} class="search-field">
           <Icon name="search" size={18} />
           <input {@attach i18n.validation} type="search" {@attach attachSearch} bind:value={search} aria-label={searchLabel} placeholder={`${searchLabel}…`} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); if (event.key === 'Escape') { event.preventDefault(); dialog.close(); } }} />
           {#if search}<button type="button" class="clear-search dn-icon-button" aria-label={i18n.t("m_c8191190a026")} onclick={() => { search = ''; searchInput.focus(); }}><Icon name="x" size={18} /></button>{/if}
@@ -197,8 +197,6 @@ import { localeContract } from '$lib/locale/core';
     .dn-quick-sheet.full-screen { inset: 0; height: 100dvh; max-height: 100dvh; border-radius: 0; }
     .full-screen form { height: 100%; max-height: 100%; }
     .full-screen .content { flex: 1; }
-    .full-screen header { padding: var(--dn-overlay-header-padding); gap: var(--dn-space-3); }
-    .full-screen h2 { font-size: var(--dn-text-card); }
   }
   @media (prefers-reduced-motion: no-preference) {
     .dn-quick-sheet[open] { animation: sheet-enter 200ms cubic-bezier(.16, 1, .3, 1); }

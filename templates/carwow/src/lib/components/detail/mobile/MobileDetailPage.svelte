@@ -1,5 +1,4 @@
 <script lang="ts">
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
@@ -244,7 +243,6 @@
 				<ChevronLeft size={22} strokeWidth={2.35} />
 			</a>
 			<div class="mobile-detail__topbar-right">
-				<LocaleTrigger />
 				<button
 					class="mobile-detail__nav-button mobile-detail__nav-button--save"
 					class:is-saved={isSaved}

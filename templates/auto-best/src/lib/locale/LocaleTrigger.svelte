@@ -2,12 +2,12 @@
   import { page } from '$app/state';
   import { getI18n } from './context';
   const i18n = getI18n();
-  let { compact = true, fullLabel = false, footer = false, beforeOpen }: { compact?: boolean; fullLabel?: boolean; footer?: boolean; beforeOpen?: () => void | Promise<void> } = $props();
+  let { compact = true, fullLabel = false, footer = false, beforeOpen }: { compact?: boolean; fullLabel?: boolean; footer?: boolean; beforeOpen?: () => void | HTMLElement | Promise<void | HTMLElement> } = $props();
   const fallback = $derived(`/${i18n.locale}/locale-settings?returnTo=${encodeURIComponent(page.url.pathname + page.url.search)}`);
   async function open(event: MouseEvent) {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    event.preventDefault(); const opener = event.currentTarget;
-    await beforeOpen?.();
+    event.preventDefault(); const originalOpener = event.currentTarget;
+    const opener = (await beforeOpen?.()) ?? originalOpener;
     window.dispatchEvent(new CustomEvent('cars:locale-open', { detail: { opener } }));
   }
 </script>

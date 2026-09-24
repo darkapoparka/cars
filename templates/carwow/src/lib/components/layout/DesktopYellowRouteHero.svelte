@@ -310,10 +310,10 @@
 
 	.daynight-yellow-route-hero__deck {
 		background: #171717;
-		border-radius: 14px;
+		border-radius: 16px;
 		box-sizing: border-box;
 		margin: 28px auto 0 !important;
-		max-width: 780px;
+		max-width: 720px;
 		padding: 14px;
 		width: 100%;
 	}
@@ -338,7 +338,7 @@
 
 	.daynight-yellow-route-hero__deck--light {
 		background: var(--desktop-panel);
-		box-shadow: none;
+		box-shadow: 0 12px 32px rgb(58 44 0 / 8%);
 	}
 
 	.daynight-yellow-route-hero--compact .daynight-yellow-route-hero__deck {

@@ -1,12 +1,7 @@
 name: Publish Champion Auto Pro package branch
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      # Shared tooling/pin updates are not authorization to publish this dealer.
-      - clients/champion-auto-pro/**
+  # Dealer publishing and historical repair runs require explicit dispatch.
   workflow_dispatch:
 
 permissions:

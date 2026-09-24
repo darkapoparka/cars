@@ -1,0 +1,5 @@
+
+> cars-template-import@0.0.1 check:assets
+> node scripts/check-assets.mjs
+
+Image signature checks passed: 806 local images.

@@ -38,7 +38,7 @@
 				<a href={linkHref(site.contact.phoneHref)}>{site.contact.phone}</a><a
 					href={linkHref(site.contact.mapHref)}
 					target="_blank"
-					rel="noreferrer">{site.contact.address}</a
+					rel="noreferrer">{dealerCopy[english ? 'en' : 'bg'].address}</a
 				><a href={linkHref(site.contact.messageHref)}>{english ? 'Message us' : 'Пиши ни'}</a>
 			</address>
 		</div>

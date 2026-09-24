@@ -170,7 +170,7 @@
 <div class="dn-enquiry-entry" class:dn-enquiry-entry--import={!selling}>
   {#if selling}
     <button class="dn-enquiry-entry-action dn-compact-control dn-entry-action dn-compact-primary" type="button" onclick={open} aria-haspopup="dialog">
-      {i18n.t("m_e9c22777385c")} <Icon name="arrow-right" size={18} />
+      {i18n.t("m_e9c22777385c")} <Icon name="arrow-right" size={15} />
     </button>
     <a class="dn-enquiry-contact" href={i18n.href(resolve('/contact'))}>{i18n.t("m_d7def4b82f7c")}</a>
   {:else}
@@ -182,7 +182,7 @@
     <div class="dn-enquiry-import-field">
       <EnquiryEntryField id="enquiry-entry" kind={importMode === 'listing' ? 'listing' : 'criteria'} value={importMode === 'listing' ? link : importBrief} {budget} bind:this={entryEditor} onapply={(value, nextBudget) => { if (importMode === 'listing') linkDraft = value; else { importBrief = value; budget = nextBudget; } }} />
     </div>
-    <button type="button" class="dn-enquiry-import-go dn-compact-control dn-entry-action dn-compact-primary" onclick={(event) => open(event, importMode === 'criteria')} aria-haspopup="dialog">{i18n.t("action.requestImport")} <Icon name="arrow-right" size={18} /></button>
+    <button type="button" class="dn-enquiry-import-go dn-compact-control dn-entry-action dn-compact-primary" onclick={(event) => open(event, importMode === 'criteria')} aria-haspopup="dialog">{i18n.t("action.requestImport")} <Icon name="arrow-right" size={15} /></button>
   {/if}
 </div>
 
@@ -190,7 +190,7 @@
   <div class="dn-enquiry-panel">
     <header class="dn-enquiry-header">
       <div><h2 id="enquiry-title" tabindex="-1" bind:this={heading}>{step === 0 ? (selling ? title : i18n.t("m_302415e752d4")) : step === 1 ? (selling ? i18n.t("m_0cd108851eb3") : i18n.t("m_a7f00a2555a1")) : i18n.t("m_a12d84419d88")}</h2></div>
-      <button class="dn-enquiry-close dn-icon-button" type="button" aria-label={i18n.t("m_0a778b356dc9")} onclick={() => dialog.close()}><Icon name="x" size={18} /></button>
+      <button class="dn-enquiry-close dn-icon-button" type="button" aria-label={i18n.t("m_0a778b356dc9")} onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
     </header>
     <ol class="dn-enquiry-steps" aria-label={i18n.t("m_0781a49bafd0")}>
       {#each steps as label, index (label)}<li class:current={step === index} class:complete={step > index} aria-current={step === index ? 'step' : undefined}><span>{index + 1}</span>{label}</li>{/each}
@@ -222,7 +222,7 @@
             <p>{i18n.t("m_82563c44c04c")}</p>
             <label class="dn-enquiry-upload"><Icon name="car" size={24} /><span>{i18n.t("m_ed13ae7913f0")}<small>{i18n.t("m_a17d08dfdf3e")}</small></span><input {@attach i18n.validation} type="file" accept="image/jpeg,image/png,image/webp" multiple onchange={addPhotos} aria-label={i18n.t("m_e44ab8a34c3d")} /></label>
             {#if photoError}<p class="dn-enquiry-error" role="alert">{photoError}</p>{/if}
-            {#if photos.length}<ul class="dn-enquiry-photo-grid">{#each photos as photo (photo.url)}<li><img src={photo.url} alt={photo.file.name} onerror={() => { removePhoto(photo.url); photoError = i18n.t("m_3ef87b0ab024"); }} /><button type="button" aria-label={i18n.t("m_ef5e8d630d53", { p0: photo.file.name })} onclick={() => removePhoto(photo.url)}><Icon name="x" size={18} /></button></li>{/each}</ul>{/if}
+            {#if photos.length}<ul class="dn-enquiry-photo-grid">{#each photos as photo (photo.url)}<li><img src={photo.url} alt={photo.file.name} onerror={() => { removePhoto(photo.url); photoError = i18n.t("m_3ef87b0ab024"); }} /><button type="button" aria-label={i18n.t("m_ef5e8d630d53", { p0: photo.file.name })} onclick={() => removePhoto(photo.url)}><Icon name="x" size={16} /></button></li>{/each}</ul>{/if}
             <p class="dn-enquiry-note">{i18n.t("m_d6f32b7a78e8")}</p>
           </div>
         {/if}

@@ -154,7 +154,7 @@
 
 	<MobileSheet
 		bind:open={locationOpen}
-		title={daynightContact.addressLabel}
+		title={dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}
 		description={site.identity.name + nt('ui205')}
 		contentClass="daynight-sell-location-sheet"
 	>
@@ -167,7 +167,7 @@
 		</div>
 		<div class="daynight-sell-mobile__location-copy">
 			<span>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}</span>
-			<strong>{daynightContact.addressLabel}</strong>
+			<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
 			<p>{nt('ui206')}</p>
 		</div>
 		<div class="daynight-sell-mobile-sheet__actions">

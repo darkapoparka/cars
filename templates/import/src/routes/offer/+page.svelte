@@ -1,25 +1,23 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import {
-		ArrowRight,
-		BadgeCheck,
-		Calculator,
-		Car,
-		Database,
-		FileSearch,
-		GitCompare,
-		Globe2,
-		Heart,
-		LayoutDashboard,
-		ListChecks,
-		MessagesSquare,
-		PanelTop,
-		Search,
-		ShieldCheck,
-		Smartphone,
-		Workflow,
-		Wrench
-	} from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import BadgeCheck from '@lucide/svelte/icons/badge-check';
+	import Calculator from '@lucide/svelte/icons/calculator';
+	import Car from '@lucide/svelte/icons/car';
+	import Database from '@lucide/svelte/icons/database';
+	import FileSearch from '@lucide/svelte/icons/file-search';
+	import GitCompare from '@lucide/svelte/icons/git-compare';
+	import Globe2 from '@lucide/svelte/icons/earth';
+	import Heart from '@lucide/svelte/icons/heart';
+	import LayoutDashboard from '@lucide/svelte/icons/layout-dashboard';
+	import ListChecks from '@lucide/svelte/icons/list-checks';
+	import MessagesSquare from '@lucide/svelte/icons/messages-square';
+	import PanelTop from '@lucide/svelte/icons/panel-top';
+	import Search from '@lucide/svelte/icons/search';
+	import ShieldCheck from '@lucide/svelte/icons/shield-check';
+	import Smartphone from '@lucide/svelte/icons/smartphone';
+	import Workflow from '@lucide/svelte/icons/workflow';
+	import Wrench from '@lucide/svelte/icons/wrench';
 
 	const heroImage = '/assets/daynight/offer/offer-poster-background.webp';
 	const logo = '/brand/daynight-wordmark.svg';

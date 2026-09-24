@@ -96,7 +96,7 @@
 			onclick={submit}
 		>
 			<Search size={20} strokeWidth={2} aria-hidden="true" />
-			{#if !onOpen}<span>{i18n.t('copy.6517beda9674')}</span>{/if}
+			<span>{i18n.t('copy.6517beda9674')}</span>
 		</button>
 	</div>
 </div>

@@ -97,7 +97,7 @@
     <header class="dn-tradein-info-sheet__header">
       <h2 id="tradein-info-title" tabindex="-1" bind:this={heading}>{i18n.t("m_15f4f5be4ade")}</h2>
       <button class="dn-tradein-info-sheet__close dn-icon-button" type="button" aria-label={i18n.t("m_7d9eb7acb13e")} onclick={closeDrawer}>
-        <Icon name="x" size={18} />
+        <Icon name="x" size={21} />
       </button>
     </header>
 

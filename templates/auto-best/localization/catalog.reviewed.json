@@ -2203,7 +2203,7 @@
     "key": "m_53d34bf6c934",
     "source": "Всеки бюджет",
     "en": "Any budget",
-    "bg": "Без ограничение на бюджета",
+    "bg": "Всеки бюджет",
     "disposition": "translate",
     "notes": "Public display copy. Source: auto-best/src/lib/components/home/VehicleQuickSearch.svelte:72, auto-best/src/lib/components/home/VehicleQuickSearch.svelte:256"
   },
@@ -2211,7 +2211,7 @@
     "key": "m_960884c7b030",
     "source": "Всеки mileage",
     "en": "Any mileage",
-    "bg": "Без ограничение на пробега",
+    "bg": "Всеки пробег",
     "disposition": "translate",
     "notes": "Public display copy. Source: auto-best/src/lib/components/home/VehicleQuickSearch.svelte:74, auto-best/src/lib/components/home/VehicleQuickSearch.svelte:268"
   },
@@ -2219,7 +2219,7 @@
     "key": "m_562ec6e12633",
     "source": "Всяка year",
     "en": "Any year",
-    "bg": "Без ограничение на годината",
+    "bg": "Всяка година",
     "disposition": "translate",
     "notes": "Public display copy. Source: auto-best/src/lib/components/home/VehicleQuickSearch.svelte:75, auto-best/src/lib/components/home/VehicleQuickSearch.svelte:274"
   },
@@ -5083,7 +5083,7 @@
     "key": "m_e8be76e05426",
     "source": "Всяко fuel",
     "en": "Any fuel",
-    "bg": "Всички видове гориво",
+    "bg": "Всяко гориво",
     "disposition": "translate",
     "notes": "Added literal missed by initial extraction. auto-best/src/lib/components/home/VehicleQuickSearch.svelte:262 | auto-best/src/lib/data/listing-draft.ts:183."
   },

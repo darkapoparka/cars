@@ -175,7 +175,7 @@
 
   <button class="dn-tradein-start dn-compact-control dn-entry-action dn-compact-primary" type="button" onclick={open} aria-haspopup="dialog">
     {i18n.t("action.requestValuation")}
-    <Icon name="arrow-right" size={18} />
+    <Icon name="arrow-right" size={15} />
   </button>
 </div>
 
@@ -186,7 +186,7 @@
         <p>{i18n.t("m_c0ce3e0c1192")}</p>
         <h2 id="tradein-title" tabindex="-1" bind:this={heading}>{step === 0 ? i18n.t("m_881ec3398409") : step === 1 ? i18n.t("m_3bcc77dee29d") : i18n.t("m_11669a1c9e37")}</h2>
       </div>
-      <button class="dn-tradein-close dn-icon-button" type="button" aria-label={i18n.t("m_f62bc38ddfaf")} onclick={() => dialog.close()}><Icon name="x" size={18} /></button>
+      <button class="dn-tradein-close dn-icon-button" type="button" aria-label={i18n.t("m_f62bc38ddfaf")} onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
     </header>
 
     <div class="dn-tradein-progress" aria-label={i18n.t("m_c248b5704fda", { p0: step + 1, p1: steps[step] })}>
@@ -213,7 +213,7 @@
           <div class="dn-tradein-section-heading"><div><h3 id="tradein-photos-title">{i18n.t("m_bda056c9ed24")}</h3><p>{i18n.t("m_d282bfeea8ae")}</p></div><span>{photos.length}/6</span></div>
           <label class="dn-tradein-upload"><Icon name="car" size={25} /><span>{i18n.t("m_ed13ae7913f0")}<small>{i18n.t("m_a17d08dfdf3e")}</small></span><input {@attach i18n.validation} type="file" accept="image/jpeg,image/png,image/webp" multiple onchange={addPhotos} aria-label={i18n.t("m_e44ab8a34c3d")} /></label>
           {#if photoError}<p class="dn-tradein-error" role="alert">{photoError}</p>{/if}
-          {#if photos.length}<ul class="dn-tradein-photo-grid">{#each photos as photo (photo.url)}<li><img src={photo.url} alt={photo.file.name} /><button type="button" aria-label={i18n.t("m_ef5e8d630d53", { p0: photo.file.name })} onclick={() => removePhoto(photo.url)}><Icon name="x" size={18} /></button></li>{/each}</ul>{/if}
+          {#if photos.length}<ul class="dn-tradein-photo-grid">{#each photos as photo (photo.url)}<li><img src={photo.url} alt={photo.file.name} /><button type="button" aria-label={i18n.t("m_ef5e8d630d53", { p0: photo.file.name })} onclick={() => removePhoto(photo.url)}><Icon name="x" size={16} /></button></li>{/each}</ul>{/if}
         </section>
 
         <label class="dn-tradein-notes">{i18n.t("m_7d6fc1420c70")} <small>{i18n.t("m_d42086812b73")}</small><textarea {@attach i18n.validation} bind:value={notes} maxlength={1500} rows="3" placeholder={i18n.t("m_e5abad3754e2")}></textarea></label>

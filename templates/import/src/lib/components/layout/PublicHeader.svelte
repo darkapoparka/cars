@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import LocaleSettingsMenu from './LocaleSettingsMenu.svelte';
 	import { routeParts } from '$lib/locale/core';
 	import { page } from '$app/state';
 	import Heart from '@lucide/svelte/icons/heart';
@@ -84,7 +84,7 @@
 				title={(english ? 'Call ' : 'Обади се: ') + site.contact.phoneHref.replace('tel:', '')}
 				><PhoneCall size={22} strokeWidth={1.7} aria-hidden="true" /></a
 			>
-			<LocaleTrigger compact />
+			<LocaleSettingsMenu />
 			<a
 				class="site-header__icon site-header__account"
 				href={linkHref('/account')}

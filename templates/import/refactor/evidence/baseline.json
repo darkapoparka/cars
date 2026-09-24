@@ -1,0 +1,82 @@
+{
+	"auditedAt": "2026-09-19",
+	"repository": "darkapoparka/cars-template-import",
+	"branch": "main",
+	"commit": "5ff9805ebe0211343e7a025465d8d71e306180fa",
+	"includesPreExistingWorkingTreeChanges": true,
+	"preExistingDirtyPaths": 18,
+	"trackedFiles": 1487,
+	"sourceFiles": 564,
+	"sourceExtensions": {
+		"svelte": 321,
+		"ts": 234,
+		"css": 6,
+		"html": 1,
+		"svg": 1,
+		"json": 1
+	},
+	"routeFileCount": 169,
+	"routeFileCountIsDistinctUrlCount": false,
+	"sourceCssSvelteLexicalOccurrences": {
+		"important": 2130,
+		"globalSelectors": 1323,
+		"hexColorLiterals": 1545,
+		"pixelValues": 6545,
+		"inlineStyleSyntax": 35
+	},
+	"static": {
+		"files": 828,
+		"bytes": 176890853,
+		"jpg": 225,
+		"webp": 275,
+		"png": 190,
+		"svg": 122,
+		"woff2": 6
+	},
+	"checks": {
+		"svelteCheck": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"unit": {
+			"files": 3,
+			"tests": 14,
+			"passed": 14
+		},
+		"prettierFailingFiles": 5,
+		"eslintSrc": {
+			"files": 555,
+			"errors": 1,
+			"warnings": 0
+		},
+		"e2eDiscovery": {
+			"files": 0,
+			"tests": 0
+		},
+		"cleanInstall": "passed in independent temporary copy",
+		"cleanBuild": "passed in independent temporary copy",
+		"localPreviewNavigations": {
+			"cases": 12,
+			"allStatus200": true,
+			"capturedPageErrors": 0
+		},
+		"mobileInventoryWithoutJavaScript": "catalogue content absent"
+	},
+	"dependencyAudit": {
+		"full": {
+			"total": 20,
+			"high": 5,
+			"moderate": 8,
+			"low": 7,
+			"critical": 0
+		},
+		"omitDev": {
+			"total": 11,
+			"high": 3,
+			"moderate": 2,
+			"low": 6,
+			"critical": 0
+		}
+	},
+	"measurementCaveat": "Lexical source counts, not parsed declarations or independently confirmed defects. Dependency entries are not an exploitability assessment. Static bytes are not page transfer bytes."
+}

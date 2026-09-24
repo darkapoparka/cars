@@ -1,10 +1,8 @@
 name: Generate exact Navara localization package
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/generate-navara-localized-package.yml'
+  # Dealer publishing and historical repair runs require explicit dispatch.
+  workflow_dispatch:
 
 permissions:
   contents: write

@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { resolve } from '$app/paths';
-	import { Check, Plus, Repeat2, Search, X } from '@lucide/svelte';
+	import Check from '@lucide/svelte/icons/check';
+	import Plus from '@lucide/svelte/icons/plus';
+	import Repeat2 from '@lucide/svelte/icons/repeat-2';
+	import Search from '@lucide/svelte/icons/search';
+	import X from '@lucide/svelte/icons/x';
 	import type { AuxeroCompareRow, AuxeroCompareVehicle } from '$lib/auxero/compare';
 	import {
 		compareBrandOptions,

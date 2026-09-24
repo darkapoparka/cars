@@ -4,7 +4,7 @@
   import { getI18n } from '$lib/locale/context';
   const i18n = getI18n();
 
-  import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+  import LocaleSettingsMenu from './LocaleSettingsMenu.svelte';
   import { lockPageScroll } from '$lib/ui/overlay';
   import { afterNavigate } from '$app/navigation';
   import { resolve } from '$app/paths';
@@ -215,7 +215,7 @@
           <li><Icon name="map-pin" size={18} strokeWidth={1.75} /><span>{i18n.dealer('address')}</span></li>
           <li><Icon name="phone" size={18} strokeWidth={1.75} /><a {...phoneLinkAttributes}>{brand.phone}</a></li>
           <li class="dn-topbar__item--appointment"><Icon name="clock" size={18} strokeWidth={1.75} /><span>{i18n.dealer('appointment')}</span></li>
-          <li class="dn-topbar__settings"><LocaleTrigger /></li>
+          <li class="dn-topbar__settings"><LocaleSettingsMenu /></li>
         </ul>
       </div>
     </div>
@@ -443,8 +443,6 @@
     .dn-header-actions { justify-self: end; white-space: nowrap; }
     .dn-topbar__list { gap: var(--dn-space-4); font-size: var(--dn-text-meta); }
     .dn-topbar__settings { flex-shrink: 0; }
-    .dn-topbar__settings :global(.cars-locale-trigger) { border-color: transparent; border-radius: var(--dn-radius-control); font-size: var(--dn-text-meta); }
-    .dn-topbar__settings :global(.cars-locale-trigger:hover) { background: var(--dn-surface); opacity: 1; }
     .dn-header:not(.dn-header--compact) .dn-header__inner { min-height: 84px; }
     .dn-topbar, .dn-topbar__inner { min-height: 44px; }
     .dn-header:not(.dn-header--compact) .dn-logo img { height: 56px; }

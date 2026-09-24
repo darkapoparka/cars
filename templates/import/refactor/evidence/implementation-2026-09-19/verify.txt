@@ -1,0 +1,61 @@
+
+> cars-template-import@0.0.1 verify
+> npm run check && npm run lint && npm run check:architecture && npm run check:assets && npm run test:unit -- --run
+
+
+> cars-template-import@0.0.1 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: c:\Users\radev\AppData\Local\Temp\import-finish-1789813979052\production-check
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+> cars-template-import@0.0.1 lint
+> npm run lint:format && npm run lint:code
+
+
+> cars-template-import@0.0.1 lint:format
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> cars-template-import@0.0.1 lint:code
+> eslint .
+
+
+> cars-template-import@0.0.1 check:architecture
+> node scripts/check-architecture.mjs
+
+Architecture checks passed: 56 native route modules, 167 reachable modules, one Tailwind generation entry.
+
+> cars-template-import@0.0.1 check:assets
+> node scripts/check-assets.mjs
+
+Image signature checks passed: 806 local images.
+
+> cars-template-import@0.0.1 test:unit
+> vitest --run
+
+
+ RUN  v4.1.11 C:/Users/radev/AppData/Local/Temp/import-finish-1789813979052/production-check
+
+ Γ£ô  server  src/lib/browser/session-draft.spec.ts (3 tests) 6ms
+ Γ£ô  server  src/lib/domain/inventory-query.spec.ts (3 tests) 7ms
+ Γ£ô  server  src/lib/data/import-criteria.spec.ts (3 tests) 7ms
+ Γ£ô  server  src/lib/domain/import-cost.spec.ts (4 tests) 5ms
+ Γ£ô  server  src/lib/domain/finance.spec.ts (3 tests) 6ms
+ Γ£ô  server  src/lib/config/site.spec.ts (15 tests) 11ms
+ Γ£ô  server  src/lib/server/request-body.spec.ts (5 tests) 48ms
+ Γ£ô  server  src/lib/server/runtime-config.spec.ts (4 tests) 6ms
+ Γ£ô  server  src/lib/server/cms-persistence.spec.ts (2 tests) 33ms
+ Γ£ô  server  src/lib/data/vehicle-keyword.spec.ts (2 tests) 4ms
+ Γ£ô  server  src/lib/data/vehicle-media.spec.ts (2 tests) 3ms
+ Γ£ô  server  src/lib/server/inquiry-flow.spec.ts (11 tests) 50ms
+
+ Test Files  12 passed (12)
+      Tests  57 passed (57)
+   Start at  14:27:17
+   Duration  888ms (transform 1.56s, setup 0ms, import 2.28s, tests 185ms, environment 4ms)
+

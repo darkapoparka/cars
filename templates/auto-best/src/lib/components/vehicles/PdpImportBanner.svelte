@@ -25,7 +25,7 @@
   <div class="dn-pdp-import-sheet">
     <header>
       <h2 id="pdp-import-title">{i18n.t("m_84a753e287b1")}</h2>
-      <button class="dn-icon-button" type="button" onclick={close} aria-label={i18n.t("m_7d9eb7acb13e")}><Icon name="x" size={18} /></button>
+      <button class="dn-icon-button" type="button" onclick={close} aria-label={i18n.t("m_7d9eb7acb13e")}><Icon name="x" size={21} /></button>
     </header>    <ol>
       <li><span>01</span><strong>{i18n.t("m_1ca1a6c6bb44")}</strong></li>
       <li><span>02</span><strong>{i18n.t("m_8d2e23bb3cc1")}</strong></li>

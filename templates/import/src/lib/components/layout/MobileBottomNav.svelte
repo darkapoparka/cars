@@ -36,6 +36,9 @@
 	let menuOpen = $state(false);
 	let navigationReady = $state(false);
 	let pendingNavigationHref = $state<string | null>(null);
+	let menuButton: HTMLButtonElement | null = null;
+	let pendingLocaleOpen: Promise<HTMLElement | undefined> | null = null;
+	let resolvePendingLocaleOpen: ((opener: HTMLElement | undefined) => void) | null = null;
 
 	onMount(() => {
 		navigationReady = true;
@@ -44,7 +47,22 @@
 	const finishPendingNavigation = () => {
 		const href = pendingNavigationHref;
 		pendingNavigationHref = null;
+		if (resolvePendingLocaleOpen) {
+			resolvePendingLocaleOpen(menuButton ?? undefined);
+			resolvePendingLocaleOpen = null;
+			pendingLocaleOpen = null;
+		}
 		if (href) window.setTimeout(() => void goto(resolve(href as '/')), 0);
+	};
+
+	const beforeLocaleOpen = (): Promise<HTMLElement | undefined> => {
+		if (!menuOpen) return Promise.resolve(menuButton ?? undefined);
+		if (pendingLocaleOpen) return pendingLocaleOpen;
+		pendingLocaleOpen = new Promise((resolve) => {
+			resolvePendingLocaleOpen = resolve;
+		});
+		menuOpen = false;
+		return pendingLocaleOpen;
 	};
 
 	const handleNavigationClick = async (event: MouseEvent, href: string) => {
@@ -99,6 +117,7 @@
 			</a>
 		{/each}
 		<button
+			bind:this={menuButton}
 			type="button"
 			class="mobile-bottom-nav__menu-trigger"
 			class:active={menuOpen}
@@ -121,7 +140,7 @@
 	contentClass="mobile-menu-sheet__panel"
 	onclose={finishPendingNavigation}
 >
-	<MobileNavigationMenu {pathname} onnavigate={handleNavigationClick} />
+	<MobileNavigationMenu {pathname} onnavigate={handleNavigationClick} {beforeLocaleOpen} />
 </MobileSheet>
 
 <style>

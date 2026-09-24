@@ -20,7 +20,10 @@
 </div>
 
 <style>
-	:global(body.daynight-home-page) .daynight-home-inventory__pills {
-		gap: 8px !important;
+	:global(body.daynight-home-page .daynight-home-shell--original) .daynight-home-inventory__pills {
+		gap: 20px !important;
+		justify-content: flex-start !important;
+		border-bottom: 1px solid var(--discovery-control-border);
+		padding-bottom: 0 !important;
 	}
 </style>

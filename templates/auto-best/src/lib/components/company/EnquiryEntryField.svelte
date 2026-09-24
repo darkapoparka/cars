@@ -91,7 +91,7 @@
 <dialog onkeydown={trapDialogTab} {@attach dialogViewport} id={`${id}-dialog`} class="dn-entry-editor" bind:this={dialog} aria-labelledby={`${id}-title`} onclose={restore} onclick={(event) => { if (event.target === event.currentTarget) dialog.close(); }}>
   <header>
     <h2 id={`${id}-title`}>{i18n.text(copy.title)}</h2>
-    <button type="button" class="dn-entry-editor-close dn-icon-button" aria-label={i18n.t("m_aea2bd97046c")} onclick={() => dialog.close()}><Icon name="x" size={18} /></button>
+    <button type="button" class="dn-entry-editor-close dn-icon-button" aria-label={i18n.t("m_aea2bd97046c")} onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
   </header>
   <form bind:this={form} onsubmit={save} novalidate>
     <div class="dn-entry-editor-fields">

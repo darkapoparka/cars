@@ -4,7 +4,7 @@
 	import { localeHref } from './core';
 	import { getI18n } from './context';
 	const i18n = getI18n();
-	let { compact = false }: { compact?: boolean } = $props();
+	let { compact = false, beforeOpen }: { compact?: boolean; beforeOpen?: () => void | HTMLElement | Promise<void | HTMLElement> } = $props();
 </script>
 
 <a
@@ -13,7 +13,7 @@
 	href={localeHref('/locale-settings', i18n.locale, base) +
 		'?returnTo=' +
 		encodeURIComponent(page.url.pathname + page.url.search)}
-	onclick={(event) => {
+	onclick={async (event) => {
 		if (
 			event.button === 0 &&
 			!event.ctrlKey &&
@@ -22,9 +22,9 @@
 			!event.altKey
 		) {
 			event.preventDefault();
-			window.dispatchEvent(
-				new CustomEvent('cars:locale-open', { detail: { opener: event.currentTarget } })
-			);
+			const originalOpener = event.currentTarget;
+			const opener = (await beforeOpen?.()) ?? originalOpener;
+			window.dispatchEvent(new CustomEvent('cars:locale-open', { detail: { opener } }));
 		}
 	}}
 	>{compact

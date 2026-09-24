@@ -653,23 +653,50 @@ export const contentSourceKeys: Readonly<Record<string, ContentKey>> = {
 	'Заявката е запазена. Това е демонстрация; не е изпратено съобщение до автомобилен търговец.':
 		'content157'
 };
+const generatedDealerEnglish = (value: string): string | undefined => {
+	let match = value.match(/^Как да потвърдите актуална наличност в (.+)$/u);
+	if (match) return `How to confirm current availability at ${match[1]}`;
+	match = value.match(
+		/^Свържете се с автокъщата на (.+) и посочете точния автомобил преди посещение\.$/u
+	);
+	if (match)
+		return `Contact the dealership on ${match[1]} and identify the exact vehicle before visiting.`;
+	return (
+		{
+			'Информация за автокъщата': 'Dealer information',
+			'Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.':
+				'Dated listing snapshot; confirm the price and availability directly with the dealership.',
+			'Независим демонстрационен преглед. Формите не изпращат съобщения и не създават резервация.':
+				'Independent demonstration preview. Forms do not send messages or create a reservation.',
+			'Външни отзиви': 'External reviews',
+			'В този преглед не са включени потвърдени клиентски отзиви':
+				'No verified customer reviews are included in this preview',
+			'Клиентски отзиви': 'Customer reviews',
+			'В този независим преглед не са включени потвърдени клиентски отзиви.':
+				'No verified customer reviews are included in this independent preview.'
+		} as Record<string, string>
+	)[value];
+};
+
 /** Call only at immutable template editorial boundaries, never on vehicle facts or user input. */
 export function contentText(locale: Locale, value: string): string {
 	const key = contentSourceKeys[value];
+	const generated = locale === 'en' ? generatedDealerEnglish(value) : undefined;
 	if (
 		locale === 'en' &&
 		!key &&
+		!generated &&
 		!Object.hasOwn(extraEnglish, value) &&
 		/[\u0400-\u04ff]/.test(value)
 	)
 		throw new Error('Missing English editorial catalog entry: ' + value);
 	const text = key
 		? (locale === 'en' ? contentEn : contentBg)[key]
-		: locale === 'en'
-			? ((extraEnglish as Record<string, string>)[value] ?? value)
-			: value;
+		: (generated ??
+			(locale === 'en' ? ((extraEnglish as Record<string, string>)[value] ?? value) : value));
 	return text.replaceAll('Day Night Auto', site.identity.displayName);
 }
+
 /** Localize selected, explicit presentation fields only; identity, URLs, values and facts are preserved. */
 export function localizedCopy<T>(value: T, locale: Locale): T {
 	const fields = new Set([

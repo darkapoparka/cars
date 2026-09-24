@@ -18,10 +18,12 @@
 
 	let {
 		pathname = '/',
-		onnavigate
+		onnavigate,
+		beforeLocaleOpen
 	}: {
 		pathname?: string;
 		onnavigate: (event: MouseEvent, href: string) => void;
+		beforeLocaleOpen: () => HTMLElement | undefined | Promise<HTMLElement | undefined>;
 	} = $props();
 
 	const english = $derived(page.data.locale === 'en');
@@ -107,7 +109,7 @@
 	/>
 </div>
 
-<LocaleTrigger />
+<LocaleTrigger beforeOpen={beforeLocaleOpen} />
 <div class="mobile-navigation-menu__sections">
 	{#each menuSections as section, sectionIndex (section.title)}
 		<section aria-labelledby={`mobile-menu-section-${sectionIndex}`}>

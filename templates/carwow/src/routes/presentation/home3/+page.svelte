@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getI18n } from '$lib/locale/context';
-	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import LocaleSettingsMenu from '$lib/components/layout/LocaleSettingsMenu.svelte';
 	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
 	const i18n = getI18n();
 	import { goto } from '$app/navigation';
@@ -85,7 +85,7 @@
 		</nav>
 
 		<div class="home3-actions" aria-label={i18n.t('copy.9eb9d46a6790')}>
-			<LocaleTrigger />
+			<LocaleSettingsMenu />
 			<a href={i18n.href('/favorites')} aria-label={i18n.t('copy.2ff1cef08851')}>
 				<Heart size={23} strokeWidth={2.1} />
 				<span>{i18n.t('copy.655f65ef3f03')}</span>
