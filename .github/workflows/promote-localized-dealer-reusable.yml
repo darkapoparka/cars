@@ -24,7 +24,7 @@ jobs:
     env:
       DEALER_SLUG: ${{ inputs.dealer_slug }}
       DEALER_REPOSITORY: ${{ inputs.dealer_repository }}
-      CARS_COMMIT: 4b43d7f15cf89868312b2ab9562a4abc5e043ab7
+      CARS_COMMIT: 9bd9068c15f4377964b2dd9f3e11d3e85238cb44
     steps:
       - name: Check out registered dealer repository
         uses: actions/checkout@v4
@@ -120,13 +120,17 @@ jobs:
             "$RUNNER_TEMP/localized/" "$GITHUB_WORKSPACE/"
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config core.autocrlf false
           git add -A
-          git diff --cached --check
           if git diff --cached --quiet; then
             echo 'Dealer already matches the reviewed localized package.'
             exit 0
           fi
-          git commit -m 'Promote current native EN/BG localization' -m "Cars source: $CARS_COMMIT"
+          if test -n "$(git diff --cached --name-only -- .github)"; then
+            echo 'Promotion attempted to change protected workflow files.' >&2
+            exit 1
+          fi
+          git commit -m 'Publish approved Cars native dealer release' -m "Canonical Cars source: $CARS_COMMIT"
           git fetch origin main
           test "$(git rev-parse origin/main)" = "$SOURCE_SHA" || { echo 'Dealer main changed before publication' >&2; exit 1; }
           git push origin HEAD:main
@@ -142,4 +146,4 @@ jobs:
             ${{ runner.temp }}/localized/localization/contract.json
             ${{ runner.temp }}/localized/localization/adoption.json
           if-no-files-found: warn
-          retention-days: 14
+          retention-days: 30
