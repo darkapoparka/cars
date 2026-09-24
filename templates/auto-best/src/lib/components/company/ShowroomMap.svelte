@@ -4,10 +4,10 @@
   const i18n = getI18n();
 
   import { brand } from '$config/brand';
-  import { showroomCoordinates } from '$data/company';
 
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${showroomCoordinates.latitude},${showroomCoordinates.longitude}&z=17&hl=bg&output=embed`;
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+  const mapAddress = $derived(i18n.dealer('address'));
+  const mapEmbedUrl = $derived(`https://maps.google.com/maps?q=${encodeURIComponent(mapAddress)}&z=16&hl=${i18n.locale}&output=embed`);
+  const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`);
 </script>
 
 <div class="dn-showroom-map">

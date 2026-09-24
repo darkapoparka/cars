@@ -109,7 +109,7 @@
 					>
 				</table>
 			</div>
-		{:else}<div class="site-panel site-stack">
+		{:else}<div class="site-panel site-stack site-empty-state">
 				<h2>{english ? 'Choose cars to compare' : 'Избери автомобили за сравнение'}</h2>
 				<p>
 					{english

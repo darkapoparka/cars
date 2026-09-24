@@ -20,14 +20,14 @@ test('reference-style icon tabs connect to compact fields without changing the m
 			nodes.map((n) => ({
 				height: n.getBoundingClientRect().height,
 				size: getComputedStyle(n.querySelector('.hfp__value')!).fontSize,
-				weight: getComputedStyle(n).fontWeight
+				weight: getComputedStyle(n.querySelector('.hfp__value')!).fontWeight
 			}))
 		);
 		expect(metrics).toHaveLength(4);
 		for (const m of metrics) {
 			expect(m.height).toBe(48);
-			expect(m.size).toBe('18px');
-			expect(m.weight).toBe('400');
+			expect(m.size).toBe('20px');
+			expect(m.weight).toBe('600');
 		}
 		expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
 			true

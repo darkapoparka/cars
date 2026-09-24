@@ -1,0 +1,76 @@
+{
+    "schemaVersion":  1,
+    "template":  "import",
+    "repository":  "darkapoparka/cars-template-import",
+    "commit":  "c961de569012d04316f9da95f228d10622be87fe",
+    "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+    "deployment":  {
+                       "id":  "dpl_DMgCzaDRtNYwDzvLuHkEsKGQ9QLn",
+                       "projectId":  "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+                       "state":  "READY",
+                       "publicAlias":  "https://cars-template-import.vercel.app/"
+                   },
+    "assertions":  [
+                       {
+                           "name":  "exact immutable validation",
+                           "status":  "passed"
+                       },
+                       {
+                           "name":  "production-equivalent mounted build",
+                           "status":  "passed"
+                       },
+                       {
+                           "name":  "public browser matrix",
+                           "status":  "passed",
+                           "passed":  24,
+                           "total":  24
+                       }
+                   ],
+    "files":  [
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\import-c961de5-validation.log",
+                      "sha256":  "ddcd628f042e82b6c1123f0b7bff238659a588a409413ae50bc5ed4be63ea499",
+                      "kind":  "exact immutable validation"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\import-mounted-build.log",
+                      "sha256":  "90a94402c4be8d2036edd0633a12a5be2dffa94324009c0cfad47dd6cc299a8b",
+                      "kind":  "production-equivalent mounted build"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\template-public-qa\\focused-summary.json",
+                      "sha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf",
+                      "kind":  "24-combination public browser matrix"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\import-mounted-http\\bg.headers",
+                      "sha256":  "c4ecd11fc6a3d1d02a840baf4265bfe45d6ef86cb54002dffd396474e5db2eb6",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\import-mounted-http\\bg.html",
+                      "sha256":  "bad17abaa4f78c67b68bb0b7069db2d04dfe0ddfc9c11630209a051432bac96e",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\import-mounted-http\\bg-retry.headers",
+                      "sha256":  "c1edb35e4456d60082ffb410e27c89cd1b34df10f5e87b94ee74576db1483b3d",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\import-mounted-http\\bg-retry.html",
+                      "sha256":  "bad17abaa4f78c67b68bb0b7069db2d04dfe0ddfc9c11630209a051432bac96e",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\import-mounted-http\\en.headers",
+                      "sha256":  "dbf2783cd6007b27169762202f1a5924698ad2f944b2ad9757be67ac898dd324",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\import-mounted-http\\en.html",
+                      "sha256":  "be59d3fcd353f5fc4212ec5cc2cc49fa9d8af368098f830155a783aabea46724",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  }
+              ]
+}

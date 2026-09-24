@@ -3,29 +3,25 @@
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import X from '@lucide/svelte/icons/x';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
-	import type { AuxeroInventoryDesktopData } from '$lib/server/inventory-options';
 	import InventoryFilter from './InventoryFilter.svelte';
-	import InventoryCompactField from './InventoryCompactField.svelte';
-	import Search from '@lucide/svelte/icons/search';
-	import {
-		inventoryFilterParam,
-		parseInventoryQuery,
-		serializeInventoryQuery
-	} from '$lib/domain/inventory-query';
+	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
 	import Action from '$lib/components/common/Action.svelte';
-	import Modal from '$lib/components/common/Modal.svelte';
 	import { linkHref } from '$lib/utils/links';
+	import type {
+		AuxeroInventoryDesktopData,
+		AuxeroInventoryFilter
+	} from '$lib/server/inventory-options';
 	let { desktop, english = false }: { desktop: AuxeroInventoryDesktopData; english?: boolean } =
 		$props();
 	let allOpen = $state(false);
-	let draft = $state<Record<string, string[]>>({});
-	let keyword = $state('');
-	function openFilters() {
-		draft = Object.fromEntries(
-			desktop.filters.map((filter) => [filter.id, [...filter.selectedValues]])
-		);
-		keyword = page.url.searchParams.get('keyword') ?? '';
-		allOpen = true;
+	let activeFilter = $state<AuxeroInventoryFilter | null>(null);
+	let dialog = $state<InventoryFiltersDialog>();
+	function appliedRangeSummary(filter: AuxeroInventoryFilter) {
+		if (!filter.numericInput) return undefined;
+		const min = page.url.searchParams.get(filter.name === 'priceTo' ? 'minPrice' : 'minMileage');
+		if (!min) return undefined;
+		const format = (value: string) => Number(value).toLocaleString(english ? 'en' : 'bg');
+		return `${filter.selectedValues[0] ? format(min) + ' – ' + format(filter.selectedValues[0]) : (english ? 'From ' : 'От ') + format(min)} ${filter.numericInput.unit}`;
 	}
 	let viewMenu: HTMLDetailsElement;
 	function dismissViewMenu(event: PointerEvent | FocusEvent) {
@@ -39,7 +35,6 @@
 			viewMenu.querySelector('summary')?.focus();
 		}
 	}
-	const formId = $props.id();
 	const quickFilters = $derived(
 		[
 			['brand'],
@@ -51,14 +46,6 @@
 		]
 			.map((names) => desktop.filters.find((filter) => names.includes(filter.name)))
 			.filter((filter) => filter !== undefined)
-	);
-	const fieldNames = $derived(
-		new Set(desktop.filters.map((filter) => inventoryFilterParam(filter.name)))
-	);
-	const passthrough = $derived(
-		[
-			...serializeInventoryQuery(parseInventoryQuery(page.url.searchParams), page.url.searchParams)
-		].filter(([name]) => !fieldNames.has(name) && name !== 'keyword' && name !== 'page')
 	);
 </script>
 
@@ -75,13 +62,18 @@
 			class="inventory-toolbar__all"
 			aria-haspopup="dialog"
 			aria-expanded={allOpen}
-			onclick={openFilters}
+			onclick={() => dialog?.openFilters()}
 			><SlidersHorizontal size={18} aria-hidden="true" />{english
 				? 'All filters'
 				: 'Всички филтри'}</Action
 		>
 		<div class="inventory-toolbar__filters">
-			{#each quickFilters as filter (filter.id)}<InventoryFilter {filter} {english} />{/each}
+			{#each quickFilters as filter (filter.id)}<InventoryFilter
+					{filter}
+					summary={appliedRangeSummary(filter)}
+					expanded={allOpen && activeFilter?.id === filter.id}
+					onopen={() => dialog?.openFilters(filter)}
+				/>{/each}
 		</div>
 		<form action={linkHref('/inventory')} class="inventory-toolbar__sort">
 			{#each [...page.url.searchParams].filter(([name]) => name !== 'sort') as [name, value], i (i)}<input
@@ -120,48 +112,7 @@
 			>
 		</div>{/if}
 </div>
-<Modal
-	bind:open={allOpen}
-	title={english ? 'Find a car' : 'Търсене на автомобили'}
-	wide
-	class="inventory-filters-dialog"
->
-	<form id={formId} action={linkHref('/inventory')} onsubmit={() => (allOpen = false)}>
-		{#each passthrough as [name, value], i (i)}<input type="hidden" {name} {value} />{/each}
-		<div class="inventory-all__search">
-			<Search size={20} aria-hidden="true" />
-			<label class="sr-only" for={formId + '-keyword'}
-				>{english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}</label
-			>
-			<input
-				id={formId + '-keyword'}
-				type="search"
-				name="keyword"
-				bind:value={keyword}
-				placeholder={english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}
-			/>
-		</div>
-		<div class="inventory-all">
-			{#each desktop.filters as filter (filter.id)}<InventoryCompactField
-					{filter}
-					{english}
-					bind:selection={draft[filter.id]}
-				/>{/each}
-		</div>
-	</form>
-	{#snippet footer()}
-		<div class="inventory-all__actions">
-			<Action
-				variant="secondary"
-				onclick={() => {
-					keyword = '';
-					draft = Object.fromEntries(desktop.filters.map((filter) => [filter.id, []]));
-				}}>{desktop.sidebar.actions.clearLabel}</Action
-			>
-			<Action type="submit" form={formId}>{english ? 'Show cars' : 'Покажи автомобили'}</Action>
-		</div>
-	{/snippet}
-</Modal>
+<InventoryFiltersDialog bind:this={dialog} {desktop} {english} bind:allOpen bind:activeFilter />
 
 <style>
 	.inventory-toolbar {
@@ -177,10 +128,8 @@
 	}
 	.inventory-toolbar__filters {
 		display: flex;
-		overflow-x: auto;
+		flex-wrap: wrap;
 		min-width: 0;
-		padding-block: 3px;
-		scrollbar-width: thin;
 		gap: var(--bc-space-2);
 	}
 	.inventory-toolbar__sort {
@@ -241,39 +190,6 @@
 		border-radius: var(--bc-radius-sm);
 		background: var(--bc-surface);
 	}
-	.inventory-all {
-		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: var(--bc-space-5) var(--bc-space-4);
-		padding-block: var(--bc-space-5);
-	}
-	:global(.site-dialog.inventory-filters-dialog) {
-		width: min(var(--bc-container-page), calc(100vw - 2 * var(--bc-space-6)));
-	}
-	.inventory-all__search {
-		display: flex;
-		align-items: center;
-		gap: var(--bc-space-3);
-		padding: var(--bc-space-3) var(--bc-space-4);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-surface);
-		color: var(--bc-muted);
-	}
-	.inventory-all__search input {
-		width: 100%;
-		min-width: 0;
-		border: 0;
-		padding: var(--bc-space-1);
-		background: transparent;
-		color: var(--bc-ink);
-		font: inherit;
-	}
-	.inventory-all__actions {
-		display: flex;
-		justify-content: space-between;
-		gap: var(--bc-space-3);
-	}
 	.inventory-toolbar {
 		position: sticky;
 		top: 0;
@@ -298,7 +214,7 @@
 	.inventory-view nav {
 		border-radius: var(--bc-radius-panel);
 	}
-	@media (max-width: 1199px) {
+	@media (max-width: 1399px) {
 		.inventory-toolbar__row {
 			grid-template-columns: 1fr auto auto;
 		}
@@ -310,14 +226,21 @@
 			justify-self: start;
 		}
 	}
-	@media (max-width: 599px) {
-		.inventory-all {
-			grid-template-columns: 1fr;
+	@media (min-width: 768px) {
+		select,
+		summary,
+		.inventory-toolbar__row :global(.inventory-toolbar__all) {
+			min-height: var(--bc-control-height-primary);
+			font-size: var(--bc-text-control);
 		}
-	}
-	@media (min-width: 600px) and (max-width: 899px) {
-		.inventory-all {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+		.inventory-toolbar__active a {
+			min-height: var(--bc-control-height-compact);
+			padding-inline: var(--bc-space-3);
+		}
+		.inventory-view a[aria-current='true'] {
+			background: var(--bc-bg-strong);
+			border-radius: var(--bc-radius-md);
+			font-weight: var(--bc-weight-heading);
 		}
 	}
 </style>

@@ -55,12 +55,12 @@ test('quick filters have a proper dialog with a fixed apply action and readable 
 	await trigger.click();
 	const dialog = page.getByRole('dialog');
 	await expect(dialog).toBeVisible();
-	const row = dialog.locator('.filter-group__option').first();
+	const row = dialog.locator('.filter-choice').first();
 	expect((await row.boundingBox())!.height).toBeGreaterThanOrEqual(48);
 	expect(
 		await row.evaluate((node) => parseFloat(getComputedStyle(node).fontSize))
 	).toBeGreaterThanOrEqual(18);
-	await dialog.locator('input[name="brand"][value="BMW"]').check();
+	await dialog.getByRole('checkbox', { name: 'BMW', exact: true }).check();
 	const result = await new AxeBuilder({ page })
 		.withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
 		.analyze();
@@ -72,7 +72,7 @@ test('quick filters have a proper dialog with a fixed apply action and readable 
 	).toEqual([]);
 	await dialog
 		.locator('.site-dialog__footer')
-		.getByRole('button', { name: 'Приложи', exact: true })
+		.getByRole('button', { name: 'Покажи автомобили', exact: true })
 		.click();
 	await expect(page).toHaveURL(
 		(url) =>

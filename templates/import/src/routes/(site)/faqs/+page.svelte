@@ -75,4 +75,16 @@
 		color: var(--bc-copy);
 		line-height: var(--bc-leading-prose);
 	}
+	@media (min-width: 768px) {
+		.faq-page > :global(.site-action) {
+			justify-self: center;
+		}
+		summary {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-text-entry);
+		}
+		p {
+			font-size: var(--bc-text-prose);
+		}
+	}
 </style>

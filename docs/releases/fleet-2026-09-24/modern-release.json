@@ -1,0 +1,159 @@
+{
+    "repository":  "darkapoparka/cars-template-modern",
+    "commit":  "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+    "approved":  true,
+    "release":  "fleet-ui-and-localization-2026-09-24",
+    "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+    "runtime":  {
+                    "node":  "22.23.2",
+                    "pnpm":  "11.4.0",
+                    "lockfile":  "pnpm-lock.yaml"
+                },
+    "modes":  {
+                  "standalone":  "exact commit validated and production alias verified at 320, 390 and 1440",
+                  "mounted":  "production-equivalent base-path build and EN/BG SSR probes passed; dealer publication still requires dealer QA"
+              },
+    "checks":  [
+                   {
+                       "name":  "exact immutable validation",
+                       "status":  "passed",
+                       "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                   },
+                   {
+                       "name":  "exact production deployment",
+                       "status":  "passed",
+                       "deploymentId":  "dpl_5LEeXtzPtrWyeKNExJcvbqzshCgx"
+                   },
+                   {
+                       "name":  "standalone browser matrix",
+                       "status":  "passed",
+                       "passed":  24,
+                       "total":  24,
+                       "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                   },
+                   {
+                       "name":  "mounted build and EN/BG route probes",
+                       "status":  "passed",
+                       "evidenceSha256":  "90ee1f76e48a2d89cfa28a9d1ec9cbbfb372bbdbb221c2ee73e1e346112d387c"
+                   }
+               ],
+    "standalone":  {
+                       "mobile":  true,
+                       "desktop":  true,
+                       "widths":  [
+                                      320,
+                                      390,
+                                      1440
+                                  ]
+                   },
+    "artifacts":  {
+                      "manifest":  "docs/releases/fleet-2026-09-24/modern-qa-manifest.json",
+                      "manifestSha256":  "dc4375071bd03317e5b61c54f0823c5ca11acc56c21ba3d81050ecb3a08bb4ea"
+                  },
+    "nativeLocalization":  {
+                               "schemaVersion":  1,
+                               "adapter":  "native-v1",
+                               "repository":  "darkapoparka/cars-template-modern",
+                               "commit":  "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+                               "locales":  [
+                                               "en",
+                                               "bg"
+                                           ],
+                               "widths":  [
+                                              320,
+                                              390,
+                                              1440
+                                          ],
+                               "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+                               "evidenceSha256":  "dc4375071bd03317e5b61c54f0823c5ca11acc56c21ba3d81050ecb3a08bb4ea",
+                               "catalogs":  [
+                                                {
+                                                    "format":  "typescript-pair",
+                                                    "path":  "packages/internationalization/preferences-messages.ts",
+                                                    "en":  "en",
+                                                    "bg":  "bg"
+                                                },
+                                                {
+                                                    "format":  "typescript-pair",
+                                                    "path":  "packages/internationalization/public-messages.ts",
+                                                    "en":  "en",
+                                                    "bg":  "bg"
+                                                },
+                                                {
+                                                    "format":  "typescript-rows",
+                                                    "path":  "packages/marketplace/content/inventory-copy.ts",
+                                                    "export":  "inventoryCopy"
+                                                }
+                                            ],
+                               "sourceDigest":  "115a01de44984d280c7e5c9ceaca2599e9b23d95ec7bb879c741fcf2ce4f1265",
+                               "deployment":  {
+                                                  "id":  "dpl_5LEeXtzPtrWyeKNExJcvbqzshCgx",
+                                                  "projectId":  "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+                                                  "state":  "READY",
+                                                  "sourceCommit":  "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+                                                  "publicAlias":  "https://cars-template-modern.vercel.app/"
+                                              },
+                               "checks":  [
+                                              {
+                                                  "name":  "catalog-completeness",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                                              },
+                                              {
+                                                  "name":  "hardcoded-ui",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                                              },
+                                              {
+                                                  "name":  "native-routing",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "90ee1f76e48a2d89cfa28a9d1ec9cbbfb372bbdbb221c2ee73e1e346112d387c"
+                                              },
+                                              {
+                                                  "name":  "standalone-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                                              },
+                                              {
+                                                  "name":  "mounted-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "90ee1f76e48a2d89cfa28a9d1ec9cbbfb372bbdbb221c2ee73e1e346112d387c"
+                                              },
+                                              {
+                                                  "name":  "public-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                                              },
+                                              {
+                                                  "name":  "preferences-no-js",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                                              },
+                                              {
+                                                  "name":  "preferences-storage-disabled",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                                              },
+                                              {
+                                                  "name":  "preferences-races",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                                              },
+                                              {
+                                                  "name":  "request-isolation",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                                              },
+                                              {
+                                                  "name":  "security-write-blocking",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                                              },
+                                              {
+                                                  "name":  "assets-preserved",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298"
+                                              }
+                                          ]
+                           }
+}

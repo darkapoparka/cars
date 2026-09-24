@@ -33,10 +33,10 @@ test('desktop filter search does not discard a previously selected make', async 
 	await visit(page, '/inventory');
 	await page.locator('.site-filter-trigger').filter({ hasText: 'Марка' }).click();
 	const popover = page.getByRole('dialog');
-	await popover.locator('input[value="BMW"]').check();
+	await popover.getByRole('checkbox', { name: 'BMW', exact: true }).check();
 	const search = popover.getByRole('searchbox');
 	if (await search.count()) await search.fill('Audi');
-	await popover.getByRole('button', { name: 'Приложи', exact: true }).click();
+	await popover.getByRole('button', { name: 'Покажи автомобили', exact: true }).click();
 	await expect(page).toHaveURL((url) => url.searchParams.getAll('brand').includes('BMW'));
 	await expect(page.locator('main .site-vehicle-card').first()).toBeVisible();
 });

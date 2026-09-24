@@ -79,7 +79,7 @@
 		</div>
 	{/if}
 </section>
-<Modal bind:open {title} wide>
+<Modal bind:open {title} wide class="vehicle-gallery-dialog">
 	<div class="gallery__viewer">
 		<img src={assetHref(current)} alt={title} width="1200" height="800" use:imageFallback />
 		{#if gallery.length > 1}
@@ -103,6 +103,22 @@
 </Modal>
 
 <style>
+	@media (min-width: 768px) {
+		:global(.vehicle-gallery-dialog) {
+			width: min(1120px, calc(100vw - 2 * var(--bc-space-6)));
+		}
+		.gallery__viewer {
+			background: var(--bc-ink);
+			padding: var(--bc-space-3);
+			border-radius: var(--bc-radius-md);
+			color: var(--bc-white);
+		}
+		.gallery__viewer .gallery__controls button {
+			border-radius: var(--bc-radius-md);
+			min-width: var(--bc-control-height-primary);
+			height: var(--bc-control-height-primary);
+		}
+	}
 	.gallery {
 		display: grid;
 		gap: var(--bc-space-3);

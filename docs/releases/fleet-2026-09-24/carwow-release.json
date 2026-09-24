@@ -1,0 +1,148 @@
+{
+    "repository":  "darkapoparka/cars-template-carwow",
+    "commit":  "d9de303ffa732234c21e2a57c73d7109e870cbeb",
+    "approved":  true,
+    "release":  "fleet-ui-and-localization-2026-09-24",
+    "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+    "runtime":  {
+                    "node":  "24.21.0",
+                    "npm":  "11.x",
+                    "lockfile":  "package-lock.json"
+                },
+    "modes":  {
+                  "standalone":  "exact commit validated and production alias verified at 320, 390 and 1440",
+                  "mounted":  "production-equivalent base-path build and EN/BG SSR probes passed; dealer publication still requires dealer QA"
+              },
+    "checks":  [
+                   {
+                       "name":  "exact immutable validation",
+                       "status":  "passed",
+                       "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                   },
+                   {
+                       "name":  "exact production deployment",
+                       "status":  "passed",
+                       "deploymentId":  "dpl_3HezU5KHrcLfMS9r1SaHeWtrEYHC"
+                   },
+                   {
+                       "name":  "standalone browser matrix",
+                       "status":  "passed",
+                       "passed":  24,
+                       "total":  24,
+                       "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                   },
+                   {
+                       "name":  "mounted build and EN/BG route probes",
+                       "status":  "passed",
+                       "evidenceSha256":  "ad0bd9fd13fd335601d90fc757c55c201b07a0bf1db50066f1a13fef7794314b"
+                   }
+               ],
+    "standalone":  {
+                       "mobile":  true,
+                       "desktop":  true,
+                       "widths":  [
+                                      320,
+                                      390,
+                                      1440
+                                  ]
+                   },
+    "artifacts":  {
+                      "manifest":  "docs/releases/fleet-2026-09-24/carwow-qa-manifest.json",
+                      "manifestSha256":  "31da35ee8cb71d6cb22bf69a224dcfd66db984400a956f37039e4624d324d3a6"
+                  },
+    "nativeLocalization":  {
+                               "schemaVersion":  1,
+                               "adapter":  "native-v1",
+                               "repository":  "darkapoparka/cars-template-carwow",
+                               "commit":  "d9de303ffa732234c21e2a57c73d7109e870cbeb",
+                               "locales":  [
+                                               "en",
+                                               "bg"
+                                           ],
+                               "widths":  [
+                                              320,
+                                              390,
+                                              1440
+                                          ],
+                               "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+                               "evidenceSha256":  "31da35ee8cb71d6cb22bf69a224dcfd66db984400a956f37039e4624d324d3a6",
+                               "catalogs":  [
+                                                {
+                                                    "format":  "typescript-pair",
+                                                    "path":  "src/lib/locale/catalog.ts",
+                                                    "en":  "en",
+                                                    "bg":  "bg"
+                                                }
+                                            ],
+                               "sourceDigest":  "d4e33c6eef43e015c6d596e5e6e6b2298bfdd0320001cee0e06614e7a0bf2263",
+                               "deployment":  {
+                                                  "id":  "dpl_3HezU5KHrcLfMS9r1SaHeWtrEYHC",
+                                                  "projectId":  "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+                                                  "state":  "READY",
+                                                  "sourceCommit":  "d9de303ffa732234c21e2a57c73d7109e870cbeb",
+                                                  "publicAlias":  "https://cars-template-carwow.vercel.app/"
+                                              },
+                               "checks":  [
+                                              {
+                                                  "name":  "catalog-completeness",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                                              },
+                                              {
+                                                  "name":  "hardcoded-ui",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                                              },
+                                              {
+                                                  "name":  "native-routing",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "ad0bd9fd13fd335601d90fc757c55c201b07a0bf1db50066f1a13fef7794314b"
+                                              },
+                                              {
+                                                  "name":  "standalone-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                                              },
+                                              {
+                                                  "name":  "mounted-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "ad0bd9fd13fd335601d90fc757c55c201b07a0bf1db50066f1a13fef7794314b"
+                                              },
+                                              {
+                                                  "name":  "public-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                                              },
+                                              {
+                                                  "name":  "preferences-no-js",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                                              },
+                                              {
+                                                  "name":  "preferences-storage-disabled",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                                              },
+                                              {
+                                                  "name":  "preferences-races",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                                              },
+                                              {
+                                                  "name":  "request-isolation",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                                              },
+                                              {
+                                                  "name":  "security-write-blocking",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                                              },
+                                              {
+                                                  "name":  "assets-preserved",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767"
+                                              }
+                                          ]
+                           }
+}

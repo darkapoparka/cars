@@ -154,4 +154,23 @@
 		color: var(--bc-accent);
 		font: var(--bc-weight-heading) 2rem/1.2 var(--bc-font-heading);
 	}
+	@media (min-width: 768px) {
+		dt,
+		dd {
+			font-size: var(--bc-text-body-lg);
+		}
+		dd {
+			font-variant-numeric: tabular-nums;
+		}
+		.finance-estimator__total {
+			border: 0;
+			border-radius: var(--bc-radius-control);
+			padding: var(--bc-space-4);
+			background: var(--bc-bg-strong);
+		}
+		.finance-estimator__total dt {
+			color: var(--bc-ink);
+			font-weight: var(--bc-weight-heading);
+		}
+	}
 </style>

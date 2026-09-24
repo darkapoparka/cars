@@ -51,7 +51,7 @@
 		<div class="home-brands">
 			{#each data.brands as brand (brand.query)}<a
 					class:home-browse-all={brand.allTile}
-					href={linkHref(href(brand.href ?? '/inventory?brand=' + encodeURIComponent(brand.query)))}
+					href={href(brand.href ?? '/inventory?brand=' + encodeURIComponent(brand.query))}
 					>{#if brand.allTile}<span class="home-browse-icon"
 							><LayoutGrid size={32} aria-hidden="true" /></span
 						>{:else if brand.image}<img
@@ -71,7 +71,7 @@
 		<div class="home-types">
 			{#each data.types as type (type.bodyType)}<a
 					class:home-browse-all={type.bodyType === 'View all' || !type.image}
-					href={linkHref(href(type.href))}
+					href={href(type.href)}
 					>{#if type.image && type.bodyType !== 'View all'}<img
 							src={assetHref(type.image)}
 							alt=""

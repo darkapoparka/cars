@@ -6,6 +6,7 @@
 		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
 	import type { PageProps } from './$types';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
+	import Action from '$lib/components/common/Action.svelte';
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
@@ -47,10 +48,24 @@
 			title={english ? 'Contact us' : 'Контакти'}
 			description={data.site.contact.appointment}
 			image="/assets/daynight/proof-studio-import-handoff.webp"
+			desktopImage="/assets/daynight/banners/contact-desktop-v2.webp"
 			align="center"
-		/>
+		>
+			{#snippet desktopActions()}
+				<Action href={data.site.contact.phoneHref} size="hero"
+					><Phone size={20} aria-hidden="true" />{english ? 'Call us' : 'Обади се'}</Action
+				>
+				<Action href={data.site.contact.mapHref} variant="glass" size="hero"
+					><MapPin size={20} aria-hidden="true" />{english
+						? 'Get directions'
+						: 'Как да стигнеш'}</Action
+				>
+			{/snippet}
+			{#snippet desktopSecondaryActions()}<SocialLinks tone="dark" />{/snippet}
+		</PageIntro>
 		<section
 			class="site-section site-container contact-overview"
+			id="contact-details"
 			aria-label={english ? 'Contact details' : 'Връзка с нас'}
 		>
 			<div class="contact-channels">
@@ -64,7 +79,6 @@
 					</a>
 				{/each}
 			</div>
-			<SocialLinks />
 		</section>
 		<section class="site-section contact-intake">
 			<div class="site-container contact-form-panel">
@@ -110,6 +124,7 @@
 	.contact-overview {
 		display: grid;
 		gap: var(--bc-space-6);
+		padding-block: var(--bc-space-8);
 	}
 	.contact-channels {
 		display: grid;
@@ -120,10 +135,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: var(--bc-space-3);
-		padding: var(--bc-space-6);
-		border-radius: var(--bc-radius-panel);
-		background: var(--bc-surface);
+		gap: var(--bc-space-2);
+		padding: var(--bc-space-5);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-card);
+		background: var(--bc-surface-raised);
 		color: var(--bc-ink);
 		text-decoration: none;
 		text-align: center;
@@ -134,10 +150,10 @@
 	.contact-channel__icon {
 		display: grid;
 		place-items: center;
-		width: var(--bc-control-height-hero);
-		height: var(--bc-control-height-hero);
+		width: var(--bc-control-height-standard);
+		height: var(--bc-control-height-standard);
 		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
+		background: var(--bc-bg-strong);
 		color: var(--bc-ink);
 	}
 	.contact-channel h2 {
@@ -153,10 +169,11 @@
 		color: var(--bc-copy);
 	}
 	.contact-intake {
-		background: var(--bc-bg-strong);
+		padding-top: var(--bc-space-2);
 	}
 	.contact-form-panel {
 		max-width: var(--bc-container-narrow);
+		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);
 		padding: var(--bc-space-8);
 		background: var(--bc-surface-raised);

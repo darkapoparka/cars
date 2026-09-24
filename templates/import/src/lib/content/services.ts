@@ -2,6 +2,7 @@ import { daynightAssets, daynightContact } from '$lib/config/dealer';
 import type { AuxeroPageBanner } from '$lib/auxero/page-banner';
 
 export type AuxeroSupportService = {
+	id: 'sourcing' | 'listing-check' | 'selling' | 'registration' | 'viewing' | 'comparison';
 	description: string;
 	href: string;
 	image: string;
@@ -49,6 +50,7 @@ export type AuxeroServiceFormData = {
 
 export const auxeroServiceCards: AuxeroSupportService[] = [
 	{
+		id: 'sourcing',
 		title: 'Подбрани автомобили',
 		description:
 			'Подбор на автомобили с проследима история, ясни снимки и реалистична крайна цена преди покупка.',
@@ -56,6 +58,7 @@ export const auxeroServiceCards: AuxeroSupportService[] = [
 		image: '/assets/daynight/services/premium-cars-banner-generated.webp'
 	},
 	{
+		id: 'listing-check',
 		title: 'Проверка на обява',
 		description:
 			'Преглед на VIN, пробег, история, оборудване, снимки и контекст на продавача преди решение.',
@@ -63,6 +66,7 @@ export const auxeroServiceCards: AuxeroSupportService[] = [
 		image: '/assets/daynight/services/evaluate-link-service.webp'
 	},
 	{
+		id: 'selling',
 		title: 'Продажба на автомобил',
 		description:
 			'Изпрати данни, документи, снимки и очаквания, за да изберем правилния път за продажба.',
@@ -70,12 +74,14 @@ export const auxeroServiceCards: AuxeroSupportService[] = [
 		image: '/assets/daynight/services/sell-car-service.webp'
 	},
 	{
+		id: 'registration',
 		title: 'Документи и регистрация',
 		description: 'Съдействие за документи по внос, техническа подготовка, регистрация и предаване.',
 		href: '/services',
 		image: daynightAssets.footerImage
 	},
 	{
+		id: 'viewing',
 		title: 'Огледи с уговорка',
 		description:
 			'Подготвени огледи, при които автомобилът, документите и консултантът са готови предварително.',
@@ -83,6 +89,7 @@ export const auxeroServiceCards: AuxeroSupportService[] = [
 		image: daynightAssets.hero
 	},
 	{
+		id: 'comparison',
 		title: 'Сравнение на модели',
 		description:
 			'Сравняваме цена, пробег, оборудване, история, разходи и срокове за няколко кандидата.',

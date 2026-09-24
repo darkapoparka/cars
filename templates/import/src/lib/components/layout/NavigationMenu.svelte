@@ -58,6 +58,7 @@
 		min-height: var(--bc-control-height-standard);
 	}
 	.site-nav-item > a {
+		position: relative;
 		display: inline-flex;
 		align-items: center;
 		min-height: var(--bc-control-height-standard);
@@ -116,7 +117,7 @@
 	nav a:hover {
 		background: var(--bc-surface);
 	}
-	.site-nav-item.active::after {
+	.site-nav-item.active > a::after {
 		position: absolute;
 		content: '';
 		inset-inline: 0;

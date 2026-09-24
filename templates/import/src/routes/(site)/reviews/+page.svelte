@@ -18,7 +18,7 @@
 >
 <main id="main-content">
 	<PageIntro title={english ? 'Customer reviews' : 'Клиентски отзиви'} />
-	<div class="site-section site-container site-stack">
+	<div class="site-section site-container site-stack reviews-page">
 		{#if data.sample}<p class="site-form-note">
 				{english
 					? 'Sample review content for this template preview.'
@@ -34,6 +34,11 @@
 </main>
 
 <style>
+	@media (min-width: 768px) {
+		.reviews-page > :global(.site-action) {
+			justify-self: center;
+		}
+	}
 	.reviews-grid {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));

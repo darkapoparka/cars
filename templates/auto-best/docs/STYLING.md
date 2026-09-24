@@ -121,7 +121,7 @@ Inventory filter chips (including removable active filters), results filters/sor
 
 ## Responsive composition
 
-Mobile inventory cards use one 18px/500 title row with an ellipsis; the full name remains in the link's accessible label, the title attribute and the detail page. The right-hand column uses 14px vertical / 12px horizontal padding, four rows (24/20/20/22px), and 6px gaps, giving the current cards a consistent 132px height. Metadata uses 14px text in compact 20px badges. Fuel/transmission badges omit decorative icons on phones; desktop badges retain them. Mobile photos fill their entire image column with `object-fit: cover`, with no letterboxing. Keep the 8px gap between inventory cards. The keyboard-only focus border is drawn above the photograph and badges so the complete card remains visibly selected; normal tapping does not display this border.
+Mobile inventory cards group a regular-weight make label with an 18px model title that may wrap to two lines. The full vehicle name remains in the accessible link label and title attribute. Content grows with the name rather than relying on a fixed card height. Year and mileage share a plain text row; fuel/transmission retain compact badges without decorative icons on phones. Photos fill the image column with object-fit: cover. Keep the 8px gap between cards and the keyboard focus border above the photograph.
 
 Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars otherwise change the available page and fixed-navigation width when moving between long pages (Home) and short pages (Sell/Import). Overlay scrollbars on touch devices retain their normal behavior.
 
@@ -150,7 +150,7 @@ Additional 359/374/380px and 1199px rules handle particular text, grid and contr
 
 Mobile inventory starts with a rounded search field and compact filter/sort controls, followed by one horizontal quick-filter rail. Make and model stay together in that rail. Active chips expose removal; selectors retain a dropdown affordance. The filter sheet contains the deeper options.
 
-Vehicle cards prioritize photograph, title and price over metadata. Mobile year/mileage badges and fuel/transmission icon treatments remain secondary. Card links cover the intended card area, not only a tiny title. Desktop grids adapt through intermediate widths rather than imposing the mobile card structure everywhere.
+Vehicle cards prioritize photograph, model and price. Make labels use the regular metadata role and darker neutral ink, with a small gap above the model. Model titles omit an exact repeated make prefix; differently named model families retain their full title. The whole card is one link. Desktop grids adapt through intermediate widths, with aligned specification and price rows. Shared card hover shadows stay shallow, and article/discovery focus indicators use the focus token.
 
 ## Detail, sell and import
 
