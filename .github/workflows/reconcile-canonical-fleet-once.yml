@@ -92,7 +92,27 @@ jobs:
             for item in $batch; do
               slug="${item%%=*}"
               repository="${item#*=}"
-              source="clients/$slug"
+              canonical="clients/$slug"
+              source="$canonical"
+
+              if [[ "$slug" == 'isauto-varna' ]]; then
+                current_repository="$(node -p "require('./$canonical/dealer.json').repository")"
+                if [[ "$current_repository" == 'darkapoparka/cars' ]]; then
+                  source="$RUNNER_TEMP/source-overrides/$slug"
+                  rm -rf "$source"
+                  mkdir -p "$(dirname "$source")"
+                  rsync -a "$canonical/" "$source/"
+                  SOURCE="$source" REPOSITORY="$repository" node <<'NODE'
+          const fs = require('node:fs');
+          const file = `${process.env.SOURCE}/dealer.json`;
+          const manifest = JSON.parse(fs.readFileSync(file, 'utf8'));
+          manifest.repository = process.env.REPOSITORY;
+          manifest.defaultBranch = 'main';
+          fs.writeFileSync(file, `${JSON.stringify(manifest, null, 2)}\n`);
+          NODE
+                fi
+              fi
+
               output="$RUNNER_TEMP/generated/$slug"
               evidence="$RUNNER_TEMP/evidence/$slug"
               rm -rf "$output" "$evidence"
@@ -103,7 +123,7 @@ jobs:
                 if test -f "$source/$protected"; then cp "$source/$protected" "$evidence/$protected.before"; fi
               done
               if test -d "$source/assets/branding"; then
-                tar -C "$source" -cf "$evidence/branding.before.tar" assets/branding
+                (cd "$source" && find assets/branding -type f -print0 | sort -z | xargs -0 -r sha256sum) > "$evidence/branding.before.sha256"
               fi
 
               node scripts/rollout-localized-client.mjs \
@@ -133,10 +153,11 @@ jobs:
             const selected = lock.templates?.[key];
             const locator = after.templateSources?.[key];
             const receipt = adoption.releases?.[key];
+            const receiptSource = receipt?.source;
             if (!selected || selected.status !== 'approved') throw new Error(`${key}: unapproved release`);
             if (after.templateRevisions?.[key] !== selected.commit) throw new Error(`${key}: revision mismatch`);
             if (locator?.repository !== 'darkapoparka/cars' || locator?.revision !== selected.commit || locator?.path !== `templates/${key}` || locator?.digest !== selected.digest || locator?.tree !== selected.source?.tree) throw new Error(`${key}: exact Cars source locator mismatch`);
-            if (receipt?.commit !== selected.commit || receipt?.digest !== selected.digest || receipt?.sourceTree !== selected.source?.tree) throw new Error(`${key}: adoption receipt mismatch`);
+            if (receipt?.commit !== selected.commit || receipt?.digest !== selected.digest || receiptSource?.repository !== selected.source?.repository || receiptSource?.revision !== selected.source?.revision || receiptSource?.path !== selected.source?.path || receiptSource?.tree !== selected.source?.tree) throw new Error(`${key}: adoption receipt mismatch`);
           }
           const generated = fs.readdirSync(process.env.OUTPUT, { recursive: true }).map(String);
           if (generated.some(file => file.includes('variant-3/variant-3') || file.includes('variant-2/variant-3'))) throw new Error('Double-prefixed generated path detected');
@@ -147,17 +168,17 @@ jobs:
                   cmp "$evidence/$protected.before" "$output/$protected"
                 fi
               done
-              if test -f "$evidence/branding.before.tar"; then
-                tar -C "$output" -cf "$evidence/branding.after.tar" assets/branding
-                cmp "$evidence/branding.before.tar" "$evidence/branding.after.tar"
+              if test -f "$evidence/branding.before.sha256"; then
+                (cd "$output" && find assets/branding -type f -print0 | sort -z | xargs -0 -r sha256sum) > "$evidence/branding.after.sha256"
+                cmp "$evidence/branding.before.sha256" "$evidence/branding.after.sha256"
               fi
               if grep -R -n -E 'variant-3/variant-3|variant-2/variant-3' "$output" --exclude-dir=node_modules --exclude='*.map'; then
                 echo "$slug: double-prefixed asset source remains" >&2
                 exit 1
               fi
 
-              rsync -a --delete "$output/" "$source/"
-              git add -A -- "$source"
+              rsync -a --delete "$output/" "$canonical/"
+              git add -A -- "$canonical"
               changed+=("$slug")
               printf '{"slug":"%s","repository":"%s","batch":%s,"state":"generated"}\n' "$slug" "$repository" "$batch_number" >> "$RUNNER_TEMP/fleet-reconciliation.ndjson"
             done
