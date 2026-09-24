@@ -96,7 +96,7 @@ jobs:
               output="$RUNNER_TEMP/generated/$slug"
               evidence="$RUNNER_TEMP/evidence/$slug"
               rm -rf "$output" "$evidence"
-              mkdir -p "$output" "$evidence"
+              mkdir -p "$(dirname "$output")" "$evidence"
 
               cp "$source/dealer.json" "$evidence/dealer.before.json"
               for protected in business-facts.json stock.json inventory.json; do
