@@ -1,5 +1,5 @@
 name: Deploy corrected localized dealer fleet
-# Full production promotion retriggered 2026-09-22 after project-ID inventory repair.
+# Fleet rollout triggered for release 5ead4304 on 2026-09-24.
 
 on:
   workflow_dispatch:
@@ -144,7 +144,7 @@ jobs:
             if (source.includes('No verified customer reviews are included in this independent preview.')) {
               throw new Error('Generated Carwow review disclosure still bypasses the localization catalog');
             }
-            if (!source.includes('Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения.')) {
+            if (!source.includes('╨ö╨╡╨╝╨╛╨╜╤ü╤é╤Ç╨░╤å╨╕╨╛╨╜╨╜╨╕ ╨╛╤é╨╖╨╕╨▓╨╕ ╨╕ ╨╛╤å╨╡╨╜╨║╨╕. ╨¥╨╡ ╤ü╨░ ╨┐╨╛╤é╨▓╤è╤Ç╨┤╨╡╨╜╨╕ ╨║╨╗╨╕╨╡╨╜╤é╤ü╨║╨╕ ╨╝╨╜╨╡╨╜╨╕╤Å.')) {
               throw new Error('Generated Carwow review disclosure is missing the reviewed catalog-backed copy');
             }
           }
@@ -220,7 +220,7 @@ jobs:
             }
             const localeUi = /data-locale-(dialog|trigger)|locale-preferences-title|cars-locale-dialog/.test(root.text)
               && root.text.includes('English')
-              && root.text.includes('Български');
+              && root.text.includes('╨æ╤è╨╗╨│╨░╤Ç╤ü╨║╨╕');
             evidence = {
               attempt,
               checkedAt: new Date().toISOString(),
