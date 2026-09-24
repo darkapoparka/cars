@@ -1,0 +1,200 @@
+name: Reconcile canonical Cars dealer fleet once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/reconcile-canonical-fleet-once.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: canonical-cars-fleet-reconciliation
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      CARS_OWNER: darkapoparka
+    steps:
+      - name: Check out exact canonical source set
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /package.json
+            /catalog.json
+            /templates.lock.json
+            /scripts/
+            /templates/
+            /docs/
+            /clients/al-basma-motors/
+            /clients/al-hamoor-al-thahabi/
+            /clients/asko-96/
+            /clients/astracar/
+            /clients/autolife/
+            /clients/automarket-varna/
+            /clients/avangard-auto/
+            /clients/champion-auto-pro/
+            /clients/day-and-night-auto-group/
+            /clients/eliqauto/
+            /clients/elit-auto-import/
+            /clients/excellent-cars/
+            /clients/f1rst-motors/
+            /clients/isauto-varna/
+            /clients/ivo-auto/
+            /clients/kg-team-auto/
+            /clients/legend-auto/
+            /clients/navara-car/
+            /clients/outletcars-varna/
+            /clients/perfect-auto-varna/
+            /clients/priselci/
+            /clients/promosale-varna/
+            /clients/texas-drive-auto/
+            /clients/the-dealers-point/
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+
+      - name: Configure guarded batch publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config core.autocrlf false
+          echo '[]' > "$RUNNER_TEMP/fleet-reconciliation.json"
+
+      - name: Generate, validate and publish six recoverable batches
+        shell: bash
+        run: |
+          set -euo pipefail
+          batches=(
+            'al-basma-motors=darkapoparka/cars-albasmamotors al-hamoor-al-thahabi=darkapoparka/cars-alhamooralthahabi asko-96=darkapoparka/cars-asko96 astracar=darkapoparka/cars-astracar'
+            'autolife=darkapoparka/cars-autolife automarket-varna=darkapoparka/cars-automarketvarna avangard-auto=darkapoparka/cars-avangardauto champion-auto-pro=darkapoparka/cars-championautopro'
+            'day-and-night-auto-group=darkapoparka/day-and-night-autodeal eliqauto=darkapoparka/cars-eliqauto elit-auto-import=darkapoparka/cars-elitautoimport excellent-cars=darkapoparka/excellent-cars'
+            'f1rst-motors=darkapoparka/cars-f1rstmotors isauto-varna=darkapoparka/cars-isautovarna ivo-auto=darkapoparka/cars-ivoauto kg-team-auto=darkapoparka/cars-kgteamauto'
+            'legend-auto=darkapoparka/cars-legendauto navara-car=darkapoparka/cars-navaracar outletcars-varna=darkapoparka/cars-outletcarsvarna perfect-auto-varna=darkapoparka/cars-perfectauto'
+            'priselci=darkapoparka/cars-priselci promosale-varna=darkapoparka/cars-promosalevarna texas-drive-auto=darkapoparka/cars-texasdriveauto the-dealers-point=darkapoparka/cars-thedealerspoint'
+          )
+
+          batch_number=0
+          for batch in "${batches[@]}"; do
+            batch_number=$((batch_number + 1))
+            changed=()
+            for item in $batch; do
+              slug="${item%%=*}"
+              repository="${item#*=}"
+              source="clients/$slug"
+              output="$RUNNER_TEMP/generated/$slug"
+              evidence="$RUNNER_TEMP/evidence/$slug"
+              rm -rf "$output" "$evidence"
+              mkdir -p "$output" "$evidence"
+
+              cp "$source/dealer.json" "$evidence/dealer.before.json"
+              for protected in business-facts.json stock.json inventory.json; do
+                if test -f "$source/$protected"; then cp "$source/$protected" "$evidence/$protected.before"; fi
+              done
+              if test -d "$source/assets/branding"; then
+                tar -C "$source" -cf "$evidence/branding.before.tar" assets/branding
+              fi
+
+              node scripts/rollout-localized-client.mjs \
+                --client-root "$source" \
+                --slug "$slug" \
+                --repository "$repository" \
+                --output "$output" \
+                > "$evidence/rollout-report.json"
+
+              SLUG="$slug" REPOSITORY="$repository" SOURCE="$source" OUTPUT="$output" node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+          const before = read(path.join(process.env.SOURCE, 'dealer.json'));
+          const after = read(path.join(process.env.OUTPUT, 'dealer.json'));
+          const lock = read('templates.lock.json');
+          const contract = read(path.join(process.env.OUTPUT, 'localization/contract.json'));
+          const adoption = read(path.join(process.env.OUTPUT, 'localization/adoption.json'));
+          if (before.slug !== process.env.SLUG || after.slug !== process.env.SLUG) throw new Error('Dealer slug changed');
+          if (after.repository !== process.env.REPOSITORY) throw new Error(`Repository identity mismatch: ${after.repository}`);
+          if (JSON.stringify(before.variants) !== JSON.stringify(after.variants)) throw new Error('Selected design trio or public mounts changed');
+          if (after.packaging?.version !== '2') throw new Error('Expected native packaging v2');
+          if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Expected complete EN/BG locale contract');
+          if (contract.dealerId !== after.dealerId || adoption.dealerId !== contract.dealerId || adoption.packagingVersion !== '2') throw new Error('Invalid localization identity or adoption seal');
+          for (const variant of after.variants) {
+            const key = variant.key;
+            const selected = lock.templates?.[key];
+            const locator = after.templateSources?.[key];
+            const receipt = adoption.releases?.[key];
+            if (!selected || selected.status !== 'approved') throw new Error(`${key}: unapproved release`);
+            if (after.templateRevisions?.[key] !== selected.commit) throw new Error(`${key}: revision mismatch`);
+            if (locator?.repository !== 'darkapoparka/cars' || locator?.revision !== selected.commit || locator?.path !== `templates/${key}` || locator?.digest !== selected.digest || locator?.tree !== selected.source?.tree) throw new Error(`${key}: exact Cars source locator mismatch`);
+            if (receipt?.commit !== selected.commit || receipt?.digest !== selected.digest || receipt?.sourceTree !== selected.source?.tree) throw new Error(`${key}: adoption receipt mismatch`);
+          }
+          const generated = fs.readdirSync(process.env.OUTPUT, { recursive: true }).map(String);
+          if (generated.some(file => file.includes('variant-3/variant-3') || file.includes('variant-2/variant-3'))) throw new Error('Double-prefixed generated path detected');
+          NODE
+
+              for protected in business-facts.json stock.json inventory.json; do
+                if test -f "$evidence/$protected.before"; then
+                  cmp "$evidence/$protected.before" "$output/$protected"
+                fi
+              done
+              if test -f "$evidence/branding.before.tar"; then
+                tar -C "$output" -cf "$evidence/branding.after.tar" assets/branding
+                cmp "$evidence/branding.before.tar" "$evidence/branding.after.tar"
+              fi
+              if grep -R -n -E 'variant-3/variant-3|variant-2/variant-3' "$output" --exclude-dir=node_modules --exclude='*.map'; then
+                echo "$slug: double-prefixed asset source remains" >&2
+                exit 1
+              fi
+
+              rsync -a --delete "$output/" "$source/"
+              git add -A -- "$source"
+              changed+=("$slug")
+              printf '{"slug":"%s","repository":"%s","batch":%s,"state":"generated"}\n' "$slug" "$repository" "$batch_number" >> "$RUNNER_TEMP/fleet-reconciliation.ndjson"
+            done
+
+            git diff --cached --check
+            if git diff --cached --quiet; then
+              echo "Batch $batch_number already matched the approved native release."
+            else
+              git commit -m "Reconcile native dealer batch $batch_number" -m "Dealers: ${changed[*]}" -m "Approved template source: 8fb6751d945776817acd8fce4a431ec7a2860b2a"
+              git push origin HEAD:main
+            fi
+          done
+
+          node -e "const fs=require('fs'); const rows=fs.readFileSync(process.env.RUNNER_TEMP+'/fleet-reconciliation.ndjson','utf8').trim().split(/\n/).filter(Boolean).map(JSON.parse); fs.writeFileSync(process.env.RUNNER_TEMP+'/fleet-reconciliation.json',JSON.stringify({completedAt:new Date().toISOString(),head:require('child_process').execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),rows},null,2)+'\n');"
+
+      - name: Verify canonical manifests after all batch pushes
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/check-workflow.mjs
+          node scripts/template-release.mjs verify
+          for manifest in clients/*/dealer.json; do
+            slug="$(basename "$(dirname "$manifest")")"
+            case "$slug" in
+              al-basma-motors|al-hamoor-al-thahabi|asko-96|astracar|autolife|automarket-varna|avangard-auto|champion-auto-pro|day-and-night-auto-group|eliqauto|elit-auto-import|excellent-cars|f1rst-motors|isauto-varna|ivo-auto|kg-team-auto|legend-auto|navara-car|outletcars-varna|perfect-auto-varna|priselci|promosale-varna|texas-drive-auto|the-dealers-point)
+                node -e "const m=require('./$manifest'); if(m.packaging?.version!=='2') process.exit(1); for(const v of m.variants){const s=m.templateSources?.[v.key]; if(s?.repository!=='darkapoparka/cars'||s?.revision!=='8fb6751d945776817acd8fce4a431ec7a2860b2a') process.exit(2)}"
+                ;;
+            esac
+          done
+
+      - name: Upload canonical reconciliation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-fleet-reconciliation
+          path: |
+            ${{ runner.temp }}/fleet-reconciliation.json
+            ${{ runner.temp }}/evidence/*/rollout-report.json
+          if-no-files-found: warn
+          retention-days: 30
