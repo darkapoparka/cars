@@ -1,6 +1,7 @@
 name: Reconcile canonical Cars dealer fleet once
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
@@ -72,20 +73,16 @@ jobs:
           git config core.autocrlf false
           echo '[]' > "$RUNNER_TEMP/fleet-reconciliation.json"
 
-      - name: Generate, validate and publish six recoverable batches
+      - name: Generate, validate and publish the two remaining recoverable batches
         shell: bash
         run: |
           set -euo pipefail
           batches=(
-            'al-basma-motors=darkapoparka/cars-albasmamotors al-hamoor-al-thahabi=darkapoparka/cars-alhamooralthahabi asko-96=darkapoparka/cars-asko96 astracar=darkapoparka/cars-astracar'
-            'autolife=darkapoparka/cars-autolife automarket-varna=darkapoparka/cars-automarketvarna avangard-auto=darkapoparka/cars-avangardauto champion-auto-pro=darkapoparka/cars-championautopro'
-            'day-and-night-auto-group=darkapoparka/day-and-night-autodeal eliqauto=darkapoparka/cars-eliqauto elit-auto-import=darkapoparka/cars-elitautoimport excellent-cars=darkapoparka/excellent-cars'
-            'f1rst-motors=darkapoparka/cars-f1rstmotors isauto-varna=darkapoparka/cars-isautovarna ivo-auto=darkapoparka/cars-ivoauto kg-team-auto=darkapoparka/cars-kgteamauto'
             'legend-auto=darkapoparka/cars-legendauto navara-car=darkapoparka/cars-navaracar outletcars-varna=darkapoparka/cars-outletcarsvarna perfect-auto-varna=darkapoparka/cars-perfectauto'
             'priselci=darkapoparka/cars-priselci promosale-varna=darkapoparka/cars-promosalevarna texas-drive-auto=darkapoparka/cars-texasdriveauto the-dealers-point=darkapoparka/cars-thedealerspoint'
           )
 
-          batch_number=0
+          batch_number=4
           for batch in "${batches[@]}"; do
             batch_number=$((batch_number + 1))
             changed=()
@@ -178,6 +175,7 @@ jobs:
               fi
 
               rsync -a --delete "$output/" "$canonical/"
+              rm -rf "$output"
               git add -A -- "$canonical"
               changed+=("$slug")
               printf '{"slug":"%s","repository":"%s","batch":%s,"state":"generated"}\n' "$slug" "$repository" "$batch_number" >> "$RUNNER_TEMP/fleet-reconciliation.ndjson"
