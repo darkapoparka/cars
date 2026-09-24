@@ -172,3 +172,17 @@ test('pinned template pair exports a standalone old base and a Cars monorepo tar
   assert.equal(fs.readFileSync(path.join(pair.newBase.directory, 'apps/web/page.tsx'), 'utf8'), 'export default "Cars v3";\n');
   assert.equal(fs.existsSync(path.join(pair.newBase.directory, 'README.md')), false);
 });
+
+
+test('selected Cars lock digest uses the canonical workflow fingerprint policy', () => {
+  const carsRoot = path.resolve(import.meta.dirname, '../..');
+  const lock = JSON.parse(fs.readFileSync(path.join(carsRoot, 'templates.lock.json'), 'utf8'));
+  const selected = lock.templates['auto-best'];
+  const result = readPinnedTemplateTree({
+    key: 'auto-best', repositoryPath: carsRoot, source: selected.source, expectedDigest: selected.digest
+  });
+  assert.equal(result.digest, selected.digest);
+  assert.equal(result.revision, selected.source.revision);
+  assert.equal(result.path, 'templates/auto-best');
+  assert.ok(result.files > 0);
+});

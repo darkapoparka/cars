@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { exportCommit, git, gitFiles, normalized, sha256 } from '../lib/workflow.mjs';
+import { exportCommit, fingerprintCommit, git, gitFiles } from '../lib/workflow.mjs';
 
 function normalizedRepository(value) {
   return String(value || '')
@@ -99,13 +99,6 @@ export function readRepositoryTreeMap({ repositoryPath, revision, prefix = '', f
   return files;
 }
 
-function sourceDigest(files) {
-  const entries = [...files.entries()]
-    .sort(([left], [right]) => left.localeCompare(right, 'en'))
-    .map(([name, bytes]) => ({ path: name, sha256: sha256(normalized(bytes)) }));
-  return sha256(JSON.stringify(entries));
-}
-
 /**
  * Resolve an immutable template tree from either its historical standalone
  * repository or the Cars monorepo. A monorepo locator must name the exact
@@ -130,7 +123,9 @@ export function readPinnedTemplateTree({ key, repositoryPath, source, expectedDi
   if (actualRepository !== repository) throw new Error(`${key}: source repository identity mismatch; expected ${repository}`);
   const files = readRepositoryTreeMap({ repositoryPath, revision, prefix });
   if (!files.size) throw new Error(`${key}: pinned source tree is empty`);
-  const digest = sourceDigest(files);
+  const canonical = fingerprintCommit(repositoryPath, revision, { prefix });
+  if (canonical.files.length !== files.size) throw new Error(`${key}: canonical fingerprint and loaded source tree differ`);
+  const digest = canonical.digest;
   if (expectedDigest && digest !== expectedDigest) throw new Error(`${key}: source tree digest mismatch for ${revision}: ${digest}`);
   return {
     key,
@@ -139,7 +134,7 @@ export function readPinnedTemplateTree({ key, repositoryPath, source, expectedDi
     revision,
     path: prefix,
     digest,
-    files: files.size,
+    files: canonical.files.length,
     tree: files
   };
 }
