@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	// Native /about/daynight-auto-plovdiv (dealer profile). Self-contained: no
 	// StorefrontTemplateContent wrapper, scoped styles reproduce the shared blend
 	// (container/headings/breadcrumb/cards) using --sa-* tokens; dealer-specific
@@ -35,22 +38,22 @@
 <div class="dealer-page">
 	<DesktopYellowRouteHero
 		headingId="dealer-profile-route-title"
-		title={`${daynightSite.shortName} ${daynightSite.city}`}
-		copy={`Автокъща в ${daynightSite.city} с подбрани автомобили, ясна информация за състоянието и съдействие до сделката.`}
-		primaryLabel="Виж наличните"
+		title={`${daynightSite.shortName} ${i18n.dealer('city')}`}
+		copy={i18n.t('pattern.de2a240cf0d3', { v0: i18n.dealer('city') })}
+		primaryLabel={i18n.t('copy.1b031d3a64bd')}
 		primaryHref="/inventory"
-		secondaryLabel="Свържете се"
+		secondaryLabel={i18n.t('copy.f36755515677')}
 		secondaryHref="/contact"
 		compact
 	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/about')}>За нас</a></li>
+				<li><a href={i18n.href(resolve('/about'))}>{i18n.t('copy.6e9ec45d6d0b')}</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><span>Профил на {daynightSite.shortName}</span></li>
+				<li><span>{i18n.t('copy.46cf3010cb40')} {daynightSite.shortName}</span></li>
 			</ul>
 		</div>
 	</section>
@@ -59,32 +62,35 @@
 		<div class="container">
 			<div class="dealer-profile-hero__grid">
 				<div class="dealer-profile-hero__content">
-					<p class="eyebrow">Проверена автокъща</p>
-					<h1>{daynightSite.shortName} {daynightSite.city}</h1>
+					<p class="eyebrow">{i18n.t('copy.aa0ad8ef6502')}</p>
+					<h1>{daynightSite.shortName} {i18n.dealer('city')}</h1>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Автокъща в {daynightSite.city} с подбрани употребявани автомобили, ясна информация за състояние,
-						съдействие при документи и практични следващи стъпки след оглед.
+						{i18n.t('copy.cd74eef92cad')}
+						{i18n.dealer('city')}
+						{i18n.t('copy.ccb8c2387759')}
 					</p>
 					<ul class="dealer-profile-hero__highlights">
 						{#each highlights as highlight (highlight)}
 							<li>
-								<img src="/assets/icons/check.svg" alt="" aria-hidden="true" />
-								{highlight}
+								<img src={i18n.asset('/assets/icons/check.svg')} alt="" aria-hidden="true" />
+								{i18n.text(highlight)}
 							</li>
 						{/each}
 					</ul>
 					<div class="dealer-profile-hero__actions">
-						<a href={resolve('/inventory')} class="sa-cta sa-cta-secondary"> Виж наличните </a>
+						<a href={i18n.href(resolve('/inventory'))} class="sa-cta sa-cta-secondary">
+							{i18n.t('copy.1b031d3a64bd')}
+						</a>
 						<a {...phoneLinkProps} class="sa-cta sa-cta-ghost">
 							{daynightSite.phoneLabel}
 						</a>
 					</div>
 				</div>
 				<div class="dealer-profile-card">
-					<img class="dealer-profile-card__logo" src={daynightSite.logoDark} alt="" />
+					<img class="dealer-profile-card__logo" src={i18n.asset(daynightSite.logoDark)} alt="" />
 					<p class="dealer-profile-card__title mb-6">{daynightSite.shortName}</p>
-					<p class="text-secondary mb-18">{daynightSite.location}</p>
-					<a {...mapLinkProps} class="text-highlight">Виж локация</a>
+					<p class="text-secondary mb-18">{i18n.dealer('address')}</p>
+					<a {...mapLinkProps} class="text-highlight">{i18n.t('copy.d78ccda3011d')}</a>
 				</div>
 			</div>
 		</div>
@@ -93,22 +99,31 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Налични автомобили</h2>
-				<a href={resolve('/inventory')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<h2>{i18n.t('copy.3bce9c370af2')}</h2>
+				<a href={i18n.href(resolve('/inventory'))} class="sa-cta sa-cta-ghost">
+					{i18n.t('copy.5701bc5c6a95')}
+				</a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each vehicles as vehicle (vehicle.slug)}
 					<a
-						href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
+						href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
 						class="dealer-vehicle-card"
 					>
-						<img src={vehicle.image} alt={vehicle.shortTitle} loading="lazy" decoding="async" />
+						<img
+							src={i18n.asset(vehicle.image)}
+							alt={vehicle.shortTitle}
+							loading="lazy"
+							decoding="async"
+						/>
 						<div>
 							<p class="dealer-vehicle-card__title mb-8">
 								{vehicle.shortTitle}
 								{vehicle.year}
 							</p>
-							<p class="text-secondary mb-10">{vehicle.mileage} · {vehicle.fuel}</p>
+							<p class="text-secondary mb-10">
+								{i18n.distance(vehicle.mileage)} · {i18n.spec(vehicle.fuel)}
+							</p>
 							<p class="dealer-vehicle-card__price text-highlight">{vehicle.priceEur}</p>
 						</div>
 					</a>
@@ -121,18 +136,21 @@
 		<div class="container">
 			<div class="dealer-about-grid">
 				<div>
-					<p class="eyebrow">За автокъщата</p>
-					<h2>Подреден процес от избора до документите</h2>
+					<p class="eyebrow">{i18n.t('copy.9c2e410c5c6c')}</p>
+					<h2>{i18n.t('copy.e8ede101756b')}</h2>
 					<p class="h7 text-secondary line-height-28 mb-24">
-						Екипът помага с сравнение на автомобили, запазване на оглед, проверка на документи,
-						регистрация, финансиране и бартер. Фокусът е клиентът да има реална информация преди
-						решение, без излишни обещания.
+						{i18n.t('copy.9dd5505e54fc')}
 					</p>
-					<a href={resolve('/contact')} class="sa-cta sa-cta-primary"> Свържете се </a>
+					<a href={i18n.href(resolve('/contact'))} class="sa-cta sa-cta-primary">
+						{i18n.t('copy.f36755515677')}
+					</a>
 				</div>
 				<LazyMapEmbed
-					src={mapEmbedSrc}
-					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+					src={i18n.asset(mapEmbedSrc)}
+					title={i18n.t('pattern.69c703e84da6', {
+						v0: daynightSite.shortName,
+						v1: i18n.dealer('city')
+					})}
 					height="330"
 				/>
 			</div>
@@ -142,17 +160,27 @@
 	<section class="background-light py-80">
 		<div class="container">
 			<div class="title-section mb-30">
-				<h2>Екип</h2>
-				<a href={resolve('/team')} class="sa-cta sa-cta-ghost">Виж екипа</a>
+				<h2>{i18n.t('copy.3906a7e1f4c1')}</h2>
+				<a href={i18n.href(resolve('/team'))} class="sa-cta sa-cta-ghost"
+					>{i18n.t('copy.4815fed6958b')}</a
+				>
 			</div>
-			<p class="text-secondary mb-18">{daynightTeamDisclosure}</p>
+			<p class="text-secondary mb-18">{i18n.text(daynightTeamDisclosure)}</p>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each team as member (member.slug)}
-					<a href={resolve('/team/[slug]', { slug: member.slug })} class="dealer-team-card">
-						<img src={member.image} alt={member.name} loading="lazy" decoding="async" />
+					<a
+						href={i18n.href(resolve('/team/[slug]', { slug: member.slug }))}
+						class="dealer-team-card"
+					>
+						<img
+							src={i18n.asset(member.image)}
+							alt={i18n.text(member.name)}
+							loading="lazy"
+							decoding="async"
+						/>
 						<div>
-							<p class="dealer-team-card__name mb-4">{member.name}</p>
-							<p class="text-secondary">{member.role}</p>
+							<p class="dealer-team-card__name mb-4">{i18n.text(member.name)}</p>
+							<p class="text-secondary">{i18n.text(member.role)}</p>
 						</div>
 					</a>
 				{/each}
@@ -164,17 +192,19 @@
 		<div class="container">
 			<div class="title-section mb-30">
 				<div>
-					<h2>Отзиви от клиенти</h2>
-					<p class="text-secondary">{daynightReviewDisclosure}</p>
+					<h2>{i18n.t('copy.93b3d88de23a')}</h2>
+					<p class="text-secondary">{i18n.text(daynightReviewDisclosure)}</p>
 				</div>
-				<a href={resolve('/reviews')} class="sa-cta sa-cta-ghost"> Виж всички </a>
+				<a href={i18n.href(resolve('/reviews'))} class="sa-cta sa-cta-ghost">
+					{i18n.t('copy.5701bc5c6a95')}
+				</a>
 			</div>
 			<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 				{#each reviews as review (review.id)}
 					<article class="dealer-review-card">
-						<p class="h7 line-height-28 mb-18">{review.text}</p>
-						<strong>{review.name}</strong>
-						<span>{review.label}</span>
+						<p class="h7 line-height-28 mb-18">{i18n.text(review.text)}</p>
+						<strong>{i18n.text(review.name)}</strong>
+						<span>{i18n.text(review.label)}</span>
 					</article>
 				{/each}
 			</div>

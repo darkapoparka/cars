@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { onMount } from 'svelte';
 	import Search from '@lucide/svelte/icons/search';
 	import { getDesktopInventoryContext } from './desktop-inventory-context.svelte';
@@ -52,7 +55,9 @@
 
 <div class="daynight-inventory-searchbar">
 	<div class="daynight-inventory-search">
-		<label class="daynight-inventory-searchbar__label" for={searchId}>Търсене</label>
+		<label class="daynight-inventory-searchbar__label" for={searchId}
+			>{i18n.t('copy.bfc95eff30e5')}</label
+		>
 		{#if onOpen}
 			<button
 				id={searchId}
@@ -60,21 +65,22 @@
 				class="daynight-inventory-search__input daynight-inventory-search__trigger"
 				class:has-query={!!filters.store.query}
 				aria-label={filters.store.query
-					? `Търсене: ${filters.store.query}`
-					: 'Търсене на автомобили'}
+					? i18n.t('pattern.769c3ae47eea', { v0: filters.store.query })
+					: i18n.t('copy.364f79690e39')}
 				aria-haspopup="dialog"
 				disabled={!hydrated}
-				onclick={openFromTrigger}>{filters.store.query || searchPlaceholder}</button
+				onclick={openFromTrigger}>{filters.store.query || i18n.text(searchPlaceholder)}</button
 			>
 		{:else}
 			<input
+				{@attach i18n.validation}
 				id={searchId}
 				class="daynight-inventory-search__input"
 				type="search"
 				name="q"
 				data-daynight-inventory-search-input
 				autocomplete="off"
-				placeholder={searchPlaceholder}
+				placeholder={i18n.text(searchPlaceholder)}
 				bind:value={filters.store.query}
 				onkeydown={handleKeydown}
 			/>
@@ -82,15 +88,15 @@
 		<button
 			class="daynight-inventory-searchbar__submit"
 			type="button"
-			aria-label="Търси автомобили"
-			title="Търси автомобили"
+			aria-label={i18n.t('copy.255bbb6ac445')}
+			title={i18n.t('copy.255bbb6ac445')}
 			aria-haspopup={onOpen ? 'dialog' : undefined}
 			disabled={onOpen && !hydrated}
 			data-daynight-inventory-search-action
 			onclick={submit}
 		>
 			<Search size={20} strokeWidth={2} aria-hidden="true" />
-			{#if !onOpen}<span>Търси</span>{/if}
+			<span>{i18n.t('copy.6517beda9674')}</span>
 		</button>
 	</div>
 </div>

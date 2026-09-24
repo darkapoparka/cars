@@ -1,7 +1,7 @@
+import { localeFromUrl } from '$lib/locale/core';
 import type { PageServerLoad } from './$types';
 import { compareVehiclesFromVehicles } from '$lib/auxero/compare';
 import { vehicles } from '$lib/data/vehicles';
-import { resolveLocale } from '$lib/i18n/messages';
 import { getAccountDashboardPageData } from '$lib/server/account-dashboard-state';
 import { getCompareVehicles } from '$lib/server/compare-state';
 import {
@@ -12,7 +12,7 @@ import {
 import { requireDayNightPageSession } from '$lib/server/auth';
 
 export const load: PageServerLoad = ({ request, url }) => {
-	const locale = resolveLocale(url.searchParams.get('lang'));
+	const locale = localeFromUrl(url);
 	const routePath = 'account/compare';
 	const session = requireDayNightPageSession(request, routePath, url.searchParams);
 

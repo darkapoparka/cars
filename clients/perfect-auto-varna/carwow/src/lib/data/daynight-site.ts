@@ -12,27 +12,43 @@ const district = "Варна";
 const street = "бул. Цар Освободител 110, кв. Победа";
 const location = "бул. Цар Освободител 110, кв. Победа";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Варна',
+	locationShort: "Варна",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Варна'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "Перфект Ауто",
+	name: 'ПЕРФЕКТ АУТО',
 	shortName,
 	city,
 	region: city,
-	countryCode: "BG",
-	locale: "bg-BG",
-	currency: "EUR",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "359888802226",
-	phoneLabel: "0888 802 226",
-	email: "",
+	phone: '359888802226',
+	phoneLabel: '0888 802 226',
+	email: '',
 	location,
-	locationShort: "бул. Цар Освободител 110, кв. Победа",
+	locationShort: `${district}, ${city}`,
 	locationLandmark: "бул. Цар Освободител 110, кв. Победа",
-	hoursLabel: "За работно време и оглед се обадете предварително.",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://perfektauto.mobile.bg/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "Перфект Ауто",
-	heroSubtitle: "Варна · Представителни обяви към 10.09.2026 г. Потвърдете наличността и условията по телефона.",
+	heroTitle: 'ПЕРФЕКТ АУТО',
+	heroSubtitle: 'Варна - Премиум автомобили в Варна с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "За Перфект Ауто", href: '/about' },
+			{ label: 'За Перфект Ауто', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

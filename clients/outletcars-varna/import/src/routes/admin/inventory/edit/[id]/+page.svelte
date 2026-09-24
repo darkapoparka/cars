@@ -36,7 +36,7 @@
 				</Card.Header>
 				<Card.Content class="grid gap-3 text-sm">
 					<div class="text-muted-foreground">Requested ID</div>
-					<code class="bg-muted text-foreground rounded-md px-3 py-2 break-all">
+					<code class="rounded-md bg-muted px-3 py-2 break-all text-foreground">
 						{data.missingListingId}
 					</code>
 				</Card.Content>

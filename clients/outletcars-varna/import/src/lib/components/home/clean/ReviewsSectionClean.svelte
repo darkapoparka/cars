@@ -2,7 +2,8 @@
 	import { resolve } from '$app/paths';
 	import type { HomeFiveReview } from '$lib/auxero/home-five';
 	import type { HomePageCopy } from '$lib/i18n/messages';
-	import { ArrowRight, Star } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Star from '@lucide/svelte/icons/star';
 
 	let { reviews, copy }: { reviews: HomeFiveReview[]; copy: HomePageCopy } = $props();
 

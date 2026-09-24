@@ -1,3 +1,5 @@
+import { optionLabel } from '$lib/i18n/options';
+import type { Locale } from '$lib/locale/core';
 export const importCountries = [
 	{ value: '', label: 'Всички', flagSrc: '/assets/daynight/flags/all.svg' },
 	{ value: 'CN', label: 'Китай', flagSrc: '/assets/daynight/flags/cn.svg' },
@@ -64,14 +66,22 @@ export const importCriteriaUrl = (url: URL, criteria: ImportCriteria) => {
 	}
 	return `${next.pathname}${next.search}${next.hash}`;
 };
-export const importCriteriaSummary = (criteria: ImportCriteria) =>
+export const importCriteriaSummary = (criteria: ImportCriteria, locale: Locale = 'bg') =>
 	[
-		importCountries.find((country) => country.value === criteria.origin && country.value)?.label,
+		optionLabel(
+			importCountries.find((country) => country.value === criteria.origin && country.value)
+				?.label ?? '',
+			locale
+		),
 		[criteria.make, criteria.model].filter(Boolean).join(' '),
-		criteria.minYear ? `от ${criteria.minYear} г.` : '',
-		criteria.maxPrice ? `до ${Number(criteria.maxPrice).toLocaleString('bg-BG')} €` : '',
-		criteria.fuel,
-		criteria.transmission
+		criteria.minYear
+			? `${locale === 'en' ? 'from' : 'от'} ${criteria.minYear}${locale === 'en' ? '' : ' г.'}`
+			: '',
+		criteria.maxPrice
+			? `${locale === 'en' ? 'up to' : 'до'} ${Number(criteria.maxPrice).toLocaleString(locale === 'en' ? 'en-GB' : 'bg-BG')} €`
+			: '',
+		optionLabel(criteria.fuel, locale),
+		optionLabel(criteria.transmission, locale)
 	]
 		.filter(Boolean)
 		.join(' · ');

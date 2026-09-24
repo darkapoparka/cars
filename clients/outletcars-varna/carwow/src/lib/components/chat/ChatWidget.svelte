@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { onMount, tick } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { X } from '@lucide/svelte';
@@ -193,8 +196,11 @@
 		onclose={() => (open = false)}
 	>
 		{#if open}
-			<button type="button" class="chat-close" aria-label="Затвори чата" onclick={closeChat}
-				><X size={20} /></button
+			<button
+				type="button"
+				class="chat-close"
+				aria-label={i18n.t('copy.34ad9a7e17d8')}
+				onclick={closeChat}><X size={20} /></button
 			>
 			<ChatThread
 				{conversation}

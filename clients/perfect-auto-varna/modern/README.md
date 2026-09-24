@@ -26,3 +26,7 @@ Entry route: `/cars`
 See `TEMPLATE.md` for template-specific boundaries and `docs/LEAD-BUILD.md` for the complete lead workflow. Historical pre-split root docs are preserved under `docs/legacy/from-cars-2026-09-10/` for provenance only; they do not override the current instructions.
 
 Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).
+
+## Current refactor program
+
+The source refactor has been implemented. Start with [implementation status](refactor/IMPLEMENTATION_STATUS.md), [verification evidence](refactor/evidence/IMPLEMENTATION.md) and [site/admin configuration](docs/SITE-CONFIGURATION.md). The original plan remains in [refactor/README.md](refactor/README.md). Owner visual acceptance, live integration and Cars-mounted release qualification remain separate; do not restart completed source work.

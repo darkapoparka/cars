@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { KeyRound, Save } from '@lucide/svelte';
+	import KeyRound from '@lucide/svelte/icons/key-round';
+	import Save from '@lucide/svelte/icons/save';
 	import type { AuxeroAccountPasswordFormData } from '$lib/auxero/account-forms';
 
 	let { password }: { password: AuxeroAccountPasswordFormData } = $props();

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { Snippet } from 'svelte';
 	import type { Attachment } from 'svelte/attachments';
 
@@ -102,7 +105,7 @@
 		<iframe
 			class={iframeClass}
 			{title}
-			{src}
+			src={i18n.asset(src)}
 			{width}
 			{height}
 			style={iframeStyle}
@@ -115,7 +118,7 @@
 		<iframe
 			class={iframeClass}
 			{title}
-			{src}
+			src={i18n.asset(src)}
 			{width}
 			{height}
 			style={iframeStyle}

@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { MapPin, Save, Upload } from '@lucide/svelte';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import Save from '@lucide/svelte/icons/save';
+	import Upload from '@lucide/svelte/icons/upload';
 	import type { AuxeroAccountProfileFormData } from '$lib/auxero/account-forms';
 
 	let { profile }: { profile: AuxeroAccountProfileFormData } = $props();

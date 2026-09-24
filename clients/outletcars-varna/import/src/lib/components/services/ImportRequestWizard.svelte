@@ -1,6 +1,30 @@
 <script lang="ts">
-	import { ArrowRight, Check, ChevronLeft, Link2, Search, X } from '@lucide/svelte';
-	import { resolve } from '$app/paths';
+	import { assetHref } from '$lib/utils/assets';
+	import { optionLabel } from '$lib/i18n/options';
+	import { contentText } from '$lib/content/localized';
+	const ct = (value: string) => contentText(page.data.locale === 'en' ? 'en' : 'bg', value);
+	import { nativeMessage } from '$lib/i18n/native';
+
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
+	import { submitIntake } from '$lib/browser/submit-intake';
+	import { receiptMessage, type InquiryReceipt } from '$lib/domain/inquiry';
+	import { page } from '$app/state';
+	import { pushState } from '$app/navigation';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Check from '@lucide/svelte/icons/check';
+	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
+	import Link2 from '@lucide/svelte/icons/link-2';
+	import Search from '@lucide/svelte/icons/search';
+	import X from '@lucide/svelte/icons/x';
+	import { browser } from '$app/environment';
+	import {
+		readSessionDraft,
+		saveSessionDraft,
+		clearSessionDraft
+	} from '$lib/browser/session-draft';
+	import { site } from '$lib/config/site';
+	import { onMount, tick } from 'svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import {
 		emptyImportCriteria,
@@ -14,6 +38,7 @@
 	type ImportIntent = 'listing' | 'source';
 
 	type Props = {
+		embedded?: boolean;
 		initialIntent: ImportIntent;
 		initialVehicle?: string;
 		initialCriteria?: ImportCriteria;
@@ -21,13 +46,14 @@
 	};
 
 	let {
+		embedded = false,
 		initialIntent,
 		initialVehicle = '',
 		initialCriteria = emptyImportCriteria,
 		onclose
 	}: Props = $props();
 
-	const stepLabels = ['Автомобил', 'Изисквания', 'Контакт'] as const;
+	const stepLabels = $derived([nt('ui167'), nt('ui238'), nt('ui137')] as const);
 	const timeframeOptions = ['Без значение', 'До 1 месец', 'До 3 месеца', 'До 6 месеца'];
 
 	// The keyed parent recreates the wizard for each new intake session.
@@ -57,8 +83,16 @@
 	let phone = $state('');
 	let email = $state('');
 	let submitted = $state(false);
+	let receipt = $state<InquiryReceipt | null>(null);
 	let submitting = $state(false);
 	let submitError = $state('');
+	let validationMessage = $state('');
+	let draftReady = $state(false);
+	let wizardRoot = $state<HTMLDivElement | null>(null);
+	const draftKey = $derived('template:import:v2:' + site.identity.origin + ':' + initialIntent);
+	const historyId = `daynight-import-wizard-${Math.random().toString(36).slice(2)}`;
+	let historyEntryActive = false;
+	let closeAfterHistory = false;
 	const requestCriteria = $derived({
 		origin,
 		make,
@@ -68,7 +102,96 @@
 		fuel,
 		transmission
 	});
-	const criteriaSummary = $derived(importCriteriaSummary(requestCriteria));
+	const criteriaSummary = $derived(
+		importCriteriaSummary(requestCriteria, page.data.locale === 'en' ? 'en' : 'bg')
+	);
+
+	const clearDraft = () => {
+		clearSessionDraft(draftKey);
+	};
+
+	const requestClose = () => {
+		if (!browser || embedded || !historyEntryActive) {
+			onclose();
+			return;
+		}
+		closeAfterHistory = true;
+		historyEntryActive = false;
+		history.back();
+	};
+
+	const handleHistoryBack = () => {
+		if (closeAfterHistory) {
+			closeAfterHistory = false;
+			onclose();
+			return;
+		}
+		if (!historyEntryActive) return;
+		historyEntryActive = false;
+		validationMessage = '';
+		if (!submitted && step > 0) {
+			step -= 1;
+			queueMicrotask(() => {
+				pushState('', { ...page.state, __daynightWizard: historyId });
+				historyEntryActive = true;
+			});
+			return;
+		}
+		onclose();
+	};
+
+	onMount(() => {
+		if (!browser) return;
+		try {
+			clearSessionDraft('daynight-import-request-draft-v1');
+			const draft = readSessionDraft(draftKey);
+			if (!draft) return;
+			if (draft.intent === 'listing' || draft.intent === 'source') intent = draft.intent;
+			if (typeof draft.step === 'number' && draft.step >= 0 && draft.step <= 2) step = draft.step;
+			if (typeof draft.vehicle === 'string') vehicle = draft.vehicle;
+			if (typeof draft.make === 'string') make = draft.make;
+			if (typeof draft.model === 'string') model = draft.model;
+			if (typeof draft.budget === 'string') budget = draft.budget;
+			if (typeof draft.origin === 'string') origin = draft.origin;
+			if (typeof draft.minYear === 'string') minYear = draft.minYear;
+			if (typeof draft.fuel === 'string') fuel = draft.fuel;
+			if (typeof draft.transmission === 'string') transmission = draft.transmission;
+			if (typeof draft.timeframe === 'string') timeframe = draft.timeframe;
+			if (typeof draft.notes === 'string') notes = draft.notes;
+			if (typeof draft.name === 'string') name = draft.name;
+			if (typeof draft.phone === 'string') phone = draft.phone;
+			if (typeof draft.email === 'string') email = draft.email;
+		} catch {
+			clearDraft();
+		} finally {
+			draftReady = true;
+		}
+	});
+
+	onMount(() => {
+		if (embedded) return;
+		pushState('', { ...page.state, __daynightWizard: historyId });
+		historyEntryActive = true;
+		window.addEventListener('popstate', handleHistoryBack);
+		return () => window.removeEventListener('popstate', handleHistoryBack);
+	});
+
+	$effect(() => {
+		if (!browser || !draftReady || submitted) return;
+		saveSessionDraft(draftKey, {
+			step,
+			intent,
+			vehicle,
+			make,
+			model,
+			budget,
+			origin,
+			minYear,
+			fuel,
+			transmission,
+			timeframe
+		});
+	});
 
 	let canContinue = $derived(
 		step === 0
@@ -80,12 +203,37 @@
 				: true
 	);
 
+	const focusFirstInvalid = async () => {
+		let selector: string;
+		if (step === 0 && intent === 'listing') {
+			validationMessage = nt('ui243');
+			selector = '#import-wizard-vehicle';
+		} else if (step === 0) {
+			validationMessage = nt('ui244');
+			selector = '#import-wizard-make';
+		} else if (name.trim().length < 2) {
+			validationMessage = nt('ui245');
+			selector = '#import-wizard-name';
+		} else {
+			validationMessage = nt('ui191');
+			selector = '#import-wizard-phone';
+		}
+		await tick();
+		wizardRoot?.querySelector<HTMLElement>(selector)?.focus({ preventScroll: false });
+	};
+
 	const goBack = () => {
+		validationMessage = '';
 		if (step > 0) step -= 1;
 	};
 
 	const goNext = async () => {
-		if (!canContinue || submitting) return;
+		if (submitting) return;
+		if (!canContinue) {
+			await focusFirstInvalid();
+			return;
+		}
+		validationMessage = '';
 		if (step < stepLabels.length - 1) {
 			step += 1;
 			return;
@@ -93,55 +241,56 @@
 		submitting = true;
 		submitError = '';
 		try {
-			const response = await fetch(resolve('/api/inquiries'), {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					name,
-					phone,
-					email,
-					source: 'import-request',
-					routePath: 'import',
-					vehicle: intent === 'listing' ? vehicle : [make, model].filter(Boolean).join(' '),
-					message: ['Заявка за внос', criteriaSummary, `Срок: ${timeframe}`, notes]
-						.filter(Boolean)
-						.join('\n')
-				})
+			receipt = await submitIntake('/api/inquiries', {
+				name,
+				phone,
+				email,
+				source: 'import-request',
+				routePath: 'import',
+				vehicle: intent === 'listing' ? vehicle : [make, model].filter(Boolean).join(' '),
+				message: [nt('ui214'), criteriaSummary, `Срок: ${timeframe}`, notes]
+					.filter(Boolean)
+					.join('\n')
 			});
-			const result = await response.json();
-			if (!response.ok || !result.ok || !result.data?.inquiry?.id)
-				throw new Error('Inquiry was not saved');
+			clearDraft();
 			submitted = true;
 		} catch {
-			submitError = 'Заявката не е изпратена. Данните са запазени във формата — опитай отново.';
+			submitError = nt('ui246');
 		} finally {
 			submitting = false;
 		}
 	};
 </script>
 
-<div class="bc-import-wizard">
+<div class="bc-import-wizard" class:bc-import-wizard--embedded={embedded} bind:this={wizardRoot}>
 	{#if submitted}
 		<div class="bc-import-wizard__success" role="status">
 			<span><Check size={25} strokeWidth={2.4} aria-hidden="true" /></span>
-			<h2>Заявката е получена</h2>
+			<h2>{nt('ui215')}</h2>
 			<p>
-				{templateInquiryCopy.success}
+				{receipt ? receiptMessage(receipt, page.data.locale === 'en') : ''}
 			</p>
-			<button type="button" onclick={onclose}>Затвори</button>
+			<button type="button" onclick={requestClose}>{nt('ui33')}</button>
 		</div>
 	{:else}
 		<header class="bc-import-wizard__header">
 			<div>
-				<p>Етап {step + 1} от {stepLabels.length}</p>
+				<p>{nt('ui165')} {step + 1} {nt('ui216')} {stepLabels.length}</p>
 				<h2>{stepLabels[step]}</h2>
 			</div>
-			<button type="button" aria-label="Затвори" onclick={onclose}>
+			<button type="button" aria-label={nt('ui33')} onclick={requestClose}>
 				<X size={20} strokeWidth={2.3} aria-hidden="true" />
 			</button>
 		</header>
 
-		<div class="bc-import-wizard__progress" aria-label={`Стъпка ${step + 1} от 3`}>
+		<div
+			class="bc-import-wizard__progress"
+			role="progressbar"
+			aria-valuemin={0}
+			aria-valuemax={3}
+			aria-valuenow={step + 1}
+			aria-label={`${nt('ui165')} ${step + 1} ${nt('ui216')} 3`}
+		>
 			{#each stepLabels as label, index (label)}
 				<span class:done={index <= step}></span>
 			{/each}
@@ -150,46 +299,46 @@
 		<div class="bc-import-wizard__body">
 			{#if step === 0}
 				<div class="bc-import-wizard__intro">
-					<h3>Кой автомобил да проверим?</h3>
-					<p>Изпрати готова обява или опиши автомобила, който търсиш.</p>
+					<h3>{nt('ui217')}</h3>
+					<p>{nt('ui218')}</p>
 				</div>
 
-				<div class="bc-import-wizard__intent" aria-label="Начин на заявка">
-					<button
-						type="button"
-						class:active={intent === 'listing'}
-						aria-pressed={intent === 'listing'}
-						onclick={() => (intent = 'listing')}
-					>
-						<Link2 size={17} strokeWidth={2.2} aria-hidden="true" />
-						Имам обява или VIN
-					</button>
-					<button
-						type="button"
-						class:active={intent === 'source'}
-						aria-pressed={intent === 'source'}
-						onclick={() => (intent = 'source')}
-					>
-						<Search size={17} strokeWidth={2.2} aria-hidden="true" />
-						Търся автомобил
-					</button>
-				</div>
+				{#if !embedded}<div class="bc-import-wizard__intent" aria-label={nt('ui219')}>
+						<button
+							type="button"
+							class:active={intent === 'listing'}
+							aria-pressed={intent === 'listing'}
+							onclick={() => (intent = 'listing')}
+						>
+							<Link2 size={17} strokeWidth={2.2} aria-hidden="true" />
+							{nt('ui220')}
+						</button>
+						<button
+							type="button"
+							class:active={intent === 'source'}
+							aria-pressed={intent === 'source'}
+							onclick={() => (intent = 'source')}
+						>
+							<Search size={17} strokeWidth={2.2} aria-hidden="true" />
+							{nt('ui221')}
+						</button>
+					</div>{/if}
 
 				<div class="bc-import-wizard__fields">
 					{#if intent === 'listing'}
 						<label class="bc-import-wizard__field--wide" for="import-wizard-vehicle">
-							<span>Линк към обява или VIN *</span>
+							<span>{nt('ui222')}</span>
 							<input
 								id="import-wizard-vehicle"
 								type="text"
-								placeholder="mobile.de, AutoScout24 или VIN"
+								placeholder={nt('ui223')}
 								required
 								bind:value={vehicle}
 							/>
 						</label>
 					{/if}
 					<fieldset class="bc-import-wizard__field--wide">
-						<legend>Пазар за покупка</legend>
+						<legend>{nt('ui224')}</legend>
 						<div class="bc-import-wizard__country-grid">
 							{#each importCountries as country (country.value)}
 								<button
@@ -199,32 +348,34 @@
 									onclick={() => (origin = country.value)}
 								>
 									<img
-										src={country.flagSrc}
+										src={assetHref(country.flagSrc)}
 										alt=""
 										aria-hidden="true"
 										width="24"
 										height="18"
-									/><strong>{country.label}</strong>
+									/><strong
+										>{optionLabel(country.label, page.data.locale === 'en' ? 'en' : 'bg')}</strong
+									>
 								</button>
 							{/each}
 						</div>
 					</fieldset>
 					{#if intent === 'source'}
 						<label for="import-wizard-make">
-							<span>Марка</span>
+							<span>{nt('ui171')}</span>
 							<input
 								id="import-wizard-make"
 								type="text"
-								placeholder="Напр. BMW"
+								placeholder={nt('ui225')}
 								bind:value={make}
 							/>
 						</label>
 						<label for="import-wizard-model">
-							<span>Модел</span>
+							<span>{nt('ui172')}</span>
 							<input
 								id="import-wizard-model"
 								type="text"
-								placeholder="Напр. X5"
+								placeholder={nt('ui226')}
 								bind:value={model}
 							/>
 						</label>
@@ -232,12 +383,12 @@
 				</div>
 			{:else if step === 1}
 				<div class="bc-import-wizard__intro">
-					<h3>Какво е важно за теб?</h3>
-					<p>Бюджетът и срокът помагат да върнем реалистична следваща стъпка.</p>
+					<h3>{nt('ui227')}</h3>
+					<p>{nt('ui228')}</p>
 				</div>
 				<div class="bc-import-wizard__fields">
 					<label for="import-wizard-year">
-						<span>Година от</span>
+						<span>{nt('ui130')}</span>
 						<input
 							id="import-wizard-year"
 							type="text"
@@ -248,7 +399,7 @@
 						/>
 					</label>
 					<label for="import-wizard-budget">
-						<span>Бюджет до</span>
+						<span>{nt('ui229')}</span>
 						<input
 							id="import-wizard-budget"
 							type="text"
@@ -258,33 +409,35 @@
 						/>
 					</label>
 					<fieldset class="bc-import-wizard__field--wide">
-						<legend>Желан срок</legend>
+						<legend>{nt('ui230')}</legend>
 						<div class="bc-import-wizard__chips">
 							{#each timeframeOptions as option (option)}
 								<button
 									type="button"
 									class:active={timeframe === option}
 									aria-pressed={timeframe === option}
-									onclick={() => (timeframe = option)}>{option}</button
+									onclick={() => (timeframe = option)}
+									>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
 								>
 							{/each}
 						</div>
 					</fieldset>
 					<fieldset class="bc-import-wizard__field--wide">
-						<legend>Гориво</legend>
+						<legend>{nt('ui61')}</legend>
 						<div class="bc-import-wizard__chips">
 							{#each importFuels as option (option)}
 								<button
 									type="button"
 									class:active={fuel === option}
 									aria-pressed={fuel === option}
-									onclick={() => (fuel = fuel === option ? '' : option)}>{option}</button
+									onclick={() => (fuel = fuel === option ? '' : option)}
+									>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
 								>
 							{/each}
 						</div>
 					</fieldset>
 					<fieldset class="bc-import-wizard__field--wide">
-						<legend>Скорости</legend>
+						<legend>{nt('ui231')}</legend>
 						<div class="bc-import-wizard__chips">
 							{#each importTransmissions as option (option)}
 								<button
@@ -292,42 +445,38 @@
 									class:active={transmission === option}
 									aria-pressed={transmission === option}
 									onclick={() => (transmission = transmission === option ? '' : option)}
-									>{option}</button
+									>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
 								>
 							{/each}
 						</div>
 					</fieldset>
 					<label class="bc-import-wizard__field--wide" for="import-wizard-notes">
-						<span>Предпочитания</span>
-						<textarea
-							id="import-wizard-notes"
-							rows="4"
-							placeholder="Двигател, година, оборудване или друго важно"
-							bind:value={notes}
+						<span>{nt('ui232')}</span>
+						<textarea id="import-wizard-notes" rows="4" placeholder={nt('ui233')} bind:value={notes}
 						></textarea>
 					</label>
 				</div>
 			{:else}
 				<div class="bc-import-wizard__intro">
-					<h3>Данни за контакт</h3>
-					<p>Името и телефонът са необходими. Имейлът е по желание.</p>
+					<h3>{nt('ui41')}</h3>
+					<p>{nt('ui234')}</p>
 					{#if criteriaSummary}<p class="bc-import-wizard__summary">{criteriaSummary}</p>{/if}
 				</div>
 				<div class="bc-import-wizard__fields">
 					<label class="bc-import-wizard__field--wide" for="import-wizard-phone">
-						<span>Телефон *</span>
+						<span>{nt('ui178')}</span>
 						<input
 							id="import-wizard-phone"
 							type="tel"
 							inputmode="tel"
 							autocomplete="tel"
-							placeholder="Вашият телефон"
+							placeholder={nt('ui235')}
 							required
 							bind:value={phone}
 						/>
 					</label>
 					<label for="import-wizard-name">
-						<span>Име *</span>
+						<span>{nt('ui236')}</span>
 						<input
 							id="import-wizard-name"
 							type="text"
@@ -338,7 +487,7 @@
 						/>
 					</label>
 					<label for="import-wizard-email">
-						<span>Имейл</span>
+						<span>{nt('ui22')}</span>
 						<input
 							id="import-wizard-email"
 							type="email"
@@ -348,25 +497,23 @@
 						/>
 					</label>
 				</div>
-				<p class="bc-import-wizard__promise">{templateInquiryCopy.notice}</p>
+				<p class="bc-import-wizard__promise">{ct(templateInquiryCopy.notice)}</p>
 			{/if}
 		</div>
 
+		{#if validationMessage}<p class="bc-import-wizard__error" role="alert">
+				{validationMessage}
+			</p>{/if}
 		{#if submitError}<p class="bc-import-wizard__error" role="alert">{submitError}</p>{/if}
 		<footer class="bc-import-wizard__nav" aria-busy={submitting}>
 			{#if step > 0}
 				<button type="button" class="bc-import-wizard__back" onclick={goBack} disabled={submitting}>
 					<ChevronLeft size={18} strokeWidth={2.4} aria-hidden="true" />
-					Назад
+					{nt('ui183')}
 				</button>
 			{/if}
-			<button
-				type="button"
-				class="bc-import-wizard__next"
-				disabled={!canContinue || submitting}
-				onclick={goNext}
-			>
-				{submitting ? 'Изпращане…' : step < stepLabels.length - 1 ? 'Продължи' : 'Изпрати заявката'}
+			<button type="button" class="bc-import-wizard__next" disabled={submitting} onclick={goNext}>
+				{submitting ? nt('ui184') : step < stepLabels.length - 1 ? nt('ui185') : nt('ui237')}
 				<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
 			</button>
 		</footer>
@@ -388,26 +535,17 @@
 	}
 	.bc-import-wizard {
 		display: grid;
-		grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
 		height: calc(100dvh - var(--bc-kb-inset, 0px));
 		min-height: 0;
-		gap: var(--bc-space-3);
-		background: var(--bc-bg-strong);
 		color: var(--bc-ink);
-		padding: max(var(--bc-space-3), env(safe-area-inset-top)) var(--bc-mobile-gutter)
-			max(var(--bc-space-3), env(safe-area-inset-bottom));
 	}
 
 	.bc-import-wizard__header {
-		display: flex;
-		align-items: center;
 		justify-content: space-between;
-		gap: 12px;
 	}
 
 	.bc-import-wizard__header > div {
 		display: grid;
-		gap: 2px;
 	}
 
 	.bc-import-wizard__header h2,
@@ -416,30 +554,16 @@
 	}
 
 	.bc-import-wizard__header h2 {
-		font-size: var(--bc-mobile-section-title);
-		font-weight: var(--bc-weight-heading);
 		letter-spacing: -0.02em;
-		line-height: var(--bc-mobile-section-title-leading);
-	}
-
-	.bc-import-wizard__header p {
-		color: var(--bc-muted);
-		font-size: var(--bc-mobile-meta);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-meta-leading);
 	}
 
 	.bc-import-wizard__header > button {
 		display: flex;
-		width: 44px;
-		height: 44px;
 		flex: 0 0 44px;
 		align-items: center;
 		justify-content: center;
 		border: 0;
 		border-radius: 999px;
-		background: var(--bc-surface-soft);
-		color: var(--bc-ink);
 		cursor: pointer;
 		padding: 0;
 	}
@@ -447,13 +571,10 @@
 	.bc-import-wizard__progress {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 6px;
 	}
 
 	.bc-import-wizard__progress span {
-		height: 5px;
 		border-radius: 999px;
-		background: var(--bc-border);
 	}
 
 	.bc-import-wizard__progress span.done {
@@ -463,10 +584,8 @@
 	.bc-import-wizard__body {
 		display: grid;
 		min-height: 0;
-		gap: var(--bc-space-4);
 		overflow-y: auto;
 		overscroll-behavior: contain;
-		padding: var(--bc-space-1) 1px var(--bc-space-6);
 		scrollbar-width: none;
 	}
 	.bc-import-wizard__body::-webkit-scrollbar {
@@ -475,7 +594,6 @@
 
 	.bc-import-wizard__intro {
 		display: grid;
-		gap: 4px;
 	}
 
 	.bc-import-wizard__intro h3,
@@ -484,53 +602,35 @@
 	}
 
 	.bc-import-wizard__intro h3 {
-		font-size: var(--bc-mobile-section-title);
-		font-weight: var(--bc-weight-heading);
 		letter-spacing: -0.015em;
-		line-height: var(--bc-mobile-section-title-leading);
 	}
 
 	.bc-import-wizard__intro p {
 		max-width: 52ch;
 		color: var(--bc-muted);
-		font-size: var(--bc-mobile-body);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-body-leading);
 	}
 
 	.bc-import-wizard__intent {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 8px;
 	}
 
 	.bc-import-wizard__intent button {
 		display: flex;
-		min-height: 50px;
 		align-items: center;
 		justify-content: center;
 		gap: 7px;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-white);
 		color: var(--bc-ink);
 		cursor: pointer;
-		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-control);
-		padding: 0 9px;
 	}
 
 	.bc-import-wizard__intent button.active {
 		border-color: var(--bc-accent);
-		background: rgba(196, 1, 1, 0.08);
-		color: var(--bc-accent-hover);
 	}
 
 	.bc-import-wizard__fields {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 12px 9px;
 	}
 
 	.bc-import-wizard__fields label {
@@ -554,10 +654,7 @@
 	.bc-import-wizard__fields textarea {
 		display: block;
 		width: 100%;
-		border: 1px solid var(--bc-border) !important;
-		border-radius: var(--bc-radius-control) !important;
-		background: var(--bc-white) !important;
-		box-shadow: none !important;
+		box-shadow: none;
 		color: var(--bc-ink);
 		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-control);
@@ -565,15 +662,8 @@
 		outline: 0;
 	}
 
-	.bc-import-wizard__fields input {
-		height: 48px !important;
-		padding: 0 12px !important;
-	}
-
 	.bc-import-wizard__fields textarea {
-		min-height: 100px;
 		resize: vertical;
-		padding: 11px 12px !important;
 	}
 
 	.bc-import-wizard__fields input::placeholder,
@@ -584,8 +674,8 @@
 
 	.bc-import-wizard__fields input:focus-visible:focus-visible,
 	.bc-import-wizard__fields textarea:focus-visible {
-		border-color: var(--bc-accent) !important;
-		background: var(--bc-white) !important;
+		border-color: var(--bc-accent);
+		background: var(--bc-white);
 	}
 
 	.bc-import-wizard__fields fieldset {
@@ -604,26 +694,15 @@
 		padding: 0;
 	}
 	.bc-import-wizard__country-grid {
-		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: var(--bc-space-2);
 	}
 	.bc-import-wizard__country-grid button {
-		display: grid;
-		min-height: 64px;
 		place-items: center;
-		gap: var(--bc-space-1);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-white);
 		color: var(--bc-ink);
 		cursor: pointer;
-		padding: var(--bc-space-2);
 	}
 	.bc-import-wizard__country-grid button > img {
 		display: block;
-		width: 24px;
-		height: 18px;
 		border-radius: 3px;
 		object-fit: cover;
 	}
@@ -634,33 +713,23 @@
 	}
 	.bc-import-wizard__country-grid button.active {
 		border-color: var(--bc-accent);
-		background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
-		color: var(--bc-accent-hover);
 	}
 
 	.bc-import-wizard__chips {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--bc-space-2);
 	}
 	.bc-import-wizard__chips button {
 		display: inline-flex;
-		min-height: var(--bc-control-height-standard);
 		align-items: center;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-white);
 		color: var(--bc-ink);
 		cursor: pointer;
 		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-control);
-		padding: 0 var(--bc-space-3);
 		line-height: var(--bc-leading-control);
 	}
 	.bc-import-wizard__chips button.active {
 		border-color: var(--bc-accent);
-		background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
-		color: var(--bc-accent-hover);
 	}
 
 	.bc-import-wizard__promise {
@@ -673,30 +742,23 @@
 
 	.bc-import-wizard__nav {
 		display: flex;
-		gap: var(--bc-space-2);
-		border-top: 1px solid var(--bc-border);
-		background: var(--bc-bg-strong);
 		padding-top: var(--bc-space-3);
 	}
 
 	.bc-import-wizard__back,
 	.bc-import-wizard__next {
 		display: inline-flex;
-		min-height: var(--bc-control-height-primary);
 		align-items: center;
 		justify-content: center;
 		gap: 6px;
-		border-radius: var(--bc-radius-control);
 		cursor: pointer;
 		font-size: var(--bc-text-cta);
-		font-weight: var(--bc-weight-heading);
+		font-weight: var(--bc-weight-action);
 		line-height: var(--bc-leading-cta);
 	}
 
 	.bc-import-wizard__back {
 		flex: 0 0 auto;
-		border: 1px solid var(--bc-border);
-		background: var(--bc-white);
 		color: var(--bc-ink);
 		padding: 0 13px;
 	}
@@ -704,14 +766,11 @@
 	.bc-import-wizard__next {
 		flex: 1 1 auto;
 		border: 0;
-		background: var(--bc-ink);
 		color: var(--bc-white);
 		padding: 0 16px;
 	}
 
 	.bc-import-wizard__next:disabled {
-		background: var(--bc-border);
-		color: var(--bc-muted);
 		cursor: not-allowed;
 	}
 
@@ -764,8 +823,8 @@
 		background: var(--bc-ink);
 		color: var(--bc-white);
 		cursor: pointer;
-		font-size: 15px;
-		font-weight: 700;
+		font-size: var(--bc-text-cta);
+		font-weight: var(--bc-weight-action);
 	}
 
 	.bc-import-wizard__nav :global(svg),
@@ -886,21 +945,21 @@
 	}
 	.bc-import-wizard__fields input,
 	.bc-import-wizard__fields textarea {
-		border: 0 !important;
-		border-radius: 10px !important;
-		background: var(--bc-white) !important;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
 	}
 	.bc-import-wizard__fields input {
-		height: 44px !important;
-		padding: 0 11px !important;
+		height: 44px;
+		padding: 0 11px;
 	}
 	.bc-import-wizard__fields textarea {
 		min-height: 70px;
-		padding: 9px 11px !important;
+		padding: 9px 11px;
 	}
 	.bc-import-wizard__fields input:focus,
 	.bc-import-wizard__fields textarea:focus {
-		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent) !important;
+		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent);
 	}
 
 	.bc-import-wizard__country-grid {
@@ -969,5 +1028,109 @@
 	.bc-import-wizard__next:disabled {
 		background: var(--bc-border);
 		color: var(--bc-muted);
+	}
+
+	.bc-import-wizard--embedded {
+		height: auto;
+		min-height: 0;
+		background: var(--bc-surface-raised);
+		padding: 0;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__header {
+		display: block;
+		padding: 0 0 var(--bc-space-4);
+		background: transparent;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__header > div {
+		text-align: left;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__header h2 {
+		font-size: var(--bc-text-h4);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__header > button,
+	.bc-import-wizard--embedded .bc-import-wizard__header::after {
+		display: none;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__progress {
+		padding: 0;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__body {
+		padding: var(--bc-space-5) 0;
+		background: transparent;
+		overflow: visible;
+		gap: var(--bc-space-4);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__country-grid,
+	.bc-import-wizard--embedded .bc-import-wizard__chips {
+		flex-wrap: wrap;
+		overflow: visible;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__fields {
+		gap: var(--bc-form-gap);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__fields input,
+	.bc-import-wizard--embedded .bc-import-wizard__fields textarea {
+		border: 1px solid var(--bc-border-strong);
+		border-radius: var(--bc-radius-control);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__nav {
+		padding: var(--bc-space-4) 0 0;
+		background: transparent;
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__next {
+		background: var(--bc-accent);
+	}
+	.bc-import-wizard--embedded .bc-import-wizard__success {
+		min-height: 320px;
+		align-content: center;
+	}
+	@media (min-width: 768px) {
+		.bc-import-wizard--embedded .bc-import-wizard__header p {
+			font-size: var(--bc-text-label);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__intro h3 {
+			font-size: var(--bc-text-h4);
+			line-height: var(--bc-leading-h4);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__intro p {
+			font-size: var(--bc-text-prose);
+			line-height: var(--bc-leading-body-lg);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__fields span,
+		.bc-import-wizard--embedded .bc-import-wizard__fields legend {
+			color: var(--bc-ink);
+			font-size: var(--bc-text-control);
+			line-height: var(--bc-leading-label);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__fields input,
+		.bc-import-wizard--embedded .bc-import-wizard__fields textarea {
+			border-color: var(--bc-route-pill-border);
+			background: var(--bc-surface);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__fields input {
+			height: var(--bc-control-height-primary);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__fields input::placeholder,
+		.bc-import-wizard--embedded .bc-import-wizard__fields textarea::placeholder {
+			color: var(--bc-copy);
+			opacity: 1;
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__country-grid,
+		.bc-import-wizard--embedded .bc-import-wizard__chips {
+			gap: var(--bc-space-2);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__country-grid button,
+		.bc-import-wizard--embedded .bc-import-wizard__chips button {
+			min-height: var(--bc-control-height-standard);
+			border-radius: var(--bc-radius-md);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__country-grid button:not(.active),
+		.bc-import-wizard--embedded .bc-import-wizard__chips button:not(.active) {
+			background: var(--bc-bg-strong);
+		}
+		.bc-import-wizard--embedded .bc-import-wizard__next {
+			min-height: var(--bc-control-height-primary);
+			border-radius: var(--bc-radius-control);
+		}
 	}
 </style>

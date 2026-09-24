@@ -1,16 +1,31 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	import { contentText } from '$lib/content/localized';
+	const english = $derived(page.data.locale === 'en');
+	import { assetHref } from '$lib/utils/assets';
+	import { getGarageContext } from '$lib/state/garage.svelte';
+	const garage = getGarageContext();
+	import { submitIntake } from '$lib/browser/submit-intake';
+	import { receiptMessage } from '$lib/domain/inquiry';
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
+	import { linkHref as resolve } from '$lib/utils/links';
 	import type { AuxeroVehicleDetailData, AuxeroVehicleDetailDrawerTabId } from '$lib/auxero/detail';
-	import { ArrowLeft, Check, GitCompare, Heart, PhoneCall, Send, Share2, X } from '@lucide/svelte';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
+	import Check from '@lucide/svelte/icons/check';
+	import GitCompare from '@lucide/svelte/icons/git-compare';
+	import Heart from '@lucide/svelte/icons/heart';
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
+	import Send from '@lucide/svelte/icons/send';
+	import Share2 from '@lucide/svelte/icons/share-2';
+	import X from '@lucide/svelte/icons/x';
 	import { Drawer } from 'vaul-svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
+	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 
 	let { detail }: { detail: AuxeroVehicleDetailData } = $props();
 
-	const compareHref = resolve('/compare');
-	const favoritesHref = resolve('/account');
+	const compareHref = $derived(resolve('/compare'));
 	const externalHref = (href: string) => ({ href });
 	const drawerRestingSnapPoint = 0.66;
 	const drawerExpandedSnapPoint = 0.92;
@@ -21,6 +36,10 @@
 	let drawerOpen = $state(true);
 	let drawerContentEl = $state<HTMLElement | null>(null);
 	let selectedImageIndex = $state(0);
+	let galleryPointerId = $state<number | null>(null);
+	let galleryStartX = $state(0);
+	let galleryStartY = $state(0);
+	let gallerySwiped = $state(false);
 	let shareStatus = $state('');
 	let viewerOpen = $state(false);
 	let inquiryOpen = $state(false);
@@ -30,6 +49,21 @@
 
 	const heroGalleryImages = $derived(Array.from(new Set(detail.galleryImages)));
 	const heroImage = $derived(heroGalleryImages[selectedImageIndex] ?? detail.image);
+
+	$effect(() => {
+		if (!browser || heroGalleryImages.length < 2) return;
+		const adjacent = [
+			(selectedImageIndex - 1 + heroGalleryImages.length) % heroGalleryImages.length,
+			(selectedImageIndex + 1) % heroGalleryImages.length
+		];
+		for (const index of adjacent) {
+			const src = heroGalleryImages[index];
+			if (!src || src === heroImage) continue;
+			const image = new Image();
+			image.decoding = 'async';
+			image.src = assetHref(src);
+		}
+	});
 	const primaryFacts = $derived(detail.overviewItems.slice(0, 4));
 	const specItems = $derived(detail.overviewItems.slice(0, 10));
 	const featureGroups = $derived(detail.featureTabs.filter((tab) => tab.items.length > 0));
@@ -103,9 +137,51 @@
 	const useFallbackImage = (event: Event) => {
 		const image = event.currentTarget as HTMLImageElement;
 
-		if (image.src !== detail.imageFallback) {
-			image.src = detail.imageFallback;
+		if (image.getAttribute('src') !== assetHref(detail.imageFallback)) {
+			image.src = assetHref(detail.imageFallback);
 		}
+	};
+
+	const beginGallerySwipe = (event: PointerEvent) => {
+		if (event.pointerType === 'mouse' && event.button !== 0) return;
+		galleryPointerId = event.pointerId;
+		galleryStartX = event.clientX;
+		galleryStartY = event.clientY;
+		gallerySwiped = false;
+		try {
+			(event.currentTarget as HTMLElement).setPointerCapture?.(event.pointerId);
+		} catch {
+			// Pointer capture is optional on older mobile WebKit versions.
+		}
+	};
+
+	const finishGallerySwipe = (event: PointerEvent) => {
+		if (galleryPointerId !== event.pointerId) return;
+		const deltaX = event.clientX - galleryStartX;
+		const deltaY = event.clientY - galleryStartY;
+		galleryPointerId = null;
+		if (
+			heroGalleryImages.length > 1 &&
+			Math.abs(deltaX) >= 48 &&
+			Math.abs(deltaX) > Math.abs(deltaY) * 1.2
+		) {
+			gallerySwiped = true;
+			const direction = deltaX < 0 ? 1 : -1;
+			selectedImageIndex =
+				(selectedImageIndex + direction + heroGalleryImages.length) % heroGalleryImages.length;
+		}
+	};
+
+	const cancelGallerySwipe = () => {
+		galleryPointerId = null;
+	};
+
+	const activateHeroImage = () => {
+		if (gallerySwiped) {
+			gallerySwiped = false;
+			return;
+		}
+		openImageViewer(selectedImageIndex);
 	};
 
 	const goBack = () => {
@@ -167,22 +243,18 @@
 		inquirySubmitting = true;
 
 		try {
-			const response = await fetch(resolve('/api/inquiries'), {
-				body: JSON.stringify({
-					...payload,
-					source: 'vehicle-detail-mobile',
-					vehicleSlug: detail.slug
-				}),
-				headers: { 'content-type': 'application/json' },
-				method: 'POST'
+			const receipt = await submitIntake('/api/inquiries', {
+				...payload,
+				source: 'vehicle-detail-mobile',
+				vehicleSlug: detail.slug
 			});
-			const result = await response.json();
-			if (!response.ok || !result.ok || !result.data?.inquiry?.id) throw new Error('Not saved');
 			inquirySaved = true;
-			inquiryStatus = templateInquiryCopy.success;
+			inquiryStatus = receiptMessage(receipt, english);
 			form.reset();
 		} catch {
-			inquiryStatus = 'Заявката не е запазена. Провери данните и опитай отново.';
+			inquiryStatus = english
+				? 'The request was not saved. Check the details and try again.'
+				: 'Заявката не е запазена. Провери данните и опитай отново.';
 		} finally {
 			inquirySubmitting = false;
 		}
@@ -228,17 +300,6 @@
 				display: none !important;
 			}
 
-			body header,
-			body.auxero-template-listing-details-3-html header,
-			body.auxero-template-listing-details-3-html .header,
-			body.auxero-template-listing-details-3-html .header-style-3,
-			body .mobile-bottom-nav,
-			body .progress-wrap,
-			body section.mb-22.background-light,
-			body .tf-spacing-style4 {
-				display: none !important;
-			}
-
 			body section.pb-100 {
 				padding-bottom: 0 !important;
 			}
@@ -257,11 +318,14 @@
 			type="button"
 			class="daynight-mobile-pdp__image-button"
 			aria-label={`${detail.mobileDrawer.photoLabel} ${selectedImageIndex + 1}`}
-			onclick={() => openImageViewer(selectedImageIndex)}
+			onpointerdown={beginGallerySwipe}
+			onpointerup={finishGallerySwipe}
+			onpointercancel={cancelGallerySwipe}
+			onclick={activateHeroImage}
 		>
 			<img
 				class="daynight-mobile-pdp__image"
-				src={heroImage}
+				src={assetHref(heroImage)}
 				alt={detail.title}
 				width="900"
 				height="1200"
@@ -272,6 +336,11 @@
 			/>
 		</button>
 		<div class="daynight-mobile-pdp__shade"></div>
+		{#if heroGalleryImages.length > 1}
+			<p class="daynight-mobile-pdp__photo-count" aria-live="polite">
+				{selectedImageIndex + 1} / {heroGalleryImages.length}
+			</p>
+		{/if}
 
 		<div class="daynight-mobile-pdp__topbar" data-mobile-pdp-topbar>
 			<button type="button" aria-label={detail.mobileDrawer.backLabel} onclick={goBack}>
@@ -279,12 +348,17 @@
 			</button>
 
 			<div class="daynight-mobile-pdp__topbar-actions">
-				<a href={compareHref} aria-label={detail.copy.compare}>
+				<a href={resolve(compareHref)} aria-label={detail.copy.compare}>
 					<GitCompare size={20} strokeWidth={2.35} aria-hidden="true" />
 				</a>
-				<a href={favoritesHref} aria-label={detail.copy.savePrefix}>
+				<button
+					type="button"
+					aria-label={detail.copy.savePrefix}
+					aria-pressed={garage.isFavorite(detail.slug)}
+					onclick={() => garage.toggleFavorite(detail.slug)}
+				>
 					<Heart size={20} strokeWidth={2.35} aria-hidden="true" />
-				</a>
+				</button>
 				<button type="button" aria-label={detail.mobileDrawer.shareLabel} onclick={shareVehicle}>
 					<Share2 size={21} strokeWidth={2.35} aria-hidden="true" />
 				</button>
@@ -296,33 +370,6 @@
 				<Check size={16} strokeWidth={2.4} aria-hidden="true" />
 				{shareStatus}
 			</p>
-		{/if}
-
-		{#if heroGalleryImages.length > 1}
-			<div class="daynight-mobile-pdp__hero-thumbs" aria-label={detail.mobileDrawer.photoLabel}>
-				{#each heroGalleryImages as image, index (image)}
-					<button
-						type="button"
-						class={selectedImageIndex === index ? 'active' : ''}
-						data-mobile-pdp-thumb
-						aria-current={selectedImageIndex === index ? 'true' : undefined}
-						aria-label={`${detail.mobileDrawer.photoLabel} ${index + 1}`}
-						onclick={() => {
-							selectedImageIndex = index;
-						}}
-					>
-						<img
-							src={image}
-							alt=""
-							width="96"
-							height="72"
-							loading="lazy"
-							decoding="async"
-							onerror={useFallbackImage}
-						/>
-					</button>
-				{/each}
-			</div>
 		{/if}
 	</div>
 
@@ -397,7 +444,7 @@
 						<div class="daynight-mobile-pdp__facts" aria-label={detail.copy.carOverview}>
 							{#each primaryFacts as item (item.label)}
 								<div>
-									<img src={`/assets/icons/${item.icon}`} alt="" aria-hidden="true" />
+									<img src={assetHref(`/assets/icons/${item.icon}`)} alt="" aria-hidden="true" />
 									<span>{item.value}</span>
 								</div>
 							{/each}
@@ -424,7 +471,7 @@
 						{#each specItems as item (item.label)}
 							<li>
 								<span>
-									<img src={`/assets/icons/${item.icon}`} alt="" aria-hidden="true" />
+									<img src={assetHref(`/assets/icons/${item.icon}`)} alt="" aria-hidden="true" />
 									{item.label}
 								</span>
 								<strong>{item.value}</strong>
@@ -452,90 +499,60 @@
 		</Drawer.Content>
 	</Drawer.Root>
 
-	<Drawer.Root bind:open={inquiryOpen} direction="bottom" fixed={true} handleOnly={true}>
-		<Drawer.Overlay class="daynight-mobile-pdp__inquiry-backdrop" onclick={closeInquiry}>
-			<span>{detail.mobileDrawer.closeLabel}</span>
-		</Drawer.Overlay>
-		<Drawer.Content
-			id="daynightMobilePdpInquiryDrawer"
-			class="daynight-mobile-pdp__inquiry"
-			aria-labelledby="daynightMobilePdpInquiryTitle"
-		>
-			<Drawer.Handle class="daynight-mobile-pdp__inquiry-handle" preventCycle={true} />
+	<MobileSheet
+		bind:open={inquiryOpen}
+		title={detail.copy.inquiryTitle}
+		description={detail.title}
+		contentClass="daynight-mobile-pdp__inquiry"
+		onclose={closeInquiry}
+	>
+		<p class="daynight-mobile-pdp__inquiry-intro">
+			{contentText(english ? 'en' : 'bg', templateInquiryCopy.notice)}
+		</p>
+		<form class="daynight-mobile-pdp__inquiry-form" onsubmit={submitInquiry}>
+			<label>
+				<span>{detail.copy.name}</span>
+				<input name="name" type="text" autocomplete="name" required />
+			</label>
+			<label>
+				<span>{detail.copy.phone}</span>
+				<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
+			</label>
+			<label>
+				<span>{detail.copy.subject}</span>
+				<select name="subject">
+					<option>{detail.copy.subjectViewing}</option>
+					<option>{detail.copy.subjectAvailability}</option>
+					<option>{detail.copy.subjectDocuments}</option>
+				</select>
+			</label>
+			<label>
+				<span>{detail.copy.message}</span>
+				<textarea name="message" rows="3" placeholder={detail.copy.messagePlaceholder}></textarea>
+			</label>
 
-			<div class="daynight-mobile-pdp__inquiry-head">
-				<div>
-					<p>{detail.title}</p>
-					<Drawer.Title
-						id="daynightMobilePdpInquiryTitle"
-						class="daynight-mobile-pdp__inquiry-title-shell"
-						level={2}
-					>
-						<span class="daynight-mobile-pdp__inquiry-title">{detail.copy.inquiryTitle}</span>
-					</Drawer.Title>
-				</div>
-				<button
-					type="button"
-					class="daynight-mobile-pdp__inquiry-close"
-					aria-label={detail.mobileDrawer.closeLabel}
-					onclick={closeInquiry}
-				>
-					<X size={20} strokeWidth={2.35} aria-hidden="true" />
-				</button>
-			</div>
-
-			<Drawer.Description class="daynight-mobile-pdp__inquiry-description">
-				<span class="daynight-mobile-pdp__inquiry-intro">{templateInquiryCopy.notice}</span>
-			</Drawer.Description>
-
-			<form class="daynight-mobile-pdp__inquiry-form" onsubmit={submitInquiry} data-vaul-no-drag>
-				<label>
-					<span>{detail.copy.name}</span>
-					<input name="name" type="text" autocomplete="name" required />
-				</label>
-				<label>
-					<span>{detail.copy.phone}</span>
-					<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
-				</label>
-				<label>
-					<span>{detail.copy.subject}</span>
-					<select name="subject">
-						<option>{detail.copy.subjectViewing}</option>
-						<option>{detail.copy.subjectAvailability}</option>
-						<option>{detail.copy.subjectDocuments}</option>
-					</select>
-				</label>
-				<label>
-					<span>{detail.copy.message}</span>
-					<textarea name="message" rows="3" placeholder={detail.copy.messagePlaceholder}></textarea>
-				</label>
-
-				<button
-					type="submit"
-					class="daynight-mobile-pdp__inquiry-submit"
-					disabled={inquirySubmitting}
-				>
-					<Send size={18} strokeWidth={2.3} aria-hidden="true" />
-					{detail.copy.sendInquiry}
-				</button>
-
-				<p class="daynight-mobile-pdp__inquiry-status" aria-live="polite">
-					{#if inquirySaved}
-						<Check size={16} strokeWidth={2.4} aria-hidden="true" />
-					{/if}
-					{inquiryStatus}
-				</p>
-			</form>
-
-			<a
-				class="daynight-mobile-pdp__inquiry-call"
-				{...externalHref(detail.contact.primaryPhoneHref)}
+			<button
+				type="submit"
+				class="daynight-mobile-pdp__inquiry-submit"
+				disabled={inquirySubmitting}
 			>
-				<PhoneCall size={18} strokeWidth={2.3} aria-hidden="true" />
-				{detail.contact.primaryPhoneLabel}
-			</a>
-		</Drawer.Content>
-	</Drawer.Root>
+				<Send size={18} strokeWidth={2.3} aria-hidden="true" />
+				{detail.copy.sendInquiry}
+			</button>
+
+			<p class="daynight-mobile-pdp__inquiry-status" aria-live="polite">
+				{#if inquirySaved}
+					<Check size={16} strokeWidth={2.4} aria-hidden="true" />
+				{/if}
+				{inquiryStatus}
+			</p>
+		</form>
+
+		<a class="daynight-mobile-pdp__inquiry-call" {...externalHref(detail.contact.primaryPhoneHref)}>
+			<PhoneCall size={18} strokeWidth={2.3} aria-hidden="true" />
+			{detail.contact.primaryPhoneLabel}
+		</a>
+	</MobileSheet>
 
 	{#if viewerOpen}
 		<div
@@ -560,7 +577,7 @@
 
 			<div class="daynight-mobile-pdp__viewer-stage">
 				<img
-					src={heroImage}
+					src={assetHref(heroImage)}
 					alt={detail.title}
 					width="900"
 					height="1200"
@@ -582,7 +599,7 @@
 						}}
 					>
 						<img
-							src={image}
+							src={assetHref(image)}
 							alt=""
 							width="96"
 							height="72"
@@ -646,6 +663,7 @@
 			background: #111111;
 			cursor: zoom-in;
 			padding: 0;
+			touch-action: pan-y;
 		}
 
 		.daynight-mobile-pdp__shade {
@@ -706,50 +724,20 @@
 			gap: 8px;
 		}
 
-		.daynight-mobile-pdp__hero-thumbs {
+		.daynight-mobile-pdp__photo-count {
 			position: absolute;
-			right: 14px;
-			bottom: 24px;
+			top: calc(70px + env(safe-area-inset-top));
 			left: 14px;
 			z-index: 1003;
-			display: flex;
-			gap: 8px;
-			overflow-x: auto;
-			overflow-y: hidden;
-			padding-bottom: 2px;
-			scrollbar-width: none;
-			-webkit-overflow-scrolling: touch;
-		}
-
-		.daynight-mobile-pdp__hero-thumbs::-webkit-scrollbar {
-			display: none;
-		}
-
-		.daynight-mobile-pdp__hero-thumbs button {
-			position: relative;
-			flex: 0 0 58px;
-			width: 58px;
-			height: 44px;
-			overflow: hidden;
-			border: 2px solid rgba(255, 255, 255, 0.72);
-			border-radius: 8px;
-			background: #ffffff;
-			cursor: pointer;
-			padding: 0;
-			box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
-		}
-
-		.daynight-mobile-pdp__hero-thumbs button.active,
-		.daynight-mobile-pdp__hero-thumbs button:focus-visible {
-			border-color: var(--bc-accent);
-			outline: 0;
-		}
-
-		.daynight-mobile-pdp__hero-thumbs img {
-			display: block;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			margin: 0;
+			border-radius: var(--bc-radius-pill);
+			background: rgb(9 10 11 / 0.72);
+			color: var(--bc-white);
+			font-size: var(--bc-mobile-meta);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-mobile-meta-leading);
+			padding: 7px 10px;
+			font-variant-numeric: tabular-nums;
 		}
 
 		.daynight-mobile-pdp__facts {
@@ -1161,10 +1149,6 @@
 				transform 0.12s ease;
 		}
 
-		.daynight-mobile-pdp__cta:active {
-			transform: translateY(1px);
-		}
-
 		/* Lucide paths use currentColor, so keep the icon and label in sync. */
 		.daynight-mobile-pdp__cta :global(svg),
 		.daynight-mobile-pdp__cta :global(svg *) {
@@ -1181,12 +1165,13 @@
 		}
 
 		.daynight-mobile-pdp__cta--call {
-			background: #1c1c1c;
-			color: #ffffff;
+			border: 1px solid var(--bc-border-strong);
+			background: var(--bc-white);
+			color: var(--bc-ink);
 		}
 
 		.daynight-mobile-pdp__cta--call:focus-visible {
-			background: #000000;
+			background: var(--bc-surface-hover);
 		}
 
 		@media (hover: hover) and (pointer: fine) {
@@ -1195,134 +1180,21 @@
 			}
 
 			.daynight-mobile-pdp__cta--call:hover {
-				background: #000000;
+				background: var(--bc-surface-hover);
 			}
 		}
 
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry[data-vaul-drawer]) {
-			position: fixed;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: 1008;
+		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry.bc-mobile-sheet__content) {
+			width: min(100%, 520px);
+			max-height: min(92dvh, 780px);
+			background: var(--bc-white);
+			color: var(--bc-ink);
+		}
+
+		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry .bc-mobile-sheet__body) {
 			display: grid;
-			gap: 12px;
-			width: 100%;
-			max-height: 90dvh;
-			overflow-y: auto;
-			border-radius: 22px 22px 0 0;
-			background: #ffffff;
-			color: #1c1c1c;
-			padding: 10px 16px calc(18px + env(safe-area-inset-bottom));
-			box-shadow: 0 -22px 50px rgba(0, 0, 0, 0.3);
-			outline: 0;
-			scrollbar-width: none;
-			-webkit-overflow-scrolling: touch;
-		}
-
-		.daynight-mobile-pdp
-			:global(.daynight-mobile-pdp__inquiry[data-vaul-drawer]::-webkit-scrollbar) {
-			display: none;
-		}
-
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry-backdrop[data-vaul-overlay]) {
-			position: fixed;
-			inset: 0;
-			z-index: 1007;
-			border: 0;
-			background: rgba(10, 12, 8, 0.5);
-			appearance: none;
-			cursor: pointer;
-			padding: 0;
-		}
-
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry-backdrop span) {
-			position: absolute;
-			width: 1px;
-			height: 1px;
-			overflow: hidden;
-			clip: rect(0 0 0 0);
-			white-space: nowrap;
-		}
-
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry-handle[data-vaul-handle]) {
-			position: relative;
-			display: block;
-			width: 56px;
-			height: 22px;
-			justify-self: center;
-			border-radius: 0;
-			background: transparent;
-			opacity: 1;
-		}
-
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry-handle[data-vaul-handle])::after {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 42px;
-			height: 4px;
-			transform: translate(-50%, -50%);
-			border-radius: 999px;
-			background: var(--bc-border);
-			content: '';
-		}
-
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry-handle [data-vaul-handle-hitarea]) {
-			position: absolute;
-			inset: 0;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: transparent;
-			transform: none;
-		}
-
-		.daynight-mobile-pdp__inquiry-head {
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-between;
-			gap: 12px;
-		}
-
-		.daynight-mobile-pdp__inquiry-head p {
-			margin: 0 0 2px;
-			overflow: hidden;
-			color: #728093;
-			font-size: var(--bc-mobile-meta);
-			font-weight: var(--bc-weight-body);
-			line-height: var(--bc-mobile-meta-leading);
-			text-overflow: ellipsis;
-			white-space: nowrap;
-		}
-
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry-title-shell),
-		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry-description) {
-			margin: 0;
-		}
-
-		.daynight-mobile-pdp__inquiry-title {
-			display: block;
-			color: #1c1c1c;
-			font-size: var(--bc-mobile-section-title);
-			font-weight: var(--bc-weight-heading);
-			line-height: var(--bc-mobile-section-title-leading);
-		}
-
-		.daynight-mobile-pdp__inquiry-close {
-			display: flex;
-			width: 44px;
-			height: 44px;
-			flex: 0 0 44px;
-			align-items: center;
-			justify-content: center;
-			border: 0;
-			border-radius: 999px;
-			background: var(--bc-surface);
-			color: #1c1c1c;
-			cursor: pointer;
-			padding: 0;
+			gap: var(--bc-space-3);
+			padding: var(--bc-space-1) 0 var(--bc-space-2);
 		}
 
 		.daynight-mobile-pdp__inquiry-intro {
@@ -1504,6 +1376,9 @@
 			min-height: 0;
 			align-items: center;
 			justify-content: center;
+			overflow: auto;
+			touch-action: pinch-zoom;
+			overscroll-behavior: contain;
 			padding: 54px 0 20px;
 		}
 
@@ -1512,6 +1387,7 @@
 			width: 100%;
 			max-height: 100%;
 			object-fit: contain;
+			touch-action: pinch-zoom;
 		}
 
 		.daynight-mobile-pdp__viewer-thumbs {

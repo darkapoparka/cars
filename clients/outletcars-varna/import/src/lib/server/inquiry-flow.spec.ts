@@ -36,6 +36,8 @@ const request = (method: string, data: Record<string, unknown>, token?: string) 
 	});
 const enableDatabase = () => {
 	privateEnv.DATABASE_URL = 'postgresql://test.invalid/demo';
+	privateEnv.TEMPLATE_MODE = 'live';
+	privateEnv.TEMPLATE_ADMIN_ENABLED = 'true';
 	privateEnv.TEMPLATE_ADMIN_EMAIL = 'operator@example.invalid';
 	privateEnv.TEMPLATE_ADMIN_PASSWORD = 'private-template-test-password';
 };
@@ -84,7 +86,10 @@ describe('inquiry persistence boundary', () => {
 			request: request('POST', { name: 'Template Test', phone: '+359000000000' })
 		});
 		expect(result.status).toBe(201);
-		expect((await result.json()).data.inquiry.contactEmail).toBe('');
+		expect(persistence.insertStoredInquiry).toHaveBeenCalledWith(
+			expect.objectContaining({ contactEmail: '', contactPhone: '+359000000000' })
+		);
+		expect((await result.json()).data.inquiry).not.toHaveProperty('contactEmail');
 	});
 
 	it('rejects empty and oversized submissions before storage', async () => {
@@ -163,5 +168,42 @@ describe('durable inquiry access', () => {
 			action({ request: request('POST', { id: 'saved' }) } as Parameters<typeof action>[0])
 		).rejects.toMatchObject({ status: 401 });
 		expect(persistence.patchStoredInquiry).not.toHaveBeenCalled();
+	});
+});
+
+describe('staff page capability containment', () => {
+	it('blocks a valid live admin from every demonstration CMS/account page and action', () => {
+		enableDatabase();
+		const session = authenticateDayNightUser({
+			email: privateEnv.TEMPLATE_ADMIN_EMAIL,
+			password: privateEnv.TEMPLATE_ADMIN_PASSWORD
+		});
+		expect(session?.role).toBe('admin');
+		for (const route of [
+			'admin/inventory',
+			'admin/agents',
+			'admin/users',
+			'admin/imports',
+			'account/listings/new',
+			'admin/copilot'
+		]) {
+			const req = request('POST', {}, session!.token);
+			expect(() => requireDayNightPageSession(req, route)).toThrow();
+		}
+		expect(
+			requireDayNightPageSession(request('POST', {}, session!.token), 'admin/inquiries').role
+		).toBe('admin');
+	});
+	it('does not turn accidental provider credentials into preview AI access', () => {
+		privateEnv.OPENAI_API_KEY = 'synthetic-key';
+		const session = authenticateDayNightUser({
+			email: 'admin@daynight.local',
+			password: 'synthetic-password'
+		});
+		expect(session?.role).toBe('admin');
+		expect(
+			requireDayNightPageSession(request('POST', {}, session!.token), 'admin/inventory').role
+		).toBe('admin');
+		expect(persistence.insertStoredInquiry).not.toHaveBeenCalled();
 	});
 });

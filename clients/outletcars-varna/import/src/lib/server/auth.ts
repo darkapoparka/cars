@@ -1,4 +1,5 @@
 import { createHash, timingSafeEqual } from 'node:crypto';
+import { isPreviewMode, runtimeConfig } from './runtime-config';
 import { error, redirect } from '@sveltejs/kit';
 import { hasInquiryDatabase, templateAdminCredentials } from './inquiry-config';
 import {
@@ -92,6 +93,7 @@ export const resolveDayNightSession = (
 	routePath = '',
 	searchParams?: URLSearchParams
 ): DayNightSession => {
+	if (!isPreviewMode()) error(401, 'A verified session is required');
 	const role = roleFromSearch(searchParams) ?? defaultRoleForDayNightRoute(routePath);
 	const user = findDayNightUserByRole(role);
 
@@ -109,16 +111,17 @@ export const sessionCookieForDayNightSession = (session: DayNightSession) =>
 	session.token
 		? `${daynightSessionCookieName}=${encodeURIComponent(
 				session.token
-			)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${60 * 60 * 8}`
+			)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${60 * 60 * 8}${isPreviewMode() ? '' : '; Secure'}`
 		: undefined;
 
 export const expiredDayNightSessionCookie = () =>
-	`${daynightSessionCookieName}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0`;
+	`${daynightSessionCookieName}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0${isPreviewMode() ? '' : '; Secure'}`;
 
 export const resolveDayNightApiSession = (
 	request: Request,
 	fallbackRole?: DayNightRole | string
 ): DayNightSession | undefined => {
+	if (!isPreviewMode() && !runtimeConfig().adminEnabled) return undefined;
 	const token = sessionTokenFromRequest(request);
 	let decodedToken;
 	try {
@@ -130,7 +133,7 @@ export const resolveDayNightApiSession = (
 
 	if (record && new Date(record.expiresAt).getTime() > Date.now()) {
 		if (
-			hasInquiryDatabase() &&
+			!isPreviewMode() &&
 			(record.userId !== 'template-configured-admin' ||
 				record.role !== 'admin' ||
 				record.email !== templateAdminCredentials().email)
@@ -138,7 +141,7 @@ export const resolveDayNightApiSession = (
 			return undefined;
 		return sessionFromRecord(record);
 	}
-	if (hasInquiryDatabase()) return undefined;
+	if (!isPreviewMode()) return undefined;
 
 	const role = normalizeDayNightRole(fallbackRole);
 	const user =
@@ -162,7 +165,7 @@ export const resolveDayNightPageSession = (
 	const authenticated = resolveDayNightApiSession(request);
 
 	if (authenticated) return authenticated;
-	if (hasInquiryDatabase() && routePath.replace(/^\/+/, '').startsWith('admin')) return undefined;
+	if (!isPreviewMode()) return undefined;
 
 	return resolveDayNightSession(routePath, searchParams);
 };
@@ -179,6 +182,16 @@ export const requireDayNightPageSession = (
 		error(401, 'OUTLETCARS.BG account session is required');
 	}
 
+	// Page actions must enforce the same capability boundary as JSON APIs.
+	// A valid staff session does not enable the demonstration CMS or filesystem uploads.
+	if (!isPreviewMode()) {
+		const route = routePath.replace(/^\/+|\/+$/g, '');
+		if (route === 'admin' && request.method === 'GET') redirect(303, '/admin/inquiries');
+		const supported =
+			route === 'admin/inquiries' || (route === 'admin/copilot' && runtimeConfig().aiEnabled);
+		if (!supported) error(503, 'This demonstration capability is not enabled in live mode');
+	}
+
 	if (!canAccessDayNightRoute(session, routePath)) {
 		error(403, 'OUTLETCARS.BG account role cannot access this route');
 	}
@@ -189,7 +202,11 @@ export const requireDayNightPageSession = (
 export const clearDayNightRequestSession = (request: Request) => {
 	const token = sessionTokenFromRequest(request);
 
-	return token ? deleteDayNightSessionByToken(decodeURIComponent(token)) : false;
+	try {
+		return token ? deleteDayNightSessionByToken(decodeURIComponent(token)) : false;
+	} catch {
+		return false;
+	}
 };
 
 export const authenticateDayNightUser = ({
@@ -201,7 +218,8 @@ export const authenticateDayNightUser = ({
 	password: string;
 	role?: DayNightRole | string;
 }): DayNightSession | undefined => {
-	if (hasInquiryDatabase()) {
+	if (!isPreviewMode()) {
+		if (!runtimeConfig().adminEnabled) return undefined;
 		const configured = templateAdminCredentials();
 		if (
 			!configured.email ||
@@ -253,7 +271,7 @@ export const registerDayNightCustomer = ({
 	password: string;
 	phone?: string;
 }): DayNightSession | undefined => {
-	if (hasInquiryDatabase()) return undefined;
+	if (!isPreviewMode()) return undefined;
 	const normalizedEmail = email.trim().toLowerCase();
 	const passwordLooksIntentional = password.trim().length >= 8;
 

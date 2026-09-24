@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import MobileActionCardContent from './MobileActionCardContent.svelte';
 	import { ArrowRight } from '@lucide/svelte';
 	let {
@@ -28,7 +31,7 @@
 	aria-label={label}
 >
 	{#if photo}
-		<img src={image} alt="" width="960" height="640" />
+		<img src={i18n.asset(image)} alt="" width="960" height="640" />
 		<span class="lead-manual-card__copy">
 			<strong>{title}</strong>
 			<span>{copy}</span>

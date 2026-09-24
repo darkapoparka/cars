@@ -60,7 +60,7 @@
 		<div class="bottom">
 			<p class="category text-white uppercase">
 				<a
-					href={resolve('/inventory/[slug]', { slug: card.slug })}
+					href={resolve('/(site)/inventory/[slug]', { slug: card.slug })}
 					class="text-xs text-white uppercase">{card.brand}</a
 				>
 			</p>
@@ -78,7 +78,7 @@
 			</div>
 		</div>
 		<div class="image">
-			<a href={resolve('/inventory/[slug]', { slug: card.slug })}>
+			<a href={resolve('/(site)/inventory/[slug]', { slug: card.slug })}>
 				<img
 					class="card--img"
 					src={card.image}
@@ -93,9 +93,9 @@
 		</div>
 		<div class="content">
 			<h2 class="h6 card-box__title mb-4">
-				<a href={resolve('/inventory/[slug]', { slug: card.slug })}>{card.title}</a>
+				<a href={resolve('/(site)/inventory/[slug]', { slug: card.slug })}>{card.title}</a>
 			</h2>
-			<p class="text-secondary clamp-1 clamp mb-8">
+			<p class="clamp-1 clamp mb-8 text-secondary">
 				{card.description || daynightContact.appointmentNote}
 			</p>
 			{@render cardMeta(card, 'tag style3 mb-14')}
@@ -114,7 +114,7 @@
 					{@render compareIcon()}
 					{copy.compare}
 				</button>
-				<a href={resolve('/inventory/[slug]', { slug: card.slug })} class="view-details">
+				<a href={resolve('/(site)/inventory/[slug]', { slug: card.slug })} class="view-details">
 					{copy.viewDetails}
 					<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt={copy.viewDetails} />
 				</a>
@@ -140,7 +140,7 @@
 			</button>
 		</div>
 		<div class="image">
-			<a href={resolve('/inventory/[slug]', { slug: card.slug })}>
+			<a href={resolve('/(site)/inventory/[slug]', { slug: card.slug })}>
 				<img
 					class="card--img"
 					src={card.image}
@@ -157,7 +157,7 @@
 			<div class="bottom">
 				<p class="category text-white uppercase">
 					<a
-						href={resolve('/inventory/[slug]', { slug: card.slug })}
+						href={resolve('/(site)/inventory/[slug]', { slug: card.slug })}
 						class="text-xs text-white uppercase">{card.brand}</a
 					>
 				</p>
@@ -175,7 +175,7 @@
 				</div>
 			</div>
 			<h2 class="h6 card-box__title mb-8">
-				<a href={resolve('/inventory/[slug]', { slug: card.slug })}>{card.title}</a>
+				<a href={resolve('/(site)/inventory/[slug]', { slug: card.slug })}>{card.title}</a>
 			</h2>
 			{@render compactCardMeta(card, 'tag style2 mb-10 daynight-card-specs')}
 			<p class="card-box__price daynight-card-price h6 mb-15">
@@ -189,7 +189,7 @@
 				>
 			</p>
 			<div class="daynight-card-actions flex justify-between">
-				<a href={resolve('/inventory/[slug]', { slug: card.slug })} class="view-details">
+				<a href={resolve('/(site)/inventory/[slug]', { slug: card.slug })} class="view-details">
 					{copy.viewDetails}
 					<img class="ml-4" src="/assets/icons/CaretCircleRight.svg" alt={copy.viewDetails} />
 				</a>

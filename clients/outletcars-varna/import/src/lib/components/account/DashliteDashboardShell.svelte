@@ -1,22 +1,20 @@
 <script lang="ts">
 	import './dashlite-dashboard.css';
 	import { resolve } from '$app/paths';
-	import {
-		Bell,
-		Car,
-		CircleUserRound,
-		GitCompare,
-		Heart,
-		LayoutDashboard,
-		LockKeyhole,
-		LogOut,
-		MessageSquare,
-		Plus,
-		Search,
-		ShieldCheck,
-		Star,
-		Users
-	} from '@lucide/svelte';
+	import Bell from '@lucide/svelte/icons/bell';
+	import Car from '@lucide/svelte/icons/car';
+	import CircleUserRound from '@lucide/svelte/icons/circle-user-round';
+	import GitCompare from '@lucide/svelte/icons/git-compare';
+	import Heart from '@lucide/svelte/icons/heart';
+	import LayoutDashboard from '@lucide/svelte/icons/layout-dashboard';
+	import LockKeyhole from '@lucide/svelte/icons/lock-keyhole';
+	import LogOut from '@lucide/svelte/icons/log-out';
+	import MessageSquare from '@lucide/svelte/icons/message-square';
+	import Plus from '@lucide/svelte/icons/plus';
+	import Search from '@lucide/svelte/icons/search';
+	import ShieldCheck from '@lucide/svelte/icons/shield-check';
+	import Star from '@lucide/svelte/icons/star';
+	import Users from '@lucide/svelte/icons/users';
 	import type { Snippet } from 'svelte';
 	import type { AuxeroDashboardPageData } from '$lib/auxero/dashboard';
 

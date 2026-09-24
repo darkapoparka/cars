@@ -14,8 +14,8 @@
 			<p class="text-highlight text-sm">{detail.verifiedLabel}</p>
 		</div>
 	</div>
-	<p class="text-secondary mb-4">{detail.bio}</p>
-	<p class="text-secondary mb-40">{detail.summary}</p>
+	<p class="mb-4 text-secondary">{detail.bio}</p>
+	<p class="mb-40 text-secondary">{detail.summary}</p>
 	<div class="divider mb-40 w-full"></div>
 	<h2 class="h4 mb-16">{detail.inventoryHeading}</h2>
 	<div class="daynight-agent-inventory mb-40 grid grid-cols-1 gap-20">

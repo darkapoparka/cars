@@ -4,6 +4,7 @@ import { getDefaultDealerSlug } from '$lib/server/app-config';
 import { createDb, hasDatabaseUrl, type Db } from '$lib/server/db/client';
 import { vehiclePhotos, vehicles } from '$lib/server/db/schema';
 import { DAY_IMAGE_FALLBACK } from '$lib/utils/daynight-image-fallback';
+import { formatEuroPriceLabel } from '$lib/utils/format';
 import type { VehiclePhotoRow, VehicleRow } from '$lib/types/database';
 import { getDealerBySlug } from './dealers';
 
@@ -52,7 +53,7 @@ export function mapPublishedVehicleToCar(vehicle: VehicleRow, photos: VehiclePho
 		drive: vehicle.drive,
 		color: vehicle.color,
 		price: vehicle.price,
-		priceEur: vehicle.price_eur,
+		priceEur: formatEuroPriceLabel(vehicle.price_eur),
 		priceBgn: vehicle.price_bgn,
 		monthly: vehicle.monthly,
 		image,

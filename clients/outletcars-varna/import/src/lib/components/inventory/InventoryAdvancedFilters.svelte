@@ -1,9 +1,15 @@
 <script lang="ts">
+	import { nativeMessage } from '$lib/i18n/native';
+
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
 	import { untrack } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
+	import { linkHref as resolve } from '$lib/utils/links';
 	import { page } from '$app/state';
-	import { Search, SlidersHorizontal, X } from '@lucide/svelte';
+	import Search from '@lucide/svelte/icons/search';
+	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
+	import X from '@lucide/svelte/icons/x';
 	import type {
 		AuxeroInventoryDesktopData,
 		AuxeroInventoryFilterOption
@@ -50,11 +56,11 @@
 		'mileageTo',
 		'transmission'
 	];
-	const numberLabels: Record<string, string> = {
-		minPrice: 'Цена от (EUR)',
-		minYear: 'Година от',
-		maxYear: 'Година до'
-	};
+	const numberLabels: Record<string, string> = $derived({
+		minPrice: nt('ui129'),
+		minYear: nt('ui130'),
+		maxYear: nt('ui131')
+	});
 	const fields = $derived(
 		fieldOrder.map((name) => {
 			const filter = desktop.filters.find((f) => f.name === name);
@@ -74,7 +80,11 @@
 		const request = new AbortController();
 		controller = request;
 		try {
-			const response = await fetch(`${resolve('/api/inventory/count')}?${queryString()}`, {
+			const params = new URLSearchParams({
+				...Object.fromEntries(new URLSearchParams(queryString())),
+				lang: page.data.locale === 'en' ? 'en' : 'bg'
+			});
+			const response = await fetch(`${resolve('/api/inventory/count')}?${params}`, {
 				signal: request.signal
 			});
 			if (!response.ok) throw new Error('Count unavailable');
@@ -132,7 +142,7 @@
 			});
 			dialog.close();
 		} catch {
-			submitError = 'Не успяхме да заредим автомобилите. Опитайте отново.';
+			submitError = nt('ui132');
 		} finally {
 			submitting = false;
 		}
@@ -182,21 +192,18 @@
 	<form onsubmit={apply}>
 		<header>
 			<h2 id="inventory-advanced-title">
-				<SlidersHorizontal size={22} aria-hidden="true" />Търсене на автомобили
+				<SlidersHorizontal size={22} aria-hidden="true" />{nt('ui115')}
 			</h2>
-			<button
-				class="close"
-				type="button"
-				onclick={() => dialog.close()}
-				aria-label="Затвори филтрите"><X size={22} /></button
+			<button class="close" type="button" onclick={() => dialog.close()} aria-label={nt('ui116')}
+				><X size={22} /></button
 			>
 		</header>
 		<div class="fields-body">
 			<label class="query"
 				><Search size={20} aria-hidden="true" /><input
-					aria-label="Търсене в разширените филтри"
+					aria-label={nt('ui117')}
 					type="search"
-					placeholder="Марка, модел или ключова дума"
+					placeholder={nt('ui65')}
 					value={draft[queryField] ?? ''}
 					oninput={(event) => setField(queryField, event.currentTarget.value)}
 				/></label
@@ -206,9 +213,9 @@
 					<label class="field"
 						><span
 							>{field.name === 'priceTo'
-								? 'Цена до (EUR)'
+								? nt('ui118')
 								: field.name === 'mileageTo'
-									? 'Пробег до'
+									? nt('ui119')
 									: field.label}</span
 						>
 						{#if numberLabels[field.name]}
@@ -217,7 +224,7 @@
 								type="number"
 								min={field.name === 'minPrice' ? '0' : '1900'}
 								max={field.name === 'minPrice' ? undefined : '2100'}
-								placeholder={field.name === 'maxYear' ? 'Без максимум' : 'Без минимум'}
+								placeholder={field.name === 'maxYear' ? nt('ui120') : nt('ui121')}
 								value={draft[field.name] ?? ''}
 								oninput={(event) => setField(field.name, event.currentTarget.value)}
 							/>
@@ -227,7 +234,7 @@
 								value={draft[field.name] ?? ''}
 								onchange={(event) => setField(field.name, event.currentTarget.value)}
 							>
-								<option value="">Всички</option>
+								<option value="">{nt('ui114')}</option>
 								{#if draft[field.name] && !optionList(field.name, field.options).some((option) => option.value === draft[field.name])}<option
 										value={draft[field.name]}>{draft[field.name]}</option
 									>{/if}
@@ -240,7 +247,7 @@
 				{/each}
 			</div>
 			<fieldset>
-				<legend>Екстри</legend>
+				<legend>{nt('ui122')}</legend>
 				<div class="features">
 					{#each features.slice(0, 8) as feature (feature.value)}<label
 							><input
@@ -252,7 +259,7 @@
 						>{/each}
 				</div>
 				{#if features.length > 8}<details>
-						<summary>Още екстри ({features.length - 8})</summary>
+						<summary>{nt('ui123')}{features.length - 8})</summary>
 						<div class="features">
 							{#each features.slice(8) as feature (feature.value)}<label
 									><input
@@ -267,7 +274,7 @@
 			</fieldset>
 		</div>
 		<footer>
-			<button class="clear" type="button" onclick={clearFilters}>Изчисти всички</button>
+			<button class="clear" type="button" onclick={clearFilters}>{nt('ui124')}</button>
 			<div class="apply-area">
 				{#if submitError}<p role="alert">{submitError}</p>{/if}<button
 					class="apply"
@@ -275,12 +282,12 @@
 					disabled={submitting}
 					aria-live="polite"
 					>{submitting
-						? 'Зареждане…'
+						? nt('ui125')
 						: loading
-							? 'Покажи автомобили'
+							? nt('ui126')
 							: count === null
-								? 'Покажи автомобили'
-								: `Покажи ${count} ${count === 1 ? 'автомобил' : 'автомобила'}`}<Search
+								? nt('ui126')
+								: `Покажи ${count} ${count === 1 ? nt('ui127') : nt('ui128')}`}<Search
 						size={18}
 						aria-hidden="true"
 					/></button

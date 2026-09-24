@@ -49,7 +49,7 @@
 </script>
 
 <script lang="ts">
-	import { resolve } from '$app/paths';
+	import { linkHref } from '$lib/utils/links';
 
 	let {
 		class: className,
@@ -73,7 +73,7 @@
 			disabled && 'pointer-events-none opacity-50',
 			className
 		)}
-		href={resolve(href as '/')}
+		href={linkHref(href)}
 		aria-disabled={disabled}
 		role={disabled ? 'link' : undefined}
 		tabindex={disabled ? -1 : undefined}

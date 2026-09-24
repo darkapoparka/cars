@@ -1,0 +1,282 @@
+{
+  "locale.title": {
+    "en": "Country and language",
+    "bg": "Държава и език"
+  },
+  "locale.welcome": {
+    "en": "Welcome to {dealerName}",
+    "bg": "Добре дошли в {dealerName}"
+  },
+  "locale.description": {
+    "en": "Choose your browsing preferences. You can change them at any time.",
+    "bg": "Изберете предпочитанията си за разглеждане. Можете да ги промените по всяко време."
+  },
+  "locale.country": {
+    "en": "Your country or region",
+    "bg": "Вашата държава или регион"
+  },
+  "locale.language": {
+    "en": "Website language",
+    "bg": "Език на сайта"
+  },
+  "locale.suggested": {
+    "en": "Suggested",
+    "bg": "Предложение"
+  },
+  "locale.suggestion": {
+    "en": "Suggested region: {country}",
+    "bg": "Предложен регион: {country}"
+  },
+  "locale.save": {
+    "en": "Save preferences",
+    "bg": "Запази избора"
+  },
+  "locale.dismiss": {
+    "en": "Not now",
+    "bg": "Не сега"
+  },
+  "locale.close": {
+    "en": "Close country and language preferences",
+    "bg": "Затвори предпочитанията за държава и език"
+  },
+  "locale.saving": {
+    "en": "Saving…",
+    "bg": "Запазване…"
+  },
+  "locale.error": {
+    "en": "Your preferences could not be saved. Please try again.",
+    "bg": "Предпочитанията не бяха запазени. Опитайте отново."
+  },
+  "locale.facts": {
+    "en": "Your preferences do not change the dealer’s location or the currency shown for each vehicle.",
+    "bg": "Предпочитанията ви не променят местоположението на дилъра или валутата, посочена за всеки автомобил."
+  },
+  "locale.arabic": {
+    "en": "More languages will be available after translation and layout review.",
+    "bg": "Още езици ще бъдат достъпни след проверка на преводите и оформлението."
+  },
+  "locale.trigger": {
+    "en": "Change country and language",
+    "bg": "Промени държавата и езика"
+  },
+  "locale.back": {
+    "en": "Back to the website",
+    "bg": "Назад към сайта"
+  },
+  "locale.unsupported": {
+    "en": "This language is not available",
+    "bg": "Този език не е наличен"
+  },
+  "demo.notice": {
+    "en": "Website demonstration. Confirm vehicle availability and details with the dealer. Forms and Admin do not send enquiries or update a live business.",
+    "bg": "Демонстрационен уебсайт. Потвърдете наличността и данните за автомобилите с дилъра. Формулярите и административният панел не изпращат запитвания и не променят данни на реален бизнес."
+  },
+  "demo.readOnly": {
+    "en": "Demonstration only. No enquiry or data was sent.",
+    "bg": "Само демонстрация. Не е изпратено запитване или данни."
+  },
+  "design.label": {
+    "en": "Design",
+    "bg": "Дизайн"
+  },
+  "design.choose": {
+    "en": "Choose a design",
+    "bg": "Избери дизайн"
+  },
+  "design.title": {
+    "en": "Choose a design for the site",
+    "bg": "Избери дизайн за сайта"
+  },
+  "admin.label": {
+    "en": "Admin dashboard (English)",
+    "bg": "Админ панел (английски)"
+  },
+  "admin.open": {
+    "en": "Admin dashboard — English-only separate demo, opens in a new tab",
+    "bg": "Административен панел — отделна демонстрация само на английски, отваря се в нов раздел"
+  },
+  "form.required": {
+    "en": "Please complete this field.",
+    "bg": "Моля, попълнете това поле."
+  },
+  "form.email": {
+    "en": "Enter a valid email address.",
+    "bg": "Въведете валиден имейл адрес."
+  },
+  "form.invalid": {
+    "en": "Please check this value.",
+    "bg": "Моля, проверете въведената стойност."
+  },
+  "form.minimum": {
+    "en": "Enter a value of at least {min}.",
+    "bg": "Въведете стойност поне {min}."
+  },
+  "form.maximum": {
+    "en": "Enter a value no greater than {max}.",
+    "bg": "Въведете стойност не по-голяма от {max}."
+  },
+  "form.tooShort": {
+    "en": "Enter at least {min} characters.",
+    "bg": "Въведете поне {min} знака."
+  },
+  "form.tooLong": {
+    "en": "Use no more than {max} characters.",
+    "bg": "Използвайте най-много {max} знака."
+  },
+  "nav.carsCompact": {
+    "en": "Cars",
+    "bg": "Коли"
+  },
+  "nav.sellCompact": {
+    "en": "Sell",
+    "bg": "Продай"
+  },
+  "a11y.skipToContent": {
+    "en": "Skip to content",
+    "bg": "Към основното съдържание"
+  },
+  "media.illustrativeVehicle": {
+    "en": "Illustrative {vehicle}",
+    "bg": "Примерен {vehicle}"
+  },
+  "inventory.count.one": {
+    "en": "{count} car",
+    "bg": "{count} автомобил"
+  },
+  "inventory.count.other": {
+    "en": "{count} cars",
+    "bg": "{count} автомобила"
+  },
+  "action.callShort": {
+    "en": "Call",
+    "bg": "Обади се"
+  },
+  "action.locationShort": {
+    "en": "Location",
+    "bg": "Адрес"
+  },
+  "action.viewingShort": {
+    "en": "Viewing info",
+    "bg": "За оглед"
+  },
+  "action.importDemo": {
+    "en": "Import demo",
+    "bg": "Внос (демо)"
+  },
+  "action.valuationDemo": {
+    "en": "Valuation demo",
+    "bg": "Демо оценка"
+  },
+  "action.showCount": {
+    "en": "Show {count}",
+    "bg": "Покажете {count}"
+  },
+  "action.clearShort": {
+    "en": "Clear",
+    "bg": "Изчисти"
+  },
+  "enquiry.purpose.sell": {
+    "en": "Sell",
+    "bg": "Продажба"
+  },
+  "enquiry.purpose.tradeIn": {
+    "en": "Trade-in",
+    "bg": "Бартер"
+  },
+  "inventory.condition.used": {
+    "en": "Used",
+    "bg": "Употребявани"
+  },
+  "inventory.condition.new": {
+    "en": "New",
+    "bg": "Нови"
+  },
+  "inventory.range.unlimited": {
+    "en": "No limit",
+    "bg": "Без ограничение"
+  },
+  "inventory.year.from": {
+    "en": "From {p0}",
+    "bg": "От {p0} г."
+  },
+  "inventory.year.to": {
+    "en": "To {p0}",
+    "bg": "До {p0} г."
+  },
+  "inventory.spec.transmission": {
+    "en": "Transmission",
+    "bg": "Скоростна кутия"
+  },
+  "inventory.spec.automatic": {
+    "en": "Automatic",
+    "bg": "Автоматик"
+  },
+  "inventory.spec.sportback": {
+    "en": "Sportback",
+    "bg": "Спортбек"
+  },
+  "inventory.spec.pickup": {
+    "en": "Pickup",
+    "bg": "Пикап"
+  },
+  "inventory.facet.make": {
+    "en": "Make",
+    "bg": "Марка"
+  },
+  "inventory.facet.model": {
+    "en": "Model",
+    "bg": "Модел"
+  },
+  "inventory.facet.body": {
+    "en": "Body style",
+    "bg": "Купе"
+  },
+  "inventory.facet.price": {
+    "en": "Budget",
+    "bg": "Бюджет"
+  },
+  "inventory.facet.year": {
+    "en": "Year",
+    "bg": "Година"
+  },
+  "inventory.facet.fuel": {
+    "en": "Fuel",
+    "bg": "Гориво"
+  },
+  "inventory.facet.mileage_max": {
+    "en": "Mileage",
+    "bg": "Пробег"
+  },
+  "inventory.facet.transmission": {
+    "en": "Transmission",
+    "bg": "Скорости"
+  },
+  "inventory.facet.version": {
+    "en": "Variant",
+    "bg": "Версия"
+  },
+  "inventory.facet.condition": {
+    "en": "Condition",
+    "bg": "Състояние"
+  },
+  "inventory.facet.equipment": {
+    "en": "Features",
+    "bg": "Екстри"
+  },
+  "inventory.facet.sort": {
+    "en": "Sort",
+    "bg": "Сортиране"
+  },
+  "action.importShort": {
+    "en": "Import",
+    "bg": "Внос"
+  },
+  "action.requestImport": {
+    "en": "Request import",
+    "bg": "Заяви внос"
+  },
+  "action.requestValuation": {
+    "en": "Request valuation",
+    "bg": "Заяви оценка"
+  }
+}

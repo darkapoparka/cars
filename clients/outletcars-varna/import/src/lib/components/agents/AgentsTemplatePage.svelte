@@ -66,7 +66,7 @@
 					<div>
 						<p class="text-highlight font-weight-600 mb-8">OUTLETCARS.BG екип</p>
 						<h1 class="h2 mb-12">Консултанти на OUTLETCARS.BG</h1>
-						<p class="text-secondary h7">
+						<p class="h7 text-secondary">
 							Продажби и огледи, подбор на автомобили, документи и предаване с ясен следващ ход.
 						</p>
 					</div>

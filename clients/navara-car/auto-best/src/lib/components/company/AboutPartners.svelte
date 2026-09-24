@@ -1,20 +1,25 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { demoContentLabel, demoPartnerIntro, demoPartners } from '$data/demo-content';
 </script>
 
 <section class="dn-about-partners" aria-labelledby="about-partners-title" data-demo-content="true">
   <div class="container">
     <header class="dn-about-partners__heading">
-      <h2 id="about-partners-title">Партньори</h2>
-      <p><span class="dn-about-demo-note">{demoContentLabel}</span> · {demoPartnerIntro}</p>
+      <h2 id="about-partners-title">{i18n.t("m_98b74d2477ce")}</h2>
+      <p><span class="dn-about-demo-note">{i18n.text(demoContentLabel)}</span> · {i18n.text(demoPartnerIntro)}</p>
     </header>
 
-    <ul class="dn-about-partners__grid" aria-label="Демо партньорски лога">
+    <ul class="dn-about-partners__grid" aria-label={i18n.t("m_da4e16436b2c")}>
       {#each demoPartners as partner (partner.id)}
         <li>
           <img
             src={partner.image}
-            alt={`Демо лого: ${partner.name}`}
+            alt={i18n.t("m_c935e8bcbcc8", { p0: partner.name })}
             width="180"
             height="80"
             loading="lazy"

@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import type { Snippet } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import { leadSite } from '$config/lead-site';
@@ -51,7 +54,7 @@
   style:--dn-theme-action-dark-start={leadSite.theme.actionTones.dark[0]}
   style:--dn-theme-action-dark-end={leadSite.theme.actionTones.dark[1]}
 >
-  <a class="dn-skip-link" href="#main-content">Към съдържанието</a>
+  <a class="dn-skip-link" href="#main-content">{i18n.t("m_ac576a66d456")}</a>
   <Header presentation={presentation.header} {mobileFooterVisible} />
   <main id="main-content" data-layout={presentation.mainLayout} tabindex="-1">{@render children()}</main>
   <Footer showActions={presentation.showFooterActions} showMobileFooter={presentation.showMobileFooter} {observeFooter} />

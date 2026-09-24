@@ -12,27 +12,43 @@ const district = "Варна";
 const street = "бул. Янош Хуняди 518, срещу КАТ Варна";
 const location = "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Варна',
+	locationShort: "Варна",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Варна'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "OUTLETCARS.BG — Варна",
+	name: 'OUTLETCARS.BG — ВАРНА',
 	shortName,
 	city,
 	region: city,
-	countryCode: "BG",
-	locale: "bg-BG",
-	currency: "EUR",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "359898921010",
-	phoneLabel: "0898 921 010",
-	email: "",
+	phone: '359898921010',
+	phoneLabel: '0898 921 010',
+	email: '',
 	location,
-	locationShort: "бул. Янош Хуняди 518, срещу КАТ Варна",
-	locationLandmark: "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
-	hoursLabel: "Пон.–пет. 08:30–17:30; съб.–нед. почивни дни",
+	locationShort: `${district}, ${city}`,
+	locationLandmark: "бул. Янош Хуняди 518, срещу КАТ Варна",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://outletcarsvarna.mobile.bg/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "OUTLETCARS.BG — Варна",
-	heroSubtitle: "Варна · Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+	heroTitle: 'OUTLETCARS.BG — ВАРНА',
+	heroSubtitle: 'Варна - Премиум автомобили в Варна с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "За OUTLETCARS.BG", href: '/about' },
+			{ label: 'За OUTLETCARS.BG', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

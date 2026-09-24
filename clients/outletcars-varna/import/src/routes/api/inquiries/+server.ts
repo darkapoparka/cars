@@ -9,21 +9,8 @@ import { errorJson, okJson, payloadString, readApiPayload } from '$lib/server/ap
 import { requireDayNightApiAccess } from '$lib/server/api-auth';
 import { normalizeDayNightRole } from '$lib/server/roles';
 import type { ApiPayload } from '$lib/server/api';
-import { z } from 'zod';
+import { inquirySubmissionSchema as submissionSchema } from '$lib/domain/inquiry';
 import { hasInquiryDatabase } from '$lib/server/inquiry-config';
-
-const submissionSchema = z
-	.object({
-		agentSlug: z.string().max(160).optional(),
-		email: z.email().max(254).optional(),
-		name: z.string().min(2).max(160),
-		phone: z.string().min(5).max(60).optional(),
-		message: z.string().max(5000).optional(),
-		routePath: z.string().max(500).optional(),
-		source: z.string().max(100).optional(),
-		vehicleSlug: z.string().max(160).optional()
-	})
-	.refine((value) => Boolean(value.email || value.phone), 'Email or phone is required');
 
 const contactName = (payload: ApiPayload) => {
 	const directName = payloadString(payload, 'name', 'SendInquiryname');
@@ -102,7 +89,15 @@ export async function POST({ request }: { request: Request }) {
 	try {
 		const inquiry = await createInquiry({ ...parsed.data, userRole: 'customer' });
 		return okJson(
-			{ inquiry, storage: hasInquiryDatabase() ? 'database' : 'demo' },
+			{
+				inquiry: { id: inquiry.id, userRole: inquiry.userRole },
+				storage: hasInquiryDatabase() ? 'database' : 'demo',
+				receipt: {
+					id: inquiry.id,
+					storage: hasInquiryDatabase() ? 'database' : 'demo',
+					notification: 'not-configured'
+				}
+			},
 			{ status: 201 }
 		);
 	} catch {

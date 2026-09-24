@@ -128,7 +128,7 @@
 			<Card.Header class="border-b">
 				<div class="flex min-w-0 items-center gap-3">
 					<span
-						class="bg-primary/10 text-primary grid size-10 shrink-0 place-items-center rounded-lg"
+						class="grid size-10 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary"
 					>
 						<Bot aria-hidden="true" />
 					</span>
@@ -183,7 +183,7 @@
 					{/each}
 				</div>
 
-				<div class="border-border bg-muted/30 overflow-hidden rounded-lg border">
+				<div class="overflow-hidden rounded-lg border border-border bg-muted/30">
 					<ScrollArea.Root class="h-[31rem]" bind:viewportRef={messageViewport}>
 						<div
 							class="flex min-h-[31rem] flex-col justify-end gap-4 p-4 md:p-5"
@@ -191,12 +191,12 @@
 						>
 							<div class="flex items-start gap-3">
 								<span
-									class="bg-primary/10 text-primary grid size-9 shrink-0 place-items-center rounded-full"
+									class="grid size-9 shrink-0 place-items-center rounded-full bg-primary/10 text-primary"
 								>
 									<Bot size={18} aria-hidden="true" />
 								</span>
 								<div
-									class="bg-background text-foreground ring-border grid max-w-[82%] gap-2 rounded-2xl rounded-bl-md px-4 py-3 text-sm leading-relaxed shadow-sm ring-1"
+									class="grid max-w-[82%] gap-2 rounded-2xl rounded-bl-md bg-background px-4 py-3 text-sm leading-relaxed text-foreground shadow-sm ring-1 ring-border"
 								>
 									<div class="flex items-center gap-2 text-xs font-medium">
 										<MessageSquareText size={15} aria-hidden="true" />
@@ -210,7 +210,7 @@
 								<div class={cn('flex items-start gap-3', message.role === 'user' && 'justify-end')}>
 									{#if message.role !== 'user'}
 										<span
-											class="bg-primary/10 text-primary grid size-9 shrink-0 place-items-center rounded-full"
+											class="grid size-9 shrink-0 place-items-center rounded-full bg-primary/10 text-primary"
 										>
 											<Bot size={18} aria-hidden="true" />
 										</span>
@@ -220,8 +220,8 @@
 										class={cn(
 											'grid max-w-[82%] gap-2 rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm',
 											message.role === 'user'
-												? 'bg-primary text-primary-foreground rounded-br-md'
-												: 'bg-background text-foreground ring-border rounded-bl-md ring-1'
+												? 'rounded-br-md bg-primary text-primary-foreground'
+												: 'rounded-bl-md bg-background text-foreground ring-1 ring-border'
 										)}
 									>
 										<div class="flex items-center gap-2 text-xs font-medium">
@@ -243,7 +243,7 @@
 
 									{#if message.role === 'user'}
 										<span
-											class="bg-primary text-primary-foreground grid size-9 shrink-0 place-items-center rounded-full"
+											class="grid size-9 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground"
 										>
 											<CircleUserRound size={18} aria-hidden="true" />
 										</span>
@@ -254,12 +254,12 @@
 							{#if chat.status === 'submitted'}
 								<div class="flex items-center gap-3">
 									<span
-										class="bg-primary/10 text-primary grid size-9 shrink-0 place-items-center rounded-full"
+										class="grid size-9 shrink-0 place-items-center rounded-full bg-primary/10 text-primary"
 									>
 										<Bot size={18} aria-hidden="true" />
 									</span>
 									<div
-										class="bg-background ring-border rounded-2xl rounded-bl-md px-4 py-3 text-sm ring-1"
+										class="rounded-2xl rounded-bl-md bg-background px-4 py-3 text-sm ring-1 ring-border"
 									>
 										Thinking...
 									</div>
@@ -285,7 +285,7 @@
 						onkeydown={handleComposerKeydown}
 					/>
 					<div class="flex flex-wrap items-center justify-between gap-3">
-						<p class="text-muted-foreground text-xs">
+						<p class="text-xs text-muted-foreground">
 							{data.copilot.enabled
 								? 'Context is refreshed from CMS on every request.'
 								: 'No secret is exposed; local fallback uses only CMS state.'}
@@ -317,15 +317,15 @@
 				</Card.Header>
 				<Card.Content class="grid gap-3">
 					{#each incompleteListings.slice(0, 5) as listing (listing.id)}
-						<div class="border-border rounded-lg border p-3">
+						<div class="rounded-lg border border-border p-3">
 							<div class="flex items-start justify-between gap-3">
 								<div class="min-w-0">
 									<p class="truncate text-sm font-medium">{listing.title}</p>
-									<p class="text-muted-foreground text-xs">
+									<p class="text-xs text-muted-foreground">
 										{listing.status} - {listing.brand}
 										{listing.model} - {listing.priceLabel}
 									</p>
-									<p class="text-muted-foreground mt-1 text-xs">
+									<p class="mt-1 text-xs text-muted-foreground">
 										Add {listing.missing.join(', ')}
 									</p>
 								</div>
@@ -345,13 +345,13 @@
 				</Card.Header>
 				<Card.Content class="grid gap-3">
 					{#each data.cms.recentWork.slice(0, 5) as item (item.id)}
-						<div class="border-border rounded-lg border p-3">
+						<div class="rounded-lg border border-border p-3">
 							<div class="flex items-center justify-between gap-3">
 								<p class="truncate text-sm font-medium">{item.label}</p>
 								<Badge variant="outline">{item.type}</Badge>
 							</div>
-							<p class="text-muted-foreground mt-1 line-clamp-2 text-xs">{item.body}</p>
-							<p class="text-muted-foreground mt-2 text-xs">{formatDate(item.createdAt)}</p>
+							<p class="mt-1 line-clamp-2 text-xs text-muted-foreground">{item.body}</p>
+							<p class="mt-2 text-xs text-muted-foreground">{formatDate(item.createdAt)}</p>
 						</div>
 					{/each}
 				</Card.Content>

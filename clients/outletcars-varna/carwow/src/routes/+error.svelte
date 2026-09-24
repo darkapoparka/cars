@@ -1,4 +1,8 @@
 <script lang="ts">
+	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
@@ -23,25 +27,26 @@
 
 <main id="main-content" class="daynight-error" aria-labelledby="daynight-error-title">
 	<div class="daynight-error__card">
-		<a class="daynight-error__brand" href={resolve('/')}>
-			<img src={resolve(daynightSite.logoDark)} alt={`${daynightSite.shortName}`} />
+		<a class="daynight-error__brand" href={i18n.href(resolve('/'))}>
+			<img src={i18n.asset(resolve(daynightSite.logoDark))} alt={`${daynightSite.shortName}`} />
 		</a>
 		<span class="daynight-error__code">{page.status}</span>
-		<h1 id="daynight-error-title">{heading}</h1>
-		<p>{detail}</p>
+		<h1 id="daynight-error-title">{i18n.text(heading)}</h1>
+		<p>{i18n.text(detail)}</p>
 		<div class="daynight-error__actions">
 			<a
 				class="daynight-error__action daynight-error__action--primary"
-				href={resolve('/inventory')}
+				href={i18n.href(resolve('/inventory'))}
 			>
 				<CarFront size={18} strokeWidth={2.3} aria-hidden="true" />
-				<span>Виж автомобилите</span>
+				<span>{i18n.t('copy.f20a4411e8d6')}</span>
 			</a>
-			<a class="daynight-error__action" href={resolve('/')}>
+			<a class="daynight-error__action" href={i18n.href(resolve('/'))}>
 				<House size={18} strokeWidth={2.3} aria-hidden="true" />
-				<span>Начало</span>
+				<span>{i18n.t('copy.4af5d2efadd7')}</span>
 			</a>
 		</div>
+		<LocaleTrigger footer />
 	</div>
 </main>
 

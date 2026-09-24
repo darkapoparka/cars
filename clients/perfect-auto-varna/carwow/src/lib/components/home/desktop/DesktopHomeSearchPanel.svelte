@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import '$lib/styles/desktop-discovery.css';
 	import Search from '@lucide/svelte/icons/search';
 	import { resolve } from '$app/paths';
@@ -52,9 +55,9 @@
 	let keywordQuery = $state('');
 	type HeroIntent = 'buy' | 'sell' | 'import';
 	const intents = [
-		{ value: 'buy', label: 'Купи' },
-		{ value: 'sell', label: 'Продай' },
-		{ value: 'import', label: 'Внос' }
+		{ value: 'buy', label: i18n.t('copy.f6c6952d4d23') },
+		{ value: 'sell', label: i18n.t('copy.6510e880c790') },
+		{ value: 'import', label: i18n.t('copy.995bfafd0b63') }
 	] as const;
 	let activeIntent = $state<HeroIntent>('buy');
 	let hydrated = $state(false);
@@ -65,11 +68,13 @@
 	let sellModel = $state('');
 	let importSourceUrl = $state('');
 	const formAction = $derived(
-		activeIntent === 'sell'
-			? resolve('/sell-your-car')
-			: activeIntent === 'import'
-				? resolve('/contact')
-				: resolve('/inventory')
+		i18n.href(
+			activeIntent === 'sell'
+				? resolve('/sell-your-car')
+				: activeIntent === 'import'
+					? resolve('/contact')
+					: resolve('/inventory')
+		)
 	);
 
 	function selectIntent(intent: HeroIntent) {
@@ -255,7 +260,7 @@
 		{/each}
 	{/if}
 	{#if showKeywordSearch}
-		<div class="hero-intent__tabs" role="tablist" aria-label="Какво искаш да направиш?">
+		<div class="hero-intent__tabs" role="tablist" aria-label={i18n.t('copy.5a80de742e54')}>
 			{#each intents as intent, index (intent.value)}
 				<button
 					type="button"
@@ -266,7 +271,7 @@
 					aria-controls="hero-intent-panel"
 					tabindex={activeIntent === intent.value ? 0 : -1}
 					onclick={() => selectIntent(intent.value)}
-					onkeydown={(event) => handleIntentKeydown(event, index)}>{intent.label}</button
+					onkeydown={(event) => handleIntentKeydown(event, index)}>{i18n.text(intent.label)}</button
 				>
 			{/each}
 		</div>
@@ -278,25 +283,27 @@
 		>
 			{#if activeIntent === 'buy'}
 				<label class="hero-intent__label hero-intent__label--search" for="hero-buy-query"
-					>Какъв автомобил търсиш?</label
+					>{i18n.t('copy.d028fe65890c')}</label
 				>
 				<div class="hero-intent__row hero-intent__row--search">
 					<input
+						{@attach i18n.validation}
 						id="hero-buy-query"
 						class="hero-intent__input"
 						type="search"
 						name="q"
 						autocomplete="off"
-						placeholder="Марка, модел или ключова дума"
+						placeholder={i18n.t('copy.df071062a573')}
 						bind:value={keywordQuery}
 					/>
 					<button
 						class="hero-intent__submit"
 						type="submit"
-						aria-label={`Търси сред ${matchingVehicleCount} автомобила`}
-						title="Търси автомобили"
+						aria-label={i18n.t('pattern.bcc5755f99f8', { v0: matchingVehicleCount })}
+						title={i18n.t('copy.255bbb6ac445')}
 					>
 						<Search size={20} strokeWidth={2} aria-hidden="true" />
+						<span>{i18n.t('copy.6517beda9674')}</span>
 					</button>
 				</div>
 				<div class="hero-intent__quick-fields">
@@ -306,16 +313,16 @@
 							class="hero-intent__filter"
 							disabled={!hydrated}
 							class:is-selected={!!selectedQuickValues[field.name]}
-							aria-label={`${field.label}: ${quickFullLabel(field)}`}
+							aria-label={`${i18n.text(field.label)}: ${i18n.spec(quickFullLabel(field))}`}
 							aria-haspopup="dialog"
 							aria-expanded={activeQuickFieldName === field.name}
-							title={quickFullLabel(field)}
+							title={i18n.spec(quickFullLabel(field))}
 							onclick={(event) => openQuickField(field, event)}
 						>
-							<span>{quickDisplayLabel(field)}</span>
+							<span>{i18n.spec(quickDisplayLabel(field))}</span>
 							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"
 								><path
-									d="m6 9 6 6 6-6"
+									d="M12 5v14M5 12h14"
 									stroke="currentColor"
 									stroke-width="2"
 									stroke-linecap="round"
@@ -328,56 +335,60 @@
 			{:else if activeIntent === 'sell'}
 				<div class="hero-intent__row hero-intent__row--sell">
 					<label class="hero-intent__label" for="hero-sell-make"
-						>Марка
+						>{i18n.t('copy.b7fccee005ae')}
 						<input
+							{@attach i18n.validation}
 							id="hero-sell-make"
 							class="hero-intent__input"
 							type="text"
 							name="make"
-							placeholder="Напр. BMW"
+							placeholder={i18n.t('copy.f72bd5b65622')}
 							required
 							maxlength="80"
 							bind:value={sellMake}
 						/>
 					</label>
 					<label class="hero-intent__label" for="hero-sell-model"
-						>Модел
+						>{i18n.t('copy.37858c8efede')}
 						<input
+							{@attach i18n.validation}
 							id="hero-sell-model"
 							class="hero-intent__input"
 							type="text"
 							name="model"
-							placeholder="Напр. Серия 3"
+							placeholder={i18n.t('copy.d9e466f57c5b')}
 							required
 							maxlength="120"
 							bind:value={sellModel}
 						/>
 					</label>
-					<button class="hero-intent__submit" type="submit">Продължи</button>
+					<button class="hero-intent__submit" type="submit">{i18n.t('copy.ffe5cca7d0b3')}</button>
 				</div>
 				<p class="hero-intent__hint">
-					Добави данните за автомобила. Следващата стъпка е заявка за оценка.
+					{i18n.t('copy.f8c37cf7bd53')}
 				</p>
 			{:else}
 				<input type="hidden" name="intent" value="import" />
-				<label class="hero-intent__label" for="hero-import-url">Линк към обява за автомобил</label>
+				<label class="hero-intent__label" for="hero-import-url">{i18n.t('copy.26bf9a0a41c0')}</label
+				>
 				<div class="hero-intent__row">
 					<input
+						{@attach i18n.validation}
 						id="hero-import-url"
 						class="hero-intent__input"
 						type="url"
 						name="sourceUrl"
-						placeholder="https://www.mobile.de/…"
+						placeholder={i18n.t('copy.18fff8d4789c')}
 						required
 						pattern="https?://.+"
 						maxlength="2000"
 						aria-describedby="hero-import-hint"
 						bind:value={importSourceUrl}
 					/>
-					<button class="hero-intent__submit" type="submit">Продължи</button>
+					<button class="hero-intent__submit" type="submit">{i18n.t('copy.ffe5cca7d0b3')}</button>
 				</div>
 				<p id="hero-import-hint" class="hero-intent__hint">
-					Хареса автомобил в чужбина? Добави линка към заявката си за внос.
+					{i18n.t('copy.a5fb78b0cbac')}
 				</p>
 			{/if}
 		</div>
@@ -393,12 +404,16 @@
 				<div class="daynight-home-hero__search-intro">
 					{#if showSearchCopy}
 						<div class="daynight-home-hero__search-copy">
-							<strong>Търси в налични</strong>
+							<strong>{i18n.t('copy.d8a207965cec')}</strong>
 							<span>({matchingVehicleCount})</span>
 						</div>
 					{/if}
 					{#if showCondition}
-						<div class="daynight-home-hero__condition" role="group" aria-label="Тип автомобил">
+						<div
+							class="daynight-home-hero__condition"
+							role="group"
+							aria-label={i18n.t('copy.ae5f681d8d20')}
+						>
 							<div class="daynight-home-hero__condition-inner">
 								<button
 									type="button"
@@ -408,7 +423,7 @@
 									]}
 									data-vehicle-condition="all"
 									aria-pressed={activeCondition === 'all'}
-									onclick={() => setActiveCondition('all')}>Всички</button
+									onclick={() => setActiveCondition('all')}>{i18n.t('copy.117d98cb652c')}</button
 								>
 								<button
 									type="button"
@@ -418,7 +433,7 @@
 									]}
 									data-vehicle-condition="new"
 									aria-pressed={activeCondition === 'new'}
-									onclick={() => setActiveCondition('new')}>Нови</button
+									onclick={() => setActiveCondition('new')}>{i18n.t('copy.fd848e5e894f')}</button
 								>
 								<button
 									type="button"
@@ -428,7 +443,7 @@
 									]}
 									data-vehicle-condition="used"
 									aria-pressed={activeCondition === 'used'}
-									onclick={() => setActiveCondition('used')}>Употребявани</button
+									onclick={() => setActiveCondition('used')}>{i18n.t('copy.9536d595d99b')}</button
 								>
 							</div>
 						</div>
@@ -457,13 +472,13 @@
 				<button
 					type="button"
 					class="filter-select-dropdown__text"
-					aria-label={`${field.label}: ${quickFullLabel(field)}`}
+					aria-label={`${i18n.text(field.label)}: ${i18n.spec(quickFullLabel(field))}`}
 					aria-haspopup="dialog"
 					aria-expanded={activeQuickFieldName === field.name}
-					title={quickFullLabel(field)}
+					title={i18n.spec(quickFullLabel(field))}
 					onclick={(event) => openQuickField(field, event)}
 				>
-					<span data-daynight-quick-value="">{quickDisplayLabel(field)}</span>
+					<span data-daynight-quick-value="">{i18n.spec(quickDisplayLabel(field))}</span>
 				</button>
 			</div>
 		</div>
@@ -477,7 +492,10 @@
 	<button
 		type="submit"
 		class={['daynight-home-hero__submit', iconOnly && 'daynight-home-hero__submit--icon']}
-		aria-label={`Търси сред ${matchingVehicleCount} ${matchingVehicleCount === 1 ? 'автомобил' : 'автомобила'}`}
+		aria-label={i18n.t('pattern.f17ae026f58f', {
+			v0: matchingVehicleCount,
+			v1: matchingVehicleCount === 1 ? i18n.t('copy.841d8c2e64c6') : i18n.t('copy.afc67636f9b8')
+		})}
 	>
 		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 			<circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
@@ -485,8 +503,8 @@
 		</svg>
 		<span
 			>{matchingVehicleCount === 1
-				? 'Покажи 1 автомобил'
-				: `Покажи ${matchingVehicleCount} автомобила`}</span
+				? i18n.t('copy.9f6e0a12c44c')
+				: i18n.t('pattern.d06c313b4917', { v0: matchingVehicleCount })}</span
 		>
 	</button>
 {/snippet}
@@ -494,7 +512,7 @@
 {#if activeQuickField}
 	<dialog
 		class="daynight-hero-filter-sheet hero-intent-dialog"
-		aria-label={activeQuickField.label}
+		aria-label={i18n.text(activeQuickField.label)}
 		onkeydown={keepQuickDialogFocus}
 		oncancel={(event) => {
 			event.preventDefault();
@@ -505,16 +523,16 @@
 		<button
 			type="button"
 			class="daynight-hero-filter-sheet__backdrop"
-			aria-label="Затвори"
+			aria-label={i18n.t('copy.1ef1a425356f')}
 			onclick={closeQuickField}
 		></button>
 		<div class="daynight-hero-filter-sheet__sheet">
 			<div class="daynight-hero-filter-sheet__head">
-				<h3 class="daynight-hero-filter-sheet__title">{activeQuickField.label}</h3>
+				<h3 class="daynight-hero-filter-sheet__title">{i18n.text(activeQuickField.label)}</h3>
 				<button
 					type="button"
 					class="daynight-hero-filter-sheet__close"
-					aria-label="Затвори"
+					aria-label={i18n.t('copy.1ef1a425356f')}
 					onclick={closeQuickField}>✕</button
 				>
 			</div>
@@ -528,11 +546,16 @@
 					/></svg
 				>
 				<input
+					{@attach i18n.validation}
 					type="text"
 					class="daynight-hero-filter-sheet__search"
 					autocomplete="off"
-					placeholder={`Търси ${activeQuickField.label.toLocaleLowerCase('bg-BG')}...`}
-					aria-label={`Търси ${activeQuickField.label.toLocaleLowerCase('bg-BG')}`}
+					placeholder={i18n.t('pattern.b73b60b23e89', {
+						v0: i18n.text(activeQuickField.label).toLocaleLowerCase(i18n.locale)
+					})}
+					aria-label={i18n.t('pattern.13a9318d4e85', {
+						v0: i18n.text(activeQuickField.label).toLocaleLowerCase(i18n.locale)
+					})}
 					bind:value={quickFilterQuery}
 				/>
 			</div>
@@ -549,13 +572,13 @@
 						aria-selected={option.value === activeQuickValue}
 						onclick={() => pickQuickValue(option.value)}
 					>
-						<span>{option.label}</span>
+						<span>{i18n.text(option.label)}</span>
 						<span class="daynight-hero-filter-sheet__tick" aria-hidden="true">✓</span>
 					</button>
 				{/each}
 				{#if filteredQuickOptions.length === 1 && quickFilterQuery.trim()}
 					<p class="daynight-hero-filter-sheet__empty">
-						Няма резултат за „{quickFilterQuery}“
+						{i18n.t('copy.41846409e36e')}{quickFilterQuery}“
 					</p>
 				{/if}
 			</div>
@@ -576,49 +599,39 @@
 	.hero-intent-dialog::backdrop {
 		background: transparent;
 	}
-	.hero-intent__label--search {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		clip-path: inset(50%);
-	}
 	/* The task panel owns its controls; legacy hero selectors do not style it. */
 	.hero-intent {
 		background: var(--discovery-panel);
-		border-radius: 12px;
+		border-radius: 16px;
+		box-shadow: 0 12px 32px rgb(58 44 0 / 10%);
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
-		padding: 14px 18px 18px;
+		padding: 8px 24px 24px;
 		text-align: left;
 		width: 100%;
 	}
 	.hero-intent__tabs {
-		display: flex;
-		justify-content: center;
-		border: 0;
-		gap: 4px;
-		margin: 0 auto 12px;
-		width: fit-content;
-		padding: 3px;
-		background: var(--discovery-muted-surface);
-		border-radius: 8px;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		border-bottom: 1px solid var(--discovery-control-border);
+		margin: 0 0 20px;
+		width: 100%;
 	}
 	.hero-intent__tabs button {
 		background: transparent;
 		border: 0;
-		border-bottom: 0;
-		border-radius: 7px;
+		border-bottom: 3px solid transparent;
+		border-radius: 0;
 		color: #59616c;
 		cursor: pointer;
 		font: inherit;
 		font-size: var(--sa-text-hero-tab);
 		font-weight: var(--sa-button-font-weight);
-		min-height: 44px;
+		min-height: 52px;
 		padding: 0 18px;
 	}
 	.hero-intent__tabs button:hover {
-		background: var(--discovery-light-hover);
+		background: #f8f8f6;
 		color: var(--sa-ink);
 	}
 	.hero-intent button:disabled {
@@ -626,14 +639,14 @@
 		opacity: 0.6;
 	}
 	.hero-intent__tabs button[aria-selected='true'] {
-		background: #171b1e;
-		color: #fff;
+		border-bottom-color: var(--discovery-action);
+		color: var(--discovery-ink);
 	}
 	.hero-intent__tabs button[aria-selected='true']:hover {
-		background: var(--discovery-action-hover);
+		background: #f8f8f6;
 	}
 	.hero-intent__panel {
-		min-height: 112px;
+		min-height: 152px;
 	}
 	.hero-intent__label {
 		color: var(--sa-ink);
@@ -720,9 +733,9 @@
 	}
 	.hero-intent__row--search .hero-intent__submit {
 		flex: none;
-		width: var(--discovery-search-action-size);
+		width: auto;
 		height: var(--discovery-search-action-size);
-		padding: 0;
+		padding: 0 20px;
 		border-radius: 5px;
 	}
 	@media (pointer: coarse) {
@@ -738,7 +751,7 @@
 	}
 	.hero-intent__filter {
 		align-items: center;
-		background: var(--discovery-filter-background);
+		background: #fff;
 		border: 1px solid var(--discovery-filter-border);
 		border-radius: 8px;
 		color: var(--discovery-filter-foreground);
@@ -749,7 +762,7 @@
 		font-weight: var(--sa-weight-medium);
 		gap: 8px;
 		justify-content: space-between;
-		min-height: 46px;
+		min-height: 52px;
 		min-width: 0;
 		padding: 8px 12px;
 	}
@@ -763,6 +776,7 @@
 	}
 	/* The storefront's legacy span/SVG colors must inherit the control color. */
 	.hero-intent__filter :is(span, svg),
+	.hero-intent__submit span,
 	.hero-intent__submit :global(svg),
 	.hero-intent__submit :global(svg *),
 	.hero-intent svg :is(path, circle) {

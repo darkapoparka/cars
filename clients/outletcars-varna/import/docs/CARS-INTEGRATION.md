@@ -19,6 +19,7 @@ The actual content boundaries include `src/lib/data/daynight.ts`, `src/lib/data/
 ## Historical documents
 
 Source-era roadmaps, audits, execution logs, migration plans, legacy copies and dated refactor evidence retain their original context. They are not new assignments. AGENTS routes current tasks. Preserve licenses and provenance; do not rewrite old results as fresh verification.
+
 ## Main is the working branch
 
 The owner chose a main-only workflow on 13 September 2026. Use the saved checkout on `main` for routine work. Do not create another branch or worktree unless the owner explicitly requests one. One task owns writes to a checkout; concurrent tasks may review read-only or work in a different repository. Fetch and inspect status before writing, preserve other tasks' work, and finish authorized implementation with scoped commits and a non-force push to main.

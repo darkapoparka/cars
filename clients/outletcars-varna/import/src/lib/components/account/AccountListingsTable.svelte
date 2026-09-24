@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { Edit3, MessageSquare, Trash2 } from '@lucide/svelte';
+	import Edit3 from '@lucide/svelte/icons/pen-line';
+	import MessageSquare from '@lucide/svelte/icons/message-square';
+	import Trash2 from '@lucide/svelte/icons/trash-2';
 	import type { AuxeroAccountListingsData } from '$lib/auxero/account-listings';
 
 	let { listings }: { listings: AuxeroAccountListingsData } = $props();
