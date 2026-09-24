@@ -19,7 +19,6 @@
 
 	let headerHeight = $state(58);
 	let headerWrapperHeight = $state(58);
-	let languageOpen = $state(false);
 	let pageScrollY = $state(0);
 	let searchOpen = $state(false);
 
@@ -41,38 +40,12 @@
 	const compareBadge = $derived(garage?.compare.length ?? 0);
 	const favoritesBadge = $derived(garage?.favorites.length ?? 0);
 
-	function closeLanguageMenu() {
-		languageOpen = false;
-	}
-
-	function toggleLanguageMenu() {
-		languageOpen = !languageOpen;
-	}
-
 	function toggleHeaderSearch() {
 		if (onSearch) {
 			onSearch();
 			return;
 		}
 		searchOpen = !searchOpen;
-	}
-
-	function handleDocumentClick(event: MouseEvent) {
-		const clickedInsideLanguageMenu = event
-			.composedPath()
-			.some((node) => node instanceof HTMLElement && node.id === 'language-select');
-
-		if (languageOpen && !clickedInsideLanguageMenu) {
-			closeLanguageMenu();
-		}
-	}
-
-	function handleDocumentKeydown(event: KeyboardEvent) {
-		if (event.key !== 'Escape') {
-			return;
-		}
-
-		closeLanguageMenu();
 	}
 
 	function trackElementHeight(setHeight: (height: number) => void): Attachment<HTMLElement> {
@@ -100,7 +73,6 @@
 </script>
 
 <svelte:window bind:scrollY={pageScrollY} />
-<svelte:document onclick={handleDocumentClick} onkeydown={handleDocumentKeydown} />
 
 <div
 	class="site-chrome relative z-50 min-h-[158px] bg-sa-surface font-sa tracking-normal text-sa-ink max-[1199px]:min-h-[58px] max-[991px]:min-h-0"
@@ -109,7 +81,7 @@
 >
 	<header class={headerClasses} id="header_main" {@attach trackHeaderHeight}>
 		{#if !isStickyFixed}
-			<SiteChromeTopBar {languageOpen} onLanguageToggle={toggleLanguageMenu} />
+			<SiteChromeTopBar />
 			<SiteChromePrimaryRow
 				searchOpen={searchExpanded ?? searchOpen}
 				{compareBadge}
@@ -201,8 +173,6 @@
 
 		.site-chrome :global(.site-chrome-topbar a),
 		.site-chrome :global(.site-chrome-topbar__dot),
-		.site-chrome :global(.site-chrome-topbar__language),
-		.site-chrome :global(.site-chrome-topbar__language span),
 		.site-chrome :global(.site-chrome-topbar svg),
 		.site-chrome :global(.site-chrome-topbar svg *) {
 			color: var(--sa-header-ink) !important;

@@ -42,6 +42,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
   aria-hidden="true"
+  focusable="false"
 >
   {#if name === 'adjustments'}
     <path d="M4 3v5.5M4 13.5V21M12 3v1.5M12 9.5V21M20 3v9.5M20 17.5V21" />

@@ -1,0 +1,50 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Пловдив",
+    "bg": "Пловдив",
+    "en": "Plovdiv",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+    "bg": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+    "en": "South Industrial Zone, Ring Road opposite Chiirite Hotel",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.address",
+    "source": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+    "bg": "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+    "en": "South Industrial Zone, Ring Road opposite Chiirite Hotel, Plovdiv",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.locationShort",
+    "source": "Пловдив",
+    "bg": "Пловдив",
+    "en": "Plovdiv",
+    "disposition": "translate",
+    "notes": "Dealer-owned short location label."
+  },
+  {
+    "key": "dealer.name",
+    "source": "K-G Team Auto",
+    "en": "K-G Team Auto",
+    "bg": "K-G Team Auto",
+    "disposition": "invariant",
+    "notes": "Dealer-owned proper name."
+  },
+  {
+    "key": "dealer.shortName",
+    "source": "K-G Team Auto",
+    "en": "K-G Team Auto",
+    "bg": "K-G Team Auto",
+    "disposition": "invariant",
+    "notes": "Dealer-owned short proper name."
+  }
+]

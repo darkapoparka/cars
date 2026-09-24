@@ -1,0 +1,285 @@
+{
+	"schemaVersion": 3,
+	"verifiedAt": "2026-09-20T16:32:11.888Z",
+	"repository": "darkapoparka/cars-template-carwow",
+	"branch": "main",
+	"baseline": "89f50c427863050abb7923152f05c091bb937d1e",
+	"priorRelease": {
+		"application": "2cb3eb1d33f71d5b3ef92497b773d629dcd52ffc",
+		"documentation": "6a503023c012c3b3f533954e9f756422af6b6313",
+		"deployment": "dpl_6eLNijAiC9M51T5z3osZjMYevfJx",
+		"scope": "Earlier 156-route matrices; superseded by expanded follow-up verification below"
+	},
+	"applicationSourceCommit": "6e2bb94f85e0140846ce8c11e09b89330c3fdbf8",
+	"releaseCommit": "4c5db243f07fa13831894e762203a75366e5a44d",
+	"releaseTree": "96cbf5c74b4fd7b0603291fa26d2497eb2eba247",
+	"sourceRelation": "Only the presentation verifier selector changed between applicationSourceCommit and releaseCommit; application, configuration, catalog and asset blobs are identical.",
+	"deployment": {
+		"id": "dpl_8vUuDx4pWFyEMqaZWNsrjm17um7C",
+		"state": "READY",
+		"sha": "4c5db243f07fa13831894e762203a75366e5a44d",
+		"project": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+		"team": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+		"url": "cars-template-carwow-l66rqgui2-tyj5.vercel.app",
+		"alias": [
+			"cars-template-carwow.vercel.app",
+			"cars-template-carwow-tyj5.vercel.app",
+			"cars-template-carwow-git-main-tyj5.vercel.app"
+		],
+		"source": "git",
+		"aliasError": null,
+		"verifiedAt": "2026-09-20T16:28:00.370Z"
+	},
+	"sourceHashes": {
+		"src/lib/locale/policy.ts": "0d94a5cd19f105bd822dd56d14baf237697a20e48b450b12b71a5bc83288d85e",
+		"src/lib/locale/server.ts": "6b949d80cb7568f90d71d36b0e3510bdf807bf3201f2db35638b463c6b5df499",
+		"src/lib/locale/catalog.ts": "b3e8c7a3948fd548e01e0b5fe393e5ed12e20c0c879b2e03396932cc270cd554",
+		"src/lib/locale/seo.ts": "1d1abc927b149a2f4f6acae38c9c22c6b478ef944258ba99b26171f6e158e410",
+		"src/lib/server/sitemap.ts": "1121b9f3ba1ea624dbca8000ad938933ba61c27a2ac5b6e4ace0c395dffd4e31",
+		"svelte.config.js": "49f883da4a008906b4fd960793212116bcf20f3401d17bc51155a8eefade3e3b",
+		"package-lock.json": "0f90a24d7de0d8a7954ca2ed359eb0970323bf72dd3e26bb6254573d20e551dd",
+		"scripts/localization-browser.mjs": "b8bc8bd4e4e22b7fcb8333414db889d59a96eeb55c8b880874a6e8a436e897a5",
+		"scripts/localization-interactions.mjs": "47f5e63971362fe0d2f404f929a4d572515a4773c7a958c06d020f1f7afc83b3",
+		"scripts/localization-followup.mjs": "c113bafb801e680ab579a7037101b8a22a3de37937a00faccd8cec7b864a94a1",
+		"scripts/locale-policy.test.mjs": "d23103bf807c7fdcfbd3820daa6ecdbc455dd4f1d59336d5951fd2d3574485fd"
+	},
+	"commands": [
+		{
+			"command": "npm run check",
+			"result": "0 errors, 0 warnings",
+			"evidence": ".audit/localization/release-followup-check.log"
+		},
+		{
+			"command": "node node_modules/vitest/vitest.mjs run",
+			"result": "167 passed, 21 files, task-only source at applicationSourceCommit",
+			"evidence": ".audit/localization/release-followup-unit.log"
+		},
+		{
+			"command": "npm run test:localization",
+			"result": "109 passed; includes12 normalized-return form/JSON negatives and valid external-query positive",
+			"evidence": ".audit/localization/redirect-current-recheck.log"
+		},
+		{
+			"command": "npm run test:tooling",
+			"result": "11 passed",
+			"evidence": ".audit/localization/followup-tooling.log"
+		},
+		{
+			"command": "npm run lint:code",
+			"result": "passed on application source; final changed verifier separately passed ESLint",
+			"evidence": ".audit/localization/release-followup-lint.log"
+		},
+		{
+			"command": "node node_modules/eslint/bin/eslint.js scripts/localization-followup.mjs",
+			"result": "passed",
+			"evidence": ".audit/localization/followup-verifier-lint.log"
+		},
+		{
+			"command": "npm run check:localization",
+			"result": "passed; presentation and actual local mobile blog display sources included",
+			"evidence": ".audit/localization/release-followup-guard.log"
+		},
+		{
+			"command": "npm run check:typography",
+			"result": "289 source files passed",
+			"evidence": ".audit/localization/release-followup-typography.log"
+		},
+		{
+			"command": "npm run check:backend-secrets",
+			"result": "354 client-exposed source and395 built client files passed",
+			"evidence": ".audit/localization/release-followup-secrets.log"
+		},
+		{
+			"command": "node .audit/localization/check-committed-format.mjs",
+			"result": "36 task-owned committed blobs passed",
+			"evidence": ".audit/localization/followup-committed-format.json"
+		},
+		{
+			"command": "DAY_LOCALE_BASE=/variant-3 node scripts/build-node-preview.mjs",
+			"result": "passed; applicationSourceCommit",
+			"evidence": ".audit/localization/release-followup-mounted-build.log"
+		},
+		{
+			"command": "DAY_LOCALE_BASE= node scripts/build-node-preview.mjs",
+			"result": "passed; releaseCommit",
+			"evidence": ".audit/localization/release-followup-standalone-build.log"
+		},
+		{
+			"command": "npm run build",
+			"result": "Vercel Git/main READY at releaseCommit",
+			"evidence": ".audit/localization/followup-deployment.json"
+		},
+		{
+			"command": "node scripts/localization-followup.mjs; node scripts/localization-browser.mjs; node scripts/localization-interactions.mjs",
+			"result": "Serial runs with LOCALE_EVIDENCE per matrix, DAY_LOCALE_BASE empty or /variant-3, LOCALE_ORIGIN local or public alias. Counts/hashes below."
+		}
+	],
+	"matrices": [
+		{
+			"name": "release-followup-final-standalone",
+			"origin": "http://127.0.0.1:6464",
+			"base": "",
+			"routes": {
+				"passed": 180,
+				"failed": 0,
+				"skipped": 0
+			},
+			"interactions": {
+				"passed": 59,
+				"failed": 0,
+				"skipped": 2
+			},
+			"followup": {
+				"cases": 35,
+				"passed": 35,
+				"failed": 0
+			},
+			"receipts": {
+				".audit/localization/release-followup-final-standalone/routes.json": "9791af56473e8b8dede4177ab8156521de60c5de78a33ba4fa713ccb7958f270",
+				".audit/localization/release-followup-final-standalone/interactions.json": "41cf99afd89b7ba2f8f1d64d6400bb7019f7ddbff7bd301d15c2725f7b7ab361",
+				".audit/localization/release-followup-final-standalone/followup.json": "2415801dee84c03237964f694fc3770df807bf13ac8ff37460e497be4d6784b1"
+			}
+		},
+		{
+			"name": "release-followup-mounted",
+			"origin": "http://127.0.0.1:6464",
+			"base": "/variant-3",
+			"routes": {
+				"passed": 180,
+				"failed": 0,
+				"skipped": 0
+			},
+			"interactions": {
+				"passed": 59,
+				"failed": 0,
+				"skipped": 2
+			},
+			"followup": {
+				"cases": 35,
+				"passed": 35,
+				"failed": 0
+			},
+			"receipts": {
+				".audit/localization/release-followup-mounted/routes.json": "8eebc79bb44842edca7c284afbe05520dd358b6bee8330fa92d3faf8c66a35d1",
+				".audit/localization/release-followup-mounted/interactions.json": "41cf99afd89b7ba2f8f1d64d6400bb7019f7ddbff7bd301d15c2725f7b7ab361",
+				".audit/localization/release-followup-mounted/followup.json": "205ad8f8f73152f0a64b2b168b38726f27875f00029cd3fe6f3a1d37b4244ef4"
+			}
+		},
+		{
+			"name": "release-followup-public",
+			"origin": "https://cars-template-carwow.vercel.app",
+			"base": "",
+			"routes": {
+				"passed": 180,
+				"failed": 0,
+				"skipped": 0
+			},
+			"interactions": {
+				"passed": 59,
+				"failed": 0,
+				"skipped": 2
+			},
+			"followup": {
+				"cases": 35,
+				"passed": 35,
+				"failed": 0
+			},
+			"receipts": {
+				".audit/localization/release-followup-public/routes.json": "6d56c83de4a334a82d6be34d26e3545f2085587b1b54fe477c2f98554867f395",
+				".audit/localization/release-followup-public/interactions.json": "41cf99afd89b7ba2f8f1d64d6400bb7019f7ddbff7bd301d15c2725f7b7ab361",
+				".audit/localization/release-followup-public/followup.json": "2415801dee84c03237964f694fc3770df807bf13ac8ff37460e497be4d6784b1"
+			}
+		}
+	],
+	"skipReason": "EN/BG1440 mobile import URL hero intentionally absent; desktop contact validation is tested.",
+	"redirect": {
+		"policySha256": "0d94a5cd19f105bd822dd56d14baf237697a20e48b450b12b71a5bc83288d85e",
+		"before": ".audit/localization/coordinator-normalized-return-path-negative.json",
+		"fix": "Revalidate normalized pathname as a single-slash relative reference; retain encoded separator/control defenses. Carwow-only change.",
+		"coverage": "Save/dismiss x form/JSON x three normalized attacks; malicious mocked browser destination; six no-JS invalid-return cases per matrix; external URL confined to query remains valid."
+	},
+	"preservation": {
+		"followupHeldPaths": 24,
+		"exactHoldBytes": 22,
+		"formattedAfterRestore": [
+			"src/lib/utils/format.ts",
+			"src/lib/components/blog/MobileBlogArticle.svelte"
+		],
+		"baselineOnlyStyle": {
+			"file": "src/lib/styles/daynight-home-desktop.css",
+			"sha256": "6f9d0895050d367617926b7dbdb2932191307394e8dc1852fa648ecde2a392f9"
+		},
+		"proof": ".audit/localization/followup-restoration-final.json",
+		"restoredBrowser": {
+			"scope": "Restored unpublished local compositions, not release source",
+			"cases": 72,
+			"passed": 72,
+			"failed": 0,
+			"articles": 6
+		},
+		"restoredUnit": "176 passed, 22 files; includes preserved local cents tests",
+		"preview": "http://127.0.0.1:6464; restored unpublished composition; not release-source evidence",
+		"port6463": "untouched",
+		"currentHashes": {
+			"src/app.d.ts": "1153b0a654927b1a8cc7b50d4489aac4aa10e21890912a216b60ca827a3fb309",
+			"src/lib/components/about/DesktopAboutPage.svelte": "356c6382b8628b0e6c3fe111c9fba1b968685250a4e9f24542b62b2a94ebbed9",
+			"src/lib/components/blog/BlogIndexPage.svelte": "d5c129b4d305b84f290bd0e4ba20c97b4541fabd43d325a8c836f4336cbff8a6",
+			"src/lib/components/home/desktop/DesktopHome.svelte": "b23bee7d69d5515eb69b9e7f2887b62a1fce39d472c7338975b5050dcc28e64a",
+			"src/lib/components/home/desktop/DesktopHomeInventoryCard.svelte": "8511a6cf84426ce9df90420bd5e937fddbfe7838797239e9f51afa4a4af40c17",
+			"src/lib/components/home/desktop/DesktopHomeInventoryTabs.svelte": "61922a7ba8399d8b9cd7ae07191e2a31511c538c53907227e786ad2eff91e593",
+			"src/lib/components/home/desktop/DesktopHomeSearchPanel.svelte": "b95b4456409a79bd42f462a19f1431d108a6b3eccd2240c2b4d8ef1c76a551f4",
+			"src/lib/components/inventory/desktop/InventoryFilterTriggers.svelte": "1bc44c39da3125eca8b5319fdb611feda7ae8df66a25e1799fc3f230e2bf9055",
+			"src/lib/components/inventory/desktop/InventoryShortcutShelf.svelte": "88db05a82f5bb11feedc6cb5d3bab5751620c836bd76df7a8bcd7a7a1074b784",
+			"src/lib/components/inventory/desktop/SearchBar.svelte": "25146a2702a8b735a271cbfe970ad2ec83fb3244f2c7bc014e6b1220edab1acf",
+			"src/lib/components/inventory/desktop/inventory-desktop.css": "4b7742d83ea19a45b05a947b9bc69a76fe50d6195a7428997cda3b372f1df30d",
+			"src/lib/components/layout/DesktopYellowRouteHero.svelte": "a1650f0580be36a44d649ce3d80c5c4d47defc7bb7af668b6a891924f20b5f3a",
+			"src/lib/components/services/DesktopServicesPage.svelte": "2e772c61370ae6b7df0ca89a23cde8a606f2d005d70760823608f6d76e47253c",
+			"src/lib/components/services/MobileServicesPage.svelte": "af39c55e0496caf395dba61105410fa9a79af43fc533b07d96ed861b7d993ea7",
+			"src/lib/data/daynight-vehicles.ts": "3d2fc7b04df1529cef35b38f681d7dd4247328ade4e5cee38dc1ad1213b4ccea",
+			"src/lib/server/repositories/public-inventory.ts": "7f70acee6077ff4579df244a91f11a6762aa4f354ded70e401ecc4125a673014",
+			"src/lib/styles/desktop-discovery.css": "01dd027486979d1d1ba91e444f47ad9f2373e12604a92045418aa81ae4c874bd",
+			"src/lib/utils/format.ts": "f843678c63046454ef3ff07800de6cd5948fb54205b42837a771108a85bd7306",
+			"src/routes/blog/+page.svelte": "e64e88eac7cedf2e0e0270f902827f0f359001fa8ae16475d78d9101d8d16574",
+			"src/routes/blog/[slug]/+page.svelte": "990150946ae62ed704a993d30245b45771a561d625998e36535b2439efcfced4",
+			"tests/home-hero.e2e.ts": "b411f4c0a7486dba14bd9c0c55072c5f28584a4340d8f076c07e0a530b9a5809",
+			"src/lib/components/blog/MobileBlogArticle.svelte": "bc1dc34dcc785272ce65782c4b96063d0a6336bef2b6b8ca5ad3d7aea42c872b",
+			"src/lib/components/blog/MobileBlogIndex.svelte": "c77b11eef8176b999cb4f04654e5907c7446cf619002a8e3ebbaccd88ffefca4",
+			"src/lib/utils/format.test.ts": "bd464767f2674a6f509fdc63f2f737acfdab9866071877c2e91916d36daf83a0"
+		}
+	},
+	"retainedFailures": [
+		"Initial strict-copy presentation500s including177/180 route result",
+		"Localized heading/action clipping and dark trigger contrast, corrected and visually rechecked",
+		"Local preview without explicit HTTP ORIGIN rejected preference writes; corrected environment only",
+		"Mounted extra suite23/35 due overly broad account selector; preserved before scoped selector rerun",
+		"VAT screenshot/test before hydration/transition; synchronized and settled screenshot inspected"
+	],
+	"knownLimitations": [
+		{
+			"command": "npm run check:architecture",
+			"result": "2 pre-existing unreachable modules: MobileLeadManualCard.svelte and mobile-filter-pill.css"
+		},
+		{
+			"command": "npm run check:format",
+			"result": "5 pre-existing unrelated formatting files: .impeccable critique, AGENTS.md, docs/CARS-INTEGRATION.md, docs/refactor-2026-09-12/REPORT.md, README.md"
+		},
+		{
+			"command": "npm run check:backend-env",
+			"result": "Local production-write preflight lacks DATABASE_URL, BETTER_AUTH_SECRET, CHAT_COOKIE_SECRET, DEFAULT_DEALER_SLUG. Public business writes remain403; no settings changed."
+		}
+	],
+	"notClaimed": [
+		"Full legacy e2e/visual baseline suite",
+		"Firefox/WebKit",
+		"Forced production500",
+		"Authenticated admin or real business delivery",
+		"Independent linguistic review",
+		"Owner approval/publication of retained unrelated design work"
+	],
+	"scope": "Carwow only; no Cars pins, dealers, other apps, worktrees, framework upgrades or security/approval changes.",
+	"buildReceipts": {
+		".audit/localization/release-followup-mounted-build.log": "1aade080c016c3c6235b3f61c9b753d094d6dd2082fb4d40278508a6859969ab",
+		".audit/localization/release-followup-standalone-build.log": "62c528286aefdd26278579929053d7a41890da95f4ce526654a81f6772c43b79",
+		".audit/localization/followup-restored-build.log": "bef4408ec781ccad1d562e6ab040fb69d35e842e673e73f3894088f728a07009"
+	}
+}

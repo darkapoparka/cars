@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { ChevronRight } from '@lucide/svelte';
 	import type { HomeMobileVehicle } from '$lib/types/home';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
@@ -13,29 +16,30 @@
 </script>
 
 {#if vehicles.length}
-	<section class="import-examples" aria-label="Примерни автомобили">
+	<section class="import-examples" aria-label={i18n.t('copy.89da4457aeaa')}>
 		<div class="import-examples__grid">
 			{#each vehicles as car (car.slug)}
 				<button
 					class="import-example"
 					type="button"
 					onclick={() => onSelect(car)}
-					aria-label={`Потърси подобен ${car.shortTitle}`}
+					aria-label={i18n.t('pattern.764733b0595b', { v0: car.shortTitle })}
 				>
 					<span class="import-example__media">
 						<img
-							src={car.image}
+							src={i18n.asset(car.image)}
 							alt={car.shortTitle}
 							loading="lazy"
 							decoding="async"
 							use:daynightImageFallback
 						/>
-						<span class="import-example__badge">Пример</span>
+						<span class="import-example__badge">{i18n.t('copy.fab313a94604')}</span>
 					</span>
 					<span class="import-example__body">
 						<span class="import-example__brand">{car.brand}</span>
 						<strong class="import-example__title">{car.model}</strong>
-						<span class="import-example__meta">{car.year} · {shortFuel(car.fuel)}</span>
+						<span class="import-example__meta">{car.year} · {shortFuel(car.fuel, i18n.locale)}</span
+						>
 					</span>
 					<span class="import-example__foot">
 						<span class="import-example__price">{car.priceEur}</span>

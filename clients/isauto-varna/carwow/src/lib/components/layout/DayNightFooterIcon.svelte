@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	export type DayNightFooterIconName =
 		| 'car-lot'
 		| 'facebook'
@@ -31,7 +34,7 @@
 {:else if name === 'facebook'}
 	<img
 		class="block size-5 object-contain"
-		src="/assets/icons/facebook.svg"
+		src={i18n.asset('/assets/icons/facebook.svg')}
 		alt=""
 		aria-hidden="true"
 		width="20"
@@ -40,7 +43,7 @@
 {:else if name === 'instagram'}
 	<img
 		class="block size-5 object-contain"
-		src="/assets/icons/instagram-official-gradient.svg"
+		src={i18n.asset('/assets/icons/instagram-official-gradient.svg')}
 		alt=""
 		aria-hidden="true"
 		width="20"
@@ -49,7 +52,7 @@
 {:else if name === 'tiktok'}
 	<img
 		class="block size-5 object-contain"
-		src="/assets/icons/tiktok-official-circle.png"
+		src={i18n.asset('/assets/icons/tiktok-official-circle.png')}
 		alt=""
 		aria-hidden="true"
 		loading="lazy"

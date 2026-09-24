@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import { fromAction } from 'svelte/attachments';
 	import { getDayNightVehicleCondition, placeholderImageSlugs } from '$lib/data/daynight-vehicles';
@@ -48,12 +51,12 @@
 	</div>
 	<div class="image">
 		<a
-			href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
-			aria-label={`Виж ${vehicle.shortTitle} ${vehicle.year}`}
+			href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
+			aria-label={i18n.t('pattern.502146f2983d', { v0: vehicle.shortTitle, v1: vehicle.year })}
 		>
 			<img
 				class="card--img"
-				src={vehicle.image}
+				src={i18n.asset(vehicle.image)}
 				alt={vehicle.shortTitle}
 				width="640"
 				height="478"
@@ -68,17 +71,17 @@
 		<div class="bottom">
 			<p class="category text-white">
 				<a
-					href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
+					href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
 					class="text-xs text-white"
-					aria-label={`${vehicle.transmission} - ${vehicle.shortTitle} ${vehicle.year}`}
-					>{vehicle.transmission}</a
+					aria-label={`${i18n.spec(vehicle.transmission)} - ${vehicle.shortTitle} ${vehicle.year}`}
+					>{i18n.spec(vehicle.transmission)}</a
 				>
 			</p>
 			<div class="flex items-center gap-8">
 				{#if hasRealPhotos}
 					<p class="category text-white uppercase">
 						<img
-							src="/assets/icons/picture.svg"
+							src={i18n.asset('/assets/icons/picture.svg')}
 							alt=""
 							aria-hidden="true"
 							decoding="async"
@@ -91,7 +94,7 @@
 		</div>
 		<p class="h6 card-box__title mb-8">
 			<a
-				href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
+				href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
 				title={`${vehicle.shortTitle} ${vehicle.year}`}>{vehicle.shortTitle}</a
 			>
 		</p>

@@ -10,7 +10,12 @@ node_modules/
 .agency-os/
 docs/
 provenance/
-scripts/
+# The production prebuild verifies generated catalogs and source adoption.
+# Ship only those three build-time helpers; the remaining QA scripts stay local.
+scripts/*
+!scripts/build-locales.mjs
+!scripts/locale-catalog.mjs
+!scripts/locale-source-audit.mjs
 tests/
 AGENTS.md
 ASSET_PROVENANCE.md

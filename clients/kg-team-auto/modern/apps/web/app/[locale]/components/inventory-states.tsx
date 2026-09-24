@@ -1,7 +1,9 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { Phone, RefreshCcw, Search } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -38,14 +40,14 @@ export const InventoryUnavailable = ({ locale }: InventoryUnavailableProps) => {
             {isBg ? "Опитайте отново" : "Try again"}
           </Button>
           <Button asChild variant="secondary">
-            <Link href={isBg ? "/bg" : "/"}>
+            <Link href={isBg ? "/bg" : "/en"}>
               <Search aria-hidden="true" className="size-4" />
               {isBg ? "Към обявите" : "Browse listings"}
             </Link>
           </Button>
-          {leadSite.staticDemoMode ? (
+          {isDealershipSite ? (
             <Button asChild variant="outline">
-              <a href={leadSite.phoneHref}>
+              <a href={withBasePath(leadSite.phoneHref)}>
                 <Phone aria-hidden="true" className="size-4" />
                 {isBg ? "Обадете се" : "Call the dealership"}
               </a>

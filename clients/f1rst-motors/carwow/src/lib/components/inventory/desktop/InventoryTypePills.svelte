@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import {
 		getDesktopInventoryContext,
@@ -64,7 +67,11 @@
 	</svg>
 {/snippet}
 
-<div class="daynight-inventory-type-pills" data-daynight-shortcut-pills aria-label="Бърз избор">
+<div
+	class="daynight-inventory-type-pills"
+	data-daynight-shortcut-pills
+	aria-label={i18n.t('copy.0ff4d985dee2')}
+>
 	{#each inventoryShortcuts as pill (pill.label)}
 		{@const active = pillActive(pill)}
 		<a
@@ -73,17 +80,21 @@
 				active && 'is-active',
 				active && 'is-selected'
 			]}
-			href={pillHref(pill)}
+			href={i18n.href(pillHref(pill))}
 			data-daynight-shortcut-clear={pill.clearsAll ? 'true' : undefined}
 			data-daynight-shortcut-field={pill.field}
 			data-daynight-shortcut-value={pill.value}
 			aria-current={active ? 'true' : 'false'}
-			aria-label={pill.clearsAll ? 'Покажи всички автомобили' : `Избери ${pill.label}`}
-			title={pill.clearsAll ? 'Покажи всички автомобили' : `Избери ${pill.label}`}
+			aria-label={pill.clearsAll
+				? i18n.t('copy.507ff40ff784')
+				: i18n.t('pattern.8b15a08c1b53', { v0: i18n.spec(pill.label) })}
+			title={pill.clearsAll
+				? i18n.t('copy.507ff40ff784')
+				: i18n.t('pattern.8b15a08c1b53', { v0: i18n.spec(pill.label) })}
 			onclick={(event) => handlePillClick(event, pill)}
 		>
 			{@render pillIcon()}
-			<span>{pill.label}</span>
+			<span>{i18n.spec(pill.label)}</span>
 		</a>
 	{/each}
 </div>

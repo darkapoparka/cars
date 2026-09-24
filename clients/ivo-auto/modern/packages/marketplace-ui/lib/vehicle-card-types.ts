@@ -15,11 +15,12 @@ export interface VehicleCardTrustSignal {
 
 export interface VehicleCardProps {
   density?: "default" | "compact";
+  desktopHeadingLevel?: 2 | 3;
   desktopLayout?: "list" | "grid";
   href?: string;
   listing: VehicleListing;
   locale?: string;
-  presentation?: "default" | "discovery";
+  presentation?: "default" | "discovery" | "showroom";
   priceInsight?: VehicleCardPriceInsight;
   priority?: boolean;
   saveHref?: string;

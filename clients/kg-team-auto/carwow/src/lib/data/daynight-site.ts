@@ -12,27 +12,43 @@ const district = "Пловдив";
 const street = "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите";
 const location = "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Пловдив',
+	locationShort: "Пловдив",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Пловдив'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "K-G Team Auto",
+	name: 'K-G TEAM AUTO',
 	shortName,
 	city,
 	region: city,
-	countryCode: "BG",
-	locale: "bg-BG",
-	currency: "EUR",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "359877346262",
-	phoneLabel: "+359877346262",
-	email: "",
+	phone: '359877346262',
+	phoneLabel: '+359877346262',
+	email: '',
 	location,
-	locationShort: "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
+	locationShort: `${district}, ${city}`,
 	locationLandmark: "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
-	hoursLabel: "Работното време не е публикувано. Потвърдете по телефона преди посещение.",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "K-G Team Auto",
-	heroSubtitle: "Пловдив · Датирани примерни обяви, не потвърдена наличност. Проверете цена, състояние и местоположение при продавача.",
+	heroTitle: 'K-G TEAM AUTO',
+	heroSubtitle: 'Пловдив - Премиум автомобили в Пловдив с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "За K-G Team Auto", href: '/about' },
+			{ label: 'За K-G Team Auto', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

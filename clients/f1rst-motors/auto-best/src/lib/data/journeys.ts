@@ -1,4 +1,5 @@
 import { featuredVehicles } from './inventory';
+import { routeParts } from '$lib/locale/core';
 
 /** Only known records can become contact context; free text is never a vehicle. */
 export function selectedVehicle(value: string | null) {
@@ -16,7 +17,8 @@ export function listReturn(value: string | null, list: '/listing-grid' | '/blog'
   if (!value || /[\\\u0000-\u001f]/.test(value)) return list;
   try {
     const url = new URL(value, 'https://template.invalid');
-    return value.startsWith('/') && url.origin === 'https://template.invalid' && url.pathname === list
+    const parts = routeParts(url.pathname);
+    return value.startsWith('/') && url.origin === 'https://template.invalid' && !parts.base && parts.path === list
       ? `${url.pathname}${url.search}${url.hash}` : list;
   } catch { return list; }
 }

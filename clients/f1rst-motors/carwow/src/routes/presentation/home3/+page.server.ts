@@ -1,20 +1,5 @@
 import { cars } from '$lib/data/daynight-vehicles';
 
-const fuelLabels: Record<string, string> = {
-	Бензин: 'Petrol',
-	'Газ/Бензин': 'Petrol/LPG',
-	'Бензин/Газ': 'Petrol/LPG',
-	Дизел: 'Diesel',
-	Електрически: 'Electric',
-	Хибриден: 'Hybrid'
-};
-
-const transmissionLabels: Record<string, string> = {
-	Автоматик: 'Automatic',
-	Ръчна: 'Manual',
-	Ръчни: 'Manual'
-};
-
 const brandLogoPaths: Record<string, string> = {
 	Audi: '/assets/images/brand/mobile/audi.svg',
 	BMW: '/assets/images/brand/mobile/bmw.svg',
@@ -84,10 +69,12 @@ function pickFeaturedCars() {
 				: index === 1
 					? 'BMW i5 eDrive40 M Sport'
 					: 'Porsche Macan T',
-		meta: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
+		year: car.year,
+		fuel: car.fuel,
+		transmission: car.transmission,
 		image: fallbackFeatureImages[index] ?? car.image,
 		cash: index === 0 ? '£41,990' : index === 1 ? '£53,990' : '£69,990',
-		lease: index === 0 ? '£499 / month' : index === 1 ? '£599 / month' : '£779 / month',
+		lease: index === 0 ? '£499' : index === 1 ? '£599' : '£779',
 		badge: 'DayNight inspected'
 	}));
 }
@@ -140,34 +127,34 @@ export function load() {
 		budgetTiles: [
 			{
 				label: 'Under £10k',
-				count: `${Math.max(148, countBetween(0, 10000))} cars`,
+				count: Math.max(148, countBetween(0, 10000)),
 				image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp'
 			},
 			{
 				label: 'Under £20k',
-				count: `${Math.max(326, countBetween(10000, 20000))} cars`,
+				count: Math.max(326, countBetween(10000, 20000)),
 				image: '/assets/images/body-type/normalized/body-hatchback-transparent.webp',
 				tone: 'blue'
 			},
 			{
 				label: 'Under £30k',
-				count: `${Math.max(412, countBetween(20000, 30000))} cars`,
+				count: Math.max(412, countBetween(20000, 30000)),
 				image: '/assets/images/body-type/normalized/body-suv-transparent.webp'
 			},
 			{
 				label: 'Under £40k',
-				count: `${Math.max(276, countBetween(30000, 40000))} cars`,
+				count: Math.max(276, countBetween(30000, 40000)),
 				image: '/assets/images/body-type/normalized/body-sedan-transparent.webp',
 				tone: 'dark'
 			},
 			{
 				label: 'Under £50k',
-				count: `${Math.max(184, countBetween(40000, 50000))} cars`,
+				count: Math.max(184, countBetween(40000, 50000)),
 				image: '/assets/images/body-type/normalized/body-coupe-transparent.webp'
 			},
 			{
 				label: 'Over £50k',
-				count: '112 cars',
+				count: 112,
 				image: '/assets/images/budget/open-budget-supercar-v2.webp',
 				tone: 'red'
 			}

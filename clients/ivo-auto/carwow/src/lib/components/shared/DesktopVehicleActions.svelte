@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import '$lib/styles/desktop-discovery.css';
 	import ArrowLeftRight from '@lucide/svelte/icons/arrow-left-right';
 	import Heart from '@lucide/svelte/icons/heart';
@@ -10,20 +13,28 @@
 	const favorite = $derived(garage.isFavorite(slug));
 </script>
 
-<div class="desktop-vehicle-actions" role="group" aria-label={`Действия за ${title}`}>
+<div
+	class="desktop-vehicle-actions"
+	role="group"
+	aria-label={i18n.t('pattern.4a55f615987e', { v0: title })}
+>
 	<button
 		type="button"
 		aria-pressed={compared}
-		aria-label={compared ? `Премахни ${title} от сравнение` : `Добави ${title} за сравнение`}
-		title={compared ? 'Премахни от сравнение' : 'Добави за сравнение'}
+		aria-label={compared
+			? i18n.t('pattern.934f8811d407', { v0: title })
+			: i18n.t('pattern.eb6671a2dbc8', { v0: title })}
+		title={compared ? i18n.t('copy.5b40a58e1ce4') : i18n.t('copy.040cc31a724d')}
 		onclick={() => garage.toggleCompare(slug)}
 		><ArrowLeftRight size={18} strokeWidth={2} aria-hidden="true" /></button
 	>
 	<button
 		type="button"
 		aria-pressed={favorite}
-		aria-label={favorite ? `Премахни ${title} от любими` : `Добави ${title} в любими`}
-		title={favorite ? 'Премахни от любими' : 'Добави в любими'}
+		aria-label={favorite
+			? i18n.t('pattern.b232837ea72c', { v0: title })
+			: i18n.t('pattern.43ac23a14f61', { v0: title })}
+		title={favorite ? i18n.t('copy.26b1f78b8a15') : i18n.t('copy.95edb020a66d')}
 		onclick={() => garage.toggleFavorite(slug)}
 		><Heart
 			size={18}

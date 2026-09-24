@@ -1,0 +1,15 @@
+.git
+**/node_modules
+**/.next*
+**/.svelte-kit
+**/.vercel
+**/.turbo
+**/.env*
+**/*.log
+**/*.tsbuildinfo
+**/build
+**/dist
+runtime
+qa
+qa-final
+evidence

@@ -1,7 +1,0 @@
-{
-  "schemaVersion": 1,
-  "release": "native-en-bg-build-install-2026-09-22",
-  "carsRelease": "1d04d90d10d687e00f184fdb5c10e1781af8ea5b",
-  "requestedAt": "2026-09-22T20:22:00+03:00",
-  "purpose": "Regenerate and deploy IS AUTO with the reviewed native package plus explicit service dependency installation for Vercel builds."
-}

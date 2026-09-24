@@ -12,27 +12,43 @@ const district = "Dubai";
 const street = "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1";
 const location = "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Dubai',
+	locationShort: "Dubai",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Dubai'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "F1rst Motors",
+	name: 'F1RST MOTORS',
 	shortName,
 	city,
 	region: city,
-	countryCode: "AE",
-	locale: "en-AE",
-	currency: "AED",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "97143201030",
-	phoneLabel: "+971 4 320 1030",
-	email: "info@f1rstmotors.com",
+	phone: '97143201030',
+	phoneLabel: '+971 4 320 1030',
+	email: '',
 	location,
-	locationShort: "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
-	locationLandmark: "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
-	hoursLabel: "Mon-Thu 10:00-21:00; Friday 14:00-21:00; Saturday 10:00-21:00; Sunday Closed",
+	locationShort: `${district}, ${city}`,
+	locationLandmark: "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://f1rstmotors.com/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "F1rst Motors",
-	heroSubtitle: "Dubai · Dated public stock sample, not a live feed. Confirm price, specifications and availability directly with F1rst Motors. Demo forms do not send messages.",
+	heroTitle: 'F1RST MOTORS',
+	heroSubtitle: 'Dubai - Премиум автомобили в Dubai с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "About F1rst Motors", href: '/about' },
+			{ label: 'За F1rst Motors', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

@@ -1,5 +1,11 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import {
+  isDealershipSite,
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
 import {
   LeadSiteMark,
   MarketplaceLocaleSwitchLink,
@@ -169,13 +175,20 @@ export const Footer = ({ locale }: FooterProps) => {
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
   const currentYear = new Date().getFullYear();
 
-  const groups = getFooterGroups(isBg, localize);
+  const groups = getFooterGroups(isBg, localize)
+    .map((group) => ({
+      ...group,
+      links: group.links.filter((link) =>
+        isPublicSitePathEnabled(link.href, publicSite)
+      ),
+    }))
+    .filter((group) => group.links.length > 0);
   const ctaLabel = getFooterCtaLabel(isBg);
 
   return (
     <footer
       className={`border-foreground/10 border-t bg-foreground text-background ${
-        leadSite.staticDemoMode ? "hidden lg:block" : ""
+        isDealershipSite ? "hidden lg:block" : ""
       }`}
       data-slot="public-marketplace-footer"
     >
@@ -191,7 +204,7 @@ export const Footer = ({ locale }: FooterProps) => {
               prefetch={false}
             >
               <LeadSiteMark />
-              {leadSite.staticDemoMode ? null : (
+              {isDealershipSite ? null : (
                 <span className="font-semibold text-background text-lg tracking-tight">
                   {leadSite.name}
                 </span>
@@ -199,7 +212,7 @@ export const Footer = ({ locale }: FooterProps) => {
             </Link>
 
             <p className="mt-4 max-w-xs text-background/75 text-body">
-              {leadSite.tagline}
+              {getLeadCopy(locale).tagline}
             </p>
 
             <div className="mt-5 flex items-start gap-2 text-background/75 text-meta">
@@ -209,13 +222,14 @@ export const Footer = ({ locale }: FooterProps) => {
                 strokeWidth={1.8}
               />
               <span>
-                {leadSite.address}, {leadSite.city}, {leadSite.country}
+                {getLeadCopy(locale).address}, {getLeadCopy(locale).city},{" "}
+                {getLeadCopy(locale).country}
               </span>
             </div>
 
             <Button
               asChild
-              className="mt-5 h-11 bg-[var(--lead-site-accent)] px-4 font-semibold text-body text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+              className="mt-5 h-11 bg-brand px-4 font-semibold text-body text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
               size="sm"
             >
               <Link href={leadSite.phoneHref} prefetch={false}>
@@ -228,7 +242,7 @@ export const Footer = ({ locale }: FooterProps) => {
           <nav
             aria-label={isBg ? "Връзки в долната част" : "Footer navigation"}
             className={`hidden grid-cols-2 gap-x-8 gap-y-8 md:grid ${
-              leadSite.staticDemoMode ? "lg:grid-cols-3" : "lg:grid-cols-4"
+              isDealershipSite ? "lg:grid-cols-3" : "lg:grid-cols-4"
             }`}
           >
             {groups.map((group) => (
@@ -251,7 +265,7 @@ export const Footer = ({ locale }: FooterProps) => {
             © {currentYear} {leadSite.name}
           </p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            {leadSite.staticDemoMode ? (
+            {isDealershipSite ? (
               <>
                 <Link
                   className="inline-flex min-h-8 items-center transition-colors hover:text-background focus-visible:rounded-sm focus-visible:[outline-offset:3px] focus-visible:[outline:2px_solid_var(--ring)]"
@@ -288,7 +302,7 @@ export const Footer = ({ locale }: FooterProps) => {
                 </Link>
               </>
             )}
-            {leadSite.staticDemoMode ? null : (
+            {isDealershipSite ? null : (
               <MarketplaceLocaleSwitchLink
                 className="inline-flex min-h-8 items-center gap-1.5 transition-colors hover:text-background focus-visible:rounded-sm focus-visible:[outline-offset:3px] focus-visible:[outline:2px_solid_var(--ring)]"
                 label={

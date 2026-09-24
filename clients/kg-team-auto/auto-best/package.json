@@ -22,7 +22,13 @@
     "smoke": "node scripts/sveltekit-smoke.mjs && node scripts/enquiry-smoke.mjs && node scripts/mobile-filter-smoke.mjs && node scripts/desktop-discovery-smoke.mjs && npm run smoke:phase4",
     "smoke:typography": "node scripts/typography-smoke.mjs",
     "check:domain": "node scripts/check-domain.mjs",
-    "smoke:phase4": "node scripts/phase4-smoke.mjs"
+    "smoke:phase4": "node scripts/phase4-smoke.mjs",
+    "locales:build": "node scripts/build-locales.mjs",
+    "check:locales": "node scripts/build-locales.mjs --check",
+    "test:locales": "node --test --test-concurrency=1 scripts/locale-policy.test.mjs scripts/locale-copy-audit.test.mjs scripts/locale-catalog.test.mjs scripts/locale-source-audit.test.mjs scripts/locale-mobile-copy.test.mjs",
+    "prebuild": "npm run check:locales && npm run check:locale-source",
+    "check:locale-source": "node scripts/locale-source-audit.mjs",
+    "smoke:locales": "node scripts/run-locale-qa.mjs"
   },
   "dependencies": {
     "@fontsource-variable/onest": "5.3.1"

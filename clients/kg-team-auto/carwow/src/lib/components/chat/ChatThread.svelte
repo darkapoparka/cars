@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	import Send from '@lucide/svelte/icons/send';
 
@@ -49,7 +52,7 @@
 	);
 
 	function formatTime(value: string) {
-		return new Intl.DateTimeFormat('bg-BG', {
+		return new Intl.DateTimeFormat(i18n.locale === 'bg' ? 'bg-BG' : 'en-GB', {
 			hour: '2-digit',
 			minute: '2-digit'
 		}).format(new Date(value));
@@ -81,33 +84,47 @@
 	<header class="chat-thread__header">
 		<div>
 			<p class="chat-thread__eyebrow">{daynightSite.shortName}</p>
-			<h2 id="daynight-chat-title">Чат с екипа</h2>
+			<h2 id="daynight-chat-title">{i18n.t('copy.8951a12df402')}</h2>
 		</div>
 		<span class="chat-thread__status">
-			{conversation?.status === 'closed' ? 'Приключен разговор' : 'Изпратете въпрос'}
+			{conversation?.status === 'closed'
+				? i18n.t('copy.24211625df89')
+				: i18n.t('copy.652413a47803')}
 		</span>
 	</header>
 
 	{#if errorMessage}
-		<p class="chat-thread__error">{errorMessage}</p>
+		<p class="chat-thread__error">{i18n.text(errorMessage)}</p>
 	{/if}
 
 	{#if loading}
-		<div class="chat-thread__loading">Зареждане...</div>
+		<div class="chat-thread__loading">{i18n.t('copy.bcc76669e08a')}</div>
 	{:else if !conversation}
 		<form class="chat-thread__start" onsubmit={submitStart}>
 			<label>
-				<span>Име</span>
-				<input bind:value={name} name="name" autocomplete="name" maxlength="140" />
+				<span>{i18n.t('copy.7848bd195104')}</span>
+				<input
+					{@attach i18n.validation}
+					bind:value={name}
+					name="name"
+					autocomplete="name"
+					maxlength="140"
+				/>
 			</label>
 			<label>
-				<span>Съобщение</span>
-				<textarea bind:value={startMessage} name="message" rows="4" maxlength="1200" required
+				<span>{i18n.t('copy.5afae14709c7')}</span>
+				<textarea
+					{@attach i18n.validation}
+					bind:value={startMessage}
+					name="message"
+					rows="4"
+					maxlength="1200"
+					required
 				></textarea>
 			</label>
 			<button type="submit" disabled={sending || !startMessage.trim()}>
 				<Send aria-hidden="true" />
-				Започни чат
+				{i18n.t('copy.5077d5b0d433')}
 			</button>
 		</form>
 	{:else}
@@ -129,22 +146,23 @@
 					</article>
 				{/each}
 			{:else}
-				<p class="chat-thread__empty">Изпратете въпрос и ще отговорим възможно най-скоро.</p>
+				<p class="chat-thread__empty">{i18n.t('copy.07d6f03129db')}</p>
 			{/if}
 		</div>
 
 		<form class="chat-thread__reply" onsubmit={submitMessage}>
 			<textarea
+				{@attach i18n.validation}
 				bind:value={draft}
 				name="message"
 				rows="3"
 				maxlength="1200"
-				placeholder="Напишете съобщение"
+				placeholder={i18n.t('copy.7cd2faacbbf4')}
 				required
 			></textarea>
 			<button type="submit" disabled={sending || !draft.trim()}>
 				<Send aria-hidden="true" />
-				Изпрати
+				{i18n.t('copy.17afffcecf9c')}
 			</button>
 		</form>
 	{/if}

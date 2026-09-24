@@ -1,14 +1,12 @@
 import { buildSitemapLocations, getSitemapVehicles, renderSitemapXml } from '$lib/server/sitemap';
 import { loadPublishedBlogArticles } from '$lib/server/blog-articles';
 import type { RequestHandler } from './$types';
+import { base } from '$app/paths';
 
 export const GET: RequestHandler = async ({ url, locals }) => {
 	const vehicles = await getSitemapVehicles();
 	const articles = await loadPublishedBlogArticles(locals);
-	const body = renderSitemapXml([
-		...buildSitemapLocations(url.origin, vehicles),
-		...articles.map(({ slug }) => `${url.origin}/blog/${encodeURIComponent(slug)}`)
-	]);
+	const body = renderSitemapXml(buildSitemapLocations(url.origin, vehicles, base, articles));
 
 	return new Response(body, {
 		headers: {

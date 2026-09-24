@@ -1,0 +1,66 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "autobest": {
+      "root": "auto-best",
+      "framework": "sveltekit",
+      "installCommand": "npm ci",
+      "buildCommand": "node ../scripts/build-native-service.mjs auto-best"
+    },
+    "modern": {
+      "root": "modern/apps/web",
+      "framework": "nextjs",
+      "installCommand": "cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -c \"pnpm install --frozen-lockfile\"",
+      "buildCommand": "node ../../../scripts/build-native-service.mjs modern"
+    },
+    "carwow": {
+      "root": "carwow",
+      "framework": "sveltekit",
+      "installCommand": "npm ci",
+      "buildCommand": "node ../scripts/build-native-service.mjs carwow"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/variant-2",
+      "destination": "/variant-2/cars",
+      "permanent": false
+    },
+    {
+      "source": "/variant-3",
+      "destination": "/variant-3/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/variant-2/(.*)",
+      "destination": {
+        "service": "modern"
+      }
+    },
+    {
+      "source": "/variant-3/(.*)",
+      "destination": {
+        "service": "carwow"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "autobest"
+      }
+    }
+  ]
+}
