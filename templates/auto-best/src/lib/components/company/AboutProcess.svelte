@@ -15,9 +15,6 @@
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
       <p>{i18n.t("m_335a481bffd9", { p0: i18n.dealer('city') })}</p>
-      <a class="dn-about-intro__action" href={i18n.href(resolve('/listing-grid'))}>
-        {i18n.t("m_9304497d3f4b")} <Icon name="arrow-right" size={18} />
-      </a>
     </div>
 
     <div class="dn-about-services">

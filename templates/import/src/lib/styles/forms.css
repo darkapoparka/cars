@@ -76,6 +76,24 @@
 	margin: 0 0 var(--bc-space-4);
 	font: var(--bc-weight-heading) var(--bc-text-h4)/1.3 var(--bc-font-heading);
 }
+@media (min-width: 768px) {
+	.site-field > span,
+	.site-field > label {
+		color: var(--bc-ink);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-heading);
+	}
+	.site-field input,
+	.site-field select,
+	.site-field textarea {
+		border-color: var(--bc-route-pill-border);
+		background: var(--bc-surface);
+	}
+	.site-field input::placeholder,
+	.site-field textarea::placeholder {
+		color: var(--bc-copy);
+	}
+}
 @media (max-width: 479px) {
 	.site-fields {
 		grid-template-columns: 1fr;

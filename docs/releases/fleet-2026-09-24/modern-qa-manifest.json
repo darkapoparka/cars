@@ -1,0 +1,83 @@
+{
+    "schemaVersion":  1,
+    "template":  "modern",
+    "repository":  "darkapoparka/cars-template-modern",
+    "commit":  "3f77bf25456a608bdaaab84cb60e97fccda063f2",
+    "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+    "deployment":  {
+                       "id":  "dpl_5LEeXtzPtrWyeKNExJcvbqzshCgx",
+                       "projectId":  "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+                       "state":  "READY",
+                       "publicAlias":  "https://cars-template-modern.vercel.app/"
+                   },
+    "assertions":  [
+                       {
+                           "name":  "exact immutable validation",
+                           "status":  "passed"
+                       },
+                       {
+                           "name":  "production-equivalent mounted build",
+                           "status":  "passed"
+                       },
+                       {
+                           "name":  "public browser matrix",
+                           "status":  "passed",
+                           "passed":  24,
+                           "total":  24
+                       },
+                       {
+                           "name":  "mounted image delivery",
+                           "status":  "passed",
+                           "optimizerReferences":  0,
+                           "rasterAssetStatus":  200,
+                           "rasterAssetSha256":  "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889"
+                       }
+                   ],
+    "files":  [
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\modern-3f77bf2-validation-2.log",
+                      "sha256":  "1ba8902315fff1070f15509c662e9e9fc151f537ba329fe6890e290846bd9298",
+                      "kind":  "exact immutable validation"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\modern-mounted-build-2.log",
+                      "sha256":  "90ee1f76e48a2d89cfa28a9d1ec9cbbfb372bbdbb221c2ee73e1e346112d387c",
+                      "kind":  "production-equivalent mounted build"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\template-public-qa\\focused-summary.json",
+                      "sha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf",
+                      "kind":  "24-combination public browser matrix"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\modern-mounted-http\\bg.headers",
+                      "sha256":  "0ce0e5ab1639ea5da7686fea91795258d3412cc177e803d2769e57b8a99cf4d3",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\modern-mounted-http\\bg.html",
+                      "sha256":  "b4f8cca81f260699a75a7afb7f4686e2e67bac0b756401fa807affc8a6b39410",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\modern-mounted-http\\en.headers",
+                      "sha256":  "055383ac6e206ea25a215cc411d4dffea90ac2b1252279ebe0ab711ad17c9657",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\modern-mounted-http\\en.html",
+                      "sha256":  "9e74d2737a6a326077cce4903453e4e8db5886b46b5273e1949a37ff43b55482",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\modern-mounted-http\\lead-logo.headers",
+                      "sha256":  "b40007b787671aa38e4263369de50c4cbdc8d2c345bb223b2e7c10d575053fb9",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\modern-mounted-http\\lead-logo.png",
+                      "sha256":  "e1ba7bdc914fce747c786761224e385afe6f53770da184f904dee624b1e30889",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  }
+              ]
+}

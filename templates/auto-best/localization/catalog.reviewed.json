@@ -1819,7 +1819,7 @@
     "key": "m_8d9512ccead1",
     "source": "60–70 000 {inventoryCurrency}",
     "en": "60,000–70,000 {inventoryCurrency}",
-    "bg": "60 000–70 000 {inventoryCurrency}",
+    "bg": "60–70 000 {inventoryCurrency}",
     "disposition": "translate",
     "notes": "Public display copy. Source: auto-best/src/lib/components/home/MobileBudget.svelte:20, auto-best/src/lib/components/home/SearchBox.svelte:111"
   },
@@ -1971,7 +1971,7 @@
     "key": "m_64e3cb0e4960",
     "source": "Buy",
     "en": "Buy",
-    "bg": "Покупка",
+    "bg": "Купи",
     "disposition": "translate",
     "notes": "Public display copy. Source: auto-best/src/lib/components/home/SearchBox.svelte:48"
   },

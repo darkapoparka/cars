@@ -1,0 +1,66 @@
+{
+    "schemaVersion":  1,
+    "template":  "carwow",
+    "repository":  "darkapoparka/cars-template-carwow",
+    "commit":  "d9de303ffa732234c21e2a57c73d7109e870cbeb",
+    "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+    "deployment":  {
+                       "id":  "dpl_3HezU5KHrcLfMS9r1SaHeWtrEYHC",
+                       "projectId":  "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+                       "state":  "READY",
+                       "publicAlias":  "https://cars-template-carwow.vercel.app/"
+                   },
+    "assertions":  [
+                       {
+                           "name":  "exact immutable validation",
+                           "status":  "passed"
+                       },
+                       {
+                           "name":  "production-equivalent mounted build",
+                           "status":  "passed"
+                       },
+                       {
+                           "name":  "public browser matrix",
+                           "status":  "passed",
+                           "passed":  24,
+                           "total":  24
+                       }
+                   ],
+    "files":  [
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\carwow-validation.log",
+                      "sha256":  "c989e882c056a98b3e93c1c2877bcbddff0cd075eee5d9498ac9f201c3042767",
+                      "kind":  "exact immutable validation"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\carwow-mounted-build.log",
+                      "sha256":  "ad0bd9fd13fd335601d90fc757c55c201b07a0bf1db50066f1a13fef7794314b",
+                      "kind":  "production-equivalent mounted build"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\template-public-qa\\focused-summary.json",
+                      "sha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf",
+                      "kind":  "24-combination public browser matrix"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\carwow-mounted-http\\bg.headers",
+                      "sha256":  "e3bbe732ad39c746370aa890f37c6e4b26a7a904123ffb0c1b4ff10091af1bdb",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\carwow-mounted-http\\bg.html",
+                      "sha256":  "a98acb403afcee6819110ff77bbcb80c1041ea2f16a35aa20d6cd10ddaaac42c",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\carwow-mounted-http\\en.headers",
+                      "sha256":  "69f90ccdd77ebaae471daeb86baa3d6c2129ac57e9214a2414cb0f146b00f360",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\carwow-mounted-http\\en.html",
+                      "sha256":  "6c1e6d4c75c24a8bc15c3af9de60ccf80fed2a9069f5e0d7b8d5d40b6ae4e370",
+                      "kind":  "mounted EN/BG HTTP evidence"
+                  }
+              ]
+}

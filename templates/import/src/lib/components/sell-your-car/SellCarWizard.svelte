@@ -830,4 +830,50 @@
 		min-height: 320px;
 		padding: 0;
 	}
+	@media (min-width: 768px) {
+		.sell-flow--embedded .sell-flow__header span {
+			font-size: var(--bc-text-label);
+		}
+		.sell-flow--embedded .sell-flow__intro h3 {
+			font-size: var(--bc-text-h4);
+			line-height: var(--bc-leading-h4);
+		}
+		.sell-flow--embedded .sell-flow__intro p {
+			font-size: var(--bc-text-prose);
+			line-height: var(--bc-leading-body-lg);
+		}
+		.sell-flow--embedded .sell-field > span,
+		.sell-flow--embedded .sell-fieldset legend {
+			color: var(--bc-ink);
+			font-size: var(--bc-text-control);
+			line-height: var(--bc-leading-label);
+		}
+		.sell-flow--embedded .sell-field input,
+		.sell-flow--embedded .sell-field textarea {
+			border-color: var(--bc-route-pill-border);
+			background: var(--bc-surface);
+		}
+		.sell-flow--embedded .sell-field input {
+			height: var(--bc-control-height-primary);
+		}
+		.sell-flow--embedded .sell-field input::placeholder,
+		.sell-flow--embedded .sell-field textarea::placeholder {
+			color: var(--bc-copy);
+			opacity: 1;
+		}
+		.sell-flow--embedded .sell-brand-rail {
+			gap: var(--bc-space-2);
+		}
+		.sell-flow--embedded .sell-brand-rail button {
+			min-height: var(--bc-control-height-standard);
+			border-radius: var(--bc-radius-md);
+		}
+		.sell-flow--embedded .sell-brand-rail button:not(.active) {
+			background: var(--bc-bg-strong);
+		}
+		.sell-flow--embedded .sell-flow__next {
+			min-height: var(--bc-control-height-primary);
+			border-radius: var(--bc-radius-control);
+		}
+	}
 </style>

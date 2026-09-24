@@ -70,7 +70,9 @@
 							name="q"
 							value={desktop.searchValue}
 							placeholder={desktop.searchPlaceholder}
-						/><Action type="submit">{english ? 'Search' : 'Търси'} ({desktop.resultCount})</Action>
+						/><Action type="submit" size="primary"
+							>{english ? 'Search' : 'Търси'} ({desktop.resultCount})</Action
+						>
 					</form>
 				</div>
 				<img
@@ -168,7 +170,20 @@
 		border: 0;
 		background: transparent;
 		color: var(--bc-ink);
-		font-size: var(--bc-text-search);
+		font-size: var(--bc-text-search-trigger);
+		line-height: var(--bc-leading-search);
+	}
+	.inventory-hero input[type='search']::placeholder {
+		color: var(--bc-copy);
+		opacity: 1;
+	}
+	.inventory-hero form:focus-within {
+		outline: 2px solid var(--bc-white);
+		outline-offset: var(--bc-space-1);
+	}
+	.inventory-hero input[type='search']:focus-visible {
+		outline: none !important;
+		box-shadow: none !important;
 	}
 	.inventory-results {
 		background: var(--bc-surface);

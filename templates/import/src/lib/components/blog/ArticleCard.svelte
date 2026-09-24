@@ -118,6 +118,15 @@
 	.article-card__link:hover .article-card__more {
 		color: var(--bc-accent);
 	}
+	@media (min-width: 768px) {
+		p,
+		.article-card__more {
+			font-size: var(--bc-text-prose);
+		}
+		p {
+			line-height: var(--bc-leading-body-lg);
+		}
+	}
 	@media (max-width: 767.98px) {
 		.article-card__body {
 			padding: var(--bc-space-5);

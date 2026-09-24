@@ -98,9 +98,9 @@
     <label><span>{i18n.t("m_ccdd25d4230f")}</span><select {@attach i18n.validation} name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
     <label><span>{i18n.t("m_5e2c614c23f0")}</span><select {@attach i18n.validation} name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
     <label><span>{i18n.t("m_191c24bf12d5")}</span><select {@attach i18n.validation} name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{specificationLabel(bodyLabel(value), i18n.locale) || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
-    <label><span>{i18n.t("m_363c4f34635c")}</span><select {@attach i18n.validation} name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? i18n.t("m_7ce2209d146e", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_2b505597daa7")}</option>{/each}</select></label>
+    <label><span>{i18n.t("m_363c4f34635c")}</span><select {@attach i18n.validation} name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? i18n.t("m_7ce2209d146e", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
     <label><span>{i18n.t("m_349ee8568241")}</span><select {@attach i18n.validation} name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
-    <label><span>{i18n.t("m_5679c2543732")}</span><select {@attach i18n.validation} name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? i18n.t("m_9f595d190089", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_2b505597daa7")}</option>{/each}</select></label>
+    <label><span>{i18n.t("m_5679c2543732")}</span><select {@attach i18n.validation} name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? i18n.t("m_9f595d190089", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
   </div>
 
   {#each hiddenFields as [name, value], index (`${name}-${value}-${index}`)}<input type="hidden" {name} {value} />{/each}
@@ -153,4 +153,11 @@
   @media (min-width: 992px) and (max-width: 1199px) { .dn-discovery__facets { gap: 10px; } .dn-discovery__facets select { padding-left: 10px; } }
   @media (min-width: 1440px) and (max-width: 1599px) { .dn-discovery .dn-discovery__facets select { padding-inline: 10px 28px; } }
   @media (max-width: 767px) { .dn-discovery { display: none; } }
+  @media (min-width: 992px) {
+    .dn-discovery .dn-discovery__facets { gap: var(--dn-space-3); }
+    .dn-discovery .dn-discovery__facets select { padding-inline: 10px 28px; font-size: var(--dn-control-size); cursor: pointer; transition: none; }
+    .dn-discovery .dn-discovery__facets select:hover { background-color: #eceef1; border-color: var(--dn-line-emphasis); }
+    .dn-discovery__search:focus-within { border-color: var(--dn-focus); }
+    .dn-discovery :is(.dn-discovery__keyword, .dn-discovery__submit) { transition: none; }
+  }
 </style>

@@ -22,6 +22,15 @@
 	let { hero, english = false }: { hero: HomeFiveHeroData; english?: boolean } = $props();
 	let modeOverride = $state<HomeFiveHeroActionMode | 'finance' | null>(null);
 	const mode = $derived(modeOverride ?? hero.activeMode);
+	const modeContent = {
+		buy: { title: ['Купи автомобил', 'Buy a car'], action: '/inventory' },
+		finance: { title: ['Автомобил на лизинг', 'Finance a car'], action: '/inventory' },
+		sell: { title: ['Продай автомобил', 'Sell your car'], action: '/sell-your-car' },
+		import: { title: ['Внеси автомобил', 'Import a car'], action: '/import' }
+	} satisfies Record<
+		HomeFiveHeroActionMode | 'finance',
+		{ title: [string, string]; action: string }
+	>;
 	let brandSelection = $state<string[]>([]);
 	let modelSelection = $state<string[]>([]);
 	let priceSelection = $state<string[]>([]);
@@ -56,26 +65,8 @@
 			)
 		);
 	}
-	const title = $derived(
-		mode === 'finance'
-			? english
-				? 'Finance a car'
-				: 'Автомобил на лизинг'
-			: mode === 'import'
-				? english
-					? 'Import a car'
-					: 'Внеси автомобил'
-				: mode === 'sell'
-					? english
-						? 'Sell your car'
-						: 'Продай автомобил'
-					: english
-						? 'Buy a car'
-						: 'Купи автомобил'
-	);
-	const action = $derived(
-		mode === 'import' ? '/import' : mode === 'sell' ? '/sell-your-car' : '/inventory'
-	);
+	const title = $derived(modeContent[mode].title[english ? 1 : 0]);
+	const action = $derived(modeContent[mode].action);
 
 	let searchOpen = $state(false);
 	let keyword = $state('');
@@ -105,6 +96,7 @@
 			variant="grid"
 			searchable
 			compact
+			prominent
 			icon={LayoutGrid}
 			isEnglish={english}
 			dialogTitle={english ? 'Choose make' : 'Избери марка'}
@@ -116,6 +108,7 @@
 			mode="multi"
 			searchable
 			compact
+			prominent
 			icon={CarFront}
 			isEnglish={english}
 			dialogTitle={english ? 'Choose model' : 'Избери модел'}
@@ -125,6 +118,7 @@
 			bind:selected={priceSelection}
 			mode="single"
 			compact
+			prominent
 			icon={Banknote}
 			isEnglish={english}
 		/>{/if}
@@ -133,6 +127,7 @@
 		bind:selected={mileageSelection}
 		mode="single"
 		compact
+		prominent
 		icon={Gauge}
 		isEnglish={english}
 	/>
@@ -198,7 +193,8 @@
 							>
 						</button>
 						<Action
-							size="primary"
+							size="hero"
+							class="home-hero__search-action"
 							aria-haspopup="dialog"
 							aria-expanded={searchOpen}
 							onclick={() => (searchOpen = true)}
@@ -335,10 +331,26 @@
 		border: 1px solid var(--bc-border-strong);
 		border-radius: var(--bc-radius-md);
 		background: var(--bc-surface-raised);
-		color: var(--bc-copy);
-		font-size: var(--bc-text-filter);
+		color: var(--bc-ink);
+		font-size: var(--bc-text-search-trigger);
 		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-search);
 		text-align: left;
+	}
+	.home-hero__search-trigger :global(svg) {
+		flex: 0 0 auto;
+		color: var(--bc-ink);
+	}
+	.home-hero__search-trigger {
+		min-height: var(--bc-control-height-hero);
+		border-color: var(--bc-route-pill-border);
+	}
+	.home-hero__search :global(.home-hero__search-action) {
+		min-width: 160px;
+		padding-inline: var(--bc-space-5);
+		border-radius: var(--bc-radius-md);
+		font-size: var(--bc-text-search-trigger);
+		font-weight: var(--bc-weight-heading);
 	}
 	.home-hero__search-trigger span {
 		overflow: hidden;

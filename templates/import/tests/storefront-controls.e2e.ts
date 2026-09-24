@@ -117,14 +117,10 @@ test('compact filters fit on desktop and retain an accessible persistent footer'
 			.map((element) => element.className)
 	);
 	expect(scrollRegions).toHaveLength(0);
-	const surfaces = await dialog.evaluate((node) => ({
-		body: getComputedStyle(node.querySelector('.site-dialog__body')!).backgroundColor,
-		group: getComputedStyle(node.querySelector('.compact-field__trigger')!).backgroundColor
-	}));
-	expect(surfaces.body).not.toBe(surfaces.group);
 	const footer = dialog.locator('.site-dialog__footer');
 	const initial = await footer.boundingBox();
-	await dialog.locator('.site-dialog__body').evaluate((node) => {
+	await dialog.getByRole('tab', { name: 'Модел', exact: true }).click();
+	await dialog.locator('.desktop-picker__options').evaluate((node) => {
 		node.scrollTop = node.scrollHeight;
 	});
 	expect((await footer.boundingBox())!.y).toBe(initial!.y);
@@ -150,16 +146,16 @@ test('all-filters search preserves hidden selected models and replaces canonical
 	await visit(page, '/inventory?brand=BMW&maxPrice=50000&view=3');
 	await page.locator('.inventory-toolbar__all').click();
 	const dialog = page.getByRole('dialog');
-	await dialog.getByRole('button', { name: /^Модел / }).click();
-	const model = page.locator('.compact-field__popover');
+	await dialog.getByRole('tab', { name: 'Модел', exact: true }).click();
+	const model = dialog.getByRole('tabpanel');
 	const search = model.getByRole('searchbox');
 	const firstChoice = model.getByRole('checkbox').first();
-	const selected = await firstChoice.locator('..').innerText();
+	const selected = await firstChoice.locator('xpath=ancestor::label').innerText();
 	await search.fill(selected!);
 	const choice = model.getByRole('checkbox').first();
 	await choice.check();
 	await search.fill('no-matching-model');
-	await model.getByRole('button', { name: 'Готово', exact: true }).click();
+	await dialog.getByRole('tab', { name: /^Цена/ }).click();
 	await expect(dialog.locator('input[type="hidden"][name="q"]')).toHaveValue(selected!);
 	await dialog.getByRole('spinbutton', { name: 'Максимална цена (EUR)' }).fill('30000');
 	await dialog

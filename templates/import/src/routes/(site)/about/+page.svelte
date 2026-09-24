@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { assetHref } from '$lib/utils/assets';
 	import type { PageProps } from './$types';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ProcessSteps from '$lib/components/common/ProcessSteps.svelte';
 	import ContactBanner from '$lib/components/common/ContactBanner.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
+	import Action from '$lib/components/common/Action.svelte';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import TeamMemberCard from '$lib/components/common/TeamMemberCard.svelte';
 	let { data }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
 	const about = $derived(data.about);
@@ -21,36 +23,27 @@
 		title={english ? 'About us' : 'За нас'}
 		description={about.hero.description}
 		image={about.hero.image}
+		desktopImage="/assets/daynight/banners/about-desktop-v2.webp"
 		align="center"
-	/>
-	<div class="site-container about-socials"><SocialLinks /></div>
+	>
+		{#snippet desktopActions()}
+			<Action href={data.site.contact.mapHref} variant="glass" size="hero"
+				><MapPin size={20} aria-hidden="true" />{english
+					? 'Get directions'
+					: 'Как да стигнем'}</Action
+			>
+		{/snippet}
+		{#snippet desktopSecondaryActions()}
+			<SocialLinks tone="dark" />
+		{/snippet}
+	</PageIntro>
+	<div class="site-container about-socials site-mobile-only"><SocialLinks /></div>
 	<section class="site-section site-container site-stack" id="about-team">
 		<header class="about-heading">
 			<h2 class="site-heading">{english ? 'The team' : 'Екипът'}</h2>
 		</header>
 		<div class="about-team">
-			{#each about.consultants as person (person.slug)}<article>
-					<img
-						src={assetHref(person.image)}
-						alt={person.name}
-						width="600"
-						height="700"
-						loading="lazy"
-					/>
-					<div>
-						<h3>{person.name}</h3>
-						<p>{person.title}</p>
-						<SocialLinks
-							links={person.socials
-								.filter((link) => link.icon === 'brands/instagram.svg')
-								.map((link) => ({
-									platform: 'instagram' as const,
-									label: link.label,
-									href: link.href
-								}))}
-						/>
-					</div>
-				</article>{/each}
+			{#each about.consultants as person (person.slug)}<TeamMemberCard {person} />{/each}
 		</div>
 	</section>
 	<section class="site-section site-container site-stack">
@@ -77,11 +70,6 @@
 	.about-socials {
 		padding-top: var(--bc-space-6);
 	}
-	.about-team article > div {
-		display: grid;
-		justify-items: center;
-		gap: var(--bc-space-3);
-	}
 	.about-heading {
 		text-align: center;
 		max-width: 76ch;
@@ -92,41 +80,19 @@
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: var(--bc-space-6);
 	}
-	.about-team article {
-		min-width: 0;
-		overflow: hidden;
-		border-radius: var(--bc-radius-panel);
-		background: var(--bc-surface);
-	}
-	.about-team img {
-		display: block;
-		width: 100%;
-		height: 360px;
-		object-fit: cover;
-		object-position: top;
-	}
-	.about-team article > div {
-		padding: var(--bc-space-5);
-		text-align: center;
-	}
-	.about-team h3 {
-		margin: 0 0 var(--bc-space-2);
-		font: var(--bc-weight-heading) var(--bc-text-h4)/1.3 var(--bc-font-heading);
-	}
-	.about-team p {
-		margin: 0;
-		color: var(--bc-copy);
-		font-size: var(--bc-text-body-lg);
-	}
 	@media (max-width: 767.98px) {
 		.about-team {
 			grid-template-columns: 1fr;
 		}
-		.about-team p {
-			font-size: var(--bc-text-body);
+	}
+	@media (min-width: 768px) {
+		#about-team {
+			padding-top: var(--bc-space-8);
 		}
-		.about-team img {
-			height: 360px;
+		.about-team {
+			width: 100%;
+			max-width: 900px;
+			margin-inline: auto;
 		}
 	}
 </style>

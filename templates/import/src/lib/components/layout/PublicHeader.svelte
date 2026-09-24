@@ -33,6 +33,7 @@
 			{ href: '/account/favorites', label: english ? 'Saved cars' : 'Любими автомобили' }
 		],
 		'/services': [
+			{ href: '/services', label: english ? 'All services' : 'Всички услуги' },
 			{ href: '/import', label: english ? 'Import a car' : 'Внос на автомобил' },
 			{ href: '/sell-your-car', label: english ? 'Sell your car' : 'Продай автомобил' },
 			{ href: '/financing', label: english ? 'Financing' : 'Финансиране' },

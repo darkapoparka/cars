@@ -15,8 +15,8 @@ try {
       await page.goto(`${base}/listing-grid?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
       const first = page.locator('.dn-listing-results .dn-vehicle-card__link').first();
       const title = await first.getAttribute('aria-label');
-      // Click the padded card area, not just its title, to protect the real hit target.
-      await first.click({ position: { x: 5, y: 5 } });
+      // Exercise the card surface inside its 20px rounded corner, away from title text.
+      await first.click({ position: { x: 12, y: 12 } });
       await page.waitForURL('**/listing-detail-v1/**');
       await page.locator(width < 768 ? '.dn-detail-mobile-back' : '.dn-detail-title-card a').click();
       await page.waitForURL(url => appPath(url) === '/listing-grid');
@@ -110,7 +110,9 @@ try {
         const homeArtwork = await page.locator('.dn-hero-vehicles__pair img').evaluate(image => image.currentSrc);
         assert(width < 768 ? homeArtwork.includes('collection-banner-v2') : homeArtwork.startsWith('data:'));
         const sources = await page.locator('.dn-hero-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
+        assert.equal(sources.length, 2);
         assert(sources.every(src => width >= 1440 ? src.startsWith('http') : src.startsWith('data:')));
+        assert.equal(media.filter(url => /auto-best-desktop-.+-v1\.webp/.test(url)).length, 0, 'Home no longer requests the generated scene');
         evidence.push({ width, heroSources: sources, homeArtwork });
         for (const [topic, scene] of [['trade-in', 'sell'], ['import', 'import']]) {
           await page.goto(`${base}/contact?topic=${topic}`, { waitUntil: 'networkidle' });

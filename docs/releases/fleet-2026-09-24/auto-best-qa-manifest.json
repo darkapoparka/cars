@@ -1,0 +1,46 @@
+{
+    "schemaVersion":  1,
+    "template":  "auto-best",
+    "repository":  "darkapoparka/cars-template-auto-best",
+    "commit":  "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+    "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+    "deployment":  {
+                       "id":  "dpl_GXXC1vmjWSfcLTJu7YXHijv7sfUf",
+                       "projectId":  "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+                       "state":  "READY",
+                       "publicAlias":  "https://cars-template-auto-best.vercel.app/"
+                   },
+    "assertions":  [
+                       {
+                           "name":  "exact immutable validation",
+                           "status":  "passed"
+                       },
+                       {
+                           "name":  "production-equivalent mounted build",
+                           "status":  "passed"
+                       },
+                       {
+                           "name":  "public browser matrix",
+                           "status":  "passed",
+                           "passed":  24,
+                           "total":  24
+                       }
+                   ],
+    "files":  [
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\auto-best-validation.log",
+                      "sha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492",
+                      "kind":  "exact immutable validation"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\auto-best-validation.log",
+                      "sha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492",
+                      "kind":  "production-equivalent mounted build"
+                  },
+                  {
+                      "path":  "J:\\cars\\runtime\\fleet-release-20260924\\template-public-qa\\focused-summary.json",
+                      "sha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf",
+                      "kind":  "24-combination public browser matrix"
+                  }
+              ]
+}

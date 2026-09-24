@@ -356,6 +356,37 @@
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
+	@media (min-width: 768px) {
+		.vehicle-search__input:focus-within {
+			outline-offset: 0;
+			border-color: var(--bc-focus);
+		}
+		.vehicle-search__controls {
+			padding-top: 0;
+		}
+		.vehicle-search__input {
+			border-radius: var(--bc-radius-md);
+		}
+		.vehicle-search__actions :global(.site-action) {
+			min-height: var(--bc-control-height-primary);
+			font-size: var(--bc-text-control);
+			border-radius: var(--bc-radius-md);
+		}
+		li a {
+			border-color: transparent;
+			border-radius: var(--bc-radius-md);
+		}
+		li a:hover {
+			border-color: var(--bc-border-strong);
+		}
+		.vehicle-search__car strong {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	}
 	@media (max-width: 599px) {
 		.vehicle-search__controls {
 			padding-inline: var(--bc-space-4);

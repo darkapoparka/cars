@@ -27,6 +27,7 @@ export type AuxeroInventoryFilter = {
 	mode: 'multiple' | 'single';
 	name: string;
 	options: AuxeroInventoryFilterOption[];
+	modelCatalog?: (AuxeroInventoryFilterOption & { brands: string[] })[];
 	numericInput?: { label: string; unit: string };
 	placeholder: string;
 	selectedSummary: string;
@@ -496,9 +497,9 @@ const modelOptionsForBrands = (brandFilter?: string) => {
 		? vehicles.filter((vehicle) => hasFilterValue(selectedBrands, vehicle.brand))
 		: vehicles;
 
-	return Array.from(new Set(source.map((vehicle) => vehicle.model).filter(Boolean)))
-		.sort((a, b) => a.localeCompare(b, 'en'))
-		.slice(0, 24);
+	return Array.from(new Set(source.map((vehicle) => vehicle.model).filter(Boolean))).sort((a, b) =>
+		a.localeCompare(b, 'en')
+	);
 };
 
 const selectedSearchQuery = (state: InventoryState) =>
@@ -757,14 +758,25 @@ const buildFilters = (state: InventoryState, locale: Locale) => {
 			placeholder: labels.brand,
 			selected: state.filters.brand
 		}),
-		makeFilter({
-			label: labels.model,
-			locale,
-			name: 'model',
-			options: options.model,
-			placeholder: labels.model,
-			selected: selectedModel(state)
-		}),
+		{
+			modelCatalog: modelOptionsForBrands().map((model) => ({
+				value: model,
+				label: model,
+				brands: [
+					...new Set(
+						vehicles.filter((vehicle) => vehicle.model === model).map((vehicle) => vehicle.brand)
+					)
+				]
+			})),
+			...makeFilter({
+				label: labels.model,
+				locale,
+				name: 'model',
+				options: options.model,
+				placeholder: labels.model,
+				selected: selectedModel(state)
+			})
+		},
 		makeFilter({
 			label: labels.price,
 			locale,

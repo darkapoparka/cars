@@ -1,5 +1,5 @@
 name: Deploy corrected localized dealer fleet
-# Full production promotion retriggered 2026-09-22 after project-ID inventory repair.
+# Fleet rollout triggered for release 5ead4304 on 2026-09-24 (encoding-safe).
 
 on:
   workflow_dispatch:
@@ -168,7 +168,6 @@ jobs:
           cd "$RUNNER_TEMP/localized-client"
           npx --yes vercel@59.19.1 deploy \
             --prod \
-            --yes \
             --force \
             --archive=tgz \
             --token="$VERCEL_TOKEN" \

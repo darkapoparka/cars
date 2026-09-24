@@ -189,6 +189,7 @@
 		margin: 0;
 		white-space: pre-line;
 		color: var(--bc-copy);
+		font-size: var(--bc-text-prose);
 		line-height: var(--bc-leading-prose);
 		overflow-wrap: anywhere;
 	}
@@ -198,6 +199,8 @@
 		gap: var(--bc-space-2) var(--bc-space-6);
 		padding-left: var(--bc-space-5);
 		margin: 0;
+		font-size: var(--bc-text-prose);
+		line-height: var(--bc-leading-body-lg);
 	}
 	.detail-related {
 		display: grid;

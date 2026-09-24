@@ -251,7 +251,11 @@
 	--bc-footer-link: #ccd0d5;
 	--bc-footer-ink: #f7f7f7;
 	--bc-dark-muted: #c4c7cb;
+	--bc-glass-surface: rgb(255 255 255 / 0.12);
+	--bc-glass-hover: rgb(255 255 255 / 0.24);
+	--bc-glass-border: rgb(255 255 255 / 0.4);
 	--bc-mobile-appbar-height: 56px;
+	--bc-desktop-page-hero-height: 360px;
 	--bc-mobile-nav-height: 70px;
 	--bc-mobile-content-max: 480px;
 	--bc-mobile-nav-icon-size: 28px;
@@ -304,6 +308,12 @@
 	--bc-motion-hover: 140ms ease;
 	--bc-motion-standard: 220ms ease;
 	--bc-motion-drawer: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (min-width: 768px) {
+	.site-shell {
+		--bc-text-meta: 0.875rem;
+	}
 }
 
 /* Desktop actions are larger, not heavier. Mobile keeps its established scale. */

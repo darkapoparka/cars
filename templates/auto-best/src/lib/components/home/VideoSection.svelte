@@ -27,19 +27,19 @@
 </script>
 
 {#if brand.youtubeUrl && featuredVideos.length > 0}
-<section class="dn-videos" aria-labelledby="videos-title">
+<section class="dn-videos dn-home-content-section" aria-labelledby="videos-title">
   <div class="container">
       <div class="dn-videos__heading dn-home-section-heading dn-home-section-heading--banner dn-home-banner-frame dn-home-banner-copy">
         <h2 id="videos-title" class="dn-home-section-title"><span class="dn-videos__wordmark"><span class="dn-videos__brand-mark"><SocialBrandIcon name="youtube" size={40} /></span>{i18n.t("m_fb7accfff8c6")}</span></h2>
         
-        <a class="dn-videos__channel dn-home-section-action" href={i18n.href(brand.youtubeUrl)} target="_blank" rel="noopener noreferrer">
-          <span class="dn-videos__channel-label">{i18n.t("m_19f3fcdf5d1c")}</span>
-          <Icon name="arrow-right" size={16} />
+        <a class="dn-videos__channel dn-home-section-action" href={i18n.href(brand.youtubeUrl)} target="_blank" rel="noopener noreferrer" aria-label={`${i18n.t("m_19f3fcdf5d1c")} ${i18n.t("m_fd19f28ff04b")}`}>
+          <span class="dn-videos__channel-label">{i18n.t("m_30a64216eaea")}</span>
+          <Icon name="arrow-right" size={18} />
           <span class="dn-sr-only"> {i18n.t("m_fd19f28ff04b")}</span>
         </a>
       </div>
 
-    <div class="dn-videos__panel">
+    <div class="dn-videos__panel dn-home-section-panel">
       <div class="dn-videos__grid">
         {#each featuredVideos as video (video.id)}
           <article class="dn-video-card">
@@ -115,7 +115,6 @@
     .dn-videos .dn-videos__heading.dn-home-section-heading { min-height: var(--dn-home-heading-banner-height); }
     .dn-videos__heading h2 { justify-content: center; }
     .dn-videos__channel :global(svg) { width: 18px; height: 18px; stroke-width: 2; }
-    .dn-videos__panel { background: var(--dn-home-panel); }
   }
 
   @media (min-width: 768px) and (max-width: 991px) {

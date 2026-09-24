@@ -1,0 +1,148 @@
+{
+    "repository":  "darkapoparka/cars-template-auto-best",
+    "commit":  "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+    "approved":  true,
+    "release":  "fleet-ui-and-localization-2026-09-24",
+    "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+    "runtime":  {
+                    "node":  "22.23.2",
+                    "npm":  "11.x",
+                    "lockfile":  "package-lock.json"
+                },
+    "modes":  {
+                  "standalone":  "exact commit validated and production alias verified at 320, 390 and 1440",
+                  "mounted":  "production-equivalent base-path build and EN/BG SSR probes passed; dealer publication still requires dealer QA"
+              },
+    "checks":  [
+                   {
+                       "name":  "exact immutable validation",
+                       "status":  "passed",
+                       "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                   },
+                   {
+                       "name":  "exact production deployment",
+                       "status":  "passed",
+                       "deploymentId":  "dpl_GXXC1vmjWSfcLTJu7YXHijv7sfUf"
+                   },
+                   {
+                       "name":  "standalone browser matrix",
+                       "status":  "passed",
+                       "passed":  24,
+                       "total":  24,
+                       "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                   },
+                   {
+                       "name":  "mounted build and EN/BG route probes",
+                       "status":  "passed",
+                       "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                   }
+               ],
+    "standalone":  {
+                       "mobile":  true,
+                       "desktop":  true,
+                       "widths":  [
+                                      320,
+                                      390,
+                                      1440
+                                  ]
+                   },
+    "artifacts":  {
+                      "manifest":  "docs/releases/fleet-2026-09-24/auto-best-qa-manifest.json",
+                      "manifestSha256":  "0c94f64fbc8da5ab137853b1e40906861c27ada6c3143204a5485a69a180452a"
+                  },
+    "nativeLocalization":  {
+                               "schemaVersion":  1,
+                               "adapter":  "native-v1",
+                               "repository":  "darkapoparka/cars-template-auto-best",
+                               "commit":  "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+                               "locales":  [
+                                               "en",
+                                               "bg"
+                                           ],
+                               "widths":  [
+                                              320,
+                                              390,
+                                              1440
+                                          ],
+                               "verifiedAt":  "2026-09-24T09:39:33.0640471Z",
+                               "evidenceSha256":  "0c94f64fbc8da5ab137853b1e40906861c27ada6c3143204a5485a69a180452a",
+                               "catalogs":  [
+                                                {
+                                                    "format":  "typescript-pair",
+                                                    "path":  "src/lib/locale/catalog.ts",
+                                                    "en":  "en",
+                                                    "bg":  "bg"
+                                                }
+                                            ],
+                               "sourceDigest":  "630ef7a807063600dfa518cf28ebe4a006ea36308bf0b358185b132eaacb1fbf",
+                               "deployment":  {
+                                                  "id":  "dpl_GXXC1vmjWSfcLTJu7YXHijv7sfUf",
+                                                  "projectId":  "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+                                                  "state":  "READY",
+                                                  "sourceCommit":  "2f4c2fb8d7a926da74272f7ea7036cfefae6a5d2",
+                                                  "publicAlias":  "https://cars-template-auto-best.vercel.app/"
+                                              },
+                               "checks":  [
+                                              {
+                                                  "name":  "catalog-completeness",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "hardcoded-ui",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "native-routing",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "standalone-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                                              },
+                                              {
+                                                  "name":  "mounted-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "public-journeys",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "068997f582e7b92bd860bed37d8764398fe5326f0ed58790f0137163450a4cdf"
+                                              },
+                                              {
+                                                  "name":  "preferences-no-js",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "preferences-storage-disabled",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "preferences-races",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "request-isolation",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "security-write-blocking",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              },
+                                              {
+                                                  "name":  "assets-preserved",
+                                                  "status":  "passed",
+                                                  "evidenceSha256":  "552417d28ea7a9064c58238d1b1e702c04b995d9a2489a2ec844f41b614ce492"
+                                              }
+                                          ]
+                           }
+}

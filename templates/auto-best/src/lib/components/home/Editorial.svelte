@@ -4,26 +4,27 @@
 
   import BrowseAllCard from './BrowseAllCard.svelte';
   import { resolve } from '$app/paths';
+  import Icon from '$components/ui/Icon.svelte';
   import { editorial } from '$data/home';
   import { leadSite } from '$config/lead-site';
 </script>
 
-<section class="dn-editorial" aria-labelledby="editorial-title">
+<section class="dn-editorial dn-home-content-section" aria-labelledby="editorial-title">
   <div class="dn-editorial__banner" style:--dn-editorial-banner={`url("${leadSite.artwork.editorialBanner}")`}>
     <div class="container">
-      <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--red dn-home-banner-frame dn-home-banner-copy">
+      <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
         <h2 id="editorial-title" class="dn-home-section-title">
           <span class="dn-heading-desktop">{i18n.t("m_7badc636af8e")}</span>
           <span class="dn-heading-mobile">{i18n.t("m_5062eeb4b9d4")}</span>
         </h2>
         
-        <a class="dn-editorial__cta dn-home-section-action" href={i18n.href(resolve('/blog'))}>{i18n.t("m_e74ad5f53e46")}</a>
+        <a class="dn-editorial__cta dn-home-section-action" href={i18n.href(resolve('/blog'))} aria-label={i18n.t("m_e74ad5f53e46")}>{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></a>
       </div>
     </div>
   </div>
 
   <div class="container">
-    <div class="dn-editorial__cards">
+    <div class="dn-editorial__cards dn-home-section-panel">
       <div class="dn-editorial__layout">
         {#each editorial as item (item.title)}
           <article class="dn-editorial-item">
@@ -162,14 +163,26 @@
   }
 
   .dn-editorial-item__link {
+    position: relative;
+    border-radius: inherit;
     display: block;
     height: 100%;
     color: inherit;
   }
 
   .dn-editorial-item__link:focus-visible {
-    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 28%);
+    outline: 3px solid var(--dn-focus);
     outline-offset: -3px;
+  }
+
+  .dn-editorial-item__link:focus-visible::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border: 3px solid var(--dn-focus);
+    border-radius: inherit;
+    pointer-events: none;
+    content: '';
   }
 
   .dn-editorial-item__media {
@@ -254,7 +267,7 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .dn-editorial-item {
+    .dn-editorial-item, .dn-editorial-item h3 {
       transition: none;
     }
   }
@@ -457,13 +470,6 @@
     .dn-editorial__cta:focus-visible {
       background: #24272c;
       color: #fff;
-    }
-
-    .dn-editorial__cards {
-      margin: calc(-1 * var(--dn-home-banner-overlap)) 0 0;
-      padding: 24px;
-      border-radius: var(--dn-radius);
-      background: var(--dn-home-panel);
     }
 
     .dn-editorial__layout {

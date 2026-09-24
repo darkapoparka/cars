@@ -177,7 +177,7 @@
 		min-height: var(--bc-control-height-compact);
 		margin-top: var(--bc-space-2);
 		color: var(--bc-copy);
-		font-size: var(--bc-text-label);
+		font-size: var(--bc-text-control);
 		text-decoration: none;
 	}
 	.purchase-finance-link:hover {

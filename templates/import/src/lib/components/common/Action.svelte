@@ -11,7 +11,7 @@
 			value?: HTMLButtonAttributes['value'];
 			form?: string;
 			onclick?: (event: MouseEvent) => void;
-			variant?: 'primary' | 'secondary' | 'strong' | 'quiet' | 'inverse';
+			variant?: 'primary' | 'secondary' | 'strong' | 'quiet' | 'inverse' | 'glass';
 			size?: 'compact' | 'standard' | 'primary' | 'hero';
 		};
 	let {
@@ -106,6 +106,17 @@
 	.inverse:hover {
 		background: var(--bc-dark-hover);
 	}
+	.glass {
+		background: var(--bc-glass-surface);
+		border-color: var(--bc-glass-border);
+		color: var(--bc-white);
+		backdrop-filter: blur(12px);
+	}
+	.glass:hover,
+	.glass[aria-pressed='true'] {
+		background: var(--bc-glass-hover);
+		border-color: var(--bc-white);
+	}
 	.size-compact {
 		font-size: var(--bc-text-control);
 		min-height: var(--bc-control-height-standard);
@@ -120,5 +131,8 @@
 	.site-action[aria-disabled='true'] {
 		opacity: 0.5;
 		cursor: not-allowed;
+	}
+	.site-action :global(svg) {
+		flex-shrink: 0;
 	}
 </style>

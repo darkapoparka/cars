@@ -5,6 +5,7 @@
 
   import './contact.css';
   import ContactHero from '$components/company/ContactHero.svelte';
+  import ContactActions from '$components/company/ContactActions.svelte';
   import ContactIntent from '$components/company/ContactIntent.svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import { brand } from '$config/brand';
@@ -27,6 +28,7 @@
 
 <section class="dn-contact-section" class:dn-contact-section--general={data.topic.id === 'general'} class:dn-contact-section--topic={data.topic.id !== 'general'} class:dn-contact-section--workflow={data.topic.id === 'trade-in' || data.topic.id === 'import'} class:dn-contact-section--import={data.topic.id === 'import'} id="contact-intent" aria-label={i18n.t("m_d7def4b82f7c")}>
   <div class="container">
+    {#if data.topic.id === 'general'}<ContactActions />{/if}
     <ContactIntent vehicle={data.vehicle} topic={data.topic} importUrl={data.importUrl} />
 
     {#if data.topic.id === 'general'}

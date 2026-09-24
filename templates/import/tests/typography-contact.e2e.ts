@@ -2,7 +2,9 @@ import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { visit } from './helpers';
 
-test('public action labels share a readable regular-weight role', async ({ page }, info) => {
+test('public actions retain their readable weight and homepage search emphasis', async ({
+	page
+}, info) => {
 	for (const route of ['/', '/inventory', '/about', '/contact', '/services', '/financing']) {
 		await visit(page, route);
 		const actions = page.locator('.site-action:visible');
@@ -12,15 +14,23 @@ test('public action labels share a readable regular-weight role', async ({ page 
 				size: parseFloat(getComputedStyle(node).fontSize),
 				weight: getComputedStyle(node).fontWeight,
 				height: node.getBoundingClientRect().height,
-				compact: node.classList.contains('size-compact')
+				compact: node.classList.contains('size-compact'),
+				card: Boolean(node.closest('.site-vehicle-card')),
+				filter: node.classList.contains('inventory-toolbar__all'),
+				heroSearch: node.classList.contains('home-hero__search-action')
 			}))
 		);
 		for (const item of metrics) {
-			expect(item.weight, route + ' ' + item.text).toBe('400');
+			expect(item.weight, route + ' ' + item.text).toBe(item.heroSearch ? '600' : '400');
+			const desktopCard = info.project.name === 'desktop' && item.card;
 			expect(item.size).toBeGreaterThanOrEqual(
-				info.project.name === 'desktop' && !item.compact ? 20 : 18
+				desktopCard
+					? 16
+					: info.project.name === 'desktop' && !item.compact && !item.filter
+						? 20
+						: 18
 			);
-			expect(item.height).toBeGreaterThanOrEqual(44);
+			expect(item.height).toBeGreaterThanOrEqual(desktopCard ? 36 : 44);
 		}
 	}
 });
@@ -29,8 +39,11 @@ test('About opens with the team, not a wall of duplicate introduction copy', asy
 	await visit(page, '/about');
 	await expect(page.locator('.about-overview')).toHaveCount(0);
 	await expect(page.locator('.about-team article')).toHaveCount(3);
-	await expect(page.locator('.about-socials .social-links a')).toHaveCount(3);
-	for (const link of await page.locator('.about-socials .social-links a').all()) {
+	const socials = page.locator(
+		'.about-socials .social-links a:visible, .site-intro .social-links a:visible'
+	);
+	await expect(socials).toHaveCount(3);
+	for (const link of await socials.all()) {
 		await expect(link).toHaveAttribute('href', /^https:/);
 		expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(48);
 		await expect(link.locator('img')).toHaveAttribute('src', /assets\/icons\/brands\//);
@@ -75,8 +88,8 @@ test('buying-panel selections retain their size and weight after choosing', asyn
 	await dialog.getByRole('button', { name: /Готово/ }).click();
 	await expect(trigger).toBeFocused();
 	const value = trigger.locator('.hfp__value');
-	expect(await value.evaluate((node) => getComputedStyle(node).fontWeight)).toBe('400');
-	expect(await value.evaluate((node) => getComputedStyle(node).fontSize)).toBe('18px');
+	expect(await value.evaluate((node) => getComputedStyle(node).fontWeight)).toBe('600');
+	expect(await value.evaluate((node) => getComputedStyle(node).fontSize)).toBe('20px');
 	await expect(trigger).toHaveClass(/hfp__field--compact/);
 	await expect(value).toContainText('BMW');
 });

@@ -264,6 +264,7 @@ test('both import modes and sell wizard validate without business writes', async
 	]);
 	await page.setViewportSize({ width: 1440, height: 900 });
 	await page.goto(route('en', '/import'));
+	await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 	const wizard = page.locator('.site-desktop-only .bc-import-wizard');
 	await expect(wizard).toContainText('Which car should we check?');
 	await wizard.getByRole('button', { name: 'Continue' }).click();

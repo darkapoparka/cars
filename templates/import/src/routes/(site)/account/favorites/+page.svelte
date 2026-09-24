@@ -33,7 +33,7 @@
 						>
 					</div>{/each}
 			</div>
-		{:else}<div class="site-panel site-stack">
+		{:else}<div class="site-panel site-stack site-empty-state">
 				<h2>{english ? 'No saved cars yet' : 'Все още няма запазени автомобили'}</h2>
 				<p>
 					{english
