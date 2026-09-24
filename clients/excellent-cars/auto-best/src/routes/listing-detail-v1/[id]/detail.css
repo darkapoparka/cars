@@ -543,19 +543,7 @@
   line-height: var(--dn-leading-heading);
 }
 
-.dn-detail-finance-sheet__header button {
-  display: grid;
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
-  place-items: center;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: #f1f2f4;
-  color: var(--dn-ink-strong);
-  cursor: pointer;
-}
+.dn-detail-finance-sheet__header button { border: 0; border-radius: 50%; background: #f1f2f4; color: var(--dn-ink-strong); }
 
 .dn-detail-finance-dialog .dn-finance-calculator > header { display: none; }
 
@@ -690,7 +678,7 @@
 
   .dn-detail-tabs button {
     min-width: 0;
-    min-height: 38px;
+    min-height: var(--dn-control-hit-height);
     padding: 0 8px;
     border-radius: 8px;
     color: #626873;

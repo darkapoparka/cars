@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 
@@ -15,7 +18,7 @@
 	<div class="listing-details--contact">
 		<div class="listing-details--contact-dealer mb-28">
 			<img
-				src="/assets/images/avatar/contact-avatar.webp"
+				src={i18n.asset('/assets/images/avatar/contact-avatar.webp')}
 				alt={`${daynightSite.shortName}`}
 				data-daynight-img="1"
 				decoding="async"
@@ -23,19 +26,22 @@
 			/>
 
 			<div class="content">
-				<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-8">
+				<a
+					href={i18n.href(resolve('/about/daynight-auto-plovdiv'))}
+					class="h4 font-weight-600 mb-8"
+				>
 					{daynightSite.shortName}
 				</a>
 
 				<div class="verify">
 					<img
-						src="/assets/icons/SealCheck.svg"
-						alt="verified"
+						src={i18n.asset('/assets/icons/SealCheck.svg')}
+						alt={i18n.t('copy.1c34f88707b5')}
 						data-daynight-img="1"
 						decoding="async"
 						loading="lazy"
 					/>
-					<p class="text-highlight text-sm">Проверена автокъща</p>
+					<p class="text-highlight text-sm">{i18n.t('copy.aa0ad8ef6502')}</p>
 				</div>
 			</div>
 		</div>
@@ -44,7 +50,7 @@
 			<li>
 				<p class="icon">
 					<img
-						src="/assets/icons/MapPin.svg"
+						src={i18n.asset('/assets/icons/MapPin.svg')}
 						alt=""
 						aria-hidden="true"
 						data-daynight-img="1"
@@ -53,8 +59,10 @@
 					/>
 				</p>
 				<div class="flex flex-col gap-4">
-					<a {...mapLinkProps}>{daynightSite.location}</a>
-					<a {...mapLinkProps} class="text-underline text-highlight text-sm"> Виж локация </a>
+					<a {...mapLinkProps}>{i18n.dealer('address')}</a>
+					<a {...mapLinkProps} class="text-underline text-highlight text-sm">
+						{i18n.t('copy.d78ccda3011d')}
+					</a>
 				</div>
 			</li>
 		</ul>
@@ -62,7 +70,7 @@
 			<li class="items-center">
 				<p class="icon">
 					<img
-						src="/assets/icons/PhoneCall.svg"
+						src={i18n.asset('/assets/icons/PhoneCall.svg')}
 						alt=""
 						aria-hidden="true"
 						data-daynight-img="1"
@@ -71,35 +79,35 @@
 					/>
 				</p>
 				<div class="flex flex-col">
-					<a href={phoneHref}>
+					<a href={i18n.href(phoneHref)}>
 						{daynightSite.phoneLabel}
 					</a>
 				</div>
 			</li>
 		</ul>
 
-		<a href={phoneHref} class="sa-cta-compact mb-12 sa-cta w-full sa-cta-primary">
+		<a href={i18n.href(phoneHref)} class="sa-cta-compact mb-12 sa-cta w-full sa-cta-primary">
 			<img
-				src="/assets/icons/PhoneCall-2.svg"
+				src={i18n.asset('/assets/icons/PhoneCall-2.svg')}
 				alt=""
 				aria-hidden="true"
 				data-daynight-img="1"
 				decoding="async"
 				loading="lazy"
 			/>
-			Обади се за оглед
+			{i18n.t('copy.30ebf6dff086')}
 		</a>
 
-		<a href={viberHref} class="sa-cta-compact sa-cta w-full sa-cta-ghost">
+		<a href={i18n.href(viberHref)} class="sa-cta-compact sa-cta w-full sa-cta-ghost">
 			<img
-				src="/assets/icons/ChatCircleDots.svg"
+				src={i18n.asset('/assets/icons/ChatCircleDots.svg')}
 				alt=""
 				aria-hidden="true"
 				data-daynight-img="1"
 				decoding="async"
 				loading="lazy"
 			/>
-			Viber чат
+			{i18n.t('copy.0e6a70363e9c')}
 		</a>
 	</div>
 </div>

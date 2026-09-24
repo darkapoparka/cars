@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { trapDialogTab } from '$lib/ui/overlay';
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import { leadSite } from '$config/lead-site';
@@ -11,23 +15,23 @@
   }
 </script>
 
-<section class="dn-pdp-import" aria-label="Внос по заявка">
-  <button bind:this={trigger} class="dn-pdp-import__banner" type="button" onclick={() => dialog.showModal()} aria-haspopup="dialog" aria-label="Как работи вносът?">
-    <img src={leadSite.artwork.pdp.importGuide} alt="Как работи вносът? Обява или критерии · 3 бързи стъпки" width="900" height="300" loading="lazy" decoding="async" />
+<section class="dn-pdp-import" aria-label={i18n.t("m_d621a3c98e0f")}>
+  <button bind:this={trigger} class="dn-pdp-import__banner" type="button" onclick={() => dialog.showModal()} aria-haspopup="dialog" aria-label={i18n.t("m_84a753e287b1")}>
+    <img src={leadSite.artwork.pdp.importGuide} alt={i18n.t("m_745ac4d5e340")} width="900" height="300" loading="lazy" decoding="async" />
   </button>
 </section>
 
-<dialog class="dn-pdp-import-dialog" bind:this={dialog} aria-labelledby="pdp-import-title" onclose={() => trigger?.focus()} onclick={(event) => { if (event.target === event.currentTarget) close(); }}>
+<dialog onkeydown={trapDialogTab} class="dn-pdp-import-dialog" bind:this={dialog} aria-labelledby="pdp-import-title" onclose={() => trigger?.focus()} onclick={(event) => { if (event.target === event.currentTarget) close(); }}>
   <div class="dn-pdp-import-sheet">
     <header>
-      <h2 id="pdp-import-title">Как работи вносът?</h2>
-      <button type="button" onclick={close} aria-label="Затвори"><Icon name="x" size={21} /></button>
+      <h2 id="pdp-import-title">{i18n.t("m_84a753e287b1")}</h2>
+      <button class="dn-icon-button" type="button" onclick={close} aria-label={i18n.t("m_7d9eb7acb13e")}><Icon name="x" size={21} /></button>
     </header>    <ol>
-      <li><span>01</span><strong>Обява или критерии</strong></li>
-      <li><span>02</span><strong>Уточняваме автомобила</strong></li>
-      <li><span>03</span><strong>Потвърждаваме следващата стъпка</strong></li>
+      <li><span>01</span><strong>{i18n.t("m_1ca1a6c6bb44")}</strong></li>
+      <li><span>02</span><strong>{i18n.t("m_8d2e23bb3cc1")}</strong></li>
+      <li><span>03</span><strong>{i18n.t("m_7472d98583c8")}</strong></li>
     </ol>
-    <a class="dn-pdp-import-sheet__cta" href={resolve('/contact?topic=import')}>Заяви внос <Icon name="arrow-right" size={17} /></a>
+    <a class="dn-pdp-import-sheet__cta" href={i18n.href(resolve('/contact?topic=import'))}>{i18n.t("m_e451c2bb4d64")} <Icon name="arrow-right" size={17} /></a>
   </div>
 </dialog>
 
@@ -41,7 +45,7 @@
   .dn-pdp-import-sheet { padding: 20px; border-radius: 22px; background: #fff; }
   .dn-pdp-import-sheet header { display: flex; align-items: center; gap: 14px; }
   .dn-pdp-import-sheet h2 { flex: 1; margin: 0; font-size: var(--dn-text-subheading); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
-  .dn-pdp-import-sheet header button { display: grid; width: 42px; height: 42px; place-items: center; border: 0; border-radius: 50%; background: #f1f2f4; color: #202329; cursor: pointer; }  .dn-pdp-import-sheet ol { display: grid; gap: 14px; margin: 24px 0 0; padding: 0; list-style: none; }
+  .dn-pdp-import-sheet header button { border: 0; border-radius: 50%; background: #f1f2f4; color: #202329; }  .dn-pdp-import-sheet ol { display: grid; gap: 14px; margin: 24px 0 0; padding: 0; list-style: none; }
   .dn-pdp-import-sheet li { display: grid; grid-template-columns: 34px minmax(0,1fr); align-items: center; gap: 12px; }
   .dn-pdp-import-sheet li > span { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: #202329; color: #fff; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); }
   .dn-pdp-import-sheet li strong { font-size: var(--dn-text-body); line-height: var(--dn-leading-meta); }

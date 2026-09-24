@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { Check, ChevronLeft, ChevronRight, Search, X } from '@lucide/svelte';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
@@ -24,7 +27,7 @@
 	function submitSearch() {
 		const href = search.searchHref;
 		closeSearch();
-		void goto(resolve(href));
+		void goto(i18n.href(resolve(href)));
 	}
 </script>
 
@@ -143,10 +146,10 @@
 		{#if search.searchView === 'main'}
 			<header>
 				<div>
-					<span>Търсене</span>
-					<strong id="mh-search-title">Намери автомобил</strong>
+					<span>{i18n.t('copy.bfc95eff30e5')}</span>
+					<strong id="mh-search-title">{i18n.t('copy.8f9f22e9e369')}</strong>
 				</div>
-				<button type="button" aria-label="Затвори" onclick={closeSearch}>
+				<button type="button" aria-label={i18n.t('copy.1ef1a425356f')} onclick={closeSearch}>
 					<X size={19} strokeWidth={2.5} />
 				</button>
 			</header>
@@ -155,11 +158,12 @@
 				<label class="mh-search-sheet__field">
 					<Search size={19} strokeWidth={2.3} aria-hidden="true" />
 					<input
+						{@attach i18n.validation}
 						type="search"
 						bind:value={search.query}
-						placeholder="Търси марка, модел…"
+						placeholder={i18n.t('copy.b470b88c8a52')}
 						autocomplete="off"
-						aria-label="Търсене"
+						aria-label={i18n.t('copy.bfc95eff30e5')}
 						enterkeyhint="search"
 						onkeydown={(event) => {
 							if (event.key !== 'Enter') return;
@@ -171,14 +175,15 @@
 
 				<div class="mh-search-sheet__group">
 					<div class="mh-search-sheet__group-head">
-						<span>Марка</span>
+						<span>{i18n.t('copy.b7fccee005ae')}</span>
 						{#if data.brands.length > popularBrands.length}
 							<button
 								type="button"
 								class="mh-search-sheet__all"
 								onclick={() => search.openFacet('brand')}
 							>
-								Всички {data.brands.length}
+								{i18n.t('copy.117d98cb652c')}
+								{data.brands.length}
 								<ChevronRight size={13} strokeWidth={2.6} aria-hidden="true" />
 							</button>
 						{/if}
@@ -195,7 +200,7 @@
 							>
 								{#if logo}
 									<span class="mh-chip__logo" aria-hidden="true">
-										<img src={logo} alt="" loading="lazy" />
+										<img src={i18n.asset(logo)} alt="" loading="lazy" />
 									</span>
 								{:else}
 									<span class="mh-chip__mark" aria-hidden="true">{brandMark(brand)}</span>
@@ -208,14 +213,15 @@
 
 				<div class="mh-search-sheet__group">
 					<div class="mh-search-sheet__group-head">
-						<span>Модел</span>
+						<span>{i18n.t('copy.37858c8efede')}</span>
 						{#if search.allModelOptions.length > search.modelChips.length}
 							<button
 								type="button"
 								class="mh-search-sheet__all"
 								onclick={() => search.openFacet('model')}
 							>
-								Всички {search.allModelOptions.length}
+								{i18n.t('copy.117d98cb652c')}
+								{search.allModelOptions.length}
 								<ChevronRight size={13} strokeWidth={2.6} aria-hidden="true" />
 							</button>
 						{/if}
@@ -237,14 +243,15 @@
 
 				<div class="mh-search-sheet__group">
 					<div class="mh-search-sheet__group-head">
-						<span>Каросерия</span>
+						<span>{i18n.t('copy.45e7e8a38730')}</span>
 						{#if data.bodyTypes.length > bodyChips.length}
 							<button
 								type="button"
 								class="mh-search-sheet__all"
 								onclick={() => search.openFacet('body')}
 							>
-								Всички {data.bodyTypes.length}
+								{i18n.t('copy.117d98cb652c')}
+								{data.bodyTypes.length}
 								<ChevronRight size={13} strokeWidth={2.6} aria-hidden="true" />
 							</button>
 						{/if}
@@ -259,15 +266,15 @@
 								onclick={() => search.toggleBody(body)}
 							>
 								{@render bodyTypeChipIcon(bodyChipIconFor(body))}
-								<span>{bodyLabel(body)}</span>
+								<span>{i18n.spec(bodyLabel(body))}</span>
 							</button>
 						{/each}
 					</div>
 				</div>
 				<label class="mh-search-sheet__group">
-					<span>Бюджет</span>
-					<select class="mh-price-select" bind:value={search.searchPrice}>
-						<option value="">Всички цени</option>
+					<span>{i18n.t('copy.84e960d40ad5')}</span>
+					<select {@attach i18n.validation} class="mh-price-select" bind:value={search.searchPrice}>
+						<option value="">{i18n.t('copy.6d9c63297fb6')}</option>
 						{#each data.budgetTiles.filter((tile) => tile.value !== 'all') as tile (tile.value)}
 							<option value={tile.value}>{tile.label}</option>
 						{/each}
@@ -275,24 +282,26 @@
 				</label>
 			</div>
 
-			<a class="mh-search-sheet__go" href={resolve(search.searchHref)}>Виж автомобилите →</a>
+			<a class="mh-search-sheet__go" href={i18n.href(resolve(search.searchHref))}
+				>{i18n.t('copy.ddfee12e223d')}</a
+			>
 		{:else}
 			<header>
 				<div class="mh-facet-head">
 					<button
 						type="button"
 						class="mh-facet-back"
-						aria-label="Назад"
+						aria-label={i18n.t('copy.1a9fb1f3cf8e')}
 						onclick={search.backToMain}
 					>
 						<ChevronLeft size={20} strokeWidth={2.5} />
 					</button>
 					<div>
-						<span>Избери</span>
+						<span>{i18n.t('copy.6a541b066d4d')}</span>
 						<strong id="mh-search-title">{search.facetTitle}</strong>
 					</div>
 				</div>
-				<button type="button" aria-label="Затвори" onclick={closeSearch}>
+				<button type="button" aria-label={i18n.t('copy.1ef1a425356f')} onclick={closeSearch}>
 					<X size={19} strokeWidth={2.5} />
 				</button>
 			</header>
@@ -302,11 +311,16 @@
 					<label class="mh-search-sheet__field">
 						<Search size={19} strokeWidth={2.3} aria-hidden="true" />
 						<input
+							{@attach i18n.validation}
 							type="search"
 							bind:value={search.facetQuery}
-							placeholder={search.searchView === 'brand' ? 'Търси марка' : 'Търси модел'}
+							placeholder={search.searchView === 'brand'
+								? i18n.t('copy.549f3ada8761')
+								: i18n.t('copy.78fbb7843147')}
 							autocomplete="off"
-							aria-label={search.searchView === 'brand' ? 'Търси марка' : 'Търси модел'}
+							aria-label={search.searchView === 'brand'
+								? i18n.t('copy.549f3ada8761')
+								: i18n.t('copy.78fbb7843147')}
 						/>
 					</label>
 				{/if}
@@ -325,7 +339,7 @@
 								<span class="mh-facet-row__label">
 									{#if logo}
 										<span class="mh-facet-row__logo" aria-hidden="true">
-											<img src={logo} alt="" loading="lazy" />
+											<img src={i18n.asset(logo)} alt="" loading="lazy" />
 										</span>
 									{:else}
 										<span class="mh-facet-row__mark" aria-hidden="true">{brandMark(brand)}</span>
@@ -338,7 +352,7 @@
 							</button>
 						{/each}
 						{#if !search.facetBrandList.length}
-							<p class="mh-facet-empty">Няма марки по това търсене.</p>
+							<p class="mh-facet-empty">{i18n.t('copy.150b5d69b380')}</p>
 						{/if}
 					{:else if search.searchView === 'model'}
 						{#each search.facetModelList as option (option.model)}
@@ -358,7 +372,7 @@
 							</button>
 						{/each}
 						{#if !search.facetModelList.length}
-							<p class="mh-facet-empty">Няма модели по това търсене.</p>
+							<p class="mh-facet-empty">{i18n.t('copy.04f070f200b8')}</p>
 						{/if}
 					{:else}
 						{#each data.bodyTypes as body (body)}
@@ -371,7 +385,7 @@
 							>
 								<span class="mh-facet-row__label">
 									{@render bodyTypeChipIcon(bodyChipIconFor(body))}
-									<span>{bodyLabel(body)}</span>
+									<span>{i18n.spec(bodyLabel(body))}</span>
 								</span>
 								{#if isSelected}
 									<Check size={18} strokeWidth={2.6} aria-hidden="true" />
@@ -382,7 +396,8 @@
 				</div>
 			</div>
 
-			<button class="mh-search-sheet__go" type="button" onclick={search.backToMain}>Готово →</button
+			<button class="mh-search-sheet__go" type="button" onclick={search.backToMain}
+				>{i18n.t('copy.d78c615e7a1e')}</button
 			>
 		{/if}
 	</div>

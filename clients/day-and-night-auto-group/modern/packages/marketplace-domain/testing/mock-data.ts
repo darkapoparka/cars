@@ -3,645 +3,1167 @@ import type { Money, VehicleListing } from "../types";
 
 export const mockListings: VehicleListing[] = [
   {
-    id: "am-1001",
-    slug: "bmw-x5-m50d-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 BMW X5 M50d",
-    description:
-      "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
-    price: { amount: 89_379, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1360, currency: "BGN" },
-    images: [
+    "id": "am-1001",
+    "slug": "2016-21784728210405323",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 26699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1635990215241-4d2805d729bb?w=1200&q=82&auto=format&fit=crop",
-        alt: "Черен BMW X5 SUV",
+        "url": "/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+        "alt": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED"
+      }
+    ],
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
+    },
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
       },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      },
+      {
+        "bg": "Steptronic",
+        "en": "Steptronic"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    features: [
-      { bg: "360° камери", en: "360° cameras" },
-      { bg: "Панорамен покрив", en: "Panoramic roof" },
-      { bg: "Head-up display", en: "Head-up display" },
-      { bg: "Обдухване на седалките", en: "Ventilated seats" },
-    ],
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "M50d",
-      year: 2020,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 167_000,
-      mileageUnit: "km",
-      enginePowerHp: 400,
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED",
+      "year": 2016,
+      "bodyType": "coupe",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 170000,
+      "mileageUnit": "km",
+      "colorExterior": "Графит"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    publishedAt: "2026-07-28T09:00:00.000Z",
-    promoted: true,
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": true
   },
   {
-    id: "am-1010",
-    slug: "mercedes-benz-gls-400d-4matic-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
-    description:
-      "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
-    price: { amount: 122_629, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1870, currency: "BGN" },
-    images: [
+    "id": "am-1010",
+    "slug": "2024-11782122632841845",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz S 63 AMG Mercedes S63 AMGE-PERFORMANCENARDO GREYRED CARBON",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 143699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1669023161435-b3b8ad71f8f7?w=1200&q=82&auto=format&fit=crop",
-        alt: "Mercedes-Benz GLS 4MATIC AMG SUV",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+        "alt": "Mercedes-Benz S 63 AMG Mercedes S63 AMGE-PERFORMANCENARDO GREYRED CARBON"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz S 63 AMG Mercedes S63 AMGE-PERFORMANCENARDO GREYRED CARBON",
+      "year": 2024,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 30000,
+      "mileageUnit": "km",
+      "colorExterior": "Графит"
     },
-    publishedAt: "2026-07-27T10:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": true
   },
   {
-    id: "am-1011",
-    slug: "bmw-750e-xdrive-m-sport-sofia-2024",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2024 BMW 750e xDrive M Sport",
-    description:
-      "Очакван внос: 7 Series plug-in hybrid с M Sport. Нисък пробег - Day & Night организира доставка и оглед в София.",
-    price: { amount: 175_436, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2680, currency: "BGN" },
-    images: [
+    "id": "am-1011",
+    "slug": "2019-11781786688563618",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz S 400 ОЧАКВАН ВНОС Mercedes S400d Long* AMG* Chauffeur",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 48699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80",
-        alt: "BMW 7 Series",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+        "alt": "Mercedes-Benz S 400 ОЧАКВАН ВНОС Mercedes S400d Long* AMG* Chauffeur"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "7 Series",
-      trim: "750e xDrive M Sport",
-      year: 2024,
-      bodyType: "sedan",
-      fuelType: "plug_in_hybrid",
-      transmission: "automatic",
-      mileageValue: 40_000,
-      mileageUnit: "km",
-      enginePowerHp: 489,
-      colorExterior: "Черен сапфир",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz S 400 ОЧАКВАН ВНОС Mercedes S400d Long* AMG* Chauffeur",
+      "year": 2019,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 179000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-26T08:40:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": true
   },
   {
-    id: "am-1012",
-    slug: "mercedes-benz-e-63-s-amg-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz E 63 S AMG",
-    description:
-      "E 63 S AMG facelift с 360, HUD и Burmester. Спортна лимузина от Day & Night Auto Group.",
-    price: { amount: 165_657, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2530, currency: "BGN" },
-    images: [
+    "id": "am-1012",
+    "slug": "2021-21781366888650416",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС GLS400d 63 AMG OPTIC* 3xTV* CARBON* B",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 72699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1609703048009-d3576872b32c?w=1200&q=80",
-        alt: "Mercedes-Benz E-Class sedan",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+        "alt": "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС GLS400d 63 AMG OPTIC* 3xTV* CARBON* B"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "E-Class",
-      trim: "E 63 S AMG",
-      year: 2021,
-      bodyType: "sedan",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 96_000,
-      mileageUnit: "km",
-      enginePowerHp: 612,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "7 места",
+        "en": "7 места"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GLS 400 ОЧАКВАН ВНОС GLS400d 63 AMG OPTIC* 3xTV* CARBON* B",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 149000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
     },
-    publishedAt: "2026-07-25T13:20:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1013",
-    slug: "mercedes-benz-cls-400d-4matic-sofia-2020",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2020 Mercedes-Benz CLS 400d 4MATIC",
-    description:
-      "CLS 400d 4MATIC AMG Line Designo с 360 камери. Елегантно купе-седан от Day & Night в София.",
-    price: { amount: 73_733, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1125, currency: "BGN" },
-    images: [
+    "id": "am-1013",
+    "slug": "2022-21784223776383846",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz GLE 53 4MATIC Очакван ВносGLE53 AMG Coupe* NIGHT Pack* ОБДУХВАНЕ",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 71699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1624085568108-36410cfe4d24?w=1200&q=80",
-        alt: "Mercedes CLS",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/21784223776383846.webp",
+        "alt": "Mercedes-Benz GLE 53 4MATIC Очакван ВносGLE53 AMG Coupe* NIGHT Pack* ОБДУХВАНЕ"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "CLS",
-      trim: "400d 4MATIC AMG Line",
-      year: 2020,
-      bodyType: "coupe",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 171_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Сив металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GLE 53 4MATIC Очакван ВносGLE53 AMG Coupe* NIGHT Pack* ОБДУХВАНЕ",
+      "year": 2022,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 105000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-24T15:05:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1014",
-    slug: "audi-q8-50-tdi-quattro-s-line-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Audi Q8 50 TDI quattro S line",
-    description:
-      "Очакван внос: Q8 50 TDI quattro S line Plus. Купе-SUV с quattro за клиенти на Day & Night.",
-    price: { amount: 99_159, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1515, currency: "BGN" },
-    images: [
+    "id": "am-1014",
+    "slug": "2021-21781186627237038",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz GLE 400 Coupe AMG360Night PackageBURMHUDP",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 63699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1200&q=80",
-        alt: "Audi Q8",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/21781186627237038.webp",
+        "alt": "Mercedes-Benz GLE 400 Coupe AMG360Night PackageBURMHUDP"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Audi",
-      model: "Q8",
-      trim: "50 TDI quattro S line",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 163_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "Buy back",
+        "en": "Buy back"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GLE 400 Coupe AMG360Night PackageBURMHUDP",
+      "year": 2021,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 166000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
     },
-    publishedAt: "2026-07-23T09:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1002",
-    slug: "mercedes-benz-gle-400d-coupe-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Mercedes-Benz GLE 400d Coupe",
-    description:
-      "GLE 400d Coupe 4MATIC AMG с 360 и Burmester. Наличен при Day & Night Auto Group - София.",
-    price: { amount: 124_584, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1900, currency: "BGN" },
-    images: [
+    "id": "am-1002",
+    "slug": "2016-21775198700636300",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz GL 63 AMG Mercedes GL63 AMG* 3xTV* 360* VENT+ HEAT* PANORAMA",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 32699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1751941710410-f8167da82750?w=1200&q=82&auto=format&fit=crop",
-        alt: "Черен Mercedes-Benz GLE SUV",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/21775198700636300.webp",
+        "alt": "Mercedes-Benz GL 63 AMG Mercedes GL63 AMG* 3xTV* 360* VENT+ HEAT* PANORAMA"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "400d Coupe 4MATIC AMG",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 166_000,
-      mileageUnit: "km",
-      enginePowerHp: 330,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz GL 63 AMG Mercedes GL63 AMG* 3xTV* 360* VENT+ HEAT* PANORAMA",
+      "year": 2016,
+      "bodyType": "suv",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 139000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
     },
-    publishedAt: "2026-07-22T11:30:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1003",
-    slug: "mercedes-benz-gle-53-amg-coupe-sofia-2022",
-    category: "lease",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2022 Mercedes-Benz GLE 53 AMG Coupe",
-    description:
-      "Очакван внос: GLE 53 AMG Coupe Night Pack. Day & Night предлага собствен лизинг след оглед.",
-    price: { amount: 140_231, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 2140, currency: "BGN" },
-    images: [
+    "id": "am-1003",
+    "slug": "2017-21758203454344162",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz G 350 Mercedes G350d AMG FACE* CAM* Heat+ Vent seats* FU",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 54699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1563721938524-4da1bede2935?w=1200&q=82&auto=format&fit=crop",
-        alt: "Бял Mercedes-Benz GLE AMG SUV",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/21758203454344162.webp",
+        "alt": "Mercedes-Benz G 350 Mercedes G350d AMG FACE* CAM* Heat+ Vent seats* FU"
+      }
     ],
-    badges: ["used", "lease"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "GLE",
-      trim: "53 AMG Coupe 4MATIC",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 105_000,
-      mileageUnit: "km",
-      enginePowerHp: 435,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz G 350 Mercedes G350d AMG FACE* CAM* Heat+ Vent seats* FU",
+      "year": 2017,
+      "bodyType": "suv",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 130000,
+      "mileageUnit": "km",
+      "colorExterior": "Графит"
     },
-    publishedAt: "2026-07-21T08:15:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1004",
-    slug: "mercedes-benz-s-350d-long-amg-sofia-2019",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2019 Mercedes-Benz S 350d Long AMG",
-    description:
-      "S 350d Long с S63 AMG оптика и пакет за шофьор. Представителна лимузина от Day & Night.",
-    price: { amount: 83_512, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1275, currency: "BGN" },
-    images: [
+    "id": "am-1004",
+    "slug": "2021-11782540302515038",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz E 63 AMG Mercedes-Benz E63S AMG* FACELIFT* 360* HUD* BURM*",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 84699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1610099610040-ab19f3a5ec35?w=1200&q=80",
-        alt: "Mercedes-Benz S-Class sedan",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/11782540302515038.webp",
+        "alt": "Mercedes-Benz E 63 AMG Mercedes-Benz E63S AMG* FACELIFT* 360* HUD* BURM*"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "S-Class",
-      trim: "S 350d Long AMG Optic",
-      year: 2019,
-      bodyType: "sedan",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 145_000,
-      mileageUnit: "km",
-      enginePowerHp: 286,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz E 63 AMG Mercedes-Benz E63S AMG* FACELIFT* 360* HUD* BURM*",
+      "year": 2021,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 96000,
+      "mileageUnit": "km",
+      "colorExterior": "Червен"
     },
-    publishedAt: "2026-07-20T14:45:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1005",
-    slug: "mercedes-benz-v-250d-vip-business-sofia-2018",
-    category: "van",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2018 Mercedes-Benz V 250d VIP Business",
-    description:
-      "V 250d VIP Business с TV, обдухване и подгряване. Бизнес ван от Day & Night Auto Group.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
+    "id": "am-1005",
+    "slug": "2021-11784224743668074",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz E 400 Очакван внос E400d * Facelift* AMG * 360* 3D BURM*",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 42699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "/lead-sell-van-v1.png",
-        alt: "V-Class van",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/11784224743668074.webp",
+        "alt": "Mercedes-Benz E 400 Очакван внос E400d * Facelift* AMG * 360* 3D BURM*"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Mercedes-Benz",
-      model: "V-Class",
-      trim: "V 250d VIP Business",
-      year: 2018,
-      bodyType: "van",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 44_500,
-      mileageUnit: "km",
-      enginePowerHp: 190,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz E 400 Очакван внос E400d * Facelift* AMG * 360* 3D BURM*",
+      "year": 2021,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 162000,
+      "mileageUnit": "km",
+      "colorExterior": "Перла"
     },
-    publishedAt: "2026-07-19T10:20:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1006",
-    slug: "range-rover-sport-svr-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 Range Rover Sport SVR",
-    description:
-      "Range Rover Sport SVR 600 к.с. с панорама, 360 и Meridian. Висок клас SUV от Day & Night.",
-    price: { amount: 106_982, currency: "BGN" },
-    priceType: "negotiable",
-    monthlyEstimate: { amount: 1635, currency: "BGN" },
-    images: [
+    "id": "am-1006",
+    "slug": "2018-11777018671764829",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz E 350 ОЧАКВАН ВНОС Mercedes E350d * AMG Line*",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 28699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1679506640590-f0152786dff0?w=1200&q=80",
-        alt: "Range Rover Sport",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/11777018671764829.webp",
+        "alt": "Mercedes-Benz E 350 ОЧАКВАН ВНОС Mercedes E350d * AMG Line*"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "Land Rover",
-      model: "Range Rover Sport",
-      trim: "SVR",
-      year: 2021,
-      bodyType: "suv",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 155_000,
-      mileageUnit: "km",
-      enginePowerHp: 600,
-      colorExterior: "Черен",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      },
+      {
+        "bg": "LED фарове",
+        "en": "LED фарове"
+      },
+      {
+        "bg": "OFFROAD пакет",
+        "en": "OFFROAD пакет"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz E 350 ОЧАКВАН ВНОС Mercedes E350d * AMG Line*",
+      "year": 2018,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 140000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-18T12:10:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1007",
-    slug: "bmw-430i-xdrive-gran-coupe-sofia-2023",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2023 BMW 430i xDrive Gran Coupe",
-    description:
-      "430i xDrive Gran Coupe M Sport с digital кокпит и Harman Kardon. Day & Night, София.",
-    price: { amount: 81_556, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1245, currency: "BGN" },
-    images: [
+    "id": "am-1007",
+    "slug": "2020-11783434857807146",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz CLS 53 AMG ОЧАКВАН CLS53 AMG * CARBON* 360* HUD* BURM* Assis",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 54699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=1200&q=80",
-        alt: "BMW 4 Series",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/11783434857807146.webp",
+        "alt": "Mercedes-Benz CLS 53 AMG ОЧАКВАН CLS53 AMG * CARBON* 360* HUD* BURM* Assis"
+      }
     ],
-    badges: ["used"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "4 Series",
-      trim: "430i xDrive Gran Coupe M Sport",
-      year: 2023,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 35_000,
-      mileageUnit: "km",
-      enginePowerHp: 245,
-      colorExterior: "Син металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz CLS 53 AMG ОЧАКВАН CLS53 AMG * CARBON* 360* HUD* BURM* Assis",
+      "year": 2020,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 166000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-17T16:00:00.000Z",
-    promoted: false,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1008",
-    slug: "bmw-m4-competition-sofia-2021",
-    category: "car",
-    dealerOrgId: "dealer-day-night-auto-group",
-    status: "active",
-    title: "2021 BMW M4 Competition",
-    description:
-      "BMW M4 Competition с M пакет, спортен салон и digital кокпит. Купе от портфолиото на Day & Night Auto Group.",
-    price: { amount: 128_496, currency: "BGN" },
-    priceType: "fixed",
-    monthlyEstimate: { amount: 1960, currency: "BGN" },
-    images: [
+    "id": "am-1008",
+    "slug": "2020-11782479430635636",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz CLS 400 Очакван Внос AMG * Designo* 360* Digital FullMax",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 37699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80",
-        alt: "Червено BMW M4 Competition пред модерен шоурум",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/11782479430635636.webp",
+        "alt": "Mercedes-Benz CLS 400 Очакван Внос AMG * Designo* 360* Digital FullMax"
+      }
     ],
-    badges: ["used", "promoted"],
-    location: { city: "София", region: "Студентски град", country: "България" },
-    spec: {
-      make: "BMW",
-      model: "M4",
-      trim: "Competition",
-      year: 2021,
-      bodyType: "coupe",
-      fuelType: "gasoline",
-      transmission: "automatic",
-      mileageValue: 165_000,
-      mileageUnit: "km",
-      enginePowerHp: 510,
-      colorExterior: "Червен металик",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "dealer-day-night-auto-group",
-      type: "dealer",
-      displayName: "Day & Night Auto Group",
-      verificationStatus: "verified",
-      city: "София",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz CLS 400 Очакван Внос AMG * Designo* 360* Digital FullMax",
+      "year": 2020,
+      "bodyType": "other",
+      "fuelType": "diesel",
+      "transmission": "automatic",
+      "mileageValue": 171000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
     },
-    publishedAt: "2026-07-16T07:40:00.000Z",
-    promoted: true,
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
+    },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
   },
   {
-    id: "am-1009",
-    slug: "bmw-x5-xdrive40d-berlin-2022",
-    category: "car",
-    status: "active",
-    title: "2022 BMW X5 xDrive40d",
-    description:
-      "Крос-бордер демо наличност с оторизирани медии и право на доставка. Финалният транспорт, данъци и регистрация се уточняват с оферта от Day & Night.",
-    price: { amount: 112_456, currency: "BGN" },
-    priceType: "fixed",
-    images: [
+    "id": "am-1009",
+    "slug": "2019-11779001443562014",
+    "category": "car",
+    "dealerOrgId": "dealer-day-and-night-auto-group",
+    "status": "active",
+    "title": "Mercedes-Benz AMG GT Mercedes AMG GT43 BURMESTER* * CAM360* DIGITAL* AS",
+    "description": "Датирана извадка от обяви; потвърдете цената и наличността директно с автокъщата.",
+    "price": {
+      "amount": 65699,
+      "currency": "EUR"
+    },
+    "priceType": "fixed",
+    "images": [
       {
-        url: "https://images.unsplash.com/photo-1635990338914-6ee781fc6d5b?w=1200&q=82&auto=format&fit=crop",
-        alt: "Черен BMW X5 SUV в градска среда",
-      },
+        "url": "/variant-3/assets/daynight/inventory-current/11779001443562014.webp",
+        "alt": "Mercedes-Benz AMG GT Mercedes AMG GT43 BURMESTER* * CAM360* DIGITAL* AS"
+      }
     ],
-    badges: ["used"],
-    location: { city: "Berlin", region: "Berlin", country: "Germany" },
-    spec: {
-      make: "BMW",
-      model: "X5",
-      trim: "xDrive40d",
-      year: 2022,
-      bodyType: "suv",
-      fuelType: "diesel",
-      transmission: "automatic",
-      mileageValue: 28_531,
-      mileageUnit: "km",
-      enginePowerHp: 340,
-      colorExterior: "Carbon Black",
+    "badges": [
+      "used"
+    ],
+    "location": {
+      "city": "София",
+      "region": "София",
+      "country": "Bulgaria"
     },
-    seller: {
-      id: "import-demo-supplier",
-      type: "dealer",
-      displayName: "AutoMarket Import Demo",
-      verificationStatus: "verified",
-      city: "Hamburg",
+    "features": [
+      {
+        "bg": "360 camera \\ Задна камера",
+        "en": "360 camera \\ Задна камера"
+      },
+      {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Auto Start Stop function",
+        "en": "Auto Start Stop function"
+      },
+      {
+        "bg": "Apple CarPlay \\ Android Auto",
+        "en": "Apple CarPlay \\ Android Auto"
+      },
+      {
+        "bg": "Bluetooth \\ handsfree система",
+        "en": "Bluetooth \\ handsfree система"
+      },
+      {
+        "bg": "DVD",
+        "en": "DVD"
+      },
+      {
+        "bg": "TV",
+        "en": "TV"
+      },
+      {
+        "bg": "GPS система за проследяване",
+        "en": "GPS система за проследяване"
+      }
+    ],
+    "spec": {
+      "make": "Mercedes-Benz",
+      "model": "Mercedes-Benz AMG GT Mercedes AMG GT43 BURMESTER* * CAM360* DIGITAL* AS",
+      "year": 2019,
+      "bodyType": "other",
+      "fuelType": "gasoline",
+      "transmission": "automatic",
+      "mileageValue": 165000,
+      "mileageUnit": "km",
+      "colorExterior": "Черен"
     },
-    supply: {
-      convertedPrice: { amount: 112_456, currency: "BGN" },
-      delivery: {
-        destinationCountryCode: "BG",
-        eligibleCountryCodes: ["BG", "DE", "RO"],
-        status: "quote_required",
-      },
-      documentCount: 4,
-      landedCostStatus: "quote_required",
-      nativePrice: { amount: 57_499, currency: "EUR" },
-      origin: {
-        city: "Berlin",
-        country: "Germany",
-        countryCode: "DE",
-        region: "Berlin",
-      },
-      priceConversion: {
-        convertedAt: "2026-07-12T18:00:00.000Z",
-        status: "converted_estimate",
-      },
-      provenance: {
-        externalReference: "DEMO-1009",
-        freshUntil: "2026-07-14T18:00:00.000Z",
-        freshnessStatus: "fresh",
-        lastConfirmedAt: "2026-07-12T18:00:00.000Z",
-        sourceDisplayName: "Authorized demo feed",
-        sourceKind: "https_feed",
-      },
-      supplier: {
-        kybStatus: "verified",
-        orgType: "importer",
-        trustStatus: "verified",
-        verifiedImporter: true,
-      },
+    "seller": {
+      "id": "dealer-day-and-night-auto-group",
+      "type": "dealer",
+      "displayName": "Day & Night Auto Group",
+      "verificationStatus": "unverified",
+      "city": "София",
+      "logoUrl": "/dealer-brand/logo-on-light.webp"
     },
-    publishedAt: "2026-07-12T18:00:00.000Z",
-    promoted: false,
-  },
+    "publishedAt": "2026-07-24T09:00:00.000Z",
+    "promoted": false
+  }
 ];
 
 const matchesText = (listing: VehicleListing, query: string) => {
@@ -698,6 +1220,13 @@ const createListingPredicates = (
     filters.mileageMax === undefined ||
     listing.spec.mileageValue <= filters.mileageMax,
   (listing) => !filters.fuel || listing.spec.fuelType === filters.fuel,
+  (listing) =>
+    filters.powerMin === undefined ||
+    (listing.spec.enginePowerHp !== undefined &&
+      listing.spec.enginePowerHp >= filters.powerMin),
+  (listing) =>
+    !filters.extra ||
+    Boolean(listing.features?.some((feature) => feature.en === filters.extra)),
   (listing) =>
     !filters.transmission || listing.spec.transmission === filters.transmission,
   (listing) => !filters.body || listing.spec.bodyType === filters.body,

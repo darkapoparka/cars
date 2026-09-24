@@ -31,19 +31,6 @@ const featuredCardImages: Record<string, string> = {
 		'/assets/images/body-type/normalized/body-coupe-transparent.webp'
 };
 
-const fuelLabels: Record<string, string> = {
-	Бензин: 'Petrol',
-	Дизел: 'Diesel',
-	Електрически: 'Electric',
-	Хибриден: 'Hybrid',
-	'Бензин/Газ': 'Petrol/LPG'
-};
-
-const transmissionLabels: Record<string, string> = {
-	Автоматик: 'Automatic',
-	Ръчна: 'Manual'
-};
-
 const bodyLabels: Record<string, string> = {
 	Седан: 'Saloons',
 	Комби: 'Estate cars',
@@ -82,8 +69,10 @@ function featuredCars() {
 	return [...primary, ...fallback].slice(0, 3).map((car) => ({
 		slug: car.slug,
 		title: car.shortTitle,
-		subtitle: `${car.year} • ${fuelLabels[car.fuel] ?? car.fuel} • ${transmissionLabels[car.transmission] ?? car.transmission}`,
-		summary: featuredSummaries[car.slug] ?? 'Verified Day Night Auto stock',
+		year: car.year,
+		fuel: car.fuel,
+		transmission: car.transmission,
+		summary: featuredSummaries[car.slug] ?? 'Verified Day & Night stock',
 		image: car.image,
 		cardImage: featuredCardImages[car.slug] ?? car.image,
 		price: car.priceEur,

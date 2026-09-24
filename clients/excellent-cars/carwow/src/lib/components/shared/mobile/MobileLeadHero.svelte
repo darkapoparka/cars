@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { onMount } from 'svelte';
 	import '$lib/styles/mobile-hero-pill.css';
 	import {
@@ -88,7 +91,7 @@
 	<div
 		class="mobile-lead-hero__tabs"
 		role="tablist"
-		aria-label={kind === 'sell' ? 'Данни за оценка' : 'Автомобил за внос'}
+		aria-label={kind === 'sell' ? i18n.t('copy.1450138aa03a') : i18n.t('copy.33e4ad07a6c6')}
 	>
 		{#each labels as label, index (label)}
 			<button
@@ -99,7 +102,7 @@
 				aria-selected={mode === (index === 0 ? 'primary' : 'secondary')}
 				tabindex={mode === (index === 0 ? 'primary' : 'secondary') ? 0 : -1}
 				onclick={() => selectMode(index === 0 ? 'primary' : 'secondary')}
-				onkeydown={(event) => tabKey(event, index)}>{label}</button
+				onkeydown={(event) => tabKey(event, index)}>{i18n.text(label)}</button
 			>
 		{/each}
 	</div>
@@ -115,10 +118,10 @@
 				class="mobile-lead-hero__manual"
 				type="button"
 				disabled={!interactive}
-				aria-label="Нямам номер или VIN. Въведи данните за автомобила ръчно"
+				aria-label={i18n.t('copy.c1a5ff7001ab')}
 				onclick={onManual}
 			>
-				<span>Марка, модел и година</span><span class="mobile-lead-hero__go"
+				<span>{i18n.t('copy.5601767a86c8')}</span><span class="mobile-lead-hero__go"
 					><ArrowRight size={21} aria-hidden="true" /></span
 				>
 			</button>
@@ -128,6 +131,7 @@
 					{#if kind === 'sell' || isVin}<ScanLine size={21} />{:else}<Link2 size={21} />{/if}
 				</span>
 				<input
+					{@attach i18n.validation}
 					disabled={!interactive}
 					value={isVin ? vinValue : value}
 					oninput={(event) => {
@@ -140,11 +144,11 @@
 					enterkeyhint="go"
 					autocomplete="off"
 					placeholder={kind === 'sell'
-						? 'Рег. номер или VIN'
+						? i18n.t('copy.bdd1fdd92f67')
 						: isVin
-							? '17-символен VIN'
-							: 'Линк към обява'}
-					aria-label={inputLabel}
+							? i18n.t('copy.59e2e63d9ecd')
+							: i18n.t('copy.fbee9a117fb4')}
+					aria-label={i18n.text(inputLabel)}
 					aria-invalid={inputError ? true : undefined}
 					aria-describedby={inputError ? id + '-error' : undefined}
 				/>
@@ -152,7 +156,8 @@
 					class="mobile-lead-hero__go"
 					disabled={!interactive}
 					type="submit"
-					aria-label="Продължи"><ArrowRight size={21} aria-hidden="true" /></button
+					aria-label={i18n.t('copy.ffe5cca7d0b3')}
+					><ArrowRight size={21} aria-hidden="true" /></button
 				>
 			</form>
 		{/if}
@@ -161,8 +166,8 @@
 				class="mobile-lead-hero__filters"
 				type="button"
 				disabled={!interactive}
-				aria-label="Филтри за внос"
-				title="Марка, модел и бюджет"
+				aria-label={i18n.t('copy.bc5afb6e459e')}
+				title={i18n.t('copy.91e2f867e4cb')}
 				aria-haspopup="dialog"
 				onclick={(event) => {
 					event.currentTarget.focus({ preventScroll: true });
@@ -171,7 +176,7 @@
 			>
 		{/if}
 		{#if inputError}<p class="mobile-lead-hero__error" id={id + '-error'} role="alert">
-				{inputError}
+				{i18n.text(inputError)}
 			</p>{/if}
 	</div>
 	<div class="mobile-lead-hero__help">
@@ -184,7 +189,11 @@
 				onclick={(event) => {
 					event.currentTarget.focus({ preventScroll: true });
 					onSubmit();
-				}}><span>Заяви оценка</span><ChevronRight size={14} aria-hidden="true" /></button
+				}}
+				><span>{i18n.t('copy.d915896778d0')}</span><ChevronRight
+					size={14}
+					aria-hidden="true"
+				/></button
 			>
 		{:else}
 			<button
@@ -195,7 +204,9 @@
 				onclick={(event) => {
 					event.currentTarget.focus({ preventScroll: true });
 					onInfo();
-				}}><CircleHelp size={14} aria-hidden="true" /><span>Как работи</span></button
+				}}
+				><CircleHelp size={14} aria-hidden="true" /><span>{i18n.t('copy.4dbb828642ef')}</span
+				></button
 			>
 		{/if}
 	</div>

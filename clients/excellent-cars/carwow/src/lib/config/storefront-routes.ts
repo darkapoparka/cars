@@ -1,3 +1,4 @@
+import { routeParts } from '$lib/locale/core';
 /** Routes with native, route-owned storefront chrome. No HTML-template lookup is involved. */
 const homeRoutes = new Set(['', 'home1', 'home1-box']);
 const nativeRoutes = new Set([
@@ -30,7 +31,7 @@ const homeBodyClasses = [
 ];
 
 export function normalizeRoutePath(pathname: string): string {
-	return pathname.replace(/^\/+|\/+$/g, '');
+	return routeParts(pathname).path.replace(/^\/+|\/+$/g, '');
 }
 
 export function routeManagesOwnChrome(pathname: string): boolean {

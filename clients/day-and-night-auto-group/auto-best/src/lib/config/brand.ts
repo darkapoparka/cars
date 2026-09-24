@@ -2,6 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
+  showroomCoordinates: { latitude: number; longitude: number };
   addressLine: string;
   address: string;
   phone: string;
@@ -14,23 +15,24 @@ export type BrandConfig = {
   facebookUrl: `https://${string}`;
 };
 
-const name = 'Day & Night Auto Group';
-const shortName = 'Day & Night';
-const city = 'София';
-const addressLine = 'ул. „Атанас Манчев“ 18, Студентски град';
+const name = "Day & Night Auto Group";
+const shortName = "Day & Night";
+const city = "София";
+const addressLine = "ул. „Атанас Манчев“ 18, Студентски град, София";
 
 export const brand = {
   name,
   shortName,
   city,
-  youtubeUrl: 'https://www.youtube.com/@kristiankirilov1355/videos',
-  instagramUrl: 'https://www.instagram.com/dayandnight_autogroup/',
-  facebookUrl: 'https://www.facebook.com/deninoshtautogroup/',
-  phone: '0877 733 110',
-  phoneHref: 'tel:+359877733110',
+  showroomCoordinates: {"latitude":0,"longitude":0},
+  youtubeUrl: "https://www.youtube.com/",
+  instagramUrl: "https://www.instagram.com/",
+  facebookUrl: "https://www.facebook.com/",
+  phone: "0877 733 110",
+  phoneHref: "tel:+359877733110",
   addressLine,
-  address: `${addressLine}, ${city}`,
-  appointment: 'Посещения с предварително уговорен час',
+  address: "ул. „Атанас Манчев“ 18, Студентски град, София",
+  appointment: "Посещения с предварителна уговорка.",
   logo: "/dealer-brand/logo-on-light.webp",
   logoOnDark: "/dealer-brand/logo-on-dark.webp"
 } as const satisfies BrandConfig;

@@ -7,12 +7,12 @@
 <style>
 	.inventory-results-shortcuts {
 		margin: 0;
-		padding: 0 10px 10px;
+		padding: 0 16px 12px;
 	}
 	:global(.inventory-refined .inventory-results-shortcuts .daynight-inventory-type-pills) {
 		display: flex !important;
 		flex-wrap: wrap !important;
-		gap: 8px !important;
+		gap: 6px 20px !important;
 		padding: 0 !important;
 		margin: 0 !important;
 	}

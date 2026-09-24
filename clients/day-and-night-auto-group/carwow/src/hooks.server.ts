@@ -1,4 +1,6 @@
 import crypto from 'node:crypto';
+import { sequence } from '@sveltejs/kit/hooks';
+import { localeHandle } from '$lib/locale/server';
 import type { Handle, HandleServerError, RequestEvent } from '@sveltejs/kit';
 import { building } from '$app/environment';
 import { svelteKitHandler } from 'better-auth/svelte-kit';
@@ -18,7 +20,7 @@ function warnMissingProductionDatabaseUrl() {
 	warnedMissingProductionDatabase = true;
 	console.error(
 		[
-			'DAY NIGHT AUTO GROUP PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
+			'DAY & NIGHT AUTO GROUP PRODUCTION MISCONFIGURATION: DATABASE_URL is missing.',
 			'The storefront will use demo-only static inventory fallback and admin/write endpoints will fail closed.',
 			'Set DATABASE_URL before promoting this Vercel deployment.'
 		].join(' ')
@@ -68,7 +70,7 @@ function varyByDevice(response: Response) {
 	return response;
 }
 
-export const handle: Handle = async ({ event, resolve }) => {
+const applicationHandle: Handle = async ({ event, resolve }) => {
 	const hasDb = hasDatabaseUrl();
 	if (!hasDb) warnMissingProductionDatabaseUrl();
 
@@ -119,3 +121,5 @@ export const handleError: HandleServerError = ({ error, event, status, message }
 		errorId
 	};
 };
+
+export const handle = sequence(localeHandle, applicationHandle);

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { MapPin, Phone, Plus } from '@lucide/svelte';
 	import {
 		daynightDealerFooterGroups,
@@ -13,46 +16,47 @@
 <footer class="mh-footer">
 	<a
 		class="mh-footer__brand"
-		href={resolve('/')}
-		aria-label={`${daynightSite.shortName} — начална страница`}
+		href={i18n.href(resolve('/'))}
+		aria-label={i18n.t('pattern.8ebcb1ddc43b', { v0: daynightSite.shortName })}
 	>
 		<img
 			class="mh-footer__logo"
-			src={resolve(daynightSite.logoLight)}
+			src={i18n.asset(resolve(daynightSite.logoLight))}
 			alt={daynightSite.name}
 			loading="lazy"
 		/>
 	</a>
 	{#if showContact}
 		<div class="mh-footer__contact">
-			<a class="mh-footer__phone" href={daynightSite.phoneHref}
+			<a class="mh-footer__phone" href={i18n.href(daynightSite.phoneHref)}
 				><Phone size={19} strokeWidth={2} /><span>{daynightSite.phoneLabel}</span></a
 			>
 			<a
 				class="mh-footer__loc"
-				href={daynightSite.mapUrl}
+				href={i18n.href(daynightSite.mapUrl)}
 				target="_blank"
 				rel="external noopener noreferrer"
-				><MapPin size={19} strokeWidth={2} /><span>{daynightSite.location}</span></a
+				><MapPin size={19} strokeWidth={2} /><span>{i18n.dealer('address')}</span></a
 			>
 		</div>
 		<div class="mh-footer__hours">
-			<span>Работно време</span>
-			<p>{daynightSite.hoursLabel}</p>
+			<span>{i18n.t('copy.e3e2e2339725')}</span>
+			<p>{i18n.text(daynightSite.hoursLabel)}</p>
 		</div>
 	{/if}
 	<div class="mh-footer__groups">
 		{#each daynightDealerFooterGroups as group (group.title)}
 			<details>
-				<summary>{group.title}<Plus size={18} strokeWidth={2} /></summary>
-				<nav aria-label={group.title}>
-					{#each group.links as link (link.href)}<a href={resolve(link.href)}>{link.label}</a
+				<summary>{i18n.text(group.title)}<Plus size={18} strokeWidth={2} /></summary>
+				<nav aria-label={i18n.text(group.title)}>
+					{#each group.links as link (link.href)}<a href={i18n.href(resolve(link.href))}
+							>{i18n.text(link.label)}</a
 						>{/each}
 				</nav>
 			</details>
 		{/each}
 	</div>
-	<nav class="mh-footer__social" aria-label="Социални канали и обяви">
+	<nav class="mh-footer__social" aria-label={i18n.t('copy.b4f5e9c6dfa2')}>
 		{#snippet footerSocialIcon(icon: FooterSocialIcon)}
 			{#if icon === 'facebook'}
 				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -115,20 +119,20 @@
 			{#if item.external}
 				<a
 					class="mh-footer__social-link"
-					href={item.href}
+					href={i18n.href(item.href)}
 					target="_blank"
 					rel="external noopener noreferrer"
-					title={item.title}
-					aria-label={item.title}
+					title={i18n.text(item.title)}
+					aria-label={i18n.text(item.title)}
 				>
 					{@render footerSocialIcon(item.icon)}
 				</a>
 			{:else}
 				<a
 					class="mh-footer__social-link"
-					href={resolve(item.href)}
-					title={item.title}
-					aria-label={item.title}
+					href={i18n.href(resolve(item.href))}
+					title={i18n.text(item.title)}
+					aria-label={i18n.text(item.title)}
 				>
 					{@render footerSocialIcon(item.icon)}
 				</a>
@@ -137,9 +141,9 @@
 	</nav>
 	<div class="mh-footer__bottom">
 		<span>© {new Date().getFullYear()} {daynightSite.shortName}</span>
-		<nav aria-label="Правна информация">
-			{#each daynightFooterBottomLinks as link (link.href)}<a href={resolve(link.href)}
-					>{link.label}</a
+		<nav aria-label={i18n.t('copy.1b6309d00ace')}>
+			{#each daynightFooterBottomLinks as link (link.href)}<a href={i18n.href(resolve(link.href))}
+					>{i18n.text(link.label)}</a
 				>{/each}
 		</nav>
 	</div>

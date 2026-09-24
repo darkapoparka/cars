@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { tick } from 'svelte';
 	import X from '@lucide/svelte/icons/x';
 	import Search from '@lucide/svelte/icons/search';
@@ -198,11 +201,13 @@
 	onkeydown={keepFocus}
 >
 	<div class="filter-dialog-header">
-		<h2 id="inventory-filter-title">{field ? field.label : 'Търсене на автомобили'}</h2>
+		<h2 id="inventory-filter-title">
+			{field ? i18n.text(field.label) : i18n.t('copy.364f79690e39')}
+		</h2>
 		<button
 			type="button"
 			class="filter-dialog-close"
-			aria-label="Затвори филтрите"
+			aria-label={i18n.t('copy.fdbd7a77254f')}
 			onclick={() => dialog.close()}><X size={22} /></button
 		>
 	</div>
@@ -211,9 +216,12 @@
 			{#if field.options.length > 8}
 				<label class="filter-dialog-search"
 					><Search size={20} /><input
+						{@attach i18n.validation}
 						type="search"
-						aria-label={`Търси ${field.label.toLocaleLowerCase('bg')}`}
-						placeholder="Търси…"
+						aria-label={i18n.t('pattern.13a9318d4e85', {
+							v0: i18n.text(field.label).toLocaleLowerCase(i18n.locale)
+						})}
+						placeholder={i18n.t('copy.e255ff5b5938')}
 						bind:value={optionQuery}
 					/></label
 				>
@@ -225,20 +233,22 @@
 						class:selected={draft[field.name]?.includes(option.value)}
 					>
 						<input
+							{@attach i18n.validation}
 							type={['brand', 'model', 'feature'].includes(field.name) ? 'checkbox' : 'radio'}
 							name={`focused-${field.name}`}
 							checked={draft[field.name]?.includes(option.value) ?? false}
 							onchange={() => toggle(field.name, option.value)}
-						/>{option.label}
+						/>{i18n.spec(option.label)}
 					</label>
-				{:else}<p class="filter-dialog-empty">Няма съвпадения.</p>{/each}
+				{:else}<p class="filter-dialog-empty">{i18n.t('copy.c7d45884da76')}</p>{/each}
 			</div>
 		{:else}
 			<label class="filter-dialog-search"
 				><Search size={20} /><input
+					{@attach i18n.validation}
 					type="search"
-					aria-label="Марка, модел или ключова дума"
-					placeholder="Марка, модел или ключова дума"
+					aria-label={i18n.t('copy.df071062a573')}
+					placeholder={i18n.t('copy.df071062a573')}
 					bind:value={query}
 				/></label
 			>
@@ -246,66 +256,78 @@
 				{#each basicFields as group (group.name)}
 					<div class="filter-dialog-field">
 						{#if ['brand', 'model'].includes(group.name)}
-							<span class="filter-dialog-label" id={`modal-label-${group.name}`}>{group.label}</span
+							<span class="filter-dialog-label" id={`modal-label-${group.name}`}
+								>{i18n.text(group.label)}</span
 							>
 							<details class="filter-dialog-multiselect">
 								<summary aria-labelledby={`modal-label-${group.name}`}
-									><span>{draft[group.name]?.length ? draft[group.name].join(', ') : 'Всички'}</span
+									><span
+										>{draft[group.name]?.length
+											? draft[group.name].join(', ')
+											: i18n.t('copy.117d98cb652c')}</span
 									><ChevronDown size={16} /></summary
 								>
 								<div class="filter-dialog-multi-options">
 									{#each options(group) as option (option.value)}
 										<label
 											><input
+												{@attach i18n.validation}
 												type="checkbox"
 												checked={draft[group.name]?.includes(option.value) ?? false}
 												onchange={() => toggle(group.name, option.value)}
-											/>{option.label}</label
+											/>{i18n.spec(option.label)}</label
 										>
-									{:else}<p>Няма налични модели.</p>{/each}
+									{:else}<p>{i18n.t('copy.8a20d8219819')}</p>{/each}
 								</div>
 							</details>
 						{:else}
-							<label class="filter-dialog-label" for={`modal-${group.name}`}>{group.label}</label>
+							<label class="filter-dialog-label" for={`modal-${group.name}`}
+								>{i18n.text(group.label)}</label
+							>
 							<select
+								{@attach i18n.validation}
 								id={`modal-${group.name}`}
 								value={draft[group.name]?.[0] ?? ''}
 								onchange={(event) => setValues(group.name, [event.currentTarget.value])}
 							>
-								<option value="">Всички</option>
+								<option value="">{i18n.t('copy.117d98cb652c')}</option>
 								{#each options(group) as option (option.value)}<option value={option.value}
-										>{option.label}</option
+										>{i18n.spec(option.label)}</option
 									>{/each}
 							</select>
 						{/if}
 					</div>
 				{/each}
 				<div class="filter-dialog-field">
-					<label class="filter-dialog-label" for="modal-availability">Наличност</label>
+					<label class="filter-dialog-label" for="modal-availability"
+						>{i18n.t('copy.cf1ac1288fd4')}</label
+					>
 					<select
+						{@attach i18n.validation}
 						id="modal-availability"
 						value={draft.availability?.[0] ?? ''}
 						onchange={(event) => setValues('availability', [event.currentTarget.value])}
 					>
-						<option value="">Всички</option><option value="available">Налични</option><option
-							value="incoming">Очакван внос</option
-						>
+						<option value="">{i18n.t('copy.117d98cb652c')}</option><option value="available"
+							>{i18n.t('copy.6916813244df')}</option
+						><option value="incoming">{i18n.t('copy.c15a323886eb')}</option>
 					</select>
 				</div>
 			</div>
 			{#if featureField}
 				<section class="filter-dialog-features" aria-labelledby="filter-extras-title">
-					<h3 id="filter-extras-title">Екстри</h3>
+					<h3 id="filter-extras-title">{i18n.t('copy.03868a05f1d2')}</h3>
 					<div class="filter-dialog-feature-grid">
 						{#each displayedFeatures as option (option.value)}
 							<label
 								class="filter-dialog-choice"
 								class:selected={draft.feature?.includes(option.value)}
 								><input
+									{@attach i18n.validation}
 									type="checkbox"
 									checked={draft.feature?.includes(option.value) ?? false}
 									onchange={() => toggle('feature', option.value)}
-								/>{option.label}</label
+								/>{i18n.spec(option.label)}</label
 							>
 						{/each}
 					</div>
@@ -316,7 +338,9 @@
 						onclick={() => {
 							allFeatures = !allFeatures;
 						}}
-						>{allFeatures ? 'По-малко екстри' : `Всички екстри (${options(featureField).length})`}
+						>{allFeatures
+							? i18n.t('copy.8d7acd09d8b1')
+							: i18n.t('pattern.435cfe2aeb96', { v0: options(featureField).length })}
 						<ChevronDown size={16} /></button
 					>
 				</section>
@@ -325,10 +349,13 @@
 	</div>
 	<div class="filter-dialog-footer">
 		<button type="button" class="filter-dialog-clear" onclick={clear}
-			>Изчисти{field ? '' : ' всички'}</button
+			>{i18n.t('copy.fc38aced5a1d')}{field ? '' : i18n.t('copy.dbf14a2afdb8')}</button
 		>
 		<button type="button" class="filter-dialog-apply" onclick={apply}
-			>Покажи {count} автомобила <Search size={18} /></button
+			>{i18n.t('copy.12efacb8a441')}
+			{count}
+			{i18n.t('copy.afc67636f9b8')}
+			<Search size={18} /></button
 		>
 	</div>
 </dialog>

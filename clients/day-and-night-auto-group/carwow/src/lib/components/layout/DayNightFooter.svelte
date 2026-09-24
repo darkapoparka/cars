@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import DesktopDealerFooter from './DesktopDealerFooter.svelte';
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
@@ -8,12 +11,12 @@
 	const phoneHref = daynightSite.phoneHref;
 	const contactHref = '/contact';
 	const facebookLinkProps = {
-		href: 'https://www.facebook.com/61566304063141/',
+		href: daynightSite.socialLinks.facebook,
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
 	const instagramLinkProps = {
-		href: 'https://www.instagram.com/daynight.auto.plovdiv/',
+		href: daynightSite.socialLinks.instagram,
 		target: '_blank',
 		rel: 'noopener'
 	} as const;
@@ -38,14 +41,15 @@
 <DesktopDealerFooter />
 
 <footer class="compact-mobile-footer">
-	<img src={daynightSite.logoLight} alt={daynightSite.name} />
-	<a class="compact-mobile-footer__phone" href={phoneHref}>{daynightSite.phoneLabel}</a>
-	<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer">{daynightSite.location}</a
+	<img src={i18n.asset(daynightSite.logoLight)} alt={daynightSite.name} />
+	<a class="compact-mobile-footer__phone" href={i18n.href(phoneHref)}>{daynightSite.phoneLabel}</a>
+	<a href={i18n.href(daynightSite.mapUrl)} target="_blank" rel="noopener noreferrer"
+		>{i18n.dealer('address')}</a
 	>
-	<nav aria-label="Връзки в долната част">
-		<a href={resolve('/inventory')}>Автомобили</a>
-		<a href={resolve('/contact')}>Контакти</a>
-		<a href={resolve('/terms')}>Условия</a>
+	<nav aria-label={i18n.t('copy.a29f84c58110')}>
+		<a href={i18n.href(resolve('/inventory'))}>{i18n.t('copy.f698657835c5')}</a>
+		<a href={i18n.href(resolve('/contact'))}>{i18n.t('copy.18a85f67cf6a')}</a>
+		<a href={i18n.href(resolve('/terms'))}>{i18n.t('copy.908b6d3a8368')}</a>
 	</nav>
 	<small>© {new Date().getFullYear()} {daynightSite.shortName}</small>
 </footer>
@@ -63,34 +67,34 @@
 					>
 						<div>
 							<a
-								href={resolve('/')}
+								href={i18n.href(resolve('/'))}
 								class="inline-block no-underline"
-								aria-label={`${daynightSite.shortName} начална страница`}
+								aria-label={i18n.t('pattern.c9fa277f00b0', { v0: daynightSite.shortName })}
 							>
 								<img
 									class="mb-[22px] block h-[54px] w-[190px] object-contain"
-									src={daynightSite.logoLight}
+									src={i18n.asset(daynightSite.logoLight)}
 									alt={daynightSite.shortName}
 								/>
 							</a>
 							<p class="m-0 mb-2 text-sa-sm leading-5 font-medium text-sa-surface/60 uppercase">
-								Огледи и консултация
+								{i18n.t('copy.9f549df65658')}
 							</p>
 							<p class="m-0 mb-7 text-sa-surface/75">
-								Огледи с предварителна уговорка.<br />Наличност, финансиране, бартер и съдействие по
-								документи.
+								{i18n.t('copy.1a60c5d02de3')}<br />{i18n.t('copy.ee90e7f25096')}
 							</p>
 						</div>
 						<form
 							class="relative mt-6 w-[min(100%,380px)] max-[1199px]:mt-5 max-[1199px]:ml-auto max-[1199px]:w-full max-[1199px]:max-w-full max-[767px]:mt-0 max-[767px]:ml-0"
 							action={resolve('/contact')}
 							method="get"
-							title="Запиши се за нови оферти"
+							title={i18n.t('copy.ef0bdd482127')}
 						>
-							<label class="sr-only" for="footer-email">Имейл за нови оферти</label>
+							<label class="sr-only" for="footer-email">{i18n.t('copy.cdf7ce2aac70')}</label>
 							<input
+								{@attach i18n.validation}
 								type="email"
-								placeholder="Имейл за нови оферти"
+								placeholder={i18n.t('copy.cdf7ce2aac70')}
 								name="email"
 								id="footer-email"
 								autocomplete="email"
@@ -100,7 +104,7 @@
 							<button
 								type="submit"
 								class="absolute top-1 right-1 flex size-12 cursor-pointer items-center justify-center rounded-sa-pill border-0 bg-sa-surface text-sa-ink transition duration-150 ease-sa hover:bg-sa-blue hover:text-sa-surface focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue [&_svg]:size-6 [&_svg_path]:stroke-current"
-								aria-label="Изпрати интерес към нови оферти"
+								aria-label={i18n.t('copy.04d3fca39222')}
 							>
 								<DayNightFooterIcon name="search" />
 							</button>
@@ -117,12 +121,14 @@
 									class="m-0 mb-3.5 flex items-center justify-between font-semibold text-sa-surface max-[767px]:mb-0"
 									data-breakpoint="mobile"
 								>
-									{group.title}
+									{i18n.text(group.title)}
 								</summary>
 								<ul class="m-0 grid list-none gap-[7px] p-0">
 									{#each group.links as link (link.href)}
 										<li class="mb-1 last:mb-0">
-											<a class={footerLinkClasses} href={resolve(link.href)}>{link.label}</a>
+											<a class={footerLinkClasses} href={i18n.href(resolve(link.href))}
+												>{i18n.text(link.label)}</a
+											>
 										</li>
 									{/each}
 								</ul>
@@ -137,7 +143,7 @@
 						<div>
 							<p class="m-0 mb-2">
 								<a
-									href={phoneHref}
+									href={i18n.href(phoneHref)}
 									class="block text-sa-lg leading-[1.44] font-medium text-sa-surface no-underline max-[767px]:font-semibold"
 									>{daynightSite.phoneLabel}</a
 								>
@@ -146,18 +152,18 @@
 								{...mapLinkProps}
 								class="mb-5 block text-sa-lg leading-[1.44] font-medium text-sa-surface/70 no-underline max-[767px]:mb-[29px] max-[767px]:font-semibold"
 							>
-								{daynightSite.location}
+								{i18n.dealer('address')}
 							</a>
 							<p class="m-0 mb-4 text-sa-sm leading-[22px] text-sa-surface/60">
-								{daynightSite.shortName} предлага актуална дигитална витрина с наличност, запитвания и
-								ясни следващи стъпки.
+								{daynightSite.shortName}
+								{i18n.t('copy.b4cae5cef8d9')}
 							</p>
 							<ul class="m-0 mb-3 flex list-none flex-wrap gap-2 p-0">
 								<li>
 									<a
 										{...facebookLinkProps}
-										title="Facebook"
-										aria-label="Facebook"
+										title={i18n.t('copy.d41f5b4977ee')}
+										aria-label={i18n.t('copy.d41f5b4977ee')}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="facebook" />
@@ -166,8 +172,8 @@
 								<li>
 									<a
 										{...instagramLinkProps}
-										title="Instagram"
-										aria-label="Instagram"
+										title={i18n.t('copy.bad57ef7837c')}
+										aria-label={i18n.t('copy.bad57ef7837c')}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="instagram" />
@@ -175,9 +181,9 @@
 								</li>
 								<li>
 									<a
-										href={phoneHref}
-										title={`Свържете се с ${daynightSite.shortName} по телефон или Viber.`}
-										aria-label={`Свържете се с ${daynightSite.shortName} по телефон или Viber.`}
+										href={i18n.href(phoneHref)}
+										title={i18n.t('pattern.73afa94d649a', { v0: daynightSite.shortName })}
+										aria-label={i18n.t('pattern.73afa94d649a', { v0: daynightSite.shortName })}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="phone" />
@@ -186,8 +192,8 @@
 								<li>
 									<a
 										{...sourceInventoryLinkProps}
-										title="Виж наличните автомобили в mobile.bg"
-										aria-label="Виж наличните автомобили в mobile.bg"
+										title={i18n.t('copy.178d1dc91a4c')}
+										aria-label={i18n.t('copy.178d1dc91a4c')}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="car-lot" />
@@ -196,8 +202,8 @@
 								<li>
 									<a
 										{...mapLinkProps}
-										title={`Отвори локацията на ${daynightSite.shortName} в Google Maps`}
-										aria-label={`Отвори локацията на ${daynightSite.shortName} в Google Maps`}
+										title={i18n.t('pattern.b04964bd626d', { v0: daynightSite.shortName })}
+										aria-label={i18n.t('pattern.b04964bd626d', { v0: daynightSite.shortName })}
 										class={socialLinkClasses}
 									>
 										<DayNightFooterIcon name="location" />
@@ -209,15 +215,15 @@
 							class="max-[1199px]:w-1/2 max-[767px]:mt-[18px] max-[767px]:w-full xl:translate-y-1"
 						>
 							<p class="m-0 mb-2 text-sa-sm leading-[22px] font-semibold text-sa-surface">
-								Имате въпрос?
+								{i18n.t('copy.6509f21139d4')}
 							</p>
 							<div class="flex items-center gap-3">
 								<a
-									href={resolve(contactHref)}
+									href={i18n.href(resolve(contactHref))}
 									class="inline-flex min-h-11 items-center justify-center rounded-sa-xs border border-sa-surface/20 px-3.5 text-sa-base leading-none font-semibold text-sa-surface/75 no-underline transition duration-150 ease-sa hover:border-sa-blue hover:bg-sa-blue hover:text-sa-surface focus-visible:border-sa-blue focus-visible:bg-sa-blue focus-visible:text-sa-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sa-blue"
-									title={`Свържете се със ${daynightSite.shortName}.`}
+									title={i18n.t('pattern.026b47f5e980', { v0: daynightSite.shortName })}
 								>
-									Свържете се
+									{i18n.t('copy.f36755515677')}
 								</a>
 							</div>
 						</div>
@@ -235,8 +241,8 @@
 				<p class="m-0 text-sa-sm leading-[22px] text-sa-surface/60">
 					©2026 <a
 						class="text-sa-sm leading-[22px] text-sa-surface no-underline"
-						href={resolve('/')}>{daynightSite.shortName}</a
-					>. Всички права запазени.
+						href={i18n.href(resolve('/'))}>{daynightSite.shortName}</a
+					>{i18n.t('copy.cef751176d99')}
 				</p>
 				<ul
 					class="m-0 flex list-none flex-wrap items-center p-0 max-[767px]:w-full max-[767px]:justify-start"
@@ -248,8 +254,8 @@
 							{/if}
 							<a
 								class="inline-block text-sa-sm leading-[22px] font-medium text-sa-surface/60 no-underline transition duration-150 ease-sa hover:text-sa-surface focus-visible:text-sa-surface"
-								href={resolve(link.href)}
-								title={link.title}>{link.label}</a
+								href={i18n.href(resolve(link.href))}
+								title={i18n.text(link.title)}>{i18n.text(link.label)}</a
 							>
 						</li>
 					{/each}

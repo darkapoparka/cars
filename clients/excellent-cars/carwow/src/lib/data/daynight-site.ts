@@ -12,27 +12,43 @@ const district = "Варна";
 const street = "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“";
 const location = "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Варна',
+	locationShort: "Варна",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Варна'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "Excellent Cars",
+	name: 'EXCELLENT CARS',
 	shortName,
 	city,
 	region: city,
-	countryCode: "BG",
-	locale: "bg-BG",
-	currency: "EUR",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "359895996559",
-	phoneLabel: "0895 996 559",
-	email: "",
+	phone: '359895996559',
+	phoneLabel: '0895 996 559',
+	email: '',
 	location,
-	locationShort: "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+	locationShort: `${district}, ${city}`,
 	locationLandmark: "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
-	hoursLabel: "Понеделник – петък: 08:30–19:00; Събота: 09:00–18:00; Неделя: почивен ден",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://excellent.mobile.bg/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "Excellent Cars",
-	heroSubtitle: "Варна · Подбрани публикувани обяви към 07.09.2026. Наличностите и условията се потвърждават по телефона.",
+	heroTitle: 'EXCELLENT CARS',
+	heroSubtitle: 'Варна - Премиум автомобили в Варна с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "За Excellent Cars", href: '/about' },
+			{ label: 'За Excellent Cars', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "slug": "day-and-night-auto-group",
-  "dealerId": null,
+  "dealerId": "day-and-night-auto-group",
   "repository": "darkapoparka/day-and-night-autodeal",
   "defaultBranch": "main",
   "language": "bg",
@@ -36,11 +36,45 @@
     "dealer-brand"
   ],
   "packaging": {
-    "version": "1"
+    "version": "2"
   },
   "templateRevisions": {
-    "auto-best": "989ec3a1d80a8f19150d18eb81282ac7cd216d83",
-    "modern": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
-    "carwow": "89f50c427863050abb7923152f05c091bb937d1e"
+    "auto-best": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+    "modern": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+    "carwow": "8fb6751d945776817acd8fce4a431ec7a2860b2a"
+  },
+  "localization": {
+    "schemaVersion": 1,
+    "dealerId": "day-and-night-auto-group",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "en",
+      "bg"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "BGN"
+  },
+  "templateSources": {
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+      "path": "templates/auto-best",
+      "tree": "44d9fc532b332e8c4cb5fd7abfc585e28d978539",
+      "digest": "a78d2cfe451551cbb4636e1e64d386d45a13db2b710f8fa8b0dc444929e61be3"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+      "path": "templates/modern",
+      "tree": "dadbc3c20d06f230bc958e6f6233f674c8755ae7",
+      "digest": "50d3f5a6739af15b2517f592fed79ff6ef7699f1e5433e16ff90c3eeb0c9339f"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars",
+      "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+      "path": "templates/carwow",
+      "tree": "af47a659d305d81523f5af97ef66d15dd0aa1f38",
+      "digest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420"
+    }
   }
 }
