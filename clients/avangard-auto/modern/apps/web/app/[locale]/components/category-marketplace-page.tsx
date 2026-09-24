@@ -2,10 +2,10 @@ import {
   buildMarketplaceSearchHref,
   createMarketplaceSearchParams,
   getVehicleCategory,
-  leadSite,
   parseMarketplaceSearchParams,
   type VehicleCategory,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { MarketplaceShell } from "@repo/marketplace-ui";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
@@ -19,6 +19,7 @@ import {
   PUBLIC_LISTING_PAGE_SIZE,
 } from "@/lib/public-marketplace-data";
 import { getMarketplacePageRedirect } from "@/lib/public-marketplace-pagination";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { AssistedSearchPanel } from "./assisted-search-panel";
 import { Footer } from "./footer";
 import { InventoryUnavailable } from "./inventory-states";
@@ -43,6 +44,7 @@ export const CategoryMarketplacePage = async ({
 }: CategoryMarketplacePageProps) => {
   const normalizedLocale = normalizeSeoLocale(locale);
   const categoryPath = routePath ?? getVehicleCategory(category).path;
+  requirePublicSitePath(categoryPath);
   const basePath = getLocalizedPath(normalizedLocale, categoryPath);
   const parsed = normalizePublicShowroomFilters(
     parseMarketplaceSearchParams(searchParams)
@@ -62,12 +64,12 @@ export const CategoryMarketplacePage = async ({
   const hasRouteSearchCriteria =
     createMarketplaceSearchParams({ ...parsed, category: "car" }).size > 0;
   const supportsDiscoveryPresentation =
-    leadSite.staticDemoMode ||
+    isDealershipSite ||
     ((category === "car" || category === "lease") &&
       make === undefined &&
       model === undefined);
   const desktopSearchVariant =
-    leadSite.staticDemoMode ||
+    isDealershipSite ||
     (supportsDiscoveryPresentation && !hasRouteSearchCriteria)
       ? "discovery"
       : "results";

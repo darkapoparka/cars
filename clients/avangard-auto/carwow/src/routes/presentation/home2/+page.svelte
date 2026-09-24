@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	import LocaleSettingsMenu from '$lib/components/layout/LocaleSettingsMenu.svelte';
+	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
+	const i18n = getI18n();
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
 	import {
 		BadgeEuro,
 		Car,
@@ -92,60 +95,62 @@
 		const target =
 			activeTab === 'sell' ? '/sell-your-car' : activeTab === 'reviews' ? '/reviews' : '/inventory';
 		const search = query.trim();
-		void goto(resolve(search ? `${target}?q=${encodeURIComponent(search)}` : target));
+		void goto(i18n.href(search ? `${target}?q=${encodeURIComponent(search)}` : target));
 	}
 </script>
 
-<svelte:head>
-	<title>AVANGARD AUTO Marketplace | Home2</title>
-	<meta
-		name="description"
-		content="Browse, buy, sell and review verified cars from AVANGARD AUTO Варна."
-	/>
-	<meta name="robots" content="noindex,nofollow" />
-</svelte:head>
+<RouteSeo
+	title={i18n.t('presentation.16979f3f074d')}
+	description={i18n.t('presentation.a6295ed4a6dd')}
+/>
+<svelte:head><meta name="robots" content="noindex,nofollow" /></svelte:head>
 
 <main id="main-content" tabindex="-1" class="home2-shell">
 	<section class="home2-hero" aria-labelledby="home2-title">
 		<img
 			class="home2-hero__cars"
-			src="/assets/images/home2/daynight-hero-showroom-v2.webp"
+			src={i18n.asset('/assets/images/home2/daynight-hero-showroom-v2.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 
-		<header class="home2-nav" aria-label="Home2 navigation">
-			<a class="home2-logo" href={resolve('/presentation/home2')} aria-label="AVANGARD AUTO Home2">
-				<img src={daynightSite.logoLight} alt="AVANGARD AUTO" />
+		<header class="home2-nav" aria-label={i18n.t('copy.b09b9bd843d4')}>
+			<a
+				class="home2-logo"
+				href={i18n.href('/presentation/home2')}
+				aria-label={i18n.t('presentation.2fa0c1fa1f19')}
+			>
+				<img src={i18n.asset(daynightSite.logoLight)} alt={i18n.t('dealer.shortName')} />
 			</a>
 
-			<nav class="home2-nav__links" aria-label="Primary">
-				<a href={resolve('/inventory')}>Cars</a>
-				<a href={resolve('/services')}>Services</a>
-				<a href={resolve('/sell-your-car')}>Sell</a>
-				<a href={resolve('/about')}>About us</a>
-				<a href={resolve('/contact')}>Contact</a>
+			<nav class="home2-nav__links" aria-label={i18n.t('copy.efe10c80ec8a')}>
+				<a href={i18n.href('/inventory')}>{i18n.t('copy.9e499e4cdaf4')}</a>
+				<a href={i18n.href('/services')}>{i18n.t('copy.604dce445e32')}</a>
+				<a href={i18n.href('/sell-your-car')}>{i18n.t('copy.2ec1e2815946')}</a>
+				<a href={i18n.href('/about')}>{i18n.t('copy.6e9ec45d6d0b')}</a>
+				<a href={i18n.href('/contact')}>{i18n.t('copy.2b5c3d26721a')}</a>
 			</nav>
 
-			<div class="home2-nav__actions" aria-label="Quick actions">
-				<a href={resolve('/admin/login')}>
+			<div class="home2-nav__actions" aria-label={i18n.t('copy.1810407f5ab7')}>
+				<LocaleSettingsMenu />
+				<a href={i18n.endpoint('/admin/login')}>
 					<CircleUserRound size={27} strokeWidth={3} />
-					<span>Log in</span>
+					<span>{i18n.t('copy.c189840cf7e2')}</span>
 				</a>
-				<button type="button" aria-label="Menu">
+				<button type="button" aria-label={i18n.t('copy.122f71765026')}>
 					<Menu size={33} strokeWidth={3} />
-					<span>Menu</span>
+					<span>{i18n.t('copy.122f71765026')}</span>
 				</button>
 			</div>
 		</header>
 
 		<h1 id="home2-title">
-			<span>Changing your car?</span>
-			<span>AVANGARD AUTO can help</span>
+			<span>{i18n.t('copy.3d2145e23142')}</span>
+			<span>{i18n.t('presentation.03845e14d910')}</span>
 		</h1>
 
-		<form class="home2-search" onsubmit={submitSearch} aria-label="Find your next car">
-			<div class="home2-search__tabs" role="tablist" aria-label="Search mode">
+		<form class="home2-search" onsubmit={submitSearch} aria-label={i18n.t('copy.bb7c0e3ca487')}>
+			<div class="home2-search__tabs" role="tablist" aria-label={i18n.t('copy.75f00aad4c45')}>
 				{#each searchTabs as tab (tab.id)}
 					<button
 						class:home2-search__tab--active={activeTab === tab.id}
@@ -154,60 +159,69 @@
 						aria-selected={activeTab === tab.id}
 						onclick={() => (activeTab = tab.id)}
 					>
-						{tab.label}
+						{i18n.t(
+							tab.id === 'find'
+								? 'presentation.find'
+								: tab.id === 'sell'
+									? 'presentation.sell'
+									: 'presentation.reviews'
+						)}
 					</button>
 				{/each}
 			</div>
 
 			<label class="home2-search__input">
-				<span class="sr-only">{activeSearch.placeholder}</span>
-				<input bind:value={query} placeholder={activeSearch.placeholder} />
-				<button type="submit" aria-label="Search">
+				<span class="sr-only">{i18n.text(activeSearch.placeholder)}</span>
+				<input bind:value={query} placeholder={i18n.text(activeSearch.placeholder)} />
+				<button type="submit" aria-label={i18n.t('copy.49c266baaaa7')}>
 					<Search size={26} strokeWidth={2.6} />
 				</button>
 			</label>
 
 			<p>
-				or let us help you
-				<a href={resolve('/inventory')}>Find a car</a>
+				{i18n.t('copy.b5dffda28a0e')}
+				<a href={i18n.href('/inventory')}>{i18n.t('copy.f92c64344e85')}</a>
 			</p>
 		</form>
 	</section>
 
 	<section class="home2-market">
-		<div class="home2-shortcuts" aria-label="Popular searches">
+		<div class="home2-shortcuts" aria-label={i18n.t('copy.1d70a4a0c377')}>
 			{#each data.shortcutPills as pill, index (pill)}
 				{@const ShortcutIcon = pillIcons[index] ?? Car}
-				<a href={resolve('/inventory')}>
+				<a href={i18n.href('/inventory')}>
 					<ShortcutIcon size={19} strokeWidth={3} />
-					{pill}
+					{i18n.text(pill)}
 				</a>
 			{/each}
 		</div>
 
 		<section class="home2-sell-card" aria-labelledby="sell-car-title">
 			<div class="home2-sell-card__copy">
-				<h2 id="sell-car-title">Sell your car for what it’s really worth</h2>
+				<h2 id="sell-car-title">{i18n.t('copy.e2af91003720')}</h2>
 				<p>
-					Get a clear valuation, part-exchange support, and help with the paperwork from our Plovdiv
-					team.
+					{i18n.t('presentation.a6c8a6fd6abc')}
 				</p>
-				<a href={resolve('/sell-your-car')}>Get instant valuation</a>
+				<a href={i18n.href('/sell-your-car')}>{i18n.t('copy.14a0d30a48ae')}</a>
 			</div>
 			<div class="home2-sell-card__media">
-				<img src="/assets/images/home2/daynight-sell-banner-v2.webp" alt="" aria-hidden="true" />
-				<span>ENTER REG</span>
+				<img
+					src={i18n.asset('/assets/images/home2/daynight-sell-banner-v2.webp')}
+					alt=""
+					aria-hidden="true"
+				/>
+				<span>{i18n.t('copy.688e55fb4bd6')}</span>
 			</div>
 		</section>
 
 		<section class="home2-budget" aria-labelledby="budget-title">
-			<h2 id="budget-title">Browse by budget</h2>
+			<h2 id="budget-title">{i18n.t('copy.7ba875c23c0a')}</h2>
 			<div class="home2-budget__grid">
 				{#each data.budgetTiles as tile (tile.label)}
-					<a href={resolve('/inventory')} class="home2-budget-tile">
-						<img src={tile.image} alt="" aria-hidden="true" />
-						<span>{tile.label}</span>
-						<small>{tile.count} cars</small>
+					<a href={i18n.href('/inventory')} class="home2-budget-tile">
+						<img src={i18n.asset(tile.image)} alt="" aria-hidden="true" />
+						<span>{i18n.text(tile.label)}</span>
+						<small>{i18n.count(tile.count)}</small>
 					</a>
 				{/each}
 			</div>
@@ -217,8 +231,8 @@
 			<div class="home2-section-title">
 				<Zap size={54} fill="currentColor" strokeWidth={2.4} />
 				<div>
-					<h2 id="trending-title">Premium is trending</h2>
-					<p>Popular AVANGARD AUTO picks, ready to compare side by side</p>
+					<h2 id="trending-title">{i18n.t('copy.34065c735fbe')}</h2>
+					<p>{i18n.t('presentation.110ff4e547d7')}</p>
 				</div>
 			</div>
 
@@ -228,28 +242,31 @@
 						<div class="home2-car-card__top">
 							<div>
 								<h3>{car.title}</h3>
-								<p>{car.summary}</p>
-								<small>{car.subtitle}</small>
+								<p>{i18n.text(car.summary)}</p>
+								<small>{car.year} • {i18n.spec(car.fuel)} • {i18n.spec(car.transmission)}</small>
 							</div>
-							<span>{car.badge}</span>
+							<span>{i18n.text(car.badge)}</span>
 						</div>
 						<strong>
 							<CheckCircle2 size={15} strokeWidth={3} />
-							{car.saving}
+							{i18n.text(car.saving)}
 						</strong>
 						<div class="home2-car-card__media">
-							<img src={car.cardImage} alt={car.title} />
+							<img src={i18n.asset(car.cardImage)} alt={car.title} />
 						</div>
 						<div class="home2-car-card__price">
 							<div class="home2-car-card__offers">
 								<span class="home2-car-card__cash">
-									<em>Cash from</em>
+									<em>{i18n.t('copy.4f5762e8db91')}</em>
 									<b>{car.price}</b>
 								</span>
-								<span class="home2-car-card__finance">Finance available</span>
+								<span class="home2-car-card__finance">{i18n.t('copy.575bee379d17')}</span>
 							</div>
-							<a href={resolve(`/inventory/${car.slug}`)} aria-label={`View ${car.title}`}>
-								<span class="sr-only">View car</span>
+							<a
+								href={i18n.href(`/inventory/${car.slug}`)}
+								aria-label={i18n.t('presentation.f4500b567925', { title: car.title })}
+							>
+								<span class="sr-only">{i18n.t('copy.7b2801c3146f')}</span>
 								<ChevronRight size={20} strokeWidth={3} />
 							</a>
 						</div>
@@ -262,50 +279,54 @@
 			<div class="home2-section-title">
 				<Star size={55} fill="currentColor" strokeWidth={1.8} />
 				<div>
-					<h2 id="reviews-title">This is how it should feel</h2>
-					<p>Customers rate AVANGARD AUTO as excellent for buying, selling and support</p>
+					<h2 id="reviews-title">{i18n.t('copy.494d953291c7')}</h2>
+					<p>{i18n.t('presentation.7144efc54761')}</p>
 				</div>
 			</div>
 
 			<div class="home2-review-grid">
 				{#each reviews as review (review.title)}
 					<article class="home2-review">
-						<div class="home2-review__stars" aria-label="5 star rating">
-							{#each starIndices as star (`${review.title}-${star}`)}
+						<div class="home2-review__stars" aria-label={i18n.t('copy.d6ad47db4d63')}>
+							{#each starIndices as star (`${i18n.text(review.title)}-${star}`)}
 								<span>★</span>
 							{/each}
-							<small><CheckCircle2 size={13} /> Verified</small>
+							<small><CheckCircle2 size={13} /> {i18n.t('copy.4f7838402f37')}</small>
 						</div>
-						<h3>{review.title}</h3>
-						<p>{review.body}</p>
-						<footer>{review.author}</footer>
+						<h3>{i18n.text(review.title)}</h3>
+						<p>{i18n.text(review.body)}</p>
+						<footer>{i18n.text(review.author)}</footer>
 					</article>
 				{/each}
 			</div>
 			<p class="home2-rating">
-				Rated {data.stats.rating} based on {data.stats.reviews} local reviews.
+				{i18n.t('presentation.8ed042c1e7ae', {
+					rating: data.stats.rating,
+					reviews: data.stats.reviews
+				})}
 			</p>
 		</section>
 	</section>
 
 	<section class="home2-dark" aria-labelledby="easy-title">
 		<div class="home2-dark__intro">
-			<img src="/brand/daynight-team-placeholder.svg" alt="AVANGARD AUTO consultant" />
+			<img
+				src={i18n.asset('/brand/daynight-team-placeholder.svg')}
+				alt={i18n.t('presentation.d2a424ed9dc1')}
+			/>
 			<div>
-				<h2 id="easy-title">We make car changing easy</h2>
+				<h2 id="easy-title">{i18n.t('copy.c1ad78cee515')}</h2>
 				<p>
-					From the first search to the final documents, our team helps you compare cars, arrange
-					inspection, financing, registration and trade-in without losing the simple marketplace
-					feel.
+					{i18n.t('copy.97110984bf6f')}
 				</p>
 			</div>
 		</div>
 
 		<div class="home2-guides">
 			{#each guideCards as guide (guide.href)}
-				<a href={resolve(guide.href)}>
-					<img src={guide.image} alt="" aria-hidden="true" />
-					<span>{guide.title}</span>
+				<a href={i18n.href(guide.href)}>
+					<img src={i18n.asset(guide.image)} alt="" aria-hidden="true" />
+					<span>{i18n.text(guide.title)}</span>
 				</a>
 			{/each}
 		</div>
@@ -315,26 +336,26 @@
 		<div class="home2-section-title home2-section-title--explore">
 			<HeartHandshake size={58} fill="currentColor" strokeWidth={2.3} />
 			<div>
-				<h2 id="explore-title">Explore cars</h2>
-				<p>Browse AVANGARD AUTO stock by the brands and body styles customers ask for most.</p>
+				<h2 id="explore-title">{i18n.t('copy.982bf9d218d6')}</h2>
+				<p>{i18n.t('presentation.46a4b9955740')}</p>
 			</div>
 		</div>
 
 		<section class="home2-browse-block" aria-labelledby="brand-browse-title">
-			<h3 id="brand-browse-title">Browse by brand</h3>
+			<h3 id="brand-browse-title">{i18n.t('copy.9eb6d7e50e27')}</h3>
 			<div class="home2-brand-grid">
 				{#each data.brands as brand (brand.brand)}
-					<a href={resolve('/inventory')} class="home2-brand-card">
+					<a href={i18n.href('/inventory')} class="home2-brand-card">
 						<span class="home2-brand-card__mark">
 							{#if brand.logo}
-								<img src={brand.logo} alt="" aria-hidden="true" />
+								<img src={i18n.asset(brand.logo)} alt="" aria-hidden="true" />
 							{:else}
 								{brand.brand.slice(0, 1)}
 							{/if}
 						</span>
 						<span class="home2-brand-card__copy">
 							<strong>{brand.brand}</strong>
-							<small>{brand.count} cars</small>
+							<small>{i18n.count(brand.count)}</small>
 						</span>
 						<ChevronRight size={18} strokeWidth={3} />
 					</a>
@@ -343,14 +364,14 @@
 		</section>
 
 		<section class="home2-browse-block" aria-labelledby="type-browse-title">
-			<h3 id="type-browse-title">Browse by body type</h3>
+			<h3 id="type-browse-title">{i18n.t('copy.0b236543ddfb')}</h3>
 			<div class="home2-type-grid">
 				{#each data.bodyTypes as body (body.body)}
-					<a href={resolve('/inventory')} class="home2-type-card">
-						<img src={body.image} alt="" aria-hidden="true" />
+					<a href={i18n.href('/inventory')} class="home2-type-card">
+						<img src={i18n.asset(body.image)} alt="" aria-hidden="true" />
 						<span>
-							<strong>{body.body}</strong>
-							<small>{body.count} available</small>
+							<strong>{i18n.text(body.body)}</strong>
+							<small>{i18n.count(body.count)}</small>
 						</span>
 					</a>
 				{/each}
@@ -504,6 +525,10 @@
 		padding-top: 0;
 	}
 
+	.home2-nav__actions :global(.cars-locale-trigger) {
+		color: white;
+		border-color: rgb(255 255 255 / 0.5);
+	}
 	.home2-nav__actions :where(a, button) {
 		display: grid;
 		place-items: center;
@@ -1546,7 +1571,11 @@
 		}
 
 		.home2-search {
-			bottom: 24px;
+			position: relative;
+			left: auto;
+			bottom: auto;
+			transform: none;
+			margin: 24px auto;
 		}
 
 		.home2-search__tabs {

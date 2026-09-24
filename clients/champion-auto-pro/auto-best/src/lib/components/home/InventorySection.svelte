@@ -1,28 +1,32 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import BrowseAllCard from './BrowseAllCard.svelte';
   import { resolve } from '$app/paths';
   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
+  import Icon from '$components/ui/Icon.svelte';
   import { featuredVehicles } from '$data/inventory';
 </script>
 
-<section class="dn-section dn-inventory" aria-labelledby="featured-title">
+<section class="dn-section dn-inventory dn-home-content-section" aria-labelledby="featured-title">
   <div class="container dn-inventory-panel">
     <div class="dn-inventory__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
       <h2 id="featured-title" class="dn-home-section-title">
-        <span class="dn-heading-desktop">Избрани автомобили</span>
-        <span class="dn-heading-mobile">Избрани автомобили</span>
+        <span class="dn-heading-desktop">{i18n.t("m_fd88b7330e98")}</span>
+        <span class="dn-heading-mobile">{i18n.t("m_fd88b7330e98")}</span>
       </h2>
-      <a class="dn-inventory__all dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили">
-        <span class="dn-heading-desktop">Вижте всички автомобили</span>
-        <span class="dn-heading-mobile" aria-hidden="true">Всички</span>
+      <a class="dn-inventory__all dn-home-section-action" href={i18n.href(resolve('/listing-grid'))} aria-label={i18n.t("m_7d6647b063a2")}>
+        <span class="dn-heading-desktop dn-home-action-label">{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></span>
+        <span class="dn-heading-mobile" aria-hidden="true">{i18n.t("m_a52ace420f21")}</span>
       </a>
     </div>
 
-    <div class="dn-inventory__grid">
+    <div class="dn-inventory__grid dn-home-section-panel">
       {#each featuredVehicles.slice(0, 4) as vehicle, index (vehicle.id)}
         <VehicleCard {vehicle} showPrice priority={index < 4} />
       {/each}
-      <BrowseAllCard label="Всички автомобили" detail="Разгледайте цялата колекция" />
+      <BrowseAllCard label={i18n.t("m_13b5d43d1176")} detail={i18n.t("m_d11f4babc6e6")} />
     </div>
   </div>
 </section>
@@ -243,11 +247,6 @@
     .dn-inventory__grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 24px;
-      position: relative;
-      margin-top: -24px;
-      padding: 24px;
-      border-radius: 16px;
-      background: var(--dn-home-panel);
     }
   }
 

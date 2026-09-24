@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { Search, X, Check, Plus } from '@lucide/svelte';
 	import MobileFullSheet from '$lib/components/shared/mobile/MobileFullSheet.svelte';
 	import type { Car } from '$lib/data/daynight-vehicles';
@@ -34,22 +37,28 @@
 <MobileFullSheet bind:open labelledBy="compare-selector-title" {onClose}>
 	<div class="selector">
 		<header>
-			<h2 id="compare-selector-title">Избери автомобили</h2>
-			<button class="close" onclick={onClose} aria-label="Затвори избора"><X size={22} /></button>
+			<h2 id="compare-selector-title">{i18n.t('copy.fddf0b60797f')}</h2>
+			<button class="close" onclick={onClose} aria-label={i18n.t('copy.616d24819164')}
+				><X size={22} /></button
+			>
 		</header>
 		<div class="search">
 			<Search size={20} /><input
+				{@attach i18n.validation}
 				type="search"
-				aria-label="Търси автомобили за сравнение"
-				placeholder="Марка, модел или година"
+				aria-label={i18n.t('copy.865ad66ae9b2')}
+				placeholder={i18n.t('copy.00d085beb98b')}
 				bind:value={query}
 			/>
 		</div>
 		<p class="status" role="status">
-			{selected.length} от {MAX_COMPARE_VEHICLES} избрани · {selected.length ===
-			MAX_COMPARE_VEHICLES
-				? 'Премахнете един, за да добавите друг.'
-				: `Изберете до ${MAX_COMPARE_VEHICLES} автомобила.`}
+			{selected.length}
+			{i18n.t('copy.5f201355756a')}
+			{MAX_COMPARE_VEHICLES}
+			{i18n.t('copy.0743ef835ee8')}
+			{selected.length === MAX_COMPARE_VEHICLES
+				? i18n.t('copy.c4f66e1ce187')
+				: i18n.t('pattern.1d2a44662926', { v0: MAX_COMPARE_VEHICLES })}
 		</p>
 		<div class="results">
 			{#each results as car (car.slug)}
@@ -60,9 +69,9 @@
 					disabled={selected.length === MAX_COMPARE_VEHICLES && !selected.includes(car.slug)}
 					onclick={() => toggle(car.slug)}
 				>
-					<img src={car.image} alt="" loading="lazy" />
+					<img src={i18n.asset(car.image)} alt="" loading="lazy" />
 					<span class="details"
-						><strong>{car.shortTitle}</strong><small>{car.year} · {car.fuel}</small><b
+						><strong>{car.shortTitle}</strong><small>{car.year} · {i18n.spec(car.fuel)}</small><b
 							>{car.priceEur}</b
 						></span
 					>
@@ -73,12 +82,12 @@
 					>
 				</button>
 			{:else}<p class="no-results">
-					Няма автомобили за „{query}“. Опитайте друга марка или модел.
+					{i18n.t('copy.292dfecab206')}{query}{i18n.t('copy.cc1b6d81fdbc')}
 				</p>{/each}
 		</div>
 		<footer>
 			<button class="done" onclick={apply}
-				>Готово · {selected.length} / {MAX_COMPARE_VEHICLES}</button
+				>{i18n.t('copy.4598594ef5c2')} {selected.length} / {MAX_COMPARE_VEHICLES}</button
 			>
 		</footer>
 	</div>

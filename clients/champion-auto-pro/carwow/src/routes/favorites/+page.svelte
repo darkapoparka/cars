@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopFavoritesPage from '$lib/components/favorites/desktop/DesktopFavoritesPage.svelte';
 	import MobileFavoritesPage from '$lib/components/favorites/mobile/MobileFavoritesPage.svelte';
@@ -14,8 +17,11 @@
 </script>
 
 <RouteSeo
-	title={`Запазени автомобили · ${daynightSite.shortName}`}
-	description={`Запазени автомобили от наличността на ${daynightSite.shortName} ${daynightSite.city}.`}
+	title={i18n.t('pattern.fe9b1727fcae', { v0: daynightSite.shortName })}
+	description={i18n.t('pattern.ef2720c0cf14', {
+		v0: daynightSite.shortName,
+		v1: daynightSite.city
+	})}
 />
 
 {#if showMobileShell}

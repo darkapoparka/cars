@@ -1,0 +1,50 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Варна",
+    "bg": "Варна",
+    "en": "Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "ГП4, разклон за с. Тополи",
+    "bg": "ГП4, разклон за с. Тополи",
+    "en": "GP4, turnoff for Topoli village",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.address",
+    "source": "ГП4, разклон за с. Тополи",
+    "bg": "ГП4, разклон за с. Тополи",
+    "en": "GP4, turnoff for Topoli village, Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.locationShort",
+    "source": "Варна",
+    "bg": "Варна",
+    "en": "Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned short location label."
+  },
+  {
+    "key": "dealer.name",
+    "source": "Аутолайф",
+    "en": "AUTOLIFE",
+    "bg": "Аутолайф",
+    "disposition": "translate",
+    "notes": "Dealer-owned proper name."
+  },
+  {
+    "key": "dealer.shortName",
+    "source": "Аутолайф",
+    "en": "Аутолайф",
+    "bg": "Аутолайф",
+    "disposition": "invariant",
+    "notes": "Dealer-owned short proper name."
+  }
+]

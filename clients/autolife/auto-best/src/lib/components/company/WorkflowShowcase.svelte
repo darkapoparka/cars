@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
   import { demoWorkflowShowcases } from '$data/demo-content';
 
@@ -8,10 +11,10 @@
 
 <section class="dn-workflow-showcase" aria-labelledby="workflow-showcase-title">
   <header>
-    <h2 id="workflow-showcase-title">{showcase.title}</h2>
-    <span class="dn-workflow-showcase__demo">Демо</span>
+    <h2 id="workflow-showcase-title">{i18n.text(showcase.title)}</h2>
+    <span class="dn-workflow-showcase__demo">{i18n.t("m_5d82e4d122eb")}</span>
   </header>
-  <ul aria-label={showcase.title}>
+  <ul aria-label={i18n.text(showcase.title)}>
     {#each showcase.vehicles as vehicle (vehicle.id)}
       <li>
         <VehicleCard {vehicle} layout="showcase" />

@@ -12,27 +12,43 @@ const district = "Варна";
 const street = "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor";
 const location = "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Варна',
+	locationShort: "Варна",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Варна'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "Champion Auto Pro",
+	name: 'CHAMPION AUTO PRO',
 	shortName,
 	city,
 	region: city,
-	countryCode: "BG",
-	locale: "bg-BG",
-	currency: "EUR",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "359885072555",
-	phoneLabel: "0885 072 555",
-	email: "",
+	phone: '359885072555',
+	phoneLabel: '0885 072 555',
+	email: '',
 	location,
-	locationShort: "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
+	locationShort: `${district}, ${city}`,
 	locationLandmark: "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
-	hoursLabel: "Понеделник – петък: 09:30–18:00; Събота: 10:00–15:00; Неделя: почивен ден",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://championautopro.mobile.bg/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "Champion Auto Pro",
-	heroSubtitle: "Варна · Подбрани публикувани обяви. Наличностите и условията се потвърждават по телефона.",
+	heroTitle: 'CHAMPION AUTO PRO',
+	heroSubtitle: 'Варна - Премиум автомобили в Варна с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "За Champion Auto Pro", href: '/about' },
+			{ label: 'За Champion Auto Pro', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

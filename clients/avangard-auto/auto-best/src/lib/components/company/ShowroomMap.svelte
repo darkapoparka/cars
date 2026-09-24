@@ -1,18 +1,24 @@
 <script lang="ts">
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { brand } from '$config/brand';
-  const mapEmbedUrl = "https://maps.google.com/maps?q=AVANGARD%20AUTO%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&output=embed";
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+
+  const mapAddress = $derived(i18n.dealer('address'));
+  const mapEmbedUrl = $derived(`https://maps.google.com/maps?q=${encodeURIComponent(mapAddress)}&z=16&hl=${i18n.locale}&output=embed`);
+  const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`);
 </script>
 
 <div class="dn-showroom-map">
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={"Карта до" + ` ${brand.name}`}
+    title={i18n.t("m_cd07db46b2c6", { p0: brand.name })}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
-  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Отворете в Google Maps</a>
+  <a class="dn-showroom-map__link" href={i18n.href(directionsUrl)} target="_blank" rel="noreferrer">{i18n.t("m_7f22a6352074")}</a>
 </div>
 
 <style>

@@ -9,6 +9,7 @@ import {
   DrawerTitle,
 } from "@repo/design-system/components/ui/drawer";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import {
   buildMarketplaceSearchHref,
   defaultVehicleCategory,
@@ -16,6 +17,12 @@ import {
   leadSite,
   type MarketplaceSearchParams,
 } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import {
+  isDealershipSite,
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
 import { CircleDollarSign, Heart, Plus, Store, User } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -26,6 +33,7 @@ import { DealerBottomNavIcon } from "./dealer-bottom-nav-icon";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
 import { DealerSocialLinks } from "./dealer-social-links";
 import { DealerUiIcon } from "./dealer-ui-icon";
+import { useLocalePreferences } from "./locale-preferences";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace-drawer";
 
@@ -33,7 +41,7 @@ const getDealerNavigationItemClassName = (active: boolean) =>
   cn(
     "relative flex min-h-[60px] min-w-0 touch-manipulation flex-col items-center justify-center gap-1 px-0.5 text-meta transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
     active
-      ? "font-semibold text-[var(--lead-site-accent)]"
+      ? "font-semibold text-brand-text"
       : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
   );
 
@@ -45,6 +53,13 @@ export const DealerBottomNav = ({
   locale?: string;
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const preferences = useLocalePreferences();
+  const localeSettingsHref = withBasePath(
+    `${getLocalizedPublicPath(locale, "/locale-settings")}?returnTo=${encodeURIComponent(
+      preferences?.returnTo ?? getLocalizedPublicPath(locale, "/cars")
+    )}`
+  );
+  const localeRequested = useRef(false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const navigationLabel = isBg
@@ -79,6 +94,9 @@ export const DealerBottomNav = ({
       label: isBg ? "Лизинг" : "Lease",
     },
   ];
+  const visibleItems = items.filter((item) =>
+    isPublicSitePathEnabled(item.href, publicSite)
+  );
   const menuLabel = isBg ? "Меню" : "Menu";
   const secondaryMenuItems = [
     {
@@ -106,8 +124,13 @@ export const DealerBottomNav = ({
         data-slot="dealer-bottom-nav"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
-        <div className="mx-auto grid min-h-[60px] max-w-lg grid-cols-5 px-1.5">
-          {items.map((item) => {
+        <div
+          className="mx-auto grid min-h-[60px] max-w-lg px-1.5"
+          style={{
+            gridTemplateColumns: `repeat(${visibleItems.length + 1}, minmax(0, 1fr))`,
+          }}
+        >
+          {visibleItems.map((item) => {
             const visuallyActive = item.active && !menuOpen;
 
             return (
@@ -156,9 +179,13 @@ export const DealerBottomNav = ({
           id="dealer-mobile-menu"
           onCloseAutoFocus={(event) => {
             event.preventDefault();
-            requestAnimationFrame(() =>
-              menuTriggerRef.current?.focus({ preventScroll: true })
-            );
+            requestAnimationFrame(() => {
+              menuTriggerRef.current?.focus({ preventScroll: true });
+              if (localeRequested.current) {
+                localeRequested.current = false;
+                preferences?.open();
+              }
+            });
           }}
         >
           <DrawerHeader className="shrink-0 px-5 pt-4 pb-4">
@@ -203,7 +230,7 @@ export const DealerBottomNav = ({
               <a
                 aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
                 className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
-                href={leadSite.phoneHref}
+                href={withBasePath(leadSite.phoneHref)}
                 onClick={() => setMenuOpen(false)}
               >
                 <DealerUiIcon className="size-5 shrink-0" name="phone" />
@@ -214,11 +241,11 @@ export const DealerBottomNav = ({
               <a
                 aria-label={
                   isBg
-                    ? `Отворете картата: ${leadSite.address}`
+                    ? `Отворете картата: ${getLeadCopy(locale).address}`
                     : "Open showroom map"
                 }
                 className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
-                href={leadSite.mapsUrl}
+                href={withBasePath(leadSite.mapsUrl)}
                 onClick={() => setMenuOpen(false)}
                 rel="noreferrer"
                 target="_blank"
@@ -235,29 +262,55 @@ export const DealerBottomNav = ({
               className="mt-4 grid gap-2"
               data-slot="dealer-mobile-menu-secondary-nav"
             >
-              {secondaryMenuItems.map((item) => {
-                return (
-                  <Link
-                    className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-compact-control text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
-                    href={item.href}
-                    key={item.href}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <DealerUiIcon
-                      className="size-5 shrink-0 text-zinc-600"
-                      name={item.icon}
-                    />
-                    <span className="min-w-0 flex-1 py-3">{item.label}</span>
-                    <DealerUiIcon
-                      className="size-4 shrink-0 text-zinc-400"
-                      name="chevronRight"
-                    />
-                  </Link>
-                );
-              })}
+              {secondaryMenuItems
+                .filter((item) =>
+                  isPublicSitePathEnabled(item.href, publicSite)
+                )
+                .map((item) => {
+                  return (
+                    <Link
+                      className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-compact-control text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
+                      href={item.href}
+                      key={item.href}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      <DealerUiIcon
+                        className="size-5 shrink-0 text-zinc-600"
+                        name={item.icon}
+                      />
+                      <span className="min-w-0 flex-1 py-3">{item.label}</span>
+                      <DealerUiIcon
+                        className="size-4 shrink-0 text-zinc-400"
+                        name="chevronRight"
+                      />
+                    </Link>
+                  );
+                })}
             </nav>
+            <a
+              className="mt-4 flex min-h-11 items-center rounded-xl border px-4 font-medium"
+              data-locale-trigger
+              href={localeSettingsHref}
+              onClick={(event) => {
+                if (
+                  preferences &&
+                  !event.ctrlKey &&
+                  !event.metaKey &&
+                  !event.shiftKey &&
+                  !event.altKey
+                ) {
+                  event.preventDefault();
+                  localeRequested.current = true;
+                  setMenuOpen(false);
+                }
+              }}
+            >
+              {isBg ? "Държава и език" : "Country and language"}
+            </a>
             <DealerSocialLinks isBg={isBg} links={leadSite.socialLinks} />
-            <p className="mt-4 text-meta text-zinc-600">{leadSite.address}</p>
+            <p className="mt-4 text-meta text-zinc-600">
+              {getLeadCopy(locale).address}
+            </p>
           </div>
         </DrawerContent>
       </Drawer>
@@ -276,7 +329,7 @@ export const BottomMarketplaceNav = ({
 }) => {
   const copy = getMarketplaceControlCopy(locale);
 
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     return (
       <DealerBottomNav
         activeMode={filters.category === "lease" ? "lease" : "buy"}

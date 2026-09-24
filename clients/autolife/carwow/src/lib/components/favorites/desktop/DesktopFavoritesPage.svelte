@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { Heart } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
@@ -18,27 +21,33 @@
 		catalogue.filter((vehicle) => !garage.favorites.includes(vehicle.slug)).slice(0, 4)
 	);
 	const countLabel = $derived(
-		vehicles.length === 1 ? '1 запазен автомобил' : `${vehicles.length} запазени автомобила`
+		vehicles.length === 1
+			? i18n.text('1 запазен автомобил')
+			: i18n.t('pattern.0041639e21e7', { v0: vehicles.length })
 	);
 </script>
 
 <main id="main-content" tabindex="-1" class="desktop-favorites inventory-template-shell">
 	<DesktopYellowRouteHero
 		headingId="favorites-title"
-		title="Запазени автомобили"
+		title={i18n.t('copy.2ff1cef08851')}
 		copy={vehicles.length
-			? `${countLabel} са готови за сравнение, оглед или запитване.`
-			: 'Запазвайте автомобили от наличността и ги преглеждайте тук.'}
+			? i18n.t('pattern.3fb1938f7f16', { v0: countLabel })
+			: i18n.t('copy.e79533fe3403')}
 		panel="light"
 		compact
 	>
-		<div class="desktop-favorites__hero-actions" aria-label="Действия">
-			<a class="sa-cta sa-cta-primary" href={resolve('/inventory')}>Виж наличните автомобили</a>
-			<a class="sa-cta sa-cta-ghost" href={resolve('/compare')}>Сравни автомобили</a>
+		<div class="desktop-favorites__hero-actions" aria-label={i18n.t('copy.cad123465b9e')}>
+			<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/inventory'))}
+				>{i18n.t('copy.4b5a450faf64')}</a
+			>
+			<a class="sa-cta sa-cta-ghost" href={i18n.href(resolve('/compare'))}
+				>{i18n.t('copy.3c4226f1f842')}</a
+			>
 		</div>
 	</DesktopYellowRouteHero>
 
-	<section class="desktop-favorites__content" aria-label="Списък със запазени автомобили">
+	<section class="desktop-favorites__content" aria-label={i18n.t('copy.925606ad84b8')}>
 		<GarageUnavailable
 			slugs={selection.unavailable}
 			onRemove={(slug) => garage.toggleFavorite(slug)}
@@ -46,10 +55,10 @@
 		{#if vehicles.length}
 			<div class="desktop-favorites__section-heading">
 				<div>
-					<p class="desktop-favorites__section-kicker">Вашият избор</p>
+					<p class="desktop-favorites__section-kicker">{i18n.t('copy.bc246f59ec57')}</p>
 					<h2>{countLabel}</h2>
 				</div>
-				<p>Натиснете сърцето върху карта, за да премахнете автомобил от запазените.</p>
+				<p>{i18n.t('copy.d5043cda9f82')}</p>
 			</div>
 			<div class="desktop-favorites__grid">
 				{#each vehicles as vehicle, index (vehicle.slug)}
@@ -61,20 +70,22 @@
 				<div class="desktop-favorites__empty-icon" aria-hidden="true">
 					<Heart size={34} strokeWidth={2.2} />
 				</div>
-				<h2>Нямате запазени автомобили</h2>
-				<p>Изберете сърцето върху обява, за да съберете кратък списък за оглед и сравнение.</p>
-				<a class="sa-cta sa-cta-primary" href={resolve('/inventory')}> Разгледай автомобилите </a>
+				<h2>{i18n.t('copy.8837bdcba905')}</h2>
+				<p>{i18n.t('copy.d61f500c9cb8')}</p>
+				<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/inventory'))}>
+					{i18n.t('copy.c79b6820c344')}
+				</a>
 			</div>
 		{/if}
 
 		{#if suggestedVehicles.length}
 			<div class="desktop-favorites__section-heading desktop-favorites__section-heading--suggested">
 				<div>
-					<p class="desktop-favorites__section-kicker">Още налични</p>
-					<h2>Автомобили, които може да разгледате</h2>
+					<p class="desktop-favorites__section-kicker">{i18n.t('copy.254d3c81a830')}</p>
+					<h2>{i18n.t('copy.7b7908c827fa')}</h2>
 				</div>
-				<a class="sa-cta-compact sa-cta sa-cta-ghost" href={resolve('/inventory')}>
-					Всички автомобили
+				<a class="sa-cta-compact sa-cta sa-cta-ghost" href={i18n.href(resolve('/inventory'))}>
+					{i18n.t('copy.8666797b13d9')}
 				</a>
 			</div>
 			<div class="desktop-favorites__grid">

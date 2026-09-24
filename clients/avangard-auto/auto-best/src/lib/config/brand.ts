@@ -2,6 +2,7 @@ export type BrandConfig = {
   name: string;
   shortName: string;
   city: string;
+  showroomCoordinates: { latitude: number; longitude: number };
   addressLine: string;
   address: string;
   phone: string;
@@ -9,7 +10,7 @@ export type BrandConfig = {
   appointment: string;
   logo: `/${string}`;
   logoOnDark: `/${string}`;
-  youtubeUrl: `https://${string}`;
+  youtubeUrl: `https://${string}` | '';
   instagramUrl: `https://${string}`;
   facebookUrl: `https://${string}`;
 };
@@ -23,6 +24,7 @@ export const brand = {
   name,
   shortName,
   city,
+  showroomCoordinates: {"latitude":0,"longitude":0},
   youtubeUrl: "https://www.youtube.com/",
   instagramUrl: "https://www.instagram.com/avangard_auto_varna/",
   facebookUrl: "https://www.facebook.com/avangardautovarna/",

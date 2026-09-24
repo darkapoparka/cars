@@ -1,4 +1,10 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
+  import LocaleSettingsMenu from './LocaleSettingsMenu.svelte';
   import { lockPageScroll } from '$lib/ui/overlay';
   import { afterNavigate } from '$app/navigation';
   import { resolve } from '$app/paths';
@@ -185,7 +191,7 @@
 <svelte:window onkeydown={handleWindowKeydown} onresize={() => { if (window.innerWidth >= 992 && mobileOpen) void closeMobile(false); if (window.innerWidth < 992) closeMega(); }} />
 
 {#if mega}
-  <button class="dn-mega-backdrop" tabindex="-1" aria-label="Затворете навигацията" onclick={closeMega}></button>
+  <button class="dn-mega-backdrop" tabindex="-1" aria-label={i18n.t("m_985463e3d2e1")} onclick={closeMega}></button>
 {/if}
 
 <div
@@ -206,9 +212,10 @@
     <div class="dn-topbar">
       <div class="container dn-topbar__inner">
         <ul class="dn-topbar__list">
-          <li><Icon name="map-pin" size={18} strokeWidth={1.75} /><span>{brand.address}</span></li>
+          <li><Icon name="map-pin" size={18} strokeWidth={1.75} /><span>{i18n.dealer('address')}</span></li>
           <li><Icon name="phone" size={18} strokeWidth={1.75} /><a {...phoneLinkAttributes}>{brand.phone}</a></li>
-          <li class="dn-topbar__item--appointment"><Icon name="clock" size={18} strokeWidth={1.75} /><span>{brand.appointment}</span></li>
+          <li class="dn-topbar__item--appointment"><Icon name="clock" size={18} strokeWidth={1.75} /><span>{i18n.dealer('appointment')}</span></li>
+          <li class="dn-topbar__settings"><LocaleSettingsMenu /></li>
         </ul>
       </div>
     </div>
@@ -217,7 +224,7 @@
       <div class="container">
         <div class="dn-header__inner">
           <div class="dn-logo-box">
-            <a class="dn-logo" href={resolve('/')} aria-label={`${brand.name} — начало`}>
+            <a class="dn-logo" href={i18n.href(resolve('/'))} aria-label={i18n.t("m_d007ba60d7c9", { p0: brand.name })}>
               <picture>
                 {#if mobileSurfaceHeader || contactOverlayHeader}
                   <source media="(max-width: 991px)" srcset={brand.logoOnDark} />
@@ -227,14 +234,14 @@
             </a>
           </div>
 
-          <nav class="dn-nav" aria-label="Основна навигация">
+          <nav class="dn-nav" aria-label={i18n.t("m_123e2803c10b")}>
             <ul class="dn-nav__list">
               {#each navigation as item (item.id)}
                 <li class:dn-nav__item--current={isActive(item)}>
                   <a
                     class:dn-nav__link--disclosure={Boolean(item.menu)}
                     id={item.menu ? `dn-nav-trigger-${item.id}` : undefined}
-                    href={resolve(item.href)}
+                    href={i18n.href(resolve(item.href))}
                     aria-current={isExactDestination(item) ? 'page' : undefined}
                     aria-expanded={item.menu ? megaItemId === item.id : undefined}
                     aria-controls={item.menu ? `dn-mega-${item.id}` : undefined}
@@ -242,7 +249,7 @@
                     onfocus={() => handleMegaTriggerFocus(item)}
                     onclick={(event) => handleMegaTriggerClick(event, item)}
                     onkeydown={(event) => handleMegaTriggerKeydown(event, item)}
-                  >{item.label}</a>
+                  >{i18n.text(item.label)}</a>
 
                   {#if item.menu && megaItemId === item.id && mega}
                     <div
@@ -260,22 +267,22 @@
                         </div>
                       </div>
                       <div class="dn-mega__side">
-                        <nav class="dn-mega__groups" aria-label={mega.title}>
+                        <nav class="dn-mega__groups" aria-label={mega.title === brand.name ? brand.name : i18n.text(mega.title)}>
                           {#each mega.groups as group (group.id)}
                             <div class="dn-mega__group">
-                              <strong>{group.title}</strong>
+                              <strong>{i18n.text(group.title)}</strong>
                               {#each group.links as link (link.id)}
                                 {#if isInternalHref(link.href)}
-                                  <a href={resolve(link.href)}>{link.label}</a>
+                                  <a href={i18n.href(resolve(link.href))}>{link.id === 'about-company-overview' ? i18n.t("m_76e1b210c1a4", { p0: brand.shortName }) : i18n.text(link.label)}</a>
                                 {:else}
-                                  <a {...{ href: link.href }}>{link.label}</a>
+                                  <a {...{ href: link.href }}>{link.href.startsWith('tel:') ? link.label : i18n.text(link.label)}</a>
                                 {/if}
                               {/each}
                             </div>
                           {/each}
                         </nav>
                         <div class="dn-mega__side-action">
-                          <ActionLink class="dn-mega__cta" href={mega.cta.href}>{mega.cta.label}</ActionLink>
+                          <ActionLink class="dn-mega__cta" href={mega.cta.href}>{i18n.text(mega.cta.label)}</ActionLink>
                         </div>
                       </div>
                     </div>
@@ -288,22 +295,22 @@
           <div class="dn-header-actions">
             <ActionLink class="dn-header-action dn-header-action--secondary" href="/contact">
               <Icon name="mail" size={17} strokeWidth={1.8} />
-              <span>Запитване</span>
+              <span>{i18n.t("m_0e3416f5f251")}</span>
             </ActionLink>
             <ActionLink class="dn-header-action dn-header-action--primary" href={detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'}>
               <Icon name="calendar" size={17} strokeWidth={1.8} />
-              <span>Запазете оглед</span>
+              <span>{i18n.t('action.viewingShort')}</span>
             </ActionLink>
           </div>
 
           <div class="dn-mobile-controls">
-            <a class="dn-mobile-control" href={resolve('/contact')} aria-label="Локация и контакти">
+            <a class="dn-mobile-control" href={i18n.href(resolve('/contact'))} aria-label={i18n.t("m_8dc51841d515")}>
               <MobileNavIcon name="location" size={20} />
             </a>
             <a
               class="dn-mobile-control dn-mobile-control--call"
               {...phoneLinkAttributes}
-              aria-label={`Обадете се на ${brand.phone}`}
+              aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}
             >
               <MobileNavIcon name="phone" size={20} />
             </a>
@@ -313,8 +320,8 @@
               type="button"
               {@attach attachMobileToggle}
               aria-expanded={mobileOpen}
-              aria-controls="dn-mobile-menu"
-              aria-label={mobileOpen ? 'Затворете менюто' : 'Отворете менюто'}
+              {@attach i18n.registerFocusTarget} aria-controls="dn-mobile-menu"
+              aria-label={mobileOpen ? i18n.t("m_434b5049f81b") : i18n.t("m_adeff71e51a4")}
               onclick={openMobile}
             >
               <MobileNavIcon name="menu" size={20} />
@@ -332,56 +339,56 @@
 
   <div hidden={mobileOpen}>
     {#if vehicleDetailHeader}
-      <nav class="dn-mobile-detail-bar" aria-label="Действия за автомобила">
-        <a class="dn-mobile-detail-bar__secondary" href={resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection')}>Заявете оглед</a>
-        <a class="dn-mobile-detail-bar__primary" {...phoneLinkAttributes}>
+      <nav class="dn-mobile-detail-bar" aria-label={i18n.t("m_4c09f960cece")}>
+        <a class="dn-mobile-detail-bar__secondary" href={i18n.href(resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'))} title={i18n.t("m_be4b2e6f02d6")}>{i18n.t("action.viewingShort")}</a>
+        <a class="dn-mobile-detail-bar__primary" {...phoneLinkAttributes} aria-label={`${i18n.t("action.callShort")} — ${brand.phone}`}>
           <MobileNavIcon name="phone" size={20} />
-          Обадете се
+          {i18n.t("action.callShort")}
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} aria-label="Основни действия">
+      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} aria-label={i18n.t("m_a690e455afe4")}>
         <a
           class:active={presentation.mobileNavigation.home}
-          href={resolve('/')}
+          href={i18n.href(resolve('/'))}
           aria-current={presentation.mobileNavigation.home ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="home" /></span>
-          <span>Начало</span>
+          <span>{i18n.t("m_3a78695388b3")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.listing}
-          href={resolve('/listing-grid')}
+          href={i18n.href(resolve('/listing-grid'))}
           aria-current={presentation.mobileNavigation.listing ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="cars" /></span>
-          <span>Коли</span>
+          <span>{i18n.t("nav.carsCompact")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.tradeIn}
-          href={resolve('/contact?topic=trade-in')}
+          href={i18n.href(resolve('/contact?topic=trade-in'))}
           aria-current={presentation.mobileNavigation.tradeIn ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="sell" /></span>
-          <span>Продай</span>
+          <span>{i18n.t("nav.sellCompact")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.import}
-          href={resolve('/contact?topic=import')}
+          href={i18n.href(resolve('/contact?topic=import'))}
           aria-current={presentation.mobileNavigation.import ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="import" /></span>
-          <span>Внос</span>
+          <span>{i18n.t("m_2cff9baabf56")}</span>
         </a>
         <button
           class:active={presentation.mobileNavigation.menu}
           type="button"
-          aria-controls="dn-mobile-menu"
+          {@attach i18n.registerFocusTarget} aria-controls="dn-mobile-menu"
           aria-expanded={mobileOpen}
           onclick={openMobile}
         >
           <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="menu" /></span>
-          <span>Меню</span>
+          <span>{i18n.t("m_99af6606ff9d")}</span>
         </button>
       </nav>
     {/if}
@@ -400,7 +407,7 @@
   .dn-topbar__list a { display: inline-flex; min-height: 44px; align-items: center; color: #30343a; font-weight: var(--dn-control-weight); }
   .dn-topbar__list a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   .dn-header__lower { background: #fff; border-top: 1px solid rgba(20,23,29,.06); border-bottom: 1px solid rgba(20,23,29,.06); }
-  .dn-header__inner { min-height: 94px; display: grid; grid-template-columns: 270px minmax(420px,1fr) auto; align-items: center; gap: 20px; }
+  .dn-header__inner { min-height: 94px; display: grid; grid-template-columns: minmax(160px, 1fr) auto minmax(160px, 1fr); align-items: center; gap: 20px; }
   .dn-logo { display: inline-flex; min-height: 44px; align-items: center; }
   .dn-logo picture { display: flex; align-items: center; }
   .dn-logo img { width: auto; max-width: 230px; height: 64px; object-fit: contain; }
@@ -433,13 +440,16 @@
   .dn-mega__side-action > :global(.dn-mega__cta) { width: 100%; min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; }
 
   @media (min-width: 992px) {
+    .dn-header-actions { justify-self: end; white-space: nowrap; }
+    .dn-topbar__list { gap: var(--dn-space-4); font-size: var(--dn-text-meta); }
+    .dn-topbar__settings { flex-shrink: 0; }
     .dn-header:not(.dn-header--compact) .dn-header__inner { min-height: 84px; }
     .dn-topbar, .dn-topbar__inner { min-height: 44px; }
     .dn-header:not(.dn-header--compact) .dn-logo img { height: 56px; }
   }
 
   @media (min-width: 992px) and (max-width: 1359px) {
-    .dn-header__inner { grid-template-columns: 190px minmax(0, 1fr) auto; gap: 12px; }
+    .dn-header__inner { gap: 12px; }
     .dn-logo img { max-width: 190px; }
     .dn-nav__list { gap: 2px; }
     .dn-nav__list > li > a { padding-inline: 8px; font-size: var(--dn-text-body); white-space: nowrap; }
@@ -451,8 +461,10 @@
   }
 
   @media (max-width: 1199px) {
-    .dn-header__inner { grid-template-columns: 210px 1fr auto; }
-    .dn-nav__list > li > a { padding-inline: 11px; font-size: var(--dn-text-lead); }
+    .dn-header__inner { gap: var(--dn-space-2); }
+    .dn-logo img { max-width: 160px; }
+    .dn-nav { min-width: 0; }
+    .dn-nav__list > li > a { padding-inline: var(--dn-space-2); font-size: var(--dn-text-body); }
     .dn-header-actions :global(.dn-header-action--secondary) { display: none; }
     .dn-header .dn-mega { padding-inline: 32px; }
   }
@@ -688,6 +700,8 @@
       font-weight: var(--dn-control-weight);
       text-align: center;
     }
+
+    .dn-mobile-detail-bar :global(svg) { flex-shrink: 0; }
 
     .dn-mobile-detail-bar__secondary {
       background: var(--dn-red);
