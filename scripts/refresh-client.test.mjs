@@ -226,7 +226,7 @@ test('Modern refresh accepts a previously generated CRLF JSON fixture', () => {
   const before = fs.readFileSync(path.join(root, fixture), 'utf8');
   assert.match(before, /\r\n/);
   assert.match(before, /"id": "am-1001"/);
-  assert.match(before, /\]\r\n\r\nconst matchesText/);
+  assert.match(before, /\];\r\n\r\nconst matchesText/);
 
   applyRefreshAdapter({
     key: 'modern',
@@ -238,7 +238,7 @@ test('Modern refresh accepts a previously generated CRLF JSON fixture', () => {
   const listings = fs.readFileSync(path.join(root, fixture), 'utf8');
   assert.match(listings, /"id": "am-1001"/);
   assert.match(listings, /"id": "am-1009"/);
-  assert.match(listings, /\]\n\nconst matchesText/);
+  assert.match(listings, /\];\n\nconst matchesText/);
   assert.equal(listings.includes('\r'), false);
   fs.rmSync(root, { recursive: true, force: true });
 });
