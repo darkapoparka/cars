@@ -173,3 +173,5 @@ jobs:
           path: ${{ runner.temp }}/reports
           if-no-files-found: warn
           retention-days: 30
+
+# Retry after correcting the Cars-subtree lock validator.
