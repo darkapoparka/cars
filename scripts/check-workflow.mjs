@@ -17,7 +17,14 @@ export function checkWorkflow(root=ROOT,{help=true}={}){
  const docs=['README.md','AGENTS.md','docs/README.md','docs/WORKFLOW.md','docs/TEMPLATE-PROMOTION.md','docs/LEAD-PUBLISHING.md','docs/QA.md','docs/COORDINATION.md','docs/REGISTRY.md','docs/LOCAL-SETUP.md','docs/WORKSPACE.md','docs/PREVIEW-ARCHITECTURE.md'];
  const workspace=validateWorkspaceMap(json(path.join(root,'workspace.json')),json(path.join(root,'Cars.code-workspace')));
  const skills=inspectSkills(root),failures=[...docs.map(f=>path.join(root,f)),...skills.map(s=>s.path)].flatMap(checkLinks);
- const lock=json(path.join(root,'templates.lock.json'));for(const key of ['auto-best','modern','carwow','import']){const e=lock.templates[key];if(e?.repository!==`darkapoparka/cars-template-${key}`||e.snapshotPath!==`templates/${key}`)failures.push('Invalid lock identity '+key);if(e.status==='approved'&&!/^[a-f0-9]{40}$/.test(e.commit||''))failures.push('Approved release lacks immutable commit '+key);}
+ const lock=json(path.join(root,'templates.lock.json'));
+ for(const key of ['auto-best','modern','carwow','import']){
+  const e=lock.templates[key],snapshotPath=`templates/${key}`,source=e?.source;
+  if(e?.repository!=='darkapoparka/cars'||e.snapshotPath!==snapshotPath||e.exportPolicy!=='cars-source-v1')failures.push('Invalid lock identity '+key);
+  if(e?.status==='approved'&&!/^[a-f0-9]{40}$/.test(e.commit||''))failures.push('Approved release lacks immutable commit '+key);
+  if(source?.repository!=='darkapoparka/cars'||source?.revision!==e?.commit||source?.path!==snapshotPath||!/^[a-f0-9]{40}$/.test(source?.tree||'')||!/^[a-f0-9]{64}$/.test(source?.digest||'')||source?.digest!==e?.digest)failures.push('Invalid Cars source locator '+key);
+  if(e?.legacySource?.repository&&e.legacySource.repository!==`darkapoparka/cars-template-${key}`)failures.push('Invalid legacy source identity '+key);
+ }
  if(help)for(const script of ['new-client','template-release','package-dealer','export-dealer','index-deployments','verify-dealer-preview','workspace-doctor','check-live-fab']){const r=spawnSync(process.execPath,[path.join(root,'scripts',script+'.mjs'),'--help'],{encoding:'utf8',windowsHide:true,timeout:15000});if(r.status!==0||!r.stdout.includes('Usage:'))failures.push(`Command help failed: ${script}: ${r.stderr}`);}
  if(failures.length)throw new Error(failures.join('\n'));return{activeDocuments:docs.length,workspace,skills:skills.map(({name,path})=>({name,path})),commandHelp:help?'passed':'not-run',discovery:'Repository-scoped .agents/skills validated; app-server skills/list supplies host discovery proof.'};
 }
