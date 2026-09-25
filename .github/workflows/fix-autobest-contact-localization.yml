@@ -1,0 +1,175 @@
+name: Repair Auto Best contact localization across fleet
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-autobest-contact-localization.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-autobest-contact-localization
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+
+      - name: Patch the canonical Auto Best dealer adapter
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('node:fs');
+          const file = 'scripts/lib/client-refresh-adapters.mjs';
+          let source = fs.readFileSync(file, 'utf8');
+          const startMarker = "  const topic = (id, label, title) => ({";
+          const endMarker = "  const coordinates = b.coordinates";
+          const start = source.indexOf(startMarker);
+          const end = source.indexOf(endMarker, start);
+          if (start < 0 || end < 0) throw new Error('Cannot locate the generated Auto Best contact-topic block');
+          const replacement = `  const topics = [
+            {
+              id: 'general',
+              label: 'Общ въпрос',
+              title: 'Разговор с екипа',
+              description: 'For availability, next steps or any other question about {dealerName}.'
+            },
+            {
+              id: 'inspection',
+              label: 'Оглед',
+              title: 'Viewing in {dealerCity}',
+              description: 'Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.'
+            },
+            {
+              id: 'import',
+              label: 'Внос',
+              title: 'Внос по заявка',
+              description: 'Изпратете обява или задайте марка, модел, година и бюджет. След това уточняваме следващите стъпки с вас.',
+              mobileDescription: 'Изпратете обява или задайте модел и бюджет.'
+            },
+            {
+              id: 'leasing',
+              label: 'Лизинг',
+              title: 'Собствен лизинг',
+              description: 'Получете актуални условия според избрания автомобил и конкретната сделка.'
+            },
+            {
+              id: 'trade-in',
+              label: 'Бартер',
+              title: 'Бартер и оценка',
+              description: 'Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.',
+              mobileDescription: 'Поискайте оценка за продажба или бартер.'
+            }
+          ];
+          `;
+          source = source.slice(0, start) + replacement + source.slice(end);
+          fs.writeFileSync(file, source);
+          NODE
+          node --check scripts/lib/client-refresh-adapters.mjs
+
+      - name: Regenerate the 24 canonical Cars-owned dealer packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          slugs=(
+            al-basma-motors al-hamoor-al-thahabi asko-96 astracar
+            autolife automarket-varna avangard-auto champion-auto-pro
+            day-and-night-auto-group eliqauto elit-auto-import excellent-cars
+            f1rst-motors isauto-varna ivo-auto kg-team-auto
+            legend-auto navara-car outletcars-varna perfect-auto-varna
+            priselci promosale-varna texas-drive-auto the-dealers-point
+          )
+          mkdir -p "$RUNNER_TEMP/generated" "$RUNNER_TEMP/reports"
+          for slug in "${slugs[@]}"; do
+            canonical="clients/$slug"
+            repository="$(node -p "require('./$canonical/dealer.json').repository")"
+            output="$RUNNER_TEMP/generated/$slug"
+            rm -rf "$output"
+            node scripts/rollout-localized-client.mjs \
+              --client-root "$canonical" \
+              --slug "$slug" \
+              --repository "$repository" \
+              --output "$output" \
+              > "$RUNNER_TEMP/reports/$slug.json"
+            test -s "$output/auto-best/src/lib/data/company.ts"
+            grep -Fq 'For availability, next steps or any other question about {dealerName}.' "$output/auto-best/src/lib/data/company.ts"
+            if grep -Eq 'Contact .+ to confirm availability, details, and the next step' "$output/auto-best/src/lib/data/company.ts"; then
+              echo "$slug still contains an unregistered dealer-specific contact message" >&2
+              exit 1
+            fi
+            rsync -a --delete "$output/" "$canonical/"
+            rm -rf "$output"
+            git add -A -- "$canonical"
+          done
+
+      - name: Validate the reconciled Cars source
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/check-workflow.mjs
+          node --test scripts/*.test.mjs
+          node scripts/template-release.mjs verify
+          git diff --cached --check
+
+      - name: Commit and publish the repaired canonical fleet
+        id: release
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config core.autocrlf false
+          git add scripts/lib/client-refresh-adapters.mjs
+          if git diff --cached --quiet; then
+            release_sha="$(git rev-parse HEAD)"
+          else
+            git commit -m 'Fix Auto Best contact localization across dealer fleet'
+            git pull --rebase origin main
+            git push origin HEAD:main
+            release_sha="$(git rev-parse HEAD)"
+          fi
+          echo "release_sha=$release_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Pin the reusable dealer promotion workflow to the repaired release
+        shell: bash
+        env:
+          RELEASE_SHA: ${{ steps.release.outputs.release_sha }}
+        run: |
+          set -euo pipefail
+          git pull --rebase origin main
+          node <<'NODE'
+          const fs = require('node:fs');
+          const file = '.github/workflows/promote-localized-dealer-reusable.yml';
+          let source = fs.readFileSync(file, 'utf8');
+          const next = source.replace(/^      CARS_COMMIT: [0-9a-f]{40}$/m, `      CARS_COMMIT: ${process.env.RELEASE_SHA}`);
+          if (next === source) throw new Error('Reusable promotion CARS_COMMIT pin was not updated');
+          fs.writeFileSync(file, next);
+          NODE
+          git add .github/workflows/promote-localized-dealer-reusable.yml
+          git diff --cached --check
+          git commit -m 'Point dealer promotion at contact-localization repair' -m "Canonical Cars source: $RELEASE_SHA"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Upload generation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: autobest-contact-fleet-repair
+          path: ${{ runner.temp }}/reports
+          if-no-files-found: warn
+          retention-days: 30
