@@ -75,9 +75,9 @@
       }
     }
   },
-  "sourceCommit": "ee8b60bd030223a63d1fc5e1a5802f92baa2a384",
+  "sourceCommit": "1178d8f4a4e77ad476fb978b3dc3d255c815f9b8",
   "packagingVersion": "2",
-  "payloadDigest": "578bf01356572f8dbb54e9cbe42191a824f6e996b6207593bd1baf60f26df8f9",
+  "payloadDigest": "fc1e0ae679e5240db2db5d1ba3cca651345822ce9a7b6f702812ffb72fa1e5e7",
   "payload": [
     {
       "path": ".gitignore",
@@ -89,7 +89,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "f754a7a0ad23983b393299b4eaab1cd36a57d0901525b7d2990b92fc5e549da8"
+      "sha256": "6b2ee84e60fa305e122a8f5c7c031af5cca895db740d4b55e7087346893a06b8"
     },
     {
       "path": "CLIENT.md",
@@ -873,7 +873,7 @@
     },
     {
       "path": "auto-best/src/lib/data/company.ts",
-      "sha256": "47382a43c05bd1063ff1877676cf72c8c716cdb5cb431d4e11b8bf0c9bc51a5e"
+      "sha256": "8511591b9f4cd57103cba3273e9d4bdc08e86aeed2b25f8da995f6a16633b1f5"
     },
     {
       "path": "auto-best/src/lib/data/dealer-profile.json",
@@ -7225,7 +7225,7 @@
     },
     {
       "path": "localization/adoption.json",
-      "sha256": "aa244ea5620404dd79ea8f1904715aa91576b120bca3312083f728c8af256c31"
+      "sha256": "4bdf9b4759675ec28bba7d2b1584fdd8593c81a77f18ecfd0ee82e69c5e1dce7"
     },
     {
       "path": "localization/contract.json",

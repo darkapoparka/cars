@@ -2,7 +2,7 @@
 
 This is an independent personalized dealer copy. Canonical editable source is Cars clients/al-basma-motors/. The dedicated dealer repository is a publishing mirror. Make lasting fixes in canonical source or the versioned packaging layer and regenerate; preserve unmatched mirror fixes first. This copy is not a reusable template master.
 
-Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/46f1249a9c737bce8804bcabc29b1d51c5c84c1e/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/46f1249a9c737bce8804bcabc29b1d51c5c84c1e/docs/LEAD-PUBLISHING.md).
+Read local CLIENT.md and dealer.json (or their parent-directory copies), .client/project.json when present, and the relevant technical TEMPLATE.md. Shared policy: [Cars workflow](https://github.com/darkapoparka/cars/blob/1178d8f4a4e77ad476fb978b3dc3d255c815f9b8/docs/WORKFLOW.md) and [publishing](https://github.com/darkapoparka/cars/blob/1178d8f4a4e77ad476fb978b3dc3d255c815f9b8/docs/LEAD-PUBLISHING.md).
 
 Preserve this dealer identity, exact repository/domain and offered designs. Apply sourced facts to real data modules; metadata alone does not change the application. Protect layout and interactions during an ordinary correction. Sample forms do not prove delivery. Audit requests are read-only; publication never authorizes outreach.
 
