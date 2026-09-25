@@ -24,7 +24,7 @@ jobs:
     env:
       DEALER_SLUG: ${{ inputs.dealer_slug }}
       DEALER_REPOSITORY: ${{ inputs.dealer_repository }}
-      CARS_COMMIT: 9bd9068c15f4377964b2dd9f3e11d3e85238cb44
+      CARS_COMMIT: c0aaf94888daddc0457e56d3b5dd48b8018d1372
     steps:
       - name: Check out registered dealer repository
         uses: actions/checkout@v4
