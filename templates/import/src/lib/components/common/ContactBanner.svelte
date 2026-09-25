@@ -18,7 +18,10 @@
 	/>
 	<div class="contact-banner__copy">
 		<h2>{title ?? (english ? 'Let’s discuss your car' : 'Нека обсъдим твоя автомобил')}</h2>
-		<p>{dealerCopy[english ? 'en' : 'bg'].address}<br />{dealerCopy[english ? 'en' : 'bg'].appointment}</p>
+		<p>
+			{dealerCopy[english ? 'en' : 'bg'].address}<br />{dealerCopy[english ? 'en' : 'bg']
+				.appointment}
+		</p>
 		<div class="contact-banner__actions">
 			<Action href={site.contact.phoneHref}
 				><Phone size={20} aria-hidden="true" />{site.contact.phone}</Action
