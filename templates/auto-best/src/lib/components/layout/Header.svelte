@@ -15,6 +15,7 @@
   import ActionLink from '$components/ui/ActionLink.svelte';
   import MobileMenu from './MobileMenu.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
+  import BottomNavIcon from './BottomNavIcon.svelte';
   import { vehicleContactHref } from '$data/journeys';
   import { brand } from '$config/brand';
   import { navigation, type InternalNavigationHref, type MegaMenu, type NavigationHref, type NavigationItem } from '$data/navigation';
@@ -353,7 +354,7 @@
           href={i18n.href(resolve('/'))}
           aria-current={presentation.mobileNavigation.home ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="home" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="home" /></span>
           <span>{i18n.t("m_3a78695388b3")}</span>
         </a>
         <a
@@ -361,7 +362,7 @@
           href={i18n.href(resolve('/listing-grid'))}
           aria-current={presentation.mobileNavigation.listing ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="cars" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="cars" /></span>
           <span>{i18n.t("nav.carsCompact")}</span>
         </a>
         <a
@@ -369,7 +370,7 @@
           href={i18n.href(resolve('/contact?topic=trade-in'))}
           aria-current={presentation.mobileNavigation.tradeIn ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="sell" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="sell" /></span>
           <span>{i18n.t("nav.sellCompact")}</span>
         </a>
         <a
@@ -377,7 +378,7 @@
           href={i18n.href(resolve('/contact?topic=import'))}
           aria-current={presentation.mobileNavigation.import ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="import" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="import" /></span>
           <span>{i18n.t("m_2cff9baabf56")}</span>
         </a>
         <button
@@ -387,7 +388,7 @@
           aria-expanded={mobileOpen}
           onclick={openMobile}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="menu" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="menu" /></span>
           <span>{i18n.t("m_99af6606ff9d")}</span>
         </button>
       </nav>
@@ -614,7 +615,9 @@
       height: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom));
       grid-template-columns: repeat(5, minmax(0, 1fr));
       padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right));
-      padding-top: 3px;
+      padding-top: var(--dn-space-half);
+      border-top-color: var(--dn-line);
+      box-shadow: 0 -4px 20px rgb(0 0 0 / 4%);
       transition: transform 180ms ease, opacity 150ms ease;
     }
 
@@ -629,19 +632,19 @@
       position: relative;
       display: grid;
       min-width: 0;
-      min-height: 52px;
+      min-height: 60px;
       place-items: center;
       align-content: center;
-      grid-template-rows: 26px auto;
-      gap: 2px;
-      padding: 4px 1px;
+      grid-template-rows: 28px auto;
+      gap: var(--dn-space-1);
+      padding: var(--dn-space-1) 0;
       border: 0;
       border-radius: 10px;
       background: transparent;
-      color: #4f5662;
+      color: var(--dn-muted);
       font: inherit;
       font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-regular);
+      font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
       cursor: pointer;
     }
@@ -649,17 +652,17 @@
     .dn-mobile-bottom-nav a.active,
     .dn-mobile-bottom-nav button.active {
       color: var(--dn-ink);
-      font-weight: var(--dn-weight-semibold);
     }
 
-    .dn-mobile-bottom-nav :is(a.active, button.active) :global(.dn-icon *) {
-      stroke-width: 2;
+    .dn-mobile-bottom-nav :is(a.active, button.active) .dn-mobile-bottom-nav__icon {
+      background: var(--dn-surface);
+      color: var(--dn-red);
     }
 
     .dn-mobile-bottom-nav__icon {
       display: grid;
-      width: 48px;
-      height: 26px;
+      width: 44px;
+      height: 28px;
       place-items: center;
       border-radius: var(--dn-radius-button);
     }

@@ -378,7 +378,7 @@
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
       display: flex;
       flex-wrap: nowrap;
-      gap: 6px;
+      gap: var(--dn-space-1);
       margin: 0;
       color: #626a75;
       font-size: var(--dn-text-meta);
@@ -387,17 +387,18 @@
     }
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta > span {
       display: inline-flex;
-      min-height: 20px;
+      min-height: 24px;
       align-items: center;
       gap: var(--dn-space-1);
-      color: #626873;
+      padding: var(--dn-space-half) var(--dn-space-1);
+      border-radius: 6px;
+      background: var(--dn-surface);
+      color: var(--dn-ink-hover);
       font-size: var(--dn-text-meta);
       font-weight: var(--dn-weight-regular);
       line-height: var(--dn-leading-meta);
       white-space: nowrap;
     }
-
-    .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta > span + span::before { content: '·'; }
 
     .dn-vehicle-card--listing .dn-vehicle-card__name {
       display: block;

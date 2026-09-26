@@ -110,7 +110,7 @@ Sell/Trade-in accepts an optional listing URL or 17-character VIN before opening
 | `--dn-home-section-space` | 32px |
 | `--dn-home-heading-banner-height` | 176px |
 | `--dn-home-banner-overlap` | 24px |
-| `--dn-mobile-nav-height` | 56px |
+| `--dn-mobile-nav-height` | 64px |
 | `--dn-mobile-detail-bar-height` | 60px |
 
 The shared spacing scale runs from 2px through 32px and supplies repeated relationships such as banner padding, overlap and control insets. It is not a mandate to tokenize every coordinate: artwork placement, local 14px card corners and one-off responsive geometry remain with their component owner.
@@ -133,6 +133,8 @@ Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars 
 | 1440px and above | Wide hero side-vehicle artwork is enabled by its media sources |
 
 Additional 359/374/380px and 1199px rules handle particular text, grid and control constraints. These are local breakpoints, not separate site themes. Safe-area insets supplement the fixed mobile navigation and sheet footers. The normal dock and vehicle-detail action bar are separate layouts with different height tokens.
+
+The mobile dock uses `BottomNavIcon.svelte` for five simple symbols with a consistent stroke. Labels keep the 14px meta role and medium weight across active/inactive tabs; a subtle icon background and accent color identify the current destination. The shared dock-height token also reserves page and overlay space. Mobile inventory cards keep year and mileage as separate neutral badges in the content column, with single-line values at 320px.
 
 ## Homepage patterns
 
