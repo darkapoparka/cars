@@ -400,14 +400,14 @@
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta > span + span::before { content: '·'; }
 
     .dn-vehicle-card--listing .dn-vehicle-card__name {
-      display: -webkit-box;
+      display: block;
       min-width: 0;
       font-size: var(--dn-text-lead);
       font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
-      white-space: normal;
-      line-clamp: 2;
-      -webkit-line-clamp: 2;
+      white-space: nowrap;
+      line-clamp: 1;
+      -webkit-line-clamp: 1;
       overflow: hidden;
       text-overflow: ellipsis;
     }

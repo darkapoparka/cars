@@ -51,6 +51,24 @@ try {
       try {
         await visit('/');
         if (width < 768) {
+          const homeCopy = await page.locator('.dn-mobile-core-card strong, .dn-mobile-core-card small, #featured-title').evaluateAll(elements => elements.map(el => {
+            const box = el.getBoundingClientRect();
+            const range = document.createRange(); range.selectNodeContents(el);
+            const text = range.getBoundingClientRect();
+            return { text: el.textContent.trim(), height: box.height, lineHeight: parseFloat(getComputedStyle(el).lineHeight),
+              fits: text.left >= box.left - 1 && text.right <= box.right + 1 };
+          }));
+          assert.equal(homeCopy.length, 9);
+          assert(homeCopy.every(item => item.fits && item.height <= item.lineHeight + 1),
+            `Home service copy and featured heading must fit one line: ${JSON.stringify(homeCopy)}`);
+          const homeArt = await page.locator('.dn-mobile-core-card').evaluateAll(cards => cards.map(card => {
+            const box = card.getBoundingClientRect();
+            const copy = card.querySelector('.dn-mobile-core-card__copy').getBoundingClientRect();
+            const art = card.querySelector('.feature-artwork').getBoundingClientRect();
+            return art.top >= copy.bottom + 4 && art.bottom <= box.bottom && art.left >= box.left && art.right <= box.right;
+          }));
+          assert(homeArt.every(Boolean), 'Service artwork stays inside its card and clear of the text');
+          await capture('home');
           const search = await page.locator('.dn-quick-search__trigger').evaluate(el => {
             const box = el.getBoundingClientRect();
             return { height: box.height, font: getComputedStyle(el).fontSize, gap: getComputedStyle(el).gap,

@@ -189,7 +189,7 @@
   @media (max-width: 767px) {
     .dn-search__mobile-modes {
       display: grid;
-      width: var(--dn-entry-segment-width);
+      width: 100%;
       min-height: var(--dn-control-height-default);
       justify-self: center;
       gap: var(--dn-space-1);

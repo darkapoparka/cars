@@ -46,6 +46,15 @@
       padding: 0;
     }
 
+    .dn-hero :global(.dn-hero-vehicles--mobile[data-pair='home']) {
+      top: 56px;
+      height: 136px;
+    }
+
+    .dn-hero :global(.dn-hero-vehicles__pair) {
+      width: min(calc(100% - 16px), 360px);
+    }
+
     .dn-hero__copy h1 {
       position: absolute;
       width: 1px;

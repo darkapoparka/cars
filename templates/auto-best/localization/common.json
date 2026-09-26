@@ -1,4 +1,12 @@
 {
+  "home.action.cars.title": { "en": "Cars", "bg": "Коли" },
+  "home.action.cars.detail": { "en": "Find your car", "bg": "Избери своята" },
+  "home.action.sell.title": { "en": "Sell", "bg": "Продай" },
+  "home.action.sell.detail": { "en": "Quick valuation", "bg": "Бърза оценка" },
+  "home.action.import.title": { "en": "Import", "bg": "Внос" },
+  "home.action.import.detail": { "en": "Sourced for you", "bg": "По твоя заявка" },
+  "home.action.finance.title": { "en": "Finance", "bg": "Лизинг" },
+  "home.action.finance.detail": { "en": "Flexible plans", "bg": "Гъвкав план" },
   "locale.title": {
     "en": "Country and language",
     "bg": "Държава и език"
