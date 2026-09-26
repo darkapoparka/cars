@@ -62,7 +62,7 @@
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
       <a class="dn-footer__logo" href={i18n.href(resolve('/'))}>
-        <img src={brand.logoOnDark} alt={brand.name} width="220" height="58" />
+        <span>{brand.name}</span>
       </a>
       <span class="dn-footer__tagline">{i18n.t("m_5cf2001dbaf7")}</span>
       <p>{i18n.t("m_9785a63caa9d")}</p>
@@ -125,8 +125,7 @@
   .dn-footer__vehicles { grid-area: vehicles; }
   .dn-footer__company { grid-area: company; }
   .dn-footer__grid > * { min-width: 0; }
-  .dn-footer__logo { display: inline-flex; min-height: var(--dn-control-hit-height); align-items: center; }
-  .dn-footer__logo img { width: 190px; height: 50px; object-fit: contain; }
+  .dn-footer__logo { display: inline-flex; min-height: var(--dn-control-hit-height); align-items: center; color: inherit; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
   .dn-footer__tagline { display: block; margin-top: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-footer__intro p { max-width: 300px; margin: var(--dn-space-4) 0 0; color: var(--dn-muted); font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
   .dn-footer nav strong { display: block; margin-bottom: var(--dn-space-3); font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-body); }
@@ -179,23 +178,22 @@
       padding-block: var(--dn-space-6) max(var(--dn-space-6), env(safe-area-inset-bottom));
       border: 0;
       border-radius: var(--dn-space-6) var(--dn-space-6) 0 0;
-      background: radial-gradient(ellipse at 100% 0%, rgb(var(--dn-theme-accent-rgb) / 12%), transparent 45%), var(--dn-ink-deep);
+      background: var(--dn-ink-deep);
       color: var(--dn-white);
     }
     .dn-footer > .container { width: calc(100% - 40px); }
     .dn-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: 'intro intro' 'contact contact' 'vehicles company'; gap: var(--dn-space-4); }
-    .dn-footer__logo img { width: 176px; height: 44px; }
     .dn-footer__tagline, .dn-footer__intro p, .dn-footer nav strong, .dn-footer__contact h2 { display: none; }
     .dn-footer nav { padding-top: var(--dn-space-3); border-top: 1px solid rgb(255 255 255 / 14%); }
-    .dn-footer nav a { color: var(--dn-text-on-ink); font-size: var(--dn-text-body); }
+    .dn-footer nav a { color: var(--dn-muted-on-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
     .dn-footer a:hover { color: var(--dn-white); }
     .dn-footer a:focus-visible { outline-color: var(--dn-white); }
-    .dn-footer__call { gap: var(--dn-space-3); padding: 0; background: transparent; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); }
-    .dn-footer__call :global(svg) { box-sizing: content-box; flex: 0 0 auto; padding: var(--dn-space-3); border-radius: var(--dn-pill); background: var(--dn-red); }
+    .dn-footer__call { min-height: var(--dn-control-hit-height); padding: 0; border-radius: var(--dn-radius-sm); background: transparent; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-body); }
+    .dn-footer__call :global(svg), .dn-footer__contact-link > :global(svg), .dn-footer__contact-arrow { display: none; }
     .dn-footer .dn-footer__call:hover { background: transparent; }
-    .dn-footer__contact-link { margin-top: var(--dn-space-2); padding-block: var(--dn-space-2); color: var(--dn-text-on-ink); }
-    .dn-footer__contact-arrow { color: var(--dn-muted-on-ink); }
-    .dn-footer__appointment { margin-top: 0; padding-left: calc(18px + var(--dn-space-3)); color: var(--dn-muted-on-ink); }
+    .dn-footer__contact-link { display: flex; margin-top: 0; padding-block: var(--dn-space-1); color: var(--dn-text-on-ink); font: var(--dn-body-font); }
+    .dn-footer__contact-link:hover { text-decoration: underline; text-underline-offset: var(--dn-space-1); }
+    .dn-footer__appointment { margin-top: var(--dn-space-2); color: var(--dn-muted-on-ink); }
     .dn-footer__bottom { flex-direction: column; gap: var(--dn-space-2); margin-top: var(--dn-space-4); padding-top: var(--dn-space-4); border-color: rgb(255 255 255 / 14%); color: var(--dn-muted-on-ink); }
     .dn-footer__copyright { color: var(--dn-text-on-ink); }
   }
