@@ -62,26 +62,11 @@
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
       <a class="dn-footer__logo" href={i18n.href(resolve('/'))}>
-        <picture>
-          <source media="(min-width: 768px)" srcset={brand.logoOnDark} />
-          <img src={brand.logo} alt={brand.name} width="220" height="58" />
-        </picture>
+        <img src={brand.logoOnDark} alt={brand.name} width="220" height="58" />
       </a>
       <span class="dn-footer__tagline">{i18n.t("m_5cf2001dbaf7")}</span>
       <p>{i18n.t("m_9785a63caa9d")}</p>
     </div>
-    <nav class="dn-footer__vehicles" aria-label={i18n.t("m_9e499e4cdaf4")}>
-      <strong>{i18n.t("m_9e499e4cdaf4")}</strong>
-      <a href={i18n.href(resolve('/listing-grid'))}>{i18n.t('footer.inventory.all')}</a>
-      <a href={i18n.href(resolve('/listing-grid?condition=used'))}>{i18n.t('footer.inventory.used')}</a>
-      <a href={i18n.href(resolve('/listing-grid?sort=newest'))}>{i18n.t('footer.inventory.latest')}</a>
-    </nav>
-    <nav class="dn-footer__company" aria-label={i18n.t("m_de4743c87973")}>
-      <strong>{i18n.t("m_de4743c87973")}</strong>
-      <a href={i18n.href(resolve('/about-us'))}>{i18n.t("m_b4b580a9ad8c")}</a>
-      <a href={i18n.href(resolve('/blog'))}>{i18n.t("m_572cd72feb9a")}</a>
-      <a href={i18n.href(resolve('/contact'))}>{i18n.t("m_2b5c3d26721a")}</a>
-    </nav>
     <div class="dn-footer__contact" aria-label={i18n.t("m_fa39abdd21f5")}>
       <h2>{i18n.t("m_822db82e0dc3")}</h2>
       <a {...phoneLinkAttributes} class="dn-footer__call">
@@ -95,6 +80,18 @@
       </a>
       <p class="dn-footer__appointment">{i18n.dealer('appointment')}</p>
     </div>
+    <nav class="dn-footer__vehicles" aria-label={i18n.t("m_9e499e4cdaf4")}>
+      <strong>{i18n.t("m_9e499e4cdaf4")}</strong>
+      <a href={i18n.href(resolve('/listing-grid'))}>{i18n.t('footer.inventory.all')}</a>
+      <a href={i18n.href(resolve('/listing-grid?condition=used'))}>{i18n.t('footer.inventory.used')}</a>
+      <a href={i18n.href(resolve('/listing-grid?sort=newest'))}>{i18n.t('footer.inventory.latest')}</a>
+    </nav>
+    <nav class="dn-footer__company" aria-label={i18n.t("m_de4743c87973")}>
+      <strong>{i18n.t("m_de4743c87973")}</strong>
+      <a href={i18n.href(resolve('/about-us'))}>{i18n.t("m_b4b580a9ad8c")}</a>
+      <a href={i18n.href(resolve('/blog'))}>{i18n.t("m_572cd72feb9a")}</a>
+      <a href={i18n.href(resolve('/contact'))}>{i18n.t("m_2b5c3d26721a")}</a>
+    </nav>
   </div>
   <div class="container dn-footer__bottom"><span class="dn-footer__copyright">© {new Date().getFullYear()} {brand.name}</span><span class="dn-footer__descriptor">{i18n.t("m_5cf2001dbaf7")}</span></div>
 </footer>
@@ -122,10 +119,13 @@
     background: var(--dn-white);
     color: var(--dn-ink);
   }
-  .dn-footer__grid { display: grid; grid-template-columns: 1.2fr .8fr .65fr 1.3fr; align-items: start; gap: 40px; }
+  .dn-footer__grid { display: grid; grid-template-columns: 1.2fr .8fr .65fr 1.3fr; grid-template-areas: 'intro vehicles company contact'; align-items: start; gap: 40px; }
+  .dn-footer__intro { grid-area: intro; }
+  .dn-footer__contact { grid-area: contact; }
+  .dn-footer__vehicles { grid-area: vehicles; }
+  .dn-footer__company { grid-area: company; }
   .dn-footer__grid > * { min-width: 0; }
   .dn-footer__logo { display: inline-flex; min-height: var(--dn-control-hit-height); align-items: center; }
-  .dn-footer__logo picture { display: block; }
   .dn-footer__logo img { width: 190px; height: 50px; object-fit: contain; }
   .dn-footer__tagline { display: block; margin-top: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-footer__intro p { max-width: 300px; margin: var(--dn-space-4) 0 0; color: var(--dn-muted); font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
@@ -170,25 +170,34 @@
 
   @media (min-width: 768px) and (max-width: 1100px) {
     .dn-footer-actions__grid, .dn-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .dn-footer__grid { grid-template-areas: 'intro contact' 'vehicles company'; }
   }
   @media (max-width: 767px) {
     .dn-footer-actions, .dn-footer--mobile-hidden { display: none; }
-    .dn-footer { padding-block: var(--dn-space-6) max(var(--dn-space-5), env(safe-area-inset-bottom)); }
+    .dn-footer {
+      margin-top: var(--dn-space-8);
+      padding-block: var(--dn-space-6) max(var(--dn-space-6), env(safe-area-inset-bottom));
+      border: 0;
+      border-radius: var(--dn-space-6) var(--dn-space-6) 0 0;
+      background: radial-gradient(ellipse at 100% 0%, rgb(var(--dn-theme-accent-rgb) / 12%), transparent 45%), var(--dn-ink-deep);
+      color: var(--dn-white);
+    }
     .dn-footer > .container { width: calc(100% - 40px); }
-    .dn-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-6) var(--dn-space-4); }
-    .dn-footer__intro, .dn-footer__contact { grid-column: 1 / -1; }
-    .dn-footer__logo img { width: 176px; height: 46px; }
-    .dn-footer__tagline { margin-top: var(--dn-space-1); }
-    .dn-footer__intro p { display: none; }
-    .dn-footer nav strong { margin-bottom: var(--dn-space-2); }
-    .dn-footer nav a { font-size: var(--dn-text-meta); }
-    .dn-footer__contact { padding-top: var(--dn-space-5); border-top: 1px solid var(--dn-line); }
-    .dn-footer__contact h2 { max-width: 300px; margin-bottom: var(--dn-space-3); }
-    .dn-footer__call { width: 100%; }
-    .dn-footer__contact-link { margin-top: var(--dn-space-3); padding-block: var(--dn-space-2); }
-    .dn-footer__appointment { margin-top: var(--dn-space-1); padding-left: calc(18px + var(--dn-space-3)); }
-    .dn-footer__bottom { margin-top: var(--dn-space-5); padding-top: var(--dn-space-4); }
-    .dn-footer__descriptor { display: none; }
+    .dn-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: 'intro intro' 'contact contact' 'vehicles company'; gap: var(--dn-space-4); }
+    .dn-footer__logo img { width: 176px; height: 44px; }
+    .dn-footer__tagline, .dn-footer__intro p, .dn-footer nav strong, .dn-footer__contact h2 { display: none; }
+    .dn-footer nav { padding-top: var(--dn-space-3); border-top: 1px solid rgb(255 255 255 / 14%); }
+    .dn-footer nav a { color: var(--dn-text-on-ink); font-size: var(--dn-text-body); }
+    .dn-footer a:hover { color: var(--dn-white); }
+    .dn-footer a:focus-visible { outline-color: var(--dn-white); }
+    .dn-footer__call { gap: var(--dn-space-3); padding: 0; background: transparent; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); }
+    .dn-footer__call :global(svg) { box-sizing: content-box; flex: 0 0 auto; padding: var(--dn-space-3); border-radius: var(--dn-pill); background: var(--dn-red); }
+    .dn-footer .dn-footer__call:hover { background: transparent; }
+    .dn-footer__contact-link { margin-top: var(--dn-space-2); padding-block: var(--dn-space-2); color: var(--dn-text-on-ink); }
+    .dn-footer__contact-arrow { color: var(--dn-muted-on-ink); }
+    .dn-footer__appointment { margin-top: 0; padding-left: calc(18px + var(--dn-space-3)); color: var(--dn-muted-on-ink); }
+    .dn-footer__bottom { flex-direction: column; gap: var(--dn-space-2); margin-top: var(--dn-space-4); padding-top: var(--dn-space-4); border-color: rgb(255 255 255 / 14%); color: var(--dn-muted-on-ink); }
+    .dn-footer__copyright { color: var(--dn-text-on-ink); }
   }
 
   @media (prefers-reduced-motion: reduce) {
