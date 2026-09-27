@@ -29,6 +29,8 @@ try {
       delete fieldStyle.gap;
       const metrics = { card: cardStyle, segment: await style(segment), action: await style(action), field: fieldStyle };
       assert.equal(metrics.segment.height, 44, 'Every segment is a full 44px target');
+      assert.equal((await style(card.locator('.dn-segmented-control'))).height, metrics.field.height, 'The complete segmented control must match the input height');
+      assert.equal(await segment.evaluate(element => { const css = getComputedStyle(element); return element.getBoundingClientRect().height - parseFloat(css.borderTopWidth) - parseFloat(css.borderBottomWidth); }), 40, 'Selected segment paint stays inset inside its full touch target');
       assert.equal(metrics.action.height, 44, 'Every primary action shares the same target');
       assert.equal((await style(field)).height, 44, 'Every single-line entry field shares the same height');
       if (baseline) assert.deepEqual(metrics, baseline, 'Shared entry surfaces and controls must match across routes');
