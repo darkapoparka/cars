@@ -1,0 +1,79 @@
+{
+  "sourceCommit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+  "target": "https://cars-template-auto-best.vercel.app/",
+  "capturedAt": "2026-09-27T21:27:42.215Z",
+  "results": [
+    {
+      "name": "qa-locale-ssr",
+      "exitCode": 0,
+      "start": "2026-09-27T21:13:43.259Z",
+      "end": "2026-09-27T21:13:57.006Z",
+      "outputSha256": "13447f6ef497263dd5ef61e97f107cc697f4e3e2ef0a74bfa2625b4fef3d9089"
+    },
+    {
+      "name": "qa-locales",
+      "exitCode": 0,
+      "start": "2026-09-27T21:13:57.178Z",
+      "end": "2026-09-27T21:15:59.876Z",
+      "outputSha256": "3780a6cec5aa2b23a828d8d28f3b4e568fd20fc812c718f9c14f4d44ef5a7d23"
+    },
+    {
+      "name": "qa-locale-http",
+      "exitCode": 0,
+      "start": "2026-09-27T21:15:59.932Z",
+      "end": "2026-09-27T21:16:02.536Z",
+      "outputSha256": "b37efd43782ed0648a959f6a2370499d8e55dbd784570a08deb40695e11656e3"
+    },
+    {
+      "name": "qa-locale-legacy",
+      "exitCode": 0,
+      "start": "2026-09-27T21:16:02.590Z",
+      "end": "2026-09-27T21:16:35.959Z",
+      "outputSha256": "63b7f48fe795c423bc3faeccc1b5e72c9a26ae14cb1f79f2ab92e9077526dd94"
+    },
+    {
+      "name": "qa-locale-preferences",
+      "exitCode": 0,
+      "start": "2026-09-27T21:16:36.104Z",
+      "end": "2026-09-27T21:16:44.908Z",
+      "outputSha256": "5aeace7e90cbaeda0eb1e9e7ce8d23998daedfbec15a248198c34723ff3c35b2"
+    },
+    {
+      "name": "qa-locale-storage",
+      "exitCode": 0,
+      "start": "2026-09-27T21:16:44.970Z",
+      "end": "2026-09-27T21:16:58.708Z",
+      "outputSha256": "f90019dc854b556750624c7002754a703f6a3786a66994f08d3e62b9d040fec5"
+    },
+    {
+      "name": "qa-locale-races",
+      "exitCode": 0,
+      "start": "2026-09-27T21:16:58.826Z",
+      "end": "2026-09-27T21:17:22.511Z",
+      "outputSha256": "2f4d09fbf1e837cea293f2ea13d503ae42653ddbad1b6585c2893bd51c0363f3"
+    },
+    {
+      "name": "qa-locale-journeys",
+      "exitCode": 0,
+      "start": "2026-09-27T21:17:22.605Z",
+      "end": "2026-09-27T21:20:28.569Z",
+      "outputSha256": "fae26798e42d0d96cfea22eb86504d440338cd81f5613a681cc6a505b0526576"
+    },
+    {
+      "name": "qa-locale-completion",
+      "exitCode": 0,
+      "start": "2026-09-27T21:20:28.658Z",
+      "end": "2026-09-27T21:20:54.440Z",
+      "outputSha256": "407e5c5bda1e1016bbbdd07e2ffa835556f2d85ebe5d132c7491739da810f4c0"
+    },
+    {
+      "name": "qa-locale-mobile-copy",
+      "exitCode": 0,
+      "start": "2026-09-27T21:20:54.575Z",
+      "end": "2026-09-27T21:21:16.308Z",
+      "outputSha256": "41a8c4c144c35ea52f3341499f32df2b8c8d4acc0b81cedc9494edfe634be115"
+    }
+  ],
+  "passed": 10,
+  "failed": 0
+}

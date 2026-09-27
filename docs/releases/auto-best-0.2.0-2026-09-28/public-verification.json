@@ -1,0 +1,38 @@
+{
+  "commit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+  "deployment": {
+    "project": "cars-template-auto-best",
+    "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+    "deploymentId": "dpl_3tvmi6D6QVeJTcqmav5LVLWM3c9J",
+    "url": "https://cars-template-auto-best-94w0gicz5-tyj5.vercel.app",
+    "alias": "https://cars-template-auto-best.vercel.app/"
+  },
+  "checkedAt": "2026-09-27T21:28:47.027Z",
+  "routes": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "finalUrl": "https://cars-template-auto-best.vercel.app/bg",
+      "lang": "bg",
+      "contentLanguage": "bg",
+      "bytes": 144172
+    },
+    {
+      "pathname": "/en/",
+      "status": 200,
+      "finalUrl": "https://cars-template-auto-best.vercel.app/en",
+      "lang": "en",
+      "contentLanguage": "en",
+      "bytes": 136441
+    },
+    {
+      "pathname": "/bg/",
+      "status": 200,
+      "finalUrl": "https://cars-template-auto-best.vercel.app/bg",
+      "lang": "bg",
+      "contentLanguage": "bg",
+      "bytes": 144172
+    }
+  ],
+  "result": "passed"
+}
