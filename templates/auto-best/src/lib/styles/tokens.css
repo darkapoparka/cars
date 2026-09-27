@@ -65,7 +65,9 @@
   /* Responsive shell aliases. */
   --dn-mobile-canvas: var(--dn-surface-canvas);
   --dn-mobile-surface: var(--dn-surface-raised);
-  --dn-mobile-nav-height: 64px;
+  /* Page clearance includes the floating bar and its bottom gap. */
+  --dn-mobile-nav-height: 76px;
+  --dn-mobile-nav-bar-height: 60px;
   --dn-mobile-detail-bar-height: 60px;
   --dn-mobile-page-end: var(--dn-space-4);
   --dn-radius-control: 12px;

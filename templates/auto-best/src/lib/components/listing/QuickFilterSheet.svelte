@@ -10,7 +10,7 @@ import { localeContract } from '$lib/locale/core';
   import { page } from '$app/state';
   import { resolve } from '$app/paths';
   import type { Attachment } from 'svelte/attachments';
-  import { listingParams, type ListingFilters } from '$data/listing';
+  import { listingTypeCount, listingParams, type ListingFilters } from '$data/listing';
   import {
     cleanListingFormData,
     listingFacetOptionLabel,
@@ -55,7 +55,7 @@ import { localeContract } from '$lib/locale/core';
   const attachHeading: Attachment<HTMLHeadingElement> = node => { heading = node; };
   const attachSearch: Attachment<HTMLInputElement> = node => { searchInput = node; };
   const range = $derived(field === 'price' || field === 'year');
-  const searchable = $derived(!range && field !== 'mileage_max' && field !== 'sort');
+  const searchable = $derived(!range && field !== 'mileage_max' && field !== 'sort' && field !== 'type');
   const searchLabel = $derived(field === 'make' ? i18n.t("m_150bec5925bd") : field === 'model' ? i18n.t("m_269619120191") : i18n.t("m_f0549fa54b59", { p0: title.toLocaleLowerCase(i18n.locale) }));
   const optionLabel = (option: string) => listingFacetOptionLabel(field, option, i18n.locale);
   const matchesSearch = (option: string) => search.trim().toLocaleLowerCase(i18n.locale).split(/\s+/).every(term => optionLabel(option).toLocaleLowerCase(i18n.locale).includes(term));
@@ -127,7 +127,7 @@ import { localeContract } from '$lib/locale/core';
           <legend class="dn-sr-only">{title}</legend>
           {#each choices as option (option)}
             <label class="choice" hidden={!matchesSearch(option)}>
-              <span>{optionLabel(option)}</span>
+              <span>{optionLabel(option)}{#if field === 'type'} <span class="choice-count">{listingTypeCount(option)}</span>{/if}</span>
               {#if field === 'equipment'}<input {@attach i18n.validation} type="checkbox" name="equipment" value={option} bind:group={equipment} />
               {:else}<input {@attach i18n.validation} type="radio" name={field} value={option} checked={selected === option} onchange={() => selected = option} />{/if}
             </label>
@@ -148,6 +148,7 @@ import { localeContract } from '$lib/locale/core';
 </dialog>
 
 <style>
+  .choice-count { margin-inline-start: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); }
   :global(body:has(.dn-quick-sheet.standalone[open])) { position: fixed; top: var(--dn-quick-scroll, 0); width: 100%; overflow: hidden; }
   .dn-quick-sheet { width: min(480px, calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow: hidden; border: 0; border-radius: 20px; background: #fff; color: var(--dn-ink); }
   .dn-quick-sheet::backdrop { background: rgb(8 10 14 / .6); }

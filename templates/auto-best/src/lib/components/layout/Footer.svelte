@@ -7,6 +7,7 @@
   import type { Attachment } from 'svelte/attachments';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileNavIcon from './MobileNavIcon.svelte';
   import { brand } from '$config/brand';
 
   let { showActions = true, showMobileFooter = false, observeFooter }: { showActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
@@ -62,7 +63,7 @@
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
       <a class="dn-footer__logo" href={i18n.href(resolve('/'))}>
-        <span>{brand.name}</span>
+        <img src={brand.logoOnDark} alt={brand.name} width="200" height="32" loading="lazy" />
       </a>
       <span class="dn-footer__tagline">{i18n.t("m_5cf2001dbaf7")}</span>
       <p>{i18n.t("m_9785a63caa9d")}</p>
@@ -70,11 +71,11 @@
     <div class="dn-footer__contact" aria-label={i18n.t("m_fa39abdd21f5")}>
       <h2>{i18n.t("m_822db82e0dc3")}</h2>
       <a {...phoneLinkAttributes} class="dn-footer__call">
-        <Icon name="phone" size={18} />
+        <MobileNavIcon name="phone" size={18} />
         <span>{brand.phone}</span>
       </a>
       <a href={i18n.href(resolve('/contact'))} class="dn-footer__contact-link">
-        <Icon name="map-pin" size={18} />
+        <MobileNavIcon name="location" size={18} />
         <span>{i18n.dealer('address')}</span>
         <span class="dn-footer__contact-arrow"><Icon name="arrow-right" size={16} /></span>
       </a>
@@ -126,6 +127,7 @@
   .dn-footer__company { grid-area: company; }
   .dn-footer__grid > * { min-width: 0; }
   .dn-footer__logo { display: inline-flex; min-height: var(--dn-control-hit-height); align-items: center; color: inherit; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+  .dn-footer__logo img { display: block; width: 200px; height: 32px; object-fit: contain; }
   .dn-footer__tagline { display: block; margin-top: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-footer__intro p { max-width: 300px; margin: var(--dn-space-4) 0 0; color: var(--dn-muted); font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
   .dn-footer nav strong { display: block; margin-bottom: var(--dn-space-3); font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-body); }

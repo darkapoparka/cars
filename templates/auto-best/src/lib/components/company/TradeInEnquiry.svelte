@@ -11,6 +11,31 @@
   import { parseVehicleReference } from '$data/vehicle-reference';
   import EnquiryEntryField from './EnquiryEntryField.svelte';
 
+  let { inlineEntry = false }: { inlineEntry?: boolean } = $props();
+  let entryMode = $state<'listing' | 'details'>('details');
+  let listingDraft = $state('');
+  let detailsDraft = $state({ make: '', model: '', year: '', mileage: '' });
+  let entryForm = $state<HTMLFormElement>();
+
+  async function startInline(event: SubmitEvent) {
+    event.preventDefault();
+    if (!entryForm) return;
+    referenceError = '';
+    const nextReference = entryMode === 'listing' ? listingDraft.trim() : '';
+    if (entryMode === 'listing' && !parseVehicleReference(nextReference)) {
+      referenceError = i18n.t('m_4b200427f69a');
+      entryForm.querySelector<HTMLInputElement>('[name="reference"]')?.focus();
+      return;
+    }
+    if (entryMode === 'details') {
+      ({ make, model, year, mileage } = detailsDraft);
+    } else if (reference !== nextReference) {
+      make = model = year = mileage = price = '';
+    }
+    reference = nextReference;
+    await show(entryForm.querySelector<HTMLButtonElement>('button[type="submit"]')!, 1);
+  }
+
   let dialog: HTMLDialogElement;
   let form: HTMLFormElement;
   let heading: HTMLHeadingElement;
@@ -59,8 +84,13 @@
     }
     referenceError = '';
     if (reference !== openedReference) step = 0;
+    await show(event.currentTarget as HTMLElement, step);
+  }
+
+  async function show(trigger: HTMLElement, nextStep: number) {
+    step = nextStep;
     openedReference = reference;
-    returnFocus = event.currentTarget as HTMLElement;
+    returnFocus = trigger;
     scrollY = window.scrollY;
     document.body.style.setProperty('--dn-tradein-scroll', `-${scrollY}px`);
     opened = true;
@@ -72,6 +102,15 @@
 
   function restore() {
     if (!opened) return;
+    if (inlineEntry) {
+      if (reference.trim()) {
+        entryMode = 'listing';
+        listingDraft = reference;
+      } else {
+        entryMode = 'details';
+        detailsDraft = { make, model, year, mileage };
+      }
+    }
     opened = false;
     document.body.style.removeProperty('--dn-tradein-scroll');
     window.scrollTo({ top: scrollY, behavior: 'instant' });
@@ -159,6 +198,26 @@
   });
 </script>
 
+{#if inlineEntry}
+  <form class="dn-service-entry" bind:this={entryForm} onsubmit={startInline}>
+    <fieldset><legend>{i18n.t('service.purpose')}</legend><div class="dn-service-entry__choices">
+      {#each ['Продажба', 'Бартер'] as option (option)}<button type="button" aria-pressed={purpose === option} onclick={() => purpose = option}>{i18n.t(option === 'Продажба' ? 'enquiry.purpose.sell' : 'enquiry.purpose.tradeIn')}</button>{/each}
+    </div></fieldset>
+    {#if entryMode === 'listing'}
+      <div><label>{i18n.t('service.reference')}<input {@attach i18n.validation} name="reference" bind:value={listingDraft} oninput={() => referenceError = ''} required maxlength={2048} autocomplete="off" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url.placeholder')} aria-invalid={referenceError ? true : undefined} aria-describedby={referenceError ? 'sell-entry-error' : 'sell-entry-hint'} /></label>
+      {#if referenceError}<p class="dn-service-entry__error" id="sell-entry-error" role="alert">{referenceError}</p>{:else}<p class="dn-service-entry__hint" id="sell-entry-hint">{i18n.t('service.reference.hint')}</p>{/if}</div>
+    {:else}
+      <div class="dn-service-entry__fields">
+        <label>{i18n.t('m_ccdd25d4230f')}<input {@attach i18n.validation} name="make" bind:value={detailsDraft.make} required pattern={'.*\\S.*'} maxlength={60} placeholder={i18n.t('service.make.placeholder')} /></label>
+        <label>{i18n.t('m_5e2c614c23f0')}<input {@attach i18n.validation} name="model" bind:value={detailsDraft.model} required pattern={'.*\\S.*'} maxlength={80} placeholder={i18n.t('service.model.placeholder')} /></label>
+        <label>{i18n.t('m_89f6832560de')}<input {@attach i18n.validation} name="year" bind:value={detailsDraft.year} required inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
+        <label>{i18n.t('m_694bea758e96')}<input {@attach i18n.validation} name="mileage" bind:value={detailsDraft.mileage} required inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="85000" /></label>
+      </div>
+    {/if}
+    <button class="dn-service-entry__alternative" type="button" onclick={() => { entryMode = entryMode === 'details' ? 'listing' : 'details'; referenceError = ''; }}>{i18n.t(entryMode === 'details' ? 'service.useListing' : 'service.useDetails')}</button>
+    <button class="dn-service-entry__submit" type="submit" aria-haspopup="dialog">{i18n.t('action.requestValuation')}<Icon name="arrow-right" size={15} /></button>
+  </form>
+{:else}
 <div class="dn-tradein-enquiry">
   <h1>{i18n.t("m_cd386206fba4")}</h1>
   <p class="dn-tradein-reference-hint" id="tradein-reference-hint">{i18n.t("m_7730704b5290")}</p>
@@ -178,6 +237,7 @@
     <Icon name="arrow-right" size={15} />
   </button>
 </div>
+{/if}
 
 <dialog onkeydown={trapDialogTab} {@attach dialogViewport} class="dn-tradein-dialog" bind:this={dialog} aria-labelledby="tradein-title" onclose={restore} onclick={(event) => { if (event.target === event.currentTarget) dialog.close(); }}>
   <div class="dn-tradein-panel">

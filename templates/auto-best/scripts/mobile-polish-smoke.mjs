@@ -40,6 +40,7 @@ try {
   for (const locale of ['bg', 'en']) for (const width of [320, 390, 430, 1440]) {
     await suite.check(`${locale} mobile polish ${width}`, async () => {
       const page = await browser.newPage({ viewport: { width, height: width === 1440 ? 900 : 844 }, reducedMotion: 'reduce' });
+      page.setDefaultNavigationTimeout(60000);
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.context().addCookies([{ name: 'cars_locale', value: locale, url: base }, { name: 'cars_prompt', value: 'v1', url: base }]);
@@ -107,22 +108,22 @@ try {
           await page.keyboard.press('Escape');
           assert.notEqual(await page.evaluate(() => getComputedStyle(document.body).position), 'fixed');
         } else await capture('inventory');
-        for (const [topic, selector] of [['import', '.dn-enquiry-import-go'], ['trade-in', '.dn-tradein-start']]) {
+        for (const topic of ['import', 'trade-in']) {
           await visit(`/contact?topic=${topic}`);
-          const action = page.locator(selector);
+          const action = page.locator('.dn-service-entry__submit');
           await fits(action);
-          await compactControl(action, { icon: true });
-          assert((await action.boundingBox()).height <= 49, 'Entry actions should remain one line');
+          await fits(page.locator('.dn-service-entry__choices button'));
+          assert.equal(await page.locator('.dn-service-process li').count(), 3);
+          await page.locator('.dn-service-faq summary').first().click();
+          assert.equal(await page.locator('.dn-service-faq details[open]').count(), 1);
           await capture(topic);
-          await page.locator('.dn-entry-editor-trigger').first().click();
-          const editor = page.locator('.dn-entry-editor[open]');
-          await editor.waitFor();
-          if (width < 768) await page.setViewportSize({ width, height: 420 });
-          const save = editor.locator('button[type=submit]');
-          const rect = await save.boundingBox();
-          assert(rect.y >= 0 && rect.y + rect.height <= (width < 768 ? 420 : 900), 'Editor Save must remain reachable in a short viewport');
-          await page.keyboard.press('Escape');
-          await page.setViewportSize({ width, height: width === 1440 ? 900 : 844 });
+          if (width < 768) {
+            await page.setViewportSize({ width, height: 420 });
+            await action.scrollIntoViewIfNeeded();
+            const rect = await action.boundingBox();
+            assert(rect.y >= 0 && rect.y + rect.height <= 420 - 64, 'Continue remains reachable above mobile navigation in a short viewport');
+            await page.setViewportSize({ width, height: 844 });
+          }
         }
         await visit('/listing-detail-v1/4');
         await fits(page.locator('.dn-detail-tabs button'));

@@ -128,44 +128,26 @@ try {
       assert(await trigger.evaluate(el => document.activeElement === el));
       return evidence;
     });
-    await check('entry-editor', '/contact?topic=import', async page => {
-      const trigger = page.locator('.dn-entry-editor-trigger').first();
-      const previous = await trigger.innerText();
-      await trigger.click();
-      const editor = page.locator('.dn-entry-editor[open]');
-      const evidence = await centered(editor.locator('.dn-entry-editor-close'));
-      await editor.locator('input[name=entry-value]').fill('https://example.com/unsaved');
-      if (width < 768) await page.setViewportSize({ width, height: 420 });
-      const save = editor.locator('.dn-entry-editor-save');
-      const box = await save.boundingBox();
-      assert(box.y >= 0 && box.y + box.height <= page.viewportSize().height, 'Save must remain visible');
-      await save.focus(); await page.keyboard.press('Tab');
-      assert(await editor.evaluate(el => el.contains(document.activeElement)), 'Tab must not escape the modal');
-      await editor.locator('.dn-entry-editor-close').click();
-      assert.equal(await trigger.innerText(), previous, 'Close must discard unsaved edits');
-      assert(await trigger.evaluate(el => document.activeElement === el)); return evidence;
-    });
-    for (const [topic, stem] of [['import', 'import'], ['trade-in', 'tradein']]) {
-      await check(`${stem}-info`, `/contact?topic=${topic}`, async page => {
-        const trigger = page.locator(`.dn-${stem}-info-drawer__peek`);
-        await trigger.click();
-        const close = page.locator(`.dn-${stem}-info-sheet__close`);
-        const evidence = await centered(close);
-        await close.click();
-        assert(await trigger.evaluate(el => document.activeElement === el)); return evidence;
+    for (const topic of ['import', 'trade-in']) {
+      await check(topic + '-info', '/contact?topic=' + topic, async page => {
+        const faq = page.locator('.dn-service-faq summary').first();
+        await faq.click();
+        assert(await page.locator('.dn-service-faq details[open] p').isVisible());
+        await faq.click();
+        assert.equal(await page.locator('.dn-service-faq details[open]').count(), 0);
+        return { inlineFaq: true };
       });
     }
     await check('tradein-form', '/contact?topic=trade-in', async page => {
-      const trigger = page.locator('.dn-tradein-start'); await trigger.click();
+      for(const [field,value] of Object.entries({make:'Audi',model:'A6',year:'2020',mileage:'85000'})) await page.locator('.dn-service-entry [name='+field+']').fill(value);
+      const trigger = page.locator('.dn-service-entry__submit'); await trigger.click();
       const evidence = await centered(page.locator('.dn-tradein-close'));
       await page.locator('.dn-tradein-close').click();
       assert(await trigger.evaluate(el => document.activeElement === el)); return evidence;
     });
     await check('import-form', '/contact?topic=import', async page => {
-      await page.locator('.dn-entry-editor-trigger').first().click();
-      await page.locator('.dn-entry-editor input[name=entry-value]').fill('https://example.com/vehicle');
-      await page.locator('.dn-entry-editor-save').click();
-      const trigger = page.locator('.dn-enquiry-import-go'); await trigger.click();
+      await page.locator('.dn-service-entry [name=link]').fill('https://example.com/vehicle');
+      const trigger = page.locator('.dn-service-entry__submit'); await trigger.click();
       const evidence = await centered(page.locator('.dn-enquiry-close'));
       await page.locator('.dn-enquiry-close').click();
       assert(await trigger.evaluate(el => document.activeElement === el)); return evidence;
@@ -190,27 +172,26 @@ try {
       assert(await trigger.evaluate(el => document.activeElement === el)); return evidence;
     });
     await check('reactive-validation', '/contact?topic=trade-in', async page => {
-      const start = page.locator('.dn-tradein-start'), close = page.locator('.dn-tradein-close');
+      const start = page.locator('.dn-service-entry__submit'), close = page.locator('.dn-tradein-close');
       await start.click();
-      const make = page.locator('.dn-tradein-dialog input[name=make]');
-      assert.equal(await make.evaluate(el => el.checkValidity()), false);
-      assert(await make.evaluate(el => el.validity.customError));
-      await close.click();
-      const editReference = async value => {
-        await page.locator('.dn-entry-editor-trigger').first().click();
-        await page.locator('.dn-entry-editor input[name=entry-value]').fill(value);
-        await page.locator('.dn-entry-editor-save').click();
-      };
-      await editReference('WVWZZZ1JZXW000001'); await start.click();
+      const inlineMake = page.locator('.dn-service-entry [name=make]');
+      assert.equal(await inlineMake.evaluate(el => el.checkValidity()), false);
+      await page.locator('.dn-service-entry__alternative').click();
+      await page.locator('.dn-service-entry [name=reference]').fill('WVWZZZ1JZXW000001');
+      await start.click();
+      await page.locator('.dn-tradein-back').click();
+      const make = page.locator('.dn-tradein-dialog [name=make]');
       assert(await make.evaluate(el => !el.required && !el.validity.customError && el.checkValidity()));
       await make.evaluate(el => el.setCustomValidity('Domain validation sentinel'));
       await make.fill('Audi');
       assert.equal(await make.evaluate(el => el.validationMessage), 'Domain validation sentinel');
-      await make.evaluate(el => el.setCustomValidity('')); await close.click();
-      await editReference(''); await start.click();
-      const model = page.locator('.dn-tradein-dialog input[name=model]');
+      await make.evaluate(el => el.setCustomValidity(''));
+      await page.locator('.dn-tradein-dialog [name=reference]').fill('');
+      await page.locator('.dn-tradein-primary').click();
+      const model = page.locator('.dn-tradein-dialog [name=model]');
       assert(await model.evaluate(el => el.required && !el.checkValidity()));
       await close.click(); return { reactiveRequired: true, domainErrorsPreserved: true };
+
     });
     await context.close();
   }
