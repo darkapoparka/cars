@@ -29,9 +29,19 @@ export const mobileHeroArtwork = {
 
 export type MobileHeroScene = keyof typeof mobileHeroArtwork;
 
-// Service crops align the measured front-car center and tyre baseline across generated scenes.
+// The exact same central vehicle is rendered in both service heroes. Only side details change.
+export const mobileServiceArtwork = {
+  car: { src: mobileHeroArtwork.sell.src, width: 1200, height: 400, crop: [298.5, 0, 600, 400] },
+  sell: {
+    left: { src: mobileHeroArtwork.sell.src, width: 1200, height: 400, crop: [0, 0, 300, 400] },
+    right: { src: mobileHeroArtwork.sell.src, width: 1200, height: 400, crop: [900, 0, 300, 400] }
+  },
+  import: {
+    left: { src: mobileHeroArtwork.import.src, width: 1200, height: 400, crop: [0, 0, 300, 400] },
+    right: { src: mobileHeroArtwork.import.src, width: 1200, height: 400, crop: [885, 0, 315, 400] }
+  }
+} as const;
+
 export const mobileHeroRegions = {
-  sell: { src: mobileHeroArtwork.sell.src, width: 1200, height: 400, crop: [-1.5, 0, 1200, 400] },
-  import: { src: mobileHeroArtwork.import.src, width: 1200, height: 400, crop: [-9, -6, 1200, 400] },
   home: { src: leadSite.artwork.mobileHero.home, width: 1200, height: 660, crop: [8, 110, 1170, 443] }
 } as const;

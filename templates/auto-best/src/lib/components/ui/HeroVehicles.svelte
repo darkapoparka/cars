@@ -2,7 +2,7 @@
   import VehicleCutout from './VehicleCutout.svelte';
   import ArtworkRegion from './ArtworkRegion.svelte';
   import { heroVehiclePairs, vehicleArtwork, mobileHeroArtwork, type HeroVehiclePair, type Vehicle, type MobileHeroScene } from '$data/vehicle-artwork';
-  import { mobileHeroRegions } from '$data/vehicle-artwork';
+  import { mobileHeroRegions, mobileServiceArtwork } from '$data/vehicle-artwork';
 
   let { pair = 'home', mobile = false, mobileScene = 'car', mobileLeft = 'silver', mobileRight = 'urus' }: {
     pair?: HeroVehiclePair; mobile?: boolean; mobileScene?: MobileHeroScene; mobileLeft?: Vehicle; mobileRight?: Vehicle;
@@ -17,7 +17,11 @@
     {#if pair === 'home'}
       <div class="dn-hero-vehicles__pair"><ArtworkRegion artwork={mobileHeroRegions.home} /></div>
     {:else if mobileScene === 'sell' || mobileScene === 'import'}
-      <div class="dn-hero-vehicles__scene"><ArtworkRegion artwork={mobileHeroRegions[mobileScene]} /></div>
+      <div class="dn-hero-vehicles__scene">
+        <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].left} /></div>
+        <div class="dn-hero-vehicles__shared-car"><ArtworkRegion artwork={mobileServiceArtwork.car} /></div>
+        <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].right} /></div>
+      </div>
     {:else}
       <picture><source media="(max-width: 767px)" srcset={mobileArtwork.src} /><img class="dn-hero-vehicles__front" data-scene="car" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={mobileArtwork.width} height={mobileArtwork.height} decoding="async" /></picture>
     {/if}
@@ -57,6 +61,9 @@
     .dn-hero-vehicles__car { display: none; }
     .dn-hero-vehicles__front { display: block; position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 160px; height: 160px; object-fit: contain; }
     .dn-hero-vehicles__scene, .dn-hero-vehicles__pair { display: block; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: min(calc(100% - 16px), 360px); }
+  }
+  @media (max-width: 767px) {
+    .dn-hero-vehicles__scene { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: end; }
   }
   @media (min-width: 1440px) {
     .dn-hero-vehicles {
