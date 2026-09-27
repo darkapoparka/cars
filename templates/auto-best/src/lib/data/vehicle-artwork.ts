@@ -23,15 +23,15 @@ export type HeroVehiclePair = LeadHeroVehiclePair;
 // Center the car itself; supporting objects can make the full composition asymmetric.
 export const mobileHeroArtwork = {
   car: { src: leadSite.artwork.mobileHero.car, width: 600, height: 600, carCenter: 300 },
-  sell: { src: leadSite.artwork.mobileHero.sell, width: 1200, height: 438, carCenter: 641.5 },
-  import: { src: leadSite.artwork.mobileHero.import, width: 1200, height: 450, carCenter: 598 }
+  sell: { src: leadSite.artwork.mobileHero.sell, width: 1200, height: 400, carCenter: 598.5 },
+  import: { src: leadSite.artwork.mobileHero.import, width: 1200, height: 400, carCenter: 591 }
 } as const;
 
 export type MobileHeroScene = keyof typeof mobileHeroArtwork;
 
-// Viewports into the existing transparent artwork; no duplicate raster assets.
+// Service crops align the measured front-car center and tyre baseline across generated scenes.
 export const mobileHeroRegions = {
-  sell: { src: mobileHeroArtwork.sell.src, width: 1200, height: 438, crop: [927, 140, 267, 291] },
-  import: { src: mobileHeroArtwork.import.src, width: 1200, height: 450, crop: [0, 152, 354, 259] },
+  sell: { src: mobileHeroArtwork.sell.src, width: 1200, height: 400, crop: [-1.5, 0, 1200, 400] },
+  import: { src: mobileHeroArtwork.import.src, width: 1200, height: 400, crop: [-9, -6, 1200, 400] },
   home: { src: leadSite.artwork.mobileHero.home, width: 1200, height: 660, crop: [8, 110, 1170, 443] }
 } as const;
