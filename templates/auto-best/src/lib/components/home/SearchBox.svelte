@@ -12,7 +12,7 @@
   import VehicleDiscoveryForm from '$components/listing/VehicleDiscoveryForm.svelte';
   import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
   import { resolveImportUrl } from '$data/company';
-  import { listingBudgetCaps } from '$data/listing';
+  import { listingBudgetCaps, listingVehicles } from '$data/listing';
   import { formatPrice } from '$lib/locale/core';
   import { localeContract } from '$lib/locale/core';
 
@@ -45,7 +45,7 @@
       <div class="dn-search__mobile-modes"><EntrySegments tabs bind:value={mode} label={i18n.t('m_a78ab3107899')} options={[{ value: 'buy', label: i18n.t('m_64e3cb0e4960'), id: 'home-buy-tab', controls: 'home-buy-search' }, { value: 'import', label: i18n.t('m_2cff9baabf56'), id: 'home-import-tab', controls: 'home-import-search' }]} /></div>
       <div id="home-buy-search" class={['dn-search__buy', { 'dn-search__buy--inactive': mode !== 'buy' }]} role="tabpanel" aria-labelledby="home-buy-tab">
         <VehicleQuickSearch />
-        <EntryAction class="dn-search__mobile-all" href={i18n.href(resolve('/listing-grid'))}>{i18n.t('m_5701bc5c6a95')}</EntryAction>
+        <EntryAction class="dn-search__mobile-all" href={i18n.href(resolve('/listing-grid'))}>{i18n.t('home.viewAllCount', { count: listingVehicles.length })}</EntryAction>
       </div>
       <div id="home-import-search" class={['dn-search__import', { 'dn-search__import--active': mode === 'import' }]} role="tabpanel" aria-labelledby="home-import-tab">
         <form class="dn-search__import-form" method="GET" action={i18n.href(resolve('/contact#contact-intent'))} novalidate onsubmit={validateImport}>

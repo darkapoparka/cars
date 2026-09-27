@@ -89,7 +89,7 @@ Home, Sell and Import use `ui/entry/EntryCard.svelte`, `EntrySegments.svelte`, `
 
 Shared entry segments fill the card content width. Each option has a 44px minimum hit target and a transparent 2px border insets the selected paint to 40px without increasing the shell height. Use short translated labels that stay on one line at 320px. The centered CTA uses `--dn-entry-action-width` (180px maximum), a 44px interaction target and a 40px painted pill. `--dn-entry-card-padding` and `--dn-entry-stack-gap` both reference the 16px spacing token.
 
-Body copy is 16px with 1.5 leading; long editorial prose uses 1.65. Labels, supporting metadata, helper text and the mobile dock use the 14px meta role. Nonessential video duration text may use the 12px caption role. Mobile section headings use 24px and service titles use 18px. Make controls and cards reflow around the type instead of adding smaller local overrides. Include `textarea` in native font inheritance.
+Body copy is 16px with 1.5 leading; long editorial prose uses 1.65. Labels, supporting metadata and helper text use the 14px meta role. The compact five-item mobile dock uses the 12px caption role. Nonessential video duration text may use the 12px caption role. Mobile section headings use 24px and service titles use 18px. Make controls and cards reflow around the type instead of adding smaller local overrides. Include `textarea` in native font inheritance.
 
 Sell/Trade-in accepts an optional listing URL or 17-character VIN before opening the enquiry. The reference remains editable and is included in the review and copied/shared text. When supplied, vehicle details are optional; without it, the existing required vehicle fields apply. This is a reference shortcut, not ad import, VIN decoding or automatic valuation. `src/lib/data/vehicle-reference.ts` owns parsing and reuses the listing URL validator.
 
@@ -134,7 +134,7 @@ Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars 
 
 Additional 359/374/380px and 1199px rules handle particular text, grid and control constraints. These are local breakpoints, not separate site themes. Safe-area insets supplement the fixed mobile navigation and sheet footers. The normal dock and vehicle-detail action bar are separate layouts with different height tokens.
 
-The mobile dock uses `BottomNavIcon.svelte` for five simple symbols with a consistent stroke. Labels keep the 14px meta role and medium weight across active/inactive tabs; a subtle icon background and accent color identify the current destination. The shared dock-height token also reserves page and overlay space. Mobile inventory cards keep year and mileage as separate neutral badges in the content column, with single-line values at 320px.
+The mobile dock uses `BottomNavIcon.svelte` and the shared `MobileNavIcon.svelte` renderer for locally embedded Lucide navigation glyphs (24px in the dock, 22px in the header, 2px stroke). Source and license are recorded in `provenance/lucide-icons.md`. The active destination uses red icon/text with a transparent background; inactive items remain muted. Labels use the compact caption role, with semibold on the active destination. Every link keeps its full touch target. The shared dock-height token also reserves page and overlay space. Mobile inventory cards keep year and mileage as separate neutral badges in the content column, with single-line values at 320px.
 
 ## Homepage patterns
 
@@ -196,3 +196,5 @@ Mobile listing cards retain their font sizes, use natural content rows with toke
 Use `dn-icon-button` from `base.css` for close, back and clear controls. It owns a token-derived 44px interaction shell with a 40px visible circle, non-shrinking SVG centering and an explicit native-appearance reset. `dn-compact-control` applies the same 44px shell and 40px visible pill to quick filters and Home, Sell and Import entry actions; `dn-entry-action` and `dn-quick-pill` select their shared width and padding roles. Components own contextual surface, ink, position and responsive visibility.
 
 `src/lib/ui/focus.ts` owns modal Tab containment; `trapDialogTab` adapts native dialog events. Disabled, hidden, inert, negative-tabindex and child-dialog controls are excluded. Focus wrapping scrolls the active control into view; closing restores the opener without scrolling the underlying page. Scroll locks release only after their last owner, even when close and unmount both run.
+
+Home’s View all action includes `listingVehicles.length` through the localized `home.viewAllCount` message. Sell and Import expose How it works as a bordered native details control with an icon, stateful chevron and numbered steps.

@@ -80,7 +80,11 @@ try {
           });
           assert.equal(search.height, 44); assert.equal(search.font, '18px'); assert.equal(search.gap, '11px');
           assert(search.icons.every(icon => icon.width === 18 && Math.abs(icon.dy) <= .5));
-          await compactControl(page.locator('.dn-search__mobile-all:visible').first(), { icon: true });
+          const viewAll = page.locator('.dn-search__mobile-all:visible').first();
+          await compactControl(viewAll, { icon: true });
+          assert.match(await viewAll.innerText(), /\([1-9]\d*\)/, 'Home action exposes the inventory count');
+          await fits(page.locator('.dn-mobile-bottom-nav a, .dn-mobile-bottom-nav button, .dn-mobile-controls a'));
+          assert.equal(await page.locator('.dn-mobile-bottom-nav [aria-current=page]').evaluate(el => getComputedStyle(el).backgroundColor), 'rgba(0, 0, 0, 0)', 'Active navigation stays light');
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);
           const trigger = page.locator('.dn-mobile-bottom-nav button');
           await trigger.click();
@@ -114,6 +118,7 @@ try {
           await fits(action);
           await fits(page.locator('.dn-service-entry__choices button'));
           assert.equal(await page.locator('.dn-service-process li').count(), 3);
+          await fits(page.locator('.dn-service-faq summary'));
           await page.locator('.dn-service-faq summary').first().click();
           assert.equal(await page.locator('.dn-service-faq details[open]').count(), 1);
           await capture(topic);
