@@ -123,7 +123,7 @@ function vercelConfiguration(manifest) {
       autobest: { root: 'auto-best', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs auto-best' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs' },
       [middleService]: middle === 'modern' ? {
         root: 'modern/apps/web', framework: 'nextjs',
-        installCommand: 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -c "pnpm install --frozen-lockfile"',
+        installCommand: 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -- pnpm install --frozen-lockfile',
         buildCommand: native ? 'node ../../../scripts/build-native-service.mjs modern' : 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -c "pnpm --filter @repo/database build && pnpm --filter web build"',
       } : { root: 'import', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs import' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs /variant-2' },
       carwow: { root: 'carwow', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs carwow' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs /variant-3' },
