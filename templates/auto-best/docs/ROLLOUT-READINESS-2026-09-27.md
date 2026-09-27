@@ -6,7 +6,7 @@ Latest Auto Best mobile polish plus two generated Sell/Import service illustrati
 
 ## Readiness
 
-The current master has tested EN/BG responsive controls, search/filter and enquiry journeys. This is not a claim of flawless UX, physical-device testing, owner acceptance or a promoted dealer release. New transparent service illustrations are wired through lead-site and shared artwork metadata for mobile cards, service heroes and the Sell campaign banner. Prompt and asset provenance: [service-banners-2026-09-27.json](../provenance/service-banners-2026-09-27.json).
+The current master has tested EN/BG responsive controls, search/filter and enquiry journeys. This is not a claim of flawless UX, physical-device testing, owner acceptance or a promoted dealer release. New transparent service illustrations are wired through lead-site and shared artwork metadata for mobile cards and the Sell campaign banner. Service heroes retain the centered front-car composition and separate supporting artwork; the generated wide scenes are not hero replacements. Prompt and asset provenance: [service-banners-2026-09-27.json](../provenance/service-banners-2026-09-27.json).
 
 All 25 local dealer manifests still reference Auto Best `989ec3a1d80a8f19150d18eb81282ac7cd216d83`. None declares the new native localization contract or a reviewed `localization/dealer-overlay.json`. These are local source observations; hosted content may contain additional fixes. The selected Auto Best release in templates.lock.json predates this polish.
 

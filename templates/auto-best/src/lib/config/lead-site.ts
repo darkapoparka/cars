@@ -157,8 +157,8 @@ export const leadSite = {
     },
     mobileHero: {
       car: '/assets/images/lead/day-night-urus-front-v1.webp',
-      sell: mobileSell,
-      import: mobileImport,
+      sell: '/assets/images/lead/day-night-mobile-sell-v1.webp',
+      import: '/assets/images/lead/day-night-mobile-import-v1.webp',
       home: collection
     },
     inventoryDemo: {
