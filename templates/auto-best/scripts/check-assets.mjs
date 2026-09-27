@@ -14,10 +14,12 @@ retainedSourceAssets.add('/assets/images/section/bg-12.jpg');
 retainedSourceAssets.add('/assets/images/template/auto-best-logo.svg');
 retainedSourceAssets.add('/assets/images/template/auto-best-logo-light.svg');
 retainedSourceAssets.add('/assets/images/template/auto-best-logo-v2-source.png');
-// Superseded campaign art is retained for provenance; v2 is shared by cards and mobile heroes.
+// Previous campaign art is retained for provenance; active cards use front-facing compositions.
 for (const name of ['day-night-mobile-sell-v1.webp', 'day-night-mobile-import-v1.webp', 'day-night-sell-banner-v2.webp']) retainedSourceAssets.add('/assets/images/lead/' + name);
 retainedSourceAssets.add('/assets/images/template/service-sell-euros-v1.webp');
 retainedSourceAssets.add('/assets/images/template/service-import-v1.webp');
+retainedSourceAssets.add('/assets/images/template/service-sell-v2.webp');
+retainedSourceAssets.add('/assets/images/template/service-import-v2.webp');
 const sourceExtension = /\.(?:css|html|js|svelte|ts)$/i;
 const mediaExtension = /\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)$/i;
 const publicAssetReference = /\/(?:assets\/[A-Za-z0-9._@%+~/-]+\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|favicon\.ico|auto-best-icon\.svg)/gi;
