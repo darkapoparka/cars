@@ -23,7 +23,7 @@
   </section>
   <div class="dn-service-faq">
     <details>
-      <summary>{i18n.t('service.process')}<Icon name="chevron-down" size={16} /></summary>
+      <summary><span class="dn-service-faq__label"><Icon name="file-invoice" size={20} />{i18n.t('service.process')}</span><Icon name="chevron-down" size={18} /></summary>
       <ol class="dn-service-process">{#each numbers as number (number)}
         <li><span aria-hidden="true">{number}</span>{i18n.t(`service.${service}.step${number}.copy`)}</li>
       {/each}</ol>
@@ -36,16 +36,20 @@
   .dn-service-landing { background: var(--dn-mobile-canvas); padding-bottom: 40px; }
   .dn-service-card { position: relative; z-index: 1; width: min(560px, calc(100% - 32px)); margin: -120px auto 0; scroll-margin-top: 24px; }
   .dn-service-faq { width: min(560px, calc(100% - 32px)); margin: 16px auto 0; }
-  summary { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; cursor: pointer; list-style: none; color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); }
+  details { border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); }
+  summary { display: flex; align-items: center; justify-content: space-between; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding: var(--dn-space-3) var(--dn-space-4); cursor: pointer; list-style: none; color: var(--dn-ink); font: var(--dn-control-font); }
+  .dn-service-faq__label { display: flex; align-items: center; gap: var(--dn-space-3); }
+  summary:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; border-radius: var(--dn-radius); }
+  details[open] summary > :global(svg) { transform: rotate(180deg); }
   summary::-webkit-details-marker { display: none; }
   details[open] summary { color: var(--dn-ink); }
-  ol { list-style: none; margin: 16px 0; padding: 0; display: grid; gap: 16px; }
+  ol { list-style: none; margin: 0; padding: var(--dn-space-4); border-top: 1px solid var(--dn-line); display: grid; gap: 16px; }
   li { display: flex; align-items: baseline; gap: 12px; color: var(--dn-ink); font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
-  li span { color: var(--dn-muted); }
-  p { margin: 0; color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-body); }
+  li span { display: grid; place-items: center; flex: 0 0 24px; height: 24px; border-radius: var(--dn-pill); background: var(--dn-surface-panel); color: var(--dn-ink); font-weight: var(--dn-weight-medium); }
+  p { margin: 0; padding: 0 var(--dn-space-4) var(--dn-space-4); color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-body); }
   @media (max-width: 767px) {
     .dn-service-landing { min-height: calc(100svh - var(--dn-mobile-nav-height)); }
     .dn-service-card { width: calc(100% - 24px); margin-top: -52px;  }
-    .dn-service-faq { width: calc(100% - 56px); margin-top: 12px; }
+    .dn-service-faq { width: calc(100% - 24px); margin-top: 12px; }
   }
 </style>

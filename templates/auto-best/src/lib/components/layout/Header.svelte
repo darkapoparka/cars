@@ -657,8 +657,9 @@
 
     .dn-mobile-bottom-nav a.active,
     .dn-mobile-bottom-nav button.active {
-      background: var(--dn-ink);
-      color: var(--dn-white);
+      background: transparent;
+      color: var(--dn-red);
+      font-weight: var(--dn-weight-semibold);
     }
 
     .dn-mobile-bottom-nav :is(a.active, button.active) .dn-mobile-bottom-nav__icon {
