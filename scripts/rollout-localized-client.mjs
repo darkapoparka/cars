@@ -124,7 +124,7 @@ function required(value, label, pattern) {
   return result;
 }
 
-function normalizeManifest(oldManifest, profile, releases, slug, repository) {
+function normalizeManifest(oldManifest, profile, releases, slug, repository, rootAssets = []) {
   const country = required(profile.business.countryCode, `${slug} country code`, /^[A-Z]{2}$/);
   const currency = required(profile.business.currency, `${slug} inventory currency`, /^[A-Z]{3}$/);
   const defaultLocale = country === 'BG' ? 'bg' : 'en';
@@ -149,6 +149,7 @@ function normalizeManifest(oldManifest, profile, releases, slug, repository) {
     language: defaultLocale,
     accent: /^#[0-9a-f]{6}$/i.test(profile.business.accent || '') ? profile.business.accent : (manifest.switcher?.accent || '#2563eb')
   };
+  manifest.extraAssets = [...new Set([...(manifest.extraAssets || []), ...rootAssets])].sort();
   manifest.templateRevisions = Object.fromEntries(manifest.variants.map(({ key }) => [key, selectedTemplateSource(releases[key]).revision]));
   manifest.templateSources = Object.fromEntries(manifest.variants.map(({ key }) => [key, selectedTemplateSource(releases[key])]));
   return validateManifest(manifest, { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });
@@ -167,7 +168,8 @@ async function build({ clientRoot, slug, output, repository }) {
 
   const profile = loadDealerProfile(source, slug);
   const releases = Object.fromEntries(oldManifest.variants.map(({ key }) => [key, verifyTemplate(ROOT, key)]));
-  const manifest = normalizeManifest(oldManifest, profile, releases, slug, repository);
+  const preservedRootAssets = rootDealerDirectories.filter((relative) => exists(path.join(source, relative)));
+  const manifest = normalizeManifest(oldManifest, profile, releases, slug, repository, preservedRootAssets);
   const carsCommit = required(git(ROOT, ['rev-parse', 'HEAD']), 'Cars source commit', /^[a-f0-9]{40}$/);
   const area = fs.mkdtempSync(path.join(os.tmpdir(), `cars-localization-${slug}-`));
   const seed = path.join(area, 'source');
