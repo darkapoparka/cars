@@ -198,3 +198,5 @@ Use `dn-icon-button` from `base.css` for close, back and clear controls. It owns
 `src/lib/ui/focus.ts` owns modal Tab containment; `trapDialogTab` adapts native dialog events. Disabled, hidden, inert, negative-tabindex and child-dialog controls are excluded. Focus wrapping scrolls the active control into view; closing restores the opener without scrolling the underlying page. Scroll locks release only after their last owner, even when close and unmount both run.
 
 Home’s View all action includes `listingVehicles.length` through the localized `home.viewAllCount` message. Sell and Import expose How it works as a bordered native details control with an icon, stateful chevron and numbered steps.
+
+Sell/Import mobile heroes retain a dominant centered front-facing vehicle with balanced supporting artwork on both sides. Their sources live under `leadSite.artwork.mobileHero`, separately from wide service-card/campaign art under `leadSite.artwork.home`. A campaign asset replacement must not change the hero composition. Verify with `scripts/hero-composition-smoke.mjs` at 320/390/430/1440px in EN/BG.
