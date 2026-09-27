@@ -165,7 +165,13 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   const inputDigest = sourceMapDigest(sourceFiles);
   const manifestInput = await fs.readFile(path.join(resolvedSource, 'dealer.json')).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
   let files = retained ?? new Map(sourceFiles);
-  for (const [name, content] of files) { safeRelative(name, 'retained file'); files.set(name, normalized(Buffer.from(content))); }
+  const preserveExtraBytes = (name) => (manifest.extraAssets ?? []).some((asset) =>
+    name === asset || name.startsWith(`${asset}/`));
+  for (const [name, content] of files) {
+    safeRelative(name, 'retained file');
+    const bytes = Buffer.from(content);
+    files.set(name, preserveExtraBytes(name) ? bytes : normalized(bytes));
+  }
   if (native) {
     if (nativeReleases) files = adoptNativeSource(files, manifest, nativeReleases);
     else { assertNativeAdoption(files, manifest); files = applyNativeMounts(files, manifest); assertNativeAdoption(files, manifest); }
