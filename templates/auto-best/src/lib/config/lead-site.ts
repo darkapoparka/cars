@@ -50,8 +50,8 @@ type LeadSiteConfig = {
 };
 
 const collection = '/assets/images/lead/day-night-collection-banner-v2.webp' as const;
-const mobileSell = '/assets/images/lead/day-night-mobile-sell-v1.webp' as const;
-const mobileImport = '/assets/images/lead/day-night-mobile-import-v1.webp' as const;
+const mobileSell = '/assets/images/template/service-sell-v2.webp' as const;
+const mobileImport = '/assets/images/template/service-import-v2.webp' as const;
 
 const vehicleCutouts = {
   silver: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1',
@@ -113,7 +113,7 @@ export const leadSite = {
     home: {
       collection,
       sell: mobileSell,
-      sellCompact: '/assets/images/lead/day-night-sell-banner-v2.webp',
+      sellCompact: mobileSell,
       import: mobileImport
     },
     routeHero: {

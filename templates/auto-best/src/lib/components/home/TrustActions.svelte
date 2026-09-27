@@ -28,7 +28,7 @@
     },
     {
       title: 'Продажба или бартер',
-      artwork: { src: leadSite.artwork.home.sellCompact, width: 1200, height: 675, bounds: [21, 79, 1180, 583], view: 'three-quarter' },
+      artwork: { src: leadSite.artwork.home.sellCompact, width: 1200, height: 400, bounds: [49, 8, 1130, 388], view: 'three-quarter' },
       vehicle: 'gclass',
       tone: 'red',
       mobileTitle: 'Продай/Бартер',
