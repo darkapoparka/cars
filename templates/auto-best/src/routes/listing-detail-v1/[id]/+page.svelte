@@ -179,6 +179,9 @@
                   </ul>
                 </div>
               {/if}
+              <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
+                <img class="dn-detail-finance-banner" src={leadSite.artwork.pdp.finance} alt={i18n.t("m_cab8c52c9be4")} width="450" height="150" loading="lazy" decoding="async" />
+              </button>
             </section>
 
             <section class="dn-detail-card dn-detail-location-card" id="location" aria-labelledby="location-title">
@@ -202,9 +205,6 @@
             </section>
 
             <section class="dn-detail-card dn-detail-finance-card" aria-label={i18n.t("m_b444d04a5c5c")}>
-              <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
-                <img class="dn-detail-finance-banner" src={leadSite.artwork.pdp.finance} alt={i18n.t("m_cab8c52c9be4")} width="450" height="150" loading="lazy" decoding="async" />
-              </button>
               <div class="dn-detail-finance-inline">
                 {#key data.vehicle.id}
                   <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} idPrefix="finance-inline" />

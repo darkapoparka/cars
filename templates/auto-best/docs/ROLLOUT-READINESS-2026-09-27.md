@@ -6,7 +6,7 @@ Latest Auto Best mobile polish. The two generated wide Sell/Import illustrations
 
 ## Readiness
 
-The current master has tested EN/BG responsive controls, search/filter and enquiry journeys. This is not a claim of flawless UX, physical-device testing, owner acceptance or a promoted dealer release. Home Sell/Import cards, service illustrations and the Sell campaign banner use the existing front-facing compositions. Their sources remain separate from the centered service heroes. The generated wide scenes are retained only as provenance, not rendered. Prompt and asset provenance: [service-banners-2026-09-27.json](../provenance/service-banners-2026-09-27.json).
+The current master has tested EN/BG responsive controls, search/filter and enquiry journeys. This is not a claim of flawless UX, physical-device testing, owner acceptance or a promoted dealer release. Home Sell/Import cards, service illustrations, the Sell campaign banner and centered mobile service heroes now use newly generated v3 front-facing compositions. Heroes render one complete transparent scene instead of duplicated side cutouts. The earlier angled v2 scenes are retained only as provenance, not rendered. New prompts, sources and checksums: [front-facing artwork](../provenance/service-front-art-2026-09-27.json). Prompt and asset provenance: [service-banners-2026-09-27.json](../provenance/service-banners-2026-09-27.json).
 
 All 25 local dealer manifests still reference Auto Best `989ec3a1d80a8f19150d18eb81282ac7cd216d83`. None declares the new native localization contract or a reviewed `localization/dealer-overlay.json`. These are local source observations; hosted content may contain additional fixes. The selected Auto Best release in templates.lock.json predates this polish.
 

@@ -667,30 +667,32 @@
   .dn-detail-tabs {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 3px;
+    gap: var(--dn-space-1);
     width: 100%;
     margin-top: 4px;
-    padding: 3px;
+    padding: 0;
     border: 0;
-    border-radius: 10px;
-    background: #f1f2f4;
+    border-radius: var(--dn-pill);
+    background: var(--dn-segment-surface);
   }
 
   .dn-detail-tabs button {
     min-width: 0;
     min-height: var(--dn-control-hit-height);
-    padding: 0 8px;
-    border-radius: 8px;
-    color: #626873;
-    font-size: var(--dn-control-size);
+    padding: 0 var(--dn-space-1);
+    border: var(--dn-space-half) solid transparent;
+    border-radius: var(--dn-pill);
+    background-clip: padding-box;
+    color: var(--dn-muted);
+    font-size: var(--dn-text-meta);
     font-weight: var(--dn-weight-regular);
+    white-space: nowrap;
   }
 
   .dn-detail-tabs button.active {
-    background: #fff;
-    color: var(--dn-ink-strong);
+    background-color: var(--dn-segment-selected);
+    color: var(--dn-ink);
     font-weight: var(--dn-weight-ui);
-    box-shadow: 0 1px 3px rgba(16,24,40,.08);
   }
 
   .dn-detail-tabs button::after { display: none; }

@@ -15,21 +15,18 @@ try {
       const frame=await hero.boundingBox();assert(frame,'Hero is visible');
       const center=frame.x+frame.width/2;
       if(width<768) {
-        const main=hero.locator(topic==='home'?'.dn-hero-vehicles__pair':'.dn-hero-vehicles__front');
+        const main=hero.locator(topic==='home'?'.dn-hero-vehicles__pair':'.dn-hero-vehicles__scene');
         const box=await main.boundingBox();assert(box,'Main vehicle artwork is visible');
         assert(Math.abs(box.x+box.width/2-center)<.5,'Primary vehicle remains centered over the entry card');
-        await main.locator(topic==='home'?'img':':scope').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
+        const img=main.locator('img');
+        await img.evaluate(image=>image.decode());
+        assert(box.x>=0&&box.x+box.width<=width,'Complete hero scene stays within viewport');
+        assert(box.y>=frame.y-1&&box.y+box.height<=frame.y+frame.height+1,'Hero scene is not clipped vertically');
         if(topic!=='home') {
-          const supports=hero.locator('.dn-hero-vehicles__support');assert.equal(await supports.count(),2);
-          for(const image of await supports.locator('img').all()) {
-            await image.evaluate(e=>e.decode());
-            assert(await image.evaluate(e=>e.naturalWidth===Number(e.getAttribute('width'))&&e.naturalHeight===Number(e.getAttribute('height'))),'Support crop metadata must match its source image');
-          }
-          const left=await supports.nth(0).boundingBox(),right=await supports.nth(1).boundingBox();
-          assert(left&&right);assert(left.x+left.width<=box.x+1&&right.x>=box.x+box.width-1,'Supporting artwork stays beside the centered vehicle');
-          assert(Math.abs((center-left.x-left.width/2)-(right.x+right.width/2-center))<1,'Supporting artwork stays balanced');
-          assert(box.width>left.width*2&&box.width>right.width*2,'The front vehicle dominates its supporting artwork');
+          assert(await img.evaluate(e=>e.naturalWidth===1200&&e.naturalHeight===400),'Scene source matches its crop metadata');
+          assert((await img.evaluate(e=>e.currentSrc)).includes('service-'+(topic==='trade-in'?'sell':'import')+'-front-v3.webp'),'Correct front-facing service asset loaded');
         }
+
       } else {
         assert.equal(await hero.locator('.dn-hero-vehicles__car:visible').count(),2,'Desktop retains its two side vehicles');
       }
