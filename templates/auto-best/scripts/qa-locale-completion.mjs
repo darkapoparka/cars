@@ -40,14 +40,22 @@ try {for(const locale of ['en','bg'])for(const width of widths)for(const kind of
    stages.push({stage,...evidence});assert.deepEqual(evidence.bad,[],stage+' wrong language');assert.deepEqual(evidence.overflow,[],stage+' clipped control labels');assert(evidence.documentOverflow<=1);assert(evidence.box.x>=-1&&evidence.box.y>=-1&&evidence.box.right<=evidence.viewport.width+1&&evidence.box.bottom<=evidence.viewport.height+1,stage+' outside viewport');
    await page.screenshot({path:path.join(out,name+'-'+stage+'.png'),animations:'disabled'});
   }
+  const entry=page.locator('.dn-service-entry:visible').first();await entry.waitFor();
   if(kind==='import'){
-   await page.locator('.dn-enquiry-import-segments button').nth(1).click();await page.locator('.dn-entry-editor-trigger:visible').click();const entry=page.locator('dialog.dn-entry-editor[open]');await entry.locator('[name=entry-value]').fill('QA vehicle criteria');await entry.locator('[name=entry-budget]').fill('40000');await entry.locator('button[type=submit]').click();await entry.waitFor({state:'hidden'});await page.locator('.dn-enquiry-import-go').click();
-  }else await page.locator('.dn-tradein-start').click();
+   await entry.locator('.dn-service-entry__choices button').nth(1).click();
+   await entry.locator('[name=brief]').fill('QA vehicle criteria');
+   await entry.locator('[name=budget]').fill('40000');
+   await entry.locator('[name=year]').fill('2020');
+  }else{
+   await entry.locator('[name=make]').fill('QA Demo');
+   await entry.locator('[name=model]').fill('QA Model');
+   await entry.locator('[name=year]').fill('2020');
+   await entry.locator('[name=mileage]').fill('85000');
+  }
+  await entry.locator('button[type=submit]').click();
   const dialog=page.locator(kind==='sell'?'dialog.dn-tradein-dialog[open]':'dialog.dn-enquiry[open]');await dialog.waitFor({state:'visible'});
   const next=dialog.locator(kind==='sell'?'footer .dn-tradein-primary':'footer .dn-enquiry-primary');
-  await dialog.locator('[name=make]').fill('QA Demo');await dialog.locator('[name=model]').fill('QA Model');await dialog.locator('[name=year]').fill('2020');
-  if(kind==='sell'){await dialog.locator('[name=mileage]').fill('85000');await dialog.locator('[name=price]').fill('20000');}
-  await next.click();await snapshot('contact-step',dialog);
+  await snapshot('contact-step',dialog);
   if(kind==='sell'){
    const upload=dialog.locator('input[type=file]');await upload.setInputFiles({name:'invalid.txt',mimeType:'text/plain',buffer:Buffer.from('Not a photo')});await dialog.locator('[role=alert]').waitFor({state:'visible'});await snapshot('photo-type-error',dialog);
    const image=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aR1sAAAAASUVORK5CYII=','base64');
@@ -56,7 +64,7 @@ try {for(const locale of ['en','bg'])for(const width of widths)for(const kind of
   }
   await next.click();await snapshot('review',dialog);
   const copy=dialog.locator(kind==='sell'?'.dn-tradein-copy':'.dn-enquiry-copy');
-  await copy.click();await page.waitForFunction(()=>window.qaSummary.length>0);assert((await page.evaluate(()=>window.qaSummary)).includes('QA Demo'));await snapshot('copy-success',dialog);
+  await copy.click();await page.waitForFunction(()=>window.qaSummary.length>0);assert((await page.evaluate(()=>window.qaSummary)).includes(kind==='sell'?'QA Demo':'QA vehicle criteria'));await snapshot('copy-success',dialog);
   await page.evaluate(()=>window.qaClipboard='deny');await copy.click();await snapshot('copy-denied',dialog);
   await next.click();await page.waitForFunction(()=>typeof window.qaRejectShare==='function');assert(await next.isDisabled());await snapshot('share-pending',dialog);
   await page.evaluate(()=>window.qaRejectShare());await next.waitFor({state:'visible'});await page.waitForFunction(selector=>!document.querySelector(selector)?.disabled,kind==='sell'?'dialog[open] footer .dn-tradein-primary':'dialog[open] footer .dn-enquiry-primary');await snapshot('share-failed',dialog);

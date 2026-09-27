@@ -2,8 +2,12 @@ name: Deploy corrected localized dealer fleet
 # Fleet rollout triggered for release 5ead4304 on 2026-09-24 (encoding-safe).
 
 on:
-  # Dealer publishing and historical repair runs require explicit dispatch.
   workflow_dispatch:
+  # A reviewed immutable template-lock change starts the registered 24-dealer rollout.
+  push:
+    branches: [main]
+    paths:
+      - 'templates.lock.json'
 
 permissions:
   contents: read
