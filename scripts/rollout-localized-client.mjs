@@ -18,6 +18,7 @@ import { ROOT, POLICY, args, git, json, validateManifest, writeJson, sha256, fin
 const exists = (file) => fs.existsSync(file);
 const skip = new Set(['.git', 'node_modules', '.vercel', '.next', '.svelte-kit', '.turbo', 'build', 'dist', 'runtime', 'coverage', 'test-results', 'playwright-report']);
 const rootFiles = ['.gitignore', 'README.md', 'CLIENT.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json'];
+const rootDealerDirectories = ['assets', 'branding', 'dealer-brand'];
 
 const generatedLocaleFiles = ['src/lib/locale/catalog.ts', 'localization/generated-manifest.json'];
 
@@ -201,10 +202,17 @@ async function build({ clientRoot, slug, output, repository }) {
       const from = path.join(source, name);
       if (exists(from)) copyTree(from, path.join(seed, name));
     }
+    const copiedRootAssets = new Set();
+    for (const relative of rootDealerDirectories) {
+      const from = path.join(source, relative);
+      if (!exists(from)) continue;
+      copyTree(from, path.join(seed, relative));
+      copiedRootAssets.add(relative);
+    }
     for (const relative of manifest.extraAssets || []) {
       const from = path.join(source, relative);
       if (!exists(from)) throw new Error(`${slug}: declared extra asset is missing: ${relative}`);
-      copyTree(from, path.join(seed, relative));
+      if (!copiedRootAssets.has(relative)) copyTree(from, path.join(seed, relative));
     }
     writeJson(path.join(seed, 'dealer.json'), manifest);
 
