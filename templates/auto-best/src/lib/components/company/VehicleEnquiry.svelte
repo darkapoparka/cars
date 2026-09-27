@@ -1,4 +1,7 @@
 <script lang="ts">
+  import EntrySegments from '$components/ui/entry/EntrySegments.svelte';
+  import EntryInput from '$components/ui/entry/EntryInput.svelte';
+  import EntryAction from '$components/ui/entry/EntryAction.svelte';
   import { trapDialogTab } from '$lib/ui/overlay';
   import { getI18n } from '$lib/locale/context';
   import { templateMessage } from '$lib/i18n/presentation';
@@ -196,23 +199,20 @@
 
 {#if inlineEntry}
   <form class="dn-service-entry" bind:this={entryForm} onsubmit={startInline}>
-    <fieldset><legend>{i18n.t('service.method')}</legend><div class="dn-service-entry__choices">
-      <button type="button" aria-pressed={importMode === 'listing'} onclick={() => { importMode = 'listing'; entryError = ''; }}>{i18n.t('service.listing')}</button>
-      <button type="button" aria-pressed={importMode === 'criteria'} onclick={() => { importMode = 'criteria'; entryError = ''; }}>{i18n.t('service.search')}</button>
-    </div></fieldset>
+    <EntrySegments class="dn-service-entry__choices" bind:value={importMode} label={i18n.t('service.method')} onchange={() => entryError = ''} options={[{ value: 'listing', label: i18n.t('service.listing') }, { value: 'criteria', label: i18n.t('service.search') }]} />
     {#if importMode === 'listing'}
-      <div class="dn-service-entry__listing"><label><span class="dn-service-entry__sr">{i18n.t('service.url')}</span><input {@attach i18n.validation} name="link" value={link} oninput={(event) => { linkDraft = event.currentTarget.value; entryError = ''; }} required maxlength={2048} inputmode="url" autocomplete="url" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url')} aria-invalid={entryError ? true : undefined} aria-describedby={entryError ? 'import-entry-error' : undefined} /></label>
+      <div class="dn-service-entry__listing"><label><span class="dn-service-entry__sr">{i18n.t('service.url')}</span><EntryInput name="link" value={link} oninput={(event) => { linkDraft = event.currentTarget.value; entryError = ''; }} required maxlength={2048} inputmode="url" autocomplete="url" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url')} aria-invalid={entryError ? true : undefined} aria-describedby={entryError ? 'import-entry-error' : undefined} /></label>
       {#if entryError}<p class="dn-service-entry__error" id="import-entry-error" role="alert">{entryError}</p>{/if}</div>
     {:else}
-      <div><label>{i18n.t('service.brief')}<textarea {@attach i18n.validation} name="brief" bind:value={importBrief} oninput={() => entryError = ''} required maxlength={1500} rows="3" placeholder={i18n.t('service.brief.placeholder')} aria-invalid={entryError ? true : undefined} aria-describedby={entryError ? 'import-brief-error' : undefined}></textarea></label>
+      <div><label>{i18n.t('service.brief')}<textarea class="dn-entry-field dn-entry-field--multiline" {@attach i18n.validation} name="brief" bind:value={importBrief} oninput={() => entryError = ''} required maxlength={1500} rows="3" placeholder={i18n.t('service.brief.placeholder')} aria-invalid={entryError ? true : undefined} aria-describedby={entryError ? 'import-brief-error' : undefined}></textarea></label>
       {#if entryError}<p class="dn-service-entry__error" id="import-brief-error" role="alert">{entryError}</p>{/if}</div>
     {/if}
     {#if importMode === 'criteria'}<div class="dn-service-entry__fields">
-      <label>{i18n.t('service.budget')}<input {@attach i18n.validation} name="budget" bind:value={budget} inputmode="numeric" pattern={'[0-9]{1,8}'} maxlength={8} placeholder="25000" /></label>
-      <label>{i18n.t('service.yearFrom')}<input {@attach i18n.validation} name="year" bind:value={year} inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
+      <label>{i18n.t('service.budget')}<EntryInput name="budget" bind:value={budget} inputmode="numeric" pattern={'[0-9]{1,8}'} maxlength={8} placeholder="25000" /></label>
+      <label>{i18n.t('service.yearFrom')}<EntryInput name="year" bind:value={year} inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
     </div>
     {/if}
-    <button class="dn-service-entry__submit" type="submit" aria-haspopup="dialog">{i18n.t('action.requestImport')}<Icon name="arrow-right" size={15} /></button>
+    <EntryAction class="dn-service-entry__submit" dialog>{i18n.t('action.requestImport')}</EntryAction>
   </form>
 {:else}
 <div class="dn-enquiry-entry" class:dn-enquiry-entry--import={!selling}>

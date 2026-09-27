@@ -30,7 +30,7 @@ try {
         await page.goto(`${base}/`, {waitUntil:'networkidle'});
         await page.evaluate(() => document.fonts.ready);
         if (width < 768) {
-          const buy = page.getByRole('tab',{name:'Покупка',exact:true});
+          const buy = page.locator('#home-buy-tab');
           assert.equal((await typeOf(buy)).size,16);
           assert.equal((await typeOf(buy)).weight,500);
           const entry = await typeOf(page.locator('.dn-quick-search__trigger'));
@@ -61,7 +61,7 @@ try {
           assert(importCtaType.size === 16 && importCtaType.weight === 500 && importCtaType.height === 44 && importCtaBox.width === 180);
           assert.equal(await importCta.evaluate(e=>parseFloat(getComputedStyle(e,'::before').height)),40);
           assert.equal(await importCta.evaluate(e=>getComputedStyle(e,'::before').backgroundColor),'rgb(196, 1, 1)');
-          assert.equal((await page.locator('.dn-search__import-field > .dn-icon').boundingBox()).width,18);
+          assert.equal(await page.locator('.dn-search__import-field > .dn-icon').count(),0);
           assert(Math.abs(importCardBox.height-buyCardBox.height)<.5 && Math.abs(importChipsBox.y-buyChipsBox.y)<.5, 'Home mode switch must not move the card or following content');
           assert(Math.abs(importCtaBox.width-buyCtaBox.width)<.5 && Math.abs(importCtaBox.y-buyCtaBox.y)<.5, 'Home mode CTAs must keep stable geometry');
           const importPlaceholderColor = await page.locator('.dn-search__import-field input').evaluate(e=>getComputedStyle(e,'::placeholder').color);
@@ -88,10 +88,10 @@ try {
           const entry = page.locator('.dn-service-entry');
           const start = entry.locator('button[type=submit]');
           const primary = await typeOf(start);
-          assert(primary.size === 16 && primary.weight === 500 && primary.height === 48);
+          assert(primary.size === 16 && primary.weight === 500 && primary.height === 44);
           for (const input of await entry.locator('input').all()) {
-            assert.equal((await typeOf(input)).size, 16);
-            assert.equal((await typeOf(input)).height, 48);
+            assert.equal((await typeOf(input)).size, 18);
+            assert.equal((await typeOf(input)).height, 44);
           }
           assert.equal(await page.locator('.dn-service-process li').count(), 3);
           await page.locator('.dn-service-faq summary').first().click();
