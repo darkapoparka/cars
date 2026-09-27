@@ -14,6 +14,25 @@ async function check(name, run) {
   catch (error) { results.push({ name, pass: false, error: error.message }); console.error('FAIL ' + name + ': ' + error.message); }
   save();
 }
+async function openManualLocaleSelector(page) {
+  await page.locator('[data-locale-ready="true"]').waitFor({ state: 'attached' });
+  let selector = page.locator('[data-locale-selector]:visible').first();
+  if (!(await selector.count())) {
+    const mobileMenu = page.locator('button[aria-controls="dn-mobile-menu"]:visible').first();
+    if (await mobileMenu.count()) {
+      await mobileMenu.click();
+      await page.locator('#dn-mobile-menu[open]').waitFor({ state: 'visible' });
+    } else {
+      const desktopMenu = page.locator('button[aria-controls="auto-best-locale-settings-menu"]:visible').first();
+      assert.equal(await desktopMenu.count(), 1, 'locale settings menu trigger');
+      await desktopMenu.click();
+      await page.locator('#auto-best-locale-settings-menu').waitFor({ state: 'visible' });
+    }
+    selector = page.locator('[data-locale-selector]:visible').first();
+  }
+  await selector.waitFor({ state: 'visible' });
+  await selector.dispatchEvent('click', { button: 0 });
+}
 try {
   await check('Auto Best preserves trade-in query and anchor when saving country and language', async () => {
     const context = await browser.newContext({ locale: 'en-US', viewport: { width: 390, height: 844 } });
@@ -37,7 +56,7 @@ try {
       assert.equal(cookies.find(cookie => cookie.name === 'cars_prompt')?.value, 'v1');
       for (const cookie of cookies) { assert.equal(cookie.path, '/'); assert.equal(cookie.httpOnly, true); assert.equal(cookie.sameSite, 'Lax'); assert.equal(cookie.secure, base.startsWith('https:')); assert(!cookie.domain.startsWith('.')); }
       await page.reload(); await dialog.waitFor({ state: 'hidden' }); console.log('Preference stage: reload', page.url());
-      await page.locator('[data-locale-ready="true"]').waitFor({ state: 'attached' }); await page.locator('[data-locale-selector]:visible').first().click(); console.log('Preference stage: manual selector', page.url()); await dialog.waitFor({ state: 'visible' });
+      await openManualLocaleSelector(page); console.log('Preference stage: manual selector', page.url()); await dialog.waitFor({ state: 'visible' });
       assert.equal(await dialog.locator('select[name=country]').inputValue(), 'BG');
       assert.equal(await dialog.locator('select[name=locale]').inputValue(), 'bg');
       await page.screenshot({ path: path.join(out, 'saved-bg-mobile.png') });
@@ -59,11 +78,11 @@ try {
       const dialog = page.locator('[data-locale-dialog]'); await dialog.waitFor({ state: 'visible' });
       const dismissed = page.waitForResponse(response => response.url() === new URL('/api/preferences', base).href && response.request().method() === 'POST');
       await page.keyboard.press('Escape'); await dialog.waitFor({ state: 'hidden' });
-      assert.equal((await dismissed).status(), 200); // Closing is immediate; cookie assertions wait for the acknowledged response.
+      assert.equal((await dismissed).status(), 200);
       const cookies = (await context.cookies()).filter(cookie => cookie.name.startsWith('cars_'));
       assert.deepEqual(cookies.map(cookie => cookie.name), ['cars_prompt']);
       await page.reload(); await page.waitForTimeout(300); assert.equal(await dialog.isVisible(), false);
-      await page.locator('[data-locale-ready="true"]').waitFor({ state: 'attached' }); await page.locator('[data-locale-selector]:visible').first().click(); await dialog.waitFor({ state: 'visible' });
+      await openManualLocaleSelector(page); await dialog.waitFor({ state: 'visible' });
       await dialog.locator('button[type=button]').first().click(); await dialog.waitFor({ state: 'hidden' });
       return { cookies, promptReopenedOnReload: false };
     } finally { await context.close(); }
@@ -78,6 +97,7 @@ try {
       await page.locator('#settings-language').selectOption('bg');
       await page.locator('button[name=action][value=save]').click();
       await page.waitForURL('**/bg/contact?topic=import&probe=no-js#form');
+      await page.locator('html').waitFor();
       assert.equal(await page.locator('html').getAttribute('lang'), 'bg');
       const cookies = await context.cookies(); assert.equal(cookies.find(cookie => cookie.name === 'cars_country')?.value, 'DE');
       return { finalUrl: page.url(), cookies };
