@@ -64,7 +64,7 @@ try {
       await page.keyboard.press('Escape'); await dialog.waitFor({ state: 'hidden' });
       await page.goto(base + '/en/contact?topic=trade-in&probe=keep#trade-in-enquiry');
       assert.equal(await page.locator('html').getAttribute('lang'), 'en');
-      const response = await page.request.get(base + '/contact?topic=trade-in', { maxRedirects: 0 });
+      const response = await page.request.get(new URL('/contact?topic=trade-in', base).href, { maxRedirects: 0 });
       assert.equal(response.status(), 307); assert.match(response.headers().location, /^\/bg\/contact\?topic=trade-in$/);
       assert.match(response.headers()['cache-control'], /private.*no-store/);
       assert.deepEqual(errors, []);
