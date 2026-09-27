@@ -1,4 +1,7 @@
 <script lang="ts">
+  import EntrySegments from '$components/ui/entry/EntrySegments.svelte';
+  import EntryInput from '$components/ui/entry/EntryInput.svelte';
+  import EntryAction from '$components/ui/entry/EntryAction.svelte';
   import { trapDialogTab } from '$lib/ui/overlay';
   import { getI18n } from '$lib/locale/context';
 
@@ -200,22 +203,20 @@
 
 {#if inlineEntry}
   <form class="dn-service-entry" bind:this={entryForm} onsubmit={startInline}>
-    <fieldset><legend>{i18n.t('service.purpose')}</legend><div class="dn-service-entry__choices">
-      {#each ['Продажба', 'Бартер'] as option (option)}<button type="button" aria-pressed={purpose === option} onclick={() => purpose = option}>{i18n.t(option === 'Продажба' ? 'enquiry.purpose.sell' : 'enquiry.purpose.tradeIn')}</button>{/each}
-    </div></fieldset>
+    <EntrySegments class="dn-service-entry__choices" bind:value={purpose} label={i18n.t('service.purpose')} options={[{ value: 'Продажба', label: i18n.t('enquiry.purpose.sell') }, { value: 'Бартер', label: i18n.t('enquiry.purpose.tradeIn') }]} />
     {#if entryMode === 'listing'}
-      <div><label>{i18n.t('service.reference')}<input {@attach i18n.validation} name="reference" bind:value={listingDraft} oninput={() => referenceError = ''} required maxlength={2048} autocomplete="off" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url.placeholder')} aria-invalid={referenceError ? true : undefined} aria-describedby={referenceError ? 'sell-entry-error' : 'sell-entry-hint'} /></label>
+      <div><label>{i18n.t('service.reference')}<EntryInput name="reference" bind:value={listingDraft} oninput={() => referenceError = ''} required maxlength={2048} autocomplete="off" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url.placeholder')} aria-invalid={referenceError ? true : undefined} aria-describedby={referenceError ? 'sell-entry-error' : 'sell-entry-hint'} /></label>
       {#if referenceError}<p class="dn-service-entry__error" id="sell-entry-error" role="alert">{referenceError}</p>{:else}<p class="dn-service-entry__hint" id="sell-entry-hint">{i18n.t('service.reference.hint')}</p>{/if}</div>
     {:else}
       <div class="dn-service-entry__fields">
-        <label>{i18n.t('m_ccdd25d4230f')}<input {@attach i18n.validation} name="make" bind:value={detailsDraft.make} required pattern={'.*\\S.*'} maxlength={60} placeholder={i18n.t('service.make.placeholder')} /></label>
-        <label>{i18n.t('m_5e2c614c23f0')}<input {@attach i18n.validation} name="model" bind:value={detailsDraft.model} required pattern={'.*\\S.*'} maxlength={80} placeholder={i18n.t('service.model.placeholder')} /></label>
-        <label>{i18n.t('m_89f6832560de')}<input {@attach i18n.validation} name="year" bind:value={detailsDraft.year} required inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
-        <label>{i18n.t('m_694bea758e96')}<input {@attach i18n.validation} name="mileage" bind:value={detailsDraft.mileage} required inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="85000" /></label>
+        <label>{i18n.t('m_ccdd25d4230f')}<EntryInput name="make" bind:value={detailsDraft.make} required pattern={'.*\\S.*'} maxlength={60} placeholder={i18n.t('service.make.placeholder')} /></label>
+        <label>{i18n.t('m_5e2c614c23f0')}<EntryInput name="model" bind:value={detailsDraft.model} required pattern={'.*\\S.*'} maxlength={80} placeholder={i18n.t('service.model.placeholder')} /></label>
+        <label>{i18n.t('m_89f6832560de')}<EntryInput name="year" bind:value={detailsDraft.year} required inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
+        <label>{i18n.t('m_694bea758e96')}<EntryInput name="mileage" bind:value={detailsDraft.mileage} required inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="85000" /></label>
       </div>
     {/if}
     <button class="dn-service-entry__alternative" type="button" onclick={() => { entryMode = entryMode === 'details' ? 'listing' : 'details'; referenceError = ''; }}>{i18n.t(entryMode === 'details' ? 'service.useListing' : 'service.useDetails')}</button>
-    <button class="dn-service-entry__submit" type="submit" aria-haspopup="dialog">{i18n.t('action.requestValuation')}<Icon name="arrow-right" size={15} /></button>
+    <EntryAction class="dn-service-entry__submit" dialog>{i18n.t('action.requestValuation')}</EntryAction>
   </form>
 {:else}
 <div class="dn-tradein-enquiry">

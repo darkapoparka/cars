@@ -169,6 +169,8 @@
   --dn-overlay-action-font: var(--dn-cta-font);
 
   /* Shared entry and segmented-control aliases. */
+  --dn-entry-stack-gap: var(--dn-space-4);
+  --dn-entry-card-padding: var(--dn-space-4);
   --dn-entry-height: var(--dn-control-height-editor);
   --dn-entry-surface: var(--dn-home-panel);
   --dn-entry-line: var(--dn-line-strong);

@@ -324,7 +324,7 @@
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: 11px;
-    margin: 0 0 12px;
+    margin: 0;
     padding: 0 16px;
     text-align: left;
     cursor: pointer;
@@ -333,7 +333,6 @@
 
   @media (min-width: 992px) {
     .dn-quick-search__trigger {
-      margin-bottom: var(--dn-discovery-gap);
       padding-inline: 18px;
     }
   }
