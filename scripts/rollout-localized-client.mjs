@@ -19,6 +19,20 @@ const exists = (file) => fs.existsSync(file);
 const skip = new Set(['.git', 'node_modules', '.vercel', '.next', '.svelte-kit', '.turbo', 'build', 'dist', 'runtime', 'coverage', 'test-results', 'playwright-report']);
 const rootFiles = ['.gitignore', 'README.md', 'CLIENT.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json'];
 const rootDealerDirectories = ['assets', 'branding', 'dealer-brand'];
+const templateCacheRoot = process.env.CARS_TEMPLATE_CACHE_ROOT ||
+  (process.env.AUTO_BEST_COMMIT ? `C:/Users/radev/cars-fleet-rollout-${process.env.AUTO_BEST_COMMIT.slice(0, 9)}/template-cache` : '');
+
+function cachedTemplate(key, sourceRef) {
+  if (!templateCacheRoot) return null;
+  try {
+    const manifest = json(path.join(templateCacheRoot, 'manifest.json'));
+    if (JSON.stringify(manifest.templates?.[key]) !== JSON.stringify(sourceRef)) return null;
+    const cached = path.join(templateCacheRoot, key);
+    return exists(path.join(cached, 'package.json')) ? cached : null;
+  } catch {
+    return null;
+  }
+}
 
 const generatedLocaleFiles = ['src/lib/locale/catalog.ts', 'localization/generated-manifest.json'];
 
@@ -182,8 +196,9 @@ async function build({ clientRoot, slug, output, repository }) {
       const oldVariant = path.join(source, key);
       if (!exists(oldVariant)) throw new Error(`${slug}: missing existing ${key} source`);
       const sourceRef = selectedTemplateSource(releases[key]);
-      const snapshot = path.join(area, 'templates', key);
-      await materializeTemplateSource({ root: ROOT, key, release: releases[key], source: sourceRef, destination: snapshot });
+      const cached = cachedTemplate(key, sourceRef);
+      const snapshot = cached || path.join(area, 'templates', key);
+      if (!cached) await materializeTemplateSource({ root: ROOT, key, release: releases[key], source: sourceRef, destination: snapshot });
       const candidate = path.join(seed, key);
       await copySource(snapshot, candidate, { key, exportPolicy: POLICY });
       const changed = applyRefreshAdapter({ key, oldVariant, candidate, profile });
