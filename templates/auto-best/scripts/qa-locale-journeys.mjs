@@ -317,9 +317,9 @@ async function preferences(s) {
   });
   await check(s,'explicit URL beats opposite saved locale',refs,async d=>{await go(s,config[s.design].preference);assert.equal(await dialog.isVisible(),false);d.copy=await copyCheck(s);d.savedCookie=(await s.context.cookies()).find(c=>c.name==='cars_locale')?.value;assert.equal(d.savedCookie,next);});
   await check(s,'country preference does not change the dealer phone',refs,async d=>{
-    const before=await p.locator('a[href^="tel:"]').evaluateAll(es=>es.map(e=>e.getAttribute('href')));assert(before.length>0);
+    const before=await p.locator('a[href^="tel:"]').evaluateAll(es=>[...new Set(es.map(e=>e.getAttribute('href')).filter(Boolean))].sort());assert(before.length>0);
     await manualOpen(s);await dialog.locator('[name=country]').selectOption('DE');await dialog.locator('button[type=submit]').click();await ready(p);await dialog.waitFor({state:'hidden'});
-    const after=await p.locator('a[href^="tel:"]').evaluateAll(es=>es.map(e=>e.getAttribute('href')));assert.deepEqual(after,before);d.phones=after;
+    const after=await p.locator('a[href^="tel:"]').evaluateAll(es=>[...new Set(es.map(e=>e.getAttribute('href')).filter(Boolean))].sort());assert.deepEqual(after,before);d.phones=after;
   });
 }
 
