@@ -1,13 +1,18 @@
 name: Deploy corrected localized dealer fleet
-# Fleet rollout triggered for release 5ead4304 on 2026-09-24 (encoding-safe).
+# Fleet rollout triggered for Auto Best 0.2.0 after preservation and cross-platform packaging fixes.
 
 on:
   workflow_dispatch:
-  # A reviewed immutable template-lock change starts the registered 24-dealer rollout.
+  # A reviewed template lock or fleet-packaging change starts the registered 24-dealer rollout.
   push:
     branches: [main]
     paths:
       - 'templates.lock.json'
+      - '.github/workflows/deploy-localized-fleet.yml'
+      - 'scripts/lib/client-refresh-adapters.mjs'
+      - 'scripts/package-dealer.mjs'
+      - 'scripts/publishing/build-native-service.mjs'
+      - 'scripts/rollout-localized-client.mjs'
 
 permissions:
   contents: read
