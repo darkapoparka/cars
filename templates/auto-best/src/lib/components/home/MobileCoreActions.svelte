@@ -8,33 +8,29 @@
 
   const actions = [
     {
-      title: 'Автомобили',
-      text: 'Разгледай всички',
-      cta: 'Разгледай',
+      title: 'home.action.cars.title',
+      text: 'home.action.cars.detail',
       href: '/listing-grid',
       tone: 'blue',
       artwork: mobileActionArtwork.collection
     },
     {
-      title: 'Продай / Бартер',
-      text: 'Бърза оценка',
-      cta: 'Заяви оценка',
+      title: 'home.action.sell.title',
+      text: 'home.action.sell.detail',
       href: '/contact?topic=trade-in',
       tone: 'red',
       artwork: mobileActionArtwork.sell
     },
     {
-      title: 'Внос по заявка',
-      text: 'Европа, САЩ, Канада',
-      cta: 'Заяви внос',
+      title: 'home.action.import.title',
+      text: 'home.action.import.detail',
       href: '/contact?topic=import',
       tone: 'ice',
       artwork: mobileActionArtwork.import
     },
     {
-      title: 'На лизинг',
-      text: 'Гъвкави условия',
-      cta: 'Виж условия',
+      title: 'home.action.finance.title',
+      text: 'home.action.finance.detail',
       href: '/contact?topic=leasing',
       tone: 'dark',
       artwork: mobileActionArtwork.finance
@@ -47,8 +43,8 @@
     {#each actions as action (action.href)}
       <a class={`dn-mobile-core-card dn-mobile-core-card--${action.tone}`} href={i18n.href(resolve(action.href))}>
         <span class="dn-mobile-core-card__copy">
-          <strong>{i18n.text(action.title)}</strong>
-          <small>{i18n.text(action.text)}</small>
+          <strong>{i18n.t(action.title)}</strong>
+          <small>{i18n.t(action.text)}</small>
         </span>
         <span class="dn-mobile-core-card__art" aria-hidden="true">
           <FeatureArtwork artwork={action.artwork} />
@@ -64,21 +60,21 @@
   @media (max-width: 767px) {
     .dn-mobile-core-actions {
       display: block;
-      padding: 8px 12px 4px;
+      padding: var(--dn-space-3) var(--dn-space-3) var(--dn-space-1);
       background: var(--dn-mobile-canvas);
     }
     .dn-mobile-core-actions__grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
+      gap: var(--dn-space-3);
     }
 
     .dn-mobile-core-card {
       position: relative;
       display: block;
-      min-height: 158px;
+      min-height: clamp(164px, 32vw, 224px);
       overflow: hidden;
-      border-radius: 14px;
+      border-radius: var(--dn-radius);
       color: #fff;
       isolation: isolate;
     }
@@ -99,9 +95,9 @@
 
     .dn-mobile-core-card strong {
       max-width: 100%;
-      font-size: var(--dn-text-lead);
+      font-size: var(--dn-text-subheading);
       font-weight: var(--dn-weight-semibold);
-      line-height: var(--dn-leading-control);
+      line-height: var(--dn-leading-heading);
       letter-spacing: var(--dn-tracking-heading);
       white-space: nowrap;
     }
@@ -109,22 +105,21 @@
     .dn-mobile-core-card small {
       display: block;
       max-width: 100%;
-      margin-top: 3px;
-      overflow: hidden;
+      margin-top: var(--dn-space-1);
       font-size: var(--dn-text-meta);
       font-weight: var(--dn-weight-regular);
       line-height: var(--dn-leading-meta);
       letter-spacing: var(--dn-tracking-normal);
       opacity: .92;
-      white-space: nowrap;
+      text-wrap: pretty;
     }
 
     .dn-mobile-core-card__art {
       position: absolute;
       z-index: 1;
-      inset-inline: var(--dn-space-2);
-      bottom: var(--dn-space-3);
-      height: 80px;
+      inset-inline: var(--dn-space-1);
+      bottom: var(--dn-space-2);
+      height: 84px;
       display: flex;
       align-items: flex-end;
       pointer-events: none;
@@ -134,17 +129,4 @@
     .dn-mobile-core-card:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   }
 
-  @media (max-width: 340px) {
-    .dn-mobile-core-card__copy { padding-inline: 8px; }
-
-    .dn-mobile-core-card strong {
-      font-size: var(--dn-text-body);
-      letter-spacing: var(--dn-tracking-heading);
-    }
-
-    .dn-mobile-core-card small {
-      font-size: var(--dn-text-caption);
-      letter-spacing: var(--dn-tracking-normal);
-    }
-  }
 </style>

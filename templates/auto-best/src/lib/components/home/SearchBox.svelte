@@ -9,8 +9,11 @@
   import VehicleDiscoveryForm from '$components/listing/VehicleDiscoveryForm.svelte';
   import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
   import { resolveImportUrl } from '$data/company';
+  import { listingBudgetCaps } from '$data/listing';
+  import { formatPrice } from '$lib/locale/core';
   import { localeContract } from '$lib/locale/core';
 
+  const budgetCaps = listingBudgetCaps();
   let desktopFilters = $state(listingFiltersFromDraft(emptyListingDraft()));
   let mode = $state<'buy' | 'import'>('buy');
   let importUrl = $state('');
@@ -119,8 +122,9 @@
 
   </div>
   <nav class="dn-search__mobile-shortcuts" aria-label={i18n.t("m_dea1661dff21")}>
-    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?price_max=60000'))}>{i18n.t("m_13ead2358af4", { inventoryCurrency: compactInventoryCurrency })}</a>
-    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?price_min=60000&price_max=70000'))}>{i18n.t("m_8d9512ccead1", { inventoryCurrency: compactInventoryCurrency })}</a>
+    {#each budgetCaps as cap (cap)}
+      <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve(`/listing-grid?price_max=${cap}`))} aria-label={i18n.t('inventory.budget.accessible', { amount: formatPrice(cap, i18n.locale) })}>{i18n.t('inventory.budget.short', { amount: cap / 1000, currency: compactInventoryCurrency })}</a>
+    {/each}
     <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=Audi'))}>{i18n.t("m_ab31803df6d5")}</a>
     <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=Mercedes-Benz'))}>{i18n.t("m_3d0e65dfe82d")}</a>
     <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=BMW'))}>{i18n.t("m_c76b5628a9d1")}</a>
@@ -189,7 +193,7 @@
   @media (max-width: 767px) {
     .dn-search__mobile-modes {
       display: grid;
-      width: var(--dn-entry-segment-width);
+      width: 100%;
       min-height: var(--dn-control-height-default);
       justify-self: center;
       gap: var(--dn-space-1);

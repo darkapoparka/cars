@@ -1,4 +1,160 @@
 {
+  "service.purpose": {
+    "en": "What would you like to do?",
+    "bg": "Какво предпочиташ?"
+  },
+  "service.sell.heading": {
+    "en": "Sell or trade in",
+    "bg": "Продажба и бартер"
+  },
+  "service.method": {
+    "en": "How would you like to start?",
+    "bg": "Как искаш да започнеш?"
+  },
+  "service.listing": {
+    "en": "I have a listing",
+    "bg": "Имам обява"
+  },
+  "service.manual": {
+    "en": "Enter details",
+    "bg": "Въведи данни"
+  },
+  "service.search": {
+    "en": "Find me a car",
+    "bg": "Търся кола"
+  },
+  "service.brief.error": {
+    "en": "Describe the car you are looking for.",
+    "bg": "Опиши автомобила, който търсиш."
+  },
+  "service.reference": {
+    "en": "Listing link or VIN",
+    "bg": "Линк към обява или VIN"
+  },
+  "service.url": {
+    "en": "Listing link",
+    "bg": "Линк към обявата"
+  },
+  "service.url.placeholder": {
+    "en": "https://…",
+    "bg": "https://…"
+  },
+  "service.reference.hint": {
+    "en": "Paste a listing link or the 17-character VIN.",
+    "bg": "Постави линк към обява или 17-символния VIN."
+  },
+  "service.useListing": {
+    "en": "Use a listing or VIN instead",
+    "bg": "Използвай обява или VIN"
+  },
+  "service.useDetails": {
+    "en": "Enter the car details instead",
+    "bg": "Въведи данните ръчно"
+  },
+  "service.url.error": {
+    "en": "Enter a valid car listing link, starting with https://.",
+    "bg": "Въведи валиден линк към обява, започващ с https://."
+  },
+  "service.brief": {
+    "en": "What car are you looking for?",
+    "bg": "Каква кола търсиш?"
+  },
+  "service.brief.placeholder": {
+    "en": "E.g. a family SUV, automatic, petrol. Tell us your preferred models and must-haves.",
+    "bg": "Напр. семеен SUV, автоматик, бензин. Опиши предпочитани модели и важното за теб."
+  },
+  "service.budget": {
+    "en": "Budget (€)",
+    "bg": "Бюджет (€)"
+  },
+  "service.make.placeholder": {
+    "en": "BMW",
+    "bg": "BMW"
+  },
+  "service.model.placeholder": {
+    "en": "530d",
+    "bg": "530d"
+  },
+  "service.yearFrom": {
+    "en": "Year from",
+    "bg": "Година от"
+  },
+  "service.demo": {
+    "en": "Demo enquiry · Review and copy or share. Nothing is sent automatically.",
+    "bg": "Демо запитване · Прегледай и копирай или сподели. Не се изпраща автоматично."
+  },
+  "service.process": {
+    "en": "How it works",
+    "bg": "Как се случва"
+  },
+  "service.sell.step1.copy": {
+    "en": "Add your car details and photos.",
+    "bg": "Добави данни и снимки на автомобила."
+  },
+  "service.sell.step2.copy": {
+    "en": "Arrange a viewing and valuation.",
+    "bg": "Уговаряме оглед и оценка."
+  },
+  "service.sell.step3.copy": {
+    "en": "Discuss the sale or trade-in terms.",
+    "bg": "Обсъждаме условията за продажба или бартер."
+  },
+  "service.import.step1.copy": {
+    "en": "Share a listing or describe the car you want.",
+    "bg": "Добави обява или опиши каква кола търсиш."
+  },
+  "service.import.step2.copy": {
+    "en": "Discuss the checks, transport and total budget.",
+    "bg": "Уточняваме проверките, транспорта и общия бюджет."
+  },
+  "service.import.step3.copy": {
+    "en": "Review the terms before deciding to buy.",
+    "bg": "Преглеждаш условията, преди да решиш за покупката."
+  },
+  "footer.inventory.all": {
+    "en": "All cars",
+    "bg": "Всички коли"
+  },
+  "footer.inventory.used": {
+    "en": "Used cars",
+    "bg": "Употребявани"
+  },
+  "footer.inventory.latest": {
+    "en": "Latest arrivals",
+    "bg": "Нови обяви"
+  },
+  "home.action.cars.title": {
+    "en": "Cars",
+    "bg": "Коли"
+  },
+  "home.action.cars.detail": {
+    "en": "Find your car",
+    "bg": "Избери своята"
+  },
+  "home.action.sell.title": {
+    "en": "Sell",
+    "bg": "Продай"
+  },
+  "home.action.sell.detail": {
+    "en": "Quick valuation",
+    "bg": "Бърза оценка"
+  },
+  "home.action.import.title": {
+    "en": "Import",
+    "bg": "Внос"
+  },
+  "home.action.import.detail": {
+    "en": "Sourced for you",
+    "bg": "По твоя заявка"
+  },
+  "home.action.finance.title": {
+    "en": "Finance",
+    "bg": "Лизинг"
+  },
+  "home.action.finance.detail": {
+    "en": "Flexible plans",
+    "bg": "Гъвкав план"
+  },
   "locale.title": {
     "en": "Country and language",
     "bg": "Държава и език"
@@ -278,5 +434,37 @@
   "action.requestValuation": {
     "en": "Request valuation",
     "bg": "Заяви оценка"
+  },
+  "inventory.facet.type": {
+    "en": "Type",
+    "bg": "Тип"
+  },
+  "inventory.type.all": {
+    "en": "All vehicles",
+    "bg": "Всички"
+  },
+  "inventory.type.car": {
+    "en": "Cars",
+    "bg": "Коли"
+  },
+  "inventory.type.motorbike": {
+    "en": "Motorbikes",
+    "bg": "Мотори"
+  },
+  "inventory.type.van": {
+    "en": "Vans",
+    "bg": "Бусове"
+  },
+  "inventory.type.truck": {
+    "en": "Trucks",
+    "bg": "Камиони"
+  },
+  "inventory.budget.short": {
+    "en": "≤ {currency}{amount}k",
+    "bg": "≤ {amount}k {currency}"
+  },
+  "inventory.budget.accessible": {
+    "en": "Vehicles up to {amount}",
+    "bg": "Автомобили до {amount}"
   }
 }

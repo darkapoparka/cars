@@ -9,6 +9,7 @@
   import ListingFilters from '$components/listing/ListingFilters.svelte';
   import ListingResults from '$components/listing/ListingResults.svelte';
   import { brand } from '$config/brand';
+  import { activeFilterCount } from '$data/listing';
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
@@ -22,7 +23,7 @@
 
 <VehicleSearchDialog filters={draftFilters}>
 {#snippet children(openFilters, filtersOpen)}
-<div class="dn-listing-stage" data-layout="hero-discovery">
+<div class="dn-listing-stage" data-layout="hero-discovery" data-active-filters={activeFilterCount(data.filters) > 0 || Boolean(data.filters.q)}>
   <ListingHero count={data.vehicles.length} />
   <ListingFilters filters={data.filters} {openFilters} {filtersOpen} onDraftChange={(filters) => draftFilters = filters} />
 </div>

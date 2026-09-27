@@ -13,6 +13,7 @@
     bodyLabel,
     filterListingVehicles,
     listingFilterOptions,
+    listingTypeCount,
     listingModelsForMake,
     listingVehicles,
     type ListingFilters
@@ -23,6 +24,7 @@
     listingDraftFromFilters,
     listingDraftHasFilters,
     listingFacetSummary,
+    listingFacetOptionLabel,
     listingFacetTitle,
     listingFiltersFromDraft,
     withListingMake,
@@ -64,6 +66,7 @@
   };
 
   const mobileFieldDefinitions = [
+    { field: 'type', label: 'Vehicle type' },
     { field: 'make', label: 'Марка' },
     { field: 'model', label: 'Модел' },
     { field: 'body', label: 'Купе' },
@@ -184,6 +187,14 @@
       </div>
       <div class="dn-listing-filter__filter-groups">
         <div class="dn-listing-filter__core-grid">
+          <label>
+            <span class="dn-listing-filter__field-label">{i18n.t('inventory.facet.type')}</span>
+            <select {@attach i18n.validation} name="type" aria-label={i18n.t('inventory.facet.type')} bind:value={draft.type}>
+              {#each listingFilterOptions.types as option (option)}
+                <option value={option}>{listingFacetOptionLabel('type', option, i18n.locale)} ({listingTypeCount(option)})</option>
+              {/each}
+            </select>
+          </label>
           <label>
             <span class="dn-listing-filter__field-label">{i18n.t("m_ccdd25d4230f")}</span>
             <select {@attach i18n.validation} name="make" aria-label={i18n.t("m_ccdd25d4230f")} value={draft.make} onchange={(event) => { draft = withListingMake(draft, event.currentTarget.value); }}>

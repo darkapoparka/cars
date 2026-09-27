@@ -848,7 +848,7 @@
     padding-bottom: 68px;
   }
   html.dn-html--workflow {
-    scroll-padding-bottom: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom) + 68px);
+    scroll-padding-bottom: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom));
   }
 }
 

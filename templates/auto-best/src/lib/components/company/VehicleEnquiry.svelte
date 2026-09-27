@@ -13,7 +13,29 @@
   import { resolveImportUrl } from '$data/company';
   import EnquiryEntryField from './EnquiryEntryField.svelte';
 
-  let { kind, importUrl = null }: { kind: 'trade-in' | 'import'; importUrl?: string | null } = $props();
+  let { kind, importUrl = null, inlineEntry = false }: { kind: 'trade-in' | 'import'; importUrl?: string | null; inlineEntry?: boolean } = $props();
+  let entryForm = $state<HTMLFormElement>();
+  let entryError = $state('');
+
+  async function startInline(event: SubmitEvent) {
+    event.preventDefault();
+    if (!entryForm) return;
+    entryError = '';
+    if (importMode === 'listing' && !resolveImportUrl(link)) {
+      entryError = i18n.t('service.url.error');
+      entryForm.querySelector<HTMLInputElement>('[name="link"]')?.focus();
+      return;
+    }
+    if (importMode === 'criteria' && !importBrief.trim()) {
+      entryError = i18n.t('service.brief.error');
+      entryForm.querySelector<HTMLTextAreaElement>('textarea')?.focus();
+      return;
+    }
+    const nextLink = importMode === 'listing' ? resolveImportUrl(link)! : '';
+    if (nextLink !== selectedLink) make = model = '';
+    selectedLink = nextLink;
+    await show(entryForm.querySelector<HTMLButtonElement>('button[type="submit"]')!, 1);
+  }
   const selling = $derived(kind === 'trade-in');
   const title = $derived(selling ? i18n.t("m_e9c22777385c") : i18n.t("m_baac038ffb2d"));
   let dialog: HTMLDialogElement;
@@ -77,7 +99,12 @@
     const nextLink = selling || withoutLink ? '' : resolveImportUrl(link) || '';
     if (nextLink !== selectedLink) step = 0;
     selectedLink = nextLink;
-    returnFocus = event.currentTarget as HTMLElement;
+    await show(event.currentTarget as HTMLElement, step);
+  }
+
+  async function show(trigger: HTMLElement, nextStep: number) {
+    step = nextStep;
+    returnFocus = trigger;
     scrollY = window.scrollY;
     document.body.style.setProperty('--dn-enquiry-scroll', `-${scrollY}px`);
     opened = true;
@@ -167,6 +194,27 @@
   onDestroy(() => photos.forEach((photo) => URL.revokeObjectURL(photo.url)));
 </script>
 
+{#if inlineEntry}
+  <form class="dn-service-entry" bind:this={entryForm} onsubmit={startInline}>
+    <fieldset><legend>{i18n.t('service.method')}</legend><div class="dn-service-entry__choices">
+      <button type="button" aria-pressed={importMode === 'listing'} onclick={() => { importMode = 'listing'; entryError = ''; }}>{i18n.t('service.listing')}</button>
+      <button type="button" aria-pressed={importMode === 'criteria'} onclick={() => { importMode = 'criteria'; entryError = ''; }}>{i18n.t('service.search')}</button>
+    </div></fieldset>
+    {#if importMode === 'listing'}
+      <div class="dn-service-entry__listing"><label><span class="dn-service-entry__sr">{i18n.t('service.url')}</span><input {@attach i18n.validation} name="link" value={link} oninput={(event) => { linkDraft = event.currentTarget.value; entryError = ''; }} required maxlength={2048} inputmode="url" autocomplete="url" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url')} aria-invalid={entryError ? true : undefined} aria-describedby={entryError ? 'import-entry-error' : undefined} /></label>
+      {#if entryError}<p class="dn-service-entry__error" id="import-entry-error" role="alert">{entryError}</p>{/if}</div>
+    {:else}
+      <div><label>{i18n.t('service.brief')}<textarea {@attach i18n.validation} name="brief" bind:value={importBrief} oninput={() => entryError = ''} required maxlength={1500} rows="3" placeholder={i18n.t('service.brief.placeholder')} aria-invalid={entryError ? true : undefined} aria-describedby={entryError ? 'import-brief-error' : undefined}></textarea></label>
+      {#if entryError}<p class="dn-service-entry__error" id="import-brief-error" role="alert">{entryError}</p>{/if}</div>
+    {/if}
+    {#if importMode === 'criteria'}<div class="dn-service-entry__fields">
+      <label>{i18n.t('service.budget')}<input {@attach i18n.validation} name="budget" bind:value={budget} inputmode="numeric" pattern={'[0-9]{1,8}'} maxlength={8} placeholder="25000" /></label>
+      <label>{i18n.t('service.yearFrom')}<input {@attach i18n.validation} name="year" bind:value={year} inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
+    </div>
+    {/if}
+    <button class="dn-service-entry__submit" type="submit" aria-haspopup="dialog">{i18n.t('action.requestImport')}<Icon name="arrow-right" size={15} /></button>
+  </form>
+{:else}
 <div class="dn-enquiry-entry" class:dn-enquiry-entry--import={!selling}>
   {#if selling}
     <button class="dn-enquiry-entry-action dn-compact-control dn-entry-action dn-compact-primary" type="button" onclick={open} aria-haspopup="dialog">
@@ -185,6 +233,7 @@
     <button type="button" class="dn-enquiry-import-go dn-compact-control dn-entry-action dn-compact-primary" onclick={(event) => open(event, importMode === 'criteria')} aria-haspopup="dialog">{i18n.t("action.requestImport")} <Icon name="arrow-right" size={15} /></button>
   {/if}
 </div>
+{/if}
 
 <dialog onkeydown={trapDialogTab} {@attach dialogViewport} class="dn-enquiry" class:dn-enquiry--import={!selling} aria-labelledby="enquiry-title" {@attach attachDialog} onclose={restore} onclick={(event) => { if (event.target === event.currentTarget) dialog.close(); }}>
   <div class="dn-enquiry-panel">
@@ -199,6 +248,7 @@
     <form class="dn-enquiry-body" bind:this={form} onsubmit={(event) => { event.preventDefault(); if (step < 2) void move(step + 1); }}>
       {#if step === 0}
         {#if selectedLink}<div class="dn-enquiry-selected-link"><Icon name="globe" size={20} /><span>{selectedLink}</span></div>{/if}
+        {#if inlineEntry && !selectedLink}<label class="dn-enquiry-notes">{i18n.t('service.brief')}<textarea {@attach i18n.validation} bind:value={importBrief} required maxlength={1500} rows="3"></textarea></label>{/if}
         {#if selling}
           <fieldset class="dn-enquiry-purpose"><legend>{i18n.t("m_fc067643a1cf")}</legend>{#each ['Продажба', 'Бартер'] as option (option)}<label><input {@attach i18n.validation} type="radio" bind:group={purpose} value={option} />{i18n.t(option === 'Продажба' ? 'enquiry.purpose.sell' : 'enquiry.purpose.tradeIn')}</label>{/each}</fieldset>
         {/if}

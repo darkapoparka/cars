@@ -47,6 +47,7 @@
   let fuel = $derived(filters.fuel);
   let modelOptions = $derived(listingModelsForMake(make));
   const quickFilters = [
+    { label: 'Vehicle type', field: 'type' },
     { label: 'Марка', field: 'make' },
     { label: 'Модел', field: 'model' },
     { label: 'Цена', field: 'price' },
@@ -61,7 +62,7 @@
   ] as const;
   const activeChips = $derived(
     [...listingParams(filters).entries()]
-      .filter(([key, value]) => value && key !== 'sort' && ['q', 'make', 'model', 'body', 'fuel', 'transmission', 'version', 'condition', 'price_min', 'price_max', 'year_min', 'year_max', 'mileage_max', 'equipment'].includes(key))
+      .filter(([key, value]) => value && key !== 'sort' && ['q', 'type', 'make', 'model', 'body', 'fuel', 'transmission', 'version', 'condition', 'price_min', 'price_max', 'year_min', 'year_max', 'mileage_max', 'equipment'].includes(key))
       .map(([key, value]) => {
         const params = removeListingFilter(filters, key, value);
         const search = params.toString();
