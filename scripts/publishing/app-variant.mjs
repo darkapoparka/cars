@@ -48,8 +48,9 @@ export function appendAppVariant({baseFiles,appFiles,template,sourceCommit,share
  const match=oldSwitcher.match(/const config = (\{[\s\S]*?\});\s*(?:const mount|const choices)/);
  if(!match)throw Error('Unknown deployed switcher configuration');const config=JSON.parse(match[1]);
  if(config.variants?.length!==3)throw Error('Unknown deployed design choices');config.variants.push({...APP_VARIANT});
- if((sharedSwitcher.match(/__CARS_SWITCHER_CONFIG__/g)||[]).length!==1)throw Error('Missing shared switcher boundary');
- const renderedSwitcher=sharedSwitcher.replace('__CARS_SWITCHER_CONFIG__',()=>JSON.stringify(config).replace(/</g,'\u003c'));
+ const boundary='const embeddedConfig = __CARS_SWITCHER_CONFIG__;';
+ if(!sharedSwitcher.includes(boundary))throw Error('Missing shared switcher boundary');
+ const renderedSwitcher=sharedSwitcher.replace(boundary,()=>`const embeddedConfig = ${JSON.stringify(config).replace(/</g,'\u003c')};`);
  files.set(switcherName,Buffer.from(renderedSwitcher));
  const service=files.get('scripts/build-native-service.mjs')?.toString();
  if(service){const old="manifest.packaging?.version !== '2'";if(!service.includes(old))throw Error('Unrecognized native build manifest check');files.set('scripts/build-native-service.mjs',Buffer.from(service.replace(old,"!['2', '3'].includes(manifest.packaging?.version)")));}
