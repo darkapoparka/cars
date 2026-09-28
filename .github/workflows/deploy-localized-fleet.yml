@@ -38,6 +38,7 @@ jobs:
           const fs = require('node:fs');
           const path = require('node:path');
 
+          (async () => {
           const inventory = JSON.parse(fs.readFileSync('docs/DEPLOYMENT-INVENTORY.json', 'utf8'));
           const requested = new Set([
             'al-basma-motors','al-hamoor-al-thahabi','al-reef-used-cars','asko-96','astracar','autolife',
@@ -156,9 +157,13 @@ jobs:
           }
           if (!report || report.failed) {
             console.error(JSON.stringify(report?.dealers.filter((dealer) => !dealer.pass) || [], null, 2));
-            process.exit(1);
+            process.exitCode = 1;
           }
-          console.log(JSON.stringify({ checkedAt: report.checkedAt, passed: report.passed, release: report.release }, null, 2));
+          console.log(JSON.stringify({ checkedAt: report?.checkedAt, passed: report?.passed, release: report?.release }, null, 2));
+          })().catch((error) => {
+            console.error(error.stack || error.message);
+            process.exitCode = 1;
+          });
           NODE
 
       - name: Upload fleet verification evidence
