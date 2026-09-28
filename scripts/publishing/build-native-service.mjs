@@ -36,7 +36,7 @@ export function nativeBuildPlan(key) {
 export function runNativeBuild(key, { packageRoot = path.resolve(import.meta.dirname, '..'), run = spawnSync } = {}) {
   const plan = nativeBuildPlan(key);
   const manifest = JSON.parse(fs.readFileSync(path.join(packageRoot, 'dealer.json'), 'utf8'));
-  if (manifest.packaging?.version !== '2' || !manifest.variants?.some(v => v.key === key && v.base === plan.base)) throw new Error('Build service differs from the native package manifest');
+  if (!['2', '3'].includes(manifest.packaging?.version) || !manifest.variants?.some(v => v.key === key && v.base === plan.base)) throw new Error('Build service differs from the native package manifest');
   const environment = { ...process.env, ...plan.environment };
   if (key === 'carwow') delete environment.DAY_PREVIEW_ADAPTER;
   const cwd = path.join(packageRoot, plan.root);

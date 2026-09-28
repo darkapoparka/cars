@@ -72,9 +72,12 @@ export function validateManifest(m,{allowLegacyPublishingReference=false}={}){
  const legacyReference=allowLegacyPublishingReference===true&&m.repository==='darkapoparka/cars'&&m.defaultBranch===`publish/${m.slug}`;
  if(!legacyReference&&!/^[\w.-]+\/(?:cars-[a-z0-9]+|excellent-cars|day-and-night-[\w-]+)$/.test(m.repository||''))throw new Error('Record the exact owner/repository identity.');
  const keys=m.variants?.map(v=>v.key)||[],standard=['auto-best','modern','carwow'],imported=['auto-best','import','carwow'];
- if(![standard,imported].some(a=>JSON.stringify(a)===JSON.stringify(keys)))throw new Error('Supported trios: auto-best,modern,carwow or auto-best,import,carwow (ordered).');
+ const offered=m.packaging?.version==='3'?[...keys.slice(0,3)]:keys;
+ if(m.packaging?.version==='3'&&(keys.length!==4||keys[3]!=='app'))throw new Error('Version 3 requires App as Design 4.');
+ if(![standard,imported].some(a=>JSON.stringify(a)===JSON.stringify(offered)))throw new Error('Supported trios: auto-best,modern,carwow or auto-best,import,carwow (ordered).');
  const routes=keys[1]==='modern'?['/','/variant-2/cars','/variant-3/']:['/','/variant-2/','/variant-3/'];
- m.variants.forEach((v,i)=>{if(v.entry!==routes[i]||v.base!==['','/variant-2','/variant-3'][i])throw new Error(`Unexpected route for ${v.key}`);});
+ if(m.packaging?.version==='3')routes.push('/variant-4/');
+ m.variants.forEach((v,i)=>{if(v.entry!==routes[i]||v.base!==['','/variant-2','/variant-3','/variant-4'][i])throw new Error(`Unexpected route for ${v.key}`);});
  for(const asset of m.extraAssets||[])if(!/^[\w.-]+(?:\/[\w.-]+)*$/.test(asset)||asset.split('/').some(p=>p==='..'||p==='.'))throw new Error('Invalid extra asset path.');
  if(!/^[\w][\w/.-]*$/.test(m.defaultBranch||'main')||m.defaultBranch?.includes('..'))throw new Error('Invalid branch name.');return m;
 }
