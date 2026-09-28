@@ -6,6 +6,7 @@ import {capturedRelatedVehicles} from './captured-related';
 
 export type Vehicle = {
   images?: string[]; sourceUrl?: string; observedAt?: string; specifications?: string; priceOnRequest?: boolean; mileageOnRequest?: boolean;
+  imagePlaceholder?: boolean; proposalBenefits?: string[];
   referenceId?: string;
   tier?: 'Luxe' | 'Prime' | 'Lite';
   optionsType?: string;

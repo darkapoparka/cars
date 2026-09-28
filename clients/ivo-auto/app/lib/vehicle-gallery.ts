@@ -91,6 +91,7 @@ const fortunerPhotos: GalleryPhoto[] = [
   }
 ];
 export function vehicleGallery(vehicle: Vehicle): GalleryPhoto[] {
+  if (vehicle.imagePlaceholder) return [{category:'Exteriors', label:'Photo unavailable', src:vehicle.image}];
   if (vehicle.images?.length) return vehicle.images.map((src, index) => ({category: 'Exteriors', label: 'Photo ' + (index + 1), src}));
   return vehicle.slug === '2024-toyota-fortuner-exr' ? fortunerPhotos : [{category:'Exteriors',label:'Exterior',src:vehicle.image}];
 }

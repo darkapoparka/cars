@@ -18,7 +18,8 @@ export default function MiniVehicleCard({vehicle, green = false}: {vehicle: Vehi
   const luxe = vehicle.tier === 'Luxe' || vehicle.slug === '2024-toyota-fortuner-exr';
   return <article aria-label={tx(`${vehicle.year} ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.card)}>
     <Link href={href} aria-label={tx(`View ${vehicle.year} ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.photo)}>
-      <img src={assetPath(vehicle.image)} alt={tx(`${vehicle.make} ${vehicle.model}`)} width={160} height={90} loading="lazy" {...stylex.props(s.image)} />
+      <img src={assetPath(vehicle.image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(`${vehicle.make} ${vehicle.model}`)} width={160} height={90} loading="lazy" {...stylex.props(s.image, vehicle.imagePlaceholder && s.placeholderImage)} />
+      {vehicle.imagePlaceholder ? <span {...stylex.props(s.placeholderLabel)}>{tx('Photo unavailable')}</span> : null}
       {badge ? <span {...stylex.props(s.badge, green && s.greenBadge, s.comingBadge)}>{tx(badge)}</span> : null}
       {luxe && !badge ? <span {...stylex.props(s.photoTier)}><ShowroomBadge premium/></span> : null}
     </Link>
@@ -37,6 +38,8 @@ const s = stylex.create({
   card: {position: 'relative', flexShrink: 0, width: 160, alignSelf: 'start', overflow: 'hidden', borderColor: '#e3e3e3', borderStyle: 'solid', borderWidth: 1, borderRadius: 17, backgroundColor: '#fff', boxShadow: '0 3px 8px rgba(0,0,0,.06)'},
   photo: {position: 'relative', display: 'block', height: 90, overflow: 'hidden'},
   image: {width: '100%', height: '100%', objectFit: 'cover'},
+  placeholderImage: {objectFit: 'contain', padding: 12, backgroundColor: '#f0f2f4'},
+  placeholderLabel: {position: 'absolute', left: 7, right: 7, bottom: 6, padding: '2px 4px', color: '#555b62', fontSize: 8, fontWeight: 600, textAlign: 'center', borderRadius: 999, backgroundColor: 'rgba(255,255,255,.94)'},
   badge: {position: 'absolute', left: 0, bottom: 0, maxWidth: '100%', overflow: 'hidden', paddingInline: 5, color: '#fff', fontSize: 9, fontWeight: 500, lineHeight: '16px', whiteSpace: 'nowrap', borderTopRightRadius: 8, backgroundColor: '#f5269d'},
   greenBadge: {backgroundColor: '#00b737'},
   comingBadge: {backgroundColor: '#676767'},

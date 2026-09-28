@@ -43,7 +43,7 @@
     "auto-best": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
     "modern": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
     "carwow": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-    "app": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd"
+    "app": "2925db90d58b29544489b22c0557b5669af02f6e"
   },
   "localization": {
     "schemaVersion": 1,
@@ -80,10 +80,10 @@
     },
     "app": {
       "repository": "darkapoparka/cars",
-      "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+      "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
       "path": "templates/app",
-      "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
-      "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
+      "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
     }
   },
   "appVariant": {
@@ -91,15 +91,21 @@
     "format": "app-preview-v1",
     "source": {
       "repository": "darkapoparka/cars",
-      "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+      "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
       "path": "templates/app",
-      "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
-      "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
+      "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
     },
     "baseDeployment": {
       "id": "dpl_HmpGwQ9oBYVBehyUFKyv9ofSRJCm",
       "url": "https://cars-asko96.vercel.app/",
       "checkedAt": "2026-09-28T02:25:28.352Z"
+    },
+    "polish": {
+      "version": "4.1",
+      "selector": "shared-v2-with-local-fallback",
+      "benefits": "proposal-examples",
+      "missingPhotos": "neutral-fallback"
     }
   }
 }
