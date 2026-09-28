@@ -1,0 +1,34 @@
+{
+  "mode": "dealer",
+  "id": "f1rst-motors",
+  "name": "F1rst Motors",
+  "shortName": "F1rst Motors",
+  "logo": {
+    "light": "/dealer-app/logo-light-833105e3bee3f1f81afa.webp",
+    "dark": "/dealer-app/logo-dark-789523ed4d11bf57d34b.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "en",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "AE",
+  "currency": "AED",
+  "city": "Dubai",
+  "address": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
+  "phoneDisplay": "+971 4 320 1030",
+  "phoneE164": "+97143201030",
+  "email": "info@f1rstmotors.com",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=F1rst%20Motors%2C%20Danube%20Building%20-%20409%20Sheikh%20Zayed%20Rd%20-%20Al%20Quoz%20-%20Al%20Quoz%201%20-%20Dubai%2C%20UAE",
+  "website": "https://f1rstmotors.com/",
+  "whatsappUrl": "",
+  "services": [
+    "Luxury vehicle sales",
+    "Sell-my-car enquiries",
+    "Vehicle sourcing enquiries"
+  ],
+  "observedAt": "2026-09-09",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "sharedSourceCommit": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+  "dealers": [
+    {
+      "slug": "al-hamoor-al-thahabi",
+      "repository": "darkapoparka/cars-alhamooralthahabi",
+      "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+      "url": "https://cars-alhamooralthahabi.vercel.app/",
+      "publishingCommit": "f729df61a24cb46552bbf8eb5bf64349ea0d9f59",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "al-basma-motors",
+      "repository": "darkapoparka/cars-albasmamotors",
+      "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+      "url": "https://cars-albasmamotors.vercel.app/",
+      "publishingCommit": "392877793c28160c7dad8c57f6332b9718a5c1de",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "asko-96",
+      "repository": "darkapoparka/cars-asko96",
+      "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+      "url": "https://cars-asko96.vercel.app/",
+      "publishingCommit": "39318f6ad0c5c535155a498e405188e2f4afcd40",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "al-reef-used-cars",
+      "repository": "darkapoparka/cars-alreefusedcars",
+      "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+      "url": "https://cars-alreefusedcars.vercel.app/",
+      "publishingCommit": "0ea35f5a6701ffa0134292057fce5c9ab9a51c6c",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "independent-repository",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "autolife",
+      "repository": "darkapoparka/cars-autolife",
+      "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+      "url": "https://cars-autolife.vercel.app/",
+      "publishingCommit": "fef5904f6e88bae655dfda66fdaff769c22d630a",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "automarket-varna",
+      "repository": "darkapoparka/cars-automarketvarna",
+      "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+      "url": "https://cars-automarketvarna.vercel.app/",
+      "publishingCommit": "d7b11d087b59bdeec04769f6ec08f759d6754c95",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "avangard-auto",
+      "repository": "darkapoparka/cars-avangardauto",
+      "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+      "url": "https://cars-avangardauto.vercel.app/",
+      "publishingCommit": "24a9691f6ed63ea12e0ce7106511a30e3069f21d",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "champion-auto-pro",
+      "repository": "darkapoparka/cars-championautopro",
+      "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+      "url": "https://cars-championautopro.vercel.app/",
+      "publishingCommit": "152cfbd78f960f38a39d5c1c102698083bd1f82d",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "astracar",
+      "repository": "darkapoparka/cars-astracar",
+      "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+      "url": "https://cars-astracar.vercel.app/",
+      "publishingCommit": "07a7d3a4a6a48aa263be01329a27a4c9776c407c",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "eliqauto",
+      "repository": "darkapoparka/cars-eliqauto",
+      "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+      "url": "https://cars-eliqauto.vercel.app/",
+      "publishingCommit": "78d7dc0791cbe360032a73b1b2ab9517d6a2699d",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "elit-auto-import",
+      "repository": "darkapoparka/cars-elitautoimport",
+      "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+      "url": "https://cars-elitautoimport.vercel.app/",
+      "publishingCommit": "948cf7ed7364ef9bbcca1214efbfaf885ef5a2bc",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "excellent-cars",
+      "repository": "darkapoparka/excellent-cars",
+      "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+      "url": "https://excellent-cars.vercel.app/",
+      "publishingCommit": "827fa1d20433964a30c9902b369b0966c9c9f33d",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "f1rst-motors",
+      "repository": "darkapoparka/cars-f1rstmotors",
+      "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+      "url": "https://cars-f1rstmotors.vercel.app/",
+      "publishingCommit": "d808051898b87e2c41bd820964cc73c57b340e51",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "isauto-varna",
+      "repository": "darkapoparka/cars-isautovarna",
+      "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+      "url": "https://cars-isautovarna.vercel.app/",
+      "publishingCommit": "0740cc31de9869a6741cde2617010ec201d89883",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "ivo-auto",
+      "repository": "darkapoparka/cars-ivoauto",
+      "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+      "url": "https://cars-ivoauto.vercel.app/",
+      "publishingCommit": "6ae3dd75da65409aaa6597f5cd42fbd9a76797f4",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "kg-team-auto",
+      "repository": "darkapoparka/cars-kgteamauto",
+      "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+      "url": "https://cars-kgteamauto.vercel.app/",
+      "publishingCommit": "1e73132fa40330731f2318aa0301598858b0e023",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "legend-auto",
+      "repository": "darkapoparka/cars-legendauto",
+      "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+      "url": "https://cars-legendauto.vercel.app/",
+      "publishingCommit": "bf3515bc41504925d3cbdfef8a0c2dd4a9baa550",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "navara-car",
+      "repository": "darkapoparka/cars-navaracar",
+      "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+      "url": "https://cars-navaracar.vercel.app/",
+      "publishingCommit": "e696a8f7974605fd5fa89afe331f1f61e2940030",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "day-and-night-auto-group",
+      "repository": "darkapoparka/day-and-night-autodeal",
+      "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+      "url": "https://day-and-night-a.vercel.app/",
+      "publishingCommit": "a42a64a991fedf526d41be7964d1875c40eb56a6",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "outletcars-varna",
+      "repository": "darkapoparka/cars-outletcarsvarna",
+      "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+      "url": "https://cars-outletcarsvarna.vercel.app/",
+      "publishingCommit": "efb7009042317ad2e4abd8c042d3026958a467b0",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "perfect-auto-varna",
+      "repository": "darkapoparka/cars-perfectauto",
+      "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+      "url": "https://cars-perfectauto.vercel.app/",
+      "publishingCommit": "1c6eabd4c68bda040a2c1a591a187cb900aeef63",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "priselci",
+      "repository": "darkapoparka/cars-priselci",
+      "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+      "url": "https://cars-priselci.vercel.app/",
+      "publishingCommit": "7e719dfdd0764b52dac36da942d121d34671f72a",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "promosale-varna",
+      "repository": "darkapoparka/cars-promosalevarna",
+      "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+      "url": "https://cars-promosalevarna.vercel.app/",
+      "publishingCommit": "86991a82010a7b6475f009ffe4b1747762014670",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "texas-drive-auto",
+      "repository": "darkapoparka/cars-texasdriveauto",
+      "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+      "url": "https://cars-texasdriveauto.vercel.app/",
+      "publishingCommit": "de46af8707d86aabbee81fdc817a0528b8c22f8a",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    },
+    {
+      "slug": "the-dealers-point",
+      "repository": "darkapoparka/cars-thedealerspoint",
+      "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+      "url": "https://cars-thedealerspoint.vercel.app/",
+      "publishingCommit": "ce3ad9ce9863233b4c94d5207db884829324d63d",
+      "template": {
+        "repository": "darkapoparka/cars",
+        "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+        "path": "templates/app",
+        "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+        "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+      },
+      "sourceOwnership": "cars-canonical",
+      "productionVerification": "recorded-separately"
+    }
+  ]
+}

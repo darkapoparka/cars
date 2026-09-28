@@ -1,0 +1,34 @@
+{
+  "mode": "dealer",
+  "id": "priselci",
+  "name": "Автокъща Приселци",
+  "shortName": "Автокъща Приселци",
+  "logo": {
+    "light": "/dealer-app/logo-light-c6427ddf1f5c073cd1a5.webp",
+    "dark": "/dealer-app/logo-dark-ac80f7e7b14ecc7ad9ec.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "бул. „Цар Освободител“ 285",
+  "phoneDisplay": "0886 251 705",
+  "phoneE164": "+359886251705",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20285%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://priselci.mobile.bg/",
+  "whatsappUrl": "",
+  "services": [
+    "Продажба на употребявани автомобили",
+    "Съдействие при регистрация",
+    "Запитване за лизинг"
+  ],
+  "observedAt": "2026-09-07",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

@@ -1,0 +1,34 @@
+{
+  "mode": "dealer",
+  "id": "the-dealers-point",
+  "name": "The Dealers Point",
+  "shortName": "The Dealers Point",
+  "logo": {
+    "light": "/dealer-app/logo-light-391e784b3ed422b42763.webp",
+    "dark": "/dealer-app/logo-dark-bf2b5687015daf0fe982.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "en",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "AE",
+  "currency": "AED",
+  "city": "Dubai",
+  "address": "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE",
+  "phoneDisplay": "+971 55 187 5094",
+  "phoneE164": "+971551875094",
+  "email": "sales@tdp.ae",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Dealers%20Point%2C%20Plot%20No.%20364-0442%2C%20Al%20Quoz%20Industrial%20Area%201%2C%20Dubai%2C%20UAE",
+  "website": "https://www.tdp.ae/",
+  "whatsappUrl": "",
+  "services": [
+    "Vehicle sales",
+    "Import/export enquiries",
+    "Showroom enquiries"
+  ],
+  "observedAt": "2026-09-09",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

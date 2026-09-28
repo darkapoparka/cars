@@ -20,6 +20,11 @@
       "key": "carwow",
       "base": "/variant-3",
       "entry": "/variant-3/"
+    },
+    {
+      "key": "app",
+      "base": "/variant-4",
+      "entry": "/variant-4/"
     }
   ],
   "extraAssets": [
@@ -28,7 +33,7 @@
     "dealer-brand"
   ],
   "packaging": {
-    "version": "2"
+    "version": "3"
   },
   "switcher": {
     "language": "bg",
@@ -37,7 +42,8 @@
   "templateRevisions": {
     "auto-best": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
     "modern": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-    "carwow": "8fb6751d945776817acd8fce4a431ec7a2860b2a"
+    "carwow": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+    "app": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd"
   },
   "localization": {
     "schemaVersion": 1,
@@ -71,6 +77,29 @@
       "path": "templates/carwow",
       "tree": "af47a659d305d81523f5af97ef66d15dd0aa1f38",
       "digest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420"
+    },
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+      "path": "templates/app",
+      "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+      "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+    }
+  },
+  "appVariant": {
+    "schemaVersion": 1,
+    "format": "app-preview-v1",
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "9fe15abc081b1a99a5c3ab4ff13e07522ffefacd",
+      "path": "templates/app",
+      "tree": "740b9746a4771ad6bc4f9cfc840d09563f60c98c",
+      "digest": "27ebe80ab129b4e97146249d2c7f9812718059856fba088979f1b801a1897bd4"
+    },
+    "baseDeployment": {
+      "id": "dpl_4iBrGLpUYiSLvDFBEKG5GfHjPhwU",
+      "url": "https://cars-perfectauto.vercel.app/",
+      "checkedAt": "2026-09-28T02:25:54.067Z"
     }
   }
 }

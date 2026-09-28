@@ -1,0 +1,39 @@
+'use client';
+
+import {useCopy} from '@/lib/locale';
+import Image from '@/components/AppImage';
+import * as stylex from '@stylexjs/stylex';
+import {Info} from 'lucide-react';
+import type {ReferenceServiceRecord,ReferenceServiceDue} from '@/lib/reference-types';
+import {media, tokens as $} from '@/app/tokens.stylex';
+import {showroom} from '@/lib/showroom';
+
+const defaultRecords = [
+  {date:'2026-07-28',distance:'50,005 km',location:'Mega Refurbishment Labs, Cars24'},
+  {date:'2026-01-12',distance:'39,649 km',location:'Non - Agency Service Center'},
+];
+/** Reference snapshot for the captured Fortuner, not live service-history verification. */
+const defaultDue:ReferenceServiceDue={title:'Servicing due after 10,000 kms/ 6months',description:'Which ever is earliest, from the date of delivery on a chargeable basis',image:'/reference-assets/continuation/fortuner-service-banner.png'};
+export default function VehicleServiceHistory({records=defaultRecords,due=defaultDue}:{records?:ReferenceServiceRecord[];due?:ReferenceServiceDue|null}) {
+  const tx = useCopy();
+
+  return <section id="service-history" {...stylex.props(s.section)}>
+    <h2 {...stylex.props(s.heading)}>{tx("Service History")}</h2>
+    {due?.image?<Image sizes="(max-width: 1099px) 100vw, 860px" src={showroom.artwork.detail.service} width={1280} height={800} alt={tx(`${showroom.name} car care: oil and filter care, suspension, brakes, AC, diagnostic checks, wheels and tyres.`)} {...stylex.props(s.banner)} />:null}
+    {due?<aside {...stylex.props(s.note,!due.image&&s.noteWithoutImage)}><Info size={15} fill="#202024" color="#fff" /><p><strong {...stylex.props(s.noteTitle)}>{tx(due.title)}</strong><span {...stylex.props(s.noteCopy)}>{tx(due.description)}</span></p></aside>:null}
+    <ol aria-label={tx("Captured service history")} {...stylex.props(s.records)}>{records.map((record,index) => <li key={`${record.date}-${index}`} {...stylex.props(s.record)}><div {...stylex.props(s.recordHeader)}><time dateTime={record.date}>{tx(record.date)}</time><span>{tx(record.distance)}</span></div><p {...stylex.props(s.location)}>{tx(record.location)}</p></li>)}</ol>
+  </section>;
+}
+const s=stylex.create({
+  section:{scrollMarginTop:179,marginTop:34},
+  heading:{color:'#202024',fontFamily:$.fontDisplay,fontSize:16,fontWeight:600,lineHeight:'24px'},
+  banner:{display:'block',width:{[media.mobile]:'calc(100% + 44px)',default:'100%'},maxWidth:'none',height:'auto',marginTop:20,marginInline:{[media.mobile]:-22,default:0},aspectRatio:'1.6',objectFit:'cover'},
+  note:{display:'grid',gridTemplateColumns:'17px minmax(0,1fr)',gap:11,position:'relative',marginTop:{default:-63,'@media (max-width: 359px)':-36},padding:'17px 9px',color:'#202024',fontFamily:$.fontDisplay,borderRadius:15,backgroundColor:'#f8f8f8'},
+  noteWithoutImage:{marginTop:18},
+  noteTitle:{display:'block',fontSize:13,fontWeight:600,lineHeight:'19px'},
+  noteCopy:{display:'block',marginTop:2,color:'#535353',fontSize:14,fontWeight:400,lineHeight:'21px'},
+  records:{margin:'21px 0 0',padding:'2px 12px',listStyle:'none',color:'#535353',fontFamily:$.fontDisplay,borderRadius:15,backgroundColor:'#f8f8f8'},
+  record:{padding:'13px 0 15px',borderBottomColor:'#e0e0e0',borderBottomStyle:'dashed',borderBottomWidth:{default:1,':last-child':0}},
+  recordHeader:{fontFamily:'Roboto,Arial,sans-serif',display:'flex',justifyContent:'space-between',gap:16,fontSize:14,lineHeight:'20px'},
+  location:{marginTop:6,color:'#555',fontSize:11.5,lineHeight:'17px'},
+});

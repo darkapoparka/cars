@@ -1,0 +1,34 @@
+{
+  "mode": "dealer",
+  "id": "legend-auto",
+  "name": "LEGEND AUTO",
+  "shortName": "LEGEND AUTO",
+  "logo": {
+    "light": "/dealer-app/logo-light-393c8f05cb6020c8e443.webp",
+    "dark": "/dealer-app/logo-dark-3306a5e66871d4527cf4.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "бул. Цар Освободител 289, срещу МАКАО",
+  "phoneDisplay": "0899 877 305",
+  "phoneE164": "+359899877305",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=LEGEND%20AUTO%2C%20%D0%B1%D1%83%D0%BB.%20%D0%A6%D0%B0%D1%80%20%D0%9E%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%20289%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0",
+  "website": "https://legendauto1.mobile.bg/",
+  "whatsappUrl": "",
+  "services": [
+    "Продажба на автомобили",
+    "Оглед с предварителна уговорка",
+    "Транспорт до всяка точка на страната (според обявите)"
+  ],
+  "observedAt": "2026-09-06T21:52:55.020Z, 2026-09-06T21:52:55.219Z, 2026-09-06T21:52:55.362Z, 2026-09-06T21:52:55.452Z, 2026-09-06T21:52:55.578Z, 2026-09-06T21:52:55.731Z, 2026-09-06T21:52:55.812Z, 2026-09-06T21:52:55.901Z, 2026-09-06T21:52:55.993Z, 2026-09-06T21:52:56.129Z, 2026-09-06T21:52:56.213Z, 2026-09-06T21:52:56.330Z, 2026-09-06T21:52:56.411Z, 2026-09-06T21:52:56.518Z",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

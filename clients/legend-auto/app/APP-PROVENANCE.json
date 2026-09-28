@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 1,
+  "dealer": "legend-auto",
+  "profile": "auto-best/src/lib/data/dealer-profile.json",
+  "profileSha256": "8a2f093ede98731f9665fcb77df9c15e6771723de8898b18b861ae6735b4b145",
+  "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+  "vehicles": 14,
+  "currency": "EUR",
+  "observedAt": "2026-09-06T21:52:55.020Z, 2026-09-06T21:52:55.219Z, 2026-09-06T21:52:55.362Z, 2026-09-06T21:52:55.452Z, 2026-09-06T21:52:55.578Z, 2026-09-06T21:52:55.731Z, 2026-09-06T21:52:55.812Z, 2026-09-06T21:52:55.901Z, 2026-09-06T21:52:55.993Z, 2026-09-06T21:52:56.129Z, 2026-09-06T21:52:56.213Z, 2026-09-06T21:52:56.330Z, 2026-09-06T21:52:56.411Z, 2026-09-06T21:52:56.518Z",
+  "assets": [
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+      "output": "public/dealer-app/logo-light-393c8f05cb6020c8e443.webp",
+      "sha256": "393c8f05cb6020c8e4435a742ad89a5d9dfdf5543ed67bc78003931ed35d7029",
+      "role": "logo-light"
+    },
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+      "output": "public/dealer-app/logo-dark-3306a5e66871d4527cf4.webp",
+      "sha256": "3306a5e66871d4527cf4de4cfc4b752ebebc346d44c0ecf0c8ffae3626cd61cf",
+      "role": "logo-dark"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-01-1.webp",
+      "output": "public/dealer-app/vehicle-ebe1981cda518186aeea.webp",
+      "sha256": "ebe1981cda518186aeeabc51a6e8b1be75ed508482542c3623056a6a9b7f1265",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-01-2.webp",
+      "output": "public/dealer-app/vehicle-ce968ad9d8f04d4861d3.webp",
+      "sha256": "ce968ad9d8f04d4861d3d31963e0ad27ea1edcbd9db373fbd4f7829ef1aa96f3",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-01-3.webp",
+      "output": "public/dealer-app/vehicle-155e052f0d6b5ca132b5.webp",
+      "sha256": "155e052f0d6b5ca132b550d05a70199697fa71bf34d6269d5af245b97a5a4f17",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-01-4.webp",
+      "output": "public/dealer-app/vehicle-c8a736371164caa22f9b.webp",
+      "sha256": "c8a736371164caa22f9b92202a05c0c9468d290b48dec3191460ec5d5bb40951",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-01-5.webp",
+      "output": "public/dealer-app/vehicle-2e090e86fb83fccd924d.webp",
+      "sha256": "2e090e86fb83fccd924d50729e8cc195bdaaee833c73f7aa380f4a5f05ca0c90",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-02-1.webp",
+      "output": "public/dealer-app/vehicle-df4b4f9845d3443aba85.webp",
+      "sha256": "df4b4f9845d3443aba85257a0fe5f4be305d902013998fa4900a522d196599d4",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-02-2.webp",
+      "output": "public/dealer-app/vehicle-2093bd8fe79f80fe1e94.webp",
+      "sha256": "2093bd8fe79f80fe1e945aaab830c4d2562f9645a1ec9c5924741bf9d56f06e3",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-02-3.webp",
+      "output": "public/dealer-app/vehicle-0ee238e2104e9fd5bcba.webp",
+      "sha256": "0ee238e2104e9fd5bcba4eeba7f834a7d68f72d57fd8097b610bbc630edb1769",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-02-4.webp",
+      "output": "public/dealer-app/vehicle-fa89378dacf9e9566a36.webp",
+      "sha256": "fa89378dacf9e9566a367f575d0395dd7e89a8234c5d24205c1461bd653f1900",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-02-5.webp",
+      "output": "public/dealer-app/vehicle-b6c20e9edaf1bd98e93a.webp",
+      "sha256": "b6c20e9edaf1bd98e93af1f2af1eaa68a0fd6407e28cdc613682ce32f02acd7f",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-03-1.webp",
+      "output": "public/dealer-app/vehicle-cfcce3d3fc153746d13e.webp",
+      "sha256": "cfcce3d3fc153746d13ee90c646a1e13af105e5e5bebbcaefd0de1eca4ca790b",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-03-2.webp",
+      "output": "public/dealer-app/vehicle-908a4f74a61892e52713.webp",
+      "sha256": "908a4f74a61892e527139748569754ca66f0d774e03927d763a03c8b652aeea7",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-03-3.webp",
+      "output": "public/dealer-app/vehicle-1fdc174d9cddc7cf4469.webp",
+      "sha256": "1fdc174d9cddc7cf446912ce6e5b80afbacef3e53f6b1514f47f82596bb02952",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-03-4.webp",
+      "output": "public/dealer-app/vehicle-e159c7bfd85f04a6e73f.webp",
+      "sha256": "e159c7bfd85f04a6e73fcd6778fa93fb53c385b32681a41101686c435de30af6",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-03-5.webp",
+      "output": "public/dealer-app/vehicle-5a7f02f419d51d40847d.webp",
+      "sha256": "5a7f02f419d51d40847dd9f8cfd5bc26b9c34a5ac8b4f01a9684746560f20299",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-04-1.webp",
+      "output": "public/dealer-app/vehicle-1a7e44c838c242826715.webp",
+      "sha256": "1a7e44c838c2428267153aa404e86cbcdfa8dc0421366e3da57a68507c255678",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-04-2.webp",
+      "output": "public/dealer-app/vehicle-93ad414b67c1e55e518e.webp",
+      "sha256": "93ad414b67c1e55e518ed150ba1bdeee7c89d89b46aad99de052e518d9ff6cf3",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-04-3.webp",
+      "output": "public/dealer-app/vehicle-bbfb0891cc2994b303d2.webp",
+      "sha256": "bbfb0891cc2994b303d2eee627d4ff4cad948caf69698051511470b5808484aa",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-04-4.webp",
+      "output": "public/dealer-app/vehicle-b1f7e8c974e51e1eefd2.webp",
+      "sha256": "b1f7e8c974e51e1eefd27a69ee060a4418eb2ada031532e37b3abe40f74be560",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-04-5.webp",
+      "output": "public/dealer-app/vehicle-4a8990932fac463fae6a.webp",
+      "sha256": "4a8990932fac463fae6a73fee7489546380e92356b3d679711d72f810edbe139",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-05-1.webp",
+      "output": "public/dealer-app/vehicle-1f6658d4cca6f67a8af0.webp",
+      "sha256": "1f6658d4cca6f67a8af06ac59623e7eddaea6820bcda342f558fb6d1460314b7",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-05-2.webp",
+      "output": "public/dealer-app/vehicle-a4dfa08d28b4ec4201a1.webp",
+      "sha256": "a4dfa08d28b4ec4201a10016980fe9046d90d974a5f382e425ed0f4c7ebbc7a5",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-05-3.webp",
+      "output": "public/dealer-app/vehicle-d3098d45507cf529914d.webp",
+      "sha256": "d3098d45507cf529914d494a42965d05814e1b059c258c56bc4cb3be71a30a87",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-05-4.webp",
+      "output": "public/dealer-app/vehicle-a1ede857eea4e1aa2f8e.webp",
+      "sha256": "a1ede857eea4e1aa2f8ea6726f6b4ec8b457792f96f4c4066974caff3478a650",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-05-5.webp",
+      "output": "public/dealer-app/vehicle-091d7dddfc997350d309.webp",
+      "sha256": "091d7dddfc997350d30998b78735505f07dab57d8fd2dacccf11c411e4e1db08",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-06-1.webp",
+      "output": "public/dealer-app/vehicle-6698adcd5904b412a4a1.webp",
+      "sha256": "6698adcd5904b412a4a177d2601b32d661d2e55f0425e3c5af9a4054249a2733",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-06-2.webp",
+      "output": "public/dealer-app/vehicle-4a0697279b0feab5496e.webp",
+      "sha256": "4a0697279b0feab5496e9afe822e18dd7cc76349c6bdbc69b09baa4d7f555802",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-06-3.webp",
+      "output": "public/dealer-app/vehicle-1604bc85c3002f652479.webp",
+      "sha256": "1604bc85c3002f6524792ed484e34858cc8ce6652bfe80dbca78a1654e73d5a2",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-06-4.webp",
+      "output": "public/dealer-app/vehicle-319bc3e6dfd16d187dc9.webp",
+      "sha256": "319bc3e6dfd16d187dc91c23b4214188a48f0bc95bec715c5395ad81cddccf22",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-06-5.webp",
+      "output": "public/dealer-app/vehicle-bd314804af65b4f4252e.webp",
+      "sha256": "bd314804af65b4f4252ec181290d345bec920f03a5ddf329aec28516541f46f0",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-07-1.webp",
+      "output": "public/dealer-app/vehicle-2f32e4875bd2110e1a26.webp",
+      "sha256": "2f32e4875bd2110e1a264eb0a66aec69f6463f3df9f90d865c488ffba43b4dfe",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-07-2.webp",
+      "output": "public/dealer-app/vehicle-f89df52dae1df702932b.webp",
+      "sha256": "f89df52dae1df702932b3d0f1555ee96504db5fd7384f7a3ded44997b5a39a43",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-07-3.webp",
+      "output": "public/dealer-app/vehicle-8d6301e2f01f539bf187.webp",
+      "sha256": "8d6301e2f01f539bf18723b56f2d1f24cc4635989b9facbcadfcd6edd9e8efff",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-07-4.webp",
+      "output": "public/dealer-app/vehicle-d9566eda580f7f135303.webp",
+      "sha256": "d9566eda580f7f135303871eeb299a5752b29d9f22374c3df59a7ca9aaa9aeca",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-07-5.webp",
+      "output": "public/dealer-app/vehicle-5c4a96b538ea0c3a7166.webp",
+      "sha256": "5c4a96b538ea0c3a716693b4209be0a2b7b026a4db14a1e6faebe8a1ff53bd34",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-08-1.webp",
+      "output": "public/dealer-app/vehicle-5eee295a186d8618ae4c.webp",
+      "sha256": "5eee295a186d8618ae4c60ae5f6a7952c56ac674996fb8bf95b492d1ed22eee6",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-08-2.webp",
+      "output": "public/dealer-app/vehicle-6b052797901662429e0b.webp",
+      "sha256": "6b052797901662429e0b91e4283dd196b12c95f6d2aa1a2c1773e86f0be417f6",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-08-3.webp",
+      "output": "public/dealer-app/vehicle-1d0f509790e3261a2c52.webp",
+      "sha256": "1d0f509790e3261a2c526829a1cd20df9923b3c8d505fa0f740365a070d30670",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-08-4.webp",
+      "output": "public/dealer-app/vehicle-ec710c8b2b90b2c364b8.webp",
+      "sha256": "ec710c8b2b90b2c364b833f01f41e0c089d91a2669b0d13d5333266bab73fe95",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-08-5.webp",
+      "output": "public/dealer-app/vehicle-83482b5852df66367cb5.webp",
+      "sha256": "83482b5852df66367cb5e287668213a8cafc210ee1fafe2dfe889355a26f6d2e",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-09-1.webp",
+      "output": "public/dealer-app/vehicle-3bea66969f61976187e9.webp",
+      "sha256": "3bea66969f61976187e9a4bfdd74ded6f502cba2f1878d26aae7d35407108672",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-09-2.webp",
+      "output": "public/dealer-app/vehicle-1536a633db2d21de6f6b.webp",
+      "sha256": "1536a633db2d21de6f6b2c1fdd2e98c69616f4ef7c51081ddf6d574522325cdd",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-09-3.webp",
+      "output": "public/dealer-app/vehicle-a17d18966f0cd95a990c.webp",
+      "sha256": "a17d18966f0cd95a990c1ae940f308a1053665fc86c0a8303ed69108f88b566e",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-09-4.webp",
+      "output": "public/dealer-app/vehicle-e365d12bb518298659d4.webp",
+      "sha256": "e365d12bb518298659d4e2287bc394f12750c0959f95c0e05a18872f3de7e92e",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-09-5.webp",
+      "output": "public/dealer-app/vehicle-303602b93bd23a34ab7b.webp",
+      "sha256": "303602b93bd23a34ab7b8d5b5cea21597060ce281be43b91d875b691a38c2f17",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-10-1.webp",
+      "output": "public/dealer-app/vehicle-259afafb4cd47af861c3.webp",
+      "sha256": "259afafb4cd47af861c3a40805746eab540c12540041f2da4becf6fb4a5ebe34",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-10-2.webp",
+      "output": "public/dealer-app/vehicle-85980909183542e1b823.webp",
+      "sha256": "85980909183542e1b823f16de1df159650662382bf0c0ddc5258c0b3ddcab073",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-10-3.webp",
+      "output": "public/dealer-app/vehicle-616ad56d0ee8556eeb20.webp",
+      "sha256": "616ad56d0ee8556eeb2032e42de1df914d78af35109063b459cc78d1a05e05f3",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-10-4.webp",
+      "output": "public/dealer-app/vehicle-7221ca15fe109527fbcf.webp",
+      "sha256": "7221ca15fe109527fbcf47344c73f1b5e43f08c81ed1733428d46fa78ae61cda",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-10-5.webp",
+      "output": "public/dealer-app/vehicle-8d0bbfb5b94b141b6609.webp",
+      "sha256": "8d0bbfb5b94b141b6609f6d02bf730f81882e09fca4d4c4dd3a2c4af0039d145",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-11-1.webp",
+      "output": "public/dealer-app/vehicle-618acb9c6010167b8ab8.webp",
+      "sha256": "618acb9c6010167b8ab8594cf26708f9251dc4b9b615eb05c076f78f09742b38",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-11-2.webp",
+      "output": "public/dealer-app/vehicle-0d4d173397713dc60f72.webp",
+      "sha256": "0d4d173397713dc60f72e2cfe26c079d47c3495b71c57d4e0e425cee471f96fb",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-11-3.webp",
+      "output": "public/dealer-app/vehicle-f14271a63babac37941b.webp",
+      "sha256": "f14271a63babac37941bff11d78ae429bcdd445226f67d3f93f200aa8268de54",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-11-4.webp",
+      "output": "public/dealer-app/vehicle-faf9be943b7e60a8ef86.webp",
+      "sha256": "faf9be943b7e60a8ef86d0065bfe93f7b14ebdcb7814435ed330179ac3e3ba95",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-11-5.webp",
+      "output": "public/dealer-app/vehicle-de0d486e763516ebf222.webp",
+      "sha256": "de0d486e763516ebf222f1f142dc7663bcea5c610bb8405a5e48862403a46ccb",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-12-1.webp",
+      "output": "public/dealer-app/vehicle-af554a631a3512daf9d8.webp",
+      "sha256": "af554a631a3512daf9d8f6a81faed65e3c621c7d27675a93c3bfdc0be591e131",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-12-2.webp",
+      "output": "public/dealer-app/vehicle-6cc35bb54955dd87ab3a.webp",
+      "sha256": "6cc35bb54955dd87ab3a4c7fc311581801951d30f64026ce0af3511d5d4d859d",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-12-3.webp",
+      "output": "public/dealer-app/vehicle-65abef43a6422a041fd0.webp",
+      "sha256": "65abef43a6422a041fd00adb5e6da53e7b1cbaa71a2192f737313304bb840c1d",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-12-4.webp",
+      "output": "public/dealer-app/vehicle-df8e00d8ebf4d25472da.webp",
+      "sha256": "df8e00d8ebf4d25472da60bf36af0c7555279561d430506623ca65a1f47f5bbc",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-12-5.webp",
+      "output": "public/dealer-app/vehicle-5022033bb6d5a19648ad.webp",
+      "sha256": "5022033bb6d5a19648adc0a580e080714471ced38a8c1b5c56f520fcb98ff3af",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-13-1.webp",
+      "output": "public/dealer-app/vehicle-007f3e0440dc0772f949.webp",
+      "sha256": "007f3e0440dc0772f949322052d2a6971fce35bd62e35980acfc20aff9e9f04d",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-13-2.webp",
+      "output": "public/dealer-app/vehicle-0b7f7c2f9414f67460cf.webp",
+      "sha256": "0b7f7c2f9414f67460cfa1224f019d4faaa39a720a2b00d740e334167a454dd5",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-13-3.webp",
+      "output": "public/dealer-app/vehicle-e438c36514b39d59983d.webp",
+      "sha256": "e438c36514b39d59983dc9bc81e2c67ab302bf96459016d70adfaa24188b1f32",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-13-4.webp",
+      "output": "public/dealer-app/vehicle-3eb9e209373bb7e2ddaa.webp",
+      "sha256": "3eb9e209373bb7e2ddaaa31d2c6634e45415e3088981d19988827fb046ab7caa",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-13-5.webp",
+      "output": "public/dealer-app/vehicle-c17db9337c237208d076.webp",
+      "sha256": "c17db9337c237208d0762ad8a247c9dd71a9ead7bb659b8e25840685bf832754",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-14-1.webp",
+      "output": "public/dealer-app/vehicle-8d62664259e84c9e38b3.webp",
+      "sha256": "8d62664259e84c9e38b32934eb1f9bdd44cfad4fa175cb6bc84270736563349c",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-14-2.webp",
+      "output": "public/dealer-app/vehicle-1e2ab4c25e78ac0c3b73.webp",
+      "sha256": "1e2ab4c25e78ac0c3b737e7c505abeaed9f42631842354e39b7cfbdd8e0ee5f6",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-14-3.webp",
+      "output": "public/dealer-app/vehicle-9697a97fc01c9b73301f.webp",
+      "sha256": "9697a97fc01c9b73301f699d3a6cee9194351f8a20a5db858a8a7c389e72f74b",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-14-4.webp",
+      "output": "public/dealer-app/vehicle-64ebcc19c98c1cca1644.webp",
+      "sha256": "64ebcc19c98c1cca16449c78f7b44220790eeb410b5157d615f735a9dfd45c0d",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/legend-auto/vehicle-14-5.webp",
+      "output": "public/dealer-app/vehicle-570d730f5ddacc4d49e7.webp",
+      "sha256": "570d730f5ddacc4d49e776dd2baa808158e2b1adb1558a81ff9bc5d124013135",
+      "role": "vehicle"
+    }
+  ]
+}

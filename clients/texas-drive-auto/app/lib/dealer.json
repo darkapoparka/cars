@@ -1,0 +1,30 @@
+{
+  "mode": "dealer",
+  "id": "texas-drive-auto",
+  "name": "Texas Drive Auto",
+  "shortName": "Texas Drive Auto",
+  "logo": {
+    "light": "/dealer-app/logo-light-2298c82ae0c02b028b50.webp",
+    "dark": "/dealer-app/logo-dark-3dea5fb84807728dcdf3.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "en",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "US",
+  "currency": "USD",
+  "city": "Dallas",
+  "address": "10511 Olympic Drive, Dallas, TX 75220",
+  "phoneDisplay": "(214) 972-3233",
+  "phoneE164": "+12149723233",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Texas%20Drive%20Auto%2C%2010511%20Olympic%20Drive%2C%20Dallas%2C%20TX%2075220",
+  "website": "https://www.texasdriveauto.com/",
+  "whatsappUrl": "",
+  "services": [],
+  "observedAt": "2026-09-08",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}
