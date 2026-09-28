@@ -1,18 +1,11 @@
-name: Deploy corrected localized dealer fleet
-# Fleet rollout triggered for Auto Best 0.2.0 after preservation and cross-platform packaging fixes.
+name: Verify Auto Best 0.2.0 dealer fleet
 
 on:
   workflow_dispatch:
-  # A reviewed template lock or fleet-packaging change starts the registered 24-dealer rollout.
   push:
     branches: [main]
     paths:
-      - 'templates.lock.json'
       - '.github/workflows/deploy-localized-fleet.yml'
-      - 'scripts/lib/client-refresh-adapters.mjs'
-      - 'scripts/package-dealer.mjs'
-      - 'scripts/publishing/build-native-service.mjs'
-      - 'scripts/rollout-localized-client.mjs'
 
 permissions:
   contents: read
@@ -22,26 +15,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  matrix:
+  verify-production:
     runs-on: ubuntu-latest
-    outputs:
-      dealers: ${{ steps.dealers.outputs.dealers }}
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /docs/DEPLOYMENT-INVENTORY.json
-      - id: dealers
-        name: Resolve production dealer fleet
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.8.0'
+
+      - name: Verify all 25 production aliases
         shell: bash
         run: |
           set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/evidence"
           node <<'NODE'
           const fs = require('node:fs');
+          const path = require('node:path');
+
           const inventory = JSON.parse(fs.readFileSync('docs/DEPLOYMENT-INVENTORY.json', 'utf8'));
           const requested = new Set([
-            'al-basma-motors','al-hamoor-al-thahabi','asko-96','astracar','autolife',
+            'al-basma-motors','al-hamoor-al-thahabi','al-reef-used-cars','asko-96','astracar','autolife',
             'automarket-varna','avangard-auto','champion-auto-pro','day-and-night-auto-group',
             'eliqauto','elit-auto-import','excellent-cars','f1rst-motors','isauto-varna',
             'ivo-auto','kg-team-auto','legend-auto','navara-car','outletcars-varna',
@@ -51,204 +50,122 @@ jobs:
             .filter((dealer) => requested.has(dealer.slug))
             .map((dealer) => ({
               slug: dealer.slug,
-              repository: dealer.repository || dealer.delivery?.gitRepository,
-              projectId: dealer.delivery?.projectId,
-              publicAlias: dealer.delivery?.url
+              name: dealer.name || dealer.slug,
+              projectId: dealer.delivery?.projectId || null,
+              alias: (dealer.delivery?.url || '').replace(/\/$/, '')
             }));
           const missing = [...requested].filter((slug) => !rows.some((row) => row.slug === slug));
-          const invalid = rows.filter((row) =>
-            !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(row.repository || '') ||
-            !/^prj_[A-Za-z0-9]+$/.test(row.projectId || '') ||
-            !/^https:\/\//.test(row.publicAlias || '')
-          );
+          const invalid = rows.filter((row) => !/^https:\/\//.test(row.alias));
           if (missing.length || invalid.length || rows.length !== requested.size) {
-            throw new Error(`Unresolved production fleet. Missing=${missing.join(',')} invalid=${invalid.map((row) => row.slug).join(',')} rows=${rows.length}`);
+            throw new Error(`Fleet inventory mismatch. missing=${missing.join(',')} invalid=${invalid.map((row) => row.slug).join(',')} rows=${rows.length}`);
           }
-          const value = JSON.stringify({ include: rows });
-          fs.appendFileSync(process.env.GITHUB_OUTPUT, `dealers=${value}\n`);
-          console.log(value);
-          NODE
 
-  deploy:
-    needs: matrix
-    strategy:
-      fail-fast: false
-      max-parallel: 4
-      matrix: ${{ fromJSON(needs.matrix.outputs.dealers) }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 120
-    env:
-      VERCEL_ORG_ID: team_RTNXBnClGWDdcYFFUW0BnqvJ
-      VERCEL_PROJECT_ID: ${{ matrix.projectId }}
-      PUBLIC_ALIAS: ${{ matrix.publicAlias }}
-    steps:
-      - name: Check out canonical Cars release and registered dealer source
-        uses: actions/checkout@v4
-        with:
-          path: cars
-          fetch-depth: 50
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /.gitignore
-            /package.json
-            /templates.lock.json
-            /scripts/
-            /templates/
-            /docs/
-            /clients/${{ matrix.slug }}/
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24.8.0'
-
-      - name: Generate sealed native EN/BG package
-        shell: bash
-        env:
-          GITHUB_SHA: ${{ github.sha }}
-        run: |
-          set -euo pipefail
-          client_root="$GITHUB_WORKSPACE/cars/clients/${{ matrix.slug }}"
-          test -s "$client_root/dealer.json"
-          rm -rf "$RUNNER_TEMP/localized-client" "$RUNNER_TEMP/evidence"
-          mkdir -p "$RUNNER_TEMP/evidence"
-          node "$GITHUB_WORKSPACE/cars/scripts/rollout-localized-client.mjs" \
-            --client-root "$client_root" \
-            --slug "${{ matrix.slug }}" \
-            --repository "${{ matrix.repository }}" \
-            --output "$RUNNER_TEMP/localized-client" \
-            | tee "$RUNNER_TEMP/evidence/rollout.json"
-
-      - name: Validate package identity, release pins and Carwow catalog safety
-        shell: bash
-        run: |
-          set -euo pipefail
-          ROOT="$RUNNER_TEMP/localized-client" \
-          EXPECTED_SLUG="${{ matrix.slug }}" \
-          EXPECTED_REPOSITORY="${{ matrix.repository }}" \
-          node <<'NODE'
-          const fs = require('node:fs');
-          const path = require('node:path');
-          const root = process.env.ROOT;
-          const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dealer.json'), 'utf8'));
-          const contract = JSON.parse(fs.readFileSync(path.join(root, 'localization/contract.json'), 'utf8'));
-          const adoption = JSON.parse(fs.readFileSync(path.join(root, 'localization/adoption.json'), 'utf8'));
-          const lock = JSON.parse(fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'cars/templates.lock.json'), 'utf8'));
-          if (manifest.slug !== process.env.EXPECTED_SLUG) throw new Error(`Dealer slug changed: ${manifest.slug}`);
-          if (manifest.repository !== process.env.EXPECTED_REPOSITORY) throw new Error(`Dealer repository changed: ${manifest.repository}`);
-          if (manifest.packaging?.version !== '2') throw new Error('Expected packaging version 2');
-          if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Expected complete EN/BG locale contract');
-          if (adoption.packagingVersion !== '2' || adoption.dealerId !== contract.dealerId) throw new Error('Invalid localization adoption receipt');
-          for (const variant of manifest.variants) {
-            const expected = lock.templates?.[variant.key]?.commit;
-            if (!expected) throw new Error(`Missing release pin for ${variant.key}`);
-            if (manifest.templateRevisions?.[variant.key] !== expected) throw new Error(`Manifest release mismatch for ${variant.key}`);
-            if (adoption.releases?.[variant.key]?.commit !== expected) throw new Error(`Adoption release mismatch for ${variant.key}`);
-          }
-          const carwowReviews = path.join(root, 'carwow/src/lib/data/daynight-reviews.ts');
-          if (fs.existsSync(carwowReviews)) {
-            const source = fs.readFileSync(carwowReviews, 'utf8');
-            if (source.includes('No verified customer reviews are included in this independent preview.')) {
-              throw new Error('Generated Carwow review disclosure still bypasses the localization catalog');
-            }
-            if (!source.includes('Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения.')) {
-              throw new Error('Generated Carwow review disclosure is missing the reviewed catalog-backed copy');
-            }
-          }
-          fs.writeFileSync(path.join(process.env.RUNNER_TEMP, 'evidence/validated-manifest.json'), JSON.stringify(manifest, null, 2));
-          NODE
-          test -s "$RUNNER_TEMP/localized-client/vercel.json"
-          test -s "$RUNNER_TEMP/localized-client/scripts/build-native-service.mjs"
-
-      - name: Deploy corrected package to existing Vercel production project
-        shell: bash
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          set -euo pipefail
-          if [ -z "${VERCEL_TOKEN:-}" ]; then
-            echo 'VERCEL_TOKEN is not configured.' >&2
-            exit 1
-          fi
-          mkdir -p "$RUNNER_TEMP/localized-client/.vercel"
-          printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > "$RUNNER_TEMP/localized-client/.vercel/project.json"
-          cd "$RUNNER_TEMP/localized-client"
-          npx --yes vercel@59.19.1 deploy \
-            --prod \
-            --force \
-            --archive=tgz \
-            --token="$VERCEL_TOKEN" \
-            | tee "$RUNNER_TEMP/evidence/vercel-deploy.log"
-
-      - name: Verify production localization on every design entry
-        shell: bash
-        run: |
-          set -euo pipefail
-          ROOT="$RUNNER_TEMP/localized-client" BASE_URL="$PUBLIC_ALIAS" node <<'NODE'
-          const fs = require('node:fs');
-          const path = require('node:path');
-          const manifest = JSON.parse(fs.readFileSync(path.join(process.env.ROOT, 'dealer.json'), 'utf8'));
-          const baseUrl = process.env.BASE_URL.replace(/\/$/, '');
           const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-          const localePath = (variant, locale) => {
-            const base = (variant.base || '').replace(/\/$/, '');
-            const entry = variant.entry || `${base}/`;
-            let suffix = entry.startsWith(base) ? entry.slice(base.length) : entry;
-            if (!suffix.startsWith('/')) suffix = `/${suffix}`;
-            if (suffix === '/') suffix = '';
-            return `${base}/${locale}${suffix}`.replace(/\/+/g, '/');
-          };
+          const decode = (value) => value
+            .replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'")
+            .replaceAll('&lt;', '<').replaceAll('&gt;', '>').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
+          const plain = (html) => decode(html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
           const request = async (url) => {
             try {
               const response = await fetch(url, {
                 redirect: 'follow',
                 signal: AbortSignal.timeout(30000),
-                headers: { 'user-agent': 'cars-localization-production-verifier/1.0', 'accept-language': 'en' }
+                headers: { 'user-agent': 'cars-autobest-fleet-verifier/2.0', 'accept-language': 'en' }
               });
-              return { status: response.status, url: response.url, text: await response.text() };
+              const text = await response.text();
+              return { status: response.status, finalUrl: response.url, text, headers: Object.fromEntries(response.headers), error: null };
             } catch (error) {
-              return { status: 0, url, text: '', error: String(error) };
+              return { status: 0, finalUrl: url, text: '', headers: {}, error: String(error) };
             }
           };
-          const routes = manifest.variants.flatMap((variant) => ['en', 'bg'].map((locale) => ({
-            key: variant.key,
-            locale,
-            pathname: localePath(variant, locale)
-          })));
-          let evidence = null;
-          for (let attempt = 1; attempt <= 48; attempt += 1) {
-            const root = await request(`${baseUrl}/`);
-            const checks = [];
-            for (const route of routes) {
-              const result = await request(`${baseUrl}${route.pathname}`);
-              const language = new RegExp(`<html[^>]*\\blang=["']?${route.locale}\\b`, 'i').test(result.text);
-              checks.push({ ...route, status: result.status, finalUrl: result.url, language, error: result.error || null });
+          const mapLimit = async (items, limit, worker) => {
+            const output = new Array(items.length);
+            let next = 0;
+            await Promise.all(Array.from({ length: Math.min(limit, items.length) }, async () => {
+              while (true) {
+                const index = next++;
+                if (index >= items.length) return;
+                output[index] = await worker(items[index]);
+              }
+            }));
+            return output;
+          };
+          const logoPath = (html) => {
+            const candidates = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)]
+              .map((match) => decode(match[1]))
+              .filter((src) => /\.(?:png|webp)(?:[?#]|$)/i.test(src) && /(?:logo|wordmark|dealer-brand|dealer\/brand|\/navara\/)/i.test(src));
+            return candidates[0] || '';
+          };
+          const verify = async (dealer) => {
+            const locales = {};
+            for (const locale of ['en', 'bg']) {
+              const page = await request(`${dealer.alias}/${locale}`);
+              const body = plain(page.text).toLocaleLowerCase(locale === 'bg' ? 'bg-BG' : 'en-US');
+              const expectedName = dealer.name.toLocaleLowerCase(locale === 'bg' ? 'bg-BG' : 'en-US');
+              locales[locale] = {
+                status: page.status,
+                finalUrl: page.finalUrl,
+                language: new RegExp(`<html[^>]*\\blang=["']?${locale}\\b`, 'i').test(page.text),
+                localeUi: /cars-locale-dialog|data-locale-dialog/.test(page.text) && page.text.includes('English') && page.text.includes('Български'),
+                releaseArtwork: page.text.includes('/assets/images/template/service-sell-front-v3.webp') && page.text.includes('/assets/images/template/service-import-front-v3.webp'),
+                vehicleTypeContract: /<option\s+value=["']motorbike["']/.test(page.text) && /<option\s+value=["']truck["']/.test(page.text),
+                dealerIdentity: body.includes(expectedName),
+                logo: logoPath(page.text),
+                error: page.error
+              };
             }
-            const localeUi = /data-locale-(dialog|trigger)|locale-preferences-title|cars-locale-dialog/.test(root.text)
-              && root.text.includes('English')
-              && root.text.includes('Български');
-            evidence = {
+            const logo = locales.en.logo || locales.bg.logo;
+            let logoCheck = { path: logo, status: 0, contentType: '', raster: /\.(?:png|webp)(?:[?#]|$)/i.test(logo), error: null };
+            if (logo) {
+              const target = new URL(logo, `${dealer.alias}/`).href;
+              try {
+                const response = await fetch(target, { redirect: 'follow', signal: AbortSignal.timeout(30000), headers: { 'user-agent': 'cars-autobest-fleet-verifier/2.0' } });
+                logoCheck = { ...logoCheck, status: response.status, contentType: response.headers.get('content-type') || '', finalUrl: response.url };
+                await response.body?.cancel();
+              } catch (error) {
+                logoCheck.error = String(error);
+              }
+            }
+            const routePass = Object.values(locales).every((item) => item.status === 200 && item.language && item.localeUi && item.releaseArtwork && item.vehicleTypeContract && item.dealerIdentity && item.logo);
+            const logoPass = logoCheck.status === 200 && logoCheck.raster && /^image\//i.test(logoCheck.contentType);
+            return { ...dealer, pass: routePass && logoPass, locales, logo: logoCheck };
+          };
+
+          let report = null;
+          for (let attempt = 1; attempt <= 80; attempt += 1) {
+            const dealers = await mapLimit(rows, 6, verify);
+            report = {
+              schemaVersion: 1,
+              release: {
+                version: '0.2.0',
+                autoBestCommit: 'b9ed9beee33c1bcc3278959a2f4cd351b04e87f0',
+                sourceTree: 'bbc9c91c017d7d2d562ad68cf1a0931c11289417',
+                sourceDigest: 'b98e011d45774f69b18a1ff69e9e42f58ad690d7cf1acbb7e56ea83303529c42'
+              },
               attempt,
               checkedAt: new Date().toISOString(),
-              root: { status: root.status, finalUrl: root.url, localeUi, error: root.error || null },
-              routes: checks
+              passed: dealers.filter((dealer) => dealer.pass).length,
+              failed: dealers.filter((dealer) => !dealer.pass).length,
+              dealers
             };
-            if (root.status === 200 && localeUi && checks.every((check) => check.status === 200 && check.language)) break;
-            if (attempt < 48) await sleep(10000);
+            fs.writeFileSync(path.join(process.env.RUNNER_TEMP, 'evidence/auto-best-0.2.0-fleet.json'), JSON.stringify(report, null, 2));
+            const pending = dealers.filter((dealer) => !dealer.pass).map((dealer) => dealer.slug);
+            console.log(`attempt=${attempt} passed=${report.passed}/25 pending=${pending.join(',') || 'none'}`);
+            if (!pending.length) break;
+            if (attempt < 80) await sleep(15000);
           }
-          fs.writeFileSync(path.join(process.env.RUNNER_TEMP, 'evidence/live-verification.json'), JSON.stringify(evidence, null, 2));
-          if (!evidence || evidence.root.status !== 200 || !evidence.root.localeUi || evidence.routes.some((check) => check.status !== 200 || !check.language)) {
-            console.error(JSON.stringify(evidence, null, 2));
+          if (!report || report.failed) {
+            console.error(JSON.stringify(report?.dealers.filter((dealer) => !dealer.pass) || [], null, 2));
             process.exit(1);
           }
-          console.log(JSON.stringify(evidence, null, 2));
+          console.log(JSON.stringify({ checkedAt: report.checkedAt, passed: report.passed, release: report.release }, null, 2));
           NODE
 
-      - name: Upload rollout evidence
+      - name: Upload fleet verification evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: corrected-localization-${{ matrix.slug }}
-          path: ${{ runner.temp }}/evidence
-          include-hidden-files: true
-          if-no-files-found: warn
-          retention-days: 14
+          name: auto-best-0.2.0-production-fleet
+          path: ${{ runner.temp }}/evidence/auto-best-0.2.0-fleet.json
+          if-no-files-found: error
+          retention-days: 30
