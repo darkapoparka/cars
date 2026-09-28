@@ -6,7 +6,7 @@ The September 2026 fleet audit found 9.346 GB of public/static files across 25 d
 
 The packager selects only exact hash/size matches. It inserts per-file external rewrites before Services catchalls. Svelte output is verified and pruned beneath `.vercel/output/static` after compilation. Next public files are verified and pruned inside the generated package before compilation, because its Vercel adapter captures them during the build completion hook. Canonical assets remain available for local previews. The pilot's application code has no static imports or filesystem reads of selected public files; a future static import of removed media fails compilation rather than publishing missing content. Unknown or changed assets stay bundled. Filename matching is limited to supported URL-safe paths, and MIME mismatches fail closed.
 
-Public URLs remain the same. Browser caches revalidate the stable old filenames; the CDN can cache their responses. Blob object names contain their content hash and are never overwritten. Do not delete a catalog object while any retained deployment refers to it.
+Public URLs remain the same. Stable legacy filenames use a one-minute browser cache at the Blob origin, plus up to one day of CDN caching. Set `cacheControlMaxAge: 60` on every upload: a cached external rewrite can forward the origin Cache-Control instead of the configured browser override. Blob object names contain their content hash; never change bytes at an existing name. The initial upload metadata was corrected in place with identical SHA-256-verified bytes, then affected project CDN caches were purged. Do not delete a catalog object while any retained deployment refers to it.
 
 ## Updating existing publishing repositories
 
@@ -21,3 +21,4 @@ A database is optional for demo listings and is not the storage fix: image bytes
 The present Blob Hobby allowance is 1 GB storage, 10 GB data transfer, 10,000 simple operations and 2,000 advanced operations. It is a bounded pilot allowance, not unlimited hosting. Reassess traffic before broader commercial use; an existing object store or a deliberately chosen production plan may be more suitable. No billing upgrade is part of this change.
 
 Sources: [Deployment Storage](https://vercel.com/docs/deployment-storage), [Blob pricing](https://vercel.com/docs/vercel-blob/usage-and-pricing), [external rewrites](https://vercel.com/docs/routing/rewrites), [Services routing](https://vercel.com/docs/services/routing).
+
