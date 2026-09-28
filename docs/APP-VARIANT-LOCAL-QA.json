@@ -1,0 +1,1381 @@
+{
+  "schemaVersion": 1,
+  "scope": "local-mounted-app",
+  "sourceRevision": "21fc9f70d04ac0c55c5bb3772ea8f8a4f5c5eff7",
+  "widths": [
+    320,
+    390,
+    1440
+  ],
+  "locales": [
+    "en",
+    "bg"
+  ],
+  "checks": 61,
+  "failures": 0,
+  "ownerReview": "not-recorded",
+  "productionAcceptance": "pending-rollout",
+  "results": [
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/cars",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/cars/nissan-micra-n-sport-065195",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/stores",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/more",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/finance",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/sell",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/service",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/saved",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "route": "/search",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/cars",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/cars/nissan-micra-n-sport-065195",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/stores",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/more",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/finance",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/sell",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/service",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/saved",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 320,
+      "locale": "bg",
+      "route": "/search",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 320,
+        "viewport": 320,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/cars",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/cars/nissan-micra-n-sport-065195",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/stores",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/more",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/finance",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/sell",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/service",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/saved",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "route": "/search",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/cars",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/cars/nissan-micra-n-sport-065195",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/stores",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/more",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/finance",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/sell",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/service",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/saved",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "route": "/search",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 390,
+        "viewport": 390,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/cars",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/cars/nissan-micra-n-sport-065195",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/stores",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/more",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/finance",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/sell",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/service",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/saved",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "route": "/search",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/cars",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/cars/nissan-micra-n-sport-065195",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/stores",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/more",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/finance",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/sell",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/service",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          },
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/saved",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "route": "/search",
+      "status": 200,
+      "pass": true,
+      "layout": {
+        "language": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "logos": [
+          {
+            "src": "/variant-4/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+            "loaded": true
+          }
+        ],
+        "badLinks": []
+      },
+      "errors": [],
+      "bad": []
+    },
+    {
+      "test": "demo-write-blocked",
+      "pass": true,
+      "status": 405
+    }
+  ]
+}

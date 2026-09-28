@@ -49,7 +49,7 @@ export function appendAppVariant({baseFiles,appFiles,template,sourceCommit,share
  if(!match)throw Error('Unknown deployed switcher configuration');const config=JSON.parse(match[1]);
  if(config.variants?.length!==3)throw Error('Unknown deployed design choices');config.variants.push({...APP_VARIANT});
  if(!sharedSwitcher.includes('__CARS_SWITCHER_CONFIG__'))throw Error('Missing shared switcher boundary');
- files.set(switcherName,Buffer.from(sharedSwitcher.replace('__CARS_SWITCHER_CONFIG__',JSON.stringify(config))));
+ files.set(switcherName,Buffer.from(oldSwitcher.replace(match[1],JSON.stringify(config))));
  const service=files.get('scripts/build-native-service.mjs')?.toString();
  if(service){const old="manifest.packaging?.version !== '2'";if(!service.includes(old))throw Error('Unrecognized native build manifest check');files.set('scripts/build-native-service.mjs',Buffer.from(service.replace(old,"!['2', '3'].includes(manifest.packaging?.version)")));}
  files.set('scripts/build-app-service.mjs',Buffer.from("import {spawnSync} from 'node:child_process';\nimport path from 'node:path';\nconst cwd=path.resolve(import.meta.dirname,'../app');\nconst result=spawnSync(process.execPath,[path.join(cwd,'node_modules/next/dist/bin/next'),'build','--webpack'],{cwd,stdio:'inherit',env:{...process.env,NEXT_PUBLIC_BASE_PATH:'/variant-4'},windowsHide:true});\nif(result.error)throw result.error;process.exitCode=result.status??1;\n"));
