@@ -1,25 +1,28 @@
-name: Localize and deploy IS AUTO Varna
+name: Deploy IS AUTO Auto Best 0.2.0
 
 on:
-  # Dealer publishing and historical repair runs require explicit dispatch.
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/localize-isauto-varna.yml'
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: localize-isauto-varna-production
+  group: deploy-isauto-autobest-0.2.0
   cancel-in-progress: true
 
 jobs:
-  localize:
-    if: github.actor != 'github-actions[bot]' || contains(github.event.head_commit.message, '[localize-isauto]')
+  deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      OUTPUT_BRANCH: publish/isauto-varna
       VERCEL_ORG_ID: team_RTNXBnClGWDdcYFFUW0BnqvJ
       VERCEL_PROJECT_ID: prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv
+      PRODUCTION_ALIAS: https://cars-isautovarna.vercel.app
+      AUTO_BEST_COMMIT: b9ed9beee33c1bcc3278959a2f4cd351b04e87f0
     steps:
       - name: Check out canonical Cars source
         uses: actions/checkout@v4
@@ -35,166 +38,189 @@ jobs:
             /templates/
             /docs/
             /clients/isauto-varna/
-            /.github/workflows/localize-isauto-varna.yml
 
       - uses: actions/setup-node@v4
         with:
           node-version: '24.8.0'
 
-      - name: Support canonical package publication branches
-        id: release
-        shell: bash
-        run: |
-          set -euo pipefail
-          node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          const file = 'scripts/rollout-localized-client.mjs';
-          let source = fs.readFileSync(file, 'utf8');
-          const replacements = [
-            [
-              "  manifest.defaultBranch = 'main';",
-              "  manifest.defaultBranch = oldManifest.defaultBranch || 'main';"
-            ],
-            [
-              '  return validateManifest(manifest);',
-              "  return validateManifest(manifest, { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });"
-            ],
-            [
-              '  const oldManifest = validateManifest(json(dealerFile));',
-              "  const oldManifest = validateManifest(json(dealerFile), { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });"
-            ]
-          ];
-          for (const [oldLine, newLine] of replacements) {
-            if (source.includes(newLine)) continue;
-            if (!source.includes(oldLine)) throw new Error(`Cannot locate localization compatibility line: ${oldLine}`);
-            source = source.replace(oldLine, newLine);
-          }
-          fs.writeFileSync(file, source);
-          const test = `import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport fs from 'node:fs';\n\ntest('localized packages preserve registered publication branches and canonical Cars package identities', () => {\n  const source = fs.readFileSync(new URL('./rollout-localized-client.mjs', import.meta.url), 'utf8');\n  assert.match(source, /manifest\\.defaultBranch = oldManifest\\.defaultBranch \\|\\| 'main';/);\n  assert.match(source, /return validateManifest\\(manifest, \\{ allowLegacyPublishingReference: repository === 'darkapoparka\\/cars' \\}\\);/);\n  assert.match(source, /const oldManifest = validateManifest\\(json\\(dealerFile\\), \\{ allowLegacyPublishingReference: repository === 'darkapoparka\\/cars' \\}\\);/);\n});\n`;
-          fs.writeFileSync('scripts/rollout-localized-client-branch.test.mjs', test);
-          NODE
-          node --test scripts/rollout-localized-client-branch.test.mjs
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add --sparse scripts/rollout-localized-client.mjs scripts/rollout-localized-client-branch.test.mjs
-          if ! git diff --cached --quiet; then
-            git diff --cached --check
-            git commit -m 'Support canonical package branches in localization rollout'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-          echo "cars_release_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Generate sealed native EN/BG package
+      - name: Generate sealed latest dealer package
         shell: bash
         env:
-          GITHUB_SHA: ${{ steps.release.outputs.cars_release_sha }}
+          GITHUB_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          rm -rf "$RUNNER_TEMP/isauto-localized"
+          actual="$(node -p "require('./templates.lock.json').templates['auto-best'].commit")"
+          test "$actual" = "$AUTO_BEST_COMMIT"
+          rm -rf "$RUNNER_TEMP/isauto-localized" "$RUNNER_TEMP/evidence"
+          mkdir -p "$RUNNER_TEMP/evidence"
           node scripts/rollout-localized-client.mjs \
             --client-root "$GITHUB_WORKSPACE/clients/isauto-varna" \
             --slug isauto-varna \
-            --repository darkapoparka/cars \
+            --repository darkapoparka/cars-isautovarna \
             --output "$RUNNER_TEMP/isauto-localized" \
-            | tee "$RUNNER_TEMP/isauto-localization-report.json"
+            | tee "$RUNNER_TEMP/evidence/rollout.json"
 
-      - name: Validate localization contract and release pins
+      - name: Prove release pins and preserved dealer assets
         shell: bash
         run: |
           set -euo pipefail
-          ROOT="$RUNNER_TEMP/isauto-localized" node --input-type=module <<'NODE'
-          import fs from 'node:fs';
-          import path from 'node:path';
+          ROOT="$RUNNER_TEMP/isauto-localized" node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const crypto = require('node:crypto');
           const root = process.env.ROOT;
           const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dealer.json'), 'utf8'));
-          const contract = JSON.parse(fs.readFileSync(path.join(root, 'localization/contract.json'), 'utf8'));
           const adoption = JSON.parse(fs.readFileSync(path.join(root, 'localization/adoption.json'), 'utf8'));
           const lock = JSON.parse(fs.readFileSync('templates.lock.json', 'utf8'));
-          if (manifest.packaging?.version !== '2') throw new Error('Expected packaging v2');
-          if (manifest.slug !== 'isauto-varna' || manifest.repository !== 'darkapoparka/cars') throw new Error('IS AUTO identity changed');
-          if (manifest.defaultBranch !== 'publish/isauto-varna') throw new Error('IS AUTO publication branch changed');
-          if (JSON.stringify([...contract.enabledLocales].sort()) !== '["bg","en"]') throw new Error('Expected complete EN/BG contract');
-          if (adoption.packagingVersion !== '2' || adoption.dealerId !== contract.dealerId) throw new Error('Invalid adoption receipt');
+          if (manifest.slug !== 'isauto-varna' || manifest.repository !== 'darkapoparka/cars-isautovarna') throw new Error('IS AUTO publishing identity changed');
+          if (manifest.packaging?.version !== '2') throw new Error('Expected native packaging v2');
           for (const variant of manifest.variants) {
             const expected = lock.templates?.[variant.key]?.commit;
             if (!expected || manifest.templateRevisions?.[variant.key] !== expected || adoption.releases?.[variant.key]?.commit !== expected) {
-              throw new Error(`Unexpected ${variant.key} release`);
+              throw new Error(`Stale ${variant.key} release pin`);
             }
           }
+          if (manifest.templateRevisions['auto-best'] !== process.env.AUTO_BEST_COMMIT) throw new Error('Auto Best 0.2.0 is not selected');
+          const hashTree = (target) => {
+            const rows = [];
+            const walk = (current, relative = '') => {
+              for (const entry of fs.readdirSync(current, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+                const next = path.join(current, entry.name);
+                const rel = relative ? `${relative}/${entry.name}` : entry.name;
+                if (entry.isDirectory()) walk(next, rel);
+                else if (entry.isFile()) rows.push([rel, crypto.createHash('sha256').update(fs.readFileSync(next)).digest('hex')]);
+                else throw new Error(`Unsupported preserved asset: ${rel}`);
+              }
+            };
+            walk(target);
+            return crypto.createHash('sha256').update(JSON.stringify(rows)).digest('hex');
+          };
+          const preserved = {};
+          for (const relative of ['branding', 'dealer-brand']) {
+            const source = path.join('clients/isauto-varna', relative);
+            const packaged = path.join(root, relative);
+            if (!fs.existsSync(source) || !fs.existsSync(packaged)) throw new Error(`Missing preserved ${relative}`);
+            preserved[relative] = { source: hashTree(source), packaged: hashTree(packaged) };
+            if (preserved[relative].source !== preserved[relative].packaged) throw new Error(`${relative} changed during packaging`);
+          }
+          const provenance = 'assets/provenance.json';
+          const sourceProvenance = fs.readFileSync(path.join('clients/isauto-varna', provenance));
+          const packagedProvenance = fs.readFileSync(path.join(root, provenance));
+          if (!sourceProvenance.equals(packagedProvenance)) throw new Error('Dealer provenance changed during packaging');
+          const evidence = {
+            checkedAt: new Date().toISOString(),
+            slug: manifest.slug,
+            repository: manifest.repository,
+            packagingVersion: manifest.packaging.version,
+            templateRevisions: manifest.templateRevisions,
+            preserved
+          };
+          fs.writeFileSync(path.join(process.env.RUNNER_TEMP, 'evidence/package-verification.json'), JSON.stringify(evidence, null, 2));
+          console.log(JSON.stringify(evidence, null, 2));
           NODE
-          test -f "$RUNNER_TEMP/isauto-localized/vercel.json"
-          test -f "$RUNNER_TEMP/isauto-localized/scripts/build-native-service.mjs"
 
-      - name: Publish localized deployment package
-        id: package
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          source_dir="$RUNNER_TEMP/isauto-localized"
-          publish_dir="$RUNNER_TEMP/isauto-publish"
-          rm -rf "$publish_dir"
-          mkdir -p "$publish_dir"
-          cd "$publish_dir"
-          git init
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          if git fetch --depth=1 origin "refs/heads/${OUTPUT_BRANCH}"; then
-            git checkout -B "$OUTPUT_BRANCH" FETCH_HEAD
-            find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-          else
-            git checkout --orphan "$OUTPUT_BRANCH"
-          fi
-          cp -a "$source_dir"/. .
-          git add -A
-          git diff --cached --check
-          if ! git diff --cached --quiet; then
-            git commit -m 'Publish IS AUTO native EN/BG package' -m 'Cars release: ${{ steps.release.outputs.cars_release_sha }}'
-            git push origin "HEAD:refs/heads/${OUTPUT_BRANCH}"
-          fi
-          echo "package_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Deploy package to existing Vercel production project
+      - name: Deploy to the existing IS AUTO Vercel project
         shell: bash
         working-directory: ${{ runner.temp }}/isauto-localized
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           set -euo pipefail
+          test -n "${VERCEL_TOKEN:-}"
           mkdir -p .vercel
           printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > .vercel/project.json
-          npx --yes vercel@59.19.1 deploy --prod --yes --scope "$VERCEL_ORG_ID" --token "$VERCEL_TOKEN"
+          npx --yes vercel@59.19.1 deploy \
+            --prod \
+            --force \
+            --archive=tgz \
+            --yes \
+            --scope tyj5 \
+            --token "$VERCEL_TOKEN" \
+            | tee "$RUNNER_TEMP/evidence/vercel-deploy.log"
 
-      - name: Verify production localization surface
+      - name: Verify production alias
         shell: bash
         run: |
           set -euo pipefail
-          for attempt in $(seq 1 30); do
-            html="$(curl -fsSL --max-time 25 https://cars-isautovarna.vercel.app/ || true)"
-            if printf '%s' "$html" | grep -q 'IS AUTO' && \
-               printf '%s' "$html" | grep -q 'Български' && \
-               printf '%s' "$html" | grep -q 'English'; then
-              curl -fsSL --max-time 25 https://cars-isautovarna.vercel.app/variant-2/cars >/dev/null
-              curl -fsSL --max-time 25 https://cars-isautovarna.vercel.app/variant-3/ >/dev/null
-              echo 'IS AUTO production serves the native EN/BG package on all three design entries.'
-              exit 0
-            fi
-            sleep 5
-          done
-          echo 'Production alias did not expose the native EN/BG package.' >&2
-          exit 1
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const base = process.env.PRODUCTION_ALIAS.replace(/\/$/, '');
+          const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+          const decode = (value) => value.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'");
+          const fetchPage = async (url, body = true) => {
+            try {
+              const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(30000), headers: { 'user-agent': 'cars-isauto-autobest-0.2.0-verifier/1.0' } });
+              const text = body ? await response.text() : '';
+              if (!body) await response.body?.cancel();
+              return { status: response.status, url: response.url, text, contentType: response.headers.get('content-type') || '', error: null };
+            } catch (error) {
+              return { status: 0, url, text: '', contentType: '', error: String(error) };
+            }
+          };
+          const logoPath = (html) => {
+            const values = [
+              ...[...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]),
+              ...[...html.matchAll(/<source\b[^>]*\bsrcset=["']([^"', ]+)/gi)].map((match) => match[1])
+            ].map(decode);
+            return values.find((value) => /\.(?:png|webp)(?:[?#]|$)/i.test(value) && /(?:logo|wordmark|dealer-brand|dealer\/brand)/i.test(value)) || '';
+          };
+          (async () => {
+            let evidence = null;
+            for (let attempt = 1; attempt <= 48; attempt += 1) {
+              const locales = {};
+              for (const locale of ['en', 'bg']) {
+                const page = await fetchPage(`${base}/${locale}`);
+                locales[locale] = {
+                  status: page.status,
+                  finalUrl: page.url,
+                  language: new RegExp(`<html[^>]*\\blang=["']?${locale}\\b`, 'i').test(page.text),
+                  localeUi: /cars-locale-dialog|data-locale-dialog/.test(page.text) && page.text.includes('English') && page.text.includes('Български'),
+                  releaseArtwork: page.text.includes('/assets/images/template/service-sell-front-v3.webp') && page.text.includes('/assets/images/template/service-import-front-v3.webp'),
+                  vehicleTypeContract: /<option\s+value=["']motorbike["']/.test(page.text) && /<option\s+value=["']truck["']/.test(page.text),
+                  logo: logoPath(page.text),
+                  error: page.error
+                };
+              }
+              const logo = locales.en.logo || locales.bg.logo;
+              const logoResult = logo ? await fetchPage(new URL(logo, `${base}/`).href, false) : { status: 0, contentType: '', url: '', error: 'No raster dealer logo found' };
+              const mounted = {};
+              for (const route of ['/variant-2/en/cars', '/variant-2/bg/cars', '/variant-3/en', '/variant-3/bg']) {
+                const result = await fetchPage(`${base}${route}`);
+                mounted[route] = { status: result.status, finalUrl: result.url, error: result.error };
+              }
+              evidence = {
+                attempt,
+                checkedAt: new Date().toISOString(),
+                locales,
+                logo: { path: logo, status: logoResult.status, finalUrl: logoResult.url, contentType: logoResult.contentType, error: logoResult.error },
+                mounted
+              };
+              const pass = Object.values(locales).every((item) => item.status === 200 && item.language && item.localeUi && item.releaseArtwork && item.vehicleTypeContract && item.logo)
+                && evidence.logo.status === 200 && /^image\//i.test(evidence.logo.contentType)
+                && Object.values(mounted).every((item) => item.status === 200);
+              evidence.pass = pass;
+              fs.writeFileSync(path.join(process.env.RUNNER_TEMP, 'evidence/live-verification.json'), JSON.stringify(evidence, null, 2));
+              console.log(`attempt=${attempt} pass=${pass}`);
+              if (pass) break;
+              if (attempt < 48) await sleep(10000);
+            }
+            if (!evidence?.pass) {
+              console.error(JSON.stringify(evidence, null, 2));
+              process.exitCode = 1;
+            }
+          })().catch((error) => {
+            console.error(error.stack || error.message);
+            process.exitCode = 1;
+          });
+          NODE
 
-      - name: Upload rollout evidence
+      - name: Upload IS AUTO rollout evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: isauto-native-en-bg-v2
-          path: |
-            ${{ runner.temp }}/isauto-localization-report.json
-            ${{ runner.temp }}/isauto-localized/localization
-            ${{ runner.temp }}/isauto-localized/dealer.json
+          name: isauto-autobest-0.2.0-production
+          path: ${{ runner.temp }}/evidence
           include-hidden-files: true
-          retention-days: 7
+          if-no-files-found: error
+          retention-days: 30
