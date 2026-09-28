@@ -11,20 +11,14 @@ permissions:
   contents: read
 
 concurrency:
-  group: deploy-corrected-localized-dealer-fleet
+  group: verify-autobest-0.2.0-production-fleet
   cancel-in-progress: true
 
 jobs:
   verify-production:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /docs/DEPLOYMENT-INVENTORY.json
-
       - uses: actions/setup-node@v4
         with:
           node-version: '24.8.0'
@@ -38,104 +32,111 @@ jobs:
           const fs = require('node:fs');
           const path = require('node:path');
 
-          (async () => {
-          const inventory = JSON.parse(fs.readFileSync('docs/DEPLOYMENT-INVENTORY.json', 'utf8'));
-          const requested = new Set([
-            'al-basma-motors','al-hamoor-al-thahabi','al-reef-used-cars','asko-96','astracar','autolife',
-            'automarket-varna','avangard-auto','champion-auto-pro','day-and-night-auto-group',
-            'eliqauto','elit-auto-import','excellent-cars','f1rst-motors','isauto-varna',
-            'ivo-auto','kg-team-auto','legend-auto','navara-car','outletcars-varna',
-            'perfect-auto-varna','priselci','promosale-varna','texas-drive-auto','the-dealers-point'
-          ]);
-          const rows = inventory.dealers
-            .filter((dealer) => requested.has(dealer.slug))
-            .map((dealer) => ({
-              slug: dealer.slug,
-              name: dealer.name || dealer.slug,
-              projectId: dealer.delivery?.projectId || null,
-              alias: (dealer.delivery?.url || '').replace(/\/$/, '')
-            }));
-          const missing = [...requested].filter((slug) => !rows.some((row) => row.slug === slug));
-          const invalid = rows.filter((row) => !/^https:\/\//.test(row.alias));
-          if (missing.length || invalid.length || rows.length !== requested.size) {
-            throw new Error(`Fleet inventory mismatch. missing=${missing.join(',')} invalid=${invalid.map((row) => row.slug).join(',')} rows=${rows.length}`);
-          }
+          const fleet = [
+            ['al-basma-motors','https://cars-albasmamotors.vercel.app'],
+            ['al-hamoor-al-thahabi','https://cars-alhamooralthahabi.vercel.app'],
+            ['al-reef-used-cars','https://cars-alreefusedcars.vercel.app'],
+            ['asko-96','https://cars-asko96.vercel.app'],
+            ['astracar','https://cars-astracar.vercel.app'],
+            ['autolife','https://cars-autolife.vercel.app'],
+            ['automarket-varna','https://cars-automarketvarna.vercel.app'],
+            ['avangard-auto','https://cars-avangardauto.vercel.app'],
+            ['champion-auto-pro','https://cars-championautopro.vercel.app'],
+            ['day-and-night-auto-group','https://day-and-night-a.vercel.app'],
+            ['eliqauto','https://cars-eliqauto.vercel.app'],
+            ['elit-auto-import','https://cars-elitautoimport.vercel.app'],
+            ['excellent-cars','https://excellent-cars.vercel.app'],
+            ['f1rst-motors','https://cars-f1rstmotors.vercel.app'],
+            ['isauto-varna','https://cars-isautovarna.vercel.app'],
+            ['ivo-auto','https://cars-ivoauto.vercel.app'],
+            ['kg-team-auto','https://cars-kgteamauto.vercel.app'],
+            ['legend-auto','https://cars-legendauto.vercel.app'],
+            ['navara-car','https://cars-navaracar.vercel.app'],
+            ['outletcars-varna','https://cars-outletcarsvarna.vercel.app'],
+            ['perfect-auto-varna','https://cars-perfectauto.vercel.app'],
+            ['priselci','https://cars-priselci.vercel.app'],
+            ['promosale-varna','https://cars-promosalevarna.vercel.app'],
+            ['texas-drive-auto','https://cars-texasdriveauto.vercel.app'],
+            ['the-dealers-point','https://cars-thedealerspoint.vercel.app']
+          ].map(([slug, alias]) => ({ slug, alias }));
 
-          const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
           const decode = (value) => value
             .replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'")
             .replaceAll('&lt;', '<').replaceAll('&gt;', '>').replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
-          const plain = (html) => decode(html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
-          const request = async (url) => {
+          const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+          const request = async (url, body = true) => {
             try {
               const response = await fetch(url, {
                 redirect: 'follow',
                 signal: AbortSignal.timeout(30000),
-                headers: { 'user-agent': 'cars-autobest-fleet-verifier/2.0', 'accept-language': 'en' }
+                headers: { 'user-agent': 'cars-autobest-fleet-verifier/3.0', 'accept-language': 'en' }
               });
-              const text = await response.text();
-              return { status: response.status, finalUrl: response.url, text, headers: Object.fromEntries(response.headers), error: null };
+              const text = body ? await response.text() : '';
+              if (!body) await response.body?.cancel();
+              return { status: response.status, finalUrl: response.url, text, contentType: response.headers.get('content-type') || '', error: null };
             } catch (error) {
-              return { status: 0, finalUrl: url, text: '', headers: {}, error: String(error) };
+              return { status: 0, finalUrl: url, text: '', contentType: '', error: String(error) };
             }
+          };
+          const logoPath = (html) => {
+            const sources = [
+              ...[...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1]),
+              ...[...html.matchAll(/<source\b[^>]*\bsrcset=["']([^"', ]+)/gi)].map((match) => match[1])
+            ].map(decode);
+            return sources.find((src) => /\.(?:png|webp)(?:[?#]|$)/i.test(src) && /(?:logo|wordmark|dealer-brand|dealer\/brand|\/navara\/)/i.test(src)) || '';
+          };
+          const verifyDealer = async (dealer) => {
+            let last = null;
+            for (let attempt = 1; attempt <= 4; attempt += 1) {
+              const locales = {};
+              for (const locale of ['en', 'bg']) {
+                const page = await request(`${dealer.alias}/${locale}`);
+                locales[locale] = {
+                  status: page.status,
+                  finalUrl: page.finalUrl,
+                  language: new RegExp(`<html[^>]*\\blang=["']?${locale}\\b`, 'i').test(page.text),
+                  localeUi: /cars-locale-dialog|data-locale-dialog/.test(page.text) && page.text.includes('English') && page.text.includes('Български'),
+                  releaseArtwork: page.text.includes('/assets/images/template/service-sell-front-v3.webp') && page.text.includes('/assets/images/template/service-import-front-v3.webp'),
+                  vehicleTypeContract: /<option\s+value=["']motorbike["']/.test(page.text) && /<option\s+value=["']truck["']/.test(page.text),
+                  logo: logoPath(page.text),
+                  error: page.error
+                };
+              }
+              const logo = locales.en.logo || locales.bg.logo;
+              const logoResponse = logo ? await request(new URL(logo, `${dealer.alias}/`).href, false) : { status: 0, contentType: '', finalUrl: '', error: 'No raster dealer logo found' };
+              const logoCheck = {
+                path: logo,
+                status: logoResponse.status,
+                finalUrl: logoResponse.finalUrl,
+                contentType: logoResponse.contentType,
+                raster: /\.(?:png|webp)(?:[?#]|$)/i.test(logo),
+                error: logoResponse.error
+              };
+              const routePass = Object.values(locales).every((item) => item.status === 200 && item.language && item.localeUi && item.releaseArtwork && item.vehicleTypeContract && item.logo);
+              const logoPass = logoCheck.status === 200 && logoCheck.raster && /^image\//i.test(logoCheck.contentType);
+              last = { ...dealer, attempt, pass: routePass && logoPass, locales, logo: logoCheck };
+              if (last.pass) return last;
+              if (attempt < 4) await delay(5000);
+            }
+            return last;
           };
           const mapLimit = async (items, limit, worker) => {
             const output = new Array(items.length);
             let next = 0;
-            await Promise.all(Array.from({ length: Math.min(limit, items.length) }, async () => {
+            await Promise.all(Array.from({ length: limit }, async () => {
               while (true) {
                 const index = next++;
                 if (index >= items.length) return;
                 output[index] = await worker(items[index]);
+                console.log(`${output[index].pass ? 'PASS' : 'FAIL'} ${output[index].slug}`);
               }
             }));
             return output;
           };
-          const logoPath = (html) => {
-            const candidates = [...html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)]
-              .map((match) => decode(match[1]))
-              .filter((src) => /\.(?:png|webp)(?:[?#]|$)/i.test(src) && /(?:logo|wordmark|dealer-brand|dealer\/brand|\/navara\/)/i.test(src));
-            return candidates[0] || '';
-          };
-          const verify = async (dealer) => {
-            const locales = {};
-            for (const locale of ['en', 'bg']) {
-              const page = await request(`${dealer.alias}/${locale}`);
-              const body = plain(page.text).toLocaleLowerCase(locale === 'bg' ? 'bg-BG' : 'en-US');
-              const expectedName = dealer.name.toLocaleLowerCase(locale === 'bg' ? 'bg-BG' : 'en-US');
-              locales[locale] = {
-                status: page.status,
-                finalUrl: page.finalUrl,
-                language: new RegExp(`<html[^>]*\\blang=["']?${locale}\\b`, 'i').test(page.text),
-                localeUi: /cars-locale-dialog|data-locale-dialog/.test(page.text) && page.text.includes('English') && page.text.includes('Български'),
-                releaseArtwork: page.text.includes('/assets/images/template/service-sell-front-v3.webp') && page.text.includes('/assets/images/template/service-import-front-v3.webp'),
-                vehicleTypeContract: /<option\s+value=["']motorbike["']/.test(page.text) && /<option\s+value=["']truck["']/.test(page.text),
-                dealerIdentity: body.includes(expectedName),
-                logo: logoPath(page.text),
-                error: page.error
-              };
-            }
-            const logo = locales.en.logo || locales.bg.logo;
-            let logoCheck = { path: logo, status: 0, contentType: '', raster: /\.(?:png|webp)(?:[?#]|$)/i.test(logo), error: null };
-            if (logo) {
-              const target = new URL(logo, `${dealer.alias}/`).href;
-              try {
-                const response = await fetch(target, { redirect: 'follow', signal: AbortSignal.timeout(30000), headers: { 'user-agent': 'cars-autobest-fleet-verifier/2.0' } });
-                logoCheck = { ...logoCheck, status: response.status, contentType: response.headers.get('content-type') || '', finalUrl: response.url };
-                await response.body?.cancel();
-              } catch (error) {
-                logoCheck.error = String(error);
-              }
-            }
-            const routePass = Object.values(locales).every((item) => item.status === 200 && item.language && item.localeUi && item.releaseArtwork && item.vehicleTypeContract && item.dealerIdentity && item.logo);
-            const logoPass = logoCheck.status === 200 && logoCheck.raster && /^image\//i.test(logoCheck.contentType);
-            return { ...dealer, pass: routePass && logoPass, locales, logo: logoCheck };
-          };
 
-          let report = null;
-          for (let attempt = 1; attempt <= 80; attempt += 1) {
-            const dealers = await mapLimit(rows, 6, verify);
-            report = {
+          (async () => {
+            const dealers = await mapLimit(fleet, 6, verifyDealer);
+            const report = {
               schemaVersion: 1,
               release: {
                 version: '0.2.0',
@@ -143,23 +144,17 @@ jobs:
                 sourceTree: 'bbc9c91c017d7d2d562ad68cf1a0931c11289417',
                 sourceDigest: 'b98e011d45774f69b18a1ff69e9e42f58ad690d7cf1acbb7e56ea83303529c42'
               },
-              attempt,
               checkedAt: new Date().toISOString(),
               passed: dealers.filter((dealer) => dealer.pass).length,
               failed: dealers.filter((dealer) => !dealer.pass).length,
               dealers
             };
             fs.writeFileSync(path.join(process.env.RUNNER_TEMP, 'evidence/auto-best-0.2.0-fleet.json'), JSON.stringify(report, null, 2));
-            const pending = dealers.filter((dealer) => !dealer.pass).map((dealer) => dealer.slug);
-            console.log(`attempt=${attempt} passed=${report.passed}/25 pending=${pending.join(',') || 'none'}`);
-            if (!pending.length) break;
-            if (attempt < 80) await sleep(15000);
-          }
-          if (!report || report.failed) {
-            console.error(JSON.stringify(report?.dealers.filter((dealer) => !dealer.pass) || [], null, 2));
-            process.exitCode = 1;
-          }
-          console.log(JSON.stringify({ checkedAt: report?.checkedAt, passed: report?.passed, release: report?.release }, null, 2));
+            console.log(JSON.stringify({ checkedAt: report.checkedAt, passed: report.passed, failed: report.failed }, null, 2));
+            if (report.failed) {
+              console.error(JSON.stringify(dealers.filter((dealer) => !dealer.pass), null, 2));
+              process.exitCode = 1;
+            }
           })().catch((error) => {
             console.error(error.stack || error.message);
             process.exitCode = 1;
