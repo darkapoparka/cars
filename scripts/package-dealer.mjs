@@ -10,6 +10,7 @@ import { dealerGuidance } from './lib/dealer-guidance.mjs';
 import { assertLegacyLocaleCompatible } from './lib/dealer-locale.mjs';
 import { NATIVE_PACKAGING_VERSION, assertNativeAdoption } from './lib/native-localization.mjs';
 import { adoptNativeSource, applyNativeMounts } from './publishing/native-mounts.mjs';
+import { applySharedMedia } from './publishing/shared-media.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -200,6 +201,11 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   files.set('dealer.json', Buffer.from(json(manifest)));
   if (guidance !== undefined && (typeof guidance !== 'string' || !guidance.trim())) throw new Error('guidance must be nonempty portable Markdown');
   if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest)));
+  const mediaCatalog = new URL('./publishing/shared-media-catalog.json', import.meta.url);
+  if (native && await exists(mediaCatalog)) {
+    applySharedMedia(files, JSON.parse(await fs.readFile(mediaCatalog, 'utf8')));
+    for (const helper of ['prune-shared-media.mjs', 'storage-assets.mjs']) files.set(`scripts/${helper}`, await fs.readFile(new URL(`./publishing/${helper}`, import.meta.url)));
+  }
   const hashes = () => [...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, content]) => ({ path: name, sha256: sha256(normalized(content)) }));
   const payload = hashes();
   const payloadDigest = sha256(JSON.stringify(payload));
