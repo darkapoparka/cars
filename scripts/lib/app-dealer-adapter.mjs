@@ -37,7 +37,10 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
   const slug=text(listing.slug);if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)||names.has(slug))throw new Error('Invalid or repeated vehicle slug: '+slug);names.add(slug);
   if(listing.currency && listing.currency!==currency)throw new Error('Mixed listing currencies require explicit per-listing treatment: '+slug);
   if(!Array.isArray(listing.images)||!listing.images.length)throw new Error('Vehicle has no retained photos: '+slug);
-  const images=await Promise.all(listing.images.map(image=>retain(image,'vehicle')));
+  const rasterSources=listing.images.filter(image=>typeof image==='string'&&!/\.svg(?:[?#]|$)/i.test(image)&&!/(?:placeholder|no[-_]?photo)/i.test(image));
+  const images=await Promise.all(rasterSources.map(image=>retain(image,'vehicle')));
+  const imagePlaceholder=images.length===0;
+  if(imagePlaceholder)images.push('/cutouts/buy-sedan-v1.png');
   const price=number(listing.priceAmount),mileage=number(listing.mileageKm,listing.mileageUnit==='km'?listing.mileageValue:undefined,listing.raw?.mileageKm);
   const fuelKey=text(listing.fuelType).toLowerCase(),transmissionKey=text(listing.transmissionType||listing.transmission).toLowerCase();
   const make=text(listing.brand||listing.make), originalModel=text(listing.model)||text(listing.title);
@@ -49,7 +52,8 @@ export async function prepareAppDealer(sourceRoot, manifest, {readFile} = {}) {
    transmission:({automatic:'Automatic',manual:'Manual'})[transmissionKey]||'Not published',
    body:label(listing.bodyType,['SUV','Sedan','Hatchback','Coupe','MPV','Convertible','Pickup'],'Other'),
    specifications:text(listing.regionalSpecs),sourceUrl:url(listing.sourceUrl),observedAt:text(listing.observedAt),
-   optionsType:'',engineType:text(listing.engineSize||listing.engine),location:text(business.city),badges:[],
+   optionsType:'',engineType:text(listing.engineSize||listing.engine),location:text(business.city),badges:[],imagePlaceholder,
+   proposalBenefits:['Warranty option','Finance option'],
    power:number(listing.powerHp)?listing.powerHp+' hp':'Not published',engine:text(listing.engineSize||listing.engine)||'Not published',
    warranty:'Confirm with seller',condition:'Confirm with seller',highlights:(listing.features||[]).filter(v=>typeof v==='string'),
    color:text(listing.exteriorColor||listing.color),featureLabels:(listing.features||[]).filter(v=>typeof v==='string')});
