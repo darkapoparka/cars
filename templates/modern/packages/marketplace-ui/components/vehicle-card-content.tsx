@@ -33,7 +33,9 @@ import {
 } from "../lib/listing-truth";
 import {
   mobileVehicleCardContentClassName,
+  mobileVehicleCardFactsClassName,
   mobileVehicleCardPriceClassName,
+  mobileVehicleCardSummaryClassName,
   mobileVehicleCardTitleClassName,
 } from "../lib/mobile-vehicle-card-layout";
 import {
@@ -148,7 +150,7 @@ const VehiclePriceSummary = ({
       </p>
       {secondaryPriceLabel ? (
         <p
-          className="text-meta text-muted-foreground"
+          className="text-micro text-muted-foreground min-[360px]:text-meta"
           title={secondaryPriceLabel}
         >
           {secondaryPriceLabel}
@@ -188,11 +190,15 @@ const VehiclePriceSummary = ({
 };
 
 const VehicleSpecPills = ({
+  className,
   listing,
   locale,
+  layout,
 }: {
+  className?: string;
   listing: VehicleListing;
   locale?: string;
+  layout?: "grid" | "inline";
 }) => {
   const copy = getVehicleCardCopy(locale);
   const facts = getVehicleCardSpecFacts(listing, locale);
@@ -201,7 +207,14 @@ const VehicleSpecPills = ({
     return null;
   }
 
-  return <DealerVehicleFacts facts={facts} label={copy.specs} />;
+  return (
+    <DealerVehicleFacts
+      className={className}
+      facts={facts}
+      label={copy.specs}
+      layout={layout}
+    />
+  );
 };
 
 const VehicleSellerFooter = ({
@@ -498,10 +511,11 @@ const MobileDealerVehicleCardContent = ({
     )}
     href={listingHref}
   >
-    <div className="min-w-0 space-y-1">
+    <div className={mobileVehicleCardSummaryClassName}>
       <h2
         className={mobileVehicleCardTitleClassName}
         data-slot="vehicle-card-title"
+        title={getVehicleCardTitle(listing, "comparison")}
       >
         {getVehicleCardTitle(listing, "comparison")}
       </h2>
@@ -511,7 +525,12 @@ const MobileDealerVehicleCardContent = ({
         variant="comparison"
       />
     </div>
-    <VehicleSpecPills listing={listing} locale={locale} />
+    <VehicleSpecPills
+      className={mobileVehicleCardFactsClassName}
+      layout="inline"
+      listing={listing}
+      locale={locale}
+    />
   </Link>
 );
 
