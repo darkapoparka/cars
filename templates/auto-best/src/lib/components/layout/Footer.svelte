@@ -187,7 +187,7 @@
     .dn-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: 'intro intro' 'contact contact' 'vehicles company'; gap: var(--dn-space-4); }
     .dn-footer__tagline, .dn-footer__intro p, .dn-footer nav strong, .dn-footer__contact h2 { display: none; }
     .dn-footer nav { padding-top: var(--dn-space-3); border-top: 1px solid rgb(255 255 255 / 14%); }
-    .dn-footer nav a { color: var(--dn-muted-on-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
+    .dn-footer nav a { overflow-wrap: anywhere; color: var(--dn-muted-on-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
     .dn-footer a:hover { color: var(--dn-white); }
     .dn-footer a:focus-visible { outline-color: var(--dn-white); }
     .dn-footer__call { min-height: var(--dn-control-hit-height); padding: 0; border-radius: var(--dn-radius-sm); background: transparent; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-body); }

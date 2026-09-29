@@ -119,7 +119,7 @@
     .dn-brand-all-glyph span { border-radius: 50%; background: #cdd2d8; }
     .dn-brand-all-glyph__accent { background: var(--dn-red); }
     .dn-brand-card--secondary { display: none; }
-    .dn-brand-card strong { align-self: end; font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
+    .dn-brand-card strong { align-self: end; overflow-wrap: anywhere; font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
     .dn-brand-card--additional { order: 2; }
     .dn-discovery-toggle { order: 1; display: grid; min-height: 108px; grid-template-rows: 58px auto; margin: 0; padding: 8px 6px 10px; border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); font-size: var(--dn-control-size); }
     .dn-discovery-toggle strong { display: block; align-self: end; line-height: var(--dn-leading-control); font-weight: var(--dn-weight-semibold); }

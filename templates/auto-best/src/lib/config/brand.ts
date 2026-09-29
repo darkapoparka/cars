@@ -33,6 +33,6 @@ export const brand = {
   addressLine,
   address: `${addressLine}, ${city}`,
   appointment: 'Посещения с предварителна уговорка',
-  logo: '/assets/images/template/auto-best-logo-v2.svg',
-  logoOnDark: '/assets/images/template/auto-best-logo-v2-light.svg'
+  logo: '/assets/images/template/auto-best-logo-v2.webp',
+  logoOnDark: '/assets/images/template/auto-best-logo-v2-light.webp'
 } as const satisfies BrandConfig;

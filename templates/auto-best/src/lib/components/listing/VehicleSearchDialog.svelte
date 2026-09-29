@@ -50,6 +50,7 @@
   let filterDialog = $state<HTMLDialogElement>();
   let dialogSearch = $state<HTMLInputElement>();
   let filtersOpen = $state(false);
+  let activeChoice = $state<string>();
   let returnFocus: HTMLButtonElement | undefined;
 
   const attachFilterDialog: Attachment<HTMLDialogElement> = (node) => {
@@ -182,7 +183,7 @@
 
       <div class="dn-mobile-filter-fields">
         {#each mobileFields as item (item.field)}
-          <button type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen} onclick={event => openChoice(event, item.field, item.label)}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
+          <button type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen && activeChoice === item.field} onclick={event => { activeChoice = item.field; openChoice(event, item.field, item.label); }}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
         {/each}
       </div>
       <div class="dn-listing-filter__filter-groups">

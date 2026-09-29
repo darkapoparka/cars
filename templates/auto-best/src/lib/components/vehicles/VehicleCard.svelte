@@ -8,7 +8,8 @@
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  import { formatVehiclePrice, type Vehicle } from '$data/inventory';
+  import { formatVehiclePriceLabel, type Vehicle } from '$data/inventory';
+  import { imageSrcset } from '$data/responsive-images';
 
   interface Props {
     vehicle: Vehicle;
@@ -24,6 +25,7 @@
   const modelTitle = $derived(vehicle.title.startsWith(`${vehicle.make} `)
     ? vehicle.title.slice(vehicle.make.length + 1)
     : vehicle.title);
+  const priceLabel = $derived(formatVehiclePriceLabel(vehicle.priceEur, i18n.locale));
 </script>
 
 <article id={`vehicle-${vehicle.id}`} data-variant={layout} class:dn-vehicle-card--listing={layout === 'listing'} class:dn-vehicle-card--showcase={layout === 'showcase'} class="dn-vehicle-card">
@@ -39,6 +41,8 @@
       <div class="dn-vehicle-card__image">
       <img
         src={vehicle.image}
+        srcset={imageSrcset(vehicle.image)}
+        sizes={layout === 'listing' ? '(max-width: 767px) 42vw, (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
         alt={vehicle.title}
         loading={priority ? 'eager' : 'lazy'}
         fetchpriority={priority ? 'high' : 'auto'}
@@ -82,7 +86,7 @@
       {/if}
 
       {#if showPrice}
-        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur, i18n.locale)}</div>
+        <div class="dn-vehicle-card__amount">{priceLabel}</div>
       {/if}
     </div>
   </a>
@@ -107,6 +111,7 @@
   }
   .dn-vehicle-card__mobile-meta { display: none; }
   .dn-vehicle-card {
+    container-type: inline-size;
     display: flex;
     width: 100%;
     min-width: 0;
@@ -160,6 +165,7 @@
     left: 10px;
     z-index: 12;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
@@ -255,7 +261,7 @@
     display: flex;
     width: 100%;
     align-items: stretch;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 8px;
     margin-top: var(--dn-vehicle-card-specs-gap, 12px);
   }
@@ -333,6 +339,8 @@
     }
 
     .dn-vehicle-card--listing {
+      display: block;
+      height: auto;
       min-height: 0;
       border-radius: 16px;
     }
@@ -377,7 +385,7 @@
 
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       gap: var(--dn-space-1);
       margin: 0;
       color: #626a75;
@@ -417,7 +425,7 @@
 
     .dn-vehicle-card--listing .dn-vehicle-card__specs {
       gap: var(--dn-space-1);
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       margin-top: 0;
     }
 
@@ -437,6 +445,23 @@
 
   @media (max-width: 359px) {
     .dn-vehicle-card--listing .dn-vehicle-card__content { padding-inline: 6px; }
+  }
+
+  /* Relative to text size: the compact layout remains intact at normal text. */
+  @container (max-width: 15rem) {
+    .dn-vehicle-card--listing .dn-vehicle-card__link { grid-template-columns: minmax(0, 1fr); }
+    .dn-vehicle-card--listing .dn-vehicle-card__visual { height: auto; aspect-ratio: 3 / 2; }
+    .dn-vehicle-card--listing .dn-vehicle-card__image { position: relative; }
+    .dn-vehicle-card__name,
+    .dn-vehicle-card--listing .dn-vehicle-card__name {
+      display: block;
+      overflow: visible;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      line-clamp: none;
+      -webkit-line-clamp: unset;
+    }
+    .dn-vehicle-card__make { overflow-wrap: anywhere; }
   }
 
   @media (prefers-reduced-motion: reduce) {

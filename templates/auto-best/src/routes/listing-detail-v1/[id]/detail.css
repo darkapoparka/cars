@@ -308,7 +308,7 @@
   gap: 20px;
 }
 
-.dn-detail-card {
+.dn-detail-card { min-width: 0; overflow-wrap: anywhere;
   padding: 24px;
   border: 1px solid #eaedf2;
   border-radius: 16px;
@@ -476,7 +476,7 @@
 }
 
 .dn-detail-related__list img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.dn-detail-related-card > span { display: block; padding: 18px 20px 20px; }
+.dn-detail-related-card > span { display: block; overflow-wrap: anywhere; padding: 18px 20px 20px; }
 .dn-detail-related__list strong,
 .dn-detail-related__list b { display: block; }
 .dn-detail-related__list strong { color: #2f343b; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
@@ -497,7 +497,7 @@
 
 @media (max-width: 991px) {
   .dn-detail-body { padding-top: 20px; padding-bottom: 64px; }
-  .dn-detail-layout { grid-template-columns: 1fr; gap: 16px; }
+  .dn-detail-layout { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .dn-detail-main,
   .dn-detail-sidebar { display: contents; }
   .dn-detail-title-card { grid-row: 1; }
@@ -513,7 +513,7 @@
 }
 
 .dn-detail-mobile-actions,
-.dn-detail-finance-trigger { display: none; }
+.dn-detail-finance-trigger { overflow-wrap: anywhere; display: none; }
 
 .dn-detail-finance-dialog {
   width: min(560px, calc(100% - 32px));
@@ -547,7 +547,7 @@
 }
 
 .dn-detail-finance-sheet__header span {
-  color: #737a84;
+  color: var(--dn-muted);
   font-size: var(--dn-text-meta);
 }
 
@@ -693,14 +693,15 @@
   .dn-detail-tabs button {
     min-width: 0;
     min-height: var(--dn-control-hit-height);
-    padding: 0 var(--dn-space-1);
+    padding: var(--dn-space-2) var(--dn-space-1);
     border: var(--dn-space-half) solid transparent;
     border-radius: var(--dn-pill);
     background-clip: padding-box;
     color: var(--dn-muted);
     font-size: var(--dn-text-meta);
     font-weight: var(--dn-weight-regular);
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .dn-detail-tabs button.active {

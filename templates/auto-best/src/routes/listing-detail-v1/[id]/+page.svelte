@@ -15,7 +15,8 @@
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
   import { brand } from '$config/brand';
-  import { formatVehiclePrice, type Vehicle } from '$data/inventory';
+  import { formatVehiclePrice, formatVehiclePriceLabel, type Vehicle } from '$data/inventory';
+  import { imageSrcset } from '$data/responsive-images';
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
@@ -31,8 +32,12 @@
   let activeDetailTab = $derived(activeTabsByVehicle[data.vehicle.id] ?? 'overview');
   let shareCopied = $state(false);
   let financeDialog = $state<HTMLDialogElement>();
+  let financeOpener: HTMLButtonElement | undefined;
 
-  const openFinance = () => financeDialog?.showModal();
+  const openFinance = (event: MouseEvent) => {
+    financeOpener = event.currentTarget instanceof HTMLButtonElement ? event.currentTarget : undefined;
+    financeDialog?.showModal();
+  };
   const closeFinance = () => financeDialog?.close();
 
   async function shareVehicle() {
@@ -117,6 +122,8 @@
                 </div>
                 <img
                   src={data.vehicle.image}
+                  srcset={imageSrcset(data.vehicle.image)}
+                  sizes="(max-width: 991px) 100vw, (max-width: 1199px) 65vw, 850px"
                   alt={data.vehicle.title}
                   width="1245"
                   height="988"
@@ -238,10 +245,10 @@
           <div class="dn-detail-related__list">
             {#each data.recommendations as vehicle (vehicle.id)}
               <a class="dn-detail-related-card" href={i18n.href(resolve(vehicle.href as '/listing-detail-v1/1'))}>
-                <img src={vehicle.image} alt="" width="420" height="280" decoding="async" />
+                <img src={vehicle.image} srcset={imageSrcset(vehicle.image)} sizes="(max-width: 767px) 236px, 33vw" alt="" width="420" height="280" loading="lazy" decoding="async" />
                 <span>
                   <strong>{vehicle.title}</strong>
-                  <b>{formatVehiclePrice(vehicle.priceEur, i18n.locale)}</b>
+                  <b>{formatVehiclePriceLabel(vehicle.priceEur, i18n.locale)}</b>
                 </span>
               </a>
             {/each}
@@ -255,6 +262,7 @@
     id="dn-detail-finance-dialog"
     bind:this={financeDialog}
     aria-labelledby="dn-detail-finance-dialog-title"
+    onclose={() => financeOpener?.focus({ preventScroll: true })}
     onclick={(event) => { if (event.target === event.currentTarget) closeFinance(); }}
   >
     <div class="dn-detail-finance-sheet">

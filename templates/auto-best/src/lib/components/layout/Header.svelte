@@ -161,6 +161,7 @@
       await tick();
       mobileReturnFocus?.focus();
     }
+    return mobileReturnFocus;
   };
 
   const handleWindowKeydown = (event: KeyboardEvent) => {
@@ -710,6 +711,7 @@
       border-radius: var(--dn-radius-button);
       font-size: var(--dn-text-body);
       font-weight: var(--dn-control-weight);
+      line-height: var(--dn-leading-control);
       text-align: center;
     }
 

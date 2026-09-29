@@ -185,9 +185,9 @@ import { localeContract } from '$lib/locale/core';
   input[type=number] { display: block; width: 100%; min-width: 0; box-sizing: border-box; margin-top: 8px; padding: 0 var(--dn-space-3); height: var(--dn-overlay-control-height); border: 1px solid #d9dde2; border-radius: 12px; background: #fff; color: inherit; font: var(--dn-overlay-field-font); }
   input::placeholder { color: #69717c; }
   p[role=alert] { color: #a40000; font-size: var(--dn-text-body); margin: 12px 0 0; }
-  footer { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-4); padding: var(--dn-space-3) var(--dn-overlay-gutter) calc(var(--dn-space-4) + env(safe-area-inset-bottom)); }
-  .clear { min-height: var(--dn-overlay-control-height); padding: 0; border: 0; background: transparent; color: inherit; text-decoration: underline; text-underline-offset: 4px; font: var(--dn-overlay-option-font); }
-  .apply { display: flex; flex: 1; min-height: var(--dn-overlay-control-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font: var(--dn-overlay-action-font); }
+  footer { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; gap: var(--dn-space-4); padding: var(--dn-space-3) var(--dn-overlay-gutter) calc(var(--dn-space-4) + env(safe-area-inset-bottom)); }
+  .clear { min-width: 0; max-width: 100%; min-height: var(--dn-overlay-control-height); padding: 0; border: 0; background: transparent; color: inherit; text-decoration: underline; text-underline-offset: 4px; font: var(--dn-overlay-option-font); overflow-wrap: anywhere; }
+  .apply { display: flex; flex: 1 1 8rem; min-width: 0; min-height: var(--dn-overlay-control-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font: var(--dn-overlay-action-font); overflow-wrap: anywhere; }
   .apply:hover { background: var(--dn-red-hover); }
   .apply:disabled { opacity: .5; cursor: default; }
   @media (max-width: 767px) {

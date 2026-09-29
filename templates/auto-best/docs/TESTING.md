@@ -66,6 +66,7 @@ For the built preview, use that preview URL instead. `scripts/browser.mjs` contr
 | `scripts/enquiry-smoke.mjs` | Enquiry entry, steps, review, local photos and sharing/copy behavior |
 | `scripts/mobile-filter-smoke.mjs` | Bulgarian returning-visitor filter draft, nested choices, application, empty results and result-label containment |
 | `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, icon size, single-line mobile inventory titles, filter footer, detail touch targets, short-viewport editors and configured settings title |
+| `scripts/mobile-reflow-smoke.mjs` | English/Bulgarian pages and dialogs at 320/390/430px, 200% root text, WCAG text-spacing overrides and short viewports; rejects clipped actions and enlarged card copy |
 | `scripts/desktop-discovery-smoke.mjs` | Desktop discovery and sticky-control behavior |
 | `scripts/phase4-smoke.mjs` | URL/filter preservation, nested and outer draft ownership, pending desktop values, shell transitions, menu focus, duplicate IDs and 767/768/991/992 boundaries |
 | `scripts/typography-smoke.mjs` | Entry/segment/CTA hierarchy, keyboard tab switching, link/VIN/description editor save and discard, stable card height, sell/import validation and review, reference edits and clearing, manual fallback, copied text, Escape/focus return, control reflow and screenshots |
@@ -149,6 +150,8 @@ The matrix covers BG/EN at 320, 390, 430, 768 and 1440px, with short 420px viewp
 ### Final mobile regression checks
 
 Set `BASE_URL` to a built preview and run `node scripts/mobile-final-smoke.mjs`. It checks EN/BG at 320/390/430px: 200% text reflow, service artwork/copy separation, navigation target containment, reduced motion, menu focus return, inert hidden footer navigation, and responsive image loading/priority. Screenshots and results are saved under `artifacts/mobile-final-smoke/`. Use the existing route, enquiry, mobile-filter and overlay suites for the wider journeys; this focused suite is not a WCAG certification or a physical-device performance test.
+
+Run `node scripts/mobile-reflow-smoke.mjs` against the same preview for seven pages and four dialogs in EN/BG at 320/390/430px. It checks normal layout, 200% root text, WCAG text-spacing overrides and short dialogs. In PowerShell, set `$env:REFLOW_ENGINE = 'webkit'` to repeat with WebKit; remove that variable to use Chromium. Both engines must preserve visible card copy and actions without horizontal overflow. Reports are saved under `artifacts/mobile-reflow-<engine>/`.
 
 ### Shared entry controls
 

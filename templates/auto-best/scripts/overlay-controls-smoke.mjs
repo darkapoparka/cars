@@ -92,9 +92,10 @@ try {
       const evidence = [await centered(close)];
       await page.screenshot({ path: `${output}/${locale}-${width}-filters.png` });
       if (width < 768) {
-        const facet = page.locator('.dn-mobile-filter-fields button').first();
+        const facet = page.locator('.dn-mobile-filter-fields button').nth(1);
         await facet.click();
         const picker = page.locator('#dn-dialog-choice');
+        assert.equal(await page.locator('.dn-mobile-filter-fields button[aria-expanded="true"]').count(), 1, 'Only the active facet reports an expanded dialog');
         const nestedHeader = await mobileHeaderGeometry(picker.locator('header'));
         assert.equal(mainHeader.shared, true, 'Main mobile overlay must use the shared header primitive');
         assert.equal(nestedHeader.shared, true, 'Nested mobile overlay must use the shared header primitive');
@@ -106,6 +107,7 @@ try {
         await picker.locator('.clear-search').click();
         assert.equal(await picker.locator('input[type=search]').inputValue(), '');
         await picker.locator('.close').click();
+        assert.equal(await page.locator('.dn-mobile-filter-fields button[aria-expanded="true"]').count(), 0, 'Closing the picker clears the expanded state');
         assert.equal(await page.locator('dialog[open]').count(), 1, 'Nested Close must retain its parent');
         await page.waitForFunction(el => document.activeElement === el, await facet.elementHandle());
         await page.setViewportSize({ width, height: 420 });
@@ -143,14 +145,16 @@ try {
       const trigger = page.locator('.dn-service-entry__submit'); await trigger.click();
       const evidence = await centered(page.locator('.dn-tradein-close'));
       await page.locator('.dn-tradein-close').click();
-      assert(await trigger.evaluate(el => document.activeElement === el)); return evidence;
+      await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
+      return evidence;
     });
     await check('import-form', '/contact?topic=import', async page => {
       await page.locator('.dn-service-entry [name=link]').fill('https://example.com/vehicle');
       const trigger = page.locator('.dn-service-entry__submit'); await trigger.click();
       const evidence = await centered(page.locator('.dn-enquiry-close'));
       await page.locator('.dn-enquiry-close').click();
-      assert(await trigger.evaluate(el => document.activeElement === el)); return evidence;
+      await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
+      return evidence;
     });
     if (width < 992) await check('mobile-menu', '', async page => {
       const trigger = page.locator('.dn-mobile-bottom-nav button'); await trigger.click();
@@ -160,16 +164,22 @@ try {
       return evidence;
     });
     if (width < 768) await check('finance', '/listing-detail-v1/4', async page => {
-      const trigger = page.locator('.dn-detail-finance-trigger'); await trigger.click();
+      const trigger = page.locator('button[aria-controls=dn-detail-finance-dialog]'); await trigger.click();
       const close = page.locator('.dn-detail-finance-sheet__header button');
-      const evidence = await centered(close); await close.click(); return evidence;
+      await page.locator('#dn-detail-finance-dialog').waitFor({ state: 'visible' });
+      const evidence = await centered(close); await close.click();
+      await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
+      return evidence;
     });
     await check('preferences', '', async page => {
-      const trigger = page.locator('[data-locale-selector]:visible').last();
+      const trigger = page.locator(width < 992 ? '.dn-mobile-bottom-nav button' : '.dn-topbar__settings .locale-settings-menu > button');
       await trigger.click();
+      await page.locator('[data-locale-selector]:visible').click();
+      await page.locator('.cars-locale-dialog').waitFor({ state: 'visible' });
       const evidence = await centered(page.locator('.cars-locale-close'));
       await page.locator('.cars-locale-close').click();
-      assert(await trigger.evaluate(el => document.activeElement === el)); return evidence;
+      await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
+      return evidence;
     });
     await check('reactive-validation', '/contact?topic=trade-in', async page => {
       const start = page.locator('.dn-service-entry__submit'), close = page.locator('.dn-tradein-close');

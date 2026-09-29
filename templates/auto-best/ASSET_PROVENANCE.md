@@ -50,3 +50,9 @@ Onest is bundled by `@fontsource-variable/onest`. The inherited source record id
 Keep source dimensions accurate and update the consuming record. Bounds use left/top/right/bottom; crop regions use x/y/width/height. Preserve transparent edges where present, use photo framing for stock and containment for decorative cutouts, and inspect text-bearing image pixels during dealer personalization.
 
 Record the asset origin and limitations alongside the dated provenance notes. The presence of a dealer logo, portrait, stock photo or video thumbnail does not itself establish wider reuse rights. [Source notices](SOURCE_LICENSE.md) describes the inherited record.
+
+## Mobile delivery encodings, 29–30 September 2026
+
+The `auto-best-logo-v2*.webp` assets are transparent, lossless 640px rasterizations of the retained matching SVGs. `body-wagon-v1.webp` is a 916×429px WebP encoding of the retained PNG, with its bounds scaled to the new dimensions. The collection banner (480/720px), front-facing sell/import artwork (480px), stock photos (640px) and first three blog photos (640px) are resized encodings of the matching full-size files. Sharp/libvips performed the resizing and encoding; no imagery or identity was generated or replaced. The wagon uses quality 92 and the responsive photograph/artwork derivatives use quality 90. All originals and their source notices remain available.
+
+`src/lib/config/lead-site.ts` registers these variants by their exact original source path. A personalized image without a matching registry entry continues to use its own original. The homepage preload and rendered hero share the same source set and size hint.

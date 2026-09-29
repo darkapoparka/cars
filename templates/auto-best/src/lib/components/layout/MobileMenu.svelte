@@ -14,7 +14,7 @@
   import MobileNavIcon from './MobileNavIcon.svelte';
   import type { HeaderPresentation } from '$data/shell';
   let { closeMobile, attachMobileMenu, attachMobileCloseButton, active }: {
-    closeMobile: (restoreFocus?: boolean) => Promise<void>;
+    closeMobile: (restoreFocus?: boolean) => Promise<void | HTMLElement>;
     attachMobileMenu: Attachment<HTMLDialogElement>;
     attachMobileCloseButton: Attachment<HTMLButtonElement>;
     active: HeaderPresentation['mobileMenu'];
@@ -55,11 +55,13 @@
           <a href={i18n.href(resolve('/about-us'))} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>{i18n.t("m_b4b580a9ad8c")}</span><Icon name="arrow-right" size={16} /></a>
           <a href={i18n.href(resolve('/contact'))} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>{i18n.t("m_d58d4100d4e6")}</span><Icon name="arrow-right" size={16} /></a>
         </nav>
-        <div class="dn-mobile-menu__social" aria-label={i18n.t("m_b16446d4331a")}>
+        {#if brand.instagramUrl || brand.youtubeUrl || brand.facebookUrl}
+        <div class="dn-mobile-menu__social" role="group" aria-label={i18n.t("m_b16446d4331a")}>
           {#if brand.instagramUrl}<a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>{i18n.t("m_bad57ef7837c")}</span></a>{/if}
           {#if brand.youtubeUrl}<a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>{i18n.t("m_fb7accfff8c6")}</span></a>{/if}
           {#if brand.facebookUrl}<a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>{i18n.t("m_d41f5b4977ee")}</span></a>{/if}
         </div>
+        {/if}
         <p class="dn-mobile-menu__address">{i18n.dealer('addressLine')}</p>
       </dialog>
 <style>

@@ -1,10 +1,11 @@
 <script lang="ts">
   import type { FeatureArtwork } from '$data/feature-artwork';
+  import { imageSrcset } from '$data/responsive-images';
   let { artwork, eager = false }: { artwork: FeatureArtwork; eager?: boolean } = $props();
 </script>
 
 <span class="feature-artwork" style:--artwork-ratio={artwork.crop[2] / artwork.crop[3]} style:aspect-ratio={`${artwork.crop[2]} / ${artwork.crop[3]}`}>
-  <img src={artwork.src} alt="" width={artwork.width} height={artwork.height} loading={eager ? 'eager' : 'lazy'} decoding="async"
+  <img src={artwork.src} srcset={imageSrcset(artwork.src)} sizes="(max-width: 767px) calc(50vw - 12px), 560px" alt="" width={artwork.width} height={artwork.height} loading={eager ? 'eager' : 'lazy'} decoding="async"
     style:width={`${artwork.width / artwork.crop[2] * 100}%`}
     style:left={`${-artwork.crop[0] / artwork.crop[2] * 100}%`}
     style:top={`${-artwork.crop[1] / artwork.crop[3] * 100}%`} />

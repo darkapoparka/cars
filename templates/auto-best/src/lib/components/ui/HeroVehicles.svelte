@@ -3,6 +3,7 @@
   import ArtworkRegion from './ArtworkRegion.svelte';
   import { heroVehiclePairs, vehicleArtwork, mobileHeroArtwork, type HeroVehiclePair, type Vehicle, type MobileHeroScene } from '$data/vehicle-artwork';
   import { mobileHeroRegions, mobileServiceArtwork } from '$data/vehicle-artwork';
+  import { mobileHeroSizes } from '$data/responsive-images';
 
   let { pair = 'home', mobile = false, mobileScene = 'car', mobileLeft = 'silver', mobileRight = 'urus' }: {
     pair?: HeroVehiclePair; mobile?: boolean; mobileScene?: MobileHeroScene; mobileLeft?: Vehicle; mobileRight?: Vehicle;
@@ -15,7 +16,7 @@
 <div class="dn-hero-vehicles" class:dn-hero-vehicles--mobile={mobile} data-pair={pair} aria-hidden="true">
   {#if mobile}
     {#if pair === 'home'}
-      <div class="dn-hero-vehicles__pair"><ArtworkRegion artwork={mobileHeroRegions.home} priority /></div>
+      <div class="dn-hero-vehicles__pair"><ArtworkRegion artwork={mobileHeroRegions.home} sizes={mobileHeroSizes} priority /></div>
     {:else if mobileScene === 'sell' || mobileScene === 'import'}
       <div class="dn-hero-vehicles__scene">
         <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].left} priority /></div>

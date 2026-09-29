@@ -29,6 +29,7 @@ type LeadSiteConfig = {
     };
   };
   artwork: {
+    responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
     desktopHeroScenes: Record<'home' | 'inventory' | 'about' | 'contact', SiteAssetPath>;
     contactHero: { desktop: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
     blogHero: SiteAssetPath;
@@ -91,6 +92,54 @@ export const leadSite = {
     }
   },
   artwork: {
+    // Exact source keys keep customized dealer imagery on its own fallback asset.
+    responsiveImages: {
+      [collection]: [
+        { src: '/assets/images/lead/day-night-collection-banner-v2-480.webp', width: 480 },
+        { src: '/assets/images/lead/day-night-collection-banner-v2-720.webp', width: 720 },
+        { src: collection, width: 1200 }
+      ],
+      [mobileSell]: [
+        { src: '/assets/images/template/service-sell-front-v3-480.webp', width: 480 },
+        { src: mobileSell, width: 1200 }
+      ],
+      [mobileImport]: [
+        { src: '/assets/images/template/service-import-front-v3-480.webp', width: 480 },
+        { src: mobileImport, width: 1200 }
+      ],
+      '/assets/images/lead/day-night-stock-01.webp': [
+        { src: '/assets/images/lead/day-night-stock-01-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-01.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-02.webp': [
+        { src: '/assets/images/lead/day-night-stock-02-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-02.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-03.webp': [
+        { src: '/assets/images/lead/day-night-stock-03-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-03.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-04.webp': [
+        { src: '/assets/images/lead/day-night-stock-04-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-04.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-06.webp': [
+        { src: '/assets/images/lead/day-night-stock-06-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-06.webp', width: 1600 }
+      ],
+      '/assets/images/blog/blog-1.jpg': [
+        { src: '/assets/images/blog/blog-1-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-1.jpg', width: 1200 }
+      ],
+      '/assets/images/blog/blog-2.jpg': [
+        { src: '/assets/images/blog/blog-2-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-2.jpg', width: 1200 }
+      ],
+      '/assets/images/blog/blog-3.jpg': [
+        { src: '/assets/images/blog/blog-3-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-3.jpg', width: 1200 }
+      ]
+    },
     desktopHeroScenes: {
       home: '/assets/images/lead/auto-best-desktop-home-v1.webp',
       inventory: '/assets/images/lead/auto-best-desktop-inventory-v1.webp',
