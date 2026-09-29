@@ -4,7 +4,6 @@
 	import type { homePageData } from '$lib/server/home';
 	import { linkHref } from '$lib/utils/links';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
 	import ReviewCard from '$lib/components/reviews/ReviewCard.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import VehicleCard from '$lib/components/inventory/VehicleCard.svelte';
@@ -24,10 +23,11 @@
 </script>
 
 <main id="main-content" class="native-home">
-	{#if mobile.current}
+	<div class="home-mobile-entry">
 		<MobileHero hero={data.hero} />
 		<FeaturedMobile vehicles={data.mobileFeatured} copy={data.copy} compactDesktop />
-	{:else}
+	</div>
+	<div class="home-desktop-entry">
 		<DesktopHero hero={data.hero} {english} />
 		<section class="site-section site-container site-stack">
 			<header class="home-section-heading">
@@ -42,7 +42,7 @@
 				>
 			</div>
 		</section>
-	{/if}
+	</div>
 	<ActionBand copy={data.copy} variant="ownership" />
 	<section class="site-section site-container site-stack">
 		<h2 class="site-heading home-section-title">
@@ -51,16 +51,21 @@
 		<div class="home-brands">
 			{#each data.brands as brand (brand.query)}<a
 					class:home-browse-all={brand.allTile}
+					aria-label={brand.allTile ? brand.name : undefined}
 					href={href(brand.href ?? '/inventory?brand=' + encodeURIComponent(brand.query))}
 					>{#if brand.allTile}<span class="home-browse-icon"
-							><LayoutGrid size={32} aria-hidden="true" /></span
+							><ArrowRight size={32} aria-hidden="true" /></span
 						>{:else if brand.image}<img
 							src={assetHref(brand.image)}
 							alt=""
 							width="100"
 							height="60"
 							loading="lazy"
-						/>{/if}<strong>{brand.name}</strong><span>{brand.count}</span></a
+						/>{/if}<strong
+						>{#if brand.allTile}<span class="browse-label-full">{brand.name}</span><span
+								class="browse-label-short">{english ? 'All' : 'Всички'}</span
+							>{:else}{brand.name}{/if}</strong
+					><span>{brand.count}</span></a
 				>{/each}
 		</div>
 	</section>
@@ -92,7 +97,14 @@
 					{english ? 'Customer reviews' : 'Клиентски отзиви'}
 				</h2>
 			</header>
-			<div class="home-reviews">
+			<!-- Keyboard focus lets readers scroll the review rail with arrow keys. -->
+			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+			<div
+				class="home-reviews"
+				tabindex="0"
+				role="region"
+				aria-label={english ? 'Customer reviews' : 'Клиентски отзиви'}
+			>
 				{#each data.reviewItems as review (review.name)}<ReviewCard {review} />{/each}
 			</div>
 			<div class="home-section-action">
@@ -109,7 +121,14 @@
 				{english ? 'Guides and advice' : 'Полезно за автомобила'}
 			</h2>
 		</header>
-		<div class="home-news">
+		<!-- Keyboard focus lets readers scroll the article rail with arrow keys. -->
+		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+		<div
+			class="home-news"
+			tabindex="0"
+			role="region"
+			aria-label={english ? 'Guides and advice' : 'Полезно за автомобила'}
+		>
 			{#each data.posts as post (post.slug)}<ArticleCard {post} {english} />{/each}
 		</div>
 		<div class="home-section-action">
@@ -124,6 +143,15 @@
 </main>
 
 <style>
+	.home-mobile-entry,
+	.home-brands .browse-label-short {
+		display: none;
+	}
+	.home-brands strong span {
+		font: inherit;
+		color: inherit;
+	}
+
 	.home-section-heading {
 		text-align: center;
 	}
@@ -220,7 +248,22 @@
 		}
 		.home-reviews,
 		.home-news {
-			grid-template-columns: 1fr;
+			grid-template-columns: none;
+			grid-auto-flow: column;
+			grid-auto-columns: 88%;
+			overflow-x: auto;
+			scroll-snap-type: x proximity;
+			gap: 12px;
+			padding-bottom: 8px;
+			scrollbar-width: thin;
+			scrollbar-color: var(--bc-border-strong) transparent;
+		}
+		.home-reviews :global(.review-card),
+		.home-news :global(.article-card) {
+			scroll-snap-align: start;
+		}
+		.home-reviews :global(.review-card) {
+			background: var(--bc-surface-raised);
 		}
 		.home-section-title {
 			text-align: left;
@@ -249,6 +292,29 @@
 		height: 125px;
 	}
 	@media (max-width: 767.98px) {
+		.home-mobile-entry {
+			display: block;
+		}
+		.home-desktop-entry {
+			display: none;
+		}
+		.home-brands .browse-label-full {
+			display: none;
+		}
+		.home-brands .browse-label-short {
+			display: inline;
+		}
+		.home-brands a.home-browse-all {
+			background: var(--bc-surface-raised);
+			border-color: var(--bc-border);
+			color: var(--bc-ink);
+		}
+		.home-brands .home-browse-all > span {
+			color: var(--bc-ink);
+		}
+		.home-brands img {
+			max-width: 100%;
+		}
 		.home-brands .home-browse-icon {
 			display: grid;
 			height: 56px;
