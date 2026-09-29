@@ -13,20 +13,18 @@
 		{
 			kind: 'sell',
 			title: i18n.t('copy.1fdf9944227c'),
-			cta: i18n.t('copy.d915896778d0'),
+			cta: i18n.t('mobile.promo.sellAction'),
 			href: '/sell-your-car' as const,
 			tone: 'dark',
-			image:
-				'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp'
+			image: '/assets/images/home/mobile/sell-trade-studio-v1.webp'
 		},
 		{
 			kind: 'import',
 			title: i18n.t('copy.f78f182894b4'),
-			cta: i18n.t('copy.ee4d0f651884'),
+			cta: i18n.t('mobile.promo.importAction'),
 			href: '/contact?intent=import' as const,
-			tone: 'red',
-			image:
-				'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-left-hero-1200.webp'
+			tone: 'dark',
+			image: '/assets/images/home/mobile/import-europe-road-v1.webp'
 		}
 	] as const;
 
@@ -50,7 +48,7 @@
 				image={mobileImageSrc(resolve(promo.image))}
 				action={promo.cta}
 				tone={promo.tone}
-				artwork="cutout"
+				artwork="promo"
 			/>
 		</a>
 	{/each}

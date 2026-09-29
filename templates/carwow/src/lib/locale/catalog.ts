@@ -123,6 +123,9 @@ export const en = {
 	'seo.contactTradeIn.title': 'Sell or trade in your car | {dealerName}',
 	'seo.contactTradeIn.description':
 		'Contact {dealerName} about a valuation, sale or trade-in of your car.',
+	'mobile.budget.any': 'Any budget',
+	'mobile.promo.sellAction': 'Get valuation',
+	'mobile.promo.importAction': 'Start import',
 	'presentation.find': 'Find a car',
 	'presentation.sell': 'Sell my car',
 	'presentation.reviews': 'Read reviews',
@@ -1963,6 +1966,9 @@ export const bg = {
 	'seo.contactTradeIn.title': 'Продажба или бартер на автомобил | {dealerName}',
 	'seo.contactTradeIn.description':
 		'Свържете се с {dealerName} за оценка, продажба или бартер на Вашия автомобил.',
+	'mobile.budget.any': 'Без бюджет',
+	'mobile.promo.sellAction': 'Заяви оценка',
+	'mobile.promo.importAction': 'Заяви внос',
 	'presentation.find': 'Намери кола',
 	'presentation.sell': 'Продай кола',
 	'presentation.reviews': 'Отзиви',

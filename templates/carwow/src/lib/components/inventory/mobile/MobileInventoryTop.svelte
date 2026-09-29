@@ -16,6 +16,7 @@
 	let {
 		mode,
 		query,
+		resultsCount,
 		onOpenSearch,
 		onOpenFilters,
 		onOpenSort,
@@ -25,6 +26,7 @@
 	}: {
 		mode: Mode;
 		query: string;
+		resultsCount: number;
 		onOpenSearch: () => void;
 		onOpenFilters: () => void;
 		onOpenSort: () => void;
@@ -77,7 +79,7 @@
 			id="mobile-inventory-search"
 			class="mobile-inventory-search"
 			type="button"
-			aria-label={i18n.text(searchLabel)}
+			aria-label={`${i18n.text(searchLabel)} (${resultsCount})`}
 			aria-haspopup="dialog"
 			onclick={onOpenSearch}
 		>
@@ -87,7 +89,7 @@
 						? 'mobile-inventory-search__label is-filled'
 						: 'mobile-inventory-search__label'}
 				>
-					{query || i18n.t('copy.ec1da1ebf306')}
+					{query || i18n.t('copy.ec1da1ebf306')} ({resultsCount})
 				</span>
 				<span class="mobile-inventory-search__icon" aria-hidden="true">
 					<Search size={19} strokeWidth={2.55} />

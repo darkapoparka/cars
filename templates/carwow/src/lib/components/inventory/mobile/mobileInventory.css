@@ -1235,16 +1235,10 @@
 
 .mobile-inventory-summary {
 	display: flex;
-	min-height: 28px;
+	min-height: 36px;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
 	gap: 8px;
-}
-.mobile-inventory-summary p {
-	margin: 0;
-	color: var(--sa-ink-soft);
-	font-size: var(--sa-type-body);
-	font-weight: var(--sa-weight-medium);
 }
 .mobile-inventory-summary button {
 	min-height: 44px;

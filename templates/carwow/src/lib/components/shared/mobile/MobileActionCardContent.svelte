@@ -16,15 +16,16 @@
 		image: string;
 		action: string;
 		tone?: 'light' | 'dark' | 'red';
-		artwork?: 'photo' | 'cutout' | 'portrait';
+		artwork?: 'photo' | 'cutout' | 'portrait' | 'promo';
 	} = $props();
 </script>
 
 <span
 	class:action-card--dark={tone !== 'light'}
 	class:action-card--red={tone === 'red'}
-	class:action-card--cutout={artwork !== 'photo'}
+	class:action-card--cutout={artwork === 'cutout' || artwork === 'portrait'}
 	class:action-card--portrait={artwork === 'portrait'}
+	class:action-card--promo={artwork === 'promo'}
 	class:action-card--compact={!copy}
 	class="action-card"
 >
@@ -169,5 +170,65 @@
 		height: 104px;
 		object-fit: contain;
 		object-position: right bottom;
+	}
+	.action-card--promo {
+		position: relative;
+		isolation: isolate;
+		display: block;
+		min-height: 156px;
+		background: #10151b;
+	}
+	.action-card--promo::before {
+		position: absolute;
+		z-index: 1;
+		inset: 0;
+		background: linear-gradient(
+			90deg,
+			#10151b 0%,
+			rgba(16, 21, 27, 0.95) 26%,
+			rgba(16, 21, 27, 0.56) 53%,
+			transparent 78%
+		);
+		content: '';
+		pointer-events: none;
+	}
+	.action-card--promo .action-card__copy {
+		position: relative;
+		z-index: 2;
+		width: 61%;
+		min-height: 156px;
+		box-sizing: border-box;
+		justify-content: space-between;
+		padding: 17px 0 16px 16px;
+	}
+	.action-card--promo strong {
+		font-size: var(--sa-mobile-type-section-title);
+		line-height: 1.12;
+	}
+	.action-card--promo .action-card__action {
+		width: max-content;
+		max-width: 100%;
+		min-height: 32px;
+		box-sizing: border-box;
+		justify-content: center;
+		gap: 5px;
+		margin-top: auto;
+		border-radius: var(--sa-r-pill);
+		background: #fff;
+		padding: 7px 10px;
+		color: #111820 !important;
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.action-card--promo .action-card__image {
+		position: absolute;
+		z-index: 0;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		min-height: 0;
+		object-fit: cover;
+		object-position: left center;
+		pointer-events: none;
 	}
 </style>

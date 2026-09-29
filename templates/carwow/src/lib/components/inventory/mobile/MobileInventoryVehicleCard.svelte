@@ -8,7 +8,7 @@
 	import { page } from '$app/state';
 	import DayNightSpecIcon from '$lib/components/shared/icons/DayNightSpecIcon.svelte';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
-	import { shortFuel } from '$lib/utils/format';
+	import { compactMobileDistance, compactMobileTransmission, shortFuel } from '$lib/utils/format';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
 
 	let { vehicle }: { vehicle: InventoryListVehicle } = $props();
@@ -71,9 +71,9 @@
 			</div>
 			<p>{i18n.spec(vehicle.conditionLine)}</p>
 			<ul aria-label={i18n.t('copy.e802379d67a7')}>
-				<li>
+				<li aria-label={i18n.distance(vehicle.mileage)} title={i18n.distance(vehicle.mileage)}>
 					<DayNightSpecIcon name="mileage" size={15} />
-					{i18n.distance(vehicle.mileage)}
+					{compactMobileDistance(i18n.distance(vehicle.mileage))}
 				</li>
 				<li>
 					<DayNightSpecIcon name="year" size={15} />
@@ -83,9 +83,9 @@
 					<DayNightSpecIcon name="fuel" size={15} />
 					{shortFuel(vehicle.fuel, i18n.locale)}
 				</li>
-				<li>
+				<li aria-label={i18n.spec(vehicle.transmission)}>
 					<DayNightSpecIcon name="transmission" size={15} />
-					{i18n.spec(vehicle.transmission)}
+					{compactMobileTransmission(i18n.spec(vehicle.transmission))}
 				</li>
 			</ul>
 		</div>

@@ -6,7 +6,7 @@
 	import { ChevronRight } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
-	import { shortFuel } from '$lib/utils/format';
+	import { compactMobileDistance, shortFuel } from '$lib/utils/format';
 	import type { HomeMobileData } from '$lib/types/home';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
 	import {
@@ -61,6 +61,13 @@
 		budget === 'all' ? inventoryPath : budgetHref(budget);
 	const brandCountLabel = (count: number) =>
 		count > 0 ? i18n.count(count) : i18n.text('Внос по заявка');
+	const budgetLabel = (value: string, label: string) => {
+		if (value === 'all') return i18n.t('mobile.budget.any');
+		const amount = value.match(/^(?:under|over)-(\d+)$/);
+		if (!amount) return i18n.text(label);
+		const thousands = Number(amount[1]) / 1000;
+		return i18n.text(label).replace(/\d[\d\s,]*EUR/, `${thousands}K €`);
+	};
 </script>
 
 <section class="mh-section mh-section--budget" aria-labelledby="mh-budget-title">
@@ -87,15 +94,7 @@
 					/>
 				</span>
 				<span class="mh-budget-card__copy">
-					<strong
-						>{i18n
-							.text(tile.label)
-							.replace('EUR', '€')
-							.replace(
-								/ (\d[\d ]* €)$/,
-								(_, amount: string) => ' ' + amount.replaceAll(' ', '\u00a0')
-							)}</strong
-					>
+					<strong aria-label={i18n.text(tile.label)}>{budgetLabel(tile.value, tile.label)}</strong>
 					<span
 						>{tile.caption
 							? i18n.t('action.showCount', { count: total })
@@ -134,8 +133,12 @@
 					<span class="mh-car__copy">
 						<span class="mh-car__brand">{car.brand}</span>
 						<strong class="mh-car__title">{car.model}</strong>
-						<span class="mh-car__meta"
-							>{car.year} · {shortFuel(car.fuel, i18n.locale)} · {i18n.distance(car.mileage)}</span
+						<span
+							class="mh-car__meta"
+							aria-label={`${car.year}, ${shortFuel(car.fuel, i18n.locale)}, ${i18n.distance(car.mileage)}`}
+							>{car.year} · {shortFuel(car.fuel, i18n.locale)} · {compactMobileDistance(
+								i18n.distance(car.mileage)
+							)}</span
 						>
 					</span>
 					<span class="mh-car__foot">

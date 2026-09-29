@@ -98,6 +98,7 @@
 	// the software keyboard actually shrinks the visual viewport, then restore it
 	// as soon as the keyboard closes (even if the field remains focused).
 	let keyboardOpen = $state(false);
+	let footerVisible = $state(false);
 	let keyboardTimer: ReturnType<typeof setTimeout> | undefined;
 	let viewportBaselineHeight = 0;
 	let viewportBaselineWidth = 0;
@@ -161,10 +162,23 @@
 		viewportBaselineHeight = window.visualViewport?.height ?? window.innerHeight;
 		viewportBaselineWidth = window.visualViewport?.width ?? window.innerWidth;
 		window.visualViewport?.addEventListener('resize', syncKeyboardVisibility);
+		const footer = document.querySelector('.mh-footer');
+		const footerObserver = footer
+			? new IntersectionObserver(
+					([entry]) => {
+						footerVisible = entry.isIntersecting;
+						footer.classList.toggle('mh-footer--dock-hidden', footerVisible);
+					},
+					{ rootMargin: '0px 0px -72px 0px' }
+				)
+			: null;
+		if (footer && footerObserver) footerObserver.observe(footer);
 
 		return () => {
 			clearTimeout(keyboardTimer);
 			window.visualViewport?.removeEventListener('resize', syncKeyboardVisibility);
+			footerObserver?.disconnect();
+			footer?.classList.remove('mh-footer--dock-hidden');
 		};
 	});
 </script>
@@ -177,7 +191,7 @@
 
 <nav
 	data-daynight-site-chrome
-	class={keyboardOpen ? 'mobile-bottom-dock is-keyboard-open' : 'mobile-bottom-dock'}
+	class={`mobile-bottom-dock${keyboardOpen ? ' is-keyboard-open' : ''}${footerVisible ? ' is-footer-visible' : ''}`}
 	aria-label={i18n.t('copy.a690e455afe4')}
 >
 	<a
@@ -331,7 +345,7 @@
 			transform 0.22s var(--sa-ease),
 			visibility 0s;
 	}
-	.mobile-bottom-dock.is-keyboard-open {
+	.mobile-bottom-dock:is(.is-keyboard-open, .is-footer-visible) {
 		visibility: hidden;
 		transform: translateY(105%);
 		transition:
