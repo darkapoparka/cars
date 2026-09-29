@@ -7,6 +7,8 @@
 		title,
 		copy,
 		image,
+		imageWidth,
+		imageHeight,
 		action,
 		tone = 'light',
 		artwork = 'photo'
@@ -14,6 +16,8 @@
 		title: string;
 		copy?: string;
 		image: string;
+		imageWidth?: number;
+		imageHeight?: number;
 		action: string;
 		tone?: 'light' | 'dark' | 'red';
 		artwork?: 'photo' | 'cutout' | 'portrait' | 'promo';
@@ -36,7 +40,15 @@
 			>{action}<ArrowRight size={16} strokeWidth={2} aria-hidden="true" /></span
 		>
 	</span>
-	<img class="action-card__image" src={i18n.asset(image)} alt="" loading="lazy" decoding="async" />
+	<img
+		class="action-card__image"
+		src={i18n.asset(image)}
+		width={imageWidth}
+		height={imageHeight}
+		alt=""
+		loading="lazy"
+		decoding="async"
+	/>
 </span>
 
 <style>
@@ -172,10 +184,13 @@
 		object-position: right bottom;
 	}
 	.action-card--promo {
+		--action-card-promo-height: clamp(168px, 45vw, 248px);
+
 		position: relative;
 		isolation: isolate;
 		display: block;
-		min-height: 156px;
+		min-height: var(--action-card-promo-height);
+		border-radius: 18px;
 		background: #10151b;
 	}
 	.action-card--promo::before {
@@ -184,10 +199,11 @@
 		inset: 0;
 		background: linear-gradient(
 			90deg,
-			#10151b 0%,
-			rgba(16, 21, 27, 0.95) 26%,
-			rgba(16, 21, 27, 0.56) 53%,
-			transparent 78%
+			rgba(9, 14, 20, 0.98) 0%,
+			rgba(9, 14, 20, 0.92) 28%,
+			rgba(9, 14, 20, 0.55) 49%,
+			rgba(9, 14, 20, 0.12) 66%,
+			transparent 82%
 		);
 		content: '';
 		pointer-events: none;
@@ -195,30 +211,32 @@
 	.action-card--promo .action-card__copy {
 		position: relative;
 		z-index: 2;
-		width: 61%;
-		min-height: 156px;
+		width: 100%;
+		min-height: var(--action-card-promo-height);
 		box-sizing: border-box;
 		justify-content: space-between;
-		padding: 17px 0 16px 16px;
+		padding: 18px;
 	}
 	.action-card--promo strong {
+		max-width: 52%;
 		font-size: var(--sa-mobile-type-section-title);
 		line-height: 1.12;
 	}
 	.action-card--promo .action-card__action {
 		width: max-content;
 		max-width: 100%;
-		min-height: 32px;
+		min-height: 36px;
 		box-sizing: border-box;
 		justify-content: center;
-		gap: 5px;
+		gap: 6px;
 		margin-top: auto;
 		border-radius: var(--sa-r-pill);
 		background: #fff;
-		padding: 7px 10px;
+		padding: 8px 12px;
 		color: #111820 !important;
-		font-size: var(--sa-text-caption);
+		font-size: var(--sa-text-sm);
 		font-weight: var(--sa-weight-semibold);
+		white-space: nowrap;
 	}
 	.action-card--promo .action-card__image {
 		position: absolute;
@@ -228,7 +246,7 @@
 		height: 100%;
 		min-height: 0;
 		object-fit: cover;
-		object-position: left center;
+		object-position: 75% center;
 		pointer-events: none;
 	}
 </style>

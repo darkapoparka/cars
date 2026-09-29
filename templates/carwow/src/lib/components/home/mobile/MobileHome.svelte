@@ -2,7 +2,7 @@
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
-	import { ChevronRight, Search, Settings2 } from '@lucide/svelte';
+	import { ChevronRight, Search } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import { onMount } from 'svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
@@ -30,7 +30,7 @@
 	const inventoryPath = '/inventory' as const;
 	const inventoryHref = resolve(inventoryPath);
 	type InventoryHref = typeof inventoryPath | `${typeof inventoryPath}?${string}`;
-	type QuickFilter = { label: string; icon: 'car-line' | typeof Settings2; href: InventoryHref };
+	type QuickFilter = { label: string; href: InventoryHref };
 	const total = $derived(data.total);
 	let heroMode = $state<'buy' | 'import'>('buy');
 	let searchOpen = $state(false);
@@ -44,58 +44,22 @@
 	const quickFilters: QuickFilter[] = [
 		{
 			label: i18n.t('copy.c82ce2919043'),
-			icon: 'car-line',
 			href: `${inventoryPath}?fuel=${encodeURIComponent('Дизел')}`
 		},
 		{
 			label: i18n.t('copy.e656f39de92d'),
-			icon: 'car-line',
 			href: `${inventoryPath}?fuel=${encodeURIComponent('Бензин')}`
 		},
 		{
 			label: i18n.t('copy.ac707141d786'),
-			icon: Settings2,
 			href: `${inventoryPath}?transmission=${encodeURIComponent('Автоматик')}`
 		},
 		{
 			label: i18n.t('copy.2f5800eb33f6'),
-			icon: 'car-line',
 			href: `${inventoryPath}?fuel=${encodeURIComponent('Електрически')}`
 		}
 	];
 </script>
-
-{#snippet quickCarIcon()}
-	<svg
-		class="mh-quick__car-icon"
-		aria-hidden="true"
-		width="32"
-		height="16"
-		viewBox="0 0 76 36"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<path
-			d="M13 23H8.5C6.6 23 5 21.4 5 19.5V17.6C5 15.9 6.2 14.4 7.9 14.1L17.7 12.3L24.2 6.7C25.5 5.6 27.1 5 28.8 5H45.5C47.7 5 49.8 6 51.1 7.8L55.3 13.4L66.3 15.8C69 16.4 71 18.8 71 21.6V23H64"
-			stroke="currentColor"
-			stroke-width="3"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-		/>
-		<path d="M25 23H52" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-		<path
-			d="M22.5 28.5C25.54 28.5 28 26.04 28 23C28 19.96 25.54 17.5 22.5 17.5C19.46 17.5 17 19.96 17 23C17 26.04 19.46 28.5 22.5 28.5Z"
-			stroke="currentColor"
-			stroke-width="3"
-		/>
-		<path
-			d="M58.5 28.5C61.54 28.5 64 26.04 64 23C64 19.96 61.54 17.5 58.5 17.5C55.46 17.5 53 19.96 53 23C53 26.04 55.46 28.5 58.5 28.5Z"
-			stroke="currentColor"
-			stroke-width="3"
-		/>
-		<path d="M25 13H48" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-	</svg>
-{/snippet}
 
 <div class="mobile-home">
 	<header class="mh-hero">
@@ -163,12 +127,6 @@
 		<nav class="mh-quick" aria-label={i18n.t('copy.427bd0c4b0b6')}>
 			{#each quickFilters as item (item.label)}
 				<a class="mh-quick__pill" href={i18n.href(resolve(item.href))}>
-					{#if item.icon === 'car-line'}
-						{@render quickCarIcon()}
-					{:else}
-						{@const Icon = item.icon}
-						<Icon size={16} strokeWidth={2.2} aria-hidden="true" />
-					{/if}
 					<span>{i18n.text(item.label)}</span>
 				</a>
 			{/each}
@@ -416,31 +374,26 @@
 
 	.mh-quick {
 		display: flex;
+		flex-wrap: wrap;
 		margin-top: 0;
 		margin-inline: var(--mh-gutter);
-		gap: var(--sa-mobile-gap-sm);
-		overflow-x: auto;
-		padding: 0 0 2px;
-		scrollbar-width: none;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.mh-quick::-webkit-scrollbar {
-		display: none;
+		gap: 8px;
+		padding: 2px 0;
 	}
 
 	.mh-quick__pill {
 		display: inline-flex;
-		flex: 0 0 auto;
+		flex: 1 0 auto;
 		align-items: center;
-		gap: var(--sa-pill-gap);
-		min-height: var(--sa-mobile-pill-h);
-		border: 0;
-		border-radius: var(--sa-pill-radius);
-		background: var(--sa-fill);
-		padding: 0 var(--sa-pill-pad-x);
+		justify-content: center;
+		min-height: 44px;
+		box-sizing: border-box;
+		border: 1px solid #dce1e7;
+		border-radius: var(--sa-r-pill);
+		background: #f7f8fa;
+		padding: 0 10px;
 		color: var(--sa-ink);
-		font: var(--sa-weight-regular) var(--sa-mobile-type-filter) / 1.5 var(--sa-font);
+		font: var(--sa-weight-medium) var(--sa-text-base) / 1.2 var(--sa-font);
 		white-space: nowrap;
 	}
 
@@ -448,42 +401,34 @@
 		font: inherit;
 	}
 
-	.mh-quick__pill :global(svg) {
-		flex: 0 0 auto;
-		color: var(--sa-blue) !important;
+	.mh-quick__pill:active {
+		border-color: #b7c0cc;
+		background: #e9edf2;
 	}
 
-	.mh-quick__car-icon {
-		display: block;
-		width: 30px;
-		height: 15px;
-		flex: 0 0 auto;
-		color: var(--sa-blue);
+	.mh-quick__pill:focus-visible {
+		outline: 3px solid var(--sa-red);
+		outline-offset: 3px;
 	}
 
-	@media (max-width: 390px) {
-		.mh-quick {
-			gap: 7px;
-		}
-
-		.mh-quick__pill {
-			gap: 5px;
-			padding-inline: 8px;
+	@media (hover: hover) {
+		.mh-quick__pill:hover {
+			border-color: #bdc6d2;
+			background: #eef1f5;
 		}
 	}
 
 	@media (max-width: 370px) {
 		.mh-quick {
-			gap: 6px;
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
+	}
 
-		.mh-quick__pill {
-			gap: 4px;
-			padding-inline: 7px;
-		}
-
-		.mh-quick__car-icon {
-			width: 28px;
+	@media (max-width: 479px) {
+		.mh-quick:lang(bg) {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 

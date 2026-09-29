@@ -16,7 +16,7 @@
 			cta: i18n.t('mobile.promo.sellAction'),
 			href: '/sell-your-car' as const,
 			tone: 'dark',
-			image: '/assets/images/home/mobile/sell-trade-studio-v1.webp'
+			image: '/assets/images/home/mobile/sell-trade-studio-v2.webp'
 		},
 		{
 			kind: 'import',
@@ -24,7 +24,7 @@
 			cta: i18n.t('mobile.promo.importAction'),
 			href: '/contact?intent=import' as const,
 			tone: 'dark',
-			image: '/assets/images/home/mobile/import-europe-road-v1.webp'
+			image: '/assets/images/home/mobile/import-europe-road-v2.webp'
 		}
 	] as const;
 
@@ -46,6 +46,8 @@
 			<MobileActionCardContent
 				title={promo.title}
 				image={mobileImageSrc(resolve(promo.image))}
+				imageWidth={960}
+				imageHeight={480}
 				action={promo.cta}
 				tone={promo.tone}
 				artwork="promo"
@@ -62,7 +64,7 @@
 	}
 	.mobile-home-promo {
 		display: block;
-		border-radius: 14px;
+		border-radius: 18px;
 		color: inherit;
 		text-decoration: none;
 	}
