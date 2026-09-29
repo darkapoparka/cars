@@ -16,6 +16,7 @@ import {
 } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { MobilePillRail } from "@repo/marketplace-ui/components/mobile-pill-rail";
+import { mobileMarketplaceOverlayPrimaryActionClassName } from "@repo/marketplace-ui/lib/mobile-overlay-styles";
 import Link from "next/link";
 import { useState } from "react";
 import { MobileDealerServiceHero } from "../components/mobile-dealer-service-hero";
@@ -228,7 +229,7 @@ export const LeaseMobileSelection = ({
             </div>
             <Button
               asChild
-              className="mt-3 h-12 min-h-12 w-full justify-between rounded-xl bg-brand px-4 font-semibold text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] active:bg-[var(--lead-site-accent-hover)]"
+              className={`${mobileMarketplaceOverlayPrimaryActionClassName} mt-3 justify-between`}
               data-slot="lease-finance-action"
             >
               <Link href={financeRequestHref}>

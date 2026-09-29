@@ -6,9 +6,8 @@ import {
 } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import {
-  mobileMarketplaceOverlayFieldClassName,
+  MobileMarketplaceOverlayField,
   mobileMarketplaceOverlayFieldRowClassName,
-  mobileMarketplaceOverlayInputClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import { VehicleCategoryArtwork } from "@repo/marketplace-ui/components/vehicle-category-artwork";
 import { useRef, useState } from "react";
@@ -77,12 +76,6 @@ export function LeaseCarSelector({
             triggerRef.current?.focus({ preventScroll: true });
           }
         }}
-        onOpenAutoFocus={(event) => {
-          event.preventDefault();
-          document
-            .querySelector<HTMLElement>('[data-slot="lease-car-selector"]')
-            ?.focus({ preventScroll: true });
-        }}
         onOpenChange={setOpen}
         open={open}
         rightAction={
@@ -97,20 +90,23 @@ export function LeaseCarSelector({
         <div
           className={`sticky top-0 z-10 ${mobileMarketplaceOverlayFieldRowClassName}`}
         >
-          <label className={mobileMarketplaceOverlayFieldClassName}>
-            <DealerUiIcon
-              className="size-[18px] shrink-0 text-zinc-600"
-              name="search"
-            />
-            <input
-              aria-label={copy.searchPlaceholder}
-              className={mobileMarketplaceOverlayInputClassName}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder={copy.searchPlaceholder}
-              type="search"
-              value={query}
-            />
-          </label>
+          <MobileMarketplaceOverlayField
+            aria-label={copy.searchPlaceholder}
+            clearAction={{
+              label: locale === "bg" ? "Изчисти търсенето" : "Clear search",
+              onClear: () => setQuery(""),
+            }}
+            icon={
+              <DealerUiIcon
+                className="size-[18px] shrink-0 text-zinc-600"
+                name="search"
+              />
+            }
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder={copy.searchPlaceholder}
+            type="search"
+            value={query}
+          />
         </div>
         <div className="grid gap-2 p-4">
           {matches.length ? (

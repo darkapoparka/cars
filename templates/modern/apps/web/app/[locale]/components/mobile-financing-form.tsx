@@ -5,6 +5,7 @@ import { Label } from "@repo/design-system/components/ui/label";
 import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace/lead-site";
 import { getMobileQuickPillClassName } from "@repo/marketplace-ui";
+import { mobileMarketplaceOverlayPrimaryActionClassName } from "@repo/marketplace-ui/lib/mobile-overlay-styles";
 import {
   CarFront,
   CheckCircle2,
@@ -42,7 +43,7 @@ const SubmitButton = ({ locale }: { locale: "bg" | "en" }) => {
 
   return (
     <Button
-      className="h-12 w-full rounded-xl bg-brand font-semibold text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] active:bg-[var(--lead-site-accent-hover)]"
+      className={mobileMarketplaceOverlayPrimaryActionClassName}
       disabled={pending}
       type="submit"
     >

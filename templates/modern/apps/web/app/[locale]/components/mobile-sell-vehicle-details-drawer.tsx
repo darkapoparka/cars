@@ -7,10 +7,9 @@ import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { leadSite } from "@repo/marketplace";
 import {
   MobileMarketplaceOverlayCloseAction,
+  MobileMarketplaceOverlayField,
   MobileMarketplaceOverlayHeader,
   MobileMarketplaceOverlayShell,
-  mobileMarketplaceOverlayFieldClassName,
-  mobileMarketplaceOverlayInputClassName,
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import { ArrowRight } from "lucide-react";
@@ -74,15 +73,9 @@ export const MobileSellVehicleDetailsDrawer = ({
         }
       }}
       onOpenAutoFocus={(event) => {
-        event.preventDefault();
         if (focusVin) {
+          event.preventDefault();
           vinRef.current?.focus({ preventScroll: true });
-        } else {
-          document
-            .querySelector<HTMLElement>(
-              '[data-slot="mobile-sell-details-drawer"]'
-            )
-            ?.focus({ preventScroll: true });
         }
       }}
       onOpenChange={(nextOpen) => {
@@ -116,28 +109,26 @@ export const MobileSellVehicleDetailsDrawer = ({
           <Label className="font-medium text-meta" htmlFor="mobile-sell-vin">
             {content.vinOptional}
           </Label>
-          <div className={mobileMarketplaceOverlayFieldClassName}>
-            <input
-              autoCapitalize="characters"
-              className={`${mobileMarketplaceOverlayInputClassName} uppercase placeholder:normal-case`}
-              id="mobile-sell-vin"
-              maxLength={17}
-              name="vin"
-              onChange={(event) =>
-                onVinChange(normalizeVehicleVin(event.target.value))
-              }
-              pattern="[A-HJ-NPR-Z0-9]{17}"
-              placeholder="WBA..."
-              ref={vinRef}
-              spellCheck={false}
-              title={
-                locale === "bg"
-                  ? "VIN трябва да съдържа 17 знака."
-                  : "A VIN must contain 17 characters."
-              }
-              value={vin}
-            />
-          </div>
+          <MobileMarketplaceOverlayField
+            autoCapitalize="characters"
+            id="mobile-sell-vin"
+            inputClassName="uppercase placeholder:normal-case"
+            inputRef={vinRef}
+            maxLength={17}
+            name="vin"
+            onChange={(event) =>
+              onVinChange(normalizeVehicleVin(event.target.value))
+            }
+            pattern="[A-HJ-NPR-Z0-9]{17}"
+            placeholder="WBA..."
+            spellCheck={false}
+            title={
+              locale === "bg"
+                ? "VIN трябва да съдържа 17 знака."
+                : "A VIN must contain 17 characters."
+            }
+            value={vin}
+          />
         </div>
 
         <div className="mt-3 grid grid-cols-2 gap-3">

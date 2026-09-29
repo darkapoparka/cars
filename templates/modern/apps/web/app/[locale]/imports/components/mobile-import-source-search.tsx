@@ -4,11 +4,11 @@ import { Button } from "@repo/design-system/components/ui/button";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import {
   MobileMarketplaceOverlayCloseAction,
+  MobileMarketplaceOverlayField,
   MobileMarketplaceOverlayHeader,
   MobileMarketplaceOverlayShell,
-  mobileMarketplaceOverlayFieldClassName,
   mobileMarketplaceOverlayFieldRowClassName,
-  mobileMarketplaceOverlayInputClassName,
+  mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import { useEffect, useRef, useState } from "react";
 
@@ -102,12 +102,6 @@ export const MobileImportSourceSearch = ({
           event.preventDefault();
           triggerRef.current?.focus({ preventScroll: true });
         }}
-        onOpenAutoFocus={(event) => {
-          event.preventDefault();
-          window.requestAnimationFrame(() => {
-            inputRef.current?.focus({ preventScroll: true });
-          });
-        }}
         onOpenChange={setOpen}
         open={open}
       >
@@ -133,42 +127,29 @@ export const MobileImportSourceSearch = ({
             className={mobileMarketplaceOverlayFieldRowClassName}
             data-slot="mobile-import-source-search-header"
           >
-            <label className={mobileMarketplaceOverlayFieldClassName}>
-              <DealerUiIcon
-                className="size-[18px] shrink-0 text-zinc-600"
-                name="search"
-              />
-              <input
-                aria-label={label}
-                autoComplete="off"
-                className={mobileMarketplaceOverlayInputClassName}
-                inputMode="url"
-                maxLength={500}
-                name="sourceUrl"
-                onChange={(event) => setSourceUrl(event.target.value)}
-                placeholder={placeholder}
-                ref={inputRef}
-                required
-                spellCheck={false}
-                type="url"
-                value={sourceUrl}
-              />
-              {sourceUrl.trim() ? (
-                <Button
-                  aria-label={copy.clear}
-                  className="size-11 shrink-0 rounded-full bg-zinc-200 p-0 text-zinc-950 shadow-none hover:bg-zinc-300 active:bg-zinc-300"
-                  onClick={() => {
-                    setSourceUrl("");
-                    inputRef.current?.focus({ preventScroll: true });
-                  }}
-                  size="icon"
-                  type="button"
-                  variant="ghost"
-                >
-                  <DealerUiIcon className="size-[18px]" name="close" />
-                </Button>
-              ) : null}
-            </label>
+            <MobileMarketplaceOverlayField
+              aria-label={label}
+              clearAction={{
+                label: copy.clear,
+                onClear: () => setSourceUrl(""),
+              }}
+              icon={
+                <DealerUiIcon
+                  className="size-[18px] shrink-0 text-zinc-600"
+                  name="search"
+                />
+              }
+              inputMode="url"
+              inputRef={inputRef}
+              maxLength={500}
+              name="sourceUrl"
+              onChange={(event) => setSourceUrl(event.target.value)}
+              placeholder={placeholder}
+              required
+              spellCheck={false}
+              type="url"
+              value={sourceUrl}
+            />
           </div>
 
           <div
@@ -180,7 +161,7 @@ export const MobileImportSourceSearch = ({
             </p>
 
             <Button
-              className="mt-6 h-12 w-full justify-between rounded-xl bg-brand px-4 font-semibold text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] active:bg-[var(--lead-site-accent-hover)]"
+              className={`${mobileMarketplaceOverlayPrimaryActionClassName} mt-6 justify-between gap-2`}
               disabled={!sourceUrl.trim()}
               type="submit"
             >
