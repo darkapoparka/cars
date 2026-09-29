@@ -17,9 +17,9 @@ export default function PageHeader({title, backHref = '/', backLabel = 'Back hom
   </div></header>;
 }
 const s = stylex.create({
-  header: {position: 'sticky', top: {[media.desktop]: 73, default: 0}, zIndex: 65, paddingTop: 'env(safe-area-inset-top)', fontFamily: $.fontSans, color: $.ink, backgroundColor: '#fff'},
+  header: {position: 'sticky', top: {[media.desktop]: 73, default: 0}, zIndex: 65, paddingTop: 'env(safe-area-inset-top)', fontFamily: $.fontSans, color: $.ink, backgroundColor: $.surface},
   inner: {display: 'grid', gridTemplateColumns: '44px minmax(0,1fr) auto', alignItems: 'center', gap: 12, minHeight: 68, maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
-  back: {display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: '#f4f4f5', cursor: 'pointer'},
+  back: {display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: $.surfaceAlt, cursor: 'pointer'},
   copy: {minWidth: 0}, title: {overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 18, fontWeight: 600, lineHeight: '24px', letterSpacing: '-.025em'},
   subtitle: {color: $.muted, fontSize: 12, lineHeight: '16px'},
   action: {display: 'flex', alignItems: 'center', justifyContent: 'flex-end', minWidth: 32},

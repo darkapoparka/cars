@@ -4,7 +4,7 @@ import {useCopy} from '@/lib/locale';
 import Image from '@/components/AppImage';
 
 import {useState,type ReactNode} from 'react';
-import {isDealer} from '@/lib/dealer-config';
+import {dealer,isDealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
@@ -37,14 +37,14 @@ function SpecGrid({vehicle,reference,onInformation}: {vehicle: Vehicle;reference
   const tx = useCopy();
 
   const icons:Record<string,typeof CarFront>={engineSize:Wrench,optionsType:Sparkles,transmissionType:Gauge,drive:CarFront,bodyType:CarFront,fuelEfficiency:Fuel,alloyWheels:CircleGauge,carExteriorColor:Palette,interiorTrimType:Armchair,noOfAirbags:ShieldCheck,numberOfSeats:Armchair,noOfKeys:KeyRound};
-  const fallback=!isDealer&&vehicle.slug==='2024-toyota-fortuner-exr'?fortunerSpecs:[['Engine',vehicle.engine,Wrench],['Transmission',vehicle.transmission,Gauge],['Body Type',vehicle.body,CarFront],['Fuel Type',vehicle.fuel,Fuel],['Exterior',vehicle.color,Palette],['Distance driven',formatPrice(vehicle.mileage)+' km',CircleGauge]] as const;
+  const fallback=dealer.referenceClaimsApproved&&!isDealer&&vehicle.slug==='2024-toyota-fortuner-exr'?fortunerSpecs:[['Engine',vehicle.engine,Wrench],['Transmission',vehicle.transmission,Gauge],['Body Type',vehicle.body,CarFront],['Fuel Type',vehicle.fuel,Fuel],['Exterior',vehicle.color,Palette],['Distance driven',formatPrice(vehicle.mileage)+' km',CircleGauge]] as const;
   const entries=reference?.specifications.length?reference.specifications.filter(spec=>!['odometerReading','specs','vin'].includes(spec.key)).map(spec=>({label:spec.label,value:spec.value,Icon:icons[spec.key]??CarFront,description:spec.description})):fallback.map(([label,value,Icon])=>({label,value,Icon,description:undefined}));
   return <dl {...stylex.props(s.specGrid)}>{entries.map(({label,value,Icon,description})=><div key={label} {...stylex.props(s.spec)}><dt aria-label={tx(label)}><Icon size={17} strokeWidth={1.5}/></dt><dd {...stylex.props(s.specValue)}><span>{tx(value)}</span>{description?<button type="button" aria-label={tx('About '+label)} onClick={()=>onInformation(label,description)} {...stylex.props(s.specInfo)}><Info size={15}/></button>:null}</dd></div>)}</dl>;
 }
 export default function VehicleBelowFold({vehicle, onLogin,reference}: {vehicle: Vehicle; onLogin: () => void;reference?:ReferenceVehicleDetail}) {
   const tx = useCopy();
 
-  const fortuner = !isDealer && vehicle.slug === '2024-toyota-fortuner-exr';
+  const fortuner = Boolean(dealer.referenceClaimsApproved && !isDealer && vehicle.slug === '2024-toyota-fortuner-exr');
   const [information,setInformation]=useState<{title:string;description:string}|null>(null);
   const hasDetails=Boolean(reference)||fortuner;
   const comparison=reference?.priceComparison??(fortuner?{cars24Price:94099,marketPrice:104000,newCarPrice:127000,totalSavings:9901}:undefined);
@@ -56,8 +56,8 @@ export default function VehicleBelowFold({vehicle, onLogin,reference}: {vehicle:
     <section id="overview" {...stylex.props(s.overview)}>
       <Link href={showroom.locationHref} aria-label={tx("See it in person — visit showroom")} {...stylex.props(s.visitRow)}><OverviewRow icon={<MapPin size={21} strokeWidth={1.7}/>} title={tx("See it in person")} copy={tx("Plan a visit to the showroom")}/><ChevronRight size={18} aria-hidden="true"/></Link>
       {reference?.highlights.length?reference.highlights.map(item=>{const Icon=overviewIcons[item.key]??CarFront;return <OverviewRow key={item.key} icon={<Icon size={21}/>} title={tx(item.title)} copy={tx(item.description)} information={item.key==='convenienceFee'}/>;}):<>
-      <OverviewRow icon={<CarFront size={20} />} title={tx(fortuner ? 'Great condition' : vehicle.condition)} copy={tx(fortuner ? 'Car has low imperfections' : 'Confirm the listing details with the dealer')} />
-      {vehicle.highlights.includes('Cruise control') || fortuner ? <OverviewRow icon={<CarFront size={21} />} title={tx("Cruise control")} copy={tx("Cruise control to drive with ease & comfort")} /> : null}
+      <OverviewRow icon={<CarFront size={20} />} title={tx(fortuner ? 'Great condition' : 'Vehicle details')} copy={tx(fortuner ? 'Car has low imperfections' : 'Confirm the listing details with the dealer')} />
+      {fortuner ? <OverviewRow icon={<CarFront size={21} />} title={tx("Cruise control")} copy={tx("Cruise control to drive with ease & comfort")} /> : null}
       <OverviewRow icon={<ShieldCheck size={22}/>} title={tx("Confirm the details")} copy={tx("Confirm any additional fees with the showroom")} information />
       {fortuner ? <OverviewRow icon={<Music2 size={22}/>} title={tx("Apple play")} copy={tx("Enjoy your drive with apple play")} /> : null}
       </>}

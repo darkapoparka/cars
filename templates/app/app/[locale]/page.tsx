@@ -36,7 +36,7 @@ export default function HomePage() {
     return () => observer.disconnect();
   }, [visibleCount]);
   return <div {...stylex.props(s.screen)}>
-    <DiscoveryHeader active="buy" />
+    <DiscoveryHeader active="buy" hideMobileIdentity />
     <ShowroomPromotion />
     <ShowroomSearch />
     <div {...stylex.props(s.filters, compact && s.filtersCompact)}><FilterPills /></div>
@@ -62,8 +62,8 @@ export default function HomePage() {
 }
 const s = stylex.create({
   screen: {minHeight: '100vh', backgroundColor: '#fff'},
-  filters: {position: 'sticky', top: {[media.mobile]: 'calc(156px + env(safe-area-inset-top))', [media.desktop]: 72, default: 0}, zIndex: 60, maxWidth: $.content, marginInline: 'auto', backgroundColor: '#fff'},
-  filtersCompact: {top: {[media.mobile]: 'calc(112px + env(safe-area-inset-top))', [media.desktop]: 72, default: 0}},
+  filters: {position: 'sticky', top: {[media.mobile]: 'calc(112px + env(safe-area-inset-top))', [media.desktop]: 72, default: 0}, zIndex: 60, maxWidth: $.content, marginInline: 'auto', backgroundColor: '#fff'},
+  filtersCompact: {top: {[media.mobile]: 'calc(68px + env(safe-area-inset-top))', [media.desktop]: 72, default: 0}},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: 170},
   heading: {fontSize: {[media.mobile]: 18, default: 25}, fontWeight: 500, lineHeight: 1.2, letterSpacing: 0},
   recent: {marginTop: 27},

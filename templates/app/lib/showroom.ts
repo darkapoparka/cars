@@ -3,6 +3,10 @@
  */
 import {dealer} from './dealer-config';
 import {bannerArtwork, type BannerTheme} from './showroom-art';
+import type {ShowroomIconName} from '@/components/ShowroomIcon';
+
+type MenuItem = {href: string; label: string; icon: ShowroomIconName; location?: boolean; primary?: boolean};
+type MenuGroup = {label: string; items: readonly MenuItem[]};
 
 // Change this setting per dealer; artwork and campaign colors switch together.
 const branding: {bannerTheme: BannerTheme} = {bannerTheme: 'black'};
@@ -22,12 +26,22 @@ export const showroom = {
     {title: 'See it in person.', copy: 'Find your favourite. Visit us.', action: 'Plan your visit', href: '/stores', image: artwork.highlights.visit},
   ],
   searchPlaceholder: 'Find your next car',
+  mobileSearchPlaceholder: 'Make or model',
   promotion: {
     title: 'Find your next car.',
     description: 'Browse online. See it in person.',
+    mobileDescription: 'Browse cars in person.',
     action: 'Explore cars',
+    mobileAction: 'View cars',
     href: '/cars',
     image: artwork.heroes.buy,
+  },
+  inventoryPromotion: {
+    title: 'See it up close.',
+    description: 'Take a closer look at your next car.',
+    mobileDescription: 'See the car in person.',
+    action: 'Plan your visit',
+    mobileAction: 'Visit showroom',
   },
   services: [
     {key: 'buy', label: 'Buy', href: '/', image: '/cutouts/buy-sedan-v1.png'},
@@ -36,9 +50,21 @@ export const showroom = {
     {key: 'service', label: 'Services', href: '/service', image: '/showroom/service-v2.png'},
   ],
   navigation: [
-    {href: '/', label: 'Home'},
-    {href: '/cars', label: 'Cars'},
-    {href: '/saved', label: 'Saved'},
-    {href: '/more', label: 'More'},
+    {href: '/', label: 'Home', icon: 'home'},
+    {href: '/cars', label: 'Cars', icon: 'cars'},
+    {href: '/saved', label: 'Saved', icon: 'saved'},
+    {href: '/more', label: 'More', icon: 'more'},
   ],
+  menu: [
+    {label: 'Your showroom', items: [
+      {href: '/cars', label: 'Browse cars', icon: 'cars', primary: true},
+      {href: '/stores', label: 'Visit showroom', icon: 'location', location: true},
+    ]},
+    {label: 'More', items: [
+      {href: '/saved', label: 'Saved cars', icon: 'saved'},
+      {href: '/sell', label: 'Sell or part-exchange', icon: 'sell'},
+      {href: '/finance', label: 'Payment options', icon: 'finance'},
+      {href: '/service', label: 'Vehicle services', icon: 'service'},
+    ]},
+  ] as readonly MenuGroup[],
 } as const;

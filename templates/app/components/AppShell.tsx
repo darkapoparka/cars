@@ -5,12 +5,11 @@ import type {ReactNode} from 'react';
 import Link from '@/components/AppLink';
 import {usePathname} from '@/lib/navigation';
 import * as stylex from '@stylexjs/stylex';
-import {CarFront, Heart, House, Menu, PanelsTopLeft} from 'lucide-react';
+import {Heart, Menu} from 'lucide-react';
+import ShowroomIcon from '@/components/ShowroomIcon';
 import {showroom} from '@/lib/showroom';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
-
-const dockIcons = {Home: House, Cars: CarFront, Saved: Heart, More: PanelsTopLeft};
 
 export default function AppShell({children}: {children:ReactNode}){
   const tx = useCopy();
@@ -26,8 +25,7 @@ export default function AppShell({children}: {children:ReactNode}){
     <div {...stylex.props(s.main,hideMobileNav&&s.mainWithoutNav)}>{tx(children)}</div>
     {!hideMobileNav?<nav aria-label={tx("App navigation")} {...stylex.props(s.bottomNav)}>{showroom.navigation.map(item=>{
       const active=item.href==='/'?pathname==='/':pathname.startsWith(item.href);
-      const Icon=dockIcons[item.label];
-      return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(s.bottomLink,active&&s.bottomLinkActive)}><Icon size={22} strokeWidth={active?2:1.65} aria-hidden="true"/></Link>;
+      return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(s.bottomLink,active&&s.bottomLinkActive)}><ShowroomIcon name={item.icon} size={22} strokeWidth={active?2:1.65}/></Link>;
     })}</nav>:null}
   </div>;
 }

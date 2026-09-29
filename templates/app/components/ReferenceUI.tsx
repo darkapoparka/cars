@@ -26,7 +26,7 @@ export function ShowroomPromotion() {
   const tx = useCopy();
 
   const promo = showroom.promotion;
-  return <ShowroomBanner title={tx(promo.title)} description={tx(promo.description)} action={promo.action} href={promo.href} image={promo.image} colourful />;
+  return <ShowroomBanner title={tx(promo.title)} description={tx(promo.description)} mobileDescription={promo.mobileDescription} action={promo.action} mobileAction={promo.mobileAction} href={promo.href} image={promo.image} colourful />;
 }
 
 const brandList=[['Mercedes Benz','Mercedes-Benz','mercedes'],['BMW','BMW','bmw'],['Audi','Audi','audi'],['Nissan','Nissan','nissan'],['Hyundai','Hyundai','hyundai']] as const;

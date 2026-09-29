@@ -2,7 +2,7 @@
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import {useEffect,useRef,useState,type TouchEvent} from 'react';
-import {isDealer} from '@/lib/dealer-config';
+import {dealer,isDealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import {useRouter} from '@/lib/navigation';
 import Link from '@/components/AppLink';
@@ -32,17 +32,17 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  const router=useRouter();
  const sectionRail=useRef<HTMLElement>(null);
  const fortuner=!isDealer&&vehicle.slug==='2024-toyota-fortuner-exr';
+ const approvedReference=dealer.referenceClaimsApproved?reference:undefined;
  const primaryImage=reference?.primaryImage??vehicle.image;
  const exteriorThumbnail=reference?.gallery.find(item=>item.label==='Right Side View')?.src??primaryImage;
  const photos=reference?.gallery.length?reference.gallery:vehicleGallery(vehicle);
- const hasDetails=Boolean(reference)||fortuner;
- const shortlist=reference?.shortListCount??(fortuner?35:undefined);
+ const hasDetails=Boolean(approvedReference);
  const isLuxe=reference?.subcategory?reference.subcategory==='LUXE':vehicle.tier==='Luxe'||fortuner;
  const gallery=fortuner?[{label:'Exteriors',image:primaryImage,thumbnail:exteriorThumbnail},{label:'Interiors',image:'/reference-assets/fortuner-interior.jpg',thumbnail:photos.find(item=>/Right Side Front Door Cabin/i.test(item.label))?.src},{label:'Features',image:'/reference-assets/fortuner-feature.jpg'},{label:'Exteriors',image:'/reference-assets/fortuner-right.jpg'}]:(reference?.gallery.length?(['Exteriors','Interiors','Features'] as const).flatMap(category=>{const first=(category==='Interiors'?photos.find(p=>/Right Side Front Door Cabin/i.test(p.label)):category==='Features'?photos.find(p=>/Steering Wheel/i.test(p.label)):undefined)??photos.find(p=>p.category===category);return first?[{label:category,image:category==='Exteriors'?primaryImage:first.src,thumbnail:category==='Exteriors'?exteriorThumbnail:first.src}]:[];}):[{label:'Exteriors',image:primaryImage}]);
  const [photo,setPhoto]=useState(0),[saved,setSaved]=useState(false),[login,setLogin]=useState(false),[overlay,setOverlay]=useState<Overlay>(null),[shared,setShared]=useState(''),[scrolled,setScrolled]=useState(false),[activeSection,setActiveSection]=useState('price'),[swipe,setSwipe]=useState<number|null>(null);
  const panel=useModal(overlay==='warranty',()=>setOverlay(null));
  const title=`${vehicle.year} ${vehicle.make.toUpperCase()} ${vehicle.model.toUpperCase()} ${vehicle.trim.split(' • ')[0]}`;
- const fee=isDealer?0:reference?.convenienceFee??3500;
+ const fee=approvedReference?.convenienceFee??0;
  useEffect(()=>{recordVehicleView(vehicle.slug);},[vehicle.slug]);
  useEffect(()=>{
   function sync(){try{const values=JSON.parse(localStorage.getItem(STORAGE_KEY)??'[]');setSaved(Array.isArray(values)&&values.includes(vehicle.slug));}catch{setSaved(false);}}
@@ -60,19 +60,19 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
   <div {...stylex.props(s.gallery)} onTouchStart={e=>setSwipe(e.touches[0].clientX)} onTouchEnd={endSwipe}>
    <button type="button" onClick={()=>setOverlay(reference?.videoTour&&photo===0?'tour':'gallery')} aria-label={tx(reference?.videoTour&&photo===0?'Open vehicle video tour':'Open vehicle photo gallery')} {...stylex.props(s.imageButton)}><img src={assetPath(reference?.videoTour&&photo===0?reference.videoTour.poster:gallery[photo].image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(title)} width={1365} height={768} fetchPriority="high" {...stylex.props(s.heroImage,vehicle.imagePlaceholder&&s.placeholderHero)}/>{vehicle.imagePlaceholder?<span {...stylex.props(s.photoUnavailable)}>{tx('Photo unavailable')}</span>:null}{reference?.videoTour&&photo===0?<span aria-hidden="true" {...stylex.props(s.tourShade)}/>:null}{reference?.videoTour&&photo===0?<span {...stylex.props(s.tourPlay)}><Play size={22} fill="currentColor"/></span>:null}</button>
    <button type="button" onClick={()=>setOverlay('similar')} {...stylex.props(s.similarButton)}><span {...stylex.props(s.similarIcon)}/>{tx("VIEW SIMILAR CARS")}</button>
+   <button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.mobileSave)}><Heart size={23} strokeWidth={2} fill={saved?'currentColor':'none'}/></button>
   </div>
   <div {...stylex.props(s.layout)}><main {...stylex.props(s.main)}>
    <nav aria-label={tx("Vehicle photographs")} {...stylex.props(s.photoTabs,Boolean(reference?.videoTour)&&s.fourPhotoTabs)}>{reference?.videoTour?<button type="button" onClick={()=>setOverlay('tour')} {...stylex.props(s.photoTab)}><img src={assetPath(photos.find(item=>item.category==='Interiors')?.src??reference.videoTour.poster)} alt={tx("")} {...stylex.props(s.thumb,vehicle.imagePlaceholder&&s.placeholderThumb)}/><span {...stylex.props(s.thumbShade)}/><span {...stylex.props(s.thumbLabel)}>{tx("Video tour")}</span></button>:null}{gallery.slice(0,3).map(tab=><Link key={tab.label} href={`/cars/${vehicle.slug}/gallery?category=${tab.label}`} {...stylex.props(s.photoTab)}><img src={assetPath(('thumbnail' in tab?tab.thumbnail:undefined)??tab.image)} alt={tx("")} {...stylex.props(s.thumb,vehicle.imagePlaceholder&&s.placeholderThumb)}/><span {...stylex.props(s.thumbShade)}/><span {...stylex.props(s.thumbLabel)}>{tx(tab.label)}</span></Link>)}</nav>
    <header {...stylex.props(s.heading)}><h1 {...stylex.props(s.title)}>{tx(title)}</h1><p {...stylex.props(s.subtitle)}><span {...stylex.props(s.optionsType)}>{tx(vehicle.specifications || vehicle.fuel)}</span> {tx(" • ")}{tx(formatPrice(vehicle.mileage))} {tx(" km")}</p></header>
    <div {...stylex.props(s.dealer)}><ShowroomBadge premium={isLuxe}/><span>{tx("Showroom collection")}</span></div>
    <section id="price" aria-label={tx("Vehicle price")} {...stylex.props(s.priceCard)}><div {...stylex.props(s.pricePart)}><div {...stylex.props(s.priceLine)}><p {...stylex.props(s.price)}>{vehicle.priceOnRequest ? tx('Price on request') : <><span {...stylex.props(s.currency)}>{tx(currency.code)}</span> {tx(formatPrice(vehicle.price))}</>}</p><button type="button" onClick={()=>setOverlay('price')} {...stylex.props(s.priceLink)}>{tx("Price information")}</button></div><p {...stylex.props(s.fee)}>{tx("Listing sample — confirm price and availability")}</p></div><div {...stylex.props(s.emiPart)}><div {...stylex.props(s.priceLine)}><p {...stylex.props(s.emi)}>{tx("Payment options")}</p><button type="button" onClick={()=>setOverlay('emi')} {...stylex.props(s.priceLink)}>{tx("Example calculator")}</button></div><p {...stylex.props(s.fee)}>{tx("Ask the dealer about terms and availability.")}</p></div></section>
-   <VehicleBelowFold vehicle={vehicle} reference={reference} onLogin={()=>setLogin(true)}/>
+   <VehicleBelowFold vehicle={vehicle} reference={approvedReference} onLogin={()=>setLogin(true)}/>
   </main><aside {...stylex.props(s.desktopBuy)}><h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2><p {...stylex.props(s.desktopPrice)}>{tx(currency.code)} {tx(formatPrice(vehicle.price))}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setLogin(true)} {...stylex.props(s.primary)}>{tx("Arrange a viewing")}</button><button type="button" onClick={()=>setLogin(true)} {...stylex.props(s.outline)}>{tx("Enquire about this car")}</button></aside></div>
-  <VehicleComparison vehicle={vehicle} related={related}/>
+  {dealer.referenceClaimsApproved?<VehicleComparison vehicle={vehicle} related={related}/>:null}
   {scrolled?<nav ref={sectionRail} aria-label={tx("Vehicle sections")} {...stylex.props(s.sectionTabs)}>{[['Price','price'],['Overview','overview'],['Features','features'],['Car Condition','condition'],['Service History','service-history'],...(hasDetails?[['Car finance','car-finance'],['Our happy customers','happy-customers']]:[]),['Similar Cars','similar-cars']].map(([label,id])=><button type="button" key={id} onClick={()=>jump(id)} aria-current={activeSection===id?'location':undefined} {...stylex.props(s.sectionTab,activeSection===id&&s.activeSectionTab)}>{tx(label)}</button>)}</nav>:null}
   <div {...stylex.props(s.floating)}><button type="button" onClick={()=>setLogin(true)} aria-label={tx("Contact the dealer")} {...stylex.props(s.whatsapp)}><span {...stylex.props(s.whatsappInner)}><MessageCircle size={24}/></span></button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.save)}><Heart size={27} strokeWidth={2.7} fill={saved?'currentColor':'none'}/></button></div>
-  {scrolled&&shortlist?<p {...stylex.props(s.popularity)}>{tx("🔥")}<span>{tx("Popular: Recently ")}{tx(shortlist)} {tx(" wishlisted this car")}</span></p>:null}
-  <footer {...stylex.props(s.purchase)}><button type="button" onClick={()=>setLogin(true)} {...stylex.props(s.outline)}>{tx("Enquire about this car")}</button><button type="button" onClick={()=>setLogin(true)} {...stylex.props(s.primary)}>{tx("Arrange a viewing")}</button></footer>
+  <footer {...stylex.props(s.purchase)}><button type="button" onClick={()=>setLogin(true)} aria-label={tx("Enquire about this car")} {...stylex.props(s.outline,s.mobileCta,s.mobileSecondary)}>{tx("Enquire")}</button><button type="button" onClick={()=>setLogin(true)} aria-label={tx("Arrange a viewing")} {...stylex.props(s.primary,s.mobileCta)}>{tx("Arrange viewing")}</button></footer>
   {shared?<div role="status" {...stylex.props(s.toast)}>{tx(shared)}<button type="button" aria-label={tx("Dismiss sharing message")} onClick={()=>setShared('')} {...stylex.props(s.toastClose)}><X size={17}/></button></div>:null}
   {overlay==='price'||overlay==='emi'?<VehiclePriceSheet kind={overlay} vehicle={vehicle} convenienceFee={fee} onClose={()=>setOverlay(null)} onEligibility={()=>{setOverlay(null);setLogin(true);}}/>:null}
   {overlay==='similar'?<SimilarVehiclesSheet vehicle={vehicle} related={related} onClose={()=>setOverlay(null)}/>:null}
@@ -84,7 +84,7 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
 }
 const s=stylex.create({
 headerAction:{display:'grid',placeItems:'center',width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:'#f4f4f5',cursor:'pointer'},
-screen:{paddingTop:0,paddingBottom:130,color:'#202024',backgroundColor:'#fff'},
+screen:{paddingTop:0,paddingBottom:{[media.mobile]:96,default:130},color:'#202024',backgroundColor:'#fff'},
 gallery:{position:'relative',maxWidth:$.content,aspectRatio:'1365/768',marginInline:'auto',overflow:'hidden'},
 imageButton:{position:'relative',display:'block',width:'100%',height:'100%',padding:0,borderWidth:0,backgroundColor:'#f5f5f5',cursor:'zoom-in'},
 tourShade:{position:'absolute',inset:0,pointerEvents:'none',backgroundImage:'linear-gradient(180deg,rgba(0,0,0,.40),transparent 45%,rgba(0,0,0,.29))'},
@@ -93,6 +93,7 @@ heroImage:{width:'100%',height:'100%',objectFit:'cover'},
 placeholderHero:{objectFit:'contain',padding:{[media.mobile]:34,default:72},backgroundColor:'#f0f2f4'},
 photoUnavailable:{position:'absolute',left:'50%',bottom:18,transform:'translateX(-50%)',padding:'6px 11px',color:'#555b62',fontSize:11,fontWeight:600,borderRadius:999,backgroundColor:'rgba(255,255,255,.94)'},
 similarButton:{display:'inline-flex',alignItems:'center',gap:5,position:'absolute',bottom:9,left:22,height:27,padding:'0 4px',color:'#202024',fontSize:11,fontWeight:600,borderWidth:0,borderRadius:5,backgroundColor:'#fff',cursor:'pointer'},
+mobileSave:{display:{[media.mobile]:'grid',default:'none'},placeItems:'center',position:'absolute',top:12,right:12,width:44,height:44,padding:0,color:'#202024',borderWidth:0,borderRadius:'50%',backgroundColor:'rgba(255,255,255,.96)',boxShadow:'0 2px 9px rgba(0,0,0,.15)',cursor:'pointer'},
 similarIcon:{width:14,height:16,borderColor:'#fff',borderStyle:'solid',borderWidth:1,borderRadius:3,backgroundColor:'#202024',boxShadow:'2px 1px 0 #202024'},
 layout:{display:'grid',gridTemplateColumns:{[media.desktop]:'minmax(0,1fr) 330px',default:'1fr'},gap:{[media.desktop]:30,default:0},maxWidth:$.content,marginInline:'auto',paddingInline:{[media.mobile]:22,default:28}},
 main:{minWidth:0},
@@ -126,12 +127,13 @@ referenceNote:{marginTop:16,color:'#727272',fontSize:12,lineHeight:1.6},
 inlineButton:{display:'inline-flex',alignItems:'center',gap:8,minHeight:42,marginTop:16,padding:0,color:$.violet,fontSize:14,fontWeight:500,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
 desktopBuy:{display:{[media.desktop]:'block',default:'none'},alignSelf:'start',position:'sticky',top:95,marginTop:25,padding:22,borderColor:'#dddddd',borderStyle:'solid',borderWidth:1,borderRadius:18},
 desktopPrice:{marginTop:20,fontSize:25,fontWeight:600},
-floating:{display:'flex',flexDirection:'column',gap:16,position:'fixed',right:22,bottom:110,zIndex:55},
+floating:{display:{[media.mobile]:'none',default:'flex'},flexDirection:'column',gap:16,position:'fixed',right:22,bottom:110,zIndex:55},
 whatsapp:{display:'grid',placeItems:'center',width:44,height:44,padding:0,color:'#fff',borderColor:'#262629',borderStyle:'solid',borderWidth:1,borderRadius:'50%',backgroundColor:'#fff',cursor:'pointer'},
 whatsappInner:{display:'grid',placeItems:'center',width:30,height:30,borderRadius:'50%',backgroundColor:'#262629'},
 save:{display:'grid',placeItems:'center',width:44,height:44,padding:0,color:'#202024',borderColor:'#202024',borderStyle:'solid',borderWidth:1,borderRadius:'50%',backgroundColor:'#fff',cursor:'pointer'},
-popularity:{display:{[media.desktop]:'none',default:'flex'},alignItems:'center',justifyContent:'center',gap:16,position:'fixed',left:0,right:0,bottom:81,zIndex:79,height:20,color:'#535353',fontFamily:$.fontDisplay,fontSize:11,lineHeight:'17px',backgroundColor:'#fafafa'},
-purchase:{display:{[media.desktop]:'none',default:'grid'},gridTemplateColumns:'1fr 1fr',gap:8,position:'fixed',left:0,right:0,bottom:0,zIndex:80,minHeight:81,padding:'0 18px 32px',backgroundColor:'#fff'},
+purchase:{display:{[media.desktop]:'none',default:'grid'},gridTemplateColumns:{[media.mobile]:'minmax(0,.85fr) minmax(0,1.15fr)',default:'1fr 1fr'},gap:8,position:'fixed',left:0,right:0,bottom:0,zIndex:80,minHeight:{[media.mobile]:60,default:81},padding:{[media.mobile]:'8px 12px calc(8px + env(safe-area-inset-bottom))',default:'0 18px 32px'},borderTopColor:{[media.mobile]:'#ededf0',default:'transparent'},borderTopStyle:'solid',borderTopWidth:{[media.mobile]:1,default:0},backgroundColor:'#fff'},
+mobileCta:{minHeight:{[media.mobile]:44,default:48},fontSize:{[media.mobile]:13,default:14},whiteSpace:'nowrap',borderRadius:{[media.mobile]:12,default:17}},
+mobileSecondary:{color:{[media.mobile]:$.ink,default:$.violet},borderColor:{[media.mobile]:'transparent',default:$.violet},backgroundColor:{[media.mobile]:'transparent',default:'#f9f9fa'}},
 primary:{fontFamily:$.fontDisplay,display:'flex',alignItems:'center',justifyContent:'center',width:'100%',minHeight:48,paddingInline:10,color:'#fff',fontSize:15,fontWeight:500,borderWidth:1,borderColor:$.violet,borderStyle:'solid',borderRadius:17,backgroundColor:$.violet,cursor:'pointer'},
 outline:{fontFamily:$.fontDisplay,display:'flex',alignItems:'center',justifyContent:'center',width:'100%',minHeight:48,paddingInline:10,color:$.violet,fontSize:15,fontWeight:500,borderColor:$.violet,borderStyle:'solid',borderWidth:1,borderRadius:17,backgroundColor:'#f9f9fa',cursor:'pointer'},
 toast:{display:'flex',alignItems:'center',gap:12,position:'fixed',left:'50%',bottom:100,zIndex:90,maxWidth:'calc(100vw - 40px)',padding:'14px 18px',transform:'translateX(-50%)',color:'#fff',fontSize:13,borderRadius:12,backgroundColor:'#202024'},

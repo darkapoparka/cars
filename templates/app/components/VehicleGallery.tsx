@@ -52,10 +52,10 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
     <header {...stylex.props(s.header)}><button type="button" aria-label={tx("Back to vehicle details")} onClick={() => history.length > 1 ? router.back() : router.push(`/cars/${vehicle.slug}`)} {...stylex.props(s.back)}><ChevronLeft size={27} strokeWidth={2} /></button><button type="button" aria-label={tx("Share car")} onClick={share} {...stylex.props(s.back)}><Share2 size={21} /></button></header>
     <nav aria-label={tx("Vehicle photo categories")} {...stylex.props(s.tabs)}>{available.map(item => <button type="button" key={item} aria-pressed={item === category} onClick={() => choose(item)} {...stylex.props(s.tab, item === category && s.activeTab)}>{tx(captions[item])}</button>)}</nav>
     <div ref={content} {...stylex.props(s.images)}>{photos.map((photo, index) => <button type="button" key={`${photo.src}-${index}`} data-photo-index={index} data-photo-category={photo.category} aria-label={tx(`Zoom ${photo.label} photo`)} onClick={() => setSelected(index)} {...stylex.props(s.photoButton)}><img src={assetPath(photo.src)} width={1200} height={625} alt={tx(`${vehicle.make} ${vehicle.model}: ${photo.label}`)} loading={index < 2 ? 'eager' : 'lazy'} {...stylex.props(s.photo, vehicle.imagePlaceholder && s.placeholderPhoto)} /><span {...stylex.props(s.photoCaption)}><Star size={12} fill="currentColor" />{tx(photo.label)}</span></button>)}</div>
-    <footer {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("BOOK FREE TEST DRIVE")}</button></footer>
+    <footer {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
     {message ? <button type="button" role="status" onClick={() => setMessage('')} {...stylex.props(s.message)}>{tx(message)}</button> : null}
     {selected !== null ? <VehiclePhotoViewer photos={photos} initialIndex={selected} onClose={() => setSelected(null)} /> : null}
-    <LoginSheet open={login} onClose={() => setLogin(false)} />
+    <LoginSheet vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} open={login} onClose={() => setLogin(false)} />
   </main>;
 }
 const s = stylex.create({
@@ -69,7 +69,7 @@ const s = stylex.create({
   photoButton: {position: 'relative', display: 'block', width: '100%', padding: 0, overflow: 'hidden', borderWidth: 0, backgroundColor: '#f1f1f1', cursor: 'zoom-in'},
   photo: {display: 'block', width: '100%', height: 'auto', aspectRatio: '1.92', objectFit: 'cover'},
   placeholderPhoto: {objectFit: 'contain', padding: 32, backgroundColor: '#f0f2f4'},
-  photoCaption: {position: 'absolute', right: 22, bottom: 8, display: 'inline-flex', alignItems: 'center', gap: 4, maxWidth: 'calc(100% - 44px)', padding: '7px 9px', color: '#fff', fontSize: 12, fontWeight: 600, lineHeight: '17px', borderRadius: 3, backgroundColor: 'rgba(8,24,53,.47)'},
+  photoCaption: {position: 'absolute', right: 22, bottom: 8, display: 'inline-flex', alignItems: 'center', gap: 4, maxWidth: 'calc(100% - 44px)', padding: '7px 9px', overflow: 'hidden', color: '#fff', fontSize: 12, fontWeight: 600, lineHeight: '17px', whiteSpace: 'nowrap', textOverflow: 'ellipsis', borderRadius: 3, backgroundColor: 'rgba(8,24,53,.47)'},
   footer: {position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 110, padding: '8px 18px 20px', backgroundColor: '#fff'},
   book: {display: 'block', width: '100%', maxWidth: 924, marginInline: 'auto', minHeight: 48, padding: '10px 15px', color: '#fff', fontSize: 16, fontWeight: 600, borderWidth: 0, borderRadius: 7, backgroundColor: $.violet, cursor: 'pointer'},
   message: {position: 'fixed', left: '50%', bottom: 95, transform: 'translateX(-50%)', zIndex: 120, padding: '12px 18px', color: '#fff', fontSize: 13, borderWidth: 0, borderRadius: 10, backgroundColor: '#202024', cursor: 'pointer'},

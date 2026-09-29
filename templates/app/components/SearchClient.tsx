@@ -69,7 +69,7 @@ export default function SearchClient({initialQuery = ''}: {initialQuery?: string
       </button>)}
       {!suggestions.length ? <button type="button" onClick={() => choose()} {...stylex.props(s.suggestion)}><Search size={16} /><span>{tx("Search for “")}{tx(query)}{tx("”")}</span><ChevronRight size={18} /></button> : null}
     </div> : <>
-      <Link href="/finance" {...stylex.props(s.loan)}><img src={assetPath("/reference-assets/loan-card.png")} width={30} height={28} alt={tx("")} /><span>{tx("Check your car loan eligibility")}</span><u>{tx("Check Now")}</u><ChevronRight size={12} /></Link>
+      <Link href="/finance" {...stylex.props(s.loan)}><img src={assetPath("/reference-assets/loan-card.png")} width={30} height={28} alt={tx("")} /><span>{tx("Finance help")}</span><u>{tx("Explore")}</u><ChevronRight size={12} /></Link>
       <section {...stylex.props(s.popular)}><h1 {...stylex.props(s.title)}>{tx("Popular Brands")}</h1><div {...stylex.props(s.brands)}>{popular.map((brand, index) => <button type="button" key={brand} onClick={() => choose({label: brand, brand})} aria-label={tx(`Search ${brand}`)} {...stylex.props(s.brand)}><img src={assetPath(`/reference-assets/continuation/search-circle-${index}.png`)} width={65} height={66} alt={tx(brand)} {...stylex.props(s.brandLogo)} /></button>)}</div></section>
       {recent.length ? <section {...stylex.props(s.recent)}><h2 {...stylex.props(s.title)}>{tx("Recently viewed cars")}</h2><div {...stylex.props(s.recentRail)}>{recent.map(vehicle => <MiniVehicleCard key={vehicle.slug} vehicle={vehicle} />)}</div></section> : null}
     </>}

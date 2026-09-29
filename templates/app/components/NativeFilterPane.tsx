@@ -11,6 +11,12 @@ import {vehicles} from '@/lib/data';
 import {bodyTypes, budgetOptions, categoryOptions, emiOptions, featureOptions, filterMakes, mileageOptions, toggleFilter, yearOptions, type Filters, type FilterTab} from '@/lib/inventory-filters';
 import {tokens as $} from '@/app/tokens.stylex';
 
+const modelChoices = [...new Map(vehicles.map(vehicle => [`${vehicle.make}::${vehicle.model}`.toLowerCase(), {make: vehicle.make, model: vehicle.model}])).values()]
+  .sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model));
+const modelKey = (make: string, model: string) => `${make}::${model}`;
+const hasModel = (models: string[], value: string) => models.some(model => model.toLowerCase() === value.toLowerCase());
+const toggleModelSelection = (models: string[], value: string) => hasModel(models, value) ? models.filter(model => model.toLowerCase() !== value.toLowerCase()) : [...models, value];
+
 function CheckRow({label, checked, onChange, radio, large = false, multiline = false}: {label: string; checked: boolean; onChange: () => void; radio?: string; large?: boolean; multiline?: boolean}) {
   const tx = useCopy();
 
@@ -23,16 +29,16 @@ function BrandGroup({make, filters, update}: {make: string; filters: Filters; up
   const checkbox = useRef<HTMLInputElement>(null);
   const selected = filters.brands.includes(make);
   const partial = filters.models.some(model => model.startsWith(`${make}::`));
-  const models = [...new Set(vehicles.filter(vehicle => vehicle.make === make).map(vehicle => vehicle.model))];
+  const models = modelChoices.filter(choice => choice.make === make).map(choice => choice.model);
   useEffect(() => {if (checkbox.current) checkbox.current.indeterminate = !selected && partial;}, [selected, partial]);
   function toggleBrand() {update({...filters, brands: toggleFilter(filters.brands, make), models: filters.models.filter(model => !model.startsWith(`${make}::`))});}
-  function toggleModel(model: string) {
-    const previous = selected ? [...filters.models, ...models.map(value => `${make}::${value}`)] : filters.models;
-    update({...filters, brands: filters.brands.filter(value => value !== make), models: toggleFilter(previous, `${make}::${model}`)});
+  function toggleBrandModel(model: string) {
+    const previous = selected ? [...filters.models, ...models.map(value => modelKey(make, value))] : filters.models;
+    update({...filters, brands: filters.brands.filter(value => value !== make), models: toggleModelSelection(previous, modelKey(make, model))});
   }
   return <div>
     <div {...stylex.props(s.brandRow)}><label {...stylex.props(s.brandLabel)}><input ref={checkbox} type="checkbox" className="cars24-filter-checkbox" checked={selected} onChange={toggleBrand} /><span>{tx(make === 'Mercedes-Benz' ? 'MERCEDES BENZ' : make.toUpperCase())}</span></label><button type="button" aria-label={tx(`Show ${make} models`)} aria-expanded={expanded} onClick={() => setExpanded(value => !value)} {...stylex.props(s.expand)}><ChevronDown size={17} strokeWidth={2.2} {...stylex.props(expanded && s.rotate)} /></button></div>
-    {expanded ? <div {...stylex.props(s.models)}>{models.map(model => <CheckRow key={model} label={tx(model.toUpperCase())} checked={selected || filters.models.includes(`${make}::${model}`)} onChange={() => toggleModel(model)} />)}{!models.length ? <p {...stylex.props(s.emptyModels)}>{tx("No models from this brand are included in the captured local catalog.")}</p> : null}</div> : null}
+    {expanded ? <div {...stylex.props(s.models)}>{models.map(model => <CheckRow key={model} label={tx(model.toUpperCase())} checked={selected || hasModel(filters.models, modelKey(make, model))} onChange={() => toggleBrandModel(model)} />)}{!models.length ? <p {...stylex.props(s.emptyModels)}>{tx("No models from this brand are included in the captured local catalog.")}</p> : null}</div> : null}
   </div>;
 }
 export default function NativeFilterPane({active, filters, update}: {active: FilterTab; filters: Filters; update: (next: Filters) => void}) {
@@ -49,15 +55,22 @@ export default function NativeFilterPane({active, filters, update}: {active: Fil
     <h3 {...stylex.props(s.brandTitle)}>{tx("All Brands")}</h3>
     {filterMakes.filter(make => make.toLowerCase().includes(query.toLowerCase())).map(make => <BrandGroup key={make} make={make} filters={filters} update={update} />)}
   </>;
+  else if (active === 'MODEL') content = <>
+    <label {...stylex.props(s.search)}><Search size={18} strokeWidth={1.8} /><input type="search" placeholder={tx("Search models")} aria-label={tx("Search models")} value={query} onChange={event => setQuery(event.target.value)} {...stylex.props(s.searchInput)} /></label>
+    {modelChoices.filter(({make, model}) => `${make} ${model}`.toLowerCase().includes(query.trim().toLowerCase())).map(({make, model}) => {
+      const value = modelKey(make, model);
+      return <CheckRow key={value} label={`${make} ${model}`} checked={hasModel(filters.models, value)} large onChange={() => update({...filters, brands: filters.brands.filter(brand => brand !== make), models: toggleModelSelection(filters.models, value)})} />;
+    })}
+  </>;
   else if (active === 'BUDGET') content = <>
-    <Link href="/finance" {...stylex.props(s.loan)}><img src={assetPath("/reference-assets/loan-card.png")} alt={tx("")} width={30} height={28} /><span>{tx("Check your car loan eligibility")}</span></Link>
-    <h3 {...stylex.props(s.suggestions)}>{tx("Suggestions")}</h3>{budgetOptions.map(value => <CheckRow key={value} label={tx(value)} checked={filters.budget.includes(value)} onChange={() => update({...filters, budget: toggleFilter(filters.budget, value)})} />)}
+    <Link href="/finance" {...stylex.props(s.loan)}><img src={assetPath("/reference-assets/loan-card.png")} alt={tx("")} width={30} height={28} /><span>{tx("Finance help")}</span></Link>
+    <h3 {...stylex.props(s.suggestions)}>{tx("Suggestions")}</h3>{budgetOptions.map(option => <CheckRow key={option.value} label={`${tx(option.relation)} ${option.amount}`} checked={filters.budget.includes(option.value)} onChange={() => update({...filters, budget: toggleFilter(filters.budget, option.value)})} />)}
     <h3 {...stylex.props(s.rangeTitle)}>{tx("Set price")}</h3><VerticalRange label={tx("price")} minimum={8000} maximum={950000} low={filters.minimum} high={filters.maximum} step={1000} prefix={currency.code + ' '} onChange={(minimum, maximum) => update({...filters, minimum, maximum})} />
   </>;
   else if (active === 'DISCOUNTS') content = <CheckRow label={tx("On Discount")} checked={selected.includes('On Discount')} onChange={() => extra(active, 'On Discount')} />;
   else if (active === 'DOWN PAYMENT') content = <CheckRow label={tx("Show only Zero down payment cars")} checked={selected.length > 0} multiline onChange={() => extra(active, 'Show only Zero down payment cars')} />;
   else if (active === 'EMI') content = <>
-    <h3 {...stylex.props(s.firstTitle)}>{tx("Suggestions")}</h3>{emiOptions.map(value => <CheckRow key={value} label={tx(value)} radio="emi" checked={selected.includes(value)} onChange={() => update({...filters, emiLimit: null, extra: {...filters.extra, EMI: [value]}})} />)}
+    <h3 {...stylex.props(s.firstTitle)}>{tx("Suggestions")}</h3>{emiOptions.map(option => <CheckRow key={option.value} label={`${tx(option.relation)} ${option.amount}`} radio="emi" checked={selected.includes(option.value)} onChange={() => update({...filters, emiLimit: null, extra: {...filters.extra, EMI: [option.value]}})} />)}
     <h3 {...stylex.props(s.rangeTitle)}>{tx("Set max EMI")}</h3><label {...stylex.props(s.emiInput)}><span>{tx(currency.code)}</span><input type="number" inputMode="numeric" min={0} max={100000} aria-label={tx("Maximum EMI")} value={filters.emiLimit ?? ''} onChange={event => update({...filters, emiLimit: event.target.value === '' ? null : Math.max(0, Math.min(100000, Number(event.target.value))), extra: {...filters.extra, EMI: []}})} {...stylex.props(s.emiNumber)} /></label>
   </>;
   else if (active === 'YEAR') content = <>

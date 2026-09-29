@@ -3,9 +3,8 @@ import {useCopy} from '@/lib/locale';
 import { useEffect, useState } from 'react';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import { Heart, LogIn } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
-import LoginSheet from '@/components/DealerEnquirySheet';
 import VehicleCard, { STORAGE_KEY } from '@/components/VehicleCard';
 import { vehicles } from '@/lib/data';
 import { media, tokens as $ } from '@/app/tokens.stylex';
@@ -14,7 +13,6 @@ export default function SavedPage() {
   const tx = useCopy();
 
   const [saved, setSaved] = useState<string[]>([]);
-  const [loginOpen, setLoginOpen] = useState(false);
 
   useEffect(() => {
     const refresh = () => {
@@ -48,11 +46,9 @@ export default function SavedPage() {
             <h2>{tx("No saved cars yet")}</h2>
             <p>{tx("Tap the heart on any car to keep it here and compare later.")}</p>
             <Link href="/cars" {...stylex.props(styles.explore)}>{tx("Explore cars")}</Link>
-            <button type="button" onClick={() => setLoginOpen(true)} {...stylex.props(styles.login)}><LogIn size={18} /> {tx(" Login to sync your wishlist")}</button>
           </section>
         )}
       </main>
-      <LoginSheet open={loginOpen} onClose={() => setLoginOpen(false)} />
     </div>
   );
 }
@@ -65,5 +61,4 @@ const styles = stylex.create({
   empty: { display: 'flex', alignItems: 'center', maxWidth: 520, minHeight: { [media.mobile]: '62vh', default: 520 }, marginInline: 'auto', paddingInline: 20, flexDirection: 'column', justifyContent: 'center', color: $.text, textAlign: 'center' },
   heart: { display: 'grid', width: 126, height: 126, placeItems: 'center', color: $.violet, borderRadius: '50%', backgroundColor: $.violetSoft },
   explore: { display: 'grid', width: '100%', maxWidth: 360, minHeight: 54, marginTop: 25, placeItems: 'center', color: '#fff', fontWeight: 850, borderRadius: 12, backgroundColor: $.violet },
-  login: { display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 7, minHeight: 48, marginTop: 10, paddingInline: 16, color: $.blue, fontWeight: 800, borderColor: $.blue, borderStyle: 'solid', borderWidth: 1, borderRadius: 12, backgroundColor: '#fff', cursor: 'pointer' },
 });
