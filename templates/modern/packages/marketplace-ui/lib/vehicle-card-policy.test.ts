@@ -73,6 +73,38 @@ describe("vehicle card policy", () => {
     ).toEqual(["Препоръчана"]);
   });
 
+  it("keeps full descriptions when compact fuel and transmission labels are displayed", () => {
+    const listing = getListing("bmw-x5-m50d-sofia-2020");
+    const spec = {
+      ...listing.spec,
+      fuelType: "plug_in_hybrid" as const,
+      transmission: "semi_automatic" as const,
+    };
+
+    expect(getVehicleCardSpecFacts({ spec }, "bg")).toEqual(
+      expect.arrayContaining([
+        { id: "fuel", value: "Плъгин хибрид", displayValue: "PHEV" },
+        {
+          id: "transmission",
+          value: "Полуавтоматик",
+          displayValue: "Полуавт.",
+        },
+      ])
+    );
+    expect(getVehicleCardSpecFacts({ spec }, "en")).toContainEqual({
+      id: "fuel",
+      value: "Plug-in hybrid",
+      displayValue: "PHEV",
+    });
+    expect(
+      getVehicleCardSpecFacts({ spec: { ...spec, fuelType: "electric" } }, "bg")
+    ).toContainEqual({
+      id: "fuel",
+      value: "Електрически",
+      displayValue: "Електро",
+    });
+  });
+
   it("surfaces an attached monthly estimate on comparison cards", () => {
     const listing = getListing("bmw-x5-m50d-sofia-2020");
 

@@ -64,6 +64,7 @@ import {
 } from "../lib/vehicle-card-view-policy";
 import { DealerVehicleFacts } from "./dealer-vehicle-facts";
 import Image from "./public-image";
+import { VehicleCardMoney } from "./vehicle-card-money";
 
 const sellerRoleIcons = {
   dealer: Store,
@@ -138,7 +139,7 @@ const VehiclePriceSummary = ({
         )}
         data-slot="vehicle-card-price"
       >
-        {formatVehicleCardMoney(pricePolicy.primaryPrice, variant, locale)}
+        <VehicleCardMoney locale={locale} money={pricePolicy.primaryPrice} />
         {pricePolicy.isMonthlyPrice ? (
           <span className="ml-1 font-medium text-meta text-muted-foreground">
             {copy.monthSuffix}

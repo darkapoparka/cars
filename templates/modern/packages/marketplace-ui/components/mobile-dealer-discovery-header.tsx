@@ -83,6 +83,7 @@ interface MobileQuickFilterItem {
 }
 
 interface MobileDealerQuickFiltersProps {
+  readonly isBg: boolean;
   readonly items: readonly MobileQuickFilterItem[];
 }
 
@@ -278,6 +279,7 @@ const MobileCompactDiscoverySurface = ({
 
 export const MobileDealerQuickFilters = ({
   items,
+  isBg,
 }: MobileDealerQuickFiltersProps) => (
   <div
     className={cn(mobileDealerContentClassName, "overflow-hidden pb-3")}
@@ -286,6 +288,7 @@ export const MobileDealerQuickFilters = ({
     <MobilePillRail
       className="flex items-center gap-2"
       data-slot="mobile-discovery-quick-rail"
+      label={isBg ? "Бързи филтри" : "Quick filters"}
     >
       {items.map((item) => (
         <button

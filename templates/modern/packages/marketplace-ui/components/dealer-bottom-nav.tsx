@@ -45,6 +45,13 @@ const getDealerNavigationItemClassName = (active: boolean) =>
       : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
   );
 
+const getLocaleSettingsHref = (locale?: string, returnTo?: string) =>
+  withBasePath(
+    `${getLocalizedPublicPath(locale, "/locale-settings")}?returnTo=${encodeURIComponent(
+      returnTo ?? getLocalizedPublicPath(locale, "/cars")
+    )}`
+  );
+
 export const DealerBottomNav = ({
   activeMode,
   locale,
@@ -54,10 +61,9 @@ export const DealerBottomNav = ({
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const preferences = useLocalePreferences();
-  const localeSettingsHref = withBasePath(
-    `${getLocalizedPublicPath(locale, "/locale-settings")}?returnTo=${encodeURIComponent(
-      preferences?.returnTo ?? getLocalizedPublicPath(locale, "/cars")
-    )}`
+  const localeSettingsHref = getLocaleSettingsHref(
+    locale,
+    preferences?.returnTo
   );
   const localeRequested = useRef(false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);

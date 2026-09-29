@@ -1,4 +1,5 @@
 import {
+  type FuelType,
   formatBodyType,
   formatFuelType,
   formatListingBadge,
@@ -23,6 +24,7 @@ export type VehicleCardSpecFactId =
   | "year";
 
 export interface VehicleCardSpecFact {
+  displayValue?: string;
   id: VehicleCardSpecFactId;
   value: string;
 }
@@ -107,11 +109,19 @@ const compactTransmissionLabels = {
   semi_automatic: { bg: "Полуавтоматик", en: "Semi-auto" },
 } as const satisfies Record<Transmission, { bg: string; en: string }>;
 
+const compactFuelLabels: Partial<Record<FuelType, { bg: string; en: string }>> =
+  {
+    electric: { bg: "Електро", en: "Electric" },
+    plug_in_hybrid: { bg: "PHEV", en: "PHEV" },
+  };
+
 export const getVehicleCardSpecFacts = (
-  listing: VehicleListing,
+  listing: Pick<VehicleListing, "spec">,
   locale?: string
 ): VehicleCardSpecFact[] => {
   const language = locale?.toLowerCase().startsWith("bg") ? "bg" : "en";
+  const fuelValue = formatFuelType(listing.spec.fuelType, locale);
+  const fuelDisplayValue = compactFuelLabels[listing.spec.fuelType]?.[language];
 
   return (
     [
@@ -120,10 +130,19 @@ export const getVehicleCardSpecFacts = (
         id: "mileage",
         value: formatMileage(listing.spec.mileageValue, locale),
       },
-      { id: "fuel", value: formatFuelType(listing.spec.fuelType, locale) },
+      {
+        id: "fuel",
+        value: fuelValue,
+        ...(fuelDisplayValue && fuelDisplayValue !== fuelValue
+          ? { displayValue: fuelDisplayValue }
+          : {}),
+      },
       {
         id: "transmission",
         value: compactTransmissionLabels[listing.spec.transmission][language],
+        ...(listing.spec.transmission === "semi_automatic" && language === "bg"
+          ? { displayValue: "Полуавт." }
+          : {}),
       },
     ] satisfies VehicleCardSpecFact[]
   ).filter((fact) => fact.value);

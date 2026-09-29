@@ -3,12 +3,14 @@
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehicle-facts";
 import Image from "@repo/marketplace-ui/components/public-image";
+import { VehicleCardMoney } from "@repo/marketplace-ui/components/vehicle-card-money";
 import {
   mobileVehicleCardContentClassName,
   mobileVehicleCardMediaClassName,
   mobileVehicleCardPriceClassName,
   mobileVehicleCardTitleClassName,
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
+import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
 import { useState } from "react";
 import {
   type FinancingVehicleOption,
@@ -31,12 +33,7 @@ export function LeaseSelectedVehicle({
   vehicle: FinancingVehicleOption;
 }) {
   const [failedImageUrl, setFailedImageUrl] = useState<string | null>(null);
-  const facts = [
-    ["year", vehicle.yearLabel],
-    ["mileage", vehicle.mileageLabel],
-    ["fuel", vehicle.fuelLabel],
-    ["transmission", vehicle.transmissionLabel],
-  ];
+  const facts = getVehicleCardSpecFacts(vehicle.filterData, locale);
 
   return (
     <article
@@ -76,7 +73,13 @@ export function LeaseSelectedVehicle({
               className={mobileVehicleCardPriceClassName}
               data-slot="lease-selected-vehicle-price"
             >
-              {vehicle.priceLabel}
+              <VehicleCardMoney
+                locale={locale}
+                money={{
+                  amount: vehicle.priceAmount,
+                  currency: vehicle.priceCurrency,
+                }}
+              />
             </p>
             {vehicle.monthlyLabel ? (
               <p
@@ -94,7 +97,7 @@ export function LeaseSelectedVehicle({
           </div>
         </div>
         <DealerVehicleFacts
-          facts={facts.map(([id, value]) => ({ id, value }))}
+          facts={facts}
           label={locale === "bg" ? "Характеристики" : "Specifications"}
         />
       </div>

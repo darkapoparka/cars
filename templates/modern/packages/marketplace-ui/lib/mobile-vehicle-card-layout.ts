@@ -10,4 +10,4 @@ export const mobileVehicleCardTitleClassName =
   "line-clamp-2 font-medium text-card-title text-foreground tracking-normal";
 
 export const mobileVehicleCardPriceClassName =
-  "font-bold text-price text-foreground tabular-nums tracking-normal";
+  "font-semibold text-price text-foreground tabular-nums tracking-normal";
