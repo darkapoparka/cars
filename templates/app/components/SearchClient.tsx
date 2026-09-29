@@ -5,7 +5,7 @@ import {useEffect, useMemo, useRef, useState, type FormEvent, type KeyboardEvent
 import Link from '@/components/AppLink';
 import {useRouter} from '@/lib/navigation';
 import * as stylex from '@stylexjs/stylex';
-import {ArrowRight, ChevronRight, CreditCard, Search, X} from 'lucide-react';
+import {ChevronRight, Search, X} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import MiniVehicleCard from '@/components/MiniVehicleCard';
 import {useRecentVehicles} from '@/components/useVehicleState';
@@ -72,7 +72,7 @@ export default function SearchClient({initialQuery = ''}: {initialQuery?: string
       </button>)}
       {!suggestions.length ? <button type="button" onClick={() => choose()} {...stylex.props(s.suggestion)}><span {...stylex.props(s.suggestionIcon)}><Search size={18} strokeWidth={1.8} aria-hidden="true"/></span><span {...stylex.props(s.suggestionText)}>{tx("Search for “")}{tx(query)}{tx("”")}</span><ChevronRight size={18} aria-hidden="true" {...stylex.props(s.suggestionArrow)}/></button> : null}
     </div> : <>
-      <Link href="/finance" {...stylex.props(s.loan)}><CreditCard size={22} strokeWidth={1.7} aria-hidden="true"/><span {...stylex.props(s.loanTitle)}>{tx("Finance help")}</span><span {...stylex.props(s.loanAction)}>{tx("Explore")}<ArrowRight size={16} aria-hidden="true"/></span></Link>
+      <Link href="/finance" {...stylex.props(s.loan)}><img src={assetPath("/reference-assets/loan-card.png")} width={30} height={28} alt="" /><span>{tx("Finance help")}</span><u>{tx("Explore")}</u><ChevronRight size={12} aria-hidden="true" /></Link>
       <section {...stylex.props(s.popular)}><h2 {...stylex.props(s.title)}>{tx("Popular Brands")}</h2><div {...stylex.props(s.brands)}>{popular.map((brand, index) => <button type="button" key={brand} onClick={() => choose({label: brand, brand})} aria-label={tx(`Search ${brand}`)} {...stylex.props(s.brand)}><img src={assetPath(`/reference-assets/continuation/search-circle-${index}.png`)} width={65} height={66} alt="" {...stylex.props(s.brandLogo)} /><span {...stylex.props(s.brandLabel)}>{brand === 'Mercedes-Benz' ? 'Mercedes' : brand}</span></button>)}</div></section>
       {recent.length ? <section {...stylex.props(s.recent)}><h2 {...stylex.props(s.title)}>{tx("Recently viewed cars")}</h2><div {...stylex.props(s.recentRail)}>{recent.map(vehicle => <MiniVehicleCard key={vehicle.slug} vehicle={vehicle} />)}</div></section> : null}
     </>}
@@ -80,9 +80,7 @@ export default function SearchClient({initialQuery = ''}: {initialQuery?: string
 }
 const s = stylex.create({
   page: {maxWidth: 720, marginInline: 'auto', paddingTop: 8, paddingInline: 16, paddingBottom: 32, color: $.ink, fontFamily: $.fontSans, backgroundColor: '#fff'},
-  loan: {display: 'flex', alignItems: 'center', gap: 12, minHeight: 56, marginTop: 16, paddingInline: 16, color: $.ink, fontSize: 14, borderWidth: 0, borderRadius: 16, backgroundColor: '#f6f6f7'},
-  loanTitle: {fontWeight: 500},
-  loanAction: {display: 'inline-flex', alignItems: 'center', flexShrink: 0, gap: 6, marginLeft: 'auto', fontSize: 13, fontWeight: 500},
+  loan: {display: 'flex', alignItems: 'center', gap: 7, minHeight: 51, marginTop: 9, paddingInline: 14, color: '#080808', fontSize: 14, borderColor: '#e8e8e8', borderStyle: 'solid', borderWidth: 1, borderRadius: 7, backgroundColor: '#f9f9f9'},
   popular: {marginTop: 28},
   title: {fontSize: 18, fontWeight: 600, lineHeight: '24px'},
   brands: {display: 'flex', gap: 12, overflowX: 'auto', overscrollBehaviorX: 'contain', marginTop: 12, marginRight: -16, paddingTop: 4, paddingBottom: 4, paddingRight: 16, scrollbarWidth: 'none'},
