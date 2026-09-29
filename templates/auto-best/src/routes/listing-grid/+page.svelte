@@ -25,7 +25,7 @@
 {#snippet children(openFilters, filtersOpen)}
 <div class="dn-listing-stage" data-layout="hero-discovery" data-active-filters={activeFilterCount(data.filters) > 0 || Boolean(data.filters.q)}>
   <ListingHero count={data.vehicles.length} />
-  <ListingFilters filters={data.filters} {openFilters} {filtersOpen} onDraftChange={(filters) => draftFilters = filters} />
+  <ListingFilters filters={data.filters} resultCount={data.vehicles.length} {openFilters} {filtersOpen} onDraftChange={(filters) => draftFilters = filters} />
 </div>
 <ListingResults filters={data.filters} vehicles={data.vehicles} {draftFilters} {openFilters} {filtersOpen} />
 {/snippet}

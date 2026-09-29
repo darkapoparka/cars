@@ -179,12 +179,11 @@
                 </div>
               {/if}
               <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
-                <span class="dn-detail-finance-trigger__icon"><Icon name="file-invoice" size={24} /></span>
+                <img class="dn-detail-finance-trigger__art" src="/assets/images/template/pdp-finance-studio-v1.jpg" alt="" width="2172" height="724" decoding="async" />
                 <span class="dn-detail-finance-trigger__copy">
                   <strong>{i18n.t("m_b231bc0b36a1")}</strong>
-                  <small>{i18n.t("m_cab8c52c9be4")}</small>
+                  <span class="dn-detail-finance-trigger__action">{i18n.t("m_625b7187cddc")}</span>
                 </span>
-                <Icon name="arrow-right" size={20} />
               </button>
             </section>
 

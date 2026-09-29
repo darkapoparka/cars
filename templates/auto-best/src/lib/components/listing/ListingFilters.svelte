@@ -32,12 +32,13 @@
 
   interface Props {
     filters: ListingFilters;
+    resultCount: number;
     openFilters: (event: MouseEvent, field?: string) => void;
     filtersOpen: boolean;
     onDraftChange: (filters: ListingFilters) => void;
   }
 
-  let { filters, openFilters, filtersOpen, onDraftChange }: Props = $props();
+  let { filters, resultCount, openFilters, filtersOpen, onDraftChange }: Props = $props();
   let activeFilterCount = $derived(countFilters(filters));
   let pending = $derived(filters);
   let query = $derived(filters.q);
@@ -107,7 +108,7 @@
           onclick={(event) => openFilters(event)}
         >
           <MobileNavIcon name="search" size={18} />
-          <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || i18n.t("m_49c266baaaa7")}</span>
+          <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || `${i18n.t("m_49c266baaaa7")} (${resultCount})`}</span>
           <span class="dn-listing-filter__keyword-hint">{i18n.t("m_27194051d1f9")} <Icon name="arrow-right" size={16} /></span>
         </button>
         <button
