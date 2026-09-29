@@ -47,7 +47,7 @@ for (const width of [320, 390, 1440])
 			});
 			page.on('pageerror', (error) => errors.push(error.message));
 			for (const path of routes) {
-				const response = await page.goto(route(locale, path));
+				const response = await page.goto(route(locale, path), { waitUntil: 'domcontentloaded' });
 				expect(response?.status(), path).toBe(200);
 				await expect(page.locator('html')).toHaveAttribute('lang', locale);
 				await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
@@ -347,7 +347,10 @@ test('client locale navigation and back update language, copy, SEO and links wit
 	);
 	await expect(
 		page
-			.getByRole('navigation', { name: 'Main navigation', exact: true })
+			.getByRole('navigation', {
+				name: info.project.name === 'mobile' ? 'Mobile navigation' : 'Main navigation',
+				exact: true
+			})
 			.getByRole('link', { name: 'Cars', exact: true })
 	).toHaveAttribute('href', route('en', '/inventory?lang=en'));
 	await page.goBack();

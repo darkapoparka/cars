@@ -30,8 +30,8 @@ export const daynightBrand = {
 } as const;
 
 export const daynightAssets = {
-	logoDark: '/assets/daynight/brand/daynight-logo-generated.png',
-	logoLight: '/assets/daynight/brand/daynight-logo-generated.png',
+	logoDark: '/assets/daynight/brand/daynight-logo-generated-600.webp',
+	logoLight: '/assets/daynight/brand/daynight-logo-generated-600.webp',
 	hero: '/assets/daynight/hero/home-05-showroom-exterior.webp',
 	homeHeroSlides: [],
 	footerImage: '/assets/daynight/footer-premium-request-v2.webp'

@@ -140,6 +140,7 @@
 				alt=""
 				width="420"
 				height="220"
+				loading="lazy"
 			/>
 			<h1 id="home-title">{title}</h1>
 			<img
@@ -147,6 +148,7 @@
 				alt=""
 				width="420"
 				height="220"
+				loading="lazy"
 			/>
 		</div>
 		<div class="home-hero__box">

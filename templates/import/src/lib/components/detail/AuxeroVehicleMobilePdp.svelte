@@ -386,6 +386,7 @@
 			class="daynight-mobile-pdp__drawer"
 			data-mobile-pdp-drawer
 			bind:ref={drawerContentEl}
+			trapFocus={false}
 		>
 			<Drawer.Handle class="daynight-mobile-pdp__handle" preventCycle={true} />
 

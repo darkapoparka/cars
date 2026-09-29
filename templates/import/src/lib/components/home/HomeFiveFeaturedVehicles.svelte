@@ -114,8 +114,8 @@
 				<div
 					class="daynight-home-vehicle-grid lg-grid-cols-2 sm-grid-cols-1 grid grid-cols-4 gap-30"
 				>
-					{#each vehicles as vehicle (vehicle.slug)}
-						<HomeFiveVehicleCard {vehicle} copy={copy.vehicleCard} />
+					{#each vehicles as vehicle, index (vehicle.slug)}
+						<HomeFiveVehicleCard {vehicle} copy={copy.vehicleCard} priority={index === 0} />
 					{/each}
 					<a
 						class="daynight-mobile-view-all-card"

@@ -237,8 +237,11 @@
 		background: var(--bc-surface-soft);
 	}
 	.mobile-vehicle-card__body h2 {
-		display: block;
-		white-space: nowrap;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		white-space: normal;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		min-height: var(--bc-mobile-card-title-leading);
@@ -264,6 +267,10 @@
 	}
 
 	@media (max-width: 340px) {
+		.mobile-vehicle-card {
+			grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+		}
+
 		.mobile-vehicle-card__prices {
 			gap: 6px;
 			margin-bottom: 10px;

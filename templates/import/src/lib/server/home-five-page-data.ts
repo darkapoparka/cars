@@ -65,8 +65,8 @@ export const buildHomeFivePageData = ({ request, url }: { request: Request; url:
 	);
 	const homeHeadHtml = `${pageDocument.headHtml.replace(/<title>[\s\S]*?<\/title>/i, '')}
 <meta name="description" content="${escapeHeadAttribute(messages.home.seo.description)}">
-<link rel="preload" as="image" fetchpriority="high" href="/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp" type="image/webp">
-<link rel="preload" as="image" fetchpriority="high" href="/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp" type="image/webp">`;
+<link rel="preload" as="image" fetchpriority="high" media="(min-width: 768px)" href="/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp" type="image/webp">
+<link rel="preload" as="image" fetchpriority="high" media="(min-width: 768px)" href="/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp" type="image/webp">`;
 
 	return {
 		auxeroFullPage: true,

@@ -662,26 +662,38 @@
 			</div>
 
 			<div class="daynight-hero-cars" aria-hidden="true">
-				<img
-					class="daynight-hero-car daynight-hero-car--left"
-					src={assetHref('/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp')}
-					alt=""
-					width="820"
-					height="420"
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-				/>
-				<img
-					class="daynight-hero-car daynight-hero-car--right"
-					src={assetHref('/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp')}
-					alt=""
-					width="820"
-					height="420"
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-				/>
+				<picture>
+					<source
+						media="(min-width: 768px)"
+						srcset={assetHref('/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp')}
+					/>
+					<img
+						class="daynight-hero-car daynight-hero-car--left"
+						src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1717' height='916'/%3E"
+						alt=""
+						width="1717"
+						height="916"
+						loading="eager"
+						decoding="async"
+						fetchpriority="high"
+					/>
+				</picture>
+				<picture>
+					<source
+						media="(min-width: 768px)"
+						srcset={assetHref('/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp')}
+					/>
+					<img
+						class="daynight-hero-car daynight-hero-car--right"
+						src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1820' height='864'/%3E"
+						alt=""
+						width="1820"
+						height="864"
+						loading="eager"
+						decoding="async"
+						fetchpriority="high"
+					/>
+				</picture>
 			</div>
 
 			<!-- Search Cars Section -->
