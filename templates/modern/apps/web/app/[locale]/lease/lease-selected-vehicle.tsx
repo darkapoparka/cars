@@ -6,6 +6,8 @@ import Image from "@repo/marketplace-ui/components/public-image";
 import {
   mobileVehicleCardContentClassName,
   mobileVehicleCardMediaClassName,
+  mobileVehicleCardPriceClassName,
+  mobileVehicleCardTitleClassName,
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import { useState } from "react";
 import {
@@ -17,24 +19,23 @@ export function LeaseSelectedVehicle({
   locale,
   onClear,
   onSelect,
+  priority = false,
   selected = false,
   vehicle,
 }: {
   locale: "bg" | "en";
   onClear?: () => void;
   onSelect?: () => void;
+  priority?: boolean;
   selected?: boolean;
   vehicle: FinancingVehicleOption;
 }) {
   const [failedImageUrl, setFailedImageUrl] = useState<string | null>(null);
   const facts = [
-    [locale === "bg" ? "Година" : "Year", vehicle.yearLabel],
-    [locale === "bg" ? "Пробег" : "Mileage", vehicle.mileageLabel],
-    [locale === "bg" ? "Гориво" : "Fuel", vehicle.fuelLabel],
-    [
-      locale === "bg" ? "Скоростна кутия" : "Transmission",
-      vehicle.transmissionLabel,
-    ],
+    ["year", vehicle.yearLabel],
+    ["mileage", vehicle.mileageLabel],
+    ["fuel", vehicle.fuelLabel],
+    ["transmission", vehicle.transmissionLabel],
   ];
 
   return (
@@ -54,6 +55,7 @@ export function LeaseSelectedVehicle({
             alt={vehicle.imageAlt}
             className="object-cover object-[center_85%] lg:object-[center_80%]"
             fill
+            loading={priority || !onSelect ? "eager" : "lazy"}
             onError={() => setFailedImageUrl(vehicle.imageUrl)}
             sizes="240px"
             src={vehicle.imageUrl}
@@ -61,9 +63,9 @@ export function LeaseSelectedVehicle({
         )}
       </div>
       <div className={mobileVehicleCardContentClassName}>
-        <div className="min-w-0 space-y-0.5">
+        <div className="min-w-0 space-y-1">
           <h2
-            className="line-clamp-2 font-semibold text-card-title text-zinc-950 tracking-heading"
+            className={mobileVehicleCardTitleClassName}
             data-slot="lease-selected-vehicle-title"
             title={vehicle.title}
           >
@@ -71,7 +73,7 @@ export function LeaseSelectedVehicle({
           </h2>
           <div className="min-w-0">
             <p
-              className="font-semibold text-price text-zinc-950 tabular-nums tracking-heading"
+              className={mobileVehicleCardPriceClassName}
               data-slot="lease-selected-vehicle-price"
             >
               {vehicle.priceLabel}

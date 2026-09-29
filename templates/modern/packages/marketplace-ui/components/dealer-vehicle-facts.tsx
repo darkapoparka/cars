@@ -8,7 +8,7 @@ export function DealerVehicleFacts({
   return (
     <ul
       aria-label={label}
-      className="grid grid-cols-2 gap-0.5 text-micro text-secondary-foreground min-[360px]:gap-1 min-[360px]:text-meta"
+      className="grid grid-cols-[minmax(0,1fr)_auto] gap-1 text-micro text-secondary-foreground lg:grid-cols-2 min-[360px]:text-meta"
       data-slot="vehicle-card-spec-pills"
     >
       {facts.map((fact) => (
@@ -17,7 +17,15 @@ export function DealerVehicleFacts({
           key={fact.id}
           title={fact.value}
         >
-          <span className="line-clamp-2 min-w-0 break-words">{fact.value}</span>
+          <span
+            className={
+              fact.id === "year" || fact.id === "mileage"
+                ? "whitespace-nowrap"
+                : "min-w-0 break-words"
+            }
+          >
+            {fact.value}
+          </span>
         </li>
       ))}
     </ul>

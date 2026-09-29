@@ -244,7 +244,7 @@ export const LeaseMobileSelection = ({
         ) : (
           <div className="mt-3 grid gap-2" data-slot="lease-vehicle-inventory">
             {filtered.length ? (
-              filtered.map((vehicle) => (
+              filtered.map((vehicle, index) => (
                 <LeaseSelectedVehicle
                   key={vehicle.id}
                   locale={locale}
@@ -260,6 +260,7 @@ export const LeaseMobileSelection = ({
                         ?.focus({ preventScroll: true })
                     );
                   }}
+                  priority={index < 2}
                   vehicle={vehicle}
                 />
               ))

@@ -47,9 +47,6 @@ interface VehicleCardVariantInput {
   viewMode: ListingViewMode;
 }
 
-const isBulgarianLocale = (locale?: string) =>
-  locale?.toLowerCase().startsWith("bg") ?? false;
-
 export const getVehicleCardVariant = ({
   density,
   desktopLayout,
@@ -181,28 +178,9 @@ export const getVehicleCardPricePolicy = (
   };
 };
 
-const formatComparisonCardMoney = (money: Money, locale?: string) => {
-  const amount = new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: 0,
-  })
-    .format(money.amount)
-    .replaceAll(",", "\u00A0");
-  let currency = money.currency;
-
-  if (money.currency === "BGN") {
-    currency = isBulgarianLocale(locale) ? "лв." : "BGN";
-  } else if (money.currency === "EUR") {
-    currency = "€";
-  }
-
-  return `${amount} ${currency}`;
-};
-
+/** Presentation changes geometry, never currency or locale formatting. */
 export const formatVehicleCardMoney = (
   money: Money,
-  variant: VehicleCardVariant,
+  _variant: VehicleCardVariant,
   locale?: string
-) =>
-  variant === "comparison"
-    ? formatComparisonCardMoney(money, locale)
-    : formatMoney(money, locale);
+) => formatMoney(money, locale);

@@ -1,4 +1,8 @@
-import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";
+import {
+  formatMoney,
+  getMockListingBySlug,
+  type VehicleListing,
+} from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   formatVehicleCardMoney,
@@ -89,7 +93,7 @@ describe("vehicle card policy", () => {
         "comparison",
         "bg"
       )
-    ).toBe("1 360 лв.");
+    ).toBe(formatMoney({ amount: 1360, currency: "BGN" }, "bg"));
   });
 
   it("keeps a lease vehicle purchase price and estimate distinct", () => {
@@ -114,7 +118,7 @@ describe("vehicle card policy", () => {
     expect(policy.monthlyEstimate).toBeUndefined();
     expect(
       formatVehicleCardMoney(policy.primaryPrice, "comparison", "bg")
-    ).toBe("57 499 €");
+    ).toBe(formatMoney(policy.primaryPrice, "bg"));
   });
 
   it("surfaces negotiable status without converting it into a finance claim", () => {

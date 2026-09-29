@@ -14,6 +14,9 @@ export const importRequestSelectClassName =
 
 export const importRequestCopy = {
   bg: {
+    callPreparation:
+      "Подгответе данните по-долу за разговора. Ще уточним транспорта и следващата стъпка по телефона.",
+    callReview: "Прегледайте данните и се обадете, за да обсъдим вноса.",
     attachedDescription:
       "Линкът е добавен. Оставете контакт, за да уточним заявката.",
     attachedLink: "Добавен линк",
@@ -60,6 +63,9 @@ export const importRequestCopy = {
     year: "Година (по избор)",
   },
   en: {
+    callPreparation:
+      "Prepare the details below for your call. We will discuss transport and the next step by phone.",
+    callReview: "Review your details, then call us to discuss the import.",
     attachedDescription:
       "Link attached. Leave your contact details to discuss the request.",
     attachedLink: "Attached link",

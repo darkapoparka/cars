@@ -19,6 +19,7 @@ import {
   type ContactActionState,
   submitContactRequest,
 } from "../contact/actions/contact";
+import { FinancingCallSummary } from "./mobile-financing-call-summary";
 import {
   buildFinancingContactMessage,
   type FinancingRequest,
@@ -28,7 +29,6 @@ import {
 } from "./mobile-financing-policy";
 import type { MobileFormDraft } from "./mobile-form-draft";
 import { PublicContactFields } from "./public-contact-fields";
-import { PublicContactUnavailable } from "./public-contact-unavailable";
 
 const initialState: ContactActionState = { status: "idle" };
 const submitFinancingRequest = (
@@ -87,10 +87,10 @@ export const FinancingRequestForm = ({
 
   if (!submissionAvailable) {
     return (
-      <div className="overflow-y-auto px-4 pb-6">
-        <p className="mb-4 font-semibold text-card-title">{request.vehicle}</p>
-        <PublicContactUnavailable locale={locale} />
-      </div>
+      <FinancingCallSummary
+        locale={locale}
+        request={{ ...request, deposit, term }}
+      />
     );
   }
 

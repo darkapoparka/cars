@@ -31,7 +31,11 @@ import {
   type ListingOrganizationRole,
   type ListingSellerRole,
 } from "../lib/listing-truth";
-import { mobileVehicleCardContentClassName } from "../lib/mobile-vehicle-card-layout";
+import {
+  mobileVehicleCardContentClassName,
+  mobileVehicleCardPriceClassName,
+  mobileVehicleCardTitleClassName,
+} from "../lib/mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
   getShowroomVehicleHeading,
@@ -85,12 +89,12 @@ export const VehicleCardMediaBadges = ({
 
   return (
     <div
-      className="pointer-events-none absolute top-1.5 left-1.5 z-10 flex max-w-[calc(100%-2.5rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
+      className="pointer-events-none absolute top-1.5 left-1 z-10 flex max-w-[calc(100%-0.5rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
       data-slot="vehicle-card-media-badges"
     >
       {labels.map((label) => (
         <Badge
-          className="h-6 rounded-md border-0 bg-white/95 px-2 font-medium text-foreground text-micro"
+          className="h-auto min-h-6 max-w-full whitespace-normal break-words rounded-md border-0 bg-white/95 px-1 font-medium text-foreground text-micro lg:h-6 lg:px-2"
           key={label}
           variant="secondary"
         >
@@ -128,7 +132,10 @@ const VehiclePriceSummary = ({
   return (
     <div className="min-w-0" data-slot="vehicle-card-price-summary">
       <p
-        className="whitespace-nowrap font-semibold text-foreground text-price tabular-nums tracking-heading lg:text-price-lg"
+        className={cn(
+          mobileVehicleCardPriceClassName,
+          "whitespace-nowrap lg:font-semibold lg:text-price-lg lg:tracking-heading"
+        )}
         data-slot="vehicle-card-price"
       >
         {formatVehicleCardMoney(pricePolicy.primaryPrice, variant, locale)}
@@ -490,9 +497,9 @@ const MobileDealerVehicleCardContent = ({
     )}
     href={listingHref}
   >
-    <div className="min-w-0 space-y-0.5">
+    <div className="min-w-0 space-y-1">
       <h2
-        className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading"
+        className={mobileVehicleCardTitleClassName}
         data-slot="vehicle-card-title"
       >
         {getVehicleCardTitle(listing, "comparison")}
