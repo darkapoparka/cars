@@ -47,7 +47,7 @@
           <small>{i18n.t(action.text)}</small>
         </span>
         <span class="dn-mobile-core-card__art" aria-hidden="true">
-          <FeatureArtwork artwork={action.artwork} />
+          <FeatureArtwork artwork={action.artwork} eager />
         </span>
       </a>
     {/each}
@@ -65,13 +65,17 @@
     }
     .dn-mobile-core-actions__grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      /* Enlarged text can reflow to one column without shrinking the type. */
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, max(8.5rem, 45%)), 1fr));
       gap: var(--dn-space-3);
     }
 
     .dn-mobile-core-card {
       position: relative;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: var(--dn-space-2);
+      padding-bottom: var(--dn-space-2);
       min-height: clamp(164px, 32vw, 224px);
       overflow: hidden;
       border-radius: var(--dn-radius);
@@ -99,7 +103,7 @@
       font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-heading);
       letter-spacing: var(--dn-tracking-heading);
-      white-space: nowrap;
+      overflow-wrap: anywhere;
     }
 
     .dn-mobile-core-card small {
@@ -115,17 +119,21 @@
     }
 
     .dn-mobile-core-card__art {
-      position: absolute;
+      position: relative;
       z-index: 1;
-      inset-inline: var(--dn-space-1);
-      bottom: var(--dn-space-2);
+      margin: auto var(--dn-space-1) 0;
       height: 84px;
+      flex: 0 0 84px;
       display: flex;
       align-items: flex-end;
       pointer-events: none;
     }
 
     .dn-mobile-core-card--dark .dn-mobile-core-card__art { mix-blend-mode: lighten; }
+    .dn-mobile-core-card__art :global(.feature-artwork) {
+      max-width: calc(84px * var(--artwork-ratio));
+      margin-inline: auto;
+    }
     .dn-mobile-core-card:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   }
 

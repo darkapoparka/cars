@@ -25,11 +25,11 @@
   <div class="dn-home-slot dn-home-slot--hero"><Hero /></div>
   <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
   <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
-  <div class="dn-home-slot dn-home-slot--browse-actions"><TrustActions group="browse" /></div>
+  <div class="dn-home-slot dn-home-slot--browse-actions"><TrustActions group="browse" mobileArtwork={false} /></div>
   <div class="dn-home-slot dn-home-slot--inventory"><InventorySection /></div>
   <div class="dn-home-slot dn-home-slot--body"><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--brands"><BrandSection /></div>
-  <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" /></div>
+  <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" mobileArtwork={false} /></div>
   <div class="dn-home-slot dn-home-slot--editorial"><Editorial /></div>
   <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
 </div>

@@ -146,6 +146,10 @@ Run `node scripts/check-overlay.mjs` for scroll-lock release order, duplicate cl
 
 The matrix covers BG/EN at 320, 390, 430, 768 and 1440px, with short 420px viewports for form/filter controls. It checks the token-derived 44px interaction shell and 40px visible circle, SVG centering within 0.5 CSS pixels, native appearance, icon size, reachable Close/Save actions, nested dialog dismissal, focus return and discarded editor drafts. Existing route, discovery, enquiry, phase4, typography and localization suites remain separate. Desktop Chrome and Windows WebKit emulation do not replace physical iOS/Android keyboard and safe-area testing.
 
+### Final mobile regression checks
+
+Set `BASE_URL` to a built preview and run `node scripts/mobile-final-smoke.mjs`. It checks EN/BG at 320/390/430px: 200% text reflow, service artwork/copy separation, navigation target containment, reduced motion, menu focus return, inert hidden footer navigation, and responsive image loading/priority. Screenshots and results are saved under `artifacts/mobile-final-smoke/`. Use the existing route, enquiry, mobile-filter and overlay suites for the wider journeys; this focused suite is not a WCAG certification or a physical-device performance test.
+
 ### Shared entry controls
 
 With `BASE_URL` set, run `node scripts/shared-entry-smoke.mjs`. It compares Home, Sell and Import card and control styles in EN/BG at 320/390px, and Sell/Import at 768/1440px. It checks 44px segment, input and action targets, keyboard selection, overflow, invalid home import links and valid-link prefill. Screenshots and results go to `artifacts/shared-entry-smoke/`. Run `scripts/enquiry-smoke.mjs` for draft, validation, review, photo, sharing and focus behavior; `TYPOGRAPHY_SCOPE=services node scripts/typography-smoke.mjs` covers service typography and short viewports.

@@ -15,12 +15,12 @@
 <div class="dn-hero-vehicles" class:dn-hero-vehicles--mobile={mobile} data-pair={pair} aria-hidden="true">
   {#if mobile}
     {#if pair === 'home'}
-      <div class="dn-hero-vehicles__pair"><ArtworkRegion artwork={mobileHeroRegions.home} /></div>
+      <div class="dn-hero-vehicles__pair"><ArtworkRegion artwork={mobileHeroRegions.home} priority /></div>
     {:else if mobileScene === 'sell' || mobileScene === 'import'}
       <div class="dn-hero-vehicles__scene">
-        <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].left} /></div>
-        <div class="dn-hero-vehicles__shared-car"><ArtworkRegion artwork={mobileServiceArtwork.car} /></div>
-        <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].right} /></div>
+        <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].left} priority /></div>
+        <div class="dn-hero-vehicles__shared-car"><ArtworkRegion artwork={mobileServiceArtwork.car} priority /></div>
+        <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].right} priority /></div>
       </div>
     {:else}
       <picture><source media="(max-width: 767px)" srcset={mobileArtwork.src} /><img class="dn-hero-vehicles__front" data-scene="car" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={mobileArtwork.width} height={mobileArtwork.height} decoding="async" /></picture>

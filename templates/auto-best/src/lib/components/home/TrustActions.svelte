@@ -10,7 +10,7 @@
   import { featureArtwork } from '$data/feature-artwork';
   import { leadSite } from '$config/lead-site';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
-  let { group, variant = 'banners' }: { group: 'browse' | 'ownership' | 'all'; variant?: 'banners' | 'cards' } = $props();
+  let { group, variant = 'banners', mobileArtwork = true }: { group: 'browse' | 'ownership' | 'all'; variant?: 'banners' | 'cards'; mobileArtwork?: boolean } = $props();
 
   const actions = [
     {
@@ -96,12 +96,12 @@
                 <div class="dn-trust-card__vehicle"><VehicleCutout vehicle={action.vehicle} framing="banner" /></div>
               {/if}
             {/if}
-            {#if variant === 'banners' && group === 'browse'}
+            {#if mobileArtwork && variant === 'banners' && group === 'browse'}
               <div class="dn-trust-card__mobile-art" aria-hidden="true">
                 <ArtworkRegion artwork={serviceArtwork[action.icon]} />
               </div>
             {/if}
-            {#if variant === 'banners' && group === 'ownership'}
+            {#if mobileArtwork && variant === 'banners' && group === 'ownership'}
               <div class="dn-trust-card__ownership-art" aria-hidden="true"><ArtworkRegion artwork={action.icon === 'contact' ? featureArtwork.import : featureArtwork.finance} /></div>
             {/if}
             {#if variant === 'cards'}

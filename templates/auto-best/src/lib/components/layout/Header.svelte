@@ -348,7 +348,7 @@
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} aria-label={i18n.t("m_a690e455afe4")}>
+      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} inert={mobileFooterVisible} aria-label={i18n.t("m_a690e455afe4")}>
         <a
           class:active={presentation.mobileNavigation.home}
           href={i18n.href(resolve('/'))}
@@ -615,7 +615,7 @@
       left: max(12px, env(safe-area-inset-left));
       right: max(12px, env(safe-area-inset-right));
       bottom: calc(8px + env(safe-area-inset-bottom));
-      height: var(--dn-mobile-nav-bar-height);
+      min-height: var(--dn-mobile-nav-bar-height);
       max-width: 440px;
       margin-inline: auto;
       grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -628,6 +628,7 @@
     }
 
     .dn-mobile-bottom-nav--footer-visible {
+      visibility: hidden;
       opacity: 0;
       pointer-events: none;
       transform: translateY(100%);
@@ -653,6 +654,8 @@
       font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
       cursor: pointer;
+      overflow-wrap: anywhere;
+      text-align: center;
     }
 
     .dn-mobile-bottom-nav a.active,
