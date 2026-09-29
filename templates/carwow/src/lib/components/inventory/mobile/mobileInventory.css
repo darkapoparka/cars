@@ -933,7 +933,7 @@
 
 .mobile-filter-options button small {
 	flex: 0 0 auto;
-	color: #707a85;
+	color: var(--sa-ink-soft);
 	font-size: var(--sa-text-xs);
 	font-weight: var(--sa-button-font-weight);
 }

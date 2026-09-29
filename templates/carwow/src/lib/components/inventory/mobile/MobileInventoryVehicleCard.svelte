@@ -11,14 +11,14 @@
 	import { compactMobileDistance, compactMobileTransmission, shortFuel } from '$lib/utils/format';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
 
-	let { vehicle }: { vehicle: InventoryListVehicle } = $props();
+	let { vehicle, priority = false }: { vehicle: InventoryListVehicle; priority?: boolean } =
+		$props();
 </script>
 
 <article class="mobile-inventory-card">
 	<a
 		class="mobile-inventory-card__link"
 		href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
-		aria-label={i18n.t('pattern.502146f2983d', { v0: vehicle.shortTitle, v1: vehicle.year })}
 		onclick={(event) => {
 			if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
 				return;
@@ -33,7 +33,8 @@
 			<img
 				src={i18n.asset(vehicle.image)}
 				alt={vehicle.shortTitle}
-				loading="lazy"
+				loading={priority ? 'eager' : 'lazy'}
+				fetchpriority={priority ? 'high' : 'auto'}
 				decoding="async"
 				data-daynight-image-fallback
 				use:daynightImageFallback

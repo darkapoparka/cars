@@ -410,7 +410,7 @@
 		display: grid;
 		flex: 1;
 		min-height: 0;
-		grid-template-rows: auto auto minmax(0, 1fr);
+		grid-template-rows: auto auto auto minmax(0, 1fr);
 		gap: 12px;
 		color: var(--sa-ink);
 	}
@@ -501,7 +501,7 @@
 	}
 	.mobile-menu-sheet__nav > a.is-current {
 		background: #fce8ed;
-		color: var(--sa-red) !important;
+		color: var(--sa-red-strong) !important;
 		border-radius: 12px;
 	}
 	.mobile-menu-sheet__nav > a.is-current .mobile-menu-sheet__row-icon {

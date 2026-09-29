@@ -214,6 +214,7 @@
 			class="mobile-detail__media-photo"
 			src={i18n.asset(activePhotoSrc)}
 			alt={vehicle.shortTitle}
+			fetchpriority="high"
 			decoding="async"
 			data-daynight-image-fallback
 			use:daynightImageFallback

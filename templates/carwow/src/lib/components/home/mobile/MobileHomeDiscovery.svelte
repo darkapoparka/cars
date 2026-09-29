@@ -114,14 +114,15 @@
 		>
 	</div>
 	<div class="mh-carlist">
-		{#each featuredCars as car (car.slug)}
+		{#each featuredCars as car, index (car.slug)}
 			<article class="mh-car">
 				<a class="mh-car__link" href={i18n.href(resolve('/inventory/[slug]', { slug: car.slug }))}>
 					<span class="mh-car__media">
 						<img
 							src={i18n.asset(car.image)}
 							alt={car.shortTitle}
-							loading="lazy"
+							loading={index === 0 ? 'eager' : 'lazy'}
+							fetchpriority={index === 0 ? 'high' : 'auto'}
 							decoding="async"
 							data-daynight-image-fallback
 							use:daynightImageFallback
@@ -192,11 +193,7 @@
 				</span>
 			</a>
 		{/each}
-		<a
-			class="mh-brandcard mh-brandcard--all"
-			href={i18n.href(inventoryHref)}
-			aria-label={i18n.t('pattern.ff2eb139b89f', { v0: brandCountLabel(total) })}
-		>
+		<a class="mh-brandcard mh-brandcard--all" href={i18n.href(inventoryHref)}>
 			<span class="mh-brandcard__icon mh-brandcard__icon--all" aria-hidden="true">
 				<img src={i18n.asset(resolve(daynightSite.logoLight))} alt="" loading="lazy" />
 			</span>

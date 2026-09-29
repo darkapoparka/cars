@@ -37,9 +37,6 @@
 
 	const phoneHref = daynightSite.phoneHref;
 	const viberHref = daynightSite.viberHref;
-	const searchLabel = $derived(
-		query.trim() ? i18n.t('pattern.769c3ae47eea', { v0: query.trim() }) : 'Отвори търсене'
-	);
 </script>
 
 <section class="mobile-inventory-top">
@@ -79,7 +76,6 @@
 			id="mobile-inventory-search"
 			class="mobile-inventory-search"
 			type="button"
-			aria-label={`${i18n.text(searchLabel)} (${resultsCount})`}
 			aria-haspopup="dialog"
 			onclick={onOpenSearch}
 		>
