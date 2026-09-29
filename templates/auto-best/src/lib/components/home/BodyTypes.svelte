@@ -59,12 +59,21 @@
             </span>
           </a>
         {/each}
+        {#if bodyTypes.length > mobileBodyTypes.size}
         <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="body-types-grid" onclick={() => expanded = !expanded}>
           <span class="dn-body-all-glyph" aria-hidden="true">
             <span class="dn-body-all-glyph__accent"></span><span></span><span></span><span></span>
           </span>
           <strong>{expanded ? i18n.t("m_211232676e95") : i18n.t("m_3cd085e8c069")}</strong>
         </button>
+        {:else}
+        <a class="dn-discovery-toggle" href={i18n.href(resolve('/listing-grid'))}>
+          <span class="dn-body-all-glyph" aria-hidden="true">
+            <span class="dn-body-all-glyph__accent"></span><span></span><span></span><span></span>
+          </span>
+          <strong>{i18n.t("m_30a64216eaea")}</strong>
+        </a>
+        {/if}
       </div>
     </div>
   </div>
