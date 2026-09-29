@@ -129,7 +129,7 @@ export const MobileInventorySearch = ({
         className="shrink-0 px-3 pb-3"
         data-slot="mobile-inventory-search-header"
       >
-        <label className="flex h-[52px] min-w-0 items-center gap-1 rounded-full bg-zinc-100 p-1 pl-3">
+        <label className="flex h-[52px] min-w-0 items-center gap-1 rounded-full bg-zinc-100 p-1 pl-3 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2">
           <Search
             aria-hidden="true"
             className="size-[18px] shrink-0 text-zinc-600"
@@ -256,7 +256,7 @@ const SearchResultButton = ({
         <>
           {listingImage ? (
             <Image
-              alt={listingImage.alt}
+              alt=""
               className="h-14 w-[88px] shrink-0 rounded-lg object-cover"
               height={112}
               sizes="88px"
@@ -269,15 +269,15 @@ const SearchResultButton = ({
             </span>
           )}
           <span className="min-w-0">
-            <span className="block truncate font-semibold text-card-title text-zinc-950 tracking-heading">
+            <span className="block whitespace-normal break-words font-semibold text-card-title text-zinc-950 tracking-heading">
               {item.label}
             </span>
-            <span className="mt-1 flex min-w-0 items-center gap-2">
-              <span className="min-w-0 flex-1 truncate text-meta text-zinc-600">
-                {`${listing.spec.year} · ${formatMileage(listing.spec.mileageValue, locale)} · ${formatFuelType(listing.spec.fuelType, locale)}`}
-              </span>
-              <span className="shrink-0 whitespace-nowrap font-semibold text-meta text-zinc-950 tabular-nums">
+            <span className="mt-1 flex min-w-0 flex-col gap-1">
+              <span className="whitespace-normal break-words font-semibold text-meta text-zinc-950 tabular-nums">
                 {formatMoney(listing.price, isBg ? "bg" : "en")}
+              </span>
+              <span className="whitespace-normal break-words text-meta text-zinc-600">
+                {`${listing.spec.year} · ${formatMileage(listing.spec.mileageValue, locale)} · ${formatFuelType(listing.spec.fuelType, locale)}`}
               </span>
             </span>
           </span>
