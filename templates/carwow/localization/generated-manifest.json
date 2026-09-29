@@ -2,7 +2,7 @@
 	"schemaVersion": 2,
 	"enabledLocales": ["en", "bg"],
 	"messages": 1620,
-	"catalogSha256": "97a3d9bdee4c11d5279bbc92731f983bace719c461e41c517e02efced88555ab",
+	"catalogSha256": "feef46844f6a9137aa5a7db0e1c271b56097eef4b57b8e27023c2464f63d5412",
 	"sources": [
 		"localization/common.json",
 		"localization/catalog.reviewed.json",
@@ -12,7 +12,7 @@
 	"sourceSha256": {
 		"localization/common.json": "a8b4b662dc484d6a6bf230311ea37cd84320246b17ac04f5da18d039b1769def",
 		"localization/catalog.reviewed.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-		"localization/template.reviewed.json": "85fe3eae04891112de930845933003a6ecc9ab55f86aa0a73eed52fdbde91d0a",
+		"localization/template.reviewed.json": "5606da6ace7e00e52e126c1fc7334bf639a5b26a891c1baaaf848a7d4ee3cbc4",
 		"localization/dealer.reviewed.json": "1c35cd12a9397c45c9e6c94d79a946eda58d5c66b19d5ae5c3dba8cfc7e45085"
 	},
 	"policySha256": "0d94a5cd19f105bd822dd56d14baf237697a20e48b450b12b71a5bc83288d85e",
@@ -43,7 +43,6 @@
 		"Lowest mileage",
 		"Need help?",
 		"Our team",
-		"Our team will contact you about the next step.",
 		"Paperwork assistance",
 		"Petrol",
 		"SUV",

@@ -555,7 +555,7 @@
 	}
 </script>
 
-<div class="mobile-inventory">
+<div class="mobile-inventory" class:mobile-inventory--map={mode === 'map'}>
 	<main id="main-content" tabindex="-1">
 		<h1 class="sr-only">{i18n.t('copy.c89eae536028')}</h1>
 		<MobileInventoryTop
@@ -676,3 +676,10 @@
 		/>
 	</MobileFullSheet>
 </div>
+
+<style>
+	.mobile-inventory--map :global(.mobile-inventory-top) {
+		background: var(--sa-blue);
+		color: #fff;
+	}
+</style>

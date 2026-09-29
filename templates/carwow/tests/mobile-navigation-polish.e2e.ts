@@ -9,7 +9,7 @@ test('menu contrast survives navigation back to Home', async ({ page }) => {
 			.locator('.mobile-bottom-dock')
 			.getByRole('link', { name: route === '/' ? 'Начало' : 'Продай', exact: true })
 			.click();
-		await expect(page).toHaveURL(new RegExp(`${route}$`));
+		await expect(page).toHaveURL(new RegExp(route === '/' ? '/bg$' : `${route}$`));
 		await page.getByRole('button', { name: 'Меню', exact: true }).click();
 		const dialog = page.getByRole('dialog', { name: 'Меню', exact: true });
 		for (const action of await dialog.locator('.mobile-menu-sheet__quick-action').all()) {

@@ -167,6 +167,44 @@ test('every inventory quick filter opens, dismisses and restores focus; sort wor
 	await expect.poll(() => page.evaluate(() => document.body.style.overflow)).not.toBe('hidden');
 });
 
+test('map contact text and actions remain readable on the mobile header', async ({ page }) => {
+	await page.setViewportSize({ width: 320, height: 568 });
+	await visit(page, '/inventory/map');
+	const ratios = await page
+		.locator('.mobile-map-card strong, .mobile-map-card span, .mobile-map-card__actions a')
+		.evaluateAll((elements) => {
+			const rgba = (value: string) => {
+				const values = value.match(/[\d.]+/g)!.map(Number);
+				return [values[0], values[1], values[2], values[3] ?? 1];
+			};
+			const blend = (color: number[], backdrop: number[]) =>
+				color.slice(0, 3).map((v, i) => v * color[3] + backdrop[i] * (1 - color[3]));
+			const luminance = (color: number[]) =>
+				color
+					.map((v) => v / 255)
+					.map((v) => (v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4))
+					.reduce((sum, v, i) => sum + v * [0.2126, 0.7152, 0.0722][i], 0);
+			return elements.map((element) => {
+				const ancestors: Element[] = [];
+				for (let current: Element | null = element; current; current = current.parentElement)
+					ancestors.unshift(current);
+				const background = ancestors.reduce(
+					(color, node) => blend(rgba(getComputedStyle(node).backgroundColor), color),
+					[255, 255, 255]
+				);
+				const foreground = blend(rgba(getComputedStyle(element).color), background);
+				const values = [luminance(foreground), luminance(background)].sort((a, b) => b - a);
+				return {
+					text: element.textContent?.trim(),
+					ratio: (values[0] + 0.05) / (values[1] + 0.05)
+				};
+			});
+		});
+	expect(ratios).toHaveLength(5);
+	for (const { text, ratio } of ratios) expect(ratio, text).toBeGreaterThanOrEqual(4.5);
+	expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
 test('detail contact labels match destinations, tabs work, save and compare persist', async ({
 	page
 }) => {
@@ -227,6 +265,27 @@ for (const viewport of [
 }
 
 for (const kind of ['import', 'sell'] as const) {
+	test(`${kind} explainer is fully localized and dismisses in the small viewport`, async ({
+		page
+	}) => {
+		await page.setViewportSize({ width: 320, height: 568 });
+		await visit(page, kind === 'import' ? '/contact?intent=import' : '/sell-your-car');
+		const trigger = page.getByRole('button', { name: 'How it works', exact: true });
+		await trigger.click();
+		const dialog = page.locator('dialog[open]');
+		await expect(dialog).toHaveAccessibleName(
+			kind === 'import' ? 'How importing works' : 'How selling works'
+		);
+		expect(await dialog.innerText()).not.toMatch(/[А-Яа-я]/);
+		const bounds = (await dialog.boundingBox())!;
+		expect(bounds.y).toBeGreaterThanOrEqual(48);
+		await expect(dialog.getByRole('button', { name: 'Close', exact: true })).toBeInViewport();
+		await expect(dialog.getByRole('button', { name: 'Got it', exact: true })).toBeInViewport();
+		await dialog.getByRole('button', { name: 'Got it', exact: true }).click();
+		await expect(dialog).not.toBeVisible();
+		await expect(trigger).toBeFocused();
+	});
+
 	test(`${kind} validates, retains drafts and honestly reports demo submission`, async ({
 		page
 	}) => {
