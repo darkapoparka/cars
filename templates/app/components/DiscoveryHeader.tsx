@@ -4,11 +4,11 @@ import DealerBrand from '@/components/DealerBrand';
 import {useEffect, useState} from 'react';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import {MapPin, ArrowUpRight} from 'lucide-react';
+import {MapPin, ArrowUpRight, Search, Heart} from 'lucide-react';
 import {showroom} from '@/lib/showroom';
-import NativeIcon from '@/components/NativeIcon';
 import {ServiceTabs, type ServiceKey} from '@/components/ReferenceUI';
 import {media, tokens as $} from '@/app/tokens.stylex';
+import {searchField} from '@/components/search-field.stylex';
 
 /** The native discovery header compacts without moving the page's scroll position. */
 export default function DiscoveryHeader({active, hideMobileIdentity = false}: {active: ServiceKey; hideMobileIdentity?: boolean}) {
@@ -36,25 +36,24 @@ export function ShowroomSearch() {
   const tx = useCopy();
 
   return <div {...stylex.props(s.searchWrap)}><div {...stylex.props(s.searchRow)}>
-    <Link href="/search" aria-label={tx("Search cars")} {...stylex.props(s.search)}><NativeIcon name="search" size={20} /><span {...stylex.props(s.searchPrompt)}>{tx(showroom.searchPlaceholder)}</span><span {...stylex.props(s.mobileSearchPrompt)}>{tx(showroom.mobileSearchPlaceholder)}</span></Link>
-    <Link href="/saved" aria-label={tx("Saved cars")} {...stylex.props(s.saved)}><NativeIcon name="heart" size={20} /></Link>
+    <Link data-search-field href="/search" aria-label={tx("Search cars")} {...stylex.props(searchField.field)}><Search size={20} strokeWidth={1.8} aria-hidden="true" {...stylex.props(searchField.icon)}/><span {...stylex.props(s.searchPrompt)}>{tx(showroom.searchPlaceholder)}</span><span {...stylex.props(s.mobileSearchPrompt)}>{tx(showroom.mobileSearchPlaceholder)}</span></Link>
+    <Link href="/saved" aria-label={tx("Saved cars")} {...stylex.props(s.saved)}><Heart size={20} strokeWidth={1.8} aria-hidden="true"/></Link>
   </div></div>;
 }
 const s = stylex.create({
-  identity: {display: {[media.desktop]: 'none', default: 'flex'}, alignItems: 'center', justifyContent: 'space-between', gap: 12, height: 32, marginBottom: 12},
+  identity: {display: {[media.desktop]: 'none', default: 'flex'}, alignItems: 'center', justifyContent: 'space-between', gap: 12, height: 44},
   mobileIdentityHidden: {display: {[media.tablet]: 'flex', default: 'none'}},
-  wordmark: {fontSize: 21, fontWeight: 700, letterSpacing: '-.9px'},
-  location: {display: 'inline-flex', alignItems: 'center', gap: 5, minHeight: 32, fontSize: 11, color: $.muted},
+  wordmark: {display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: 21, fontWeight: 700, letterSpacing: '-.9px'},
+  location: {display: 'inline-flex', alignItems: 'center', gap: 5, minHeight: 44, fontSize: 12, color: $.muted},
   spacer: {display: {[media.mobile]: 'block', default: 'none'}, height: 'calc(156px + env(safe-area-inset-top))'},
   spacerWithoutIdentity: {height: 'calc(112px + env(safe-area-inset-top))'},
   header: {position: {[media.mobile]: 'fixed', default: 'relative'}, top: 0, left: 0, right: 0, zIndex: 70, color: $.ink, backgroundColor: '#fff'},
   compact: {boxShadow: '0 1px 0 rgba(20,20,24,.08)'},
   inner: {maxWidth: $.content, marginInline: 'auto', paddingTop: {[media.mobile]: 'calc(12px + env(safe-area-inset-top))', default: 30}, paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: 12},
-  innerCompact: {paddingTop: {[media.mobile]: 'calc(12px + env(safe-area-inset-top))', default: 18}, paddingBottom: 16},
+  innerCompact: {paddingTop: {[media.mobile]: 'calc(12px + env(safe-area-inset-top))', default: 18}, paddingBottom: 12},
   searchWrap: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 10},
-  searchRow: {display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 44px', gap: 8},
-  search: {display: 'flex', alignItems: 'center', gap: 10, height: 44, paddingInline: 13, color: $.muted, fontSize: 15, fontWeight: 400, borderRadius: 12, backgroundColor: '#f4f4f5'},
+  searchRow: {display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 48px', gap: 10},
   searchPrompt: {display: {[media.mobile]: 'none', default: 'block'}},
   mobileSearchPrompt: {display: {[media.mobile]: 'block', default: 'none'}, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
-  saved: {display: 'grid', placeItems: 'center', width: 44, height: 44, color: $.ink, borderRadius: '50%', backgroundColor: '#f4f4f5'},
+  saved: {display: 'grid', placeItems: 'center', width: 48, height: 48, color: $.ink, borderRadius: '50%', backgroundColor: '#f4f4f5'},
 });

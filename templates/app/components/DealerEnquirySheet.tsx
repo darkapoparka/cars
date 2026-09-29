@@ -47,8 +47,8 @@ const s = stylex.create({
   close: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, padding: 0, borderWidth: 0, borderRadius: '50%', backgroundColor: '#f4f4f5', color: $.ink, cursor: 'pointer'},
   note: {marginTop: 14, color: $.muted, fontSize: 12, lineHeight: 1.6},
   label: {display: 'block', marginTop: 20, marginBottom: 8, fontSize: 14, fontWeight: 500},
-  textarea: {display: 'block', width: '100%', resize: 'vertical', padding: 12, fontSize: 14, lineHeight: 1.5, color: $.ink, borderColor: '#d4d4d8', borderWidth: 1, borderStyle: 'solid', borderRadius: 12, backgroundColor: '#fff'},
+  textarea: {display: 'block', width: '100%', resize: 'vertical', padding: 12, fontSize: 16, lineHeight: 1.5, color: $.ink, borderColor: $.controlBorder, borderWidth: 1, borderStyle: 'solid', borderRadius: 12, backgroundColor: '#fff'},
   actions: {display: 'grid', gap: 10, marginTop: 18},
   action: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 46, padding: '10px 14px', color: '#fff', fontSize: 14, fontWeight: 500, borderRadius: 12, backgroundColor: '#262629'},
-  secondary: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 46, padding: '10px 14px', color: $.ink, fontSize: 14, borderColor: '#d4d4d8', borderStyle: 'solid', borderWidth: 1, borderRadius: 12, backgroundColor: '#fff', cursor: 'pointer'},
+  secondary: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 46, padding: '10px 14px', color: $.ink, fontSize: 14, borderColor: $.controlBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 12, backgroundColor: '#fff', cursor: 'pointer'},
 });

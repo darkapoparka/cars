@@ -11,14 +11,15 @@ export const tokens = stylex.defineVars({
   blueDark: '#111113',
   ink: '#202024',
   text: '#202024',
-  muted: '#717178',
-  subtle: '#9d9d9d',
+  muted: '#626269',
+  subtle: '#66666e',
   surface: '#ffffff',
   bannerSurface: '#e3e3e3',
   bannerMuted: '#606065',
   surfaceAlt: '#f6f6f7',
   rail: '#f5f5f6',
   line: '#e6e6e9',
+  controlBorder: '#86868e',
   green: '#08a64f',
   pink: '#f32689',
   orange: '#ef7000',
@@ -29,6 +30,13 @@ export const tokens = stylex.defineVars({
   radiusLg: '24px',
   radiusXl: '32px',
   content: '1240px',
+});
+
+// The retained Geist/Poppins subsets have no Cyrillic. Use one complete family
+// for Bulgarian text, numbers and controls instead of per-glyph fallbacks.
+export const bulgarianTypography = stylex.createTheme(tokens, {
+  fontSans: 'Roboto, Arial, sans-serif',
+  fontDisplay: 'Roboto, Arial, sans-serif',
 });
 
 export const media = stylex.defineConsts({

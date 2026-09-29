@@ -24,8 +24,8 @@ const s = stylex.create({
   image: {position: 'absolute', right: 0, bottom: 0, height: '100%', width: 'auto', maxWidth: 'none', maskImage: 'linear-gradient(to right,transparent,#000 30%)'},
   copy: {position: 'relative', zIndex: 1, padding: {[media.mobile]: 14, default: 16}, width: '100%'},
   title: {color: '#fff', fontSize: {[media.mobile]: 20, default: 26}, fontWeight: 600, letterSpacing: '-.025em', lineHeight: 1.2},
-  description: {marginTop: {[media.mobile]: 5, default: 7}, maxWidth: {[media.mobile]: '62%', default: '51%'}, color: campaign.muted, fontSize: {[media.mobile]: 12, default: 14}, lineHeight: 1.45},
-  link: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: 32, paddingInline: 11, marginTop: {[media.mobile]: 8, default: 12}, borderRadius: 30, backgroundColor: '#fff', fontSize: 11, color: campaign.actionText, fontWeight: 600, whiteSpace: 'nowrap'},
+  description: {marginTop: {[media.mobile]: 5, default: 7}, maxWidth: {[media.mobile]: '62%', default: '51%'}, color: campaign.muted, fontSize: 13, lineHeight: 1.45},
+  link: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: 36, paddingInline: 12, marginTop: {[media.mobile]: 8, default: 12}, borderRadius: 30, backgroundColor: '#fff', fontSize: 12, color: campaign.actionText, fontWeight: 600, whiteSpace: 'nowrap'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
 });

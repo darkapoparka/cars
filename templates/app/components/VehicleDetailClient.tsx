@@ -49,17 +49,17 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
   const frame=requestAnimationFrame(()=>{sync();onScroll();});const onScroll=()=>{setScrolled(window.scrollY>400);const sections=['price','overview','features','condition','service-history','car-finance','happy-customers','similar-cars'];let active='price';for(const section of sections){const target=document.getElementById(section);if(target&&target.getBoundingClientRect().top<=190)active=section;}setActiveSection(active);};window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('drive24:saved-change',sync);window.addEventListener('storage',sync);
   return()=>{cancelAnimationFrame(frame);window.removeEventListener('scroll',onScroll);window.removeEventListener('drive24:saved-change',sync);window.removeEventListener('storage',sync);};
  },[vehicle.slug]);
- useEffect(()=>{const rail=sectionRail.current;const active=rail?.querySelector<HTMLElement>('[aria-current="location"]');if(rail&&active)rail.scrollTo({left:Math.max(0,active.offsetLeft+active.offsetWidth-rail.clientWidth+22),behavior:'smooth'});},[activeSection,scrolled]);
+ useEffect(()=>{const rail=sectionRail.current;const active=rail?.querySelector<HTMLElement>('[aria-current="location"]');if(rail&&active)rail.scrollTo({left:Math.max(0,active.offsetLeft+active.offsetWidth-rail.clientWidth+22),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});},[activeSection,scrolled]);
  function toggleSaved(){try{const parsed=JSON.parse(localStorage.getItem(STORAGE_KEY)??'[]');const items:string[]=Array.isArray(parsed)?parsed:[];const next=items.includes(vehicle.slug)?items.filter(item=>item!==vehicle.slug):[...items,vehicle.slug];localStorage.setItem(STORAGE_KEY,JSON.stringify(next));setSaved(next.includes(vehicle.slug));window.dispatchEvent(new CustomEvent('drive24:saved-change'));}catch{setShared('Your browser could not save this car.');}}
  async function share(){try{if(navigator.share){await navigator.share({title,url:location.href});}else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);setShared('Link copied');}else{setShared(location.href);}}catch(error){if(!(error instanceof DOMException&&error.name==='AbortError'))setShared('Sharing is unavailable in this browser.');}}
  function nextPhoto(direction:number){setPhoto(current=>(current+direction+gallery.length)%gallery.length);}
  function endSwipe(event:TouchEvent){if(swipe!==null&&Math.abs(event.changedTouches[0].clientX-swipe)>40)nextPhoto(event.changedTouches[0].clientX<swipe?1:-1);setSwipe(null);}
  function backToList(){if(history.length>1)router.back();else router.push('/cars');}
- function jump(id:string){const target=document.getElementById(id);if(target){const offset=innerWidth<1100?(id==='service-history'?179:164):194;window.scrollTo({top:scrollY+target.getBoundingClientRect().top-offset,behavior:'smooth'});setActiveSection(id);}}
+ function jump(id:string){const target=document.getElementById(id);if(target){const offset=innerWidth<1100?(id==='service-history'?179:164):194;window.scrollTo({top:scrollY+target.getBoundingClientRect().top-offset,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});setActiveSection(id);}}
  return <div {...stylex.props(s.screen)}><PageHeader title={tx("Car details")} onBack={backToList} backLabel={tx("Back to cars")} action={<button type="button" onClick={share} aria-label={tx("Share car")} {...stylex.props(s.headerAction)}><Share2 size={20}/></button>}/>
   <div {...stylex.props(s.gallery)} onTouchStart={e=>setSwipe(e.touches[0].clientX)} onTouchEnd={endSwipe}>
    <button type="button" onClick={()=>setOverlay(reference?.videoTour&&photo===0?'tour':'gallery')} aria-label={tx(reference?.videoTour&&photo===0?'Open vehicle video tour':'Open vehicle photo gallery')} {...stylex.props(s.imageButton)}><img src={assetPath(reference?.videoTour&&photo===0?reference.videoTour.poster:gallery[photo].image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(title)} width={1365} height={768} fetchPriority="high" {...stylex.props(s.heroImage,vehicle.imagePlaceholder&&s.placeholderHero)}/>{vehicle.imagePlaceholder?<span {...stylex.props(s.photoUnavailable)}>{tx('Photo unavailable')}</span>:null}{reference?.videoTour&&photo===0?<span aria-hidden="true" {...stylex.props(s.tourShade)}/>:null}{reference?.videoTour&&photo===0?<span {...stylex.props(s.tourPlay)}><Play size={22} fill="currentColor"/></span>:null}</button>
-   <button type="button" onClick={()=>setOverlay('similar')} {...stylex.props(s.similarButton)}><span {...stylex.props(s.similarIcon)}/>{tx("VIEW SIMILAR CARS")}</button>
+   <button type="button" onClick={()=>setOverlay('similar')} {...stylex.props(s.similarButton)}><span {...stylex.props(s.similarIcon)}/>{tx("Similar Cars")}</button>
    <button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.mobileSave)}><Heart size={23} strokeWidth={2} fill={saved?'currentColor':'none'}/></button>
   </div>
   <div {...stylex.props(s.layout)}><main {...stylex.props(s.main)}>
@@ -92,7 +92,7 @@ tourPlay:{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50
 heroImage:{width:'100%',height:'100%',objectFit:'cover'},
 placeholderHero:{objectFit:'contain',padding:{[media.mobile]:34,default:72},backgroundColor:'#f0f2f4'},
 photoUnavailable:{position:'absolute',left:'50%',bottom:18,transform:'translateX(-50%)',padding:'6px 11px',color:'#555b62',fontSize:11,fontWeight:600,borderRadius:999,backgroundColor:'rgba(255,255,255,.94)'},
-similarButton:{display:'inline-flex',alignItems:'center',gap:5,position:'absolute',bottom:9,left:22,height:27,padding:'0 4px',color:'#202024',fontSize:11,fontWeight:600,borderWidth:0,borderRadius:5,backgroundColor:'#fff',cursor:'pointer'},
+similarButton:{display:'inline-flex',alignItems:'center',gap:5,position:'absolute',bottom:9,left:12,minHeight:44,padding:'8px 10px',color:'#202024',fontSize:13,fontWeight:600,borderWidth:0,borderRadius:5,backgroundColor:'#fff',cursor:'pointer'},
 mobileSave:{display:{[media.mobile]:'grid',default:'none'},placeItems:'center',position:'absolute',top:12,right:12,width:44,height:44,padding:0,color:'#202024',borderWidth:0,borderRadius:'50%',backgroundColor:'rgba(255,255,255,.96)',boxShadow:'0 2px 9px rgba(0,0,0,.15)',cursor:'pointer'},
 similarIcon:{width:14,height:16,borderColor:'#fff',borderStyle:'solid',borderWidth:1,borderRadius:3,backgroundColor:'#202024',boxShadow:'2px 1px 0 #202024'},
 layout:{display:'grid',gridTemplateColumns:{[media.desktop]:'minmax(0,1fr) 330px',default:'1fr'},gap:{[media.desktop]:30,default:0},maxWidth:$.content,marginInline:'auto',paddingInline:{[media.mobile]:22,default:28}},
@@ -108,23 +108,23 @@ heading:{marginTop:18},
 title:{fontFamily:$.fontDisplay,fontSize:{[media.mobile]:18,default:27},fontWeight:600,lineHeight:{[media.mobile]:'27px',default:'35px'}},
 optionsType:{fontFamily:$.fontDisplay,fontSize:13,fontWeight:500},
 subtitle:{marginTop:0,fontSize:12,fontWeight:400,lineHeight:'18px'},
-dealer:{fontFamily:$.fontDisplay,display:'flex',alignItems:'center',gap:6,minHeight:38,marginTop:10,paddingInline:8,color:'#5c420d',fontSize:14,fontWeight:500,borderRadius:5,backgroundImage:'linear-gradient(90deg,#faf4e7,#fff)'},
+dealer:{fontFamily:$.fontSans,display:'flex',flexWrap:'wrap',alignItems:'center',gap:6,minHeight:38,marginTop:10,paddingInline:8,color:'#5c420d',fontSize:14,fontWeight:500,borderRadius:5,backgroundImage:'linear-gradient(90deg,#faf4e7,#fff)'},
 priceCard:{overflow:'hidden',marginTop:16,borderColor:'#c7c7c7',borderStyle:'solid',borderWidth:1,borderRadius:9},
 pricePart:{padding:'15px 9px 12px'},
 priceLine:{display:'flex',alignItems:'center',flexWrap:'wrap',gap:'6px 10px'},
 price:{fontFamily:$.fontDisplay,fontSize:18,fontWeight:600,lineHeight:'25px',whiteSpace:'nowrap'},
 currency:{fontSize:14,fontWeight:600},
-priceLink:{fontFamily:$.fontDisplay,flexShrink:0,marginLeft:'auto',padding:0,color:'#202024',fontSize:11,fontWeight:600,lineHeight:'18px',textDecoration:'underline',borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
-fee:{marginTop:8,fontSize:11,fontFamily:$.fontDisplay,fontWeight:400,lineHeight:'18px'},
+priceLink:{fontFamily:$.fontSans,flexShrink:1,maxWidth:'55%',minWidth:0,minHeight:44,marginLeft:'auto',padding:'6px 0',color:'#202024',fontSize:13,fontWeight:500,lineHeight:'19px',textAlign:'right',textDecoration:'underline',borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
+fee:{marginTop:8,fontSize:12,fontFamily:$.fontSans,fontWeight:400,lineHeight:'18px'},
 emiPart:{padding:'14px 9px 13px',backgroundColor:'#f4f4f5'},
 emi:{fontFamily:$.fontDisplay,fontSize:16,fontWeight:600,lineHeight:'21px'},
 overviewText:{marginTop:5,color:'#727272',fontSize:13,fontWeight:400,lineHeight:1.6},
 sectionTabs:{display:'flex',position:'fixed',top:{[media.desktop]:141,default:'calc(68px + env(safe-area-inset-top))'},left:0,right:0,zIndex:59,gap:9,overflowX:'auto',padding:'6px 22px 9px',backgroundColor:'#fff',scrollbarWidth:'none'},
-sectionTab:{fontFamily:$.fontDisplay,display:'grid',placeItems:'center',flexShrink:0,minHeight:31,padding:'5px 13px',color:'#202024',fontSize:12,lineHeight:'20px',fontWeight:400,borderColor:'#c4c4c4',borderStyle:'solid',borderWidth:1,borderRadius:14,backgroundColor:'#fff',cursor:'pointer'},
+sectionTab:{fontFamily:$.fontDisplay,display:'grid',placeItems:'center',flexShrink:0,minHeight:44,padding:'7px 13px',color:'#202024',fontSize:13,lineHeight:'20px',fontWeight:400,borderColor:'#c4c4c4',borderStyle:'solid',borderWidth:1,borderRadius:14,backgroundColor:'#fff',cursor:'pointer'},
 activeSectionTab:{color:'#fff',borderColor:'#202024',backgroundColor:'#202024'},
 sectionTitle:{fontSize:20,fontWeight:500,lineHeight:'27px'},
 referenceNote:{marginTop:16,color:'#727272',fontSize:12,lineHeight:1.6},
-inlineButton:{display:'inline-flex',alignItems:'center',gap:8,minHeight:42,marginTop:16,padding:0,color:$.violet,fontSize:14,fontWeight:500,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
+inlineButton:{display:'inline-flex',alignItems:'center',gap:8,minHeight:44,marginTop:16,padding:0,color:$.violet,fontSize:14,fontWeight:500,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
 desktopBuy:{display:{[media.desktop]:'block',default:'none'},alignSelf:'start',position:'sticky',top:95,marginTop:25,padding:22,borderColor:'#dddddd',borderStyle:'solid',borderWidth:1,borderRadius:18},
 desktopPrice:{marginTop:20,fontSize:25,fontWeight:600},
 floating:{display:{[media.mobile]:'none',default:'flex'},flexDirection:'column',gap:16,position:'fixed',right:22,bottom:110,zIndex:55},
@@ -137,9 +137,9 @@ mobileSecondary:{color:{[media.mobile]:$.ink,default:$.violet},borderColor:{[med
 primary:{fontFamily:$.fontDisplay,display:'flex',alignItems:'center',justifyContent:'center',width:'100%',minHeight:48,paddingInline:10,color:'#fff',fontSize:15,fontWeight:500,borderWidth:1,borderColor:$.violet,borderStyle:'solid',borderRadius:17,backgroundColor:$.violet,cursor:'pointer'},
 outline:{fontFamily:$.fontDisplay,display:'flex',alignItems:'center',justifyContent:'center',width:'100%',minHeight:48,paddingInline:10,color:$.violet,fontSize:15,fontWeight:500,borderColor:$.violet,borderStyle:'solid',borderWidth:1,borderRadius:17,backgroundColor:'#f9f9fa',cursor:'pointer'},
 toast:{display:'flex',alignItems:'center',gap:12,position:'fixed',left:'50%',bottom:100,zIndex:90,maxWidth:'calc(100vw - 40px)',padding:'14px 18px',transform:'translateX(-50%)',color:'#fff',fontSize:13,borderRadius:12,backgroundColor:'#202024'},
-toastClose:{display:'grid',placeItems:'center',padding:0,color:'#fff',borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
+toastClose:{display:'grid',placeItems:'center',width:44,height:44,padding:0,color:'#fff',borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
 backdrop:{display:'flex',alignItems:{[media.mobile]:'flex-end',default:'center'},justifyContent:'center',position:'fixed',inset:0,zIndex:205,padding:{[media.mobile]:0,default:24},backgroundColor:'rgba(0,0,0,.6)'},
 sheet:{width:'100%',maxWidth:600,maxHeight:'90dvh',overflowY:'auto',padding:'20px 22px 34px',borderRadius:24,backgroundColor:'#fff',outlineStyle:'none'},
 sheetHeader:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:16,marginBottom:20},
-close:{display:'grid',placeItems:'center',width:32,height:32,padding:0,color:'#202024',borderWidth:0,backgroundColor:'transparent',cursor:'pointer'}
+close:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:'#202024',borderWidth:0,backgroundColor:'transparent',cursor:'pointer'}
 });

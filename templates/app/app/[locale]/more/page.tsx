@@ -22,9 +22,9 @@ export default function MorePage() {
 
   return <div {...stylex.props(s.screen)}>
     <PageHeader title="Menu" action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
-    <div {...stylex.props(s.content)}>
+    <main {...stylex.props(s.content)}>
       {showroom.menu.map(group => <nav key={group.label} aria-label={tx(group.label)} {...stylex.props(s.section, s.list)}>
-        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.label)} primary={item.primary} copy={item.location ? location : undefined}/>)}
+        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.href === '/cars' ? 'Cars' : item.label)} primary={item.primary} copy={item.location ? location : undefined}/>)}
       </nav>)}
 
       {dealer.phoneE164 || dealer.email ? <section aria-label={tx('Contact the dealer')} {...stylex.props(s.section)}>
@@ -42,7 +42,7 @@ export default function MorePage() {
         </div>
       </section> : null}
       <p {...stylex.props(s.notice)}>{tx(dealer.previewNotice)}</p>
-    </div>
+    </main>
   </div>;
 }
 
@@ -73,5 +73,5 @@ const s = stylex.create({
   languages: {display: 'flex', gap: 4},
   language: {display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, paddingInline: 8, color: $.muted, fontSize: 13, fontWeight: 500, borderBottomWidth: 2, borderBottomStyle: 'solid', borderBottomColor: 'transparent'},
   languageSelected: {color: $.ink, borderBottomColor: $.ink},
-  notice: {margin: 0, paddingTop: 12, paddingInline: 2, color: $.muted, fontSize: 11, lineHeight: '17px'},
+  notice: {margin: 0, paddingTop: 12, paddingInline: 2, color: $.muted, fontSize: 12, lineHeight: '18px'},
 });
