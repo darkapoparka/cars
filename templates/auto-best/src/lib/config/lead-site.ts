@@ -109,22 +109,27 @@ export const leadSite = {
       ],
       '/assets/images/lead/day-night-stock-01.webp': [
         { src: '/assets/images/lead/day-night-stock-01-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-01-960.webp', width: 960 },
         { src: '/assets/images/lead/day-night-stock-01.webp', width: 1600 }
       ],
       '/assets/images/lead/day-night-stock-02.webp': [
         { src: '/assets/images/lead/day-night-stock-02-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-02-960.webp', width: 960 },
         { src: '/assets/images/lead/day-night-stock-02.webp', width: 1600 }
       ],
       '/assets/images/lead/day-night-stock-03.webp': [
         { src: '/assets/images/lead/day-night-stock-03-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-03-960.webp', width: 960 },
         { src: '/assets/images/lead/day-night-stock-03.webp', width: 1600 }
       ],
       '/assets/images/lead/day-night-stock-04.webp': [
         { src: '/assets/images/lead/day-night-stock-04-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-04-960.webp', width: 960 },
         { src: '/assets/images/lead/day-night-stock-04.webp', width: 1600 }
       ],
       '/assets/images/lead/day-night-stock-06.webp': [
         { src: '/assets/images/lead/day-night-stock-06-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-06-960.webp', width: 960 },
         { src: '/assets/images/lead/day-night-stock-06.webp', width: 1600 }
       ],
       '/assets/images/blog/blog-1.jpg': [

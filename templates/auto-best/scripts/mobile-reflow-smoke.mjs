@@ -35,6 +35,8 @@ async function fits(page, mode) {
 }
 
 async function checkReflow(page) {
+  // Fonts and responsive container queries must reach paint before geometry is sampled.
+  await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   const evidence = { normal: await fits(page, 'normal') };
   for (const [mode, content] of Object.entries(overrides)) {
     const style = await page.addStyleTag({ content });

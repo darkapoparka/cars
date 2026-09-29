@@ -62,7 +62,7 @@
     {#if vehicles.length}
       <div class="dn-listing-results__grid">
         {#each vehicles as vehicle, index (vehicle.id)}
-          <VehicleCard {vehicle} returnTo={`${page.url.pathname}${page.url.search}#vehicle-${vehicle.id}`} showPrice priority={index < 4} layout="listing" />
+          <VehicleCard {vehicle} returnTo={`${page.url.pathname}${page.url.search}#vehicle-${vehicle.id}`} showPrice priority={index === 0} layout="listing" />
         {/each}
       </div>
     {:else}
@@ -287,7 +287,7 @@
 
     .dn-listing-results__grid {
       grid-template-columns: minmax(0, 1fr);
-      gap: 8px;
+      gap: var(--dn-space-4);
     }
   }
 </style>

@@ -84,6 +84,18 @@ try {
           await compactControl(viewAll, { icon: true });
           assert.match(await viewAll.innerText(), /\([1-9]\d*\)/, 'Home action exposes the inventory count');
           await fits(page.locator('.dn-mobile-bottom-nav a, .dn-mobile-bottom-nav button, .dn-mobile-controls a'));
+          const dock = page.locator('.dn-mobile-bottom-nav');
+          const dockControls = dock.locator('a,button');
+          assert.equal(await dockControls.count(), 5);
+          for (const control of await dockControls.all()) {
+            const label = (await control.locator('.dn-mobile-bottom-nav__label').textContent()).trim();
+            const role = await control.evaluate(el => el.tagName === 'A' ? 'link' : 'button');
+            assert(label && await dock.getByRole(role, { name: label, exact: true }).count() === 1,
+              'Every dock icon retains its complete accessible name');
+          }
+          const labelWidths = await dock.locator('.dn-mobile-bottom-nav__label').evaluateAll(labels => labels.map(label => label.getBoundingClientRect().width));
+          assert(labelWidths.every(value => width === 320 ? value <= 1 : value > 1),
+            'The narrow dock uses icons; typical phone widths keep visible labels');
           assert.equal(await page.locator('.dn-mobile-bottom-nav [aria-current=page]').evaluate(el => getComputedStyle(el).backgroundColor), 'rgba(0, 0, 0, 0)', 'Active navigation stays light');
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);
           const trigger = page.locator('.dn-mobile-bottom-nav button');
@@ -96,11 +108,20 @@ try {
         await visit('/listing-grid');
         if (width < 768) {
           const titles = await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__name').evaluateAll(elements => elements.map(el => ({
-            text: el.textContent.trim(), whiteSpace: getComputedStyle(el).whiteSpace, overflow: getComputedStyle(el).textOverflow,
-            height: el.getBoundingClientRect().height, lineHeight: parseFloat(getComputedStyle(el).lineHeight)
+            text: el.textContent.trim(), whiteSpace: getComputedStyle(el).whiteSpace,
+            clipped: el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1
           })));
           assert(titles.length > 0);
-          assert(titles.every(t => t.text && t.whiteSpace === 'nowrap' && t.overflow === 'ellipsis' && t.height <= t.lineHeight + 1), 'Owner-approved mobile listing titles remain single-line with retained full accessible text');
+          assert(titles.every(t => t.text && t.whiteSpace === 'normal' && !t.clipped), 'Mobile listing titles wrap completely within the photo-first cards');
+          const photos = await page.locator('.dn-vehicle-card--listing').evaluateAll(cards => cards.map(card => {
+            const image = card.querySelector('.dn-vehicle-card__visual').getBoundingClientRect();
+            const content = card.querySelector('.dn-vehicle-card__content').getBoundingClientRect();
+            const box = card.getBoundingClientRect();
+            return Math.abs(image.width - box.width) <= 1 && Math.abs(image.width / image.height - 16 / 9) <= .01 && content.top >= image.bottom - 1;
+          }));
+          assert(photos.every(Boolean), 'Each mobile card shows a full-width landscape image above the copy');
+          assert.equal(await page.locator('.dn-vehicle-card--listing img[fetchpriority="high"]').count(), 1,
+            'Only the first inventory photograph gets high fetch priority');
           await capture('inventory');
           await page.locator('.dn-listing-filter__toggle').click();
           const filter = page.locator('#dn-listing-filter-dialog');

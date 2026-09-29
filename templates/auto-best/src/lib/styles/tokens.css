@@ -67,7 +67,7 @@
   --dn-mobile-surface: var(--dn-surface-raised);
   /* Page clearance includes the floating bar and its bottom gap. */
   --dn-mobile-nav-height: calc(var(--dn-mobile-nav-bar-height) + 16px);
-  --dn-mobile-nav-bar-height: max(60px, calc(24px + 1.95rem + 12px));
+  --dn-mobile-nav-bar-height: max(60px, calc(24px + 0.975rem + 12px));
   --dn-mobile-detail-bar-height: max(60px, calc(2.75rem + 16px));
   --dn-mobile-page-end: var(--dn-space-4);
   --dn-radius-control: 12px;

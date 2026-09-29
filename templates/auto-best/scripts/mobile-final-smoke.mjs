@@ -41,6 +41,11 @@ try {
           });
         });
         assert(nav, 'Enlarged navigation labels remain inside their touch targets');
+        const compactDock = await page.locator('.dn-mobile-bottom-nav__label').evaluateAll(labels => labels.every(label => {
+          const box = label.getBoundingClientRect();
+          return box.width === 1 && box.height === 1 && getComputedStyle(label).clipPath !== 'none';
+        }));
+        assert(compactDock, 'The dock switches to accessible icons when enlarged text would crowd its labels');
         await page.screenshot({ path: `${output}/${locale}-${width}-large-text.png` });
         await page.reload({ waitUntil: 'networkidle' });
         const menu = page.locator('.dn-mobile-bottom-nav button');

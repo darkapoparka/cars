@@ -356,7 +356,7 @@
           aria-current={presentation.mobileNavigation.home ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="home" /></span>
-          <span>{i18n.t("m_3a78695388b3")}</span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("m_3a78695388b3")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.listing}
@@ -364,7 +364,7 @@
           aria-current={presentation.mobileNavigation.listing ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="cars" /></span>
-          <span>{i18n.t("nav.carsCompact")}</span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("nav.carsCompact")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.tradeIn}
@@ -372,7 +372,7 @@
           aria-current={presentation.mobileNavigation.tradeIn ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="sell" /></span>
-          <span>{i18n.t("nav.sellCompact")}</span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("nav.sellCompact")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.import}
@@ -380,7 +380,7 @@
           aria-current={presentation.mobileNavigation.import ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="import" /></span>
-          <span>{i18n.t("m_2cff9baabf56")}</span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("m_2cff9baabf56")}</span>
         </a>
         <button
           class:active={presentation.mobileNavigation.menu}
@@ -390,7 +390,7 @@
           onclick={openMobile}
         >
           <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="menu" /></span>
-          <span>{i18n.t("m_99af6606ff9d")}</span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("m_99af6606ff9d")}</span>
         </button>
       </nav>
     {/if}
@@ -442,12 +442,18 @@
   .dn-mega__side-action > :global(.dn-mega__cta) { width: 100%; min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; }
 
   @media (min-width: 992px) {
+    .dn-header__lower { container-type: inline-size; }
     .dn-header-actions { justify-self: end; white-space: nowrap; }
     .dn-topbar__list { gap: var(--dn-space-4); font-size: var(--dn-text-meta); }
     .dn-topbar__settings { flex-shrink: 0; }
     .dn-header:not(.dn-header--compact) .dn-header__inner { min-height: 84px; }
     .dn-topbar, .dn-topbar__inner { min-height: 44px; }
     .dn-header:not(.dn-header--compact) .dn-logo img { height: 56px; }
+
+    /* Let enlarged action labels fit their column without covering navigation. */
+    @container (max-width: 60rem) {
+      .dn-header-actions { flex-direction: column; align-items: stretch; }
+    }
   }
 
   @media (min-width: 992px) and (max-width: 1359px) {
@@ -612,6 +618,7 @@
     }
 
     .dn-mobile-bottom-nav {
+      container-type: inline-size;
       display: grid;
       left: max(12px, env(safe-area-inset-left));
       right: max(12px, env(safe-area-inset-right));
@@ -655,7 +662,7 @@
       font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
       cursor: pointer;
-      overflow-wrap: anywhere;
+      white-space: nowrap;
       text-align: center;
     }
 
@@ -691,6 +698,26 @@
     .dn-mobile-bottom-nav button:focus-visible {
       outline: 2px solid var(--dn-focus);
       outline-offset: -2px;
+    }
+
+    /* Keep names available to assistive technology when the dock cannot fit labels. */
+    @container (max-width: 20rem) {
+      .dn-mobile-bottom-nav__label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+
+      .dn-mobile-bottom-nav a,
+      .dn-mobile-bottom-nav button {
+        grid-template-rows: 24px;
+        gap: 0;
+      }
     }
 
     .dn-mobile-detail-bar {

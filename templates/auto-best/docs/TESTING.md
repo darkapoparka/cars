@@ -65,7 +65,7 @@ For the built preview, use that preview URL instead. `scripts/browser.mjs` contr
 | `scripts/journey-smoke.mjs` | Listing/article returns, vehicle contact context, discovery and menu interaction |
 | `scripts/enquiry-smoke.mjs` | Enquiry entry, steps, review, local photos and sharing/copy behavior |
 | `scripts/mobile-filter-smoke.mjs` | Bulgarian returning-visitor filter draft, nested choices, application, empty results and result-label containment |
-| `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, icon size, single-line mobile inventory titles, filter footer, detail touch targets, short-viewport editors and configured settings title |
+| `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, icon size, complete wrapping inventory titles, full-width landscape photos, accessible compact navigation, filter footer, detail touch targets, short-viewport editors and configured settings title |
 | `scripts/mobile-reflow-smoke.mjs` | English/Bulgarian pages and dialogs at 320/390/430px, 200% root text, WCAG text-spacing overrides and short viewports; rejects clipped actions and enlarged card copy |
 | `scripts/desktop-discovery-smoke.mjs` | Desktop discovery and sticky-control behavior |
 | `scripts/phase4-smoke.mjs` | URL/filter preservation, nested and outer draft ownership, pending desktop values, shell transitions, menu focus, duplicate IDs and 767/768/991/992 boundaries |
