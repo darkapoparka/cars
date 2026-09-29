@@ -4,6 +4,12 @@ import { sveltekit } from '@sveltejs/kit/vite';
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
+	server: {
+		watch: {
+			// Generated deployment bundles and audit copies are not development sources.
+			ignored: ['**/.audit/**', '**/.vercel/**']
+		}
+	},
 	resolve: {
 		preserveSymlinks: true
 	},

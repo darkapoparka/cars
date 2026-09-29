@@ -16,9 +16,9 @@
 	<title>OUTLETCARS.BG Admin Login</title>
 </svelte:head>
 
-<main class="admin-cms bg-background text-foreground min-h-svh">
+<main class="admin-cms min-h-svh bg-background text-foreground">
 	<section class="grid min-h-svh lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.72fr)]">
-		<div class="bg-primary text-primary-foreground relative hidden overflow-hidden lg:block">
+		<div class="relative hidden overflow-hidden bg-primary text-primary-foreground lg:block">
 			<img
 				src="/assets/daynight/cta/premium-cars-banner-v2.webp"
 				alt=""
@@ -45,7 +45,7 @@
 		<div class="flex items-center justify-center p-6">
 			<Card.Root class="w-full max-w-md">
 				<Card.Header>
-					<div class="bg-muted mb-3 flex size-10 items-center justify-center rounded-lg">
+					<div class="mb-3 flex size-10 items-center justify-center rounded-lg bg-muted">
 						<ShieldCheck aria-hidden="true" />
 					</div>
 					<Card.Title>Welcome back</Card.Title>
@@ -59,7 +59,7 @@
 					>
 						{#if form?.error}
 							<p
-								class="border-destructive/30 bg-destructive/10 text-destructive rounded-lg border px-3 py-2 text-sm font-medium"
+								class="rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm font-medium text-destructive"
 							>
 								{form.error}
 							</p>
@@ -93,7 +93,7 @@
 						</Button>
 					</form>
 				</Card.Content>
-				<Card.Footer class="text-muted-foreground text-sm">
+				<Card.Footer class="text-sm text-muted-foreground">
 					{#if data.databaseMode}
 						Sign in with the administrator credentials configured for this template.
 					{:else}

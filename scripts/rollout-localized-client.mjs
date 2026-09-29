@@ -18,6 +18,21 @@ import { ROOT, POLICY, args, git, json, validateManifest, writeJson, sha256, fin
 const exists = (file) => fs.existsSync(file);
 const skip = new Set(['.git', 'node_modules', '.vercel', '.next', '.svelte-kit', '.turbo', 'build', 'dist', 'runtime', 'coverage', 'test-results', 'playwright-report']);
 const rootFiles = ['.gitignore', 'README.md', 'CLIENT.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json'];
+const rootDealerDirectories = ['assets', 'branding', 'dealer-brand'];
+const templateCacheRoot = process.env.CARS_TEMPLATE_CACHE_ROOT ||
+  (process.env.AUTO_BEST_COMMIT ? `C:/Users/radev/cars-fleet-rollout-${process.env.AUTO_BEST_COMMIT.slice(0, 9)}/template-cache` : '');
+
+function cachedTemplate(key, sourceRef) {
+  if (!templateCacheRoot) return null;
+  try {
+    const manifest = json(path.join(templateCacheRoot, 'manifest.json'));
+    if (JSON.stringify(manifest.templates?.[key]) !== JSON.stringify(sourceRef)) return null;
+    const cached = path.join(templateCacheRoot, key);
+    return exists(path.join(cached, 'package.json')) ? cached : null;
+  } catch {
+    return null;
+  }
+}
 
 const generatedLocaleFiles = ['src/lib/locale/catalog.ts', 'localization/generated-manifest.json'];
 
@@ -123,7 +138,7 @@ function required(value, label, pattern) {
   return result;
 }
 
-function normalizeManifest(oldManifest, profile, releases, slug, repository) {
+function normalizeManifest(oldManifest, profile, releases, slug, repository, rootAssets = []) {
   const country = required(profile.business.countryCode, `${slug} country code`, /^[A-Z]{2}$/);
   const currency = required(profile.business.currency, `${slug} inventory currency`, /^[A-Z]{3}$/);
   const defaultLocale = country === 'BG' ? 'bg' : 'en';
@@ -148,6 +163,7 @@ function normalizeManifest(oldManifest, profile, releases, slug, repository) {
     language: defaultLocale,
     accent: /^#[0-9a-f]{6}$/i.test(profile.business.accent || '') ? profile.business.accent : (manifest.switcher?.accent || '#2563eb')
   };
+  manifest.extraAssets = [...new Set([...(manifest.extraAssets || []), ...rootAssets])].sort();
   manifest.templateRevisions = Object.fromEntries(manifest.variants.map(({ key }) => [key, selectedTemplateSource(releases[key]).revision]));
   manifest.templateSources = Object.fromEntries(manifest.variants.map(({ key }) => [key, selectedTemplateSource(releases[key])]));
   return validateManifest(manifest, { allowLegacyPublishingReference: repository === 'darkapoparka/cars' });
@@ -166,7 +182,8 @@ async function build({ clientRoot, slug, output, repository }) {
 
   const profile = loadDealerProfile(source, slug);
   const releases = Object.fromEntries(oldManifest.variants.map(({ key }) => [key, verifyTemplate(ROOT, key)]));
-  const manifest = normalizeManifest(oldManifest, profile, releases, slug, repository);
+  const preservedRootAssets = rootDealerDirectories.filter((relative) => exists(path.join(source, relative)));
+  const manifest = normalizeManifest(oldManifest, profile, releases, slug, repository, preservedRootAssets);
   const carsCommit = required(git(ROOT, ['rev-parse', 'HEAD']), 'Cars source commit', /^[a-f0-9]{40}$/);
   const area = fs.mkdtempSync(path.join(os.tmpdir(), `cars-localization-${slug}-`));
   const seed = path.join(area, 'source');
@@ -179,8 +196,9 @@ async function build({ clientRoot, slug, output, repository }) {
       const oldVariant = path.join(source, key);
       if (!exists(oldVariant)) throw new Error(`${slug}: missing existing ${key} source`);
       const sourceRef = selectedTemplateSource(releases[key]);
-      const snapshot = path.join(area, 'templates', key);
-      await materializeTemplateSource({ root: ROOT, key, release: releases[key], source: sourceRef, destination: snapshot });
+      const cached = cachedTemplate(key, sourceRef);
+      const snapshot = cached || path.join(area, 'templates', key);
+      if (!cached) await materializeTemplateSource({ root: ROOT, key, release: releases[key], source: sourceRef, destination: snapshot });
       const candidate = path.join(seed, key);
       await copySource(snapshot, candidate, { key, exportPolicy: POLICY });
       const changed = applyRefreshAdapter({ key, oldVariant, candidate, profile });
@@ -201,10 +219,17 @@ async function build({ clientRoot, slug, output, repository }) {
       const from = path.join(source, name);
       if (exists(from)) copyTree(from, path.join(seed, name));
     }
+    const copiedRootAssets = new Set();
+    for (const relative of rootDealerDirectories) {
+      const from = path.join(source, relative);
+      if (!exists(from)) continue;
+      copyTree(from, path.join(seed, relative));
+      copiedRootAssets.add(relative);
+    }
     for (const relative of manifest.extraAssets || []) {
       const from = path.join(source, relative);
       if (!exists(from)) throw new Error(`${slug}: declared extra asset is missing: ${relative}`);
-      copyTree(from, path.join(seed, relative));
+      if (!copiedRootAssets.has(relative)) copyTree(from, path.join(seed, relative));
     }
     writeJson(path.join(seed, 'dealer.json'), manifest);
 

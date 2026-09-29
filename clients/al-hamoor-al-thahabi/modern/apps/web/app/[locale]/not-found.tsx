@@ -2,6 +2,7 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { leadSite } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   LeadSiteMark,
   marketplaceContentFrameClassName,
@@ -15,14 +16,17 @@ import { Footer } from "./components/footer";
 const NotFound = () => {
   const params = useParams<{ locale?: string }>();
   const isBg = params.locale === "bg";
-  const homeHref = isBg ? "/bg" : "/";
-  const browseHref = isBg ? "/bg/cars" : "/cars";
+  const homeHref = isBg ? "/bg" : "/en";
+  const browseHref = isBg ? "/bg/cars" : "/en/cars";
   const pageTitle = isBg
     ? `Страницата не е намерена | ${leadSite.name}`
     : `Page not found | ${leadSite.name}`;
 
   return (
-    <PublicRecoveryFrame locale={isBg ? "bg" : "en"}>
+    <PublicRecoveryFrame
+      desktopTitle={isBg ? "Страницата не е намерена" : "Page not found"}
+      locale={isBg ? "bg" : "en"}
+    >
       <title>{pageTitle}</title>
       <a
         className="fixed top-3 left-3 z-[100] -translate-y-24 rounded-lg bg-foreground px-4 py-3 font-semibold text-background shadow-lg focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -32,9 +36,7 @@ const NotFound = () => {
       </a>
       <header
         className={
-          leadSite.staticDemoMode
-            ? "hidden border-border border-b bg-card lg:block"
-            : "border-border border-b bg-card"
+          isDealershipSite ? "hidden" : "border-border border-b bg-card"
         }
       >
         <div
@@ -68,10 +70,16 @@ const NotFound = () => {
         tabIndex={-1}
       >
         <section className="w-full max-w-lg rounded-xl border border-border bg-card p-6 text-center sm:p-8">
-          <p className="font-semibold text-[var(--lead-site-accent)] text-sm dark:text-[var(--lead-site-accent-bright)]">
+          <p className="font-semibold text-brand-text text-sm dark:text-[var(--lead-site-accent-bright)]">
             404
           </p>
-          <h1 className="mt-2 font-semibold text-section-title tracking-tight">
+          <h1
+            className={
+              isDealershipSite
+                ? "mt-2 font-semibold text-section-title tracking-tight lg:hidden"
+                : "mt-2 font-semibold text-section-title tracking-tight"
+            }
+          >
             {isBg ? "Страницата не е намерена" : "Page not found"}
           </h1>
           <p className="mt-2 text-muted-foreground text-sm leading-6">

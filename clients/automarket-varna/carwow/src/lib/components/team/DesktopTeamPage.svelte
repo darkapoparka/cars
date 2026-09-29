@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	// Native 1:1 rebuild of the localized /team (sale-agents.html) desktop content:
 	// breadcrumb + title + the consultant card grid (photo with social overlay +
@@ -118,23 +121,31 @@
 {#snippet teamHoverActions(member: DayNightTeamMember)}
 	<ul class="sale-agent-social flex gap-8">
 		<li>
-			<a href={`tel:${member.phone}`} title="Обади се за оглед" aria-label="Обади се за оглед">
+			<a
+				href={i18n.href(`tel:${member.phone}`)}
+				title={i18n.t('copy.30ebf6dff086')}
+				aria-label={i18n.t('copy.30ebf6dff086')}
+			>
 				{@render phoneIcon(20)}
 			</a>
 		</li>
 		{#if member.email}
 			<li>
 				<a
-					href={`mailto:${member.email}`}
-					title={`Имейл към ${member.name}`}
-					aria-label={`Имейл към ${member.name}`}
+					href={i18n.href(`mailto:${member.email}`)}
+					title={i18n.t('pattern.38be24678d5c', { v0: i18n.text(member.name) })}
+					aria-label={i18n.t('pattern.38be24678d5c', { v0: i18n.text(member.name) })}
 				>
 					{@render mailIcon(20)}
 				</a>
 			</li>
 		{/if}
 		<li>
-			<a href={resolve(teamHref(member.slug))} title="Виж профила" aria-label="Виж профила">
+			<a
+				href={i18n.href(resolve(teamHref(member.slug)))}
+				title={i18n.t('copy.a7e7e1b8dd3b')}
+				aria-label={i18n.t('copy.a7e7e1b8dd3b')}
+			>
 				{@render profileIcon()}
 			</a>
 		</li>
@@ -144,16 +155,20 @@
 {#snippet teamContactActions(member: DayNightTeamMember)}
 	<ul class="contact">
 		<li>
-			<a href={`tel:${member.phone}`} title="Обади се за оглед" aria-label="Обади се за оглед">
+			<a
+				href={i18n.href(`tel:${member.phone}`)}
+				title={i18n.t('copy.30ebf6dff086')}
+				aria-label={i18n.t('copy.30ebf6dff086')}
+			>
 				{@render phoneIcon(24)}
 			</a>
 		</li>
 		{#if member.email}
 			<li>
 				<a
-					href={`mailto:${member.email}`}
-					title={`Имейл към ${daynightSite.shortName}`}
-					aria-label={`Имейл към ${daynightSite.shortName}`}
+					href={i18n.href(`mailto:${member.email}`)}
+					title={i18n.t('pattern.38be24678d5c', { v0: daynightSite.shortName })}
+					aria-label={i18n.t('pattern.38be24678d5c', { v0: daynightSite.shortName })}
 				>
 					{@render mailIcon(24)}
 				</a>
@@ -167,19 +182,26 @@
 		<div class="card-top mb-20">
 			<a
 				class="flex w-full"
-				href={resolve(teamHref(member.slug))}
-				aria-label={`Виж профила на ${member.name}`}
+				href={i18n.href(resolve(teamHref(member.slug)))}
+				aria-label={i18n.t('pattern.c09d582164e0', { v0: i18n.text(member.name) })}
 			>
-				<img class="w-full" src={asset(member.image as AssetHref)} alt={member.name} />
+				<img
+					class="w-full"
+					src={i18n.asset(asset(member.image as AssetHref))}
+					alt={i18n.text(member.name)}
+				/>
 			</a>
 			{@render teamHoverActions(member)}
 		</div>
 		<div class="card-bottom flex items-center justify-between gap-16">
 			<div class="content">
-				<a class="h5 font-weight-600 sale-agent-title" href={resolve(teamHref(member.slug))}>
-					{member.name}
+				<a
+					class="h5 font-weight-600 sale-agent-title"
+					href={i18n.href(resolve(teamHref(member.slug)))}
+				>
+					{i18n.text(member.name)}
 				</a>
-				<p class="text-secondary text-sm">{member.role}</p>
+				<p class="text-secondary text-sm">{i18n.text(member.role)}</p>
 			</div>
 			{@render teamContactActions(member)}
 		</div>
@@ -189,31 +211,31 @@
 <div class="team-page">
 	<DesktopYellowRouteHero
 		headingId="team-route-title"
-		title={`Екипът на ${daynightSite.shortName}`}
-		copy={daynightTeamDisclosure}
+		title={i18n.t('pattern.b531635e92b3', { v0: daynightSite.shortName })}
+		copy={i18n.text(daynightTeamDisclosure)}
 		panel="light"
-		primaryLabel="Свържете се"
+		primaryLabel={i18n.t('copy.f36755515677')}
 		primaryHref="/contact"
-		secondaryLabel="Виж автомобилите"
+		secondaryLabel={i18n.t('copy.f20a4411e8d6')}
 		secondaryHref="/inventory"
 	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<a href={resolve('/')}>Още</a>
+					<a href={i18n.href(resolve('/'))}>{i18n.t('copy.bb593f6846bd')}</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Екипът на {daynightSite.shortName}</span>
+					<span>{i18n.t('copy.fcefd041a983')} {daynightSite.shortName}</span>
 				</li>
 			</ul>
 		</div>
@@ -221,8 +243,8 @@
 
 	<section class="pb-100">
 		<div class="container">
-			<h1>Екипът на {daynightSite.shortName}</h1>
-			<p class="team-disclosure">{daynightTeamDisclosure}</p>
+			<h1>{i18n.t('copy.fcefd041a983')} {daynightSite.shortName}</h1>
+			<p class="team-disclosure">{i18n.text(daynightTeamDisclosure)}</p>
 		</div>
 		<div class="tf-spacing-style3"></div>
 

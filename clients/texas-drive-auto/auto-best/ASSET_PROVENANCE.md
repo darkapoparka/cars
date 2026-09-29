@@ -26,6 +26,7 @@ A filename does not prove a file is currently rendered. Component/data reference
 | [Vehicle cutouts](provenance/vehicle-cutouts-2026-09-06.md) | Generated vehicle imagery and encoding |
 | [Side profiles](provenance/vehicle-side-profiles-2026-09-06.md) | Broadside artwork and original inputs |
 | [Hero pairs](provenance/hero-vehicle-pairs-2026-09-06.md) | Distinct route vehicle pairs |
+| [Desktop hero scenes](provenance/desktop-hero-scenes-2026-09-23.json) | Four built-in image-generation prompts: ivory Home studio, graphite Inventory studio, warm About architecture and blue-hour Contact architecture. Decorative concepts, not photos of the dealer's premises. WebP files retain the original 2172×724 dimensions. |
 | [Collection lineup](provenance/collection-lineup-2026-09-06.md) | Homepage collection art |
 | [Browse campaign pair](provenance/browse-campaign-pair-2026-09-06.md) | Collection/sell illustrations |
 | [Mobile services](provenance/mobile-service-artwork-2026-09-06.md) | Mobile sell/import assets |

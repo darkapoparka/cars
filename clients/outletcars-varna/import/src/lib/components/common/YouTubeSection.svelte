@@ -1,21 +1,32 @@
 <script lang="ts">
-	import { ArrowRight, Play } from '@lucide/svelte';
+	import { linkHref } from '$lib/utils/links';
+	import { assetHref } from '$lib/utils/assets';
+	import { localizedCopy } from '$lib/content/localized';
+	import { site } from '$lib/config/site';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Play from '@lucide/svelte/icons/play';
 	import type { AboutVideo } from '$lib/data/about-videos';
 
 	let { videos, english = false }: { videos: AboutVideo[]; english?: boolean } = $props();
 	let activeVideo = $state<string | null>(null);
 	const focusPlayer = (element: HTMLIFrameElement) => element.focus();
 	const selectedVideos = $derived(
-		videos.filter((video) => /^[\w-]{11}$/.test(video.id)).slice(0, 3)
+		localizedCopy(videos, english ? 'en' : 'bg')
+			.filter((video) => /^[\w-]{11}$/.test(video.id))
+			.slice(0, 3)
 	);
 </script>
 
 {#if selectedVideos.length}
-	<section class="daynight-youtube" aria-label="OUTLETCARS.BG в YouTube">
-		<div class="container">
+	<section
+		class="daynight-youtube"
+		aria-label={site.identity.name + (english ? ' on YouTube' : ' в YouTube')}
+	>
+		<div class="site-container">
 			<div class="daynight-youtube__heading">
 				<h2>
-					OUTLETCARS.BG {english ? 'on' : 'в'}
+					{site.identity.name}
+					{english ? 'on' : 'в'}
 					<span
 						><svg width="36" height="25" viewBox="0 0 36 25" aria-hidden="true"
 							><rect width="36" height="25" rx="7" fill="#ff0033" /><path
@@ -32,7 +43,9 @@
 						{#if activeVideo === video.id}
 							<iframe
 								{@attach focusPlayer}
-								src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0`}
+								src={assetHref(
+									`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&rel=0`
+								)}
 								title={video.title}
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 								allowfullscreen
@@ -41,7 +54,7 @@
 						{:else}
 							<a
 								class="daynight-youtube__poster"
-								href={`https://www.youtube.com/watch?v=${video.id}`}
+								href={linkHref(`https://www.youtube.com/watch?v=${video.id}`)}
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label={`${english ? 'Play' : 'Пусни'}: ${video.title}`}
@@ -52,7 +65,7 @@
 								}}
 							>
 								<img
-									src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
+									src={assetHref(`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`)}
 									alt=""
 									width="480"
 									height="360"
@@ -85,7 +98,7 @@
 	.daynight-youtube__heading {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		gap: 20px;
 		margin-bottom: 24px;
 	}
@@ -96,9 +109,9 @@
 		gap: 10px;
 		margin: 0;
 		color: var(--bc-ink);
-		font-size: 30px;
+		font-size: var(--bc-desktop-section-title);
 		line-height: 1.2;
-		font-weight: 650;
+		font-weight: var(--bc-weight-heading);
 		letter-spacing: -0.025em;
 	}
 	h2 span {

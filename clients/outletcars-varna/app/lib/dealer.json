@@ -1,0 +1,30 @@
+{
+  "mode": "dealer",
+  "id": "outletcars-varna",
+  "name": "OUTLETCARS.BG — Варна",
+  "shortName": "OUTLETCARS.BG — Варна",
+  "logo": {
+    "light": "/dealer-app/logo-light-f6f5e42e0bb7ac78eb23.webp",
+    "dark": "/dealer-app/logo-dark-55620d4870ba19745d61.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България",
+  "phoneDisplay": "0898 921 010",
+  "phoneE164": "+359898921010",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=OUTLETCARS.BG%20%E2%80%94%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%B1%D1%83%D0%BB.%20%D0%AF%D0%BD%D0%BE%D1%88%20%D0%A5%D1%83%D0%BD%D1%8F%D0%B4%D0%B8%20518%2C%20%D1%81%D1%80%D0%B5%D1%89%D1%83%20%D0%9A%D0%90%D0%A2%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://outletcarsvarna.mobile.bg/",
+  "whatsappUrl": "",
+  "services": [],
+  "observedAt": "2026-09-09T19:17:27.878450+00:00",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

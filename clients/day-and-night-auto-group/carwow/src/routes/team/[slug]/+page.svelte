@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
 	import PublicStorefrontRoute from '$lib/components/layout/PublicStorefrontRoute.svelte';
 	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
 	import DesktopTeamMemberPage from '$lib/components/team/DesktopTeamMemberPage.svelte';
@@ -7,7 +9,11 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<RouteSeo title={data.seo.title} description={data.seo.description} ogImage={data.member.image} />
+<RouteSeo
+	title={i18n.text(data.member.name)}
+	description={i18n.text(data.member.bio)}
+	ogImage={data.member.image}
+/>
 
 <PublicStorefrontRoute mainContentAnchor>
 	<DesktopTeamMemberPage member={data.member} members={data.members} />

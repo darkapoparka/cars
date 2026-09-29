@@ -1,20 +1,19 @@
+import { unavailableVehiclePhotos, unavailableVehicleImage } from './unavailable-media';
+import { illustrativeMonthly } from '$lib/domain/finance';
+import { site } from '$lib/config/site';
 import { daynightVehicles } from './daynight';
 import type { InventoryFilters, SortKey, Vehicle, VehicleCondition } from '$lib/types/vehicle';
 
 export type { InventoryFilters, SortKey, Vehicle, VehicleCondition } from '$lib/types/vehicle';
 
-const detailGalleryFallback: string[] = [];
-
-const conditionForStatus = (status: string, isClientVehicle: boolean): VehicleCondition => {
-	if (isClientVehicle) return 'Certified';
-	if (status === 'New listing') return 'New';
-
-	return 'Used';
-};
+// Listing recency and customer ownership do not certify vehicle condition.
+const conditionForStatus = (): VehicleCondition => 'Used';
 
 const knownBrokenImageFallbacks: Record<string, string> = {};
 const imageForVehicle = (vehicle: { id: string; image: string }) =>
-	knownBrokenImageFallbacks[vehicle.id] ?? vehicle.image;
+	unavailableVehiclePhotos.has(vehicle.id)
+		? unavailableVehicleImage
+		: (knownBrokenImageFallbacks[vehicle.id] ?? vehicle.image);
 
 const modelSeriesFromTitle = (title: string, brand: string) => {
 	const normalizedTitle = title.trim();
@@ -33,11 +32,11 @@ export const vehicles: Vehicle[] = daynightVehicles.map((vehicle, index) => ({
 	brand: vehicle.make,
 	model: modelSeriesFromTitle(vehicle.model, vehicle.make),
 	bodyType: vehicle.body,
-	condition: conditionForStatus(vehicle.status, vehicle.isClientVehicle),
+	condition: conditionForStatus(),
 	price: vehicle.priceEur,
 	priceLabel: vehicle.price.replace(/\s*EUR\b/, ' €'),
 	priceBgn: vehicle.priceBgn,
-	monthly: Math.round(vehicle.priceEur / 72),
+	monthly: illustrativeMonthly(vehicle.priceEur, site.finance),
 	year: vehicle.year,
 	mileage: vehicle.mileageKm,
 	fuel: vehicle.fuel,
@@ -46,13 +45,18 @@ export const vehicles: Vehicle[] = daynightVehicles.map((vehicle, index) => ({
 	exterior: vehicle.color,
 	interior: 'On request',
 	location: vehicle.location,
-	vin: vehicle.sourceId,
+	vin: /^[A-HJ-NPR-Z0-9]{17}$/i.test(vehicle.sourceId) ? vehicle.sourceId : '',
 	stockNumber: vehicle.sourceId,
 	tag: vehicle.status,
 	tagTone: vehicle.isClientVehicle ? 'dark' : index % 3 === 0 ? 'lime' : 'violet',
 	image: imageForVehicle(vehicle),
 	images: [imageForVehicle(vehicle)],
-	gallery: [imageForVehicle(vehicle), ...detailGalleryFallback],
+	gallery: [imageForVehicle(vehicle)],
+	mediaKind: unavailableVehiclePhotos.has(vehicle.id)
+		? 'unavailable'
+		: knownBrokenImageFallbacks[vehicle.id]
+			? 'illustration'
+			: 'listing',
 	dealerSlug: "outletcars-varna",
 	agentSlug: "outletcars-varna-sales",
 	rating: 0,

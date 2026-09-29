@@ -1,5 +1,11 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
+  import Icon from '$components/ui/Icon.svelte';
   import { brands } from '$data/home';
   const mobileBrands = new Set(
     [...brands.filter((brand) => brand.count > 0), ...brands.filter((brand) => brand.count <= 0)]
@@ -15,23 +21,23 @@
   let expanded = $state(false);
 </script>
 
-<section class="dn-brand-section" aria-labelledby="brand-title">
+<section class="dn-brand-section dn-home-content-section" aria-labelledby="brand-title">
   <div class="container dn-brand-shell">
     <div class="dn-brand-hero">
       <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
         <h2 id="brand-title" class="dn-home-section-title">
-          <span class="dn-heading-desktop">Изберете по марка</span>
-          <span class="dn-heading-mobile">По марка</span>
+          <span class="dn-heading-desktop">{i18n.t("m_9eb6d7e50e27")}</span>
+          <span class="dn-heading-mobile">{i18n.t("m_5216bd5728f8")}</span>
         </h2>
-        <a class="dn-brand-hero__cta dn-home-section-action" href={resolve('/listing-grid')} aria-label="Вижте всички автомобили"><span class="dn-heading-desktop">Вижте всички автомобили</span><span class="dn-heading-mobile" aria-hidden="true">Всички</span></a>
+        <a class="dn-brand-hero__cta dn-home-section-action" href={i18n.href(resolve('/listing-grid'))} aria-label={i18n.t("m_7d6647b063a2")}><span class="dn-heading-desktop dn-home-action-label">{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></span><span class="dn-heading-mobile" aria-hidden="true">{i18n.t("m_a52ace420f21")}</span></a>
       </div>
     </div>
-    <div class="dn-brand-panel">
+    <div class="dn-brand-panel dn-home-section-panel">
       <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(brands.length, 6))}>
         {#each brands as brand (brand.label)}
-          <a class="dn-brand-card" class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`)}>
+          <a class="dn-brand-card" class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={i18n.href(resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`))}>
             <span class="dn-brand-card__image">
-              <span class="dn-brand-card__frame" style:--logo-mobile-width={`${mobileLogoWidth(brand)}px`} style:--logo-desktop-width={`${desktopLogoWidth(brand)}px`} style:--logo-ratio={`${brand.bounds[2] - brand.bounds[0]} / ${brand.bounds[3] - brand.bounds[1]}`} style:--logo-image-width={`${brand.width / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-left={`${-brand.bounds[0] / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-top={`${-brand.bounds[1] / (brand.bounds[3] - brand.bounds[1]) * 100}%`}><img src={brand.image} alt={`${brand.label} лого`} loading="lazy" decoding="async" width={brand.width} height={brand.height} /></span>
+              <span class="dn-brand-card__frame" style:--logo-mobile-width={`${mobileLogoWidth(brand)}px`} style:--logo-desktop-width={`${desktopLogoWidth(brand)}px`} style:--logo-ratio={`${brand.bounds[2] - brand.bounds[0]} / ${brand.bounds[3] - brand.bounds[1]}`} style:--logo-image-width={`${brand.width / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-left={`${-brand.bounds[0] / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-top={`${-brand.bounds[1] / (brand.bounds[3] - brand.bounds[1]) * 100}%`}><img src={brand.image} alt={i18n.t("m_f6e3b3cf6fb0", { p0: brand.label })} loading="lazy" decoding="async" width={brand.width} height={brand.height} /></span>
             </span>
             <strong>{brand.label}</strong>
           </a>
@@ -40,7 +46,7 @@
         <span class="dn-brand-all-glyph" aria-hidden="true">
           <span class="dn-brand-all-glyph__accent"></span><span></span><span></span><span></span>
         </span>
-        <strong>{expanded ? 'Покажи по-малко' : 'Всички марки'}</strong>
+        <strong>{expanded ? i18n.t("m_211232676e95") : i18n.t("m_28c0e12158d9")}</strong>
       </button>
       </div>
 
@@ -71,7 +77,7 @@
   .dn-brand-card strong { display: block; margin: 0; color: #24272c; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
   .dn-brand-card:hover, .dn-brand-card:focus-visible { box-shadow: var(--dn-card-hover-shadow); }
   .dn-brand-hero__cta:hover { background: var(--dn-surface-hover); }
-  a:focus-visible { outline: 3px solid var(--dn-line-emphasis); outline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
 
   @media (min-width: 768px) and (max-width: 1199px) {
     .dn-brand-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -80,7 +86,7 @@
 
   @media (min-width: 992px) {
     .dn-brand-hero { padding: 0; }
-    .dn-brand-panel { position: relative; margin-top: calc(-1 * var(--dn-home-banner-overlap)); padding: 24px; border-radius: var(--dn-radius); }
+    .dn-brand-card { background: var(--dn-surface-raised); box-shadow: var(--dn-card-shadow); }
     .dn-brand-card__image { height: 72px; }
     .dn-brand-card__frame { width: var(--logo-desktop-width); }
     .dn-brand-card strong { font-size: var(--dn-text-lead); line-height: var(--dn-leading-body); }

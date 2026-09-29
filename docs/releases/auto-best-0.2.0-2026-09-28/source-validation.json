@@ -1,0 +1,21 @@
+{
+  "commit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+  "tree": "bbc9c91c017d7d2d562ad68cf1a0931c11289417",
+  "digest": "b98e011d45774f69b18a1ff69e9e42f58ad690d7cf1acbb7e56ea83303529c42",
+  "checkedAt": "2026-09-27T21:28:46.016Z",
+  "commands": [
+    {
+      "command": "C:\\Users\\radev\\AppData\\Local\\nvm\\v22.20.0\\node.exe C:\\Users\\radev\\AppData\\Local\\nvm\\v22.20.0\\node_modules\\npm\\bin\\npm-cli.js run validate",
+      "status": 0,
+      "log": "source-validate.log",
+      "logSha256": "403a03b5a49a54db6caade3ac22ef46392b818e63808c6993bca3041324eead0"
+    },
+    {
+      "command": "C:\\Users\\radev\\AppData\\Local\\nvm\\v22.20.0\\node.exe C:\\Users\\radev\\AppData\\Local\\nvm\\v22.20.0\\node_modules\\npm\\bin\\npm-cli.js run test:locales",
+      "status": 0,
+      "log": "source-locales.log",
+      "logSha256": "942b8af17408ce104aa3796081568a88281346537de9ee40c6f4f0dc0b112a57"
+    }
+  ],
+  "result": "passed"
+}

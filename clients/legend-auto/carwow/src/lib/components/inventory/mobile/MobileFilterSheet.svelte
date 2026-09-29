@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import { Car, Fuel, Search, X } from '@lucide/svelte';
 	import MobileFilterOptions from './MobileFilterOptions.svelte';
@@ -156,7 +159,7 @@
 	{#if logo}
 		<img
 			class="mobile-inventory-brand-logo"
-			src={resolve(logo)}
+			src={i18n.asset(resolve(logo))}
 			alt=""
 			width={size}
 			height={size}
@@ -170,10 +173,15 @@
 <div class="mobile-filter-sheet" data-mode={filterSheetMode}>
 	<header>
 		<div>
-			<span>{filterSheetEyebrow} · избор до „Покажи“</span>
+			<span>{i18n.text(filterSheetEyebrow)} {i18n.t('copy.ca6f0cbf0592')}</span>
 			<strong id="mobile-filter-title">{resultCountLabel}</strong>
 		</div>
-		<button type="button" aria-label="Затвори" data-mobile-drawer-initial-focus onclick={onClose}>
+		<button
+			type="button"
+			aria-label={i18n.t('copy.1ef1a425356f')}
+			data-mobile-drawer-initial-focus
+			onclick={onClose}
+		>
 			<X size={19} strokeWidth={2.5} />
 		</button>
 	</header>
@@ -190,10 +198,10 @@
 				onclick={() => openFilterSheet('brand')}
 			>
 				{#if brandSummary}
-					<span>Марка</span>
+					<span>{i18n.t('copy.b7fccee005ae')}</span>
 					<strong>{brandSummary}</strong>
 				{:else}
-					<strong>Марка</strong>
+					<strong>{i18n.t('copy.b7fccee005ae')}</strong>
 				{/if}
 			</button>
 			<button
@@ -202,10 +210,10 @@
 				onclick={() => openFilterSheet('model')}
 			>
 				{#if modelSummary}
-					<span>Модел</span>
+					<span>{i18n.t('copy.37858c8efede')}</span>
 					<strong>{modelSummary}</strong>
 				{:else}
-					<strong>Модел</strong>
+					<strong>{i18n.t('copy.37858c8efede')}</strong>
 				{/if}
 			</button>
 			<button
@@ -214,10 +222,10 @@
 				onclick={() => openFilterSheet('fuel')}
 			>
 				{#if fuelSummary}
-					<span>Гориво</span>
-					<strong>{fuelSummary}</strong>
+					<span>{i18n.t('copy.b52d6c364219')}</span>
+					<strong>{i18n.spec(fuelSummary)}</strong>
 				{:else}
-					<strong>Гориво</strong>
+					<strong>{i18n.t('copy.b52d6c364219')}</strong>
 				{/if}
 			</button>
 			<button
@@ -226,10 +234,10 @@
 				onclick={() => openFilterSheet('mileage')}
 			>
 				{#if mileageLabel}
-					<span>Пробег</span>
-					<strong>{mileageLabel}</strong>
+					<span>{i18n.t('copy.69cc064f0636')}</span>
+					<strong>{i18n.spec(mileageLabel)}</strong>
 				{:else}
-					<strong>Пробег</strong>
+					<strong>{i18n.t('copy.69cc064f0636')}</strong>
 				{/if}
 			</button>
 			<button
@@ -238,10 +246,10 @@
 				onclick={() => openFilterSheet('body')}
 			>
 				{#if bodySummary}
-					<span>Каросерия</span>
+					<span>{i18n.t('copy.45e7e8a38730')}</span>
 					<strong>{bodySummary}</strong>
 				{:else}
-					<strong>Каросерия</strong>
+					<strong>{i18n.t('copy.45e7e8a38730')}</strong>
 				{/if}
 			</button>
 			<button
@@ -250,10 +258,10 @@
 				onclick={() => openFilterSheet('sort')}
 			>
 				{#if sortOverviewLabel}
-					<span>Подредба</span>
-					<strong>{sortOverviewLabel}</strong>
+					<span>{i18n.t('copy.365e7bf87b30')}</span>
+					<strong>{i18n.text(sortOverviewLabel)}</strong>
 				{:else}
-					<strong>Подредба</strong>
+					<strong>{i18n.t('copy.365e7bf87b30')}</strong>
 				{/if}
 			</button>
 			<button
@@ -262,10 +270,10 @@
 				onclick={() => openFilterSheet('price')}
 			>
 				{#if priceLabel}
-					<span>Цена</span>
-					<strong>{priceLabel}</strong>
+					<span>{i18n.t('copy.be0e705ced81')}</span>
+					<strong>{i18n.spec(priceLabel)}</strong>
 				{:else}
-					<strong>Цена</strong>
+					<strong>{i18n.t('copy.be0e705ced81')}</strong>
 				{/if}
 			</button>
 			<button
@@ -274,34 +282,39 @@
 				onclick={() => openFilterSheet('transmission')}
 			>
 				{#if transmission}
-					<span>Скорости</span>
-					<strong>{transmission}</strong>
+					<span>{i18n.t('copy.4172507e5ff2')}</span>
+					<strong>{i18n.spec(transmission)}</strong>
 				{:else}
-					<strong>Скорости</strong>
+					<strong>{i18n.t('copy.4172507e5ff2')}</strong>
 				{/if}
 			</button>
 		{:else if filterSheetMode === 'search'}
 			<div class="mobile-filter-search mobile-filter-search--query">
 				<Search size={18} strokeWidth={2.35} aria-hidden="true" />
 				<input
+					{@attach i18n.validation}
 					id="mobile-inventory-query"
 					type="search"
 					value={query}
-					aria-label="Търсене"
+					aria-label={i18n.t('copy.bfc95eff30e5')}
 					autocomplete="off"
-					placeholder="Марка, модел, цена..."
+					placeholder={i18n.t('copy.248027f805a8')}
 					oninput={(event) => onQueryChange(inputValue(event))}
 				/>
 				{#if query}
-					<button type="button" aria-label="Изчисти търсенето" onclick={() => onQueryChange('')}>
+					<button
+						type="button"
+						aria-label={i18n.t('copy.b0e15a8398c0')}
+						onclick={() => onQueryChange('')}
+					>
 						<X size={17} strokeWidth={2.4} />
 					</button>
 				{/if}
 			</div>
-			<div class="mobile-search-options" aria-label="Бързо търсене">
+			<div class="mobile-search-options" aria-label={i18n.t('copy.1e49801e3aca')}>
 				<section class="mobile-search-options__group" aria-labelledby="mobile-search-brands">
 					<div class="mobile-search-options__heading">
-						<span id="mobile-search-brands">Популярни марки</span>
+						<span id="mobile-search-brands">{i18n.t('copy.914c5f5c34b5')}</span>
 						{#if selectedBrands.length}
 							<small>{brandSummary}</small>
 						{/if}
@@ -316,7 +329,7 @@
 								onclick={() => toggleBrand(option.value)}
 							>
 								{@render brandMark(option.value, 17)}
-								<span>{option.value}</span>
+								<span>{i18n.spec(option.value)}</span>
 								<small>{option.count}</small>
 							</button>
 						{/each}
@@ -325,9 +338,9 @@
 
 				<section class="mobile-search-options__group" aria-labelledby="mobile-search-price">
 					<div class="mobile-search-options__heading">
-						<span id="mobile-search-price">Бюджет</span>
+						<span id="mobile-search-price">{i18n.t('copy.84e960d40ad5')}</span>
 						{#if priceLabel}
-							<small>{priceLabel}</small>
+							<small>{i18n.spec(priceLabel)}</small>
 						{/if}
 					</div>
 					<div class="mobile-search-options__chips">
@@ -339,7 +352,7 @@
 								aria-pressed={isSelected}
 								onclick={() => setPrice(isSelected ? '' : option.value)}
 							>
-								<span>{option.label}</span>
+								<span>{i18n.spec(option.label)}</span>
 								<small>{priceOptionCount(option.value)}</small>
 							</button>
 						{/each}
@@ -348,9 +361,9 @@
 
 				<section class="mobile-search-options__group" aria-labelledby="mobile-search-fuel">
 					<div class="mobile-search-options__heading">
-						<span id="mobile-search-fuel">Гориво</span>
+						<span id="mobile-search-fuel">{i18n.t('copy.b52d6c364219')}</span>
 						{#if fuel}
-							<small>{fuel}</small>
+							<small>{i18n.spec(fuel)}</small>
 						{/if}
 					</div>
 					<div class="mobile-search-options__chips">
@@ -363,7 +376,7 @@
 								onclick={() => setFuel(isSelected ? '' : option.value)}
 							>
 								<Fuel size={16} strokeWidth={2.2} aria-hidden="true" />
-								<span>{option.value}</span>
+								<span>{i18n.spec(option.value)}</span>
 								<small>{option.count}</small>
 							</button>
 						{/each}
@@ -374,30 +387,31 @@
 			<div class="mobile-filter-search">
 				<Search size={18} strokeWidth={2.35} aria-hidden="true" />
 				<input
+					{@attach i18n.validation}
 					type="search"
 					value={selectorQuery}
-					placeholder="Търси марка"
+					placeholder={i18n.t('copy.549f3ada8761')}
 					autocomplete="off"
-					aria-label="Търси марка"
+					aria-label={i18n.t('copy.549f3ada8761')}
 					oninput={(event) => onSelectorQueryChange(inputValue(event))}
 				/>
 				{#if selectorQuery}
 					<button
 						type="button"
-						aria-label="Изчисти търсенето"
+						aria-label={i18n.t('copy.b0e15a8398c0')}
 						onclick={() => onSelectorQueryChange('')}
 					>
 						<X size={16} strokeWidth={2.5} />
 					</button>
 				{/if}
 			</div>
-			<div class="mobile-filter-options" aria-label="Марки">
+			<div class="mobile-filter-options" aria-label={i18n.t('copy.83755da980c3')}>
 				<button
 					type="button"
 					class={!selectedBrands.length ? 'is-active' : ''}
 					onclick={clearBrandsAndReturn}
 				>
-					<span>Всички марки</span>
+					<span>{i18n.t('copy.0adfd4e68815')}</span>
 					<small>{showAllBrandsCount()}</small>
 				</button>
 				{#each filteredBrandOptions as option (option.value)}
@@ -412,12 +426,12 @@
 						<span class="mobile-filter-options__brand">
 							<span class="mobile-filter-options__brand-mark" aria-hidden="true">
 								{#if logo}
-									<img src={resolve(logo)} alt="" loading="lazy" />
+									<img src={i18n.asset(resolve(logo))} alt="" loading="lazy" />
 								{:else}
 									<span>{brandInitials(option.value)}</span>
 								{/if}
 							</span>
-							<span>{option.value}</span>
+							<span>{i18n.spec(option.value)}</span>
 						</span>
 						{#if isSelected}
 							<span class="mobile-filter-options__selected-mark" aria-hidden="true"></span>
@@ -427,37 +441,38 @@
 					</button>
 				{/each}
 				{#if !filteredBrandOptions.length}
-					<p class="mobile-filter-options__empty">Няма марки по това търсене.</p>
+					<p class="mobile-filter-options__empty">{i18n.t('copy.150b5d69b380')}</p>
 				{/if}
 			</div>
 		{:else if filterSheetMode === 'model'}
 			<div class="mobile-filter-search">
 				<Search size={18} strokeWidth={2.35} aria-hidden="true" />
 				<input
+					{@attach i18n.validation}
 					type="search"
 					value={selectorQuery}
-					placeholder="Търси модел"
+					placeholder={i18n.t('copy.78fbb7843147')}
 					autocomplete="off"
-					aria-label="Търси модел"
+					aria-label={i18n.t('copy.78fbb7843147')}
 					oninput={(event) => onSelectorQueryChange(inputValue(event))}
 				/>
 				{#if selectorQuery}
 					<button
 						type="button"
-						aria-label="Изчисти търсенето"
+						aria-label={i18n.t('copy.b0e15a8398c0')}
 						onclick={() => onSelectorQueryChange('')}
 					>
 						<X size={16} strokeWidth={2.5} />
 					</button>
 				{/if}
 			</div>
-			<div class="mobile-filter-options" aria-label="Модели">
+			<div class="mobile-filter-options" aria-label={i18n.t('copy.78a19a5d2b59')}>
 				<button
 					type="button"
 					class={!selectedModels.length ? 'is-active' : ''}
 					onclick={clearModelsAndReturn}
 				>
-					<span>Всички модели</span>
+					<span>{i18n.t('copy.6e6e565abe87')}</span>
 					<small>{showAllModelsCount()}</small>
 				</button>
 				{#each filteredModelOptions as option (option.value)}
@@ -477,13 +492,13 @@
 					</button>
 				{/each}
 				{#if !filteredModelOptions.length}
-					<p class="mobile-filter-options__empty">Няма модели по това търсене.</p>
+					<p class="mobile-filter-options__empty">{i18n.t('copy.04f070f200b8')}</p>
 				{/if}
 			</div>
 		{:else if filterSheetMode === 'fuel'}
 			<MobileFilterOptions
-				ariaLabel="Гориво"
-				allLabel="Всички горива"
+				ariaLabel={i18n.t('copy.b52d6c364219')}
+				allLabel={i18n.t('copy.fe2da9280eb0')}
 				allCount={vehiclesCount}
 				allActive={!fuel}
 				options={fuelOptions}
@@ -493,8 +508,8 @@
 			/>
 		{:else if filterSheetMode === 'mileage'}
 			<MobileFilterOptions
-				ariaLabel="Пробег"
-				allLabel="Всички пробези"
+				ariaLabel={i18n.t('copy.69cc064f0636')}
+				allLabel={i18n.t('copy.2ced06b31e8b')}
 				allCount={vehiclesCount}
 				allActive={!mileage}
 				options={mileageOptions}
@@ -505,8 +520,8 @@
 			/>
 		{:else if filterSheetMode === 'body'}
 			<MobileFilterOptions
-				ariaLabel="Каросерия"
-				allLabel="Всички каросерии"
+				ariaLabel={i18n.t('copy.45e7e8a38730')}
+				allLabel={i18n.t('copy.e551fe4e16ed')}
 				allCount={vehiclesCount}
 				allActive={!selectedBodies.length}
 				options={bodyOptions}
@@ -517,8 +532,8 @@
 			/>
 		{:else if filterSheetMode === 'price'}
 			<MobileFilterOptions
-				ariaLabel="Цена"
-				allLabel="Всички цени"
+				ariaLabel={i18n.t('copy.be0e705ced81')}
+				allLabel={i18n.t('copy.6d9c63297fb6')}
 				allCount={priceOptionCount('')}
 				allActive={!price}
 				options={priceOptions}
@@ -529,8 +544,8 @@
 			/>
 		{:else if filterSheetMode === 'transmission'}
 			<MobileFilterOptions
-				ariaLabel="Скорости"
-				allLabel="Всички скорости"
+				ariaLabel={i18n.t('copy.4172507e5ff2')}
+				allLabel={i18n.t('copy.524e70cdee14')}
 				allCount={vehiclesCount}
 				allActive={!transmission}
 				options={transmissions.map((item) => ({ value: item }))}
@@ -540,14 +555,14 @@
 				onSelect={selectTransmissionAndReturn}
 			/>
 		{:else if filterSheetMode === 'sort'}
-			<div class="mobile-filter-options" aria-label="Подредба">
+			<div class="mobile-filter-options" aria-label={i18n.t('copy.365e7bf87b30')}>
 				{#each sortOptions as option (option.value)}
 					<button
 						type="button"
 						class={sort === option.value ? 'is-active' : ''}
 						onclick={() => selectSortAndReturn(option.value)}
 					>
-						<span>{option.label}</span>
+						<span>{i18n.spec(option.label)}</span>
 					</button>
 				{/each}
 			</div>
@@ -555,9 +570,9 @@
 	</div>
 
 	<div class="mobile-filter-sheet__actions">
-		<button type="button" onclick={clearCurrentSheet}>{filterSheetClearLabel}</button>
+		<button type="button" onclick={clearCurrentSheet}>{i18n.text(filterSheetClearLabel)}</button>
 		<button class="is-primary" type="button" onclick={completeFilterSheet}>
-			{filterSheetActionLabel}
+			{i18n.text(filterSheetActionLabel)}
 		</button>
 	</div>
 </div>

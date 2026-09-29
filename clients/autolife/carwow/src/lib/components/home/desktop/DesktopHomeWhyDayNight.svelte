@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { daynightSite } from '$lib/data/daynight-site';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
 	import {
@@ -19,25 +20,25 @@
 	const campaigns = [
 		{
 			id: 'collection',
-			title: 'Вижте колекцията',
-			copy: 'Разгледайте селекцията и попитайте за наличност.',
-			cta: 'Вижте автомобилите',
+			title: i18n.t('copy.e9ae13f96968'),
+			copy: i18n.t('copy.d4a82c45f54b'),
+			cta: i18n.t('copy.3e8dfac47711'),
 			href: '/inventory',
 			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp'
 		},
 		{
 			id: 'viewing',
-			title: 'Запазете оглед',
-			copy: 'Изберете автомобил и уговорете удобно посещение.',
-			cta: 'Запазете оглед',
+			title: i18n.t('copy.26f81b3e6be0'),
+			copy: i18n.t('copy.801a8dafacd6'),
+			cta: i18n.t('copy.26f81b3e6be0'),
 			href: '/contact',
 			image: '/assets/images/home-promos/phone-portrait-generated-v7.webp'
 		},
 		{
 			id: 'financing',
-			title: 'Лизинг и замяна',
-			copy: 'Попитайте за индивидуални условия за избрания автомобил.',
-			cta: 'Поискайте условия',
+			title: i18n.t('copy.f10b5c4141c6'),
+			copy: i18n.t('copy.f7b510e5c8e8'),
+			cta: i18n.t('copy.bfb86c80c190'),
 			href: '/financing',
 			image: '/assets/images/home-promos/leasing-calculator-cutout-v7.webp'
 		}
@@ -56,25 +57,25 @@
 		{
 			id: 'stock',
 			value: String(daynightVehicles.length),
-			label: 'Налични автомобила',
+			label: i18n.t('copy.3cdc29bcbb1c'),
 			hasDivider: true
 		},
 		{
 			id: 'brands',
 			value: String(new Set(daynightVehicles.map((vehicle) => vehicle.brand)).size),
-			label: 'марки в наличност',
+			label: i18n.t('copy.8bf93fc79382'),
 			hasDivider: true
 		},
 		{
 			id: 'location',
 			value: '1',
-			label: `локация в ${daynightSite.city}`,
+			label: i18n.t('pattern.eb1b575ffa24', { v0: i18n.dealer('city') }),
 			hasDivider: true
 		},
 		{
 			id: 'contact',
 			value: '4',
-			label: 'директни канала за контакт'
+			label: i18n.t('copy.2a471f835c7f')
 		}
 	] as const;
 </script>
@@ -82,14 +83,14 @@
 <section class="daynight-home-section daynight-home-section--why">
 	<div class="daynight-home-container">
 		{#if variant === 'campaign-grid'}
-			<div class="daynight-home-campaign-grid" aria-label="Възможности за покупка и контакт">
+			<div class="daynight-home-campaign-grid" aria-label={i18n.t('copy.4a941d921adf')}>
 				{#each campaigns as campaign (campaign.id)}
 					<article
 						class={`daynight-home-campaign-card daynight-home-campaign-card--${campaign.id}`}
 					>
 						<div class="daynight-home-campaign-card__media" aria-hidden="true">
 							<img
-								src={desktopOnlyImagePlaceholder}
+								src={i18n.asset(desktopOnlyImagePlaceholder)}
 								srcset={desktopOnlySrcset(campaign.image, 1536)}
 								sizes={desktopOnlySizes('min(420px, calc((100vw - 80px) / 3))')}
 								width="1536"
@@ -101,10 +102,10 @@
 						</div>
 
 						<div class="daynight-home-campaign-card__content">
-							<h2>{campaign.title}</h2>
-							<p>{campaign.copy}</p>
+							<h2>{i18n.text(campaign.title)}</h2>
+							<p>{i18n.text(campaign.copy)}</p>
 							<DesktopBrowseLink
-								href={resolve(campaign.href)}
+								href={i18n.href(resolve(campaign.href))}
 								label={campaign.cta}
 								tone={campaign.id === 'collection' ? 'light' : 'dark'}
 							/>
@@ -116,7 +117,7 @@
 			<div class="daynight-home-why">
 				<div class="daynight-home-why__media" aria-hidden="true">
 					<img
-						src={desktopOnlyImagePlaceholder}
+						src={i18n.asset(desktopOnlyImagePlaceholder)}
 						srcset={desktopOnlySrcset(
 							'/assets/images/home-promos/kristian-financing-campaign-v1.webp',
 							1800
@@ -129,13 +130,13 @@
 				</div>
 
 				<div class="daynight-home-why__content">
-					<h2 class="daynight-home-why__title">Лизинг и замяна</h2>
+					<h2 class="daynight-home-why__title">{i18n.t('copy.f10b5c4141c6')}</h2>
 					<p class="daynight-home-why__copy">
-						Попитайте за индивидуални условия според избрания автомобил.
+						{i18n.t('copy.69519a191cfe')}
 					</p>
 
-					<a href={resolve('/financing')} class="daynight-home-why__cta">
-						<span>Поискайте условия</span>
+					<a href={i18n.href(resolve('/financing'))} class="daynight-home-why__cta">
+						<span>{i18n.t('copy.bfb86c80c190')}</span>
 						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
 							<path
 								d="M5 12h14M13 6l6 6-6 6"
@@ -167,7 +168,7 @@
 									>{metric.suffix ?? ''}
 								</div>
 							</div>
-							<p class="daynight-home-metric__label">{metric.label}</p>
+							<p class="daynight-home-metric__label">{i18n.text(metric.label)}</p>
 						</div>
 					</div>
 				{/each}

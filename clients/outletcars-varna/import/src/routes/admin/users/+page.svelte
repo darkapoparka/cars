@@ -80,7 +80,7 @@
 			<Card.Content class="p-0">
 				<div class="max-h-[calc(100svh-22rem)] min-h-[28rem] overflow-auto">
 					<Table.Root class="min-w-[64rem]">
-						<Table.Header class="bg-card sticky top-0 z-10 shadow-[0_1px_0_var(--border)]">
+						<Table.Header class="sticky top-0 z-10 bg-card shadow-[0_1px_0_var(--border)]">
 							<Table.Row>
 								<Table.Head>User</Table.Head>
 								<Table.Head>Role</Table.Head>
@@ -95,8 +95,8 @@
 									<Table.Cell>
 										<div class="min-w-64">
 											<p class="m-0 font-medium">{user.name}</p>
-											<p class="text-muted-foreground m-0 text-xs">{user.email}</p>
-											<p class="text-muted-foreground m-0 text-xs">{user.phone}</p>
+											<p class="m-0 text-xs text-muted-foreground">{user.email}</p>
+											<p class="m-0 text-xs text-muted-foreground">{user.phone}</p>
 										</div>
 									</Table.Cell>
 									<Table.Cell>
@@ -107,7 +107,7 @@
 											{user.statusLabel}
 										</Badge>
 									</Table.Cell>
-									<Table.Cell class="text-muted-foreground hidden max-w-72 text-xs lg:table-cell">
+									<Table.Cell class="hidden max-w-72 text-xs text-muted-foreground lg:table-cell">
 										{user.context}
 									</Table.Cell>
 									<Table.Cell class="min-w-[28rem]">
@@ -121,7 +121,7 @@
 												</div>
 												<select
 													name="status"
-													class="border-input bg-background focus-visible:ring-ring h-10 rounded-lg border px-3 text-sm capitalize outline-none focus-visible:ring-3"
+													class="h-10 rounded-lg border border-input bg-background px-3 text-sm capitalize outline-none focus-visible:ring-3 focus-visible:ring-ring"
 												>
 													{#each statuses as statusName (statusName)}
 														<option value={statusName} selected={user.status === statusName}>
@@ -146,7 +146,7 @@
 					</Table.Root>
 				</div>
 			</Card.Content>
-			<Card.Footer class="text-muted-foreground justify-between border-t text-xs">
+			<Card.Footer class="justify-between border-t text-xs text-muted-foreground">
 				<span>{formatNumber(data.users.length)} records shown</span>
 				<span>Account edits stay in the table row</span>
 			</Card.Footer>

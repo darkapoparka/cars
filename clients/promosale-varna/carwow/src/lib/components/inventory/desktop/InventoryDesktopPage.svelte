@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import DesktopHomeTrailingChrome from '$lib/components/home/desktop/DesktopHomeTrailingChrome.svelte';
 	import SiteChrome from '$lib/components/layout/SiteChrome.svelte';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
@@ -64,7 +67,7 @@
 		<div class="inventory-hero" data-daynight-inventory-layout="grid">
 			<DesktopYellowRouteHero
 				headingId="daynight-inventory-title"
-				title="Налични автомобили"
+				title={i18n.t('copy.3bce9c370af2')}
 				panel="light"
 				deckWidth="full"
 				children={inventoryControls}

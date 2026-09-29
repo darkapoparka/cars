@@ -94,7 +94,7 @@
 			<Card.Content class="p-0">
 				<div class="max-h-[calc(100svh-22rem)] min-h-[28rem] overflow-auto">
 					<Table.Root class="min-w-[76rem]">
-						<Table.Header class="bg-card sticky top-0 z-10 shadow-[0_1px_0_var(--border)]">
+						<Table.Header class="sticky top-0 z-10 bg-card shadow-[0_1px_0_var(--border)]">
 							<Table.Row>
 								<Table.Head>Vehicle</Table.Head>
 								<Table.Head>Status</Table.Head>
@@ -112,13 +112,13 @@
 									<Table.Cell>
 										<div class="flex min-w-72 items-center gap-3">
 											<img
-												class="ring-border size-12 rounded-md object-cover ring-1"
+												class="size-12 rounded-md object-cover ring-1 ring-border"
 												src={vehicle.image}
 												alt={`${vehicle.title} thumbnail`}
 											/>
 											<span class="min-w-0">
 												<span class="block truncate font-medium">{vehicle.title}</span>
-												<span class="text-muted-foreground block truncate text-xs">
+												<span class="block truncate text-xs text-muted-foreground">
 													{formatVehicleMeta(vehicle)}
 												</span>
 											</span>
@@ -137,14 +137,14 @@
 													{formatStatus(vehicle.completeness.level)}
 												</span>
 											</div>
-											<div class="bg-muted h-2 overflow-hidden rounded-full">
+											<div class="h-2 overflow-hidden rounded-full bg-muted">
 												<div
-													class="bg-primary h-full rounded-full"
+													class="h-full rounded-full bg-primary"
 													style={`width: ${vehicle.completeness.score}%`}
 												></div>
 											</div>
 											{#if vehicle.completeness.missing.length}
-												<p class="text-muted-foreground line-clamp-1 text-xs">
+												<p class="line-clamp-1 text-xs text-muted-foreground">
 													Add {vehicle.completeness.missing.slice(0, 3).join(', ')}
 												</p>
 											{/if}
@@ -166,7 +166,7 @@
 									<Table.Cell class="hidden text-right font-medium md:table-cell">
 										{vehicle.priceLabel}
 									</Table.Cell>
-									<Table.Cell class="text-muted-foreground hidden text-right text-xs lg:table-cell">
+									<Table.Cell class="hidden text-right text-xs text-muted-foreground lg:table-cell">
 										{formatDate(vehicle.updatedAt)}
 									</Table.Cell>
 									<Table.Cell class="text-right">
@@ -236,7 +236,7 @@
 					</Table.Root>
 				</div>
 			</Card.Content>
-			<Card.Footer class="text-muted-foreground justify-between border-t text-xs">
+			<Card.Footer class="justify-between border-t text-xs text-muted-foreground">
 				<span>{formatNumber(data.inventory.length)} records shown</span>
 				<span>Scroll table for the full CMS inventory</span>
 			</Card.Footer>

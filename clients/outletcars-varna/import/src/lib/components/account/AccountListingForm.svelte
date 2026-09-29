@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { FileText, ImagePlus, Save, Send } from '@lucide/svelte';
+	import FileText from '@lucide/svelte/icons/file-text';
+	import ImagePlus from '@lucide/svelte/icons/image-plus';
+	import Save from '@lucide/svelte/icons/save';
+	import Send from '@lucide/svelte/icons/send';
 	import type {
 		AuxeroAccountListingFormData,
 		AuxeroListingFormDropdownField

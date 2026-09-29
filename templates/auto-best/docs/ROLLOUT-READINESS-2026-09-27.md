@@ -1,4 +1,4 @@
-# Auto Best readiness and dealer rollout — 27 September 2026
+# Auto Best readiness and dealer rollout ΓÇö 27 September 2026
 
 ## Scope
 
@@ -22,10 +22,10 @@ All 25 local dealer manifests still reference Auto Best `989ec3a1d80a8f19150d18e
 ## Rollout work
 
 1. Complete exact-source release QA, including EN/BG localization acceptance, mounted behavior and matching hosted evidence required by TEMPLATE-PROMOTION.md.
-2. Reconcile each dealer’s publishing head and local changes. Preserve existing identity, stock, contacts, permitted assets, unique fixes, all three designs and the admin/switcher links.
-3. Prepare reviewed native dealer overlays and locale configuration. Existing refresh-client.mjs migrates the manifest’s whole offered trio, so do not run it as though it were an Auto Best-only copier. Review its exact proposal before installing any candidate; preserve the other designs.
+2. Reconcile each dealerΓÇÖs publishing head and local changes. Preserve existing identity, stock, contacts, permitted assets, unique fixes, all three designs and the admin/switcher links.
+3. Prepare reviewed native dealer overlays and locale configuration. Existing refresh-client.mjs migrates the manifestΓÇÖs whole offered trio, so do not run it as though it were an Auto Best-only copier. Review its exact proposal before installing any candidate; preserve the other designs.
 4. Start with one Bulgarian and one English dealer candidate. Verify 320/390/1440px, locale routes, logo variants, inventory/detail/contact, filtering, forms, switcher and assets.
-5. Adopt reviewed candidates sequentially, using existing packaging/export tools for Cars-owned dealers and Al Reef’s independent repository for that dealer. Publishing scope is awaiting the owner’s answer in this chat.
+5. Adopt reviewed candidates sequentially, using existing packaging/export tools for Cars-owned dealers and Al ReefΓÇÖs independent repository for that dealer. Publishing scope is awaiting the ownerΓÇÖs answer in this chat.
 
 ## Registered fleet
 
@@ -56,3 +56,11 @@ All 25 local dealer manifests still reference Auto Best `989ec3a1d80a8f19150d18e
 | promosale-varna | cars-canonical | 989ec3a1d80a | No |
 | texas-drive-auto | cars-canonical | 989ec3a1d80a | No |
 | the-dealers-point | cars-canonical | 989ec3a1d80a | No |
+
+## Release candidate 0.2.0
+
+- Exact Cars parent: 4657de57df15859ee3f5da6c86d1b7cbacc9d486
+- Application source is unchanged from the reviewed 0.2.0 candidate; this documentation-only commit restores an ordinary Git push event for the production template binding.
+- Exact-source checks: locale suite 25/25, architecture/CSS/token/typography/assets/domain validation, production build, and strict Svelte diagnostics with zero errors and zero warnings.
+- Browser acceptance: EN/BG at 320, 390, 768, and 1440 px; menu-owned locale preferences, query/hash retention, no-JavaScript flow, storage-disabled flow, request isolation, and security write blocking.
+- Dealer adoption remains guarded and per-repository; dealer profile, inventory, logo contracts, and custom assets are regenerated or preserved by the existing promotion workflows.

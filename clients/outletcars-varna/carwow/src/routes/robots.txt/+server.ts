@@ -1,17 +1,18 @@
 import type { RequestHandler } from './$types';
+import { base } from '$app/paths';
 
 export const GET: RequestHandler = ({ url }) => {
 	const body = `User-agent: *
-Disallow: /admin
-Disallow: /admin/
-Disallow: /dashboard
-Disallow: /dashboard/
-Disallow: /home2
-Disallow: /home3
-Disallow: /presentation/home2
-Disallow: /presentation/home3
+Disallow: ${base}/admin
+Disallow: ${base}/admin/
+Disallow: ${base}/dashboard
+Disallow: ${base}/dashboard/
+Disallow: ${base}/home2
+Disallow: ${base}/home3
+Disallow: ${base}/presentation/home2
+Disallow: ${base}/presentation/home3
 
-Sitemap: ${url.origin}/sitemap.xml
+Sitemap: ${url.origin}${base}/sitemap.xml
 `;
 
 	return new Response(body, {

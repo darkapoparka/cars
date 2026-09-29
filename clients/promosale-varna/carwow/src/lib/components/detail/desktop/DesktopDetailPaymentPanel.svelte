@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 
@@ -10,9 +13,9 @@
 	let isVatDropdownOpen = $state(false);
 
 	const vatRows = $derived([
-		{ id: 'price', label: 'Цена:', value: vehicle.priceBgn },
-		{ id: 'tax', label: 'Данък върху МПС:', value: 'уточняват се' },
-		{ id: 'total', label: 'Цена с данък:', value: vehicle.priceBgn }
+		{ id: 'price', label: i18n.t('copy.bbae2b0a216e'), value: i18n.stock(vehicle.priceBgn) },
+		{ id: 'tax', label: i18n.t('copy.76624ccd4357'), value: i18n.text('уточняват се') },
+		{ id: 'total', label: i18n.t('copy.b57f86f937c9'), value: i18n.stock(vehicle.priceBgn) }
 	]);
 
 	function selectPaymentMode(mode: PaymentMode) {
@@ -44,7 +47,7 @@
 						onclick={() => selectPaymentMode('cash')}
 						onkeydown={(event) => handlePaymentKeydown(event, 'cash')}
 					>
-						В брой
+						{i18n.t('copy.5f8a8d446cf5')}
 					</button>
 				</li>
 				<li class={activePaymentMode === 'finance' ? 'active' : undefined}>
@@ -54,7 +57,7 @@
 						onclick={() => selectPaymentMode('finance')}
 						onkeydown={(event) => handlePaymentKeydown(event, 'finance')}
 					>
-						Финансиране
+						{i18n.t('copy.6e55eeb12cce')}
 					</button>
 				</li>
 			</ul>
@@ -62,37 +65,39 @@
 
 		<div class="content-tab visible">
 			<div class={['content-inner', activePaymentMode === 'cash' && 'active']}>
-				<p class="h5 mb-4">Цена:</p>
+				<p class="h5 mb-4">{i18n.t('copy.bbae2b0a216e')}</p>
 				<p class="pdp-payment-price mb-4">
 					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
 				</p>
-				<p class="text-secondary mb-16">Цена без данъци и такси</p>
+				<p class="text-secondary mb-16">{i18n.t('copy.8ea4d30f38f1')}</p>
 
 				<p class="flex items-center gap-8">
 					<img
-						src="/assets/icons/Info.svg"
+						src={i18n.asset('/assets/icons/Info.svg')}
 						alt=""
 						aria-hidden="true"
 						data-daynight-img="1"
 						decoding="async"
 						loading="eager"
 					/>
-					<a href={resolve('/terms')} class="text-underline text-highlight">Автомобил по ДДС</a>
+					<a href={i18n.href(resolve('/terms'))} class="text-underline text-highlight"
+						>{i18n.t('copy.879dd3a420c9')}</a
+					>
 				</p>
 			</div>
 
 			<div class={['content-inner', activePaymentMode === 'finance' && 'active']}>
-				<p class="h5 mb-4">Цена:</p>
+				<p class="h5 mb-4">{i18n.t('copy.bbae2b0a216e')}</p>
 				<p class="pdp-payment-price pdp-payment-price--stacked mb-4">
 					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
-					<span class="pdp-payment-price__monthly">{vehicle.monthly}</span>
+					<span class="pdp-payment-price__monthly">{i18n.spec(vehicle.monthly)}</span>
 				</p>
-				<p class="text-secondary mb-4">Вноска без данъци и такси</p>
-				<p class="text-secondary mb-16">Първоначална вноска · 72 мес. · 7.89% ГПР</p>
+				<p class="text-secondary mb-4">{i18n.t('copy.ec632c0e2888')}</p>
+				<p class="text-secondary mb-16">{i18n.t('copy.8f14e90acd70')}</p>
 
 				<div class={['core-dropdown flex items-center gap-8', isVatDropdownOpen && 'active']}>
 					<img
-						src="/assets/icons/Info.svg"
+						src={i18n.asset('/assets/icons/Info.svg')}
 						alt=""
 						aria-hidden="true"
 						data-daynight-img="1"
@@ -107,7 +112,7 @@
 						aria-controls="coreDropdownMenu"
 						onclick={toggleVatDropdown}
 					>
-						Автомобил по ДДС
+						{i18n.t('copy.879dd3a420c9')}
 					</button>
 					<div class="core-dropdown__menu" id="coreDropdownMenu">
 						<ul class="core-dropdown__list">

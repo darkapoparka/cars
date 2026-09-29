@@ -1,0 +1,23 @@
+{
+  "mode": "template",
+  "id": "drive24-template",
+  "name": "Drive24",
+  "shortName": "Drive24",
+  "logo": {"light": "/icon.svg", "dark": "/icon.svg", "icon": "/icon.svg"},
+  "defaultLocale": "en",
+  "enabledLocales": ["en", "bg"],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "",
+  "address": "",
+  "phoneDisplay": "",
+  "phoneE164": "",
+  "email": "",
+  "mapsUrl": "",
+  "website": "",
+  "whatsappUrl": "",
+  "services": [],
+  "observedAt": "",
+  "inventoryNotice": "Demonstration inventory. Confirm vehicle information, price and availability with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

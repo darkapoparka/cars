@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { onMount as onClientMount } from 'svelte';
 	let interactive = $state(false);
 	onClientMount(() => {
@@ -38,12 +41,17 @@
 	aria-describedby={errorMessage ? `${titleId}-error` : undefined}
 >
 	<header class="lead-sheet__header">
-		<button class="lead-sheet__close" type="button" onclick={onClose} aria-label="Затвори"
-			><X size={21} strokeWidth={2.25} /></button
+		<button
+			class="lead-sheet__close"
+			type="button"
+			onclick={onClose}
+			aria-label={i18n.t('copy.1ef1a425356f')}><X size={21} strokeWidth={2.25} /></button
 		>
 		<div>
-			<span>Етап {step} от 2</span>
-			<h2 id={titleId} aria-live="polite">{step === 1 ? 'Автомобил' : 'Контакт'}</h2>
+			<span>{i18n.t('copy.84d5f0c90613')} {i18n.text(step)} {i18n.t('copy.2811c5b4b790')}</span>
+			<h2 id={titleId} aria-live="polite">
+				{step === 1 ? i18n.t('copy.e549eadf1b38') : i18n.t('copy.5bc9a8a2e214')}
+			</h2>
 		</div>
 		<span class="lead-sheet__spacer" aria-hidden="true"></span>
 	</header>
@@ -53,7 +61,7 @@
 	<div class="lead-sheet__body">
 		<fieldset disabled={busy || !interactive}>{@render children()}</fieldset>
 		{#if errorMessage}<p class="lead-error" id={`${titleId}-error`} role="alert">
-				{errorMessage}
+				{i18n.text(errorMessage)}
 			</p>{/if}
 	</div>
 	<footer class="lead-sheet__footer">
@@ -61,10 +69,15 @@
 				class="lead-back"
 				type="button"
 				disabled={busy || !interactive}
-				onclick={onBack}><ArrowLeft size={18} strokeWidth={2.4} /> Назад</button
+				onclick={onBack}
+				><ArrowLeft size={18} strokeWidth={2.4} /> {i18n.t('copy.1a9fb1f3cf8e')}</button
 			>{/if}
 		<button class="lead-primary" type="submit" disabled={busy || !interactive}
-			>{step === 1 ? 'Продължи' : busy ? 'Изпращаме…' : submitLabel}</button
+			>{step === 1
+				? i18n.t('copy.ffe5cca7d0b3')
+				: busy
+					? i18n.t('copy.393a587634a0')
+					: submitLabel}</button
 		>
 	</footer>
 </form>

@@ -1,22 +1,33 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { ChevronRight, PhoneCall } from '@lucide/svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileLeadImageBanner from './MobileLeadImageBanner.svelte';
 
 	let {
 		phoneHref,
-		title = 'Искаш помощ?',
-		copy = 'Говори директно с екипа ни.',
+		title = i18n.t('copy.a8486dcea523'),
+		copy = i18n.t('copy.b75c88742595'),
 		image
 	}: { phoneHref: string; title?: string; copy?: string; image?: string } = $props();
 </script>
 
 {#if image}
-	<aside aria-label={`Контакт с ${daynightSite.shortName}`}>
-		<MobileLeadImageBanner {title} {image} action="Обади се" href={phoneHref} />
+	<aside aria-label={i18n.t('pattern.5bc6bd908ea0', { v0: daynightSite.shortName })}>
+		<MobileLeadImageBanner
+			{title}
+			{image}
+			action={i18n.t('copy.d40e5119596a')}
+			href={i18n.href(phoneHref)}
+		/>
 	</aside>
 {:else}
-	<aside class="lead-contact" aria-label={`Контакт с ${daynightSite.shortName}`}>
+	<aside
+		class="lead-contact"
+		aria-label={i18n.t('pattern.5bc6bd908ea0', { v0: daynightSite.shortName })}
+	>
 		<span class="lead-contact__icon" aria-hidden="true">
 			<PhoneCall size={19} strokeWidth={2.2} />
 		</span>
@@ -24,7 +35,9 @@
 			<strong>{title}</strong>
 			<small>{copy}</small>
 		</span>
-		<a href={phoneHref}>Обади се <ChevronRight size={15} strokeWidth={2.5} /></a>
+		<a href={i18n.href(phoneHref)}
+			>{i18n.t('copy.d40e5119596a')} <ChevronRight size={15} strokeWidth={2.5} /></a
+		>
 	</aside>
 {/if}
 

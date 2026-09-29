@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import SiteChromeCtaButtons from './SiteChromeCtaButtons.svelte';
@@ -38,20 +41,20 @@
 				<div class="ml-auto flex shrink-0 items-center gap-3">
 					<div class="flex shrink-0 items-center gap-2">
 						<a
-							href={phoneHref}
+							href={i18n.href(phoneHref)}
 							class={homePhoneClasses}
 							data-daynight-header-tool="phone"
-							aria-label={`Обади се на ${daynightSite.phoneLabel}`}
-							title={daynightSite.phoneCta}
+							aria-label={i18n.t('pattern.ab13c281dac3', { v0: daynightSite.phoneLabel })}
+							title={i18n.text(daynightSite.phoneCta)}
 						>
 							<SiteChromeIcon name="phone" />
 						</a>
 						<a
-							href={resolve('/contact')}
+							href={i18n.href(resolve('/contact'))}
 							class={headerToolClasses}
 							data-daynight-header-tool="contact"
-							aria-label={daynightSite.accountCta}
-							title={daynightSite.accountCta}
+							aria-label={i18n.text(daynightSite.accountCta)}
+							title={i18n.text(daynightSite.accountCta)}
 						>
 							<SiteChromeIcon name="account" />
 						</a>
@@ -60,8 +63,8 @@
 							class={[headerToolClasses, searchOpen && 'border-[#b9cce5] bg-white text-sa-blue']}
 							id="searchToggle"
 							data-daynight-header-tool="search"
-							aria-label="Отвори търсене"
-							title="Отвори търсене"
+							aria-label={i18n.t('copy.0cf61c7bf465')}
+							title={i18n.t('copy.0cf61c7bf465')}
 							aria-expanded={searchOpen}
 							aria-controls="searchForm"
 							onclick={(event) => {
@@ -72,11 +75,11 @@
 							<SiteChromeIcon name="search" />
 						</button>
 						<a
-							href={resolve('/compare')}
+							href={i18n.href(resolve('/compare'))}
 							class={headerToolClasses}
 							data-daynight-header-tool="compare"
-							aria-label="Сравни"
-							title="Сравни"
+							aria-label={i18n.t('copy.52f6ad9e2fd8')}
+							title={i18n.t('copy.52f6ad9e2fd8')}
 						>
 							<SiteChromeIcon name="compare" />
 							{#if compareBadge > 0}<span class={badgeClasses} aria-hidden="true"
@@ -84,11 +87,11 @@
 								>{/if}
 						</a>
 						<a
-							href={resolve('/favorites')}
+							href={i18n.href(resolve('/favorites'))}
 							class={headerToolClasses}
 							data-daynight-header-tool="favorites"
-							aria-label="Запазени автомобили"
-							title="Запазени автомобили"
+							aria-label={i18n.t('copy.2ff1cef08851')}
+							title={i18n.t('copy.2ff1cef08851')}
 						>
 							<SiteChromeIcon name="heart" />
 							{#if favoritesBadge > 0}<span class={badgeClasses} aria-hidden="true"

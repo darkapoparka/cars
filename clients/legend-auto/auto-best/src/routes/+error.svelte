@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
   import { brand } from '$config/brand';
@@ -7,22 +10,22 @@
 </script>
 
 <svelte:head>
-  <title>{isNotFound ? 'Страницата не е намерена' : 'Възникна грешка'} — {brand.name}</title>
+  <title>{isNotFound ? i18n.t("m_c7af89550e87") : i18n.t("m_01d33de5831d")} — {brand.name}</title>
   <meta name="robots" content="noindex" />
 </svelte:head>
 
 <section class="dn-error" aria-labelledby="error-title">
   <div class="container">
     <p class="dn-kicker">{page.status}</p>
-    <h1 id="error-title">{isNotFound ? 'Страницата не е намерена' : 'Възникна неочаквана грешка'}</h1>
+    <h1 id="error-title">{isNotFound ? i18n.t("m_c7af89550e87") : i18n.t("m_d338744343a0")}</h1>
     <p>
       {isNotFound
-        ? 'Адресът може да е променен или страницата вече да не е част от сайта.'
-        : 'Опитайте отново или се свържете с екипа за съдействие.'}
+        ? i18n.t("m_466880968a72")
+        : i18n.t("m_5cb8caa2c3fe")}
     </p>
     <div class="dn-error__actions">
-      <a class="dn-error__primary" href={resolve('/listing-grid')}>Разгледайте автомобилите</a>
-      <a class="dn-error__secondary" href={resolve('/contact')}>Свържете се с нас</a>
+      <a class="dn-error__primary" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_c2eca604aa18")}</a>
+      <a class="dn-error__secondary" href={i18n.href(resolve('/contact'))}>{i18n.t("m_d7def4b82f7c")}</a>
     </div>
   </div>
 </section>

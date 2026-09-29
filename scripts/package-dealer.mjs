@@ -1,3 +1,4 @@
+import { APP_PACKAGING_VERSION, baseNativeManifest, assertAppVariant, appendAppService } from './publishing/app-variant.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -9,11 +10,12 @@ import { dealerGuidance } from './lib/dealer-guidance.mjs';
 import { assertLegacyLocaleCompatible } from './lib/dealer-locale.mjs';
 import { NATIVE_PACKAGING_VERSION, assertNativeAdoption } from './lib/native-localization.mjs';
 import { adoptNativeSource, applyNativeMounts } from './publishing/native-mounts.mjs';
+import { applySharedMedia } from './publishing/shared-media.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const OMITTED = new Set(['node_modules', '.git', '.vercel', '.netlify', '.agency-os', '.codex', '.claude', '.agents', '.openai', '.auth', '.template', '.svelte-kit', '.turbo', '.cache', '.pnpm-store', 'build', 'dist', 'runtime', 'artifacts', 'audits', 'qa', 'qa-final', 'evidence', 'test-results', 'playwright-report', 'coverage']);
-const ROOT_FILES = new Set(['.gitignore', 'AGENTS.md', 'CLIENT.md', 'README.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json']);
+const ROOT_FILES = new Set(['.gitignore', 'AGENTS.md', 'CLIENT.md', 'README.md', 'DEPLOYMENT.md', 'business-facts.json', 'stock.json', 'FACTS-AND-INVENTORY.json', '.cars-app.json']);
 const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const sha256 = (value) => createHash('sha256').update(value).digest('hex');
 const normalized = (bytes) => {
@@ -41,11 +43,15 @@ function safeRelative(value, label) {
 export function validatePackagingManifest(manifest) {
   if (manifest?.schemaVersion !== 1 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(manifest.slug ?? '')) throw new Error('Invalid dealer manifest schemaVersion or slug');
   if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(manifest.repository ?? '')) throw new Error('Manifest repository must be owner/name');
-  if (![PACKAGING_VERSION, NATIVE_PACKAGING_VERSION].includes(manifest.packaging?.version)) throw new Error(`Unsupported packaging version: ${manifest.packaging?.version}`);
+  if (![PACKAGING_VERSION, NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION].includes(manifest.packaging?.version)) throw new Error(`Unsupported packaging version: ${manifest.packaging?.version}`);
   const variants = manifest.variants;
   const middle = variants?.[1]?.key;
-  if (!Array.isArray(variants) || variants.length !== 3 || variants[0].key !== 'auto-best' || !['modern', 'import'].includes(middle) || variants[2].key !== 'carwow') throw new Error('Packaging requires auto-best + modern/import + carwow in that order');
+  if (!Array.isArray(variants) || variants.length !== (manifest.packaging.version === APP_PACKAGING_VERSION ? 4 : 3) || variants[0].key !== 'auto-best' || !['modern', 'import'].includes(middle) || variants[2].key !== 'carwow') throw new Error('Packaging requires auto-best + modern/import + carwow in that order');
   const required = [{ base: '', entry: '/' }, { base: '/variant-2', entry: middle === 'modern' ? '/variant-2/cars' : '/variant-2/' }, { base: '/variant-3', entry: '/variant-3/' }];
+  if (manifest.packaging.version === APP_PACKAGING_VERSION) {
+    if (variants[3].key !== 'app') throw new Error('Fourth variant must be App');
+    required.push({ base: '/variant-4', entry: '/variant-4/' });
+  }
   for (const [index, variant] of variants.entries()) {
     if (variant.base !== required[index].base || variant.entry !== required[index].entry) throw new Error(`Unsupported ${variant.key} mount or entry`);
   }
@@ -92,7 +98,7 @@ async function collectSource(source, manifest) {
     await walk(key);
   }
   for (const entry of (await fs.readdir(source, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name, 'en'))) {
-    if (ROOT_FILES.has(entry.name) || /^(?:LICEN[CS]E|COPYING|NOTICE|PROVENANCE)(?:\.[\w-]+)?$/i.test(entry.name) || entry.name === 'scripts' || entry.name === '.client' || (manifest.packaging.version === NATIVE_PACKAGING_VERSION && entry.name === 'localization')) await walk(entry.name);
+    if (ROOT_FILES.has(entry.name) || /^(?:LICEN[CS]E|COPYING|NOTICE|PROVENANCE)(?:\.[\w-]+)?$/i.test(entry.name) || entry.name === 'scripts' || entry.name === '.client' || ([NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION].includes(manifest.packaging.version) && entry.name === 'localization')) await walk(entry.name);
   }
   for (const asset of manifest.extraAssets ?? []) {
     if (!(await exists(path.join(source, asset)))) throw new Error(`Declared extra asset is missing: ${asset}`);
@@ -109,21 +115,21 @@ function retainedAtCommit(relative, manifest) {
   return relative === 'dealer.json' || manifest.variants.some(v => v.key === first)
     || ROOT_FILES.has(first) || /^(?:LICEN[CS]E|COPYING|NOTICE|PROVENANCE)(?:\.[\w-]+)?$/i.test(first)
     || ['scripts', '.client'].includes(first)
-    || (manifest.packaging.version === NATIVE_PACKAGING_VERSION && first === 'localization')
+    || ([NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION].includes(manifest.packaging.version) && first === 'localization')
     || (manifest.extraAssets ?? []).some(p => relative === p || relative.startsWith(p + '/'));
 }
 
 function vercelConfiguration(manifest) {
   const middle = manifest.variants[1].key;
   const middleService = middle === 'modern' ? 'modern' : 'importer';
-  const native = manifest.packaging.version === NATIVE_PACKAGING_VERSION;
-  return {
+  const native = [NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION].includes(manifest.packaging.version);
+  const configuration = {
     $schema: 'https://openapi.vercel.sh/vercel.json',
     services: {
       autobest: { root: 'auto-best', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs auto-best' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs' },
       [middleService]: middle === 'modern' ? {
         root: 'modern/apps/web', framework: 'nextjs',
-        installCommand: 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -c "pnpm install --frozen-lockfile"',
+        installCommand: 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -- pnpm install --frozen-lockfile',
         buildCommand: native ? 'node ../../../scripts/build-native-service.mjs modern' : 'cd ../.. && npx --yes --package=node@22.23.2 --package=pnpm@11.4.0 -c "pnpm --filter @repo/database build && pnpm --filter web build"',
       } : { root: 'import', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs import' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs /variant-2' },
       carwow: { root: 'carwow', framework: 'sveltekit', installCommand: 'npm ci', buildCommand: native ? 'node ../scripts/build-native-service.mjs carwow' : 'npm run build && node ../scripts/fix-svelte-service-output.mjs /variant-3' },
@@ -132,10 +138,11 @@ function vercelConfiguration(manifest) {
     redirects: [{ source: '/variant-2', destination: manifest.variants[1].entry, permanent: false }, { source: '/variant-3', destination: '/variant-3/', permanent: false }],
     rewrites: [{ source: '/variant-2/(.*)', destination: { service: middleService } }, { source: '/variant-3/(.*)', destination: { service: 'carwow' } }, { source: '/(.*)', destination: { service: 'autobest' } }],
   };
+  return manifest.packaging.version === APP_PACKAGING_VERSION ? appendAppService(configuration) : configuration;
 }
 
 function switcherConfiguration(manifest, nativeMessages) {
-  const native = manifest.packaging.version === NATIVE_PACKAGING_VERSION;
+  const native = [NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION].includes(manifest.packaging.version);
   const language = native ? manifest.localization.defaultLocale : manifest.switcher?.language ?? manifest.language ?? 'bg';
   const words = {
     bg: { design: 'Дизайн', choose: 'Избор на дизайн', title: 'Изберете визия за сайта' },
@@ -158,17 +165,24 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   validatePackagingManifest(manifest);
   if (!/^[a-f\d]{40}(?:[a-f\d]{24})?$/i.test(sourceCommit ?? '')) throw new Error('sourceCommit must be the full source Git commit SHA');
   const resolvedSource = await fs.realpath(path.resolve(source));
-  const native = manifest.packaging.version === NATIVE_PACKAGING_VERSION;
+  const native = [NATIVE_PACKAGING_VERSION, APP_PACKAGING_VERSION].includes(manifest.packaging.version);
   const retained = canonicalFiles ? new Map([...canonicalFiles].map(([name, bytes]) => [name, Buffer.from(bytes)])) : undefined;
   if (!native) assertLegacyLocaleCompatible({ manifest, files: retained, source: resolvedSource });
   const sourceFiles = await collectSource(resolvedSource, manifest);
   const inputDigest = sourceMapDigest(sourceFiles);
   const manifestInput = await fs.readFile(path.join(resolvedSource, 'dealer.json')).catch(error => { if (error.code === 'ENOENT') return null; throw error; });
   let files = retained ?? new Map(sourceFiles);
-  for (const [name, content] of files) { safeRelative(name, 'retained file'); files.set(name, normalized(Buffer.from(content))); }
+  const preserveExtraBytes = (name) => (manifest.extraAssets ?? []).some((asset) =>
+    name === asset || name.startsWith(`${asset}/`));
+  for (const [name, content] of files) {
+    safeRelative(name, 'retained file');
+    const bytes = Buffer.from(content);
+    files.set(name, preserveExtraBytes(name) ? bytes : normalized(bytes));
+  }
   if (native) {
-    if (nativeReleases) files = adoptNativeSource(files, manifest, nativeReleases);
-    else { assertNativeAdoption(files, manifest); files = applyNativeMounts(files, manifest); assertNativeAdoption(files, manifest); }
+    if (nativeReleases) files = adoptNativeSource(files, baseNativeManifest(manifest), nativeReleases);
+    else { assertNativeAdoption(files, baseNativeManifest(manifest)); files = applyNativeMounts(files, baseNativeManifest(manifest)); assertNativeAdoption(files, baseNativeManifest(manifest)); }
+    assertAppVariant(files, manifest);
   } else {
     assertLegacyLocaleCompatible({ manifest, files });
     if (nativeReleases) throw new Error('Native releases require packaging version 2');
@@ -187,6 +201,11 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   files.set('dealer.json', Buffer.from(json(manifest)));
   if (guidance !== undefined && (typeof guidance !== 'string' || !guidance.trim())) throw new Error('guidance must be nonempty portable Markdown');
   if (guidance !== undefined || !files.has('AGENTS.md')) files.set('AGENTS.md', Buffer.from(guidance ?? fallbackGuidance(manifest)));
+  const mediaCatalog = new URL('./publishing/shared-media-catalog.json', import.meta.url);
+  if (native && await exists(mediaCatalog)) {
+    applySharedMedia(files, JSON.parse(await fs.readFile(mediaCatalog, 'utf8')));
+    for (const helper of ['prune-shared-media.mjs', 'storage-assets.mjs']) files.set(`scripts/${helper}`, await fs.readFile(new URL(`./publishing/${helper}`, import.meta.url)));
+  }
   const hashes = () => [...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, content]) => ({ path: name, sha256: sha256(normalized(content)) }));
   const payload = hashes();
   const payloadDigest = sha256(JSON.stringify(payload));

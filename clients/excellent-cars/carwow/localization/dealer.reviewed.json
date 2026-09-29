@@ -1,0 +1,50 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Варна",
+    "bg": "Варна",
+    "en": "Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+    "bg": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+    "en": "Yan Hunyadi Blvd., corner with Tsar Osvoboditel Blvd.",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.address",
+    "source": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+    "bg": "бул. „Ян Хунияди“, ъгъла с бул. „Цар Освободител“",
+    "en": "Yan Hunyadi Blvd., corner with Tsar Osvoboditel Blvd., Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.locationShort",
+    "source": "Варна",
+    "bg": "Варна",
+    "en": "Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned short location label."
+  },
+  {
+    "key": "dealer.name",
+    "source": "Excellent Cars",
+    "en": "Excellent Cars",
+    "bg": "Excellent Cars",
+    "disposition": "invariant",
+    "notes": "Dealer-owned proper name."
+  },
+  {
+    "key": "dealer.shortName",
+    "source": "Excellent Cars",
+    "en": "Excellent Cars",
+    "bg": "Excellent Cars",
+    "disposition": "invariant",
+    "notes": "Dealer-owned short proper name."
+  }
+]

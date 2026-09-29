@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "release": "0.2.0",
+  "repository": "darkapoparka/cars",
+  "commit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+  "sourcePath": "templates/auto-best",
+  "sourceTree": "bbc9c91c017d7d2d562ad68cf1a0931c11289417",
+  "sourceDigest": "b98e011d45774f69b18a1ff69e9e42f58ad690d7cf1acbb7e56ea83303529c42",
+  "approved": true,
+  "verifiedAt": "2026-09-27T21:31:05.292Z",
+  "runtime": {
+    "node": "22.20.0",
+    "npm": "10.9.3",
+    "lockfile": "package-lock.json"
+  },
+  "modes": {
+    "standalone": "Exact Cars subtree source, production build, EN/BG browser matrix and public alias verified.",
+    "mounted": "Native v2 packaging contract verified; each dealer remains an explicit preserved-asset deployment."
+  },
+  "checks": [
+    {
+      "name": "exact-immutable-source",
+      "status": "passed",
+      "evidenceSha256": "40f3191c0108cf705a1aae0cba297a81cf58d8b7b2e24414e7671718ca1a1258",
+      "evidence": "docs/releases/auto-best-0.2.0-2026-09-28/source-validation.json"
+    },
+    {
+      "name": "source-build-and-locales",
+      "status": "passed",
+      "evidenceSha256": "0c33299fa3dbbb40445600a045863d7e53deabff05790121131a4378b66080c1",
+      "evidence": "docs/releases/auto-best-0.2.0-2026-09-28/source-validate.log"
+    },
+    {
+      "name": "production-en-bg-browser-matrix",
+      "status": "passed",
+      "evidenceSha256": "e6cb5100e30b5b1b5f9aee042b351f69cf9660a29ad27a56f3c5b5a81bafd450",
+      "evidence": "docs/releases/auto-best-0.2.0-2026-09-28/production-qa.json"
+    },
+    {
+      "name": "fresh-public-routes",
+      "status": "passed",
+      "evidenceSha256": "600189c67742cf7cb3856777580f5904f75bc3378089080eaf350e56df2c9237",
+      "evidence": "docs/releases/auto-best-0.2.0-2026-09-28/public-verification.json"
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "widths": [
+      320,
+      390,
+      1440
+    ]
+  },
+  "nativeLocalization": {
+    "schemaVersion": 1,
+    "adapter": "native-v1",
+    "repository": "darkapoparka/cars",
+    "commit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+    "sourcePath": "templates/auto-best",
+    "sourceTree": "bbc9c91c017d7d2d562ad68cf1a0931c11289417",
+    "locales": [
+      "en",
+      "bg"
+    ],
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "verifiedAt": "2026-09-27T21:31:05.292Z",
+    "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6",
+    "catalogs": [
+      {
+        "format": "typescript-pair",
+        "path": "src/lib/locale/catalog.ts",
+        "en": "en",
+        "bg": "bg"
+      }
+    ],
+    "sourceDigest": "b98e011d45774f69b18a1ff69e9e42f58ad690d7cf1acbb7e56ea83303529c42",
+    "deployment": {
+      "id": "dpl_3tvmi6D6QVeJTcqmav5LVLWM3c9J",
+      "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+      "state": "READY",
+      "sourceCommit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+      "publicAlias": "https://cars-template-auto-best.vercel.app/"
+    },
+    "checks": [
+      {
+        "name": "catalog-completeness",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "hardcoded-ui",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "native-routing",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "standalone-journeys",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "mounted-journeys",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "public-journeys",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "preferences-no-js",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "preferences-storage-disabled",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "preferences-races",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "request-isolation",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "security-write-blocking",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      },
+      {
+        "name": "assets-preserved",
+        "status": "passed",
+        "evidenceSha256": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6"
+      }
+    ]
+  }
+}

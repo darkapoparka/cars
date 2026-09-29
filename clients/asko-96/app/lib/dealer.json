@@ -1,0 +1,36 @@
+{
+  "mode": "dealer",
+  "id": "asko-96",
+  "name": "АСКО 96",
+  "shortName": "АСКО 96",
+  "logo": {
+    "light": "/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+    "dark": "/dealer-app/logo-dark-71a4ab99b7d35b9b758b.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "София",
+  "address": "бул. „Ботевградско шосе“ 300",
+  "phoneDisplay": "0899 76 96 96",
+  "phoneE164": "+359899769696",
+  "email": "askogroup@abv.bg",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%A1%D0%9A%D0%9E%2096%2C%20%D0%91%D0%BE%D1%82%D0%B5%D0%B2%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%20%D1%88%D0%BE%D1%81%D0%B5%20300%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F",
+  "website": "https://asko96.bg/",
+  "whatsappUrl": "",
+  "services": [
+    "Продажба на автомобили",
+    "Замяна и изкупуване",
+    "Внос по поръчка",
+    "Собствен лизинг",
+    "Сервизно обслужване"
+  ],
+  "observedAt": "2026-09-06",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

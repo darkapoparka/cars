@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	type FilterOption = {
 		value: string;
 		label?: string;
@@ -37,7 +40,7 @@
 
 <div class="mobile-filter-options" aria-label={ariaLabel}>
 	<button type="button" class={allActive ? 'is-active' : ''} onclick={onClear}>
-		<span>{allLabel}</span>
+		<span>{i18n.text(allLabel)}</span>
 		<small>{allCount}</small>
 	</button>
 	{#each options as option (option.value)}
@@ -48,7 +51,7 @@
 			aria-pressed={selected}
 			onclick={() => onSelect(option.value)}
 		>
-			<span>{option.label ?? option.value}</span>
+			<span>{i18n.spec(option.label ?? option.value)}</span>
 			{#if selected}
 				<span class="mobile-filter-options__selected-mark" aria-hidden="true"></span>
 			{:else}
@@ -57,6 +60,6 @@
 		</button>
 	{/each}
 	{#if emptyLabel && !options.length}
-		<p class="mobile-filter-options__empty">{emptyLabel}</p>
+		<p class="mobile-filter-options__empty">{i18n.text(emptyLabel)}</p>
 	{/if}
 </div>

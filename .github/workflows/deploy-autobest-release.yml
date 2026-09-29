@@ -1,0 +1,124 @@
+name: Deploy Auto Best release candidate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "templates/auto-best/**"
+      - ".github/workflows/deploy-autobest-release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-auto-best-release
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      VERCEL_ORG_ID: team_RTNXBnClGWDdcYFFUW0BnqvJ
+      VERCEL_PROJECT_ID: prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX
+      PUBLIC_ALIAS: https://cars-template-auto-best.vercel.app/
+    steps:
+      - name: Check out exact Auto Best source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /templates/auto-best/
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.20.0"
+          cache: npm
+          cache-dependency-path: templates/auto-best/package-lock.json
+
+      - name: Validate exact release candidate
+        working-directory: templates/auto-best
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run validate
+          npm run test:locales
+
+      - id: deploy
+        name: Deploy exact subtree to Auto Best production
+        working-directory: templates/auto-best
+        shell: bash
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "${VERCEL_TOKEN:-}" || { echo 'VERCEL_TOKEN is not configured.' >&2; exit 1; }
+          mkdir -p .vercel "$RUNNER_TEMP/auto-best-release"
+          printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > .vercel/project.json
+          deployment_url="$(npx --yes vercel@59.19.1 deploy --prod --force --archive=tgz --token="$VERCEL_TOKEN" | tail -n 1)"
+          case "$deployment_url" in https://*) ;; *) echo "Invalid deployment URL: $deployment_url" >&2; exit 1;; esac
+          echo "deployment_url=$deployment_url" >> "$GITHUB_OUTPUT"
+          DEPLOYMENT_URL="$deployment_url" node <<'NODE'
+          const fs = require('node:fs');
+          const evidence = {
+            repository: 'darkapoparka/cars',
+            commit: process.env.GITHUB_SHA,
+            sourcePath: 'templates/auto-best',
+            deploymentUrl: process.env.DEPLOYMENT_URL,
+            publicAlias: process.env.PUBLIC_ALIAS,
+            deployedAt: new Date().toISOString()
+          };
+          fs.writeFileSync(`${process.env.RUNNER_TEMP}/auto-best-release/deployment.json`, JSON.stringify(evidence, null, 2));
+          NODE
+
+      - name: Verify public EN/BG routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('node:fs');
+          const alias = process.env.PUBLIC_ALIAS.replace(/\/$/, '');
+          const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+          const request = async (pathname) => {
+            try {
+              const response = await fetch(`${alias}${pathname}`, {
+                redirect: 'follow',
+                signal: AbortSignal.timeout(30000),
+                headers: { 'user-agent': 'cars-autobest-release-verifier/1.0' }
+              });
+              return { status: response.status, url: response.url, text: await response.text() };
+            } catch (error) {
+              return { status: 0, url: `${alias}${pathname}`, text: '', error: String(error) };
+            }
+          };
+          let evidence = null;
+          for (let attempt = 1; attempt <= 48; attempt += 1) {
+            const [root, en, bg] = await Promise.all([request('/'), request('/en/'), request('/bg/')]);
+            evidence = {
+              attempt,
+              checkedAt: new Date().toISOString(),
+              root: { status: root.status, url: root.url, error: root.error || null },
+              en: { status: en.status, url: en.url, language: /<html[^>]*\blang=["']?en\b/i.test(en.text), error: en.error || null },
+              bg: { status: bg.status, url: bg.url, language: /<html[^>]*\blang=["']?bg\b/i.test(bg.text), error: bg.error || null }
+            };
+            if (root.status === 200 && en.status === 200 && bg.status === 200 && evidence.en.language && evidence.bg.language) break;
+            if (attempt < 48) await sleep(10000);
+          }
+          fs.writeFileSync(`${process.env.RUNNER_TEMP}/auto-best-release/public-verification.json`, JSON.stringify(evidence, null, 2));
+          if (!evidence || evidence.root.status !== 200 || evidence.en.status !== 200 || evidence.bg.status !== 200 || !evidence.en.language || !evidence.bg.language) {
+            console.error(JSON.stringify(evidence, null, 2));
+            process.exit(1);
+          }
+          console.log(JSON.stringify(evidence, null, 2));
+          NODE
+
+      - name: Upload exact-source release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auto-best-release-${{ github.sha }}
+          path: ${{ runner.temp }}/auto-best-release
+          if-no-files-found: warn
+          retention-days: 30

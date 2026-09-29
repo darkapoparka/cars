@@ -29,9 +29,9 @@ export type DayNightFooterLinkGroup = {
 
 export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
-		title: 'ELIT AUTO IMPORT EXPORT',
+		title: 'About the dealership',
 		links: [
-			{ href: '/about', label: 'За ELIT AUTO' },
+			{ href: '/about', label: 'About us' },
 			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
 			{ href: '/team', label: 'Екип' },
 			{ href: '/reviews', label: 'Отзиви' },

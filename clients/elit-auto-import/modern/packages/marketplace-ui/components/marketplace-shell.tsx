@@ -3,8 +3,8 @@
 import {
   buildMarketplaceSearchHref,
   fallbackVehicleTaxonomy,
+  getCategoryPath,
   type ListingViewMode,
-  leadSite,
   type MarketplaceSearchParams,
   type QuickFilterKey,
   type VehicleCategory,
@@ -13,6 +13,7 @@ import {
   withSearchParamUpdates,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { usePathname, useRouter } from "next/navigation";
 import {
   type ReactNode,
@@ -37,6 +38,7 @@ import {
   getMarketplaceQuickFilterLabel,
 } from "../lib/marketplace-filter-policy";
 import type { MarketplaceModelInventoryCount } from "../lib/model-picker-options";
+import { getLocalizedPublicPath } from "../lib/public-path";
 import { BottomMarketplaceNav } from "./dealer-bottom-nav";
 import { DesktopMarketplaceBar } from "./desktop-discovery-bar";
 import { getActiveFilterChips } from "./desktop-marketplace-controls";
@@ -59,6 +61,7 @@ interface MarketplaceShellProps {
   assistantSlot?: ReactNode;
   basePath?: string;
   defaultViewMode?: ListingViewMode;
+  desktopDiscoverySlot?: ReactNode;
   desktopSearchVariant?: "discovery" | "results";
   filters: MarketplaceSearchParams;
   inventoryFacets?: {
@@ -112,6 +115,7 @@ export const MarketplaceShell = ({
   appBaseUrl,
   basePath,
   desktopSearchVariant = "discovery",
+  desktopDiscoverySlot,
   defaultViewMode = "list",
   filters: initialFilters,
   inventoryFacets,
@@ -148,9 +152,12 @@ export const MarketplaceShell = ({
   }, [initialFilters]);
 
   const currentPath = getMarketplaceCurrentPath({ basePath, locale, pathname });
-  const commitFilters = (updates: Partial<MarketplaceSearchParams>) => {
+  const commitFilters = (
+    updates: Partial<MarketplaceSearchParams>,
+    targetPath = currentPath
+  ) => {
     const next = withSearchParamUpdates(filtersRef.current, updates);
-    const href = buildMarketplaceSearchHref(next, currentPath);
+    const href = buildMarketplaceSearchHref(next, targetPath);
 
     filtersRef.current = next;
     setFilters(next);
@@ -159,10 +166,26 @@ export const MarketplaceShell = ({
     });
   };
 
-  const appUrl = leadSite.staticDemoMode
-    ? ""
-    : cleanMarketplaceBaseUrl(appBaseUrl);
+  const commitDesktopFilters = (updates: Partial<MarketplaceSearchParams>) => {
+    const target = isDealershipSite
+      ? getLocalizedPublicPath(
+          locale,
+          getCategoryPath(updates.category ?? filtersRef.current.category)
+        )
+      : currentPath;
+    commitFilters(updates, target);
+  };
+
+  const appUrl = isDealershipSite ? "" : cleanMarketplaceBaseUrl(appBaseUrl);
   const activeFilterChips = getActiveFilterChips(filters, locale);
+  const showDealerDesktopLanding =
+    Boolean(desktopDiscoverySlot) &&
+    isDealershipSite &&
+    desktopSearchVariant === "discovery" &&
+    filters.category === "car" &&
+    filters.sort === "recommended" &&
+    filters.page === 1 &&
+    activeFilterChips.length === 0;
   const structuredFilterCount = activeFilterChips.filter(
     (chip) => chip.id !== "q"
   ).length;
@@ -182,7 +205,7 @@ export const MarketplaceShell = ({
       (currentUpdates, chip) => Object.assign(currentUpdates, chip.updates),
       {}
     );
-    commitFilters(updates);
+    commitDesktopFilters(updates);
   };
 
   const marketplaceOverlayOpen =
@@ -338,7 +361,7 @@ export const MarketplaceShell = ({
           filterCount={structuredFilterCount}
           filters={filters}
           locale={locale}
-          onApply={commitFilters}
+          onApply={commitDesktopFilters}
           onClearFilters={clearFilters}
           onOpenFilters={() =>
             openMarketplaceOverlay(() => setFilterOpen(true))
@@ -359,10 +382,14 @@ export const MarketplaceShell = ({
           query={query}
           searchListings={searchListings}
           setQuery={setQuery}
+          showDealerDesktopLanding={showDealerDesktopLanding}
+          taxonomy={taxonomy}
           totalListings={totalListings}
           variant={desktopSearchVariant}
           viewMode={viewMode}
         />
+
+        {showDealerDesktopLanding ? desktopDiscoverySlot : null}
 
         <MarketplaceResults
           activeFilterCount={activeFilterChips.length}
@@ -370,9 +397,11 @@ export const MarketplaceShell = ({
           currentPath={currentPath}
           desktopSearchVariant={desktopSearchVariant}
           filters={filters}
+          hideDesktop={showDealerDesktopLanding}
           isBg={isBg}
           listings={listings}
           locale={locale}
+          onApply={commitDesktopFilters}
           onChooseCategory={() =>
             openMarketplaceOverlay(() => setCategoryOpen(true))
           }
@@ -408,6 +437,7 @@ export const MarketplaceShell = ({
               : undefined
           }
           onApply={commitFilters}
+          onDesktopApply={commitDesktopFilters}
           onOpenChange={setMakeModelOpen}
           open={makeModelOpen}
           taxonomy={taxonomy}
@@ -448,6 +478,7 @@ export const MarketplaceShell = ({
           filters={filters}
           locale={locale}
           onApply={commitFilters}
+          onDesktopApply={commitDesktopFilters}
           onOpenChange={setFilterOpen}
           open={filterOpen}
           taxonomy={taxonomy}

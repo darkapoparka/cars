@@ -1,18 +1,24 @@
 <script lang="ts">
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { brand } from '$config/brand';
-  const mapEmbedUrl = "https://maps.google.com/maps?q=F1rst%20Motors%2C%20Danube%20Building%20-%20409%20Sheikh%20Zayed%20Rd%20-%20Al%20Quoz%20-%20Al%20Quoz%201%20-%20Dubai%2C%20UAE&z=16&output=embed";
-  const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`;
+
+  const mapAddress = $derived(i18n.dealer('address'));
+  const mapEmbedUrl = $derived(`https://maps.google.com/maps?q=${encodeURIComponent(mapAddress)}&z=16&hl=${i18n.locale}&output=embed`);
+  const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapAddress)}`);
 </script>
 
 <div class="dn-showroom-map">
   <iframe
     class="dn-showroom-map__frame"
     src={mapEmbedUrl}
-    title={"Map to" + ` ${brand.name}`}
+    title={i18n.t("m_cd07db46b2c6", { p0: brand.name })}
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
   ></iframe>
-  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noreferrer">Open in Google Maps</a>
+  <a class="dn-showroom-map__link" href={i18n.href(directionsUrl)} target="_blank" rel="noreferrer">{i18n.t("m_7f22a6352074")}</a>
 </div>
 
 <style>

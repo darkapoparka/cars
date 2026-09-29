@@ -1,3 +1,4 @@
+import { routeParts } from '$lib/locale/core';
 import { loadInventoryCountSummary } from '$lib/server/public-inventory-summary';
 import { isMobileUserAgent } from '$lib/server/device';
 import type { LayoutServerLoad } from './$types';
@@ -15,8 +16,9 @@ export const load: LayoutServerLoad = async ({ locals, url, request }) => {
 	const initialViewport = isMobileUserAgent(request.headers.get('user-agent'))
 		? 'mobile'
 		: 'desktop';
-	if (!shouldLoadStorefrontInventorySummary(url.pathname)) {
+	if (!shouldLoadStorefrontInventorySummary(routeParts(url.pathname).path)) {
 		return {
+			localeState: locals.localeState,
 			initialViewport,
 			storefrontInventorySummary: null
 		};
@@ -24,6 +26,7 @@ export const load: LayoutServerLoad = async ({ locals, url, request }) => {
 
 	try {
 		return {
+			localeState: locals.localeState,
 			initialViewport,
 			storefrontInventorySummary: await loadInventoryCountSummary({ db: locals.db })
 		};
@@ -34,6 +37,7 @@ export const load: LayoutServerLoad = async ({ locals, url, request }) => {
 		});
 
 		return {
+			localeState: locals.localeState,
 			initialViewport,
 			storefrontInventorySummary: null
 		};

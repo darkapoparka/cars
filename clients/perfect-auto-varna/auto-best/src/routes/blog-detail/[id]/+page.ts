@@ -1,4 +1,6 @@
 import { listReturn } from '$data/journeys';
+import { resolveLocale } from '$lib/locale/core';
+import { templateText } from '$lib/locale/messages';
 import { error } from '@sveltejs/kit';
 import { blogCategories, blogPosts } from '$data/editorial';
 import type { PageLoad } from './$types';
@@ -8,12 +10,12 @@ export const load: PageLoad = ({ params, url }) => {
   const postId = Number(params.id);
 
   if (!isCanonicalId || !Number.isSafeInteger(postId)) {
-    error(404, 'Материалът не е намерен.');
+    error(404, templateText(resolveLocale({ url }).locale, 'Материалът не е намерен.'));
   }
 
   const post = blogPosts.find((item) => item.id === postId);
   if (!post) {
-    error(404, 'Материалът не е намерен.');
+    error(404, templateText(resolveLocale({ url }).locale, 'Материалът не е намерен.'));
   }
 
   const related = blogPosts

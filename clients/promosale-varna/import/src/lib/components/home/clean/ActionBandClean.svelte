@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import type { HomePageCopy } from '$lib/i18n/messages';
-	import { ArrowRight } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	// Clean Svelte 5 + Tailwind v4 rebuild of the two promo cards under the hero:
 	//   • Import card  — green (#E3062F = bc-accent), dark ink, large car cutout

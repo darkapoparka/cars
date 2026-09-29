@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
 	import PanelLeft from '@lucide/svelte/icons/panel-left';
 	import Settings2 from '@lucide/svelte/icons/settings-2';
@@ -17,10 +20,10 @@
 	} = $props();
 
 	const densityOptions = [
-		{ index: 0, label: '2 колони' },
-		{ index: 1, label: '3 колони' },
-		{ index: 2, label: '4 колони' },
-		{ index: 3, label: '5 колони' }
+		{ index: 0, label: i18n.t('copy.55b835a61c8c') },
+		{ index: 1, label: i18n.t('copy.4d4c2c7a1764') },
+		{ index: 2, label: i18n.t('copy.d08e89ae02ee') },
+		{ index: 3, label: i18n.t('copy.59bb8dadb0e2') }
 	];
 
 	let open = $state(false);
@@ -38,19 +41,19 @@
 
 <div class="inventory-preview-settings" data-daynight-preview-settings>
 	{#if open}
-		<section class="inventory-preview-settings__panel" aria-label="Настройки на изгледа">
+		<section class="inventory-preview-settings__panel" aria-label={i18n.t('copy.88f4bc81346a')}>
 			<header>
 				<div>
-					<span>Демо настройки</span>
-					<strong>Преглед на инвентара</strong>
+					<span>{i18n.t('copy.a7684989e182')}</span>
+					<strong>{i18n.t('copy.cf635f4ebe53')}</strong>
 				</div>
-				<button type="button" aria-label="Затвори настройките" onclick={close}>
+				<button type="button" aria-label={i18n.t('copy.ee5d618df32c')} onclick={close}>
 					<X aria-hidden="true" size={18} strokeWidth={2.2} />
 				</button>
 			</header>
 
 			<div class="inventory-preview-settings__group">
-				<span>Подредба</span>
+				<span>{i18n.t('copy.365e7bf87b30')}</span>
 				<div class="inventory-preview-settings__segmented">
 					<button
 						class:active={layoutMode === 'grid'}
@@ -59,7 +62,7 @@
 						onclick={() => onLayoutChange('grid')}
 					>
 						<LayoutGrid aria-hidden="true" size={17} />
-						Без колона
+						{i18n.t('copy.4e8237ff7ac0')}
 					</button>
 					<button
 						class:active={layoutMode === 'sidebar'}
@@ -68,13 +71,13 @@
 						onclick={() => onLayoutChange('sidebar')}
 					>
 						<PanelLeft aria-hidden="true" size={17} />
-						С колона
+						{i18n.t('copy.b8292a249d30')}
 					</button>
 				</div>
 			</div>
 
 			<div class="inventory-preview-settings__group">
-				<span>Карти на ред</span>
+				<span>{i18n.t('copy.9fc5f411815d')}</span>
 				<div class="inventory-preview-settings__density">
 					{#each densityOptions as option (option.index)}
 						<button
@@ -90,14 +93,14 @@
 				</div>
 			</div>
 
-			<p>Тези контроли са само за сравнение на демо вариантите.</p>
+			<p>{i18n.t('copy.3c0e8f8eebd4')}</p>
 		</section>
 	{/if}
 
 	<button
 		class="inventory-preview-settings__launcher"
 		type="button"
-		aria-label={open ? 'Затвори настройките на изгледа' : 'Настройки на изгледа'}
+		aria-label={open ? i18n.t('copy.8cc140b6deb8') : i18n.t('copy.88f4bc81346a')}
 		aria-expanded={open}
 		onclick={() => (open = !open)}
 	>

@@ -1,16 +1,14 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import {
-		ArrowLeft,
-		Calendar,
-		Fuel,
-		Gauge,
-		GitCompare,
-		Heart,
-		MapPin,
-		MessageSquare,
-		ShieldCheck
-	} from '@lucide/svelte';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
+	import Calendar from '@lucide/svelte/icons/calendar';
+	import Fuel from '@lucide/svelte/icons/fuel';
+	import Gauge from '@lucide/svelte/icons/gauge';
+	import GitCompare from '@lucide/svelte/icons/git-compare';
+	import Heart from '@lucide/svelte/icons/heart';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import MessageSquare from '@lucide/svelte/icons/message-square';
+	import ShieldCheck from '@lucide/svelte/icons/shield-check';
 	import type { Vehicle } from '$lib/data/vehicles';
 
 	let { vehicle }: { vehicle: Vehicle } = $props();

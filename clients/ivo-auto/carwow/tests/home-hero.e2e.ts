@@ -90,9 +90,9 @@ for (const width of [1280, 1440, 1920]) {
 		});
 		expect(layout.overflow).toBe(false);
 		for (const heading of layout.headings) expect(heading).toEqual(layout.headings[0]);
-		// The shared section heading scales from 28px to 36px across desktop widths.
-		expect(parseFloat(layout.headings[0][0])).toBeGreaterThanOrEqual(28);
-		expect(parseFloat(layout.headings[0][0])).toBeLessThanOrEqual(36);
+		// --sa-heading-section scales from 36px to 50px in the retained desktop type system.
+		expect(parseFloat(layout.headings[0][0])).toBeGreaterThanOrEqual(36);
+		expect(parseFloat(layout.headings[0][0])).toBeLessThanOrEqual(50);
 		expect(layout.heroSize).toBeGreaterThan(parseFloat(layout.headings[0][0]));
 		const heights: number[] = [];
 		for (const mode of ['Купи', 'Продай', 'Внос']) {

@@ -1,4 +1,9 @@
 <script lang="ts">
+	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
+	import { routeParts } from '$lib/locale/core';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import MobileDockIcon from './MobileDockIcon.svelte';
 	import {
 		Heart as NavSavedIcon,
@@ -24,7 +29,7 @@
 	const sellHref = resolve('/sell-your-car');
 	const phoneHref = daynightSite.phoneHref;
 	const mapHref = daynightSite.mapUrl;
-	const currentPath = $derived(appPage.url.pathname);
+	const currentPath = $derived(routeParts(appPage.url.pathname).path);
 	const garage = getOptionalGarageContext();
 	const compareCount = $derived(garage.compare.length);
 	const isHome = $derived(currentPath === '/');
@@ -62,8 +67,8 @@
 
 	const menuItems = (
 		[
-			{ href: '/favorites', label: 'Запазени' },
-			{ href: '/compare', label: 'Сравнение' },
+			{ href: '/favorites', label: i18n.t('copy.655f65ef3f03') },
+			{ href: '/compare', label: i18n.t('copy.c2a9007babf2') },
 			...publicNavItems.slice(3)
 		] as Array<{ href: MenuHref; label: string }>
 	).map((item) => ({
@@ -73,10 +78,11 @@
 
 	function isNavActive(href: MenuHref) {
 		if (href === '/contact' && isImport) return false;
-		const path = resolve(href);
+		const path = routeParts(resolve(href)).path;
 		return currentPath === path || (path !== '/' && currentPath.startsWith(`${path}/`));
 	}
 
+	let menuButton: HTMLButtonElement;
 	async function openMenu(event: MouseEvent) {
 		if (event.currentTarget instanceof HTMLElement)
 			event.currentTarget.focus({ preventScroll: true });
@@ -172,54 +178,55 @@
 <nav
 	data-daynight-site-chrome
 	class={keyboardOpen ? 'mobile-bottom-dock is-keyboard-open' : 'mobile-bottom-dock'}
-	aria-label="Основни действия"
+	aria-label={i18n.t('copy.a690e455afe4')}
 >
 	<a
 		class={isHome ? 'mobile-bottom-dock__item is-active' : 'mobile-bottom-dock__item'}
-		href={homeHref}
+		href={i18n.href(homeHref)}
 		aria-current={isHome ? 'page' : undefined}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<MobileDockIcon name="home" />
 		</span>
-		<span class="mobile-bottom-dock__label">Начало</span>
+		<span class="mobile-bottom-dock__label">{i18n.t('copy.4af5d2efadd7')}</span>
 	</a>
 	<a
 		class={isInventory ? 'mobile-bottom-dock__item is-active' : 'mobile-bottom-dock__item'}
-		href={inventoryHref}
+		href={i18n.href(inventoryHref)}
 		aria-current={isInventory ? 'page' : undefined}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<MobileDockIcon name="car" />
 		</span>
-		<span class="mobile-bottom-dock__label">Коли</span>
+		<span class="mobile-bottom-dock__label">{i18n.t('copy.3d2762f992b1')}</span>
 	</a>
 	<a
 		class={isSell ? 'mobile-bottom-dock__item is-active' : 'mobile-bottom-dock__item'}
-		href={sellHref}
+		href={i18n.href(sellHref)}
 		aria-current={isSell ? 'page' : undefined}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<MobileDockIcon name="sell" />
 		</span>
-		<span class="mobile-bottom-dock__label">Продай</span>
+		<span class="mobile-bottom-dock__label">{i18n.t('copy.6510e880c790')}</span>
 	</a>
 	<a
 		class={isImport ? 'mobile-bottom-dock__item is-active' : 'mobile-bottom-dock__item'}
-		href={importHref}
+		href={i18n.href(importHref)}
 		aria-current={isImport ? 'page' : undefined}
 	>
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<MobileDockIcon name="import" />
 		</span>
-		<span class="mobile-bottom-dock__label">Внос</span>
+		<span class="mobile-bottom-dock__label">{i18n.t('copy.995bfafd0b63')}</span>
 	</a>
 	<button
+		bind:this={menuButton}
 		class={menuOpen || isMenuSection
 			? 'mobile-bottom-dock__item is-active'
 			: 'mobile-bottom-dock__item'}
 		type="button"
-		aria-label="Меню"
+		aria-label={i18n.t('copy.122f71765026')}
 		aria-controls="mobile-menu-sheet"
 		aria-expanded={menuOpen}
 		onclick={openMenu}
@@ -227,7 +234,7 @@
 		<span class="mobile-bottom-dock__icon" aria-hidden="true">
 			<MobileDockIcon name="menu" />
 		</span>
-		<span class="mobile-bottom-dock__label">Меню</span>
+		<span class="mobile-bottom-dock__label">{i18n.t('copy.122f71765026')}</span>
 	</button>
 </nav>
 
@@ -235,14 +242,14 @@
 	<section
 		id="mobile-menu-sheet"
 		class="mobile-menu-sheet"
-		aria-label="Меню"
+		aria-label={i18n.t('copy.122f71765026')}
 		data-daynight-site-chrome
 	>
 		<div class="mobile-menu-sheet__head">
-			<h2 id="mobile-menu-title" class="mobile-menu-sheet__title">Меню</h2>
+			<h2 id="mobile-menu-title" class="mobile-menu-sheet__title">{i18n.t('copy.122f71765026')}</h2>
 			<button
 				type="button"
-				aria-label="Затвори"
+				aria-label={i18n.t('copy.1ef1a425356f')}
 				data-mobile-drawer-initial-focus
 				onclick={() => (menuOpen = false)}
 			>
@@ -250,49 +257,56 @@
 			</button>
 		</div>
 
-		<div class="mobile-menu-sheet__quick" role="group" aria-label="Бързи действия">
+		<div class="mobile-menu-sheet__quick" role="group" aria-label={i18n.t('copy.2cd6b212c3e5')}>
 			<a
 				class="mobile-menu-sheet__quick-action mobile-menu-sheet__quick-action--call"
-				href={phoneHref}
-				aria-label={`Обади се на ${daynightSite.phoneLabel}`}
+				href={i18n.href(phoneHref)}
+				aria-label={i18n.t('pattern.ab13c281dac3', { v0: daynightSite.phoneLabel })}
 			>
 				<span class="mobile-menu-sheet__row-icon" aria-hidden="true">
 					<PhoneCall size={20} strokeWidth={2.2} />
 				</span>
 				<span>
-					<strong>Обади се</strong>
+					<strong>{i18n.t('copy.d40e5119596a')}</strong>
 				</span>
 			</a>
 			<a
 				class="mobile-menu-sheet__quick-action mobile-menu-sheet__quick-action--map"
-				href={mapHref}
+				href={i18n.href(mapHref)}
 				target="_blank"
 				rel="noopener noreferrer"
-				aria-label="Отвори карта"
+				aria-label={i18n.t('copy.d0f804364b2c')}
 			>
 				<span class="mobile-menu-sheet__row-icon" aria-hidden="true">
 					<MapPin size={20} strokeWidth={2.2} />
 				</span>
 				<span>
-					<strong>Карта</strong>
+					<strong>{i18n.t('copy.2751c9100018')}</strong>
 				</span>
 			</a>
 		</div>
 
-		<nav class="mobile-menu-sheet__nav" aria-label="Навигация">
+		<LocaleTrigger
+			fullLabel
+			beforeOpen={() => {
+				menuOpen = false;
+				return menuButton;
+			}}
+		/>
+		<nav class="mobile-menu-sheet__nav" aria-label={i18n.t('copy.e638fc3afbee')}>
 			{#each menuItems as item (item.href)}
 				{@const RowIcon = item.icon}
 				<a
 					class={isNavActive(item.href) ? 'is-current' : ''}
 					aria-current={isNavActive(item.href) ? 'page' : undefined}
-					href={resolve(item.href)}
+					href={i18n.href(resolve(item.href))}
 					onclick={() => (menuOpen = false)}
 				>
 					<span class="mobile-menu-sheet__row-icon" aria-hidden="true">
 						<RowIcon size={20} strokeWidth={2.2} />
 					</span>
 					<span
-						>{item.label}{item.href === '/compare' && compareCount
+						>{i18n.text(item.label)}{item.href === '/compare' && compareCount
 							? ` (${compareCount})`
 							: ''}</span
 					>

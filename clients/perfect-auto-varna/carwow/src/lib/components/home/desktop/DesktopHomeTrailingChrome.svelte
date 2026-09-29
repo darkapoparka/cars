@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	function scrollTop() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
@@ -7,7 +10,7 @@
 <button
 	class="progress-wrap active-progress"
 	type="button"
-	aria-label="Към началото"
+	aria-label={i18n.t('copy.ec427f47dae8')}
 	onclick={scrollTop}
 >
 	<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -17,7 +20,11 @@
 		>
 		</path>
 	</svg>
-	<img class="progress-wrap-icon" src="/assets/icons/top.svg" alt="top" />
+	<img
+		class="progress-wrap-icon"
+		src={i18n.asset('/assets/icons/top.svg')}
+		alt={i18n.t('copy.28720365c5e7')}
+	/>
 </button>
 
 <style>

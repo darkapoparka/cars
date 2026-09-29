@@ -86,10 +86,10 @@
 	const menuItemId = (path: AdminPath) => path.split('/').at(-1) || 'dashboard';
 </script>
 
-<main class="admin-cms bg-background text-foreground min-h-svh">
+<main class="admin-cms min-h-svh bg-background text-foreground">
 	<Sidebar.Provider
 		style="--sidebar-width: 18rem; --header-height: 4rem;"
-		class="bg-background min-h-svh"
+		class="min-h-svh bg-background"
 	>
 		<Sidebar.Root collapsible="offcanvas" variant={sidebarVariant}>
 			<Sidebar.Header>
@@ -99,13 +99,13 @@
 							{#snippet child({ props })}
 								<a href={resolve('/admin')} {...props}>
 									<span
-										class="bg-sidebar-primary text-sidebar-primary-foreground grid size-9 place-items-center rounded-lg font-semibold"
+										class="grid size-9 place-items-center rounded-lg bg-sidebar-primary font-semibold text-sidebar-primary-foreground"
 									>
 										B
 									</span>
 									<span class="grid flex-1 text-left text-sm leading-tight">
 										<span class="truncate text-sm font-semibold">OUTLETCARS.BG</span>
-										<span class="text-muted-foreground truncate text-xs">Admin CMS</span>
+										<span class="truncate text-xs text-muted-foreground">Admin CMS</span>
 									</span>
 								</a>
 							{/snippet}
@@ -151,7 +151,7 @@
 				<form method="POST" action={resolve('/admin/logout')}>
 					<Button
 						variant="outline"
-						class="border-sidebar-border bg-sidebar-accent/60 text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground w-full justify-start"
+						class="w-full justify-start border-sidebar-border bg-sidebar-accent/60 text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
 						type="submit"
 					>
 						<LogOut data-icon="inline-start" aria-hidden="true" />
@@ -164,13 +164,13 @@
 
 		<Sidebar.Inset>
 			<header
-				class="bg-card text-foreground border-border flex h-[var(--header-height)] shrink-0 items-center gap-3 border-b px-5 lg:px-8"
+				class="flex h-[var(--header-height)] shrink-0 items-center gap-3 border-b border-border bg-card px-5 text-foreground lg:px-8"
 			>
-				<Sidebar.Trigger class="text-muted-foreground hover:bg-muted hover:text-foreground -ms-1" />
-				<Separator orientation="vertical" class="bg-border me-2 data-[orientation=vertical]:h-5" />
+				<Sidebar.Trigger class="-ms-1 text-muted-foreground hover:bg-muted hover:text-foreground" />
+				<Separator orientation="vertical" class="me-2 bg-border data-[orientation=vertical]:h-5" />
 				<div class="min-w-0 flex-1">
-					<p class="text-muted-foreground truncate text-xs font-medium">{eyebrow}</p>
-					<h1 class="text-foreground truncate text-lg font-semibold tracking-tight">{title}</h1>
+					<p class="truncate text-xs font-medium text-muted-foreground">{eyebrow}</p>
+					<h1 class="truncate text-lg font-semibold tracking-tight text-foreground">{title}</h1>
 				</div>
 				{#if primaryAction}
 					<Button href={primaryAction.href} variant="secondary" data-dashboard-primary-action>

@@ -29,9 +29,11 @@ type LeadSiteConfig = {
     };
   };
   artwork: {
+    desktopHeroScenes: Record<'home' | 'inventory' | 'about' | 'contact', SiteAssetPath>;
     contactHero: { desktop: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
+    sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
     home: { collection: SiteAssetPath; sell: SiteAssetPath; sellCompact: SiteAssetPath; import: SiteAssetPath };
     routeHero: {
       standard: Record<RouteHeroAsset, SiteAssetPath>;
@@ -90,6 +92,12 @@ export const leadSite = {
     }
   },
   artwork: {
+    desktopHeroScenes: {
+      home: '/assets/images/lead/auto-best-desktop-home-v1.webp',
+      inventory: '/assets/images/lead/auto-best-desktop-inventory-v1.webp',
+      about: '/assets/images/lead/auto-best-desktop-about-v1.webp',
+      contact: '/assets/images/lead/auto-best-desktop-contact-v1.webp'
+    },
     contactHero: {
       desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',
       sellMobile: '/assets/images/lead/day-night-sell-banner-v1.webp',
@@ -98,6 +106,10 @@ export const leadSite = {
     },
     blogHero: '/assets/images/lead/day-night-blog-hero-v2.webp',
     editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',
+    sectionBanners: {
+      graphite: '/assets/images/lead/auto-best-banner-graphite-v1.png',
+      crimson: '/assets/images/lead/auto-best-banner-crimson-v1.png'
+    },
     home: {
       collection,
       sell: mobileSell,

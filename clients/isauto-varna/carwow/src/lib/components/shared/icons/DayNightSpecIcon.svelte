@@ -9,6 +9,8 @@
 </script>
 
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
 	const iconPaths: Record<DayNightSpecIconName, string> = {
 		body: '/assets/icons/auto.svg',
 		engine: '/assets/icons/engine.svg',
@@ -20,7 +22,7 @@
 
 	let { name, size = 14 }: { name: DayNightSpecIconName; size?: number } = $props();
 
-	const path = $derived(iconPaths[name]);
+	const path = $derived(i18n.asset(iconPaths[name]));
 </script>
 
 <span

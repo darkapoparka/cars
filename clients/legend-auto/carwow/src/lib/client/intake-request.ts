@@ -6,6 +6,7 @@ export type IntakeResponse =
 	| IntakeFailure;
 
 export function intakeErrorMessage(status: number) {
+	if (status === 403) return 'Само демонстрация. Не е изпратено запитване или данни.';
 	if (status === 400 || status === 422) return 'Проверете въведените данни и опитайте отново.';
 	if (status === 429) return 'Получихме твърде много заявки. Изчакайте малко и опитайте отново.';
 	if (status === 0) return 'Няма връзка. Проверете интернет връзката си и опитайте отново.';

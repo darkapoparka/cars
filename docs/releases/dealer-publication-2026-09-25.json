@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "publishedAt": "2026-09-25T00:36:35Z",
+  "canonicalCarsCommit": "9bd9068c15f4377964b2dd9f3e11d3e85238cb44",
+  "templateRelease": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+  "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+  "dealers": [
+    {"slug":"al-basma-motors","repository":"darkapoparka/cars-albasmamotors","mainSha":"ee3d8eb706834909ec3c2b35e1d6352bcdf1c526","projectId":"prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk","publicAlias":"https://cars-albasmamotors.vercel.app/"},
+    {"slug":"al-hamoor-al-thahabi","repository":"darkapoparka/cars-alhamooralthahabi","mainSha":"704e254e89f3b315fede17a14bf8d3d7601696d6","projectId":"prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw","publicAlias":"https://cars-alhamooralthahabi.vercel.app/"},
+    {"slug":"asko-96","repository":"darkapoparka/cars-asko96","mainSha":"e27bdb7ababed2f93818f77c5a5a2a432c5625a9","projectId":"prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX","publicAlias":"https://cars-asko96.vercel.app/"},
+    {"slug":"astracar","repository":"darkapoparka/cars-astracar","mainSha":"809de64b3ea5433b8a44cf6c1e8914edc91e0fcb","projectId":"prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT","publicAlias":"https://cars-astracar.vercel.app/"},
+    {"slug":"autolife","repository":"darkapoparka/cars-autolife","mainSha":"d07daeba123116a636102eaff58292f7e49c8dbd","projectId":"prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd","publicAlias":"https://cars-autolife.vercel.app/"},
+    {"slug":"automarket-varna","repository":"darkapoparka/cars-automarketvarna","mainSha":"10d8fa19a860e76244908cfd7b915c8870e29ec4","projectId":"prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP","publicAlias":"https://cars-automarketvarna.vercel.app/"},
+    {"slug":"avangard-auto","repository":"darkapoparka/cars-avangardauto","mainSha":"196e57475882b79deb5bd289e51cd139376c600d","projectId":"prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc","publicAlias":"https://cars-avangardauto.vercel.app/"},
+    {"slug":"champion-auto-pro","repository":"darkapoparka/cars-championautopro","mainSha":"dd7076477f5b3f369ece3960df1dc5aedb845930","projectId":"prj_Zles0MpLROdFwgSnvuvpxrNBWcRY","publicAlias":"https://cars-championautopro.vercel.app/"},
+    {"slug":"day-and-night-auto-group","repository":"darkapoparka/day-and-night-autodeal","mainSha":"41e06c690dcd673896460cbafb95696e46155b9b","projectId":"prj_enD9orrI6rwguMMtDlS0IP6RAXjr","publicAlias":"https://day-and-night-a.vercel.app/"},
+    {"slug":"eliqauto","repository":"darkapoparka/cars-eliqauto","mainSha":"f1e48efa57cda18e174329877ce0e04e6f9b8707","projectId":"prj_0aDYGRa0LI91M3AJRY4dlGssLUF3","publicAlias":"https://cars-eliqauto.vercel.app/"},
+    {"slug":"elit-auto-import","repository":"darkapoparka/cars-elitautoimport","mainSha":"af16a51147a87b5b577bb8a42a05608f67528325","projectId":"prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs","publicAlias":"https://cars-elitautoimport.vercel.app/"},
+    {"slug":"excellent-cars","repository":"darkapoparka/excellent-cars","mainSha":"60235235d7811b00e463d32a37ba60c389bc49b2","projectId":"prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq","publicAlias":"https://excellent-cars.vercel.app/"},
+    {"slug":"f1rst-motors","repository":"darkapoparka/cars-f1rstmotors","mainSha":"77aaa651498458c6cf65a95f06809692d2dc5b67","projectId":"prj_mavqUXCj6hSEg8EvBJW8G3XJlihm","publicAlias":"https://cars-f1rstmotors.vercel.app/"},
+    {"slug":"isauto-varna","repository":"darkapoparka/cars-isautovarna","mainSha":"c38e49cac75bad003281f434206171477f1b5014","projectId":"prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv","publicAlias":"https://cars-isautovarna.vercel.app/"},
+    {"slug":"ivo-auto","repository":"darkapoparka/cars-ivoauto","mainSha":"3a7de3f16c589dedef503fefdacfb772aa99c624","projectId":"prj_bruM9mopofyBcgwxkKFG9tQFZBMN","publicAlias":"https://cars-ivoauto.vercel.app/"},
+    {"slug":"kg-team-auto","repository":"darkapoparka/cars-kgteamauto","mainSha":"78d7f17d6e677e9fd06ed6a65242e5f443e02a80","projectId":"prj_IALzfkjBAv5N4YJfNB1sEliOaNBg","publicAlias":"https://cars-kgteamauto.vercel.app/"},
+    {"slug":"legend-auto","repository":"darkapoparka/cars-legendauto","mainSha":"c44b9ff745334c1dabb12663966073588a22c184","projectId":"prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw","publicAlias":"https://cars-legendauto.vercel.app/"},
+    {"slug":"navara-car","repository":"darkapoparka/cars-navaracar","mainSha":"d28dcee6b349ed88cd4ac54c2188c3676c0f589a","projectId":"prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr","publicAlias":"https://cars-navaracar.vercel.app/"},
+    {"slug":"outletcars-varna","repository":"darkapoparka/cars-outletcarsvarna","mainSha":"c80338aeef79903fb77b04a9b9d605e64b5d8116","projectId":"prj_1KYEEcbBwAd5iCtAvDGM59INQLe7","publicAlias":"https://cars-outletcarsvarna.vercel.app/"},
+    {"slug":"perfect-auto-varna","repository":"darkapoparka/cars-perfectauto","mainSha":"42ba775779585e2c018a3c6029e72d19c2a15a5c","projectId":"prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR","publicAlias":"https://cars-perfectauto.vercel.app/"},
+    {"slug":"priselci","repository":"darkapoparka/cars-priselci","mainSha":"19297b5ffa9e2fe5bb556b083795e935252b0283","projectId":"prj_GwnlfPmyImlJuiocl77NWplzvTTb","publicAlias":"https://cars-priselci.vercel.app/"},
+    {"slug":"promosale-varna","repository":"darkapoparka/cars-promosalevarna","mainSha":"233d7e2670a69c0547278c9dfbf22b452543d4aa","projectId":"prj_yjXIu0an7sqCiY26hKWgOGUl5hbY","publicAlias":"https://cars-promosalevarna.vercel.app/"},
+    {"slug":"texas-drive-auto","repository":"darkapoparka/cars-texasdriveauto","mainSha":"139dae407ff50626b8cba228b9d669381f1409e8","projectId":"prj_0BoiQdp4HpS0QcfH425hy9ns536V","publicAlias":"https://cars-texasdriveauto.vercel.app/"},
+    {"slug":"the-dealers-point","repository":"darkapoparka/cars-thedealerspoint","mainSha":"e7ee8726b39ed2b8571649f31c633d844db58e72","projectId":"prj_tzUK5hufsHiC8aJ7uyxZF5qCii07","publicAlias":"https://cars-thedealerspoint.vercel.app/"}
+  ]
+}

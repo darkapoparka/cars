@@ -1,11 +1,16 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
   import { vehicleArtwork } from '$data/vehicle-artwork';
   import { featuredVehicles } from '$data/inventory';
   import { leadSite } from '$config/lead-site';
 
-  const vehicleCount = (count: number) => `${count} ${count === 1 ? 'автомобил' : 'автомобила'}`;
+  const vehicleCount = (count: number) => i18n.t("m_8cbaa55a52ef", { p0: count, p1: count === 1 ? i18n.t("m_2b2961a431b2") : i18n.t("m_1f58b1e965af") });
 
   const allArtwork = { src: leadSite.artwork.home.collection, width: 1200, height: 668, crop: [0, 96, 1200, 500] as const };
 
@@ -33,27 +38,27 @@
 
 <section class="dn-mobile-budget" aria-labelledby="mobile-budget-title">
   <div class="dn-mobile-section-heading">
-    <h2 id="mobile-budget-title">По бюджет</h2>
+    <h2 id="mobile-budget-title">{i18n.t("m_e8a40ac23a8c")}</h2>
   </div>
 
   <div class="dn-mobile-budget__grid">
     {#each budgetTiles as tile (tile.href)}
-      <a class="dn-mobile-budget-card" href={resolve(tile.href)}>
+      <a class="dn-mobile-budget-card" href={i18n.href(resolve(tile.href))}>
         <span class="dn-mobile-budget-card__media">
           <ArtworkRegion artwork={{ ...tile.artwork, crop: [0, 100, 1000, 460] }} />
         </span>
         <span class="dn-mobile-budget-card__copy">
-          <strong>{tile.label}</strong>
+          <strong>{i18n.text(tile.label)}</strong>
           <small>{tile.detail}</small>
         </span>
       </a>
     {/each}
-    <a class="dn-mobile-budget-card dn-mobile-budget-card--all" href={resolve('/listing-grid')}>
+    <a class="dn-mobile-budget-card dn-mobile-budget-card--all" href={i18n.href(resolve('/listing-grid'))}>
       <span class="dn-mobile-budget-card__media">
         <ArtworkRegion artwork={allArtwork} />
       </span>
       <span class="dn-mobile-budget-card__copy">
-        <strong>Всички</strong>
+        <strong>{i18n.t("m_a52ace420f21")}</strong>
         <small>{vehicleCount(featuredVehicles.length)}</small>
       </span>
     </a>

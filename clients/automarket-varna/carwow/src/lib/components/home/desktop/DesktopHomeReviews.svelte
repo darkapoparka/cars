@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	import Check from '@lucide/svelte/icons/check';
 	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
@@ -17,7 +20,7 @@
 		showHeaderCta = true,
 		showBelowCta = false,
 		balancedActionCards = false,
-		ctaLabel = 'Виж всички'
+		ctaLabel = i18n.t('copy.5701bc5c6a95')
 	}: {
 		showReviews?: boolean;
 		showActionCards?: boolean;
@@ -53,8 +56,8 @@
 			modifier: 'inventory',
 			image: '/assets/images/home-promos/gclass-urus-pair-v4.webp',
 			alt: 'Mercedes-Benz G-Class и Lamborghini Urus',
-			title: 'Купи автомобил уверено',
-			balancedTitle: 'Купи автомобил',
+			title: i18n.t('copy.e59363561d98'),
+			balancedTitle: i18n.t('copy.2c7f964ab3f3'),
 			titleHref: '/inventory',
 			bullets: [
 				'Прегледайте актуалната наличност.',
@@ -67,19 +70,19 @@
 				'Уговорете оглед с екипа.'
 			],
 			ctaHref: '/inventory',
-			ctaLabel: 'Разгледай автомобилите'
+			ctaLabel: i18n.t('copy.c79b6820c344')
 		},
 		{
 			id: 'sell-or-trade',
 			modifier: 'sell',
 			image: '/assets/images/home-promos/urus-rear-v4.webp',
 			alt: 'Продай или замени автомобил',
-			title: 'Продай или замени лесно',
-			balancedTitle: 'Продай или замени',
+			title: i18n.t('copy.3a5675b88f80'),
+			balancedTitle: i18n.t('copy.3ba407bb3a13'),
 			titleHref: '/sell-your-car',
 			bullets: [
 				'Изпратете снимки и данни за автомобила.',
-				`Получете обратна връзка от екипа на ${daynightSite.shortName}.`,
+				i18n.t('pattern.2a875564e65c', { v0: daynightSite.shortName }),
 				'Обсъдете продажба, бартер и следващи стъпки.'
 			],
 			balancedBullets: [
@@ -88,7 +91,7 @@
 				'Обсъдете продажба или замяна.'
 			],
 			ctaHref: '/sell-your-car/request',
-			ctaLabel: 'Продай автомобил'
+			ctaLabel: i18n.t('copy.e72ca6df1e26')
 		}
 	];
 </script>
@@ -98,16 +101,16 @@
 	class:daynight-home-section--reviews-with-banner={showReviews}
 	class:daynight-home-section--actions={!showReviews && showActionCards}
 	class:daynight-home-section--balanced-actions={balancedActionCards}
-	aria-label={!showReviews && showActionCards ? 'Купи или продай' : undefined}
+	aria-label={!showReviews && showActionCards ? i18n.t('copy.45fb1be3fa4b') : undefined}
 >
 	{#if showReviews}
 		<div class="daynight-home-container home-reviews-heading">
 			<DesktopSectionHeading
-				title="Отзиви от клиенти"
-				href={showHeaderCta ? resolve('/reviews') : undefined}
+				title={i18n.t('copy.93b3d88de23a')}
+				href={i18n.href(showHeaderCta ? resolve('/reviews') : undefined)}
 				label={ctaLabel}
 			/>
-			<p class="home-reviews-disclosure">{daynightReviewDisclosure}</p>
+			<p class="home-reviews-disclosure">{i18n.text(daynightReviewDisclosure)}</p>
 		</div>
 		<div
 			class="daynight-home-container daynight-home-section-panel daynight-home-section-panel--reviews"
@@ -116,24 +119,24 @@
 				<div class="daynight-home-review-grid__items">
 					{#each reviews as review (review.id)}
 						<div class="daynight-home-review-grid__item">
-							<a href={resolve('/reviews')} class="daynight-home-review-card">
+							<a href={i18n.href(resolve('/reviews'))} class="daynight-home-review-card">
 								<div class="daynight-home-review-card__rating">
 									{#each starIds.slice(0, review.rating) as star (star)}
-										<img src="/assets/icons/star.svg" alt="" aria-hidden="true" />
+										<img src={i18n.asset('/assets/icons/star.svg')} alt="" aria-hidden="true" />
 									{/each}
 								</div>
-								<p class="daynight-home-review-card__description">{review.text}</p>
+								<p class="daynight-home-review-card__description">{i18n.text(review.text)}</p>
 								<div class="daynight-home-review-card__user">
 									<img
 										class="daynight-home-review-card__avatar"
-										src={desktopOnlyImagePlaceholder}
+										src={i18n.asset(desktopOnlyImagePlaceholder)}
 										srcset={desktopOnlySrcset(review.avatar, 160)}
 										sizes={desktopOnlySizes('56px')}
-										alt={review.name}
+										alt={i18n.text(review.name)}
 									/>
 									<div class="daynight-home-review-card__user-content">
-										<p class="daynight-home-review-card__name">{review.name}</p>
-										<p class="daynight-home-review-card__meta">{review.label}</p>
+										<p class="daynight-home-review-card__name">{i18n.text(review.name)}</p>
+										<p class="daynight-home-review-card__meta">{i18n.text(review.label)}</p>
 									</div>
 								</div>
 							</a>
@@ -143,8 +146,8 @@
 			</div>
 			{#if showBelowCta}
 				<div class="daynight-home-reviews__browse-cta">
-					<a href={resolve('/reviews')} class="daynight-home-reviews__browse-cta-link">
-						{ctaLabel}
+					<a href={i18n.href(resolve('/reviews'))} class="daynight-home-reviews__browse-cta-link">
+						{i18n.text(ctaLabel)}
 					</a>
 				</div>
 			{/if}
@@ -161,29 +164,35 @@
 						<div class={`daynight-home-action-card daynight-home-action-card--${card.modifier}`}>
 							<img
 								class="daynight-home-action-card__image"
-								src={desktopOnlyImagePlaceholder}
+								src={i18n.asset(desktopOnlyImagePlaceholder)}
 								srcset={desktopOnlySrcset(card.image, 1536)}
 								sizes={desktopOnlySizes('44vw')}
-								alt={card.alt}
+								alt={i18n.text(card.alt)}
 							/>
 							<div class="daynight-home-action-card__content">
 								<p class="daynight-home-action-card__heading">
-									<a href={resolve(card.titleHref)} class="daynight-home-action-card__title">
+									<a
+										href={i18n.href(resolve(card.titleHref))}
+										class="daynight-home-action-card__title"
+									>
 										{balancedActionCards ? card.balancedTitle : card.title}
 									</a>
 								</p>
 								<ul class="daynight-home-action-card__list">
 									{#each balancedActionCards ? card.balancedBullets : card.bullets as bullet (bullet)}
-										<li><Check size={15} strokeWidth={2} aria-hidden="true" />{bullet}</li>
+										<li>
+											<Check size={15} strokeWidth={2} aria-hidden="true" />{i18n.text(bullet)}
+										</li>
 									{/each}
 								</ul>
 								<div class="home-action-button">
 									{#if card.modifier === 'inventory'}<DesktopBrowseLink
-											href={resolve(card.ctaHref)}
+											href={i18n.href(resolve(card.ctaHref))}
 											label={card.ctaLabel}
 											tone="dark"
-										/>{:else}<a href={resolve(card.ctaHref)} class="daynight-home-action-card__cta"
-											>{card.ctaLabel}</a
+										/>{:else}<a
+											href={i18n.href(resolve(card.ctaHref))}
+											class="daynight-home-action-card__cta">{i18n.text(card.ctaLabel)}</a
 										>{/if}
 								</div>
 							</div>

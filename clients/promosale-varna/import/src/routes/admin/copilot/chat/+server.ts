@@ -1,4 +1,5 @@
 import { env } from '$env/dynamic/private';
+import { runtimeConfig } from '$lib/server/runtime-config';
 import { error } from '@sveltejs/kit';
 import { openai } from '@ai-sdk/openai';
 import {
@@ -20,7 +21,7 @@ import {
 import { requireDayNightPageSession } from '$lib/server/auth';
 
 const modelName = () => env.OPENAI_MODEL || 'gpt-5.5';
-const hasOpenAiKey = () => Boolean(env.OPENAI_API_KEY?.trim());
+const hasOpenAiKey = () => runtimeConfig().aiEnabled;
 
 const fallbackStreamResponse = ({
 	message,

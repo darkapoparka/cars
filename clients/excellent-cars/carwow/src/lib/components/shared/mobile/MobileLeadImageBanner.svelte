@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { ChevronRight } from '@lucide/svelte';
 	type Props = { title: string; action: string; image: string } & (
 		| { href: string; onOpen?: never }
@@ -8,7 +11,7 @@
 </script>
 
 {#snippet content()}
-	<img src={image} alt="" width="960" height="540" />
+	<img src={i18n.asset(image)} alt="" width="960" height="540" />
 	<strong class="lead-image-banner__title">{title}</strong>
 	<span class="lead-image-banner__action" aria-hidden="true"
 		>{action}<ChevronRight size={17} strokeWidth={2.5} /></span
@@ -16,7 +19,9 @@
 {/snippet}
 
 {#if href}
-	<a class="lead-image-banner" {href} aria-label={`${action}: ${title}`}>{@render content()}</a>
+	<a class="lead-image-banner" href={i18n.href(href)} aria-label={`${action}: ${title}`}
+		>{@render content()}</a
+	>
 {:else}
 	<button
 		class="lead-image-banner"

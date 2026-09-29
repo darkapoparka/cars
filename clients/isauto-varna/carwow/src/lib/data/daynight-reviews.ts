@@ -8,8 +8,7 @@ export type DayNightReview = {
 };
 
 export const daynightReviews: DayNightReview[] = [];
-export const daynightReviewDisclosure =
-	'Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения.' as const;
+export const daynightReviewDisclosure = "Демонстрационни отзиви и оценки. Не са потвърдени клиентски мнения." as const;
 export const daynightReviewCount = 0;
 export const daynightReviewCountLabel = "Няма потвърдени отзиви";
 export const daynightReviewLinkLabel = daynightReviewCountLabel;

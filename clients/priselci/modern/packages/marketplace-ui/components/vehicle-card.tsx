@@ -3,8 +3,8 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 import { getListingPath } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { Heart, Images } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { rememberInventoryReturn } from "../lib/inventory-return";
@@ -19,10 +19,12 @@ import {
   getVehicleCardViewListingLabel,
   vehicleCardPlaceholder,
 } from "../lib/vehicle-card-view-policy";
+import Image from "./public-image";
 import {
   VehicleCardContent,
   VehicleCardMediaBadges,
 } from "./vehicle-card-content";
+import styles from "./vehicle-card-desktop.module.css";
 
 export type {
   VehicleCardPriceInsight,
@@ -32,9 +34,10 @@ export type {
 
 export const VehicleCard = ({
   density = "default",
+  desktopHeadingLevel = 2,
   desktopLayout = "list",
   href,
-  listing,
+  listing: sourceListing,
   locale,
   presentation = "default",
   priceInsight,
@@ -44,6 +47,7 @@ export const VehicleCard = ({
   trustSignals = [],
   viewMode = "list",
 }: VehicleCardProps) => {
+  const listing = localizeListingCopy(sourceListing, locale);
   const [imageFailed, setImageFailed] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(!listing.images[0]?.url);
   const isGrid = viewMode === "grid";
@@ -62,8 +66,8 @@ export const VehicleCard = ({
   return (
     <article
       className={cn(
+        styles.card,
         "group flex overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border",
-        "lg:transition-[border-color,box-shadow] lg:hover:border-foreground/25 lg:hover:shadow-sm",
         !isDesktopComparison &&
           "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
@@ -71,6 +75,8 @@ export const VehicleCard = ({
         isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
       )}
       data-presentation={presentation}
+      data-slot="vehicle-card"
+      data-view-mode={viewMode}
       onClickCapture={() => rememberInventoryReturn(listingHref)}
     >
       <div
@@ -154,6 +160,7 @@ export const VehicleCard = ({
       </div>
 
       <VehicleCardContent
+        desktopHeadingLevel={desktopHeadingLevel}
         isDesktopComparison={isDesktopComparison}
         listing={listing}
         listingHref={listingHref}

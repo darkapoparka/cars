@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-19T20:03:43.455Z",
+  "updatedAt": "2026-09-28T15:27:16.511Z",
   "githubOwner": "darkapoparka",
   "vercelTeam": "tyj5",
   "model": "One canonical dealer folder; one publishing repository and Vercel project; actual variants declared per dealer.",
@@ -190,6 +190,28 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "production-media-verified",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "c2fae6125d0153a6123f8fed8ab265fc44907463",
+          "preservedPublishingCommit": "66737076ff58b64227d47f262fee2d0b24a66ad3",
+          "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_DDddERiwsmswKh8VtFhK8adYCpLN",
+          "deploymentState": "READY",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": {
+            "outputCopiesRemaining": 0,
+            "assetHashChecks": 12,
+            "htmlRoutes": 4,
+            "checkedAt": "2026-09-28T15:25:08.613Z"
+          },
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -432,6 +454,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "9e88ddbba72e2cf6ce82e6da068a1ec42bddc019",
+          "preservedPublishingCommit": "fc6a4f20049e6d8c3c6730add29bf9822c2d91a7",
+          "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_GzKmtV4eekr2kXRyiKVfmZ1FGSVe",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -620,6 +659,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "fa76458617285d1e89ee61a48c6642166f43ff7d",
+          "preservedPublishingCommit": "f485d5521d06c1fbb19d8e849b168e97914eb0de",
+          "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_6uoPiwNuqrcw1QnYEwgvjxXisHni",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "handoff": "https://github.com/darkapoparka/cars-alreefusedcars/blob/main/docs/HANDOFF.md",
@@ -877,6 +933,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "e77cca8cb88cde735b6d09c8ed24dadba0aaae91",
+          "preservedPublishingCommit": "da9d640e5012eac4cff9ad06e73348458be5b88f",
+          "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_5JjsRdmKw6Qcxu1UKPv5dLkXA9m6",
+          "deploymentState": "BUILDING",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -1041,6 +1114,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "9dd70c0504df7272dbbcc6314b0cf12a69b98137",
+          "preservedPublishingCommit": "7de21386711ed436ec2a47eabea1db1d41d46577",
+          "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_HQe1X7suanxA4SsEtcVMTT2j9Sge",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -1495,6 +1585,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "f146e5ed0e45d018b50e71be6dcc85ff9365a5b8",
+          "preservedPublishingCommit": "cf19956eaff90de6c31c7cd6c2a406a8e92726aa",
+          "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_tb6KTSznFhcDrfcbcztuhe6wquEW",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -1659,6 +1766,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "3978a8a573dee45cb482335c1917ba4b9da9e57b",
+          "preservedPublishingCommit": "5712b74c1baf73a419afd83e3edf90575cf0c169",
+          "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_6qvQVkohJHsjB11rAnRG99su6fPS",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -1823,6 +1947,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "e23b66ab8cd796f77a33cc7687a517efed72df17",
+          "preservedPublishingCommit": "30655e6e92fdf233786d85e2683c4abddfe154b6",
+          "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_2wPvndcN4J3bEwheGuT18cU72tvB",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -2314,6 +2455,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "95e468e8cbc0000a83b7b24e6a4abcd191032ebb",
+          "preservedPublishingCommit": "3281967a24d3099b7d92c11a262be665276f71f8",
+          "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_FFkqNXyen3B5W7fYCW7jA766wVHM",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -2664,6 +2822,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "144c36b13508603c2668070f73b7f8cf9aa4eb51",
+          "preservedPublishingCommit": "89a32694da033618ee8d196a9f7ad7f6da5e26fa",
+          "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_8S9PPNv97FDZdgU2t3gjiJfpDVgy",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "canonicalSourceRef": "main",
@@ -2847,6 +3022,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "4b7e62ab5aa61615ff0ebe1db5fdb1f2a6767539",
+          "preservedPublishingCommit": "34d408289a0e94fc9b04f8cc4a17c564d0163016",
+          "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_BWK7UTGUS8yeiJfxkM1Yo4sTSWCT",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -3011,6 +3203,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "564fd4a1b78613895e18078d4465dd42fa782a92",
+          "preservedPublishingCommit": "f60c224e1c39dd085e5d44046fdcb7bda2b2a5cf",
+          "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_85kTAmtQFZ9G1oiiWDgq89z57bJJ",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -3359,6 +3568,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "f4e4c6de9853a31451ddcbc94102c755d32896ac",
+          "preservedPublishingCommit": "a165f87cdbf5b0cf9bcede64d206a7f2ffbf6670",
+          "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_ALwBM8H5UGSxvEkbyZm83oeicbDX",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -3802,6 +4028,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "15dacb046476660d2a2e293be3d0e73f577f6df8",
+          "preservedPublishingCommit": "3d2d599cbd07697b3c8fa38e5e48cdcfabc3b566",
+          "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_GAAgMqQpQ9fb6WKQYEaM26zmqLRv",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "canonicalSourceRef": "main",
@@ -4828,6 +5071,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "e0c7c050c776f38fffa0c75cb8e7111c3aa362df",
+          "preservedPublishingCommit": "2fa75d51ff306bf94e7bef514f840de87fac64b7",
+          "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_3S8Qn7h9ku9voXBAHbPNQWfW6xbX",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "canonicalSourceRef": "main",
@@ -4953,6 +5213,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "49efafc9ecacb0eae000464beedaccfb1544fb9e",
+          "preservedPublishingCommit": "8d0ada478a5cc482a00b924d7ed5dc79386ba80d",
+          "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_9rjWV9P1UGtj7D4ZJdAkQSXqxD19",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -5286,6 +5563,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "003a0e7ee9f1b9cc4064c8ac1eaed845fc87173f",
+          "preservedPublishingCommit": "e57918fe52006f59956db46a8732bc0fcfb57fc9",
+          "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_CyC7gbfek758D65qa9Q8kTgogtVa",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -5635,6 +5929,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "439fdf95683ec5431ebc0cd08c5229e485618061",
+          "preservedPublishingCommit": "45e0b8d95c796ace42439aa46810c5689d894b7b",
+          "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_4tCqfwQkTJPDqthEe9wNkFCgJ6zC",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -6414,6 +6725,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "ae509f44784be9bf6c812baf3c6a731afbf9e110",
+          "preservedPublishingCommit": "c26d968102b5e73f20cc55675bf4da53d77ee756",
+          "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_2oJqgq4uf1a81ZTfitzNMj6uCVYm",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -7004,6 +7332,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "caa526922e72e0efa6c0fac11bbb3c40b3293205",
+          "preservedPublishingCommit": "20882208102b71d7f8a7b6ebae3840464435537d",
+          "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_FE4KZQdMB5VzqWRm4Cv5eXKBwN8T",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 847,
+          "selectedBytes": 408634704,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "canonicalSourceRef": "main",
@@ -7156,6 +7501,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "d60341f2445b34dd90b0f244ececfff143cbba8c",
+          "preservedPublishingCommit": "8b85d4374fa0dfb3e04b145d0e68864d328f7e9b",
+          "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_FAYhEUMvKJssJZMQQ3oMYMrtMWSX",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "canonicalSourceRef": "main",
@@ -7492,6 +7854,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "78dbf7b73f51dfe3e9c55b179098e9e4edf4db15",
+          "preservedPublishingCommit": "f73b8f6f7a4fe026b88165942c7557d86c3a8463",
+          "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_BW5iy3Un3t43m4Dy9QCSiwRKrEjZ",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -7680,6 +8059,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "2cad88becd319978b913488c105493250e66cb24",
+          "preservedPublishingCommit": "6143d16a18a29a1ee5d1fd9973fae07b5207d370",
+          "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_79JR2aWD9nyYKsZs9cVF9xKMvEvc",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 847,
+          "selectedBytes": 408634704,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "deliveryHistory": [
@@ -8706,6 +9102,28 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "production-media-verified",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "6cc65c8662a09844469b11009f76efaea7950d3f",
+          "preservedPublishingCommit": "605b2aac3df17d4ac7663e05635d1a27c6a712b1",
+          "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_J56vN86uUV8EKMHt6SuKp6mmQvE7",
+          "deploymentState": "READY",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": {
+            "outputCopiesRemaining": 0,
+            "assetHashChecks": 12,
+            "htmlRoutes": 4,
+            "checkedAt": "2026-09-28T15:25:45.072Z"
+          },
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "legacyIndex": {
@@ -8871,6 +9289,23 @@
         },
         "ownerReview": {
           "state": "unknown"
+        },
+        "sharedMedia": {
+          "recordedAt": "2026-09-28T15:27:16.511Z",
+          "state": "published-awaiting-build-verification",
+          "sourceCommit": "205f989e9673464cd07785b23532750f823671f6",
+          "exportCommit": "54f37dfb67bc8f4367f039f49b1ff3ce572d2286",
+          "preservedPublishingCommit": "b359a9ca0e2c32f3ad11c94908637e3e3eb09b53",
+          "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+          "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+          "deploymentId": "dpl_2kr7tY3e3dYHAWF9RFXw452rNht5",
+          "deploymentState": "QUEUED",
+          "selectedFiles": 549,
+          "selectedBytes": 287365636,
+          "sharedCatalogObjects": 823,
+          "sharedCatalogBytes": 454227903,
+          "verification": null,
+          "scope": "Shared-media storage fix only; preserves all pre-existing application blobs. Does not imply full visual or owner approval."
         }
       },
       "canonicalSourceRef": "main",

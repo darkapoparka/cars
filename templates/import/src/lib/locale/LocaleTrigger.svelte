@@ -4,7 +4,11 @@
 	import { localeHref } from './core';
 	import { getI18n } from './context';
 	const i18n = getI18n();
-	let { compact = false, beforeOpen }: { compact?: boolean; beforeOpen?: () => void | HTMLElement | Promise<void | HTMLElement> } = $props();
+	let {
+		compact = false,
+		beforeOpen
+	}: { compact?: boolean; beforeOpen?: () => void | HTMLElement | Promise<void | HTMLElement> } =
+		$props();
 </script>
 
 <a

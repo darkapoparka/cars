@@ -1,2 +1,2 @@
-@import 'tailwindcss';
-@import './daynight.tailwind.css';
+/* Compatibility reference; utility output is owned by app.css. */
+@reference './app.css';

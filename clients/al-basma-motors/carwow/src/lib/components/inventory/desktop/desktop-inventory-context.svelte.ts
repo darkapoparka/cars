@@ -1,3 +1,4 @@
+import { localeHref, routeParts } from '$lib/locale/core';
 import { createContext } from 'svelte';
 import { replaceState } from '$app/navigation';
 import { resolve } from '$app/paths';
@@ -280,7 +281,14 @@ export class DesktopInventoryFilters {
 		const params = serializeInventoryFilters(this.store.criteria, this.sort, page.url.searchParams);
 		const query = params.toString();
 		const nextPath: InventoryFilterPath = query ? `/inventory?${query}` : '/inventory';
-		replaceState(resolve(nextPath), {});
+		replaceState(
+			localeHref(
+				resolve(nextPath),
+				page.data.localeState?.locale ?? 'bg',
+				routeParts(page.url.pathname).base
+			) + page.url.hash,
+			{}
+		);
 	}
 }
 

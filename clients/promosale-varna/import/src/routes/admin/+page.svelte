@@ -128,23 +128,23 @@
 				</Card.Header>
 				<Card.Content class="grid gap-4 p-4 sm:grid-cols-3">
 					<div class="grid gap-1">
-						<span class="text-muted-foreground text-sm">Inventory coverage</span>
+						<span class="text-sm text-muted-foreground">Inventory coverage</span>
 						<span class="text-3xl font-semibold tabular-nums">
 							{formatNumber(data.cms.kpis.liveListings)}
 						</span>
-						<span class="text-muted-foreground text-sm">live cars</span>
+						<span class="text-sm text-muted-foreground">live cars</span>
 					</div>
 					<div class="grid gap-1">
-						<span class="text-muted-foreground text-sm">Customer work</span>
+						<span class="text-sm text-muted-foreground">Customer work</span>
 						<span class="text-3xl font-semibold tabular-nums">{formatNumber(openWork)}</span>
-						<span class="text-muted-foreground text-sm">items waiting</span>
+						<span class="text-sm text-muted-foreground">items waiting</span>
 					</div>
 					<div class="grid gap-1">
-						<span class="text-muted-foreground text-sm">Content</span>
+						<span class="text-sm text-muted-foreground">Content</span>
 						<span class="text-3xl font-semibold tabular-nums">
 							{formatNumber(data.cms.kpis.publishedPosts)}
 						</span>
-						<span class="text-muted-foreground text-sm">published posts</span>
+						<span class="text-sm text-muted-foreground">published posts</span>
 					</div>
 				</Card.Content>
 			</Card.Root>
@@ -179,7 +179,7 @@
 		{#each stats as stat (stat.label)}
 			{@const Icon = stat.icon}
 			<a href={resolve(stat.href as '/')} class="group">
-				<Card.Root size="sm" class="group-hover:bg-muted/50 min-h-28 transition-colors">
+				<Card.Root size="sm" class="min-h-28 transition-colors group-hover:bg-muted/50">
 					<Card.Header>
 						<Card.Description>{stat.label}</Card.Description>
 						<Card.Action>
@@ -190,7 +190,7 @@
 						</Card.Title>
 					</Card.Header>
 					<Card.Footer class="text-sm">
-						<span class="text-muted-foreground truncate">{stat.detail}</span>
+						<span class="truncate text-muted-foreground">{stat.detail}</span>
 					</Card.Footer>
 				</Card.Root>
 			</a>
@@ -216,13 +216,13 @@
 					<div class="grid divide-y">
 						{#each data.cms.recentInventory as vehicle (vehicle.id)}
 							<a
-								class="hover:bg-muted/70 grid min-h-20 gap-3 px-4 py-3 transition-colors md:grid-cols-[minmax(0,1fr)_auto]"
+								class="grid min-h-20 gap-3 px-4 py-3 transition-colors hover:bg-muted/70 md:grid-cols-[minmax(0,1fr)_auto]"
 								href={resolve('/admin/inventory/edit/[id]', { id: vehicle.id })}
 								data-sveltekit-reload
 							>
 								<span class="flex min-w-0 items-center gap-3">
 									<img
-										class="ring-border size-14 rounded-lg object-cover ring-1"
+										class="size-14 rounded-lg object-cover ring-1 ring-border"
 										src={vehicle.image}
 										alt={vehicle.title}
 										decoding="async"
@@ -230,7 +230,7 @@
 									/>
 									<span class="min-w-0">
 										<span class="block truncate font-medium">{vehicle.title}</span>
-										<span class="text-muted-foreground block truncate text-sm">
+										<span class="block truncate text-sm text-muted-foreground">
 											{vehicle.brand} / {vehicle.year} / {vehicle.fuel}
 										</span>
 									</span>
@@ -276,7 +276,7 @@
 						<div class="grid gap-1 p-2">
 							{#each data.cms.recentWork as item (item.id)}
 								<a
-									class="hover:bg-muted flex min-h-20 items-start justify-between gap-3 rounded-lg px-3 py-3 text-sm transition-colors"
+									class="flex min-h-20 items-start justify-between gap-3 rounded-lg px-3 py-3 text-sm transition-colors hover:bg-muted"
 									href={resolve(item.href)}
 								>
 									<span class="flex min-w-0 gap-3">
@@ -285,10 +285,10 @@
 										</Avatar.Root>
 										<span class="min-w-0">
 											<span class="block truncate font-medium">{item.label}</span>
-											<span class="text-muted-foreground block truncate text-xs">
+											<span class="block truncate text-xs text-muted-foreground">
 												{item.type} / {item.meta}
 											</span>
-											<span class="text-muted-foreground block text-xs">
+											<span class="block text-xs text-muted-foreground">
 												{formatDate(item.createdAt)}
 											</span>
 										</span>
@@ -314,7 +314,7 @@
 					</Card.Title>
 				</Card.Header>
 				<Separator />
-				<Card.Footer class="text-muted-foreground text-sm">
+				<Card.Footer class="text-sm text-muted-foreground">
 					Inquiries, messages, and import/sell-car requests waiting for staff action.
 				</Card.Footer>
 			</Card.Root>

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { ArrowRight } from '@lucide/svelte';
 	let {
 		title,
@@ -32,7 +35,7 @@
 			>{action}<ArrowRight size={16} strokeWidth={2} aria-hidden="true" /></span
 		>
 	</span>
-	<img class="action-card__image" src={image} alt="" loading="lazy" decoding="async" />
+	<img class="action-card__image" src={i18n.asset(image)} alt="" loading="lazy" decoding="async" />
 </span>
 
 <style>

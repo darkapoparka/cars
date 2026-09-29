@@ -6,6 +6,7 @@ import {
 } from './daynight-image-fallback';
 
 class ImageStub extends EventTarget {
+	ownerDocument = { documentElement: { lang: 'bg' } };
 	src = '/vehicle.jpg';
 	currentSrc = '';
 	complete = false;
@@ -32,6 +33,15 @@ class ImageStub extends EventTarget {
 }
 
 describe('image fallback lifecycle', () => {
+	it('renders native English fallback copy from the owning document locale', () => {
+		const stub = new ImageStub();
+		stub.ownerDocument.documentElement.lang = 'en';
+		stub.complete = true;
+		const action = daynightImageFallback(stub.image);
+		expect(decodeURIComponent(stub.src)).toContain('Photos coming soon');
+		expect(decodeURIComponent(stub.src)).not.toContain('Очаквайте снимки');
+		action.destroy();
+	});
 	it('leaves healthy images and healthy transparent pixels alone', () => {
 		const stub = new ImageStub();
 		stub.complete = true;

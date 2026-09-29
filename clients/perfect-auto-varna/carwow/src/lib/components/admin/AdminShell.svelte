@@ -149,7 +149,7 @@
 						Inventory, leads, imports, and content are managed from this workspace.
 					</p>
 				</div>
-				<form method="POST" action="/admin/logout">
+				<form method="POST" action={resolve('/admin/logout')}>
 					<Button
 						variant="ghost"
 						class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground w-full justify-start"

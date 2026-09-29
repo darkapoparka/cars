@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-25T20:46:19Z",
+  "teamId": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+  "teamSlug": "tyj5",
+  "canonicalCarsSource": "c0aaf94888daddc0457e56d3b5dd48b8018d1372",
+  "status": {
+    "dealers": 25,
+    "exactShaReady": 10,
+    "routeChecksPassed": 180,
+    "routeChecksExpectedForCompleted": 180,
+    "previousAssetAuditPassed": 300,
+    "previousAssetAuditExpected": 300,
+    "remaining": 15
+  },
+  "completed": [
+    {"slug":"al-basma-motors","projectId":"prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk","deploymentId":"dpl_Bnkk3pwrQFnNRfSYZsxhLr7k9Dqg","sha":"27ccee7565b1da8ec4f150182893b204b645bfa9","alias":"cars-albasmamotors.vercel.app","routes":"18/18"},
+    {"slug":"al-reef-used-cars","projectId":"prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm","deploymentId":"dpl_EHPjThpg1B5S1TDjgYMhoaoUgbCW","sha":"1c1e906a8834f0351f71a9477b4898788adfc1d6","alias":"cars-alreefusedcars.vercel.app","routes":"18/18"},
+    {"slug":"al-hamoor-al-thahabi","projectId":"prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw","deploymentId":"dpl_CJU9A77RpXa2T9MkeYDx8vshUXgr","sha":"0258dd805fa4ef042437d2a3c4e03dca764be325","alias":"cars-alhamooralthahabi.vercel.app","routes":"18/18"},
+    {"slug":"asko-96","projectId":"prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX","deploymentId":"dpl_Ce94rUWuKFHsCtorDRkJTh7e2eEx","sha":"1c8a4a69117db223644430268b901e9bf3ed67fb","alias":"cars-asko96.vercel.app","routes":"18/18"},
+    {"slug":"astracar","projectId":"prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT","deploymentId":"dpl_Esyi1GvRC3TjvPad4THmr6C8feyr","sha":"345217d10d2c754c1c51ca1120c279dda483ce41","alias":"cars-astracar.vercel.app","routes":"18/18"},
+    {"slug":"autolife","projectId":"prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd","deploymentId":"dpl_DevU437vsxK6JVyxgqY78Rju1eXZ","sha":"16dba23ccd20cb5f014ace4a14b950e289cd5fc1","alias":"cars-autolife.vercel.app","routes":"18/18"},
+    {"slug":"automarket-varna","projectId":"prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP","deploymentId":"dpl_6xPHCngq5jX1A6MbST4jUYyYcz5i","sha":"84220c13e213784d3826254caa53eeef691f108f","alias":"cars-automarketvarna.vercel.app","routes":"18/18"},
+    {"slug":"avangard-auto","projectId":"prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc","deploymentId":"dpl_3dACYrh58qtY62x4XxgeduUnehgd","sha":"8dddf366095859ce6b44eb6100a22d91bbe4ce0b","alias":"cars-avangardauto.vercel.app","routes":"18/18"},
+    {"slug":"champion-auto-pro","projectId":"prj_Zles0MpLROdFwgSnvuvpxrNBWcRY","deploymentId":"dpl_7URYw5ZykeXiv4VBcrLwa2VKPsxX","sha":"8e0e1003e0279b836485f62517667bc45629bf07","alias":"cars-championautopro.vercel.app","routes":"18/18"},
+    {"slug":"day-and-night-auto-group","projectId":"prj_enD9orrI6rwguMMtDlS0IP6RAXjr","deploymentId":"dpl_D6nQht8NGBLtjQVWvKw2zu4PUaTn","sha":"f2fa2ba5bec9fe84a4b8256485d97191fc125e75","alias":"day-and-night-a.vercel.app","routes":"18/18"}
+  ],
+  "blocker": {
+    "directApi": {
+      "code": "api-deployments-free-per-day",
+      "httpStatus": 402,
+      "limit": 100,
+      "remaining": 0,
+      "resetEpochMs": 1790455462978,
+      "resetUtc": "2026-09-26T20:44:22.978Z",
+      "resetEuropeSofia": "2026-09-26T23:44:22.978+03:00",
+      "failedDealer": "eliqauto"
+    },
+    "gitIntegration": {
+      "code": "build-rate-limit",
+      "description": "Deployment rate limited — retry in 24 hours.",
+      "testRepository": "darkapoparka/cars-eliqauto",
+      "testCommit": "7b05491a5e79196210ceae1658828c42fa9c35eb",
+      "applicationTreeCommit": "e101f99efcb22a665d33726057b5446c77e6ffd3",
+      "result": "No Vercel deployment object was created. GitHub Vercel commit status failed immediately."
+    }
+  },
+  "remaining": [
+    {"slug":"eliqauto","projectId":"prj_0aDYGRa0LI91M3AJRY4dlGssLUF3","projectName":"cars-eliqauto","repoId":1364890388,"sha":"7b05491a5e79196210ceae1658828c42fa9c35eb","applicationTreeCommit":"e101f99efcb22a665d33726057b5446c77e6ffd3","alias":"cars-eliqauto.vercel.app"},
+    {"slug":"elit-auto-import","projectId":"prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs","projectName":"cars-elitautoimport","repoId":1364801726,"sha":"6d802ed26cbed0bf58f0f249e9abf6fddb7d2898","alias":"cars-elitautoimport.vercel.app"},
+    {"slug":"excellent-cars","projectId":"prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq","projectName":"excellent-cars","repoId":1328720739,"sha":"51f8a5f8e66e92e615c1f0bdfd34be0595118d92","alias":"excellent-cars.vercel.app"},
+    {"slug":"f1rst-motors","projectId":"prj_mavqUXCj6hSEg8EvBJW8G3XJlihm","projectName":"cars-f1rstmotors","repoId":1365207143,"sha":"afa9620cc740ab548ecfef03390fe8c93987c766","alias":"cars-f1rstmotors.vercel.app"},
+    {"slug":"isauto-varna","projectId":"prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv","projectName":"cars-isautovarna","repoId":1366074909,"sha":"65c162f38aabf04f821877cb49c850511adc18f5","alias":"cars-isautovarna.vercel.app"},
+    {"slug":"ivo-auto","projectId":"prj_bruM9mopofyBcgwxkKFG9tQFZBMN","projectName":"cars-ivoauto","repoId":1364782080,"sha":"e46fc6dd9562448f0b41e38a9bd7fe3c4ca2c867","alias":"cars-ivoauto.vercel.app"},
+    {"slug":"kg-team-auto","projectId":"prj_IALzfkjBAv5N4YJfNB1sEliOaNBg","projectName":"cars-kgteamauto","repoId":1364890255,"sha":"113fc58d7d71a4024e3faee2afdb806ab43b001d","alias":"cars-kgteamauto.vercel.app"},
+    {"slug":"legend-auto","projectId":"prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw","projectName":"cars-legendauto","repoId":1364801702,"sha":"6ea71db471aad5329926b2c19688d3e35900704b","alias":"cars-legendauto.vercel.app"},
+    {"slug":"navara-car","projectId":"prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr","projectName":"cars-navaracar","repoId":1364890285,"sha":"27a617ed04dff89da4c5d495477b4eebdc1f1849","alias":"cars-navaracar.vercel.app"},
+    {"slug":"outletcars-varna","projectId":"prj_1KYEEcbBwAd5iCtAvDGM59INQLe7","projectName":"cars-outletcarsvarna","repoId":1364890456,"sha":"4fa9d7a4366df4f2a80d662682f910b5bed4ea17","alias":"cars-outletcarsvarna.vercel.app"},
+    {"slug":"perfect-auto-varna","projectId":"prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR","projectName":"cars-perfectauto","repoId":1364890555,"sha":"5f043a561b1e8d37ccf83d4b29599d952db8c90e","alias":"cars-perfectauto.vercel.app"},
+    {"slug":"priselci","projectId":"prj_GwnlfPmyImlJuiocl77NWplzvTTb","projectName":"cars-priselci","repoId":1364787756,"sha":"b3597e994e1f9168b01fd5bd4e510be85797c5ae","alias":"cars-priselci.vercel.app"},
+    {"slug":"promosale-varna","projectId":"prj_yjXIu0an7sqCiY26hKWgOGUl5hbY","projectName":"cars-promosalevarna","repoId":1364890820,"sha":"2658a36f4bee7aa614f2cf0e67e86726becd15bc","alias":"cars-promosalevarna.vercel.app"},
+    {"slug":"texas-drive-auto","projectId":"prj_0BoiQdp4HpS0QcfH425hy9ns536V","projectName":"cars-texasdriveauto","repoId":1365207293,"sha":"6ff6f5b1497dd8429e69845023d64343d5035938","alias":"cars-texasdriveauto.vercel.app"},
+    {"slug":"the-dealers-point","projectId":"prj_tzUK5hufsHiC8aJ7uyxZF5qCii07","projectName":"cars-thedealerspoint","repoId":1365207447,"sha":"1c58ab2690f060fa5ce4ab538441a68ebc9d484b","alias":"cars-thedealerspoint.vercel.app"}
+  ],
+  "templatePublishing": {
+    "carsTemplateProjectsDisconnectedFromMonorepo": true,
+    "projects": ["cars-template-auto-best","cars-template-modern","cars-template-carwow","cars-template-import"],
+    "reason": "Prevent repeated GIT_REPO_TOO_BIG_FOR_DISK failures while a controlled small-repository publishing path is reconciled. Existing public aliases continue serving prior READY artifacts."
+  },
+  "resumeGate": {
+    "mode": "sequential",
+    "maxParallel": 1,
+    "requirementsPerDealer": ["READY", "expected main SHA", "registered production alias", "18/18 EN/BG routes", "12/12 public assets"],
+    "stopOnFirstFailure": true,
+    "doNotUseEmptyTriggerCommits": true,
+    "doNotReconnectTemplateProjectsToCarsMonorepo": true
+  }
+}

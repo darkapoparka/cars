@@ -1,7 +1,7 @@
+import { localeFromUrl } from '$lib/locale/core';
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { agentDetailFromAgent } from '$lib/auxero/agent-detail';
-import { resolveLocale } from '$lib/i18n/messages';
 import { renderAuxeroPageDocument } from '$lib/server/auxero-page';
 import { auxeroPublicShellData } from '$lib/server/auxero-public-shell';
 import { getAgentDetailBySlug } from '$lib/server/agent-detail-state';
@@ -13,7 +13,7 @@ export const load: PageServerLoad = ({ params, request, url }) => {
 		error(404, 'Agent not found');
 	}
 
-	const locale = resolveLocale(url.searchParams.get('lang'));
+	const locale = localeFromUrl(url);
 	const pageDocument = renderAuxeroPageDocument(
 		'sale-agents-details.html',
 		{

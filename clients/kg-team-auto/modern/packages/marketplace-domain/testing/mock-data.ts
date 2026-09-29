@@ -4,7 +4,7 @@ import type { Money, VehicleListing } from "../types";
 export const mockListings: VehicleListing[] = [
   {
     "id": "am-1001",
-    "slug": "toyota-yaris-742708",
+    "slug": "toyota-yaris-1-33i-116000km-6-speed-swiss-edition-2014-11783754278742708",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -45,30 +45,17 @@ export const mockListings: VehicleListing[] = [
       {
         "bg": "Парктроник",
         "en": "Парктроник"
-      },
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатик",
-        "en": "Климатик"
       }
     ],
     "spec": {
       "make": "Toyota",
-      "model": "Yaris",
+      "model": "Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
       "year": 2014,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 116000,
-      "mileageUnit": "km",
-      "colorExterior": "Черен"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -83,7 +70,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1010",
-    "slug": "nissan-qashqai-309786",
+    "slug": "nissan-qashqai-2-0i-131000km-automatic-2014-21785829117309786",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -118,32 +105,19 @@ export const mockListings: VehicleListing[] = [
     },
     "features": [
       {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
         "bg": "4x4",
         "en": "4x4"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатроник",
-        "en": "Климатроник"
       }
     ],
     "spec": {
       "make": "Nissan",
-      "model": "Qashqai",
+      "model": "Qashqai 2.0i 131000KM AUTOMATIC",
       "year": 2014,
       "bodyType": "suv",
       "fuelType": "gasoline",
       "transmission": "automatic",
       "mileageValue": 131000,
-      "mileageUnit": "km",
-      "colorExterior": "Перла"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -158,7 +132,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1011",
-    "slug": "mitsubishi-colt-277480",
+    "slug": "mitsubishi-colt-1-5-i-swiss-2007-11678716951277480",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -191,26 +165,15 @@ export const mockListings: VehicleListing[] = [
       "region": "Пловдив",
       "country": "BG"
     },
-    "features": [
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Климатик",
-        "en": "Климатик"
-      }
-    ],
     "spec": {
       "make": "Mitsubishi",
-      "model": "Colt",
+      "model": "Colt 1.5 I SWISS",
       "year": 2007,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 189000,
-      "mileageUnit": "km",
-      "colorExterior": "Бял"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -225,7 +188,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1012",
-    "slug": "mini-cooper-954394",
+    "slug": "mini-cooper-1-6i-153000km-euro-5-75ps-2013-11773570472954394",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -262,30 +225,17 @@ export const mockListings: VehicleListing[] = [
       {
         "bg": "Парктроник",
         "en": "Парктроник"
-      },
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатроник",
-        "en": "Климатроник"
       }
     ],
     "spec": {
       "make": "Mini",
-      "model": "Cooper",
+      "model": "Cooper 1.6i 153000km EURO-5 75PS.",
       "year": 2013,
       "bodyType": "coupe",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 153000,
-      "mileageUnit": "km",
-      "colorExterior": "Черен"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -300,7 +250,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1013",
-    "slug": "honda-jazz-478967",
+    "slug": "honda-jazz-1-4-si-automatic-sport-edition-2013-11780222156478967",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -333,30 +283,15 @@ export const mockListings: VehicleListing[] = [
       "region": "Пловдив",
       "country": "BG"
     },
-    "features": [
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатроник",
-        "en": "Климатроник"
-      }
-    ],
     "spec": {
       "make": "Honda",
-      "model": "Jazz",
+      "model": "Jazz 1.4-SI AUTOMATIC SPORT EDITION",
       "year": 2013,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "automatic",
       "mileageValue": 145000,
-      "mileageUnit": "km",
-      "colorExterior": "Черен"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -371,7 +306,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1014",
-    "slug": "honda-cr-v-975689",
+    "slug": "honda-cr-v-2-2-i-ctdi-177000km-executiv-2009-21788253346975689",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -406,44 +341,31 @@ export const mockListings: VehicleListing[] = [
     },
     "features": [
       {
+        "bg": "4x4",
+        "en": "4x4"
+      },
+      {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
         "bg": "Навигация",
         "en": "Навигация"
       },
       {
         "bg": "Парктроник",
         "en": "Парктроник"
-      },
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "4x4",
-        "en": "4x4"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатроник",
-        "en": "Климатроник"
-      },
-      {
-        "bg": "Подгряване на седалките",
-        "en": "Подгряване на седалките"
       }
     ],
     "spec": {
       "make": "Honda",
-      "model": "Cr-v",
+      "model": "Cr-v 2.2 I-CTDI 177000KM EXECUTIV",
       "year": 2009,
       "bodyType": "suv",
       "fuelType": "diesel",
       "transmission": "manual",
       "mileageValue": 177000,
-      "mileageUnit": "km",
-      "colorExterior": "Сив"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -458,7 +380,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1002",
-    "slug": "vw-golf-874945",
+    "slug": "vw-golf-vi-tdi-swiss-edition-6-speed-4x4-2013-11782979504874945",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -493,36 +415,23 @@ export const mockListings: VehicleListing[] = [
     },
     "features": [
       {
-        "bg": "Парктроник",
-        "en": "Парктроник"
-      },
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
         "bg": "4x4",
         "en": "4x4"
       },
       {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатик",
-        "en": "Климатик"
+        "bg": "Парктроник",
+        "en": "Парктроник"
       }
     ],
     "spec": {
       "make": "VW",
-      "model": "Golf",
+      "model": "Golf VI-TDI SWISS EDITION 6-SPEED 4X4",
       "year": 2013,
       "bodyType": "wagon",
       "fuelType": "diesel",
       "transmission": "manual",
       "mileageValue": 197000,
-      "mileageUnit": "km",
-      "colorExterior": "Бял"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -537,7 +446,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1003",
-    "slug": "toyota-auris-201470",
+    "slug": "toyota-auris-1-8-hsd-181000km-euro5-2011-11778753257201470",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -572,40 +481,27 @@ export const mockListings: VehicleListing[] = [
     },
     "features": [
       {
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
+      },
+      {
         "bg": "Навигация",
         "en": "Навигация"
       },
       {
         "bg": "Парктроник",
         "en": "Парктроник"
-      },
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатроник",
-        "en": "Климатроник"
-      },
-      {
-        "bg": "Подгряване на седалките",
-        "en": "Подгряване на седалките"
       }
     ],
     "spec": {
       "make": "Toyota",
-      "model": "Auris",
+      "model": "Auris 1.8 HSD 181000KM EURO5",
       "year": 2011,
       "bodyType": "hatchback",
       "fuelType": "hybrid",
       "transmission": "automatic",
       "mileageValue": 181000,
-      "mileageUnit": "km",
-      "colorExterior": "Бял"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -620,7 +516,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1004",
-    "slug": "suzuki-swift-184091",
+    "slug": "suzuki-swift-1-3i-151000km-swiss-edition-2010-11777536762184091",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -653,26 +549,15 @@ export const mockListings: VehicleListing[] = [
       "region": "Пловдив",
       "country": "BG"
     },
-    "features": [
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Климатик",
-        "en": "Климатик"
-      }
-    ],
     "spec": {
       "make": "Suzuki",
-      "model": "Swift",
+      "model": "Swift 1.3i 151000km. SWISS EDITION",
       "year": 2010,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 151000,
-      "mileageUnit": "km",
-      "colorExterior": "Черен"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -687,7 +572,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1005",
-    "slug": "subaru-impreza-704576",
+    "slug": "subaru-impreza-2-0i-swiss-edition-2007-11701247770704576",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -722,32 +607,23 @@ export const mockListings: VehicleListing[] = [
     },
     "features": [
       {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
         "bg": "4x4",
         "en": "4x4"
       },
       {
-        "bg": "Климатроник",
-        "en": "Климатроник"
-      },
-      {
-        "bg": "Подгряване на седалките",
-        "en": "Подгряване на седалките"
+        "bg": "Подгряване на седалки",
+        "en": "Подгряване на седалки"
       }
     ],
     "spec": {
       "make": "Subaru",
-      "model": "Impreza",
+      "model": "Impreza 2.0i SWISS EDITION",
       "year": 2007,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 207000,
-      "mileageUnit": "km",
-      "colorExterior": "Светло сив"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -762,7 +638,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1006",
-    "slug": "toyota-yaris-742708",
+    "slug": "toyota-yaris-1-33i-116000km-6-speed-swiss-edition-2014-11783754278742708",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -803,30 +679,17 @@ export const mockListings: VehicleListing[] = [
       {
         "bg": "Парктроник",
         "en": "Парктроник"
-      },
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатик",
-        "en": "Климатик"
       }
     ],
     "spec": {
       "make": "Toyota",
-      "model": "Yaris",
+      "model": "Yaris 1.33I 116000KM 6-SPEED SWISS EDITION",
       "year": 2014,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 116000,
-      "mileageUnit": "km",
-      "colorExterior": "Черен"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -841,7 +704,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1007",
-    "slug": "nissan-qashqai-309786",
+    "slug": "nissan-qashqai-2-0i-131000km-automatic-2014-21785829117309786",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -876,32 +739,19 @@ export const mockListings: VehicleListing[] = [
     },
     "features": [
       {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
         "bg": "4x4",
         "en": "4x4"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатроник",
-        "en": "Климатроник"
       }
     ],
     "spec": {
       "make": "Nissan",
-      "model": "Qashqai",
+      "model": "Qashqai 2.0i 131000KM AUTOMATIC",
       "year": 2014,
       "bodyType": "suv",
       "fuelType": "gasoline",
       "transmission": "automatic",
       "mileageValue": 131000,
-      "mileageUnit": "km",
-      "colorExterior": "Перла"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -916,7 +766,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1008",
-    "slug": "mitsubishi-colt-277480",
+    "slug": "mitsubishi-colt-1-5-i-swiss-2007-11678716951277480",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -949,26 +799,15 @@ export const mockListings: VehicleListing[] = [
       "region": "Пловдив",
       "country": "BG"
     },
-    "features": [
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Климатик",
-        "en": "Климатик"
-      }
-    ],
     "spec": {
       "make": "Mitsubishi",
-      "model": "Colt",
+      "model": "Colt 1.5 I SWISS",
       "year": 2007,
       "bodyType": "hatchback",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 189000,
-      "mileageUnit": "km",
-      "colorExterior": "Бял"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -983,7 +822,7 @@ export const mockListings: VehicleListing[] = [
   },
   {
     "id": "am-1009",
-    "slug": "mini-cooper-954394",
+    "slug": "mini-cooper-1-6i-153000km-euro-5-75ps-2013-11773570472954394",
     "category": "car",
     "dealerOrgId": "dealer-kg-team-auto",
     "status": "active",
@@ -1020,30 +859,17 @@ export const mockListings: VehicleListing[] = [
       {
         "bg": "Парктроник",
         "en": "Парктроник"
-      },
-      {
-        "bg": "Система ISOFIX",
-        "en": "Система ISOFIX"
-      },
-      {
-        "bg": "Сервизна книжка",
-        "en": "Сервизна книжка"
-      },
-      {
-        "bg": "Климатроник",
-        "en": "Климатроник"
       }
     ],
     "spec": {
       "make": "Mini",
-      "model": "Cooper",
+      "model": "Cooper 1.6i 153000km EURO-5 75PS.",
       "year": 2013,
       "bodyType": "coupe",
       "fuelType": "gasoline",
       "transmission": "manual",
       "mileageValue": 153000,
-      "mileageUnit": "km",
-      "colorExterior": "Черен"
+      "mileageUnit": "km"
     },
     "seller": {
       "id": "dealer-kg-team-auto",
@@ -1056,7 +882,7 @@ export const mockListings: VehicleListing[] = [
     "publishedAt": "2026-09-09T09:00:00.000Z",
     "promoted": false
   }
-]
+];
 
 const matchesText = (listing: VehicleListing, query: string) => {
   const haystack = [
@@ -1112,6 +938,13 @@ const createListingPredicates = (
     filters.mileageMax === undefined ||
     listing.spec.mileageValue <= filters.mileageMax,
   (listing) => !filters.fuel || listing.spec.fuelType === filters.fuel,
+  (listing) =>
+    filters.powerMin === undefined ||
+    (listing.spec.enginePowerHp !== undefined &&
+      listing.spec.enginePowerHp >= filters.powerMin),
+  (listing) =>
+    !filters.extra ||
+    Boolean(listing.features?.some((feature) => feature.en === filters.extra)),
   (listing) =>
     !filters.transmission || listing.spec.transmission === filters.transmission,
   (listing) => !filters.body || listing.spec.bodyType === filters.body,

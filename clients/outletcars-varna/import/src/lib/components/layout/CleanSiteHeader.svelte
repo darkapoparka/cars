@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { page } from '$app/state';
-	import { SvelteURLSearchParams } from 'svelte/reactivity';
-	import { Globe2, MapPin, PhoneCall } from '@lucide/svelte';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
 	import { daynightAssets } from '$lib/data/daynight';
 	import type { HomeFiveHeaderData } from '$lib/auxero/home-five';
 	import SiteMegaMenu from './SiteMegaMenu.svelte';
 	import SiteSearchModal from './SiteSearchModal.svelte';
+	import LocaleSettingsMenu from './LocaleSettingsMenu.svelte';
 
 	// Clean Svelte 5 + Tailwind v4 public header — the keystone shared header for the
 	// Auxero → clean migration. It shares one restrained dark desktop row with the
@@ -32,41 +32,11 @@
 
 	// External (tel:/mailto:/https:) hrefs bypass `resolve`; internal start with `/`.
 	const linkHref = (href: string) => (href.startsWith('/') ? resolve(href as '/') : href);
-	const languageCode = (option: string) =>
-		option === 'English' || option === 'Английски' ? 'en' : 'bg';
-	const languageHref = (option: string) => {
-		const params = new SvelteURLSearchParams(page.url.searchParams);
-		params.set('lang', languageCode(option));
-		return `${page.url.pathname}?${params.toString()}`;
-	};
 	const isActive = (href: string, fallback: boolean) =>
 		pathname ? pathname === href || (href !== '/' && pathname.startsWith(`${href}/`)) : fallback;
 
 	let searchOpen = $state(false);
-	let langOpen = $state(false);
 
-	function closeLanguage() {
-		langOpen = false;
-	}
-	// Outside-click / Escape close for the language menu. Reacts to `langOpen` and
-	// touches the live document — the one acceptable $effect here.
-	$effect(() => {
-		if (!langOpen) return;
-		const onPointerDown = (event: PointerEvent) => {
-			const target = event.target;
-			if (target instanceof Element && target.closest('[data-language-switch]')) return;
-			langOpen = false;
-		};
-		const onKeydown = (event: KeyboardEvent) => {
-			if (event.key === 'Escape') langOpen = false;
-		};
-		document.addEventListener('pointerdown', onPointerDown);
-		document.addEventListener('keydown', onKeydown);
-		return () => {
-			document.removeEventListener('pointerdown', onPointerDown);
-			document.removeEventListener('keydown', onKeydown);
-		};
-	});
 </script>
 
 <!-- ===== inline SVG glyphs (themed paths, currentColor) ===== -->
@@ -236,42 +206,7 @@
 					<PhoneCall size={21} strokeWidth={1.8} aria-hidden="true" />
 				</a>
 
-				<div class="relative hidden xl:block" data-language-switch>
-					<button
-						type="button"
-						aria-haspopup="menu"
-						aria-expanded={langOpen}
-						aria-label={`${header.language.current} — смени езика`}
-						title={header.language.current}
-						onclick={() => (langOpen = !langOpen)}
-						class="flex h-11 w-11 items-center justify-center text-white/82 transition-colors hover:text-white focus-visible:text-white"
-					>
-						<Globe2 size={21} strokeWidth={1.8} aria-hidden="true" />
-					</button>
-					{#if langOpen}
-						<div
-							role="menu"
-							class="absolute top-full right-0 z-30 mt-2 min-w-[140px] overflow-hidden rounded-bc-md border border-bc-border bg-white py-1 text-bc-ink shadow-bc-panel"
-						>
-							{#each header.language.options as option (option)}
-								<a
-									href={resolve(languageHref(option) as '/')}
-									role="menuitem"
-									aria-current={option === header.language.current ? 'true' : undefined}
-									onclick={closeLanguage}
-									class={[
-										'flex w-full items-center px-4 py-2 text-left text-sm transition-colors hover:bg-bc-surface-soft',
-										option === header.language.current
-											? 'font-bold text-bc-accent-contrast'
-											: 'text-bc-ink-soft'
-									]}
-								>
-									{option}
-								</a>
-							{/each}
-						</div>
-					{/if}
-				</div>
+				<div class="hidden xl:block"><LocaleSettingsMenu /></div>
 
 				<a
 					href={resolve('/account')}

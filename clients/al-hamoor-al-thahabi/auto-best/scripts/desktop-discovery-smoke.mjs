@@ -1,3 +1,4 @@
+import { appPath, returningContext, returningPage } from './locale-smoke-fixture.mjs';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { launchBrowser, previewUrl } from './browser.mjs';
@@ -9,7 +10,7 @@ const results = [];
 try {
   for (const width of [1024, 1440, 1920]) {
     for (const route of ['/', '/listing-grid']) {
-      const page = await browser.newPage({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
+      const page = await returningPage(browser, { viewport: { width, height: 900 }, reducedMotion: 'reduce' });
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
@@ -18,7 +19,7 @@ try {
       assert.equal(await bar.isVisible(), false);
       const submit = form.locator('.dn-discovery__submit');
       assert.equal(await submit.innerText(), '');
-      assert.equal(await submit.getAttribute('aria-label'), 'Търси');
+      assert.equal(await submit.getAttribute('aria-label'), 'Търсете');
       assert.equal((await submit.boundingBox()).width, 48);
       if (route === '/') {
         assert.equal(await form.locator('.dn-discovery__filters, .dn-discovery__actions').count(), 0);
@@ -56,7 +57,7 @@ try {
         assert.equal(await bar.isVisible(), false, 'Home discovery intentionally stays in the hero instead of becoming sticky');
         await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
         await form.locator('.dn-discovery__submit').click();
-        await page.waitForURL(url => url.pathname === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
       } else {
         await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
@@ -88,7 +89,7 @@ try {
         await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
         await bar.waitFor({ state: 'visible' });
         await bar.locator('.dn-discovery-sticky__submit').click();
-        await page.waitForURL(url => url.pathname === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
         await page.setViewportSize({ width: 390, height: 844 });
         await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));

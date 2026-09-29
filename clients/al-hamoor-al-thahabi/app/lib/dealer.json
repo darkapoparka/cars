@@ -1,0 +1,34 @@
+{
+  "mode": "dealer",
+  "id": "al-hamoor-al-thahabi",
+  "name": "Al Hamoor Al Thahabi Used Cars",
+  "shortName": "Al Hamoor Al Thahabi Used Cars",
+  "logo": {
+    "light": "/dealer-app/logo-light-3a945d87e9198790cc0c.webp",
+    "dark": "/dealer-app/logo-dark-3ae4cc8473042f99c776.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "en",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "AE",
+  "currency": "AED",
+  "city": "Sharjah",
+  "address": "Souk Al Haraj, showroom 353, Sharjah",
+  "phoneDisplay": "+971 54 555 5204",
+  "phoneE164": "+971545555204",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al+Hamoor+Al+Thahabi+Souk+Al+Haraj+353+Sharjah",
+  "website": "",
+  "whatsappUrl": "",
+  "services": [
+    "Vehicle sales",
+    "Viewings by arrangement",
+    "Trade-in enquiries: confirm terms directly"
+  ],
+  "observedAt": "2026-09-09",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

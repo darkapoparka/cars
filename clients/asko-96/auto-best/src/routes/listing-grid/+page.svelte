@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import './listing.css';
   import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
   import ListingHero from '$components/listing/ListingHero.svelte';
@@ -12,8 +16,8 @@
 </script>
 
 <svelte:head>
-  <title>Налични автомобили — {brand.name}</title>
-  <meta name="description" content={`Подбрани премиум автомобили, внос и собствен лизинг в ${brand.city}.`} />
+  <title>{i18n.t("m_270ca25eca2a", { p0: brand.name })}</title>
+  <meta name="description" content={i18n.t("m_ab0bddd89743", { p0: i18n.dealer('city') })} />
 </svelte:head>
 
 <VehicleSearchDialog filters={draftFilters}>

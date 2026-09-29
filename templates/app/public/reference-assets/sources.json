@@ -1,0 +1,565 @@
+{
+  "purpose": "Local reference reconstruction; not an official service",
+  "assets": [
+    {
+      "name": "home-promotion",
+      "url": "https://c24-media-service.c24.tech/production/prod/c24-assembly-service/uae/30%20day%20updated/app%20and%20msite%20homepage%20(3).png",
+      "width": 1080,
+      "height": 432
+    },
+    {
+      "name": "tab-buy",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/16/c6e40749-4352-4195-b46f-252e6b3a749aBuy%20car.png",
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "tab-sell",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/09/e95868db-6ea5-4975-8cff-61bda5d45392Sell%20car.png",
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "tab-finance",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/09/b98b16dc-3492-4a74-a790-4dceff0e5965loan.png",
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "tab-service",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/09/c7d687a9-5d32-423c-a481-bd7746ec5b20care.png",
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "brand-mercedes",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/05/d4567809-b958-4b57-94f4-ff26848e4164msite.png",
+      "width": 210,
+      "height": 192
+    },
+    {
+      "name": "brand-bmw",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/05/6b1e4ee8-2b7b-45f7-ae3f-3d15c43831fcmsite.png",
+      "width": 210,
+      "height": 192
+    },
+    {
+      "name": "brand-audi",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/10/bd4a2ef5-d57c-4c7b-8a91-a5a5173dbee8msite.png",
+      "width": 210,
+      "height": 192
+    },
+    {
+      "name": "brand-nissan",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/14/ce285f6e-9a7c-413e-95d2-44bb6a535528Property%201%3DNissan.png",
+      "width": 210,
+      "height": 192
+    },
+    {
+      "name": "brand-hyundai",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/14/3cd71505-26a3-49dd-8149-c381c1bca996Logo%202.png",
+      "width": 210,
+      "height": 192
+    },
+    {
+      "name": "fortuner.jpg",
+      "url": "https://media-ae.cars24.com/c24-uae-ct-masked-images-prod/9714841126/standardised-camera-Front-Left-1783105759070.jpg",
+      "width": 1365,
+      "height": 768,
+      "bytes": 217683
+    },
+    {
+      "name": "logo.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/08/d820a07a-0539-471a-b61c-84487e9d67b9org-logo.png",
+      "width": 564,
+      "height": 160,
+      "bytes": 7380
+    },
+    {
+      "name": "luxe-tag.svg",
+      "url": "https://media-ae.cars24.com/dls-central/uae/car-card/uae-luxe-car-tag.svg",
+      "width": 74,
+      "height": 18,
+      "bytes": 7508
+    },
+    {
+      "name": "tab-service-selected.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/09/88ff790e-de3c-422f-9d40-6aa8c9677ec9care-selected.png",
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "tab-sell-selected.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/09/72075000-5575-4743-b740-12f71fe728b2sell-selected.png",
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "tab-finance-selected.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/09/37687cea-2efc-4c0e-b58e-f787e0c7551cloan-selected.png",
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "tab-buy-selected.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/16/0934f1d5-ad05-4331-be0d-2a14195259a5Buy_car_selected.png",
+      "width": 210,
+      "height": 210
+    },
+    {
+      "name": "offer-finance.png",
+      "url": "https://c24-media-service.c24.tech/production/prod/c24-assembly-service/uae/Subvention/carousel.png",
+      "width": 864,
+      "height": 486
+    },
+    {
+      "name": "offer-return.png",
+      "url": "https://c24-media-service.c24.tech/production/prod/c24-assembly-service/uae/30%20day%20updated/Buy%20carousel%20new.png",
+      "width": 864,
+      "height": 486
+    },
+    {
+      "name": "offer-warranty.png",
+      "url": "https://media-ae.cars24.com/blog/cms/cms/2026/04/16/e2ffdc13-7d4f-42bb-81b1-a7c6f58a2db6LTW.png",
+      "width": 864,
+      "height": 486
+    },
+    {
+      "name": "sell-brand-4",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/19/006f75c9-10c9-4412-a389-e9c85a6cfbc3mercedes.png",
+      "width": 249,
+      "height": 216
+    },
+    {
+      "name": "sell-brand-8",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/19/91b1712b-5f8f-4e61-adbe-1766c6edc77akia.png",
+      "width": 249,
+      "height": 216
+    },
+    {
+      "name": "finance-benefit-2",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/05/c24f7ff1-0ade-4e55-9c33-88c332921f90LandscapeShape.png",
+      "width": 486,
+      "height": 324
+    },
+    {
+      "name": "finance-bank-3",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/04/8a6d4277-2662-4edc-9f72-85d54d29ea62app%20bank.png",
+      "width": 228,
+      "height": 138
+    },
+    {
+      "name": "service-hero",
+      "url": "https://static-cdn.cars24.com/prod/cms/2026/02/16/c8538e6f-a983-4ac6-ba7c-f1551b603b2ehero%20banner_service.webp",
+      "width": 1080,
+      "height": 432
+    },
+    {
+      "name": "finance-benefit-3",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/05/44aba84f-9aa6-4f52-aa48-a806c7e0c851LandscapeShape.png",
+      "width": 486,
+      "height": 324
+    },
+    {
+      "name": "sell-hero",
+      "url": "https://static-cdn.cars24.com/prod/cms/2026/02/16/09883d03-4f79-4e6d-bf26-91e7254a4aabhero%20banner_sell.webp",
+      "width": 1080,
+      "height": 432
+    },
+    {
+      "name": "finance-bank-1",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/04/560be98e-d531-43d6-84c0-2f673eb3e0cdProperty%201%3DVariant2.png",
+      "width": 228,
+      "height": 138
+    },
+    {
+      "name": "finance-bank-2",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/04/e7f195ef-a37a-4e36-89a7-8b32abb5b193Property%201%3DVariant3.png",
+      "width": 228,
+      "height": 138
+    },
+    {
+      "name": "sell-brand-1",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/08/8df2aedb-c3ae-4a1c-a831-eeea85564988Logo%203.png",
+      "width": 210,
+      "height": 192
+    },
+    {
+      "name": "sell-brand-5",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/19/8c14682e-50f3-4c99-9140-3f440634f9eaBMW.png",
+      "width": 249,
+      "height": 216
+    },
+    {
+      "name": "sell-brand-3",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/08/bab64b26-8fe1-4d59-8c2c-9af89fb96df9Logo%2013.png",
+      "width": 210,
+      "height": 192
+    },
+    {
+      "name": "finance-benefit-1",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/05/d76c02e4-57f5-4344-a7e0-af353c750544LandscapeShape.png",
+      "width": 486,
+      "height": 324
+    },
+    {
+      "name": "finance-hero",
+      "url": "https://static-cdn.cars24.com/prod/cms/2026/02/13/d5b07c01-9d2a-4669-a507-e71b5434d255hero%20banner_loan%20%281%29.png",
+      "width": 1080,
+      "height": 432
+    },
+    {
+      "name": "sell-brand-7",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/19/54cab1e3-272f-4d97-ad41-e46b4a83a750ford.png",
+      "width": 249,
+      "height": 216
+    },
+    {
+      "name": "sell-brand-6",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/11/a72aebf6-5dbd-4b84-9e5a-22a7a3838012AUDI.png",
+      "width": 249,
+      "height": 216
+    },
+    {
+      "name": "finance-bank-4",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/04/58db7afe-9790-4405-94d8-64fb254e34dfComponent%2023.png",
+      "width": 228,
+      "height": 138
+    },
+    {
+      "name": "sell-brand-2",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/19/cdf88e54-6a9a-49b5-b930-347d4f519a27honda.png",
+      "width": 249,
+      "height": 216
+    },
+    {
+      "name": "finance-benefit-4",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/05/42395a3b-5f3a-4a9b-b375-69c21facbdeaLandscapeShape.png",
+      "width": 486,
+      "height": 324
+    },
+    {
+      "name": "body-suv.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/03/6947994f-a277-4ddd-9a43-901225f539c0Property%201%3DSUV.png",
+      "width": 570,
+      "height": 273
+    },
+    {
+      "name": "body-convertible.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2025/12/29/d261baa8-0e48-4569-852e-9b3f2b2f9c64Property%201%3DVariant3.png",
+      "width": 392,
+      "height": 208
+    },
+    {
+      "name": "brand-chevrolet.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/19/aabd6575-55cb-440b-a269-f638a7463081.slots.png",
+      "width": 249,
+      "height": 216
+    },
+    {
+      "name": "body-coupe.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/03/7f7cd499-444b-4baa-b4e0-99279fccd8fcProperty%201%3DVariant6.png",
+      "width": 570,
+      "height": 273
+    },
+    {
+      "name": "body-hatchback.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/03/3f43c3d8-acea-4f39-ad11-6f79a77052abProperty%201%3DVariant3.png",
+      "width": 570,
+      "height": 273
+    },
+    {
+      "name": "ciaz.png",
+      "url": "https://media-ae.cars24.com/c24-uae-ct-masked-images-prod/9714842062/standardised-1-6aa92c11bde06361f0ca83bd-1789472449017.png",
+      "width": 1210,
+      "height": 798
+    },
+    {
+      "name": "body-sedan.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/03/45b18bf0-ec1b-4c27-a4af-9e23c3266434Property%201%3DVariant2%20%281%29.png",
+      "width": 570,
+      "height": 273
+    },
+    {
+      "name": "veloz.png",
+      "url": "https://media-ae.cars24.com/c24-uae-ct-masked-images-prod/9718403147/standardised-1-6a9837ec09e25b406610c7e2-1788361399128.png",
+      "width": 1267,
+      "height": 842
+    },
+    {
+      "name": "body-mpv.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/02/03/0817849e-5a58-4f65-8006-af355f2509f8Property%201%3DVariant7.png",
+      "width": 570,
+      "height": 273
+    },
+    {
+      "name": "assistant.png",
+      "source": "reference/2026-09-26-parity/android-cars-top.png",
+      "crop": {
+        "left": 1076,
+        "top": 2230,
+        "width": 138,
+        "height": 138
+      },
+      "purpose": "Isolated native image artwork; interactive UI is implemented in HTML."
+    },
+    {
+      "name": "stores-hero.png",
+      "source": "reference/2026-09-26-parity/android-stores.png",
+      "crop": {
+        "left": 0,
+        "top": 153,
+        "width": 1280,
+        "height": 510
+      },
+      "purpose": "Isolated native image artwork; interactive UI is implemented in HTML."
+    },
+    {
+      "name": "store-barsha.png",
+      "source": "reference/2026-09-26-parity/android-stores.png",
+      "crop": {
+        "left": 42,
+        "top": 704,
+        "width": 1196,
+        "height": 432
+      },
+      "purpose": "Isolated native image artwork; interactive UI is implemented in HTML."
+    },
+    {
+      "name": "store-ras-al-khor.png",
+      "source": "reference/2026-09-26-parity/android-stores.png",
+      "crop": {
+        "left": 42,
+        "top": 1697,
+        "width": 1196,
+        "height": 432
+      },
+      "purpose": "Isolated native image artwork; interactive UI is implemented in HTML."
+    },
+    {
+      "name": "luxe-promotion.png",
+      "source": "reference/2026-09-26-parity/android-luxe.png",
+      "crop": {
+        "left": 0,
+        "top": 309,
+        "width": 1280,
+        "height": 426
+      },
+      "purpose": "Isolated native image artwork; interactive UI is implemented in HTML."
+    },
+    {
+      "name": "menu-location.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 450,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-bookings.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 722,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-seller.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 878,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-wishlist.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 1034,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-sell.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 1223,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-buy.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 1439,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-service.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 1655,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-care.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 1868,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-finance.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 2083,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-valuation.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 2233,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "menu-how.png",
+      "source": "reference/2026-09-26-parity/android-menu.png",
+      "crop": {
+        "left": 66,
+        "top": 2485,
+        "width": 60,
+        "height": 60
+      }
+    },
+    {
+      "name": "brand-chevrolet.png",
+      "url": "https://static-cdn.cars24.com/qa/cms/2026/01/19/aabd6575-55cb-440b-a269-f638a7463081.slots.png"
+    },
+    {
+      "name": "listing-promotion.png",
+      "source": "reference/2026-09-26-parity/android-cars-top.png",
+      "crop": {
+        "left": 0,
+        "top": 546,
+        "width": 1280,
+        "height": 411
+      },
+      "purpose": "Isolated native marketing artwork or vehicle photograph; cards, controls and prices remain real HTML."
+    },
+    {
+      "name": "ciaz-native-card.png",
+      "source": "reference/2026-09-26-parity/android-cars-top.png",
+      "crop": {
+        "left": 63,
+        "top": 1808,
+        "width": 402,
+        "height": 228
+      },
+      "purpose": "Isolated native marketing artwork or vehicle photograph; cards, controls and prices remain real HTML."
+    },
+    {
+      "name": "veloz-native-card.png",
+      "source": "reference/2026-09-26-parity/android-cars-top.png",
+      "crop": {
+        "left": 63,
+        "top": 2341,
+        "width": 402,
+        "height": 228
+      },
+      "purpose": "Isolated native marketing artwork or vehicle photograph; cards, controls and prices remain real HTML."
+    },
+    {
+      "name": "land-cruiser-native-card.png",
+      "source": "reference/2026-09-26-parity/android-luxe.png",
+      "crop": {
+        "left": 63,
+        "top": 2131,
+        "width": 402,
+        "height": 228
+      },
+      "purpose": "Isolated native marketing artwork or vehicle photograph; cards, controls and prices remain real HTML."
+    },
+    {
+      "name": "return-icon.png",
+      "source": "reference/2026-09-26-parity/android-detail-loaded.png",
+      "crop": {
+        "left": 75,
+        "top": 2278,
+        "width": 126,
+        "height": 120
+      },
+      "purpose": "Isolated native marketing artwork or vehicle photograph; cards, controls and prices remain real HTML."
+    },
+    {
+      "name": "fortuner-right.jpg",
+      "url": "https://media-ae.cars24.com/c24-uae-ct-masked-images-prod/9714841126/standardised-camera-Right-Front-Diagonal--45--Degree--View-1783105759070.jpg"
+    },
+    {
+      "name": "fortuner-interior.jpg",
+      "url": "https://media-ae.cars24.com/c24-uae-ct-masked-images-prod/9714841126/standardised-camera-Right-Side-Front-Door-Cabin-View-1783105759228.jpg"
+    },
+    {
+      "name": "fortuner-feature.jpg",
+      "url": "https://media-ae.cars24.com/c24-uae-ct-masked-images-prod/9714841126/standardised-camera-Engine-Bonet-View-1783105759235.jpg"
+    },
+    {
+      "name": "sell-hero-art.png",
+      "source": "reference/2026-09-26-parity/android-sell.png",
+      "logicalCrop": {
+        "left": 0,
+        "top": 164,
+        "width": 427,
+        "height": 171
+      },
+      "notes": "Left copy area replaced with the native background scanline; visible headings and CTA are HTML."
+    },
+    {
+      "name": "finance-hero-art.png",
+      "source": "reference/2026-09-26-parity/android-finance.png",
+      "logicalCrop": {
+        "left": 0,
+        "top": 164,
+        "width": 427,
+        "height": 171
+      },
+      "notes": "Left copy area replaced with the native background scanline; visible headings and CTA are HTML."
+    },
+    {
+      "name": "service-hero-art.png",
+      "source": "reference/2026-09-26-parity/android-service.png",
+      "logicalCrop": {
+        "left": 0,
+        "top": 164,
+        "width": 427,
+        "height": 171
+      },
+      "notes": "Left copy area replaced with the native background scanline; visible headings and CTA are HTML."
+    }
+  ]
+}

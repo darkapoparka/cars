@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	import LocaleSettingsMenu from '$lib/components/layout/LocaleSettingsMenu.svelte';
+	import RouteSeo from '$lib/components/seo/RouteSeo.svelte';
+	const i18n = getI18n();
 	import { goto } from '$app/navigation';
-	import { resolve } from '$app/paths';
 	import {
 		BadgeCheck,
 		Box,
@@ -52,68 +55,74 @@
 		const target =
 			activeTab === 'sell' ? '/sell-your-car' : activeTab === 'reviews' ? '/reviews' : '/inventory';
 		const search = query.trim();
-		void goto(resolve(search ? `${target}?q=${encodeURIComponent(search)}` : target));
+		void goto(i18n.href(search ? `${target}?q=${encodeURIComponent(search)}` : target));
 	}
 </script>
 
-<svelte:head>
-	<title>K-G Team Auto Marketplace | Home3</title>
-	<meta
-		name="description"
-		content="A carwow-inspired K-G Team Auto marketplace homepage for buying, selling and comparing cars."
-	/>
-	<meta name="robots" content="noindex,nofollow" />
-</svelte:head>
+<RouteSeo
+	title={i18n.t('presentation.57fb6799a67e')}
+	description={i18n.t('presentation.015843050cf8')}
+/>
+<svelte:head><meta name="robots" content="noindex,nofollow" /></svelte:head>
 
 <main id="main-content" tabindex="-1" class="home3-shell">
-	<header class="home3-header" aria-label="Home3 navigation">
-		<a class="home3-logo" href={resolve('/presentation/home3')} aria-label="K-G Team Auto Home3">
-			<span>DAY</span>
-			<strong>AUTO</strong>
+	<header class="home3-header" aria-label={i18n.t('copy.811617606862')}>
+		<a
+			class="home3-logo"
+			href={i18n.href('/presentation/home3')}
+			aria-label={i18n.t('presentation.bf1211e8c682')}
+		>
+			<span>{i18n.t('copy.c45bc4a7dc2c')}</span>
+			<strong>{i18n.t('copy.6ea56fae9eac')}</strong>
 		</a>
 
-		<nav class="home3-nav" aria-label="Primary">
+		<nav class="home3-nav" aria-label={i18n.t('copy.efe10c80ec8a')}>
 			{#each data.navItems as item (item)}
-				<a href={resolve('/inventory')}>{item}</a>
+				<a href={i18n.href('/inventory')}
+					>{item === 'Electric' ? i18n.t('presentation.electric') : i18n.text(item)}</a
+				>
 			{/each}
 		</nav>
 
-		<div class="home3-actions" aria-label="Account actions">
-			<a href={resolve('/favorites')} aria-label="Saved cars">
+		<div class="home3-actions" aria-label={i18n.t('copy.9eb9d46a6790')}>
+			<LocaleSettingsMenu />
+			<a href={i18n.href('/favorites')} aria-label={i18n.t('copy.2ff1cef08851')}>
 				<Heart size={23} strokeWidth={2.1} />
-				<span>Saved</span>
+				<span>{i18n.t('copy.655f65ef3f03')}</span>
 			</a>
-			<a href={resolve('/admin/login')} aria-label="Sign in">
+			<a href={i18n.endpoint('/admin/login')} aria-label={i18n.t('copy.bfd402b2f6f3')}>
 				<CircleUserRound size={23} strokeWidth={2.1} />
-				<span>Sign in</span>
+				<span>{i18n.t('copy.bfd402b2f6f3')}</span>
 			</a>
-			<a class="home3-sell-button" href={resolve('/sell-your-car')}>Sell my car</a>
+			<a class="home3-sell-button" href={i18n.href('/sell-your-car')}
+				>{i18n.t('presentation.sell')}</a
+			>
 		</div>
 	</header>
 
 	<section class="home3-hero" aria-labelledby="home3-title">
 		<img
 			class="home3-hero__car home3-hero__car--left"
-			src="/assets/images/body-type/normalized/body-sedan-transparent.webp"
+			src={i18n.asset('/assets/images/body-type/normalized/body-sedan-transparent.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 		<img
 			class="home3-hero__car home3-hero__car--right"
-			src="/assets/images/body-type/normalized/body-suv-transparent.webp"
+			src={i18n.asset('/assets/images/body-type/normalized/body-suv-transparent.webp')}
 			alt=""
 			aria-hidden="true"
 		/>
 
 		<div class="home3-hero__center">
 			<h1 id="home3-title">
-				<span>Changing your car?</span>
-				<span>K-G Team Auto can help</span>
+				<span>{i18n.t('copy.3d2145e23142')}</span>
+				<span>{i18n.t('presentation.03845e14d910')}</span>
 			</h1>
 			<i aria-hidden="true"></i>
 
-			<form class="home3-search" onsubmit={submitSearch} aria-label="Find your next car">
-				<div class="home3-search__tabs" role="tablist" aria-label="Search mode">
+			<form class="home3-search" onsubmit={submitSearch} aria-label={i18n.t('copy.bb7c0e3ca487')}>
+				<div class="home3-search__tabs" role="tablist" aria-label={i18n.t('copy.75f00aad4c45')}>
 					{#each data.searchTabs as tab (tab.id)}
 						<button
 							class:home3-search__tab--active={activeTab === tab.id}
@@ -122,65 +131,70 @@
 							aria-selected={activeTab === tab.id}
 							onclick={() => (activeTab = tab.id)}
 						>
-							{tab.label}
+							{i18n.t(
+								tab.id === 'find'
+									? 'presentation.find'
+									: tab.id === 'sell'
+										? 'presentation.sell'
+										: 'presentation.reviews'
+							)}
 						</button>
 					{/each}
 				</div>
 
 				<label class="home3-search__input">
-					<span class="sr-only">{activeSearch.placeholder}</span>
-					<input bind:value={query} placeholder={activeSearch.placeholder} />
-					<button type="submit" aria-label="Search">
+					<span class="sr-only">{i18n.text(activeSearch.placeholder)}</span>
+					<input bind:value={query} placeholder={i18n.text(activeSearch.placeholder)} />
+					<button type="submit" aria-label={i18n.t('copy.49c266baaaa7')}>
 						<Search size={26} strokeWidth={2.6} />
 					</button>
 				</label>
 
 				<p>
-					or let us help you
-					<a href={resolve('/inventory')}>Find a car</a>
+					{i18n.t('copy.b5dffda28a0e')}
+					<a href={i18n.href('/inventory')}>{i18n.t('copy.f92c64344e85')}</a>
 				</p>
 			</form>
 		</div>
 	</section>
 
 	<section class="home3-market">
-		<div class="home3-chips" aria-label="Popular searches">
+		<div class="home3-chips" aria-label={i18n.t('copy.1d70a4a0c377')}>
 			{#each data.shortcutPills as pill (pill.label)}
 				{@const PillIcon = getPillIcon(pill.icon)}
-				<a href={resolve('/inventory')}>
+				<a href={i18n.href('/inventory')}>
 					<PillIcon size={19} strokeWidth={2.6} />
-					{pill.label}
+					{i18n.text(pill.label)}
 				</a>
 			{/each}
 		</div>
 
 		<section class="home3-sell-panel" aria-labelledby="home3-sell-title">
 			<div class="home3-sell-panel__copy">
-				<h2 id="home3-sell-title">Sell your car for what it’s really worth</h2>
+				<h2 id="home3-sell-title">{i18n.t('copy.e2af91003720')}</h2>
 				<p>
-					We’ll put your car in front of 5,500+ verified dealers. Fast payment, home collection,
-					completely free.
+					{i18n.t('copy.37eafbd6874f')}
 				</p>
-				<a href={resolve('/sell-your-car')}>Get instant valuation</a>
+				<a href={i18n.href('/sell-your-car')}>{i18n.t('copy.14a0d30a48ae')}</a>
 			</div>
 
 			<div class="home3-sell-panel__media" aria-hidden="true">
-				<img src="/assets/images/card/card-32.png" alt="" />
+				<img src={i18n.asset('/assets/images/card/card-32.png')} alt="" />
 			</div>
 
-			<ul class="home3-sell-panel__points" aria-label="Selling benefits">
+			<ul class="home3-sell-panel__points" aria-label={i18n.t('copy.c818d868da47')}>
 				{#each data.sellPoints as point, index (point)}
 					{@const SellIcon = sellIcons[index] ?? BadgeCheck}
 					<li>
 						<SellIcon size={24} strokeWidth={2.2} />
-						<span>{point}</span>
+						<span>{i18n.text(point)}</span>
 					</li>
 				{/each}
 			</ul>
 		</section>
 
 		<section class="home3-budget" aria-labelledby="home3-budget-title">
-			<h2 id="home3-budget-title">Browse by budget</h2>
+			<h2 id="home3-budget-title">{i18n.t('copy.7ba875c23c0a')}</h2>
 			<div class="home3-budget__grid">
 				{#each data.budgetTiles as tile (tile.label)}
 					<a
@@ -188,13 +202,13 @@
 						class:home3-budget-card--blue={tile.tone === 'blue'}
 						class:home3-budget-card--dark={tile.tone === 'dark'}
 						class:home3-budget-card--red={tile.tone === 'red'}
-						href={resolve('/inventory')}
+						href={i18n.href('/inventory')}
 					>
 						<span>
-							<strong>{tile.label}</strong>
-							<small>{tile.count}</small>
+							<strong>{i18n.text(tile.label)}</strong>
+							<small>{i18n.count(tile.count)}</small>
 						</span>
-						<img src={tile.image} alt="" aria-hidden="true" />
+						<img src={i18n.asset(tile.image)} alt="" aria-hidden="true" />
 					</a>
 				{/each}
 			</div>
@@ -204,9 +218,9 @@
 			<div class="home3-section-head">
 				<div>
 					<Zap size={25} fill="currentColor" strokeWidth={2.2} />
-					<h2 id="home3-premium-title">Premium is trending</h2>
+					<h2 id="home3-premium-title">{i18n.t('copy.34065c735fbe')}</h2>
 				</div>
-				<a href={resolve('/inventory')}>See all premium</a>
+				<a href={i18n.href('/inventory')}>{i18n.t('copy.991a9fb6b651')}</a>
 			</div>
 
 			<div class="home3-premium__grid">
@@ -214,24 +228,27 @@
 					<article class="home3-premium-card">
 						<div class="home3-premium-card__copy">
 							<h3>{car.title}</h3>
-							<p>{car.meta}</p>
+							<p>{car.year} • {i18n.spec(car.fuel)} • {i18n.spec(car.transmission)}</p>
 							<span>
 								<ShieldCheck size={12} strokeWidth={2.5} />
-								{car.badge}
+								{i18n.text(car.badge)}
 							</span>
 						</div>
 						<img
 							class:home3-premium-card__image--blue={index === 1}
-							src={car.image}
+							src={i18n.asset(car.image)}
 							alt={car.title}
 						/>
 						<div class="home3-premium-card__price">
-							<small>Cash from</small>
+							<small>{i18n.t('copy.4f5762e8db91')}</small>
 							<strong>{car.cash}</strong>
-							<small>Lease from</small>
-							<b>{car.lease}</b>
+							<small>{i18n.t('copy.187cd1ed6c4e')}</small>
+							<b>{i18n.t('presentation.1a41735e6ab8', { amount: car.lease })}</b>
 						</div>
-						<a href={resolve(`/inventory/${car.slug}`)} aria-label={`View ${car.title}`}>
+						<a
+							href={i18n.href(`/inventory/${car.slug}`)}
+							aria-label={i18n.t('presentation.f4500b567925', { title: car.title })}
+						>
 							<ChevronRight size={22} strokeWidth={2.6} />
 						</a>
 					</article>
@@ -241,15 +258,15 @@
 
 		<section class="home3-news" aria-labelledby="home3-news-title">
 			<div class="home3-section-head">
-				<h2 id="home3-news-title">Expert reviews & latest news</h2>
-				<a href={resolve('/blog')}>View all</a>
+				<h2 id="home3-news-title">{i18n.t('copy.d49c98784183')}</h2>
+				<a href={i18n.href('/blog')}>{i18n.t('copy.30a64216eaea')}</a>
 			</div>
 
 			<div class="home3-news__grid">
 				{#each data.newsCards as card (card.title)}
-					<a href={resolve('/blog')} class="home3-news-card">
-						<img src={card.image} alt="" aria-hidden="true" />
-						<strong>{card.title}</strong>
+					<a href={i18n.href('/blog')} class="home3-news-card">
+						<img src={i18n.asset(card.image)} alt="" aria-hidden="true" />
+						<strong>{i18n.text(card.title)}</strong>
 					</a>
 				{/each}
 			</div>
@@ -259,26 +276,26 @@
 			<div class="home3-section-head">
 				<div>
 					<Star size={25} fill="currentColor" strokeWidth={2.2} />
-					<h2 id="home3-explore-title">Browse popular cars</h2>
+					<h2 id="home3-explore-title">{i18n.t('copy.2b60407978bd')}</h2>
 				</div>
-				<a href={resolve('/inventory')}>View all cars</a>
+				<a href={i18n.href('/inventory')}>{i18n.t('copy.7d6647b063a2')}</a>
 			</div>
 
 			<section class="home3-browse-block" aria-labelledby="home3-brand-title">
-				<h3 id="home3-brand-title">Browse by brand</h3>
+				<h3 id="home3-brand-title">{i18n.t('copy.9eb6d7e50e27')}</h3>
 				<div class="home3-brand-grid">
 					{#each data.brands as brand (brand.brand)}
-						<a href={resolve('/inventory')} class="home3-brand-card">
+						<a href={i18n.href('/inventory')} class="home3-brand-card">
 							<span class="home3-brand-card__mark">
 								{#if brand.logo}
-									<img src={brand.logo} alt="" aria-hidden="true" />
+									<img src={i18n.asset(brand.logo)} alt="" aria-hidden="true" />
 								{:else}
 									{brand.brand.slice(0, 1)}
 								{/if}
 							</span>
 							<span class="home3-brand-card__copy">
 								<strong>{brand.brand}</strong>
-								<small>{brand.count} cars</small>
+								<small>{i18n.count(brand.count)}</small>
 							</span>
 							<ChevronRight size={19} strokeWidth={2.8} />
 						</a>
@@ -287,14 +304,14 @@
 			</section>
 
 			<section class="home3-browse-block" aria-labelledby="home3-type-title">
-				<h3 id="home3-type-title">Browse by body type</h3>
+				<h3 id="home3-type-title">{i18n.t('copy.0b236543ddfb')}</h3>
 				<div class="home3-type-grid">
 					{#each data.bodyTypes as body (body.body)}
-						<a href={resolve('/inventory')} class="home3-type-card">
-							<img src={body.image} alt="" aria-hidden="true" />
+						<a href={i18n.href('/inventory')} class="home3-type-card">
+							<img src={i18n.asset(body.image)} alt="" aria-hidden="true" />
 							<span>
-								<strong>{body.body}</strong>
-								<small>{body.count} available</small>
+								<strong>{i18n.text(body.body)}</strong>
+								<small>{i18n.count(body.count)}</small>
 							</span>
 						</a>
 					{/each}
@@ -361,11 +378,11 @@
 		position: relative;
 		z-index: 10;
 		display: grid;
-		grid-template-columns: minmax(244px, 1fr) auto minmax(244px, 1fr);
+		grid-template-columns: auto minmax(0, 1fr) auto;
 		align-items: center;
 		gap: 24px;
-		height: 58px;
-		padding: 0 52px;
+		min-height: 58px;
+		padding: 8px 52px;
 		border-bottom: 1px solid rgb(15 23 42 / 0.06);
 		background: white;
 		box-shadow: 0 1px 10px rgb(15 23 42 / 0.04);
@@ -398,7 +415,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 38px;
+		gap: 12px 18px;
+		flex-wrap: wrap;
 		color: #070b14;
 		font-size: var(--sa-text-caption);
 		font-weight: var(--sa-weight-strong);
@@ -406,6 +424,7 @@
 	}
 
 	.home3-actions {
+		white-space: nowrap;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -1341,6 +1360,10 @@
 
 	@media (max-width: 760px) {
 		.home3-header {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 12px;
 			padding-inline: 18px;
 		}
 

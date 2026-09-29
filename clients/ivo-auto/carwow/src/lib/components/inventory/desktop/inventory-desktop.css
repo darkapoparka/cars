@@ -3691,10 +3691,10 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	min-height: 0 !important;
 	position: static !important;
 	flex: 0 0 auto;
-	width: var(--discovery-search-action-size) !important;
+	width: auto !important;
 	min-width: var(--discovery-search-action-size);
 	height: var(--discovery-search-action-size) !important;
-	padding: 0 !important;
+	padding: 0 20px !important;
 	background: var(--discovery-action) !important;
 	border-radius: 5px !important;
 	color: #fff !important;

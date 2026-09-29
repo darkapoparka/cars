@@ -1,3 +1,4 @@
+import { readRequestForm } from '$lib/server/request-body';
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import { hasInquiryDatabase } from '$lib/server/inquiry-config';
@@ -21,7 +22,7 @@ export const load: PageServerLoad = ({ url }) => ({
 
 export const actions: Actions = {
 	default: async ({ cookies, request, url }) => {
-		const formData = await request.formData();
+		const formData = await readRequestForm(request);
 		const email = String(formData.get('email') ?? '').trim();
 		const password = String(formData.get('password') ?? '');
 		const role = String(formData.get('role') ?? 'admin') as DayNightRole;

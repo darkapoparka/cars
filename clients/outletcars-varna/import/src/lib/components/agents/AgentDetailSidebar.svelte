@@ -131,7 +131,7 @@
 				<span class="text-sm">{sidebar.consentLabel}</span>
 			</label>
 
-			<p class="text-secondary text-xs">
+			<p class="text-xs text-secondary">
 				Използвайки тази услуга, приемате нашите
 				<a href={resolve('/terms')} class="text-highlight text-underline text-xs"
 					>{sidebar.termsLabel}</a

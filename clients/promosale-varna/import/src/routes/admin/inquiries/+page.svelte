@@ -83,8 +83,8 @@
 								aria-current={activeInquiry?.id === inquiry.id ? 'page' : undefined}
 								data-daynight-admin-inquiry={inquiry.id}
 								class={cn(
-									'hover:bg-muted flex min-h-24 items-start gap-3 rounded-lg px-3 py-3 text-sm transition-colors',
-									activeInquiry?.id === inquiry.id && 'bg-muted ring-border ring-1'
+									'flex min-h-24 items-start gap-3 rounded-lg px-3 py-3 text-sm transition-colors hover:bg-muted',
+									activeInquiry?.id === inquiry.id && 'bg-muted ring-1 ring-border'
 								)}
 							>
 								<Avatar.Root class="size-10">
@@ -93,11 +93,11 @@
 								<span class="grid min-w-0 flex-1 gap-1.5">
 									<span class="flex items-center justify-between gap-2">
 										<span class="truncate font-medium">{inquiry.contactName}</span>
-										<span class="text-muted-foreground shrink-0 text-xs">
+										<span class="shrink-0 text-xs text-muted-foreground">
 											{formatDate(inquiry.createdAt)}
 										</span>
 									</span>
-									<span class="text-muted-foreground truncate text-xs">{inquiry.contactEmail}</span>
+									<span class="truncate text-xs text-muted-foreground">{inquiry.contactEmail}</span>
 									<span class="flex min-w-0 items-center justify-between gap-2">
 										<span class="truncate text-xs">
 											{inquiry.vehicleTitle ?? sourceLabel(inquiry.source)}
@@ -106,7 +106,7 @@
 											{formatStatus(inquiry.status)}
 										</Badge>
 									</span>
-									<span class="text-muted-foreground line-clamp-2 text-xs leading-relaxed">
+									<span class="line-clamp-2 text-xs leading-relaxed text-muted-foreground">
 										{inquiry.message}
 									</span>
 								</span>
@@ -131,14 +131,14 @@
 							<Card.Description class="flex flex-wrap items-center gap-x-4 gap-y-1">
 								<a
 									href={`mailto:${activeInquiry.contactEmail}`}
-									class="hover:bg-muted hover:text-foreground -mx-2 inline-flex min-h-9 min-w-0 items-center gap-2 rounded-md px-2 transition-colors"
+									class="-mx-2 inline-flex min-h-9 min-w-0 items-center gap-2 rounded-md px-2 transition-colors hover:bg-muted hover:text-foreground"
 								>
 									<Mail class="size-4 shrink-0" aria-hidden="true" />
 									<span class="truncate">{activeInquiry.contactEmail}</span>
 								</a>
 								<a
 									href={`tel:${activeInquiry.contactPhone}`}
-									class="hover:bg-muted hover:text-foreground -mx-2 inline-flex min-h-9 items-center gap-2 rounded-md px-2 transition-colors"
+									class="-mx-2 inline-flex min-h-9 items-center gap-2 rounded-md px-2 transition-colors hover:bg-muted hover:text-foreground"
 								>
 									<Phone class="size-4 shrink-0" aria-hidden="true" />
 									{activeInquiry.contactPhone}
@@ -172,21 +172,21 @@
 					<div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_19rem]">
 						<div class="grid content-start gap-5">
 							<section class="grid gap-2">
-								<p class="text-muted-foreground m-0 text-xs font-medium tracking-wide uppercase">
+								<p class="m-0 text-xs font-medium tracking-wide text-muted-foreground uppercase">
 									Customer message
 								</p>
 								<p class="m-0 text-base leading-7">{activeInquiry.message}</p>
 							</section>
 
 							<section class="grid gap-3 border-t pt-5">
-								<p class="text-muted-foreground m-0 text-xs font-medium tracking-wide uppercase">
+								<p class="m-0 text-xs font-medium tracking-wide text-muted-foreground uppercase">
 									Context
 								</p>
 								<div class="grid gap-1">
 									<h2 class="m-0 text-xl font-semibold tracking-tight">
 										{activeInquiry.vehicleTitle ?? sourceLabel(activeInquiry.source)}
 									</h2>
-									<p class="text-muted-foreground m-0 text-sm">
+									<p class="m-0 text-sm text-muted-foreground">
 										{sourceLabel(activeInquiry.source)} submitted on {formatDate(
 											activeInquiry.createdAt
 										)}
@@ -206,7 +206,7 @@
 							</section>
 						</div>
 
-						<aside class="bg-muted/35 grid content-start gap-4 rounded-lg p-4 text-sm">
+						<aside class="grid content-start gap-4 rounded-lg bg-muted/35 p-4 text-sm">
 							<div class="flex items-center justify-between gap-3">
 								<span class="text-muted-foreground">Status</span>
 								<Badge variant={statusVariant(activeInquiry.status)} class="capitalize">
@@ -233,7 +233,7 @@
 					</div>
 				</Card.Content>
 
-				<Card.Footer class="bg-background/95 border-t">
+				<Card.Footer class="border-t bg-background/95">
 					<form method="POST" class="grid w-full gap-4">
 						<input type="hidden" name="id" value={activeInquiry.id} />
 
@@ -243,7 +243,7 @@
 								<select
 									id="inquiry-status"
 									name="status"
-									class="border-input bg-background focus-visible:ring-ring h-11 rounded-lg border px-3 text-sm capitalize outline-none focus-visible:ring-3"
+									class="h-11 rounded-lg border border-input bg-background px-3 text-sm capitalize outline-none focus-visible:ring-3 focus-visible:ring-ring"
 								>
 									{#each statuses as statusName (statusName)}
 										<option value={statusName} selected={activeInquiry.status === statusName}>
@@ -257,7 +257,7 @@
 								<select
 									id="inquiry-agent"
 									name="assignedAgentSlug"
-									class="border-input bg-background focus-visible:ring-ring h-11 rounded-lg border px-3 text-sm outline-none focus-visible:ring-3"
+									class="h-11 rounded-lg border border-input bg-background px-3 text-sm outline-none focus-visible:ring-3 focus-visible:ring-ring"
 								>
 									{#each data.cms.agents as agent (agent.slug)}
 										<option

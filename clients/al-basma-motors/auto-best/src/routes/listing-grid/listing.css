@@ -13,24 +13,27 @@
 }
 
 .dn-listing-hero__media,
-.dn-listing-hero__overlay {
-  position: absolute;
-  inset: 0;
+.dn-listing-hero__overlay { display: none; }
+
+/* The existing tablet photograph is separate from the solid desktop banner. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .dn-listing-hero__media,
+  .dn-listing-hero__overlay { display: block; position: absolute; inset: 0; }
+  .dn-listing-hero__media { background: url('/assets/images/section/bg-4.jpg') center 45% / cover no-repeat; }
+  .dn-listing-hero__overlay { background: var(--dn-route-hero-overlay); }
 }
 
-.dn-listing-hero__media {
-  background: url('/assets/images/section/bg-4.jpg') center 45% / cover no-repeat;
-}
-
-.dn-listing-hero__overlay {
-  background: var(--dn-route-hero-overlay);
+@media (min-width: 992px) {
+  .dn-app-shell .dn-listing-stage .dn-listing-hero.dn-route-hero--studio {
+    background: var(--dn-theme-hero-surface-deep);
+  }
 }
 
 @media (min-width: 992px) {
   .dn-listing-stage[data-layout='hero-discovery'] {
-    --dn-studio-background: var(--dn-workflow-canvas);
+    --dn-studio-background: var(--dn-theme-hero-surface-deep);
     --dn-studio-heading: #fff;
-    --dn-studio-description: #f5dadd;
+    --dn-studio-description: var(--dn-white);
     min-height: var(--dn-route-hero-height);
     padding-bottom: 0;
     background: var(--dn-studio-background);
@@ -41,9 +44,6 @@
     overflow: visible;
   }
 
-  .dn-listing-stage[data-layout='hero-discovery'] .dn-route-hero__layout {
-    padding-bottom: 0;
-  }
 }
 
 @media (max-width: 767px) {

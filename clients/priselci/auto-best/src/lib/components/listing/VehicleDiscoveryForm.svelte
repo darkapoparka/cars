@@ -1,4 +1,10 @@
 <script lang="ts">
+  import { specificationLabel } from '$lib/i18n/presentation';
+
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import type { Attachment } from 'svelte/attachments';
@@ -54,7 +60,7 @@
   });
   let models = $derived(listingModelsForMake(make));
   let activeCount = $derived(activeFilterCount(pending));
-  let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || keywordPlaceholder);
+  let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || i18n.text(keywordPlaceholder));
   let prices = $derived(listingOptionsWithCurrent(listingFilterOptions.prices, filters.priceMax?.toString() ?? ''));
   let years = $derived(listingOptionsWithCurrent(listingFilterOptions.years, filters.yearMin?.toString() ?? ''));
   let mileages = $derived(listingOptionsWithCurrent(listingFilterOptions.mileages, filters.mileageMax?.toString() ?? ''));
@@ -72,42 +78,42 @@
   const clean = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
-<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={resolve('/listing-grid')} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
+<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
   <div class="dn-discovery__toolbar">
     <div class="dn-discovery__search">
-      <button class="dn-discovery__keyword" type="button" aria-label={keywordPlaceholder} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+      <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
         <Icon name="search" size={20} />
-        <span>{filters.q || keywordPlaceholder}</span>
+        <span>{filters.q || i18n.text(keywordPlaceholder)}</span>
       </button>
       {#if showFilterAction}
-        <button class="dn-discovery__filters" type="button" title="Всички филтри" aria-label={activeCount ? `Всички филтри: ${activeCount} активни` : 'Всички филтри'} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
-          <Icon name="adjustments" size={18} strokeWidth={1.8} /><span>Филтри</span>
+        <button class="dn-discovery__filters" type="button" title={i18n.t("m_3deeda2a1ebe")} aria-label={activeCount ? i18n.t("m_8a61a4d5543e", { p0: activeCount }) : i18n.t("m_3deeda2a1ebe")} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+          <Icon name="adjustments" size={18} strokeWidth={1.8} /><span>{i18n.t("m_546ebb8eb993")}</span>
           {#if activeCount}<span class="dn-discovery__count" aria-hidden="true">{activeCount}</span>{/if}
         </button>
       {/if}
-      <button class="dn-discovery__submit" type="submit" aria-label="Търси" title="Търси"><Icon name="search" size={21} /></button>
+      <button class="dn-discovery__submit" type="submit" aria-label={i18n.t("m_49c266baaaa7")} title={i18n.t("m_49c266baaaa7")}><Icon name="search" size={21} /></button>
     </div>
   </div>
   <div class="dn-discovery__facets">
-    <label><span>Марка</span><select name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
-    <label><span>Модел</span><select name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
-    <label><span>Купе</span><select name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{bodyLabel(value) || 'Всички'}</option>{/each}</select></label>
-    <label><span>Цена до</span><select name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? `${formatListingNumber(value)} €` : 'Без лимит'}</option>{/each}</select></label>
-    <label><span>Година от</span><select name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || 'Всички'}</option>{/each}</select></label>
-    <label><span>Пробег до</span><select name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? `${formatListingNumber(value)} км` : 'Без лимит'}</option>{/each}</select></label>
+    <label><span>{i18n.t("m_ccdd25d4230f")}</span><select {@attach i18n.validation} name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
+    <label><span>{i18n.t("m_5e2c614c23f0")}</span><select {@attach i18n.validation} name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
+    <label><span>{i18n.t("m_191c24bf12d5")}</span><select {@attach i18n.validation} name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{specificationLabel(bodyLabel(value), i18n.locale) || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
+    <label><span>{i18n.t("m_363c4f34635c")}</span><select {@attach i18n.validation} name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? i18n.t("m_7ce2209d146e", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
+    <label><span>{i18n.t("m_349ee8568241")}</span><select {@attach i18n.validation} name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
+    <label><span>{i18n.t("m_5679c2543732")}</span><select {@attach i18n.validation} name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? i18n.t("m_9f595d190089", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
   </div>
 
   {#each hiddenFields as [name, value], index (`${name}-${value}-${index}`)}<input type="hidden" {name} {value} />{/each}
 </form>
 
-<div class="dn-discovery-sticky" popover="manual" {@attach attachSticky} role="region" aria-label="Бързо търсене на автомобили">
-  <button class="dn-discovery-sticky__keyword" type="button" aria-label="Отвори търсенето на автомобили" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+<div class="dn-discovery-sticky" popover="manual" {@attach attachSticky} role="region" aria-label={i18n.t("m_8451d82f9587")}>
+  <button class="dn-discovery-sticky__keyword" type="button" aria-label={i18n.t("m_a6403c514411")} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
     <Icon name="search" size={20} /><span>{summary}</span>
   </button>
   <button class="dn-discovery-sticky__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
-    <Icon name="adjustments" size={20} /><span>Филтри</span>{#if activeCount}<span class="dn-discovery-sticky__count">{activeCount}</span>{/if}
+    <Icon name="adjustments" size={20} /><span>{i18n.t("m_546ebb8eb993")}</span>{#if activeCount}<span class="dn-discovery-sticky__count">{activeCount}</span>{/if}
   </button>
-  <button class="dn-discovery-sticky__submit" type="submit" form="dn-desktop-discovery" aria-label="Търси" title="Търси"><Icon name="search" size={21} /></button>
+  <button class="dn-discovery-sticky__submit" type="submit" form="dn-desktop-discovery" aria-label={i18n.t("m_49c266baaaa7")} title={i18n.t("m_49c266baaaa7")}><Icon name="search" size={21} /></button>
 </div>
 
 <style>
@@ -147,4 +153,11 @@
   @media (min-width: 992px) and (max-width: 1199px) { .dn-discovery__facets { gap: 10px; } .dn-discovery__facets select { font-size: var(--dn-text-control-prominent); padding-left: 10px; } }
   @media (min-width: 1440px) and (max-width: 1599px) { .dn-discovery .dn-discovery__facets select { padding-inline: 10px 28px; font-size: var(--dn-control-size); } }
   @media (max-width: 767px) { .dn-discovery { display: none; } }
+  @media (min-width: 992px) {
+    .dn-discovery .dn-discovery__facets { gap: var(--dn-space-3); }
+    .dn-discovery .dn-discovery__facets select { padding-inline: 10px 28px; font-size: var(--dn-control-size); cursor: pointer; transition: none; }
+    .dn-discovery .dn-discovery__facets select:hover { background-color: #eceef1; border-color: var(--dn-line-emphasis); }
+    .dn-discovery__search:focus-within { border-color: var(--dn-focus); }
+    .dn-discovery :is(.dn-discovery__keyword, .dn-discovery__submit) { transition: none; }
+  }
 </style>

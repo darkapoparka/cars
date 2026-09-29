@@ -81,8 +81,8 @@ export function calculateFinance(inputs: FinanceInputs) {
 	};
 }
 
-export function formatFinanceEur(value: number) {
-	return new Intl.NumberFormat('bg-BG', {
+export function formatFinanceEur(value: number, locale: 'en' | 'bg' = 'bg') {
+	return new Intl.NumberFormat(locale === 'en' ? 'en-GB' : 'bg-BG', {
 		style: 'currency',
 		currency: 'EUR',
 		maximumFractionDigits: 2

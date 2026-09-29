@@ -1,3 +1,5 @@
+import { illustrativeMonthly } from '$lib/domain/finance';
+import { site } from '$lib/config/site';
 import {
 	getRelatedVehicles,
 	vehicles,
@@ -7,7 +9,7 @@ import {
 import { listDayNightInventoryListings } from './db';
 import { publicListingStatuses } from './cms-workflow';
 
-const fallbackImage = '/assets/images/card/card-1.jpg';
+const fallbackImage = '/assets/vehicle-placeholder.svg';
 
 const conditionForListing = (status: string): VehicleCondition =>
 	status === 'published' || status === 'reserved' ? 'Used' : 'Certified';
@@ -61,7 +63,7 @@ export const vehicleFromCmsListing = (
 		location: listing.location,
 		mileage: listing.mileage,
 		model: listing.model,
-		monthly: price > 0 ? Math.round(price / 72) : 0,
+		monthly: illustrativeMonthly(price, site.finance),
 		price,
 		priceBgn: price > 0 ? formatBgnFromEur(price) : 'On request',
 		priceLabel: listing.priceLabel,

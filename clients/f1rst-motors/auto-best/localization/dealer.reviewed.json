@@ -1,0 +1,58 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Dubai",
+    "en": "Dubai",
+    "bg": "Дубай",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
+    "en": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
+    "bg": "Danube сграда - 409 Sheikh Zayed Rd - Al Quoz 1",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.appointment",
+    "source": "Mon-Thu 10:00-21:00; Friday 14:00-21:00; Saturday 10:00-21:00; Sunday Closed",
+    "en": "Mon-Thu 10:00-21:00; Friday 14:00-21:00; Saturday 10:00-21:00; Sunday Closed",
+    "bg": "Понеделник–четвъртък 10:00–21:00; петък 14:00–21:00; събота 10:00–21:00; неделя почивен ден",
+    "disposition": "translate",
+    "notes": "Dealer-owned appointment and opening-hours guidance."
+  },
+  {
+    "key": "m_159520cd7f28",
+    "source": "Най-желаната кола в България | Lamborghini Urus",
+    "en": "The most sought-after car in Bulgaria | Lamborghini Urus",
+    "bg": "Най-желаната кола в България | Lamborghini Urus",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/videos.ts:15"
+  },
+  {
+    "key": "m_8304a160c431",
+    "source": "Продадох най-новата Панамера",
+    "en": "I sold the latest Panamera",
+    "bg": "Продадох най-новата Панамера",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/videos.ts:21"
+  },
+  {
+    "key": "m_086566303936",
+    "source": "Каква е разликата в G-класите",
+    "en": "What is the difference between the G-Class models?",
+    "bg": "Каква е разликата в G-класите",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/videos.ts:27"
+  },
+  {
+    "key": "dealer.address",
+    "source": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
+    "en": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
+    "bg": "Danube сграда - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, ОАЕ",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  }
+]

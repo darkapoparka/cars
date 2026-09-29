@@ -13,7 +13,13 @@ import {
 	writeGarageFavorites
 } from './garage-storage';
 
-const garageStorage = () => (browser ? window.localStorage : undefined);
+const garageStorage = () => {
+	try {
+		return browser ? window.localStorage : undefined;
+	} catch {
+		return undefined;
+	}
+};
 
 const syncGarageDom = (
 	favorites = readGarageFavorites(garageStorage()),
@@ -54,8 +60,16 @@ const shouldSyncGarageApi = () => {
 	);
 };
 
-const hasStoredGarageState = (storage: Storage | undefined) =>
-	storage?.getItem(garageFavoriteKey) !== null || storage?.getItem(garageCompareKey) !== null;
+const hasStoredGarageState = (storage: Storage | undefined) => {
+	try {
+		return Boolean(
+			storage &&
+			(storage.getItem(garageFavoriteKey) !== null || storage.getItem(garageCompareKey) !== null)
+		);
+	} catch {
+		return false;
+	}
+};
 
 const syncGarageApi = async () => {
 	if (!shouldSyncGarageApi()) return;
@@ -128,31 +142,39 @@ export class GarageState {
 			this.applyExternalGarageState((event as CustomEvent<GarageUpdatedDetail>).detail);
 		};
 
+		const onStorage = (event: StorageEvent) => {
+			if (!event.key || event.key === garageFavoriteKey || event.key === garageCompareKey)
+				this.applyExternalGarageState();
+		};
 		window.addEventListener('daynight:garage-updated', listener);
-
-		return () => window.removeEventListener('daynight:garage-updated', listener);
+		window.addEventListener('storage', onStorage);
+		return () => {
+			window.removeEventListener('daynight:garage-updated', listener);
+			window.removeEventListener('storage', onStorage);
+		};
 	}
 
 	toggleFavorite(slug: string) {
-		this.favorites = favoriteSlugsWith(readGarageFavorites(garageStorage()), slug);
+		this.favorites = favoriteSlugsWith(this.favorites, slug);
 		writeGarageFavorites(garageStorage(), this.favorites);
 		syncGarageDom();
 		void syncGarageApi();
 	}
 
 	addCompare(slug: string) {
-		this.compare = compareSlugsWith(readGarageCompare(garageStorage()), slug);
+		this.compare = compareSlugsWith(this.compare, slug);
 		writeGarageCompare(garageStorage(), this.compare);
 		syncGarageDom();
 		void syncGarageApi();
 	}
 
 	toggleCompare(slug: string) {
-		this.addCompare(slug);
+		if (this.isCompared(slug)) this.removeCompare(slug);
+		else this.addCompare(slug);
 	}
 
 	removeCompare(slug: string) {
-		this.compare = readGarageCompare(garageStorage()).filter((item) => item !== slug);
+		this.compare = this.compare.filter((item) => item !== slug);
 		writeGarageCompare(garageStorage(), this.compare);
 		syncGarageDom();
 		void syncGarageApi();

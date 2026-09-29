@@ -3,7 +3,10 @@
 	import type { AuxeroMessageBubble, AuxeroMessageThreadData } from '$lib/auxero/messages';
 	import { daynightAssets } from '$lib/data/daynight';
 	import MobileBottomNav from '$lib/components/layout/MobileBottomNav.svelte';
-	import { ArrowLeft, CheckCheck, PhoneCall, Send } from '@lucide/svelte';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
+	import CheckCheck from '@lucide/svelte/icons/check-check';
+	import PhoneCall from '@lucide/svelte/icons/phone-call';
+	import Send from '@lucide/svelte/icons/send';
 
 	let { thread }: { thread: AuxeroMessageThreadData } = $props();
 

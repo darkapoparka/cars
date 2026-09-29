@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { Snippet } from 'svelte';
 	import DesktopBrowseLink from './DesktopBrowseLink.svelte';
 	let {
@@ -25,7 +28,7 @@
 		</h2>
 		{#if copy}<p>{copy}</p>{/if}
 	</div>
-	{#if href && label}<DesktopBrowseLink {href} {label} />{/if}
+	{#if href && label}<DesktopBrowseLink href={i18n.href(href)} {label} />{/if}
 </div>
 
 <style>

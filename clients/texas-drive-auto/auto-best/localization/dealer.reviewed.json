@@ -1,0 +1,58 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Dallas",
+    "en": "Dallas",
+    "bg": "Далас",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "10511 Olympic Drive, Dallas, TX 75220",
+    "en": "10511 Olympic Drive, Dallas, TX 75220",
+    "bg": "10511 Olympic Drive, Dallas, TX 75220",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.appointment",
+    "source": "Monday–Saturday 10 AM–6 PM; Sunday closed",
+    "en": "Monday–Saturday 10 AM–6 PM; Sunday closed",
+    "bg": "Понеделник–събота 10:00–18:00; неделя почивен ден",
+    "disposition": "translate",
+    "notes": "Dealer-owned appointment and opening-hours guidance."
+  },
+  {
+    "key": "m_159520cd7f28",
+    "source": "Най-желаната кола в България | Lamborghini Urus",
+    "en": "The most sought-after car in Bulgaria | Lamborghini Urus",
+    "bg": "Най-желаната кола в България | Lamborghini Urus",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/videos.ts:15"
+  },
+  {
+    "key": "m_8304a160c431",
+    "source": "Продадох най-новата Панамера",
+    "en": "I sold the latest Panamera",
+    "bg": "Продадох най-новата Панамера",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/videos.ts:21"
+  },
+  {
+    "key": "m_086566303936",
+    "source": "Каква е разликата в G-класите",
+    "en": "What is the difference between the G-Class models?",
+    "bg": "Каква е разликата в G-класите",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/videos.ts:27"
+  },
+  {
+    "key": "dealer.address",
+    "source": "10511 Olympic Drive, Dallas, TX 75220",
+    "en": "10511 Olympic Drive, Dallas, TX 75220",
+    "bg": "10511 Olympic Drive, Dallas, TX 75220",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  }
+]

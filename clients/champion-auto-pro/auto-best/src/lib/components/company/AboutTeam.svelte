@@ -1,4 +1,9 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import { brand } from '$config/brand';
   import { demoContentLabel, demoTeamIntro, demoTeamMembers } from '$data/demo-content';
@@ -10,8 +15,8 @@
 <section class="dn-about-team" aria-labelledby="about-team-title" data-demo-content="true">
   <div class="container">
     <header class="dn-about-team__heading">
-      <h2 id="about-team-title">Екипът</h2>
-      <p><span class="dn-about-demo-note">{demoContentLabel}</span> · {demoTeamIntro}</p>
+      <h2 id="about-team-title">{i18n.t("m_3322731be19d")}</h2>
+      <p><span class="dn-about-demo-note">{i18n.text(demoContentLabel)}</span> · {i18n.text(demoTeamIntro)}</p>
     </header>
 
     <div class="dn-about-team__grid">
@@ -20,7 +25,7 @@
           <div class="dn-about-team-card__media">
             <img
               src={member.image}
-              alt={`Демо профил: ${member.name}`}
+              alt={i18n.t("m_6b903e11850f", { p0: member.name })}
               width="450"
               height="450"
               loading="lazy"
@@ -30,13 +35,13 @@
           <div class="dn-about-team-card__details">
             <div>
               <h3>{member.name}</h3>
-              <p>{member.role}</p>
+              <p>{i18n.text(member.role)}</p>
             </div>
             <div class="dn-about-team-card__actions">
-              <a {...phoneLinkAttributes} aria-label={`Обадете се на ${brand.name}`}>
+              <a {...phoneLinkAttributes} aria-label={i18n.t("m_772c70f449af", { p0: brand.name })}>
                 <Icon name="phone" size={16} strokeWidth={1.8} />
               </a>
-              <a href={resolve('/contact')} aria-label={`Изпратете запитване до ${brand.name}`}>
+              <a href={i18n.href(resolve('/contact'))} aria-label={i18n.t("m_bf8f5e29ff56", { p0: brand.name })}>
                 <Icon name="mail" size={16} strokeWidth={1.8} />
               </a>
             </div>

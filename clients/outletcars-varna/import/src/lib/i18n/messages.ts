@@ -1,9 +1,11 @@
+import { inventoryText } from '$lib/content/inventory-localized';
+import { site, resolveSiteLocale } from '$lib/config/site';
 import { parseAuxeroHeadAssets, type AuxeroPageDocument } from '$lib/auxero/page-document';
 
 export const locales = ['bg', 'en'] as const;
 export type Locale = (typeof locales)[number];
 
-export const defaultLocale: Locale = 'bg';
+export const defaultLocale: Locale = site.locale.default;
 
 export type HomePageCopy = {
 	actionBand: {
@@ -521,8 +523,7 @@ export const messages: Record<Locale, PublicMessages> = {
 	}
 };
 
-export const resolveLocale = (value: string | null | undefined): Locale =>
-	value === 'en' ? 'en' : defaultLocale;
+export const resolveLocale = (value: string | null | undefined): Locale => resolveSiteLocale(value);
 
 export const getMessages = (locale: Locale) => messages[locale];
 
@@ -530,12 +531,13 @@ export const translateVehicleTerm = (
 	locale: Locale,
 	group: keyof PublicMessages['vehicleTerms'],
 	value: string
-) => messages[locale].vehicleTerms[group][value] ?? value;
+) => messages[locale].vehicleTerms[group][value] ?? inventoryText(locale, value);
 
 const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 export const localizeVehicleTermsInText = (locale: Locale, value: string) => {
-	if (locale === 'en') return value;
+	const authored = inventoryText(locale, value);
+	if (locale === 'en' || authored !== value) return authored;
 
 	const termGroups: Array<keyof PublicMessages['vehicleTerms']> = [
 		'bodyTypes',
@@ -559,11 +561,10 @@ export const localizeCount = (locale: Locale, count: string) =>
 	locale === 'bg' ? count.replace(/\bVehicles\b/g, 'автомобила') : count;
 
 /**
- * Bulgarian count noun for "автомобил": singular for counts ending in 1 (but not 11),
- * paucal/plural form otherwise. Avoids ungrammatical strings like "1 автомобила".
+ * Bulgarian count noun for "автомобил": singular only for 1;
+ * use the count form for every other number, including 21 and 101. Avoids ungrammatical strings like "1 автомобила".
  */
-export const bgVehicleCountNoun = (count: number) =>
-	count % 10 === 1 && count % 100 !== 11 ? 'автомобил' : 'автомобила';
+export const bgVehicleCountNoun = (count: number) => (count === 1 ? 'автомобил' : 'автомобила');
 
 const auxeroBgReplacements: Array<[RegExp, string]> = [
 	// Inventory + detail template strings. Multi-word/compound phrases are listed

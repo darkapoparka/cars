@@ -29,9 +29,9 @@ export type DayNightFooterLinkGroup = {
 
 export const daynightFooterLinkGroups: DayNightFooterLinkGroup[] = [
 	{
-		title: 'AL HAMOOR AL THAHABI USED CARS',
+		title: 'About the dealership',
 		links: [
-			{ href: '/about', label: 'За Al Hamoor Al Thahabi' },
+			{ href: '/about', label: 'About us' },
 			{ href: '/about/daynight-auto-plovdiv', label: 'Профил на автокъщата' },
 			{ href: '/team', label: 'Екип' },
 			{ href: '/reviews', label: 'Отзиви' },

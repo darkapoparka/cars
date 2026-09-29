@@ -1,6 +1,8 @@
 import { cars, type Car } from '$lib/data/daynight-vehicles';
 import { getPublishedPublicInventory } from '$lib/server/repositories/public-inventory';
 import { PUBLIC_SITEMAP_ROUTES } from '$lib/server/public-routes';
+import { dealerLocaleConfiguration } from '$lib/locale/config';
+import { localeHref } from '$lib/locale/core';
 
 type SitemapVehicle = Pick<Car, 'slug'>;
 
@@ -16,13 +18,20 @@ function normalizeOrigin(origin: string) {
 	return origin.replace(/\/+$/g, '');
 }
 
-export function buildSitemapLocations(origin: string, vehicles: SitemapVehicle[]) {
-	const base = normalizeOrigin(origin);
-
-	return [
-		...PUBLIC_SITEMAP_ROUTES.map((route) => `${base}/${route.path}`),
-		...vehicles.map((vehicle) => `${base}/inventory/${vehicle.slug}`)
+export function buildSitemapLocations(
+	origin: string,
+	vehicles: SitemapVehicle[],
+	base = '',
+	articles: { slug: string }[] = []
+) {
+	const paths = [
+		...PUBLIC_SITEMAP_ROUTES.map((route) => `/${route.path}`),
+		...vehicles.map((vehicle) => `/inventory/${encodeURIComponent(vehicle.slug)}`),
+		...articles.map((article) => `/blog/${encodeURIComponent(article.slug)}`)
 	];
+	return dealerLocaleConfiguration.enabledLocales.flatMap((locale) =>
+		paths.map((path) => normalizeOrigin(origin) + localeHref(path, locale, base))
+	);
 }
 
 export function renderSitemapXml(locations: string[]) {

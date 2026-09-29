@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	type IconName =
 		| 'account'
 		| 'chevron-down'
@@ -164,7 +167,7 @@
 {:else if name === 'facebook'}
 	<img
 		class="block size-6 object-contain"
-		src="/assets/icons/facebook.svg"
+		src={i18n.asset('/assets/icons/facebook.svg')}
 		alt=""
 		aria-hidden="true"
 		width="24"
@@ -173,7 +176,7 @@
 {:else if name === 'instagram'}
 	<img
 		class="block size-6 object-contain"
-		src="/assets/icons/instagram-official-gradient.svg"
+		src={i18n.asset('/assets/icons/instagram-official-gradient.svg')}
 		alt=""
 		aria-hidden="true"
 		width="24"

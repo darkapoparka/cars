@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { onDestroy } from 'svelte';
 	import {
 		validateImportVehicle,
@@ -69,7 +72,7 @@
 	const originSearchLabel = $derived(
 		selectedOrigin === DEFAULT_IMPORT_ORIGIN
 			? 'Търсене без предпочитана държава'
-			: `Търсене от ${selectedOriginLabel}`
+			: i18n.t('pattern.03b4d792cda2', { v0: selectedOriginLabel })
 	);
 
 	const phoneHref = daynightSite.phoneHref;
@@ -80,8 +83,8 @@
 	);
 	const requestMeta = $derived(
 		[
-			importYear.trim() && `след ${importYear.trim()}`,
-			importBudget.trim() && `до ${importBudget.trim()} €`
+			importYear.trim() && i18n.t('pattern.c74b077c6c6e', { v0: importYear.trim() }),
+			importBudget.trim() && i18n.t('pattern.38af6e110534', { v0: importBudget.trim() })
 		]
 			.filter(Boolean)
 			.join(' · ')
@@ -198,7 +201,7 @@
 				fuel: null,
 				transmission: null,
 				notes: [
-					`Произход: ${selectedOriginLabel}`,
+					i18n.t('pattern.2f6ef55bc267', { v0: selectedOriginLabel }),
 					buildImportNotes(
 						{
 							...initial,
@@ -254,7 +257,7 @@
 <div class="mobile-import">
 	<MobileLeadHero
 		kind="import"
-		title="Внос на автомобил"
+		title={i18n.t('copy.3d1ecec672e9')}
 		bind:value={quickValue}
 		bind:vinValue={quickVin}
 		bind:mode={quickMode}
@@ -268,16 +271,18 @@
 			<section class="import-success" aria-labelledby="import-success-title">
 				<span class="import-success__icon"><CircleCheck size={22} strokeWidth={2.3} /></span>
 				<div>
-					<h2 id="import-success-title">Заявката е изпратена</h2>
-					<p>Ще се свържем с Вас с конкретни варианти и следваща стъпка.</p>
+					<h2 id="import-success-title">{i18n.t('copy.f6436fa174f3')}</h2>
+					<p>{i18n.t('copy.c5f9a7d8c8ae')}</p>
 				</div>
 				<div class="import-success__actions">
-					<a href={phoneHref}><Phone size={17} strokeWidth={2.3} /> Обади се</a>
-					<button type="button" onclick={startAnother}>Нова заявка</button>
+					<a href={i18n.href(phoneHref)}
+						><Phone size={17} strokeWidth={2.3} /> {i18n.t('copy.d40e5119596a')}</a
+					>
+					<button type="button" onclick={startAnother}>{i18n.t('copy.d05d2b62ae66')}</button>
 				</div>
 			</section>
 		{:else}
-			<nav class="import-origins" aria-label="Произход на автомобила">
+			<nav class="import-origins" aria-label={i18n.t('copy.30a3d2e54b40')}>
 				{#each originOptions as option (option.code)}
 					<button
 						type="button"
@@ -293,15 +298,15 @@
 								aria-hidden="true"
 							></span>
 						{/if}
-						<span>{option.label}</span>
+						<span>{i18n.text(option.label)}</span>
 					</button>
 				{/each}
 			</nav>
 			<MobileImportExamples {vehicles} onSelect={chooseExample} />
 			<MobileLeadContactCard
 				{phoneHref}
-				title="Искаш съдействие?"
-				copy="Ще помогнем с избора, проверката и вноса."
+				title={i18n.t('copy.6873fde144df')}
+				copy={i18n.t('copy.c9d9a830a29a')}
 			/>
 		{/if}
 	</main>
@@ -312,17 +317,18 @@
 			step={formStep}
 			busy={submitState === 'submitting'}
 			errorMessage={submitMessage}
-			submitLabel="Изпрати заявка"
+			submitLabel={i18n.t('copy.0c927e425946')}
 			onSubmit={handleSubmit}
 			onBack={goBack}
 			onClose={closeForm}
 		>
 			<p class="import-origin-summary import-origin-summary--form">{originSearchLabel}</p>
 			{#if formStep === 1}
-				<section class="lead-fields" aria-label="Автомобил за внос">
+				<section class="lead-fields" aria-label={i18n.t('copy.33e4ad07a6c6')}>
 					<label class="lead-field">
-						<span>Линк към обява <small>по желание</small></span>
+						<span>{i18n.t('copy.fbee9a117fb4')} <small>{i18n.t('copy.d42086812b73')}</small></span>
 						<input
+							{@attach i18n.validation}
 							name="sourceUrl"
 							aria-invalid={issue?.field === 'sourceUrl' ? true : undefined}
 							aria-describedby={issue?.field === 'sourceUrl'
@@ -331,13 +337,14 @@
 							bind:value={sourceUrl}
 							type="url"
 							inputmode="url"
-							placeholder="https://..."
+							placeholder={i18n.t('copy.e98a62ef23bb')}
 							autocomplete="url"
 						/>
 					</label>
 					<label class="lead-field">
-						<span>Какъв автомобил търсите</span>
+						<span>{i18n.t('copy.d39e88976c4b')}</span>
 						<input
+							{@attach i18n.validation}
 							name="query"
 							aria-invalid={issue?.field === 'query' ? true : undefined}
 							aria-describedby={issue?.field === 'query' ? 'import-sheet-title-error' : undefined}
@@ -347,15 +354,16 @@
 								importModel = '';
 							}}
 							type="text"
-							placeholder="BMW X5, дизел..."
+							placeholder={i18n.t('copy.1200e7129216')}
 							autocomplete="off"
 							required={!sourceUrl.trim()}
 						/>
 					</label>
 					<div class="lead-field-grid">
 						<label class="lead-field">
-							<span>Година от</span>
+							<span>{i18n.t('copy.5adb14a9dc09')}</span>
 							<input
+								{@attach i18n.validation}
 								name="year"
 								aria-invalid={issue?.field === 'year' ? true : undefined}
 								aria-describedby={issue?.field === 'year' ? 'import-sheet-title-error' : undefined}
@@ -366,8 +374,9 @@
 							/>
 						</label>
 						<label class="lead-field">
-							<span>Бюджет €</span>
+							<span>{i18n.t('copy.deec546f88d7')}</span>
 							<input
+								{@attach i18n.validation}
 								name="budget"
 								aria-invalid={issue?.field === 'budget' ? true : undefined}
 								aria-describedby={issue?.field === 'budget'
@@ -382,44 +391,46 @@
 					</div>
 				</section>
 			{:else}
-				<section class="lead-fields" aria-label="Контакт">
+				<section class="lead-fields" aria-label={i18n.t('copy.5bc9a8a2e214')}>
 					<div class="lead-summary">
 						<div>
-							<span>Търсене</span><strong>{requestTitle}</strong>{#if requestMeta}<small
-									>{requestMeta}</small
-								>{/if}
+							<span>{i18n.t('copy.bfc95eff30e5')}</span><strong>{requestTitle}</strong
+							>{#if requestMeta}<small>{requestMeta}</small>{/if}
 						</div>
-						<button type="button" onclick={goBack}>Редактирай</button>
+						<button type="button" onclick={goBack}>{i18n.t('copy.69bd6f7ec2e5')}</button>
 					</div>
 					<label class="lead-field">
-						<span>Телефон или имейл</span>
+						<span>{i18n.t('copy.e998010069b6')}</span>
 						<input
+							{@attach i18n.validation}
 							name="contact"
 							aria-invalid={issue?.field === 'contact' ? true : undefined}
 							aria-describedby={issue?.field === 'contact' ? 'import-sheet-title-error' : undefined}
 							bind:value={contact}
 							type="text"
-							placeholder="08... или email"
+							placeholder={i18n.t('copy.0223cd618829')}
 							autocomplete="email"
 							required
 						/>
 					</label>
 					<label class="lead-field lead-field--textarea">
-						<span>Бележка <small>по желание</small></span>
+						<span>{i18n.t('copy.c662d4951a80')} <small>{i18n.t('copy.d42086812b73')}</small></span>
 						<textarea
+							{@attach i18n.validation}
 							name="message"
 							aria-invalid={issue?.field === 'message' ? true : undefined}
 							aria-describedby={issue?.field === 'message' ? 'import-sheet-title-error' : undefined}
 							bind:value={message}
 							rows="3"
-							placeholder="Оборудване, гориво, други условия..."
+							placeholder={i18n.t('copy.66382abc9582')}
 						></textarea>
 					</label>
 				</section>
 			{/if}
 
 			<label class="honeypot" aria-hidden="true">
-				<span>Компания</span><input
+				<span>{i18n.t('copy.64d92044a1ff')}</span><input
+					{@attach i18n.validation}
 					bind:value={companyWebsite}
 					type="text"
 					tabindex="-1"

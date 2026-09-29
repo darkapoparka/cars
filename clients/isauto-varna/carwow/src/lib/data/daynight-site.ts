@@ -12,27 +12,43 @@ const district = "Бизнес парк Варна";
 const street = "Бизнес парк Варна, сграда B6";
 const location = "Бизнес парк Варна, сграда B6, Варна, България";
 
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'Варна',
+	locationShort: "Бизнес парк Варна, Варна",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, Варна'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
+
 export const daynightSite = {
-	name: "IS AUTO Varna",
+	name: 'IS AUTO VARNA',
 	shortName,
 	city,
 	region: city,
-	countryCode: "BG",
-	locale: "bg-BG",
-	currency: "EUR",
+	countryCode: 'BG',
+	locale: 'bg-BG',
+	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: "359899266666",
-	phoneLabel: "0899 266 666",
-	email: "varna@isauto.net",
+	phone: '359899266666',
+	phoneLabel: '0899 266 666',
+	email: '',
 	location,
-	locationShort: "Бизнес парк Варна, сграда B6",
-	locationLandmark: "Бизнес парк Варна, сграда B6, Варна, България",
-	hoursLabel: "Понеделник–петък 09:00–18:00; събота 10:00–16:00; неделя почивен ден",
+	locationShort: `${district}, ${city}`,
+	locationLandmark: "Бизнес парк Варна, сграда B6",
+	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: "https://www.isauto.net/",
+	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark-20260919.webp",
 	logoDark: "/dealer-brand/logo-on-light-20260919.webp",
 	socialLinks: {"facebook":"https://www.facebook.com/isauto1","instagram":"https://www.instagram.com/is__auto/?hl=bg","youtube":"","tiktok":""},
@@ -40,8 +56,8 @@ export const daynightSite = {
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: "IS AUTO Varna",
-	heroSubtitle: "Варна · Датирана извадка от публичните обяви към 16.09.2026 г.; потвърдете цената и наличността директно с IS AUTO Varna.",
+	heroTitle: 'IS AUTO VARNA',
+	heroSubtitle: 'Варна - Премиум автомобили в Варна с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
 	reviewLinkLabel: daynightReviewLinkLabel
@@ -90,7 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: "За IS AUTO", href: '/about' },
+			{ label: 'За IS AUTO', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "dealer": "perfect-auto-varna",
+  "profile": "auto-best/src/lib/data/dealer-profile.json",
+  "profileSha256": "5a0493840c03e28c2aaa8e117ff9a1c1aaa6223f3f460c0b241d66f32b108e56",
+  "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+  "vehicles": 6,
+  "currency": "EUR",
+  "observedAt": "2026-09-10",
+  "assets": [
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+      "output": "public/dealer-app/logo-light-f14f8fd14fcb86890633.webp",
+      "sha256": "f14f8fd14fcb86890633c6548ca774a2a7a7639493a09b21d4113db4f57adfd0",
+      "role": "logo-light"
+    },
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+      "output": "public/dealer-app/logo-dark-529cbc115327200b2d15.webp",
+      "sha256": "529cbc115327200b2d154fe6bc0ca1c75687ecac4b0f2cca7770a1151e24cf58",
+      "role": "logo-dark"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-01-1.webp",
+      "output": "public/dealer-app/vehicle-72efcccdd10d09f38c23.webp",
+      "sha256": "72efcccdd10d09f38c23bfe7e93730478e8d6380e11bb11886c53a109f334841",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-01-2.webp",
+      "output": "public/dealer-app/vehicle-7313ed0d3bf2e896a085.webp",
+      "sha256": "7313ed0d3bf2e896a0854c6abe3b17ee24f15fc09bcaf626387ada8d24af490e",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-01-3.webp",
+      "output": "public/dealer-app/vehicle-1633d792c1bf16c1503f.webp",
+      "sha256": "1633d792c1bf16c1503fdf21f8cadaf7497df32c5e8f541fba32757aaeb4b317",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-01-4.webp",
+      "output": "public/dealer-app/vehicle-6ee1c7a4f7bc10166531.webp",
+      "sha256": "6ee1c7a4f7bc1016653167028cad8a39f356d7b1382e32926f81a6726762fa69",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-01-5.webp",
+      "output": "public/dealer-app/vehicle-4e8a4f74fff474de46e5.webp",
+      "sha256": "4e8a4f74fff474de46e58e4b2222bbc22a9c6ff4a5a30099b73bc3c002b9d341",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-02-1.webp",
+      "output": "public/dealer-app/vehicle-8b34bc64a8f1df16c1a6.webp",
+      "sha256": "8b34bc64a8f1df16c1a6e0a70632c5647cc6bd47f25a9ca600e7d377524f86f5",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-02-2.webp",
+      "output": "public/dealer-app/vehicle-3cf943fc888962c1895e.webp",
+      "sha256": "3cf943fc888962c1895e27ff025f842f112f7faad20bc59b6f74ffd030c82c04",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-02-3.webp",
+      "output": "public/dealer-app/vehicle-01e012e93c909839f890.webp",
+      "sha256": "01e012e93c909839f890035a5cb3bc593b1da6b41ad7cdf8ad34f16964c953c7",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-02-4.webp",
+      "output": "public/dealer-app/vehicle-e9ddb7bb577d187461a1.webp",
+      "sha256": "e9ddb7bb577d187461a11fcfe16283e16102b39003726a76df26061ff35f59e9",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-02-5.webp",
+      "output": "public/dealer-app/vehicle-c2635e0b57f728e8586c.webp",
+      "sha256": "c2635e0b57f728e8586cd35bef02cc1ceeb4d4000ba417caf54c0f28bad7165c",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-03-1.webp",
+      "output": "public/dealer-app/vehicle-01162b093339341f9b15.webp",
+      "sha256": "01162b093339341f9b15708328855a63e815a138d0b98e843d01ebf0a4d26b95",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-03-2.webp",
+      "output": "public/dealer-app/vehicle-0690627becda16979b3b.webp",
+      "sha256": "0690627becda16979b3be64c9da64e02209a7664731ab041b47985710135878d",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-03-3.webp",
+      "output": "public/dealer-app/vehicle-1d9c85dc76d71c1e5086.webp",
+      "sha256": "1d9c85dc76d71c1e5086da6801d43e061fb83c44bbf27f153cdabb67897711b6",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-03-4.webp",
+      "output": "public/dealer-app/vehicle-ea8212145a6cbba40d03.webp",
+      "sha256": "ea8212145a6cbba40d032855b1906ff2f1ce7f0d72461affab9d9fac525a2873",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-03-5.webp",
+      "output": "public/dealer-app/vehicle-488db5acfae2164fbf2e.webp",
+      "sha256": "488db5acfae2164fbf2e3cce47980ad6215b7e9cc69a2de98d3907745bef9412",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-04-1.webp",
+      "output": "public/dealer-app/vehicle-87e7afe21d9d4881b155.webp",
+      "sha256": "87e7afe21d9d4881b155862d9f171170d94b3d3f2ca1b4af4396f3dc7fe467d4",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-04-2.webp",
+      "output": "public/dealer-app/vehicle-11eb27a98c0e258f4188.webp",
+      "sha256": "11eb27a98c0e258f4188b018fdbca9c505e5a3c92ea2599367fdabbc86077ea5",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-04-3.webp",
+      "output": "public/dealer-app/vehicle-ce60d57aedd340a31d4f.webp",
+      "sha256": "ce60d57aedd340a31d4fa4950af19e6dd9372e082e48a1fb23d314eacb641c90",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-04-4.webp",
+      "output": "public/dealer-app/vehicle-7ae51239711cb9d8c134.webp",
+      "sha256": "7ae51239711cb9d8c134bd295078e18384900757ad9a10dd1fd13d7abadcd81f",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-04-5.webp",
+      "output": "public/dealer-app/vehicle-d0c7c30cfe6c38f43e76.webp",
+      "sha256": "d0c7c30cfe6c38f43e767d71a3ffb9b0035321a8f5361bdc6c2feac1bf634225",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-05-1.webp",
+      "output": "public/dealer-app/vehicle-9d7bdd9ce343986abcfd.webp",
+      "sha256": "9d7bdd9ce343986abcfde179c943f0cade581586f2891ee000ee6372fa8a2bd7",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-05-2.webp",
+      "output": "public/dealer-app/vehicle-bb9e946eca38d92cb734.webp",
+      "sha256": "bb9e946eca38d92cb734cee28259176268ef5eddf3352c0d90534dbd5f56528a",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-05-3.webp",
+      "output": "public/dealer-app/vehicle-19c0d197e1a3ff2944fc.webp",
+      "sha256": "19c0d197e1a3ff2944fc74e3379ae73b8274acef5e08f63eea14d76a8f7fc9d8",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-05-4.webp",
+      "output": "public/dealer-app/vehicle-fe41b1cb11d9422f2341.webp",
+      "sha256": "fe41b1cb11d9422f23417dfa8c090dc07e02046db2142eeddfadafc80408010f",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-05-5.webp",
+      "output": "public/dealer-app/vehicle-08cff27f247620073eaf.webp",
+      "sha256": "08cff27f247620073eaf3666855456391f11bf1997c598e31b02c8a4362d6dff",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-06-1.webp",
+      "output": "public/dealer-app/vehicle-98ea5844a09e4c8bad14.webp",
+      "sha256": "98ea5844a09e4c8bad14291b9b6a42beb210b2a7b39f4daa5d8de6bfb049d7a9",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-06-2.webp",
+      "output": "public/dealer-app/vehicle-a4b576f7a304da6b92e9.webp",
+      "sha256": "a4b576f7a304da6b92e9cec455c57d0e7149b72dabf8c5aaef05e44102e8ad35",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-06-3.webp",
+      "output": "public/dealer-app/vehicle-4e77c7e2c96007a09074.webp",
+      "sha256": "4e77c7e2c96007a0907469a6f18db97b25e4293f8abdabdd8888bd3f982ec9de",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-06-4.webp",
+      "output": "public/dealer-app/vehicle-606ae2d8130e9c6819b1.webp",
+      "sha256": "606ae2d8130e9c6819b1796fc6294c4709bccbfbb0a0ad72b42e734a01a59ebf",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/perfect-auto/vehicle-06-5.webp",
+      "output": "public/dealer-app/vehicle-010b9724f866f9c7d16c.webp",
+      "sha256": "010b9724f866f9c7d16cb1a22885ad3ea13de909932534e37332834b0112fb15",
+      "role": "vehicle"
+    }
+  ],
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
+    "path": "templates/app",
+    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
+    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
+  },
+  "generatedAt": "2026-09-28T04:58:07.534Z",
+  "policy": {
+    "selector": "shared-v2-with-local-fallback",
+    "benefits": "clearly-labelled-proposal-examples",
+    "missingPhotos": "neutral-template-artwork-not-invented-stock"
+  }
+}

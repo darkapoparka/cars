@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 	import { getGarageContext } from '$lib/state/garage.svelte';
@@ -85,18 +88,18 @@
 {/snippet}
 
 <div class="title-section pdp-title-card__main">
-	<a href={resolve('/inventory')} class="pdp-nav-button pdp-nav-button--back">
+	<a href={i18n.href(resolve('/inventory'))} class="pdp-nav-button pdp-nav-button--back">
 		{@render leftArrow()}
-		<span>Назад</span>
+		<span>{i18n.t('copy.1a9fb1f3cf8e')}</span>
 	</a>
 	<h1 class="daynight-pdp-title">{vehicle.shortTitle} {vehicle.year}</h1>
 	<div class="pdp-title-actions flex items-center justify-end gap-12">
 		<a
-			href={resolve('/compare')}
+			href={i18n.href(resolve('/compare'))}
 			class="btn-icon-circle hover-stroke-white"
 			class:is-active={isCompared}
-			title={isCompared ? 'Виж сравнение' : 'Добави и виж сравнение'}
-			aria-label={isCompared ? 'Виж сравнение' : 'Добави и виж сравнение'}
+			title={isCompared ? i18n.t('copy.a94ff3569058') : i18n.t('copy.64197e79f4cb')}
+			aria-label={isCompared ? i18n.t('copy.a94ff3569058') : i18n.t('copy.64197e79f4cb')}
 			onclick={() => {
 				if (!isCompared) garage.toggleCompare(vehicle.slug);
 			}}
@@ -108,8 +111,8 @@
 			type="button"
 			class="btn-icon-circle hover-stroke-white"
 			class:is-active={isSaved}
-			title={isSaved ? 'Премахни от запазени' : 'Запази автомобила'}
-			aria-label={isSaved ? 'Премахни от запазени' : 'Запази автомобила'}
+			title={isSaved ? i18n.t('copy.5ad0c819e20a') : i18n.t('copy.8537f616c6d8')}
+			aria-label={isSaved ? i18n.t('copy.5ad0c819e20a') : i18n.t('copy.8537f616c6d8')}
 			aria-pressed={isSaved}
 			onclick={() => garage.toggleFavorite(vehicle.slug)}
 		>
@@ -119,15 +122,15 @@
 		<button
 			type="button"
 			class="btn-icon-circle hover-fill-white"
-			title="Сподели автомобила"
-			aria-label="Сподели автомобила"
+			title={i18n.t('copy.a689b33e2649')}
+			aria-label={i18n.t('copy.a689b33e2649')}
 			onclick={shareVehicle}
 		>
 			{@render shareIcon()}
 		</button>
 	</div>
 	{#if shareState}
-		<span class="pdp-share-status" role="status" aria-live="polite">{shareState}</span>
+		<span class="pdp-share-status" role="status" aria-live="polite">{i18n.text(shareState)}</span>
 	{/if}
 </div>
 

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { onMount as onClientMount } from 'svelte';
 	let interactive = $state(false);
 	onClientMount(() => {
@@ -23,7 +26,7 @@
 	let contact = $state(
 		appPage.url.searchParams.get('phone') || appPage.url.searchParams.get('email') || ''
 	);
-	let message = $state(contactContext.message);
+	let message = $state(i18n.text(contactContext.message));
 	let companyWebsite = $state('');
 	let leadSubmitState = $state<'idle' | 'submitting' | 'success' | 'error'>('idle');
 	let leadSubmitMessage = $state('');
@@ -58,7 +61,12 @@
 				email,
 				phone: email ? null : contactValue,
 				source: 'contact-page-mobile',
-				message: buildContactMessage(contactContext, message),
+				message: buildContactMessage(
+					contactContext,
+					message,
+					i18n.text(contactContext.subject),
+					i18n.locale
+				),
 				companyWebsite
 			},
 			{ signal: controller.signal }
@@ -70,20 +78,20 @@
 	const contactCards = [
 		{
 			id: 'phone',
-			title: 'Телефон',
+			title: i18n.t('copy.822f9fd9ba2d'),
 			value: daynightSite.phoneLabel,
 			icon: PhoneCall
 		},
 		{
 			id: 'address',
-			title: 'Адрес',
-			value: daynightSite.location,
+			title: i18n.t('copy.da82e80563d7'),
+			value: i18n.dealer('address'),
 			icon: MapPin
 		},
 		{
 			id: 'hours',
-			title: 'Работно време',
-			value: daynightSite.hoursLabel,
+			title: i18n.t('copy.e3e2e2339725'),
+			value: i18n.text(daynightSite.hoursLabel),
 			href: null,
 			icon: Clock
 		}
@@ -91,13 +99,12 @@
 </script>
 
 <div class="mobile-contact-app mobile-info-page">
-	<MobileInfoHero
-		title="Контакти"
-		description="За оглед, въпрос или съдействие — обадете се или ни пишете."
-	>
-		<a href={phoneHref}><PhoneCall size={18} strokeWidth={2} /> Обади се</a>
-		<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
-			><MapPin size={18} strokeWidth={2} /> Карта</a
+	<MobileInfoHero title={i18n.t('copy.18a85f67cf6a')} description={i18n.t('copy.44d8f321233b')}>
+		<a href={i18n.href(phoneHref)}
+			><PhoneCall size={18} strokeWidth={2} /> {i18n.t('copy.d40e5119596a')}</a
+		>
+		<a href={i18n.href(daynightSite.mapUrl)} target="_blank" rel="noopener noreferrer"
+			><MapPin size={18} strokeWidth={2} /> {i18n.t('copy.2751c9100018')}</a
 		>
 	</MobileInfoHero>
 
@@ -109,21 +116,20 @@
 		>
 			<noscript
 				><p>
-					За онлайн заявка е необходим JavaScript. <a href={daynightSite.phoneHref}
-						>Свържете се с екипа по телефона.</a
-					>
+					{i18n.t('copy.8b681b7a839d')}
+					<a href={i18n.href(daynightSite.phoneHref)}>{i18n.t('copy.04eb33f8c2d0')}</a>
 				</p></noscript
 			>
 			<div class="mobile-contact-heading">
 				<h2 id="mobile-contact-form-title">
-					{contactContext.subject || 'Пишете ни'}
+					{i18n.text(contactContext.subject) || i18n.t('copy.b69a9fd53d0a')}
 				</h2>
 			</div>
 
 			{#if contactContext.vehicle}
 				<p>
-					Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext.vehicle
-						.year} · {contactContext.vehicle.lot}
+					{i18n.t('copy.1392cb97602c')} <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext
+						.vehicle.year} · {contactContext.vehicle.lot}
 				</p>
 			{/if}
 
@@ -131,8 +137,8 @@
 				<div class="mobile-contact-success" role="status" aria-live="polite">
 					<MessageCircle size={23} strokeWidth={2} />
 					<span>
-						<strong>Запитването е изпратено</strong>
-						<small>{leadSubmitMessage}</small>
+						<strong>{i18n.t('copy.4295b1a0b719')}</strong>
+						<small>{i18n.text(leadSubmitMessage)}</small>
 					</span>
 				</div>
 			{:else}
@@ -152,8 +158,9 @@
 						aria-hidden="true"
 						style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"
 					>
-						<label for="mobile-contact-company-website">Не попълвайте това поле</label>
+						<label for="mobile-contact-company-website">{i18n.t('copy.624d565a3f48')}</label>
 						<input
+							{@attach i18n.validation}
 							id="mobile-contact-company-website"
 							name="companyWebsite"
 							type="text"
@@ -163,22 +170,24 @@
 						/>
 					</div>
 					<label>
-						<span>Име</span>
+						<span>{i18n.t('copy.7848bd195104')}</span>
 						<input
+							{@attach i18n.validation}
 							disabled={leadSubmitState === 'submitting' || !interactive}
 							bind:value={name}
 							name="name"
 							maxlength="140"
 							type="text"
-							placeholder="Вашето име"
+							placeholder={i18n.t('copy.62170ed5140f')}
 							autocomplete="name"
 							required
 						/>
 					</label>
 
 					<label>
-						<span>Телефон или имейл</span>
+						<span>{i18n.t('copy.e998010069b6')}</span>
 						<input
+							{@attach i18n.validation}
 							disabled={leadSubmitState === 'submitting' || !interactive}
 							bind:value={contact}
 							name="contact"
@@ -187,27 +196,30 @@
 							aria-describedby={invalidContact ? 'mobile-contact-error' : undefined}
 							type="text"
 							inputmode="text"
-							placeholder="Вашият телефон или имейл"
+							placeholder={i18n.t('copy.c7427fb7089e')}
 							autocomplete="off"
 							required
 						/>
 					</label>
 					<label>
-						<span>Съобщение</span>
+						<span>{i18n.t('copy.5afae14709c7')}</span>
 						<textarea
+							{@attach i18n.validation}
 							disabled={leadSubmitState === 'submitting' || !interactive}
 							bind:value={message}
 							name="message"
 							maxlength="3500"
 							rows="3"
-							placeholder="Автомобил, оглед, бартер, документи..."
+							placeholder={i18n.t('copy.af1947d4c586')}
 							required
 						></textarea>
 					</label>
 					<button type="submit" disabled={leadSubmitState === 'submitting' || !interactive}>
 						<Send size={18} strokeWidth={2} />
 						<span>
-							{leadSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}
+							{leadSubmitState === 'submitting'
+								? i18n.t('copy.acfcd771108c')
+								: i18n.t('copy.8d4343e23a1b')}
 						</span>
 					</button>
 					{#if leadSubmitMessage}
@@ -217,7 +229,7 @@
 							role="alert"
 							aria-live="polite"
 						>
-							{leadSubmitMessage}
+							{i18n.text(leadSubmitMessage)}
 						</p>
 					{/if}
 				</form>
@@ -226,7 +238,7 @@
 
 		<section class="mobile-contact-section" aria-labelledby="mobile-contact-info-title">
 			<div class="mobile-contact-heading">
-				<h2 id="mobile-contact-info-title">Посетете ни</h2>
+				<h2 id="mobile-contact-info-title">{i18n.t('copy.b41cda79b240')}</h2>
 			</div>
 
 			<div class="mobile-contact-cards">
@@ -235,11 +247,11 @@
 					<div class="mobile-contact-card">
 						<span class="mobile-contact-card__icon"><Icon size={21} strokeWidth={2} /></span>
 						<span>
-							<strong>{card.title}</strong>
+							<strong>{i18n.text(card.title)}</strong>
 							<small
-								>{#if card.id === 'phone'}<a href={phoneHref}>{card.value}</a
+								>{#if card.id === 'phone'}<a href={i18n.href(phoneHref)}>{card.value}</a
 									>{:else if card.id === 'address'}<a
-										href={daynightSite.mapUrl}
+										href={i18n.href(daynightSite.mapUrl)}
 										target="_blank"
 										rel="noopener noreferrer">{card.value}</a
 									>{:else}{card.value}{/if}</small
@@ -250,15 +262,18 @@
 			</div>
 		</section>
 
-		<section class="mobile-contact-map" aria-label="Карта">
+		<section class="mobile-contact-map" aria-label={i18n.t('copy.2751c9100018')}>
 			<div class="mobile-contact-map__head">
 				<div>
-					<h2>Шоурум в {daynightSite.city}</h2>
+					<h2>{i18n.t('copy.5a3113aa5669')} {i18n.dealer('city')}</h2>
 				</div>
 			</div>
 			<iframe
 				{@attach deferredMapFrame(mapEmbedSrc, '120px')}
-				title={`Карта до ${daynightSite.shortName}, ${daynightSite.city}`}
+				title={i18n.t('pattern.6b3521e28d5f', {
+					v0: daynightSite.shortName,
+					v1: i18n.dealer('city')
+				})}
 				data-map-src={mapEmbedSrc}
 				height="270"
 				style="border:0;width:100%;"
@@ -268,9 +283,9 @@
 			></iframe>
 			<a
 				class="mobile-contact-map__fallback"
-				href={daynightSite.mapUrl}
+				href={i18n.href(daynightSite.mapUrl)}
 				target="_blank"
-				rel="noopener noreferrer">Отвори упътвания</a
+				rel="noopener noreferrer">{i18n.t('copy.8c3c925bc79b')}</a
 			>
 		</section>
 	</main>

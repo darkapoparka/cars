@@ -61,7 +61,7 @@
 						{formatNumber(metric.value)}
 					</Card.Title>
 				</Card.Header>
-				<Card.Footer class="text-muted-foreground text-sm">{metric.status}</Card.Footer>
+				<Card.Footer class="text-sm text-muted-foreground">{metric.status}</Card.Footer>
 			</Card.Root>
 		{/each}
 	</section>

@@ -1,6 +1,11 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import { BadgeEuro } from '@lucide/svelte';
+	import { assetHref } from '$lib/utils/assets';
+	import { nativeMessage } from '$lib/i18n/native';
+	import { page } from '$app/state';
+	const nt = (key: import('$lib/i18n/native').NativeKey) =>
+		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
+	import { linkHref as resolve } from '$lib/utils/links';
+	import BadgeEuro from '@lucide/svelte/icons/badge-euro';
 	import type {
 		HomeFiveVehicleCardData,
 		HomeFiveVehiclePill,
@@ -23,7 +28,7 @@
 	} = $props();
 
 	const mobileFeaturedTitle = $derived(
-		copy.featuredTitle === 'Newest Vehicles' ? 'Newest' : 'Нови коли'
+		copy.featuredTitle === 'Newest Vehicles' ? 'Newest' : nt('ui56')
 	);
 
 	const isEnglish = $derived(copy.featuredTitle === 'Newest Vehicles');
@@ -46,7 +51,7 @@
 		data-daynight-home-vehicles
 		aria-label={copy.featuredTitle}
 	>
-		<div class="container">
+		<div class="site-container">
 			<div class="daynight-newest-shell wow fadeInUp" data-wow-delay="0.1s">
 				<div class="daynight-newest-banner">
 					<div class="daynight-newest-banner__inner">
@@ -77,7 +82,7 @@
 											{:else if pill.image}
 												<img
 													class={`daynight-pill-image daynight-pill-image--${pill.kind}`}
-													src={pill.image}
+													src={assetHref(pill.image)}
 													alt=""
 													width="96"
 													height="48"
@@ -119,7 +124,7 @@
 					>
 						<span class="daynight-mobile-view-all-card__logo" aria-hidden="true">
 							<img
-								src="/brand/daynight-wordmark.svg"
+								src={assetHref('/brand/daynight-wordmark.svg')}
 								loading="lazy"
 								decoding="async"
 								width="220"
@@ -131,7 +136,7 @@
 							{#each mobileCtaVehicles as ctaVehicle (ctaVehicle.slug)}
 								<span class="daynight-mobile-view-all-card__thumb">
 									<img
-										src={ctaVehicle.image}
+										src={assetHref(ctaVehicle.image)}
 										alt=""
 										width="160"
 										height="107"

@@ -1,0 +1,33 @@
+{
+  "mode": "dealer",
+  "id": "autolife",
+  "name": "Аутолайф",
+  "shortName": "Аутолайф",
+  "logo": {
+    "light": "/dealer-app/logo-light-39e499a64ac1cf2ced3a.webp",
+    "dark": "/dealer-app/logo-dark-fe6ee08d283060f362df.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "ГП4, разклон за с. Тополи",
+  "phoneDisplay": "0895 766 736",
+  "phoneE164": "+359895766736",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=43.22861,27.8253778",
+  "website": "https://autolife.mobile.bg/",
+  "whatsappUrl": "",
+  "services": [
+    "Продажба на автомобили",
+    "Лизинг е отбелязан в обявите; доставчик и условия не са потвърдени"
+  ],
+  "observedAt": "2026-09-07",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

@@ -46,33 +46,35 @@ export const companyServices: CompanyService[] = [
 export const contactTopics: ContactTopic[] = [
   {
     "id": "general",
-    "label": "General question",
-    "title": "Contact the dealer",
-    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+    "label": "Общ въпрос",
+    "title": "Разговор с екипа",
+    "description": "For availability, next steps or any other question about {dealerName}."
   },
   {
     "id": "inspection",
-    "label": "Viewing",
-    "title": "Viewing in Dubai",
-    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+    "label": "Оглед",
+    "title": "Viewing in {dealerCity}",
+    "description": "Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време."
   },
   {
     "id": "import",
-    "label": "Import",
-    "title": "Import enquiry",
-    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+    "label": "Внос",
+    "title": "Внос по заявка",
+    "description": "Изпратете обява или задайте марка, модел, година и бюджет. След това уточняваме следващите стъпки с вас.",
+    "mobileDescription": "Изпратете обява или задайте модел и бюджет."
   },
   {
     "id": "leasing",
-    "label": "Financing",
-    "title": "Financing enquiry",
-    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+    "label": "Лизинг",
+    "title": "Собствен лизинг",
+    "description": "Получете актуални условия според избрания автомобил и конкретната сделка."
   },
   {
     "id": "trade-in",
-    "label": "Trade-in",
-    "title": "Trade-in enquiry",
-    "description": "Contact F1rst Motors to confirm availability, details, and the next step."
+    "label": "Бартер",
+    "title": "Бартер и оценка",
+    "description": "Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.",
+    "mobileDescription": "Поискайте оценка за продажба или бартер."
   }
 ];
 export const resolveContactTopic = (value: string | null) =>

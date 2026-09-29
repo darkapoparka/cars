@@ -1,0 +1,50 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Варна",
+    "bg": "Варна",
+    "en": "Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "бул. Цар Освободител 289, срещу МАКАО",
+    "bg": "бул. Цар Освободител 289, срещу МАКАО",
+    "en": "289 Tsar Osvoboditel Blvd., opposite MACAO",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.address",
+    "source": "бул. Цар Освободител 289, срещу МАКАО",
+    "bg": "бул. Цар Освободител 289, срещу МАКАО",
+    "en": "289 Tsar Osvoboditel Blvd., opposite MACAO, Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.locationShort",
+    "source": "Варна",
+    "bg": "Варна",
+    "en": "Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned short location label."
+  },
+  {
+    "key": "dealer.name",
+    "source": "LEGEND AUTO",
+    "en": "LEGEND AUTO",
+    "bg": "LEGEND AUTO",
+    "disposition": "invariant",
+    "notes": "Dealer-owned proper name."
+  },
+  {
+    "key": "dealer.shortName",
+    "source": "LEGEND AUTO",
+    "en": "LEGEND AUTO",
+    "bg": "LEGEND AUTO",
+    "disposition": "invariant",
+    "notes": "Dealer-owned short proper name."
+  }
+]

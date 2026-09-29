@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import type { HomeFiveHeroAction, HomeFiveHeroData } from '$lib/auxero/home-five';
-	import { ChevronDown, Search } from '@lucide/svelte';
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
+	import Search from '@lucide/svelte/icons/search';
 
 	// Clean Svelte 5 + Tailwind v4 rebuild of the OUTLETCARS.BG homepage hero, migrating
 	// off the legacy Auxero theme + swiper. Premium dark-green band (no photo wash, so

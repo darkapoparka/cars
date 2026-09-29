@@ -1,0 +1,35 @@
+{
+  "mode": "dealer",
+  "id": "elit-auto-import",
+  "name": "ELIT AUTO IMPORT EXPORT",
+  "shortName": "ELIT AUTO IMPORT EXPORT",
+  "logo": {
+    "light": "/dealer-app/logo-light-90d3eb315513dab86943.webp",
+    "dark": "/dealer-app/logo-dark-88b599aa9a8f3bf42a44.webp",
+    "icon": "/dealer-app/icon.png"
+  },
+  "defaultLocale": "bg",
+  "enabledLocales": [
+    "en",
+    "bg"
+  ],
+  "country": "BG",
+  "currency": "EUR",
+  "city": "Варна",
+  "address": "ул. „Прилеп“ 74А, м-т Пчелина",
+  "phoneDisplay": "0887 777 887",
+  "phoneE164": "+359887777887",
+  "email": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=ELIT%20AUTO%20IMPORT%20EXPORT%2C%20%D0%9F%D1%80%D0%B8%D0%BB%D0%B5%D0%BF%2074%D0%90%2C%20%D0%92%D0%B0%D1%80%D0%BD%D0%B0%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+  "website": "https://elitautoimport.mobile.bg/",
+  "whatsappUrl": "",
+  "services": [
+    "Продажба на автомобили",
+    "Внос от Европа, САЩ и Япония",
+    "Доставка в страната със собствен транспорт",
+    "Проверка в сервиз по избор на клиента"
+  ],
+  "observedAt": "2026-09-07",
+  "inventoryNotice": "Dated listing samples. Confirm price, availability and vehicle information with the dealer.",
+  "previewNotice": "Independent design preview. No purchase, reservation or message is submitted by this website."
+}

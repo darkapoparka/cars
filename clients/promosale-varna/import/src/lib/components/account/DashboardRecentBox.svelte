@@ -38,7 +38,7 @@
 	<div class="daynight-dashboard-recent">
 		<div class="daynight-dashboard-recent__header">
 			<p class="h5 mb-0">Приоритетна опашка</p>
-			<p class="text-secondary mb-0 text-sm">{recent.items.length} последни</p>
+			<p class="mb-0 text-sm text-secondary">{recent.items.length} последни</p>
 		</div>
 
 		<div class="daynight-dashboard-recent__list">
@@ -51,11 +51,11 @@
 							</div>
 							<div class="daynight-dashboard-recent-card__person">
 								<p class="daynight-dashboard-recent-card__name mb-4">{item.name}</p>
-								<p class="text-secondary mb-0 text-sm">{item.dateLabel}</p>
+								<p class="mb-0 text-sm text-secondary">{item.dateLabel}</p>
 							</div>
 						</div>
 						<p class="daynight-dashboard-recent-card__title mb-6">{item.title}</p>
-						<p class="daynight-dashboard-meta text-secondary mb-8">{item.metaLabel}</p>
+						<p class="daynight-dashboard-meta mb-8 text-secondary">{item.metaLabel}</p>
 						<p class="daynight-dashboard-recent-card__body mb-0">{item.body}</p>
 					</div>
 					<div class="daynight-dashboard-recent-card__aside">

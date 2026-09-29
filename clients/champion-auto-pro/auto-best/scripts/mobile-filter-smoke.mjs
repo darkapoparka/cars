@@ -10,6 +10,11 @@ const results = [];
 try {
   for (const [width, height] of [[320, 677], [390, 844], [430, 932], [700, 390]]) {
     const page = await browser.newPage({ viewport: { width, height }, reducedMotion: 'reduce' });
+    // Returning-visitor fixture: first-visit preferences have their own locale suite.
+    await page.context().addCookies([
+      { name: 'cars_prompt', value: 'v1', url: base },
+      { name: 'cars_locale', value: 'bg', url: base }
+    ]);
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(`${base}/listing-grid?sort=price-asc`, { waitUntil: 'networkidle' });
@@ -27,10 +32,14 @@ try {
     await query.fill('123');
     const submit = main.locator('.dn-listing-filter__dialog-submit');
     assert.equal(await submit.isDisabled(), true);
-    assert.match(await submit.innerText(), /Покажи 0/);
+    assert.match(await submit.innerText(), /Покажете 0/);
     assert.equal(await main.locator('.dn-listing-filter__clear').innerText(), 'Изчисти');
-    const textHeight = await submit.locator('span').evaluate(el => el.getBoundingClientRect().height);
+    const textHeight = await submit.locator('.dn-listing-filter__submit-compact').evaluate(el => el.getBoundingClientRect().height);
     assert(textHeight <= 25, 'Zero-results action must stay on one line');
+    assert(await submit.evaluate(el => el.scrollWidth <= el.clientWidth), 'The result count must fit inside its button');
+    const labelBox = await submit.locator('.dn-listing-filter__submit-compact').boundingBox();
+    const submitBox = await submit.boundingBox();
+    assert(labelBox.x >= submitBox.x && labelBox.x + labelBox.width <= submitBox.x + submitBox.width, 'The result label must stay within the button');
     await page.screenshot({ path: `${output}/zero-${width}.png` });
     await query.fill('');
 
@@ -49,33 +58,33 @@ try {
     }
     const row = title => main.locator('.dn-mobile-filter-fields button').filter({ has: page.getByText(title, { exact: true }) });
     await row('Марка').click();
-    await picker.getByRole('searchbox', { name: 'Търси марка', exact: true }).fill('audi');
+    await picker.getByRole('searchbox', { name: 'Търсете марка', exact: true }).fill('audi');
     await picker.getByRole('radio', { name: 'Audi', exact: true }).check();
-    await picker.getByRole('button', { name: 'Приложи', exact: true }).click();
+    await picker.getByRole('button', { name: 'Приложете', exact: true }).click();
     await picker.waitFor({ state: 'hidden' });
     assert.equal(new URL(page.url()).searchParams.has('make'), false, 'Picker apply must only update the draft');
     assert.match(await row('Марка').innerText(), /Audi/);
     await row('Модел').click();
     assert.equal(await picker.getByRole('radio').count(), 3, 'Models must use the draft make');
     await picker.getByRole('radio', { name: 'RS Q8', exact: true }).check();
-    await picker.getByRole('button', { name: 'Приложи', exact: true }).click();
+    await picker.getByRole('button', { name: 'Приложете', exact: true }).click();
     await row('Марка').click();
     await picker.getByRole('radio', { name: 'BMW', exact: true }).check();
-    await picker.getByRole('button', { name: 'Затвори избора', exact: true }).click();
+    await picker.getByRole('button', { name: 'Затворете избора', exact: true }).click();
     assert.match(await row('Марка').innerText(), /Audi/, 'Cancel must retain the previous draft');
     assert.match(await row('Модел').innerText(), /RS Q8/);
     await row('Бюджет').click();
     await picker.locator('input[name=price_min]').fill('55001');
     await picker.locator('input[name=price_max]').fill('90001');
-    await picker.getByRole('button', { name: 'Приложи', exact: true }).click();
+    await picker.getByRole('button', { name: 'Приложете', exact: true }).click();
     assert.equal(await main.locator('select[name=price_min]').inputValue(), '55001');
     await row('Година').click();
     await picker.locator('input[name=year_min]').fill('2019');
     await picker.locator('input[name=year_max]').fill('2024');
-    await picker.getByRole('button', { name: 'Приложи', exact: true }).click();
+    await picker.getByRole('button', { name: 'Приложете', exact: true }).click();
     await row('Екстри').click();
     await picker.getByRole('checkbox', { name: '4x4', exact: true }).check();
-    await picker.getByRole('button', { name: 'Приложи', exact: true }).click();
+    await picker.getByRole('button', { name: 'Приложете', exact: true }).click();
     assert.equal(await main.locator('input[name=equipment][value="4x4"]').isChecked(), true);
     await page.screenshot({ path: `${output}/draft-${width}.png` });
     assert.equal(await submit.isEnabled(), true);

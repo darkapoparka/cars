@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { tick } from 'svelte';
 	import type { Snippet } from 'svelte';
 	import type { Attachment } from 'svelte/attachments';
@@ -176,7 +179,7 @@
 			<button
 				class="mobile-fullsheet__handle"
 				type="button"
-				aria-label="Прибери панела"
+				aria-label={i18n.t('copy.ce02002b323c')}
 				onclick={() => {
 					if (!dragged) closeSheet();
 					dragged = false;

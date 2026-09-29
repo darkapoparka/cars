@@ -1,6 +1,7 @@
 import { template } from '$config/template';
 import { featuredVehicles } from '$data/inventory';
 import { blogPosts } from '$data/editorial';
+import { localeContract, localeHref } from '$lib/locale/core';
 import type { RequestHandler } from './$types';
 
 const canonicalRoutes = [
@@ -28,7 +29,7 @@ const escapeXml = (value: string) =>
 
 export const GET: RequestHandler = ({ url }) => {
   const urls = canonicalRoutes
-    .map((pathname) => `  <url><loc>${escapeXml(new URL(pathname, template.canonicalOrigin || url.origin).href)}</loc></url>`)
+    .flatMap((pathname) => localeContract.enabledLocales.map(locale => `  <url><loc>${escapeXml(new URL(localeHref(pathname, locale), template.canonicalOrigin || url.origin).href)}</loc></url>`))
     .join('\n');
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 

@@ -85,3 +85,9 @@ Static media is referenced by public paths. Artwork helpers render existing crop
 For a new article or vehicle, extend its typed records. For a new page, add a route and compose existing components. For a new reusable interaction, extract the shared behavior where a second real consumer exists. Add a backend boundary only when a client needs an actual integration. This keeps ordinary dealership customization focused on content rather than framework work.
 
 [Components](docs/COMPONENTS.md) maps concrete implementations; [Data](docs/DATA.md) covers record shapes; [Testing](docs/TESTING.md) documents the scripts that exercise them.
+
+## Native EN/BG request state
+
+The pure portable policy lives in `src/lib/locale/policy.ts`; explicit dealer configuration lives in `src/lib/config/locale.ts`. `src/hooks.ts` performs URL-only rerouting, while `locale/server.ts` resolves request locals before the existing read-only application handler. `+layout.server.ts` passes that state into the native Svelte context. No mutable visitor-global locale store or rendered-text replacement is used.
+
+Common, template and dealer-owned catalog inputs generate typed messages and a source/hash manifest. Ambiguous aliases are excluded; contextual field titles use explicit keys. Preferences have a same-origin bounded server endpoint and an SSR form. The endpoint sets preference cookies only; business operations remain disabled. See [Localization](docs/localization/README.md) and [coverage](docs/localization/COVERAGE.md) for contracts and evidence.

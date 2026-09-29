@@ -45,7 +45,7 @@
 								href={resolve(('/admin/messages?thread=' + encodeURIComponent(thread.id)) as '/')}
 								data-daynight-admin-thread={thread.id}
 								class={cn(
-									'hover:bg-muted flex min-h-20 items-start gap-3 rounded-lg px-3 py-3 text-sm transition-colors',
+									'flex min-h-20 items-start gap-3 rounded-lg px-3 py-3 text-sm transition-colors hover:bg-muted',
 									activeThread?.id === thread.id && 'bg-muted'
 								)}
 							>
@@ -55,11 +55,11 @@
 								<span class="grid min-w-0 flex-1 gap-1">
 									<span class="flex items-center justify-between gap-2">
 										<span class="truncate font-medium">{thread.participantName}</span>
-										<span class="text-muted-foreground shrink-0 text-xs">
+										<span class="shrink-0 text-xs text-muted-foreground">
 											{formatDate(thread.lastMessageAt)}
 										</span>
 									</span>
-									<span class="text-muted-foreground truncate text-xs">{thread.subtitle}</span>
+									<span class="truncate text-xs text-muted-foreground">{thread.subtitle}</span>
 									<span class="flex items-center justify-between gap-2">
 										<span class="truncate text-xs capitalize">{thread.title}</span>
 										<Badge variant={statusVariant(thread.status)} class="capitalize">
@@ -120,8 +120,8 @@
 										class={cn(
 											'grid max-w-[78%] gap-1 rounded-2xl px-4 py-3 text-sm shadow-sm',
 											message.direction === 'outbound'
-												? 'bg-primary text-primary-foreground rounded-br-md'
-												: 'bg-card text-card-foreground ring-border rounded-bl-md ring-1'
+												? 'rounded-br-md bg-primary text-primary-foreground'
+												: 'rounded-bl-md bg-card text-card-foreground ring-1 ring-border'
 										)}
 									>
 										<span class="font-medium">{message.authorName}</span>
@@ -143,7 +143,7 @@
 					</ScrollArea.Root>
 				</Card.Content>
 
-				<Card.Footer class="bg-background/95 border-t p-4">
+				<Card.Footer class="border-t bg-background/95 p-4">
 					<form method="POST" class="grid w-full gap-4">
 						<input type="hidden" name="id" value={firstMessage?.id ?? activeThread.id} />
 						<input type="hidden" name="threadId" value={activeThread.id} />
@@ -163,7 +163,7 @@
 								<select
 									id="message-status"
 									name="status"
-									class="border-input bg-background focus-visible:ring-ring h-10 rounded-lg border px-3 text-sm capitalize outline-none focus-visible:ring-3"
+									class="h-10 rounded-lg border border-input bg-background px-3 text-sm capitalize outline-none focus-visible:ring-3 focus-visible:ring-ring"
 								>
 									{#each statuses as statusName (statusName)}
 										<option value={statusName} selected={activeThread.status === statusName}>

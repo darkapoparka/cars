@@ -16,7 +16,6 @@ import {
   Info,
   LockKeyhole,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { type ReactNode, useState } from "react";
 import { localizeMarketplace } from "../lib/marketplace-filter-config";
@@ -27,6 +26,7 @@ import {
 } from "./desktop-discovery-search";
 import { getDesktopQuickFilterClassName } from "./desktop-quick-filters";
 import type { MarketplaceMode } from "./marketplace-masthead";
+import Image from "./public-image";
 
 type ApplyFilters = (filters: Partial<MarketplaceSearchParams>) => void;
 
@@ -217,7 +217,7 @@ const DesktopSellSurface = ({
     </label>
     <div className="m-1.5 grid place-items-center">
       <Button
-        className="h-12 rounded-xl bg-[var(--lead-site-accent)] px-6 text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+        className="h-12 rounded-xl bg-brand px-6 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
         type="submit"
       >
         {localizeMarketplace(isBg, "Продължи", "Continue")}
@@ -391,7 +391,7 @@ const DesktopImportSurface = ({
       </Popover>
       <div className="m-1.5 grid place-items-center">
         <Button
-          className="h-12 cursor-pointer rounded-xl bg-[var(--lead-site-accent)] px-5 font-semibold text-base text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+          className="h-12 cursor-pointer rounded-xl bg-brand px-5 font-semibold text-base text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
           type="submit"
         >
           <ArrowRight aria-hidden="true" className="size-4" />

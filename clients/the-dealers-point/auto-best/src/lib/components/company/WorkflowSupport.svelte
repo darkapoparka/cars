@@ -1,4 +1,9 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { asset } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import { brand } from '$config/brand';
@@ -9,10 +14,10 @@
 
 <aside class="dn-workflow-support" aria-labelledby="workflow-support-title">
   <div class="dn-workflow-support__copy">
-    <h2 id="workflow-support-title">Имаш въпроси?</h2>
-    <p>{topic === 'import' ? 'Помагаме с обявата и избора на автомобил.' : 'Помагаме с оценката и следващите стъпки.'}</p>
-    <a class="dn-workflow-support__call" href={brand.phoneHref} aria-label={`Говори с екипа на ${brand.phone}`}>
-      Говори с екипа <Icon name="arrow-right" size={18} />
+    <h2 id="workflow-support-title">{i18n.t("m_7116878f4b19")}</h2>
+    <p>{topic === 'import' ? i18n.t("m_9aa63d96b7ec") : i18n.t("m_cb3a18cc302e")}</p>
+    <a class="dn-workflow-support__call" href={i18n.href(brand.phoneHref)} aria-label={i18n.t("m_aba9830dff26", { p0: brand.phone })}>
+      {i18n.t("m_1be37387b2b4")} <Icon name="arrow-right" size={18} />
     </a>
   </div>
   <img src={asset(leadSite.artwork.contactHero.support)} alt="" width="900" height="1352" />

@@ -1,6 +1,12 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { GitCompare, Heart, Menu, Plus, Search, User, X } from '@lucide/svelte';
+	import GitCompare from '@lucide/svelte/icons/git-compare';
+	import Heart from '@lucide/svelte/icons/heart';
+	import Menu from '@lucide/svelte/icons/menu';
+	import Plus from '@lucide/svelte/icons/plus';
+	import Search from '@lucide/svelte/icons/search';
+	import User from '@lucide/svelte/icons/user';
+	import X from '@lucide/svelte/icons/x';
 	import { resolve } from '$app/paths';
 	import { daynightAssets, isPrimaryNavActive, mainNavigation } from '$lib/data/daynight';
 	import { cn } from '$lib/utils';

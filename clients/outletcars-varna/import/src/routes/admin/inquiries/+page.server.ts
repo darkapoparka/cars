@@ -1,3 +1,4 @@
+import { readRequestForm } from '$lib/server/request-body';
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
 import { getAdminCmsOverview } from '$lib/server/admin-cms';
@@ -24,7 +25,7 @@ export const load: PageServerLoad = async ({ request, url }) => {
 export const actions: Actions = {
 	default: async ({ request }) => {
 		requireDayNightPageSession(request, 'admin/inquiries');
-		const formData = await request.formData();
+		const formData = await readRequestForm(request);
 		const id = value(formData, 'id');
 
 		if (!id) {

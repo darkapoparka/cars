@@ -1,3 +1,4 @@
+import { base } from '$app/paths';
 import { error, redirect } from '@sveltejs/kit';
 import { and, eq } from 'drizzle-orm';
 import type { LayoutServerLoad } from './$types';
@@ -8,7 +9,7 @@ import { isStaffRole } from '$lib/server/repositories/admin';
 const publicAdminRoutes = new Set(['/admin/login']);
 
 export const load: LayoutServerLoad = async ({ locals, url }) => {
-	const isPublicAdminRoute = publicAdminRoutes.has(url.pathname);
+	const isPublicAdminRoute = publicAdminRoutes.has(url.pathname.slice(base.length) || '/');
 	const { session, user } = locals;
 
 	if (!session || !user) {
@@ -22,7 +23,10 @@ export const load: LayoutServerLoad = async ({ locals, url }) => {
 			};
 		}
 
-		throw redirect(303, `/admin/login?redirectTo=${encodeURIComponent(url.pathname + url.search)}`);
+		throw redirect(
+			303,
+			`${base}/admin/login?redirectTo=${encodeURIComponent(url.pathname + url.search)}`
+		);
 	}
 
 	if (!locals.db) {
@@ -58,7 +62,7 @@ export const load: LayoutServerLoad = async ({ locals, url }) => {
 	}
 
 	if (isPublicAdminRoute) {
-		throw redirect(303, '/admin');
+		throw redirect(303, `${base}/admin`);
 	}
 
 	const [dealer] = await locals.db

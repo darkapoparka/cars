@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "dealer": "f1rst-motors",
+  "profile": "auto-best/src/lib/data/dealer-profile.json",
+  "profileSha256": "e64a75eb66eb2512de371dda59d18e24dc8113f45096adaa1fb4825e0cdb9dec",
+  "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+  "vehicles": 10,
+  "currency": "AED",
+  "observedAt": "2026-09-09",
+  "assets": [
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+      "output": "public/dealer-app/logo-light-833105e3bee3f1f81afa.webp",
+      "sha256": "833105e3bee3f1f81afa6ce7ebbfa4e4e2b2d51fa5e72efc28335d74b3d5f624",
+      "role": "logo-light"
+    },
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+      "output": "public/dealer-app/logo-dark-789523ed4d11bf57d34b.webp",
+      "sha256": "789523ed4d11bf57d34bedf8800745bae3f7db54b93fe35ce6e45aad16933665",
+      "role": "logo-dark"
+    }
+  ],
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
+    "path": "templates/app",
+    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
+    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
+  },
+  "generatedAt": "2026-09-28T04:58:01.346Z",
+  "policy": {
+    "selector": "shared-v2-with-local-fallback",
+    "benefits": "clearly-labelled-proposal-examples",
+    "missingPhotos": "neutral-template-artwork-not-invented-stock"
+  }
+}

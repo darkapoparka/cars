@@ -5,15 +5,31 @@ import {
 	daynightReviewLinkLabel
 } from './daynight-reviews';
 
-const phoneE164 = '+359877733110';
-const city = 'София';
-const shortName = 'Day Night Auto';
-const district = 'Студентски град';
-const street = 'ул. Атанас Манчев 18';
-const location = `гр. ${city}, ${district}, ${street}`;
+const phoneE164 = "+359877733110";
+const city = "София";
+const shortName = "Day & Night";
+const district = "София";
+const street = "ул. „Атанас Манчев“ 18, Студентски град, София";
+const location = "ул. „Атанас Манчев“ 18, Студентски град, София";
+
+/** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
+export const daynightDealerText = {
+	en: {
+		city: 'София',
+	locationShort: "София",
+		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
+		address: '18 Atanas Manchev Street, Studentski Grad, София'
+	},
+	bg: {
+		city,
+		locationShort: `${district}, ${city}`,
+		addressLine: `${district} · ${street}`,
+		address: location
+	}
+} as const;
 
 export const daynightSite = {
-	name: 'DAY NIGHT AUTO GROUP',
+	name: 'DAY & NIGHT AUTO GROUP',
 	shortName,
 	city,
 	region: city,
@@ -22,12 +38,12 @@ export const daynightSite = {
 	currency: 'EUR',
 	phoneE164,
 	...contactLinks(phoneE164),
-	phone: '0877733110',
+	phone: '359877733110',
 	phoneLabel: '0877 733 110',
 	email: '',
 	location,
 	locationShort: `${district}, ${city}`,
-	locationLandmark: `${district} · ${street}`,
+	locationLandmark: "ул. „Атанас Манчев“ 18, Студентски град, София",
 	hoursLabel: 'Огледи с предварителна уговорка',
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
@@ -35,11 +51,12 @@ export const daynightSite = {
 	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
+	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',
 	phoneCta: 'Обади се за оглед',
-	heroTitle: 'DAY NIGHT AUTO GROUP',
+	heroTitle: 'DAY & NIGHT AUTO GROUP',
 	heroSubtitle: 'София - Премиум автомобили в София с подреден процес за оглед и запитване',
 	reviewCount: daynightReviewCount,
 	reviewCountLabel: daynightReviewCountLabel,
@@ -89,8 +106,7 @@ export const publicNavGroups = [
 		label: 'За нас',
 		href: '/about',
 		children: [
-			{ label: 'За Day Night Auto', href: '/about' },
-			{ label: 'Профил на автокъщата', href: '/about/daynight-auto-plovdiv' },
+			{ label: 'За Day & Night', href: '/about' },
 			{ label: 'Екип', href: '/team' },
 			{ label: 'Отзиви', href: '/reviews' },
 			{ label: 'Блог', href: '/blog' },

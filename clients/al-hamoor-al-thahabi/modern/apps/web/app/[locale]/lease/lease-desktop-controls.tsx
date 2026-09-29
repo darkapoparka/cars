@@ -1,13 +1,50 @@
 "use client";
 
-import { Button } from "@repo/design-system/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
-import Link from "next/link";
+import { withBasePath } from "@repo/internationalization/paths";
+import { formatMoney } from "@repo/marketplace";
+import { DesktopActionButton } from "@repo/marketplace-ui/components/desktop-action-panel";
+import { Phone } from "lucide-react";
+import styles from "./lease-desktop-controls.module.css";
+import { LeaseDesktopVehiclePicker } from "./lease-desktop-vehicle-picker";
 import {
   type FinancingVehicleOption,
-  leaseSelectClassName,
+  getLeasePrincipal,
   leaseSelectorCopy,
 } from "./lease-finance-policy";
+
+function PreferenceChoices({
+  label,
+  name,
+  options,
+  value,
+  onChange,
+}: {
+  label: string;
+  name: string;
+  options: readonly { label: string; value: string }[];
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <fieldset className={styles.choiceField}>
+      <legend>{label}</legend>
+      <div className={styles.choices}>
+        {options.map((option) => (
+          <label className={styles.choice} key={option.value}>
+            <input
+              checked={value === option.value}
+              name={name}
+              onChange={() => onChange(option.value)}
+              type="radio"
+              value={option.value}
+            />
+            <span>{option.label}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  );
+}
 
 export const LeaseDesktopControls = ({
   deposit,
@@ -15,10 +52,10 @@ export const LeaseDesktopControls = ({
   onDepositChange,
   onTermChange,
   onVehicleChange,
-  phoneDisplay,
   phoneHref,
   selectedVehicle,
   term,
+  title,
   vehicles,
 }: {
   deposit: string;
@@ -26,128 +63,119 @@ export const LeaseDesktopControls = ({
   onDepositChange: (deposit: string) => void;
   onTermChange: (term: string) => void;
   onVehicleChange: (vehicleId: string) => void;
-  phoneDisplay: string;
   phoneHref: string;
-  selectedVehicle: FinancingVehicleOption;
+  selectedVehicle?: FinancingVehicleOption;
   term: string;
+  title: string;
   vehicles: FinancingVehicleOption[];
 }) => {
   const copy = leaseSelectorCopy[locale];
-  const selectedDeposit = copy.depositOptions.find(
-    (option) => option.value === deposit
-  );
-  const selectedTerm = copy.termOptions.find((option) => option.value === term);
-
+  const text =
+    locale === "bg"
+      ? {
+          flexible: "По избор",
+          term: "Срок в месеци",
+          principal: "Сума за финансиране",
+          chooseDeposit: "По договаряне",
+          monthly: "Месечна вноска",
+          tailored: "По индивидуална оферта",
+          note: "Изберете предпочитанията си. Месечната вноска, лихвата и таксите се потвърждават в офертата.",
+          beforeCosts: "Преди лихва и такси",
+        }
+      : {
+          flexible: "Flexible",
+          term: "Term in months",
+          principal: "Amount to finance",
+          chooseDeposit: "To be agreed",
+          monthly: "Monthly payment",
+          tailored: "Personalised offer",
+          note: "Choose your preferences. Monthly payment, interest and fees are confirmed in your offer.",
+          beforeCosts: "Before interest and fees",
+        };
+  const principal = selectedVehicle
+    ? getLeasePrincipal(selectedVehicle.priceAmount, deposit)
+    : null;
+  const money = (amount: number) =>
+    selectedVehicle
+      ? formatMoney({ amount, currency: selectedVehicle.priceCurrency }, locale)
+      : "—";
+  const principalPlaceholder = selectedVehicle ? text.chooseDeposit : "—";
+  const depositPlaceholder = selectedVehicle ? text.flexible : "—";
   return (
-    <div className="hidden lg:block" data-slot="lease-desktop-controls">
-      <div className="grid grid-cols-2 gap-3 text-left lg:grid-cols-[minmax(15rem,1.7fr)_minmax(11rem,1fr)_minmax(10rem,0.9fr)]">
-        <div className="col-span-2 grid gap-1.5 text-meta lg:col-span-1">
-          <span>{copy.vehicleLabel}</span>
-          <select
-            aria-label={copy.vehicleLabel}
-            className={leaseSelectClassName}
-            id="finance-vehicle-desktop"
-            onChange={(event) => onVehicleChange(event.target.value)}
-            value={selectedVehicle.id}
-          >
-            {vehicles.map((vehicle) => (
-              <option key={vehicle.id} value={vehicle.id}>
-                {vehicle.title} · {vehicle.priceLabel}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <label className="grid gap-1.5 text-meta" htmlFor="finance-deposit">
-          <span>{copy.depositLabel}</span>
-          <select
-            className={leaseSelectClassName}
-            id="finance-deposit"
-            onChange={(event) => onDepositChange(event.target.value)}
-            value={deposit}
-          >
-            {copy.depositOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className="grid gap-1.5 text-meta" htmlFor="finance-term">
-          <span>{copy.termLabel}</span>
-          <select
-            className={leaseSelectClassName}
-            id="finance-term"
-            onChange={(event) => onTermChange(event.target.value)}
-            value={term}
-          >
-            {copy.termOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </label>
+    <div
+      className={`hidden lg:grid ${styles.desktopControls}`}
+      data-slot="lease-desktop-controls"
+    >
+      <LeaseDesktopVehiclePicker
+        locale={locale}
+        onSelect={onVehicleChange}
+        selectedVehicle={selectedVehicle}
+        vehicles={vehicles}
+      />
+      <div className={styles.preferences}>
+        <h2 className={styles.heading}>{title}</h2>
+        <PreferenceChoices
+          label={copy.depositShortLabel}
+          name="desktop-finance-deposit"
+          onChange={onDepositChange}
+          options={copy.depositOptions.map((option) => ({
+            ...option,
+            label: option.value === "flexible" ? text.flexible : option.label,
+          }))}
+          value={deposit}
+        />
+        <PreferenceChoices
+          label={text.term}
+          name="desktop-finance-term"
+          onChange={onTermChange}
+          options={copy.termOptions.map((option) => ({
+            ...option,
+            label: option.value === "flexible" ? text.flexible : option.value,
+          }))}
+          value={term}
+        />
+        <p className={styles.note} data-slot="finance-note">
+          {text.note}
+        </p>
       </div>
 
-      <div className="mt-3 flex flex-col gap-3 rounded-lg bg-secondary p-3.5 text-left sm:flex-row sm:items-center">
-        <div className="min-w-0 flex-1">
-          <p className="text-meta text-muted-foreground">
-            {copy.selectionLabel}
-          </p>
-          <p className="truncate font-semibold text-card-title tracking-heading">
-            {selectedVehicle.title}
-          </p>
-          <p className="mt-1 text-meta text-muted-foreground">
-            {selectedDeposit?.label} · {selectedTerm?.label}
-          </p>
+      <div className={styles.summary} data-slot="finance-summary">
+        <div aria-live="polite" className={styles.principal}>
+          <span>{text.principal}</span>
+          <strong data-slot="finance-principal">
+            {principal
+              ? money(principal.amountToFinance)
+              : principalPlaceholder}
+          </strong>
+          <small>{text.beforeCosts}</small>
         </div>
-        <div className="grid grid-cols-2 gap-4 sm:flex sm:items-center sm:gap-5">
+        <dl className={styles.breakdown}>
           <div>
-            <p className="text-meta text-muted-foreground">{copy.priceLabel}</p>
-            <p className="font-semibold text-price tracking-heading">
-              {selectedVehicle.priceLabel}
-            </p>
+            <dt>{copy.depositShortLabel}</dt>
+            <dd data-slot="finance-initial-payment">
+              {principal ? money(principal.initialPayment) : depositPlaceholder}
+            </dd>
           </div>
-          {selectedVehicle.monthlyLabel ? (
-            <div>
-              <p className="text-meta text-muted-foreground">
-                {copy.estimateLabel}
-              </p>
-              <p className="font-semibold text-[var(--lead-site-accent)] text-price tracking-heading">
-                {selectedVehicle.monthlyLabel}
-              </p>
-            </div>
-          ) : null}
+          <div>
+            <dt>{text.monthly}</dt>
+            <dd>{text.tailored}</dd>
+          </div>
+        </dl>
+        <div className={styles.actions} data-slot="finance-actions">
+          {selectedVehicle ? (
+            <DesktopActionButton asChild>
+              <a href={withBasePath(phoneHref)}>
+                <Phone aria-hidden="true" />
+                {copy.phoneAction}
+              </a>
+            </DesktopActionButton>
+          ) : (
+            <DesktopActionButton disabled>
+              {copy.phoneAction}
+            </DesktopActionButton>
+          )}
         </div>
       </div>
-
-      <div className="mt-4 flex flex-col items-stretch justify-center gap-2 sm:flex-row sm:items-center">
-        <Button
-          asChild
-          className="h-11 gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
-        >
-          <a href={phoneHref}>
-            <Phone aria-hidden="true" className="size-4" />
-            {copy.phoneAction}
-          </a>
-        </Button>
-        <Button
-          asChild
-          className="h-11 gap-2 rounded-lg px-5 text-compact-control"
-          variant="secondary"
-        >
-          <Link href={selectedVehicle.detailHref}>
-            {copy.detailAction}
-            <ArrowRight aria-hidden="true" className="size-4" />
-          </Link>
-        </Button>
-      </div>
-
-      <p className="mt-3 text-center text-meta text-muted-foreground">
-        {copy.note} {phoneDisplay}
-      </p>
     </div>
   );
 };

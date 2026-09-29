@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import '$lib/styles/desktop-discovery.css';
 	import { onMount } from 'svelte';
-	import ChevronDown from '@lucide/svelte/icons/chevron-down';
+	import Plus from '@lucide/svelte/icons/plus';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import type { InventoryQuickFilterGroup } from '$lib/types/inventory';
 	import { getDesktopInventoryContext } from './desktop-inventory-context.svelte';
@@ -32,7 +35,7 @@
 </script>
 
 <div class="inventory-filter-triggers" class:inventory-filter-triggers--sidebar={sidebar}>
-	{#if sidebar}<h2>Филтри</h2>{/if}
+	{#if sidebar}<h2>{i18n.t('copy.182fd6b7e7e5')}</h2>{/if}
 	{#each visible as field (field.name)}
 		{@const selected = inventory.getFieldValues(field.name)}
 		<button
@@ -44,11 +47,13 @@
 		>
 			<span
 				>{selected.length === 1
-					? (field.options.find((option) => option.value === selected[0])?.label ?? field.label)
+					? i18n.spec(
+							field.options.find((option) => option.value === selected[0])?.label ?? field.label
+						)
 					: selected.length
-						? `${field.label} (${selected.length})`
-						: field.label}</span
-			><ChevronDown size={16} />
+						? i18n.text(field.label) + ' (' + selected.length + ')'
+						: i18n.text(field.label)}</span
+			><Plus size={16} aria-hidden="true" />
 		</button>
 	{/each}
 	<button
@@ -57,7 +62,9 @@
 		class="all-filters"
 		aria-haspopup="dialog"
 		onclick={(event) => openFromTrigger(event)}
-		><SlidersHorizontal size={18} /><span>{sidebar ? 'Всички филтри' : 'Още филтри'}</span></button
+		><SlidersHorizontal size={18} /><span
+			>{sidebar ? i18n.t('copy.dadecddc582b') : i18n.t('copy.1d58508bde13')}</span
+		></button
 	>
 </div>
 
@@ -65,7 +72,7 @@
 	.inventory-filter-triggers {
 		display: grid;
 		grid-template-columns: repeat(6, minmax(0, 1fr));
-		gap: 10px;
+		gap: 12px;
 		background: var(--discovery-panel);
 		border-radius: 12px;
 		padding: 12px;
@@ -75,14 +82,14 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		height: 46px;
+		height: 52px;
 		min-width: 0;
 		padding: 0 14px;
 		border: 1px solid var(--discovery-filter-border);
 		border-radius: 8px;
 		color: var(--discovery-filter-foreground);
-		background: var(--discovery-filter-background);
-		font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
+		background: #fff;
+		font: var(--sa-button-font-weight) var(--sa-text-base) / var(--sa-button-line-height)
 			var(--sa-font);
 		cursor: pointer;
 	}

@@ -1,28 +1,30 @@
-import { json } from '@sveltejs/kit';
+import { error, json } from '@sveltejs/kit';
+import { readRequestBytes } from './request-body';
 
 export type ApiPayload = Record<string, unknown>;
 
 export const readApiPayload = async (request: Request): Promise<ApiPayload> => {
 	const contentType = request.headers.get('content-type') ?? '';
-
-	if (contentType.includes('application/json')) {
-		let body: unknown;
-
-		try {
-			body = await request.json();
-		} catch {
-			// Malformed JSON → treat as an empty payload (downstream returns a clean 400)
-			// instead of surfacing an unhandled 500.
-			return {};
+	const type = contentType.split(';')[0].trim().toLowerCase();
+	if (
+		!['application/json', 'application/x-www-form-urlencoded', 'multipart/form-data'].includes(type)
+	)
+		error(415, 'Unsupported request format');
+	const bytes = await readRequestBytes(request);
+	try {
+		if (type === 'application/json') {
+			const body: unknown = JSON.parse(new TextDecoder().decode(bytes));
+			return body && typeof body === 'object' && !Array.isArray(body) ? (body as ApiPayload) : {};
 		}
-
-		// Reject arrays (typeof [] === 'object') so payloadString reads named keys, not indices.
-		return body && typeof body === 'object' && !Array.isArray(body) ? (body as ApiPayload) : {};
+		const bounded = new Request(request.url, {
+			method: 'POST',
+			headers: { 'content-type': contentType },
+			body: bytes
+		});
+		return Object.fromEntries((await bounded.formData()).entries());
+	} catch {
+		return {};
 	}
-
-	const formData = await request.formData();
-
-	return Object.fromEntries(formData.entries());
 };
 
 export const payloadString = (payload: ApiPayload, ...keys: string[]) => {

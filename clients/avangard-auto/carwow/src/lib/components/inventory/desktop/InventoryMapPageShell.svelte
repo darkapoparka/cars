@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { page as appPage } from '$app/state';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import SiteChrome from '$lib/components/layout/SiteChrome.svelte';
@@ -36,7 +39,7 @@
 	const isListPanelActive = $derived(activePanel === 'list');
 	const isGridPanelActive = $derived(activePanel === 'grid');
 	const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-		`${daynightSite.mapLabel}, ${daynightSite.location}`
+		`${daynightSite.shortName}, ${i18n.dealer('address')}`
 	)}&output=embed`;
 	const mapLinkAttributes = {
 		href: daynightSite.mapUrl,
@@ -54,7 +57,7 @@
 	<SiteChrome />
 
 	<main id="main-content" tabindex="-1" aria-labelledby="inventory-map-title">
-		<h1 id="inventory-map-title" class="sr-only">Карта на наличните автомобили</h1>
+		<h1 id="inventory-map-title" class="sr-only">{i18n.t('copy.0ed883d26db7')}</h1>
 
 		<section class="inventory-map-section">
 			<div class="inventory-map-grid">
@@ -76,10 +79,12 @@
 												fill="#1C1C1C"
 											/>
 										</svg>
-										Филтри</button
+										{i18n.t('copy.182fd6b7e7e5')}</button
 									>
 									<p class="md-hidden">
-										Карта на наличните автомобили · {filters.resultCount} автомобила
+										{i18n.t('copy.e35852617367')}
+										{filters.resultCount}
+										{i18n.t('copy.afc67636f9b8')}
 									</p>
 								</div>
 							</div>
@@ -91,7 +96,7 @@
 									<button
 										class={isListPanelActive ? 'item-menu active' : 'item-menu'}
 										type="button"
-										aria-label="Списъчен изглед"
+										aria-label={i18n.t('copy.7398c1ba5b7a')}
 										aria-pressed={isListPanelActive}
 										onclick={() => showPanel('list')}
 									>
@@ -129,7 +134,7 @@
 									<button
 										class={isGridPanelActive ? 'item-menu active' : 'item-menu'}
 										type="button"
-										aria-label="Картов изглед"
+										aria-label={i18n.t('copy.7e148b2bfe19')}
 										aria-pressed={isGridPanelActive}
 										onclick={() => showPanel('grid')}
 									>
@@ -150,7 +155,7 @@
 							</div>
 							<div class="inventory-map-toolbar__cell inventory-map-toolbar__cell--sort">
 								<div class="flex h-full items-center justify-end gap-[8px]">
-									<p class="md-hidden">Сортиране</p>
+									<p class="md-hidden">{i18n.t('copy.8201ef7de128')}</p>
 									<SortDropdown />
 								</div>
 							</div>
@@ -162,7 +167,8 @@
 								data-show="false"
 							>
 								<p class="inline gap-[4px]">
-									<span id="filterMatchesCount">{filters.resultCount} </span> автомобила
+									<span id="filterMatchesCount">{filters.resultCount} </span>
+									{i18n.t('copy.afc67636f9b8')}
 								</p>
 								<div
 									class="divider-vertical-style2 inline-block h-[16px] align-middle"
@@ -172,8 +178,11 @@
 								<div id="filterTags" class="inline gap-[8px]"></div>
 
 								<button class="btn-clear-items" id="btnClearAll">
-									Изчисти
-									<img src="/assets/icons/X-White.svg" alt="X" />
+									{i18n.t('copy.fc38aced5a1d')}
+									<img
+										src={i18n.asset('/assets/icons/X-White.svg')}
+										alt={i18n.t('copy.4b68ab3847fe')}
+									/>
 								</button>
 							</div>
 						</div>
@@ -201,8 +210,11 @@
 					id="map"
 					class="daynight-inventory-map-panel"
 					iframeClass="daynight-inventory-map-panel__iframe"
-					title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
-					src={mapEmbedSrc}
+					title={i18n.t('pattern.69c703e84da6', {
+						v0: daynightSite.shortName,
+						v1: i18n.dealer('city')
+					})}
+					src={i18n.asset(mapEmbedSrc)}
 					width="100%"
 					height="100%"
 					iframeStyle="border:0;display:block;"
@@ -220,12 +232,12 @@
 						></span>
 						<span class="daynight-inventory-map-panel__pin"></span>
 						<div class="daynight-inventory-map-panel__card">
-							<strong>{daynightSite.shortName} {daynightSite.city}</strong>
-							<span>{daynightSite.location}</span>
+							<strong>{daynightSite.shortName} {i18n.dealer('city')}</strong>
+							<span>{i18n.dealer('address')}</span>
 						</div>
 					</div>
 					<a class="daynight-inventory-map-panel__open" {...mapLinkAttributes}>
-						Отвори в Google Maps
+						{i18n.t('copy.e30ce79c4a5c')}
 					</a>
 				</LazyMapEmbed>
 			</div>

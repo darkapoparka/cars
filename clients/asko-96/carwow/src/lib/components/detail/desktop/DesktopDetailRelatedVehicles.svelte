@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 	import VehicleCard from '$lib/components/inventory/desktop/VehicleCard.svelte';
 
@@ -8,7 +11,7 @@
 {#if vehicles.length}
 	<section class="background-light pdp-related py-100" aria-labelledby="pdp-related-title">
 		<div class="container">
-			<p id="pdp-related-title" class="h3 mb-40 capitalize">Подобни автомобили</p>
+			<p id="pdp-related-title" class="h3 mb-40 capitalize">{i18n.t('copy.60f9289f603e')}</p>
 			<div class="pdp-related__grid">
 				{#each vehicles as vehicle, index (vehicle.slug)}
 					<VehicleCard {vehicle} {index} />

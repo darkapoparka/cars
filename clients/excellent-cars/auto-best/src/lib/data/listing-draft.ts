@@ -1,4 +1,7 @@
 import type { VehicleEquipment } from './inventory';
+import { localeContract, intlLocale, type Locale } from '$lib/locale/core';
+import { message, templateText } from '$lib/locale/messages';
+import { formatTemplate, specificationLabel } from '$lib/i18n/presentation';
 import {
   bodyLabel,
   listingFilterOptions,
@@ -21,6 +24,10 @@ export type ListingFacetField =
   | 'condition'
   | 'equipment'
   | 'sort';
+
+/** Field labels are contextual; the body filter is not the Coupe option. */
+export const listingFacetTitle = (field: ListingFacetField, locale: Locale): string =>
+  message(locale, `inventory.facet.${field}`);
 
 export type ListingDraft = {
   q: string;
@@ -138,15 +145,15 @@ export const listingDraftHasFilters = (draft: ListingDraft) => {
   );
 };
 
-export const formatListingNumber = (value: string | number) =>
-  new Intl.NumberFormat('bg-BG').format(Number(value));
+export const formatListingNumber = (value: string | number, locale: Locale = 'en') =>
+  new Intl.NumberFormat(intlLocale(locale)).format(Number(value));
 
 export function listingOptionsWithCurrent(options: readonly string[], current: string): readonly string[] {
   return current && !options.includes(current) ? [...options, current] : options;
 }
 
-const listingRangeSummary = (minimum: string, maximum: string, suffix: string) =>
-  minimum || maximum ? `${minimum || '—'} – ${maximum || '—'}${suffix}` : 'Без ограничение';
+const listingRangeSummary = (minimum: string, maximum: string, suffix: string, locale: Locale) =>
+  minimum || maximum ? `${minimum ? (suffix ? formatListingNumber(minimum, locale) : minimum) : '—'} – ${maximum ? (suffix ? formatListingNumber(maximum, locale) : maximum) : '—'}${suffix}` : message(locale, 'inventory.range.unlimited');
 
 export function listingFacetOptions(field: ListingFacetField, make = ''): readonly string[] {
   switch (field) {
@@ -163,30 +170,31 @@ export function listingFacetOptions(field: ListingFacetField, make = ''): readon
   }
 }
 
-export function listingFacetOptionLabel(field: ListingFacetField, option: string): string {
-  if (field === 'body') return bodyLabel(option) || 'Всички';
+export function listingFacetOptionLabel(field: ListingFacetField, option: string, locale: Locale = 'en'): string {
+  if (field === 'body') return specificationLabel(bodyLabel(option), locale) || templateText(locale, 'All');
   if (field === 'sort') {
-    return listingFilterOptions.sorts.find(([value]) => value === (option || 'default'))?.[1] ?? option;
+    const label = listingFilterOptions.sorts.find(([value]) => value === (option || 'default'))?.[1];
+    return label ? templateText(locale, label) : option;
   }
-  if (option === 'new') return 'Нови';
-  if (option === 'used') return 'Употребявани';
-  return option || 'Всички';
+  if (option === 'new') return templateText(locale, 'New');
+  if (option === 'used') return message(locale, 'inventory.condition.used');
+  return specificationLabel(option, locale) || templateText(locale, 'All');
 }
 
-export function listingFacetSummary(field: ListingFacetField, draft: ListingDraft): string {
+export function listingFacetSummary(field: ListingFacetField, draft: ListingDraft, locale: Locale = 'en'): string {
   switch (field) {
-    case 'make': return draft.make || 'Всички марки';
-    case 'model': return draft.model || 'Всички модели';
-    case 'body': return bodyLabel(draft.body) || 'Всички купета';
-    case 'price': return listingRangeSummary(draft.priceMin, draft.priceMax, ' €');
-    case 'year': return listingRangeSummary(draft.yearMin, draft.yearMax, '');
-    case 'fuel': return draft.fuel || 'Всяко гориво';
-    case 'mileage_max': return draft.mileageMax ? `До ${draft.mileageMax} км` : 'Без ограничение';
-    case 'transmission': return draft.transmission || 'Всички';
-    case 'version': return draft.version || 'Всички';
-    case 'condition': return draft.condition === 'new' ? 'Нови' : draft.condition === 'used' ? 'Употребявани' : 'Всички';
-    case 'equipment': return draft.equipment.length ? `${draft.equipment.length} избрани` : 'Без предпочитания';
-    case 'sort': return listingFacetOptionLabel('sort', draft.sort === 'default' ? '' : draft.sort);
+    case 'make': return draft.make || templateText(locale, 'All brands');
+    case 'model': return draft.model || templateText(locale, 'All модели');
+    case 'body': return specificationLabel(bodyLabel(draft.body), locale) || templateText(locale, 'All купета');
+    case 'price': return listingRangeSummary(draft.priceMin, draft.priceMax, ' ' + localeContract.inventoryCurrency, locale);
+    case 'year': return listingRangeSummary(draft.yearMin, draft.yearMax, '', locale);
+    case 'fuel': return specificationLabel(draft.fuel, locale) || templateText(locale, 'Всяко fuel');
+    case 'mileage_max': return draft.mileageMax ? formatTemplate(locale, 'To {p0} km', { p0: formatListingNumber(draft.mileageMax, locale) }) : message(locale, 'inventory.range.unlimited');
+    case 'transmission': return specificationLabel(draft.transmission, locale) || templateText(locale, 'All');
+    case 'version': return draft.version || templateText(locale, 'All');
+    case 'condition': return draft.condition ? message(locale, draft.condition === 'new' ? 'inventory.condition.new' : 'inventory.condition.used') : templateText(locale, 'All');
+    case 'equipment': return draft.equipment.length ? formatTemplate(locale, '{p0} selected features', { p0: draft.equipment.length }) : templateText(locale, 'Без предпочитания');
+    case 'sort': return listingFacetOptionLabel('sort', draft.sort === 'default' ? '' : draft.sort, locale);
   }
 }
 
@@ -203,15 +211,16 @@ export function listingModelAfterMakeChange(currentMake: string, nextMake: strin
   return normalize(currentMake) === normalize(nextMake) ? currentModel : '';
 }
 
-export function listingAppliedFilterLabel(filters: ListingFilters, key: string, value: string): string {
+export function listingAppliedFilterLabel(filters: ListingFilters, key: string, value: string, locale: Locale = 'en'): string {
   switch (key) {
-    case 'body': return bodyLabel(filters.body);
-    case 'condition': return filters.condition === 'new' ? 'Нови' : 'Употребявани';
-    case 'price_min': return `От ${filters.priceMin?.toLocaleString('bg-BG')} €`;
-    case 'price_max': return `До ${filters.priceMax?.toLocaleString('bg-BG')} €`;
-    case 'year_min': return `От ${filters.yearMin} г.`;
-    case 'year_max': return `До ${filters.yearMax} г.`;
-    case 'mileage_max': return `До ${filters.mileageMax?.toLocaleString('bg-BG')} км`;
+    case 'body': return specificationLabel(bodyLabel(filters.body), locale);
+    case 'condition': return message(locale, filters.condition === 'new' ? 'inventory.condition.new' : 'inventory.condition.used');
+    case 'fuel': case 'transmission': case 'equipment': return specificationLabel(value, locale);
+    case 'price_min': return formatTemplate(locale, 'From {p0} {inventoryCurrency}', { p0: formatListingNumber(filters.priceMin ?? 0, locale) });
+    case 'price_max': return formatTemplate(locale, 'To {p0} {inventoryCurrency}', { p0: formatListingNumber(filters.priceMax ?? 0, locale) });
+    case 'year_min': return message(locale, 'inventory.year.from', { p0: filters.yearMin ?? '' });
+    case 'year_max': return message(locale, 'inventory.year.to', { p0: filters.yearMax ?? '' });
+    case 'mileage_max': return formatTemplate(locale, 'To {p0} km', { p0: formatListingNumber(filters.mileageMax ?? 0, locale) });
     default: return value;
   }
 }

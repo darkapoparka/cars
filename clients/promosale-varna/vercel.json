@@ -1,0 +1,66 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "autobest": {
+      "root": "auto-best",
+      "framework": "sveltekit",
+      "installCommand": "npm ci",
+      "buildCommand": "node ../scripts/build-native-service.mjs auto-best"
+    },
+    "importer": {
+      "root": "import",
+      "framework": "sveltekit",
+      "installCommand": "npm ci",
+      "buildCommand": "node ../scripts/build-native-service.mjs import"
+    },
+    "carwow": {
+      "root": "carwow",
+      "framework": "sveltekit",
+      "installCommand": "npm ci",
+      "buildCommand": "node ../scripts/build-native-service.mjs carwow"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/variant-2",
+      "destination": "/variant-2/",
+      "permanent": false
+    },
+    {
+      "source": "/variant-3",
+      "destination": "/variant-3/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/variant-2/(.*)",
+      "destination": {
+        "service": "importer"
+      }
+    },
+    {
+      "source": "/variant-3/(.*)",
+      "destination": {
+        "service": "carwow"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "autobest"
+      }
+    }
+  ]
+}

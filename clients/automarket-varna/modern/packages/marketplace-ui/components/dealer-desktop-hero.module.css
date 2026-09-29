@@ -1,0 +1,165 @@
+.hero {
+  display: none;
+}
+
+.hero[data-variant="service"] {
+  display: block;
+}
+.scene,
+.copy {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero,
+  .hero[data-variant="service"] {
+    --desktop-action-panel-min-height: 20rem;
+    --desktop-hero-height: calc(var(--desktop-action-panel-min-height) + 7rem);
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: var(--desktop-hero-height);
+    padding: 1.5rem 0;
+    color: var(--inverse-foreground);
+    background: var(--inverse);
+    isolation: isolate;
+  }
+  .scene {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    height: var(--desktop-hero-height);
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .scene > img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .scene::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(180deg, var(--inverse), transparent 35%);
+  }
+  .copy {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: min(calc(100% - 2 * var(--layout-gutter)), 56rem);
+    text-align: center;
+  }
+  .hero[data-variant="landing"],
+  .hero[data-variant="service"] {
+    height: auto;
+    min-height: var(--desktop-hero-height);
+    background: var(--inverse);
+  }
+  .hero[data-scene-tone="quiet"] {
+    gap: 1rem;
+    min-height: 0;
+    padding-block: 1.25rem 1.75rem;
+    background: var(--inverse);
+  }
+  .hero[data-scene-tone="quiet"] .scene {
+    height: 100%;
+    opacity: 0.62;
+  }
+  .hero[data-variant="landing"] .copy,
+  .hero[data-variant="service"] .copy {
+    min-height: 3rem;
+  }
+  .copy h1 {
+    margin: 0;
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+  .description {
+    max-width: 38rem;
+    margin: 0.625rem auto 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--inverse-muted);
+    text-wrap: pretty;
+  }
+  .eyebrow {
+    margin: 0 0 0.625rem;
+    font-size: var(--text-micro);
+    color: var(--inverse-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+  }
+  .hero[data-variant="page"],
+  .hero[data-variant="compact"] {
+    justify-content: flex-start;
+    height: var(--desktop-hero-height);
+  }
+  .serviceContent {
+    position: relative;
+    z-index: 1;
+    flex: none;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    color: var(--foreground);
+  }
+  .loadingPanelFrame {
+    position: relative;
+    z-index: 1;
+    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+  }
+  .copy .loadingTitle {
+    max-width: 24rem;
+    margin-inline: auto;
+    color: transparent;
+    background: var(--inverse-control);
+    border-radius: var(--radius-sm);
+  }
+  .loadingFields {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+  .loadingFields > div {
+    height: 3rem;
+    background: var(--control);
+    border-radius: 0.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero,
+  .hero[data-variant="service"] {
+    --desktop-action-panel-min-height: 17.5rem;
+  }
+}
+/* On narrower desktops, keep the complete vehicles alongside the heading
+   instead of letting the form cover them. Wide screens have room beside it. */
+@media (min-width: 1024px) and (max-width: 1855px) {
+  .scene {
+    inset: 0 7.5% auto;
+    height: 7rem;
+    mask-image:
+      linear-gradient(to bottom, var(--inverse) 88%, transparent),
+      linear-gradient(
+        to right,
+        transparent,
+        var(--inverse) 5%,
+        var(--inverse) 95%,
+        transparent
+      );
+    mask-composite: intersect;
+  }
+  .scene > img {
+    object-position: center 47%;
+  }
+}

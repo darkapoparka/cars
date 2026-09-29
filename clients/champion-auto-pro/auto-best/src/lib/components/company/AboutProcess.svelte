@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import AboutServiceIcon from './AboutServiceIcon.svelte';
@@ -10,10 +14,7 @@
   <div class="container">
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
-      <p>Подбираме автомобили според вашите критерии, организираме оглед в {brand.city} и обсъждаме внос, бартер или собствен лизинг директно с екипа.</p>
-      <a class="dn-about-intro__action" href={resolve('/listing-grid')}>
-        Вижте автомобилите <Icon name="arrow-right" size={18} />
-      </a>
+      <p>{i18n.t("m_335a481bffd9", { p0: i18n.dealer('city') })}</p>
     </div>
 
     <div class="dn-about-services">
@@ -23,11 +24,11 @@
             <AboutServiceIcon name={service.icon} />
           </div>
           <div>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
+            <h3>{i18n.text(service.title)}</h3>
+            <p>{i18n.text(service.description)}</p>
           </div>
-          <a href={resolve(service.href as '/contact')}>
-            <span>{service.cta}</span>
+          <a href={i18n.href(resolve(service.href as '/contact'))}>
+            <span>{i18n.text(service.cta)}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </a>
         </article>

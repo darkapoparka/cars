@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import type { HomeBrandStripItem } from '$lib/data/home-brand-strip';
 	import type { HomeDesktopData } from '$lib/types/home';
 	import SiteChrome from '$lib/components/layout/SiteChrome.svelte';
@@ -21,10 +24,13 @@
 			<DesktopHomeInventoryPreview vehicles={data.vehicles} />
 			<DesktopHomeBrandStrip
 				brands={brandStrip.slice(0, 12)}
-				title="Избери марка"
-				ctaLabel="Всички марки"
+				title={i18n.t('copy.de22b27028ed')}
+				ctaLabel={i18n.t('copy.0adfd4e68815')}
 			/>
-			<DesktopHomeVehicleCategories title="Тип каросерия" ctaLabel="Всички типове" />
+			<DesktopHomeVehicleCategories
+				title={i18n.t('copy.5d28c794a047')}
+				ctaLabel={i18n.text('Всички типове')}
+			/>
 			<DesktopHomeWhyDayNight showMetrics={false} />
 			<DesktopHomeReviews />
 		</main>

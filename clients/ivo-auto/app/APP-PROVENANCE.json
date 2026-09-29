@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "dealer": "ivo-auto",
+  "profile": "auto-best/src/lib/data/dealer-profile.json",
+  "profileSha256": "48acb84eda6a8689d24ca7a223c33b8c14f81297775651b36fdbd2c46c21f14c",
+  "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+  "vehicles": 16,
+  "currency": "EUR",
+  "observedAt": "2026-09-07",
+  "assets": [
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+      "output": "public/dealer-app/logo-light-ea0c2b4430439ec6481a.webp",
+      "sha256": "ea0c2b4430439ec6481a659aa6ed8783d1a0747681c168fdfd64555114c3a68f",
+      "role": "logo-light"
+    },
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+      "output": "public/dealer-app/logo-dark-e94bd3eeba6185ba97f0.webp",
+      "sha256": "e94bd3eeba6185ba97f0d8e32a2b03f2ef6b324e3b24d9e51a3c5fe62ce2873f",
+      "role": "logo-dark"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-01-1.webp",
+      "output": "public/dealer-app/vehicle-716d2ec21b1dcce2987e.webp",
+      "sha256": "716d2ec21b1dcce2987e7bae60aa858657cd2d38f9c12d7ec347a7b0a1a8128b",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-01-2.webp",
+      "output": "public/dealer-app/vehicle-716d2ec21b1dcce2987e.webp",
+      "sha256": "716d2ec21b1dcce2987e7bae60aa858657cd2d38f9c12d7ec347a7b0a1a8128b",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-01-3.webp",
+      "output": "public/dealer-app/vehicle-2f3a473daa04f964769c.webp",
+      "sha256": "2f3a473daa04f964769c5d96e3e410e5a53223614f95fe8dfb84de6c9ae9bd48",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-01-4.webp",
+      "output": "public/dealer-app/vehicle-49dd8e5120f95c874973.webp",
+      "sha256": "49dd8e5120f95c8749732a74bdfac02d4c0558820ff2fce943a81c7cfb1b6dde",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-02-1.webp",
+      "output": "public/dealer-app/vehicle-1b9d65c96c973548982f.webp",
+      "sha256": "1b9d65c96c973548982fd252295a3e617a6d5042984387e1f2bf7a386eb0c0f5",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-02-2.webp",
+      "output": "public/dealer-app/vehicle-1b9d65c96c973548982f.webp",
+      "sha256": "1b9d65c96c973548982fd252295a3e617a6d5042984387e1f2bf7a386eb0c0f5",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-02-3.webp",
+      "output": "public/dealer-app/vehicle-7b51ed2cc4f3e9426d64.webp",
+      "sha256": "7b51ed2cc4f3e9426d649262ef05f2828506058fb0c65d50929da55698837b2e",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-02-4.webp",
+      "output": "public/dealer-app/vehicle-11fdbbc3d39d2a3833d2.webp",
+      "sha256": "11fdbbc3d39d2a3833d25f7c258fcb707ba1684b2f5d93505a582c3df59a094a",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-03-1.webp",
+      "output": "public/dealer-app/vehicle-fcc94f96d70067066bc4.webp",
+      "sha256": "fcc94f96d70067066bc46abe02dd2a2c5ecce08dfc3520f1c420e9a65ffc1c82",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-03-2.webp",
+      "output": "public/dealer-app/vehicle-fcc94f96d70067066bc4.webp",
+      "sha256": "fcc94f96d70067066bc46abe02dd2a2c5ecce08dfc3520f1c420e9a65ffc1c82",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-03-3.webp",
+      "output": "public/dealer-app/vehicle-681185fac01e9fdbd888.webp",
+      "sha256": "681185fac01e9fdbd888c3a5d921ae39dfc20e8bb2f2f0235152ac9eabc5e263",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-03-4.webp",
+      "output": "public/dealer-app/vehicle-a1ec63336ce8e901f453.webp",
+      "sha256": "a1ec63336ce8e901f4533f31891cd7a38e9f2055e3b219b1fc5c653c7f91c543",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-04-1.webp",
+      "output": "public/dealer-app/vehicle-23db9d804697f19b5faa.webp",
+      "sha256": "23db9d804697f19b5faa6d62327386e160fa14fbbc204d9b1c38f43c9c99b3cb",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-04-2.webp",
+      "output": "public/dealer-app/vehicle-23db9d804697f19b5faa.webp",
+      "sha256": "23db9d804697f19b5faa6d62327386e160fa14fbbc204d9b1c38f43c9c99b3cb",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-04-3.webp",
+      "output": "public/dealer-app/vehicle-909d568b2fbbdf5948af.webp",
+      "sha256": "909d568b2fbbdf5948af8a16c90f8ce1cd4e706185fe37729d4b93906157d5dd",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-04-4.webp",
+      "output": "public/dealer-app/vehicle-a1a9a26d2e1fcaf8437c.webp",
+      "sha256": "a1a9a26d2e1fcaf8437c66c33b1a04ef01cfb4bb4c12ff34256f5c24967df049",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-05-1.webp",
+      "output": "public/dealer-app/vehicle-05bad3cf9bf1ea8ea71d.webp",
+      "sha256": "05bad3cf9bf1ea8ea71d6b84da1e9dc700eba8ad679e416333707ad14ae6e34a",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-05-2.webp",
+      "output": "public/dealer-app/vehicle-05bad3cf9bf1ea8ea71d.webp",
+      "sha256": "05bad3cf9bf1ea8ea71d6b84da1e9dc700eba8ad679e416333707ad14ae6e34a",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-05-3.webp",
+      "output": "public/dealer-app/vehicle-0cd1c66701ff23c23c88.webp",
+      "sha256": "0cd1c66701ff23c23c8849f82b4b94f2c5bd5d19eb6a154c69afca7e9b8f2b9c",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-05-4.webp",
+      "output": "public/dealer-app/vehicle-a20e08daf96d2775875a.webp",
+      "sha256": "a20e08daf96d2775875a8f8dc63d38acf930ad58b2a57524e9316c1ae88596f9",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-06-1.webp",
+      "output": "public/dealer-app/vehicle-a519368142d950ceb307.webp",
+      "sha256": "a519368142d950ceb3073902161959ae50704d65d0e47f2516d150bc8d67a6c7",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-06-2.webp",
+      "output": "public/dealer-app/vehicle-a519368142d950ceb307.webp",
+      "sha256": "a519368142d950ceb3073902161959ae50704d65d0e47f2516d150bc8d67a6c7",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-06-3.webp",
+      "output": "public/dealer-app/vehicle-6ffd063a8e3a5219cde3.webp",
+      "sha256": "6ffd063a8e3a5219cde3dcd2eaf3bcec375f446a7050ccbee240c003924bb58c",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-06-4.webp",
+      "output": "public/dealer-app/vehicle-db275b89ce1ed2dd365d.webp",
+      "sha256": "db275b89ce1ed2dd365d0417e53c9f29693649ec7bdb6edc07ba4e60ebb055ec",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-07-1.webp",
+      "output": "public/dealer-app/vehicle-5ce89dc3af00c109e7e3.webp",
+      "sha256": "5ce89dc3af00c109e7e3fb6639389c7112ea1f1082b5acc71c29fdd036be7892",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-07-2.webp",
+      "output": "public/dealer-app/vehicle-5ce89dc3af00c109e7e3.webp",
+      "sha256": "5ce89dc3af00c109e7e3fb6639389c7112ea1f1082b5acc71c29fdd036be7892",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-07-3.webp",
+      "output": "public/dealer-app/vehicle-9b053a11207d9601f8b5.webp",
+      "sha256": "9b053a11207d9601f8b5af74f1837dfae015e39840126a2fc9aa8ccecf427445",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-07-4.webp",
+      "output": "public/dealer-app/vehicle-a34c552b0d1f3422aa24.webp",
+      "sha256": "a34c552b0d1f3422aa247b2c1b1a69722a8d95d977402ca78012b1199811b421",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-08-1.webp",
+      "output": "public/dealer-app/vehicle-7b79ed56d55c9bfea4d4.webp",
+      "sha256": "7b79ed56d55c9bfea4d4dac943bafe9ed23ea4958761321ebbd38bc34261d573",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-08-2.webp",
+      "output": "public/dealer-app/vehicle-7b79ed56d55c9bfea4d4.webp",
+      "sha256": "7b79ed56d55c9bfea4d4dac943bafe9ed23ea4958761321ebbd38bc34261d573",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-08-3.webp",
+      "output": "public/dealer-app/vehicle-70c2d2474de4ab505c5c.webp",
+      "sha256": "70c2d2474de4ab505c5c3a5262997b75f413e0c98e4bf8c1aa56e98e9d28efbe",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-08-4.webp",
+      "output": "public/dealer-app/vehicle-a7d4b8855ceb62d68ba8.webp",
+      "sha256": "a7d4b8855ceb62d68ba87205a22710fad71c7696e7fbb314933b92c7d84b511a",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-09-1.webp",
+      "output": "public/dealer-app/vehicle-6ad4971478aa59ce96a0.webp",
+      "sha256": "6ad4971478aa59ce96a04f6c5db5f600e0cd6f1f5340f3205250396b7e316eba",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-09-2.webp",
+      "output": "public/dealer-app/vehicle-6ad4971478aa59ce96a0.webp",
+      "sha256": "6ad4971478aa59ce96a04f6c5db5f600e0cd6f1f5340f3205250396b7e316eba",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-09-3.webp",
+      "output": "public/dealer-app/vehicle-92d5b91bfdc985b2f4a9.webp",
+      "sha256": "92d5b91bfdc985b2f4a9ad4d299aadbf53be624084291f62e09e6d7cc4372ea9",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-09-4.webp",
+      "output": "public/dealer-app/vehicle-f8e6f2bf7db8875abe35.webp",
+      "sha256": "f8e6f2bf7db8875abe35b53899778e71bbf3f28b27415743a876e94d4415e1bd",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-10-1.webp",
+      "output": "public/dealer-app/vehicle-8e31650ce3bd95a6ea7b.webp",
+      "sha256": "8e31650ce3bd95a6ea7bf982a44e668a68782762fc5058ff6a4fa46907be8c80",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-10-2.webp",
+      "output": "public/dealer-app/vehicle-8e31650ce3bd95a6ea7b.webp",
+      "sha256": "8e31650ce3bd95a6ea7bf982a44e668a68782762fc5058ff6a4fa46907be8c80",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-10-3.webp",
+      "output": "public/dealer-app/vehicle-a649d5f5c8e9dd899729.webp",
+      "sha256": "a649d5f5c8e9dd899729f6f54e8414fc2ff3f8511eab47b5474e14d96db9830e",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-10-4.webp",
+      "output": "public/dealer-app/vehicle-c341b9c33d5c93297731.webp",
+      "sha256": "c341b9c33d5c9329773105f8ece3b700b4d21562894d983f45f616f88d63514c",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-11-1.webp",
+      "output": "public/dealer-app/vehicle-3aff5ab51951df3f5fc3.webp",
+      "sha256": "3aff5ab51951df3f5fc335f8594320c08e0d931a76567ac0c23a610e700d0796",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-11-2.webp",
+      "output": "public/dealer-app/vehicle-3aff5ab51951df3f5fc3.webp",
+      "sha256": "3aff5ab51951df3f5fc335f8594320c08e0d931a76567ac0c23a610e700d0796",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-11-3.webp",
+      "output": "public/dealer-app/vehicle-01e0421236c4a4cc4ed3.webp",
+      "sha256": "01e0421236c4a4cc4ed3791bafa75598ba0e259c7e17f35587a4e6e86644312a",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-11-4.webp",
+      "output": "public/dealer-app/vehicle-5a601ce946fa5c7069a5.webp",
+      "sha256": "5a601ce946fa5c7069a5d097411ee73cd67f85a462569ff1eb4b50ac22568806",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-12-1.webp",
+      "output": "public/dealer-app/vehicle-6df61aae813ed81f04fb.webp",
+      "sha256": "6df61aae813ed81f04fb62a4a1576d917dc8522adf24afb27081db84686b66cc",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-12-2.webp",
+      "output": "public/dealer-app/vehicle-6df61aae813ed81f04fb.webp",
+      "sha256": "6df61aae813ed81f04fb62a4a1576d917dc8522adf24afb27081db84686b66cc",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-12-3.webp",
+      "output": "public/dealer-app/vehicle-614c52ece56d5e164d80.webp",
+      "sha256": "614c52ece56d5e164d80df596009f2260c1bde053f374a04821d314c0238eeb6",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-12-4.webp",
+      "output": "public/dealer-app/vehicle-7dcb269fa44fb99acc4c.webp",
+      "sha256": "7dcb269fa44fb99acc4ca09d648cf9d6ef409d0faf38aee4be4d1a11c89251cd",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-13-1.webp",
+      "output": "public/dealer-app/vehicle-656ca9224f9ec5bac194.webp",
+      "sha256": "656ca9224f9ec5bac194ed1b46f7d25c00154c48b7383108d189b3a39f9c219c",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-13-2.webp",
+      "output": "public/dealer-app/vehicle-656ca9224f9ec5bac194.webp",
+      "sha256": "656ca9224f9ec5bac194ed1b46f7d25c00154c48b7383108d189b3a39f9c219c",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-13-3.webp",
+      "output": "public/dealer-app/vehicle-204d59155ce4eeb68750.webp",
+      "sha256": "204d59155ce4eeb68750b98c359da02431d85f5aea6305e02c3229d6916a9dc0",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-13-4.webp",
+      "output": "public/dealer-app/vehicle-afba597708c1f05b509f.webp",
+      "sha256": "afba597708c1f05b509f433431b9bf223a2aee06e6e019a5cefb1668dfa476dc",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-14-1.webp",
+      "output": "public/dealer-app/vehicle-0eee5ab55df7a5d4ae79.webp",
+      "sha256": "0eee5ab55df7a5d4ae793f3466d954b532fac63a8d332f8558d490af65be9e5f",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-14-2.webp",
+      "output": "public/dealer-app/vehicle-0eee5ab55df7a5d4ae79.webp",
+      "sha256": "0eee5ab55df7a5d4ae793f3466d954b532fac63a8d332f8558d490af65be9e5f",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-14-3.webp",
+      "output": "public/dealer-app/vehicle-b45a9b52ad79d7e18352.webp",
+      "sha256": "b45a9b52ad79d7e18352bbf603c30f954bf7750018afba18dc188c48d5ba07d8",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-14-4.webp",
+      "output": "public/dealer-app/vehicle-1c5538ef4b99f2938db6.webp",
+      "sha256": "1c5538ef4b99f2938db6b09fb73b84d21696b50e8e68dfd707f6b9634082055f",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-15-1.webp",
+      "output": "public/dealer-app/vehicle-bdc6ff0e125b62c66849.webp",
+      "sha256": "bdc6ff0e125b62c668490e950a2915d492461866014bdb0605979b20bb4a1ae8",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-15-2.webp",
+      "output": "public/dealer-app/vehicle-bdc6ff0e125b62c66849.webp",
+      "sha256": "bdc6ff0e125b62c668490e950a2915d492461866014bdb0605979b20bb4a1ae8",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-15-3.webp",
+      "output": "public/dealer-app/vehicle-24c0cb9162193b41f5ac.webp",
+      "sha256": "24c0cb9162193b41f5acffc58eac8e39ddca05a3737159252c5f1b7aca7cc25d",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-15-4.webp",
+      "output": "public/dealer-app/vehicle-64abab7c1cf2a0f782c2.webp",
+      "sha256": "64abab7c1cf2a0f782c2dd3eb7d199b83e934348adfb9739b75d602fb248aa73",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-16-1.webp",
+      "output": "public/dealer-app/vehicle-97bb8cfc6f863241fcdb.webp",
+      "sha256": "97bb8cfc6f863241fcdb147ea2c9ea1d6b3e1dd7ae8b91a5ba87879f4213a037",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-16-2.webp",
+      "output": "public/dealer-app/vehicle-97bb8cfc6f863241fcdb.webp",
+      "sha256": "97bb8cfc6f863241fcdb147ea2c9ea1d6b3e1dd7ae8b91a5ba87879f4213a037",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-16-3.webp",
+      "output": "public/dealer-app/vehicle-682b75deb9fabf726da2.webp",
+      "sha256": "682b75deb9fabf726da2b31d7cc1e4929f6c3e42edae6165cc5207d0ffd97f6d",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/assets/ivo-auto/vehicle-16-4.webp",
+      "output": "public/dealer-app/vehicle-685d6003f8c6dc12fe7b.webp",
+      "sha256": "685d6003f8c6dc12fe7b36ea950e52260af0ae2a5fe53bbb860e061e1e809baf",
+      "role": "vehicle"
+    }
+  ],
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
+    "path": "templates/app",
+    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
+    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
+  },
+  "generatedAt": "2026-09-28T04:58:02.854Z",
+  "policy": {
+    "selector": "shared-v2-with-local-fallback",
+    "benefits": "clearly-labelled-proposal-examples",
+    "missingPhotos": "neutral-template-artwork-not-invented-stock"
+  }
+}

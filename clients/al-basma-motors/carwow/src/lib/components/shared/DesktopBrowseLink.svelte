@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	let {
 		href,
@@ -7,7 +10,11 @@
 	}: { href: string; label: string; tone?: 'light' | 'dark' } = $props();
 </script>
 
-<a {href} class="desktop-browse-link" class:desktop-browse-link--dark={tone === 'dark'}>
+<a
+	href={i18n.href(href)}
+	class="desktop-browse-link"
+	class:desktop-browse-link--dark={tone === 'dark'}
+>
 	<span>{label}</span><ArrowRight size={18} strokeWidth={2} aria-hidden="true" />
 </a>
 

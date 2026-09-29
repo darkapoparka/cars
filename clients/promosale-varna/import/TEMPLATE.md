@@ -6,9 +6,10 @@
 - Key: `import`
 - Role: Design 2 option in an Import trio
 - Design position: import/sourcing specialist for dealers that actively sell the import journey
-- Stack: SvelteKit + Vite (Auxero-derived)
+- Stack: Svelte 5 + SvelteKit + Vite 8 + Tailwind CSS v4; explicit Vercel adapter
+- Runtime: Node 24 (see .node-version), npm lockfile
 - Primary entry: `/`
-- Suggested standalone review port: `6464`
+- Suggested standalone review port: `6790`
 
 This is a **template master**, not a sendable dealer demo. The baseline intentionally preserves source/sample material for design fidelity; every lead copy requires a complete identity and content sweep.
 
@@ -16,14 +17,16 @@ This is a **template master**, not a sendable dealer demo. The baseline intentio
 
 ```text
 npm ci
-npm run dev -- --host 127.0.0.1 --port 6464 --strictPort
+npm run dev -- --host 127.0.0.1 --port 6790 --strictPort
 ```
 
 ## Primary personalization surface
 
 Shared customer typography follows [Typography](docs/TYPOGRAPHY.md).
 
-- `src/lib/data/daynight.ts`
+- `src/lib/config/dealer.ts` and validated `src/lib/config/site.ts`
+- `src/lib/content/`
+- `src/lib/data/daynight.ts` (compatibility/content facade)
 - `src/lib/data/daynight-listings.json`
 - `src/lib/data/vehicles.ts`
 - `src/lib/styles/`
@@ -43,12 +46,13 @@ Do not assume these are the only identity consumers. Search every retained route
 
 ## Required checks
 
-- `npm run check`
+- `npm run verify`
 - `npm run build`
+- `npm run test:e2e`
 
 ## Inquiry persistence
 
-Optional Neon-backed inquiry storage and private template admin access are documented in [Inquiry database](docs/INQUIRY-DATABASE.md). Without database configuration the synthetic preview remains in memory. Saving is separate from notification delivery.
+Optional Neon-backed inquiry storage and private template admin access are documented in [Inquiry database](docs/INQUIRY-DATABASE.md). Preview mode stays synthetic even when credentials are present. Live persistence must be explicitly enabled. Saving is separate from notification delivery.
 
 ## Current constraints
 
@@ -63,3 +67,5 @@ Split on 2026-09-10 from the live working tree at `J:/cars/templates/import`. Th
 Cars owns portfolio choices: standard Auto Best / Modern / Carwow, or Auto Best / Import / Carwow. See [Cars integration](docs/CARS-INTEGRATION.md).
 
 Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).
+
+Current source boundaries and retained legacy limits: [Architecture](docs/ARCHITECTURE.md).

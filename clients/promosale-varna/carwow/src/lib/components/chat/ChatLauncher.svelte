@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { MessageCircle, X } from '@lucide/svelte';
 
 	type Props = {
@@ -13,7 +16,7 @@
 <button
 	class="chat-launcher"
 	type="button"
-	aria-label={open ? 'Затвори чата' : 'Отвори чат с екипа'}
+	aria-label={open ? i18n.t('copy.34ad9a7e17d8') : i18n.t('copy.c9c782f3c571')}
 	aria-expanded={open}
 	{onclick}
 >
@@ -22,7 +25,7 @@
 	{:else}
 		<MessageCircle aria-hidden="true" />
 	{/if}
-	<span class="chat-launcher__label">Чат с екипа</span>
+	<span class="chat-launcher__label">{i18n.t('copy.8951a12df402')}</span>
 	{#if unreadCount > 0}
 		<span class="chat-launcher__badge">{unreadCount}</span>
 	{/if}

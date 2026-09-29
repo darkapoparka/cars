@@ -1,6 +1,4 @@
-@import 'tailwindcss';
-@import '../../styles/daynight.css';
-@import '../../styles/daynight.tailwind.css';
+@reference '../../styles/app.css';
 
 [data-daynight-dashboard] {
 	--dash-bg: var(--bc-dashboard-bg);

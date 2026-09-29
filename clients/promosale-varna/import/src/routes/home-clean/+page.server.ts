@@ -1,3 +1,4 @@
+import { localeFromUrl } from '$lib/locale/core';
 import type { PageServerLoad } from './$types';
 import {
 	homeFiveBrandCardsForLocale,
@@ -14,14 +15,14 @@ import {
 } from '$lib/auxero/home-five';
 import { posts } from '$lib/data/blog';
 import { vehicles } from '$lib/data/vehicles';
-import { getMessages, resolveLocale } from '$lib/i18n/messages';
+import { getMessages } from '$lib/i18n/messages';
 
 // Clean route: NO pageDocument → the Auxero app.css / guards / swiper never load.
 // Returns only the typed view-model data the clean home sections consume. The same
 // builders that fed the Auxero shell feed the clean components directly (the data
 // layer was already clean). auxeroFullPage stays true so the page owns its chrome.
 export const load: PageServerLoad = ({ url }) => {
-	const locale = resolveLocale(url.searchParams.get('lang'));
+	const locale = localeFromUrl(url);
 	const activeHeroMode = resolveHomeFiveHeroActionMode(url.searchParams.get('intent'));
 	const messages = getMessages(locale);
 

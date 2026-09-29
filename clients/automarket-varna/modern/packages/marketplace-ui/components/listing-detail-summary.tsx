@@ -1,5 +1,6 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowLeft, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
@@ -61,7 +62,10 @@ export const DesktopListingSummaryHeader = ({
             <MapPin aria-hidden="true" className="size-3.5" />
             {formatVehicleLocation(physicalLocation, locale)}
           </span>
-          <span>Ref {listing.id.toUpperCase()}</span>
+          <span>
+            {locale?.startsWith("bg") ? "Реф." : "Ref"}{" "}
+            {listing.id.toUpperCase()}
+          </span>
         </div>
       </div>
       <ListingActions
@@ -143,7 +147,7 @@ export const MobileListingSummary = ({
     listing,
     sellerOrganizationRole
   );
-  const showSellerIdentity = !leadSite.staticDemoMode;
+  const showSellerIdentity = !isDealershipSite;
   const monthlyAmount = formatListingMonthlyEstimate(
     listing.monthlyEstimate,
     locale

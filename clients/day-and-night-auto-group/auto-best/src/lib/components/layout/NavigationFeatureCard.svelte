@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import type { NavigationFeature } from '$data/navigation';
   import { vehicleArtwork } from '$data/vehicle-artwork';
@@ -14,8 +17,8 @@
   });
 </script>
 
-<a class="dn-mega__feature" class:dn-mega__feature--red={feature.tone === 'red'} class:dn-mega__feature--ink={feature.tone === 'ink'} href={resolve(feature.href)}>
-  <span class="copy"><strong>{feature.title}</strong></span>
+<a class="dn-mega__feature" class:dn-mega__feature--red={feature.tone === 'red'} class:dn-mega__feature--ink={feature.tone === 'ink'} href={i18n.href(resolve(feature.href))}>
+  <span class="copy"><strong>{i18n.text(feature.title)}</strong></span>
   <span class="artwork" class:artwork--photo={feature.media === 'photo'}>
     <FeatureArtwork {artwork} />
   </span>

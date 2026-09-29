@@ -2,18 +2,22 @@ import { Badge } from "@repo/design-system/components/ui/badge";
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleListing } from "@repo/marketplace";
 import {
+  ArrowRight,
   BadgeCheck,
   Boxes,
+  CalendarDays,
   Clock3,
   Factory,
+  Fuel,
+  Gauge,
   MapPin,
+  Settings2,
   ShieldCheck,
   Ship,
   Store,
   Truck,
   UserRound,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   formatTruthDateTime,
@@ -30,6 +34,7 @@ import {
 import { mobileVehicleCardContentClassName } from "../lib/mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
+  getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
   getVehicleCardSpecFacts,
@@ -54,6 +59,7 @@ import {
   vehicleCardToneClassNames,
 } from "../lib/vehicle-card-view-policy";
 import { DealerVehicleFacts } from "./dealer-vehicle-facts";
+import Image from "./public-image";
 
 const sellerRoleIcons = {
   dealer: Store,
@@ -120,7 +126,7 @@ const VehiclePriceSummary = ({
   );
 
   return (
-    <div className="min-w-0">
+    <div className="min-w-0" data-slot="vehicle-card-price-summary">
       <p
         className="whitespace-nowrap font-semibold text-foreground text-price tabular-nums tracking-heading lg:text-price-lg"
         data-slot="vehicle-card-price"
@@ -270,7 +276,10 @@ const VehicleSellerFooter = ({
   }
 
   return (
-    <footer className="mt-auto flex min-w-0 max-w-full items-center lg:mt-1 lg:border-border/70 lg:border-t lg:pt-2">
+    <footer
+      className="mt-auto flex min-w-0 max-w-full items-center lg:mt-1 lg:border-border/70 lg:border-t lg:pt-2"
+      data-slot="vehicle-card-seller"
+    >
       <span
         className="inline-flex min-w-0 max-w-full items-center gap-1.5 rounded-full bg-secondary/85 px-2.5 py-1 text-foreground/75 text-meta lg:rounded-none lg:bg-transparent lg:p-0 lg:text-muted-foreground"
         title={sellerLabel}
@@ -279,10 +288,10 @@ const VehicleSellerFooter = ({
           <Image
             alt=""
             aria-hidden="true"
-            className="size-4 shrink-0 rounded object-contain"
+            className="h-4 w-10 shrink-0 object-contain"
             height={16}
             src={listing.seller.logoUrl}
-            width={16}
+            width={40}
           />
         ) : null}
         <span className="truncate font-medium">{sellerLabel}</span>
@@ -320,7 +329,10 @@ const VehicleLocationDetails = ({
     .join(", ");
 
   return (
-    <div className="space-y-1.5 pt-1 text-meta text-muted-foreground lg:pt-0.5">
+    <div
+      className="space-y-1.5 pt-1 text-meta text-muted-foreground lg:pt-0.5"
+      data-slot="vehicle-card-location"
+    >
       <p className="flex min-w-0 items-start gap-1.5">
         <MapPin aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0" />
         <span className="lg:hidden">{mobileLocation}</span>
@@ -428,7 +440,10 @@ const VehicleProvenanceFooter = ({
   );
 
   return (
-    <footer className="mt-3 hidden flex-wrap items-center justify-between gap-x-3 gap-y-1 text-micro text-muted-foreground lg:flex">
+    <footer
+      className="mt-3 hidden flex-wrap items-center justify-between gap-x-3 gap-y-1 text-micro text-muted-foreground lg:flex"
+      data-slot="vehicle-card-provenance"
+    >
       <span className="flex min-w-0 items-center gap-1.5">
         <Clock3 aria-hidden="true" className="h-3 w-3 shrink-0" />
         <span className="truncate">
@@ -493,6 +508,7 @@ const MobileDealerVehicleCardContent = ({
 );
 
 const ComparisonVehicleCardContent = ({
+  desktopHeadingLevel,
   isDesktopComparison,
   listing,
   listingHref,
@@ -501,14 +517,16 @@ const ComparisonVehicleCardContent = ({
   presentation,
   sellerOrganizationRole,
 }: {
+  desktopHeadingLevel: 2 | 3;
   isDesktopComparison: boolean;
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
   priceInsight?: VehicleCardPriceInsight;
-  presentation: "default" | "discovery";
+  presentation: "default" | "discovery" | "showroom";
   sellerOrganizationRole?: ListingOrganizationRole;
 }) => {
+  const Heading = desktopHeadingLevel === 3 ? "h3" : "h2";
   const landedCostTruth = getLandedCostTruth(listing);
   const vehicleTitle = getVehicleCardTitle(listing, "comparison");
 
@@ -518,17 +536,18 @@ const ComparisonVehicleCardContent = ({
         "flex min-w-0 flex-col gap-2.5 p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:gap-3 lg:p-3.5",
         isDesktopComparison && "lg:gap-2 lg:p-3"
       )}
+      data-slot="vehicle-card-content"
       href={listingHref}
     >
       {presentation === "discovery" ? (
         <div data-slot="vehicle-card-title-row">
-          <h2
+          <Heading
             className="line-clamp-2 min-w-0 font-semibold text-card-title text-foreground tracking-heading lg:min-h-10 lg:text-card-title-lg"
             data-slot="vehicle-card-title"
             title={vehicleTitle}
           >
             {vehicleTitle}
-          </h2>
+          </Heading>
         </div>
       ) : (
         <>
@@ -545,13 +564,13 @@ const ComparisonVehicleCardContent = ({
               locale={locale}
             />
           </div>
-          <h2
+          <Heading
             className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading lg:text-card-title-lg"
             data-slot="vehicle-card-title"
             title={vehicleTitle}
           >
             {vehicleTitle}
-          </h2>
+          </Heading>
         </>
       )}
       <VehiclePriceSummary
@@ -562,6 +581,65 @@ const ComparisonVehicleCardContent = ({
       />
       <div className="mt-auto">
         <VehicleSpecPills listing={listing} locale={locale} />
+      </div>
+    </Link>
+  );
+};
+
+const showroomFactIcons = {
+  year: CalendarDays,
+  mileage: Gauge,
+  fuel: Fuel,
+  transmission: Settings2,
+} as const;
+
+/** Compact desktop presentation using the same title, price, media and fact policies as other cards. */
+const ShowroomVehicleCardContent = ({
+  listing,
+  listingHref,
+  locale,
+}: {
+  listing: VehicleListing;
+  listingHref: string;
+  locale?: string;
+}) => {
+  const heading = getShowroomVehicleHeading(listing, locale);
+  const facts = getVehicleCardSpecFacts(listing, locale).filter(
+    (fact) => fact.id !== "year"
+  );
+  return (
+    <Link
+      className="min-w-0"
+      data-slot="vehicle-card-content"
+      href={listingHref}
+    >
+      <div data-slot="showroom-vehicle-heading">
+        <h3 data-slot="vehicle-card-title">{heading.title}</h3>
+        <p data-slot="showroom-vehicle-subtitle">{heading.subtitle}</p>
+      </div>
+      <ul
+        aria-label={getVehicleCardCopy(locale).specs}
+        data-slot="showroom-vehicle-facts"
+      >
+        {facts.map((fact) => {
+          const Icon = showroomFactIcons[fact.id];
+          return (
+            <li data-fact={fact.id} key={fact.id}>
+              <Icon aria-hidden="true" size={13} strokeWidth={1.6} />
+              <span>{fact.value}</span>
+            </li>
+          );
+        })}
+      </ul>
+      <div data-slot="showroom-vehicle-price-row">
+        <VehiclePriceSummary
+          listing={listing}
+          locale={locale}
+          variant="comparison"
+        />
+        <span aria-hidden="true" data-slot="showroom-vehicle-open">
+          <ArrowRight size={17} />
+        </span>
       </div>
     </Link>
   );
@@ -595,6 +673,7 @@ const ListVehicleCardContent = ({
         "flex min-w-0 flex-col gap-1.5 p-3.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset",
         isCompactList && "lg:p-4"
       )}
+      data-slot="vehicle-card-content"
       href={listingHref}
     >
       <h2
@@ -633,6 +712,7 @@ const ListVehicleCardContent = ({
 };
 
 export const VehicleCardContent = ({
+  desktopHeadingLevel,
   isDesktopComparison,
   listing,
   listingHref,
@@ -643,44 +723,60 @@ export const VehicleCardContent = ({
   trustSignals,
   variant,
 }: {
+  desktopHeadingLevel: 2 | 3;
   isDesktopComparison: boolean;
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
-  presentation: "default" | "discovery";
+  presentation: "default" | "discovery" | "showroom";
   priceInsight?: VehicleCardPriceInsight;
   sellerOrganizationRole?: ListingOrganizationRole;
   trustSignals: readonly VehicleCardTrustSignal[];
   variant: VehicleCardVariant;
-}) => (
-  <>
-    <MobileDealerVehicleCardContent
-      listing={listing}
-      listingHref={listingHref}
-      locale={locale}
-    />
-    <div className="hidden lg:contents">
-      {variant === "comparison" ? (
-        <ComparisonVehicleCardContent
-          isDesktopComparison={isDesktopComparison}
-          listing={listing}
-          listingHref={listingHref}
-          locale={locale}
-          presentation={presentation}
-          priceInsight={priceInsight}
-          sellerOrganizationRole={sellerOrganizationRole}
-        />
-      ) : (
-        <ListVehicleCardContent
-          listing={listing}
-          listingHref={listingHref}
-          locale={locale}
-          priceInsight={priceInsight}
-          sellerOrganizationRole={sellerOrganizationRole}
-          trustSignals={trustSignals}
-          variant={variant}
-        />
-      )}
-    </div>
-  </>
-);
+}) => {
+  let desktopContent: ReturnType<typeof ComparisonVehicleCardContent>;
+  if (presentation === "showroom") {
+    desktopContent = (
+      <ShowroomVehicleCardContent
+        listing={listing}
+        listingHref={listingHref}
+        locale={locale}
+      />
+    );
+  } else if (variant === "comparison") {
+    desktopContent = (
+      <ComparisonVehicleCardContent
+        desktopHeadingLevel={desktopHeadingLevel}
+        isDesktopComparison={isDesktopComparison}
+        listing={listing}
+        listingHref={listingHref}
+        locale={locale}
+        presentation={presentation}
+        priceInsight={priceInsight}
+        sellerOrganizationRole={sellerOrganizationRole}
+      />
+    );
+  } else {
+    desktopContent = (
+      <ListVehicleCardContent
+        listing={listing}
+        listingHref={listingHref}
+        locale={locale}
+        priceInsight={priceInsight}
+        sellerOrganizationRole={sellerOrganizationRole}
+        trustSignals={trustSignals}
+        variant={variant}
+      />
+    );
+  }
+  return (
+    <>
+      <MobileDealerVehicleCardContent
+        listing={listing}
+        listingHref={listingHref}
+        locale={locale}
+      />
+      <div className="hidden lg:contents">{desktopContent}</div>
+    </>
+  );
+};

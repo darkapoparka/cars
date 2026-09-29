@@ -1,3 +1,4 @@
+import { resolveLocale } from '$lib/locale/core';
 import type { PageLoad } from './$types';
 import { filterListingVehicles, listingVehicles, parseListingFilters } from '$data/listing';
 
@@ -6,6 +7,6 @@ export const load: PageLoad = ({ url }) => {
 
   return {
     filters,
-    vehicles: filterListingVehicles(listingVehicles, filters)
+    vehicles: filterListingVehicles(listingVehicles, filters, resolveLocale({ url }).locale)
   };
 };

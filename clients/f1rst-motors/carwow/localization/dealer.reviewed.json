@@ -1,0 +1,50 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Dubai",
+    "bg": "Дубай",
+    "en": "Dubai",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
+    "bg": "Danube сграда - 409 Sheikh Zayed Rd - Al Quoz 1",
+    "en": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.address",
+    "source": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
+    "bg": "Danube сграда - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, ОАЕ",
+    "en": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.locationShort",
+    "source": "Dubai",
+    "bg": "Дубай",
+    "en": "Dubai",
+    "disposition": "translate",
+    "notes": "Dealer-owned short location label."
+  },
+  {
+    "key": "dealer.name",
+    "source": "F1rst Motors",
+    "en": "F1rst Motors",
+    "bg": "F1rst Motors",
+    "disposition": "invariant",
+    "notes": "Dealer-owned proper name."
+  },
+  {
+    "key": "dealer.shortName",
+    "source": "F1rst Motors",
+    "en": "F1rst Motors",
+    "bg": "F1rst Motors",
+    "disposition": "invariant",
+    "notes": "Dealer-owned short proper name."
+  }
+]

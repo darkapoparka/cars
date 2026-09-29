@@ -73,15 +73,15 @@
 				<Card.Content class="grid gap-4 p-4">
 					<div class="grid gap-4 text-sm sm:grid-cols-2">
 						<div>
-							<p class="text-muted-foreground m-0 text-xs">Contact</p>
+							<p class="m-0 text-xs text-muted-foreground">Contact</p>
 							<p class="m-0 font-medium">{submission.contactName}</p>
-							<p class="text-muted-foreground m-0 text-xs">{submission.contactEmail}</p>
-							<p class="text-muted-foreground m-0 text-xs">{submission.contactPhone}</p>
+							<p class="m-0 text-xs text-muted-foreground">{submission.contactEmail}</p>
+							<p class="m-0 text-xs text-muted-foreground">{submission.contactPhone}</p>
 						</div>
 						<div>
-							<p class="text-muted-foreground m-0 text-xs">Created</p>
+							<p class="m-0 text-xs text-muted-foreground">Created</p>
 							<p class="m-0 font-medium">{formatDate(submission.createdAt)}</p>
-							<p class="text-muted-foreground m-0 text-xs capitalize">
+							<p class="m-0 text-xs text-muted-foreground capitalize">
 								{submission.source.replace('-', ' ')}
 							</p>
 						</div>
@@ -98,7 +98,7 @@
 								<select
 									id={`import-status-${submission.id}`}
 									name="status"
-									class="border-input bg-background focus-visible:ring-ring h-10 rounded-lg border px-3 text-sm capitalize outline-none focus-visible:ring-3"
+									class="h-10 rounded-lg border border-input bg-background px-3 text-sm capitalize outline-none focus-visible:ring-3 focus-visible:ring-ring"
 								>
 									{#each statuses as statusName (statusName)}
 										<option value={statusName} selected={submission.status === statusName}>

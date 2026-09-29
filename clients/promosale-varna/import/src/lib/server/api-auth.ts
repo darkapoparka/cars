@@ -1,4 +1,5 @@
 import { errorJson } from './api';
+import { runtimeConfig } from './runtime-config';
 import {
 	canAccessDayNightRoute,
 	resolveDayNightApiSession,
@@ -30,6 +31,13 @@ export const requireDayNightApiAccess = ({
 	request,
 	routePath = ''
 }: ApiAccessOptions): ApiAccessResult => {
+	const config = runtimeConfig();
+	if (config.mode === 'live' && !config.adminEnabled)
+		return { response: errorJson('Staff access is unavailable', 401) };
+	if (config.mode === 'live' && routePath !== 'admin/inquiries')
+		return {
+			response: errorJson('This demonstration capability is not enabled in live mode', 503)
+		};
 	const session = resolveDayNightApiSession(request, fallbackRole);
 
 	if (!session) {

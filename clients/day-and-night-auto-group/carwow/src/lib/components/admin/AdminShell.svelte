@@ -91,7 +91,7 @@
 										/>
 									</span>
 									<span class="grid flex-1 text-left text-sm leading-tight">
-										<span class="truncate font-semibold">Day Night Auto</span>
+										<span class="truncate font-semibold">Day & Night</span>
 										<span class="text-sidebar-foreground/60 truncate text-xs">CMS workspace</span>
 									</span>
 								</a>
@@ -149,7 +149,7 @@
 						Inventory, leads, imports, and content are managed from this workspace.
 					</p>
 				</div>
-				<form method="POST" action="/admin/logout">
+				<form method="POST" action={resolve('/admin/logout')}>
 					<Button
 						variant="ghost"
 						class="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground w-full justify-start"
@@ -170,7 +170,7 @@
 				<Separator orientation="vertical" class="me-2 data-[orientation=vertical]:h-4" />
 				<div class="min-w-0 flex-1">
 					<p class="text-muted-foreground flex items-center gap-1 truncate text-xs font-medium">
-						<span>Day Night Auto</span>
+						<span>Day & Night</span>
 						<ChevronRight aria-hidden="true" />
 						<span>{eyebrow}</span>
 					</p>

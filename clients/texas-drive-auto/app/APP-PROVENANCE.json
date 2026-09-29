@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "dealer": "texas-drive-auto",
+  "profile": "auto-best/src/lib/data/dealer-profile.json",
+  "profileSha256": "ca2c48e43258c8352b56de916a6c42f80a1570c530cc90812334b1202404a2d3",
+  "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+  "vehicles": 8,
+  "currency": "USD",
+  "observedAt": "2026-09-08",
+  "assets": [
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+      "output": "public/dealer-app/logo-light-2298c82ae0c02b028b50.webp",
+      "sha256": "2298c82ae0c02b028b50c6775e118dc8b1260f19da07ce69c121d56ba58256c0",
+      "role": "logo-light"
+    },
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+      "output": "public/dealer-app/logo-dark-3dea5fb84807728dcdf3.webp",
+      "sha256": "3dea5fb84807728dcdf333040b41e71c72ccabbc3a179082797714ebb6742231",
+      "role": "logo-dark"
+    },
+    {
+      "source": "auto-best/static/stock/127361913-1.webp",
+      "output": "public/dealer-app/vehicle-f05bafa591d1c7addbbc.webp",
+      "sha256": "f05bafa591d1c7addbbc0839fc308c0f717e01d214da9d09567ef591cb16e158",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/stock/127361925-1.webp",
+      "output": "public/dealer-app/vehicle-9630e81b8a4369995908.webp",
+      "sha256": "9630e81b8a4369995908baaa021da911f5e5f96bbd4ba3b8fde5d1cfc1206ae3",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/stock/127361904-1.webp",
+      "output": "public/dealer-app/vehicle-2fd83adf01279e6745b4.webp",
+      "sha256": "2fd83adf01279e6745b4f33373cab57b1ed2be7517298dabd6e13dece38929ea",
+      "role": "vehicle"
+    }
+  ],
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
+    "path": "templates/app",
+    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
+    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
+  },
+  "generatedAt": "2026-09-28T04:58:10.427Z",
+  "policy": {
+    "selector": "shared-v2-with-local-fallback",
+    "benefits": "clearly-labelled-proposal-examples",
+    "missingPhotos": "neutral-template-artwork-not-invented-stock"
+  }
+}

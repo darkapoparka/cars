@@ -1,0 +1,23 @@
+{
+  "commit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+  "sourceTree": "bbc9c91c017d7d2d562ad68cf1a0931c11289417",
+  "sourceDigest": "b98e011d45774f69b18a1ff69e9e42f58ad690d7cf1acbb7e56ea83303529c42",
+  "deployment": {
+    "id": "dpl_3tvmi6D6QVeJTcqmav5LVLWM3c9J",
+    "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+    "state": "READY",
+    "sourceCommit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+    "publicAlias": "https://cars-template-auto-best.vercel.app/"
+  },
+  "verifiedAt": "2026-09-27T21:31:05.292Z",
+  "acceptanceHash": "8dc0acdb63f27281ced4abf8b8f4bb84e29eadc054c26866ab15a38962deb9f6",
+  "sourceChecks": 2,
+  "productionSuites": 10,
+  "evidenceHashes": {
+    "source-validation.json": "40f3191c0108cf705a1aae0cba297a81cf58d8b7b2e24414e7671718ca1a1258",
+    "source-validate.log": "403a03b5a49a54db6caade3ac22ef46392b818e63808c6993bca3041324eead0",
+    "source-locales.log": "942b8af17408ce104aa3796081568a88281346537de9ee40c6f4f0dc0b112a57",
+    "production-qa.json": "e6cb5100e30b5b1b5f9aee042b351f69cf9660a29ad27a56f3c5b5a81bafd450",
+    "public-verification.json": "600189c67742cf7cb3856777580f5904f75bc3378089080eaf350e56df2c9237"
+  }
+}

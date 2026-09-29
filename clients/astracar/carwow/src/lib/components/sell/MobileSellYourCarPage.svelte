@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { CircleCheck, Phone } from '@lucide/svelte';
 	import { untrack, onDestroy } from 'svelte';
 	import {
@@ -47,7 +50,7 @@
 	onDestroy(() => submissionController?.abort());
 
 	const phoneHref = daynightSite.phoneHref;
-	const sellErrorMessage = `Не успяхме да изпратим заявката. Опитайте отново или се обадете на ${daynightSite.phoneLabel}.`;
+	const sellErrorMessage = i18n.t('pattern.b8d0760cdb0e', { v0: daynightSite.phoneLabel });
 	const vehicleTitle = $derived(
 		[make.trim(), model.trim()].filter(Boolean).join(' ') ||
 			plate.trim().toUpperCase() ||
@@ -55,7 +58,9 @@
 			'Автомобил'
 	);
 	const vehicleMeta = $derived(
-		[year.trim(), mileage.trim() && `${mileage.trim()} км`].filter(Boolean).join(' · ')
+		[year.trim(), mileage.trim() && i18n.t('pattern.116743977eaf', { v0: mileage.trim() })]
+			.filter(Boolean)
+			.join(' · ')
 	);
 	const submittedFields = $derived.by(() =>
 		[
@@ -197,7 +202,7 @@
 <div class="mobile-sell">
 	<MobileLeadHero
 		kind="sell"
-		title="Продай автомобила"
+		title={i18n.t('copy.96f8181bbcb0')}
 		bind:value={quickValue}
 		onSubmit={openForm}
 		onManual={openManualForm}
@@ -209,29 +214,31 @@
 			<section class="sell-success" aria-labelledby="sell-success-title">
 				<span class="sell-success__icon"><CircleCheck size={22} strokeWidth={2.3} /></span>
 				<div>
-					<h2 id="sell-success-title">Заявката е изпратена</h2>
-					<p>Ще се свържем с Вас за оценката и следващата стъпка.</p>
+					<h2 id="sell-success-title">{i18n.t('copy.f6436fa174f3')}</h2>
+					<p>{i18n.t('copy.5a70d5886190')}</p>
 				</div>
 				{#if submittedFields.length}
 					<dl>
 						{#each submittedFields as field (field.label)}
 							<div>
-								<dt>{field.label}</dt>
+								<dt>{i18n.text(field.label)}</dt>
 								<dd>{field.value}</dd>
 							</div>
 						{/each}
 					</dl>
 				{/if}
 				<div class="sell-success__actions">
-					<a href={phoneHref}><Phone size={17} strokeWidth={2.3} /> Обади се</a>
-					<button type="button" onclick={startAnother}>Нова заявка</button>
+					<a href={i18n.href(phoneHref)}
+						><Phone size={17} strokeWidth={2.3} /> {i18n.t('copy.d40e5119596a')}</a
+					>
+					<button type="button" onclick={startAnother}>{i18n.t('copy.d05d2b62ae66')}</button>
 				</div>
 			</section>
 		{:else}
 			<MobileLeadContactCard
 				{phoneHref}
-				title="Предпочиташ разговор?"
-				copy="Ще помогнем с оценката и следващите стъпки."
+				title={i18n.t('copy.89ed122d152e')}
+				copy={i18n.t('copy.8883fb6fda36')}
 				image={resolve('/assets/images/home-promos/phone-portrait-generated-v7.webp')}
 			/>
 			<MobileLeadSteps kind="sell" onOpen={() => (infoOpen = true)} />
@@ -244,43 +251,46 @@
 			step={formStep}
 			busy={sellSubmitState === 'submitting'}
 			errorMessage={sellSubmitMessage}
-			submitLabel="Изпрати за оценка"
+			submitLabel={i18n.t('copy.52ebbadc0a49')}
 			onSubmit={handleSubmit}
 			onBack={goBack}
 			onClose={closeForm}
 		>
 			{#if formStep === 1}
-				<section class="lead-fields" aria-label="Данни за автомобила">
+				<section class="lead-fields" aria-label={i18n.t('copy.15f0e23bb56e')}>
 					<div class="lead-field-grid">
 						<label class="lead-field">
-							<span>Марка</span>
+							<span>{i18n.t('copy.b7fccee005ae')}</span>
 							<input
+								{@attach i18n.validation}
 								name="make"
 								aria-invalid={issue?.field === 'make' ? true : undefined}
 								aria-describedby={issue?.field === 'make' ? 'sell-sheet-title-error' : undefined}
 								bind:value={make}
 								type="text"
-								placeholder="BMW"
+								placeholder={i18n.t('copy.c76b5628a9d1')}
 								autocomplete="off"
 							/>
 						</label>
 						<label class="lead-field">
-							<span>Модел</span>
+							<span>{i18n.t('copy.37858c8efede')}</span>
 							<input
+								{@attach i18n.validation}
 								name="model"
 								aria-invalid={issue?.field === 'model' ? true : undefined}
 								aria-describedby={issue?.field === 'model' ? 'sell-sheet-title-error' : undefined}
 								bind:value={model}
 								type="text"
-								placeholder="X5"
+								placeholder={i18n.t('copy.06b4fefb71dd')}
 								autocomplete="off"
 							/>
 						</label>
 					</div>
 					<div class="lead-field-grid">
 						<label class="lead-field">
-							<span>Година</span>
+							<span>{i18n.t('copy.38867d861fa9')}</span>
 							<input
+								{@attach i18n.validation}
 								name="year"
 								aria-invalid={issue?.field === 'year' ? true : undefined}
 								aria-describedby={issue?.field === 'year' ? 'sell-sheet-title-error' : undefined}
@@ -291,8 +301,9 @@
 							/>
 						</label>
 						<label class="lead-field">
-							<span>Километри</span>
+							<span>{i18n.t('copy.02bfe7db4ca8')}</span>
 							<input
+								{@attach i18n.validation}
 								name="mileage"
 								aria-invalid={issue?.field === 'mileage' ? true : undefined}
 								aria-describedby={issue?.field === 'mileage' ? 'sell-sheet-title-error' : undefined}
@@ -304,43 +315,45 @@
 						</label>
 					</div>
 					<label class="lead-field">
-						<span>Регистрационен номер <small>по желание</small></span>
+						<span>{i18n.t('copy.cabeddcf59bc')} <small>{i18n.t('copy.d42086812b73')}</small></span>
 						<input
+							{@attach i18n.validation}
 							name="plate"
 							aria-invalid={issue?.field === 'plate' ? true : undefined}
 							aria-describedby={issue?.field === 'plate' ? 'sell-sheet-title-error' : undefined}
 							bind:value={plate}
 							type="text"
-							placeholder="CB 1234 AB"
+							placeholder={i18n.t('copy.54ea35065bd7')}
 							autocomplete="off"
 						/>
 					</label>
 					<label class="lead-field">
-						<span>VIN <small>по желание</small></span>
+						<span>{i18n.t('copy.5e0211b12d1e')} <small>{i18n.t('copy.d42086812b73')}</small></span>
 						<input
+							{@attach i18n.validation}
 							name="vin"
 							aria-invalid={issue?.field === 'vin' ? true : undefined}
 							aria-describedby={issue?.field === 'vin' ? 'sell-sheet-title-error' : undefined}
 							bind:value={vin}
 							type="text"
-							placeholder="WBA..."
+							placeholder={i18n.t('copy.51b70e01ccc6')}
 							autocomplete="off"
 						/>
 					</label>
 				</section>
 			{:else}
-				<section class="lead-fields" aria-label="Контакт">
+				<section class="lead-fields" aria-label={i18n.t('copy.5bc9a8a2e214')}>
 					<div class="lead-summary">
 						<div>
-							<span>Автомобил</span><strong>{vehicleTitle}</strong>{#if vehicleMeta}<small
-									>{vehicleMeta}</small
-								>{/if}
+							<span>{i18n.t('copy.e549eadf1b38')}</span><strong>{vehicleTitle}</strong
+							>{#if vehicleMeta}<small>{vehicleMeta}</small>{/if}
 						</div>
-						<button type="button" onclick={goBack}>Редактирай</button>
+						<button type="button" onclick={goBack}>{i18n.t('copy.69bd6f7ec2e5')}</button>
 					</div>
 					<label class="lead-field">
-						<span>Телефон</span>
+						<span>{i18n.t('copy.822f9fd9ba2d')}</span>
 						<input
+							{@attach i18n.validation}
 							name="contact"
 							aria-invalid={issue?.field === 'contact' ? true : undefined}
 							aria-describedby={issue?.field === 'contact' ? 'sell-sheet-title-error' : undefined}
@@ -356,7 +369,8 @@
 			{/if}
 
 			<label class="honeypot" aria-hidden="true">
-				<span>Компания</span><input
+				<span>{i18n.t('copy.64d92044a1ff')}</span><input
+					{@attach i18n.validation}
 					bind:value={companyWebsite}
 					type="text"
 					tabindex="-1"

@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import {
 		ArrowRight,
@@ -37,25 +40,23 @@
 	] as const;
 	const support = [
 		{
-			title: 'Избор и оглед',
+			title: i18n.t('copy.d305ebd80044'),
 			icon: CarFront,
-			description:
-				'Разгледай наличните автомобили. Ще уточним оборудването, състоянието и удобен час за оглед.',
+			description: i18n.t('copy.7be7c320b9a6'),
 			href: '/inventory',
 			action: 'Виж автомобилите'
 		},
 		{
-			title: 'Продажба и бартер',
+			title: i18n.t('copy.6fa7eed90f10'),
 			icon: ArrowLeftRight,
-			description: 'Изпрати данни за твоя автомобил, за да обсъдим оценка, продажба или замяна.',
+			description: i18n.t('copy.d3586a08b233'),
 			href: '/sell-your-car',
 			action: 'Продай или замени'
 		},
 		{
-			title: 'Документи и финансиране',
+			title: i18n.t('copy.3a71741a7f89'),
 			icon: FileCheck2,
-			description:
-				'Съдействаме с регистрацията, документите и вариантите за финансиране на избрания автомобил.',
+			description: i18n.t('copy.bc4b92300580'),
 			href: '/services',
 			action: 'Разгледай услугите'
 		}
@@ -72,58 +73,93 @@
 <main id="main-content" tabindex="-1" class="about-page">
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
-		title={`За ${daynightSite.shortName}`}
+		title={i18n.t('pattern.558d5da46c92', { v0: daynightSite.shortName })}
 		panel="light"
 		compact
 	>
 		<div class="about-hero-panel">
 			<div class="about-hero-primary">
-				<strong>Намери следващия си автомобил</strong>
-				<a class="sa-cta sa-cta-primary" href={resolve('/inventory')}>Виж автомобилите</a>
-			</div>
-			<nav class="about-hero-contact" aria-label="Контакти и социални мрежи">
-				<a href={daynightSite.mapUrl} target="_blank" rel="noopener noreferrer"
-					><MapPin size={18} />{daynightSite.locationShort}</a
+				<strong>{i18n.t('copy.3667f9f676c2')}</strong>
+				<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/inventory'))}
+					>{i18n.t('copy.f20a4411e8d6')}</a
 				>
-				<a href={daynightSite.phoneHref}><Phone size={18} />{daynightSite.phoneLabel}</a>
+			</div>
+			<nav class="about-hero-contact" aria-label={i18n.t('copy.3618c24ea260')}>
+				<a href={i18n.href(daynightSite.mapUrl)} target="_blank" rel="noopener noreferrer"
+					><MapPin size={18} />{i18n.dealer('locationShort')}</a
+				>
+				<a href={i18n.href(daynightSite.phoneHref)}><Phone size={18} />{daynightSite.phoneLabel}</a>
 				{#if daynightSite.socialLinks.facebook || daynightSite.socialLinks.instagram || youtubeChannelUrl}
 					<div class="about-hero-socials">
-						{#if daynightSite.socialLinks.facebook}<a href={daynightSite.socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"><SiteChromeIcon name="facebook" /></a>{/if}
-						{#if daynightSite.socialLinks.instagram}<a href={daynightSite.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><SiteChromeIcon name="instagram" /></a>{/if}
-						{#if youtubeChannelUrl}<a href={youtubeChannelUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src={resolve('/assets/icons/youtube-footer.svg')} alt="" width="22" height="22" /></a>{/if}
+						{#if daynightSite.socialLinks.facebook}<a href={daynightSite.socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('copy.d41f5b4977ee')}><SiteChromeIcon name="facebook" /></a>{/if}
+						{#if daynightSite.socialLinks.instagram}<a href={daynightSite.socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('copy.bad57ef7837c')}><SiteChromeIcon name="instagram" /></a>{/if}
+						{#if youtubeChannelUrl}<a href={i18n.href(youtubeChannelUrl)} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('copy.fb7accfff8c6')}><img src={i18n.asset(resolve('/assets/icons/youtube-footer.svg'))} alt="" width="22" height="22" /></a>{/if}
 					</div>
 				{/if}
 			</nav>
 		</div>
 	</DesktopYellowRouteHero>
 
+	<section class="about-section" aria-labelledby="about-story-title">
+		<div class="about-container about-story">
+			<img
+				class="about-story__image"
+				src={i18n.asset(resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp'))}
+				alt={i18n.t('pattern.52479dcffce2', { v0: daynightSite.shortName })}
+				width="1200"
+				height="800"
+				loading="lazy"
+			/>
+			<div>
+				<h2 id="about-story-title">
+					{i18n.t('copy.8e364ad977c2')}<br />{i18n.t('copy.26f103de55d7')}
+				</h2>
+				<p>
+					{daynightSite.shortName}
+					{i18n.t('copy.6e5947b6b2ee')}
+					{i18n.dealer('city')}{i18n.t('copy.c2bf91e6c61c')}
+				</p>
+				<p>
+					{i18n.t('copy.054350d6d3b9')}
+				</p>
+				<DesktopBrowseLink
+					href={i18n.href(resolve('/contact'))}
+					label={i18n.t('copy.0a896165cc28')}
+				/>
+			</div>
+		</div>
+	</section>
+
 	<section class="about-section about-team" aria-labelledby="about-team-title">
 		<div class="about-container">
 			<div class="about-section-heading">
-				<h2 id="about-team-title">Екипът зад твоя избор</h2>
-				<DesktopBrowseLink href={resolve('/team')} label="Виж екипа" />
+				<h2 id="about-team-title">{i18n.t('copy.f92fc966857c')}</h2>
+				<DesktopBrowseLink href={i18n.href(resolve('/team'))} label={i18n.t('copy.4815fed6958b')} />
 			</div>
-			<p class="about-demo-label">{daynightTeamDisclosure}</p>
+			<p class="about-demo-label">{i18n.text(daynightTeamDisclosure)}</p>
 			<div class="about-team-grid">
 				{#each teamMembers as member (member.slug)}
 					<article class="about-team-card">
-						<a class="about-team-card__image" href={resolve(teamHref(member.slug))}
+						<a class="about-team-card__image" href={i18n.href(resolve(teamHref(member.slug)))}
 							><img
-								src={resolve(member.image as AssetHref)}
-								alt={`Демо портрет: ${member.name}`}
+								src={i18n.asset(resolve(member.image as AssetHref))}
+								alt={i18n.t('pattern.141e9e4edaa0', { v0: i18n.text(member.name) })}
 								width="500"
 								height="500"
 								loading="lazy"
 							/></a
 						>
 						<div class="about-team-card__body">
-							<h3><a href={resolve(teamHref(member.slug))}>{member.name}</a></h3>
-							<p class="about-team-card__role">{member.role}</p>
+							<h3>
+								<a href={i18n.href(resolve(teamHref(member.slug)))}>{i18n.text(member.name)}</a>
+							</h3>
+							<p class="about-team-card__role">{i18n.text(member.role)}</p>
 							<div class="about-team-card__contact">
 								<a
 									class="about-seller-contact"
-									href={`tel:${member.phone}`}
-									aria-label={`Свържи се с екипа: ${member.role}`}><Phone size={18} /></a
+									href={i18n.href(`tel:${member.phone}`)}
+									aria-label={i18n.t('pattern.83d5aea4691e', { v0: i18n.text(member.role) })}
+									><Phone size={18} /></a
 								>
 							</div>
 						</div>
@@ -131,35 +167,9 @@
 				{/each}
 			</div>
 			<div class="about-social-row">
-				<a class="about-reviews-link about-text-link" href={resolve('/reviews')}
-					>Отзиви от клиенти <ArrowRight size={18} /></a
+				<a class="about-reviews-link about-text-link" href={i18n.href(resolve('/reviews'))}
+					>{i18n.t('copy.93b3d88de23a')} <ArrowRight size={18} /></a
 				>
-			</div>
-		</div>
-	</section>
-
-	<section class="about-section" aria-labelledby="about-story-title">
-		<div class="about-container about-story">
-			<img
-				class="about-story__image"
-				src={resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp')}
-				alt={`Илюстративна визия на ${daynightSite.shortName}: Mercedes-Benz и Lamborghini с ключове за бартер`}
-				width="1200"
-				height="800"
-				loading="lazy"
-			/>
-			<div>
-				<h2 id="about-story-title">От избора<br />до ключовете.</h2>
-				<p>
-					{daynightSite.shortName} е автокъща в {daynightSite.city}. При нас можеш да разгледаш
-					наличните автомобили, да уговориш оглед и да обсъдиш продажба или бартер на твоя
-					автомобил.
-				</p>
-				<p>
-					Разгледай автомобилите онлайн или ни посети на {daynightSite.locationShort}. Екипът ще уточни
-					наличността, подробностите по автомобила и удобен час за оглед.
-				</p>
-				<DesktopBrowseLink href={resolve('/contact')} label="Свържи се с нас" />
 			</div>
 		</div>
 	</section>
@@ -167,14 +177,17 @@
 	<section class="about-section" aria-labelledby="about-brands-title">
 		<div class="about-container">
 			<div class="about-section-heading">
-				<h2 id="about-brands-title">Разгледай по марка</h2>
-				<DesktopBrowseLink href={resolve('/inventory')} label="Всички автомобили" />
+				<h2 id="about-brands-title">{i18n.t('copy.6381cc76ef70')}</h2>
+				<DesktopBrowseLink
+					href={i18n.href(resolve('/inventory'))}
+					label={i18n.t('copy.8666797b13d9')}
+				/>
 			</div>
 			<div class="about-brands">
 				{#each brands as brand (brand.brand)}
-					<a href={resolve(`/inventory?brand=${encodeURIComponent(brand.brand)}`)}>
+					<a href={i18n.href(resolve(`/inventory?brand=${encodeURIComponent(brand.brand)}`))}>
 						<img
-							src={resolve(`/assets/images/brand/mobile/${brand.image}.svg`)}
+							src={i18n.asset(resolve(`/assets/images/brand/mobile/${brand.image}.svg`))}
 							alt=""
 							width="36"
 							height="28"
@@ -190,16 +203,16 @@
 	<section class="about-section about-support" aria-labelledby="about-support-title">
 		<div class="about-container">
 			<div class="about-section-heading">
-				<h2 id="about-support-title">С какво можем да помогнем</h2>
+				<h2 id="about-support-title">{i18n.t('copy.634ff4b2bcec')}</h2>
 			</div>
 			<div class="about-support-grid">
 				{#each support as item (item.href)}
-					<a class="about-support-card" href={resolve(item.href)}>
+					<a class="about-support-card" href={i18n.href(resolve(item.href))}>
 						<item.icon size={28} strokeWidth={1.8} aria-hidden="true" />
-						<h3>{item.title}</h3>
-						<p>{item.description}</p>
+						<h3>{i18n.text(item.title)}</h3>
+						<p>{i18n.text(item.description)}</p>
 						<span class="about-support-action"
-							>{item.action}<ArrowRight size={18} aria-hidden="true" /></span
+							>{i18n.text(item.action)}<ArrowRight size={18} aria-hidden="true" /></span
 						>
 					</a>
 				{/each}
@@ -210,34 +223,43 @@
 	<section class="about-visit" aria-labelledby="about-visit-title">
 		<div class="about-container about-visit__banner">
 			<div class="about-visit__copy">
-				<h2 id="about-visit-title">Ела да го видиш<br />на живо.</h2>
+				<h2 id="about-visit-title">
+					{i18n.t('copy.6743c626ebbe')}<br />{i18n.t('copy.3a7eae8de6f0')}
+				</h2>
 				<address class="about-visit-address">
-					<MapPin size={20} aria-hidden="true" /><span>{daynightSite.location}</span>
+					<MapPin size={20} aria-hidden="true" /><span>{i18n.dealer('address')}</span>
 				</address>
 				<div class="about-visit-hours">
 					<Clock3 size={20} aria-hidden="true" />
-					<div><strong>{daynightSite.hoursLabel}</strong></div>
+					<div><strong>{i18n.text(daynightSite.hoursLabel)}</strong></div>
 				</div>
-				<a class="sa-cta sa-cta-primary" href={resolve('/contact')}
-					>Уговори оглед <ArrowRight size={18} /></a
+				<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
+					>{i18n.t('copy.d117eaf5db9d')} <ArrowRight size={18} /></a
 				>
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
 					<LazyMapEmbed
-						src={mapEmbedSrc}
-						title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+						src={i18n.asset(mapEmbedSrc)}
+						title={i18n.t('pattern.69c703e84da6', {
+							v0: daynightSite.shortName,
+							v1: i18n.dealer('city')
+						})}
 						height="280"
 					/>
 				{:else}
 					<button class="about-map-preview" onclick={() => (mapVisible = true)}>
 						<MapPin size={36} aria-hidden="true" />
-						<strong>{daynightSite.locationShort}</strong>
-						<span>Покажи картата <ArrowRight size={18} aria-hidden="true" /></span>
+						<strong>{i18n.t('copy.ccfa430a19e9')} {i18n.dealer('city')}</strong>
+						<span>{i18n.t('copy.da1cb832975e')} <ArrowRight size={18} aria-hidden="true" /></span>
 					</button>
 				{/if}
-				<a href={daynightSite.mapUrl} target="_blank" rel="noopener" class="about-map-link"
-					><MapPin size={18} />Отвори маршрута <ArrowRight size={18} /></a
+				<a
+					href={i18n.href(daynightSite.mapUrl)}
+					target="_blank"
+					rel="noopener"
+					class="about-map-link"
+					><MapPin size={18} />{i18n.t('copy.a097cde80791')} <ArrowRight size={18} /></a
 				>
 			</div>
 		</div>
@@ -337,7 +359,7 @@
 		margin-inline: auto;
 	}
 	.about-section {
-		padding: 40px 0;
+		padding: 56px 0;
 	}
 	.about-page h2 {
 		font: var(--sa-weight-strong) var(--sa-text-desktop-section-title)/1.1 var(--sa-font);
@@ -359,9 +381,9 @@
 	}
 	.about-story {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 40px;
-		background: #25292b;
+		grid-template-columns: 1.1fr 1fr;
+		gap: 56px;
+		background: #f5f5f2;
 		border-radius: 16px;
 		overflow: hidden;
 		align-items: center;
@@ -369,7 +391,7 @@
 	.about-story__image {
 		width: 100%;
 		height: 100%;
-		min-height: 380px;
+		min-height: 440px;
 		object-fit: cover;
 		object-position: center bottom;
 		border-radius: 0;
@@ -388,10 +410,11 @@
 		padding: 36px 36px 36px 0;
 	}
 	.about-story h2 {
-		color: #fff;
+		color: var(--sa-ink);
+		font-size: var(--sa-text-desktop-hero-title);
 	}
 	.about-story p {
-		color: #d9dcde;
+		color: #59616a;
 		font-size: var(--sa-type-body);
 		margin-top: 16px;
 	}
@@ -517,8 +540,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 		border-radius: 12px;
-		background: #e9ecee;
-		padding: 28px;
+		background: #fff;
+		border: 1px solid #dfe2e4;
+		padding: 32px;
 	}
 	.about-support-card h3 {
 		font: var(--sa-weight-strong) var(--sa-text-card-title)/1.3 var(--sa-font);

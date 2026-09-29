@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	import type { HomeFiveBrandCard, HomeFiveTypeCard } from '$lib/auxero/home-five';
 	import type { HomePageCopy } from '$lib/i18n/messages';
-	import { ArrowRight } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 
 	// Clean Svelte 5 + Tailwind v4 rebuild of the homepage "Browse" section.
 	// Two sub-blocks, each = a dark-green band header (title + green CTA pill) over a

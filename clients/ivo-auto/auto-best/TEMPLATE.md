@@ -17,7 +17,7 @@
 
 `src/lib/config/brand.ts` contains names, logo, phone, address and social destinations. `src/lib/config/template.ts` contains preview/published mode, canonical origin, identity/inventory verification flags and optional team/partner sections. Design tokens live in `src/lib/styles/tokens.css`.
 
-These are code-level configuration modules. There is no admin panel, universal theme JSON or one-switch localization system. Headlines, service artwork and some campaign copy live with their components or feature data; [Reuse](REUSE_GUIDE.md) and [Components](docs/COMPONENTS.md) identify them.
+These are code-level configuration modules. Native English/Bulgarian localization uses `src/lib/config/locale.ts` and versioned common/template/dealer catalogs; other languages remain disabled. There is no admin panel or universal theme JSON. Headlines, service artwork and some campaign copy live with their components or feature data; [Reuse](REUSE_GUIDE.md) and [Components](docs/COMPONENTS.md) identify them.
 
 ## Defaults that matter when copying
 
@@ -34,3 +34,5 @@ The standalone repository owns future shared improvements. The earlier Cars prev
 [Setup](README.md) · [Product](PRODUCT.md) · [Architecture](ARCHITECTURE.md) · [Styling](docs/STYLING.md) · [Reuse](REUSE_GUIDE.md) · [Source lineage](SOURCE_LICENSE.md)
 
 Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](docs/CARS-INTEGRATION.md).
+
+Native locale routing, catalog ownership and reproducible acceptance: [Localization](docs/localization/README.md).

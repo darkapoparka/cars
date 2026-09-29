@@ -1,0 +1,1090 @@
+[
+  {
+    "key": "m_d028fe65890c",
+    "source": "Какъв автомобил търсиш?",
+    "en": "What car are you looking for?",
+    "bg": "Какъв автомобил търсиш?",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/company/EnquiryEntryField.svelte:22"
+  },
+  {
+    "key": "m_48b06561777d",
+    "source": "Бартер",
+    "en": "Trade-in",
+    "bg": "Бартер",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/company/TradeInEnquiry.svelte:166, src/lib/components/company/VehicleEnquiry.svelte:202, src/lib/data/company.ts:120, src/lib/data/editorial.ts:6, src/lib/data/editorial.ts:141, src/lib/data/editorial.ts:142, src/lib/data/editorial.ts:227, src/routes/blog-detail/[id]/+page.svelte:25"
+  },
+  {
+    "key": "m_f584ec8f827b",
+    "source": "Избери JPG, PNG или WebP снимки.",
+    "en": "Choose JPG, PNG or WebP photos.",
+    "bg": "Избери JPG, PNG или WebP снимки.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/company/TradeInEnquiry.svelte:99"
+  },
+  {
+    "key": "m_a59a2cac14f1",
+    "source": "Можеш да добавиш до 6 снимки.",
+    "en": "You can add up to 6 photos.",
+    "bg": "Можеш да добавиш до 6 снимки.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/company/TradeInEnquiry.svelte:108"
+  },
+  {
+    "key": "m_9b610bbd53bf",
+    "source": "Текстът е копиран. Постави го в избраното приложение или се обади на екипа.",
+    "en": "The text was copied. Paste it into your chosen app or call the team.",
+    "bg": "Текстът е копиран. Постави го в избраното приложение или се обади на екипа.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/company/TradeInEnquiry.svelte:125"
+  },
+  {
+    "key": "m_c1ee33fffd0f",
+    "source": "Този браузър не може да споделя снимките. Копирай текста и добави снимките в приложението, което използваш.",
+    "en": "This browser cannot share the photos. Copy the text and add the photos in your chosen app.",
+    "bg": "Този браузър не може да споделя снимките. Копирай текста и добави снимките в приложението, което използваш.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/company/TradeInEnquiry.svelte:137"
+  },
+  {
+    "key": "m_df14621607d6",
+    "source": "Изберете JPG, PNG или WebP снимки.",
+    "en": "Choose JPG, PNG or WebP photos.",
+    "bg": "Изберете JPG, PNG или WebP снимки.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/company/VehicleEnquiry.svelte:111"
+  },
+  {
+    "key": "m_5701bc5c6a95",
+    "source": "Виж всички",
+    "en": "View all",
+    "bg": "Виж всички",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/BrowseAllCard.svelte:7, src/lib/components/home/BrowseAllCard.svelte:7"
+  },
+  {
+    "key": "m_13ead2358af4",
+    "source": "До 60 000 €",
+    "en": "Up to 60,000 {inventoryCurrency}",
+    "bg": "До 60 000 {inventoryCurrency}",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileBudget.svelte:19"
+  },
+  {
+    "key": "m_48a732b72c1b",
+    "source": "Над 70 000 €",
+    "en": "Over 70,000 {inventoryCurrency}",
+    "bg": "Над 70 000 {inventoryCurrency}",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileBudget.svelte:31"
+  },
+  {
+    "key": "m_05ce16ecbd37",
+    "source": "Разгледай всички",
+    "en": "Browse all",
+    "bg": "Разгледай всички",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:11"
+  },
+  {
+    "key": "m_1fdf9944227c",
+    "source": "Продай / Бартер",
+    "en": "Sell / Trade-in",
+    "bg": "Продай / Бартер",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:20"
+  },
+  {
+    "key": "m_3b06a7795398",
+    "source": "Бърза оценка",
+    "en": "Quick appraisal",
+    "bg": "Бърза оценка",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:21"
+  },
+  {
+    "key": "m_d915896778d0",
+    "source": "Заяви оценка",
+    "en": "Request an appraisal",
+    "bg": "Заяви оценка",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:22, src/lib/components/home/TrustActions.svelte:35"
+  },
+  {
+    "key": "m_fc333acc2c86",
+    "source": "Внос по заявка",
+    "en": "Import to order",
+    "bg": "Внос по заявка",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:30, src/lib/components/home/TrustActions.svelte:43, src/lib/components/home/TrustActions.svelte:46, src/lib/components/layout/Footer.svelte:35, src/lib/data/company.ts:69, src/lib/data/company.ts:108, src/lib/data/navigation.ts:100"
+  },
+  {
+    "key": "m_332de044ceb6",
+    "source": "Европа, САЩ, Канада",
+    "en": "Europe, USA, Canada",
+    "bg": "Европа, САЩ, Канада",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:31"
+  },
+  {
+    "key": "m_ee4d0f651884",
+    "source": "Заяви внос",
+    "en": "Request an import",
+    "bg": "Заяви внос",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:32, src/lib/components/home/TrustActions.svelte:47"
+  },
+  {
+    "key": "m_71ea43c6045a",
+    "source": "На лизинг",
+    "en": "With financing",
+    "bg": "На лизинг",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:40"
+  },
+  {
+    "key": "m_87e315ecc270",
+    "source": "Гъвкави условия",
+    "en": "Flexible terms",
+    "bg": "Гъвкави условия",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/MobileCoreActions.svelte:41"
+  },
+  {
+    "key": "m_e9ae13f96968",
+    "source": "Вижте колекцията",
+    "en": "View the collection",
+    "bg": "Вижте колекцията",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:17"
+  },
+  {
+    "key": "m_086145245c2b",
+    "source": "Изберете автомобил",
+    "en": "Choose a car",
+    "bg": "Изберете автомобил",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:24"
+  },
+  {
+    "key": "m_2ab2e5b85583",
+    "source": "Към автомобилите",
+    "en": "Browse cars",
+    "bg": "Към автомобилите",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:25"
+  },
+  {
+    "key": "m_8724cead6f8c",
+    "source": "Продажба или бартер",
+    "en": "Sell or trade in",
+    "bg": "Продажба или бартер",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:30"
+  },
+  {
+    "key": "m_c1adbacc9ba0",
+    "source": "Продай/Бартер",
+    "en": "Sell/Trade-in",
+    "bg": "Продай/Бартер",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:34"
+  },
+  {
+    "key": "m_f3cf0314008e",
+    "source": "Получете оценка за продажба или бартер.",
+    "en": "Get an appraisal for a sale or trade-in.",
+    "bg": "Получете оценка за продажба или бартер.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:36"
+  },
+  {
+    "key": "m_5e3155fbc011",
+    "source": "Получете оценка",
+    "en": "Get an appraisal",
+    "bg": "Получете оценка",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:37"
+  },
+  {
+    "key": "m_d96d1fbb419f",
+    "source": "за продажба или бартер.",
+    "en": "for a sale or trade-in.",
+    "bg": "за продажба или бартер.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:37"
+  },
+  {
+    "key": "m_0366fa03b10a",
+    "source": "Поискайте оценка",
+    "en": "Request an appraisal",
+    "bg": "Поискайте оценка",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:38, src/lib/data/company.ts:88"
+  },
+  {
+    "key": "m_60227676de1b",
+    "source": "Споделете модел и бюджет за внос по заявка.",
+    "en": "Tell us your preferred model and budget for an import to order.",
+    "bg": "Споделете модел и бюджет за внос по заявка.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:48"
+  },
+  {
+    "key": "m_b9eac7ee5387",
+    "source": "Споделете своя бюджет",
+    "en": "Tell us your budget",
+    "bg": "Споделете своя бюджет",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:49"
+  },
+  {
+    "key": "m_3da18bf69f2f",
+    "source": "и модел за внос.",
+    "en": "and the model to import.",
+    "bg": "и модел за внос.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:49"
+  },
+  {
+    "key": "m_cd68bf0a12a8",
+    "source": "Заявете внос",
+    "en": "Request an import",
+    "bg": "Заявете внос",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:50"
+  },
+  {
+    "key": "m_73322af42813",
+    "source": "Собствен лизинг",
+    "en": "In-house financing",
+    "bg": "Собствен лизинг",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:55, src/lib/components/layout/Footer.svelte:29, src/lib/data/company.ts:77, src/lib/data/company.ts:115, src/lib/data/navigation.ts:101"
+  },
+  {
+    "key": "m_e8b8a518e15b",
+    "source": "Лизинг",
+    "en": "Financing",
+    "bg": "Лизинг",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:58, src/lib/data/company.ts:114, src/lib/data/editorial.ts:6, src/lib/data/editorial.ts:75, src/lib/data/editorial.ts:76, src/lib/data/editorial.ts:227, src/routes/blog-detail/[id]/+page.svelte:25"
+  },
+  {
+    "key": "m_4eda95d8b88e",
+    "source": "Попитайте за първоначална вноска, срок и условия.",
+    "en": "Ask about the deposit, term and conditions.",
+    "bg": "Попитайте за първоначална вноска, срок и условия.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:60"
+  },
+  {
+    "key": "m_35c0520e2467",
+    "source": "Попитайте за вноска,",
+    "en": "Ask about the deposit,",
+    "bg": "Попитайте за вноска,",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:61"
+  },
+  {
+    "key": "m_4b36c1a6b6c5",
+    "source": "срок и условия.",
+    "en": "term and conditions.",
+    "bg": "срок и условия.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:61"
+  },
+  {
+    "key": "m_bfb86c80c190",
+    "source": "Поискайте условия",
+    "en": "Ask about the terms",
+    "bg": "Поискайте условия",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/home/TrustActions.svelte:62"
+  },
+  {
+    "key": "m_dce64d6d5cf9",
+    "source": "Подбрани автомобили",
+    "en": "Selected cars",
+    "bg": "Подбрани автомобили",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/layout/Footer.svelte:17"
+  },
+  {
+    "key": "m_26c39003300b",
+    "source": "Разгледайте актуалната селекция",
+    "en": "Browse the current selection",
+    "bg": "Разгледайте актуалната селекция",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/layout/Footer.svelte:18"
+  },
+  {
+    "key": "m_83f82e8f7941",
+    "source": "Попитайте за актуалните условия",
+    "en": "Ask about current terms",
+    "bg": "Попитайте за актуалните условия",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/layout/Footer.svelte:30"
+  },
+  {
+    "key": "m_505d84ec9e70",
+    "source": "Уточнете критериите с екипа",
+    "en": "Discuss your requirements with the team",
+    "bg": "Уточнете критериите с екипа",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/layout/Footer.svelte:36"
+  },
+  {
+    "key": "m_d8a207965cec",
+    "source": "Търси в налични",
+    "en": "Search inventory",
+    "bg": "Търси в налични",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/listing/ListingFilters.svelte:88"
+  },
+  {
+    "key": "m_8201ef7de128",
+    "source": "Сортиране",
+    "en": "Sort",
+    "bg": "Сортиране",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/listing/ListingFilters.svelte:128"
+  },
+  {
+    "key": "m_4172507e5ff2",
+    "source": "Скорости",
+    "en": "Transmission",
+    "bg": "Скорости",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/listing/ListingFilters.svelte:55, src/lib/components/listing/VehicleSearchDialog.svelte:73"
+  },
+  {
+    "key": "m_9a2b3a9b77ef",
+    "source": "Най-ниска цена",
+    "en": "Lowest price",
+    "bg": "Най-ниска цена",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/listing/ListingResults.svelte:23"
+  },
+  {
+    "key": "m_e24ff727fc11",
+    "source": "Най-висока цена",
+    "en": "Highest price",
+    "bg": "Най-висока цена",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/components/listing/ListingResults.svelte:24"
+  },
+  {
+    "key": "m_adcd1cdf412c",
+    "source": "Подгответе за разговора",
+    "en": "Prepare for the conversation",
+    "bg": "Подгответе за разговора",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:27"
+  },
+  {
+    "key": "m_5601767a86c8",
+    "source": "Марка, модел и година",
+    "en": "Make, model and year",
+    "bg": "Марка, модел и година",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:28"
+  },
+  {
+    "key": "m_a0377d8b71a6",
+    "source": "Пробег и състояние",
+    "en": "Mileage and condition",
+    "bg": "Пробег и състояние",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:28"
+  },
+  {
+    "key": "m_aada183a3fe4",
+    "source": "Снимки или линк към обява",
+    "en": "Photos or a listing link",
+    "bg": "Снимки или линк към обява",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:28"
+  },
+  {
+    "key": "m_bfd9dc91bc3c",
+    "source": "Марка, модел и предпочитания",
+    "en": "Make, model and preferences",
+    "bg": "Марка, модел и предпочитания",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:32"
+  },
+  {
+    "key": "m_1cee63914df2",
+    "source": "Бюджет за покупката и вноса",
+    "en": "Purchase and import budget",
+    "bg": "Бюджет за покупката и вноса",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:32"
+  },
+  {
+    "key": "m_2c3a54c209a1",
+    "source": "Линк към обява, ако вече сте избрали",
+    "en": "A listing link, if you have chosen a car",
+    "bg": "Линк към обява, ако вече сте избрали",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:32"
+  },
+  {
+    "key": "m_6bb146551669",
+    "source": "Обсъдете с екипа",
+    "en": "Discuss with the team",
+    "bg": "Обсъдете с екипа",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:35"
+  },
+  {
+    "key": "m_ca7ee5ab4c85",
+    "source": "Автомобилът, който сте избрали",
+    "en": "The car you have chosen",
+    "bg": "Автомобилът, който сте избрали",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:36"
+  },
+  {
+    "key": "m_ab46fa0e4491",
+    "source": "Първоначална вноска и срок",
+    "en": "Deposit and term",
+    "bg": "Първоначална вноска и срок",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:36"
+  },
+  {
+    "key": "m_711bde30aaa0",
+    "source": "Актуални условия за конкретната сделка",
+    "en": "Current terms for the specific transaction",
+    "bg": "Актуални условия за конкретната сделка",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:36"
+  },
+  {
+    "key": "m_3e6f9e0436cf",
+    "source": "Уговорете посещението",
+    "en": "Arrange your visit",
+    "bg": "Уговорете посещението",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:39"
+  },
+  {
+    "key": "m_af91133cc199",
+    "source": "Автомобилът, който искате да видите",
+    "en": "The car you would like to view",
+    "bg": "Автомобилът, който искате да видите",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:40"
+  },
+  {
+    "key": "m_8bc66fe280de",
+    "source": "Удобен ден и час",
+    "en": "A convenient date and time",
+    "bg": "Удобен ден и час",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:40"
+  },
+  {
+    "key": "m_6734516535e1",
+    "source": "Потвърждение от екипа по телефона",
+    "en": "Confirmation from the team by phone",
+    "bg": "Потвърждение от екипа по телефона",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:40"
+  },
+  {
+    "key": "m_26f81b3e6be0",
+    "source": "Запазете оглед",
+    "en": "Arrange a viewing",
+    "bg": "Запазете оглед",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:64, src/lib/data/navigation.ts:117"
+  },
+  {
+    "key": "m_c1579a24c261",
+    "source": "Обсъдете автомобил, бюджет и внос с екипа.",
+    "en": "Discuss the car, budget and import with the team.",
+    "bg": "Обсъдете автомобил, бюджет и внос с екипа.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:70"
+  },
+  {
+    "key": "m_b543c9c10a34",
+    "source": "Попитайте за внос",
+    "en": "Ask about importing",
+    "bg": "Попитайте за внос",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:72"
+  },
+  {
+    "key": "m_f0d9e2b2e897",
+    "source": "Условия според избрания автомобил.",
+    "en": "Terms depend on the selected car.",
+    "bg": "Условия според избрания автомобил.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:78"
+  },
+  {
+    "key": "m_0ffd05c724b5",
+    "source": "Обсъдете лизинг",
+    "en": "Discuss financing",
+    "bg": "Обсъдете лизинг",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:80"
+  },
+  {
+    "key": "m_49b43af19dcf",
+    "source": "Оценка за бартер",
+    "en": "Trade-in appraisal",
+    "bg": "Оценка за бартер",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:85"
+  },
+  {
+    "key": "m_095e3fc11742",
+    "source": "Предложете своя автомобил за индивидуална оценка.",
+    "en": "Offer your car for an individual appraisal.",
+    "bg": "Предложете своя автомобил за индивидуална оценка.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:86"
+  },
+  {
+    "key": "m_bd96fdeb30eb",
+    "source": "Разговор с екипа",
+    "en": "Talk to the team",
+    "bg": "Разговор с екипа",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:96"
+  },
+  {
+    "key": "m_85b7e52e1fc2",
+    "source": "Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.",
+    "en": "Arrange your visit in advance so we can prepare the specific car and allow enough time.",
+    "bg": "Уговорете посещение предварително, за да подготвим конкретния автомобил и да отделим нужното време.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:103"
+  },
+  {
+    "key": "m_97a38845e84e",
+    "source": "Изпратете обява или задайте марка, модел, година и бюджет. След това уточняваме следващите стъпки с вас.",
+    "en": "Provide a listing or specify a make, model, year and budget. We will then discuss the next steps with you.",
+    "bg": "Изпратете обява или задайте марка, модел, година и бюджет. След това уточняваме следващите стъпки с вас.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:109"
+  },
+  {
+    "key": "m_12d67a47eea6",
+    "source": "Изпратете обява или задайте модел и бюджет.",
+    "en": "Provide a listing or specify a model and budget.",
+    "bg": "Изпратете обява или задайте модел и бюджет.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:110"
+  },
+  {
+    "key": "m_bdcf1a5b90dc",
+    "source": "Получете актуални условия според избрания автомобил и конкретната сделка.",
+    "en": "Ask for current terms for your selected car and the specific transaction.",
+    "bg": "Получете актуални условия според избрания автомобил и конкретната сделка.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:116"
+  },
+  {
+    "key": "m_d7a5831e8826",
+    "source": "Бартер и оценка",
+    "en": "Trade-in and appraisal",
+    "bg": "Бартер и оценка",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:121, src/lib/data/editorial.ts:139"
+  },
+  {
+    "key": "m_111bf297828a",
+    "source": "Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.",
+    "en": "Tell us about the car you would like to offer and request an individual appraisal.",
+    "bg": "Разкажете ни за автомобила, който искате да предложите, и поискайте индивидуална оценка.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:122"
+  },
+  {
+    "key": "m_fad6f6b05163",
+    "source": "Поискайте оценка за продажба или бартер.",
+    "en": "Request an appraisal for a sale or trade-in.",
+    "bg": "Поискайте оценка за продажба или бартер.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/company.ts:123"
+  },
+  {
+    "key": "m_8d319146b510",
+    "source": "Примерни профили за визуален преглед. Имената и снимките ще бъдат заменени с реалния екип.",
+    "en": "Sample profiles for a visual preview. The names and photos will be replaced with the real team.",
+    "bg": "Примерни профили за визуален преглед. Имената и снимките ще бъдат заменени с реалния екип.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/demo-content.ts:30"
+  },
+  {
+    "key": "m_cef356a09f1b",
+    "source": "История, документи и техническо състояние се потвърждават директно с екипа.",
+    "en": "Confirm the history, documents and mechanical condition directly with the team.",
+    "bg": "История, документи и техническо състояние се потвърждават директно с екипа.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:30"
+  },
+  {
+    "key": "m_61d62763706a",
+    "source": "Преди срещата поискайте основните данни за автомобила и наличната сервизна история. Сравнете идентификационните данни в документите с тези върху автомобила и отбележете всичко, което трябва да бъде изяснено на място.",
+    "en": "Before the meeting, ask for the basic vehicle details and available service history. Compare the identifiers in the documents with those on the car and note anything that needs clarification in person.",
+    "bg": "Преди срещата поискайте основните данни за автомобила и наличната сервизна история. Сравнете идентификационните данни в документите с тези върху автомобила и отбележете всичко, което трябва да бъде изяснено на място.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:37"
+  },
+  {
+    "key": "m_f88ad7334276",
+    "source": "Проверете каросерията, гумите, интериора и работата на основните системи, след което направете пробно шофиране. Ако не сте сигурни в техническото състояние, включете независим специалист преди решение за покупка.",
+    "en": "Check the bodywork, tyres, interior and main systems, then take a test drive. Consult an independent specialist before buying if you are unsure of the mechanical condition.",
+    "bg": "Проверете каросерията, гумите, интериора и работата на основните системи, след което направете пробно шофиране. Ако не сте сигурни в техническото състояние, включете независим специалист преди решение за покупка.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:43"
+  },
+  {
+    "key": "m_718682656426",
+    "source": "Обсъдете търсене, транспорт и подготовката за регистрация в България.",
+    "en": "Discuss sourcing, transport and preparation for registration in Bulgaria.",
+    "bg": "Обсъдете търсене, транспорт и подготовката за регистрация в България.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:52"
+  },
+  {
+    "key": "m_c34bbb09db54",
+    "source": "Марка и модел не са достатъчни. Уточнете година, двигател, оборудване, допустим пробег и общ бюджет, включително транспорт и подготовка за регистрация.",
+    "en": "A make and model are not enough. Specify the year, engine, equipment, acceptable mileage and total budget, including transport and preparation for registration.",
+    "bg": "Марка и модел не са достатъчни. Уточнете година, двигател, оборудване, допустим пробег и общ бюджет, включително транспорт и подготовка за регистрация.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:59"
+  },
+  {
+    "key": "m_b00b442cc6fd",
+    "source": "Преди ангажимент потвърдете кой е конкретният автомобил, какво е известно за състоянието му, кои документи го придружават и как ще бъде организиран транспортът. Финалните изисквания за регистрация трябва да се сверят с актуалните официални правила.",
+    "en": "Before committing, confirm the exact vehicle, what is known about its condition, which documents accompany it and how transport will be arranged. Check the final registration requirements against current official rules.",
+    "bg": "Преди ангажимент потвърдете кой е конкретният автомобил, какво е известно за състоянието му, кои документи го придружават и как ще бъде организиран транспортът. Финалните изисквания за регистрация трябва да се сверят с актуалните официални правила.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:65"
+  },
+  {
+    "key": "m_9fef04b1b70e",
+    "source": "Как да сравните лизингови оферти?",
+    "en": "How to compare financing offers?",
+    "bg": "Как да сравните лизингови оферти?",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:73, src/lib/data/navigation.ts:136"
+  },
+  {
+    "key": "m_52776548936d",
+    "source": "Попитайте за актуалните условия според избрания автомобил.",
+    "en": "Ask about current terms for your selected car.",
+    "bg": "Попитайте за актуалните условия според избрания автомобил.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:74"
+  },
+  {
+    "key": "m_8ad37440f756",
+    "source": "Гледайте не само месечната вноска, а срока, първоначалното плащане, общата дължима сума, таксите, застраховките и условията за собственост в края на договора.",
+    "en": "Look beyond the monthly payment: consider the term, initial payment, total amount payable, fees, insurance and ownership terms at the end of the agreement.",
+    "bg": "Гледайте не само месечната вноска, а срока, първоначалното плащане, общата дължима сума, таксите, застраховките и условията за собственост в края на договора.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:81"
+  },
+  {
+    "key": "m_80301859af37",
+    "source": "Оставете място за регистрация, обслужване и текущи разходи. Поискайте писмена индивидуална оферта за конкретния автомобил, преди да сравнявате различни варианти.",
+    "en": "Allow for registration, servicing and running costs. Request an individual written offer for the specific car before comparing options.",
+    "bg": "Оставете място за регистрация, обслужване и текущи разходи. Поискайте писмена индивидуална оферта за конкретния автомобил, преди да сравнявате различни варианти.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:87"
+  },
+  {
+    "key": "m_198a58698cea",
+    "source": "Как да изберете автомобил",
+    "en": "How to choose a car",
+    "bg": "Как да изберете автомобил",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:95"
+  },
+  {
+    "key": "m_2b13bb88ef4e",
+    "source": "Марка, купе и бюджет се уточняват с екипа според вашите критерии.",
+    "en": "Discuss the make, body type and budget with the team based on your requirements.",
+    "bg": "Марка, купе и бюджет се уточняват с екипа според вашите критерии.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:96"
+  },
+  {
+    "key": "m_af278c6d7728",
+    "source": "Избор",
+    "en": "Choosing a car",
+    "bg": "Избор",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:98"
+  },
+  {
+    "key": "m_a1df03960270",
+    "source": "Разходът, обслужването, гумите, застраховката и очакваният пробег влияят върху реалната цена на притежание. Изберете най-добрия баланс за вашия начин на използване, а не просто най-дългия списък с екстри.",
+    "en": "Fuel consumption, servicing, tyres, insurance and expected mileage affect the true cost of ownership. Choose the right balance for your needs, not simply the longest equipment list.",
+    "bg": "Разходът, обслужването, гумите, застраховката и очакваният пробег влияят върху реалната цена на притежание. Изберете най-добрия баланс за вашия начин на използване, а не просто най-дългия списък с екстри.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:109"
+  },
+  {
+    "key": "m_bb6de49273a3",
+    "source": "Посещенията в шоурума са с предварителна уговорка. Посочете кой автомобил искате да видите и кои въпроси са най-важни за вас, за да бъде срещата конкретна и полезна.",
+    "en": "Showroom visits are by appointment. Tell us which car you would like to view and your main questions so the meeting is focused and useful.",
+    "bg": "Посещенията в шоурума са с предварителна уговорка. Посочете кой автомобил искате да видите и кои въпроси са най-важни за вас, за да бъде срещата конкретна и полезна.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:125"
+  },
+  {
+    "key": "m_c73ab32761ef",
+    "source": "Дайте си време за спокоен оглед",
+    "en": "Allow enough time for a thorough viewing",
+    "bg": "Дайте си време за спокоен оглед",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:130"
+  },
+  {
+    "key": "m_19c11dc2b06e",
+    "source": "Прегледайте автомобила на дневна светлина, седнете на всички места, проверете практичните детайли и запишете въпросите си. Не е необходимо да вземате решение преди да сте изяснили състоянието и документите.",
+    "en": "Inspect the car in daylight, try every seat, check the practical details and write down your questions. There is no need to decide before clarifying the condition and documents.",
+    "bg": "Прегледайте автомобила на дневна светлина, седнете на всички места, проверете практичните детайли и запишете въпросите си. Не е необходимо да вземате решение преди да сте изяснили състоянието и документите.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:131"
+  },
+  {
+    "key": "m_d6fccee975d0",
+    "source": "Предложете автомобил за бартер и поискайте индивидуална оценка.",
+    "en": "Offer a car for trade-in and request an individual appraisal.",
+    "bg": "Предложете автомобил за бартер и поискайте индивидуална оценка.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:140"
+  },
+  {
+    "key": "m_6d7353ddea1e",
+    "source": "Модел, година, пробег, оборудване, сервизна история и известни забележки дават добра начална картина. Снимките помагат за предварителен разговор, но не заменят огледа на място.",
+    "en": "The model, year, mileage, equipment, service history and known issues provide a useful starting point. Photos help an initial conversation but do not replace an in-person inspection.",
+    "bg": "Модел, година, пробег, оборудване, сервизна история и известни забележки дават добра начална картина. Снимките помагат за предварителен разговор, но не заменят огледа на място.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:147"
+  },
+  {
+    "key": "m_b1162f9ae5b2",
+    "source": "Крайната стойност зависи от състоянието, документите и текущото пазарно търсене. Сравнете не само оценката на стария автомобил, а и условията по автомобила, който искате да придобиете.",
+    "en": "The final value depends on condition, documents and current market demand. Compare both the appraisal of your current car and the terms for the car you want to acquire.",
+    "bg": "Крайната стойност зависи от състоянието, документите и текущото пазарно търсене. Сравнете не само оценката на стария автомобил, а и условията по автомобила, който искате да придобиете.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:153"
+  },
+  {
+    "key": "m_6dfab762f8d5",
+    "source": "Екипът ориентира за следващите стъпки след пристигане на автомобила.",
+    "en": "The team explains the next steps after the car arrives.",
+    "bg": "Екипът ориентира за следващите стъпки след пристигане на автомобила.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:162"
+  },
+  {
+    "key": "m_8074f997b21c",
+    "source": "Съберете документите за произход и придобиване на автомобила, както и всичко получено при транспорта. Проверете имената, идентификационните данни и датите за разминавания още преди започване на регистрацията.",
+    "en": "Collect the vehicle origin and purchase documents, along with everything received during transport. Check names, identifiers and dates for discrepancies before starting registration.",
+    "bg": "Съберете документите за произход и придобиване на автомобила, както и всичко получено при транспорта. Проверете имената, идентификационните данни и датите за разминавания още преди започване на регистрацията.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:169"
+  },
+  {
+    "key": "m_ee7c4793c0c6",
+    "source": "Изискванията зависят от произхода и конкретния автомобил. Потвърдете текущите стъпки и необходимите оригинали с компетентните институции или избран доставчик, вместо да разчитате на стар списък от интернет.",
+    "en": "Requirements depend on the origin and the specific vehicle. Confirm the current steps and required original documents with the relevant authorities or your chosen provider rather than relying on an old online checklist.",
+    "bg": "Изискванията зависят от произхода и конкретния автомобил. Потвърдете текущите стъпки и необходимите оригинали с компетентните институции или избран доставчик, вместо да разчитате на стар списък от интернет.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:175"
+  },
+  {
+    "key": "m_b1b2f7bff7d1",
+    "source": "Пробег, история, оборудване и наличност се потвърждават на място.",
+    "en": "Confirm mileage, history, equipment and availability in person.",
+    "bg": "Пробег, история, оборудване и наличност се потвърждават на място.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:184"
+  },
+  {
+    "key": "m_c0e3e7e79516",
+    "source": "Уточнете каква сервизна информация е налична, има ли известни ремонти или забележки и кои консумативи са сменяни скоро. Поискайте конкретни отговори за конкретния автомобил.",
+    "en": "Ask what service information is available, whether there are known repairs or issues and which service items were recently replaced. Request specific answers about the specific car.",
+    "bg": "Уточнете каква сервизна информация е налична, има ли известни ремонти или забележки и кои консумативи са сменяни скоро. Поискайте конкретни отговори за конкретния автомобил.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:191"
+  },
+  {
+    "key": "m_f10c1f827576",
+    "source": "Потвърдете важните за вас функции на място и попитайте какво е включено в обявената цена. Добавете към сметката регистрация, първоначално обслужване, гуми и застраховки.",
+    "en": "Check the features that matter to you in person and ask what the advertised price includes. Allow for registration, initial servicing, tyres and insurance.",
+    "bg": "Потвърдете важните за вас функции на място и попитайте какво е включено в обявената цена. Добавете към сметката регистрация, първоначално обслужване, гуми и застраховки.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:197"
+  },
+  {
+    "key": "m_92d77043c14b",
+    "source": "Свържете се за сервиз, документи и следващи стъпки след сделката.",
+    "en": "Get in touch about servicing, documents and the next steps after the transaction.",
+    "bg": "Свържете се за сервиз, документи и следващи стъпки след сделката.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:206"
+  },
+  {
+    "key": "m_d0fc2d0d9cda",
+    "source": "Подредете договора, платежните документи, сервизната информация и всичко предадено с автомобила. Проверете актуалните срокове за регистрация и застраховане по официален източник.",
+    "en": "Organise the agreement, payment documents, service information and everything handed over with the car. Check current registration and insurance deadlines with an official source.",
+    "bg": "Подредете договора, платежните документи, сервизната информация и всичко предадено с автомобила. Проверете актуалните срокове за регистрация и застраховане по официален източник.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:213"
+  },
+  {
+    "key": "m_a11dc1d50728",
+    "source": "Запишете текущия пробег и планирайте първоначален технически преглед според наличната история. Така следващото обслужване се основава на ясна информация, а не на предположения.",
+    "en": "Record the current mileage and plan an initial mechanical inspection based on the available history. This makes the next service depend on clear information rather than assumptions.",
+    "bg": "Запишете текущия пробег и планирайте първоначален технически преглед според наличната история. Така следващото обслужване се основава на ясна информация, а не на предположения.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/editorial.ts:219"
+  },
+  {
+    "key": "m_4758b873ee67",
+    "source": "Спортбек",
+    "en": "Sportback",
+    "bg": "Спортбек",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/home.ts:17, src/lib/data/inventory.ts:45, src/lib/data/listing.ts:25"
+  },
+  {
+    "key": "m_187d6b06014a",
+    "source": "История, документи и техническо състояние.",
+    "en": "History, documents and mechanical condition.",
+    "bg": "История, документи и техническо състояние.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/home.ts:45"
+  },
+  {
+    "key": "m_24b03aeb835a",
+    "source": "Търсене, транспорт и подготовка за регистрация.",
+    "en": "Sourcing, transport and preparation for registration.",
+    "bg": "Търсене, транспорт и подготовка за регистрация.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/home.ts:46"
+  },
+  {
+    "key": "m_4679c63c99a3",
+    "source": "Полезно",
+    "en": "Guides",
+    "bg": "Полезно",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/home.ts:52, src/lib/data/navigation.ts:128"
+  },
+  {
+    "key": "m_ac707141d786",
+    "source": "Автоматик",
+    "en": "Automatic",
+    "bg": "Автоматик",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/inventory.ts:40, src/lib/data/inventory.ts:41, src/lib/data/inventory.ts:42, src/lib/data/inventory.ts:43, src/lib/data/inventory.ts:44, src/lib/data/inventory.ts:45, src/lib/data/inventory.ts:46, src/lib/data/inventory.ts:47"
+  },
+  {
+    "key": "m_6cbd2c24a672",
+    "source": "SUV купе",
+    "en": "SUV coupe",
+    "bg": "SUV купе",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/inventory.ts:41, src/lib/data/inventory.ts:43, src/lib/data/inventory.ts:46"
+  },
+  {
+    "key": "m_c10868e3f4a5",
+    "source": "Цена: ниска към висока",
+    "en": "Price: low to high",
+    "bg": "Цена: ниска към висока",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/listing.ts:65"
+  },
+  {
+    "key": "m_b0d7e30f2fd1",
+    "source": "Цена: висока към ниска",
+    "en": "Price: high to low",
+    "bg": "Цена: висока към ниска",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/listing.ts:66"
+  },
+  {
+    "key": "m_05b8de79a860",
+    "source": "Разгледайте наличностите по състояние, тип купе или марка.",
+    "en": "Browse inventory by condition, body type or make.",
+    "bg": "Разгледайте наличностите по състояние, тип купе или марка.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:62"
+  },
+  {
+    "key": "m_7d6effe4246f",
+    "source": "Най-нови предложения",
+    "en": "Latest arrivals",
+    "bg": "Най-нови предложения",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:74"
+  },
+  {
+    "key": "m_9536d595d99b",
+    "source": "Употребявани",
+    "en": "Used cars",
+    "bg": "Употребявани",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:75"
+  },
+  {
+    "key": "m_d243e62a678e",
+    "source": "По тип купе",
+    "en": "By body type",
+    "bg": "По тип купе",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:80"
+  },
+  {
+    "key": "m_4623a3704858",
+    "source": "Филтрирайте по тип, гориво и състояние.",
+    "en": "Filter by body type, fuel and condition.",
+    "bg": "Филтрирайте по тип, гориво и състояние.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:88"
+  },
+  {
+    "key": "m_860447bfbc8b",
+    "source": "Научете повече за екипа, процеса на работа и начините за покупка.",
+    "en": "Learn about the team, the process and ways to buy.",
+    "bg": "Научете повече за екипа, процеса на работа и начините за покупка.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:97"
+  },
+  {
+    "key": "m_00961bc4ee7b",
+    "source": "Шоурум и подбор",
+    "en": "Showroom and selection",
+    "bg": "Шоурум и подбор",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:99"
+  },
+  {
+    "key": "m_64d92044a1ff",
+    "source": "Компания",
+    "en": "Company",
+    "bg": "Компания",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:106"
+  },
+  {
+    "key": "m_f36755515677",
+    "source": "Свържете се",
+    "en": "Contact us",
+    "bg": "Свържете се",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:115"
+  },
+  {
+    "key": "m_be2d92818f1d",
+    "source": "Адрес и посещение",
+    "en": "Address and visits",
+    "bg": "Адрес и посещение",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:118"
+  },
+  {
+    "key": "m_24a343e09dfd",
+    "source": "Свържете се с екипа",
+    "en": "Contact the team",
+    "bg": "Свържете се с екипа",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:123"
+  },
+  {
+    "key": "m_a996b585026a",
+    "source": "Наличност, оглед, внос и собствен лизинг.",
+    "en": "Inventory, viewings, imports and in-house financing.",
+    "bg": "Наличност, оглед, внос и собствен лизинг.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:123"
+  },
+  {
+    "key": "m_1bd3808f1916",
+    "source": "Практична информация за избора, проверката и финансирането на автомобил.",
+    "en": "Practical information on choosing, inspecting and financing a car.",
+    "bg": "Практична информация за избора, проверката и финансирането на автомобил.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:132"
+  },
+  {
+    "key": "m_c9b2a67acc6e",
+    "source": "Какво да уточните преди финансиране.",
+    "en": "What to clarify before arranging financing.",
+    "bg": "Какво да уточните преди финансиране.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:136"
+  },
+  {
+    "key": "m_fdf2a16d80b8",
+    "source": "Лизинг и условия",
+    "en": "Financing and terms",
+    "bg": "Лизинг и условия",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:145"
+  },
+  {
+    "key": "m_e84078225ca3",
+    "source": "Внос в България",
+    "en": "Importing into Bulgaria",
+    "bg": "Внос в България",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:152"
+  },
+  {
+    "key": "m_b9c61e957b1d",
+    "source": "Вижте всички статии",
+    "en": "View all articles",
+    "bg": "Вижте всички статии",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:158"
+  },
+  {
+    "key": "m_74ca162cf17c",
+    "source": "Насоки за избор, покупка, лизинг и внос.",
+    "en": "Guides to choosing, buying, financing and importing.",
+    "bg": "Насоки за избор, покупка, лизинг и внос.",
+    "disposition": "translate",
+    "notes": "Native template copy translated from retained source; not independent human review. src/lib/data/navigation.ts:158"
+  },
+  {
+    "key": "m_ade1916e99c7",
+    "source": "Viewing in {dealerCity}",
+    "en": "Viewing in {dealerCity}",
+    "bg": "Оглед в {dealerCity}",
+    "disposition": "translate",
+    "notes": "Native source display correction verified against retained dealer fields; source records and external destinations are unchanged."
+  },
+  {
+    "key": "m_9ba9b004823d",
+    "source": "Visits in {dealerCity} by appointment.",
+    "en": "Visits in {dealerCity} by appointment.",
+    "bg": "Посещение в {dealerCity} с предварителна уговорка.",
+    "disposition": "translate",
+    "notes": "Native source display correction verified against retained dealer fields; source records and external destinations are unchanged."
+  },
+  {
+    "key": "m_8b85dedfc4d4",
+    "source": "For availability, next steps or any other question about {dealerName}.",
+    "en": "For availability, next steps or any other question about {dealerName}.",
+    "bg": "За наличност, следващи стъпки или друг въпрос за {dealerName}.",
+    "disposition": "translate",
+    "notes": "Native source display correction verified against retained dealer fields; source records and external destinations are unchanged."
+  }
+]

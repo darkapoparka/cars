@@ -1,4 +1,10 @@
 <script lang="ts">
+  import { specificationLabel, formatMileage } from '$lib/i18n/presentation';
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
@@ -13,14 +19,19 @@
   }
 
   let { vehicle, returnTo, showPrice = false, priority = false, layout = 'default' }: Props = $props();
+
+  // The make has its own label; retain titles that use a different model family.
+  const modelTitle = $derived(vehicle.title.startsWith(`${vehicle.make} `)
+    ? vehicle.title.slice(vehicle.make.length + 1)
+    : vehicle.title);
 </script>
 
 <article id={`vehicle-${vehicle.id}`} data-variant={layout} class:dn-vehicle-card--listing={layout === 'listing'} class:dn-vehicle-card--showcase={layout === 'showcase'} class="dn-vehicle-card">
-  <a class="dn-vehicle-card__link" href={withListReturn(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }), returnTo)} aria-label={`Вижте ${vehicle.title}`}>
+  <a class="dn-vehicle-card__link" href={i18n.href(withListReturn(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }), returnTo))} aria-label={i18n.t("m_7e95f8ea5711", { p0: vehicle.title })}>
     <div class="dn-vehicle-card__visual">
       {#if layout !== 'showcase'}
       <div class="dn-vehicle-card__badges">
-        <span class="dn-vehicle-card__badge dn-vehicle-card__badge--mileage">{vehicle.mileage}</span>
+        <span class="dn-vehicle-card__badge dn-vehicle-card__badge--mileage">{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
         <span class="dn-vehicle-card__badge dn-vehicle-card__badge--year">{vehicle.year}</span>
       </div>
       {/if}
@@ -39,37 +50,39 @@
     </div>
 
     <div class="dn-vehicle-card__content">
-      {#if layout !== 'showcase'}<div class="dn-vehicle-card__category"><p>{vehicle.category}</p></div>{/if}
-      {#if layout === 'listing'}
-        <h2 class="dn-vehicle-card__name" title={vehicle.title}>{vehicle.title}</h2>
-      {:else}
-        <h3 class="dn-vehicle-card__name" title={vehicle.title}>{vehicle.title}</h3>
-      {/if}
+      <div class="dn-vehicle-card__identity">
+        <p class="dn-vehicle-card__make">{vehicle.make}</p>
+        {#if layout === 'listing'}
+          <h2 class="dn-vehicle-card__name" title={vehicle.title}>{modelTitle}</h2>
+        {:else}
+          <h3 class="dn-vehicle-card__name" title={vehicle.title}>{modelTitle}</h3>
+        {/if}
+      </div>
       {#if layout === 'showcase'}
-        <p class="dn-vehicle-card__summary">{vehicle.year} · {vehicle.fuel}</p>
+        <p class="dn-vehicle-card__summary">{vehicle.year} · {specificationLabel(vehicle.fuel, i18n.locale)}</p>
       {/if}
       {#if layout === 'listing'}
-        <div class="dn-vehicle-card__mobile-meta" aria-label="Година и пробег">
+        <div class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_fe73f0109419")}>
           <span>{vehicle.year}</span>
-          <span>{vehicle.mileage}</span>
+          <span>{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
         </div>
       {/if}
 
       {#if layout !== 'showcase'}
-      <div class="dn-vehicle-card__specs" aria-label="Основни характеристики">
+      <div class="dn-vehicle-card__specs" aria-label={i18n.t("m_148a9be6e575")}>
         <span class="dn-vehicle-card__spec">
           <Icon name="fuel" size={15} strokeWidth={1.7} />
-          {vehicle.fuel}
+          {specificationLabel(vehicle.fuel, i18n.locale)}
         </span>
         <span class="dn-vehicle-card__spec">
           <Icon name="transmission" size={15} strokeWidth={1.7} />
-          {vehicle.transmission}
+          {specificationLabel(vehicle.transmission, i18n.locale)}
         </span>
       </div>
       {/if}
 
       {#if showPrice}
-        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur)}</div>
+        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur, i18n.locale)}</div>
       {/if}
     </div>
   </a>
@@ -104,7 +117,7 @@
     border-radius: 16px;
     background: #fff;
     box-shadow: var(--dn-vehicle-card-shadow, none);
-    transition: background-color 160ms ease-out, box-shadow 180ms ease-out;
+    transition: background-color 160ms ease-out, box-shadow 180ms ease-out, transform 180ms ease-out;
   }
 
   .dn-vehicle-card__link {
@@ -186,6 +199,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 220ms ease-out;
   }
 
   .dn-vehicle-card__content {
@@ -196,17 +210,15 @@
     background: transparent;
   }
 
-  .dn-vehicle-card__category {
-    margin: 0 0 6px;
-  }
+  .dn-vehicle-card__identity { min-width: 0; }
 
-  .dn-vehicle-card__category p {
-    margin: 0;
-    color: #6b7280;
-    font-size: var(--dn-text-body);
+  .dn-vehicle-card__make {
+    margin: 0 0 var(--dn-space-half);
+    color: var(--dn-ink-hover);
+    font-size: var(--dn-text-meta);
     font-weight: var(--dn-weight-regular);
-    line-height: var(--dn-leading-heading);
-    letter-spacing: var(--dn-tracking-label);
+    line-height: var(--dn-leading-meta);
+    letter-spacing: var(--dn-tracking-normal);
   }
 
   .dn-vehicle-card__name {
@@ -263,10 +275,9 @@
     font-size: var(--dn-text-meta);
     font-weight: var(--dn-weight-medium);
     line-height: var(--dn-leading-heading);
+    font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
-
-  .dn-vehicle-card__spec { font-variant-numeric: tabular-nums; }
 
   .dn-vehicle-card__amount {
     margin-top: auto;
@@ -277,6 +288,32 @@
     line-height: var(--dn-leading-heading);
     letter-spacing: var(--dn-tracking-heading);
     font-variant-numeric: tabular-nums;
+  }
+
+  @media (min-width: 992px) {
+    .dn-vehicle-card {
+      box-shadow: var(--dn-card-shadow);
+      transition: box-shadow 120ms ease-out, transform 180ms ease-out;
+    }
+
+    .dn-vehicle-card--listing { border-radius: var(--dn-radius-lg); }
+
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      .dn-vehicle-card--listing:hover { transform: translateY(-2px); }
+      .dn-vehicle-card--listing:hover .dn-vehicle-card__image img { transform: scale(1.025); }
+    }
+
+    .dn-vehicle-card__content { padding: var(--dn-space-5); }
+    .dn-vehicle-card--showcase .dn-vehicle-card__content { padding: var(--dn-space-3) var(--dn-space-4); }
+    .dn-vehicle-card__name { line-height: var(--dn-leading-card); }
+    .dn-vehicle-card__badges { inset: 12px 12px auto; }
+    .dn-vehicle-card__badge { padding: 5px 10px; font-size: var(--dn-text-meta); font-variant-numeric: tabular-nums; }
+    .dn-vehicle-card__specs { margin-top: auto; padding-top: var(--dn-space-3); }
+    .dn-vehicle-card__amount { margin-top: 0; }
+
+    @media (hover: hover) and (pointer: fine) {
+      .dn-vehicle-card:hover { box-shadow: var(--dn-card-hover-shadow); }
+    }
   }
 
   @media (max-width: 767px) {
@@ -296,20 +333,25 @@
     }
 
     .dn-vehicle-card--listing {
-      min-height: 132px;
+      min-height: 0;
       border-radius: 16px;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__link {
       display: grid;
-      min-height: 132px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      min-height: 0;
+      grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__visual {
-      height: 132px;
-      min-height: 132px;
+      height: 100%;
+      min-height: 0;
       aspect-ratio: auto;
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__image {
+      position: absolute;
+      inset: 0;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__image img {
@@ -327,14 +369,10 @@
     .dn-vehicle-card--listing .dn-vehicle-card__content {
       display: grid;
       min-width: 0;
-      grid-template-rows: 24px 20px 20px 22px;
+      grid-template-rows: repeat(4, auto);
       align-content: start;
-      gap: 6px;
-      padding: 14px 12px;
-    }
-
-    .dn-vehicle-card--listing .dn-vehicle-card__category {
-      display: none;
+      gap: var(--dn-space-2);
+      padding: var(--dn-space-3);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
@@ -351,10 +389,7 @@
       display: inline-flex;
       min-height: 20px;
       align-items: center;
-      padding: 0 4px;
-      border: 1px solid #e7e8eb;
-      border-radius: 6px;
-      background: #f5f6f7;
+      gap: var(--dn-space-1);
       color: #626873;
       font-size: var(--dn-text-meta);
       font-weight: var(--dn-weight-regular);
@@ -362,20 +397,19 @@
       white-space: nowrap;
     }
 
-    .dn-vehicle-card--listing .dn-vehicle-card__category p {
-      font-size: var(--dn-text-body);
-      line-height: var(--dn-leading-heading);
-    }
+    .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta > span + span::before { content: '·'; }
 
     .dn-vehicle-card--listing .dn-vehicle-card__name {
-      display: block;
+      display: -webkit-box;
+      min-width: 0;
       font-size: var(--dn-text-lead);
       font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
-      white-space: nowrap;
+      white-space: normal;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
       text-overflow: ellipsis;
-      -webkit-line-clamp: 1;
-      line-clamp: 1;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__specs {

@@ -1,4 +1,10 @@
 <script lang="ts">
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
+  import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
   import { resolve } from '$app/paths';
   import type { Attachment } from 'svelte/attachments';
   import { trapDialogTab } from '$lib/ui/overlay';
@@ -25,35 +31,36 @@
         oncancel={(event) => { event.preventDefault(); void closeMobile(); }}
         onclick={(event) => { if (event.target === event.currentTarget) void closeMobile(); }}
       >
-        <h2 class="dn-sr-only" id="dn-mobile-menu-title">Основна навигация</h2>
+        <h2 class="dn-sr-only" id="dn-mobile-menu-title">{i18n.t("m_123e2803c10b")}</h2>
         <div class="dn-mobile-menu__header">
-          <a class="dn-mobile-menu__brand" href={resolve('/')} aria-label={`${brand.name} — начало`} onclick={() => void closeMobile(false)}>
+          <a class="dn-mobile-menu__brand" href={i18n.href(resolve('/'))} aria-label={i18n.t("m_d007ba60d7c9", { p0: brand.name })} onclick={() => void closeMobile(false)}>
             <img src={brand.logo} alt={brand.name} width="160" height="44" />
           </a>
         <button
-          class="dn-mobile-menu__close"
+          class="dn-mobile-menu__close dn-icon-button"
           type="button"
           {@attach attachMobileCloseButton}
-          aria-label="Затворете менюто"
+          aria-label={i18n.t("m_434b5049f81b")}
           onclick={() => closeMobile()}
-        ><MobileNavIcon name="close" size={20} /></button>
+        ><MobileNavIcon name="close" size={18} /></button>
         </div>
         <div class="dn-mobile-menu__contact">
-          <a class="dn-mobile-menu__call" {...phoneLinkAttributes} aria-label={`Обади се на ${brand.phone}`} title={brand.phone}><MobileNavIcon name="phone" size={20} /><span>Обади се</span></a>
-          <a href={resolve('/contact#contact-location-title')} onclick={() => void closeMobile(false)} aria-label={`Локация: ${brand.address}`}><MobileNavIcon name="location" size={20} /><span>Локация</span></a>
+          <a class="dn-mobile-menu__call" {...phoneLinkAttributes} aria-label={`${i18n.t("action.callShort")} — ${brand.phone}`} title={brand.phone}><MobileNavIcon name="phone" size={20} /><span>{i18n.t("action.callShort")}</span></a>
+          <a href={i18n.href(resolve('/contact#contact-location-title'))} onclick={() => void closeMobile(false)} aria-label={`${i18n.t("action.locationShort")} — ${i18n.dealer('address')}`}><MobileNavIcon name="location" size={20} /><span>{i18n.t("action.locationShort")}</span></a>
         </div>
-        <nav aria-label="Мобилна навигация">
-          <a href={resolve('/listing-grid')} aria-current={active.listing ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>Всички автомобили</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/blog')} aria-current={active.blog ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>Съвети за покупка</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/about-us')} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>За нас</span><Icon name="arrow-right" size={16} /></a>
-          <a href={resolve('/contact')} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>Контакти и посещение</span><Icon name="arrow-right" size={16} /></a>
+        <LocaleTrigger fullLabel beforeOpen={() => closeMobile(false)} />
+        <nav aria-label={i18n.t("m_7b624fe4f7ac")}>
+          <a href={i18n.href(resolve('/listing-grid'))} aria-current={active.listing ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>{i18n.t("m_13b5d43d1176")}</span><Icon name="arrow-right" size={16} /></a>
+          <a href={i18n.href(resolve('/blog'))} aria-current={active.blog ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>{i18n.t("m_5b0e082dcfae")}</span><Icon name="arrow-right" size={16} /></a>
+          <a href={i18n.href(resolve('/about-us'))} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>{i18n.t("m_b4b580a9ad8c")}</span><Icon name="arrow-right" size={16} /></a>
+          <a href={i18n.href(resolve('/contact'))} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>{i18n.t("m_d58d4100d4e6")}</span><Icon name="arrow-right" size={16} /></a>
         </nav>
-        <div class="dn-mobile-menu__social" aria-label="Социални мрежи">
-          <a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>Instagram</span></a>
-          <a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>YouTube</span></a>
-          <a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>Facebook</span></a>
+        <div class="dn-mobile-menu__social" aria-label={i18n.t("m_b16446d4331a")}>
+          {#if brand.instagramUrl}<a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>{i18n.t("m_bad57ef7837c")}</span></a>{/if}
+          {#if brand.youtubeUrl}<a {...{ href: brand.youtubeUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="youtube" /><span>{i18n.t("m_fb7accfff8c6")}</span></a>{/if}
+          {#if brand.facebookUrl}<a {...{ href: brand.facebookUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="facebook" /><span>{i18n.t("m_d41f5b4977ee")}</span></a>{/if}
         </div>
-        <p class="dn-mobile-menu__address">{brand.addressLine}</p>
+        <p class="dn-mobile-menu__address">{i18n.dealer('addressLine')}</p>
       </dialog>
 <style>
   .dn-mobile-menu { position: fixed; inset: auto 0 0; width: 100%; max-width: none; max-height: calc(100dvh - 68px); margin: 0; padding: var(--dn-space-4) var(--dn-space-5) calc(var(--dn-space-5) + env(safe-area-inset-bottom)); overflow-y: auto; border: 0; border-radius: var(--dn-radius-lg) var(--dn-radius-lg) 0 0; background: var(--dn-white); color: var(--dn-ink); }
@@ -63,9 +70,12 @@
   .dn-mobile-menu__header { position: relative; display: flex; flex-shrink: 0; align-items: center; justify-content: center; min-height: var(--dn-control-hit-height); }
   .dn-mobile-menu__brand { display: inline-flex; align-items: center; min-height: var(--dn-control-hit-height); }
   .dn-mobile-menu__brand img { display: block; width: 160px; height: 44px; object-fit: contain; }
-  .dn-mobile-menu__close { position: absolute; right: 0; display: grid; width: var(--dn-control-hit-height); height: var(--dn-control-hit-height); place-items: center; border: 0; border-radius: var(--dn-pill); background: var(--dn-home-panel); color: var(--dn-ink); cursor: pointer; }
+  .dn-mobile-menu__close { position: absolute; right: 0; border: 0; border-radius: var(--dn-pill); background: var(--dn-home-panel); color: var(--dn-ink); }
   .dn-mobile-menu__contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-3); margin-top: var(--dn-space-5); }
   .dn-mobile-menu__contact a { display: flex; align-items: center; justify-content: center; gap: var(--dn-space-2); min-height: var(--dn-entry-action-height); padding: var(--dn-space-2); border: 1px solid transparent; border-radius: var(--dn-pill); background: var(--dn-red); color: var(--dn-white); font: var(--dn-control-font); }
+  .dn-mobile-menu__contact a { min-width: 0; text-align: center; }
+  .dn-mobile-menu__contact a span { min-width: 0; overflow-wrap: anywhere; }
+  .dn-mobile-menu__contact :global(svg) { flex-shrink: 0; }
   .dn-mobile-menu__contact a:hover { background: var(--dn-red-hover); }
   .dn-mobile-menu__contact .dn-mobile-menu__call { background: var(--dn-ink); }
   .dn-mobile-menu__contact .dn-mobile-menu__call:hover { background: var(--dn-ink-hover); }

@@ -8,6 +8,7 @@ import {
   type MarketplaceSearchParams,
   type VehicleListing,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { useEffect } from "react";
 import { getAccountListingSaveFlowHref } from "../lib/account-save-flow";
 import { readInventoryReturn } from "../lib/inventory-return";
@@ -17,6 +18,8 @@ import {
   shouldHideDesktopResultSummary,
 } from "../lib/marketplace-results-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import dealerStyles from "./dealer-inventory.module.css";
+import { DealerInventorySummary } from "./dealer-inventory-summary";
 import { ResultToolbar } from "./desktop-marketplace-controls";
 import { MarketplacePagination } from "./marketplace-pagination";
 import { MarketplaceResultsEmptyState } from "./marketplace-results-empty-state";
@@ -28,10 +31,12 @@ export const MarketplaceResults = ({
   currentPath,
   desktopSearchVariant,
   filters,
+  hideDesktop = false,
   isBg,
   listings,
   locale,
   onChooseCategory,
+  onApply,
   onOpenFilters,
   onViewModeChange,
   totalListings,
@@ -42,10 +47,12 @@ export const MarketplaceResults = ({
   currentPath: string;
   desktopSearchVariant: "discovery" | "results";
   filters: MarketplaceSearchParams;
+  hideDesktop?: boolean;
   isBg: boolean;
   listings: VehicleListing[];
   locale?: string;
   onChooseCategory: () => void;
+  onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onOpenFilters: () => void;
   onViewModeChange: (viewMode: ListingViewMode) => void;
   totalListings: number;
@@ -66,12 +73,20 @@ export const MarketplaceResults = ({
   }, []);
   const useDiscoveryInventoryGrid =
     desktopSearchVariant === "discovery" && viewMode === "grid";
+  const regularPresentation = useDiscoveryInventoryGrid
+    ? "discovery"
+    : "default";
   const priorityListingCount =
     useDiscoveryInventoryGrid || useWideInventoryGrid ? 4 : 3;
 
   return (
     <section
-      className={getMarketplaceResultsSectionClassName(desktopSearchVariant)}
+      className={cn(
+        getMarketplaceResultsSectionClassName(desktopSearchVariant),
+        isDealershipSite && dealerStyles.results,
+        hideDesktop && "lg:hidden"
+      )}
+      data-desktop-hidden={hideDesktop}
     >
       <div className="min-w-0">
         <p
@@ -83,23 +98,36 @@ export const MarketplaceResults = ({
         >
           {totalListings} {totalListings === 1 ? singularLabel : pluralLabel}
         </p>
-        <ResultToolbar
-          filters={filters}
-          hideDesktopSummary={shouldHideDesktopResultSummary(
-            desktopSearchVariant
-          )}
-          locale={locale}
-          onOpenFilters={onOpenFilters}
-          onViewModeChange={onViewModeChange}
-          totalListings={totalListings}
-          viewMode={viewMode}
-        />
-
+        {isDealershipSite && (
+          <DealerInventorySummary
+            filters={filters}
+            locale={locale}
+            onApply={onApply}
+            onOpenFilters={onOpenFilters}
+            onViewModeChange={onViewModeChange}
+            totalListings={totalListings}
+            viewMode={viewMode}
+          />
+        )}
+        <div className={isDealershipSite ? "lg:hidden" : undefined}>
+          <ResultToolbar
+            filters={filters}
+            hideDesktopSummary={shouldHideDesktopResultSummary(
+              desktopSearchVariant
+            )}
+            locale={locale}
+            onOpenFilters={onOpenFilters}
+            onViewModeChange={onViewModeChange}
+            totalListings={totalListings}
+            viewMode={viewMode}
+          />
+        </div>
         {listings.length > 0 ? (
           <>
             <div
               className={cn(
                 "grid items-start gap-2 lg:gap-4",
+                isDealershipSite && dealerStyles.grid,
                 getMarketplaceListingGridClassName({
                   listingCount: listings.length,
                   useDiscoveryInventoryGrid,
@@ -108,6 +136,7 @@ export const MarketplaceResults = ({
                 })
               )}
               data-slot="marketplace-listing-grid"
+              data-view={viewMode}
             >
               {listings.map((listing, index) => (
                 <VehicleCard
@@ -121,7 +150,7 @@ export const MarketplaceResults = ({
                   listing={listing}
                   locale={locale}
                   presentation={
-                    useDiscoveryInventoryGrid ? "discovery" : "default"
+                    isDealershipSite ? "discovery" : regularPresentation
                   }
                   priority={index < priorityListingCount}
                   saveHref={getAccountListingSaveFlowHref(appBaseUrl, listing)}

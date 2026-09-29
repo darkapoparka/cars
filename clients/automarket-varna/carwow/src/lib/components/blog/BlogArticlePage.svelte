@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	// Native self-contained rebuild of the /blog/[slug] (blog-details-2.html) desktop
 	// article: breadcrumb + centered title/meta + hero image + body (lead, pull-quote,
 	// paired images, sections, tags + share, author card, prev/next) + the "Още по
@@ -35,7 +38,7 @@
 	});
 	const shareUrl = $derived(`${page.url.origin}${resolve('/blog/[slug]', { slug: article.slug })}`);
 	const encodedShareUrl = $derived(encodeURIComponent(shareUrl));
-	const encodedShareTitle = $derived(encodeURIComponent(article.title));
+	const encodedShareTitle = $derived(encodeURIComponent(i18n.text(article.title)));
 	const facebookShareLinkProps = $derived({
 		href: `https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`,
 		target: '_blank',
@@ -45,7 +48,7 @@
 		href: `mailto:?subject=${encodedShareTitle}&body=${encodedShareUrl}`
 	});
 	function formatArticleDate(value: string) {
-		return new Intl.DateTimeFormat('bg-BG', {
+		return new Intl.DateTimeFormat(i18n.locale === 'bg' ? 'bg-BG' : 'en-GB', {
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric'
@@ -61,23 +64,25 @@
 {#snippet articleMeta()}
 	<ul class="bloc-details-tag-style-2 mb-40">
 		{#if article.author}<li><span class="h7">{article.author}</span></li>{/if}
-		<li><a class="h7" href={resolve('/blog')}>{formatArticleDate(article.date)}</a></li>
+		<li><a class="h7" href={i18n.href(resolve('/blog'))}>{formatArticleDate(article.date)}</a></li>
 		<li>
-			<a class="h7" href={resolve(filterHref('category', article.category))}>{article.category}</a>
+			<a class="h7" href={i18n.href(resolve(filterHref('category', article.category)))}
+				>{i18n.text(article.category)}</a
+			>
 		</li>
 	</ul>
 {/snippet}
 
 {#snippet socialLinks()}
 	<ul class="blog-detail-social flex gap-12">
-		<li><p>Сподели:</p></li>
+		<li><p>{i18n.t('copy.a23803489c5a')}</p></li>
 		<li>
-			<a {...facebookShareLinkProps} aria-label="Сподели публикацията">
+			<a {...facebookShareLinkProps} aria-label={i18n.t('copy.8bfad9fd5193')}>
 				<Share2 size={18} />
 			</a>
 		</li>
 		<li>
-			<a {...mailShareLinkProps} aria-label="Изпрати публикацията по имейл">
+			<a {...mailShareLinkProps} aria-label={i18n.t('copy.37369974e59a')}>
 				<Mail size={18} />
 			</a>
 		</li>
@@ -85,20 +90,27 @@
 {/snippet}
 
 {#snippet relatedCard(related: DayNightArticle)}
-	<a href={resolve('/blog/[slug]', { slug: related.slug })} class="post-style-2 overflow-hidden">
+	<a
+		href={i18n.href(resolve('/blog/[slug]', { slug: related.slug }))}
+		class="post-style-2 overflow-hidden"
+	>
 		<img
 			class="post--img flex"
-			src={related.image}
-			alt={related.title}
+			src={i18n.asset(related.image)}
+			alt={i18n.text(related.title)}
 			loading="lazy"
 			decoding="async"
 		/>
 		<div class="content">
-			<p class="h5 title mb-8 text-white">{related.title}</p>
+			<p class="h5 title mb-8 text-white">{i18n.text(related.title)}</p>
 			<div class="blog-related-meta flex justify-start gap-8">
-				{#if related.author}<span class="text-xs text-white">от {related.author}</span>{/if}
+				{#if related.author}<span class="text-xs text-white"
+						>{i18n.t('copy.5f201355756a')} {related.author}</span
+					>{/if}
 				<span class="text-xs text-white">{formatArticleDate(related.date)}</span>
-				<span class="text-highlight text-underline text-xs uppercase">{related.category}</span>
+				<span class="text-highlight text-underline text-xs uppercase"
+					>{i18n.text(related.category)}</span
+				>
 			</div>
 		</div>
 	</a>
@@ -107,51 +119,51 @@
 <div class="blog-article-page">
 	<DesktopYellowRouteHero
 		headingId="blog-article-route-title"
-		title={article.title}
-		copy={`${article.category} · ${formatArticleDate(article.date)}`}
-		primaryLabel="Всички публикации"
+		title={i18n.text(article.title)}
+		copy={`${i18n.text(article.category)} · ${formatArticleDate(article.date)}`}
+		primaryLabel={i18n.t('copy.8e3c1ad5a405')}
 		primaryHref="/blog"
-		secondaryLabel="Свържете се"
+		secondaryLabel={i18n.t('copy.f36755515677')}
 		secondaryHref="/contact"
 		compact
 	/>
 	<section class="background-light mb-32">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href={resolve('/')}>Начало</a></li>
+				<li><a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><a href={resolve('/blog')}>Блог</a></li>
+				<li><a href={i18n.href(resolve('/blog'))}>{i18n.t('copy.c31cdbd07e6c')}</a></li>
 				<li class="breadcrumb__icon" aria-hidden="true"><ChevronRight size={14} /></li>
-				<li><span>{article.category}</span></li>
+				<li><span>{i18n.text(article.category)}</span></li>
 			</ul>
 		</div>
 	</section>
 
 	<section class="blog-article-main">
 		<div class="bloc-details-container">
-			<h1 class="title-2 mb-16 text-center">{article.title}</h1>
+			<h1 class="title-2 mb-16 text-center">{i18n.text(article.title)}</h1>
 			{@render articleMeta()}
 			<img
 				class="post--img radius-20 mb-40 flex"
-				src={article.image}
-				alt={article.title}
+				src={i18n.asset(article.image)}
+				alt={i18n.text(article.title)}
 				loading="eager"
 				decoding="async"
 			/>
-			<p class="h7 text-secondary line-height-28 mb-28">{article.description}</p>
+			<p class="h7 text-secondary line-height-28 mb-28">{i18n.text(article.description)}</p>
 
 			{#each article.sections as section (section.heading)}
-				<h2 class="h4 mb-12">{section.heading}</h2>
+				<h2 class="h4 mb-12">{i18n.text(section.heading)}</h2>
 				{#each section.paragraphs as paragraph (paragraph)}
-					<p class="text-secondary h7 line-height-28 mb-28">{paragraph}</p>
+					<p class="text-secondary h7 line-height-28 mb-28">{i18n.text(paragraph)}</p>
 				{/each}
 			{/each}
 
 			<div class="md-flex-col mb-40 flex justify-between gap-16">
 				<ul class="blog-detail-tags flex gap-12">
-					<li><p>Тема:</p></li>
+					<li><p>{i18n.t('copy.4be6b7b408be')}</p></li>
 					{#each article.tags.slice(0, 3) as tag (tag)}
-						<li><a href={resolve(filterHref('tag', tag))}>{tag}</a></li>
+						<li><a href={i18n.href(resolve(filterHref('tag', tag)))}>{i18n.text(tag)}</a></li>
 					{/each}
 				</ul>
 				{@render socialLinks()}
@@ -160,43 +172,49 @@
 			<div class="divider mb-40"></div>
 			<div class="mb-40">
 				<div class="listing-details--contact-dealer mb-20">
-					<img src={daynightSite.logoDark} alt={daynightSite.shortName} />
+					<img src={i18n.asset(daynightSite.logoDark)} alt={daynightSite.shortName} />
 					<div class="content">
-						<a href={resolve('/about/daynight-auto-plovdiv')} class="h4 font-weight-600 mb-4">
+						<a
+							href={i18n.href(resolve('/about/daynight-auto-plovdiv'))}
+							class="h4 font-weight-600 mb-4"
+						>
 							{daynightSite.shortName}
 						</a>
-						<p class="text-secondary mb-18">Автокъща в {daynightSite.city}</p>
+						<p class="text-secondary mb-18">{i18n.t('copy.cd74eef92cad')} {i18n.dealer('city')}</p>
 						{#if daynightSite.email}
-							<a href={`mailto:${daynightSite.email}`} class="text-highlight text-sm">
+							<a href={i18n.href(`mailto:${daynightSite.email}`)} class="text-highlight text-sm">
 								{daynightSite.email}
 							</a>
 						{/if}
 					</div>
 				</div>
 				<p class="h7 line-height-28">
-					Имате въпрос за конкретен автомобил? <a href={resolve('/contact')}>Свържете се с екипа</a> и
-					посочете обявата, която ви интересува.
+					{i18n.t('copy.24cac3e98719')}
+					<a href={i18n.href(resolve('/contact'))}>{i18n.t('copy.24a343e09dfd')}</a>
+					{i18n.t('copy.4f28122ad536')}
 				</p>
 			</div>
 
 			<div class="divider mb-26"></div>
 			<div class="blog-detail-recentpost mb-24 flex justify-between">
 				<div class="previous">
-					<p class="font-weight-600 text-highlight mb-4 uppercase">ПРЕДИШНА</p>
+					<p class="font-weight-600 text-highlight mb-4 uppercase">{i18n.t('copy.5387e75e95fd')}</p>
 					<a
-						href={resolve('/blog/[slug]', { slug: adjacentArticles.previous.slug })}
+						href={i18n.href(resolve('/blog/[slug]', { slug: adjacentArticles.previous.slug }))}
 						class="h5 font-weight-500 capitalize"
 					>
-						{adjacentArticles.previous.title}
+						{i18n.text(adjacentArticles.previous.title)}
 					</a>
 				</div>
 				<div class="next">
-					<p class="font-weight-600 text-highlight mb-4 text-right uppercase">СЛЕДВАЩА</p>
+					<p class="font-weight-600 text-highlight mb-4 text-right uppercase">
+						{i18n.t('copy.93388d6647b9')}
+					</p>
 					<a
-						href={resolve('/blog/[slug]', { slug: adjacentArticles.next.slug })}
+						href={i18n.href(resolve('/blog/[slug]', { slug: adjacentArticles.next.slug }))}
 						class="h5 font-weight-500 text-right capitalize"
 					>
-						{adjacentArticles.next.title}
+						{i18n.text(adjacentArticles.next.title)}
 					</a>
 				</div>
 			</div>
@@ -206,9 +224,9 @@
 	{#if relatedArticles.length}
 		<section class="py-100">
 			<div class="container">
-				<h2 class="mb-12 text-center">Още по темата</h2>
+				<h2 class="mb-12 text-center">{i18n.t('copy.6494327d1094')}</h2>
 				<p class="h7 text-secondary mb-40 text-center">
-					Последни новини и практични съвети за покупка, документи, финансиране и наличност.
+					{i18n.t('copy.c722a875a7ef')}
 				</p>
 				<div class="md-grid-cols-1 grid grid-cols-3 gap-24">
 					{#each relatedArticles as related (related.slug)}

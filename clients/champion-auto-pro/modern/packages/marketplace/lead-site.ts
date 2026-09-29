@@ -1,9 +1,42 @@
+import { carsLocale } from './cars-locale';
+import type {
+  PublicSiteArtwork,
+  PublicSiteConfig,
+} from "@repo/marketplace-domain/site-config";
+import { inventoryCopy } from "./content/inventory-copy";
+
 export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
+
+export interface LeadSiteCopy {
+  readonly address: string;
+  readonly city: string;
+  readonly country: string;
+  readonly tagline: string;
+}
+
+export type DealerInventoryCopy = Readonly<
+  Record<
+    string,
+    {
+      readonly sourceDescription?: string;
+      readonly bg: {
+        readonly description: string;
+        readonly imageAlts: readonly string[];
+      };
+      readonly en: {
+        readonly description: string;
+        readonly imageAlts: readonly string[];
+      };
+    }
+  >
+>;
 
 export interface LeadSiteConfig {
   readonly accent: string;
   readonly address: string;
+  readonly artwork?: Partial<PublicSiteArtwork>;
   readonly city: string;
+  readonly colorMode?: "light";
   readonly contactUrl: string;
   readonly country: string;
   readonly countryCode: string;
@@ -12,7 +45,17 @@ export interface LeadSiteConfig {
   readonly email: string;
   readonly financingArtworkPath: string;
   readonly heroPath: string;
+  readonly iconPath?: string;
+  readonly inventoryCategories?: readonly (
+    | "car"
+    | "truck"
+    | "van"
+    | "motorbike"
+  )[];
+  readonly inventoryCopy?: DealerInventoryCopy;
   readonly locale: string;
+  readonly localizedCopy?: Readonly<Record<"bg" | "en", LeadSiteCopy>>;
+  readonly logoInversePath?: string;
   readonly logoPath: string;
   readonly logoOnLight: string;
   readonly logoOnDark: string;
@@ -22,9 +65,12 @@ export interface LeadSiteConfig {
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
+  readonly publicDefaultLocale?: "bg" | "en";
+  readonly publicLocales?: readonly ("bg" | "en")[];
   readonly sellCategoryAssets: Readonly<
     Record<"car" | "motorbike" | "truck" | "van", string>
   >;
+  readonly services?: Partial<PublicSiteConfig["services"]>;
   readonly shortName: string;
   readonly slug: string;
   readonly socialLinks?: Partial<
@@ -32,25 +78,44 @@ export interface LeadSiteConfig {
   >;
   readonly staticDemoMode: boolean;
   readonly tagline: string;
+  readonly websiteKind?: PublicSiteConfig["kind"];
 }
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
+  websiteKind: "dealership",
+  publicLocales: carsLocale.enabledLocales,
+  publicDefaultLocale: carsLocale.defaultLocale,
+  inventoryCopy,
+  localizedCopy: {
+  "bg": {
+    "address": "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
+    "city": "Варна",
+    "country": "България",
+    "tagline": "Champion Auto Pro — автомобили и съдействие в Варна."
+  },
+  "en": {
+    "address": "302 Tsar Osvoboditel Blvd. / Izgi Europe Motor car wash, Varna",
+    "city": "Varna",
+    "country": "Bulgaria",
+    "tagline": "Champion Auto Pro — vehicles and dealer support in Varna."
+  }
+},
   accent: "#282522",
-  address: "бул. „Цар Освободител“ 302 / Автомивка Izgi Europe Motor",
+  address: "ул. „Атанас Манчев“ 18, Варна",
   city: "Варна",
-  district: { bg: "Варна", en: "Варна" },
+  district: { bg: "Варна", en: "Varna" },
   sellCategoryAssets: {
     car: "/lead-sell-car-v1.png",
     motorbike: "/lead-sell-motorcycle-v1.png",
     truck: "/lead-sell-truck-v1.png",
     van: "/lead-sell-van-v1.png",
   },
-  financingArtworkPath: "/images/services/leasing-red-suv-v2.png",
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.webp",
   contactUrl: "tel:+359885072555",
   country: "България",
-  countryCode: "BG",
-  currency: "EUR",
+  countryCode: carsLocale.dealerCountry,
+  currency: carsLocale.inventoryCurrency,
   email: "",
   heroPath: "/lead-hero.jpg",
   locale: "bg-BG",
@@ -69,6 +134,6 @@ export const leadSite: LeadSiteConfig = {
   slug: "champion-auto-pro",
   socialLinks: {},
   staticDemoMode: true,
-  tagline: "Подбрани публикувани обяви. Наличностите и условията се потвърждават по телефона.",
+  tagline: "Премиум автомобили, внос и собствен лизинг в Варна.",
 };
 // LEAD_SITE_CONFIG_END

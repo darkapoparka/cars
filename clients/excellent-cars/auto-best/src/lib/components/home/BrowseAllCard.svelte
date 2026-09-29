@@ -1,12 +1,15 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  let { href = '/listing-grid', label = 'Виж всички', detail = '', action = 'Виж всички', compact = false, image }: {
+  let { href = '/listing-grid', label = i18n.t("m_5701bc5c6a95"), detail = '', action = i18n.t("m_5701bc5c6a95"), compact = false, image }: {
     href?: '/listing-grid' | '/blog'; label?: string; detail?: string; action?: string; compact?: boolean; image?: string;
   } = $props();
 </script>
 
-<a class="dn-browse-all" class:compact class:dn-browse-all--with-image={Boolean(image)} href={resolve(href)}>
+<a class="dn-browse-all" class:compact class:dn-browse-all--with-image={Boolean(image)} href={i18n.href(resolve(href))}>
   {#if image}<img src={image} alt="" width="180" height="90" loading="lazy" />
   {:else}<span class="mark"><Icon name="arrow-right" size={compact ? 24 : 28} /></span>{/if}
   <strong>{label}</strong>

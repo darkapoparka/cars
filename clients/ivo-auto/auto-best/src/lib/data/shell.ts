@@ -2,6 +2,7 @@ import { resolveContactTopic, type ContactTopicId } from './company';
 import type { Vehicle } from './inventory';
 import { selectedVehicle } from './journeys';
 import { navigation } from './navigation';
+import { routeParts } from '$lib/locale/core';
 
 export type ShellRoute = 'home' | 'listing' | 'vehicle-detail' | 'contact' | 'about' | 'blog' | 'content';
 export type ShellMainLayout = 'flush' | 'default';
@@ -76,6 +77,8 @@ const navigationPresentation = (url: URL) => Object.fromEntries(
 ) as Record<string, NavigationItemPresentation>;
 
 export function resolveShellPresentation(url: URL, status = 200): ShellPresentation {
+  url = new URL(url);
+  url.pathname = routeParts(url.pathname).path;
   const { pathname } = url;
   const route = classifyRoute(pathname);
   const contactTopic = pathname === '/contact' ? resolveContactTopic(url.searchParams.get('topic')).id : null;

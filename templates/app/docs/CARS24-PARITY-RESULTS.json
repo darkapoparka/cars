@@ -1,0 +1,403 @@
+{
+  "createdAt": "2026-09-26T16:38:36.469Z",
+  "project": "L:\\cars-app",
+  "head": "1ee05e9556500f456b639d1134e90cdd108fb709",
+  "buildId": "iXFI2Mqx_f0GPieQ3j1XV",
+  "checkExit": 0,
+  "preview": "http://192.168.1.2:4173",
+  "previewChecks": [
+    {
+      "url": "http://127.0.0.1:4173",
+      "status": 200,
+      "testedBuildPresent": true
+    },
+    {
+      "url": "http://192.168.1.2:4173",
+      "status": 200,
+      "testedBuildPresent": true
+    }
+  ],
+  "committed": false,
+  "pushed": false,
+  "sourceUnchanged": true,
+  "suites": {
+    "visuals": {
+      "passed": 51,
+      "failed": 0,
+      "screenshots": 20,
+      "browserErrors": 0,
+      "report": "reference/2026-09-26-finish/visuals/results.json"
+    },
+    "regression": {
+      "passed": 224,
+      "failed": 0,
+      "screenshots": 80,
+      "browserErrors": 0,
+      "report": "reference/2026-09-26-finish/regression/results.json"
+    },
+    "new-flows": {
+      "passed": 71,
+      "failed": 0,
+      "screenshots": 21,
+      "browserErrors": 0,
+      "report": "reference/2026-09-26-finish/new-flows/results.json"
+    },
+    "vehicle-coverage": {
+      "passed": 323,
+      "failed": 0,
+      "screenshots": 21,
+      "browserErrors": 0,
+      "report": "reference/2026-09-26-finish/vehicle-coverage/results.json"
+    },
+    "gestures": {
+      "passed": 8,
+      "failed": 0,
+      "screenshots": 2,
+      "browserErrors": 0,
+      "report": "reference/2026-09-26-finish/gestures/results.json"
+    }
+  },
+  "loanUnitTests": {
+    "passed": 5,
+    "failed": 0
+  },
+  "totalChecks": 682,
+  "screenshots": 144,
+  "coverage": {
+    "capturedListingDetails": 43,
+    "galleryImages": 793,
+    "videoTours": 22,
+    "inspectionCheckpoints": 3374,
+    "featureEntries": 831,
+    "sourceFailures": 0,
+    "liveInventory": false
+  },
+  "visualReview": {
+    "comparisonPairs": 12,
+    "directory": "reference/2026-09-26-finish/visuals/pairs",
+    "review": "reference/2026-09-26-finish/visual-review.md",
+    "measuredGuestPolishPassComplete": true,
+    "exhaustivePixelParityAccepted": false
+  },
+  "completedThisPass": [
+    "Measured font identification and native vehicle title, price and dealer typography",
+    "Separate reference-matched side-view thumbnails without changing hero media",
+    "Native three-tab and four-tab geometry, spacing and heights",
+    "Gallery category font and pill widths",
+    "EMI sheet top edge, heading position, fixed action and short-screen scrolling"
+  ],
+  "remaining": [
+    "Exhaustive pixel and transition identity across every native state is not established",
+    "Five preserved legacy fixtures lack a newly captured detailed listing",
+    "Authenticated account and transaction interfaces are outside the verified guest flows"
+  ],
+  "disconnected": [
+    "OTP",
+    "live inventory synchronization",
+    "real bookings",
+    "payments",
+    "lender decisions"
+  ],
+  "sourceHashes": [
+    {
+      "path": "app/app.css",
+      "sha256": "f4fb55e822150f5aaffa1d45d59443533e612374a2b831646f2f3ae656b57181"
+    },
+    {
+      "path": "app/benefits/[kind]/page.tsx",
+      "sha256": "4724895b5f8203d0773eb6fe13703a08c26d02904cedd970b639c7961342f0aa"
+    },
+    {
+      "path": "app/cars/[slug]/features/page.tsx",
+      "sha256": "3ea9c4c6548606624395bc8971a5e11cde03b88c4dfd6a63b554ede2d55ae401"
+    },
+    {
+      "path": "app/cars/[slug]/gallery/page.tsx",
+      "sha256": "18b9438996a5a447dbefb01f82f0c9d734b17c8e4e6a54b2697e0eeda2318a2f"
+    },
+    {
+      "path": "app/cars/[slug]/inspection/page.tsx",
+      "sha256": "255e91cdae0e33a5aa5aa3f56d07012de8feaf40d4d036d248c3e44d499cbf00"
+    },
+    {
+      "path": "app/cars/[slug]/page.tsx",
+      "sha256": "0d5d4b760c93538b26983d826520474bd20d8a3ecb17e4fd1c073e0fef3aa7c8"
+    },
+    {
+      "path": "app/cars/page.tsx",
+      "sha256": "763610f61dd8907394753d61832978d7fae9a8f5a97f23bc3bdf816ad796463c"
+    },
+    {
+      "path": "app/finance/page.tsx",
+      "sha256": "2966f2d72cd0ca2314056526772d4c32a2c2ef0c64c255297890a0016395258f"
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha256": "1c32983925c0f3eb5b6b19b3697454c5df247a5079f94173eefe55ed9bee5d12"
+    },
+    {
+      "path": "app/luxe/page.tsx",
+      "sha256": "71c0b0798d4718c70ff8a51930e15a9c05a45ae5d88ce89cb6073c03125952e3"
+    },
+    {
+      "path": "app/manifest.ts",
+      "sha256": "c2f755c40007bea25d57d3cc7cb45a7e0dcb80c56a988a355fe7b31611fd4217"
+    },
+    {
+      "path": "app/more/page.tsx",
+      "sha256": "71a336de9a6e4792c93750ff62faa178882a316826b527b70745e56526cac721"
+    },
+    {
+      "path": "app/not-found.tsx",
+      "sha256": "d3921ef44809f299991b073815fd7d15cea24492d854b26218b9e997de99d253"
+    },
+    {
+      "path": "app/page.tsx",
+      "sha256": "011564347e6b39daad0a2d3893194ba41611fe4d54277c34f4fd2d0a998cffca"
+    },
+    {
+      "path": "app/saved/page.tsx",
+      "sha256": "e307abbebc71c1ac10d81b8048b227cd5efbe44abcf8bc604c5c4ee1f46e143b"
+    },
+    {
+      "path": "app/search/page.tsx",
+      "sha256": "da5d5f4ecc0f4a710192c225034c0caee13ae4798d2f1ec7cb0437f8a3d3b8b4"
+    },
+    {
+      "path": "app/sell/details/page.tsx",
+      "sha256": "950e6acafc4fa7f7fe680186c5461783f9dcb26027770ff1f841e36347e1b48c"
+    },
+    {
+      "path": "app/sell/page.tsx",
+      "sha256": "c26af7e0b69bf8f7a4609d95ef1789c0a7d1ea7c2b93cbfb0abfdcd7362d88fd"
+    },
+    {
+      "path": "app/service/details/page.tsx",
+      "sha256": "dd004ba1e1e561bb591a738171b1a3cd454230caae5a8fe7bb83f3f7dfdeea33"
+    },
+    {
+      "path": "app/service/page.tsx",
+      "sha256": "f5ea29bb8076aa968ce5bc796c1800cb117be147e6f8821e4ef4d49cf787f8ce"
+    },
+    {
+      "path": "app/stores/page.tsx",
+      "sha256": "0e0b2ab7a794da47ac9aa98a2a673d498bf7bfbd2828843ce10059b83bebe04b"
+    },
+    {
+      "path": "app/tokens.stylex.ts",
+      "sha256": "3292cd8a1ebfd0f98b6132d9d8f0411e4894ee38ba918539ab4f80dd5089ae0a"
+    },
+    {
+      "path": "babel.config.js",
+      "sha256": "f20fa8bd219cfd21d3a7022872f316a68570ce31b0264f90b593b9e116c405bd"
+    },
+    {
+      "path": "components/AppShell.tsx",
+      "sha256": "4a40e3ca4387cd274e06926e833e828e451230f52c0c6f9ce69c0df2c58a1ac8"
+    },
+    {
+      "path": "components/BenefitsPage.tsx",
+      "sha256": "1918d61b31c5b988adf1588d5c6c7725c68116838cdab79e809bd0d8a8d396a0"
+    },
+    {
+      "path": "components/CustomerStories.tsx",
+      "sha256": "6984951ae0cd8a06df56086c8d764ee2682428a8523a510e5ec8e38bd9b2fc4a"
+    },
+    {
+      "path": "components/DetailOffers.tsx",
+      "sha256": "03ea3cb3824e337073c843f71ef8a939762f1057c9c6136571b2f17e35b0fa0d"
+    },
+    {
+      "path": "components/DiscoveryHeader.tsx",
+      "sha256": "b9d61bdfaf8cbb68dc56b646f58d7e47c0c59d538acce9050dea62a2ebe853f8"
+    },
+    {
+      "path": "components/FeatureContent.tsx",
+      "sha256": "949968e30e06424db7512269576c54a75e4bb1a4bc82be36903c52194ca6d190"
+    },
+    {
+      "path": "components/FeatureLanding.tsx",
+      "sha256": "6bad4b643b2c0f78aeee58a86b4258f1af30716372087ddcb450c1165259d514"
+    },
+    {
+      "path": "components/FinanceCalculator.tsx",
+      "sha256": "2fb6831bbcc4106841f2987755c804e6763d0dc7d5102f49fa7e176e160c5bff"
+    },
+    {
+      "path": "components/GuestBanner.tsx",
+      "sha256": "b5190412efe90083072c76e96836979289225c22c4584dbbe5fd8119ab09d551"
+    },
+    {
+      "path": "components/InspectionReport.tsx",
+      "sha256": "c4bac6f27c6ede3687c5ac0f31c754a0b4816bc06efd1b4645f46a843edb8190"
+    },
+    {
+      "path": "components/InventoryClient.tsx",
+      "sha256": "a5932577c974cb7d351c052c3cf4f3bda9747d7fb1fb0d3f1097bee0c7f0891d"
+    },
+    {
+      "path": "components/LoanSliderFrame.tsx",
+      "sha256": "044b032c10c01e0000b19fc98b52019234d9094d514ef19b1426ff995f4c81c0"
+    },
+    {
+      "path": "components/LoginSheet.tsx",
+      "sha256": "161dc66bc475afae85bedf540ef3ddf9e07f884f0fc2de0505330486e091e51e"
+    },
+    {
+      "path": "components/MiniVehicleCard.tsx",
+      "sha256": "0d0654234c194fdbafc8a8a7c75a6e047bad422a90b00d8bcdb1f9e74172a1d8"
+    },
+    {
+      "path": "components/NativeFilterPane.tsx",
+      "sha256": "ea14cae753e2053bc9e97f5a687d548abb26951820977b75ad8a77f256f23446"
+    },
+    {
+      "path": "components/NativeIcon.tsx",
+      "sha256": "14ebc14b67dc1c2476044b8e8cd48ed3f391cef5839e3173986648080d3d6e8e"
+    },
+    {
+      "path": "components/OfferCarousel.tsx",
+      "sha256": "f9eaae69578d4b631fffd6c675e829cac0c278da0712a6f94ea2625c35b73250"
+    },
+    {
+      "path": "components/ReferenceInfoSheet.tsx",
+      "sha256": "ed5bd3a3db25676edab1efcb0f5aba0cdeb7ce77f1638f140100d58262283815"
+    },
+    {
+      "path": "components/ReferenceUI.tsx",
+      "sha256": "c6b9cadd12ef2a10f0bbd5d96f857eba1af59679d1c1015559e05bad73ee93d5"
+    },
+    {
+      "path": "components/ReferenceVideo.tsx",
+      "sha256": "e2bf749ede18f25ef8e97172403aeea81a7a4baaba8f8d71caf81c78b84bde6a"
+    },
+    {
+      "path": "components/SearchClient.tsx",
+      "sha256": "355ca2177f779362be17d561ce1bdd74bfc328800f35c0ea82ee5f6f05f116bf"
+    },
+    {
+      "path": "components/SellJourney.tsx",
+      "sha256": "73b9b87faf219831845d274bfd1abdc3bacc97c907e3ff62fa7f2fae68abbac5"
+    },
+    {
+      "path": "components/ServiceJourney.tsx",
+      "sha256": "c8f6fe27c6903ef6de472c51a628126d2b62815ffc4bc4e54846b6af1425a2df"
+    },
+    {
+      "path": "components/SimilarVehiclesSheet.tsx",
+      "sha256": "fdb70bc828de48cd639ecd3844b2d6907c9fd996d05107457652c9f8e17db8d4"
+    },
+    {
+      "path": "components/StoresClient.tsx",
+      "sha256": "7706a0321688ba8e9a109bba2d789083235751029291a6aa08826299711d48d1"
+    },
+    {
+      "path": "components/StructuralSummary.tsx",
+      "sha256": "c05b9be2d3a29ffa03dd02b5d8c1716fc381d1a5844c77e512d60ad7a73bcaca"
+    },
+    {
+      "path": "components/VehicleBelowFold.tsx",
+      "sha256": "16429279f9c094c22f39dd76bcf3fad55dae6bce62f3d47942aad0a2d3887e90"
+    },
+    {
+      "path": "components/VehicleCard.tsx",
+      "sha256": "2afbad2667af51f933aa019a83384ee0d1a0b658dc2fa9ea6d5e9c75c3bbe354"
+    },
+    {
+      "path": "components/VehicleComparison.tsx",
+      "sha256": "fe61de3670af7dc6677942299b1af84628a2546a6b594b9f87ae46b7c28efa92"
+    },
+    {
+      "path": "components/VehicleDetailClient.tsx",
+      "sha256": "da8777f2bd498a54ced070a7bd331ed2d3fd37c7399fffced7fd14cb3609e409"
+    },
+    {
+      "path": "components/VehicleFeatures.tsx",
+      "sha256": "d6fa5110d33b3194b497abe846f528a2fcd94422db95acee3bb6244ba5cc03de"
+    },
+    {
+      "path": "components/VehicleFinanceSection.tsx",
+      "sha256": "589f1f9062ff6da0edea926fe92e533efa575d96a9a64060fa04431e2ddeb03e"
+    },
+    {
+      "path": "components/VehicleGallery.tsx",
+      "sha256": "cb13edbf7a062c1ee398da5cf476bb2277f3ac93fb80a8ad132a737ce1a849b0"
+    },
+    {
+      "path": "components/VehiclePhotoViewer.tsx",
+      "sha256": "49ea325029b1d467ea45d7885e0b07b52124be0401185650c24676c3a9f35b01"
+    },
+    {
+      "path": "components/VehiclePriceSheet.tsx",
+      "sha256": "49e2e17e32b0e1af15b5af76245beaae8dc5eb3065f8a65e9ce25bf05817fca2"
+    },
+    {
+      "path": "components/VehicleServiceHistory.tsx",
+      "sha256": "ceea51e0856f46e6cadd646ad28323bdbd50c6ab4c6973af00a3bcb11dfb2196"
+    },
+    {
+      "path": "components/VehicleTourViewer.tsx",
+      "sha256": "02de851325d6b6cf248160b9c0b3283ef4ef3ea70f16eec433cf7b892ef7c6a0"
+    },
+    {
+      "path": "components/VerticalRange.tsx",
+      "sha256": "e7be94e686c4acf27af559924a5f943bc7c942908e4a4449d3963bebba87342e"
+    },
+    {
+      "path": "components/useInventoryHistory.ts",
+      "sha256": "859f687aa1c94619e40a739f447b1f65fd2f04830b8882e622ba370940a1cd7a"
+    },
+    {
+      "path": "components/useModal.ts",
+      "sha256": "02a538dba87a642d44ca2527ed542f797dc7cbd0fe0eb2d7fb0f095dfe138d97"
+    },
+    {
+      "path": "components/useVehicleState.ts",
+      "sha256": "826e2ec05ed35029e9bfe5b6767903b7b7e914579c70b81ca6e51b0fc518ca49"
+    },
+    {
+      "path": "lib/captured-inventory.ts",
+      "sha256": "553a79035cebfb13dabad111c422b4190a8854f6b1372f5f0962a9ff916062fc"
+    },
+    {
+      "path": "lib/captured-related.ts",
+      "sha256": "383bec0ba38f565d1baf01ce513f083a94e8876ec49d4fdc4b1c996b28c8f601"
+    },
+    {
+      "path": "lib/captured-vehicle-details.json",
+      "sha256": "ef0fd42dcb8d16ba74caf3ddd5e993a38c1fbdd5471e616a7b0032a96d69fb10"
+    },
+    {
+      "path": "lib/data.ts",
+      "sha256": "07932941f288c0f16124c0513e30f68534ce940784b9a61c2b8ac57576a14386"
+    },
+    {
+      "path": "lib/inventory-filters.ts",
+      "sha256": "89ce39e2c1197bfc6c0a396cef2c1729c57bbfb94d4fb00b3ad59c4fa948bddc"
+    },
+    {
+      "path": "lib/loan-estimate.ts",
+      "sha256": "78d6da5285511b43c6a7508931ed080bc656bcf0b99ef69e7f39a972b102afbe"
+    },
+    {
+      "path": "lib/reference-data.server.ts",
+      "sha256": "005d9fd015966f80af3ebf390435d0fc4a34613ee3055d5c670879c03a82d9ad"
+    },
+    {
+      "path": "lib/reference-types.ts",
+      "sha256": "a4293b0c66e65451d77f0e06eedfb1b6f76ec6fd96d4eec780f9aa72208b51ef"
+    },
+    {
+      "path": "lib/vehicle-gallery.ts",
+      "sha256": "fd0553f22923762ec4f384cd980c064fed53ef81a1aafcbadbe4b989f64ce62f"
+    },
+    {
+      "path": "next.config.js",
+      "sha256": "0935383a99db4517c595ec2e41390ea95f2f9d9c4070295768a0359020cfbe7d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "7fdfba9d8413f8acd5f542c8696889c2a84ac7b3474841ae3bbe91fb02df371e"
+    }
+  ]
+}

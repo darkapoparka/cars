@@ -1,4 +1,10 @@
 <script lang="ts">
+  import { specificationLabel } from '$lib/i18n/presentation';
+
+
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { resolve } from '$app/paths';
   import {
     activeFilterCount as countFilters,
@@ -14,6 +20,7 @@
   import {
     cleanListingFormData,
     listingAppliedFilterLabel,
+    listingFacetTitle,
     listingFiltersFromFormData,
     listingModelAfterMakeChange,
     normalizeListingMakeTransition
@@ -59,7 +66,7 @@
         const params = removeListingFilter(filters, key, value);
         const search = params.toString();
         const href: '/listing-grid' | `/listing-grid?${string}` = search ? `/listing-grid?${search}` : '/listing-grid';
-        return { key: `${key}-${value}`, label: listingAppliedFilterLabel(filters, key, value), href };
+        return { key: `${key}-${value}`, label: listingAppliedFilterLabel(filters, key, value, i18n.locale), href };
       })
   );
 
@@ -76,18 +83,18 @@
   const cleanFormData = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
-<section class="dn-listing-filter-wrap" data-slot="listing-filters" aria-label="Филтри за автомобили">
+<section class="dn-listing-filter-wrap" data-slot="listing-filters" aria-label={i18n.t("m_6f8428de4166")}>
   <div class="container">
     <div class="dn-listing-filter">
-      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} keywordPlaceholder="Търси в налични" /></div>
+      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} /></div>
       <QuickFilterSheet mode="url" id="dn-listing-sort-sheet">
       {#snippet children(openSort, sortOpen)}
-      <form class="dn-listing-mobile-form" method="GET" action={resolve('/listing-grid')} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
+      <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
         <div class="dn-listing-filter__primary">
         <div class="dn-listing-filter__search-field">
-          <MobileNavIcon name="search" size={20} />
-          <input class="dn-listing-filter__keyword" type="search" name="q" bind:value={query} aria-label="Търсене на автомобили" placeholder="Марка, модел или ключова дума" />
-          <button class="dn-listing-filter__submit" type="submit"><Icon name="search" size={18} /><span>Търсене</span></button>
+          <MobileNavIcon name="search" size={18} />
+          <input {@attach i18n.validation} class="dn-listing-filter__keyword" type="search" name="q" bind:value={query} aria-label={i18n.t("m_32729e44de2d")} placeholder={i18n.t("m_13fd09148700")} />
+          <button class="dn-listing-filter__submit" type="submit"><Icon name="search" size={18} /><span>{i18n.t("m_49c266baaaa7")}</span></button>
         </div>
         <button
           class="dn-listing-filter__keyword dn-listing-filter__mobile-keyword"
@@ -95,12 +102,12 @@
           aria-haspopup="dialog"
           aria-controls="dn-listing-filter-dialog"
           aria-expanded={filtersOpen}
-          aria-label={query ? `Търсене: ${query}. Отворете търсенето на автомобили` : 'Отворете търсенето на автомобили'}
+          aria-label={query ? i18n.t("m_645cee389418", { p0: query }) : i18n.t("m_a6403c514411")}
           onclick={(event) => openFilters(event)}
         >
-          <MobileNavIcon name="search" size={20} />
-          <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || 'Търси в налични'}</span>
-          <span class="dn-listing-filter__keyword-hint">Търсене по ключова дума <Icon name="arrow-right" size={16} /></span>
+          <MobileNavIcon name="search" size={18} />
+          <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || i18n.t("m_eb47f359cb25")}</span>
+          <span class="dn-listing-filter__keyword-hint">{i18n.t("m_27194051d1f9")} <Icon name="arrow-right" size={16} /></span>
         </button>
         <button
           class="dn-listing-filter__toggle"
@@ -108,16 +115,16 @@
           aria-haspopup="dialog"
           aria-controls="dn-listing-filter-dialog"
           aria-expanded={filtersOpen}
-          aria-label={activeFilterCount ? `Филтри: ${activeFilterCount} ${activeFilterCount === 1 ? 'активен' : 'активни'}` : 'Филтри'}
-          title="Филтри"
+          aria-label={activeFilterCount ? i18n.t("m_ea1098f8421e", { p0: activeFilterCount, p1: activeFilterCount === 1 ? i18n.t("m_c22462bc76a0") : i18n.t("m_91313b277ed8") }) : i18n.t("m_546ebb8eb993")}
+          title={i18n.t("m_546ebb8eb993")}
           onclick={(event) => openFilters(event)}
         >
           <MobileNavIcon name="filters" size={20} />
-          <span class="dn-listing-filter__toggle-label">Филтри</span>
+          <span class="dn-listing-filter__toggle-label">{i18n.t("m_546ebb8eb993")}</span>
           {#if activeFilterCount > 0}<span class="dn-listing-filter__count" aria-hidden="true">{activeFilterCount}</span>{/if}
         </button>
-        <button class="dn-listing-filter__mobile-sort" class:dn-listing-filter__mobile-sort--active={filters.sort !== 'default'} type="button" title="Сортиране"
-          aria-label={`Сортиране: ${listingFilterOptions.sorts.find(([value]) => value === filters.sort)?.[1]}`}
+        <button class="dn-listing-filter__mobile-sort" class:dn-listing-filter__mobile-sort--active={filters.sort !== 'default'} type="button" title={i18n.t("m_bec69036aa27")}
+          aria-label={i18n.t("m_c3f09566c8eb", { p0: i18n.text(listingFilterOptions.sorts.find(([value]) => value === filters.sort)?.[1] ?? 'Recommended') })}
           aria-haspopup="dialog" aria-controls="dn-listing-sort-sheet" aria-expanded={sortOpen}
           onclick={(event) => openSort(event, 'sort', 'Сортиране')}>
           <MobileNavIcon name="sort" size={20} />
@@ -126,36 +133,36 @@
         <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
         </div>
 
-        <div class="dn-listing-filter__facets" aria-label="Основни филтри">
+        <div class="dn-listing-filter__facets" aria-label={i18n.t("m_f6c8ed6a4374")}>
         <label>
-          <span class="dn-listing-filter__label">Марка</span>
-          <select name="make" aria-label="Марка" value={make} onchange={changeMake}>
+          <span class="dn-listing-filter__label">{i18n.t("m_ccdd25d4230f")}</span>
+          <select {@attach i18n.validation} name="make" aria-label={i18n.t("m_ccdd25d4230f")} value={make} onchange={changeMake}>
             {#each listingFilterOptions.makes as option (option)}
-              <option value={option}>{option || 'Всички'}</option>
+              <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_a52ace420f21")}</option>
             {/each}
           </select>
         </label>
         <label>
-          <span class="dn-listing-filter__label">Модел</span>
-          <select name="model" aria-label="Модел" bind:value={model}>
+          <span class="dn-listing-filter__label">{i18n.t("m_5e2c614c23f0")}</span>
+          <select {@attach i18n.validation} name="model" aria-label={i18n.t("m_5e2c614c23f0")} bind:value={model}>
             {#each modelOptions as option (option)}
-              <option value={option}>{option || 'Всички'}</option>
+              <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_a52ace420f21")}</option>
             {/each}
           </select>
         </label>
         <label>
-          <span class="dn-listing-filter__label">Купе</span>
-          <select name="body" aria-label="Купе" bind:value={body}>
+          <span class="dn-listing-filter__label">{i18n.t("m_191c24bf12d5")}</span>
+          <select {@attach i18n.validation} name="body" aria-label={i18n.t("m_191c24bf12d5")} bind:value={body}>
             {#each listingFilterOptions.bodies as option (option)}
-              <option value={option}>{bodyLabel(option) || 'Всички'}</option>
+              <option value={option}>{specificationLabel(bodyLabel(option), i18n.locale) || i18n.t("m_a52ace420f21")}</option>
             {/each}
           </select>
         </label>
         <label>
-          <span class="dn-listing-filter__label">Гориво</span>
-          <select name="fuel" aria-label="Гориво" bind:value={fuel}>
+          <span class="dn-listing-filter__label">{i18n.t("m_a80f942f4112")}</span>
+          <select {@attach i18n.validation} name="fuel" aria-label={i18n.t("m_a80f942f4112")} bind:value={fuel}>
             {#each listingFilterOptions.fuels as option (option)}
-              <option value={option}>{option || 'Всички'}</option>
+              <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_a52ace420f21")}</option>
             {/each}
           </select>
         </label>
@@ -170,9 +177,9 @@
       <div class="dn-listing-filter__quick-row">
       <QuickFilterSheet mode="url">
       {#snippet children(openQuick, quickOpen)}
-      <nav class={['dn-listing-filter__quick', { 'dn-listing-filter__quick--active': activeChips.length > 0 }]} aria-label="Бързи филтри">
+      <nav class={['dn-listing-filter__quick', { 'dn-listing-filter__quick--active': activeChips.length > 0 }]} aria-label={i18n.t("m_dea1661dff21")}>
         {#each activeChips as chip (chip.key)}
-          <a class="active" href={resolve(chip.href)} aria-label={`Премахни ${chip.label}`}>
+          <a class="active" href={i18n.href(resolve(chip.href))} aria-label={i18n.t("m_ef5e8d630d53", { p0: chip.label })}>
             {chip.label}<Icon name="x" size={14} />
           </a>
         {/each}
@@ -184,7 +191,7 @@
             aria-expanded={quickOpen}
             onclick={(event) => openQuick(event, item.field, item.label)}
           >
-            {item.label}<Icon name="chevron-down" size={14} />
+            {listingFacetTitle(item.field, i18n.locale)}<Icon name="chevron-down" size={14} />
           </button>
         {/each}
       </nav>
@@ -402,16 +409,14 @@
   }
 
   @media (min-width: 992px) {
-    .dn-listing-filter-wrap { top: 320px; margin-top: 0; }
+    .dn-listing-filter-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); top: var(--dn-route-hero-control-top); margin-top: 0; }
     .dn-listing-filter-wrap > .container { width: var(--dn-discovery-width); }
     .dn-listing-filter { border-radius: var(--dn-discovery-radius); box-shadow: 0 12px 32px rgb(32 35 41 / 6%); }
     .dn-listing-filter__search-field { min-height: var(--dn-discovery-search-height); }
     .dn-listing-filter__facets { gap: var(--dn-discovery-gap); }
   }
 
-  @media (min-width: 1440px) {
-    .dn-listing-filter-wrap { --dn-discovery-width: min(1040px, calc(100vw - 560px)); }
-  }
+
 
   @media (max-width: 767px) {
     .dn-listing-filter-wrap {
@@ -464,7 +469,7 @@
       border: 0;
       border-radius: var(--dn-pill);
       background: transparent;
-      font-size: var(--dn-text-body);
+      font: var(--dn-entry-font);
       box-shadow: none;
       isolation: isolate;
     }

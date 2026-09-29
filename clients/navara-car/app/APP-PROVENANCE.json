@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "dealer": "navara-car",
+  "profile": "auto-best/src/lib/data/dealer-profile.json",
+  "profileSha256": "cc9ead406811b976b64ed7ba0c8e095c80a0aba0f490be26d14204c66b4fe09c",
+  "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+  "vehicles": 9,
+  "currency": "EUR",
+  "observedAt": "2026-09-08",
+  "assets": [
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
+      "output": "public/dealer-app/logo-light-59bf693ac7938da19bad.webp",
+      "sha256": "59bf693ac7938da19bad1ff965c84f57d47879457d2832580521e18f98620293",
+      "role": "logo-light"
+    },
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
+      "output": "public/dealer-app/logo-dark-c2736c32f1b7151c1206.webp",
+      "sha256": "c2736c32f1b7151c1206fd2708c96bea6536650a7ff4cbcf699850c801be588f",
+      "role": "logo-dark"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11786363468065195-1.webp",
+      "output": "public/dealer-app/vehicle-263339932ec5ebf87a63.webp",
+      "sha256": "263339932ec5ebf87a635c24955756d5d18be4d7bdc9919f330c1b9b41d7d474",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11786363468065195-2.webp",
+      "output": "public/dealer-app/vehicle-c7d96e6c31ef0a574e1c.webp",
+      "sha256": "c7d96e6c31ef0a574e1c0476947e6a62e7695db0aae08c848414957a224ade8e",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11782409246983224-1.webp",
+      "output": "public/dealer-app/vehicle-d2efe1aef87879a4cc95.webp",
+      "sha256": "d2efe1aef87879a4cc9527d962359c5342d5fd6f23ff3943a40734365cf6f445",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11782409246983224-2.webp",
+      "output": "public/dealer-app/vehicle-c2ff011ed5228b40fb7c.webp",
+      "sha256": "c2ff011ed5228b40fb7c374dfef20736f94dffe8c72751672c428c9315589276",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11787311216769974-1.webp",
+      "output": "public/dealer-app/vehicle-57738caa0e78e491d913.webp",
+      "sha256": "57738caa0e78e491d9138c87909238d29b6f4d171068b696f73b7ed6444cbbd6",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11787311216769974-2.webp",
+      "output": "public/dealer-app/vehicle-89f439e03cb01b07f07b.webp",
+      "sha256": "89f439e03cb01b07f07be08e5a9ce661ec284ed466ed9b32f67857882d6258fd",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/21780735125049477-1.webp",
+      "output": "public/dealer-app/vehicle-2a24f3fe60158e7e5773.webp",
+      "sha256": "2a24f3fe60158e7e577381047c8c9c335b6bfe5afe35b7b672c450efb69200ee",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/21780735125049477-2.webp",
+      "output": "public/dealer-app/vehicle-a62852312800566af898.webp",
+      "sha256": "a62852312800566af8982b59b7e4e9f8a6446d3c98a8556a499eb07f70350366",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11787212062225914-1.webp",
+      "output": "public/dealer-app/vehicle-1e4700c1894d6d90d133.webp",
+      "sha256": "1e4700c1894d6d90d13361a2ab6bc363a918d1c6a91285de77bca5ad19212b79",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11787212062225914-2.webp",
+      "output": "public/dealer-app/vehicle-277ed7d7cf046d66f35b.webp",
+      "sha256": "277ed7d7cf046d66f35b189a4c2d4f62f89a84d1ba193e9e87d782e6b01c4797",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/21774534756506554-1.webp",
+      "output": "public/dealer-app/vehicle-2f082cc3f0b946a9faa7.webp",
+      "sha256": "2f082cc3f0b946a9faa7d3ca354f6ccbfbbeb1ee25cb75fb1860656cd17a2111",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/21774534756506554-2.webp",
+      "output": "public/dealer-app/vehicle-e50b8f5e51222508fdd7.webp",
+      "sha256": "e50b8f5e51222508fdd7be2d63a89972d7345a6c54767f83d6d6510bc6f2a41b",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11784982235652112-1.webp",
+      "output": "public/dealer-app/vehicle-105fff548a73448485df.webp",
+      "sha256": "105fff548a73448485df35451ce1fc8fe6b29c2f43f427d0ee3ddb514e141bcb",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11784982235652112-2.webp",
+      "output": "public/dealer-app/vehicle-b9828f31d7c6be996b61.webp",
+      "sha256": "b9828f31d7c6be996b610ed21132217c71d1b75348241e18d4077f7850161ad0",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11772183782578045-1.webp",
+      "output": "public/dealer-app/vehicle-441cff3bbdf9a85021de.webp",
+      "sha256": "441cff3bbdf9a85021de4d74e05051e4c6911657b6f9f4a977dcd8202756b9df",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11772183782578045-2.webp",
+      "output": "public/dealer-app/vehicle-10b78d4a159546764c1c.webp",
+      "sha256": "10b78d4a159546764c1cd5dcb0eb42c34682d33609cbbbc0b8f94166a0c093ca",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11780755712824361-1.webp",
+      "output": "public/dealer-app/vehicle-dc27fdf943eb2a073396.webp",
+      "sha256": "dc27fdf943eb2a0733962613249f7564b44d806d1276cc263167facfc85a891a",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/navara/vehicles/11780755712824361-2.webp",
+      "output": "public/dealer-app/vehicle-8e5f89fef021df02130c.webp",
+      "sha256": "8e5f89fef021df02130cf487e18d94bf1157178e051d055363f68cf2c82d051d",
+      "role": "vehicle"
+    }
+  ],
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
+    "path": "templates/app",
+    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
+    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
+  },
+  "generatedAt": "2026-09-28T04:58:05.874Z",
+  "policy": {
+    "selector": "shared-v2-with-local-fallback",
+    "benefits": "clearly-labelled-proposal-examples",
+    "missingPhotos": "neutral-template-artwork-not-invented-stock"
+  }
+}

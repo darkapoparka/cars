@@ -1,11 +1,9 @@
-import { posts } from '$lib/data/blog';
-import { daynightBrand, daynightFetchedAt } from '$lib/data/daynight';
-import { agents } from '$lib/data/agents';
-import { publicSitemapRoutes } from '$lib/auxero/sitemap';
+import { base } from '$app/paths';
+import { site } from '$lib/config/site';
+import { localeHref } from '$lib/locale/core';
+import { listBlogPosts } from '$lib/server/blog-state';
+import { daynightFetchedAt } from '$lib/data/daynight';
 import { listPublicVehicles } from '$lib/server/public-vehicles';
-
-const baseUrl = `https://${daynightBrand.domain}`;
-
 const escapeXml = (value: string) =>
 	value
 		.replaceAll('&', '&amp;')
@@ -13,30 +11,58 @@ const escapeXml = (value: string) =>
 		.replaceAll('>', '&gt;')
 		.replaceAll('"', '&quot;')
 		.replaceAll("'", '&apos;');
-
-const routeUrl = (path: string) => `${baseUrl}${path}`;
-
-const urlEntry = (loc: string) => `<url>
-	<loc>${escapeXml(loc)}</loc>
-	<lastmod>${daynightFetchedAt}</lastmod>
-</url>`;
-
 export function GET() {
-	const dynamicRoutes = [
-		...listPublicVehicles().map((vehicle) => `/inventory/${vehicle.slug}`),
-		...agents.map((agent) => `/agents/${agent.slug}`),
-		...posts.map((post) => `/blog/${post.slug}`)
+	const paths = [
+		'/',
+		'/inventory',
+		'/import',
+		'/sell-your-car',
+		'/financing',
+		'/calculator',
+		'/contact',
+		'/services',
+		'/about',
+		'/blog',
+		'/reviews',
+		'/faqs',
+		'/privacy',
+		'/terms',
+		'/cookies',
+		...listPublicVehicles().map((v) => '/inventory/' + v.slug),
+		...listBlogPosts().map((p) => '/blog/' + p.slug)
 	];
-	const urls = [...publicSitemapRoutes, ...dynamicRoutes].map((path) => urlEntry(routeUrl(path)));
-	const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.join('\n')}
-</urlset>`;
-
-	return new Response(xml, {
-		headers: {
-			'content-type': 'application/xml; charset=utf-8',
-			'cache-control': 'public, max-age=3600'
+	const url = (path: string, locale: 'en' | 'bg') =>
+		site.identity.origin + localeHref(path, locale, base);
+	const entries = paths.flatMap((path) =>
+		site.locale.supported.map(
+			(locale) =>
+				'<url><loc>' +
+				escapeXml(url(path, locale)) +
+				'</loc><lastmod>' +
+				daynightFetchedAt +
+				'</lastmod>' +
+				site.locale.supported
+					.map(
+						(language) =>
+							'<xhtml:link rel="alternate" hreflang="' +
+							language +
+							'" href="' +
+							escapeXml(url(path, language)) +
+							'"/>'
+					)
+					.join('') +
+				'</url>'
+		)
+	);
+	return new Response(
+		'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' +
+			entries.join('') +
+			'</urlset>',
+		{
+			headers: {
+				'content-type': 'application/xml; charset=utf-8',
+				'cache-control': 'public, max-age=3600'
+			}
 		}
-	});
+	);
 }

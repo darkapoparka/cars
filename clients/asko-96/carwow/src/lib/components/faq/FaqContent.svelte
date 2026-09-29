@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { daynightSite } from '$lib/data/daynight-site';
 	// Native 1:1 rebuild of the localized /faq (faqs.html) main content: breadcrumb
 	// + heading + the three grouped FAQ accordions. The Q&A pairs come from the
@@ -32,12 +35,12 @@
 <div class="faq-page">
 	<DesktopYellowRouteHero
 		headingId="faq-route-title"
-		title="Често задавани въпроси"
-		copy={`Отговори на чести въпроси за покупка, продажба, финансиране и контакт с ${daynightSite.shortName}.`}
+		title={i18n.t('copy.6a4ec0f53189')}
+		copy={i18n.t('pattern.be0ea7080930', { v0: daynightSite.shortName })}
 		panel="light"
-		primaryLabel="Свържете се"
+		primaryLabel={i18n.t('copy.f36755515677')}
 		primaryHref="/contact"
-		secondaryLabel="Виж автомобилите"
+		secondaryLabel={i18n.t('copy.f20a4411e8d6')}
 		secondaryHref="/inventory"
 	/>
 	<!-- breadcrumb -->
@@ -45,19 +48,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>{i18n.t('copy.bb593f6846bd')}</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Често задавани въпроси</span>
+					<span>{i18n.t('copy.6a4ec0f53189')}</span>
 				</li>
 			</ul>
 		</div>
@@ -68,10 +71,10 @@
 		{#each daynightFaqGroups as group, groupIndex (group.id)}
 			<div class={group.containerClass}>
 				{#if groupIndex === 0}
-					<h1>Често задавани въпроси</h1>
+					<h1>{i18n.t('copy.6a4ec0f53189')}</h1>
 					<div class="tf-spacing-style3"></div>
 				{/if}
-				<h2 class={group.headingClass}>{group.heading}</h2>
+				<h2 class={group.headingClass}>{i18n.text(group.heading)}</h2>
 				<div class="max-width-850 mx-auto w-full">
 					<div
 						class="flat-accordion max-width-930 wow fadeIn flex flex-col gap-18"
@@ -88,7 +91,7 @@
 									aria-controls={`faq-answer-${group.id}-${itemIndex}`}
 									onclick={() => toggleItem(item.id)}
 								>
-									<p class="h5 title">{item.question}</p>
+									<p class="h5 title">{i18n.text(item.question)}</p>
 									<span class="icon">
 										<svg
 											width="24"
@@ -109,7 +112,7 @@
 								</button>
 								<div id={`faq-answer-${group.id}-${itemIndex}`} class="toggle-content">
 									{#each item.answer as paragraph (paragraph.text)}
-										<p class={paragraph.class}>{paragraph.text}</p>
+										<p class={paragraph.class}>{i18n.text(paragraph.text)}</p>
 									{/each}
 								</div>
 							</div>

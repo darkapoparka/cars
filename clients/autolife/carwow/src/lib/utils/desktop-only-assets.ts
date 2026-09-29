@@ -1,7 +1,10 @@
-export const desktopOnlyImagePlaceholder = '/assets/images/placeholder/transparent-1x1.svg';
+import { base } from '$app/paths';
+const asset = (value: string) =>
+	base && value.startsWith('/') && !value.startsWith(base + '/') ? base + value : value;
+export const desktopOnlyImagePlaceholder = asset('/assets/images/placeholder/transparent-1x1.svg');
 
 export function desktopOnlySrcset(src: string, width: number) {
-	return `${desktopOnlyImagePlaceholder} 4w, ${src} ${width}w`;
+	return `${desktopOnlyImagePlaceholder} 4w, ${asset(src)} ${width}w`;
 }
 
 export function desktopOnlySizes(desktopSize: string) {

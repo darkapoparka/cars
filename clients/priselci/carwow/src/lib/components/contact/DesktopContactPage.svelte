@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { page as appPage } from '$app/state';
 	import { submitImportRequest } from '$lib/client/import-request-submit';
 	import { submitLead } from '$lib/client/lead-submit';
@@ -50,16 +53,16 @@
 	const isImportMode = $derived(importFields.isImport);
 
 	let name = $state('');
-	let subject = $state(initialSubject);
+	let subject = $state(i18n.text(initialSubject));
 	let email = $state(initialEmail);
 	let phone = $state(initialImportFields.phone);
 	let sourceUrl = $state(initialImportFields.sourceUrl);
-	let message = $state(contactContext.message);
+	let message = $state(i18n.text(contactContext.message));
 	let leadSubmitState = $state<LeadSubmitState>('idle');
 	let leadSubmitMessage = $state('');
 
-	const leadErrorMessage = `Не успяхме да изпратим запитването. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
-	const importErrorMessage = `Не успяхме да изпратим заявката за внос. Моля, опитайте отново или се свържете по телефон/Viber на ${daynightSite.phoneLabel}.`;
+	const leadErrorMessage = i18n.t('pattern.46349c35d9b3', { v0: daynightSite.phoneLabel });
+	const importErrorMessage = i18n.t('pattern.672c8135c5f2', { v0: daynightSite.phoneLabel });
 
 	function readFormValue(formData: FormData, name: string) {
 		const value = formData.get(name);
@@ -87,7 +90,12 @@
 		const messageValue = readFormValue(formData, 'message');
 		const sourceUrlValue = readFormValue(formData, 'sourceUrl');
 		const companyWebsite = readFormValue(formData, 'companyWebsite');
-		const fullMessage = buildContactMessage(contactContext, messageValue, subjectValue);
+		const fullMessage = buildContactMessage(
+			contactContext,
+			messageValue,
+			subjectValue,
+			i18n.locale
+		);
 
 		leadSubmitState = 'submitting';
 		leadSubmitMessage = '';
@@ -127,7 +135,7 @@
 				? 'Благодарим! Заявката за внос е изпратена и ще Ви изпратим конкретни варианти.'
 				: 'Благодарим! Ще се свържем с Вас възможно най-скоро.';
 			name = '';
-			subject = initialSubject;
+			subject = i18n.text(initialSubject);
 			email = '';
 			phone = '';
 			sourceUrl = '';
@@ -205,13 +213,11 @@
 			artwork={isImportMode ? 'cars' : 'contact'}
 			panel="light"
 			headingId="daynight-contact-title"
-			title={isImportMode ? 'Заявка за внос на автомобил' : 'Свържете се с нас'}
-			copy={isImportMode
-				? 'Изпратете линк, модел или бюджет и ще Ви върнем конкретна следваща стъпка.'
-				: 'Оглед, документи, финансиране, бартер или въпрос за наличен автомобил.'}
-			primaryLabel="Изпрати запитване"
+			title={isImportMode ? i18n.t('copy.2e7c9b80674d') : i18n.t('copy.ef106e677853')}
+			copy={isImportMode ? i18n.t('copy.f2c82db998a8') : i18n.t('copy.c06078b56711')}
+			primaryLabel={i18n.t('copy.8d4343e23a1b')}
 			primaryHref="/contact#contact-form"
-			secondaryLabel="Виж автомобили"
+			secondaryLabel={i18n.t('copy.2042bdf14638')}
 			secondaryHref="/inventory"
 		/>
 		<section id="contact-form" class="daynight-contact-primary bg-white pb-84">
@@ -219,7 +225,7 @@
 			<div class="contact-page container">
 				<div class="daynight-contact-page-banner" aria-hidden="true">
 					<img
-						src={desktopOnlyImagePlaceholder}
+						src={i18n.asset(desktopOnlyImagePlaceholder)}
 						srcset={desktopOnlySrcset(contactBannerSrc, 2400)}
 						sizes={desktopOnlySizes('70vw')}
 						alt=""
@@ -227,7 +233,7 @@
 						loading="eager"
 						decoding="async"
 					/>
-					<span>Шоурум в {daynightSite.city}</span>
+					<span>{i18n.t('copy.5a3113aa5669')} {i18n.dealer('city')}</span>
 				</div>
 
 				<div class="lg-grid-cols-1 grid grid-cols-2 gap-30">
@@ -235,51 +241,49 @@
 						<div class="daynight-contact-info-body">
 							<h2 class="daynight-contact-title h3">
 								{isImportMode
-									? 'Заявка за внос на автомобил'
-									: `Свържете се със ${daynightSite.shortName}`}
+									? i18n.t('copy.2e7c9b80674d')
+									: i18n.t('pattern.b6d6f6a5cd4d', { v0: daynightSite.shortName })}
 							</h2>
 							<p class="daynight-contact-intro text-body-style-2">
-								{isImportMode
-									? 'Изпратете линк, модел или бюджет и ще Ви изпратим конкретни варианти за внос.'
-									: 'Свържете се за оглед, документи, регистрация, финансиране, бартер или въпрос за наличен автомобил.'}
+								{isImportMode ? i18n.t('copy.750333818fbe') : i18n.t('copy.e512339c62b0')}
 							</p>
 
 							<div class="daynight-contact-actions">
 								<a
-									href={daynightSite.phoneHref}
+									href={i18n.href(daynightSite.phoneHref)}
 									class="daynight-contact-action sa-cta sa-cta-primary"
 								>
 									{@render phoneIcon()}
-									<span>Обади се / Viber</span>
+									<span>{i18n.t('copy.a8aeb3e34b39')}</span>
 								</a>
 								<a
 									{...mapLinkAttributes}
 									class="daynight-contact-action daynight-contact-action--map sa-cta sa-cta-ghost"
 								>
 									{@render mapIcon()}
-									<span>Виж карта</span>
+									<span>{i18n.t('copy.9ce6575c95bf')}</span>
 								</a>
 							</div>
 
-							<div class="daynight-contact-details" aria-label="Данни за контакт">
+							<div class="daynight-contact-details" aria-label={i18n.t('copy.bcca34cd1331')}>
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Адрес</p>
-									<p class="daynight-contact-detail-value">{daynightSite.location}</p>
+									<p class="daynight-contact-detail-label">{i18n.t('copy.da82e80563d7')}</p>
+									<p class="daynight-contact-detail-value">{i18n.dealer('address')}</p>
 								</div>
 								<div class="daynight-contact-detail">
-									<p class="daynight-contact-detail-label">Телефон / Viber</p>
-									<a href={daynightSite.phoneHref} class="daynight-contact-detail-value">
+									<p class="daynight-contact-detail-label">{i18n.t('copy.9024d789ee44')}</p>
+									<a href={i18n.href(daynightSite.phoneHref)} class="daynight-contact-detail-value">
 										{daynightSite.phoneLabel}
 									</a>
 								</div>
 								<div class="daynight-contact-detail">
-									<p class="daynight-contact-detail-label">Писмен контакт</p>
-									<p class="daynight-contact-detail-value">Използвайте формата за запитване</p>
+									<p class="daynight-contact-detail-label">{i18n.t('copy.3d63677d26eb')}</p>
+									<p class="daynight-contact-detail-value">{i18n.t('copy.64e9803996e6')}</p>
 								</div>
 								<div class="daynight-contact-detail daynight-contact-detail--wide">
-									<p class="daynight-contact-detail-label">Работно време</p>
+									<p class="daynight-contact-detail-label">{i18n.t('copy.e3e2e2339725')}</p>
 									<p class="daynight-contact-detail-value">
-										{daynightSite.hoursLabel}
+										{i18n.text(daynightSite.hoursLabel)}
 									</p>
 								</div>
 							</div>
@@ -287,16 +291,16 @@
 					</div>
 
 					<div class="radius-20 contact-page-form bg-white">
-						<p class="h3 mb-12">{isImportMode ? 'Данни за внос' : 'Пишете ни за автомобил'}</p>
+						<p class="h3 mb-12">
+							{isImportMode ? i18n.t('copy.861a0c697553') : i18n.t('copy.7591b20003da')}
+						</p>
 						<p class="text-body-style-2 mb-32">
-							{isImportMode
-								? 'Попълнете контакт и линк към обява, ако вече сте избрали автомобил.'
-								: 'Пишете ни за автомобил, оглед, документи или следващи стъпки.'}
+							{isImportMode ? i18n.t('copy.9d2e9a7ae02d') : i18n.t('copy.3126332fb100')}
 						</p>
 
 						{#if !isImportMode && contactContext.vehicle}
 							<p class="mb-20">
-								Автомобил: <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext
+								{i18n.t('copy.1392cb97602c')} <strong>{contactContext.vehicle.shortTitle}</strong> · {contactContext
 									.vehicle.year} · {contactContext.vehicle.lot}
 							</p>
 						{/if}
@@ -312,8 +316,9 @@
 								aria-hidden="true"
 								style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"
 							>
-								<label for="contact-company-website">Не попълвайте това поле</label>
+								<label for="contact-company-website">{i18n.t('copy.624d565a3f48')}</label>
 								<input
+									{@attach i18n.validation}
 									id="contact-company-website"
 									name="companyWebsite"
 									type="text"
@@ -325,84 +330,94 @@
 							</div>
 							<div class="md-grid-cols-1 mb-22 grid grid-cols-2 gap-x-20 gap-y-24">
 								<div class="padding-0">
-									<p class="mb-8">Име</p>
+									<p class="mb-8">{i18n.t('copy.7848bd195104')}</p>
 									<input
+										{@attach i18n.validation}
 										class="active input-large"
 										id="contact-name"
 										name="name"
 										type="text"
 										bind:value={name}
-										placeholder="Вашето име"
+										placeholder={i18n.t('copy.62170ed5140f')}
 										required={!isImportMode}
-										aria-label="Вашето име"
+										aria-label={i18n.t('copy.62170ed5140f')}
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Тема</p>
+									<p class="mb-8">{i18n.t('copy.682f961a0751')}</p>
 									<input
+										{@attach i18n.validation}
 										class="input-large"
-										placeholder={isImportMode ? 'Внос на автомобил' : 'Автомобил, бартер...'}
+										placeholder={isImportMode
+											? i18n.t('copy.3d1ecec672e9')
+											: i18n.t('copy.092a6a006177')}
 										id="contact-subject"
 										name="subject"
 										type="text"
 										bind:value={subject}
 										required
-										aria-label="Тема на запитването"
+										aria-label={i18n.t('copy.b4096becea88')}
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Имейл</p>
+									<p class="mb-8">{i18n.t('copy.de9f803f65b3')}</p>
 									<input
+										{@attach i18n.validation}
 										class="input-large"
 										name="email"
 										id="contact-email"
 										type="email"
 										bind:value={email}
-										placeholder="Имейл по желание"
-										aria-label="Имейл"
+										placeholder={i18n.t('copy.55ea9d92e01f')}
+										aria-label={i18n.t('copy.de9f803f65b3')}
 									/>
 								</div>
 								<div class="padding-0">
-									<p class="mb-8">Телефон</p>
+									<p class="mb-8">{i18n.t('copy.822f9fd9ba2d')}</p>
 									<input
-										placeholder="Въведете телефон"
+										{@attach i18n.validation}
+										placeholder={i18n.t('copy.190d5c7b5099')}
 										class="input-large"
 										name="phone"
 										id="contact-phone"
 										type="tel"
 										bind:value={phone}
 										required
-										aria-label="Телефон"
+										aria-label={i18n.t('copy.822f9fd9ba2d')}
 									/>
 								</div>
 								{#if isImportMode}
 									<div class="padding-0 col-span-2">
-										<p class="mb-8">Линк към обява</p>
+										<p class="mb-8">{i18n.t('copy.fbee9a117fb4')}</p>
 										<input
+											{@attach i18n.validation}
 											class="input-large"
 											name="sourceUrl"
 											id="contact-source-url"
 											type="text"
 											inputmode="url"
 											bind:value={sourceUrl}
-											placeholder="mobile.de, autoscout24..."
-											aria-label="Линк към обява"
+											placeholder={i18n.t('copy.97a949d64838')}
+											aria-label={i18n.t('copy.fbee9a117fb4')}
 										/>
 									</div>
 								{/if}
 								<div class="padding-0 col-span-2">
-									<p class="mb-8">{isImportMode ? 'Какво търсите' : 'Съобщение'}</p>
+									<p class="mb-8">
+										{isImportMode ? i18n.t('copy.9d6369bfff6b') : i18n.t('copy.5afae14709c7')}
+									</p>
 									<textarea
+										{@attach i18n.validation}
 										placeholder={isImportMode
-											? 'Марка, модел, бюджет, условия или допълнителни изисквания...'
-											: 'Вашето съобщение*'}
+											? i18n.t('copy.4bf472c43c87')
+											: i18n.t('copy.82ab10595424')}
 										rows="3"
 										name="message"
 										class="message"
 										id="message"
 										bind:value={message}
 										required={!isImportMode}
-										aria-label="Съобщение"
+										aria-label={i18n.t('copy.5afae14709c7')}
 									></textarea>
 								</div>
 							</div>
@@ -412,10 +427,10 @@
 								disabled={leadSubmitState === 'submitting'}
 							>
 								{leadSubmitState === 'submitting'
-									? 'Изпращаме...'
+									? i18n.t('copy.acfcd771108c')
 									: isImportMode
-										? 'Изпрати заявка'
-										: 'Изпрати запитване'}
+										? i18n.t('copy.0c927e425946')
+										: i18n.t('copy.8d4343e23a1b')}
 							</button>
 							{#if leadSubmitMessage}
 								<p
@@ -427,7 +442,7 @@
 									role={leadSubmitState === 'error' ? 'alert' : 'status'}
 									aria-live="polite"
 								>
-									{leadSubmitMessage}
+									{i18n.text(leadSubmitMessage)}
 								</p>
 							{/if}
 						</form>
@@ -441,7 +456,10 @@
 				<div class="widget-gg-map radius-8 daynight-contact-map__frame flex overflow-hidden">
 					<iframe
 						{@attach deferredMapFrame(mapEmbedSrc, '180px')}
-						title={`Карта до ${daynightSite.shortName} ${daynightSite.city}`}
+						title={i18n.t('pattern.69c703e84da6', {
+							v0: daynightSite.shortName,
+							v1: i18n.dealer('city')
+						})}
 						data-map-src={mapEmbedSrc}
 						height="520"
 						style="border:0;width: 100%;"
@@ -451,11 +469,11 @@
 					></iframe>
 					<div
 						class="daynight-contact-map__overlay"
-						aria-label={`Локация ${daynightSite.shortName}`}
+						aria-label={i18n.t('pattern.007fa5724fe8', { v0: daynightSite.shortName })}
 					>
 						<p class="daynight-contact-map__eyebrow">{daynightSite.shortName}</p>
-						<p class="daynight-contact-map__address">{daynightSite.location}</p>
-						<a {...mapLinkAttributes}>Отвори в Google Maps</a>
+						<p class="daynight-contact-map__address">{i18n.dealer('address')}</p>
+						<a {...mapLinkAttributes}>{i18n.t('copy.e30ce79c4a5c')}</a>
 					</div>
 				</div>
 			</div>

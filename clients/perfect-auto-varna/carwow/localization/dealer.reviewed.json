@@ -1,0 +1,50 @@
+[
+  {
+    "key": "dealer.city",
+    "source": "Варна",
+    "bg": "Варна",
+    "en": "Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned city copy generated from the reviewed Cars dealer profile."
+  },
+  {
+    "key": "dealer.addressLine",
+    "source": "бул. Цар Освободител 110, кв. Победа",
+    "bg": "бул. Цар Освободител 110, кв. Победа",
+    "en": "110 Tsar Osvoboditel Blvd., Pobeda district",
+    "disposition": "translate",
+    "notes": "Dealer-owned address line; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.address",
+    "source": "бул. Цар Освободител 110, кв. Победа",
+    "bg": "бул. Цар Освободител 110, кв. Победа",
+    "en": "110 Tsar Osvoboditel Blvd., Pobeda district, Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned full address; physical location and destination remain unchanged."
+  },
+  {
+    "key": "dealer.locationShort",
+    "source": "Варна",
+    "bg": "Варна",
+    "en": "Varna",
+    "disposition": "translate",
+    "notes": "Dealer-owned short location label."
+  },
+  {
+    "key": "dealer.name",
+    "source": "Перфект Ауто",
+    "en": "PERFECT AUTO",
+    "bg": "Перфект Ауто",
+    "disposition": "translate",
+    "notes": "Dealer-owned proper name."
+  },
+  {
+    "key": "dealer.shortName",
+    "source": "Перфект Ауто",
+    "en": "Перфект Ауто",
+    "bg": "Перфект Ауто",
+    "disposition": "invariant",
+    "notes": "Dealer-owned short proper name."
+  }
+]

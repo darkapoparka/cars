@@ -9,6 +9,28 @@ body { margin: 0; color: var(--dn-ink); background: var(--dn-surface-raised); fo
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
 button { font: var(--dn-control-font); }
+/* One browser-independent frame for close, back and clear icon controls. */
+.dn-icon-button { display: inline-grid; place-items: center; flex: 0 0 auto; width: var(--dn-control-hit-height); height: var(--dn-control-hit-height); min-width: var(--dn-control-hit-height); min-height: var(--dn-control-hit-height); padding: var(--dn-compact-control-inset); box-sizing: border-box; appearance: none; border: 0; border-radius: var(--dn-pill); background-clip: content-box; color: inherit; cursor: pointer; touch-action: manipulation; }
+.dn-icon-button > svg { display: block; flex: none; pointer-events: none; }
+.dn-overlay-close > svg { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); }
+@media (max-width: 767px) {
+  .dn-app-shell .dn-mobile-overlay-header { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-3); padding: var(--dn-overlay-header-padding); background: var(--dn-white); }
+  .dn-app-shell .dn-mobile-overlay-header > h2 { min-width: 0; margin: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+  .dn-app-shell .dn-mobile-overlay-header > .dn-overlay-close { margin-inline-start: auto; }
+  .dn-app-shell .dn-mobile-overlay-search { display: flex; min-height: var(--dn-overlay-control-height); align-items: center; gap: var(--dn-entry-icon-gap); padding: 0 var(--dn-space-1) 0 var(--dn-space-4); border: 0; border-radius: var(--dn-pill); background: var(--dn-home-panel); color: var(--dn-muted); box-shadow: none; }
+  .dn-app-shell .dn-mobile-overlay-search:focus-within { border: 0; outline: 2px solid var(--dn-focus); outline-offset: 2px; box-shadow: none; }
+  .dn-app-shell .dn-mobile-overlay-search > svg { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); flex: 0 0 var(--dn-control-icon-size); }
+  .dn-app-shell .dn-mobile-overlay-search input[type='search'] { flex: 1; width: 100%; min-width: 0; height: var(--dn-overlay-control-height); padding: 0; border: 0; outline: 0; background: transparent; box-shadow: none; color: var(--dn-ink); font: var(--dn-overlay-field-font); }
+}
+.dn-app-shell .dn-compact-control { position: relative; z-index: 0; isolation: isolate; display: inline-flex; min-height: var(--dn-entry-action-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-compact-control-ink, var(--dn-ink)); font: var(--dn-compact-control-font); text-decoration: none; white-space: nowrap; }
+.dn-app-shell .dn-compact-control::before { position: absolute; z-index: -1; inset: var(--dn-compact-control-inset) 0; border-radius: inherit; background: var(--dn-compact-control-surface, var(--dn-white)); content: ''; transition: background-color 160ms ease-out; }
+.dn-app-shell .dn-entry-action { display: flex; width: var(--dn-entry-action-width); padding: 0 var(--dn-entry-action-padding-inline); }
+.dn-app-shell .dn-entry-action > svg { width: var(--dn-entry-action-icon-size); height: var(--dn-entry-action-icon-size); flex: none; }
+.dn-app-shell .dn-quick-pill { flex: 0 0 auto; padding: 0 var(--dn-compact-control-padding-inline); }
+.dn-app-shell .dn-compact-primary { --dn-compact-control-surface: var(--dn-red); --dn-compact-control-ink: var(--dn-white); font-weight: var(--dn-cta-weight); }
+.dn-app-shell .dn-compact-primary:is(:hover, :focus-visible) { --dn-compact-control-surface: var(--dn-red-hover); }
+.dn-app-shell .dn-compact-pill { --dn-compact-control-surface: var(--dn-white); --dn-compact-control-ink: #30363f; }
+.dn-app-shell .dn-compact-pill:is(:hover, :focus-visible) { --dn-compact-control-surface: var(--dn-surface-hover); }
 h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
 /* Shared by Buy/Import discovery and Sell/Import enquiry entry points. */
 .dn-segmented-control { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-1); padding: var(--dn-space-half); border-radius: var(--dn-pill); background: var(--dn-segment-surface); }

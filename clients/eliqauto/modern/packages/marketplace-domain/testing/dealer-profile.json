@@ -27,9 +27,9 @@
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=ELIQ%20AUTO%2C%20%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0%2C%20%D0%BD%D0%B0%20%D0%B3%D1%8A%D1%80%D0%B1%D0%B0%20%D0%BD%D0%B0%20%D0%93%D1%80%D0%BE%D0%B1%D0%B8%D1%89%D0%B5%D0%BD%20%D0%BF%D0%B0%D1%80%D0%BA%2C%20%D0%9F%D0%B0%D0%B7%D0%B0%D1%80%D0%B4%D0%B6%D0%B8%D0%BA",
     "mapsEmbedUrl": "https://maps.google.com/maps?q=ELIQ%20AUTO%2C%20%D1%83%D0%BB.%20%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0%2C%20%D0%BD%D0%B0%20%D0%B3%D1%8A%D1%80%D0%B1%D0%B0%20%D0%BD%D0%B0%20%D0%93%D1%80%D0%BE%D0%B1%D0%B8%D1%89%D0%B5%D0%BD%20%D0%BF%D0%B0%D1%80%D0%BA%2C%20%D0%9F%D0%B0%D0%B7%D0%B0%D1%80%D0%B4%D0%B6%D0%B8%D0%BA&z=16&output=embed",
     "accent": "#c40101",
-    "logo": "/dealer-brand/logo-on-light.webp",
-    "logoLight": "/dealer-brand/logo-on-light.webp",
-    "logoDark": "/dealer-brand/logo-on-dark.webp",
+    "logo": "/dealer-brand/logo-on-light-20260919.webp",
+    "logoLight": "/dealer-brand/logo-on-light-20260919.webp",
+    "logoDark": "/dealer-brand/logo-on-dark-20260919.webp",
     "socialLinks": {
       "facebook": "",
       "instagram": "",
@@ -1373,27 +1373,35 @@
   "logoContract": {
     "schemaVersion": 1,
     "dealer": "eliqauto",
-    "decision": "REFINE EXISTING IDENTITY",
-    "source": "Canonical Cars clients/eliqauto/auto-best/static/assets/eliqauto/brand/eliq-auto-wordmark-header.png; existing raster identity retained",
-    "originalSha256": "2d76fa4a8abfaa2809eeed58ac272ae0e8cb36412c26a722137fc14feda09582",
+    "decision": "USE GENERATED CANDIDATE",
+    "source": "Six generated PNG replacements explicitly requested by the owner in this conversation",
+    "generationId": "8a4723df-79b4-49e1-a093-9e042bcdc5f1",
+    "originalSha256": "ac98717ffc15abef266494e4efbb2c726a14d45ecc69c1a7e213fd1ac8332e40",
+    "preparedAt": "2026-09-19T14:18:13.348Z",
     "assets": {
       "onLight": {
-        "publicPath": "/dealer-brand/logo-on-light.webp",
-        "sha256": "06362aaf4802ca5d4bb92a3a7579c505238dd51ee682b976ef52d2f93e87f55d",
-        "bytes": 5484
+        "publicPath": "/dealer-brand/logo-on-light-20260919.webp",
+        "sha256": "47a1af7c61fb7a84c18b8717c25486b41811ab2556860dc27a6731ec6c0aba38",
+        "bytes": 126158,
+        "width": 1200,
+        "height": 304
       },
       "onDark": {
-        "publicPath": "/dealer-brand/logo-on-dark.webp",
-        "sha256": "4e4a06f54d306816c7bc28b0904ed50c3284b83fdf43c73f3f48dbd8207de4f7",
-        "bytes": 5362
+        "publicPath": "/dealer-brand/logo-on-dark-20260919.webp",
+        "sha256": "1cf956154e7101725bba0d42603ea27bf0bf509782803dea0db176453a5ca91c",
+        "bytes": 107762,
+        "width": 1200,
+        "height": 304
       },
       "onAccent": {
-        "publicPath": "/dealer-brand/logo-on-accent.webp",
-        "sha256": "5c0e988f0496f0076034fe47f86c0cc98050c54e1d21363fa3f88ca734a98d9f",
-        "bytes": 2706
+        "publicPath": "/dealer-brand/logo-on-accent-20260919.webp",
+        "sha256": "06958c8a062054447f6632b2f3cdf5ac94158942cfb945104dd2ec66fb46a9fc",
+        "bytes": 80872,
+        "width": 1200,
+        "height": 304
       }
     },
-    "preparedAt": "2026-09-19T04:58:29.386Z",
-    "rules": "Render committed contextual rasters. Do not redraw, invert, clip, or add a background plaque. Preserve template hero/layout/artwork."
+    "rules": "Use committed transparent raster assets for light/dark/accent surfaces. No CSS inversion, clipping, temporary text logo or header plaque. Preserve template layout, inventory and three designs plus Admin.",
+    "identityStatus": "Owner-requested demonstration identity, not a claim of official dealership approval"
   }
 }

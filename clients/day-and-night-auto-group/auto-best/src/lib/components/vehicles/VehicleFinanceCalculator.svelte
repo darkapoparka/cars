@@ -1,7 +1,11 @@
 <script lang="ts">
+  import { getI18n } from '$lib/locale/context';
+
+  const i18n = getI18n();
+
   import { vehicleContactHref } from '$data/journeys';
   import { resolve } from '$app/paths';
-  import { formatVehiclePrice } from '$data/inventory';
+  import { formatPrice } from '$lib/locale/core';
 
   let { priceEur, vehicleId, idPrefix = 'finance' }: { priceEur: number; vehicleId: number; idPrefix?: string } = $props();
 
@@ -21,32 +25,32 @@
 
 <div class="dn-finance-calculator">
   <header>
-    <h2>Калкулатор за финансиране</h2>
-    <p>Променете първоначалната вноска и срока, за да видите оставащата главница.</p>
+    <h2>{i18n.t("m_bb13d3f9546c")}</h2>
+    <p>{i18n.t("m_59771da764a8")}</p>
   </header>
 
   <div class="dn-finance-calculator__fields">
     <label>
-      <span>Първоначална вноска</span>
+      <span>{i18n.t("m_0da00b600a2d")}</span>
       <span class="dn-finance-calculator__input">
-        <input
+        <input {@attach i18n.validation}
           type="number"
           min="0"
           max={priceEur}
-          step="500"
+          step="1"
           bind:value={downPaymentEur}
           onblur={normalizeDownPayment}
           aria-describedby={disclaimerId}
         />
-        <b>€</b>
+        <b>{i18n.t("m_716f15f096c0")}</b>
       </span>
     </label>
 
     <label>
-      <span>Срок</span>
-      <select bind:value={termMonths} aria-describedby={disclaimerId}>
+      <span>{i18n.t("m_c6f3bfd45614")}</span>
+      <select {@attach i18n.validation} bind:value={termMonths} aria-describedby={disclaimerId}>
         {#each financeTerms as term (term)}
-          <option value={term}>{term} месеца</option>
+          <option value={term}>{i18n.t("m_76866efdecb0", { p0: term })}</option>
         {/each}
       </select>
     </label>
@@ -54,21 +58,21 @@
 
   <dl class="dn-finance-calculator__result" aria-live="polite">
     <div>
-      <dt>Оставаща главница</dt>
-      <dd>{formatVehiclePrice(financedPrincipal)}</dd>
+      <dt>{i18n.t("m_e43dbb778995")}</dt>
+      <dd>{formatPrice(financedPrincipal, i18n.locale)}</dd>
     </div>
     <div>
-      <dt>Главница / месец</dt>
-      <dd>{formatVehiclePrice(principalPerMonth)}</dd>
+      <dt>{i18n.t("m_25604ed836cb")}</dt>
+      <dd>{formatPrice(principalPerMonth, i18n.locale)}</dd>
     </div>
   </dl>
 
   <p id={disclaimerId} class="dn-finance-calculator__disclaimer">
-    Ориентир без лихва, такси и застраховки. Не представлява кредитна оферта.
+    {i18n.t("m_d2b577395c64")}
   </p>
 
-  <a href={resolve(vehicleContactHref(vehicleId, 'leasing'))}>
-    Обсъдете финансиране
+  <a href={i18n.href(resolve(vehicleContactHref(vehicleId, 'leasing')))}>
+    {i18n.t("m_1f0593e69d38")}
   </a>
 </div>
 

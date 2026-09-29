@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { MapPin, Navigation, X } from '@lucide/svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileDrawer from '$lib/components/shared/mobile/MobileDrawer.svelte';
@@ -11,10 +14,10 @@
 	<div class="mh-location-sheet mh-sheet-scope">
 		<header>
 			<div>
-				<span>Локация</span>
-				<strong id="mh-location-title">{daynightSite.locationShort}</strong>
+				<span>{i18n.t('copy.cb9410729d40')}</span>
+				<strong id="mh-location-title">{i18n.dealer('locationShort')}</strong>
 			</div>
-			<button type="button" aria-label="Затвори" onclick={() => (open = false)}>
+			<button type="button" aria-label={i18n.t('copy.1ef1a425356f')} onclick={() => (open = false)}>
 				<X size={19} strokeWidth={2.5} />
 			</button>
 		</header>
@@ -23,18 +26,18 @@
 			<span class="mh-location-sheet__pin">
 				<MapPin size={24} strokeWidth={2.5} />
 			</span>
-			<span>{daynightSite.city}</span>
-			<strong>{daynightSite.location}</strong>
+			<span>{i18n.dealer('city')}</span>
+			<strong>{i18n.dealer('address')}</strong>
 		</div>
 
-		<p>{daynightSite.location}</p>
+		<p>{i18n.dealer('address')}</p>
 
 		<div class="mh-location-sheet__actions">
-			<a class="is-primary" href={mapHref} target="_blank" rel="external noreferrer">
+			<a class="is-primary" href={i18n.href(mapHref)} target="_blank" rel="external noreferrer">
 				<Navigation size={16} strokeWidth={2.4} aria-hidden="true" />
-				Отвори карта
+				{i18n.t('copy.d0f804364b2c')}
 			</a>
-			<a href={phoneHref}>Обади се</a>
+			<a href={i18n.href(phoneHref)}>{i18n.t('copy.d40e5119596a')}</a>
 		</div>
 	</div>
 </MobileDrawer>

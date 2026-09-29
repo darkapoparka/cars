@@ -1,6 +1,12 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { ArrowRight, Calendar, Cog, Fuel, Gauge, Heart, Images } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Calendar from '@lucide/svelte/icons/calendar';
+	import Cog from '@lucide/svelte/icons/cog';
+	import Fuel from '@lucide/svelte/icons/fuel';
+	import Gauge from '@lucide/svelte/icons/gauge';
+	import Heart from '@lucide/svelte/icons/heart';
+	import Images from '@lucide/svelte/icons/images';
 	import type { HomeFiveVehicleCardData } from '$lib/auxero/home-five';
 	import type { VehicleCardCopy } from '$lib/i18n/messages';
 	import { getGarageContext } from '$lib/state/garage.svelte';

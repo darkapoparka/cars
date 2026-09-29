@@ -9,10 +9,12 @@ export function nativeBuildPlan(key) {
     key, root: 'modern', base: '/variant-2',
     environment: { NEXT_PUBLIC_BASE_PATH: '/variant-2' },
     steps: [
-      ['npx', '--yes', '--package=node@22.23.2', '--package=pnpm@11.4.0', '-c',
-        'pnpm install --frozen-lockfile --prod=false'],
-      ['npx', '--yes', '--package=node@22.23.2', '--package=pnpm@11.4.0', '-c',
-        'pnpm --filter @repo/database build && pnpm --filter web build']
+      ['npx', '--yes', '--package=node@22.23.2', '--package=pnpm@11.4.0', '--',
+        'pnpm', 'install', '--frozen-lockfile', '--prod=false'],
+      ['npx', '--yes', '--package=node@22.23.2', '--package=pnpm@11.4.0', '--',
+        'pnpm', '--filter', '@repo/database', 'build'],
+      ['npx', '--yes', '--package=node@22.23.2', '--package=pnpm@11.4.0', '--',
+        'pnpm', '--filter', 'web', 'build']
     ]
   };
   const bases = { 'auto-best': '', import: '/variant-2', carwow: '/variant-3' };
@@ -34,15 +36,16 @@ export function nativeBuildPlan(key) {
 export function runNativeBuild(key, { packageRoot = path.resolve(import.meta.dirname, '..'), run = spawnSync } = {}) {
   const plan = nativeBuildPlan(key);
   const manifest = JSON.parse(fs.readFileSync(path.join(packageRoot, 'dealer.json'), 'utf8'));
-  if (manifest.packaging?.version !== '2' || !manifest.variants?.some(v => v.key === key && v.base === plan.base)) throw new Error('Build service differs from the native package manifest');
+  if (!['2', '3'].includes(manifest.packaging?.version) || !manifest.variants?.some(v => v.key === key && v.base === plan.base)) throw new Error('Build service differs from the native package manifest');
   const environment = { ...process.env, ...plan.environment };
   if (key === 'carwow') delete environment.DAY_PREVIEW_ADAPTER;
   const cwd = path.join(packageRoot, plan.root);
   for (const [program, ...args] of plan.steps) {
     // Arguments come only from the fixed plan above, never from manifest text.
     const windows = process.platform === 'win32' && program !== 'node';
+    const executable = windows ? path.join(path.dirname(process.execPath), `${program}.cmd`) : program;
     const command = windows ? 'cmd.exe' : program === 'node' ? process.execPath : program;
-    const parameters = windows ? ['/d', '/s', '/c', `"${[program, ...args].map(a => `"${a}"`).join(' ')}"`] : args;
+    const parameters = windows ? ['/d', '/s', '/c', `"${[executable, ...args].map(a => `"${a}"`).join(' ')}"`] : args;
     const result = run(command, parameters, {
       cwd, env: environment, stdio: 'inherit', windowsHide: true,
       ...(windows ? { windowsVerbatimArguments: true } : {})

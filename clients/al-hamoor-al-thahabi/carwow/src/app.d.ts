@@ -1,3 +1,4 @@
+import type { LocaleState } from '$lib/locale/core';
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
 import type { Db } from '$lib/server/db/client';
@@ -30,17 +31,20 @@ declare global {
 			errorId?: string;
 		}
 		interface Locals {
+			localeState: LocaleState;
 			db: Db | null;
 			session: SafeAuthSession | null;
 			user: SafeAuthUser | null;
 			staffProfile: ProfileRow | null;
 		}
 		interface PageData {
+			localeState?: LocaleState;
 			session?: null;
 			user?: SafePageUser | null;
 			storefrontInventorySummary?: InventoryCountSummary | null;
 		}
 		interface PageState {
+			blogReturn?: string;
 			inventoryReturn?: string;
 			inventoryScrollY?: number;
 		}

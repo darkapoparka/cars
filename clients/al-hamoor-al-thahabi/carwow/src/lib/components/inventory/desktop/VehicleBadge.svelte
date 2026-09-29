@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 
 	let { vehicle, index }: { vehicle: InventoryListVehicle; index: number } = $props();
@@ -19,7 +21,7 @@
 </script>
 
 {#if badge}
-	<p class="{badgeClass} highlight text-white">{badge}</p>
+	<p class="{badgeClass} highlight text-white">{i18n.spec(badge)}</p>
 {:else}
 	<p></p>
 {/if}

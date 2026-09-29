@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 
@@ -10,13 +13,13 @@
 <div class="h6 card-box__price mb-15">
 	<span class="daynight-card-price__stack">
 		<span class="daynight-card-price__value">{displayPrice}</span>
-		<span class="daynight-card-price__monthly">{vehicle.monthly}</span>
+		<span class="daynight-card-price__monthly">{i18n.spec(vehicle.monthly)}</span>
 	</span>
 	<a
-		href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
+		href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
 		class="daynight-card-price__link"
-		aria-label={`Виж ${vehicle.shortTitle}`}
-		title="Виж автомобила"
+		aria-label={i18n.t('pattern.db06e7c6718a', { v0: vehicle.shortTitle })}
+		title={i18n.t('copy.0e6bbe909038')}
 	>
 		<svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
 			<path d="M4.25 10H15.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />

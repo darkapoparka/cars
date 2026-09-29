@@ -22,7 +22,7 @@
 </script>
 
 <section class="daynight-browse-section py-100">
-	<div class="container">
+	<div class="site-container">
 		<div class="daynight-browse-section__surface">
 			<div class="daynight-brand-strip">
 				<div
@@ -73,7 +73,7 @@
 										{/if}
 									</span>
 									<p class="h5">{brand.name}</p>
-									<p class="text-muted text-sm">{brand.count}</p>
+									<p class="text-sm text-muted">{brand.count}</p>
 								</a>
 							</div>
 						{/each}
@@ -136,7 +136,7 @@
 			display: block;
 			margin-block: 24px;
 		}
-		.daynight-browse-interlude :global(.container) {
+		.daynight-browse-interlude :global(.site-container) {
 			width: 100%;
 			padding-inline: 0;
 		}

@@ -1,4 +1,6 @@
 import { listReturn } from '$data/journeys';
+import { resolveLocale } from '$lib/locale/core';
+import { templateText } from '$lib/locale/messages';
 import { error } from '@sveltejs/kit';
 import { featuredVehicles } from '$data/inventory';
 import type { PageLoad } from './$types';
@@ -8,13 +10,13 @@ export const load: PageLoad = ({ params, url }) => {
   const vehicleId = Number(params.id);
 
   if (!isCanonicalId || !Number.isSafeInteger(vehicleId)) {
-    error(404, 'Автомобилът не е намерен.');
+    error(404, templateText(resolveLocale({ url }).locale, 'Автомобилът не е намерен.'));
   }
 
   const vehicle = featuredVehicles.find((item) => item.id === vehicleId);
 
   if (!vehicle) {
-    error(404, 'Автомобилът не е намерен.');
+    error(404, templateText(resolveLocale({ url }).locale, 'Автомобилът не е намерен.'));
   }
 
   const recommendations = featuredVehicles

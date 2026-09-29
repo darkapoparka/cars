@@ -1,3 +1,4 @@
+import { runtimeConfig } from './runtime-config';
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import type {
@@ -71,12 +72,16 @@ const writeJson = <Collection extends CmsCollectionName>(
 const clone = <Value>(value: Value): Value => JSON.parse(JSON.stringify(value)) as Value;
 
 export const readCmsCollection = <Collection extends CmsCollectionName>(collection: Collection) =>
-	clone(readJson(collection));
+	runtimeConfig().cmsEnabled ? clone(readJson(collection)) : ([] as CmsCollections[Collection]);
 
 export const writeCmsCollection = <Collection extends CmsCollectionName>(
 	collection: Collection,
 	records: CmsCollections[Collection]
-) => writeJson(collection, clone(records));
+) => {
+	if (!runtimeConfig().cmsEnabled)
+		throw new Error('Demonstration CMS storage is disabled in live mode');
+	writeJson(collection, clone(records));
+};
 
 export const resetCmsPersistenceForTests = () => {
 	if (!process.env.VITEST && process.env.NODE_ENV !== 'test') return;
@@ -116,10 +121,10 @@ const isValidUpload = (file: File, kind: CmsUploadKind) => {
 	const extension = extensionFromName(file.name);
 
 	if (kind === 'documents') {
-		return documentExtensions.has(extension) || documentMimeTypes.has(file.type);
+		return documentExtensions.has(extension) && (!file.type || documentMimeTypes.has(file.type));
 	}
 
-	return imageExtensions.has(extension) || imageMimeTypes.has(file.type);
+	return imageExtensions.has(extension) && (!file.type || imageMimeTypes.has(file.type));
 };
 
 const maxUploadSize = (kind: CmsUploadKind) => (kind === 'documents' ? 10 : 8) * 1024 * 1024;
@@ -140,6 +145,7 @@ export const saveCmsUploadFiles = async ({
 	formData: FormData;
 	recordId: string;
 }): Promise<CmsUploadResult> => {
+	if (!runtimeConfig().uploadsEnabled) throw new Error('Uploads are disabled in live mode');
 	const now = new Date().toISOString();
 	const result: CmsUploadResult = {
 		documents: [],

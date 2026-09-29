@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	// Native 1:1 rebuild of the localized /reviews (clients-reviews.html) main
 	// content: breadcrumb + heading + the testimonial grid. The grid is driven by
 	// the same daynight-reviews.ts data the template pipeline used, so each card's
@@ -23,12 +26,12 @@
 <div class="reviews-page">
 	<DesktopYellowRouteHero
 		headingId="reviews-route-title"
-		title="Отзиви от клиенти"
-		copy={daynightReviewDisclosure}
+		title={i18n.t('copy.93b3d88de23a')}
+		copy={i18n.text(daynightReviewDisclosure)}
 		panel="light"
-		primaryLabel="Виж автомобилите"
+		primaryLabel={i18n.t('copy.f20a4411e8d6')}
 		primaryHref="/inventory"
-		secondaryLabel="Свържете се"
+		secondaryLabel={i18n.t('copy.f36755515677')}
 		secondaryHref="/contact"
 	/>
 	<!-- breadcrumb -->
@@ -36,19 +39,19 @@
 		<div class="container">
 			<ul class="breadcrumb">
 				<li>
-					<a href={resolve('/')}>Начало</a>
+					<a href={i18n.href(resolve('/'))}>{i18n.t('copy.4af5d2efadd7')}</a>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Още</span>
+					<span>{i18n.t('copy.bb593f6846bd')}</span>
 				</li>
 				<li class="breadcrumb__icon" aria-hidden="true">
 					<ChevronRight size={14} />
 				</li>
 				<li>
-					<span>Отзиви от клиенти</span>
+					<span>{i18n.t('copy.93b3d88de23a')}</span>
 				</li>
 			</ul>
 		</div>
@@ -58,8 +61,8 @@
 	<!-- New Cars -->
 	<section class="pb-100">
 		<div class="container">
-			<h1>Отзиви от клиенти</h1>
-			<p class="review-disclosure">{daynightReviewDisclosure}</p>
+			<h1>{i18n.t('copy.93b3d88de23a')}</h1>
+			<p class="review-disclosure">{i18n.text(daynightReviewDisclosure)}</p>
 			<div class="tf-spacing-style3"></div>
 
 			<div class="lg-grid-cols-2 md-grid-cols-1 mb-40 grid grid-cols-3 gap-x-30 gap-y-38">
@@ -68,20 +71,20 @@
 						<div
 							class="mb-16 flex items-center gap-4"
 							role="img"
-							aria-label={`${review.rating} от 5 — примерна оценка`}
+							aria-label={i18n.t('pattern.c7408f94a77f', { v0: review.rating })}
 						>
 							{#each Array.from({ length: review.rating }, (_, i) => i) as star (star)}
-								<img src="/assets/icons/star-6.svg" alt="" />
+								<img src={i18n.asset('/assets/icons/star-6.svg')} alt="" />
 							{/each}
 						</div>
 						<p class="testimonior-box--desc mb-16">
-							{review.text}
+							{i18n.text(review.text)}
 						</p>
 						<div class="testimonior-box--user">
-							<img class="testimonior--img" src={review.avatar} alt="" />
+							<img class="testimonior--img" src={i18n.asset(review.avatar)} alt="" />
 							<div class="testimonior-box--user-content">
-								<p class="h5 title">{review.name}</p>
-								<p class="desc">{review.label}</p>
+								<p class="h5 title">{i18n.text(review.name)}</p>
+								<p class="desc">{i18n.text(review.label)}</p>
 							</div>
 						</div>
 					</div>

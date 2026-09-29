@@ -1,4 +1,8 @@
 <script lang="ts">
+	import { routeParts } from '$lib/locale/core';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
 	import { resolve } from '$app/paths';
 	import { goto, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
@@ -13,28 +17,28 @@
 <article class="mobile-inventory-card">
 	<a
 		class="mobile-inventory-card__link"
-		href={resolve('/inventory/[slug]', { slug: vehicle.slug })}
-		aria-label={`Виж ${vehicle.shortTitle} ${vehicle.year}`}
+		href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
+		aria-label={i18n.t('pattern.502146f2983d', { v0: vehicle.shortTitle, v1: vehicle.year })}
 		onclick={(event) => {
 			if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
 				return;
 			event.preventDefault();
 			replaceState('', { ...page.state, inventoryScrollY: window.scrollY });
-			void goto(resolve('/inventory/[slug]', { slug: vehicle.slug }), {
-				state: { inventoryReturn: page.url.pathname + page.url.search }
+			void goto(i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug })), {
+				state: { inventoryReturn: routeParts(page.url.pathname).path + page.url.search }
 			});
 		}}
 	>
 		<div class="mobile-inventory-card__media">
 			<img
-				src={vehicle.image}
+				src={i18n.asset(vehicle.image)}
 				alt={vehicle.shortTitle}
 				loading="lazy"
 				decoding="async"
 				data-daynight-image-fallback
 				use:daynightImageFallback
 			/>
-			<span>{vehicle.badges[0] ?? 'Наличен'}</span>
+			<span>{i18n.spec(vehicle.badges[0] ?? i18n.t('copy.e9ba59c46d94'))}</span>
 		</div>
 		<div class="mobile-inventory-card__body">
 			<div class="mobile-inventory-card__title">
@@ -42,7 +46,9 @@
 				<div class="mobile-inventory-card__price">
 					<span class="mobile-inventory-card__price-stack">
 						<strong>{vehicle.priceEur}</strong>
-						{#if vehicle.monthly !== 'Финансиране по запитване'}<span>{vehicle.monthly}</span>{/if}
+						{#if vehicle.monthly !== 'Финансиране по запитване'}<span
+								>{i18n.spec(vehicle.monthly)}</span
+							>{/if}
 					</span>
 					<span class="mobile-inventory-card__arrow" aria-hidden="true">
 						<svg viewBox="0 0 20 20" fill="none">
@@ -63,11 +69,11 @@
 					</span>
 				</div>
 			</div>
-			<p>{vehicle.conditionLine}</p>
-			<ul aria-label="Основни данни">
+			<p>{i18n.spec(vehicle.conditionLine)}</p>
+			<ul aria-label={i18n.t('copy.e802379d67a7')}>
 				<li>
 					<DayNightSpecIcon name="mileage" size={15} />
-					{vehicle.mileage}
+					{i18n.distance(vehicle.mileage)}
 				</li>
 				<li>
 					<DayNightSpecIcon name="year" size={15} />
@@ -75,11 +81,11 @@
 				</li>
 				<li>
 					<DayNightSpecIcon name="fuel" size={15} />
-					{shortFuel(vehicle.fuel)}
+					{shortFuel(vehicle.fuel, i18n.locale)}
 				</li>
 				<li>
 					<DayNightSpecIcon name="transmission" size={15} />
-					{vehicle.transmission}
+					{i18n.spec(vehicle.transmission)}
 				</li>
 			</ul>
 		</div>

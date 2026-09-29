@@ -1,5 +1,16 @@
 <script lang="ts">
-	import { ArrowRight } from '@lucide/svelte';
+	import { getI18n } from '$lib/locale/context';
+	const i18n = getI18n();
+
+	import {
+		ArrowRight,
+		ScanSearch,
+		FileCheck2,
+		Wallet,
+		ArrowLeftRight,
+		Search,
+		Truck
+	} from '@lucide/svelte';
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
@@ -13,43 +24,49 @@
 	const services = [
 		{
 			id: 'inspection',
-			title: 'Проверка преди покупка',
-			summary: 'Организираме преглед на автомобила, история и реално състояние преди решение.',
+			icon: ScanSearch,
+			title: i18n.t('copy.5614ec1dae85'),
+			summary: i18n.t('copy.d3fa00dce963'),
 			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'documents',
-			title: 'Документи и регистрация',
-			summary: 'Съдействаме с талони, регистрация, застраховки и нужните стъпки след сделка.',
+			icon: FileCheck2,
+			title: i18n.t('copy.f1da90a0a436'),
+			summary: i18n.t('copy.a612933622e4'),
 			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'financing',
-			title: 'Финансиране',
-			summary: 'Помагаме да сравните варианти за финансиране и месечна вноска.',
+			icon: Wallet,
+			title: i18n.t('copy.6e55eeb12cce'),
+			summary: i18n.t('copy.4bb935a12b5e'),
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'trade-in',
-			title: 'Бартер и оценка',
-			summary: 'Оценяваме текущия автомобил и го включваме като част от покупката.',
+			icon: ArrowLeftRight,
+			title: i18n.t('copy.d7a5831e8826'),
+			summary: i18n.t('copy.3396cccc2803'),
 			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'sourcing',
-			title: 'Търсене по задание',
-			summary: 'Уточняваме марка, бюджет и оборудване, после търсим подходящ автомобил.',
+			icon: Search,
+			title: i18n.t('copy.48ebd7529fe3'),
+			summary: i18n.t('copy.a16ad0426974'),
 			image: '/assets/images/services/service-card-sourcing-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		},
 		{
 			id: 'delivery',
-			title: 'Доставка и предаване',
-			summary: 'Координираме транспорт, предаване и последните практически детайли.',
+			icon: Truck,
+			title: i18n.t('copy.1f9c7e5286a7'),
+			summary: i18n.t('copy.0e290359d369'),
 			image: '/assets/images/services/service-card-delivery-daynight-v2.webp',
 			imagePosition: 'center bottom'
 		}
@@ -92,7 +109,7 @@
 
 		event.preventDefault();
 		selectedService = id;
-		void goto(resolve(serviceRequestPath(id)), { keepFocus: true });
+		void goto(i18n.href(resolve(serviceRequestPath(id))), { keepFocus: true });
 	}
 
 	function buildServiceNotes() {
@@ -140,8 +157,7 @@
 
 		serviceSubmitState = 'error';
 		serviceSubmitMessage =
-			result.error ||
-			`Не успяхме да изпратим запитването. Моля, обадете се на ${daynightSite.phoneLabel}.`;
+			result.error || i18n.t('pattern.092b5d19f038', { v0: daynightSite.phoneLabel });
 	}
 </script>
 
@@ -149,40 +165,48 @@
 	id="main-content"
 	tabindex="-1"
 	class="desktop-services"
-	aria-label={`Услуги ${daynightSite.shortName}`}
+	aria-label={i18n.t('pattern.eb6cae93a699', { v0: daynightSite.shortName })}
 >
 	<DesktopYellowRouteHero
 		headingId="daynight-services-title"
-		title="Услуги за твоя автомобил"
+		title={i18n.t('copy.d700ec2758ef')}
 		panel="light"
 		compact
 	>
 		<div class="services-chooser">
-			<h2 id="services-choice-title">Какво ти е необходимо?</h2>
+			<h2 id="services-choice-title">{i18n.t('copy.c4eb9ace64ee')}</h2>
 			<nav class="services-shortcuts" aria-labelledby="services-choice-title">
 				{#each services as service (service.id)}
 					<a
-						href={resolve(serviceRequestPath(service.id))}
-						onclick={(event) => chooseService(service.id, event)}>{service.title}</a
+						href={i18n.href(resolve(serviceRequestPath(service.id)))}
+						onclick={(event) => chooseService(service.id, event)}
 					>
+						<service.icon size={22} strokeWidth={1.7} aria-hidden="true" />
+						<span>{i18n.text(service.title)}</span>
+						<ArrowRight size={16} class="services-shortcut-arrow" aria-hidden="true" />
+					</a>
 				{/each}
 			</nav>
 			<p class="services-help">
-				Не знаеш коя услуга ти трябва? <a href={daynightSite.phoneHref}>Обади ни се</a>
+				{i18n.t('copy.bade5f3f4082')}
+				<a href={i18n.href(daynightSite.phoneHref)}>{i18n.t('copy.2384a5f73657')}</a>
 			</p>
 		</div>
 	</DesktopYellowRouteHero>
 
 	<section class="desktop-services-offers">
 		<div class="container">
-			<h2 class="desktop-services-sr-only">Конкретни услуги от {daynightSite.shortName}</h2>
+			<h2 class="desktop-services-sr-only">
+				{i18n.t('copy.397d7e3473ba')}
+				{daynightSite.shortName}
+			</h2>
 
 			<div class="desktop-services-grid">
 				{#each services as service (service.id)}
 					<a
 						class="desktop-services-card"
-						href={resolve(serviceRequestPath(service.id))}
-						aria-label={`Заяви услуга: ${service.title}`}
+						href={i18n.href(resolve(serviceRequestPath(service.id)))}
+						aria-label={i18n.t('pattern.98f83adf5270', { v0: i18n.text(service.title) })}
 						onclick={(event) => chooseService(service.id, event)}
 					>
 						<span
@@ -190,13 +214,18 @@
 							aria-hidden="true"
 							style:--service-card-position={service.imagePosition}
 						>
-							<img src={resolve(service.image)} alt="" aria-hidden="true" loading="lazy" />
+							<img
+								src={i18n.asset(resolve(service.image))}
+								alt=""
+								aria-hidden="true"
+								loading="lazy"
+							/>
 						</span>
 						<div class="desktop-services-card__content">
-							<h3>{service.title}</h3>
-							<p>{service.summary}</p>
+							<h3>{i18n.text(service.title)}</h3>
+							<p>{i18n.text(service.summary)}</p>
 							<span class="desktop-services-card__cta" aria-hidden="true">
-								<span>Избери услугата</span><ArrowRight size={18} />
+								<span>{i18n.t('copy.b3b1d6656697')}</span><ArrowRight size={18} />
 							</span>
 						</div>
 					</a>
@@ -208,10 +237,9 @@
 	<section class="desktop-services-request" id="services-request">
 		<div class="desktop-services-request__shell container">
 			<div class="desktop-services-request__copy">
-				<h2>Да уточним<br />детайлите.</h2>
+				<h2>{i18n.t('copy.9042389747b0')}<br />{i18n.t('copy.6a83ad41f94f')}</h2>
 				<p>
-					Остави телефон и ни разкажи за автомобила. Ще се свържем с теб, за да обсъдим услугата,
-					документите и удобен срок.
+					{i18n.t('copy.09f7bdbf30aa')}
 				</p>
 			</div>
 
@@ -223,50 +251,70 @@
 			>
 				<input type="hidden" name="intent" value="services" />
 				<label class="desktop-services-honeypot" aria-hidden="true">
-					<span>Компания</span>
-					<input type="text" tabindex="-1" autocomplete="off" bind:value={companyWebsite} />
+					<span>{i18n.t('copy.64d92044a1ff')}</span>
+					<input
+						{@attach i18n.validation}
+						type="text"
+						tabindex="-1"
+						autocomplete="off"
+						bind:value={companyWebsite}
+					/>
 				</label>
 
 				<div class="desktop-services-form__grid">
 					<label class="desktop-services-field">
-						<span>Име</span>
-						<input name="name" type="text" bind:value={name} placeholder="Име и фамилия" />
+						<span>{i18n.t('copy.7848bd195104')}</span>
+						<input
+							{@attach i18n.validation}
+							name="name"
+							type="text"
+							bind:value={name}
+							placeholder={i18n.t('copy.a3203bcb4cff')}
+						/>
 					</label>
 					<label class="desktop-services-field">
-						<span>Телефон</span>
+						<span>{i18n.t('copy.822f9fd9ba2d')}</span>
 						<input
+							{@attach i18n.validation}
 							name="phone"
 							type="tel"
 							bind:value={phone}
-							placeholder="Телефон за връзка"
+							placeholder={i18n.t('copy.b4a2956e4ac2')}
 							autocomplete="tel"
 							required
 						/>
 					</label>
 					<label class="desktop-services-field" for="desktop-services-service">
-						<span>Услуга</span>
-						<select id="desktop-services-service" name="service" bind:value={selectedService}>
+						<span>{i18n.t('copy.629f17f3b66f')}</span>
+						<select
+							{@attach i18n.validation}
+							id="desktop-services-service"
+							name="service"
+							bind:value={selectedService}
+						>
 							{#each services as service (service.id)}
-								<option value={service.id}>{service.title}</option>
+								<option value={service.id}>{i18n.text(service.title)}</option>
 							{/each}
 						</select>
 					</label>
 					<label class="desktop-services-field">
-						<span>Автомобил</span>
+						<span>{i18n.t('copy.e549eadf1b38')}</span>
 						<input
+							{@attach i18n.validation}
 							name="vehicle"
 							type="text"
 							bind:value={vehicle}
-							placeholder="Марка, модел или линк към обява"
+							placeholder={i18n.t('copy.7558220498f7')}
 						/>
 					</label>
 					<label class="desktop-services-field desktop-services-field--wide">
-						<span>Съобщение</span>
+						<span>{i18n.t('copy.5afae14709c7')}</span>
 						<textarea
+							{@attach i18n.validation}
 							name="message"
 							bind:value={message}
 							rows="2"
-							placeholder="Какво искате да уточним?"
+							placeholder={i18n.t('copy.c72dac4e6b0f')}
 						></textarea>
 					</label>
 				</div>
@@ -278,7 +326,7 @@
 						role={serviceSubmitState === 'error' ? 'alert' : 'status'}
 						aria-live="polite"
 					>
-						{serviceSubmitMessage}
+						{i18n.text(serviceSubmitMessage)}
 					</p>
 				{/if}
 
@@ -287,7 +335,11 @@
 					type="submit"
 					disabled={serviceSubmitState === 'submitting'}
 				>
-					<span>{serviceSubmitState === 'submitting' ? 'Изпращаме...' : 'Изпрати запитване'}</span>
+					<span
+						>{serviceSubmitState === 'submitting'
+							? i18n.t('copy.acfcd771108c')
+							: i18n.t('copy.8d4343e23a1b')}</span
+					>
 				</button>
 			</form>
 		</div>
@@ -298,20 +350,32 @@
 	.services-shortcuts {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-auto-rows: 1fr;
 		gap: 10px;
 		margin: 18px 0;
 	}
 	.services-shortcuts a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 44px;
-		padding: 8px;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		align-content: space-between;
+		gap: 12px;
+		min-height: 116px;
+		padding: 16px;
 		border: 1px solid var(--desktop-control-border);
 		border-radius: 8px;
-		background: var(--desktop-field);
+		background: #fff;
 		color: var(--sa-ink);
 		font: var(--sa-weight-medium) var(--sa-text-caption)/1.35 var(--sa-font);
+		text-align: left;
+	}
+	.services-shortcuts a > :global(svg:first-child) {
+		grid-column: 1 / -1;
+	}
+	.services-shortcuts a span {
+		min-height: 2.7em;
+	}
+	.services-shortcuts a > :global(.services-shortcut-arrow) {
+		align-self: end;
 	}
 	.services-shortcuts a:hover {
 		background: var(--desktop-secondary-hover);
@@ -347,7 +411,7 @@
 	}
 	.services-chooser {
 		padding: 24px;
-		text-align: center;
+		text-align: left;
 	}
 	.desktop-services .services-chooser h2 {
 		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);

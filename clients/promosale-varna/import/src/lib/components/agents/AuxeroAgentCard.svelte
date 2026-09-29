@@ -34,12 +34,12 @@
 				class="h5 font-weight-600 sale-agent-title"
 				href={resolve('/agents/[slug]', { slug: card.slug })}>{card.name}</a
 			>
-			<p class="text-secondary text-sm">{card.title}</p>
+			<p class="text-sm text-secondary">{card.title}</p>
 			{#if card.management}
-				<p class="text-secondary mt-4 text-sm" data-daynight-agent-status={card.management.status}>
+				<p class="mt-4 text-sm text-secondary" data-daynight-agent-status={card.management.status}>
 					{card.management.statusText}
 				</p>
-				<p class="text-secondary mt-4 text-sm" data-daynight-agent-note={card.slug}>
+				<p class="mt-4 text-sm text-secondary" data-daynight-agent-note={card.slug}>
 					{card.management.note}
 				</p>
 			{/if}

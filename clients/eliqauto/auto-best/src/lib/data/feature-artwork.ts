@@ -21,3 +21,11 @@ export const editorialArtwork = {
   import: { src: '/assets/images/template/menu-editorial-import-v1.webp', width: 1536, height: 1024, crop: [0, 0, 1536, 1024] },
   finance: { src: '/assets/images/template/menu-editorial-leasing-v1.webp', width: 1536, height: 1024, crop: [0, 0, 1536, 1024] },
 } as const satisfies Record<string, FeatureArtwork>;
+
+// Crop transparent canvas padding so mobile actions share a visible baseline and width.
+export const mobileActionArtwork = {
+  collection: { src: leadSite.artwork.home.collection, width: 1200, height: 668, crop: [20, 121, 1153, 431] },
+  sell: { src: leadSite.artwork.home.sell, width: 1200, height: 438, crop: [121, 8, 1040, 413] },
+  import: { src: leadSite.artwork.home.import, width: 1200, height: 450, crop: [88, 27, 1020, 388] },
+  finance: { src: '/assets/images/template/mobile-leasing-card-v4.webp', width: 720, height: 240, crop: [73, 9, 573, 215] },
+} as const satisfies Record<string, FeatureArtwork>;

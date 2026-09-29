@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "dealer": "the-dealers-point",
+  "profile": "auto-best/src/lib/data/dealer-profile.json",
+  "profileSha256": "908e128e3076c9fcd782c9150a312f00c999588aed13180a5d903ab69eb0dcc3",
+  "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+  "vehicles": 10,
+  "currency": "AED",
+  "observedAt": "2026-09-09",
+  "assets": [
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+      "output": "public/dealer-app/logo-light-391e784b3ed422b42763.webp",
+      "sha256": "391e784b3ed422b42763a9417b406e6d8433b625d0149c68464659145c363cb8",
+      "role": "logo-light"
+    },
+    {
+      "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+      "output": "public/dealer-app/logo-dark-bf2b5687015daf0fe982.webp",
+      "sha256": "bf2b5687015daf0fe982ca89f4116b25e4064ce13e52b9c1dbf6fa02c7f0b4d0",
+      "role": "logo-dark"
+    }
+  ],
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
+    "path": "templates/app",
+    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
+    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
+  },
+  "generatedAt": "2026-09-28T04:58:11.266Z",
+  "policy": {
+    "selector": "shared-v2-with-local-fallback",
+    "benefits": "clearly-labelled-proposal-examples",
+    "missingPhotos": "neutral-template-artwork-not-invented-stock"
+  }
+}

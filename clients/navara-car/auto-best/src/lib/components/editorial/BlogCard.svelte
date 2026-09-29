@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { blogPostTitle, blogPostSummary } from '$data/editorial';
+  import { getI18n } from '$lib/locale/context';
+  const i18n = getI18n();
+
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
   import { brand } from '$config/brand';
@@ -8,7 +12,7 @@
 </script>
 
 <article id={`article-${post.id}`} class="dn-blog-card">
-  <a class="dn-blog-card__link" href={withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo)} aria-label={post.title}>
+  <a class="dn-blog-card__link" href={i18n.href(withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo))} aria-label={blogPostTitle(post, i18n.locale)}>
     <span class="dn-blog-card__media">
       <img
         src={post.image}
@@ -23,10 +27,10 @@
     <span class="dn-blog-card__body">
       <span class="dn-blog-card__meta">
         <span class="dn-blog-card__brand">{brand.name}</span>
-        <span class="dn-blog-card__category">{post.category}</span>
+        <span class="dn-blog-card__category">{i18n.text(post.category)}</span>
       </span>
-      <h2>{post.title}</h2>
-      <span class="dn-blog-card__text">{post.text}</span>
+      <h2>{blogPostTitle(post, i18n.locale)}</h2>
+      <span class="dn-blog-card__text">{blogPostSummary(post, i18n.locale)}</span>
     </span>
   </a>
 </article>
@@ -49,6 +53,8 @@
   }
 
   .dn-blog-card__link {
+    position: relative;
+    border-radius: inherit;
     display: flex;
     height: 100%;
     flex-direction: column;
@@ -56,8 +62,18 @@
   }
 
   .dn-blog-card__link:focus-visible {
-    outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 28%);
+    outline: 3px solid var(--dn-focus);
     outline-offset: -3px;
+  }
+
+  .dn-blog-card__link:focus-visible::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border: 3px solid var(--dn-focus);
+    border-radius: 15px;
+    pointer-events: none;
+    content: '';
   }
 
   .dn-blog-card__media {
@@ -90,12 +106,12 @@
     align-items: center;
     color: #4f5662;
     font-size: var(--dn-text-meta);
-    font-weight: var(--dn-weight-medium);
+    font-weight: var(--dn-weight-regular);
     line-height: var(--dn-leading-meta);
   }
 
   .dn-blog-card__brand {
-    font-weight: var(--dn-weight-semibold);
+    font-weight: var(--dn-weight-regular);
   }
 
   .dn-blog-card__category {
@@ -138,6 +154,11 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     line-clamp: 2;
+  }
+
+  @media (min-width: 992px) {
+    .dn-blog-card__body { padding: var(--dn-space-5); }
+    h2 { font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); }
   }
 
   @media (max-width: 767px) {
