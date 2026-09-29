@@ -40,6 +40,13 @@
     display: contents;
   }
 
+  @media (min-width: 768px) and (max-width: 991px) {
+    .dn-home-page {
+      --dn-route-hero-height: 560px;
+      --dn-route-hero-control-top: 280px;
+    }
+  }
+
   @media (min-width: 992px) {
     .dn-home-page :global(.dn-home-content-section) {
       background: var(--dn-surface-canvas);

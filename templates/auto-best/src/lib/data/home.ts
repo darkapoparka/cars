@@ -32,14 +32,14 @@ const brandArtwork = [
   { label: 'BMW', image: '/assets/images/partner/parner12.png', width: 140, height: 80, bounds: [33, 3, 107, 77] }
 ] as const;
 
-// Template discovery is independent of the current sample inventory.
+// Browse shortcuts follow the current inventory; artwork remains available for future stock.
 const enabledBodyTypes = new Set(['Sedan', 'Hatchback', 'Pickup Truck', 'SUV', 'Wagon', 'Convertible', 'Coupe', 'Sportback']);
 export const bodyTypes = bodyArtwork.filter(item => enabledBodyTypes.has(item.query)).map(item => ({
   ...item, label: bodyLabel(item.query), count: featuredVehicles.filter(vehicle => vehicle.body === item.query).length
-}));
+})).filter(item => item.count > 0);
 export const brands = brandArtwork.map(item => ({
   ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length
-}));
+})).filter(item => item.count > 0);
 
 const editorialSummaries: Record<number, string> = {
   1: 'История, документи и техническо състояние.',

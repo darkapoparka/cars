@@ -35,7 +35,10 @@
 
 <section class="dn-listing-results" data-slot="listing-results" aria-labelledby="listing-results-title">
   <div class="container">
-    <h1 id="listing-results-title" class="dn-sr-only dn-listing-results__title">{i18n.t("m_065a8285dddf")}</h1>
+    <div class="dn-listing-results__intro">
+      <h1 id="listing-results-title" class="dn-listing-results__title">{i18n.t("m_065a8285dddf")}</h1>
+      <span>{vehicles.length} {vehicles.length === 1 ? i18n.t("m_2b2961a431b2") : i18n.t("m_1f58b1e965af")}</span>
+    </div>
     <div class="dn-listing-results__heading">
       <div class="dn-listing-results__tools">
         <button class="dn-listing-results__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
@@ -77,7 +80,7 @@
 
 <style>
   /* The desktop hero owns the page heading; mobile omits that hero. */
-  .dn-listing-results__title { display: none; }
+  .dn-listing-results__intro { display: none; }
   .dn-listing-results__tools {
     display: inline-flex;
     align-items: center;
@@ -240,7 +243,21 @@
   }
 
   @media (max-width: 767px) {
-    .dn-listing-results__title { display: block; }
+    .dn-listing-results__intro {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0 18px;
+    }
+    .dn-listing-results__title {
+      margin: 0;
+      color: var(--dn-ink-strong);
+      font-size: var(--dn-text-subheading);
+      font-weight: var(--dn-weight-semibold);
+      line-height: var(--dn-leading-heading);
+    }
+    .dn-listing-results__intro > span { color: #626a75; font-size: var(--dn-text-meta); white-space: nowrap; }
     .dn-listing-results {
       padding: 0 0 var(--dn-mobile-page-end);
     }

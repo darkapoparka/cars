@@ -42,12 +42,21 @@
             <strong>{brand.label}</strong>
           </a>
         {/each}
+      {#if brands.length > mobileBrands.size}
       <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="brands-grid" onclick={() => expanded = !expanded}>
         <span class="dn-brand-all-glyph" aria-hidden="true">
           <span class="dn-brand-all-glyph__accent"></span><span></span><span></span><span></span>
         </span>
         <strong>{expanded ? i18n.t("m_211232676e95") : i18n.t("m_28c0e12158d9")}</strong>
       </button>
+      {:else}
+      <a class="dn-discovery-toggle" href={i18n.href(resolve('/listing-grid'))}>
+        <span class="dn-brand-all-glyph" aria-hidden="true">
+          <span class="dn-brand-all-glyph__accent"></span><span></span><span></span><span></span>
+        </span>
+        <strong>{i18n.t("m_30a64216eaea")}</strong>
+      </a>
+      {/if}
       </div>
 
     </div>

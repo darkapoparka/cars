@@ -15,7 +15,6 @@
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
   import { brand } from '$config/brand';
-  import { leadSite } from '$config/lead-site';
   import { formatVehiclePrice, type Vehicle } from '$data/inventory';
   import type { PageData } from './$types';
 
@@ -180,7 +179,12 @@
                 </div>
               {/if}
               <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
-                <img class="dn-detail-finance-banner" src={leadSite.artwork.pdp.finance} alt={i18n.t("m_cab8c52c9be4")} width="450" height="150" loading="lazy" decoding="async" />
+                <span class="dn-detail-finance-trigger__icon"><Icon name="file-invoice" size={24} /></span>
+                <span class="dn-detail-finance-trigger__copy">
+                  <strong>{i18n.t("m_b231bc0b36a1")}</strong>
+                  <small>{i18n.t("m_cab8c52c9be4")}</small>
+                </span>
+                <Icon name="arrow-right" size={20} />
               </button>
             </section>
 
@@ -214,7 +218,10 @@
 
             <section class="dn-detail-card dn-detail-dealer" aria-label={brand.name}>
               <a class="dn-detail-dealer-banner" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
-                <img src={leadSite.artwork.pdp.seller} alt={templateMessage(i18n, "{p0} — contact the showroom to confirm vehicle details.", { p0: brand.name })} width="360" height="270" loading="lazy" decoding="async" />
+                <img src={brand.logoOnDark} alt={brand.name} width="180" height="64" loading="lazy" decoding="async" />
+                <strong>{i18n.t("m_fa39abdd21f5")}</strong>
+                <span>{brand.phone}</span>
+                <span class="dn-detail-dealer-banner__action">{i18n.t("m_be4b2e6f02d6")} <Icon name="arrow-right" size={18} /></span>
               </a>
             </section>
 

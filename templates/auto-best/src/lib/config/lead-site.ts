@@ -43,9 +43,9 @@ type LeadSiteConfig = {
     vehicleCutouts: Record<VehicleArtworkKey, SiteAssetPath>;
     heroVehiclePairs: Record<HeroVehiclePair, readonly [VehicleArtworkKey, VehicleArtworkKey]>;
     mobileHero: { car: SiteAssetPath; sell: SiteAssetPath; import: SiteAssetPath; home: SiteAssetPath };
-    inventoryDemo: Record<'stock01' | 'stock02' | 'stock03' | 'stock04' | 'stock05' | 'stock06', SiteAssetPath>;
+    inventoryDemo: Record<'stock01' | 'stock02' | 'stock03' | 'stock04' | 'stock06', SiteAssetPath>;
     videos: Record<'urus' | 'panamera' | 'gclass', SiteAssetPath>;
-    pdp: { importGuide: SiteAssetPath; finance: SiteAssetPath; seller: SiteAssetPath };
+    pdp: { importGuide: SiteAssetPath };
   };
 };
 
@@ -166,7 +166,6 @@ export const leadSite = {
       stock02: '/assets/images/lead/day-night-stock-02.webp',
       stock03: '/assets/images/lead/day-night-stock-03.webp',
       stock04: '/assets/images/lead/day-night-stock-04.webp',
-      stock05: '/assets/images/lead/day-night-stock-05.webp',
       stock06: '/assets/images/lead/day-night-stock-06.webp'
     },
     videos: {
@@ -175,9 +174,7 @@ export const leadSite = {
       gclass: '/assets/images/lead/day-night-video-g-class.jpg'
     },
     pdp: {
-      importGuide: '/assets/images/lead/import-how-generated-v1.webp',
-      finance: '/assets/images/lead/pdp-finance-clean-mobile.webp',
-      seller: '/assets/images/lead/pdp-seller-clean-mobile.webp'
+      importGuide: '/assets/images/lead/import-how-generated-v1.webp'
     }
   }
 } as const satisfies LeadSiteConfig;
