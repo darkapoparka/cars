@@ -17,12 +17,13 @@ export const mobileVehicleCardInfoClassName =
 export const mobileVehicleCardFactsClassName =
   "col-span-2 col-start-1 row-start-2 min-w-0 px-3 pb-3 lg:p-0";
 
+/** Reserve the secondary-price line even when a monthly estimate is absent. */
 export const mobileVehicleCardPriceSummaryClassName =
-  "flex min-w-0 flex-col gap-0.5 lg:block";
+  "grid min-w-0 grid-rows-[auto_minmax(var(--text-micro--line-height),auto)] gap-0.5 lg:block";
 
 /** Keep inventory and financing cards on the same mobile type hierarchy. */
 export const mobileVehicleCardTitleClassName =
-  "line-clamp-2 font-medium text-card-title text-foreground tracking-normal";
+  "line-clamp-2 min-h-[2lh] font-medium text-card-title text-foreground tracking-normal lg:min-h-0";
 
 export const mobileVehicleCardPriceClassName =
   "font-semibold text-price text-foreground tabular-nums tracking-normal";

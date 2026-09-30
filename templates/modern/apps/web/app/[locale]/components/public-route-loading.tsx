@@ -21,6 +21,7 @@ import {
   mobileVehicleCardInfoClassName,
   mobileVehicleCardMediaClassName,
   mobileVehicleCardPriceSummaryClassName,
+  mobileVehicleCardTitleClassName,
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import { locale as getRootLocale } from "next/root-params";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
@@ -275,18 +276,21 @@ export const PublicRouteLoading = async ({
               <div className={mobileVehicleCardMediaClassName} />
               <div className={mobileVehicleCardContentClassName}>
                 <div className={mobileVehicleCardInfoClassName}>
-                  <div className="h-5 w-4/5 rounded bg-secondary" />
+                  <div className={mobileVehicleCardTitleClassName}>
+                    <div className="h-4 w-4/5 rounded bg-secondary" />
+                    <div className="mt-1 h-4 w-3/5 rounded bg-secondary" />
+                  </div>
                   <div className={mobileVehicleCardPriceSummaryClassName}>
                     <div className="h-6 w-3/4 rounded bg-secondary" />
                     <div className="h-3 w-4/5 rounded bg-secondary" />
                   </div>
                 </div>
                 <div className={mobileVehicleCardFactsClassName}>
-                  <div className="flex flex-wrap gap-2">
-                    <div className="h-4 w-8 rounded bg-secondary" />
-                    <div className="h-4 w-16 rounded bg-secondary" />
-                    <div className="h-4 w-10 rounded bg-secondary" />
-                    <div className="h-4 w-16 rounded bg-secondary" />
+                  <div className="flex flex-wrap gap-1">
+                    <div className="h-6 w-8 rounded-md bg-secondary" />
+                    <div className="h-6 w-16 rounded-md bg-secondary" />
+                    <div className="h-6 w-10 rounded-md bg-secondary" />
+                    <div className="h-6 w-16 rounded-md bg-secondary" />
                   </div>
                 </div>
               </div>
