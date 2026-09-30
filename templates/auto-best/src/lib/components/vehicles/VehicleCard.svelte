@@ -28,6 +28,12 @@
   const priceLabel = $derived(formatVehiclePriceLabel(vehicle.priceEur, i18n.locale));
 </script>
 
+{#snippet amount()}
+  {#if showPrice}
+    <div class="dn-vehicle-card__amount">{priceLabel}</div>
+  {/if}
+{/snippet}
+
 <article id={`vehicle-${vehicle.id}`} data-variant={layout} class:dn-vehicle-card--listing={layout === 'listing'} class:dn-vehicle-card--showcase={layout === 'showcase'} class="dn-vehicle-card">
   <a class="dn-vehicle-card__link" href={i18n.href(withListReturn(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }), returnTo))} aria-label={i18n.t("m_7e95f8ea5711", { p0: vehicle.title })}>
     <div class="dn-vehicle-card__visual">
@@ -42,7 +48,7 @@
       <img
         src={vehicle.image}
         srcset={imageSrcset(vehicle.image)}
-        sizes={layout === 'listing' ? '(max-width: 767px) calc(100vw - 24px), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
+        sizes={layout === 'listing' ? '(max-width: 767px) calc((100vw - 48px) * .4), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
         alt={vehicle.title}
         loading={priority ? 'eager' : 'lazy'}
         fetchpriority={priority ? 'high' : 'auto'}
@@ -62,13 +68,16 @@
           <h3 class="dn-vehicle-card__name" title={vehicle.title}>{modelTitle}</h3>
         {/if}
       </div>
+      {#if layout === 'listing'}
+        {@render amount()}
+      {/if}
       {#if layout === 'showcase'}
         <p class="dn-vehicle-card__summary">{vehicle.year} · {specificationLabel(vehicle.fuel, i18n.locale)}</p>
       {/if}
       {#if layout === 'listing'}
         <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
-          <li class="dn-vehicle-card__fact-group">
-            <span class="dn-vehicle-card__fact">{vehicle.year}</span>
+          <li class="dn-vehicle-card__fact-group dn-vehicle-card__fact-group--history">
+            <span class="dn-vehicle-card__fact dn-vehicle-card__fact--year">{vehicle.year}</span>
             <span class="dn-vehicle-card__fact">{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
           </li>
           <li class="dn-vehicle-card__fact-group">
@@ -91,8 +100,8 @@
       </div>
       {/if}
 
-      {#if showPrice}
-        <div class="dn-vehicle-card__amount">{priceLabel}</div>
+      {#if layout !== 'listing'}
+        {@render amount()}
       {/if}
     </div>
   </a>
@@ -302,6 +311,8 @@
     font-variant-numeric: tabular-nums;
   }
 
+  .dn-vehicle-card--listing .dn-vehicle-card__amount { order: 1; }
+
   @media (min-width: 992px) {
     .dn-vehicle-card {
       box-shadow: var(--dn-card-shadow);
@@ -355,13 +366,17 @@
     .dn-vehicle-card--listing .dn-vehicle-card__link {
       display: grid;
       min-height: 0;
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      align-items: center;
+      gap: var(--dn-space-2);
+      padding: var(--dn-space-2);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__visual {
       height: auto;
       min-height: 0;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 3 / 2;
+      border-radius: var(--dn-radius-sm);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__image {
@@ -377,10 +392,10 @@
       display: grid;
       min-width: 0;
       align-content: start;
-      grid-template-columns: minmax(0, 1fr) auto;
-      grid-template-areas: "identity price" "facts facts";
-      gap: var(--dn-space-2);
-      padding: var(--dn-space-2) var(--dn-space-3);
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: "identity" "price" "facts";
+      gap: var(--dn-space-1);
+      padding: 0;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__identity {
@@ -394,9 +409,9 @@
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
       grid-area: facts;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: var(--dn-space-half);
+      flex-direction: column;
+      align-items: start;
+      gap: var(--dn-space-1);
       margin: 0;
       padding: 0;
       list-style: none;
@@ -407,8 +422,7 @@
       min-width: 0;
       max-width: 100%;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: var(--dn-space-half);
+      gap: var(--dn-space-2);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__fact {
@@ -418,7 +432,7 @@
       flex: 0 1 auto;
       align-items: center;
       justify-content: center;
-      padding: var(--dn-space-half) var(--dn-space-1);
+      padding: var(--dn-space-half) calc(var(--dn-space-1) + var(--dn-space-half));
       overflow: visible;
       border: 0;
       border-radius: var(--dn-pill);
@@ -431,6 +445,19 @@
       text-align: center;
       white-space: normal;
       overflow-wrap: anywhere;
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__fact-group--history .dn-vehicle-card__fact {
+      padding: 0;
+      background: transparent;
+      color: var(--dn-muted);
+      font-weight: var(--dn-weight-regular);
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__fact-group--history .dn-vehicle-card__fact--year {
+      padding-inline-end: var(--dn-space-2);
+      border-inline-end: 1px solid var(--dn-line);
+      border-radius: 0;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__name {
@@ -452,21 +479,20 @@
 
     .dn-vehicle-card--listing .dn-vehicle-card__amount {
       grid-area: price;
-      align-self: center;
+      align-self: start;
       margin-top: 0;
       padding-top: 0;
       color: var(--dn-ink);
       font-size: var(--dn-text-card);
       font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-control);
-      text-align: end;
+      text-align: start;
       overflow-wrap: anywhere;
     }
 
     @container (max-width: 16rem) {
-      .dn-vehicle-card--listing .dn-vehicle-card__content {
+      .dn-vehicle-card--listing .dn-vehicle-card__link {
         grid-template-columns: minmax(0, 1fr);
-        grid-template-areas: "identity" "price" "facts";
       }
 
       .dn-vehicle-card--listing .dn-vehicle-card__make {

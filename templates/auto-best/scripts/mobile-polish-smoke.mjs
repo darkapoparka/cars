@@ -112,14 +112,20 @@ try {
             clipped: el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1
           })));
           assert(titles.length > 0);
-          assert(titles.every(t => t.text && t.whiteSpace === 'normal' && !t.clipped), 'Mobile listing titles wrap completely within the photo-first cards');
+          assert(titles.every(t => t.text && t.whiteSpace === 'normal' && !t.clipped), 'Mobile list titles remain complete and readable');
           const photos = await page.locator('.dn-vehicle-card--listing').evaluateAll(cards => cards.map(card => {
-            const image = card.querySelector('.dn-vehicle-card__visual').getBoundingClientRect();
+            const photograph = card.querySelector('img');
+            const image = photograph.getBoundingClientRect();
             const content = card.querySelector('.dn-vehicle-card__content').getBoundingClientRect();
             const box = card.getBoundingClientRect();
-            return Math.abs(image.width - box.width) <= 1 && Math.abs(image.width / image.height - 16 / 9) <= .01 && content.top >= image.bottom - 1;
+            const identity = card.querySelector('.dn-vehicle-card__identity').getBoundingClientRect();
+            const price = card.querySelector('.dn-vehicle-card__amount').getBoundingClientRect();
+            return photograph.complete && photograph.naturalWidth > 0 &&
+              Math.abs(image.width / image.height - photograph.naturalWidth / photograph.naturalHeight) <= .01 &&
+              image.left >= box.left && image.right <= content.left - 1 && image.bottom <= box.bottom &&
+              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom - 1;
           }));
-          assert(photos.every(Boolean), 'Each mobile card shows a full-width landscape image above the copy');
+          assert(photos.every(Boolean), 'Landscape thumbnails preserve the car photograph beside the copy; price follows the model');
           assert.equal(await page.locator('.dn-vehicle-card--listing img[fetchpriority="high"]').count(), 1,
             'Only the first inventory photograph gets high fetch priority');
           await capture('inventory');

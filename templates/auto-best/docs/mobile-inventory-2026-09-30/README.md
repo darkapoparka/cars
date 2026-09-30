@@ -1,6 +1,6 @@
 # Mobile inventory revision — 30 September 2026
 
-The compact split layout cropped away much of each car and squeezed the model names into a narrow column. Mobile inventory now uses a full-width landscape photograph above the vehicle information. These comparisons use **normal text size**, the same 320×844 and 390×844 viewports, and the same scroll position in the in-app browser at `http://127.0.0.1:5173/en/listing-grid`.
+The original split layout cropped away much of each car and squeezed the model names into a narrow column. The first revision, `e9d021f8c`, replaced it with a full-width landscape photograph above the vehicle information. The comparisons below record that first revision at **normal text size**, the same 320×844 and 390×844 viewports, and the same scroll position in the in-app browser at `http://127.0.0.1:5173/en/listing-grid`. Subsequent revisions and the current compact list appear at the end of this record.
 
 | Normal text size | Before | After |
 | --- | --- | --- |
@@ -76,6 +76,21 @@ These screenshots compare the tall badge revision with the compact revision at *
 
 The compact revision passed `npm run validate` (0 Svelte errors and warnings), all 8 mobile polish cases, all 66 WebKit reflow cases, and all 42 Chromium inventory accessibility/text-bounds states with no violations, overflow or clipped copy. These checks ran on the final production build at `http://127.0.0.1:5185`, using Node 22.20.0. The tested `VehicleCard.svelte` blob is `86e06b202903b9014852cd40624854cee66539c7`; earlier JSON matrices remain evidence for their respective revisions. Both languages were visually checked at 320px, and long titles at 390px. The detached development server runs at `http://127.0.0.1:5173`.
 
-This changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The asset-count guard is committed only for the five derivatives owned by this revision.
+### Compact list follow-up
+
+The current mobile inventory uses a landscape thumbnail beside a single details column. Price follows the model in both the markup and mobile layout. Year/mileage form a quiet text row; fuel/transmission use two badges with more internal space and separation. The photograph retains its source proportions so the vehicle stays visible. Narrow containers and enlarged text stack the photo above the information, while normal desktop and carousel composition remain intact. [Styling](../STYLING.md#mobile-listing-cards) owns the current contract.
+
+At normal 16px root text, the first card is 143.4px high in both in-app browser views, compared with 251.5px at 320px and 290.9px at 390px in the previous revision. Four complete cards fit in each viewport. These comparisons retain the same viewport and scroll position 0:
+
+| Width | Previous photo-on-top card | Compact list |
+| --- | --- | --- |
+| 320px | ![Previous card at 320px](../mobile-card-density-2026-09-30/after-320.jpg) | ![Compact list at 320px](../mobile-list-cards-2026-09-30/after-320.jpg) |
+| 390px | ![Previous card at 390px](../mobile-card-density-2026-09-30/after-390.jpg) | ![Compact list at 390px](../mobile-list-cards-2026-09-30/after-390.jpg) |
+
+The final build passed `npm run validate` with 0 Svelte errors and warnings, all 8 mobile polish cases, all 42 Chromium inventory accessibility/text-bounds states, and all 66 WebKit reflow cases. No violations, overflow or clipped copy were found in those states. The checks ran against the production preview on port 5185 with Node 22.20.0. Both languages were visually checked at 320px; the live 390px list → vehicle 1 → anchored list return also passed. Desktop card prices remain below their specifications with exactly one price per card. The mobile image hint now matches the thumbnail; a 390px retina viewport selects the existing 640px source, with first-image priority and subsequent lazy loading retained.
+
+Tested source blobs: `VehicleCard.svelte` — `9f43221a78816f731ffcd2cfb72eaed457dbcc28`; `ListingResults.svelte` — `c67e5482d798d68996f2704031dffcf22025be0b`; `mobile-polish-smoke.mjs` — `5843fe05cb44372e79db3ee8b23fc7d55fa9d0e9`. Earlier JSON matrices remain evidence for their respective revisions.
+
+This changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The first revision's asset guard covered its five image derivatives; the compact list introduces no new assets.
 
 Automated axe and layout checks provide bounded evidence, not a claim of complete WCAG conformance. Physical-device and screen-reader acceptance remain separate from these browser checks.

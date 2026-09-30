@@ -287,7 +287,7 @@
 
     .dn-listing-results__grid {
       grid-template-columns: minmax(0, 1fr);
-      gap: var(--dn-space-4);
+      gap: var(--dn-space-3);
     }
   }
 </style>
