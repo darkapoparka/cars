@@ -145,9 +145,10 @@ test('native build plan uses each framework mount and propagates a build failure
 test('native FAB keeps the explicit URL locale across all three designs and labels Admin honestly', async t => {
   const f = setup(t), target = path.join(f.root, 'fab'); await packageDealer(options(f, target));
   const source = read(target, 'auto-best/static/preview-switcher.js').toString();
-  const script = source.slice(source.indexOf('  const config = '), source.indexOf('  const index = ')) + '\nglobalThis.state = {config, choices};';
+  const script = '(function () {\n' + source.slice(source.indexOf('  const config = '), source.indexOf('  const index = ')) + '\nglobalThis.state = {config, choices};\n})();';
   for (const locale of ['en', 'bg']) {
-    const context = { location: { pathname: `/variant-2/${locale}/cars` }, document: { documentElement: { lang: locale === 'en' ? 'bg' : 'en' } } };
+    const config = JSON.parse(source.match(/const embeddedConfig = (.*);/)[1]);
+    const context = { __CARS_SWITCHER_CONFIG__: config, location: { pathname: `/variant-2/${locale}/cars` }, document: { documentElement: { lang: locale === 'en' ? 'bg' : 'en' } } };
     vm.runInNewContext(script, context, { timeout: 1000 });
     assert.deepEqual(Array.from(context.state.choices, c => c.entry), [`/${locale}`, `/variant-2/${locale}/cars`, `/variant-3/${locale}`]);
     assert.equal(context.state.config.language, locale); assert.match(context.state.config.labels.admin, /English|английски/);

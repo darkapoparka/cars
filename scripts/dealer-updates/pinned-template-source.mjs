@@ -60,7 +60,7 @@ function assertExternalDestination(repositoryPath, destination, prefix = '', all
 export function exportPinnedTemplate({ repositoryPath, repository, revision, destination, expectedDigest, prefix = '' }) {
   const normalizedRepo = normalizedRepository(repository);
   if (normalizedRepo !== 'darkapoparka/cars' && !/^darkapoparka\/cars-template-[a-z0-9_.-]+$/i.test(normalizedRepo)) throw new Error('Expected a registered Cars template repository identity');
-  if (normalizedRepo === 'darkapoparka/cars' && !/^templates\/(?:auto-best|modern|carwow|import)$/.test(prefix)) throw new Error('Cars monorepo exports require one exact templates/<key> subtree');
+  if (normalizedRepo === 'darkapoparka/cars' && !/^templates\/(?:auto-best|modern|carwow|import|app)$/.test(prefix)) throw new Error('Cars monorepo exports require one exact templates/<key> subtree');
   if (normalizedRepo !== 'darkapoparka/cars' && prefix !== '') throw new Error('Standalone template exports must use the repository root');
   if (!/^[a-f0-9]{40}$/.test(revision || '')) throw new Error('Pinned template export requires an immutable commit SHA');
   if (expectedDigest !== undefined && !/^[a-f0-9]{64}$/.test(expectedDigest || '')) throw new Error('Expected release digest must be SHA-256');
@@ -106,7 +106,7 @@ export function readRepositoryTreeMap({ repositoryPath, revision, prefix = '', f
  * for the template digest.
  */
 export function readPinnedTemplateTree({ key, repositoryPath, source, expectedDigest = source?.digest }) {
-  if (!['auto-best', 'modern', 'carwow', 'import'].includes(key)) throw new Error(`Unknown template key: ${key}`);
+  if (!['auto-best', 'modern', 'carwow', 'import', 'app'].includes(key)) throw new Error(`Unknown template key: ${key}`);
   if (!source || typeof source !== 'object') throw new Error(`${key}: immutable source locator is required`);
   const repository = normalizedRepository(source.repository);
   const revision = source.revision || source.commit;
@@ -125,7 +125,14 @@ export function readPinnedTemplateTree({ key, repositoryPath, source, expectedDi
   if (!files.size) throw new Error(`${key}: pinned source tree is empty`);
   const canonical = fingerprintCommit(repositoryPath, revision, { prefix });
   if (canonical.files.length !== files.size) throw new Error(`${key}: canonical fingerprint and loaded source tree differ`);
-  const digest = canonical.digest;
+  let digest = canonical.digest;
+  // The first App release recorded the full committed subtree, before the
+  // common Cars export policy excluded agent instructions and Next type output.
+  // Verify that historical digest against Git without weakening new releases.
+  if (key === 'app' && expectedDigest && digest !== expectedDigest) {
+    const full = fingerprintCommit(repositoryPath, revision, { prefix, filter: () => true });
+    if (full.digest === expectedDigest) digest = full.digest;
+  }
   if (expectedDigest && digest !== expectedDigest) throw new Error(`${key}: source tree digest mismatch for ${revision}: ${digest}`);
   return {
     key,
@@ -164,7 +171,7 @@ function repositoryPathFor(locator, { repositoryPath, repositoryPaths, fallbackR
 
 /** Materialize the dealer's old base and exact approved target across standalone or Cars monorepo sources. */
 export function exportPinnedTemplatePair({ pin, repositoryPath, repositoryPaths, runDirectory, key }) {
-  if (!pin || !['auto-best', 'modern', 'carwow', 'import'].includes(key) ||
+  if (!pin || !['auto-best', 'modern', 'carwow', 'import', 'app'].includes(key) ||
       !/^[a-f0-9]{40}$/.test(pin.from || '') || !/^[a-f0-9]{40}$/.test(pin.to || '')) {
     throw new Error(`${key}: invalid immutable old/new template pin pair`);
   }

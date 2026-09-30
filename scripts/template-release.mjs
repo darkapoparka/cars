@@ -51,14 +51,14 @@ export function releaseStatus(root){
 
 // Select a reviewed commit already published from Cars. No template folder is copied or replaced.
 export function approveCarsTemplate({root=ROOT,key,commit,evidence,write=false}) {
- if(!['auto-best','modern','carwow','import'].includes(key))throw new Error('Select one of the four Cars templates.');
+ if(!['auto-best','modern','carwow','import','app'].includes(key))throw new Error('Select one of the five Cars templates.');
  if(!/^[a-f0-9]{40}$/.test(commit||''))throw new Error('Supply an immutable 40-character Cars commit SHA.');
  const remote=git(root,['remote','get-url','origin']).replace(/\.git$/,'').replace(/^git@github.com:/,'https://github.com/');
  if(remote!=='https://github.com/darkapoparka/cars'||git(root,['branch','--show-current'])!=='main')throw new Error('Approve template releases from the Cars main checkout.');
  for(const ref of ['HEAD','refs/remotes/origin/main']) {
   if(git(root,['merge-base','--is-ancestor',commit,ref],{allowFailure:true})===null)throw new Error(`Template source is not published on Cars main: ${ref}`);
  }
- const lockFile=path.join(root,'templates.lock.json'),before=fs.readFileSync(lockFile),lock=JSON.parse(before),prior=lock.templates[key];
+ const lockFile=path.join(root,'templates.lock.json'),before=fs.readFileSync(lockFile),lock=JSON.parse(before),prior=lock.templates[key] || (key==='app' ? {snapshotPath:'templates/app'} : null);
  if(!prior)throw new Error(`No existing release entry for ${key}.`);
  const prefix=`templates/${key}`,actual=fingerprintCommit(root,commit,{prefix});
  if(!actual.files.some(f=>f.path==='package.json'))throw new Error(`${key}: missing template application at the selected commit.`);

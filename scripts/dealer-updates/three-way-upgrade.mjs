@@ -196,11 +196,11 @@ function record(pathname, kind, before, after, extra = {}) {
 
 /** Select immutable revisions from the current Cars approval lock, never from a floating branch label. */
 export function selectPinnedRevisions(manifest, lock) {
-  if (!Array.isArray(manifest?.variants) || manifest.variants.length !== 3) {
-    throw new Error('Template update requires the dealer’s recorded three-design manifest');
+  if (!Array.isArray(manifest?.variants) || ![3, 4].includes(manifest.variants.length)) {
+    throw new Error('Template update requires the dealer’s recorded three- or four-design manifest');
   }
   const keys = manifest.variants.map(({ key }) => key);
-  if (![['auto-best', 'modern', 'carwow'], ['auto-best', 'import', 'carwow']]
+  if (![['auto-best', 'modern', 'carwow'], ['auto-best', 'import', 'carwow'], ['auto-best', 'modern', 'carwow', 'app'], ['auto-best', 'import', 'carwow', 'app']]
     .some(allowed => JSON.stringify(allowed) === JSON.stringify(keys))) {
     throw new Error('Template update supports the standard trio or the Import trio in its recorded order');
   }
@@ -272,6 +272,7 @@ export function updateManifestPins(manifest, pins) {
     next.templateRevisions[key] = pin.to;
     next.templateSources[key] = { ...pin.targetSource };
   }
+  if (pins.app && next.appVariant) next.appVariant.source = { ...pins.app.targetSource };
   return next;
 }
 

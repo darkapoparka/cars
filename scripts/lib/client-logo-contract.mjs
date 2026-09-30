@@ -105,6 +105,7 @@ export function applyDealerLogoContract({ key, oldVariant, candidate, profile })
     edit('packages/marketplace-ui/components/listing-detail-content.tsx', text => {
       const start = text.indexOf('<span className="relative block aspect-[1780/512] w-28">');
       const end = text.indexOf('</span>', start);
+      if (start < 0 && text.includes('ListingCtaBanner')) return text;
       if (start < 0 || end < 0) throw Error('Missing Modern financing logo anchor');
       return text.slice(0, start) + '<span className="relative block aspect-[1780/512] w-28">\n                <Image alt={leadSite.name} className="h-full w-full object-contain" height={512} sizes="112px" src={leadSite.logoOnAccent} width={1780} />\n              </span>' + text.slice(end + 7);
     });

@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fingerprint } from '../lib/workflow.mjs';
-import { validatePackagingManifest } from '../package-dealer.mjs';
+import { validatePackagingManifest, packageRetainsPath } from '../package-dealer.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
 import { adoptNativeSource, applyNativeMounts } from '../publishing/native-mounts.mjs';
 import { assertNativeAdoption } from '../lib/native-localization.mjs';
@@ -19,8 +19,9 @@ import {
   updateManifestPins
 } from './three-way-upgrade.mjs';
 import { readPinnedTemplateTree } from './pinned-template-source.mjs';
+import { baseNativeManifest, APP_PACKAGING_VERSION, assertAppVariant } from '../publishing/app-variant.mjs';
 
-const TEMPLATE_KEYS = ['auto-best', 'modern', 'carwow', 'import'];
+const TEMPLATE_KEYS = ['auto-best', 'modern', 'carwow', 'import', 'app'];
 const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
 const writeJsonExclusive = (file, value) => fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`, { flag: 'wx' });
@@ -208,6 +209,7 @@ export function targetManifestForUpgrade({ dealerRoot, manifest, pins }) {
   ));
   if (kinds.size !== 1) throw new Error('A dealer update cannot mix Cars-native and legacy target sources');
   if (!kinds.has('cars-native')) return validatePackagingManifest(next);
+  if (['2', APP_PACKAGING_VERSION].includes(manifest.packaging?.version) && manifest.localization) return validatePackagingManifest(next);
   const factsFile = path.join(dealerRoot, 'business-facts.json');
   const rawFacts = fs.existsSync(factsFile) ? readJson(factsFile) : {};
   const business = refreshNormalizeInternals.normalizeBusiness(dealerRoot, manifest.slug, rawFacts);
@@ -219,7 +221,7 @@ export function targetManifestForUpgrade({ dealerRoot, manifest, pins }) {
   next.dealerId = next.dealerId || next.slug;
   next.defaultBranch = next.defaultBranch || 'main';
   next.language = defaultLocale;
-  next.packaging = { version: '2' };
+  next.packaging = { version: manifest.packaging?.version === APP_PACKAGING_VERSION ? APP_PACKAGING_VERSION : '2' };
   next.localization = {
     schemaVersion: 1, dealerId: next.dealerId, defaultLocale, enabledLocales: ['en', 'bg'],
     dealerCountry: country, inventoryCurrency: currency
@@ -241,16 +243,16 @@ async function adaptPinnedBases({ keys, oldBases, newBases, manifest, targetMani
   if (manifest.packaging.version === '1') {
     fromAdapter = 'cars-package-v1-mounts';
     await applyMounts(oldFiles, manifest);
-  } else if (manifest.packaging.version === '2') {
+  } else if (['2', APP_PACKAGING_VERSION].includes(manifest.packaging.version)) {
     fromAdapter = 'cars-package-v2-native-mounts';
-    oldFiles = applyNativeMounts(oldFiles, manifest);
+    oldFiles = applyNativeMounts(oldFiles, baseNativeManifest(manifest));
   } else throw new Error(`Unsupported dealer packaging version: ${manifest.packaging?.version}`);
   if (targetManifest.packaging.version === '1') {
     targetAdapter = 'cars-package-v1-mounts';
     await applyMounts(newFiles, targetManifest);
-  } else if (targetManifest.packaging.version === '2') {
+  } else if (['2', APP_PACKAGING_VERSION].includes(targetManifest.packaging.version)) {
     targetAdapter = 'cars-package-v2-native-mounts';
-    newFiles = applyNativeMounts(newFiles, targetManifest);
+    newFiles = applyNativeMounts(newFiles, baseNativeManifest(targetManifest));
   } else throw new Error(`Unsupported target packaging version: ${targetManifest.packaging?.version}`);
   return {
     adapter: `${fromAdapter}->${targetAdapter}`, targetManifest,
@@ -312,7 +314,7 @@ function writeDirectoryTreeChanges(root, before, after) {
 }
 
 function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock) {
-  if (plan.manifest.packaging.version !== '2') {
+  if (!['2', APP_PACKAGING_VERSION].includes(plan.manifest.packaging.version)) {
     reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
     return;
   }
@@ -320,8 +322,27 @@ function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock) {
   const before = new Map([...files].map(([name, bytes]) => [name, Buffer.from(bytes)]));
   const candidateManifest = JSON.parse(files.get('dealer.json').toString('utf8').replace(/^\uFEFF/, ''));
   validatePackagingManifest(candidateManifest);
-  const adopted = adoptNativeSource(files, candidateManifest, lock.templates);
-  assertNativeAdoption(adopted, candidateManifest);
+  const baseManifest = baseNativeManifest(candidateManifest);
+  const adopted = adoptNativeSource(files, baseManifest, lock.templates);
+  assertNativeAdoption(adopted, baseManifest);
+  if (candidateManifest.packaging.version === APP_PACKAGING_VERSION) {
+    const appSource = candidateManifest.templateSources.app;
+    candidateManifest.appVariant = { ...candidateManifest.appVariant, source: appSource };
+    const appFiles = new Map();
+    // Binary assets retain their exact bytes; normalize only valid UTF-8 text.
+    for (const [name, bytes] of adopted) if (name.startsWith('app/') && packageRetainsPath(name)) {
+      const text = bytes.toString('utf8');
+      appFiles.set(name.slice(4), !bytes.includes(0) && Buffer.from(text).equals(bytes) ? Buffer.from(text.replace(/\r\n/g, '\n')) : bytes);
+    }
+    const receipt = JSON.parse(adopted.get('.cars-app.json').toString('utf8'));
+    receipt.template = appSource;
+    receipt.appDigest = sha256(Buffer.from(JSON.stringify([...appFiles].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, bytes]) => [name, sha256(bytes)]))));
+    receipt.refreshedAt = new Date().toISOString();
+    adopted.set('.cars-app.json', Buffer.from(JSON.stringify(receipt, null, 2) + '\n'));
+    adopted.set('dealer.json', Buffer.from(JSON.stringify(candidateManifest, null, 2) + '\n'));
+    assertAppVariant(new Map([...adopted].filter(([name]) => packageRetainsPath(name))), candidateManifest);
+    plan.manifest = candidateManifest;
+  }
   writeDirectoryTreeChanges(candidateDirectory, before, adopted);
   reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
 }

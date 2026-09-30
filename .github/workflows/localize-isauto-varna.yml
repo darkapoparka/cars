@@ -2,10 +2,6 @@ name: Deploy IS AUTO Auto Best 0.2.0
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/localize-isauto-varna.yml'
 
 permissions:
   contents: read

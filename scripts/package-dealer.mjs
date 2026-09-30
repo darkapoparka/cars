@@ -1,4 +1,5 @@
 import { APP_PACKAGING_VERSION, baseNativeManifest, assertAppVariant, appendAppService } from './publishing/app-variant.mjs';
+import { assertCarsOwnedDealer } from './lib/dealer-source.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -72,6 +73,11 @@ function omitted(name, relative) {
   if (/^(?:AGENTS(?:\.override)?|CLAUDE)\.md$/i.test(name) && relative !== 'AGENTS.md') return true;
   if (relative.split('/').includes('.client') && name !== '.client' && name !== 'project.json') return true;
   return false;
+}
+
+export function packageRetainsPath(relative) {
+  const parts = relative.replaceAll('\\', '/').split('/');
+  return parts.every((name, index) => !omitted(name, parts.slice(0, index + 1).join('/')));
 }
 
 function sourceMapDigest(files) {
@@ -280,7 +286,7 @@ async function main(args) {
     } else throw new Error(`Unknown argument: ${flag}`);
   }
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(options.client ?? '') || !options.out) throw new Error('Use --client SLUG --out runtime/dealer-packages/SLUG [--write]');
-  const source = path.join(ROOT, 'clients', options.client);
+  const source = assertCarsOwnedDealer(ROOT, options.client);
   const destination = path.resolve(ROOT, options.out);
   const packagesRoot = path.join(ROOT, 'runtime', 'dealer-packages');
   if (!contained(packagesRoot, destination) || destination === packagesRoot) throw new Error('--out must be a new directory under runtime/dealer-packages');
