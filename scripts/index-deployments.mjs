@@ -1,8 +1,10 @@
 import fs from 'node:fs';
+import { assertIndependentCheckout } from './lib/dealer-source.mjs';
 import path from 'node:path';
+import { clientSourceGuide } from './lib/client-source-guide.mjs';
 import {ROOT,json,writeJson,validateManifest,git} from './lib/workflow.mjs';
 
-const supported=['auto-best','modern','import','carwow','rencar','autodeal','showroom','boxcar','motoria','nusavo'];
+const supported=['auto-best','modern','import','carwow','app','rencar','autodeal','showroom','boxcar','motoria','nusavo'];
 const read = file => fs.existsSync(file) ? json(file) : null;
 export function validateIndexedManifest(manifest,record){
  const legacy=record?.publishingException;
@@ -24,10 +26,11 @@ export function indexDeployments(root=ROOT) {
   for(const entry of fs.readdirSync(path.join(root,'clients'),{withFileTypes:true}).filter(e=>e.isDirectory())) {
     if(previous.aliases?.[entry.name])continue;
     const slug=entry.name,dir=path.join(root,'clients',slug),prior=records.get(slug)||{},manifest=read(path.join(dir,'dealer.json'));
-    if(prior.sourceOwnership==='independent-repository') throw new Error('Duplicate Cars source for independently owned dealer: '+slug);
+    if(prior.sourceOwnership==='independent-repository') { assertIndependentCheckout(root, prior, dir); records.set(slug, {...prior, localPresent:true}); continue; }
+    if(fs.existsSync(path.join(dir,'.git')) || manifest?.sourceOwnership==='independent-repository') throw new Error('Register independent source ownership before indexing: '+slug);
     if(manifest)validateIndexedManifest(manifest,prior);
     const facts=read(path.join(dir,'business-facts.json'));
-    const keys=supported.filter(v=>fs.existsSync(path.join(dir,v,'package.json')));
+    const keys=supported.filter(v=>(v!=='app'||manifest?.packaging.version==='3')&&fs.existsSync(path.join(dir,v,'package.json')));
     const ordered=[...keys,...(prior.variants||[]).map(v=>v.key).filter(k=>!keys.includes(k))];
     const variants=ordered.map(key=>{
       const metadata=read(path.join(dir,key,'.client/project.json'))||{},old=prior.variants?.find(v=>v.key===key)||{},offered=manifest?.variants.find(v=>v.key===key);
@@ -47,7 +50,7 @@ export function validateRegistry(registry,root=null) {
  for(const d of registry.dealers){if(slugs.has(d.slug))throw new Error('Duplicate dealer slug '+d.slug);slugs.add(d.slug);if(d.repository){if(repositories.has(d.repository))throw new Error('Repository reused by '+d.slug+' and '+repositories.get(d.repository));repositories.set(d.repository,d.slug);}
   const keys=d.variants.map(v=>v.key);if(new Set(keys).size!==keys.length)throw new Error('Duplicate variant '+d.slug);
   if(d.evidence?.ownerReview?.state==='passed'&&!d.evidence.ownerReview.reviewedBy)throw new Error('Owner review needs owner attribution: '+d.slug);
-  if(d.sourceOwnership==='independent-repository'){if(d.localPath!==null||d.canonicalSourceRepository!==d.repository)throw new Error('Independent source cannot also live in Cars: '+d.slug);validateManifest({schemaVersion:1,slug:d.slug,repository:d.repository,defaultBranch:'main',variants:d.variants,packaging:{version:'1'}});}
+  if(d.sourceOwnership==='independent-repository'){if(d.localPath!==null||d.canonicalSourceRepository!==d.repository)throw new Error('Independent source cannot also be Cars-owned: '+d.slug);validateManifest({schemaVersion:1,slug:d.slug,repository:d.repository,defaultBranch:'main',variants:d.variants,packaging:{version:d.packagingVersion||'1'}});}
   if(root&&d.sourceOwnership!=='independent-repository'&&fs.existsSync(path.join(root,d.localPath,'dealer.json'))){const m=validateIndexedManifest(json(path.join(root,d.localPath,'dealer.json')),d);if(d.repository!==m.repository)throw new Error('Registry manifest identity drift: '+d.slug);for(const v of m.variants)if(!d.variants.some(x=>x.key===v.key&&x.entry===v.entry))throw new Error('Registry variant/entry drift: '+d.slug);}
  }
  for(const[alias,target]of Object.entries(registry.aliases||{}))if(alias===target||!slugs.has(target))throw new Error('Unresolved registry alias '+alias);
@@ -59,13 +62,14 @@ export function registryViews(registry) {
  for(const d of registry.dealers){const route=d.variants.map(v=>v.key+(v.entry?' '+v.entry:' (entry unrecorded)')).join(' / ')||'Research only';lines.push('| '+[esc(d.name),d.sourceOwnership==='independent-repository'?(d.evidence?.source?.remoteVerified?'[Independent source](https://github.com/'+d.repository+'/tree/main/)':'Independent source — GitHub publication pending'):d.localPresent&&d.variants.every(v=>v.localPresent!==false)?'[Local source](../'+d.localPath+'/)':d.canonicalSourceRef==='main'?'[Source on main](https://github.com/darkapoparka/cars/tree/main/'+d.localPath+'/)':'Preserved source evidence',esc(route),d.delivery.url?'['+esc(d.delivery.state)+']('+d.delivery.url+')':esc(d.evidence?.deployment?.state),esc(d.evidence?.browser?.state)+' / '+esc(d.evidence?.ownerReview?.state)].join(' | ')+' |');}
  lines.push('','[Registry contract](REGISTRY.md) · [Owner review](MANUAL-REVIEW.md)','');
  const projects=registry.dealers.map(d=>({slug:d.slug,name:d.name,path:d.sourceOwnership==='independent-repository'?d.checkoutPath:d.localPath,variants:d.variants.map(v=>v.key),sourceState:d.sourceOwnership==='independent-repository'?'independent-source':d.localPresent&&d.variants.every(v=>v.localPresent!==false)?'source-present':d.canonicalSourceRef==='main'?'source-on-main':'source-not-local',reviewState:d.evidence?.ownerReview?.state||'unknown',...(d.id?{leadId:d.id}:{})}));
- return{deployments:lines.join('\n'),index:{schemaVersion:2,source:'docs/DEPLOYMENT-INVENTORY.json',projects,campaignCandidatesWithoutFolders:registry.campaignCandidatesWithoutFolders||[]}};
+ return{clientGuide:clientSourceGuide(registry),deployments:lines.join('\n'),index:{schemaVersion:2,source:'docs/DEPLOYMENT-INVENTORY.json',projects,campaignCandidatesWithoutFolders:registry.campaignCandidatesWithoutFolders||[]}};
 }
 export function writeRegistryViews(root=ROOT) {
  const registry=json(path.join(root,'docs/DEPLOYMENT-INVENTORY.json'));
  validateRegistry(registry);
  const views=registryViews(registry);
  fs.writeFileSync(path.join(root,'docs/DEPLOYMENTS.md'),views.deployments);
+ fs.writeFileSync(path.join(root,'clients/README.md'),views.clientGuide);
  writeJson(path.join(root,'clients/index.json'),views.index);
  return registry;
 }
@@ -77,13 +81,15 @@ function main(){
  const views=registryViews(inventory);
  if(options.includes('--check')){
   const saved=json(path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json'));validateRegistry(saved,ROOT);
+  if(fs.readFileSync(path.join(ROOT,'clients/README.md'),'utf8').replaceAll('\r\n','\n')!==registryViews(saved).clientGuide)throw new Error('Client source guide differs; run --views-only.');
   const actualIndex=json(path.join(ROOT,'clients/index.json'));if(JSON.stringify(actualIndex.projects)!==JSON.stringify(registryViews(saved).index.projects))throw new Error('Generated client index differs; run --write.');
   if(fs.readFileSync(path.join(ROOT,'docs/DEPLOYMENTS.md'),'utf8').replaceAll('\r\n','\n')!==registryViews(saved).deployments)throw new Error('Generated deployment list differs; run --write.');
  }else if(options.includes('--write')){
   writeJson(path.join(ROOT,'docs/DEPLOYMENT-INVENTORY.json'),inventory);
   fs.writeFileSync(path.join(ROOT,'docs/DEPLOYMENTS.md'),views.deployments);
+  fs.writeFileSync(path.join(ROOT,'clients/README.md'),views.clientGuide);
   writeJson(path.join(ROOT,'clients/index.json'),views.index);
-  fs.writeFileSync(path.join(ROOT,'docs/PROJECTS.md'),'# Cars projects\n\nGenerated project index: [deployment inventory](DEPLOYMENTS.md). Machine-readable view: [clients/index.json](../clients/index.json), derived from the [technical registry](DEPLOYMENT-INVENTORY.json).\n\nUse node scripts/index-deployments.mjs --write to refresh local presence. Prior branch/source recovery evidence remains in [LEAD-RECOVERY.md](LEAD-RECOVERY.md). Source presence is not build success, hosted verification or owner review.\n');
+  fs.writeFileSync(path.join(ROOT,'docs/PROJECTS.md'),'# Cars projects\n\nStart with [dealer folders, repositories and public sites](../clients/README.md). Full generated project index: [deployment inventory](DEPLOYMENTS.md). Machine-readable view: [clients/index.json](../clients/index.json), derived from the [technical registry](DEPLOYMENT-INVENTORY.json).\n\nUse node scripts/index-deployments.mjs --write to refresh local presence. Prior branch/source recovery evidence remains in [LEAD-RECOVERY.md](LEAD-RECOVERY.md). Source presence is not build success, hosted verification or owner review.\n');
  }
  console.log(JSON.stringify({mode:options[0]||'preview',dealers:inventory.dealers.length,applications:inventory.dealers.reduce((n,d)=>n+d.variants.length,0),importTrios:inventory.dealers.filter(d=>d.variants.some(v=>v.key==='import')).map(d=>d.slug)}));
 }

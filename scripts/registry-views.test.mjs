@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {writeRegistryViews,registryViews} from './index-deployments.mjs';
+import {writeRegistryViews,registryViews,indexDeployments} from './index-deployments.mjs';
 function fixture(t){
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'cars-views-test-'));
  t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
@@ -27,4 +27,11 @@ test('views-only rejects invalid registry before writing output',t=>{
  const f=fixture(t);f.registry.aliases.bad='missing';
  fs.writeFileSync(path.join(f.root,'docs/DEPLOYMENT-INVENTORY.json'),JSON.stringify(f.registry));
  assert.throws(()=>writeRegistryViews(f.root),/Unresolved registry alias/);assert.equal(fs.existsSync(path.join(f.root,'docs/DEPLOYMENTS.md')),false);
+});
+
+test('source indexing finds declared Design 4 without offering a candidate App folder',t=>{
+ const f=fixture(t),source=path.join(f.root,'clients/example'),m={schemaVersion:1,slug:'example',repository:'fixture/cars-example',defaultBranch:'main',packaging:{version:'3'},variants:[{key:'auto-best',entry:'/',base:''},{key:'modern',entry:'/variant-2/cars',base:'/variant-2'},{key:'carwow',entry:'/variant-3/',base:'/variant-3'},{key:'app',entry:'/variant-4/',base:'/variant-4'}]};
+ for(const {key}of m.variants){fs.mkdirSync(path.join(source,key));fs.writeFileSync(path.join(source,key,'package.json'),'{}');}
+ fs.writeFileSync(path.join(source,'dealer.json'),JSON.stringify(m));let d=indexDeployments(f.root).dealers.find(d=>d.slug==='example');assert.equal(d.variants.find(v=>v.key==='app').localPresent,true);
+ m.packaging.version='1';m.variants.pop();fs.writeFileSync(path.join(source,'dealer.json'),JSON.stringify(m));d=indexDeployments(f.root).dealers.find(d=>d.slug==='example');assert.equal(d.variants.some(v=>v.key==='app'),false);
 });

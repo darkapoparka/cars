@@ -15,3 +15,9 @@ test('verified independent GitHub source links to its own repository',()=>{
 test('independent ownership rejects a competing central source copy',()=>{
  const r=registry();r.dealers[0].localPath='clients/example-cars';assert.throws(()=>validateRegistry(r),/Independent source/);
 });
+
+test('independent four-design sources retain their declared packaging contract',()=>{
+ const r=registry(),d=r.dealers[0];d.packagingVersion='3';d.variants.push({key:'app',entry:'/variant-4/',base:'/variant-4'});
+ assert.equal(validateRegistry(r),true);assert.match(registryViews(r).deployments,/app \/variant-4\//);
+ d.packagingVersion='1';assert.throws(()=>validateRegistry(r),/Supported trios/);
+});
