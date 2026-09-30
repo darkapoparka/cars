@@ -116,6 +116,12 @@ try {
           })));
           assert(titles.length > 0);
           assert(titles.every(t => t.text && t.whiteSpace === 'normal' && !t.clipped), 'Mobile list titles remain complete and readable');
+          // Visit each photo before checking it: offscreen inventory intentionally stays lazy.
+          for (const card of await page.locator('.dn-vehicle-card--listing').all()) {
+            await card.scrollIntoViewIfNeeded();
+            await card.locator('img').evaluate(image => image.decode());
+          }
+          await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
           const photos = await page.locator('.dn-vehicle-card--listing').evaluateAll(cards => cards.map(card => {
             const photograph = card.querySelector('img');
             const image = photograph.getBoundingClientRect();
@@ -127,18 +133,32 @@ try {
             const headingStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
             const priceStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__amount'));
             const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')];
-            const badgesMatch = facts.every(fact => getComputedStyle(fact).backgroundColor === priceStyle.backgroundColor);
-            return photograph.complete && photograph.naturalWidth > 0 &&
-              Math.abs(image.width / image.height - photograph.naturalWidth / photograph.naturalHeight) <= .01 &&
-              image.left >= box.left && image.right <= content.left - 1 && image.bottom <= box.bottom &&
+            const badgeBoxes = facts.map(fact => fact.getBoundingClientRect());
+            const badgeSurface = getComputedStyle(facts[0]).backgroundColor;
+            const badgesMatch = facts.every(fact => getComputedStyle(fact).backgroundColor === badgeSurface);
+            return { title: photograph.alt, loaded: photograph.complete && photograph.naturalWidth > 0, fits:
+              Math.abs(image.width / image.height - 2) <= .01 &&
+              Math.abs(image.left - box.left) <= 1 && Math.abs(image.right - box.right) <= 1 && image.bottom <= content.top + 1 &&
+              card.querySelector('.dn-vehicle-card__name').innerText.trim() === photograph.alt &&
               Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom - 1 &&
-              metadata.top >= Math.max(image.bottom, content.bottom) &&
+              metadata.top >= price.bottom &&
               metadata.left >= box.left && metadata.right <= box.right && metadata.bottom <= box.bottom &&
-              parseFloat(headingStyle.fontSize) > parseFloat(priceStyle.fontSize) &&
-              parseFloat(headingStyle.fontWeight) > parseFloat(priceStyle.fontWeight) &&
-              facts.length === 5 && badgesMatch && priceStyle.backgroundColor !== 'rgba(0, 0, 0, 0)';
+              parseFloat(priceStyle.fontSize) > parseFloat(headingStyle.fontSize) &&
+              parseFloat(priceStyle.fontWeight) > parseFloat(headingStyle.fontWeight) &&
+              facts.length === 4 && badgesMatch && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
+              Math.abs(badgeBoxes[0].left - metadata.left) <= 1 && Math.abs(badgeBoxes[3].right - metadata.right) <= 1 &&
+              badgeBoxes.every(badge => Math.abs(badge.top - metadata.top) <= 1 && Math.abs(badge.height - metadata.height) <= 1) &&
+              priceStyle.backgroundColor === 'rgba(0, 0, 0, 0)' };
           }));
-          assert(photos.every(Boolean), 'Landscape photos remain whole; the title leads the price badge and all five facts share a badge family');
+          assert(photos.every(photo => photo.loaded && photo.fits),
+            `Full-width landscape photos lead complete titles, a plain price and four supporting badges: ${JSON.stringify(photos.filter(photo => !photo.loaded || !photo.fits))}`);
+          const alignment = await page.locator('.dn-vehicle-card--listing').evaluateAll(cards => cards.map(card => {
+            const box = card.getBoundingClientRect();
+            return { height: box.height, priceTop: card.querySelector('.dn-vehicle-card__amount').getBoundingClientRect().top - box.top,
+              factsTop: card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect().top - box.top };
+          }));
+          for (const key of ['height', 'priceTop', 'factsTop']) assert(Math.max(...alignment.map(item => item[key])) - Math.min(...alignment.map(item => item[key])) <= 1,
+            `All inventory cards share their ${key}, including the longest AMG titles`);
           assert.equal(await page.locator('.dn-vehicle-card--listing img[fetchpriority="high"]').count(), 1,
             'Only the first inventory photograph gets high fetch priority');
           await capture('inventory');

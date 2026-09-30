@@ -30,7 +30,7 @@
 
 {#snippet amount()}
   {#if showPrice}
-    <div class="dn-vehicle-card__amount" class:dn-vehicle-card__fact={layout === 'listing'}>{priceLabel}</div>
+    <div class="dn-vehicle-card__amount">{priceLabel}</div>
   {/if}
 {/snippet}
 
@@ -48,7 +48,7 @@
       <img
         src={vehicle.image}
         srcset={imageSrcset(vehicle.image)}
-        sizes={layout === 'listing' ? '(max-width: 767px) calc((100vw - 48px) * .53), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
+        sizes={layout === 'listing' ? '(max-width: 767px) calc(100vw - 24px), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
         alt={vehicle.title}
         loading={priority ? 'eager' : 'lazy'}
         fetchpriority={priority ? 'high' : 'auto'}
@@ -63,7 +63,9 @@
       <div class="dn-vehicle-card__identity">
         <p class="dn-vehicle-card__make">{vehicle.make}</p>
         {#if layout === 'listing'}
-          <h2 class="dn-vehicle-card__name" title={vehicle.title}>{modelTitle}</h2>
+          <h2 class="dn-vehicle-card__name" title={vehicle.title}>
+            <span class="dn-vehicle-card__model-title">{modelTitle}</span><span class="dn-vehicle-card__full-title">{vehicle.title}</span>
+          </h2>
         {:else}
           <h3 class="dn-vehicle-card__name" title={vehicle.title}>{modelTitle}</h3>
         {/if}
@@ -90,19 +92,15 @@
       {#if layout !== 'listing'}
         {@render amount()}
       {/if}
+      {#if layout === 'listing'}
+        <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
+          <li class="dn-vehicle-card__fact">{vehicle.year}</li>
+          <li class="dn-vehicle-card__fact">{formatMileage(vehicle.mileageKm, i18n.locale)}</li>
+          <li class="dn-vehicle-card__fact">{specificationLabel(vehicle.fuel, i18n.locale)}</li>
+          <li class="dn-vehicle-card__fact">{specificationLabel(vehicle.transmission, i18n.locale)}</li>
+        </ul>
+      {/if}
     </div>
-    {#if layout === 'listing'}
-      <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
-        <li class="dn-vehicle-card__fact-group">
-          <span class="dn-vehicle-card__fact">{vehicle.year}</span>
-          <span class="dn-vehicle-card__fact">{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
-        </li>
-        <li class="dn-vehicle-card__fact-group">
-          <span class="dn-vehicle-card__fact">{specificationLabel(vehicle.fuel, i18n.locale)}</span>
-          <span class="dn-vehicle-card__fact">{specificationLabel(vehicle.transmission, i18n.locale)}</span>
-        </li>
-      </ul>
-    {/if}
   </a>
 </article>
 
@@ -124,6 +122,7 @@
     line-height: var(--dn-leading-meta);
   }
   .dn-vehicle-card__mobile-meta { display: none; }
+  .dn-vehicle-card__full-title { display: none; }
   .dn-vehicle-card {
     container-type: inline-size;
     display: flex;
@@ -355,7 +354,7 @@
     }
 
     .dn-vehicle-card--listing {
-      display: block;
+      display: flex;
       height: auto;
       min-height: 0;
       border-radius: var(--dn-radius);
@@ -365,17 +364,16 @@
     .dn-vehicle-card--listing .dn-vehicle-card__link {
       display: grid;
       min-height: 0;
-      grid-template-columns: minmax(0, 53fr) minmax(0, 47fr);
-      align-items: center;
-      gap: var(--dn-space-2);
-      padding: var(--dn-space-2);
+      grid-template-rows: auto 1fr;
+      gap: 0;
+      padding: 0;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__visual {
       height: auto;
       min-height: 0;
-      aspect-ratio: 3 / 2;
-      border-radius: var(--dn-radius-sm);
+      flex: 0 0 auto;
+      aspect-ratio: 2 / 1;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__image {
@@ -390,11 +388,11 @@
     .dn-vehicle-card--listing .dn-vehicle-card__content {
       display: grid;
       min-width: 0;
-      align-content: start;
       grid-template-columns: minmax(0, 1fr);
-      grid-template-areas: "identity" "price";
-      gap: var(--dn-space-1);
-      padding: 0;
+      grid-template-rows: minmax(min-content, 1fr) auto auto;
+      grid-template-areas: "identity" "price" "facts";
+      gap: var(--dn-space-2);
+      padding: var(--dn-space-3);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__identity {
@@ -402,34 +400,26 @@
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__make {
-      color: var(--dn-muted);
+      display: none;
     }
 
+    .dn-vehicle-card--listing .dn-vehicle-card__model-title { display: none; }
+    .dn-vehicle-card--listing .dn-vehicle-card__full-title { display: inline; }
+
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
-      grid-column: 1 / -1;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      flex-wrap: wrap;
+      grid-area: facts;
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr) max-content minmax(0, 1fr);
       gap: var(--dn-space-1);
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    .dn-vehicle-card--listing .dn-vehicle-card__fact-group {
-      display: flex;
-      min-width: 0;
-      max-width: 100%;
-      flex-wrap: wrap;
-      gap: var(--dn-space-1);
-    }
-
     .dn-vehicle-card--listing .dn-vehicle-card__fact {
       display: inline-flex;
       min-width: 0;
       max-width: 100%;
-      flex: 0 1 auto;
       align-items: center;
       justify-content: center;
       padding: var(--dn-space-1);
@@ -438,7 +428,7 @@
       border-radius: var(--dn-pill);
       background: var(--dn-surface-panel);
       color: var(--dn-ink-hover);
-      font-size: var(--dn-text-meta);
+      font-size: var(--dn-text-caption);
       font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-meta);
       font-variant-numeric: tabular-nums;
@@ -450,8 +440,8 @@
     .dn-vehicle-card--listing .dn-vehicle-card__name {
       display: block;
       min-width: 0;
-      font-size: var(--dn-text-card);
-      font-weight: var(--dn-weight-semibold);
+      font-size: var(--dn-text-lead);
+      font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
       white-space: normal;
       overflow-wrap: anywhere;
@@ -469,34 +459,23 @@
       justify-self: start;
       align-self: start;
       margin-top: 0;
-      padding: var(--dn-space-1) var(--dn-space-2);
+      padding: 0;
       color: var(--dn-ink);
-      font-size: var(--dn-text-body);
-      font-weight: var(--dn-weight-medium);
+      font-size: var(--dn-text-card);
+      font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-control);
       letter-spacing: var(--dn-tracking-normal);
       text-align: start;
       overflow-wrap: anywhere;
     }
-
-    @container (max-width: 16rem) {
-      .dn-vehicle-card--listing .dn-vehicle-card__link {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .dn-vehicle-card--listing .dn-vehicle-card__make {
-        overflow-wrap: anywhere;
-      }
-
-      .dn-vehicle-card--listing .dn-vehicle-card__amount {
-        justify-self: start;
-        text-align: start;
-      }
-    }
   }
 
   /* Narrow carousel and desktop cards also reveal their full titles at larger text sizes. */
   @container (max-width: 15rem) {
+    .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .dn-vehicle-card__name,
     .dn-vehicle-card--listing .dn-vehicle-card__name {
       display: block;

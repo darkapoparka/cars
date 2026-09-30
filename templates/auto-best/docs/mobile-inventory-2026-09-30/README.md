@@ -119,6 +119,21 @@ These in-app-browser screenshots use normal text size, matching 320×844 and 390
 
 The final production build passed `npm run validate` with 0 Svelte errors and warnings, 8 mobile polish cases, 6 enlarged-text/focus/loading cases, 42 Chromium inventory accessibility/text-bounds states, and 66 WebKit reflow cases. No violations, overflow or clipped copy were found in the inventory matrix. Manual checks also verified filter/sort focus return, applied-filter emphasis, the 390px list → detail → anchored list return, and one desktop price below the specifications. [Checks and verified source blobs](../mobile-controls-badges-2026-09-30/checks.json) record this revision; earlier matrices belong to their respective revisions.
 
+### Full image and equal height follow-up
+
+The split layout squeezed longer names and made the AMG cards taller than their neighbours. Mobile inventory now uses a full-width 2:1 photograph, the complete vehicle title, a plain price and four supporting specification badges. The slightly shorter photograph preserves a clear view of each car. Price hierarchy and quieter specifications were checked against the local Cars24 and mobile.de inventory references. Flexible equal grid rows keep every card the same height and align price and badge positions; larger text grows the cards together. The complete title uses 18px/500 type, the price uses 20px/600, and the four badges use the 12px caption role. The badge grid spans both edges of the details column, including at 320px in both languages, and reflows to two columns at enlarged text sizes. The price has no badge background or padding. Grid layout also fixes Safari's intrinsic-height overflow when text spacing increases.
+
+These comparisons use normal 16px root text, matching 320×844 and 390×844 viewports, and scroll position 0:
+
+| Width | Previous split layout | Full image and plain price |
+| --- | --- | --- |
+| 320px | ![Previous split cards at 320px](../mobile-controls-badges-2026-09-30/after-320.jpg) | ![Full image cards at 320px](../mobile-full-image-cards-2026-09-30/after-320.jpg) |
+| 390px | ![Previous split cards at 390px](../mobile-controls-badges-2026-09-30/after-390.jpg) | ![Full image cards at 390px](../mobile-full-image-cards-2026-09-30/after-390.jpg) |
+
+The final production build passed `npm run validate` with 0 Svelte errors and warnings, all 8 mobile polish cases, all 42 Chromium inventory accessibility/text-bounds states and all 66 WebKit reflow cases. The inventory matrix found zero axe violations, horizontal overflow, clipped copy or runtime errors. The suites cover English/Bulgarian, 320px through desktop, increased text spacing and 200% root text. Photographs are checked after scrolling into view, preserving native lazy loading; a 390px retina viewport selects the existing 960px source. Normal English cards in the in-app browser measure 255.0px at 320px and 290.0px at 390px, with all seven prices and badge rows aligned. The live list → vehicle 1 → anchored list return passed. Desktop retains its separate make/model labels and one price below the specifications.
+
+Verified source blobs: `VehicleCard.svelte` — `77aea5bff880932a8af64a215038dd3606815790`; `ListingResults.svelte` — `38337b33e25a033d412069eb539eb6f0f2d6e398`; `mobile-polish-smoke.mjs` — `dbf1fd352d3c996e480638d76d000e36ea91afc2`; `mobile-reflow-smoke.mjs` — `ad79bae0d56c08a0cd5149c12bc5da0050bd2f8f`. These checks used Node 22.20.0 and the production preview on port 5185; the development server remains on port 5173. Earlier matrices belong to their respective revisions.
+
 This revision changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The first revision's asset guard covered its five image derivatives; the subsequent card revisions introduce no new public assets or runtime dependencies. Dock icon sources and the retained MIT license are recorded in [Phosphor provenance](../../provenance/phosphor-icons.md).
 
 Automated axe and layout checks provide bounded evidence, not a claim of complete WCAG conformance. Physical-device and screen-reader acceptance remain separate from these browser checks.

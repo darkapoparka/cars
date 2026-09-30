@@ -65,7 +65,7 @@ The root layout imports `@fontsource-variable/onest`. `--dn-font` is `Onest Vari
 
 | Token | Size | Typical use |
 | --- | --- | --- |
-| `--dn-text-caption` | `0.75rem` | Nonessential video durations |
+| `--dn-text-caption` | `0.75rem` | Compact mobile dock labels, inventory badges and video durations |
 | `--dn-text-badge` | `0.875rem` | Compact badges |
 | `--dn-text-meta` | `0.875rem` | Supporting metadata |
 | `--dn-text-body` | `1rem` | Body copy, inputs and ordinary controls |
@@ -89,7 +89,7 @@ Home, Sell and Import use `ui/entry/EntryCard.svelte`, `EntrySegments.svelte`, `
 
 Shared entry segments fill the card content width. Each option has a 44px minimum hit target and a transparent 2px border insets the selected paint to 40px without increasing the shell height. Use short translated labels that stay on one line at 320px. The centered CTA uses `--dn-entry-action-width` (180px maximum), a 44px interaction target and a 40px painted pill. `--dn-entry-card-padding` and `--dn-entry-stack-gap` both reference the 16px spacing token.
 
-Body copy is 16px with 1.5 leading; long editorial prose uses 1.65. Labels, supporting metadata and helper text use the 14px meta role. The compact five-item mobile dock uses the 12px caption role. Nonessential video duration text may use the 12px caption role. Mobile section headings use 24px and service titles use 18px. Make controls and cards reflow around the type instead of adding smaller local overrides. Include `textarea` in native font inheritance.
+Body copy is 16px with 1.5 leading; long editorial prose uses 1.65. Labels, supporting metadata and helper text use the 14px meta role. The compact five-item mobile dock and inventory badges use the 12px caption role. Nonessential video duration text may use the 12px caption role. Mobile section headings use 24px and service titles use 18px. Make controls and cards reflow around the type instead of adding smaller local overrides. Include `textarea` in native font inheritance.
 
 Sell/Trade-in accepts an optional listing URL or 17-character VIN before opening the enquiry. The reference remains editable and is included in the review and copied/shared text. When supplied, vehicle details are optional; without it, the existing required vehicle fields apply. This is a reference shortcut, not ad import, VIN decoding or automatic valuation. `src/lib/data/vehicle-reference.ts` owns parsing and reuses the listing URL validator.
 
@@ -121,7 +121,7 @@ Inventory filter chips (including removable active filters), results filters/sor
 
 ## Responsive composition
 
-Mobile inventory uses compact list cards with a landscape photograph beside the details. A regular-weight make label and wrapping 20px semibold model title sit above a quieter 16px medium price badge. Year, mileage, fuel and transmission use the same badge family in a full-width footer, wrapping as two pairs. Complete names remain visible and in the accessible link label and title attribute; content grows with the name. Keep the 12px gap between cards and the keyboard focus border visible around the whole card.
+Mobile inventory uses full-width landscape photographs above the complete 18px medium vehicle title, a plain 20px semibold price and four supporting specification badges. All cards have equal height through shared flexible grid rows; longer titles and enlarged text grow the cards together. Complete names remain visible and in the accessible link label and title attribute. Keep the 12px gap between cards and the keyboard focus border visible around the whole card.
 
 Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars otherwise change the available page and fixed-navigation width when moving between long pages (Home) and short pages (Sell/Import). Overlay scrollbars on touch devices retain their normal behavior.
 
@@ -152,7 +152,7 @@ The mobile dock uses `BottomNavIcon.svelte` for five locally embedded Phosphor d
 
 Mobile inventory starts with a rounded search field and compact filter/sort controls, followed by one horizontal quick-filter rail. Make and model stay together in that rail. Active chips expose removal; selectors retain a dropdown affordance. The filter sheet contains the deeper options.
 
-Vehicle cards prioritize photograph, model and price. Make labels use the regular metadata role and darker neutral ink, with a small gap above the model. Model titles omit an exact repeated make prefix; differently named model families retain their full title. The whole card is one link. Desktop grids adapt through intermediate widths, with aligned specification and price rows. Shared card hover shadows stay shallow, and article/discovery focus indicators use the focus token.
+Vehicle cards prioritize photograph, model and price. Desktop and carousel variants use a separate regular metadata make label and omit an exact repeated make prefix from the model; differently named model families retain their full title. Mobile inventory shows the complete vehicle title once, including its make. The whole card is one link. Desktop grids adapt through intermediate widths, with aligned specification and price rows. Shared card hover shadows stay shallow, and article/discovery focus indicators use the focus token.
 
 ## Detail, sell and import
 
@@ -190,7 +190,7 @@ Overlay gutters, row gaps and row corners reuse the foundation spacing/radius sy
 
 ### Mobile listing cards
 
-Below 768px, the listing variant uses a 53% landscape photograph and 47% details column, with 8px outer padding and an 8px column gap. The photograph keeps its 3:2 source proportions and centers vertically instead of stretching into a tall crop. The 20px/600 model leads the 16px/500 price badge; the price follows the model and shares the metadata's neutral surface and pill shape. Its padding is 4px vertically and 8px horizontally. The four specifications span both columns in a separate footer as 14px/500 badges with 4px padding and gaps. Year/mileage and fuel/transmission wrap as pairs, with individual values also able to grow at enlarged text sizes. The mobile `sizes` hint follows the wider photograph. At card widths of 16rem or less, the photograph and details stack so enlarged text remains readable. Desktop/tablet and carousel/showcase variants retain their existing composition. `VehicleCard.svelte` owns the card, and `ListingResults.svelte` owns its 12px mobile separation. The mobile polish, reflow and inventory accessibility checks verify both locales.
+Below 768px, the listing variant uses a full-width 2:1 photograph followed by one details column with 12px padding and 8px row gaps. The complete 18px/500 title precedes a plain 20px/600 price. Year, mileage, fuel and transmission use supporting 12px/500 badges with 4px padding and gaps. The four-column badge grid fills the content width: year and fuel size to their labels, while mileage and transmission share the remaining space. At card widths of 15rem or less, including enlarged text, it reflows to two columns. The mobile `sizes` hint follows the full-width frame, selecting the retained 960px derivative at 390px and 2× density. `ListingResults.svelte` uses `grid-auto-rows: 1fr` to keep every mobile card the same height. The card link uses grid rows so Safari accounts for the complete details height under increased text spacing. The details grid lets the title region absorb the shared row height, aligning prices and badges without fixed heights, title truncation or clipped enlarged text. `VehicleCard.svelte` owns that composition; desktop/tablet and carousel/showcase variants retain their existing layouts. The mobile polish and reflow suites verify card height consistency, badge alignment, readable copy and both locales. Offscreen photographs remain lazy and are verified after scrolling them into view.
 
 The mobile inventory toolbar places Search, Sort and Filters in that DOM and visual order, with Filters at the far right. Sort and Filters reuse `dn-icon-button`: 44px interaction shells, 40px white painted circles and 20px icons. Focus uses `--dn-focus`; applied filters and non-default sorting use red icon emphasis. Search also paints inside a 44px shell. `ListingFilters.svelte` owns these controls and their existing dialogs.
 

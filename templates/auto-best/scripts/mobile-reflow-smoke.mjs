@@ -26,11 +26,15 @@ async function fits(page, mode) {
     const selector = 'a,button,summary' + (enlarged ? ',.dn-vehicle-card__make,.dn-vehicle-card__name,.dn-vehicle-card__amount,.dn-blog-card h2' : '');
     const clipped = [...root.querySelectorAll(selector)].filter(visible)
       .filter(el => el.scrollWidth > el.clientWidth + 2 || el.scrollHeight > el.clientHeight + 2)
-      .map(el => ({ text: el.textContent.trim().slice(0, 80), class: String(el.className) }));
-    return { pageOverflow: document.documentElement.scrollWidth > innerWidth + 1, dialogOverflow: root.tagName === 'DIALOG' && root.scrollWidth > root.clientWidth + 1, clipped };
+      .map(el => ({ text: el.textContent.trim().slice(0, 80), class: String(el.className),
+        client: { width: el.clientWidth, height: el.clientHeight }, scroll: { width: el.scrollWidth, height: el.scrollHeight } }));
+    const cardHeights = [...root.querySelectorAll('.dn-vehicle-card--listing')].map(card => card.getBoundingClientRect().height);
+    const cardHeightSpread = cardHeights.length ? Math.max(...cardHeights) - Math.min(...cardHeights) : 0;
+    return { pageOverflow: document.documentElement.scrollWidth > innerWidth + 1, dialogOverflow: root.tagName === 'DIALOG' && root.scrollWidth > root.clientWidth + 1, clipped, cardHeightSpread };
   }, mode === 'enlarged');
   assert(!geometry.pageOverflow && !geometry.dialogOverflow, JSON.stringify(geometry));
   assert.deepEqual(geometry.clipped, [], `${mode}: visible copy and actions must fit`);
+  assert(geometry.cardHeightSpread <= 1, `${mode}: inventory cards retain equal heights`);
   return geometry;
 }
 
