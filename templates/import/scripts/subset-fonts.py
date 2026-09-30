@@ -8,7 +8,8 @@ from pathlib import Path
 from fontTools import subset
 from fontTools.ttLib import TTFont
 
-root = Path(__file__).resolve().parents[1] / "static" / "fonts" / "sofia-sans"
+project = Path(__file__).resolve().parents[1]
+root = project / "static" / "fonts" / "sofia-sans"
 ranges = {
     "latin": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-036F,U+2000-206F,U+20A0-20CF,U+2113,U+2122,U+2190-21FF,U+2212,U+FEFF,U+FFFD",
     "cyrillic": "U+0400-052F,U+2DE0-2DFF,U+A640-A69F",
@@ -66,4 +67,13 @@ for family, weight, filename in faces:
         print(f"{output.name}: {output.stat().st_size} bytes")
     original.close()
 
-(root / "fonts.css").write_text("\n\n".join(css) + "\n", encoding="utf-8")
+stylesheet = "\n\n".join(css) + "\n"
+(root / "fonts.css").write_text(stylesheet, encoding="utf-8")
+# Keep the bundled stylesheet in Vite's source boundary, with public asset URLs.
+# The relative-path copy remains available beside the font files for compatibility.
+(project / "src" / "lib" / "styles" / "fonts.css").write_text(
+    stylesheet.replace("url('./", "url('/fonts/sofia-sans/").replace(
+        "(./OFL.txt)", "(static/fonts/sofia-sans/OFL.txt)"
+    ),
+    encoding="utf-8",
+)

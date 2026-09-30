@@ -2,7 +2,7 @@
 	import { routeParts } from '$lib/locale/core';
 	import { base } from '$app/paths';
 	import '$lib/styles/app.css';
-	import '../../static/fonts/sofia-sans/fonts.css';
+	import '$lib/styles/fonts.css';
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { site } from '$lib/config/site';
