@@ -1,4 +1,5 @@
 import { stockValue, vehicleDescription } from './stock';
+import { dealerVehiclePriceLabel } from '$lib/utils/dealer-price-label';
 import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 import { attachLocalizedValidation } from './validation';
 import { getContext, setContext } from 'svelte';
@@ -70,6 +71,7 @@ export function getI18n() {
 			message(state().locale, key, parameters),
 		dealer: (field: DealerTextField) => dealerLabel(state().locale, field),
 		stock: (value: string | number) => stockValue(state().locale, value),
+		price: (value: string) => dealerVehiclePriceLabel(value, state().locale),
 		vehicleDescription: (value: DayNightVehicle) => vehicleDescription(state().locale, value),
 		count: (count: number) => vehicleCount(state().locale, count),
 		distance: (value: string) => {

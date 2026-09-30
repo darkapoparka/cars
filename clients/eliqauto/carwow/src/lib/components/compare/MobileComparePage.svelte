@@ -74,7 +74,7 @@
 							<a
 								href={i18n.href(resolve('/inventory/[slug]', { slug: car.slug }))}
 								title={car.shortTitle}>{car.shortTitle}</a
-							><strong>{car.priceEur}</strong>
+							><strong>{i18n.price(car.priceEur)}</strong>
 						</div>
 						<dl>
 							{#each rows as row (row.label)}<div>

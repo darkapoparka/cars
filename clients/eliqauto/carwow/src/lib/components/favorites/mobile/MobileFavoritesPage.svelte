@@ -79,7 +79,7 @@
 											<h3 title={vehicle.shortTitle}>{vehicle.shortTitle}</h3>
 										</div>
 										<div class="mobile-favorites-card__price">
-											<strong>{vehicle.priceEur}</strong>
+											<strong>{i18n.price(vehicle.priceEur)}</strong>
 											<span>{i18n.spec(vehicle.monthly)}</span>
 										</div>
 									</div>

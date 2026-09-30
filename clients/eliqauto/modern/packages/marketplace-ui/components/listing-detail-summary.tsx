@@ -1,5 +1,7 @@
 import { Button } from "@repo/design-system/components/ui/button";
-import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
+import { formatMoney, leadSite, type VehicleListing ,
+  formatVehicleMoney,
+} from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowLeft, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -158,7 +160,7 @@ export const MobileListingSummary = ({
       <div className="border-zinc-200 border-b pb-3">
         <div className="flex min-w-0 items-baseline justify-between gap-2">
           <p className="min-w-0 break-words font-semibold text-price tabular-nums tracking-heading lg:text-price-lg">
-            {formatMoney(primaryPrice, locale)}
+            {formatVehicleMoney(primaryPrice, locale)}
           </p>
           {monthlyAmount ? (
             <p className="shrink-0 whitespace-nowrap text-right text-meta text-zinc-600 tabular-nums">

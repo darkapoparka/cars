@@ -3,6 +3,8 @@ import {
   formatPriceType,
   leadSite,
   type VehicleListing,
+
+  formatVehicleMoney,
 } from "@repo/marketplace";
 import {
   Building2,
@@ -210,7 +212,7 @@ export const ListingPublicTruth = ({
           detail={formatPriceType(listing.priceType, locale)}
           icon={WalletCards}
           label={supply ? copy.nativePrice : copy.advertisedPrice}
-          value={formatMoney(primaryPrice, locale)}
+          value={formatVehicleMoney(primaryPrice, locale)}
         />
         {approximatePrice ? (
           <TruthRow

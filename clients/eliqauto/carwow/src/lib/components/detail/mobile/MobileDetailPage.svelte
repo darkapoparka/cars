@@ -179,7 +179,7 @@
 
 	async function shareVehicle() {
 		const url = globalThis.location?.href ?? resolve(`/inventory/${vehicle.slug}`);
-		const title = `${vehicle.shortTitle} - ${vehicle.priceEur}`;
+		const title = `${vehicle.shortTitle} - ${i18n.price(vehicle.priceEur)}`;
 
 		try {
 			if (navigator.share) {
@@ -328,7 +328,7 @@
 				<small class="mobile-detail-sheet__price-monthly">{i18n.spec(vehicle.monthly)}</small>
 				<h1 class="mobile-detail-sheet__title">{vehicle.shortTitle}</h1>
 				<div class="mobile-detail-sheet__price">
-					<strong class="mobile-detail-sheet__price-eur">{vehicle.priceEur}</strong>
+					<strong class="mobile-detail-sheet__price-eur">{i18n.price(vehicle.priceEur)}</strong>
 					<span class="mobile-detail-sheet__price-bgn">{i18n.stock(vehicle.priceBgn)}</span>
 				</div>
 			</header>

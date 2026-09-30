@@ -5,6 +5,8 @@ import {
   formatPriceType,
   type Money,
   type PriceType,
+
+  formatVehicleMoney,
 } from "@repo/marketplace";
 import { BarChart3 } from "lucide-react";
 
@@ -68,7 +70,7 @@ export const ListingPriceIntelligence = ({
         <div className="rounded-lg bg-muted p-3">
           <p className="text-meta text-muted-foreground">{t.advertisedPrice}</p>
           <p className="mt-1 font-semibold text-card-title-lg tracking-heading">
-            {formatMoney(price, locale)}
+            {formatVehicleMoney(price, locale)}
           </p>
           <p className="mt-1 text-meta text-muted-foreground">
             {formatPriceType(priceType, locale)}

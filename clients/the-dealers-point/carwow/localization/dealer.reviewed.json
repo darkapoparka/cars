@@ -46,5 +46,13 @@
     "bg": "Dealers Point",
     "disposition": "invariant",
     "notes": "Dealer-owned short proper name."
+  },
+  {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Dubai — свържете се за оглед.",
+    "en": "Available vehicle in Dubai — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Dubai — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
   }
 ]

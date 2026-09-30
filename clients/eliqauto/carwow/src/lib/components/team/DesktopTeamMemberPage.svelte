@@ -136,7 +136,7 @@
 							<p class="text-secondary mb-10">
 								{i18n.distance(vehicle.mileage)} · {i18n.spec(vehicle.fuel)}
 							</p>
-							<p class="h5 text-highlight">{vehicle.priceEur}</p>
+							<p class="h5 text-highlight">{i18n.price(vehicle.priceEur)}</p>
 						</div>
 					</a>
 				{/each}

@@ -10,7 +10,9 @@ import {
   DialogTitle,
 } from "@repo/design-system/components/ui/dialog";
 import { cn } from "@repo/design-system/lib/utils";
-import { formatMoney } from "@repo/marketplace/format";
+import { formatMoney ,
+  formatVehicleMoney,
+} from "@repo/marketplace/format";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
@@ -370,7 +372,7 @@ const ListingSuggestionContent = ({
       </span>
       <span className="min-w-32 shrink-0 text-right">
         <span className="block font-semibold text-compact-control text-foreground">
-          {formatMoney(listing.price, isBg ? "bg" : "en")}
+          {formatVehicleMoney(listing.price, isBg ? "bg" : "en")}
         </span>
         {listing.monthlyEstimate ? (
           <span className="mt-1 block text-micro text-muted-foreground">

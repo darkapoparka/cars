@@ -72,7 +72,7 @@
 					<img src={i18n.asset(car.image)} alt="" loading="lazy" />
 					<span class="details"
 						><strong>{car.shortTitle}</strong><small>{car.year} · {i18n.spec(car.fuel)}</small><b
-							>{car.priceEur}</b
+							>{i18n.price(car.priceEur)}</b
 						></span
 					>
 					<span class="mark" aria-hidden="true"

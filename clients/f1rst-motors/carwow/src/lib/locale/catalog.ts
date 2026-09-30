@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE',
 	'dealer.locationShort': 'Dubai',
 	'dealer.name': 'F1rst Motors',
-	'dealer.shortName': 'F1rst Motors'
+	'dealer.shortName': 'F1rst Motors',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Dubai — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'Danube сграда - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, ОАЕ',
 	'dealer.locationShort': 'Дубай',
 	'dealer.name': 'F1rst Motors',
-	'dealer.shortName': 'F1rst Motors'
+	'dealer.shortName': 'F1rst Motors',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Dubai — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7114,13 +7117,17 @@ export const sourceKeys = {
 	'Danube сграда - 409 Sheikh Zayed Rd - Al Quoz 1': 'dealer.addressLine',
 	'Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE': 'dealer.address',
 	'Danube сграда - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, ОАЕ': 'dealer.address',
-	'F1rst Motors': 'dealer.name'
+	'F1rst Motors': 'dealer.name',
+	'Наличен автомобил в Dubai — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Dubai — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Dubai: 'dealer.locationShort',
 	'Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1': 'dealer.addressLine',
 	'Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE': 'dealer.address',
-	'F1rst Motors': 'dealer.shortName'
+	'F1rst Motors': 'dealer.shortName',
+	'Наличен автомобил в Dubai — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

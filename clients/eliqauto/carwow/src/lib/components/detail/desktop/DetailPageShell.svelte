@@ -42,7 +42,7 @@
 				: {}),
 			fuelType: i18n.spec(vehicle.fuel),
 			vehicleTransmission: i18n.spec(vehicle.transmission),
-			offers: {
+			offers: vehicle.price > 0 ? {
 				'@type': 'Offer',
 				price: vehicle.price,
 				priceCurrency: daynightSite.currency,
@@ -52,7 +52,7 @@
 						: 'https://schema.org/InStock',
 				url: appState.url ? appState.url.origin + appState.url.pathname : '',
 				seller: { '@type': 'AutoDealer', name: daynightSite.shortName }
-			}
+			} : undefined
 		}).replaceAll('<', '\\u003c')
 	);
 

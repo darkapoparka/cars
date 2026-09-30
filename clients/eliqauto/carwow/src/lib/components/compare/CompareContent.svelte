@@ -165,7 +165,7 @@
 													>{vehicle.shortTitle}</a
 												>
 											</p>
-											<p class="text-secondary text-center">{vehicle.priceEur}</p>
+											<p class="text-secondary text-center">{i18n.price(vehicle.priceEur)}</p>
 										</div>
 									</td>
 								{/each}

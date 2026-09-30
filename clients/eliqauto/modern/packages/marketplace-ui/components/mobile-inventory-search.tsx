@@ -5,8 +5,9 @@ import { cn } from "@repo/design-system/lib/utils";
 import {
   formatFuelType,
   formatMileage,
-  formatMoney,
   getListingPath,
+
+  formatVehicleMoney,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { CarFront, Search } from "lucide-react";
@@ -258,7 +259,7 @@ const SearchResultButton = ({
             </span>
             <span className="mt-1 flex min-w-0 flex-col gap-1">
               <span className="whitespace-normal break-words font-semibold text-meta text-zinc-950 tabular-nums">
-                {formatMoney(listing.price, isBg ? "bg" : "en")}
+                {formatVehicleMoney(listing.price, isBg ? "bg" : "en")}
               </span>
               <span className="whitespace-normal break-words text-meta text-zinc-600">
                 {`${listing.spec.year} · ${formatMileage(listing.spec.mileageValue, locale)} · ${formatFuelType(listing.spec.fuelType, locale)}`}

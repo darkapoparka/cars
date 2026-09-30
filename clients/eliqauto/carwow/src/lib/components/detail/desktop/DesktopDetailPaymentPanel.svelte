@@ -67,7 +67,7 @@
 			<div class={['content-inner', activePaymentMode === 'cash' && 'active']}>
 				<p class="h5 mb-4">{i18n.t('copy.bbae2b0a216e')}</p>
 				<p class="pdp-payment-price mb-4">
-					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
+					<span class="pdp-payment-price__cash">{i18n.price(vehicle.priceEur)}</span>
 				</p>
 				<p class="text-secondary mb-16">{i18n.t('copy.8ea4d30f38f1')}</p>
 
@@ -89,7 +89,7 @@
 			<div class={['content-inner', activePaymentMode === 'finance' && 'active']}>
 				<p class="h5 mb-4">{i18n.t('copy.bbae2b0a216e')}</p>
 				<p class="pdp-payment-price pdp-payment-price--stacked mb-4">
-					<span class="pdp-payment-price__cash">{vehicle.priceEur}</span>
+					<span class="pdp-payment-price__cash">{i18n.price(vehicle.priceEur)}</span>
 					<span class="pdp-payment-price__monthly">{i18n.spec(vehicle.monthly)}</span>
 				</p>
 				<p class="text-secondary mb-4">{i18n.t('copy.ec632c0e2888')}</p>

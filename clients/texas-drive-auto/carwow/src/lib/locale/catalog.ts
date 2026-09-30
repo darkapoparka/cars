@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': '10511 Olympic Drive, Dallas, TX 75220',
 	'dealer.locationShort': 'Texas, Dallas',
 	'dealer.name': 'Texas Drive Auto',
-	'dealer.shortName': 'Texas Drive Auto'
+	'dealer.shortName': 'Texas Drive Auto',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Dallas — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': '10511 Olympic Drive, Dallas, TX 75220',
 	'dealer.locationShort': 'Далас',
 	'dealer.name': 'Texas Drive Auto',
-	'dealer.shortName': 'Texas Drive Auto'
+	'dealer.shortName': 'Texas Drive Auto',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Dallas — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7111,13 +7114,17 @@ export const sourceKeys = {
 	Dallas: 'dealer.city',
 	'10511 Olympic Drive, Dallas, TX 75220': 'dealer.address',
 	'Texas, Dallas': 'dealer.locationShort',
-	'Texas Drive Auto': 'dealer.name'
+	'Texas Drive Auto': 'dealer.name',
+	'Наличен автомобил в Dallas — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Dallas — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Dallas: 'dealer.city',
 	'10511 Olympic Drive, Dallas, TX 75220': 'dealer.address',
 	'Texas, Dallas': 'dealer.locationShort',
-	'Texas Drive Auto': 'dealer.shortName'
+	'Texas Drive Auto': 'dealer.shortName',
+	'Наличен автомобил в Dallas — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

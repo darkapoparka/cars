@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'Souk Al Haraj, showroom 353, Sharjah',
 	'dealer.locationShort': 'Sharjah',
 	'dealer.name': 'Al Hamoor Al Thahabi',
-	'dealer.shortName': 'Al Hamoor Al Thahabi'
+	'dealer.shortName': 'Al Hamoor Al Thahabi',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Sharjah — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'Souk Al Haraj, Шоурум 353, Sharjah',
 	'dealer.locationShort': 'Шарджа',
 	'dealer.name': 'Al Hamoor Al Thahabi Used Cars',
-	'dealer.shortName': 'Al Hamoor Al Thahabi'
+	'dealer.shortName': 'Al Hamoor Al Thahabi',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Sharjah — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7113,13 +7116,17 @@ export const sourceKeys = {
 	'Souk Al Haraj, showroom 353, Sharjah': 'dealer.address',
 	'Souk Al Haraj, Шоурум 353, Sharjah': 'dealer.address',
 	'Al Hamoor Al Thahabi Used Cars': 'dealer.name',
-	'Al Hamoor Al Thahabi': 'dealer.shortName'
+	'Al Hamoor Al Thahabi': 'dealer.shortName',
+	'Наличен автомобил в Sharjah — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Sharjah — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Sharjah: 'dealer.locationShort',
 	'Souk Al Haraj, showroom 353, Sharjah': 'dealer.address',
 	'Al Hamoor Al Thahabi Used Cars': 'dealer.name',
-	'Al Hamoor Al Thahabi': 'dealer.shortName'
+	'Al Hamoor Al Thahabi': 'dealer.shortName',
+	'Наличен автомобил в Sharjah — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

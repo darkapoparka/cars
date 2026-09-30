@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'Showroom 61, Souq Al Haraj, Sharjah, UAE',
 	'dealer.locationShort': 'Sharjah',
 	'dealer.name': 'Al Basma',
-	'dealer.shortName': 'Al Basma'
+	'dealer.shortName': 'Al Basma',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Sharjah — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'Шоурум 61, Souq Al Haraj, Sharjah, ОАЕ',
 	'dealer.locationShort': 'Шарджа',
 	'dealer.name': 'Al Basma Motors',
-	'dealer.shortName': 'Al Basma'
+	'dealer.shortName': 'Al Basma',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Sharjah — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7115,14 +7118,18 @@ export const sourceKeys = {
 	'Showroom 61, Souq Al Haraj, Sharjah, UAE': 'dealer.address',
 	'Шоурум 61, Souq Al Haraj, Sharjah, ОАЕ': 'dealer.address',
 	'Al Basma Motors': 'dealer.name',
-	'Al Basma': 'dealer.shortName'
+	'Al Basma': 'dealer.shortName',
+	'Наличен автомобил в Sharjah — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Sharjah — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Sharjah: 'dealer.locationShort',
 	'Showroom 61, Souq Al Haraj': 'dealer.addressLine',
 	'Showroom 61, Souq Al Haraj, Sharjah, UAE': 'dealer.address',
 	'Al Basma Motors': 'dealer.name',
-	'Al Basma': 'dealer.shortName'
+	'Al Basma': 'dealer.shortName',
+	'Наличен автомобил в Sharjah — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

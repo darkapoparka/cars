@@ -14,7 +14,7 @@
 
 	async function shareVehicle() {
 		const url = globalThis.location?.href ?? resolve(`/inventory/${vehicle.slug}`);
-		const title = `${vehicle.shortTitle} - ${vehicle.priceEur}`;
+		const title = `${vehicle.shortTitle} - ${i18n.price(vehicle.priceEur)}`;
 
 		try {
 			if (navigator.share) {

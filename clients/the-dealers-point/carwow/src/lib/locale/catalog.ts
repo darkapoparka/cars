@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE',
 	'dealer.locationShort': 'Dubai',
 	'dealer.name': 'Dealers Point',
-	'dealer.shortName': 'Dealers Point'
+	'dealer.shortName': 'Dealers Point',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Dubai — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'Plot No. 364-0442, Al Quoz индустриална зона 1, Dubai, ОАЕ',
 	'dealer.locationShort': 'Дубай',
 	'dealer.name': 'The Dealers Point',
-	'dealer.shortName': 'Dealers Point'
+	'dealer.shortName': 'Dealers Point',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Dubai — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7115,14 +7118,18 @@ export const sourceKeys = {
 	'Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE': 'dealer.address',
 	'Plot No. 364-0442, Al Quoz индустриална зона 1, Dubai, ОАЕ': 'dealer.address',
 	'The Dealers Point': 'dealer.name',
-	'Dealers Point': 'dealer.shortName'
+	'Dealers Point': 'dealer.shortName',
+	'Наличен автомобил в Dubai — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Dubai — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Dubai: 'dealer.locationShort',
 	'Plot No. 364-0442, Al Quoz Industrial Area 1': 'dealer.addressLine',
 	'Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE': 'dealer.address',
 	'The Dealers Point': 'dealer.name',
-	'Dealers Point': 'dealer.shortName'
+	'Dealers Point': 'dealer.shortName',
+	'Наличен автомобил в Dubai — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

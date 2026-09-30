@@ -13,6 +13,8 @@ import {
   getListingPath,
   leadSite,
   parseMarketplaceSearchParams,
+
+  formatVehicleMoney,
 } from "@repo/marketplace";
 import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
@@ -150,7 +152,7 @@ export default async function LeasePage({
           )}/${normalizedLocale === "bg" ? "мес." : "mo."}`,
         }
       : {}),
-    priceLabel: formatMoney(listing.price, normalizedLocale),
+    priceLabel: formatVehicleMoney(listing.price, normalizedLocale),
     priceAmount: listing.price.amount,
     priceCurrency: listing.price.currency,
     fuelType: listing.spec.fuelType,

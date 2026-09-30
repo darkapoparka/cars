@@ -40,7 +40,7 @@
 						<MobileVehicleStats vehicle={car} />
 					</span>
 					<span class="import-example__foot">
-						<span class="import-example__price">{car.priceEur}</span>
+						<span class="import-example__price">{i18n.price(car.priceEur)}</span>
 						<span class="import-example__go" aria-hidden="true"
 							><ChevronRight size={16} strokeWidth={3} /></span
 						>

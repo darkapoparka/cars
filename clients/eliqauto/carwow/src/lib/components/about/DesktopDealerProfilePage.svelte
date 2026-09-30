@@ -124,7 +124,7 @@
 							<p class="text-secondary mb-10">
 								{i18n.distance(vehicle.mileage)} · {i18n.spec(vehicle.fuel)}
 							</p>
-							<p class="dealer-vehicle-card__price text-highlight">{vehicle.priceEur}</p>
+							<p class="dealer-vehicle-card__price text-highlight">{i18n.price(vehicle.priceEur)}</p>
 						</div>
 					</a>
 				{/each}

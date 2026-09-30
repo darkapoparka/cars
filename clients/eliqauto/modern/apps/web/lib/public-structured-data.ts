@@ -133,8 +133,8 @@ export const createOfferStructuredData = ({
     itemOffered: {
       "@id": `${listingUrl}#vehicle`,
     },
-    price: advertisedPrice.amount,
-    priceCurrency: advertisedPrice.currency,
+    price: advertisedPrice.amount > 0 ? advertisedPrice.amount : undefined,
+    priceCurrency: advertisedPrice.amount > 0 ? advertisedPrice.currency : undefined,
     seller: {
       "@type": listing.seller.type === "dealer" ? "Organization" : "Person",
       address: {

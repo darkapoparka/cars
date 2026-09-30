@@ -135,6 +135,12 @@ const moneyFormatter = (money: Money, locale?: string) =>
 export const formatMoney = (money: Money, locale?: string) =>
   moneyFormatter(money, locale).format(money.amount);
 
+/** Missing advertised vehicle prices never imply that a car is free. */
+export const formatVehicleMoney = (money: Money, locale?: string) =>
+  money.amount > 0
+    ? formatMoney(money, locale)
+    : isBulgarianLocale(locale) ? "Цена при запитване" : "Price on request";
+
 /** Preserve locale ordering and spacing when the currency needs separate styling. */
 export const formatMoneyParts = (money: Money, locale?: string) =>
   moneyFormatter(money, locale).formatToParts(money.amount);

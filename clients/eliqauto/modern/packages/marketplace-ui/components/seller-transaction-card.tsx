@@ -3,6 +3,8 @@ import {
   formatMoney,
   formatPriceType,
   type VehicleListing,
+
+  formatVehicleMoney,
 } from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { CircleDollarSign, MessageCircle, Phone } from "lucide-react";
@@ -61,7 +63,7 @@ export const SellerTransactionCard = ({
         {transactionLabel}
       </p>
       <p className="mt-1 font-semibold text-price-lg tracking-heading">
-        {formatMoney(primaryPrice, locale)}
+        {formatVehicleMoney(primaryPrice, locale)}
         {isMonthlyTransaction ? `/${copy.month}` : ""}
       </p>
       {approximatePrice ? (

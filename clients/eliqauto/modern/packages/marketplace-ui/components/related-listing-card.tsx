@@ -3,6 +3,8 @@ import {
   formatMileage,
   formatMoney,
   type VehicleListing,
+
+  formatVehicleMoney,
 } from "@repo/marketplace";
 import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { Car, MapPin, Truck } from "lucide-react";
@@ -62,7 +64,7 @@ const DesktopRelatedListingCard = ({
         </div>
         <div className="p-3">
           <p className="font-semibold text-price tracking-heading">
-            {formatMoney(primaryPrice, locale)}
+            {formatVehicleMoney(primaryPrice, locale)}
           </p>
           {approximatePrice ? (
             <p className="text-meta text-muted-foreground">

@@ -46,7 +46,7 @@
 				<h2 title={vehicle.shortTitle}>{vehicle.shortTitle}</h2>
 				<div class="mobile-inventory-card__price">
 					<span class="mobile-inventory-card__price-stack">
-						<strong>{vehicle.priceEur}</strong>
+						<strong>{i18n.price(vehicle.priceEur)}</strong>
 						{#if vehicle.monthly !== 'Финансиране по запитване'}<span
 								>{i18n.spec(vehicle.monthly)}</span
 							>{/if}

@@ -1,13 +1,14 @@
 import { getRelatedMarketplaceListings } from "@repo/database/marketplace";
 import {
   buildMarketplaceSearchHref,
-  formatMoney,
   getCategoryPath,
   getListingPath,
   getMockRelatedListings,
   leadSite,
   parseMarketplaceSearchParams,
   type VehicleListing,
+
+  formatVehicleMoney,
 } from "@repo/marketplace";
 import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import { isDealershipSite } from "@repo/marketplace/site-config";
@@ -63,7 +64,7 @@ const getAdvertisedPrice = (listing: VehicleListing) =>
   listing.supply?.nativePrice ?? listing.price;
 
 const getListingDescription = (listing: VehicleListing, locale: string) =>
-  `${formatMoney(getAdvertisedPrice(listing), locale)} - ${listing.spec.year} ${
+  `${formatVehicleMoney(getAdvertisedPrice(listing), locale)} - ${listing.spec.year} ${
     listing.spec.make
   } ${listing.spec.model} ${locale === "bg" ? "в" : "in"} ${isDealershipSite ? getLeadCopy(locale).city : listing.location.city}.`;
 

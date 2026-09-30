@@ -14,7 +14,7 @@
 	const garage = getOptionalGarageContext();
 	const isCompared = $derived(garage.isCompared(vehicle.slug));
 	const isFavorite = $derived(garage.isFavorite(vehicle.slug));
-	const displayPrice = $derived(vehicle.priceEur.replace(/\s*EUR\b/, ' €'));
+	const displayPrice = $derived(i18n.price(vehicle.priceEur).replace(/\s*EUR\b/, ' €'));
 	const fallbackBadge = $derived(index % 5 === 1 ? 'Добра цена' : '');
 	const badge = $derived(
 		vehicle.badges.find((value) => normalizeBadgeLabel(value) !== 'vip') ??

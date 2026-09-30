@@ -102,7 +102,7 @@
 			</li>
 		</ul>
 		<p class="daynight-home-inventory-card__price">
-			<span class="daynight-card-price__value">{vehicle.priceEur}</span>
+			<span class="daynight-card-price__value">{i18n.price(vehicle.priceEur)}</span>
 			<span class="daynight-card-price__meta"
 				><a href={i18n.href(resolve('/financing'))} class="daynight-card-price__link"
 					>{i18n.spec(vehicle.monthly)}</a

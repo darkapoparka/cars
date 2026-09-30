@@ -1,4 +1,4 @@
-import { formatMoneyParts, type Money } from "@repo/marketplace";
+import { formatMoneyParts, formatVehicleMoney, type Money } from "@repo/marketplace";
 
 /** Keep the full localized price, with a quieter currency on mobile. */
 export function VehicleCardMoney({
@@ -8,6 +8,7 @@ export function VehicleCardMoney({
   money: Money;
   locale?: string;
 }) {
+  if (!(money.amount > 0)) return <>{formatVehicleMoney(money, locale)}</>;
   const parts = formatMoneyParts(money, locale);
   const currencyIndex = parts.findIndex(({ type }) => type === "currency");
   const join = (values: Intl.NumberFormatPart[]) =>

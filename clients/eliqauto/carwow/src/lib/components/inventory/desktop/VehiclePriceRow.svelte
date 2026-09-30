@@ -7,7 +7,7 @@
 
 	let { vehicle }: { vehicle: InventoryListVehicle } = $props();
 
-	const displayPrice = $derived(vehicle.priceEur.replace(/\s*EUR\b/, ' €'));
+	const displayPrice = $derived(i18n.price(vehicle.priceEur).replace(/\s*EUR\b/, ' €'));
 </script>
 
 <div class="h6 card-box__price mb-15">
