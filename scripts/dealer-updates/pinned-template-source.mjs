@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { exportCommit, fingerprintCommit, git, gitFiles } from '../lib/workflow.mjs';
+import {appSourceRetainsPath} from '../publishing/app-source.mjs';
 
 function normalizedRepository(value) {
   return String(value || '')
@@ -132,6 +133,10 @@ export function readPinnedTemplateTree({ key, repositoryPath, source, expectedDi
   if (key === 'app' && expectedDigest && digest !== expectedDigest) {
     const full = fingerprintCommit(repositoryPath, revision, { prefix, filter: () => true });
     if (full.digest === expectedDigest) digest = full.digest;
+  }
+  if (key === 'app' && expectedDigest && digest !== expectedDigest) {
+    const runtime = fingerprintCommit(repositoryPath, revision, { prefix, filter: appSourceRetainsPath });
+    if (runtime.digest === expectedDigest) digest = runtime.digest;
   }
   if (expectedDigest && digest !== expectedDigest) throw new Error(`${key}: source tree digest mismatch for ${revision}: ${digest}`);
   return {

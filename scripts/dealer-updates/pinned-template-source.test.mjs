@@ -6,6 +6,7 @@ import path from 'node:path';
 import test from 'node:test';
 import { fingerprint } from '../lib/workflow.mjs';
 import { exportPinnedTemplate, exportPinnedTemplatePair, readPinnedTemplateTree, readRepositoryTreeMap } from './pinned-template-source.mjs';
+import {appSourceRetainsPath} from '../publishing/app-source.mjs';
 
 function runGit(repo, args) {
   return execFileSync('git', ['-C', repo, ...args], {
@@ -34,6 +35,19 @@ function templateRepo(t, key = 'auto-best') {
   const digest = fingerprint(repo).digest;
   return { root, repo, from, to, digest };
 }
+
+test('historical App runtime-only digest is checked against the exact pinned Git source', t=>{
+  const fixture=templateRepo(t,'app');
+  fs.mkdirSync(path.join(fixture.repo,'app'),{recursive:true});fs.writeFileSync(path.join(fixture.repo,'app/layout.tsx'),'export default "Pinned App";\n');
+  fs.mkdirSync(path.join(fixture.repo,'public/reference-assets/catalog'),{recursive:true});fs.writeFileSync(path.join(fixture.repo,'public/reference-assets/catalog/capture.txt'),'Reference evidence excluded by the historical App collector');
+  runGit(fixture.repo,['add','.']);runGit(fixture.repo,['commit','-m','App runtime source']);
+  const revision=runGit(fixture.repo,['rev-parse','HEAD']),digest=fingerprint(fixture.repo,{filter:appSourceRetainsPath}).digest;
+  assert.notEqual(digest,fingerprint(fixture.repo).digest);
+  const source={repository:'darkapoparka/cars-template-app',revision,digest};
+  const loaded=readPinnedTemplateTree({key:'app',repositoryPath:fixture.repo,source});
+  assert.equal(loaded.digest,digest);assert.equal(loaded.tree.get('app/layout.tsx').toString(),'export default "Pinned App";\n');
+  assert.throws(()=>readPinnedTemplateTree({key:'app',repositoryPath:fixture.repo,source:{...source,revision:fixture.from}}),/digest mismatch/);
+});
 
 test('pinned template exports use exact old/new commits and verify the approved target digest', t => {
   const fixture = templateRepo(t), runDirectory = path.join(fixture.root, 'runtime');
