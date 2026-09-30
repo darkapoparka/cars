@@ -48,7 +48,7 @@
       <img
         src={vehicle.image}
         srcset={imageSrcset(vehicle.image)}
-        sizes={layout === 'listing' ? '(max-width: 767px) calc((100vw - 48px) * .4), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
+        sizes={layout === 'listing' ? '(max-width: 767px) calc((100vw - 48px) * .53), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
         alt={vehicle.title}
         loading={priority ? 'eager' : 'lazy'}
         fetchpriority={priority ? 'high' : 'auto'}
@@ -74,19 +74,6 @@
       {#if layout === 'showcase'}
         <p class="dn-vehicle-card__summary">{vehicle.year} · {specificationLabel(vehicle.fuel, i18n.locale)}</p>
       {/if}
-      {#if layout === 'listing'}
-        <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
-          <li class="dn-vehicle-card__fact-group dn-vehicle-card__fact-group--history">
-            <span class="dn-vehicle-card__fact dn-vehicle-card__fact--year">{vehicle.year}</span>
-            <span class="dn-vehicle-card__fact">{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
-          </li>
-          <li class="dn-vehicle-card__fact-group">
-            <span class="dn-vehicle-card__fact">{specificationLabel(vehicle.fuel, i18n.locale)}</span>
-            <span class="dn-vehicle-card__fact">{specificationLabel(vehicle.transmission, i18n.locale)}</span>
-          </li>
-        </ul>
-      {/if}
-
       {#if layout !== 'showcase'}
       <div class="dn-vehicle-card__specs" aria-label={i18n.t("m_148a9be6e575")}>
         <span class="dn-vehicle-card__spec">
@@ -104,6 +91,18 @@
         {@render amount()}
       {/if}
     </div>
+    {#if layout === 'listing'}
+      <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
+        <li class="dn-vehicle-card__fact-group dn-vehicle-card__fact-group--history">
+          <span class="dn-vehicle-card__fact dn-vehicle-card__fact--year">{vehicle.year}</span>
+          <span class="dn-vehicle-card__fact">{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
+        </li>
+        <li class="dn-vehicle-card__fact-group">
+          <span class="dn-vehicle-card__fact">{specificationLabel(vehicle.fuel, i18n.locale)}</span>
+          <span class="dn-vehicle-card__fact">{specificationLabel(vehicle.transmission, i18n.locale)}</span>
+        </li>
+      </ul>
+    {/if}
   </a>
 </article>
 
@@ -366,7 +365,7 @@
     .dn-vehicle-card--listing .dn-vehicle-card__link {
       display: grid;
       min-height: 0;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      grid-template-columns: minmax(0, 53fr) minmax(0, 47fr);
       align-items: center;
       gap: var(--dn-space-2);
       padding: var(--dn-space-2);
@@ -393,7 +392,7 @@
       min-width: 0;
       align-content: start;
       grid-template-columns: minmax(0, 1fr);
-      grid-template-areas: "identity" "price" "facts";
+      grid-template-areas: "identity" "price";
       gap: var(--dn-space-1);
       padding: 0;
     }
@@ -407,11 +406,12 @@
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
-      grid-area: facts;
+      grid-column: 1 / -1;
       display: flex;
-      flex-direction: column;
-      align-items: start;
-      gap: var(--dn-space-1);
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--dn-space-1) var(--dn-space-2);
       margin: 0;
       padding: 0;
       list-style: none;
@@ -422,7 +422,7 @@
       min-width: 0;
       max-width: 100%;
       flex-wrap: wrap;
-      gap: var(--dn-space-2);
+      gap: var(--dn-space-1);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__fact {
@@ -455,7 +455,7 @@
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__fact-group--history .dn-vehicle-card__fact--year {
-      padding-inline-end: var(--dn-space-2);
+      padding-inline-end: var(--dn-space-1);
       border-inline-end: 1px solid var(--dn-line);
       border-radius: 0;
     }

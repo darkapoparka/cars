@@ -78,7 +78,7 @@ The compact revision passed `npm run validate` (0 Svelte errors and warnings), a
 
 ### Compact list follow-up
 
-The current mobile inventory uses a landscape thumbnail beside a single details column. Price follows the model in both the markup and mobile layout. Year/mileage form a quiet text row; fuel/transmission use two badges with more internal space and separation. The photograph retains its source proportions so the vehicle stays visible. Narrow containers and enlarged text stack the photo above the information, while normal desktop and carousel composition remain intact. [Styling](../STYLING.md#mobile-listing-cards) owns the current contract.
+The compact list revision, `8709bb3f0`, used a landscape thumbnail beside a single details column. Price follows the model in both the markup and mobile layout. Year/mileage form a quiet text row; fuel/transmission use two badges with more internal space and separation. The photograph retains its source proportions so the vehicle stays visible. Narrow containers and enlarged text stack the photo above the information, while normal desktop and carousel composition remain intact. [Styling](../STYLING.md#mobile-listing-cards) owns the current contract.
 
 At normal 16px root text, the first card is 143.4px high in both in-app browser views, compared with 251.5px at 320px and 290.9px at 390px in the previous revision. Four complete cards fit in each viewport. These comparisons retain the same viewport and scroll position 0:
 
@@ -91,6 +91,19 @@ The final build passed `npm run validate` with 0 Svelte errors and warnings, all
 
 Tested source blobs: `VehicleCard.svelte` — `9f43221a78816f731ffcd2cfb72eaed457dbcc28`; `ListingResults.svelte` — `c67e5482d798d68996f2704031dffcf22025be0b`; `mobile-polish-smoke.mjs` — `5843fe05cb44372e79db3ee8b23fc7d55fa9d0e9`. Earlier JSON matrices remain evidence for their respective revisions.
 
-This changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The first revision's asset guard covered its five image derivatives; the compact list introduces no new assets.
+### Larger list photograph follow-up
+
+The photograph now takes 53% of the main row, with the model and price together in the remaining column. Specifications span the full card below that row and wrap by group when translated or enlarged. This gives the photograph 32.5% more width and approximately 76% more area while preserving the whole car. The mobile image hint follows the new width and still selects the existing 640px source at 390px and 2× density.
+
+At normal 16px root text and scroll position 0 in the in-app browser, the first photo is 136.2px wide at 320px and 173.3px at 390px, up from 102.8px and 130.8px. The first card is 138.8px and 163.5px high respectively; the prior compact list was 143.4px at both widths. Longer names and Bulgarian specifications grow naturally.
+
+| Width | Previous compact list | Larger photograph |
+| --- | --- | --- |
+| 320px | ![Previous list at 320px](../mobile-list-cards-2026-09-30/after-320.jpg) | ![Larger photograph at 320px](../mobile-list-photo-2026-09-30/after-320.jpg) |
+| 390px | ![Previous list at 390px](../mobile-list-cards-2026-09-30/after-390.jpg) | ![Larger photograph at 390px](../mobile-list-photo-2026-09-30/after-390.jpg) |
+
+The final production build passed `npm run validate` with 0 Svelte errors and warnings, all 8 mobile polish cases, all 42 Chromium inventory accessibility/text-bounds states and all 66 WebKit reflow cases. No violations, overflow or clipped copy were found in those states, including both languages, increased text spacing and 200% root text. The live 390px list → vehicle 1 → anchored list return passed, and desktop cards retain one price below their specifications. Tested source blobs: `VehicleCard.svelte` — `879e0e9a6fda7ec0ab670a79ab09ea0d9f886de9`; `mobile-polish-smoke.mjs` — `2798f6ddcb7bdd7bbeae8689ffd1dc470dcad4c6`. Earlier matrices record their respective revisions.
+
+This revision changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The first revision's asset guard covered its five image derivatives; the subsequent card revisions introduce no new public assets.
 
 Automated axe and layout checks provide bounded evidence, not a claim of complete WCAG conformance. Physical-device and screen-reader acceptance remain separate from these browser checks.

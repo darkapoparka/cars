@@ -121,7 +121,7 @@ Inventory filter chips (including removable active filters), results filters/sor
 
 ## Responsive composition
 
-Mobile inventory uses compact list cards with a landscape thumbnail beside the details. A regular-weight make label and wrapping 18px model title sit above the 20px price, a quiet year/mileage row and two fuel/transmission badges. Complete names remain visible and in the accessible link label and title attribute; content grows with the name. Keep the 12px gap between cards and the keyboard focus border visible around the whole card.
+Mobile inventory uses compact list cards with a landscape photograph beside the details. A regular-weight make label and wrapping 18px model title sit above the 20px price. Year/mileage and fuel/transmission share a full-width footer below the photograph and details. Complete names remain visible and in the accessible link label and title attribute; content grows with the name. Keep the 12px gap between cards and the keyboard focus border visible around the whole card.
 
 Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars otherwise change the available page and fixed-navigation width when moving between long pages (Home) and short pages (Sell/Import). Overlay scrollbars on touch devices retain their normal behavior.
 
@@ -190,7 +190,7 @@ Overlay gutters, row gaps and row corners reuse the foundation spacing/radius sy
 
 ### Mobile listing cards
 
-Below 768px, the listing variant uses a 40% landscape thumbnail and 60% details column, with 8px outer padding and an 8px column gap. The photograph keeps its 3:2 source proportions and centers vertically instead of stretching into a tall crop. The 18px model, 20px price and metadata form one readable stack with 4px row gaps. Year/mileage use plain 14px text and a subtle divider; fuel/transmission use two intrinsic-width badges with 2px vertical and 6px horizontal padding and an 8px gap. Both metadata groups wrap when needed. At card widths of 16rem or less, the photograph and details stack so enlarged text remains readable. Desktop/tablet and carousel/showcase variants retain their existing composition. `VehicleCard.svelte` owns the card, and `ListingResults.svelte` owns its 12px mobile separation. The mobile polish, reflow and inventory accessibility checks verify both locales.
+Below 768px, the listing variant uses a 53% landscape photograph and 47% details column, with 8px outer padding and an 8px column gap. The photograph keeps its 3:2 source proportions and centers vertically instead of stretching into a tall crop. The 18px model and 20px price form one readable stack with 4px row gaps. Specifications span both columns in a separate footer: year/mileage use plain 14px text and a subtle divider; fuel/transmission use two intrinsic-width badges with 2px vertical and 6px horizontal padding. Each group has a 4px internal gap, with an 8px gap between groups; both groups wrap when needed. The mobile `sizes` hint follows the wider photograph. At card widths of 16rem or less, the photograph and details stack so enlarged text remains readable. Desktop/tablet and carousel/showcase variants retain their existing composition. `VehicleCard.svelte` owns the card, and `ListingResults.svelte` owns its 12px mobile separation. The mobile polish, reflow and inventory accessibility checks verify both locales.
 
 ## Shared icon-only controls and modal behavior
 

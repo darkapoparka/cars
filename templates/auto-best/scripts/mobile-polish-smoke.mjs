@@ -120,12 +120,15 @@ try {
             const box = card.getBoundingClientRect();
             const identity = card.querySelector('.dn-vehicle-card__identity').getBoundingClientRect();
             const price = card.querySelector('.dn-vehicle-card__amount').getBoundingClientRect();
+            const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
             return photograph.complete && photograph.naturalWidth > 0 &&
               Math.abs(image.width / image.height - photograph.naturalWidth / photograph.naturalHeight) <= .01 &&
               image.left >= box.left && image.right <= content.left - 1 && image.bottom <= box.bottom &&
-              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom - 1;
+              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom - 1 &&
+              metadata.top >= Math.max(image.bottom, content.bottom) &&
+              metadata.left >= box.left && metadata.right <= box.right && metadata.bottom <= box.bottom;
           }));
-          assert(photos.every(Boolean), 'Landscape thumbnails preserve the car photograph beside the copy; price follows the model');
+          assert(photos.every(Boolean), 'Landscape photos preserve the car beside the copy; price follows the model and specs clear both columns');
           assert.equal(await page.locator('.dn-vehicle-card--listing img[fetchpriority="high"]').count(), 1,
             'Only the first inventory photograph gets high fetch priority');
           await capture('inventory');
