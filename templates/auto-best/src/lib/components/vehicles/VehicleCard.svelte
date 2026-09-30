@@ -67,10 +67,14 @@
       {/if}
       {#if layout === 'listing'}
         <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
-          <li class="dn-vehicle-card__fact">{vehicle.year}</li>
-          <li class="dn-vehicle-card__fact">{formatMileage(vehicle.mileageKm, i18n.locale)}</li>
-          <li class="dn-vehicle-card__fact">{specificationLabel(vehicle.fuel, i18n.locale)}</li>
-          <li class="dn-vehicle-card__fact">{specificationLabel(vehicle.transmission, i18n.locale)}</li>
+          <li class="dn-vehicle-card__fact-group">
+            <span class="dn-vehicle-card__fact">{vehicle.year}</span>
+            <span class="dn-vehicle-card__fact">{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
+          </li>
+          <li class="dn-vehicle-card__fact-group">
+            <span class="dn-vehicle-card__fact">{specificationLabel(vehicle.fuel, i18n.locale)}</span>
+            <span class="dn-vehicle-card__fact">{specificationLabel(vehicle.transmission, i18n.locale)}</span>
+          </li>
         </ul>
       {/if}
 
@@ -373,8 +377,14 @@
       display: grid;
       min-width: 0;
       align-content: start;
-      gap: var(--dn-space-3);
-      padding: var(--dn-space-3) var(--dn-space-4);
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-areas: "identity price" "facts facts";
+      gap: var(--dn-space-2);
+      padding: var(--dn-space-2) var(--dn-space-3);
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__identity {
+      grid-area: identity;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__make {
@@ -382,21 +392,33 @@
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--dn-space-2);
+      grid-area: facts;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--dn-space-half);
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    .dn-vehicle-card--listing .dn-vehicle-card__fact {
+    .dn-vehicle-card--listing .dn-vehicle-card__fact-group {
       display: flex;
       min-width: 0;
+      max-width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--dn-space-half);
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__fact {
+      display: inline-flex;
+      min-width: 0;
+      max-width: 100%;
+      flex: 0 1 auto;
       align-items: center;
       justify-content: center;
-      min-height: 32px;
-      padding: var(--dn-space-1) var(--dn-space-2);
+      padding: var(--dn-space-half) var(--dn-space-1);
       overflow: visible;
       border: 0;
       border-radius: var(--dn-pill);
@@ -414,7 +436,7 @@
     .dn-vehicle-card--listing .dn-vehicle-card__name {
       display: block;
       min-width: 0;
-      font-size: var(--dn-text-card);
+      font-size: var(--dn-text-lead);
       font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-control);
       white-space: normal;
@@ -429,20 +451,31 @@
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__amount {
+      grid-area: price;
+      align-self: center;
       margin-top: 0;
-      padding-top: var(--dn-space-2);
-      border-top: 1px solid var(--dn-line);
+      padding-top: 0;
       color: var(--dn-ink);
-      font-size: var(--dn-text-subheading);
+      font-size: var(--dn-text-card);
       font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-control);
       text-align: end;
       overflow-wrap: anywhere;
     }
 
-    @container (max-width: 15rem) {
-      .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
+    @container (max-width: 16rem) {
+      .dn-vehicle-card--listing .dn-vehicle-card__content {
         grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "identity" "price" "facts";
+      }
+
+      .dn-vehicle-card--listing .dn-vehicle-card__make {
+        overflow-wrap: anywhere;
+      }
+
+      .dn-vehicle-card--listing .dn-vehicle-card__amount {
+        justify-self: start;
+        text-align: start;
       }
     }
   }

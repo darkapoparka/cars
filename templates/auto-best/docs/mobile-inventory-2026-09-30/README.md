@@ -52,7 +52,7 @@ Initial concurrent runs encountered two navigation timeouts and a WebKit geometr
 
 ### Badge follow-up
 
-The latest revision keeps the photograph on top and groups all four specifications into centered pill badges in two equal columns. The badge list uses one column at card widths of 15rem or less to accommodate enlarged text. Content has 12px vertical padding; the price has its own row and aligns to the right. [Styling](../STYLING.md#mobile-listing-cards) describes the current component contract.
+The badge revision, `de074faf1`, kept the photograph on top and grouped all four specifications into centered pill badges in two equal columns. At card widths of 15rem or less it used one badge column. Content had 12px vertical padding and a separate right-aligned price row. This layout was superseded by the compact revision below; [Styling](../STYLING.md#mobile-listing-cards) describes the current component contract.
 
 The initial screenshots and full matrix above record the first revision, `e9d021f8c`. These are the updated cards at normal text size and the same scroll position:
 
@@ -61,7 +61,20 @@ The initial screenshots and full matrix above record the first revision, `e9d021
 | 320px | ![Previous details at 320px](after-320.jpg) | ![Centered badges at 320px](../mobile-card-badges-2026-09-30/after-320.jpg) |
 | 390px | ![Previous details at 390px](after-390.jpg) | ![Centered badges at 390px](../mobile-card-badges-2026-09-30/after-390.jpg) |
 
-The badge revision passed `npm run validate` (0 Svelte errors and warnings), all 8 mobile polish cases, all 66 WebKit reflow cases, and all 42 Chromium inventory accessibility/text-bounds states with no violations or clipping. The tested `VehicleCard.svelte` blob is `e846e371bd1edcc9bc833507fbf1c0b455915bef`; the prior JSON matrices remain evidence for the first revision. Both languages were also inspected in the live in-app browser. The Node 22.20.0 development server runs at `http://127.0.0.1:5173`.
+The badge revision passed `npm run validate` (0 Svelte errors and warnings), all 8 mobile polish cases, all 66 WebKit reflow cases, and all 42 Chromium inventory accessibility/text-bounds states with no violations or clipping. The tested `VehicleCard.svelte` blob is `e846e371bd1edcc9bc833507fbf1c0b455915bef`; the prior JSON matrices remain evidence for the first revision. Both languages were also inspected in the live in-app browser.
+
+### Compact details follow-up
+
+The separate price row and full-width badge grid made the cards unnecessarily tall. The model and price now share a row, with 18px and 20px type respectively. Specifications use small intrinsic-width badges in year/mileage and fuel/transmission pairs, wrapping as pairs when space is limited. The details panel uses 8px vertical and 12px horizontal padding, an 8px row gap and 2px gaps between badges. At narrow container widths or enlarged text, the identity and price stack without clipping. The full-width 16:9 photograph stays in place.
+
+These screenshots compare the tall badge revision with the compact revision at **normal 16px root text**, identical CSS viewport sizes, and scroll position 0. In the in-app browser, the first card measures 251.5px high at 320px and 290.9px at 390px; its details panel is 93.4px in both views. Longer model names and translated badges grow naturally.
+
+| Width | Tall badge revision | Compact details |
+| --- | --- | --- |
+| 320px | ![Tall card at 320px](../mobile-card-badges-2026-09-30/after-320.jpg) | ![Compact card at 320px](../mobile-card-density-2026-09-30/after-320.jpg) |
+| 390px | ![Tall card at 390px](../mobile-card-badges-2026-09-30/after-390.jpg) | ![Compact card at 390px](../mobile-card-density-2026-09-30/after-390.jpg) |
+
+The compact revision passed `npm run validate` (0 Svelte errors and warnings), all 8 mobile polish cases, all 66 WebKit reflow cases, and all 42 Chromium inventory accessibility/text-bounds states with no violations, overflow or clipped copy. These checks ran on the final production build at `http://127.0.0.1:5185`, using Node 22.20.0. The tested `VehicleCard.svelte` blob is `86e06b202903b9014852cd40624854cee66539c7`; earlier JSON matrices remain evidence for their respective revisions. Both languages were visually checked at 320px, and long titles at 390px. The detached development server runs at `http://127.0.0.1:5173`.
 
 This changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The asset-count guard is committed only for the five derivatives owned by this revision.
 
