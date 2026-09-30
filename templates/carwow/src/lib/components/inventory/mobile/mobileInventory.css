@@ -292,53 +292,6 @@
 	text-transform: uppercase;
 }
 
-.mobile-inventory-pills {
-	display: flex;
-	gap: var(--sa-mobile-gap-xs);
-	overflow-x: auto;
-	padding: 0;
-	overscroll-behavior-x: contain;
-	scroll-padding-inline: 14px;
-	scrollbar-width: none;
-}
-
-.mobile-inventory-pills::-webkit-scrollbar {
-	display: none;
-}
-
-.mobile-inventory-pills button {
-	display: inline-flex;
-	flex: 0 0 auto;
-	min-height: var(--sa-mobile-pill-h);
-	align-items: center;
-	justify-content: center;
-	gap: var(--sa-pill-gap);
-	border: 0;
-	border-radius: var(--sa-pill-radius);
-	background: var(--sa-fill);
-	padding: 0 var(--sa-pill-pad-x);
-	color: var(--sa-ink);
-	font-family: var(--sa-font);
-	font-size: var(--sa-button-font-size);
-	font-weight: var(--sa-button-font-weight);
-	letter-spacing: 0;
-	line-height: 1;
-	white-space: nowrap;
-	box-shadow: none;
-}
-
-.mobile-inventory-pill-label {
-	display: block;
-	overflow: hidden;
-	min-width: 0;
-	font: inherit;
-	font-weight: inherit;
-	line-height: inherit;
-	letter-spacing: inherit;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
 .mobile-inventory-pills .mobile-inventory-pill-chevron {
 	flex: 0 0 auto;
 	margin-left: auto;
@@ -1168,8 +1121,7 @@
 	font-weight: var(--sa-weight-medium);
 	line-height: var(--sa-mobile-leading-body);
 }
-.mobile-map-card__actions a,
-.mobile-inventory-pills button {
+.mobile-map-card__actions a {
 	font-size: var(--sa-button-font-size);
 	font-weight: var(--sa-button-font-weight);
 }

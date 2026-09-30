@@ -4,6 +4,7 @@
 
 	import { Car, ChevronDown, Fuel, Gauge } from '@lucide/svelte';
 	import type { FilterSheetMode } from '$lib/types/mobile-inventory';
+	import '$lib/styles/mobile-quick-pills.css';
 
 	let {
 		vehiclesCount,
@@ -39,7 +40,7 @@
 </script>
 
 <div class="mobile-inventory-quick" role="group" aria-label={i18n.t('copy.427bd0c4b0b6')}>
-	<div class="mobile-inventory-pills">
+	<div class="mobile-inventory-pills mobile-quick-pills">
 		<button
 			type="button"
 			class={selectedBrands.length

@@ -17,6 +17,7 @@
 	import MobileHomeLocationSheet from './MobileHomeLocationSheet.svelte';
 	import './mobile-home-sheets.css';
 	import '$lib/styles/mobile-hero-pill.css';
+	import '$lib/styles/mobile-quick-pills.css';
 
 	let {
 		data,
@@ -124,7 +125,7 @@
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mh-quick" aria-label={i18n.t('copy.427bd0c4b0b6')}>
+		<nav class="mh-quick mobile-quick-pills" aria-label={i18n.t('copy.427bd0c4b0b6')}>
 			{#each quickFilters as item (item.label)}
 				<a
 					class="mh-quick__pill"
@@ -383,55 +384,10 @@
 	}
 
 	.mh-quick {
-		display: flex;
+		--mobile-quick-pills-padding: 6px var(--mh-gutter);
+		--mobile-quick-pills-scroll-padding: var(--mh-gutter);
+
 		margin-top: 0;
-		gap: 8px;
-		overflow-x: auto;
-		overscroll-behavior-x: contain;
-		padding: 6px var(--mh-gutter);
-		scroll-padding-inline: var(--mh-gutter);
-		scrollbar-width: none;
-	}
-
-	.mh-quick::-webkit-scrollbar {
-		display: none;
-	}
-
-	.mh-quick__pill {
-		display: inline-flex;
-		flex: 0 0 auto;
-		align-items: center;
-		justify-content: center;
-		min-height: 44px;
-		box-sizing: border-box;
-		border: 1px solid #dce1e7;
-		border-radius: var(--sa-r-pill);
-		background: #f7f8fa;
-		padding: 0 10px;
-		color: var(--sa-ink);
-		font: var(--sa-weight-medium) var(--sa-text-base) / 1.2 var(--sa-font);
-		white-space: nowrap;
-	}
-
-	.mh-quick__pill span {
-		font: inherit;
-	}
-
-	.mh-quick__pill:active {
-		border-color: #b7c0cc;
-		background: #e9edf2;
-	}
-
-	.mh-quick__pill:focus-visible {
-		outline: 3px solid var(--sa-red);
-		outline-offset: 3px;
-	}
-
-	@media (hover: hover) {
-		.mh-quick__pill:hover {
-			border-color: #bdc6d2;
-			background: #eef1f5;
-		}
 	}
 
 	.mobile-home :global(svg),
