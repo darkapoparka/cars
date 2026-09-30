@@ -33,6 +33,8 @@ import {
 } from "../lib/listing-truth";
 import {
   mobileVehicleCardContentClassName,
+  mobileVehicleCardFactsClassName,
+  mobileVehicleCardInfoClassName,
   mobileVehicleCardPriceClassName,
   mobileVehicleCardPriceSummaryClassName,
   mobileVehicleCardTitleClassName,
@@ -91,7 +93,7 @@ export const VehicleCardMediaBadges = ({
 
   return (
     <div
-      className="pointer-events-none absolute top-3 left-3 z-10 flex max-w-[calc(100%-4.5rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
+      className="pointer-events-none absolute top-1.5 left-1.5 z-10 flex max-w-[calc(100%-0.75rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
       data-slot="vehicle-card-media-badges"
     >
       {labels.map((label) => (
@@ -503,7 +505,7 @@ const MobileDealerVehicleCardContent = ({
     data-slot="vehicle-card-mobile-content"
     href={listingHref}
   >
-    <div className="min-w-0 space-y-1">
+    <div className={mobileVehicleCardInfoClassName}>
       <h2
         className={mobileVehicleCardTitleClassName}
         data-slot="vehicle-card-title"
@@ -517,7 +519,9 @@ const MobileDealerVehicleCardContent = ({
         variant="comparison"
       />
     </div>
-    <VehicleSpecPills listing={listing} locale={locale} />
+    <div className={mobileVehicleCardFactsClassName}>
+      <VehicleSpecPills listing={listing} locale={locale} />
+    </div>
   </Link>
 );
 

@@ -17,6 +17,8 @@ import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-des
 import {
   mobileVehicleCardClassName,
   mobileVehicleCardContentClassName,
+  mobileVehicleCardFactsClassName,
+  mobileVehicleCardInfoClassName,
   mobileVehicleCardMediaClassName,
   mobileVehicleCardPriceSummaryClassName,
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
@@ -272,18 +274,20 @@ export const PublicRouteLoading = async ({
             >
               <div className={mobileVehicleCardMediaClassName} />
               <div className={mobileVehicleCardContentClassName}>
-                <div className="space-y-1">
+                <div className={mobileVehicleCardInfoClassName}>
                   <div className="h-5 w-4/5 rounded bg-secondary" />
                   <div className={mobileVehicleCardPriceSummaryClassName}>
-                    <div className="h-7 w-2/5 rounded bg-secondary" />
-                    <div className="h-3 w-1/3 rounded bg-secondary" />
+                    <div className="h-6 w-3/4 rounded bg-secondary" />
+                    <div className="h-3 w-4/5 rounded bg-secondary" />
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-1">
-                  <div className="h-6 w-12 rounded-md bg-secondary" />
-                  <div className="h-6 w-20 rounded-md bg-secondary" />
-                  <div className="h-6 w-12 rounded-md bg-secondary" />
-                  <div className="h-6 w-20 rounded-md bg-secondary" />
+                <div className={mobileVehicleCardFactsClassName}>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="h-4 w-8 rounded bg-secondary" />
+                    <div className="h-4 w-16 rounded bg-secondary" />
+                    <div className="h-4 w-10 rounded bg-secondary" />
+                    <div className="h-4 w-16 rounded bg-secondary" />
+                  </div>
                 </div>
               </div>
             </div>

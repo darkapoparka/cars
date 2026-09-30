@@ -7,7 +7,9 @@ import { VehicleCardMoney } from "@repo/marketplace-ui/components/vehicle-card-m
 import {
   mobileVehicleCardClassName,
   mobileVehicleCardContentClassName,
+  mobileVehicleCardFactsClassName,
   mobileVehicleCardImageSizes,
+  mobileVehicleCardInfoClassName,
   mobileVehicleCardMediaClassName,
   mobileVehicleCardPriceClassName,
   mobileVehicleCardPriceSummaryClassName,
@@ -56,7 +58,7 @@ export function LeaseSelectedVehicle({
         ) : (
           <Image
             alt={vehicle.imageAlt}
-            className="object-cover object-center"
+            className="object-cover object-[center_60%] lg:object-center"
             fill
             loading={priority || !onSelect ? "eager" : "lazy"}
             onError={() => setFailedImageUrl(vehicle.imageUrl)}
@@ -66,7 +68,7 @@ export function LeaseSelectedVehicle({
         )}
       </div>
       <div className={mobileVehicleCardContentClassName}>
-        <div className="min-w-0 space-y-1">
+        <div className={mobileVehicleCardInfoClassName}>
           <h2
             className={mobileVehicleCardTitleClassName}
             data-slot="lease-selected-vehicle-title"
@@ -102,16 +104,18 @@ export function LeaseSelectedVehicle({
             ) : null}
           </div>
         </div>
-        <DealerVehicleFacts
-          facts={facts}
-          label={locale === "bg" ? "Характеристики" : "Specifications"}
-        />
+        <div className={mobileVehicleCardFactsClassName}>
+          <DealerVehicleFacts
+            facts={facts}
+            label={locale === "bg" ? "Характеристики" : "Specifications"}
+          />
+        </div>
       </div>
       {onSelect ? (
         <button
           aria-label={`${locale === "bg" ? "Изберете" : "Select"} ${vehicle.title}, ${vehicle.priceLabel}`}
           aria-pressed={selected}
-          className="absolute inset-0 rounded-xl focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-[-2px] active:bg-black/5"
+          className="absolute inset-0 z-20 rounded-xl focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-[-2px] active:bg-black/5"
           data-vehicle-selected={selected}
           onClick={onSelect}
           type="button"
@@ -126,7 +130,7 @@ export function LeaseSelectedVehicle({
       {onClear ? (
         <button
           aria-label={leaseSelectorCopy[locale].clearSelection}
-          className="absolute top-1.5 left-1.5 grid size-11 place-items-center rounded-full bg-white text-zinc-700 transition-colors hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
+          className="absolute top-1.5 left-1.5 z-30 grid size-11 place-items-center rounded-full bg-white text-zinc-700 transition-colors hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
           onClick={onClear}
           title={leaseSelectorCopy[locale].clearSelection}
           type="button"
