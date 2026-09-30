@@ -1528,7 +1528,7 @@
 			background: transparent;
 			color: rgb(255 255 255 / 0.72);
 			font-family: var(--bc-font-body);
-			font-size: var(--bc-text-h5);
+			font-size: var(--bc-text-mode-tab);
 			font-weight: var(--bc-weight-control);
 			letter-spacing: 0;
 			line-height: 24px;

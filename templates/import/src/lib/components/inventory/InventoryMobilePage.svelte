@@ -311,7 +311,10 @@
 	const mobileSearchShowAllLabel = $derived(
 		mobile.countLabel.toLocaleLowerCase().startsWith('all') ? 'Show all' : nt('ui85')
 	);
-	const mobileSearchCount = $derived(mobile.countLabel.match(/\d+/)?.[0] ?? '');
+	const mobileSearchCount = $derived(String(mobile.resultCount));
+	const mobileSearchTriggerLabel = $derived(
+		`${mobile.searchDisplayValue || mobile.searchLabel} (${mobile.resultCount})`
+	);
 	const inventoryHeading = $derived(mobile.filterLabel === nt('ui133') ? nt('ui136') : 'Vehicles');
 	const filterDrawerId = $derived(filterDrawerIds[filterDrawerMode]);
 	const filterDrawerHasActions = $derived(
@@ -536,13 +539,18 @@
 					<button
 						type="button"
 						class="daynight-inventory-mobile__search-field"
-						aria-label={mobile.searchDisplayValue || mobile.searchPlaceholder}
+						aria-label={`${mobileSearchTriggerLabel}, ${mobile.searchPlaceholder}`}
 						aria-haspopup="dialog"
 						aria-expanded={searchDrawerOpen}
 						onclick={openSearchDrawer}
 					>
 						<Search size={20} strokeWidth={2} aria-hidden="true" />
-						<span>{mobile.searchDisplayValue || mobile.searchLabel}</span>
+						<span class="daynight-inventory-mobile__search-label">
+							<span class="daynight-inventory-mobile__search-value">
+								{mobile.searchDisplayValue || mobile.searchLabel}
+							</span>
+							<span class="daynight-inventory-mobile__search-count">({mobile.resultCount})</span>
+						</span>
 					</button>
 					<MobileIconAction
 						label={mobile.filterLabel}
@@ -1109,9 +1117,9 @@
 		width: 100%;
 		max-width: 100vw;
 		min-width: 0;
-		gap: var(--bc-space-2);
+		gap: 0;
 		overflow-x: hidden;
-		padding: 0 14px 92px;
+		padding: 0 var(--bc-mobile-gutter) 92px;
 	}
 
 	.daynight-inventory-mobile__sticky {
@@ -1122,15 +1130,15 @@
 		gap: var(--bc-space-2);
 		min-width: 0;
 		margin: 0;
-		padding: max(6px, env(safe-area-inset-top)) 0 var(--bc-space-2);
+		/* Keep one 12px gap between the pills and results, owned by the sticky toolbar. */
+		padding: max(var(--bc-space-2), env(safe-area-inset-top)) 0 var(--bc-space-3);
 		background: color-mix(in srgb, var(--bc-bg) 94%, transparent);
 		backdrop-filter: blur(14px);
 		-webkit-backdrop-filter: blur(14px);
-		border-bottom: 1px solid transparent;
 	}
 
 	.daynight-inventory-mobile__sticky[aria-busy='true'] {
-		border-bottom-color: var(--bc-accent);
+		box-shadow: inset 0 -1px var(--bc-accent);
 	}
 
 	.daynight-inventory-mobile__search {
@@ -1151,7 +1159,7 @@
 		border: 0;
 		border-radius: var(--bc-radius-pill);
 		background: var(--bc-white);
-		padding: 0 14px;
+		padding: 0 var(--bc-space-4);
 		color: var(--bc-ink);
 		cursor: pointer;
 		text-align: left;
@@ -1160,14 +1168,22 @@
 		flex: 0 0 auto;
 		color: var(--bc-copy);
 	}
-	.daynight-inventory-mobile__search-field span {
+	.daynight-inventory-mobile__search-label {
+		display: flex;
 		min-width: 0;
-		overflow: hidden;
-		font-size: var(--bc-text-search-trigger);
+		gap: var(--bc-space-1);
+		font-size: var(--bc-text-search);
 		font-weight: var(--bc-weight-body);
 		line-height: var(--bc-leading-search);
-		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+	.daynight-inventory-mobile__search-value {
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.daynight-inventory-mobile__search-count {
+		flex: 0 0 auto;
 	}
 	.daynight-inventory-mobile__search-field:focus-visible {
 		outline: 2px solid var(--bc-accent);
@@ -1180,7 +1196,7 @@
 		gap: var(--bc-space-2);
 		margin: 0 calc(-1 * var(--bc-mobile-gutter));
 		overflow-x: auto;
-		padding: 0 var(--bc-mobile-gutter) 2px;
+		padding: 0 var(--bc-mobile-gutter);
 		scrollbar-width: none;
 		-webkit-mask-image: linear-gradient(to right, var(--bc-ink) calc(100% - 34px), transparent);
 		mask-image: linear-gradient(to right, var(--bc-ink) calc(100% - 34px), transparent);
@@ -1241,7 +1257,8 @@
 		line-height: var(--bc-leading-filter);
 	}
 
-	.daynight-inventory-mobile__tool-choice.active span {
+	.daynight-inventory-mobile__tool-choice.active span,
+	.daynight-inventory-mobile__tool-choice.active strong {
 		color: var(--bc-white);
 		font-size: var(--bc-text-filter);
 		font-weight: var(--bc-weight-control);

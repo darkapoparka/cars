@@ -59,6 +59,7 @@ export type InventoryMobileData = {
 	priceOptions: InventoryMobileOption[];
 	priceValue: string;
 	quickPills: InventoryMobilePill[];
+	resultCount: number;
 	searchDrawerTitle: string;
 	searchDisplayValue: string;
 	searchLabel: string;
@@ -836,6 +837,7 @@ export const inventoryMobileDataFromState = (
 		priceOptions,
 		priceValue: priceOptions.find((option) => option.active && option.value)?.label ?? text.all,
 		quickPills: [totalPill, ...brandPills, ...bodyPills],
+		resultCount: state.selected.length,
 		searchDrawerTitle: text.searchDrawerTitle,
 		searchDisplayValue,
 		searchLabel: text.search,

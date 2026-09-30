@@ -29,4 +29,6 @@ Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them
 
 Placeholders inherit input typography. A search input inside a decorated wrapper uses a visible focus ring on that wrapper. Verify selected states, placeholder styles and keyboard focus in the browser.
 
+Mobile inventory search uses the 18px input scale and shows the current filtered result count, including zero. Long queries truncate before the count. Search and filter rows have an 8px gap; the sticky toolbar owns the single 12px gap before the first vehicle card. Home Buy/Import and service entry tabs use the same 20px mode-tab token, 400 weight and 44px targets.
+
 Test matching roles across home, inventory, About, Contact and conversion routes at 390px and 1440px, plus intermediate-width reflow. The typography-contact test suite checks action size and weight, picker selection, social links and Contact alignment. Existing suites cover selection persistence, drawers, navigation and focus.
