@@ -43,7 +43,7 @@ function VehicleCard({vehicle, luxe = false, showDiscount = false}: {vehicle: Ve
       </Link>
       <button type="button" onClick={toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${vehicle.make} ${vehicle.model} from saved cars` : `Save ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.heart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button>
     </div>
-    <Link href={href} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} {...stylex.props(s.pill)}>{tx(item)}</span>)}</Link>
+    <Link href={href} aria-label={facts.map(item => tx(item)).join(', ')} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} title={tx(item)} {...stylex.props(s.pill, index < 2 && s.fixedPill)}>{tx(item)}</span>)}</Link>
     <Link href={showroom.locationHref} aria-label={location ? `${tx(showroom.locationLabel)}: ${location}` : tx(showroom.locationLabel)} {...stylex.props(s.location)}><MapPin size={17} strokeWidth={1.6} aria-hidden="true" {...stylex.props(s.locationIcon)}/><span {...stylex.props(s.locationText)}>{location || tx(showroom.locationLabel)}</span>{isLuxe ? <ShowroomBadge premium/> : null}<ChevronRight size={14} aria-hidden="true" {...stylex.props(s.locationIcon)}/></Link>
     {error ? <p role="alert" {...stylex.props(s.error)}>{tx(error)}</p> : null}
   </article>;
@@ -59,10 +59,10 @@ const s = stylex.create({
   placeholderLabel: {position: 'absolute', left: 8, right: 8, bottom: 7, padding: '3px 6px', color: '#555b62', fontSize: 9, fontWeight: 600, lineHeight: '13px', textAlign: 'center', borderRadius: 999, backgroundColor: 'rgba(255,255,255,.94)'},
   rate: {position: 'absolute', left: 0, bottom: 0, maxWidth: '100%', overflow: 'hidden', paddingInline: 6, color: '#fff', fontSize: 12, fontWeight: 500, lineHeight: '18px', whiteSpace: 'nowrap', borderTopRightRadius: 9, backgroundColor: '#b51b72'},
   coming: {backgroundColor: '#676767'},
-  info: {minWidth: 0},
-  title: {overflow: 'hidden', paddingRight: 22, fontSize: {[media.mobile]: 14, default: 16}, fontWeight: 600, lineHeight: '19px', display: '-webkit-box', whiteSpace: 'normal', textOverflow: 'ellipsis', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'},
+  info: {display: 'flex', flexDirection: 'column', minWidth: 0},
+  title: {overflow: 'hidden', paddingRight: 22, fontSize: {[media.mobile]: 15, default: 16}, fontWeight: 500, lineHeight: '20px', display: '-webkit-box', whiteSpace: 'normal', textOverflow: 'ellipsis', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'},
   trim: {overflow: 'hidden', marginTop: 1, color: $.muted, fontSize: 13, fontWeight: 400, lineHeight: '18px', whiteSpace: 'nowrap', textOverflow: 'ellipsis'},
-  priceRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 5, marginTop: 3, minHeight: 20},
+  priceRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 5, marginTop: 'auto', paddingTop: 4, minHeight: 20},
   price: {display: 'inline-flex', flexWrap: 'wrap', alignItems: 'center', gap: 2, maxWidth: '100%', fontSize: 16, fontWeight: 600, lineHeight: '20px'},
   discount: {paddingInline: 4, color: '#008c36', fontSize: 11, fontWeight: 500, lineHeight: '16px', whiteSpace: 'nowrap', borderRadius: 12, backgroundColor: '#effbf1'},
   monthly: {display: 'flex', alignItems: 'center', gap: 4, marginTop: 1, whiteSpace: 'nowrap', lineHeight: '18px'},
@@ -74,8 +74,9 @@ const s = stylex.create({
   benefitChip: {maxWidth: '100%', padding: '2px 5px', color: '#34383d', fontSize: 9, fontWeight: 600, lineHeight: '13px', overflowWrap: 'anywhere', borderRadius: 8, backgroundColor: '#eef0f2'},
   heart: {position: 'absolute', top: 3, right: 1, display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: '#727272', borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   heartSaved: {color: $.ink},
-  meta: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 6, minHeight: 44, paddingTop: 6, paddingBottom: 10, paddingInline: 12},
-  pill: {maxWidth: '100%', paddingBlock: 3, paddingInline: 6, color: $.muted, fontSize: 12, fontWeight: 400, lineHeight: '17px', overflowWrap: 'anywhere', borderRadius: 6, backgroundColor: '#f4f4f4'},
+  meta: {display: 'flex', alignItems: 'center', gap: 4, minHeight: 36, paddingTop: 4, paddingBottom: 8, paddingInline: 12, overflow: 'hidden'},
+  pill: {flexShrink: 1, minWidth: 0, maxWidth: '100%', overflow: 'hidden', paddingBlock: 3, paddingInline: 6, color: $.muted, fontSize: 12, fontWeight: 400, lineHeight: '16px', whiteSpace: 'nowrap', textOverflow: 'ellipsis', borderRadius: 6, backgroundColor: '#f4f4f4'},
+  fixedPill: {flexShrink: 0},
   location: {display: 'flex', alignItems: 'center', gap: 7, minHeight: 44, paddingInline: 12, color: $.muted, borderTopColor: $.line, borderTopStyle: 'solid', borderTopWidth: 1, backgroundColor: {default: $.surfaceAlt, ':hover': $.rail}},
   locationIcon: {flexShrink: 0},
   locationText: {flexGrow: 1, minWidth: 0, overflow: 'hidden', fontSize: 12, fontWeight: 500, whiteSpace: 'nowrap', textOverflow: 'ellipsis'},

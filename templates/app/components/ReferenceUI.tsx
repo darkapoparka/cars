@@ -99,5 +99,5 @@ const s=stylex.create({
  brandImageCompact:{width:74},
  brandLabelCompact:{fontWeight:500},
  brandLabel:{fontSize:{[media.mobile]:14,default:15},fontWeight:400,lineHeight:'18px',maxWidth:80},
- filters:{display:'flex',alignItems:'center',gap:8,overflowX:'auto',overscrollBehaviorX:'contain',paddingBlock:12,paddingInline:{[media.mobile]:12,default:28},backgroundColor:'#fff',scrollbarWidth:'none'},
+ filters:{display:'flex',alignItems:'center',gap:6,overflowX:'auto',overscrollBehaviorX:'contain',paddingBlock:{[media.mobile]:6,default:12},paddingInline:{[media.mobile]:12,default:28},backgroundColor:'#fff',scrollbarWidth:'none'},
 });

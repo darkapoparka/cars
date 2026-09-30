@@ -2,7 +2,7 @@
 
 import {useCopy} from '@/lib/locale';
 import Link from '@/components/AppLink';
-import {ArrowUpDown, ChevronDown, SlidersHorizontal} from 'lucide-react';
+import {ArrowUpDown, SlidersHorizontal} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {tokens as $} from '@/app/tokens.stylex';
 
@@ -16,21 +16,19 @@ type Props = {
 export default function FilterPill({label, icon, selected = false, href, onClick}: Props) {
   const tx = useCopy();
 
-  const content = <>
-    {icon === 'filter' ? <SlidersHorizontal size={18} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : icon === 'sort' ? <ArrowUpDown size={18} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : null}
+  const content = <span {...stylex.props(s.surface, selected && s.selected)}>
+    {icon === 'filter' ? <SlidersHorizontal size={16} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : icon === 'sort' ? <ArrowUpDown size={16} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : null}
     <span>{tx(label)}</span>
-    {selected ? <span aria-hidden="true" {...stylex.props(s.dot)}/> : null}
-    {!icon ? <ChevronDown size={14} strokeWidth={1.8} aria-hidden="true"/> : null}
-  </>;
-  const props = stylex.props(s.pill, selected && s.selected);
+  </span>;
+  const props = stylex.props(s.pill);
   return href
-    ? <Link href={href} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} {...props}>{tx(content)}</Link>
-    : <button type="button" onClick={onClick} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} aria-haspopup="dialog" {...props}>{tx(content)}</button>;
+    ? <Link href={href} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} {...props}>{content}</Link>
+    : <button type="button" onClick={onClick} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} aria-haspopup="dialog" {...props}>{content}</button>;
 }
 
 const s = stylex.create({
-  pill: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, gap: 8, minHeight: 44, paddingInline: 14, color: $.ink, fontFamily: $.fontSans, fontSize: 14, fontWeight: 500, lineHeight: 1.25, whiteSpace: 'nowrap', borderWidth: 1, borderStyle: 'solid', borderColor: '#e6e6e9', borderRadius: 9999, backgroundColor: {default: '#fff', ':hover': '#f4f4f5'}, cursor: 'pointer'},
+  pill: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, minHeight: 44, padding: 0, color: $.ink, fontFamily: $.fontSans, fontSize: 15, fontWeight: 500, lineHeight: '20px', whiteSpace: 'nowrap', borderWidth: 0, borderRadius: 9999, backgroundColor: 'transparent', cursor: 'pointer'},
+  surface: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 5, minHeight: 36, paddingInline: 8, borderWidth: 1, borderStyle: 'solid', borderColor: '#e6e6e9', borderRadius: 9999, backgroundColor: {default: '#fff', ':hover': '#f4f4f5'}},
   selected: {color: '#fff', borderColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark}},
   icon: {flexShrink: 0},
-  dot: {width: 5, height: 5, borderRadius: '50%', backgroundColor: 'currentColor'},
 });
