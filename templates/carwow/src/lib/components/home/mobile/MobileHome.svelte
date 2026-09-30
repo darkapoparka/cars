@@ -126,7 +126,16 @@
 	<main id="main-content" tabindex="-1">
 		<nav class="mh-quick" aria-label={i18n.t('copy.427bd0c4b0b6')}>
 			{#each quickFilters as item (item.label)}
-				<a class="mh-quick__pill" href={i18n.href(resolve(item.href))}>
+				<a
+					class="mh-quick__pill"
+					href={i18n.href(resolve(item.href))}
+					onfocus={(event) =>
+						event.currentTarget.scrollIntoView({
+							block: 'nearest',
+							inline: 'nearest',
+							behavior: 'instant'
+						})}
+				>
 					<span>{i18n.text(item.label)}</span>
 				</a>
 			{/each}
@@ -249,15 +258,15 @@
 		box-sizing: border-box;
 		width: 100%;
 		min-width: 0;
-		min-height: 52px;
-		align-items: center;
+		min-height: 44px;
+		align-items: flex-end;
 		justify-content: center;
 		border: 0;
 		background: transparent;
 		color: var(--mh-hero-tab-color, rgba(255, 255, 255, 0.76));
 		font: var(--sa-weight-medium) var(--sa-mobile-type-primary-tab) / var(--sa-leading-snug)
 			var(--sa-font);
-		padding: 8px 8px 10px;
+		padding: 0 8px 6px;
 		cursor: pointer;
 		transition: color 0.18s ease;
 		-webkit-tap-highlight-color: transparent;
@@ -284,7 +293,7 @@
 		bottom: -1px;
 		left: 0;
 		width: auto;
-		height: 4px;
+		height: 3px;
 		border-radius: 4px 4px 0 0;
 		background: var(--sa-red, #d50032);
 		content: '';
@@ -309,6 +318,7 @@
 	.mh-hero__modes--segmented button {
 		width: 100%;
 		min-height: 38px;
+		align-items: center;
 		border-radius: var(--sa-r-pill);
 		padding: 2px 8px;
 		font-size: var(--sa-button-font-size);
@@ -374,16 +384,22 @@
 
 	.mh-quick {
 		display: flex;
-		flex-wrap: wrap;
 		margin-top: 0;
-		margin-inline: var(--mh-gutter);
 		gap: 8px;
-		padding: 2px 0;
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		padding: 6px var(--mh-gutter);
+		scroll-padding-inline: var(--mh-gutter);
+		scrollbar-width: none;
+	}
+
+	.mh-quick::-webkit-scrollbar {
+		display: none;
 	}
 
 	.mh-quick__pill {
 		display: inline-flex;
-		flex: 1 0 auto;
+		flex: 0 0 auto;
 		align-items: center;
 		justify-content: center;
 		min-height: 44px;
@@ -415,20 +431,6 @@
 		.mh-quick__pill:hover {
 			border-color: #bdc6d2;
 			background: #eef1f5;
-		}
-	}
-
-	@media (max-width: 370px) {
-		.mh-quick {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
-	}
-
-	@media (max-width: 479px) {
-		.mh-quick:lang(bg) {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 

@@ -237,15 +237,19 @@
 	}
 	.mobile-lead-hero__tabs button {
 		position: relative;
+		display: flex;
+		box-sizing: border-box;
 		width: 100%;
 		min-width: 0;
-		min-height: 52px;
+		min-height: 44px;
+		align-items: flex-end;
+		justify-content: center;
 		border: 0;
 		background: transparent;
 		color: rgba(255, 255, 255, 0.76);
 		font: var(--sa-weight-medium) var(--sa-mobile-type-primary-tab) / var(--sa-leading-snug)
 			var(--sa-font);
-		padding: 8px 8px 10px;
+		padding: 0 8px 6px;
 		cursor: pointer;
 	}
 	.mobile-lead-hero__tabs button[aria-selected='true'] {
@@ -256,7 +260,7 @@
 		content: '';
 		position: absolute;
 		inset: auto 0 -1px;
-		height: 4px;
+		height: 3px;
 		border-radius: 4px 4px 0 0;
 		background: var(--sa-red);
 	}
