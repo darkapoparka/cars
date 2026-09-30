@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'GP4, turnoff for Topoli village, Varna',
 	'dealer.locationShort': 'Varna',
 	'dealer.name': 'AUTOLIFE',
-	'dealer.shortName': 'Аутолайф'
+	'dealer.shortName': 'Аутолайф',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Varna — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'ГП4, разклон за с. Тополи',
 	'dealer.locationShort': 'Варна',
 	'dealer.name': 'Аутолайф',
-	'dealer.shortName': 'Аутолайф'
+	'dealer.shortName': 'Аутолайф',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Варна — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7112,12 +7115,16 @@ export const sourceKeys = {
 	Varna: 'dealer.city',
 	'GP4, turnoff for Topoli village': 'dealer.addressLine',
 	'GP4, turnoff for Topoli village, Varna': 'dealer.address',
-	AUTOLIFE: 'dealer.name'
+	AUTOLIFE: 'dealer.name',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Varna — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Варна: 'dealer.locationShort',
 	'ГП4, разклон за с. Тополи': 'dealer.address',
-	Аутолайф: 'dealer.shortName'
+	Аутолайф: 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

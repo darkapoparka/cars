@@ -323,7 +323,7 @@
 				<Drawer.Handle class="mobile-detail-sheet__handle" preventCycle />
 			</div>
 
-			<header class="mobile-detail-sheet__head">
+			<header class="mobile-detail-sheet__head" class:mobile-detail-sheet__head--unpriced={vehicle.price <= 0}>
 				<span class="mobile-detail-sheet__brand">{vehicle.brand}</span>
 				<small class="mobile-detail-sheet__price-monthly">{i18n.spec(vehicle.monthly)}</small>
 				<h1 class="mobile-detail-sheet__title">{vehicle.shortTitle}</h1>
@@ -807,6 +807,22 @@
 		justify-items: end;
 		align-self: center;
 		text-align: right;
+	}
+
+	.mobile-detail-sheet__head--unpriced {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas: 'brand' 'title' 'price' 'monthly';
+	}
+
+	.mobile-detail-sheet__head--unpriced .mobile-detail-sheet__price {
+		justify-items: start;
+		text-align: left;
+	}
+
+	.mobile-detail-sheet__head--unpriced .mobile-detail-sheet__price-eur {
+		max-width: 100%;
+		white-space: normal;
+		overflow-wrap: anywhere;
 	}
 
 	.mobile-detail-sheet__price-monthly {

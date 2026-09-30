@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': '518 Yanosh Hunyadi Blvd., opposite Varna Traffic Police, Varna, Bulgaria',
 	'dealer.locationShort': 'Varna',
 	'dealer.name': 'OUTLETCARS.BG',
-	'dealer.shortName': 'OUTLETCARS.BG'
+	'dealer.shortName': 'OUTLETCARS.BG',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Varna — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България',
 	'dealer.locationShort': 'Варна',
 	'dealer.name': 'OUTLETCARS.BG — Варна',
-	'dealer.shortName': 'OUTLETCARS.BG'
+	'dealer.shortName': 'OUTLETCARS.BG',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Варна — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7115,14 +7118,18 @@ export const sourceKeys = {
 	'бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България': 'dealer.address',
 	'518 Yanosh Hunyadi Blvd., opposite Varna Traffic Police, Varna, Bulgaria': 'dealer.address',
 	'OUTLETCARS.BG — Варна': 'dealer.name',
-	'OUTLETCARS.BG': 'dealer.shortName'
+	'OUTLETCARS.BG': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Varna — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Варна: 'dealer.locationShort',
 	'бул. Янош Хуняди 518, срещу КАТ Варна': 'dealer.addressLine',
 	'бул. Янош Хуняди 518, срещу КАТ Варна, Варна, България': 'dealer.address',
 	'OUTLETCARS.BG — Варна': 'dealer.name',
-	'OUTLETCARS.BG': 'dealer.shortName'
+	'OUTLETCARS.BG': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

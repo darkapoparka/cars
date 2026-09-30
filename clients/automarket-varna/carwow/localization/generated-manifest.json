@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 2,
 	"enabledLocales": ["en", "bg"],
-	"messages": 1620,
-	"catalogSha256": "63cc2348297a20ca312bb3fd3730e7bd25b3ed4b6867cde67dc1c5e7abd2f68b",
+	"messages": 1621,
+	"catalogSha256": "354b8309d57bd5f7c2c6be9a61900607e0e9d9e06b8ae328dad9cb43fe146d91",
 	"sources": [
 		"localization/common.json",
 		"localization/catalog.reviewed.json",
@@ -13,7 +13,7 @@
 		"localization/common.json": "a8b4b662dc484d6a6bf230311ea37cd84320246b17ac04f5da18d039b1769def",
 		"localization/catalog.reviewed.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
 		"localization/template.reviewed.json": "5606da6ace7e00e52e126c1fc7334bf639a5b26a891c1baaaf848a7d4ee3cbc4",
-		"localization/dealer.reviewed.json": "3288ca37542ed357f1db7725be5c5b27866f8a6937c5477c48d6086cdbdd6e13"
+		"localization/dealer.reviewed.json": "7e19eba309a2d1b5bfbabbe6b77ca44468b54a2217f6c99704ad3121959469ae"
 	},
 	"policySha256": "0d94a5cd19f105bd822dd56d14baf237697a20e48b450b12b71a5bc83288d85e",
 	"ambiguousAliases": [

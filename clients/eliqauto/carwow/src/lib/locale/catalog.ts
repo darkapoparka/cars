@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'Svoboda Street, behind the cemetery park, Pazardzhik',
 	'dealer.locationShort': 'Pazardzhik',
 	'dealer.name': 'ELIQ AUTO',
-	'dealer.shortName': 'ELIQ AUTO'
+	'dealer.shortName': 'ELIQ AUTO',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Pazardzhik — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'ул. Свобода, на гърба на Гробищен парк, Пазарджик',
 	'dealer.locationShort': 'Пазарджик',
 	'dealer.name': 'ELIQ AUTO',
-	'dealer.shortName': 'ELIQ AUTO'
+	'dealer.shortName': 'ELIQ AUTO',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Пазарджик — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7114,13 +7117,17 @@ export const sourceKeys = {
 	'Svoboda Street, behind the cemetery park': 'dealer.addressLine',
 	'ул. Свобода, на гърба на Гробищен парк, Пазарджик': 'dealer.address',
 	'Svoboda Street, behind the cemetery park, Pazardzhik': 'dealer.address',
-	'ELIQ AUTO': 'dealer.name'
+	'ELIQ AUTO': 'dealer.name',
+	'Наличен автомобил в Пазарджик — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Pazardzhik — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Пазарджик: 'dealer.locationShort',
 	'ул. Свобода, на гърба на Гробищен парк': 'dealer.addressLine',
 	'ул. Свобода, на гърба на Гробищен парк, Пазарджик': 'dealer.address',
-	'ELIQ AUTO': 'dealer.shortName'
+	'ELIQ AUTO': 'dealer.shortName',
+	'Наличен автомобил в Пазарджик — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

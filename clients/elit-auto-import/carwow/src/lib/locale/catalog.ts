@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': '74A Prilep Street, Pchelina area, Varna',
 	'dealer.locationShort': 'Varna',
 	'dealer.name': 'ELIT AUTO',
-	'dealer.shortName': 'ELIT AUTO'
+	'dealer.shortName': 'ELIT AUTO',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Varna — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'ул. „Прилеп“ 74А, м-т Пчелина',
 	'dealer.locationShort': 'Варна',
 	'dealer.name': 'ELIT AUTO IMPORT EXPORT',
-	'dealer.shortName': 'ELIT AUTO'
+	'dealer.shortName': 'ELIT AUTO',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Варна — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7113,13 +7116,17 @@ export const sourceKeys = {
 	'74A Prilep Street, Pchelina area': 'dealer.addressLine',
 	'74A Prilep Street, Pchelina area, Varna': 'dealer.address',
 	'ELIT AUTO IMPORT EXPORT': 'dealer.name',
-	'ELIT AUTO': 'dealer.shortName'
+	'ELIT AUTO': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Varna — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Варна: 'dealer.locationShort',
 	'ул. „Прилеп“ 74А, м-т Пчелина': 'dealer.address',
 	'ELIT AUTO IMPORT EXPORT': 'dealer.name',
-	'ELIT AUTO': 'dealer.shortName'
+	'ELIT AUTO': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

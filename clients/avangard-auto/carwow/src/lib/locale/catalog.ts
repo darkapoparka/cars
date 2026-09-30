@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': '289 Tsar Osvoboditel Blvd., Varna',
 	'dealer.locationShort': 'Varna',
 	'dealer.name': 'AVANGARD AUTO',
-	'dealer.shortName': 'AVANGARD AUTO'
+	'dealer.shortName': 'AVANGARD AUTO',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Varna — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'бул. Цар Освободител 289',
 	'dealer.locationShort': 'Варна',
 	'dealer.name': 'AVANGARD AUTO',
-	'dealer.shortName': 'AVANGARD AUTO'
+	'dealer.shortName': 'AVANGARD AUTO',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Варна — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7112,12 +7115,16 @@ export const sourceKeys = {
 	Varna: 'dealer.city',
 	'289 Tsar Osvoboditel Blvd.': 'dealer.addressLine',
 	'289 Tsar Osvoboditel Blvd., Varna': 'dealer.address',
-	'AVANGARD AUTO': 'dealer.name'
+	'AVANGARD AUTO': 'dealer.name',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Varna — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Варна: 'dealer.locationShort',
 	'бул. Цар Освободител 289': 'dealer.address',
-	'AVANGARD AUTO': 'dealer.shortName'
+	'AVANGARD AUTO': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

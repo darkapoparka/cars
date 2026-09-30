@@ -1840,7 +1840,9 @@ export const en = {
 		'Tsar Osvoboditel Blvd. — 300 m to the right after Doma na Kamiona, towards Varna Airport, Varna',
 	'dealer.locationShort': 'Varna',
 	'dealer.name': 'AUTOMARKET',
-	'dealer.shortName': 'Аутомаркет'
+	'dealer.shortName': 'Аутомаркет',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Varna — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3699,7 +3701,8 @@ export const bg = {
 	'dealer.address': 'бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището',
 	'dealer.locationShort': 'Варна',
 	'dealer.name': 'Аутомаркет Варна',
-	'dealer.shortName': 'Аутомаркет'
+	'dealer.shortName': 'Аутомаркет',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Варна — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7118,13 +7121,17 @@ export const sourceKeys = {
 		'dealer.address',
 	'Аутомаркет Варна': 'dealer.name',
 	AUTOMARKET: 'dealer.name',
-	Аутомаркет: 'dealer.shortName'
+	Аутомаркет: 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Varna — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Варна: 'dealer.locationShort',
 	'бул. Цар Освободител — 300 м вдясно след Дом на Камиона, посока летището': 'dealer.address',
 	'Аутомаркет Варна': 'dealer.name',
-	Аутомаркет: 'dealer.shortName'
+	Аутомаркет: 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

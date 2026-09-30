@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'Tsar Osvoboditel Blvd., Kaysieva Gradina, Varna',
 	'dealer.locationShort': 'Varna',
 	'dealer.name': 'Navara Car',
-	'dealer.shortName': 'Navara Car'
+	'dealer.shortName': 'Navara Car',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Varna — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'бул. „Цар Освободител“, Кайсиева градина, Варна',
 	'dealer.locationShort': 'Варна',
 	'dealer.name': 'Навара кар',
-	'dealer.shortName': 'Navara Car'
+	'dealer.shortName': 'Navara Car',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Варна — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7115,14 +7118,18 @@ export const sourceKeys = {
 	'бул. „Цар Освободител“, Кайсиева градина, Варна': 'dealer.address',
 	'Tsar Osvoboditel Blvd., Kaysieva Gradina, Varna': 'dealer.address',
 	'Навара кар': 'dealer.name',
-	'Navara Car': 'dealer.shortName'
+	'Navara Car': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Varna — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Варна: 'dealer.locationShort',
 	'бул. „Цар Освободител“, Кайсиева градина': 'dealer.addressLine',
 	'бул. „Цар Освободител“, Кайсиева градина, Варна': 'dealer.address',
 	'Навара кар': 'dealer.name',
-	'Navara Car': 'dealer.shortName'
+	'Navara Car': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

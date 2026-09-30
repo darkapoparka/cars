@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'Varna Business Park, Building B6, Varna, Bulgaria',
 	'dealer.locationShort': 'Varna Business Park, Varna',
 	'dealer.name': 'IS AUTO Varna',
-	'dealer.shortName': 'IS AUTO'
+	'dealer.shortName': 'IS AUTO',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Varna — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'Бизнес парк Варна, сграда B6, Варна, България',
 	'dealer.locationShort': 'Бизнес парк Варна, Варна',
 	'dealer.name': 'IS AUTO Varna',
-	'dealer.shortName': 'IS AUTO'
+	'dealer.shortName': 'IS AUTO',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Варна — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7117,7 +7120,10 @@ export const sourceKeys = {
 	'Бизнес парк Варна, Варна': 'dealer.locationShort',
 	'Varna Business Park, Varna': 'dealer.locationShort',
 	'IS AUTO Varna': 'dealer.name',
-	'IS AUTO': 'dealer.shortName'
+	'IS AUTO': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Varna — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Варна: 'dealer.city',
@@ -7125,7 +7131,8 @@ export const dealerSourceKeys = {
 	'Бизнес парк Варна, сграда B6, Варна, България': 'dealer.address',
 	'Бизнес парк Варна, Варна': 'dealer.locationShort',
 	'IS AUTO Varna': 'dealer.name',
-	'IS AUTO': 'dealer.shortName'
+	'IS AUTO': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

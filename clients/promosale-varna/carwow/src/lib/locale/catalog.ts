@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'Varna Sea Station, Varna, Bulgaria',
 	'dealer.locationShort': 'Varna',
 	'dealer.name': 'Promosale Varna',
-	'dealer.shortName': 'Promosale Varna'
+	'dealer.shortName': 'Promosale Varna',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Varna — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'Морска гара Варна, Варна, България',
 	'dealer.locationShort': 'Варна',
 	'dealer.name': 'Promosale Varna',
-	'dealer.shortName': 'Promosale Varna'
+	'dealer.shortName': 'Promosale Varna',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Варна — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7114,13 +7117,17 @@ export const sourceKeys = {
 	'Varna Sea Station': 'dealer.addressLine',
 	'Морска гара Варна, Варна, България': 'dealer.address',
 	'Varna Sea Station, Varna, Bulgaria': 'dealer.address',
-	'Promosale Varna': 'dealer.name'
+	'Promosale Varna': 'dealer.name',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Varna — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Варна: 'dealer.locationShort',
 	'Морска гара Варна': 'dealer.addressLine',
 	'Морска гара Варна, Варна, България': 'dealer.address',
-	'Promosale Varna': 'dealer.shortName'
+	'Promosale Varna': 'dealer.shortName',
+	'Наличен автомобил в Варна — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',

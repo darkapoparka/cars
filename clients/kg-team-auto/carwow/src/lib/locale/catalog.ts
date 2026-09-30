@@ -1838,7 +1838,9 @@ export const en = {
 	'dealer.address': 'South Industrial Zone, Ring Road opposite Chiirite Hotel, Plovdiv',
 	'dealer.locationShort': 'Plovdiv',
 	'dealer.name': 'K-G Team Auto',
-	'dealer.shortName': 'K-G Team Auto'
+	'dealer.shortName': 'K-G Team Auto',
+	'dealer.inventoryViewingCondition':
+		'Available vehicle in Plovdiv — contact the dealer to arrange a viewing.'
 } as const;
 export const bg = {
 	'locale.title': 'Държава и език',
@@ -3697,7 +3699,8 @@ export const bg = {
 	'dealer.address': 'Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите',
 	'dealer.locationShort': 'Пловдив',
 	'dealer.name': 'K-G Team Auto',
-	'dealer.shortName': 'K-G Team Auto'
+	'dealer.shortName': 'K-G Team Auto',
+	'dealer.inventoryViewingCondition': 'Наличен автомобил в Пловдив — свържете се за оглед.'
 } as const;
 export const sourceKeys = {
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
@@ -7112,12 +7115,16 @@ export const sourceKeys = {
 	Plovdiv: 'dealer.city',
 	'South Industrial Zone, Ring Road opposite Chiirite Hotel': 'dealer.addressLine',
 	'South Industrial Zone, Ring Road opposite Chiirite Hotel, Plovdiv': 'dealer.address',
-	'K-G Team Auto': 'dealer.name'
+	'K-G Team Auto': 'dealer.name',
+	'Наличен автомобил в Пловдив — свържете се за оглед.': 'dealer.inventoryViewingCondition',
+	'Available vehicle in Plovdiv — contact the dealer to arrange a viewing.':
+		'dealer.inventoryViewingCondition'
 } as const;
 export const dealerSourceKeys = {
 	Пловдив: 'dealer.locationShort',
 	'Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите': 'dealer.address',
-	'K-G Team Auto': 'dealer.shortName'
+	'K-G Team Auto': 'dealer.shortName',
+	'Наличен автомобил в Пловдив — свържете се за оглед.': 'dealer.inventoryViewingCondition'
 } as const;
 export const ambiguousAliases = [
 	'1 car',
