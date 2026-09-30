@@ -16,7 +16,7 @@
 			cta: i18n.t('mobile.promo.sellAction'),
 			href: '/sell-your-car' as const,
 			tone: 'dark',
-			image: '/assets/images/home/mobile/sell-trade-studio-v2.webp'
+			image: '/assets/images/home/mobile/sell-trade-forecourt-v3.webp'
 		},
 		{
 			kind: 'import',

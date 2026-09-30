@@ -10,8 +10,15 @@
 		phoneHref,
 		title = i18n.t('copy.a8486dcea523'),
 		copy = i18n.t('copy.b75c88742595'),
-		image
-	}: { phoneHref: string; title?: string; copy?: string; image?: string } = $props();
+		image,
+		artwork = 'cutout'
+	}: {
+		phoneHref: string;
+		title?: string;
+		copy?: string;
+		image?: string;
+		artwork?: 'cutout' | 'photo';
+	} = $props();
 </script>
 
 {#if image}
@@ -20,6 +27,7 @@
 			{title}
 			{image}
 			action={i18n.t('copy.d40e5119596a')}
+			{artwork}
 			href={i18n.href(phoneHref)}
 		/>
 	</aside>

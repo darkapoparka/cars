@@ -9,6 +9,8 @@
 		Heart as NavSavedIcon,
 		Info as NavInfoIcon,
 		MapPin,
+		ChevronRight,
+		Globe2,
 		Menu as NavMenuIcon,
 		Newspaper,
 		PhoneCall,
@@ -22,6 +24,7 @@
 	import { publicNavItems, daynightSite } from '$lib/data/daynight-site';
 	import { getOptionalGarageContext } from '$lib/state/garage.svelte';
 	import { onMount, tick } from 'svelte';
+	import '$lib/styles/mobile-entry-hero.css';
 
 	const homeHref = resolve('/');
 	const inventoryHref = resolve('/inventory');
@@ -259,8 +262,18 @@
 		aria-label={i18n.t('copy.122f71765026')}
 		data-daynight-site-chrome
 	>
-		<div class="mobile-menu-sheet__head">
-			<h2 id="mobile-menu-title" class="mobile-menu-sheet__title">{i18n.t('copy.122f71765026')}</h2>
+		<div class="mobile-menu-sheet__head mobile-entry-menu-surface">
+			<div class="mobile-menu-sheet__brand">
+				<img
+					src={i18n.asset(resolve(daynightSite.logoLight))}
+					alt={daynightSite.shortName}
+					width="144"
+					height="38"
+				/>
+				<h2 id="mobile-menu-title" class="mobile-menu-sheet__title">
+					{i18n.t('copy.122f71765026')}
+				</h2>
+			</div>
 			<button
 				type="button"
 				aria-label={i18n.t('copy.1ef1a425356f')}
@@ -300,13 +313,17 @@
 			</a>
 		</div>
 
-		<LocaleTrigger
-			fullLabel
-			beforeOpen={() => {
-				menuOpen = false;
-				return menuButton;
-			}}
-		/>
+		<div class="mobile-menu-sheet__locale">
+			<Globe2 size={20} strokeWidth={2} aria-hidden="true" />
+			<LocaleTrigger
+				fullLabel
+				beforeOpen={() => {
+					menuOpen = false;
+					return menuButton;
+				}}
+			/>
+			<span aria-hidden="true">{i18n.locale.toUpperCase()}</span>
+		</div>
 		<nav class="mobile-menu-sheet__nav" aria-label={i18n.t('copy.e638fc3afbee')}>
 			{#each menuItems as item (item.href)}
 				{@const RowIcon = item.icon}
@@ -319,11 +336,17 @@
 					<span class="mobile-menu-sheet__row-icon" aria-hidden="true">
 						<RowIcon size={20} strokeWidth={2.2} />
 					</span>
-					<span
+					<span class="mobile-menu-sheet__label"
 						>{i18n.text(item.label)}{item.href === '/compare' && compareCount
 							? ` (${compareCount})`
 							: ''}</span
 					>
+					<ChevronRight
+						class="mobile-menu-sheet__chevron"
+						size={16}
+						strokeWidth={2}
+						aria-hidden="true"
+					/>
 				</a>
 			{/each}
 		</nav>
@@ -411,7 +434,7 @@
 		flex: 1;
 		min-height: 0;
 		grid-template-rows: auto auto auto minmax(0, 1fr);
-		gap: 12px;
+		gap: 10px;
 		color: var(--sa-ink);
 	}
 	:global(.mobile-drawer:has(#mobile-menu-sheet)) {
@@ -426,11 +449,25 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
+		padding: 12px 14px;
+		border-radius: 14px;
+	}
+	.mobile-menu-sheet__brand {
+		display: grid;
+		gap: 4px;
+		min-width: 0;
+	}
+	.mobile-menu-sheet__brand img {
+		display: block;
+		max-width: 100%;
+		object-fit: contain;
+		object-position: left center;
 	}
 	.mobile-menu-sheet__title {
 		margin: 0;
-		font-size: var(--sa-text-card-title);
-		font-weight: var(--sa-weight-heading);
+		color: #fff;
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.2;
 	}
 	.mobile-menu-sheet__head button {
@@ -439,9 +476,9 @@
 		height: 44px;
 		place-items: center;
 		border: 0;
-		border-radius: 50%;
-		background: var(--sa-fill);
-		color: var(--sa-ink);
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.12);
+		color: #fff;
 		cursor: pointer;
 	}
 	.mobile-menu-sheet__quick {
@@ -457,7 +494,7 @@
 		align-items: center;
 		gap: 10px;
 		border-radius: 12px;
-		padding: 12px;
+		padding: 8px 12px;
 		background: var(--sa-fill);
 		color: var(--sa-ink) !important;
 		text-decoration: none;
@@ -470,25 +507,31 @@
 		color: #fff !important;
 	}
 	.mobile-menu-sheet__quick-action--map {
-		background: var(--sa-ink);
-		color: #fff !important;
+		background: var(--sa-fill);
+		color: var(--sa-ink) !important;
 	}
 	.mobile-menu-sheet__quick strong {
 		color: inherit;
-		font-size: var(--sa-text-caption);
-		font-weight: var(--sa-weight-heading);
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
 		line-height: 1.3;
 	}
 	.mobile-menu-sheet__nav {
 		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 8px;
+		grid-template-columns: minmax(0, 1fr);
+		align-content: start;
+		gap: 2px;
 		min-height: 0;
 		overflow-y: auto;
 		overscroll-behavior: contain;
 	}
-	.mobile-menu-sheet__nav > a > span:last-child {
-		font-size: var(--sa-text-caption);
+	.mobile-menu-sheet__nav > a {
+		background: #fff;
+		border-radius: 10px;
+	}
+	.mobile-menu-sheet__label {
+		flex: 1;
+		font-size: var(--sa-text-base);
 		font-weight: var(--sa-button-font-weight);
 		line-height: 1.3;
 	}
@@ -499,6 +542,37 @@
 		place-items: center;
 		color: #526071;
 	}
+	.mobile-menu-sheet__nav .mobile-menu-sheet__row-icon {
+		width: 34px;
+		height: 34px;
+		flex-basis: 34px;
+		border-radius: 10px;
+		background: var(--sa-fill);
+	}
+	.mobile-menu-sheet__nav :global(.mobile-menu-sheet__chevron) {
+		flex: 0 0 auto;
+		color: #687280;
+	}
+	.mobile-menu-sheet__locale {
+		display: grid;
+		grid-template-columns: 24px minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 10px;
+		padding: 0 12px;
+		border-bottom: 1px solid var(--sa-line);
+		color: #526071;
+	}
+	.mobile-menu-sheet__locale :global(.cars-locale-trigger) {
+		min-width: 0;
+		padding: 0;
+		color: var(--sa-ink);
+		font-size: var(--sa-text-base);
+		font-weight: var(--sa-weight-medium);
+	}
+	.mobile-menu-sheet__locale > span {
+		font-size: var(--sa-text-caption);
+		font-weight: var(--sa-weight-medium);
+	}
 	.mobile-menu-sheet__nav > a.is-current {
 		background: #fce8ed;
 		color: var(--sa-red-strong) !important;
@@ -506,11 +580,15 @@
 	}
 	.mobile-menu-sheet__nav > a.is-current .mobile-menu-sheet__row-icon {
 		color: inherit;
+		background: #fff;
 	}
 	.mobile-menu-sheet a:focus-visible,
 	.mobile-menu-sheet button:focus-visible {
-		outline: 2px solid var(--sa-red);
+		outline: 2px solid var(--sa-ink);
 		outline-offset: -2px;
+	}
+	.mobile-menu-sheet__head button:focus-visible {
+		outline-color: #fff;
 	}
 	.mobile-menu-sheet :global(svg),
 	.mobile-menu-sheet :global(svg *) {

@@ -4,6 +4,7 @@
 
 	import { onMount } from 'svelte';
 	import '$lib/styles/mobile-hero-pill.css';
+	import '$lib/styles/mobile-entry-hero.css';
 	import {
 		ArrowRight,
 		ChevronRight,
@@ -85,11 +86,11 @@
 	}
 </script>
 
-<header class="mobile-lead-hero">
+<header class="mobile-lead-hero mobile-entry-hero">
 	<MobileHeroBar />
 	<h1>{title}</h1>
 	<div
-		class="mobile-lead-hero__tabs"
+		class="mobile-lead-hero__tabs mobile-entry-hero__tabs"
 		role="tablist"
 		aria-label={kind === 'sell' ? i18n.t('copy.1450138aa03a') : i18n.t('copy.33e4ad07a6c6')}
 	>
@@ -115,18 +116,23 @@
 	>
 		{#if kind === 'sell' && mode === 'secondary'}
 			<button
-				class="mobile-lead-hero__manual"
+				class="mobile-lead-hero__manual mobile-entry-hero__search"
 				type="button"
 				disabled={!interactive}
 				aria-label={i18n.t('copy.c1a5ff7001ab')}
 				onclick={onManual}
 			>
-				<span>{i18n.t('copy.5601767a86c8')}</span><span class="mobile-lead-hero__go"
+				<span>{i18n.t('copy.5601767a86c8')}</span><span
+					class="mobile-lead-hero__go mobile-entry-hero__go"
 					><ArrowRight size={21} aria-hidden="true" /></span
 				>
 			</button>
 		{:else}
-			<form class="mobile-lead-hero__search" onsubmit={handleSubmit} novalidate>
+			<form
+				class="mobile-lead-hero__search mobile-entry-hero__search"
+				onsubmit={handleSubmit}
+				novalidate
+			>
 				<span class="mobile-lead-hero__input-icon" aria-hidden="true">
 					{#if kind === 'sell' || isVin}<ScanLine size={21} />{:else}<Link2 size={21} />{/if}
 				</span>
@@ -153,7 +159,7 @@
 					aria-describedby={inputError ? id + '-error' : undefined}
 				/>
 				<button
-					class="mobile-lead-hero__go"
+					class="mobile-lead-hero__go mobile-entry-hero__go"
 					disabled={!interactive}
 					type="submit"
 					aria-label={i18n.t('copy.ffe5cca7d0b3')}
@@ -213,14 +219,6 @@
 </header>
 
 <style>
-	.mobile-lead-hero {
-		display: grid;
-		gap: var(--sa-mobile-hero-gap);
-		background: var(--sa-blue);
-		color: #fff;
-		padding: calc(env(safe-area-inset-top) + 12px) var(--sa-mobile-gutter-wide)
-			var(--sa-mobile-hero-bottom);
-	}
 	h1 {
 		position: absolute;
 		width: 1px;
@@ -229,40 +227,6 @@
 		clip: rect(0 0 0 0);
 		clip-path: inset(50%);
 		white-space: nowrap;
-	}
-	.mobile-lead-hero__tabs {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.24);
-	}
-	.mobile-lead-hero__tabs button {
-		position: relative;
-		display: flex;
-		box-sizing: border-box;
-		width: 100%;
-		min-width: 0;
-		min-height: 44px;
-		align-items: flex-end;
-		justify-content: center;
-		border: 0;
-		background: transparent;
-		color: rgba(255, 255, 255, 0.76);
-		font: var(--sa-weight-medium) var(--sa-mobile-type-primary-tab) / var(--sa-leading-snug)
-			var(--sa-font);
-		padding: 0 8px 6px;
-		cursor: pointer;
-	}
-	.mobile-lead-hero__tabs button[aria-selected='true'] {
-		color: #fff;
-		font-weight: var(--sa-button-font-weight);
-	}
-	.mobile-lead-hero__tabs button[aria-selected='true']::after {
-		content: '';
-		position: absolute;
-		inset: auto 0 -1px;
-		height: 3px;
-		border-radius: 4px 4px 0 0;
-		background: var(--sa-red);
 	}
 	.mobile-lead-hero__entry--import {
 		display: grid;
@@ -289,9 +253,6 @@
 		grid-template-columns: 24px minmax(0, 1fr) var(--sa-mobile-pill-h);
 		align-items: center;
 		gap: 9px;
-		min-height: 52px;
-		border-radius: var(--sa-r-pill);
-		background: #fff;
 		padding: 4px 4px 4px 15px;
 	}
 	.mobile-lead-hero__input-icon {
@@ -313,10 +274,6 @@
 		color: #66717f;
 		opacity: 1;
 	}
-	.mobile-lead-hero__search:focus-within {
-		outline: 2px solid var(--sa-red);
-		outline-offset: 2px;
-	}
 	.mobile-lead-hero__go {
 		display: grid;
 		width: var(--sa-mobile-pill-h);
@@ -324,7 +281,6 @@
 		place-items: center;
 		border: 0;
 		border-radius: 50%;
-		background: var(--sa-blue);
 		color: #fff;
 		padding: 0;
 		cursor: pointer;
@@ -337,12 +293,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 100%;
-		min-height: 52px;
 		gap: 8px;
-		border: 0;
-		border-radius: var(--sa-r-pill);
-		background: #fff;
 		color: #66717f;
 		padding: 4px 4px 4px 17px;
 		font: var(--sa-weight-medium) var(--sa-text-base) / 1.2 var(--sa-font);

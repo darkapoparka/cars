@@ -239,7 +239,8 @@
 				{phoneHref}
 				title={i18n.t('copy.89ed122d152e')}
 				copy={i18n.t('copy.8883fb6fda36')}
-				image={resolve('/assets/images/home-promos/phone-portrait-generated-v7.webp')}
+				image={resolve('/assets/images/home-promos/sell-valuation-contact-v1.webp')}
+				artwork="photo"
 			/>
 			<MobileLeadSteps kind="sell" onOpen={() => (infoOpen = true)} />
 		{/if}

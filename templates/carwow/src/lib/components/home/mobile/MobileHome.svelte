@@ -18,6 +18,7 @@
 	import './mobile-home-sheets.css';
 	import '$lib/styles/mobile-hero-pill.css';
 	import '$lib/styles/mobile-quick-pills.css';
+	import '$lib/styles/mobile-entry-hero.css';
 
 	let {
 		data,
@@ -63,14 +64,14 @@
 </script>
 
 <div class="mobile-home">
-	<header class="mh-hero">
+	<header class="mh-hero mobile-entry-hero">
 		<MobileHeroBar onLocation={() => (locationOpen = true)} />
 
 		<h1 class="mh-hero__title">{daynightSite.shortName}</h1>
 
 		<div class={`mh-hero__box${heroBox ? ' mh-hero__box--card' : ''}`}>
 			<div
-				class={`mh-hero__modes${heroToggle === 'segmented' ? ' mh-hero__modes--segmented' : ''}`}
+				class={`mh-hero__modes mobile-entry-hero__tabs${heroToggle === 'segmented' ? ' mh-hero__modes--segmented' : ''}`}
 				role="group"
 				aria-label={i18n.t('copy.69b5266fcf70')}
 			>
@@ -91,11 +92,11 @@
 					{i18n.t('copy.995bfafd0b63')}
 				</button>
 			</div>
-			<button class="mh-hero__search" type="button" onclick={openSearch}>
+			<button class="mh-hero__search mobile-entry-hero__search" type="button" onclick={openSearch}>
 				<span class="mh-hero__search-label">
 					{heroMode === 'buy' ? i18n.t('copy.5e985723597f') : i18n.t('copy.d028fe65890c')}
 				</span>
-				<span class="mh-hero__search-go" aria-hidden="true">
+				<span class="mh-hero__search-go mobile-entry-hero__go" aria-hidden="true">
 					{#if heroMode === 'buy'}
 						<Search size={20} strokeWidth={2.5} />
 					{:else}
@@ -184,11 +185,7 @@
 		padding-bottom: 12px;
 	}
 	.mh-hero {
-		display: grid;
-		gap: var(--sa-mobile-hero-gap);
-		padding: calc(env(safe-area-inset-top) + 12px) var(--mh-gutter) var(--sa-mobile-hero-bottom);
-		background: var(--sa-blue);
-		color: #fff;
+		--mobile-entry-gutter: var(--mh-gutter);
 	}
 
 	.mh-hero__title {
@@ -203,7 +200,7 @@
 
 	.mh-hero__box {
 		display: grid;
-		gap: var(--sa-mobile-hero-gap);
+		gap: var(--mobile-entry-hero-gap);
 		margin: 0;
 		border: 0;
 		border-radius: 0;
@@ -244,60 +241,9 @@
 		color: var(--sa-blue-strong) !important;
 	}
 	.mh-hero__modes {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
 		justify-self: center;
 		align-items: end;
-		width: 100%;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.24);
 		padding: 0;
-	}
-
-	.mh-hero__modes button {
-		position: relative;
-		display: flex;
-		box-sizing: border-box;
-		width: 100%;
-		min-width: 0;
-		min-height: 44px;
-		align-items: flex-end;
-		justify-content: center;
-		border: 0;
-		background: transparent;
-		color: var(--mh-hero-tab-color, rgba(255, 255, 255, 0.76));
-		font: var(--sa-weight-medium) var(--sa-mobile-type-primary-tab) / var(--sa-leading-snug)
-			var(--sa-font);
-		padding: 0 8px 6px;
-		cursor: pointer;
-		transition: color 0.18s ease;
-		-webkit-tap-highlight-color: transparent;
-	}
-
-	.mh-hero__modes button:hover {
-		color: #fff;
-	}
-
-	.mh-hero__modes button:focus-visible {
-		border-radius: 6px 6px 0 0;
-		outline: 2px solid rgba(255, 255, 255, 0.76);
-		outline-offset: -3px;
-	}
-
-	.mh-hero__modes button.is-active {
-		color: var(--mh-hero-tab-active, #fff);
-		font-weight: var(--sa-button-font-weight);
-	}
-
-	.mh-hero__modes button.is-active::after {
-		position: absolute;
-		right: 0;
-		bottom: -1px;
-		left: 0;
-		width: auto;
-		height: 3px;
-		border-radius: 4px 4px 0 0;
-		background: var(--sa-red, #d50032);
-		content: '';
 	}
 	.mh-hero__modes--segmented {
 		display: grid;
@@ -341,21 +287,14 @@
 
 	.mh-hero__search {
 		display: inline-flex;
-		width: 100%;
-		min-height: var(--sa-mobile-search-h);
 		align-items: center;
-		box-sizing: border-box;
 		gap: 12px;
-		border: 0;
-		border-radius: var(--sa-r-pill);
-		background: #fff;
 		padding: 4px 4px 4px 17px;
 		color: var(--sa-muted);
 		font-size: var(--sa-text-base);
 		font-weight: var(--sa-weight-medium);
 		text-align: left;
 		cursor: pointer;
-		box-shadow: 0 12px 32px rgba(0, 45, 110, 0.18);
 	}
 
 	.mh-hero__search-label {
@@ -373,7 +312,6 @@
 		flex: 0 0 auto;
 		place-items: center;
 		border-radius: 50%;
-		background: var(--sa-blue);
 		color: #fff !important;
 	}
 
@@ -407,11 +345,7 @@
 		}
 
 		.mh-hero__box {
-			gap: var(--sa-mobile-hero-gap);
-		}
-
-		.mh-hero__search {
-			min-height: var(--sa-mobile-search-h);
+			gap: var(--mobile-entry-hero-gap);
 		}
 
 		.mh-hero__search-go {

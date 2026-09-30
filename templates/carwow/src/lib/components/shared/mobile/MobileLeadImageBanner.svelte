@@ -3,28 +3,45 @@
 	const i18n = getI18n();
 
 	import { ChevronRight } from '@lucide/svelte';
-	type Props = { title: string; action: string; image: string } & (
+	import MobileActionCardContent from './MobileActionCardContent.svelte';
+	type Props = { title: string; action: string; image: string; artwork?: 'cutout' | 'photo' } & (
 		| { href: string; onOpen?: never }
 		| { href?: never; onOpen: () => void }
 	);
-	let { title, action, image, href, onOpen }: Props = $props();
+	let { title, action, image, href, onOpen, artwork = 'cutout' }: Props = $props();
 </script>
 
 {#snippet content()}
-	<img src={i18n.asset(image)} alt="" width="960" height="540" />
-	<strong class="lead-image-banner__title">{title}</strong>
-	<span class="lead-image-banner__action" aria-hidden="true"
-		>{action}<ChevronRight size={17} strokeWidth={2.5} /></span
-	>
+	{#if artwork === 'photo'}
+		<MobileActionCardContent
+			{title}
+			{image}
+			{action}
+			imageWidth={960}
+			imageHeight={480}
+			tone="dark"
+			artwork="promo"
+		/>
+	{:else}
+		<img src={i18n.asset(image)} alt="" width="960" height="540" />
+		<strong class="lead-image-banner__title">{title}</strong>
+		<span class="lead-image-banner__action" aria-hidden="true"
+			>{action}<ChevronRight size={17} strokeWidth={2.5} /></span
+		>
+	{/if}
 {/snippet}
 
 {#if href}
-	<a class="lead-image-banner" href={i18n.href(href)} aria-label={`${action}: ${title}`}
-		>{@render content()}</a
+	<a
+		class="lead-image-banner"
+		class:lead-image-banner--photo={artwork === 'photo'}
+		href={i18n.href(href)}
+		aria-label={`${action}: ${title}`}>{@render content()}</a
 	>
 {:else}
 	<button
 		class="lead-image-banner"
+		class:lead-image-banner--photo={artwork === 'photo'}
 		type="button"
 		aria-label={title}
 		aria-haspopup="dialog"
@@ -105,6 +122,13 @@
 	}
 	.lead-image-banner:active .lead-image-banner__action {
 		background: var(--sa-red-hover, #bc002c);
+	}
+	.lead-image-banner--photo {
+		display: block;
+		min-height: 0;
+		padding: 0;
+		border-radius: 18px;
+		background: #10151b;
 	}
 	@media (max-width: 359px) {
 		img {
