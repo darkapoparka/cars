@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { assetHref } from '$lib/utils/assets';
 	import { dealerCopy } from '$lib/config/dealer-copy';
 	import { nativeMessage } from '$lib/i18n/native';
 
@@ -30,6 +31,16 @@
 		formOpen = true;
 	};
 </script>
+
+<svelte:head>
+	<link
+		rel="preload"
+		as="image"
+		href={assetHref('/assets/daynight/proof-studio-import-handoff.webp')}
+		media="(max-width: 767px)"
+		fetchpriority="high"
+	/>
+</svelte:head>
 
 <div
 	class="daynight-contact-mobile"

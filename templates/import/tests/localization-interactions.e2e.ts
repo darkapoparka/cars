@@ -27,27 +27,27 @@ for (const width of [320, 390, 1440])
 						.click();
 					await expect(wizard.getByRole('alert')).toBeVisible();
 					await wizard
-						.locator('#import-wizard-vehicle')
+						.locator('[id^="import-wizard-vehicle-"]')
 						.fill('https://listing.example.invalid/synthetic');
 				} else {
-					await expect(wizard.locator('#import-wizard-make')).toBeVisible();
-					await wizard.locator('#import-wizard-make').fill('BMW');
-					await wizard.locator('#import-wizard-model').fill('X5');
+					await expect(wizard.locator('[id^="import-wizard-make-"]')).toBeVisible();
+					await wizard.locator('[id^="import-wizard-make-"]').fill('BMW');
+					await wizard.locator('[id^="import-wizard-model-"]').fill('X5');
 				}
 				await wizard
 					.getByRole('button', { name: english ? 'Continue' : 'Продължи', exact: true })
 					.click();
-				await expect(wizard.locator('#import-wizard-budget')).toBeVisible();
-				await wizard.locator('#import-wizard-budget').fill('30000');
+				await expect(wizard.locator('[id^="import-wizard-budget-"]')).toBeVisible();
+				await wizard.locator('[id^="import-wizard-budget-"]').fill('30000');
 				await wizard
 					.getByRole('button', { name: english ? 'Petrol' : 'Бензин', exact: true })
 					.click();
 				await wizard
 					.getByRole('button', { name: english ? 'Continue' : 'Продължи', exact: true })
 					.click();
-				await wizard.locator('#import-wizard-name').fill('Synthetic Verification');
-				await wizard.locator('#import-wizard-phone').fill('+359000000000');
-				await wizard.locator('#import-wizard-email').fill('synthetic@example.invalid');
+				await wizard.locator('[id^="import-wizard-name-"]').fill('Synthetic Verification');
+				await wizard.locator('[id^="import-wizard-phone-"]').fill('+359000000000');
+				await wizard.locator('[id^="import-wizard-email-"]').fill('synthetic@example.invalid');
 				const response = page.waitForResponse(
 					(r) => r.url().includes('/api/inquiries') && r.request().method() === 'POST'
 				);
@@ -65,6 +65,13 @@ for (const width of [320, 390, 1440])
 				await expect(wizard.getByRole('status')).toContainText(
 					english ? 'No message was sent' : 'Не е изпратено съобщение'
 				);
+				if (width < 768) {
+					const close = wizard.getByRole('status').getByRole('button');
+					await expect(close).toBeInViewport();
+					const bounds = await close.boundingBox();
+					expect(bounds?.x).toBeGreaterThan(0);
+					expect((bounds?.x ?? width) + (bounds?.width ?? width)).toBeLessThan(width);
+				}
 				await page.screenshot({
 					path: info.outputPath('import-' + mode + '-' + locale + '-' + width + '.png')
 				});

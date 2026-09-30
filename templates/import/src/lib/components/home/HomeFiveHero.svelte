@@ -150,14 +150,14 @@
 				? [
 						{ href: '/calculator', label: 'Import calculator' },
 						{ href: '/services', label: 'Import process' },
-						{ href: '/agents', label: 'Consultant' },
+						{ href: '/contact?topic=import', label: 'Consultant' },
 						{ href: '/contact', label: 'Ask ' + site.identity.name },
 						{ href: '/inventory', label: 'Available cars' }
 					]
 				: [
 						{ href: '/calculator', label: nt('ui91') },
 						{ href: '/services', label: nt('ui92') },
-						{ href: '/agents', label: nt('ui93') },
+						{ href: '/contact?topic=import', label: nt('ui93') },
 						{ href: '/contact', label: nt('ui94') + site.identity.name },
 						{ href: '/inventory', label: nt('ui95') }
 					];
@@ -168,14 +168,14 @@
 				? [
 						{ href: '/sell-your-car', label: 'Valuation form' },
 						{ href: '/services', label: 'Selling process' },
-						{ href: '/agents', label: 'Consultant' },
+						{ href: '/contact?topic=sell', label: 'Consultant' },
 						{ href: '/contact', label: 'Ask ' + site.identity.name },
 						{ href: '/inventory', label: 'Available cars' }
 					]
 				: [
 						{ href: '/sell-your-car', label: nt('ui96') },
 						{ href: '/services', label: nt('ui97') },
-						{ href: '/agents', label: nt('ui93') },
+						{ href: '/contact?topic=sell', label: nt('ui93') },
 						{ href: '/contact', label: nt('ui94') + site.identity.name },
 						{ href: '/inventory', label: nt('ui95') }
 					];

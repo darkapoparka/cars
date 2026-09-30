@@ -53,6 +53,7 @@
 					alt=""
 					width="420"
 					height="220"
+					loading="lazy"
 				/>
 				<div class="inventory-hero__content">
 					<h1>{desktop.title}</h1>
@@ -81,6 +82,7 @@
 					alt=""
 					width="420"
 					height="220"
+					loading="lazy"
 				/>
 			</div>
 		</section>

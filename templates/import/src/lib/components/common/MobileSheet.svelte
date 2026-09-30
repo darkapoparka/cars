@@ -163,7 +163,8 @@
 		flex-direction: column;
 		width: min(100%, var(--bc-mobile-sheet-max-width));
 		max-height: min(calc(92dvh - var(--bc-kb-inset, 0px)), var(--bc-mobile-sheet-max-height));
-		overflow: hidden;
+		/* The body owns scrolling; focusing a field must not scroll the sheet shell. */
+		overflow: clip;
 		margin-inline: auto;
 		border-radius: var(--bc-radius-panel) var(--bc-radius-panel) 0 0;
 		background: var(--bc-bg);
@@ -180,6 +181,12 @@
 		max-height: none;
 		border-radius: 0;
 		padding-top: max(var(--bc-space-3), env(safe-area-inset-top));
+	}
+
+	/* Vaul extends draggable drawers below the viewport. Full-screen sheets do not
+	   drag; that extension lets browser focus scroll the entire dialog off screen. */
+	:global(.bc-mobile-sheet__content--full)::after {
+		display: none;
 	}
 
 	:global(.bc-mobile-sheet__handle) {

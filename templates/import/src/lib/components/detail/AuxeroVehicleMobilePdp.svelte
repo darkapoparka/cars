@@ -555,14 +555,15 @@
 		</a>
 	</MobileSheet>
 
-	{#if viewerOpen}
-		<div
-			class="daynight-mobile-pdp__viewer"
-			data-mobile-pdp-viewer
-			role="dialog"
-			aria-modal="true"
-			aria-label={detail.mobileDrawer.photoLabel}
-		>
+	<MobileSheet
+		bind:open={viewerOpen}
+		title={detail.mobileDrawer.photoLabel}
+		mode="full"
+		showHeader={false}
+		showHandle={false}
+		contentClass="daynight-mobile-pdp__viewer-sheet"
+	>
+		<div class="daynight-mobile-pdp__viewer" data-mobile-pdp-viewer>
 			<button
 				type="button"
 				class="daynight-mobile-pdp__viewer-close"
@@ -612,7 +613,7 @@
 				{/each}
 			</div>
 		</div>
-	{/if}
+	</MobileSheet>
 </section>
 
 <style>
@@ -1332,14 +1333,19 @@
 		}
 
 		.daynight-mobile-pdp__viewer {
-			position: fixed;
-			inset: 0;
-			z-index: 1010;
+			position: relative;
+			width: 100%;
+			height: 100%;
 			display: grid;
 			grid-template-rows: auto minmax(0, 1fr) auto;
 			background: #050505;
 			color: #ffffff;
 			padding: calc(14px + env(safe-area-inset-top)) 14px calc(16px + env(safe-area-inset-bottom));
+		}
+
+		:global(.daynight-mobile-pdp__viewer-sheet.bc-mobile-sheet__content) {
+			padding: 0;
+			background: #050505;
 		}
 
 		.daynight-mobile-pdp__viewer-close {

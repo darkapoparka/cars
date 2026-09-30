@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { assetHref } from '$lib/utils/assets';
+	import { vehicleImageDelivery } from '$lib/utils/vehicle-images';
 	import { nativeMessage } from '$lib/i18n/native';
 	import { page } from '$app/state';
 	const nt = (key: import('$lib/i18n/native').NativeKey) =>
@@ -21,13 +21,10 @@
 	}: { card: MobileVehicleCardData; image?: string; priority?: boolean } = $props();
 
 	let imageFailed = $state(false);
+	const deliveryImage = $derived(vehicleImageDelivery(image));
 </script>
 
-<a
-	class="mobile-vehicle-card"
-	href={resolve('/inventory/' + encodeURIComponent(card.slug))}
-	aria-label={card.title}
->
+<a class="mobile-vehicle-card" href={resolve('/inventory/' + encodeURIComponent(card.slug))}>
 	<div class="mobile-vehicle-card__image" class:image-failed={imageFailed}>
 		{#if imageFailed}
 			<div class="mobile-vehicle-card__placeholder" role="img" aria-label={nt('ui34') + card.title}>
@@ -37,7 +34,8 @@
 		{:else}
 			<img
 				use:imageFallback
-				src={assetHref(image)}
+				src={deliveryImage.src}
+				srcset={deliveryImage.srcset}
 				alt={card.title}
 				width="660"
 				height="440"

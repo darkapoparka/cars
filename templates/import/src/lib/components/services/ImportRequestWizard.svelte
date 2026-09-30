@@ -53,6 +53,9 @@
 		onclose
 	}: Props = $props();
 
+	const wizardId = $props.id();
+	const fieldId = (field: string) => `import-wizard-${field}-${wizardId}`;
+
 	const stepLabels = $derived([nt('ui167'), nt('ui238'), nt('ui137')] as const);
 	const timeframeOptions = ['Без значение', 'До 1 месец', 'До 3 месеца', 'До 6 месеца'];
 
@@ -207,16 +210,16 @@
 		let selector: string;
 		if (step === 0 && intent === 'listing') {
 			validationMessage = nt('ui243');
-			selector = '#import-wizard-vehicle';
+			selector = '[id^="import-wizard-vehicle-"]';
 		} else if (step === 0) {
 			validationMessage = nt('ui244');
-			selector = '#import-wizard-make';
+			selector = '[id^="import-wizard-make-"]';
 		} else if (name.trim().length < 2) {
 			validationMessage = nt('ui245');
-			selector = '#import-wizard-name';
+			selector = '[id^="import-wizard-name-"]';
 		} else {
 			validationMessage = nt('ui191');
-			selector = '#import-wizard-phone';
+			selector = '[id^="import-wizard-phone-"]';
 		}
 		await tick();
 		wizardRoot?.querySelector<HTMLElement>(selector)?.focus({ preventScroll: false });
@@ -326,10 +329,10 @@
 
 				<div class="bc-import-wizard__fields">
 					{#if intent === 'listing'}
-						<label class="bc-import-wizard__field--wide" for="import-wizard-vehicle">
+						<label class="bc-import-wizard__field--wide" for={fieldId('vehicle')}>
 							<span>{nt('ui222')}</span>
 							<input
-								id="import-wizard-vehicle"
+								id={fieldId('vehicle')}
 								type="text"
 								placeholder={nt('ui223')}
 								required
@@ -361,19 +364,14 @@
 						</div>
 					</fieldset>
 					{#if intent === 'source'}
-						<label for="import-wizard-make">
+						<label for={fieldId('make')}>
 							<span>{nt('ui171')}</span>
-							<input
-								id="import-wizard-make"
-								type="text"
-								placeholder={nt('ui225')}
-								bind:value={make}
-							/>
+							<input id={fieldId('make')} type="text" placeholder={nt('ui225')} bind:value={make} />
 						</label>
-						<label for="import-wizard-model">
+						<label for={fieldId('model')}>
 							<span>{nt('ui172')}</span>
 							<input
-								id="import-wizard-model"
+								id={fieldId('model')}
 								type="text"
 								placeholder={nt('ui226')}
 								bind:value={model}
@@ -387,10 +385,10 @@
 					<p>{nt('ui228')}</p>
 				</div>
 				<div class="bc-import-wizard__fields">
-					<label for="import-wizard-year">
+					<label for={fieldId('year')}>
 						<span>{nt('ui130')}</span>
 						<input
-							id="import-wizard-year"
+							id={fieldId('year')}
 							type="text"
 							inputmode="numeric"
 							maxlength="4"
@@ -398,10 +396,10 @@
 							bind:value={minYear}
 						/>
 					</label>
-					<label for="import-wizard-budget">
+					<label for={fieldId('budget')}>
 						<span>{nt('ui229')}</span>
 						<input
-							id="import-wizard-budget"
+							id={fieldId('budget')}
 							type="text"
 							inputmode="numeric"
 							placeholder="EUR"
@@ -450,9 +448,9 @@
 							{/each}
 						</div>
 					</fieldset>
-					<label class="bc-import-wizard__field--wide" for="import-wizard-notes">
+					<label class="bc-import-wizard__field--wide" for={fieldId('notes')}>
 						<span>{nt('ui232')}</span>
-						<textarea id="import-wizard-notes" rows="4" placeholder={nt('ui233')} bind:value={notes}
+						<textarea id={fieldId('notes')} rows="4" placeholder={nt('ui233')} bind:value={notes}
 						></textarea>
 					</label>
 				</div>
@@ -463,10 +461,10 @@
 					{#if criteriaSummary}<p class="bc-import-wizard__summary">{criteriaSummary}</p>{/if}
 				</div>
 				<div class="bc-import-wizard__fields">
-					<label class="bc-import-wizard__field--wide" for="import-wizard-phone">
+					<label class="bc-import-wizard__field--wide" for={fieldId('phone')}>
 						<span>{nt('ui178')}</span>
 						<input
-							id="import-wizard-phone"
+							id={fieldId('phone')}
 							type="tel"
 							inputmode="tel"
 							autocomplete="tel"
@@ -475,10 +473,10 @@
 							bind:value={phone}
 						/>
 					</label>
-					<label for="import-wizard-name">
+					<label for={fieldId('name')}>
 						<span>{nt('ui236')}</span>
 						<input
-							id="import-wizard-name"
+							id={fieldId('name')}
 							type="text"
 							autocomplete="name"
 							required
@@ -486,10 +484,10 @@
 							bind:value={name}
 						/>
 					</label>
-					<label for="import-wizard-email">
+					<label for={fieldId('email')}>
 						<span>{nt('ui22')}</span>
 						<input
-							id="import-wizard-email"
+							id={fieldId('email')}
 							type="email"
 							inputmode="email"
 							autocomplete="email"
@@ -1028,6 +1026,13 @@
 	.bc-import-wizard__next:disabled {
 		background: var(--bc-border);
 		color: var(--bc-muted);
+	}
+
+	.bc-import-wizard:not(.bc-import-wizard--embedded) .bc-import-wizard__success {
+		grid-row: 1 / -1;
+		align-content: center;
+		padding: max(var(--bc-space-6), env(safe-area-inset-top)) var(--bc-mobile-gutter)
+			max(var(--bc-space-6), env(safe-area-inset-bottom));
 	}
 
 	.bc-import-wizard--embedded {

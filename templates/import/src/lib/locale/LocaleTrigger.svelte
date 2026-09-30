@@ -13,7 +13,7 @@
 
 <a
 	data-locale-selector
-	aria-label={i18n.t('title')}
+	aria-label={compact ? i18n.locale.toUpperCase() + ' · ' + i18n.t('title') : undefined}
 	href={localeHref('/locale-settings', i18n.locale, base) +
 		'?returnTo=' +
 		encodeURIComponent(page.url.pathname + page.url.search)}

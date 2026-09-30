@@ -144,6 +144,11 @@
 </MobileSheet>
 
 <style>
+	/* Covered navigation must also leave the accessibility tree while a modal sheet is open. */
+	:global(body:has(.bc-mobile-sheet__content[data-state='open'])) .mobile-bottom-nav {
+		visibility: hidden;
+	}
+
 	.mobile-bottom-nav {
 		display: none;
 	}

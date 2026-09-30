@@ -58,7 +58,6 @@
 								href={linkHref(`https://www.youtube.com/watch?v=${video.id}`)}
 								target="_blank"
 								rel="noopener noreferrer"
-								aria-label={`${english ? 'Play' : 'Пусни'}: ${video.title}`}
 								onclick={(event) => {
 									if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
 									event.preventDefault();

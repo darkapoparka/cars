@@ -52,6 +52,39 @@ test('mobile home prioritizes its visible photo without downloading desktop artw
 	expect(desktopImages).toEqual([]);
 });
 
+test('visible mobile inventory photos load delivery renditions and Contact prioritizes its banner', async ({
+	page
+}) => {
+	const desktopArtwork: string[] = [];
+	page.on('request', (request) => {
+		if (/\/megamenu\/inventory-(audi-a7|bmw-x5)-cutout/.test(request.url())) {
+			desktopArtwork.push(request.url());
+		}
+	});
+	await page.setViewportSize({ width: 320, height: 844 });
+	await visit(page, '/en/inventory');
+	const photos = page.locator('.daynight-inventory-mobile__cards .mobile-vehicle-card img');
+	for (const photo of (await photos.all()).slice(0, 3)) {
+		await expect(photo).toHaveAttribute('loading', 'eager');
+		await expect(photo).toHaveAttribute('fetchpriority', 'high');
+		await expect
+			.poll(() => photo.evaluate((image: HTMLImageElement) => image.naturalWidth))
+			.toBeGreaterThan(0);
+		expect(await photo.evaluate((image: HTMLImageElement) => image.currentSrc)).toContain(
+			'/delivery/vehicles/'
+		);
+	}
+	expect(desktopArtwork).toEqual([]);
+	await visit(page, '/en/contact');
+	const preload = page.locator('head link[rel="preload"][as="image"]');
+	await expect(preload).toHaveAttribute(
+		'href',
+		'/assets/daynight/proof-studio-import-handoff.webp'
+	);
+	await expect(preload).toHaveAttribute('media', '(max-width: 767px)');
+	await expect(preload).toHaveAttribute('fetchpriority', 'high');
+});
+
 test('mobile comparison supports adding, removing and clearing cars', async ({ page }) => {
 	await page.setViewportSize({ width: 320, height: 844 });
 	await visit(page, '/en/compare');
@@ -61,7 +94,7 @@ test('mobile comparison supports adding, removing and clearing cars', async ({ p
 	const table = page.getByRole('table', { name: 'Vehicle specifications' });
 	await expect(table.getByRole('columnheader')).toHaveCount(3);
 	const result = await new AxeBuilder({ page })
-		.withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
+		.withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
 		.analyze();
 	expect(result.violations.map(({ id }) => id)).toEqual([]);
 	await table
@@ -87,12 +120,15 @@ for (const width of [320, 390]) {
 		await expect(save).toHaveAttribute('aria-pressed', 'true');
 		await page.keyboard.press('Enter');
 		await expect(save).toHaveAttribute('aria-pressed', 'false');
-		const photo = page.getByRole('button', { name: 'Photos 1', exact: true });
+		const photo = page
+			.getByRole('button', { name: 'Photos 1', exact: true })
+			.and(page.locator('.daynight-mobile-pdp__image-button'));
 		await photo.focus();
 		await expect(photo).toBeFocused();
 		await page.keyboard.press('Enter');
 		await expect(page.locator('.daynight-mobile-pdp__viewer')).toBeVisible();
 		await page.keyboard.press('Escape');
+		await expect(page.locator('.daynight-mobile-pdp__viewer')).not.toBeVisible();
 		await expect(photo).toBeFocused();
 		await page.getByRole('button', { name: 'Inquire', exact: true }).click();
 		const inquiry = page.getByRole('dialog', { name: 'Send Inquiry about Vehicle', exact: true });
@@ -136,7 +172,7 @@ for (const route of [
 			true
 		);
 		const result = await new AxeBuilder({ page })
-			.withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
+			.withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
 			.analyze();
 		expect(
 			result.violations.map(({ id, nodes }) => ({

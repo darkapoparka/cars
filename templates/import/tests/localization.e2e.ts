@@ -270,8 +270,8 @@ test('both import modes and sell wizard validate without business writes', async
 	await wizard.getByRole('button', { name: 'Continue' }).click();
 	await expect(wizard.getByRole('alert')).toContainText('Add a listing');
 	await page.getByRole('tab', { name: 'Find a car', exact: true }).click();
-	await expect(wizard.locator('#import-wizard-make')).toBeVisible();
-	await wizard.locator('#import-wizard-make').fill('Synthetic');
+	await expect(wizard.locator('[id^="import-wizard-make-"]')).toBeVisible();
+	await wizard.locator('[id^="import-wizard-make-"]').fill('Synthetic');
 	await wizard.getByRole('button', { name: 'Continue' }).click();
 	await expect(wizard).toContainText('Preferred timeframe');
 	await expect(wizard.getByRole('button', { name: 'Petrol', exact: true })).toBeVisible();

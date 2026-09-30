@@ -2,6 +2,8 @@
 
 Public copy uses self-hosted Sofia Sans. Headings use Sofia Sans SemiCondensed. Keep the admin font configuration isolated.
 
+The root layout bundles the font stylesheet with the shared styles, avoiding a separate blocking font CSS request. Latin and Cyrillic delivery subsets retain the original glyph metrics; the original full fonts remain the fallback for other scripts. The SIL OFL license stays beside all font files. To regenerate these assets, install FontTools 4.66.1 and Brotli 1.2.0 in an isolated Python environment and run `python scripts/subset-fonts.py`. Python is only needed for asset maintenance.
+
 Design values live in src/lib/styles/tokens.css. Action, MobileModeTabs, HeroFilterDialog and forms.css own their typography and geometry. Do not apply a heading weight to ordinary controls, or shrink action text through page-level CSS.
 
 | Role                             | Desktop                 | Mobile                                               | Weight                  |

@@ -1246,7 +1246,7 @@ const heroActionsForLocale = (locale: Locale): HomeFiveHeroAction[] =>
 					drawerKicker: 'Import from Europe',
 					drawerTitle: 'Send a listing link',
 					helper:
-						'Paste a Canadian listing URL or VIN. Day Night Auto will review history, photos, mileage, and estimated landed cost.',
+						'Paste a European listing URL or VIN. Day Night Auto will review history, photos, mileage, and estimated landed cost.',
 					inputName: 'vehicle',
 					label: 'Import',
 					mobileHeading: 'Import from Europe.',
