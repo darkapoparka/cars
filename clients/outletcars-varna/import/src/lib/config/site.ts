@@ -130,7 +130,7 @@ export const site: SiteConfig = validateSiteConfig({
 		displayName: daynightBrand.displayName,
 		origin: `https://${daynightBrand.domain}`,
 		logo: daynightAssets.logoDark,
-		logoOnDark: daynightAssets.logoLight,
+		logoOnDark: daynightAssets.logoDark,
 		favicon: '/brand/daynight-favicon.svg'
 	},
 	contact: {
