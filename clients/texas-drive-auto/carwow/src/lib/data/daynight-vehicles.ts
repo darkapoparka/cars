@@ -1,5 +1,6 @@
 import { currentDayNightListings, type CurrentDayNightListing } from './daynight-current-inventory';
 import { formatEuroPriceLabel } from '$lib/utils/format';
+import { parseDealerNumber } from '$lib/utils/dealer-market-numbers';
 
 export type Car = {
 	slug: string;
@@ -33,10 +34,7 @@ export type Car = {
 	sourceUrl: string;
 };
 
-const parseLocalizedNumber = (value: string) => {
-	const match = value.match(/\d[\d\s]*(?:[.,]\d+)?/);
-	return match ? Number(match[0].replaceAll(' ', '').replace(',', '.')) : 0;
-};
+const parseLocalizedNumber = parseDealerNumber;
 
 const normalizeFuel = (fuel: string) =>
 	({

@@ -1,4 +1,6 @@
 import { stockValue, vehicleDescription } from './stock';
+import { dealerCurrencyText } from '$lib/utils/dealer-market-numbers';
+import { localeContract } from './core';
 import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 import { attachLocalizedValidation } from './validation';
 import { getContext, setContext } from 'svelte';
@@ -67,7 +69,7 @@ export function getI18n() {
 			return state();
 		},
 		t: (key: MessageKey, parameters?: MessageParameters) =>
-			message(state().locale, key, parameters),
+			dealerCurrencyText(message(state().locale, key, parameters), localeContract.inventoryCurrency),
 		dealer: (field: DealerTextField) => dealerLabel(state().locale, field),
 		stock: (value: string | number) => stockValue(state().locale, value),
 		vehicleDescription: (value: DayNightVehicle) => vehicleDescription(state().locale, value),
@@ -85,7 +87,7 @@ export function getI18n() {
 				: value;
 		},
 		spec: <T>(value: T): T => specificationText(state().locale, value),
-		text: <T>(value: T): T => templateText(state().locale, value),
+		text: <T>(value: T): T => dealerCurrencyText(templateText(state().locale, value), localeContract.inventoryCurrency),
 		asset: (value: string) => {
 			const base = routeParts(page.url.pathname).base;
 			return base &&

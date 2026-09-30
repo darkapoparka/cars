@@ -216,7 +216,7 @@
 									{@attach i18n.validation}
 									class="input-large"
 									id="КалкулаторTrade"
-									placeholder="0 €"
+									placeholder={`0 ${daynightSite.currency}`}
 									name="КалкулаторTrade"
 									type="text"
 									inputmode="decimal"

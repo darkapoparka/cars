@@ -1,3 +1,4 @@
+import { localeContract } from '$lib/locale/core';
 /** Illustrative EUR calculation only; defaults are sample inputs, not offered terms. */
 export const financeDefaults = {
 	price: '46300',
@@ -84,7 +85,7 @@ export function calculateFinance(inputs: FinanceInputs) {
 export function formatFinanceEur(value: number, locale: 'en' | 'bg' = 'bg') {
 	return new Intl.NumberFormat(locale === 'en' ? 'en-GB' : 'bg-BG', {
 		style: 'currency',
-		currency: 'EUR',
+		currency: localeContract.inventoryCurrency,
 		maximumFractionDigits: 2
 	}).format(value);
 }

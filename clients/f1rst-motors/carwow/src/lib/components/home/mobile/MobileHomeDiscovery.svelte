@@ -6,6 +6,7 @@
 	import { ChevronRight } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
+	import { localeContract } from '$lib/locale/core';
 	import MobileVehicleStats from '$lib/components/shared/mobile/MobileVehicleStats.svelte';
 	import type { HomeMobileData } from '$lib/types/home';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
@@ -66,7 +67,8 @@
 		const amount = value.match(/^(?:under|over)-(\d+)$/);
 		if (!amount) return i18n.text(label);
 		const thousands = Number(amount[1]) / 1000;
-		return i18n.text(label).replace(/\d[\d\s,]*EUR/, `${thousands}K €`);
+		const currency = localeContract.inventoryCurrency;
+		return i18n.text(label).replace(/\d[\d\s,]*(?:EUR|AED|USD)/, `${thousands}K ${currency === 'EUR' ? '€' : currency}`);
 	};
 </script>
 
