@@ -50,6 +50,19 @@ Initial concurrent runs encountered two navigation timeouts and a WebKit geometr
 
 ## Scope and preserved work
 
+### Badge follow-up
+
+The latest revision keeps the photograph on top and groups all four specifications into centered pill badges in two equal columns. The badge list uses one column at card widths of 15rem or less to accommodate enlarged text. Content has 12px vertical padding; the price has its own row and aligns to the right. [Styling](../STYLING.md#mobile-listing-cards) describes the current component contract.
+
+The initial screenshots and full matrix above record the first revision, `e9d021f8c`. These are the updated cards at normal text size and the same scroll position:
+
+| Width | Previous details | Centered badges |
+| --- | --- | --- |
+| 320px | ![Previous details at 320px](after-320.jpg) | ![Centered badges at 320px](../mobile-card-badges-2026-09-30/after-320.jpg) |
+| 390px | ![Previous details at 390px](after-390.jpg) | ![Centered badges at 390px](../mobile-card-badges-2026-09-30/after-390.jpg) |
+
+The badge revision passed `npm run validate` (0 Svelte errors and warnings), all 8 mobile polish cases, all 66 WebKit reflow cases, and all 42 Chromium inventory accessibility/text-bounds states with no violations or clipping. The tested `VehicleCard.svelte` blob is `e846e371bd1edcc9bc833507fbf1c0b455915bef`; the prior JSON matrices remain evidence for the first revision. Both languages were also inspected in the live in-app browser. The Node 22.20.0 development server runs at `http://127.0.0.1:5173`.
+
 This changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The asset-count guard is committed only for the five derivatives owned by this revision.
 
 Automated axe and layout checks provide bounded evidence, not a claim of complete WCAG conformance. Physical-device and screen-reader acceptance remain separate from these browser checks.

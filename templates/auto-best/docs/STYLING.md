@@ -188,8 +188,9 @@ These dimensions are semantic role tokens or deliberate component geometry; they
 
 Overlay gutters, row gaps and row corners reuse the foundation spacing/radius system. Collapsed filters use concise unrestricted values such as “Всеки бюджет”, “Всеки пробег” and “Всяка година”; active values use ink emphasis and wrap without truncation.
 
-### Owner-approved mobile listing title contract — 20 September 2026
-Mobile listing cards retain their font sizes, use natural content rows with token-based gaps, and keep titles on one line with visual ellipsis. Full model text remains in the DOM/accessibility tree and detail destination. This supersedes the earlier two-line mobile-card assertion; desktop presentation is unchanged. Locale acceptance covers both languages and all eight retained cards.
+### Mobile listing cards
+
+Below 768px, the listing variant keeps a full-width 16:9 photograph above the details and lets complete model names wrap. Year, mileage, fuel and transmission form a named list of centered pill badges in two equal columns. At card widths of 15rem or less, the badges use one column so enlarged text remains readable. Content uses 16px horizontal and 12px vertical padding with 12px row gaps. The separate price row aligns to the right and can wrap. Desktop/tablet and carousel/showcase variants retain their existing composition. `VehicleCard.svelte` owns this presentation; the mobile polish, reflow and inventory accessibility checks verify both locales.
 
 ## Shared icon-only controls and modal behavior
 
