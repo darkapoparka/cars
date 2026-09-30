@@ -34,6 +34,7 @@ import {
 import {
   mobileVehicleCardContentClassName,
   mobileVehicleCardPriceClassName,
+  mobileVehicleCardPriceSummaryClassName,
   mobileVehicleCardTitleClassName,
 } from "../lib/mobile-vehicle-card-layout";
 import {
@@ -90,7 +91,7 @@ export const VehicleCardMediaBadges = ({
 
   return (
     <div
-      className="pointer-events-none absolute top-1.5 left-1 z-10 flex max-w-[calc(100%-0.5rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
+      className="pointer-events-none absolute top-3 left-3 z-10 flex max-w-[calc(100%-4.5rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
       data-slot="vehicle-card-media-badges"
     >
       {labels.map((label) => (
@@ -131,7 +132,10 @@ const VehiclePriceSummary = ({
   );
 
   return (
-    <div className="min-w-0" data-slot="vehicle-card-price-summary">
+    <div
+      className={mobileVehicleCardPriceSummaryClassName}
+      data-slot="vehicle-card-price-summary"
+    >
       <p
         className={cn(
           mobileVehicleCardPriceClassName,
@@ -148,7 +152,7 @@ const VehiclePriceSummary = ({
       </p>
       {secondaryPriceLabel ? (
         <p
-          className="text-micro text-muted-foreground min-[360px]:text-meta"
+          className="text-micro text-muted-foreground lg:text-meta"
           title={secondaryPriceLabel}
         >
           {secondaryPriceLabel}
@@ -496,6 +500,7 @@ const MobileDealerVehicleCardContent = ({
       mobileVehicleCardContentClassName,
       "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
     )}
+    data-slot="vehicle-card-mobile-content"
     href={listingHref}
   >
     <div className="min-w-0 space-y-1">

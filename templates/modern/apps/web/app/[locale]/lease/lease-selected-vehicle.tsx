@@ -5,9 +5,12 @@ import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehic
 import Image from "@repo/marketplace-ui/components/public-image";
 import { VehicleCardMoney } from "@repo/marketplace-ui/components/vehicle-card-money";
 import {
+  mobileVehicleCardClassName,
   mobileVehicleCardContentClassName,
+  mobileVehicleCardImageSizes,
   mobileVehicleCardMediaClassName,
   mobileVehicleCardPriceClassName,
+  mobileVehicleCardPriceSummaryClassName,
   mobileVehicleCardTitleClassName,
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
@@ -37,12 +40,15 @@ export function LeaseSelectedVehicle({
 
   return (
     <article
-      className={`relative flex overflow-hidden rounded-xl bg-card ${onSelect ? "" : "mt-4"}`}
+      className={`${mobileVehicleCardClassName} relative overflow-hidden rounded-xl bg-card ${onSelect ? "" : "mt-4"}`}
       data-slot={
         onSelect ? "lease-vehicle-option" : "lease-selected-vehicle-card"
       }
     >
-      <div className={mobileVehicleCardMediaClassName}>
+      <div
+        className={mobileVehicleCardMediaClassName}
+        data-slot="vehicle-card-media"
+      >
         {failedImageUrl === vehicle.imageUrl ? (
           <div className="absolute inset-0 grid place-items-center text-zinc-400">
             <DealerUiIcon className="size-9" name="car" />
@@ -54,7 +60,7 @@ export function LeaseSelectedVehicle({
             fill
             loading={priority || !onSelect ? "eager" : "lazy"}
             onError={() => setFailedImageUrl(vehicle.imageUrl)}
-            sizes="240px"
+            sizes={`(max-width: 1023px) ${mobileVehicleCardImageSizes}, 240px`}
             src={vehicle.imageUrl}
           />
         )}
@@ -68,7 +74,7 @@ export function LeaseSelectedVehicle({
           >
             {vehicle.title}
           </h2>
-          <div className="min-w-0">
+          <div className={mobileVehicleCardPriceSummaryClassName}>
             <p
               className={mobileVehicleCardPriceClassName}
               data-slot="lease-selected-vehicle-price"
@@ -83,7 +89,7 @@ export function LeaseSelectedVehicle({
             </p>
             {vehicle.monthlyLabel ? (
               <p
-                className="text-micro text-muted-foreground min-[360px]:text-meta"
+                className="text-micro text-muted-foreground lg:text-meta"
                 title={
                   locale === "bg"
                     ? "Ориентировъчна месечна вноска"
