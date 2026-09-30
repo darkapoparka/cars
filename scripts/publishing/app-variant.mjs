@@ -4,6 +4,7 @@ export const APP_VARIANT=Object.freeze({key:'app',base:'/variant-4',entry:'/vari
 export const sha256=bytes=>createHash('sha256').update(bytes).digest('hex');
 const json=value=>Buffer.from(JSON.stringify(value,null,2)+'\n');
 const digest=files=>sha256(Buffer.from(JSON.stringify([...files].sort(([a],[b])=>a<b?-1:a>b?1:0).map(([name,bytes])=>[name,sha256(bytes)]))));
+export {digest as appSourceDigest};
 export function baseNativeManifest(manifest){
  const base=structuredClone(manifest);if(base.packaging?.version!==APP_PACKAGING_VERSION)return base;
  if(base.variants?.length!==4||JSON.stringify(base.variants[3])!==JSON.stringify(APP_VARIANT))throw Error('Invalid App extension manifest');

@@ -68,6 +68,7 @@ export function validatePackagingManifest(manifest) {
 }
 
 function omitted(name, relative) {
+  if(name === 'next-env.d.ts' || /(?:^|\/)packages\/database\/generated(?:\/|$)/.test(relative)) return true;
   if (OMITTED.has(name) || name.startsWith('.next') || (name.startsWith('.env') && !/^\.env\.(example|sample|template)$/.test(name))) return true;
   if (/\.(?:log|tsbuildinfo|pem|key|pfx|p12|pid)$/i.test(name)) return true;
   if (/(?:credentials|service-account|license-certificate|purchase-code)/i.test(name) && !/\.(?:[cm]?[jt]sx?|svelte|vue|py|sh|ps1)$/i.test(name)) return true;
@@ -85,7 +86,7 @@ function sourceMapDigest(files) {
   return sha256(JSON.stringify([...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, content]) => [name, sha256(normalized(content))])));
 }
 
-async function collectSource(source, manifest) {
+export async function collectSource(source, manifest) {
   const files = new Map();
   async function walk(relative) {
     const absolute = path.join(source, relative);

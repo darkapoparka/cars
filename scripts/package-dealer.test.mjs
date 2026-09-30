@@ -46,6 +46,8 @@ async function fixture(t, middle = 'modern') {
     'auto-best/AGENTS.md': 'old absolute instructions',
     'auto-best/.client/project.json': '{"id":"preserve"}',
     'auto-best/.client/private-notes.md': 'not public',
+    'auto-best/next-env.d.ts': 'Reproducible framework output, not dealer source',
+    'modern/packages/database/generated/client.ts': 'Reproducible Prisma output, not dealer source',
     'carwow/package.json': '{"type":"module","engines":{"node":"24.x"}}\n',
     'carwow/package-lock.json': '{"lockfileVersion":3}\r\n',
     'carwow/.env.example': 'DATABASE_URL=\n',
@@ -169,6 +171,8 @@ for (const middle of ['modern', 'import']) {
     assert.ok(first.files.includes('auto-best/.client/project.json'));
     assert.ok(!first.files.some((name) => /node_modules|\.git\/|\.env(?!\.(?:example|sample|template)$)|\.vercel\/|\.next\/|private-notes/.test(name)));
     assert.ok(!first.files.includes('auto-best/AGENTS.md'));
+    assert.ok(!first.files.includes('auto-best/next-env.d.ts'));
+    assert.ok(!first.files.includes('modern/packages/database/generated/client.ts'));
     assert.deepEqual(await fs.readFile(path.join(first.destination, 'auto-best/package-lock.json')), normalized(await fs.readFile(path.join(options.source, 'auto-best/package-lock.json'))));
     const identity = JSON.parse(await fs.readFile(path.join(first.destination, '.cars-package.json'), 'utf8'));
     assert.equal(identity.sourceCommit, sourceCommit);
