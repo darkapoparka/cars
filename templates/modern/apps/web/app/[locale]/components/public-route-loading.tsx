@@ -276,13 +276,15 @@ export const PublicRouteLoading = async ({
               <div className={mobileVehicleCardMediaClassName} />
               <div className={mobileVehicleCardContentClassName}>
                 <div className={mobileVehicleCardInfoClassName}>
-                  <div className={mobileVehicleCardTitleClassName}>
+                  <div
+                    className={cn(mobileVehicleCardTitleClassName, "h-[2lh]")}
+                  >
                     <div className="h-4 w-4/5 rounded bg-secondary" />
                     <div className="mt-1 h-4 w-3/5 rounded bg-secondary" />
                   </div>
                   <div className={mobileVehicleCardPriceSummaryClassName}>
                     <div className="h-6 w-3/4 rounded bg-secondary" />
-                    <div className="h-3 w-4/5 rounded bg-secondary" />
+                    <div className="h-4 w-4/5 rounded bg-secondary" />
                   </div>
                 </div>
                 <div className={mobileVehicleCardFactsClassName}>
