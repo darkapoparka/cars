@@ -15,11 +15,11 @@ const location = "Showroom 61, Souq Al Haraj, Sharjah, UAE";
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Sharjah',
-	locationShort: "Sharjah",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Sharjah'
-	},
+  "city": "Sharjah",
+  "locationShort": "Sharjah",
+  "addressLine": "Showroom 61, Souq Al Haraj",
+  "address": "Showroom 61, Souq Al Haraj, Sharjah, UAE"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -52,6 +52,7 @@ export const daynightSite = {
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"https://www.facebook.com/albasmamotors","instagram":"https://www.instagram.com/albasmamotors","youtube":"","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

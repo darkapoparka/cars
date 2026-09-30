@@ -308,7 +308,7 @@
   gap: 20px;
 }
 
-.dn-detail-card {
+.dn-detail-card { min-width: 0; overflow-wrap: anywhere;
   padding: 24px;
   border: 1px solid #eaedf2;
   border-radius: 16px;
@@ -342,7 +342,7 @@
 
 .dn-detail-summary__actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 8px;
   margin-top: 16px;
 }
@@ -409,17 +409,34 @@
 .dn-detail-dealer__actions { display: grid; grid-template-columns: 1fr; margin-top: 20px; }
 
 .dn-detail-dealer-banner {
-  display: block;
-  overflow: hidden;
-  border-radius: 14px;
+  display: flex;
+  min-height: calc(2 * var(--dn-control-height-default));
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dn-space-3);
+  padding: var(--dn-space-4);
+  border-radius: var(--dn-radius);
+  background: var(--dn-ink-strong);
+  color: var(--dn-white);
 }
 
-.dn-detail-dealer-banner img {
+.dn-detail-dealer-banner__logo {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 112px;
+  min-width: 0;
+  max-height: 40px;
+  object-fit: contain;
+  object-position: left center;
 }
 
+.dn-detail-banner-action {
+  flex-shrink: 0;
+  padding: 0 var(--dn-space-3);
+  box-shadow: none;
+  cursor: pointer;
+}
+.dn-detail-banner-action svg { flex-shrink: 0; }
+.dn-detail-banner-action:hover { --dn-compact-control-surface: var(--dn-surface-hover); }
 .dn-detail-related {
   margin-top: 48px;
   padding: 28px;
@@ -462,7 +479,7 @@
 }
 
 .dn-detail-related__list img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.dn-detail-related-card > span { display: block; padding: 18px 20px 20px; }
+.dn-detail-related-card > span { display: block; overflow-wrap: anywhere; padding: 18px 20px 20px; }
 .dn-detail-related__list strong,
 .dn-detail-related__list b { display: block; }
 .dn-detail-related__list strong { color: #2f343b; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
@@ -483,7 +500,7 @@
 
 @media (max-width: 991px) {
   .dn-detail-body { padding-top: 20px; padding-bottom: 64px; }
-  .dn-detail-layout { grid-template-columns: 1fr; gap: 16px; }
+  .dn-detail-layout { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .dn-detail-main,
   .dn-detail-sidebar { display: contents; }
   .dn-detail-title-card { grid-row: 1; }
@@ -499,7 +516,7 @@
 }
 
 .dn-detail-mobile-actions,
-.dn-detail-finance-trigger { display: none; }
+.dn-detail-finance-trigger { overflow-wrap: anywhere; display: none; }
 
 .dn-detail-finance-dialog {
   width: min(560px, calc(100% - 32px));
@@ -533,7 +550,7 @@
 }
 
 .dn-detail-finance-sheet__header span {
-  color: #737a84;
+  color: var(--dn-muted);
   font-size: var(--dn-text-meta);
 }
 
@@ -667,30 +684,33 @@
   .dn-detail-tabs {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 3px;
+    gap: var(--dn-space-1);
     width: 100%;
     margin-top: 4px;
-    padding: 3px;
+    padding: 0;
     border: 0;
-    border-radius: 10px;
-    background: #f1f2f4;
+    border-radius: var(--dn-pill);
+    background: var(--dn-segment-surface);
   }
 
   .dn-detail-tabs button {
     min-width: 0;
     min-height: var(--dn-control-hit-height);
-    padding: 0 8px;
-    border-radius: 8px;
-    color: #626873;
-    font-size: var(--dn-control-size);
+    padding: var(--dn-space-2) var(--dn-space-1);
+    border: var(--dn-space-half) solid transparent;
+    border-radius: var(--dn-pill);
+    background-clip: padding-box;
+    color: var(--dn-muted);
+    font-size: var(--dn-text-meta);
     font-weight: var(--dn-weight-regular);
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 
   .dn-detail-tabs button.active {
-    background: #fff;
-    color: var(--dn-ink-strong);
+    background-color: var(--dn-segment-selected);
+    color: var(--dn-ink);
     font-weight: var(--dn-weight-ui);
-    box-shadow: 0 1px 3px rgba(16,24,40,.08);
   }
 
   .dn-detail-tabs button::after { display: none; }
@@ -752,56 +772,27 @@
     background: #fff;
   }
 
-  .dn-detail-finance-card { grid-row: 5; }
-  .dn-detail-finance-inline { display: none; }
+  .dn-detail-finance-card { display: none; }
 
   .dn-detail-finance-trigger {
-    display: block;
-    width: 100%;
-    min-height: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    border-radius: 16px;
-    background: transparent;
-    cursor: pointer;
+    display: flex;
+    grid-row: 5;
+    min-height: calc(2 * var(--dn-control-height-default));
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--dn-space-2);
+    margin: var(--dn-space-3) var(--dn-space-3) 0;
+    padding: var(--dn-space-4);
+    border-radius: var(--dn-radius);
+    background: var(--dn-red);
+    color: var(--dn-white);
   }
 
-  .dn-detail-finance-banner {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .dn-detail-finance-trigger__icon {
-    display: grid;
-    width: 40px;
-    height: 40px;
-    place-items: center;
-    border-radius: 50%;
-    background: #f3f4f6;
-    color: var(--dn-red);
-  }
-
-  .dn-detail-finance-trigger__copy {
-    display: grid;
-    gap: 3px;
+  .dn-detail-finance-trigger > strong {
     min-width: 0;
-  }
-
-  .dn-detail-finance-trigger__copy strong {
     font-size: var(--dn-text-body);
     line-height: var(--dn-leading-heading);
   }
-
-  .dn-detail-finance-trigger__copy small {
-    overflow: hidden;
-    color: #68707a;
-    font-size: var(--dn-text-meta);
-    line-height: var(--dn-leading-meta);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
   .dn-detail-dealer__actions { display: none; }
   .dn-detail-dealer__header { gap: 7px; }
   .dn-detail-dealer__header img {
@@ -823,12 +814,12 @@
   .dn-detail-location-card__header p { text-align: left; }
 
   .dn-detail-related {
-    margin: 0;
-    padding: 24px 0 28px;
+    margin: 12px 12px 0;
+    padding: 20px 0 16px;
     overflow: hidden;
     border: 0;
-    border-radius: 0;
-    background: transparent;
+    border-radius: 16px;
+    background: #fff;
     box-shadow: none;
   }
 
@@ -866,7 +857,7 @@
     overflow: hidden;
     border: 0;
     border-radius: 14px;
-    background: #fff;
+    background: #f4f5f7;
     box-shadow: none;
     scroll-snap-align: start;
   }

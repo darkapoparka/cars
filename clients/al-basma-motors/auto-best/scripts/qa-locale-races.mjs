@@ -64,7 +64,16 @@ try {
         if (['immediate-dismiss', 'reopen-pending-dismiss'].includes(scenario)) await pending;
         await dialog.waitFor({ state: 'hidden', timeout: 700 });
         if (scenario === 'reopen-pending-dismiss') {
-          await page.locator('header [data-locale-selector]:visible').first().click();
+          let selector = page.locator('[data-locale-selector]:visible').first();
+          if (!(await selector.count()) && design === 'auto-best') {
+            const settingsTrigger = page.locator('[aria-controls="auto-best-locale-settings-menu"]:visible').first();
+            await settingsTrigger.click();
+            const settingsPanel = page.locator('#auto-best-locale-settings-menu');
+            await settingsPanel.waitFor({ state: 'visible' });
+            selector = settingsPanel.locator('[data-locale-selector]:visible').first();
+          }
+          assert.equal(await selector.count(), 1, 'A visible locale trigger must be available');
+          await selector.click();
           await dialog.waitFor({ state: 'visible' });
           assert.equal(await dialog.locator('button[type=submit]').isEnabled(), true, 'Reopening must clear a stale pending dismissal');
           await dialog.locator('select[name=locale]').selectOption(locale === 'en' ? 'bg' : 'en');

@@ -26,7 +26,7 @@
 
 <section class="lead-explainer" aria-labelledby={titleId}>
 	<header class="lead-explainer__header">
-		<h2 id={titleId}>{content.title}</h2>
+		<h2 id={titleId}>{i18n.text(content.title)}</h2>
 		<button
 			class="lead-explainer__close"
 			type="button"

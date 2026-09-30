@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "Al Basma Motors";
@@ -25,7 +25,7 @@ export const brand = {
   shortName,
   city,
   showroomCoordinates: {"latitude":0,"longitude":0},
-  youtubeUrl: "https://www.youtube.com/",
+  youtubeUrl: "",
   instagramUrl: "https://www.instagram.com/albasmamotors",
   facebookUrl: "https://www.facebook.com/albasmamotors",
   phone: "+971 54 342 2222",
