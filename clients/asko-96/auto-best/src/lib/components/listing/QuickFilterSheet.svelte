@@ -10,7 +10,7 @@ import { localeContract } from '$lib/locale/core';
   import { page } from '$app/state';
   import { resolve } from '$app/paths';
   import type { Attachment } from 'svelte/attachments';
-  import { listingParams, type ListingFilters } from '$data/listing';
+  import { listingTypeCount, listingParams, type ListingFilters } from '$data/listing';
   import {
     cleanListingFormData,
     listingFacetOptionLabel,
@@ -55,7 +55,7 @@ import { localeContract } from '$lib/locale/core';
   const attachHeading: Attachment<HTMLHeadingElement> = node => { heading = node; };
   const attachSearch: Attachment<HTMLInputElement> = node => { searchInput = node; };
   const range = $derived(field === 'price' || field === 'year');
-  const searchable = $derived(!range && field !== 'mileage_max' && field !== 'sort');
+  const searchable = $derived(!range && field !== 'mileage_max' && field !== 'sort' && field !== 'type');
   const searchLabel = $derived(field === 'make' ? i18n.t("m_150bec5925bd") : field === 'model' ? i18n.t("m_269619120191") : i18n.t("m_f0549fa54b59", { p0: title.toLocaleLowerCase(i18n.locale) }));
   const optionLabel = (option: string) => listingFacetOptionLabel(field, option, i18n.locale);
   const matchesSearch = (option: string) => search.trim().toLocaleLowerCase(i18n.locale).split(/\s+/).every(term => optionLabel(option).toLocaleLowerCase(i18n.locale).includes(term));
@@ -127,7 +127,7 @@ import { localeContract } from '$lib/locale/core';
           <legend class="dn-sr-only">{title}</legend>
           {#each choices as option (option)}
             <label class="choice" hidden={!matchesSearch(option)}>
-              <span>{optionLabel(option)}</span>
+              <span>{optionLabel(option)}{#if field === 'type'} <span class="choice-count">{listingTypeCount(option)}</span>{/if}</span>
               {#if field === 'equipment'}<input {@attach i18n.validation} type="checkbox" name="equipment" value={option} bind:group={equipment} />
               {:else}<input {@attach i18n.validation} type="radio" name={field} value={option} checked={selected === option} onchange={() => selected = option} />{/if}
             </label>
@@ -148,6 +148,7 @@ import { localeContract } from '$lib/locale/core';
 </dialog>
 
 <style>
+  .choice-count { margin-inline-start: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); }
   :global(body:has(.dn-quick-sheet.standalone[open])) { position: fixed; top: var(--dn-quick-scroll, 0); width: 100%; overflow: hidden; }
   .dn-quick-sheet { width: min(480px, calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow: hidden; border: 0; border-radius: 20px; background: #fff; color: var(--dn-ink); }
   .dn-quick-sheet::backdrop { background: rgb(8 10 14 / .6); }
@@ -184,9 +185,9 @@ import { localeContract } from '$lib/locale/core';
   input[type=number] { display: block; width: 100%; min-width: 0; box-sizing: border-box; margin-top: 8px; padding: 0 var(--dn-space-3); height: var(--dn-overlay-control-height); border: 1px solid #d9dde2; border-radius: 12px; background: #fff; color: inherit; font: var(--dn-overlay-field-font); }
   input::placeholder { color: #69717c; }
   p[role=alert] { color: #a40000; font-size: var(--dn-text-body); margin: 12px 0 0; }
-  footer { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-4); padding: var(--dn-space-3) var(--dn-overlay-gutter) calc(var(--dn-space-4) + env(safe-area-inset-bottom)); }
-  .clear { min-height: var(--dn-overlay-control-height); padding: 0; border: 0; background: transparent; color: inherit; text-decoration: underline; text-underline-offset: 4px; font: var(--dn-overlay-option-font); }
-  .apply { display: flex; flex: 1; min-height: var(--dn-overlay-control-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font: var(--dn-overlay-action-font); }
+  footer { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; gap: var(--dn-space-4); padding: var(--dn-space-3) var(--dn-overlay-gutter) calc(var(--dn-space-4) + env(safe-area-inset-bottom)); }
+  .clear { min-width: 0; max-width: 100%; min-height: var(--dn-overlay-control-height); padding: 0; border: 0; background: transparent; color: inherit; text-decoration: underline; text-underline-offset: 4px; font: var(--dn-overlay-option-font); overflow-wrap: anywhere; }
+  .apply { display: flex; flex: 1 1 8rem; min-width: 0; min-height: var(--dn-overlay-control-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font: var(--dn-overlay-action-font); overflow-wrap: anywhere; }
   .apply:hover { background: var(--dn-red-hover); }
   .apply:disabled { opacity: .5; cursor: default; }
   @media (max-width: 767px) {

@@ -1,0 +1,365 @@
+{
+  "capturedAt": "2026-09-30T04:36:27.556Z",
+  "method": "Codex in-app browser, read-only DOM measurements",
+  "measurements": [
+    {
+      "footerRendered": false,
+      "overflow": 0,
+      "pillRow": [
+        {
+          "height": 48,
+          "pills": [
+            {
+              "height": 44,
+              "text": "Държава",
+              "y": 257
+            },
+            {
+              "height": 44,
+              "text": "Тип",
+              "y": 257
+            },
+            {
+              "height": 44,
+              "text": "Марка",
+              "y": 257
+            },
+            {
+              "height": 44,
+              "text": "Модел",
+              "y": 257
+            }
+          ],
+          "scrollWidth": 436,
+          "width": 292
+        }
+      ],
+      "url": "http://127.0.0.1:5174/bg/import",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      },
+      "visibleTabs": [
+        {
+          "font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "height": 44,
+          "size": "20px",
+          "text": "LINK / VIN",
+          "weight": "400"
+        },
+        {
+          "font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "height": 44,
+          "size": "20px",
+          "text": "Нямам линк",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "drawer": [
+        {
+          "background": "rgb(238, 241, 244)",
+          "height": 776,
+          "scrollHeight": 2329
+        }
+      ],
+      "menuCards": [],
+      "navVisibility": "hidden",
+      "url": "http://127.0.0.1:5174/en/import?lang=en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "clearBackground": "rgb(255, 255, 255)",
+      "drawerBackground": "rgb(238, 241, 244)",
+      "searchBackground": "rgb(255, 255, 255)",
+      "unselectedOptions": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "SUV 26"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Sedan 11"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Cabriolet 4"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "EV 1"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Petrol 39"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Plug-in hybrid 2"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Up to 80 000 km 9"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Up to 120 000 km 30"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Up to 160 000 km 40"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Over 160 000 km 2"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Up to 30 000 EUR 7"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "30 000 EUR - 50 000 EUR 27"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "50 000 EUR - 80 000 EUR 9"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Over 80 000 EUR 1"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "From 2023 3"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "From 2021 10"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "From 2019 32"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Automatic 41"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "On request 1"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "4x4 37"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "LED headlights 38"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Head-up 7"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 44,
+          "text": "Keyless start 29"
+        }
+      ],
+      "url": "http://127.0.0.1:5174/en/inventory?lang=en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "drawerBackground": "rgb(238, 241, 244)",
+      "searchBackground": "rgb(255, 255, 255)",
+      "url": "http://127.0.0.1:5174/en?lang=en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      },
+      "whiteOptions": true
+    },
+    {
+      "hintBackground": "rgb(255, 255, 255)",
+      "inputBackground": "rgb(255, 255, 255)",
+      "overlayBackground": "rgb(238, 241, 244)",
+      "secondaryActionBackground": "rgb(255, 255, 255)",
+      "url": "http://127.0.0.1:5174/en?lang=en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "overflow": 0,
+      "request": [
+        {
+          "id": "import-wizard-make-c7",
+          "name": "",
+          "value": "BMW"
+        },
+        {
+          "id": "import-wizard-model-c7",
+          "name": "",
+          "value": "X5"
+        },
+        {
+          "id": "import-wizard-type-c7",
+          "name": "",
+          "value": "SUV"
+        }
+      ],
+      "selectedCountries": [
+        "All",
+        "Germany"
+      ],
+      "url": "http://127.0.0.1:5174/en/import?origin=DE&bodyType=SUV&make=BMW&model=X5&lang=en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 212,
+          "padding": "16px"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 260,
+          "padding": "16px"
+        }
+      ],
+      "ctaHeight": 48,
+      "footerRendered": false,
+      "image": [
+        {
+          "complete": true,
+          "height": 88,
+          "naturalWidth": 88,
+          "source": "http://127.0.0.1:5174/assets/daynight/services/sell-valuation-mobile-generated-v1-small.webp",
+          "width": 88
+        }
+      ],
+      "navIcons": [
+        {
+          "stroke": "1.8",
+          "width": "23"
+        },
+        {
+          "stroke": "1.8",
+          "width": "23"
+        },
+        {
+          "stroke": "1.8",
+          "width": "23"
+        },
+        {
+          "stroke": "1.8",
+          "width": "23"
+        },
+        {
+          "stroke": "1.8",
+          "width": "23"
+        }
+      ],
+      "overflow": 0,
+      "tabs": [
+        {
+          "font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "height": 44,
+          "lineHeight": "24px",
+          "size": "20px",
+          "text": "VIN",
+          "weight": "400"
+        },
+        {
+          "font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "height": 44,
+          "lineHeight": "24px",
+          "size": "20px",
+          "text": "No VIN?",
+          "weight": "400"
+        }
+      ],
+      "url": "http://127.0.0.1:5174/en/sell-your-car?lang=en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "navVisibility": "visible",
+      "tabs": [
+        {
+          "font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "height": 44,
+          "lineHeight": "24px",
+          "size": "20px",
+          "text": "Buy",
+          "weight": "400"
+        },
+        {
+          "font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "height": 44,
+          "lineHeight": "24px",
+          "size": "20px",
+          "text": "Import",
+          "weight": "400"
+        }
+      ],
+      "url": "http://127.0.0.1:5174/en?lang=en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "bodyBottomPadding": "0px",
+      "footerRect": {
+        "height": 653,
+        "y": 294.78125
+      },
+      "journey": "Client navigation Home to Sell to Home, then scroll to footer",
+      "navFooterState": "true",
+      "navVisibility": "hidden",
+      "url": "http://127.0.0.1:5174/en?lang=en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  ]
+}

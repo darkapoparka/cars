@@ -1,4 +1,4 @@
-import type { VehicleEquipment } from './inventory';
+import { vehicleTypes, type VehicleEquipment } from './inventory';
 import { localeContract, intlLocale, type Locale } from '$lib/locale/core';
 import { message, templateText } from '$lib/locale/messages';
 import { formatTemplate, specificationLabel } from '$lib/i18n/presentation';
@@ -12,6 +12,7 @@ import {
 } from './listing';
 
 export type ListingFacetField =
+  | 'type'
   | 'make'
   | 'model'
   | 'body'
@@ -31,6 +32,7 @@ export const listingFacetTitle = (field: ListingFacetField, locale: Locale): str
 
 export type ListingDraft = {
   q: string;
+  type: ListingFilters['type'];
   make: string;
   model: string;
   body: string;
@@ -52,6 +54,7 @@ const normalize = (value: string) => value.toLocaleLowerCase('bg-BG').trim();
 
 export const emptyListingDraft = (sort: ListingSort = 'default'): ListingDraft => ({
   q: '',
+  type: '',
   make: '',
   model: '',
   body: '',
@@ -70,6 +73,7 @@ export const emptyListingDraft = (sort: ListingSort = 'default'): ListingDraft =
 
 export const listingDraftFromFilters = (filters: ListingFilters): ListingDraft => ({
   q: filters.q,
+  type: filters.type,
   make: filters.make,
   model: filters.model,
   body: filters.body,
@@ -90,6 +94,7 @@ export const listingFiltersFromDraft = (draft: ListingDraft): ListingFilters => 
   const params = new URLSearchParams();
   const values: [string, string][] = [
     ['q', draft.q],
+    ['type', draft.type],
     ['make', draft.make],
     ['model', draft.model],
     ['body', draft.body],
@@ -138,7 +143,7 @@ export function withListingMake(draft: ListingDraft, make: string): ListingDraft
 export const listingDraftHasFilters = (draft: ListingDraft) => {
   const filters = listingFiltersFromDraft(draft);
   return Boolean(
-    filters.q || filters.make || filters.model || filters.body || filters.fuel ||
+    filters.q || filters.type || filters.make || filters.model || filters.body || filters.fuel ||
     filters.transmission || filters.version || filters.equipment.length || filters.condition ||
     filters.yearMin !== null || filters.yearMax !== null || filters.priceMin !== null ||
     filters.priceMax !== null || filters.mileageMax !== null
@@ -158,6 +163,7 @@ const listingRangeSummary = (minimum: string, maximum: string, suffix: string, l
 export function listingFacetOptions(field: ListingFacetField, make = ''): readonly string[] {
   switch (field) {
     case 'sort': return listingFilterOptions.sorts.map(([value]) => value === 'default' ? '' : value);
+    case 'type': return listingFilterOptions.types;
     case 'make': return listingFilterOptions.makes;
     case 'model': return listingModelsForMake(make);
     case 'body': return listingFilterOptions.bodies;
@@ -171,6 +177,10 @@ export function listingFacetOptions(field: ListingFacetField, make = ''): readon
 }
 
 export function listingFacetOptionLabel(field: ListingFacetField, option: string, locale: Locale = 'en'): string {
+  if (field === 'type') {
+    const type = vehicleTypes.find(type => type === option);
+    return message(locale, type ? `inventory.type.${type}` : 'inventory.type.all');
+  }
   if (field === 'body') return specificationLabel(bodyLabel(option), locale) || templateText(locale, 'All');
   if (field === 'sort') {
     const label = listingFilterOptions.sorts.find(([value]) => value === (option || 'default'))?.[1];
@@ -183,6 +193,7 @@ export function listingFacetOptionLabel(field: ListingFacetField, option: string
 
 export function listingFacetSummary(field: ListingFacetField, draft: ListingDraft, locale: Locale = 'en'): string {
   switch (field) {
+    case 'type': return listingFacetOptionLabel('type', draft.type, locale);
     case 'make': return draft.make || templateText(locale, 'All brands');
     case 'model': return draft.model || templateText(locale, 'All модели');
     case 'body': return specificationLabel(bodyLabel(draft.body), locale) || templateText(locale, 'All купета');
@@ -213,6 +224,7 @@ export function listingModelAfterMakeChange(currentMake: string, nextMake: strin
 
 export function listingAppliedFilterLabel(filters: ListingFilters, key: string, value: string, locale: Locale = 'en'): string {
   switch (key) {
+    case 'type': return listingFacetOptionLabel('type', filters.type, locale);
     case 'body': return specificationLabel(bodyLabel(filters.body), locale);
     case 'condition': return message(locale, filters.condition === 'new' ? 'inventory.condition.new' : 'inventory.condition.used');
     case 'fuel': case 'transmission': case 'equipment': return specificationLabel(value, locale);

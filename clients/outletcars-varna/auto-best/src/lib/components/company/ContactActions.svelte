@@ -28,6 +28,7 @@
     <Icon name="map-pin" size={18} />
     <span>{i18n.dealer('address')}</span>
   </p>
+  {#if profiles.some(profile => profile.href)}
   <div class="dn-contact-actions__social dn-social-profile-links" role="group" aria-label={i18n.t('m_b16446d4331a')}>
     {#each profiles.filter(profile => profile.href) as profile (profile.name)}
       <a class="dn-social-profile-link" href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('m_c0b8af66cd54', { p0: profile.label })} title={profile.label}>
@@ -35,6 +36,7 @@
       </a>
     {/each}
   </div>
+  {/if}
 </div>
 
 <style>

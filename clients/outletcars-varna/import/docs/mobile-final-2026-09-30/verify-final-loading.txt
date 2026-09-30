@@ -1,0 +1,48 @@
+
+> cars-template-import@0.0.1 verify
+> npm run check && npm run lint && npm run check:architecture && npm run check:assets && npm run test:unit -- --run
+
+
+> cars-template-import@0.0.1 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: c:\Users\radev\AppData\Local\Temp\import-mobile-final-20260930\source
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings
+
+> cars-template-import@0.0.1 lint
+> npm run lint:format && npm run lint:code
+
+
+> cars-template-import@0.0.1 lint:format
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> cars-template-import@0.0.1 lint:code
+> eslint .
+
+
+> cars-template-import@0.0.1 check:architecture
+> node scripts/check-architecture.mjs
+
+Architecture checks passed: 57 native route modules, 188 reachable modules, one Tailwind generation entry.
+
+> cars-template-import@0.0.1 check:assets
+> node scripts/check-assets.mjs
+
+Image signature checks passed: 824 local images.
+
+> cars-template-import@0.0.1 test:unit
+> vitest --run
+
+
+ RUN  v4.1.11 C:/Users/radev/AppData/Local/Temp/import-mobile-final-20260930/source
+
+
+ Test Files  16 passed (16)
+      Tests  117 passed (117)
+   Start at  03:41:25
+   Duration  6.24s (transform 8.15s, setup 0ms, import 13.54s, tests 796ms, environment 6ms)

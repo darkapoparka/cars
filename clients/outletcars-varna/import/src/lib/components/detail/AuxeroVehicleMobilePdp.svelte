@@ -386,6 +386,7 @@
 			class="daynight-mobile-pdp__drawer"
 			data-mobile-pdp-drawer
 			bind:ref={drawerContentEl}
+			trapFocus={false}
 		>
 			<Drawer.Handle class="daynight-mobile-pdp__handle" preventCycle={true} />
 
@@ -450,8 +451,10 @@
 							{/each}
 						</div>
 
-						<p class="daynight-mobile-pdp__eyebrow">{detail.copy.description}</p>
-						<p class="daynight-mobile-pdp__body-copy">{detail.description}</p>
+						<div class="daynight-mobile-pdp__description">
+							<p class="daynight-mobile-pdp__eyebrow">{detail.copy.description}</p>
+							<p class="daynight-mobile-pdp__body-copy">{detail.description}</p>
+						</div>
 
 						<div class="daynight-mobile-pdp__finance">
 							<div>
@@ -554,14 +557,15 @@
 		</a>
 	</MobileSheet>
 
-	{#if viewerOpen}
-		<div
-			class="daynight-mobile-pdp__viewer"
-			data-mobile-pdp-viewer
-			role="dialog"
-			aria-modal="true"
-			aria-label={detail.mobileDrawer.photoLabel}
-		>
+	<MobileSheet
+		bind:open={viewerOpen}
+		title={detail.mobileDrawer.photoLabel}
+		mode="full"
+		showHeader={false}
+		showHandle={false}
+		contentClass="daynight-mobile-pdp__viewer-sheet"
+	>
+		<div class="daynight-mobile-pdp__viewer" data-mobile-pdp-viewer>
 			<button
 				type="button"
 				class="daynight-mobile-pdp__viewer-close"
@@ -611,7 +615,7 @@
 				{/each}
 			</div>
 		</div>
-	{/if}
+	</MobileSheet>
 </section>
 
 <style>
@@ -1004,9 +1008,20 @@
 			text-transform: uppercase;
 		}
 
+		.daynight-mobile-pdp__description {
+			display: grid;
+			gap: 10px;
+			padding: 16px;
+			border: 1px solid #e4e7eb;
+			border-radius: var(--bc-radius-card);
+			background: #fff;
+		}
+
 		.daynight-mobile-pdp__body-copy {
 			margin: 0;
-			color: #5f6871;
+			color: #343b43;
+			white-space: pre-line;
+			overflow-wrap: anywhere;
 			font-size: var(--bc-mobile-body);
 			line-height: var(--bc-mobile-body-leading);
 			font-weight: var(--bc-weight-body);
@@ -1331,14 +1346,19 @@
 		}
 
 		.daynight-mobile-pdp__viewer {
-			position: fixed;
-			inset: 0;
-			z-index: 1010;
+			position: relative;
+			width: 100%;
+			height: 100%;
 			display: grid;
 			grid-template-rows: auto minmax(0, 1fr) auto;
 			background: #050505;
 			color: #ffffff;
 			padding: calc(14px + env(safe-area-inset-top)) 14px calc(16px + env(safe-area-inset-bottom));
+		}
+
+		:global(.daynight-mobile-pdp__viewer-sheet.bc-mobile-sheet__content) {
+			padding: 0;
+			background: #050505;
 		}
 
 		.daynight-mobile-pdp__viewer-close {

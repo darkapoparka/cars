@@ -2,7 +2,8 @@
   import VehicleCutout from './VehicleCutout.svelte';
   import ArtworkRegion from './ArtworkRegion.svelte';
   import { heroVehiclePairs, vehicleArtwork, mobileHeroArtwork, type HeroVehiclePair, type Vehicle, type MobileHeroScene } from '$data/vehicle-artwork';
-  import { mobileHeroRegions } from '$data/vehicle-artwork';
+  import { mobileHeroRegions, mobileServiceArtwork } from '$data/vehicle-artwork';
+  import { mobileHeroSizes } from '$data/responsive-images';
 
   let { pair = 'home', mobile = false, mobileScene = 'car', mobileLeft = 'silver', mobileRight = 'urus' }: {
     pair?: HeroVehiclePair; mobile?: boolean; mobileScene?: MobileHeroScene; mobileLeft?: Vehicle; mobileRight?: Vehicle;
@@ -15,16 +16,15 @@
 <div class="dn-hero-vehicles" class:dn-hero-vehicles--mobile={mobile} data-pair={pair} aria-hidden="true">
   {#if mobile}
     {#if pair === 'home'}
-      <div class="dn-hero-vehicles__pair"><ArtworkRegion artwork={mobileHeroRegions.home} /></div>
+      <div class="dn-hero-vehicles__pair"><ArtworkRegion artwork={mobileHeroRegions.home} sizes={mobileHeroSizes} priority /></div>
+    {:else if mobileScene === 'sell' || mobileScene === 'import'}
+      <div class="dn-hero-vehicles__scene">
+        <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].left} priority /></div>
+        <div class="dn-hero-vehicles__shared-car"><ArtworkRegion artwork={mobileServiceArtwork.car} priority /></div>
+        <div class="dn-hero-vehicles__detail"><ArtworkRegion artwork={mobileServiceArtwork[mobileScene].right} priority /></div>
+      </div>
     {:else}
       <picture><source media="(max-width: 767px)" srcset={mobileArtwork.src} /><img class="dn-hero-vehicles__front" data-scene="car" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={mobileArtwork.width} height={mobileArtwork.height} decoding="async" /></picture>
-      {#if mobileScene === 'sell' || mobileScene === 'import'}
-        {#each sides as side (side)}
-          <div class="dn-hero-vehicles__support dn-hero-vehicles__support--{side}" class:dn-hero-vehicles__support--ship={mobileScene === 'import'} data-support={mobileScene}>
-            <ArtworkRegion artwork={mobileHeroRegions[mobileScene]} />
-          </div>
-        {/each}
-      {/if}
     {/if}
   {/if}
   {#each sides as side (side)}
@@ -47,26 +47,24 @@
 <style>
   .dn-hero-vehicles { display: none; }
   .dn-hero-vehicles__front { display: none; }
-  .dn-hero-vehicles__support, .dn-hero-vehicles__pair { display: none; }
+  .dn-hero-vehicles__scene, .dn-hero-vehicles__pair { display: none; }
   @media (max-width: 767px) {
     .dn-hero-vehicles--mobile {
       display: block;
       position: absolute;
-      top: 68px;
+      top: 56px;
       left: 0;
       right: 0;
-      height: 128px;
+      height: 136px;
       overflow: hidden;
       pointer-events: none;
     }
-    .dn-hero-vehicles--mobile[data-pair='home'] { top: 60px; }
     .dn-hero-vehicles__car { display: none; }
     .dn-hero-vehicles__front { display: block; position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 160px; height: 160px; object-fit: contain; }
-    .dn-hero-vehicles__support { display: block; position: absolute; bottom: 4px; width: clamp(56px, 18vw, 70px); }
-    .dn-hero-vehicles__support--left { right: calc(50% + 82px); }
-    .dn-hero-vehicles__support--right { left: calc(50% + 82px); }
-    .dn-hero-vehicles__support--ship.dn-hero-vehicles__support--right { transform: scaleX(-1); }
-    .dn-hero-vehicles__pair { display: block; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: min(calc(100% - 24px), 330px); }
+    .dn-hero-vehicles__scene, .dn-hero-vehicles__pair { display: block; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: min(calc(100% - 16px), 360px); }
+  }
+  @media (max-width: 767px) {
+    .dn-hero-vehicles__scene { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: end; }
   }
   @media (min-width: 1440px) {
     .dn-hero-vehicles {

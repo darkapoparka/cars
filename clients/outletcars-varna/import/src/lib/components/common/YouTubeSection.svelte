@@ -25,8 +25,9 @@
 		<div class="site-container">
 			<div class="daynight-youtube__heading">
 				<h2>
-					{site.identity.name}
-					{english ? 'on' : 'в'}
+					<span class="youtube-dealer">{site.identity.name}</span><span class="youtube-preposition"
+						>{english ? 'on' : 'в'}</span
+					>
 					<span
 						><svg width="36" height="25" viewBox="0 0 36 25" aria-hidden="true"
 							><rect width="36" height="25" rx="7" fill="#ff0033" /><path
@@ -57,7 +58,6 @@
 								href={linkHref(`https://www.youtube.com/watch?v=${video.id}`)}
 								target="_blank"
 								rel="noopener noreferrer"
-								aria-label={`${english ? 'Play' : 'Пусни'}: ${video.title}`}
 								onclick={(event) => {
 									if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
 									event.preventDefault();
@@ -211,10 +211,29 @@
 	}
 	@media (max-width: 767px) {
 		.daynight-youtube {
-			padding-block: 24px;
+			padding-block: 12px;
+		}
+
+		.daynight-youtube > .site-container {
+			background: var(--bc-surface-raised);
+			border: 1px solid var(--bc-border);
+			border-radius: 20px;
+			padding: 20px 14px;
+		}
+		h2 .youtube-dealer {
+			flex-basis: 100%;
+			font-size: 16px;
+			color: var(--bc-muted);
+		}
+		h2 {
+			gap: 8px;
+		}
+		h2 .youtube-preposition {
+			font-size: 18px;
 		}
 		.daynight-youtube__heading {
 			gap: 12px;
+			justify-content: flex-start;
 			flex-wrap: wrap;
 			margin-bottom: 16px;
 		}
@@ -227,6 +246,9 @@
 			grid-auto-columns: 88%;
 			overflow-x: auto;
 			scroll-snap-type: x proximity;
+			padding-bottom: 8px;
+			scrollbar-width: thin;
+			scrollbar-color: var(--bc-border-strong) transparent;
 			gap: 16px;
 		}
 		.daynight-youtube__video {

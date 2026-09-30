@@ -24,10 +24,13 @@
 		clearSessionDraft
 	} from '$lib/browser/session-draft';
 	import { site } from '$lib/config/site';
+	import { mobileServiceCopy } from '$lib/content/service-mobile';
+	import { translateVehicleTerm } from '$lib/i18n/messages';
 	import { onMount, tick } from 'svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import {
 		emptyImportCriteria,
+		importBodyTypes,
 		importCountries,
 		importCriteriaSummary,
 		importFuels,
@@ -53,6 +56,9 @@
 		onclose
 	}: Props = $props();
 
+	const wizardId = $props.id();
+	const fieldId = (field: string) => `import-wizard-${field}-${wizardId}`;
+
 	const stepLabels = $derived([nt('ui167'), nt('ui238'), nt('ui137')] as const);
 	const timeframeOptions = ['Без значение', 'До 1 месец', 'До 3 месеца', 'До 6 месеца'];
 
@@ -67,6 +73,8 @@
 	let make = $state(initialCriteria.make);
 	// svelte-ignore state_referenced_locally
 	let model = $state(initialCriteria.model);
+	// svelte-ignore state_referenced_locally
+	let bodyType = $state(initialCriteria.bodyType);
 	// svelte-ignore state_referenced_locally
 	let budget = $state(initialCriteria.maxPrice);
 	// svelte-ignore state_referenced_locally
@@ -89,7 +97,14 @@
 	let validationMessage = $state('');
 	let draftReady = $state(false);
 	let wizardRoot = $state<HTMLDivElement | null>(null);
-	const draftKey = $derived('template:import:v2:' + site.identity.origin + ':' + initialIntent);
+	const draftKey = $derived(
+		'template:import:v2:' +
+			site.identity.origin +
+			':' +
+			initialIntent +
+			':' +
+			JSON.stringify(initialCriteria)
+	);
 	const historyId = `daynight-import-wizard-${Math.random().toString(36).slice(2)}`;
 	let historyEntryActive = false;
 	let closeAfterHistory = false;
@@ -97,6 +112,7 @@
 		origin,
 		make,
 		model,
+		bodyType,
 		minYear,
 		maxPrice: budget,
 		fuel,
@@ -151,6 +167,7 @@
 			if (typeof draft.vehicle === 'string') vehicle = draft.vehicle;
 			if (typeof draft.make === 'string') make = draft.make;
 			if (typeof draft.model === 'string') model = draft.model;
+			if (typeof draft.bodyType === 'string') bodyType = draft.bodyType;
 			if (typeof draft.budget === 'string') budget = draft.budget;
 			if (typeof draft.origin === 'string') origin = draft.origin;
 			if (typeof draft.minYear === 'string') minYear = draft.minYear;
@@ -184,6 +201,7 @@
 			vehicle,
 			make,
 			model,
+			bodyType,
 			budget,
 			origin,
 			minYear,
@@ -207,16 +225,16 @@
 		let selector: string;
 		if (step === 0 && intent === 'listing') {
 			validationMessage = nt('ui243');
-			selector = '#import-wizard-vehicle';
+			selector = '[id^="import-wizard-vehicle-"]';
 		} else if (step === 0) {
 			validationMessage = nt('ui244');
-			selector = '#import-wizard-make';
+			selector = '[id^="import-wizard-make-"]';
 		} else if (name.trim().length < 2) {
 			validationMessage = nt('ui245');
-			selector = '#import-wizard-name';
+			selector = '[id^="import-wizard-name-"]';
 		} else {
 			validationMessage = nt('ui191');
-			selector = '#import-wizard-phone';
+			selector = '[id^="import-wizard-phone-"]';
 		}
 		await tick();
 		wizardRoot?.querySelector<HTMLElement>(selector)?.focus({ preventScroll: false });
@@ -326,10 +344,10 @@
 
 				<div class="bc-import-wizard__fields">
 					{#if intent === 'listing'}
-						<label class="bc-import-wizard__field--wide" for="import-wizard-vehicle">
+						<label class="bc-import-wizard__field--wide" for={fieldId('vehicle')}>
 							<span>{nt('ui222')}</span>
 							<input
-								id="import-wizard-vehicle"
+								id={fieldId('vehicle')}
 								type="text"
 								placeholder={nt('ui223')}
 								required
@@ -361,23 +379,35 @@
 						</div>
 					</fieldset>
 					{#if intent === 'source'}
-						<label for="import-wizard-make">
+						<label for={fieldId('make')}>
 							<span>{nt('ui171')}</span>
-							<input
-								id="import-wizard-make"
-								type="text"
-								placeholder={nt('ui225')}
-								bind:value={make}
-							/>
+							<input id={fieldId('make')} type="text" placeholder={nt('ui225')} bind:value={make} />
 						</label>
-						<label for="import-wizard-model">
+						<label for={fieldId('model')}>
 							<span>{nt('ui172')}</span>
 							<input
-								id="import-wizard-model"
+								id={fieldId('model')}
 								type="text"
 								placeholder={nt('ui226')}
 								bind:value={model}
 							/>
+						</label>
+						<label class="bc-import-wizard__field--wide" for={fieldId('type')}>
+							<span>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].type}</span>
+							<select id={fieldId('type')} bind:value={bodyType}>
+								<option value=""
+									>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].anyType}</option
+								>
+								{#each importBodyTypes as value (value)}
+									<option {value}
+										>{translateVehicleTerm(
+											page.data.locale === 'en' ? 'en' : 'bg',
+											'bodyTypes',
+											value
+										)}</option
+									>
+								{/each}
+							</select>
 						</label>
 					{/if}
 				</div>
@@ -387,10 +417,10 @@
 					<p>{nt('ui228')}</p>
 				</div>
 				<div class="bc-import-wizard__fields">
-					<label for="import-wizard-year">
+					<label for={fieldId('year')}>
 						<span>{nt('ui130')}</span>
 						<input
-							id="import-wizard-year"
+							id={fieldId('year')}
 							type="text"
 							inputmode="numeric"
 							maxlength="4"
@@ -398,10 +428,10 @@
 							bind:value={minYear}
 						/>
 					</label>
-					<label for="import-wizard-budget">
+					<label for={fieldId('budget')}>
 						<span>{nt('ui229')}</span>
 						<input
-							id="import-wizard-budget"
+							id={fieldId('budget')}
 							type="text"
 							inputmode="numeric"
 							placeholder="EUR"
@@ -450,9 +480,9 @@
 							{/each}
 						</div>
 					</fieldset>
-					<label class="bc-import-wizard__field--wide" for="import-wizard-notes">
+					<label class="bc-import-wizard__field--wide" for={fieldId('notes')}>
 						<span>{nt('ui232')}</span>
-						<textarea id="import-wizard-notes" rows="4" placeholder={nt('ui233')} bind:value={notes}
+						<textarea id={fieldId('notes')} rows="4" placeholder={nt('ui233')} bind:value={notes}
 						></textarea>
 					</label>
 				</div>
@@ -463,10 +493,10 @@
 					{#if criteriaSummary}<p class="bc-import-wizard__summary">{criteriaSummary}</p>{/if}
 				</div>
 				<div class="bc-import-wizard__fields">
-					<label class="bc-import-wizard__field--wide" for="import-wizard-phone">
+					<label class="bc-import-wizard__field--wide" for={fieldId('phone')}>
 						<span>{nt('ui178')}</span>
 						<input
-							id="import-wizard-phone"
+							id={fieldId('phone')}
 							type="tel"
 							inputmode="tel"
 							autocomplete="tel"
@@ -475,10 +505,10 @@
 							bind:value={phone}
 						/>
 					</label>
-					<label for="import-wizard-name">
+					<label for={fieldId('name')}>
 						<span>{nt('ui236')}</span>
 						<input
-							id="import-wizard-name"
+							id={fieldId('name')}
 							type="text"
 							autocomplete="name"
 							required
@@ -486,10 +516,10 @@
 							bind:value={name}
 						/>
 					</label>
-					<label for="import-wizard-email">
+					<label for={fieldId('email')}>
 						<span>{nt('ui22')}</span>
 						<input
-							id="import-wizard-email"
+							id={fieldId('email')}
 							type="email"
 							inputmode="email"
 							autocomplete="email"
@@ -651,6 +681,7 @@
 	}
 
 	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select,
 	.bc-import-wizard__fields textarea {
 		display: block;
 		width: 100%;
@@ -673,6 +704,7 @@
 	}
 
 	.bc-import-wizard__fields input:focus-visible:focus-visible,
+	.bc-import-wizard__fields select:focus-visible,
 	.bc-import-wizard__fields textarea:focus-visible {
 		border-color: var(--bc-accent);
 		background: var(--bc-white);
@@ -944,12 +976,14 @@
 		font-weight: var(--bc-weight-heading);
 	}
 	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select,
 	.bc-import-wizard__fields textarea {
 		border: 0;
 		border-radius: 10px;
 		background: var(--bc-white);
 	}
-	.bc-import-wizard__fields input {
+	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select {
 		height: 44px;
 		padding: 0 11px;
 	}
@@ -958,6 +992,7 @@
 		padding: 9px 11px;
 	}
 	.bc-import-wizard__fields input:focus,
+	.bc-import-wizard__fields select:focus,
 	.bc-import-wizard__fields textarea:focus {
 		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent);
 	}
@@ -1028,6 +1063,13 @@
 	.bc-import-wizard__next:disabled {
 		background: var(--bc-border);
 		color: var(--bc-muted);
+	}
+
+	.bc-import-wizard:not(.bc-import-wizard--embedded) .bc-import-wizard__success {
+		grid-row: 1 / -1;
+		align-content: center;
+		padding: max(var(--bc-space-6), env(safe-area-inset-top)) var(--bc-mobile-gutter)
+			max(var(--bc-space-6), env(safe-area-inset-bottom));
 	}
 
 	.bc-import-wizard--embedded {
@@ -1103,11 +1145,13 @@
 			line-height: var(--bc-leading-label);
 		}
 		.bc-import-wizard--embedded .bc-import-wizard__fields input,
+		.bc-import-wizard--embedded .bc-import-wizard__fields select,
 		.bc-import-wizard--embedded .bc-import-wizard__fields textarea {
 			border-color: var(--bc-route-pill-border);
 			background: var(--bc-surface);
 		}
-		.bc-import-wizard--embedded .bc-import-wizard__fields input {
+		.bc-import-wizard--embedded .bc-import-wizard__fields input,
+		.bc-import-wizard--embedded .bc-import-wizard__fields select {
 			height: var(--bc-control-height-primary);
 		}
 		.bc-import-wizard--embedded .bc-import-wizard__fields input::placeholder,

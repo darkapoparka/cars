@@ -1,14 +1,25 @@
 import {currency} from './currency';
 import type {Vehicle} from './data';
 
-export const filterTabs = ['BRAND', 'BUDGET', 'DISCOUNTS', 'EMI', 'DOWN PAYMENT', 'YEAR', 'BODY TYPE', 'MILEAGE', 'CAR TYPE', 'FUEL TYPE', 'CATEGORIES', 'FEATURES', 'ENGINE'] as const;
+export const filterTabs = ['BRAND', 'MODEL', 'BUDGET', 'DISCOUNTS', 'EMI', 'DOWN PAYMENT', 'YEAR', 'BODY TYPE', 'MILEAGE', 'CAR TYPE', 'FUEL TYPE', 'CATEGORIES', 'FEATURES', 'ENGINE'] as const;
 export type FilterTab = (typeof filterTabs)[number];
+export const quickFilterTabs = ['BRAND', 'MODEL', 'BUDGET', 'DISCOUNTS', 'YEAR', 'MILEAGE', 'BODY TYPE', 'FUEL TYPE'] as const satisfies readonly FilterTab[];
 export const filterMakes = ['Nissan', 'Toyota', 'Mitsubishi', 'MG', 'Mercedes-Benz', 'BMW', 'Ford', 'Chevrolet', 'Hyundai', 'Kia', 'Jeep', 'JAC', 'Mazda', 'Honda', 'Suzuki', 'Audi', 'Volkswagen', 'Lexus', 'Renault', 'Volvo', 'Land Rover', 'Infiniti', 'Peugeot', 'Porsche', 'Haval', 'Tesla', 'GMC', 'Dodge', 'Mini', 'Jaguar'];
 export const bodyTypes = ['SUV', 'SEDAN', 'HATCHBACK', 'COUPE', 'CONVERTIBLE', 'SUV COUPE', 'DOUBLE CAB UTILITY', 'MPV', 'CREW CAB UTILITY', 'SPORTBACK', 'VAN', 'LIFTBACK', 'PICK-UP', 'ROADSTER'] as const;
 export const categoryOptions = ['Adventure car', 'As good as new', 'Budget friendly', 'Daily commuter/ Economical car', 'Family car', 'Latest SUVs', 'Luxury in budget', 'Hot deals', 'Premium sedans'];
 export const featureOptions = ['Fuel Efficient', 'Reverse Camera', 'Sunroof', 'Panoramic Sunroof', 'Moonroof'];
-export const budgetOptions = [`Less than ${currency.code} 40K`, `Less than ${currency.code} 60K`, `Less than ${currency.code} 100K`, `Above ${currency.code} 100K`];
-export const emiOptions = [`Less than ${currency.code} 750`, `Less than ${currency.code} 1,500`, `Less than ${currency.code} 2,000`, `Above ${currency.code} 2,000`];
+export const budgetOptions = [
+  {value: `Less than ${currency.code} 40K`, relation: 'Less than', amount: `${currency.code} 40K`},
+  {value: `Less than ${currency.code} 60K`, relation: 'Less than', amount: `${currency.code} 60K`},
+  {value: `Less than ${currency.code} 100K`, relation: 'Less than', amount: `${currency.code} 100K`},
+  {value: `Above ${currency.code} 100K`, relation: 'Above', amount: `${currency.code} 100K`},
+] as const;
+export const emiOptions = [
+  {value: `Less than ${currency.code} 750`, relation: 'Less than', amount: `${currency.code} 750`},
+  {value: `Less than ${currency.code} 1,500`, relation: 'Less than', amount: `${currency.code} 1,500`},
+  {value: `Less than ${currency.code} 2,000`, relation: 'Less than', amount: `${currency.code} 2,000`},
+  {value: `Above ${currency.code} 2,000`, relation: 'Above', amount: `${currency.code} 2,000`},
+] as const;
 export const yearOptions = ['2021 & above', '2019 & above', '2017 & above', '2015 & above', '2013 & above', '2011 & above'];
 export const mileageOptions = ['Under 30,000 kms', 'Under 60,000 kms', 'Under 90,000 kms', 'Under 120,000 kms', 'Under 150,000 kms'];
 
@@ -91,7 +102,7 @@ function matchesFeature(vehicle: Vehicle, feature: string) {
 export function matchesInventory(vehicle: Vehicle, filters: Filters, query: string) {
   const normalized = query.trim().toLowerCase();
   if (normalized && !`${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.trim}`.toLowerCase().includes(normalized)) return false;
-  if ((filters.brands.length || filters.models.length) && !filters.brands.includes(vehicle.make) && !filters.models.includes(`${vehicle.make}::${vehicle.model}`)) return false;
+  if ((filters.brands.length || filters.models.length) && !filters.brands.includes(vehicle.make) && !filters.models.some(model => model.toLowerCase() === `${vehicle.make}::${vehicle.model}`.toLowerCase())) return false;
   if (filters.bodies.length && !filters.bodies.some(body => matchesBody(vehicle, body))) return false;
   if (filters.fuel.length && !filters.fuel.includes(vehicle.fuel)) return false;
   const defaults = emptyFilters();

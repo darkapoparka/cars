@@ -1,5 +1,6 @@
 import { optionLabel } from '$lib/i18n/options';
 import type { Locale } from '$lib/locale/core';
+import { translateVehicleTerm } from '$lib/i18n/messages';
 export const importCountries = [
 	{ value: '', label: 'Всички', flagSrc: '/assets/daynight/flags/all.svg' },
 	{ value: 'CN', label: 'Китай', flagSrc: '/assets/daynight/flags/cn.svg' },
@@ -11,6 +12,15 @@ export const importCountries = [
 
 export const importFuels = ['Бензин', 'Дизел', 'Хибрид', 'Електрически'];
 export const importTransmissions = ['Автомат', 'Ръчни'];
+export const importBodyTypes = [
+	'SUV',
+	'Sedan',
+	'Hatchback',
+	'Wagon',
+	'Coupe',
+	'Cabriolet',
+	'Pickup Truck'
+];
 export const importMakes = [
 	'Audi',
 	'BMW',
@@ -27,6 +37,7 @@ export type ImportCriteria = {
 	origin: string;
 	make: string;
 	model: string;
+	bodyType: string;
 	minYear: string;
 	maxPrice: string;
 	fuel: string;
@@ -36,6 +47,7 @@ export const emptyImportCriteria: ImportCriteria = {
 	origin: '',
 	make: '',
 	model: '',
+	bodyType: '',
 	minYear: '',
 	maxPrice: '',
 	fuel: '',
@@ -49,6 +61,7 @@ export const importCriteriaFromParams = (params: URLSearchParams): ImportCriteri
 		origin: importCountries.some((country) => country.value === origin) ? origin : '',
 		make: (params.get('make') ?? '').trim().slice(0, 60),
 		model: (params.get('model') ?? '').trim().slice(0, 80),
+		bodyType: importBodyTypes.find((value) => value === params.get('bodyType')) ?? '',
 		minYear:
 			/^\d{4}$/.test(year) && Number(year) >= 1900 && Number(year) <= new Date().getFullYear()
 				? year
@@ -74,6 +87,7 @@ export const importCriteriaSummary = (criteria: ImportCriteria, locale: Locale =
 			locale
 		),
 		[criteria.make, criteria.model].filter(Boolean).join(' '),
+		criteria.bodyType ? translateVehicleTerm(locale, 'bodyTypes', criteria.bodyType) : '',
 		criteria.minYear
 			? `${locale === 'en' ? 'from' : 'от'} ${criteria.minYear}${locale === 'en' ? '' : ' г.'}`
 			: '',

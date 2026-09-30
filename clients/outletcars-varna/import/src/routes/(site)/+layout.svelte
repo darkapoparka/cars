@@ -12,6 +12,7 @@
 	const canonicalFor = (locale: 'bg' | 'en') =>
 		data.site.identity.origin + localeHref(page.url.pathname, locale, base);
 	const canonical = $derived(canonicalFor(data.locale));
+	const isHome = $derived(routeParts(page.url.pathname).path === '/');
 	const ownsMobileChrome = $derived(
 		routeParts(page.url.pathname).path === '/inventory' ||
 			routeParts(page.url.pathname).path.startsWith('/inventory/') ||
@@ -35,12 +36,19 @@
 	>
 	<PublicHeader mobile={!ownsMobileChrome} />
 	{@render children()}
-	<PublicFooter />
-	<div class="site-container"><LocaleTrigger /></div>
+	<div class:site-shell__footer--desktop-only={!isHome} data-home-footer={isHome ? '' : undefined}>
+		<PublicFooter />
+		<div class="site-container"><LocaleTrigger /></div>
+	</div>
 	<LocalePreferences />
 </div>
 
 <style>
+	@media (max-width: 767.98px) {
+		.site-shell__footer--desktop-only {
+			display: none;
+		}
+	}
 	.site-skip {
 		position: fixed;
 		top: 8px;

@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "dealer": "asko-96",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/app",
+    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+  },
+  "appDigest": "ccad5db1e6b5fecab38df39a4e8609e219d6c6586fc33ad9a4eae59177c1c66c",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "asko-96",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "17766d70ee12aa528edf2a173ba8f10665b4b099c8477e258e8e71a16c0b4e0f",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 16,
+    "currency": "EUR",
+    "observedAt": "2026-09-06",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+        "sha256": "d4ada78e14c425468dd1149dae2c052b0f6c0601a3ef17b4165d1293d654eaa8",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-71a4ab99b7d35b9b758b.webp",
+        "sha256": "71a4ab99b7d35b9b758b1a008b6ed9f8d3ecc4a3b1a0792c3d72afd281b19d02",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-01-1.webp",
+        "output": "public/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+        "sha256": "93f30d3593648dc639bb05fa0e8be8652f1480ef14f279966165eb7558f4fb96",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-02-1.webp",
+        "output": "public/dealer-app/vehicle-1b8102780bdd0764b86c.webp",
+        "sha256": "1b8102780bdd0764b86c4f43fcf5828f1416b2c3329d11b99c1ce3b4d8b58e07",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-02-2.webp",
+        "output": "public/dealer-app/vehicle-fb8886d61cbeac0061f3.webp",
+        "sha256": "fb8886d61cbeac0061f38a96ea2bf453df6c5b50e6234d9afb512702ab86a71f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-02-3.webp",
+        "output": "public/dealer-app/vehicle-2cf3cc964d109edee385.webp",
+        "sha256": "2cf3cc964d109edee385996dd2c09d54c2ac89c982502f461bc2c2b56744a4c1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-02-4.webp",
+        "output": "public/dealer-app/vehicle-4f89be57470b89e27973.webp",
+        "sha256": "4f89be57470b89e27973c1a9b3641dac00c7461335b167ea7525ed4357f1cb88",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-03-1.webp",
+        "output": "public/dealer-app/vehicle-86c70514f91f7d474d71.webp",
+        "sha256": "86c70514f91f7d474d71224f3c6d16f5ed155417a6fc508b69c7a4ca0da87078",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-03-2.webp",
+        "output": "public/dealer-app/vehicle-d463de5cd695b1fd54c2.webp",
+        "sha256": "d463de5cd695b1fd54c2d5a1508029ca749e0ef788888f21b039a4df35a862ca",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-03-3.webp",
+        "output": "public/dealer-app/vehicle-5d34ae37d540e38ba25f.webp",
+        "sha256": "5d34ae37d540e38ba25f2e5735a3238caf53c99271e3a0693d82c43af3a0e71c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-03-4.webp",
+        "output": "public/dealer-app/vehicle-21427f58dc6b9dc30345.webp",
+        "sha256": "21427f58dc6b9dc30345d03c9555d4c51a75d0f29f4e2682faa659a21bcbb740",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-04-1.webp",
+        "output": "public/dealer-app/vehicle-49b717a3db6397c50326.webp",
+        "sha256": "49b717a3db6397c50326189c5a498c39126d2607aab5182fe618b6d4f822004d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-04-2.webp",
+        "output": "public/dealer-app/vehicle-cb437719266216989075.webp",
+        "sha256": "cb437719266216989075576cf0c080773d0853a63cbb37cbb85367ae56690942",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-04-3.webp",
+        "output": "public/dealer-app/vehicle-7a33bb597e2f764ac531.webp",
+        "sha256": "7a33bb597e2f764ac53165ea1e095efc27e56ac7513888f67b62bfb10a228dfb",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-04-4.webp",
+        "output": "public/dealer-app/vehicle-3401489ec5b47c4fb7ac.webp",
+        "sha256": "3401489ec5b47c4fb7ac88931030cba8c9f5622876a35c08b1eba25608d6e434",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-05-1.webp",
+        "output": "public/dealer-app/vehicle-05b8d6acf0578d833bb1.webp",
+        "sha256": "05b8d6acf0578d833bb1537ead7be40bb04fe3a5946169af65f0fc9fd5f010b3",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-05-2.webp",
+        "output": "public/dealer-app/vehicle-f2ce423148deb77cdeb2.webp",
+        "sha256": "f2ce423148deb77cdeb24f4feabea3fc4d3735db83383ce3713444cec623c8bc",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-05-3.webp",
+        "output": "public/dealer-app/vehicle-74ddfc74ab56d8b92136.webp",
+        "sha256": "74ddfc74ab56d8b92136163209bd30fb822bfa5fe1da6c772428f4093942f62a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-05-4.webp",
+        "output": "public/dealer-app/vehicle-e489aa4c68d4c5845371.webp",
+        "sha256": "e489aa4c68d4c5845371a67f670252a59817397cc6866a86ffad7e6322e9cf94",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-06-1.webp",
+        "output": "public/dealer-app/vehicle-4fa4954c0a542210789b.webp",
+        "sha256": "4fa4954c0a542210789bc5af99295063daeaecf02b305580df8218c0572f525a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-06-2.webp",
+        "output": "public/dealer-app/vehicle-460e5ed16a31b40cc2e4.webp",
+        "sha256": "460e5ed16a31b40cc2e4b8d4e7226a2e970dc6a1c5d26cdce3fc74400205409b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-06-3.webp",
+        "output": "public/dealer-app/vehicle-dd40ab058dc55b552e54.webp",
+        "sha256": "dd40ab058dc55b552e540b62b0ab59c4cf322a07992094256c3732192f1ea84b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-06-4.webp",
+        "output": "public/dealer-app/vehicle-37c14a4f306d1602939a.webp",
+        "sha256": "37c14a4f306d1602939a65b22c246183034bada45e37712d88f992323c019e13",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-07-1.webp",
+        "output": "public/dealer-app/vehicle-b4327519046714defe8b.webp",
+        "sha256": "b4327519046714defe8be8114dad12b0397632a653d66ebbe9fd76f3738d6187",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-07-2.webp",
+        "output": "public/dealer-app/vehicle-21ccc42e60cdca9d360b.webp",
+        "sha256": "21ccc42e60cdca9d360bfc8ca7713a56bcc994b5b401bf9699a09c765a01bf2a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-07-3.webp",
+        "output": "public/dealer-app/vehicle-3a502a924cb2cbd9ba4a.webp",
+        "sha256": "3a502a924cb2cbd9ba4a3d53926f2a6d0c50ded28546b3bc2c8e9fbd7828a77c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-07-4.webp",
+        "output": "public/dealer-app/vehicle-ed9d747c76d3b9d5daf8.webp",
+        "sha256": "ed9d747c76d3b9d5daf8d28127389898295c62620523a480cf679072aafd5b7d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-08-1.webp",
+        "output": "public/dealer-app/vehicle-8b4577c86635bca04a08.webp",
+        "sha256": "8b4577c86635bca04a08eb32dc351b9c07fe1f1e344a2411631d68fa3a7de4bb",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-08-2.webp",
+        "output": "public/dealer-app/vehicle-db2790701bc68c3bdb65.webp",
+        "sha256": "db2790701bc68c3bdb65f14e6c54266529e03ab2129786a178e2234538795da6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-08-3.webp",
+        "output": "public/dealer-app/vehicle-0b678670d26658f8f695.webp",
+        "sha256": "0b678670d26658f8f6951f77649260dfc94d4f9e423aee12ec82042be42e7149",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-08-4.webp",
+        "output": "public/dealer-app/vehicle-c4ecbf108797c90d6617.webp",
+        "sha256": "c4ecbf108797c90d66179af1c7ae4ea2baaaf94ac289741d6845cb48714c7500",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-09-1.webp",
+        "output": "public/dealer-app/vehicle-ea1cd88eb2ec14b8f1c9.webp",
+        "sha256": "ea1cd88eb2ec14b8f1c9be5da7fa118d57be8ea17479717f9ae23525458abc20",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-10-1.webp",
+        "output": "public/dealer-app/vehicle-e363ec1e7de138b9bec7.webp",
+        "sha256": "e363ec1e7de138b9bec73680d13e6f1fc6f89055587e75553ab10683bf9f3bf2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-11-1.webp",
+        "output": "public/dealer-app/vehicle-a066b47f28a3b0d53d0c.webp",
+        "sha256": "a066b47f28a3b0d53d0cdd20c0d468feadf8cf5a8d4615591468638606f2419c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-11-2.webp",
+        "output": "public/dealer-app/vehicle-f9b82b6c2910aadc1e7f.webp",
+        "sha256": "f9b82b6c2910aadc1e7feb71aa942fdb18edff7da1312755d94d0e7bd501893c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-11-3.webp",
+        "output": "public/dealer-app/vehicle-a6bf1d61bd2d2673ed7c.webp",
+        "sha256": "a6bf1d61bd2d2673ed7c01de646feb387790af79a1a32e0c800af5b61b8aefd5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-11-4.webp",
+        "output": "public/dealer-app/vehicle-293f6058c7b26ddff027.webp",
+        "sha256": "293f6058c7b26ddff0277bb8bee3341e8f5b41af30a6b0332dbb45b35d0cb34c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-12-1.webp",
+        "output": "public/dealer-app/vehicle-3dd4dee0b19ac0151cf3.webp",
+        "sha256": "3dd4dee0b19ac0151cf39dab5e47a93d53937be4e3c1e864d46fc3f22999d256",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-12-2.webp",
+        "output": "public/dealer-app/vehicle-adbaa80618ad8af34fe7.webp",
+        "sha256": "adbaa80618ad8af34fe7f7df0628572b15bd094407d7a952ee1cb71b6b2bd742",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-12-3.webp",
+        "output": "public/dealer-app/vehicle-2c8aaf0da687fdd7e2e0.webp",
+        "sha256": "2c8aaf0da687fdd7e2e0b8beac3213e952a426be0941f04f406f64641dfb36da",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-12-4.webp",
+        "output": "public/dealer-app/vehicle-b3371832f07c3f57ba32.webp",
+        "sha256": "b3371832f07c3f57ba329c4d1b62ffda8da331f684462eb52a61bda8cd4ab70a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-13-1.webp",
+        "output": "public/dealer-app/vehicle-b04746339130b64ef19c.webp",
+        "sha256": "b04746339130b64ef19c04a3183fb478f855b2d623c263fcc8c106a73bda0b50",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-13-2.webp",
+        "output": "public/dealer-app/vehicle-13c1a670718db4b99260.webp",
+        "sha256": "13c1a670718db4b992608829228c551285f1c1d716424bfce28d8e42b83fb72b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-13-3.webp",
+        "output": "public/dealer-app/vehicle-3310457970da091ed679.webp",
+        "sha256": "3310457970da091ed6794f724f7b5ec1645c55fc8d5b12dd9f20bfca2058daf8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-13-4.webp",
+        "output": "public/dealer-app/vehicle-e347f4f536f1c7c6d68e.webp",
+        "sha256": "e347f4f536f1c7c6d68ef46d021ccb328843252e831b1ff65d84c2bba035a416",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-14-1.webp",
+        "output": "public/dealer-app/vehicle-3458f62f2585cd281432.webp",
+        "sha256": "3458f62f2585cd281432a4a879d4cb936ff587b10280275740aff27233ed8817",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-14-2.webp",
+        "output": "public/dealer-app/vehicle-5d5ff9ec1c43555d65bf.webp",
+        "sha256": "5d5ff9ec1c43555d65bf3c8ac974b4e0d980ab3ca86f288c87f3551cdcaee2e5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-14-3.webp",
+        "output": "public/dealer-app/vehicle-493b521064d01353c867.webp",
+        "sha256": "493b521064d01353c867c8a00d87808807908c3e76deeec664d4863184935d5e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-14-4.webp",
+        "output": "public/dealer-app/vehicle-6600f35c84ed32f11908.webp",
+        "sha256": "6600f35c84ed32f11908db0d4714483badc3da66e60cc6ec2f8f89707ee4c4d1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-15-1.webp",
+        "output": "public/dealer-app/vehicle-08c06d75d2bcd5919d93.webp",
+        "sha256": "08c06d75d2bcd5919d934b2de1b137186f794c828f113e7f308d12dc4b1947f8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-16-1.webp",
+        "output": "public/dealer-app/vehicle-bdde3d136a8eaed98b1f.webp",
+        "sha256": "bdde3d136a8eaed98b1f0660bfbc59b4b98520718c3c821bc165da939b400d71",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-16-2.webp",
+        "output": "public/dealer-app/vehicle-362de7f733ea0be444f5.webp",
+        "sha256": "362de7f733ea0be444f52c70fbf270c23eca86c32eeb4890ec86855011ce7aa7",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-16-3.webp",
+        "output": "public/dealer-app/vehicle-6d4d94f97230a95148f5.webp",
+        "sha256": "6d4d94f97230a95148f5c5bfe22cd1153248017c1f6b6054e340568dbb7e171d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/asko96/vehicle-16-4.webp",
+        "output": "public/dealer-app/vehicle-ddd15d6e7415701ece97.webp",
+        "sha256": "ddd15d6e7415701ece97982311f6400e0b214b9366eadac9736aea4bbb176e5a",
+        "role": "vehicle"
+      }
+    ]
+  },
+  "baseDeployment": {
+    "id": "dpl_HmpGwQ9oBYVBehyUFKyv9ofSRJCm",
+    "url": "https://cars-asko96.vercel.app/",
+    "checkedAt": "2026-09-28T02:25:28.352Z"
+  },
+  "baseReceiptSha256": "74618e80a33853742885299f147e7a57062cb61527aec89e65ee53610ad7f693",
+  "refreshedAt": "2026-09-30T10:15:51.717Z"
+}

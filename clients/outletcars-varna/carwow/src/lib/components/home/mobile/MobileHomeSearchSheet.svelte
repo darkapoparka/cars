@@ -276,7 +276,7 @@
 					<select {@attach i18n.validation} class="mh-price-select" bind:value={search.searchPrice}>
 						<option value="">{i18n.t('copy.6d9c63297fb6')}</option>
 						{#each data.budgetTiles.filter((tile) => tile.value !== 'all') as tile (tile.value)}
-							<option value={tile.value}>{tile.label}</option>
+							<option value={tile.value}>{i18n.text(tile.label)}</option>
 						{/each}
 					</select>
 				</label>

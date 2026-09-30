@@ -15,11 +15,11 @@ const location = "бул. „Ботевградско шосе“ 300";
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'София',
-	locationShort: "София",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, София'
-	},
+  "city": "Sofia",
+  "locationShort": "Sofia",
+  "addressLine": "300 Botevgradsko Shose Blvd.",
+  "address": "300 Botevgradsko Shose Blvd., Sofia"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -52,6 +52,7 @@ export const daynightSite = {
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"https://www.facebook.com/p/Asko96-100050328800477/","instagram":"","youtube":"https://www.youtube.com/@asko96bulgaria","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

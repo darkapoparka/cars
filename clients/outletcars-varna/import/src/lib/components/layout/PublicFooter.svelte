@@ -105,6 +105,9 @@
 		flex-wrap: wrap;
 	}
 	@media (max-width: 767.98px) {
+		.site-footer {
+			border-radius: 24px 24px 0 0;
+		}
 		.site-footer__main {
 			grid-template-columns: 1fr;
 			gap: var(--bc-space-6);

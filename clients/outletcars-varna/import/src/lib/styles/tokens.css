@@ -256,9 +256,9 @@
 	--bc-glass-border: rgb(255 255 255 / 0.4);
 	--bc-mobile-appbar-height: 56px;
 	--bc-desktop-page-hero-height: 360px;
-	--bc-mobile-nav-height: 70px;
+	--bc-mobile-nav-height: 58px;
 	--bc-mobile-content-max: 480px;
-	--bc-mobile-nav-icon-size: 28px;
+	--bc-mobile-nav-icon-size: 22px;
 	--bc-mobile-icon-action-hit-size: var(--bc-control-height-standard);
 	--bc-mobile-icon-action-surface-size: var(--bc-control-height-secondary);
 	--bc-mobile-sheet-max-width: 520px;

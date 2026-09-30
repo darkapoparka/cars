@@ -42,6 +42,7 @@
 			alt={logoAlt}
 			width="1744"
 			height="512"
+			fetchpriority="high"
 		/>
 	</a>
 	<div class="bc-mobile-appbar__actions" role="group" aria-label={actionsLabel}>

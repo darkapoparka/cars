@@ -2,7 +2,7 @@
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
-	import { ChevronRight, Search, Settings2 } from '@lucide/svelte';
+	import { ChevronRight, Search } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import { onMount } from 'svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
@@ -17,6 +17,8 @@
 	import MobileHomeLocationSheet from './MobileHomeLocationSheet.svelte';
 	import './mobile-home-sheets.css';
 	import '$lib/styles/mobile-hero-pill.css';
+	import '$lib/styles/mobile-quick-pills.css';
+	import '$lib/styles/mobile-entry-hero.css';
 
 	let {
 		data,
@@ -30,7 +32,7 @@
 	const inventoryPath = '/inventory' as const;
 	const inventoryHref = resolve(inventoryPath);
 	type InventoryHref = typeof inventoryPath | `${typeof inventoryPath}?${string}`;
-	type QuickFilter = { label: string; icon: 'car-line' | typeof Settings2; href: InventoryHref };
+	type QuickFilter = { label: string; ariaLabel: string; href: InventoryHref };
 	const total = $derived(data.total);
 	let heroMode = $state<'buy' | 'import'>('buy');
 	let searchOpen = $state(false);
@@ -41,71 +43,31 @@
 		else importOpen = true;
 	}
 	onMount(() => enhanceDayNightImageFallbacks());
-	const quickFilters: QuickFilter[] = [
-		{
-			label: i18n.t('copy.c82ce2919043'),
-			icon: 'car-line',
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Дизел')}`
-		},
-		{
-			label: i18n.t('copy.e656f39de92d'),
-			icon: 'car-line',
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Бензин')}`
-		},
-		{
-			label: i18n.t('copy.ac707141d786'),
-			icon: Settings2,
-			href: `${inventoryPath}?transmission=${encodeURIComponent('Автоматик')}`
-		},
-		{
-			label: i18n.t('copy.2f5800eb33f6'),
-			icon: 'car-line',
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Електрически')}`
-		}
-	];
+	const priceNumber = $derived(new Intl.NumberFormat(i18n.locale === 'bg' ? 'bg-BG' : 'en-GB'));
+	const quickFilters = $derived(
+		data.budgetTiles.flatMap((tile): QuickFilter[] => {
+			const band = tile.value.match(/^(under|over)-(\d+)$/);
+			if (!band) return [];
+			return [
+				{
+					label: `${band[1] === 'under' ? '<' : '>'}${priceNumber.format(Number(band[2]))}`,
+					ariaLabel: i18n.text(tile.label),
+					href: `${inventoryPath}?price=${encodeURIComponent(tile.value)}`
+				}
+			];
+		})
+	);
 </script>
 
-{#snippet quickCarIcon()}
-	<svg
-		class="mh-quick__car-icon"
-		aria-hidden="true"
-		width="32"
-		height="16"
-		viewBox="0 0 76 36"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<path
-			d="M13 23H8.5C6.6 23 5 21.4 5 19.5V17.6C5 15.9 6.2 14.4 7.9 14.1L17.7 12.3L24.2 6.7C25.5 5.6 27.1 5 28.8 5H45.5C47.7 5 49.8 6 51.1 7.8L55.3 13.4L66.3 15.8C69 16.4 71 18.8 71 21.6V23H64"
-			stroke="currentColor"
-			stroke-width="3"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-		/>
-		<path d="M25 23H52" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-		<path
-			d="M22.5 28.5C25.54 28.5 28 26.04 28 23C28 19.96 25.54 17.5 22.5 17.5C19.46 17.5 17 19.96 17 23C17 26.04 19.46 28.5 22.5 28.5Z"
-			stroke="currentColor"
-			stroke-width="3"
-		/>
-		<path
-			d="M58.5 28.5C61.54 28.5 64 26.04 64 23C64 19.96 61.54 17.5 58.5 17.5C55.46 17.5 53 19.96 53 23C53 26.04 55.46 28.5 58.5 28.5Z"
-			stroke="currentColor"
-			stroke-width="3"
-		/>
-		<path d="M25 13H48" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-	</svg>
-{/snippet}
-
 <div class="mobile-home">
-	<header class="mh-hero">
+	<header class="mh-hero mobile-entry-hero">
 		<MobileHeroBar onLocation={() => (locationOpen = true)} />
 
 		<h1 class="mh-hero__title">{daynightSite.shortName}</h1>
 
 		<div class={`mh-hero__box${heroBox ? ' mh-hero__box--card' : ''}`}>
 			<div
-				class={`mh-hero__modes${heroToggle === 'segmented' ? ' mh-hero__modes--segmented' : ''}`}
+				class={`mh-hero__modes mobile-entry-hero__tabs${heroToggle === 'segmented' ? ' mh-hero__modes--segmented' : ''}`}
 				role="group"
 				aria-label={i18n.t('copy.69b5266fcf70')}
 			>
@@ -126,11 +88,11 @@
 					{i18n.t('copy.995bfafd0b63')}
 				</button>
 			</div>
-			<button class="mh-hero__search" type="button" onclick={openSearch}>
+			<button class="mh-hero__search mobile-entry-hero__search" type="button" onclick={openSearch}>
 				<span class="mh-hero__search-label">
 					{heroMode === 'buy' ? i18n.t('copy.5e985723597f') : i18n.t('copy.d028fe65890c')}
 				</span>
-				<span class="mh-hero__search-go" aria-hidden="true">
+				<span class="mh-hero__search-go mobile-entry-hero__go" aria-hidden="true">
 					{#if heroMode === 'buy'}
 						<Search size={20} strokeWidth={2.5} />
 					{:else}
@@ -160,16 +122,20 @@
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mh-quick" aria-label={i18n.t('copy.427bd0c4b0b6')}>
+		<nav class="mh-quick mobile-quick-pills" aria-label={i18n.t('copy.6a46dc837411')}>
 			{#each quickFilters as item (item.label)}
-				<a class="mh-quick__pill" href={i18n.href(resolve(item.href))}>
-					{#if item.icon === 'car-line'}
-						{@render quickCarIcon()}
-					{:else}
-						{@const Icon = item.icon}
-						<Icon size={16} strokeWidth={2.2} aria-hidden="true" />
-					{/if}
-					<span>{i18n.text(item.label)}</span>
+				<a
+					class="mh-quick__pill"
+					aria-label={item.ariaLabel}
+					href={i18n.href(resolve(item.href))}
+					onfocus={(event) =>
+						event.currentTarget.scrollIntoView({
+							block: 'nearest',
+							inline: 'nearest',
+							behavior: 'instant'
+						})}
+				>
+					<span>{item.label}</span>
 				</a>
 			{/each}
 		</nav>
@@ -208,6 +174,7 @@
 		position: relative;
 		z-index: 2;
 		display: grid;
+		grid-template-columns: minmax(0, 1fr);
 		gap: 18px;
 		margin-top: calc(-1 * var(--sa-mobile-panel-overlap));
 		border-radius: var(--sa-r-xl) var(--sa-r-xl) 0 0;
@@ -216,11 +183,7 @@
 		padding-bottom: 12px;
 	}
 	.mh-hero {
-		display: grid;
-		gap: var(--sa-mobile-hero-gap);
-		padding: calc(env(safe-area-inset-top) + 12px) var(--mh-gutter) var(--sa-mobile-hero-bottom);
-		background: var(--sa-blue);
-		color: #fff;
+		--mobile-entry-gutter: var(--mh-gutter);
 	}
 
 	.mh-hero__title {
@@ -235,7 +198,7 @@
 
 	.mh-hero__box {
 		display: grid;
-		gap: var(--sa-mobile-hero-gap);
+		gap: var(--mobile-entry-hero-gap);
 		margin: 0;
 		border: 0;
 		border-radius: 0;
@@ -276,60 +239,9 @@
 		color: var(--sa-blue-strong) !important;
 	}
 	.mh-hero__modes {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
 		justify-self: center;
 		align-items: end;
-		width: 100%;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.24);
 		padding: 0;
-	}
-
-	.mh-hero__modes button {
-		position: relative;
-		display: flex;
-		box-sizing: border-box;
-		width: 100%;
-		min-width: 0;
-		min-height: 52px;
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		background: transparent;
-		color: var(--mh-hero-tab-color, rgba(255, 255, 255, 0.76));
-		font: var(--sa-weight-medium) var(--sa-mobile-type-primary-tab) / var(--sa-leading-snug)
-			var(--sa-font);
-		padding: 8px 8px 10px;
-		cursor: pointer;
-		transition: color 0.18s ease;
-		-webkit-tap-highlight-color: transparent;
-	}
-
-	.mh-hero__modes button:hover {
-		color: #fff;
-	}
-
-	.mh-hero__modes button:focus-visible {
-		border-radius: 6px 6px 0 0;
-		outline: 2px solid rgba(255, 255, 255, 0.76);
-		outline-offset: -3px;
-	}
-
-	.mh-hero__modes button.is-active {
-		color: var(--mh-hero-tab-active, #fff);
-		font-weight: var(--sa-button-font-weight);
-	}
-
-	.mh-hero__modes button.is-active::after {
-		position: absolute;
-		right: 0;
-		bottom: -1px;
-		left: 0;
-		width: auto;
-		height: 4px;
-		border-radius: 4px 4px 0 0;
-		background: var(--sa-red, #d50032);
-		content: '';
 	}
 	.mh-hero__modes--segmented {
 		display: grid;
@@ -351,6 +263,7 @@
 	.mh-hero__modes--segmented button {
 		width: 100%;
 		min-height: 38px;
+		align-items: center;
 		border-radius: var(--sa-r-pill);
 		padding: 2px 8px;
 		font-size: var(--sa-button-font-size);
@@ -372,21 +285,14 @@
 
 	.mh-hero__search {
 		display: inline-flex;
-		width: 100%;
-		min-height: var(--sa-mobile-search-h);
 		align-items: center;
-		box-sizing: border-box;
 		gap: 12px;
-		border: 0;
-		border-radius: var(--sa-r-pill);
-		background: #fff;
 		padding: 4px 4px 4px 17px;
 		color: var(--sa-muted);
 		font-size: var(--sa-text-base);
 		font-weight: var(--sa-weight-medium);
 		text-align: left;
 		cursor: pointer;
-		box-shadow: 0 12px 32px rgba(0, 45, 110, 0.18);
 	}
 
 	.mh-hero__search-label {
@@ -404,7 +310,6 @@
 		flex: 0 0 auto;
 		place-items: center;
 		border-radius: 50%;
-		background: var(--sa-blue);
 		color: #fff !important;
 	}
 
@@ -415,76 +320,11 @@
 	}
 
 	.mh-quick {
-		display: flex;
-		margin-top: 0;
-		margin-inline: var(--mh-gutter);
-		gap: var(--sa-mobile-gap-sm);
-		overflow-x: auto;
-		padding: 0 0 2px;
-		scrollbar-width: none;
-		-webkit-overflow-scrolling: touch;
-	}
+		--mobile-quick-pills-padding: 6px 0;
+		--mobile-quick-pills-scroll-padding: 0px;
 
-	.mh-quick::-webkit-scrollbar {
-		display: none;
-	}
-
-	.mh-quick__pill {
-		display: inline-flex;
-		flex: 0 0 auto;
-		align-items: center;
-		gap: var(--sa-pill-gap);
-		min-height: var(--sa-mobile-pill-h);
-		border: 0;
-		border-radius: var(--sa-pill-radius);
-		background: var(--sa-fill);
-		padding: 0 var(--sa-pill-pad-x);
-		color: var(--sa-ink);
-		font: var(--sa-weight-regular) var(--sa-mobile-type-filter) / 1.5 var(--sa-font);
-		white-space: nowrap;
-	}
-
-	.mh-quick__pill span {
-		font: inherit;
-	}
-
-	.mh-quick__pill :global(svg) {
-		flex: 0 0 auto;
-		color: var(--sa-blue) !important;
-	}
-
-	.mh-quick__car-icon {
-		display: block;
-		width: 30px;
-		height: 15px;
-		flex: 0 0 auto;
-		color: var(--sa-blue);
-	}
-
-	@media (max-width: 390px) {
-		.mh-quick {
-			gap: 7px;
-		}
-
-		.mh-quick__pill {
-			gap: 5px;
-			padding-inline: 8px;
-		}
-	}
-
-	@media (max-width: 370px) {
-		.mh-quick {
-			gap: 6px;
-		}
-
-		.mh-quick__pill {
-			gap: 4px;
-			padding-inline: 7px;
-		}
-
-		.mh-quick__car-icon {
-			width: 28px;
-		}
+		min-width: 0;
+		margin: 0 var(--mh-gutter);
 	}
 
 	.mobile-home :global(svg),
@@ -504,11 +344,7 @@
 		}
 
 		.mh-hero__box {
-			gap: var(--sa-mobile-hero-gap);
-		}
-
-		.mh-hero__search {
-			min-height: var(--sa-mobile-search-h);
+			gap: var(--mobile-entry-hero-gap);
 		}
 
 		.mh-hero__search-go {

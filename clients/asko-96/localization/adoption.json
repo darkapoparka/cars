@@ -7,14 +7,14 @@
     "auto-best": {
       "status": "approved",
       "repository": "darkapoparka/cars",
-      "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-      "digest": "a78d2cfe451551cbb4636e1e64d386d45a13db2b710f8fa8b0dc444929e61be3",
+      "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "digest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
         "path": "templates/auto-best",
-        "tree": "44d9fc532b332e8c4cb5fd7abfc585e28d978539",
-        "digest": "a78d2cfe451551cbb4636e1e64d386d45a13db2b710f8fa8b0dc444929e61be3"
+        "tree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb",
+        "digest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964"
       },
       "snapshotPath": "templates/auto-best",
       "qa": {
@@ -22,9 +22,9 @@
           "schemaVersion": 1,
           "adapter": "native-v1",
           "repository": "darkapoparka/cars",
-          "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+          "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
           "sourcePath": "templates/auto-best",
-          "sourceTree": "44d9fc532b332e8c4cb5fd7abfc585e28d978539",
+          "sourceTree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb",
           "locales": [
             "en",
             "bg"
@@ -34,8 +34,8 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-24T18:41:21.202Z",
-          "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa",
+          "verifiedAt": "2026-09-30T09:43:35.799Z",
+          "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -44,74 +44,74 @@
               "bg": "bg"
             }
           ],
-          "sourceDigest": "a78d2cfe451551cbb4636e1e64d386d45a13db2b710f8fa8b0dc444929e61be3",
+          "sourceDigest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964",
           "deployment": {
-            "id": "dpl_9fF4w5PjmW6peqSGw5j4qHWNw99X",
+            "id": "dpl_DyEQ16sDVqe81ZtaGnuvYAizLDxn",
             "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
             "state": "READY",
-            "sourceCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+            "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
             "publicAlias": "https://cars-template-auto-best.vercel.app/"
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "10f66140c6c388e15a24eb55408446c039473f52ff5097b944a12adfcb9c4732"
             }
           ]
         }
@@ -120,14 +120,14 @@
     "modern": {
       "status": "approved",
       "repository": "darkapoparka/cars",
-      "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-      "digest": "50d3f5a6739af15b2517f592fed79ff6ef7699f1e5433e16ff90c3eeb0c9339f",
+      "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "digest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
         "path": "templates/modern",
-        "tree": "dadbc3c20d06f230bc958e6f6233f674c8755ae7",
-        "digest": "50d3f5a6739af15b2517f592fed79ff6ef7699f1e5433e16ff90c3eeb0c9339f"
+        "tree": "796661a4ff23fb9db34b7df68dc7f190497e4922",
+        "digest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c"
       },
       "snapshotPath": "templates/modern",
       "qa": {
@@ -135,9 +135,9 @@
           "schemaVersion": 1,
           "adapter": "native-v1",
           "repository": "darkapoparka/cars",
-          "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+          "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
           "sourcePath": "templates/modern",
-          "sourceTree": "dadbc3c20d06f230bc958e6f6233f674c8755ae7",
+          "sourceTree": "796661a4ff23fb9db34b7df68dc7f190497e4922",
           "locales": [
             "en",
             "bg"
@@ -147,8 +147,8 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-24T18:41:21.202Z",
-          "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa",
+          "verifiedAt": "2026-09-30T09:43:37.017Z",
+          "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -168,74 +168,74 @@
               "export": "inventoryCopy"
             }
           ],
-          "sourceDigest": "50d3f5a6739af15b2517f592fed79ff6ef7699f1e5433e16ff90c3eeb0c9339f",
+          "sourceDigest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c",
           "deployment": {
-            "id": "dpl_7CMxfiWyo8CacszXemvVhdjmjMgW",
+            "id": "dpl_HRWDBhDDptapT6oDGaoE8Bkh2deE",
             "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
             "state": "READY",
-            "sourceCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+            "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
             "publicAlias": "https://cars-template-modern.vercel.app/"
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "ae19e95eda8db60c6d98d581438081edba307c4edcdaf1d2d17d9f943673441e"
             }
           ]
         }
@@ -244,14 +244,14 @@
     "carwow": {
       "status": "approved",
       "repository": "darkapoparka/cars",
-      "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-      "digest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420",
+      "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "digest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f",
       "source": {
         "repository": "darkapoparka/cars",
-        "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
         "path": "templates/carwow",
-        "tree": "af47a659d305d81523f5af97ef66d15dd0aa1f38",
-        "digest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420"
+        "tree": "6ba84fbd77bf8536491fcb7f649c620776c91060",
+        "digest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f"
       },
       "snapshotPath": "templates/carwow",
       "qa": {
@@ -259,9 +259,9 @@
           "schemaVersion": 1,
           "adapter": "native-v1",
           "repository": "darkapoparka/cars",
-          "commit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+          "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
           "sourcePath": "templates/carwow",
-          "sourceTree": "af47a659d305d81523f5af97ef66d15dd0aa1f38",
+          "sourceTree": "6ba84fbd77bf8536491fcb7f649c620776c91060",
           "locales": [
             "en",
             "bg"
@@ -271,8 +271,8 @@
             390,
             1440
           ],
-          "verifiedAt": "2026-09-24T18:41:21.202Z",
-          "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa",
+          "verifiedAt": "2026-09-30T09:43:40.041Z",
+          "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
           "catalogs": [
             {
               "format": "typescript-pair",
@@ -281,74 +281,74 @@
               "bg": "bg"
             }
           ],
-          "sourceDigest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420",
+          "sourceDigest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f",
           "deployment": {
-            "id": "dpl_CP4e821dwwQSJbyD4EgzatmhkMgT",
+            "id": "dpl_5Dkn8YK5zLTKb1MQ4V9rYMJLJESK",
             "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
             "state": "READY",
-            "sourceCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+            "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
             "publicAlias": "https://cars-template-carwow.vercel.app/"
           },
           "checks": [
             {
               "name": "catalog-completeness",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "hardcoded-ui",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "native-routing",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "standalone-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "mounted-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "public-journeys",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "preferences-no-js",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "preferences-storage-disabled",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "preferences-races",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "request-isolation",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "security-write-blocking",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             },
             {
               "name": "assets-preserved",
               "status": "passed",
-              "evidenceSha256": "e2be9caadf09790ac0e35939f362a9bb051587f65a2f587fd446d5234c5adbfa"
+              "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
             }
           ]
         }
@@ -356,8 +356,8 @@
     }
   },
   "input": {
-    "digest": "5c79720ad2ae2ea4a470ce085ceb7a199a1eb26d1e17e89379ff11e37baa3cec",
-    "files": 3501
+    "digest": "9f27e7de8a898f4f1b07a6fd792fc1f7bad8635a4311e9d01f729ab916dd05b9",
+    "files": 3680
   },
   "dealerAcceptance": "requires-dealer-build-and-public-journeys"
 }

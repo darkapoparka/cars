@@ -2,7 +2,6 @@
   import { setLocaleContext, getI18n, applicationUrl } from '$lib/locale/context';
   import { localeHref } from '$lib/locale/core';
   import LocalePreferences from '$lib/locale/LocalePreferences.svelte';
-  import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 
   import '@fontsource-variable/onest';
   import { template, canIndex } from '$config/template';
@@ -45,15 +44,3 @@
   {@render children()}
 </SiteShell>
 {/key}
-
-<div class="cars-locale-footer"><LocaleTrigger compact={false} footer /></div>
-
-<style>
-  .cars-locale-footer { display: flex; justify-content: center; padding: var(--dn-space-4); background: var(--dn-surface); }
-  @media (min-width: 768px) {
-    .cars-locale-footer { padding: 0 var(--dn-space-4) var(--dn-space-6); background: var(--dn-ink-deep); color: var(--dn-muted-on-ink); }
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-    .cars-locale-footer :global(.cars-locale-trigger--footer) { margin-bottom: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom)); }
-  }
-</style>

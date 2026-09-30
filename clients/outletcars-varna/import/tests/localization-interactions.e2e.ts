@@ -27,27 +27,27 @@ for (const width of [320, 390, 1440])
 						.click();
 					await expect(wizard.getByRole('alert')).toBeVisible();
 					await wizard
-						.locator('#import-wizard-vehicle')
+						.locator('[id^="import-wizard-vehicle-"]')
 						.fill('https://listing.example.invalid/synthetic');
 				} else {
-					await expect(wizard.locator('#import-wizard-make')).toBeVisible();
-					await wizard.locator('#import-wizard-make').fill('BMW');
-					await wizard.locator('#import-wizard-model').fill('X5');
+					await expect(wizard.locator('[id^="import-wizard-make-"]')).toBeVisible();
+					await wizard.locator('[id^="import-wizard-make-"]').fill('BMW');
+					await wizard.locator('[id^="import-wizard-model-"]').fill('X5');
 				}
 				await wizard
 					.getByRole('button', { name: english ? 'Continue' : 'Продължи', exact: true })
 					.click();
-				await expect(wizard.locator('#import-wizard-budget')).toBeVisible();
-				await wizard.locator('#import-wizard-budget').fill('30000');
+				await expect(wizard.locator('[id^="import-wizard-budget-"]')).toBeVisible();
+				await wizard.locator('[id^="import-wizard-budget-"]').fill('30000');
 				await wizard
 					.getByRole('button', { name: english ? 'Petrol' : 'Бензин', exact: true })
 					.click();
 				await wizard
 					.getByRole('button', { name: english ? 'Continue' : 'Продължи', exact: true })
 					.click();
-				await wizard.locator('#import-wizard-name').fill('Synthetic Verification');
-				await wizard.locator('#import-wizard-phone').fill('+359000000000');
-				await wizard.locator('#import-wizard-email').fill('synthetic@example.invalid');
+				await wizard.locator('[id^="import-wizard-name-"]').fill('Synthetic Verification');
+				await wizard.locator('[id^="import-wizard-phone-"]').fill('+359000000000');
+				await wizard.locator('[id^="import-wizard-email-"]').fill('synthetic@example.invalid');
 				const response = page.waitForResponse(
 					(r) => r.url().includes('/api/inquiries') && r.request().method() === 'POST'
 				);
@@ -65,6 +65,13 @@ for (const width of [320, 390, 1440])
 				await expect(wizard.getByRole('status')).toContainText(
 					english ? 'No message was sent' : 'Не е изпратено съобщение'
 				);
+				if (width < 768) {
+					const close = wizard.getByRole('status').getByRole('button');
+					await expect(close).toBeInViewport();
+					const bounds = await close.boundingBox();
+					expect(bounds?.x).toBeGreaterThan(0);
+					expect((bounds?.x ?? width) + (bounds?.width ?? width)).toBeLessThan(width);
+				}
 				await page.screenshot({
 					path: info.outputPath('import-' + mode + '-' + locale + '-' + width + '.png')
 				});
@@ -108,7 +115,8 @@ for (const width of [320, 390, 1440])
 			test.setTimeout(90000);
 			await page.setViewportSize({ width, height: 900 });
 			await suppressPrompt(page, info.project.use.baseURL as string);
-			await page.goto(route(locale, '/calculator'));
+			await page.goto(route(locale, '/calculator'), { waitUntil: 'domcontentloaded' });
+			await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 			const calculator = page.locator('.import-estimator');
 			await calculator.locator('input').nth(0).fill('30000');
 			await calculator.locator('input').nth(1).fill('1000');
@@ -118,14 +126,16 @@ for (const width of [320, 390, 1440])
 			await expect(calculator.locator('output')).toContainText(/41[\s,.]*300/);
 			await calculator.locator('input').first().fill('-1');
 			await expect(calculator.getByRole('status')).toBeVisible();
-			await page.goto(route(locale, '/financing'));
+			await page.goto(route(locale, '/financing'), { waitUntil: 'domcontentloaded' });
+			await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 			const finance = page.locator('.finance-estimator');
 			await finance.locator('input').nth(0).fill('30000');
 			await finance.locator('input').nth(1).fill('6000');
 			await finance.locator('select').selectOption('60');
 			await finance.locator('input').nth(2).fill('0');
 			await expect(finance.locator('.finance-estimator__total')).toContainText('400');
-			await page.goto(route(locale, '/contact?topic=trade-in'));
+			await page.goto(route(locale, '/contact?topic=trade-in'), { waitUntil: 'domcontentloaded' });
+			await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 			if (width < 768)
 				await page
 					.getByRole('button', {
@@ -147,7 +157,8 @@ for (const width of [320, 390, 1440])
 					.filter({ hasText: english ? 'No message was sent' : 'Не е изпратено съобщение' })
 					.first()
 			).toBeVisible();
-			await page.goto(route(locale, '/inventory'));
+			await page.goto(route(locale, '/inventory'), { waitUntil: 'domcontentloaded' });
+			await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 			if (width < 768) {
 				await page.getByRole('button', { name: english ? 'Menu' : 'Меню', exact: true }).click();
 				const menu = page
@@ -162,6 +173,10 @@ for (const width of [320, 390, 1440])
 				await expect(page).toHaveURL((u) => u.pathname === route(locale, '/contact'));
 				await expect(menu).not.toBeVisible();
 			} else {
+				await page
+					.locator('.site-header')
+					.getByRole('button', { name: english ? 'Menu' : 'Меню', exact: true })
+					.click();
 				await expect(page.locator('.site-header [data-locale-selector]')).toBeVisible();
 			}
 		});

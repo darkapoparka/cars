@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "АСКО 96";
@@ -26,7 +26,7 @@ export const brand = {
   city,
   showroomCoordinates: {"latitude":0,"longitude":0},
   youtubeUrl: "https://www.youtube.com/@asko96bulgaria",
-  instagramUrl: "https://www.instagram.com/",
+  instagramUrl: "",
   facebookUrl: "https://www.facebook.com/p/Asko96-100050328800477/",
   phone: "0899 76 96 96",
   phoneHref: "tel:+359899769696",

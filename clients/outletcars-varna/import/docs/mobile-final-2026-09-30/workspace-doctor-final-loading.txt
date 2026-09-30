@@ -1,0 +1,8 @@
+Cars workspace: no working files changed. Tracking refs are requested for refresh; verify each repository below.
+cars: uncommitted-work | ahead=0 behind=0 changed=1378 | freshness=fetched-this-run | L:\CODEX\cars
+admin: uncommitted-work, behind-fetched-main, unpublished-local-commits | ahead=4 behind=4 changed=1 | freshness=fetched-this-run | L:\CODEX\cars-admin
+auto-best: uncommitted-work | owner=cars | changed=16 | L:\CODEX\cars\templates\auto-best
+modern: uncommitted-work | owner=cars | changed=7 | L:\CODEX\cars\templates\modern
+carwow: uncommitted-work | owner=cars | changed=11 | L:\CODEX\cars\templates\carwow
+import: uncommitted-work | owner=cars | changed=46 | L:\CODEX\cars\templates\import
+Preserve and reconcile the flagged checkout with its writer; do not reset, clean, mass-stage or move it.

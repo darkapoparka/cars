@@ -35,7 +35,7 @@
 
 <section class="dn-listing-results" data-slot="listing-results" aria-labelledby="listing-results-title">
   <div class="container">
-    <h1 id="listing-results-title" class="dn-sr-only dn-listing-results__title">{i18n.t("m_065a8285dddf")}</h1>
+    <h1 id="listing-results-title" class="dn-sr-only dn-listing-results__mobile-title">{i18n.t("m_065a8285dddf")}</h1>
     <div class="dn-listing-results__heading">
       <div class="dn-listing-results__tools">
         <button class="dn-listing-results__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
@@ -62,7 +62,7 @@
     {#if vehicles.length}
       <div class="dn-listing-results__grid">
         {#each vehicles as vehicle, index (vehicle.id)}
-          <VehicleCard {vehicle} returnTo={`${page.url.pathname}${page.url.search}#vehicle-${vehicle.id}`} showPrice priority={index < 4} layout="listing" />
+          <VehicleCard {vehicle} returnTo={`${page.url.pathname}${page.url.search}#vehicle-${vehicle.id}`} showPrice priority={index === 0} layout="listing" />
         {/each}
       </div>
     {:else}
@@ -76,8 +76,9 @@
 </section>
 
 <style>
-  /* The desktop hero owns the page heading; mobile omits that hero. */
-  .dn-listing-results__title { display: none; }
+  @media (min-width: 768px) {
+    .dn-listing-results__mobile-title { display: none; }
+  }
   .dn-listing-results__tools {
     display: inline-flex;
     align-items: center;
@@ -240,7 +241,6 @@
   }
 
   @media (max-width: 767px) {
-    .dn-listing-results__title { display: block; }
     .dn-listing-results {
       padding: 0 0 var(--dn-mobile-page-end);
     }
@@ -287,7 +287,8 @@
 
     .dn-listing-results__grid {
       grid-template-columns: minmax(0, 1fr);
-      gap: 8px;
+      grid-auto-rows: 1fr;
+      gap: var(--dn-space-3);
     }
   }
 </style>

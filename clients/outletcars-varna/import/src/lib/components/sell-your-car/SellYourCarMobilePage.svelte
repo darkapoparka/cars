@@ -7,7 +7,6 @@
 	import { site } from '$lib/config/site';
 	import { linkHref as resolve } from '$lib/utils/links';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import Check from '@lucide/svelte/icons/check';
 	import MapPin from '@lucide/svelte/icons/map-pin';
 	import Navigation from '@lucide/svelte/icons/navigation';
 	import PhoneCall from '@lucide/svelte/icons/phone-call';
@@ -25,6 +24,7 @@
 	import MobileServiceEntry from '$lib/components/services/MobileServiceEntry.svelte';
 	import MobileServiceManualEntry from '$lib/components/services/MobileServiceManualEntry.svelte';
 	import SellCarWizard from './SellCarWizard.svelte';
+	import SellValuationCard from './SellValuationCard.svelte';
 
 	let {
 		embedded = false,
@@ -126,29 +126,7 @@
 			</div>
 		{/snippet}
 		{#snippet content()}
-			<section class="sell-readiness" aria-labelledby="sell-readiness-title">
-				<h2 id="sell-readiness-title">{nt('ui199')}</h2>
-				<ul>
-					<li>
-						<span aria-hidden="true"><Check size={16} strokeWidth={2.4} /></span>
-						<div>
-							<strong>{nt('ui196')}</strong><small>{nt('ui200')}</small>
-						</div>
-					</li>
-					<li>
-						<span aria-hidden="true"><Check size={16} strokeWidth={2.4} /></span>
-						<div>
-							<strong>{nt('ui201')}</strong><small>{nt('ui202')}</small>
-						</div>
-					</li>
-					<li>
-						<span aria-hidden="true"><Check size={16} strokeWidth={2.4} /></span>
-						<div>
-							<strong>{nt('ui203')}</strong><small>{nt('ui204')}</small>
-						</div>
-					</li>
-				</ul>
-			</section>
+			<SellValuationCard open={wizardOpen} onstart={() => openWizard(entryMode === 'manual')} />
 		{/snippet}
 	</MobileServiceEntry>
 
@@ -219,65 +197,6 @@
 
 	.daynight-sell-mobile :global(a) {
 		text-decoration: none !important;
-	}
-
-	.sell-readiness {
-		display: grid;
-		gap: var(--bc-space-3);
-		padding: var(--bc-space-4);
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-white);
-	}
-
-	.sell-readiness h2 {
-		margin: 0;
-		font-size: var(--bc-mobile-section-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-section-title-leading);
-	}
-
-	.sell-readiness ul {
-		display: grid;
-		gap: var(--bc-space-3);
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	.sell-readiness li {
-		display: grid;
-		grid-template-columns: 30px minmax(0, 1fr);
-		align-items: start;
-		gap: var(--bc-space-3);
-	}
-
-	.sell-readiness li > span {
-		display: grid;
-		width: 30px;
-		height: 30px;
-		place-items: center;
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-accent-tint);
-		color: var(--bc-accent);
-	}
-
-	.sell-readiness li > div {
-		display: grid;
-		gap: 2px;
-	}
-
-	.sell-readiness strong {
-		color: var(--bc-ink);
-		font-size: var(--bc-mobile-card-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-card-title-leading);
-	}
-
-	.sell-readiness small {
-		color: var(--bc-copy);
-		font-size: var(--bc-mobile-body);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-body-leading);
 	}
 
 	:global(.daynight-sell-wizard-drawer__sheet.bc-mobile-sheet__content) {

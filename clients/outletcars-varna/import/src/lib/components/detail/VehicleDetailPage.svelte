@@ -77,7 +77,7 @@
 						</div>
 					</header>
 					<VehicleGallery images={detail.galleryImages} title={detail.title} {english} />
-					<section class="site-panel">
+					<section class="site-panel detail-description-card">
 						<h2>{english ? 'Description' : 'Описание'}</h2>
 						<p class="detail-description">{detail.description}</p>
 					</section>
@@ -185,10 +185,14 @@
 		display: flex;
 		gap: var(--bc-space-1);
 	}
+	.detail-description-card {
+		background: #fff;
+		color: #1c1c1c;
+	}
 	.detail-description {
 		margin: 0;
 		white-space: pre-line;
-		color: var(--bc-copy);
+		color: #343b43;
 		font-size: var(--bc-text-prose);
 		line-height: var(--bc-leading-prose);
 		overflow-wrap: anywhere;

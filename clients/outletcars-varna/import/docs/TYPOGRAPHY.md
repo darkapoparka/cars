@@ -2,6 +2,8 @@
 
 Public copy uses self-hosted Sofia Sans. Headings use Sofia Sans SemiCondensed. Keep the admin font configuration isolated.
 
+The root layout bundles `src/lib/styles/fonts.css` with the shared styles, avoiding a separate blocking font CSS request. It references fonts through their public `/fonts/sofia-sans/` URLs; importing a stylesheet from `static/` can produce forbidden development asset paths. Latin and Cyrillic delivery subsets retain the original glyph metrics; the original full fonts remain the fallback for other scripts. The SIL OFL license and a compatible relative-path stylesheet stay beside all font files. To regenerate these assets and both stylesheet copies, install FontTools 4.66.1 and Brotli 1.2.0 in an isolated Python environment and run `python scripts/subset-fonts.py`. Python is only needed for asset maintenance.
+
 Design values live in src/lib/styles/tokens.css. Action, MobileModeTabs, HeroFilterDialog and forms.css own their typography and geometry. Do not apply a heading weight to ordinary controls, or shrink action text through page-level CSS.
 
 | Role                             | Desktop                 | Mobile                                               | Weight                  |
@@ -26,5 +28,7 @@ Actions remain at least 44px high; primary actions, option rows and social links
 Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them with native selects to simplify implementation. The all-filters dialog has one scrolling body and a persistent action footer.
 
 Placeholders inherit input typography. A search input inside a decorated wrapper uses a visible focus ring on that wrapper. Verify selected states, placeholder styles and keyboard focus in the browser.
+
+Mobile inventory search uses the 18px input scale and shows the current filtered result count, including zero. Long queries truncate before the count. Search and filter rows have an 8px gap; the sticky toolbar owns the single 12px gap before the first vehicle card. Home Buy/Import and service entry tabs use the same 20px mode-tab token, 400 weight and 44px targets.
 
 Test matching roles across home, inventory, About, Contact and conversion routes at 390px and 1440px, plus intermediate-width reflow. The typography-contact test suite checks action size and weight, picker selection, social links and Contact alignment. Existing suites cover selection persistence, drawers, navigation and focus.

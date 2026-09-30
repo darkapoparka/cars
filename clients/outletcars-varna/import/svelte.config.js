@@ -7,6 +7,8 @@ const config = {
 		runes: ({ filename }) => (filename.split(/[/\\]/).includes('node_modules') ? undefined : true)
 	},
 	kit: {
+		// Avoid a render-blocking request chain on the initial mobile document.
+		inlineStyleThreshold: process.env.NODE_ENV === 'production' ? 262144 : 0,
 		paths: { base: process.env.TEMPLATE_BASE_PATH || '', relative: false },
 		adapter: adapter({ runtime: 'nodejs24.x' })
 	}

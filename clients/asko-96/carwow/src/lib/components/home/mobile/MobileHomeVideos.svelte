@@ -9,18 +9,18 @@
 	import { tick } from 'svelte';
 
 	let activeVideo = $state<string | null>(null);
-	let trigger: HTMLButtonElement | undefined;
+	let triggerCard: HTMLElement | null = null;
 
 	function play(id: string, event: MouseEvent) {
-		trigger = event.currentTarget as HTMLButtonElement;
+		triggerCard = (event.currentTarget as HTMLButtonElement).closest('.mobile-video-card');
 		activeVideo = id;
 	}
 
 	async function stop() {
-		const previous = trigger;
+		const previousCard = triggerCard;
 		activeVideo = null;
 		await tick();
-		previous?.focus();
+		previousCard?.querySelector<HTMLButtonElement>('.mobile-video-card__play')?.focus();
 	}
 </script>
 
@@ -70,7 +70,9 @@
 							class="mobile-video-card__play"
 							type="button"
 							onclick={(event) => play(video.id, event)}
-							aria-label={i18n.t('pattern.23e9e4cc63e8', { v0: i18n.text(video.title) })}
+							aria-label={i18n.t('pattern.23e9e4cc63e8', {
+								v0: `${video.duration} ${i18n.text(video.title)}`
+							})}
 						>
 							<img
 								src={i18n.asset(mobileImageSrc(video.thumbnail))}

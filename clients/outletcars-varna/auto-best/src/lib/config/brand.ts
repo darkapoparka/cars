@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "OUTLETCARS.BG — Варна";
@@ -25,9 +25,9 @@ export const brand = {
   shortName,
   city,
   showroomCoordinates: {"latitude":0,"longitude":0},
-  youtubeUrl: "https://www.youtube.com/",
-  instagramUrl: "https://www.instagram.com/",
-  facebookUrl: "https://www.facebook.com/",
+  youtubeUrl: "",
+  instagramUrl: "",
+  facebookUrl: "",
   phone: "0898 921 010",
   phoneHref: "tel:+359898921010",
   addressLine,

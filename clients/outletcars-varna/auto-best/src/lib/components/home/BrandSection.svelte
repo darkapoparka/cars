@@ -6,7 +6,7 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  import { brands } from '$data/home';
+  import { brands, desktopBrands } from '$data/home';
   const mobileBrands = new Set(
     [...brands.filter((brand) => brand.count > 0), ...brands.filter((brand) => brand.count <= 0)]
       .slice(0, 3)
@@ -33,21 +33,30 @@
       </div>
     </div>
     <div class="dn-brand-panel dn-home-section-panel">
-      <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(brands.length, 6))}>
-        {#each brands as brand (brand.label)}
-          <a class="dn-brand-card" class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={i18n.href(resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`))}>
+      <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(desktopBrands.length, 6))}>
+        {#each desktopBrands as brand (brand.label)}
+          <a class="dn-brand-card" class:dn-brand-card--desktop-only={brand.count === 0} class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={i18n.href(resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`))}>
             <span class="dn-brand-card__image">
               <span class="dn-brand-card__frame" style:--logo-mobile-width={`${mobileLogoWidth(brand)}px`} style:--logo-desktop-width={`${desktopLogoWidth(brand)}px`} style:--logo-ratio={`${brand.bounds[2] - brand.bounds[0]} / ${brand.bounds[3] - brand.bounds[1]}`} style:--logo-image-width={`${brand.width / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-left={`${-brand.bounds[0] / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-top={`${-brand.bounds[1] / (brand.bounds[3] - brand.bounds[1]) * 100}%`}><img src={brand.image} alt={i18n.t("m_f6e3b3cf6fb0", { p0: brand.label })} loading="lazy" decoding="async" width={brand.width} height={brand.height} /></span>
             </span>
             <strong>{brand.label}</strong>
           </a>
         {/each}
+      {#if brands.length > mobileBrands.size}
       <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="brands-grid" onclick={() => expanded = !expanded}>
         <span class="dn-brand-all-glyph" aria-hidden="true">
           <span class="dn-brand-all-glyph__accent"></span><span></span><span></span><span></span>
         </span>
         <strong>{expanded ? i18n.t("m_211232676e95") : i18n.t("m_28c0e12158d9")}</strong>
       </button>
+      {:else}
+      <a class="dn-discovery-toggle" href={i18n.href(resolve('/listing-grid'))}>
+        <span class="dn-brand-all-glyph" aria-hidden="true">
+          <span class="dn-brand-all-glyph__accent"></span><span></span><span></span><span></span>
+        </span>
+        <strong>{i18n.t("m_30a64216eaea")}</strong>
+      </a>
+      {/if}
       </div>
 
     </div>
@@ -85,6 +94,7 @@
   }
 
   @media (min-width: 992px) {
+    .dn-brand-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .dn-brand-hero { padding: 0; }
     .dn-brand-card { background: var(--dn-surface-raised); box-shadow: var(--dn-card-shadow); }
     .dn-brand-card__image { height: 72px; }
@@ -109,8 +119,9 @@
     .dn-brand-all-glyph { display: grid; width: 54px; height: 54px; align-self: center; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 auto; padding: 9px; border-radius: 16px; background: #f1f3f5; }
     .dn-brand-all-glyph span { border-radius: 50%; background: #cdd2d8; }
     .dn-brand-all-glyph__accent { background: var(--dn-red); }
-    .dn-brand-card--secondary { display: none; }
-    .dn-brand-card strong { align-self: end; font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
+    .dn-brand-card--secondary,
+    .dn-brand-card--desktop-only { display: none; }
+    .dn-brand-card strong { align-self: end; overflow-wrap: anywhere; font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
     .dn-brand-card--additional { order: 2; }
     .dn-discovery-toggle { order: 1; display: grid; min-height: 108px; grid-template-rows: 58px auto; margin: 0; padding: 8px 6px 10px; border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); font-size: var(--dn-control-size); }
     .dn-discovery-toggle strong { display: block; align-self: end; line-height: var(--dn-leading-control); font-weight: var(--dn-weight-semibold); }

@@ -4,6 +4,21 @@ import { sveltekit } from '@sveltejs/kit/vite';
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
+	build: {
+		rolldownOptions: {
+			output: {
+				codeSplitting: {
+					// Keep small icon modules from queuing dozens of initial mobile requests.
+					groups: [
+						{
+							name: 'icons',
+							test: /node_modules[/\\]@lucide[/\\]svelte[/\\]/
+						}
+					]
+				}
+			}
+		}
+	},
 	server: {
 		watch: {
 			// Generated deployment bundles and audit copies are not development sources.

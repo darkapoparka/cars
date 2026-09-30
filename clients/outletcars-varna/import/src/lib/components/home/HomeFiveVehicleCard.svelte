@@ -12,10 +12,12 @@
 	let {
 		copy,
 		style2 = false,
+		priority = false,
 		vehicle
 	}: {
 		copy: VehicleCardCopy;
 		style2?: boolean;
+		priority?: boolean;
 		vehicle: HomeFiveVehicleCardData;
 	} = $props();
 
@@ -67,7 +69,8 @@
 				alt={vehicle.title}
 				width="660"
 				height="440"
-				loading="lazy"
+				loading={priority ? 'eager' : 'lazy'}
+				fetchpriority={priority ? 'high' : 'auto'}
 				decoding="async"
 				onerror={(event) => {
 					const image = event.currentTarget as HTMLImageElement;
