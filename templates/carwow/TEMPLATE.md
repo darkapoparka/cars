@@ -2,7 +2,8 @@
 
 ## Identity
 
-- Repository: `darkapoparka/cars-template-carwow`
+- Repository: `darkapoparka/cars`
+- Master path: `templates/carwow`
 - Key: `carwow`
 - Portfolio role: **core**
 - Design position: consumer marketplace / strongest immediate visual impact
@@ -30,6 +31,15 @@ npm run dev -- --host 127.0.0.1 --port 6463 --strictPort
 - `static/`
 
 Do not assume these are the only identity consumers. Search every retained route, data module, metadata definition and static asset before declaring a skin complete.
+
+Day Night is sample identity in this master. A dealer copy must replace its name,
+logos, contacts, map destinations, social/video links and any branded imagery with
+the selected dealer's sourced content. Check desktop and mobile headers, menus,
+footers, cards, metadata and every reachable route. Neutral service artwork may
+be reused when suitable; assets carrying sample branding must be replaced. Never
+mark identity QA complete from a config-only change. Follow the Cars
+[content and integration sweep](../../docs/LEAD-BUILD-GUARDRAILS.md#6-complete-the-content-and-integration-sweep)
+before a dealer copy is reviewed or published.
 
 ## Representative QA routes
 

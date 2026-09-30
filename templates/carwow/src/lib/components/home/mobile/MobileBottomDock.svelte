@@ -24,7 +24,6 @@
 	import { publicNavItems, daynightSite } from '$lib/data/daynight-site';
 	import { getOptionalGarageContext } from '$lib/state/garage.svelte';
 	import { onMount, tick } from 'svelte';
-	import '$lib/styles/mobile-entry-hero.css';
 
 	const homeHref = resolve('/');
 	const inventoryHref = resolve('/inventory');
@@ -35,6 +34,12 @@
 	const currentPath = $derived(routeParts(appPage.url.pathname).path);
 	const garage = getOptionalGarageContext();
 	const compareCount = $derived(garage.compare.length);
+	const localeSummaryId = $props.id();
+	const regionNames = $derived(new Intl.DisplayNames([i18n.locale], { type: 'region' }));
+	const languageNames = $derived(new Intl.DisplayNames([i18n.locale], { type: 'language' }));
+	const localeSummary = $derived(
+		`${regionNames.of(i18n.state.country) ?? i18n.state.country} · ${languageNames.of(i18n.locale) ?? i18n.locale.toUpperCase()}`
+	);
 	const isHome = $derived(currentPath === '/');
 	const isInventory = $derived(
 		currentPath === '/inventory' || currentPath.startsWith('/inventory/')
@@ -262,18 +267,10 @@
 		aria-label={i18n.t('copy.122f71765026')}
 		data-daynight-site-chrome
 	>
-		<div class="mobile-menu-sheet__head mobile-entry-menu-surface">
-			<div class="mobile-menu-sheet__brand">
-				<img
-					src={i18n.asset(resolve(daynightSite.logoLight))}
-					alt={daynightSite.shortName}
-					width="144"
-					height="38"
-				/>
-				<h2 id="mobile-menu-title" class="mobile-menu-sheet__title">
-					{i18n.t('copy.122f71765026')}
-				</h2>
-			</div>
+		<div class="mobile-menu-sheet__head">
+			<h2 id="mobile-menu-title" class="mobile-menu-sheet__title">
+				{i18n.t('copy.122f71765026')}
+			</h2>
 			<button
 				type="button"
 				aria-label={i18n.t('copy.1ef1a425356f')}
@@ -314,15 +311,23 @@
 		</div>
 
 		<div class="mobile-menu-sheet__locale">
-			<Globe2 size={20} strokeWidth={2} aria-hidden="true" />
 			<LocaleTrigger
 				fullLabel
+				describedBy={localeSummaryId}
 				beforeOpen={() => {
 					menuOpen = false;
 					return menuButton;
 				}}
-			/>
-			<span aria-hidden="true">{i18n.locale.toUpperCase()}</span>
+			>
+				<span class="mobile-menu-sheet__locale-icon" aria-hidden="true">
+					<Globe2 size={20} strokeWidth={2} />
+				</span>
+				<span class="mobile-menu-sheet__locale-copy">
+					<strong>{i18n.t('locale.title')}</strong>
+					<small id={localeSummaryId}>{localeSummary}</small>
+				</span>
+				<ChevronRight size={16} strokeWidth={2} aria-hidden="true" />
+			</LocaleTrigger>
 		</div>
 		<nav class="mobile-menu-sheet__nav" aria-label={i18n.t('copy.e638fc3afbee')}>
 			{#each menuItems as item (item.href)}
@@ -362,7 +367,7 @@
 		grid-template-columns: repeat(5, minmax(0, 1fr));
 		border-top: 1px solid var(--sa-line);
 		background: #fff;
-		padding: 4px 8px calc(4px + env(safe-area-inset-bottom));
+		padding: 3px 8px calc(3px + env(safe-area-inset-bottom));
 		transform: translateY(0);
 		transition:
 			transform 0.22s var(--sa-ease),
@@ -378,7 +383,7 @@
 	.mobile-bottom-dock__item {
 		display: grid;
 		min-width: 0;
-		min-height: 56px;
+		min-height: var(--sa-mobile-dock-item-h);
 		place-items: center;
 		align-content: center;
 		gap: 3px;
@@ -395,13 +400,13 @@
 	.mobile-bottom-dock__icon {
 		display: grid;
 		width: 44px;
-		height: 30px;
+		height: 24px;
 		place-items: center;
 		transition: color 150ms ease-out;
 	}
 	.mobile-bottom-dock__icon :global(svg) {
-		width: 26px;
-		height: 26px;
+		width: 22px;
+		height: 22px;
 	}
 	.mobile-bottom-dock__label {
 		color: inherit;
@@ -449,25 +454,14 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		padding: 12px 14px;
-		border-radius: 14px;
-	}
-	.mobile-menu-sheet__brand {
-		display: grid;
-		gap: 4px;
-		min-width: 0;
-	}
-	.mobile-menu-sheet__brand img {
-		display: block;
-		max-width: 100%;
-		object-fit: contain;
-		object-position: left center;
+		min-height: 44px;
+		padding: 0 0 4px;
 	}
 	.mobile-menu-sheet__title {
 		margin: 0;
-		color: #fff;
-		font-size: var(--sa-text-base);
-		font-weight: var(--sa-weight-medium);
+		color: var(--sa-ink);
+		font-size: var(--sa-mobile-type-section-title);
+		font-weight: var(--sa-weight-heading);
 		line-height: 1.2;
 	}
 	.mobile-menu-sheet__head button {
@@ -477,8 +471,8 @@
 		place-items: center;
 		border: 0;
 		border-radius: 12px;
-		background: rgba(255, 255, 255, 0.12);
-		color: #fff;
+		background: var(--sa-fill);
+		color: var(--sa-ink);
 		cursor: pointer;
 	}
 	.mobile-menu-sheet__quick {
@@ -507,8 +501,8 @@
 		color: #fff !important;
 	}
 	.mobile-menu-sheet__quick-action--map {
-		background: var(--sa-fill);
-		color: var(--sa-ink) !important;
+		background: var(--sa-ink);
+		color: #fff !important;
 	}
 	.mobile-menu-sheet__quick strong {
 		color: inherit;
@@ -554,24 +548,53 @@
 		color: #687280;
 	}
 	.mobile-menu-sheet__locale {
-		display: grid;
-		grid-template-columns: 24px minmax(0, 1fr) auto;
-		align-items: center;
-		gap: 10px;
-		padding: 0 12px;
-		border-bottom: 1px solid var(--sa-line);
 		color: #526071;
 	}
 	.mobile-menu-sheet__locale :global(.cars-locale-trigger) {
+		display: grid;
+		grid-template-columns: 36px minmax(0, 1fr) 16px;
+		align-items: center;
+		gap: 10px;
 		min-width: 0;
-		padding: 0;
+		min-height: 64px;
+		padding: 10px 12px;
+		border: 1px solid var(--sa-line);
+		border-radius: 12px;
+		background: var(--sa-fill);
 		color: var(--sa-ink);
 		font-size: var(--sa-text-base);
 		font-weight: var(--sa-weight-medium);
 	}
-	.mobile-menu-sheet__locale > span {
-		font-size: var(--sa-text-caption);
+	.mobile-menu-sheet__locale :global(.cars-locale-trigger:focus-visible) {
+		outline-offset: -3px;
+	}
+	.mobile-menu-sheet__locale-icon {
+		display: grid;
+		width: 36px;
+		height: 36px;
+		place-items: center;
+		border-radius: 10px;
+		background: #fff;
+		color: #526071;
+	}
+	.mobile-menu-sheet__locale-copy {
+		display: grid;
+		min-width: 0;
+		gap: 3px;
+	}
+	.mobile-menu-sheet__locale-copy strong {
+		font-size: var(--sa-mobile-type-body);
 		font-weight: var(--sa-weight-medium);
+		line-height: 1.25;
+	}
+	.mobile-menu-sheet__locale-copy small {
+		overflow: hidden;
+		color: #526071;
+		font-size: var(--sa-mobile-type-meta);
+		font-weight: var(--sa-weight-regular);
+		line-height: 1.25;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.mobile-menu-sheet__nav > a.is-current {
 		background: #fce8ed;
@@ -587,8 +610,9 @@
 		outline: 2px solid var(--sa-ink);
 		outline-offset: -2px;
 	}
-	.mobile-menu-sheet__head button:focus-visible {
+	.mobile-menu-sheet__quick-action:focus-visible {
 		outline-color: #fff;
+		outline-offset: -3px;
 	}
 	.mobile-menu-sheet :global(svg),
 	.mobile-menu-sheet :global(svg *) {

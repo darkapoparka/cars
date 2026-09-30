@@ -1,4 +1,4 @@
-/* Shared mobile quick filters: the inventory treatment also used on home. */
+/* Shared mobile quick filters across Home, Inventory and Import. */
 .mobile-quick-pills {
 	display: flex;
 	flex-wrap: nowrap;

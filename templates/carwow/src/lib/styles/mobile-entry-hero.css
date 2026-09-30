@@ -1,6 +1,5 @@
-/* Shared dark entry surface for Home, Sell, Import and the mobile menu. */
-.mobile-entry-hero,
-.mobile-entry-menu-surface {
+/* Shared dark entry surface for Home, Sell and Import. */
+.mobile-entry-hero {
 	background: linear-gradient(165deg, #181a1e 0%, #08090b 62%, #050505 100%);
 	color: #fff;
 }

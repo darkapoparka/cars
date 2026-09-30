@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getI18n } from '$lib/locale/context';
+	import '$lib/styles/mobile-quick-pills.css';
 	const i18n = getI18n();
 
 	import { onDestroy } from 'svelte';
@@ -282,16 +283,16 @@
 				</div>
 			</section>
 		{:else}
-			<nav class="import-origins" aria-label={i18n.t('copy.30a3d2e54b40')}>
+			<nav class="import-origins mobile-quick-pills" aria-label={i18n.t('copy.30a3d2e54b40')}>
 				{#each originOptions as option (option.code)}
 					<button
 						type="button"
-						class:active={selectedOrigin === option.code}
+						class:is-active={selectedOrigin === option.code}
 						onclick={() => (selectedOrigin = option.code)}
 						aria-pressed={selectedOrigin === option.code}
 					>
 						{#if option.code === 'XX'}
-							<Globe2 size={17} strokeWidth={2.2} aria-hidden="true" />
+							<Globe2 size={16} strokeWidth={2.2} aria-hidden="true" />
 						{:else}
 							<span
 								class={`import-origin-flag import-origin-flag--${option.code.toLowerCase()}`}
@@ -486,50 +487,25 @@
 	}
 
 	.import-origins {
-		display: flex;
-		gap: 7px;
-		overflow-x: auto;
+		--mobile-quick-pills-padding: 0 2px 2px;
+
 		margin-inline: -2px;
-		padding: 0 2px 2px;
-		scrollbar-width: none;
-		-webkit-overflow-scrolling: touch;
-	}
-	.import-origins::-webkit-scrollbar {
-		display: none;
 	}
 	.import-origins button {
-		display: inline-flex;
-		min-height: var(--sa-mobile-pill-h);
-		flex: 0 0 auto;
-		align-items: center;
-		justify-content: center;
-		gap: 7px;
-		border: 0;
-		border-radius: var(--sa-pill-radius);
-		background: var(--sa-fill);
-		color: #25303b;
-		font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
-			var(--sa-font);
-		padding: 0 13px;
 		cursor: pointer;
-		white-space: nowrap;
 		-webkit-tap-highlight-color: transparent;
 	}
-	.import-origins button.active {
+	.import-origins button.is-active {
 		border-color: var(--sa-red);
 		background: var(--sa-red);
 		color: #fff;
 		box-shadow: none;
 	}
-	.import-origins button:focus-visible {
-		outline: 2px solid var(--sa-red);
-		outline-offset: 2px;
-	}
 	.import-origin-flag {
 		position: relative;
 		display: inline-block;
-		width: 20px;
-		height: 14px;
+		width: 18px;
+		height: 12px;
 		flex: 0 0 auto;
 		overflow: hidden;
 		border: 1px solid rgba(15, 20, 23, 0.12);
@@ -548,7 +524,7 @@
 		inset: 0;
 		color: #ffd43b;
 		font-size: var(--sa-text-caption);
-		line-height: 11px;
+		line-height: 9px;
 		text-align: center;
 	}
 	.import-origin-flag--us {
@@ -573,8 +549,8 @@
 		height: 7px;
 		border-radius: 50%;
 		background: #bc002d;
-		top: 3px;
-		left: 6px;
+		top: 2px;
+		left: 5px;
 	}
 	.import-origin-flag--cn {
 		background: #de2910;
