@@ -20,6 +20,9 @@ export const nativeText = (files, name) => {
 };
 export const nativeWrite = (files, name, text) => files.set(name, Buffer.from(text));
 const stableHash = value => sha256(JSON.stringify(value));
+const sameSource = (left, right) => left && right &&
+  JSON.stringify(Object.keys(left).sort()) === JSON.stringify(Object.keys(right).sort()) &&
+  ['repository','revision','path','tree','digest'].every(field => left[field] === right[field]);
 
 // Parse catalog JSON without executing TypeScript, getters or supplied JavaScript.
 // Duplicate keys are errors, including escaped duplicates JSON.parse would discard.
@@ -164,7 +167,7 @@ export function sealNativeAdoption(files, manifest, releases) {
     const release = releases[key], review = validateNativeRelease(key, release);
     const selectedRevision = release.source?.revision || release.commit;
     if (selectedRevision !== manifest.templateRevisions[key]) throw new Error(`${key}: native release differs from selected revision`);
-    if (release.source && JSON.stringify(manifest.templateSources?.[key]) !== JSON.stringify(release.source)) throw new Error(`${key}: native source locator differs from selected release`);
+    if (release.source && !sameSource(manifest.templateSources?.[key], release.source)) throw new Error(`${key}: native source locator differs from selected release`);
     auditNativeCatalogs(files, key, review.catalogs);
     selected[key] = { status: 'approved', repository: release.repository, commit: release.commit, digest: release.digest,
       ...(release.source ? { source: release.source, snapshotPath: release.snapshotPath } : {}),
@@ -195,7 +198,7 @@ export function assertNativeAdoption(files, manifest) {
     const release = receipt.releases[key], review = validateNativeRelease(key, release);
     const selectedRevision = release.source?.revision || release.commit;
     if (selectedRevision !== manifest.templateRevisions[key]) throw new Error(`${key}: stale native revision`);
-    if (release.source && JSON.stringify(manifest.templateSources?.[key]) !== JSON.stringify(release.source)) throw new Error(`${key}: stale native source locator`);
+    if (release.source && !sameSource(manifest.templateSources?.[key], release.source)) throw new Error(`${key}: stale native source locator`);
     auditNativeCatalogs(files, key, review.catalogs);
   }
   const actual = nativeInputDigest(files, manifest);

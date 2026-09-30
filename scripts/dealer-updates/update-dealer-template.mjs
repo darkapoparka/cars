@@ -1,7 +1,8 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createRequire } from 'node:module';
 import { fingerprint } from '../lib/workflow.mjs';
 import { validatePackagingManifest, packageRetainsPath } from '../package-dealer.mjs';
 import { applyMounts } from '../publishing/mounts.mjs';
@@ -25,6 +26,7 @@ const TEMPLATE_KEYS = ['auto-best', 'modern', 'carwow', 'import', 'app'];
 const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
 const writeJsonExclusive = (file, value) => fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`, { flag: 'wx' });
+let catalogGeneration = 0;
 
 export const updateDealerTemplateUsage = `
 Opt in to a template update for one existing dealer.
@@ -45,7 +47,7 @@ function parseCommand(argv) {
   const [action, ...rest] = argv;
   if (!['plan', 'install', 'rollback'].includes(action)) throw new Error(`Unknown action: ${action}\n${updateDealerTemplateUsage}`);
   const allowed = {
-    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file']),
+    plan: new Set(['dealer-root', 'cars-root', 'template-root', 'lock-file', 'run-dir', 'candidate-dir', 'resolutions-file', 'asset-pool']),
     install: new Set(['run-dir']),
     rollback: new Set(['run-dir', 'dealer-root'])
   }[action];
@@ -313,17 +315,41 @@ function writeDirectoryTreeChanges(root, before, after) {
   }
 }
 
-function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock) {
+export async function regenerateDealerCatalogs(candidateDirectory, carsRoot = defaultCarsRoot()) {
+  for (const key of ['auto-best', 'carwow']) {
+    const directory = path.join(candidateDirectory, key);
+    if (!fs.existsSync(directory)) continue;
+    const scriptFile = path.join(directory, 'scripts/build-locales.mjs');
+    let script = fs.readFileSync(scriptFile, 'utf8');
+    const rootStatement = "const root = path.resolve(import.meta.dirname, '..');";
+    if (script.split(rootStatement).length !== 2) throw new Error(`${key}: unreviewed catalog generator root`);
+    script = script.replace(rootStatement, `const root = ${JSON.stringify(directory)};`)
+      .replace("from './locale-catalog.mjs'", `from ${JSON.stringify(pathToFileURL(path.join(directory, 'scripts/locale-catalog.mjs')).href)}`);
+    if (script.includes("from 'prettier'")) {
+      const require = createRequire(path.join(carsRoot, 'templates', key, 'package.json'));
+      script = script.replace("from 'prettier'", `from ${JSON.stringify(pathToFileURL(require.resolve('prettier')).href)}`);
+      // These generated files are TS object literals and JSON. UI plugins are
+      // unnecessary and resolve their stylesheet relative to the caller cwd.
+      script = script.replaceAll('...prettierOptions, parser:',
+        '...prettierOptions, plugins: [], parser:');
+    }
+    // Execute the existing reviewed generator against this derived source only.
+    await import(`data:text/javascript;base64,${Buffer.from(script).toString('base64')}#${++catalogGeneration}`);
+  }
+}
+
+async function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt} = {}) {
   if (!['2', APP_PACKAGING_VERSION].includes(plan.manifest.packaging.version)) {
     reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
     return;
   }
+  await regenerateDealerCatalogs(candidateDirectory, carsRoot);
   const files = readDirectoryTree(candidateDirectory);
   const before = new Map([...files].map(([name, bytes]) => [name, Buffer.from(bytes)]));
   const candidateManifest = JSON.parse(files.get('dealer.json').toString('utf8').replace(/^\uFEFF/, ''));
   validatePackagingManifest(candidateManifest);
   const baseManifest = baseNativeManifest(candidateManifest);
-  const adopted = adoptNativeSource(files, baseManifest, lock.templates);
+  const adopted = adoptNativeSource(new Map([...files].filter(([name]) => packageRetainsPath(name))), baseManifest, lock.templates);
   assertNativeAdoption(adopted, baseManifest);
   if (candidateManifest.packaging.version === APP_PACKAGING_VERSION) {
     const appSource = candidateManifest.templateSources.app;
@@ -337,13 +363,15 @@ function addNativeAdoption(plan, candidateDirectory, dealerRoot, lock) {
     const receipt = JSON.parse(adopted.get('.cars-app.json').toString('utf8'));
     receipt.template = appSource;
     receipt.appDigest = sha256(Buffer.from(JSON.stringify([...appFiles].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, bytes]) => [name, sha256(bytes)]))));
-    receipt.refreshedAt = new Date().toISOString();
+    receipt.refreshedAt = refreshedAt;
     adopted.set('.cars-app.json', Buffer.from(JSON.stringify(receipt, null, 2) + '\n'));
     adopted.set('dealer.json', Buffer.from(JSON.stringify(candidateManifest, null, 2) + '\n'));
     assertAppVariant(new Map([...adopted].filter(([name]) => packageRetainsPath(name))), candidateManifest);
     plan.manifest = candidateManifest;
   }
-  writeDirectoryTreeChanges(candidateDirectory, before, adopted);
+  // Retain excluded dealer work in source; it is not part of the publish seal.
+  const diskFiles = new Map([...files, ...adopted]);
+  writeDirectoryTreeChanges(candidateDirectory, before, diskFiles);
   reconcilePlanWithCandidate({ source: dealerRoot, plan, candidateDirectory });
 }
 
@@ -430,6 +458,7 @@ function renderPins(pins) {
 }
 
 async function runPlan(values) {
+  const createdAt = new Date().toISOString();
   const carsRoot = fs.realpathSync(path.resolve(values['cars-root'] || defaultCarsRoot()));
   const dealerRoot = fs.realpathSync(required(values, 'dealer-root'));
   const manifestPath = path.join(dealerRoot, 'dealer.json');
@@ -478,15 +507,17 @@ async function runPlan(values) {
   }
 
   const adapted = await adaptPinnedBases({ keys: Object.keys(pins), oldBases, newBases, manifest, targetManifest });
+  const assetPool=values['asset-pool']?ensureCandidateDirectory({carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:values['asset-pool'],explicit:true}):null;
+  if(assetPool&&pathsOverlap(assetPool,candidatePath))throw new Error('Derived asset pool must be separate from the candidate');
   const plan = planDealerUpgrade({ dealerRoot, lock, oldBases: adapted.oldBases, newBases: adapted.newBases, targetManifest: adapted.targetManifest, resolutions });
   let candidateDirectory = null, candidateDigest = null;
   if (plan.ready) {
     candidateDirectory = materializeUpgradeCandidate({
       source: dealerRoot,
       plan,
-      destination: candidatePath
+      destination: candidatePath, assetPool
     });
-    addNativeAdoption(plan, candidateDirectory, dealerRoot, lock);
+    await addNativeAdoption(plan, candidateDirectory, dealerRoot, lock, {carsRoot, refreshedAt: createdAt});
     candidateDigest = fingerprint(candidateDirectory).digest;
   }
   const review = upgradeReviewReport(plan);
@@ -496,7 +527,7 @@ async function runPlan(values) {
 
   const metadata = {
     schemaVersion: 1,
-    createdAt: new Date().toISOString(),
+    createdAt,
     dealerRoot,
     dealerSlug: manifest.slug,
     carsRoot,
@@ -515,6 +546,7 @@ async function runPlan(values) {
     reviewSha256: sha256(reviewBytes),
     reviewDigest: sha256(Buffer.from(JSON.stringify(review))),
     candidateDirectory,
+    assetPool,
     candidateDigest
   };
   writeJsonExclusive(path.join(runDirectory, 'run.json'), metadata);
@@ -551,6 +583,7 @@ async function runInstall(values) {
   const lock = JSON.parse(lockBytes.toString('utf8').replace(/^\uFEFF/, ''));
   const paths = repositoryPaths(metadata.carsRoot, metadata.templateRoot);
   validateRepositoryPaths(metadata.pins, paths);
+  if(metadata.assetPool)ensureCandidateDirectory({carsRoot:metadata.carsRoot,dealerRoot,repositoryPaths:paths,runDirectory,requested:metadata.assetPool,explicit:true});
   const candidateDirectory = ensureCandidateDirectory({
     carsRoot: metadata.carsRoot,
     dealerRoot,
@@ -600,8 +633,8 @@ async function runInstall(values) {
     fs.mkdirSync(path.dirname(candidateDirectory), { recursive: true });
     const validationCandidate = fs.mkdtempSync(path.join(path.dirname(candidateDirectory), '.cars-upgrade-validation-'));
     try {
-      materializeUpgradeCandidate({ source: dealerRoot, plan, destination: validationCandidate });
-      addNativeAdoption(plan, validationCandidate, dealerRoot, lock);
+      materializeUpgradeCandidate({ source: dealerRoot, plan, destination: validationCandidate, assetPool: metadata.assetPool });
+      await addNativeAdoption(plan, validationCandidate, dealerRoot, lock, {carsRoot: metadata.carsRoot, refreshedAt: metadata.createdAt});
       recomputedReview = upgradeReviewReport(plan);
     } finally {
       fs.rmSync(validationCandidate, { recursive: true, force: true });

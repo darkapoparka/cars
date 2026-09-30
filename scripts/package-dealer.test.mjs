@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto';
 import { stripTypeScriptTypes } from 'node:module';
 import { spawnSync } from 'node:child_process';
 import test from 'node:test';
-import { packageDealer, planDealerPackage } from './package-dealer.mjs';
+import { committedDealerInputs, packageDealer, planDealerPackage } from './package-dealer.mjs';
 import { fixSvelteServiceOutput } from './publishing/fix-svelte-service-output.mjs';
 import {verifyPackage} from './export-dealer.mjs';
 import {normalized} from './lib/workflow.mjs';
@@ -328,4 +328,30 @@ test('native localization is rejected before legacy mounting or destination writ
   await assert.rejects(() => packageDealer({ ...options, canonicalFiles: new Map() }), { code: 'NATIVE_LOCALE_PACKAGER_REQUIRED' });
   assert.deepEqual(await tree(options.source), withNative);
   assert.equal(await fs.access(options.destination).then(() => true, () => false), false);
+});
+
+test('derived package callers keep committed-source drift and deletion guards', async t => {
+  const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'cars-committed-inputs-'));
+  t.after(() => fs.rm(directory, {recursive:true, force:true}));
+  const source = path.join(directory, 'clients', 'fixture-cars');
+  const manifest = {...manifestFor(), extraAssets:[]};
+  await put(source, 'dealer.json', JSON.stringify(manifest,null,2)+'\n');
+  for (const {key} of manifest.variants) await put(source, key+'/package.json', '{}\n');
+  await put(source, 'auto-best/src/identity.ts', 'export const name = "Dealer";\n');
+  const gitRun = args => {
+    const r=spawnSync('git',['-C',directory,...args],{encoding:'utf8',windowsHide:true});
+    assert.equal(r.status,0,r.stderr);return r.stdout.trim();
+  };
+  gitRun(['init','-q']);gitRun(['config','user.email','fixture@example.invalid']);gitRun(['config','user.name','Fixture']);gitRun(['config','core.autocrlf','false']);
+  gitRun(['add','clients']);gitRun(['commit','-qm','Fixture']);
+  const options={root:directory,source,manifest,sourceCommit:gitRun(['rev-parse','HEAD']),prefix:'clients/fixture-cars'};
+  await put(source,'auto-best/src/draft.ts','uncommitted draft');
+  await put(source,'auto-best/src/identity.ts','export const name = "Dealer";\r\n');
+  const inputs=await committedDealerInputs(options);
+  assert.deepEqual(inputs.untrackedExcluded,['auto-best/src/draft.ts']);
+  assert(inputs.canonicalFiles.has('auto-best/src/identity.ts'));
+  await put(source,'auto-best/src/identity.ts','export const name = "Changed";\n');
+  await assert.rejects(()=>committedDealerInputs(options),/Retained canonical source differs/);
+  await fs.unlink(path.join(source,'auto-best/src/identity.ts'));
+  await assert.rejects(()=>committedDealerInputs(options),/identity.ts \(deleted\)/);
 });

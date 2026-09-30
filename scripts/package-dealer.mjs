@@ -12,6 +12,7 @@ import { assertLegacyLocaleCompatible } from './lib/dealer-locale.mjs';
 import { NATIVE_PACKAGING_VERSION, assertNativeAdoption } from './lib/native-localization.mjs';
 import { adoptNativeSource, applyNativeMounts } from './publishing/native-mounts.mjs';
 import { applySharedMedia } from './publishing/shared-media.mjs';
+import {writeDerivedFile} from './lib/derived-assets.mjs';
 
 export const PACKAGING_VERSION = '1';
 const ROOT = path.resolve(import.meta.dirname, '..');
@@ -248,6 +249,7 @@ async function verifyPreparedSource(prepared) {
 export async function packageDealer(options) {
   const prepared = await prepare(options);
   const destination = await validateDestination(prepared.resolvedSource, options.destination);
+  if(options.assetPool){const pool=path.resolve(options.assetPool);if(contained(prepared.resolvedSource,pool)||contained(pool,prepared.resolvedSource)||contained(destination,pool)||contained(pool,destination))throw new Error('Derived asset pool must be separate from source and package');}
   await fs.mkdir(path.dirname(destination), { recursive: true });
   // A testable boundary; every input is rechecked after caller activity. The CLI exposes no callback.
   if (options.beforeInstall) await options.beforeInstall();
@@ -258,7 +260,7 @@ export async function packageDealer(options) {
     for (const [name, content] of [...prepared.files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)) {
       const target = path.join(destination, name);
       await fs.mkdir(path.dirname(target), { recursive: true });
-      await fs.writeFile(target, content, { flag: 'wx' });
+      writeDerivedFile(target, content, {assetPool: options.assetPool});
     }
     await verifyPreparedSource(prepared);
   } catch (error) {
@@ -268,6 +270,27 @@ export async function packageDealer(options) {
     throw error;
   }
   return { destination, files: [...prepared.files.keys()].sort(), digest: prepared.digest, packagingVersion: prepared.packagingVersion };
+}
+
+/** Use the CLI's exact committed-source checks for callers writing derived packages elsewhere. */
+export async function committedDealerInputs({root = ROOT, source, manifest, sourceCommit, prefix}) {
+  const retained = await collectSource(source, manifest);
+  const tracked = new Map(gitFiles(root, sourceCommit, {prefix, filter:p=>retainedAtCommit(p,manifest)}).map(f=>[f.path,f]));
+  const untrackedExcluded=[...retained.keys()].filter(name=>!tracked.has(name));
+  for(const name of untrackedExcluded)retained.delete(name);
+  for(const extra of manifest.extraAssets ?? [])if(![...tracked.keys()].some(p=>p===extra||p.startsWith(extra+'/')))throw new Error(`Declared extra path is not committed: ${extra}`);
+  const mismatches=[];
+  for (const [name,content] of [...retained,['dealer.json',Buffer.from(json(manifest))]]) {
+    const entry=tracked.get(name);
+    if(!entry){mismatches.push(name);continue;}
+    const bytes=normalized(content);
+    const hash=createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
+    const blob=entry.blob;
+    if(hash!==blob){const original=git(root,['cat-file','blob',blob],{encoding:null});if(!normalized(content).equals(normalized(original)))mismatches.push(name);}
+  }
+  for (const name of tracked.keys()) if (name !== 'dealer.json' && !retained.has(name)) mismatches.push(name + ' (deleted)');
+  if(mismatches.length)throw new Error(`Retained canonical source differs from ${sourceCommit}: ${mismatches.slice(0,8).join(', ')} (${mismatches.length} paths). Commit the scoped source first or select its exact --source-commit.`);
+  return {canonicalFiles: retained, untrackedExcluded};
 }
 
 async function main(args) {
@@ -295,23 +318,7 @@ async function main(args) {
   const revision = spawnSync('git', ['-C', ROOT, 'rev-parse', 'HEAD'], { encoding: 'utf8', windowsHide: true });
   if (revision.status !== 0) throw new Error(revision.stderr || 'Cannot read Cars source commit');
   const sourceCommit = options['source-commit'] || revision.stdout.trim();
-  const retained = await collectSource(source, manifest);
-  const tracked = new Map(gitFiles(ROOT, sourceCommit, {prefix:`clients/${options.client}`, filter:p=>retainedAtCommit(p,manifest)}).map(f=>[f.path,f]));
-  const untrackedExcluded=[...retained.keys()].filter(name=>!tracked.has(name));
-  for(const name of untrackedExcluded)retained.delete(name);
-  for(const extra of manifest.extraAssets ?? [])if(![...tracked.keys()].some(p=>p===extra||p.startsWith(extra+'/')))throw new Error(`Declared extra path is not committed: ${extra}`);
-  const mismatches=[];
-  for (const [name,content] of [...retained,['dealer.json',Buffer.from(json(manifest))]]) {
-    const entry=tracked.get(name);
-    if(!entry){mismatches.push(name);continue;}
-    const bytes=normalized(content);
-    const hash=createHash('sha1').update(`blob ${bytes.length}\0`).update(bytes).digest('hex');
-    // Git's object hash is stable across CRLF-normalized source text.
-    const blob=entry.blob;
-    if(hash!==blob){const original=git(ROOT,['cat-file','blob',blob],{encoding:null});if(!normalized(content).equals(normalized(original)))mismatches.push(name);}
-  }
-  for (const name of tracked.keys()) if (name !== 'dealer.json' && !retained.has(name)) mismatches.push(name + ' (deleted)');
-  if(mismatches.length)throw new Error(`Retained canonical source differs from ${sourceCommit}: ${mismatches.slice(0,8).join(', ')} (${mismatches.length} paths). Commit the scoped source first or select its exact --source-commit.`);
+  const {canonicalFiles: retained, untrackedExcluded} = await committedDealerInputs({root: ROOT, source, manifest, sourceCommit, prefix:`clients/${options.client}`});
   const result = await (write ? packageDealer : planDealerPackage)({ source, destination, manifest, sourceCommit, canonicalFiles:retained, guidance:dealerGuidance({slug:manifest.slug,variants:manifest.variants,workflowCommit:sourceCommit}) });
   console.log(json({ mode: write ? 'write' : 'dry-run', ...result, fileCount: result.files.length, files: undefined,untrackedExcluded }).trim());
 }

@@ -81,6 +81,19 @@ test('adoption binds full native source and rejects changes after review', t => 
   const stale = structuredClone(f.manifest); stale.templateRevisions.modern = '9'.repeat(40);
   assert.throws(() => assertNativeAdoption(adopted, stale), /stale/);
 });
+
+test('Cars native source locators accept property reordering and reject changed identity', t => {
+  const f=setup(t);f.manifest.templateSources={};
+  for(const {key} of f.manifest.variants){
+    const release=f.releases[key],source={repository:'darkapoparka/cars',revision:release.commit,path:`templates/${key}`,tree:'a'.repeat(40),digest:release.digest};
+    release.repository=source.repository;release.source=source;release.snapshotPath=source.path;
+    Object.assign(release.qa.nativeLocalization,{repository:source.repository,sourcePath:source.path,sourceTree:source.tree});
+    f.manifest.templateSources[key]=Object.fromEntries(Object.entries(source).reverse());
+  }
+  const adopted=adoptNativeSource(f.files,f.manifest,f.releases);assertNativeAdoption(adopted,f.manifest);
+  const changed=structuredClone(f.manifest);changed.templateSources.modern.tree='b'.repeat(40);
+  assert.throws(()=>assertNativeAdoption(adopted,changed),/stale native source locator/);
+});
 test('release promotion needs exact reviewed source, tests, deployment and public alias', t => {
   const f = setup(t);
   assert.equal(nativeReleaseReadiness(f.manifest.variants, f.releases).ready, true);

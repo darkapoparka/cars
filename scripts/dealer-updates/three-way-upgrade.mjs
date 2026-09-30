@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
+import {writeDerivedFile} from '../lib/derived-assets.mjs';
 
 const TEXT_EXTENSIONS = new Set([
   '.cjs', '.css', '.html', '.js', '.json', '.md', '.mjs', '.svelte', '.ts', '.tsx', '.txt', '.xml', '.yaml', '.yml'
@@ -21,6 +22,7 @@ function ignoredFile(name) {
 
 const sha256 = value => crypto.createHash('sha256').update(value).digest('hex');
 const exists = file => fs.existsSync(file);
+const diffCache = new Map();
 const normalizedText = bytes => Buffer.from(bytes.toString('utf8').replace(/\r\n/g, '\n'));
 
 function safeRelative(value) {
@@ -461,6 +463,13 @@ export function planThreeWayUpgrade({ oldBase, newBase, dealer, resolutions = {}
 }
 
 export function unifiedDiff(beforeBytes, afterBytes, labels = ['dealer', 'candidate']) {
+  const key=JSON.stringify([labels,sha256(beforeBytes??Buffer.alloc(0)),sha256(afterBytes??Buffer.alloc(0))]);
+  if(diffCache.has(key))return diffCache.get(key);
+  const result=computeUnifiedDiff(beforeBytes,afterBytes,labels);
+  if(diffCache.size>=2048)diffCache.delete(diffCache.keys().next().value);
+  diffCache.set(key,result);return result;
+}
+function computeUnifiedDiff(beforeBytes, afterBytes, labels) {
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'cars-upgrade-diff-'));
   try {
     const before = path.join(temp, 'before');
@@ -490,7 +499,7 @@ export function writeCandidateTree(plan, destination) {
 }
 
 /** Materialize the full buildable dealer source under runtime without touching its checkout. */
-export function materializeUpgradeCandidate({ source, plan, destination }) {
+export function materializeUpgradeCandidate({ source, plan, destination, assetPool }) {
   if (!plan?.ready) throw new Error('Unresolved template conflicts block candidate materialization');
   const target = path.resolve(destination);
   assertOutsideSource(source, target, 'Candidate destination');
@@ -509,7 +518,7 @@ export function materializeUpgradeCandidate({ source, plan, destination }) {
   for (const [name, bytes] of finalFiles) {
     const file = path.join(target, safeRelative(name));
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, bytes, { flag: 'wx' });
+    writeDerivedFile(file, bytes, {assetPool});
   }
   return target;
 }
