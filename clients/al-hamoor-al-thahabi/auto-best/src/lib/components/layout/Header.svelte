@@ -14,7 +14,8 @@
   import NavigationFeatureCard from './NavigationFeatureCard.svelte';
   import ActionLink from '$components/ui/ActionLink.svelte';
   import MobileMenu from './MobileMenu.svelte';
-  import MobileNavIcon from './MobileNavIcon.svelte';
+  import MobileNavIcon from './MobileActionIcon.svelte';
+  import BottomNavIcon from './BottomNavIcon.svelte';
   import { vehicleContactHref } from '$data/journeys';
   import { brand } from '$config/brand';
   import { navigation, type InternalNavigationHref, type MegaMenu, type NavigationHref, type NavigationItem } from '$data/navigation';
@@ -160,6 +161,7 @@
       await tick();
       mobileReturnFocus?.focus();
     }
+    return mobileReturnFocus;
   };
 
   const handleWindowKeydown = (event: KeyboardEvent) => {
@@ -305,14 +307,14 @@
 
           <div class="dn-mobile-controls">
             <a class="dn-mobile-control" href={i18n.href(resolve('/contact'))} aria-label={i18n.t("m_8dc51841d515")}>
-              <MobileNavIcon name="location" size={20} />
+              <MobileNavIcon name="location" size={22} />
             </a>
             <a
               class="dn-mobile-control dn-mobile-control--call"
               {...phoneLinkAttributes}
               aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}
             >
-              <MobileNavIcon name="phone" size={20} />
+              <MobileNavIcon name="phone" size={22} />
             </a>
             {#if vehicleDetailHeader}
             <button
@@ -342,43 +344,43 @@
       <nav class="dn-mobile-detail-bar" aria-label={i18n.t("m_4c09f960cece")}>
         <a class="dn-mobile-detail-bar__secondary" href={i18n.href(resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'))} title={i18n.t("m_be4b2e6f02d6")}>{i18n.t("action.viewingShort")}</a>
         <a class="dn-mobile-detail-bar__primary" {...phoneLinkAttributes} aria-label={`${i18n.t("action.callShort")} — ${brand.phone}`}>
-          <MobileNavIcon name="phone" size={20} />
+          <MobileNavIcon name="phone" size={22} />
           {i18n.t("action.callShort")}
         </a>
       </nav>
     {:else}
-      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} aria-label={i18n.t("m_a690e455afe4")}>
+      <nav class="dn-mobile-bottom-nav" class:dn-mobile-bottom-nav--footer-visible={mobileFooterVisible} inert={mobileFooterVisible} aria-label={i18n.t("m_a690e455afe4")}>
         <a
           class:active={presentation.mobileNavigation.home}
           href={i18n.href(resolve('/'))}
           aria-current={presentation.mobileNavigation.home ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="home" /></span>
-          <span>{i18n.t("m_3a78695388b3")}</span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="home" /></span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("m_3a78695388b3")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.listing}
           href={i18n.href(resolve('/listing-grid'))}
           aria-current={presentation.mobileNavigation.listing ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="cars" /></span>
-          <span>{i18n.t("nav.carsCompact")}</span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="cars" /></span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("nav.carsCompact")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.tradeIn}
           href={i18n.href(resolve('/contact?topic=trade-in'))}
           aria-current={presentation.mobileNavigation.tradeIn ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="sell" /></span>
-          <span>{i18n.t("nav.sellCompact")}</span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="sell" /></span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("nav.sellCompact")}</span>
         </a>
         <a
           class:active={presentation.mobileNavigation.import}
           href={i18n.href(resolve('/contact?topic=import'))}
           aria-current={presentation.mobileNavigation.import ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="import" /></span>
-          <span>{i18n.t("m_2cff9baabf56")}</span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="import" /></span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("m_2cff9baabf56")}</span>
         </a>
         <button
           class:active={presentation.mobileNavigation.menu}
@@ -387,8 +389,8 @@
           aria-expanded={mobileOpen}
           onclick={openMobile}
         >
-          <span class="dn-mobile-bottom-nav__icon"><MobileNavIcon name="menu" /></span>
-          <span>{i18n.t("m_99af6606ff9d")}</span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="menu" /></span>
+          <span class="dn-mobile-bottom-nav__label">{i18n.t("m_99af6606ff9d")}</span>
         </button>
       </nav>
     {/if}
@@ -440,12 +442,18 @@
   .dn-mega__side-action > :global(.dn-mega__cta) { width: 100%; min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; }
 
   @media (min-width: 992px) {
+    .dn-header__lower { container-type: inline-size; }
     .dn-header-actions { justify-self: end; white-space: nowrap; }
     .dn-topbar__list { gap: var(--dn-space-4); font-size: var(--dn-text-meta); }
     .dn-topbar__settings { flex-shrink: 0; }
     .dn-header:not(.dn-header--compact) .dn-header__inner { min-height: 84px; }
     .dn-topbar, .dn-topbar__inner { min-height: 44px; }
     .dn-header:not(.dn-header--compact) .dn-logo img { height: 56px; }
+
+    /* Let enlarged action labels fit their column without covering navigation. */
+    @container (max-width: 60rem) {
+      .dn-header-actions { flex-direction: column; align-items: stretch; }
+    }
   }
 
   @media (min-width: 992px) and (max-width: 1359px) {
@@ -610,15 +618,17 @@
     }
 
     .dn-mobile-bottom-nav {
+      container-type: inline-size;
       display: grid;
-      height: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom));
+      min-height: calc(var(--dn-mobile-nav-bar-height) + env(safe-area-inset-bottom));
       grid-template-columns: repeat(5, minmax(0, 1fr));
-      padding-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right));
-      padding-top: 3px;
+      padding: var(--dn-space-1) max(var(--dn-space-3), env(safe-area-inset-right)) calc(var(--dn-space-1) + env(safe-area-inset-bottom)) max(var(--dn-space-3), env(safe-area-inset-left));
+      border-top-color: var(--dn-line);
       transition: transform 180ms ease, opacity 150ms ease;
     }
 
     .dn-mobile-bottom-nav--footer-visible {
+      visibility: hidden;
       opacity: 0;
       pointer-events: none;
       transform: translateY(100%);
@@ -629,55 +639,77 @@
       position: relative;
       display: grid;
       min-width: 0;
-      min-height: 52px;
+      min-height: var(--dn-control-height-default);
       place-items: center;
       align-content: center;
-      grid-template-rows: 26px auto;
-      gap: 2px;
-      padding: 4px 1px;
+      grid-template-rows: 24px auto;
+      gap: var(--dn-space-half);
+      padding: 3px 0;
       border: 0;
-      border-radius: 10px;
+      border-radius: var(--dn-radius);
       background: transparent;
-      color: #4f5662;
+      color: var(--dn-ink);
       font: inherit;
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-regular);
+      font-size: var(--dn-text-caption);
+      font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
       cursor: pointer;
+      white-space: nowrap;
+      text-align: center;
     }
 
     .dn-mobile-bottom-nav a.active,
     .dn-mobile-bottom-nav button.active {
-      color: var(--dn-ink);
+      background: transparent;
+      color: var(--dn-red);
       font-weight: var(--dn-weight-semibold);
     }
 
-    .dn-mobile-bottom-nav :is(a.active, button.active) :global(.dn-icon *) {
-      stroke-width: 2;
+    .dn-mobile-bottom-nav :is(a.active, button.active) .dn-mobile-bottom-nav__icon {
+      color: inherit;
     }
 
     .dn-mobile-bottom-nav__icon {
       display: grid;
-      width: 48px;
-      height: 26px;
+      width: 24px;
+      height: 24px;
       place-items: center;
-      border-radius: var(--dn-radius-button);
     }
 
     .dn-mobile-bottom-nav :global(.dn-icon) {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
     }
 
-    .dn-mobile-bottom-nav a:active,
-    .dn-mobile-bottom-nav button:active {
-      background: #f2f3f5;
+    .dn-mobile-bottom-nav a:not(.active):active,
+    .dn-mobile-bottom-nav button:not(.active):active {
+      color: var(--dn-red);
     }
 
     .dn-mobile-bottom-nav a:focus-visible,
     .dn-mobile-bottom-nav button:focus-visible {
-      outline: 2px solid #202329;
+      outline: 2px solid var(--dn-focus);
       outline-offset: -2px;
+    }
+
+    /* Normal phone widths keep labels; enlarged text retains complete accessible names. */
+    @container (max-width: 15rem) {
+      .dn-mobile-bottom-nav__label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+
+      .dn-mobile-bottom-nav a,
+      .dn-mobile-bottom-nav button {
+        grid-template-rows: 24px;
+        gap: 0;
+      }
     }
 
     .dn-mobile-detail-bar {
@@ -698,6 +730,7 @@
       border-radius: var(--dn-radius-button);
       font-size: var(--dn-text-body);
       font-weight: var(--dn-control-weight);
+      line-height: var(--dn-leading-control);
       text-align: center;
     }
 
@@ -802,12 +835,12 @@
 
   @media (max-width: 991px) {
     .dn-header-fixed .dn-header .dn-mobile-controls :is(.dn-mobile-control, .dn-mobile-toggle) {
-      border: 1px solid #e0e3e7;
-      background: #f1f2f4;
-      color: #202329;
+      border: 0;
+      background: transparent;
+      color: var(--dn-ink);
     }
     .dn-header-fixed:is(.dn-header-fixed--home-overlay, .dn-header-fixed--contact-overlay) .dn-header .dn-mobile-controls :is(.dn-mobile-control, .dn-mobile-toggle) {
-      border-color: rgba(255, 255, 255, .35);
+      border: 0;
       background: transparent;
       color: #fff;
     }
@@ -815,11 +848,11 @@
       outline: 2px solid currentColor;
       outline-offset: 3px;
     }
-    .dn-header .dn-logo img { width: 142px; max-width: 142px; height: 40px; }
+    .dn-header .dn-logo img { width: 164px; max-width: 164px; height: 40px; }
     .dn-header-fixed--home-overlay { background: transparent; }
   }
   @media (max-width: 359px) {
-    .dn-header .dn-logo img { width: 132px; max-width: 132px; height: 40px; }
+    .dn-header .dn-logo img { width: 148px; max-width: 148px; height: 40px; }
     .dn-mobile-controls { gap: 6px; }
   }
 

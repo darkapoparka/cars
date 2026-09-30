@@ -1,0 +1,1812 @@
+[
+  {
+    "name": "finance-keyboard",
+    "initialOutputs": [
+      "EUR 8,700 · 20%",
+      "EUR 689"
+    ],
+    "updatedOutputs": [
+      "EUR 9,135 · 21%",
+      "EUR 1,061"
+    ]
+  },
+  {
+    "name": "escape-focus-return",
+    "dialogCount": 0,
+    "focus": "Начини на плащанеПримерен калкулатор",
+    "outline": "rgb(32, 32, 36) solid 2px"
+  },
+  {
+    "name": "similar-section-action",
+    "dialog": "Подобни автомобили"
+  },
+  {
+    "name": "bg-390",
+    "layout": {
+      "changedTargets": [
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Екстериор",
+          "top": -12.015625,
+          "width": 101
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Интериор",
+          "top": -12.015625,
+          "width": 101
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Оборудване",
+          "top": -12.015625,
+          "width": 101
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 44,
+          "lineHeight": "19px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Информация за цената",
+          "top": 176.984375,
+          "width": 142.5625
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 48,
+          "lineHeight": "normal",
+          "outline": "rgba(0, 0, 0, 0) none 3px",
+          "outlineOffset": "-2px",
+          "radius": "12px",
+          "text": "Начини на плащанеПримерен калкулатор",
+          "top": 270.984375,
+          "width": 305
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 64,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Вижте на мястоПланирайте посещение в автокъщата",
+          "top": 375.984375,
+          "width": 331
+        }
+      ],
+      "documentWidth": 375,
+      "finance": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 48,
+        "lineHeight": "normal",
+        "outline": "rgba(0, 0, 0, 0) none 3px",
+        "outlineOffset": "-2px",
+        "radius": "12px",
+        "text": "Начини на плащанеПримерен калкулатор",
+        "top": 270.984375,
+        "width": 305
+      },
+      "financeHint": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 98, 105)",
+        "fontSize": "13px",
+        "height": 19,
+        "lineHeight": "19px",
+        "outline": "rgb(98, 98, 105) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Примерен калкулатор",
+        "top": 297.484375,
+        "width": 231
+      },
+      "financeIcon": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 40,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "50%",
+        "text": "",
+        "top": 274.984375,
+        "width": 40
+      },
+      "financeTitle": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 22,
+        "lineHeight": "22px",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Начини на плащане",
+        "top": 273.484375,
+        "width": 231
+      },
+      "overviewIcons": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 388.984375,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 452.984375,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 524.484375,
+          "width": 38
+        }
+      ],
+      "price": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 194,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "18px",
+        "text": "EUR 43,499Информация за ценатаПримерна обява — потвърдете цената и наличносттаНачини на плащанеПримерен калкулаторПопитайте продавача за условията и наличността.",
+        "top": 163.984375,
+        "width": 331
+      },
+      "scrollY": 300,
+      "specs": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "1.6L",
+          "top": 904.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Автоматична",
+          "top": 904.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "SUV",
+          "top": 953.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Бензин",
+          "top": 953.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Red",
+          "top": 1002.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "99,000 km",
+          "top": 1002.171875,
+          "width": 120.5
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  },
+  {
+    "name": "bg-320",
+    "layout": {
+      "changedTargets": [
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Екстериор",
+          "top": -12.40625,
+          "width": 77.65625
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Интериор",
+          "top": -12.40625,
+          "width": 77.671875
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Оборудване",
+          "top": -12.40625,
+          "width": 77.671875
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 50,
+          "lineHeight": "19px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Информация за цената",
+          "top": 176.59375,
+          "width": 129.25
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 48,
+          "lineHeight": "normal",
+          "outline": "rgba(0, 0, 0, 0) none 3px",
+          "outlineOffset": "-2px",
+          "radius": "12px",
+          "text": "Начини на плащанеПримерен калкулатор",
+          "top": 294.59375,
+          "width": 235
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 79,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Вижте на мястоПланирайте посещение в автокъщата",
+          "top": 417.59375,
+          "width": 261
+        }
+      ],
+      "documentWidth": 305,
+      "finance": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 48,
+        "lineHeight": "normal",
+        "outline": "rgba(0, 0, 0, 0) none 3px",
+        "outlineOffset": "-2px",
+        "radius": "12px",
+        "text": "Начини на плащанеПримерен калкулатор",
+        "top": 294.59375,
+        "width": 235
+      },
+      "financeHint": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 98, 105)",
+        "fontSize": "13px",
+        "height": 19,
+        "lineHeight": "19px",
+        "outline": "rgb(98, 98, 105) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Примерен калкулатор",
+        "top": 321.09375,
+        "width": 161
+      },
+      "financeIcon": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 40,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "50%",
+        "text": "",
+        "top": 298.59375,
+        "width": 40
+      },
+      "financeTitle": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 22,
+        "lineHeight": "22px",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Начини на плащане",
+        "top": 297.09375,
+        "width": 161
+      },
+      "overviewIcons": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 438.09375,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 517.09375,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 607.09375,
+          "width": 38
+        }
+      ],
+      "price": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 236,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "18px",
+        "text": "EUR 43,499Информация за ценатаПримерна обява — потвърдете цената и наличносттаНачини на плащанеПримерен калкулаторПопитайте продавача за условията и наличността.",
+        "top": 163.59375,
+        "width": 261
+      },
+      "scrollY": 261,
+      "specs": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "1.6L",
+          "top": 1022.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Автоматична",
+          "top": 1022.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "SUV",
+          "top": 1071.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Бензин",
+          "top": 1071.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Red",
+          "top": 1120.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "99,000 km",
+          "top": 1120.96875,
+          "width": 85.5
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    }
+  },
+  {
+    "name": "lower-320",
+    "featureCheck": [
+      {
+        "background": "rgb(32, 32, 36)",
+        "color": "rgb(255, 255, 255)",
+        "radius": "50%",
+        "size": 18
+      }
+    ],
+    "features": {
+      "scrollWidth": 261,
+      "width": 261
+    },
+    "specs": {
+      "radius": "18px",
+      "scrollWidth": 261,
+      "width": 261
+    },
+    "tabs": [
+      {
+        "fontSize": "14px",
+        "height": 44,
+        "radius": "999px",
+        "text": "Цена"
+      },
+      {
+        "fontSize": "14px",
+        "height": 44,
+        "radius": "999px",
+        "text": "Обща информация"
+      },
+      {
+        "fontSize": "14px",
+        "height": 44,
+        "radius": "999px",
+        "text": "Оборудване"
+      },
+      {
+        "fontSize": "14px",
+        "height": 44,
+        "radius": "999px",
+        "text": "Състояние"
+      },
+      {
+        "fontSize": "14px",
+        "height": 44,
+        "radius": "999px",
+        "text": "Сервизна история"
+      },
+      {
+        "fontSize": "14px",
+        "height": 44,
+        "radius": "999px",
+        "text": "Подобни автомобили"
+      }
+    ]
+  },
+  {
+    "name": "bg-768",
+    "layout": {
+      "changedTargets": [
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 85,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Екстериор",
+          "top": -56.34375,
+          "width": 180
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 85,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Интериор",
+          "top": -56.34375,
+          "width": 180
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 85,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Оборудване",
+          "top": -56.34375,
+          "width": 180
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 44,
+          "lineHeight": "19px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Информация за цената",
+          "top": 176.65625,
+          "width": 142.5625
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 48,
+          "lineHeight": "normal",
+          "outline": "rgba(0, 0, 0, 0) none 3px",
+          "outlineOffset": "-2px",
+          "radius": "12px",
+          "text": "Начини на плащанеПримерен калкулатор",
+          "top": 270.65625,
+          "width": 671
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 64,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Вижте на мястоПланирайте посещение в автокъщата",
+          "top": 375.65625,
+          "width": 697
+        }
+      ],
+      "documentWidth": 753,
+      "finance": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 48,
+        "lineHeight": "normal",
+        "outline": "rgba(0, 0, 0, 0) none 3px",
+        "outlineOffset": "-2px",
+        "radius": "12px",
+        "text": "Начини на плащанеПримерен калкулатор",
+        "top": 270.65625,
+        "width": 671
+      },
+      "financeHint": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 98, 105)",
+        "fontSize": "13px",
+        "height": 19,
+        "lineHeight": "19px",
+        "outline": "rgb(98, 98, 105) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Примерен калкулатор",
+        "top": 297.15625,
+        "width": 597
+      },
+      "financeIcon": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 40,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "50%",
+        "text": "",
+        "top": 274.65625,
+        "width": 40
+      },
+      "financeTitle": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 22,
+        "lineHeight": "22px",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Начини на плащане",
+        "top": 273.15625,
+        "width": 597
+      },
+      "overviewIcons": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 388.65625,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 452.65625,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 516.65625,
+          "width": 38
+        }
+      ],
+      "price": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 194,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "18px",
+        "text": "EUR 43,499Информация за ценатаПримерна обява — потвърдете цената и наличносттаНачини на плащанеПримерен калкулаторПопитайте продавача за условията и наличността.",
+        "top": 163.65625,
+        "width": 697
+      },
+      "scrollY": 557,
+      "specs": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "1.6L",
+          "top": 955.65625,
+          "width": 303.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Автоматична",
+          "top": 955.65625,
+          "width": 303.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "SUV",
+          "top": 1004.65625,
+          "width": 303.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Бензин",
+          "top": 1004.65625,
+          "width": 303.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Red",
+          "top": 1053.65625,
+          "width": 303.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "99,000 km",
+          "top": 1053.65625,
+          "width": 303.5
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      }
+    }
+  },
+  {
+    "name": "bg-1440",
+    "layout": {
+      "changedTargets": [
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 85,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Екстериор",
+          "top": -26.34375,
+          "width": 180
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 85,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Интериор",
+          "top": -26.34375,
+          "width": 180
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 85,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Оборудване",
+          "top": -26.34375,
+          "width": 180
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 44,
+          "lineHeight": "19px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Информация за цената",
+          "top": 206.65625,
+          "width": 142.5625
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 48,
+          "lineHeight": "normal",
+          "outline": "rgba(0, 0, 0, 0) none 3px",
+          "outlineOffset": "-2px",
+          "radius": "12px",
+          "text": "Начини на плащанеПримерен калкулатор",
+          "top": 300.65625,
+          "width": 798
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 64,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Вижте на мястоПланирайте посещение в автокъщата",
+          "top": 405.65625,
+          "width": 824
+        }
+      ],
+      "documentWidth": 1425,
+      "finance": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 48,
+        "lineHeight": "normal",
+        "outline": "rgba(0, 0, 0, 0) none 3px",
+        "outlineOffset": "-2px",
+        "radius": "12px",
+        "text": "Начини на плащанеПримерен калкулатор",
+        "top": 300.65625,
+        "width": 798
+      },
+      "financeHint": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 98, 105)",
+        "fontSize": "13px",
+        "height": 19,
+        "lineHeight": "19px",
+        "outline": "rgb(98, 98, 105) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Примерен калкулатор",
+        "top": 327.15625,
+        "width": 724
+      },
+      "financeIcon": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 40,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "50%",
+        "text": "",
+        "top": 304.65625,
+        "width": 40
+      },
+      "financeTitle": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 22,
+        "lineHeight": "22px",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Начини на плащане",
+        "top": 303.15625,
+        "width": 724
+      },
+      "overviewIcons": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 418.65625,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 482.65625,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 546.65625,
+          "width": 38
+        }
+      ],
+      "price": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 194,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "18px",
+        "text": "EUR 43,499Информация за ценатаПримерна обява — потвърдете цената и наличносттаНачини на плащанеПримерен калкулаторПопитайте продавача за условията и наличността.",
+        "top": 193.65625,
+        "width": 824
+      },
+      "scrollY": 874,
+      "specs": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "1.6L",
+          "top": 977.65625,
+          "width": 367
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Автоматична",
+          "top": 977.65625,
+          "width": 367
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "SUV",
+          "top": 1026.65625,
+          "width": 367
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Бензин",
+          "top": 1026.65625,
+          "width": 367
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Red",
+          "top": 1075.65625,
+          "width": 367
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "99,000 km",
+          "top": 1075.65625,
+          "width": 367
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    }
+  },
+  {
+    "name": "contrast",
+    "samples": [
+      {
+        "background": "rgb(246, 246, 247)",
+        "foreground": "rgb(32, 32, 36)",
+        "text": "Начини на плащане",
+        "ratio": 15.03
+      },
+      {
+        "background": "rgb(246, 246, 247)",
+        "foreground": "rgb(98, 98, 105)",
+        "text": "Примерен калкулатор",
+        "ratio": 5.6
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "foreground": "rgb(32, 32, 36)",
+        "text": "EUR 43,499",
+        "ratio": 16.24
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "foreground": "rgb(98, 98, 105)",
+        "text": "Примерна обява — потвърдете цената и наличността",
+        "ratio": 6.05
+      },
+      {
+        "background": "rgb(246, 246, 247)",
+        "foreground": "rgb(98, 98, 105)",
+        "text": "Попитайте продавача за условията и наличността.",
+        "ratio": 5.6
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "foreground": "rgb(32, 32, 36)",
+        "text": "Вижте на място",
+        "ratio": 16.24
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "foreground": "rgb(32, 32, 36)",
+        "text": "Данни за автомобила",
+        "ratio": 16.24
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "foreground": "rgb(98, 98, 105)",
+        "text": "Потвърдете данните в обявата с продавача",
+        "ratio": 6.05
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "foreground": "rgb(32, 32, 36)",
+        "text": "Потвърдете подробностите",
+        "ratio": 16.24
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "foreground": "rgb(98, 98, 105)",
+        "text": "Потвърдете допълнителните такси с автокъщата",
+        "ratio": 6.05
+      }
+    ]
+  },
+  {
+    "name": "en-390",
+    "layout": {
+      "changedTargets": [
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Exteriors",
+          "top": 287.984375,
+          "width": 101
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Interiors",
+          "top": 287.984375,
+          "width": 101
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Features",
+          "top": 287.984375,
+          "width": 101
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 44,
+          "lineHeight": "19px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Price information",
+          "top": 476.984375,
+          "width": 108.1875
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 48,
+          "lineHeight": "normal",
+          "outline": "rgba(0, 0, 0, 0) none 3px",
+          "outlineOffset": "-2px",
+          "radius": "12px",
+          "text": "Payment optionsExample calculator",
+          "top": 570.984375,
+          "width": 305
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 64,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "See it in personPlan a visit to the showroom",
+          "top": 675.984375,
+          "width": 331
+        }
+      ],
+      "documentWidth": 375,
+      "finance": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 48,
+        "lineHeight": "normal",
+        "outline": "rgba(0, 0, 0, 0) none 3px",
+        "outlineOffset": "-2px",
+        "radius": "12px",
+        "text": "Payment optionsExample calculator",
+        "top": 570.984375,
+        "width": 305
+      },
+      "financeHint": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 98, 105)",
+        "fontSize": "13px",
+        "height": 19,
+        "lineHeight": "19px",
+        "outline": "rgb(98, 98, 105) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Example calculator",
+        "top": 597.484375,
+        "width": 231
+      },
+      "financeIcon": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 40,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "50%",
+        "text": "",
+        "top": 574.984375,
+        "width": 40
+      },
+      "financeTitle": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 22,
+        "lineHeight": "22px",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Payment options",
+        "top": 573.484375,
+        "width": 231
+      },
+      "overviewIcons": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 688.984375,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 752.984375,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 824.484375,
+          "width": 38
+        }
+      ],
+      "price": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 194,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "18px",
+        "text": "EUR 43,499Price informationListing sample — confirm price and availabilityPayment optionsExample calculatorAsk the dealer about terms and availability.",
+        "top": 463.984375,
+        "width": 331
+      },
+      "scrollY": 0,
+      "specs": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "1.6L",
+          "top": 1204.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Automatic",
+          "top": 1204.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "SUV",
+          "top": 1253.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Petrol",
+          "top": 1253.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Red",
+          "top": 1302.171875,
+          "width": 120.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "99,000 km",
+          "top": 1302.171875,
+          "width": 120.5
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  },
+  {
+    "name": "price-information",
+    "dialogText": "Price information\nAdvertised vehicle price\nEUR 43,499\n\nThis is a dated listing sample, not a live quotation. Confirm price, availability, taxes and any additional fees directly with the dealer.\n\nNo return period, warranty, insurance, registration charge or finance approval is promised by this preview.\n\nAsk the dealer"
+  },
+  {
+    "name": "en-320",
+    "layout": {
+      "changedTargets": [
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Exteriors",
+          "top": 195.59375,
+          "width": 77.65625
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Interiors",
+          "top": 195.59375,
+          "width": 77.671875
+        },
+        {
+          "background": "rgb(21, 21, 21)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 49,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "Features",
+          "top": 195.59375,
+          "width": 77.671875
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 44,
+          "lineHeight": "19px",
+          "outline": "rgb(39, 39, 43) solid 2px",
+          "outlineOffset": "3px",
+          "radius": "0px",
+          "text": "Price information",
+          "top": 384.59375,
+          "width": 108.1875
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 48,
+          "lineHeight": "normal",
+          "outline": "rgba(0, 0, 0, 0) none 3px",
+          "outlineOffset": "-2px",
+          "radius": "12px",
+          "text": "Payment optionsExample calculator",
+          "top": 496.59375,
+          "width": 235
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 64,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "12px",
+          "text": "See it in personPlan a visit to the showroom",
+          "top": 619.59375,
+          "width": 261
+        }
+      ],
+      "documentWidth": 305,
+      "finance": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 48,
+        "lineHeight": "normal",
+        "outline": "rgba(0, 0, 0, 0) none 3px",
+        "outlineOffset": "-2px",
+        "radius": "12px",
+        "text": "Payment optionsExample calculator",
+        "top": 496.59375,
+        "width": 235
+      },
+      "financeHint": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 98, 105)",
+        "fontSize": "13px",
+        "height": 19,
+        "lineHeight": "19px",
+        "outline": "rgb(98, 98, 105) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Example calculator",
+        "top": 523.09375,
+        "width": 161
+      },
+      "financeIcon": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 40,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "50%",
+        "text": "",
+        "top": 500.59375,
+        "width": 40
+      },
+      "financeTitle": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 22,
+        "lineHeight": "22px",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "0px",
+        "text": "Payment options",
+        "top": 499.09375,
+        "width": 161
+      },
+      "overviewIcons": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 632.59375,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 704.09375,
+          "width": 38
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "height": 38,
+          "lineHeight": "normal",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "50%",
+          "text": "",
+          "top": 783.09375,
+          "width": 38
+        }
+      ],
+      "price": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(32, 32, 36)",
+        "fontSize": "16px",
+        "height": 230,
+        "lineHeight": "normal",
+        "outline": "rgb(32, 32, 36) none 3px",
+        "outlineOffset": "0px",
+        "radius": "18px",
+        "text": "EUR 43,499Price informationListing sample — confirm price and availabilityPayment optionsExample calculatorAsk the dealer about terms and availability.",
+        "top": 371.59375,
+        "width": 261
+      },
+      "scrollY": 53,
+      "specs": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "1.6L",
+          "top": 1187.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Automatic",
+          "top": 1187.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "SUV",
+          "top": 1236.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Petrol",
+          "top": 1236.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "Red",
+          "top": 1285.96875,
+          "width": 85.5
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "13px",
+          "height": 20,
+          "lineHeight": "20px",
+          "outline": "rgb(32, 32, 36) none 3px",
+          "outlineOffset": "0px",
+          "radius": "0px",
+          "text": "99,000 km",
+          "top": 1285.96875,
+          "width": 85.5
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    }
+  }
+]

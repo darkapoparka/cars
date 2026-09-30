@@ -1,0 +1,91 @@
+{
+	"date": "2026-09-30",
+	"timezone": "Europe/Sofia",
+	"repository": "L:/CODEX/cars",
+	"folder": "L:/CODEX/cars/templates/carwow",
+	"branch": "main",
+	"head": "807e2d6ee76aaa26fc08ffab64221faece3a2fdb",
+	"url": "http://127.0.0.1:6464/en/contact?intent=import",
+	"changes": [
+		"Replaced the plain import help card with a photographic advisor commerce banner, short existing bilingual caption and native call link.",
+		"Added an optional caption to the existing photo-banner component; existing callers remain compatible.",
+		"Replaced the menu showroom image with new charcoal/silver alloy-wheel artwork and adapted its normal/short-screen crop. The configured dealer logo and grey 44px close control remain native HTML."
+	],
+	"generation": {
+		"tool": "Built-in image_gen.imagegen",
+		"provenance": "docs/asset-provenance/import-help-menu-commerce-2026-09-30.json",
+		"assets": [
+			{
+				"path": "static/assets/images/home-promos/import-help-advisor-v1.webp",
+				"width": 960,
+				"height": 480,
+				"bytes": 33158
+			},
+			{
+				"path": "static/assets/images/menu/menu-wheel-commerce-v3.webp",
+				"width": 960,
+				"height": 320,
+				"bytes": 24346
+			}
+		]
+	},
+	"verification": {
+		"mobile": "30 states passed in Chromium/WebKit across en/bg, 320/390/430px and short 390x420 / landscape 568x320 menus; no recorded runtime/HTTP errors, broken images, page overflow or axe WCAG 2.0/2.1/2.2 violations. Call target, caption clipping, compact banner height, grey close styling and focus return checked.",
+		"finalMenuCrops": "Six final menu crops checked in Chromium/WebKit after short-screen image blending adjustment.",
+		"sourceCheck": "0 errors, 0 warnings. Initial missing resolve import was corrected before the passing check.",
+		"lint": "Scoped ESLint passed for the five changed source files.",
+		"format": "Changed-file Prettier check passed.",
+		"typography": "295 source files passed.",
+		"build": "npm run build passed, including localization verification and Vercel adapter output.",
+		"limits": "Mounted verification used the local Vite dev server. This focused banner task does not supersede the broader 200% text/performance acceptance limits in MOBILE-VERIFICATION-2026-09-30.md."
+	},
+	"evidence": ".audit/banner-redesign-2026-09-30/",
+	"files": [
+		"src/lib/components/contact/MobileImportPage.svelte",
+		"src/lib/components/shared/mobile/MobileLeadImageBanner.svelte",
+		"src/lib/components/shared/mobile/MobileActionCardContent.svelte",
+		"src/lib/components/home/mobile/MobileBottomDock.svelte",
+		"src/lib/data/daynight-site.ts",
+		"static/assets/images/home-promos/import-help-advisor-v1.webp",
+		"static/assets/images/menu/menu-wheel-commerce-v3.webp",
+		"docs/asset-provenance/import-help-menu-commerce-2026-09-30.json",
+		"docs/BANNER-VERIFICATION-2026-09-30.json"
+	],
+	"preservation": "Pre-existing edits, prior task changes, old assets and all nine pre-existing staged paths were retained. App template on port 3001 was inspected only.",
+	"delivery": {
+		"status": "Locally verified; uncommitted.",
+		"blocker": "Pre-existing shared L:/CODEX/cars/.git/index.lock, zero bytes, last modified 2026-09-30 07:24:30 Europe/Sofia. Not bypassed or removed.",
+		"nextAction": "Once the lock owner has finished, recheck HEAD/index, review this task's delta against .audit/banner-redesign-2026-09-30/before/ and task-only.patch, then make a scoped commit on main and non-force push. Do not stage combined pre-existing component edits blindly. No deployment is authorized by this task."
+	},
+	"finalization": {
+		"date": "2026-09-30T08:13:54.548Z",
+		"head": "807e2d6ee76aaa26fc08ffab64221faece3a2fdb",
+		"scope": "Banner title wrapping, composition, compact white CTA pills and home price quick filters only.",
+		"changes": [
+			"Widened promo title column and removed balanced wrapping. Prefer to talk? stays on one line at 320px in English; translated and enlarged text can reflow.",
+			"Grouped CTA directly under heading/caption with a 12px gap and 16px inset. Content-sized 124px compact / 140px caption banner minimums replace viewport-growing height.",
+			"Used compact 36px white rounded CTA cues with dark text and 14px arrows; the full banner remains the interactive target.",
+			"Preserved imagery and scaled it with contain at the right edge, avoiding aggressive crops.",
+			"Replaced home fuel/transmission shortcuts with <10,000, <20,000, <30,000, <50,000 and >50,000 price bands derived from the existing budget data. Numeric separators follow the current locale. Each keeps the matching inventory query and a full translated EUR accessibility label.",
+			"Inset the home quick-filter viewport by 16px while preserving the original pill typography, padding and single horizontal scrolling row. Full amounts and all five existing price bands provide a clear scrolling row."
+		],
+		"verification": {
+			"browser": "48 Chromium/WebKit states: en/bg, 320/390/430px at default text size and 320px at 200% text. Banner text/CTA clipping, image loading, scoped axe WCAG violations, CTA spacing, single-line English title and quick-filter gutter/focus visibility passed.",
+			"actions": "Sell information dialog opens/closes with focus return; native call href unchanged; all five price quick filters navigate to the matching price band and displayed vehicles fall within the selected limit. Empty inventory states verified.",
+			"desktop": "Home/sell/import overflow smoke at 1280px passed.",
+			"source": "Svelte check: 0 errors, 0 warnings. Scoped ESLint, Prettier and 295-file typography check passed.",
+			"build": "npm run build passed with Node 24.21.0 and Vercel adapter output.",
+			"limits": "Focused local banner/filter verification only; broader mobile acceptance and production performance were not re-audited.",
+			"retry": "Initial enlarged Bulgarian banner word overflow was fixed. An intermediate browser run was interrupted by build-triggered dev reload. The filter rail now has min-width: 0 to preserve its inset in WebKit. Original filter sizing and horizontal scrolling were restored at the owner request. The final browser run ran after the build completed."
+		},
+		"files": [
+			"src/lib/components/shared/mobile/MobileActionCardContent.svelte",
+			"src/lib/components/shared/mobile/MobileLeadImageBanner.svelte",
+			"src/lib/components/home/mobile/MobileHome.svelte",
+			"docs/BANNER-VERIFICATION-2026-09-30.json"
+		],
+		"evidence": ".audit/banner-final-spacing-2026-09-30",
+		"preservation": "Existing component edits and the nine pre-existing staged paths retained; staged diff is byte-for-byte unchanged.",
+		"delivery": "Local source verified. Existing shared .git/index.lock still blocks scoped commit/push; lock retained. Main HEAD and exact task delta recorded for later integration."
+	}
+}

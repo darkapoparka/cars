@@ -66,3 +66,18 @@ export const specificationLabel = (value: string, locale: Locale): string =>
 
 export const formatMileage = (value: number, locale: Locale): string =>
   new Intl.NumberFormat(intlLocale(locale), { style: 'unit', unit: 'kilometer', unitDisplay: 'short' }).format(value);
+
+// Compact list badges keep their full, unit-bearing label in accessible text.
+export const compactMileage = (value: number, locale: Locale): string =>
+  new Intl.NumberFormat(intlLocale(locale), { useGrouping: false }).format(value);
+
+const compactSpecificationCopy: Record<string, MessageKey> = {
+  'inventory.spec.automatic': 'inventory.spec.automaticCompact',
+  'm_a76dab2d1c01': 'inventory.spec.electricCompact'
+};
+export const compactSpecificationLabel = (value: string, locale: Locale): string => {
+  const key = specificationCopy[value];
+  return key && compactSpecificationCopy[key]
+    ? message(locale, compactSpecificationCopy[key])
+    : specificationLabel(value, locale);
+};

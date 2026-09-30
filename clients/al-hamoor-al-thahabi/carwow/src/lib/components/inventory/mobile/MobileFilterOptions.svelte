@@ -38,7 +38,7 @@
 	} = $props();
 </script>
 
-<div class="mobile-filter-options" aria-label={ariaLabel}>
+<div class="mobile-filter-options" role="group" aria-label={ariaLabel}>
 	<button type="button" class={allActive ? 'is-active' : ''} onclick={onClear}>
 		<span>{i18n.text(allLabel)}</span>
 		<small>{allCount}</small>

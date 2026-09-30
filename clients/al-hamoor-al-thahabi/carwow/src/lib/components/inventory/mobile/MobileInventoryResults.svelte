@@ -17,8 +17,8 @@
 
 {#if vehicles.length}
 	<div class="mobile-inventory-list">
-		{#each vehicles as vehicle (vehicle.slug)}
-			<MobileInventoryVehicleCard {vehicle} />
+		{#each vehicles as vehicle, index (vehicle.slug)}
+			<MobileInventoryVehicleCard {vehicle} priority={index < 4} />
 		{/each}
 	</div>
 {:else}

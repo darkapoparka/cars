@@ -500,18 +500,5 @@
       "sha256": "733f9aa142df21aa2e6241f7045de7c40ae2fed8aaabe606dad81c897d8ec800",
       "role": "vehicle"
     }
-  ],
-  "template": {
-    "repository": "darkapoparka/cars",
-    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
-    "path": "templates/app",
-    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
-    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
-  },
-  "generatedAt": "2026-09-28T04:57:52.297Z",
-  "policy": {
-    "selector": "shared-v2-with-local-fallback",
-    "benefits": "clearly-labelled-proposal-examples",
-    "missingPhotos": "neutral-template-artwork-not-invented-stock"
-  }
+  ]
 }

@@ -24,7 +24,7 @@ async function frame(locator, expectedHeight, font, allowWrap = false) {
 }
 try {
   for (const locale of ['bg', 'en']) for (const width of [320, 390, 430]) {
-    for (const flow of ['home', 'listing', 'editor']) await suite.check(`${locale} ${width} ${flow}`, async () => {
+    for (const flow of ['home', 'listing', 'service']) await suite.check(`${locale} ${width} ${flow}`, async () => {
       const page = await browser.newPage({
         viewport: { width, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'reduce'
       });
@@ -69,16 +69,14 @@ try {
           await page.keyboard.press('Escape');
           await page.keyboard.press('Escape');
         } else {
-          await page.locator('.dn-entry-editor-trigger').first().click();
-          const editor = page.locator('.dn-entry-editor[open]');
-          await frame(editor.locator('input').first(), 44, 18);
-          await frame(editor.locator('.dn-entry-editor-cancel'), 44, 16);
-          await frame(editor.locator('.dn-entry-editor-save'), 44, 18);
-          await page.screenshot({ path: `${output}/${locale}-${width}-editor.png` });
+          await frame(page.locator('.dn-service-entry input').first(), 48, 16);
+          await frame(page.locator('.dn-service-entry__submit'), 48, 16);
+          await page.screenshot({ path: output + '/' + locale + '-' + width + '-entry.png' });
           await page.setViewportSize({ width, height: 420 });
-          const save = await editor.locator('.dn-entry-editor-save').boundingBox();
-          assert(save.y >= 0 && save.y + save.height <= 420);
-          await page.keyboard.press('Escape');
+          await page.locator('.dn-service-entry__submit').scrollIntoViewIfNeeded();
+          const save = await page.locator('.dn-service-entry__submit').boundingBox();
+          assert(save.y >= 0 && save.y + save.height <= 420 - 64);
+
         }
         assert.equal(await page.locator('dialog[open]').count(), 0);
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

@@ -81,7 +81,12 @@
 	const category = $derived(page.url.searchParams.get('category') ?? '');
 	const visibleServices = $derived(
 		services.filter((service) => {
-			const text = [service.title, service.label, service.kicker, ...service.points]
+			const text = [
+				service.title,
+				service.label,
+				service.kicker,
+				...service.points.map((point) => i18n.text(point))
+			]
 				.join(' ')
 				.toLocaleLowerCase('bg-BG');
 			return (
@@ -277,7 +282,7 @@
 					{#each activeService.points as point (point)}
 						<li>
 							<BadgeCheck size={18} strokeWidth={2.4} />
-							<span>{point}</span>
+							<span>{i18n.text(point)}</span>
 						</li>
 					{/each}
 				</ul>
@@ -444,7 +449,7 @@
 	}
 	.mobile-services-chips a.active {
 		background: #fce8ed;
-		color: var(--sa-red);
+		color: var(--sa-red-strong);
 	}
 	.mobile-services-app main {
 		padding: 0 var(--sa-mobile-gutter) calc(88px + env(safe-area-inset-bottom));

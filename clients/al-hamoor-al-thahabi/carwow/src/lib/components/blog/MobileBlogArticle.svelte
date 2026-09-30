@@ -202,7 +202,7 @@
 		border-radius: 8px;
 		padding: 4px 9px;
 		background: #fce8ed;
-		color: var(--sa-red);
+		color: var(--sa-red-strong);
 		font-weight: var(--sa-button-font-weight);
 		text-decoration: none;
 	}

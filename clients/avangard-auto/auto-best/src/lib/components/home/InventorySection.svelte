@@ -23,8 +23,8 @@
     </div>
 
     <div class="dn-inventory__grid dn-home-section-panel">
-      {#each featuredVehicles.slice(0, 4) as vehicle, index (vehicle.id)}
-        <VehicleCard {vehicle} showPrice priority={index < 4} />
+      {#each featuredVehicles.slice(0, 4) as vehicle (vehicle.id)}
+        <VehicleCard {vehicle} showPrice />
       {/each}
       <BrowseAllCard label={i18n.t("m_13b5d43d1176")} detail={i18n.t("m_d11f4babc6e6")} />
     </div>

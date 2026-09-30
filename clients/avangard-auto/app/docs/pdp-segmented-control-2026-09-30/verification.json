@@ -1,0 +1,287 @@
+{
+  "route": "http://localhost:3001/bg/cars/2022-kia-seltos-lx-3696",
+  "checks": [
+    {
+      "width": 320,
+      "locale": "bg",
+      "state": "Information",
+      "metrics": {
+        "documentWidth": 305,
+        "priceBottom": 547.59375,
+        "scrollWidth": 305,
+        "tabs": [
+          {
+            "clipped": false,
+            "height": 44,
+            "name": "Информация",
+            "width": 87
+          },
+          {
+            "clipped": false,
+            "height": 44,
+            "name": "Екстериор",
+            "width": 87
+          },
+          {
+            "clipped": false,
+            "height": 44,
+            "name": "Интериор",
+            "width": 87
+          }
+        ],
+        "track": [
+          {
+            "height": 52,
+            "width": 273,
+            "y": 567.59375
+          }
+        ],
+        "viewport": 320
+      }
+    },
+    {
+      "width": 320,
+      "state": "ArrowRight to Exteriors",
+      "metrics": {
+        "focusOutline": "rgb(32, 32, 36) solid 2px",
+        "focused": "Екстериор",
+        "priceBottom": 347.59375,
+        "priceVisible": true,
+        "selected": "Екстериор",
+        "trackTop": 367.59375,
+        "visiblePanels": [
+          "_R_24slritpet5relb_-panel-1"
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "state": "ArrowRight to Interiors",
+      "metrics": {
+        "focused": "Интериор",
+        "images": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ],
+        "priceDocumentBottom": 547.59375,
+        "selected": "Интериор",
+        "trackDocumentTop": 567.59375,
+        "visiblePanels": [
+          "_R_24slritpet5relb_-tab-2"
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "state": "Home to Information",
+      "metrics": {
+        "focused": "Информация",
+        "images": [
+          {
+            "loaded": true
+          }
+        ],
+        "priceDocumentBottom": 547.59375,
+        "selected": "Информация",
+        "trackDocumentTop": 567.59375,
+        "visiblePanels": [
+          "_R_24slritpet5relb_-tab-0"
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "state": "End to Interiors",
+      "metrics": {
+        "focused": "Интериор",
+        "images": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ],
+        "priceDocumentBottom": 547.59375,
+        "selected": "Интериор",
+        "trackDocumentTop": 567.59375,
+        "visiblePanels": [
+          "_R_24slritpet5relb_-tab-2"
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "state": "ArrowRight wraps to Information",
+      "metrics": {
+        "focused": "Информация",
+        "images": [
+          {
+            "loaded": true
+          }
+        ],
+        "priceDocumentBottom": 547.59375,
+        "selected": "Информация",
+        "trackDocumentTop": 567.59375,
+        "visiblePanels": [
+          "_R_24slritpet5relb_-tab-0"
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "metrics": {
+        "brokenImages": 0,
+        "documentWidth": 375,
+        "priceDocumentBottom": 568.984375,
+        "scrollWidth": 375,
+        "tabs": [
+          {
+            "clipped": false,
+            "font": "13px",
+            "height": 44,
+            "name": "Информация",
+            "text": "Инфо",
+            "width": 110.328125
+          },
+          {
+            "clipped": false,
+            "font": "13px",
+            "height": 44,
+            "name": "Екстериор",
+            "text": "Екстериор",
+            "width": 110.328125
+          },
+          {
+            "clipped": false,
+            "font": "13px",
+            "height": 44,
+            "name": "Интериор",
+            "text": "Интериор",
+            "width": 110.34375
+          }
+        ],
+        "track": {
+          "height": 52,
+          "top": 588.984375,
+          "width": 343
+        },
+        "viewport": 390
+      }
+    },
+    {
+      "width": 390,
+      "state": "390px touch selection Exteriors",
+      "metrics": {
+        "focused": "Екстериор",
+        "images": [
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          },
+          {
+            "loaded": true
+          }
+        ],
+        "priceDocumentBottom": 568.984375,
+        "selected": "Екстериор",
+        "trackDocumentTop": 588.984375,
+        "visiblePanels": [
+          "_R_24slritpet5relb_-tab-1"
+        ]
+      }
+    },
+    {
+      "state": "Photo viewer Escape",
+      "metrics": {
+        "focused": "Отвори снимката: Отпред вдясно",
+        "openDialogs": 0,
+        "selected": "Екстериор"
+      }
+    },
+    {
+      "width": 1440,
+      "metrics": {
+        "brokenImages": 0,
+        "documentWidth": 1425,
+        "priceDocumentBottom": 1136.65625,
+        "scrollWidth": 1425,
+        "tabs": [
+          {
+            "clipped": false,
+            "font": "14px",
+            "height": 44,
+            "name": "Информация",
+            "text": "Информация",
+            "width": 270.65625
+          },
+          {
+            "clipped": false,
+            "font": "14px",
+            "height": 44,
+            "name": "Екстериор",
+            "text": "Екстериор",
+            "width": 270.671875
+          },
+          {
+            "clipped": false,
+            "font": "14px",
+            "height": 44,
+            "name": "Интериор",
+            "text": "Интериор",
+            "width": 270.65625
+          }
+        ],
+        "track": {
+          "height": 52,
+          "top": 1156.65625,
+          "width": 824
+        },
+        "viewport": 1440
+      }
+    }
+  ],
+  "consoleErrors": [],
+  "build": {
+    "command": "npm run check",
+    "result": "passed",
+    "staticPages": 407,
+    "node": "22.20.0"
+  }
+}

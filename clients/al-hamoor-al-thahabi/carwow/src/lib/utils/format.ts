@@ -54,6 +54,23 @@ export function formatNumber(value: number) {
 	return new Intl.NumberFormat('en-US').format(value);
 }
 
+/** Short labels for the narrow mobile vehicle chips; keep the full value in accessible text. */
+export function compactMobileDistance(distance: string): string {
+	const match = distance.match(/^\s*([\d\s,.]+)\s*(km|км)\s*$/i);
+	if (!match) return distance;
+	const value = Number(match[1].replace(/\D/g, ''));
+	if (!Number.isFinite(value) || value < 1000) return distance;
+	const rounded = Math.round(value / 100);
+	const exact = value % 100 === 0;
+	return `${exact ? '' : '≈'}${Number((rounded / 10).toFixed(1))}k ${match[2]}`;
+}
+
+export function compactMobileTransmission(transmission: string): string {
+	if (transmission === 'Automatic') return 'Auto';
+	if (transmission === 'Автоматик') return 'Авто';
+	return transmission;
+}
+
 export function calculateMonthlyPayment(
 	principal: number,
 	annualRate: number,

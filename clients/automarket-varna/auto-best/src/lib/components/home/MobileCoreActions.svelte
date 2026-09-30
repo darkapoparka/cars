@@ -4,40 +4,32 @@
 
   import { resolve } from '$app/paths';
   import FeatureArtwork from '$components/ui/FeatureArtwork.svelte';
-  import { mobileActionArtwork } from '$data/feature-artwork';
+  import { homeActionArtwork } from '$data/feature-artwork';
 
   const actions = [
     {
-      title: 'Автомобили',
-      text: 'Разгледай всички',
-      cta: 'Разгледай',
+      title: 'home.action.cars.title',
       href: '/listing-grid',
       tone: 'blue',
-      artwork: mobileActionArtwork.collection
+      artwork: homeActionArtwork.collection
     },
     {
-      title: 'Продай / Бартер',
-      text: 'Бърза оценка',
-      cta: 'Заяви оценка',
+      title: 'home.action.sell.title',
       href: '/contact?topic=trade-in',
       tone: 'red',
-      artwork: mobileActionArtwork.sell
+      artwork: homeActionArtwork.sell
     },
     {
-      title: 'Внос по заявка',
-      text: 'Европа, САЩ, Канада',
-      cta: 'Заяви внос',
+      title: 'home.action.import.title',
       href: '/contact?topic=import',
       tone: 'ice',
-      artwork: mobileActionArtwork.import
+      artwork: homeActionArtwork.import
     },
     {
-      title: 'На лизинг',
-      text: 'Гъвкави условия',
-      cta: 'Виж условия',
+      title: 'home.action.finance.title',
       href: '/contact?topic=leasing',
       tone: 'dark',
-      artwork: mobileActionArtwork.finance
+      artwork: homeActionArtwork.finance
     }
   ] as const;
 </script>
@@ -47,12 +39,9 @@
     {#each actions as action (action.href)}
       <a class={`dn-mobile-core-card dn-mobile-core-card--${action.tone}`} href={i18n.href(resolve(action.href))}>
         <span class="dn-mobile-core-card__copy">
-          <strong>{i18n.text(action.title)}</strong>
-          <small>{i18n.text(action.text)}</small>
+          <strong>{i18n.t(action.title)}</strong>
         </span>
-        <span class="dn-mobile-core-card__art" aria-hidden="true">
-          <FeatureArtwork artwork={action.artwork} />
-        </span>
+        <span class="dn-mobile-core-card__art" aria-hidden="true"><FeatureArtwork artwork={action.artwork} eager /></span>
       </a>
     {/each}
   </div>
@@ -64,28 +53,35 @@
   @media (max-width: 767px) {
     .dn-mobile-core-actions {
       display: block;
-      padding: 8px 12px 4px;
+      padding: var(--dn-space-3) var(--dn-space-3) var(--dn-space-1);
       background: var(--dn-mobile-canvas);
     }
     .dn-mobile-core-actions__grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
+      /* Enlarged text can reflow to one column without shrinking the type. */
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, max(8rem, 45%)), 1fr));
+      gap: var(--dn-space-4);
     }
 
     .dn-mobile-core-card {
       position: relative;
-      display: block;
-      min-height: 158px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--dn-space-2);
+      padding-bottom: var(--dn-space-2);
+      min-width: 0;
+      width: 100%;
+      min-height: 112px;
+      aspect-ratio: 3 / 2;
       overflow: hidden;
-      border-radius: 14px;
+      border-radius: var(--dn-radius);
       color: #fff;
       isolation: isolate;
     }
 
-    .dn-mobile-core-card--blue { background: linear-gradient(145deg, var(--dn-theme-action-blue-start) 0%, var(--dn-theme-action-blue-end) 100%); }
-    .dn-mobile-core-card--red { background: linear-gradient(145deg, var(--dn-theme-action-red-start) 0%, var(--dn-theme-action-red-end) 100%); }
-    .dn-mobile-core-card--ice { background: linear-gradient(145deg, var(--dn-theme-action-ice-start) 0%, var(--dn-theme-action-ice-end) 100%); color: var(--dn-theme-action-ice-ink); }
+    .dn-mobile-core-card--blue { background: var(--dn-theme-action-blue-start); }
+    .dn-mobile-core-card--red { background: var(--dn-theme-action-red-start); }
+    .dn-mobile-core-card--ice { background: var(--dn-theme-action-ice-start); color: var(--dn-theme-action-ice-ink); }
     .dn-mobile-core-card--dark { background: var(--dn-theme-hero-surface); }
 
     .dn-mobile-core-card__copy {
@@ -99,52 +95,30 @@
 
     .dn-mobile-core-card strong {
       max-width: 100%;
-      font-size: var(--dn-text-lead);
+      font-size: var(--dn-text-card);
       font-weight: var(--dn-weight-semibold);
-      line-height: var(--dn-leading-control);
+      line-height: var(--dn-leading-heading);
       letter-spacing: var(--dn-tracking-heading);
-      white-space: nowrap;
+      overflow-wrap: anywhere;
     }
 
-    .dn-mobile-core-card small {
-      display: block;
-      max-width: 100%;
-      margin-top: 3px;
-      overflow: hidden;
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-regular);
-      line-height: var(--dn-leading-meta);
-      letter-spacing: var(--dn-tracking-normal);
-      opacity: .92;
-      white-space: nowrap;
-    }
 
     .dn-mobile-core-card__art {
-      position: absolute;
+      position: relative;
       z-index: 1;
-      inset-inline: var(--dn-space-2);
-      bottom: var(--dn-space-3);
-      height: 80px;
+      margin: auto var(--dn-space-2) 0;
+      height: 58px;
+      flex: 0 0 58px;
       display: flex;
       align-items: flex-end;
       pointer-events: none;
     }
 
-    .dn-mobile-core-card--dark .dn-mobile-core-card__art { mix-blend-mode: lighten; }
+    .dn-mobile-core-card__art :global(.feature-artwork) {
+      max-width: calc(58px * var(--artwork-ratio));
+      margin-inline: auto;
+    }
     .dn-mobile-core-card:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   }
 
-  @media (max-width: 340px) {
-    .dn-mobile-core-card__copy { padding-inline: 8px; }
-
-    .dn-mobile-core-card strong {
-      font-size: var(--dn-text-body);
-      letter-spacing: var(--dn-tracking-heading);
-    }
-
-    .dn-mobile-core-card small {
-      font-size: var(--dn-text-caption);
-      letter-spacing: var(--dn-tracking-normal);
-    }
-  }
 </style>

@@ -44,6 +44,10 @@
     overflow: visible;
   }
 
+  .dn-listing-stage[data-layout='hero-discovery'][data-active-filters='true'] {
+    padding-bottom: calc(var(--dn-control-height-default) + var(--dn-space-4));
+  }
+
 }
 
 @media (max-width: 767px) {

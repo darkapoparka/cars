@@ -7,6 +7,8 @@
 		title,
 		copy,
 		image,
+		imageWidth,
+		imageHeight,
 		action,
 		tone = 'light',
 		artwork = 'photo'
@@ -14,17 +16,20 @@
 		title: string;
 		copy?: string;
 		image: string;
+		imageWidth?: number;
+		imageHeight?: number;
 		action: string;
 		tone?: 'light' | 'dark' | 'red';
-		artwork?: 'photo' | 'cutout' | 'portrait';
+		artwork?: 'photo' | 'cutout' | 'portrait' | 'promo';
 	} = $props();
 </script>
 
 <span
 	class:action-card--dark={tone !== 'light'}
 	class:action-card--red={tone === 'red'}
-	class:action-card--cutout={artwork !== 'photo'}
+	class:action-card--cutout={artwork === 'cutout' || artwork === 'portrait'}
 	class:action-card--portrait={artwork === 'portrait'}
+	class:action-card--promo={artwork === 'promo'}
 	class:action-card--compact={!copy}
 	class="action-card"
 >
@@ -32,10 +37,22 @@
 		<strong>{title}</strong>
 		{#if copy}<small>{copy}</small>{/if}
 		<span class="action-card__action"
-			>{action}<ArrowRight size={16} strokeWidth={2} aria-hidden="true" /></span
+			>{action}<ArrowRight
+				size={artwork === 'promo' ? 14 : 16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/></span
 		>
 	</span>
-	<img class="action-card__image" src={i18n.asset(image)} alt="" loading="lazy" decoding="async" />
+	<img
+		class="action-card__image"
+		src={i18n.asset(image)}
+		width={imageWidth}
+		height={imageHeight}
+		alt=""
+		loading="lazy"
+		decoding="async"
+	/>
 </span>
 
 <style>
@@ -169,5 +186,84 @@
 		height: 104px;
 		object-fit: contain;
 		object-position: right bottom;
+	}
+	.action-card--promo {
+		--action-card-promo-height: 140px;
+
+		position: relative;
+		isolation: isolate;
+		display: block;
+		min-height: var(--action-card-promo-height);
+		border-radius: var(--sa-r-lg);
+		background: #10151b;
+	}
+	.action-card--promo::before {
+		position: absolute;
+		z-index: 1;
+		inset: 0;
+		background: linear-gradient(
+			90deg,
+			rgba(9, 14, 20, 0.98) 0%,
+			rgba(9, 14, 20, 0.92) 28%,
+			rgba(9, 14, 20, 0.55) 49%,
+			rgba(9, 14, 20, 0.12) 66%,
+			transparent 82%
+		);
+		content: '';
+		pointer-events: none;
+	}
+	.action-card--promo.action-card--compact {
+		--action-card-promo-height: 124px;
+	}
+	.action-card--promo .action-card__copy {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		min-height: var(--action-card-promo-height);
+		box-sizing: border-box;
+		justify-content: center;
+		gap: 4px;
+		padding: 16px;
+	}
+	.action-card--promo strong {
+		max-width: 72%;
+		overflow-wrap: anywhere;
+		font-size: var(--sa-mobile-type-section-title);
+		line-height: 1.2;
+		text-wrap: initial;
+	}
+	.action-card--promo small {
+		max-width: 64%;
+		overflow-wrap: anywhere;
+		font-size: var(--sa-mobile-type-meta);
+		line-height: 1.35;
+	}
+	.action-card--promo .action-card__action {
+		width: max-content;
+		max-width: 100%;
+		min-height: 36px;
+		box-sizing: border-box;
+		justify-content: center;
+		gap: 6px;
+		margin-top: 8px;
+		border: 1px solid transparent;
+		border-radius: var(--sa-r-pill);
+		background: #fff;
+		padding: 6px 12px;
+		color: #111820 !important;
+		font-size: var(--sa-text-sm);
+		font-weight: var(--sa-weight-medium);
+		white-space: normal;
+	}
+	.action-card--promo .action-card__image {
+		position: absolute;
+		z-index: 0;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		min-height: 0;
+		object-fit: contain;
+		object-position: right center;
+		pointer-events: none;
 	}
 </style>

@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 1,
+  "dealer": "astracar",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/app",
+    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+  },
+  "appDigest": "85e32a4c4cb84298b81a7f3726a2b54b3ad7e208d2db0eb76254a9b35a089c8c",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "astracar",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "c8049a2b8c0e4d2f3dea4bf713dad237a8e657c09c40b9d5e75ce2cc58dc7ec9",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 15,
+    "currency": "EUR",
+    "observedAt": "2026-09-07",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-ae767c83298d5954172e.webp",
+        "sha256": "ae767c83298d5954172ecbfba2d0ed4ac01463357ff9726a1eedf69ea8cdb4fc",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-3eb55132d19dc4560e2d.webp",
+        "sha256": "3eb55132d19dc4560e2d89812798c8f39ba7ebedd328079bf5625f8996ad786e",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-01-1.webp",
+        "output": "public/dealer-app/vehicle-c3efbce242d56ca8d31b.webp",
+        "sha256": "c3efbce242d56ca8d31b85db54d11101f698f4f5a4a251cc9729f2c28c972914",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-01-2.webp",
+        "output": "public/dealer-app/vehicle-6db44b19202513063a1d.webp",
+        "sha256": "6db44b19202513063a1d785860a36e73748744df8600fd0c231e971ee8a58033",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-01-3.webp",
+        "output": "public/dealer-app/vehicle-4e1011b52d61fa8ea633.webp",
+        "sha256": "4e1011b52d61fa8ea6333ce7d387a29f8b0784dbed985f3ec95b79766b17f594",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-01-4.webp",
+        "output": "public/dealer-app/vehicle-cd46d2acd6c420d58b04.webp",
+        "sha256": "cd46d2acd6c420d58b047b09d673e182ecb01083b69481ec8cfb25e215585b49",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-01-5.webp",
+        "output": "public/dealer-app/vehicle-5b0b14f649b058cefe7c.webp",
+        "sha256": "5b0b14f649b058cefe7c9c023d9d500e7d5adadb0ef34528b67e8a18c0eb475d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-02-1.webp",
+        "output": "public/dealer-app/vehicle-74d1b406655171f87f99.webp",
+        "sha256": "74d1b406655171f87f99b0ab7422111c2928e2bca4cd8ce4b855bb081e595dcd",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-02-2.webp",
+        "output": "public/dealer-app/vehicle-cafe68e61011a90a1757.webp",
+        "sha256": "cafe68e61011a90a1757fadaab1580be472993c18e307135803c3d72d102e0f3",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-02-3.webp",
+        "output": "public/dealer-app/vehicle-18c7e4ead36dc6b3c6c7.webp",
+        "sha256": "18c7e4ead36dc6b3c6c7038a4e6f0bfd3ad734c40b28ada09b55025530bbde87",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-02-4.webp",
+        "output": "public/dealer-app/vehicle-2a786aff1961ff9506f9.webp",
+        "sha256": "2a786aff1961ff9506f90651bbc58e8db99a875718e2506333044aa76dd6623e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-02-5.webp",
+        "output": "public/dealer-app/vehicle-122def9628974cfdadaf.webp",
+        "sha256": "122def9628974cfdadaf2ec0c42a22558eb5f9a6bbfdd35023f0e49225187d31",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-03-1.webp",
+        "output": "public/dealer-app/vehicle-3379e29afc8fd43f3d1e.webp",
+        "sha256": "3379e29afc8fd43f3d1ead3e6a031096606fac766e7a51509930d0af8ebf9203",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-03-2.webp",
+        "output": "public/dealer-app/vehicle-43f9d32accf1ed72a2c0.webp",
+        "sha256": "43f9d32accf1ed72a2c0ab1b261b3b138837616b8a7cafb85529b70e67cd77ed",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-03-3.webp",
+        "output": "public/dealer-app/vehicle-b576d28e08fb4d9fc485.webp",
+        "sha256": "b576d28e08fb4d9fc4859684838c3e816b0e2841bac9219a11bbe56400aeac2e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-03-4.webp",
+        "output": "public/dealer-app/vehicle-4c10c795b7f4e5bb0d26.webp",
+        "sha256": "4c10c795b7f4e5bb0d260006e59ebe0d6d4cee94dd4a533862e598aad5b50365",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-03-5.webp",
+        "output": "public/dealer-app/vehicle-ed9aa5b7a0ce076b2359.webp",
+        "sha256": "ed9aa5b7a0ce076b23598d2a9b80ef613bf5ecd93cd1a9ecb639414e7335211b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-04-1.webp",
+        "output": "public/dealer-app/vehicle-661f5b71cad046e86af7.webp",
+        "sha256": "661f5b71cad046e86af7237a4c32c8e5b455ae367b862d63d3ee93ade9de58af",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-04-2.webp",
+        "output": "public/dealer-app/vehicle-b2b61f6bc50ad3725cdb.webp",
+        "sha256": "b2b61f6bc50ad3725cdb95501b0e57c26545c51af0e3d8ba864ffb5ddea38d1b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-04-3.webp",
+        "output": "public/dealer-app/vehicle-3c713e9d7102e3937ea8.webp",
+        "sha256": "3c713e9d7102e3937ea85294851cfb2abc27ee9b4fff5da615937613fd32083a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-04-4.webp",
+        "output": "public/dealer-app/vehicle-49641f4b1486ebf80b88.webp",
+        "sha256": "49641f4b1486ebf80b88dabb3d7920e4177a57b3a780b6edb383fd81e2b7b7d5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-04-5.webp",
+        "output": "public/dealer-app/vehicle-8b13826363e45bb3b76f.webp",
+        "sha256": "8b13826363e45bb3b76fc1f91c8f7ff3d325bd60af84d2ea8338933f2a5f0937",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-05-1.webp",
+        "output": "public/dealer-app/vehicle-3b3b400d9fe973cab6f8.webp",
+        "sha256": "3b3b400d9fe973cab6f8b9df4c5661196e75cac0dab0d87a2ecf9300da70d8b4",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-05-2.webp",
+        "output": "public/dealer-app/vehicle-ae294d93be616d9ba3a3.webp",
+        "sha256": "ae294d93be616d9ba3a3da81dbd0d415c5680f635653d34631edb6bf9ff46fc1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-05-3.webp",
+        "output": "public/dealer-app/vehicle-744b4ad7bd7ec2c1e5d4.webp",
+        "sha256": "744b4ad7bd7ec2c1e5d4d63a3951ea0d6aaab5d6f60e579913577b3da8aeef9c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-05-4.webp",
+        "output": "public/dealer-app/vehicle-2801aa36b7a093322ef2.webp",
+        "sha256": "2801aa36b7a093322ef267530ca087b626a67193e205f6c5d7e095f419f6de1b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-05-5.webp",
+        "output": "public/dealer-app/vehicle-02521612a2248cae6640.webp",
+        "sha256": "02521612a2248cae664022c7745c0e5fa73aed3e6436d19051bd233c7c6aa7ed",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-06-1.webp",
+        "output": "public/dealer-app/vehicle-207f19cb07da01cf2437.webp",
+        "sha256": "207f19cb07da01cf2437189441addfdee15756cf927fd63372af01e148bed859",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-06-2.webp",
+        "output": "public/dealer-app/vehicle-159d1a765e901213c660.webp",
+        "sha256": "159d1a765e901213c66092ec3c7b9ed26d3cbab5149368967313ab0cc6f20d9d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-06-3.webp",
+        "output": "public/dealer-app/vehicle-45f3ee1112cfcfbf8809.webp",
+        "sha256": "45f3ee1112cfcfbf8809aa50b116527fd75aa2aa2bbfecc1989d6ef998750bfe",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-06-4.webp",
+        "output": "public/dealer-app/vehicle-5d5d1a6fd1918aa4caa6.webp",
+        "sha256": "5d5d1a6fd1918aa4caa675ab325af70993c0bcfc77599629bb38419ad9707921",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-06-5.webp",
+        "output": "public/dealer-app/vehicle-dc74109709e8eb7c6f44.webp",
+        "sha256": "dc74109709e8eb7c6f4494792c85d55665a02941bbf847d346799a4545c28c5c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-07-1.webp",
+        "output": "public/dealer-app/vehicle-74fbed7496d1e8f9d7a8.webp",
+        "sha256": "74fbed7496d1e8f9d7a812b2b3ed7eb560357c8468f27266c791a302ff3a8d04",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-07-2.webp",
+        "output": "public/dealer-app/vehicle-83e345c6038ee21ccc77.webp",
+        "sha256": "83e345c6038ee21ccc77372be1191f023dd361d7ebfe22d6e3578c36ec07cf29",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-07-3.webp",
+        "output": "public/dealer-app/vehicle-5d2d616efeba7c49bcfd.webp",
+        "sha256": "5d2d616efeba7c49bcfd5e557dea73fa56689e17c7f709d7cf12d08f76a3dc95",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-07-4.webp",
+        "output": "public/dealer-app/vehicle-2429ac8d2bb4e674d9c7.webp",
+        "sha256": "2429ac8d2bb4e674d9c7e8739e327c9004cd21944a132b972be5c0e2690ab844",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-07-5.webp",
+        "output": "public/dealer-app/vehicle-b33443ffffeebc69ea6a.webp",
+        "sha256": "b33443ffffeebc69ea6afb21726abf850ae851a5014e645fd6a3b7a66a62d968",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-08-1.webp",
+        "output": "public/dealer-app/vehicle-3546b89610db7430de0e.webp",
+        "sha256": "3546b89610db7430de0e07c9317f71c0637628f161dc3a8a6aa86428a46e9338",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-08-2.webp",
+        "output": "public/dealer-app/vehicle-cf95cee14d1759b9858f.webp",
+        "sha256": "cf95cee14d1759b9858f841655148943855171cc5e73e38c966a7b65d43c01b6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-08-3.webp",
+        "output": "public/dealer-app/vehicle-1bdf102ccfc7adac8f26.webp",
+        "sha256": "1bdf102ccfc7adac8f26f6358edad9d6ec12ce1cafa155f318ce09ec1377e515",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-08-4.webp",
+        "output": "public/dealer-app/vehicle-75502e1c44b9e6ff4866.webp",
+        "sha256": "75502e1c44b9e6ff4866ed76eaf6eb7610e7a6b1554cf44a0801c5c50c419ce5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-08-5.webp",
+        "output": "public/dealer-app/vehicle-3863f637265f8fd29708.webp",
+        "sha256": "3863f637265f8fd297088abf84c949ed5f614266154eb067728c1a5ef162e404",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-09-1.webp",
+        "output": "public/dealer-app/vehicle-38bcbde0689a873d7470.webp",
+        "sha256": "38bcbde0689a873d7470d97564f1886cb599e014b8a7b75cf07fa05573d8cb17",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-09-2.webp",
+        "output": "public/dealer-app/vehicle-3ef6942277ad1f60b78f.webp",
+        "sha256": "3ef6942277ad1f60b78fd61bb1e29e13ac73fd86a46e1c054ed9920d2ed34a6d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-09-3.webp",
+        "output": "public/dealer-app/vehicle-8f13b8d096a393c7294c.webp",
+        "sha256": "8f13b8d096a393c7294cf69ca9da69d85b4c92c57e1d5f5eedc6661edd80b143",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-09-4.webp",
+        "output": "public/dealer-app/vehicle-df6482035a66896e1bdc.webp",
+        "sha256": "df6482035a66896e1bdcc931e9456929fbbb0e69ce69bba2aef6d615bb5fffeb",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-09-5.webp",
+        "output": "public/dealer-app/vehicle-0c8adb4be0dab4c02de3.webp",
+        "sha256": "0c8adb4be0dab4c02de3066ebe3ccfb0603a7ee0112bc6829e4cd59688ff2602",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-10-1.webp",
+        "output": "public/dealer-app/vehicle-b292b7424ab1c5800139.webp",
+        "sha256": "b292b7424ab1c580013917ea7b7c9b6c5cc73b98c9cb6fe25febca952c169a3b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-10-2.webp",
+        "output": "public/dealer-app/vehicle-e90da46281dded83dea1.webp",
+        "sha256": "e90da46281dded83dea1aa5d7e434c42f87efa73121ff798d7641087b74ec66b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-10-3.webp",
+        "output": "public/dealer-app/vehicle-544a6acbf39ed90d52a4.webp",
+        "sha256": "544a6acbf39ed90d52a49aeacfa0f2109bcbf9ec24dd8f58407098a0ae7c3cf3",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-10-4.webp",
+        "output": "public/dealer-app/vehicle-9fc391d69eebc883dca6.webp",
+        "sha256": "9fc391d69eebc883dca6eaeb2b79ce7403f9317993719fbce18e07563026441f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-10-5.webp",
+        "output": "public/dealer-app/vehicle-217cd2c181cc781dd315.webp",
+        "sha256": "217cd2c181cc781dd3156206e002dcfeab4d799bf2f88ce6840c192f461f1249",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-11-1.webp",
+        "output": "public/dealer-app/vehicle-2137cb46cbfb4ce08e0d.webp",
+        "sha256": "2137cb46cbfb4ce08e0d3d298e3aed62f2ca9dcf6e1ee5b4842536981fb2c034",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-11-2.webp",
+        "output": "public/dealer-app/vehicle-67ce3408de62314083ab.webp",
+        "sha256": "67ce3408de62314083abe0999b46a3e315cb1c6112ed1d74713ffcbf824fcc79",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-11-3.webp",
+        "output": "public/dealer-app/vehicle-dc3d7c74735cc69ca12e.webp",
+        "sha256": "dc3d7c74735cc69ca12e68898f728f571e2bdee2fa8bef6924406426fe6e6470",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-11-4.webp",
+        "output": "public/dealer-app/vehicle-101b043c50827f9a5749.webp",
+        "sha256": "101b043c50827f9a5749a943d7d1ac50088c7bbb674220e7ecba7091fb9c19ab",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-11-5.webp",
+        "output": "public/dealer-app/vehicle-0e8e9b7eb7efc794658c.webp",
+        "sha256": "0e8e9b7eb7efc794658cc7e986d8b23829a39f06f05b1858239c16c2a6bf69e6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-12-1.webp",
+        "output": "public/dealer-app/vehicle-063693e163fe7e57741c.webp",
+        "sha256": "063693e163fe7e57741ce27f7487367e83def979f22e914521cb7020798bd84f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-12-2.webp",
+        "output": "public/dealer-app/vehicle-5f6a46fb1f2d87502095.webp",
+        "sha256": "5f6a46fb1f2d875020959eeae50162f0b0e80f92101fd6d5e6f786134568d93d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-12-3.webp",
+        "output": "public/dealer-app/vehicle-24ff1fc50af00daaab92.webp",
+        "sha256": "24ff1fc50af00daaab92ebeba7e37ee821f110d5a61b0fa68851322445c8d406",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-12-4.webp",
+        "output": "public/dealer-app/vehicle-09a7c43e07c0dfb1fae7.webp",
+        "sha256": "09a7c43e07c0dfb1fae707a344dde73ced06515d4de435aa395a36cec6e93ee0",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-12-5.webp",
+        "output": "public/dealer-app/vehicle-bb69988b82b5891867d9.webp",
+        "sha256": "bb69988b82b5891867d9de1a19a11632ba79f293278af487c93ba1ee7c309f6f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-13-1.webp",
+        "output": "public/dealer-app/vehicle-95c53f9a8db8e2b5eb5e.webp",
+        "sha256": "95c53f9a8db8e2b5eb5ed80e9e9ac54651d97dd24c76793878cf9f5f7bdfcb7c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-13-2.webp",
+        "output": "public/dealer-app/vehicle-79732adaa3489268c56d.webp",
+        "sha256": "79732adaa3489268c56db120716d3de8a30da95531c4c4e319a2b357240a61b2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-13-3.webp",
+        "output": "public/dealer-app/vehicle-453cb21d4d989cd29d7c.webp",
+        "sha256": "453cb21d4d989cd29d7ca32ba7ebcd51b78ee696cae64f135ddc9c6b9bc47c72",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-13-4.webp",
+        "output": "public/dealer-app/vehicle-7a0243c5f1e6773365fb.webp",
+        "sha256": "7a0243c5f1e6773365fb8c773e01073b0e6e7bec2236a130226991e8aeb96969",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-13-5.webp",
+        "output": "public/dealer-app/vehicle-29aed8cd7657bfa4be31.webp",
+        "sha256": "29aed8cd7657bfa4be31433e02aca5d81eb1d01eca611ed23457997a70b9586b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-14-1.webp",
+        "output": "public/dealer-app/vehicle-538799f302349a2fc76c.webp",
+        "sha256": "538799f302349a2fc76cfdf0999d2b6af6583ed1fc391425f2ccda89fbcc3a86",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-14-2.webp",
+        "output": "public/dealer-app/vehicle-436c97c6d300d92c029a.webp",
+        "sha256": "436c97c6d300d92c029ad81a4e486dba9c858b66565b7cf56052eaeef8fde490",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-14-3.webp",
+        "output": "public/dealer-app/vehicle-e36dd92e4639110927f9.webp",
+        "sha256": "e36dd92e4639110927f970e6e1cdd722e43c98f0f3e2058ac42cf807aee010e0",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-14-4.webp",
+        "output": "public/dealer-app/vehicle-8c5d1d5fe0d9ca91cea1.webp",
+        "sha256": "8c5d1d5fe0d9ca91cea1d5759f1014b683da8ea1c975b50ec17b01f2bcf0162e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-14-5.webp",
+        "output": "public/dealer-app/vehicle-cd21a2070a66a6d911a0.webp",
+        "sha256": "cd21a2070a66a6d911a092809b62fb258b78f930c031b0ed77660a0cadda2b20",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-15-1.webp",
+        "output": "public/dealer-app/vehicle-a593a2216d6e0d6ba0e8.webp",
+        "sha256": "a593a2216d6e0d6ba0e8634b1540659850c57c13b103311bd472febf234738ea",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-15-2.webp",
+        "output": "public/dealer-app/vehicle-71770667a371e154606b.webp",
+        "sha256": "71770667a371e154606b88cc0be5f895f1664295241bb316efe60f8a204fc2fa",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-15-3.webp",
+        "output": "public/dealer-app/vehicle-1fc96e92909ad85886a4.webp",
+        "sha256": "1fc96e92909ad85886a406be57b2dcad11495ed817327d841446d12dbaf811c5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-15-4.webp",
+        "output": "public/dealer-app/vehicle-ad07f7f11f36e7473cbf.webp",
+        "sha256": "ad07f7f11f36e7473cbfc5063923d9b832fa3a88ffb3cd74a8c988d7585c2133",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/astracar/vehicle-15-5.webp",
+        "output": "public/dealer-app/vehicle-1c7135cf290a1f814829.webp",
+        "sha256": "1c7135cf290a1f814829674df0591109a4dc28c1670fa22c36d295118cea7edb",
+        "role": "vehicle"
+      }
+    ]
+  },
+  "baseDeployment": {
+    "id": "dpl_F4jfs8d3GbA3kbVQmHxMESo3y1ob",
+    "url": "https://cars-astracar.vercel.app/",
+    "checkedAt": "2026-09-28T02:25:40.614Z"
+  },
+  "baseReceiptSha256": "7062159caf6ad3581f87dd8b135349c12bf54b8bab838a6db607cda0f6cb7593",
+  "refreshedAt": "2026-09-30T10:50:03.250Z"
+}

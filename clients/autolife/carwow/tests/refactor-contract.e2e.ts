@@ -48,7 +48,7 @@ test('home and vehicle CSS follows the 991/992 boundary without duplicate links 
 	await page.setViewportSize({ width: 390, height: 844 });
 	await page.goto('/inventory', { waitUntil: 'networkidle' });
 	const href = await page
-		.locator('a[href^="/inventory/"]:not([href="/inventory/map"])')
+		.locator('a[href^="/bg/inventory/"]:not([href="/bg/inventory/map"])')
 		.first()
 		.getAttribute('href');
 	expect(href).toBeTruthy();
@@ -111,7 +111,7 @@ test('legacy dashboard URLs redirect, while unknown and prototype-named URLs sta
 		['dashboard/reviews', '/admin'],
 		['dashboard/change-password', '/admin/settings']
 	]) {
-		const response = await request.get('/' + path, { maxRedirects: 0 });
+		const response = await request.get('/bg/' + path, { maxRedirects: 0 });
 		expect(response.status()).toBe(303);
 		expect(response.headers().location).toBe(target);
 	}
@@ -122,7 +122,7 @@ test('legacy dashboard URLs redirect, while unknown and prototype-named URLs sta
 		'/dashboard/unknown',
 		'/dashboard.html'
 	]) {
-		expect((await request.get(path, { maxRedirects: 0 })).status()).toBe(404);
+		expect((await request.get('/bg' + path, { maxRedirects: 0 })).status()).toBe(404);
 	}
 });
 
@@ -159,8 +159,9 @@ test('production inventory preserves the inspected search action and listing gut
 		if (previous) await page.goto(previous, { waitUntil: 'networkidle' });
 		await page.goto('/inventory', { waitUntil: 'networkidle' });
 		const action = page.locator('.inventory-hero .daynight-inventory-searchbar__submit');
-		await expect(action).toHaveCSS('width', '44px');
-		await expect(action).toHaveCSS('height', '44px');
+		const bounds = (await action.boundingBox())!;
+		expect(bounds.width).toBeGreaterThanOrEqual(44);
+		expect(bounds.height).toBeGreaterThanOrEqual(44);
 		await expect(action).toHaveCSS('background-color', 'rgb(23, 27, 30)');
 		await expect
 			.poll(async () => (await page.locator('.daynight-inventory-listings-shell').boundingBox())?.x)

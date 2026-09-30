@@ -23,20 +23,24 @@
 			class="mh-footer__logo"
 			src={i18n.asset(resolve(daynightSite.logoLight))}
 			alt={daynightSite.name}
+			width="600"
+			height="171"
 			loading="lazy"
 		/>
 	</a>
 	{#if showContact}
 		<div class="mh-footer__contact">
 			<a class="mh-footer__phone" href={i18n.href(daynightSite.phoneHref)}
-				><Phone size={19} strokeWidth={2} /><span>{daynightSite.phoneLabel}</span></a
+				><Phone size={19} strokeWidth={2} aria-hidden="true" /><span>{daynightSite.phoneLabel}</span
+				></a
 			>
 			<a
 				class="mh-footer__loc"
 				href={i18n.href(daynightSite.mapUrl)}
 				target="_blank"
 				rel="external noopener noreferrer"
-				><MapPin size={19} strokeWidth={2} /><span>{i18n.dealer('address')}</span></a
+				><MapPin size={19} strokeWidth={2} aria-hidden="true" /><span>{i18n.dealer('address')}</span
+				></a
 			>
 		</div>
 		<div class="mh-footer__hours">
@@ -47,7 +51,9 @@
 	<div class="mh-footer__groups">
 		{#each daynightDealerFooterGroups as group (group.title)}
 			<details>
-				<summary>{i18n.text(group.title)}<Plus size={18} strokeWidth={2} /></summary>
+				<summary
+					>{i18n.text(group.title)}<Plus size={18} strokeWidth={2} aria-hidden="true" /></summary
+				>
 				<nav aria-label={i18n.text(group.title)}>
 					{#each group.links as link (link.href)}<a href={i18n.href(resolve(link.href))}
 							>{i18n.text(link.label)}</a
@@ -156,14 +162,18 @@
 	}
 	.mh-footer {
 		display: grid;
-		gap: 20px;
+		gap: 24px;
 		margin-top: 24px;
-		padding: 28px var(--sa-mobile-gutter-wide) calc(24px + 62px + env(safe-area-inset-bottom));
-		background: #1c1c1c;
+		padding: 32px var(--sa-mobile-gutter-wide) calc(24px + 62px + env(safe-area-inset-bottom));
+		border-radius: 24px 24px 0 0;
+		background: #000;
 		color: #fff;
 		font-size: var(--sa-type-body);
 		font-weight: var(--sa-weight-regular);
 		line-height: var(--sa-mobile-leading-body);
+	}
+	.mh-footer:global(.mh-footer--dock-hidden) {
+		padding-bottom: calc(28px + env(safe-area-inset-bottom));
 	}
 	.mh-footer a {
 		color: inherit;
@@ -182,39 +192,38 @@
 	}
 	.mh-footer__logo {
 		display: block;
-		width: 180px;
+		width: 160px;
 		height: auto;
 	}
 	.mh-footer__contact {
 		display: grid;
-		gap: 8px;
+		gap: 4px;
 	}
 	.mh-footer__phone,
 	.mh-footer__loc {
 		display: flex;
 		align-items: center;
 		gap: 12px;
-		min-height: 48px;
-		padding: 12px 16px;
-		border-radius: var(--sa-r-md);
+		min-height: var(--sa-mobile-action-h);
+		padding: 0;
 	}
 	.mh-footer__phone {
-		justify-content: center;
-		background: var(--sa-red);
+		font-size: var(--sa-text-lg);
 		font-weight: var(--sa-weight-medium);
 	}
-	.mh-footer__loc {
-		background: #242424;
+	.mh-footer .mh-footer__loc {
+		color: #c5cad2;
 	}
 	.mh-footer__contact :global(svg) {
 		flex-shrink: 0;
+		color: #b7bec8;
 	}
 	.mh-footer__hours {
 		display: grid;
 		gap: 4px;
 	}
 	.mh-footer__hours > span {
-		color: #b7bec5;
+		color: #b7bec8;
 		font-size: var(--sa-mobile-type-meta);
 	}
 	.mh-footer__hours p {
@@ -222,20 +231,19 @@
 	}
 	.mh-footer__groups {
 		display: grid;
-		gap: 8px;
+		border-top: 1px solid #2c3036;
 	}
 	.mh-footer__groups details {
-		background: #242424;
-		border-radius: var(--sa-r-md);
-		overflow: hidden;
+		border-bottom: 1px solid #2c3036;
 	}
 	.mh-footer__groups summary {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		min-height: 48px;
-		padding: 12px 16px;
+		box-sizing: border-box;
+		min-height: 56px;
+		padding: 10px 0;
 		list-style: none;
 		cursor: pointer;
 		font-weight: var(--sa-weight-medium);
@@ -245,40 +253,47 @@
 	}
 	.mh-footer__groups summary :global(svg) {
 		flex-shrink: 0;
+		color: #b7bec8;
 	}
 	.mh-footer__groups details[open] summary :global(svg) {
 		transform: rotate(45deg);
 	}
 	.mh-footer__groups nav {
 		display: grid;
-		padding: 0 16px 8px;
+		padding: 0 0 12px;
 	}
 	.mh-footer__groups nav a {
 		display: flex;
+		box-sizing: border-box;
 		align-items: center;
 		min-height: var(--sa-mobile-action-h);
 		padding: 8px 0;
-		color: #d2d7dc;
+		color: #c5cad2;
 	}
 	.mh-footer__social {
 		display: flex;
-		gap: 12px;
+		gap: 8px;
 	}
-	.mh-footer__social-link {
+	.mh-footer .mh-footer__social-link {
 		display: grid;
 		place-items: center;
 		width: var(--sa-mobile-action-h);
 		height: var(--sa-mobile-action-h);
-		border: 1px solid #464646;
-		border-radius: 50%;
+		border-radius: 8px;
+		color: #c5cad2;
 	}
 	.mh-footer__social-link:hover {
-		background: #303030;
+		background: #1c1f24;
 	}
 	.mh-footer__bottom {
-		display: grid;
-		gap: 4px;
-		color: #b7bec5;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 4px 12px;
+		border-top: 1px solid #2c3036;
+		padding-top: 12px;
+		color: #b7bec8;
 		font-size: var(--sa-mobile-type-meta);
 	}
 	.mh-footer__bottom nav {

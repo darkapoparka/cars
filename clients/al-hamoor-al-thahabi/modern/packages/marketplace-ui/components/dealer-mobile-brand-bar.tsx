@@ -28,8 +28,6 @@ export const DealerMobileBrandBar = ({
 }) => {
   const light = tone === "light";
   const clean = tone === "clean";
-  const useOnLight = wordmarkTone === "dark" || (wordmarkTone === "original" && light);
-  const logoSource = useOnLight ? leadSite.logoOnLight : leadSite.logoOnDark;
   const logoWidthClassName = "w-[144px] max-w-[48vw]";
 
   return (
@@ -73,7 +71,7 @@ export const DealerMobileBrandBar = ({
             height={512}
             priority
             sizes="(max-width: 1023px) 144px, 0px"
-            src={logoSource}
+            src={wordmarkTone === "light" ? leadSite.logoOnDark : wordmarkTone === "dark" || light ? leadSite.logoOnLight : leadSite.logoOnDark}
             width={1780}
           />
         </span>

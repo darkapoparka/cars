@@ -15,11 +15,11 @@ const location = "бул. „Цар Освободител“ 282";
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Варна',
-	locationShort: "Варна",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Варна'
-	},
+  "city": "Varna",
+  "locationShort": "Varna",
+  "addressLine": "282 Tsar Osvoboditel Blvd.",
+  "address": "282 Tsar Osvoboditel Blvd., Varna"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -52,6 +52,7 @@ export const daynightSite = {
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

@@ -1,0 +1,2252 @@
+[
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "0 автомобила"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [
+      {
+        "height": 24,
+        "name": "Търсене на автомобили",
+        "tag": "INPUT",
+        "width": 181
+      }
+    ],
+    "smallText": [
+      {
+        "ratio": 17.9,
+        "required": 4.5,
+        "size": 11,
+        "text": "Посетете ни"
+      }
+    ],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "inventory-empty-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 2,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [
+      {
+        "ratio": 15.09,
+        "required": 4.5,
+        "size": 11,
+        "text": "Drive24\nПодбрани"
+      },
+      {
+        "ratio": 5.7,
+        "required": 4.5,
+        "size": 11,
+        "text": "Подбрани"
+      }
+    ],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 320,
+    "label": "home-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [
+      {
+        "ratio": 15.09,
+        "required": 4.5,
+        "size": 11,
+        "text": "Drive24\nПодбрани"
+      },
+      {
+        "ratio": 5.7,
+        "required": 4.5,
+        "size": 11,
+        "text": "Подбрани"
+      }
+    ],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 390,
+    "label": "home-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      },
+      {
+        "lines": 1,
+        "text": "Нашите услуги"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [
+      {
+        "height": 37,
+        "name": "50,000 km\nАвтоматична\nОтлично състояние",
+        "tag": "A",
+        "width": 349
+      }
+    ],
+    "smallText": [
+      {
+        "ratio": 15.09,
+        "required": 4.5,
+        "size": 11,
+        "text": "Drive24\nПодбрани"
+      },
+      {
+        "ratio": 5.7,
+        "required": 4.5,
+        "size": 11,
+        "text": "Подбрани"
+      },
+      {
+        "ratio": 13.97,
+        "required": 4.5,
+        "size": 11,
+        "text": "Drive24\nПодбрани"
+      },
+      {
+        "ratio": 5.27,
+        "required": 4.5,
+        "size": 11,
+        "text": "Подбрани"
+      }
+    ],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 390,
+    "label": "home-cards-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Грижа за колата."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Периодично обслужване"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [
+      {
+        "height": 25,
+        "name": "Drive24",
+        "tag": "A",
+        "width": 67
+      },
+      {
+        "height": 32,
+        "name": "Посетете ни",
+        "tag": "A",
+        "width": 97
+      }
+    ],
+    "smallText": [
+      {
+        "ratio": 6.05,
+        "required": 4.5,
+        "size": 11,
+        "text": "Посетете ни"
+      },
+      {
+        "ratio": 12.64,
+        "required": 4.5,
+        "size": 11,
+        "text": "Ежедневна грижа"
+      }
+    ],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/service",
+    "width": 390,
+    "label": "service-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Грижа за колата."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Периодично обслужване"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [
+      {
+        "height": 25,
+        "name": "Drive24",
+        "tag": "A",
+        "width": 67
+      },
+      {
+        "height": 32,
+        "name": "Посетете ни",
+        "tag": "A",
+        "width": 97
+      }
+    ],
+    "smallText": [
+      {
+        "ratio": 6.05,
+        "required": 4.5,
+        "size": 11,
+        "text": "Посетете ни"
+      },
+      {
+        "ratio": 12.64,
+        "required": 4.5,
+        "size": 11,
+        "text": "Ежедневна грижа"
+      }
+    ],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/service",
+    "width": 320,
+    "label": "service-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Цялостна грижа"
+      },
+      {
+        "lines": 2,
+        "text": "Грижа за автомобила, стъпка по стъпка"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [
+      {
+        "height": 25,
+        "name": "Drive24",
+        "tag": "A",
+        "width": 67
+      },
+      {
+        "height": 32,
+        "name": "Посетете ни",
+        "tag": "A",
+        "width": 97
+      }
+    ],
+    "smallText": [
+      {
+        "ratio": 6.05,
+        "required": 4.5,
+        "size": 11,
+        "text": "Посетете ни"
+      },
+      {
+        "ratio": 12.64,
+        "required": 4.5,
+        "size": 11,
+        "text": "По-внимателен преглед"
+      }
+    ],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/service",
+    "width": 320,
+    "label": "service-content-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Финансиране."
+      },
+      {
+        "lines": 1,
+        "text": "Примерна вноска"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/finance",
+    "width": 320,
+    "label": "finance-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Свържете се с продавача"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [
+      {
+        "height": 146,
+        "name": "",
+        "tag": "TEXTAREA",
+        "width": 276
+      }
+    ],
+    "url": "http://localhost:3001/bg/finance",
+    "width": 320,
+    "label": "enquiry-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Примерна вноска"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [
+      {
+        "height": 2,
+        "name": "Процент на първоначалната вноска",
+        "tag": "INPUT",
+        "width": 235
+      }
+    ],
+    "smallText": [],
+    "unnamedControls": [
+      {
+        "height": 88,
+        "name": "",
+        "tag": "INPUT",
+        "width": 116
+      },
+      {
+        "height": 88,
+        "name": "",
+        "tag": "INPUT",
+        "width": 116
+      }
+    ],
+    "url": "http://localhost:3001/bg/finance",
+    "width": 320,
+    "label": "finance-calculator-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 2,
+        "text": "Продайте колата си."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Продайте на нас"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/sell",
+    "width": 320,
+    "label": "sell-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Запазени автомобили"
+      },
+      {
+        "lines": 2,
+        "text": "Все още няма запазени автомобили"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/saved",
+    "width": 320,
+    "label": "saved-empty-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Запазени автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "1 автомобил"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/saved",
+    "width": 320,
+    "label": "saved-car-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Автомобил"
+      },
+      {
+        "lines": 1,
+        "text": "2024 TOYOTA FORTUNER EXR"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [
+      {
+        "height": 27,
+        "name": "ВИЖ ПОДОБНИ АВТОМОБИЛИ",
+        "tag": "BUTTON",
+        "width": 187
+      },
+      {
+        "height": 18,
+        "name": "Информация за цената",
+        "tag": "BUTTON",
+        "width": 121
+      },
+      {
+        "height": 18,
+        "name": "Примерен калкулатор",
+        "tag": "BUTTON",
+        "width": 115
+      }
+    ],
+    "smallText": [
+      {
+        "ratio": 16.24,
+        "required": 4.5,
+        "size": 11,
+        "text": "ВИЖ ПОДОБНИ АВТОМОБИЛИ"
+      },
+      {
+        "ratio": 16.24,
+        "required": 4.5,
+        "size": 11,
+        "text": "Информация за цената"
+      },
+      {
+        "ratio": 16.24,
+        "required": 4.5,
+        "size": 11,
+        "text": "Примерна обява — потвърдете цената и наличността"
+      },
+      {
+        "ratio": 14.77,
+        "required": 4.5,
+        "size": 11,
+        "text": "Примерен калкулатор"
+      },
+      {
+        "ratio": 14.77,
+        "required": 4.5,
+        "size": 11,
+        "text": "Попитайте продавача за условията и наличността."
+      },
+      {
+        "ratio": 7.69,
+        "required": 4.5,
+        "size": 11,
+        "text": "Планирайте посещение в автокъщата"
+      }
+    ],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "label": "vehicle-detail-before-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Подобни автомобили на 2024 TOYOTA FORTUNER"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [
+      {
+        "height": 32,
+        "name": "Затвори подобните автомобили",
+        "tag": "BUTTON",
+        "width": 20
+      }
+    ],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "label": "similar-sheet-before-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Подобни автомобили"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "label": "similar-sheet-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "label": "photo-viewer-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Оборудване"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr/features",
+    "width": 320,
+    "label": "vehicle-features-empty-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 2,
+        "text": "Въздушна възглавница за коленете"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr/features",
+    "width": 320,
+    "label": "feature-information-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [
+      {
+        "ratio": 3.43,
+        "required": 4.5,
+        "size": 12,
+        "text": "Лява страна"
+      },
+      {
+        "ratio": 3.43,
+        "required": 4.5,
+        "size": 12,
+        "text": "Отпред"
+      },
+      {
+        "ratio": 3.43,
+        "required": 4.5,
+        "size": 12,
+        "text": "Централна конзола"
+      },
+      {
+        "ratio": 3.43,
+        "required": 4.5,
+        "size": 12,
+        "text": "Мултимедийна система"
+      },
+      {
+        "ratio": 3.43,
+        "required": 4.5,
+        "size": 12,
+        "text": "Волан"
+      }
+    ],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Снимки"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr/gallery?category=Interiors",
+    "width": 320,
+    "label": "gallery-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Снимки"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr/gallery?category=Features",
+    "width": 320,
+    "label": "gallery-features-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Автомобил"
+      },
+      {
+        "lines": 1,
+        "text": "2024 TOYOTA FORTUNER EXR"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "label": "vehicle-detail-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Автомобил"
+      },
+      {
+        "lines": 1,
+        "text": "Състояние"
+      },
+      {
+        "lines": 1,
+        "text": "Сервизна история"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "label": "vehicle-detail-lower-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Автомобил"
+      },
+      {
+        "lines": 1,
+        "text": "Оборудване"
+      },
+      {
+        "lines": 1,
+        "text": "Състояние"
+      },
+      {
+        "lines": 1,
+        "text": "Сервизна история"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 390,
+    "label": "vehicle-detail-lower-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Меню"
+      },
+      {
+        "lines": 1,
+        "text": "Език"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/more",
+    "width": 390,
+    "label": "menu-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Меню"
+      },
+      {
+        "lines": 1,
+        "text": "Език"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/more",
+    "width": 320,
+    "label": "menu-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Посетете ни"
+      },
+      {
+        "lines": 2,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": null,
+        "text": "Drive24"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/stores",
+    "width": 320,
+    "label": "showroom-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Посетете ни"
+      },
+      {
+        "lines": 1,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": null,
+        "text": "Drive24"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/stores",
+    "width": 390,
+    "label": "showroom-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 390,
+    "label": "search-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 320,
+    "label": "search-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "9 автомобила"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "inventory-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [
+      {
+        "ratio": 2.75,
+        "required": 4.5,
+        "size": 12,
+        "text": "Макс."
+      }
+    ],
+    "headings": [
+      {
+        "lines": null,
+        "text": "ФИЛТРИ"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [
+      {
+        "height": 264,
+        "name": "price maximum slider",
+        "tag": "INPUT",
+        "width": 29
+      },
+      {
+        "height": 264,
+        "name": "price minimum slider",
+        "tag": "INPUT",
+        "width": 29
+      },
+      {
+        "height": 29,
+        "name": "Maximum price",
+        "tag": "INPUT",
+        "width": 122
+      },
+      {
+        "height": 29,
+        "name": "Minimum price",
+        "tag": "INPUT",
+        "width": 122
+      }
+    ],
+    "smallText": [],
+    "unnamedControls": [
+      {
+        "height": 44,
+        "name": "",
+        "tag": "INPUT",
+        "width": 269
+      },
+      {
+        "height": 44,
+        "name": "",
+        "tag": "INPUT",
+        "width": 269
+      },
+      {
+        "height": 44,
+        "name": "",
+        "tag": "INPUT",
+        "width": 269
+      },
+      {
+        "height": 44,
+        "name": "",
+        "tag": "INPUT",
+        "width": 269
+      }
+    ],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "budget-filter-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "ФИЛТРИ"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "budget-filter-320-fixed"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "ФИЛТРИ"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "model-filter-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Подреди"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "sort-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Открийте следващия си автомобил."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 1000,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 1425,
+    "smallTargets": [
+      {
+        "height": 30,
+        "name": "Drive24 home",
+        "tag": "A",
+        "width": 80
+      },
+      {
+        "height": 44,
+        "name": "Купи",
+        "tag": "A",
+        "width": 34
+      },
+      {
+        "height": 42,
+        "name": "Запазени автомобили",
+        "tag": "A",
+        "width": 42
+      },
+      {
+        "height": 42,
+        "name": "Отворете менюто",
+        "tag": "A",
+        "width": 42
+      }
+    ],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 1440,
+    "label": "home-desktop"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 2,
+        "text": "Открийте следващия си автомобил."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 1024,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 753,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 768,
+    "label": "home-tablet"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Грижа за колата."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Периодично обслужване"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/service",
+    "width": 390,
+    "label": "service-390-final"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Грижа за колата."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Периодично обслужване"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/service",
+    "width": 320,
+    "label": "service-320-final"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Периодично обслужване"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/service",
+    "width": 320,
+    "label": "service-information-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 390,
+    "label": "production-home-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 2,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 320,
+    "label": "production-home-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 320,
+    "label": "production-search-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "9 автомобила"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "production-toyota-inventory-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "ФИЛТРИ"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "production-budget-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Финансиране."
+      },
+      {
+        "lines": 1,
+        "text": "Примерна вноска"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/finance",
+    "width": 390,
+    "label": "production-finance-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Примерна вноска"
+      },
+      {
+        "lines": 1,
+        "text": "Планирайте бюджета си."
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/finance",
+    "width": 390,
+    "label": "production-finance-calculator-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Продайте колата си."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Продайте на нас"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/sell",
+    "width": 390,
+    "label": "production-sell-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Грижа за колата."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Периодично обслужване"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/service",
+    "width": 390,
+    "label": "production-service-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Запитване за сервиз"
+      },
+      {
+        "lines": 1,
+        "text": "За вашия автомобил"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/service/details?brand=Toyota",
+    "width": 390,
+    "label": "production-service-request-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Открийте следващия си автомобил."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 1000,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 1425,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 1440,
+    "label": "production-home-desktop"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "Филтри за автомобили"
+      },
+      {
+        "lines": null,
+        "text": "48 автомобила"
+      }
+    ],
+    "height": 1000,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 1425,
+    "smallTargets": [
+      {
+        "height": 43,
+        "name": "Nissan",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "Toyota",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "Mitsubishi",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "MG",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "Mercedes-Benz",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "BMW",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "Ford",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "Chevrolet",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "Hyundai",
+        "tag": "INPUT",
+        "width": 207
+      },
+      {
+        "height": 43,
+        "name": "Kia",
+        "tag": "INPUT",
+        "width": 207
+      }
+    ],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars",
+    "width": 1440,
+    "label": "production-inventory-desktop"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Автомобил"
+      },
+      {
+        "lines": 1,
+        "text": "2024 TOYOTA FORTUNER EXR"
+      },
+      {
+        "lines": 1,
+        "text": "2024 TOYOTA FORTUNER EXR"
+      }
+    ],
+    "height": 1000,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 1425,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 1440,
+    "label": "production-vehicle-desktop"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Подобни автомобили"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "label": "production-similar-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Информация за гаранцията"
+      },
+      {
+        "lines": 3,
+        "text": "Опознайте следващия си автомобил."
+      },
+      {
+        "lines": 3,
+        "text": "Запознайте се с подробностите, преди да решите."
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/benefits/warranty",
+    "width": 320,
+    "label": "production-warranty-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Информация за връщане"
+      },
+      {
+        "lines": 3,
+        "text": "Опознайте следващия си автомобил."
+      },
+      {
+        "lines": 3,
+        "text": "Запознайте се с подробностите, преди да решите."
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/benefits/returns",
+    "width": 320,
+    "label": "production-returns-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Доклад от преглед"
+      },
+      {
+        "lines": 1,
+        "text": "2024 TOYOTA FORTUNER"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr/inspection",
+    "width": 320,
+    "label": "production-inspection-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Изберете селекция"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": 1,
+        "text": "Разгледайте по марки"
+      },
+      {
+        "lines": null,
+        "text": "15 автомобила"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/luxe",
+    "width": 320,
+    "label": "production-luxe-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Информация за гаранцията"
+      },
+      {
+        "lines": 2,
+        "text": "Опознайте колата."
+      },
+      {
+        "lines": 1,
+        "text": "Преди да решите."
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/benefits/warranty",
+    "width": 320,
+    "label": "final-warranty-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Информация за връщане"
+      },
+      {
+        "lines": 2,
+        "text": "Опознайте колата."
+      },
+      {
+        "lines": 1,
+        "text": "Преди да решите."
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/benefits/returns",
+    "width": 320,
+    "label": "final-returns-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Подбрани автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": 1,
+        "text": "Разгледайте по марки"
+      },
+      {
+        "lines": null,
+        "text": "15 автомобила"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/luxe",
+    "width": 320,
+    "label": "final-luxe-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "Филтри за автомобили"
+      },
+      {
+        "lines": null,
+        "text": "48 автомобила"
+      }
+    ],
+    "height": 1000,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 1425,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars",
+    "width": 1440,
+    "label": "final-inventory-desktop"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Автомобил"
+      },
+      {
+        "lines": 2,
+        "text": "Опознайте колата."
+      },
+      {
+        "lines": 1,
+        "text": "Оборудване"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "label": "final-vehicle-ownership-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Примерна вноска"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/finance",
+    "width": 320,
+    "label": "final-finance-calculator-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Свържете се с продавача"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/finance",
+    "width": 320,
+    "label": "final-enquiry-320"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 390,
+    "label": "final-home-cards-390"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 390,
+    "label": "final-search-390"
+  }
+]

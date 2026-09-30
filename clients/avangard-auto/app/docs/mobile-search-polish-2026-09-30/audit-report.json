@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-09-29T22:35:48.827Z",
+  "scope": "Cars App mobile search and filter follow-up",
+  "source": "L:/CODEX/cars/templates/app",
+  "referenceSource": "L:/inspiration/cars24 (read only)",
+  "runtime": {
+    "node": "22.20.0",
+    "check": "npm run check",
+    "result": "passed",
+    "includes": [
+      "ESLint",
+      "TypeScript",
+      "Next.js webpack production build, 407 generated pages"
+    ]
+  },
+  "observations": {
+    "views": 25,
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "issues": [],
+    "method": "Read-only visible DOM and computed-style checks, screenshots, keyboard and pointer interactions in the in-app browser"
+  },
+  "interactionResults": {
+    "pointerSearchFocus": "0px border, no outline; 48px capsule",
+    "keyboardSearchFocus": "single 2px solid #202024 ring",
+    "searchSelection": "8 Toyota suggestions; ArrowDown + Enter shows 9 Toyota cars",
+    "modelFilter": "Corolla query and selection shows 1 car",
+    "clearFilters": "restores 48 cars",
+    "sort": "price ascending begins with Mitsubishi Attrage at EUR 24,799",
+    "modalEscape": "closes filters and returns focus to the Filter control",
+    "keyboardSuggestionVisibility": "suggestion-7 bottom 468px within a 500px-high viewport",
+    "featureSearch": "Bulgarian query круиз shows Cruise Control; clear restores all groups"
+  },
+  "limits": [
+    "Focused checks, not formal WCAG certification",
+    "Desktop Chromium viewport overrides, not physical-device Web Vitals measurements"
+  ],
+  "production": {
+    "routesFile": "production-routes.json",
+    "routesPassed": 5
+  },
+  "screenshots": [
+    "home-320.jpg",
+    "home-390.jpg",
+    "search-390.jpg",
+    "filters-320.jpg",
+    "filters-390.jpg"
+  ]
+}

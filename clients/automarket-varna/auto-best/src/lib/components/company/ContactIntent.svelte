@@ -67,6 +67,7 @@
     </a>
 
 
+    {#if socialPlatforms.some(profile => profile.href)}
     <div class="dn-contact-social" role="group" aria-label={i18n.t("m_b16446d4331a")}>
       <span>{i18n.t("m_b16446d4331a")}</span>
       <div class="dn-social-profile-links">
@@ -77,6 +78,7 @@
         {/each}
       </div>
     </div>
+    {/if}
     {/if}
   </div>
 

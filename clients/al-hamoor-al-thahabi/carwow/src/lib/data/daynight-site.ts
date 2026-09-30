@@ -15,11 +15,11 @@ const location = "Souk Al Haraj, showroom 353, Sharjah";
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Sharjah',
-	locationShort: "Sharjah",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Sharjah'
-	},
+  "city": "Sharjah",
+  "locationShort": "Sharjah",
+  "addressLine": "Souk Al Haraj, showroom 353, Sharjah",
+  "address": "Souk Al Haraj, showroom 353, Sharjah"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -52,6 +52,7 @@ export const daynightSite = {
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

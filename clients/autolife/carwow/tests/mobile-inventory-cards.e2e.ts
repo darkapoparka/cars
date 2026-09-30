@@ -8,7 +8,7 @@ for (const width of [320, 390, 428]) {
 		await expect(card).toBeVisible();
 		await expect(card.getByRole('heading', { level: 2 })).toHaveText('Mercedes-Benz GLA 45 AMG');
 		const titleWeight = await card.evaluate((element) =>
-			getComputedStyle(element).getPropertyValue('--sa-weight-strong').trim()
+			getComputedStyle(element).getPropertyValue('--sa-weight-medium').trim()
 		);
 		await expect(card.getByRole('heading', { level: 2 })).toHaveCSS('font-weight', titleWeight);
 		await expect(card.locator('.mobile-inventory-card__price strong')).toHaveCSS(

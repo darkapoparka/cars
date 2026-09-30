@@ -5,7 +5,7 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  import { bodyTypes } from '$data/home';
+  import { bodyTypes, desktopBodyTypes } from '$data/home';
 
   const mobileBodyTypes = new Set<string>(
     [...bodyTypes.filter((item) => item.count > 0), ...bodyTypes.filter((item) => item.count <= 0)]
@@ -34,8 +34,8 @@
 
     <div class="dn-body-types__viewport dn-home-section-panel">
       <div class="dn-body-types__rail" id="body-types-grid" aria-label={i18n.t("m_b94720bac36c")}>
-        {#each bodyTypes as item (item.query)}
-          <a class="dn-body-type" class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`))}>
+        {#each desktopBodyTypes as item (item.query)}
+          <a class="dn-body-type" class:dn-body-type--desktop-only={item.count === 0} class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`))}>
             <span class="dn-body-type__image">
               <span class="dn-body-type__frame"
                 style:--body-aspect={`${item.bounds[2] - item.bounds[0]} / ${item.bounds[3] - item.bounds[1]}`}
@@ -59,12 +59,21 @@
             </span>
           </a>
         {/each}
+        {#if bodyTypes.length > mobileBodyTypes.size}
         <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="body-types-grid" onclick={() => expanded = !expanded}>
           <span class="dn-body-all-glyph" aria-hidden="true">
             <span class="dn-body-all-glyph__accent"></span><span></span><span></span><span></span>
           </span>
           <strong>{expanded ? i18n.t("m_211232676e95") : i18n.t("m_3cd085e8c069")}</strong>
         </button>
+        {:else}
+        <a class="dn-discovery-toggle" href={i18n.href(resolve('/listing-grid'))}>
+          <span class="dn-body-all-glyph" aria-hidden="true">
+            <span class="dn-body-all-glyph__accent"></span><span></span><span></span><span></span>
+          </span>
+          <strong>{i18n.t("m_30a64216eaea")}</strong>
+        </a>
+        {/if}
       </div>
     </div>
   </div>
@@ -368,6 +377,7 @@
       display: none;
     }
 
-    .dn-body-type--secondary { display: none; }
+    .dn-body-type--secondary,
+    .dn-body-type--desktop-only { display: none; }
   }
 </style>

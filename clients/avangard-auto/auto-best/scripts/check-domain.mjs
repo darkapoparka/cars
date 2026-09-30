@@ -39,6 +39,7 @@ for (const record of records) {
   assert(record.verification !== 'verified' || record.evidenceUrl);
 }
 const completeParams = new URLSearchParams([
+  ['type', 'car'],
   ['q', 'Audi'], ['make', 'Audi'], ['model', 'RS Q8'], ['body', 'SUV'],
   ['fuel', 'Бензин'], ['transmission', 'Автоматик'], ['version', 'RS'],
   ['equipment', '4x4'], ['equipment', 'Навигация'], ['condition', 'used'],
@@ -86,6 +87,26 @@ assert.equal(listing.removeListingFilter(filters, 'make', 'BMW').has('model'), f
 assert.equal(listing.removeListingFilter(filters, 'make', 'BMW').get('sort'), 'price-asc');
 for (const value of ['12oops', '-1', '1.5', 'Infinity', '999999999999999999']) assert.equal(listing.parseListingFilters(new URLSearchParams({ price_max: value })).priceMax, null);
 assert.equal(listing.filterListingVehicles(records, listing.parseListingFilters(new URLSearchParams('price_max=0'))).length, 0);
+// Real category filtering, including the dealer's future non-car inventory.
+const mixedInventory = inventory.vehicleTypes.map((type, index) => ({ ...records[0], id: index + 1, type, priceEur: (index + 1) * 9000 }));
+for (const type of inventory.vehicleTypes) {
+  const filters = listing.parseListingFilters(new URLSearchParams({ type }));
+  assert.deepEqual(listing.filterListingVehicles(mixedInventory, filters).map(vehicle => vehicle.type), [type]);
+  assert.equal(listingDraft.listingFiltersFromDraft(listingDraft.listingDraftFromFilters(filters)).type, type);
+  assert.equal(listing.activeFilterCount(filters), 1);
+  assert.equal(listing.removeListingFilter(filters, 'type', type).has('type'), false);
+}
+assert.equal(listing.parseListingFilters(new URLSearchParams('type=spaceship')).type, '');
+assert.equal(listing.filterListingVehicles(records, listing.parseListingFilters(new URLSearchParams('type=motorbike'))).length, 0);
+const preservedType = new URLSearchParams(listingDraft.preservedListingFacetEntries(new URLSearchParams('type=car&price_max=80000&sort=price-asc'), 'sort', 'newest'));
+assert.equal(preservedType.get('type'), 'car');
+assert.equal(preservedType.get('price_max'), '80000');
+assert.deepEqual(listing.listingBudgetCaps(mixedInventory), [10000, 20000, 30000]);
+assert.deepEqual(listing.listingBudgetCaps([]), []);
+assert.deepEqual(listing.listingBudgetCaps(records), [60000, 80000, 100000]);
+for (const cap of listing.listingBudgetCaps(records)) {
+  assert(listing.filterListingVehicles(records, listing.parseListingFilters(new URLSearchParams({ price_max: String(cap) }))).length > 0);
+}
 for (const value of ['//example.com/listing-grid', '/\\example.com', 'javascript:alert(1)', '/contact', '/listing-grid/evil', 'https://example.com/listing-grid']) assert.equal(journeys.listReturn(value, '/listing-grid'), '/listing-grid');
 assert.equal(journeys.listReturn('/listing-grid?make=BMW#vehicle-4', '/listing-grid'), '/listing-grid?make=BMW#vehicle-4');
 for (const value of ['0', '01', '1x', '999', 'BMW']) assert.equal(journeys.selectedVehicle(value), null);

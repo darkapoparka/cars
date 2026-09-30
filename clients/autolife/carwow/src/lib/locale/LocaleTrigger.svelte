@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import { page } from '$app/state';
 	import { getI18n } from './context';
 	const i18n = getI18n();
@@ -6,12 +7,16 @@
 		compact = true,
 		fullLabel = false,
 		footer = false,
-		beforeOpen
+		beforeOpen,
+		children,
+		describedBy
 	}: {
 		compact?: boolean;
 		fullLabel?: boolean;
 		footer?: boolean;
 		beforeOpen?: () => void | HTMLElement | Promise<void | HTMLElement>;
+		children?: Snippet;
+		describedBy?: string;
 	} = $props();
 	const fallback = $derived(
 		`${i18n.href('/locale-settings')}?returnTo=${encodeURIComponent(page.url.pathname + page.url.search + page.url.hash)}`
@@ -35,12 +40,13 @@
 	data-locale-selector
 	aria-haspopup="dialog"
 	aria-label={i18n.t('locale.trigger')}
+	aria-describedby={describedBy}
 	title={i18n.t('locale.title')}
 	onclick={open}
 >
-	{#if fullLabel}{i18n.t('locale.title')}{:else}{i18n.locale.toUpperCase()}{#if !compact}<span
-				aria-hidden="true"
-			>
+	{#if children}{@render children()}{:else if fullLabel}{i18n.t(
+			'locale.title'
+		)}{:else}{i18n.locale.toUpperCase()}{#if !compact}<span aria-hidden="true">
 				· {i18n.state.country}</span
 			>{/if}{/if}
 </a>

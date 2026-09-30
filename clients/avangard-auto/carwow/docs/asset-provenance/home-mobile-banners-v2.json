@@ -1,0 +1,26 @@
+{
+	"purpose": "Illustrative sell/trade-in and car-import artwork for the reusable Carwow mobile home; no inventory or dealer-facility claims.",
+	"generatedDate": "2026-09-30",
+	"generator": "Built-in image_gen.imagegen",
+	"modelVersion": "Not exposed by the built-in tool; no explicit 2.5 model selector is available.",
+	"treatment": "Native HTML localized titles and calls to action; WebP resize and encoding only, no retouching. Original generated PNGs preserved in the local audit directory.",
+	"assets": [
+		{
+			"path": "static/assets/images/home/mobile/sell-trade-studio-v2.webp",
+			"width": 960,
+			"height": 480,
+			"bytes": 28856,
+			"sourceSha256": "456761f4db04f04a7b82f40b015f73ab9aa66d0c81b6c70e63a4ca720c6d28b2",
+			"prompt": "Use case: ads-marketing. Asset type: photograph used as the background of a mobile automotive sell / trade-in service banner. Create a premium, photorealistic automotive campaign image, ultra-wide horizontal 2:1 composition. A beautifully proportioned metallic platinum-silver European sports sedan, unbranded, seen from a low front three-quarter angle, fully visible with realistic wheels, headlights and bodywork. Place the car on the RIGHT, occupying approximately the right 62% of the image; its complete silhouette must remain clear when the photo is shown at 350 by 175 pixels. Vehicle brightly lit with a broad softbox highlight across its bonnet, fine reflections and a subtle deep-red rim light from the far right. Sophisticated charcoal photography studio with a matte dark floor, a natural contact shadow and a little subdued red reflected light, clean and believable rather than a synthetic showroom. Leave the LEFT 40% as clean, nearly black charcoal negative space for website headline and CTA; no visible props or distractions there. Keep the car vertically centered with safe room above and below for responsive cropping. Crisp, premium advertising photography, inviting and striking at small mobile size, controlled highlights, silver car must stand out clearly. No people, no branding or logos, no lettering, no license plate text, no watermark, no baked-in headings or buttons. This is illustrative service artwork, not a dealership inventory photo."
+		},
+		{
+			"path": "static/assets/images/home/mobile/import-europe-road-v2.webp",
+			"width": 960,
+			"height": 480,
+			"bytes": 46982,
+			"sourceSha256": "65c4aed6c37dffded8880fa0fae6a2ed08f627c15021f9f03af3f8368a4da671",
+			"prompt": "Use case: ads-marketing. Asset type: photograph used as the background of a mobile car import service banner. Create a premium, photorealistic automotive campaign photo, ultra-wide horizontal 2:1 composition. One elegant pearl-white European touring SUV, unbranded, driving on a clean sweeping Alpine road above a deep blue lake, seen from a low front three-quarter tracking angle. Put the car clearly in the RIGHT 60% of the canvas, complete realistic silhouette and wheels visible, bright white paint and crisp headlights readable when displayed at 350 by 175 pixels. A beautiful recognizably European mountain landscape behind the car: layered blue mountains, restrained green slopes, morning sunlight, a pale warm sky. Natural road motion blur confined to foreground and wheels, sharp believable car body, refined travel atmosphere, not a racing scene. On the LEFT 40%, use a shaded dark navy and evergreen foreground hillside with no objects or details competing with overlaid website headline and CTA. Keep the car vertically centered, with safe space above and below for responsive crops. A cohesive premium companion to a charcoal studio automotive banner, but visually distinct with white paint, blue scenery and natural morning light. Polished real automotive editorial photography, excellent contrast and realistic geometry. No people, no transport trucks, no flags, no branding, logos, text, license plate lettering, watermark, baked-in headlines or buttons. Illustrative service artwork, not a real dealer inventory photo."
+		}
+	],
+	"originalAssets": "Version 1 artwork retained."
+}

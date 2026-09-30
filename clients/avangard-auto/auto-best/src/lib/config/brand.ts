@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "AVANGARD AUTO";
@@ -25,7 +25,7 @@ export const brand = {
   shortName,
   city,
   showroomCoordinates: {"latitude":0,"longitude":0},
-  youtubeUrl: "https://www.youtube.com/",
+  youtubeUrl: "",
   instagramUrl: "https://www.instagram.com/avangard_auto_varna/",
   facebookUrl: "https://www.facebook.com/avangardautovarna/",
   phone: "0877 800 921",

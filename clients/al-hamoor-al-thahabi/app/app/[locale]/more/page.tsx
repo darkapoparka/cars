@@ -1,38 +1,77 @@
 'use client';
-import {assetPath} from '@/lib/paths';
-import {useCopy} from '@/lib/locale';
-import Link from '@/components/AppLink';
+
 import * as stylex from '@stylexjs/stylex';
+import {ChevronRight} from 'lucide-react';
+import Link from '@/components/AppLink';
 import PageHeader from '@/components/PageHeader';
+import DealerBrand from '@/components/DealerBrand';
+import ShowroomIcon, {type ShowroomIconName} from '@/components/ShowroomIcon';
 import {dealer} from '@/lib/dealer-config';
-import {useLocale} from '@/lib/locale';
+import {useCopy, useLocale} from '@/lib/locale';
 import {browserPath} from '@/lib/paths';
-import {tokens as $} from '@/app/tokens.stylex';
+import {showroom} from '@/lib/showroom';
+import {showroomLocation} from '@/lib/showroom-location';
+import {media, tokens as $} from '@/app/tokens.stylex';
+
+const languageNames = {en: 'English', bg: 'Български'};
+
 export default function MorePage() {
   const tx = useCopy();
-
   const locale = useLocale();
-  return <div {...stylex.props(s.screen)}><PageHeader title={tx(dealer.name)}/>
-    <div {...stylex.props(s.location)}><MenuImage name="location"/><span>{tx(dealer.city || dealer.country)}</span></div>
-    <section><h2 {...stylex.props(s.activityTitle)}>{tx("Your showroom")}</h2><Link href="/saved" {...stylex.props(s.activityRow)}><MenuImage name="wishlist"/><span>{tx("Saved cars")}</span></Link><Link href="/cars" {...stylex.props(s.activityRow)}><MenuImage name="buy"/><span>{tx("Browse cars")}</span></Link></section>
-    <section {...stylex.props(s.section)}><MenuLink href="/sell" icon="sell" title={tx("Sell or part-exchange")} copy={tx("Ask the dealer about your car")}/><MenuLink href="/finance" icon="finance" title={tx("Payment options")} copy={tx("Explore an example and ask about availability")}/><MenuLink href="/service" icon="service" title={tx("Vehicle services")} copy={tx("Confirm available services with the dealer")}/><MenuLink href="/stores" icon="location" title={tx("Visit showroom")} copy={tx(dealer.address || dealer.city)}/></section>
-    <section {...stylex.props(s.section)}><h2 {...stylex.props(s.activityTitle)}>{tx("Language")}</h2><a href={browserPath('/more','en')} lang="en" hrefLang="en" aria-current={locale==='en'?'true':undefined} {...stylex.props(s.activityRow)}>{tx("English ")}{tx(locale==='en'?'✓':'')}</a><a href={browserPath('/more','bg')} lang="bg" hrefLang="bg" aria-current={locale==='bg'?'true':undefined} {...stylex.props(s.activityRow)}>{tx("Български ")}{tx(locale==='bg'?'✓':'')}</a></section>
-    <section {...stylex.props(s.section)}><h2 {...stylex.props(s.activityTitle)}>{tx("Contact the dealer")}</h2>{dealer.phoneE164?<a href={'tel:'+dealer.phoneE164} {...stylex.props(s.activityRow)}>{tx(dealer.phoneDisplay)}</a>:null}{dealer.email?<a href={'mailto:'+dealer.email} {...stylex.props(s.activityRow)}>{tx(dealer.email)}</a>:null}<Link href="/stores" {...stylex.props(s.activityRow)}>{tx("Contact and location details")}</Link></section>
-    <p {...stylex.props(s.notice)}>{tx(dealer.previewNotice)}</p>
+  const location = dealer.address.trim() || dealer.city.trim() ? showroomLocation(locale, true) : tx('Plan your visit');
+
+  return <div {...stylex.props(s.screen)}>
+    <PageHeader title="Menu" action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
+    <main {...stylex.props(s.content)}>
+      {showroom.menu.map(group => <nav key={group.label} aria-label={tx(group.label)} {...stylex.props(s.section, s.list)}>
+        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.href === '/cars' ? 'Cars' : item.label)} primary={item.primary} copy={item.location ? location : undefined}/>)}
+      </nav>)}
+
+      {dealer.phoneE164 || dealer.email ? <section aria-label={tx('Contact the dealer')} {...stylex.props(s.section)}>
+        <h2 {...stylex.props(s.sectionTitle)}>{tx('Contact the dealer')}</h2>
+        <div {...stylex.props(s.list)}>
+          {dealer.phoneE164 ? <MenuRow href={'tel:' + dealer.phoneE164} icon="phone" title={dealer.phoneDisplay || dealer.phoneE164}/> : null}
+          {dealer.email ? <MenuRow href={'mailto:' + dealer.email} icon="email" title={dealer.email}/> : null}
+        </div>
+      </section> : null}
+
+      {dealer.enabledLocales.length > 1 ? <section {...stylex.props(s.languageRow)}>
+        <h2 {...stylex.props(s.languageTitle)}>{tx('Language')}</h2>
+        <div role="group" aria-label={tx('Language')} {...stylex.props(s.languages)}>
+          {dealer.enabledLocales.map(language => <a key={language} href={browserPath('/more', language)} lang={language} hrefLang={language} aria-current={locale === language ? 'true' : undefined} {...stylex.props(s.language, locale === language && s.languageSelected)}>{languageNames[language]}</a>)}
+        </div>
+      </section> : null}
+      <p {...stylex.props(s.notice)}>{tx(dealer.previewNotice)}</p>
+    </main>
   </div>;
 }
-function MenuImage({name}: {name:string}) {
-  const tx = useCopy();
- return <img src={assetPath(`/reference-assets/menu-${name}.png`)} width={20} height={20} alt={tx("")} {...stylex.props(s.icon)}/>; }
-function MenuLink({href, icon, title, copy}: {href:string; icon:string; title:string; copy:string}) {
-  const tx = useCopy();
- return <Link href={href} {...stylex.props(s.serviceRow)}><MenuImage name={icon}/><span {...stylex.props(s.copy)}><span>{tx(title)}</span><span {...stylex.props(s.subtitle)}>{tx(copy)}</span></span></Link>; }
+
+function MenuRow({href, icon, title, copy, primary = false}: {href: string; icon: ShowroomIconName; title: string; copy?: string; primary?: boolean}) {
+  return <Link href={href} {...stylex.props(s.row, primary && s.primaryRow)}>
+    <span {...stylex.props(s.icon)}><ShowroomIcon name={icon} size={24}/></span>
+    <span {...stylex.props(s.copy)}><span>{title}</span>{copy ? <span {...stylex.props(s.subtitle)}>{copy}</span> : null}</span>
+    <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.chevron, primary && s.primaryChevron)}/>
+  </Link>;
+}
+
 const s = stylex.create({
-  screen:{maxWidth:$.content,minHeight:'100vh',marginInline:'auto',paddingTop:0,paddingBottom:100,color:$.ink,backgroundColor:'#fff',fontFamily:$.fontSans},
-  location:{display:'flex',alignItems:'center',gap:9,minHeight:39,paddingInline:22,fontSize:13,fontWeight:400,backgroundColor:'#f8f8f8'},
-  activityTitle:{minHeight:45,paddingTop:24,paddingInline:22,color:'#808080',fontSize:14,fontWeight:400,lineHeight:'21px'},
-  activityRow:{display:'flex',alignItems:'center',gap:11,width:'100%',minHeight:52,paddingInline:22,color:$.ink,fontSize:14,fontWeight:500,lineHeight:'21px',textAlign:'left',overflowWrap:'anywhere',borderWidth:0,borderBottomColor:'#f1f1f1',borderBottomStyle:'solid',borderBottomWidth:1,backgroundColor:'#fff'},
-  icon:{flexShrink:0,width:20,height:20,objectFit:'contain',filter:'grayscale(1)'},section:{borderTopColor:'#f6f6f6',borderTopStyle:'solid',borderTopWidth:11},
-  serviceRow:{display:'flex',alignItems:'flex-start',gap:11,width:'100%',minHeight:72,paddingBlock:15,paddingInline:22,color:$.ink,fontSize:14,fontWeight:500,lineHeight:'21px',textAlign:'left',borderWidth:0,borderBottomColor:'#f1f1f1',borderBottomStyle:'solid',borderBottomWidth:1,backgroundColor:'#fff'},
-  copy:{display:'flex',flexDirection:'column',minWidth:0},subtitle:{color:'#808080',fontWeight:400},notice:{padding:22,fontSize:12,lineHeight:1.6,color:'#71717a'},
+  screen: {maxWidth: 760, marginInline: 'auto', color: $.ink, backgroundColor: $.surface, fontFamily: $.fontSans},
+  brand: {display: 'block', maxWidth: 128, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 16, fontWeight: 600, letterSpacing: '-.025em'},
+  content: {paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 8, paddingBottom: 20},
+  section: {marginBottom: 16},
+  sectionTitle: {margin: 0, paddingBlock: 10, paddingInline: 2, color: $.muted, fontSize: 13, fontWeight: 500, lineHeight: '20px'},
+  list: {borderColor: $.line, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, overflow: 'hidden'},
+  row: {display: 'grid', gridTemplateColumns: '28px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 9, paddingInline: 15, color: $.ink, fontSize: 16, fontWeight: 500, lineHeight: '22px', textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineColor: {default: 'transparent', ':focus-visible': $.ink}},
+  primaryRow: {minHeight: 60, fontWeight: 600, color: $.surface, borderBottomColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark, ':active': $.violetDark}, outlineColor: {default: 'transparent', ':focus-visible': $.surface}},
+  icon: {display: 'grid', placeItems: 'center', width: 28, height: 28},
+  copy: {display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0, overflowWrap: 'anywhere'},
+  subtitle: {color: $.muted, fontSize: 13, fontWeight: 400, lineHeight: '18px'},
+  chevron: {color: $.subtle},
+  primaryChevron: {color: $.surface},
+  languageRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12, minHeight: 52, paddingInline: 2},
+  languageTitle: {fontSize: 14, fontWeight: 500, lineHeight: '20px'},
+  languages: {display: 'flex', gap: 2, padding: 3, borderRadius: 28, backgroundColor: $.surfaceAlt},
+  language: {display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, paddingInline: 14, color: $.muted, fontSize: 14, fontWeight: 500, lineHeight: '20px', borderWidth: 1, borderStyle: 'solid', borderColor: 'transparent', borderRadius: 24, backgroundColor: {default: 'transparent', ':hover': $.rail}, outlineOffset: -3},
+  languageSelected: {color: $.surface, borderColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark}, outlineColor: {default: 'transparent', ':focus-visible': $.surface}},
+  notice: {margin: 0, paddingTop: 16, paddingInline: 2, color: $.muted, fontSize: 12, lineHeight: '18px'},
 });
