@@ -1,0 +1,35 @@
+{
+  "slug": "perfect-auto-varna",
+  "checkedAt": "2026-09-30T14:42:57.923Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Варна — свържете се за оглед.",
+    "en": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Варна — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "8db689e342a5931bbb418af3fc14b5f11363a5afd02e6683b0fdaf24b16cdbb7",
+      "after": "43fba4e5d479953b416b302256bc4e786c47064c5745d524e032ea212732885b"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "8ad976cb9a40e67afd4b0935186284f258d11fe7c59fb715c870301b6a26659a",
+      "after": "0474d59db74f8c23465a481c03a1fe07ea81cf6b8e11cd8cb8aa1c8cc2583f9d"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "513422535cddde8541edcaa64cb3eb3d6c3d97153631b09a325a67a41a8256ee",
+      "after": "663cae47c9d208ac4d708934418eb68d2a2ad13261c9dcb72c3e6982b6815998"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "680c25fb560d63104eabd76a9445abb79fdd2e25f59ea0c1a2ca728867aad4ca",
+      "after": "72a46ad4b6e2c6a5c0719cceb5673cab40a48bf145cbb17d006be94f929587ff"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "champion-auto-pro",
+  "checkedAt": "2026-09-30T15:13:30.435Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "f777b607d31f920cd9d5e54e8c6f8b4b8c2dc564",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4440,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "d8714c31b3e516201726a1663e4fc7d72362d0f8092e05b9077497681a1070c1",
+  "packageFiles": 4447,
+  "baselineSha256": "9d22bda6a4a522a222d3539469823794c7e563a4333fe62ea49f8a7a6e99fbe8",
+  "preservation": {
+    "slug": "champion-auto-pro",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/champion-auto-pro",
+    "checkedAt": "2026-09-30T15:13:29.763Z",
+    "protectedFiles": 355,
+    "inventoryRows": 16,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

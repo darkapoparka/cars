@@ -1,0 +1,35 @@
+{
+  "slug": "kg-team-auto",
+  "checkedAt": "2026-09-30T14:42:20.709Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Пловдив — свържете се за оглед.",
+    "en": "Available vehicle in Plovdiv — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Пловдив — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "d328e03ccee06f68608a3c14d614868bffd26d168f538c1050823c10135765e1",
+      "after": "8b109fa3050a17e1c4d26110c31da95f31382c8bda0618545af7ea3b1db892c7"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "22abe4ae6e88cc3d9b8f58cb80d56287efe2eca9ff17420846760a3726ed4dae",
+      "after": "d5719cf91dc7cebe1e8b9bf0906135e62ef53bb6257fe23f616f7344e10e437e"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "4b10b1eb9b37c642c2a57a181dfbd31049d5306d43c7917c76a7ee89493bfb37",
+      "after": "cb72589a4afb2c7eec970bccf37581c93694cbb6469f44030e69ef391bd65a6b"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "94dc6e89369490f5f278438ab49f87ed696d93028de72d319c031afd120b1783",
+      "after": "fc6bc28e6f51094295f91d1fc321250c951c6ab541dc94afc1b5f6661da0399c"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

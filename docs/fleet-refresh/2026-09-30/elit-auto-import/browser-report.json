@@ -1,0 +1,3843 @@
+{
+  "slug": "elit-auto-import",
+  "commit": "cd86bfa89154b4ce49ac8b365c9322079e72efc5",
+  "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+  "deploymentId": "dpl_8Pc3hUvWjXNHqjVBdULz53S19kz3",
+  "state": "READY",
+  "url": "https://cars-elitautoimport.vercel.app/",
+  "deploymentUrl": "https://cars-elitautoimport-6mwcjugch-tyj5.vercel.app",
+  "productionCurrent": true,
+  "createdAt": 1790780682124,
+  "checkedAt": "2026-09-30T15:45:27.568Z",
+  "verificationVersion": 2,
+  "completed": true,
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "checks": [
+    {
+      "name": "exact-dealer-logo",
+      "kind": "light",
+      "status": 200,
+      "sha256": "90d3eb315513dab8694368a50c0361475e00711552b442c0182eae9305298896",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "dark",
+      "status": 200,
+      "sha256": "88b599aa9a8f3bf42a448be712b00505aa3c28bc5be4d7a74593a5cbd7e32a81",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "icon",
+      "status": 200,
+      "sha256": "89f0dbf40abba4c81f01178f8f023b4e176f419c7eeec9b2aa74b4d4cf1671d6",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "ELIT AUTO IMPORT EXPORT — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Примерни автомобили — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11694504370077664-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Mercedes-Benz GL 450 — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 305,
+        "viewport": 320,
+        "title": "Автомобили от ELIT AUTO IMPORT EXPORT | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11694504370077664-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/listing/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 305,
+        "viewport": 320,
+        "title": "Mercedes-Benz GL 450 | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Проверени автомобили и бърз контакт | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11690723101506266-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Автомобили в наличност | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11655794958039551-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11722966256335346-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11693118990022696-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11752522269460399-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg/inventory/volvo-s60-441521",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Volvo S60 | ELIT AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-hyundai.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Our cars · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-b05d26bb0583129f9556.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-fc997a8f740bf1702c45.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 320,
+      "locale": "bg",
+      "count": 15,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg/cars/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "2010 Mercedes-Benz GL 450 · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "ELIT AUTO IMPORT EXPORT — Showroom concept in Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Demo inventory — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11694504370077664-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz GL 450 — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "Cars at ELIT AUTO IMPORT EXPORT | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11694504370077664-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experienceCurrent"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "About and contact | ELIT AUTO | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-location-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/en/listing/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "Mercedes-Benz GL 450 | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Checked cars and easy contact | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11690723101506266-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Available cars | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11655794958039551-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11722966256335346-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11693118990022696-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11752522269460399-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact us | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/en/inventory/volvo-s60-441521",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Volvo S60 | ELIT AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "dealer-english-viewing-condition",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "expected": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-hyundai.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-b05d26bb0583129f9556.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-fc997a8f740bf1702c45.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "en",
+      "count": 15,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/en/cars/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "2010 Mercedes-Benz GL 450 · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "ELIT AUTO IMPORT EXPORT — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Примерни автомобили — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11694504370077664-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359887777887"
+      ],
+      "expected": "359887777887",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz GL 450 — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "Автомобили от ELIT AUTO IMPORT EXPORT | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11694504370077664-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "За нас и контакти | ELIT AUTO | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-location-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359887777887"
+      ],
+      "expected": "359887777887",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/listing/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "Mercedes-Benz GL 450 | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Проверени автомобили и бърз контакт | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11690723101506266-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-budget-currency",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "labels": [
+        "До 20K €",
+        "До 30K €",
+        "До 50K €",
+        "Без бюджет"
+      ],
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Автомобили в наличност | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11655794958039551-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11722966256335346-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11693118990022696-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11752522269460399-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359887777887"
+      ],
+      "expected": "359887777887",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg/inventory/volvo-s60-441521",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Volvo S60 | ELIT AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-hyundai.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-b05d26bb0583129f9556.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-fc997a8f740bf1702c45.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "bg",
+      "count": 15,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359887777887"
+      ],
+      "expected": "359887777887",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg/cars/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "2010 Mercedes-Benz GL 450 · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "ELIT AUTO IMPORT EXPORT — Showroom concept in Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Demo inventory — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Contact — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GL 450 — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Cars at ELIT AUTO IMPORT EXPORT | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experienceCurrent"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "About and contact | ELIT AUTO | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/en/listing/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GL 450 | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-4.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Checked cars and easy contact | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n      \n      Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "options": [
+        "All prices ✓",
+        "Up to 10,000 EUR ✓",
+        "Up to 20,000 EUR ✓",
+        "Up to 30,000 EUR ✓",
+        "Up to 50,000 EUR ✓",
+        "Over 50,000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Available cars | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11694504370077664-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Contact us | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/en/inventory/mercedes-benz-gl-373192",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GL | ELIT AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "dealer-english-viewing-condition",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "expected": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/logo-light-90d3eb315513dab86943.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-hyundai.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n      \n      Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/logo-light-90d3eb315513dab86943.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-b05d26bb0583129f9556.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-fc997a8f740bf1702c45.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-1801796eca7991184d28.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "en",
+      "count": 15,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/logo-light-90d3eb315513dab86943.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/en/cars/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2010 Mercedes-Benz GL 450 · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/logo-light-90d3eb315513dab86943.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "ELIT AUTO IMPORT EXPORT — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Примерни автомобили — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Контакти — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GL 450 — ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Автомобили от ELIT AUTO IMPORT EXPORT | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "За нас и контакти | ELIT AUTO | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-2/bg/listing/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GL 450 | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/assets/elit/21717056982373192-4.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-2/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Проверени автомобили и бърз контакт | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "options": [
+        "Всички цени ✓",
+        "До 10 000 EUR ✓",
+        "До 20 000 EUR ✓",
+        "До 30 000 EUR ✓",
+        "До 50 000 EUR ✓",
+        "Над 50 000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Автомобили в наличност | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11700571967441521-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11529502627430878-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11694454110383951-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/11694504370077664-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Контакти | ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-3/bg/inventory/mercedes-benz-gl-373192",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GL | ELIT AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/elit/21717056982373192-0.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/Info.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/palette.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/MapPin.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/Seatbelt.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/Frame.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/transmission-2.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/logo-light-90d3eb315513dab86943.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/brand-hyundai.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-elitautoimport.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-elitautoimport.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-elitautoimport",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/logo-light-90d3eb315513dab86943.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-b05d26bb0583129f9556.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-fc997a8f740bf1702c45.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-1801796eca7991184d28.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "bg",
+      "count": 15,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/logo-light-90d3eb315513dab86943.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-elitautoimport.vercel.app/variant-4/bg/cars/mercedes-benz-gl-450-2010-21717056982373192",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2010 Mercedes-Benz GL 450 · ELIT AUTO IMPORT EXPORT"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/logo-light-90d3eb315513dab86943.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-elitautoimport.vercel.app/variant-4/dealer-app/vehicle-9249fea95ef5d47dd575.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "eliqauto",
+  "checkedAt": "2026-09-30T14:41:52.147Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Пазарджик — свържете се за оглед.",
+    "en": "Available vehicle in Pazardzhik — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Пазарджик — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "c8b91d95f95f9a08d4acbda229f8c3ccbe3beafa4aa350be486704c1be54b093",
+      "after": "e585744517ab7d0cde314a161427601a46613bdfc6db80aeef3d0da3016e00d1"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "e31a24a1478aedb39c463bfe97ea6e3cba34c6cec5fa31d315ab9897a1f89efb",
+      "after": "dc13f634425979337046402efae87cf2b2dea22782dbc048e04404a9dc1fe73a"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "914b99c6c45dee32d8985a60e8815c856398dbb8816b895e9d680c0c6a676ed1",
+      "after": "03cc0a41c444cf9f1e9b31c6a4978d00d20bf6235821eb4e0980f31049a0a488"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "c299c4b50bc1e65349d52b4787c062a087daca4649d33787ae288fe76405c04c",
+      "after": "6861f86c435859e4ddd15e4ed18320271e1bd4aebfdc16e9c4e346ac9c1d4155"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

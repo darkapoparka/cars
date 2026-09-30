@@ -1,0 +1,27 @@
+{
+  "slug": "the-dealers-point",
+  "checkedAt": "2026-09-30T14:27:41.615Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+  "exportCommit": "2fa069742136946c991a06f99a6748b3fb845558",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4156,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "7ee3623c72b92fd2a485fd053d02252b83c0e2de9abdcc938117c54ba6d27886",
+  "packageFiles": 4163,
+  "baselineSha256": "88f2bbf57f5e5d751e1d873f81d464d3a9f666e62de082dc2ad136e82a604e41",
+  "preservation": {
+    "slug": "the-dealers-point",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/the-dealers-point",
+    "checkedAt": "2026-09-30T14:27:40.975Z",
+    "protectedFiles": 68,
+    "inventoryRows": 10,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

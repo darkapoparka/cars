@@ -1,0 +1,27 @@
+{
+  "slug": "ivo-auto",
+  "checkedAt": "2026-09-30T15:13:43.902Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "e6418c881c629c967b58cf51dd1c5add9ace3894",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4428,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "3584a2794d90318b26cf1e473c65c91bb0e18f756ae29e7a4d611fb3d052c4bd",
+  "packageFiles": 4435,
+  "baselineSha256": "7d6a37c908c38e47c5799c8616c6ca058537a6e3cd857dfeaffbd81e25323223",
+  "preservation": {
+    "slug": "ivo-auto",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/ivo-auto",
+    "checkedAt": "2026-09-30T15:13:43.231Z",
+    "protectedFiles": 343,
+    "inventoryRows": 16,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

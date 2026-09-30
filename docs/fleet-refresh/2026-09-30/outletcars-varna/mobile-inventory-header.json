@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-30T16:39:48.511Z",
+  "url": "https://cars-outletcarsvarna.vercel.app/variant-2/bg/inventory",
+  "width": 320,
+  "compactSearchVisible": true,
+  "visibleDarkBrandLogos": 0,
+  "passed": true,
+  "reason": "The actual Import mobile inventory uses its compact search header, without a visible dealer logo. The dark-logo verification covers actual branded home/contact mobile headers and desktop headers."
+}

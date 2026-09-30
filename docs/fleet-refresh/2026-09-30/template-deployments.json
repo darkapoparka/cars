@@ -1,0 +1,72 @@
+[
+  {
+    "key": "auto-best",
+    "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+    "publishingRepository": "darkapoparka/cars-template-auto-best",
+    "commit": "e4e1c7840416478d7f8dc285ab4f600e30a8f63b",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964",
+    "deploymentId": "dpl_DyEQ16sDVqe81ZtaGnuvYAizLDxn",
+    "state": "READY",
+    "url": "https://cars-template-auto-best.vercel.app/",
+    "deploymentUrl": "https://cars-template-auto-best-g7c3kizsd-tyj5.vercel.app",
+    "productionCurrent": true,
+    "checkedAt": "2026-09-30T16:48:46.531Z"
+  },
+  {
+    "key": "modern",
+    "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+    "publishingRepository": "darkapoparka/cars-template-modern",
+    "commit": "4f6e759e7480b66707ca855ea8bb5fc2611d9afe",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c",
+    "deploymentId": "dpl_HRWDBhDDptapT6oDGaoE8Bkh2deE",
+    "state": "READY",
+    "url": "https://cars-template-modern.vercel.app/",
+    "deploymentUrl": "https://cars-template-modern-i9ngdvazj-tyj5.vercel.app",
+    "productionCurrent": true,
+    "checkedAt": "2026-09-30T16:48:47.199Z"
+  },
+  {
+    "key": "carwow",
+    "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+    "publishingRepository": "darkapoparka/cars-template-carwow",
+    "commit": "d23b2a392ad6e511547d5501573428ea2fda4e26",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f",
+    "deploymentId": "dpl_5Dkn8YK5zLTKb1MQ4V9rYMJLJESK",
+    "state": "READY",
+    "url": "https://cars-template-carwow.vercel.app/",
+    "deploymentUrl": "https://cars-template-carwow-oimia9hzc-tyj5.vercel.app",
+    "productionCurrent": true,
+    "checkedAt": "2026-09-30T16:48:46.473Z"
+  },
+  {
+    "key": "import",
+    "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+    "publishingRepository": "darkapoparka/cars-template-import",
+    "commit": "5bbcb962dd671237f2a360dcae8229638d51d947",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "ed185f9b04d02b1ce3a0304a9e72118d25b45da4e621b63601697eb401d83dfd",
+    "deploymentId": "dpl_BbgLUrgFQUPWZWkb2djooyH1Kj3n",
+    "state": "READY",
+    "url": "https://cars-template-import.vercel.app/",
+    "deploymentUrl": "https://cars-template-import-pz0xvzxac-tyj5.vercel.app",
+    "productionCurrent": true,
+    "checkedAt": "2026-09-30T16:48:46.490Z"
+  },
+  {
+    "key": "app",
+    "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+    "publishingRepository": "darkapoparka/cars-template-app",
+    "commit": "8ab7571fedc0bf66473fc81ce077fd700c3231b7",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+    "deploymentId": "dpl_3ZmJbvM9ewh8ZxLnwkGz1vg5UGtJ",
+    "state": "READY",
+    "url": "https://cars-template-app.vercel.app/",
+    "deploymentUrl": "https://cars-template-dbkhat18l-tyj5.vercel.app",
+    "productionCurrent": true,
+    "checkedAt": "2026-09-30T16:48:46.441Z"
+  }
+]

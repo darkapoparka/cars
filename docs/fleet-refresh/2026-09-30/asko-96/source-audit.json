@@ -1,0 +1,27 @@
+{
+  "slug": "asko-96",
+  "checkedAt": "2026-09-30T13:41:33.917Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "1b2b533eb7f04ebe2d2fef6c330aaa2e75254792",
+  "exportCommit": "f67b671b251960f87d4339a473c9793b30aeafc5",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4390,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "d98daa71bd11f6e005bf35e3133c1230a72f8cc3e4912658e24ffc29e2dd819b",
+  "packageFiles": 4397,
+  "baselineSha256": "c569c0ce539275ef4b940af521f0264e168c30a482d35b94300b9842f03fa504",
+  "preservation": {
+    "slug": "asko-96",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/asko-96",
+    "checkedAt": "2026-09-30T13:41:32.583Z",
+    "protectedFiles": 298,
+    "inventoryRows": 16,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

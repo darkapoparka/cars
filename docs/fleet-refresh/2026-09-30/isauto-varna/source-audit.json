@@ -1,0 +1,27 @@
+{
+  "slug": "isauto-varna",
+  "checkedAt": "2026-09-30T15:13:41.239Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "29f2223f7d04278b15c3258d77a8858224e23d5d",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4135,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "201311a04c563fb36d0a47b58b9e1244dac2cbc9dd84861e5233ac3fdd8dcdbd",
+  "packageFiles": 4142,
+  "baselineSha256": "61ba9eea36b0138ba0255b61f3e9b55a2c13f664908e0c9866ed7abe767b1d9a",
+  "preservation": {
+    "slug": "isauto-varna",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/isauto-varna",
+    "checkedAt": "2026-09-30T15:13:40.665Z",
+    "protectedFiles": 62,
+    "inventoryRows": 6,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

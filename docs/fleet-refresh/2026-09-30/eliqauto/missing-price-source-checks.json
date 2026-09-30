@@ -1,0 +1,10 @@
+{
+  "slug": "eliqauto",
+  "checkedAt": "2026-09-30T14:44:45.102Z",
+  "changedSourceSyntaxChecks": 30,
+  "modernFormattingCases": 9,
+  "carwowFormattingCases": 8,
+  "sourceConfiguration": "Actual retained dealer config and inventory-copy modules",
+  "reactReview": "Pure formatting and an early return in a component without hooks; no new state, effect, network request or data mutation. Existing semantic controls and positive-price currency styling are preserved.",
+  "passed": true
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "legend-auto",
+  "checkedAt": "2026-09-30T15:13:49.092Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "7f056f0130897ba2e4aeebfcc09719791e4a5ee6",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4478,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "79c21b0c61faff2c0fc4bf810b1e6d8944426fd9b7a8fddb27be363e584fef0e",
+  "packageFiles": 4485,
+  "baselineSha256": "77fcf2334c704047e864326763de54ea3b69b62276e16eba828b6d8e32b4f07c",
+  "preservation": {
+    "slug": "legend-auto",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/legend-auto",
+    "checkedAt": "2026-09-30T15:13:48.418Z",
+    "protectedFiles": 390,
+    "inventoryRows": 14,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

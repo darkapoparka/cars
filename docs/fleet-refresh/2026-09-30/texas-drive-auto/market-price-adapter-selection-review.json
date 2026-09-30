@@ -1,0 +1,7 @@
+{
+  "slug": "texas-drive-auto",
+  "path": "carwow/src/lib/locale/context.ts",
+  "before": "1066477e32e18e4dee0297f283f69586bf078f6b5610fcae370155d356e9f367",
+  "after": "9a526cb745b843a7471f1d40f5ea14fc3604be71fef0b25e13b3ef5bea0aa5e0",
+  "reason": "The same dealer currency adapter must format selected price-filter labels as well as ordinary translated price-band copy. Vehicle records and numbers do not change."
+}

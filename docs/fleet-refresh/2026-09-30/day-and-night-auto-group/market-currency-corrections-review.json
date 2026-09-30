@@ -1,0 +1,78 @@
+{
+  "slug": "day-and-night-auto-group",
+  "checkedAt": "2026-09-30T13:49:11.624Z",
+  "baselineSha256": "0b8502baa7c18b19ef3a3ccb0c86ee8d7f4ed12087f97a694daac34271c9329f",
+  "beforeContract": {
+    "schemaVersion": 1,
+    "dealerId": "day-and-night-auto-group",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "en",
+      "bg"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "BGN"
+  },
+  "afterContract": {
+    "schemaVersion": 1,
+    "dealerId": "day-and-night-auto-group",
+    "defaultLocale": "bg",
+    "enabledLocales": [
+      "en",
+      "bg"
+    ],
+    "dealerCountry": "BG",
+    "inventoryCurrency": "EUR"
+  },
+  "evidence": {
+    "originalListingCount": 40,
+    "originalListingCurrencies": [
+      "EUR"
+    ],
+    "originalAppCurrency": "EUR",
+    "pricesUnchanged": true
+  },
+  "changes": [
+    {
+      "path": "auto-best/src/lib/config/cars-locale.ts",
+      "before": "03cdb0254ffc28bd0fa3cd6d723615bd9769ebb6529e34fe7c435207497ffc66",
+      "after": "661d966e0442686024de474bb6fbbce161eacc25808f74bdc5fd4a5b9c242eec"
+    },
+    {
+      "path": "modern/apps/web/lib/cars-locale.ts",
+      "before": "03cdb0254ffc28bd0fa3cd6d723615bd9769ebb6529e34fe7c435207497ffc66",
+      "after": "661d966e0442686024de474bb6fbbce161eacc25808f74bdc5fd4a5b9c242eec"
+    },
+    {
+      "path": "modern/packages/internationalization/cars-locale.ts",
+      "before": "03cdb0254ffc28bd0fa3cd6d723615bd9769ebb6529e34fe7c435207497ffc66",
+      "after": "661d966e0442686024de474bb6fbbce161eacc25808f74bdc5fd4a5b9c242eec"
+    },
+    {
+      "path": "modern/packages/marketplace/cars-locale.ts",
+      "before": "03cdb0254ffc28bd0fa3cd6d723615bd9769ebb6529e34fe7c435207497ffc66",
+      "after": "661d966e0442686024de474bb6fbbce161eacc25808f74bdc5fd4a5b9c242eec"
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-site.ts",
+      "before": "82b2b1d441e387c34d045ff8d9d07ea04bc1456d3f9623d0fd897ca8263e900a",
+      "after": "eea2bb629a618cc88a10e2cb9706a115822485d8197b3541f53271b95fa1152e"
+    },
+    {
+      "path": "carwow/src/lib/locale/cars-locale.ts",
+      "before": "03cdb0254ffc28bd0fa3cd6d723615bd9769ebb6529e34fe7c435207497ffc66",
+      "after": "661d966e0442686024de474bb6fbbce161eacc25808f74bdc5fd4a5b9c242eec"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "3e7f07a0d77283d672f88178dca86b5ac2cb2c3d4e0bbbfcf9ee1fbba3b2f943",
+      "after": "359afce25a6f4ab61757f7c6212cb73dcdb012173f230f48e8c5cc423a36c101"
+    },
+    {
+      "path": "localization/contract.json",
+      "before": "db19d970220f1716cb5e1fd4ba0dc78cfdb3ed65adb0c316e74b2542a52bb9c8",
+      "after": "6e69b67c814d6b44a291f7ff709b11e8c5dfadd353ad518269ef8dd38d89aff3"
+    }
+  ],
+  "reason": "Auto Best and Modern were labeling unchanged euro-valued original listings as leva because an older currency contract declared BGN. Correct only the native display contract and site metadata; preserve all authored price amounts, original stock, images, contacts and business profile."
+}

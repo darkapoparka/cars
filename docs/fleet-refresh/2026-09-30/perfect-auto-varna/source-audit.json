@@ -1,0 +1,27 @@
+{
+  "slug": "perfect-auto-varna",
+  "checkedAt": "2026-09-30T15:13:56.726Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "363053482731ca8d793b8b9745c55926e233fcea",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4276,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "99653bc1cede1006ef2c21fe08e79f5d251440caf813661d309c08071d9b4b12",
+  "packageFiles": 4283,
+  "baselineSha256": "e7a9087a65e9e5d1c19fe93a53d0faec583cac577470a5104661388165ba1126",
+  "preservation": {
+    "slug": "perfect-auto-varna",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/perfect-auto-varna",
+    "checkedAt": "2026-09-30T15:13:56.111Z",
+    "protectedFiles": 191,
+    "inventoryRows": 6,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

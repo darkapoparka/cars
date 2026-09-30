@@ -1,0 +1,27 @@
+{
+  "slug": "kg-team-auto",
+  "checkedAt": "2026-09-30T15:13:46.422Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "172799d55aec5895ed61c4d3e49ec12a4a8f21d0",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4262,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "efa42a3fd22fe7b28095096dc57e737cc0e579631d1e4fff82b3155b99971f62",
+  "packageFiles": 4269,
+  "baselineSha256": "9d2cebfc57873b0786f01a348c79f1e9f4692c64cb1ad6391fd974c046bcefe8",
+  "preservation": {
+    "slug": "kg-team-auto",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/kg-team-auto",
+    "checkedAt": "2026-09-30T15:13:45.794Z",
+    "protectedFiles": 148,
+    "inventoryRows": 10,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

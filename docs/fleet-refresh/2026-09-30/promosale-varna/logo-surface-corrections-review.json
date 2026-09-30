@@ -1,0 +1,28 @@
+{
+  "slug": "promosale-varna",
+  "checkedAt": "2026-09-30T16:22:01.925Z",
+  "changes": [
+    {
+      "path": "import/src/lib/config/site.ts",
+      "before": "8686151324ab326ecbf3b6bf68462a53f78756deaf43682f4af915ef5483b27d",
+      "after": "68e2933d61b034e329353c8a03a3c8b45388c8f7e3b075f66babb48805077aa5"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "27fac3417688e536eb87bec75ee91e7430629161584a71278527c2ed798a728c",
+      "after": "29dd2639b09e8d662324583200a3abce822350a550cf2323738d372c08ea1bb9"
+    }
+  ],
+  "expectedLogoPath": "/dealer-brand/logo-on-dark.webp",
+  "expectedLogoSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+  "affectedSurfaces": [
+    "mobile dark header",
+    "desktop dark header",
+    "dark footer"
+  ],
+  "originalLogoFilesUnchanged": true,
+  "originalStockUnchanged": true,
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "reason": "The Import typed site config used the dealer logo intended for light surfaces on its charcoal header. Bind logoOnDark to the existing reviewed on-dark asset; preserve the default transparent-surface binding and all original logos, imagery, colors, stock and contacts. Native/App seals pass before and after the reviewed change.",
+  "sourceCommit": "0d543209bc29c04724ce4a95254eace9c6ceb5e4"
+}

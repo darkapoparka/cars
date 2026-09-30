@@ -1,0 +1,27 @@
+{
+  "slug": "automarket-varna",
+  "checkedAt": "2026-09-30T15:13:25.237Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "2691644565e580f5b9cb8521e508a4f8cd402681",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4529,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "84f477055c3c5b0e1003c908d3aba51f2888fae2814fba9866d02bd1be73b485",
+  "packageFiles": 4536,
+  "baselineSha256": "1684b3587ea7794674d7606388b289905f9cfc19be3acd61505ac8197dbef0a5",
+  "preservation": {
+    "slug": "automarket-varna",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/automarket-varna",
+    "checkedAt": "2026-09-30T15:13:24.467Z",
+    "protectedFiles": 438,
+    "inventoryRows": 16,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

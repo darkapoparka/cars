@@ -1,0 +1,27 @@
+{
+  "slug": "autolife",
+  "checkedAt": "2026-09-30T15:13:22.247Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "e28afdd250c7e9ac8b5048ac77cf87ebd294b5ea",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4440,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "2a8c5c271999374b947c88a0b3e4a5c714f37a9c109e6420508272287dac4de7",
+  "packageFiles": 4447,
+  "baselineSha256": "7e7957ba25bfd888ee3b28d17b7dfa606da60ac7f7b3e3f69dd357c8f887f21c",
+  "preservation": {
+    "slug": "autolife",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/autolife",
+    "checkedAt": "2026-09-30T15:13:21.473Z",
+    "protectedFiles": 350,
+    "inventoryRows": 16,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

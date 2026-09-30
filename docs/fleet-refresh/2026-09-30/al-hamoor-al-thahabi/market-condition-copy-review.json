@@ -1,0 +1,35 @@
+{
+  "slug": "al-hamoor-al-thahabi",
+  "checkedAt": "2026-09-30T14:09:49.740Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Sharjah — свържете се за оглед.",
+    "en": "Available vehicle in Sharjah — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Sharjah — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "b1ce94de2a216c11e574376efecf583ae4b4b971686558f7bdc59fc3dec45465",
+      "after": "daf8eaea1a03232f302feb65e75bec20b55dedc536d0f916e6758acf51d08e19"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "314322b9062d0e9f7b5bcd3a293b60f27113f297312d9b0411ee0fa677519e41",
+      "after": "f1b41609219b5d53ab826fff22a7e1bf1478e3555592ee35b35ad6a31c5b6ba1"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "44c61cfcaacaf33b0b737f79e412faad934d575ddd68a2114040f284051bac59",
+      "after": "57b3f8faa5ad7f32825b48474995ccc56d0ff34aad93553083b79763bd917fc9"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "75243919829af6e08be1d686eb9e274e01c36a0d12f887e47bcaf41e1449ce49",
+      "after": "f8e8c8c63da315cb31657a1c0b183acd01a08f252b59926213723797f1795c28"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

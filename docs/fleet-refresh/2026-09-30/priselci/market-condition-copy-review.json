@@ -1,0 +1,35 @@
+{
+  "slug": "priselci",
+  "checkedAt": "2026-09-30T14:43:03.897Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Варна — свържете се за оглед.",
+    "en": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Варна — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "f79a55ae9f66aea2d5dafb4d74e738b3d71db91a0c42a314e2fc243385152194",
+      "after": "e08c553e9a759ded5368c1d8a32d19fb38cfde8f7938ed24de32c092c34208f0"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "e78b5e724bc456fb2a9a63206b580fee16be871054b6f368ae1667f100f43621",
+      "after": "9bbc7c456649845c8d51e68062ad3932f4ccb15ace378eeb771f45cb5c7b9e19"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "67090102055c3ddb27b7ba72191b33c5ba7b8dcbe73ee0fe693ebadd7076594b",
+      "after": "1e96dcea3ef4b4ae36209777824548dde2e0a3e643a0fda6b231f12eb2a34881"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "b1c4cae4bed5ca3ce036c0e1313d5a0c6403e72b08e6a5d974d9723e7ced3bf0",
+      "after": "69da9e75a093a9d02351a60e0c5fbd558ea551078f4e9903cd19ecc0e8ee70aa"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

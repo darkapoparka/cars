@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-09-30T16:31:15.4349051Z",
+  "canonicalRoot": "L:\\CODEX\\cars",
+  "branch": "main",
+  "repository": "darkapoparka/cars",
+  "sourceHead": "0d543209bc29c04724ce4a95254eace9c6ceb5e4",
+  "compatibilityPath": "J:\\cars",
+  "linkType": "Junction",
+  "junctionTarget": "L:\\CODEX\\cars",
+  "compatibilityHead": "0d543209bc29c04724ce4a95254eace9c6ceb5e4",
+  "sameRepository": true,
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "templateTrees": [
+    {
+      "key": "auto-best",
+      "tree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb",
+      "matchesReviewedRelease": true
+    },
+    {
+      "key": "modern",
+      "tree": "796661a4ff23fb9db34b7df68dc7f190497e4922",
+      "matchesReviewedRelease": true
+    },
+    {
+      "key": "carwow",
+      "tree": "6ba84fbd77bf8536491fcb7f649c620776c91060",
+      "matchesReviewedRelease": true
+    },
+    {
+      "key": "import",
+      "tree": "9582504af8d3e043b36fc12dd1648e19dbf51cc5",
+      "matchesReviewedRelease": true
+    },
+    {
+      "key": "app",
+      "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080",
+      "matchesReviewedRelease": true
+    }
+  ],
+  "formerTemplateReposRole": "Recovery-only, as defined in the Cars source workflow."
+}

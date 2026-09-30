@@ -1,0 +1,27 @@
+{
+  "slug": "astracar",
+  "checkedAt": "2026-09-30T15:13:19.314Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "1d12b699e2a830a52f4137cb63bd412950b215e9",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4512,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "1e5e4e067890f855496359aa4c16bf762384bc9c34b0ad69427a31d2344fb421",
+  "packageFiles": 4519,
+  "baselineSha256": "b9ba94b94f19daac31830100818545a2f2d6faee9c1895046c80b1902f65ae66",
+  "preservation": {
+    "slug": "astracar",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/astracar",
+    "checkedAt": "2026-09-30T15:13:18.578Z",
+    "protectedFiles": 417,
+    "inventoryRows": 15,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "texas-drive-auto",
+  "checkedAt": "2026-09-30T14:10:04.930Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Dallas — свържете се за оглед.",
+    "en": "Available vehicle in Dallas — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Dallas — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "52bb1a3b592802b45f1db409c0b32a7c92dea8546461465306793841012ec265",
+      "after": "0b98f98e8039de75f5ebc5cc3e94513f351e791b8364c331ea16dabf953684e0"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "2efc4f6278a17484ea46a584f0ed90efd4063365e57009c619adef1f760adceb",
+      "after": "83659b41f2dbdf7e29399515afc7bf353ece750ab24068cf4aab7d9f114e5fe7"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "69721630ad962f95b69730ea1f7206fe743d7b6442403dc4f744b541da73f0f8",
+      "after": "c254d774c9af5a2b342984b8fc88fbe4253ca487c89b0ac76980a995b83b0228"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "c99bb4b75c4f81473e550a6cef5e2608f50117093099ee27a483198cbb253bc0",
+      "after": "59a13bb27775fd061d3161e8be8e3bacd7998d977ab07174ea0bfb72c7f51e8b"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

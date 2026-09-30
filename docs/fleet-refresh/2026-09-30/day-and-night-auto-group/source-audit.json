@@ -1,0 +1,36 @@
+{
+  "slug": "day-and-night-auto-group",
+  "checkedAt": "2026-09-30T13:57:02.403Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "8871d64f7c3cce26786a4864f2ff07087df57667",
+  "exportCommit": "3d6225f0a57f3bcc59763b464a4fd448d5f0e3a6",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4137,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "2932d824a526eca8004370cbc1cead40168932fe2d0f105b2f1debacca710b91",
+  "packageFiles": 4144,
+  "baselineSha256": "0b8502baa7c18b19ef3a3ccb0c86ee8d7f4ed12087f97a694daac34271c9329f",
+  "preservation": {
+    "slug": "day-and-night-auto-group",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/day-and-night-auto-group",
+    "checkedAt": "2026-09-30T13:57:01.773Z",
+    "protectedFiles": 64,
+    "inventoryRows": 40,
+    "reviewedAdditions": [
+      {
+        "path": "dealer.json",
+        "field": "localization.inventoryCurrency",
+        "before": "BGN",
+        "value": "EUR",
+        "reason": "Correct the label for unchanged euro-valued original listings; no price amount, listing or business fact is altered.",
+        "review": "L:/CODEX/cars/runtime/fleet-refresh-20260930/market-currency-corrections/day-and-night-auto-group/review.json"
+      }
+    ],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

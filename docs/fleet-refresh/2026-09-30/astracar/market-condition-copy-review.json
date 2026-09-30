@@ -1,0 +1,35 @@
+{
+  "slug": "astracar",
+  "checkedAt": "2026-09-30T14:41:21.209Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Варна — свържете се за оглед.",
+    "en": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Варна — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "b11977a29626ea3a726f9ef02895245cbe3fe6a9cbd892ff7872f13d4810bc68",
+      "after": "1ba08b9103924fe50c64d40478f23623f9b99a085d5d899e36d55bccb6968749"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "e6dd0f83d135e67f9a761972beb2468eba039014006943e7888bd0a932515b90",
+      "after": "b7cc3b84d9b22772a7bbacd0c5a11519f2f8aca7fab2c738c314497c744483eb"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "ffd6fdc34bd590e3669c2e90aa99587b4a55c69f7ba37a859bb4c636bf737e4c",
+      "after": "0ceeb6054ea8b9951ea7ca11384097d19bb67f0a582f47c83db0d8d2a94e6540"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "d536dcf58a9537b7e3f328ebe96c8f719bba46ff408fd97eae276c8b990def61",
+      "after": "dcfa7c1a92d835d39e6f581d5cf37f46c7842910fe51c03e9a8fb877ed3c1ce2"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

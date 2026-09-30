@@ -1,0 +1,35 @@
+{
+  "slug": "f1rst-motors",
+  "checkedAt": "2026-09-30T14:09:59.755Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Dubai — свържете се за оглед.",
+    "en": "Available vehicle in Dubai — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Dubai — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "cd6b45f73b253c626646824000aca59f0d43330433ee37f49d288355abd88374",
+      "after": "9f97bc5dc82b208376d3464861dfdfd953eec78e01fb978086d892d5d0f94471"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "ce93a6e5c27d04b42d4ca05e9fd899f2e3747236af85f08c50ff2c57c5a50af5",
+      "after": "5251191729f0af6d90f2517c0c22ad7d00c040088f3d7cb4eccd86b8c9c7eda4"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "d57c639104d8f89e78dc56ed5197900326d68ca0444e6df8528ff04eff0f9e29",
+      "after": "b3bfc84975b1462de142139b0904cb61eddb2e461a09fba9601efa9c6b1e5748"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "6b66cd57bec398c4c21f3e1cf33b3ab1ff7dd7d9d70b85c64502af172f192782",
+      "after": "9064bf3061078351b8fef7d84500990b056435e6bcf6cff7e8ca932803980459"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

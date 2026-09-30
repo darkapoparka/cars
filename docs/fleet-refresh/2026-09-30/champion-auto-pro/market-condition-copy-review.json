@@ -1,0 +1,35 @@
+{
+  "slug": "champion-auto-pro",
+  "checkedAt": "2026-09-30T14:41:46.013Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Варна — свържете се за оглед.",
+    "en": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Варна — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "af15bb9380405f8b37155aafd937958d759af64102d1cdd3ff453b99340efb69",
+      "after": "1ac251bda5158f5775790cc9af46cc8e5479f3c3c205dbc8e530be8709ae276f"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "ac42d273b6bf4e07359f4f9cbb2250f6f1c03b132c4f18b95b29cdb9a930fdf3",
+      "after": "e62d1c05bd56fa7caab8ee9fe72f9d90819b201d6bcb329e018cce8815f74e1c"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "14f1036ab73146440c7f6560ac6dc0415ad9bf56b1909b21c7e9f103cd4c592c",
+      "after": "d245dd9601617c2e6f4df7dc42fe0d1497386dfc2e0973a9d2b33e839359386b"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "47bbc85d61d802d595939cce6e6c880b959658f0ac4710617970406e0c064e68",
+      "after": "32412fa0832be4c362f3e7ef1efa68a7d04f197c909a2f2d89662cca4c2f1482"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "f1rst-motors",
+  "checkedAt": "2026-09-30T14:27:36.375Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+  "exportCommit": "7ddba964ffcdae8e566f8f6c4573812639eb3e4b",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4156,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "6a7afd6756bbd267eee1881aabd0cdd1e389adc95d3f2b603c7c261cd3ae26ca",
+  "packageFiles": 4163,
+  "baselineSha256": "ff2ac07fc7bca412dd28f33f5320fdc5de2abb39118f88edb10d68342d3d5d04",
+  "preservation": {
+    "slug": "f1rst-motors",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/f1rst-motors",
+    "checkedAt": "2026-09-30T14:27:35.704Z",
+    "protectedFiles": 68,
+    "inventoryRows": 10,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

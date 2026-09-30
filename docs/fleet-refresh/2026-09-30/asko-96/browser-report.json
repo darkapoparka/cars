@@ -1,0 +1,3820 @@
+{
+  "slug": "asko-96",
+  "commit": "f67b671b251960f87d4339a473c9793b30aeafc5",
+  "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+  "deploymentId": "dpl_BfqT84DrmfapcgcF8QoWt4mCYzBB",
+  "state": "READY",
+  "url": "https://cars-asko96.vercel.app/",
+  "deploymentUrl": "https://cars-asko96-1ac7cllkh-tyj5.vercel.app",
+  "productionCurrent": true,
+  "createdAt": 1790770037662,
+  "checkedAt": "2026-09-30T13:33:36.276Z",
+  "verificationVersion": 2,
+  "completed": true,
+  "sourceCommit": "1b2b533eb7f04ebe2d2fef6c330aaa2e75254792",
+  "checks": [
+    {
+      "name": "exact-dealer-logo",
+      "kind": "light",
+      "status": 200,
+      "sha256": "d4ada78e14c425468dd1149dae2c052b0f6c0601a3ef17b4165d1293d654eaa8",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "dark",
+      "status": 200,
+      "sha256": "71a4ab99b7d35b9b758b1a008b6ed9f8d3ecc4a3b1a0792c3d72afd281b19d02",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "icon",
+      "status": 200,
+      "sha256": "bb11a0add6d12b8a54a6b7e8056aae18a17dcca4f8509029a9aa068bb4f3b529",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "АСКО 96 — Концепция за шоурум в София"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Примерни автомобили — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Toyota Rav4 HYBRID — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 305,
+        "viewport": 320,
+        "title": "Автомобили от АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-2/bg/listing/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 305,
+        "viewport": 320,
+        "title": "Toyota Rav4 HYBRID | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/leasing-red-suv-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Проверени автомобили и бърз контакт | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-hatchback-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-10-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Автомобили в наличност | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-08-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-14-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-16-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-07-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/inventory/mini-countryman-all4-076934",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Mini Countryman ALL4 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Our cars · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-1b8102780bdd0764b86c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-86c70514f91f7d474d71.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 320,
+      "locale": "bg",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg/cars/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "2024 Toyota Rav4 HYBRID · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "АСКО 96 — Showroom concept in Sofia"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Demo inventory — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Toyota Rav4 HYBRID — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-2/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "Cars at АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experienceCurrent"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "About and contact | АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-location-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/social/youtube.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/social/facebook.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-2/en/listing/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "Toyota Rav4 HYBRID | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/leasing-red-suv-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Checked cars and easy contact | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-hatchback-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-10-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Available cars | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-08-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-14-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-16-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-07-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact us | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-3/en/inventory/mini-countryman-all4-076934",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mini Countryman ALL4 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-1b8102780bdd0764b86c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-86c70514f91f7d474d71.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "en",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-4/en/cars/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "2024 Toyota Rav4 HYBRID · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "АСКО 96 — Концепция за шоурум в София"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Примерни автомобили — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359899769696"
+      ],
+      "expected": "359899769696",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Toyota Rav4 HYBRID — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "Автомобили от АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "За нас и контакти | АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-location-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/social/youtube.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/social/facebook.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359899769696"
+      ],
+      "expected": "359899769696",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-2/bg/listing/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "Toyota Rav4 HYBRID | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/leasing-red-suv-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Проверени автомобили и бърз контакт | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-hatchback-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-10-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-budget-currency",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "labels": [
+        "До 10K €",
+        "До 20K €",
+        "До 30K €",
+        "До 50K €"
+      ],
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Автомобили в наличност | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-08-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-14-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-16-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-07-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359899769696"
+      ],
+      "expected": "359899769696",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/inventory/mini-countryman-all4-076934",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mini Countryman ALL4 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-1b8102780bdd0764b86c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-86c70514f91f7d474d71.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "bg",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359899769696"
+      ],
+      "expected": "359899769696",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg/cars/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "2024 Toyota Rav4 HYBRID · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "АСКО 96 — Showroom concept in Sofia"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Demo inventory — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Contact — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Toyota Rav4 HYBRID — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-2/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Cars at АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experienceCurrent"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "About and contact | АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-2/en/listing/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Toyota Rav4 HYBRID | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Checked cars and easy contact | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "options": [
+        "All prices ✓",
+        "Up to 10,000 EUR ✓",
+        "Up to 20,000 EUR ✓",
+        "Up to 30,000 EUR ✓",
+        "Up to 50,000 EUR ✓",
+        "Over 50,000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Available cars | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Contact us | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-3/en/inventory/toyota-rav4-hybrid-626928",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Toyota Rav4 HYBRID | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/Info.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/palette.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/MapPin.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/Seatbelt.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/Frame.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/transmission-2.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-1b8102780bdd0764b86c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-86c70514f91f7d474d71.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-49b717a3db6397c50326.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "en",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-asko96.vercel.app/variant-4/en/cars/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2024 Toyota Rav4 HYBRID · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "АСКО 96 — Концепция за шоурум в София"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Примерни автомобили — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Контакти — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Toyota Rav4 HYBRID — АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Автомобили от АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "За нас и контакти | АСКО 96 | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-2/bg/listing/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Toyota Rav4 HYBRID | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-2/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Проверени автомобили и бърз контакт | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "options": [
+        "Всички цени ✓",
+        "До 10 000 EUR ✓",
+        "До 20 000 EUR ✓",
+        "До 30 000 EUR ✓",
+        "До 50 000 EUR ✓",
+        "Над 50 000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Автомобили в наличност | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Контакти | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/inventory/toyota-rav4-hybrid-626928",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Toyota Rav4 HYBRID | АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/asko96/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/Info.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/palette.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/MapPin.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/Seatbelt.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/Frame.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/transmission-2.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/reference-assets/sell-brand-1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-asko96.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-asko96.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-asko96",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-1b8102780bdd0764b86c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-86c70514f91f7d474d71.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-49b717a3db6397c50326.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "bg",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-4/bg/cars/toyota-rav4-hybrid-2024-21788444587626928",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2024 Toyota Rav4 HYBRID · АСКО 96"
+      },
+      "images": [
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/logo-light-d4ada78e14c425468dd1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-asko96.vercel.app/variant-4/dealer-app/vehicle-93f30d3593648dc639bb.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "settled-carwow-mobile-detail-price",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-asko96.vercel.app/variant-3/bg/inventory/mini-countryman-all4-076934",
+      "status": 200,
+      "layout": {
+        "text": "7 777 €",
+        "element": {
+          "x": 292.875,
+          "y": 431.453125,
+          "width": 83.125,
+          "height": 26.875
+        },
+        "glyphs": {
+          "x": 292.875,
+          "right": 376,
+          "width": 83.125
+        },
+        "viewport": 390,
+        "documentWidth": 390,
+        "fabOverlap": 0,
+        "pass": true
+      },
+      "errors": [],
+      "checkedAt": "2026-09-30T15:12:00.355Z",
+      "pass": true
+    }
+  ],
+  "passed": true,
+  "screenshotFollowUpAt": "2026-09-30T15:12:00.355Z",
+  "settledCarwowScreenshotSha256": "292778bb49a17a26dd267a1b9c7bef9d9c3cb568a27eba9cf1addb665aa75ed1"
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "eliqauto",
+  "checkedAt": "2026-09-30T15:13:33.563Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "c6494e902515f62583ca82fa335caa1853deb270",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4536,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "468e90921d0674a41db30fed8ed3c3b9075c37c1e8e0aadaac82dfbb63276d50",
+  "packageFiles": 4543,
+  "baselineSha256": "92812bc6b53933be3e969451d05897ac5e13f7fae3b8048b1f7a3289a0c5c457",
+  "preservation": {
+    "slug": "eliqauto",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/eliqauto",
+    "checkedAt": "2026-09-30T15:13:32.734Z",
+    "protectedFiles": 414,
+    "inventoryRows": 16,
+    "reviewedAdditions": [
+      {
+        "path": "app/lib/dealer.json",
+        "field": "referenceClaimsApproved",
+        "value": false,
+        "reason": "Optional shared safety flag keeps unverified claims disabled; every original dealer field remains identical."
+      }
+    ],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

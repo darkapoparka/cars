@@ -1,0 +1,69 @@
+{
+  "slug": "isauto-varna",
+  "publicAlias": "cars-isautovarna.vercel.app",
+  "reason": "The exact production Git builds were READY while the project production target and public alias remained older.",
+  "verifiedProjectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+  "initialAliasRepair": {
+    "deploymentId": "dpl_5HjTg6MG5YwbZLeKSfj92A4hei1W",
+    "exportCommit": "26d03e123cd39c67045fd06ba95de51bd3c78c88",
+    "operation": "Assign the existing verified build to the same dealer alias."
+  },
+  "finalPromotion": {
+    "checkedAt": "2026-09-30T15:25:27.988Z",
+    "operation": "Promote the existing READY production build; no new deployment.",
+    "before": {
+      "checkedAt": "2026-09-30T15:18:47.857Z",
+      "project": {
+        "id": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+        "name": "cars-isautovarna",
+        "repository": "darkapoparka/cars-isautovarna",
+        "productionBranch": "main",
+        "productionTarget": "dpl_Dsn693jzxTqzZtTfRhqzHwjHebw4"
+      },
+      "deployment": {
+        "id": "dpl_26QVkgsQngkf1MSZ1nhBiVFSyFJW",
+        "commit": "29f2223f7d04278b15c3258d77a8858224e23d5d",
+        "ref": "main",
+        "target": "production",
+        "state": "READY",
+        "aliases": [
+          "cars-isautovarna-tyj5.vercel.app",
+          "cars-isautovarna-git-main-tyj5.vercel.app"
+        ]
+      },
+      "alias": {
+        "name": "cars-isautovarna.vercel.app",
+        "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+        "deploymentId": "dpl_5HjTg6MG5YwbZLeKSfj92A4hei1W"
+      },
+      "domains": [
+        {
+          "name": "cars-isautovarna.vercel.app",
+          "gitBranch": null,
+          "redirect": null,
+          "verified": true
+        }
+      ]
+    },
+    "after": {
+      "projectProductionTarget": "dpl_26QVkgsQngkf1MSZ1nhBiVFSyFJW",
+      "aliasDeploymentId": "dpl_26QVkgsQngkf1MSZ1nhBiVFSyFJW",
+      "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+      "commit": "29f2223f7d04278b15c3258d77a8858224e23d5d"
+    },
+    "passed": true
+  },
+  "finalDeployment": {
+    "slug": "isauto-varna",
+    "commit": "29f2223f7d04278b15c3258d77a8858224e23d5d",
+    "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+    "deploymentId": "dpl_26QVkgsQngkf1MSZ1nhBiVFSyFJW",
+    "state": "READY",
+    "url": "https://cars-isautovarna.vercel.app/",
+    "deploymentUrl": "https://cars-isautovarna-4x3wvhf2h-tyj5.vercel.app",
+    "productionCurrent": true,
+    "createdAt": 1790780483533,
+    "checkedAt": "2026-09-30T16:41:40.313Z"
+  },
+  "extraDeploymentCreated": false
+}

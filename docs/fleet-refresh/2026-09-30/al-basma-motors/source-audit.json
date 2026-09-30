@@ -1,0 +1,27 @@
+{
+  "slug": "al-basma-motors",
+  "checkedAt": "2026-09-30T14:27:25.482Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+  "exportCommit": "f9c35d1ef6713af2e9407fd5596c3023e2b7ca5b",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4294,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "54a65b98a4b9db2612165c03d16e383f55043ddb318cbc737a7b67542f1464be",
+  "packageFiles": 4301,
+  "baselineSha256": "1050680f22b9ee836f5f811797248ae93934786c99f905765d650d7918bee8cf",
+  "preservation": {
+    "slug": "al-basma-motors",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/al-basma-motors",
+    "checkedAt": "2026-09-30T14:27:24.812Z",
+    "protectedFiles": 188,
+    "inventoryRows": 10,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

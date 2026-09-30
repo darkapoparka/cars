@@ -1,0 +1,4179 @@
+{
+  "slug": "promosale-varna",
+  "commit": "55315bc7cc5e9d90fc2b148e1fb880cc9f872679",
+  "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+  "deploymentId": "dpl_Anbqsb3aKzfwSKXriKZZTTgyWU9H",
+  "state": "READY",
+  "url": "https://cars-promosalevarna.vercel.app/",
+  "deploymentUrl": "https://cars-promosalevarna-c4zmallb6-tyj5.vercel.app",
+  "productionCurrent": true,
+  "createdAt": 1790785725063,
+  "checkedAt": "2026-09-30T16:41:22.991Z",
+  "verificationVersion": 2,
+  "completed": true,
+  "sourceCommit": "0d543209bc29c04724ce4a95254eace9c6ceb5e4",
+  "checks": [
+    {
+      "name": "exact-dealer-logo",
+      "kind": "light",
+      "status": 200,
+      "sha256": "66b9f788b14b096b007d85fba75cc5e15cf929d5d4ebd337824534bea3543dd1",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "dark",
+      "status": 200,
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "icon",
+      "status": 200,
+      "sha256": "0de89f957af0dad27a1b85b39a6f9b5a9f1199cc6f5ac1f2a646c7d0c709efad",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Promosale Varna — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Примерни автомобили — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Promosale Varna — Автомобили и внос по заявка"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/brands/porsche.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-10.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-4.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-5.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-6.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-7.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "import",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вносаТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Налични автомобили — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "import",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/inventory/21788787563552939",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/palette.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Проверени автомобили и бърз контакт | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Автомобили в наличност | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786106091652576-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg/inventory/audi-a1-050885",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Audi A1 | Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Our cars · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-9cc9e66e735101558162.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-3d11a98185f0cb85844d.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 320,
+      "locale": "bg",
+      "count": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg/cars/mercedes-benz-eqe-350-burmester-2022-21788787563552939",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "2022 Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Promosale Varna — Showroom concept in Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "target": "",
+          "text": "Import specialistImport-focused journey2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Demo inventory — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact — Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Promosale Varna — Cars and vehicle sourcing"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/brands/porsche.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-10.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-4.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "import",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "target": "",
+          "text": "Import specialistImport-focused journeyCurrent"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Available vehicles — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact PROMOSALE VARNA — Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/contact",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "import",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/inventory/21788787563552939?lang=en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/palette.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Checked cars and easy contact | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "target": "",
+          "text": "Import specialistImport-focused journey2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Available cars | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786106091652576-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact us | PROMOSALE VARNA"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/en/inventory/audi-a1-050885",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Audi A1 | Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "dealer-english-viewing-condition",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "expected": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "target": "",
+          "text": "Import specialistImport-focused journey2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-9cc9e66e735101558162.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-3d11a98185f0cb85844d.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "en",
+      "count": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/en/cars/mercedes-benz-eqe-350-burmester-2022-21788787563552939",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "2022 Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Promosale Varna — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Примерни автомобили — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти — Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359892020208"
+      ],
+      "expected": "359892020208",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Promosale Varna — Автомобили и внос по заявка"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/brands/porsche.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-10.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/images/brand/brand-4.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "import",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вносаТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Налични автомобили — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Свържете се с PROMOSALE VARNA — Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/contact",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "import",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359892020208"
+      ],
+      "expected": "359892020208",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "import",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/inventory/21788787563552939",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/icons/palette.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Проверени автомобили и бърз контакт | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-budget-currency",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "labels": [
+        "До 20K €",
+        "До 30K €",
+        "До 50K €",
+        "Без бюджет"
+      ],
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Автомобили в наличност | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786106091652576-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти | PROMOSALE VARNA"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359892020208"
+      ],
+      "expected": "359892020208",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg/inventory/audi-a1-050885",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Audi A1 | Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-9cc9e66e735101558162.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-3d11a98185f0cb85844d.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "bg",
+      "count": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359892020208"
+      ],
+      "expected": "359892020208",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg/cars/mercedes-benz-eqe-350-burmester-2022-21788787563552939",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "2022 Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Promosale Varna — Showroom concept in Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "target": "",
+          "text": "Import specialistImport-focused journey2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Demo inventory — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Contact — Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Promosale Varna — Cars and vehicle sourcing"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "import",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "target": "",
+          "text": "Import specialistImport-focused journeyCurrent"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Available vehicles — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/megamenu/inventory-audi-a7-cutout.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786106091652576-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/inventory",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Contact PROMOSALE VARNA — Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/banners/contact-desktop-v2.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/contact",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "import",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/en/inventory/21788787563552939?lang=en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Checked cars and easy contact | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "target": "",
+          "text": "Import specialistImport-focused journey2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "options": [
+        "All prices ✓",
+        "Up to 10,000 EUR ✓",
+        "Up to 20,000 EUR ✓",
+        "Up to 30,000 EUR ✓",
+        "Up to 50,000 EUR ✓",
+        "Over 50,000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Available cars | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Contact us | PROMOSALE VARNA"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/en/inventory/mercedes-benz-eqe-552939",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Mercedes-Benz EQE | Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "dealer-english-viewing-condition",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "expected": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/logo-light-66b9f788b14b096b007d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/en",
+          "target": "",
+          "text": "Import specialistImport-focused journey2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/logo-light-66b9f788b14b096b007d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-9cc9e66e735101558162.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-3d11a98185f0cb85844d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5fb82925d85687c337c7.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "en",
+      "count": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/logo-light-66b9f788b14b096b007d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/en/cars/mercedes-benz-eqe-350-burmester-2022-21788787563552939",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2022 Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/logo-light-66b9f788b14b096b007d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Promosale Varna — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Примерни автомобили — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Контакти — Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Promosale Varna — Автомобили и внос по заявка"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "import",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вносаТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Налични автомобили — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/megamenu/inventory-audi-a7-cutout.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/11786106091652576-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/inventory",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "import",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Свържете се с PROMOSALE VARNA — Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/assets/daynight/banners/contact-desktop-v2.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-import-dark-header-logo",
+      "variant": "import",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/contact",
+      "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+      "expected": "/variant-2/dealer-brand/logo-on-dark.webp",
+      "sha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "expectedSha256": "0bfec3e1f4c57c2932a1d5ea6e6f5f8795221b07ebdbdabb82a79dcc2deed928",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "import",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-2/bg/inventory/21788787563552939",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ — Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-2/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Проверени автомобили и бърз контакт | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "options": [
+        "Всички цени ✓",
+        "До 10 000 EUR ✓",
+        "До 20 000 EUR ✓",
+        "До 30 000 EUR ✓",
+        "До 50 000 EUR ✓",
+        "Над 50 000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Автомобили в наличност | PROMOSALE VARNA"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11787906058256951-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786461174971809-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786375334835370-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/11786370554050885-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Контакти | PROMOSALE VARNA"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-3/bg/inventory/mercedes-benz-eqe-552939",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Mercedes-Benz EQE | Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/dealer/inventory/21788787563552939-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/Info.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/palette.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/MapPin.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/Seatbelt.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/Frame.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/transmission-2.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/logo-light-66b9f788b14b096b007d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-promosalevarna.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-2/bg",
+          "target": "",
+          "text": "Автомобилен вносВизия, фокусирана върху вноса2"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-promosalevarna.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-promosalevarna",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/logo-light-66b9f788b14b096b007d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-9cc9e66e735101558162.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-3d11a98185f0cb85844d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5fb82925d85687c337c7.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "bg",
+      "count": 6,
+      "expected": 6,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · Promosale Varna"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/logo-light-66b9f788b14b096b007d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-promosalevarna.vercel.app/variant-4/bg/cars/mercedes-benz-eqe-350-burmester-2022-21788787563552939",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2022 Mercedes-Benz EQE 350+ * Burmester* Подгрев* ЛИЗИНГ · Promosale Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/logo-light-66b9f788b14b096b007d.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-promosalevarna.vercel.app/variant-4/dealer-app/vehicle-5de64cc1b30797fb3690.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "passed": true
+}

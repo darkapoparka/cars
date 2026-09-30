@@ -1,0 +1,27 @@
+{
+  "slug": "al-hamoor-al-thahabi",
+  "checkedAt": "2026-09-30T14:27:28.282Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+  "exportCommit": "c7aed788007bb7eac1bf91b7c158a14dc5c53330",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4335,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "797d1dcd4a88d5275718ec9fd42321e7d6c5b68e899b57b6bcdad5cf73677445",
+  "packageFiles": 4342,
+  "baselineSha256": "8cf02006b636b8bcecb69bd22f0a6a5f7082da3914c080c925968d71f7b46783",
+  "preservation": {
+    "slug": "al-hamoor-al-thahabi",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/al-hamoor-al-thahabi",
+    "checkedAt": "2026-09-30T14:27:27.524Z",
+    "protectedFiles": 230,
+    "inventoryRows": 8,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

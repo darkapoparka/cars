@@ -1,0 +1,1456 @@
+[
+  {
+    "slugs": [
+      "al-basma-motors",
+      "al-hamoor-al-thahabi"
+    ],
+    "checkedAt": "2026-09-30T15:41:20.569Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "al-basma-motors",
+        "commit": "f9c35d1ef6713af2e9407fd5596c3023e2b7ca5b",
+        "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+        "reportCheckedAt": "2026-09-30T14:49:40.569Z",
+        "reportSha256": "18a27c2e29dc1977d204578129869d02aadbd1c2c8b972db2811988f2af67bf9",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/al-basma-motors/auto-best-home-390.png",
+            "sha256": "20a81710e02c07b2b8b0faa55f86dd40a8785f6810a17c40e091f6e18905399b"
+          },
+          {
+            "path": "dealer-qa-final/al-basma-motors/auto-best-detail-390.png",
+            "sha256": "4fd09545d1f897e628a7b2be5d80a051952924d2aafbe8b5ab41d7f7493e7e5e"
+          },
+          {
+            "path": "dealer-qa-final/al-basma-motors/modern-home-390.png",
+            "sha256": "53ad2855c02d616219150b3f2c579d3456793b498a6c20088d9cb2f0d3adaf93"
+          },
+          {
+            "path": "dealer-qa-final/al-basma-motors/modern-detail-390.png",
+            "sha256": "af817b61170677df0dfd9f74ae93042a89ec3f06b76cf450e7dfa71be76c7461"
+          },
+          {
+            "path": "dealer-qa-final/al-basma-motors/carwow-home-390.png",
+            "sha256": "29123916af853dda9bab2c5814273236e07fd28f378c490b3bf47fc2c62ceeae"
+          },
+          {
+            "path": "dealer-qa-final/al-basma-motors/carwow-detail-390.png",
+            "sha256": "b62b3aa10bb599d7abbb8accdd179fe7f740c5975718cb43b9a926527ba495f3"
+          },
+          {
+            "path": "dealer-qa-final/al-basma-motors/app-home-390.png",
+            "sha256": "fb9afa43936ae7dcd974f6b6d7f1a9f4048ea2ac02a40a5a8e37dd47ca245f38"
+          },
+          {
+            "path": "dealer-qa-final/al-basma-motors/app-detail-390.png",
+            "sha256": "25c6a45522678fb67bbd0a4492ea1598052a126591682d91cf7f9a05648e01ec"
+          }
+        ]
+      },
+      {
+        "slug": "al-hamoor-al-thahabi",
+        "commit": "c7aed788007bb7eac1bf91b7c158a14dc5c53330",
+        "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+        "reportCheckedAt": "2026-09-30T14:54:27.508Z",
+        "reportSha256": "978e2ba3b7abd4c2b8bc804c4852424832fae871506c601c4861f90b1d6a48fb",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/al-hamoor-al-thahabi/auto-best-home-390.png",
+            "sha256": "7ced86e976deb8b5308a9c17bef3072f27dc7afc29617801990c4450951d1b43"
+          },
+          {
+            "path": "dealer-qa-final/al-hamoor-al-thahabi/auto-best-detail-390.png",
+            "sha256": "9c579cabf351a35450fe5e246853023a00dbf3cd8a0fac174123f1557f228745"
+          },
+          {
+            "path": "dealer-qa-final/al-hamoor-al-thahabi/modern-home-390.png",
+            "sha256": "5f70e6e5f6aaa3c33aaec2c54fad747f02c75e56d335a5f3a8b7c20e73e7601b"
+          },
+          {
+            "path": "dealer-qa-final/al-hamoor-al-thahabi/modern-detail-390.png",
+            "sha256": "b31b3edb02f59eef37bb81d0d8ee3a6de5516f25c783301783fa53f1484921ef"
+          },
+          {
+            "path": "dealer-qa-final/al-hamoor-al-thahabi/carwow-home-390.png",
+            "sha256": "23e272c0c9425e31bf17761f7c931b9868c662154ed4735a7b418a9367ef2d95"
+          },
+          {
+            "path": "dealer-qa-final/al-hamoor-al-thahabi/carwow-detail-390.png",
+            "sha256": "95915f82a17d6e1c7de57ce4d122e6d7d8f2d48c6ea6a5f1a4146ff847ed221b"
+          },
+          {
+            "path": "dealer-qa-final/al-hamoor-al-thahabi/app-home-390.png",
+            "sha256": "ba5582a4be0396307d4322d721e6777fbb562d3178998353dc2b1ed2e264ff93"
+          },
+          {
+            "path": "dealer-qa-final/al-hamoor-al-thahabi/app-detail-390.png",
+            "sha256": "a8600665c24e5c5b38954862a80cbcbdc1bf877e676c91acb82d219bf9762052"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/al-basma-motors_al-hamoor-al-thahabi-home.png",
+        "sha256": "1c3dbd5ee06ca3926a939d9163d08f7aa99adb62b2f0a2cff61c2d213bdd9541"
+      },
+      {
+        "path": "visual-galleries/al-basma-motors_al-hamoor-al-thahabi-detail.png",
+        "sha256": "943a254ce823a28112445fb71d5d4434702271020f30a055a34f8df6c7d14d7d"
+      }
+    ],
+    "observations": "Inspected all four final mobile home and vehicle-detail designs for both dealers. The gold logos, black/red branding, original listing imagery and original inventory counts remain; AED amounts use readable grouped values. Carwow viewing copy is English with Sharjah retained. Missing source specifications remain explicit. The four-design FAB and mobile navigation are present."
+  },
+  {
+    "slugs": [
+      "al-reef-used-cars"
+    ],
+    "checkedAt": "2026-09-30T15:04:12.142Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "al-reef-used-cars",
+        "commit": "8bac5e0355f2580ee3050246ce235ed0b545638d",
+        "sourceCommit": "48f3c43724f52df498a9b06d2fa7d5baae75d41d",
+        "reportCheckedAt": "2026-09-30T14:47:02.238Z",
+        "reportSha256": "27e617257948d2f9c6da045c160744439e4a326103d8db3deda5a04b1e0e5891",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/al-reef-used-cars/auto-best-home-390.png",
+            "sha256": "d1dba748fc401a20a4d4f377546c6f589d53669563e93e8ad92f6038c007364d"
+          },
+          {
+            "path": "dealer-qa-final/al-reef-used-cars/auto-best-detail-390.png",
+            "sha256": "1399ec48a9f7237ef7de4e7016781408285a616da1e98bf0c2451f790c7ef976"
+          },
+          {
+            "path": "dealer-qa-final/al-reef-used-cars/modern-home-390.png",
+            "sha256": "780195fd76c4ee253ca1bb86cab814e90a32c1e0d3f7a6e2884309de016ee7f1"
+          },
+          {
+            "path": "dealer-qa-final/al-reef-used-cars/modern-detail-390.png",
+            "sha256": "ae0561996937dc473db207b7400e6b6e19dff6bb8870538cd727af2f895ef6b3"
+          },
+          {
+            "path": "dealer-qa-final/al-reef-used-cars/carwow-home-390.png",
+            "sha256": "d1e86a8f4f84a3e980ebbfee2a089b758fa075bdd3acc951581e5e1099f6f1bf"
+          },
+          {
+            "path": "dealer-qa-final/al-reef-used-cars/carwow-detail-390.png",
+            "sha256": "ef00410e20996cf45583fb1d183f2987f53b8f3bdac5eaad2455428f0f9231d1"
+          },
+          {
+            "path": "dealer-qa-final/al-reef-used-cars/app-home-390.png",
+            "sha256": "cd247c13e9a26a1985a9687b19416ef6eda2addd49bcdc98349c47278bf042d5"
+          },
+          {
+            "path": "dealer-qa-final/al-reef-used-cars/app-detail-390.png",
+            "sha256": "08ba54a7847d1935c5730d18051834a01418e7a33dc5021fb23cde0915dfa4ca"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/al-reef-used-cars-home.png",
+        "sha256": "7a71c289903b90f73ea4597a4bc72cc749c7602e43cf63096c6668d25a8b45fa"
+      },
+      {
+        "path": "visual-galleries/al-reef-used-cars-detail.png",
+        "sha256": "31657af1559694121d3981baaaa9fb42a5770c97d5570bc96b74c1d00b1d0772"
+      }
+    ],
+    "observations": "Reviewed all four mobile home and vehicle detail layouts for the independent dealer source. Original logo, dealer stock media, AED amounts, location and English viewing copy are present. Existing source-summary gaps are retained. The dedicated Git repository and Vercel identity remain independent of Cars-owned exports."
+  },
+  {
+    "slugs": [
+      "asko-96",
+      "f1rst-motors"
+    ],
+    "checkedAt": "2026-09-30T15:32:02.766Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "asko-96",
+        "commit": "f67b671b251960f87d4339a473c9793b30aeafc5",
+        "sourceCommit": "1b2b533eb7f04ebe2d2fef6c330aaa2e75254792",
+        "reportCheckedAt": "2026-09-30T13:33:36.276Z",
+        "reportSha256": "b7eb2bcccd7e78ad805c33d081882b1c23f8e4c73fb2921e72195f41e5c97a3e",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/asko-96/auto-best-home-390.png",
+            "sha256": "585376795beefde6968ac15d2e7dc0a86d38be3f979d426c9735ad17d244a63d"
+          },
+          {
+            "path": "dealer-qa-final/asko-96/auto-best-detail-390.png",
+            "sha256": "72bf8f80c4b93104ce128b503c0e31567eca7f5136d5c17a1adac9ac90a61a75"
+          },
+          {
+            "path": "dealer-qa-final/asko-96/modern-home-390.png",
+            "sha256": "a2f586976f480344719ce2691ae30150981a7aec7703136467d3f4c76d2c6000"
+          },
+          {
+            "path": "dealer-qa-final/asko-96/modern-detail-390.png",
+            "sha256": "e776e08b9c805663c2d1eaf79ff6eb76d0159c32160f00781fe93e4b380e9702"
+          },
+          {
+            "path": "dealer-qa-final/asko-96/carwow-home-390.png",
+            "sha256": "1cf3ff558331e94b58567552151cfc8b45696a61a7f58386a29a6d81f11035d7"
+          },
+          {
+            "path": "dealer-qa-final/asko-96/carwow-detail-390.png",
+            "sha256": "292778bb49a17a26dd267a1b9c7bef9d9c3cb568a27eba9cf1addb665aa75ed1"
+          },
+          {
+            "path": "dealer-qa-final/asko-96/app-home-390.png",
+            "sha256": "5f96e67d64a632c853997496eabb9e177b5034d1fcfc788980ee8c4202b05e4a"
+          },
+          {
+            "path": "dealer-qa-final/asko-96/app-detail-390.png",
+            "sha256": "7f348ba598904ff022f906149ab6ecc46f539b37e40af7ddfdf94988f8e8ec2d"
+          }
+        ]
+      },
+      {
+        "slug": "f1rst-motors",
+        "commit": "7ddba964ffcdae8e566f8f6c4573812639eb3e4b",
+        "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+        "reportCheckedAt": "2026-09-30T15:06:59.304Z",
+        "reportSha256": "4c564a0a81ae1021a14baf3b9ad671c4397358ea0d3b826eab2906a5c629809a",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/f1rst-motors/auto-best-home-390.png",
+            "sha256": "0eaa201610c3e6cc637a71c053a842bebeab0c650855a53f75bf085f4e5cf166"
+          },
+          {
+            "path": "dealer-qa-final/f1rst-motors/auto-best-detail-390.png",
+            "sha256": "3d439af18cbded2e32536744cba635fc6448eb54da7f3c27c7e79c5b0e5d82d0"
+          },
+          {
+            "path": "dealer-qa-final/f1rst-motors/modern-home-390.png",
+            "sha256": "3a85da02c55196eddd308aa38774061bddec2f50eddb4f9d4d493c4283b11c8e"
+          },
+          {
+            "path": "dealer-qa-final/f1rst-motors/modern-detail-390.png",
+            "sha256": "9be76cf0d3421c54ee445fa052ad55706cafbba1779e718188e79c24c5f9453b"
+          },
+          {
+            "path": "dealer-qa-final/f1rst-motors/carwow-home-390.png",
+            "sha256": "385f0fa474994560b68d96cd41c9e0e6491706ffbb2bcec841e8fca316d20cf6"
+          },
+          {
+            "path": "dealer-qa-final/f1rst-motors/carwow-detail-390.png",
+            "sha256": "7d60af761953db63a2588cce7160b0b7026b7b528846e20df2e94be23aae6f2e"
+          },
+          {
+            "path": "dealer-qa-final/f1rst-motors/app-home-390.png",
+            "sha256": "484961da3cf9bdfe004ba08a05e7fcfdecad4d99349401cf9c6cda257a6b66e3"
+          },
+          {
+            "path": "dealer-qa-final/f1rst-motors/app-detail-390.png",
+            "sha256": "21d9fd505c36747014ee089b789a7dbb094ad713940a84cf11e6d934c6ea1017"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/asko-96_f1rst-motors-home.png",
+        "sha256": "2ea75aec94431c73333798ecedf8543161cf484de1f29c1bfe1b597287b1975f"
+      },
+      {
+        "path": "visual-galleries/asko-96_f1rst-motors-detail.png",
+        "sha256": "6056717e5e0edbbbec28beb9b9d56d08a731c889e5aeedd753756b282972ecd9"
+      }
+    ],
+    "observations": "Reviewed all four mobile home and detail views. Asko retains its logo, actual stock photos and EUR prices. F1rst retains its clearly labeled concept media and source-summary gaps; grouped AED amounts are shown correctly and its viewing sentence is now English. Original stock counts and assets are preserved."
+  },
+  {
+    "slugs": [
+      "astracar",
+      "autolife"
+    ],
+    "checkedAt": "2026-09-30T15:42:09.065Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "astracar",
+        "commit": "1d12b699e2a830a52f4137cb63bd412950b215e9",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:23:10.339Z",
+        "reportSha256": "3a4b1215d22bb3a76db9aa2ef4a800619881025eb4895cb89717afe370c3e01d",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/astracar/auto-best-home-390.png",
+            "sha256": "c4a929cddd0390194118cd3c52e77f32526b6c357ad57c77615fa6dbe0f3f3db"
+          },
+          {
+            "path": "dealer-qa-final/astracar/auto-best-detail-390.png",
+            "sha256": "253e195c417538c230d5a4509e19b294672a80339a65b47b0b8d5c867bfc54ef"
+          },
+          {
+            "path": "dealer-qa-final/astracar/modern-home-390.png",
+            "sha256": "3c4d43e911a1709080520696020b9d241cdd1541ade534e1514f300dcbd1f4f0"
+          },
+          {
+            "path": "dealer-qa-final/astracar/modern-detail-390.png",
+            "sha256": "79650f2772dc1b84478eaff300c5e1ac5933980e5e58e0da18624a1d8abf83cb"
+          },
+          {
+            "path": "dealer-qa-final/astracar/carwow-home-390.png",
+            "sha256": "1a7cfff0c40b9db203e31d0e7ad13bf64cd8581727ebf09e00e285afb1ef8a2e"
+          },
+          {
+            "path": "dealer-qa-final/astracar/carwow-detail-390.png",
+            "sha256": "ecc87f1bf450beca427652ab8696864e835e466a90b5bddc2252e4ed6afd976a"
+          },
+          {
+            "path": "dealer-qa-final/astracar/app-home-390.png",
+            "sha256": "8adc93de1e76d92d774f7d45c0584cb46b1351365c5f4743fd6f3b8ac79b9534"
+          },
+          {
+            "path": "dealer-qa-final/astracar/app-detail-390.png",
+            "sha256": "749e061f3c304ab08a695fc37ffc3f99aeae42ed6d9121d96d967856d87f4baf"
+          }
+        ]
+      },
+      {
+        "slug": "autolife",
+        "commit": "e28afdd250c7e9ac8b5048ac77cf87ebd294b5ea",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:27:51.784Z",
+        "reportSha256": "ed47d26173485701043a8db3d6bf9714cc19b51b9700bf30792188b6b5d4aaf1",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/autolife/auto-best-home-390.png",
+            "sha256": "40f815865d0a2dd4fa6f5643ee66824018dc324b6bfa92e8a65af133f7a5d11a"
+          },
+          {
+            "path": "dealer-qa-final/autolife/auto-best-detail-390.png",
+            "sha256": "2dd9fa109aa78e67b9538b0dc8d688e68d02ccb0ee791bc4b22b961346f7b377"
+          },
+          {
+            "path": "dealer-qa-final/autolife/modern-home-390.png",
+            "sha256": "708019ce0c18c933c95b687d09dd064dc3479ee63ed8fbe1c19630a43be63d89"
+          },
+          {
+            "path": "dealer-qa-final/autolife/modern-detail-390.png",
+            "sha256": "b36e1b0ed0d3302e074e8abf3dbc20d8502ca6954bffca0758dbb4f9bd81d271"
+          },
+          {
+            "path": "dealer-qa-final/autolife/carwow-home-390.png",
+            "sha256": "bd50c636ab20d9ab55213b294f9e70bc20b6dd32b44040f68733d01ba757193a"
+          },
+          {
+            "path": "dealer-qa-final/autolife/carwow-detail-390.png",
+            "sha256": "6c8ab2a51a3b8dc3ce12de19e78ef21083cdaaed5ff43b5cf07c7143d0a03f86"
+          },
+          {
+            "path": "dealer-qa-final/autolife/app-home-390.png",
+            "sha256": "f98d050310a99fa8fa06cdbcaaeab1f9a85f9a762e87f3d8312037908bbfb090"
+          },
+          {
+            "path": "dealer-qa-final/autolife/app-detail-390.png",
+            "sha256": "60780ab6436e1b403ade66019653078f3f4f1652ca86a906bcce66235c37b71f"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/astracar_autolife-home.png",
+        "sha256": "a32b08886fd76b29185af3d8e82d73abd9eceef677a91dc9f74624256cb230d9"
+      },
+      {
+        "path": "visual-galleries/astracar_autolife-detail.png",
+        "sha256": "f89a32a6693afc8f404e78b7d35b2cc16e971a9c542ec849957c6dfecb521b05"
+      }
+    ],
+    "observations": "Inspected the final four home and representative detail designs for both Varna dealers. Original blue/silver logos, vehicle photography and EUR amounts remain. Bulgarian labels and dealer location copy are readable; each original variant inventory count is retained. Carwow price/title rows are settled and the four-design switcher is visible."
+  },
+  {
+    "slugs": [
+      "isauto-varna",
+      "automarket-varna"
+    ],
+    "checkedAt": "2026-09-30T15:42:09.423Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "isauto-varna",
+        "commit": "29f2223f7d04278b15c3258d77a8858224e23d5d",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:21:38.512Z",
+        "reportSha256": "7ab561708a7c1e5cf377d952ca8ae38763f28fe366539887ca863cc2732589db",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/isauto-varna/auto-best-home-390.png",
+            "sha256": "ee8456335c1e46a961516663a02b6e92b0b3b344d43a36a496797416dab2705e"
+          },
+          {
+            "path": "dealer-qa-final/isauto-varna/auto-best-detail-390.png",
+            "sha256": "0aae0e8f87d0f9f03cb4e5da9eeb1274f239b2d6a5d5c764bac3f4d2bfca9ee2"
+          },
+          {
+            "path": "dealer-qa-final/isauto-varna/modern-home-390.png",
+            "sha256": "6eda5df097103f63d333e45f4b32df0f276ae0f9bd3d68c54056af6d7c66fe0d"
+          },
+          {
+            "path": "dealer-qa-final/isauto-varna/modern-detail-390.png",
+            "sha256": "7726614929e5128c52b3c4eb5a76805df399e9fa81dc8d68e889c6cd72ed4158"
+          },
+          {
+            "path": "dealer-qa-final/isauto-varna/carwow-home-390.png",
+            "sha256": "e96be5999f8777b8c6cd617d74ce1f3826c199fc05dfbc8c0c7b98fac33c32c0"
+          },
+          {
+            "path": "dealer-qa-final/isauto-varna/carwow-detail-390.png",
+            "sha256": "1c31841f0153344675a01b14a2b3d799ac32872a8fea41beac94ba9ef5030a3b"
+          },
+          {
+            "path": "dealer-qa-final/isauto-varna/app-home-390.png",
+            "sha256": "9b11bf908df57b69bff0bfbb2f8cf060ef5738c0e86f35e381a8b1562d0ff21e"
+          },
+          {
+            "path": "dealer-qa-final/isauto-varna/app-detail-390.png",
+            "sha256": "0ed0a5ff29e23429145888fd2fabee84bc77feed944e4f473335ff028d5a2249"
+          }
+        ]
+      },
+      {
+        "slug": "automarket-varna",
+        "commit": "2691644565e580f5b9cb8521e508a4f8cd402681",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:32:32.142Z",
+        "reportSha256": "2540c33f448355cfeabcd6e66ab1b9b34c9c198c98516769ee663fca76b9f8ab",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/automarket-varna/auto-best-home-390.png",
+            "sha256": "2b3ca9556d2ffeedd9e7e592a30a2f7cddce22b6e120695d70cbf5bd8403977f"
+          },
+          {
+            "path": "dealer-qa-final/automarket-varna/auto-best-detail-390.png",
+            "sha256": "9a78744d43cdc8206a1b4b09af36c5b6f3fbd8087da9521cbe039541535714a3"
+          },
+          {
+            "path": "dealer-qa-final/automarket-varna/modern-home-390.png",
+            "sha256": "b6225c5b2c35cb04cb4c0237ee46f7dca17dd4ea5ea0eb13ec54faed69b2e2f7"
+          },
+          {
+            "path": "dealer-qa-final/automarket-varna/modern-detail-390.png",
+            "sha256": "a91f1125593bf24df1eba7f2a821ad1316fecfd42537de9f3f386bf68c258525"
+          },
+          {
+            "path": "dealer-qa-final/automarket-varna/carwow-home-390.png",
+            "sha256": "bb99575cb3d67daa9ab84733525aaff6c36229926c9df6fd1c28d527cf9bb036"
+          },
+          {
+            "path": "dealer-qa-final/automarket-varna/carwow-detail-390.png",
+            "sha256": "b042755655c083d09df585495a99a4f2aab9fce4618f7c1a3d9e2d938266383e"
+          },
+          {
+            "path": "dealer-qa-final/automarket-varna/app-home-390.png",
+            "sha256": "836c4a1a7dfa9e434b20f508d98fb1eeb56de0b33a1544a310832b0aa72b27c2"
+          },
+          {
+            "path": "dealer-qa-final/automarket-varna/app-detail-390.png",
+            "sha256": "7d74c76170d993c931bfbd05a20658f795326420c9b773b0072ced38eca8dbf3"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/isauto-varna_automarket-varna-home.png",
+        "sha256": "514e77ef7d3c5db068f854468b60dea49708bfa55956566a8aa4442e4a679624"
+      },
+      {
+        "path": "visual-galleries/isauto-varna_automarket-varna-detail.png",
+        "sha256": "31a388e5527d53ee4a5a1625535d0d70b18411e4b064a427d6a40b1f408bb8f1"
+      }
+    ],
+    "observations": "Inspected all four final home and detail designs after IS-AUTO production promotion. Original red/black IS-AUTO branding and blue Automarket branding, stock images and EUR amounts remain. IS-AUTO Carwow retains its original dealer-logo vehicle placeholder and disclosed source gaps. The other representative vehicle images load, Bulgarian location copy is intact and the four-design FAB is visible."
+  },
+  {
+    "slugs": [
+      "avangard-auto",
+      "champion-auto-pro"
+    ],
+    "checkedAt": "2026-09-30T15:44:23.681Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "avangard-auto",
+        "commit": "1ed331bdd9e1121a7eeb0b0db0d0d15a2e4392ad",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:37:12.882Z",
+        "reportSha256": "6d45b8139d74fbaec2ad7cde5c4c98d874733cbcd93d2ab1489e33a15180af18",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/avangard-auto/auto-best-home-390.png",
+            "sha256": "e11b1a8f667dcf2dab3164f8cf87048172c5e7a6c1b2af5aa2b992bfdb8fe99e"
+          },
+          {
+            "path": "dealer-qa-final/avangard-auto/auto-best-detail-390.png",
+            "sha256": "b374bb3e4b9232ecb0ab8b44be077348446ce3d0f20a9adad8255eacd839c935"
+          },
+          {
+            "path": "dealer-qa-final/avangard-auto/modern-home-390.png",
+            "sha256": "0e737bf38a2462eadcad2e7f7c458d3879db3e16fdfcfe31358227c3be8f31e0"
+          },
+          {
+            "path": "dealer-qa-final/avangard-auto/modern-detail-390.png",
+            "sha256": "107a0578d4f275c19c8b8b8da3a746b801aa8e5c5b675a2a26f5ad245b347a59"
+          },
+          {
+            "path": "dealer-qa-final/avangard-auto/carwow-home-390.png",
+            "sha256": "9db30d52914b6cda676a5348c5273780f3a2f60a2075fe2044616d501423ba6c"
+          },
+          {
+            "path": "dealer-qa-final/avangard-auto/carwow-detail-390.png",
+            "sha256": "4d4efaa1d8166ee3cd082fcc76e386e4ba32c47e66f1332129014384aba40353"
+          },
+          {
+            "path": "dealer-qa-final/avangard-auto/app-home-390.png",
+            "sha256": "a23c22b71d9adc05b429b12abe3b185278c45724f102b167162677d8178308c9"
+          },
+          {
+            "path": "dealer-qa-final/avangard-auto/app-detail-390.png",
+            "sha256": "feab50cefd857ba3b2ddacdc37ed75f98ddfcf6489a0879f521f315b8015eb7e"
+          }
+        ]
+      },
+      {
+        "slug": "champion-auto-pro",
+        "commit": "f777b607d31f920cd9d5e54e8c6f8b4b8c2dc564",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:40:52.265Z",
+        "reportSha256": "178d88b1439c210547ce01a2e65980583dae8faabffc5f447879b0f2b9ce9603",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/champion-auto-pro/auto-best-home-390.png",
+            "sha256": "41a9e7ff5898db511b41a7b66ceda49cd87e4f9a5e4e5bc0f335cc7996a2a04a"
+          },
+          {
+            "path": "dealer-qa-final/champion-auto-pro/auto-best-detail-390.png",
+            "sha256": "eb2e111cf700fcc56ffbd1ba9e44b258550b8dc29f59686c5de6c60b44f1f35d"
+          },
+          {
+            "path": "dealer-qa-final/champion-auto-pro/modern-home-390.png",
+            "sha256": "3c10ab1a027f4d539ae1e77531a179bae868769f7a07125ada22b2c8f89975f4"
+          },
+          {
+            "path": "dealer-qa-final/champion-auto-pro/modern-detail-390.png",
+            "sha256": "88446649266f85f359b917a818c124cdd9d5ed30aec1453dfac546209695e8ed"
+          },
+          {
+            "path": "dealer-qa-final/champion-auto-pro/carwow-home-390.png",
+            "sha256": "09e22febcd320eae9d55a2bf8fdea786ad8867be83bcc43630ee85ec1e0f6a63"
+          },
+          {
+            "path": "dealer-qa-final/champion-auto-pro/carwow-detail-390.png",
+            "sha256": "621b37d9a88ed1c4c8bf1e42833f5923df25c11ca3a15338da7093435e473b70"
+          },
+          {
+            "path": "dealer-qa-final/champion-auto-pro/app-home-390.png",
+            "sha256": "7c69a54df10910769204ad7e0df8b1c85bbf5e1c4e2093039966246f5d7fbbe7"
+          },
+          {
+            "path": "dealer-qa-final/champion-auto-pro/app-detail-390.png",
+            "sha256": "3e9d2eb7a0f5573e9e31931e1aa795e32bfc03d12bf7ca24d41c10f50b414f5e"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/avangard-auto_champion-auto-pro-home.png",
+        "sha256": "f8eb7e68675a59089170377c6f58aaa7dcb39c7e0faa35bc906efa5363a8fb9a"
+      },
+      {
+        "path": "visual-galleries/avangard-auto_champion-auto-pro-detail.png",
+        "sha256": "f580f4d11628635d33094951633487e35fec4d9f381bfda86e31bc7591b4fd40"
+      }
+    ],
+    "observations": "Inspected all final home and detail views across the four designs. Avangard blue/red vehicle photography and the Champion white script logo and original photographed stock remain. EUR prices, Bulgarian location text and full representative model titles are readable. The original variant stock counts, catalog data and four-design switcher are retained."
+  },
+  {
+    "slugs": [
+      "eliqauto",
+      "day-and-night-auto-group"
+    ],
+    "checkedAt": "2026-09-30T15:20:34.175Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "eliqauto",
+        "commit": "c6494e902515f62583ca82fa335caa1853deb270",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:12:57.717Z",
+        "reportSha256": "80e5921c0f0eba95a512f3cb0e5e4db5e6d06bd7357bac63b86cfd12ff081b86",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/eliqauto/auto-best-home-390.png",
+            "sha256": "b842735a96758a3aa7509e56e269cfeec9ad3b9bdd8e5e9609d4367ffd4c9bb1"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/auto-best-detail-390.png",
+            "sha256": "eadc7cecc45da2c77a6f83d9126a74e9f85dc5dc6afc1742c55425e7bd1ff702"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/auto-best-missing-price-390.png",
+            "sha256": "9f4fa718cd76549c36cd5ab0646ef61c016444cb5bc1082df325578f21fc6712"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/modern-home-390.png",
+            "sha256": "f20a9a0b3979f37e959eccc66910161014678e97ec447486b4d2adccbbec2f9e"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/modern-detail-390.png",
+            "sha256": "7269aeff997e20af7a4fa8a52a4c23124ac4d0399245679c270b219be81b4b57"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/modern-missing-price-390.png",
+            "sha256": "2b88a66154783e10e0257a8c7f4d6d10d9b8fd90892a609bc69bb456b18f5f8f"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/carwow-home-390.png",
+            "sha256": "9121271324048b0a5b844cf9257b4e714b841ef13c7b5380526ee42a9ef5650f"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/carwow-detail-390.png",
+            "sha256": "f4dbb2becfe9029a4efe4fe446262739cf82a5a00c37edbf36115c0144ae1183"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/carwow-missing-price-390.png",
+            "sha256": "f448aa6b62d0b3cd09a23f7c9f7c5ca529e7146d4dce18c1002abcf05deb2b4c"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/app-home-390.png",
+            "sha256": "97a64f9920920ac6fcffc79ee3daa2dc18b8fce090e11e207cad9cd01775fdc8"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/app-detail-390.png",
+            "sha256": "e3cfbac0aa96009eff728f3db5b3c654a85be0eb9afe7faec110d219e95c9fc8"
+          },
+          {
+            "path": "dealer-qa-final/eliqauto/app-missing-price-390.png",
+            "sha256": "0628e87fcc1e9a987e1ce3075308d46a61e391ef3e131ef680d1b4240efc9360"
+          }
+        ]
+      },
+      {
+        "slug": "day-and-night-auto-group",
+        "commit": "3d6225f0a57f3bcc59763b464a4fd448d5f0e3a6",
+        "sourceCommit": "8871d64f7c3cce26786a4864f2ff07087df57667",
+        "reportCheckedAt": "2026-09-30T14:58:01.139Z",
+        "reportSha256": "3d0ac07db7b9d90fa5b9a9349b012e9c1c5ea3dc1e0587b7e6183eda7cca7a2d",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/day-and-night-auto-group/auto-best-home-390.png",
+            "sha256": "74c3172b04a95db2a6d8a3a32dcf39b26f4cfb76a777b26f2d159657b981364f"
+          },
+          {
+            "path": "dealer-qa-final/day-and-night-auto-group/auto-best-detail-390.png",
+            "sha256": "da332dd3e0c15e499b701dbc974ace72db9cd586795bfd6ff9fa6005801e81e0"
+          },
+          {
+            "path": "dealer-qa-final/day-and-night-auto-group/modern-home-390.png",
+            "sha256": "57e2971e1e4cfab0141ed208f62fe50f8c85c560e32ed53ae470585ddb519c64"
+          },
+          {
+            "path": "dealer-qa-final/day-and-night-auto-group/modern-detail-390.png",
+            "sha256": "a4f7f8ce5683c408bce7eda19a6fbe8a08f129eb36c6899b2830e67c74703032"
+          },
+          {
+            "path": "dealer-qa-final/day-and-night-auto-group/carwow-home-390.png",
+            "sha256": "32c67fedec8910c5f4a4ef6f7e7ffec9024dd01e80ed3369c48d5a1b57bf8e22"
+          },
+          {
+            "path": "dealer-qa-final/day-and-night-auto-group/carwow-detail-390.png",
+            "sha256": "fd9179d2ca9857869260229122755818300aa0bf81ab595223993e32e8b519d4"
+          },
+          {
+            "path": "dealer-qa-final/day-and-night-auto-group/app-home-390.png",
+            "sha256": "b82e4a5883779205efa047651eb65144c48e25476105cfcc8634b0a3e48c9d62"
+          },
+          {
+            "path": "dealer-qa-final/day-and-night-auto-group/app-detail-390.png",
+            "sha256": "bf0492830f83f21ae19fd3282d65b66aaf987500f3147b136a8354fda0082843"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/eliqauto_day-and-night-auto-group-home.png",
+        "sha256": "aaafc20e84e299b660a8c8ad55b01afe8916a6a36c941dcefe8326debc3702dc"
+      },
+      {
+        "path": "visual-galleries/eliqauto_day-and-night-auto-group-detail.png",
+        "sha256": "924cfb6c31433f4416d97a18c15b34734cf62c074a20f95e28f574ff852d95e9"
+      },
+      {
+        "path": "visual-galleries/eliqauto-missing-price.png",
+        "sha256": "505ec1946f6460518e21c377718ea6e9248ebc9df1d79083812f98e9da195782"
+      }
+    ],
+    "observations": "Reviewed every offered mobile design and the four additional Eliq unquoted-listing views. Original logos and stock photos are retained. Day & Night now displays its unchanged amounts in EUR across all designs. Eliq shows Цена при запитване with a readable vehicle title and price row, while positive prices remain unchanged."
+  },
+  {
+    "slugs": [
+      "elit-auto-import"
+    ],
+    "checkedAt": "2026-09-30T15:51:48.371Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "elit-auto-import",
+        "commit": "cd86bfa89154b4ce49ac8b365c9322079e72efc5",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:45:27.568Z",
+        "reportSha256": "60e72147c0d94b7481b70a8476f16083856b1fd7ef8869d677b543ae45c00c94",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/elit-auto-import/auto-best-home-390.png",
+            "sha256": "35b262f2c7530b03088cba2605ea76cccd3b635d29759b6038a7a3c5ea661937"
+          },
+          {
+            "path": "dealer-qa-final/elit-auto-import/auto-best-detail-390.png",
+            "sha256": "467c278630bef18e3b793913c0876369b8f7d048be5044b14e5fd92edaa80bca"
+          },
+          {
+            "path": "dealer-qa-final/elit-auto-import/modern-home-390.png",
+            "sha256": "a364564239eb5d7f02bf24c66ac673966bc8df78effb5185fcca993c2f6dc465"
+          },
+          {
+            "path": "dealer-qa-final/elit-auto-import/modern-detail-390.png",
+            "sha256": "cc5078f044f5e8e8e295177b7e89acd7888b0f54cab2b91acbff376275d7799c"
+          },
+          {
+            "path": "dealer-qa-final/elit-auto-import/carwow-home-390.png",
+            "sha256": "7bd0cad705f1de7d794481e755317f4236bb9ac78ba4b2a1c6ea4cb0fb7f07b0"
+          },
+          {
+            "path": "dealer-qa-final/elit-auto-import/carwow-detail-390.png",
+            "sha256": "fb4a16b23616b7b42cad33f1e56281255aa438babd9143391d98e0e3094f809c"
+          },
+          {
+            "path": "dealer-qa-final/elit-auto-import/app-home-390.png",
+            "sha256": "4b178a75a844cd163cbeb5c3fb834884f549ed950b853db39547b05e9879e2b1"
+          },
+          {
+            "path": "dealer-qa-final/elit-auto-import/app-detail-390.png",
+            "sha256": "226b65088225dfeff2c47d3f4b4a2a1483e78ba831264807ded17985e64f4051"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/elit-auto-import-home.png",
+        "sha256": "733bfa1b3b99864aed31c5657db988290f815a2b5f71a28d83280bcca45d7cd0"
+      },
+      {
+        "path": "visual-galleries/elit-auto-import-detail.png",
+        "sha256": "a89684c1a181d89ecfe3c732b8e232651072e03945559d83cf80158c0bfcc7fd"
+      }
+    ],
+    "observations": "Inspected all four final mobile home and detail designs. The original red ELIT AUTO logo, vehicle photographs, Bulgarian dealer copy and EUR listing values remain. Representative Mercedes and Volvo details are readable; original missing specifications are still disclosed. The four offered designs remain Auto Best, Modern, Carwow and App, matching this dealer manifest."
+  },
+  {
+    "slugs": [
+      "excellent-cars"
+    ],
+    "checkedAt": "2026-09-30T15:55:17.302Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "excellent-cars",
+        "commit": "cdc2dd375e20bac2b94c9d4b724c78b6927416c1",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:50:03.506Z",
+        "reportSha256": "735599cbac5811437a1bbdf221b168ff9ed3b20b9cdfb6c51f5427810b0f794a",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/excellent-cars/auto-best-home-390.png",
+            "sha256": "4aee82cef579e59abb98210e1cd512268e3fed12002f84b5c540b2262e4ca857"
+          },
+          {
+            "path": "dealer-qa-final/excellent-cars/auto-best-detail-390.png",
+            "sha256": "d591e8ceafd9abdf647fee125f29b1f00dac8b4e2e07342c660fb2ff8dae39e6"
+          },
+          {
+            "path": "dealer-qa-final/excellent-cars/modern-home-390.png",
+            "sha256": "7f252bf43e6e62cd260288bee80b21129c75c7a3de0a7aac8fe328f453f099f3"
+          },
+          {
+            "path": "dealer-qa-final/excellent-cars/modern-detail-390.png",
+            "sha256": "1e44fd2f22afc073ecd09e82c21802d22bb22fc0ad1a1db5b82f554c8bb4b9d6"
+          },
+          {
+            "path": "dealer-qa-final/excellent-cars/carwow-home-390.png",
+            "sha256": "6bd4209ac62ce89e922bb8552bd5b573b124cc0e59d73f723ab6e3cc180f29c8"
+          },
+          {
+            "path": "dealer-qa-final/excellent-cars/carwow-detail-390.png",
+            "sha256": "e2e94982f2883a1184e6884193a7d39c4a617d3d85f17b4ab1faedfa021b1705"
+          },
+          {
+            "path": "dealer-qa-final/excellent-cars/app-home-390.png",
+            "sha256": "0543ac34b8c12bf49b43a4ccb8b1fc48420ff3ba664eae1497bd6f45a9373196"
+          },
+          {
+            "path": "dealer-qa-final/excellent-cars/app-detail-390.png",
+            "sha256": "ab274e87faf4bd0eaacf89cf5c64d9abe3e54afa6c15d271dd6946166a3b07b0"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/excellent-cars-home.png",
+        "sha256": "f51622192d68c16918ddb5acce43aee5ecaf07a7381a20157d0a3a013ad15500"
+      },
+      {
+        "path": "visual-galleries/excellent-cars-detail.png",
+        "sha256": "b0315d30008b28ea37658101684ee14e5e80a7b0a466839259bdfb32e07626b2"
+      }
+    ],
+    "observations": "Inspected all four final home and representative detail designs. The existing Excellent Cars logo, dealership-watermarked photographs, EUR listing amounts and Bulgarian business copy remain. Mercedes and Peugeot detail titles and Carwow price rows are readable. Original differing inventory counts and the four-design switcher are retained."
+  },
+  {
+    "slugs": [
+      "ivo-auto"
+    ],
+    "checkedAt": "2026-09-30T15:58:21.543Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "ivo-auto",
+        "commit": "e6418c881c629c967b58cf51dd1c5add9ace3894",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:54:38.395Z",
+        "reportSha256": "c4b6c561064f6783984c60a2c1a6a506bf5066802299730989a4ff4ae216bc13",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/ivo-auto/auto-best-home-390.png",
+            "sha256": "071e88393abc5d3e90e3ad924123356d70efdf78cf12660ebc2a827f7720ce1f"
+          },
+          {
+            "path": "dealer-qa-final/ivo-auto/auto-best-detail-390.png",
+            "sha256": "91a410e934c0fcb3b8dff4c7f2c12926b5468ca9eb4f905932c0033c14304223"
+          },
+          {
+            "path": "dealer-qa-final/ivo-auto/modern-home-390.png",
+            "sha256": "32cc781ff0e39f29b43c698f5a565d1b970792f30e4589a17542740ba0a45cad"
+          },
+          {
+            "path": "dealer-qa-final/ivo-auto/modern-detail-390.png",
+            "sha256": "2f6ae9300c9b0720466d5531eb4be4db31354cc69deef2ba59a837264fd80f3e"
+          },
+          {
+            "path": "dealer-qa-final/ivo-auto/carwow-home-390.png",
+            "sha256": "c3840eca4995dfd85cfd87e4610b973bcaca772560ba7867dd1011553f4b114a"
+          },
+          {
+            "path": "dealer-qa-final/ivo-auto/carwow-detail-390.png",
+            "sha256": "980c2cc0e34e080ce02a2b0630995950170040c4e90be2d00eabdc0a667c85f1"
+          },
+          {
+            "path": "dealer-qa-final/ivo-auto/app-home-390.png",
+            "sha256": "875c149b541e763ee5b03244589bdd598ca886c616dd8c106b6e21d18b7e1c01"
+          },
+          {
+            "path": "dealer-qa-final/ivo-auto/app-detail-390.png",
+            "sha256": "6b6856b704a2e443c2f39a81cba6570bf66bfa7aa3dd0c97dc5b73ea58120b65"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/ivo-auto-home.png",
+        "sha256": "fdcc3c538575599835f7196ba414119a30932f46eeeba1b956054cd25e4eb96c"
+      },
+      {
+        "path": "visual-galleries/ivo-auto-detail.png",
+        "sha256": "dcfc25766087dea5d08a8d84f97fdd6026f8ba9f2adadd2c4d15be3c1066669c"
+      }
+    ],
+    "observations": "Inspected all four final mobile home and vehicle detail designs. Original IVO AUTO red/silver logo, gold switcher accent, dealership photographs and EUR price values remain. Representative Rolls-Royce and Audi details are readable, with settled Carwow pricing and Bulgarian Varna viewing copy. Original stock counts and absent source fields remain explicit."
+  },
+  {
+    "slugs": [
+      "kg-team-auto"
+    ],
+    "checkedAt": "2026-09-30T16:01:09.358Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "kg-team-auto",
+        "commit": "172799d55aec5895ed61c4d3e49ec12a4a8f21d0",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T15:59:20.205Z",
+        "reportSha256": "65cfc9309957c1eadbdbc7c3b154d9aab19c871c282c076406fb9f4efda36adb",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/kg-team-auto/auto-best-home-390.png",
+            "sha256": "19a14cb68e45a0cd20b7ab22f400243f4d51a8cab6430058f700aba41d8411c5"
+          },
+          {
+            "path": "dealer-qa-final/kg-team-auto/auto-best-detail-390.png",
+            "sha256": "5e6fd29d6ae8fdbbec04190f72315b813a05537baadb61b3a1a1521157c07907"
+          },
+          {
+            "path": "dealer-qa-final/kg-team-auto/modern-home-390.png",
+            "sha256": "9ad6db611b57eef94180de58a00e2f27d1eb5e7343d56f6548c397388293b530"
+          },
+          {
+            "path": "dealer-qa-final/kg-team-auto/modern-detail-390.png",
+            "sha256": "2b570ebfb685d805844228889f9c26c3065f1bcd75b5637b881bc7f4a294fd13"
+          },
+          {
+            "path": "dealer-qa-final/kg-team-auto/carwow-home-390.png",
+            "sha256": "167f49669a42adfc19f3f498b879e3c1acb1c4f97aa38850ca81e01ab0506138"
+          },
+          {
+            "path": "dealer-qa-final/kg-team-auto/carwow-detail-390.png",
+            "sha256": "7bf995aaaa6a33f130a885be1433a6782e9ff45232e941755b63db0b720b5742"
+          },
+          {
+            "path": "dealer-qa-final/kg-team-auto/app-home-390.png",
+            "sha256": "1f22738c44fdf870e4a6aefc977ab713bc61115fc14e7e4ca5ebe55eae15be89"
+          },
+          {
+            "path": "dealer-qa-final/kg-team-auto/app-detail-390.png",
+            "sha256": "f1c49f30266aeece3d394e0a1561cef20c6d85399f201d4bf532c683465d00e4"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/kg-team-auto-home.png",
+        "sha256": "35718a298d726dbfdbed46b5fdfc8a949f4b96475adbeb56c32bfb59eaaac7cc"
+      },
+      {
+        "path": "visual-galleries/kg-team-auto-detail.png",
+        "sha256": "349f58e43ec9b5984d0344ba155c26a2e02d7e7a03e2a4c09847e8ee163f8bb3"
+      }
+    ],
+    "observations": "Inspected all four final mobile home and detail designs. Original KG Team red/silver logo, dealership photographs, retained Toyota and Mitsubishi listing amounts and Plovdiv viewing location remain. Long Toyota titles wrap legibly; Carwow shows settled full EUR values. Source gaps and original differing variant stock counts remain, with the four-design switcher visible."
+  },
+  {
+    "slugs": [
+      "legend-auto"
+    ],
+    "checkedAt": "2026-09-30T16:05:55.167Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "legend-auto",
+        "commit": "7f056f0130897ba2e4aeebfcc09719791e4a5ee6",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T16:03:03.194Z",
+        "reportSha256": "293829076564ee86e10376ad8442fdd4a8792d24c1d2326e642aefc8cc5043ec",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/legend-auto/auto-best-home-390.png",
+            "sha256": "78d72eca99bd81240cb30f28111f6bfb968fb787c3c12bff8ba58a121a9f48f6"
+          },
+          {
+            "path": "dealer-qa-final/legend-auto/auto-best-detail-390.png",
+            "sha256": "62cb85b93cc558140252663788629a109a8959bae2ce394b9e74807da1d55853"
+          },
+          {
+            "path": "dealer-qa-final/legend-auto/modern-home-390.png",
+            "sha256": "c8e20ee486eece391c790f9a6faa7166274d275173ea565cf7c211d9d7e6120b"
+          },
+          {
+            "path": "dealer-qa-final/legend-auto/modern-detail-390.png",
+            "sha256": "623c4c4c5d0c9cc5fd910f798077998ad89936f7fd31f43b20b4300c1cd83068"
+          },
+          {
+            "path": "dealer-qa-final/legend-auto/carwow-home-390.png",
+            "sha256": "5ed4cfa29e7125ac3a41292a13fee6913f5b64792ee477f602faa637fb86f82f"
+          },
+          {
+            "path": "dealer-qa-final/legend-auto/carwow-detail-390.png",
+            "sha256": "4eac3f1bb58d5828f5774a8b8fdd7355a4edfd3b23a284c0ca8e2ecd19dd6270"
+          },
+          {
+            "path": "dealer-qa-final/legend-auto/app-home-390.png",
+            "sha256": "b9473624098a30066a1d6b38855b879755c0726101bfbba263341345f6c7508e"
+          },
+          {
+            "path": "dealer-qa-final/legend-auto/app-detail-390.png",
+            "sha256": "bdbd19e65fe72b8056fdbde46311c5b86ed93142aaea4b1e649350eae8240991"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/legend-auto-home.png",
+        "sha256": "6948333f7a777da962b262f0b9bc9c5285ebd4a74c883c6918f187c5b82ce5f8"
+      },
+      {
+        "path": "visual-galleries/legend-auto-detail.png",
+        "sha256": "ad4b620330b3521d5c9eaaef5bb31ac87b163edd4558365225c517f23abca8ba"
+      }
+    ],
+    "observations": "Inspected all four final mobile home and vehicle-detail designs. Original LEGEND AUTO logo, red switcher accent, car photographs and EUR stock amounts remain. Long original Audi titles wrap, and the settled Carwow Opel price is fully readable. Bulgarian Varna viewing copy, disclosed source gaps and original inventory counts remain."
+  },
+  {
+    "slugs": [
+      "navara-car"
+    ],
+    "checkedAt": "2026-09-30T16:09:36.992Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "navara-car",
+        "commit": "e28713a76f90ad163538c79f483911caa099e6f0",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T16:06:41.032Z",
+        "reportSha256": "4bba0fa188be4d872761991d0bcaa7fa8c0e64f19cedcdb88a569789911fb819",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/navara-car/auto-best-home-390.png",
+            "sha256": "630930c5e0fdc1822629b6c0a3d6925dad0595c5e3f869a4a1d07a43a50e6ef2"
+          },
+          {
+            "path": "dealer-qa-final/navara-car/auto-best-detail-390.png",
+            "sha256": "ba5c6961e03eb60c036ca1ab06123f0ed318ecac9f2df792650c0f7a519e4427"
+          },
+          {
+            "path": "dealer-qa-final/navara-car/modern-home-390.png",
+            "sha256": "74e4e367656cd753193efedddc702939454e2bc66d9aadaaa9966110e19f4253"
+          },
+          {
+            "path": "dealer-qa-final/navara-car/modern-detail-390.png",
+            "sha256": "9c857df53692847d08d81470860b53aa211048bb024417608a55f3d6ec31ee1e"
+          },
+          {
+            "path": "dealer-qa-final/navara-car/carwow-home-390.png",
+            "sha256": "dfd421c9f8ee470f907644ad1f7a5f71192bec2be6789a76ac9b32b158d46834"
+          },
+          {
+            "path": "dealer-qa-final/navara-car/carwow-detail-390.png",
+            "sha256": "5eb5600d12b0760f4b3e49229f28c4969319bb475e470a6eb84d1d25ebc191fe"
+          },
+          {
+            "path": "dealer-qa-final/navara-car/app-home-390.png",
+            "sha256": "d06596d0dd0824c04d89f056948721cd7c83a4a8984da5300e99a76dbd40e697"
+          },
+          {
+            "path": "dealer-qa-final/navara-car/app-detail-390.png",
+            "sha256": "b0d4871316845fff491f353f12a36b79ea9d1109a9e07b2cbacb406e41c8a13e"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/navara-car-home.png",
+        "sha256": "2550c6ff885b53033c4e8410248fcac874e50969271d442f5a74d83fc86e197d"
+      },
+      {
+        "path": "visual-galleries/navara-car-detail.png",
+        "sha256": "2e06a88b99066056964a8a9b739b3e0041c4ecfef75ebe670f255e2e4a12bab8"
+      }
+    ],
+    "observations": "Inspected all four final mobile home and vehicle-detail designs. Original NAVARA logo, red/silver branding, stock photographs and EUR values remain. Nissan and Smart details are readable, Carwow pricing is settled, and Bulgarian Varna viewing copy and original source gaps are retained. The original variant inventory counts and four-design switcher remain."
+  },
+  {
+    "slugs": [
+      "outletcars-varna",
+      "promosale-varna"
+    ],
+    "checkedAt": "2026-09-30T16:48:39.800Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "outletcars-varna",
+        "commit": "9165fd22a217675b7131ad4e2c5043ae9e61897f",
+        "sourceCommit": "0d543209bc29c04724ce4a95254eace9c6ceb5e4",
+        "reportCheckedAt": "2026-09-30T16:41:15.362Z",
+        "reportSha256": "87a7fdec58b1f7712e15977fbdc07ca6d13fc88ad47b84699e50a1ea513e4f36",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/outletcars-varna/auto-best-home-390.png",
+            "sha256": "8230dc55c6a0a3c731ad8f338b3763ffc84f12f558d47bb27cad9d1d337fe024"
+          },
+          {
+            "path": "dealer-qa-final/outletcars-varna/auto-best-detail-390.png",
+            "sha256": "8a44fcc20a4e2e8569eab4c283d7cdfc30c3b23cae072805943b73b984afcbb9"
+          },
+          {
+            "path": "dealer-qa-final/outletcars-varna/import-home-390.png",
+            "sha256": "01fb73bcf8034e136cc5c019ecc3f28cc8dee08fad6172d5d1cdde71ae78610a"
+          },
+          {
+            "path": "dealer-qa-final/outletcars-varna/import-detail-390.png",
+            "sha256": "f04d728cc4669a37abfb7af3819ccad555fc11388e0257bf1f181b5e2c081237"
+          },
+          {
+            "path": "dealer-qa-final/outletcars-varna/carwow-home-390.png",
+            "sha256": "0743f963054b5d548360fd1466d0dbf908f402f68afd6141b28be68ea099db39"
+          },
+          {
+            "path": "dealer-qa-final/outletcars-varna/carwow-detail-390.png",
+            "sha256": "a5c6b4753965f15c5c3a9d221ede087756165544f0ef0fa798209eae38fac3f6"
+          },
+          {
+            "path": "dealer-qa-final/outletcars-varna/app-home-390.png",
+            "sha256": "4265ccf48258c641a0134408e88fdf6069f35177f21afbe67610d785469093a6"
+          },
+          {
+            "path": "dealer-qa-final/outletcars-varna/app-detail-390.png",
+            "sha256": "de70b9a2f97299c8a1d481bb1c5f86e8cc5d6743a5fb7a05afba379370f8f148"
+          }
+        ]
+      },
+      {
+        "slug": "promosale-varna",
+        "commit": "55315bc7cc5e9d90fc2b148e1fb880cc9f872679",
+        "sourceCommit": "0d543209bc29c04724ce4a95254eace9c6ceb5e4",
+        "reportCheckedAt": "2026-09-30T16:41:22.991Z",
+        "reportSha256": "f2cf71ddc1e96ae37b11176c9ef4d26983980bf815052b3d2523c794e38eeb4f",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/promosale-varna/auto-best-home-390.png",
+            "sha256": "74ffa962939a5d9ce920c2e869007a864c933072a300c459fbd64827462af0e0"
+          },
+          {
+            "path": "dealer-qa-final/promosale-varna/auto-best-detail-390.png",
+            "sha256": "560ae68d0a6985eafefee9fe8981782576cd177d9308bc33fc06c005567c1918"
+          },
+          {
+            "path": "dealer-qa-final/promosale-varna/import-home-390.png",
+            "sha256": "ceefd75c98f7604dcb7c47330bfc900fa8ebaf5898fd36be0a560e2b5e5fdc4e"
+          },
+          {
+            "path": "dealer-qa-final/promosale-varna/import-detail-390.png",
+            "sha256": "d66c407db38eaab97abd505b30ba75871b71dfa5333d0138a765a6063d938530"
+          },
+          {
+            "path": "dealer-qa-final/promosale-varna/carwow-home-390.png",
+            "sha256": "3b41a2d39a389e0019c6f00ef5729d526cef71175d5074a8c28a9bce11d2f9e4"
+          },
+          {
+            "path": "dealer-qa-final/promosale-varna/carwow-detail-390.png",
+            "sha256": "95104edc0dd01f82c78d780cff1a2681059c8b17df0abf3567247150332110a3"
+          },
+          {
+            "path": "dealer-qa-final/promosale-varna/app-home-390.png",
+            "sha256": "46408beb22a5d3e704fe512032418ba617a5e6299e33325f25095c7e5989b967"
+          },
+          {
+            "path": "dealer-qa-final/promosale-varna/app-detail-390.png",
+            "sha256": "c66fdfc20dbb8fc21910da475de55c2de489290035c5a8867c4983a1bf347418"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/outletcars-varna_promosale-varna-home.png",
+        "sha256": "025ceb8fd956242858e2ba83e925e35eabcb2ebc7c4025323ea993a14caa1d67"
+      },
+      {
+        "path": "visual-galleries/outletcars-varna_promosale-varna-detail.png",
+        "sha256": "62d88598c9a59874bfa635e04c71ce4d455af9643c7c7cbdfd0203a977a30247"
+      }
+    ],
+    "observations": "Reviewed the current production home and vehicle-detail screenshots for all four designs at 390px. Import now displays each original silver/red dealer logo clearly on its charcoal header. Dealer photos, original variant stock, EUR prices, mobile actions and the four-design FAB are retained; long vehicle titles wrap on detail pages. Carwow retains its original distinct sample inventory."
+  },
+  {
+    "slugs": [
+      "perfect-auto-varna",
+      "priselci"
+    ],
+    "checkedAt": "2026-09-30T16:30:33.790Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "perfect-auto-varna",
+        "commit": "363053482731ca8d793b8b9745c55926e233fcea",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T16:14:46.634Z",
+        "reportSha256": "932e6f8ad154df7d654705813378be0b3ffb7bc64246cc3cc9ce47fc3714e93a",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/perfect-auto-varna/auto-best-home-390.png",
+            "sha256": "d27d08ae716f34308f72ec861338b8852f4b967366df4b57d3f6f10c1f223aac"
+          },
+          {
+            "path": "dealer-qa-final/perfect-auto-varna/auto-best-detail-390.png",
+            "sha256": "ae148e931cc07eee8d5cfe90f6c515c7a2ec3d3fdf500a7f3deb9c1c519fc72d"
+          },
+          {
+            "path": "dealer-qa-final/perfect-auto-varna/modern-home-390.png",
+            "sha256": "609ba8ba1f38c71bc41be4c555c3a8f88a94ac9b770c40ec225f782106d97416"
+          },
+          {
+            "path": "dealer-qa-final/perfect-auto-varna/modern-detail-390.png",
+            "sha256": "3c59cd10ae997fcbaec4797fa6906afbe8b72fe4a36de265a674cf677ad9187e"
+          },
+          {
+            "path": "dealer-qa-final/perfect-auto-varna/carwow-home-390.png",
+            "sha256": "689c6bd5b4404649562e5afa6a1c7a91da8ac278d23332a7517a5872675a4543"
+          },
+          {
+            "path": "dealer-qa-final/perfect-auto-varna/carwow-detail-390.png",
+            "sha256": "3d8da66fa0f8aa76907f2d4681da662ffa2922234169e2272bba99e379c42d4f"
+          },
+          {
+            "path": "dealer-qa-final/perfect-auto-varna/app-home-390.png",
+            "sha256": "4f326bce4af770270b92d31ddc4ceea098a8dd6056fe9a1ba75d48418e4a182a"
+          },
+          {
+            "path": "dealer-qa-final/perfect-auto-varna/app-detail-390.png",
+            "sha256": "4daeeb9969f16478f765b9925a382dd59a3623a0fb468618d1d22d35b3fea649"
+          }
+        ]
+      },
+      {
+        "slug": "priselci",
+        "commit": "f3dc6d7131d815113574229f5a2d627cc7ccb5fd",
+        "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+        "reportCheckedAt": "2026-09-30T16:18:31.600Z",
+        "reportSha256": "c5a86529fdc1d58def4e626ac335172095d711288315dc9ab4306454624279a8",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/priselci/auto-best-home-390.png",
+            "sha256": "8caee0f3c575beec5c694a5adfd9813a77477d9e9b72a2e458eee7572f3168cb"
+          },
+          {
+            "path": "dealer-qa-final/priselci/auto-best-detail-390.png",
+            "sha256": "d8b3768c79a793cfacc0ef510a4fe1baef1992e93fba274dd254229656bc850d"
+          },
+          {
+            "path": "dealer-qa-final/priselci/modern-home-390.png",
+            "sha256": "01b39c1c618b6770b6d13b57d934c0a95d2e38284cf12de35a15f76e7541d514"
+          },
+          {
+            "path": "dealer-qa-final/priselci/modern-detail-390.png",
+            "sha256": "226f3312e932f8e82cc83263259d279ce0c67ce1e501e973e343ac0a1202dd41"
+          },
+          {
+            "path": "dealer-qa-final/priselci/carwow-home-390.png",
+            "sha256": "c7504c1051b271ee7c709747ebc477e3cf0cf23517dce7e224d31b61dd82c7ea"
+          },
+          {
+            "path": "dealer-qa-final/priselci/carwow-detail-390.png",
+            "sha256": "213fc379f2c8e2bcafc4f570d2bed20605af19a03f3b54022fa78c2de4f8e931"
+          },
+          {
+            "path": "dealer-qa-final/priselci/app-home-390.png",
+            "sha256": "28b891f4fef76a934d0136aac0ed1a7d8dc6f3b4b345b76baa3926d78d6e5728"
+          },
+          {
+            "path": "dealer-qa-final/priselci/app-detail-390.png",
+            "sha256": "fdbe4bcb47aa942e0e1a4e14fb0e3aa93ae066320d4756f0cbaa549b32dcba00"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/perfect-auto-varna_priselci-home.png",
+        "sha256": "64aecc5a72bd6b99b83dc993f2ebc7ebd957aa96ee1a3c631ce5ee486e42d805"
+      },
+      {
+        "path": "visual-galleries/perfect-auto-varna_priselci-detail.png",
+        "sha256": "f70a41201927b54ed9c4a606bec13366b24cf46532a24614bac565ee00b917a8"
+      }
+    ],
+    "observations": "Inspected all four final mobile home and vehicle-detail designs for both dealers. Original Perfect Auto red/silver identity and Priselci green wordmark, dealership photographs, EUR amounts and Bulgarian viewing copy remain. Representative Mercedes, VW and Dacia detail rows are readable, with settled Carwow pricing. Original variant counts and source disclosures are retained."
+  },
+  {
+    "slugs": [
+      "texas-drive-auto",
+      "the-dealers-point"
+    ],
+    "checkedAt": "2026-09-30T14:53:03.241Z",
+    "reviewer": "Codex visual inspection",
+    "width": 390,
+    "views": [
+      "home",
+      "vehicle-detail"
+    ],
+    "dealers": [
+      {
+        "slug": "texas-drive-auto",
+        "commit": "fb6c1441b56a5c8da147bb2c7e4f389997cdf0ed",
+        "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+        "reportCheckedAt": "2026-09-30T14:35:42.189Z",
+        "reportSha256": "147099cb06c3c974942b50c4874a11926adf2e7a07423136106fe660691b9d77",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/texas-drive-auto/auto-best-home-390.png",
+            "sha256": "cc45af9d0a1ae859d04e7991bd240cf872a7e280ca5a8173c1cc0bcd65416548"
+          },
+          {
+            "path": "dealer-qa-final/texas-drive-auto/auto-best-detail-390.png",
+            "sha256": "2eeaf1983438e5d3ef976055d017ac8d01f509d014a469c9ed4374ff55c6ccb9"
+          },
+          {
+            "path": "dealer-qa-final/texas-drive-auto/modern-home-390.png",
+            "sha256": "deb356b5dad12400617c15e3b5a74b9d0eb4f6e5b04450dffbef257e3dc68c24"
+          },
+          {
+            "path": "dealer-qa-final/texas-drive-auto/modern-detail-390.png",
+            "sha256": "e0ea852a8b833cdf75856d148df3c6474ec137fe5f5b0f41529029492983671e"
+          },
+          {
+            "path": "dealer-qa-final/texas-drive-auto/carwow-home-390.png",
+            "sha256": "4115d7de7899d4a122b3862c09d3a64f97bea88d40f95976bcd69f3f4bc67d9e"
+          },
+          {
+            "path": "dealer-qa-final/texas-drive-auto/carwow-detail-390.png",
+            "sha256": "95a1ab5ca6b0a3e47edd7edf04688c4345daa26699095b462731f15faffb8665"
+          },
+          {
+            "path": "dealer-qa-final/texas-drive-auto/app-home-390.png",
+            "sha256": "24abb96056954c6a3459933a20c856698722eb63a15140271a8d9aad25d67c2e"
+          },
+          {
+            "path": "dealer-qa-final/texas-drive-auto/app-detail-390.png",
+            "sha256": "0a8e6108ee368e30ee856560907df58d3f4fb58bc2bb6800a892db505bb9872e"
+          }
+        ]
+      },
+      {
+        "slug": "the-dealers-point",
+        "commit": "2fa069742136946c991a06f99a6748b3fb845558",
+        "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+        "reportCheckedAt": "2026-09-30T14:42:22.892Z",
+        "reportSha256": "dd5f0acce5bab43aef26fdd503d345ecc3f8b8a9b1a536ada2509b49ec02f918",
+        "screenshots": [
+          {
+            "path": "dealer-qa-final/the-dealers-point/auto-best-home-390.png",
+            "sha256": "11517cfe8c565756fde37fcfdd5585e7187a3fb8bbccc1eaa965b2fc79094c1f"
+          },
+          {
+            "path": "dealer-qa-final/the-dealers-point/auto-best-detail-390.png",
+            "sha256": "bf91185e009e924068b131ffceb91657c6b6e0ce9cc714c5b5b38eb2477de44f"
+          },
+          {
+            "path": "dealer-qa-final/the-dealers-point/modern-home-390.png",
+            "sha256": "d9df272de00a25c6811d156f9562d90990ef929a1e88c42b86854942b0e09f60"
+          },
+          {
+            "path": "dealer-qa-final/the-dealers-point/modern-detail-390.png",
+            "sha256": "96657317fcbbc4c3ae9787891000c490b31b00aeb75b4f88384d69de7dd74cfb"
+          },
+          {
+            "path": "dealer-qa-final/the-dealers-point/carwow-home-390.png",
+            "sha256": "0edbfde495a9277f52d75076da8e91db2fdbbbd325c9410dcba9f81f5256b0cb"
+          },
+          {
+            "path": "dealer-qa-final/the-dealers-point/carwow-detail-390.png",
+            "sha256": "a5e8f632163c27a95b8f89a8c369e6a8140aa41df2e44f9734e8cbe34e2715fb"
+          },
+          {
+            "path": "dealer-qa-final/the-dealers-point/app-home-390.png",
+            "sha256": "cdd60b903476fbed081c771a23f07a639d9085c000014c81959cb452857cc5d3"
+          },
+          {
+            "path": "dealer-qa-final/the-dealers-point/app-detail-390.png",
+            "sha256": "f7d15f5cc212ea20161e7596e99e38a9550db25ed89c4d260f080c618fa8be31"
+          }
+        ]
+      }
+    ],
+    "proofs": [
+      {
+        "path": "visual-galleries/texas-drive-auto_the-dealers-point-home.png",
+        "sha256": "e1611d1aa924344e3d29e122a21fed044fdede8cfb4780d5e3fbea91af0f359f"
+      },
+      {
+        "path": "visual-galleries/texas-drive-auto_the-dealers-point-detail.png",
+        "sha256": "72c084b5a42dff32eca1dad58c94902db354f2c674d5a9c09d5171af0620c317"
+      }
+    ],
+    "observations": "Reviewed all four mobile home and vehicle detail views. USD and AED prices, recognizable dealer logos, original stock photos and explicitly labeled concept placeholders are retained. English viewing copy is now localized. Source-summary gaps and unavailable photo placeholders remain as in the original inventory; no stock or image replacement was made."
+  }
+]

@@ -1,0 +1,164 @@
+{
+  "slug": "eliqauto",
+  "checkedAt": "2026-09-30T14:04:51.271Z",
+  "changes": [
+    {
+      "path": "carwow/src/lib/utils/dealer-price-label.ts",
+      "before": null,
+      "after": "418d18d0de916f63009c2723331185e990e93e624fbb6cba3f8c00b88fe02c66"
+    },
+    {
+      "path": "carwow/src/lib/locale/context.ts",
+      "before": "5e825680a96ff03843a651a4db5f8812b841552827b7572740d1571e08f61217",
+      "after": "1d6d3fc738558bd55af41632dcd69b9e7b571c5d6f4db0c9f162c5132f2fed74"
+    },
+    {
+      "path": "carwow/src/lib/components/about/DesktopDealerProfilePage.svelte",
+      "before": "2b9a6844e50a2606bfdfd2156f84415fa6e885e216f7829efdee903371062db0",
+      "after": "16f3a5e45af0aabee372d285842bbefc615ffb0ef1bf8dfa36b7a61436adfc5b"
+    },
+    {
+      "path": "carwow/src/lib/components/compare/CompareContent.svelte",
+      "before": "eacc2091613a70462509f32ad9d4d65e12aaca2c1fa4d1c041c60202a6b5a667",
+      "after": "b7e7dbc7d0824c70cf124d3146ee410b37f5e8fccb23adaa982d7b5d835563ad"
+    },
+    {
+      "path": "carwow/src/lib/components/compare/MobileComparePage.svelte",
+      "before": "c2c06a1990c80e5f39b7d71a5017f2d17d81784a917199be30493eddf0768ef0",
+      "after": "a8bb473a2c350124c8312f3de6fbc3ebc5107553f29d30c0797ee709d68769a7"
+    },
+    {
+      "path": "carwow/src/lib/components/compare/MobileCompareSelector.svelte",
+      "before": "dad146797e1f19bf963d85d554380977cdf348655cb094e95985b2ddeda7e187",
+      "after": "faf754f55b1f2622aaf357c7a95340ebb6127a88d371251e261e27d5149fe765"
+    },
+    {
+      "path": "carwow/src/lib/components/contact/MobileImportExamples.svelte",
+      "before": "1bdb0c29fbd6131dc3656563be24da8fa79f0b40d10561efe4ee13152852331b",
+      "after": "1c894c9f1d8cbddf0f3630d8b36d240a4cf0dd7785cce780a84bf7858e912250"
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailPaymentPanel.svelte",
+      "before": "1424b38a5de895b9f710dc205ca982d6395c3e4f5e86ca0959e2830abb758e46",
+      "after": "f1e62bbde181a0574db1601019584d330bf044420e913671920b44882bcb0e2c"
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DesktopDetailTitleBar.svelte",
+      "before": "98a1f0ca8138a2942fe03ef7403fd92eb44cd0be1d5ae0886d58c53e8cb35588",
+      "after": "957eb729b441455adb2e38bc60662eb1a87f8d998ea1d6d1eed5050d1b666cd0"
+    },
+    {
+      "path": "carwow/src/lib/components/detail/mobile/MobileDetailPage.svelte",
+      "before": "3056f73f45819d1b74fdeebeb6d2413aaf7cf17f295b1dfb6c216e13155f79a3",
+      "after": "b292004d4a8697855d9c50a949f36467a1e0434cbe6326dd8963913416eaa38c"
+    },
+    {
+      "path": "carwow/src/lib/components/favorites/mobile/MobileFavoritesPage.svelte",
+      "before": "fe5a37d9b8734f8c2b4ffe0dc2855ba69b8fdb85d3ad305493f63a71639e6444",
+      "after": "ea97a99f689139ec0a7fa8451f57075a696f2fad29b407fe8edc0b8f7d242bd7"
+    },
+    {
+      "path": "carwow/src/lib/components/home/desktop/DesktopHomeInventoryCard.svelte",
+      "before": "8511a6cf84426ce9df90420bd5e937fddbfe7838797239e9f51afa4a4af40c17",
+      "after": "969ec61a0821a7361f0bac5b787ffe5f89552f7c3bbe7fc701f06e0fae120178"
+    },
+    {
+      "path": "carwow/src/lib/components/home/mobile/MobileHomeDiscovery.svelte",
+      "before": "7a0c8ffbe586dd15a6a2e1ae5ecfc54dfc460931580c480aa7921c58003dc69e",
+      "after": "eb26183707e7a824257350dd7c922e5c10bb4da27f24e2cb928b5fd7612e8996"
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/desktop/MapVehicleCard.svelte",
+      "before": "fcdb53b2b40f6b021a19c2e780fdd4dd7fab9f179fcfbb02c8a3bff546f302f5",
+      "after": "8a2b3c878fe2b8887a40aa95ab8fccfec26232b1fe78dc19ac2b5af5db9ca73c"
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/desktop/VehiclePriceRow.svelte",
+      "before": "685fb4eb3962bc9963b6bb5d3ef9f68d6417fe737a9638555dcd72633f5b3bf0",
+      "after": "d0daee974bd8dac1d725d7b4ba7c3e11c1e98c491bbc01269207f1987da5c3e7"
+    },
+    {
+      "path": "carwow/src/lib/components/inventory/mobile/MobileInventoryVehicleCard.svelte",
+      "before": "dc18e10914544fc5c98dc86da1dd5ecaa6ab8a898a6a6ddf2b3bcd69ab0d02cd",
+      "after": "88a2fb8e142f5b6fd95a86c20ef742c2218b162c1fce88a6facb5b0927952853"
+    },
+    {
+      "path": "carwow/src/lib/components/team/DesktopTeamMemberPage.svelte",
+      "before": "fb80e1bbcc9b1db8c6a2752608b4e19b5bc3d20abb21fc861250d7748496e68e",
+      "after": "29a557863157ab145633e7087feedd9295aed260941bc3564a8ff05d9234d66e"
+    },
+    {
+      "path": "carwow/src/lib/components/detail/desktop/DetailPageShell.svelte",
+      "before": "02fcafa792ead3bd210f64361c8269096e0e3d4fd2d29a7500c613a1fd57cfbb",
+      "after": "19df4bd23c3e3cefe7919e4d2121c0cc8ada103c968189c85e8a491d34cffefe"
+    },
+    {
+      "path": "modern/packages/marketplace/format.ts",
+      "before": "3761ce5479c304d06f0ed76a8538c9151e1565ced87411d1de6aff1b86c9aafa",
+      "after": "4b96a028680686e5763e1e12ac296d5e4607b67c91f102618906742e4a843573"
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/desktop-search-assistant.tsx",
+      "before": "b00ff4a546ed72de179a3cd7c0f73b0a7ff7bfca50304c9655628ee31f04d6fb",
+      "after": "820fbd2a50d050385dfec1f8ea9db40bd945ef9a3408911e243eb14a14e58125"
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/mobile-inventory-search.tsx",
+      "before": "dcf4d338cd7aa340f90897a24e0b97e81201ee412a38437ce3f6bed4e17de3ac",
+      "after": "705c7c638e10d8dd95213fb28c6bbb6c98457b610363d8aaa4b1531f16cb552d"
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/listing-detail-summary.tsx",
+      "before": "d9ae96f206a942e9a8159ebb168e1093eb49cfb00f2617d6dba44cf70edcc63a",
+      "after": "8fb2aebbe40b53e722cb163cb40f032589c954d51190170b39f3799db5bc8382"
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/listing-public-truth.tsx",
+      "before": "8eee44fac08cf221f65d50c41d4a24c9daf02b91879d61195f2841fb1c3aa693",
+      "after": "65026dd0f9524bf919954f537f052c95948fa6474e0776b0124877b7e58f771f"
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/listing-price-intelligence.tsx",
+      "before": "fc96de5e0aabc9956c96a850e8a0cc5819a493037fb6d6e7e9d6891dfefc2a0a",
+      "after": "137d5051ebd9d009cd22aaf5813c27eeab4222befbf2f6744d690757e14d170a"
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/seller-transaction-card.tsx",
+      "before": "cd548175d3a8c92fcf94167d91bcbcb428e18218c023c5fadc2e7a2e4dc898eb",
+      "after": "c77dfa4e4e57fc31c62e42b1c6f7cca992e70a970b1ba5aee46147ef2b9ad850"
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/related-listing-card.tsx",
+      "before": "112524a80c38be204c65a7526b1b1c26900497b45d6c054208ea5dbfacd9fd27",
+      "after": "f5203439163e1b456cfe726df464648a8889d138e8dfa20f9eafed4242b62ba6"
+    },
+    {
+      "path": "modern/apps/web/app/[locale]/lease/page.tsx",
+      "before": "3ade72c4459289cabffe0a17de4c4040453a14361282c230d74e2ea4ae590672",
+      "after": "c6b1a56d03b6590a51d7b3e59478d2a79c6049b1d53f31e9b193f42e8c28ec24"
+    },
+    {
+      "path": "modern/apps/web/app/[locale]/listing/[slug]/page.tsx",
+      "before": "edf6a4aa7c557e8186c12537df40e73a3bffdcde67e0f9ec106d9eaab27b942a",
+      "after": "2b08ee68f0f0615cbfb8446f2dba9aaa77344d97fdc86ff849434c3d760e4d35"
+    },
+    {
+      "path": "modern/packages/marketplace-ui/components/vehicle-card-money.tsx",
+      "before": "e1b457115d7c9cec4af1b5bc5255cdb10ae44c8d6b15168887b6c30f7a3b1ce2",
+      "after": "1f5f68f205e3ac4d7bc4c62b2185c02fc3a3ae1d8962be46bb4765049277a63a"
+    },
+    {
+      "path": "modern/apps/web/lib/public-structured-data.ts",
+      "before": "ddb66689a0b022d27ec9d47c2cb5e8608e93634d0cb86db673f17f7e621a433c",
+      "after": "584f91b330a14aaf6446b2b555ce5f42cf7d30ac66a489b43fa22c9b5bbabed0"
+    }
+  ],
+  "unknownListingId": "11780177315125298",
+  "originalPriceAmount": 0,
+  "originalPriceDataUnchanged": true,
+  "unitCases": 8,
+  "reactReview": "Pure formatting and an early return in a component without hooks; no new state, effect, network request or data mutation. Existing semantic controls and positive-price currency styling are preserved.",
+  "reason": "One retained Eliq listing uses zero as the missing-price placeholder. Render Price on request in the two families that displayed a free-car amount, and omit an unpriced Carwow Offer. Original inventory, price numbers, branding and stock photos remain unchanged. Modern structured Offer metadata also omits an unknown price and currency instead of advertising a zero-price vehicle.",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "mobileUnknownPriceLayout": "Only an unquoted vehicle uses a full-width title and price row, so Price on request remains readable at 320px. Positive-price layouts are unchanged."
+}

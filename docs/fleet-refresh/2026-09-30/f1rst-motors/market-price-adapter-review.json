@@ -1,0 +1,38 @@
+{
+  "slug": "f1rst-motors",
+  "currency": "AED",
+  "changes": [
+    {
+      "path": "carwow/src/lib/utils/dealer-market-numbers.ts",
+      "before": null,
+      "after": "cde4e7e8ffb7931c34f20987a95c6bdf2cf9c2efb71d777398e4645424fc0697"
+    },
+    {
+      "path": "carwow/src/lib/data/daynight-vehicles.ts",
+      "before": "8ba2963a2aa6ec3d6e03c9610adbd796263a0915ce4eab8778fc1dcec356a756",
+      "after": "9e47a8b634fca18bdcf379e086cde39c82c1db530a243dd62ab278c91bd32fd7"
+    },
+    {
+      "path": "carwow/src/lib/locale/context.ts",
+      "before": "5e825680a96ff03843a651a4db5f8812b841552827b7572740d1571e08f61217",
+      "after": "1066477e32e18e4dee0297f283f69586bf078f6b5610fcae370155d356e9f367"
+    },
+    {
+      "path": "carwow/src/lib/components/home/mobile/MobileHomeDiscovery.svelte",
+      "before": "7a0c8ffbe586dd15a6a2e1ae5ecfc54dfc460931580c480aa7921c58003dc69e",
+      "after": "e11649ea7fc42ed3aea34268a0aa9e3ea683f9ea16ec8169e4fffd84e14223bf"
+    },
+    {
+      "path": "carwow/src/lib/utils/finance-estimate.ts",
+      "before": "f7c2e36e1656af0b51580d8168fbafa7f65185c1d1b7510f397f6d24450c38bf",
+      "after": "8ef273ad12d72d96f0afed2b37e30a8a32fd1c81d7e87238f186eeedeb7fced6"
+    },
+    {
+      "path": "carwow/src/lib/components/calculator/CalculatorContent.svelte",
+      "before": "533f1a3b4e478414def1aaa6a15f4450ff25d697a965cba050cbcd1f9fc8fc25",
+      "after": "d1870c5f034d2fda38537240d6dd15153e14d124677829d255816cf04f1af452"
+    }
+  ],
+  "checks": "Grouped AED/USD prices and mileage retain complete numeric values; decimal EUR fixture remains correct; budget currency matches dealer; protected stock/assets unchanged.",
+  "reason": "Dealer market adapter for existing authored non-EUR stock values and inherited Euro price-band presentation."
+}

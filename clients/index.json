@@ -22,7 +22,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown",
@@ -48,7 +49,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown",
@@ -57,11 +59,12 @@
     {
       "slug": "al-reef-used-cars",
       "name": "Al Reef Used Cars",
-      "path": "I:/cars-clients/al-reef-used-cars",
+      "path": "L:/CODEX/cars/clients/al-reef-used-cars",
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "independent-source",
       "reviewState": "unknown",
@@ -98,7 +101,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -110,7 +114,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -170,7 +175,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -182,7 +188,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -194,7 +201,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -255,7 +263,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -291,9 +300,10 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
-      "sourceState": "source-on-main",
+      "sourceState": "source-present",
       "reviewState": "unknown"
     },
     {
@@ -315,7 +325,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -327,7 +338,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -363,7 +375,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -411,7 +424,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -543,9 +557,10 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
-      "sourceState": "source-on-main",
+      "sourceState": "source-present",
       "reviewState": "unknown"
     },
     {
@@ -555,7 +570,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -592,7 +608,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown",
@@ -629,7 +646,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -727,7 +745,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -800,7 +819,8 @@
       "variants": [
         "auto-best",
         "import",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -812,7 +832,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -848,7 +869,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -860,7 +882,8 @@
       "variants": [
         "auto-best",
         "import",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"
@@ -980,7 +1003,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown",
@@ -993,7 +1017,8 @@
       "variants": [
         "auto-best",
         "modern",
-        "carwow"
+        "carwow",
+        "app"
       ],
       "sourceState": "source-present",
       "reviewState": "unknown"

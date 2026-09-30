@@ -1,0 +1,27 @@
+{
+  "slug": "texas-drive-auto",
+  "checkedAt": "2026-09-30T14:27:39.088Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "69ece503a0c4bcd806b3f7b0275a61e43c687776",
+  "exportCommit": "fb6c1441b56a5c8da147bb2c7e4f389997cdf0ed",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4143,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "af0f2ea54f09893e36b4810901f4ba56b5a8aab2b10ea1e936cc9488545ad626",
+  "packageFiles": 4150,
+  "baselineSha256": "34ec22ef88f484797a7f3bd1ce576dcee341105a26da0fbe59a93cc4828be6bd",
+  "preservation": {
+    "slug": "texas-drive-auto",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/texas-drive-auto",
+    "checkedAt": "2026-09-30T14:27:38.432Z",
+    "protectedFiles": 57,
+    "inventoryRows": 8,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

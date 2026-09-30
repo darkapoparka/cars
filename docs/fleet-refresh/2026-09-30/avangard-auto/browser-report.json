@@ -1,0 +1,3899 @@
+{
+  "slug": "avangard-auto",
+  "commit": "1ed331bdd9e1121a7eeb0b0db0d0d15a2e4392ad",
+  "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+  "deploymentId": "dpl_ES1xCeT4fns6msvBmhRXC5ey9Wyr",
+  "state": "READY",
+  "url": "https://cars-avangardauto.vercel.app/",
+  "deploymentUrl": "https://cars-avangardauto-6ny27th42-tyj5.vercel.app",
+  "productionCurrent": true,
+  "createdAt": 1790780613400,
+  "checkedAt": "2026-09-30T15:37:12.882Z",
+  "verificationVersion": 2,
+  "completed": true,
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "checks": [
+    {
+      "name": "exact-dealer-logo",
+      "kind": "light",
+      "status": 200,
+      "sha256": "50aaaad8c8bd39738a9c0c9214de09779cac4883f9f0857771e05e012a8d3c98",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "dark",
+      "status": 200,
+      "sha256": "8aded442df0d3a0866513dc5539d0a8b8434166084c86169095899227480fe4d",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "icon",
+      "status": 200,
+      "sha256": "eb64d1becf26ef3e24a47a9255b29293715e665de12ceed22aa1e160162ed587",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "AVANGARD AUTO — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Примерни автомобили — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "VW Passat Alltrack — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 305,
+        "viewport": 320,
+        "title": "Автомобили от AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/bg/listing/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 305,
+        "viewport": 320,
+        "title": "VW Passat Alltrack | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Проверени автомобили и бърз контакт | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-hatchback-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-12-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-14-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Автомобили в наличност | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-10-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-11-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-16-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-08-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg/inventory/peugeot-208-1-6hdi-679744",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Peugeot 208 1.6HDI | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-nissan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/sell-brand-8.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Our cars · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-88519743f494f5067779.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-4b0357c2d83042cad60a.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 320,
+      "locale": "bg",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg/cars/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "2018 VW Passat Alltrack · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "AVANGARD AUTO — Showroom concept in Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Demo inventory — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact — AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "VW Passat Alltrack — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "Cars at AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experienceCurrent"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "About and contact | AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-location-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/social/instagram-white.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/social/facebook.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/en/listing/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "VW Passat Alltrack | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Checked cars and easy contact | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-hatchback-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-12-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-14-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Available cars | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-10-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-11-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-16-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-08-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact us | AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/en/inventory/peugeot-208-1-6hdi-679744",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Peugeot 208 1.6HDI | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "dealer-english-viewing-condition",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "expected": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-nissan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/sell-brand-8.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-88519743f494f5067779.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-4b0357c2d83042cad60a.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "en",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/en/cars/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "2018 VW Passat Alltrack · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "AVANGARD AUTO — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Примерни автомобили — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти — AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359877800921"
+      ],
+      "expected": "359877800921",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "VW Passat Alltrack — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "Автомобили от AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "За нас и контакти | AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-location-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/social/instagram-white.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/social/facebook.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359877800921"
+      ],
+      "expected": "359877800921",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/bg/listing/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "VW Passat Alltrack | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Проверени автомобили и бърз контакт | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-hatchback-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-sedan-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-12-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-14-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-budget-currency",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "labels": [
+        "До 10K €",
+        "До 20K €",
+        "До 30K €",
+        "До 50K €"
+      ],
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Автомобили в наличност | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-10-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-11-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-16-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-08-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти | AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359877800921"
+      ],
+      "expected": "359877800921",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg/inventory/peugeot-208-1-6hdi-679744",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Peugeot 208 1.6HDI | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-nissan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/sell-brand-8.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-88519743f494f5067779.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-4b0357c2d83042cad60a.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "bg",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359877800921"
+      ],
+      "expected": "359877800921",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg/cars/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "2018 VW Passat Alltrack · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "AVANGARD AUTO — Showroom concept in Varna"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Demo inventory — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Contact — AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "VW Passat Alltrack — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Cars at AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experienceCurrent"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "About and contact | AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/en/listing/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "VW Passat Alltrack | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-4.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Checked cars and easy contact | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/instagram-official-gradient.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "options": [
+        "All prices ✓",
+        "Up to 10,000 EUR ✓",
+        "Up to 20,000 EUR ✓",
+        "Up to 30,000 EUR ✓",
+        "Up to 50,000 EUR ✓",
+        "Over 50,000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Available cars | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/instagram-official-gradient.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Contact us | AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/instagram-official-gradient.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/en/inventory/vw-passat-alltrack-119627",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "VW Passat Alltrack | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/instagram-official-gradient.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "dealer-english-viewing-condition",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "expected": "Available vehicle in Varna — contact the dealer to arrange a viewing.",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-nissan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/sell-brand-8.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-88519743f494f5067779.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-4b0357c2d83042cad60a.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-27ed91a386a892c3a93d.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "en",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/en/cars/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2018 VW Passat Alltrack · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "AVANGARD AUTO — Концепция за шоурум в Варна"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Примерни автомобили — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Контакти — AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "VW Passat Alltrack — AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Автомобили от AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "За нас и контакти | AVANGARD AUTO | AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-2/bg/listing/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "VW Passat Alltrack | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-dark-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/assets/avangard/vehicle-01-4.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-2/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Проверени автомобили и бърз контакт | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/instagram-official-gradient.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "options": [
+        "Всички цени ✓",
+        "До 10 000 EUR ✓",
+        "До 20 000 EUR ✓",
+        "До 30 000 EUR ✓",
+        "До 50 000 EUR ✓",
+        "Над 50 000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Автомобили в наличност | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/instagram-official-gradient.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-02-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-03-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-04-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-05-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Контакти | AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/instagram-official-gradient.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-3/bg/inventory/vw-passat-alltrack-119627",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "VW Passat Alltrack | AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/facebook.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/instagram-official-gradient.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/dealer-brand/logo-on-light-20260919.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/avangard/vehicle-01-1.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/brand-nissan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/reference-assets/sell-brand-8.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://cars-avangardauto.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://cars-avangardauto.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=cars-avangardauto",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-88519743f494f5067779.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-4b0357c2d83042cad60a.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-27ed91a386a892c3a93d.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "bg",
+      "count": 16,
+      "expected": 16,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · AVANGARD AUTO"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://cars-avangardauto.vercel.app/variant-4/bg/cars/vw-passat-alltrack-2018-11785010475119627",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2018 VW Passat Alltrack · AVANGARD AUTO"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/logo-light-50aaaad8c8bd39738a9c.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://cars-avangardauto.vercel.app/variant-4/dealer-app/vehicle-67784366aec3ecea2fb3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "passed": true
+}

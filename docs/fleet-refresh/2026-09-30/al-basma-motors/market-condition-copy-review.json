@@ -1,0 +1,35 @@
+{
+  "slug": "al-basma-motors",
+  "checkedAt": "2026-09-30T14:09:44.577Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Sharjah — свържете се за оглед.",
+    "en": "Available vehicle in Sharjah — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Sharjah — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "9bf824e7038ff8e8f0ac2b262a8ebedffd25b2b85ba7cbca434fec10120ec6e9",
+      "after": "3b95cb49457fbe85b6f43c48bbe690873aaf2f81b0909687c74acd958caeb83a"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "260c4ba9b9361240d9b811038f18b324b8036e96113d3188e9590f8d842e87e0",
+      "after": "fe7b41817f4974f43974121f2412653179b7488f1ca5d0271f305598e5b290d6"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "0ac4a8800ad1c94c547b0545adde61f64b4481eaa07da49000766085de71a0c9",
+      "after": "a7dffeaeec3538135aa4baec06ba06f6556285eba7010393d2732ddfe0ad9584"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "c04f06cc3f14e5daf60dc08ead23af3ccf3fee58765290748dfdb8248d954481",
+      "after": "ffcecfbf90d6219f6f7c5ba7efaf733e54aef456f7ec0855039cd8b7e76e6e59"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}

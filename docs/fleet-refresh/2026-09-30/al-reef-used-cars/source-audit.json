@@ -1,0 +1,27 @@
+{
+  "slug": "al-reef-used-cars",
+  "checkedAt": "2026-09-30T14:27:30.842Z",
+  "sourceRepository": "darkapoparka/cars-alreefusedcars",
+  "sourceCommit": "48f3c43724f52df498a9b06d2fa7d5baae75d41d",
+  "exportCommit": "8bac5e0355f2580ee3050246ce235ed0b545638d",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4196,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "201705d5f31ad98fb766c35e8aa936f2e2096bbeb98baf061d1f7b776f211298",
+  "packageFiles": 4201,
+  "baselineSha256": "edbb5269c3860694bdd434136099e81bd1890c59a03fa2b66c2e27913e1f6586",
+  "preservation": {
+    "slug": "al-reef-used-cars",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/al-reef-used-cars",
+    "checkedAt": "2026-09-30T14:27:30.224Z",
+    "protectedFiles": 120,
+    "inventoryRows": 6,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

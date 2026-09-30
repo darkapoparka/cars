@@ -1,0 +1,27 @@
+{
+  "slug": "navara-car",
+  "checkedAt": "2026-09-30T15:13:51.493Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "e28713a76f90ad163538c79f483911caa099e6f0",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4208,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "7b439cc2de64aafe5b569f243e5e73b66cd523f0603f17d71e13ae627e1737dd",
+  "packageFiles": 4215,
+  "baselineSha256": "716bd118634a1298f0e650bc167b45809c9515b404d1838a225c16c94b7f9cbf",
+  "preservation": {
+    "slug": "navara-car",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/navara-car",
+    "checkedAt": "2026-09-30T15:13:50.892Z",
+    "protectedFiles": 112,
+    "inventoryRows": 9,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

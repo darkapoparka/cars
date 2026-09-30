@@ -1,0 +1,3771 @@
+{
+  "slug": "day-and-night-auto-group",
+  "commit": "3d6225f0a57f3bcc59763b464a4fd448d5f0e3a6",
+  "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+  "deploymentId": "dpl_4Vy1b9CbVyvpE3qMZq7LAKk4TNVw",
+  "state": "READY",
+  "url": "https://day-and-night-a.vercel.app/",
+  "deploymentUrl": "https://day-and-night-3hz5xtrvc-tyj5.vercel.app",
+  "productionCurrent": true,
+  "createdAt": 1790776441518,
+  "checkedAt": "2026-09-30T14:58:01.139Z",
+  "verificationVersion": 2,
+  "completed": true,
+  "sourceCommit": "8871d64f7c3cce26786a4864f2ff07087df57667",
+  "checks": [
+    {
+      "name": "exact-dealer-logo",
+      "kind": "light",
+      "status": 200,
+      "sha256": "04bf9a0cd31cd72992a8ad4687292554121f7aab84c9195dc971efebd4119e2f",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "dark",
+      "status": 200,
+      "sha256": "019719775d6f0bc08136bfc8140dc725c12abd39915276fe43abab29da145e51",
+      "pass": true
+    },
+    {
+      "name": "exact-dealer-logo",
+      "kind": "icon",
+      "status": 200,
+      "sha256": "3b329a1bf8b6ea6ed215b93b23b8ca4ed3ea625e18d516a2a310b6e2dcabffb7",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Day & Night Auto Group — Концепция за шоурум в София"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Примерни автомобили — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 305,
+        "viewport": 320,
+        "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784223776383846.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-2/bg/listing/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 305,
+        "viewport": 320,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Проверени автомобили и бърз контакт | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-coupe-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21762334502775312.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Автомобили в наличност | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11775198338574112.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781790478711568.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21765900685685588.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11777018671764829.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21777637702876978.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Mercedes-Benz GLA 45 AMG | Day & Night"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "Our cars · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-f7528d9d392a770be545.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-43cca3eab4df0d8894c9.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 320,
+      "locale": "bg",
+      "count": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 320,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg/cars/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 320,
+        "viewport": 320,
+        "title": "2016 Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Day & Night Auto Group — Showroom concept in Sofia"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Demo inventory — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact — Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "Cars at Day & Night Auto Group | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784223776383846.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experienceCurrent"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "About and contact | Day & Night | Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-location-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-2/en/listing/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 375,
+        "viewport": 390,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Checked cars and easy contact | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-coupe-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21762334502775312.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Available cars | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11775198338574112.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781790478711568.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21765900685685588.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11777018671764829.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21777637702876978.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Contact us | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-3/en/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz GLA 45 AMG | Day & Night"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-f7528d9d392a770be545.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-43cca3eab4df0d8894c9.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "en",
+      "count": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-4/en/cars/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 390,
+        "viewport": 390,
+        "title": "2016 Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Day & Night Auto Group — Концепция за шоурум в София"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/home-action-finance-v3.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Примерни автомобили — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти — Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359877733110"
+      ],
+      "expected": "359877733110",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-car-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-filters-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784223776383846.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "За нас и контакти | Day & Night | Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-location-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359877733110"
+      ],
+      "expected": "359877733110",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-2/bg/listing/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 375,
+        "viewport": 390,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/services/header-phone-v4.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Проверени автомобили и бърз контакт | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-wagon-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-suv-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/body-type/normalized/body-coupe-transparent-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/images/budget/open-budget-supercar-v2-mobile.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21762334502775312.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-budget-currency",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "labels": [
+        "До 30K €",
+        "До 50K €",
+        "Над 50K €",
+        "Без бюджет"
+      ],
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Автомобили в наличност | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11775198338574112.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781790478711568.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21765900685685588.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11777018671764829.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21777637702876978.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Контакти | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359877733110"
+      ],
+      "expected": "359877733110",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Mercedes-Benz GLA 45 AMG | Day & Night"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Our cars · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-f7528d9d392a770be545.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-43cca3eab4df0d8894c9.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 390,
+      "locale": "bg",
+      "count": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "Visit showroom · Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "reviewed-dealer-call-link",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "phones": [
+        "359877733110"
+      ],
+      "expected": "359877733110",
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 390,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg/cars/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 390,
+        "viewport": 390,
+        "title": "2016 Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Day & Night Auto Group — Showroom concept in Sofia"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer siteCurrent"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/en/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Demo inventory — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Contact — Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Cars at Day & Night Auto Group | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experienceCurrent"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-2/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "About and contact | Day & Night | Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-2/en/listing/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-3/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Checked cars and easy contact | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layoutCurrent"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journey4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "options": [
+        "All prices ✓",
+        "Up to 10,000 EUR ✓",
+        "Up to 20,000 EUR ✓",
+        "Up to 30,000 EUR ✓",
+        "Up to 50,000 EUR ✓",
+        "Over 50,000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-3/en/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Available cars | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784223776383846.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-3/en/contact",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Contact us | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-3/en/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GLA 45 AMG | Day & Night"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22480%22%20viewBox%3D%220%200%20640%20480%22%3E%3Crect%20width%3D%22640%22%20height%3D%22480%22%20fill%3D%22%23f1f4f9%22%2F%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%22638%22%20height%3D%22478%22%20rx%3D%2220%22%20fill%3D%22none%22%20stroke%3D%22%23d7deea%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M172%20274h36l37-62h144l43%2062h36M230%20274h180M222%20274a34%2034%200%201%200%2068%200M350%20274a34%2034%200%201%200%2068%200%22%20fill%3D%22none%22%20stroke%3D%22%238A0000%22%20stroke-width%3D%2214%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22168%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2262%22%20font-weight%3D%22800%22%20fill%3D%22%238A0000%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EDAY%3C%2Ftext%3E%3Ctext%20x%3D%22320%22%20y%3D%22210%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%23607086%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%228%22%3EAUTO%3C%2Ftext%3E%3Ctext%20x%3D%22320%22%20y%3D%22372%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22600%22%20fill%3D%22%238a97ab%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%221%22%3EPhotos%20coming%20soon%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22480%22%20viewBox%3D%220%200%20640%20480%22%3E%3Crect%20width%3D%22640%22%20height%3D%22480%22%20fill%3D%22%23f1f4f9%22%2F%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%22638%22%20height%3D%22478%22%20rx%3D%2220%22%20fill%3D%22none%22%20stroke%3D%22%23d7deea%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M172%20274h36l37-62h144l43%2062h36M230%20274h180M222%20274a34%2034%200%201%200%2068%200M350%20274a34%2034%200%201%200%2068%200%22%20fill%3D%22none%22%20stroke%3D%22%238A0000%22%20stroke-width%3D%2214%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22168%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2262%22%20font-weight%3D%22800%22%20fill%3D%22%238A0000%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EDAY%3C%2Ftext%3E%3Ctext%20x%3D%22320%22%20y%3D%22210%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%23607086%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%228%22%3EAUTO%3C%2Ftext%3E%3Ctext%20x%3D%22320%22%20y%3D%22372%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22600%22%20fill%3D%22%238a97ab%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%221%22%3EPhotos%20coming%20soon%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-4/en",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/en",
+          "target": "",
+          "text": "ClassicEditorial dealer site1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/en/cars",
+          "target": "",
+          "text": "MarketplaceRich catalog experience2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/en",
+          "target": "",
+          "text": "PremiumModern showroom layout3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/en",
+          "target": "",
+          "text": "AppMobile-first buying journeyCurrent"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Admin dashboardPreview inventory, enquiries and content tools.↗"
+        }
+      ],
+      "active": "Design 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-4/en/cars",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-f7528d9d392a770be545.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-43cca3eab4df0d8894c9.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-00bf120684716403e966.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "en",
+      "count": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-4/en/stores",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "en",
+      "url": "https://day-and-night-a.vercel.app/variant-4/en/cars/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "en",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2016 Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Day & Night Auto Group — Концепция за шоурум в София"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/template/service-sell-front-v3.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визияТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 1 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg/listing-grid",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Примерни автомобили — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Контакти — Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "auto-best",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED — Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяванеТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n          \n          Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 2 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-2/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "За нас и контакти | Day & Night | Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/images/desktop/studio-complete-vehicles-v4.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "modern",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-2/bg/listing/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1425,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED | Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-dark.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-2/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Проверени автомобили и бърз контакт | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурумТекущ"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупка4"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 3 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "dealer-market-selected-price-currency",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "options": [
+        "Всички цени ✓",
+        "До 10 000 EUR ✓",
+        "До 20 000 EUR ✓",
+        "До 30 000 EUR ✓",
+        "До 50 000 EUR ✓",
+        "Над 50 000 EUR ✓"
+      ],
+      "label": "≤ 10k EUR ",
+      "currency": "EUR",
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg/inventory",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Автомобили в наличност | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/chevron-down-primary.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784728210405323.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11782122632841845.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/11781786688563618.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21781366888650416.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight/inventory-current/21784223776383846.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/picture.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg/contact",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Контакти | DAY & NIGHT AUTO GROUP"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-contact/contact-support-cutouts.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-1x-2400x1100.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "carwow",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-3/bg/inventory/mercedes-benz-gla-45-amg-405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1435,
+        "viewport": 1440,
+        "title": "Mercedes-Benz GLA 45 AMG | Day & Night"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/dealer-brand/logo-on-light.webp",
+          "loaded": true
+        },
+        {
+          "src": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22640%22%20height%3D%22480%22%20viewBox%3D%220%200%20640%20480%22%3E%3Crect%20width%3D%22640%22%20height%3D%22480%22%20fill%3D%22%23f1f4f9%22%2F%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%22638%22%20height%3D%22478%22%20rx%3D%2220%22%20fill%3D%22none%22%20stroke%3D%22%23d7deea%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M172%20274h36l37-62h144l43%2062h36M230%20274h180M222%20274a34%2034%200%201%200%2068%200M350%20274a34%2034%200%201%200%2068%200%22%20fill%3D%22none%22%20stroke%3D%22%238A0000%22%20stroke-width%3D%2214%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Ctext%20x%3D%22320%22%20y%3D%22168%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2262%22%20font-weight%3D%22800%22%20fill%3D%22%238A0000%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%222%22%3EDAY%3C%2Ftext%3E%3Ctext%20x%3D%22320%22%20y%3D%22210%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%23607086%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%228%22%3EAUTO%3C%2Ftext%3E%3Ctext%20x%3D%22320%22%20y%3D%22372%22%20font-family%3D%22Manrope%2C%20Arial%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22600%22%20fill%3D%22%238a97ab%22%20text-anchor%3D%22middle%22%20letter-spacing%3D%221%22%3E%D0%9E%D1%87%D0%B0%D0%BA%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D1%81%D0%BD%D0%B8%D0%BC%D0%BA%D0%B8%3C%2Ftext%3E%3C%2Fsvg%3E",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/playcircle.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/view-all-photo.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/Info.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/icon-gauge.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/calendar.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/gaspump.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/palette.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/MapPin.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/Seatbelt.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/Frame.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/transmission-2.svg",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-3/assets/icons/top.svg",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/buy-sedan-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/cutouts/sedan.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/finance-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/service-v2.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-hero-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-mercedes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-bmw.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/reference-assets/brand-audi.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-collection-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-finance-v1.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "four-design-switcher",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "links": [
+        {
+          "href": "https://day-and-night-a.vercel.app/bg",
+          "target": "",
+          "text": "КласическиДилърски сайт с редакционна визия1"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-2/bg/cars",
+          "target": "",
+          "text": "АвтопорталБогато каталожно изживяване2"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-3/bg",
+          "target": "",
+          "text": "ПремиумМодерен шоурум3"
+        },
+        {
+          "href": "https://day-and-night-a.vercel.app/variant-4/bg",
+          "target": "",
+          "text": "ПриложениеМобилно изживяване за покупкаТекущ"
+        },
+        {
+          "href": "https://cars-admin-blue.vercel.app/?dealer=day-and-night-a",
+          "target": "_blank",
+          "text": "\n      \n      Админ панелПреглед на наличности, запитвания и съдържание.↗"
+        }
+      ],
+      "active": "Дизайн 4 / 4",
+      "focused": true,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg/cars",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Our cars · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/black/home-visit-v1.png",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-f7528d9d392a770be545.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-43cca3eab4df0d8894c9.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-00bf120684716403e966.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "exact-app-inventory-count",
+      "width": 1440,
+      "locale": "bg",
+      "count": 40,
+      "expected": 40,
+      "pass": true
+    },
+    {
+      "name": "public-journey",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg/stores",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "Visit showroom · Day & Night Auto Group"
+      },
+      "requiresImages": false,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/showroom/studio-car-v2.png",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "name": "vehicle-detail",
+      "variant": "app",
+      "width": 1440,
+      "locale": "bg",
+      "url": "https://day-and-night-a.vercel.app/variant-4/bg/cars/2016-21784728210405323",
+      "status": 200,
+      "layout": {
+        "lang": "bg",
+        "width": 1440,
+        "viewport": 1440,
+        "title": "2016 Mercedes-Benz GLA 45 AMG Очакван внос AMG EDITION 1CARBONPANOHKCAMRED · Day & Night Auto Group"
+      },
+      "requiresImages": true,
+      "emptyInventoryExpected": false,
+      "images": [
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/logo-light-04bf9a0cd31cd72992a8.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://day-and-night-a.vercel.app/variant-4/dealer-app/vehicle-0c8d37b6f21316a6e522.webp",
+          "loaded": true
+        }
+      ],
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "passed": true
+}

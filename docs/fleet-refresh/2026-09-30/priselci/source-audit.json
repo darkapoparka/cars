@@ -1,0 +1,27 @@
+{
+  "slug": "priselci",
+  "checkedAt": "2026-09-30T15:14:02.561Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "f3dc6d7131d815113574229f5a2d627cc7ccb5fd",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4453,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "ad3afe7e0c9ac69d65d39ff04d268497c945a8007670f68dc9089f33e98b25a5",
+  "packageFiles": 4460,
+  "baselineSha256": "6c96bd8abb62c895db1cddbd8929b11b18e62bcf1515c1567e19f80bdd713bbf",
+  "preservation": {
+    "slug": "priselci",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/priselci",
+    "checkedAt": "2026-09-30T15:14:00.496Z",
+    "protectedFiles": 365,
+    "inventoryRows": 16,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

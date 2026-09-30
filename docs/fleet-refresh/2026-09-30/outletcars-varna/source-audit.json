@@ -1,0 +1,27 @@
+{
+  "slug": "outletcars-varna",
+  "checkedAt": "2026-09-30T16:31:38.101Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "0d543209bc29c04724ce4a95254eace9c6ceb5e4",
+  "exportCommit": "9165fd22a217675b7131ad4e2c5043ae9e61897f",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4467,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "4952ad10c35a63488c2823e15a921ec081d8599d5ac5421663e0749020ac1aff",
+  "packageFiles": 4474,
+  "baselineSha256": "f58cc854bffa08bc6c4ea6650a2a8081a5f9911463c1068c481b5c8808afc4ec",
+  "preservation": {
+    "slug": "outletcars-varna",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/outletcars-varna",
+    "checkedAt": "2026-09-30T16:31:37.099Z",
+    "protectedFiles": 181,
+    "inventoryRows": 8,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

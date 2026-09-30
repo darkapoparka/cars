@@ -1,0 +1,27 @@
+{
+  "slug": "elit-auto-import",
+  "checkedAt": "2026-09-30T15:13:36.374Z",
+  "sourceRepository": "darkapoparka/cars",
+  "sourceCommit": "cc0e0520c9b5d85694c9b8d76203d9929f1fd928",
+  "exportCommit": "cd86bfa89154b4ce49ac8b365c9322079e72efc5",
+  "templateRevision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourceFiles": 4511,
+  "untrackedExcluded": [],
+  "nativeAdoption": "passed",
+  "appAdoption": "passed",
+  "packageDigest": "d2924b0df15501cfd8038ee96f964496d25c5024e5fc2bda14e7ebd101754bbd",
+  "packageFiles": 4518,
+  "baselineSha256": "d733cde62d980a49bee2538be1cdf053d539ecbb2bdac8290ca8858295ffec5b",
+  "preservation": {
+    "slug": "elit-auto-import",
+    "phase": "final-source",
+    "directory": "L:/CODEX/cars/clients/elit-auto-import",
+    "checkedAt": "2026-09-30T15:13:35.722Z",
+    "protectedFiles": 420,
+    "inventoryRows": 15,
+    "reviewedAdditions": [],
+    "failures": [],
+    "passed": true
+  },
+  "passed": true
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "al-reef-used-cars",
+  "checkedAt": "2026-09-30T14:09:55.023Z",
+  "row": {
+    "key": "dealer.inventoryViewingCondition",
+    "source": "Наличен автомобил в Sharjah — свържете се за оглед.",
+    "en": "Available vehicle in Sharjah — contact the dealer to arrange a viewing.",
+    "bg": "Наличен автомобил в Sharjah — свържете се за оглед.",
+    "disposition": "translate",
+    "notes": "Localize the existing template-composed availability sentence. Original vehicle data, customer-entered descriptions, stock amounts and date/availability disclosures remain unchanged."
+  },
+  "changes": [
+    {
+      "path": "carwow/localization/dealer.reviewed.json",
+      "before": "6e23fe7b54e7cd74f444243ccf8188de181aae94a2a9f81bb0a5750b55da0df8",
+      "after": "abb8f289f030971e535d4796b9e50597b55e783acb3e88c8800421a48a5e078f"
+    },
+    {
+      "path": "carwow/localization/generated-manifest.json",
+      "before": "bf63831afd3b790480aa0545feaa3b858d2ce5d92dfca27ccfe6f2cc4afa0728",
+      "after": "0d57beb5cc2cb66c9aab1a3b0a06f5bac32499e8086c88f8c75498cff6bb7921"
+    },
+    {
+      "path": "carwow/src/lib/locale/catalog.ts",
+      "before": "6db1b250b8dda3029cda9ad798ed05402987a522493d014f20210c26d52e601d",
+      "after": "dc3be70561afc1f4d7b43a5f45bb38d06f8514f1c4772c7f38fb5815c4fa1de2"
+    },
+    {
+      "path": "localization/adoption.json",
+      "before": "a3d36bc01c02f379ac8dbaea35fd8588125355a14bb135685b052d2e802218a2",
+      "after": "86722c8f4f6ed6fc5ae7108a9bcbefac2c360ff773cc10ada2b75bc61b9df040"
+    }
+  ],
+  "reason": "The default English Carwow detail page still displayed its composed availability sentence in Bulgarian. Compile the reviewed English translation through the existing native dealer catalog instead of rewriting vehicle data."
+}
