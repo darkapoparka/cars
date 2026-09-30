@@ -86,7 +86,7 @@ export function getI18n() {
 						(state().locale === 'bg' ? ' км' : ' km')
 				: value;
 		},
-		spec: <T>(value: T): T => specificationText(state().locale, value),
+		spec: <T>(value: T): T => dealerCurrencyText(specificationText(state().locale, value), localeContract.inventoryCurrency),
 		text: <T>(value: T): T => dealerCurrencyText(templateText(state().locale, value), localeContract.inventoryCurrency),
 		asset: (value: string) => {
 			const base = routeParts(page.url.pathname).base;
