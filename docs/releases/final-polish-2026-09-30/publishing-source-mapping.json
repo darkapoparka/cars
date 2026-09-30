@@ -1,0 +1,298 @@
+[
+  {
+    "key": "auto-best",
+    "repository": "darkapoparka/cars-template-auto-best",
+    "parent": "a2134db9719fad375b306dd1f4ef601b40a8d3d4",
+    "commit": "e4e1c7840416478d7f8dc285ab4f600e30a8f63b",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964",
+    "archived": [
+      {
+        "path": ".github/workflows/sync-from-cars.yml",
+        "destination": ".github/workflows/sync-from-cars.yml"
+      },
+      {
+        "path": "static/assets/images/lead/day-night-stock-05.webp",
+        "destination": ".template/recovery/standalone-only/a2134db9719fad375b306dd1f4ef601b40a8d3d4/static/assets/images/lead/day-night-stock-05.webp"
+      },
+      {
+        "path": "static/assets/images/lead/day-night-video-g-class.jpg",
+        "destination": ".template/recovery/standalone-only/a2134db9719fad375b306dd1f4ef601b40a8d3d4/static/assets/images/lead/day-night-video-g-class.jpg"
+      },
+      {
+        "path": "static/assets/images/lead/day-night-video-panamera.jpg",
+        "destination": ".template/recovery/standalone-only/a2134db9719fad375b306dd1f4ef601b40a8d3d4/static/assets/images/lead/day-night-video-panamera.jpg"
+      },
+      {
+        "path": "static/assets/images/lead/day-night-video-urus.jpg",
+        "destination": ".template/recovery/standalone-only/a2134db9719fad375b306dd1f4ef601b40a8d3d4/static/assets/images/lead/day-night-video-urus.jpg"
+      },
+      {
+        "path": "static/assets/images/lead/pdp-finance-clean-mobile.webp",
+        "destination": ".template/recovery/standalone-only/a2134db9719fad375b306dd1f4ef601b40a8d3d4/static/assets/images/lead/pdp-finance-clean-mobile.webp"
+      },
+      {
+        "path": "static/assets/images/lead/pdp-seller-clean-mobile.webp",
+        "destination": ".template/recovery/standalone-only/a2134db9719fad375b306dd1f4ef601b40a8d3d4/static/assets/images/lead/pdp-seller-clean-mobile.webp"
+      }
+    ],
+    "runtimeSourceMatches": true,
+    "pushedAt": "2026-09-30T09:20:13.206Z"
+  },
+  {
+    "key": "modern",
+    "repository": "darkapoparka/cars-template-modern",
+    "parent": "ad3a1722370e1f386d774c7c4e0b235448e2d8fc",
+    "commit": "4f6e759e7480b66707ca855ea8bb5fc2611d9afe",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c",
+    "archived": [
+      {
+        "path": ".github/workflows/sync-from-cars.yml",
+        "destination": ".github/workflows/sync-from-cars.yml"
+      }
+    ],
+    "runtimeSourceMatches": true,
+    "pushedAt": "2026-09-30T09:20:27.468Z"
+  },
+  {
+    "key": "carwow",
+    "repository": "darkapoparka/cars-template-carwow",
+    "parent": "6c7ad8ad26b39b085497e54face8ab0d5cb52858",
+    "commit": "d23b2a392ad6e511547d5501573428ea2fda4e26",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f",
+    "archived": [
+      {
+        "path": ".github/workflows/sync-from-cars.yml",
+        "destination": ".github/workflows/sync-from-cars.yml"
+      }
+    ],
+    "runtimeSourceMatches": true,
+    "pushedAt": "2026-09-30T09:20:38.616Z"
+  },
+  {
+    "key": "import",
+    "repository": "darkapoparka/cars-template-import",
+    "parent": "45e14ea0d4eff74f42cab0b5f7149285fef0bc97",
+    "commit": "5bbcb962dd671237f2a360dcae8229638d51d947",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "ed185f9b04d02b1ce3a0304a9e72118d25b45da4e621b63601697eb401d83dfd",
+    "archived": [
+      {
+        "path": ".github/workflows/sync-from-cars.yml",
+        "destination": ".github/workflows/sync-from-cars.yml"
+      },
+      {
+        "path": ".template/recovery/standalone-only/f1c0ed796565d2c1d06ce7e47f78848b365f30c5/src/lib/components/account/UserManagementTable.svelte",
+        "destination": ".template/recovery/standalone-only/f1c0ed796565d2c1d06ce7e47f78848b365f30c5/src/lib/components/account/UserManagementTable.svelte"
+      },
+      {
+        "path": ".template/recovery/standalone-only/f1c0ed796565d2c1d06ce7e47f78848b365f30c5/src/lib/components/account/UserManagementTemplatePage.svelte",
+        "destination": ".template/recovery/standalone-only/f1c0ed796565d2c1d06ce7e47f78848b365f30c5/src/lib/components/account/UserManagementTemplatePage.svelte"
+      }
+    ],
+    "runtimeSourceMatches": true,
+    "pushedAt": "2026-09-30T09:20:53.972Z"
+  },
+  {
+    "key": "app",
+    "repository": "darkapoparka/cars-template-app",
+    "parent": "b4987a919744239a209af7fb71811435cc330a43",
+    "commit": "8ab7571fedc0bf66473fc81ce077fd700c3231b7",
+    "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourceDigest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+    "archived": [
+      {
+        "path": ".github/workflows/quality.yml",
+        "destination": ".github/workflows/quality.yml"
+      },
+      {
+        "path": "app/benefits/[kind]/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/benefits/[kind]/page.tsx"
+      },
+      {
+        "path": "app/cars/[slug]/features/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/cars/[slug]/features/page.tsx"
+      },
+      {
+        "path": "app/cars/[slug]/gallery/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/cars/[slug]/gallery/page.tsx"
+      },
+      {
+        "path": "app/cars/[slug]/inspection/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/cars/[slug]/inspection/page.tsx"
+      },
+      {
+        "path": "app/cars/[slug]/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/cars/[slug]/page.tsx"
+      },
+      {
+        "path": "app/cars/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/cars/page.tsx"
+      },
+      {
+        "path": "app/finance/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/finance/page.tsx"
+      },
+      {
+        "path": "app/luxe/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/luxe/page.tsx"
+      },
+      {
+        "path": "app/more/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/more/page.tsx"
+      },
+      {
+        "path": "app/saved/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/saved/page.tsx"
+      },
+      {
+        "path": "app/search/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/search/page.tsx"
+      },
+      {
+        "path": "app/sell/details/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/sell/details/page.tsx"
+      },
+      {
+        "path": "app/sell/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/sell/page.tsx"
+      },
+      {
+        "path": "app/service/details/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/service/details/page.tsx"
+      },
+      {
+        "path": "app/service/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/service/page.tsx"
+      },
+      {
+        "path": "app/stores/page.tsx",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/app/stores/page.tsx"
+      },
+      {
+        "path": "components/useScrollThreshold.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/components/useScrollThreshold.ts"
+      },
+      {
+        "path": "components/useVehicleSections.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/components/useVehicleSections.ts"
+      },
+      {
+        "path": "docs/AUDIT-2026-09-29.md",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/docs/AUDIT-2026-09-29.md"
+      },
+      {
+        "path": "docs/audit/2026-09-29/resource-comparison.json",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/docs/audit/2026-09-29/resource-comparison.json"
+      },
+      {
+        "path": "docs/audit/2026-09-29/verification.json",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/docs/audit/2026-09-29/verification.json"
+      },
+      {
+        "path": "docs/audit/2026-09-29/visual-comparison.json",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/docs/audit/2026-09-29/visual-comparison.json"
+      },
+      {
+        "path": "lib/dom/focus.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/dom/focus.ts"
+      },
+      {
+        "path": "lib/fixtures/legacy-vehicles.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/fixtures/legacy-vehicles.ts"
+      },
+      {
+        "path": "lib/format.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/format.ts"
+      },
+      {
+        "path": "lib/gallery-gestures.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/gallery-gestures.ts"
+      },
+      {
+        "path": "lib/inventory-state.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/inventory-state.ts"
+      },
+      {
+        "path": "lib/journeys/sell.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/journeys/sell.ts"
+      },
+      {
+        "path": "lib/journeys/service.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/journeys/service.ts"
+      },
+      {
+        "path": "lib/phone.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/phone.ts"
+      },
+      {
+        "path": "lib/state/string-list-store.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/state/string-list-store.ts"
+      },
+      {
+        "path": "lib/state/vehicle-store.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/state/vehicle-store.ts"
+      },
+      {
+        "path": "lib/state/viewport-store.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/state/viewport-store.ts"
+      },
+      {
+        "path": "lib/vehicle.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/lib/vehicle.ts"
+      },
+      {
+        "path": "playwright.config.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/playwright.config.ts"
+      },
+      {
+        "path": "scripts/check-appearance.mjs",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/scripts/check-appearance.mjs"
+      },
+      {
+        "path": "scripts/check-architecture.mjs",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/scripts/check-architecture.mjs"
+      },
+      {
+        "path": "tests/contracts/appearance.json",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/contracts/appearance.json"
+      },
+      {
+        "path": "tests/contracts/inventory.json",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/contracts/inventory.json"
+      },
+      {
+        "path": "tests/e2e/journeys.spec.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/e2e/journeys.spec.ts"
+      },
+      {
+        "path": "tests/e2e/regressions.spec.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/e2e/regressions.spec.ts"
+      },
+      {
+        "path": "tests/e2e/routes.spec.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/e2e/routes.spec.ts"
+      },
+      {
+        "path": "tests/e2e/support.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/e2e/support.ts"
+      },
+      {
+        "path": "tests/unit/assets.test.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/unit/assets.test.ts"
+      },
+      {
+        "path": "tests/unit/domain.test.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/unit/domain.test.ts"
+      },
+      {
+        "path": "tests/unit/storage.test.ts",
+        "destination": ".template/recovery/standalone-only/b4987a919744239a209af7fb71811435cc330a43/tests/unit/storage.test.ts"
+      }
+    ],
+    "runtimeSourceMatches": true,
+    "pushedAt": "2026-09-30T09:21:07.004Z"
+  }
+]

@@ -1,0 +1,843 @@
+{
+  "schemaVersion": 1,
+  "key": "modern",
+  "canonicalSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/modern",
+    "tree": "796661a4ff23fb9db34b7df68dc7f190497e4922",
+    "digest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c"
+  },
+  "publishingSource": {
+    "repository": "darkapoparka/cars-template-modern",
+    "commit": "4f6e759e7480b66707ca855ea8bb5fc2611d9afe",
+    "runtimeSourceMatches": true
+  },
+  "sourceProof": {
+    "key": "modern",
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "path": "templates/modern",
+      "tree": "796661a4ff23fb9db34b7df68dc7f190497e4922",
+      "digest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c"
+    },
+    "mirror": {
+      "repository": "darkapoparka/cars-template-modern",
+      "commit": "4f6e759e7480b66707ca855ea8bb5fc2611d9afe",
+      "runtimeSourceMatches": true
+    },
+    "catalogs": {
+      "catalogs": [
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "packages/internationalization/preferences-messages.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 23,
+          "contentDigest": "9aef9590deaa579618d9b366f8a09b2a6c8b17ced168641469c00bf8da9c72c9"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "packages/internationalization/public-messages.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 27,
+          "contentDigest": "5bffa6e066509d415a0730f5b7c39d7b6d13ff563c8f447cde59c95fc3d86a8a"
+        },
+        {
+          "descriptor": {
+            "format": "typescript-rows",
+            "path": "packages/marketplace/content/inventory-copy.ts",
+            "export": "inventoryCopy"
+          },
+          "keys": 28,
+          "contentDigest": "7c9e8fd4f189c9f76c6eaafeb93d3c8c910bf149685a659feaa7b185e2893c07"
+        }
+      ],
+      "declaredCatalogParityPassed": true,
+      "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+    },
+    "boundaries": [
+      {
+        "path": "packages/internationalization/policy.ts",
+        "previousCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "currentHash": "572c20b618b28b692df3a0537bc4a510a177b7766c1bd91d8d767cc7e1b3a97a",
+        "previousHash": "572c20b618b28b692df3a0537bc4a510a177b7766c1bd91d8d767cc7e1b3a97a",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/cars-source-2026-09-24/modern-release.json"
+      },
+      {
+        "path": "packages/internationalization/preferences.test.ts",
+        "previousCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "currentHash": "c68a3e19b5368d8d7d1f5392100109747e89a2b7a454ed582a38c6648272156b",
+        "previousHash": "c68a3e19b5368d8d7d1f5392100109747e89a2b7a454ed582a38c6648272156b",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/cars-source-2026-09-24/modern-release.json"
+      },
+      {
+        "path": "packages/internationalization/proxy.test.ts",
+        "previousCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "currentHash": "568154b3d31c9f639eb74d53f469b68a427dc1cb5af1fd384a742cadcbe9356d",
+        "previousHash": "568154b3d31c9f639eb74d53f469b68a427dc1cb5af1fd384a742cadcbe9356d",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/cars-source-2026-09-24/modern-release.json"
+      },
+      {
+        "path": "packages/internationalization/proxy.ts",
+        "previousCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "currentHash": "c5d6bdcf91545fb5a4d07e43781c109d642c7cf95abfbba35f07fd2d3e718f84",
+        "previousHash": "c5d6bdcf91545fb5a4d07e43781c109d642c7cf95abfbba35f07fd2d3e718f84",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/cars-source-2026-09-24/modern-release.json"
+      },
+      {
+        "path": "packages/marketplace-ui/components/locale-preferences.tsx",
+        "previousCommit": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
+        "currentHash": "48a3e09a3384de152ca48a8f9acc764f1659027ba9b2347e0effbe2f9349f9b3",
+        "previousHash": "48a3e09a3384de152ca48a8f9acc764f1659027ba9b2347e0effbe2f9349f9b3",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/cars-source-2026-09-24/modern-release.json"
+      }
+    ],
+    "mountedConfigurationPassed": true
+  },
+  "live": {
+    "key": "modern",
+    "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+    "commit": "4f6e759e7480b66707ca855ea8bb5fc2611d9afe",
+    "deployments": [
+      {
+        "id": "dpl_HRWDBhDDptapT6oDGaoE8Bkh2deE",
+        "url": "cars-template-modern-i9ngdvazj-tyj5.vercel.app",
+        "state": "READY",
+        "target": "production",
+        "created": 1790760029407
+      }
+    ],
+    "base": "https://cars-template-modern.vercel.app",
+    "verifiedAt": "2026-09-30T09:36:17.382Z",
+    "checks": [
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 320,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 305,
+          "viewport": 320,
+          "title": "Cars at Day & Night Auto Group | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-car-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-filters-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1609703048009-d3576872b32c%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 320,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 305,
+          "viewport": 320,
+          "title": "About and contact | Day & Night | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-phone-v4.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/images/social/instagram-white.svg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fsocial%2Fyoutube.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fsocial%2Ffacebook.png&w=32&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 320,
+        "locale": "en",
+        "url": "https://cars-template-modern.vercel.app/en/listing/bmw-x5-m50d-sofia-2020",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 305,
+          "viewport": 320
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 320,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 305,
+          "viewport": 320,
+          "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-car-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-filters-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1609703048009-d3576872b32c%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 320,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 305,
+          "viewport": 320,
+          "title": "За нас и контакти | Day & Night | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-phone-v4.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/images/social/instagram-white.svg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fsocial%2Fyoutube.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fsocial%2Ffacebook.png&w=32&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 320,
+        "locale": "bg",
+        "url": "https://cars-template-modern.vercel.app/bg/listing/bmw-x5-m50d-sofia-2020",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 305,
+          "viewport": 320
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 390,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 375,
+          "viewport": 390,
+          "title": "Cars at Day & Night Auto Group | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-car-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-filters-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1609703048009-d3576872b32c%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 390,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 375,
+          "viewport": 390,
+          "title": "About and contact | Day & Night | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-phone-v4.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/images/social/instagram-white.svg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fsocial%2Fyoutube.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fsocial%2Ffacebook.png&w=32&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 390,
+        "locale": "en",
+        "url": "https://cars-template-modern.vercel.app/en/listing/bmw-x5-m50d-sofia-2020",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 375,
+          "viewport": 390
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 390,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 375,
+          "viewport": 390,
+          "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-car-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-filters-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1609703048009-d3576872b32c%3Fw%3D1200%26q%3D80&w=256&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 390,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 375,
+          "viewport": 390,
+          "title": "За нас и контакти | Day & Night | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fservices%2Fheader-phone-v4.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/images/social/instagram-white.svg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fsocial%2Fyoutube.png&w=48&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Fimages%2Fsocial%2Ffacebook.png&w=32&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 390,
+        "locale": "bg",
+        "url": "https://cars-template-modern.vercel.app/bg/listing/bmw-x5-m50d-sofia-2020",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 375,
+          "viewport": 390
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 1440,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "Cars at Day & Night Auto Group | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/images/desktop/studio-complete-vehicles-v4.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=384&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 1440,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "About and contact | Day & Night | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/images/desktop/studio-complete-vehicles-v4.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 1440,
+        "locale": "en",
+        "url": "https://cars-template-modern.vercel.app/en/listing/bmw-x5-m50d-sofia-2020",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1425,
+          "viewport": 1440
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 1440,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/images/desktop/studio-complete-vehicles-v4.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=384&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 1440,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "За нас и контакти | Day & Night | Day & Night Auto Group"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/images/desktop/studio-complete-vehicles-v4.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-modern.vercel.app/_next/image?url=%2Flead-logo.png&w=256&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 1440,
+        "locale": "bg",
+        "url": "https://cars-template-modern.vercel.app/bg/listing/bmw-x5-m50d-sofia-2020",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1425,
+          "viewport": 1440
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "request-isolation",
+        "locale": "en",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "name": "request-isolation",
+        "locale": "bg",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "name": "security-write-blocking",
+        "status": 403,
+        "pass": true
+      },
+      {
+        "name": "no-javascript",
+        "status": 200,
+        "lang": "en",
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "storage-disabled",
+        "status": 200,
+        "lang": "en",
+        "errors": [],
+        "pass": true
+      }
+    ],
+    "passed": true
+  },
+  "nativeTests": [
+    {
+      "name": "auto-best-unit",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "--test",
+        "scripts/locale-policy.test.mjs",
+        "scripts/locale-catalog.test.mjs",
+        "scripts/locale-source-audit.test.mjs",
+        "scripts/locale-copy-audit.test.mjs",
+        "scripts/locale-mobile-copy.test.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:10.797Z"
+    },
+    {
+      "name": "carwow-unit",
+      "folder": "carwow",
+      "node": "L:/Toolchains/Node/24.21.0/node.exe",
+      "args": [
+        "--experimental-strip-types",
+        "--test",
+        "scripts/locale-policy.test.mjs",
+        "scripts/locale-catalog.test.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:11.111Z"
+    },
+    {
+      "name": "import-unit",
+      "folder": "import",
+      "node": "L:/Toolchains/Node/24.21.0/node.exe",
+      "args": [
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "src/lib/i18n/native.spec.ts",
+        "src/lib/i18n/native-source.spec.ts"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:15.513Z"
+    },
+    {
+      "name": "modern-unit",
+      "folder": "modern/apps/web",
+      "node": "C:/Users/radev/AppData/Local/nvm/v22.23.2/node.exe",
+      "args": [
+        "../../node_modules/vitest/vitest.mjs",
+        "run",
+        "lib/public-locale-policy.test.ts",
+        "lib/public-proxy-policy.test.ts"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:17.591Z"
+    },
+    {
+      "name": "auto-best-preferences",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-preferences.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:25.083Z"
+    },
+    {
+      "name": "auto-best-storage",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-storage.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:35.783Z"
+    },
+    {
+      "name": "auto-best-races",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-races.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:49.681Z"
+    }
+  ],
+  "acceptanceScope": {
+    "browser": "EN/BG public home, inventory, detail and contact or stores at 320,390,1440; visible image loading; no JavaScript; denied browser storage; conflicting cookies; anonymous write rejection.",
+    "nativeBoundaries": "Portable core, server, preference handlers and UI logic compared with prior accepted immutable source. All are byte-identical after line normalization; Auto Best preference changes are CSS only and its preference/storage/race journeys were rerun.",
+    "mounted": "Actual native configuration adapter executed against the selected subtree; existing workflow suite passed 235 tests. Each dealer still requires its mounted build and hosted journey verification."
+  },
+  "limitations": [
+    "Physical-device performance acceptance is not implied."
+  ],
+  "verifiedAt": "2026-09-30T09:43:37.017Z"
+}

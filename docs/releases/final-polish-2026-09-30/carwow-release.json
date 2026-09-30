@@ -1,0 +1,172 @@
+{
+  "repository": "darkapoparka/cars",
+  "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourcePath": "templates/carwow",
+  "sourceTree": "6ba84fbd77bf8536491fcb7f649c620776c91060",
+  "sourceDigest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f",
+  "approved": true,
+  "verifiedAt": "2026-09-30T09:43:40.041Z",
+  "release": "2026.09.30",
+  "runtime": {
+    "node": "24.x",
+    "hosting": "Vercel production build",
+    "browser": "Chrome"
+  },
+  "checks": [
+    {
+      "name": "exact-source-and-mirror-mapping",
+      "status": "passed",
+      "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+      "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
+    },
+    {
+      "name": "vercel-production-build",
+      "status": "passed",
+      "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+      "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
+    },
+    {
+      "name": "public-en-bg-browser-acceptance",
+      "status": "passed",
+      "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+      "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f"
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "widths": [
+      320,
+      390,
+      1440
+    ]
+  },
+  "modes": {
+    "standalone": "Hosted EN/BG acceptance passed for the exact canonical runtime source.",
+    "mounted": "Explicit dealer refresh, preservation assertions and hosted verification required."
+  },
+  "nativeLocalization": {
+    "schemaVersion": 1,
+    "adapter": "native-v1",
+    "repository": "darkapoparka/cars",
+    "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "sourcePath": "templates/carwow",
+    "sourceTree": "6ba84fbd77bf8536491fcb7f649c620776c91060",
+    "sourceDigest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f",
+    "locales": [
+      "en",
+      "bg"
+    ],
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "verifiedAt": "2026-09-30T09:43:40.041Z",
+    "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+    "catalogs": [
+      {
+        "format": "typescript-pair",
+        "path": "src/lib/locale/catalog.ts",
+        "en": "en",
+        "bg": "bg"
+      }
+    ],
+    "deployment": {
+      "id": "dpl_5Dkn8YK5zLTKb1MQ4V9rYMJLJESK",
+      "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+      "state": "READY",
+      "sourceCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "publicAlias": "https://cars-template-carwow.vercel.app/",
+      "publishingRepository": "darkapoparka/cars-template-carwow",
+      "publishingCommit": "d23b2a392ad6e511547d5501573428ea2fda4e26",
+      "sourceMapping": "docs/releases/final-polish-2026-09-30/publishing-source-mapping.json"
+    },
+    "checks": [
+      {
+        "name": "catalog-completeness",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+      },
+      {
+        "name": "hardcoded-ui",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+      },
+      {
+        "name": "native-routing",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+      },
+      {
+        "name": "standalone-journeys",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+      },
+      {
+        "name": "mounted-journeys",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Native adapter and workflow mount contracts; final hosted dealer acceptance required."
+      },
+      {
+        "name": "public-journeys",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+      },
+      {
+        "name": "preferences-no-js",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+      },
+      {
+        "name": "preferences-storage-disabled",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+      },
+      {
+        "name": "preferences-races",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Unchanged accepted preference implementation verified by exact source comparison; current public fallback checked."
+      },
+      {
+        "name": "request-isolation",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+      },
+      {
+        "name": "security-write-blocking",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+      },
+      {
+        "name": "assets-preserved",
+        "status": "passed",
+        "evidenceSha256": "09984784eb4af89ae6eb9a618ff6eda5b7f725a0387e96e669de9b04193d218f",
+        "evidence": "docs/releases/final-polish-2026-09-30/carwow-acceptance.json",
+        "scope": "Current source tests, explicit source mapping and public acceptance in linked evidence."
+      }
+    ]
+  }
+}

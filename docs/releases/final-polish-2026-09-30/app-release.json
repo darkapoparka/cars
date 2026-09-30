@@ -1,0 +1,48 @@
+{
+  "repository": "darkapoparka/cars",
+  "commit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+  "sourcePath": "templates/app",
+  "sourceTree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080",
+  "sourceDigest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+  "approved": true,
+  "verifiedAt": "2026-09-30T09:43:46.204Z",
+  "release": "2026.09.30",
+  "runtime": {
+    "node": "22.x",
+    "hosting": "Vercel production build",
+    "browser": "Chrome"
+  },
+  "checks": [
+    {
+      "name": "exact-source-and-mirror-mapping",
+      "status": "passed",
+      "evidence": "docs/releases/final-polish-2026-09-30/app-acceptance.json",
+      "evidenceSha256": "09182ecd0d5073243a1290058817c689c047b16bb117b1011c8fb96e9f528346"
+    },
+    {
+      "name": "vercel-production-build",
+      "status": "passed",
+      "evidence": "docs/releases/final-polish-2026-09-30/app-acceptance.json",
+      "evidenceSha256": "09182ecd0d5073243a1290058817c689c047b16bb117b1011c8fb96e9f528346"
+    },
+    {
+      "name": "public-en-bg-browser-acceptance",
+      "status": "passed",
+      "evidence": "docs/releases/final-polish-2026-09-30/app-acceptance.json",
+      "evidenceSha256": "09182ecd0d5073243a1290058817c689c047b16bb117b1011c8fb96e9f528346"
+    }
+  ],
+  "standalone": {
+    "mobile": true,
+    "desktop": true,
+    "widths": [
+      320,
+      390,
+      1440
+    ]
+  },
+  "modes": {
+    "standalone": "Hosted EN/BG acceptance passed for the exact canonical runtime source.",
+    "mounted": "Explicit dealer refresh, preservation assertions and hosted verification required."
+  }
+}

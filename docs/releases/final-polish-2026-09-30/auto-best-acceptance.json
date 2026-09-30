@@ -1,0 +1,990 @@
+{
+  "schemaVersion": 1,
+  "key": "auto-best",
+  "canonicalSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/auto-best",
+    "tree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb",
+    "digest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964"
+  },
+  "publishingSource": {
+    "repository": "darkapoparka/cars-template-auto-best",
+    "commit": "e4e1c7840416478d7f8dc285ab4f600e30a8f63b",
+    "runtimeSourceMatches": true
+  },
+  "sourceProof": {
+    "key": "auto-best",
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "path": "templates/auto-best",
+      "tree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb",
+      "digest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964"
+    },
+    "mirror": {
+      "repository": "darkapoparka/cars-template-auto-best",
+      "commit": "e4e1c7840416478d7f8dc285ab4f600e30a8f63b",
+      "runtimeSourceMatches": true
+    },
+    "catalogs": {
+      "catalogs": [
+        {
+          "descriptor": {
+            "format": "typescript-pair",
+            "path": "src/lib/locale/catalog.ts",
+            "en": "en",
+            "bg": "bg"
+          },
+          "keys": 1019,
+          "contentDigest": "8fc16c8dfb31ae25a7287727d883ac630431ca1c9055eda3172c956dbffcb023"
+        }
+      ],
+      "declaredCatalogParityPassed": true,
+      "linguisticAcceptance": "requires-reviewed-evidence-not-key-counts"
+    },
+    "boundaries": [
+      {
+        "path": "src/lib/locale/LocalePreferences.svelte",
+        "previousCommit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+        "currentHash": "e85bcc59c0eac6e990ddd3dcaad872e944f40b568ff81019bb1d7e429bed65a4",
+        "previousHash": "447e99d41ca09fcf469d548cafd2c914f15d0dc38c60c1bbc2ce643e811c9ea6",
+        "unchanged": false,
+        "onlyStylesChanged": true,
+        "priorAcceptance": "docs/releases/auto-best-0.2.0-2026-09-28/auto-best-release.json"
+      },
+      {
+        "path": "src/lib/locale/core.ts",
+        "previousCommit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+        "currentHash": "51f0a9d86614357fcc086b32b87ea42c25f74bccccd00925b8dc902f48aa04bf",
+        "previousHash": "51f0a9d86614357fcc086b32b87ea42c25f74bccccd00925b8dc902f48aa04bf",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/auto-best-0.2.0-2026-09-28/auto-best-release.json"
+      },
+      {
+        "path": "src/lib/locale/policy.ts",
+        "previousCommit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+        "currentHash": "5cac2494777341dfb0f2cbc886de13a554dee17bfa46ba8b116ddf57a2a700bc",
+        "previousHash": "5cac2494777341dfb0f2cbc886de13a554dee17bfa46ba8b116ddf57a2a700bc",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/auto-best-0.2.0-2026-09-28/auto-best-release.json"
+      },
+      {
+        "path": "src/lib/locale/server.ts",
+        "previousCommit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+        "currentHash": "d3915343fb15c3dba18784af0bb47e4882a0a60debde40a0e3e8ce2ef59c59ce",
+        "previousHash": "d3915343fb15c3dba18784af0bb47e4882a0a60debde40a0e3e8ce2ef59c59ce",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/auto-best-0.2.0-2026-09-28/auto-best-release.json"
+      },
+      {
+        "path": "src/routes/api/preferences/+server.ts",
+        "previousCommit": "b9ed9beee33c1bcc3278959a2f4cd351b04e87f0",
+        "currentHash": "c73b6c973af57fb509ca924834fad17f66e96d216b14db952bcef5e0d05b9566",
+        "previousHash": "c73b6c973af57fb509ca924834fad17f66e96d216b14db952bcef5e0d05b9566",
+        "unchanged": true,
+        "onlyStylesChanged": false,
+        "priorAcceptance": "docs/releases/auto-best-0.2.0-2026-09-28/auto-best-release.json"
+      }
+    ],
+    "mountedConfigurationPassed": true
+  },
+  "live": {
+    "key": "auto-best",
+    "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+    "commit": "e4e1c7840416478d7f8dc285ab4f600e30a8f63b",
+    "deployments": [
+      {
+        "id": "dpl_DyEQ16sDVqe81ZtaGnuvYAizLDxn",
+        "url": "cars-template-auto-best-g7c3kizsd-tyj5.vercel.app",
+        "state": "READY",
+        "target": "production",
+        "created": 1790760016519
+      }
+    ],
+    "base": "https://cars-template-auto-best.vercel.app",
+    "verifiedAt": "2026-09-30T09:35:09.386Z",
+    "checks": [
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 320,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 320,
+          "viewport": 320,
+          "title": "Auto Best — Showroom concept in Sofia"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2-light.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/home-action-finance-v3.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/listing-grid",
+        "width": 320,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 320,
+          "viewport": 320,
+          "title": "Demo inventory — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-03-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 320,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 320,
+          "viewport": 320,
+          "title": "Contact — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2-light.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 320,
+        "locale": "en",
+        "url": "https://cars-template-auto-best.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 320,
+          "viewport": 320
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 320,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 320,
+          "viewport": 320,
+          "title": "Auto Best — Концепция за шоурум в София"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2-light.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/home-action-finance-v3.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/listing-grid",
+        "width": 320,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 320,
+          "viewport": 320,
+          "title": "Примерни автомобили — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-03-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 320,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 320,
+          "viewport": 320,
+          "title": "Контакти — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2-light.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 320,
+        "locale": "bg",
+        "url": "https://cars-template-auto-best.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 320,
+          "viewport": 320
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 390,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 390,
+          "viewport": 390,
+          "title": "Auto Best — Showroom concept in Sofia"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2-light.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/home-action-finance-v3.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/listing-grid",
+        "width": 390,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 390,
+          "viewport": 390,
+          "title": "Demo inventory — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-03-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 390,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 390,
+          "viewport": 390,
+          "title": "Contact — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2-light.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 390,
+        "locale": "en",
+        "url": "https://cars-template-auto-best.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 390,
+          "viewport": 390
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 390,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 390,
+          "viewport": 390,
+          "title": "Auto Best — Концепция за шоурум в София"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2-light.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-sell-front-v3-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-import-front-v3-480.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/home-action-finance-v3.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/listing-grid",
+        "width": 390,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 390,
+          "viewport": 390,
+          "title": "Примерни автомобили — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-03-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 390,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 390,
+          "viewport": 390,
+          "title": "Контакти — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2-light.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 390,
+        "locale": "bg",
+        "url": "https://cars-template-auto-best.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 390,
+          "viewport": 390
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 1440,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "Auto Best — Showroom concept in Sofia"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-sell-front-v3.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/listing-grid",
+        "width": 1440,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "Demo inventory — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 1440,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "Contact — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 1440,
+        "locale": "en",
+        "url": "https://cars-template-auto-best.vercel.app/en/listing-detail-v1/1?return=%2Fen%2Flisting-grid%23vehicle-1",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1425,
+          "viewport": 1440
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 1440,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "Auto Best — Концепция за шоурум в София"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-collection-banner-v2.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/service-sell-front-v3.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/listing-grid",
+        "width": 1440,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "Примерни автомобили — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-04-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-01-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-06-640.webp",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/lead/day-night-stock-02-640.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/contact",
+        "width": 1440,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1425,
+          "viewport": 1440,
+          "title": "Контакти — Auto Best"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-auto-best.vercel.app/assets/images/template/auto-best-logo-v2.webp",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 1440,
+        "locale": "bg",
+        "url": "https://cars-template-auto-best.vercel.app/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1425,
+          "viewport": 1440
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "request-isolation",
+        "locale": "en",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "name": "request-isolation",
+        "locale": "bg",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "name": "security-write-blocking",
+        "status": 403,
+        "pass": true
+      },
+      {
+        "name": "no-javascript",
+        "status": 200,
+        "lang": "en",
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "storage-disabled",
+        "status": 200,
+        "lang": "en",
+        "errors": [],
+        "pass": true
+      }
+    ],
+    "passed": true
+  },
+  "nativeTests": [
+    {
+      "name": "auto-best-unit",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "--test",
+        "scripts/locale-policy.test.mjs",
+        "scripts/locale-catalog.test.mjs",
+        "scripts/locale-source-audit.test.mjs",
+        "scripts/locale-copy-audit.test.mjs",
+        "scripts/locale-mobile-copy.test.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:10.797Z"
+    },
+    {
+      "name": "carwow-unit",
+      "folder": "carwow",
+      "node": "L:/Toolchains/Node/24.21.0/node.exe",
+      "args": [
+        "--experimental-strip-types",
+        "--test",
+        "scripts/locale-policy.test.mjs",
+        "scripts/locale-catalog.test.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:11.111Z"
+    },
+    {
+      "name": "import-unit",
+      "folder": "import",
+      "node": "L:/Toolchains/Node/24.21.0/node.exe",
+      "args": [
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "src/lib/i18n/native.spec.ts",
+        "src/lib/i18n/native-source.spec.ts"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:15.513Z"
+    },
+    {
+      "name": "modern-unit",
+      "folder": "modern/apps/web",
+      "node": "C:/Users/radev/AppData/Local/nvm/v22.23.2/node.exe",
+      "args": [
+        "../../node_modules/vitest/vitest.mjs",
+        "run",
+        "lib/public-locale-policy.test.ts",
+        "lib/public-proxy-policy.test.ts"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:17.591Z"
+    },
+    {
+      "name": "auto-best-preferences",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-preferences.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:25.083Z"
+    },
+    {
+      "name": "auto-best-storage",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-storage.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:35.783Z"
+    },
+    {
+      "name": "auto-best-races",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-races.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:49.681Z"
+    }
+  ],
+  "acceptanceScope": {
+    "browser": "EN/BG public home, inventory, detail and contact or stores at 320,390,1440; visible image loading; no JavaScript; denied browser storage; conflicting cookies; anonymous write rejection.",
+    "nativeBoundaries": "Portable core, server, preference handlers and UI logic compared with prior accepted immutable source. All are byte-identical after line normalization; Auto Best preference changes are CSS only and its preference/storage/race journeys were rerun.",
+    "mounted": "Actual native configuration adapter executed against the selected subtree; existing workflow suite passed 235 tests. Each dealer still requires its mounted build and hosted journey verification."
+  },
+  "limitations": [
+    "Physical-device performance acceptance is not implied."
+  ],
+  "verifiedAt": "2026-09-30T09:43:35.799Z"
+}

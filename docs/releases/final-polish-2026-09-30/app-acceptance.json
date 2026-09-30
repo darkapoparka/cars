@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "key": "app",
+  "canonicalSource": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/app",
+    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080",
+    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad"
+  },
+  "publishingSource": {
+    "repository": "darkapoparka/cars-template-app",
+    "commit": "8ab7571fedc0bf66473fc81ce077fd700c3231b7",
+    "runtimeSourceMatches": true
+  },
+  "sourceProof": {
+    "key": "app",
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "path": "templates/app",
+      "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080",
+      "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad"
+    },
+    "mirror": {
+      "repository": "darkapoparka/cars-template-app",
+      "commit": "8ab7571fedc0bf66473fc81ce077fd700c3231b7",
+      "runtimeSourceMatches": true
+    },
+    "catalogs": null,
+    "boundaries": [],
+    "mountedConfigurationPassed": false
+  },
+  "live": {
+    "key": "app",
+    "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+    "commit": "8ab7571fedc0bf66473fc81ce077fd700c3231b7",
+    "deployments": [
+      {
+        "id": "dpl_3ZmJbvM9ewh8ZxLnwkGz1vg5UGtJ",
+        "url": "cars-template-dbkhat18l-tyj5.vercel.app",
+        "state": "READY",
+        "target": "production",
+        "created": 1790760069311
+      }
+    ],
+    "base": "https://cars-template-app.vercel.app",
+    "verifiedAt": "2026-09-30T09:40:23.159Z",
+    "checks": [
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 320,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 320,
+          "viewport": 320,
+          "title": "Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fsedan.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Ffinance-v2.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fservice-v2.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-hero-v1.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-mercedes.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-bmw.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-audi.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-nissan.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-collection-v1.png&w=384&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 320,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 320,
+          "viewport": 320,
+          "title": "Our cars · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-visit-v1.png&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9718403147.jpg",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/stores",
+        "width": 320,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 320,
+          "viewport": 320,
+          "title": "Visit showroom · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fstudio-car-v2.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 320,
+        "locale": "en",
+        "url": "https://cars-template-app.vercel.app/en/cars/2024-toyota-fortuner-exr",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 320,
+          "viewport": 320
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 320,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 320,
+          "viewport": 320,
+          "title": "Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fsedan.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Ffinance-v2.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fservice-v2.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-hero-v1.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-mercedes.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-bmw.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-audi.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-nissan.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-collection-v1.png&w=384&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 320,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 320,
+          "viewport": 320,
+          "title": "Our cars · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-visit-v1.png&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9718403147.jpg",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/stores",
+        "width": 320,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 320,
+          "viewport": 320,
+          "title": "Visit showroom · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fstudio-car-v2.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 320,
+        "locale": "bg",
+        "url": "https://cars-template-app.vercel.app/bg/cars/2024-toyota-fortuner-exr",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 320,
+          "viewport": 320
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 390,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 390,
+          "viewport": 390,
+          "title": "Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fsedan.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Ffinance-v2.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fservice-v2.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-hero-v1.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-mercedes.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-bmw.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-audi.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-nissan.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-hyundai.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-collection-v1.png&w=384&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 390,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 390,
+          "viewport": 390,
+          "title": "Our cars · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-visit-v1.png&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9718403147.jpg",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/stores",
+        "width": 390,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 390,
+          "viewport": 390,
+          "title": "Visit showroom · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fstudio-car-v2.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 390,
+        "locale": "en",
+        "url": "https://cars-template-app.vercel.app/en/cars/2024-toyota-fortuner-exr",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 390,
+          "viewport": 390
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 390,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 390,
+          "viewport": 390,
+          "title": "Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fsedan.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Ffinance-v2.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fservice-v2.png&w=96&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-hero-v1.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-mercedes.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-bmw.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-audi.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-nissan.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-hyundai.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-collection-v1.png&w=384&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 390,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 390,
+          "viewport": 390,
+          "title": "Our cars · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-visit-v1.png&w=384&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9718403147.jpg",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/stores",
+        "width": 390,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 390,
+          "viewport": 390,
+          "title": "Visit showroom · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fstudio-car-v2.png&w=640&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 390,
+        "locale": "bg",
+        "url": "https://cars-template-app.vercel.app/bg/cars/2024-toyota-fortuner-exr",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 390,
+          "viewport": 390
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 1440,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1440,
+          "viewport": 1440,
+          "title": "Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fsedan.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Ffinance-v2.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fservice-v2.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-hero-v1.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-mercedes.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-bmw.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-audi.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-nissan.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-hyundai.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/sell-brand-1.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/sell-brand-7.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/sell-brand-8.png",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 1440,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1440,
+          "viewport": 1440,
+          "title": "Our cars · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-visit-v1.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9718403147.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9718423696.jpg",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/stores",
+        "width": 1440,
+        "locale": "en",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1440,
+          "viewport": 1440,
+          "title": "Visit showroom · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fstudio-car-v2.png&w=1080&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 1440,
+        "locale": "en",
+        "url": "https://cars-template-app.vercel.app/en/cars/2024-toyota-fortuner-exr",
+        "status": 200,
+        "layout": {
+          "lang": "en",
+          "width": 1440,
+          "viewport": 1440
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "",
+        "width": 1440,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1440,
+          "viewport": 1440,
+          "title": "Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fcutouts%2Fsedan.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Ffinance-v2.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fservice-v2.png&w=256&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-hero-v1.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-mercedes.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-bmw.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-audi.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-nissan.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/brand-hyundai.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/sell-brand-1.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/sell-brand-7.png",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/sell-brand-8.png",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/cars",
+        "width": 1440,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1440,
+          "viewport": 1440,
+          "title": "Our cars · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fblack%2Fhome-visit-v1.png&w=640&q=75",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9714841126.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9718403147.jpg",
+            "loaded": true
+          },
+          {
+            "src": "https://cars-template-app.vercel.app/reference-assets/catalog/9718423696.jpg",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "public-journey",
+        "route": "/stores",
+        "width": 1440,
+        "locale": "bg",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1440,
+          "viewport": 1440,
+          "title": "Visit showroom · Drive24"
+        },
+        "images": [
+          {
+            "src": "https://cars-template-app.vercel.app/_next/image?url=%2Fshowroom%2Fstudio-car-v2.png&w=1080&q=75",
+            "loaded": true
+          }
+        ],
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "vehicle-detail",
+        "width": 1440,
+        "locale": "bg",
+        "url": "https://cars-template-app.vercel.app/bg/cars/2024-toyota-fortuner-exr",
+        "status": 200,
+        "layout": {
+          "lang": "bg",
+          "width": 1440,
+          "viewport": 1440
+        },
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "request-isolation",
+        "locale": "en",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "name": "request-isolation",
+        "locale": "bg",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "name": "security-write-blocking",
+        "status": 405,
+        "pass": true
+      },
+      {
+        "name": "no-javascript",
+        "status": 200,
+        "lang": "en",
+        "errors": [],
+        "pass": true
+      },
+      {
+        "name": "storage-disabled",
+        "status": 200,
+        "lang": "en",
+        "errors": [],
+        "pass": true
+      }
+    ],
+    "passed": true
+  },
+  "nativeTests": [
+    {
+      "name": "auto-best-unit",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "--test",
+        "scripts/locale-policy.test.mjs",
+        "scripts/locale-catalog.test.mjs",
+        "scripts/locale-source-audit.test.mjs",
+        "scripts/locale-copy-audit.test.mjs",
+        "scripts/locale-mobile-copy.test.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:10.797Z"
+    },
+    {
+      "name": "carwow-unit",
+      "folder": "carwow",
+      "node": "L:/Toolchains/Node/24.21.0/node.exe",
+      "args": [
+        "--experimental-strip-types",
+        "--test",
+        "scripts/locale-policy.test.mjs",
+        "scripts/locale-catalog.test.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:11.111Z"
+    },
+    {
+      "name": "import-unit",
+      "folder": "import",
+      "node": "L:/Toolchains/Node/24.21.0/node.exe",
+      "args": [
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "src/lib/i18n/native.spec.ts",
+        "src/lib/i18n/native-source.spec.ts"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:15.513Z"
+    },
+    {
+      "name": "modern-unit",
+      "folder": "modern/apps/web",
+      "node": "C:/Users/radev/AppData/Local/nvm/v22.23.2/node.exe",
+      "args": [
+        "../../node_modules/vitest/vitest.mjs",
+        "run",
+        "lib/public-locale-policy.test.ts",
+        "lib/public-proxy-policy.test.ts"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:17.591Z"
+    },
+    {
+      "name": "auto-best-preferences",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-preferences.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:25.083Z"
+    },
+    {
+      "name": "auto-best-storage",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-storage.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:35.783Z"
+    },
+    {
+      "name": "auto-best-races",
+      "folder": "auto-best",
+      "node": "L:\\Toolchains\\Node\\26.10.0\\node.exe",
+      "args": [
+        "scripts/qa-locale-races.mjs"
+      ],
+      "code": 0,
+      "completedAt": "2026-09-30T09:37:49.681Z"
+    }
+  ],
+  "acceptanceScope": {
+    "browser": "EN/BG public home, inventory, detail and contact or stores at 320,390,1440; visible image loading; no JavaScript; denied browser storage; conflicting cookies; anonymous write rejection.",
+    "nativeBoundaries": "Portable core, server, preference handlers and UI logic compared with prior accepted immutable source. All are byte-identical after line normalization; Auto Best preference changes are CSS only and its preference/storage/race journeys were rerun.",
+    "mounted": "Actual native configuration adapter executed against the selected subtree; existing workflow suite passed 235 tests. Each dealer still requires its mounted build and hosted journey verification."
+  },
+  "limitations": [
+    "Physical-device performance acceptance is not implied."
+  ],
+  "verifiedAt": "2026-09-30T09:43:46.204Z"
+}
