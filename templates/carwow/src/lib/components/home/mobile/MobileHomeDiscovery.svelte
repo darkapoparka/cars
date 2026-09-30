@@ -6,7 +6,7 @@
 	import { ChevronRight } from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
-	import { compactMobileDistance, shortFuel } from '$lib/utils/format';
+	import MobileVehicleStats from '$lib/components/shared/mobile/MobileVehicleStats.svelte';
 	import type { HomeMobileData } from '$lib/types/home';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
 	import {
@@ -132,15 +132,8 @@
 						{/if}
 					</span>
 					<span class="mh-car__copy">
-						<span class="mh-car__brand">{car.brand}</span>
-						<strong class="mh-car__title">{car.model}</strong>
-						<span
-							class="mh-car__meta"
-							aria-label={`${car.year}, ${shortFuel(car.fuel, i18n.locale)}, ${i18n.distance(car.mileage)}`}
-							>{car.year} · {shortFuel(car.fuel, i18n.locale)} · {compactMobileDistance(
-								i18n.distance(car.mileage)
-							)}</span
-						>
+						<strong class="mh-car__title" title={car.shortTitle}>{car.shortTitle}</strong>
+						<MobileVehicleStats vehicle={car} />
 					</span>
 					<span class="mh-car__foot">
 						<span class="mh-car__price">{car.priceEur}</span>
@@ -587,7 +580,7 @@
 	.mh-car {
 		position: relative;
 		display: grid;
-		grid-template-rows: 136px minmax(68px, auto) 42px;
+		grid-template-rows: 136px minmax(68px, auto) auto;
 		overflow: hidden;
 		border: 1px solid #e2e7ee;
 		border-radius: 8px;
@@ -607,18 +600,6 @@
 		gap: 4px;
 		min-width: 0;
 		padding: 11px 13px 4px;
-	}
-
-	.mh-car__brand {
-		overflow: hidden;
-		color: #4f5966;
-		font-size: var(--sa-text-xs);
-		font-weight: var(--sa-weight-semibold);
-		letter-spacing: var(--sa-tracking-wide);
-		line-height: 1;
-		text-overflow: ellipsis;
-		text-transform: uppercase;
-		white-space: nowrap;
 	}
 
 	.mh-car__media {
@@ -669,16 +650,6 @@
 		white-space: nowrap;
 	}
 
-	.mh-car__meta {
-		overflow: hidden;
-		color: #4f5966;
-		font-size: var(--sa-text-sm);
-		font-weight: var(--sa-weight-medium);
-		line-height: 1.15;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-
 	.mh-car__foot {
 		display: flex;
 		align-items: center;
@@ -688,20 +659,14 @@
 	}
 
 	.mh-car__price {
-		display: inline-flex;
-		max-width: calc(100% - 40px);
+		display: block;
+		min-width: 0;
 		min-height: var(--sa-mobile-section-action-h);
-		align-items: center;
-		border-radius: 6px;
-		background: #fff;
-		padding: 0 9px;
-		overflow: hidden;
+		align-content: center;
 		color: var(--sa-price);
 		font-size: var(--sa-text-lg);
 		font-weight: var(--sa-weight-strong);
-		line-height: 1;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+		line-height: 1.2;
 	}
 
 	.mh-car__go {
@@ -761,7 +726,6 @@
 		line-height: var(--sa-mobile-leading-meta);
 	}
 
-	.mh-car__brand,
 	.mh-car__badge {
 		font-size: var(--sa-mobile-type-micro);
 		font-weight: var(--sa-weight-semibold);
@@ -771,12 +735,6 @@
 		font-size: var(--sa-mobile-type-card-title);
 		font-weight: var(--sa-weight-heading);
 		line-height: var(--sa-mobile-leading-heading);
-	}
-
-	.mh-car__meta {
-		font-size: var(--sa-mobile-type-meta);
-		font-weight: var(--sa-weight-medium);
-		line-height: var(--sa-mobile-leading-meta);
 	}
 
 	.mh-car__price {

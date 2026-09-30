@@ -2,10 +2,10 @@
 import {assetPath, browserPath} from '@/lib/paths';
 import {useCopy, useLocale} from '@/lib/locale';
 import {useEffect, useMemo, useRef, useState} from 'react';
-import {useRouter} from '@/lib/navigation';
 import * as stylex from '@stylexjs/stylex';
 import {Share2, Star} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
+import IconButton from '@/components/IconButton';
 import LoginSheet from '@/components/DealerEnquirySheet';
 import VehiclePhotoViewer from '@/components/VehiclePhotoViewer';
 import {vehicleGallery, type GalleryCategory,type GalleryPhoto} from '@/lib/vehicle-gallery';
@@ -18,7 +18,6 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
   const tx = useCopy();
   const locale = useLocale();
 
-  const router = useRouter();
   const photos = useMemo(() => capturedPhotos?.length?capturedPhotos:vehicleGallery(vehicle), [vehicle,capturedPhotos]);
   const available = categories.filter(item => photos.some(photo => photo.category === item));
   const [category, setCategory] = useState<GalleryCategory>(available.includes(initialCategory) ? initialCategory : available[0]);
@@ -51,7 +50,7 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
     } catch (error) {if (!(error instanceof DOMException && error.name === 'AbortError')) setMessage('Sharing is unavailable in this browser.');}
   }
   return <main aria-label={tx("Vehicle photo gallery")} {...stylex.props(s.page)}>
-    <PageHeader title={tx("Photos")} onBack={() => history.length > 1 ? router.back() : router.push(`/cars/${vehicle.slug}`)} backLabel={tx("Back to vehicle details")} action={<button type="button" aria-label={tx("Share car")} onClick={share} {...stylex.props(s.back)}><Share2 size={21}/></button>}/>
+    <PageHeader title={tx("Photos")} backHref={`/cars/${vehicle.slug}`} backLabel={tx("Back to vehicle details")} action={<IconButton icon={Share2} label={tx('Share car')} onClick={share}/>}/>
     <nav aria-label={tx("Vehicle photo categories")} {...stylex.props(s.tabs)}>{available.map(item => <button type="button" key={item} aria-pressed={item === category} onClick={() => choose(item)} {...stylex.props(s.tab, item === category && s.activeTab)}>{tx(captions[item])}</button>)}</nav>
     <div ref={content} {...stylex.props(s.images)}>{photos.map((photo, index) => <button type="button" key={`${photo.src}-${index}`} data-photo-index={index} data-photo-category={photo.category} aria-label={tx(`Zoom ${photo.label} photo`)} onClick={() => setSelected(index)} {...stylex.props(s.photoButton)}><img src={assetPath(photo.src)} width={1200} height={625} alt={`${vehicle.make} ${vehicle.model}: ${tx(photo.label)}`} loading={index < 2 ? 'eager' : 'lazy'} {...stylex.props(s.photo, vehicle.imagePlaceholder && s.placeholderPhoto)} /><span {...stylex.props(s.photoCaption)}><Star size={12} fill="currentColor" />{tx(photo.label)}</span></button>)}</div>
     <footer {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
@@ -62,7 +61,6 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
 }
 const s = stylex.create({
   page: {minHeight: '100dvh', paddingTop: 0, paddingBottom: 'calc(80px + env(safe-area-inset-bottom))', color: '#202024', backgroundColor: '#fff'},
-  back: {display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   tabs: {position: 'sticky', top: {[media.desktop]: 141, default: 'calc(68px + env(safe-area-inset-top))'}, left: 0, right: 0, zIndex: 104, display: 'flex', alignItems: 'center', gap: 9, height: 52, overflowX: 'auto', scrollbarWidth: 'none', paddingInline: 12, backgroundColor: '#f9f9f9'},
   tab: {fontFamily:$.fontSans,flexShrink:0,minHeight: 44, padding: '6px 9px', color: '#202024', fontSize: 14, fontWeight: 400, lineHeight: '20px', borderColor: '#c4c4c4', borderStyle: 'solid', borderWidth: 1, borderRadius: 15, backgroundColor: 'transparent', cursor: 'pointer'},
   activeTab: {color: '#fff', fontWeight: 600, borderColor: '#202024', backgroundColor: '#202024'},

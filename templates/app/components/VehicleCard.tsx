@@ -1,26 +1,21 @@
 'use client';
 import {memo} from 'react';
 import {assetPath} from '@/lib/paths';
-import {useCopy, useLocale} from '@/lib/locale';
-import {showroomLocation} from '@/lib/showroom-location';
+import {useCopy} from '@/lib/locale';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import ShowroomBadge from '@/components/ShowroomBadge';
-import {showroom} from '@/lib/showroom';
-import {ChevronRight, Heart, MapPin} from 'lucide-react';
+import {Heart} from 'lucide-react';
 import {CurrencyLabel} from '@/components/ReferenceUI';
 import {SAVED_KEY, useSavedVehicle} from '@/components/useVehicleState';
 import {formatPrice, type Vehicle} from '@/lib/data';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 export const STORAGE_KEY = SAVED_KEY;
-function VehicleCard({vehicle, luxe = false, showDiscount = false}: {vehicle: Vehicle; luxe?: boolean; showDiscount?: boolean}) {
+function VehicleCard({vehicle, showDiscount = false}: {vehicle: Vehicle; showDiscount?: boolean}) {
   const tx = useCopy();
-  const location = showroomLocation(useLocale());
 
   const {saved, toggle, error} = useSavedVehicle(vehicle.slug);
   const discount = Math.max(0, (vehicle.previousPrice ?? vehicle.price) - vehicle.price);
-  const isLuxe = vehicle.tier ? vehicle.tier === 'Luxe' : luxe || vehicle.slug === '2024-toyota-fortuner-exr';
   const badge = /coming/i.test(vehicle.badges[0] || '') ? 'Coming soon' : '';
   const href = `/cars/${vehicle.slug}`;
   const benefits = vehicle.proposalBenefits?.slice(0, 2) ?? [];
@@ -44,7 +39,6 @@ function VehicleCard({vehicle, luxe = false, showDiscount = false}: {vehicle: Ve
       <button type="button" onClick={toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${vehicle.make} ${vehicle.model} from saved cars` : `Save ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.heart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button>
     </div>
     <Link href={href} aria-label={facts.map(item => tx(item)).join(', ')} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} title={tx(item)} {...stylex.props(s.pill, index < 2 && s.fixedPill)}>{tx(item)}</span>)}</Link>
-    <Link href={showroom.locationHref} aria-label={location ? `${tx(showroom.locationLabel)}: ${location}` : tx(showroom.locationLabel)} {...stylex.props(s.location)}><MapPin size={17} strokeWidth={1.6} aria-hidden="true" {...stylex.props(s.locationIcon)}/><span {...stylex.props(s.locationText)}>{location || tx(showroom.locationLabel)}</span>{isLuxe ? <ShowroomBadge premium/> : null}<ChevronRight size={14} aria-hidden="true" {...stylex.props(s.locationIcon)}/></Link>
     {error ? <p role="alert" {...stylex.props(s.error)}>{tx(error)}</p> : null}
   </article>;
 }
@@ -77,8 +71,5 @@ const s = stylex.create({
   meta: {display: 'flex', alignItems: 'center', gap: 4, minHeight: 36, paddingTop: 4, paddingBottom: 8, paddingInline: 12, overflow: 'hidden'},
   pill: {flexShrink: 1, minWidth: 0, maxWidth: '100%', overflow: 'hidden', paddingBlock: 3, paddingInline: 6, color: $.muted, fontSize: 12, fontWeight: 400, lineHeight: '16px', whiteSpace: 'nowrap', textOverflow: 'ellipsis', borderRadius: 6, backgroundColor: '#f4f4f4'},
   fixedPill: {flexShrink: 0},
-  location: {display: 'flex', alignItems: 'center', gap: 7, minHeight: 44, paddingInline: 12, color: $.muted, borderTopColor: $.line, borderTopStyle: 'solid', borderTopWidth: 1, backgroundColor: {default: $.surfaceAlt, ':hover': $.rail}},
-  locationIcon: {flexShrink: 0},
-  locationText: {flexGrow: 1, minWidth: 0, overflow: 'hidden', fontSize: 12, fontWeight: 500, whiteSpace: 'nowrap', textOverflow: 'ellipsis'},
   error: {padding: '10px 12px', color: '#b42318', fontSize: 12, lineHeight: 1.4},
 });

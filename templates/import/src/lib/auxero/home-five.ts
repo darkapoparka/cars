@@ -890,7 +890,7 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 	},
 	{
 		label: 'View all',
-		image: '/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp',
+		image: '/assets/daynight/body-types/all-cars-front.webp',
 		bodyType: 'View all',
 		href: '/inventory'
 	}

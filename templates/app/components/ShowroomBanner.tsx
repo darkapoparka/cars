@@ -21,7 +21,7 @@ type Props = {
   colourful?: boolean;
 } & ({href: string; onClick?: never} | {href?: never; onClick: () => void});
 
-/** Shared fixed composition for every showroom hero and artwork theme. */
+/** Shared content-sized composition for every showroom hero and artwork theme. */
 export default function ShowroomBanner({title, mobileTitle, description, mobileDescription, action, mobileAction, image, href, onClick, colourful = false}: Props) {
   const tx = useCopy();
 
@@ -39,14 +39,14 @@ export default function ShowroomBanner({title, mobileTitle, description, mobileD
 const s = stylex.create({
   colourful: {color: '#fff', backgroundColor: campaign.surface},
   colourImage: {width: {[media.mobile]: '100%', default: 'auto'}, height: '100%', objectFit: 'cover', objectPosition: 'right center', maskImage: 'linear-gradient(to right,transparent,#000 8%),linear-gradient(to bottom,transparent 15%,#000 50%)'},
-  colourDescription: {color: campaign.muted, maxWidth: {[media.mobile]: '51%', default: 280}},
+  colourDescription: {color: campaign.muted, maxWidth: {[media.mobile]: '65%', default: 280}},
   colourAction: {color: campaign.actionText, backgroundColor: '#fff'},
-  banner: {position: 'relative', isolation: 'isolate', display: 'flex', alignItems: 'center', minHeight: {[media.mobile]: 164, [media.tablet]: 276, default: 300}, padding: {[media.mobile]: 14, [media.tablet]: 28, default: '32px 40px'}, overflow: 'hidden', color: $.ink, backgroundColor: $.bannerSurface},
+  banner: {position: 'relative', isolation: 'isolate', display: 'flex', alignItems: 'center', minHeight: {[media.mobile]: 0, [media.tablet]: 276, default: 300}, padding: {[media.mobile]: $.bannerPadding, [media.tablet]: 28, default: '32px 40px'}, overflow: 'hidden', color: $.ink, backgroundColor: $.bannerSurface},
   copy: {position: 'relative', zIndex: 1, width: {[media.mobile]: '100%', default: '65%'}, minWidth: 0},
   image: {position: 'absolute', right: 0, bottom: 0, width: {[media.mobile]: '92%', default: 'auto'}, maxWidth: 'none', height: {[media.mobile]: 'auto', default: '100%'}, pointerEvents: 'none', maskImage: 'linear-gradient(to right,transparent,#000 22%),linear-gradient(to bottom,transparent,#000 20%)', maskComposite: 'intersect'},
-  title: {maxWidth: {[media.mobile]: '72%', default: '100%'}, fontSize: {[media.mobile]: 'clamp(20px,5.6vw,24px)', [media.tablet]: 28, default: 36}, fontWeight: 600, lineHeight: 1.2, letterSpacing: '-.02em', textWrap: 'balance'},
-  description: {minHeight: {[media.mobile]: 0, default: 46}, maxWidth: {[media.mobile]: '62%', default: 280}, marginTop: {[media.mobile]: 6, default: 12}, fontSize: {[media.mobile]: 13, default: 16}, fontWeight: 400, lineHeight: 1.45, color: $.bannerMuted},
-  action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: 44, marginTop: {[media.mobile]: 12, default: 16}, paddingInline: {[media.mobile]: 12, default: 18}, color: '#fff', fontSize: {[media.mobile]: 13, default: 14}, fontWeight: 600, whiteSpace: 'nowrap', borderWidth: 0, borderRadius: 30, backgroundColor: $.ink, cursor: 'pointer', outlineColor: '#fff'},
+  title: {maxWidth: '100%', fontSize: {[media.mobile]: $.bannerTitleSize, [media.tablet]: 28, default: 36}, fontWeight: 600, lineHeight: {[media.mobile]: $.bannerTitleLineHeight, default: 1.2}, letterSpacing: '-.02em', textWrap: 'pretty'},
+  description: {minHeight: {[media.mobile]: 0, default: 46}, maxWidth: {[media.mobile]: '65%', default: 280}, marginTop: {[media.mobile]: 6, default: 12}, fontSize: {[media.mobile]: $.bannerCopySize, default: 16}, fontWeight: 400, lineHeight: {[media.mobile]: $.bannerCopyLineHeight, default: 1.45}, whiteSpace: 'pre-line', color: $.bannerMuted},
+  action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: $.controlHeight, marginTop: {[media.mobile]: 12, default: 16}, paddingInline: {[media.mobile]: 12, default: 18}, color: '#fff', fontSize: {[media.mobile]: $.bannerCopySize, default: 14}, fontWeight: 600, whiteSpace: 'nowrap', borderWidth: 0, borderRadius: 30, backgroundColor: $.ink, cursor: 'pointer', outlineColor: '#fff'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
 });

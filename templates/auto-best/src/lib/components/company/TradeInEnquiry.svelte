@@ -13,12 +13,24 @@
   import { brand } from '$config/brand';
   import { parseVehicleReference } from '$data/vehicle-reference';
   import EnquiryEntryField from './EnquiryEntryField.svelte';
+  import ServiceEntryField from './ServiceEntryField.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
 
   let { inlineEntry = false }: { inlineEntry?: boolean } = $props();
   let entryMode = $state<'listing' | 'details'>('details');
   let listingDraft = $state('');
   let detailsDraft = $state({ make: '', model: '', year: '', mileage: '' });
   let entryForm = $state<HTMLFormElement>();
+  let mobileEditor = $state<{ edit: (trigger?: HTMLElement) => Promise<void> }>();
+  let mobileDraftUsed = $state(false);
+
+  async function startMobile(event: MouseEvent) {
+    if (!parseVehicleReference(reference) && (!make.trim() || !model.trim())) {
+      await mobileEditor?.edit(event.currentTarget as HTMLElement);
+      return;
+    }
+    await show(event.currentTarget as HTMLElement, 1);
+  }
 
   async function startInline(event: SubmitEvent) {
     event.preventDefault();
@@ -202,7 +214,12 @@
 </script>
 
 {#if inlineEntry}
-  <form class="dn-service-entry" bind:this={entryForm} onsubmit={startInline}>
+  <div class="dn-service-entry dn-service-entry--mobile">
+    <EntrySegments class="dn-service-entry__choices" bind:value={purpose} label={i18n.t('service.purpose')} options={[{ value: 'Продажба', label: i18n.t('enquiry.purpose.sell') }, { value: 'Бартер', label: i18n.t('enquiry.purpose.tradeIn') }]} />
+    <ServiceEntryField id="sell-service-field" mode="sell" bind:this={mobileEditor} value={{ reference, make, model, year, mileage, budget: price, brief: '' }} onapply={(draft) => { ({ reference, make, model, year, mileage } = draft); price = draft.budget; mobileDraftUsed = true; detailsDraft = { make, model, year, mileage }; }} />
+    <button class="dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary" type="button" aria-haspopup="dialog" onclick={startMobile}>{i18n.t('action.requestValuation')}<MobileActionIcon name="arrow" size={15} /></button>
+  </div>
+  <form class="dn-service-entry dn-service-entry--desktop" bind:this={entryForm} onsubmit={startInline}>
     <EntrySegments class="dn-service-entry__choices" bind:value={purpose} label={i18n.t('service.purpose')} options={[{ value: 'Продажба', label: i18n.t('enquiry.purpose.sell') }, { value: 'Бартер', label: i18n.t('enquiry.purpose.tradeIn') }]} />
     {#if entryMode === 'listing'}
       <div><label>{i18n.t('service.reference')}<EntryInput name="reference" bind:value={listingDraft} oninput={() => referenceError = ''} required maxlength={2048} autocomplete="off" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url.placeholder')} aria-invalid={referenceError ? true : undefined} aria-describedby={referenceError ? 'sell-entry-error' : 'sell-entry-hint'} /></label>
@@ -263,8 +280,8 @@
           <label>{i18n.t("m_ccdd25d4230f")} {#if !vehicleReference}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference)} bind:value={make} name="make" required={!vehicleReference} maxlength={60} placeholder={i18n.t("m_f72bd5b65622")} autocomplete="off" /></label>
           <label>{i18n.t("m_5e2c614c23f0")} {#if !vehicleReference}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference)} bind:value={model} name="model" required={!vehicleReference} maxlength={80} placeholder={i18n.t("m_a40a2e1bcc02")} autocomplete="off" /></label>
           <div class="dn-tradein-pair">
-            <label>{i18n.t("m_89f6832560de")} {#if !vehicleReference}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference)} bind:value={year} name="year" required={!vehicleReference} inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
-            <label>{i18n.t("m_694bea758e96")} {#if !vehicleReference}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference)} bind:value={mileage} name="mileage" required={!vehicleReference} inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="85000" /></label>
+            <label>{i18n.t("m_89f6832560de")} {#if !vehicleReference && !mobileDraftUsed}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference || mobileDraftUsed)} bind:value={year} name="year" required={!vehicleReference && !mobileDraftUsed} inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
+            <label>{i18n.t("m_694bea758e96")} {#if !vehicleReference && !mobileDraftUsed}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference || mobileDraftUsed)} bind:value={mileage} name="mileage" required={!vehicleReference && !mobileDraftUsed} inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="85000" /></label>
           </div>
           <label>{i18n.t("m_ce900bda7196")} <small>{i18n.t("m_d42086812b73")}</small><input {@attach i18n.validation} bind:value={price} name="price" inputmode="numeric" pattern={'[0-9]{1,8}'} maxlength={8} placeholder={i18n.t("m_3241a6d5a4a1")} /></label>
         </div>
@@ -411,9 +428,9 @@
     .dn-tradein-reference-hint { text-align: center; }
     .dn-tradein-entry-segments { margin-top: 16px; }
     .dn-tradein-start { margin-top: var(--dn-space-3); }
-    .dn-tradein-dialog { inset: var(--dn-form-dialog-top) 0 auto; width: 100%; height: var(--dn-form-dialog-height); max-height: var(--dn-form-dialog-height); margin: 0; border-radius: 0 0 var(--dn-radius-lg) var(--dn-radius-lg); }
+    .dn-tradein-dialog { position: fixed; inset: 0; width: 100%; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; }
     .dn-tradein-panel { height: 100%; max-height: 100%; }
-    .dn-tradein-header { padding: 18px 16px 12px; }
+    .dn-tradein-header { padding: var(--dn-overlay-header-padding); }
     .dn-tradein-header h2 { overflow-wrap: anywhere; font-size: var(--dn-text-subheading); }
     .dn-tradein-progress { padding: 0 16px 14px; }
     .dn-tradein-body { padding: 18px 16px 22px; }

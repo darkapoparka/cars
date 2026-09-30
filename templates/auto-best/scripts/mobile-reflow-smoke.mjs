@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { webkit } from 'playwright';
 import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
+import { fillServiceEntry, serviceAction } from './service-entry-fixture.mjs';
 
 const base = previewUrl();
 const engine = process.env.REFLOW_ENGINE || 'chromium';
@@ -9,7 +10,7 @@ assert(['chromium', 'webkit'].includes(engine), 'Unsupported reflow browser engi
 const output = `artifacts/mobile-reflow-${engine}`;
 const suite = await smokeReport(output, base);
 const browser = await (engine === 'webkit' ? webkit.launch({ headless: true }) : launchBrowser());
-const routes = ['', '/listing-grid', '/listing-detail-v1/1', '/about-us', '/blog', '/contact', '/locale-settings'];
+const routes = ['', '/listing-grid', '/listing-detail-v1/1', '/about-us', '/blog', '/contact', '/contact?topic=trade-in', '/contact?topic=import', '/locale-settings'];
 const overrides = {
   spacing: '* { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; } p { margin-bottom: 2em !important; }',
   enlarged: 'html { font-size: 200% !important; }'
@@ -81,8 +82,8 @@ try {
             await page.locator('.dn-mobile-menu [data-locale-selector]').click();
           } else {
             const fields = name === 'import' ? { link: 'https://example.com/vehicle' } : { make: 'Audi', model: 'A6', year: '2020', mileage: '85000' };
-            for (const [field, value] of Object.entries(fields)) await page.locator(`.dn-service-entry [name=${field}]`).fill(value);
-            await page.locator('.dn-service-entry__submit').click();
+            await fillServiceEntry(page, fields);
+            await serviceAction(page).click();
           }
           await page.locator('dialog[open]').last().waitFor({ state: 'visible' });
           await page.evaluate(() => document.fonts.ready);

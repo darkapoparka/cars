@@ -24,10 +24,13 @@
 		clearSessionDraft
 	} from '$lib/browser/session-draft';
 	import { site } from '$lib/config/site';
+	import { mobileServiceCopy } from '$lib/content/service-mobile';
+	import { translateVehicleTerm } from '$lib/i18n/messages';
 	import { onMount, tick } from 'svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import {
 		emptyImportCriteria,
+		importBodyTypes,
 		importCountries,
 		importCriteriaSummary,
 		importFuels,
@@ -71,6 +74,8 @@
 	// svelte-ignore state_referenced_locally
 	let model = $state(initialCriteria.model);
 	// svelte-ignore state_referenced_locally
+	let bodyType = $state(initialCriteria.bodyType);
+	// svelte-ignore state_referenced_locally
 	let budget = $state(initialCriteria.maxPrice);
 	// svelte-ignore state_referenced_locally
 	let origin = $state(initialCriteria.origin);
@@ -92,7 +97,14 @@
 	let validationMessage = $state('');
 	let draftReady = $state(false);
 	let wizardRoot = $state<HTMLDivElement | null>(null);
-	const draftKey = $derived('template:import:v2:' + site.identity.origin + ':' + initialIntent);
+	const draftKey = $derived(
+		'template:import:v2:' +
+			site.identity.origin +
+			':' +
+			initialIntent +
+			':' +
+			JSON.stringify(initialCriteria)
+	);
 	const historyId = `daynight-import-wizard-${Math.random().toString(36).slice(2)}`;
 	let historyEntryActive = false;
 	let closeAfterHistory = false;
@@ -100,6 +112,7 @@
 		origin,
 		make,
 		model,
+		bodyType,
 		minYear,
 		maxPrice: budget,
 		fuel,
@@ -154,6 +167,7 @@
 			if (typeof draft.vehicle === 'string') vehicle = draft.vehicle;
 			if (typeof draft.make === 'string') make = draft.make;
 			if (typeof draft.model === 'string') model = draft.model;
+			if (typeof draft.bodyType === 'string') bodyType = draft.bodyType;
 			if (typeof draft.budget === 'string') budget = draft.budget;
 			if (typeof draft.origin === 'string') origin = draft.origin;
 			if (typeof draft.minYear === 'string') minYear = draft.minYear;
@@ -187,6 +201,7 @@
 			vehicle,
 			make,
 			model,
+			bodyType,
 			budget,
 			origin,
 			minYear,
@@ -376,6 +391,23 @@
 								placeholder={nt('ui226')}
 								bind:value={model}
 							/>
+						</label>
+						<label class="bc-import-wizard__field--wide" for={fieldId('type')}>
+							<span>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].type}</span>
+							<select id={fieldId('type')} bind:value={bodyType}>
+								<option value=""
+									>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].anyType}</option
+								>
+								{#each importBodyTypes as value (value)}
+									<option {value}
+										>{translateVehicleTerm(
+											page.data.locale === 'en' ? 'en' : 'bg',
+											'bodyTypes',
+											value
+										)}</option
+									>
+								{/each}
+							</select>
 						</label>
 					{/if}
 				</div>
@@ -649,6 +681,7 @@
 	}
 
 	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select,
 	.bc-import-wizard__fields textarea {
 		display: block;
 		width: 100%;
@@ -671,6 +704,7 @@
 	}
 
 	.bc-import-wizard__fields input:focus-visible:focus-visible,
+	.bc-import-wizard__fields select:focus-visible,
 	.bc-import-wizard__fields textarea:focus-visible {
 		border-color: var(--bc-accent);
 		background: var(--bc-white);
@@ -942,12 +976,14 @@
 		font-weight: var(--bc-weight-heading);
 	}
 	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select,
 	.bc-import-wizard__fields textarea {
 		border: 0;
 		border-radius: 10px;
 		background: var(--bc-white);
 	}
-	.bc-import-wizard__fields input {
+	.bc-import-wizard__fields input,
+	.bc-import-wizard__fields select {
 		height: 44px;
 		padding: 0 11px;
 	}
@@ -956,6 +992,7 @@
 		padding: 9px 11px;
 	}
 	.bc-import-wizard__fields input:focus,
+	.bc-import-wizard__fields select:focus,
 	.bc-import-wizard__fields textarea:focus {
 		box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--bc-accent) 48%, transparent);
 	}
@@ -1108,11 +1145,13 @@
 			line-height: var(--bc-leading-label);
 		}
 		.bc-import-wizard--embedded .bc-import-wizard__fields input,
+		.bc-import-wizard--embedded .bc-import-wizard__fields select,
 		.bc-import-wizard--embedded .bc-import-wizard__fields textarea {
 			border-color: var(--bc-route-pill-border);
 			background: var(--bc-surface);
 		}
-		.bc-import-wizard--embedded .bc-import-wizard__fields input {
+		.bc-import-wizard--embedded .bc-import-wizard__fields input,
+		.bc-import-wizard--embedded .bc-import-wizard__fields select {
 			height: var(--bc-control-height-primary);
 		}
 		.bc-import-wizard--embedded .bc-import-wizard__fields input::placeholder,

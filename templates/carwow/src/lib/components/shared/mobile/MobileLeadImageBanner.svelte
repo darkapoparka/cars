@@ -4,17 +4,21 @@
 
 	import { ChevronRight } from '@lucide/svelte';
 	import MobileActionCardContent from './MobileActionCardContent.svelte';
-	type Props = { title: string; action: string; image: string; artwork?: 'cutout' | 'photo' } & (
-		| { href: string; onOpen?: never }
-		| { href?: never; onOpen: () => void }
-	);
-	let { title, action, image, href, onOpen, artwork = 'cutout' }: Props = $props();
+	type Props = {
+		title: string;
+		copy?: string;
+		action: string;
+		image: string;
+		artwork?: 'cutout' | 'photo';
+	} & ({ href: string; onOpen?: never } | { href?: never; onOpen: () => void });
+	let { title, copy, action, image, href, onOpen, artwork = 'cutout' }: Props = $props();
 </script>
 
 {#snippet content()}
 	{#if artwork === 'photo'}
 		<MobileActionCardContent
 			{title}
+			{copy}
 			{image}
 			{action}
 			imageWidth={960}
@@ -127,7 +131,7 @@
 		display: block;
 		min-height: 0;
 		padding: 0;
-		border-radius: 18px;
+		border-radius: var(--sa-r-lg);
 		background: #10151b;
 	}
 	@media (max-width: 359px) {

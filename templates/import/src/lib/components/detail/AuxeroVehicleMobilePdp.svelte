@@ -451,8 +451,10 @@
 							{/each}
 						</div>
 
-						<p class="daynight-mobile-pdp__eyebrow">{detail.copy.description}</p>
-						<p class="daynight-mobile-pdp__body-copy">{detail.description}</p>
+						<div class="daynight-mobile-pdp__description">
+							<p class="daynight-mobile-pdp__eyebrow">{detail.copy.description}</p>
+							<p class="daynight-mobile-pdp__body-copy">{detail.description}</p>
+						</div>
 
 						<div class="daynight-mobile-pdp__finance">
 							<div>
@@ -1006,9 +1008,20 @@
 			text-transform: uppercase;
 		}
 
+		.daynight-mobile-pdp__description {
+			display: grid;
+			gap: 10px;
+			padding: 16px;
+			border: 1px solid #e4e7eb;
+			border-radius: var(--bc-radius-card);
+			background: #fff;
+		}
+
 		.daynight-mobile-pdp__body-copy {
 			margin: 0;
-			color: #5f6871;
+			color: #343b43;
+			white-space: pre-line;
+			overflow-wrap: anywhere;
 			font-size: var(--bc-mobile-body);
 			line-height: var(--bc-mobile-body-leading);
 			font-weight: var(--bc-weight-body);

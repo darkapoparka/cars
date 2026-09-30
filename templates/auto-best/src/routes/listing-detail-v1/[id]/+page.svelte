@@ -185,14 +185,15 @@
                   </ul>
                 </div>
               {/if}
-              <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
-                <img class="dn-detail-finance-trigger__art" src="/assets/images/template/pdp-finance-studio-v1.jpg" alt="" width="2172" height="724" decoding="async" />
-                <span class="dn-detail-finance-trigger__copy">
-                  <strong>{i18n.t("m_b231bc0b36a1")}</strong>
-                  <span class="dn-detail-finance-trigger__action">{i18n.t("m_625b7187cddc")}</span>
-                </span>
-              </button>
             </section>
+
+            <div class="dn-detail-finance-trigger">
+              <strong>{i18n.t("m_b231bc0b36a1")}</strong>
+              <button class="dn-compact-control dn-detail-banner-action" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
+                {i18n.t("action.calculate")}
+                <Icon name="arrow-right" size={16} />
+              </button>
+            </div>
 
             <section class="dn-detail-card dn-detail-location-card" id="location" aria-labelledby="location-title">
               <div class="dn-detail-location-card__header">
@@ -223,12 +224,13 @@
             </section>
 
             <section class="dn-detail-card dn-detail-dealer" aria-label={brand.name}>
-              <a class="dn-detail-dealer-banner" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
-                <img src={brand.logoOnDark} alt={brand.name} width="180" height="64" loading="lazy" decoding="async" />
-                <strong>{i18n.t("m_fa39abdd21f5")}</strong>
-                <span>{brand.phone}</span>
-                <span class="dn-detail-dealer-banner__action">{i18n.t("m_be4b2e6f02d6")} <Icon name="arrow-right" size={18} /></span>
-              </a>
+              <div class="dn-detail-dealer-banner">
+                <img class="dn-detail-dealer-banner__logo" src={brand.logoOnDark} alt={brand.name} width="180" height="64" loading="lazy" decoding="async" />
+                <a class="dn-compact-control dn-detail-banner-action" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
+                  {i18n.t("action.viewingShort")}
+                  <Icon name="arrow-right" size={16} />
+                </a>
+              </div>
             </section>
 
           </aside>
@@ -237,7 +239,7 @@
         <section class="dn-detail-related" aria-labelledby="related-title">
           <div class="dn-detail-related__header">
             <div>
-              <h2 id="related-title">{i18n.t("m_0122bd9951a2")}</h2>
+              <h2 id="related-title">{i18n.t("detail.viewMore")}</h2>
               <p>{i18n.t("m_70f001dd6767")}</p>
             </div>
             <a class="dn-detail-related__all" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_7d6647b063a2")}</a>

@@ -32,6 +32,8 @@ type LeadSiteConfig = {
     responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
     desktopHeroScenes: Record<'home' | 'inventory' | 'about' | 'contact', SiteAssetPath>;
     contactHero: { desktop: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
+    serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
+    homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
@@ -156,6 +158,15 @@ export const leadSite = {
       sellMobile: '/assets/images/lead/day-night-sell-banner-v1.webp',
       importMobile: '/assets/images/lead/day-night-import-banner-v1.webp',
       support: '/assets/images/lead/day-night-contact-phone-red-v1.webp'
+    },
+    serviceBanners: {
+      sell: '/assets/images/template/service-sell-banner-v1.webp',
+      import: '/assets/images/template/service-import-banner-v1.webp'
+    },
+    homeActionScenes: {
+      sell: mobileSell,
+      import: mobileImport,
+      finance: '/assets/images/template/home-action-finance-v3.webp'
     },
     blogHero: '/assets/images/lead/day-night-blog-hero-v2.webp',
     editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',

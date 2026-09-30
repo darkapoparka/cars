@@ -1,0 +1,35 @@
+{
+  "key": "app",
+  "name": "App",
+  "aliases": [
+    "cars-app",
+    "webapp"
+  ],
+  "path": "templates/app",
+  "version": "2026.09.26-working-copy",
+  "family": "dealer-webapp",
+  "stack": "next",
+  "sourcePort": 4173,
+  "libraryPort": 6473,
+  "entry": "/",
+  "homes": [
+    {
+      "id": "main",
+      "route": "/"
+    }
+  ],
+  "priority": "polish-next",
+  "readiness": "reference-content-candidate",
+  "reskinEffort": "dealer-adaptation-needed",
+  "brandFiles": [
+    "app/layout.tsx",
+    "app/manifest.ts",
+    "app/tokens.stylex.ts",
+    "components",
+    "lib/data.ts",
+    "public"
+  ],
+  "note": "Working copy of L:/cars-app, including uncommitted UI work. App-like single-dealer candidate for polishing; retained Cars24 reference identity/content must be adapted before client use. No approved release or dealer-generator support yet. See templates/app/TEMPLATE.md.",
+  "versionRole": "Local candidate import; not an immutable approved release.",
+  "sourceRepository": "darkapoparka/cars"
+}

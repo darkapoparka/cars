@@ -4,36 +4,32 @@
 
   import { resolve } from '$app/paths';
   import FeatureArtwork from '$components/ui/FeatureArtwork.svelte';
-  import { mobileActionArtwork } from '$data/feature-artwork';
+  import { homeActionArtwork } from '$data/feature-artwork';
 
   const actions = [
     {
       title: 'home.action.cars.title',
-      text: 'home.action.cars.detail',
       href: '/listing-grid',
       tone: 'blue',
-      artwork: mobileActionArtwork.collection
+      artwork: homeActionArtwork.collection
     },
     {
       title: 'home.action.sell.title',
-      text: 'home.action.sell.detail',
       href: '/contact?topic=trade-in',
       tone: 'red',
-      artwork: mobileActionArtwork.sell
+      artwork: homeActionArtwork.sell
     },
     {
       title: 'home.action.import.title',
-      text: 'home.action.import.detail',
       href: '/contact?topic=import',
       tone: 'ice',
-      artwork: mobileActionArtwork.import
+      artwork: homeActionArtwork.import
     },
     {
       title: 'home.action.finance.title',
-      text: 'home.action.finance.detail',
       href: '/contact?topic=leasing',
       tone: 'dark',
-      artwork: mobileActionArtwork.finance
+      artwork: homeActionArtwork.finance
     }
   ] as const;
 </script>
@@ -44,11 +40,8 @@
       <a class={`dn-mobile-core-card dn-mobile-core-card--${action.tone}`} href={i18n.href(resolve(action.href))}>
         <span class="dn-mobile-core-card__copy">
           <strong>{i18n.t(action.title)}</strong>
-          <small>{i18n.t(action.text)}</small>
         </span>
-        <span class="dn-mobile-core-card__art" aria-hidden="true">
-          <FeatureArtwork artwork={action.artwork} eager />
-        </span>
+        <span class="dn-mobile-core-card__art" aria-hidden="true"><FeatureArtwork artwork={action.artwork} eager /></span>
       </a>
     {/each}
   </div>
@@ -66,8 +59,8 @@
     .dn-mobile-core-actions__grid {
       display: grid;
       /* Enlarged text can reflow to one column without shrinking the type. */
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, max(8.5rem, 45%)), 1fr));
-      gap: var(--dn-space-3);
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, max(8rem, 45%)), 1fr));
+      gap: var(--dn-space-4);
     }
 
     .dn-mobile-core-card {
@@ -76,16 +69,19 @@
       flex-direction: column;
       gap: var(--dn-space-2);
       padding-bottom: var(--dn-space-2);
-      min-height: clamp(164px, 32vw, 224px);
+      min-width: 0;
+      width: 100%;
+      min-height: 112px;
+      aspect-ratio: 3 / 2;
       overflow: hidden;
       border-radius: var(--dn-radius);
       color: #fff;
       isolation: isolate;
     }
 
-    .dn-mobile-core-card--blue { background: linear-gradient(145deg, var(--dn-theme-action-blue-start) 0%, var(--dn-theme-action-blue-end) 100%); }
-    .dn-mobile-core-card--red { background: linear-gradient(145deg, var(--dn-theme-action-red-start) 0%, var(--dn-theme-action-red-end) 100%); }
-    .dn-mobile-core-card--ice { background: linear-gradient(145deg, var(--dn-theme-action-ice-start) 0%, var(--dn-theme-action-ice-end) 100%); color: var(--dn-theme-action-ice-ink); }
+    .dn-mobile-core-card--blue { background: var(--dn-theme-action-blue-start); }
+    .dn-mobile-core-card--red { background: var(--dn-theme-action-red-start); }
+    .dn-mobile-core-card--ice { background: var(--dn-theme-action-ice-start); color: var(--dn-theme-action-ice-ink); }
     .dn-mobile-core-card--dark { background: var(--dn-theme-hero-surface); }
 
     .dn-mobile-core-card__copy {
@@ -99,39 +95,27 @@
 
     .dn-mobile-core-card strong {
       max-width: 100%;
-      font-size: var(--dn-text-subheading);
+      font-size: var(--dn-text-card);
       font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-heading);
       letter-spacing: var(--dn-tracking-heading);
       overflow-wrap: anywhere;
     }
 
-    .dn-mobile-core-card small {
-      display: block;
-      max-width: 100%;
-      margin-top: var(--dn-space-1);
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-regular);
-      line-height: var(--dn-leading-meta);
-      letter-spacing: var(--dn-tracking-normal);
-      opacity: .92;
-      text-wrap: pretty;
-    }
 
     .dn-mobile-core-card__art {
       position: relative;
       z-index: 1;
-      margin: auto var(--dn-space-1) 0;
-      height: 84px;
-      flex: 0 0 84px;
+      margin: auto var(--dn-space-2) 0;
+      height: 58px;
+      flex: 0 0 58px;
       display: flex;
       align-items: flex-end;
       pointer-events: none;
     }
 
-    .dn-mobile-core-card--dark .dn-mobile-core-card__art { mix-blend-mode: lighten; }
     .dn-mobile-core-card__art :global(.feature-artwork) {
-      max-width: calc(84px * var(--artwork-ratio));
+      max-width: calc(58px * var(--artwork-ratio));
       margin-inline: auto;
     }
     .dn-mobile-core-card:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }

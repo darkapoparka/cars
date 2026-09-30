@@ -42,7 +42,7 @@ export function LeaseSelectedVehicle({
 
   return (
     <article
-      className={`${mobileVehicleCardClassName} relative overflow-hidden rounded-xl bg-card ${onSelect ? "" : "mt-4"}`}
+      className={`${mobileVehicleCardClassName} relative overflow-hidden rounded-xl bg-card`}
       data-slot={
         onSelect ? "lease-vehicle-option" : "lease-selected-vehicle-card"
       }
@@ -91,7 +91,7 @@ export function LeaseSelectedVehicle({
             </p>
             {vehicle.monthlyLabel ? (
               <p
-                className="text-micro text-muted-foreground lg:text-meta"
+                className="text-card-spec text-muted-foreground lg:text-meta"
                 title={
                   locale === "bg"
                     ? "Ориентировъчна месечна вноска"

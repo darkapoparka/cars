@@ -80,15 +80,15 @@
 			onclick={onOpenSearch}
 		>
 			<span class="mobile-inventory-search__field">
+				<span class="mobile-inventory-search__icon" aria-hidden="true">
+					<Search size={19} strokeWidth={2.55} />
+				</span>
 				<span
 					class={query
 						? 'mobile-inventory-search__label is-filled'
 						: 'mobile-inventory-search__label'}
 				>
 					{query || i18n.t('copy.ec1da1ebf306')} ({resultsCount})
-				</span>
-				<span class="mobile-inventory-search__icon" aria-hidden="true">
-					<Search size={19} strokeWidth={2.55} />
 				</span>
 			</span>
 		</button>

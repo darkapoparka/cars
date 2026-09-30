@@ -1,7 +1,6 @@
 'use client';
 import {useCopy} from '@/lib/locale';
 import {useState} from 'react';
-import {useRouter} from '@/lib/navigation';
 import * as stylex from '@stylexjs/stylex';
 import {CarFront, Check, Info, Music2, Search, ShieldCheck, Sparkles, X} from 'lucide-react';
 import {isDealer} from '@/lib/dealer-config';
@@ -21,7 +20,6 @@ export const capturedFortunerFeatures = [
 export default function VehicleFeatures({vehicle,featureGroups}: {vehicle: Vehicle;featureGroups?:ReferenceFeatureGroup[]}) {
   const tx = useCopy();
 
-  const router = useRouter();
   const [query, setQuery] = useState('');
   const [information,setInformation]=useState<ReferenceFeature|null>(null);
   const descriptions=new Map(featureGroups?.flatMap(group=>group.items).map(feature=>[feature.name,feature]));
@@ -30,7 +28,7 @@ export default function VehicleFeatures({vehicle,featureGroups}: {vehicle: Vehic
   const groups = featureGroups?.length?featureGroups.map(group=>({name:group.name,icon:icons[group.key]??CarFront,items:group.items.map(item=>item.name)})):fortuner ? capturedFortunerFeatures : [{name: 'Captured features', icon: CarFront, items: vehicle.highlights}];
   const filtered = groups.map(group => ({...group, items: group.items.filter(item => `${item} ${tx(item)}`.toLocaleLowerCase().includes(query.toLocaleLowerCase()))})).filter(group => group.items.length);
   return <main {...stylex.props(s.page)}>
-    <PageHeader title={tx("Features")} onBack={() => history.length > 1 ? router.back() : router.push(`/cars/${vehicle.slug}`)} backLabel={tx("Back to vehicle")}/>
+    <PageHeader title={tx("Features")} backHref={`/cars/${vehicle.slug}`} backLabel={tx("Back to vehicle")}/>
     <div {...stylex.props(s.content)}><div data-search-field role="search" {...stylex.props(searchField.field)}><Search size={20} aria-hidden="true" {...stylex.props(searchField.icon)} /><input data-search-input type="search" aria-label={tx("Search for a feature")} placeholder={tx("Search for a feature")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={event => setQuery(event.target.value)} {...stylex.props(searchField.input)} />{query ? <button type="button" aria-label={tx("Clear feature search")} onClick={() => setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true" /></button> : null}</div>
       {filtered.map(({name, icon: Icon, items}) => <section key={name} {...stylex.props(s.section)}><h2 {...stylex.props(s.sectionTitle)}><span {...stylex.props(s.icon)}><Icon size={18} /></span>{tx(name)}</h2><ul {...stylex.props(s.list)}>{items.map(item => <li key={item} {...stylex.props(s.item)}><span>{tx(item)}{descriptions.get(item)?.description?<button type="button" aria-label={tx(`About ${item}`)} onClick={()=>setInformation(descriptions.get(item)!)} {...stylex.props(s.information)}><Info size={13} fill="#202024" color="#fff"/></button>:null}</span><span {...stylex.props(s.check)}><Check size={11} strokeWidth={2.5} /></span></li>)}</ul></section>)}
       {!filtered.length ? <p {...stylex.props(s.empty)}>{tx("No features match “")}{tx(query)}{tx("”.")}</p> : null}

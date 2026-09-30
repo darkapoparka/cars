@@ -2,17 +2,10 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { linkHref as resolve } from '$lib/utils/links';
-	import { onMount } from 'svelte';
-	import { HugeiconsIcon } from '@hugeicons/svelte';
+	import { onMount, tick } from 'svelte';
+	import MobileNavIcon from '$lib/components/layout/MobileNavIcon.svelte';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import MobileNavigationMenu from '$lib/components/layout/MobileNavigationMenu.svelte';
-	import {
-		Car01Icon,
-		Globe02Icon,
-		Home03Icon,
-		Menu01Icon,
-		SaleTag01Icon
-	} from '@hugeicons/core-free-icons';
 
 	let { pathname = '/' }: { pathname?: string } = $props();
 
@@ -20,21 +13,22 @@
 	const menuLabel = $derived(english ? 'Menu' : 'Меню');
 	const localHref = (href: string) => href + (english ? '?lang=en' : '');
 	const mainItems = $derived([
-		{ href: '/', label: english ? 'Home' : 'Начало', icon: Home03Icon, exact: true },
-		{ href: '/inventory', label: english ? 'Cars' : 'Коли', icon: Car01Icon, exact: false },
+		{ href: '/', label: english ? 'Home' : 'Начало', icon: 'home', exact: true },
+		{ href: '/inventory', label: english ? 'Cars' : 'Коли', icon: 'cars', exact: false },
 		{
 			href: '/sell-your-car',
 			label: english ? 'Sell' : 'Продай',
-			icon: SaleTag01Icon,
+			icon: 'sell',
 			exact: false
 		},
-		{ href: '/import', label: english ? 'Import' : 'Внос', icon: Globe02Icon, exact: false }
+		{ href: '/import', label: english ? 'Import' : 'Внос', icon: 'import', exact: false }
 	] as const);
 
 	const isActive = (href: string, exact = false) =>
 		exact ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
 	let menuOpen = $state(false);
 	let navigationReady = $state(false);
+	let footerVisible = $state(false);
 	let pendingNavigationHref = $state<string | null>(null);
 	let menuButton: HTMLButtonElement | null = null;
 	let pendingLocaleOpen: Promise<HTMLElement | undefined> | null = null;
@@ -42,6 +36,27 @@
 
 	onMount(() => {
 		navigationReady = true;
+	});
+	$effect(() => {
+		footerVisible = false;
+		if (!navigationReady || pathname !== '/') return;
+		let cancelled = false;
+		let observer: IntersectionObserver | undefined;
+		// The route also updates the footer marker. Observe after that DOM update,
+		// including client navigation back to Home from another service page.
+		void tick().then(() => {
+			if (cancelled) return;
+			const footer = document.querySelector('[data-home-footer]');
+			if (!footer) return;
+			observer = new IntersectionObserver(([entry]) => {
+				if (!cancelled) footerVisible = entry?.isIntersecting ?? false;
+			});
+			observer.observe(footer);
+		});
+		return () => {
+			cancelled = true;
+			observer?.disconnect();
+		};
 	});
 
 	const finishPendingNavigation = () => {
@@ -99,6 +114,7 @@
 
 <nav
 	class="mobile-bottom-nav"
+	data-footer-visible={footerVisible ? 'true' : undefined}
 	aria-label={english ? 'Mobile navigation' : 'Мобилна навигация'}
 	data-daynight-stylekit-nav-ready={navigationReady ? 'true' : undefined}
 >
@@ -111,7 +127,7 @@
 				onclick={(event) => handleNavigationClick(event, localHref(item.href))}
 			>
 				<span class="mobile-bottom-nav__icon" aria-hidden="true">
-					<HugeiconsIcon icon={item.icon} size={24} color="currentColor" strokeWidth={1.8} />
+					<MobileNavIcon name={item.icon} />
 				</span>
 				<span class="mobile-bottom-nav__label">{item.label}</span>
 			</a>
@@ -127,7 +143,7 @@
 			onclick={() => (menuOpen = true)}
 		>
 			<span class="mobile-bottom-nav__icon" aria-hidden="true">
-				<HugeiconsIcon icon={Menu01Icon} size={24} color="currentColor" strokeWidth={1.8} />
+				<MobileNavIcon name="menu" />
 			</span>
 			<span class="mobile-bottom-nav__label">{menuLabel}</span>
 		</button>
@@ -148,6 +164,9 @@
 	:global(body:has(.bc-mobile-sheet__content[data-state='open'])) .mobile-bottom-nav {
 		visibility: hidden;
 	}
+	.mobile-bottom-nav[data-footer-visible='true'] {
+		visibility: hidden;
+	}
 
 	.mobile-bottom-nav {
 		display: none;
@@ -156,6 +175,9 @@
 	@media (max-width: 767.98px) {
 		:global(body) {
 			padding-bottom: calc(var(--bc-mobile-nav-height) + env(safe-area-inset-bottom));
+		}
+		:global(body:has(.mobile-bottom-nav[data-footer-visible='true'])) {
+			padding-bottom: env(safe-area-inset-bottom);
 		}
 
 		.mobile-bottom-nav,
@@ -177,7 +199,7 @@
 			z-index: 999;
 			display: block;
 			height: calc(var(--bc-mobile-nav-height) + env(safe-area-inset-bottom));
-			border-top: 1px solid rgb(28 28 28 / 0.16);
+			border-top: 1px solid var(--bc-border);
 			background: var(--bc-white);
 			padding-bottom: env(safe-area-inset-bottom);
 		}
@@ -201,12 +223,12 @@
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			gap: var(--bc-space-1);
+			gap: 3px;
 			border: 0;
 			border-radius: 0;
 			background: transparent;
 			appearance: none;
-			color: var(--bc-muted);
+			color: var(--bc-copy);
 			cursor: pointer;
 			padding: 0;
 			text-align: center;
@@ -218,24 +240,29 @@
 
 		.mobile-bottom-nav__icon {
 			display: grid;
-			width: var(--bc-mobile-nav-icon-size);
-			height: var(--bc-mobile-nav-icon-size);
+			width: 44px;
+			height: 30px;
 			place-items: center;
-			border-radius: var(--bc-radius-pill);
+			border-radius: 10px;
 			color: inherit;
 			line-height: 0;
 		}
 
 		.mobile-bottom-nav__label {
 			color: inherit;
-			font-size: var(--bc-mobile-meta);
+			font-size: 0.75rem;
 			font-weight: var(--bc-weight-body);
-			line-height: var(--bc-mobile-meta-leading);
+			line-height: 1.3334;
 		}
 
 		.mobile-bottom-nav a.active,
 		.mobile-bottom-nav__menu-trigger.active {
 			color: var(--bc-accent);
+		}
+
+		.mobile-bottom-nav a.active .mobile-bottom-nav__icon,
+		.mobile-bottom-nav__menu-trigger.active .mobile-bottom-nav__icon {
+			background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
 		}
 
 		.mobile-bottom-nav a.active .mobile-bottom-nav__label,
@@ -250,14 +277,12 @@
 			outline-offset: -2px !important;
 		}
 
-		.mobile-bottom-nav :global(svg),
-		.mobile-bottom-nav :global(svg *) {
+		.mobile-bottom-nav :global(svg) {
 			color: currentColor;
-			stroke: currentColor;
 		}
 
 		:global(.mobile-menu-sheet__panel.bc-mobile-sheet__content) {
-			background: var(--bc-bg);
+			background: var(--bc-bg-strong);
 		}
 
 		:global(.mobile-menu-sheet__panel .bc-mobile-sheet__body) {

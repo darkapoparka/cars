@@ -19,15 +19,15 @@ The in-app browser pass used temporary desktop-browser viewports at 320×740 and
 
 The full 48-card DOM geometry pass observed 42 wrapping fact rows at 320px and three at 390px before the correction; the corrected cards had one fact row and a 0px gap between the bottom of the photo and the final information line. The final chip pass also confirmed that the first card's mileage and transmission did not truncate at 320px.
 
-The screenshots precede the last adjustment to the quick rail's vertical padding, from 4px to 6px, which leaves room for the existing keyboard outline. Fresh final browser interaction and desktop checks remain pending: after resuming, the existing tab was a `data:` connection-error page, and the browser policy rejected attaching to it. No alternate browser automation was used to bypass that restriction.
+The screenshots precede the last adjustment to the quick rail's vertical padding, from 4px to 6px, which leaves room for the existing keyboard outline. The resumed tab initially held a `data:` connection-error page, which the browser policy rejected. After the user returned to the working inventory page, the final layout and interactions were verified through the same in-app browser during the [card-footer pass](../mobile-card-footer-2026-09-30/README.md). No alternate browser automation was used to bypass the earlier restriction.
 
 ## Verification
 
 - Node 22.20.0; `npm run check` runs lint, TypeScript, and the webpack production build. The resumed run uses the existing `NEXT_DIST_DIR=.next-build-check` configuration so the dev server can keep its separate `.next` output.
 - Source-derived contrast ratios: normal/selected quick-pill text 16.24:1, card-fact text 5.50:1, inventory notice 6.05:1. These calculations do not establish full WCAG conformance.
 - HTTP checks after server restart: `/bg`, `/bg/search`, and `/bg/cars` returned 200 without the development error-overlay marker.
-- Production HTTP smoke on the completed build: `/bg`, `/bg/search`, `/bg/cars`, and `/bg/saved` returned 200. Home rendered 12 cards and inventory 48, with the complete fact link names present in the generated HTML. This checks server rendering; filter/sort/save client interactions still require the pending browser pass.
+- Production HTTP smoke on the completed build: `/bg`, `/bg/search`, `/bg/cars`, and `/bg/saved` returned 200. Home rendered 12 cards and inventory 48, with the complete fact link names present in the generated HTML. The subsequent card-footer pass verified filtering, sorting, saving/removal, Home shortcuts, detail/showroom links, and responsive layout at 320px, 390px, 768px, and 1440px in the browser.
 - Dev server: `http://localhost:3001`, Node 22, webpack, bound to loopback.
 - Build result: `npm run check` passed with exit code 0: lint, TypeScript, optimized webpack compilation, and all 407 generated pages. Next's expected custom-Babel warnings remained. The build-generated `next-env.d.ts` paths and two `tsconfig.json` include additions were verified and restored to their exact pre-check contents; unrelated changes were preserved.
 
-Owner visual acceptance and the remaining browser checks are separate from build success.
+Owner visual acceptance is separate from build success and the recorded browser checks.

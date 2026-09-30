@@ -1,10 +1,10 @@
 'use client';
 import {useCopy} from '@/lib/locale';
 import {useDeferredValue,useEffect,useMemo,useRef,useState} from 'react';
-import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
 import {Heart,Search,X} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
+import IconButton from '@/components/IconButton';
 import FilterPill from '@/components/FilterPill';
 import InventoryPromotion from '@/components/InventoryPromotion';
 import VehicleCard from '@/components/VehicleCard';
@@ -54,7 +54,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  function categoryLabel(tab:Tab){const label=tx(tab);return label==='EMI'?label:label.charAt(0)+label.slice(1).toLowerCase();}
  const modal=useModal(overlay!==null,close,{history:false});
  return <div {...stylex.props(s.screen)}>
-  <PageHeader title={tx(luxe?'Select collection':'Our cars')} action={<Link href="/saved" aria-label={tx("Saved cars")} {...stylex.props(s.roundButton)}><Heart size={21}/></Link>}/>
+  <PageHeader title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>
   <div {...stylex.props(s.topInner)}><div data-search-field role="search" {...stylex.props(searchField.field)}><Search size={20} aria-hidden="true" {...stylex.props(searchField.icon)}/><input data-search-input type="search" autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={e=>setQuery(e.target.value)} placeholder={tx("Search make or model")} aria-label={tx("Search cars")} {...stylex.props(searchField.input)}/>{query?<button type="button" aria-label={tx("Clear search")} onClick={()=>setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button>:null}</div></div>
   <InventoryPromotion/>
   <nav aria-label={tx("Inventory filters")} {...stylex.props(s.toolbar)}>
@@ -66,7 +66,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
    <section aria-busy={query!==deferredQuery} {...stylex.props(s.results)}>
     {luxe?<div {...stylex.props(s.luxeBrands)}><BrandRow compact title={tx("Explore by brand")} onSelect={brand=>setFilters({...filters,brands:[brand]})}/></div>:null}
     <div {...stylex.props(s.resultHeading)}><h2 aria-live="polite" aria-atomic="true" {...stylex.props(s.resultTitle)}>{tx(count)} {tx(count===1?'car':'cars')}</h2></div>
-    {results.length?<div {...stylex.props(s.grid)}>{results.map(vehicle=><VehicleCard key={vehicle.slug} vehicle={vehicle} luxe={luxe}/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h3>{tx("No cars match these filters")}</h3><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
+    {results.length?<div {...stylex.props(s.grid)}>{results.map(vehicle=><VehicleCard key={vehicle.slug} vehicle={vehicle}/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h3>{tx("No cars match these filters")}</h3><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
     {dealer.inventoryNotice?<p {...stylex.props(s.inventoryNotice)}>{tx(dealer.inventoryNotice)}</p>:null}
    </section>
   </main>
@@ -85,7 +85,6 @@ function discount(car:Vehicle){return (car.previousPrice??car.price)-car.price;}
 const s=stylex.create({
  screen:{minHeight:'100vh',paddingBottom:110,backgroundColor:'#fff'},
  topInner:{maxWidth:$.content,marginInline:'auto',paddingTop:4,paddingInline:{[media.mobile]:12,default:28}},
- roundButton:{display:'grid',placeItems:'center',width:44,height:44,color:$.ink,borderRadius:'50%',backgroundColor:'#f4f4f5'},
  toolbar:{display:'flex',position:'sticky',top:{[media.desktop]:141,default:'calc(68px + env(safe-area-inset-top))'},zIndex:45,gap:6,overflowX:'auto',overscrollBehaviorX:'contain',maxWidth:$.content,marginInline:'auto',paddingBlock:{[media.mobile]:6,default:12},paddingInline:{[media.mobile]:12,default:28},backgroundColor:'#fff',scrollbarWidth:'none'},
  content:{display:'grid',gridTemplateColumns:{[media.desktop]:'245px minmax(0,1fr)',default:'1fr'},gap:24,maxWidth:$.content,marginInline:'auto',paddingTop:10,paddingInline:{[media.mobile]:12,default:28},paddingBottom:80},
  sidebar:{display:{[media.desktop]:'block',default:'none'},alignSelf:'start',position:'sticky',top:150,padding:18,borderColor:$.line,borderStyle:'solid',borderWidth:1,borderRadius:18},

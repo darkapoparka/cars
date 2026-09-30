@@ -71,9 +71,10 @@ export const VehicleCard = ({
       className={cn(
         styles.card,
         mobileVehicleCardClassName,
-        "group relative overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border",
-        !isDesktopComparison &&
-          "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
+        "group relative overflow-hidden rounded-xl border-0 bg-card p-0 lg:rounded-lg lg:border lg:border-border",
+        isDesktopComparison
+          ? "lg:**:data-[slot=vehicle-card-title]:line-clamp-2"
+          : "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
           "lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-0 xl:grid-cols-[15rem_minmax(0,1fr)]",
         isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"

@@ -3,6 +3,7 @@
   import { resolveContactTopic } from '$data/company';
   import ContactHero from './ContactHero.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import ServiceCallBanner from './ServiceCallBanner.svelte';
   import TradeInEnquiry from './TradeInEnquiry.svelte';
   import VehicleEnquiry from './VehicleEnquiry.svelte';
   import './service-entry.css';
@@ -21,6 +22,7 @@
     {#if topic === 'trade-in'}<TradeInEnquiry inlineEntry />{:else}<VehicleEnquiry kind="import" {importUrl} inlineEntry />{/if}
     </EntryCard>
   </section>
+  <ServiceCallBanner {topic} />
   <div class="dn-service-faq">
     <details>
       <summary><span class="dn-service-faq__label"><Icon name="file-invoice" size={20} />{i18n.t('service.process')}</span><Icon name="chevron-down" size={18} /></summary>
@@ -50,6 +52,6 @@
   @media (max-width: 767px) {
     .dn-service-landing { min-height: calc(100svh - var(--dn-mobile-nav-height)); }
     .dn-service-card { width: calc(100% - 24px); margin-top: -52px;  }
-    .dn-service-faq { width: calc(100% - 24px); margin-top: 12px; }
+    .dn-service-faq { display: none; }
   }
 </style>

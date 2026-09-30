@@ -56,7 +56,7 @@ export default function HomePage() {
         <h2 {...stylex.props(s.heading)}>{tx("Recently viewed cars")}</h2>
         <div {...stylex.props(s.recentRail)}>{recent.map(vehicle => <MiniVehicleCard key={vehicle.slug} vehicle={vehicle} green />)}</div>
       </section> : null}
-      <section {...stylex.props(s.offers)}><h2 {...stylex.props(s.heading)}>{tx("Your showroom, your way")}</h2><ShowroomHighlights /></section>
+      <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers)}><ShowroomHighlights /></section>
       <section aria-label={tx("Available cars")} {...stylex.props(s.feed)}>
         {firstFeed.map((vehicle, index) => <div key={vehicle.slug} {...stylex.props(index === 4 && s.feedGroup)}><VehicleCard vehicle={vehicle} showDiscount={false} /></div>)}
       </section>

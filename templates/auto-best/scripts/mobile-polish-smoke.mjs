@@ -36,6 +36,17 @@ async function compactControl(locator, { icon = false } = {}) {
   if (icon) { assert.equal(result.iconWidth, 15); assert(Math.abs(result.iconDy) <= .5); }
   return result;
 }
+async function alignedDock(page) {
+  const alignment = await page.locator('.dn-mobile-bottom-nav a,.dn-mobile-bottom-nav button').evaluateAll(controls => controls.map(control => {
+    const icon = control.querySelector('svg').getBoundingClientRect();
+    const label = control.querySelector('.dn-mobile-bottom-nav__label').getBoundingClientRect();
+    return { iconTop: icon.top, labelTop: label.top, transform: getComputedStyle(control).transform };
+  }));
+  assert.equal(alignment.length, 5);
+  assert(Math.max(...alignment.map(item => item.iconTop)) - Math.min(...alignment.map(item => item.iconTop)) <= .5 &&
+    Math.max(...alignment.map(item => item.labelTop)) - Math.min(...alignment.map(item => item.labelTop)) <= .5 &&
+    alignment.every(item => item.transform === 'none'), 'Every navigation item shares one baseline; Sell is never raised');
+}
 try {
   for (const locale of ['bg', 'en']) for (const width of [320, 390, 430, 1440]) {
     await suite.check(`${locale} mobile polish ${width}`, async () => {
@@ -60,7 +71,7 @@ try {
             return { text: el.textContent.trim(), height: box.height, lineHeight: parseFloat(getComputedStyle(el).lineHeight),
               fits: text.left >= box.left - 1 && text.right <= box.right + 1 };
           }));
-          assert.equal(homeCopy.length, 9);
+          assert.equal(homeCopy.length, 5);
           assert(homeCopy.every(item => item.fits && item.height <= item.lineHeight + 1),
             `Home service copy and featured heading must fit one line: ${JSON.stringify(homeCopy)}`);
           const homeArt = await page.locator('.dn-mobile-core-card').evaluateAll(cards => cards.map(card => {
@@ -70,7 +81,14 @@ try {
             return art.top >= copy.bottom + 4 && art.bottom <= box.bottom && art.left >= box.left && art.right <= box.right;
           }));
           assert(homeArt.every(Boolean), 'Service artwork stays inside its card and clear of the text');
+          const actionImages = await page.locator('.dn-mobile-core-card img').evaluateAll(images => images.map(image => image.getAttribute('src')));
+          assert.equal(new Set(actionImages).size, 4, 'Each service has distinct imagery');
+          assert.match(actionImages[1], /service-sell-front-v3/);
+          assert.match(actionImages[2], /service-import-front-v3/);
+          assert.match(actionImages[3], /home-action-finance-v3/);
           await capture('home');
+          await page.locator('.dn-mobile-core-actions').scrollIntoViewIfNeeded();
+          await capture('home-actions');
           const search = await page.locator('.dn-quick-search__trigger').evaluate(el => {
             const box = el.getBoundingClientRect();
             return { height: box.height, font: getComputedStyle(el).fontSize, gap: getComputedStyle(el).gap,
@@ -98,10 +116,30 @@ try {
           const labelWidths = await dock.locator('.dn-mobile-bottom-nav__label').evaluateAll(labels => labels.map(label => label.getBoundingClientRect().width));
           assert(labelWidths.every(value => value > 1), 'Normal phone widths keep every dock label visible');
           assert.equal(await page.locator('.dn-mobile-bottom-nav [aria-current=page]').evaluate(el => getComputedStyle(el).backgroundColor), 'rgba(0, 0, 0, 0)', 'Active navigation stays light');
+          const dockStyle = await dock.evaluate(el => {
+            const box = el.getBoundingClientRect(), style = getComputedStyle(el);
+            const inactive = el.querySelector('a:not(.active)');
+            return { left: box.left, right: box.right, viewport: document.documentElement.clientWidth,
+              background: style.backgroundColor, radius: style.borderRadius, shadow: style.boxShadow,
+              inactive: getComputedStyle(inactive).color, ink: getComputedStyle(document.body).color };
+          });
+          assert(dockStyle.left <= 1 && Math.abs(dockStyle.right - dockStyle.viewport) <= 1 && dockStyle.radius === '0px' && dockStyle.shadow === 'none' && dockStyle.background === 'rgb(255, 255, 255)',
+            'The dock is a flat white bar spanning the mobile viewport');
+          assert.equal(dockStyle.inactive, dockStyle.ink, 'Inactive dock icons and labels use the strong ink color');
+          assert.equal(await dock.locator('svg[data-icon-family="hugeicons-rounded"][viewBox="0 0 24 24"][fill="none"]').count(), 5,
+            'All five mobile dock glyphs use official Hugeicons Stroke Rounded geometry');
+          assert.equal(await dock.locator('path[opacity]').count(), 0, 'Dock glyphs have no grey duotone layer');
+          await alignedDock(page);
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);
           const trigger = page.locator('.dn-mobile-bottom-nav button');
           await trigger.click();
           await fits(page.locator('.dn-mobile-menu__contact a'));
+          const localeControl = page.locator('.dn-mobile-menu [data-locale-selector]');
+          await fits(localeControl);
+          assert.equal(await localeControl.locator('svg[data-icon-family="hugeicons-rounded"]').count(), 2,
+            'Country and language has a globe and chevron in the same mobile icon family');
+          assert(await localeControl.evaluate(el => el.getBoundingClientRect().height >= 44 && getComputedStyle(el).backgroundColor !== 'rgba(0, 0, 0, 0)'),
+            'Country and language is a visible full-row control');
           await capture('menu');
           await page.keyboard.press('Escape');
           assert.equal(await trigger.evaluate(el => document.activeElement === el), true);
@@ -110,12 +148,15 @@ try {
         if (width < 768) {
           assert.deepEqual(await page.locator('.dn-mobile-bottom-nav__label').allTextContents(), dockNames,
             'Home and inventory retain the same dock destinations and order');
+          await alignedDock(page);
           const titles = await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__name').evaluateAll(elements => elements.map(el => ({
-            text: el.textContent.trim(), whiteSpace: getComputedStyle(el).whiteSpace,
+            text: el.innerText.trim(), whiteSpace: getComputedStyle(el).whiteSpace,
+            lines: el.getBoundingClientRect().height / parseFloat(getComputedStyle(el).lineHeight),
             clipped: el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1
           })));
           assert(titles.length > 0);
           assert(titles.every(t => t.text && t.whiteSpace === 'normal' && !t.clipped), 'Mobile list titles remain complete and readable');
+          assert(titles.every(t => t.lines <= 2.05), 'Model titles remain complete within two readable lines');
           // Visit each photo before checking it: offscreen inventory intentionally stays lazy.
           for (const card of await page.locator('.dn-vehicle-card--listing').all()) {
             await card.scrollIntoViewIfNeeded();
@@ -128,39 +169,75 @@ try {
             const content = card.querySelector('.dn-vehicle-card__content').getBoundingClientRect();
             const box = card.getBoundingClientRect();
             const identity = card.querySelector('.dn-vehicle-card__identity').getBoundingClientRect();
+            const make = card.querySelector('.dn-vehicle-card__make').innerText.trim();
+            const model = photograph.alt.startsWith(`${make} `) ? photograph.alt.slice(make.length + 1) : photograph.alt;
             const price = card.querySelector('.dn-vehicle-card__amount').getBoundingClientRect();
             const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
             const headingStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
             const priceStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__amount'));
             const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')];
             const badgeBoxes = facts.map(fact => fact.getBoundingClientRect());
+            const badgeTextFits = facts.every(fact => {
+              const text = fact.querySelector('[aria-hidden="true"]') ?? fact;
+              const range = document.createRange(); range.selectNodeContents(text);
+              const textBox = range.getBoundingClientRect(), badge = fact.getBoundingClientRect();
+              return textBox.left >= badge.left && textBox.right <= badge.right && textBox.top >= badge.top && textBox.bottom <= badge.bottom;
+            });
             const badgeSurface = getComputedStyle(facts[0]).backgroundColor;
             const badgesMatch = facts.every(fact => getComputedStyle(fact).backgroundColor === badgeSurface);
             return { title: photograph.alt, loaded: photograph.complete && photograph.naturalWidth > 0, fits:
-              Math.abs(image.width / image.height - 2) <= .01 &&
-              Math.abs(image.left - box.left) <= 1 && Math.abs(image.right - box.right) <= 1 && image.bottom <= content.top + 1 &&
-              card.querySelector('.dn-vehicle-card__name').innerText.trim() === photograph.alt &&
-              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom - 1 &&
-              metadata.top >= price.bottom &&
+              getComputedStyle(photograph).objectFit === 'cover' && image.width >= (box.width - 28) * .49 &&
+              Math.abs(image.top - identity.top) <= 1 && Math.abs(image.bottom - metadata.bottom) <= 1 &&
+              image.left >= box.left && image.right <= content.left - 1 && image.bottom <= box.bottom &&
+              make && card.querySelector('.dn-vehicle-card__name').innerText.trim() === model &&
+              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom - 1 && price.top <= identity.bottom + 6 &&
+              metadata.top >= content.bottom && metadata.left > image.right &&
               metadata.left >= box.left && metadata.right <= box.right && metadata.bottom <= box.bottom &&
               parseFloat(priceStyle.fontSize) > parseFloat(headingStyle.fontSize) &&
               parseFloat(priceStyle.fontWeight) > parseFloat(headingStyle.fontWeight) &&
-              facts.length === 4 && badgesMatch && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
+              facts.length === 4 && badgesMatch && badgeTextFits && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
+              badgeBoxes.every(badge => Math.abs(badge.width - badgeBoxes[0].width) <= 1 && Math.abs(badge.height - badgeBoxes[0].height) <= 1) &&
+              facts.every(fact => getComputedStyle(fact).borderRadius === '6px') &&
               Math.abs(badgeBoxes[0].left - metadata.left) <= 1 && Math.abs(badgeBoxes[3].right - metadata.right) <= 1 &&
-              badgeBoxes.every(badge => Math.abs(badge.top - metadata.top) <= 1 && Math.abs(badge.height - metadata.height) <= 1) &&
+              Math.abs(badgeBoxes[0].top - badgeBoxes[1].top) <= 1 &&
+              Math.abs(badgeBoxes[2].top - badgeBoxes[3].top) <= 1 && badgeBoxes[2].top >= badgeBoxes[0].bottom + 3 &&
               priceStyle.backgroundColor === 'rgba(0, 0, 0, 0)' };
           }));
           assert(photos.every(photo => photo.loaded && photo.fits),
-            `Full-width landscape photos lead complete titles, a plain price and four supporting badges: ${JSON.stringify(photos.filter(photo => !photo.loaded || !photo.fits))}`);
+            `Photos match the full height of the details and two rows of badges: ${JSON.stringify(photos.filter(photo => !photo.loaded || !photo.fits))}`);
+          const mileageBadge = page.locator('.dn-vehicle-card__mobile-meta li:nth-child(2)').first();
+          assert.match(await mileageBadge.locator('[aria-hidden="true"]').innerText(), /^\d+$/,
+            'Mobile mileage keeps all digits without an extra unit or grouping');
+          assert.match(await mileageBadge.locator('.dn-sr-only').innerText(), /km|км/,
+            'Accessible mileage retains its full kilometer unit');
           const alignment = await page.locator('.dn-vehicle-card--listing').evaluateAll(cards => cards.map(card => {
             const box = card.getBoundingClientRect();
             return { height: box.height, priceTop: card.querySelector('.dn-vehicle-card__amount').getBoundingClientRect().top - box.top,
               factsTop: card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect().top - box.top };
           }));
-          for (const key of ['height', 'priceTop', 'factsTop']) assert(Math.max(...alignment.map(item => item[key])) - Math.min(...alignment.map(item => item[key])) <= 1,
+          for (const key of ['height']) assert(Math.max(...alignment.map(item => item[key])) - Math.min(...alignment.map(item => item[key])) <= 1,
             `All inventory cards share their ${key}, including the longest AMG titles`);
           assert.equal(await page.locator('.dn-vehicle-card--listing img[fetchpriority="high"]').count(), 1,
             'Only the first inventory photograph gets high fetch priority');
+          const quickPills = await page.locator('.dn-listing-filter__quick button').evaluateAll(pills => pills.map(pill => {
+            const box = pill.getBoundingClientRect(), style = getComputedStyle(pill), paint = getComputedStyle(pill, '::before');
+            return { hitHeight: box.height, paintedHeight: box.height - parseFloat(paint.top) - parseFloat(paint.bottom),
+              font: style.fontSize, iconWidth: pill.querySelector('svg').getBoundingClientRect().width };
+          }));
+          assert(quickPills.every(pill => pill.hitHeight >= 44 && pill.paintedHeight === 40 && pill.font === '16px' && pill.iconWidth === 14),
+            'Inventory quick filters match Home pills: 40px paint, 16px type and 44px targets');
+          assert.equal(await page.locator('.dn-listing-filter__mobile-keyword').evaluate(el => getComputedStyle(el).fontSize), '16px',
+            'Inventory search uses the same readable control size as the quick filters');
+          assert.equal(await page.locator('.dn-listing-filter__mobile-keyword > svg').evaluate(el => el.getBoundingClientRect().width), 22,
+            'Mobile inventory search has a legible 22px icon');
+          const railSpacing = await page.evaluate(() => {
+            const toolbar = document.querySelector('.dn-listing-filter__primary').getBoundingClientRect();
+            const rail = document.querySelector('.dn-listing-filter__quick').getBoundingClientRect();
+            const grid = document.querySelector('.dn-listing-results__grid').getBoundingClientRect();
+            return { above: rail.top - toolbar.bottom, below: grid.top - rail.bottom };
+          });
+          assert(railSpacing.above >= 12 && railSpacing.below >= 16,
+            `Quick filters retain clear spacing from search and cards: ${JSON.stringify(railSpacing)}`);
           await capture('inventory');
           const discoveryControls = await page.locator('.dn-listing-filter__mobile-sort,.dn-listing-filter__toggle').evaluateAll(controls => controls.map(control => {
             const box = control.getBoundingClientRect(), style = getComputedStyle(control);
@@ -182,15 +259,44 @@ try {
         } else await capture('inventory');
         for (const topic of ['import', 'trade-in']) {
           await visit(`/contact?topic=${topic}`);
-          if (width < 768) assert.deepEqual(await page.locator('.dn-mobile-bottom-nav__label').allTextContents(), dockNames,
-            'Sell and Import retain the same dock destinations and order');
-          const action = page.locator('.dn-service-entry__submit');
+          if (width < 768) {
+            assert.deepEqual(await page.locator('.dn-mobile-bottom-nav__label').allTextContents(), dockNames,
+              'Sell and Import retain the same dock destinations and order');
+            await alignedDock(page);
+          }
+          const action = page.locator('.dn-service-entry__submit:visible');
           await fits(action);
-          await fits(page.locator('.dn-service-entry__choices button'));
+          await fits(page.locator('.dn-service-entry:visible .dn-service-entry__choices button'));
           assert.equal(await page.locator('.dn-service-process li').count(), 3);
-          await fits(page.locator('.dn-service-faq summary'));
-          await page.locator('.dn-service-faq summary').first().click();
-          assert.equal(await page.locator('.dn-service-faq details[open]').count(), 1);
+          if (width < 768) {
+            assert.equal(await page.locator('.dn-service-faq').isVisible(), false);
+            const banner = page.locator('.dn-service-banner');
+            await banner.scrollIntoViewIfNeeded();
+            await banner.locator('img').evaluate(image => image.decode());
+            assert(await banner.isVisible());
+            await fits(banner.locator('a'));
+            const callControl = await compactControl(banner.locator('a'), { icon: true });
+            assert(callControl.width < 180, 'Call uses its content width rather than the full entry CTA width');
+            assert.match(await banner.locator('a').getAttribute('href'), /^tel:/);
+            assert.equal(await banner.locator('[data-icon-family="hugeicons-rounded"]').count(), 1);
+            assert(await banner.locator('img').evaluate(image => image.naturalWidth > 1));
+            assert(await banner.locator('h2').evaluate(heading => {
+              const box = heading.getBoundingClientRect();
+              return box.height <= parseFloat(getComputedStyle(heading).lineHeight) + 1;
+            }), 'The service banner heading uses the full card width and fits one line');
+            const bannerLayout = await banner.evaluate(card => {
+              const copy = card.querySelector('p').getBoundingClientRect(), action = card.querySelector('a').getBoundingClientRect();
+              const box = card.getBoundingClientRect();
+              return { gap: action.top - copy.bottom, height: box.height, bottom: box.bottom - action.bottom };
+            });
+            assert(bannerLayout.gap >= 12 && bannerLayout.gap <= 16 && Math.abs(bannerLayout.bottom - 16) <= 1 && bannerLayout.height < 180,
+              `Banner CTA follows its text in the smaller card: ${JSON.stringify(bannerLayout)}`);
+          } else {
+            assert.equal(await page.locator('.dn-service-banner').isVisible(), false);
+            await fits(page.locator('.dn-service-faq summary'));
+            await page.locator('.dn-service-faq summary').first().click();
+            assert.equal(await page.locator('.dn-service-faq details[open]').count(), 1);
+          }
           await capture(topic);
           if (width < 768) {
             await page.setViewportSize({ width, height: 420 });

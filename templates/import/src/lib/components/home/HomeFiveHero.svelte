@@ -1908,7 +1908,7 @@
 			flex: 0 0 40px;
 			border: 0;
 			border-radius: 999px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			color: var(--bc-ink);
 			cursor: pointer;
 			padding: 0;
@@ -1957,7 +1957,7 @@
 			align-items: center;
 			gap: 10px;
 			border-radius: 999px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			padding: 0 13px;
 			color: var(--bc-ink);
 		}
@@ -2036,7 +2036,7 @@
 			min-height: 44px;
 			align-items: center;
 			border-radius: 8px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			padding: 0 12px;
 			color: var(--bc-ink);
 			font-size: var(--bc-text-control);
@@ -2083,15 +2083,16 @@
 		}
 
 		.daynight-home-search-drawer__group a:focus-visible {
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			color: var(--bc-ink);
-			outline: 0;
+			outline: 2px solid var(--bc-accent);
+			outline-offset: 2px;
 		}
 
 		.daynight-home-search-drawer__hint {
 			margin: 0;
 			border-radius: 12px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			padding: 12px 13px;
 			color: var(--bc-copy);
 			font-size: var(--bc-mobile-body);
@@ -2118,7 +2119,7 @@
 			justify-content: center;
 			border: 0;
 			border-radius: 12px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			padding: 0 12px;
 			color: var(--bc-ink);
 			font-size: var(--bc-text-cta);

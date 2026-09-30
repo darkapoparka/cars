@@ -277,10 +277,9 @@ export const PublicRouteLoading = async ({
               <div className={mobileVehicleCardContentClassName}>
                 <div className={mobileVehicleCardInfoClassName}>
                   <div
-                    className={cn(mobileVehicleCardTitleClassName, "h-[2lh]")}
+                    className={cn(mobileVehicleCardTitleClassName, "h-[1lh]")}
                   >
                     <div className="h-4 w-4/5 rounded bg-secondary" />
-                    <div className="mt-1 h-4 w-3/5 rounded bg-secondary" />
                   </div>
                   <div className={mobileVehicleCardPriceSummaryClassName}>
                     <div className="h-6 w-3/4 rounded bg-secondary" />
@@ -288,7 +287,7 @@ export const PublicRouteLoading = async ({
                   </div>
                 </div>
                 <div className={mobileVehicleCardFactsClassName}>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="grid grid-cols-[max-content_minmax(0,1fr)] gap-1">
                     <div className="h-6 w-8 rounded-md bg-secondary" />
                     <div className="h-6 w-16 rounded-md bg-secondary" />
                     <div className="h-6 w-10 rounded-md bg-secondary" />

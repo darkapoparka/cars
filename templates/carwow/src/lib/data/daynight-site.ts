@@ -51,6 +51,7 @@ export const daynightSite = {
 	sourceInventory: 'https://daynight.mobile.bg/',
 	logoLight: '/brand/daynight-logo.webp',
 	logoDark: '/brand/daynight-logo.webp',
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

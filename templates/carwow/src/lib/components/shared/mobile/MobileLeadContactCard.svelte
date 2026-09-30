@@ -10,12 +10,14 @@
 		phoneHref,
 		title = i18n.t('copy.a8486dcea523'),
 		copy = i18n.t('copy.b75c88742595'),
+		action = i18n.t('copy.d40e5119596a'),
 		image,
 		artwork = 'cutout'
 	}: {
 		phoneHref: string;
 		title?: string;
 		copy?: string;
+		action?: string;
 		image?: string;
 		artwork?: 'cutout' | 'photo';
 	} = $props();
@@ -23,13 +25,7 @@
 
 {#if image}
 	<aside aria-label={i18n.t('pattern.5bc6bd908ea0', { v0: daynightSite.shortName })}>
-		<MobileLeadImageBanner
-			{title}
-			{image}
-			action={i18n.t('copy.d40e5119596a')}
-			{artwork}
-			href={i18n.href(phoneHref)}
-		/>
+		<MobileLeadImageBanner {title} {image} {action} {artwork} href={i18n.href(phoneHref)} />
 	</aside>
 {:else}
 	<aside
@@ -43,9 +39,7 @@
 			<strong>{title}</strong>
 			<small>{copy}</small>
 		</span>
-		<a href={i18n.href(phoneHref)}
-			>{i18n.t('copy.d40e5119596a')} <ChevronRight size={15} strokeWidth={2.5} /></a
-		>
+		<a href={i18n.href(phoneHref)}>{action} <ChevronRight size={15} strokeWidth={2.5} /></a>
 	</aside>
 {/if}
 

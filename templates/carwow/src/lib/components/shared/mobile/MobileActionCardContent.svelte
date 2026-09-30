@@ -37,7 +37,11 @@
 		<strong>{title}</strong>
 		{#if copy}<small>{copy}</small>{/if}
 		<span class="action-card__action"
-			>{action}<ArrowRight size={16} strokeWidth={2} aria-hidden="true" /></span
+			>{action}<ArrowRight
+				size={artwork === 'promo' ? 14 : 16}
+				strokeWidth={2}
+				aria-hidden="true"
+			/></span
 		>
 	</span>
 	<img
@@ -184,13 +188,13 @@
 		object-position: right bottom;
 	}
 	.action-card--promo {
-		--action-card-promo-height: clamp(168px, 45vw, 248px);
+		--action-card-promo-height: 140px;
 
 		position: relative;
 		isolation: isolate;
 		display: block;
 		min-height: var(--action-card-promo-height);
-		border-radius: 18px;
+		border-radius: var(--sa-r-lg);
 		background: #10151b;
 	}
 	.action-card--promo::before {
@@ -208,19 +212,31 @@
 		content: '';
 		pointer-events: none;
 	}
+	.action-card--promo.action-card--compact {
+		--action-card-promo-height: 124px;
+	}
 	.action-card--promo .action-card__copy {
 		position: relative;
 		z-index: 2;
 		width: 100%;
 		min-height: var(--action-card-promo-height);
 		box-sizing: border-box;
-		justify-content: space-between;
-		padding: 18px;
+		justify-content: center;
+		gap: 4px;
+		padding: 16px;
 	}
 	.action-card--promo strong {
-		max-width: 52%;
+		max-width: 72%;
+		overflow-wrap: anywhere;
 		font-size: var(--sa-mobile-type-section-title);
-		line-height: 1.12;
+		line-height: 1.2;
+		text-wrap: initial;
+	}
+	.action-card--promo small {
+		max-width: 64%;
+		overflow-wrap: anywhere;
+		font-size: var(--sa-mobile-type-meta);
+		line-height: 1.35;
 	}
 	.action-card--promo .action-card__action {
 		width: max-content;
@@ -229,14 +245,15 @@
 		box-sizing: border-box;
 		justify-content: center;
 		gap: 6px;
-		margin-top: auto;
+		margin-top: 8px;
+		border: 1px solid transparent;
 		border-radius: var(--sa-r-pill);
 		background: #fff;
-		padding: 8px 12px;
+		padding: 6px 12px;
 		color: #111820 !important;
 		font-size: var(--sa-text-sm);
-		font-weight: var(--sa-weight-semibold);
-		white-space: nowrap;
+		font-weight: var(--sa-weight-medium);
+		white-space: normal;
 	}
 	.action-card--promo .action-card__image {
 		position: absolute;
@@ -245,8 +262,8 @@
 		width: 100%;
 		height: 100%;
 		min-height: 0;
-		object-fit: cover;
-		object-position: 75% center;
+		object-fit: contain;
+		object-position: right center;
 		pointer-events: none;
 	}
 </style>

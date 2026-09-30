@@ -29,3 +29,9 @@ export const mobileActionArtwork = {
   import: { src: leadSite.artwork.home.import, width: 1200, height: 400, crop: [0, 0, 1200, 400] },
   finance: { src: '/assets/images/template/mobile-leasing-card-v4.webp', width: 720, height: 240, crop: [73, 9, 573, 215] },
 } as const satisfies Record<string, FeatureArtwork>;
+
+// Home scenes are independent of existing service and desktop artwork consumers.
+export const homeActionArtwork = {
+  ...mobileActionArtwork,
+  finance: { src: leadSite.artwork.homeActionScenes.finance, width: 720, height: 405, crop: [37, 49, 653, 327] },
+} as const satisfies Record<string, FeatureArtwork>;

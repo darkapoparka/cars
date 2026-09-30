@@ -26,7 +26,7 @@
     normalizeListingMakeTransition
   } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
-  import MobileNavIcon from '$components/layout/MobileNavIcon.svelte';
+  import MobileNavIcon from '$components/layout/MobileActionIcon.svelte';
   import QuickFilterSheet from './QuickFilterSheet.svelte';
   import VehicleDiscoveryForm from './VehicleDiscoveryForm.svelte';
 
@@ -94,7 +94,7 @@
       <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
         <div class="dn-listing-filter__primary">
         <div class="dn-listing-filter__search-field">
-          <MobileNavIcon name="search" size={18} />
+          <MobileNavIcon name="search" size={22} />
           <input {@attach i18n.validation} class="dn-listing-filter__keyword" type="search" name="q" bind:value={query} aria-label={i18n.t("m_32729e44de2d")} placeholder={i18n.t("m_13fd09148700")} />
           <button class="dn-listing-filter__submit" type="submit"><Icon name="search" size={18} /><span>{i18n.t("m_49c266baaaa7")}</span></button>
         </div>
@@ -107,7 +107,7 @@
           aria-label={query ? i18n.t("m_645cee389418", { p0: query }) : i18n.t("m_a6403c514411")}
           onclick={(event) => openFilters(event)}
         >
-          <MobileNavIcon name="search" size={18} />
+          <MobileNavIcon name="search" size={22} />
           <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || `${i18n.t("m_49c266baaaa7")} (${resultCount})`}</span>
           <span class="dn-listing-filter__keyword-hint">{i18n.t("m_27194051d1f9")} <Icon name="arrow-right" size={16} /></span>
         </button>
@@ -269,7 +269,7 @@
     transition: border-color 150ms ease-out, background-color 150ms ease-out;
   }
 
-  .dn-listing-filter__keyword > :global(.dn-icon) { color: #6d737d; }
+    .dn-listing-filter__keyword > :global(.dn-icon) { color: #6d737d; }
 
   .dn-listing-filter select {
     width: 100%;
@@ -428,7 +428,7 @@
     .dn-listing-desktop-discovery { display: none; }
     .dn-listing-filter__quick {
       display: flex;
-      gap: 8px;
+      gap: var(--dn-space-2);
       padding: 2px 0 8px;
       overflow-x: auto;
       scrollbar-width: none;
@@ -436,29 +436,40 @@
     .dn-listing-filter__quick::-webkit-scrollbar { display: none; }
     .dn-listing-filter__quick a,
     .dn-listing-filter__quick button {
+      position: relative;
+      z-index: 0;
+      isolation: isolate;
       display: inline-flex;
       min-height: 44px;
       flex: 0 0 auto;
       align-items: center;
-      gap: 8px;
-      padding: 0 15px;
+      gap: var(--dn-entry-action-gap);
+      padding: 0 var(--dn-compact-control-padding-inline);
       border: 0;
       border-radius: var(--dn-pill);
-      background: #fff;
-      color: #3f4650;
-      font-family: inherit;
-      font-size: var(--dn-control-size);
-      font-weight: var(--dn-control-weight);
+      background: transparent;
+      color: var(--dn-ink);
+      font: var(--dn-compact-control-font);
       white-space: nowrap;
       cursor: pointer;
     }
+    .dn-listing-filter__quick :is(a, button)::before {
+      position: absolute;
+      inset: var(--dn-compact-control-inset) 0;
+      z-index: -1;
+      border-radius: inherit;
+      background: var(--dn-white);
+      content: '';
+    }
+    .dn-listing-filter__quick :global(svg) { width: 14px; height: 14px; flex: 0 0 auto; }
     .dn-listing-filter__quick a:focus-visible,
-    .dn-listing-filter__quick button:focus-visible { outline: 2px solid var(--dn-red); outline-offset: -2px; }
-    .dn-listing-filter__quick a.active { background: #202329; color: #fff; }
+    .dn-listing-filter__quick button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
+    .dn-listing-filter__quick a.active { background: transparent; color: var(--dn-white); }
+    .dn-listing-filter__quick a.active::before { background: var(--dn-ink); }
     .dn-listing-filter__primary {
       grid-template-columns: minmax(0, 1fr) 44px 44px;
       gap: 8px;
-      padding: calc(12px + env(safe-area-inset-top)) 0 8px;
+      padding: calc(12px + env(safe-area-inset-top)) 0 0;
     }
     .dn-listing-filter__keyword {
       grid-column: auto;
@@ -468,7 +479,7 @@
       border: 0;
       border-radius: var(--dn-pill);
       background: transparent;
-      font: var(--dn-entry-font);
+      font: var(--dn-control-font);
       box-shadow: none;
       isolation: isolate;
     }
@@ -481,6 +492,7 @@
       content: '';
     }
     .dn-listing-filter__keyword-hint { display: none; }
+    .dn-listing-filter__mobile-keyword > :global(.dn-icon) { color: var(--dn-ink-hover); }
     .dn-listing-filter__toggle,
     .dn-listing-filter .dn-listing-filter__mobile-sort {
       display: inline-grid;
@@ -507,7 +519,7 @@
       min-width: 0;
       align-items: center;
       gap: 12px;
-      padding-bottom: 8px;
+      padding-block: var(--dn-space-3) var(--dn-space-4);
     }
     .dn-listing-filter__quick-row .dn-listing-filter__quick { min-width: 0; flex: 1; padding-block: 0; }
     .dn-listing-filter__count { display: none; }

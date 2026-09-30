@@ -14,7 +14,7 @@
   import NavigationFeatureCard from './NavigationFeatureCard.svelte';
   import ActionLink from '$components/ui/ActionLink.svelte';
   import MobileMenu from './MobileMenu.svelte';
-  import MobileNavIcon from './MobileNavIcon.svelte';
+  import MobileNavIcon from './MobileActionIcon.svelte';
   import BottomNavIcon from './BottomNavIcon.svelte';
   import { vehicleContactHref } from '$data/journeys';
   import { brand } from '$config/brand';
@@ -620,18 +620,10 @@
     .dn-mobile-bottom-nav {
       container-type: inline-size;
       display: grid;
-      left: max(12px, env(safe-area-inset-left));
-      right: max(12px, env(safe-area-inset-right));
-      bottom: calc(8px + env(safe-area-inset-bottom));
-      min-height: var(--dn-mobile-nav-bar-height);
-      max-width: 440px;
-      margin-inline: auto;
+      min-height: calc(var(--dn-mobile-nav-bar-height) + env(safe-area-inset-bottom));
       grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: var(--dn-space-half);
-      padding: var(--dn-space-1);
-      border: 1px solid var(--dn-line);
-      border-radius: 22px;
-      box-shadow: 0 4px 24px rgb(20 23 29 / 8%);
+      padding: var(--dn-space-1) max(var(--dn-space-3), env(safe-area-inset-right)) calc(var(--dn-space-1) + env(safe-area-inset-bottom)) max(var(--dn-space-3), env(safe-area-inset-left));
+      border-top-color: var(--dn-line);
       transition: transform 180ms ease, opacity 150ms ease;
     }
 
@@ -656,7 +648,7 @@
       border: 0;
       border-radius: var(--dn-radius);
       background: transparent;
-      color: var(--dn-muted);
+      color: var(--dn-ink);
       font: inherit;
       font-size: var(--dn-text-caption);
       font-weight: var(--dn-weight-medium);
@@ -691,7 +683,7 @@
 
     .dn-mobile-bottom-nav a:not(.active):active,
     .dn-mobile-bottom-nav button:not(.active):active {
-      background: var(--dn-surface-panel);
+      color: var(--dn-red);
     }
 
     .dn-mobile-bottom-nav a:focus-visible,

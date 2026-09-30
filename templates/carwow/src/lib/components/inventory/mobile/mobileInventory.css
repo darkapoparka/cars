@@ -411,19 +411,17 @@
 }
 
 .mobile-inventory-card h2 {
-	display: -webkit-box;
+	display: block;
+	min-width: 0;
 	overflow: hidden;
 	margin: 0;
-	/* Single-column list — let the title take its natural 1 or 2 lines so the
-	   price hugs it (no reserved-line gap on short titles). */
 	color: #0f1629;
 	font-size: var(--sa-text-base);
 	font-weight: var(--sa-weight-medium);
 	letter-spacing: -0.02em;
 	line-height: 1.18;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	line-clamp: 2;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .mobile-inventory-card__price {

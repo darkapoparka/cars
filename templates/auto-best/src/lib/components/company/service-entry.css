@@ -1,4 +1,10 @@
 .dn-service-entry { display: grid; gap: var(--dn-entry-stack-gap); }
+.dn-service-entry--mobile { display: none; }
+@media (max-width: 767px) {
+  .dn-service-entry--desktop { display: none; }
+  .dn-service-entry--mobile { display: grid; }
+  .dn-service-entry--mobile .dn-service-entry__submit { justify-self: center; max-width: 100%; margin: 0 auto; cursor: pointer; }
+}
 .dn-service-entry__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
 .dn-service-entry__fields .wide { grid-column: 1 / -1; }
 .dn-service-entry label { display: flex; flex-direction: column; gap: 8px; min-width: 0; color: var(--dn-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); }

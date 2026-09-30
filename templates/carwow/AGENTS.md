@@ -1,19 +1,19 @@
 # Carwow template instructions
 
-This is the authoritative reusable master: darkapoparka/cars-template-carwow. The current user request determines scope. Preserve the existing rendered design unless the requested shared improvement changes it.
+This is the authoritative reusable master at templates/carwow in darkapoparka/cars. Follow [Cars ownership](../../AGENTS.md); the former standalone repository is retained history, not an active master. The current user request determines scope. Preserve the existing rendered design unless the requested shared improvement changes it.
 
 ## Task routing
 
 - Shared template frontend/code work: work here, keep changes reusable, and read only the relevant architecture/style/QA reference.
 - Dealer build or correction: use canonical clients/<slug>/ in [Cars](https://github.com/darkapoparka/cars), through its workflow. Do not personalize this master.
-- Template release: follow [Cars integration](docs/CARS-INTEGRATION.md); promotion selects an exact reviewed commit and leaves existing dealers independent.
+- Template release: follow [Cars template releases](../../docs/TEMPLATE-PROMOTION.md); promotion selects an exact reviewed commit and leaves existing dealers independent.
 - Audit/status: inspect without edits or publication unless fixes are requested.
 
-Read [TEMPLATE](TEMPLATE.md) for runtime/content boundaries and [docs/QA.md](docs/QA.md) when verification needs it. [Cars integration](docs/CARS-INTEGRATION.md) owns the cross-repository contract. Do not load every historical task ledger or resume its backlog.
+Read [TEMPLATE](TEMPLATE.md) for runtime/content boundaries and [docs/QA.md](docs/QA.md) when verification needs it. [Cars template releases](../../docs/TEMPLATE-PROMOTION.md) owns the source and release contract. Do not load every historical task ledger or resume its backlog.
 
 ## Implementation and preservation
 
-Confirm physical checkout, remote, current branch/HEAD, relevant dirty paths and listener ownership. One writer owns the checkout/index/build output. Preserve unrelated staged, unstaged, untracked and unique branch work; no blanket staging, clean/reset, deletion of unmerged work or force-push. Keep existing lockfiles, runtime, licenses and provenance. Do not switch a working branch or overwrite a Cars snapshot merely to synchronize it.
+Confirm physical checkout, remote, current branch/HEAD, relevant dirty paths and listener ownership. One writer owns the checkout/index/build output. Preserve unrelated staged, unstaged, untracked and unique branch work; no blanket staging, clean/reset, deletion of unmerged work or force-push. Keep existing lockfiles, runtime, licenses and provenance. Do not switch a working branch or overwrite another template or dealer merely to synchronize it.
 
 Use the release-documented Node runtime and retained npm lockfile. Keep source ownership at `src/lib/data/daynight-site.ts`, `src/lib/data/daynight-current-inventory.ts`, `src/lib/data/daynight-vehicles.ts`, `src/lib/styles/`, `static/`. Reuse actual components and data boundaries. Desktop and mobile have intentional separate compositions; retain route/chrome and viewport contracts.
 

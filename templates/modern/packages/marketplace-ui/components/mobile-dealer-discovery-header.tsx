@@ -14,6 +14,10 @@ import {
   X,
 } from "lucide-react";
 import type { MouseEvent } from "react";
+import {
+  mobileSearchTriggerClassName,
+  mobileSearchTriggerLabelClassName,
+} from "../lib/mobile-form-control";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getMobileQuickPillClassName } from "../lib/mobile-quick-pill";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
@@ -167,13 +171,11 @@ const MobileSearchButton = ({
         : searchLabel
     }
     className={cn(
-      "flex min-w-0 items-center gap-2.5 text-left ring-1 ring-inset transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
+      mobileSearchTriggerClassName,
       onDark
         ? "bg-white ring-white/15 hover:bg-zinc-100 focus-visible:outline-[var(--lead-site-accent-bright)]"
         : "bg-zinc-100 ring-zinc-200/80 hover:bg-zinc-200 focus-visible:outline-ring",
-      isCompact
-        ? "h-11 flex-1 rounded-full px-3"
-        : "h-12 w-full rounded-full px-4"
+      isCompact ? "h-11 flex-1 px-3" : "h-12 w-full px-4"
     )}
     data-slot="mobile-discovery-search"
     onClick={(event) => openFromButton(event, onOpenSearch)}
@@ -184,13 +186,7 @@ const MobileSearchButton = ({
       className="size-[18px] shrink-0 text-zinc-600"
       strokeWidth={2}
     />
-    <span
-      className={cn(
-        "min-w-0 flex-1 truncate font-medium tabular-nums",
-        isCompact ? "text-compact-control" : "text-body",
-        hasMakeModelSelection ? "text-zinc-950" : "text-zinc-600"
-      )}
-    >
+    <span className={mobileSearchTriggerLabelClassName}>
       {hasMakeModelSelection ? makeModelValue : searchLabel}
     </span>
     {isCompact ? null : (

@@ -41,6 +41,10 @@ mark identity QA complete from a config-only change. Follow the Cars
 [content and integration sweep](../../docs/LEAD-BUILD-GUARDRAILS.md#6-complete-the-content-and-integration-sweep)
 before a dealer copy is reviewed or published.
 
+The menu's `daynightSite.menuLogo` is a neutral showroom placeholder. Replace it
+with the dealer's logo when cloning; `menuBanner` is a separate image setting so
+the menu can use sourced showroom photography without baking controls into it.
+
 ## Representative QA routes
 
 - `/`

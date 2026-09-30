@@ -49,7 +49,7 @@ const s = stylex.create({
   save: {position: 'absolute', top: 0, right: 0, display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: '#727272', borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   saved: {color: '#202024'},
   body: {display: 'flex', flexDirection: 'column', padding: '10px 10px 12px'},
-  title: {overflow: 'hidden', fontSize: 14, fontWeight: 500, lineHeight: '20px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'},
+  title: {display: 'block', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 14, fontWeight: 500, lineHeight: '20px'},
   price: {display: 'flex', alignItems: 'center', gap: 1, marginTop: 6, fontSize: 15, fontWeight: 600, lineHeight: '21px', whiteSpace: 'nowrap'},
   monthly: {display: 'inline-flex', alignItems: 'center', gap: 1, marginTop: 2, color: '#626269', fontSize: 12, fontWeight: 400, lineHeight: '18px', whiteSpace: 'nowrap'},
   photoTier: {position: 'absolute', left: 6, bottom: 6, padding: '1px 4px', borderRadius: 4, backgroundColor: 'rgba(255,255,255,.94)'},

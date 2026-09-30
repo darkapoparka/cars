@@ -1388,7 +1388,7 @@
 		flex: 0 0 40px;
 		border: 0;
 		border-radius: var(--bc-radius-pill);
-		background: var(--bc-surface);
+		background: var(--bc-white);
 		color: inherit;
 		cursor: pointer;
 		padding: 0;
@@ -1524,7 +1524,7 @@
 		flex: 0 0 var(--bc-control-height-standard);
 		border: 0;
 		border-radius: 50%;
-		background: var(--bc-surface);
+		background: var(--bc-white);
 		color: var(--bc-ink);
 		cursor: pointer;
 		padding: 0;
@@ -1544,7 +1544,7 @@
 		gap: var(--bc-space-3);
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-pill);
-		background: var(--bc-surface);
+		background: var(--bc-white);
 		padding: 0 var(--bc-space-3);
 		color: var(--bc-ink);
 	}
@@ -1688,7 +1688,7 @@
 		gap: 7px;
 		border: 0;
 		border-radius: var(--bc-radius-md);
-		background: var(--bc-surface);
+		background: var(--bc-white);
 		padding: 0 var(--bc-space-3);
 		appearance: none;
 		color: var(--bc-ink);
@@ -1795,7 +1795,7 @@
 		justify-content: center;
 		min-height: var(--bc-control-height-primary);
 		border-radius: var(--bc-radius-control);
-		background: var(--bc-surface);
+		background: var(--bc-white);
 		color: var(--bc-ink);
 	}
 

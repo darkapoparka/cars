@@ -1,4 +1,7 @@
-import { mobileResponsiveFormFocusClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
+import {
+  mobileResponsiveFormFocusClassName,
+  mobileResponsiveFormTextClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
 export const importRequestOrigins = [
   { code: "CN", bg: "Китай", en: "China" },
   { code: "DE", bg: "Германия", en: "Germany" },
@@ -7,7 +10,7 @@ export const importRequestOrigins = [
   { code: "KR", bg: "Южна Корея", en: "South Korea" },
 ] as const;
 
-export const importRequestInputClassName = `h-12 rounded-xl border-transparent bg-zinc-100 text-base shadow-none lg:h-11 lg:rounded-lg lg:bg-secondary ${mobileResponsiveFormFocusClassName}`;
+export const importRequestInputClassName = `h-12 rounded-xl border-transparent bg-zinc-100 text-base shadow-none lg:h-11 lg:rounded-lg lg:bg-secondary ${mobileResponsiveFormTextClassName} ${mobileResponsiveFormFocusClassName}`;
 
 export const importRequestSelectClassName =
   "h-11 w-full rounded-lg border border-transparent bg-secondary px-3 text-sm outline-none transition-shadow focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50";

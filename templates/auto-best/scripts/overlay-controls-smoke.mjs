@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { webkit } from 'playwright';
 import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
+import { fillServiceEntry, serviceEntry, serviceAction } from './service-entry-fixture.mjs';
 
 const base = previewUrl();
 const engine = process.env.OVERLAY_ENGINE || 'chromium';
@@ -132,6 +133,12 @@ try {
     });
     for (const topic of ['import', 'trade-in']) {
       await check(topic + '-info', '/contact?topic=' + topic, async page => {
+        if (width < 768) {
+          assert.equal(await page.locator('.dn-service-faq').isVisible(), false);
+          assert(await page.locator('.dn-service-banner').isVisible());
+          assert.match(await page.locator('.dn-service-banner a').getAttribute('href'), /^tel:/);
+          return { serviceBanner: true };
+        }
         const faq = page.locator('.dn-service-faq summary').first();
         await faq.click();
         assert(await page.locator('.dn-service-faq details[open] p').isVisible());
@@ -141,16 +148,16 @@ try {
       });
     }
     await check('tradein-form', '/contact?topic=trade-in', async page => {
-      for(const [field,value] of Object.entries({make:'Audi',model:'A6',year:'2020',mileage:'85000'})) await page.locator('.dn-service-entry [name='+field+']').fill(value);
-      const trigger = page.locator('.dn-service-entry__submit'); await trigger.click();
+      await fillServiceEntry(page, {make:'Audi',model:'A6',year:'2020',mileage:'85000'});
+      const trigger = serviceAction(page); await trigger.click();
       const evidence = await centered(page.locator('.dn-tradein-close'));
       await page.locator('.dn-tradein-close').click();
       await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
       return evidence;
     });
     await check('import-form', '/contact?topic=import', async page => {
-      await page.locator('.dn-service-entry [name=link]').fill('https://example.com/vehicle');
-      const trigger = page.locator('.dn-service-entry__submit'); await trigger.click();
+      await fillServiceEntry(page, {link:'https://example.com/vehicle'});
+      const trigger = serviceAction(page); await trigger.click();
       const evidence = await centered(page.locator('.dn-enquiry-close'));
       await page.locator('.dn-enquiry-close').click();
       await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
@@ -182,12 +189,15 @@ try {
       return evidence;
     });
     await check('reactive-validation', '/contact?topic=trade-in', async page => {
-      const start = page.locator('.dn-service-entry__submit'), close = page.locator('.dn-tradein-close');
+      const start = serviceAction(page), close = page.locator('.dn-tradein-close');
       await start.click();
-      const inlineMake = page.locator('.dn-service-entry [name=make]');
+      const inlineMake = width < 768 ? page.locator('.dn-service-editor[open] [name=make]') : serviceEntry(page).locator('[name=make]');
       assert.equal(await inlineMake.evaluate(el => el.checkValidity()), false);
-      await page.locator('.dn-service-entry__alternative').click();
-      await page.locator('.dn-service-entry [name=reference]').fill('WVWZZZ1JZXW000001');
+      if (width < 768) await fillServiceEntry(page, {reference:'WVWZZZ1JZXW000001'});
+      else {
+        await page.locator('.dn-service-entry__alternative:visible').click();
+        await serviceEntry(page).locator('[name=reference]').fill('WVWZZZ1JZXW000001');
+      }
       await start.click();
       await page.locator('.dn-tradein-back').click();
       const make = page.locator('.dn-tradein-dialog [name=make]');

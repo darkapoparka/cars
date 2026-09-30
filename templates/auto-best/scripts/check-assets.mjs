@@ -5,11 +5,15 @@ import process from 'node:process';
 const root = process.cwd();
 const sourceRoot = path.join(root, 'src');
 const staticRoot = path.join(root, 'static');
-const guardedMediaCount = 146;
+const guardedMediaCount = 158;
+// Preserve the two earlier local Home scene options for provenance.
+const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
 const retainedSourceAssets = new Set(['/assets/images/template/service-sell-key-v1.png', '/assets/images/icon-box/car-list4.png', '/assets/images/icon-box/car-list7.png', '/assets/images/lead/day-night-guide-import.webp', '/assets/images/lead/day-night-guide-inspection.webp', '/assets/images/lead/day-night-guide-leasing.webp', '/assets/images/lead/day-night-home-hero-v3.webp', '/assets/images/lead/day-night-home-black-v1.webp', '/assets/images/lead/day-night-logo.png', '/favicon.ico', '/assets/images/section/car-slide1.png', '/assets/images/section/car-slide2.png', '/assets/images/section/car-slide3.png']);
 // The solid About banner no longer requests this photograph; retain its source provenance.
 retainedSourceAssets.add('/assets/images/section/bg-12.jpg');
+for (const asset of homeScenePrototypes) retainedSourceAssets.add(asset);
+for (const name of ['sell', 'import', 'finance']) retainedSourceAssets.add(`/assets/images/template/home-action-${name}-v2.webp`);
 // Previous identity and the untouched generated source remain available for provenance.
 retainedSourceAssets.add('/assets/images/template/auto-best-logo.svg');
 retainedSourceAssets.add('/assets/images/template/auto-best-logo-light.svg');
@@ -24,6 +28,10 @@ retainedSourceAssets.add('/assets/images/template/service-sell-euros-v1.webp');
 retainedSourceAssets.add('/assets/images/template/service-import-v1.webp');
 retainedSourceAssets.add('/assets/images/template/service-sell-v2.webp');
 retainedSourceAssets.add('/assets/images/template/service-import-v2.webp');
+// Preserve the previous finance campaign image; mobile now uses the keys composition.
+retainedSourceAssets.add('/assets/images/template/pdp-finance-studio-v1.jpg');
+// Original low-resolution body illustrations remain available as source references.
+for (const number of [1, 2, 3, 8]) retainedSourceAssets.add(`/assets/images/icon-box/car-list${number}.png`);
 const sourceExtension = /\.(?:css|html|js|svelte|ts)$/i;
 const mediaExtension = /\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)$/i;
 const publicAssetReference = /\/(?:assets\/[A-Za-z0-9._@%+~/-]+\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|favicon\.ico|auto-best-icon\.svg)/gi;

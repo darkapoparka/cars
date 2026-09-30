@@ -4,7 +4,7 @@ import DealerBrand from '@/components/DealerBrand';
 import {useEffect, useState} from 'react';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import {MapPin, ArrowUpRight, Search, Heart} from 'lucide-react';
+import {MapPin, ArrowUpRight, Search} from 'lucide-react';
 import {showroom} from '@/lib/showroom';
 import {ServiceTabs, type ServiceKey} from '@/components/ReferenceUI';
 import {media, tokens as $} from '@/app/tokens.stylex';
@@ -37,7 +37,6 @@ export function ShowroomSearch() {
 
   return <div {...stylex.props(s.searchWrap)}><div {...stylex.props(s.searchRow)}>
     <Link data-search-field href="/search" aria-label={tx("Search cars")} {...stylex.props(searchField.field)}><Search size={20} strokeWidth={1.8} aria-hidden="true" {...stylex.props(searchField.icon)}/><span {...stylex.props(s.searchPrompt)}>{tx(showroom.searchPlaceholder)}</span><span {...stylex.props(s.mobileSearchPrompt)}>{tx(showroom.mobileSearchPlaceholder)}</span></Link>
-    <Link href="/saved" aria-label={tx("Saved cars")} {...stylex.props(s.saved)}><Heart size={20} strokeWidth={1.8} aria-hidden="true"/></Link>
   </div></div>;
 }
 const s = stylex.create({
@@ -52,8 +51,7 @@ const s = stylex.create({
   inner: {maxWidth: $.content, marginInline: 'auto', paddingTop: {[media.mobile]: 'calc(12px + env(safe-area-inset-top))', default: 30}, paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: 12},
   innerCompact: {paddingTop: {[media.mobile]: 'calc(12px + env(safe-area-inset-top))', default: 18}, paddingBottom: 12},
   searchWrap: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 10},
-  searchRow: {display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 48px', gap: 10},
+  searchRow: {display: 'block'},
   searchPrompt: {display: {[media.mobile]: 'none', default: 'block'}},
   mobileSearchPrompt: {display: {[media.mobile]: 'block', default: 'none'}, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
-  saved: {display: 'grid', placeItems: 'center', width: 48, height: 48, color: $.ink, borderRadius: '50%', backgroundColor: '#f4f4f5'},
 });

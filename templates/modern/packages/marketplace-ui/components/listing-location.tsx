@@ -1,6 +1,7 @@
 import { leadSite } from "@repo/marketplace";
 import { getLeadCopy } from "@repo/marketplace/lead-copy";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { publicSite } from "@repo/marketplace/site-config";
+import { ListingCtaBanner } from "./listing-cta-banner";
 
 interface ListingLocationProps {
   readonly locale?: string;
@@ -14,35 +15,31 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
   return (
     <section
       aria-labelledby="listing-location-heading"
-      className="overflow-hidden rounded-xl border border-border bg-secondary"
+      className="overflow-hidden rounded-xl bg-secondary"
       data-slot="listing-location"
       id="listing-location"
     >
-      <div className="space-y-3 bg-card p-4">
-        <h2
-          className="flex items-center gap-2 font-semibold text-card-title"
-          id="listing-location-heading"
-        >
-          <MapPin aria-hidden="true" className="size-5 shrink-0" />
-          {isBg ? "Посетете шоурума" : "Visit the showroom"}
-        </h2>
-        <p className="text-meta text-muted-foreground">
+      <ListingCtaBanner
+        action={
+          <>
+            {isBg ? "Упътвания" : "Get directions"}
+            <span className="sr-only">
+              {isBg ? " — отваря се в нов раздел" : " — opens in a new tab"}
+            </span>
+          </>
+        }
+        artwork={publicSite.artwork.contactHero}
+        external
+        heading={isBg ? "Посетете шоурума" : "Visit the showroom"}
+        headingId="listing-location-heading"
+        href={leadSite.mapsUrl}
+        slot="listing-showroom-card"
+      >
+        <p className="max-w-64 text-meta text-white/90">
           {copy.address}, {copy.city}
         </p>
-        <a
-          className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-secondary px-3 font-medium text-meta focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
-          href={leadSite.mapsUrl}
-          rel="noreferrer"
-          target="_blank"
-        >
-          {isBg ? "Упътвания" : "Get directions"}
-          <ArrowUpRight aria-hidden="true" className="size-4" />
-          <span className="sr-only">
-            {isBg ? " — отваря се в нов раздел" : " — opens in a new tab"}
-          </span>
-        </a>
-      </div>
-      <details className="group border-border border-t">
+      </ListingCtaBanner>
+      <details className="group">
         <summary className="cursor-pointer px-4 py-3 font-medium text-meta focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px]">
           {isBg ? "Карта на шоурума" : "Showroom map"}
         </summary>

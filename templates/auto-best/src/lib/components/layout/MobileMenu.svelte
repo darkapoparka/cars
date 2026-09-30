@@ -9,9 +9,8 @@
   import type { Attachment } from 'svelte/attachments';
   import { trapDialogTab } from '$lib/ui/overlay';
   import { brand } from '$config/brand';
-  import Icon from '$components/ui/Icon.svelte';
   import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
-  import MobileNavIcon from './MobileNavIcon.svelte';
+  import MobileNavIcon from './MobileActionIcon.svelte';
   import type { HeaderPresentation } from '$data/shell';
   let { closeMobile, attachMobileMenu, attachMobileCloseButton, active }: {
     closeMobile: (restoreFocus?: boolean) => Promise<void | HTMLElement>;
@@ -48,12 +47,18 @@
           <a class="dn-mobile-menu__call" {...phoneLinkAttributes} aria-label={`${i18n.t("action.callShort")} — ${brand.phone}`} title={brand.phone}><MobileNavIcon name="phone" size={20} /><span>{i18n.t("action.callShort")}</span></a>
           <a href={i18n.href(resolve('/contact#contact-location-title'))} onclick={() => void closeMobile(false)} aria-label={`${i18n.t("action.locationShort")} — ${i18n.dealer('address')}`}><MobileNavIcon name="location" size={20} /><span>{i18n.t("action.locationShort")}</span></a>
         </div>
-        <LocaleTrigger fullLabel beforeOpen={() => closeMobile(false)} />
+        <LocaleTrigger fullLabel beforeOpen={() => closeMobile(false)}>
+          {#snippet children()}
+            <MobileNavIcon name="language" size={22} />
+            <span class="dn-mobile-menu__locale-label">{i18n.t('locale.title')}</span>
+            <MobileNavIcon name="arrow" size={18} />
+          {/snippet}
+        </LocaleTrigger>
         <nav aria-label={i18n.t("m_7b624fe4f7ac")}>
-          <a href={i18n.href(resolve('/listing-grid'))} aria-current={active.listing ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={20} /><span>{i18n.t("m_13b5d43d1176")}</span><Icon name="arrow-right" size={16} /></a>
-          <a href={i18n.href(resolve('/blog'))} aria-current={active.blog ? 'page' : undefined} onclick={() => void closeMobile(false)}><Icon name="file-invoice" size={20} /><span>{i18n.t("m_5b0e082dcfae")}</span><Icon name="arrow-right" size={16} /></a>
-          <a href={i18n.href(resolve('/about-us'))} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="home" size={20} /><span>{i18n.t("m_b4b580a9ad8c")}</span><Icon name="arrow-right" size={16} /></a>
-          <a href={i18n.href(resolve('/contact'))} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={20} /><span>{i18n.t("m_d58d4100d4e6")}</span><Icon name="arrow-right" size={16} /></a>
+          <a href={i18n.href(resolve('/listing-grid'))} aria-current={active.listing ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={22} /><span>{i18n.t("m_13b5d43d1176")}</span><MobileNavIcon name="arrow" size={18} /></a>
+          <a href={i18n.href(resolve('/blog'))} aria-current={active.blog ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="article" size={22} /><span>{i18n.t("m_5b0e082dcfae")}</span><MobileNavIcon name="arrow" size={18} /></a>
+          <a href={i18n.href(resolve('/about-us'))} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="company" size={22} /><span>{i18n.t("m_b4b580a9ad8c")}</span><MobileNavIcon name="arrow" size={18} /></a>
+          <a href={i18n.href(resolve('/contact'))} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={22} /><span>{i18n.t("m_d58d4100d4e6")}</span><MobileNavIcon name="arrow" size={18} /></a>
         </nav>
         {#if brand.instagramUrl || brand.youtubeUrl || brand.facebookUrl}
         <div class="dn-mobile-menu__social" role="group" aria-label={i18n.t("m_b16446d4331a")}>
@@ -81,6 +86,8 @@
   .dn-mobile-menu__contact a:hover { background: var(--dn-red-hover); }
   .dn-mobile-menu__contact .dn-mobile-menu__call { background: var(--dn-ink); }
   .dn-mobile-menu__contact .dn-mobile-menu__call:hover { background: var(--dn-ink-hover); }
+  .dn-mobile-menu :global(.cars-locale-trigger) { gap: var(--dn-space-3); min-height: var(--dn-entry-height); margin-top: var(--dn-space-5); padding: var(--dn-space-3) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-home-panel); font: var(--dn-control-font); }
+  .dn-mobile-menu__locale-label { flex: 1; }
   nav { display: grid; gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
   nav a { display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-entry-height); padding: var(--dn-space-3) var(--dn-space-4); border-radius: var(--dn-radius-control); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-control-font); }
   nav a span { flex: 1; }

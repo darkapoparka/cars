@@ -43,7 +43,7 @@
 		</div>
 		<div class="mobile-inventory-card__body">
 			<div class="mobile-inventory-card__title">
-				<h2>{vehicle.shortTitle}</h2>
+				<h2 title={vehicle.shortTitle}>{vehicle.shortTitle}</h2>
 				<div class="mobile-inventory-card__price">
 					<span class="mobile-inventory-card__price-stack">
 						<strong>{vehicle.priceEur}</strong>

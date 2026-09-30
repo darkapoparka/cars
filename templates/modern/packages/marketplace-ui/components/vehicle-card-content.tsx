@@ -98,7 +98,7 @@ export const VehicleCardMediaBadges = ({
     >
       {labels.map((label) => (
         <Badge
-          className="h-auto min-h-6 max-w-full whitespace-normal break-words rounded-md border-0 bg-white/95 px-1 font-medium text-foreground text-micro lg:h-6 lg:px-2"
+          className="h-auto min-h-5 max-w-full whitespace-normal break-words rounded-md border-0 bg-white/95 px-1.5 py-0.5 font-medium text-foreground text-micro ring-1 ring-black/5 ring-inset lg:h-6 lg:px-2 lg:py-0 lg:ring-0"
           key={label}
           variant="secondary"
         >
@@ -154,7 +154,7 @@ const VehiclePriceSummary = ({
       </p>
       {secondaryPriceLabel ? (
         <p
-          className="text-micro text-muted-foreground lg:text-meta"
+          className="text-card-spec text-muted-foreground lg:text-meta"
           title={secondaryPriceLabel}
         >
           {secondaryPriceLabel}

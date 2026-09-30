@@ -10,10 +10,12 @@
 
 <section class="contact-banner">
 	<img
-		src={assetHref('/assets/daynight/banners/home-consultation-v2.webp')}
+		src={assetHref('/assets/daynight/banners/commerce-visit.webp')}
+		srcset={`${assetHref('/assets/daynight/banners/commerce-visit-small.webp')} 360w, ${assetHref('/assets/daynight/banners/commerce-visit.webp')} 720w, ${assetHref('/assets/daynight/banners/commerce-visit-large.webp')} 1080w`}
+		sizes="(max-width: 767px) calc(100vw - 28px), 1080px"
 		alt=""
-		width="1536"
-		height="512"
+		width="720"
+		height="405"
 		loading="lazy"
 	/>
 	<div class="contact-banner__copy">
@@ -38,14 +40,14 @@
 		position: relative;
 		isolation: isolate;
 		display: grid;
-		place-items: center;
+		align-items: center;
 		min-height: 300px;
 		overflow: hidden;
 		border-radius: var(--bc-radius-section);
 		background: var(--bc-mobile-dark);
 		color: var(--bc-white);
 		padding: var(--bc-space-8);
-		text-align: center;
+		text-align: left;
 	}
 	.contact-banner > img {
 		position: absolute;
@@ -60,10 +62,10 @@
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background: rgb(9 10 11 / 0.72);
+		background: linear-gradient(90deg, rgb(9 10 11 / 0.4), transparent 85%);
 	}
 	.contact-banner__copy {
-		max-width: 65ch;
+		max-width: 58%;
 	}
 	h2 {
 		margin: 0;
@@ -76,13 +78,19 @@
 	}
 	.contact-banner__actions {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		gap: var(--bc-space-3);
 	}
 	@media (max-width: 575px) {
 		.contact-banner {
 			padding: var(--bc-space-6) var(--bc-space-4);
+		}
+		.contact-banner__copy {
+			max-width: 100%;
+		}
+		.contact-banner::after {
+			background: rgb(9 10 11 / 0.62);
 		}
 	}
 </style>

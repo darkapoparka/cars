@@ -11,7 +11,7 @@ import {useCopy, useLocale} from '@/lib/locale';
 import {browserPath} from '@/lib/paths';
 import {showroom} from '@/lib/showroom';
 import {showroomLocation} from '@/lib/showroom-location';
-import {tokens as $} from '@/app/tokens.stylex';
+import {media, tokens as $} from '@/app/tokens.stylex';
 
 const languageNames = {en: 'English', bg: 'Български'};
 
@@ -48,30 +48,30 @@ export default function MorePage() {
 
 function MenuRow({href, icon, title, copy, primary = false}: {href: string; icon: ShowroomIconName; title: string; copy?: string; primary?: boolean}) {
   return <Link href={href} {...stylex.props(s.row, primary && s.primaryRow)}>
-    <span {...stylex.props(s.icon)}><ShowroomIcon name={icon} size={30}/></span>
+    <span {...stylex.props(s.icon)}><ShowroomIcon name={icon} size={24}/></span>
     <span {...stylex.props(s.copy)}><span>{title}</span>{copy ? <span {...stylex.props(s.subtitle)}>{copy}</span> : null}</span>
-    <ChevronRight size={18} aria-hidden="true" {...stylex.props(s.chevron, primary && s.primaryChevron)}/>
+    <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.chevron, primary && s.primaryChevron)}/>
   </Link>;
 }
 
 const s = stylex.create({
   screen: {maxWidth: 760, marginInline: 'auto', color: $.ink, backgroundColor: $.surface, fontFamily: $.fontSans},
   brand: {display: 'block', maxWidth: 128, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: 16, fontWeight: 600, letterSpacing: '-.025em'},
-  content: {padding: 16, paddingTop: 8},
-  section: {marginBottom: 12},
+  content: {paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 8, paddingBottom: 20},
+  section: {marginBottom: 16},
   sectionTitle: {margin: 0, paddingBlock: 10, paddingInline: 2, color: $.muted, fontSize: 13, fontWeight: 500, lineHeight: '20px'},
-  list: {borderColor: $.line, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusSm, overflow: 'hidden'},
-  row: {display: 'grid', gridTemplateColumns: '36px minmax(0,1fr) 18px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 9, paddingInline: 12, color: $.ink, fontSize: 15, fontWeight: 500, lineHeight: '21px', textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineColor: {default: 'transparent', ':focus-visible': $.ink}},
-  primaryRow: {minHeight: 62, fontWeight: 600, color: $.surface, borderBottomColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark, ':active': $.violetDark}, outlineColor: {default: 'transparent', ':focus-visible': $.surface}},
-  icon: {display: 'grid', placeItems: 'center', width: 36, height: 36},
+  list: {borderColor: $.line, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, overflow: 'hidden'},
+  row: {display: 'grid', gridTemplateColumns: '28px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 9, paddingInline: 15, color: $.ink, fontSize: 16, fontWeight: 500, lineHeight: '22px', textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineColor: {default: 'transparent', ':focus-visible': $.ink}},
+  primaryRow: {minHeight: 60, fontWeight: 600, color: $.surface, borderBottomColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark, ':active': $.violetDark}, outlineColor: {default: 'transparent', ':focus-visible': $.surface}},
+  icon: {display: 'grid', placeItems: 'center', width: 28, height: 28},
   copy: {display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0, overflowWrap: 'anywhere'},
-  subtitle: {color: $.muted, fontSize: 12, fontWeight: 400, lineHeight: '17px'},
+  subtitle: {color: $.muted, fontSize: 13, fontWeight: 400, lineHeight: '18px'},
   chevron: {color: $.subtle},
   primaryChevron: {color: $.surface},
-  languageRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', columnGap: 8, minHeight: 52, paddingInline: 2},
+  languageRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12, minHeight: 52, paddingInline: 2},
   languageTitle: {fontSize: 14, fontWeight: 500, lineHeight: '20px'},
-  languages: {display: 'flex', gap: 4},
-  language: {display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, paddingInline: 8, color: $.muted, fontSize: 13, fontWeight: 500, borderBottomWidth: 2, borderBottomStyle: 'solid', borderBottomColor: 'transparent'},
-  languageSelected: {color: $.ink, borderBottomColor: $.ink},
-  notice: {margin: 0, paddingTop: 12, paddingInline: 2, color: $.muted, fontSize: 12, lineHeight: '18px'},
+  languages: {display: 'flex', gap: 2, padding: 3, borderRadius: 28, backgroundColor: $.surfaceAlt},
+  language: {display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, paddingInline: 14, color: $.muted, fontSize: 14, fontWeight: 500, lineHeight: '20px', borderWidth: 1, borderStyle: 'solid', borderColor: 'transparent', borderRadius: 24, backgroundColor: {default: 'transparent', ':hover': $.rail}, outlineOffset: -3},
+  languageSelected: {color: $.surface, borderColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark}, outlineColor: {default: 'transparent', ':focus-visible': $.surface}},
+  notice: {margin: 0, paddingTop: 16, paddingInline: 2, color: $.muted, fontSize: 12, lineHeight: '18px'},
 });

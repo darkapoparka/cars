@@ -7,12 +7,13 @@ import {dealer} from '@/lib/dealer-config';
 import {useCopy, useLocale} from '@/lib/locale';
 import {useModal} from './useModal';
 import {media, tokens as $} from '@/app/tokens.stylex';
-function DealerEnquiryContent({open, onClose, vehicleTitle}: {open: boolean; onClose: () => void; vehicleTitle?: string}) {
+function DealerEnquiryContent({open, onClose, vehicleTitle, intent = 'enquiry'}: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: 'enquiry' | 'viewing'}) {
   const tx = useCopy(), locale = useLocale();
   const panel = useModal(open, onClose);
   const [message, setMessage] = useState(() => {
     const subject = vehicleTitle || (locale === 'bg' ? 'вашите автомобили' : 'your cars');
-    return (locale === 'bg' ? 'Здравейте, интересувам се от ' : 'Hello, I would like to enquire about ') + subject + '.\n' + (typeof window === 'undefined' ? '' : window.location.href);
+    const greeting = intent === 'viewing' ? (locale === 'bg' ? 'Здравейте, искам да уговоря оглед на ' : 'Hello, I would like to arrange a viewing of ') : (locale === 'bg' ? 'Здравейте, интересувам се от ' : 'Hello, I would like to enquire about ');
+    return greeting + subject + '.\n' + (typeof window === 'undefined' ? '' : window.location.href);
   });
   const [status, setStatus] = useState('');
   const mail = dealer.email ? `mailto:${dealer.email}?subject=${encodeURIComponent(vehicleTitle || dealer.name)}&body=${encodeURIComponent(message)}` : '';
@@ -20,7 +21,7 @@ function DealerEnquiryContent({open, onClose, vehicleTitle}: {open: boolean; onC
   async function copyDraft() {try {await navigator.clipboard.writeText(message); setStatus(tx('Draft copied. Nothing has been sent.'));} catch {setStatus(tx('Select and copy the draft below.'));}}
   return <div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && onClose()}>
     <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="dealer-enquiry-title" {...stylex.props(s.sheet)}>
-      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id="dealer-enquiry-title" {...stylex.props(s.title)}>{tx('Contact the dealer')}</h2></div><button type="button" aria-label={tx('Close enquiry')} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header>
+      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id="dealer-enquiry-title" {...stylex.props(s.title)}>{tx(intent === 'viewing' ? 'Request a viewing' : 'Contact the dealer')}</h2></div><button type="button" aria-label={tx('Close enquiry')} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header>
       <p {...stylex.props(s.note)}>{tx('This preview prepares an enquiry only. No booking, purchase or message is submitted here.')}</p>
       <label htmlFor="dealer-message" {...stylex.props(s.label)}>{tx('Your enquiry draft')}</label>
       <textarea id="dealer-message" value={message} onChange={event => setMessage(event.target.value)} rows={5} {...stylex.props(s.textarea)}/>
@@ -35,9 +36,9 @@ function DealerEnquiryContent({open, onClose, vehicleTitle}: {open: boolean; onC
     </section>
   </div>;
 }
-export default function DealerEnquirySheet(props: {open: boolean; onClose: () => void; vehicleTitle?: string}) {
+export default function DealerEnquirySheet(props: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: 'enquiry' | 'viewing'}) {
   const locale = useLocale();
-  return props.open ? <DealerEnquiryContent key={locale + ':' + (props.vehicleTitle || '')} {...props}/> : null;
+  return props.open ? <DealerEnquiryContent key={locale + ':' + (props.vehicleTitle || '') + ':' + (props.intent || 'enquiry')} {...props}/> : null;
 }
 const s = stylex.create({
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.48)'},

@@ -10,6 +10,10 @@ import {
   mobileMarketplaceOverlayFieldRowClassName,
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
+import {
+  mobileSearchTriggerClassName,
+  mobileSearchTriggerLabelClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
 import { useEffect, useRef, useState } from "react";
 
 interface MobileImportSourceSearchProps {
@@ -71,7 +75,8 @@ export const MobileImportSourceSearch = ({
           aria-expanded={open}
           aria-haspopup="dialog"
           aria-label={copy.open}
-          className="flex h-12 w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] active:bg-zinc-200"
+          className={`${mobileSearchTriggerClassName} bg-white ring-black/5 focus-visible:outline-ring active:bg-zinc-100`}
+          data-slot="mobile-import-search-trigger"
           disabled={!ready}
           onClick={() => setOpen(true)}
           ref={triggerRef}
@@ -81,11 +86,7 @@ export const MobileImportSourceSearch = ({
             className="size-[18px] shrink-0 text-zinc-500"
             name="search"
           />
-          <span
-            className={`min-w-0 flex-1 truncate font-medium text-body ${
-              sourceUrl ? "text-zinc-950" : "text-zinc-500"
-            }`}
-          >
+          <span className={mobileSearchTriggerLabelClassName}>
             {sourceUrl || placeholder}
           </span>
           <DealerUiIcon

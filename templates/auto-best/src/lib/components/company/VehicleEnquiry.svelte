@@ -15,10 +15,27 @@
   import { brand } from '$config/brand';
   import { resolveImportUrl } from '$data/company';
   import EnquiryEntryField from './EnquiryEntryField.svelte';
+  import ServiceEntryField from './ServiceEntryField.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
 
   let { kind, importUrl = null, inlineEntry = false }: { kind: 'trade-in' | 'import'; importUrl?: string | null; inlineEntry?: boolean } = $props();
   let entryForm = $state<HTMLFormElement>();
   let entryError = $state('');
+  let mobileEditor = $state<{ edit: (trigger?: HTMLElement) => Promise<void> }>();
+  let mobileEntry = $state<HTMLDivElement>();
+
+  async function chooseMobileMode() {
+    await tick();
+    await mobileEditor?.edit(mobileEntry?.querySelector<HTMLElement>('.dn-segmented-option[aria-pressed="true"]') ?? undefined);
+  }
+  async function startMobile(event: MouseEvent) {
+    if (importMode === 'listing' ? !resolveImportUrl(link) : !importBrief.trim() && (!make.trim() || !model.trim())) {
+      await mobileEditor?.edit(event.currentTarget as HTMLElement);
+      return;
+    }
+    selectedLink = importMode === 'listing' ? resolveImportUrl(link)! : '';
+    await show(event.currentTarget as HTMLElement, 1);
+  }
 
   async function startInline(event: SubmitEvent) {
     event.preventDefault();
@@ -198,7 +215,12 @@
 </script>
 
 {#if inlineEntry}
-  <form class="dn-service-entry" bind:this={entryForm} onsubmit={startInline}>
+  <div class="dn-service-entry dn-service-entry--mobile" bind:this={mobileEntry}>
+    <EntrySegments class="dn-service-entry__choices" bind:value={importMode} label={i18n.t('service.method')} onchange={chooseMobileMode} options={[{ value: 'listing', label: i18n.t('service.listing') }, { value: 'criteria', label: i18n.t('service.search') }]} />
+    <ServiceEntryField id="import-service-field" mode={importMode} bind:this={mobileEditor} value={{ reference: importMode === 'listing' ? link : '', make, model, year, mileage: '', budget, brief: importBrief }} onapply={(draft) => { if (importMode === 'listing') linkDraft = draft.reference; else { ({ make, model, year, budget } = draft); importBrief = draft.brief; } }} />
+    <button class="dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary" type="button" aria-haspopup="dialog" onclick={startMobile}>{i18n.t('action.requestImport')}<MobileActionIcon name="arrow" size={15} /></button>
+  </div>
+  <form class="dn-service-entry dn-service-entry--desktop" bind:this={entryForm} onsubmit={startInline}>
     <EntrySegments class="dn-service-entry__choices" bind:value={importMode} label={i18n.t('service.method')} onchange={() => entryError = ''} options={[{ value: 'listing', label: i18n.t('service.listing') }, { value: 'criteria', label: i18n.t('service.search') }]} />
     {#if importMode === 'listing'}
       <div class="dn-service-entry__listing"><label><span class="dn-service-entry__sr">{i18n.t('service.url')}</span><EntryInput name="link" value={link} oninput={(event) => { linkDraft = event.currentTarget.value; entryError = ''; }} required maxlength={2048} inputmode="url" autocomplete="url" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url')} aria-invalid={entryError ? true : undefined} aria-describedby={entryError ? 'import-entry-error' : undefined} /></label>
@@ -248,7 +270,7 @@
     <form class="dn-enquiry-body" bind:this={form} onsubmit={(event) => { event.preventDefault(); if (step < 2) void move(step + 1); }}>
       {#if step === 0}
         {#if selectedLink}<div class="dn-enquiry-selected-link"><Icon name="globe" size={20} /><span>{selectedLink}</span></div>{/if}
-        {#if inlineEntry && !selectedLink}<label class="dn-enquiry-notes">{i18n.t('service.brief')}<textarea {@attach i18n.validation} bind:value={importBrief} required maxlength={1500} rows="3"></textarea></label>{/if}
+        {#if inlineEntry && !selectedLink}<label class="dn-enquiry-notes">{i18n.t('service.brief')}<textarea {@attach i18n.validation} bind:value={importBrief} required={!make.trim() || !model.trim()} maxlength={1500} rows="3"></textarea></label>{/if}
         {#if selling}
           <fieldset class="dn-enquiry-purpose"><legend>{i18n.t("m_fc067643a1cf")}</legend>{#each ['Продажба', 'Бартер'] as option (option)}<label><input {@attach i18n.validation} type="radio" bind:group={purpose} value={option} />{i18n.t(option === 'Продажба' ? 'enquiry.purpose.sell' : 'enquiry.purpose.tradeIn')}</label>{/each}</fieldset>
         {/if}
@@ -382,9 +404,9 @@
   .dn-enquiry-error { color: #a40000; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   .dn-enquiry-feedback { padding: 12px; border-radius: 10px; background: #f2f3f5; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   @media (max-width: 767px) {
-    .dn-enquiry { inset: var(--dn-form-dialog-top) 0 auto; width: 100%; height: var(--dn-form-dialog-height); max-height: var(--dn-form-dialog-height); margin: 0; border-radius: 0 0 var(--dn-radius-lg) var(--dn-radius-lg); }
+    .dn-enquiry { position: fixed; inset: 0; width: 100%; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; }
     .dn-enquiry-panel { height: 100%; max-height: 100%; }
-    .dn-enquiry-header { padding: 20px 16px 16px; }
+    .dn-enquiry-header { padding: var(--dn-overlay-header-padding); }
     .dn-enquiry-header h2 { font-size: var(--dn-text-subheading); }
     .dn-enquiry-steps { gap: 14px; padding: 0 16px 16px; }
     .dn-enquiry-body { flex: 1; padding: 20px 16px; }

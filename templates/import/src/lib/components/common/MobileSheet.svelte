@@ -167,7 +167,7 @@
 		overflow: clip;
 		margin-inline: auto;
 		border-radius: var(--bc-radius-panel) var(--bc-radius-panel) 0 0;
-		background: var(--bc-bg);
+		background: var(--bc-bg-strong);
 		color: var(--bc-ink);
 		outline: 0;
 		padding: var(--bc-space-2) var(--bc-mobile-gutter)

@@ -15,6 +15,7 @@
 		serviceVehicles = [],
 		embedded = false,
 		inventoryTitle = nt('ui248'),
+		showInventoryHeading = true,
 		browseControls,
 		content,
 		modes,
@@ -31,6 +32,7 @@
 		serviceVehicles?: VehicleCardSummary[];
 		embedded?: boolean;
 		inventoryTitle?: string;
+		showInventoryHeading?: boolean;
 		browseControls?: Snippet;
 		content?: Snippet;
 		modes?: Snippet;
@@ -86,7 +88,7 @@
 		{#if alternative}<div class="mobile-service-entry__alternative">
 				{@render alternative()}
 			</div>{/if}
-		{#if serviceVehicles.length}
+		{#if serviceVehicles.length && showInventoryHeading}
 			<div class="mobile-service-entry__inventory-heading">
 				<h2>{inventoryTitle}</h2>
 				<a href={resolve('/inventory')}
@@ -329,7 +331,7 @@
 		outline-offset: 3px;
 	}
 	:global(.mobile-service-info-sheet.bc-mobile-sheet__content) {
-		background: var(--bc-surface);
+		background: var(--bc-bg-strong);
 	}
 
 	:global(.mobile-service-info-sheet .bc-mobile-sheet__body) {
@@ -337,13 +339,16 @@
 	}
 	ol {
 		display: grid;
-		gap: var(--bc-space-5);
+		gap: var(--bc-space-3);
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
 	li {
 		display: grid;
+		padding: var(--bc-space-4);
+		border-radius: var(--bc-radius-card);
+		background: var(--bc-white);
 		grid-template-columns: 28px minmax(0, 1fr);
 		gap: var(--bc-space-3);
 		align-items: start;

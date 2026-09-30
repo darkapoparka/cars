@@ -5,14 +5,7 @@
 	import { onMount } from 'svelte';
 	import '$lib/styles/mobile-hero-pill.css';
 	import '$lib/styles/mobile-entry-hero.css';
-	import {
-		ArrowRight,
-		ChevronRight,
-		CircleHelp,
-		Link2,
-		ScanLine,
-		SlidersHorizontal
-	} from '@lucide/svelte';
+	import { ArrowRight, ChevronRight, CircleHelp, Link2, ScanLine } from '@lucide/svelte';
 	import MobileHeroBar from '$lib/components/shared/MobileHeroBar.svelte';
 	let {
 		kind,
@@ -109,7 +102,6 @@
 	</div>
 	<div
 		class="mobile-lead-hero__entry"
-		class:mobile-lead-hero__entry--import={kind === 'import'}
 		role="tabpanel"
 		id={id + '-panel'}
 		aria-labelledby={id + '-tab-' + (mode === 'primary' ? 0 : 1)}
@@ -125,6 +117,23 @@
 				<span>{i18n.t('copy.5601767a86c8')}</span><span
 					class="mobile-lead-hero__go mobile-entry-hero__go"
 					><ArrowRight size={21} aria-hidden="true" /></span
+				>
+			</button>
+		{:else if kind === 'import' && !isVin}
+			<button
+				class="mobile-lead-hero__search mobile-lead-hero__link mobile-entry-hero__search"
+				type="button"
+				disabled={!interactive}
+				aria-label={i18n.t('copy.fbee9a117fb4')}
+				aria-haspopup="dialog"
+				onclick={onManual}
+			>
+				<span class="mobile-lead-hero__input-icon" aria-hidden="true"><Link2 size={21} /></span>
+				<span class="mobile-lead-hero__link-label" class:is-filled={Boolean(value.trim())}
+					>{value.trim() || i18n.t('copy.fbee9a117fb4')}</span
+				>
+				<span class="mobile-lead-hero__go mobile-entry-hero__go" aria-hidden="true"
+					><ArrowRight size={21} /></span
 				>
 			</button>
 		{:else}
@@ -166,20 +175,6 @@
 					><ArrowRight size={21} aria-hidden="true" /></button
 				>
 			</form>
-		{/if}
-		{#if kind === 'import'}
-			<button
-				class="mobile-lead-hero__filters"
-				type="button"
-				disabled={!interactive}
-				aria-label={i18n.t('copy.bc5afb6e459e')}
-				title={i18n.t('copy.91e2f867e4cb')}
-				aria-haspopup="dialog"
-				onclick={(event) => {
-					event.currentTarget.focus({ preventScroll: true });
-					onManual();
-				}}><SlidersHorizontal size={20} strokeWidth={2} aria-hidden="true" /></button
-			>
 		{/if}
 		{#if inputError}<p class="mobile-lead-hero__error" id={id + '-error'} role="alert">
 				{i18n.text(inputError)}
@@ -228,26 +223,6 @@
 		clip-path: inset(50%);
 		white-space: nowrap;
 	}
-	.mobile-lead-hero__entry--import {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) var(--sa-mobile-action-h);
-		align-items: center;
-		gap: var(--sa-space-2);
-	}
-	.mobile-lead-hero__filters {
-		display: grid;
-		place-items: center;
-		width: var(--sa-mobile-action-h);
-		height: var(--sa-mobile-action-h);
-		padding: 0;
-		border: 1px solid rgba(255, 255, 255, 0.16);
-		border-radius: var(--sa-r-pill);
-		background: rgba(255, 255, 255, 0.08);
-		color: #fff;
-	}
-	.mobile-lead-hero__filters :global(svg) {
-		stroke: currentColor;
-	}
 	.mobile-lead-hero__search {
 		display: grid;
 		grid-template-columns: 24px minmax(0, 1fr) var(--sa-mobile-pill-h);
@@ -273,6 +248,25 @@
 	.mobile-lead-hero__search input::placeholder {
 		color: #66717f;
 		opacity: 1;
+	}
+	.mobile-lead-hero__link {
+		width: 100%;
+		border: 0;
+		font-family: var(--sa-font);
+		text-align: left;
+		cursor: pointer;
+	}
+	.mobile-lead-hero__link-label {
+		overflow: hidden;
+		min-width: 0;
+		color: #66717f;
+		font-size: var(--sa-mobile-type-input);
+		font-weight: var(--sa-weight-medium);
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.mobile-lead-hero__link-label.is-filled {
+		color: var(--sa-ink);
 	}
 	.mobile-lead-hero__go {
 		display: grid;

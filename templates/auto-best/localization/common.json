@@ -1,4 +1,12 @@
 {
+  "detail.viewMore": {
+    "en": "View more",
+    "bg": "Виж още"
+  },
+  "action.calculate": {
+    "en": "Calculate",
+    "bg": "Изчисли"
+  },
   "home.viewAllCount": {
     "en": "View all ({count})",
     "bg": "Виж всички ({count})"
@@ -7,6 +15,11 @@
     "en": "What would you like to do?",
     "bg": "Какво предпочиташ?"
   },
+  "service.entry.vehicle": { "en": "Add your car", "bg": "Добави автомобил" },
+  "service.entry.criteria": { "en": "Make, model…", "bg": "Марка, модел…" },
+  "service.entry.vehicleTitle": { "en": "Your car", "bg": "Твоят автомобил" },
+  "service.entry.criteriaTitle": { "en": "Find a car", "bg": "Каква кола търсиш?" },
+  "service.entry.preferences": { "en": "Other preferences (optional)", "bg": "Други предпочитания (по желание)" },
   "service.sell.heading": {
     "en": "Sell or trade in",
     "bg": "Продажба и бартер"
@@ -90,6 +103,18 @@
   "service.process": {
     "en": "How it works",
     "bg": "Как се случва"
+  },
+  "service.sell.banner.title": { "en": "Time for a change?", "bg": "Време за промяна?" },
+  "service.sell.banner.copy": { "en": "Sell or trade in.", "bg": "Продажба или бартер." },
+  "service.import.banner.title": { "en": "Your next car", "bg": "Твоята следваща кола" },
+  "service.import.banner.copy": { "en": "Sourced for you.", "bg": "Внос по заявка." },
+  "inventory.spec.automaticCompact": {
+    "en": "Auto",
+    "bg": "Автом."
+  },
+  "inventory.spec.electricCompact": {
+    "en": "Electric",
+    "bg": "Електр."
   },
   "service.sell.step1.copy": {
     "en": "Add your car details and photos.",

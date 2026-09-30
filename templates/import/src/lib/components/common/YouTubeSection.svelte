@@ -211,7 +211,7 @@
 	}
 	@media (max-width: 767px) {
 		.daynight-youtube {
-			padding-block: 24px;
+			padding-block: 12px;
 		}
 
 		.daynight-youtube > .site-container {

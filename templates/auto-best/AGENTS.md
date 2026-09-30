@@ -1,15 +1,15 @@
 # Auto Best template instructions
 
-This is the authoritative reusable master: darkapoparka/cars-template-auto-best. The current user request determines scope. Preserve the existing rendered design unless the requested shared improvement changes it.
+This is the authoritative reusable master at templates/auto-best in darkapoparka/cars. Follow [Cars ownership](../../AGENTS.md); the former standalone repository is retained history, not an active master. The current user request determines scope. Preserve the existing rendered design unless the requested shared improvement changes it.
 
 ## Task routing
 
 - Shared template frontend/code work: work here, keep changes reusable, and read only the relevant architecture/style/QA reference.
 - Dealer build or correction: use canonical clients/<slug>/ in [Cars](https://github.com/darkapoparka/cars), through its workflow. Do not personalize this master.
-- Template release: follow [Cars integration](docs/CARS-INTEGRATION.md); promotion selects an exact reviewed commit and leaves existing dealers independent.
+- Template release: follow [Cars template releases](../../docs/TEMPLATE-PROMOTION.md); promotion selects an exact reviewed commit and leaves existing dealers independent.
 - Audit/status: inspect without edits or publication unless fixes are requested.
 
-Read [TEMPLATE](TEMPLATE.md) for runtime/content boundaries and [docs/TESTING.md](docs/TESTING.md) when verification needs it. [Cars integration](docs/CARS-INTEGRATION.md) owns the cross-repository contract. Do not load every historical task ledger or resume its backlog.
+Read [TEMPLATE](TEMPLATE.md) for runtime/content boundaries and [docs/TESTING.md](docs/TESTING.md) when verification needs it. [Cars template releases](../../docs/TEMPLATE-PROMOTION.md) owns the source and release contract. Do not load every historical task ledger or resume its backlog.
 
 ## Implementation and preservation
 
@@ -21,9 +21,13 @@ Never add a white/colored rectangle, badge, pill, border or shadow behind a deal
 
 Before accepting a clone, inspect both variants on their actual backgrounds at mobile and desktop widths, including the menu and footer. Check transparency, contrast, aspect ratio, clipping and link hit areas. See [Reuse](REUSE_GUIDE.md#logo-assets).
 
+### Navigation icons
+
+Do not use Lucide in this template. The owner rejected that library on 30 September 2026 and requested a real replacement library instead of project-drawn SVGs. Mobile header, menu, dock and inventory toolbar use official Hugeicons Stroke Rounded geometry through `MobileActionIcon.svelte`; preserve the pinned source and MIT notice in `provenance/hugeicons.md`. Do not change icon families again without an explicit owner request. Mobile styling requests do not authorize desktop changes; keep mobile renderers separate from desktop/footer consumers. Use recognizable destination glyphs and retain localized labels, focus and hit areas.
+
 ### Working changes
 
-Confirm physical checkout, remote, current branch/HEAD, relevant dirty paths and listener ownership. One writer owns the checkout/index/build output. Preserve unrelated staged, unstaged, untracked and unique branch work; no blanket staging, clean/reset, deletion of unmerged work or force-push. Keep existing lockfiles, runtime, licenses and provenance. Do not switch a working branch or overwrite a Cars snapshot merely to synchronize it.
+Confirm physical checkout, remote, current branch/HEAD, relevant dirty paths and listener ownership. One writer owns the checkout/index/build output. Preserve unrelated staged, unstaged, untracked and unique branch work; no blanket staging, clean/reset, deletion of unmerged work or force-push. Keep existing lockfiles, runtime, licenses and provenance. Do not switch a working branch or overwrite another template or dealer merely to synchronize it.
 
 Use Node 22.12+ on the 22 line and the retained npm lockfile. Keep source ownership at `src/lib/config/brand.ts`, `src/lib/config/template.ts`, `src/lib/data/`, `src/lib/styles/tokens.css`, `static/`. Reuse actual components and data boundaries. Preserve the existing route and interaction contracts.
 

@@ -32,7 +32,7 @@
 	const inventoryPath = '/inventory' as const;
 	const inventoryHref = resolve(inventoryPath);
 	type InventoryHref = typeof inventoryPath | `${typeof inventoryPath}?${string}`;
-	type QuickFilter = { label: string; href: InventoryHref };
+	type QuickFilter = { label: string; ariaLabel: string; href: InventoryHref };
 	const total = $derived(data.total);
 	let heroMode = $state<'buy' | 'import'>('buy');
 	let searchOpen = $state(false);
@@ -43,24 +43,20 @@
 		else importOpen = true;
 	}
 	onMount(() => enhanceDayNightImageFallbacks());
-	const quickFilters: QuickFilter[] = [
-		{
-			label: i18n.t('copy.c82ce2919043'),
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Дизел')}`
-		},
-		{
-			label: i18n.t('copy.e656f39de92d'),
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Бензин')}`
-		},
-		{
-			label: i18n.t('copy.ac707141d786'),
-			href: `${inventoryPath}?transmission=${encodeURIComponent('Автоматик')}`
-		},
-		{
-			label: i18n.t('copy.2f5800eb33f6'),
-			href: `${inventoryPath}?fuel=${encodeURIComponent('Електрически')}`
-		}
-	];
+	const priceNumber = $derived(new Intl.NumberFormat(i18n.locale === 'bg' ? 'bg-BG' : 'en-GB'));
+	const quickFilters = $derived(
+		data.budgetTiles.flatMap((tile): QuickFilter[] => {
+			const band = tile.value.match(/^(under|over)-(\d+)$/);
+			if (!band) return [];
+			return [
+				{
+					label: `${band[1] === 'under' ? '<' : '>'}${priceNumber.format(Number(band[2]))}`,
+					ariaLabel: i18n.text(tile.label),
+					href: `${inventoryPath}?price=${encodeURIComponent(tile.value)}`
+				}
+			];
+		})
+	);
 </script>
 
 <div class="mobile-home">
@@ -126,10 +122,11 @@
 	</header>
 
 	<main id="main-content" tabindex="-1">
-		<nav class="mh-quick mobile-quick-pills" aria-label={i18n.t('copy.427bd0c4b0b6')}>
+		<nav class="mh-quick mobile-quick-pills" aria-label={i18n.t('copy.6a46dc837411')}>
 			{#each quickFilters as item (item.label)}
 				<a
 					class="mh-quick__pill"
+					aria-label={item.ariaLabel}
 					href={i18n.href(resolve(item.href))}
 					onfocus={(event) =>
 						event.currentTarget.scrollIntoView({
@@ -138,7 +135,7 @@
 							behavior: 'instant'
 						})}
 				>
-					<span>{i18n.text(item.label)}</span>
+					<span>{item.label}</span>
 				</a>
 			{/each}
 		</nav>
@@ -177,6 +174,7 @@
 		position: relative;
 		z-index: 2;
 		display: grid;
+		grid-template-columns: minmax(0, 1fr);
 		gap: 18px;
 		margin-top: calc(-1 * var(--sa-mobile-panel-overlap));
 		border-radius: var(--sa-r-xl) var(--sa-r-xl) 0 0;
@@ -322,10 +320,11 @@
 	}
 
 	.mh-quick {
-		--mobile-quick-pills-padding: 6px var(--mh-gutter);
-		--mobile-quick-pills-scroll-padding: var(--mh-gutter);
+		--mobile-quick-pills-padding: 6px 0;
+		--mobile-quick-pills-scroll-padding: 0px;
 
-		margin-top: 0;
+		min-width: 0;
+		margin: 0 var(--mh-gutter);
 	}
 
 	.mobile-home :global(svg),

@@ -3,7 +3,10 @@ import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { formatMoney } from "@repo/marketplace";
 import { publicSite } from "@repo/marketplace/site-config";
-import { mobileResponsiveFormFocusClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
+import {
+  mobileResponsiveFormFocusClassName,
+  mobileResponsiveFormTextClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
 import type { MobileFormDraft } from "../../components/mobile-form-draft";
 import { MobileVehicleTaxonomyFields } from "../../components/mobile-vehicle-taxonomy-fields";
 import { PublicContactFields } from "../../components/public-contact-fields";
@@ -115,7 +118,7 @@ export const ImportVehicleFields = ({
           {text.message}
         </Label>
         <Textarea
-          className={`h-24 min-h-24 resize-none rounded-xl border-transparent bg-zinc-100 text-base shadow-none placeholder:text-zinc-600 lg:h-20 lg:min-h-20 lg:rounded-lg lg:bg-secondary ${mobileResponsiveFormFocusClassName}`}
+          className={`h-24 min-h-24 resize-none rounded-xl border-transparent bg-zinc-100 text-base shadow-none placeholder:text-zinc-600 lg:h-20 lg:min-h-20 lg:rounded-lg lg:bg-secondary ${mobileResponsiveFormTextClassName} ${mobileResponsiveFormFocusClassName}`}
           defaultValue={draft.message}
           id="import-message"
           maxLength={3000}

@@ -57,6 +57,7 @@
 							><ArrowRight size={32} aria-hidden="true" /></span
 						>{:else if brand.image}<img
 							src={assetHref(brand.image)}
+							data-brand={brand.query}
 							alt=""
 							width="100"
 							height="60"
@@ -75,9 +76,9 @@
 		</h2>
 		<div class="home-types">
 			{#each data.types as type (type.bodyType)}<a
-					class:home-browse-all={type.bodyType === 'View all' || !type.image}
+					class:home-browse-all={!type.image}
 					href={href(type.href)}
-					>{#if type.image && type.bodyType !== 'View all'}<img
+					>{#if type.image}<img
 							src={assetHref(type.image)}
 							alt=""
 							width="360"
@@ -106,8 +107,13 @@
 				aria-label={english ? 'Customer reviews' : 'Клиентски отзиви'}
 			>
 				{#each data.reviewItems as review (review.name)}<ReviewCard {review} />{/each}
+				<a class="home-rail-end" href={href('/reviews')}
+					><ArrowRight size={32} aria-hidden="true" /><strong
+						>{english ? 'View all' : 'Виж всички'}</strong
+					></a
+				>
 			</div>
-			<div class="home-section-action">
+			<div class="home-section-action home-desktop-action">
 				<Action href={localized('/reviews')} variant="strong"
 					>{english ? 'View all' : 'Виж всички'}<ArrowRight size={18} aria-hidden="true" /></Action
 				>
@@ -130,8 +136,13 @@
 			aria-label={english ? 'Guides and advice' : 'Полезно за автомобила'}
 		>
 			{#each data.posts as post (post.slug)}<ArticleCard {post} {english} />{/each}
+			<a class="home-rail-end" href={href('/blog')}
+				><ArrowRight size={32} aria-hidden="true" /><strong
+					>{english ? 'All guides' : 'Всички статии'}</strong
+				></a
+			>
 		</div>
-		<div class="home-section-action">
+		<div class="home-section-action home-desktop-action">
 			<Action href={localized('/blog')} variant="strong"
 				>{english ? 'All guides' : 'Всички статии'}<ArrowRight
 					size={18}
@@ -143,6 +154,9 @@
 </main>
 
 <style>
+	.home-rail-end {
+		display: none;
+	}
 	.home-mobile-entry,
 	.home-brands .browse-label-short {
 		display: none;
@@ -224,6 +238,53 @@
 		}
 	}
 	@media (max-width: 767.98px) {
+		.home-desktop-action {
+			display: none;
+		}
+		.home-rail-end {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+			min-width: 0;
+			padding: 24px;
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-radius-panel);
+			background: var(--bc-surface-raised);
+			color: var(--bc-ink);
+			text-decoration: none;
+			scroll-snap-align: start;
+			font-size: 18px;
+		}
+		.home-rail-end:hover {
+			border-color: var(--bc-border-strong);
+		}
+		.home-rail-end:focus-visible {
+			outline: 2px solid var(--bc-accent);
+			outline-offset: -3px;
+		}
+
+		.site-section {
+			padding-block: 20px 12px;
+		}
+		.site-stack {
+			gap: 16px;
+		}
+		.home-news :global(.article-card__body) {
+			padding: 14px;
+			gap: 8px;
+		}
+		.home-news :global(.article-card__image) {
+			aspect-ratio: 16 / 9;
+		}
+		.home-news :global(.article-card__body > p) {
+			display: none;
+		}
+		.home-section-action {
+			padding-top: 0;
+		}
+
 		.home-vehicles,
 		.home-types {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -233,12 +294,36 @@
 			gap: 10px;
 		}
 		.home-brands a {
-			min-height: 132px;
-			padding: 12px 8px;
+			min-height: 108px;
+			padding: 10px 8px;
+			align-content: center;
+			gap: 6px;
 		}
 		.home-brands img {
 			height: 56px;
 			width: 88px;
+			/* Balance the supplied artwork without changing the label baseline or tile size. */
+			transform: scale(var(--brand-optical-scale, 1));
+		}
+		.home-brands img[data-brand='Tesla'] {
+			--brand-optical-scale: 0.8;
+		}
+		.home-brands img[data-brand='Volvo'] {
+			--brand-optical-scale: 0.84;
+		}
+		.home-brands img[data-brand='BMW'],
+		.home-brands img[data-brand='Mercedes-Benz'],
+		.home-brands img[data-brand='Porsche'],
+		.home-brands img[data-brand='Honda'] {
+			--brand-optical-scale: 0.92;
+		}
+		.home-brands img[data-brand='Toyota'],
+		.home-brands img[data-brand='Audi'] {
+			--brand-optical-scale: 1.08;
+		}
+		.home-brands img[data-brand='Ford'],
+		.home-brands img[data-brand='Hyundai'] {
+			--brand-optical-scale: 1.12;
 		}
 		.home-types img {
 			height: 68px;

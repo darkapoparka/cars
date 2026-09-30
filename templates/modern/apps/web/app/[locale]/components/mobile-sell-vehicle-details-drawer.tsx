@@ -12,6 +12,7 @@ import {
   MobileMarketplaceOverlayShell,
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
+import { mobileFormTextClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -197,7 +198,7 @@ export const MobileSellVehicleDetailsDrawer = ({
             {locale === "bg" ? "Бележки (по желание)" : "Notes (optional)"}
           </Label>
           <Textarea
-            className="min-h-20 rounded-xl border-transparent bg-zinc-100 text-base shadow-none"
+            className={`min-h-20 rounded-xl border-transparent bg-zinc-100 shadow-none ${mobileFormTextClassName}`}
             defaultValue={draft.notes}
             id="mobile-sell-notes"
             maxLength={500}

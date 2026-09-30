@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { getI18n } from '$lib/locale/context';
 	import '$lib/styles/mobile-quick-pills.css';
 	const i18n = getI18n();
@@ -17,7 +18,7 @@
 	import MobileLeadForm from '$lib/components/shared/mobile/MobileLeadForm.svelte';
 	import MobileFullSheet from '$lib/components/shared/mobile/MobileFullSheet.svelte';
 	import MobileLeadHero from '$lib/components/shared/mobile/MobileLeadHero.svelte';
-	import MobileLeadContactCard from '$lib/components/shared/mobile/MobileLeadContactCard.svelte';
+	import MobileLeadImageBanner from '$lib/components/shared/mobile/MobileLeadImageBanner.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import type { HomeMobileVehicle } from '$lib/types/home';
 	import MobileImportExamples from './MobileImportExamples.svelte';
@@ -72,8 +73,8 @@
 	);
 	const originSearchLabel = $derived(
 		selectedOrigin === DEFAULT_IMPORT_ORIGIN
-			? 'Търсене без предпочитана държава'
-			: i18n.t('pattern.03b4d792cda2', { v0: selectedOriginLabel })
+			? i18n.t('copy.ceaebda62d52')
+			: i18n.t('pattern.03b4d792cda2', { v0: i18n.text(selectedOriginLabel) })
 	);
 
 	const phoneHref = daynightSite.phoneHref;
@@ -141,6 +142,7 @@
 		formStep = 1;
 		submitMessage = '';
 		if (submitState === 'error') submitState = 'idle';
+		quickValue = sourceUrl;
 	}
 
 	function goBack() {
@@ -304,11 +306,16 @@
 				{/each}
 			</nav>
 			<MobileImportExamples {vehicles} onSelect={chooseExample} />
-			<MobileLeadContactCard
-				{phoneHref}
-				title={i18n.t('copy.6873fde144df')}
-				copy={i18n.t('copy.c9d9a830a29a')}
-			/>
+			<aside aria-label={i18n.t('copy.6873fde144df')}>
+				<MobileLeadImageBanner
+					title={i18n.t('copy.6873fde144df')}
+					copy={i18n.t('copy.b75c88742595')}
+					action={i18n.t('copy.d40e5119596a')}
+					image={resolve('/assets/images/home-promos/import-help-advisor-v1.webp')}
+					href={phoneHref}
+					artwork="photo"
+				/>
+			</aside>
 		{/if}
 	</main>
 

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdir } from 'node:fs/promises';
 import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
+import { fillServiceEntry, serviceEntry, serviceAction } from './service-entry-fixture.mjs';
 
 const base = previewUrl();
 const serviceOnly = process.env.TYPOGRAPHY_SCOPE === 'services';
@@ -85,19 +86,26 @@ try {
         }
         for (const topic of ['trade-in', 'import']) {
           await page.goto(base + '/contact?topic=' + topic, {waitUntil:'networkidle'});
-          const entry = page.locator('.dn-service-entry');
-          const start = entry.locator('button[type=submit]');
+          const entry = serviceEntry(page);
+          const start = serviceAction(page);
           const primary = await typeOf(start);
           assert(primary.size === 16 && primary.weight === 500 && primary.height === 44);
-          for (const input of await entry.locator('input').all()) {
+          for (const input of await entry.locator('input:visible').all()) {
             assert.equal((await typeOf(input)).size, 18);
             assert.equal((await typeOf(input)).height, 44);
           }
           assert.equal(await page.locator('.dn-service-process li').count(), 3);
-          await page.locator('.dn-service-faq summary').first().click();
-          assert(await page.locator('.dn-service-faq details[open] p').isVisible());
+          if (width < 768) {
+            assert(await page.locator('.dn-service-banner').isVisible());
+            assert.equal(await page.locator('.dn-service-faq').isVisible(), false);
+          } else {
+            await page.locator('.dn-service-faq summary').first().click();
+            assert(await page.locator('.dn-service-faq details[open] p').isVisible());
+          }
           await readable(page, width + '-' + topic);
-          if (topic === 'trade-in') {
+          if (width < 768) {
+            await fillServiceEntry(page, topic === 'trade-in' ? { make:'Audi', model:'A6 Avant', year:'2020', mileage:'85000' } : { link:'https://example.com/car' });
+          } else if (topic === 'trade-in') {
             await start.click();
             assert(await entry.locator('[name=make]').evaluate(e=>e===document.activeElement));
             for(const [field,value] of Object.entries({make:'Audi',model:'A6 Avant',year:'2020',mileage:'85000'})) await entry.locator('[name='+field+']').fill(value);
@@ -122,14 +130,16 @@ try {
       try {
         for (const topic of ['trade-in','import']) {
           await page.goto(`${base}/contact?topic=${topic}`, { waitUntil: 'networkidle' });
-          const action = page.locator('.dn-service-entry__submit');
+          const action = serviceAction(page);
           await action.scrollIntoViewIfNeeded();
           const [navBox, actionBox] = await Promise.all([page.locator('.dn-mobile-bottom-nav').boundingBox(), action.boundingBox()]);
           assert(actionBox && navBox && actionBox.y >= 0 && actionBox.y + actionBox.height <= navBox.y + 1);
           assert.equal(await page.locator('.dn-service-process li').count(), 3);
-          const faq = page.locator('.dn-service-faq summary').first();
-          await faq.click();
-          assert(await page.locator('.dn-service-faq details[open] p').isVisible());
+          const bannerCall = page.locator('.dn-service-banner a');
+          await bannerCall.scrollIntoViewIfNeeded();
+          const callBox = await bannerCall.boundingBox();
+          assert(callBox.y >= 0 && callBox.y + callBox.height <= navBox.y + 1);
+          assert.match(await bannerCall.getAttribute('href'), /^tel:/);
 
         }
       } finally { await page.close(); }

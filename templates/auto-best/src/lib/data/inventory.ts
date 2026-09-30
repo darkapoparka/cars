@@ -25,6 +25,8 @@ export type Vehicle = {
   category: string;
   body: string;
   make: string;
+  /** Optional manufacturer sub-brand used by compact card identity. */
+  cardBrand?: string;
   title: string;
   year: string;
   yearNumber: number;
@@ -45,9 +47,9 @@ const inventoryRecords: Omit<Vehicle, 'year' | 'mileage' | 'href' | 'verificatio
   { id: 2, type: 'car', image: leadSite.artwork.inventoryDemo.stock01, category: 'SUV купе', body: 'SUV', make: 'Mercedes-Benz', title: 'Mercedes-Benz GLE Coupé', yearNumber: 2021, mileageKm: 96865, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 55403 },
   { id: 3, type: 'car', image: leadSite.artwork.inventoryDemo.stock06, category: 'SUV', body: 'SUV', make: 'Audi', title: 'Audi RS Q8', yearNumber: 2021, mileageKm: 94709, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'], condition: 'used', priceEur: 57480 },
   { id: 4, type: 'car', image: leadSite.artwork.inventoryDemo.stock02, category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 M Sport', yearNumber: 2021, mileageKm: 62485, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 54223 },
-  { id: 6, type: 'car', image: leadSite.artwork.inventoryDemo.stock03, category: 'Спортбек', body: 'Sportback', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT 4-Door', yearNumber: 2020, mileageKm: 72812, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 61069 },
+  { id: 6, type: 'car', image: leadSite.artwork.inventoryDemo.stock03, category: 'Спортбек', body: 'Sportback', make: 'Mercedes-Benz', cardBrand: 'Mercedes-AMG', title: 'Mercedes-AMG GT 4-Door', yearNumber: 2020, mileageKm: 72812, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 61069 },
   { id: 7, type: 'car', image: leadSite.artwork.inventoryDemo.stock02, category: 'SUV купе', body: 'SUV', make: 'BMW', title: 'BMW X6 xDrive', yearNumber: 2020, mileageKm: 76346, fuel: 'Дизел', transmission: 'Автоматик', equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 85635 },
-  { id: 8, type: 'car', image: leadSite.artwork.inventoryDemo.stock03, category: 'Купе', body: 'Coupe', make: 'Mercedes-Benz', title: 'Mercedes-AMG GT Coupé', yearNumber: 2023, mileageKm: 49584, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 51365 }
+  { id: 8, type: 'car', image: leadSite.artwork.inventoryDemo.stock03, category: 'Купе', body: 'Coupe', make: 'Mercedes-Benz', cardBrand: 'Mercedes-AMG', title: 'Mercedes-AMG GT Coupé', yearNumber: 2023, mileageKm: 49584, fuel: 'Бензин', transmission: 'Автоматик', equipment: ['360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп'], condition: 'used', priceEur: 51365 }
 ];
 
 // Imported master fixtures are not VIN-verified stock. Preserve source media;

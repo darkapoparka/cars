@@ -20,17 +20,21 @@
 	import Link2 from '@lucide/svelte/icons/link-2';
 	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
 	import ImportRequestWizard from './ImportRequestWizard.svelte';
+	import ImportBrowseControls from './ImportBrowseControls.svelte';
+	import type { ImportBrowseData } from '$lib/server/import-browse';
 
 	type ImportIntent = 'listing' | 'source';
 
 	let {
 		embedded = false,
 		form,
-		serviceVehicles
+		serviceVehicles,
+		browse
 	}: {
 		embedded?: boolean;
 		form: AuxeroServiceFormData;
 		serviceVehicles: VehicleCardSummary[];
+		browse: ImportBrowseData;
 	} = $props();
 
 	const vehicle = $derived(form.vehicleField.value ?? '');
@@ -58,6 +62,7 @@
 	<MobileServiceEntry
 		{embedded}
 		{serviceVehicles}
+		showInventoryHeading={false}
 		showTitle={false}
 		title={ct(importRequestMobileCopy.title)}
 		intro={ct(importRequestMobileCopy.intro)}
@@ -67,6 +72,9 @@
 			index === 0 ? { ...step, text: nt('ui210') } : step
 		)}
 	>
+		{#snippet browseControls()}
+			<ImportBrowseControls {browse} {criteria} onrequest={() => openWizard('source')} />
+		{/snippet}
 		{#snippet modes()}
 			<MobileModeTabs
 				bind:value={entryMode}
