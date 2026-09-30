@@ -5,13 +5,9 @@ import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehic
 import Image from "@repo/marketplace-ui/components/public-image";
 import { VehicleCardMoney } from "@repo/marketplace-ui/components/vehicle-card-money";
 import {
-  mobileVehicleCardClassName,
   mobileVehicleCardContentClassName,
-  mobileVehicleCardFactsClassName,
-  mobileVehicleCardImageSizes,
   mobileVehicleCardMediaClassName,
   mobileVehicleCardPriceClassName,
-  mobileVehicleCardSummaryClassName,
   mobileVehicleCardTitleClassName,
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
@@ -41,7 +37,7 @@ export function LeaseSelectedVehicle({
 
   return (
     <article
-      className={`${mobileVehicleCardClassName} relative overflow-hidden rounded-xl bg-card ${onSelect ? "" : "mt-4"}`}
+      className={`relative flex overflow-hidden rounded-xl bg-card ${onSelect ? "" : "mt-4"}`}
       data-slot={
         onSelect ? "lease-vehicle-option" : "lease-selected-vehicle-card"
       }
@@ -58,13 +54,13 @@ export function LeaseSelectedVehicle({
             fill
             loading={priority || !onSelect ? "eager" : "lazy"}
             onError={() => setFailedImageUrl(vehicle.imageUrl)}
-            sizes={mobileVehicleCardImageSizes}
+            sizes="240px"
             src={vehicle.imageUrl}
           />
         )}
       </div>
       <div className={mobileVehicleCardContentClassName}>
-        <div className={mobileVehicleCardSummaryClassName}>
+        <div className="min-w-0 space-y-1">
           <h2
             className={mobileVehicleCardTitleClassName}
             data-slot="lease-selected-vehicle-title"
@@ -101,10 +97,8 @@ export function LeaseSelectedVehicle({
           </div>
         </div>
         <DealerVehicleFacts
-          className={mobileVehicleCardFactsClassName}
           facts={facts}
           label={locale === "bg" ? "Характеристики" : "Specifications"}
-          layout="inline"
         />
       </div>
       {onSelect ? (

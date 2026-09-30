@@ -8,10 +8,7 @@ import { Heart, Images } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { rememberInventoryReturn } from "../lib/inventory-return";
-import {
-  mobileVehicleCardClassName,
-  mobileVehicleCardMediaClassName,
-} from "../lib/mobile-vehicle-card-layout";
+import { mobileVehicleCardMediaClassName } from "../lib/mobile-vehicle-card-layout";
 import { getVehicleCardVariant } from "../lib/vehicle-card-policy";
 import type { VehicleCardProps } from "../lib/vehicle-card-types";
 import {
@@ -70,8 +67,7 @@ export const VehicleCard = ({
     <article
       className={cn(
         styles.card,
-        mobileVehicleCardClassName,
-        "group overflow-hidden rounded-xl border-0 bg-card p-0 lg:flex lg:rounded-lg lg:border lg:border-border lg:**:data-[slot=vehicle-card-title]:line-clamp-2",
+        "group flex overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border",
         !isDesktopComparison &&
           "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
@@ -86,7 +82,7 @@ export const VehicleCard = ({
       <div
         className={cn(
           mobileVehicleCardMediaClassName,
-          "lg:col-auto lg:row-auto lg:min-h-0 lg:w-full lg:max-w-none lg:shrink-0",
+          "lg:min-h-0 lg:w-full lg:max-w-none",
           getVehicleCardMediaClassName(isCompact, isGrid, isDesktopComparison)
         )}
         data-slot="vehicle-card-media"
