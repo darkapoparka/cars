@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "packagingVersion": "2",
   "dealerId": "day-and-night-auto-group",
-  "contractDigest": "147a0b4dad4f1fd25233d7763de53fe973f9c02e18aea55fa64a1b2c6b03f748",
+  "contractDigest": "5a78b021addfc3cfc5363579ae238a90081823f4feb2aef4a138f2e9650071d7",
   "releases": {
     "auto-best": {
       "status": "approved",
@@ -356,7 +356,7 @@
     }
   },
   "input": {
-    "digest": "1c6c5f0e9b1c33c317b8d713dd80fcfc6f3dea75f97ed02cbd4064b10026308b",
+    "digest": "28ff07a63081c8f02841be5d44167d3f5115615e0511dbad73948d83428082bd",
     "files": 3499
   },
   "dealerAcceptance": "requires-dealer-build-and-public-journeys"

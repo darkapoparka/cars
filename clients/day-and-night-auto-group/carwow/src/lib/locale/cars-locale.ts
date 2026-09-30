@@ -8,5 +8,5 @@ export const carsLocale = {
     "bg"
   ],
   "dealerCountry": "BG",
-  "inventoryCurrency": "BGN"
+  "inventoryCurrency": "EUR"
 } as const;

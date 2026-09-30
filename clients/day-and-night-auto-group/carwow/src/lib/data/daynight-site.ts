@@ -35,7 +35,7 @@ export const daynightSite = {
 	region: city,
 	countryCode: "BG",
 	locale: "bg-BG",
-	currency: "BGN",
+	currency: "EUR",
 	phoneE164,
 	...contactLinks(phoneE164),
 	phone: '359877733110',
