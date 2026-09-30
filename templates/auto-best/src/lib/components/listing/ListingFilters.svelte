@@ -111,8 +111,16 @@
           <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || `${i18n.t("m_49c266baaaa7")} (${resultCount})`}</span>
           <span class="dn-listing-filter__keyword-hint">{i18n.t("m_27194051d1f9")} <Icon name="arrow-right" size={16} /></span>
         </button>
+        <button class="dn-listing-filter__mobile-sort dn-icon-button" class:dn-listing-filter__mobile-sort--active={filters.sort !== 'default'} type="button" title={i18n.t("m_bec69036aa27")}
+          aria-label={i18n.t("m_c3f09566c8eb", { p0: i18n.text(listingFilterOptions.sorts.find(([value]) => value === filters.sort)?.[1] ?? 'Recommended') })}
+          aria-haspopup="dialog" aria-controls="dn-listing-sort-sheet" aria-expanded={sortOpen}
+          onclick={(event) => openSort(event, 'sort', 'Сортиране')}>
+          <MobileNavIcon name="sort" size={20} />
+          {#if filters.sort !== 'default'}<span class="dn-listing-filter__sort-active" aria-hidden="true"></span>{/if}
+        </button>
         <button
-          class="dn-listing-filter__toggle"
+          class="dn-listing-filter__toggle dn-icon-button"
+          class:dn-listing-filter__toggle--active={activeFilterCount > 0}
           type="button"
           aria-haspopup="dialog"
           aria-controls="dn-listing-filter-dialog"
@@ -124,13 +132,6 @@
           <MobileNavIcon name="filters" size={20} />
           <span class="dn-listing-filter__toggle-label">{i18n.t("m_546ebb8eb993")}</span>
           {#if activeFilterCount > 0}<span class="dn-listing-filter__count" aria-hidden="true">{activeFilterCount}</span>{/if}
-        </button>
-        <button class="dn-listing-filter__mobile-sort" class:dn-listing-filter__mobile-sort--active={filters.sort !== 'default'} type="button" title={i18n.t("m_bec69036aa27")}
-          aria-label={i18n.t("m_c3f09566c8eb", { p0: i18n.text(listingFilterOptions.sorts.find(([value]) => value === filters.sort)?.[1] ?? 'Recommended') })}
-          aria-haspopup="dialog" aria-controls="dn-listing-sort-sheet" aria-expanded={sortOpen}
-          onclick={(event) => openSort(event, 'sort', 'Сортиране')}>
-          <MobileNavIcon name="sort" size={20} />
-          {#if filters.sort !== 'default'}<span class="dn-listing-filter__sort-active" aria-hidden="true"></span>{/if}
         </button>
         <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
         </div>
@@ -314,11 +315,7 @@
     cursor: pointer;
   }
 
-  .dn-listing-filter__toggle { border: 1px solid #202329; background: #202329; color: #fff; }
-  .dn-listing-filter__toggle:focus-visible { border-color: #111318; background: #111318; }
-  @media (hover: hover) and (pointer: fine) {
-    .dn-listing-filter__toggle:hover { border-color: #111318; background: #111318; }
-  }
+  .dn-listing-filter__toggle { border: 0; color: var(--dn-ink); }
 
   .dn-listing-filter__count {
     display: inline-grid;
@@ -477,7 +474,7 @@
     }
     .dn-listing-filter__keyword::before {
       position: absolute;
-      inset: 1px;
+      inset: 2px;
       z-index: -1;
       border-radius: inherit;
       background: #fff;
@@ -486,36 +483,24 @@
     .dn-listing-filter__keyword-hint { display: none; }
     .dn-listing-filter__toggle,
     .dn-listing-filter .dn-listing-filter__mobile-sort {
-      position: relative;
-      display: grid;
-      width: 44px;
-      height: 44px;
-      place-items: center;
-      padding: 0;
+      display: inline-grid;
+      width: var(--dn-control-hit-height);
+      height: var(--dn-control-hit-height);
+      padding: var(--dn-compact-control-inset);
       border: 0;
-      border-radius: 50%;
-      background: transparent;
-      isolation: isolate;
+      background-color: var(--dn-white);
     }
-    .dn-listing-filter__toggle::before,
-    .dn-listing-filter__mobile-sort::before {
-      position: absolute;
-      inset: 1px;
-      z-index: -1;
-      border-radius: 50%;
-      content: '';
-    }
-    .dn-listing-filter__toggle::before { background: #202329; }
-    .dn-listing-filter__mobile-sort::before { background: #fff; }
-    .dn-listing-filter__toggle:focus-visible::before { background: #111318; }
-    .dn-listing-filter__mobile-sort:focus-visible { outline: 2px solid #202329; outline-offset: 2px; }
+    .dn-listing-filter__toggle { color: var(--dn-ink); }
+    .dn-listing-filter__toggle:focus-visible,
+    .dn-listing-filter__mobile-sort:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; background-color: var(--dn-surface-panel); }
     .dn-listing-filter__toggle-label { display: none; }
     .dn-listing-filter__mobile-sort { color: #202329; cursor: pointer; }
     @media (hover: hover) and (pointer: fine) {
-      .dn-listing-filter__toggle:hover::before { background: #111318; }
-      .dn-listing-filter__mobile-sort:hover::before { background: #e8eaed; }
+      .dn-listing-filter__toggle:hover,
+      .dn-listing-filter__mobile-sort:hover { background-color: var(--dn-surface-hover); }
     }
     .dn-listing-filter__mobile-sort--active { color: var(--dn-red); }
+    .dn-listing-filter__toggle--active { color: var(--dn-red); }
     .dn-listing-filter__sort-active { display: none; }
     .dn-listing-filter__quick-row {
       display: flex;

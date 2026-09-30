@@ -700,8 +700,8 @@
       outline-offset: -2px;
     }
 
-    /* Keep names available to assistive technology when the dock cannot fit labels. */
-    @container (max-width: 20rem) {
+    /* Normal phone widths keep labels; enlarged text retains complete accessible names. */
+    @container (max-width: 15rem) {
       .dn-mobile-bottom-nav__label {
         position: absolute;
         width: 1px;

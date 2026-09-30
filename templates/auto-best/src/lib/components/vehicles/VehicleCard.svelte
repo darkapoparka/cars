@@ -30,7 +30,7 @@
 
 {#snippet amount()}
   {#if showPrice}
-    <div class="dn-vehicle-card__amount">{priceLabel}</div>
+    <div class="dn-vehicle-card__amount" class:dn-vehicle-card__fact={layout === 'listing'}>{priceLabel}</div>
   {/if}
 {/snippet}
 
@@ -93,8 +93,8 @@
     </div>
     {#if layout === 'listing'}
       <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
-        <li class="dn-vehicle-card__fact-group dn-vehicle-card__fact-group--history">
-          <span class="dn-vehicle-card__fact dn-vehicle-card__fact--year">{vehicle.year}</span>
+        <li class="dn-vehicle-card__fact-group">
+          <span class="dn-vehicle-card__fact">{vehicle.year}</span>
           <span class="dn-vehicle-card__fact">{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
         </li>
         <li class="dn-vehicle-card__fact-group">
@@ -409,9 +409,9 @@
       grid-column: 1 / -1;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: start;
       flex-wrap: wrap;
-      gap: var(--dn-space-1) var(--dn-space-2);
+      gap: var(--dn-space-1);
       margin: 0;
       padding: 0;
       list-style: none;
@@ -432,7 +432,7 @@
       flex: 0 1 auto;
       align-items: center;
       justify-content: center;
-      padding: var(--dn-space-half) calc(var(--dn-space-1) + var(--dn-space-half));
+      padding: var(--dn-space-1);
       overflow: visible;
       border: 0;
       border-radius: var(--dn-pill);
@@ -447,23 +447,10 @@
       overflow-wrap: anywhere;
     }
 
-    .dn-vehicle-card--listing .dn-vehicle-card__fact-group--history .dn-vehicle-card__fact {
-      padding: 0;
-      background: transparent;
-      color: var(--dn-muted);
-      font-weight: var(--dn-weight-regular);
-    }
-
-    .dn-vehicle-card--listing .dn-vehicle-card__fact-group--history .dn-vehicle-card__fact--year {
-      padding-inline-end: var(--dn-space-1);
-      border-inline-end: 1px solid var(--dn-line);
-      border-radius: 0;
-    }
-
     .dn-vehicle-card--listing .dn-vehicle-card__name {
       display: block;
       min-width: 0;
-      font-size: var(--dn-text-lead);
+      font-size: var(--dn-text-card);
       font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-control);
       white-space: normal;
@@ -479,13 +466,15 @@
 
     .dn-vehicle-card--listing .dn-vehicle-card__amount {
       grid-area: price;
+      justify-self: start;
       align-self: start;
       margin-top: 0;
-      padding-top: 0;
+      padding: var(--dn-space-1) var(--dn-space-2);
       color: var(--dn-ink);
-      font-size: var(--dn-text-card);
-      font-weight: var(--dn-weight-semibold);
+      font-size: var(--dn-text-body);
+      font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
+      letter-spacing: var(--dn-tracking-normal);
       text-align: start;
       overflow-wrap: anywhere;
     }

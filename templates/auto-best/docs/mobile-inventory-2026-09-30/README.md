@@ -104,6 +104,21 @@ At normal 16px root text and scroll position 0 in the in-app browser, the first 
 
 The final production build passed `npm run validate` with 0 Svelte errors and warnings, all 8 mobile polish cases, all 42 Chromium inventory accessibility/text-bounds states and all 66 WebKit reflow cases. No violations, overflow or clipped copy were found in those states, including both languages, increased text spacing and 200% root text. The live 390px list → vehicle 1 → anchored list return passed, and desktop cards retain one price below their specifications. Tested source blobs: `VehicleCard.svelte` — `879e0e9a6fda7ec0ab670a79ab09ea0d9f886de9`; `mobile-polish-smoke.mjs` — `2798f6ddcb7bdd7bbeae8689ffd1dc470dcad4c6`. Earlier matrices record their respective revisions.
 
-This revision changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The first revision's asset guard covered its five image derivatives; the subsequent card revisions introduce no new public assets.
+### Badge hierarchy and navigation follow-up
+
+The compact list keeps the larger landscape photograph. Model titles now use 20px semibold type, while the price uses a quieter 16px medium badge below the identity. Year, mileage, fuel and transmission share its background and pill shape; the specifications wrap as two pairs, including Bulgarian at 320px. At normal 16px root text, the first card is 142.8px high at 320px and 167.5px at 390px, with the same 136.2px and 173.3px photographs as the preceding revision.
+
+The main dock uses locally embedded Phosphor duotone icons and keeps all five labels visible at normal phone widths, including 320px. Home, inventory, Sell and Import retain the same destinations and order; labels do not disappear on a timer. Enlarged text retains the accessible icon-only fallback below 15rem of available width. Vehicle detail pages retain their contextual Call and Viewing actions. The discovery toolbar now orders Search, Sort and Filters, with Filters at the far right. Sort and Filters share a neutral 40px painted circle within a 44px target and expose an applied state in red.
+
+These in-app-browser screenshots use normal text size, matching 320×844 and 390×844 viewports, and scroll position 0:
+
+| Width | Previous hierarchy and controls | Updated badges and controls |
+| --- | --- | --- |
+| 320px | ![Previous list and controls at 320px](../mobile-list-photo-2026-09-30/after-320.jpg) | ![Updated badges and controls at 320px](../mobile-controls-badges-2026-09-30/after-320.jpg) |
+| 390px | ![Previous list and controls at 390px](../mobile-list-photo-2026-09-30/after-390.jpg) | ![Updated badges and controls at 390px](../mobile-controls-badges-2026-09-30/after-390.jpg) |
+
+The final production build passed `npm run validate` with 0 Svelte errors and warnings, 8 mobile polish cases, 6 enlarged-text/focus/loading cases, 42 Chromium inventory accessibility/text-bounds states, and 66 WebKit reflow cases. No violations, overflow or clipped copy were found in the inventory matrix. Manual checks also verified filter/sort focus return, applied-filter emphasis, the 390px list → detail → anchored list return, and one desktop price below the specifications. [Checks and verified source blobs](../mobile-controls-badges-2026-09-30/checks.json) record this revision; earlier matrices belong to their respective revisions.
+
+This revision changes the reusable Auto Best master. It does not promote a template release or deploy a dealer. The working preview includes the pre-existing body/brand artwork, locale and vehicle-finance drafts; these are preserved outside this commit. The shared Cars index also retains other tasks' staged changes. The first revision's asset guard covered its five image derivatives; the subsequent card revisions introduce no new public assets or runtime dependencies. Dock icon sources and the retained MIT license are recorded in [Phosphor provenance](../../provenance/phosphor-icons.md).
 
 Automated axe and layout checks provide bounded evidence, not a claim of complete WCAG conformance. Physical-device and screen-reader acceptance remain separate from these browser checks.

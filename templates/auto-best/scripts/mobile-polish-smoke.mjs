@@ -43,6 +43,7 @@ try {
       page.setDefaultNavigationTimeout(60000);
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
+      let dockNames;
       await page.context().addCookies([{ name: 'cars_locale', value: locale, url: base }, { name: 'cars_prompt', value: 'v1', url: base }]);
       const visit = async path => { await page.goto(base + path, { waitUntil: 'networkidle' }); await page.evaluate(() => document.fonts.ready); };
       const capture = async name => {
@@ -87,6 +88,7 @@ try {
           const dock = page.locator('.dn-mobile-bottom-nav');
           const dockControls = dock.locator('a,button');
           assert.equal(await dockControls.count(), 5);
+          dockNames = await dock.locator('.dn-mobile-bottom-nav__label').allTextContents();
           for (const control of await dockControls.all()) {
             const label = (await control.locator('.dn-mobile-bottom-nav__label').textContent()).trim();
             const role = await control.evaluate(el => el.tagName === 'A' ? 'link' : 'button');
@@ -94,8 +96,7 @@ try {
               'Every dock icon retains its complete accessible name');
           }
           const labelWidths = await dock.locator('.dn-mobile-bottom-nav__label').evaluateAll(labels => labels.map(label => label.getBoundingClientRect().width));
-          assert(labelWidths.every(value => width === 320 ? value <= 1 : value > 1),
-            'The narrow dock uses icons; typical phone widths keep visible labels');
+          assert(labelWidths.every(value => value > 1), 'Normal phone widths keep every dock label visible');
           assert.equal(await page.locator('.dn-mobile-bottom-nav [aria-current=page]').evaluate(el => getComputedStyle(el).backgroundColor), 'rgba(0, 0, 0, 0)', 'Active navigation stays light');
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);
           const trigger = page.locator('.dn-mobile-bottom-nav button');
@@ -107,6 +108,8 @@ try {
         }
         await visit('/listing-grid');
         if (width < 768) {
+          assert.deepEqual(await page.locator('.dn-mobile-bottom-nav__label').allTextContents(), dockNames,
+            'Home and inventory retain the same dock destinations and order');
           const titles = await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__name').evaluateAll(elements => elements.map(el => ({
             text: el.textContent.trim(), whiteSpace: getComputedStyle(el).whiteSpace,
             clipped: el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1
@@ -121,17 +124,32 @@ try {
             const identity = card.querySelector('.dn-vehicle-card__identity').getBoundingClientRect();
             const price = card.querySelector('.dn-vehicle-card__amount').getBoundingClientRect();
             const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
+            const headingStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
+            const priceStyle = getComputedStyle(card.querySelector('.dn-vehicle-card__amount'));
+            const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')];
+            const badgesMatch = facts.every(fact => getComputedStyle(fact).backgroundColor === priceStyle.backgroundColor);
             return photograph.complete && photograph.naturalWidth > 0 &&
               Math.abs(image.width / image.height - photograph.naturalWidth / photograph.naturalHeight) <= .01 &&
               image.left >= box.left && image.right <= content.left - 1 && image.bottom <= box.bottom &&
               Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom - 1 &&
               metadata.top >= Math.max(image.bottom, content.bottom) &&
-              metadata.left >= box.left && metadata.right <= box.right && metadata.bottom <= box.bottom;
+              metadata.left >= box.left && metadata.right <= box.right && metadata.bottom <= box.bottom &&
+              parseFloat(headingStyle.fontSize) > parseFloat(priceStyle.fontSize) &&
+              parseFloat(headingStyle.fontWeight) > parseFloat(priceStyle.fontWeight) &&
+              facts.length === 5 && badgesMatch && priceStyle.backgroundColor !== 'rgba(0, 0, 0, 0)';
           }));
-          assert(photos.every(Boolean), 'Landscape photos preserve the car beside the copy; price follows the model and specs clear both columns');
+          assert(photos.every(Boolean), 'Landscape photos remain whole; the title leads the price badge and all five facts share a badge family');
           assert.equal(await page.locator('.dn-vehicle-card--listing img[fetchpriority="high"]').count(), 1,
             'Only the first inventory photograph gets high fetch priority');
           await capture('inventory');
+          const discoveryControls = await page.locator('.dn-listing-filter__mobile-sort,.dn-listing-filter__toggle').evaluateAll(controls => controls.map(control => {
+            const box = control.getBoundingClientRect(), style = getComputedStyle(control);
+            return { width: box.width, height: box.height, left: box.left, right: box.right, clip: style.backgroundClip,
+              paintedHeight: box.height - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom) };
+          }));
+          assert(discoveryControls.every(control => control.width === 44 && control.height === 44 && control.paintedHeight === 40 && control.clip === 'content-box'),
+            'Sort and Filters share a 44px target and 40px painted circle');
+          assert(discoveryControls[1].left > discoveryControls[0].right, 'Filters is the rightmost discovery control');
           await page.locator('.dn-listing-filter__toggle').click();
           const filter = page.locator('#dn-listing-filter-dialog');
           await filter.locator('input[name=q]').fill('no-match-mobile-polish');
@@ -144,6 +162,8 @@ try {
         } else await capture('inventory');
         for (const topic of ['import', 'trade-in']) {
           await visit(`/contact?topic=${topic}`);
+          if (width < 768) assert.deepEqual(await page.locator('.dn-mobile-bottom-nav__label').allTextContents(), dockNames,
+            'Sell and Import retain the same dock destinations and order');
           const action = page.locator('.dn-service-entry__submit');
           await fits(action);
           await fits(page.locator('.dn-service-entry__choices button'));
