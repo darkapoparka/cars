@@ -69,6 +69,11 @@ export function validatePackagingManifest(manifest) {
 
 function omitted(name, relative) {
   if(name === 'next-env.d.ts' || /(?:^|\/)packages\/database\/generated(?:\/|$)/.test(relative)) return true;
+  // These are ignored design reference exports, not storefront assets. Keep
+  // them on disk without adding them to a native source or publishing seal.
+  if (/^carwow\/static\/offer-shots(?:\/|$)/.test(relative)
+    || /^carwow\/static\/assets\/images\/daynight-premium-banners\/[^/]+\.png$/.test(relative)
+    || /^carwow\/static\/assets\/images\/daynight-premium-banners\/webp\/[^/]+-(?:clean-v1|spartak-v\d+)\.webp$/.test(relative)) return true;
   if (OMITTED.has(name) || name.startsWith('.next') || (name.startsWith('.env') && !/^\.env\.(example|sample|template)$/.test(name))) return true;
   if (/\.(?:log|tsbuildinfo|pem|key|pfx|p12|pid)$/i.test(name)) return true;
   if (/(?:credentials|service-account|license-certificate|purchase-code)/i.test(name) && !/\.(?:[cm]?[jt]sx?|svelte|vue|py|sh|ps1)$/i.test(name)) return true;

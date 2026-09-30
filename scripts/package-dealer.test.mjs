@@ -6,12 +6,16 @@ import { createHash } from 'node:crypto';
 import { stripTypeScriptTypes } from 'node:module';
 import { spawnSync } from 'node:child_process';
 import test from 'node:test';
-import { committedDealerInputs, packageDealer, planDealerPackage } from './package-dealer.mjs';
+import { committedDealerInputs, packageDealer, planDealerPackage, packageRetainsPath } from './package-dealer.mjs';
 import { fixSvelteServiceOutput } from './publishing/fix-svelte-service-output.mjs';
 import {verifyPackage} from './export-dealer.mjs';
 import {normalized} from './lib/workflow.mjs';
 
 const sourceCommit = 'a'.repeat(40);
+test('ignored reference exports are excluded while current storefront banners and dealer images are retained', () => {
+  for (const file of ['carwow/static/offer-shots/app-mobile-home.png', 'carwow/static/assets/images/daynight-premium-banners/brands-in-stock-spartak-v1.png', 'carwow/static/assets/images/daynight-premium-banners/webp/brands-in-stock-clean-v1.webp', 'carwow/static/assets/images/daynight-premium-banners/webp/brands-in-stock-spartak-v2.webp']) assert.equal(packageRetainsPath(file), false, file);
+  for (const file of ['carwow/static/assets/images/daynight-premium-banners/webp/brands-in-stock-imagegen-v3.webp', 'carwow/static/assets/images/daynight-premium-banners/webp/inventory-latest-front-v1.png', 'carwow/static/dealer-brand/logo.png', 'carwow/static/dealer-inventory/car.png', 'assets/reference.jpg']) assert.equal(packageRetainsPath(file), true, file);
+});
 const manifestFor = (middle = 'modern') => ({
   schemaVersion: 1, slug: 'fixture-cars', repository: 'darkapoparka/cars-fixture', defaultBranch: 'main',
   variants: [{ key: 'auto-best', entry: '/', base: '' }, { key: middle, entry: middle === 'modern' ? '/variant-2/cars' : '/variant-2/', base: '/variant-2' }, { key: 'carwow', entry: '/variant-3/', base: '/variant-3' }],
