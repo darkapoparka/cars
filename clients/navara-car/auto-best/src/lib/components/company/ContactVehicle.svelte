@@ -6,13 +6,14 @@
 
   import { resolve } from '$app/paths';
   import { formatVehiclePrice, type Vehicle } from '$data/inventory';
+  import { imageSrcset } from '$data/responsive-images';
   import Icon from '$components/ui/Icon.svelte';
 
   let { vehicle, hero = false }: { vehicle: Vehicle; hero?: boolean } = $props();
 </script>
 
 <a class="dn-contact-vehicle" class:dn-contact-vehicle--hero={hero} href={i18n.href(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }))} aria-label={i18n.t("m_0b6d5cf8073c", { p0: vehicle.title })}>
-  <img src={vehicle.image} alt="" width="120" height="90" />
+  <img src={vehicle.image} srcset={imageSrcset(vehicle.image)} sizes="88px" alt="" width="120" height="90" decoding="async" />
   <span><small>{i18n.t("m_ab266814f5ea")}</small><strong>{vehicle.title}</strong><span>{vehicle.year} · {formatVehiclePrice(vehicle.priceEur, i18n.locale)}</span></span>
   <Icon name="arrow-right" size={18} />
 </a>

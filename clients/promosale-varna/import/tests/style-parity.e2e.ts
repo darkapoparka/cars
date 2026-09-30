@@ -27,7 +27,7 @@ test('desktop navigation is centered and its dropdown aligns with the complete i
 
 test('image banners do not underline their titles or action copy', async ({ page }) => {
 	await visit(page, '/');
-	const banners = page.locator('.daynight-action-card');
+	const banners = page.locator('.commerce-banner');
 	expect(await banners.count()).toBeGreaterThan(0);
 	expect(
 		await banners.evaluateAll((nodes) =>

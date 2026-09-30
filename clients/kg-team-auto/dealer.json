@@ -36,13 +36,59 @@
   },
   "switcher": {
     "language": "bg",
-    "accent": "#c40101"
+    "accent": "#2563eb"
   },
   "templateRevisions": {
-    "auto-best": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-    "modern": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-    "carwow": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-    "app": "2925db90d58b29544489b22c0557b5669af02f6e"
+    "auto-best": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "modern": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "carwow": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "app": "b66693e3a475ef563ab45f51e4297e7073830ec1"
+  },
+  "templateSources": {
+    "app": {
+      "repository": "darkapoparka/cars",
+      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "path": "templates/app",
+      "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+      "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    },
+    "auto-best": {
+      "repository": "darkapoparka/cars",
+      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "path": "templates/auto-best",
+      "digest": "77644e5f217932973c88a81a4e1fd136efd0ca351d6aeee0dca1daa94ad42964",
+      "tree": "08b90f149f2a2f385cec7fe6b6d8f9d5021b79eb"
+    },
+    "modern": {
+      "repository": "darkapoparka/cars",
+      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "path": "templates/modern",
+      "digest": "3585b499ec306bc302bf1abf99771a6aacbdf34bf665a60f2e1093983143fe4c",
+      "tree": "796661a4ff23fb9db34b7df68dc7f190497e4922"
+    },
+    "carwow": {
+      "repository": "darkapoparka/cars",
+      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "path": "templates/carwow",
+      "digest": "9c9afa90d6c7897c5eb6b37bd79fcb9a2d32bc90809f8dfec290139d056f0e5f",
+      "tree": "6ba84fbd77bf8536491fcb7f649c620776c91060"
+    }
+  },
+  "appVariant": {
+    "schemaVersion": 1,
+    "format": "app-preview-v1",
+    "source": {
+      "repository": "darkapoparka/cars",
+      "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+      "path": "templates/app",
+      "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+      "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+    },
+    "baseDeployment": {
+      "id": "dpl_6tNQfw2DGGTiw1mBVAHJnkG9vUaA",
+      "url": "https://cars-kgteamauto.vercel.app/",
+      "checkedAt": "2026-09-28T02:25:47.563Z"
+    }
   },
   "localization": {
     "schemaVersion": 1,
@@ -54,57 +100,5 @@
     ],
     "dealerCountry": "BG",
     "inventoryCurrency": "EUR"
-  },
-  "templateSources": {
-    "auto-best": {
-      "repository": "darkapoparka/cars",
-      "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-      "path": "templates/auto-best",
-      "tree": "44d9fc532b332e8c4cb5fd7abfc585e28d978539",
-      "digest": "a78d2cfe451551cbb4636e1e64d386d45a13db2b710f8fa8b0dc444929e61be3"
-    },
-    "modern": {
-      "repository": "darkapoparka/cars",
-      "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-      "path": "templates/modern",
-      "tree": "dadbc3c20d06f230bc958e6f6233f674c8755ae7",
-      "digest": "50d3f5a6739af15b2517f592fed79ff6ef7699f1e5433e16ff90c3eeb0c9339f"
-    },
-    "carwow": {
-      "repository": "darkapoparka/cars",
-      "revision": "8fb6751d945776817acd8fce4a431ec7a2860b2a",
-      "path": "templates/carwow",
-      "tree": "af47a659d305d81523f5af97ef66d15dd0aa1f38",
-      "digest": "cd4794eb4c6840acaf6112bc0e480fdc93f6ab4b224ef4976ee6af25df8d9420"
-    },
-    "app": {
-      "repository": "darkapoparka/cars",
-      "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
-      "path": "templates/app",
-      "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
-      "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
-    }
-  },
-  "appVariant": {
-    "schemaVersion": 1,
-    "format": "app-preview-v1",
-    "source": {
-      "repository": "darkapoparka/cars",
-      "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
-      "path": "templates/app",
-      "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
-      "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
-    },
-    "baseDeployment": {
-      "id": "dpl_6tNQfw2DGGTiw1mBVAHJnkG9vUaA",
-      "url": "https://cars-kgteamauto.vercel.app/",
-      "checkedAt": "2026-09-28T02:25:47.563Z"
-    },
-    "polish": {
-      "version": "4.1",
-      "selector": "shared-v2-with-local-fallback",
-      "benefits": "proposal-examples",
-      "missingPhotos": "neutral-fallback"
-    }
   }
 }

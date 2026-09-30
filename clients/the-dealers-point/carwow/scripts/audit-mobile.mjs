@@ -42,9 +42,27 @@ const coreRoutes = [
 ];
 const routes = new Set(coreRoutes);
 const browser = await engine.launch();
+// Inspect the storefront after its first-visit preferences have been dismissed.
+// Explicit /en and /bg routes still select their own language.
+const browsingState = {
+	locale: 'bg-BG',
+	storageState: {
+		cookies: ['cars_locale', 'cars_prompt'].map((name) => ({
+			name,
+			value: name === 'cars_locale' ? 'bg' : 'v1',
+			domain: base.hostname,
+			path: '/',
+			expires: -1,
+			httpOnly: false,
+			secure: base.protocol === 'https:',
+			sameSite: 'Lax'
+		})),
+		origins: []
+	}
+};
 const results = [];
 try {
-	const discovery = await browser.newPage();
+	const discovery = await browser.newPage(browsingState);
 	try {
 		// The sitemap includes vehicles beyond the first inventory pagination page.
 		const sitemap = await discovery.request.get(new URL('/sitemap.xml', base).href);
@@ -81,16 +99,17 @@ try {
 			width === 390 || process.env.AUDIT_ALL_WIDTHS === '1' ? [...routes] : coreRoutes;
 		for (const route of selectedRoutes) {
 			// Fresh contexts bound browser memory and prevent route/garage/CSS state contaminating evidence.
-			const context = await browser.newContext(
-				width >= 992
+			const context = await browser.newContext({
+				...browsingState,
+				...(width >= 992
 					? { viewport: { width, height: 1000 } }
 					: {
 							...devices['iPhone 13'],
 							viewport: { width, height: 844 },
 							deviceScaleFactor: 1,
 							isMobile: engineName !== 'firefox'
-						}
-			);
+						})
+			});
 			const page = await context.newPage();
 			const errors = [];
 			const httpErrors = [];

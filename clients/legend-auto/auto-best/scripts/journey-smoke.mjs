@@ -114,11 +114,23 @@ try {
         assert(sources.every(src => width >= 1440 ? src.startsWith('http') : src.startsWith('data:')));
         assert.equal(media.filter(url => /auto-best-desktop-.+-v1\.webp/.test(url)).length, 0, 'Home no longer requests the generated scene');
         evidence.push({ width, heroSources: sources, homeArtwork });
-        for (const [topic, scene] of [['trade-in', 'sell'], ['import', 'import']]) {
+        let sharedServiceCar = null;
+        for (const [topic, service] of [['trade-in', 'sell'], ['import', 'import']]) {
           await page.goto(`${base}/contact?topic=${topic}`, { waitUntil: 'networkidle' });
-          const support = await page.locator('.dn-hero-vehicles__support img').evaluateAll(images => images.map(image => image.currentSrc));
-          assert.equal(support.length, 2);
-          assert(support.every(src => width < 768 ? src.includes(`mobile-${scene}-v1`) : src.startsWith('data:')));
+          const scene = page.locator('.dn-hero-vehicles__scene');
+          const support = await scene.locator('img').evaluateAll(images => images.map(image => image.currentSrc));
+          assert.equal(support.length, 3, 'Service hero renders two detail crops around one shared car');
+          assert.equal(await scene.locator('.dn-hero-vehicles__detail img').count(), 2);
+          assert.equal(await scene.locator('.dn-hero-vehicles__shared-car img').count(), 1);
+          if (width < 768) {
+            const expectedDetails = `service-${service}-front-v3.webp`;
+            assert(support[0].includes(expectedDetails) && support[2].includes(expectedDetails));
+            assert(support[1].includes('service-sell-front-v3.webp'), 'Both services reuse the reviewed central car');
+            if (sharedServiceCar === null) sharedServiceCar = support[1];
+            else assert.equal(support[1], sharedServiceCar, 'Sell and Import must use the exact same central-car source');
+          } else {
+            assert(support.every(src => src.startsWith('data:')), 'Mobile service media must not load outside its viewport');
+          }
         }
       } finally { await page.close(); }
     }

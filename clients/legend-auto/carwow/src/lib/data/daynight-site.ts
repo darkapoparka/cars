@@ -15,11 +15,11 @@ const location = "бул. Цар Освободител 289, срещу МАКА
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Варна',
-	locationShort: "Варна",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Варна'
-	},
+  "city": "Varna",
+  "locationShort": "Varna",
+  "addressLine": "289 Tsar Osvoboditel Blvd., opposite MACAO",
+  "address": "289 Tsar Osvoboditel Blvd., opposite MACAO, Varna"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -33,14 +33,14 @@ export const daynightSite = {
 	shortName,
 	city,
 	region: city,
-	countryCode: 'BG',
-	locale: 'bg-BG',
-	currency: 'EUR',
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
 	phoneE164,
 	...contactLinks(phoneE164),
 	phone: '359899877305',
 	phoneLabel: '0899 877 305',
-	email: '',
+	email: "",
 	location,
 	locationShort: `${district}, ${city}`,
 	locationLandmark: "бул. Цар Освободител 289, срещу МАКАО",
@@ -48,10 +48,11 @@ export const daynightSite = {
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: 'https://daynight.mobile.bg/',
+	sourceInventory: "https://legendauto1.mobile.bg/",
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

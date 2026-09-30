@@ -6,7 +6,7 @@ import * as stylex from '@stylexjs/stylex';
 import {ChevronLeft, ChevronRight, Expand, X} from 'lucide-react';
 import {useModal} from '@/components/useModal';
 import type {GalleryPhoto} from '@/lib/vehicle-gallery';
-import {media, tokens as $} from '@/app/tokens.stylex';
+import {tokens as $} from '@/app/tokens.stylex';
 
 export default function VehiclePhotoViewer({photos, initialIndex = 0, onClose}: {photos: GalleryPhoto[]; initialIndex?: number; onClose: () => void}) {
   const tx = useCopy();
@@ -65,19 +65,19 @@ export default function VehiclePhotoViewer({photos, initialIndex = 0, onClose}: 
       </div>
       <button type="button" onClick={() => move(-1)} aria-label={tx("Previous photo")} {...stylex.props(s.arrow, s.previous)}><ChevronLeft size={27} /></button>
       <button type="button" onClick={() => move(1)} aria-label={tx("Next photo")} {...stylex.props(s.arrow, s.next)}><ChevronRight size={27} /></button>
-      <button type="button" onClick={zoom} aria-label={tx(scale > 1 ? 'Zoom out' : 'Zoom in')} {...stylex.props(s.zoom)}><Expand size={15} />{tx(scale > 1 ? 'Zoom Out' : 'Pinch to Zoom In')}</button>
+      <button type="button" onClick={zoom} aria-label={tx(scale > 1 ? 'Zoom out' : 'Zoom in')} {...stylex.props(s.zoom)}><Expand size={15} />{tx(scale > 1 ? 'Zoom out' : 'Zoom in')}</button>
       <div {...stylex.props(s.caption)}><span>{tx(photo.label)}</span><span aria-live="polite">{tx(index + 1)} {tx(" / ")}{tx(photos.length)}</span></div>
     </div>
   </div>;
 }
 const s = stylex.create({
-  viewer: {position: 'fixed', top: {[media.mobile]: 51, default: 0}, right: 0, bottom: {[media.mobile]: 24, default: 0}, left: 0, zIndex: 240, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontFamily: $.fontDisplay, backgroundColor: '#000', outlineStyle: 'none'},
-  close: {position: 'absolute', top: 24, right: 22, zIndex: 5, display: 'grid', placeItems: 'center', width: 27, height: 27, padding: 0, color: '#fff', borderWidth: 0, borderRadius: '50%', backgroundColor: '#333', cursor: 'pointer'},
+  viewer: {position: 'fixed', top: 0, right: 0, bottom: 0, left: 0, zIndex: 240, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontFamily: $.fontSans, backgroundColor: '#000', outlineStyle: 'none'},
+  close: {position: 'absolute', top: 'calc(24px + env(safe-area-inset-top))', right: 'calc(22px + env(safe-area-inset-right))', zIndex: 5, display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: '#fff', borderWidth: 0, borderRadius: '50%', backgroundColor: '#333', cursor: 'pointer', outlineColor: {default: 'transparent', ':focus-visible': '#fff'}},
   center: {position: 'relative', width: '100%', maxWidth: 1200, touchAction:'none', userSelect:'none'},
-  stage: {position: 'relative', width: '100%', aspectRatio: '1.92', overflow: 'hidden', touchAction: 'none', userSelect: 'none'},
-  image: {display: 'block', width: '100%', height: '100%', objectFit: 'cover'},
-  arrow: {position: 'absolute', top: 'calc(50% - 14px)', zIndex: 3, display: 'grid', placeItems: 'center', width: 29, height: 29, padding: 0, color: '#fff', borderWidth: 0, borderRadius: '50%', backgroundColor: 'rgba(1,16,41,.85)', cursor: 'pointer'},
-  previous: {left: 22}, next: {right: 22},
-  zoom: {position: 'absolute', top: 'calc(50% - 16px)', left: '50%', transform: 'translateX(-50%)', zIndex: 3, display: 'inline-flex', alignItems: 'center', gap: 7, padding: '8px 10px', color: '#fff', fontSize: 11, fontWeight: 500, borderWidth: 0, borderRadius: 2, backgroundColor: 'rgba(5,27,58,.62)', cursor: 'pointer'},
-  caption: {position: 'absolute', top: 'calc(100% + 20px)', left: 22, right: 22, display: 'flex', justifyContent: 'space-between', gap: 20, fontSize: 11, lineHeight: '18px'},
+  stage: {position: 'relative', width: '100%', aspectRatio: '1.92', maxHeight: 'calc(100dvh - 220px)', overflow: 'hidden', touchAction: 'none', userSelect: 'none'},
+  image: {display: 'block', width: '100%', height: '100%', objectFit: 'contain'},
+  arrow: {position: 'absolute', top: 'calc(50% - 22px)', zIndex: 3, display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: '#fff', borderWidth: 0, borderRadius: '50%', backgroundColor: 'rgba(32,32,36,.85)', cursor: 'pointer', outlineColor: {default: 'transparent', ':focus-visible': '#fff'}},
+  previous: {left: 8}, next: {right: 8},
+  zoom: {position: 'absolute', top: 'calc(100% + 64px)', left: '50%', transform: 'translateX(-50%)', zIndex: 3, display: 'inline-flex', alignItems: 'center', gap: 7, minHeight: 44, padding: '8px 14px', color: '#fff', fontSize: 13, fontWeight: 500, borderWidth: 0, borderRadius: 22, whiteSpace: 'nowrap', backgroundColor: '#29292d', cursor: 'pointer', outlineColor: {default: 'transparent', ':focus-visible': '#fff'}},
+  caption: {position: 'absolute', top: 'calc(100% + 20px)', left: 22, right: 22, display: 'flex', justifyContent: 'space-between', gap: 12, fontSize: 12, lineHeight: '18px'},
 });

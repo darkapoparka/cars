@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "dealer": "isauto-varna",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/app",
+    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+  },
+  "appDigest": "e81e3d44f870387dd72c2c762a97435f4afcd370f118810de8d33abf9deaf13a",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "isauto-varna",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "4f3caa9ec6eaf4fd2c4b04d7c915d22dd5846ae5f437c643c71117167db7ec25",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 6,
+    "currency": "EUR",
+    "observedAt": "2026-09-16",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
+        "output": "public/dealer-app/logo-light-d093167bf017992b7686.webp",
+        "sha256": "d093167bf017992b76864055e909e36e3fe173aaedcfa077f00a1225277c29e4",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
+        "output": "public/dealer-app/logo-dark-7be72f265ad997e6f7f8.webp",
+        "sha256": "7be72f265ad997e6f7f86ee3af9f8f2ae1d24f188acd45a14bdc201f0f054eb4",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/dealer/inventory-1.webp",
+        "output": "public/dealer-app/vehicle-2ed0bb6590dacb3f44b9.webp",
+        "sha256": "2ed0bb6590dacb3f44b9e97a1abf72ddbdc5cc60480c9a4671b01f32f1dad1a5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer/inventory-2.webp",
+        "output": "public/dealer-app/vehicle-17ba4930d72251b772b7.webp",
+        "sha256": "17ba4930d72251b772b7e08e2b197db0aba20da2a95bb00be1c861b40e493260",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer/inventory-3.webp",
+        "output": "public/dealer-app/vehicle-bfd22031b5dce06a1dc5.webp",
+        "sha256": "bfd22031b5dce06a1dc5dcea4620b7f373c01c35266dc2c2d115f7d9569fbe33",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer/inventory-4.webp",
+        "output": "public/dealer-app/vehicle-5fbb33174351d24dff80.webp",
+        "sha256": "5fbb33174351d24dff8038239fbaa2d37d4404bb516ffddbcbbc1cf51cd6fa6d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer/inventory-5.webp",
+        "output": "public/dealer-app/vehicle-8cabb45fc928526afe04.webp",
+        "sha256": "8cabb45fc928526afe04ae337af73e28810cce76e7ac90b2ae68062695092ac7",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/dealer/inventory-6.webp",
+        "output": "public/dealer-app/vehicle-e480519d71d40fd0495e.webp",
+        "sha256": "e480519d71d40fd0495ee6c70b82d595faa3eb56981fba9f9c238fa535fdf04c",
+        "role": "vehicle"
+      }
+    ]
+  },
+  "baseDeployment": {
+    "id": "dpl_9zhikwXLRYiettS1ERL7geEVQxCb",
+    "url": "https://cars-isautovarna.vercel.app/",
+    "checkedAt": "2026-09-28T02:25:47.067Z"
+  },
+  "baseReceiptSha256": "671171c7aad775d85967f555701c5859d93e28d2a80fca7975c078bc21fef86c",
+  "refreshedAt": "2026-09-30T11:27:08.044Z"
+}

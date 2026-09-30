@@ -7,6 +7,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import { editorial } from '$data/home';
   import { leadSite } from '$config/lead-site';
+  import { imageSrcset } from '$data/responsive-images';
 </script>
 
 <section class="dn-editorial dn-home-content-section" aria-labelledby="editorial-title">
@@ -32,6 +33,8 @@
               <span class="dn-editorial-item__media">
                 <img
                   src={item.image}
+                  srcset={imageSrcset(item.image)}
+                  sizes="(max-width: 767px) 260px, (max-width: 991px) 50vw, 33vw"
                   alt=""
                   loading="lazy"
                   decoding="async"

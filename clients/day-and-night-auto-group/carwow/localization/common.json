@@ -403,6 +403,18 @@
 		"en": "Contact {dealerName} about a valuation, sale or trade-in of your car.",
 		"bg": "Свържете се с {dealerName} за оценка, продажба или бартер на Вашия автомобил."
 	},
+	"mobile.budget.any": {
+		"en": "Any budget",
+		"bg": "Без бюджет"
+	},
+	"mobile.promo.sellAction": {
+		"en": "Get valuation",
+		"bg": "Заяви оценка"
+	},
+	"mobile.promo.importAction": {
+		"en": "Start import",
+		"bg": "Заяви внос"
+	},
 	"presentation.find": {
 		"en": "Find a car",
 		"bg": "Намери кола"

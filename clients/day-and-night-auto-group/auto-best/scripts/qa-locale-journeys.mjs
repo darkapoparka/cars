@@ -195,12 +195,17 @@ async function menuOpen(s) {
   await trigger.click(); const panel=s.page.locator(config[s.design].menuPanel); await panel.waitFor({state:'visible'}); return {trigger,panel};
 }
 async function manualOpen(s) {
-  // Header first. The mobile menu is a real source-backed alternative to an obscured footer.
-  const header=s.page.locator('header [data-locale-selector]:visible').first();
-  let trigger;
-  if(await header.count()) trigger=header;
-  else if(s.width<992) { const {panel}=await menuOpen(s); trigger=panel.locator('[data-locale-selector]'); }
-  else trigger=s.page.locator('[data-locale-selector]:visible').first();
+  // Use any direct trigger first, then open the responsive menu that owns the locale control.
+  let trigger=s.page.locator('[data-locale-selector]:visible').first();
+  if(!(await trigger.count()) && s.width<992) { const {panel}=await menuOpen(s); trigger=panel.locator('[data-locale-selector]:visible').first(); }
+  if(!(await trigger.count()) && s.design==='auto-best') {
+    const settingsTrigger=s.page.locator('[aria-controls="auto-best-locale-settings-menu"]:visible').first();
+    await settingsTrigger.click();
+    const settingsPanel=s.page.locator('#auto-best-locale-settings-menu');
+    await settingsPanel.waitFor({state:'visible'});
+    trigger=settingsPanel.locator('[data-locale-selector]:visible').first();
+  }
+  assert.equal(await trigger.count(),1,'A visible locale trigger must be available');
   await trigger.click(); await prefs(s.page).waitFor({state:'visible'});
   return trigger;
 }
@@ -303,7 +308,7 @@ async function preferences(s) {
   });
   await check(s,'Escape restores focus to visible selector or menu',refs,async d=>{
     if(!await dialog.isVisible())await manualOpen(s);await dismiss(s);
-    d.focus=await p.evaluate(()=>{const el=document.activeElement;const r=el?.getBoundingClientRect();return{html:el?.outerHTML.slice(0,500),visible:!!el?.checkVisibility()&&!!r&&r.width>0&&r.height>0,inViewport:!!r&&r.bottom>0&&r.top<innerHeight,valid:!!el?.matches('[data-locale-selector],[aria-controls="dn-mobile-menu"],[aria-controls="mobile-menu-sheet"],[data-slot="dealer-bottom-nav-menu"]')};});
+    d.focus=await p.evaluate(()=>{const el=document.activeElement;const r=el?.getBoundingClientRect();return{html:el?.outerHTML.slice(0,500),visible:!!el?.checkVisibility()&&!!r&&r.width>0&&r.height>0,inViewport:!!r&&r.bottom>0&&r.top<innerHeight,valid:!!el?.matches('[data-locale-selector],[aria-controls="auto-best-locale-settings-menu"],[aria-controls="dn-mobile-menu"],[aria-controls="mobile-menu-sheet"],[data-slot="dealer-bottom-nav-menu"]')};});
     assert(d.focus.visible&&d.focus.inViewport&&d.focus.valid,`Bad focus restoration: ${JSON.stringify(d.focus)}`);
   });
   await check(s,'unsaved draft resets on next manual open',refs,async d=>{
@@ -312,9 +317,9 @@ async function preferences(s) {
   });
   await check(s,'explicit URL beats opposite saved locale',refs,async d=>{await go(s,config[s.design].preference);assert.equal(await dialog.isVisible(),false);d.copy=await copyCheck(s);d.savedCookie=(await s.context.cookies()).find(c=>c.name==='cars_locale')?.value;assert.equal(d.savedCookie,next);});
   await check(s,'country preference does not change the dealer phone',refs,async d=>{
-    const before=await p.locator('a[href^="tel:"]').evaluateAll(es=>es.map(e=>e.getAttribute('href')));assert(before.length>0);
+    const before=await p.locator('a[href^="tel:"]').evaluateAll(es=>[...new Set(es.map(e=>e.getAttribute('href')).filter(Boolean))].sort());assert(before.length>0);
     await manualOpen(s);await dialog.locator('[name=country]').selectOption('DE');await dialog.locator('button[type=submit]').click();await ready(p);await dialog.waitFor({state:'hidden'});
-    const after=await p.locator('a[href^="tel:"]').evaluateAll(es=>es.map(e=>e.getAttribute('href')));assert.deepEqual(after,before);d.phones=after;
+    const after=await p.locator('a[href^="tel:"]').evaluateAll(es=>[...new Set(es.map(e=>e.getAttribute('href')).filter(Boolean))].sort());assert.deepEqual(after,before);d.phones=after;
   });
 }
 
@@ -331,29 +336,79 @@ async function autoJourney(s,kind) {
     // Entry-copy failures must not hide subsequent validation coverage.
     if(await prefs(p).isVisible())await dismiss(s);
   }
-  await check(s,'entry editor custom invalid URL/VIN error',ref,async d=>{
-    await p.locator('.dn-entry-editor-trigger:visible').click();const dialog=p.locator('dialog.dn-entry-editor[open]');await dialog.waitFor();
-    await dialog.locator('[name=entry-value]').fill('QA_INVALID_REFERENCE');await dialog.locator('button[type=submit]').click();d.error=await alertText(s,dialog);d.copy=await copyCheck(s,dialog);d.fit=await fit(p,dialog);await p.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});
-  });
+  const entry=p.locator('.dn-service-entry:visible').first();
+  await entry.waitFor();
+
   if(kind==='sell') {
-    await check(s,'blank required vehicle fields / localized native validation',ref,async d=>{
-      await p.locator('.dn-tradein-start').click();const dialog=p.locator('dialog.dn-tradein-dialog[open]');await dialog.waitFor();await dialog.locator('.dn-tradein-primary').click();d.invalid=await invalid(s,dialog.locator('[name=make]'));d.copy=await copyCheck(s,dialog);d.fit=await fit(p,dialog);
+    await check(s,'inline listing reference custom invalid URL/VIN error',ref,async d=>{
+      const alternative=entry.locator('.dn-service-entry__alternative');
+      await alternative.click();
+      const reference=entry.locator('[name=reference]');
+      await reference.fill('QA_INVALID_REFERENCE');
+      await entry.locator('button[type=submit]').click();
+      d.error=await alertText(s,entry);
+      d.copy=await copyCheck(s,entry);
+      d.fit=await fit(p,entry);
+      await alternative.click();
+      await entry.locator('[name=make]:visible').waitFor();
     });
-    await check(s,'invalid year and negative mileage / no send',ref,async d=>{
-      const dialog=p.locator('dialog.dn-tradein-dialog[open]');await dialog.locator('[name=make]').fill('QA Demo');await dialog.locator('[name=model]').fill('QA Model');await dialog.locator('[name=year]').fill('0000');await dialog.locator('.dn-tradein-primary').click();d.year=await invalid(s,dialog.locator('[name=year]'));
-      await dialog.locator('[name=year]').fill('2020');await dialog.locator('[name=mileage]').fill('-1');await dialog.locator('.dn-tradein-primary').click();d.mileage=await invalid(s,dialog.locator('[name=mileage]'));await noSuccess(s);await p.keyboard.press('Escape');
+    await check(s,'blank required inline vehicle fields / localized native validation',ref,async d=>{
+      await entry.locator('button[type=submit]').click();
+      d.invalid=await invalid(s,entry.locator('[name=make]'));
+      d.copy=await copyCheck(s,entry);
+      d.fit=await fit(p,entry);
+    });
+    await check(s,'inline invalid year and negative mileage / no send',ref,async d=>{
+      await entry.locator('[name=make]').fill('QA Demo');
+      await entry.locator('[name=model]').fill('QA Model');
+      const year=entry.locator('[name=year]');
+      const mileage=entry.locator('[name=mileage]');
+      await year.fill('0000');
+      await entry.locator('button[type=submit]').click();
+      d.year=await invalid(s,year);
+      await year.fill('2020');
+      await mileage.fill('-1');
+      await entry.locator('button[type=submit]').click();
+      d.mileage=await invalid(s,mileage);
+      await noSuccess(s);
     });
   } else {
-    await check(s,'criteria editor negative configured-currency budget custom error',ref,async d=>{
-      await p.locator('.dn-enquiry-import-segments button').nth(1).click();await p.locator('.dn-entry-editor-trigger:visible').click();const dialog=p.locator('dialog.dn-entry-editor[open]');await dialog.locator('[name=entry-value]').fill('QA dummy car criteria');await dialog.locator('[name=entry-budget]').fill('-1');await dialog.locator('button[type=submit]').click();d.error=await alertText(s,dialog);assert(d.error.includes(inventoryCurrency));d.copy=await copyCheck(s,dialog);
-      await dialog.locator('[name=entry-budget]').fill('40000');await dialog.locator('button[type=submit]').click();await dialog.waitFor({state:'hidden'});
+    await check(s,'inline listing custom invalid URL error',ref,async d=>{
+      const link=entry.locator('[name=link]');
+      await link.fill('QA_INVALID_REFERENCE');
+      await entry.locator('button[type=submit]').click();
+      d.error=await alertText(s,entry);
+      d.copy=await copyCheck(s,entry);
+      d.fit=await fit(p,entry);
     });
-    await check(s,'available import request sheet / invalid year / Escape',ref,async d=>{
-      await p.locator('.dn-enquiry-import-go').click();const dialog=p.locator('dialog.dn-enquiry[open]');await dialog.waitFor();await dialog.locator('[name=year]').fill('0000');await dialog.locator('footer .dn-enquiry-primary').click();d.error=await invalid(s,dialog.locator('[name=year]'));d.copy=await copyCheck(s,dialog);d.fit=await fit(p,dialog);await noSuccess(s);await p.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});
+    await check(s,'inline criteria negative budget native validation',ref,async d=>{
+      await entry.locator('.dn-service-entry__choices button').nth(1).click();
+      await entry.locator('[name=brief]').fill('QA dummy car criteria');
+      const budget=entry.locator('[name=budget]');
+      await budget.fill('-1');
+      await entry.locator('button[type=submit]').click();
+      d.error=await invalid(s,budget);
+      d.copy=await copyCheck(s,entry);
+      await noSuccess(s);
+      await budget.fill('40000');
+    });
+    await check(s,'inline invalid year then available import request sheet / Escape',ref,async d=>{
+      const year=entry.locator('[name=year]');
+      await year.fill('0000');
+      await entry.locator('button[type=submit]').click();
+      d.error=await invalid(s,year);
+      await year.fill('2020');
+      await entry.locator('button[type=submit]').click();
+      const dialog=p.locator('dialog.dn-enquiry[open]');
+      await dialog.waitFor();
+      d.copy=await copyCheck(s,dialog);
+      d.fit=await fit(p,dialog);
+      await noSuccess(s);
+      await p.keyboard.press('Escape');
+      await dialog.waitFor({state:'hidden'});
     });
   }
 }
-
 async function carJourney(s,kind) {
   const p=s.page,ref=kind==='sell'?sources.carSell:sources.carImport,mobile=s.width<992;
   await check(s,'entry and explicit demo notice',ref,async d=>{await dismissedSetup(s,kind==='sell'?'/sell-your-car':'/contact?intent=import');d.notice=await notice(s);d.copy=await copyCheck(s);d.fit=await noOverflow(p);});

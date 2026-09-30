@@ -13,7 +13,7 @@ export type BodyChipIcon = 'sedan' | 'suv' | 'wagon' | 'hatchback' | 'coupe' | '
 export const footerSocialLinks: FooterSocialLink[] = [
 	{"label":"Facebook","href":"https://www.facebook.com/albasmamotors","title":"Facebook","icon":"facebook","external":true},
 	{"label":"Instagram","href":"https://www.instagram.com/albasmamotors","title":"Instagram","icon":"instagram","external":true},
-	{ label: "Mobile.bg", href: daynightSite.sourceInventory, title: "View dealer inventory", icon: "mobilebg", external: true }
+
 ];
 
 export const brandLogos: Record<string, string> = {

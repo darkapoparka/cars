@@ -7,6 +7,7 @@
   import type { Attachment } from 'svelte/attachments';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileNavIcon from './MobileNavIcon.svelte';
   import { brand } from '$config/brand';
 
   let { showActions = true, showMobileFooter = false, observeFooter }: { showActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
@@ -62,19 +63,29 @@
   <div class="container dn-footer__grid">
     <div class="dn-footer__intro">
       <a class="dn-footer__logo" href={i18n.href(resolve('/'))}>
-        <picture>
-          <source media="(min-width: 768px)" srcset={brand.logoOnDark} />
-          <img src={brand.logoOnDark} alt={brand.name} width="220" height="58" />
-        </picture>
+        <img src={brand.logoOnDark} alt={brand.name} width="200" height="32" loading="lazy" />
       </a>
       <span class="dn-footer__tagline">{i18n.t("m_5cf2001dbaf7")}</span>
       <p>{i18n.t("m_9785a63caa9d")}</p>
     </div>
+    <div class="dn-footer__contact" aria-label={i18n.t("m_fa39abdd21f5")}>
+      <h2>{i18n.t("m_822db82e0dc3")}</h2>
+      <a {...phoneLinkAttributes} class="dn-footer__call">
+        <MobileNavIcon name="phone" size={18} />
+        <span>{brand.phone}</span>
+      </a>
+      <a href={i18n.href(resolve('/contact'))} class="dn-footer__contact-link">
+        <MobileNavIcon name="location" size={18} />
+        <span>{i18n.dealer('address')}</span>
+        <span class="dn-footer__contact-arrow"><Icon name="arrow-right" size={16} /></span>
+      </a>
+      <p class="dn-footer__appointment">{i18n.dealer('appointment')}</p>
+    </div>
     <nav class="dn-footer__vehicles" aria-label={i18n.t("m_9e499e4cdaf4")}>
       <strong>{i18n.t("m_9e499e4cdaf4")}</strong>
-      <a href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_13b5d43d1176")}</a>
-      <a href={i18n.href(resolve('/listing-grid?condition=used'))}>{i18n.t("m_2b705510e73a")}</a>
-      <a href={i18n.href(resolve('/listing-grid?sort=newest'))}>{i18n.t("m_615eaa5f897b")}</a>
+      <a href={i18n.href(resolve('/listing-grid'))}>{i18n.t('footer.inventory.all')}</a>
+      <a href={i18n.href(resolve('/listing-grid?condition=used'))}>{i18n.t('footer.inventory.used')}</a>
+      <a href={i18n.href(resolve('/listing-grid?sort=newest'))}>{i18n.t('footer.inventory.latest')}</a>
     </nav>
     <nav class="dn-footer__company" aria-label={i18n.t("m_de4743c87973")}>
       <strong>{i18n.t("m_de4743c87973")}</strong>
@@ -82,19 +93,6 @@
       <a href={i18n.href(resolve('/blog'))}>{i18n.t("m_572cd72feb9a")}</a>
       <a href={i18n.href(resolve('/contact'))}>{i18n.t("m_2b5c3d26721a")}</a>
     </nav>
-    <div class="dn-footer__contact" aria-label={i18n.t("m_fa39abdd21f5")}>
-      <h2>{i18n.t("m_822db82e0dc3")}</h2>
-      <a {...phoneLinkAttributes} class="dn-footer__call">
-        <Icon name="phone" size={18} />
-        <span>{brand.phone}</span>
-      </a>
-      <a href={i18n.href(resolve('/contact'))} class="dn-footer__contact-link">
-        <Icon name="map-pin" size={18} />
-        <span>{i18n.dealer('address')}</span>
-        <span class="dn-footer__contact-arrow"><Icon name="arrow-right" size={16} /></span>
-      </a>
-      <p class="dn-footer__appointment">{i18n.dealer('appointment')}</p>
-    </div>
   </div>
   <div class="container dn-footer__bottom"><span class="dn-footer__copyright">© {new Date().getFullYear()} {brand.name}</span><span class="dn-footer__descriptor">{i18n.t("m_5cf2001dbaf7")}</span></div>
 </footer>
@@ -122,11 +120,14 @@
     background: var(--dn-white);
     color: var(--dn-ink);
   }
-  .dn-footer__grid { display: grid; grid-template-columns: 1.2fr .8fr .65fr 1.3fr; align-items: start; gap: 40px; }
+  .dn-footer__grid { display: grid; grid-template-columns: 1.2fr .8fr .65fr 1.3fr; grid-template-areas: 'intro vehicles company contact'; align-items: start; gap: 40px; }
+  .dn-footer__intro { grid-area: intro; }
+  .dn-footer__contact { grid-area: contact; }
+  .dn-footer__vehicles { grid-area: vehicles; }
+  .dn-footer__company { grid-area: company; }
   .dn-footer__grid > * { min-width: 0; }
-  .dn-footer__logo { display: inline-flex; min-height: var(--dn-control-hit-height); align-items: center; }
-  .dn-footer__logo picture { display: block; }
-  .dn-footer__logo img { width: 190px; height: 50px; object-fit: contain; }
+  .dn-footer__logo { display: inline-flex; min-height: var(--dn-control-hit-height); align-items: center; color: inherit; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+  .dn-footer__logo img { display: block; width: 200px; height: 32px; object-fit: contain; }
   .dn-footer__tagline { display: block; margin-top: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-footer__intro p { max-width: 300px; margin: var(--dn-space-4) 0 0; color: var(--dn-muted); font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
   .dn-footer nav strong { display: block; margin-bottom: var(--dn-space-3); font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-body); }
@@ -164,29 +165,39 @@
     .dn-footer__contact-link:hover .dn-footer__contact-arrow { transform: translate(3px, -3px) rotate(-45deg); }
     .dn-footer__call { transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease; }
     .dn-footer .dn-footer__call:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgb(0 0 0 / 24%); }
-    .dn-footer__bottom { margin-top: 44px; padding-top: 0; border: 0; color: var(--dn-muted-on-ink); }
+    .dn-footer__bottom { margin-top: 44px; padding-top: var(--dn-space-5); border-color: rgb(255 255 255 / 14%); color: var(--dn-muted-on-ink); }
     .dn-footer a:focus-visible { outline-color: var(--dn-white); }
   }
 
   @media (min-width: 768px) and (max-width: 1100px) {
     .dn-footer-actions__grid, .dn-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .dn-footer__grid { grid-template-areas: 'intro contact' 'vehicles company'; }
   }
   @media (max-width: 767px) {
     .dn-footer-actions, .dn-footer--mobile-hidden { display: none; }
-    .dn-footer { padding-block: var(--dn-space-5) max(var(--dn-space-4), env(safe-area-inset-bottom)); }
+    .dn-footer {
+      margin-top: var(--dn-space-8);
+      padding-block: var(--dn-space-6) max(var(--dn-space-6), env(safe-area-inset-bottom));
+      border: 0;
+      border-radius: var(--dn-space-6) var(--dn-space-6) 0 0;
+      background: var(--dn-ink-deep);
+      color: var(--dn-white);
+    }
     .dn-footer > .container { width: calc(100% - 40px); }
-    .dn-footer__grid { grid-template-columns: minmax(0, 1fr); gap: var(--dn-space-3); }
-    .dn-footer__logo img { width: 160px; height: 42px; }
-    .dn-footer__tagline { margin-top: 0; }
-    .dn-footer__intro p, .dn-footer__vehicles, .dn-footer nav strong { display: none; }
-    .dn-footer__contact h2 { max-width: 300px; margin-bottom: var(--dn-space-3); }
-    .dn-footer__call { width: 100%; }
-    .dn-footer__contact-link { margin-top: var(--dn-space-2); padding-block: var(--dn-space-1); }
-    .dn-footer__appointment { margin-top: 0; }
-    .dn-footer__company { display: flex; flex-wrap: wrap; gap: var(--dn-space-1) var(--dn-space-6); }
-    .dn-footer__company a { color: var(--dn-ink); }
-    .dn-footer__bottom { margin-top: var(--dn-space-2); padding-top: var(--dn-space-3); }
-    .dn-footer__descriptor { display: none; }
+    .dn-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: 'intro intro' 'contact contact' 'vehicles company'; gap: var(--dn-space-4); }
+    .dn-footer__tagline, .dn-footer__intro p, .dn-footer nav strong, .dn-footer__contact h2 { display: none; }
+    .dn-footer nav { padding-top: var(--dn-space-3); border-top: 1px solid rgb(255 255 255 / 14%); }
+    .dn-footer nav a { overflow-wrap: anywhere; color: var(--dn-muted-on-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
+    .dn-footer a:hover { color: var(--dn-white); }
+    .dn-footer a:focus-visible { outline-color: var(--dn-white); }
+    .dn-footer__call { min-height: var(--dn-control-hit-height); padding: 0; border-radius: var(--dn-radius-sm); background: transparent; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-body); }
+    .dn-footer__call :global(svg), .dn-footer__contact-link > :global(svg), .dn-footer__contact-arrow { display: none; }
+    .dn-footer .dn-footer__call:hover { background: transparent; }
+    .dn-footer__contact-link { display: flex; margin-top: 0; padding-block: var(--dn-space-1); color: var(--dn-text-on-ink); font: var(--dn-body-font); }
+    .dn-footer__contact-link:hover { text-decoration: underline; text-underline-offset: var(--dn-space-1); }
+    .dn-footer__appointment { margin-top: var(--dn-space-2); color: var(--dn-muted-on-ink); }
+    .dn-footer__bottom { flex-direction: column; gap: var(--dn-space-2); margin-top: var(--dn-space-4); padding-top: var(--dn-space-4); border-color: rgb(255 255 255 / 14%); color: var(--dn-muted-on-ink); }
+    .dn-footer__copyright { color: var(--dn-text-on-ink); }
   }
 
   @media (prefers-reduced-motion: reduce) {

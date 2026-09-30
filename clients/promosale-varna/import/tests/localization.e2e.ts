@@ -47,7 +47,7 @@ for (const width of [320, 390, 1440])
 			});
 			page.on('pageerror', (error) => errors.push(error.message));
 			for (const path of routes) {
-				const response = await page.goto(route(locale, path));
+				const response = await page.goto(route(locale, path), { waitUntil: 'domcontentloaded' });
 				expect(response?.status(), path).toBe(200);
 				await expect(page.locator('html')).toHaveAttribute('lang', locale);
 				await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
@@ -270,8 +270,8 @@ test('both import modes and sell wizard validate without business writes', async
 	await wizard.getByRole('button', { name: 'Continue' }).click();
 	await expect(wizard.getByRole('alert')).toContainText('Add a listing');
 	await page.getByRole('tab', { name: 'Find a car', exact: true }).click();
-	await expect(wizard.locator('#import-wizard-make')).toBeVisible();
-	await wizard.locator('#import-wizard-make').fill('Synthetic');
+	await expect(wizard.locator('[id^="import-wizard-make-"]')).toBeVisible();
+	await wizard.locator('[id^="import-wizard-make-"]').fill('Synthetic');
 	await wizard.getByRole('button', { name: 'Continue' }).click();
 	await expect(wizard).toContainText('Preferred timeframe');
 	await expect(wizard.getByRole('button', { name: 'Petrol', exact: true })).toBeVisible();
@@ -347,7 +347,10 @@ test('client locale navigation and back update language, copy, SEO and links wit
 	);
 	await expect(
 		page
-			.getByRole('navigation', { name: 'Main navigation', exact: true })
+			.getByRole('navigation', {
+				name: info.project.name === 'mobile' ? 'Mobile navigation' : 'Main navigation',
+				exact: true
+			})
 			.getByRole('link', { name: 'Cars', exact: true })
 	).toHaveAttribute('href', route('en', '/inventory?lang=en'));
 	await page.goBack();

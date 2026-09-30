@@ -1,0 +1,1712 @@
+{
+  "date": "2026-09-30",
+  "route": "/bg/more",
+  "browser": "Codex in-app browser",
+  "source": {
+    "path": "L:/CODEX/cars/templates/app/app/[locale]/more/page.tsx",
+    "baselineMain": "8709bb3f0",
+    "integration": "Pending shared Git index availability",
+    "mainAtFinish": "0f72b78b7c40e2329045785f3a622e0460be53d2",
+    "moreBaselineMatchesHead": true,
+    "ownedPaths": [
+      "templates/app/app/[locale]/more/page.tsx",
+      "templates/app/docs/more-mobile-polish-2026-09-30/"
+    ],
+    "nextAction": "When the active Cars Git index lock is released, fetch and inspect drift, commit only the owned More source/evidence, preserve unrelated staged changes and push main without force."
+  },
+  "before": {
+    "mobile390": {
+      "document": {
+        "clientWidth": 390,
+        "scrollHeight": 844,
+        "scrollWidth": 390
+      },
+      "languages": [
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 496,
+            "height": 44,
+            "width": 58.5,
+            "x": 228.390625,
+            "y": 452
+          },
+          "color": "rgb(98, 98, 105)",
+          "current": null,
+          "text": "English"
+        },
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 496,
+            "height": 44,
+            "width": 81.109375,
+            "x": 290.890625,
+            "y": 452
+          },
+          "color": "rgb(32, 32, 36)",
+          "current": "true",
+          "text": "Български"
+        }
+      ],
+      "notice": {
+        "bottom": 548,
+        "height": 48,
+        "width": 358,
+        "x": 16,
+        "y": 500
+      },
+      "rows": [
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 139,
+            "height": 62,
+            "width": 356,
+            "x": 17,
+            "y": 77
+          },
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "15px",
+          "href": "/bg/cars",
+          "icon": {
+            "bottom": 122.5,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 92.5
+          },
+          "label": {
+            "bottom": 118,
+            "height": 21,
+            "width": 254,
+            "x": 77,
+            "y": 97
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 197,
+            "height": 58,
+            "width": 356,
+            "x": 17,
+            "y": 139
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/stores",
+          "icon": {
+            "bottom": 183,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 153
+          },
+          "label": {
+            "bottom": 188,
+            "height": 40,
+            "width": 254,
+            "x": 77,
+            "y": 148
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Посетете ниПланирайте посещение"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 267,
+            "height": 56,
+            "width": 356,
+            "x": 17,
+            "y": 211
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/saved",
+          "icon": {
+            "bottom": 253.5,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 223.5
+          },
+          "label": {
+            "bottom": 249,
+            "height": 21,
+            "width": 254,
+            "x": 77,
+            "y": 228
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Запазени автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 323,
+            "height": 56,
+            "width": 356,
+            "x": 17,
+            "y": 267
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/sell",
+          "icon": {
+            "bottom": 309.5,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 279.5
+          },
+          "label": {
+            "bottom": 305,
+            "height": 21,
+            "width": 254,
+            "x": 77,
+            "y": 284
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Продайте или заменете"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 379,
+            "height": 56,
+            "width": 356,
+            "x": 17,
+            "y": 323
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/finance",
+          "icon": {
+            "bottom": 365.5,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 335.5
+          },
+          "label": {
+            "bottom": 361,
+            "height": 21,
+            "width": 254,
+            "x": 77,
+            "y": 340
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Начини на плащане"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 435,
+            "height": 56,
+            "width": 356,
+            "x": 17,
+            "y": 379
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/service",
+          "icon": {
+            "bottom": 422,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 392
+          },
+          "label": {
+            "bottom": 417.5,
+            "height": 21,
+            "width": 254,
+            "x": 77,
+            "y": 396.5
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Услуги за автомобила"
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "mobile320": {
+      "document": {
+        "clientWidth": 320,
+        "scrollHeight": 740,
+        "scrollWidth": 320
+      },
+      "languages": [
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 496,
+            "height": 44,
+            "width": 58.5,
+            "x": 158.390625,
+            "y": 452
+          },
+          "color": "rgb(98, 98, 105)",
+          "current": null,
+          "text": "English"
+        },
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 496,
+            "height": 44,
+            "width": 81.109375,
+            "x": 220.890625,
+            "y": 452
+          },
+          "color": "rgb(32, 32, 36)",
+          "current": "true",
+          "text": "Български"
+        }
+      ],
+      "notice": {
+        "bottom": 548,
+        "height": 48,
+        "width": 288,
+        "x": 16,
+        "y": 500
+      },
+      "rows": [
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 139,
+            "height": 62,
+            "width": 286,
+            "x": 17,
+            "y": 77
+          },
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "15px",
+          "href": "/bg/cars",
+          "icon": {
+            "bottom": 122.5,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 92.5
+          },
+          "label": {
+            "bottom": 118,
+            "height": 21,
+            "width": 184,
+            "x": 77,
+            "y": 97
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 197,
+            "height": 58,
+            "width": 286,
+            "x": 17,
+            "y": 139
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/stores",
+          "icon": {
+            "bottom": 183,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 153
+          },
+          "label": {
+            "bottom": 188,
+            "height": 40,
+            "width": 184,
+            "x": 77,
+            "y": 148
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Посетете ниПланирайте посещение"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 267,
+            "height": 56,
+            "width": 286,
+            "x": 17,
+            "y": 211
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/saved",
+          "icon": {
+            "bottom": 253.5,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 223.5
+          },
+          "label": {
+            "bottom": 249,
+            "height": 21,
+            "width": 184,
+            "x": 77,
+            "y": 228
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Запазени автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 323,
+            "height": 56,
+            "width": 286,
+            "x": 17,
+            "y": 267
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/sell",
+          "icon": {
+            "bottom": 309.5,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 279.5
+          },
+          "label": {
+            "bottom": 305,
+            "height": 21,
+            "width": 184,
+            "x": 77,
+            "y": 284
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Продайте или заменете"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 379,
+            "height": 56,
+            "width": 286,
+            "x": 17,
+            "y": 323
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/finance",
+          "icon": {
+            "bottom": 365.5,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 335.5
+          },
+          "label": {
+            "bottom": 361,
+            "height": 21,
+            "width": 184,
+            "x": 77,
+            "y": 340
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Начини на плащане"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 435,
+            "height": 56,
+            "width": 286,
+            "x": 17,
+            "y": 379
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "href": "/bg/service",
+          "icon": {
+            "bottom": 422,
+            "height": 30,
+            "width": 30,
+            "x": 32,
+            "y": 392
+          },
+          "label": {
+            "bottom": 417.5,
+            "height": 21,
+            "width": 184,
+            "x": 77,
+            "y": 396.5
+          },
+          "lineHeight": "21px",
+          "overflow": false,
+          "title": "Услуги за автомобила"
+        }
+      ],
+      "viewport": {
+        "height": 740,
+        "width": 320
+      }
+    }
+  },
+  "after": {
+    "mobile390": {
+      "document": {
+        "clientWidth": 390,
+        "scrollHeight": 844,
+        "scrollWidth": 390
+      },
+      "languages": [
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 504,
+            "height": 44,
+            "width": 75.765625,
+            "x": 195.109375,
+            "y": 460
+          },
+          "color": "rgb(98, 98, 105)",
+          "current": null,
+          "text": "English"
+        },
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 504,
+            "height": 44,
+            "width": 100.125,
+            "x": 272.875,
+            "y": 460
+          },
+          "color": "rgb(255, 255, 255)",
+          "current": "true",
+          "text": "Български"
+        }
+      ],
+      "notice": {
+        "bottom": 560,
+        "height": 52,
+        "width": 366,
+        "x": 12,
+        "y": 508
+      },
+      "rows": [
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 137,
+            "height": 60,
+            "width": 364,
+            "x": 13,
+            "y": 77
+          },
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "href": "/bg/cars",
+          "icon": {
+            "bottom": 118.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 94.5
+          },
+          "label": {
+            "bottom": 117.5,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 95.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 197,
+            "height": 60,
+            "width": 364,
+            "x": 13,
+            "y": 137
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/stores",
+          "icon": {
+            "bottom": 179,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 155
+          },
+          "label": {
+            "bottom": 188,
+            "height": 42,
+            "width": 266,
+            "x": 68,
+            "y": 146
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Посетете ниПланирайте посещение"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 271,
+            "height": 56,
+            "width": 364,
+            "x": 13,
+            "y": 215
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/saved",
+          "icon": {
+            "bottom": 254.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 230.5
+          },
+          "label": {
+            "bottom": 253.5,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 231.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Запазени автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 327,
+            "height": 56,
+            "width": 364,
+            "x": 13,
+            "y": 271
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/sell",
+          "icon": {
+            "bottom": 310.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 286.5
+          },
+          "label": {
+            "bottom": 309.5,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 287.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Продайте или заменете"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 383,
+            "height": 56,
+            "width": 364,
+            "x": 13,
+            "y": 327
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/finance",
+          "icon": {
+            "bottom": 366.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 342.5
+          },
+          "label": {
+            "bottom": 365.5,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 343.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Начини на плащане"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 439,
+            "height": 56,
+            "width": 364,
+            "x": 13,
+            "y": 383
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/service",
+          "icon": {
+            "bottom": 423,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 399
+          },
+          "label": {
+            "bottom": 422,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 400
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Услуги за автомобила"
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "mobile320": {
+      "document": {
+        "clientWidth": 320,
+        "scrollHeight": 740,
+        "scrollWidth": 320
+      },
+      "languages": [
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 504,
+            "height": 44,
+            "width": 75.765625,
+            "x": 125.109375,
+            "y": 460
+          },
+          "color": "rgb(98, 98, 105)",
+          "current": null,
+          "text": "English"
+        },
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 504,
+            "height": 44,
+            "width": 100.125,
+            "x": 202.875,
+            "y": 460
+          },
+          "color": "rgb(255, 255, 255)",
+          "current": "true",
+          "text": "Български"
+        }
+      ],
+      "notice": {
+        "bottom": 560,
+        "height": 52,
+        "width": 296,
+        "x": 12,
+        "y": 508
+      },
+      "rows": [
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 137,
+            "height": 60,
+            "width": 294,
+            "x": 13,
+            "y": 77
+          },
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "href": "/bg/cars",
+          "icon": {
+            "bottom": 118.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 94.5
+          },
+          "label": {
+            "bottom": 117.5,
+            "height": 22,
+            "width": 196,
+            "x": 68,
+            "y": 95.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 197,
+            "height": 60,
+            "width": 294,
+            "x": 13,
+            "y": 137
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/stores",
+          "icon": {
+            "bottom": 179,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 155
+          },
+          "label": {
+            "bottom": 188,
+            "height": 42,
+            "width": 196,
+            "x": 68,
+            "y": 146
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Посетете ниПланирайте посещение"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 271,
+            "height": 56,
+            "width": 294,
+            "x": 13,
+            "y": 215
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/saved",
+          "icon": {
+            "bottom": 254.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 230.5
+          },
+          "label": {
+            "bottom": 253.5,
+            "height": 22,
+            "width": 196,
+            "x": 68,
+            "y": 231.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Запазени автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 327,
+            "height": 56,
+            "width": 294,
+            "x": 13,
+            "y": 271
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/sell",
+          "icon": {
+            "bottom": 310.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 286.5
+          },
+          "label": {
+            "bottom": 309.5,
+            "height": 22,
+            "width": 196,
+            "x": 68,
+            "y": 287.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Продайте или заменете"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 383,
+            "height": 56,
+            "width": 294,
+            "x": 13,
+            "y": 327
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/finance",
+          "icon": {
+            "bottom": 366.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 342.5
+          },
+          "label": {
+            "bottom": 365.5,
+            "height": 22,
+            "width": 196,
+            "x": 68,
+            "y": 343.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Начини на плащане"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 439,
+            "height": 56,
+            "width": 294,
+            "x": 13,
+            "y": 383
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/service",
+          "icon": {
+            "bottom": 423,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 399
+          },
+          "label": {
+            "bottom": 422,
+            "height": 22,
+            "width": 196,
+            "x": 68,
+            "y": 400
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Услуги за автомобила"
+        }
+      ],
+      "viewport": {
+        "height": 740,
+        "width": 320
+      }
+    },
+    "shortMobile320": {
+      "clientWidth": 305,
+      "dock": {
+        "bottom": 556,
+        "height": 50,
+        "top": 506
+      },
+      "languages": [
+        {
+          "bottom": 412,
+          "height": 44,
+          "text": "English",
+          "top": 368
+        },
+        {
+          "bottom": 412,
+          "height": 44,
+          "text": "Български",
+          "top": 368
+        }
+      ],
+      "notice": {
+        "bottom": 468,
+        "height": 52,
+        "top": 416
+      },
+      "scrollTop": 92,
+      "scrollWidth": 305,
+      "viewport": {
+        "height": 568,
+        "width": 320
+      }
+    },
+    "tablet768": {
+      "document": {
+        "clientWidth": 768,
+        "scrollHeight": 1024,
+        "scrollWidth": 768
+      },
+      "languages": [
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 504,
+            "height": 44,
+            "width": 75.765625,
+            "x": 553.109375,
+            "y": 460
+          },
+          "color": "rgb(98, 98, 105)",
+          "current": null,
+          "text": "English"
+        },
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 504,
+            "height": 44,
+            "width": 100.125,
+            "x": 630.875,
+            "y": 460
+          },
+          "color": "rgb(255, 255, 255)",
+          "current": "true",
+          "text": "Български"
+        }
+      ],
+      "notice": {
+        "bottom": 542,
+        "height": 34,
+        "width": 704,
+        "x": 32,
+        "y": 508
+      },
+      "rows": [
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 137,
+            "height": 60,
+            "width": 702,
+            "x": 33,
+            "y": 77
+          },
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "href": "/bg/cars",
+          "icon": {
+            "bottom": 118.5,
+            "height": 24,
+            "width": 24,
+            "x": 50,
+            "y": 94.5
+          },
+          "label": {
+            "bottom": 117.5,
+            "height": 22,
+            "width": 604,
+            "x": 88,
+            "y": 95.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 197,
+            "height": 60,
+            "width": 702,
+            "x": 33,
+            "y": 137
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/stores",
+          "icon": {
+            "bottom": 179,
+            "height": 24,
+            "width": 24,
+            "x": 50,
+            "y": 155
+          },
+          "label": {
+            "bottom": 188,
+            "height": 42,
+            "width": 604,
+            "x": 88,
+            "y": 146
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Посетете ниПланирайте посещение"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 271,
+            "height": 56,
+            "width": 702,
+            "x": 33,
+            "y": 215
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/saved",
+          "icon": {
+            "bottom": 254.5,
+            "height": 24,
+            "width": 24,
+            "x": 50,
+            "y": 230.5
+          },
+          "label": {
+            "bottom": 253.5,
+            "height": 22,
+            "width": 604,
+            "x": 88,
+            "y": 231.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Запазени автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 327,
+            "height": 56,
+            "width": 702,
+            "x": 33,
+            "y": 271
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/sell",
+          "icon": {
+            "bottom": 310.5,
+            "height": 24,
+            "width": 24,
+            "x": 50,
+            "y": 286.5
+          },
+          "label": {
+            "bottom": 309.5,
+            "height": 22,
+            "width": 604,
+            "x": 88,
+            "y": 287.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Продайте или заменете"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 383,
+            "height": 56,
+            "width": 702,
+            "x": 33,
+            "y": 327
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/finance",
+          "icon": {
+            "bottom": 366.5,
+            "height": 24,
+            "width": 24,
+            "x": 50,
+            "y": 342.5
+          },
+          "label": {
+            "bottom": 365.5,
+            "height": 22,
+            "width": 604,
+            "x": 88,
+            "y": 343.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Начини на плащане"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 439,
+            "height": 56,
+            "width": 702,
+            "x": 33,
+            "y": 383
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/service",
+          "icon": {
+            "bottom": 423,
+            "height": 24,
+            "width": 24,
+            "x": 50,
+            "y": 399
+          },
+          "label": {
+            "bottom": 422,
+            "height": 22,
+            "width": 604,
+            "x": 88,
+            "y": 400
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Услуги за автомобила"
+        }
+      ],
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      }
+    },
+    "desktop1440": {
+      "document": {
+        "clientWidth": 1425,
+        "scrollHeight": 1001,
+        "scrollWidth": 1425
+      },
+      "languages": [
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 577,
+            "height": 44,
+            "width": 75.765625,
+            "x": 881.609375,
+            "y": 533
+          },
+          "color": "rgb(98, 98, 105)",
+          "current": null,
+          "text": "English"
+        },
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 577,
+            "height": 44,
+            "width": 100.125,
+            "x": 959.375,
+            "y": 533
+          },
+          "color": "rgb(255, 255, 255)",
+          "current": "true",
+          "text": "Български"
+        }
+      ],
+      "notice": {
+        "bottom": 615,
+        "height": 34,
+        "width": 704,
+        "x": 360.5,
+        "y": 581
+      },
+      "rows": [
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 210,
+            "height": 60,
+            "width": 702,
+            "x": 361.5,
+            "y": 150
+          },
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "href": "/bg/cars",
+          "icon": {
+            "bottom": 191.5,
+            "height": 24,
+            "width": 24,
+            "x": 378.5,
+            "y": 167.5
+          },
+          "label": {
+            "bottom": 190.5,
+            "height": 22,
+            "width": 604,
+            "x": 416.5,
+            "y": 168.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 270,
+            "height": 60,
+            "width": 702,
+            "x": 361.5,
+            "y": 210
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/stores",
+          "icon": {
+            "bottom": 252,
+            "height": 24,
+            "width": 24,
+            "x": 378.5,
+            "y": 228
+          },
+          "label": {
+            "bottom": 261,
+            "height": 42,
+            "width": 604,
+            "x": 416.5,
+            "y": 219
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Посетете ниПланирайте посещение"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 344,
+            "height": 56,
+            "width": 702,
+            "x": 361.5,
+            "y": 288
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/saved",
+          "icon": {
+            "bottom": 327.5,
+            "height": 24,
+            "width": 24,
+            "x": 378.5,
+            "y": 303.5
+          },
+          "label": {
+            "bottom": 326.5,
+            "height": 22,
+            "width": 604,
+            "x": 416.5,
+            "y": 304.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Запазени автомобили"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 400,
+            "height": 56,
+            "width": 702,
+            "x": 361.5,
+            "y": 344
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/sell",
+          "icon": {
+            "bottom": 383.5,
+            "height": 24,
+            "width": 24,
+            "x": 378.5,
+            "y": 359.5
+          },
+          "label": {
+            "bottom": 382.5,
+            "height": 22,
+            "width": 604,
+            "x": 416.5,
+            "y": 360.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Продайте или заменете"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 456,
+            "height": 56,
+            "width": 702,
+            "x": 361.5,
+            "y": 400
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/finance",
+          "icon": {
+            "bottom": 439.5,
+            "height": 24,
+            "width": 24,
+            "x": 378.5,
+            "y": 415.5
+          },
+          "label": {
+            "bottom": 438.5,
+            "height": 22,
+            "width": 604,
+            "x": 416.5,
+            "y": 416.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Начини на плащане"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 512,
+            "height": 56,
+            "width": 702,
+            "x": 361.5,
+            "y": 456
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/bg/service",
+          "icon": {
+            "bottom": 496,
+            "height": 24,
+            "width": 24,
+            "x": 378.5,
+            "y": 472
+          },
+          "label": {
+            "bottom": 495,
+            "height": 22,
+            "width": 604,
+            "x": 416.5,
+            "y": 473
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Услуги за автомобила"
+        }
+      ],
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "english390": {
+      "document": {
+        "clientWidth": 390,
+        "scrollHeight": 844,
+        "scrollWidth": 390
+      },
+      "languages": [
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 504,
+            "height": 44,
+            "width": 79.3125,
+            "x": 191.5625,
+            "y": 460
+          },
+          "color": "rgb(255, 255, 255)",
+          "current": "true",
+          "text": "English"
+        },
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "box": {
+            "bottom": 504,
+            "height": 44,
+            "width": 100.125,
+            "x": 272.875,
+            "y": 460
+          },
+          "color": "rgb(98, 98, 105)",
+          "current": null,
+          "text": "Български"
+        }
+      ],
+      "notice": {
+        "bottom": 560,
+        "height": 52,
+        "width": 366,
+        "x": 12,
+        "y": 508
+      },
+      "rows": [
+        {
+          "backgroundColor": "rgb(32, 32, 36)",
+          "box": {
+            "bottom": 137,
+            "height": 60,
+            "width": 364,
+            "x": 13,
+            "y": 77
+          },
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "href": "/en/cars",
+          "icon": {
+            "bottom": 118.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 94.5
+          },
+          "label": {
+            "bottom": 117.5,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 95.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Cars"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 197,
+            "height": 60,
+            "width": 364,
+            "x": 13,
+            "y": 137
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/en/stores",
+          "icon": {
+            "bottom": 179,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 155
+          },
+          "label": {
+            "bottom": 188,
+            "height": 42,
+            "width": 266,
+            "x": 68,
+            "y": 146
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Visit showroomPlan your visit"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 271,
+            "height": 56,
+            "width": 364,
+            "x": 13,
+            "y": 215
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/en/saved",
+          "icon": {
+            "bottom": 254.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 230.5
+          },
+          "label": {
+            "bottom": 253.5,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 231.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Saved cars"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 327,
+            "height": 56,
+            "width": 364,
+            "x": 13,
+            "y": 271
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/en/sell",
+          "icon": {
+            "bottom": 310.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 286.5
+          },
+          "label": {
+            "bottom": 309.5,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 287.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Sell or part-exchange"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 383,
+            "height": 56,
+            "width": 364,
+            "x": 13,
+            "y": 327
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/en/finance",
+          "icon": {
+            "bottom": 366.5,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 342.5
+          },
+          "label": {
+            "bottom": 365.5,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 343.5
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Payment options"
+        },
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "box": {
+            "bottom": 439,
+            "height": 56,
+            "width": 364,
+            "x": 13,
+            "y": 383
+          },
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "16px",
+          "href": "/en/service",
+          "icon": {
+            "bottom": 423,
+            "height": 24,
+            "width": 24,
+            "x": 30,
+            "y": 399
+          },
+          "label": {
+            "bottom": 422,
+            "height": 22,
+            "width": 266,
+            "x": 68,
+            "y": 400
+          },
+          "lineHeight": "22px",
+          "overflow": false,
+          "title": "Vehicle services"
+        }
+      ],
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  },
+  "focus": {
+    "primary": {
+      "href": "/bg/cars",
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineOffset": "-3px",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "text": "Автомобили",
+      "visible": true
+    },
+    "visit": {
+      "href": "/bg/stores",
+      "outlineColor": "rgb(32, 32, 36)",
+      "outlineOffset": "-3px",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "text": "Посетете ниПланирайте посещение",
+      "visible": true
+    },
+    "language": {
+      "href": "/en/more",
+      "outlineColor": "rgb(39, 39, 43)",
+      "outlineOffset": "-3px",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "text": "English",
+      "visible": true
+    },
+    "selectedLanguage": {
+      "backgroundColor": "rgb(32, 32, 36)",
+      "color": "rgb(255, 255, 255)",
+      "href": "/bg/more",
+      "outlineColor": "rgb(255, 255, 255)",
+      "outlineOffset": "-3px",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px",
+      "text": "Български",
+      "visible": true
+    }
+  },
+  "navigation": {
+    "cars": {
+      "url": "http://localhost:3001/bg/cars",
+      "headingVisible": true
+    },
+    "showroom": {
+      "url": "http://localhost:3001/bg/stores",
+      "snapshot": "- link \"Към съдържанието\":\n  - /url: \"#app-content\"\n- banner:\n  - link \"Към началото\":\n    - /url: /bg\n  - heading \"Посетете ни\" [level=1]\n- main:\n  - img \"Илюстративно изображение на автокъща\"\n  - paragraph: Drive24\n  - heading \"Следващата ви кола.\" [level=2]\n  - heading \"Drive24\" [level=2]\n  - generic: В този шаблон още няма въведени контакти.\n  - paragraph: Уговорете удобен час, преди да тръгнете. Потвърдете точния адрес и наличността с продавача.\n  - link \"Нашите автомобили\":\n    - /url: /bg/cars\n    - text: Нашите автомобили\n  - paragraph: Независим демо дизайн. Този сайт не извършва покупки и резервации и не изпраща съобщения.\n  - paragraph: Демонстрационен каталог. Потвърдете данните за автомобила, цената и наличността с продавача.\n- navigation \"Навигация\":\n  - link \"Начало\":\n    - /url: /bg\n  - link \"Автомобили\":\n    - /url: /bg/cars\n  - link \"Запазени\":\n    - /url: /bg/saved\n  - link \"Още\":\n    - /url: /bg/more\n- alert: Посетете ни"
+    },
+    "languageSwitch": "English with Enter, back to Bulgarian; final selected dark state verified in both locales"
+  },
+  "console": [],
+  "checks": {
+    "initialCheck": "Passed lint, TypeScript and production build before the final selected-language color adjustment",
+    "finalCheck": "Passed npm run check: lint, TypeScript, webpack production build and all 407 generated pages on Node 22.20.0; exit 0.",
+    "recovery": "The ENOSPC build retry emptied tsconfig.json. It was restored from the exact pre-check baseline; the next check passed. Final generated-file changes were verified and the original next-env/tsconfig contents restored."
+  },
+  "limitations": [
+    "Viewport checks, not physical-device tests",
+    "No configured contact rows were present",
+    "No formal WCAG certification or owner visual acceptance claimed"
+  ]
+}

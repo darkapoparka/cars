@@ -1,4 +1,4 @@
-import { featuredVehicles, type Vehicle, type VehicleCondition, type VehicleEquipment } from './inventory';
+import { featuredVehicles, vehicleTypes, type VehicleType, type Vehicle, type VehicleCondition, type VehicleEquipment } from './inventory';
 import type { Locale } from '$lib/locale/core';
 import { specificationLabel } from '$lib/i18n/presentation';
 
@@ -6,6 +6,7 @@ export type ListingSort = 'default' | 'newest' | 'price-asc' | 'price-desc' | 'm
 
 export type ListingFilters = {
   q: string;
+  type: '' | VehicleType;
   make: string;
   model: string;
   body: string;
@@ -50,6 +51,7 @@ export function removeListingFilter(filters: ListingFilters, key: string, value:
 }
 
 export const listingFilterOptions = {
+  types: ['', ...vehicleTypes],
   makes: availableValues('make'),
   bodies: availableValues('body'),
   fuels: availableValues('fuel'),
@@ -57,7 +59,7 @@ export const listingFilterOptions = {
   versions: ['', 'RS', 'AMG', 'M Sport', 'xDrive'],
   equipment: ['4x4', '360° камера', 'Панорамен покрив', 'Подгряване на седалки', 'Навигация', 'Парктроник', 'Безключов достъп', 'Адаптивен круиз контрол'] satisfies readonly VehicleEquipment[],
   years: ['', '2019', '2020', '2021', '2022', '2023', '2024'],
-  prices: ['', '50000', '55000', '60000', '70000', '80000', '90000', '100000'],
+  prices: ['', '5000', '10000', '15000', '20000', '30000', '40000', '50000', '55000', '60000', '70000', '80000', '90000', '100000'],
   mileages: ['', '50000', '75000', '100000'],
   sorts: [
     ['default', 'Препоръчани'],
@@ -83,6 +85,7 @@ export const parseListingFilters = (params: URLSearchParams): ListingFilters => 
 
   return {
     q: params.get('q')?.trim() ?? '',
+    type: vehicleTypes.includes(params.get('type') as VehicleType) ? params.get('type') as VehicleType : '',
     make: params.get('make')?.trim() ?? '',
     model: params.get('model')?.trim() ?? '',
     body: params.get('body')?.trim() ?? '',
@@ -140,6 +143,7 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
 
   const filtered = vehicles.filter((vehicle) => {
     if (query && !vehicleMatchesQuery(vehicle, query, locale)) return false;
+    if (filters.type && vehicle.type !== filters.type) return false;
     if (make && normalize(vehicle.make) !== make) return false;
     if (model && !normalize(vehicle.title).includes(model)) return false;
     if (body && normalize(vehicle.body) !== body && !normalize(vehicle.category).includes(body)) return false;
@@ -166,3 +170,19 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
 };
 
 export const listingVehicles = featuredVehicles;
+
+/** Category counts describe stocked vehicle types, independently of the current facets. */
+export const listingTypeCount = (type: string) => featuredVehicles.filter(vehicle => !type || vehicle.type === type).length;
+
+/** Short, useful budget caps adapt to a dealer's stock; avoid duplicate or empty shortcuts. */
+export function listingBudgetCaps(vehicles: readonly Vehicle[] = featuredVehicles): number[] {
+  const caps = [10000, 20000, 30000, 40000, 60000, 80000, 100000, 150000, 200000];
+  const result: number[] = [];
+  let previousCount = 0;
+  for (const cap of caps) {
+    const count = vehicles.filter(vehicle => vehicle.priceEur > 0 && vehicle.priceEur <= cap).length;
+    if (count > previousCount) { result.push(cap); previousCount = count; }
+    if (result.length === 3) break;
+  }
+  return result;
+}

@@ -1,3 +1,10 @@
+import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
+import { templateText } from '$lib/locale/messages';
+import { leadSite } from '$config/lead-site';
+
+export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
+export type VehicleType = typeof vehicleTypes[number];
+
 export type VehicleCondition = 'new' | 'used';
 export type VehicleEquipment =
   | '4x4'
@@ -11,12 +18,15 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  type: VehicleType;
   verification: 'sample' | 'verified';
   evidenceUrl?: string;
   image: string;
   category: string;
   body: string;
   make: string;
+  /** Optional manufacturer sub-brand used by compact card identity. */
+  cardBrand?: string;
   title: string;
   year: string;
   yearNumber: number;
@@ -53,7 +63,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 26699,
-    "href": "/listing-detail-v1/1"
+    "href": "/listing-detail-v1/1",
+    "type": "car"
   },
   {
     "id": 2,
@@ -76,7 +87,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 143699,
-    "href": "/listing-detail-v1/2"
+    "href": "/listing-detail-v1/2",
+    "type": "car"
   },
   {
     "id": 3,
@@ -99,7 +111,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 48699,
-    "href": "/listing-detail-v1/3"
+    "href": "/listing-detail-v1/3",
+    "type": "car"
   },
   {
     "id": 4,
@@ -122,7 +135,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 72699,
-    "href": "/listing-detail-v1/4"
+    "href": "/listing-detail-v1/4",
+    "type": "car"
   },
   {
     "id": 5,
@@ -145,7 +159,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 71699,
-    "href": "/listing-detail-v1/5"
+    "href": "/listing-detail-v1/5",
+    "type": "car"
   },
   {
     "id": 6,
@@ -168,7 +183,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 63699,
-    "href": "/listing-detail-v1/6"
+    "href": "/listing-detail-v1/6",
+    "type": "car"
   },
   {
     "id": 7,
@@ -191,7 +207,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 32699,
-    "href": "/listing-detail-v1/7"
+    "href": "/listing-detail-v1/7",
+    "type": "car"
   },
   {
     "id": 8,
@@ -214,7 +231,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 54699,
-    "href": "/listing-detail-v1/8"
+    "href": "/listing-detail-v1/8",
+    "type": "car"
   },
   {
     "id": 9,
@@ -237,7 +255,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 84699,
-    "href": "/listing-detail-v1/9"
+    "href": "/listing-detail-v1/9",
+    "type": "car"
   },
   {
     "id": 10,
@@ -260,7 +279,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 42699,
-    "href": "/listing-detail-v1/10"
+    "href": "/listing-detail-v1/10",
+    "type": "car"
   },
   {
     "id": 11,
@@ -283,7 +303,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 28699,
-    "href": "/listing-detail-v1/11"
+    "href": "/listing-detail-v1/11",
+    "type": "car"
   },
   {
     "id": 12,
@@ -306,7 +327,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 54699,
-    "href": "/listing-detail-v1/12"
+    "href": "/listing-detail-v1/12",
+    "type": "car"
   },
   {
     "id": 13,
@@ -329,7 +351,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 37699,
-    "href": "/listing-detail-v1/13"
+    "href": "/listing-detail-v1/13",
+    "type": "car"
   },
   {
     "id": 14,
@@ -352,7 +375,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 65699,
-    "href": "/listing-detail-v1/14"
+    "href": "/listing-detail-v1/14",
+    "type": "car"
   },
   {
     "id": 15,
@@ -375,7 +399,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 54699,
-    "href": "/listing-detail-v1/15"
+    "href": "/listing-detail-v1/15",
+    "type": "car"
   },
   {
     "id": 16,
@@ -398,7 +423,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 53699,
-    "href": "/listing-detail-v1/16"
+    "href": "/listing-detail-v1/16",
+    "type": "car"
   },
   {
     "id": 17,
@@ -421,7 +447,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 71669,
-    "href": "/listing-detail-v1/17"
+    "href": "/listing-detail-v1/17",
+    "type": "car"
   },
   {
     "id": 18,
@@ -444,7 +471,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 28478.45,
-    "href": "/listing-detail-v1/18"
+    "href": "/listing-detail-v1/18",
+    "type": "car"
   },
   {
     "id": 19,
@@ -467,7 +495,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 28699,
-    "href": "/listing-detail-v1/19"
+    "href": "/listing-detail-v1/19",
+    "type": "car"
   },
   {
     "id": 20,
@@ -490,7 +519,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 55699,
-    "href": "/listing-detail-v1/20"
+    "href": "/listing-detail-v1/20",
+    "type": "car"
   },
   {
     "id": 21,
@@ -513,7 +543,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 68699,
-    "href": "/listing-detail-v1/21"
+    "href": "/listing-detail-v1/21",
+    "type": "car"
   },
   {
     "id": 22,
@@ -536,7 +567,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 41699,
-    "href": "/listing-detail-v1/22"
+    "href": "/listing-detail-v1/22",
+    "type": "car"
   },
   {
     "id": 23,
@@ -559,7 +591,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 69699,
-    "href": "/listing-detail-v1/23"
+    "href": "/listing-detail-v1/23",
+    "type": "car"
   },
   {
     "id": 24,
@@ -582,7 +615,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 50699,
-    "href": "/listing-detail-v1/24"
+    "href": "/listing-detail-v1/24",
+    "type": "car"
   },
   {
     "id": 25,
@@ -605,7 +639,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 41699,
-    "href": "/listing-detail-v1/25"
+    "href": "/listing-detail-v1/25",
+    "type": "car"
   },
   {
     "id": 26,
@@ -628,7 +663,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 29699,
-    "href": "/listing-detail-v1/26"
+    "href": "/listing-detail-v1/26",
+    "type": "car"
   },
   {
     "id": 27,
@@ -651,7 +687,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 27500,
-    "href": "/listing-detail-v1/27"
+    "href": "/listing-detail-v1/27",
+    "type": "car"
   },
   {
     "id": 28,
@@ -674,7 +711,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 59699,
-    "href": "/listing-detail-v1/28"
+    "href": "/listing-detail-v1/28",
+    "type": "car"
   },
   {
     "id": 29,
@@ -697,7 +735,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 33699,
-    "href": "/listing-detail-v1/29"
+    "href": "/listing-detail-v1/29",
+    "type": "car"
   },
   {
     "id": 30,
@@ -719,7 +758,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 88699,
-    "href": "/listing-detail-v1/30"
+    "href": "/listing-detail-v1/30",
+    "type": "car"
   },
   {
     "id": 31,
@@ -741,7 +781,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 172669,
-    "href": "/listing-detail-v1/31"
+    "href": "/listing-detail-v1/31",
+    "type": "car"
   },
   {
     "id": 32,
@@ -764,7 +805,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 45699,
-    "href": "/listing-detail-v1/32"
+    "href": "/listing-detail-v1/32",
+    "type": "car"
   },
   {
     "id": 33,
@@ -787,7 +829,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 28699,
-    "href": "/listing-detail-v1/33"
+    "href": "/listing-detail-v1/33",
+    "type": "car"
   },
   {
     "id": 34,
@@ -810,7 +853,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 86699,
-    "href": "/listing-detail-v1/34"
+    "href": "/listing-detail-v1/34",
+    "type": "car"
   },
   {
     "id": 35,
@@ -833,7 +877,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 54699,
-    "href": "/listing-detail-v1/35"
+    "href": "/listing-detail-v1/35",
+    "type": "car"
   },
   {
     "id": 36,
@@ -856,7 +901,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 33699,
-    "href": "/listing-detail-v1/36"
+    "href": "/listing-detail-v1/36",
+    "type": "car"
   },
   {
     "id": 37,
@@ -879,7 +925,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 29699,
-    "href": "/listing-detail-v1/37"
+    "href": "/listing-detail-v1/37",
+    "type": "car"
   },
   {
     "id": 38,
@@ -901,7 +948,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 72699,
-    "href": "/listing-detail-v1/38"
+    "href": "/listing-detail-v1/38",
+    "type": "car"
   },
   {
     "id": 39,
@@ -924,7 +972,8 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 61699,
-    "href": "/listing-detail-v1/39"
+    "href": "/listing-detail-v1/39",
+    "type": "car"
   },
   {
     "id": 40,
@@ -947,15 +996,13 @@ export const featuredVehicles: Vehicle[] = [
     ],
     "condition": "used",
     "priceEur": 27699,
-    "href": "/listing-detail-v1/40"
+    "href": "/listing-detail-v1/40",
+    "type": "car"
   }
 ];
 
-const inventoryLocale = "bg-BG";
-const inventoryCurrency = "BGN";
-export const formatVehiclePrice = (amount: number) =>
-  new Intl.NumberFormat(inventoryLocale, {
-    style: 'currency',
-    currency: inventoryCurrency,
-    maximumFractionDigits: 0
-  }).format(amount);
+export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+
+/** Allow a currency line break while preserving the locale's grouped digits. */
+export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');

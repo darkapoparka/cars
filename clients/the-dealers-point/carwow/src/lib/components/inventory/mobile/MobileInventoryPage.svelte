@@ -555,12 +555,13 @@
 	}
 </script>
 
-<div class="mobile-inventory">
+<div class="mobile-inventory" class:mobile-inventory--map={mode === 'map'}>
 	<main id="main-content" tabindex="-1">
 		<h1 class="sr-only">{i18n.t('copy.c89eae536028')}</h1>
 		<MobileInventoryTop
 			{mode}
 			{query}
+			resultsCount={filteredVehicles.length}
 			{activeFilterCount}
 			{sortLabel}
 			sortActive={sort !== 'price-asc'}
@@ -570,6 +571,7 @@
 		/>
 
 		<section class="mobile-inventory-results" aria-live="polite">
+			<p class="sr-only" role="status">{resultCountLabel}</p>
 			<MobileInventoryQuickFilters
 				vehiclesCount={vehicles.length}
 				{selectedBrands}
@@ -586,12 +588,11 @@
 				openFilterSheet={(nextMode) => openFilterSheet(nextMode)}
 				{clearFilters}
 			/>
-			<div class="mobile-inventory-summary">
-				<p role="status">{resultCountLabel}</p>
-				{#if hasActiveFilters}<button type="button" onclick={clearFilters}
-						>{i18n.t('copy.2992c6ed4fad')}</button
-					>{/if}
-			</div>
+			{#if hasActiveFilters}
+				<div class="mobile-inventory-summary">
+					<button type="button" onclick={clearFilters}>{i18n.t('copy.2992c6ed4fad')}</button>
+				</div>
+			{/if}
 			<MobileInventoryResults vehicles={sortedVehicles} onClearFilters={clearFilters} />
 		</section>
 	</main>
@@ -675,3 +676,10 @@
 		/>
 	</MobileFullSheet>
 </div>
+
+<style>
+	.mobile-inventory--map :global(.mobile-inventory-top) {
+		background: var(--sa-blue);
+		color: #fff;
+	}
+</style>

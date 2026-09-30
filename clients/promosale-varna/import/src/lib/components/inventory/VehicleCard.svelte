@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { assetHref } from '$lib/utils/assets';
+	import { vehicleImageDelivery } from '$lib/utils/vehicle-images';
 	import { imageFallback } from '$lib/browser/image-fallback';
 	import Heart from '@lucide/svelte/icons/heart';
 	import ArrowLeftRight from '@lucide/svelte/icons/arrow-left-right';
@@ -13,6 +13,7 @@
 		english = false
 	}: { card: AuxeroInventoryVehicleCard; priority?: boolean; english?: boolean } = $props();
 	const garage = getGarageContext();
+	const deliveryImage = $derived(vehicleImageDelivery(card.image));
 	const href = $derived(
 		'/inventory/' + encodeURIComponent(card.slug) + (english ? '?lang=en' : '')
 	);
@@ -23,7 +24,9 @@
 		<a href={linkHref(href)} aria-label={card.title}
 			><img
 				use:imageFallback
-				src={assetHref(card.image)}
+				src={deliveryImage.src}
+				srcset={deliveryImage.srcset}
+				sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 330px"
 				alt={card.title}
 				width="660"
 				height="440"

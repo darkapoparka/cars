@@ -10,8 +10,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-header.module.css";
-import { DealerNavigationLink } from "./dealer-navigation-link";
 import { DealerDesktopLocaleMenu } from "./dealer-desktop-locale-menu";
+import { DealerNavigationLink } from "./dealer-navigation-link";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import Image from "./public-image";
 

@@ -1,0 +1,17 @@
+{
+	"purpose": "Illustrative commerce artwork for the reusable Carwow sell/trade-in and valuation banners. Does not depict this dealer, an actual sale or verified customer.",
+	"generatedDate": "2026-09-30",
+	"generator": "Built-in image_gen.imagegen",
+	"modelVersion": "Not exposed by the built-in tool.",
+	"asset": "static/assets/images/home-promos/sell-key-handoff-commerce-v2.webp",
+	"width": 960,
+	"height": 480,
+	"bytes": 25296,
+	"treatment": "WebP resize/encoding only. Localized titles and actions remain native HTML.",
+	"styleReferences": [
+		"templates/app/public/showroom/black/sell-direct-v1.png",
+		"templates/app/public/showroom/black/ownership-v1.png"
+	],
+	"original": "C:/Users/radev/.codex/generated_images/01a0f0c6-090d-7a72-bf39-b9d2f8576643/exec-96734533-acea-406b-b1bb-45f5d284ff40.png",
+	"prompt": "Use case: ads-marketing. Create one production background asset for a mobile automotive sell / valuation commerce banner, landscape 2:1. Image 1 (sell-direct-v1.png) is a reference for realistic cutout hands and car key, right-side placement, ample empty left side and commercial graphic composition. Image 2 (ownership-v1.png) is a reference ONLY for restrained charcoal/silver background and fine halftone pattern. This is a new banner, not a scene photo. A very realistic isolated photographic close-up on the RIGHT of two natural human hands exchanging an ordinary black car key with a silver ring: one hand holds the ring from upper right, the other receives from lower right. Natural anatomically accurate fingers, believable skin texture, clean clothing sleeves, crisp real key details, simple elegant studio product lighting. Keep ALL hands and the complete key within the RIGHT 48% of the canvas; neither hand nor key may enter the left text area. LEFT 52% must be clean near-black charcoal negative space, softly varied matte tones, for localized HTML headline and button to be overlaid later. Small, subtle gray dotted halftone pattern confined to the far right background. The artwork should feel like a professionally art-directed commerce advertisement matching the provided reference at 350x175 pixels. Rich charcoal black and silver with natural skin color. No car, no vehicle, no showroom, no outdoor scenery, no person or face, no text, no letters, no logo, no watermark, no glowing effects, no floating coins, no big shield icon, no extra objects. Do not generate UI, button, border or rounded corners."
+}

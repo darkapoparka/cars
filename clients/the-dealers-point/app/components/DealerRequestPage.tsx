@@ -31,7 +31,7 @@ const s = stylex.create({
   page:{maxWidth:720,marginInline:'auto',paddingInline:{[media.mobile]:22,default:28},paddingBottom:80},
   title:{marginTop:24,fontSize:23,lineHeight:1.3,fontWeight:600,color:$.ink},
   note:{marginTop:14,fontSize:13,lineHeight:1.6,color:$.muted},form:{display:'grid',gap:20,marginTop:28},
-  label:{display:'grid',gap:8,fontSize:14,color:$.ink},input:{display:'block',width:'100%',minHeight:46,padding:12,fontSize:16,lineHeight:1.5,color:$.ink,borderColor:'#d4d4d8',borderStyle:'solid',borderWidth:1,borderRadius:12,backgroundColor:'#fff'},
+  label:{display:'grid',gap:8,fontSize:14,color:$.ink},input:{display:'block',width:'100%',minHeight:46,padding:12,fontSize:16,lineHeight:1.5,color:$.ink,borderColor:$.controlBorder,borderStyle:'solid',borderWidth:1,borderRadius:12,backgroundColor:'#fff'},
   action:{minHeight:48,padding:12,fontSize:15,fontWeight:500,color:'#fff',borderWidth:0,borderRadius:14,backgroundColor:'#262629',cursor:'pointer'},
   contact:{display:'flex',alignItems:'center',justifyContent:'center',minHeight:48,marginTop:18,fontSize:14,color:$.ink},
 });

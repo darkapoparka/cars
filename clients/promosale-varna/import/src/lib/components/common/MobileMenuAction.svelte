@@ -76,7 +76,8 @@
 	}
 
 	.bc-mobile-menu-action.active {
-		background: var(--bc-surface-hover);
+		background: var(--bc-white);
+		border-color: var(--bc-accent);
 		color: var(--bc-accent);
 	}
 

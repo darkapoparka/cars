@@ -1,4 +1,7 @@
 <script lang="ts">
+  import EntrySegments from '$components/ui/entry/EntrySegments.svelte';
+  import EntryInput from '$components/ui/entry/EntryInput.svelte';
+  import EntryAction from '$components/ui/entry/EntryAction.svelte';
   import { trapDialogTab } from '$lib/ui/overlay';
   import { getI18n } from '$lib/locale/context';
 
@@ -10,6 +13,43 @@
   import { brand } from '$config/brand';
   import { parseVehicleReference } from '$data/vehicle-reference';
   import EnquiryEntryField from './EnquiryEntryField.svelte';
+  import ServiceEntryField from './ServiceEntryField.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
+
+  let { inlineEntry = false }: { inlineEntry?: boolean } = $props();
+  let entryMode = $state<'listing' | 'details'>('details');
+  let listingDraft = $state('');
+  let detailsDraft = $state({ make: '', model: '', year: '', mileage: '' });
+  let entryForm = $state<HTMLFormElement>();
+  let mobileEditor = $state<{ edit: (trigger?: HTMLElement) => Promise<void> }>();
+  let mobileDraftUsed = $state(false);
+
+  async function startMobile(event: MouseEvent) {
+    if (!parseVehicleReference(reference) && (!make.trim() || !model.trim())) {
+      await mobileEditor?.edit(event.currentTarget as HTMLElement);
+      return;
+    }
+    await show(event.currentTarget as HTMLElement, 1);
+  }
+
+  async function startInline(event: SubmitEvent) {
+    event.preventDefault();
+    if (!entryForm) return;
+    referenceError = '';
+    const nextReference = entryMode === 'listing' ? listingDraft.trim() : '';
+    if (entryMode === 'listing' && !parseVehicleReference(nextReference)) {
+      referenceError = i18n.t('m_4b200427f69a');
+      entryForm.querySelector<HTMLInputElement>('[name="reference"]')?.focus();
+      return;
+    }
+    if (entryMode === 'details') {
+      ({ make, model, year, mileage } = detailsDraft);
+    } else if (reference !== nextReference) {
+      make = model = year = mileage = price = '';
+    }
+    reference = nextReference;
+    await show(entryForm.querySelector<HTMLButtonElement>('button[type="submit"]')!, 1);
+  }
 
   let dialog: HTMLDialogElement;
   let form: HTMLFormElement;
@@ -59,8 +99,13 @@
     }
     referenceError = '';
     if (reference !== openedReference) step = 0;
+    await show(event.currentTarget as HTMLElement, step);
+  }
+
+  async function show(trigger: HTMLElement, nextStep: number) {
+    step = nextStep;
     openedReference = reference;
-    returnFocus = event.currentTarget as HTMLElement;
+    returnFocus = trigger;
     scrollY = window.scrollY;
     document.body.style.setProperty('--dn-tradein-scroll', `-${scrollY}px`);
     opened = true;
@@ -72,6 +117,15 @@
 
   function restore() {
     if (!opened) return;
+    if (inlineEntry) {
+      if (reference.trim()) {
+        entryMode = 'listing';
+        listingDraft = reference;
+      } else {
+        entryMode = 'details';
+        detailsDraft = { make, model, year, mileage };
+      }
+    }
     opened = false;
     document.body.style.removeProperty('--dn-tradein-scroll');
     window.scrollTo({ top: scrollY, behavior: 'instant' });
@@ -159,6 +213,29 @@
   });
 </script>
 
+{#if inlineEntry}
+  <div class="dn-service-entry dn-service-entry--mobile">
+    <EntrySegments class="dn-service-entry__choices" bind:value={purpose} label={i18n.t('service.purpose')} options={[{ value: 'Продажба', label: i18n.t('enquiry.purpose.sell') }, { value: 'Бартер', label: i18n.t('enquiry.purpose.tradeIn') }]} />
+    <ServiceEntryField id="sell-service-field" mode="sell" bind:this={mobileEditor} value={{ reference, make, model, year, mileage, budget: price, brief: '' }} onapply={(draft) => { ({ reference, make, model, year, mileage } = draft); price = draft.budget; mobileDraftUsed = true; detailsDraft = { make, model, year, mileage }; }} />
+    <button class="dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary" type="button" aria-haspopup="dialog" onclick={startMobile}>{i18n.t('action.requestValuation')}<MobileActionIcon name="arrow" size={15} /></button>
+  </div>
+  <form class="dn-service-entry dn-service-entry--desktop" bind:this={entryForm} onsubmit={startInline}>
+    <EntrySegments class="dn-service-entry__choices" bind:value={purpose} label={i18n.t('service.purpose')} options={[{ value: 'Продажба', label: i18n.t('enquiry.purpose.sell') }, { value: 'Бартер', label: i18n.t('enquiry.purpose.tradeIn') }]} />
+    {#if entryMode === 'listing'}
+      <div><label>{i18n.t('service.reference')}<EntryInput name="reference" bind:value={listingDraft} oninput={() => referenceError = ''} required maxlength={2048} autocomplete="off" autocapitalize="none" spellcheck={false} placeholder={i18n.t('service.url.placeholder')} aria-invalid={referenceError ? true : undefined} aria-describedby={referenceError ? 'sell-entry-error' : 'sell-entry-hint'} /></label>
+      {#if referenceError}<p class="dn-service-entry__error" id="sell-entry-error" role="alert">{referenceError}</p>{:else}<p class="dn-service-entry__hint" id="sell-entry-hint">{i18n.t('service.reference.hint')}</p>{/if}</div>
+    {:else}
+      <div class="dn-service-entry__fields">
+        <label>{i18n.t('m_ccdd25d4230f')}<EntryInput name="make" bind:value={detailsDraft.make} required pattern={'.*\\S.*'} maxlength={60} placeholder={i18n.t('service.make.placeholder')} /></label>
+        <label>{i18n.t('m_5e2c614c23f0')}<EntryInput name="model" bind:value={detailsDraft.model} required pattern={'.*\\S.*'} maxlength={80} placeholder={i18n.t('service.model.placeholder')} /></label>
+        <label>{i18n.t('m_89f6832560de')}<EntryInput name="year" bind:value={detailsDraft.year} required inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
+        <label>{i18n.t('m_694bea758e96')}<EntryInput name="mileage" bind:value={detailsDraft.mileage} required inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="85000" /></label>
+      </div>
+    {/if}
+    <button class="dn-service-entry__alternative" type="button" onclick={() => { entryMode = entryMode === 'details' ? 'listing' : 'details'; referenceError = ''; }}>{i18n.t(entryMode === 'details' ? 'service.useListing' : 'service.useDetails')}</button>
+    <EntryAction class="dn-service-entry__submit" dialog>{i18n.t('action.requestValuation')}</EntryAction>
+  </form>
+{:else}
 <div class="dn-tradein-enquiry">
   <h1>{i18n.t("m_cd386206fba4")}</h1>
   <p class="dn-tradein-reference-hint" id="tradein-reference-hint">{i18n.t("m_7730704b5290")}</p>
@@ -178,6 +255,7 @@
     <Icon name="arrow-right" size={15} />
   </button>
 </div>
+{/if}
 
 <dialog onkeydown={trapDialogTab} {@attach dialogViewport} class="dn-tradein-dialog" bind:this={dialog} aria-labelledby="tradein-title" onclose={restore} onclick={(event) => { if (event.target === event.currentTarget) dialog.close(); }}>
   <div class="dn-tradein-panel">
@@ -202,8 +280,8 @@
           <label>{i18n.t("m_ccdd25d4230f")} {#if !vehicleReference}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference)} bind:value={make} name="make" required={!vehicleReference} maxlength={60} placeholder={i18n.t("m_f72bd5b65622")} autocomplete="off" /></label>
           <label>{i18n.t("m_5e2c614c23f0")} {#if !vehicleReference}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference)} bind:value={model} name="model" required={!vehicleReference} maxlength={80} placeholder={i18n.t("m_a40a2e1bcc02")} autocomplete="off" /></label>
           <div class="dn-tradein-pair">
-            <label>{i18n.t("m_89f6832560de")} {#if !vehicleReference}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference)} bind:value={year} name="year" required={!vehicleReference} inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
-            <label>{i18n.t("m_694bea758e96")} {#if !vehicleReference}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference)} bind:value={mileage} name="mileage" required={!vehicleReference} inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="85000" /></label>
+            <label>{i18n.t("m_89f6832560de")} {#if !vehicleReference && !mobileDraftUsed}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference || mobileDraftUsed)} bind:value={year} name="year" required={!vehicleReference && !mobileDraftUsed} inputmode="numeric" pattern={'(19|20)[0-9]{2}'} maxlength={4} placeholder="2020" /></label>
+            <label>{i18n.t("m_694bea758e96")} {#if !vehicleReference && !mobileDraftUsed}<span aria-hidden="true">*</span>{/if}<input {@attach i18n.validationFor(vehicleReference || mobileDraftUsed)} bind:value={mileage} name="mileage" required={!vehicleReference && !mobileDraftUsed} inputmode="numeric" pattern={'[0-9]{1,7}'} maxlength={7} placeholder="85000" /></label>
           </div>
           <label>{i18n.t("m_ce900bda7196")} <small>{i18n.t("m_d42086812b73")}</small><input {@attach i18n.validation} bind:value={price} name="price" inputmode="numeric" pattern={'[0-9]{1,8}'} maxlength={8} placeholder={i18n.t("m_3241a6d5a4a1")} /></label>
         </div>
@@ -277,7 +355,7 @@
   .dn-tradein-header { display: flex; flex: 0 0 auto; align-items: flex-start; gap: 14px; padding: 22px 24px 14px; }
   .dn-tradein-header > div { min-width: 0; flex: 1; }
   .dn-tradein-header p { margin: 0 0 4px; color: var(--dn-red); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); letter-spacing: var(--dn-tracking-label); text-transform: uppercase; }
-  .dn-tradein-header h2 { margin: 0; font-size: var(--dn-text-heading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+  .dn-tradein-header h2 { overflow-wrap: anywhere; margin: 0; font-size: var(--dn-text-heading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
   .dn-tradein-close { border: 0; border-radius: 50%; background: #f2f3f5; color: #202329; }
   .dn-tradein-progress { flex: 0 0 auto; padding: 0 24px 16px; border-bottom: 1px solid #e8eaed; }
   .dn-tradein-progress__copy { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #686f79; font-size: var(--dn-text-meta); }
@@ -288,20 +366,20 @@
   .dn-tradein-fields { display: grid; gap: 16px; }
   .dn-tradein-fields label, .dn-tradein-notes { display: block; min-width: 0; color: #353a41; font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
   .dn-tradein-fields label > span { color: var(--dn-red); }
-  .dn-tradein-fields small, .dn-tradein-notes small { color: #7a818b; font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
+  .dn-tradein-fields small, .dn-tradein-notes small { color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
   .dn-tradein-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
   .dn-tradein-fields input, .dn-tradein-notes textarea { display: block; width: 100%; min-height: var(--dn-control-height-editor); margin-top: 7px; padding: var(--dn-space-2) var(--dn-space-3); box-sizing: border-box; border: 1px solid #d5dae0; border-radius: 12px; background: #fff; color: #202329; font: var(--dn-entry-font); }
   .dn-tradein-notes textarea { min-height: 96px; resize: vertical; }
-  .dn-tradein-fields input:focus, .dn-tradein-notes textarea:focus { border-color: #202329; outline: 2px solid rgba(32,35,41,.12); outline-offset: 1px; }
-  .dn-tradein-fields input::placeholder, .dn-tradein-notes textarea::placeholder { color: #8a919b; opacity: 1; }
-  .dn-tradein-note { margin: 14px 0 0; color: #747b85; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
+  .dn-tradein-fields input:focus, .dn-tradein-notes textarea:focus { border-color: #202329; outline: 3px solid var(--dn-focus); outline-offset: 2px; }
+  .dn-tradein-fields input::placeholder, .dn-tradein-notes textarea::placeholder { color: var(--dn-muted); opacity: 1; }
+  .dn-tradein-note { margin: 14px 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   .dn-tradein-section-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
   .dn-tradein-section-heading h3 { margin: 0; color: #25292f; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-meta); }
-  .dn-tradein-section-heading p { margin: 4px 0 0; color: #737a84; font-size: var(--dn-text-body); line-height: var(--dn-leading-meta); }
-  .dn-tradein-section-heading > span { flex: 0 0 auto; color: #737a84; font-size: var(--dn-text-meta); }
+  .dn-tradein-section-heading p { margin: 4px 0 0; color: var(--dn-muted); font-size: var(--dn-text-body); line-height: var(--dn-leading-meta); }
+  .dn-tradein-section-heading > span { flex: 0 0 auto; color: var(--dn-muted); font-size: var(--dn-text-meta); }
   .dn-tradein-upload { position: relative; display: flex; min-height: 84px; align-items: center; justify-content: center; gap: 12px; margin-top: 12px; padding: 12px; border: 1px dashed #aeb5bf; border-radius: 14px; background: #fafbfc; cursor: pointer; }
   .dn-tradein-upload > span { font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); }
-  .dn-tradein-upload small { display: block; margin-top: 3px; color: #737a84; font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
+  .dn-tradein-upload small { display: block; margin-top: 3px; color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-regular); }
   .dn-tradein-upload input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
   .dn-tradein-upload:focus-within { outline: 2px solid #202329; outline-offset: 3px; }
   .dn-tradein-error { margin: 8px 0 0; color: #9b111e; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
@@ -330,9 +408,9 @@
   .dn-tradein-copy { border: 1px solid #d7dbe0; background: #fff; color: #24282e; }
   .dn-tradein-review-call { border: 0; background: #202329; color: #fff; }
   .dn-tradein-feedback { margin: 12px 0 0; padding: 11px 12px; border-radius: 10px; background: #f0f2f4; color: #424850; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
-  .dn-tradein-footer { display: flex; flex: 0 0 auto; align-items: center; gap: 10px; padding: 14px 24px; border-top: 1px solid #e7e9ec; background: #fff; }
-  .dn-tradein-back { display: flex; min-height: var(--dn-control-height-default); align-items: center; gap: var(--dn-entry-action-gap); padding: 0 4px; border: 0; background: transparent; color: #30343a; font: var(--dn-compact-control-font); }
-  .dn-tradein-primary { display: flex; min-height: var(--dn-control-height-default); flex: 1; align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); padding: 0 var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); line-height: var(--dn-leading-control); }
+  .dn-tradein-footer { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px 24px; border-top: 1px solid #e7e9ec; background: #fff; }
+  .dn-tradein-back { min-width: 0; max-width: 100%; overflow-wrap: anywhere; display: flex; min-height: var(--dn-control-height-default); align-items: center; gap: var(--dn-entry-action-gap); padding: 0 4px; border: 0; background: transparent; color: #30343a; font: var(--dn-compact-control-font); }
+  .dn-tradein-primary { min-width: 0; overflow-wrap: anywhere; display: flex; min-height: var(--dn-control-height-default); flex: 1 1 8rem; align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); line-height: var(--dn-leading-control); }
   .dn-tradein-primary:disabled { opacity: .6; cursor: wait; }
 
   :global(.dn-contact-intent--tradein .dn-contact-workflow-title),
@@ -350,10 +428,10 @@
     .dn-tradein-reference-hint { text-align: center; }
     .dn-tradein-entry-segments { margin-top: 16px; }
     .dn-tradein-start { margin-top: var(--dn-space-3); }
-    .dn-tradein-dialog { inset: var(--dn-form-dialog-top) 0 auto; width: 100%; height: var(--dn-form-dialog-height); max-height: var(--dn-form-dialog-height); margin: 0; border-radius: 0 0 var(--dn-radius-lg) var(--dn-radius-lg); }
+    .dn-tradein-dialog { position: fixed; inset: 0; width: 100%; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; }
     .dn-tradein-panel { height: 100%; max-height: 100%; }
-    .dn-tradein-header { padding: 18px 16px 12px; }
-    .dn-tradein-header h2 { font-size: var(--dn-text-subheading); }
+    .dn-tradein-header { padding: var(--dn-overlay-header-padding); }
+    .dn-tradein-header h2 { overflow-wrap: anywhere; font-size: var(--dn-text-subheading); }
     .dn-tradein-progress { padding: 0 16px 14px; }
     .dn-tradein-body { padding: 18px 16px 22px; }
     .dn-tradein-footer { padding: 11px 16px max(12px,env(safe-area-inset-bottom)); }

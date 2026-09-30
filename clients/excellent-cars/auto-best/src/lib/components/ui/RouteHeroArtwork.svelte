@@ -10,6 +10,8 @@
 </script>
 
 {#each routeArtwork.pairs[variant] as asset, index (asset)}
+  <picture>
+  <source media="(min-width: 992px)" srcset={theme === 'light' ? routeArtwork.standard[asset] : coloredArtwork[asset] ?? routeArtwork.standard[asset]} />
   <img
     class="dn-route-hero__artwork"
     class:dn-route-hero__artwork--left={index === 0}
@@ -17,15 +19,17 @@
     class:dn-route-hero__artwork--portrait={asset === 'portrait' || asset === 'phone'}
     class:dn-route-hero__artwork--phone={asset === 'phone'}
     class:dn-route-hero__artwork--colored={theme !== 'light'}
-    src={theme === 'light' ? routeArtwork.standard[asset] : coloredArtwork[asset] ?? routeArtwork.standard[asset]}
+    src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
     alt=""
     width="900"
     height={asset === 'portrait' || asset === 'phone' ? 1350 : 600}
     decoding="async"
   />
+  </picture>
 {/each}
 
 <style>
+  picture { display: contents; }
   .dn-route-hero__artwork { display: none; }
   @media (min-width: 992px) {
     .dn-route-hero__artwork {

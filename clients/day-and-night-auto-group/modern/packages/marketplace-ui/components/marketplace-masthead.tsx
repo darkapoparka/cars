@@ -747,9 +747,7 @@ export const MarketplaceMasthead = ({
           {utilityActions.map((action) => (
             <UtilityAction key={action.label} {...action} />
           ))}
-          {showLocaleSwitch ? (
-            <LocaleUtilityAction locale={locale} />
-          ) : null}
+          {showLocaleSwitch ? <LocaleUtilityAction locale={locale} /> : null}
         </div>
       </div>
     </header>

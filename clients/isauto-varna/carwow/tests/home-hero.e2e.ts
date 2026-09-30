@@ -23,7 +23,7 @@ test('hero modes switch with the keyboard and retain separate drafts', async ({ 
 	await expect(page.locator('#hero-import-url')).toHaveValue(
 		'https://www.mobile.de/auto-inserat/test/123.html'
 	);
-	await expect(page).toHaveURL(/\/$/);
+	await expect(page).toHaveURL(/\/bg$/);
 });
 
 test('sell carries make and model into the existing desktop intake', async ({ page }) => {
@@ -44,7 +44,7 @@ test('import validates a URL and carries it into the existing request', async ({
 	await input.fill('not-a-url');
 	await page.locator('.hero-intent__submit').click();
 	await expect(input).toBeFocused();
-	await expect(page).toHaveURL(/\/$/);
+	await expect(page).toHaveURL(/\/bg$/);
 	const sourceUrl = 'https://www.mobile.de/auto-inserat/test/123.html?lang=bg&ref=home';
 	await input.fill(sourceUrl);
 	await page.locator('.hero-intent__submit').click();

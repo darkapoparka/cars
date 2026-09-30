@@ -29,8 +29,11 @@ type LeadSiteConfig = {
     };
   };
   artwork: {
+    responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
     desktopHeroScenes: Record<'home' | 'inventory' | 'about' | 'contact', SiteAssetPath>;
     contactHero: { desktop: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
+    serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
+    homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
@@ -43,15 +46,14 @@ type LeadSiteConfig = {
     vehicleCutouts: Record<VehicleArtworkKey, SiteAssetPath>;
     heroVehiclePairs: Record<HeroVehiclePair, readonly [VehicleArtworkKey, VehicleArtworkKey]>;
     mobileHero: { car: SiteAssetPath; sell: SiteAssetPath; import: SiteAssetPath; home: SiteAssetPath };
-    inventoryDemo: Record<'stock01' | 'stock02' | 'stock03' | 'stock04' | 'stock05' | 'stock06', SiteAssetPath>;
-    videos: Record<'urus' | 'panamera' | 'gclass', SiteAssetPath>;
-    pdp: { importGuide: SiteAssetPath; finance: SiteAssetPath; seller: SiteAssetPath };
+    inventoryDemo: Record<'stock01' | 'stock02' | 'stock03' | 'stock04' | 'stock06', SiteAssetPath>;
+    pdp: { importGuide: SiteAssetPath };
   };
 };
 
 const collection = '/assets/images/lead/day-night-collection-banner-v2.webp' as const;
-const mobileSell = '/assets/images/lead/day-night-mobile-sell-v1.webp' as const;
-const mobileImport = '/assets/images/lead/day-night-mobile-import-v1.webp' as const;
+const mobileSell = '/assets/images/template/service-sell-front-v3.webp' as const;
+const mobileImport = '/assets/images/template/service-import-front-v3.webp' as const;
 
 const vehicleCutouts = {
   silver: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1',
@@ -92,6 +94,59 @@ export const leadSite = {
     }
   },
   artwork: {
+    // Exact source keys keep customized dealer imagery on its own fallback asset.
+    responsiveImages: {
+      [collection]: [
+        { src: '/assets/images/lead/day-night-collection-banner-v2-480.webp', width: 480 },
+        { src: '/assets/images/lead/day-night-collection-banner-v2-720.webp', width: 720 },
+        { src: collection, width: 1200 }
+      ],
+      [mobileSell]: [
+        { src: '/assets/images/template/service-sell-front-v3-480.webp', width: 480 },
+        { src: mobileSell, width: 1200 }
+      ],
+      [mobileImport]: [
+        { src: '/assets/images/template/service-import-front-v3-480.webp', width: 480 },
+        { src: mobileImport, width: 1200 }
+      ],
+      '/assets/images/lead/day-night-stock-01.webp': [
+        { src: '/assets/images/lead/day-night-stock-01-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-01-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-01.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-02.webp': [
+        { src: '/assets/images/lead/day-night-stock-02-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-02-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-02.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-03.webp': [
+        { src: '/assets/images/lead/day-night-stock-03-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-03-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-03.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-04.webp': [
+        { src: '/assets/images/lead/day-night-stock-04-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-04-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-04.webp', width: 1600 }
+      ],
+      '/assets/images/lead/day-night-stock-06.webp': [
+        { src: '/assets/images/lead/day-night-stock-06-640.webp', width: 640 },
+        { src: '/assets/images/lead/day-night-stock-06-960.webp', width: 960 },
+        { src: '/assets/images/lead/day-night-stock-06.webp', width: 1600 }
+      ],
+      '/assets/images/blog/blog-1.jpg': [
+        { src: '/assets/images/blog/blog-1-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-1.jpg', width: 1200 }
+      ],
+      '/assets/images/blog/blog-2.jpg': [
+        { src: '/assets/images/blog/blog-2-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-2.jpg', width: 1200 }
+      ],
+      '/assets/images/blog/blog-3.jpg': [
+        { src: '/assets/images/blog/blog-3-640.webp', width: 640 },
+        { src: '/assets/images/blog/blog-3.jpg', width: 1200 }
+      ]
+    },
     desktopHeroScenes: {
       home: '/assets/images/lead/auto-best-desktop-home-v1.webp',
       inventory: '/assets/images/lead/auto-best-desktop-inventory-v1.webp',
@@ -104,6 +159,15 @@ export const leadSite = {
       importMobile: '/assets/images/lead/day-night-import-banner-v1.webp',
       support: '/assets/images/lead/day-night-contact-phone-red-v1.webp'
     },
+    serviceBanners: {
+      sell: '/assets/images/template/service-sell-banner-v1.webp',
+      import: '/assets/images/template/service-import-banner-v1.webp'
+    },
+    homeActionScenes: {
+      sell: mobileSell,
+      import: mobileImport,
+      finance: '/assets/images/template/home-action-finance-v3.webp'
+    },
     blogHero: '/assets/images/lead/day-night-blog-hero-v2.webp',
     editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',
     sectionBanners: {
@@ -113,7 +177,7 @@ export const leadSite = {
     home: {
       collection,
       sell: mobileSell,
-      sellCompact: '/assets/images/lead/day-night-sell-banner-v2.webp',
+      sellCompact: mobileSell,
       import: mobileImport
     },
     routeHero: {
@@ -166,18 +230,10 @@ export const leadSite = {
       stock02: '/assets/images/lead/day-night-stock-02.webp',
       stock03: '/assets/images/lead/day-night-stock-03.webp',
       stock04: '/assets/images/lead/day-night-stock-04.webp',
-      stock05: '/assets/images/lead/day-night-stock-05.webp',
       stock06: '/assets/images/lead/day-night-stock-06.webp'
     },
-    videos: {
-      urus: '/assets/images/lead/day-night-video-urus.jpg',
-      panamera: '/assets/images/lead/day-night-video-panamera.jpg',
-      gclass: '/assets/images/lead/day-night-video-g-class.jpg'
-    },
     pdp: {
-      importGuide: '/assets/images/lead/import-how-generated-v1.webp',
-      finance: '/assets/images/lead/pdp-finance-clean-mobile.webp',
-      seller: '/assets/images/lead/pdp-seller-clean-mobile.webp'
+      importGuide: '/assets/images/lead/import-how-generated-v1.webp'
     }
   }
 } as const satisfies LeadSiteConfig;

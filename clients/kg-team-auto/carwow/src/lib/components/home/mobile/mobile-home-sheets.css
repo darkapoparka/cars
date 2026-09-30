@@ -600,7 +600,7 @@
 }
 
 .mh-sheet-scope .mh-sell-field span {
-	color: var(--sa-muted);
+	color: var(--sa-ink-soft);
 	font-size: var(--sa-text-sm);
 	font-weight: var(--sa-weight-medium);
 	line-height: var(--sa-leading-snug);

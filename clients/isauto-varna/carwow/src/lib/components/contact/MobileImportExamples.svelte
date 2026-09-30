@@ -5,7 +5,7 @@
 	import { ChevronRight } from '@lucide/svelte';
 	import type { HomeMobileVehicle } from '$lib/types/home';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
-	import { shortFuel } from '$lib/utils/format';
+	import MobileVehicleStats from '$lib/components/shared/mobile/MobileVehicleStats.svelte';
 	let {
 		vehicles,
 		onSelect
@@ -36,10 +36,8 @@
 						<span class="import-example__badge">{i18n.t('copy.fab313a94604')}</span>
 					</span>
 					<span class="import-example__body">
-						<span class="import-example__brand">{car.brand}</span>
-						<strong class="import-example__title">{car.model}</strong>
-						<span class="import-example__meta">{car.year} · {shortFuel(car.fuel, i18n.locale)}</span
-						>
+						<strong class="import-example__title" title={car.shortTitle}>{car.shortTitle}</strong>
+						<MobileVehicleStats vehicle={car} />
 					</span>
 					<span class="import-example__foot">
 						<span class="import-example__price">{car.priceEur}</span>
@@ -112,23 +110,14 @@
 		padding: 10px 10px 6px;
 		width: 100%;
 	}
-	.import-example__brand {
-		color: #4f5966;
-		font-size: var(--sa-text-caption);
-		font-weight: var(--sa-weight-semibold);
-		line-height: 1.2;
-		text-transform: uppercase;
-	}
 	.import-example__title {
+		min-width: 0;
+		overflow: hidden;
 		font-size: var(--sa-text-base);
 		font-weight: var(--sa-weight-heading);
 		line-height: 1.3;
-		overflow-wrap: anywhere;
-	}
-	.import-example__meta {
-		color: #4f5966;
-		font-size: var(--sa-text-caption);
-		line-height: 1.3;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.import-example__foot {
 		display: flex;
@@ -140,14 +129,11 @@
 		padding: 0 10px 10px;
 	}
 	.import-example__price {
-		border-radius: 6px;
-		background: #fff;
-		padding: 4px 6px;
+		min-width: 0;
 		color: var(--sa-price);
-		font-size: var(--sa-text-base);
+		font-size: var(--sa-text-lg);
 		line-height: 1.3;
 		font-weight: var(--sa-weight-strong);
-		white-space: nowrap;
 	}
 	.import-example__go {
 		display: grid;
@@ -173,8 +159,7 @@
 			gap: 4px;
 		}
 		.import-example__price {
-			font-size: var(--sa-text-base);
-			padding-inline: 5px;
+			font-size: var(--sa-text-lg);
 		}
 	}
 	.import-example:active {

@@ -123,7 +123,7 @@ test('card actions remain legible and retain state from home to inventory and fa
 		await expect(action).toHaveCSS('outline-style', 'solid');
 	}
 	await page.goto('/favorites');
-	await expect(page.locator(`a[href="/inventory/${slug}"]`).first()).toBeVisible();
+	await expect(page.locator(`a[href="/bg/inventory/${slug}"]`).first()).toBeVisible();
 	await page.goto('/compare');
 	await expect(page.locator('.card-details')).toBeVisible();
 	await page.goto('/inventory');

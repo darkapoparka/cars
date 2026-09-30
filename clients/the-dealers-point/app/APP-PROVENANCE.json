@@ -19,19 +19,66 @@
       "output": "public/dealer-app/logo-dark-bf2b5687015daf0fe982.webp",
       "sha256": "bf2b5687015daf0fe982ca89f4116b25e4064ce13e52b9c1dbf6fa02c7f0b4d0",
       "role": "logo-dark"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/1.svg",
+      "output": "public/dealer-app/vehicle-e57492651be81d8b1f2f.svg",
+      "sha256": "e57492651be81d8b1f2f1cff400f55ccd2cede0416a0ea1deafec65adc3c5a0b",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/2.svg",
+      "output": "public/dealer-app/vehicle-3da61aed7d7fafd373d4.svg",
+      "sha256": "3da61aed7d7fafd373d42820ceb2a11640e4fa80eefaf5cd102fd4dbc94b1600",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/3.svg",
+      "output": "public/dealer-app/vehicle-2ad4b819b86dc48f7d51.svg",
+      "sha256": "2ad4b819b86dc48f7d5119ffb692043519b52134a807406320183c3073c580d6",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/4.svg",
+      "output": "public/dealer-app/vehicle-20328b5e323cd6e3433f.svg",
+      "sha256": "20328b5e323cd6e3433f016a4e792ddcdbd5ba88c45f21921d2bcdfed117397b",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/5.svg",
+      "output": "public/dealer-app/vehicle-c50cebbe990dab6dda73.svg",
+      "sha256": "c50cebbe990dab6dda73720dc5c49a619013b23d816447c902bbeb032785b1e5",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/6.svg",
+      "output": "public/dealer-app/vehicle-d52b7e272cdb372eff5b.svg",
+      "sha256": "d52b7e272cdb372eff5be0b6bc2f29d38d156f44ed6c16ceee062f2a943d44ce",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/7.svg",
+      "output": "public/dealer-app/vehicle-bf8fc4e5a0cff373f8b2.svg",
+      "sha256": "bf8fc4e5a0cff373f8b29efb05bf5cbf4a12ae138bc48c06e66f02ea5f5e5304",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/8.svg",
+      "output": "public/dealer-app/vehicle-e1f00ae8de49616a03f7.svg",
+      "sha256": "e1f00ae8de49616a03f7d2ff6f8c4ef40f5d6a8e5d5ece386b68964226edd06b",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/9.svg",
+      "output": "public/dealer-app/vehicle-cd36de87ece3e1cab0e7.svg",
+      "sha256": "cd36de87ece3e1cab0e70a97c56d12446a6f735db3bbf3778404991eb78ddc01",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/dealer/stock/10.svg",
+      "output": "public/dealer-app/vehicle-d00eb0308fa5f1773965.svg",
+      "sha256": "d00eb0308fa5f17739650101847b24583daecc411e54596da9512f259b546ee6",
+      "role": "vehicle"
     }
-  ],
-  "template": {
-    "repository": "darkapoparka/cars",
-    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
-    "path": "templates/app",
-    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
-    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
-  },
-  "generatedAt": "2026-09-28T04:58:11.266Z",
-  "policy": {
-    "selector": "shared-v2-with-local-fallback",
-    "benefits": "clearly-labelled-proposal-examples",
-    "missingPhotos": "neutral-template-artwork-not-invented-stock"
-  }
+  ]
 }

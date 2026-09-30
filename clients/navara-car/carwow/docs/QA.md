@@ -32,6 +32,8 @@ npm run test:e2e
 
 The existing visual-baseline suite is separate and platform-sensitive. Do not update committed reference screenshots without approval; capture independent before/after evidence for a refactor.
 
+The legacy route journeys and mobile crawler use saved Bulgarian browsing preferences and dismiss the first-visit language prompt. Explicit locale routes keep their own language; the English acceptance tests override the saved preference. First-visit preferences need a separate fresh-context check so they cannot obscure the storefront being audited.
+
 ## Route and interaction matrix
 
 `npm run audit:mobile` combines the current sitemap with inventory, article and team-profile links, so pagination cannot omit published vehicle details. It captures the complete set at 390px plus canonical routes at 320, 430 and 1440px. Initial-viewport screenshots retain natural loading; the full-page pass settles lazy images before measuring broken/pending media, overflow and main/skip targets. HTTP response failures remain recorded even if an image fallback recovers. Each route receives a fresh browser context to avoid cross-route state and unbounded crawl memory.

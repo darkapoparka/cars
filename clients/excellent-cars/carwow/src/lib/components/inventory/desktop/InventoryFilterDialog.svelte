@@ -349,7 +349,7 @@
 	</div>
 	<div class="filter-dialog-footer">
 		<button type="button" class="filter-dialog-clear" onclick={clear}
-			>{i18n.t('copy.fc38aced5a1d')}{field ? '' : i18n.t('copy.dbf14a2afdb8')}</button
+			>{i18n.t('copy.fc38aced5a1d')}{field ? '' : ' ' + i18n.t('copy.dbf14a2afdb8')}</button
 		>
 		<button type="button" class="filter-dialog-apply" onclick={apply}
 			>{i18n.t('copy.12efacb8a441')}

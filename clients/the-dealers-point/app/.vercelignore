@@ -1,0 +1,10 @@
+.git
+.next
+node_modules
+reference
+.template
+runtime
+*.log
+*.tsbuildinfo
+.env*
+*.apk

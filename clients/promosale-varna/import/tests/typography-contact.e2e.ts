@@ -2,6 +2,39 @@ import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { visit } from './helpers';
 
+test('public typography loads the actual Sofia Sans Latin and Cyrillic faces', async ({ page }) => {
+	const fontResponses: Array<{ url: string; status: number }> = [];
+	page.on('response', (response) => {
+		if (/sofia-sans\/.*\.woff2/.test(response.url())) {
+			fontResponses.push({ url: response.url(), status: response.status() });
+		}
+	});
+	await visit(page, '/en/sell-your-car');
+	const faces = await page.evaluate(async () => {
+		const loaded = await document.fonts.load('400 20px "Sofia Sans"', 'Buy Купи');
+		return loaded.map(({ family, weight, status }) => ({ family, weight, status }));
+	});
+	expect(faces.length).toBeGreaterThanOrEqual(2);
+	for (const face of faces) {
+		expect(face).toEqual({ family: 'Sofia Sans', weight: '400', status: 'loaded' });
+	}
+	expect(fontResponses.length).toBeGreaterThan(0);
+	expect(
+		fontResponses,
+		'Font assets must load or revalidate successfully from public URLs'
+	).toEqual(
+		expect.arrayContaining([
+			expect.objectContaining({ url: expect.stringContaining('SofiaSans-Regular.latin.woff2') }),
+			expect.objectContaining({ url: expect.stringContaining('SofiaSans-Regular.cyrillic.woff2') })
+		])
+	);
+	expect(
+		fontResponses.every(
+			({ url, status }) => [200, 304].includes(status) && !url.includes('/static/')
+		)
+	).toBe(true);
+});
+
 test('public actions retain their readable weight and homepage search emphasis', async ({
 	page
 }, info) => {

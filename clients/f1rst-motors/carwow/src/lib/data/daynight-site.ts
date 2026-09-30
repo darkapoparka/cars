@@ -15,11 +15,11 @@ const location = "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - 
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Dubai',
-	locationShort: "Dubai",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Dubai'
-	},
+  "city": "Dubai",
+  "locationShort": "Dubai",
+  "addressLine": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
+  "address": "Danube Building - 409 Sheikh Zayed Rd - Al Quoz - Al Quoz 1 - Dubai, UAE"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -33,14 +33,14 @@ export const daynightSite = {
 	shortName,
 	city,
 	region: city,
-	countryCode: 'BG',
-	locale: 'bg-BG',
-	currency: 'EUR',
+	countryCode: "AE",
+	locale: "en-AE",
+	currency: "AED",
 	phoneE164,
 	...contactLinks(phoneE164),
 	phone: '97143201030',
 	phoneLabel: '+971 4 320 1030',
-	email: '',
+	email: "info@f1rstmotors.com",
 	location,
 	locationShort: `${district}, ${city}`,
 	locationLandmark: "Danube Building - 409 Sheikh Zayed Rd - Al Quoz 1",
@@ -48,10 +48,11 @@ export const daynightSite = {
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: 'https://daynight.mobile.bg/',
+	sourceInventory: "https://f1rstmotors.com/",
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

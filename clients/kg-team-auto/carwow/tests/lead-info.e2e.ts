@@ -72,11 +72,15 @@ for (const flow of flows) {
 		await expect(dialog).toBeVisible();
 		await dialog.getByRole('button', { name: 'Затвори' }).focus();
 		await page.keyboard.press('Shift+Tab');
-		await expect(dialog.getByRole('button', { name: 'Прибери панела', exact: true })).toBeFocused();
+		await expect(
+			dialog.getByRole('button', { name: 'Приберете панела', exact: true })
+		).toBeFocused();
 		await page.keyboard.press('Shift+Tab');
 		await expect(dialog.getByRole('button', { name: 'Разбрах' })).toBeFocused();
 		await page.keyboard.press('Tab');
-		await expect(dialog.getByRole('button', { name: 'Прибери панела', exact: true })).toBeFocused();
+		await expect(
+			dialog.getByRole('button', { name: 'Приберете панела', exact: true })
+		).toBeFocused();
 		await page.keyboard.press('Tab');
 		await expect(dialog.getByRole('button', { name: 'Затвори' })).toBeFocused();
 		await dialog.getByRole('button', { name: 'Разбрах' }).click();

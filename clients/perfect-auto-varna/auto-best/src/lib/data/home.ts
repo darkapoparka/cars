@@ -5,14 +5,14 @@ import { leadSite } from '$config/lead-site';
 
 // Visible vehicle bounds align mobile artwork; the opaque wagon uses its visible silhouette.
 const bodyArtwork = [
-  { label: 'Седан', query: 'Sedan', image: '/assets/images/icon-box/car-list1.png', width: 180, height: 80, bounds: [9, 11, 171, 70] },
-  { label: 'Хечбек', query: 'Hatchback', image: '/assets/images/icon-box/car-list2.png', width: 180, height: 80, bounds: [12, 8, 168, 71] },
-  { label: 'Пикап', query: 'Pickup Truck', image: '/assets/images/icon-box/car-list3.png', width: 180, height: 80, bounds: [11, 13, 170, 71] },
+  { label: 'Седан', query: 'Sedan', image: '/assets/images/template/body-sedan-v2.webp', width: 768, height: 384, bounds: [14, 24, 754, 361] },
+  { label: 'Хечбек', query: 'Hatchback', image: '/assets/images/template/body-hatchback-v2.webp', width: 768, height: 384, bounds: [13, 4, 750, 381] },
+  { label: 'Пикап', query: 'Pickup Truck', image: '/assets/images/template/body-pickup-v2.webp', width: 768, height: 384, bounds: [6, 14, 764, 377] },
   { label: 'SUV', query: 'SUV', image: leadSite.artwork.vehicleCutouts.urus, width: 1000, height: 667, bounds: [18, 156, 983, 495] },
   { label: 'Кросоувър', query: 'Crossover', image: '/assets/images/icon-box/car-list5.png', width: 206, height: 95, bounds: [0, 0, 206, 95] },
   { label: 'Миниван', query: 'Minivan', image: '/assets/images/icon-box/car-list6.png', width: 140, height: 80, bounds: [0, 0, 140, 80] },
-  { label: 'Комби', query: 'Wagon', image: '/assets/images/template/body-wagon-v1.png', width: 1832, height: 858, bounds: [22, 138, 1800, 716] },
-  { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/icon-box/car-list8.png', width: 180, height: 80, bounds: [11, 15, 170, 63] },
+  { label: 'Комби', query: 'Wagon', image: '/assets/images/template/body-wagon-v1.webp', width: 916, height: 429, bounds: [11, 69, 900, 358] },
+  { label: 'Кабриолет', query: 'Convertible', image: '/assets/images/template/body-convertible-v2.webp', width: 768, height: 320, bounds: [18, 50, 756, 301] },
   { label: 'Купе', query: 'Coupe', image: leadSite.artwork.vehicleCutouts.porsche, width: 1000, height: 667, bounds: [12, 169, 987, 480] },
   { label: 'Спортбек', query: 'Sportback', image: leadSite.artwork.vehicleCutouts.amggt, width: 1000, height: 667, bounds: [14, 169, 980, 473] }
 ] as const;
@@ -32,14 +32,16 @@ const brandArtwork = [
   { label: 'BMW', image: '/assets/images/partner/parner12.png', width: 140, height: 80, bounds: [33, 3, 107, 77] }
 ] as const;
 
-// Template discovery is independent of the current sample inventory.
+// Desktop discovery retains the full template catalog; mobile shortcuts follow stock.
 const enabledBodyTypes = new Set(['Sedan', 'Hatchback', 'Pickup Truck', 'SUV', 'Wagon', 'Convertible', 'Coupe', 'Sportback']);
-export const bodyTypes = bodyArtwork.filter(item => enabledBodyTypes.has(item.query)).map(item => ({
+export const desktopBodyTypes = bodyArtwork.filter(item => enabledBodyTypes.has(item.query)).map(item => ({
   ...item, label: bodyLabel(item.query), count: featuredVehicles.filter(vehicle => vehicle.body === item.query).length
 }));
-export const brands = brandArtwork.map(item => ({
+export const desktopBrands = brandArtwork.map(item => ({
   ...item, count: featuredVehicles.filter(vehicle => vehicle.make === item.label).length
 }));
+export const bodyTypes = desktopBodyTypes.filter(item => item.count > 0);
+export const brands = desktopBrands.filter(item => item.count > 0);
 
 const editorialSummaries: Record<number, string> = {
   1: 'История, документи и техническо състояние.',

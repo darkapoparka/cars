@@ -13,6 +13,7 @@
     bodyLabel,
     filterListingVehicles,
     listingFilterOptions,
+    listingTypeCount,
     listingModelsForMake,
     listingVehicles,
     type ListingFilters
@@ -23,6 +24,7 @@
     listingDraftFromFilters,
     listingDraftHasFilters,
     listingFacetSummary,
+    listingFacetOptionLabel,
     listingFacetTitle,
     listingFiltersFromDraft,
     withListingMake,
@@ -48,6 +50,7 @@
   let filterDialog = $state<HTMLDialogElement>();
   let dialogSearch = $state<HTMLInputElement>();
   let filtersOpen = $state(false);
+  let activeChoice = $state<string>();
   let returnFocus: HTMLButtonElement | undefined;
 
   const attachFilterDialog: Attachment<HTMLDialogElement> = (node) => {
@@ -64,6 +67,7 @@
   };
 
   const mobileFieldDefinitions = [
+    { field: 'type', label: 'Vehicle type' },
     { field: 'make', label: 'Марка' },
     { field: 'model', label: 'Модел' },
     { field: 'body', label: 'Купе' },
@@ -179,11 +183,19 @@
 
       <div class="dn-mobile-filter-fields">
         {#each mobileFields as item (item.field)}
-          <button type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen} onclick={event => openChoice(event, item.field, item.label)}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
+          <button type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen && activeChoice === item.field} onclick={event => { activeChoice = item.field; openChoice(event, item.field, item.label); }}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
         {/each}
       </div>
       <div class="dn-listing-filter__filter-groups">
         <div class="dn-listing-filter__core-grid">
+          <label>
+            <span class="dn-listing-filter__field-label">{i18n.t('inventory.facet.type')}</span>
+            <select {@attach i18n.validation} name="type" aria-label={i18n.t('inventory.facet.type')} bind:value={draft.type}>
+              {#each listingFilterOptions.types as option (option)}
+                <option value={option}>{listingFacetOptionLabel('type', option, i18n.locale)} ({listingTypeCount(option)})</option>
+              {/each}
+            </select>
+          </label>
           <label>
             <span class="dn-listing-filter__field-label">{i18n.t("m_ccdd25d4230f")}</span>
             <select {@attach i18n.validation} name="make" aria-label={i18n.t("m_ccdd25d4230f")} value={draft.make} onchange={(event) => { draft = withListingMake(draft, event.currentTarget.value); }}>

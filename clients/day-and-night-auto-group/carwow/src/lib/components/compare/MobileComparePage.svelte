@@ -71,8 +71,9 @@
 							>
 						</div>
 						<div class="identity">
-							<a href={i18n.href(resolve('/inventory/[slug]', { slug: car.slug }))}
-								>{car.shortTitle}</a
+							<a
+								href={i18n.href(resolve('/inventory/[slug]', { slug: car.slug }))}
+								title={car.shortTitle}>{car.shortTitle}</a
 							><strong>{car.priceEur}</strong>
 						</div>
 						<dl>
@@ -219,16 +220,23 @@
 	.identity {
 		display: grid;
 		align-content: start;
-		grid-template-rows: 57px auto;
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: auto auto;
 		gap: 6px;
-		min-height: 112px;
+		min-height: 80px;
+		min-width: 0;
 		padding: 12px 10px;
 	}
 	.identity a {
+		display: block;
+		min-width: 0;
+		overflow: hidden;
 		color: inherit;
 		font-size: var(--sa-text-caption);
 		line-height: 1.35;
 		font-weight: var(--sa-button-font-weight);
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.identity strong {
 		font-size: var(--sa-text-control);

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { specificationLabel, formatMileage } from '$lib/i18n/presentation';
+  import { specificationLabel, formatMileage, compactMileage, compactSpecificationLabel } from '$lib/i18n/presentation';
 
 
   import { getI18n } from '$lib/locale/context';
@@ -8,7 +8,8 @@
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  import { formatVehiclePrice, type Vehicle } from '$data/inventory';
+  import { formatVehiclePriceLabel, type Vehicle } from '$data/inventory';
+  import { imageSrcset } from '$data/responsive-images';
 
   interface Props {
     vehicle: Vehicle;
@@ -24,7 +25,18 @@
   const modelTitle = $derived(vehicle.title.startsWith(`${vehicle.make} `)
     ? vehicle.title.slice(vehicle.make.length + 1)
     : vehicle.title);
+  const cardBrand = $derived(vehicle.cardBrand ?? vehicle.make);
+  const mobileModelTitle = $derived(vehicle.title.startsWith(`${cardBrand} `)
+    ? vehicle.title.slice(cardBrand.length + 1)
+    : modelTitle);
+  const priceLabel = $derived(formatVehiclePriceLabel(vehicle.priceEur, i18n.locale));
 </script>
+
+{#snippet amount()}
+  {#if showPrice}
+    <div class="dn-vehicle-card__amount">{priceLabel}</div>
+  {/if}
+{/snippet}
 
 <article id={`vehicle-${vehicle.id}`} data-variant={layout} class:dn-vehicle-card--listing={layout === 'listing'} class:dn-vehicle-card--showcase={layout === 'showcase'} class="dn-vehicle-card">
   <a class="dn-vehicle-card__link" href={i18n.href(withListReturn(resolve('/listing-detail-v1/[id]', { id: String(vehicle.id) }), returnTo))} aria-label={i18n.t("m_7e95f8ea5711", { p0: vehicle.title })}>
@@ -39,6 +51,8 @@
       <div class="dn-vehicle-card__image">
       <img
         src={vehicle.image}
+        srcset={imageSrcset(vehicle.image)}
+        sizes={layout === 'listing' ? '(max-width: 767px) calc((100vw - 52px) * .5), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
         alt={vehicle.title}
         loading={priority ? 'eager' : 'lazy'}
         fetchpriority={priority ? 'high' : 'auto'}
@@ -51,23 +65,27 @@
 
     <div class="dn-vehicle-card__content">
       <div class="dn-vehicle-card__identity">
-        <p class="dn-vehicle-card__make">{vehicle.make}</p>
+        <p class="dn-vehicle-card__make">
+          {#if layout === 'listing'}
+            <span class="dn-vehicle-card__make-title">{vehicle.make}</span><span class="dn-vehicle-card__mobile-make">{cardBrand}</span>
+          {:else}
+            {vehicle.make}
+          {/if}
+        </p>
         {#if layout === 'listing'}
-          <h2 class="dn-vehicle-card__name" title={vehicle.title}>{modelTitle}</h2>
+          <h2 class="dn-vehicle-card__name" title={vehicle.title}>
+            <span class="dn-vehicle-card__model-title">{modelTitle}</span><span class="dn-vehicle-card__mobile-title">{mobileModelTitle}</span>
+          </h2>
         {:else}
           <h3 class="dn-vehicle-card__name" title={vehicle.title}>{modelTitle}</h3>
         {/if}
       </div>
+      {#if layout === 'listing'}
+        {@render amount()}
+      {/if}
       {#if layout === 'showcase'}
         <p class="dn-vehicle-card__summary">{vehicle.year} · {specificationLabel(vehicle.fuel, i18n.locale)}</p>
       {/if}
-      {#if layout === 'listing'}
-        <div class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_fe73f0109419")}>
-          <span>{vehicle.year}</span>
-          <span>{formatMileage(vehicle.mileageKm, i18n.locale)}</span>
-        </div>
-      {/if}
-
       {#if layout !== 'showcase'}
       <div class="dn-vehicle-card__specs" aria-label={i18n.t("m_148a9be6e575")}>
         <span class="dn-vehicle-card__spec">
@@ -81,10 +99,18 @@
       </div>
       {/if}
 
-      {#if showPrice}
-        <div class="dn-vehicle-card__amount">{formatVehiclePrice(vehicle.priceEur, i18n.locale)}</div>
+      {#if layout !== 'listing'}
+        {@render amount()}
       {/if}
     </div>
+    {#if layout === 'listing'}
+      <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
+        <li class="dn-vehicle-card__fact">{vehicle.year}</li>
+        <li class="dn-vehicle-card__fact" title={formatMileage(vehicle.mileageKm, i18n.locale)}><span aria-hidden="true">{compactMileage(vehicle.mileageKm, i18n.locale)}</span><span class="dn-sr-only">{formatMileage(vehicle.mileageKm, i18n.locale)}</span></li>
+        <li class="dn-vehicle-card__fact" title={specificationLabel(vehicle.fuel, i18n.locale)}><span aria-hidden="true">{compactSpecificationLabel(vehicle.fuel, i18n.locale)}</span><span class="dn-sr-only">{specificationLabel(vehicle.fuel, i18n.locale)}</span></li>
+        <li class="dn-vehicle-card__fact" title={specificationLabel(vehicle.transmission, i18n.locale)}><span aria-hidden="true">{compactSpecificationLabel(vehicle.transmission, i18n.locale)}</span><span class="dn-sr-only">{specificationLabel(vehicle.transmission, i18n.locale)}</span></li>
+      </ul>
+    {/if}
   </a>
 </article>
 
@@ -106,7 +132,10 @@
     line-height: var(--dn-leading-meta);
   }
   .dn-vehicle-card__mobile-meta { display: none; }
+  .dn-vehicle-card__mobile-title,
+  .dn-vehicle-card__mobile-make { display: none; }
   .dn-vehicle-card {
+    container-type: inline-size;
     display: flex;
     width: 100%;
     min-width: 0;
@@ -160,6 +189,7 @@
     left: 10px;
     z-index: 12;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 8px;
@@ -255,7 +285,7 @@
     display: flex;
     width: 100%;
     align-items: stretch;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 8px;
     margin-top: var(--dn-vehicle-card-specs-gap, 12px);
   }
@@ -289,6 +319,8 @@
     letter-spacing: var(--dn-tracking-heading);
     font-variant-numeric: tabular-nums;
   }
+
+  .dn-vehicle-card--listing .dn-vehicle-card__amount { order: 1; }
 
   @media (min-width: 992px) {
     .dn-vehicle-card {
@@ -333,20 +365,31 @@
     }
 
     .dn-vehicle-card--listing {
+      display: flex;
+      height: auto;
       min-height: 0;
-      border-radius: 16px;
+      border-radius: var(--dn-radius);
+      box-shadow: var(--dn-card-shadow);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__link {
       display: grid;
       min-height: 0;
-      grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: var(--dn-space-3);
+      row-gap: var(--dn-space-2);
+      padding: var(--dn-space-2);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__visual {
       height: 100%;
       min-height: 0;
+      width: 100%;
+      grid-row: 1 / 3;
+      align-self: stretch;
       aspect-ratio: auto;
+      border-radius: var(--dn-radius-sm);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__image {
@@ -354,101 +397,127 @@
       inset: 0;
     }
 
-    .dn-vehicle-card--listing .dn-vehicle-card__image img {
-      object-fit: cover;
-    }
-
     .dn-vehicle-card--listing .dn-vehicle-card__badges {
-      display: none;
-    }
-
-    .dn-vehicle-card--listing .dn-vehicle-card__badge--mileage {
       display: none;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__content {
       display: grid;
       min-width: 0;
-      grid-template-rows: repeat(4, auto);
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      grid-template-areas: "identity" "price";
       align-content: start;
-      gap: var(--dn-space-2);
-      padding: var(--dn-space-3);
+      gap: var(--dn-space-1);
+      padding: 0;
     }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__identity {
+      grid-area: identity;
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__make {
+      display: block;
+      color: var(--dn-muted);
+      font-size: var(--dn-text-caption);
+      overflow-wrap: anywhere;
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__model-title { display: none; }
+    .dn-vehicle-card--listing .dn-vehicle-card__make-title { display: none; }
+    .dn-vehicle-card--listing .dn-vehicle-card__mobile-title,
+    .dn-vehicle-card--listing .dn-vehicle-card__mobile-make { display: inline; }
 
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 6px;
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 1fr;
+      gap: var(--dn-space-1);
       margin: 0;
-      color: #626a75;
-      font-size: var(--dn-text-meta);
+      padding: 0;
+      list-style: none;
+    }
+
+    .dn-vehicle-card--listing .dn-vehicle-card__fact {
+      display: inline-flex;
+      min-width: 0;
+      max-width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: var(--dn-space-1) var(--dn-space-half);
+      overflow: visible;
+      border: 0;
+      border-radius: var(--dn-radius-xs);
+      background: var(--dn-surface-panel);
+      color: var(--dn-ink-hover);
+      font-size: var(--dn-text-caption);
+      font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-meta);
       font-variant-numeric: tabular-nums;
+      text-align: center;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
-    .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta > span {
-      display: inline-flex;
-      min-height: 20px;
-      align-items: center;
-      gap: var(--dn-space-1);
-      color: #626873;
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-regular);
-      line-height: var(--dn-leading-meta);
-      white-space: nowrap;
-    }
-
-    .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta > span + span::before { content: '·'; }
 
     .dn-vehicle-card--listing .dn-vehicle-card__name {
-      display: -webkit-box;
+      display: block;
       min-width: 0;
-      font-size: var(--dn-text-lead);
+      font-size: var(--dn-text-body);
       font-weight: var(--dn-weight-medium);
       line-height: var(--dn-leading-control);
       white-space: normal;
-      line-clamp: 2;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      overflow-wrap: anywhere;
+      line-clamp: none;
+      -webkit-line-clamp: unset;
+      overflow: visible;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__specs {
-      gap: 6px;
-      flex-wrap: nowrap;
-      margin-top: 0;
-    }
-
-    .dn-vehicle-card--listing .dn-vehicle-card__spec {
-      min-height: 20px;
-      gap: 4px;
-      padding: 0 4px;
-      border: 1px solid #e7e8eb;
-      border-radius: 6px;
-      background: #f5f6f7;
-      color: #626873;
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-regular);
-      line-height: var(--dn-leading-meta);
-    }
-
-    .dn-vehicle-card--listing .dn-vehicle-card__spec :global(.dn-icon) {
       display: none;
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__amount {
+      grid-area: price;
+      justify-self: start;
+      align-self: start;
       margin-top: 0;
-      padding-top: 0;
-      color: #11151c;
-      font-size: var(--dn-text-card);
+      padding: 0;
+      color: var(--dn-ink);
+      font-size: var(--dn-text-lead);
       font-weight: var(--dn-weight-semibold);
-      line-height: var(--dn-leading-section);
+      line-height: var(--dn-leading-control);
+      letter-spacing: var(--dn-tracking-normal);
+      text-align: start;
+      overflow-wrap: anywhere;
+    }
+
+    @container (max-width: 15rem) {
+      .dn-vehicle-card--listing .dn-vehicle-card__link {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto minmax(min-content, 1fr) auto;
+      }
+      .dn-vehicle-card--listing .dn-vehicle-card__visual { grid-row: auto; height: auto; aspect-ratio: 3 / 2; }
+      .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta { grid-column: 1; }
     }
   }
 
-  @media (max-width: 359px) {
-    .dn-vehicle-card--listing .dn-vehicle-card__content { padding-inline: 6px; }
-    .dn-vehicle-card--listing .dn-vehicle-card__specs { gap: 4px; }
-    .dn-vehicle-card--listing .dn-vehicle-card__spec { gap: 3px; padding-inline: 2px; }
+  /* Narrow carousel and desktop cards also reveal their full titles at larger text sizes. */
+  @container (max-width: 15rem) {
+    .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dn-vehicle-card__name,
+    .dn-vehicle-card--listing .dn-vehicle-card__name {
+      display: block;
+      overflow: visible;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      line-clamp: none;
+      -webkit-line-clamp: unset;
+    }
+    .dn-vehicle-card__make { overflow-wrap: anywhere; }
   }
 
   @media (prefers-reduced-motion: reduce) {

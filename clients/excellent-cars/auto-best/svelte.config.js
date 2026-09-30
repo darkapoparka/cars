@@ -6,6 +6,8 @@ const config = {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter(),
+    // Avoid extra blocking requests for small styles; keep larger sheets cacheable.
+    inlineStyleThreshold: 32 * 1024,
     alias: {
       $components: 'src/lib/components',
       $config: 'src/lib/config',

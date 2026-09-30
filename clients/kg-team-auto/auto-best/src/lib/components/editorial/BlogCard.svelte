@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { imageSrcset } from '$data/responsive-images';
   import { blogPostTitle, blogPostSummary } from '$data/editorial';
   import { getI18n } from '$lib/locale/context';
   const i18n = getI18n();
@@ -16,6 +17,8 @@
     <span class="dn-blog-card__media">
       <img
         src={post.image}
+        srcset={imageSrcset(post.image)}
+        sizes="(max-width: 767px) 108px, (max-width: 991px) 50vw, 33vw"
         alt=""
         width="820"
         height="540"
@@ -37,6 +40,7 @@
 
 <style>
   .dn-blog-card {
+    container-type: inline-size;
     min-width: 0;
     height: 100%;
     overflow: hidden;
@@ -173,6 +177,12 @@
     .dn-blog-card__category::before { display: none; }
     h2 { margin: 5px 0 6px; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
     .dn-blog-card__text { margin-top: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
+  }
+
+  @container (max-width: 15rem) {
+    .dn-blog-card__link { grid-template-columns: minmax(0, 1fr); }
+    .dn-blog-card__media { height: auto; min-height: 0; aspect-ratio: 16 / 9; }
+    .dn-blog-card__body { min-width: 0; overflow-wrap: anywhere; }
   }
 
   @media (prefers-reduced-motion: reduce) {

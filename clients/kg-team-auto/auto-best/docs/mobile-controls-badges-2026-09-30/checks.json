@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-09-30T03:15:40.0151386Z",
+  "base": "http://127.0.0.1:5185",
+  "runtime": "Node 22.20.0",
+  "validate": {
+    "svelteErrors": 0,
+    "passed": true,
+    "command": "npm run validate",
+    "svelteWarnings": 0
+  },
+  "suites": [
+    {
+      "cases": 8,
+      "passed": 8,
+      "engine": "chromium",
+      "command": "node scripts/mobile-polish-smoke.mjs",
+      "generatedAt": "2026-09-30T03:08:46.329Z"
+    },
+    {
+      "cases": 6,
+      "passed": 6,
+      "engine": "chromium",
+      "command": "node scripts/mobile-final-smoke.mjs",
+      "generatedAt": "2026-09-30T03:10:24.429Z"
+    },
+    {
+      "cases": 66,
+      "passed": 66,
+      "engine": "webkit",
+      "command": "node scripts/mobile-reflow-smoke.mjs",
+      "generatedAt": "2026-09-30T03:10:24.826Z"
+    },
+    {
+      "engine": "chromium",
+      "cases": 42,
+      "command": "node artifacts/mobile-inventory-audit.mjs",
+      "passed": 42,
+      "axeVersion": "4.13.0",
+      "locales": [
+        "en",
+        "bg"
+      ],
+      "axeTags": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21a",
+        "wcag21aa",
+        "wcag22aa"
+      ],
+      "textModes": [
+        "normal",
+        "spacing",
+        "enlarged"
+      ],
+      "widths": [
+        320,
+        360,
+        390,
+        430,
+        767,
+        768,
+        1440
+      ],
+      "violations": 0
+    }
+  ],
+  "screenshots": {
+    "url": "http://127.0.0.1:5173/en/listing-grid",
+    "viewportWidths": [
+      320,
+      390
+    ],
+    "scrollY": 0,
+    "source": "Codex in-app browser",
+    "rootFontPx": 16,
+    "viewportHeight": 844
+  },
+  "manual": [
+    "Filters and Sort open and restore trigger focus on dismissal",
+    "Applied Audi filter updates results, accessible count and red filter state",
+    "390px inventory to vehicle 1 to anchored inventory return",
+    "1440px: one price below specifications per card; mobile metadata hidden"
+  ],
+  "testedSourceBlobs": {
+    "src/lib/components/vehicles/VehicleCard.svelte": "52fc224afc3104fc881c2bc91c790127eab515cc",
+    "src/lib/components/layout/Header.svelte": "066d8a02a30ce9992c2f293d37306282c242d3a2",
+    "src/lib/components/layout/BottomNavIcon.svelte": "c1b51ae979ff49d19d5b900e55f5a7d030f16f67",
+    "src/lib/components/listing/ListingFilters.svelte": "6206b0e07b168e41969291b9072fe631632a005f",
+    "scripts/mobile-polish-smoke.mjs": "f8661582562ce74ab0a75491fc19b5a8c32c55fb"
+  },
+  "scope": "Reusable Auto Best master; no template release or dealer publication",
+  "limit": "Automated browser evidence; physical device and screen reader acceptance are separate"
+}

@@ -238,8 +238,10 @@
 			<MobileLeadContactCard
 				{phoneHref}
 				title={i18n.t('copy.89ed122d152e')}
+				action={i18n.t('copy.2384a5f73657')}
 				copy={i18n.t('copy.8883fb6fda36')}
-				image={resolve('/assets/images/home-promos/phone-portrait-generated-v7.webp')}
+				image={resolve('/assets/images/home-promos/sell-key-handoff-commerce-v2.webp')}
+				artwork="photo"
 			/>
 			<MobileLeadSteps kind="sell" onOpen={() => (infoOpen = true)} />
 		{/if}

@@ -1,0 +1,37 @@
+{
+	"generatedDate": "2026-09-30",
+	"generator": "Built-in image_gen.imagegen",
+	"modelVersion": "Not exposed by the built-in tool",
+	"purpose": "Illustrative service artwork for the reusable template, without claims about actual staff, facilities, inventory or completed transactions.",
+	"treatment": "WebP resize and encoding only; no retouching. All titles and CTAs remain native localized HTML.",
+	"assets": [
+		{
+			"path": "static/assets/images/home/mobile/sell-trade-forecourt-v3.webp",
+			"purpose": "Mobile home sell or trade-in banner",
+			"width": 960,
+			"height": 480,
+			"bytes": 72870,
+			"sourceSha256": "7bdaec055022f4b36a657a6b0bf34a1ee1ee7be1dd59d46152a53d4e5fa00f9a",
+			"prompt": "Use case: photorealistic-natural. Asset type: an automotive sell / trade-in website banner, landscape 2:1 composition, image only. Create a believable editorial photograph outdoors at a quiet European car dealership forecourt on a bright overcast morning. One attractive metallic graphite-grey premium estate car in the foreground, low front three-quarter view, complete body and all wheels proportioned naturally; a second pearl-white premium SUV slightly behind it. Both vehicles on the RIGHT half of the image, facing slightly toward the viewer, separated clearly, generous framing so nothing is cut off. Real asphalt, soft daylight, a simple stone-and-glass showroom and restrained trees far behind, faint realistic reflections rather than perfect chrome. The LEFT 45 percent is a softly shaded, dark out-of-focus foreground of the forecourt with ample empty space for the website's separately rendered white title and button. Warm, approachable and grounded automotive magazine photography with a real camera, 50mm lens, natural exposure, fine tactile detail. The cars must look like real usable cars rather than sci-fi concepts or miniature renders. This should convey changing from your current car to your next car without gimmicks. Avoid a photography studio, colored rim lights, neon, glossy floor, giant grille, dramatic smoke, CGI, fake people, hands, floating keys, arrows, logos, legible number plates, lettering, watermark, baked-in website text or buttons. Illustrative service photography; do not depict a named real dealership or real inventory."
+		},
+		{
+			"path": "static/assets/images/home-promos/sell-valuation-contact-v1.webp",
+			"purpose": "Mobile sell contact card",
+			"width": 960,
+			"height": 480,
+			"bytes": 38172,
+			"sourceSha256": "d45d70f040c134a2e3a077b5e663891820f75f0350f6c754f9ab4552788e1b4e",
+			"prompt": "Use case: photorealistic-natural. Asset type: horizontal 2:1 website service card about discussing a car valuation. An authentic editorial detail photo in a quiet modern European automotive appraisal reception. In the RIGHT half, a real black car key fob with one metal key ring resting on a closed dark-green leather document folio, beside a compact smartphone face down, on a lightly worn oak counter. In the right background visible through a broad showroom window, a graphite estate car parked outside, gently out of focus. Natural late morning daylight, restrained warm oak, charcoal and pale grey palette, ordinary tangible objects with accurate scale and real imperfections. The LEFT half is a calm darker out-of-focus section of the same counter and shaded interior, generous empty area for a separately rendered website headline and CTA. Camera at counter height with a 50mm lens, medium depth of field, realistic reflections, tactile matte surfaces. Helpful approachable service photography rather than luxury fantasy advertising. Composition must read at 350px width with the key fob clearly recognizable. No people, faces, hands, floating objects, visible display content, written documents, banknotes, currency, cash, signatures, branding, logos, lettering, watermark, collage, artificial studio spotlight, neon, CGI or baked-in text/buttons. Illustrative service art only; no claimed actual staff, facility or transaction."
+		},
+		{
+			"path": "static/assets/images/home-promos/sell-inspection-process-v1.webp",
+			"purpose": "Mobile sell process card",
+			"width": 960,
+			"height": 480,
+			"bytes": 40108,
+			"sourceSha256": "b2936494ee191314c8d2ed299536c524797c36962c5be9e51e0c7e500abb9b83",
+			"prompt": "Use case: photorealistic-natural. Asset type: a horizontal 2:1 website card explaining the car appraisal / selling process. Create a straightforward editorial automotive inspection photograph in a clean, quiet independent European garage. The RIGHT half is a close three-quarter view of the front wheel, front wing and headlight of a real metallic silver estate car parked on a concrete floor. In the immediate RIGHT foreground, a slim plain clipboard with a blank white sheet and a closed black pen rests naturally on the edge of a modest mobile workshop table; no tool clutter. The car and the inspection context are both easy to recognize at mobile card size. The LEFT 45 percent is softly shaded, out-of-focus garage space, with subtle natural texture and no distinct objects, providing empty darker space for separately rendered white website title and call to action. Broad soft daylight from a garage door, neutral colors, realistic scale, genuine car paint with faint surface reflections, 50mm documentary photography, calm and trustworthy. A photo someone could actually take at an inspection, not a luxury concept ad. No people or hands, no fabricated faces, no transaction handshake, no giant props, no futuristic vehicles, neon, smoke, glossy studio floor, CGI, logos, branding, lettering, license plate text, readable paperwork, watermarks or baked-in website labels/buttons. Illustrative service image only, not actual inventory or a named workshop."
+		}
+	],
+	"originalAssets": "Prior banner and card artwork retained. Generated originals remain in the tool output directory."
+}

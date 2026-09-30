@@ -1,0 +1,153 @@
+{
+  "method": "In-app browser DOM and screenshots; production layout checks followed by dev-mode reload",
+  "layouts": [
+    {
+      "finance": {
+        "background": "rgb(249, 249, 249)",
+        "color": "rgb(8, 8, 8)",
+        "fontSize": "14px",
+        "gap": "7px",
+        "height": 51,
+        "href": "/bg/finance",
+        "imageAlt": "",
+        "imageLoaded": true,
+        "radius": "7px",
+        "text": "ФинансиранеВижте",
+        "width": 358
+      },
+      "focus": {
+        "href": null,
+        "outlineStyle": "none",
+        "tag": "INPUT"
+      },
+      "scrollWidth": 390,
+      "search": {
+        "border": "0px",
+        "fontSize": "16px",
+        "outline": "3px"
+      },
+      "viewport": 390,
+      "label": "390px restored"
+    },
+    {
+      "finance": {
+        "background": "rgb(249, 249, 249)",
+        "color": "rgb(8, 8, 8)",
+        "fontSize": "14px",
+        "gap": "7px",
+        "height": 51,
+        "href": "/bg/finance",
+        "imageAlt": "",
+        "imageLoaded": true,
+        "radius": "7px",
+        "text": "ФинансиранеВижте",
+        "width": 358
+      },
+      "focus": {
+        "href": "/bg/finance",
+        "outlineStyle": "solid",
+        "tag": "A"
+      },
+      "scrollWidth": 390,
+      "search": {
+        "border": "0px",
+        "fontSize": "16px",
+        "outline": "3px"
+      },
+      "viewport": 390,
+      "label": "390px keyboard focus"
+    },
+    {
+      "finance": {
+        "background": "rgb(249, 249, 249)",
+        "color": "rgb(8, 8, 8)",
+        "fontSize": "14px",
+        "gap": "7px",
+        "height": 51,
+        "href": "/bg/finance",
+        "imageAlt": "",
+        "imageLoaded": true,
+        "radius": "7px",
+        "text": "ФинансиранеВижте",
+        "width": 288
+      },
+      "focus": {
+        "href": null,
+        "outlineStyle": "none",
+        "tag": "INPUT"
+      },
+      "scrollWidth": 320,
+      "search": {
+        "border": "0px",
+        "fontSize": "16px",
+        "outline": "3px"
+      },
+      "viewport": 320,
+      "label": "320px restored"
+    },
+    {
+      "finance": {
+        "background": "rgb(249, 249, 249)",
+        "color": "rgb(8, 8, 8)",
+        "fontSize": "14px",
+        "gap": "7px",
+        "height": 51,
+        "href": "/bg/finance",
+        "imageAlt": "",
+        "imageLoaded": true,
+        "radius": "7px",
+        "text": "ФинансиранеВижте",
+        "width": 688
+      },
+      "focus": {
+        "href": null,
+        "outlineStyle": "none",
+        "tag": "INPUT"
+      },
+      "scrollWidth": 1425,
+      "search": {
+        "border": "0px",
+        "fontSize": "16px",
+        "outline": "2px"
+      },
+      "viewport": 1425,
+      "label": "1440px restored"
+    },
+    {
+      "finance": {
+        "background": "rgb(249, 249, 249)",
+        "color": "rgb(8, 8, 8)",
+        "fontSize": "14px",
+        "gap": "7px",
+        "height": 51,
+        "href": "/bg/finance",
+        "imageAlt": "",
+        "imageLoaded": true,
+        "radius": "7px",
+        "text": "ФинансиранеВижте",
+        "width": 358
+      },
+      "focus": {
+        "href": null,
+        "outlineStyle": "none",
+        "tag": "INPUT"
+      },
+      "scrollWidth": 390,
+      "search": {
+        "border": "0px",
+        "fontSize": "16px",
+        "outline": "3px",
+        "outlineStyle": "none"
+      },
+      "viewport": 390,
+      "label": "390px dev mode restored"
+    }
+  ],
+  "checks": {
+    "keyboardFinanceNavigation": "Passed: Tab and Enter opened /bg/finance",
+    "searchSuggestions": "8 Toyota suggestions; ArrowDown and Enter opened /bg/cars?brand=Toyota with nine cars",
+    "build": "npm run check passed using Node 22.20.0",
+    "devReload": "Passed: search reloaded successfully with restored finance strip",
+    "devBrowserLogs": []
+  }
+}

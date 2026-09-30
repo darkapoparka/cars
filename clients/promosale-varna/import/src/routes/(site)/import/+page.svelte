@@ -88,7 +88,12 @@
 	</div>
 	<div class="site-mobile-only">
 		<h1 class="sr-only">{title}</h1>
-		<ImportRequestMobilePage form={data.form} serviceVehicles={data.serviceVehicles} embedded />
+		<ImportRequestMobilePage
+			form={data.form}
+			serviceVehicles={data.serviceVehicles}
+			browse={data.browse}
+			embedded
+		/>
 	</div>
 </main>
 

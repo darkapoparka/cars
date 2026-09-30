@@ -15,11 +15,11 @@ const location = "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE";
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Dubai',
-	locationShort: "Dubai",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Dubai'
-	},
+  "city": "Dubai",
+  "locationShort": "Dubai",
+  "addressLine": "Plot No. 364-0442, Al Quoz Industrial Area 1",
+  "address": "Plot No. 364-0442, Al Quoz Industrial Area 1, Dubai, UAE"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -33,14 +33,14 @@ export const daynightSite = {
 	shortName,
 	city,
 	region: city,
-	countryCode: 'BG',
-	locale: 'bg-BG',
-	currency: 'EUR',
+	countryCode: "AE",
+	locale: "en-AE",
+	currency: "AED",
 	phoneE164,
 	...contactLinks(phoneE164),
 	phone: '971551875094',
 	phoneLabel: '+971 55 187 5094',
-	email: '',
+	email: "sales@tdp.ae",
 	location,
 	locationShort: `${district}, ${city}`,
 	locationLandmark: "Plot No. 364-0442, Al Quoz Industrial Area 1",
@@ -48,10 +48,11 @@ export const daynightSite = {
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: 'https://daynight.mobile.bg/',
+	sourceInventory: "https://www.tdp.ae/",
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

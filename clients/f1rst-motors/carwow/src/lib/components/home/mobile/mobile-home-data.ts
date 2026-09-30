@@ -11,7 +11,7 @@ export type FooterSocialLink = {
 export type BodyChipIcon = 'sedan' | 'suv' | 'wagon' | 'hatchback' | 'coupe' | 'mpv';
 
 export const footerSocialLinks: FooterSocialLink[] = [
-	{ label: "Mobile.bg", href: daynightSite.sourceInventory, title: "View dealer inventory", icon: "mobilebg", external: true }
+
 ];
 
 export const brandLogos: Record<string, string> = {

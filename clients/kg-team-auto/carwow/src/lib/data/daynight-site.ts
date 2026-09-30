@@ -15,11 +15,11 @@ const location = "Индустриална зона – Юг, Околовръс
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Пловдив',
-	locationShort: "Пловдив",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Пловдив'
-	},
+  "city": "Plovdiv",
+  "locationShort": "Plovdiv",
+  "addressLine": "South Industrial Zone, Ring Road opposite Chiirite Hotel",
+  "address": "South Industrial Zone, Ring Road opposite Chiirite Hotel, Plovdiv"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -33,14 +33,14 @@ export const daynightSite = {
 	shortName,
 	city,
 	region: city,
-	countryCode: 'BG',
-	locale: 'bg-BG',
-	currency: 'EUR',
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
 	phoneE164,
 	...contactLinks(phoneE164),
 	phone: '359877346262',
 	phoneLabel: '+359877346262',
-	email: '',
+	email: "",
 	location,
 	locationShort: `${district}, ${city}`,
 	locationLandmark: "Индустриална зона – Юг, Околовръстен път срещу хотел Чиирите",
@@ -48,10 +48,11 @@ export const daynightSite = {
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: 'https://daynight.mobile.bg/',
+	sourceInventory: "",
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

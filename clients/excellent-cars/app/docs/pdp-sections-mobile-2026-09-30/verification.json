@@ -1,0 +1,439 @@
+{
+  "date": "2026-09-30",
+  "check": "Final npm run check passed after classified-equipment refinement: ESLint, TypeScript and production build with 407 pages",
+  "evidence": [
+    {
+      "check": "inline exterior photo",
+      "result": {
+        "caption": "УвеличиДясна страна2  / 5",
+        "src": "/reference-assets/vehicle-details/9718423696/photo-1.jpg"
+      }
+    },
+    {
+      "check": "photo Escape focus return",
+      "result": {
+        "dialogs": 0,
+        "focus": "Отвори снимката: Дясна страна"
+      }
+    },
+    {
+      "check": "ArrowRight activates Interior",
+      "result": {
+        "focused": "Интериор",
+        "selected": "Интериор",
+        "url": "http://localhost:3001/bg/cars/2022-kia-seltos-lx-3696",
+        "visiblePanels": 1
+      }
+    },
+    {
+      "check": "Home activates Information",
+      "result": {
+        "focus": "Информация",
+        "selected": "Информация"
+      }
+    },
+    {
+      "check": "ArrowLeft wraps to Interior",
+      "result": {
+        "focus": "Интериор",
+        "selected": "Интериор"
+      }
+    },
+    {
+      "check": "bg 390 sections",
+      "result": {
+        "clientWidth": 375,
+        "conditionText": "Състояние\n\nНяма наличен доклад от проверка. Попитайте продавача за състоянието на автомобила.\n\nПоискайте информация за автомобила",
+        "features": {
+          "background": "rgb(246, 246, 247)",
+          "radius": "18px"
+        },
+        "footerButtons": [
+          {
+            "border": "0px",
+            "height": 40,
+            "text": "Запитване"
+          },
+          {
+            "border": "1px",
+            "height": 40,
+            "text": "Оглед"
+          }
+        ],
+        "labels": [
+          {
+            "font": "13px",
+            "text": "Двигател"
+          },
+          {
+            "font": "13px",
+            "text": "Скоростна кутия"
+          },
+          {
+            "font": "13px",
+            "text": "Тип купе"
+          },
+          {
+            "font": "13px",
+            "text": "Гориво"
+          },
+          {
+            "font": "13px",
+            "text": "Цвят"
+          },
+          {
+            "font": "13px",
+            "text": "Пробег"
+          }
+        ],
+        "scrollWidth": 375,
+        "values": [
+          {
+            "font": "15px",
+            "text": "1.6L"
+          },
+          {
+            "font": "15px",
+            "text": "Автоматична"
+          },
+          {
+            "font": "15px",
+            "text": "SUV"
+          },
+          {
+            "font": "15px",
+            "text": "Бензин"
+          },
+          {
+            "font": "15px",
+            "text": "Червен"
+          },
+          {
+            "font": "15px",
+            "text": "99,000 км"
+          }
+        ],
+        "width": 390
+      }
+    },
+    {
+      "check": "desktop inline gallery",
+      "result": {
+        "footerDisplay": "none",
+        "overflow": false,
+        "photoColumns": "406px 406px",
+        "sectionRails": 0,
+        "viewport": [
+          1440,
+          900
+        ],
+        "visiblePanels": [
+          "_R_24slritpet5relb_-tab-1"
+        ]
+      }
+    },
+    {
+      "check": "desktop sticky clearance",
+      "result": {
+        "overflow": false,
+        "railBottom": 200,
+        "sidebarTop": 216
+      }
+    },
+    {
+      "check": "tablet 768 reflow",
+      "result": {
+        "client": 753,
+        "footerHeight": 61,
+        "tabs": [
+          {
+            "height": 44,
+            "text": "Информация",
+            "width": 228.328125
+          },
+          {
+            "height": 44,
+            "text": "Екстериор",
+            "width": 228.328125
+          },
+          {
+            "height": 44,
+            "text": "Интериор",
+            "width": 228.328125
+          }
+        ],
+        "viewport": [
+          768,
+          1024
+        ],
+        "width": 753
+      }
+    },
+    {
+      "check": "short phone footer clearance",
+      "result": {
+        "footerTop": 515,
+        "lastActionBottom": 494.59375,
+        "overflow": false,
+        "viewport": [
+          320,
+          568
+        ]
+      }
+    },
+    {
+      "check": "condition row opens enquiry",
+      "result": {
+        "dialog": null,
+        "text": "Drive24\n\nСвържете се с продавача\n\nТози демо сайт само подготвя запитване. Тук не се правят резервации и покупки и не се изпращат съобщения.\n\nЧернова на запитването\nКопирай черновата\n\nЗа този демо сайт няма потвърден канал за контакт.\n\nПотвърдете наличността, цените и условията за услугите директно с продавача."
+      }
+    },
+    {
+      "check": "condition request focus returns",
+      "result": {
+        "dialogs": 0,
+        "focus": "Състояние — Поискайте информация за автомобила"
+      }
+    },
+    {
+      "check": "footer enquiry opens draft",
+      "result": {
+        "draft": "Здравейте, интересувам се от 2022 KIA SELTOS LX.\nhttp://localhost:3001/bg/cars/2022-kia-seltos-lx-3696",
+        "title": "dealer-enquiry-title"
+      }
+    },
+    {
+      "check": "footer enquiry focus return",
+      "result": {
+        "focus": "Запитване за автомобила",
+        "outline": "2px"
+      }
+    },
+    {
+      "check": "footer viewing opens draft",
+      "result": {
+        "dialog": "dealer-enquiry-title"
+      }
+    },
+    {
+      "check": "finance controls update illustrative result",
+      "result": {
+        "range": "21",
+        "terms": [
+          "3 години"
+        ],
+        "text": "Примерно плащане\nПримерна вноска\n\nСамо пример. Това не е оферта от продавач или кредитор. Можете да промените стойностите по-долу.\n\nЦена на автомобила (EUR)\nГодишна лихва (%)\nПървоначална вноска\nEUR 9,135 · 21%\nСрок на изплащане\n1 година\n2 години\n3 години\n4 години\n5 години\n6 години\n7 години\nПримерна месечна вноска\nEUR 1,061\nПримерна обща сума с първоначалната вноска: EUR 47,333\n\nДанъци, регистрация, застраховки и допълнителни такси не са включени. Потвърдете действителните лихви, изисквания и налични услуги с продавача и кредитора.\n\nПопитайте продавача"
+      }
+    },
+    {
+      "check": "finance Escape focus return",
+      "result": {
+        "dialogs": 0,
+        "focus": "Начини на плащанеПримерен калкулатор",
+        "outlineWidth": "2px"
+      }
+    },
+    {
+      "check": "equipment destination and search",
+      "result": {
+        "items": [
+          "Круиз контрол"
+        ],
+        "overflow": false,
+        "query": "Круиз",
+        "url": "http://localhost:3001/bg/cars/2022-kia-seltos-lx-3696/features"
+      }
+    },
+    {
+      "check": "Tab enters visible panel",
+      "result": {
+        "labelledBy": "_r_1_-tab-1",
+        "role": "tabpanel"
+      }
+    },
+    {
+      "check": "Tab reaches inline photo",
+      "result": {
+        "focus": "Отвори снимката: Отпред вдясно"
+      }
+    },
+    {
+      "check": "End activates Interior",
+      "result": {
+        "focused": "Интериор",
+        "selected": "Интериор"
+      }
+    },
+    {
+      "check": "ArrowRight wraps to Information",
+      "result": {
+        "focused": "Информация",
+        "selected": "Информация",
+        "url": "http://localhost:3001/bg/cars/2022-kia-seltos-lx-3696"
+      }
+    },
+    {
+      "check": "final text contrast",
+      "result": {
+        "priceNote": {
+          "background": "rgb(246, 246, 247)",
+          "color": "rgb(98, 98, 105)",
+          "fontSize": "12px",
+          "lineHeight": "18px",
+          "text": "Примерна обява — потвърдете цената и наличността",
+          "ratio": 5.602812940800617
+        },
+        "recordStatus": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(98, 98, 105)",
+          "fontSize": "13px",
+          "lineHeight": "18px",
+          "text": "Няма доклад",
+          "ratio": 6.0511909141688
+        },
+        "selectedTab": {
+          "background": "rgb(32, 32, 36)",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "text": "ИнфоИнформация",
+          "ratio": 16.235084718802778
+        },
+        "specLabel": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(98, 98, 105)",
+          "fontSize": "13px",
+          "lineHeight": "18px",
+          "text": "Двигател",
+          "ratio": 6.0511909141688
+        },
+        "specValue": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(32, 32, 36)",
+          "fontSize": "15px",
+          "lineHeight": "22px",
+          "text": "1.6L",
+          "ratio": 16.235084718802778
+        }
+      }
+    },
+    {
+      "check": "English 320 reflow",
+      "result": {
+        "labels": [
+          "Info",
+          "Exteriors",
+          "Interiors"
+        ],
+        "overflow": false,
+        "recordRows": [
+          {
+            "height": 56,
+            "overflow": false,
+            "text": "Car Condition\nNo report"
+          },
+          {
+            "height": 56,
+            "overflow": false,
+            "text": "Service History\nNo records"
+          }
+        ],
+        "values": [
+          {
+            "font": "15px",
+            "text": "1.6L"
+          },
+          {
+            "font": "15px",
+            "text": "Automatic"
+          },
+          {
+            "font": "15px",
+            "text": "SUV"
+          },
+          {
+            "font": "15px",
+            "text": "Petrol"
+          },
+          {
+            "font": "15px",
+            "text": "Red"
+          },
+          {
+            "font": "15px",
+            "text": "99,000 km"
+          }
+        ],
+        "viewport": [
+          320,
+          844
+        ]
+      }
+    },
+    {
+      "check": "final Bulgarian 390 layout",
+      "result": {
+        "client": 375,
+        "footerHeight": 53,
+        "pageHeight": 1459,
+        "records": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "height": 56,
+            "text": "Състояние\nНяма доклад"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "height": 56,
+            "text": "Сервизна история\nНяма данни"
+          }
+        ],
+        "sectionRail": 0,
+        "viewport": [
+          390,
+          844
+        ],
+        "width": 375
+      }
+    },
+    {
+      "check": "browser JavaScript errors",
+      "result": []
+    },
+    {
+      "check": "Fortuner classified equipment",
+      "result": {
+        "items": [
+          "Предни фарове за мъгла",
+          "Круиз контрол",
+          "Заден парктроник"
+        ],
+        "overflow": false,
+        "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr"
+      }
+    },
+    {
+      "check": "Kia classified equipment final",
+      "result": {
+        "items": [
+          "Круиз контрол",
+          "Релси на покрива",
+          "Спойлер на задната броня"
+        ],
+        "overflow": false,
+        "url": "http://localhost:3001/bg/cars/2022-kia-seltos-lx-3696"
+      }
+    },
+    {
+      "check": "final equipment English reflow",
+      "result": {
+        "items": [
+          "Cruise Control",
+          "Roof Rails",
+          "Rear Bumper Spoiler"
+        ],
+        "overflow": false
+      }
+    }
+  ]
+}

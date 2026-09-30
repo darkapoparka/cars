@@ -15,11 +15,11 @@ const location = "ул. Свобода, на гърба на Гробищен п
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Пазарджик',
-	locationShort: "Пазарджик",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Пазарджик'
-	},
+  "city": "Pazardzhik",
+  "locationShort": "Pazardzhik",
+  "addressLine": "Svoboda Street, behind the cemetery park",
+  "address": "Svoboda Street, behind the cemetery park, Pazardzhik"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -33,14 +33,14 @@ export const daynightSite = {
 	shortName,
 	city,
 	region: city,
-	countryCode: 'BG',
-	locale: 'bg-BG',
-	currency: 'EUR',
+	countryCode: "BG",
+	locale: "bg-BG",
+	currency: "EUR",
 	phoneE164,
 	...contactLinks(phoneE164),
 	phone: '359896781662',
 	phoneLabel: '0896 781 662',
-	email: '',
+	email: "",
 	location,
 	locationShort: `${district}, ${city}`,
 	locationLandmark: "ул. Свобода, на гърба на Гробищен парк",
@@ -48,10 +48,11 @@ export const daynightSite = {
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: 'https://daynight.mobile.bg/',
+	sourceInventory: "https://eliqauto.mobile.bg/",
 	logoLight: "/dealer-brand/logo-on-dark-20260919.webp",
 	logoDark: "/dealer-brand/logo-on-light-20260919.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"https://www.youtube.com/channel/UCGXhr1QYqALiBBQpBYZtpmw","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

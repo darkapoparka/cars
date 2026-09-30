@@ -67,8 +67,8 @@
 		width: 100%;
 		height: auto;
 		aspect-ratio: 1.6;
-		object-fit: cover;
-		background: var(--bc-card-media);
+		object-fit: contain;
+		background: #f1f3f5;
 	}
 	.article-card__body {
 		display: flex;
@@ -132,7 +132,14 @@
 			padding: var(--bc-space-5);
 		}
 		.article-card__title {
-			font-size: var(--bc-mobile-section-title);
+			font-size: 17px;
+			line-height: 22px;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+			overflow: hidden;
+			min-height: 44px;
 		}
 	}
 </style>

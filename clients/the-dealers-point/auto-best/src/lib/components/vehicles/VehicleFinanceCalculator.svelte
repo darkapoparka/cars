@@ -159,7 +159,7 @@
   }
 
   .dn-finance-calculator__result dt {
-    color: #707680;
+    color: var(--dn-muted);
     font-size: var(--dn-text-meta);
     line-height: var(--dn-leading-meta);
   }
@@ -174,7 +174,7 @@
 
   .dn-finance-calculator__disclaimer {
     margin: 10px 0 0;
-    color: #747a83;
+    color: var(--dn-muted);
     font-size: var(--dn-text-meta);
     line-height: var(--dn-leading-body);
   }

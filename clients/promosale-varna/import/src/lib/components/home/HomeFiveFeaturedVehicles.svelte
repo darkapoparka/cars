@@ -114,8 +114,8 @@
 				<div
 					class="daynight-home-vehicle-grid lg-grid-cols-2 sm-grid-cols-1 grid grid-cols-4 gap-30"
 				>
-					{#each vehicles as vehicle (vehicle.slug)}
-						<HomeFiveVehicleCard {vehicle} copy={copy.vehicleCard} />
+					{#each vehicles as vehicle, index (vehicle.slug)}
+						<HomeFiveVehicleCard {vehicle} copy={copy.vehicleCard} priority={index === 0} />
 					{/each}
 					<a
 						class="daynight-mobile-view-all-card"
@@ -1017,7 +1017,7 @@
 		.daynight-featured-vehicles {
 			background: var(--bc-bg-strong);
 			padding-top: 0;
-			padding-bottom: 8px;
+			padding-bottom: 0;
 		}
 
 		.daynight-newest-shell {
@@ -1198,7 +1198,7 @@
 			display: grid;
 			width: 100%;
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-			grid-auto-rows: 88px;
+			grid-auto-rows: 64px;
 			gap: 8px;
 		}
 

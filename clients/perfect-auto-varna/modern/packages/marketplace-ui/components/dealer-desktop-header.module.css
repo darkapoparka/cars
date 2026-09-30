@@ -14,7 +14,9 @@
     border-bottom: 0;
   }
 
-  .header:has([aria-controls="dealer-desktop-locale-menu"][aria-expanded="true"]) {
+  .header:has(
+      [aria-controls="dealer-desktop-locale-menu"][aria-expanded="true"]
+    ) {
     z-index: 45;
   }
 

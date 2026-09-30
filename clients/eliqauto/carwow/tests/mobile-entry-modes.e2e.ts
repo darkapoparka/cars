@@ -19,11 +19,15 @@ test('import tabs preserve separate drafts and submit only the chosen identifier
 		});
 	});
 	await page.goto('/contact?intent=import', { waitUntil: 'networkidle' });
-	const link = page.getByRole('textbox', { name: 'Линк към обява', exact: true });
+	const linkTrigger = page.getByRole('button', { name: 'Линк към обява', exact: true });
+	await linkTrigger.click();
+	const linkDialog = page.locator('dialog[open]');
+	const link = linkDialog.locator('[name="sourceUrl"]');
 	await link.fill('not a link');
-	await page.getByRole('button', { name: 'Продължи', exact: true }).click();
+	await linkDialog.getByRole('button', { name: 'Продължи', exact: true }).click();
 	await expect(page.getByRole('alert')).toContainText('https://');
 	await link.fill('https://example.com/car');
+	await page.keyboard.press('Escape');
 	await page.getByRole('tab', { name: 'Линк', exact: true }).focus();
 	await page.keyboard.press('ArrowRight');
 	await expect(page.getByRole('tab', { name: 'VIN', exact: true })).toHaveAttribute(
@@ -36,7 +40,9 @@ test('import tabs preserve separate drafts and submit only the chosen identifier
 	await expect(page.getByRole('alert')).toContainText('17');
 	await vin.fill('WBA12345678901234');
 	await page.getByRole('tab', { name: 'Линк', exact: true }).click();
+	await linkTrigger.click();
 	await expect(link).toHaveValue('https://example.com/car');
+	await page.keyboard.press('Escape');
 	await page.getByRole('tab', { name: 'VIN', exact: true }).click();
 	await expect(vin).toHaveValue('WBA12345678901234');
 	await page.getByRole('button', { name: 'Продължи', exact: true }).click();
@@ -46,7 +52,9 @@ test('import tabs preserve separate drafts and submit only the chosen identifier
 	await dialog.getByRole('button', { name: 'Продължи', exact: true }).click();
 	await dialog.locator('[name="contact"]').fill('+359888123456');
 	await dialog.getByRole('button', { name: 'Изпрати заявка', exact: true }).click();
-	await expect(page.getByRole('heading', { name: 'Заявката е изпратена' })).toBeVisible();
+	await expect(
+		page.getByRole('heading', { name: 'Демонстрацията приключи; не е изпратена заявка' })
+	).toBeVisible();
 	expect(payload.notes).toContain('WBA12345678901234');
 	expect(payload.notes).not.toContain('https://example.com/car');
 });
@@ -63,7 +71,7 @@ test('sell manual mode preserves the identifier draft and form details', async (
 	await page.getByRole('button', { name: /Въведи данните за автомобила ръчно/ }).click();
 	await expect(dialog.locator('[name="make"]')).toHaveValue('BMW');
 	await page.keyboard.press('Escape');
-	await page.getByRole('tab', { name: 'VIN / Номер', exact: true }).click();
+	await page.getByRole('tab', { name: 'VIN / номер', exact: true }).click();
 	await expect(identifier).toHaveValue('CB 1234 AB');
 });
 
@@ -75,7 +83,7 @@ for (const route of ['/sell-your-car', '/contact?intent=import']) {
 		const trigger = page.getByRole('button', { name: 'Как работи', exact: true });
 		await trigger.click();
 		const dialog = page.locator('dialog[open]');
-		const handle = dialog.getByRole('button', { name: 'Прибери панела', exact: true });
+		const handle = dialog.getByRole('button', { name: 'Приберете панела', exact: true });
 		let box = (await handle.boundingBox())!;
 		await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
 		await page.mouse.down();

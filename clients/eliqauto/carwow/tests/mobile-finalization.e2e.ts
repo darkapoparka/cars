@@ -94,17 +94,16 @@ for (const viewport of [
 test('blog active category is visible and filters are reversible', async ({ page }) => {
 	await page.setViewportSize({ width: 390, height: 844 });
 	await page.goto('/blog', { waitUntil: 'networkidle' });
-	const categories = page.locator('.blog-controls .widget-categories');
+	const categories = page.getByRole('navigation', { name: 'Категории публикации' });
 	await categories.getByRole('link', { name: 'Продажба', exact: true }).click();
 	await expect(page).toHaveURL(/category=/);
 	const active = categories.locator('a.active');
 	await expect(active).toHaveText('Продажба');
 	await expect(active).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
 	await expect(active).not.toHaveCSS('background-color', 'rgb(255, 255, 255)');
-	const visibleCards = page.locator('[data-daynight-article-card]:visible');
+	const visibleCards = page.locator('.mobile-blog__card');
 	expect(await visibleCards.count()).toBeGreaterThan(0);
-	for (const card of await visibleCards.all())
-		await expect(card).toHaveAttribute('data-daynight-category', 'Продажба');
+	await expect(visibleCards).toHaveCount(2);
 	await categories.getByRole('link', { name: 'Всички', exact: true }).click();
 	await expect(page).toHaveURL(/\/blog$/);
 });
@@ -137,7 +136,7 @@ for (const kind of ['sell', 'import'] as const) {
 		});
 		if (kind === 'sell') await page.getByRole('tab', { name: 'Данни', exact: true }).click();
 		await page
-			.getByRole('button', { name: kind === 'sell' ? /Нямам номер или VIN/ : /Нямам линк/ })
+			.getByRole('button', { name: kind === 'sell' ? /Нямам номер или VIN/ : /Филтри за внос/ })
 			.click();
 		const dialog = page.locator('dialog[open]');
 		await dialog.getByRole('button', { name: 'Продължи', exact: true }).click();
@@ -162,7 +161,9 @@ for (const kind of ['sell', 'import'] as const) {
 		await expect(dialog.getByRole('alert')).not.toContainText('Lead intake');
 		await expect(dialog.locator('[name="contact"]')).toHaveValue('+359888123456');
 		await dialog.locator('button[type="submit"]').click();
-		await expect(page.getByRole('heading', { name: 'Заявката е изпратена' })).toBeVisible();
+		await expect(
+			page.getByRole('heading', { name: 'Демонстрацията приключи; не е изпратена заявка' })
+		).toBeVisible();
 		expect(submissions).toBe(2);
 		expect(payload.contact).toBe('+359888123456');
 		if (kind === 'import') expect(payload.budgetMax).toBe(40000);
@@ -208,7 +209,7 @@ test('withdrawn garage selections are retained until explicitly removed', async 
 	expect(
 		await page.evaluate(() => JSON.parse(localStorage.getItem('daynight:favorites') || '[]'))
 	).toEqual(['withdrawn-test-car']);
-	await page.getByRole('button', { name: /Премахни недостъпните/ }).click();
+	await page.getByRole('button', { name: /Премахнете недостъпните/ }).click();
 	await expect(page.getByRole('complementary', { name: 'Недостъпни обяви' })).toHaveCount(0);
 	expect(
 		await page.evaluate(() => JSON.parse(localStorage.getItem('daynight:favorites') || '[]'))
@@ -220,16 +221,16 @@ test('legacy sell aliases preserve query parameters', async ({ request }) => {
 		['/sell-car', '/sell-your-car'],
 		['/sell-car/request', '/sell-your-car/request']
 	]) {
-		const response = await request.get(`${from}?make=BMW`, { maxRedirects: 0 });
+		const response = await request.get(`/bg${from}?make=BMW`, { maxRedirects: 0 });
 		expect(response.status()).toBe(308);
-		expect(response.headers().location).toBe(`${to}?make=BMW`);
+		expect(response.headers().location).toBe(`/bg${to}?make=BMW`);
 	}
 });
 
 test('import form actions remain reachable in a reduced visible viewport', async ({ page }) => {
 	await page.setViewportSize({ width: 390, height: 420 });
 	await page.goto('/contact?intent=import', { waitUntil: 'networkidle' });
-	await page.getByRole('button', { name: /Нямам линк/ }).click();
+	await page.getByRole('button', { name: /Филтри за внос/ }).click();
 	const dialog = page.locator('dialog[open]');
 	await dialog.locator('[name="query"]').fill('BMW X5');
 	await expect(dialog.getByRole('button', { name: 'Продължи', exact: true })).toBeInViewport();

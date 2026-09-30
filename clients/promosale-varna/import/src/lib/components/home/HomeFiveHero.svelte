@@ -150,14 +150,14 @@
 				? [
 						{ href: '/calculator', label: 'Import calculator' },
 						{ href: '/services', label: 'Import process' },
-						{ href: '/agents', label: 'Consultant' },
+						{ href: '/contact?topic=import', label: 'Consultant' },
 						{ href: '/contact', label: 'Ask ' + site.identity.name },
 						{ href: '/inventory', label: 'Available cars' }
 					]
 				: [
 						{ href: '/calculator', label: nt('ui91') },
 						{ href: '/services', label: nt('ui92') },
-						{ href: '/agents', label: nt('ui93') },
+						{ href: '/contact?topic=import', label: nt('ui93') },
 						{ href: '/contact', label: nt('ui94') + site.identity.name },
 						{ href: '/inventory', label: nt('ui95') }
 					];
@@ -168,14 +168,14 @@
 				? [
 						{ href: '/sell-your-car', label: 'Valuation form' },
 						{ href: '/services', label: 'Selling process' },
-						{ href: '/agents', label: 'Consultant' },
+						{ href: '/contact?topic=sell', label: 'Consultant' },
 						{ href: '/contact', label: 'Ask ' + site.identity.name },
 						{ href: '/inventory', label: 'Available cars' }
 					]
 				: [
 						{ href: '/sell-your-car', label: nt('ui96') },
 						{ href: '/services', label: nt('ui97') },
-						{ href: '/agents', label: nt('ui93') },
+						{ href: '/contact?topic=sell', label: nt('ui93') },
 						{ href: '/contact', label: nt('ui94') + site.identity.name },
 						{ href: '/inventory', label: nt('ui95') }
 					];
@@ -662,26 +662,38 @@
 			</div>
 
 			<div class="daynight-hero-cars" aria-hidden="true">
-				<img
-					class="daynight-hero-car daynight-hero-car--left"
-					src={assetHref('/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp')}
-					alt=""
-					width="820"
-					height="420"
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-				/>
-				<img
-					class="daynight-hero-car daynight-hero-car--right"
-					src={assetHref('/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp')}
-					alt=""
-					width="820"
-					height="420"
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-				/>
+				<picture>
+					<source
+						media="(min-width: 768px)"
+						srcset={assetHref('/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp')}
+					/>
+					<img
+						class="daynight-hero-car daynight-hero-car--left"
+						src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1717' height='916'/%3E"
+						alt=""
+						width="1717"
+						height="916"
+						loading="eager"
+						decoding="async"
+						fetchpriority="high"
+					/>
+				</picture>
+				<picture>
+					<source
+						media="(min-width: 768px)"
+						srcset={assetHref('/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp')}
+					/>
+					<img
+						class="daynight-hero-car daynight-hero-car--right"
+						src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1820' height='864'/%3E"
+						alt=""
+						width="1820"
+						height="864"
+						loading="eager"
+						decoding="async"
+						fetchpriority="high"
+					/>
+				</picture>
 			</div>
 
 			<!-- Search Cars Section -->
@@ -1516,7 +1528,7 @@
 			background: transparent;
 			color: rgb(255 255 255 / 0.72);
 			font-family: var(--bc-font-body);
-			font-size: var(--bc-text-h5);
+			font-size: var(--bc-text-mode-tab);
 			font-weight: var(--bc-weight-control);
 			letter-spacing: 0;
 			line-height: 24px;
@@ -1896,7 +1908,7 @@
 			flex: 0 0 40px;
 			border: 0;
 			border-radius: 999px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			color: var(--bc-ink);
 			cursor: pointer;
 			padding: 0;
@@ -1945,7 +1957,7 @@
 			align-items: center;
 			gap: 10px;
 			border-radius: 999px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			padding: 0 13px;
 			color: var(--bc-ink);
 		}
@@ -2024,7 +2036,7 @@
 			min-height: 44px;
 			align-items: center;
 			border-radius: 8px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			padding: 0 12px;
 			color: var(--bc-ink);
 			font-size: var(--bc-text-control);
@@ -2071,15 +2083,16 @@
 		}
 
 		.daynight-home-search-drawer__group a:focus-visible {
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			color: var(--bc-ink);
-			outline: 0;
+			outline: 2px solid var(--bc-accent);
+			outline-offset: 2px;
 		}
 
 		.daynight-home-search-drawer__hint {
 			margin: 0;
 			border-radius: 12px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			padding: 12px 13px;
 			color: var(--bc-copy);
 			font-size: var(--bc-mobile-body);
@@ -2106,7 +2119,7 @@
 			justify-content: center;
 			border: 0;
 			border-radius: 12px;
-			background: var(--bc-surface);
+			background: var(--bc-white);
 			padding: 0 12px;
 			color: var(--bc-ink);
 			font-size: var(--bc-text-cta);

@@ -1,3 +1,10 @@
+import { formatPrice, localeContract, type Locale } from '$lib/locale/core';
+import { templateText } from '$lib/locale/messages';
+import { leadSite } from '$config/lead-site';
+
+export const vehicleTypes = ['car', 'motorbike', 'van', 'truck'] as const;
+export type VehicleType = typeof vehicleTypes[number];
+
 export type VehicleCondition = 'new' | 'used';
 export type VehicleEquipment =
   | '4x4'
@@ -11,12 +18,15 @@ export type VehicleEquipment =
 
 export type Vehicle = {
   id: number;
+  type: VehicleType;
   verification: 'sample' | 'verified';
   evidenceUrl?: string;
   image: string;
   category: string;
   body: string;
   make: string;
+  /** Optional manufacturer sub-brand used by compact card identity. */
+  cardBrand?: string;
   title: string;
   year: string;
   yearNumber: number;
@@ -49,7 +59,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 12880,
-    "href": "/listing-detail-v1/1"
+    "href": "/listing-detail-v1/1",
+    "type": "car"
   },
   {
     "id": 2,
@@ -69,7 +80,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 24880,
-    "href": "/listing-detail-v1/2"
+    "href": "/listing-detail-v1/2",
+    "type": "car"
   },
   {
     "id": 3,
@@ -89,7 +101,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 13660,
-    "href": "/listing-detail-v1/3"
+    "href": "/listing-detail-v1/3",
+    "type": "car"
   },
   {
     "id": 4,
@@ -109,7 +122,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 13660,
-    "href": "/listing-detail-v1/4"
+    "href": "/listing-detail-v1/4",
+    "type": "car"
   },
   {
     "id": 5,
@@ -129,7 +143,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 0,
-    "href": "/listing-detail-v1/5"
+    "href": "/listing-detail-v1/5",
+    "type": "car"
   },
   {
     "id": 6,
@@ -149,7 +164,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 77880,
-    "href": "/listing-detail-v1/6"
+    "href": "/listing-detail-v1/6",
+    "type": "car"
   },
   {
     "id": 7,
@@ -169,7 +185,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 39660,
-    "href": "/listing-detail-v1/7"
+    "href": "/listing-detail-v1/7",
+    "type": "car"
   },
   {
     "id": 8,
@@ -189,7 +206,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 81745,
-    "href": "/listing-detail-v1/8"
+    "href": "/listing-detail-v1/8",
+    "type": "car"
   },
   {
     "id": 9,
@@ -209,7 +227,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 25660,
-    "href": "/listing-detail-v1/9"
+    "href": "/listing-detail-v1/9",
+    "type": "car"
   },
   {
     "id": 10,
@@ -229,7 +248,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 79660,
-    "href": "/listing-detail-v1/10"
+    "href": "/listing-detail-v1/10",
+    "type": "car"
   },
   {
     "id": 11,
@@ -249,7 +269,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 64880,
-    "href": "/listing-detail-v1/11"
+    "href": "/listing-detail-v1/11",
+    "type": "car"
   },
   {
     "id": 12,
@@ -269,7 +290,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 57880,
-    "href": "/listing-detail-v1/12"
+    "href": "/listing-detail-v1/12",
+    "type": "car"
   },
   {
     "id": 13,
@@ -289,7 +311,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 39660,
-    "href": "/listing-detail-v1/13"
+    "href": "/listing-detail-v1/13",
+    "type": "car"
   },
   {
     "id": 14,
@@ -309,7 +332,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 39660,
-    "href": "/listing-detail-v1/14"
+    "href": "/listing-detail-v1/14",
+    "type": "car"
   },
   {
     "id": 15,
@@ -329,7 +353,8 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 29660,
-    "href": "/listing-detail-v1/15"
+    "href": "/listing-detail-v1/15",
+    "type": "car"
   },
   {
     "id": 16,
@@ -349,15 +374,13 @@ export const featuredVehicles: Vehicle[] = [
     "equipment": [],
     "condition": "used",
     "priceEur": 15880,
-    "href": "/listing-detail-v1/16"
+    "href": "/listing-detail-v1/16",
+    "type": "car"
   }
 ];
 
-const inventoryLocale = "bg-BG";
-const inventoryCurrency = "EUR";
-export const formatVehiclePrice = (amount: number) =>
-  new Intl.NumberFormat(inventoryLocale, {
-    style: 'currency',
-    currency: inventoryCurrency,
-    maximumFractionDigits: 0
-  }).format(amount);
+export const formatVehiclePrice = (amount: number, locale: Locale = localeContract.defaultLocale) => amount > 0 ? formatPrice(amount, locale) : templateText(locale, 'Price on request');
+
+/** Allow a currency line break while preserving the locale's grouped digits. */
+export const formatVehiclePriceLabel = (amount: number, locale: Locale = localeContract.defaultLocale) =>
+  formatVehiclePrice(amount, locale).replace(/([A-Z]{3})\s+/u, '$1 ').replace(/\s+([A-Z]{3})$/u, ' $1');

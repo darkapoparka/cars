@@ -405,7 +405,7 @@
 					</button>
 				{/if}
 			</div>
-			<div class="mobile-filter-options" aria-label={i18n.t('copy.83755da980c3')}>
+			<div class="mobile-filter-options" role="group" aria-label={i18n.t('copy.83755da980c3')}>
 				<button
 					type="button"
 					class={!selectedBrands.length ? 'is-active' : ''}
@@ -466,7 +466,7 @@
 					</button>
 				{/if}
 			</div>
-			<div class="mobile-filter-options" aria-label={i18n.t('copy.78a19a5d2b59')}>
+			<div class="mobile-filter-options" role="group" aria-label={i18n.t('copy.78a19a5d2b59')}>
 				<button
 					type="button"
 					class={!selectedModels.length ? 'is-active' : ''}
@@ -555,7 +555,7 @@
 				onSelect={selectTransmissionAndReturn}
 			/>
 		{:else if filterSheetMode === 'sort'}
-			<div class="mobile-filter-options" aria-label={i18n.t('copy.365e7bf87b30')}>
+			<div class="mobile-filter-options" role="group" aria-label={i18n.t('copy.365e7bf87b30')}>
 				{#each sortOptions as option (option.value)}
 					<button
 						type="button"

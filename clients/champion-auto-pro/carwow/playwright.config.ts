@@ -23,6 +23,22 @@ export default defineConfig({
 	use: {
 		browserName: browserName as BrowserName,
 		baseURL,
+		// Legacy route journeys assert Bulgarian copy. Explicit /en coverage
+		// overrides these cookies in mobile-acceptance.e2e.ts.
+		locale: 'bg-BG',
+		storageState: {
+			cookies: ['cars_locale', 'cars_prompt'].map((name) => ({
+				name,
+				value: name === 'cars_locale' ? 'bg' : 'v1',
+				domain: new URL(baseURL).hostname,
+				path: '/',
+				expires: -1,
+				httpOnly: false,
+				secure: new URL(baseURL).protocol === 'https:',
+				sameSite: 'Lax' as const
+			})),
+			origins: []
+		},
 		trace: 'retain-on-failure',
 		screenshot: 'only-on-failure'
 	}

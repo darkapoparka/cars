@@ -15,11 +15,11 @@ const location = "10511 Olympic Drive, Dallas, TX 75220";
 /** Dealer-owned bilingual place copy. Client packages replace this bounded object. */
 export const daynightDealerText = {
 	en: {
-		city: 'Dallas',
-	locationShort: "Texas, Dallas",
-		addressLine: 'Studentski Grad · 18 Atanas Manchev Street',
-		address: '18 Atanas Manchev Street, Studentski Grad, Dallas'
-	},
+  "city": "Dallas",
+  "locationShort": "Texas, Dallas",
+  "addressLine": "10511 Olympic Drive, Dallas, TX 75220",
+  "address": "10511 Olympic Drive, Dallas, TX 75220"
+},
 	bg: {
 		city,
 		locationShort: `${district}, ${city}`,
@@ -33,14 +33,14 @@ export const daynightSite = {
 	shortName,
 	city,
 	region: city,
-	countryCode: 'BG',
-	locale: 'bg-BG',
-	currency: 'EUR',
+	countryCode: "US",
+	locale: "en-US",
+	currency: "USD",
 	phoneE164,
 	...contactLinks(phoneE164),
 	phone: '12149723233',
 	phoneLabel: '(214) 972-3233',
-	email: '',
+	email: "",
 	location,
 	locationShort: `${district}, ${city}`,
 	locationLandmark: "10511 Olympic Drive, Dallas, TX 75220",
@@ -48,10 +48,11 @@ export const daynightSite = {
 	mapEmbedSrc: `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=16&output=embed`,
 	mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`,
 	mapLabel: `${shortName}, ${location}`,
-	sourceInventory: 'https://daynight.mobile.bg/',
+	sourceInventory: "https://www.texasdriveauto.com/",
 	logoLight: "/dealer-brand/logo-on-dark.webp",
 	logoDark: "/dealer-brand/logo-on-light.webp",
 	socialLinks: {"facebook":"","instagram":"","youtube":"","tiktok":""},
+	menuBanner: '/assets/images/menu/menu-wheel-commerce-v3.webp',
 	primaryCta: 'Виж наличните автомобили',
 	sellCarCta: 'Продай автомобил',
 	accountCta: 'Свържи се с екипа',

@@ -12,6 +12,7 @@ describe('import criteria URLs', () => {
 			origin: 'DE',
 			make: 'BMW',
 			model: 'X5',
+			bodyType: 'SUV',
 			minYear: '2020',
 			maxPrice: '45000',
 			fuel: 'Дизел',
@@ -25,13 +26,15 @@ describe('import criteria URLs', () => {
 	it('rejects unsupported countries and malformed numeric or option values', () => {
 		expect(
 			importCriteriaFromParams(
-				new URLSearchParams('origin=ZZ&minYear=3000&maxPrice=-1&fuel=unknown&transmission=unknown')
+				new URLSearchParams(
+					'origin=ZZ&bodyType=unknown&minYear=3000&maxPrice=-1&fuel=unknown&transmission=unknown'
+				)
 			)
 		).toEqual(emptyImportCriteria);
 	});
 	it('clears all criteria while retaining unrelated URL state', () => {
 		const url = new URL(
-			'https://example.test/import?origin=DE&make=BMW&maxPrice=50000&vehicle=listing#request'
+			'https://example.test/import?origin=DE&make=BMW&bodyType=SUV&maxPrice=50000&vehicle=listing#request'
 		);
 		expect(importCriteriaUrl(url, emptyImportCriteria)).toBe('/import?vehicle=listing#request');
 	});

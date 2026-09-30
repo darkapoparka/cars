@@ -4,7 +4,13 @@
   const i18n = getI18n();
 
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+  import { mobileHeroRegions } from '$data/vehicle-artwork';
+  import { imageSrcset, mobileHeroSizes } from '$data/responsive-images';
 </script>
+
+<svelte:head>
+  <link rel="preload" as="image" href={mobileHeroRegions.home.src} imagesrcset={imageSrcset(mobileHeroRegions.home.src)} imagesizes={mobileHeroSizes} media="(max-width: 767px)" fetchpriority="high" />
+</svelte:head>
 
 <section class="dn-hero dn-route-hero dn-route-hero--light dn-discovery-hero" aria-labelledby="home-hero-title">
   <HeroVehicles pair="home" mobile />

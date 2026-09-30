@@ -33,7 +33,7 @@
 	<h1 class="sr-only">{i18n.t('copy.fd9d10272875')}</h1>
 	<header class="mobile-blog__top">
 		<form
-			action={resolve('/blog')}
+			action={i18n.href(resolve('/blog'))}
 			method="get"
 			role="search"
 			aria-label={i18n.t('copy.71e9661e5e2a')}
@@ -105,7 +105,7 @@
 						)
 							return;
 						event.preventDefault();
-						void goto(resolve('/blog/[slug]', { slug: article.slug }), {
+						void goto(i18n.href(resolve('/blog/[slug]', { slug: article.slug })), {
 							state: { blogReturn: routeParts(page.url.pathname).path + page.url.search }
 						});
 					}}
@@ -223,7 +223,7 @@
 	}
 	.mobile-blog__pills a.active {
 		background: #fce8ed;
-		color: var(--sa-red);
+		color: var(--sa-red-strong);
 	}
 	.mobile-blog__results {
 		padding: 0 var(--sa-mobile-gutter);

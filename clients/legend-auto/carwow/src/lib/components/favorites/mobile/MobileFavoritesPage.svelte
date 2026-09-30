@@ -76,8 +76,7 @@
 								<div class="mobile-favorites-card__body">
 									<div class="mobile-favorites-card__title">
 										<div>
-											<small>{vehicle.brand}</small>
-											<h3>{vehicle.shortTitle}</h3>
+											<h3 title={vehicle.shortTitle}>{vehicle.shortTitle}</h3>
 										</div>
 										<div class="mobile-favorites-card__price">
 											<strong>{vehicle.priceEur}</strong>
@@ -265,17 +264,9 @@
 		min-width: 0;
 	}
 
-	.mobile-favorites-card__title small {
-		color: #7e8896;
-		font-size: var(--sa-text-xs);
-		font-weight: var(--sa-weight-strong);
-		letter-spacing: 0.07em;
-		line-height: 1;
-		text-transform: uppercase;
-	}
-
 	.mobile-favorites-card h3 {
-		display: -webkit-box;
+		display: block;
+		min-width: 0;
 		overflow: hidden;
 		margin: 0;
 		color: #0f1629;
@@ -283,9 +274,8 @@
 		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.017em;
 		line-height: 1.16;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		line-clamp: 2;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	.mobile-favorites-card__price {
@@ -511,8 +501,7 @@
 		font-weight: var(--sa-weight-medium);
 		line-height: var(--sa-mobile-leading-body);
 	}
-	.mobile-favorites-card__media span,
-	.mobile-favorites-card__title small {
+	.mobile-favorites-card__media span {
 		font-size: var(--sa-mobile-type-micro);
 		font-weight: var(--sa-weight-semibold);
 	}

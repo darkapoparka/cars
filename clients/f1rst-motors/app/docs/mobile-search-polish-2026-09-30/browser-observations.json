@@ -1,0 +1,738 @@
+[
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 390,
+    "label": "search-polish-390-empty"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 320,
+    "label": "search-polish-320-empty"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "48 автомобила"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?q=",
+    "width": 320,
+    "label": "search-polish-320-inventory"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 320,
+    "label": "search-polish-320-suggestions"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "9 автомобила"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "search-polish-320-toyota-results"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Филтри"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "search-polish-320-brand-filters"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Филтри"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "search-polish-320-model-filter"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Подреди"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 320,
+    "label": "search-polish-320-sort"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "48 автомобила"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 390,
+    "label": "search-polish-390-sorted-inventory"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Филтри"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?brand=Toyota",
+    "width": 390,
+    "label": "search-polish-390-brand-filters"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 390,
+    "label": "search-polish-390-home"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 390,
+    "label": "search-polish-390-empty-final"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 320,
+    "label": "search-polish-320-long-query"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 1024,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 768,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 768,
+    "label": "search-polish-768-search"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Филтри"
+      }
+    ],
+    "height": 1024,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 768,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars",
+    "width": 768,
+    "label": "search-polish-768-filters"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Нашите автомобили"
+      },
+      {
+        "lines": 1,
+        "text": "Вижте отблизо."
+      },
+      {
+        "lines": null,
+        "text": "Филтри за автомобили"
+      },
+      {
+        "lines": null,
+        "text": "48 автомобила"
+      }
+    ],
+    "height": 1000,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      },
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 1425,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars",
+    "width": 1440,
+    "label": "search-polish-1440-inventory"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Филтри"
+      }
+    ],
+    "height": 1000,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 1440,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars",
+    "width": 1440,
+    "label": "search-polish-1440-filters"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Открийте следващия си автомобил."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 1000,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 1425,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 1440,
+    "label": "search-polish-1440-home"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 1000,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 1425,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 1440,
+    "label": "search-polish-1440-search"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 390,
+    "label": "search-polish-production-390-home"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Търсене"
+      },
+      {
+        "lines": 1,
+        "text": "Популярни марки"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 390,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/search",
+    "width": 390,
+    "label": "search-polish-production-390-search"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Оборудване"
+      },
+      {
+        "lines": 1.5,
+        "text": "Екстериор"
+      },
+      {
+        "lines": 1.5,
+        "text": "Комфорт и удобство"
+      },
+      {
+        "lines": 1.5,
+        "text": "Безопасност и защита"
+      }
+    ],
+    "height": 844,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 375,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr/features",
+    "width": 390,
+    "label": "search-polish-production-390-features"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 1,
+        "text": "Оборудване"
+      },
+      {
+        "lines": 1.5,
+        "text": "Комфорт и удобство"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr/features",
+    "width": 320,
+    "label": "search-polish-production-320-feature-query"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": 2,
+        "text": "Следващата ви кола."
+      },
+      {
+        "lines": 1,
+        "text": "Изберете марка"
+      },
+      {
+        "lines": 1,
+        "text": "Последно разгледани"
+      }
+    ],
+    "height": 740,
+    "inputs": [],
+    "overflow": false,
+    "scrollWidth": 305,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg",
+    "width": 320,
+    "label": "search-polish-production-320-home"
+  },
+  {
+    "brokenImages": [],
+    "contrastFailures": [],
+    "headings": [
+      {
+        "lines": null,
+        "text": "Филтри"
+      }
+    ],
+    "height": 740,
+    "inputs": [
+      {
+        "font": "Roboto, Arial, sans-serif",
+        "size": "16px"
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 320,
+    "smallTargets": [],
+    "smallText": [],
+    "unnamedControls": [],
+    "url": "http://localhost:3001/bg/cars?filters=1",
+    "width": 320,
+    "label": "search-polish-production-320-filters"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "route": "/bg",
+    "status": 200,
+    "milliseconds": 353
+  },
+  {
+    "route": "/bg/search",
+    "status": 200,
+    "milliseconds": 41
+  },
+  {
+    "route": "/bg/cars",
+    "status": 200,
+    "milliseconds": 110
+  },
+  {
+    "route": "/bg/cars/2024-toyota-fortuner-exr",
+    "status": 200,
+    "milliseconds": 46
+  },
+  {
+    "route": "/bg/cars/2024-toyota-fortuner-exr/features",
+    "status": 200,
+    "milliseconds": 31
+  }
+]

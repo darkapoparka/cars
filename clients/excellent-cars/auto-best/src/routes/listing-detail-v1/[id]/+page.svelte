@@ -15,8 +15,8 @@
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
   import { brand } from '$config/brand';
-  import { leadSite } from '$config/lead-site';
-  import { formatVehiclePrice, type Vehicle } from '$data/inventory';
+  import { formatVehiclePrice, formatVehiclePriceLabel, type Vehicle } from '$data/inventory';
+  import { imageSrcset } from '$data/responsive-images';
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
@@ -32,8 +32,12 @@
   let activeDetailTab = $derived(activeTabsByVehicle[data.vehicle.id] ?? 'overview');
   let shareCopied = $state(false);
   let financeDialog = $state<HTMLDialogElement>();
+  let financeOpener: HTMLButtonElement | undefined;
 
-  const openFinance = () => financeDialog?.showModal();
+  const openFinance = (event: MouseEvent) => {
+    financeOpener = event.currentTarget instanceof HTMLButtonElement ? event.currentTarget : undefined;
+    financeDialog?.showModal();
+  };
   const closeFinance = () => financeDialog?.close();
 
   async function shareVehicle() {
@@ -118,6 +122,8 @@
                 </div>
                 <img
                   src={data.vehicle.image}
+                  srcset={imageSrcset(data.vehicle.image)}
+                  sizes="(max-width: 991px) 100vw, (max-width: 1199px) 65vw, 850px"
                   alt={data.vehicle.title}
                   width="1245"
                   height="988"
@@ -181,6 +187,14 @@
               {/if}
             </section>
 
+            <div class="dn-detail-finance-trigger">
+              <strong>{i18n.t("m_b231bc0b36a1")}</strong>
+              <button class="dn-compact-control dn-detail-banner-action" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
+                {i18n.t("action.calculate")}
+                <Icon name="arrow-right" size={16} />
+              </button>
+            </div>
+
             <section class="dn-detail-card dn-detail-location-card" id="location" aria-labelledby="location-title">
               <div class="dn-detail-location-card__header">
                 <h2 id="location-title">{i18n.t("m_15b61974b270")}</h2>
@@ -202,9 +216,6 @@
             </section>
 
             <section class="dn-detail-card dn-detail-finance-card" aria-label={i18n.t("m_b444d04a5c5c")}>
-              <button class="dn-detail-finance-trigger" type="button" onclick={openFinance} aria-haspopup="dialog" aria-controls="dn-detail-finance-dialog" aria-label={i18n.t("m_e5ac520d079e")}>
-                <img class="dn-detail-finance-banner" src={leadSite.artwork.pdp.finance} alt={i18n.t("m_cab8c52c9be4")} width="450" height="150" loading="lazy" decoding="async" />
-              </button>
               <div class="dn-detail-finance-inline">
                 {#key data.vehicle.id}
                   <VehicleFinanceCalculator priceEur={data.vehicle.priceEur} vehicleId={data.vehicle.id} idPrefix="finance-inline" />
@@ -213,9 +224,13 @@
             </section>
 
             <section class="dn-detail-card dn-detail-dealer" aria-label={brand.name}>
-              <a class="dn-detail-dealer-banner" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
-                <img src={leadSite.artwork.pdp.seller} alt={templateMessage(i18n, "{p0} — contact the showroom to confirm vehicle details.", { p0: brand.name })} width="360" height="270" loading="lazy" decoding="async" />
-              </a>
+              <div class="dn-detail-dealer-banner">
+                <img class="dn-detail-dealer-banner__logo" src={brand.logoOnDark} alt={brand.name} width="180" height="64" loading="lazy" decoding="async" />
+                <a class="dn-compact-control dn-detail-banner-action" href={i18n.href(resolve(vehicleContactHref(data.vehicle.id)))}>
+                  {i18n.t("action.viewingShort")}
+                  <Icon name="arrow-right" size={16} />
+                </a>
+              </div>
             </section>
 
           </aside>
@@ -224,7 +239,7 @@
         <section class="dn-detail-related" aria-labelledby="related-title">
           <div class="dn-detail-related__header">
             <div>
-              <h2 id="related-title">{i18n.t("m_0122bd9951a2")}</h2>
+              <h2 id="related-title">{i18n.t("detail.viewMore")}</h2>
               <p>{i18n.t("m_70f001dd6767")}</p>
             </div>
             <a class="dn-detail-related__all" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_7d6647b063a2")}</a>
@@ -232,10 +247,10 @@
           <div class="dn-detail-related__list">
             {#each data.recommendations as vehicle (vehicle.id)}
               <a class="dn-detail-related-card" href={i18n.href(resolve(vehicle.href as '/listing-detail-v1/1'))}>
-                <img src={vehicle.image} alt="" width="420" height="280" decoding="async" />
+                <img src={vehicle.image} srcset={imageSrcset(vehicle.image)} sizes="(max-width: 767px) 236px, 33vw" alt="" width="420" height="280" loading="lazy" decoding="async" />
                 <span>
                   <strong>{vehicle.title}</strong>
-                  <b>{formatVehiclePrice(vehicle.priceEur, i18n.locale)}</b>
+                  <b>{formatVehiclePriceLabel(vehicle.priceEur, i18n.locale)}</b>
                 </span>
               </a>
             {/each}
@@ -249,6 +264,7 @@
     id="dn-detail-finance-dialog"
     bind:this={financeDialog}
     aria-labelledby="dn-detail-finance-dialog-title"
+    onclose={() => financeOpener?.focus({ preventScroll: true })}
     onclick={(event) => { if (event.target === event.currentTarget) closeFinance(); }}
   >
     <div class="dn-detail-finance-sheet">

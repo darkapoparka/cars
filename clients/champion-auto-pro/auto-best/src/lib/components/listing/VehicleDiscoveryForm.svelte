@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { listingFacetOptionLabel } from '$data/listing-draft';
   import { specificationLabel } from '$lib/i18n/presentation';
 
   import { getI18n } from '$lib/locale/context';
@@ -64,7 +65,7 @@
   let prices = $derived(listingOptionsWithCurrent(listingFilterOptions.prices, filters.priceMax?.toString() ?? ''));
   let years = $derived(listingOptionsWithCurrent(listingFilterOptions.years, filters.yearMin?.toString() ?? ''));
   let mileages = $derived(listingOptionsWithCurrent(listingFilterOptions.mileages, filters.mileageMax?.toString() ?? ''));
-  let hiddenFields = $derived(listingHiddenFields(filters, ['make', 'model', 'body', 'price_max', 'year_min', 'mileage_max']));
+  let hiddenFields = $derived(listingHiddenFields(filters, ['type', 'make', 'model', 'body', 'price_max', 'year_min', 'mileage_max']));
 
   function updateDraft(event: Event) {
     pending = normalizeListingMakeTransition(pending, listingFiltersFromFormData(new FormData(event.currentTarget as HTMLFormElement)));
@@ -80,6 +81,7 @@
 
 <form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
   <div class="dn-discovery__toolbar">
+    <label class="dn-discovery__type"><span>{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{listingFacetOptionLabel('type', value, i18n.locale)}</option>{/each}</select></label>
     <div class="dn-discovery__search">
       <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
         <Icon name="search" size={20} />
@@ -123,6 +125,9 @@
     display: grid;
     gap: var(--dn-discovery-gap);
   }
+  .dn-discovery__type { display: grid; flex: 0 0 190px; min-width: 0; height: var(--dn-discovery-search-height); padding: var(--dn-space-1) var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface); }
+  .dn-discovery__type > span { color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-meta); }
+  .dn-discovery__type select { min-width: 0; width: 100%; height: 30px; padding: 0 24px 0 0; border: 0; background-color: transparent; color: var(--dn-ink); font: var(--dn-body-font); }
   .dn-discovery__toolbar { display: flex; align-items: center; gap: 14px; min-width: 0; }
   .dn-discovery__search { display: flex; flex: 1; align-items: center; gap: 8px; min-width: 0; height: var(--dn-discovery-search-height, 60px); padding: 5px; border: 1px solid #dfe2e6; border-radius: var(--dn-pill); background: #f5f6f7; }
   .dn-discovery__keyword { display: flex; flex: 1; align-items: center; gap: 12px; min-width: 0; height: 48px; padding: 0 12px; border: 0; border-radius: var(--dn-pill); background: transparent; color: #68717d; text-align: left; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-regular); line-height: var(--dn-leading-control); cursor: pointer; }

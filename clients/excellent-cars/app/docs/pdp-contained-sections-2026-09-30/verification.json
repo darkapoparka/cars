@@ -1,0 +1,353 @@
+{
+  "date": "2026-09-30",
+  "layouts": [
+    {
+      "cardHeight": 240,
+      "height": 740,
+      "overflow": false,
+      "tiles": [
+        {
+          "height": 56,
+          "label": "Двигател",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "1.6L",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Скорости",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Автоматична",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Тип купе",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "SUV",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Гориво",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Бензин",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Цвят",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Червен",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Пробег",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "99,000 км",
+          "valueHeight": 20
+        }
+      ],
+      "top": 887.59375,
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "height": 80,
+          "href": "/bg/stores",
+          "name": "Вижте на място — посетете автокъщата"
+        },
+        {
+          "height": 44,
+          "href": "/bg/cars/2022-kia-seltos-lx-3696/features",
+          "name": "Цялото оборудване"
+        }
+      ],
+      "brokenImages": [],
+      "cardHeight": 240,
+      "contentWidth": 375,
+      "documentWidth": 375,
+      "height": 844,
+      "tiles": [
+        {
+          "height": 56,
+          "label": "Двигател",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "1.6L",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Скорости",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Автоматична",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Тип купе",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "SUV",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Гориво",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Бензин",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Цвят",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Червен",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Пробег",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "99,000 км",
+          "valueHeight": 20
+        }
+      ],
+      "url": "http://localhost:3001/bg/cars/2022-kia-seltos-lx-3696",
+      "width": 390
+    },
+    {
+      "actions": [
+        {
+          "height": 80,
+          "href": "/bg/stores",
+          "name": "Вижте на място — посетете автокъщата"
+        },
+        {
+          "height": 44,
+          "href": "/bg/cars/2022-kia-seltos-lx-3696/features",
+          "name": "Цялото оборудване"
+        }
+      ],
+      "brokenImages": [],
+      "cardHeight": 288,
+      "contentWidth": 1425,
+      "documentWidth": 1425,
+      "height": 1000,
+      "tiles": [
+        {
+          "height": 68,
+          "label": "Двигател",
+          "labelHeight": 18,
+          "overflow": false,
+          "value": "1.6L",
+          "valueHeight": 22
+        },
+        {
+          "height": 68,
+          "label": "Скорости",
+          "labelHeight": 18,
+          "overflow": false,
+          "value": "Автоматична",
+          "valueHeight": 22
+        },
+        {
+          "height": 68,
+          "label": "Тип купе",
+          "labelHeight": 18,
+          "overflow": false,
+          "value": "SUV",
+          "valueHeight": 22
+        },
+        {
+          "height": 68,
+          "label": "Гориво",
+          "labelHeight": 18,
+          "overflow": false,
+          "value": "Бензин",
+          "valueHeight": 22
+        },
+        {
+          "height": 68,
+          "label": "Цвят",
+          "labelHeight": 18,
+          "overflow": false,
+          "value": "Червен",
+          "valueHeight": 22
+        },
+        {
+          "height": 68,
+          "label": "Пробег",
+          "labelHeight": 18,
+          "overflow": false,
+          "value": "99,000 км",
+          "valueHeight": 22
+        }
+      ],
+      "url": "http://localhost:3001/bg/cars/2022-kia-seltos-lx-3696",
+      "width": 1440
+    },
+    {
+      "actions": [
+        {
+          "height": 80,
+          "href": "/en/stores",
+          "name": "See it in person — visit showroom"
+        },
+        {
+          "height": 44,
+          "href": "/en/cars/2024-toyota-fortuner-exr/features",
+          "name": "View all features"
+        }
+      ],
+      "brokenImages": [],
+      "cardHeight": 240,
+      "contentWidth": 305,
+      "documentWidth": 305,
+      "height": 740,
+      "tiles": [
+        {
+          "height": 56,
+          "label": "Engine",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "2.7L",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Gearbox",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Automatic",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Body Type",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "SUV",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Fuel Type",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Petrol",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Color",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Grey",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Distance driven",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "50,000 km",
+          "valueHeight": 20
+        }
+      ],
+      "url": "http://localhost:3001/en/cars/2024-toyota-fortuner-exr",
+      "width": 320
+    },
+    {
+      "actions": [
+        {
+          "height": 80,
+          "href": "/bg/stores",
+          "name": "Вижте на място — посетете автокъщата"
+        },
+        {
+          "height": 44,
+          "href": "/bg/cars/2024-toyota-fortuner-exr/features",
+          "name": "Цялото оборудване"
+        }
+      ],
+      "brokenImages": [],
+      "cardHeight": 240,
+      "contentWidth": 305,
+      "documentWidth": 305,
+      "height": 740,
+      "tiles": [
+        {
+          "height": 56,
+          "label": "Двигател",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "2.7L",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Скорости",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Автоматична",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Тип купе",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "SUV",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Гориво",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Бензин",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Цвят",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "Сив",
+          "valueHeight": 20
+        },
+        {
+          "height": 56,
+          "label": "Пробег",
+          "labelHeight": 16,
+          "overflow": false,
+          "value": "50,000 км",
+          "valueHeight": 20
+        }
+      ],
+      "url": "http://localhost:3001/bg/cars/2024-toyota-fortuner-exr",
+      "width": 320
+    }
+  ],
+  "interactions": {
+    "visitDestination": "/bg/stores",
+    "equipmentDestination": "/bg/cars/2024-toyota-fortuner-exr/features",
+    "equipmentSearch": "Круиз narrows to Круиз контрол",
+    "keyboardFocus": "2px solid focus ring on both changed links",
+    "conditionRequest": "Unsent enquiry draft; Escape closes and restores trigger focus"
+  }
+}

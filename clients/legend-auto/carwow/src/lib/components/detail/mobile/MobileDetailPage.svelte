@@ -214,6 +214,7 @@
 			class="mobile-detail__media-photo"
 			src={i18n.asset(activePhotoSrc)}
 			alt={vehicle.shortTitle}
+			fetchpriority="high"
 			decoding="async"
 			data-daynight-image-fallback
 			use:daynightImageFallback
@@ -903,19 +904,16 @@
 		flex: 0 0 auto;
 		min-height: 44px;
 		margin: 1px 0 4px;
-		/* Tabs span the full width in equal thirds (original positioning). The active
-		   underline sits 8px in from each tab edge on a hairline divider — rounded,
-		   2px, native underline-tab look (geometry from the pawtreon inline-tabs).
-		   This switcher no longer competes with the filled CTA pills above it. */
 		border-bottom: 1px solid #e8ecf2;
 	}
 
 	.mobile-detail-tabs button {
 		display: inline-flex;
 		position: relative;
+		box-sizing: border-box;
 		min-width: 0;
 		min-height: 44px;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: center;
 		border: 0;
 		background: transparent;
@@ -923,7 +921,7 @@
 		font-size: var(--sa-button-font-size);
 		font-weight: var(--sa-button-font-weight);
 		letter-spacing: 0;
-		padding: 0 8px;
+		padding: 0 8px 6px;
 		outline: none;
 		cursor: pointer;
 		transition: color 0.16s ease;
@@ -937,8 +935,6 @@
 		bottom: -1px;
 		left: 0;
 		height: 3px;
-		/* Spans the full tab width (each equal third), on the divider line (-1px
-		   overlaps the 1px border), 3px tall, rounded caps — native underline tab. */
 		border-radius: 999px;
 		background: var(--sa-blue);
 		opacity: 0;
@@ -956,8 +952,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		/* The sheet is portaled to <body>, so the template's global span color
-		   reaches it and would paint dark text on the active blue segment. */
 		color: inherit !important;
 	}
 
@@ -966,9 +960,9 @@
 		box-shadow: none !important;
 	}
 
-	.mobile-detail-tabs button:focus-visible:not(.is-active) {
-		border-radius: 10px;
-		outline: 3px solid rgba(47, 122, 255, 0.32) !important;
+	.mobile-detail-tabs button:focus-visible {
+		border-radius: 6px 6px 0 0;
+		outline: 2px solid var(--sa-ink) !important;
 		outline-offset: -3px;
 	}
 

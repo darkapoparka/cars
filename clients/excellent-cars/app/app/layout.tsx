@@ -8,6 +8,7 @@ import {getLocale, getCopy} from '@/lib/locale-server';
 import AppShell from '@/components/AppShell';
 import * as stylex from '@stylexjs/stylex';
 import {blueCampaignTheme} from './campaign-theme.stylex';
+import {bulgarianTypography} from './tokens.stylex';
 export async function generateMetadata(): Promise<Metadata> {
   const tx = await getCopy();
   return {title: {default: showroom.name, template: `%s · ${showroom.name}`},
@@ -21,7 +22,7 @@ export default async function RootLayout({children}: Readonly<{children: React.R
   const locale = await getLocale();
   return <html lang={locale}><head>
     {basePath ? <script defer src="/preview-switcher.js"/> : null}
-  </head><body data-cars-app="true" {...stylex.props(showroom.bannerTheme === 'blue' && blueCampaignTheme)}>
+  </head><body data-cars-app="true" {...stylex.props(showroom.bannerTheme === 'blue' && blueCampaignTheme, locale === 'bg' && bulgarianTypography)}>
     <LocaleProvider locale={locale}><AppShell>{children}</AppShell></LocaleProvider>
   </body></html>;
 }

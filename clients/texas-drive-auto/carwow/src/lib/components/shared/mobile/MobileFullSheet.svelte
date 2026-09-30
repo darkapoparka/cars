@@ -225,7 +225,10 @@
 		top: auto;
 		bottom: var(--sa-ov-bottom, 0px);
 		height: auto;
-		max-height: calc(var(--sa-ov-h, 100dvh) - var(--sa-space-4) - env(safe-area-inset-top));
+		max-height: calc(
+			var(--sa-ov-h, 100dvh) - clamp(16px, calc(var(--sa-ov-h, 100dvh) - 480px), 48px) -
+				env(safe-area-inset-top)
+		);
 		max-width: 36rem;
 		margin-inline: auto;
 		overflow: hidden;

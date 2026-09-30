@@ -5,14 +5,14 @@
 	align-items: center;
 	justify-content: center;
 	gap: 4px;
-	border: 1px solid rgba(255, 255, 255, 0.16);
+	border: 1px solid rgba(255, 255, 255, 0.22);
 	border-radius: var(--sa-r-pill);
-	background: rgba(255, 255, 255, 0.08);
+	background: rgba(255, 255, 255, 0.11);
 	padding: 0 13px;
 	color: rgba(255, 255, 255, 0.92) !important;
 	font-family: var(--sa-font);
 	font-size: var(--sa-text-base);
-	font-weight: var(--sa-weight-regular);
+	font-weight: var(--sa-weight-medium);
 	line-height: var(--sa-leading-normal);
 	text-decoration: none;
 	cursor: pointer;

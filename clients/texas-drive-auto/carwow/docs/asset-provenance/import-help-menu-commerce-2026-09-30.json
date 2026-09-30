@@ -1,0 +1,32 @@
+{
+	"generatedDate": "2026-09-30",
+	"generator": "Built-in image_gen.imagegen",
+	"modelVersion": "Not exposed by the built-in tool.",
+	"references": {
+		"page": "http://localhost:3001/bg/cars/2022-kia-seltos-lx-3696",
+		"inspection": "Compact showroom/ownership banners inspected in the browser. Local artwork used for style and composition.",
+		"assets": [
+			"templates/app/public/showroom/black/home-visit-v1.png",
+			"templates/app/public/showroom/black/ownership-v1.png"
+		]
+	},
+	"treatment": "WebP resize/encoding only. The real configured logo, localized headline/caption, and all controls remain native HTML.",
+	"assets": [
+		{
+			"asset": "static/assets/images/home-promos/import-help-advisor-v1.webp",
+			"width": 960,
+			"height": 480,
+			"purpose": "Illustrative import-advice commerce banner. Newly generated generic advisor; not an actual staff member or a claim of verified services.",
+			"original": "C:/Users/radev/.codex/generated_images/01a0f0c6-090d-7a72-bf39-b9d2f8576643/exec-3800a8b8-6d6c-499d-9bcc-f0fc8b68a101.png",
+			"prompt": "Use case: ads-marketing. Asset type: production background artwork for a compact mobile automotive import advice / call-us banner, landscape 2:1. Input image 1 (home-visit-v1.png) is a STYLE and COMPOSITION reference only: realistic photographic people on the right, charcoal black negative space on the left, restrained fine grey halftone texture. Create a new, different illustrative advisor, not the reference people. Subject: a photorealistic approachable male vehicle-import advisor aged about 38, short naturally textured dark hair, light stubble, charcoal cotton overshirt over a plain dark tee, a discreet black call headset. Head and upper torso on the RIGHT 43% of the canvas, angled a little towards the left, calm friendly expression with a small natural smile, realistic skin pores and fabric texture, softly lit by a large studio softbox. Clearly photographic and credible, not polished plastic stock-model skin. The complete head stays within the frame with comfortable top clearance. LEFT 57% is uninterrupted near-black charcoal matte negative space for localized HTML heading, short caption and white button, all added later. A subtle silver-grey curved division and extremely fine restrained halftone dots on the far right connect it to the reference's commerce art direction. At 350x175 pixels the face is readable and the left text area completely clear. No vehicle, no car, no showroom, no desk, no money, no extra person, no letters, no typography, no logo, no badge, no watermark, no button or UI, no giant shield, no neon or glowing effects. This is clean professional commerce artwork, not a candid scene."
+		},
+		{
+			"asset": "static/assets/images/menu/menu-wheel-commerce-v3.webp",
+			"width": 960,
+			"height": 320,
+			"purpose": "Neutral automotive product composition for the reusable mobile menu. No dealership premises, inventory, manufacturer logo, or generated dealer identity.",
+			"original": "C:/Users/radev/.codex/generated_images/01a0f0c6-090d-7a72-bf39-b9d2f8576643/exec-a90d9e5b-832e-4598-957d-c47406c1f380.png",
+			"prompt": "Use case: ads-marketing. Asset type: premium automotive mobile menu brand banner background, very wide landscape 3:1. Input image 1 (ownership-v1.png) is a STYLE reference only for the restrained charcoal-black / silver material palette, clean left negative space and subtle fine halftone detail. Generate a new professional studio product photograph composition. On the RIGHT 38% only, one realistic unbranded silver multi-spoke alloy wheel with a matte black rubber tyre, shown at a restrained slight three-quarter angle. Crisp believable brushed aluminium, subtle machining texture, physically coherent evenly arranged spokes, ordinary dark centre cap with NO logo, convincing rubber tread texture, soft studio highlights and a grounded short shadow. Wheel large enough to read at 150px wide, with top and bottom fully inside the artwork and modest breathing room. LEFT 62% stays clean near-black matte charcoal with very subtle tonal variation, clear for an actual dealership logo and location added later in HTML. A very light, tiny grey halftone pattern confined behind the wheel at the far right. Quiet high-end commercial art direction. No car, no vehicle body, no showroom/building, no scenery, no person, no text, no word, no logo, no watermark, no price, no shield, no neon, no glow, no gold, no sparks, no baked-in border, rounded corners, button or UI."
+		}
+	]
+}

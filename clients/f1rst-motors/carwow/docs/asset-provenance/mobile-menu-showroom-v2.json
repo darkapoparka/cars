@@ -1,0 +1,33 @@
+{
+	"generatedDate": "2026-09-30",
+	"generator": "Built-in image_gen.imagegen",
+	"modelVersion": "Not exposed by the built-in tool",
+	"purpose": "Neutral illustrative showroom photograph and generated placeholder logo for the reusable mobile menu. The photograph does not depict a verified dealer facility or inventory.",
+	"treatment": "Built-in image generation followed by WebP resize and encoding; excess empty logo framing cropped. Native CSS screen blending places the opaque raster logo over the photograph. Menu controls and place copy are native localized HTML.",
+	"assets": [
+		{
+			"path": "static/assets/images/menu/showroom-menu-banner-v2.webp",
+			"reference": "static/brand/daynight-hero-banner-dealership-v1.webp",
+			"sourceFile": "exec-666bf7c8-082f-4670-b188-1be370fc0f2b.png",
+			"prompt": "Use case: precise-object-edit. Asset type: generic car-showroom website menu banner. Edit the supplied showroom photograph and keep its panoramic 1600x600 framing, glass-fronted showroom on the right, realistic row of premium road cars, camera angle, dusk exposure, asphalt foreground and left-side open composition. The subject must remain a believable professional automotive showroom. Remove the SPARTAK AUTO lettering and helmet emblem completely from the building fascia; leave a clean plain dark charcoal facade, without any dealership name or logo. Reduce the overly dramatic orange sunset slightly to a restrained warm evening glow, retaining natural showroom lighting and photographic realism. Keep the left third as dark quiet foreground and uncluttered atmosphere, suitable for a separately rendered white placeholder dealership logo in the website. Preserve the useful building-and-car composition rather than replacing it with a single scenic car. No new signage, no labels, no watermarks, no added people, no extra cars, no UI, no text, no close button. This is neutral illustrative template photography, not an actual dealership or real inventory.",
+			"width": 960,
+			"height": 360,
+			"bytes": 36302,
+			"referenceSha256": "297a4eafed5d45f7059be6ce047d625a758793fcabe2a6dd601c6ab9c53d1416",
+			"sourceSha256": "8edb6082b303a0dde4140b478c590413ac7f85c67471c432cac4395338d23e68",
+			"sha256": "79cb35643a1ce3c77692fec6aafc9f1389aa061f222b6c0adf52efad91afab93"
+		},
+		{
+			"path": "static/brand/menu-placeholder-autogroup-v5.webp",
+			"sourceFile": "exec-6dc3562d-0734-43f3-81f6-2888cc6cd73d.png",
+			"prompt": "Use case: logo-brand. Create a refined neutral wordmark for a premium car dealership website template. Exact text: \"AUTO GROUP\". White solid bold upright geometric sans-serif lettering, professionally kerned, calm proportions, clear open letter counters. One small red rectangular accent preceding the wordmark. Absolutely no icon or emblem: no wheels, no car silhouettes, no badges, no monogram. One line of typography with a restrained red accent, in a balanced wide horizontal composition. Flat clean artwork on a perfectly solid opaque black background. Tight framing, minimal even outer margin. Legible at 146 pixels wide on a dark photographic showroom banner. Clean solid white strokes and smooth edges. No distressed details, no grain, no texture, no italic racing font, no chrome, no bevel, no shadows, no glow, no gradient, no extra slogans, no additional words, no recognizable existing brand. This is a generated placeholder identity to be replaced in dealer projects.",
+			"width": 672,
+			"height": 71,
+			"bytes": 6262,
+			"sourceSha256": "e11bfd28e87cdee441719b61da66f01b2fa2024acfab124553a3a81d2e9f3eb2",
+			"sha256": "3d3a396d0f81f2a3555012bf40e13833bc6f87640cb8e1d274b2a8e0b1085b87"
+		}
+	],
+	"placeholderLogo": "static/brand/menu-placeholder-autogroup-v5.webp; generated raster wordmark, replaced through daynightSite.menuLogo in dealer copies.",
+	"originalAssets": "Original reference and generated PNG files retained. Superseded photograph and logo candidates retained in the ignored local audit folder."
+}

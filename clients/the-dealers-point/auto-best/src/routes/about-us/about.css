@@ -199,12 +199,12 @@
 }
 
 @media (max-width: 991px) {
-  .dn-about-hero.dn-route-hero { height: 300px; min-height: 300px; }
-  .dn-about-hero .dn-route-hero__layout { padding: 24px 16px; justify-content: center; gap: 12px; }
+  .dn-about-hero.dn-route-hero { height: auto; min-height: 300px; }
+  .dn-about-hero .dn-route-hero__layout { height: auto; min-height: inherit; padding: 24px 16px; justify-content: center; gap: 12px; }
   .dn-about-hero .dn-route-hero__copy { display: block; text-align: center; }
   .dn-about-hero .dn-route-hero__copy h1 { font-size: var(--dn-text-heading); line-height: var(--dn-leading-heading); }
   .dn-about-hero .dn-route-hero__copy p { margin-top: 12px; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
-  .dn-about-hero .dn-about-button { min-height: 44px; align-self: center; margin-top: 0; font-size: var(--dn-cta-size); }
+  .dn-about-hero .dn-about-button { max-width: 100%; min-height: 44px; flex-shrink: 0; align-self: center; margin-top: 0; padding-block: var(--dn-space-2); overflow-wrap: anywhere; font-size: var(--dn-cta-size); }
   .dn-about-process > .container,
   .dn-about-showroom > .container {
     width: calc(100% - 24px);
@@ -215,6 +215,7 @@
     background: var(--dn-mobile-canvas);
   }
   .dn-about-showroom { padding: 32px 0; background: var(--dn-mobile-canvas); }
+  .dn-about-section-heading, .dn-about-showroom__heading, .dn-about-service-card, .dn-about-showroom__copy { min-width: 0; overflow-wrap: anywhere; }
   .dn-about-section-heading { text-align: left; }
   .dn-about-section-heading > p { font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
   .dn-about-section-heading h2 { font-size: var(--dn-text-subheading); }

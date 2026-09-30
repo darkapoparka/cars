@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "dealer": "texas-drive-auto",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/app",
+    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+  },
+  "appDigest": "e9d38e7d8c00d2d1c227d099cc6f411a74e724069c79aeac7af72bc8d5bb7a51",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "texas-drive-auto",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "ca2c48e43258c8352b56de916a6c42f80a1570c530cc90812334b1202404a2d3",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 8,
+    "currency": "USD",
+    "observedAt": "2026-09-08",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light.webp",
+        "output": "public/dealer-app/logo-light-2298c82ae0c02b028b50.webp",
+        "sha256": "2298c82ae0c02b028b50c6775e118dc8b1260f19da07ce69c121d56ba58256c0",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark.webp",
+        "output": "public/dealer-app/logo-dark-3dea5fb84807728dcdf3.webp",
+        "sha256": "3dea5fb84807728dcdf333040b41e71c72ccabbc3a179082797714ebb6742231",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/stock/127361913-1.webp",
+        "output": "public/dealer-app/vehicle-f05bafa591d1c7addbbc.webp",
+        "sha256": "f05bafa591d1c7addbbc0839fc308c0f717e01d214da9d09567ef591cb16e158",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/media/photo-unavailable.svg",
+        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/stock/127361925-1.webp",
+        "output": "public/dealer-app/vehicle-9630e81b8a4369995908.webp",
+        "sha256": "9630e81b8a4369995908baaa021da911f5e5f96bbd4ba3b8fde5d1cfc1206ae3",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/media/photo-unavailable.svg",
+        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/stock/127361904-1.webp",
+        "output": "public/dealer-app/vehicle-2fd83adf01279e6745b4.webp",
+        "sha256": "2fd83adf01279e6745b4f33373cab57b1ed2be7517298dabd6e13dece38929ea",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/media/photo-unavailable.svg",
+        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/media/photo-unavailable.svg",
+        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/media/photo-unavailable.svg",
+        "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+        "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+        "role": "vehicle"
+      }
+    ]
+  },
+  "baseDeployment": {
+    "id": "dpl_D67pGtc2zoA8WLqQNb4PbgChSbQY",
+    "url": "https://cars-texasdriveauto.vercel.app/",
+    "checkedAt": "2026-09-28T02:25:55.611Z"
+  },
+  "baseReceiptSha256": "70d8d9dadf066744c51045a6266b889467a28c7a15cdbdab39310e855b64a3b6",
+  "refreshedAt": "2026-09-30T11:49:56.623Z"
+}

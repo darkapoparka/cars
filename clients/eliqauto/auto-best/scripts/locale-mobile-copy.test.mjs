@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { compileCatalog } from './locale-catalog.mjs';
 const read = p => fs.readFileSync(new URL('../' + p, import.meta.url), 'utf8');
+const usesNativeKey = (source, key) =>
+  source.includes(`i18n.t("${key}")`) || source.includes(`i18n.t('${key}')`);
 const common = JSON.parse(read('localization/common.json'));
 const rows = ['catalog', 'template', 'dealer'].flatMap(name => JSON.parse(read(`localization/${name}.reviewed.json`)));
 const catalog = compileCatalog(common, rows);
@@ -25,8 +27,8 @@ test('compact import controls retain complete native EN/BG copy', () => {
 test('primary actions use direct native keys while demo copy stays descriptive', () => {
   const guide = read('src/lib/components/company/ImportHowItWorks.svelte');
   for (const key of ['m_0dc54277231e', 'm_15f4f5be4ade', 'm_ed51f4a53cda'])
-    assert.ok(guide.includes(`i18n.t("${key}")`), key);
-  assert.ok(read('src/lib/components/home/SearchBox.svelte').includes('i18n.t("action.importShort")'));
-  assert.ok(read('src/lib/components/company/VehicleEnquiry.svelte').includes('i18n.t("action.requestImport")'));
-  assert.ok(read('src/lib/components/company/TradeInEnquiry.svelte').includes('i18n.t("action.requestValuation")'));
+    assert.ok(usesNativeKey(guide, key), key);
+  assert.ok(usesNativeKey(read('src/lib/components/home/SearchBox.svelte'), 'action.importShort'));
+  assert.ok(usesNativeKey(read('src/lib/components/company/VehicleEnquiry.svelte'), 'action.requestImport'));
+  assert.ok(usesNativeKey(read('src/lib/components/company/TradeInEnquiry.svelte'), 'action.requestValuation'));
 });

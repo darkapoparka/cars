@@ -1,4 +1,3 @@
-import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { getLeadCopy } from "@repo/marketplace/lead-copy";
@@ -6,6 +5,7 @@ import {
   isPublicSitePathEnabled,
   publicSite,
 } from "@repo/marketplace/site-config";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import type { Metadata } from "next";

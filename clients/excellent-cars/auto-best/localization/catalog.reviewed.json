@@ -1786,8 +1786,8 @@
   {
     "key": "m_fd88b7330e98",
     "source": "Featured demo cars",
-    "en": "Featured demo cars",
-    "bg": "Избрани примерни автомобили",
+    "en": "Featured cars",
+    "bg": "Избрани автомобили",
     "disposition": "translate",
     "notes": "Public display copy. Source: auto-best/src/lib/components/home/InventorySection.svelte:12, auto-best/src/lib/components/home/InventorySection.svelte:13"
   },

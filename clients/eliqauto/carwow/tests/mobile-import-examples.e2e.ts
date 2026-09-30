@@ -39,7 +39,9 @@ test('sample model opens an editable import request with the chosen origin', asy
 	await expect(dialog).toContainText('Търсене от Германия');
 	await dialog.locator('[name="contact"]').fill('+359888123456');
 	await dialog.getByRole('button', { name: 'Изпрати заявка', exact: true }).click();
-	await expect(page.getByRole('heading', { name: 'Заявката е изпратена' })).toBeVisible();
+	await expect(
+		page.getByRole('heading', { name: 'Демонстрацията приключи; не е изпратена заявка' })
+	).toBeVisible();
 	expect(payload.originCountry).toBe('DE');
 	expect(payload.budgetMax).toBe(80000);
 	expect(payload.desiredMake).toBeTruthy();
@@ -74,7 +76,9 @@ test('editing a sample request does not retain the old structured model', async 
 	await dialog.getByRole('button', { name: 'Продължи', exact: true }).click();
 	await dialog.locator('[name="contact"]').fill('+359888123456');
 	await dialog.getByRole('button', { name: 'Изпрати заявка', exact: true }).click();
-	await expect(page.getByRole('heading', { name: 'Заявката е изпратена' })).toBeVisible();
+	await expect(
+		page.getByRole('heading', { name: 'Демонстрацията приключи; не е изпратена заявка' })
+	).toBeVisible();
 	expect(payload.desiredMake).toBeNull();
 	expect(payload.desiredModel).toBeNull();
 	expect(payload.notes).toContain('BMW X5');

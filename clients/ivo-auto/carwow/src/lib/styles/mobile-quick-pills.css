@@ -1,0 +1,61 @@
+/* Shared mobile quick filters across Home, Inventory and Import. */
+.mobile-quick-pills {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	min-height: var(--sa-mobile-pill-h);
+	gap: var(--sa-mobile-gap-xs);
+	overflow-x: auto;
+	padding: var(--mobile-quick-pills-padding, 0);
+	overscroll-behavior-x: contain;
+	scroll-padding-inline: var(--mobile-quick-pills-scroll-padding, 14px);
+	scrollbar-width: none;
+}
+
+.mobile-quick-pills::-webkit-scrollbar {
+	display: none;
+}
+
+.mobile-quick-pills > :is(a, button) {
+	display: inline-flex;
+	flex: 0 0 auto;
+	box-sizing: border-box;
+	min-height: var(--sa-mobile-hero-cta-h);
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	border: 0;
+	border-radius: var(--sa-pill-radius);
+	background: var(--sa-fill);
+	padding: 0 10px;
+	color: var(--sa-ink);
+	font-family: var(--sa-font);
+	font-size: var(--sa-text-base);
+	font-weight: var(--sa-button-font-weight);
+	letter-spacing: 0;
+	line-height: 1;
+	white-space: nowrap;
+	box-shadow: none;
+	text-decoration: none;
+}
+
+.mobile-quick-pills > :is(a, button) > span {
+	display: block;
+	overflow: hidden;
+	min-width: 0;
+	font: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.mobile-quick-pills > :is(a, button):focus-visible {
+	outline: 2px solid var(--sa-ink);
+	outline-offset: -3px;
+}
+
+.mobile-quick-pills > :is(a, button).is-active:focus-visible {
+	outline-color: #fff;
+}

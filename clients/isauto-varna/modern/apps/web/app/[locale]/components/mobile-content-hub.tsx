@@ -45,6 +45,11 @@ interface MobileContentHubProps {
   locale: "bg" | "en";
 }
 
+const contentCategoryLabels = {
+  bg: "Категории материали",
+  en: "Content categories",
+} as const;
+
 function DesktopContentSearch({
   isBg,
   ready,
@@ -247,6 +252,7 @@ export const MobileContentHub = ({
             <MobilePillRail
               className="gap-2"
               data-slot="editorial-filter-pills"
+              label={contentCategoryLabels[locale]}
             >
               {contentFilters.map(({ id: value, ...labels }) => (
                 <button

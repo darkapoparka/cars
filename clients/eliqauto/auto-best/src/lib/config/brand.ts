@@ -11,8 +11,8 @@ export type BrandConfig = {
   logo: `/${string}`;
   logoOnDark: `/${string}`;
   youtubeUrl: `https://${string}` | '';
-  instagramUrl: `https://${string}`;
-  facebookUrl: `https://${string}`;
+  instagramUrl: `https://${string}` | '';
+  facebookUrl: `https://${string}` | '';
 };
 
 const name = "ELIQ AUTO";
@@ -26,8 +26,8 @@ export const brand = {
   city,
   showroomCoordinates: {"latitude":0,"longitude":0},
   youtubeUrl: "https://www.youtube.com/channel/UCGXhr1QYqALiBBQpBYZtpmw",
-  instagramUrl: "https://www.instagram.com/",
-  facebookUrl: "https://www.facebook.com/",
+  instagramUrl: "",
+  facebookUrl: "",
   phone: "0896 781 662",
   phoneHref: "tel:+359896781662",
   addressLine,

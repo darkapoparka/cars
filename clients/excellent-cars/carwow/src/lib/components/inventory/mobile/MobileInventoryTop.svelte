@@ -16,6 +16,7 @@
 	let {
 		mode,
 		query,
+		resultsCount,
 		onOpenSearch,
 		onOpenFilters,
 		onOpenSort,
@@ -25,6 +26,7 @@
 	}: {
 		mode: Mode;
 		query: string;
+		resultsCount: number;
 		onOpenSearch: () => void;
 		onOpenFilters: () => void;
 		onOpenSort: () => void;
@@ -35,9 +37,6 @@
 
 	const phoneHref = daynightSite.phoneHref;
 	const viberHref = daynightSite.viberHref;
-	const searchLabel = $derived(
-		query.trim() ? i18n.t('pattern.769c3ae47eea', { v0: query.trim() }) : 'Отвори търсене'
-	);
 </script>
 
 <section class="mobile-inventory-top">
@@ -77,20 +76,19 @@
 			id="mobile-inventory-search"
 			class="mobile-inventory-search"
 			type="button"
-			aria-label={i18n.text(searchLabel)}
 			aria-haspopup="dialog"
 			onclick={onOpenSearch}
 		>
 			<span class="mobile-inventory-search__field">
+				<span class="mobile-inventory-search__icon" aria-hidden="true">
+					<Search size={19} strokeWidth={2.55} />
+				</span>
 				<span
 					class={query
 						? 'mobile-inventory-search__label is-filled'
 						: 'mobile-inventory-search__label'}
 				>
-					{query || i18n.t('copy.ec1da1ebf306')}
-				</span>
-				<span class="mobile-inventory-search__icon" aria-hidden="true">
-					<Search size={19} strokeWidth={2.55} />
+					{query || i18n.t('copy.ec1da1ebf306')} ({resultsCount})
 				</span>
 			</span>
 		</button>

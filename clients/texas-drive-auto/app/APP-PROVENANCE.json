@@ -27,9 +27,21 @@
       "role": "vehicle"
     },
     {
+      "source": "auto-best/static/media/photo-unavailable.svg",
+      "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+      "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+      "role": "vehicle"
+    },
+    {
       "source": "auto-best/static/stock/127361925-1.webp",
       "output": "public/dealer-app/vehicle-9630e81b8a4369995908.webp",
       "sha256": "9630e81b8a4369995908baaa021da911f5e5f96bbd4ba3b8fde5d1cfc1206ae3",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/media/photo-unavailable.svg",
+      "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+      "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
       "role": "vehicle"
     },
     {
@@ -37,19 +49,24 @@
       "output": "public/dealer-app/vehicle-2fd83adf01279e6745b4.webp",
       "sha256": "2fd83adf01279e6745b4f33373cab57b1ed2be7517298dabd6e13dece38929ea",
       "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/media/photo-unavailable.svg",
+      "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+      "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/media/photo-unavailable.svg",
+      "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+      "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+      "role": "vehicle"
+    },
+    {
+      "source": "auto-best/static/media/photo-unavailable.svg",
+      "output": "public/dealer-app/vehicle-7ee2ac8fa3d2d3331bee.svg",
+      "sha256": "7ee2ac8fa3d2d3331bee51d3e6f081e206e5ffe425e0ecba38ad9b15f1867a38",
+      "role": "vehicle"
     }
-  ],
-  "template": {
-    "repository": "darkapoparka/cars",
-    "revision": "2925db90d58b29544489b22c0557b5669af02f6e",
-    "path": "templates/app",
-    "tree": "5a454d833e8d65f884e24899dbc2a701a2d7e128",
-    "digest": "9181356226740b44bfb2b0e0aebbb32369bf82859610c582a1e559ad5e3711c8"
-  },
-  "generatedAt": "2026-09-28T04:58:10.427Z",
-  "policy": {
-    "selector": "shared-v2-with-local-fallback",
-    "benefits": "clearly-labelled-proposal-examples",
-    "missingPhotos": "neutral-template-artwork-not-invented-stock"
-  }
+  ]
 }

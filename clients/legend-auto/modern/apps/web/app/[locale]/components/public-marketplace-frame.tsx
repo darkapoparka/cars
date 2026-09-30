@@ -17,11 +17,11 @@ import {
   type MarketplaceMode,
   MobileDealerChrome,
 } from "@repo/marketplace-ui";
-import { DealerDesktopLocaleMenu } from "@repo/marketplace-ui/components/dealer-desktop-locale-menu";
 import {
   DealerDesktopHero,
   type DealerDesktopHeroProps,
 } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import { DealerDesktopLocaleMenu } from "@repo/marketplace-ui/components/dealer-desktop-locale-menu";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { Heart, MapPin, Phone, Plus } from "lucide-react";
 import Link from "next/link";
@@ -246,7 +246,9 @@ export const PublicMarketplaceFrame = ({
                 </a>
               </Button>
             ) : null}
-            {isDealershipSite ? null : <DealerDesktopLocaleMenu locale={normalizedLocale} tone="light" />}
+            {isDealershipSite ? null : (
+              <DealerDesktopLocaleMenu locale={normalizedLocale} tone="light" />
+            )}
             <Button
               asChild
               className={`h-10 min-w-10 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)] ${

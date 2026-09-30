@@ -1,0 +1,607 @@
+{
+  "schemaVersion": 1,
+  "dealer": "eliqauto",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/app",
+    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+  },
+  "appDigest": "5b9c897b7b12a8d516477d1a1ac0c2258bf78f1c9318e4f34b717e02d70aa348",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "eliqauto",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "1824750b4ad559a474472d1f40829c5283b852d223aafda3f9e2187253376cac",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 16,
+    "currency": "EUR",
+    "observedAt": "",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
+        "output": "public/dealer-app/logo-light-47a1af7c61fb7a84c18b.webp",
+        "sha256": "47a1af7c61fb7a84c18b8717c25486b41811ab2556860dc27a6731ec6c0aba38",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
+        "output": "public/dealer-app/logo-dark-1cf956154e7101725bba.webp",
+        "sha256": "1cf956154e7101725bba0d42603ea27bf0bf509782803dea0db176453a5ca91c",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11779989521200947/img-01.webp",
+        "output": "public/dealer-app/vehicle-fa813b89f051c56580cf.webp",
+        "sha256": "fa813b89f051c56580cf526169210d4035c7bf961ecff7bf05be2ed0a989a888",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11779989521200947/img-02.webp",
+        "output": "public/dealer-app/vehicle-f1df6f373bc03502e022.webp",
+        "sha256": "f1df6f373bc03502e02285e70c4fff2d7c06f928523eb31759bf6aa844e188be",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11779989521200947/img-03.webp",
+        "output": "public/dealer-app/vehicle-f1673af973175313d224.webp",
+        "sha256": "f1673af973175313d224e8b236efb94b1835caf5672e2d779106b1663f4c1404",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11779989521200947/img-04.webp",
+        "output": "public/dealer-app/vehicle-f9a245fcb85c66f47ecf.webp",
+        "sha256": "f9a245fcb85c66f47ecfb83e8d1e0739fa402f87423f0e78891a1c3bf5f346da",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11779989521200947/img-05.webp",
+        "output": "public/dealer-app/vehicle-228af09055a18a0bfabd.webp",
+        "sha256": "228af09055a18a0bfabde8c247f7f82e21fc50d1bda147c7f59f18cb29c279c8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11779989521200947/img-06.webp",
+        "output": "public/dealer-app/vehicle-e8de548b97a07acda9b1.webp",
+        "sha256": "e8de548b97a07acda9b16d8f0a6da77b0aaabbf921896ca253079589dff54bf8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780007305121982/img-02.webp",
+        "output": "public/dealer-app/vehicle-47030e6ffc16e71f8a4a.webp",
+        "sha256": "47030e6ffc16e71f8a4afec6b3c537c4bf51066dfa38cc8380fafb5aeb129910",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780007305121982/img-03.webp",
+        "output": "public/dealer-app/vehicle-04e9e8cc87e333ba6a58.webp",
+        "sha256": "04e9e8cc87e333ba6a5883790e6e071e3fd1277cfc069f6fa91254875b05f0de",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780007305121982/img-04.webp",
+        "output": "public/dealer-app/vehicle-a6aa121394e741ce97fc.webp",
+        "sha256": "a6aa121394e741ce97fc8cc83b54ae27e4ef8bc90a9a70f40158c3951b859dd6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780007305121982/img-05.webp",
+        "output": "public/dealer-app/vehicle-f2391b125252488acdfa.webp",
+        "sha256": "f2391b125252488acdfa054a0075520e8631dd5db799cc173cd4c977e9eebd6c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780007305121982/img-06.webp",
+        "output": "public/dealer-app/vehicle-cac9b5e60fc178d3cfc5.webp",
+        "sha256": "cac9b5e60fc178d3cfc5eb28ca3d76bcc7097bea91255ec341028de164aea6f7",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780175636720970/img-02.webp",
+        "output": "public/dealer-app/vehicle-9bcd87b3041c0cc30aac.webp",
+        "sha256": "9bcd87b3041c0cc30aacc897423ec25d5506d4360a770f1f6b3d04ff57a6e32a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780175636720970/img-03.webp",
+        "output": "public/dealer-app/vehicle-30ea2c711f8176223dee.webp",
+        "sha256": "30ea2c711f8176223dee9f471adecfed6af104b86b3ee7f53f9074755ff175cc",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780175636720970/img-04.webp",
+        "output": "public/dealer-app/vehicle-7e7e2eaf6c463b16b188.webp",
+        "sha256": "7e7e2eaf6c463b16b1886a6d25604e229f4bb63d17c89c91acd804798da06e3f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780175636720970/img-05.webp",
+        "output": "public/dealer-app/vehicle-17ca2a15365b6cdc9a5d.webp",
+        "sha256": "17ca2a15365b6cdc9a5d1662fe9f27910f10d30c3d829b27fd632cb44cbd9e1d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780175636720970/img-06.webp",
+        "output": "public/dealer-app/vehicle-05945ce9b3a5113be20b.webp",
+        "sha256": "05945ce9b3a5113be20b9b1c49cd0db47ef259237e2255754d0307dda0c4dd8a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780176585830804/img-02.webp",
+        "output": "public/dealer-app/vehicle-e275f23dd81169b9116d.webp",
+        "sha256": "e275f23dd81169b9116d525f62a23095b6898aa4f002e1458585a926fbafef47",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780176585830804/img-03.webp",
+        "output": "public/dealer-app/vehicle-90f1e70715bef2130cfa.webp",
+        "sha256": "90f1e70715bef2130cfabdc315c066e618ecf0715cfe1d61a9b4ddfb172a419d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780176585830804/img-04.webp",
+        "output": "public/dealer-app/vehicle-a30333289c9a7793d9fb.webp",
+        "sha256": "a30333289c9a7793d9fbe80ba91c637606134f59da3865b1172ea9af37d3a81f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780176585830804/img-05.webp",
+        "output": "public/dealer-app/vehicle-c1122034374c14d39445.webp",
+        "sha256": "c1122034374c14d3944512ee24f1e86f76d75ac007a7752c0237452ec6b6de01",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780176585830804/img-06.webp",
+        "output": "public/dealer-app/vehicle-8ffa0f7656d05e928f11.webp",
+        "sha256": "8ffa0f7656d05e928f117884e51a0cf5e62de0a28541a2840baf1e5d70989466",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780176585830804/img-01.webp",
+        "output": "public/dealer-app/vehicle-2a49ecacd719c3245906.webp",
+        "sha256": "2a49ecacd719c3245906edcf39cee4dd2b88577e2dcdd2a6d5ec46d13c8c92f5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780177315125298/img-01.webp",
+        "output": "public/dealer-app/vehicle-91bf091ac118180823f1.webp",
+        "sha256": "91bf091ac118180823f124594f936cdd3e283ed850f484eb39a974c2b325d9e0",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780177315125298/img-02.webp",
+        "output": "public/dealer-app/vehicle-64f23bbee83076fd84db.webp",
+        "sha256": "64f23bbee83076fd84db43deb8ce7a3abd527be11c11cb2b0491329bf573aac2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780177315125298/img-03.webp",
+        "output": "public/dealer-app/vehicle-1243c3631a25dccddf9c.webp",
+        "sha256": "1243c3631a25dccddf9ce71b12cd5bf1979b254a63b055cde7b2a56b9d0bcd1d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780177315125298/img-04.webp",
+        "output": "public/dealer-app/vehicle-02f92991ac360f5cde56.webp",
+        "sha256": "02f92991ac360f5cde560619cbae6032604284ba7ec06c6aa3e78a830d384cfd",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780177315125298/img-05.webp",
+        "output": "public/dealer-app/vehicle-04a7e597b367133ade1a.webp",
+        "sha256": "04a7e597b367133ade1a8cc8c623a2663705b7c1c4641883bc71a30cf4a8c58f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780177315125298/img-06.webp",
+        "output": "public/dealer-app/vehicle-fd629d237f56cf9fb548.webp",
+        "sha256": "fd629d237f56cf9fb5487cd8bbc1a967be779ea669b3a81a025bb42d21359544",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780254722465322/img-01.webp",
+        "output": "public/dealer-app/vehicle-5271c0477eeecdb427c1.webp",
+        "sha256": "5271c0477eeecdb427c1559307bd22f04c5129e06193b926f63846cc1e114ac8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780254722465322/img-02.webp",
+        "output": "public/dealer-app/vehicle-caac4adfd7c878ced850.webp",
+        "sha256": "caac4adfd7c878ced850807e2f8aaee025d343215c9b2171a9e4e26af7b2f4c4",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780254722465322/img-03.webp",
+        "output": "public/dealer-app/vehicle-6dc0bae5b87fc2fd672a.webp",
+        "sha256": "6dc0bae5b87fc2fd672a6f72d094c855c68f777031d88366e694796198755da1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780254722465322/img-04.webp",
+        "output": "public/dealer-app/vehicle-4ab33f9c64e8a5dcbe36.webp",
+        "sha256": "4ab33f9c64e8a5dcbe36de68747fa43bc4a7b6b272eb98edf02e6cbc58486096",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780254722465322/img-05.webp",
+        "output": "public/dealer-app/vehicle-82f18060b25299d56ca8.webp",
+        "sha256": "82f18060b25299d56ca829990ad862557c6a624d9910f62166de55abe928d5ce",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780254722465322/img-06.webp",
+        "output": "public/dealer-app/vehicle-d6ec863bad852dbd6777.webp",
+        "sha256": "d6ec863bad852dbd677735bab2a3f146c40e92cba690e57c0ef99bdf9a884b67",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780906851194765/img-01.webp",
+        "output": "public/dealer-app/vehicle-95985b8a7b1ebfed5b07.webp",
+        "sha256": "95985b8a7b1ebfed5b076152c456cfe116db08a9d738d33f836285953b39bb16",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780906851194765/img-02.webp",
+        "output": "public/dealer-app/vehicle-a80919e66324f2f9908b.webp",
+        "sha256": "a80919e66324f2f9908b753e5fa57f9cc7a8b3aa27ae634bd6e1acbb72a40798",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780906851194765/img-03.webp",
+        "output": "public/dealer-app/vehicle-81f4c780ce2336b558f1.webp",
+        "sha256": "81f4c780ce2336b558f1b8f7423406436e5842b6b7d39aea3c582283bbf6673a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780906851194765/img-04.webp",
+        "output": "public/dealer-app/vehicle-ddc35e802f75591bb3db.webp",
+        "sha256": "ddc35e802f75591bb3dbef9368c7f09d8fbac4fb73664d4672a7dcf21f1da8b9",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780906851194765/img-05.webp",
+        "output": "public/dealer-app/vehicle-040d8b7c01eda7d3eb3e.webp",
+        "sha256": "040d8b7c01eda7d3eb3e9f910eabfb4c4e2d1118d2fe5b1c7b5bd36a7aaf08f1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780906851194765/img-06.webp",
+        "output": "public/dealer-app/vehicle-e878df83eb8ac7e2a230.webp",
+        "sha256": "e878df83eb8ac7e2a230f678355dde8684336e8f70cd55633450d276b92717da",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780907716855488/img-01.webp",
+        "output": "public/dealer-app/vehicle-a90cfde5d7df21c9bb87.webp",
+        "sha256": "a90cfde5d7df21c9bb87668f6e044474254f3b146f2302083e62353393fcb28c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780907716855488/img-02.webp",
+        "output": "public/dealer-app/vehicle-69bf6e399035d84f1d40.webp",
+        "sha256": "69bf6e399035d84f1d400237496c645b94e726a36c8075b36768a2de7b103251",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780907716855488/img-03.webp",
+        "output": "public/dealer-app/vehicle-7d7e88339c92fd969afb.webp",
+        "sha256": "7d7e88339c92fd969afb7c83202cf3fb45b665d8e24782427febfd87c24ca27c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780907716855488/img-04.webp",
+        "output": "public/dealer-app/vehicle-6e6aa48287d41b984d5d.webp",
+        "sha256": "6e6aa48287d41b984d5da568065032dbea94bb61407e6d2a298dd5f35ec5b5c1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780907716855488/img-05.webp",
+        "output": "public/dealer-app/vehicle-8f0704963ee72d2546e1.webp",
+        "sha256": "8f0704963ee72d2546e11ab116fd517f35aaeea69de45e080d0be779fe958a8b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780907716855488/img-06.webp",
+        "output": "public/dealer-app/vehicle-eb6ac9cfea894cba6689.webp",
+        "sha256": "eb6ac9cfea894cba66896f85172c65af59441bc743135d718317ca4e8c5af734",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780909888518340/img-01.webp",
+        "output": "public/dealer-app/vehicle-a676d7ede575ee4e62f0.webp",
+        "sha256": "a676d7ede575ee4e62f031fd8096945e627be2aa0d99353f3619e91873861a76",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780909888518340/img-02.webp",
+        "output": "public/dealer-app/vehicle-471256637b75b492d367.webp",
+        "sha256": "471256637b75b492d36792bced2acd63734ae050169ac78fe7b93d1c7c3d544a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780909888518340/img-03.webp",
+        "output": "public/dealer-app/vehicle-0f1b61f580990dc85b34.webp",
+        "sha256": "0f1b61f580990dc85b34e428dee8f556cc70372f041d7ff2b3908cf31ebfecc5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780909888518340/img-04.webp",
+        "output": "public/dealer-app/vehicle-a5887f2aaf428d74a1e3.webp",
+        "sha256": "a5887f2aaf428d74a1e32437692bc9ecd56913e64139c15739fda340b479daa9",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780909888518340/img-05.webp",
+        "output": "public/dealer-app/vehicle-f33e1582ef55167ff656.webp",
+        "sha256": "f33e1582ef55167ff6560abd17905ae3b491f8f2fbed930471b80c2ba10e58d8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11780909888518340/img-06.webp",
+        "output": "public/dealer-app/vehicle-b493494de29ea793d29d.webp",
+        "sha256": "b493494de29ea793d29d67e925fdeb93ed4c22a5a11dce7cb5aa4d72861d79f2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781187597210481/img-01.webp",
+        "output": "public/dealer-app/vehicle-b8719979a340157ab2c4.webp",
+        "sha256": "b8719979a340157ab2c413f6b8d43ad7edfa82efa6197afab7ea14c6dfee049d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781187597210481/img-02.webp",
+        "output": "public/dealer-app/vehicle-c3943c3181c15f9eac4a.webp",
+        "sha256": "c3943c3181c15f9eac4aaa8700ce6d86852cb6c92bc752a6ef7a3afca3f5b087",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781187597210481/img-03.webp",
+        "output": "public/dealer-app/vehicle-bf161cf1e26e9fedbd2c.webp",
+        "sha256": "bf161cf1e26e9fedbd2c88432f81dd859b72385065fce0e5d1efce57e85ed130",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781187597210481/img-04.webp",
+        "output": "public/dealer-app/vehicle-6e3ce0a952f0ad4b45a6.webp",
+        "sha256": "6e3ce0a952f0ad4b45a66ff448941c0b86c5bb67eb7bf610e7681cef53550064",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781187597210481/img-05.webp",
+        "output": "public/dealer-app/vehicle-709d110db10c5bb359dd.webp",
+        "sha256": "709d110db10c5bb359dd0eb89c7c976cecf1674ed00eeeebfa3acc3b998ccad8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781187597210481/img-06.webp",
+        "output": "public/dealer-app/vehicle-1f657785aa08b1db87c4.webp",
+        "sha256": "1f657785aa08b1db87c4705ea57856092e86eedf8bd6091245b205b69cd830f2",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781207164422554/img-01.webp",
+        "output": "public/dealer-app/vehicle-4377041c75cb1c1cc122.webp",
+        "sha256": "4377041c75cb1c1cc122b3f54b5d49f5fa0d0321435e8871c41a09d3dde3a394",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781207164422554/img-02.webp",
+        "output": "public/dealer-app/vehicle-0cea7fed7a7833596e71.webp",
+        "sha256": "0cea7fed7a7833596e718b1ea9af5b291bf7bcc3ea986d9f199cb59adf8c35c9",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781207164422554/img-03.webp",
+        "output": "public/dealer-app/vehicle-59aa32365dcd6209eebc.webp",
+        "sha256": "59aa32365dcd6209eebc99adb08831fffb91dca9f7b7741372b486b9eddb5ea5",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781207164422554/img-04.webp",
+        "output": "public/dealer-app/vehicle-8b3f69e9d6069f13cbf8.webp",
+        "sha256": "8b3f69e9d6069f13cbf8bfa7e48e754aa9119ec5793d4f845c252a9ba6fbb58d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781207164422554/img-05.webp",
+        "output": "public/dealer-app/vehicle-eb1d0d0bc2eb42598a7c.webp",
+        "sha256": "eb1d0d0bc2eb42598a7c538f34670638dcb83dc08f65d6a501b54635a1a0fc8c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781207164422554/img-06.webp",
+        "output": "public/dealer-app/vehicle-49e20ca31288c1615642.webp",
+        "sha256": "49e20ca31288c1615642b7b173415fc0c8b4087e2c2a514e47e703b0b4b36ce3",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781211980587571/img-01.webp",
+        "output": "public/dealer-app/vehicle-d24f9ff7ad61279c5c57.webp",
+        "sha256": "d24f9ff7ad61279c5c570fa30efaf33c125859295f0bc77be1733d8f4c0d75c6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781211980587571/img-02.webp",
+        "output": "public/dealer-app/vehicle-13e3924d88bc97646505.webp",
+        "sha256": "13e3924d88bc97646505f24386139df13190fc2897c1ffe68c50bc0e1951988b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781211980587571/img-03.webp",
+        "output": "public/dealer-app/vehicle-11cbc456e5300944f287.webp",
+        "sha256": "11cbc456e5300944f2878928fb04f7eadaf24c78930dbfa2a76b45fdd5b6d809",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781211980587571/img-04.webp",
+        "output": "public/dealer-app/vehicle-871706e491e4281dbb29.webp",
+        "sha256": "871706e491e4281dbb29d063b8713413f284fb3595261cdeb7eb04a47a31a1a7",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781211980587571/img-05.webp",
+        "output": "public/dealer-app/vehicle-f138763b7fd16e2f729c.webp",
+        "sha256": "f138763b7fd16e2f729c8bdaf9fbc85ffe40ac4b0f7ee6de63427caf3ef124a3",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781211980587571/img-06.webp",
+        "output": "public/dealer-app/vehicle-1d14c7d745a22f2aa61c.webp",
+        "sha256": "1d14c7d745a22f2aa61cda640ad6075af718743621995dc7653da709edcda21b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781244995278530/img-01.webp",
+        "output": "public/dealer-app/vehicle-c94dbb4c564e267f0c23.webp",
+        "sha256": "c94dbb4c564e267f0c2359613eb9952ebdac0f45cc2808af1c8deedc8ac879de",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781244995278530/img-02.webp",
+        "output": "public/dealer-app/vehicle-8b8608f61056892a2893.webp",
+        "sha256": "8b8608f61056892a2893ee47f47cc2d9e64de427b7fe62c1359d941727760f7c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781244995278530/img-03.webp",
+        "output": "public/dealer-app/vehicle-dc88df4956b3fbf61fb1.webp",
+        "sha256": "dc88df4956b3fbf61fb1550c6edbf19e30b2d518a48e8090d352613518fa14b6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781244995278530/img-04.webp",
+        "output": "public/dealer-app/vehicle-372bb3e456d003e619b4.webp",
+        "sha256": "372bb3e456d003e619b45449050021e697bf74a6ffb9190cf360e04a7ba91221",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781244995278530/img-05.webp",
+        "output": "public/dealer-app/vehicle-a62e633cae4943424a9e.webp",
+        "sha256": "a62e633cae4943424a9eb86a1cd0a5a84f933ad169ca84b773949c7bbb2f3056",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781244995278530/img-06.webp",
+        "output": "public/dealer-app/vehicle-aacefc3e7b2add2b933b.webp",
+        "sha256": "aacefc3e7b2add2b933be8ff5055807cc219b1f68295c494bb7ecbe1cc54c2fa",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781281410239020/img-01.webp",
+        "output": "public/dealer-app/vehicle-18c03bb66a63dda8d338.webp",
+        "sha256": "18c03bb66a63dda8d338f0a63e8056d47caaaf3683e90da6b98c9fb3f664e13a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781281410239020/img-02.webp",
+        "output": "public/dealer-app/vehicle-22ffcadb24fddae04dbf.webp",
+        "sha256": "22ffcadb24fddae04dbf317b778c5ef6cde7201185b93d075ac3aae414465539",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781281410239020/img-03.webp",
+        "output": "public/dealer-app/vehicle-4f5fb7e1fe839499d1db.webp",
+        "sha256": "4f5fb7e1fe839499d1dbc401ac51cc1491a0a27784ac51c7838dc9e9da65cadb",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781281410239020/img-04.webp",
+        "output": "public/dealer-app/vehicle-97cd62c4476994201e8e.webp",
+        "sha256": "97cd62c4476994201e8eef25710f3299ba3c6e49ebd060e84cf8d047d9cea8ce",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781281410239020/img-05.webp",
+        "output": "public/dealer-app/vehicle-9e39d4aab5dbf3555601.webp",
+        "sha256": "9e39d4aab5dbf3555601219321cb1241c9c087e39967e4a05c13a70a3d1c23f1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781281410239020/img-06.webp",
+        "output": "public/dealer-app/vehicle-76dbd2dd5a3c30da2c92.webp",
+        "sha256": "76dbd2dd5a3c30da2c926fa4b0e8692c79fd85783f9aa998b1b2248b561a126d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781294210212810/img-01.webp",
+        "output": "public/dealer-app/vehicle-f4fbeb08ab83105c4e9f.webp",
+        "sha256": "f4fbeb08ab83105c4e9fa06acb9c5361839760eae2b8286e1d0e3d4da9c5ef8b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781294210212810/img-02.webp",
+        "output": "public/dealer-app/vehicle-156dbcf247bb49892e99.webp",
+        "sha256": "156dbcf247bb49892e99cc8f2c4bab9d28de3076cba65506f18c56ed8821ebf0",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781294210212810/img-03.webp",
+        "output": "public/dealer-app/vehicle-21ee208017f873246174.webp",
+        "sha256": "21ee208017f87324617423c6932fae5640150eb87a86dd2bae4a2a1ad32d8f7b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781294210212810/img-04.webp",
+        "output": "public/dealer-app/vehicle-c1065f6aa304dd44d8b7.webp",
+        "sha256": "c1065f6aa304dd44d8b74c399267e887727e8e37a65de329d8777437b6d750a9",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781294210212810/img-05.webp",
+        "output": "public/dealer-app/vehicle-889e10a7d9274670067a.webp",
+        "sha256": "889e10a7d9274670067a707f60a76877d00915d8b24f5b35502a044818f91952",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781294210212810/img-06.webp",
+        "output": "public/dealer-app/vehicle-9c8d18770ede11965011.webp",
+        "sha256": "9c8d18770ede119650114766ab4157060bfe5eb0d66f08132ab1cf21c76aa994",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781346026930952/img-01.webp",
+        "output": "public/dealer-app/vehicle-c51d3c687a76b954b975.webp",
+        "sha256": "c51d3c687a76b954b975f79cba13be82473191db91b27bf3f7420aa5b5eb89e4",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781346026930952/img-02.webp",
+        "output": "public/dealer-app/vehicle-cd9a5b7143a25ac3821e.webp",
+        "sha256": "cd9a5b7143a25ac3821e26192e43f1812a1e30f41087f8900240a81ede256192",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781346026930952/img-03.webp",
+        "output": "public/dealer-app/vehicle-670c730e91670802bcb0.webp",
+        "sha256": "670c730e91670802bcb08da134542119491936bd169266d65cad7b0fae5ab81e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781346026930952/img-04.webp",
+        "output": "public/dealer-app/vehicle-2dda3b6897e134f877ec.webp",
+        "sha256": "2dda3b6897e134f877ecbde89e630a2292c73f950c85b10b668adef147bbd33c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781346026930952/img-05.webp",
+        "output": "public/dealer-app/vehicle-3380e99f8cf248d99772.webp",
+        "sha256": "3380e99f8cf248d9977296e03d80c199cf3ffce394fff428d8cfc70bb3adfa7f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/eliqauto/cars/11781346026930952/img-06.webp",
+        "output": "public/dealer-app/vehicle-3149dfa5da8e8c96c6e1.webp",
+        "sha256": "3149dfa5da8e8c96c6e18f818931b2f048dd8e25732c5d78794606b03c4fe2c2",
+        "role": "vehicle"
+      }
+    ]
+  },
+  "baseDeployment": {
+    "id": "dpl_FTp9vzenc2QGBADMH7QMfMmVuTqG",
+    "url": "https://cars-eliqauto.vercel.app/",
+    "checkedAt": "2026-09-28T02:25:40.550Z"
+  },
+  "baseReceiptSha256": "689792ea008b9504cf5574bd0487d8106861d1925bf0fbf19cbf97f4ce7de54d",
+  "refreshedAt": "2026-09-30T11:14:46.043Z"
+}

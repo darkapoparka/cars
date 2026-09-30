@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "dealer": "priselci",
+  "template": {
+    "repository": "darkapoparka/cars",
+    "revision": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "path": "templates/app",
+    "digest": "3344230cf8de012eb9c2daf1c962c4a3f189960b52f2026e1d049f2a6eae26ad",
+    "tree": "cd17d913dd597bf7dfb3e2244c2a3a2914ab3080"
+  },
+  "appDigest": "9da40654acb83bff4a55d7a5dac0b0874b820ac130b20ec485320787c8a00bf7",
+  "provenance": {
+    "schemaVersion": 1,
+    "dealer": "priselci",
+    "profile": "auto-best/src/lib/data/dealer-profile.json",
+    "profileSha256": "a31e8701cf1f204e9ec1cbe5534c5d814410e12f21bd397bfc0098abd7bb9d56",
+    "logoPolicy": "Preserve existing raster identities; no replacement logo was generated.",
+    "vehicles": 16,
+    "currency": "EUR",
+    "observedAt": "2026-09-07",
+    "assets": [
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-light-20260919.webp",
+        "output": "public/dealer-app/logo-light-c6427ddf1f5c073cd1a5.webp",
+        "sha256": "c6427ddf1f5c073cd1a54333a305364ca8c3814295c3f9ec52428d69dd8667b8",
+        "role": "logo-light"
+      },
+      {
+        "source": "auto-best/static/dealer-brand/logo-on-dark-20260919.webp",
+        "output": "public/dealer-app/logo-dark-ac80f7e7b14ecc7ad9ec.webp",
+        "sha256": "ac80f7e7b14ecc7ad9ec63bfaba962c2381071d5f7f7da823a95b2ec84db029d",
+        "role": "logo-dark"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-01-1.webp",
+        "output": "public/dealer-app/vehicle-e651af49f285ca8e77f2.webp",
+        "sha256": "e651af49f285ca8e77f2e1583fff4ca38e2213f60290e1af415182d6f6fba61d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-01-2.webp",
+        "output": "public/dealer-app/vehicle-81032148df589c38ecb1.webp",
+        "sha256": "81032148df589c38ecb1c5dc3abe8fe524113a1b710bdf69928cc4eee4aca047",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-01-3.webp",
+        "output": "public/dealer-app/vehicle-0cb0707fb5819880b2e6.webp",
+        "sha256": "0cb0707fb5819880b2e69fe60e24846355fd0387ad405d88e725e6bfe1c31d48",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-01-4.webp",
+        "output": "public/dealer-app/vehicle-db698e1753e4bc96a51e.webp",
+        "sha256": "db698e1753e4bc96a51e154b306086fdd89deda7a453fb0c581b3539d911984b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-02-1.webp",
+        "output": "public/dealer-app/vehicle-07d4a765ea6c3c0d9a5f.webp",
+        "sha256": "07d4a765ea6c3c0d9a5f4d72cfd90d4cf8e9b0ee08f012ef0151844ea617f758",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-02-2.webp",
+        "output": "public/dealer-app/vehicle-5b06cd7201ea49d35e51.webp",
+        "sha256": "5b06cd7201ea49d35e5109bb7ac999f7d879037b76a652d4277bf757d059ea84",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-02-3.webp",
+        "output": "public/dealer-app/vehicle-b9c55704429ba9e5c2b6.webp",
+        "sha256": "b9c55704429ba9e5c2b63288661f2a71018adf6a0710e9c1c4e160fa3cc3af47",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-02-4.webp",
+        "output": "public/dealer-app/vehicle-f103bcbf704adedf5f36.webp",
+        "sha256": "f103bcbf704adedf5f36b5b5f4ad5ad51446c10fcdeacd12f6968f2bbfbdb9fd",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-03-1.webp",
+        "output": "public/dealer-app/vehicle-5c7339a8fd081ea50a71.webp",
+        "sha256": "5c7339a8fd081ea50a71db09399145e40e6e85e181b7fc38dd6ff5a823967e02",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-03-2.webp",
+        "output": "public/dealer-app/vehicle-ed068c262196d3516bf0.webp",
+        "sha256": "ed068c262196d3516bf05350841b07293a60a2ecbeba1f49e00a6eca44a0284d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-03-3.webp",
+        "output": "public/dealer-app/vehicle-01f74bc14387425d4417.webp",
+        "sha256": "01f74bc14387425d441770683e58c2ab9f24500f63a687df8f207392317ba306",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-03-4.webp",
+        "output": "public/dealer-app/vehicle-5eaff7151ddead77acfa.webp",
+        "sha256": "5eaff7151ddead77acfad6a4fec7f1b27b4da775e96b9f61b1bb229661020e2e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-04-1.webp",
+        "output": "public/dealer-app/vehicle-81764f2decb6b06b4118.webp",
+        "sha256": "81764f2decb6b06b4118278fff6ffe5775f7fe9152dd02029ebd9c3a85743745",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-04-2.webp",
+        "output": "public/dealer-app/vehicle-c1dd435f95f2ec5e5ff9.webp",
+        "sha256": "c1dd435f95f2ec5e5ff9e0b14f65a62a196ed47924a3a35bec5fd2d41a84247d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-04-3.webp",
+        "output": "public/dealer-app/vehicle-72ae9e9eb591beb27226.webp",
+        "sha256": "72ae9e9eb591beb27226fc9bca74c12dcc16cbb2e00a24cc6baf0f6185247836",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-04-4.webp",
+        "output": "public/dealer-app/vehicle-d1aa4d7d631eb2c6c315.webp",
+        "sha256": "d1aa4d7d631eb2c6c31584a8fadacaa36a4de3faa87f6007e904693e156e9909",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-05-1.webp",
+        "output": "public/dealer-app/vehicle-c20ab6e957e9a035ffd9.webp",
+        "sha256": "c20ab6e957e9a035ffd91616e2b41f922b281f06b62228056f05d01ce44a9227",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-05-2.webp",
+        "output": "public/dealer-app/vehicle-5d159c2a22e8e8053e75.webp",
+        "sha256": "5d159c2a22e8e8053e75bbaba4f1e4b5b28612aee09b2fdbc0a8fe2486032445",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-05-3.webp",
+        "output": "public/dealer-app/vehicle-a689cc87a4471c4c164e.webp",
+        "sha256": "a689cc87a4471c4c164eaf780924aa2d818c2457efbada5a97437be555e83a35",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-05-4.webp",
+        "output": "public/dealer-app/vehicle-930334fcc3b468a6c8eb.webp",
+        "sha256": "930334fcc3b468a6c8ebeb3d9fa720c40f10ccf65b9f7d0f4cd442b4ae7334b9",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-06-1.webp",
+        "output": "public/dealer-app/vehicle-52aec3285f11898ddb8f.webp",
+        "sha256": "52aec3285f11898ddb8f7e69dd7076f9d46d67d01ced407bd3f393cdc536c92d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-06-2.webp",
+        "output": "public/dealer-app/vehicle-6ca7609e4d8a75dab812.webp",
+        "sha256": "6ca7609e4d8a75dab8123d76e2eada8c95897b589d596795c3049970e549a892",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-06-3.webp",
+        "output": "public/dealer-app/vehicle-5bd2761b5472b833b6db.webp",
+        "sha256": "5bd2761b5472b833b6db493f450a90b3e6e0a33ff8d8e12ab946c5b19f700b5c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-06-4.webp",
+        "output": "public/dealer-app/vehicle-aadd0d93e50bbe8ece48.webp",
+        "sha256": "aadd0d93e50bbe8ece48a7151a4f587f73b48cb0a7ab05000ccb77f8205e6cf1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-07-1.webp",
+        "output": "public/dealer-app/vehicle-45cd2ff9f41948ce5f60.webp",
+        "sha256": "45cd2ff9f41948ce5f602e912ca4d0d33bc1390e29c77663fd67a60eef88f99a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-07-2.webp",
+        "output": "public/dealer-app/vehicle-2bc4ee808e0e0cc35469.webp",
+        "sha256": "2bc4ee808e0e0cc354699c35618bd486c2ad0a6aa4ecd5233677286f41dece94",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-07-3.webp",
+        "output": "public/dealer-app/vehicle-f61379145173a22aafde.webp",
+        "sha256": "f61379145173a22aafde684b9c1648e81d318c54de2997cc892ee110e14046cf",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-07-4.webp",
+        "output": "public/dealer-app/vehicle-ecbb4040acf37caa5c9e.webp",
+        "sha256": "ecbb4040acf37caa5c9e9d5c2ebb59f0576cf5fc10f39c9d35837e89927feb2d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-08-1.webp",
+        "output": "public/dealer-app/vehicle-ae30f31b17060bce186d.webp",
+        "sha256": "ae30f31b17060bce186d93b5301101a00a871fb6d03717e7ecd32c14d3861a1a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-08-2.webp",
+        "output": "public/dealer-app/vehicle-dfcacc5d9d30339b9e69.webp",
+        "sha256": "dfcacc5d9d30339b9e690f2b517335b1238abade5df81162443d61d48c63ca3c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-08-3.webp",
+        "output": "public/dealer-app/vehicle-c3f2e44832cd92aefbcb.webp",
+        "sha256": "c3f2e44832cd92aefbcb4b5a91fd5a5a451163bfa2756dde0fb08d593dabe123",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-08-4.webp",
+        "output": "public/dealer-app/vehicle-335375171f9fdc4440b0.webp",
+        "sha256": "335375171f9fdc4440b01e214d08da349f5a3a3a52f1300202d415450c8ad26d",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-09-1.webp",
+        "output": "public/dealer-app/vehicle-4b26c8638716e594a291.webp",
+        "sha256": "4b26c8638716e594a291796bbd96f869e44b0fc98de150a17fb3037d2e79c07b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-09-2.webp",
+        "output": "public/dealer-app/vehicle-b0eb181182006d234bb5.webp",
+        "sha256": "b0eb181182006d234bb543cc1c1cf3cc8fd628fbb93a3ca61f308d2a9352844a",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-09-3.webp",
+        "output": "public/dealer-app/vehicle-eb21ccd348840c51f5ea.webp",
+        "sha256": "eb21ccd348840c51f5ea353d6f4c3b613ca3151e0cefec17d73f3f51970577df",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-09-4.webp",
+        "output": "public/dealer-app/vehicle-c008c97910d1d8e176a0.webp",
+        "sha256": "c008c97910d1d8e176a0324c035832e2ad211ca69f3bc6b1d6676eed701fdcca",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-10-1.webp",
+        "output": "public/dealer-app/vehicle-ca1f84c4d3f1209d2db8.webp",
+        "sha256": "ca1f84c4d3f1209d2db8b187a8da082a5f349c8ea1c465afe4e64b0ff73cf01e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-10-2.webp",
+        "output": "public/dealer-app/vehicle-a23bf8f2f182a4af09e5.webp",
+        "sha256": "a23bf8f2f182a4af09e516c555ef79a0dd933bce0c30bb62f2aa07cf0cc4e20b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-10-3.webp",
+        "output": "public/dealer-app/vehicle-9d70e76ebe19713873fc.webp",
+        "sha256": "9d70e76ebe19713873fc8f16ed1583f785aa6d3a1ee69dc236b591ffd70da0c3",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-10-4.webp",
+        "output": "public/dealer-app/vehicle-ede314652cc5e391560f.webp",
+        "sha256": "ede314652cc5e391560f6508054a01d28a128988b34ad33c60a30968688d77fc",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-11-1.webp",
+        "output": "public/dealer-app/vehicle-704f4891f970ff6c304d.webp",
+        "sha256": "704f4891f970ff6c304dbd0a19e48c4f37f894190301b64ab5f2cab3a03c0c62",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-11-2.webp",
+        "output": "public/dealer-app/vehicle-a3400dc72b21970d709f.webp",
+        "sha256": "a3400dc72b21970d709f3bedab7c1952e5d9c1d14aee6c20b783667adaab58fd",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-11-3.webp",
+        "output": "public/dealer-app/vehicle-d94d07d6d9c5358b6ddb.webp",
+        "sha256": "d94d07d6d9c5358b6ddb97e1e485d4c80d8b38f74cae4958b299c779a48b232e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-11-4.webp",
+        "output": "public/dealer-app/vehicle-dbef57767b6e46e3d164.webp",
+        "sha256": "dbef57767b6e46e3d1649f4312fa9d94e3782a18b75fc682c26125bae90d8e07",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-12-1.webp",
+        "output": "public/dealer-app/vehicle-5d23834d3aec708a5921.webp",
+        "sha256": "5d23834d3aec708a59215086b0c28db27a4ded205f45f52f0bbf141d72253ad9",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-12-2.webp",
+        "output": "public/dealer-app/vehicle-aac32cd711ac11f079bb.webp",
+        "sha256": "aac32cd711ac11f079bb7bc8c40790aa5aa2d9ee2ab292699748024b6b3bd0f6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-12-3.webp",
+        "output": "public/dealer-app/vehicle-bd18bb00713c67d39afd.webp",
+        "sha256": "bd18bb00713c67d39afdd9fee51c6d16d9821beec8e2d8c290b331cdc9b63d6b",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-12-4.webp",
+        "output": "public/dealer-app/vehicle-25a6302c48dc7eae64f9.webp",
+        "sha256": "25a6302c48dc7eae64f91f7eccef95da507e6b1aed153e8485c59e617546be1e",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-13-1.webp",
+        "output": "public/dealer-app/vehicle-102e52346da38051a872.webp",
+        "sha256": "102e52346da38051a8729dde17bd2445fa217ed36f4201e0b42ca675cb205581",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-13-2.webp",
+        "output": "public/dealer-app/vehicle-a889897fa9a5bb613bb3.webp",
+        "sha256": "a889897fa9a5bb613bb334679801dbcb1db4bc3206c6eb06339b919fb9f3464f",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-13-3.webp",
+        "output": "public/dealer-app/vehicle-45ebd2176cc763729129.webp",
+        "sha256": "45ebd2176cc76372912955b7048624c0d8ee3b35c36485ab2473d7d7f406f5c4",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-13-4.webp",
+        "output": "public/dealer-app/vehicle-3c53ad51dc7a5d864eaf.webp",
+        "sha256": "3c53ad51dc7a5d864eaf271ca9f4ed3a530cd096cce0d7da4224c24d3dc24cc0",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-14-1.webp",
+        "output": "public/dealer-app/vehicle-6de189bd024b2897df5c.webp",
+        "sha256": "6de189bd024b2897df5c0c1441f864df59a29d1f8d08c3f557e6a3c7d2b40c9c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-14-2.webp",
+        "output": "public/dealer-app/vehicle-877e79c3fc4d66b51eed.webp",
+        "sha256": "877e79c3fc4d66b51eeda9067b1f256741cdabd46369b2adad040a49808352a8",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-14-3.webp",
+        "output": "public/dealer-app/vehicle-5e5cc5f010c5591f7273.webp",
+        "sha256": "5e5cc5f010c5591f7273211b56d724d7b4d4fdc48421c03ebaa4fab05d6f1892",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-14-4.webp",
+        "output": "public/dealer-app/vehicle-6217638efe4ee633ce6c.webp",
+        "sha256": "6217638efe4ee633ce6c312c6cb916cfc185c686718845ee7b97f0895f655e86",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-15-1.webp",
+        "output": "public/dealer-app/vehicle-e48c07de674b361a7d92.webp",
+        "sha256": "e48c07de674b361a7d9216a86c4e66db34701c642e9f25fe796dd539f8a086b1",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-15-2.webp",
+        "output": "public/dealer-app/vehicle-a503e199510e4058ef7e.webp",
+        "sha256": "a503e199510e4058ef7e1070b9150603ad9cf97b28a8081149fe814e452c280c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-15-3.webp",
+        "output": "public/dealer-app/vehicle-157d991026d3f58913c1.webp",
+        "sha256": "157d991026d3f58913c1d4f3ad44dcc7839f9a9455d7dcb7e55a12cebc1083a6",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-15-4.webp",
+        "output": "public/dealer-app/vehicle-cc230f505fb8030a524a.webp",
+        "sha256": "cc230f505fb8030a524a0f66b18b4a7790fa48fc5b2331e4f708161298c74af4",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-16-1.webp",
+        "output": "public/dealer-app/vehicle-d6eff565b526e2f250f0.webp",
+        "sha256": "d6eff565b526e2f250f08dd36fc3a07662c0ab6af02321d634ae66118746fd84",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-16-2.webp",
+        "output": "public/dealer-app/vehicle-f83eb0ae5e64a4b01e70.webp",
+        "sha256": "f83eb0ae5e64a4b01e7047d6372afdec16734fe3b699224f661fab2eae4008ff",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-16-3.webp",
+        "output": "public/dealer-app/vehicle-9a066bb5a3027c631d1b.webp",
+        "sha256": "9a066bb5a3027c631d1b77eaae08f877ea8cfebdcce1c1ef6c2153a042f4f35c",
+        "role": "vehicle"
+      },
+      {
+        "source": "auto-best/static/assets/priselci/vehicle-16-4.webp",
+        "output": "public/dealer-app/vehicle-73fcd9b21db95093a3f4.webp",
+        "sha256": "73fcd9b21db95093a3f47cd3b25dae21d9301daf248f99680353cdb7824915e0",
+        "role": "vehicle"
+      }
+    ]
+  },
+  "baseDeployment": {
+    "id": "dpl_9YZJVviuYC2w8xv7vxNP6fPXjdNk",
+    "url": "https://cars-priselci.vercel.app/",
+    "checkedAt": "2026-09-28T02:25:55.298Z"
+  },
+  "baseReceiptSha256": "c793bf349c7feae7cab0fcc9891617a370856c723990da8d6312887bd533d19c",
+  "refreshedAt": "2026-09-30T11:44:07.460Z"
+}

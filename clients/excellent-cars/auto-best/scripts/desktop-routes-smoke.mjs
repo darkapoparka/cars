@@ -86,10 +86,13 @@ try {
               assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
               assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
               assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
-              if (route === 'listing-grid') assert.equal(await page.locator('.dn-listing-hero__copy p').innerText(), locale === 'bg' ? '8 автомобила' : '8 cars');
+              if (route === 'listing-grid') {
+                const count = await page.locator('.dn-listing-results .dn-vehicle-card').count();
+                assert.equal(await page.locator('.dn-listing-hero__copy p').innerText(), locale === 'bg' ? `${count} автомобила` : `${count} cars`);
+              }
               if (route === 'about-us' || route === 'contact') {
                 const social = page.locator(route === 'about-us' ? '.dn-about-socials a' : '.dn-contact-actions__social a');
-                assert.equal(await social.count(), 3);
+                assert.equal(await social.count(), 0, 'The master has no borrowed dealer social accounts');
                 for (const link of await social.all()) {
                   const box = await link.boundingBox();
                   assert.equal(box.width, 56); assert.equal(box.height, 56);

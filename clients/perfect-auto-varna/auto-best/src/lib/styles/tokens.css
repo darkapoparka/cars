@@ -65,10 +65,13 @@
   /* Responsive shell aliases. */
   --dn-mobile-canvas: var(--dn-surface-canvas);
   --dn-mobile-surface: var(--dn-surface-raised);
-  --dn-mobile-nav-height: 56px;
-  --dn-mobile-detail-bar-height: 60px;
+  /* Page clearance includes the fixed bar and separation from page actions. */
+  --dn-mobile-nav-height: calc(var(--dn-mobile-nav-bar-height) + 16px);
+  --dn-mobile-nav-bar-height: max(60px, calc(24px + 0.975rem + 12px));
+  --dn-mobile-detail-bar-height: max(60px, calc(2.75rem + 16px));
   --dn-mobile-page-end: var(--dn-space-4);
   --dn-radius-control: 12px;
+  --dn-radius-xs: 6px;
   --dn-radius-sm: 10px;
   --dn-radius: 16px;
   --dn-radius-lg: 20px;
@@ -167,6 +170,8 @@
   --dn-overlay-action-font: var(--dn-cta-font);
 
   /* Shared entry and segmented-control aliases. */
+  --dn-entry-stack-gap: var(--dn-space-4);
+  --dn-entry-card-padding: var(--dn-space-4);
   --dn-entry-height: var(--dn-control-height-editor);
   --dn-entry-surface: var(--dn-home-panel);
   --dn-entry-line: var(--dn-line-strong);
@@ -180,7 +185,7 @@
   --dn-control-icon-size: 18px;
   --dn-entry-action-icon-size: 15px;
   --dn-entry-segment-width: min(240px, calc(100% - var(--dn-space-6)));
-  --dn-entry-action-width: min(180px, 100%);
+  --dn-entry-action-width: min(11.25rem, 100%);
   --dn-segment-surface: var(--dn-home-panel);
   --dn-segment-selected: var(--dn-surface-raised);
 }

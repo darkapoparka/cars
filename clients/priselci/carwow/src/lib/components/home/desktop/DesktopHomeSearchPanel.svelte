@@ -572,7 +572,7 @@
 						aria-selected={option.value === activeQuickValue}
 						onclick={() => pickQuickValue(option.value)}
 					>
-						<span>{i18n.text(option.label)}</span>
+						<span>{i18n.spec(option.label)}</span>
 						<span class="daynight-hero-filter-sheet__tick" aria-hidden="true">✓</span>
 					</button>
 				{/each}

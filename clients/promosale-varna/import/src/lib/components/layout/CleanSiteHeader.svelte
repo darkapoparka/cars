@@ -36,7 +36,6 @@
 		pathname ? pathname === href || (href !== '/' && pathname.startsWith(`${href}/`)) : fallback;
 
 	let searchOpen = $state(false);
-
 </script>
 
 <!-- ===== inline SVG glyphs (themed paths, currentColor) ===== -->

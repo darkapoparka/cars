@@ -13,7 +13,12 @@
 	<MobileLeadImageBanner
 		title={i18n.t('copy.4dbb828642ef')}
 		action={i18n.t('copy.52ac512573fc')}
-		image={resolve('/assets/images/home-promos/gclass-urus-pair-v4.webp')}
+		image={resolve(
+			kind === 'sell'
+				? '/assets/images/home-promos/sell-inspection-process-v1.webp'
+				: '/assets/images/home-promos/gclass-urus-pair-v4.webp'
+		)}
+		artwork={kind === 'sell' ? 'photo' : 'cutout'}
 		{onOpen}
 	/>
 </section>

@@ -1,0 +1,133 @@
+{
+  "generatedAt": "2026-09-29T21:48:34.389Z",
+  "node": "v22.20.0",
+  "environment": "Next production server, local unthrottled HTTP. Durations are server response checks, not browser interaction or mobile Web Vitals.",
+  "results": [
+    {
+      "route": "/bg",
+      "status": 200,
+      "durationMs": 74,
+      "bytes": 101138,
+      "ok": true
+    },
+    {
+      "route": "/bg/search",
+      "status": 200,
+      "durationMs": 21,
+      "bytes": 16946,
+      "ok": true
+    },
+    {
+      "route": "/bg/cars",
+      "status": 200,
+      "durationMs": 53,
+      "bytes": 212101,
+      "ok": true
+    },
+    {
+      "route": "/bg/saved",
+      "status": 200,
+      "durationMs": 11,
+      "bytes": 15360,
+      "ok": true
+    },
+    {
+      "route": "/bg/more",
+      "status": 200,
+      "durationMs": 18,
+      "bytes": 21630,
+      "ok": true
+    },
+    {
+      "route": "/bg/sell",
+      "status": 200,
+      "durationMs": 16,
+      "bytes": 49238,
+      "ok": true
+    },
+    {
+      "route": "/bg/sell/details",
+      "status": 200,
+      "durationMs": 14,
+      "bytes": 13563,
+      "ok": true
+    },
+    {
+      "route": "/bg/finance",
+      "status": 200,
+      "durationMs": 14,
+      "bytes": 44412,
+      "ok": true
+    },
+    {
+      "route": "/bg/service",
+      "status": 200,
+      "durationMs": 16,
+      "bytes": 44378,
+      "ok": true
+    },
+    {
+      "route": "/bg/service/details",
+      "status": 200,
+      "durationMs": 16,
+      "bytes": 13566,
+      "ok": true
+    },
+    {
+      "route": "/bg/stores",
+      "status": 200,
+      "durationMs": 9,
+      "bytes": 17755,
+      "ok": true
+    },
+    {
+      "route": "/bg/luxe",
+      "status": 200,
+      "durationMs": 22,
+      "bytes": 93437,
+      "ok": true
+    },
+    {
+      "route": "/bg/benefits/returns",
+      "status": 200,
+      "durationMs": 8,
+      "bytes": 16602,
+      "ok": true
+    },
+    {
+      "route": "/bg/benefits/warranty",
+      "status": 200,
+      "durationMs": 11,
+      "bytes": 16620,
+      "ok": true
+    },
+    {
+      "route": "/bg/cars/2024-toyota-fortuner-exr",
+      "status": 200,
+      "durationMs": 16,
+      "bytes": 49888,
+      "ok": true
+    },
+    {
+      "route": "/bg/cars/2024-toyota-fortuner-exr/gallery",
+      "status": 200,
+      "durationMs": 14,
+      "bytes": 38532,
+      "ok": true
+    },
+    {
+      "route": "/bg/cars/2024-toyota-fortuner-exr/features",
+      "status": 200,
+      "durationMs": 17,
+      "bytes": 26737,
+      "ok": true
+    },
+    {
+      "route": "/bg/cars/2024-toyota-fortuner-exr/inspection",
+      "status": 200,
+      "durationMs": 15,
+      "bytes": 19934,
+      "ok": true
+    }
+  ]
+}

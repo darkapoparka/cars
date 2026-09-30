@@ -1,5 +1,5 @@
-import Image from "./public-image";
 import styles from "./desktop-banner-cars.module.css";
+import Image from "./public-image";
 
 const pairs = {
   inventory: ["golf", "a45"],
@@ -18,11 +18,11 @@ export function DesktopBannerCars({
         <div className={index === 0 ? styles.left : styles.right} key={car}>
           <Image
             alt=""
-            src={`/images/desktop/cutout-${car}-v1.webp`}
-            width={1000}
             height={667}
             sizes="(min-width: 1024px) 28rem, 0px"
+            src={`/images/desktop/cutout-${car}-v1.webp`}
             unoptimized
+            width={1000}
           />
         </div>
       ))}

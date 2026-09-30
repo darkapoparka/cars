@@ -32,7 +32,8 @@ test('services search and filters combine, and the existing request drawer keeps
 	await drawer.getByLabel('Автомобил', { exact: true }).fill('BMW X5');
 	await drawer.getByLabel('Телефон', { exact: true }).fill('+359888123456');
 	await drawer.getByRole('button', { name: 'Попитай за документи', exact: true }).click();
-	await expect(drawer.getByRole('status')).toContainText('Заявката е подготвена');
+	await expect(drawer.getByRole('status')).toContainText('нищо не е изпратено');
+	await expect(drawer.getByRole('status')).not.toContainText('ще се свърже');
 	expect(payload.source).toBe('services-mobile');
 	expect(payload.message).toContain('Регистрация и документи');
 	await drawer.getByRole('button', { name: 'Затвори', exact: true }).click();

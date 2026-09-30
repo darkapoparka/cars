@@ -341,7 +341,6 @@
   .dn-app-shell .dn-contact-hero:not(.dn-contact-hero--general) :is(h1, p) { color: #fff; }
 }
 @media (max-width: 767px) {
-  .dn-app-shell .dn-search { box-shadow: 0 6px 18px rgb(13 18 26 / .06); }
   .dn-app-shell .dn-hero.dn-route-hero { height: 244px; min-height: 244px; }
   .dn-app-shell .dn-contact-hero--workflow.dn-route-hero { height: var(--dn-mobile-entry-hero-height); min-height: var(--dn-mobile-entry-hero-height); }
   .dn-app-shell .dn-contact-intent--workflow .dn-contact-intent__main { padding-bottom: 20px; box-shadow: 0 6px 18px rgb(13 18 26 / .06); }

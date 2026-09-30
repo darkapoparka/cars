@@ -1,0 +1,712 @@
+{
+  "date": "2026-09-30",
+  "scope": "Local App template UI",
+  "check": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "generatedPages": 407
+  },
+  "homeAndRecent": [
+    {
+      "label": "final home 390",
+      "banners": [
+        {
+          "action": {
+            "height": 44,
+            "width": 125.296875,
+            "x": 28,
+            "y": 927.90625
+          },
+          "card": {
+            "height": 154,
+            "width": 351,
+            "x": 12,
+            "y": 833.90625
+          },
+          "copy": {
+            "height": 36,
+            "width": 125,
+            "x": 28,
+            "y": 879.90625
+          },
+          "name": "Разгледайте автомобилите",
+          "title": {
+            "height": 24,
+            "width": 193.53125,
+            "x": 28,
+            "y": 849.90625
+          }
+        },
+        {
+          "action": {
+            "height": 44,
+            "width": 161.34375,
+            "x": 391,
+            "y": 927.90625
+          },
+          "card": {
+            "height": 154,
+            "width": 351,
+            "x": 375,
+            "y": 833.90625
+          },
+          "copy": {
+            "height": 36,
+            "width": 142.84375,
+            "x": 391,
+            "y": 879.90625
+          },
+          "name": "Разгледайте финансирането",
+          "title": {
+            "height": 24,
+            "width": 148.1875,
+            "x": 391,
+            "y": 849.90625
+          }
+        },
+        {
+          "action": {
+            "height": 44,
+            "width": 136.734375,
+            "x": 754,
+            "y": 927.90625
+          },
+          "card": {
+            "height": 154,
+            "width": 351,
+            "x": 738,
+            "y": 833.90625
+          },
+          "copy": {
+            "height": 36,
+            "width": 131.21875,
+            "x": 754,
+            "y": 879.90625
+          },
+          "name": "Оценете автомобила си",
+          "title": {
+            "height": 24,
+            "width": 191.796875,
+            "x": 754,
+            "y": 849.90625
+          }
+        },
+        {
+          "action": {
+            "height": 44,
+            "width": 114.703125,
+            "x": 1117,
+            "y": 927.90625
+          },
+          "card": {
+            "height": 154,
+            "width": 351,
+            "x": 1101,
+            "y": 833.90625
+          },
+          "copy": {
+            "height": 36,
+            "width": 139.75,
+            "x": 1117,
+            "y": 879.90625
+          },
+          "name": "Планирайте посещение",
+          "title": {
+            "height": 24,
+            "width": 150.390625,
+            "x": 1117,
+            "y": 849.90625
+          }
+        }
+      ],
+      "documentWidth": 375,
+      "recent": [
+        {
+          "height": 199,
+          "name": "2022 Kia SELTOS",
+          "priceOffset": 145,
+          "textOverflow": "ellipsis",
+          "titleContentWidth": 170,
+          "titleHeight": 20,
+          "titleWidth": 170,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 199,
+          "name": "2023 Land Rover DEFENDER",
+          "priceOffset": 145,
+          "textOverflow": "ellipsis",
+          "titleContentWidth": 178,
+          "titleHeight": 20,
+          "titleWidth": 170,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 199,
+          "name": "2024 Toyota FORTUNER",
+          "priceOffset": 145,
+          "textOverflow": "ellipsis",
+          "titleContentWidth": 170,
+          "titleHeight": 20,
+          "titleWidth": 170,
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "label": "final home 320",
+      "banners": [
+        {
+          "action": {
+            "height": 44,
+            "width": 121.1875,
+            "x": 28,
+            "y": 578.90625
+          },
+          "card": {
+            "height": 154,
+            "width": 281,
+            "x": 12,
+            "y": 484.90625
+          },
+          "copy": {
+            "height": 36,
+            "width": 125,
+            "x": 28,
+            "y": 530.90625
+          },
+          "name": "Разгледайте автомобилите",
+          "title": {
+            "height": 24,
+            "width": 193.53125,
+            "x": 28,
+            "y": 500.90625
+          }
+        },
+        {
+          "action": {
+            "height": 44,
+            "width": 157.234375,
+            "x": 321,
+            "y": 578.90625
+          },
+          "card": {
+            "height": 154,
+            "width": 281,
+            "x": 305,
+            "y": 484.90625
+          },
+          "copy": {
+            "height": 36,
+            "width": 142.84375,
+            "x": 321,
+            "y": 530.90625
+          },
+          "name": "Разгледайте финансирането",
+          "title": {
+            "height": 24,
+            "width": 148.1875,
+            "x": 321,
+            "y": 500.90625
+          }
+        },
+        {
+          "action": {
+            "height": 44,
+            "width": 132.625,
+            "x": 614,
+            "y": 578.90625
+          },
+          "card": {
+            "height": 154,
+            "width": 281,
+            "x": 598,
+            "y": 484.90625
+          },
+          "copy": {
+            "height": 36,
+            "width": 131.21875,
+            "x": 614,
+            "y": 530.90625
+          },
+          "name": "Оценете автомобила си",
+          "title": {
+            "height": 24,
+            "width": 191.796875,
+            "x": 614,
+            "y": 500.90625
+          }
+        },
+        {
+          "action": {
+            "height": 44,
+            "width": 110.59375,
+            "x": 907,
+            "y": 578.90625
+          },
+          "card": {
+            "height": 154,
+            "width": 281,
+            "x": 891,
+            "y": 484.90625
+          },
+          "copy": {
+            "height": 36,
+            "width": 139.75,
+            "x": 907,
+            "y": 530.90625
+          },
+          "name": "Планирайте посещение",
+          "title": {
+            "height": 24,
+            "width": 150.390625,
+            "x": 907,
+            "y": 500.90625
+          }
+        }
+      ],
+      "documentWidth": 305,
+      "recent": [
+        {
+          "height": 199,
+          "name": "2022 Kia SELTOS",
+          "priceOffset": 145,
+          "textOverflow": "ellipsis",
+          "titleContentWidth": 170,
+          "titleHeight": 20,
+          "titleWidth": 170,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 199,
+          "name": "2023 Land Rover DEFENDER",
+          "priceOffset": 145,
+          "textOverflow": "ellipsis",
+          "titleContentWidth": 178,
+          "titleHeight": 20,
+          "titleWidth": 170,
+          "whiteSpace": "nowrap"
+        },
+        {
+          "height": 199,
+          "name": "2024 Toyota FORTUNER",
+          "priceOffset": 145,
+          "textOverflow": "ellipsis",
+          "titleContentWidth": 170,
+          "titleHeight": 20,
+          "titleWidth": 170,
+          "whiteSpace": "nowrap"
+        }
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    }
+  ],
+  "priceHeader": [
+    {
+      "label": "BG Defender long title 320",
+      "currencyColor": "rgb(98, 98, 105)",
+      "currencySize": "12px",
+      "documentWidth": 305,
+      "infoSurface": {
+        "bottom": 225.59375,
+        "height": 36,
+        "width": 36,
+        "x": 249,
+        "y": 189.59375
+      },
+      "infoTarget": {
+        "bottom": 229.59375,
+        "height": 44,
+        "width": 44,
+        "x": 245,
+        "y": 185.59375
+      },
+      "paymentInMain": false,
+      "price": "256,999 EUR",
+      "priceBox": {
+        "bottom": 290.59375,
+        "height": 41,
+        "width": 273,
+        "x": 16,
+        "y": 249.59375
+      },
+      "scrollWidth": 305,
+      "subtitleCount": 0,
+      "title": "2023 LAND ROVER DEFENDER P300 110 SE",
+      "titleBox": {
+        "bottom": 247.59375,
+        "height": 62,
+        "width": 221,
+        "x": 16,
+        "y": 185.59375
+      },
+      "viewport": 320
+    },
+    {
+      "label": "BG Kia 320 final",
+      "currencyColor": "rgb(98, 98, 105)",
+      "currencySize": "12px",
+      "documentWidth": 305,
+      "infoSurface": {
+        "bottom": 225.59375,
+        "height": 36,
+        "width": 36,
+        "x": 249,
+        "y": 189.59375
+      },
+      "infoTarget": {
+        "bottom": 229.59375,
+        "height": 44,
+        "width": 44,
+        "x": 245,
+        "y": 185.59375
+      },
+      "paymentInMain": false,
+      "price": "43,499 EUR",
+      "priceBox": {
+        "bottom": 272.59375,
+        "height": 41,
+        "width": 273,
+        "x": 16,
+        "y": 231.59375
+      },
+      "scrollWidth": 305,
+      "subtitleCount": 0,
+      "title": "2022 KIA SELTOS LX",
+      "titleBox": {
+        "bottom": 220.59375,
+        "height": 35,
+        "width": 221,
+        "x": 16,
+        "y": 185.59375
+      },
+      "viewport": 320
+    },
+    {
+      "label": "BG Kia 390 final",
+      "currencyColor": "rgb(98, 98, 105)",
+      "currencySize": "12px",
+      "documentWidth": 375,
+      "infoSurface": {
+        "bottom": 264.984375,
+        "height": 36,
+        "width": 36,
+        "x": 319,
+        "y": 228.984375
+      },
+      "infoTarget": {
+        "bottom": 268.984375,
+        "height": 44,
+        "width": 44,
+        "x": 315,
+        "y": 224.984375
+      },
+      "paymentInMain": false,
+      "price": "43,499 EUR",
+      "priceBox": {
+        "bottom": 311.984375,
+        "height": 41,
+        "width": 343,
+        "x": 16,
+        "y": 270.984375
+      },
+      "scrollWidth": 375,
+      "subtitleCount": 0,
+      "title": "2022 KIA SELTOS LX",
+      "titleBox": {
+        "bottom": 259.984375,
+        "height": 35,
+        "width": 291,
+        "x": 16,
+        "y": 224.984375
+      },
+      "viewport": 390
+    }
+  ],
+  "sharedNavigation": [
+    {
+      "label": "PDP 320 shared back/share",
+      "controls": [
+        {
+          "href": "/bg/cars",
+          "icon": [
+            18,
+            18
+          ],
+          "label": "Към автомобилите",
+          "surface": [
+            36,
+            36
+          ],
+          "target": [
+            44,
+            44
+          ]
+        },
+        {
+          "href": null,
+          "icon": [
+            18,
+            18
+          ],
+          "label": "Сподели автомобила",
+          "surface": [
+            36,
+            36
+          ],
+          "target": [
+            44,
+            44
+          ]
+        }
+      ],
+      "documentWidth": 305,
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "label": "Cars 320 shared back/saved",
+      "controls": [
+        {
+          "href": "/bg",
+          "icon": [
+            18,
+            18
+          ],
+          "label": "Към началото",
+          "surface": [
+            36,
+            36
+          ],
+          "target": [
+            44,
+            44
+          ]
+        },
+        {
+          "href": "/bg/saved",
+          "icon": [
+            18,
+            18
+          ],
+          "label": "Запазени автомобили",
+          "surface": [
+            36,
+            36
+          ],
+          "target": [
+            44,
+            44
+          ]
+        }
+      ],
+      "documentWidth": 305,
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "label": "Saved 320 shared back",
+      "controls": [
+        {
+          "href": "/bg",
+          "icon": [
+            18,
+            18
+          ],
+          "label": "Към началото",
+          "surface": [
+            36,
+            36
+          ],
+          "target": [
+            44,
+            44
+          ]
+        }
+      ],
+      "documentWidth": 320,
+      "scrollWidth": 320,
+      "viewport": 320
+    },
+    {
+      "label": "Search 390 final shared back",
+      "controls": [
+        {
+          "href": "/bg/cars",
+          "icon": [
+            18,
+            18
+          ],
+          "label": "Към автомобилите",
+          "surface": [
+            36,
+            36
+          ],
+          "target": [
+            44,
+            44
+          ]
+        }
+      ],
+      "documentWidth": 390,
+      "scrollWidth": 390,
+      "viewport": 390
+    }
+  ],
+  "interactions": [
+    {
+      "label": "Drawer Tab reaches close",
+      "result": {
+        "dialogTitles": [
+          "Варианти за оглед\n\n2022 KIA SELTOS LX\n\nНа място\nПосетете шоурума\nЗаяви оглед\nУго"
+        ],
+        "dialogWidth": 390,
+        "documentWidth": 390,
+        "focused": "Затвори вариантите за оглед",
+        "scrollLocked": true,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "label": "Drawer Shift+Tab wraps to request",
+      "result": {
+        "dialogTitles": [
+          "Варианти за оглед\n\n2022 KIA SELTOS LX\n\nНа място\nПосетете шоурума\nЗаяви оглед\nУго"
+        ],
+        "dialogWidth": 390,
+        "documentWidth": 390,
+        "focused": "Заяви оглед\nУговорете удобен час",
+        "scrollLocked": true,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "label": "Drawer Tab wraps to close",
+      "result": {
+        "dialogTitles": [
+          "Варианти за оглед\n\n2022 KIA SELTOS LX\n\nНа място\nПосетете шоурума\nЗаяви оглед\nУго"
+        ],
+        "dialogWidth": 390,
+        "documentWidth": 390,
+        "focused": "Затвори вариантите за оглед",
+        "scrollLocked": true,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "label": "Viewing request prepares car-specific draft",
+      "result": {
+        "dialogs": 1,
+        "scrollLocked": true,
+        "value": "Здравейте, искам да уговоря оглед на 2022 KIA SELTOS LX.\nhttp://localhost:3001/bg/cars/2022-kia-seltos-lx-3696"
+      }
+    },
+    {
+      "label": "Enquiry Escape restores the viewing trigger",
+      "result": {
+        "dialogTitles": [],
+        "documentWidth": 375,
+        "focused": "Уговорете оглед",
+        "scrollLocked": false,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "label": "Save persists after reload",
+      "result": {
+        "initial": "false",
+        "current": "true"
+      }
+    },
+    {
+      "label": "Localized back link reaches inventory",
+      "result": {
+        "url": "http://localhost:3001/bg/cars"
+      }
+    },
+    {
+      "label": "Fortuner ArrowRight selects and focuses Interiors",
+      "result": {
+        "focused": "Interiors",
+        "priceVisible": true,
+        "selected": "Interiors",
+        "visiblePanels": 1
+      }
+    },
+    {
+      "label": "Fortuner Home restores Information",
+      "result": {
+        "focused": "Information",
+        "selected": "Information"
+      }
+    },
+    {
+      "check": "price information",
+      "opened": true,
+      "escapeFocus": "Информация за цената"
+    },
+    {
+      "check": "final segments keyboard",
+      "arrowRightToInterior": true,
+      "homeToInfo": true
+    },
+    {
+      "check": "viewing in-person navigation",
+      "url": "http://localhost:3001/bg/stores",
+      "bodyOverflow": "hidden auto"
+    },
+    {
+      "check": "shared saved navigation",
+      "carsToSaved": true,
+      "savedToHomeUrl": "http://localhost:3001/bg"
+    },
+    {
+      "check": "final payment accordion in price info",
+      "expanded": "true",
+      "calculators": 1
+    },
+    {
+      "check": "final info Escape",
+      "focused": "Информация за цената",
+      "dialogs": 0
+    },
+    {
+      "check": "final exterior panel",
+      "headings": 0,
+      "photos": 5,
+      "price": "43,499 EUR"
+    },
+    {
+      "label": "final shared Search Back",
+      "url": "http://localhost:3001/bg/cars",
+      "passed": true
+    }
+  ],
+  "desktopPdp": {
+    "viewport": 1440,
+    "documentWidth": 1425,
+    "scrollWidth": 1425,
+    "brokenLoadedImages": 0,
+    "sharedActions": {
+      "touchTarget": 44,
+      "surface": 36,
+      "icon": 18
+    },
+    "segmentTargets": 44,
+    "segmentTrack": 36,
+    "mainPrice": "43,499 EUR",
+    "mainPaymentButton": false
+  },
+  "consoleErrors": [],
+  "delivery": {
+    "localOnly": true,
+    "existingGitIndexLockPreserved": true,
+    "previouslyStagedFiles": 9
+  }
+}
