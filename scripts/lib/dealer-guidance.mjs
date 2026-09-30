@@ -2,7 +2,8 @@ const commands = {
   'auto-best': {runtime:'Node 22.12+ on the 22 line; npm/package-lock.json', install:'npm ci', dev:'npm run dev -- --host 127.0.0.1 --port 6601 --strictPort', check:'npm run check && npm run build'},
   carwow: {runtime:'Use the locked Node runtime; npm/package-lock.json', install:'npm ci', dev:'npm exec vite dev -- --host 127.0.0.1 --port 6603 --strictPort', check:'npm run check && npm run build'},
   import: {runtime:'Use the locked Node runtime; npm/package-lock.json', install:'npm ci', dev:'npm run dev -- --host 127.0.0.1 --port 6602 --strictPort', check:'npm run check && npm run build'},
-  modern: {runtime:'Node >=22.22.0 <23; pnpm 11.4.0; retain the whole workspace', install:'pnpm install --frozen-lockfile\npnpm --filter @repo/database build', dev:'pnpm --filter web exec next dev -H 127.0.0.1 -p 6602', check:'pnpm --filter web typecheck\npnpm --filter web build'}
+  modern: {runtime:'Node >=22.22.0 <23; pnpm 11.4.0; retain the whole workspace', install:'pnpm install --frozen-lockfile\npnpm --filter @repo/database build', dev:'pnpm --filter web exec next dev -H 127.0.0.1 -p 6602', check:'pnpm --filter web typecheck\npnpm --filter web build'},
+  app: {runtime:'Node 22.x; npm/package-lock.json', install:'npm ci', dev:'npm run dev -- --hostname=127.0.0.1 --port=6604', check:'npm run check'}
 };
 export function dealerGuidance({slug, variants, workflowCommit, variant = null}) {
   const source = 'https://github.com/darkapoparka/cars/blob/' + (workflowCommit || 'main');
