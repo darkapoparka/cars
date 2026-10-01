@@ -65,6 +65,7 @@ export type AuxeroAboutContent = {
 	};
 	process: {
 		description: string;
+		mobileDescription?: string;
 		title: string;
 	}[];
 	reviews: AuxeroReviewCard[];
@@ -208,19 +209,23 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 	process: [
 		{
 			title: '1. Заявка',
-			description: 'Изпращате линк, VIN, бюджет или модел, който търсите.'
+			description: 'Изпращате линк, VIN, бюджет или модел, който търсите.',
+			mobileDescription: 'Изпрати линк, VIN или предпочитан модел.'
 		},
 		{
 			title: '2. Проверка',
-			description: 'Екипът гледа история, снимки, пробег, документи и реални разходи.'
+			description: 'Екипът гледа история, снимки, пробег, документи и реални разходи.',
+			mobileDescription: 'Проверяваме история, документи и разходи.'
 		},
 		{
 			title: '3. Решение',
-			description: 'Получавате ясен контекст дали автомобилът си струва следваща стъпка.'
+			description: 'Получавате ясен контекст дали автомобилът си струва следваща стъпка.',
+			mobileDescription: 'Обсъждаме автомобила и крайните разходи.'
 		},
 		{
 			title: '4. Оглед и предаване',
-			description: 'Организираме оглед, документи, регистрация или продажба с уговорка.'
+			description: 'Организираме оглед, документи, регистрация или продажба с уговорка.',
+			mobileDescription: 'Уговаряме оглед, документи и предаване.'
 		}
 	],
 	reviews: auxeroReviewCards.slice(0, 4),

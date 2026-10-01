@@ -9,14 +9,18 @@
 	let { data }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
 	let query = $derived(data.serviceQuery);
+	const normalizedQuery = $derived(query.trim().toLocaleLowerCase());
 	const matching = $derived(
 		data.services.filter((service) => {
 			const detail = data.directory.details[service.id];
 			return [service.title, service.description, ...detail.includes]
 				.join(' ')
 				.toLocaleLowerCase()
-				.includes(query.trim().toLocaleLowerCase());
+				.includes(normalizedQuery);
 		})
+	);
+	const countLabel = $derived(
+		matching.length === 1 ? data.directory.countSingular : data.directory.count
 	);
 </script>
 
@@ -52,16 +56,32 @@
 					<Action
 						variant="glass"
 						size="compact"
-						aria-pressed={query === filter.query}
+						aria-pressed={normalizedQuery === filter.query.toLocaleLowerCase()}
 						onclick={() => (query = filter.query)}>{filter.label}</Action
 					>
 				{/each}
 			</div>
 		{/snippet}
 	</PageIntro>
+	<div class="site-mobile-only">
+		<div class="site-container service-mobile-tools">
+			<div class="service-mobile-filters" role="group" aria-label={data.directory.quickLabel}>
+				{#each data.directory.quickFilters as filter (filter.query)}
+					<Action
+						variant={normalizedQuery === filter.query.toLocaleLowerCase() ? 'strong' : 'secondary'}
+						size="compact"
+						aria-pressed={normalizedQuery === filter.query.toLocaleLowerCase()}
+						aria-controls="service-results"
+						onclick={() => (query = filter.query)}>{filter.label}</Action
+					>
+				{/each}
+			</div>
+			<span class="sr-only" role="status">{matching.length} {countLabel}</span>
+		</div>
+	</div>
 	<div class="site-container service-results-heading site-desktop-only">
 		<h2 class="site-heading">{data.directory.title}</h2>
-		<span role="status">{matching.length} {data.directory.count}</span>
+		<span role="status">{matching.length} {countLabel}</span>
 		{#if query}<Action variant="quiet" onclick={() => (query = '')}>{data.directory.clear}</Action
 			>{/if}
 	</div>
@@ -137,6 +157,22 @@
 		}
 	}
 	@media (max-width: 767.98px) {
+		.service-mobile-tools {
+			padding-top: var(--bc-space-4);
+		}
+		.service-mobile-filters {
+			display: flex;
+			gap: var(--bc-space-2);
+			overflow-x: auto;
+			padding: var(--bc-space-2);
+			margin: calc(-1 * var(--bc-space-1)) calc(-1 * var(--bc-space-2));
+			scrollbar-width: none;
+		}
+		.service-mobile-filters :global(.site-action) {
+			flex: 0 0 auto;
+			border-radius: var(--bc-radius-pill);
+			padding-inline: var(--bc-space-4);
+		}
 		.services-grid {
 			grid-template-columns: 1fr;
 		}

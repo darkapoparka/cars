@@ -31,6 +31,10 @@ for (const locale of ['en', 'bg']) {
 				expect(response?.status(), route).toBe(200);
 				await expect(page.locator('[data-mobile-page-hero]:visible'), route).toHaveCount(1);
 				await expect(page.getByRole('heading', { level: 1 }), route).toHaveCount(1);
+				if (route === 'about' && locale === 'en')
+					await expect(page.locator('.process-steps--mobile-panel')).not.toContainText(
+						/[\u0400-\u04ff]/
+					);
 				const nav = page.getByRole('navigation', {
 					name: locale === 'en' ? 'Mobile navigation' : 'Мобилна навигация',
 					exact: true
@@ -123,16 +127,34 @@ for (const locale of ['en', 'bg']) {
 		);
 	});
 
-	test(`${locale} service search clears an empty result and keeps service destinations`, async ({
+	test(`${locale} service filters and search clear an empty result and keep service destinations`, async ({
 		page
 	}) => {
+		await page.setViewportSize({ width: 320, height: 568 });
 		await visit(page, `/${locale}/services`);
 		const search = page.getByRole('searchbox', {
 			name: locale === 'en' ? 'Search services' : 'Търси услуга'
 		});
-		await search.fill('VIN');
+		const filters = page.getByRole('group', {
+			name: locale === 'en' ? 'Quick service filters' : 'Бърз избор на услуга'
+		});
+		const vin = filters.getByRole('button', {
+			name: locale === 'en' ? 'Check / VIN' : 'Проверка / VIN',
+			exact: true
+		});
+		await vin.click();
+		await expect(vin).toHaveAttribute('aria-pressed', 'true');
+		await expect(search).toHaveValue('VIN');
 		await expect(page.locator('.service-card')).toHaveCount(1);
 		await expect(page.locator('.service-card > a')).toHaveAttribute('href', `/${locale}/import`);
+		const all = filters.getByRole('button', {
+			name: locale === 'en' ? 'All' : 'Всички',
+			exact: true
+		});
+		await all.click();
+		await expect(search).toBeEmpty();
+		await expect(all).toHaveAttribute('aria-pressed', 'true');
+		await expect(page.locator('.service-card')).toHaveCount(6);
 		await search.fill('no matching service');
 		await expect(page.locator('.service-empty')).toBeVisible();
 		await page.locator('.service-empty button').click();

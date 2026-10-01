@@ -2,8 +2,13 @@
 	import { assetHref } from '$lib/utils/assets';
 	import type { AuxeroAgentCard } from '$lib/auxero/agents';
 	import SocialLinks from './SocialLinks.svelte';
-	let { person }: { person: Pick<AuxeroAgentCard, 'name' | 'title' | 'image' | 'socials'> } =
-		$props();
+	let {
+		person,
+		mobileCompact = false
+	}: {
+		person: Pick<AuxeroAgentCard, 'name' | 'title' | 'image' | 'socials'>;
+		mobileCompact?: boolean;
+	} = $props();
 	const socials = $derived(
 		person.socials
 			.filter((link) => link.icon === 'brands/instagram.svg')
@@ -11,7 +16,7 @@
 	);
 </script>
 
-<article class="team-card">
+<article class="team-card" class:team-card--mobile-compact={mobileCompact}>
 	<img
 		class="team-card__portrait"
 		src={assetHref(person.image)}
@@ -158,6 +163,26 @@
 		p {
 			font-size: var(--bc-text-body);
 			line-height: var(--bc-leading-body);
+		}
+		.team-card--mobile-compact {
+			grid-template-columns: 64px minmax(0, 1fr);
+			align-items: center;
+			gap: var(--bc-space-3);
+			padding: var(--bc-space-4);
+		}
+		.team-card--mobile-compact .team-card__portrait {
+			width: 64px;
+			height: 64px;
+			min-height: 0;
+			border-radius: var(--bc-radius-pill);
+		}
+		.team-card--mobile-compact .team-card__body {
+			padding: 0;
+			gap: var(--bc-space-1);
+		}
+		.team-card--mobile-compact h3 {
+			font-size: var(--bc-mobile-card-title);
+			line-height: var(--bc-mobile-card-title-leading);
 		}
 	}
 </style>

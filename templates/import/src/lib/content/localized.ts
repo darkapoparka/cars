@@ -703,6 +703,7 @@ export function localizedCopy<T>(value: T, locale: Locale): T {
 		'title',
 		'text',
 		'description',
+		'mobileDescription',
 		'intro',
 		'question',
 		'answer',

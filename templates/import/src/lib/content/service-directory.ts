@@ -16,6 +16,7 @@ type DirectoryCopy = {
 	search: string;
 	title: string;
 	count: string;
+	countSingular: string;
 	empty: string;
 	clear: string;
 	quickLabel: string;
@@ -29,6 +30,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		search: 'Търси услуга',
 		title: 'Как можем да помогнем',
 		count: 'услуги',
+		countSingular: 'услуга',
 		empty: 'Няма намерени услуги. Опитай с „внос“, „документи“ или „продажба“.',
 		clear: 'Изчисти търсенето',
 		quickLabel: 'Бърз избор на услуга',
@@ -92,6 +94,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		search: 'Search services',
 		title: 'How we can help',
 		count: 'services',
+		countSingular: 'service',
 		empty: 'No matching services. Try “import”, “documents” or “selling”.',
 		clear: 'Clear search',
 		quickLabel: 'Quick service filters',
