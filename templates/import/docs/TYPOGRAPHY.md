@@ -25,6 +25,8 @@ Actions use --bc-weight-action; inputs and options use --bc-weight-control. Head
 
 Actions remain at least 44px high; primary actions, option rows and social links use 48px targets. Small visual icons do not mean small hit areas. Do not shrink text to squeeze more controls into a row: use wrapping or the established horizontal rail.
 
+Desktop vehicle cards keep a single 18px title line with an ellipsis and the full name on hover. Year, fuel and transmission share one metadata row, with the complete mileage aligned right. Year and transmission retain their width; long fuel labels truncate within the remaining space and retain their full hover text. Mileage belongs in this row rather than over the photograph. Card actions retain 18px text and a 44px minimum height at compact card widths too. This contract is shared by Home, Inventory, Favorites and related vehicles; mobile keeps its separate card composition.
+
 Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them with native selects to simplify implementation. The all-filters dialog has one scrolling body and a persistent action footer.
 
 Placeholders inherit input typography. A search input inside a decorated wrapper uses a visible focus ring on that wrapper. Verify selected states, placeholder styles and keyboard focus in the browser.

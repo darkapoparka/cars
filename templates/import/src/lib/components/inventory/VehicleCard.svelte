@@ -51,11 +51,14 @@
 	</div>
 	<div class="site-vehicle-card__body">
 		<h2><a href={linkHref(href)} title={card.title}>{card.title}</a></h2>
-		<ul aria-label={english ? 'Specifications' : 'Характеристики'}>
-			<li>{card.year}</li>
-			<li>{card.fuel}</li>
-			<li>{card.transmission}</li>
-		</ul>
+		<div class="site-vehicle-card__metadata">
+			<ul aria-label={english ? 'Specifications' : 'Характеристики'}>
+				<li>{card.year}</li>
+				<li title={card.fuel}>{card.fuel}</li>
+				<li title={card.transmission}>{card.transmission}</li>
+			</ul>
+			<span class="site-vehicle-card__desktop-mileage">{card.mileageLabel}</span>
+		</div>
 		<div class="site-vehicle-card__price">
 			<strong>{card.priceLabel}</strong>{#if card.monthlyLabel}<a
 					href={linkHref(
@@ -146,6 +149,12 @@
 		gap: var(--bc-space-3);
 		min-width: 0;
 	}
+	.site-vehicle-card__metadata {
+		display: contents;
+	}
+	.site-vehicle-card__desktop-mileage {
+		display: none;
+	}
 	h2 {
 		margin: 0;
 		font-family: var(--bc-font-heading);
@@ -232,12 +241,34 @@
 		.site-vehicle-card__body {
 			gap: var(--bc-space-2);
 		}
+		.site-vehicle-card__mileage {
+			display: none;
+		}
+		.site-vehicle-card__metadata {
+			display: flex;
+			align-items: center;
+			gap: var(--bc-space-2);
+		}
+		.site-vehicle-card__desktop-mileage {
+			display: block;
+			flex: none;
+			border-radius: var(--bc-radius-sm);
+			padding: 2px var(--bc-space-2);
+			background: var(--bc-surface);
+			color: var(--bc-copy);
+			font-size: var(--bc-text-meta);
+			line-height: var(--bc-leading-meta);
+			font-variant-numeric: tabular-nums;
+			white-space: nowrap;
+		}
 		.site-vehicle-card__price {
 			margin-top: var(--bc-space-1);
 		}
 		ul {
+			flex: 1;
+			min-width: 0;
 			flex-wrap: nowrap;
-			gap: var(--bc-space-2);
+			gap: var(--bc-space-1);
 		}
 		li {
 			min-width: 0;
@@ -247,12 +278,13 @@
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
-		li:first-child {
+		li:first-child,
+		li:last-child {
 			flex-shrink: 0;
 		}
 		li + li::before {
 			content: '·';
-			margin-right: var(--bc-space-2);
+			margin-right: var(--bc-space-1);
 			color: var(--bc-muted);
 		}
 		strong {
@@ -286,14 +318,6 @@
 		@container vehicle-card (max-width: 280px) {
 			.site-vehicle-card__body {
 				padding: var(--bc-space-3);
-			}
-			.site-vehicle-card__actions :global(.site-action) {
-				min-height: var(--bc-control-height-compact);
-				font-size: var(--bc-text-label);
-			}
-			.site-vehicle-card__actions > button {
-				flex-basis: var(--bc-control-height-compact);
-				width: var(--bc-control-height-compact);
 			}
 		}
 	}
