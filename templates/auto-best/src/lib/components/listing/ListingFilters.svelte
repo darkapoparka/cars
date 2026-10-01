@@ -468,7 +468,7 @@
     .dn-listing-filter__quick a.active::before { background: var(--dn-ink); }
     .dn-listing-filter__primary {
       grid-template-columns: minmax(0, 1fr) 44px 44px;
-      gap: 8px;
+      gap: var(--dn-space-1);
       padding: calc(12px + env(safe-area-inset-top)) 0 0;
     }
     .dn-listing-filter__keyword {

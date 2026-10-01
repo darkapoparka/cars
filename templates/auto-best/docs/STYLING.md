@@ -184,7 +184,7 @@ Mobile controls use shared size roles. Home quick links, inventory quick filters
 
 The mobile Home opener uses a 22px Hugeicons search glyph and a 20px filter glyph; overlay search fields retain 18px icons and the shared entry-icon gap. The mobile inventory opener also uses a 22px Hugeicons search glyph. Header location and phone glyphs use 28px within their retained 44px targets. Icon-only controls use a 44px target with a 40px painted circle, while each component chooses an icon size appropriate to its visual role. Grid/flex geometry centres icons; do not add device-specific translations or route-specific offsets.
 
-Below 768px, Home/Sell/Import entry fields share a white surface, a light border and the control corner radius. Mobile focus uses the ink color; keyboard focus remains visible and pointer focus on the entry opener does not leave an outline. Interactive controls suppress the native tap highlight.
+Below 768px, Home/Sell/Import entry fields share a white surface, a defined neutral edge, a soft shadow and the control corner radius. `--dn-entry-mobile-line` and `--dn-entry-mobile-shadow` keep the field distinct against its white card. Inventory search, sort and filter controls use a 4px layout gap while retaining their 44px touch targets. Mobile focus uses the ink color; keyboard focus remains visible and pointer focus on the entry opener does not leave an outline. Interactive controls suppress the native tap highlight.
 
 ## Overlay control proportions
 
