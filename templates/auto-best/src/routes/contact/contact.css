@@ -1,5 +1,6 @@
 .dn-contact-hero__mobile-title,
 .dn-contact-workflow-title { display: none; }
+.dn-contact-hero__desktop-actions { display: none; }
 
 .dn-contact-hero.dn-route-hero {
   position: relative;
@@ -658,19 +659,31 @@
   .dn-contact-call-number { white-space: normal; }
 }
 
-/* General contact pairs the useful details and map in one desktop panel. */
+/* Keep the full photographic hero separate from the practical visit panel. */
 @media (min-width: 992px) {
   .dn-app-shell .dn-contact-hero--general.dn-route-hero {
+    --dn-studio-background: var(--dn-theme-contact-surface);
+    --dn-studio-heading: var(--dn-white);
+    --dn-studio-description: var(--dn-white);
     align-items: flex-start;
-    background: var(--dn-surface-canvas);
   }
   .dn-app-shell .dn-contact-hero--general .dn-contact-hero__action { display: none; }
+  .dn-contact-hero__desktop-actions { display: flex; gap: var(--dn-space-3); }
+  .dn-contact-hero__desktop-actions .dn-contact-button {
+    min-height: var(--dn-control-height-default);
+    gap: var(--dn-space-2);
+    padding: 0 var(--dn-space-5);
+    border-radius: var(--dn-pill);
+    font: var(--dn-control-font);
+  }
+  .dn-contact-hero__call { background: var(--dn-red); color: var(--dn-white); }
+  .dn-contact-hero__call:hover { background: var(--dn-red-hover); }
+  .dn-contact-hero__visit { background: var(--dn-white); color: var(--dn-ink); }
+  .dn-contact-hero__visit:hover { background: var(--dn-surface-hover); }
+  .dn-contact-hero__desktop-actions a:focus-visible { outline: 3px solid var(--dn-white); outline-offset: 4px; }
   .dn-contact-section--general {
-    position: relative;
-    z-index: 1;
-    margin-top: -188px;
-    padding: 0 0 64px;
-    background: transparent;
+    padding: var(--dn-space-8) 0 48px;
+    background: var(--dn-surface-canvas);
     scroll-margin-top: 160px;
   }
   .dn-contact-section--general > .container { width: min(1344px, 100%); padding-inline: 24px; }

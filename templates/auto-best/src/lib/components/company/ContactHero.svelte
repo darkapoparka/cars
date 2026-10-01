@@ -9,6 +9,8 @@
   import ContactVehicle from './ContactVehicle.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+  import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
+  import { brand } from '$config/brand';
   import type { ContactTopic } from '$data/company';
 
   let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
@@ -21,8 +23,10 @@
   });
 </script>
 
-<section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-route-hero--light={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
-  {#if topic.id !== 'general'}
+<section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
+  {#if topic.id === 'general'}
+    <DesktopHeroScene scene="contact" />
+  {:else}
   <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} mobileScene={topic.id === 'trade-in' ? 'sell' : topic.id === 'import' ? 'import' : 'car'} />
   {/if}
   <div class="container dn-contact-hero__content dn-route-hero__layout">
@@ -30,6 +34,16 @@
       <h1 id="contact-title"><span class="dn-contact-hero__desktop-title">{topic.id === 'general' ? i18n.t("m_2b5c3d26721a") : topic.id === 'trade-in' ? i18n.t("m_3d25686c3130") : i18n.text(topic.title)}</span><span class="dn-contact-hero__mobile-title">{topic.id === 'general' ? i18n.t("m_2b5c3d26721a") : topic.id === 'trade-in' ? i18n.t("m_3d25686c3130") : i18n.text(topic.title)}</span></h1>
       <p class="dn-contact-hero__lead">{heroDescriptions[topic.id]}</p>
     </div>
+    {#if topic.id === 'general'}
+      <div class="dn-contact-hero__desktop-actions dn-route-hero__control">
+        <a class="dn-contact-button dn-contact-hero__call" href={brand.phoneHref} aria-label={i18n.t('m_772c70f449af', { p0: brand.phone })}>
+          <Icon name="phone" size={18} />{brand.phone}
+        </a>
+        <a class="dn-contact-button dn-contact-hero__visit" href="#contact-intent">
+          {i18n.t('m_c95356784006')}<Icon name="chevron-down" size={18} />
+        </a>
+      </div>
+    {/if}
     {#if topic.id === 'leasing'}
       {#if vehicle}
         <div class="dn-contact-hero__vehicle dn-route-hero__control">

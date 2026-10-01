@@ -4,8 +4,9 @@ Auto Best combines an image-led automotive layout, Onest typography, rounded sur
 
 ## Desktop route composition
 
-Home, Inventory, Blog and general Contact use `--dn-surface-canvas` behind their
-heroes. About retains its neutral showroom photograph. All share the 540px hero
+Home, Inventory and Blog use `--dn-surface-canvas` behind their
+heroes. About retains its neutral showroom photograph; Contact uses its dark
+showroom photograph with white copy and call/directions actions. All share the 540px hero
 geometry and centered type. White Blog category pills remain distinct from the
 canvas; the active and hovered category uses the brand accent.
 
@@ -15,8 +16,9 @@ address and appointment copy, one primary call action, directions, configured
 social profiles, and the Google map. Its coordinates come from `brand.ts`.
 The map mounts only at 992px and above; the external map link stays available
 without JavaScript or when the provider is unavailable. Mobile retains its
-existing contact composition. General Contact overlaps this panel into the hero
-instead of repeating call/address cards beneath an empty map placeholder.
+existing contact composition. General Contact uses the compact visit panel below
+the complete hero, with a 32px gap. Its map area reserves both grid rows before
+hydration so the external map link stays at the bottom while the iframe mounts.
 
 ## CSS structure
 

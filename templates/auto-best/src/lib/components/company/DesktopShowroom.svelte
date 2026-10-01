@@ -5,7 +5,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
 
-  let { id }: { id: string } = $props();
+  let { id, compact = false }: { id: string; compact?: boolean } = $props();
   const i18n = getI18n();
   const desktop = new MediaQuery('(min-width: 992px)', false);
   const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;
@@ -18,7 +18,7 @@
   ] as const;
 </script>
 
-<section class="dn-desktop-showroom" aria-labelledby={id}>
+<section class="dn-desktop-showroom" class:dn-desktop-showroom--compact={compact} aria-labelledby={id}>
   <div class="dn-desktop-showroom__details">
     <h2 {id}>{i18n.t('m_8647c430b400', { p0: i18n.dealer('city') })}</h2>
     <dl>
@@ -171,6 +171,8 @@
       background: var(--dn-surface-subtle);
     }
     iframe {
+      grid-row: 1;
+      grid-column: 1;
       display: block;
       width: 100%;
       height: 100%;
@@ -178,6 +180,8 @@
       border: 0;
     }
     .dn-desktop-showroom__map-link {
+      grid-row: 2;
+      grid-column: 1;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -191,5 +195,9 @@
     .dn-desktop-showroom__map-link:hover {
       color: var(--dn-red);
     }
+    .dn-desktop-showroom--compact { min-height: 360px; grid-template-columns: minmax(360px, 1fr) minmax(0, 1fr); }
+    .dn-desktop-showroom--compact .dn-desktop-showroom__details { gap: var(--dn-space-5); }
+    .dn-desktop-showroom--compact h2 { font-size: var(--dn-text-subheading); }
+    .dn-desktop-showroom--compact iframe { min-height: 300px; }
   }
 </style>

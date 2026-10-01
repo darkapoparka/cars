@@ -37,7 +37,7 @@
     <ContactIntent vehicle={data.vehicle} topic={data.topic} importUrl={data.importUrl} />
 
     {#if data.topic.id === 'general'}
-      <DesktopShowroom id="contact-showroom-desktop-title" />
+      <DesktopShowroom id="contact-showroom-desktop-title" compact />
       <div class="dn-contact-location dn-contact-location--general" aria-labelledby="contact-location-title">
         <div class="dn-contact-location__card">
           <div class="dn-contact-location__heading">

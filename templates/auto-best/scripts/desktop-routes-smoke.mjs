@@ -44,7 +44,7 @@ try {
               const lead = copy.querySelector('p');
               const scene = hero.querySelector('.dn-desktop-hero-scene img');
               const rect = e => e?.getBoundingClientRect().toJSON();
-              const controls = document.querySelector('.dn-search__desktop-form, .dn-listing-desktop-discovery, .dn-blog-toolbar, .dn-about-hero .dn-about-button, .dn-desktop-showroom');
+              const controls = document.querySelector('.dn-search__desktop-form, .dn-listing-desktop-discovery, .dn-blog-toolbar, .dn-about-hero .dn-about-button, .dn-contact-hero__desktop-actions');
               return {
                 hero: rect(hero), copy: rect(copy), heading: rect(heading), lead: rect(lead), controls: rect(controls),
                 header: rect(document.querySelector('.dn-header-fixed')),
@@ -61,14 +61,14 @@ try {
             assert(geometry.overflow <= 1, 'Horizontal page overflow');
             assert.deepEqual(geometry.broken, [], 'Broken visible images');
             assert.deepEqual(errors, [], 'Browser runtime errors');
-            const hasScene = route === 'about-us' && width >= 992;
-            assert.equal(sceneRequests.length, hasScene ? 1 : 0, 'Only the visible route scene is requested; phones load none');
+            const hasScene = (route === 'about-us' || route === 'contact') && width >= 992;
+            assert.equal(sceneRequests.length, hasScene ? 1 : 0, 'Only visible About/Contact scenes are requested; phones load none');
             if (hasScene) {
-              assert(geometry.scene.src.endsWith('auto-best-desktop-about-v1.webp'), 'Only About retains the architectural scene');
+              assert(geometry.scene.src.endsWith(`auto-best-desktop-${route === 'about-us' ? 'about' : 'contact'}-v1.webp`), 'Each company page uses its configured photographic hero');
               assert.equal(geometry.scene.height, geometry.hero.height - (width < 1200 ? 140 : 0), 'Laptop crop keeps scene edges below navigation');
               assert.equal(geometry.scene.bottom, geometry.hero.bottom, 'Scene meets the banner baseline');
             }
-            if (route !== 'about-us') {
+            if (route !== 'about-us' && route !== 'contact') {
               assert.equal(geometry.scene, null, 'Cutout routes omit the full scene element');
               assert.equal(geometry.cutouts.length, route === 'contact' ? 0 : 2, 'Contact omits hidden decorative vehicles; discovery retains its cutout pair');
               assert(geometry.cutouts.every(image => width >= 1440 ? (!image.width || image.src.startsWith('http')) : image.src.startsWith('data:')), 'Visible wide cutouts load; narrow screens use placeholders');
@@ -84,7 +84,7 @@ try {
               assert.equal(geometry.leadSize, route === '' || route === 'about-us' ? '14px' : '18px', 'Location badges use metadata type; descriptions use lead type');
               assert(geometry.copy.y >= geometry.header.bottom + 8, 'Hero text clears navigation');
               assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
-              if (route !== 'contact') assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
+              assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
               assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
               if (route === 'listing-grid') {
                 const count = await page.locator('.dn-listing-results .dn-vehicle-card').count();
@@ -96,7 +96,18 @@ try {
               }
               const surface = { '': '.dn-inventory', 'listing-grid': '.dn-listing-results', 'about-us': '.dn-about-process', 'blog': '.dn-blog-index' }[route];
               if (surface) assert.equal(await page.locator(surface).evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Desktop routes share a light-grey content canvas');
-              assert.equal(await page.locator('.dn-route-hero').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Desktop heroes share the soft grey canvas; About adds its photographic scene');
+              if (route !== 'contact') assert.equal(await page.locator('.dn-route-hero').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Discovery heroes use the soft grey canvas; About adds its photograph');
+              if (route === 'contact') {
+                assert.equal(await page.locator('h1').evaluate(e => getComputedStyle(e).color), 'rgb(255, 255, 255)', 'Contact title contrasts against the dark photograph');
+                assert.equal(await page.locator('.dn-contact-hero__call').getAttribute('href'), 'tel:+359879824625');
+                const showroom = await page.locator('.dn-desktop-showroom').boundingBox();
+                assert.equal(showroom.y - geometry.hero.bottom, 32, 'The visit panel follows the complete hero instead of obscuring it');
+                await page.locator('.dn-contact-hero__visit').focus();
+                assert.equal(await page.locator('.dn-contact-hero__visit').evaluate(e => getComputedStyle(e).outlineStyle), 'solid');
+                await page.locator('.dn-contact-hero__visit').click();
+                assert.equal(new URL(page.url()).hash, '#contact-intent', 'Directions takes the visitor to the visit panel');
+                await page.evaluate(() => scrollTo(0, 0));
+              }
               if (route === '') {
                 for (const section of await page.locator('.dn-home-content-section').all()) assert.equal(await section.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Home sections use one canvas');
                 for (const card of await page.locator('.dn-vehicle-card').all()) assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Vehicle cards remain white');
