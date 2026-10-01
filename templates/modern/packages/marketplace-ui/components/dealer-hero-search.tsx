@@ -20,12 +20,13 @@ import {
   CarFront,
   ChevronDown,
   Search,
+  SlidersHorizontal,
   Truck,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import type { ReactNode } from "react";
-import { useState, useTransition } from "react";
+import { useId, useState, useTransition } from "react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
 import { useMarketplaceOverlayCoordinator } from "../hooks/use-marketplace-overlay-coordinator";
 import {
@@ -91,6 +92,8 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
   const setQuery = (value: string) =>
     setFilters((current) => ({ ...current, q: value }));
   const [pending, startTransition] = useTransition();
+  const [expanded, setExpanded] = useState(false);
+  const advancedFiltersId = useId();
   const [makeModelStep, setMakeModelStep] = useState<"make" | "model" | null>(
     null
   );
@@ -142,6 +145,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
       <DesktopActionPanel
         className={styles.panel}
         data-slot="dealer-desktop-toolbar"
+        fitContent
       >
         <nav
           aria-label={text("Категории превозни средства", "Vehicle categories")}
@@ -318,7 +322,25 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               ]}
               title={text("Година", "Year")}
             />
-
+          </div>
+          <button
+            aria-controls={advancedFiltersId}
+            aria-expanded={expanded}
+            className={styles.expandFilters}
+            onClick={() => setExpanded((current) => !current)}
+            type="button"
+          >
+            <SlidersHorizontal aria-hidden="true" size={16} />
+            {expanded
+              ? text("По-малко филтри", "Fewer filters")
+              : text("Още филтри", "More filters")}
+            <ChevronDown aria-hidden="true" size={15} />
+          </button>
+          <div
+            className={styles.advancedFields}
+            hidden={!expanded}
+            id={advancedFiltersId}
+          >
             <DesktopQuickRangeDialog
               active={filters.mileageMax !== undefined}
               className={fieldClassName}

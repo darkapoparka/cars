@@ -10,6 +10,9 @@
   .content {
     position: relative;
     z-index: 3;
-    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+    width: min(
+      calc(100% - 2 * var(--layout-gutter)),
+      var(--layout-content-max)
+    );
   }
 }

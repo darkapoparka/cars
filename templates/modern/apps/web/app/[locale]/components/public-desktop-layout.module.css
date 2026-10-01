@@ -217,7 +217,10 @@
 
 @media (min-width: 1024px) {
   .heroContent {
-    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+    width: min(
+      calc(100% - 2 * var(--layout-gutter)),
+      var(--layout-content-max)
+    );
   }
   .heroContent .panel {
     padding: 1.5rem;
@@ -314,8 +317,11 @@
 
 @media (min-width: 1024px) {
   .serviceBody {
-    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
-    max-width: 72rem;
+    width: min(
+      calc(100% - 2 * var(--layout-gutter)),
+      var(--layout-content-max)
+    );
+    max-width: var(--layout-content-max);
   }
 }
 
@@ -349,5 +355,53 @@
     padding-inline: 0.5rem;
     background: transparent;
     border-radius: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    width: min(
+      calc(100% - 2 * var(--layout-gutter)),
+      var(--layout-content-max)
+    );
+    max-width: var(--layout-content-max);
+    padding-inline: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .loadingLanding {
+    padding: 2rem
+      max(var(--layout-gutter), calc((100% - var(--layout-content-max)) / 2))
+      2.5rem;
+    background: var(--inverse);
+  }
+  .loadingIntroduction {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .loadingPhoto {
+    height: clamp(19rem, 27vw, 23rem);
+    background: var(--inverse-control);
+    border-radius: 1rem;
+  }
+  .loadingSearch {
+    display: grid;
+    gap: 1rem;
+    min-height: 13.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--panel);
+    border-radius: 1rem;
+  }
+  .loadingResults {
+    width: min(
+      calc(100% - 2 * var(--layout-gutter)),
+      var(--layout-content-max)
+    );
+    max-width: var(--layout-content-max);
+    padding: 2rem 0;
   }
 }

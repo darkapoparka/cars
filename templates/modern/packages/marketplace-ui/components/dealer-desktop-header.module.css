@@ -4,14 +4,14 @@
 
 @media (min-width: 1024px) {
   .header {
-    --desktop-header-height: 4.5rem;
+    --desktop-header-height: 5.25rem;
     position: relative;
     z-index: 40;
     display: block;
     width: 100%;
     color: var(--inverse-foreground);
     background: var(--inverse);
-    border-bottom: 0;
+    border-bottom: 1px solid var(--inverse-border);
   }
 
   .header:has(

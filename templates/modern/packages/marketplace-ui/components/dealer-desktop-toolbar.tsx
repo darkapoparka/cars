@@ -33,7 +33,7 @@ export const DealerDesktopToolbar = ({
     <div className={styles.toolbar} data-slot="dealer-desktop-inventory-hero">
       <DealerDesktopHero
         title={isBg ? "Автомобили в наличност" : "Vehicles in stock"}
-        variant="landing"
+        variant="compact"
       >
         <div className={styles.content}>
           <DealerHeroSearch

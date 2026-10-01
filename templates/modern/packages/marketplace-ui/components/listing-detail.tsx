@@ -20,6 +20,7 @@ import {
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { getVehicleCardBadgeLabels } from "../lib/vehicle-card-policy";
 import { ListingDetailContent } from "./listing-detail-content";
+import styles from "./listing-detail-desktop.module.css";
 import {
   DesktopListingSummaryHeader,
   MobileListingGalleryActions,
@@ -105,7 +106,12 @@ export const ListingDetail = ({
         variant="discovery"
       />
 
-      <div className="mx-auto max-w-[96rem] lg:px-6 lg:py-4 xl:px-10">
+      <div
+        className={cn(
+          "mx-auto max-w-[96rem] lg:px-6 lg:py-4 xl:px-10",
+          styles.content
+        )}
+      >
         <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_min(21rem,40%)] lg:items-start lg:gap-6 xl:grid-cols-[minmax(0,1fr)_min(22rem,40%)] xl:gap-8">
           <div className="min-w-0">
             <DesktopListingSummaryHeader

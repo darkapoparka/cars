@@ -118,7 +118,8 @@ export const VehicleCard = ({
             sizes={getVehicleCardImageSizes(
               isCompact,
               isGrid,
-              isDesktopComparison
+              isDesktopComparison,
+              presentation === "discovery"
             )}
             src={imageSource}
             unoptimized={imageSource.startsWith("data:")}

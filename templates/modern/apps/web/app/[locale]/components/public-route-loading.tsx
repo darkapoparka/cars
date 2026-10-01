@@ -12,7 +12,6 @@ import {
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
 import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
-import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
 import { mobileSearchFieldHeightClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import {
@@ -26,6 +25,7 @@ import {
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import { locale as getRootLocale } from "next/root-params";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
+import desktopStyles from "./public-desktop-layout.module.css";
 
 const loadingCards = [
   "one",
@@ -125,11 +125,26 @@ const MobileLoadingHeader = ({
 const DealerLoadingHeader = ({ locale }: { locale: string }) => (
   <div className="hidden lg:block" data-slot="dealer-desktop-loading">
     <DealerDesktopHeader activeMode={null} locale={locale} />
-    <DealerDesktopHero
-      loading
-      title={locale === "bg" ? "Зареждане" : "Loading"}
-      variant="landing"
-    />
+    <div aria-hidden="true" className={desktopStyles.loadingLanding}>
+      <div className={desktopStyles.loadingIntroduction}>
+        <div className="space-y-5">
+          <div className="h-3 w-48 rounded bg-inverse-control" />
+          <div className="h-28 w-4/5 rounded-xl bg-inverse-control" />
+          <div className="h-12 w-4/5 rounded bg-inverse-control" />
+          <div className="h-8 w-48 rounded bg-inverse-control" />
+        </div>
+        <div className={desktopStyles.loadingPhoto} />
+      </div>
+      <div className={desktopStyles.loadingSearch}>
+        <div className="h-10 w-1/3 rounded-lg bg-control" />
+        <div className="h-12 rounded-lg bg-control" />
+        <div className="grid grid-cols-4 gap-3">
+          {loadingFilters.slice(0, 4).map((filter) => (
+            <div className="h-11 rounded-lg bg-control" key={filter} />
+          ))}
+        </div>
+      </div>
+    </div>
   </div>
 );
 
@@ -200,7 +215,7 @@ const DesktopDiscoveryCards = () => (
   <div
     className={
       isDealershipSite
-        ? "hidden grid-cols-3 gap-6 lg:grid min-[1440px]:grid-cols-4"
+        ? "hidden grid-cols-3 gap-6 lg:grid"
         : "hidden grid-cols-3 gap-5 lg:grid xl:grid-cols-4 2xl:grid-cols-5"
     }
   >
@@ -258,7 +273,10 @@ export const PublicRouteLoading = async ({
       )}
 
       <div
-        className="mx-auto max-w-[96rem] px-4 pb-3 lg:px-6 lg:pt-3 xl:px-10"
+        className={cn(
+          "mx-auto max-w-[96rem] px-4 pb-3 lg:px-6 lg:pt-3 xl:px-10",
+          isDealershipSite && desktopStyles.loadingResults
+        )}
         data-slot="public-route-loading-content"
       >
         <output className="sr-only">
