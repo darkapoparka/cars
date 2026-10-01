@@ -59,6 +59,7 @@
 	}
 	@media (min-width: 768px) {
 		.site-filter-trigger {
+			font-weight: var(--bc-weight-control);
 			min-height: var(--bc-control-height-primary);
 			padding-inline: var(--bc-space-3);
 			gap: var(--bc-space-2);

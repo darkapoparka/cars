@@ -220,20 +220,31 @@
 		color: var(--bc-accent);
 	}
 	@media (min-width: 768px) {
+		h2 a {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+			white-space: normal;
+			min-height: 2lh;
+		}
+		.site-vehicle-card__media {
+			aspect-ratio: 1.6;
+		}
 		.site-vehicle-card {
 			container-type: inline-size;
 			container-name: vehicle-card;
 		}
 		.site-vehicle-card__actions :global(.site-action) {
 			min-width: 0;
-			min-height: var(--bc-control-height-secondary);
+			min-height: var(--bc-control-height-standard);
 			padding-inline: var(--bc-space-3);
 			border-radius: var(--bc-radius-md);
 			font-size: var(--bc-text-control);
 		}
 		.site-vehicle-card__actions > button {
-			flex: 0 0 var(--bc-control-height-secondary);
-			width: var(--bc-control-height-secondary);
+			flex: 0 0 var(--bc-control-height-standard);
+			width: var(--bc-control-height-standard);
 			border-radius: var(--bc-radius-md);
 			color: var(--bc-copy);
 		}

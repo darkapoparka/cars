@@ -117,6 +117,23 @@
 	.commerce-banner--compact h3 {
 		font-size: 22px;
 	}
+	@media (min-width: 768px) {
+		.commerce-banner:not(.commerce-banner--compact) {
+			aspect-ratio: auto;
+			min-height: 260px;
+			padding: var(--bc-space-6);
+		}
+		h3 {
+			font-size: var(--bc-text-h3);
+		}
+		p {
+			font-size: var(--bc-text-body-lg);
+		}
+		.commerce-banner__action {
+			font-size: var(--bc-text-control);
+			min-height: var(--bc-control-height-primary);
+		}
+	}
 	@media (max-width: 767px) {
 		.commerce-banner {
 			min-height: 0;

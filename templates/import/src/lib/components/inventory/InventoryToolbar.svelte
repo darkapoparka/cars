@@ -3,6 +3,8 @@
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import X from '@lucide/svelte/icons/x';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
+	import PanelLeft from '@lucide/svelte/icons/panel-left';
+	import { inventoryFilterParam } from '$lib/domain/inventory-query';
 	import InventoryFilter from './InventoryFilter.svelte';
 	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
 	import Action from '$lib/components/common/Action.svelte';
@@ -36,15 +38,8 @@
 		}
 	}
 	const quickFilters = $derived(
-		[
-			['brand'],
-			['q', 'model'],
-			['maxPrice', 'priceTo'],
-			['minYear', 'yearFrom', 'mileageTo', 'maxMileage'],
-			['fuel'],
-			['body', 'bodyType']
-		]
-			.map((names) => desktop.filters.find((filter) => names.includes(filter.name)))
+		['brand', 'q', 'maxPrice', 'maxMileage', 'fuel', 'body']
+			.map((name) => desktop.filters.find((filter) => inventoryFilterParam(filter.name) === name))
 			.filter((filter) => filter !== undefined)
 	);
 </script>
@@ -103,6 +98,16 @@
 					>{/each}
 			</nav>
 		</details>
+		<Action
+			href={desktop.layoutToggle.href}
+			variant="secondary"
+			size="compact"
+			aria-label={desktop.layoutToggle.ariaLabel}
+			aria-controls="inventory-results"
+			class="inventory-toolbar__layout"
+		>
+			<PanelLeft size={18} aria-hidden="true" />{desktop.layoutToggle.label}
+		</Action>
 	</div>
 	{#if desktop.activeFilters}<div class="site-container inventory-toolbar__active">
 			{#each desktop.activeFilters.chips as chip (chip.href)}<a href={linkHref(chip.href)}
@@ -116,13 +121,17 @@
 
 <style>
 	.inventory-toolbar {
+		position: sticky;
+		top: 0;
+		z-index: 80;
 		background: var(--bc-surface-raised);
 		border-bottom: 1px solid var(--bc-border);
 		padding-block: var(--bc-space-3);
+		box-shadow: var(--bc-shadow-subtle);
 	}
 	.inventory-toolbar__row {
-		display: grid;
-		grid-template-columns: auto minmax(0, 1fr) auto auto;
+		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: var(--bc-space-3);
 	}
@@ -131,9 +140,11 @@
 		flex-wrap: wrap;
 		min-width: 0;
 		gap: var(--bc-space-2);
+		flex: 1;
 	}
 	.inventory-toolbar__sort {
 		margin: 0;
+		margin-left: auto;
 	}
 	select,
 	summary {
@@ -151,6 +162,8 @@
 	summary {
 		display: flex;
 		align-items: center;
+		gap: var(--bc-space-2);
+		list-style: none;
 	}
 	.inventory-view nav {
 		position: absolute;
@@ -160,7 +173,7 @@
 		min-width: 160px;
 		padding: var(--bc-space-2);
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
+		border-radius: var(--bc-radius-panel);
 		background: var(--bc-surface-raised);
 		box-shadow: var(--bc-shadow-panel);
 		display: grid;
@@ -190,12 +203,6 @@
 		border-radius: var(--bc-radius-sm);
 		background: var(--bc-surface);
 	}
-	.inventory-toolbar {
-		position: sticky;
-		top: 0;
-		z-index: 80;
-		box-shadow: var(--bc-shadow-subtle);
-	}
 	.inventory-toolbar__row :global(.inventory-toolbar__all) {
 		min-height: var(--bc-route-pill-height);
 		border-radius: var(--bc-radius-pill);
@@ -204,26 +211,13 @@
 	.inventory-toolbar__filters :global(.site-filter-trigger) {
 		flex: 0 0 auto;
 	}
-	summary {
-		gap: var(--bc-space-2);
-		list-style: none;
-	}
 	summary::-webkit-details-marker {
 		display: none;
 	}
-	.inventory-view nav {
-		border-radius: var(--bc-radius-panel);
-	}
-	@media (max-width: 1399px) {
-		.inventory-toolbar__row {
-			grid-template-columns: 1fr auto auto;
-		}
+	@media (max-width: 1279px) {
 		.inventory-toolbar__filters {
-			grid-row: 2;
-			grid-column: 1/-1;
-		}
-		.inventory-toolbar__row :global(.inventory-toolbar__all) {
-			justify-self: start;
+			order: 1;
+			flex-basis: 100%;
 		}
 	}
 	@media (min-width: 768px) {

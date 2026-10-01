@@ -402,6 +402,9 @@
 		color: var(--bc-ink);
 	}
 	@media (min-width: 768px) {
+		.hfp__field--prominent .hfp__value {
+			font-weight: var(--bc-weight-control);
+		}
 		.hfp__search:focus-within {
 			outline-offset: 0;
 			border-color: var(--bc-focus);

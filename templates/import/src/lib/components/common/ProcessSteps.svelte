@@ -77,8 +77,14 @@
 	}
 	@media (min-width: 768px) {
 		.process-steps--horizontal li {
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-radius-card);
+			background: var(--bc-card-bg);
 			grid-template-rows: auto 1fr;
 			align-content: start;
+		}
+		.process-steps--horizontal .process-steps__number {
+			background: var(--bc-bg-strong);
 		}
 	}
 	@media (max-width: 575px) {

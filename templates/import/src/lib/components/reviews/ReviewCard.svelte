@@ -100,6 +100,15 @@
 		font-size: var(--bc-text-body-lg);
 		line-height: var(--bc-leading-body-lg);
 	}
+	@media (min-width: 768px) {
+		.review-card {
+			background: var(--bc-card-bg);
+			border-radius: var(--bc-radius-card);
+		}
+		.review-card__avatar {
+			background: var(--bc-bg-strong);
+		}
+	}
 	@media (max-width: 767.98px) {
 		.review-card__role-full {
 			display: none;

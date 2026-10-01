@@ -35,9 +35,7 @@ test('public typography loads the actual Sofia Sans Latin and Cyrillic faces', a
 	).toBe(true);
 });
 
-test('public actions retain their readable weight and homepage search emphasis', async ({
-	page
-}, info) => {
+test('public actions share a readable control weight', async ({ page }, info) => {
 	for (const route of ['/', '/inventory', '/about', '/contact', '/services', '/financing']) {
 		await visit(page, route);
 		const actions = page.locator('.site-action:visible');
@@ -49,12 +47,11 @@ test('public actions retain their readable weight and homepage search emphasis',
 				height: node.getBoundingClientRect().height,
 				compact: node.classList.contains('size-compact'),
 				card: Boolean(node.closest('.site-vehicle-card')),
-				filter: node.classList.contains('inventory-toolbar__all'),
-				heroSearch: node.classList.contains('home-hero__search-action')
+				filter: node.classList.contains('inventory-toolbar__all')
 			}))
 		);
 		for (const item of metrics) {
-			expect(item.weight, route + ' ' + item.text).toBe(item.heroSearch ? '600' : '400');
+			expect(item.weight, route + ' ' + item.text).toBe('400');
 			const desktopCard = info.project.name === 'desktop' && item.card;
 			expect(item.size).toBeGreaterThanOrEqual(
 				desktopCard
@@ -121,7 +118,7 @@ test('buying-panel selections retain their size and weight after choosing', asyn
 	await dialog.getByRole('button', { name: /Готово/ }).click();
 	await expect(trigger).toBeFocused();
 	const value = trigger.locator('.hfp__value');
-	expect(await value.evaluate((node) => getComputedStyle(node).fontWeight)).toBe('600');
+	expect(await value.evaluate((node) => getComputedStyle(node).fontWeight)).toBe('400');
 	expect(await value.evaluate((node) => getComputedStyle(node).fontSize)).toBe('20px');
 	await expect(trigger).toHaveClass(/hfp__field--compact/);
 	await expect(value).toContainText('BMW');

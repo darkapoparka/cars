@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { assetHref } from '$lib/utils/assets';
 	import type {
 		HomeFiveHeroData,
 		HomeFiveHeroActionMode,
@@ -19,18 +18,19 @@
 	import Action from '$lib/components/common/Action.svelte';
 	import HeroFilterDialog from './HeroFilterDialog.svelte';
 	import { linkHref } from '$lib/utils/links';
-	let { hero, english = false }: { hero: HomeFiveHeroData; english?: boolean } = $props();
+	import PageIntro from '$lib/components/common/PageIntro.svelte';
+	import { homeHeroModes } from '$lib/content/home-discovery';
+	let {
+		hero,
+		english = false,
+		discoveryLinks
+	}: {
+		hero: HomeFiveHeroData;
+		english?: boolean;
+		discoveryLinks: { label: string; href: string }[];
+	} = $props();
 	let modeOverride = $state<HomeFiveHeroActionMode | 'finance' | null>(null);
 	const mode = $derived(modeOverride ?? hero.activeMode);
-	const modeContent = {
-		buy: { title: ['Купи автомобил', 'Buy a car'], action: '/inventory' },
-		finance: { title: ['Автомобил на лизинг', 'Finance a car'], action: '/inventory' },
-		sell: { title: ['Продай автомобил', 'Sell your car'], action: '/sell-your-car' },
-		import: { title: ['Внеси автомобил', 'Import a car'], action: '/import' }
-	} satisfies Record<
-		HomeFiveHeroActionMode | 'finance',
-		{ title: [string, string]; action: string }
-	>;
 	let brandSelection = $state<string[]>([]);
 	let modelSelection = $state<string[]>([]);
 	let priceSelection = $state<string[]>([]);
@@ -65,8 +65,8 @@
 			)
 		);
 	}
-	const title = $derived(modeContent[mode].title[english ? 1 : 0]);
-	const action = $derived(modeContent[mode].action);
+	const title = $derived(homeHeroModes[mode].title[english ? 'en' : 'bg']);
+	const action = $derived(homeHeroModes[mode].action);
 
 	let searchOpen = $state(false);
 	let keyword = $state('');
@@ -79,6 +79,12 @@
 		for (const value of priceSelection) params.append('maxPrice', value);
 		for (const value of mileageSelection) params.append('maxMileage', value);
 		return params.toString();
+	});
+	const searchHref = $derived.by(() => {
+		const params = new SvelteURLSearchParams(searchParams);
+		if (keyword.trim()) params.set('keyword', keyword.trim());
+		if (english) params.set('lang', 'en');
+		return '/inventory' + (params.size ? '?' + params.toString() : '');
 	});
 	function clearSelection() {
 		brandSelection = [];
@@ -132,25 +138,8 @@
 		isEnglish={english}
 	/>
 {/snippet}
-<section class="home-hero" aria-labelledby="home-title">
-	<div class="site-container">
-		<div class="home-hero__heading">
-			<img
-				src={assetHref('/assets/daynight/megamenu/inventory-bmw-x5-cutout.webp')}
-				alt=""
-				width="420"
-				height="220"
-				loading="lazy"
-			/>
-			<h1 id="home-title">{title}</h1>
-			<img
-				src={assetHref('/assets/daynight/megamenu/inventory-audi-sq5-cutout.webp')}
-				alt=""
-				width="420"
-				height="220"
-				loading="lazy"
-			/>
-		</div>
+<PageIntro {title} titleId="home-title" class="home-hero" vehicleArtwork align="center">
+	{#snippet desktopActions()}
 		<div class="home-hero__box">
 			<ModeTabs
 				surface="dark"
@@ -194,13 +183,7 @@
 									(english ? 'Make, model or keyword' : 'Марка, модел или ключова дума')}</span
 							>
 						</button>
-						<Action
-							size="hero"
-							class="home-hero__search-action"
-							aria-haspopup="dialog"
-							aria-expanded={searchOpen}
-							onclick={() => (searchOpen = true)}
-						>
+						<Action href={searchHref} size="hero" class="home-hero__search-action">
 							<Search size={19} aria-hidden="true" />{english ? 'Search' : 'Търси'}
 						</Action>
 					</div>
@@ -257,8 +240,17 @@
 				{/if}
 			</div>
 		</div>
-	</div>
-</section>
+	{/snippet}
+	{#snippet desktopSecondaryActions()}
+		<nav class="home-quick-links" aria-label={english ? 'Quick car searches' : 'Бързо търсене'}>
+			{#each discoveryLinks as link (link.href)}<Action
+					href={link.href}
+					variant="glass"
+					size="compact">{link.label}</Action
+				>{/each}
+		</nav>
+	{/snippet}
+</PageIntro>
 <VehicleSearchDialog
 	bind:open={searchOpen}
 	bind:keyword
@@ -269,31 +261,11 @@
 />
 
 <style>
-	.home-hero {
-		background: var(--bc-mobile-dark);
-		color: var(--bc-white);
-		padding: var(--bc-space-6) 0 var(--bc-space-8);
-	}
-	.home-hero__heading {
-		display: grid;
-		grid-template-columns: 260px minmax(0, 1fr) 260px;
-		align-items: center;
-		gap: var(--bc-space-5);
-		padding-bottom: var(--bc-space-6);
-	}
-	.home-hero__heading img {
-		width: 100%;
-		height: 130px;
-		object-fit: contain;
-	}
-	h1 {
-		margin: 0;
-		font: var(--bc-weight-heading) clamp(2.5rem, 4vw, 3.5rem)/1.1 var(--bc-font-heading);
-		text-align: center;
-	}
 	.home-hero__box {
-		max-width: 1100px;
+		width: 100%;
+		max-width: 880px;
 		margin-inline: auto;
+		text-align: left;
 	}
 	.home-hero__box :global(.mobile-mode-tabs) {
 		margin-inline: var(--bc-space-6);
@@ -302,12 +274,13 @@
 		display: grid;
 		align-content: center;
 		gap: var(--bc-space-4);
-		min-height: 156px;
+		min-height: calc(var(--bc-control-height-hero) * 2 + var(--bc-space-6) * 2);
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-control);
 		padding: var(--bc-space-5);
 		color: var(--bc-ink);
 		background: var(--bc-surface-raised);
+		box-shadow: var(--bc-shadow-panel);
 	}
 	.home-hero__panel:focus-visible {
 		outline-offset: 4px !important;
@@ -352,7 +325,7 @@
 		padding-inline: var(--bc-space-5);
 		border-radius: var(--bc-radius-md);
 		font-size: var(--bc-text-search-trigger);
-		font-weight: var(--bc-weight-heading);
+		font-weight: var(--bc-weight-action);
 	}
 	.home-hero__search-trigger span {
 		overflow: hidden;
@@ -411,10 +384,14 @@
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	@media (max-width: 1100px) {
-		.home-hero__heading {
-			grid-template-columns: 180px minmax(0, 1fr) 180px;
-		}
+	.home-quick-links {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: var(--bc-space-2);
+	}
+	.home-quick-links :global(.site-action) {
+		border-radius: var(--bc-radius-pill);
 	}
 	@media (max-width: 900px) {
 		.home-hero__filters {

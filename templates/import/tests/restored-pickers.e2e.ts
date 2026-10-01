@@ -35,7 +35,7 @@ test('homepage makes and models use the retained modal picker, not native select
 	await expect(dialog.locator('.hfp__row').filter({ hasText: 'X5' })).toHaveCount(0);
 	await page.keyboard.press('Escape');
 	await expect(fields.nth(1)).toBeFocused();
-	await page.locator('.home-hero').getByRole('button', { name: 'Търси', exact: true }).click();
+	await page.locator('#home-query').click();
 	await expect(page.locator('.vehicle-search-dialog')).toBeVisible();
 	await page
 		.locator('.vehicle-search-dialog .site-dialog__footer')

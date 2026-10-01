@@ -27,7 +27,7 @@ test('reference-style icon tabs connect to compact fields without changing the m
 		for (const m of metrics) {
 			expect(m.height).toBe(48);
 			expect(m.size).toBe('20px');
-			expect(m.weight).toBe('600');
+			expect(m.weight).toBe('400');
 		}
 		expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
 			true
@@ -122,7 +122,7 @@ test('empty results and an unavailable preview never manufacture a result count'
 	page
 }) => {
 	await visit(page, '/');
-	await page.locator('.home-hero').getByRole('button', { name: 'Търси', exact: true }).click();
+	await page.locator('#home-query').click();
 	const dialog = page.locator('.vehicle-search-dialog');
 	const initialBounds = await dialog.boundingBox();
 	const initialInput = await dialog.getByRole('searchbox').boundingBox();
@@ -160,4 +160,30 @@ test('header search reuses the same focused result dialog', async ({ page }) => 
 	await expect(dialog.locator('.vehicle-search__results li').first()).toContainText('Audi');
 	await page.keyboard.press('Escape');
 	await expect(opener).toBeFocused();
+});
+
+test('home Search follows the selected filters directly and discovery pills open real results', async ({
+	page
+}) => {
+	await visit(page, '/');
+	await page.getByRole('button', { name: 'Марка: Всички марки', exact: true }).click();
+	const picker = page.getByRole('dialog').filter({ has: page.locator('.hfp-picker') });
+	await picker.locator('.hfp__chip').filter({ hasText: 'BMW' }).click();
+	await page.keyboard.press('Escape');
+	await page
+		.locator('.home-hero__search')
+		.getByRole('link', { name: 'Търси', exact: true })
+		.click();
+	await expect(page).toHaveURL(
+		(url) => url.pathname === '/bg/inventory' && url.searchParams.get('brand') === 'BMW'
+	);
+	await expect(page.locator('.vehicle-search-dialog')).not.toBeVisible();
+	await expect(page.locator('main .site-vehicle-card').first()).toContainText('BMW');
+	await visit(page, '/');
+	await page
+		.getByRole('navigation', { name: 'Бързо търсене' })
+		.getByRole('link', { name: 'SUV', exact: true })
+		.click();
+	await expect(page).toHaveURL((url) => url.searchParams.get('body') === 'SUV');
+	await expect(page.locator('main .site-vehicle-card').first()).toBeVisible();
 });

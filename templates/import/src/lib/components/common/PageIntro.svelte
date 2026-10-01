@@ -1,11 +1,16 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
 	import type { Snippet } from 'svelte';
+	import HeroCars from './HeroCars.svelte';
 	let {
 		title,
 		description,
 		image,
 		desktopImage,
+		compact = false,
+		vehicleArtwork = false,
+		titleId,
+		class: className = '',
 		align = 'start',
 		desktopDescription,
 		desktopActions,
@@ -16,6 +21,10 @@
 		description?: string;
 		image?: string;
 		desktopImage?: string;
+		compact?: boolean;
+		vehicleArtwork?: boolean;
+		titleId?: string;
+		class?: string;
 		align?: 'start' | 'center';
 		desktopDescription?: string;
 		desktopActions?: Snippet;
@@ -25,17 +34,20 @@
 </script>
 
 <section
-	class="site-intro"
-	class:site-intro--image={Boolean(image)}
+	class={['site-intro', className]}
+	class:site-intro--image={Boolean(image) || vehicleArtwork}
+	class:site-intro--cars={vehicleArtwork}
+	class:site-intro--compact={compact}
 	class:site-intro--center={align === 'center'}
 	class:site-intro--interactive={Boolean(desktopActions)}
 >
+	{#if vehicleArtwork}<HeroCars />{/if}
 	{#if image}<picture>
 			{#if desktopImage}<source media="(min-width: 768px)" srcset={assetHref(desktopImage)} />{/if}
 			<img src={assetHref(image)} alt="" width="1920" height="640" fetchpriority="high" /></picture
 		>{/if}
 	<div class="site-container site-intro__content">
-		<h1>{title}</h1>
+		<h1 id={titleId}>{title}</h1>
 		{#if description}<p>{description}</p>{:else if desktopDescription}<p
 				class="site-intro__desktop-description"
 			>
@@ -115,11 +127,20 @@
 		background: linear-gradient(180deg, rgb(9 10 11 / 0.62), rgb(9 10 11 / 0.72));
 	}
 	@media (min-width: 768px) {
+		.site-intro--cars::after {
+			display: none;
+		}
+		h1 {
+			font-size: var(--bc-desktop-hero-title);
+		}
 		.site-intro--image {
 			display: flex;
 			align-items: center;
 			min-height: var(--bc-desktop-page-hero-height);
 			padding-block: var(--bc-space-8);
+		}
+		.site-intro--compact {
+			min-height: var(--bc-desktop-page-hero-height-compact);
 		}
 		.site-intro--interactive .site-intro__content {
 			display: grid;

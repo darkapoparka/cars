@@ -57,6 +57,7 @@
 				<input
 					class="filter-group__search"
 					id={id + '-maximum'}
+					{name}
 					type="number"
 					inputmode="numeric"
 					min="1"
@@ -81,50 +82,52 @@
 				autocomplete="off"
 			/>
 		{/if}
-		<!-- A custom maximum has no checked preset; hidden values also preserve searched-out choices. -->
-		{#each selected.filter((value) => !visible.some((option) => option.value === value)) as value (value)}<input
-				type="hidden"
-				{name}
-				{value}
-			/>{/each}
-		<div class="filter-group__options" id={id + '-options'}>
-			{#each visible as option (option.value)}
-				<label class="filter-group__option"
-					><input
-						type={filter.mode === 'single' ? 'radio' : 'checkbox'}
-						{name}
-						value={option.value}
-						checked={selected.includes(option.value)}
-						onchange={() => toggle(option.value)}
-					/>{#if option.image}<img
-							class="filter-group__image"
-							src={assetHref(option.image)}
-							alt=""
-							width="36"
-							height="28"
-							loading="lazy"
-						/>{/if}<span>{option.label}</span></label
+		{#if !filter.numericInput}
+			<!-- Hidden values preserve choices temporarily hidden by option search. -->
+			{#each selected.filter((value) => !visible.some((option) => option.value === value)) as value (value)}<input
+					type="hidden"
+					{name}
+					{value}
+				/>{/each}
+			<div class="filter-group__options" id={id + '-options'}>
+				{#each visible as option (option.value)}
+					<label class="filter-group__option"
+						><input
+							type={filter.mode === 'single' ? 'radio' : 'checkbox'}
+							{name}
+							value={option.value}
+							checked={selected.includes(option.value)}
+							onchange={() => toggle(option.value)}
+						/>{#if option.image}<img
+								class="filter-group__image"
+								src={assetHref(option.image)}
+								alt=""
+								width="36"
+								height="28"
+								loading="lazy"
+							/>{/if}<span>{option.label}</span></label
+					>
+				{:else}<p class="filter-group__empty" role="status">
+						{english ? 'No matching options' : 'Няма съвпадения'}
+					</p>{/each}
+			</div>
+			{#if !query.trim() && matching.length > 8}
+				<button
+					class="filter-group__more"
+					type="button"
+					aria-expanded={expanded}
+					aria-controls={id + '-options'}
+					onclick={() => (expanded = !expanded)}
+					>{expanded
+						? english
+							? 'Show fewer'
+							: 'Покажи по-малко'
+						: (english ? 'Show all' : 'Покажи всички') + ' (' + matching.length + ')'}<ChevronDown
+						size={16}
+						aria-hidden="true"
+					/></button
 				>
-			{:else}<p class="filter-group__empty" role="status">
-					{english ? 'No matching options' : 'Няма съвпадения'}
-				</p>{/each}
-		</div>
-		{#if !query.trim() && matching.length > 8}
-			<button
-				class="filter-group__more"
-				type="button"
-				aria-expanded={expanded}
-				aria-controls={id + '-options'}
-				onclick={() => (expanded = !expanded)}
-				>{expanded
-					? english
-						? 'Show fewer'
-						: 'Покажи по-малко'
-					: (english ? 'Show all' : 'Покажи всички') + ' (' + matching.length + ')'}<ChevronDown
-					size={16}
-					aria-hidden="true"
-				/></button
-			>
+			{/if}
 		{/if}
 	</div>
 </fieldset>

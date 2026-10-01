@@ -95,6 +95,11 @@
 	.daynight-action-band--mobile {
 		display: none;
 	}
+	@media (min-width: 768px) {
+		.daynight-action-band {
+			padding-block: var(--bc-space-8);
+		}
+	}
 	.daynight-action-grid {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));

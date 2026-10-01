@@ -256,6 +256,8 @@
 	--bc-glass-border: rgb(255 255 255 / 0.4);
 	--bc-mobile-appbar-height: 56px;
 	--bc-desktop-page-hero-height: 360px;
+	--bc-desktop-hero-title: clamp(2.5rem, 3.5vw, 3.25rem);
+	--bc-desktop-page-hero-height-compact: 240px;
 	--bc-mobile-nav-height: 58px;
 	--bc-mobile-content-max: 480px;
 	--bc-mobile-nav-icon-size: 22px;

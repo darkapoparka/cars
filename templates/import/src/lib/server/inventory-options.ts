@@ -484,7 +484,9 @@ const inventoryClearFiltersUrl = (state: InventoryState) => {
 	const defaultView = defaultInventoryViewForLayout(state.layout);
 
 	if (state.filterPresentation === 'modal') params.set('filters', 'modal');
-	if (state.layout === 'classic') params.set('layout', 'classic');
+	if (state.layout === 'dashboard') params.set('layout', 'dashboard');
+	const lang = state.searchParams.get('lang');
+	if (lang) params.set('lang', lang);
 	if (state.view !== defaultView) params.set('view', state.view);
 	if (state.sortParam !== 'best-match') params.set('sort', state.sortParam);
 

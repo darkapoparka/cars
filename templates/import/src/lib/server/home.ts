@@ -16,6 +16,7 @@ import { inventoryDesktopDataFromState } from './inventory-options';
 import { inventoryMobileDataFromState } from './inventory-options-mobile';
 import { posts } from '$lib/data/blog';
 import { isPreviewMode } from './runtime-config';
+import { homeDiscoveryLinks } from '$lib/content/home-discovery';
 
 export function homePageData(url: URL, requestLocale?: import('$lib/locale/core').Locale) {
 	const locale = requestLocale ?? localeFromUrl(url);
@@ -25,6 +26,7 @@ export function homePageData(url: URL, requestLocale?: import('$lib/locale/core'
 	const featured = inventory.filter((vehicle) => vehicle.mediaKind === 'listing').slice(0, 8);
 	return {
 		locale,
+		discoveryLinks: homeDiscoveryLinks(inventory, locale),
 		copy: getMessages(locale).home,
 		hero: {
 			...homeFiveHeroDataFromVehicles(

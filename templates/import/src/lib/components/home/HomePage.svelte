@@ -28,7 +28,7 @@
 		<FeaturedMobile vehicles={data.mobileFeatured} copy={data.copy} compactDesktop />
 	</div>
 	<div class="home-desktop-entry">
-		<DesktopHero hero={data.hero} {english} />
+		<DesktopHero hero={data.hero} {english} discoveryLinks={data.discoveryLinks} />
 		<section class="site-section site-container site-stack">
 			<header class="home-section-heading">
 				<h2 class="site-heading home-section-title">{data.copy.featuredTitle}</h2>
@@ -138,7 +138,7 @@
 			role="region"
 			aria-label={english ? 'Guides and advice' : 'Полезно за автомобила'}
 		>
-			{#each data.posts as post (post.slug)}<ArticleCard {post} {english} />{/each}
+			{#each data.posts as post (post.slug)}<ArticleCard {post} {english} compact />{/each}
 			<a class="home-rail-end" href={href('/blog')}
 				><ArrowRight size={32} aria-hidden="true" /><strong
 					>{english ? 'All guides' : 'Всички статии'}</strong
@@ -230,6 +230,28 @@
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: var(--bc-space-5);
+	}
+	@media (min-width: 768px) {
+		.home-brands a,
+		.home-types a {
+			align-content: center;
+			gap: var(--bc-space-3);
+			padding: var(--bc-space-5);
+		}
+		.home-brands strong,
+		.home-types strong {
+			font: var(--bc-weight-heading) var(--bc-text-entry)/var(--bc-leading-control)
+				var(--bc-font-body);
+		}
+		.home-brands > a > span {
+			font-size: var(--bc-text-label);
+		}
+		.home-brands img {
+			height: 68px;
+		}
+		.home-types img {
+			height: 140px;
+		}
 	}
 	@media (max-width: 1100px) {
 		.home-vehicles,

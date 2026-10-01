@@ -6,11 +6,12 @@
 	let {
 		post,
 		english = false,
-		level = 3
-	}: { post: BlogPost; english?: boolean; level?: 2 | 3 } = $props();
+		level = 3,
+		compact = false
+	}: { post: BlogPost; english?: boolean; level?: 2 | 3; compact?: boolean } = $props();
 </script>
 
-<article class="article-card">
+<article class="article-card" class:article-card--compact={compact}>
 	<a class="article-card__link" href={linkHref('/blog/' + post.slug + (english ? '?lang=en' : ''))}>
 		<img
 			class="article-card__image"
@@ -68,7 +69,7 @@
 		height: auto;
 		aspect-ratio: 1.6;
 		object-fit: contain;
-		background: #f1f3f5;
+		background: var(--bc-surface);
 	}
 	.article-card__body {
 		display: flex;
@@ -119,6 +120,28 @@
 		color: var(--bc-accent);
 	}
 	@media (min-width: 768px) {
+		.article-card__link {
+			border-radius: var(--bc-radius-card);
+		}
+		.article-card--compact .article-card__image {
+			aspect-ratio: 2.4;
+			object-fit: cover;
+		}
+		.article-card--compact .article-card__body {
+			padding: var(--bc-space-5);
+		}
+		.article-card--compact .article-card__title {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+			overflow: hidden;
+			min-height: 2lh;
+			font-size: var(--bc-text-h5);
+		}
+		.article-card--compact p {
+			display: none;
+		}
 		p,
 		.article-card__more {
 			font-size: var(--bc-text-prose);

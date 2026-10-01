@@ -57,7 +57,7 @@
 		{/snippet}
 	</PageIntro>
 	<div class="site-container service-results-heading site-desktop-only">
-		<h2>{data.directory.title}</h2>
+		<h2 class="site-heading">{data.directory.title}</h2>
 		<span role="status">{matching.length} {data.directory.count}</span>
 		{#if query}<Action variant="quiet" onclick={() => (query = '')}>{data.directory.clear}</Action
 			>{/if}
@@ -184,7 +184,7 @@
 		padding: var(--bc-space-6);
 		text-align: center;
 	}
-	h2 {
+	.service-card h2 {
 		margin: 0;
 		font: var(--bc-weight-heading) var(--bc-text-h4)/1.3 var(--bc-font-heading);
 	}
@@ -225,7 +225,8 @@
 		}
 		.service-card {
 			border-radius: var(--bc-radius-card);
-			background: var(--bc-surface);
+			border: 1px solid var(--bc-border);
+			background: var(--bc-card-bg);
 		}
 		.service-card__body {
 			gap: var(--bc-space-3);
@@ -240,8 +241,8 @@
 			min-height: var(--bc-control-height-standard);
 			padding: var(--bc-space-2) var(--bc-space-4);
 			border-radius: var(--bc-radius-md);
-			background: var(--bc-ink);
-			color: var(--bc-white);
+			background: var(--bc-control);
+			color: var(--bc-ink);
 			font-size: var(--bc-text-control);
 			font-weight: var(--bc-weight-action);
 		}

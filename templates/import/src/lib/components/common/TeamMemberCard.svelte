@@ -68,6 +68,7 @@
 			padding: var(--bc-space-3);
 			border: 1px solid var(--bc-border);
 			background: var(--bc-surface-raised);
+			border-radius: var(--bc-radius-card);
 			transition: box-shadow var(--bc-motion-standard);
 		}
 		.team-card:hover,
@@ -85,13 +86,13 @@
 		h3 {
 			grid-area: 2 / 1;
 			margin: var(--bc-space-4) var(--bc-space-1) 0;
-			font-size: 20px;
+			font-size: var(--bc-text-h5);
 			text-align: left;
 		}
 		p {
 			grid-area: 3 / 1;
 			margin: var(--bc-space-1) var(--bc-space-1);
-			font-size: 14px;
+			font-size: var(--bc-text-label);
 			line-height: 1.5;
 			text-align: left;
 		}

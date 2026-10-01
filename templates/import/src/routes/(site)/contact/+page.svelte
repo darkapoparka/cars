@@ -182,4 +182,29 @@
 		margin-bottom: var(--bc-space-6);
 		text-align: center;
 	}
+	@media (min-width: 768px) {
+		.contact-channel {
+			display: grid;
+			grid-template-columns: var(--bc-control-height-primary) minmax(0, 1fr);
+			align-items: start;
+			gap: var(--bc-space-2) var(--bc-space-4);
+			padding: var(--bc-space-6);
+			text-align: left;
+		}
+		.contact-channel__icon {
+			grid-row: 1 / 3;
+		}
+		.contact-channel h2,
+		.contact-channel p {
+			grid-column: 2;
+		}
+		.contact-channel h2 {
+			font-size: var(--bc-text-h5);
+		}
+		.contact-channel:hover {
+			background: var(--bc-card-bg);
+			border-color: var(--bc-border-strong);
+			box-shadow: var(--bc-shadow-card);
+		}
+	}
 </style>
