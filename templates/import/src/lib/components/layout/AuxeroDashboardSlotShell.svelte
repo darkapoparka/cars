@@ -52,7 +52,6 @@
 		{ href: '/account/messages', label: english ? 'Messages' : 'Съобщения' }
 	]);
 	const containerOpenTag = '<div class="dashboard-container">';
-	const contentOpenTag = '<div class="dashboard-content">';
 	const innerOpenTag = '<div class="dashboard-content--inner">';
 	const detailsOpenTag = '<div class="dashboard-content--details">';
 
@@ -61,12 +60,14 @@
 
 		if (containerStart < 0) return undefined;
 
-		const contentStart = beforeHtml.indexOf(contentOpenTag, containerStart);
-
-		if (contentStart < 0) return undefined;
+		const contentMatch = beforeHtml
+			.slice(containerStart)
+			.match(/<div class="(dashboard-content(?: [^"]*)?)">/);
+		if (!contentMatch || contentMatch.index === undefined) return undefined;
+		const contentStart = containerStart + contentMatch.index;
 
 		const innerStart = beforeHtml.indexOf(innerOpenTag, contentStart);
-		const headerStart = contentStart + contentOpenTag.length;
+		const headerStart = contentStart + contentMatch[0].length;
 		const headerEnd = innerStart < 0 ? beforeHtml.length : innerStart;
 		const detailsStart = innerStart < 0 ? -1 : beforeHtml.indexOf(detailsOpenTag, innerStart);
 		const innerPrefixStart = innerStart < 0 ? -1 : innerStart + innerOpenTag.length;
@@ -74,14 +75,22 @@
 		const detailsPrefixStart = detailsStart < 0 ? -1 : detailsStart + detailsOpenTag.length;
 		const innerPrefixHtml =
 			innerPrefixStart < 0 ? '' : beforeHtml.slice(innerPrefixStart, innerPrefixEnd);
+		const detailsPrefixHtml =
+			preserveDetailsPrefix && detailsPrefixStart >= 0 ? beforeHtml.slice(detailsPrefixStart) : '';
+		const detailsBox = detailsPrefixHtml.match(/<div class="([^"]*\bdashboard-box\b[^"]*)">/);
+		const detailsBoxStart = detailsBox?.index ?? -1;
+		const closingDivCount = detailsBox ? 5 : 4;
 
 		return {
-			afterHtml: afterHtml.replace(/^(?:\s*<\/div>){1,4}/, ''),
+			afterHtml: afterHtml.replace(new RegExp(`^(?:\\s*</div>){1,${closingDivCount}}`), ''),
 			beforeHtml: beforeHtml.slice(0, containerStart),
-			detailsPrefixHtml:
-				preserveDetailsPrefix && detailsPrefixStart >= 0
-					? beforeHtml.slice(detailsPrefixStart)
-					: '',
+			contentClass: contentMatch[1],
+			detailsPrefixHtml,
+			detailsBoxClass: detailsBox?.[1],
+			detailsBeforeBox: detailsPrefixHtml.slice(0, detailsBoxStart),
+			detailsBoxPrefix: detailsBox
+				? detailsPrefixHtml.slice(detailsBoxStart + detailsBox[0].length)
+				: '',
 			headerHtml: beforeHtml.slice(headerStart, headerEnd),
 			hasInnerPrefix: innerPrefixHtml.trim().length > 0,
 			innerPrefixHtml,
@@ -111,7 +120,7 @@
 			<div class="dashboard-container">
 				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 				{@html dashboardShell.sidebarHtml}
-				<div class="dashboard-content">
+				<div class={dashboardShell.contentClass}>
 					<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 					{@html dashboardShell.headerHtml}
 					<div class="dashboard-content--inner">
@@ -122,9 +131,20 @@
 							<p class="h3 mb-30">{title}</p>
 						{/if}
 						<div class="dashboard-content--details" data-daynight-dashboard>
-							<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-							{@html dashboardShell.detailsPrefixHtml}
-							{@render children()}
+							{#if dashboardShell.detailsBoxClass}
+								<!-- Keep the legacy card wrapper inside Svelte's hydration markers. -->
+								<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+								{@html dashboardShell.detailsBeforeBox}
+								<div class={dashboardShell.detailsBoxClass}>
+									<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+									{@html dashboardShell.detailsBoxPrefix}
+									{@render children()}
+								</div>
+							{:else}
+								<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+								{@html dashboardShell.detailsPrefixHtml}
+								{@render children()}
+							{/if}
 						</div>
 					</div>
 				</div>
@@ -176,6 +196,7 @@
 		.account-mobile-shell :global(.dashboard-content > .header),
 		.account-mobile-shell :global(.dashboard-content--inner > .h3),
 		.account-mobile-shell :global(.dashboard-content--details > .h3),
+		.account-mobile-shell :global(.dashboard-content--details > .title-section > .h3),
 		.account-mobile-shell :global(.dashboard-menu-toggle-input),
 		.account-mobile-shell :global(.dashboard-menu-backdrop),
 		.account-mobile-shell :global(.dashboard-toggle-btn) {
