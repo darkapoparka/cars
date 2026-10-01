@@ -22,9 +22,14 @@ BGN, so the screenshots show `лв.`. The same component handles EUR.
 - Biome check passed for the six changed source and verification files.
 - Browser measurements: 48px leasing entry at 320px and 390px, with no document
   or price overflow; currency and amount both resolve to 20px, weight 600.
-- Shared-header navigation passed in Chromium at 320px and 390px, and WebKit at
-  320px. The first WebKit 390px run encountered a concurrent desktop stylesheet
-  compile error in `dealer-desktop-toolbar.module.css`; its trace is preserved.
+  Inventory at 320px also has a 48px entry and fitting prices. At 1440px the
+  visible amount and currency both resolve to 22px, with no document overflow.
+- Shared-header navigation passed in Chromium and WebKit at 320px and 390px.
+  The first WebKit 390px run encountered a concurrent desktop stylesheet compile
+  error in `dealer-desktop-toolbar.module.css`; the same test passed unchanged
+  after that edit recovered. Both the original trace and recheck are preserved.
+- The inventory Price pill opens its existing detailed price drawer and closes
+  without changing the selected filters.
 
 Matched mobile header comparison:
 `../runtime/mobile-header-currency-2026-10-01/header-before-after.png`.
