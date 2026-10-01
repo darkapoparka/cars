@@ -1,5 +1,28 @@
 import { expect, test } from '@playwright/test';
 
+test('desktop type and make grids open all inventory from the final tile', async ({ page }) => {
+	for (const locale of ['en', 'bg']) {
+		await page.goto(`/${locale}`);
+		await expect(page.getByRole('tab').first()).toBeEnabled();
+		for (const sectionSelector of [
+			'.daynight-home-section--vehicle-types',
+			'.daynight-home-brand-section'
+		]) {
+			const section = page.locator(sectionSelector);
+			await expect(section.locator('.desktop-section-heading a')).toHaveCount(0);
+			const lastTile = section.locator('.desktop-browse-all');
+			await expect(lastTile).toHaveAttribute('href', `/${locale}/inventory`);
+			await lastTile.focus();
+			await lastTile.press('Enter');
+			await expect(page).toHaveURL(new RegExp(`/${locale}/inventory$`));
+			await expect(
+				page.locator('[data-daynight-grid-panel].active [data-daynight-vehicle-card]').first()
+			).toBeVisible();
+			await page.goto(`/${locale}`);
+		}
+	}
+});
+
 test('quick inventory filters wrap within their row and toggle without losing focus', async ({
 	page
 }, testInfo) => {
@@ -27,41 +50,31 @@ test('quick inventory filters wrap within their row and toggle without losing fo
 				)
 				.toMatchObject({ loaded: true, realPhoto: true });
 			const chips = shelf.locator('a');
-			const geometry = await shelf.evaluate((element) => {
-				const box = element.getBoundingClientRect();
-				const filterRow = document.querySelector(
-					'.inventory-banner-filters .inventory-filter-triggers'
-				);
-				if (!filterRow) {
-					throw new Error(
-						JSON.stringify({
-							innerWidth,
-							clientWidth: document.documentElement.clientWidth,
-							mobile: matchMedia('(max-width: 991px)').matches,
-							desktop: matchMedia('(min-width: 992px)').matches,
-							gutter: getComputedStyle(document.documentElement).scrollbarGutter,
-							connected: element.isConnected
-						})
-					);
-				}
-				const filters = filterRow.getBoundingClientRect();
-				return {
-					gap: box.top - filters.bottom,
-					aligned: Math.abs(box.left - filters.left) < 1,
-					contained: [...element.querySelectorAll('a')].every((chip) => {
-						const bounds = chip.getBoundingClientRect();
-						return (
-							bounds.left >= box.left - 1 &&
-							bounds.right <= box.right + 1 &&
-							bounds.top >= box.top &&
-							bounds.bottom <= box.bottom + 1
+			await expect
+				.poll(() =>
+					shelf.evaluate((element) => {
+						const box = element.getBoundingClientRect();
+						const filterRow = document.querySelector(
+							'.inventory-banner-filters .inventory-filter-triggers'
 						);
+						if (!element.isConnected || !filterRow) return null;
+						const filters = filterRow.getBoundingClientRect();
+						return {
+							separated: box.top - filters.bottom >= 8,
+							aligned: Math.abs(box.left - filters.left) < 1,
+							contained: [...element.querySelectorAll('a')].every((chip) => {
+								const bounds = chip.getBoundingClientRect();
+								return (
+									bounds.left >= box.left - 1 &&
+									bounds.right <= box.right + 1 &&
+									bounds.top >= box.top &&
+									bounds.bottom <= box.bottom + 1
+								);
+							})
+						};
 					})
-				};
-			});
-			expect(geometry.gap).toBeGreaterThanOrEqual(8);
-			expect(geometry.aligned).toBe(true);
-			expect(geometry.contained).toBe(true);
+				)
+				.toEqual({ separated: true, aligned: true, contained: true });
 			const bmw = chips.filter({ hasText: /^BMW$/ });
 			await bmw.focus();
 			await bmw.press('Enter');

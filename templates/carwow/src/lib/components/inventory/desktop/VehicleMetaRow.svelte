@@ -4,28 +4,46 @@
 
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 
-	let { vehicle, styleClass }: { vehicle: InventoryListVehicle; styleClass: string } = $props();
+	let {
+		vehicle,
+		styleClass,
+		plain = false
+	}: { vehicle: InventoryListVehicle; styleClass: string; plain?: boolean } = $props();
 </script>
 
-<ul class="tag {styleClass}">
-	<li>
-		<img src={i18n.asset('/assets/icons/icon-gauge.svg')} alt="" aria-hidden="true" /><span
-			>{i18n.distance(vehicle.mileage)}</span
-		>
-	</li>
-	<li>
-		<img src={i18n.asset('/assets/icons/calendar.svg')} alt="" aria-hidden="true" /><span
-			>{vehicle.year}</span
-		>
-	</li>
-	<li>
-		<img src={i18n.asset('/assets/icons/gaspump.svg')} alt="" aria-hidden="true" /><span
-			>{i18n.spec(vehicle.fuel)}</span
-		>
-	</li>
+<ul class="tag {styleClass}" class:plain>
+	{#if plain}
+		<li><span>{vehicle.year}</span></li>
+		<li><span>{i18n.distance(vehicle.mileage)}</span></li>
+	{:else}
+		<li>
+			<img src={i18n.asset('/assets/icons/icon-gauge.svg')} alt="" aria-hidden="true" /><span
+				>{i18n.distance(vehicle.mileage)}</span
+			>
+		</li>
+		<li>
+			<img src={i18n.asset('/assets/icons/calendar.svg')} alt="" aria-hidden="true" /><span
+				>{vehicle.year}</span
+			>
+		</li>
+		<li>
+			<img src={i18n.asset('/assets/icons/gaspump.svg')} alt="" aria-hidden="true" /><span
+				>{i18n.spec(vehicle.fuel)}</span
+			>
+		</li>
+	{/if}
 </ul>
 
 <style>
+	.tag.plain {
+		gap: 0 10px;
+		margin: 0;
+		list-style: none;
+	}
+	.tag.plain li + li::before {
+		content: '·';
+		margin-right: 10px;
+	}
 	.tag.style2 {
 		display: flex;
 		align-items: center;

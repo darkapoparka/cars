@@ -3,6 +3,7 @@
 	const i18n = getI18n();
 
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import { resolve } from '$app/paths';
 	import { cars } from '$lib/data/daynight-vehicles';
 	import {
@@ -81,14 +82,10 @@
 	let {
 		title = i18n.t('copy.c5b39ab615ea'),
 		ctaLabel = i18n.t('copy.b026ee3ab143'),
-		showHeaderCta = true,
-		showBelowCta = false,
 		showEmptyCategories = true
 	}: {
 		title?: string;
 		ctaLabel?: string;
-		showHeaderCta?: boolean;
-		showBelowCta?: boolean;
 		showEmptyCategories?: boolean;
 	} = $props();
 
@@ -103,16 +100,12 @@
 
 <section class="daynight-home-section daynight-home-section--vehicle-types">
 	<div class="daynight-home-container home-browse-heading">
-		<DesktopSectionHeading
-			{title}
-			href={i18n.href(showHeaderCta ? resolve('/inventory') : undefined)}
-			label={ctaLabel}
-		/>
+		<DesktopSectionHeading {title} centered />
 	</div>
 	<div class="daynight-home-section-content daynight-home-container">
 		<div class="daynight-vehicle-types">
 			<div class="daynight-vehicle-types__grid">
-				{#each vehicleCategories as category (category.id)}
+				{#each vehicleCategories.slice(0, 7) as category (category.id)}
 					<div class="daynight-vehicle-types__item">
 						<a
 							href={i18n.href(`${resolve('/inventory')}?${category.query}`)}
@@ -124,6 +117,8 @@
 									srcset={desktopOnlySrcset(category.image, 600)}
 									sizes={desktopOnlySizes('220px')}
 									alt={i18n.text(category.title)}
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 							<div class="daynight-vehicle-type-card__content">
@@ -137,15 +132,18 @@
 						</a>
 					</div>
 				{/each}
+				<div class="daynight-vehicle-types__item">
+					<a
+						href={i18n.href(resolve('/inventory'))}
+						class="daynight-vehicle-type-card desktop-browse-all"
+						aria-label={ctaLabel}
+					>
+						<ArrowRight size={48} strokeWidth={1.5} aria-hidden="true" />
+						<span>{i18n.t('copy.5701bc5c6a95')}</span>
+					</a>
+				</div>
 			</div>
 		</div>
-		{#if showBelowCta}
-			<div class="daynight-home-browse-cta">
-				<a href={i18n.href(resolve('/inventory'))} class="daynight-home-browse-cta__link">
-					{i18n.text(ctaLabel)}
-				</a>
-			</div>
-		{/if}
 	</div>
 </section>
 
@@ -153,164 +151,77 @@
 	.home-browse-heading {
 		padding-top: 36px;
 	}
-	:global(body.daynight-home-page) .daynight-vehicle-types__grid {
-		gap: 16px !important;
+	.daynight-vehicle-types__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 16px;
 	}
-
 	:global(body.daynight-home-page) .daynight-vehicle-type-card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		min-height: 224px;
 		background: #fff !important;
-		border: 0 !important;
-		border-radius: 16px !important;
+		border: 1px solid var(--discovery-control-border) !important;
+		border-radius: 12px !important;
 		box-shadow: none !important;
 		box-sizing: border-box;
-		min-height: 250px !important;
 		overflow: hidden;
-		padding: 14px 0 18px !important;
-		transition: background-color 0.14s ease !important;
+		padding: 16px 12px !important;
+		text-align: center;
+		transition:
+			background-color 140ms ease,
+			border-color 140ms ease;
 	}
-
-	:global(body.daynight-home-page) .daynight-vehicle-type-card:hover,
-	:global(body.daynight-home-page) .daynight-vehicle-type-card:focus-visible,
-	:global(body.daynight-home-page) .daynight-vehicle-type-card:focus-within {
-		background: #fff !important;
-		border-color: transparent !important;
+	:global(body.daynight-home-page) .daynight-vehicle-type-card:is(:hover, :focus-visible) {
+		background: var(--sa-yellow) !important;
+		border-color: var(--sa-yellow) !important;
 		box-shadow: none !important;
 		transform: none !important;
 	}
-
 	:global(body.daynight-home-page) .daynight-vehicle-type-card:focus-visible {
-		outline: 2px solid #d50032;
-		outline-offset: 2px;
+		outline: 2px solid var(--desktop-focus);
+		outline-offset: 3px;
 	}
-
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__image {
-		height: 164px !important;
+		height: 138px !important;
 		margin: 0 !important;
-		padding: 0 10px 12px !important;
+		padding: 0 0 8px !important;
 	}
-
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__image img {
 		height: 100% !important;
+		width: 100% !important;
 		object-fit: contain !important;
 		mix-blend-mode: multiply;
 		transform: none !important;
-		width: 100% !important;
 	}
-
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__content {
-		margin-top: 0 !important;
-		padding: 0 20px !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		text-align: center;
 	}
-
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__title {
-		font-size: var(--sa-text-xl) !important;
-		font-weight: var(--sa-weight-heading) !important;
-		line-height: 1.2 !important;
+		font: var(--sa-weight-strong) var(--sa-text-xl)/1.3 var(--sa-font) !important;
 		margin: 0 0 4px !important;
 	}
-
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__count {
-		color: #47515b !important;
-		font-size: var(--sa-text-caption) !important;
-		line-height: 1.3 !important;
+		color: var(--discovery-muted) !important;
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font) !important;
 		margin: 0 !important;
 	}
-
-	.daynight-home-browse-cta {
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-browse-cta__link {
-		align-items: center;
-		background: transparent;
-		border: 1px solid #c91620;
-		border-radius: 8px;
-		box-sizing: border-box;
-		color: #c91620;
-		display: inline-flex;
-		font-size: var(--sa-text-base);
-		font-weight: var(--sa-weight-semibold);
-		justify-content: center;
-		min-height: 42px;
-		padding: 0 18px;
-		text-decoration: none;
-		transition:
-			background-color 0.14s ease,
-			border-color 0.14s ease,
-			color 0.14s ease;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-browse-cta__link:hover,
-	:global(body.daynight-home-page) .daynight-home-browse-cta__link:focus-visible {
-		background: #c91620;
-		border-color: #c91620;
-		color: #fff;
-	}
-
-	:global(body.daynight-home-page) .daynight-vehicle-type-card--empty {
-		background: #f8fafc !important;
-		border-color: #e2e8f0 !important;
-	}
-
 	:global(body.daynight-home-page)
 		.daynight-vehicle-type-card--empty
 		.daynight-vehicle-type-card__image
 		img {
 		opacity: 0.64;
 	}
-
-	:global(body.daynight-home-page)
-		.daynight-vehicle-type-card--empty
-		.daynight-vehicle-type-card__count {
-		color: #47515b !important;
-	}
-
-	@media (min-width: 992px) {
-		.daynight-home-section--vehicle-types :global(.daynight-home-section-banner) {
-			padding: 40px 0 18px !important;
-		}
-
-		.daynight-home-section--vehicle-types :global(.daynight-home-section-banner__inner) {
-			align-items: center !important;
-			flex-direction: row !important;
-			justify-content: space-between !important;
-			padding: 0 !important;
-			text-align: left !important;
-		}
-
-		.daynight-home-section--vehicle-types :global(.daynight-home-section-banner__copy) {
-			align-items: flex-start !important;
-			justify-content: flex-start !important;
-			text-align: left !important;
-			width: auto !important;
-		}
-
-		.daynight-home-section--vehicle-types :global(.daynight-home-section-banner__copy h2) {
-			text-align: left !important;
-		}
-
-		.daynight-home-section--vehicle-types :global(.daynight-home-section-banner__cta) {
-			background: transparent !important;
-			border: 0 !important;
-			box-shadow: none !important;
-			color: #111827 !important;
-			min-height: auto !important;
-			padding: 4px 0 !important;
-			transform: none !important;
-		}
-
-		.daynight-home-section--vehicle-types :global(.daynight-home-section-banner__cta::after) {
-			content: '→';
-			margin-left: 8px;
-		}
-
-		.daynight-home-section--vehicle-types :global(.daynight-home-section-banner__cta:hover),
-		.daynight-home-section--vehicle-types
-			:global(.daynight-home-section-banner__cta:focus-visible) {
-			background: transparent !important;
-			color: #c91620 !important;
-		}
+	:global(body.daynight-home-page) .daynight-vehicle-type-card.desktop-browse-all {
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		background: var(--sa-yellow) !important;
+		border-color: var(--sa-yellow) !important;
+		color: var(--sa-ink);
+		font: var(--sa-weight-strong) var(--sa-text-xl)/1.3 var(--sa-font);
 	}
 </style>

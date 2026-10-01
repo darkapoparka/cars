@@ -31,8 +31,8 @@
 					<img
 						src={i18n.asset('/assets/brands/youtube-logo.png')}
 						alt={i18n.t('copy.fb7accfff8c6')}
-						width="138"
-						height="46"
+						width="196"
+						height="65"
 					/></span
 				>
 			{/snippet}
@@ -71,10 +71,14 @@
 								aria-label={i18n.t('pattern.23e9e4cc63e8', { v0: i18n.text(video.title) })}
 							>
 								<img
-									src={i18n.asset(video.thumbnail)}
+									src={i18n.asset(
+										video.thumbnail
+											.replace('/home-videos/', '/home-videos/desktop/')
+											.replace('.jpg', '.webp')
+									)}
 									alt=""
-									width="480"
-									height="270"
+									width="1280"
+									height="720"
 									loading="lazy"
 									decoding="async"
 								/>
@@ -85,7 +89,6 @@
 							</button>
 						{/if}
 					</div>
-					<h3>{i18n.text(video.title)}</h3>
 				</article>
 			{/each}
 		</div>
@@ -111,29 +114,37 @@
 	}
 	.home-videos__title img {
 		display: block;
-		width: 138px;
-		height: 46px;
+		width: 196px;
+		height: 65px;
 		object-fit: contain;
 	}
 	.home-videos__grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 24px;
+		grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+		grid-template-rows: repeat(2, minmax(0, 1fr));
+		gap: 16px;
 	}
 	.home-video {
 		border-radius: 12px;
-		overflow: hidden;
+		min-width: 0;
+	}
+	.home-video:first-child {
+		grid-row: span 2;
+	}
+	.home-video:first-child .home-video__image {
+		aspect-ratio: auto;
+		height: 100%;
 	}
 	.home-video__image {
 		aspect-ratio: 16 / 9;
 		background: #24282c;
 		position: relative;
+		border-radius: inherit;
+		overflow: hidden;
 	}
-	.home-video h3 {
-		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);
-		padding: 14px 0 0;
-		color: var(--sa-ink);
-		margin: 0;
+	.home-video__image:focus-within {
+		outline: 2px solid var(--desktop-focus, #171b1e);
+		outline-offset: 3px;
 	}
 	.home-video__play {
 		position: absolute;

@@ -3,7 +3,9 @@
 	const i18n = getI18n();
 
 	import DesktopVehicleActions from '$lib/components/shared/DesktopVehicleActions.svelte';
+	import DesktopVehicleCardDetails from '$lib/components/shared/DesktopVehicleCardDetails.svelte';
 	import { resolve } from '$app/paths';
+	import { onMount } from 'svelte';
 	import { fromAction } from 'svelte/attachments';
 	import {
 		getDayNightVehicleCondition,
@@ -21,6 +23,10 @@
 	const image = $derived(desktopVehicleImage(vehicle.image));
 	const featureList = $derived(vehicle.features.join(' | '));
 	const visiblePhotoCount = $derived(vehicle.gallery.length > 1 ? vehicle.gallery.length : 0);
+	let desktopMounted = $state(false);
+	onMount(() => {
+		desktopMounted = window.innerWidth >= 992;
+	});
 </script>
 
 <div
@@ -57,9 +63,11 @@
 		>
 			<img
 				class="daynight-home-inventory-card__image"
-				src={i18n.asset(image.width ? desktopOnlyImagePlaceholder : image.src)}
-				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset)}
-				sizes="(min-width: 1400px) 312px, (min-width: 992px) calc((100vw - 152px) / 4), 1px"
+				src={i18n.asset(image.width && !desktopMounted ? desktopOnlyImagePlaceholder : image.src)}
+				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset, !desktopMounted)}
+				sizes={desktopMounted
+					? '(min-width: 1400px) 424px, calc((100vw - 128px) / 3)'
+					: '(min-width: 1400px) 424px, (min-width: 992px) calc((100vw - 128px) / 3), 1px'}
 				width={image.width}
 				height={image.height}
 				alt={vehicle.shortTitle}
@@ -70,14 +78,6 @@
 			/>
 		</a>
 		<div class="daynight-home-inventory-card__badges">
-			<p class="daynight-home-inventory-card__badge">
-				<a
-					href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
-					class="daynight-home-inventory-card__badge-link"
-					aria-label={`${i18n.spec(vehicle.transmission)} - ${vehicle.shortTitle}`}
-					>{i18n.spec(vehicle.transmission)}</a
-				>
-			</p>
 			{#if visiblePhotoCount}
 				<div class="daynight-home-inventory-card__tag-row">
 					<p class="daynight-home-inventory-card__badge">
@@ -89,36 +89,6 @@
 		</div>
 	</div>
 	<div class="daynight-home-inventory-card__content">
-		<p class="daynight-home-inventory-card__title">
-			<a
-				href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
-				title={vehicle.shortTitle}>{vehicle.shortTitle}</a
-			>
-		</p>
-		<ul class="daynight-home-inventory-card__specs">
-			<li>
-				<img src={i18n.asset('/assets/icons/icon-gauge.svg')} alt="" aria-hidden="true" /><span
-					>{i18n.distance(vehicle.mileage)}</span
-				>
-			</li>
-			<li>
-				<img src={i18n.asset('/assets/icons/calendar.svg')} alt="" aria-hidden="true" /><span
-					>{vehicle.year}</span
-				>
-			</li>
-			<li>
-				<img src={i18n.asset('/assets/icons/gaspump.svg')} alt="" aria-hidden="true" /><span
-					>{i18n.spec(vehicle.fuel)}</span
-				>
-			</li>
-		</ul>
-		<p class="daynight-home-inventory-card__price">
-			<span class="daynight-card-price__value">{vehicle.priceEur}</span>
-			<span class="daynight-card-price__meta"
-				><a href={i18n.href(resolve('/financing'))} class="daynight-card-price__link"
-					>{i18n.spec(vehicle.monthly)}</a
-				></span
-			>
-		</p>
+		<DesktopVehicleCardDetails {vehicle} financeLink />
 	</div>
 </div>

@@ -3,6 +3,7 @@
 	const i18n = getI18n();
 
 	import { resolve } from '$app/paths';
+	import { tick } from 'svelte';
 	import {
 		getDesktopInventoryContext,
 		inventoryShortcuts
@@ -24,7 +25,9 @@
 			: filters.isShortcutActive(shortcut.field, shortcut.value ?? '');
 	}
 
-	function handlePillClick(event: MouseEvent, shortcut: (typeof inventoryShortcuts)[number]) {
+	async function handlePillClick(event: MouseEvent, shortcut: (typeof inventoryShortcuts)[number]) {
+		const anchor = event.currentTarget as HTMLAnchorElement;
+		const retainFocus = event.detail === 0 || document.activeElement === anchor;
 		event.preventDefault();
 		filters.openField = '';
 		if (shortcut.clearsAll) {
@@ -33,6 +36,13 @@
 			filters.toggleShortcut(shortcut.field, shortcut.value);
 		}
 		filters.syncUrl();
+		// Restore keyboard focus after reactive changes and the browser's layout update.
+		await tick();
+		if (retainFocus) {
+			requestAnimationFrame(() => {
+				if (anchor.isConnected) anchor.focus({ preventScroll: true });
+			});
+		}
 	}
 </script>
 

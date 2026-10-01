@@ -179,10 +179,12 @@
 	}
 	.daynight-home-shell .daynight-home-inventory__grid {
 		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 24px;
 	}
 	.daynight-home-shell .daynight-home-inventory__card {
+		display: flex;
+		flex-direction: column;
 		position: relative;
 		min-width: 0;
 		overflow: hidden;
@@ -220,12 +222,19 @@
 		position: relative;
 		aspect-ratio: 4 / 3;
 		background: #e7e9eb;
+		flex: none;
+		min-height: 0;
+		overflow: hidden;
 	}
 	.daynight-home-shell .daynight-home-inventory-card__media > a {
 		display: block;
+		position: absolute;
+		inset: 0;
+		width: 100%;
 		height: 100%;
 	}
 	.daynight-home-shell .daynight-home-inventory-card__image {
+		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -234,7 +243,7 @@
 		position: absolute;
 		inset: auto 12px 12px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
 	.daynight-home-shell .daynight-home-inventory-card__badge {
 		display: flex;
@@ -248,73 +257,14 @@
 		font-size: var(--sa-text-caption);
 		line-height: 18px;
 	}
-	.daynight-home-shell .daynight-home-inventory-card__badge-link {
-		color: inherit;
-		font: inherit;
-	}
 	.daynight-home-shell .daynight-home-inventory-card__badge img {
 		width: 16px;
 		height: 16px;
 	}
 	.daynight-home-shell .daynight-home-inventory-card__content {
-		display: grid;
-		gap: 12px;
-		padding: 16px;
-	}
-	.daynight-home-shell .daynight-home-inventory-card__title {
-		margin: 0;
-		min-height: 47px;
-		font-size: var(--sa-text-lg);
-		font-weight: var(--sa-weight-semibold);
-		line-height: 1.3;
-	}
-	.daynight-home-shell .daynight-home-inventory-card__title a {
-		color: var(--sa-ink);
-		font: inherit;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		overflow: hidden;
-	}
-	.daynight-home-shell .daynight-home-inventory-card__specs {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 8px 12px;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	.daynight-home-shell .daynight-home-inventory-card__specs li {
-		display: flex;
-		align-items: center;
-		gap: 5px;
-		color: #47515b;
-		font-size: var(--sa-text-caption);
-		line-height: 20px;
-	}
-	.daynight-home-shell .daynight-home-inventory-card__specs img {
-		width: 16px;
-		height: 16px;
-	}
-	.daynight-home-shell .daynight-home-inventory-card__price {
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-		gap: 6px;
-		border-top: 1px solid #eaecf0;
-		margin: 0;
-		padding-top: 12px;
-	}
-	.daynight-home-shell .daynight-card-price__value {
-		font-size: var(--sa-text-2xl);
-		font-weight: var(--sa-weight-strong);
-		color: var(--sa-ink);
-		line-height: 1.15;
-	}
-	.daynight-home-shell .daynight-card-price__link {
-		font-size: var(--sa-text-caption);
-		color: #47515b;
-		line-height: 1.4;
+		flex: 1;
+		padding: 20px;
 	}
 	/* Browse grids and honest, readable zero-stock counts. */
 	.daynight-home-shell .daynight-vehicle-types__grid {

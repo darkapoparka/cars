@@ -50,9 +50,16 @@ test('server bootstrap and hydration use one desktop CSS URL', async ({ page }, 
 	await expect(page.getByRole('tab', { name: 'Buy', exact: true })).toBeEnabled();
 	expect(requests.size).toBe(1);
 	await page.evaluate(() => document.fonts.ready);
+	const photoHeights = await page
+		.locator('.daynight-home-inventory-card__media')
+		.evaluateAll((media) => media.slice(0, 3).map((item) => item.getBoundingClientRect().height));
+	expect(Math.max(...photoHeights) - Math.min(...photoHeights)).toBeLessThan(1);
 	await page.screenshot({ path: testInfo.outputPath('home-desktop-after.png') });
 	for (const selector of [
+		'.daynight-home-inventory__grid',
 		'.daynight-home-action-grid',
+		'.daynight-home-section--vehicle-types',
+		'.daynight-home-brand-section',
 		'.daynight-home-campaign-grid',
 		'.home-videos',
 		'.daynight-home-review-grid'
@@ -70,6 +77,19 @@ test('server bootstrap and hydration use one desktop CSS URL', async ({ page }, 
 		path: testInfo.outputPath('home-desktop-full-after.png'),
 		fullPage: true
 	});
+	for (const [selector, filename] of [
+		['.daynight-home-inventory', 'desktop-car-cards.png'],
+		['.daynight-home-section--vehicle-types', 'desktop-browse-types.png'],
+		['.daynight-home-brand-section', 'desktop-browse-makes.png'],
+		['.home-videos', 'desktop-youtube-panel.png']
+	]) {
+		const section = (await page.locator(selector).boundingBox())!;
+		await page.screenshot({
+			path: testInfo.outputPath(filename),
+			fullPage: true,
+			clip: { x: 0, y: section.y - 16, width: 1440, height: section.height + 32 }
+		});
+	}
 	const campaigns = (await page.locator('.daynight-home-campaign-grid').boundingBox())!;
 	const reviews = (await page.locator('.home-reviews-panel').boundingBox())!;
 	await page.screenshot({
@@ -123,10 +143,13 @@ test('desktop variants and the 991/992px composition boundary remain usable', as
 			} else if (path === '/en/inventory' && width >= 992) {
 				const grid = page.locator('[data-daynight-grid-panel="2"].active > .grid');
 				await expect(grid).toBeVisible();
-				const columns = await grid.evaluate(
-					(element) => getComputedStyle(element).gridTemplateColumns.split(' ').length
-				);
-				expect(columns).toBe(width <= 1240 ? 3 : 4);
+				await expect
+					.poll(() =>
+						grid.evaluate(
+							(element) => getComputedStyle(element).gridTemplateColumns.split(' ').length
+						)
+					)
+					.toBe(width <= 1240 ? 3 : 4);
 			} else if (!path.includes('/inventory')) {
 				await expect(page.locator('.mobile-home')).toHaveCount(width < 992 ? 1 : 0);
 				if (width === 992 && path === '/en')
@@ -167,17 +190,24 @@ test.describe('mobile preservation', () => {
 	}, testInfo) => {
 		const desktopRequests: string[] = [];
 		page.on('request', (request) => {
-			if (/inventory-desktop\/|daynight-(?:home|detail)-desktop.*\.css/.test(request.url()))
+			if (
+				/inventory-desktop\/|home-videos\/desktop\/|daynight-(?:home|detail)-desktop.*\.css/.test(
+					request.url()
+				)
+			)
 				desktopRequests.push(request.url());
 		});
-		await page.goto('/en');
-		await expect(page.locator('.mobile-home')).toBeVisible();
-		await expect(page.locator('.hero-intent')).toHaveCount(0);
-		await page.evaluate(() => document.fonts.ready);
-		await page.screenshot({ path: testInfo.outputPath('mobile-home-after.png') });
-		await page.goto('/en/inventory/mercedes-benz-gla-45-amg-405323');
-		await expect(page.locator('.daynight-detail')).toHaveCount(0);
-		expect(desktopRequests).toEqual([]);
+		for (const width of [320, 390]) {
+			await page.setViewportSize({ width, height: 844 });
+			await page.goto('/en');
+			await expect(page.locator('.mobile-home')).toBeVisible();
+			await expect(page.locator('.hero-intent')).toHaveCount(0);
+			await page.evaluate(() => document.fonts.ready);
+			await page.screenshot({ path: testInfo.outputPath(`mobile-home-${width}-after.png`) });
+			await page.goto('/en/inventory/mercedes-benz-gla-45-amg-405323');
+			await expect(page.locator('.daynight-detail')).toHaveCount(0);
+			expect(desktopRequests).toEqual([]);
+		}
 	});
 });
 
@@ -195,6 +225,11 @@ test('desktop videos request the player only after activation', async ({ page },
 	await page.goto('/en');
 	await page.locator('.home-video__play').first().click({ trial: true });
 	await expect(page.locator('.home-videos iframe')).toHaveCount(0);
+	await expect(page.locator('.home-videos h3')).toHaveCount(0);
+	await expect(page.locator('.home-video__image').first()).toHaveCSS('border-radius', '12px');
+	const featured = (await page.locator('.home-video__image').first().boundingBox())!;
+	const secondary = (await page.locator('.home-video__image').nth(1).boundingBox())!;
+	expect(featured.width).toBeGreaterThan(secondary.width * 1.9);
 	await expect(page.locator('.home-video__playmark').first()).toHaveCSS(
 		'color',
 		'rgb(255, 255, 255)'
@@ -206,7 +241,7 @@ test('desktop videos request the player only after activation', async ({ page },
 				.first()
 				.evaluate((image: HTMLImageElement) => image.naturalWidth)
 		)
-		.toBeGreaterThan(0);
+		.toBeGreaterThanOrEqual(1280);
 	await page.screenshot({ path: testInfo.outputPath('videos-desktop-after.png') });
 	await page.locator('.home-video__play').first().click();
 	await expect(page.locator('.home-videos iframe')).toHaveCount(1);

@@ -3,6 +3,7 @@
 	const i18n = getI18n();
 
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import { resolve } from '$app/paths';
 	import type { HomeBrandStripItem } from '$lib/data/home-brand-strip';
 	import {
@@ -15,16 +16,12 @@
 		brands,
 		title = i18n.t('copy.3e94445966d1'),
 		ctaLabel = i18n.t('copy.bb31879737a7'),
-		showHeaderCta = true,
-		showBelowCta = false,
 		showHeading = true,
 		layout = 'section'
 	}: {
 		brands: HomeBrandStripItem[];
 		title?: string;
 		ctaLabel?: string;
-		showHeaderCta?: boolean;
-		showBelowCta?: boolean;
 		showHeading?: boolean;
 		layout?: 'section' | 'strip';
 	} = $props();
@@ -44,17 +41,13 @@
 >
 	{#if headingVisible}
 		<div class="daynight-home-container home-browse-heading">
-			<DesktopSectionHeading
-				{title}
-				href={i18n.href(showHeaderCta ? resolve('/inventory') : undefined)}
-				label={ctaLabel}
-			/>
+			<DesktopSectionHeading {title} centered />
 		</div>
 	{/if}
 	<div class="daynight-home-section-content daynight-home-container">
 		<div class="daynight-brand-grid">
 			<div class="daynight-brand-grid__items">
-				{#each brands as brand (brand.id)}
+				{#each isStrip ? brands : brands.slice(0, 11) as brand (brand.id)}
 					<div class="daynight-brand-grid__item">
 						<a
 							href={i18n.href(
@@ -73,6 +66,8 @@
 									srcset={desktopOnlySrcset(brand.image, 200)}
 									sizes={desktopOnlySizes('64px')}
 									alt=""
+									loading="lazy"
+									decoding="async"
 								/>
 							</span>
 							{#if !isStrip}
@@ -88,15 +83,20 @@
 						</a>
 					</div>
 				{/each}
+				{#if !isStrip}
+					<div class="daynight-brand-grid__item">
+						<a
+							href={i18n.href(resolve('/inventory'))}
+							class="daynight-brand-card desktop-browse-all"
+							aria-label={ctaLabel}
+						>
+							<ArrowRight size={40} strokeWidth={1.5} aria-hidden="true" />
+							<span>{i18n.t('copy.5701bc5c6a95')}</span>
+						</a>
+					</div>
+				{/if}
 			</div>
 		</div>
-		{#if showBelowCta && !isStrip}
-			<div class="daynight-home-browse-cta">
-				<a href={i18n.href(resolve('/inventory'))} class="daynight-home-browse-cta__link">
-					{i18n.text(ctaLabel)}
-				</a>
-			</div>
-		{/if}
 	</div>
 </section>
 
@@ -126,45 +126,11 @@
 		width: 100% !important;
 	}
 
-	.daynight-home-browse-cta {
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-browse-cta__link {
-		align-items: center;
-		background: transparent;
-		border: 1px solid #c91620;
-		border-radius: 8px;
-		box-sizing: border-box;
-		color: #c91620;
-		display: inline-flex;
-		font-size: var(--sa-text-base);
-		font-weight: var(--sa-weight-semibold);
-		justify-content: center;
-		min-height: 42px;
-		padding: 0 18px;
-		text-decoration: none;
-		box-shadow: none !important;
-		transition:
-			background-color 0.14s ease,
-			border-color 0.14s ease,
-			color 0.14s ease;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-browse-cta__link:hover,
-	:global(body.daynight-home-page) .daynight-home-browse-cta__link:focus-visible {
-		background: #c91620;
-		border-color: #c91620;
-		color: #fff;
-	}
-
 	:global(body.daynight-home-page) .daynight-brand-grid .daynight-brand-card {
 		align-items: center !important;
 		background: #fff !important;
-		border: 0 !important;
-		border-radius: 16px;
+		border: 1px solid var(--discovery-control-border) !important;
+		border-radius: 12px;
 		box-shadow: none !important;
 		box-sizing: border-box;
 		display: flex;
@@ -179,14 +145,14 @@
 
 	:global(body.daynight-home-page) .daynight-brand-grid .daynight-brand-card:hover,
 	:global(body.daynight-home-page) .daynight-brand-grid .daynight-brand-card:focus-visible {
-		background: #fff !important;
-		border-color: transparent !important;
+		background: var(--sa-yellow) !important;
+		border-color: var(--sa-yellow) !important;
 		box-shadow: none !important;
 		transform: none !important;
 	}
 
 	:global(body.daynight-home-page) .daynight-brand-grid .daynight-brand-card:focus-visible {
-		outline: 2px solid #d50032;
+		outline: 2px solid var(--desktop-focus);
 		outline-offset: 2px;
 	}
 
@@ -299,52 +265,6 @@
 		transform: scale(1.45);
 	}
 
-	@media (min-width: 992px) {
-		.daynight-home-brand-section :global(.daynight-home-section-banner) {
-			padding: 40px 0 18px !important;
-		}
-
-		.daynight-home-brand-section :global(.daynight-home-section-banner__inner) {
-			align-items: center !important;
-			flex-direction: row !important;
-			justify-content: space-between !important;
-			padding: 0 !important;
-			text-align: left !important;
-		}
-
-		.daynight-home-brand-section :global(.daynight-home-section-banner__copy) {
-			align-items: flex-start !important;
-			justify-content: flex-start !important;
-			text-align: left !important;
-			width: auto !important;
-		}
-
-		.daynight-home-brand-section :global(.daynight-home-section-banner__copy h2) {
-			text-align: left !important;
-		}
-
-		.daynight-home-brand-section :global(.daynight-home-section-banner__cta) {
-			background: transparent !important;
-			border: 0 !important;
-			box-shadow: none !important;
-			color: #111827 !important;
-			min-height: auto !important;
-			padding: 4px 0 !important;
-			transform: none !important;
-		}
-
-		.daynight-home-brand-section :global(.daynight-home-section-banner__cta::after) {
-			content: '→';
-			margin-left: 8px;
-		}
-
-		.daynight-home-brand-section :global(.daynight-home-section-banner__cta:hover),
-		.daynight-home-brand-section :global(.daynight-home-section-banner__cta:focus-visible) {
-			background: transparent !important;
-			color: #c91620 !important;
-		}
-	}
-
 	@media (max-width: 1199px) {
 		.daynight-brand-grid__items {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -365,5 +285,14 @@
 		.daynight-brand-grid__items {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
+	}
+
+	:global(body.daynight-home-page) .daynight-brand-grid .daynight-brand-card.desktop-browse-all {
+		justify-content: center;
+		gap: 12px;
+		background: var(--sa-yellow) !important;
+		border-color: var(--sa-yellow) !important;
+		color: var(--sa-ink);
+		font: var(--sa-weight-strong) var(--sa-text-lg)/1.3 var(--sa-font);
 	}
 </style>

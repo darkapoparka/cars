@@ -5,7 +5,8 @@
 	import { resolve } from '$app/paths';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 
-	let { vehicle }: { vehicle: InventoryListVehicle } = $props();
+	let { vehicle, financeLink = false }: { vehicle: InventoryListVehicle; financeLink?: boolean } =
+		$props();
 
 	const displayPrice = $derived(vehicle.priceEur.replace(/\s*EUR\b/, ' €'));
 </script>
@@ -13,7 +14,10 @@
 <div class="h6 card-box__price mb-15">
 	<span class="daynight-card-price__stack">
 		<span class="daynight-card-price__value">{displayPrice}</span>
-		<span class="daynight-card-price__monthly">{i18n.spec(vehicle.monthly)}</span>
+		<span class="daynight-card-price__monthly">
+			{#if financeLink}<a href={i18n.href(resolve('/financing'))}>{i18n.spec(vehicle.monthly)}</a
+				>{:else}{i18n.spec(vehicle.monthly)}{/if}
+		</span>
 	</span>
 	<a
 		href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
@@ -71,20 +75,22 @@
 
 	.daynight-card-price__link {
 		align-items: center;
-		background: #050505;
+		background: #fff;
+		border: 1px solid var(--discovery-control-border, #d9dde1);
 		border-radius: 999px;
-		color: #fff;
+		color: var(--sa-ink);
 		display: inline-flex;
-		flex: 0 0 32px;
-		height: 32px;
+		flex: 0 0 40px;
+		height: 40px;
 		justify-content: center;
 		text-decoration: none;
 		transition: background-color 140ms ease;
-		width: 32px;
+		width: 40px;
 	}
 
 	.daynight-card-price__link:hover {
-		background: var(--desktop-action-hover);
+		background: var(--sa-yellow);
+		border-color: var(--sa-yellow);
 	}
 
 	.daynight-card-price__link:focus-visible {
@@ -93,7 +99,14 @@
 	}
 
 	.daynight-card-price__link svg {
-		height: 17px;
-		width: 17px;
+		height: 20px;
+		width: 20px;
+	}
+	.daynight-card-price__monthly a {
+		color: inherit;
+		font: inherit;
+	}
+	.daynight-card-price__monthly a:hover {
+		text-decoration: underline;
 	}
 </style>

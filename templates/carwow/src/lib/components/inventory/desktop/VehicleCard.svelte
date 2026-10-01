@@ -8,8 +8,7 @@
 	import { getDayNightVehicleCondition, placeholderImageSlugs } from '$lib/data/daynight-vehicles';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 	import VehicleBadge from './VehicleBadge.svelte';
-	import VehicleMetaRow from './VehicleMetaRow.svelte';
-	import VehiclePriceRow from './VehiclePriceRow.svelte';
+	import DesktopVehicleCardDetails from '$lib/components/shared/DesktopVehicleCardDetails.svelte';
 	import DesktopVehicleActions from '$lib/components/shared/DesktopVehicleActions.svelte';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
 	import { desktopVehicleImage, desktopVehicleImageSrcset } from '$lib/utils/desktop-vehicle-image';
@@ -82,40 +81,15 @@
 				{@attach imageFallbackAttachment}
 			/>
 		</a>
+		{#if hasRealPhotos && vehicle.gallery.length > 1}
+			<p class="desktop-catalogue-card__photos">
+				<img src={i18n.asset('/assets/icons/picture.svg')} alt="" aria-hidden="true" />
+				{vehicle.gallery.length}
+			</p>
+		{/if}
 	</div>
 	<div class="content">
-		<div class="bottom">
-			<p class="category text-white">
-				<a
-					href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
-					class="text-xs text-white"
-					aria-label={`${i18n.spec(vehicle.transmission)} - ${vehicle.shortTitle} ${vehicle.year}`}
-					>{i18n.spec(vehicle.transmission)}</a
-				>
-			</p>
-			<div class="flex items-center gap-8">
-				{#if hasRealPhotos}
-					<p class="category text-white uppercase">
-						<img
-							src={i18n.asset('/assets/icons/picture.svg')}
-							alt=""
-							aria-hidden="true"
-							decoding="async"
-							loading="lazy"
-						/>
-						{vehicle.gallery.length}
-					</p>
-				{/if}
-			</div>
-		</div>
-		<p class="h6 card-box__title mb-8">
-			<a
-				href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}
-				title={`${vehicle.shortTitle} ${vehicle.year}`}>{vehicle.shortTitle}</a
-			>
-		</p>
-		<VehicleMetaRow {vehicle} styleClass="style2 mb-10" />
-		<VehiclePriceRow {vehicle} />
+		<DesktopVehicleCardDetails {vehicle} />
 	</div>
 </div>
 
@@ -152,6 +126,8 @@
 	}
 	.image > a {
 		display: block;
+		position: absolute;
+		inset: 0;
 		width: 100%;
 		height: 100%;
 	}
@@ -164,60 +140,28 @@
 	.content {
 		display: flex;
 		flex-direction: column;
-		gap: 12px;
-		padding: 16px;
+		padding: 20px;
 		position: relative;
 		flex: 1;
 		min-width: 0;
 	}
-	.bottom {
-		display: flex;
-		justify-content: space-between;
-		position: absolute;
-		inset: auto 12px calc(100% + 12px);
-	}
-	.category {
+	.desktop-catalogue-card__photos {
 		display: inline-flex;
 		align-items: center;
+		position: absolute;
+		right: 12px;
+		bottom: 12px;
 		gap: 5px;
-		min-height: 26px;
 		padding: 4px 8px;
+		margin: 0;
 		border-radius: 6px;
 		background: #171b1e;
 		color: #fff;
-		font-size: var(--sa-text-caption);
-		line-height: 18px;
+		font: var(--sa-weight-medium) var(--sa-text-caption)/1.4 var(--sa-font);
 	}
-	.category a {
-		color: inherit;
-		font: inherit;
-	}
-	.category img {
+	.desktop-catalogue-card__photos img {
 		width: 16px;
 		height: 16px;
-	}
-	.desktop-catalogue-card .card-box__title {
-		margin: 0;
-		min-height: 47px;
-		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.3 var(--sa-font);
-		color: var(--sa-ink);
-	}
-	.card-box__title a {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		line-clamp: 2;
-		overflow: hidden;
-		color: inherit;
-		font: inherit;
-	}
-	.desktop-catalogue-card :global(.tag.style2) {
-		margin: 0;
-	}
-	.desktop-catalogue-card :global(.card-box__price) {
-		border-top: 1px solid #eaecf0;
-		margin: auto 0 0;
-		padding-top: 12px;
 	}
 	.desktop-catalogue-card a:focus-visible {
 		outline: 2px solid var(--desktop-focus, #171b1e);
