@@ -204,8 +204,12 @@
 @media (max-width: 991px) {
   .dn-about-intro { display: block; }
   .dn-about-intro .dn-entry-card { grid-template-columns: minmax(0, 1fr); overflow-wrap: anywhere; }
-  .dn-about-intro p { margin: 0; color: var(--dn-muted); font: var(--dn-body-font); text-align: center; }
   .dn-about-intro .dn-entry-action { --dn-entry-action-width: min(100%, 240px); margin-inline: auto; }
+  .dn-about-intro__services { --dn-control-height-prominent: 52px; display: flex; align-items: center; gap: var(--dn-space-3); min-width: 0; min-height: var(--dn-control-height-prominent); padding: var(--dn-space-3) var(--dn-space-4); border-radius: var(--dn-radius-control); background: var(--dn-entry-prominent-surface); color: var(--dn-ink); font: var(--dn-entry-prominent-font); }
+  .dn-about-intro__services > span { min-width: 0; }
+  .dn-about-intro__services-cue { flex: none; margin-inline-start: auto; transform: rotate(90deg); }
+  .dn-about-intro__services:hover { background: var(--dn-surface-hover); }
+  .dn-about-intro__services:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; }
   .dn-about-intro__socials { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--dn-space-3); }
   .dn-about-intro__socials a { display: inline-grid; place-items: center; flex: none; width: var(--dn-control-height-default); height: var(--dn-control-height-default); border-radius: var(--dn-pill); background: var(--dn-surface-subtle); color: var(--dn-ink); }
   .dn-about-intro__socials a:hover { background: var(--dn-ink); color: var(--dn-white); }
@@ -248,10 +252,11 @@
     padding: 16px;
     border: 0;
   }
-  .dn-about-service-card__icon { width: 32px; height: 32px; margin: 0; grid-row: 1 / 3; }
+  .dn-about-service-card__icon { width: 32px; height: 32px; margin: 0; grid-row: 1; align-self: center; }
   .dn-about-service-card__icon svg { width: 100%; height: 100%; }
-  .dn-about-service-card h3 { font-size: var(--dn-text-body); }
-  .dn-about-service-card p { margin: 0; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
+  .dn-about-service-card__copy { display: contents; }
+  .dn-about-service-card h3 { grid-column: 2; grid-row: 1; align-self: center; font-size: var(--dn-text-body); }
+  .dn-about-service-card p { grid-column: 1 / -1; grid-row: 2; margin: 0; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
 
   .dn-about-service-card > a {
     grid-column: 1 / -1;
@@ -267,6 +272,10 @@
   .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map { grid-template-columns: minmax(0, 1fr); gap: var(--dn-space-4); }
   .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map__place { padding-bottom: 0; }
   .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map__link { position: static; width: 100%; padding: var(--dn-space-2) var(--dn-space-3); }
+}
+
+@media (max-width: 767px) {
+  .dn-app-shell .dn-about-hero.dn-information-hero.dn-route-hero { height: 244px; min-height: 244px; padding: calc(var(--dn-space-5) * 2) 0 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

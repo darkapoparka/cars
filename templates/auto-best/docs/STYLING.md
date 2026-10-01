@@ -57,11 +57,17 @@ their existing content order.
 
 Below 992px, About and general Contact use an overlay header on their dark hero,
 with an inset white card overlapping the banner by 52px, as on Home. About uses
-`EntryCard.svelte` for its only visible page heading, introduction, inventory
-action and configured social profiles. Its mobile hero reuses the configured
-dark showroom illustration, with the image width determining the banner height
-on narrow screens. The artwork is requested only below 992px; the desktop hero
-copy stays in its separate layout. Contact groups its
+`EntryCard.svelte` for its only visible page heading, a service-section shortcut,
+inventory action and configured social profiles. The service link uses Home's
+pale entry-field treatment and a downward arrow; it scrolls to the four existing
+service cards. Phone and location remain in the header and contact/map sections.
+Empty profile URLs omit the corresponding social icon.
+Its hero reuses the configured dark showroom illustration. Below 768px, a 244px
+banner places the card at Home's 192px anchor, with the artwork capped at 320px
+to keep the showroom visible above it. At 768–991px the banner follows the image's
+natural height. The artwork is requested only below 992px; the desktop hero
+copy stays in its separate layout. Service cards align their icon and title in
+one row, then give the description the full width below that row. Contact groups its
 phone and directions actions before address and visit details. Its actions stack
 when their container is narrower than 18rem, including enlarged text. Blog's
 header shares the yellow hero surface. `BlogHero.svelte` keeps its native GET

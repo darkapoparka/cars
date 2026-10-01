@@ -45,6 +45,10 @@
     }
   }
 
+  @media (max-width: 767px) {
+    .dn-about-hero__showroom { width: min(calc(100% - var(--dn-space-6)), 320px); }
+  }
+
   @media (min-width: 992px) {
     .dn-about-hero__lead { display: none; }
   }

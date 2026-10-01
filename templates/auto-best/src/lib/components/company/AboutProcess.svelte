@@ -23,7 +23,7 @@
           <div class="dn-about-service-card__icon" aria-hidden="true">
             <AboutServiceIcon name={service.icon} />
           </div>
-          <div>
+          <div class="dn-about-service-card__copy">
             <h3>{i18n.text(service.title)}</h3>
             <p>{i18n.text(service.description)}</p>
           </div>
