@@ -1,4 +1,3 @@
-import { publicSite } from "@repo/marketplace/site-config";
 import type { ReactNode } from "react";
 import { desktopBannerArtwork } from "../lib/desktop-banner-artwork";
 import styles from "./dealer-desktop-hero.module.css";
@@ -46,20 +45,18 @@ export function DealerDesktopHero({
       }
       data-variant={variant}
     >
-      {variant !== "service" ? (
-        <div aria-hidden="true" className={styles.scene}>
-          <Image
-            alt=""
-            data-slot="desktop-hero-scene"
-            fill
-            sizes="(min-width: 1024px) 100vw, 0px"
-            src={desktopBannerArtwork.service}
-            unoptimized
-          />
-        </div>
-      ) : null}
+      <div aria-hidden="true" className={styles.scene}>
+        <Image
+          alt=""
+          data-slot="desktop-hero-scene"
+          fill
+          sizes="(min-width: 1024px) 100vw, 0px"
+          src={desktopBannerArtwork.service}
+          unoptimized
+        />
+      </div>
       <div className={styles.copy}>
-        <p className={styles.eyebrow}>{eyebrow ?? publicSite.identity.name}</p>
+        {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
         <h1 className={loading ? styles.loadingTitle : undefined} id={titleId}>
           {title}
         </h1>

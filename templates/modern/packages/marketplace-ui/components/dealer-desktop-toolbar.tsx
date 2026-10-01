@@ -7,7 +7,7 @@ import type {
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import type { ReactNode } from "react";
-import { formatVehicleCount } from "../lib/marketplace-results-toolbar-policy";
+import { DealerDesktopHero } from "./dealer-desktop-hero";
 import styles from "./dealer-desktop-toolbar.module.css";
 import { DealerHeroSearch } from "./dealer-hero-search";
 export interface DealerDesktopToolbarProps {
@@ -27,36 +27,25 @@ export const DealerDesktopToolbar = ({
   filters,
   locale,
   taxonomy,
-  totalListings,
 }: DealerDesktopToolbarProps) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   return (
     <div className={styles.toolbar} data-slot="dealer-desktop-inventory-hero">
-      <div className={styles.content}>
-        <div className={styles.heading}>
-          <div>
-            <p className={styles.eyebrow}>
-              {isBg ? "Разгледайте каталога" : "Explore the collection"}
-            </p>
-            <h1 id="desktop-inventory-title">
-              {isBg ? "Автомобили в наличност" : "Vehicles in stock"}
-            </h1>
-          </div>
-          {totalListings !== undefined ? (
-            <p className={styles.count}>
-              {formatVehicleCount(totalListings, filters.category, locale)}
-            </p>
-          ) : null}
+      <DealerDesktopHero
+        title={isBg ? "Автомобили в наличност" : "Vehicles in stock"}
+        variant="landing"
+      >
+        <div className={styles.content}>
+          <DealerHeroSearch
+            assistantSlot={assistantSlot}
+            filters={filters}
+            key={JSON.stringify(filters)}
+            locale={locale}
+            searchListings={searchListings}
+            taxonomy={taxonomy}
+          />
         </div>
-        <DealerHeroSearch
-          assistantSlot={assistantSlot}
-          filters={filters}
-          key={JSON.stringify(filters)}
-          locale={locale}
-          searchListings={searchListings}
-          taxonomy={taxonomy}
-        />
-      </div>
+      </DealerDesktopHero>
     </div>
   );
 };

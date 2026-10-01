@@ -4,7 +4,6 @@ import { cn } from "@repo/design-system/lib/utils";
 import type {
   ListingViewMode,
   MarketplaceSearchParams,
-  VehicleListing,
   VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
@@ -38,7 +37,6 @@ interface DesktopMarketplaceBarProps {
   appBaseUrl: string;
   assistantSlot?: ReactNode;
   categoryCounts?: DesktopCategoryInventoryCount[];
-  featuredListing?: VehicleListing;
   filterCount: number;
   filters: MarketplaceSearchParams;
   locale?: string;
@@ -81,7 +79,6 @@ export const DesktopMarketplaceBar = ({
   showDealerDesktopLanding = false,
   categoryCounts,
   filterCount,
-  featuredListing,
   filters,
   locale,
   onApply,
@@ -146,10 +143,7 @@ export const DesktopMarketplaceBar = ({
         locale={locale}
       >
         {showDealerDesktopLanding ? (
-          <DealerDesktopDiscoveryHero
-            {...dealerToolbarProps}
-            featuredListing={featuredListing}
-          />
+          <DealerDesktopDiscoveryHero {...dealerToolbarProps} />
         ) : (
           <DealerDesktopToolbar {...dealerToolbarProps} />
         )}

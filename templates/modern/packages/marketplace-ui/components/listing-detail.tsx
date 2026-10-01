@@ -1,9 +1,6 @@
 import { cn } from "@repo/design-system/lib/utils";
 import {
   buildMarketplaceSearchHref,
-  formatFuelType,
-  formatMileage,
-  formatTransmission,
   getCategoryPath,
   type VehicleListing,
 } from "@repo/marketplace";
@@ -22,7 +19,6 @@ import {
 } from "../lib/listing-truth";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { getVehicleCardBadgeLabels } from "../lib/vehicle-card-policy";
-import desktopStyles from "./listing-desktop.module.css";
 import { ListingDetailContent } from "./listing-detail-content";
 import {
   DesktopListingSummaryHeader,
@@ -96,7 +92,6 @@ export const ListingDetail = ({
     <main
       className={cn(
         "min-h-[100dvh] bg-card text-foreground lg:bg-background lg:pb-10",
-        isDealershipSite && desktopStyles.detail,
         hasFixedContactBar
           ? "pb-[calc(4.5rem+env(safe-area-inset-bottom))]"
           : "pb-[calc(1rem+env(safe-area-inset-bottom))]"
@@ -137,40 +132,6 @@ export const ListingDetail = ({
                 saveHref={saveHref}
               />
             </div>
-
-            {isDealershipSite ? (
-              <dl
-                aria-label={
-                  locale?.startsWith("bg")
-                    ? "Основни характеристики"
-                    : "Key specifications"
-                }
-                className={desktopStyles.facts}
-              >
-                <div>
-                  <dt>{locale?.startsWith("bg") ? "Година" : "Year"}</dt>
-                  <dd>{listing.spec.year}</dd>
-                </div>
-                <div>
-                  <dt>{locale?.startsWith("bg") ? "Пробег" : "Mileage"}</dt>
-                  <dd>{formatMileage(listing.spec.mileageValue, locale)}</dd>
-                </div>
-                <div>
-                  <dt>{locale?.startsWith("bg") ? "Гориво" : "Fuel"}</dt>
-                  <dd>{formatFuelType(listing.spec.fuelType, locale)}</dd>
-                </div>
-                <div>
-                  <dt>
-                    {locale?.startsWith("bg")
-                      ? "Скоростна кутия"
-                      : "Transmission"}
-                  </dt>
-                  <dd>
-                    {formatTransmission(listing.spec.transmission, locale)}
-                  </dd>
-                </div>
-              </dl>
-            ) : null}
 
             <article className="relative z-10 -mt-4 rounded-t-2xl bg-card px-4 lg:z-auto lg:mt-4 lg:rounded-none lg:bg-transparent lg:px-0">
               <MobileListingSummary

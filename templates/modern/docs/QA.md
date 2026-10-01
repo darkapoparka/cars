@@ -24,10 +24,8 @@ For Vercel static-demo deployments, the web app derives the deployment HTTPS ori
 - `pnpm --filter web typecheck`
 - `pnpm --filter web build  # with the documented preview environment`
 
-To build while a local preview is running, use the existing isolated E2E output support: set `AUTOMARKET_PUBLIC_E2E=true` and a unique `E2E_PUBLIC_RUN_ID` before the build. The generated directory is separate from the preview's `.next`. This still verifies the static-demo build; it does not verify a hosted deployment.
-
 ## Browser matrix
-Test at **320px**, **390px** and **1440px**. Desktop changes also need **1024px**, **1280px** and **1920px** checks. Minimum route set:
+Test at **390px** and **1440px**. Minimum route set:
 - `/cars`
 - `/bg/cars`
 - `/bg/listing/bmw-x5-m50d-sofia-2020`
@@ -37,11 +35,6 @@ Test at **320px**, **390px** and **1440px**. Desktop changes also need **1024px*
 - `/bg/lease`
 
 On the tested routes, exercise navigation, mobile menu/open-close behavior, one search/filter path, one vehicle-detail transition and return path, phone/contact CTA, map/contact link, and the main sell/finance/import/enquiry path that the lead actually offers.
-
-## Desktop regression checks
-With the local demo already running, set `E2E_BASE_URL` to its actual origin and run `pnpm --filter e2e exec playwright test --config=playwright.desktop.config.ts`. The focused suite checks the home, inventory, listing, import, sell, leasing, contact and guides routes in Bulgarian and English at 1024, 1280, 1440 and 1920px. It exercises draft search and advanced filters, reset, sort and view persistence, the featured vehicle, gallery, keyboard tabs and return navigation. Home and inventory also run the focused axe gate.
-
-The suite uses the existing returning-visitor setup and blocks enquiry delivery. It saves the 1440px home and listing evidence in `docs/desktop-2026-10-01/`. Inspect the rendered layout in the browser too: automated reflow and accessibility checks do not establish owner visual acceptance.
 
 ## Visual/content checks
 - Correct dealer logo and favicon; no stretched or low-quality placeholder identity.

@@ -11,7 +11,6 @@ import {
   MobileDealerChrome,
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
-import { DealerDesktopDiscoveryHero } from "@repo/marketplace-ui/components/dealer-desktop-discovery-hero";
 import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
@@ -123,49 +122,27 @@ const MobileLoadingHeader = ({
 );
 
 /** Keep the dealership masthead stable while route data resolves. */
-const DealerLoadingHeader = ({
-  locale,
-  service,
-}: {
-  locale: string;
-  service: boolean;
-}) => (
-  <div
-    aria-hidden="true"
-    className="hidden lg:block"
-    data-slot="dealer-desktop-loading"
-    inert
-  >
+const DealerLoadingHeader = ({ locale }: { locale: string }) => (
+  <div className="hidden lg:block" data-slot="dealer-desktop-loading">
     <DealerDesktopHeader activeMode={null} locale={locale} />
-    {service ? (
-      <DealerDesktopHero
-        loading
-        title={locale === "bg" ? "Зареждане" : "Loading"}
-        variant="service"
-      />
-    ) : (
-      <DealerDesktopDiscoveryHero
-        filters={parseMarketplaceSearchParams({})}
-        loading
-        locale={locale}
-        totalListings={0}
-      />
-    )}
+    <DealerDesktopHero
+      loading
+      title={locale === "bg" ? "Зареждане" : "Loading"}
+      variant="landing"
+    />
   </div>
 );
 
 const DesktopLoadingHeader = ({
   variant,
   locale,
-  service = false,
 }: {
   locale: string;
   variant: "discovery" | "results";
-  service?: boolean;
 }) => {
   const isResults = variant === "results";
   if (isDealershipSite) {
-    return <DealerLoadingHeader locale={locale} service={service} />;
+    return <DealerLoadingHeader locale={locale} />;
   }
 
   return (
@@ -223,7 +200,7 @@ const DesktopDiscoveryCards = () => (
   <div
     className={
       isDealershipSite
-        ? "hidden grid-cols-3 gap-6 lg:grid min-[1600px]:grid-cols-4"
+        ? "hidden grid-cols-3 gap-6 lg:grid min-[1440px]:grid-cols-4"
         : "hidden grid-cols-3 gap-5 lg:grid xl:grid-cols-4 2xl:grid-cols-5"
     }
   >
@@ -277,11 +254,7 @@ export const PublicRouteLoading = async ({
           </DealerDesktopHeader>
         </div>
       ) : (
-        <DesktopLoadingHeader
-          locale={locale}
-          service={mobileTone === "leasing"}
-          variant={variant}
-        />
+        <DesktopLoadingHeader locale={locale} variant={variant} />
       )}
 
       <div
