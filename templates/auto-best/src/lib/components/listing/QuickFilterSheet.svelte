@@ -140,9 +140,9 @@ import { localeContract } from '$lib/locale/core';
       {/if}
     </div>
     {#each preserved as [name, value], index (`${name}-${index}`)}<input type="hidden" {name} {value} />{/each}
-    <footer>
-      <button class="clear" type="button" onclick={clear}>{i18n.t("m_83b12c2216ef")}</button>
-      <button class="apply" type="submit" disabled={invalid}>{i18n.t("m_31e392d1c037")}<Icon name="arrow-right" size={18} /></button>
+    <footer class="dn-mobile-overlay-footer">
+      <button class="clear dn-mobile-overlay-clear" type="button" onclick={clear}>{i18n.t("m_83b12c2216ef")}</button>
+      <button class="apply dn-mobile-overlay-action" type="submit" disabled={invalid}>{i18n.t("m_31e392d1c037")}<Icon name="arrow-right" size={18} /></button>
     </footer>
   </form>
 </dialog>

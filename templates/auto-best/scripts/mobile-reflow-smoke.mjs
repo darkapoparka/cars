@@ -71,13 +71,16 @@ try {
           return await checkReflow(page);
         } finally { await page.close(); }
       });
-      for (const name of ['make', 'preferences', 'import', 'sell']) await check(`${locale} ${width} ${name} dialog reflow`, async () => {
+      for (const name of ['filters', 'home-make', 'make', 'preferences', 'import', 'sell']) await check(`${locale} ${width} ${name} dialog reflow`, async () => {
         const page = await context.newPage();
         page.setDefaultNavigationTimeout(60000);
         const route = name === 'make' ? '/listing-grid' : name === 'import' ? '/contact?topic=import' : name === 'sell' ? '/contact?topic=trade-in' : '';
         try {
           await page.goto(`${base}/${locale}${route}`, { waitUntil: 'networkidle' });
-          if (name === 'make') {
+          if (name === 'filters' || name === 'home-make') {
+            await page.locator('.dn-quick-search__trigger').click();
+            if (name === 'home-make') await page.locator('.dn-quick-search__filter-row').first().click();
+          } else if (name === 'make') {
             await page.locator('.dn-listing-filter__toggle').click();
             await page.locator('.dn-mobile-filter-fields button').nth(1).click();
           } else if (name === 'preferences') {

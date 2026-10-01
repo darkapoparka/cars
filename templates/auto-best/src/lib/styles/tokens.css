@@ -181,6 +181,7 @@
   --dn-overlay-control-height: var(--dn-overlay-control-height-compact);
   --dn-overlay-field-font: var(--dn-entry-font);
   --dn-overlay-option-font: var(--dn-control-font);
+  --dn-overlay-value-font: var(--dn-weight-regular) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
   --dn-overlay-action-font: var(--dn-cta-font);
 
   /* Shared entry and segmented-control aliases. */

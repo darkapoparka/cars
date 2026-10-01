@@ -21,6 +21,7 @@ button { font: var(--dn-control-font); }
 .dn-icon-button > svg { display: block; flex: none; pointer-events: none; }
 .dn-overlay-close > svg { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); }
 @media (max-width: 767px) {
+  html:has(dialog[open]) { overflow: hidden; }
   .dn-app-shell dialog .dn-mobile-overlay-header { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-3); padding: var(--dn-overlay-header-padding); background: var(--dn-white); }
   .dn-app-shell dialog .dn-mobile-overlay-header > h2 { min-width: 0; margin: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); overflow-wrap: anywhere; }
   .dn-app-shell dialog .dn-mobile-overlay-header > .dn-overlay-close { margin-inline-start: auto; }
@@ -28,6 +29,25 @@ button { font: var(--dn-control-font); }
   .dn-app-shell dialog .dn-mobile-overlay-search:focus-within { border: 0; outline: 2px solid var(--dn-focus); outline-offset: 2px; box-shadow: none; }
   .dn-app-shell dialog .dn-mobile-overlay-search > svg { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); flex: 0 0 var(--dn-control-icon-size); }
   .dn-app-shell dialog .dn-mobile-overlay-search input[type='search'] { flex: 1; width: 100%; min-width: 0; height: var(--dn-overlay-control-height); padding: 0; border: 0; outline: 0; background: transparent; box-shadow: none; color: var(--dn-ink); font: var(--dn-overlay-field-font); }
+
+  /* Shared mobile filter rows, choices and actions; labels stay quieter than input text. */
+  .dn-app-shell dialog .dn-mobile-overlay-row { display: flex; align-items: center; gap: var(--dn-overlay-gap); width: 100%; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-align: left; cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-overlay-row strong { min-width: 0; max-width: 60%; font: inherit; overflow-wrap: anywhere; }
+  .dn-app-shell dialog .dn-mobile-overlay-row > span { flex: 1; min-width: 0; color: var(--dn-muted); font: var(--dn-overlay-value-font); text-align: right; overflow-wrap: anywhere; }
+  .dn-app-shell dialog .dn-mobile-overlay-row > span[data-active='true'] { color: var(--dn-ink); }
+  .dn-app-shell dialog .dn-mobile-overlay-row > svg { flex: 0 0 var(--dn-control-icon-size); width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); color: var(--dn-muted); }
+  .dn-app-shell dialog .dn-mobile-overlay-option { min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); overflow-wrap: anywhere; cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-overlay-option[aria-pressed='true'] { background: var(--dn-ink-strong); color: var(--dn-white); }
+  .dn-app-shell dialog .dn-mobile-overlay-footer { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-overlay-gutter) max(var(--dn-space-3), env(safe-area-inset-bottom)); background: var(--dn-white); }
+  .dn-app-shell dialog .dn-mobile-overlay-clear { display: inline-flex; min-width: 0; min-height: var(--dn-overlay-control-height); align-items: center; justify-content: center; padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-decoration: none; overflow-wrap: anywhere; cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-overlay-clear:disabled { color: var(--dn-muted); cursor: default; }
+  .dn-app-shell dialog .dn-mobile-overlay-action { display: inline-flex; flex: 1; min-width: 0; min-height: var(--dn-overlay-control-height); height: auto; align-items: center; justify-content: center; gap: var(--dn-overlay-gap); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: var(--dn-white); font: var(--dn-overlay-action-font); text-align: center; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-overlay-action:disabled { background: var(--dn-line); color: var(--dn-muted); cursor: not-allowed; }
+  .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-overlay-clear, .dn-mobile-overlay-action):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
+  @media (hover: hover) and (pointer: fine) {
+    .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-overlay-clear):enabled:not([aria-pressed='true']):hover { background: var(--dn-surface-hover); }
+    .dn-app-shell dialog .dn-mobile-overlay-action:enabled:hover { background: var(--dn-red-hover); }
+  }
 }
 .dn-app-shell .dn-compact-control { position: relative; z-index: 0; isolation: isolate; display: inline-flex; min-height: var(--dn-entry-action-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-compact-control-ink, var(--dn-ink)); font: var(--dn-compact-control-font); text-decoration: none; white-space: nowrap; }
 .dn-app-shell .dn-compact-control::before { position: absolute; z-index: -1; inset: var(--dn-compact-control-inset) 0; border-radius: inherit; background: var(--dn-compact-control-surface, var(--dn-white)); content: ''; transition: background-color 160ms ease-out; }
@@ -58,6 +78,7 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
     --dn-focus: var(--dn-ink);
     --dn-entry-prominent-font: var(--dn-entry-font);
     --dn-control-height-prominent: var(--dn-control-height-default);
+    --dn-overlay-action-font: var(--dn-control-font);
   }
   .dn-app-shell :is(a, button, input, select, textarea, summary) { -webkit-tap-highlight-color: transparent; }
   .dn-app-shell .dn-entry-field { border: 0; border-radius: var(--dn-radius-control); box-shadow: none; }

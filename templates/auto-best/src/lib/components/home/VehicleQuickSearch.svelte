@@ -186,7 +186,7 @@
   <div class="dn-quick-search__panel">
     <header class="dn-quick-search__header">
       {#if mobileView === 'main'}
-        <button class="dn-quick-search__reset" type="button" disabled={!hasFilters} onclick={resetSearch}>{i18n.t("m_128a282f10ea")}</button>
+        <button class="dn-quick-search__reset dn-mobile-overlay-clear" type="button" disabled={!hasFilters} onclick={resetSearch}>{i18n.t('action.clearShort')}</button>
       {:else}
         <button
           class="dn-quick-search__back dn-icon-button"
@@ -250,37 +250,37 @@
 
       {#if mobileView === 'main'}
         <div class="dn-quick-search__filter-rows">
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('make')}>
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" type="button" onclick={() => openMobileMenu('make')}>
             <strong>{i18n.t("m_ffd178a2d771")}</strong>
             <span data-active={Boolean(make || model)}>{makeModelSummary}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('body')}>
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" type="button" onclick={() => openMobileMenu('body')}>
             <strong>{i18n.t("m_191c24bf12d5")}</strong>
             <span data-active={Boolean(body)}>{body ? specificationLabel(bodyLabel(body), i18n.locale) : i18n.t("m_a52ace420f21")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('price')}>
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" type="button" onclick={() => openMobileMenu('price')}>
             <strong>{i18n.t("m_84e960d40ad5")}</strong>
             <span data-active={Boolean(priceMax)}>{priceMax ? i18n.t("m_a04d91558e9c", { p0: formatListingNumber(priceMax, i18n.locale) }) : i18n.t("m_53d34bf6c934")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('fuel')}>
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" type="button" onclick={() => openMobileMenu('fuel')}>
             <strong>{i18n.t("m_a80f942f4112")}</strong>
             <span data-active={Boolean(fuel)}>{fuel ? specificationLabel(fuel, i18n.locale) : i18n.t("m_a52ace420f21")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('mileage')}>
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" type="button" onclick={() => openMobileMenu('mileage')}>
             <strong>{i18n.t("m_ffe44a017911")}</strong>
             <span data-active={Boolean(mileageMax)}>{mileageMax ? i18n.t("m_243dcf897937", { p0: formatListingNumber(mileageMax, i18n.locale) }) : i18n.t("m_960884c7b030")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
           </button>
 
-          <button class="dn-quick-search__filter-row" type="button" onclick={() => openMobileMenu('year')}>
+          <button class="dn-quick-search__filter-row dn-mobile-overlay-row" type="button" onclick={() => openMobileMenu('year')}>
             <strong>{i18n.t("m_89f6832560de")}</strong>
             <span data-active={Boolean(yearMin)}>{yearMin ? i18n.t("m_a8f4bf044ac3", { p0: yearMin }) : i18n.t("m_562ec6e12633")}</span>
             <Icon name="arrow-right" size={17} strokeWidth={1.8} />
@@ -291,7 +291,7 @@
           <div class="dn-quick-search__option-grid">
             {#each mobileMenuOptions as option (option.value)}
               <button
-                class={['dn-quick-search__option', { 'dn-quick-search__option--selected': mobileMenuValue === option.value }]}
+                class="dn-quick-search__option dn-mobile-overlay-option"
                 type="button"
                 aria-pressed={mobileMenuValue === option.value}
                 onclick={() => selectMobileOption(option.value)}
@@ -303,8 +303,8 @@
         </div>
       {/if}
 
-      <footer class="dn-quick-search__mobile-footer">
-        <button type="submit" disabled={filteredVehicles.length === 0} aria-live="polite">
+      <footer class="dn-quick-search__mobile-footer dn-mobile-overlay-footer">
+        <button class="dn-mobile-overlay-action" type="submit" disabled={filteredVehicles.length === 0} aria-live="polite">
           {filteredVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: filteredVehicles.length })}
         </button>
       </footer>
@@ -482,7 +482,7 @@
       min-height: 64px;
       grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, 1fr);
       gap: 0;
-      padding: 6px 12px;
+      padding: var(--dn-space-3) var(--dn-overlay-gutter);
       background: #fff;
     }
 
@@ -492,22 +492,7 @@
       letter-spacing: var(--dn-tracking-heading);
     }
 
-    .dn-quick-search__reset {
-      display: inline-flex;
-      min-width: 0;
-      min-height: 44px;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: var(--dn-red);
-      cursor: pointer;
-      font: inherit;
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-semibold);
-      overflow-wrap: anywhere;
-    }
+    .dn-quick-search__reset { display: inline-flex; justify-self: start; }
 
     .dn-quick-search__back {
       display: inline-grid;
@@ -533,11 +518,6 @@
       outline-offset: -3px;
     }
 
-    .dn-quick-search__reset:disabled {
-      color: #9aa0a8;
-      cursor: default;
-    }
-
     .dn-quick-search__title-desktop {
       display: none;
     }
@@ -551,7 +531,7 @@
     }
 
     .dn-quick-search__form {
-      padding: 4px 16px 10px;
+      padding: 0 var(--dn-overlay-gutter) var(--dn-overlay-gap);
     }
 
     .dn-quick-search__form--mobile-hidden {
@@ -568,56 +548,12 @@
     .dn-quick-search__filter-rows {
       display: grid;
       min-height: 0;
-      gap: 8px;
-      padding: 0 16px 10px;
+      grid-auto-rows: max-content;
+      align-content: start;
+      gap: var(--dn-overlay-gap);
+      padding: 0 var(--dn-overlay-gutter) var(--dn-overlay-gap);
       overflow-y: auto;
       overscroll-behavior: contain;
-    }
-
-    .dn-quick-search__filter-row {
-      display: grid;
-      min-height: 52px;
-      width: 100%;
-      grid-template-columns: auto minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 10px;
-      padding: 0 14px;
-      border: 1px solid transparent;
-      border-radius: 14px;
-      background: #f1f2f4;
-      color: #191c22;
-      cursor: pointer;
-      font: inherit;
-      text-align: left;
-      transition: background-color 140ms ease-out, border-color 140ms ease-out;
-    }
-
-    .dn-quick-search__filter-row strong {
-      font-size: var(--dn-text-body);
-      font-weight: var(--dn-weight-semibold);
-    }
-
-    .dn-quick-search__filter-row > span {
-      overflow: hidden;
-      color: #626975;
-      font-size: var(--dn-text-meta);
-      text-align: right;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .dn-quick-search__filter-row :global(.dn-icon) {
-      color: #626975;
-    }
-
-    .dn-quick-search__filter-row:hover {
-      background: #e9ebee;
-    }
-
-    .dn-quick-search__filter-row:focus-visible {
-      border-color: var(--dn-red);
-      outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 18%);
-      outline-offset: -3px;
     }
 
     .dn-quick-search__option-menu {
@@ -631,62 +567,10 @@
     .dn-quick-search__option-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: var(--dn-overlay-gap);
     }
 
-    .dn-quick-search__option {
-      min-height: 52px;
-      padding: 8px 12px;
-      border: 1px solid transparent;
-      border-radius: 14px;
-      background: #f1f2f4;
-      color: #24272c;
-      cursor: pointer;
-      font: inherit;
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-semibold);
-      line-height: var(--dn-leading-heading);
-      transition: background-color 140ms ease-out, color 140ms ease-out;
-    }
-
-    .dn-quick-search__option:hover {
-      background: #e4e7ea;
-    }
-
-    .dn-quick-search__option:focus-visible {
-      outline: 3px solid rgb(var(--dn-theme-accent-rgb) / 20%);
-      outline-offset: -3px;
-    }
-
-    .dn-quick-search__option--selected {
-      background: var(--dn-ink-strong);
-      color: #fff;
-    }
-
-    .dn-quick-search__mobile-footer {
-      margin-top: auto;
-      flex: 0 0 auto;
-      padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
-      background: #fff;
-    }
-
-    .dn-quick-search__mobile-footer button {
-      width: 100%;
-      min-height: 50px;
-      border: 0;
-      border-radius: var(--dn-radius-button);
-      background: var(--dn-red);
-      color: #fff;
-      cursor: pointer;
-      font: var(--dn-cta-font);
-    }
-
-    .dn-quick-search__mobile-footer button:disabled {
-      background: #c7cbd1;
-      cursor: not-allowed;
-    }
-
-
+    .dn-quick-search__mobile-footer { margin-top: auto; }
   }
 
   @media (prefers-reduced-motion: reduce) {

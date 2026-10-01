@@ -183,7 +183,7 @@
 
       <div class="dn-mobile-filter-fields">
         {#each mobileFields as item (item.field)}
-          <button type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen && activeChoice === item.field} onclick={event => { activeChoice = item.field; openChoice(event, item.field, item.label); }}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
+          <button class="dn-mobile-overlay-row" type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen && activeChoice === item.field} onclick={event => { activeChoice = item.field; openChoice(event, item.field, item.label); }}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
         {/each}
       </div>
       <div class="dn-listing-filter__filter-groups">
@@ -313,14 +313,14 @@
       </div>
     </div>
 
-    <footer class="dn-listing-filter__dialog-footer">
+    <footer class="dn-listing-filter__dialog-footer dn-mobile-overlay-footer">
       {#if hasInvalidRange}
         <p class="dn-listing-filter__range-error" role="alert">
           {hasInvalidPriceRange ? i18n.t("m_2157bc34d38a") : i18n.t("m_e35acfc7ae2e")}
         </p>
       {/if}
-      {#if hasLiveFilters}<a class="dn-listing-filter__clear" href={i18n.href(resolve('/listing-grid'))} onclick={handleClear}>{i18n.t("action.clearShort")}</a>{/if}
-      <button class="dn-listing-filter__dialog-submit" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite" aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}>
+      {#if hasLiveFilters}<a class="dn-listing-filter__clear dn-mobile-overlay-clear" href={i18n.href(resolve('/listing-grid'))} onclick={handleClear}>{i18n.t("action.clearShort")}</a>{/if}
+      <button class="dn-listing-filter__dialog-submit dn-mobile-overlay-action" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite" aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}>
         <span class="dn-listing-filter__submit-full">{matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}</span>
         <span class="dn-listing-filter__submit-compact">{i18n.t("action.showCount", { count: matchingVehicles.length })}</span>
         <Icon name="search" size={18} />
@@ -360,8 +360,8 @@
     box-shadow: 0 0 0 3px rgba(32, 35, 41, 0.12);
   }
 
-  :global(html:has(.dn-listing-filter__dialog[open])) {
-    overflow-y: scroll;
+  @media (min-width: 768px) {
+    :global(html:has(.dn-listing-filter__dialog[open])) { overflow-y: scroll; }
   }
 
   :global(body:has(.dn-listing-filter__dialog[open])) {
@@ -662,14 +662,8 @@
   }
 
   @media (max-width: 767px) {
-    :global(html:has(.dn-listing-filter__dialog[open])) { overflow: hidden; }
     .dn-listing-filter__inline-submit, .dn-listing-filter__filter-groups { display: none; }
     .dn-mobile-filter-fields { display: grid; gap: var(--dn-overlay-gap); }
-    .dn-mobile-filter-fields button { display: flex; align-items: center; gap: var(--dn-entry-action-gap); width: 100%; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: #24272c; text-align: left; font: var(--dn-overlay-option-font); cursor: pointer; }
-    .dn-mobile-filter-fields strong { flex: 0 0 auto; font-weight: var(--dn-weight-medium); }
-    .dn-mobile-filter-fields span { flex: 1; min-width: 0; text-align: right; color: var(--dn-muted); font: var(--dn-entry-font); overflow-wrap: anywhere; }
-    .dn-mobile-filter-fields span[data-active="true"] { color: var(--dn-ink); }
-    .dn-mobile-filter-fields :global(svg) { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); flex: 0 0 var(--dn-control-icon-size); color: #656b74; }
     .dn-listing-filter__dialog-submit :global(svg),
     .dn-listing-filter__submit-full { display: none; }
     .dn-listing-filter__submit-compact { display: inline; }
@@ -698,7 +692,7 @@
     .dn-listing-filter__dialog-search {
       height: var(--dn-overlay-control-height);
       flex-basis: var(--dn-overlay-control-height);
-      margin-bottom: 16px;
+      margin-bottom: var(--dn-overlay-gap);
       padding: 0 var(--dn-space-4);
     }
 
