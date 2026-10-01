@@ -3,6 +3,7 @@
   const i18n = getI18n();
 
   import BrowseAllCard from './BrowseAllCard.svelte';
+  import SectionBannerArtwork from './SectionBannerArtwork.svelte';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import { editorial } from '$data/home';
@@ -13,7 +14,8 @@
 <section class="dn-editorial dn-home-content-section" aria-labelledby="editorial-title">
   <div class="dn-editorial__banner" style:--dn-editorial-banner={`url("${leadSite.artwork.editorialBanner}")`}>
     <div class="container">
-      <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
+      <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--artwork dn-home-banner-frame dn-home-banner-copy">
+        <SectionBannerArtwork section="guides" />
         <h2 id="editorial-title" class="dn-home-section-title">
           <span class="dn-heading-desktop">{i18n.t("m_7badc636af8e")}</span>
           <span class="dn-heading-mobile">{i18n.t("m_5062eeb4b9d4")}</span>

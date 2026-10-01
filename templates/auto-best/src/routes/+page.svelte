@@ -133,7 +133,6 @@
     .dn-home-page :global(.dn-home-section-heading--light) {
       background: var(--dn-surface-subtle);
     }
-    .dn-home-page :global(.dn-home-section-heading--ice) { background: var(--dn-theme-action-ice-start); }
     .dn-home-page :global(.dn-home-section-heading--light > h2) { color: var(--dn-ink); }
     .dn-home-page :global(.dn-home-section-heading--light > p) { color: var(--dn-muted); }
     .dn-home-page :global(.dn-home-section-heading--light > .dn-home-section-action) { background: var(--dn-red); color: var(--dn-white); }
@@ -163,6 +162,21 @@
     .dn-home-page :global(.dn-home-banner-copy > .dn-home-section-action) {
       margin-top: 0;
       align-self: center;
+    }
+
+    .dn-home-page :global(.dn-home-section-heading--artwork) {
+      min-height: 208px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: var(--dn-space-4);
+      padding: var(--dn-space-8);
+    }
+    .dn-home-page :global(.dn-home-section-heading--artwork > h2) {
+      max-width: 46%;
+    }
+    .dn-home-page :global(.dn-home-section-heading--artwork > .dn-home-section-action) {
+      align-self: flex-start;
     }
 
     .dn-home-page :global(.dn-home-section-action:hover) {

@@ -6,6 +6,7 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import SectionBannerArtwork from './SectionBannerArtwork.svelte';
   import { brands, desktopBrands } from '$data/home';
   const mobileBrands = new Set(
     [...brands.filter((brand) => brand.count > 0), ...brands.filter((brand) => brand.count <= 0)]
@@ -24,7 +25,8 @@
 <section class="dn-brand-section dn-home-content-section" aria-labelledby="brand-title">
   <div class="container dn-brand-shell">
     <div class="dn-brand-hero">
-      <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+      <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--artwork dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+        <SectionBannerArtwork section="brands" />
         <h2 id="brand-title" class="dn-home-section-title">
           <span class="dn-heading-desktop">{i18n.t("m_9eb6d7e50e27")}</span>
           <span class="dn-heading-mobile">{i18n.t("m_5216bd5728f8")}</span>

@@ -5,6 +5,7 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import SectionBannerArtwork from './SectionBannerArtwork.svelte';
   import { bodyTypes, desktopBodyTypes } from '$data/home';
 
   const mobileBodyTypes = new Set<string>(
@@ -22,7 +23,8 @@
 
 <section class="dn-section dn-body-types dn-home-content-section" aria-labelledby="body-types-title">
   <div class="container dn-body-types__panel">
-    <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--light dn-home-section-heading--ice dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+    <div class="dn-section-heading dn-body-types__heading dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--artwork dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+      <SectionBannerArtwork section="body" />
       <h2 id="body-types-title" class="dn-home-section-title">
         <span class="dn-heading-desktop">{i18n.t("m_555a44ad25a6")}</span>
         <span class="dn-heading-mobile">{i18n.t("m_ef0ecd6a2ade")}</span>

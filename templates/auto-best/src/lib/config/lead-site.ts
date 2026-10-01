@@ -37,6 +37,7 @@ type LeadSiteConfig = {
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
+    homeSectionBanners: Record<'inventory' | 'body' | 'brands' | 'guides', SiteAssetPath>;
     home: { collection: SiteAssetPath; sell: SiteAssetPath; sellCompact: SiteAssetPath; import: SiteAssetPath };
     routeHero: {
       standard: Record<RouteHeroAsset, SiteAssetPath>;
@@ -173,6 +174,12 @@ export const leadSite = {
     sectionBanners: {
       graphite: '/assets/images/lead/auto-best-banner-graphite-v1.png',
       crimson: '/assets/images/lead/auto-best-banner-crimson-v1.png'
+    },
+    homeSectionBanners: {
+      inventory: '/assets/images/template/home-section-inventory-v1.webp',
+      body: '/assets/images/template/home-section-body-v1.webp',
+      brands: '/assets/images/template/home-section-brands-v1.webp',
+      guides: '/assets/images/template/home-section-guides-v1.webp'
     },
     home: {
       collection,
