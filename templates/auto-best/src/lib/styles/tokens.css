@@ -163,6 +163,12 @@
   --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-heading) var(--dn-font);
   --dn-mobile-card-price-compact-font: var(--dn-weight-semibold) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
 
+  /* Mobile body-style and brand tiles share media and label geometry. */
+  --dn-discovery-label-font: var(--dn-weight-semibold) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-discovery-tile-height: 116px;
+  --dn-discovery-media-height: 64px;
+  --dn-discovery-tile-padding: var(--dn-space-2) var(--dn-space-2) var(--dn-space-3);
+
   /* Mobile overlays use the default frame; desktop overlays can opt into the expanded editor frame. */
   --dn-selection-surface: color-mix(in srgb, var(--dn-red) 4%, var(--dn-white));
   --dn-selection-line: color-mix(in srgb, var(--dn-red) 28%, var(--dn-white));

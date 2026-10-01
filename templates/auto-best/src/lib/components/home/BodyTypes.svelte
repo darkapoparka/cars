@@ -5,6 +5,7 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import DiscoveryAllTile from './DiscoveryAllTile.svelte';
   import { bodyTypes, desktopBodyTypes } from '$data/home';
 
   const mobileBodyTypes = new Set<string>(
@@ -59,21 +60,11 @@
             </span>
           </a>
         {/each}
-        {#if bodyTypes.length > mobileBodyTypes.size}
-        <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="body-types-grid" onclick={() => expanded = !expanded}>
-          <span class="dn-body-all-glyph" aria-hidden="true">
-            <span class="dn-body-all-glyph__accent"></span><span></span><span></span><span></span>
-          </span>
-          <strong>{expanded ? i18n.t("m_211232676e95") : i18n.t("m_3cd085e8c069")}</strong>
-        </button>
-        {:else}
-        <a class="dn-discovery-toggle" href={i18n.href(resolve('/listing-grid'))}>
-          <span class="dn-body-all-glyph" aria-hidden="true">
-            <span class="dn-body-all-glyph__accent"></span><span></span><span></span><span></span>
-          </span>
-          <strong>{i18n.t("m_30a64216eaea")}</strong>
-        </a>
-        {/if}
+        <DiscoveryAllTile
+          {expanded}
+          controls="body-types-grid"
+          ontoggle={bodyTypes.length > mobileBodyTypes.size ? () => expanded = !expanded : undefined}
+        />
       </div>
     </div>
   </div>
@@ -81,20 +72,6 @@
 
 <style>
   .dn-body-type__frame { display: contents; }
-  .dn-discovery-toggle { display: none; }
-  @media (max-width: 767px) {
-    .dn-body-type--additional { order: 2; }
-    .dn-discovery-toggle {
-      order: 1; display: grid; min-height: 126px; grid-template-rows: 78px auto; margin: 0; padding: 8px 12px 12px;
-      border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink);
-      font: inherit; font-size: var(--dn-control-size); text-align: center; cursor: pointer;
-    }
-    .dn-body-all-glyph { display: grid; width: 58px; height: 58px; align-self: center; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 auto; padding: 9px; border-radius: 16px; background: #f1f3f5; }
-    .dn-body-all-glyph span { border-radius: 50%; background: #cdd2d8; }
-    .dn-body-all-glyph__accent { background: var(--dn-red); }
-    .dn-discovery-toggle strong { display: block; align-self: end; line-height: var(--dn-leading-control); font-weight: var(--dn-weight-semibold); }
-    .dn-discovery-toggle:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
-  }
 
   .dn-body-types__heading {
     justify-content: center;
@@ -329,15 +306,16 @@
       grid-auto-flow: row;
       grid-auto-columns: auto;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: var(--dn-space-2);
     }
 
     .dn-body-type {
       display: grid;
-      min-height: 126px;
+      min-height: var(--dn-discovery-tile-height);
       grid-template-columns: 1fr;
-      grid-template-rows: 78px auto;
-      padding: 8px 12px 12px;
+      grid-template-rows: var(--dn-discovery-media-height) auto;
+      gap: var(--dn-space-2);
+      padding: var(--dn-discovery-tile-padding);
       border-radius: 14px;
       background: var(--dn-mobile-surface);
       text-align: left;
@@ -345,7 +323,7 @@
 
     .dn-body-type__image {
       position: relative;
-      height: 78px;
+      height: var(--dn-discovery-media-height);
       width: 100%;
       margin: 0;
       overflow: hidden;
@@ -354,11 +332,11 @@
     .dn-body-type__frame {
       display: block;
       position: absolute;
-      width: var(--body-optical-width, 100%);
+      width: min(var(--body-optical-width, 100%), calc(var(--dn-discovery-media-height) * (var(--body-aspect))));
       aspect-ratio: var(--body-aspect);
       left: 50%;
-      bottom: 12px;
-      transform: translateX(-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .dn-body-type__image img {
@@ -382,14 +360,15 @@
     .dn-body-type__title {
       margin: 0;
       width: 100%;
-      font-size: var(--dn-text-body);
-      font-weight: var(--dn-weight-semibold);
+      font: var(--dn-discovery-label-font);
       text-align: center;
     }
 
     .dn-body-type__subtitle {
       display: none;
     }
+
+    .dn-body-type--additional { order: 2; }
 
     .dn-body-type--secondary,
     .dn-body-type--desktop-only { display: none; }

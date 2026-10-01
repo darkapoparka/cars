@@ -1,11 +1,11 @@
 <script lang="ts">
 
-
   import { getI18n } from '$lib/locale/context';
   const i18n = getI18n();
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import DiscoveryAllTile from './DiscoveryAllTile.svelte';
   import { brands, desktopBrands } from '$data/home';
   const mobileBrands = new Set(
     [...brands.filter((brand) => brand.count > 0), ...brands.filter((brand) => brand.count <= 0)]
@@ -42,21 +42,11 @@
             <strong>{brand.label}</strong>
           </a>
         {/each}
-      {#if brands.length > mobileBrands.size}
-      <button class="dn-discovery-toggle" aria-expanded={expanded} aria-controls="brands-grid" onclick={() => expanded = !expanded}>
-        <span class="dn-brand-all-glyph" aria-hidden="true">
-          <span class="dn-brand-all-glyph__accent"></span><span></span><span></span><span></span>
-        </span>
-        <strong>{expanded ? i18n.t("m_211232676e95") : i18n.t("m_28c0e12158d9")}</strong>
-      </button>
-      {:else}
-      <a class="dn-discovery-toggle" href={i18n.href(resolve('/listing-grid'))}>
-        <span class="dn-brand-all-glyph" aria-hidden="true">
-          <span class="dn-brand-all-glyph__accent"></span><span></span><span></span><span></span>
-        </span>
-        <strong>{i18n.t("m_30a64216eaea")}</strong>
-      </a>
-      {/if}
+        <DiscoveryAllTile
+          {expanded}
+          controls="brands-grid"
+          ontoggle={brands.length > mobileBrands.size ? () => expanded = !expanded : undefined}
+        />
       </div>
 
     </div>
@@ -65,11 +55,6 @@
 
 <style>
   .dn-brand-card__frame { display: block; position: relative; width: var(--logo-mobile-width); aspect-ratio: var(--logo-ratio); overflow: hidden; }
-  .dn-discovery-toggle { display: none; }
-  @media (max-width: 767px) {
-    .dn-discovery-toggle { display: flex; width: 100%; min-height: 44px; align-items: center; justify-content: center; margin-top: 10px; border: 1px solid #d9dde1; border-radius: var(--dn-radius-button); background: #eceef0; color: #24272c; font: inherit; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); }
-    .dn-discovery-toggle:focus-visible { outline: 3px solid var(--dn-line-emphasis); outline-offset: 3px; }
-  }
 
   .dn-brand-section { padding: 32px 0; background: #fff; }
   .dn-brand-shell { padding: 0; border-radius: 20px; background: var(--dn-home-panel); }
@@ -114,19 +99,14 @@
     .dn-brand-hero__cta { display: none; min-height: 44px; padding: 0; border: 0; background: transparent; color: #4f5661; font-size: var(--dn-cta-size); }
     .dn-heading-mobile { display: inline; }
     .dn-brand-panel { margin-top: 8px; padding: 0; border-radius: 0; background: transparent; }
-    .dn-brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-    .dn-brand-card { display: grid; min-height: 108px; grid-template-rows: 58px auto; padding: 8px 6px 10px; border-radius: 14px; background: var(--dn-mobile-surface); }
-    .dn-brand-card__image { height: 54px; align-self: center; margin: 0; }
+    .dn-brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
+    .dn-brand-card { display: grid; min-height: var(--dn-discovery-tile-height); grid-template-rows: var(--dn-discovery-media-height) auto; gap: var(--dn-space-2); padding: var(--dn-discovery-tile-padding); border-radius: 14px; background: var(--dn-mobile-surface); }
+    .dn-brand-card__image { height: var(--dn-discovery-media-height); align-self: center; margin: 0; }
     .dn-brand-card__frame { width: var(--logo-mobile-width); }
-    .dn-brand-all-glyph { display: grid; width: 54px; height: 54px; align-self: center; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 0 auto; padding: 9px; border-radius: 16px; background: #f1f3f5; }
-    .dn-brand-all-glyph span { border-radius: 50%; background: #cdd2d8; }
-    .dn-brand-all-glyph__accent { background: var(--dn-red); }
     .dn-brand-card--secondary,
     .dn-brand-card--desktop-only { display: none; }
-    .dn-brand-card strong { align-self: end; overflow-wrap: anywhere; font-size: var(--dn-text-body); line-height: var(--dn-leading-heading); }
+    .dn-brand-card strong { align-self: end; overflow-wrap: anywhere; font: var(--dn-discovery-label-font); }
     .dn-brand-card--additional { order: 2; }
-    .dn-discovery-toggle { order: 1; display: grid; min-height: 108px; grid-template-rows: 58px auto; margin: 0; padding: 8px 6px 10px; border: 0; border-radius: 14px; background: var(--dn-mobile-surface); color: var(--dn-ink); font-size: var(--dn-control-size); }
-    .dn-discovery-toggle strong { display: block; align-self: end; line-height: var(--dn-leading-control); font-weight: var(--dn-weight-semibold); }
   }
 
   @media (prefers-reduced-motion: reduce) {

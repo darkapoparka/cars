@@ -47,6 +47,45 @@ async function alignedDock(page) {
     Math.max(...alignment.map(item => item.labelTop)) - Math.min(...alignment.map(item => item.labelTop)) <= .5 &&
     alignment.every(item => item.transform === 'none'), 'Every navigation item shares one baseline; Sell is never raised');
 }
+async function alignedDiscovery(page, locale) {
+  const grids = await page.locator('#body-types-grid, #brands-grid').evaluateAll(elements => elements.map(grid => {
+    const cards = [...grid.children].filter(card => card.checkVisibility());
+    return cards.map(card => {
+      const box = card.getBoundingClientRect();
+      const label = card.querySelector('strong');
+      const labelBox = label.getBoundingClientRect();
+      const glyph = card.querySelector('.dn-discovery-all__glyph');
+      const glyphBox = glyph?.getBoundingClientRect();
+      const frame = card.querySelector('.dn-body-type__frame, .dn-brand-card__frame');
+      const media = frame?.parentElement.getBoundingClientRect();
+      const artwork = frame?.getBoundingClientRect();
+      return { height: box.height, labelTop: labelBox.top - box.top, labelHeight: labelBox.height,
+        clipped: label.scrollWidth > label.clientWidth + 1, font: getComputedStyle(label).font,
+        glyph: glyphBox ? { top: glyphBox.top - box.top, width: glyphBox.width, height: glyphBox.height } : null,
+        allLabel: glyph ? label.textContent.trim() : null,
+        artFits: !artwork || (artwork.top >= media.top - 1 && artwork.bottom <= media.bottom + 1 && artwork.left >= media.left - 1 && artwork.right <= media.right + 1) };
+    });
+  }));
+  const cards = grids.flat();
+  assert(cards.every(card => card.height === 116 && !card.clipped && card.labelHeight < 22 && card.artFits),
+    `Discovery copy and artwork fit the same compact tile: ${JSON.stringify(grids)}`);
+  assert(Math.max(...cards.map(card => card.labelTop)) - Math.min(...cards.map(card => card.labelTop)) < 1,
+    'Body styles, brand names and All share one label baseline');
+  assert.equal(new Set(cards.map(card => card.font)).size, 1);
+  const all = cards.filter(card => card.glyph);
+  assert.equal(all.length, 2);
+  assert.deepEqual(all[0].glyph, all[1].glyph, 'Both All glyphs have identical size and placement');
+  assert(all.every(card => card.allLabel === (locale === 'bg' ? 'Всички' : 'All')));
+  const disclosure = page.locator('#body-types-grid button.dn-discovery-toggle');
+  if (await disclosure.count()) {
+    await disclosure.click();
+    assert.equal(await disclosure.getAttribute('aria-expanded'), 'true');
+    assert(await page.locator('#body-types-grid .dn-body-type:visible').count() > 3);
+    await disclosure.click();
+    assert.equal(await disclosure.getAttribute('aria-expanded'), 'false');
+  }
+  assert.equal(await page.locator('#brands-grid a.dn-discovery-toggle').getAttribute('href'), `/${locale}/listing-grid`);
+}
 async function longCardCopy(page, locale, layout) {
   // Exercise future dealer inventory without replacing the master's sample records.
   const title = 'Tesla Model 3 Performance Long Range AWD';
@@ -163,7 +202,7 @@ try {
                 return { width: icon.width, dy: icon.y + icon.height / 2 - box.y - box.height / 2 };
               }) };
           });
-          assert.equal(search.height, 52); assert.equal(search.font, '16px'); assert.equal(search.gap, '8px');
+          assert.equal(search.height, 44); assert.equal(search.font, '18px'); assert.equal(search.gap, '8px');
           assert.deepEqual(search.icons.map(icon => icon.width), [22]);
           assert(search.icons.every(icon => Math.abs(icon.dy) <= .5));
           assert.equal(search.background, 'rgb(241, 243, 245)', 'The main mobile entry field has a pale surface');
@@ -175,13 +214,14 @@ try {
           assert.deepEqual(headerIcons, [22, 22], 'Header location and phone glyphs stay proportionate to the wordmark');
           await fits(page.locator('.dn-mobile-control'));
           await page.locator('.dn-quick-search__trigger').click();
-          assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '16px',
+          assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '18px',
             'The search editor uses the same readable input size as its entry field');
           await page.locator('.dn-quick-search__close').click();
           assert.equal(await page.locator('.dn-quick-search__trigger').evaluate(el => getComputedStyle(el).outlineStyle), 'none', 'Closing by pointer does not leave a focus ring over the opener');
           await page.keyboard.press('Tab');
           await page.keyboard.press('Shift+Tab');
           assert(await page.locator('.dn-quick-search__trigger').evaluate(el => el.matches(':focus-visible') && parseFloat(getComputedStyle(el).outlineWidth) >= 2), 'Keyboard navigation retains a visible focus indicator');
+          await alignedDiscovery(page, locale);
           await longCardCopy(page, locale, 'carousel');
           const cardTypography = await page.locator('.dn-inventory .dn-vehicle-card').first().evaluate(card => {
             const title = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
@@ -370,6 +410,17 @@ try {
           assert.equal(await page.locator('.dn-service-process li').count(), 3);
           if (width < 768) {
             assert.equal(await page.locator('.dn-service-faq').isVisible(), false);
+            const field = page.locator('.dn-service-entry__field:visible');
+            assert.deepEqual(await field.evaluate(el => ({ height: el.getBoundingClientRect().height,
+              font: getComputedStyle(el).fontSize, fits: el.querySelector('span').scrollWidth <= el.querySelector('span').clientWidth + 1 })),
+              { height: 44, font: '18px', fits: true }, 'Sell and Import share the compact, readable entry proportions');
+            await field.click();
+            const editor = page.locator('.dn-service-editor[open]');
+            const editorFields = await editor.locator('input').evaluateAll(inputs => inputs.map(input => ({
+              height: input.getBoundingClientRect().height, font: getComputedStyle(input).fontSize
+            })));
+            assert(editorFields.every(input => input.height === 44 && input.font === '18px'));
+            await page.keyboard.press('Escape');
             const banner = page.locator('.dn-service-banner');
             await banner.scrollIntoViewIfNeeded();
             await banner.locator('img').evaluate(image => image.decode());
@@ -425,7 +476,7 @@ try {
             size: getComputedStyle(input).fontSize, border: getComputedStyle(input).borderWidth,
             height: input.getBoundingClientRect().height, frame: getComputedStyle(input.closest('form')).padding
           }));
-          assert.deepEqual(articleStyles, { size: '16px', border: '0px', height: 52, frame: '0px' },
+          assert.deepEqual(articleStyles, { size: '18px', border: '0px', height: 44, frame: '0px' },
             'Article search shares the mobile input system without a second frame');
           assert.equal(await page.locator('.dn-blog-card h2').first().evaluate(title => getComputedStyle(title).fontWeight), '500');
           await capture('articles');

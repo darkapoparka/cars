@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { MediaQuery } from 'svelte/reactivity';
   import { trapDialogTab } from '$lib/ui/overlay';
   import { specificationLabel } from '$lib/i18n/presentation';
 
@@ -24,6 +25,8 @@
 
   type MobileFilterView = 'main' | 'make' | 'model' | 'body' | 'price' | 'fuel' | 'mileage' | 'year';
   type MobileFilterOption = { value: string; label: string };
+
+  const mobile = new MediaQuery('(max-width: 767px)', false);
 
   let dialog = $state<HTMLDialogElement>();
   let trigger = $state<HTMLButtonElement>();
@@ -101,7 +104,7 @@
     searchOpen = true;
     mobileView = 'main';
     dialog?.showModal();
-    if (window.matchMedia('(min-width: 768px)').matches) requestAnimationFrame(() => searchInput?.focus());
+    if (!mobile.current) requestAnimationFrame(() => searchInput?.focus());
   };
   const closeSearch = () => { if (dialog?.open) dialog.close(); };
   const resetSearch = () => {
@@ -220,7 +223,7 @@
           bind:value={query}
           type="search"
           name="q"
-          placeholder={i18n.t("m_08c6b6889e71")}
+          placeholder={i18n.t(mobile.current ? 'm_cb8bed4ff8b8' : 'm_08c6b6889e71')}
           autocomplete="off"
           aria-describedby="quick-search-status"
           onkeydown={handleKeydown}
