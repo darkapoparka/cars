@@ -11,6 +11,7 @@
 		mobileTitle,
 		mobileDescription,
 		mobileActions,
+		mobileAlign = 'start',
 		compact = false,
 		vehicleArtwork = false,
 		titleId,
@@ -28,6 +29,7 @@
 		mobileTitle?: string;
 		mobileDescription?: string;
 		mobileActions?: Snippet;
+		mobileAlign?: 'start' | 'center';
 		compact?: boolean;
 		vehicleArtwork?: boolean;
 		titleId?: string;
@@ -45,6 +47,7 @@
 	description={mobileDescription}
 	{image}
 	actions={mobileActions}
+	align={mobileAlign}
 />
 <section
 	class={['site-intro', 'site-desktop-only', className]}

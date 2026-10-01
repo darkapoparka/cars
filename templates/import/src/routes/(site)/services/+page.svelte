@@ -32,6 +32,7 @@
 	<PageIntro
 		title={english ? 'Services for your car' : 'Услуги за твоя автомобил'}
 		mobileTitle={english ? 'Services' : 'Услуги'}
+		mobileAlign="center"
 		image="/assets/daynight/services/premium-cars-banner-generated.webp"
 		desktopImage="/assets/daynight/banners/services-studio-desktop.webp"
 		align="center"

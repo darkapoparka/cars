@@ -1,0 +1,74 @@
+[
+	{
+		"locale": "bg",
+		"page": "about",
+		"width": 320,
+		"alignment": "center",
+		"font": "28px",
+		"overflow": false,
+		"searchAlignment": null
+	},
+	{
+		"locale": "bg",
+		"page": "services",
+		"width": 320,
+		"alignment": "center",
+		"font": "28px",
+		"overflow": false,
+		"searchAlignment": "start"
+	},
+	{
+		"locale": "en",
+		"page": "about",
+		"width": 320,
+		"alignment": "center",
+		"font": "28px",
+		"overflow": false,
+		"searchAlignment": null
+	},
+	{
+		"locale": "en",
+		"page": "services",
+		"width": 320,
+		"alignment": "center",
+		"font": "28px",
+		"overflow": false,
+		"searchAlignment": "start"
+	},
+	{
+		"locale": "bg",
+		"page": "about",
+		"width": 390,
+		"alignment": "center",
+		"font": "28px",
+		"overflow": false,
+		"searchAlignment": null
+	},
+	{
+		"locale": "bg",
+		"page": "services",
+		"width": 390,
+		"alignment": "center",
+		"font": "28px",
+		"overflow": false,
+		"searchAlignment": "start"
+	},
+	{
+		"locale": "en",
+		"page": "about",
+		"width": 390,
+		"alignment": "center",
+		"font": "28px",
+		"overflow": false,
+		"searchAlignment": null
+	},
+	{
+		"locale": "en",
+		"page": "services",
+		"width": 390,
+		"alignment": "center",
+		"font": "28px",
+		"overflow": false,
+		"searchAlignment": "start"
+	}
+]

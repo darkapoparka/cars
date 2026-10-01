@@ -22,6 +22,7 @@
 <main id="main-content">
 	<PageIntro
 		title={english ? 'About us' : 'За нас'}
+		mobileAlign="center"
 		mobileDescription={english
 			? 'Cars, checks and a clear next step.'
 			: 'Автомобили, проверка и ясен следващ ход.'}

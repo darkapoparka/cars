@@ -8,6 +8,7 @@
 		image,
 		titleId,
 		headingLevel = 1,
+		align = 'start',
 		actions
 	}: {
 		title: string;
@@ -15,6 +16,7 @@
 		image?: string;
 		titleId?: string;
 		headingLevel?: 1 | 2;
+		align?: 'start' | 'center';
 		actions?: Snippet;
 	} = $props();
 </script>
@@ -35,7 +37,7 @@
 			/></picture
 		>{/if}
 	<MobileAppbar surface="dark" />
-	<div class="mobile-page-hero__copy">
+	<div class="mobile-page-hero__copy" class:mobile-page-hero__copy--center={align === 'center'}>
 		<svelte:element this={headingLevel === 1 ? 'h1' : 'h2'} id={titleId}>{title}</svelte:element>
 		{#if description}<p>{description}</p>{/if}
 		{#if actions}<div class="mobile-page-hero__actions">{@render actions()}</div>{/if}
@@ -91,6 +93,11 @@
 			color: var(--bc-dark-muted);
 			font: var(--bc-weight-body) var(--bc-mobile-body)/var(--bc-mobile-body-leading)
 				var(--bc-font-body);
+		}
+		.mobile-page-hero__copy--center > :global(h1),
+		.mobile-page-hero__copy--center > :global(h2),
+		.mobile-page-hero__copy--center > p {
+			text-align: center;
 		}
 		.mobile-page-hero__actions {
 			min-width: 0;
