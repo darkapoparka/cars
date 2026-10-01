@@ -48,7 +48,7 @@ export default function MorePage() {
 
 function MenuRow({href, icon, title, copy}: {href: string; icon: ShowroomIconName; title: string; copy?: string}) {
   return <Link href={href} {...stylex.props(s.row)}>
-    <span {...stylex.props(s.icon)}><ShowroomIcon name={icon} size={24}/></span>
+    <span {...stylex.props(s.icon)}><ShowroomIcon name={icon} size={22}/></span>
     <span {...stylex.props(s.copy)}><span>{title}</span>{copy ? <span {...stylex.props(s.subtitle)}>{copy}</span> : null}</span>
     <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.chevron)}/>
   </Link>;
@@ -61,8 +61,8 @@ const s = stylex.create({
   section: {marginBottom: 16},
   sectionTitle: {margin: 0, paddingBlock: 10, paddingInline: 2, color: $.muted, fontSize: 13, fontWeight: 500, lineHeight: '20px'},
   list: {borderColor: $.line, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, overflow: 'hidden'},
-  row: {display: 'grid', gridTemplateColumns: '28px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 9, paddingInline: 15, color: $.ink, fontSize: 16, fontWeight: 500, lineHeight: '22px', textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineColor: {default: 'transparent', ':focus-visible': $.ink}},
-  icon: {display: 'grid', placeItems: 'center', width: 28, height: 28},
+  row: {display: 'grid', gridTemplateColumns: '24px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 9, paddingInline: 16, color: $.ink, fontSize: 16, fontWeight: 500, lineHeight: '22px', textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: '#ededf0', backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineColor: {default: 'transparent', ':focus-visible': $.ink}},
+  icon: {display: 'grid', placeItems: 'center', width: 24, height: 24},
   copy: {display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0, overflowWrap: 'anywhere'},
   subtitle: {color: $.muted, fontSize: 13, fontWeight: 400, lineHeight: '18px'},
   chevron: {color: $.subtle},

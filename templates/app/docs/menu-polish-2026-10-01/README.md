@@ -1,5 +1,9 @@
 # Restrained mobile menu polish
 
+## Small follow-up polish
+
+On the restored grouped menu, reduced icons from 24px to 22px in a 24px column, normalized row side padding to 16px, and softened full-width divider color from #e6e6e9 to #ededf0. Card borders, typography, group spacing, row heights and language control stay as restored. Current screenshots: 390-fine-polish.jpg and 320-fine-polish.jpg. Verified six visible menu rows and no overflow at 320px, 390px and 1440px; primary row targets remain 56px and the location row remains 60px.
+
 ## Current revision: restored original composition
 
 The owner rejected the open-list redesign. Restored the original menu from before commit 5b480220a: grouped cards, original 500-weight labels, 24px icons, 12px mobile gutters, spacing and pill-shaped language selector. The only retained visual correction is removal of the black Cars-row treatment. Current screenshot: 390-restored-baseline.jpg. Verified at 320px, 390px and 1440px with no horizontal overflow. Earlier revisions below are superseded.
