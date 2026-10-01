@@ -443,9 +443,19 @@ test('desktop videos request the player only after activation', async ({ page },
 	await expect(page.locator('.home-videos iframe')).toHaveCount(0);
 	await expect(page.locator('.home-videos h3')).toHaveCount(0);
 	await expect(page.locator('.home-video__image').first()).toHaveCSS('border-radius', '12px');
-	const featured = (await page.locator('.home-video__image').first().boundingBox())!;
-	const secondary = (await page.locator('.home-video__image').nth(1).boundingBox())!;
-	expect(featured.width).toBeGreaterThan(secondary.width * 1.9);
+	const videoBoxes = await page.locator('.home-video__image').evaluateAll((videos) =>
+		videos.map((video) => {
+			const box = video.getBoundingClientRect();
+			return { width: box.width, height: box.height, top: box.top };
+		})
+	);
+	expect(videoBoxes).toHaveLength(3);
+	for (const box of videoBoxes) {
+		expect(Math.abs(box.width - videoBoxes[0].width)).toBeLessThan(1);
+		expect(Math.abs(box.height - videoBoxes[0].height)).toBeLessThan(1);
+		expect(Math.abs(box.top - videoBoxes[0].top)).toBeLessThan(1);
+		expect(Math.abs(box.width / box.height - 16 / 9)).toBeLessThan(0.01);
+	}
 	await expect(page.locator('.home-video__playmark').first()).toHaveCSS(
 		'color',
 		'rgb(255, 255, 255)'

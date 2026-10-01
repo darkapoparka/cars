@@ -120,20 +120,12 @@
 	}
 	.home-videos__grid {
 		display: grid;
-		grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-		grid-template-rows: repeat(2, minmax(0, 1fr));
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 16px;
 	}
 	.home-video {
 		border-radius: 12px;
 		min-width: 0;
-	}
-	.home-video:first-child {
-		grid-row: span 2;
-	}
-	.home-video:first-child .home-video__image {
-		aspect-ratio: auto;
-		height: 100%;
 	}
 	.home-video__image {
 		aspect-ratio: 16 / 9;

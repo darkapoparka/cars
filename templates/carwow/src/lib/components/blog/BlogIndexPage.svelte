@@ -2,23 +2,14 @@
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
-	// Native self-contained rebuild of the /blog (blog-standard.html) desktop main
-	// content: centered intro + the 2-column innerpage layout
-	// (featured post-style-2 overlay card + post-style-6 card grid on the left,
-	// search/categories/recent-posts/archive/tags widgets in the sticky sidebar).
-	// The look that used to come from app.css + StorefrontTemplateContent's :global
-	// stylesheet is reproduced as a SELF-CONTAINED scoped style block below (the
-	// design-system rules for .post-style-2/.post-style-6/.recent-post/.widget-* are
-	// inlined from StorefrontTemplateContent, de-scoped to this component's markup).
-	// Brand colours route through tokens (--sa-*); template neutrals stay literal for
-	// an exact visual match.
-
 	import { resolve } from '$app/paths';
 	import MobileBlogIndex from './MobileBlogIndex.svelte';
 	import { getViewportContext } from '$lib/hooks/viewport.svelte';
 	const viewport = getViewportContext();
-	import { ArrowUpRight, Search, X } from '@lucide/svelte';
+	import { Search, X } from '@lucide/svelte';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
+	import '$lib/styles/desktop-page-frame.css';
+	import '$lib/styles/desktop-discovery.css';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
 	import type { DayNightArticle, DayNightArticleCategory } from '$lib/data/daynight-blog';
 
@@ -82,8 +73,6 @@
 			return true;
 		})
 	);
-	const featuredArticle = $derived(visibleArticles[0]);
-	const cardArticles = $derived(visibleArticles.filter((article) => article !== featuredArticle));
 	const categoryOptions = $derived.by(() =>
 		blogCategories
 			.map((category) => ({
@@ -180,32 +169,30 @@
 	</div>
 {/snippet}
 
-{#snippet featuredCard(article: DayNightArticle)}
+{#snippet articleCard(article: DayNightArticle)}
 	<a
 		href={i18n.href(resolve('/blog/[slug]', { slug: article.slug }))}
-		class="blog-featured-card"
+		class="blog-article-card"
 		data-daynight-article-card
 		data-daynight-category={article.category}
 		data-daynight-tags={article.tags.join(' ')}
 		data-daynight-archive={articleArchiveValue(article)}
 		data-daynight-title={article.title}
 	>
-		<div class="blog-featured-card__image">
+		<div class="blog-article-card__media">
 			<img
-				class="post--img"
 				src={i18n.asset(article.image)}
 				alt={i18n.text(article.title)}
-				loading="eager"
+				width="960"
+				height="540"
+				loading="lazy"
 				decoding="async"
 			/>
 		</div>
-		<div class="blog-featured-card__content">
+		<div class="blog-article-card__body">
 			{@render articleMeta(article)}
-			<h2 class="h3 mb-8">{i18n.text(article.title)}</h2>
-			<p class="text-secondary">{i18n.text(article.description)}</p>
-			<span class="blog-read-link"
-				>{i18n.t('copy.3240a0799690')} <ArrowUpRight size={18} aria-hidden="true" /></span
-			>
+			<h2>{i18n.text(article.title)}</h2>
+			<p>{i18n.text(article.description)}</p>
 		</div>
 	</a>
 {/snippet}
@@ -213,8 +200,11 @@
 {#snippet blogHeroControls()}
 	<div class="blog-hero-controls">
 		<nav class="blog-category-switch" aria-label={i18n.t('copy.05f6c615a351')}>
-			<a href={i18n.href(resolve('/blog'))} class={!hasActiveFilters ? 'active' : ''}
-				>{i18n.t('copy.117d98cb652c')}</a
+			<a
+				href={i18n.href(resolve('/blog'))}
+				class="desktop-discovery-chip"
+				class:is-active={!hasActiveFilters}
+				aria-current={!hasActiveFilters ? 'true' : undefined}>{i18n.t('copy.117d98cb652c')}</a
 			>
 			{#each categoryOptions as option (option.value)}
 				<a
@@ -223,10 +213,11 @@
 							filterHref({ category: isActiveFilter('category', option.value) ? '' : option.value })
 						)
 					)}
-					class:active={isActiveFilter('category', option.value)}
+					class="desktop-discovery-chip"
+					class:is-active={isActiveFilter('category', option.value)}
+					aria-current={isActiveFilter('category', option.value) ? 'true' : undefined}
+					>{i18n.text(option.label)}</a
 				>
-					{i18n.text(option.label)}
-				</a>
 			{/each}
 		</nav>
 		<form action={resolve('/blog')} class="blog-hero-search" method="get">
@@ -253,10 +244,11 @@
 						href={i18n.href(
 							resolve(filterHref({ tag: isActiveFilter('tag', option.value) ? '' : option.value }))
 						)}
-						class:active={isActiveFilter('tag', option.value)}
+						class="desktop-discovery-chip"
+						class:is-active={isActiveFilter('tag', option.value)}
+						aria-current={isActiveFilter('tag', option.value) ? 'true' : undefined}
+						>{i18n.text(option.label)}<span>{option.count}</span></a
 					>
-						{i18n.text(option.label)}<span>{option.count}</span>
-					</a>
 				{/each}
 			</nav>
 			<div class="blog-filter-status" aria-live="polite">
@@ -266,39 +258,14 @@
 						? i18n.t('copy.53e0a90d4d5b')
 						: i18n.t('copy.320493d7cb5d')}</span
 				>
-				{#if hasActiveFilters}<a href={i18n.href(resolve('/blog'))} class="blog-clear-filters"
+				{#if hasActiveFilters}
+					<a href={i18n.href(resolve('/blog'))} class="blog-clear-filters"
 						><X size={16} />{i18n.t('copy.fc38aced5a1d')}</a
-					>{/if}
+					>
+				{/if}
 			</div>
 		</div>
 	</div>
-{/snippet}
-
-{#snippet articleCard(article: DayNightArticle)}
-	<a
-		href={i18n.href(resolve('/blog/[slug]', { slug: article.slug }))}
-		class="post-style-6 overflow-hidden"
-		data-daynight-article-card
-		data-daynight-category={article.category}
-		data-daynight-tags={article.tags.join(' ')}
-		data-daynight-archive={articleArchiveValue(article)}
-		data-daynight-title={article.title}
-	>
-		<div class="image">
-			<img
-				class="post--img flex"
-				src={i18n.asset(article.image)}
-				alt={i18n.text(article.title)}
-				loading="lazy"
-				decoding="async"
-			/>
-		</div>
-		<div class="content">
-			{@render articleMeta(article)}
-			<h2 class="h4 title mb-12">{i18n.text(article.title)}</h2>
-			<p class="clamp clamp-2 text-secondary">{i18n.text(article.description)}</p>
-		</div>
-	</a>
 {/snippet}
 
 {#if viewport.mobile}
@@ -312,7 +279,7 @@
 		]}
 	/>
 {:else}
-	<div class="blog-page">
+	<div class="blog-page desktop-discovery-theme">
 		<DesktopYellowRouteHero
 			headingId="blog-route-title"
 			title={i18n.t('copy.9651258a1b3e')}
@@ -320,16 +287,8 @@
 			deckWidth="wide"
 			children={blogHeroControls}
 		/>
-		<section class="pb-100">
-			<div class="container">
-				<div class="blog-page-title">
-					<p class="eyebrow">{i18n.t('copy.c31cdbd07e6c')}</p>
-					<h1>{i18n.t('copy.9651258a1b3e')}</h1>
-					<p class="h7 text-secondary line-height-28">
-						{i18n.t('copy.5d440bd06811')}
-					</p>
-				</div>
-
+		<section class="blog-list" aria-labelledby="blog-route-title">
+			<div class="blog-container" data-daynight-blog-index>
 				{#if !articles.length}
 					<div class="blog-empty" data-daynight-blog-empty>
 						<h2>{i18n.t('copy.16352908518e')}</h2>
@@ -338,79 +297,18 @@
 							>{i18n.t('copy.ef106e677853')}</a
 						>
 					</div>
+				{:else if !visibleArticles.length}
+					<div class="blog-empty" role="status">
+						<p>{i18n.t('copy.35c9f823a4d2')}</p>
+						<a class="sa-cta sa-cta-secondary" href={i18n.href(resolve('/blog'))}
+							>{i18n.t('copy.fc38aced5a1d')}</a
+						>
+					</div>
 				{:else}
-					<div class="blog-index-layout">
-						<div class="blog-controls" role="search" aria-label={i18n.t('copy.fc474f46be32')}>
-							<form action={resolve('/blog')} class="widget-search mb-34 w-full" method="get">
-								<label class="sr-only" for="blog-search">{i18n.t('copy.c744f13b5bc2')}</label>
-								<input
-									{@attach i18n.validation}
-									class="input-normal"
-									type="search"
-									name="q"
-									id="blog-search"
-									placeholder={i18n.t('copy.d51833ea37eb')}
-									value={filters.q}
-								/>
-								{#each searchHiddenFilters() as [name, value] (name)}
-									<input type="hidden" {name} {value} />
-								{/each}
-								<button
-									type="submit"
-									class="widget-search-btn"
-									aria-label={i18n.t('copy.6517beda9674')}
-								>
-									<Search size={22} />
-								</button>
-							</form>
-							<ul class="widget-categories blog-mobile-categories">
-								<li>
-									<a href={i18n.href(resolve('/blog'))} class={!hasActiveFilters ? 'active' : ''}
-										>{i18n.t('copy.117d98cb652c')}</a
-									>
-								</li>
-								{#each categoryOptions as option (option.value)}
-									<li>
-										<a
-											href={i18n.href(resolve(filterHref({ category: option.value })))}
-											class={isActiveFilter('category', option.value) ? 'active' : ''}
-											>{i18n.text(option.label)}</a
-										>
-									</li>
-								{/each}
-							</ul>
-						</div>
-
-						<div class="innerpage__content">
-							<div data-daynight-blog-index>
-								{#if featuredArticle}
-									<div class="blog-magazine">
-										{@render featuredCard(featuredArticle)}
-										{#if cardArticles.length}
-											<div class="blog-magazine__side">
-												{#each cardArticles.slice(0, 2) as article (article.slug)}
-													{@render articleCard(article)}
-												{/each}
-											</div>
-										{/if}
-									</div>
-								{/if}
-
-								{#if cardArticles.length > 2}
-									<div class="blog-card-grid">
-										{#each cardArticles.slice(2) as article (article.slug)}
-											{@render articleCard(article)}
-										{/each}
-									</div>
-								{/if}
-
-								{#if !visibleArticles.length}
-									<p class="h5 text-secondary daynight-blog-empty mb-40">
-										{i18n.t('copy.35c9f823a4d2')}
-									</p>
-								{/if}
-							</div>
-						</div>
+					<div class="blog-card-grid">
+						{#each visibleArticles as article (article.slug)}
+							{@render articleCard(article)}
+						{/each}
 					</div>
 				{/if}
 			</div>
@@ -419,696 +317,223 @@
 {/if}
 
 <style>
-	.blog-hero-search {
-		display: grid;
-		gap: 0;
-		padding: 0;
+	.blog-page {
+		background: var(--discovery-canvas);
+		color: var(--sa-ink);
+		font-family: var(--sa-font);
 	}
-
+	.blog-page a:not(.sa-cta) {
+		text-decoration: none;
+	}
+	.blog-hero-controls {
+		display: grid;
+		gap: 12px;
+		text-align: left;
+	}
+	.blog-category-switch,
+	.blog-quick-topics {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		align-items: center;
+	}
+	.blog-hero-search {
+		margin: 0;
+	}
 	.blog-hero-search__field {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) 44px;
+		align-items: center;
 		gap: 4px;
-		min-height: 54px;
+		height: 54px;
 		padding: 4px;
-		border: 1px solid var(--desktop-control-border);
+		border: 1px solid var(--discovery-control-border);
 		border-radius: 8px;
 		background: #fff;
 	}
-
 	.blog-hero-search__field input {
 		min-width: 0;
+		width: 100%;
+		height: 44px;
+		margin: 0;
+		padding: 0 12px;
 		border: 0;
 		background: transparent;
 		color: var(--sa-ink);
 		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font);
 		outline: 0;
-		padding: 0 12px;
+		box-shadow: none;
 	}
-
 	.blog-hero-search__field button {
 		display: grid;
 		width: 44px;
 		height: 44px;
 		place-items: center;
+		padding: 0;
 		border: 0;
 		border-radius: 6px;
 		background: var(--desktop-action);
 		color: #fff;
 		cursor: pointer;
 	}
-
+	.blog-hero-search__field button :global(svg) {
+		color: inherit;
+	}
+	.blog-hero-search__field button:hover {
+		background: var(--desktop-action-hover);
+	}
 	.blog-hero-search__field:focus-within {
 		outline: 2px solid var(--desktop-focus);
-		outline-offset: 2px;
+		outline-offset: -1px;
 	}
-
-	.blog-hero-controls {
-		display: grid;
-		gap: 12px;
-	}
-
-	.blog-category-switch {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		width: 100%;
-		margin-inline: auto;
-		padding: 0;
-		border-bottom: 1px solid var(--desktop-control-border);
-	}
-
-	.blog-category-switch a {
-		display: inline-flex;
-		min-height: 48px;
-		align-items: center;
-		justify-content: center;
-		border-bottom: 3px solid transparent;
-		color: var(--sa-muted);
-		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.2 var(--sa-font);
-	}
-
-	.blog-category-switch a:hover,
-	.blog-category-switch a:focus-visible {
-		color: var(--sa-ink);
-	}
-
-	.blog-category-switch a.active {
-		border-bottom-color: var(--desktop-action);
-		color: var(--desktop-action) !important;
-	}
-
 	.blog-quick-row {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
-		gap: 16px;
+		gap: 12px;
 	}
-
-	.blog-quick-topics {
-		display: flex;
-		flex-wrap: wrap;
-		min-width: 0;
-		align-items: center;
-		gap: 8px;
-		white-space: nowrap;
+	.blog-quick-topics .desktop-discovery-chip span {
+		opacity: 0.7;
 	}
-
-	.blog-quick-topics a {
-		display: inline-flex;
-		min-height: 36px;
-		align-items: center;
-		gap: 6px;
-		padding: 0 4px;
-		border-bottom: 1px solid var(--desktop-control-border);
-		color: var(--sa-ink);
-		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.2 var(--sa-font);
-	}
-
-	.blog-quick-topics a span {
-		color: var(--sa-muted);
-		font-size: var(--sa-text-xs);
-		font-weight: var(--sa-button-font-weight);
-	}
-
-	.blog-quick-topics a.active {
-		border-color: var(--desktop-action);
-		background: var(--desktop-action);
-		color: #fff;
-	}
-
-	.blog-quick-topics a.active span {
-		color: rgb(255 255 255 / 72%);
-	}
-
 	.blog-filter-status {
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 12px;
 		margin-left: auto;
-		color: var(--sa-muted);
-		font: var(--sa-weight-semibold) var(--sa-text-caption)/1.3 var(--sa-font);
+		color: var(--discovery-muted);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 		white-space: nowrap;
 	}
-
 	.blog-clear-filters {
 		display: inline-flex;
-		min-height: 36px;
 		align-items: center;
 		gap: 6px;
-		border: 1px solid var(--desktop-control-border);
+		min-height: 36px;
+		padding: 0 12px;
+		border: 1px solid var(--discovery-control-border);
 		border-radius: 8px;
-		padding: 0 11px;
+		color: var(--sa-ink);
 		background: #fff;
-		color: var(--sa-ink) !important;
 	}
-
-	.blog-clear-filters:hover,
-	.blog-clear-filters:focus-visible {
-		border-color: var(--desktop-secondary-hover);
-		background: var(--desktop-secondary-hover, var(--sa-fill-2));
+	.blog-clear-filters:hover {
+		background: var(--sa-yellow);
+		border-color: var(--sa-yellow);
 	}
-
-	@media (min-width: 992px) {
-		.blog-controls .widget-search {
-			display: none;
-		}
-
-		.blog-page {
-			padding-top: 0;
-		}
-
-		.blog-page-title {
-			display: none;
-		}
-
-		.blog-page > .pb-100 {
-			background: #f4f5f6;
-			padding-top: var(--sa-desktop-section-y-md);
-		}
+	.blog-list {
+		padding: 36px 0 64px;
 	}
-
-	/* Self-contained scoped styles for /blog. These reproduce the rules the legacy
-	   app.css + StorefrontTemplateContent :global stylesheet provided for the verbatim
-	   class strings used above. Svelte scopes them to this component's markup, so no
-	   :global wrapper is required (except :global(svg) for icons and the universal
-	   reset). Brand colours route through tokens (--sa-*); template neutrals stay
-	   literal for an exact match. */
-
-	/* app.css zeroed every margin and box-sized everything; reproduce that universal
-	   reset at low specificity so the .mb-* utilities below (declared later, equal
-	   specificity) still win for elements that carry them. */
-	.blog-page {
-		padding-top: 0;
-		box-sizing: border-box;
-		color: #1c1c1c;
-		font-family: var(--sa-font);
-		font-size: var(--sa-text-base);
-		font-weight: var(--sa-weight-regular);
-		line-height: 26px;
-		letter-spacing: 0;
+	.blog-container {
+		width: var(--desktop-content-width);
+		max-width: var(--desktop-content-max);
+		margin-inline: auto;
 	}
-
-	.blog-page :global(*) {
-		box-sizing: border-box;
-	}
-
-	.blog-page :global(h1),
-	.blog-page :global(h2),
-	.blog-page :global(h3),
-	.blog-page :global(p),
-	.blog-page :global(ul) {
-		margin: 0;
-	}
-
-	.blog-page :global(a:not(.sa-cta)) {
-		color: inherit;
-		text-decoration: none;
-	}
-
-	.blog-page :global(img),
-	.blog-page :global(svg) {
-		display: block;
-		max-width: 100%;
-	}
-
-	/* Layout container — the legacy `.container` blended app.css (max-width 1440 /
-	   padding 0 15px) with StorefrontTemplateContent (width min(100% - 48px, 1320px)).
-	   The explicit max-width also defeats Tailwind's built-in `.container`. */
-	.container {
-		width: min(100% - 48px, 1320px);
-		max-width: 1440px;
-		margin: 0 auto;
-		padding: 0 15px;
-	}
-
-	.blog-empty {
-		max-width: 760px;
-		margin: 0 auto;
-		text-align: center;
-	}
-	.blog-empty h2 {
-		font-size: var(--sa-text-xl, var(--sa-text-xl));
-		line-height: 1.4;
-	}
-	.blog-empty p {
-		margin-block: 16px 24px;
-	}
-
-	/* Section spacing */
-	.pb-100 {
-		padding-bottom: 100px;
-	}
-
-	.mb-8 {
-		margin-bottom: 8px;
-	}
-
-	.mb-12 {
-		margin-bottom: 12px;
-	}
-
-	.mb-34 {
-		margin-bottom: 34px;
-	}
-
-	.mb-40 {
-		margin-bottom: 40px;
-	}
-
-	.w-full {
-		width: 100%;
-	}
-
-	/* Flex utilities used by article media/meta snippets. */
-	.flex {
-		display: flex;
-	}
-
-	.overflow-hidden {
-		overflow: hidden;
-	}
-
-	/* Text utilities */
-	.text-secondary {
-		color: #667085;
-	}
-
-	.line-height-28 {
-		line-height: 28px;
-	}
-
-	/* Heading utilities. app.css forced font-weight:600 on the whole .h4…h7,h1…h6
-	   group; StorefrontTemplateContent re-set .h3/.h4/.h5 weights (winning at source
-	   order) while .h7 kept the 600. Reproduce the computed result. */
-	.h3 {
-		font-size: var(--sa-type-page);
-		font-weight: var(--sa-weight-heading);
-		line-height: 1.16;
-	}
-
-	.h4 {
-		font-size: var(--sa-text-card-title);
-		font-weight: var(--sa-weight-heading);
-		line-height: 1.25;
-	}
-
-	.h5 {
-		font-size: var(--sa-text-lg);
-		font-weight: var(--sa-weight-heading);
-		line-height: 1.35;
-	}
-
-	.h7 {
-		font-size: var(--sa-text-lg);
-		font-weight: var(--sa-weight-medium);
-		line-height: var(--sa-leading-body);
-	}
-
-	.eyebrow {
-		margin-bottom: 12px;
-		color: var(--sa-blue, #b00000);
-		font-size: var(--sa-text-sm);
-		font-weight: var(--sa-weight-medium);
-		letter-spacing: 0;
-		line-height: var(--sa-leading-snug);
-		text-transform: none;
-	}
-
-	.blog-page h1 {
-		color: #111827;
-		font-size: var(--sa-text-desktop-hero-title);
-		font-weight: var(--sa-weight-heading);
-		line-height: 1.08;
-		text-align: center;
-	}
-
-	/* Centered intro block */
-	.blog-page-title {
-		margin: 0 auto 40px;
-		max-width: 760px;
-		text-align: center;
-	}
-
-	.blog-page-title h1 {
-		margin-bottom: 14px;
-	}
-
-	/* The blog is a full-width editorial stream. Search/category discovery lives in
-	   the Chroma hero; archive/tag discovery follows the stream instead of consuming
-	   a permanent sidebar column. */
-	.blog-index-layout,
-	.innerpage__content {
-		min-width: 0;
-		width: 100%;
-	}
-
-	.blog-controls {
-		display: none;
-	}
-
-	.blog-magazine {
-		display: grid;
-		grid-template-columns: minmax(0, 1.45fr) minmax(360px, 1fr);
-		gap: 32px;
-		min-height: 500px;
-		margin-bottom: 24px;
-		align-items: stretch;
-	}
-
-	.blog-magazine > .blog-featured-card {
-		min-height: 100%;
-		margin-bottom: 0;
-	}
-
-	.blog-magazine__side {
-		display: grid;
-		grid-template-rows: repeat(2, minmax(0, 1fr));
-		gap: 32px;
-	}
-
-	.blog-page .blog-magazine__side .post-style-6 {
-		display: grid;
-		grid-template-columns: minmax(140px, 0.75fr) minmax(0, 1fr);
-		height: 100%;
-		min-height: 238px;
-		overflow: hidden;
-	}
-
-	.blog-magazine__side .post-style-6 .post--img {
-		height: 100%;
-		aspect-ratio: auto;
-	}
-	.blog-magazine__side .post-style-6 .image {
-		height: 100%;
-	}
-
-	.blog-magazine__side .post-style-6 .content {
-		align-self: center;
-		padding: 18px;
-	}
-
-	.blog-magazine__side .post-style-6 .clamp-2 {
-		display: none;
-	}
-
 	.blog-card-grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 24px;
-		margin-bottom: 0;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 20px;
 	}
-
-	.post--img {
+	.blog-article-card {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		overflow: hidden;
+		border: 1px solid var(--discovery-control-border);
+		border-radius: 12px;
+		background: #fff;
+		color: var(--sa-ink);
+	}
+	.blog-article-card:hover {
+		border-color: var(--discovery-border-hover);
+	}
+	.blog-article-card__media {
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+		background: var(--discovery-muted-surface);
+	}
+	.blog-article-card__media img {
+		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
-
-	.blog-page .blog-featured-card,
-	.blog-page .post-style-6 {
-		display: block;
-		overflow: hidden;
-		border: 1px solid #e2e4e5;
-		border-radius: 12px;
-		background: #fff;
-		color: #111827;
-		box-shadow: none;
-		text-decoration: none;
-		transition:
-			transform 160ms ease,
-			box-shadow 160ms ease;
+	.blog-article-card__body {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		min-width: 0;
+		padding: 18px;
 	}
-
-	.blog-featured-card:hover,
-	.blog-featured-card:focus-visible,
-	.post-style-6:hover,
-	.post-style-6:focus-visible {
-		transform: translateY(-2px);
-		box-shadow: 0 14px 30px rgb(15 23 42 / 10%);
-	}
-
-	.blog-featured-card__image {
-		height: 330px;
-		overflow: hidden;
-	}
-
-	.blog-featured-card__content {
-		padding: 28px;
-	}
-	.blog-read-link {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		margin-top: 20px;
-		font: var(--sa-weight-semibold) var(--sa-text-caption)/1.4 var(--sa-font);
-	}
-	@media (prefers-reduced-motion: reduce) {
-		.blog-page .blog-featured-card,
-		.blog-page .post-style-6 {
-			transition: none;
-			transform: none;
-		}
-	}
-
-	.blog-featured-card__content > p {
-		font-size: var(--sa-type-body);
-		line-height: 1.55;
-	}
-
-	.post-style-6 .image {
-		height: 210px;
-		overflow: hidden;
-	}
-
-	.post-style-6 .content {
-		padding: 20px;
-	}
-
-	.clamp-2 {
-		display: -webkit-box;
-		overflow: hidden;
-		line-clamp: 2;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-	}
-
-	/* Article meta row */
 	.blog-meta {
 		display: flex;
-		align-items: center;
 		flex-wrap: wrap;
-		gap: 12px;
-		justify-content: flex-start;
-		margin-bottom: 12px;
-	}
-
-	.blog-meta span {
-		font-size: var(--sa-text-sm);
-		line-height: 1.4;
-	}
-
-	.blog-meta__category {
-		color: var(--sa-red);
-		font-weight: var(--sa-weight-strong);
-		text-transform: uppercase;
-	}
-
-	/* Search widget */
-	.widget-search {
-		position: relative;
-	}
-
-	.input-normal {
-		width: 100%;
-		height: 54px;
-		border: 1px solid #d9e0ea;
-		border-radius: 8px;
-		background: #fff;
-		color: #111827;
-		font: inherit;
-		font-weight: var(--sa-weight-semibold);
-		outline: 0;
-		padding: 0 16px;
-	}
-
-	.widget-search .input-normal {
-		padding-right: 54px;
-	}
-
-	.input-normal:focus {
-		border-color: var(--sa-blue, #b00000);
-		box-shadow: 0 0 0 3px rgba(176, 0, 0, 0.14);
-	}
-
-	.widget-search-btn {
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		display: grid;
-		width: 44px;
-		height: 44px;
-		place-items: center;
-		border: 0;
-		border-radius: 8px;
-		background: var(--sa-line);
-		color: var(--sa-blue, #b00000);
-		cursor: pointer;
-	}
-
-	.widget-search-btn :global(svg) {
-		color: #1c1c1c;
-	}
-
-	/* Compact mobile category controls. Desktop discovery lives in the hero. */
-	.widget-categories {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	.widget-categories a {
-		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		min-height: 40px;
-		border: 0;
-		border-radius: 8px;
-		background: var(--desktop-field, var(--sa-fill));
-		color: #344054;
-		padding: 9px 12px;
-		font-weight: var(--sa-button-font-weight);
+		gap: 8px;
+		margin-bottom: 12px;
+		color: var(--discovery-muted);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 	}
-
-	.widget-categories a:hover {
-		background: var(--desktop-secondary-hover, var(--sa-fill-2));
-		color: var(--desktop-action);
+	.blog-meta__category {
+		padding: 2px 6px;
+		border-radius: 4px;
+		background: var(--discovery-muted-surface);
+		color: var(--sa-ink);
+		font-weight: var(--sa-weight-medium);
 	}
-
-	.blog-page .widget-categories a.active {
-		background: var(--sa-ink);
-		color: #fff;
+	.blog-article-card h2 {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		min-height: 2lh;
+		overflow: hidden;
+		margin: 0;
+		color: var(--sa-ink);
+		font: var(--sa-weight-strong) var(--sa-text-xl)/1.3 var(--sa-font);
+		letter-spacing: -0.02em;
 	}
-
+	.blog-article-card p {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		overflow: hidden;
+		margin: 12px 0 0;
+		color: var(--discovery-muted);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
+	}
+	.blog-empty {
+		max-width: 760px;
+		margin-inline: auto;
+		padding: 32px;
+		border: 1px solid var(--discovery-control-border);
+		border-radius: 12px;
+		background: #fff;
+		text-align: center;
+	}
+	.blog-empty h2 {
+		margin: 0;
+		font: var(--sa-weight-strong) var(--sa-text-xl)/1.4 var(--sa-font);
+	}
+	.blog-empty p {
+		margin: 12px 0 24px;
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
+	}
+	.blog-page :is(a, button):focus-visible {
+		outline: 2px solid var(--desktop-focus);
+		outline-offset: 3px;
+	}
 	.sr-only {
 		position: absolute;
 		width: 1px;
 		height: 1px;
 		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
+		clip-path: inset(50%);
 		white-space: nowrap;
 	}
-
-	@media (max-width: 1199px) {
-		.blog-magazine {
-			grid-template-columns: 1fr;
-			min-height: 0;
-		}
-
-		.blog-magazine > .blog-featured-card {
-			min-height: 360px;
-		}
-
-		.blog-magazine__side {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			grid-template-rows: auto;
-		}
-
-		.blog-magazine__side .post-style-6 {
-			grid-template-columns: 1fr;
-		}
-
-		.blog-magazine__side .post-style-6 .post--img {
-			height: auto;
-			aspect-ratio: 1.55;
-		}
-
+	@media (min-width: 992px) and (max-width: 1199px) {
 		.blog-card-grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
-	}
-
-	@media (max-width: 991px) {
-		.blog-controls {
-			display: block;
-			margin-bottom: 24px;
-		}
-
-		.blog-page-title {
-			margin-bottom: 28px;
-			text-align: left;
-		}
-
-		.blog-page-title h1 {
-			font-size: var(--sa-type-page);
-			line-height: 1.12;
-		}
-	}
-
-	@media (max-width: 767px) {
-		.blog-page-title h1 {
-			text-align: left;
-			font-size: var(--sa-text-panel-title);
-		}
-		.blog-page-title {
-			margin-bottom: 24px;
-		}
-		.blog-controls .widget-search {
-			margin-bottom: 16px;
-		}
-		.blog-controls .widget-categories {
-			display: flex;
-			gap: 8px;
-			overflow-x: auto;
-			padding-bottom: 4px;
-			margin-bottom: 0;
-		}
-		.blog-controls .widget-categories li {
-			flex: 0 0 auto;
-		}
-		.blog-controls .widget-categories a {
-			gap: 8px;
-			white-space: nowrap;
-		}
-		.blog-magazine,
-		.blog-magazine__side,
-		.blog-card-grid {
-			grid-template-columns: 1fr;
-		}
-		.blog-featured-card__image {
-			height: 220px;
-		}
-		.blog-featured-card__content {
-			padding: 18px;
-		}
-		.post-style-6,
-		.blog-magazine__side .post-style-6 {
-			display: grid;
-			grid-template-columns: 96px minmax(0, 1fr);
-			min-height: 0;
-		}
-		.post-style-6 .post--img,
-		.blog-magazine__side .post-style-6 .post--img {
-			height: 100%;
-			aspect-ratio: auto;
-		}
-		.post-style-6 .content,
-		.blog-magazine__side .post-style-6 .content {
-			padding: 12px;
-		}
-		.post-style-6 .h4 {
-			font-size: var(--sa-text-lg);
-		}
-		.post-style-6 .blog-meta {
-			gap: 4px 8px;
-			margin-bottom: 8px;
-		}
-
-		.container {
-			width: calc(100% - 32px);
-			padding: 0;
-		}
-		.pb-100 {
-			padding-bottom: 56px;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 	}
 </style>

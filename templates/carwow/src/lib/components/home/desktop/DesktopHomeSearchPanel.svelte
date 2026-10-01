@@ -616,8 +616,8 @@
 		padding: 3px;
 		background: var(--discovery-muted-surface);
 		border-radius: 8px;
-		margin: 0 0 18px;
-		width: 100%;
+		margin: 0 auto 16px;
+		width: fit-content;
 	}
 	.hero-intent__tabs button {
 		background: transparent;
@@ -625,10 +625,10 @@
 		border-radius: 6px;
 		color: #59616c;
 		cursor: pointer;
-		font: inherit;
-		font-size: var(--sa-text-body-sm);
-		font-weight: var(--sa-button-font-weight);
+		font: var(--sa-weight-semibold) var(--sa-text-body-sm)/1.2 var(--sa-font);
+		box-shadow: none;
 		min-height: 36px;
+		min-width: 104px;
 		padding: 0 18px;
 	}
 	.hero-intent__tabs button:hover {
@@ -647,7 +647,7 @@
 		background: var(--discovery-action-hover);
 	}
 	.hero-intent__panel {
-		min-height: 152px;
+		min-height: 140px;
 	}
 	.hero-intent__label {
 		color: var(--sa-ink);
@@ -672,7 +672,7 @@
 		margin: 0;
 	}
 	.hero-intent .hero-intent__input {
-		background: var(--discovery-filter-background);
+		background: var(--discovery-surface);
 		border: 1px solid var(--discovery-control-border);
 		border-radius: 8px;
 		box-shadow: none;

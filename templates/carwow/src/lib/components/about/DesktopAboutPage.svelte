@@ -3,6 +3,7 @@
 	const i18n = getI18n();
 
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
+	import '$lib/styles/desktop-page-frame.css';
 	import {
 		ArrowRight,
 		Phone,
@@ -122,17 +123,10 @@
 
 	<section class="about-section" aria-labelledby="about-story-title">
 		<div class="about-container about-story">
-			<img
-				class="about-story__image"
-				src={i18n.asset(resolve('/assets/images/services/service-card-trade-in-daynight-v2.webp'))}
-				alt={i18n.t('pattern.52479dcffce2', { v0: daynightSite.shortName })}
-				width="1200"
-				height="800"
-				loading="lazy"
-			/>
 			<div>
 				<h2 id="about-story-title">
-					{i18n.t('copy.8e364ad977c2')}<br />{i18n.t('copy.26f103de55d7')}
+					{i18n.t('copy.8e364ad977c2')}
+					{i18n.t('copy.26f103de55d7')}
 				</h2>
 				<p>
 					{daynightSite.shortName}
@@ -361,7 +355,7 @@
 		margin-top: 24px;
 	}
 	.about-page {
-		background: #f4f5f6;
+		background: var(--discovery-canvas, #f4f6fa);
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
 	}
@@ -374,12 +368,12 @@
 		stroke: currentColor !important;
 	}
 	.about-container {
-		width: calc(100% - 96px);
-		max-width: 1280px;
+		width: var(--desktop-content-width);
+		max-width: var(--desktop-content-max);
 		margin-inline: auto;
 	}
 	.about-section {
-		padding: 56px 0;
+		padding: 36px 0;
 	}
 	.about-page h2 {
 		font: var(--sa-weight-strong) var(--sa-text-desktop-section-title)/1.1 var(--sa-font);
@@ -400,21 +394,9 @@
 		padding-inline: 22px;
 	}
 	.about-story {
-		display: grid;
-		grid-template-columns: 1.1fr 1fr;
-		gap: 56px;
-		background: #f5f5f2;
-		border-radius: 16px;
-		overflow: hidden;
-		align-items: center;
-	}
-	.about-story__image {
-		width: 100%;
-		height: 100%;
-		min-height: 440px;
-		object-fit: cover;
-		object-position: center bottom;
-		border-radius: 0;
+		background: #fff;
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 12px;
 	}
 	.about-text-link {
 		display: inline-flex;
@@ -427,11 +409,14 @@
 		margin-top: 20px;
 	}
 	.about-story > div {
-		padding: 36px 36px 36px 0;
+		max-width: 920px;
+		margin-inline: auto;
+		padding: 32px;
+		text-align: center;
 	}
 	.about-story h2 {
 		color: var(--sa-ink);
-		font-size: var(--sa-text-desktop-hero-title);
+		font-size: var(--sa-text-panel-title);
 	}
 	.about-story p {
 		color: #59616a;
@@ -695,12 +680,6 @@
 		border-radius: 0 0 10px 10px;
 	}
 	@media (max-width: 1199px) {
-		.about-container {
-			width: calc(100% - 64px);
-		}
-		.about-story {
-			gap: 32px;
-		}
 		.about-team-grid {
 			gap: 16px;
 		}

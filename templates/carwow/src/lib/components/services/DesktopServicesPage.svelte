@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getI18n } from '$lib/locale/context';
+	import '$lib/styles/desktop-page-frame.css';
 	const i18n = getI18n();
 
 	import {
@@ -171,7 +172,7 @@
 		headingId="daynight-services-title"
 		title={i18n.t('copy.d700ec2758ef')}
 		panel="light"
-		compact
+		deckWidth="wide"
 	>
 		<div class="services-chooser">
 			<h2 id="services-choice-title">{i18n.t('copy.c4eb9ace64ee')}</h2>
@@ -181,9 +182,8 @@
 						href={i18n.href(resolve(serviceRequestPath(service.id)))}
 						onclick={(event) => chooseService(service.id, event)}
 					>
-						<service.icon size={22} strokeWidth={1.7} aria-hidden="true" />
+						<service.icon size={18} strokeWidth={1.7} aria-hidden="true" />
 						<span>{i18n.text(service.title)}</span>
-						<ArrowRight size={16} class="services-shortcut-arrow" aria-hidden="true" />
 					</a>
 				{/each}
 			</nav>
@@ -348,19 +348,17 @@
 
 <style>
 	.services-shortcuts {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		grid-auto-rows: 1fr;
-		gap: 10px;
-		margin: 18px 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin: 14px 0;
 	}
 	.services-shortcuts a {
-		display: grid;
-		grid-template-columns: 1fr auto;
-		align-content: space-between;
-		gap: 12px;
-		min-height: 116px;
-		padding: 16px;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		min-height: 40px;
+		padding: 8px 12px;
 		border: 1px solid var(--desktop-control-border);
 		border-radius: 8px;
 		background: #fff;
@@ -368,14 +366,8 @@
 		font: var(--sa-weight-medium) var(--sa-text-caption)/1.35 var(--sa-font);
 		text-align: left;
 	}
-	.services-shortcuts a > :global(svg:first-child) {
-		grid-column: 1 / -1;
-	}
-	.services-shortcuts a span {
-		min-height: 2.7em;
-	}
-	.services-shortcuts a > :global(.services-shortcut-arrow) {
-		align-self: end;
+	.services-shortcuts a > :global(svg) {
+		flex: none;
 	}
 	.services-shortcuts a:hover {
 		background: var(--desktop-secondary-hover);
@@ -392,7 +384,7 @@
 		text-underline-offset: 3px;
 	}
 	.desktop-services {
-		background: #fff;
+		background: var(--discovery-canvas, #f4f6fa);
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
 	}
@@ -404,13 +396,13 @@
 		text-decoration: none;
 	}
 	.desktop-services .container {
-		width: calc(100% - 96px);
-		max-width: 1280px;
+		width: var(--desktop-content-width);
+		max-width: var(--desktop-content-max);
 		margin-inline: auto;
 		padding: 0;
 	}
 	.services-chooser {
-		padding: 24px;
+		padding: 0;
 		text-align: left;
 	}
 	.desktop-services .services-chooser h2 {
@@ -420,7 +412,7 @@
 		letter-spacing: 0;
 	}
 	.desktop-services-offers {
-		padding: 56px 0 64px;
+		padding: 36px 0 48px;
 	}
 	.desktop-services-sr-only,
 	.desktop-services-honeypot {
@@ -433,21 +425,22 @@
 	}
 	.desktop-services-grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 24px;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 20px;
 	}
 	.desktop-services-card {
 		display: flex;
 		flex-direction: column;
-		color: #fff;
+		color: var(--sa-ink);
 		min-width: 0;
 		overflow: hidden;
-		background: #25292b;
+		background: #fff;
+		border: 1px solid var(--desktop-control-border);
 		border-radius: 12px;
 	}
 	.desktop-services-card__media {
 		display: block;
-		aspect-ratio: 8 / 5;
+		aspect-ratio: 16 / 9;
 		overflow: hidden;
 		border-radius: 0;
 		background: #25292b;
@@ -459,44 +452,47 @@
 		object-position: var(--service-card-position, center);
 	}
 	.desktop-services-card__content {
-		padding: 22px 24px 24px;
+		padding: 16px;
 		display: flex;
 		flex-direction: column;
 		flex: 1;
 	}
 	.desktop-services-card h3 {
-		font: var(--sa-weight-strong) var(--sa-text-desktop-card-title)/1.25 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-lg)/1.35 var(--sa-font);
 		letter-spacing: 0;
 		margin: 0 0 8px;
-		color: #fff;
+		color: var(--sa-ink);
+		min-height: 2lh;
 	}
 	.desktop-services-card p {
-		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
-		color: #d9dcde;
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
+		color: var(--discovery-muted, #62676e);
 		margin: 0;
 	}
 	.desktop-services-card__cta {
 		display: inline-flex;
 		align-self: flex-start;
 		align-items: center;
-		gap: 16px;
-		color: #15191b;
-		background: #fff;
-		border-radius: 8px;
-		font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
-			var(--sa-font);
-		padding: 10px 16px;
-		margin-top: 20px;
-		min-height: 44px;
+		gap: 8px;
+		color: var(--sa-ink);
+		font: var(--sa-weight-semibold) var(--sa-text-caption)/1.4 var(--sa-font);
+		margin-top: auto;
+		padding-top: 16px;
 	}
 	.desktop-services-card__content p {
-		flex: 1;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		overflow: hidden;
+		min-height: 3em;
 	}
 	.desktop-services-card__cta :global(*) {
 		color: inherit;
 	}
 	.desktop-services-card:is(:hover, :focus-visible) .desktop-services-card__cta {
-		background: var(--sa-yellow);
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 	.desktop-services :is(a, select):focus-visible {
 		outline: 2px solid var(--desktop-focus);
@@ -597,9 +593,6 @@
 		color: #027a48;
 	}
 	@media (max-width: 1199px) {
-		.desktop-services .container {
-			width: calc(100% - 64px);
-		}
 		.desktop-services .desktop-services-request__shell {
 			padding: 32px;
 			gap: 28px;

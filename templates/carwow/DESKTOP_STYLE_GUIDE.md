@@ -1,6 +1,6 @@
 # Day & Night — desktop style guide
 
-Updated 2026-10-01. Desktop refinement of the existing dealer site, with separate mobile compositions preserved. This guide governs new desktop styling; it does not certify every legacy route as migrated.
+Updated 2026-10-02. Desktop refinement of the existing dealer site, with separate mobile compositions preserved. This guide governs new desktop styling; it does not certify every legacy route as migrated.
 
 ## Direction
 
@@ -16,7 +16,7 @@ The previous mismatch was measurable: home and inventory shortcuts used differen
 
 - Shared desktop CTA grammar: `src/lib/styles/desktop-controls.css` (992px and wider). `sa-cta-primary` and `desktop-primary-action` use black; secondary/ghost actions use white with a neutral border.
 - Shared desktop discovery roles and chip states: `src/lib/styles/desktop-discovery.css`.
-- Shared Home, catalogue and vehicle-detail content frame: `src/lib/styles/desktop-page-frame.css` (1320px maximum, matching desktop gutters).
+- Shared Home, catalogue, vehicle-detail, Services, About and Blog content frame: `src/lib/styles/desktop-page-frame.css` (1320px maximum, matching desktop gutters).
 - Existing brand yellow, Geist font and responsive heading scale: `src/lib/styles/tokens.css`.
 - Do not change global/mobile tokens to solve a desktop-only issue.
 - The former generated visual specimen is not shipped. Review the live Home and Inventory routes; their components and shared styles are the implementation authority for complete controls.
@@ -96,9 +96,9 @@ Keyboard focus uses a solid 2px black outline with a 2–3px offset. For composi
 | Desktop vehicle card details  | `DesktopVehicleCardDetails.svelte`, `VehiclePriceRow.svelte`; one hierarchy for Home, catalogue and related cards            |
 | Type and make browse grids    | `DesktopHomeVehicleCategories.svelte`, `DesktopHomeBrandStrip.svelte`; centered headings and a final View all tile           |
 
-Inventory shortcuts have a separate row, aligned with the filter triggers, with a 12px row gap and 8px chip gaps. Let the chips wrap within the panel at smaller desktop widths. Active shortcuts keep their black state and remove affordance; keyboard activation preserves focus and the URL filter state.
+Home's mode rail fits its three tabs and is centered within the task panel. Tabs have a 104px minimum width, without extra shadows. Keep the search input white inside its white frame. Inventory uses a contained 1040px hero panel with a full-width search row. Its shortcuts have a separate row, aligned with the filter triggers, with a 12px row gap and 8px chip gaps. Let the chips wrap within the panel at smaller desktop widths. Active shortcuts keep their black state and remove affordance; keyboard activation preserves focus and the URL filter state.
 
-`InventoryPageShell.svelte` exclusively selects the desktop composition. Do not add a second CSS viewport gate around its shell: WebKit can disagree at the 992px scrollbar boundary. `InventoryDesktopPage.svelte` also keeps the shared route hero visible within this selected desktop branch, without changing the hero's other consumers. The shared desktop frame keeps the document scrollbar gutter-free while Home, Inventory or vehicle detail's desktop shell is mounted. Native scrolling remains available; mobile compositions retain their existing scrollbar rules. Avoid a breakpoint-conditioned `scrollbar-gutter: stable` on the document: WebKit can repeatedly change viewport mode at 992px, dropping focus and hiding content. Keep the existing scroll-lock compensation for open dialogs.
+`InventoryPageShell.svelte` exclusively selects the desktop composition. Do not add a second CSS viewport gate around its shell: WebKit can disagree at the 992px scrollbar boundary. `InventoryDesktopPage.svelte` also keeps the shared route hero visible within this selected desktop branch, without changing the hero's other consumers. The shared desktop frame keeps the document scrollbar gutter-free while Home, Inventory, vehicle detail, Services, About or Blog's desktop shell is mounted. Native scrolling remains available; mobile compositions retain their existing scrollbar rules. Avoid a breakpoint-conditioned `scrollbar-gutter: stable` on the document: WebKit can repeatedly change viewport mode at 992px, dropping focus and hiding content. Keep the existing scroll-lock compensation for open dialogs.
 
 The paired action banners have matching grid geometry and a 272px minimum height, growing to fit longer copy. Keep the car illustrations in their own grid column instead of mixing absolute positioning with grid placement. Video and review sections use matching flat white containers with 28px padding; review quotes sit on quiet neutral surfaces inside the group.
 
@@ -106,7 +106,13 @@ The desktop Home preview shows eight cars in four columns at 992–1439px and te
 
 Type and make headings are centered without a separate heading CTA. The last tile opens the full inventory, replacing the last preview tile; the complete taxonomy remains available through inventory filters. The strip variant retains its compact logo-only composition.
 
-The video group uses one large featured thumbnail and two beside it. The YouTube logo is 196px wide. Thumbnail artwork carries its own text; video titles remain in accessible play/close/player labels. Round and clip the media itself on all four corners. Cache the official 1280×720 thumbnails in the desktop-only asset directory, leave existing mobile images/data intact, and create the player only after activation.
+The video group uses three equal 16:9 thumbnails in one row. The YouTube logo is 196px wide. Thumbnail artwork carries its own text; video titles remain in accessible play/close/player labels, without captions below. Round and clip the media itself on all four corners. Cache the official 1280×720 thumbnails in the desktop-only asset directory, leave existing mobile images/data intact, and create the player only after activation.
+
+`DesktopServicesPage.svelte` uses five white service cards per row at desktop widths, with 16:9 images, 18px headings and two-line 14px description previews. All six services remain available. Hero shortcuts are compact links, and each card still opens the existing request form with its service selected.
+
+`DesktopAboutPage.svelte` groups the first introduction below the hero inside a compact white panel, with centered copy and a 28px heading. Do not restore the oversized photo/text split. Team, contact and map content retain their functional compositions.
+
+`BlogIndexPage.svelte` displays articles in a regular four-column desktop grid, with three columns at 992–1199px. Category and topic links use the shared filter-pill states; search, topic and category selections preserve each other in the URL. Keep Back, clearing filters and empty results functional. Do not enlarge a featured post or add a second sidebar article layout. The mobile branch retains its own composition.
 
 Legacy CSS still exists. Shared chip rules contain narrowly scoped `!important` adapters to outrank it. Edit those owning rules instead of appending another late override. Use the same token values for the rest of the family; preserve route-specific data and semantics.
 
