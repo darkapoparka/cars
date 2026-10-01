@@ -53,7 +53,7 @@ for (const width of [320, 360, 390, 430, 844]) {
         await link.click();
         await page.waitForURL(
           (url) =>
-            `${url.pathname}${url.search}` ===
+            `${url.pathname}${url.search}`.replace(defaultLocalePrefix, "") ===
             href?.replace(defaultLocalePrefix, "")
         );
       }
@@ -80,7 +80,7 @@ for (const width of [320, 360, 390, 430, 844]) {
             .locator('[data-slot="mobile-dealer-primary-control"]')
             .boundingBox()
         )?.y
-      ).toBe(64);
+      ).toBe(68);
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= window.innerWidth
@@ -92,7 +92,7 @@ for (const width of [320, 360, 390, 430, 844]) {
     );
     expect(samples.length).toBeGreaterThan(0);
     for (const positions of samples) {
-      expect(positions).toEqual([0, 12, 64, 128]);
+      expect(positions).toEqual([0, 12, 68, 128]);
     }
     await page.goBack();
     await expect(

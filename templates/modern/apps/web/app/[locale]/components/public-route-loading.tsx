@@ -14,6 +14,7 @@ import {
 import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
+import { mobileSearchFieldHeightClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import {
   mobileVehicleCardClassName,
   mobileVehicleCardContentClassName,
@@ -79,7 +80,9 @@ const MobileLoadingHeader = ({
         locale={locale === "bg" ? "bg" : "en"}
         tone={mobileTone}
       >
-        <div className="h-[52px] rounded-full bg-white" />
+        <div
+          className={`${mobileSearchFieldHeightClassName} rounded-full bg-white`}
+        />
       </MobileDealerServiceHero>
     ) : (
       <div className="bg-zinc-950">
@@ -96,7 +99,9 @@ const MobileLoadingHeader = ({
             </div>
           }
         >
-          <div className="h-[52px] rounded-full bg-white" />
+          <div
+            className={`${mobileSearchFieldHeightClassName} rounded-full bg-white`}
+          />
         </MobileDealerChrome>
       </div>
     )}

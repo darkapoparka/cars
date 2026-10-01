@@ -17,10 +17,7 @@ export function MobileDealerChrome({
         {brandRow}
       </div>
       {children ? (
-        <div
-          className="mt-3 h-[52px]"
-          data-slot="mobile-dealer-primary-control"
-        >
+        <div className="mt-3" data-slot="mobile-dealer-primary-control">
           {children}
         </div>
       ) : null}
