@@ -6,12 +6,14 @@
   import { resolve } from '$app/paths';
   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import CampaignVehiclePair from '$components/ui/CampaignVehiclePair.svelte';
   import { featuredVehicles } from '$data/inventory';
 </script>
 
 <section class="dn-section dn-inventory dn-home-content-section" aria-labelledby="featured-title">
   <div class="container dn-inventory-panel">
     <div class="dn-inventory__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
+      <CampaignVehiclePair pair="home" framing="section" />
       <h2 id="featured-title" class="dn-home-section-title">
         <span class="dn-heading-desktop">{i18n.t("m_fd88b7330e98")}</span>
         <span class="dn-heading-mobile">{i18n.t("m_fd88b7330e98")}</span>

@@ -12,8 +12,11 @@ const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp
 const retainedSourceAssets = new Set(['/assets/images/template/service-sell-key-v1.png', '/assets/images/icon-box/car-list4.png', '/assets/images/icon-box/car-list7.png', '/assets/images/lead/day-night-guide-import.webp', '/assets/images/lead/day-night-guide-inspection.webp', '/assets/images/lead/day-night-guide-leasing.webp', '/assets/images/lead/day-night-home-hero-v3.webp', '/assets/images/lead/day-night-home-black-v1.webp', '/assets/images/lead/day-night-logo.png', '/favicon.ico', '/assets/images/section/car-slide1.png', '/assets/images/section/car-slide2.png', '/assets/images/section/car-slide3.png']);
 // The solid About banner no longer requests this photograph; retain its source provenance.
 retainedSourceAssets.add('/assets/images/section/bg-12.jpg');
-// Earlier desktop showroom proposals remain archived; campaign heroes use v2 artwork.
+// Earlier desktop showroom proposals remain archived for provenance.
 for (const name of ['home', 'inventory', 'contact']) retainedSourceAssets.add(`/assets/images/lead/auto-best-desktop-${name}-v1.webp`);
+// These proposals were rejected for warm colour or distorted props. Reuse reviewed cutouts instead.
+retainedSourceAssets.add('/assets/images/lead/auto-best-desktop-about-v1.webp');
+for (const name of ['blog', 'contact']) retainedSourceAssets.add(`/assets/images/lead/auto-best-desktop-${name}-v2.webp`);
 for (const asset of homeScenePrototypes) retainedSourceAssets.add(asset);
 // Rejected desktop section images remain available as source history, without runtime requests.
 for (const name of ['inventory', 'body', 'brands', 'guides']) retainedSourceAssets.add(`/assets/images/template/home-section-${name}-v1.webp`);

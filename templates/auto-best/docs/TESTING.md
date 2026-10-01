@@ -106,18 +106,20 @@ languages checks these positions through Home, Inventory, About, Contact and Blo
 the import, trade-in and leasing routes
 use the same frame. Header, logo and navigation bounds remain unchanged through
 those page transitions. Artwork framing remains identical through header
-navigation while the image changes for each main destination. The initial Home
+navigation while the image or car pair changes for each main destination. The initial Home
 load waits for hydration before testing the hover disclosure and title click.
 Home and Inventory keep identical search-panel bounds.
 It also verifies
 single-line desktop card titles with complete accessible labels and compact
-title-to-specifications spacing, one selected desktop scene request per route and
-no desktop scene requests on mobile, with no additional vehicle overlays,
+title-to-specifications spacing, one selected raster scene request on Home and
+Inventory, and distinct original car pairs on About, Blog and Contact. Mobile
+requests none of these desktop scenes. Home's dark inventory/editorial section
+banners reuse the original cutouts. The suite also checks
 title/description/control separation, real Onest
 glyph rendering (including Cyrillic), visible images, page overflow and runtime
 errors. Desktop content canvases are light grey with white cards;
-all heroes use white headings on dark campaign artwork. About retains its
-architectural photograph with a darker grade.
+all heroes use white headings on dark campaign artwork. About shares the black
+palette and no longer uses the warm architectural photograph.
 Contact keeps its call action and keyboard-accessible directions anchor. Its compact
 visit panel follows the hero without overlap. Home/About share the white location
 badge. About/Contact share one white visit panel with a real map and call/directions

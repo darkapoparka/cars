@@ -5,6 +5,7 @@
   import BrowseAllCard from './BrowseAllCard.svelte';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import CampaignVehiclePair from '$components/ui/CampaignVehiclePair.svelte';
   import { editorial } from '$data/home';
   import { leadSite } from '$config/lead-site';
   import { imageSrcset } from '$data/responsive-images';
@@ -14,6 +15,7 @@
   <div class="dn-editorial__banner" style:--dn-editorial-banner={`url("${leadSite.artwork.editorialBanner}")`}>
     <div class="container">
       <div class="dn-editorial__heading dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
+        <CampaignVehiclePair pair="blog" framing="section" />
         <h2 id="editorial-title" class="dn-home-section-title">
           <span class="dn-heading-desktop">{i18n.t("m_7badc636af8e")}</span>
           <span class="dn-heading-mobile">{i18n.t("m_5062eeb4b9d4")}</span>

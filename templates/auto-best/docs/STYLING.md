@@ -4,18 +4,22 @@ Auto Best combines an image-led automotive layout, Onest typography, rounded sur
 
 ## Desktop route composition
 
-Home, Inventory, Blog and Contact use individual graphite campaign images through
-`DesktopHeroScene.svelte`. The artwork shares subtle halftone dots and restrained
-red accents, with vehicles or relevant service objects confined to the edges.
-About retains its architectural photograph with a darker grade. White headings,
+Home and Inventory use individual graphite campaign images through
+`DesktopHeroScene.svelte`. About, Blog and Contact use the existing transparent
+vehicle pairs through `CampaignVehiclePair.svelte`, with the same black palette,
+subtle halftone dots and restrained red accents. The warm About photograph and
+the distorted Blog/Contact props are retained as provenance only. White headings,
 red primary actions and white search/category/location controls share one
 treatment. Each scene is selected explicitly from `lead-site.ts`; Contact service
-entries use the Contact artwork. All desktop
+entries use the Contact pair. All desktop
 route heroes share a 540px frame: titles start at 200px, leaving 60px below the
 desktop header, and primary controls start at 340px. Subtitle length does not move
 either anchor. Home and Inventory use the same search-panel bounds, padding and
 radius; Blog uses that same center lane. The artwork has identical framing
-across routes, without additional desktop cutout pairs. Mobile Home
+across routes. Vehicle alpha bounds set body height and tyre baselines without
+stretching; the cars stay at the outer edges, leaving the copy and controls clear.
+The Home inventory and editorial heading banners reuse the same cutout renderer
+in its smaller section frame. Mobile Home
 and service illustrations keep their existing composition and do not request
 the desktop artwork. The desktop logo has a
 fixed image box and flex alignment so decoding or route typography does not move
@@ -193,7 +197,7 @@ Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars 
 | Up to 767px | Mobile navigation, home service grid, compact search and bottom-sheet treatments |
 | 768–991px | Intermediate layout; individual components retain their own arrangements |
 | 992px and above | Desktop composition, section banners and desktop discovery controls |
-| 1440px and above | Individual campaign artwork fills the shared hero frame |
+| 1440px and above | Full-width hero artwork keeps the shared center lane clear |
 
 Additional 359/374/380px and 1199px rules handle particular text, grid and control constraints. These are local breakpoints, not separate site themes. Safe-area insets supplement the fixed mobile navigation and sheet footers. The normal dock and vehicle-detail action bar are separate layouts with different height tokens.
 

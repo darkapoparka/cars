@@ -4,6 +4,7 @@ type RouteHeroAsset = 'cars' | 'keys' | 'guide' | 'silver' | 'graphite' | 'portr
 type RouteHeroVariant = 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell';
 type VehicleArtworkKey = 'silver' | 'graphite' | 'gclass' | 'urus' | 'golf' | 'a45' | 'porsche' | 'amggt' | 'm5' | 'e63' | 'm4' | 'rs5';
 type HeroVehiclePair = 'home' | 'inventory' | 'about' | 'blog' | 'contact';
+type DesktopHeroArtwork = { kind: 'image'; src: SiteAssetPath } | { kind: 'vehicles'; pair: HeroVehiclePair };
 
 type LeadSiteConfig = {
   theme: {
@@ -30,7 +31,7 @@ type LeadSiteConfig = {
   };
   artwork: {
     responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
-    desktopHeroScenes: Record<'home' | 'inventory' | 'about' | 'blog' | 'contact', SiteAssetPath>;
+    desktopHeroScenes: Record<HeroVehiclePair, DesktopHeroArtwork>;
     contactHero: { desktop: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
     serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
     homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
@@ -148,11 +149,11 @@ export const leadSite = {
       ]
     },
     desktopHeroScenes: {
-      home: '/assets/images/lead/auto-best-desktop-home-v2.webp',
-      inventory: '/assets/images/lead/auto-best-desktop-inventory-v2.webp',
-      about: '/assets/images/lead/auto-best-desktop-about-v1.webp',
-      blog: '/assets/images/lead/auto-best-desktop-blog-v2.webp',
-      contact: '/assets/images/lead/auto-best-desktop-contact-v2.webp'
+      home: { kind: 'image', src: '/assets/images/lead/auto-best-desktop-home-v2.webp' },
+      inventory: { kind: 'image', src: '/assets/images/lead/auto-best-desktop-inventory-v2.webp' },
+      about: { kind: 'vehicles', pair: 'about' },
+      blog: { kind: 'vehicles', pair: 'blog' },
+      contact: { kind: 'vehicles', pair: 'contact' }
     },
     contactHero: {
       desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',

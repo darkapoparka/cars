@@ -29,7 +29,8 @@ async function heroGeometry(page) {
     const copy = hero.querySelector('.dn-route-hero__copy');
     const heading = hero.querySelector('h1');
     const lead = copy.querySelector('p');
-    const scene = hero.querySelector('.dn-desktop-hero-scene img');
+    const scene = hero.querySelector('.dn-desktop-hero-scene');
+    const sceneImage = scene?.querySelector(':scope > picture > img');
     const rect = e => e?.getBoundingClientRect().toJSON();
     const controls = document.querySelector('.dn-search, .dn-listing-filter, .dn-blog-toolbar, .dn-about-hero .dn-about-button, .dn-contact-hero__desktop-actions, .dn-contact-hero__action');
     return {
@@ -38,8 +39,8 @@ async function heroGeometry(page) {
       logo: rect(document.querySelector('.dn-logo img')),
       navigation: rect(document.querySelector('.dn-nav')),
       backgroundImage: getComputedStyle(hero).backgroundImage,
-      scene: scene ? { src: scene.currentSrc, ...rect(scene) } : null,
-      cutouts: [...hero.querySelectorAll('.dn-hero-vehicles__car img')].map(image => ({ src: image.currentSrc, ...rect(image) })),
+      scene: scene ? { src: sceneImage?.currentSrc ?? null, artwork: scene.dataset.artwork, ...rect(scene) } : null,
+      cutouts: [...hero.querySelectorAll('.dn-campaign-vehicles__car')].filter(car => car.getBoundingClientRect().width).map(car => ({ vehicle: car.dataset.vehicle, src: car.querySelector('img').currentSrc, ...rect(car.querySelector('img')) })),
       font: getComputedStyle(heading).fontFamily,
       headingSize: getComputedStyle(heading).fontSize,
       leadSize: getComputedStyle(lead).fontSize,
@@ -96,15 +97,31 @@ try {
               assert.equal(await page.locator('.dn-blog-search__icon--desktop').isVisible(), width >= 992, 'Desktop retains its search icon');
             }
             const hasScene = width >= 992;
-            assert.equal(sceneRequests.length, hasScene ? 1 : 0, 'Every desktop route requests only its own scene; phones load none');
+            const imageScene = route === '' || route === 'listing-grid';
+            assert.equal(sceneRequests.length, hasScene && imageScene ? 1 : 0, 'Only Home and Inventory request campaign raster scenes; phones load none');
             if (hasScene) {
-              const scene = { '': 'home-v2', 'listing-grid': 'inventory-v2', 'about-us': 'about-v1', blog: 'blog-v2', contact: 'contact-v2' }[route];
-              assert(geometry.scene.src.endsWith(`auto-best-desktop-${scene}.webp`), 'Each route has its own configured artwork in the shared frame');
+              assert.equal(geometry.scene.artwork, imageScene ? 'image' : 'vehicles', 'Company and editorial routes reuse reviewed vehicle cutouts');
+              if (imageScene) {
+                const scene = route === '' ? 'home-v2' : 'inventory-v2';
+                assert(geometry.scene.src.endsWith(`auto-best-desktop-${scene}.webp`), 'Home and Inventory keep their individual artwork');
+              } else {
+                const pair = { 'about-us': ['porsche', 'amggt'], blog: ['m5', 'e63'], contact: ['m4', 'rs5'] }[route];
+                assert.deepEqual(geometry.cutouts.map(car => car.vehicle), pair, 'Each destination has its own reviewed car pair');
+                for (const car of geometry.cutouts) {
+                  assert.match(car.src, new RegExp(`day-night-cutout-${car.vehicle}-v1\\.webp`), 'The original cutout source is used without generated props');
+                  assert(Math.abs(car.width / car.height - 1000 / 667) < .01, 'Vehicles keep their natural proportions');
+                }
+              }
               assert.equal(geometry.scene.height, geometry.hero.height - (width < 1200 ? 140 : 0), 'Laptop crop keeps scene edges below navigation');
               assert.equal(geometry.scene.bottom, geometry.hero.bottom, 'Scene meets the banner baseline');
-              assert.equal(await page.locator('.dn-desktop-hero-scene').evaluate(e => getComputedStyle(e).filter), route === 'about-us' ? 'brightness(0.55)' : 'none', 'About retains its photograph with readable white copy; campaign artwork uses its original colour');
             }
-            assert.equal(geometry.cutouts.length, 0, 'The shared showroom replaces separate desktop vehicle overlays');
+            assert.equal(geometry.cutouts.length, hasScene && !imageScene ? 2 : 0, 'Cutouts appear only in their configured desktop scenes');
+            assert.equal(await page.locator('.dn-hero-vehicles__car').count(), 0, 'The mobile hero renderer does not add another desktop pair');
+            if (!hasScene) {
+              for (const image of await page.locator('.dn-campaign-vehicles img').all()) {
+                assert((await image.evaluate(image => image.currentSrc)).startsWith('data:image/gif;'), 'Hidden desktop pairs do not load car artwork on mobile');
+              }
+            }
             if (width >= 992) {
               assertDesktopFrame(geometry);
               assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
@@ -145,6 +162,10 @@ try {
                 await page.evaluate(() => scrollTo(0, 0));
               }
               if (route === '') {
+                for (const heading of await page.locator('.dn-inventory__heading, .dn-editorial__heading').all()) {
+                  assert.equal(await heading.locator('.dn-campaign-vehicles--section').count(), 1, 'Dark section banners reuse the reviewed car artwork');
+                  assert.equal(await heading.locator('.dn-vehicle-cutout').count(), 2, 'Each section banner has one vehicle pair');
+                }
                 for (const section of await page.locator('.dn-home-content-section').all()) assert.equal(await section.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Home sections use one canvas');
                 for (const card of await page.locator('.dn-vehicle-card').all()) assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Vehicle cards remain white');
                 for (const card of await page.locator('.dn-body-type, .dn-brand-card').filter({ visible: true }).all()) {
@@ -241,10 +262,10 @@ try {
             });
             const geometry = await heroGeometry(page);
             assertDesktopFrame(geometry);
-            const { src: currentSource, ...currentScene } = geometry.scene;
-            const { src: initialSource, ...initialScene } = initial.scene;
+            const { src: currentSource, artwork: _currentArtwork, ...currentScene } = geometry.scene;
+            const { src: initialSource, artwork: _initialArtwork, ...initialScene } = initial.scene;
             assert.deepEqual(currentScene, initialScene, 'Artwork framing stays fixed through header navigation');
-            if (route) assert.notEqual(currentSource, initialSource, 'Main destinations have individual artwork');
+            if (route) assert.notEqual(currentSource ?? geometry.cutouts.map(car => car.vehicle).join(','), initialSource, 'Main destinations have individual artwork');
             for (const element of ['header', 'logo', 'navigation']) {
               assert.deepEqual(geometry[element], initial[element], `${element} keeps its position and size when switching routes`);
             }
@@ -261,8 +282,9 @@ try {
             await settleHeroFonts(page);
             const geometry = await heroGeometry(page);
             assertDesktopFrame(geometry);
-            assert(geometry.scene.src.endsWith('auto-best-desktop-contact-v2.webp'), 'Service entries share the Contact campaign artwork');
-            assert.equal(geometry.cutouts.length, 0, 'Service illustrations remain mobile only');
+            assert.equal(geometry.scene.artwork, 'vehicles', 'Service entries share the clean Contact composition');
+            assert.deepEqual(geometry.cutouts.map(car => car.vehicle), ['m4', 'rs5'], 'Service entries keep the Contact car pair');
+            assert.equal(await page.locator('.dn-hero-vehicles__car').count(), 0, 'Service illustrations remain mobile only');
             assert(geometry.overflow <= 1, 'Service route has no horizontal overflow');
             return geometry;
           });
