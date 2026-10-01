@@ -1,5 +1,13 @@
 # Restrained mobile menu polish
 
+## Current revision: open mobile list
+
+The final direction removes the mobile card outlines and rounded containers. Quiet section labels identify the existing groups, icons are 20px, and rows use a consistent 20px page gutter with full-width separators. Language switching uses a light segmented control with a white selected state. Destinations, dealer configuration, language behavior and bottom navigation are retained. Wider layouts keep their grouped containers.
+
+Current screenshots: 390-open-list.jpg, 320-open-list-bottom.jpg and desktop-open-list.jpg. Verified no page overflow at 320px, 390px and 1440px; menu rows retain at least 56px height and language options retain 44px targets. At 320px the final notice can be scrolled fully clear of the bottom dock. English/Bulgarian switching preserves /more, and Cars opens /bg/cars with 48 listings. The retained Cars24 menu capture informed the open-list structure and smaller icons; no reference login, marketplace claims or proprietary artwork was added.
+
+## Earlier revisions
+
 The /more page keeps its existing grouped cards, icons, language control and bottom navigation. The owner rejected both the inset separators and the black Cars row. Every menu row now uses the same white surface, dark icon and regular label, with full-width borders. Mobile labels use weight 400; desktop uses weight 500. Rows remain 56px high, with the location row at 60px for its subtitle. The current screenshot is 390-uniform-rows.jpg; earlier screenshots retain the superseded treatments for comparison.
 
 Verified the main template at 320px, 390px and 1440px with no page overflow. English/Bulgarian switching retains /more and marks the selected language correctly. The vehicle-services menu link opens /bg/service, and returning restores the menu. Desktop computed styles retain the previous weights and separators.
