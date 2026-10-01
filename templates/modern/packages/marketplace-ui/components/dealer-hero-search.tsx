@@ -25,7 +25,7 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import type { ReactNode } from "react";
-import { useState, useTransition } from "react";
+import { useId, useState, useTransition } from "react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
 import { useMarketplaceOverlayCoordinator } from "../hooks/use-marketplace-overlay-coordinator";
 import {
@@ -68,6 +68,7 @@ const fieldClassName = `${desktopQuickFilterOptionClassName} ${styles.field}`;
 
 export interface DealerHeroSearchProps {
   assistantSlot?: ReactNode;
+  compact?: boolean;
   filters: MarketplaceSearchParams;
   locale?: string;
   searchListings?: readonly InventorySearchListing[];
@@ -81,12 +82,15 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     locale,
     searchListings,
     assistantSlot,
+    compact = false,
     taxonomy = fallbackVehicleTaxonomy,
   } = props;
   const router = useRouter();
   const pathname = usePathname();
   const isDesktop = useDesktopMarketplaceViewport();
   const [filters, setFilters] = useState(initialFilters);
+  const [advancedFiltersOpen, setAdvancedFiltersOpen] = useState(false);
+  const advancedFiltersId = useId();
   const query = filters.q ?? "";
   const setQuery = (value: string) =>
     setFilters((current) => ({ ...current, q: value }));
@@ -98,8 +102,12 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const text = (bg: string, en: string) => (isBg ? bg : en);
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
-  const filterCount = getActiveFilterChips(filters, locale).filter(
+  const activeFilterChips = getActiveFilterChips(filters, locale).filter(
     (chip) => chip.id !== "q"
+  );
+  const filterCount = activeFilterChips.length;
+  const advancedFilterCount = activeFilterChips.filter(
+    (chip) => !["make-model", "price", "year"].includes(chip.id)
   ).length;
   const onApply = (updates: Partial<MarketplaceSearchParams>) => {
     setFilters((current) => withSearchParamUpdates(current, updates));
@@ -138,7 +146,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     isBg
   );
   return (
-    <div className={styles.desktopSearch}>
+    <div className={styles.desktopSearch} data-compact={compact}>
       <DesktopActionPanel
         className={styles.panel}
         data-slot="dealer-desktop-toolbar"
@@ -318,174 +326,200 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               ]}
               title={text("Година", "Year")}
             />
+            {compact ? (
+              <Button
+                aria-controls={advancedFiltersId}
+                aria-expanded={advancedFiltersOpen}
+                className={`${fieldClassName} ${styles.expandFilters}`}
+                onClick={() => setAdvancedFiltersOpen((open) => !open)}
+                type="button"
+                variant="outline"
+              >
+                <span>
+                  {text("Още филтри", "More filters")}
+                  {advancedFilterCount ? ` (${advancedFilterCount})` : ""}
+                </span>
+                <ChevronDown aria-hidden size={16} />
+              </Button>
+            ) : null}
+            <div
+              className={styles.advancedFields}
+              hidden={compact && !advancedFiltersOpen}
+              id={advancedFiltersId}
+            >
+              <DesktopQuickRangeDialog
+                active={filters.mileageMax !== undefined}
+                className={fieldClassName}
+                dataSlot="desktop-hero-mileage"
+                description={text(
+                  "Задайте максимален пробег.",
+                  "Set a maximum mileage."
+                )}
+                formatValue={(value) =>
+                  `${numberFormatter.format(value)} ${text("км", "km")}`
+                }
+                isBg={isBg}
+                label={labels.mileage}
+                maximumLabel={text("Максимален пробег", "Maximum mileage")}
+                maximumOnly
+                maximumPrefix={text("До", "Up to")}
+                minimumLabel={text("Минимум", "Minimum")}
+                onApply={({ maximum }) => onApply({ mileageMax: maximum })}
+                presets={[]}
+                quickSelectLabel={text("Бърз избор", "Quick select")}
+                range={marketplaceMileageRange}
+                selectedMaximum={filters.mileageMax}
+                step={5000}
+                thumbLabels={[
+                  text("Минимален пробег", "Minimum mileage"),
+                  text("Максимален пробег", "Maximum mileage"),
+                ]}
+                title={text("Пробег", "Mileage")}
+              />
+              <DesktopQuickFilterDialog
+                active={Boolean(filters.transmission)}
+                anyLabel={text("Всички скорости", "Any transmission")}
+                className={fieldClassName}
+                dataSlot="desktop-hero-transmission"
+                isBg={isBg}
+                label={
+                  filters.transmission
+                    ? labels.transmission
+                    : text("Скоростна кутия", "Transmission")
+                }
+                onSelect={(transmission) =>
+                  onApply({
+                    transmission:
+                      transmission as MarketplaceSearchParams["transmission"],
+                  })
+                }
+                options={marketplaceTransmissionOptions.map((value) => ({
+                  value,
+                  label: formatTransmission(value, locale),
+                }))}
+                selected={filters.transmission}
+                title={text("Скоростна кутия", "Transmission")}
+              />
+              <DesktopQuickFilterDialog
+                active={Boolean(filters.body)}
+                anyLabel={text("Всички типове", "Any body type")}
+                className={fieldClassName}
+                dataSlot="desktop-hero-body"
+                isBg={isBg}
+                label={
+                  getDesktopQuickFilterLabels(filters, isBg, numberFormatter)
+                    .body
+                }
+                onSelect={(body) =>
+                  onApply({ body: body as MarketplaceSearchParams["body"] })
+                }
+                options={marketplaceBodyFilterOptions.map((option) => ({
+                  value: option.value,
+                  label: isBg ? option.labelBg : option.labelEn,
+                }))}
+                selected={filters.body}
+                title={text("Тип купе", "Body type")}
+              />
 
-            <DesktopQuickRangeDialog
-              active={filters.mileageMax !== undefined}
-              className={fieldClassName}
-              dataSlot="desktop-hero-mileage"
-              description={text(
-                "Задайте максимален пробег.",
-                "Set a maximum mileage."
-              )}
-              formatValue={(value) =>
-                `${numberFormatter.format(value)} ${text("км", "km")}`
-              }
-              isBg={isBg}
-              label={labels.mileage}
-              maximumLabel={text("Максимален пробег", "Maximum mileage")}
-              maximumOnly
-              maximumPrefix={text("До", "Up to")}
-              minimumLabel={text("Минимум", "Minimum")}
-              onApply={({ maximum }) => onApply({ mileageMax: maximum })}
-              presets={[]}
-              quickSelectLabel={text("Бърз избор", "Quick select")}
-              range={marketplaceMileageRange}
-              selectedMaximum={filters.mileageMax}
-              step={5000}
-              thumbLabels={[
-                text("Минимален пробег", "Minimum mileage"),
-                text("Максимален пробег", "Maximum mileage"),
-              ]}
-              title={text("Пробег", "Mileage")}
-            />
-            <DesktopQuickFilterDialog
-              active={Boolean(filters.transmission)}
-              anyLabel={text("Всички скорости", "Any transmission")}
-              className={fieldClassName}
-              dataSlot="desktop-hero-transmission"
-              isBg={isBg}
-              label={
-                filters.transmission
-                  ? labels.transmission
-                  : text("Скоростна кутия", "Transmission")
-              }
-              onSelect={(transmission) =>
-                onApply({
-                  transmission:
-                    transmission as MarketplaceSearchParams["transmission"],
-                })
-              }
-              options={marketplaceTransmissionOptions.map((value) => ({
-                value,
-                label: formatTransmission(value, locale),
-              }))}
-              selected={filters.transmission}
-              title={text("Скоростна кутия", "Transmission")}
-            />
-            <DesktopQuickFilterDialog
-              active={Boolean(filters.body)}
-              anyLabel={text("Всички типове", "Any body type")}
-              className={fieldClassName}
-              dataSlot="desktop-hero-body"
-              isBg={isBg}
-              label={
-                getDesktopQuickFilterLabels(filters, isBg, numberFormatter).body
-              }
-              onSelect={(body) =>
-                onApply({ body: body as MarketplaceSearchParams["body"] })
-              }
-              options={marketplaceBodyFilterOptions.map((option) => ({
-                value: option.value,
-                label: isBg ? option.labelBg : option.labelEn,
-              }))}
-              selected={filters.body}
-              title={text("Тип купе", "Body type")}
-            />
-
-            <DesktopQuickFilterDialog
-              active={Boolean(filters.fuel)}
-              anyLabel={text("Всички горива", "Any fuel")}
-              className={fieldClassName}
-              dataSlot="desktop-hero-fuel"
-              isBg={isBg}
-              label={labels.fuel}
-              onSelect={(fuel) =>
-                onApply({ fuel: fuel as MarketplaceSearchParams["fuel"] })
-              }
-              options={marketplaceFuelOptions.map((value) => ({
-                value,
-                label: formatFuelType(value, locale),
-              }))}
-              selected={filters.fuel}
-              title={text("Гориво", "Fuel")}
-            />
-            <DesktopQuickFilterDialog
-              active={Boolean(filters.seller)}
-              anyLabel={text("Всички продавачи", "Any seller")}
-              className={fieldClassName}
-              dataSlot="desktop-hero-seller"
-              isBg={isBg}
-              label={
-                filters.seller ? labels.seller : text("Продавач", "Seller type")
-              }
-              onSelect={(seller) =>
-                onApply({ seller: seller as MarketplaceSearchParams["seller"] })
-              }
-              options={[
-                { value: "dealer", label: text("Автокъща", "Dealer") },
-                {
-                  value: "private",
-                  label: text("Частно лице", "Private seller"),
-                },
-              ]}
-              selected={filters.seller}
-              title={text("Продавач", "Seller type")}
-            />
-            <DesktopQuickFilterDialog
-              active={filters.powerMin !== undefined}
-              anyLabel={text("Всяка мощност", "Any power")}
-              className={fieldClassName}
-              dataSlot="desktop-hero-power"
-              isBg={isBg}
-              label={
-                filters.powerMin
-                  ? `${filters.powerMin}+ ${text("к.с.", "hp")}`
-                  : text("Мощност", "Power")
-              }
-              onSelect={(power) =>
-                onApply({ powerMin: power ? Number(power) : undefined })
-              }
-              options={[100, 150, 200, 250, 300, 400, 500].map((power) => ({
-                value: String(power),
-                label: `${power}+ ${text("к.с.", "hp")}`,
-              }))}
-              selected={filters.powerMin?.toString()}
-              title={text("Минимална мощност", "Minimum power")}
-            />
-            <DesktopQuickFilterDialog
-              active={Boolean(filters.extra)}
-              anyLabel={
-                equipmentOptions.length
-                  ? text("Без предпочитание", "Any equipment")
-                  : text("Няма записано оборудване", "No equipment recorded")
-              }
-              className={fieldClassName}
-              dataSlot="desktop-hero-extras"
-              isBg={isBg}
-              label={
-                equipmentOptions.find(
-                  (option) => option.value === filters.extra
-                )?.label ??
-                filters.extra ??
-                text("Екстри", "Extras")
-              }
-              onSelect={(extra) => onApply({ extra })}
-              options={equipmentOptions}
-              selected={filters.extra}
-              title={text("Оборудване", "Equipment")}
-            />
-            <DesktopQuickFilterDialog
-              active={Boolean(filters.location)}
-              anyLabel={text("Всички места", "Any location")}
-              className={fieldClassName}
-              dataSlot="desktop-hero-location"
-              isBg={isBg}
-              label={labels.location}
-              onSelect={(location) => onApply({ location })}
-              options={locationOptions}
-              selected={filters.location}
-              title={text("Местоположение", "Location")}
-            />
+              <DesktopQuickFilterDialog
+                active={Boolean(filters.fuel)}
+                anyLabel={text("Всички горива", "Any fuel")}
+                className={fieldClassName}
+                dataSlot="desktop-hero-fuel"
+                isBg={isBg}
+                label={labels.fuel}
+                onSelect={(fuel) =>
+                  onApply({ fuel: fuel as MarketplaceSearchParams["fuel"] })
+                }
+                options={marketplaceFuelOptions.map((value) => ({
+                  value,
+                  label: formatFuelType(value, locale),
+                }))}
+                selected={filters.fuel}
+                title={text("Гориво", "Fuel")}
+              />
+              <DesktopQuickFilterDialog
+                active={Boolean(filters.seller)}
+                anyLabel={text("Всички продавачи", "Any seller")}
+                className={fieldClassName}
+                dataSlot="desktop-hero-seller"
+                isBg={isBg}
+                label={
+                  filters.seller
+                    ? labels.seller
+                    : text("Продавач", "Seller type")
+                }
+                onSelect={(seller) =>
+                  onApply({
+                    seller: seller as MarketplaceSearchParams["seller"],
+                  })
+                }
+                options={[
+                  { value: "dealer", label: text("Автокъща", "Dealer") },
+                  {
+                    value: "private",
+                    label: text("Частно лице", "Private seller"),
+                  },
+                ]}
+                selected={filters.seller}
+                title={text("Продавач", "Seller type")}
+              />
+              <DesktopQuickFilterDialog
+                active={filters.powerMin !== undefined}
+                anyLabel={text("Всяка мощност", "Any power")}
+                className={fieldClassName}
+                dataSlot="desktop-hero-power"
+                isBg={isBg}
+                label={
+                  filters.powerMin
+                    ? `${filters.powerMin}+ ${text("к.с.", "hp")}`
+                    : text("Мощност", "Power")
+                }
+                onSelect={(power) =>
+                  onApply({ powerMin: power ? Number(power) : undefined })
+                }
+                options={[100, 150, 200, 250, 300, 400, 500].map((power) => ({
+                  value: String(power),
+                  label: `${power}+ ${text("к.с.", "hp")}`,
+                }))}
+                selected={filters.powerMin?.toString()}
+                title={text("Минимална мощност", "Minimum power")}
+              />
+              <DesktopQuickFilterDialog
+                active={Boolean(filters.extra)}
+                anyLabel={
+                  equipmentOptions.length
+                    ? text("Без предпочитание", "Any equipment")
+                    : text("Няма записано оборудване", "No equipment recorded")
+                }
+                className={fieldClassName}
+                dataSlot="desktop-hero-extras"
+                isBg={isBg}
+                label={
+                  equipmentOptions.find(
+                    (option) => option.value === filters.extra
+                  )?.label ??
+                  filters.extra ??
+                  text("Екстри", "Extras")
+                }
+                onSelect={(extra) => onApply({ extra })}
+                options={equipmentOptions}
+                selected={filters.extra}
+                title={text("Оборудване", "Equipment")}
+              />
+              <DesktopQuickFilterDialog
+                active={Boolean(filters.location)}
+                anyLabel={text("Всички места", "Any location")}
+                className={fieldClassName}
+                dataSlot="desktop-hero-location"
+                isBg={isBg}
+                label={labels.location}
+                onSelect={(location) => onApply({ location })}
+                options={locationOptions}
+                selected={filters.location}
+                title={text("Местоположение", "Location")}
+              />
+            </div>
           </div>
           <SearchDraftStatus
             filterCount={filterCount}

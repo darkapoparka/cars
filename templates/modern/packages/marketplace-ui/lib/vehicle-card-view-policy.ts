@@ -305,7 +305,7 @@ export const getVehicleCardImageSizes = (
   isDesktopGrid: boolean
 ) => {
   if (isDesktopGrid) {
-    return `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1279px) 33vw, 25vw`;
+    return `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1199px) 50vw, 33vw`;
   }
   if (isCompact) {
     return isGrid

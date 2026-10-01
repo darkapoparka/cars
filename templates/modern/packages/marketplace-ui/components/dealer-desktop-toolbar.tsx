@@ -38,6 +38,7 @@ export const DealerDesktopToolbar = ({
         <div className={styles.content}>
           <DealerHeroSearch
             assistantSlot={assistantSlot}
+            compact
             filters={filters}
             key={JSON.stringify(filters)}
             locale={locale}

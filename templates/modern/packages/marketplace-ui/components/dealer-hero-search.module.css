@@ -2,6 +2,12 @@
   display: none;
 }
 @media (min-width: 1024px) {
+  .advancedFields {
+    display: contents;
+  }
+  .advancedFields[hidden] {
+    display: none;
+  }
   .desktopSearch {
     display: grid;
     gap: 1.25rem;
@@ -149,6 +155,50 @@
     padding: 0 0.25rem;
     font-size: 0.8125rem;
     color: var(--muted-foreground);
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktopSearch[data-compact="true"] .panel {
+    gap: 0.875rem;
+    min-height: 0;
+    padding: 1.125rem;
+    border-radius: 0.875rem;
+  }
+  .desktopSearch[data-compact="true"] .tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    background: transparent;
+  }
+  .desktopSearch[data-compact="true"] .tabs a {
+    min-height: 2.25rem;
+    padding: 0.375rem 1rem;
+  }
+  .desktopSearch[data-compact="true"] .tabs a[aria-current="page"] {
+    background: var(--control);
+    border-color: transparent;
+  }
+  .desktopSearch[data-compact="true"] .form {
+    gap: 0.75rem;
+  }
+  .desktopSearch[data-compact="true"] .fields {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(9rem, 0.7fr);
+    gap: 0.625rem;
+  }
+  .desktopSearch[data-compact="true"] .advancedFields:not([hidden]) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column: 1 / -1;
+    gap: 0.625rem;
+  }
+  .expandFilters {
+    justify-content: space-between;
+    background: var(--control);
+    border-color: transparent;
+  }
+  .expandFilters[aria-expanded="true"] svg {
+    transform: rotate(180deg);
   }
 }
 @media (min-width: 1280px) {

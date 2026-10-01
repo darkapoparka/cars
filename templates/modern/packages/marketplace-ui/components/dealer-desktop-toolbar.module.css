@@ -15,4 +15,11 @@
       var(--layout-content-max)
     );
   }
+  .toolbar [data-slot="dealer-desktop-home-hero"] {
+    gap: 1rem;
+    padding: 1rem 0 1.5rem;
+  }
+  .toolbar [data-slot="dealer-desktop-home-hero"] h1 {
+    font-size: 2rem;
+  }
 }
