@@ -86,6 +86,7 @@ export const accountSubmissionListingRows = (): AuxeroAccountListingRow[] =>
 			submission.mileage,
 			submissionStatusBg[submission.status] ?? submission.status
 		],
+		createdAt: submission.createdAt,
 		description: localizeSubmissionMessage(submission.message),
 		id: submission.id,
 		image: '/assets/images/dashboard/car.svg',

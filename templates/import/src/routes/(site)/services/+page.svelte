@@ -177,6 +177,9 @@
 			font-size: var(--bc-mobile-label);
 			white-space: nowrap;
 		}
+		.service-mobile-filters :global(.site-action.secondary) {
+			background: var(--bc-white);
+		}
 		.services-grid {
 			grid-template-columns: 1fr;
 			container: service-list / inline-size;

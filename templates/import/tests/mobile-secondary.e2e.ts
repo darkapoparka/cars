@@ -139,6 +139,15 @@ for (const locale of ['en', 'bg']) {
 			name: locale === 'en' ? 'Quick service filters' : 'Бърз избор на услуга'
 		});
 		const filterButtons = filters.getByRole('button');
+		expect(
+			await filters
+				.locator('button[aria-pressed="false"]')
+				.evaluateAll((buttons) =>
+					buttons.every(
+						(button) => getComputedStyle(button).backgroundColor === 'rgb(255, 255, 255)'
+					)
+				)
+		).toBe(true);
 		const rows = await filterButtons.evaluateAll((buttons) =>
 			buttons.map((button) => button.getBoundingClientRect().top)
 		);

@@ -81,19 +81,11 @@
 					</Action>
 				</div>
 			</section>
-			<section class="daynight-contact-mobile__info" aria-label={nt('ui41')}>
-				<div>
-					<p>{nt('ui23')}</p>
-					<a {...hrefAttributes(info.phoneHref)}>{info.phoneLabel}</a>
-					{#if info.secondaryPhoneHref !== info.phoneHref || info.secondaryPhoneLabel !== info.phoneLabel}
-						<a {...hrefAttributes(info.secondaryPhoneHref)}>{info.secondaryPhoneLabel}</a>
-					{/if}
-				</div>
-				<div>
-					{#if info.emailHref.startsWith('mailto:')}<p>{nt('ui42')}</p>{/if}
+			{#if info.emailHref.startsWith('mailto:')}
+				<section class="daynight-contact-mobile__info" aria-label={nt('ui42')}>
 					<a {...hrefAttributes(info.emailHref)}>{info.emailLabel}</a>
-				</div>
-			</section>
+				</section>
+			{/if}
 
 			<Action
 				variant="strong"
@@ -168,30 +160,16 @@
 		text-underline-offset: 3px;
 	}
 	.daynight-contact-mobile__info {
-		display: grid;
-		gap: var(--bc-space-4);
 		padding-inline: var(--bc-space-1);
 	}
-	.daynight-contact-mobile__info > div {
-		display: grid;
-		gap: var(--bc-space-1);
-		min-width: 0;
-	}
-	.daynight-contact-mobile__info p {
-		margin: 0;
-		color: var(--bc-muted);
-		font: var(--bc-weight-body) var(--bc-mobile-label)/1.25 var(--bc-font-body);
-	}
-	.daynight-contact-mobile__info div > a {
+	.daynight-contact-mobile__info a {
+		display: inline-flex;
+		min-height: var(--bc-control-height-standard);
+		align-items: center;
 		color: var(--bc-ink);
 		font: var(--bc-weight-heading) var(--bc-mobile-card-title)/1.333333 var(--bc-font-body);
 		overflow-wrap: anywhere;
 		text-decoration: none;
-	}
-	.daynight-contact-mobile__info div > a {
-		display: inline-flex;
-		min-height: var(--bc-control-height-standard);
-		align-items: center;
 	}
 	.daynight-contact-mobile__socials {
 		display: grid;

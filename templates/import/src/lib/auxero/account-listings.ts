@@ -9,6 +9,7 @@ export type AuxeroAccountListingAction = {
 export type AuxeroAccountListingRow = {
 	actions: AuxeroAccountListingAction[];
 	columns: string[];
+	createdAt?: string;
 	description: string;
 	href?: string;
 	id: string;
