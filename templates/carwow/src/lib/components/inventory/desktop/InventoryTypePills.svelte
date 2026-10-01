@@ -36,37 +36,6 @@
 	}
 </script>
 
-{#snippet pillIcon()}
-	<svg
-		aria-hidden="true"
-		width="42"
-		height="20"
-		viewBox="0 0 76 36"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<path
-			d="M13 23H8.5C6.6 23 5 21.4 5 19.5V17.6C5 15.9 6.2 14.4 7.9 14.1L17.7 12.3L24.2 6.7C25.5 5.6 27.1 5 28.8 5H45.5C47.7 5 49.8 6 51.1 7.8L55.3 13.4L66.3 15.8C69 16.4 71 18.8 71 21.6V23H64"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-		/>
-		<path d="M25 23H52" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-		<path
-			d="M22.5 28.5C25.5376 28.5 28 26.0376 28 23C28 19.9624 25.5376 17.5 22.5 17.5C19.4624 17.5 17 19.9624 17 23C17 26.0376 19.4624 28.5 22.5 28.5Z"
-			stroke="currentColor"
-			stroke-width="2"
-		/>
-		<path
-			d="M58.5 28.5C61.5376 28.5 64 26.0376 64 23C64 19.9624 61.5376 17.5 58.5 17.5C55.4624 17.5 53 19.9624 53 23C53 26.0376 55.4624 28.5 58.5 28.5Z"
-			stroke="currentColor"
-			stroke-width="2"
-		/>
-		<path d="M25 13H48" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-	</svg>
-{/snippet}
-
 <div
 	class="daynight-inventory-type-pills"
 	data-daynight-shortcut-pills
@@ -93,78 +62,22 @@
 				: i18n.t('pattern.8b15a08c1b53', { v0: i18n.spec(pill.label) })}
 			onclick={(event) => handlePillClick(event, pill)}
 		>
-			{@render pillIcon()}
 			<span>{i18n.spec(pill.label)}</span>
 		</a>
 	{/each}
 </div>
 
 <style>
-	:global(.inventory-template-shell .daynight-inventory-type-pill) {
-		position: relative;
-	}
-
-	:global(
-		.inventory-template-shell .daynight-inventory-quick-form .daynight-inventory-type-pill.is-active
-	) {
-		background: #b00000;
-		border-color: #b00000;
-		color: #fff;
-	}
-
-	:global(
-		.inventory-template-shell
-			.daynight-inventory-quick-form
-			.daynight-inventory-type-pill.is-active:hover
-	) {
-		background: #8a0000;
-		border-color: #8a0000;
-		color: #fff;
-	}
-
-	:global(
-		.inventory-template-shell
-			.daynight-inventory-quick-form
-			.daynight-inventory-type-pill.is-selected
-	) {
-		background: #b00000;
-		border-color: #b00000;
-		color: #fff;
-	}
-
-	:global(
-		.inventory-template-shell
-			.daynight-inventory-quick-form
-			.daynight-inventory-type-pill.is-selected:hover
-	) {
-		background: #8a0000;
-		border-color: #8a0000;
-		color: #fff;
-	}
-
-	:global(
-		.inventory-template-shell
-			.daynight-inventory-type-pill.is-selected:not([data-daynight-shortcut-clear='true'])::after
-	) {
-		align-items: center;
-		border: 1px solid rgba(255, 255, 255, 0.78);
-		border-radius: 999px;
-		content: 'x';
-		display: inline-flex;
-		flex: 0 0 auto;
-		font-size: var(--sa-text-caption);
-		font-weight: var(--sa-weight-strong);
-		height: 18px;
-		justify-content: center;
-		line-height: 1;
-		margin-left: 1px;
-		text-transform: uppercase;
+	.daynight-inventory-type-pill.is-selected:not([data-daynight-shortcut-clear='true'])::after {
+		content: '×';
+		display: grid;
+		place-items: center;
+		flex: 0 0 18px;
 		width: 18px;
-	}
-
-	:global(.inventory-template-shell .daynight-inventory-type-pill:focus-visible) {
-		box-shadow: none;
-		outline: 2px solid #b00000;
-		outline-offset: 2px;
+		height: 18px;
+		border: 1px solid currentColor;
+		border-radius: 50%;
+		font: inherit;
+		line-height: 1;
 	}
 </style>

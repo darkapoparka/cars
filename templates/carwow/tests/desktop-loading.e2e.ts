@@ -52,6 +52,7 @@ test('server bootstrap and hydration use one desktop CSS URL', async ({ page }, 
 	await page.evaluate(() => document.fonts.ready);
 	await page.screenshot({ path: testInfo.outputPath('home-desktop-after.png') });
 	for (const selector of [
+		'.daynight-home-action-grid',
 		'.daynight-home-campaign-grid',
 		'.home-videos',
 		'.daynight-home-review-grid'
@@ -63,9 +64,23 @@ test('server bootstrap and hydration use one desktop CSS URL', async ({ page }, 
 				.toBeGreaterThan(0);
 		}
 	}
+	await page.evaluate(() => window.scrollTo(0, 0));
+	await expect.poll(() => page.evaluate(() => scrollY)).toBe(0);
 	await page.screenshot({
 		path: testInfo.outputPath('home-desktop-full-after.png'),
 		fullPage: true
+	});
+	const campaigns = (await page.locator('.daynight-home-campaign-grid').boundingBox())!;
+	const reviews = (await page.locator('.home-reviews-panel').boundingBox())!;
+	await page.screenshot({
+		path: testInfo.outputPath('desktop-banners-videos-reviews.png'),
+		fullPage: true,
+		clip: {
+			x: 0,
+			y: campaigns.y - 24,
+			width: 1440,
+			height: reviews.y + reviews.height - campaigns.y + 48
+		}
 	});
 });
 

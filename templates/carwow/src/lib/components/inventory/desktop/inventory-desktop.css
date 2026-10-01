@@ -437,13 +437,9 @@
 	width: 1px;
 }
 
-/* LAYOUT: retained native card/layout contracts. */
-@media (max-width: 991px) {
-	.inventory-template-shell,
-	.inventory-template-mobile-hidden {
-		display: none;
-	}
-}
+/* LAYOUT: retained native card/layout contracts.
+ * InventoryPageShell exclusively mounts this composition on desktop. A second
+ * CSS viewport gate hides the selected page at WebKit's scrollbar boundary. */
 
 /* Native desktop inventory layout. Re-rooted from the legacy
    `body.daynight-template-listing-grid4-columns-html` body class onto the

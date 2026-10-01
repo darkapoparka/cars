@@ -7,16 +7,13 @@
 <style>
 	.inventory-results-shortcuts {
 		margin: 0;
-		padding: 0 16px 12px;
+		padding: 0;
 	}
 	:global(.inventory-refined .inventory-results-shortcuts .daynight-inventory-type-pills) {
 		display: flex !important;
 		flex-wrap: wrap !important;
-		gap: 6px 20px !important;
+		gap: 8px !important;
 		padding: 0 !important;
 		margin: 0 !important;
-	}
-	:global(.inventory-refined .inventory-results-shortcuts .daynight-inventory-type-pill svg) {
-		display: none !important;
 	}
 </style>

@@ -89,6 +89,15 @@ Keyboard focus uses a solid 2px black outline with a 2–3px offset. For composi
 | Inventory task controls       | `InventoryDesktopPage.svelte`, `InventoryFilterTriggers.svelte`, `InventoryFilterDialog.svelte`                              |
 | Shared shortcut appearance    | `desktop-discovery.css`, `DesktopHomeInventoryTabs.svelte`, `InventoryShortcutShelf.svelte`, `InventoryTypePills.svelte`     |
 | Discovery canvas/card borders | `DesktopHomeInventoryPreview.svelte`, `DesktopHome.svelte`, `DesktopHomeInventoryCard.svelte`, `InventoryDesktopPage.svelte` |
+| Buy / Sell and review panels  | `DesktopHomeReviews.svelte`; the desktop composition sheet does not override their geometry                                  |
+| Three promotional banners     | `DesktopHomeWhyDayNight.svelte`; compact content with a separate illustration area                                           |
+| Desktop video panel           | `DesktopHomeVideos.svelte`; white section panel, 16:9 thumbnails and click-to-play players                                   |
+
+Inventory shortcuts have a separate row, aligned with the filter triggers, with a 12px row gap and 8px chip gaps. Let the chips wrap within the panel at smaller desktop widths. Active shortcuts keep their black state and remove affordance; keyboard activation preserves focus and the URL filter state.
+
+`InventoryPageShell.svelte` exclusively selects the desktop composition. Do not add a second CSS viewport gate around its shell: WebKit can disagree at the 992px scrollbar boundary. `InventoryDesktopPage.svelte` also keeps the shared route hero visible within this selected desktop branch, without changing the hero's other consumers. Avoid a breakpoint-conditioned `scrollbar-gutter: stable` on the document: WebKit can repeatedly change viewport mode at 992px, dropping focus and hiding content. Keep the existing scroll-lock compensation for open dialogs.
+
+The paired action banners have matching grid geometry and a 272px minimum height, growing to fit longer copy. Keep the car illustrations in their own grid column instead of mixing absolute positioning with grid placement. Video and review sections use matching flat white containers with 28px padding; review quotes sit on quiet neutral surfaces inside the group.
 
 Legacy CSS still exists. Shared chip rules contain narrowly scoped `!important` adapters to outrank it. Edit those owning rules instead of appending another late override. Use the same token values for the rest of the family; preserve route-specific data and semantics.
 

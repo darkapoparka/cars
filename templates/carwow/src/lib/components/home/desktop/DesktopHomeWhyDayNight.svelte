@@ -181,7 +181,7 @@
 	.daynight-home-campaign-grid {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 16px;
+		gap: 24px;
 	}
 
 	.daynight-home-campaign-card {
@@ -193,8 +193,8 @@
 		border-radius: 12px;
 		box-shadow: none;
 		display: grid;
-		grid-template-rows: auto minmax(220px, 1fr);
-		min-height: 440px;
+		grid-template-rows: auto minmax(160px, 1fr);
+		min-height: 360px;
 		overflow: hidden;
 		position: relative;
 	}
@@ -225,22 +225,23 @@
 		object-position: right bottom;
 	}
 	.daynight-home-campaign-card--collection .daynight-home-campaign-card__media img {
-		width: 104%;
-		height: auto;
+		width: 100%;
+		height: 100%;
 		right: 0;
-		bottom: -16%;
+		bottom: 0;
+		object-position: center bottom;
 	}
 	.daynight-home-campaign-card--viewing .daynight-home-campaign-card__media img {
-		height: 320px;
-		width: 320px;
+		height: 220px;
+		width: 220px;
 		right: 12px;
 		top: 0;
 	}
 	.daynight-home-campaign-card--financing .daynight-home-campaign-card__media img {
 		height: auto;
-		width: 88%;
+		width: 76%;
 		right: 0;
-		top: -16%;
+		top: -12%;
 	}
 	.daynight-home-campaign-card__content {
 		align-items: flex-start;
@@ -248,7 +249,7 @@
 		display: flex;
 		flex-direction: column;
 		grid-row: 1;
-		padding: 28px 28px 16px;
+		padding: 24px 24px 16px;
 		position: relative;
 		min-width: 0;
 	}
@@ -258,7 +259,7 @@
 		font-weight: var(--sa-weight-heading);
 		letter-spacing: -0.025em;
 		line-height: 1.15;
-		margin: 0 0 12px;
+		margin: 0 0 10px;
 		overflow-wrap: break-word;
 	}
 	.daynight-home-campaign-card p {
@@ -266,7 +267,7 @@
 		font-size: var(--sa-type-body);
 		font-weight: var(--sa-weight-regular);
 		line-height: 1.5;
-		margin: 0 0 20px;
+		margin: 0 0 16px;
 		max-width: 34ch;
 		min-height: 3em;
 	}

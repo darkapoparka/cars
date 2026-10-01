@@ -60,3 +60,25 @@ The shared language chunk remains about 464KB decoded, and the root stylesheet r
 Ignored local artifacts: `.audit/desktop-2026-10-01/`. Key files are `home-desktop-after.png`, `home-desktop-full-after.png`, `inventory-desktop-after.png`, `detail-desktop-after.png`, `videos-desktop-after.png`, `mobile-home-before.jpg`, `mobile-home-after.png`, `e2e-desktop-final.log`, `e2e-webkit-focused-final.log`, `e2e-mobile-final.log`, `unit-final.log`, `build-final.log`, `built-css-before.json`, `built-css-final.json`, `desktop-weight-final.log` and `mobile-source-preservation-final.json`.
 
 Codex in-app tab inspection timed out during the final pass; final screenshots and checks came from the purpose-built browser QA suite against the same port-6464 production preview.
+
+## Follow-up: desktop filters, banners and content panels
+
+The owner requested a final desktop pass after the first correction, using the current [Carwow homepage](https://www.carwow.co.uk/) as inspiration. Its compact task links, clearly grouped content and consistent spacing informed this pass. Day Night Auto retains its existing identity, imagery, content and routes; the white video/review containers are a deliberate choice for this template.
+
+- Inventory shortcut pills now align with the filter triggers, with 12px between rows and 8px between chips. Removed the repeated hidden SVG markup and competing red selected-state rules. Keyboard selection retains focus, the URL filter and the black selected state/remove affordance.
+- Buy / Sell cards use one grid owner in `DesktopHomeReviews.svelte`. Removed the conflicting flex/absolute-positioned composition rules and local override chain. Both cards have a 272px minimum height, grow for longer copy, keep illustrations in their own column and use the existing shared CTA component.
+- The three campaign banners have a 360px minimum height, tighter copy spacing and contained illustration areas. Existing collection, viewing and financing routes remain intact.
+- YouTube and reviews use matching flat white panels with neutral borders and 28px padding. Video thumbnails retain their 16:9 ratio and only create a player on activation. Review quotes use neutral inner cards; demonstration disclosure remains visible.
+- WebKit exposed a second CSS hide gate on inventory at the 992px scrollbar boundary. The route already exclusively selects desktop. Removed that redundant shell gate and kept the shared hero visible inside the selected desktop inventory component, without changing its other consumers.
+- Removed the desktop-only document `scrollbar-gutter: stable` rule. In WebKit, applying it at the composition breakpoint could repeatedly switch the rendered branch, losing keyboard focus and hiding images. The mobile media rules, viewport selection logic and dialog scroll-lock compensation are preserved.
+- Desktop catalogue cards drop the transparent SVG candidate after mounting at a desktop width. WebKit could retain it instead of the real photograph at 992px, particularly when changing locales. SSR/mobile source guards remain in place; other callers keep the helper's original behavior.
+
+A separate owner-authorized mobile chat edited mobile files in the same checkout during this follow-up. This desktop task did not edit those files or include them in its commit. All 125 protected mobile/data/assets/token files matched the snapshot taken after that chat's edits. The other chat's uncommitted work remains preserved. The earlier mobile verification above records the first correction, rather than acceptance of the other chat's later work.
+
+Final follow-up production build passed. Desktop home source CSS is 10,515 bytes; its production stylesheet is 8,638 bytes with the same `daynight-home-desktop.BUZxmlDj.css` URL in client and server output. The sheet retains zero `!important` declarations. Svelte/TypeScript reports zero errors and warnings; scoped ESLint, typography across 297 source files, formatting and scoped diff checks passed.
+
+Final Chromium: 25 tests passed. Final focused WebKit: seven tests passed, including the new inventory pills/photo/focus check in English and Bulgarian at 992/1280/1440/1920px. Both engines verified the CSS bootstrap/navigation, video lifecycle and mobile composition/asset separation. These are local production-preview checks; full WebKit route and hosted/device acceptance are not claimed.
+
+Follow-up evidence lives in `.audit/desktop-2026-10-01/`, including `polish-accepted-chromium/`, `polish-accepted-webkit/`, `build-polish-verified.log`, `check-polish-verified.log`, `e2e-polish-accepted-chromium.log`, `e2e-polish-accepted-webkit.log` and `mobile-polish-preservation-final.json`. In-app browser inspection recovered for this follow-up, and the reference and local desktop were visually inspected there.
+
+This follow-up does not close the download-budget, shared CSS/language weight, architecture, original-photo or hosted/device acceptance limits recorded above. It does not promote a template release or deploy dealers.

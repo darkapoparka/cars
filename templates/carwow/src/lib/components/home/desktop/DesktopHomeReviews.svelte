@@ -104,55 +104,57 @@
 	aria-label={!showReviews && showActionCards ? i18n.t('copy.45fb1be3fa4b') : undefined}
 >
 	{#if showReviews}
-		<div class="daynight-home-container home-reviews-heading">
-			<DesktopSectionHeading
-				title={i18n.t('copy.93b3d88de23a')}
-				href={i18n.href(showHeaderCta ? resolve('/reviews') : undefined)}
-				label={ctaLabel}
-			/>
-			<p class="home-reviews-disclosure">{i18n.text(daynightReviewDisclosure)}</p>
-		</div>
-		<div
-			class="daynight-home-container daynight-home-section-panel daynight-home-section-panel--reviews"
-		>
-			<div class="daynight-home-review-grid">
-				<div class="daynight-home-review-grid__items">
-					{#each reviews as review (review.id)}
-						<div class="daynight-home-review-grid__item">
-							<a href={i18n.href(resolve('/reviews'))} class="daynight-home-review-card">
-								<div class="daynight-home-review-card__rating">
-									{#each starIds.slice(0, review.rating) as star (star)}
-										<img src={i18n.asset('/assets/icons/star.svg')} alt="" aria-hidden="true" />
-									{/each}
-								</div>
-								<p class="daynight-home-review-card__description">{i18n.text(review.text)}</p>
-								<div class="daynight-home-review-card__user">
-									<img
-										class="daynight-home-review-card__avatar"
-										src={i18n.asset(desktopOnlyImagePlaceholder)}
-										srcset={desktopOnlySrcset(review.avatar, 160)}
-										sizes={desktopOnlySizes('56px')}
-										alt={i18n.text(review.name)}
-										loading="lazy"
-										decoding="async"
-									/>
-									<div class="daynight-home-review-card__user-content">
-										<p class="daynight-home-review-card__name">{i18n.text(review.name)}</p>
-										<p class="daynight-home-review-card__meta">{i18n.text(review.label)}</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					{/each}
-				</div>
+		<div class="daynight-home-container home-reviews-panel">
+			<div class="home-reviews-heading">
+				<DesktopSectionHeading
+					title={i18n.t('copy.93b3d88de23a')}
+					href={i18n.href(showHeaderCta ? resolve('/reviews') : undefined)}
+					label={ctaLabel}
+				/>
+				<p class="home-reviews-disclosure">{i18n.text(daynightReviewDisclosure)}</p>
 			</div>
-			{#if showBelowCta}
-				<div class="daynight-home-reviews__browse-cta">
-					<a href={i18n.href(resolve('/reviews'))} class="daynight-home-reviews__browse-cta-link">
-						{i18n.text(ctaLabel)}
-					</a>
+			<div class="daynight-home-section-panel daynight-home-section-panel--reviews">
+				<div class="daynight-home-review-grid">
+					<div class="daynight-home-review-grid__items">
+						{#each reviews as review (review.id)}
+							<div class="daynight-home-review-grid__item">
+								<a href={i18n.href(resolve('/reviews'))} class="daynight-home-review-card">
+									<div class="daynight-home-review-card__rating">
+										{#each starIds.slice(0, review.rating) as star (star)}
+											<img src={i18n.asset('/assets/icons/star.svg')} alt="" aria-hidden="true" />
+										{/each}
+									</div>
+									<p class="daynight-home-review-card__description">{i18n.text(review.text)}</p>
+									<div class="daynight-home-review-card__user">
+										<img
+											class="daynight-home-review-card__avatar"
+											src={i18n.asset(desktopOnlyImagePlaceholder)}
+											srcset={desktopOnlySrcset(review.avatar, 160)}
+											sizes={desktopOnlySizes('56px')}
+											alt={i18n.text(review.name)}
+											width="48"
+											height="48"
+											loading="lazy"
+											decoding="async"
+										/>
+										<div class="daynight-home-review-card__user-content">
+											<p class="daynight-home-review-card__name">{i18n.text(review.name)}</p>
+											<p class="daynight-home-review-card__meta">{i18n.text(review.label)}</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						{/each}
+					</div>
 				</div>
-			{/if}
+				{#if showBelowCta}
+					<div class="daynight-home-reviews__browse-cta">
+						<a href={i18n.href(resolve('/reviews'))} class="daynight-home-reviews__browse-cta-link">
+							{i18n.text(ctaLabel)}
+						</a>
+					</div>
+				{/if}
+			</div>
 		</div>
 	{/if}
 	{#if showReviews && showActionCards}
@@ -172,6 +174,8 @@
 								alt={i18n.text(card.alt)}
 								loading="lazy"
 								decoding="async"
+								width="1536"
+								height="1024"
 							/>
 							<div class="daynight-home-action-card__content">
 								<p class="daynight-home-action-card__heading">
@@ -190,14 +194,11 @@
 									{/each}
 								</ul>
 								<div class="home-action-button">
-									{#if card.modifier === 'inventory'}<DesktopBrowseLink
-											href={i18n.href(resolve(card.ctaHref))}
-											label={card.ctaLabel}
-											tone="dark"
-										/>{:else}<a
-											href={i18n.href(resolve(card.ctaHref))}
-											class="daynight-home-action-card__cta">{i18n.text(card.ctaLabel)}</a
-										>{/if}
+									<DesktopBrowseLink
+										href={i18n.href(resolve(card.ctaHref))}
+										label={card.ctaLabel}
+										tone={card.modifier === 'inventory' ? 'dark' : 'light'}
+									/>
 								</div>
 							</div>
 						</div>
@@ -209,245 +210,209 @@
 </section>
 
 <style>
-	.home-reviews-disclosure {
-		margin: 12px 0 0;
-		color: var(--sa-ink-soft);
-		font: var(--sa-weight-medium) var(--sa-text-sm)/1.5 var(--sa-font);
-	}
-	.home-action-button {
-		margin-top: 22px;
-		display: flex;
-		align-items: center;
-	}
-	.home-reviews-heading {
-		padding-top: 36px;
-	}
-	:global(body.daynight-home-page) .daynight-home-action-grid {
-		gap: 16px !important;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card {
-		--banner-foreground: var(--desktop-action);
-		background: var(--sa-yellow);
-		border: 0 !important;
-		border-radius: 16px !important;
-		box-shadow: none !important;
+	/* This desktop component owns both promotional panels and customer reviews. */
+	.daynight-home-action-grid {
 		display: grid;
-		grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-		height: 300px;
-		isolation: isolate;
-		max-height: none;
-		overflow: hidden;
-		transform: none !important;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 24px;
 	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card--sell {
+	.daynight-home-action-grid__item {
+		min-width: 0;
+	}
+	.daynight-home-action-card {
+		--banner-foreground: var(--desktop-action);
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+		min-height: 272px;
+		height: 100%;
+		overflow: hidden;
+		border-radius: 12px;
+		background: var(--sa-yellow);
+	}
+	.daynight-home-action-card--sell {
 		--banner-foreground: #fff;
 		background: var(--sa-red-strong);
 	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card::before {
-		content: none !important;
-		display: none !important;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__image {
+	.daynight-home-action-card__image {
 		grid-column: 2;
 		grid-row: 1;
-		height: 100% !important;
-		object-fit: contain;
-		object-position: center;
-		padding: 8px;
-		box-sizing: border-box;
+		display: block;
 		width: 100%;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__content {
-		align-items: flex-start;
-		background: transparent !important;
-		bottom: auto;
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: column;
-		grid-column: 1;
-		grid-row: 1;
-		justify-content: flex-start;
-		left: auto;
-		padding: 28px 8px 28px 32px !important;
-		position: relative;
-		width: auto;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__heading {
-		margin: 0 0 14px;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__title {
-		color: var(--banner-foreground) !important;
-		font-size: var(--sa-text-panel-title);
-		font-weight: var(--sa-weight-heading);
-		letter-spacing: -0.025em;
-		line-height: 1.12;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__list {
-		margin: 0 0 22px;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__list li {
-		color: var(--banner-foreground);
-		font-size: var(--sa-button-font-size);
-		font-weight: var(--sa-button-font-weight);
-		gap: 8px;
-		line-height: 1.35;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__list li:not(:last-child) {
-		margin-bottom: 7px;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__list :global(svg) {
-		color: inherit;
-		flex: 0 0 auto;
-		height: 15px;
-		width: 15px;
-	}
-	:global(body.daynight-home-page) .daynight-home-action-card__list :global(svg *),
-	:global(body.daynight-home-page) .daynight-home-action-card__list :global(svg) {
-		color: var(--banner-foreground) !important;
-		stroke: currentColor !important;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__cta {
-		align-items: center;
-		background: #111827 !important;
-		border: 0 !important;
-		border-radius: 8px !important;
-		box-shadow: none !important;
-		color: #fff !important;
-		display: inline-flex;
-		font-size: var(--sa-button-font-size);
-		font-weight: var(--sa-button-font-weight);
-		height: 44px;
-		justify-content: center;
-		margin-top: auto;
-		padding: 0 18px !important;
-		transition: background-color 0.14s ease;
-	}
-
-	:global(body.daynight-home-page)
-		.daynight-home-action-card--sell
-		.daynight-home-action-card__cta {
-		background: var(--desktop-secondary) !important;
-		color: var(--desktop-action) !important;
-	}
-
-	:global(body.daynight-home-page)
-		.daynight-home-action-card--inventory
-		.daynight-home-action-card__cta:hover,
-	:global(body.daynight-home-page)
-		.daynight-home-action-card--inventory
-		.daynight-home-action-card__cta:focus-visible {
-		background: var(--desktop-action-hover) !important;
-	}
-
-	:global(body.daynight-home-page)
-		.daynight-home-action-card--sell
-		.daynight-home-action-card__cta:hover,
-	:global(body.daynight-home-page)
-		.daynight-home-action-card--sell
-		.daynight-home-action-card__cta:focus-visible {
-		background: var(--desktop-secondary-hover) !important;
-	}
-
-	:global(body.daynight-home-page) .daynight-home-action-card__cta:focus-visible {
-		outline: 2px solid #111827;
-		outline-offset: 3px;
-	}
-
-	:global(body.daynight-home-page)
-		.daynight-home-section--balanced-actions
-		:global(.daynight-home-action-card__content) {
-		display: flex;
 		height: 100%;
 		min-height: 0;
-		padding-left: 28px !important;
-		padding-right: 4px !important;
+		object-fit: contain;
+		object-position: center;
 	}
-
-	.daynight-home-section--balanced-actions :global(.daynight-home-action-card__heading) {
+	.daynight-home-action-card__content {
+		grid-column: 1;
+		grid-row: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		min-width: 0;
+		padding: 28px 0 28px 28px;
+	}
+	.daynight-home-action-card__heading {
+		margin: 0 0 16px;
+	}
+	.daynight-home-action-card__title {
+		color: var(--banner-foreground);
+		font: var(--sa-weight-heading) var(--sa-text-panel-title)/1.15 var(--sa-font);
+		letter-spacing: -0.025em;
+	}
+	.daynight-home-action-card__list {
+		display: grid;
+		gap: 8px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.daynight-home-action-card__list li {
+		display: flex;
+		align-items: flex-start;
+		gap: 8px;
+		color: var(--banner-foreground);
+		font: var(--sa-weight-regular) var(--sa-text-control)/1.45 var(--sa-font);
+	}
+	.daynight-home-action-card__list :global(svg),
+	.daynight-home-action-card__list :global(svg *) {
+		color: var(--banner-foreground);
+		stroke: currentColor;
+	}
+	.daynight-home-action-card__list :global(svg) {
+		flex-shrink: 0;
+		margin-top: 3px;
+	}
+	.home-action-button {
+		padding-top: 24px;
+		margin-top: auto;
+	}
+	.home-action-button :global(.desktop-browse-link) {
+		max-width: 100%;
+		white-space: normal;
+		text-align: center;
+	}
+	.home-action-button :global(.desktop-browse-link svg),
+	.home-action-button :global(.desktop-browse-link svg *) {
+		color: inherit;
+		stroke: currentColor;
+	}
+	.daynight-home-action-spacer {
+		height: 32px;
+	}
+	.home-reviews-panel {
+		padding: 28px;
+		border: 1px solid var(--discovery-control-border);
+		border-radius: 12px;
+		background: #fff;
+	}
+	.home-reviews-heading {
+		margin-bottom: 24px;
+	}
+	.home-reviews-heading :global(.desktop-section-heading) {
 		margin-bottom: 12px;
 	}
-
-	.daynight-home-section--balanced-actions :global(.daynight-home-action-card__title),
-	.daynight-home-section--balanced-actions :global(.daynight-home-action-card__list li) {
-		white-space: nowrap;
+	.home-reviews-disclosure {
+		margin: 0;
+		color: var(--sa-ink-soft);
+		font: var(--sa-weight-regular) var(--sa-text-sm)/1.5 var(--sa-font);
 	}
-
-	:global(body.daynight-home-page)
-		.daynight-home-section--balanced-actions
-		:global(.daynight-home-action-card__title) {
-		font-size: var(--sa-text-panel-title);
+	.daynight-home-review-grid__items {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 20px;
 	}
-
-	:global(body.daynight-home-page)
-		.daynight-home-section--balanced-actions
-		:global(.daynight-home-action-card__list li) {
-		font-size: var(--sa-button-font-size);
-		font-weight: var(--sa-button-font-weight);
-		line-height: 1.4;
+	.daynight-home-review-grid__item {
+		min-width: 0;
 	}
-
-	.daynight-home-section--balanced-actions :global(.daynight-home-action-card__list) {
-		align-self: start;
-		margin-bottom: 0;
+	.daynight-home-review-card {
+		display: flex;
+		flex-direction: column;
+		min-height: 248px;
+		height: 100%;
+		padding: 20px;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		background: var(--discovery-muted-surface);
+		text-decoration: none;
 	}
-
-	:global(body.daynight-home-page)
-		.daynight-home-section--balanced-actions
-		:global(.daynight-home-action-card__cta) {
-		align-self: flex-start;
-		font-size: var(--sa-button-font-size);
-		justify-self: start;
-		margin: auto 0 0;
+	.daynight-home-review-card:hover {
+		border-color: var(--discovery-border-hover);
 	}
-
+	.daynight-home-review-card__rating {
+		display: flex;
+		gap: 4px;
+		margin-bottom: 14px;
+	}
+	.daynight-home-review-card__rating img {
+		width: 18px;
+		height: 18px;
+	}
+	.daynight-home-review-card__description {
+		color: var(--sa-ink);
+		font: var(--sa-weight-regular) var(--sa-text-control)/1.6 var(--sa-font);
+		margin: 0 0 24px;
+	}
+	.daynight-home-review-card__user {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-top: auto;
+	}
+	.daynight-home-review-card__avatar {
+		width: 48px;
+		height: 48px;
+		flex-shrink: 0;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	.daynight-home-review-card__name {
+		color: var(--sa-ink);
+		font: var(--sa-weight-semibold) var(--sa-text-control)/1.4 var(--sa-font);
+		margin: 0;
+	}
+	.daynight-home-review-card__meta {
+		color: var(--sa-ink-soft);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
+		margin: 4px 0 0;
+	}
 	.daynight-home-reviews__browse-cta {
 		display: flex;
 		justify-content: center;
 		margin-top: 24px;
 	}
-
-	:global(body.daynight-home-page) .daynight-home-reviews__browse-cta-link {
-		align-items: center;
-		background: transparent;
-		border: 1px solid #c91620;
-		border-radius: 8px;
-		box-sizing: border-box;
-		color: #c91620;
+	.daynight-home-reviews__browse-cta-link {
 		display: inline-flex;
-		font-size: var(--sa-button-font-size);
-		font-weight: var(--sa-button-font-weight);
+		align-items: center;
 		justify-content: center;
-		min-height: 42px;
+		min-height: 44px;
 		padding: 0 18px;
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 8px;
+		color: var(--desktop-action);
+		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
+		background: #fff;
 		text-decoration: none;
-		transition:
-			background-color 0.14s ease,
-			border-color 0.14s ease,
-			color 0.14s ease;
 	}
-
-	:global(body.daynight-home-page) .daynight-home-reviews__browse-cta-link:hover,
-	:global(body.daynight-home-page) .daynight-home-reviews__browse-cta-link:focus-visible {
-		background: #c91620;
-		border-color: #c91620;
-		color: #fff;
+	.daynight-home-reviews__browse-cta-link:hover {
+		background: var(--desktop-secondary-hover);
+		border-color: var(--desktop-secondary-hover);
 	}
-
-	@media (max-width: 1199px) and (min-width: 992px) {
-		:global(body.daynight-home-page) .daynight-home-action-grid {
-			grid-template-columns: minmax(0, 1fr);
+	@media (max-width: 1199px) {
+		.daynight-home-action-grid {
+			gap: 16px;
+		}
+		.daynight-home-action-card {
+			grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+		}
+		.daynight-home-action-card__content {
+			padding: 24px 0 24px 24px;
+		}
+		.home-reviews-panel {
+			padding: 24px;
+		}
+		.daynight-home-review-grid__items {
+			gap: 16px;
 		}
 	}
 </style>

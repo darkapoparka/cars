@@ -3,6 +3,7 @@
 	const i18n = getI18n();
 
 	import { resolve } from '$app/paths';
+	import { onMount } from 'svelte';
 	import { fromAction } from 'svelte/attachments';
 	import { getDayNightVehicleCondition, placeholderImageSlugs } from '$lib/data/daynight-vehicles';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
@@ -26,6 +27,12 @@
 	);
 	const condition = $derived(getDayNightVehicleCondition(vehicle));
 	const image = $derived(desktopVehicleImage(vehicle.image));
+	let desktopMounted = $state(false);
+	onMount(() => {
+		// Keep SSR/mobile source guards, then use photographic candidates on desktop.
+		// WebKit can retain the transparent SVG candidate at the 992px boundary.
+		desktopMounted = window.innerWidth >= 992;
+	});
 	// A placeholder-only gallery is not a real photo — no count badge for it.
 	const hasRealPhotos = $derived(
 		!placeholderImageSlugs.has(vehicle.slug) && vehicle.gallery.length > 0
@@ -61,9 +68,11 @@
 		>
 			<img
 				class="card--img"
-				src={i18n.asset(image.width ? desktopOnlyImagePlaceholder : image.src)}
-				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset)}
-				sizes="(min-width: 1241px) calc((100vw - 160px) / 4), (min-width: 992px) calc((100vw - 120px) / 3), 1px"
+				src={i18n.asset(image.width && !desktopMounted ? desktopOnlyImagePlaceholder : image.src)}
+				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset, !desktopMounted)}
+				sizes={desktopMounted
+					? '(min-width: 1241px) calc((100vw - 160px) / 4), calc((100vw - 120px) / 3)'
+					: '(min-width: 1241px) calc((100vw - 160px) / 4), (min-width: 992px) calc((100vw - 120px) / 3), 1px'}
 				alt={vehicle.shortTitle}
 				width={image.width}
 				height={image.height}

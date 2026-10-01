@@ -121,11 +121,19 @@
 	}
 
 	.inventory-banner-filters {
+		display: grid;
+		gap: 12px;
 		background: transparent;
 		border-radius: 0;
 	}
 
 	.inventory-hero {
 		width: 100%;
+	}
+
+	/* The route shell already selects desktop, including the 992px boundary.
+	 * Keep the shared hero visible here without changing its mobile consumers. */
+	.inventory-hero :global(.daynight-yellow-route-hero) {
+		display: block;
 	}
 </style>

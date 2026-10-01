@@ -13,11 +13,15 @@ export function desktopVehicleImage(src: string, width: 320 | 640 | 1280 = 640) 
 }
 
 /** Let ordinary screens choose card-sized photos while dense screens retain detail. */
-export function desktopVehicleImageSrcset(src: string, asset: (path: string) => string) {
+export function desktopVehicleImageSrcset(
+	src: string,
+	asset: (path: string) => string,
+	includePlaceholder = true
+) {
 	const variants = desktopVehicleImages[src];
 	const original = desktopVehicleImage(src);
 	const images = variants ? [variants[320], variants[640]] : original.width ? [original] : [];
-	return images.length
-		? `${asset(desktopOnlyImagePlaceholder)} 4w, ${images.map((image) => `${asset(image.src)} ${image.width}w`).join(', ')}`
-		: undefined;
+	if (!images.length) return undefined;
+	const photos = images.map((image) => `${asset(image.src)} ${image.width}w`).join(', ');
+	return includePlaceholder ? `${asset(desktopOnlyImagePlaceholder)} 4w, ${photos}` : photos;
 }

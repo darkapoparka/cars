@@ -1,5 +1,83 @@
 import { expect, test } from '@playwright/test';
 
+test('quick inventory filters wrap within their row and toggle without losing focus', async ({
+	page
+}, testInfo) => {
+	for (const locale of ['en', 'bg']) {
+		for (const width of [992, 1280, 1440, 1920]) {
+			await page.setViewportSize({ width, height: 1000 });
+			await page.goto(`/${locale}/inventory`);
+			await expect(page.locator('.inventory-filter-triggers button').first()).toBeVisible();
+			await expect(page.locator('.inventory-filter-triggers button').first()).toBeEnabled();
+			await page.evaluate(() => document.fonts.ready);
+			const shelf = page.locator('.inventory-results-shortcuts');
+			await expect(shelf).toBeVisible();
+			await expect
+				.poll(() =>
+					page
+						.locator('[data-daynight-grid-panel].active .image > a img')
+						.first()
+						.evaluate((image: HTMLImageElement) => ({
+							loaded: image.complete && image.naturalWidth > 0,
+							realPhoto: !image.currentSrc.includes('transparent-1x1'),
+							currentSrc: image.currentSrc,
+							viewport: innerWidth,
+							gutter: getComputedStyle(document.documentElement).scrollbarGutter
+						}))
+				)
+				.toMatchObject({ loaded: true, realPhoto: true });
+			const chips = shelf.locator('a');
+			const geometry = await shelf.evaluate((element) => {
+				const box = element.getBoundingClientRect();
+				const filterRow = document.querySelector(
+					'.inventory-banner-filters .inventory-filter-triggers'
+				);
+				if (!filterRow) {
+					throw new Error(
+						JSON.stringify({
+							innerWidth,
+							clientWidth: document.documentElement.clientWidth,
+							mobile: matchMedia('(max-width: 991px)').matches,
+							desktop: matchMedia('(min-width: 992px)').matches,
+							gutter: getComputedStyle(document.documentElement).scrollbarGutter,
+							connected: element.isConnected
+						})
+					);
+				}
+				const filters = filterRow.getBoundingClientRect();
+				return {
+					gap: box.top - filters.bottom,
+					aligned: Math.abs(box.left - filters.left) < 1,
+					contained: [...element.querySelectorAll('a')].every((chip) => {
+						const bounds = chip.getBoundingClientRect();
+						return (
+							bounds.left >= box.left - 1 &&
+							bounds.right <= box.right + 1 &&
+							bounds.top >= box.top &&
+							bounds.bottom <= box.bottom + 1
+						);
+					})
+				};
+			});
+			expect(geometry.gap).toBeGreaterThanOrEqual(8);
+			expect(geometry.aligned).toBe(true);
+			expect(geometry.contained).toBe(true);
+			const bmw = chips.filter({ hasText: /^BMW$/ });
+			await bmw.focus();
+			await bmw.press('Enter');
+			await expect(bmw).toHaveAttribute('aria-current', 'true');
+			await expect(bmw).toBeFocused();
+			await expect(page).toHaveURL(/brand=BMW/);
+			await expect(bmw).toHaveCSS('color', 'rgb(255, 255, 255)');
+			await bmw.press('Enter');
+			await expect(bmw).toHaveAttribute('aria-current', 'false');
+			await expect(page).not.toHaveURL(/brand=BMW/);
+			await expect(chips.first()).toHaveAttribute('aria-current', 'true');
+			await page.screenshot({ path: testInfo.outputPath(`quick-filters-${locale}-${width}.png`) });
+		}
+	}
+});
+
 test('inventory search entry points open the full filter dialog and restore focus', async ({
 	page
 }) => {

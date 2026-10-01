@@ -135,12 +135,6 @@
 {/if}
 
 <style>
-	@media (min-width: 992px) {
-		:global(html) {
-			scrollbar-gutter: stable;
-		}
-	}
-
 	:global(html.daynight-scroll-locked .header-wrapper.header-sticky),
 	:global(html.daynight-scroll-locked .header.is-fixed),
 	:global(html.daynight-scroll-locked .daynight-home-header.is-fixed) {

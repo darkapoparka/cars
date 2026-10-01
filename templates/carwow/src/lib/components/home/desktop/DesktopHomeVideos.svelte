@@ -8,6 +8,7 @@
 	import Play from '@lucide/svelte/icons/play';
 	import X from '@lucide/svelte/icons/x';
 	import { tick } from 'svelte';
+	const sectionTitle = $derived(i18n.t('pattern.a68a6b88cee2', { v0: daynightSite.shortName }));
 	let activeVideo = $state<string | null>(null);
 	let triggerCard: HTMLElement | null = null;
 	async function stop() {
@@ -17,25 +18,21 @@
 	}
 </script>
 
-<section
-	class="home-videos"
-	aria-label={i18n.t('pattern.a68a6b88cee2', { v0: daynightSite.shortName })}
->
-	<div class="daynight-home-container">
+<section class="home-videos daynight-home-section" aria-label={sectionTitle}>
+	<div class="daynight-home-container home-videos__panel">
 		<DesktopSectionHeading
-			title={i18n.t('pattern.a68a6b88cee2', { v0: daynightSite.shortName })}
+			title={sectionTitle}
 			href={i18n.href(youtubeChannelUrl)}
 			label={i18n.t('copy.48ed41283c9d')}
 		>
 			{#snippet titleContent()}
 				<span class="home-videos__title"
-					>{daynightSite.shortName}
-					{i18n.t('copy.b8012cb642c8')}
+					>{sectionTitle.replace(/\s+YouTube$/, '')}
 					<img
 						src={i18n.asset('/assets/brands/youtube-logo.png')}
 						alt={i18n.t('copy.fb7accfff8c6')}
-						width="186"
-						height="62"
+						width="138"
+						height="46"
 					/></span
 				>
 			{/snippet}
@@ -97,21 +94,25 @@
 
 <style>
 	.home-videos {
-		background: #f5f6f7;
-		padding: 40px 0;
+		padding: 0 0 48px;
+	}
+	.home-videos__panel {
+		padding: 28px;
+		border: 1px solid var(--discovery-control-border);
+		border-radius: 12px;
+		background: #fff;
 	}
 	.home-videos__title {
 		display: inline-flex;
 		align-items: center;
 		gap: 12px;
-		font: inherit !important;
-		color: inherit !important;
+		font: inherit;
+		color: inherit;
 	}
 	.home-videos__title img {
 		display: block;
-		width: 186px;
-		height: 62px;
-		margin-block: -9px;
+		width: 138px;
+		height: 46px;
 		object-fit: contain;
 	}
 	.home-videos__grid {
@@ -125,13 +126,12 @@
 	}
 	.home-video__image {
 		aspect-ratio: 16 / 9;
-		min-height: 200px;
 		background: #24282c;
 		position: relative;
 	}
 	.home-video h3 {
 		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);
-		padding: 16px 0 0;
+		padding: 14px 0 0;
 		color: var(--sa-ink);
 		margin: 0;
 	}
@@ -200,7 +200,6 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		min-height: 200px;
 		border: 0;
 	}
 </style>
