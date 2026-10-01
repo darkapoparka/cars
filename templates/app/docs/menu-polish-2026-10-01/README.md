@@ -1,6 +1,10 @@
 # Restrained mobile menu polish
 
-## Current revision: open mobile list
+## Current revision: restored original composition
+
+The owner rejected the open-list redesign. Restored the original menu from before commit 5b480220a: grouped cards, original 500-weight labels, 24px icons, 12px mobile gutters, spacing and pill-shaped language selector. The only retained visual correction is removal of the black Cars-row treatment. Current screenshot: 390-restored-baseline.jpg. Verified at 320px, 390px and 1440px with no horizontal overflow. Earlier revisions below are superseded.
+
+## Superseded revision: open mobile list
 
 The final direction removes the mobile card outlines and rounded containers. Quiet section labels identify the existing groups, icons are 20px, and rows use a consistent 20px page gutter with full-width separators. Language switching uses a light segmented control with a white selected state. Destinations, dealer configuration, language behavior and bottom navigation are retained. Wider layouts keep their grouped containers.
 
