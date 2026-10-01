@@ -1,0 +1,326 @@
+{
+	"before-390": {
+		"cards": [
+			{
+				"bodyWidth": 234,
+				"ctaHeight": 44,
+				"ctaWidth": 210,
+				"fontFamily": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"fontSize": "18px",
+				"height": 162,
+				"title": "Подбрани автомобили",
+				"titleHeight": 22.5,
+				"titleWidth": 210
+			},
+			{
+				"bodyWidth": 234,
+				"ctaHeight": 44,
+				"ctaWidth": 210,
+				"fontFamily": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"fontSize": "18px",
+				"height": 162,
+				"title": "Проверка на обява",
+				"titleHeight": 22.5,
+				"titleWidth": 210
+			},
+			{
+				"bodyWidth": 234,
+				"ctaHeight": 44,
+				"ctaWidth": 210,
+				"fontFamily": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"fontSize": "18px",
+				"height": 162,
+				"title": "Продажба на автомобил",
+				"titleHeight": 22.5,
+				"titleWidth": 210
+			},
+			{
+				"bodyWidth": 234,
+				"ctaHeight": 44,
+				"ctaWidth": 210,
+				"fontFamily": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"fontSize": "18px",
+				"height": 162,
+				"title": "Документи и регистрация",
+				"titleHeight": 22.5,
+				"titleWidth": 210
+			},
+			{
+				"bodyWidth": 234,
+				"ctaHeight": 44,
+				"ctaWidth": 210,
+				"fontFamily": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"fontSize": "18px",
+				"height": 162,
+				"title": "Огледи с уговорка",
+				"titleHeight": 22.5,
+				"titleWidth": 210
+			},
+			{
+				"bodyWidth": 234,
+				"ctaHeight": 44,
+				"ctaWidth": 210,
+				"fontFamily": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"fontSize": "18px",
+				"height": 162,
+				"title": "Сравнение на модели",
+				"titleHeight": 22.5,
+				"titleWidth": 210
+			}
+		],
+		"scrollWidth": 390,
+		"viewport": 390
+	},
+	"before-320": {
+		"cards": [
+			{
+				"height": 183,
+				"title": "Подбрани автомобили",
+				"titleHeight": 45,
+				"titleWidth": 164.5
+			},
+			{
+				"height": 162,
+				"title": "Проверка на обява",
+				"titleHeight": 22.5,
+				"titleWidth": 164.5
+			},
+			{
+				"height": 183,
+				"title": "Продажба на автомобил",
+				"titleHeight": 45,
+				"titleWidth": 164.5
+			},
+			{
+				"height": 183,
+				"title": "Документи и регистрация",
+				"titleHeight": 45,
+				"titleWidth": 164.5
+			},
+			{
+				"height": 162,
+				"title": "Огледи с уговорка",
+				"titleHeight": 22.5,
+				"titleWidth": 164.5
+			},
+			{
+				"height": 162,
+				"title": "Сравнение на модели",
+				"titleHeight": 22.5,
+				"titleWidth": 164.5
+			}
+		],
+		"scrollWidth": 320,
+		"viewport": 320
+	},
+	"after-390": {
+		"cards": [
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"fontSize": "20px",
+				"height": 164,
+				"title": "Подбрани автомобили",
+				"titleHeight": 26,
+				"titleScrollWidth": 228,
+				"titleWidth": 228
+			},
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"fontSize": "20px",
+				"height": 164,
+				"title": "Проверка на обява",
+				"titleHeight": 26,
+				"titleScrollWidth": 228,
+				"titleWidth": 228
+			},
+			{
+				"ctaBackground": "rgb(238, 241, 244)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"fontSize": "20px",
+				"height": 164,
+				"title": "Продажба на автомобил",
+				"titleHeight": 26,
+				"titleScrollWidth": 228,
+				"titleWidth": 228
+			},
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"fontSize": "20px",
+				"height": 164,
+				"title": "Документи и регистрация",
+				"titleHeight": 26,
+				"titleScrollWidth": 228,
+				"titleWidth": 228
+			},
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"fontSize": "20px",
+				"height": 164,
+				"title": "Огледи с уговорка",
+				"titleHeight": 26,
+				"titleScrollWidth": 228,
+				"titleWidth": 228
+			},
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"fontSize": "20px",
+				"height": 164,
+				"title": "Сравнение на модели",
+				"titleHeight": 26,
+				"titleScrollWidth": 228,
+				"titleWidth": 228
+			}
+		],
+		"scrollWidth": 390,
+		"viewport": 390
+	},
+	"after-320": {
+		"cards": [
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"height": 190,
+				"title": "Подбрани автомобили",
+				"titleHeight": 52,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"height": 164,
+				"title": "Проверка на обява",
+				"titleHeight": 26,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaBackground": "rgb(238, 241, 244)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"height": 190,
+				"title": "Продажба на автомобил",
+				"titleHeight": 52,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"height": 190,
+				"title": "Документи и регистрация",
+				"titleHeight": 52,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"height": 164,
+				"title": "Огледи с уговорка",
+				"titleHeight": 26,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaBackground": "rgb(245, 247, 249)",
+				"ctaHeight": 44,
+				"ctaRadius": "999px",
+				"ctaWidth": 141.46875,
+				"height": 164,
+				"title": "Сравнение на модели",
+				"titleHeight": 26,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			}
+		],
+		"scrollWidth": 320,
+		"viewport": 320
+	},
+	"after-en-320": {
+		"cards": [
+			{
+				"ctaHeight": 44,
+				"ctaWidth": 135.484375,
+				"href": "/en/inventory",
+				"title": "Selected cars",
+				"titleHeight": 26,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaHeight": 44,
+				"ctaWidth": 135.484375,
+				"href": "/en/import",
+				"title": "Listing review",
+				"titleHeight": 26,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaHeight": 44,
+				"ctaWidth": 135.484375,
+				"href": "/en/sell-your-car",
+				"title": "Selling a car",
+				"titleHeight": 26,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaHeight": 44,
+				"ctaWidth": 135.484375,
+				"href": "/en/contact?topic=registration#contact-details",
+				"title": "Documents and registration",
+				"titleHeight": 52,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaHeight": 44,
+				"ctaWidth": 135.484375,
+				"href": "/en/contact#contact-details",
+				"title": "Viewings by appointment",
+				"titleHeight": 52,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			},
+			{
+				"ctaHeight": 44,
+				"ctaWidth": 135.484375,
+				"href": "/en/compare",
+				"title": "Model comparison",
+				"titleHeight": 26,
+				"titleScrollWidth": 179,
+				"titleWidth": 179
+			}
+		],
+		"scrollWidth": 320,
+		"viewport": 320
+	}
+}
