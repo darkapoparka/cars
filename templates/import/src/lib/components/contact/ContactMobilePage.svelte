@@ -11,11 +11,11 @@
 	import MessageCircle from '@lucide/svelte/icons/message-circle';
 	import Navigation from '@lucide/svelte/icons/navigation';
 	import PhoneCall from '@lucide/svelte/icons/phone-call';
-	import Plus from '@lucide/svelte/icons/plus';
 	import { linkHref } from '$lib/utils/links';
 	import { daynightContact } from '$lib/config/dealer';
 	import type { AuxeroContactFormData, AuxeroContactPageInfo } from '$lib/auxero/contact';
 	import MobilePageHero from '$lib/components/common/MobilePageHero.svelte';
+	import Action from '$lib/components/common/Action.svelte';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
@@ -25,6 +25,8 @@
 		embedded = false
 	}: { form: AuxeroContactFormData; info: AuxeroContactPageInfo; embedded?: boolean } = $props();
 	let formOpen = $state(false);
+	const english = $derived(page.data.locale === 'en');
+	const copy = $derived(dealerCopy[english ? 'en' : 'bg']);
 	const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(daynightContact.addressLabel)}`;
 	const hrefAttributes = (href: string) => ({ href: linkHref(href) });
 	const openForm = () => {
@@ -49,40 +51,40 @@
 >
 	<svelte:element this={embedded ? 'section' : 'main'} class="daynight-contact-mobile__main">
 		<MobilePageHero
-			title={page.data.locale === 'en' ? 'Contact us' : 'Контакти'}
-			description={dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}
+			title={english ? 'Contact us' : 'Контакти'}
+			description={copy.appointment}
 			image="/assets/daynight/proof-studio-import-handoff.webp"
 			titleId="contact-mobile-title"
+			align="center"
 		>
 			{#snippet actions()}
 				<nav class="daynight-contact-mobile__actions" aria-label={nt('ui36')}>
-					<a {...hrefAttributes(info.phoneHref)}
-						><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui37')}</a
+					<Action href={info.phoneHref} variant="secondary" size="compact"
+						><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui37')}</Action
 					>
-					<a {...hrefAttributes(daynightContact.viberHref)}
-						><MessageCircle size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui38')}</a
-					>
-					<button
-						type="button"
-						onclick={openForm}
-						aria-label={nt('ui39')}
-						aria-haspopup="dialog"
-						aria-expanded={formOpen}
-						><Plus size={18} strokeWidth={2.35} aria-hidden="true" />{nt('ui40')}</button
+					<Action href={daynightContact.viberHref} variant="glass" size="compact"
+						><MessageCircle size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui38')}</Action
 					>
 				</nav>
 			{/snippet}
 		</MobilePageHero>
 		<div class="daynight-contact-mobile__body">
-			<SocialLinks />
-
 			<section class="daynight-contact-mobile__info" aria-label={nt('ui41')}>
 				<article>
 					<span><MapPin size={18} strokeWidth={2.25} aria-hidden="true" /></span>
 					<div>
 						<p>{info.officeLabel}</p>
-						<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
-						<small>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}</small>
+						<strong>{copy.address}</strong>
+						<Action
+							href={mapHref}
+							variant="secondary"
+							size="compact"
+							target="_blank"
+							rel="noreferrer"
+							class="daynight-contact-mobile__map-action"
+						>
+							{nt('ui44')}<Navigation size={17} strokeWidth={2.3} aria-hidden="true" />
+						</Action>
 					</div>
 				</article>
 				<article>
@@ -99,33 +101,37 @@
 					<span><Mail size={18} strokeWidth={2.25} aria-hidden="true" /></span>
 					<div>
 						<p>{nt('ui42')}</p>
-						<a {...hrefAttributes(info.emailHref)}>{info.emailLabel}</a>
+						<a {...hrefAttributes(info.emailHref)}
+							>{info.emailHref.startsWith('mailto:')
+								? info.emailLabel
+								: english
+									? 'Open contact page'
+									: 'Отвори страницата'}</a
+						>
 					</div>
 				</article>
 			</section>
 
-			<section class="daynight-contact-mobile__map-card" aria-label={nt('ui19')}>
-				<div class="daynight-contact-mobile__map-preview" aria-hidden="true">
-					<span class="road road-a"></span>
-					<span class="road road-b"></span>
-					<span class="road road-c"></span>
-					<span class="pin"><MapPin size={24} strokeWidth={2.45} /></span>
-				</div>
-				<div>
-					<p>{nt('ui43')}</p>
-					<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
-					<a {...hrefAttributes(mapHref)} target="_blank" rel="noreferrer">
-						{nt('ui44')}
-						<Navigation size={17} strokeWidth={2.3} aria-hidden="true" />
-					</a>
-				</div>
-			</section>
+			<Action
+				variant="strong"
+				size="primary"
+				onclick={openForm}
+				aria-label={nt('ui39')}
+				aria-haspopup="dialog"
+				aria-expanded={formOpen}
+			>
+				<Mail size={18} aria-hidden="true" />{english ? 'Send an enquiry' : 'Изпрати запитване'}
+			</Action>
+			<div class="daynight-contact-mobile__socials">
+				<p>{english ? 'Follow us' : 'Последвай ни'}</p>
+				<SocialLinks />
+			</div>
 		</div>
 	</svelte:element>
 
 	<MobileSheet bind:open={formOpen} title={form.title}
 		><LeadForm
-			english={page.data.locale === 'en'}
+			{english}
 			source={page.url.searchParams.get('topic') === 'trade-in' ? 'trade-in' : 'contact'}
 		/></MobileSheet
 	>
@@ -133,276 +139,87 @@
 
 <style>
 	.daynight-contact-mobile {
-		position: relative;
 		min-height: 100svh;
-		overflow-x: hidden;
 		background: var(--bc-bg-strong);
 		color: var(--bc-ink);
 	}
-
 	.daynight-contact-mobile__body {
 		display: grid;
 		gap: var(--bc-space-3);
-		padding: var(--bc-space-3) var(--bc-mobile-gutter)
+		padding: var(--bc-space-4) var(--bc-mobile-gutter)
 			calc(var(--bc-mobile-nav-height) + var(--bc-space-6));
 	}
-
 	.daynight-contact-mobile__actions {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: var(--bc-space-2);
-	}
-
-	.daynight-contact-mobile__actions a,
-	.daynight-contact-mobile__actions button {
 		display: flex;
-		min-height: var(--bc-control-height-primary);
-		min-width: 0;
-		align-items: center;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: var(--bc-space-2);
-		overflow: hidden;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-surface-raised);
-		color: var(--bc-ink);
-		cursor: pointer;
-		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-action);
-		line-height: var(--bc-leading-control);
-		padding: 0 var(--bc-space-2);
-		text-decoration: none !important;
-		white-space: nowrap;
 	}
-
-	.daynight-contact-mobile__actions a:first-child {
-		background: var(--bc-accent-bright-soft);
-		color: var(--bc-ink);
+	.daynight-contact-mobile__actions :global(.site-action) {
+		border-radius: var(--bc-radius-pill);
+		padding-inline: var(--bc-space-4);
 	}
-
-	.daynight-contact-mobile__actions button:focus-visible,
-	.daynight-contact-mobile__actions a:focus-visible {
-		background: var(--bc-surface-hover);
-		color: var(--bc-ink);
-		outline: 0;
-	}
-
-	@media (hover: hover) and (pointer: fine) {
-		.daynight-contact-mobile__actions button:hover,
-		.daynight-contact-mobile__actions a:hover {
-			background: var(--bc-surface-hover);
-			color: var(--bc-ink);
-			outline: 0;
-		}
-	}
-
 	.daynight-contact-mobile__info {
 		display: grid;
-		gap: var(--bc-space-2);
+		gap: var(--bc-space-3);
 	}
-
 	.daynight-contact-mobile__info article {
 		display: flex;
 		min-width: 0;
 		align-items: flex-start;
 		gap: var(--bc-space-3);
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-surface-raised);
+		border-radius: var(--bc-radius-panel);
+		background: var(--bc-white);
 		padding: var(--bc-space-3);
 	}
-
 	.daynight-contact-mobile__info article > span {
-		display: flex;
+		display: grid;
 		width: var(--bc-control-height-compact);
 		height: var(--bc-control-height-compact);
-		align-items: center;
-		justify-content: center;
+		place-items: center;
 		flex: 0 0 var(--bc-control-height-compact);
 		border-radius: var(--bc-radius-card);
 		background: var(--bc-surface);
-		color: var(--bc-ink);
 	}
-
-	.daynight-contact-mobile__info div {
+	.daynight-contact-mobile__info article > div {
 		display: grid;
-		gap: 2px;
+		gap: var(--bc-space-1);
 		min-width: 0;
 	}
-
-	.daynight-contact-mobile__info p,
-	.daynight-contact-mobile__info strong,
-	.daynight-contact-mobile__info small,
-	.daynight-contact-mobile__info a {
-		margin: 0;
-		letter-spacing: 0;
-	}
-
 	.daynight-contact-mobile__info p {
-		color: var(--bc-muted);
-		font-size: var(--bc-mobile-label);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-label-leading);
-		text-transform: uppercase;
-	}
-
-	.daynight-contact-mobile__info strong,
-	.daynight-contact-mobile__info a {
-		color: var(--bc-ink);
-		font-size: var(--bc-mobile-card-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-card-title-leading);
-		overflow-wrap: anywhere;
-		text-decoration: none !important;
-	}
-
-	.daynight-contact-mobile__info a {
-		display: inline-flex;
-		min-height: var(--bc-control-height-standard);
-		align-items: center;
-		margin-block: -11px;
-		padding-block: 11px;
-	}
-
-	.daynight-contact-mobile__info small {
-		color: var(--bc-copy);
-		font-size: var(--bc-mobile-body);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-body-leading);
-	}
-
-	.daynight-contact-mobile__map-card {
-		display: grid;
-		grid-template-columns: 118px minmax(0, 1fr);
-		gap: var(--bc-space-3);
-		align-items: stretch;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-surface-raised);
-		padding: var(--bc-space-2);
-	}
-
-	.daynight-contact-mobile__map-card > div:last-child {
-		display: grid;
-		align-content: center;
-		gap: 4px;
-		min-width: 0;
-	}
-
-	.daynight-contact-mobile__map-card p,
-	.daynight-contact-mobile__map-card strong {
 		margin: 0;
-		letter-spacing: 0;
+		color: var(--bc-muted);
+		font: var(--bc-weight-body) var(--bc-mobile-label)/1.25 var(--bc-font-body);
 	}
-
-	.daynight-contact-mobile__map-card p {
-		color: var(--bc-accent);
-		font-size: var(--bc-mobile-label);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-label-leading);
-		text-transform: uppercase;
-	}
-
-	.daynight-contact-mobile__map-card strong {
+	.daynight-contact-mobile__info strong,
+	.daynight-contact-mobile__info div > a {
 		color: var(--bc-ink);
-		font-size: var(--bc-mobile-card-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-card-title-leading);
+		font: var(--bc-weight-heading) var(--bc-mobile-card-title)/1.333333 var(--bc-font-body);
+		overflow-wrap: anywhere;
+		text-decoration: none;
 	}
-
-	.daynight-contact-mobile__map-card a {
+	.daynight-contact-mobile__info div > a {
 		display: inline-flex;
-		width: fit-content;
 		min-height: var(--bc-control-height-standard);
 		align-items: center;
+	}
+	.daynight-contact-mobile__info :global(.daynight-contact-mobile__map-action) {
+		width: fit-content;
+		max-width: 100%;
+		margin-top: var(--bc-space-2);
+		border-radius: var(--bc-radius-pill);
+		padding-inline: var(--bc-space-3);
+	}
+	.daynight-contact-mobile__socials {
+		display: grid;
 		gap: var(--bc-space-2);
-		margin-top: var(--bc-space-1);
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-ink);
-		color: var(--bc-white);
-		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-leading-control);
-		padding: 0 var(--bc-space-3);
-		text-decoration: none !important;
+		padding-top: var(--bc-space-2);
+		text-align: center;
 	}
-
-	.daynight-contact-mobile__map-preview {
-		position: relative;
-		min-height: 118px;
-		overflow: hidden;
-		border-radius: var(--bc-radius-card);
-		background:
-			linear-gradient(135deg, rgba(254, 226, 226, 0.28), rgba(255, 255, 255, 0.82)),
-			var(--bc-surface);
-	}
-
-	.daynight-contact-mobile__map-preview::before,
-	.daynight-contact-mobile__map-preview::after {
-		position: absolute;
-		inset: 16px;
-		border: 1px solid rgba(28, 28, 28, 0.08);
-		border-radius: 18px;
-		content: '';
-	}
-
-	.daynight-contact-mobile__map-preview::after {
-		inset: 42px -22px auto 26px;
-		height: 42px;
-		border-right: 0;
-		border-left: 0;
-		transform: rotate(-8deg);
-	}
-
-	.daynight-contact-mobile__map-preview .road {
-		position: absolute;
-		border-radius: var(--bc-radius-pill);
-		background: rgba(28, 28, 28, 0.12);
-	}
-
-	.daynight-contact-mobile__map-preview .road-a {
-		top: 25px;
-		left: -20px;
-		width: 76%;
-		height: 8px;
-		transform: rotate(13deg);
-	}
-
-	.daynight-contact-mobile__map-preview .road-b {
-		right: -10px;
-		bottom: 28px;
-		width: 74%;
-		height: 8px;
-		transform: rotate(-20deg);
-	}
-
-	.daynight-contact-mobile__map-preview .road-c {
-		top: 7px;
-		left: 48%;
-		width: 8px;
-		height: 118px;
-		transform: rotate(20deg);
-	}
-
-	.daynight-contact-mobile__map-preview .pin {
-		position: absolute;
-		top: 39px;
-		left: 50%;
-		display: flex;
-		width: 46px;
-		height: 46px;
-		align-items: center;
-		justify-content: center;
-		border: 4px solid var(--bc-white);
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-accent-bright-soft);
-		color: var(--bc-ink);
-		transform: translateX(-50%);
-	}
-
-	@media (max-width: 359px) {
-		.daynight-contact-mobile__map-card {
-			grid-template-columns: 1fr;
-		}
+	.daynight-contact-mobile__socials p {
+		margin: 0;
+		color: var(--bc-muted);
+		font: var(--bc-weight-body) var(--bc-mobile-label)/1.25 var(--bc-font-body);
 	}
 </style>

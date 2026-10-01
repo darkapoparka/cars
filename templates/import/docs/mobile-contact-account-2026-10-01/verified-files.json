@@ -1,0 +1,38 @@
+[
+  {
+    "path": "src/lib/components/contact/ContactMobilePage.svelte",
+    "sha256": "ef6520f295825efe7e334bac6bc13492eb067ef538c0963152a9cff336aed836"
+  },
+  {
+    "path": "src/lib/components/layout/AuxeroDashboardSlotShell.svelte",
+    "sha256": "acdb42d40954cbcf7ebfaf6af21945a3f31717f9a6dbc0c9ee0cd7aa533dec43"
+  },
+  {
+    "path": "src/lib/components/account/DashboardRecentTemplatePage.svelte",
+    "sha256": "f9c4567704898168054190b9f19dbe524e62b89c4290492e8e9fb95d1a5abefe"
+  },
+  {
+    "path": "src/lib/components/account/DashboardRecentBox.svelte",
+    "sha256": "cb035d7faac6a26d66cc09e466397c3c2d70b26ed1dd84523ff626f3ac2b097d"
+  },
+  {
+    "path": "src/lib/components/account/AccountProfileTemplatePage.svelte",
+    "sha256": "0f28cdca01bc7a3b8d1f49b6bd08e34a9de783cac961abb55ef5013867a62cca"
+  },
+  {
+    "path": "src/lib/components/services/ServiceCard.svelte",
+    "sha256": "4076064c0bc5cc5dcf5512057ab7967bf425cf7a55fce7ccb52eb71326f38e67"
+  },
+  {
+    "path": "src/routes/(site)/services/+page.svelte",
+    "sha256": "bd3feccdc0eac524b5739a000044f00c6385075ccf835f132773813190601ee1"
+  },
+  {
+    "path": "tests/account-hydration.e2e.ts",
+    "sha256": "8f0618ce7ae3f4db1682f320ef9fd4bfda0c7ca112d3dccf0b6c240256dc0ab1"
+  },
+  {
+    "path": "tests/mobile-secondary.e2e.ts",
+    "sha256": "f9451dc6f66bc1d15dad27cc8dc8cd15e893b833f256e57187f123cb720d7f58"
+  }
+]

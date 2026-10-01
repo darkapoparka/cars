@@ -353,24 +353,41 @@
 
 	@media (max-width: 767.98px) {
 		.daynight-dashboard-overview {
+			min-width: 0;
+			grid-template-columns: minmax(0, 1fr);
 			gap: 16px;
-			padding: 18px !important;
+			padding: var(--bc-space-4) !important;
+		}
+
+		:global(body.dashboard .account-mobile-shell) .daynight-dashboard-overview {
+			background: var(--bc-white) !important;
+			background-color: var(--bc-white) !important;
 		}
 
 		.daynight-dashboard-overview__header,
 		.daynight-dashboard-recent__header {
+			min-width: 0;
 			align-items: stretch;
 			flex-direction: column;
 		}
 
 		.daynight-dashboard-overview__primary {
+			min-width: 0;
+			max-width: 100%;
 			width: 100%;
 			justify-content: center;
+			overflow-wrap: anywhere;
+			padding-inline: var(--bc-space-3);
 		}
 
 		.daynight-dashboard-overview__summary,
 		.daynight-dashboard-actions {
-			grid-template-columns: 1fr;
+			min-width: 0;
+			grid-template-columns: minmax(0, 1fr);
+		}
+
+		.daynight-dashboard-overview__summary {
+			container: account-summary / inline-size;
 		}
 
 		.daynight-dashboard-summary-item {
@@ -388,15 +405,45 @@
 		}
 
 		.daynight-dashboard-summary-item__label {
-			text-align: right;
+			min-width: 0;
+			overflow-wrap: anywhere;
+			order: -1;
+			font-size: var(--bc-mobile-label);
+			font-weight: var(--bc-weight-body);
+			line-height: 1.25;
+		}
+
+		.daynight-dashboard-overview__primary,
+		.daynight-dashboard-recent-card__link {
+			min-height: var(--bc-control-height-standard);
+			font-size: var(--bc-mobile-label);
+			line-height: 1.25;
+			white-space: normal;
+		}
+
+		:global(body.dashboard .account-mobile-shell) .daynight-dashboard-overview__primary {
+			height: auto !important;
+			padding-block: var(--bc-space-2);
+			text-align: center;
+			line-height: 1.25 !important;
+			white-space: normal !important;
+		}
+
+		.daynight-dashboard-meta,
+		.daynight-dashboard-recent-card__body {
+			font-size: var(--bc-mobile-body);
+			line-height: var(--bc-mobile-body-leading);
 		}
 
 		.daynight-dashboard-recent__list {
+			min-width: 0;
+			grid-template-columns: minmax(0, 1fr);
 			padding: 0 14px;
 		}
 
 		.daynight-dashboard-recent-card {
-			grid-template-columns: 1fr;
+			min-width: 0;
+			grid-template-columns: minmax(0, 1fr);
 			gap: 14px;
 			padding: 16px 0 !important;
 		}
@@ -405,10 +452,22 @@
 			min-width: 0;
 			align-items: center;
 			flex-direction: row;
+			flex-wrap: wrap;
 		}
 
 		.daynight-dashboard-status {
 			margin-left: 0;
+			font-size: 14px;
+			font-weight: var(--bc-weight-heading);
+			line-height: 20px;
+			white-space: normal;
+		}
+	}
+	@container account-summary (width < 16rem) {
+		.daynight-dashboard-summary-item {
+			align-items: flex-start;
+			flex-direction: column;
+			gap: var(--bc-space-2);
 		}
 	}
 </style>

@@ -162,7 +162,8 @@
 <style>
 	.account-mobile-links {
 		display: flex;
-		gap: var(--bc-space-4);
+		justify-content: space-between;
+		gap: var(--bc-space-2);
 		overflow-x: auto;
 		scrollbar-width: none;
 	}
@@ -171,11 +172,11 @@
 		display: flex;
 		align-items: center;
 		min-height: var(--bc-control-height-standard);
-		padding-inline: var(--bc-space-1);
+		padding-block: var(--bc-space-1);
 		color: var(--bc-dark-muted);
 		border-bottom: 2px solid transparent;
 		text-decoration: none;
-		font: var(--bc-weight-control) var(--bc-text-mode-tab)/1.2 var(--bc-font-body);
+		font: var(--bc-weight-control) var(--bc-mobile-label)/1.2 var(--bc-font-body);
 	}
 	.account-mobile-links a[aria-current='page'] {
 		color: var(--bc-white);
@@ -227,7 +228,7 @@
 			background: var(--bc-white) !important;
 		}
 		.account-mobile-shell :global(.dashboard-content--details > .grid:first-of-type) {
-			grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+			grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr)) !important;
 		}
 		.account-mobile-shell :global(.dashboard-cart) {
 			min-width: 0;

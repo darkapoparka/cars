@@ -138,6 +138,9 @@ for (const locale of ['en', 'bg']) {
 		const filters = page.getByRole('group', {
 			name: locale === 'en' ? 'Quick service filters' : 'Бърз избор на услуга'
 		});
+		for (const filter of await filters.getByRole('button').all()) {
+			await expect(filter).toBeInViewport({ ratio: 1 });
+		}
 		const vin = filters.getByRole('button', {
 			name: locale === 'en' ? 'Check / VIN' : 'Проверка / VIN',
 			exact: true

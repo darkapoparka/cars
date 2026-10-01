@@ -221,6 +221,19 @@
 			color: var(--bc-ink);
 		}
 	}
+	@container service-list (width < 16rem) {
+		.service-card > a {
+			grid-template-columns: 1fr;
+		}
+		.service-card img {
+			min-height: 0;
+			height: auto;
+			aspect-ratio: 16 / 9;
+		}
+		.service-card h2 {
+			overflow-wrap: anywhere;
+		}
+	}
 	@media (prefers-reduced-motion: reduce) {
 		.service-card {
 			transition: none;
