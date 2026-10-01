@@ -114,10 +114,10 @@
   .discoveryContent {
     display: block;
     width: min(
-      calc(100% - (2 * var(--layout-gutter))),
+      calc(100% - (2 * clamp(1.5rem, 4vw, 4rem))),
       var(--layout-content-max)
     );
-    padding-block: 2.5rem 2rem;
+    padding-block: 3.25rem 4rem;
     margin-inline: auto;
   }
 
@@ -131,10 +131,18 @@
 
   .sectionHeading h2 {
     margin: 0;
-    font-size: var(--text-section-title-lg);
+    font-size: clamp(1.75rem, 2.2vw, 2.25rem);
     font-weight: var(--font-weight-bold);
     line-height: var(--text-section-title-lg--line-height);
     letter-spacing: var(--tracking-heading);
+  }
+  .sectionEyebrow {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
   .sectionActions {
@@ -188,7 +196,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1600px) {
   .vehicleSlide {
     flex-basis: 25%;
   }

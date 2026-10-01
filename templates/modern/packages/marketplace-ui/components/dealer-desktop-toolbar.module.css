@@ -4,12 +4,49 @@
 @media (min-width: 1024px) {
   .toolbar {
     position: relative;
-    z-index: 42;
+    z-index: 20;
     display: block;
+    padding-block: 1.5rem 0;
+    color: var(--inverse-foreground);
+    background: linear-gradient(
+      to bottom,
+      var(--inverse) 0,
+      var(--inverse) calc(100% - 3rem),
+      var(--background) calc(100% - 3rem)
+    );
   }
   .content {
     position: relative;
     z-index: 3;
-    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+    width: min(
+      calc(100% - 2 * clamp(1.5rem, 4vw, 4rem)),
+      var(--layout-content-max)
+    );
+    margin-inline: auto;
+  }
+  .heading {
+    display: flex;
+    gap: 1.5rem;
+    align-items: end;
+    justify-content: space-between;
+    padding-block: 0.5rem 2rem;
+  }
+  .eyebrow {
+    margin-bottom: 0.625rem;
+    font-size: 0.75rem;
+    color: var(--inverse-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .heading h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+  }
+  .count {
+    padding-bottom: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--inverse-muted);
   }
 }

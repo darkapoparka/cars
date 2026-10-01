@@ -198,7 +198,14 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: var(--radius-vehicle);
-    box-shadow: var(--elevation-panel);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 3%);
+    transition:
+      border-color var(--duration-interaction),
+      box-shadow var(--duration-interaction);
+  }
+  .card[data-presentation="showroom"]:hover {
+    border-color: color-mix(in srgb, var(--foreground) 25%, var(--border));
+    box-shadow: var(--elevation-card-hover);
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-media"] {
     width: 100%;
@@ -209,15 +216,15 @@
     flex: 1;
     flex-direction: column;
     gap: 0.75rem;
-    padding: 1rem;
+    padding: 1.25rem;
   }
   .card[data-presentation="showroom"] [data-slot="showroom-vehicle-heading"] {
-    min-height: 3rem;
+    min-height: 3.75rem;
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-title"] {
     display: block;
     overflow: visible;
-    font-size: var(--text-card-title);
+    font-size: 1.125rem;
     font-weight: var(--font-weight-semibold);
     line-height: var(--text-card-title--line-height);
     letter-spacing: var(--tracking-heading);
@@ -234,7 +241,7 @@
     flex-wrap: wrap;
     gap: 0.375rem;
     align-content: start;
-    min-height: 2.625rem;
+    min-height: 2rem;
     font-size: var(--text-micro);
     line-height: 1.125rem;
     color: var(--muted-foreground);
@@ -245,20 +252,20 @@
     align-items: center;
     max-width: 100%;
     min-height: var(--control-height-sm);
-    padding: 0.375rem 0.5rem;
+    padding: 0.25rem 0;
     overflow-wrap: anywhere;
-    background: var(--control);
-    border-radius: var(--radius-lg);
+    background: transparent;
+    border-radius: 0;
   }
   .card[data-presentation="showroom"] [data-slot="showroom-vehicle-facts"] svg {
     flex-shrink: 0;
   }
   .card[data-presentation="showroom"] [data-slot="showroom-vehicle-price-row"] {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between;
-    padding-top: 0.75rem;
+    padding-top: 1rem;
     margin-top: auto;
     border-top: 1px solid var(--border);
   }

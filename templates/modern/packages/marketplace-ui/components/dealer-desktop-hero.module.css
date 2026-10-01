@@ -163,3 +163,43 @@
     object-position: center 47%;
   }
 }
+
+@media (min-width: 1024px) {
+  .hero[data-variant="service"] {
+    --desktop-action-panel-min-height: 0px;
+    gap: 1.75rem;
+    min-height: 0;
+    padding-block: 2.75rem 0;
+    background: linear-gradient(
+      to bottom,
+      var(--inverse) 0,
+      var(--inverse) calc(100% - 3rem),
+      var(--background) calc(100% - 3rem)
+    );
+  }
+  .hero[data-variant="service"] .copy {
+    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+    text-align: left;
+  }
+  .hero[data-variant="service"] h1 {
+    font-size: clamp(2rem, 3.25vw, 3rem);
+    letter-spacing: -0.045em;
+  }
+  .hero[data-variant="service"] .eyebrow {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.875rem;
+    letter-spacing: 0.1em;
+  }
+  .hero[data-variant="service"] .eyebrow::before {
+    width: 1.5rem;
+    height: 2px;
+    content: "";
+    background: var(--brand);
+  }
+  .hero[data-variant="service"] .description {
+    margin-inline: 0;
+    font-size: 0.9375rem;
+  }
+}

@@ -14,7 +14,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-discovery.module.css";
-import { DealerDesktopServiceLinks } from "./dealer-desktop-service-links";
+import { DealerDesktopShowroomSections } from "./dealer-desktop-showroom-sections";
 import { VehicleCard } from "./vehicle-card";
 
 /** Server-ordered stock, with the existing carousel handling browsing; no duplicate datasets. */
@@ -40,6 +40,9 @@ export const DealerDesktopDiscoveryContent = ({
       >
         <div className={styles.sectionHeading}>
           <div>
+            <p className={styles.sectionEyebrow}>
+              {isBg ? "От нашия каталог" : "From the collection"}
+            </p>
             <h2 id="desktop-inventory-heading">
               {isBg ? "Налични автомобили" : "Available Vehicles"}
             </h2>
@@ -75,7 +78,7 @@ export const DealerDesktopDiscoveryContent = ({
                 href={getLocalizedPublicPath(locale, getListingPath(listing))}
                 listing={listing}
                 locale={locale}
-                presentation="discovery"
+                presentation="showroom"
                 priority={false}
                 viewMode="grid"
               />
@@ -83,7 +86,7 @@ export const DealerDesktopDiscoveryContent = ({
           ))}
         </CarouselContent>
       </Carousel>
-      <DealerDesktopServiceLinks locale={locale} placement="inventory" />
+      <DealerDesktopShowroomSections locale={locale} />
     </section>
   );
 };

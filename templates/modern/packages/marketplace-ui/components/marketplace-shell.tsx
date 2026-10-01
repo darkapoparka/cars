@@ -361,6 +361,11 @@ export const MarketplaceShell = ({
           appBaseUrl={appUrl}
           assistantSlot={assistantSlot}
           categoryCounts={inventoryFacets?.categoryCounts}
+          featuredListing={
+            listings.find(
+              (listing) => listing.promoted && listing.images.length
+            ) ?? listings.find((listing) => listing.images.length)
+          }
           filterCount={structuredFilterCount}
           filters={filters}
           locale={locale}

@@ -4,14 +4,16 @@
 
 @media (min-width: 1024px) {
   .header {
-    --desktop-header-height: 4.5rem;
-    position: relative;
+    --desktop-header-height: 5rem;
+    position: sticky;
+    top: 0;
     z-index: 40;
     display: block;
     width: 100%;
     color: var(--inverse-foreground);
     background: var(--inverse);
-    border-bottom: 0;
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--inverse-border) 60%, transparent);
   }
 
   .header:has(
@@ -26,7 +28,7 @@
     gap: clamp(0.75rem, 1.5vw, 1.5rem);
     align-items: center;
     width: min(
-      calc(100% - (2 * var(--layout-gutter))),
+      calc(100% - (2 * clamp(1.5rem, 4vw, 4rem))),
       var(--layout-content-max)
     );
     min-height: var(--desktop-header-height);
@@ -61,7 +63,7 @@
     font-weight: var(--font-weight-medium);
     color: var(--inverse-muted);
     border: 1px solid transparent;
-    border-radius: var(--radius-pill);
+    border-radius: 0.5rem;
     transition:
       color var(--duration-interaction),
       background-color var(--duration-interaction),
@@ -77,9 +79,9 @@
   .segments a[aria-current="page"] {
     font-weight: var(--font-weight-semibold);
     color: var(--inverse-foreground);
-    background: color-mix(in srgb, var(--inverse-foreground) 8%, transparent);
-    border-color: var(--inverse-border);
-    box-shadow: none;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: inset 0 -2px var(--brand);
   }
 
   .contact {
