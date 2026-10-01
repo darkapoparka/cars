@@ -2,28 +2,37 @@
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
-	import { ChevronRight } from '@lucide/svelte';
+	import { DEFAULT_IMPORT_ORIGIN, importOrigins } from '$lib/data/lead-content';
 	import type { HomeMobileVehicle } from '$lib/types/home';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
 	import MobileVehicleStats from '$lib/components/shared/mobile/MobileVehicleStats.svelte';
+	import MobileVehicleArrow from '$lib/components/shared/mobile/MobileVehicleArrow.svelte';
 	let {
 		vehicles,
+		origin = DEFAULT_IMPORT_ORIGIN,
 		onSelect
 	}: {
 		vehicles: HomeMobileVehicle[];
-		onSelect: (car: HomeMobileVehicle) => void;
+		origin?: string;
+		onSelect: (car: HomeMobileVehicle, origin: string) => void;
 	} = $props();
+	const sampleOrigins = importOrigins.filter((option) => option.code !== DEFAULT_IMPORT_ORIGIN);
 </script>
 
 {#if vehicles.length}
 	<section class="import-examples" aria-label={i18n.t('copy.89da4457aeaa')}>
+		<p class="import-examples__note">{i18n.t('copy.89da4457aeaa')}</p>
 		<div class="import-examples__grid">
-			{#each vehicles as car (car.slug)}
+			{#each vehicles as car, index (car.slug)}
+				{@const exampleOrigin =
+					origin === DEFAULT_IMPORT_ORIGIN
+						? sampleOrigins[index % sampleOrigins.length]
+						: (sampleOrigins.find((option) => option.code === origin) ?? sampleOrigins[0])}
 				<button
 					class="import-example"
 					type="button"
-					onclick={() => onSelect(car)}
-					aria-label={i18n.t('pattern.764733b0595b', { v0: car.shortTitle })}
+					onclick={() => onSelect(car, exampleOrigin.code)}
+					aria-label={`${i18n.t('pattern.764733b0595b', { v0: car.shortTitle })}. ${i18n.t('pattern.03b4d792cda2', { v0: i18n.text(exampleOrigin.label) })}`}
 				>
 					<span class="import-example__media">
 						<img
@@ -33,7 +42,7 @@
 							decoding="async"
 							use:daynightImageFallback
 						/>
-						<span class="import-example__badge">{i18n.t('copy.fab313a94604')}</span>
+						<span class="import-example__badge">{i18n.text(exampleOrigin.label)}</span>
 					</span>
 					<span class="import-example__body">
 						<strong class="import-example__title" title={car.shortTitle}>{car.shortTitle}</strong>
@@ -41,9 +50,7 @@
 					</span>
 					<span class="import-example__foot">
 						<span class="import-example__price">{car.priceEur}</span>
-						<span class="import-example__go" aria-hidden="true"
-							><ChevronRight size={16} strokeWidth={3} /></span
-						>
+						<span class="import-example__go" aria-hidden="true"><MobileVehicleArrow /></span>
 					</span>
 				</button>
 			{/each}
@@ -53,14 +60,26 @@
 
 <style>
 	.import-examples {
+		container: import-examples / inline-size;
 		display: grid;
 		gap: 10px;
 		padding: 0 0 12px;
+	}
+	.import-examples__note {
+		margin: 0;
+		color: var(--sa-muted);
+		font-size: var(--sa-mobile-type-micro);
+		line-height: var(--sa-mobile-leading-meta);
 	}
 	.import-examples__grid {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 12px 10px;
+	}
+	@container import-examples (max-width: 18rem) {
+		.import-examples__grid {
+			grid-template-columns: 1fr;
+		}
 	}
 	.import-example {
 		display: flex;
@@ -93,6 +112,8 @@
 		position: absolute;
 		top: 7px;
 		left: 7px;
+		max-width: calc(100% - 14px);
+		overflow: hidden;
 		border-radius: var(--sa-r-pill);
 		background: var(--sa-ink);
 		padding: 4px 7px;
@@ -100,7 +121,8 @@
 		font-size: var(--sa-text-xs);
 		font-weight: var(--sa-weight-semibold);
 		line-height: 1;
-		text-transform: uppercase;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.import-example__body {
 		display: flex;
@@ -134,21 +156,19 @@
 		font-size: var(--sa-text-lg);
 		line-height: 1.3;
 		font-weight: var(--sa-weight-strong);
+		white-space: nowrap;
 	}
 	.import-example__go {
 		display: grid;
-		width: 28px;
-		height: 28px;
+		width: 20px;
+		height: 20px;
 		flex: 0 0 auto;
 		place-items: center;
-		border-radius: 50%;
-		background: var(--sa-ink);
-		color: #fff;
+		color: var(--sa-ink);
 	}
-	.import-example__go :global(svg),
-	.import-example__go :global(svg *) {
-		color: #fff !important;
-		stroke: #fff !important;
+	.import-example__go :global(svg) {
+		width: 20px;
+		height: 20px;
 	}
 	@media (max-width: 359px) {
 		.import-example__body {

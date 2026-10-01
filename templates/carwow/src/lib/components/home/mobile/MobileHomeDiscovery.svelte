@@ -7,6 +7,7 @@
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import MobileVehicleStats from '$lib/components/shared/mobile/MobileVehicleStats.svelte';
+	import MobileVehicleArrow from '$lib/components/shared/mobile/MobileVehicleArrow.svelte';
 	import type { HomeMobileData } from '$lib/types/home';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
 	import {
@@ -138,7 +139,7 @@
 					<span class="mh-car__foot">
 						<span class="mh-car__price">{car.priceEur}</span>
 						<span class="mh-car__go" aria-hidden="true">
-							<ChevronRight size={18} strokeWidth={3} />
+							<MobileVehicleArrow />
 						</span>
 					</span>
 				</a>
@@ -253,6 +254,7 @@
 
 	.mh-section__head {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		gap: 10px;
@@ -400,6 +402,16 @@
 		padding: 0 16px 4px;
 		scrollbar-width: none;
 		-webkit-overflow-scrolling: touch;
+	}
+
+	.mh-section--featured {
+		container: home-featured / inline-size;
+	}
+
+	@container home-featured (max-width: 13rem) {
+		.mh-carlist {
+			grid-auto-columns: calc(100cqw - 32px);
+		}
 	}
 
 	.mh-carlist::-webkit-scrollbar {
@@ -628,6 +640,8 @@
 		position: absolute;
 		top: 7px;
 		left: 7px;
+		max-width: calc(100% - 14px);
+		overflow: hidden;
 		border-radius: var(--sa-r-pill);
 		background: var(--sa-blue);
 		padding: 4px 7px;
@@ -637,6 +651,8 @@
 		letter-spacing: var(--sa-tracking-wide);
 		line-height: 1;
 		text-transform: uppercase;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	.mh-car__title {
@@ -667,37 +683,25 @@
 		font-size: var(--sa-text-lg);
 		font-weight: var(--sa-weight-strong);
 		line-height: 1.2;
+		white-space: nowrap;
 	}
 
 	.mh-car__go {
 		display: grid;
-		width: var(--sa-mobile-card-action);
-		height: var(--sa-mobile-card-action);
+		width: 24px;
+		height: 24px;
 		flex: 0 0 auto;
 		place-items: center;
-		border-radius: 999px;
-		background: var(--sa-ink);
-		color: #fff;
+		color: var(--sa-ink);
 	}
 
 	.mh-car__go :global(svg) {
-		width: 16px;
-		height: 16px;
-		color: #fff !important;
-	}
-
-	.mh-car__go :global(path) {
-		stroke: #fff !important;
+		width: 20px;
+		height: 20px;
 	}
 
 	.mh-cta:active {
 		opacity: 0.9;
-	}
-
-	.mh-car__go :global(svg),
-	.mh-car__go :global(svg *) {
-		color: #fff !important;
-		stroke: #fff !important;
 	}
 
 	@media (max-width: 360px) {

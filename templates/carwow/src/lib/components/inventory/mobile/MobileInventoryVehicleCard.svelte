@@ -6,7 +6,7 @@
 	import { resolve } from '$app/paths';
 	import { goto, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
-	import DayNightSpecIcon from '$lib/components/shared/icons/DayNightSpecIcon.svelte';
+	import MobileVehicleArrow from '$lib/components/shared/mobile/MobileVehicleArrow.svelte';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
 	import { compactMobileDistance, compactMobileTransmission, shortFuel } from '$lib/utils/format';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
@@ -52,40 +52,22 @@
 							>{/if}
 					</span>
 					<span class="mobile-inventory-card__arrow" aria-hidden="true">
-						<svg viewBox="0 0 20 20" fill="none">
-							<path
-								d="M4.25 10H15.25"
-								stroke="currentColor"
-								stroke-width="1.8"
-								stroke-linecap="round"
-							/>
-							<path
-								d="M10.75 5.5L15.25 10L10.75 14.5"
-								stroke="currentColor"
-								stroke-width="1.8"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
+						<MobileVehicleArrow />
 					</span>
 				</div>
 			</div>
 			<p>{i18n.spec(vehicle.conditionLine)}</p>
 			<ul aria-label={i18n.t('copy.e802379d67a7')}>
 				<li aria-label={i18n.distance(vehicle.mileage)} title={i18n.distance(vehicle.mileage)}>
-					<DayNightSpecIcon name="mileage" size={15} />
 					{compactMobileDistance(i18n.distance(vehicle.mileage))}
 				</li>
 				<li>
-					<DayNightSpecIcon name="year" size={15} />
 					{vehicle.year}
 				</li>
-				<li>
-					<DayNightSpecIcon name="fuel" size={15} />
+				<li aria-label={i18n.spec(vehicle.fuel)}>
 					{shortFuel(vehicle.fuel, i18n.locale)}
 				</li>
 				<li aria-label={i18n.spec(vehicle.transmission)}>
-					<DayNightSpecIcon name="transmission" size={15} />
 					{compactMobileTransmission(i18n.spec(vehicle.transmission))}
 				</li>
 			</ul>

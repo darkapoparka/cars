@@ -1,0 +1,171 @@
+{
+	"schemaVersion": 1,
+	"kind": "Carwow mobile polish review",
+	"verifiedAt": "2026-10-01T07:25:41.751Z",
+	"repository": "https://github.com/darkapoparka/cars",
+	"sourcePath": "templates/carwow",
+	"workingBranch": "main",
+	"mobileBuildBaseCommit": "a00a0ea2857cd5c4c0b870d76c26e8843f0bc0c0",
+	"runtime": "L:/Toolchains/Node/24.21.0/node.exe",
+	"preview": "http://127.0.0.1:6464/en/contact?intent=import",
+	"sourcePaths": [
+		"src/lib/components/contact/MobileImportExamples.svelte",
+		"src/lib/components/contact/MobileImportPage.svelte",
+		"src/lib/components/home/mobile/MobileHome.svelte",
+		"src/lib/components/home/mobile/MobileHomeDiscovery.svelte",
+		"src/lib/components/inventory/mobile/MobileInventoryTop.svelte",
+		"src/lib/components/inventory/mobile/MobileInventoryVehicleCard.svelte",
+		"src/lib/components/inventory/mobile/mobileInventory.css",
+		"src/lib/components/shared/mobile/MobileLeadHero.svelte",
+		"src/lib/components/shared/mobile/MobileVehicleStats.svelte",
+		"src/lib/components/shared/mobile/MobileVehicleArrow.svelte",
+		"src/lib/styles/mobile-entry-hero.css",
+		"tests/mobile-import-examples.e2e.ts",
+		"tests/mobile-finalization.e2e.ts"
+	],
+	"changes": [
+		"Retain underline mobile entry tabs with a lighter 2px red active indicator and a 44px minimum target.",
+		"Share the inventory's plain 20px arrow across Home, Inventory and Import cards; keep the whole card interactive.",
+		"Remove vehicle spec badge icons, use consistent 14px text and spacing, and retain full accessible spec values.",
+		"Order inventory controls as Search, Sort, Filter in both the DOM and the rendered row.",
+		"Use the same muted placeholder colour for Home, Sell and Import entry fields.",
+		"Label import examples with sample countries/regions, retain one small example disclosure, and carry the selected sample origin into the editable request.",
+		"Keep badge and price text on one line; use roomier card layouts for enlarged text and constrain Home hero grid tracks."
+	],
+	"checks": {
+		"typecheck": {
+			"command": "npm run check",
+			"result": "passed",
+			"errors": 0,
+			"warnings": 0,
+			"evidence": ".audit/mobile-polish-2026-10-01/check.log"
+		},
+		"unit": {
+			"command": "npm run test:unit -- --run",
+			"result": "passed",
+			"files": 22,
+			"tests": 187,
+			"evidence": ".audit/mobile-polish-2026-10-01/unit.log"
+		},
+		"build": {
+			"command": "npm run build",
+			"result": "passed",
+			"evidence": ".audit/mobile-polish-2026-10-01/build.log"
+		},
+		"lint": {
+			"command": "eslint on the task-owned Svelte and test files",
+			"result": "passed",
+			"evidence": ".audit/mobile-polish-2026-10-01/lint.log"
+		},
+		"format": {
+			"command": "prettier --check on all 13 task-owned source/test files",
+			"result": "passed",
+			"evidence": ".audit/mobile-polish-2026-10-01/format.log"
+		},
+		"typography": {
+			"command": "node scripts/check-typography.mjs",
+			"result": "passed",
+			"sourceFilesScanned": 298,
+			"evidence": ".audit/mobile-polish-2026-10-01/typography.log"
+		},
+		"chromiumFlows": {
+			"command": "playwright test tests/mobile-inventory-cards.e2e.ts tests/mobile-import-examples.e2e.ts tests/mobile-entry-modes.e2e.ts tests/mobile-acceptance.e2e.ts tests/mobile-finalization.e2e.ts tests/mobile-navigation-polish.e2e.ts --workers=1",
+			"engine": "chromium",
+			"result": "passed",
+			"tests": 41,
+			"evidence": ".audit/mobile-polish-2026-10-01/chromium-final.log"
+		},
+		"webkitFlows": {
+			"command": "Same six mobile suites with E2E_BROWSER=webkit and one worker",
+			"result": "assertions-passed-runner-failed",
+			"testsPassed": 41,
+			"failedTests": 0,
+			"exitCode": 1,
+			"runnerErrors": "Worker failed to exit within 300000ms after stop; Playwright force-killed it.",
+			"evidence": ".audit/mobile-polish-2026-10-01/webkit-final.log"
+		},
+		"webkitFocused": {
+			"command": "Inventory cards, import examples, entry modes and navigation suites; one worker, 30000ms child shutdown deadline",
+			"result": "assertions-passed-runner-failed",
+			"testsPassed": 10,
+			"failedTests": 0,
+			"exitCode": 1,
+			"runnerErrors": "The WebKit browser's graceful close did not finish; worker shutdown timed out again.",
+			"evidence": ".audit/mobile-polish-2026-10-01/webkit-focused-final.log"
+		},
+		"chromiumGeometry": {
+			"command": "node .audit/mobile-polish-2026-10-01/geometry.mjs",
+			"result": "passed",
+			"states": 88,
+			"issues": 0,
+			"widths": [320, 360, 390, 430, 568, 768, 991, 992, 1440],
+			"locales": ["en", "bg"],
+			"textSize200PercentWidths": [320, 390],
+			"evidence": ".audit/mobile-polish-2026-10-01/geometry.json"
+		},
+		"webkitGeometry": {
+			"command": "Same geometry audit with POLISH_BROWSER=webkit and POLISH_WIDTHS=320,390",
+			"result": "passed",
+			"states": 32,
+			"issues": 0,
+			"locales": ["en", "bg"],
+			"textSize200PercentWidths": [320, 390],
+			"evidence": ".audit/mobile-polish-2026-10-01/webkit-geometry/geometry.json"
+		},
+		"architecture": {
+			"command": "node scripts/check-architecture.mjs",
+			"result": "pre-existing-failure",
+			"finding": "Unreachable source module: src/lib/components/shared/mobile/MobileLeadManualCard.svelte",
+			"evidence": ".audit/mobile-polish-2026-10-01/architecture.log"
+		},
+		"workspace": {
+			"command": "node scripts/workspace-doctor.mjs --fetch --json",
+			"carsOriginMatches": true,
+			"carsBranch": "main",
+			"carsAhead": 0,
+			"carsBehind": 0,
+			"result": "scoped work in a dirty shared repository; unrelated admin drift retained",
+			"evidence": ".audit/mobile-polish-2026-10-01/workspace-doctor.json"
+		}
+	},
+	"renderedReview": {
+		"routes": [
+			"/en",
+			"/en/inventory",
+			"/en/contact?intent=import",
+			"/en/sell-your-car",
+			"matching /bg routes"
+		],
+		"measurements": [
+			"page horizontal overflow",
+			"badge line count and clipping",
+			"price containment",
+			"badge font inheritance",
+			"20px transparent card arrows",
+			"rightmost Filter"
+		],
+		"inAppBrowser": "Visually reviewed Inventory at 320px, Home at 390px and Import at 320px; confirmed a Europe sample opens the form with Europe selected.",
+		"screenshots": [
+			".audit/mobile-polish-2026-10-01/home-en-390.png",
+			".audit/mobile-polish-2026-10-01/inventory-en-320.png",
+			".audit/mobile-polish-2026-10-01/import-en-320.png",
+			".audit/mobile-polish-2026-10-01/import-bg-320.png"
+		]
+	},
+	"preservation": {
+		"commitScope": "Only the listed mobile source/test files and this report.",
+		"retained": "Desktop drafts, inventory data, canonical identity/assets, lockfiles, other templates, dealer source and the release lock.",
+		"concurrentDesktopWork": "The desktop chat started another authorized pass after the mobile production build. Its later source changes and preview rebuilds are outside this mobile commit.",
+		"evidence": [
+			".audit/mobile-polish-2026-10-01/protected-before.json",
+			".audit/mobile-polish-2026-10-01/protected-after.json"
+		]
+	},
+	"limitations": [
+		"Full WebKit flow assertions passed, but its test runner exits unsuccessfully during shutdown. The diagnostic run reproduced the shutdown failure.",
+		"The pre-existing unused MobileLeadManualCard architecture finding remains.",
+		"A cold development run timed out on some pages, and an isolation run was interrupted when the shared preview was stopped for the separate desktop rebuild; those are not passing runs.",
+		"Results cover the local standalone template. Mounted/public deployment, physical devices, assistive technology, field performance and real provider delivery were not verified.",
+		"The later desktop draft is outside the source state used for the full mobile build/flow review; no template release or dealer deployment is selected here."
+	]
+}

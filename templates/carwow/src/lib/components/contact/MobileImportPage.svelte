@@ -123,7 +123,8 @@
 		openForm(false);
 	}
 
-	function chooseExample(car: HomeMobileVehicle) {
+	function chooseExample(car: HomeMobileVehicle, origin: string) {
+		selectedOrigin = origin;
 		sourceUrl = '';
 		importQuery = `${car.brand} ${car.model}`;
 		importMake = car.brand;
@@ -305,7 +306,7 @@
 					</button>
 				{/each}
 			</nav>
-			<MobileImportExamples {vehicles} onSelect={chooseExample} />
+			<MobileImportExamples {vehicles} origin={selectedOrigin} onSelect={chooseExample} />
 			<aside aria-label={i18n.t('copy.6873fde144df')}>
 				<MobileLeadImageBanner
 					title={i18n.t('copy.6873fde144df')}

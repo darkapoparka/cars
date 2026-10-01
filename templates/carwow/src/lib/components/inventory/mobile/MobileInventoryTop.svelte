@@ -94,6 +94,17 @@
 		</button>
 		<button
 			class="mobile-inventory-tool"
+			class:is-active={sortActive}
+			type="button"
+			aria-label={i18n.t('copy.6fb79ad30738') + i18n.text(sortLabel)}
+			title={i18n.t('copy.6fb79ad30738') + i18n.text(sortLabel)}
+			aria-haspopup="dialog"
+			onclick={onOpenSort}
+		>
+			<ArrowUpDown size={22} strokeWidth={2} aria-hidden="true" />
+		</button>
+		<button
+			class="mobile-inventory-tool"
 			class:is-active={activeFilterCount > 0}
 			type="button"
 			aria-label={activeFilterCount
@@ -107,17 +118,6 @@
 			{#if activeFilterCount}<span class="mobile-inventory-tool__count" aria-hidden="true"
 					>{activeFilterCount}</span
 				>{/if}
-		</button>
-		<button
-			class="mobile-inventory-tool"
-			class:is-active={sortActive}
-			type="button"
-			aria-label={i18n.t('copy.6fb79ad30738') + i18n.text(sortLabel)}
-			title={i18n.t('copy.6fb79ad30738') + i18n.text(sortLabel)}
-			aria-haspopup="dialog"
-			onclick={onOpenSort}
-		>
-			<ArrowUpDown size={22} strokeWidth={2} aria-hidden="true" />
 		</button>
 	</div>
 </section>

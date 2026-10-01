@@ -18,13 +18,18 @@ test('sample model opens an editable import request with the chosen origin', asy
 	await page.goto('/contact?intent=import', { waitUntil: 'networkidle' });
 	const examples = page.getByRole('region', { name: /Примерни автомобили/ });
 	const card = examples.getByRole('button').first();
-	await expect(card.getByText('Пример', { exact: true })).toBeVisible();
+	await expect(examples.getByText('Примерни автомобили', { exact: true })).toBeVisible();
+	await expect(card.locator('.import-example__badge')).toHaveText('Германия');
+	await expect(examples.getByRole('button').nth(1).locator('.import-example__badge')).toHaveText(
+		'Европа'
+	);
 	const title = await card.getAttribute('aria-label');
 	await page.getByRole('button', { name: 'Германия', exact: true }).click();
 	await expect(page.getByRole('button', { name: 'Германия', exact: true })).toHaveAttribute(
 		'aria-pressed',
 		'true'
 	);
+	await expect(examples.locator('.import-example__badge')).toHaveText(Array(6).fill('Германия'));
 	await card.click();
 	const dialog = page.locator('dialog[open]');
 	await expect(dialog).toContainText('Търсене от Германия');
@@ -69,9 +74,10 @@ test('editing a sample request does not retain the old structured model', async 
 	await page
 		.getByRole('region', { name: /Примерни автомобили/ })
 		.getByRole('button')
-		.first()
+		.nth(1)
 		.click();
 	const dialog = page.locator('dialog[open]');
+	await expect(dialog).toContainText('Търсене от Европа');
 	await dialog.locator('[name="query"]').fill('BMW X5');
 	await dialog.getByRole('button', { name: 'Продължи', exact: true }).click();
 	await dialog.locator('[name="contact"]').fill('+359888123456');
@@ -81,5 +87,6 @@ test('editing a sample request does not retain the old structured model', async 
 	).toBeVisible();
 	expect(payload.desiredMake).toBeNull();
 	expect(payload.desiredModel).toBeNull();
+	expect(payload.originCountry).toBe('EU');
 	expect(payload.notes).toContain('BMW X5');
 });

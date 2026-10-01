@@ -198,6 +198,8 @@
 
 	.mh-hero__box {
 		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		min-width: 0;
 		gap: var(--mobile-entry-hero-gap);
 		margin: 0;
 		border: 0;
@@ -298,6 +300,9 @@
 	.mh-hero__search-label {
 		flex: 1 1 auto;
 		min-width: 0;
+		color: var(--mobile-entry-placeholder);
+		font: inherit;
+		line-height: inherit;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -317,6 +322,14 @@
 	.mh-hero__search-go :global(svg *) {
 		color: #fff !important;
 		stroke: #fff !important;
+	}
+
+	.mh-hero__all {
+		max-width: 100%;
+	}
+	.mh-hero__all > span {
+		min-width: 0;
+		text-align: center;
 	}
 
 	.mh-quick {

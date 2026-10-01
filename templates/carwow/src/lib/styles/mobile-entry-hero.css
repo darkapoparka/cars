@@ -6,8 +6,11 @@
 
 .mobile-entry-hero {
 	--mobile-entry-hero-gap: 12px;
+	--mobile-entry-placeholder: #66717f;
 
 	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	min-width: 0;
 	gap: var(--mobile-entry-hero-gap);
 	padding: calc(env(safe-area-inset-top) + 12px)
 		var(--mobile-entry-gutter, var(--sa-mobile-gutter-wide)) var(--sa-mobile-hero-bottom);
@@ -35,6 +38,7 @@
 	font: var(--sa-weight-medium) var(--sa-mobile-type-primary-tab) / var(--sa-leading-snug)
 		var(--sa-font);
 	padding: 0 8px 6px;
+	white-space: nowrap;
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
 }
@@ -47,7 +51,7 @@
 .mobile-entry-hero__tabs > button:is(.is-active, [aria-selected='true'])::after {
 	position: absolute;
 	inset: auto 0 -1px;
-	height: 3px;
+	height: 2px;
 	border-radius: 4px 4px 0 0;
 	background: var(--sa-red);
 	content: '';

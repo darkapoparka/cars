@@ -136,7 +136,7 @@ for (const kind of ['sell', 'import'] as const) {
 		});
 		if (kind === 'sell') await page.getByRole('tab', { name: 'Данни', exact: true }).click();
 		await page
-			.getByRole('button', { name: kind === 'sell' ? /Нямам номер или VIN/ : /Филтри за внос/ })
+			.getByRole('button', { name: kind === 'sell' ? /Нямам номер или VIN/ : 'Линк към обява' })
 			.click();
 		const dialog = page.locator('dialog[open]');
 		await dialog.getByRole('button', { name: 'Продължи', exact: true }).click();
@@ -149,6 +149,10 @@ for (const kind of ['sell', 'import'] as const) {
 		} else {
 			await dialog.locator('[name="query"]').fill('BMW X5');
 			await dialog.locator('[name="budget"]').fill('40 000');
+			await dialog.locator('[name="sourceUrl"]').fill('not-a-url');
+			await dialog.getByRole('button', { name: 'Продължи', exact: true }).click();
+			await expect(dialog.locator('[name="sourceUrl"]')).toHaveAttribute('aria-invalid', 'true');
+			await dialog.locator('[name="sourceUrl"]').fill('https://example.com/car');
 		}
 		await dialog.getByRole('button', { name: 'Продължи', exact: true }).click();
 		await dialog.locator('[name="contact"]').fill('not-a-contact');
@@ -230,9 +234,10 @@ test('legacy sell aliases preserve query parameters', async ({ request }) => {
 test('import form actions remain reachable in a reduced visible viewport', async ({ page }) => {
 	await page.setViewportSize({ width: 390, height: 420 });
 	await page.goto('/contact?intent=import', { waitUntil: 'networkidle' });
-	await page.getByRole('button', { name: /Филтри за внос/ }).click();
+	await page.getByRole('button', { name: 'Линк към обява', exact: true }).click();
 	const dialog = page.locator('dialog[open]');
 	await dialog.locator('[name="query"]').fill('BMW X5');
+	await dialog.locator('[name="sourceUrl"]').fill('https://example.com/car');
 	await expect(dialog.getByRole('button', { name: 'Продължи', exact: true })).toBeInViewport();
 	await dialog.getByRole('button', { name: 'Продължи', exact: true }).click();
 	await expect(dialog.locator('button[type="submit"]')).toBeInViewport();

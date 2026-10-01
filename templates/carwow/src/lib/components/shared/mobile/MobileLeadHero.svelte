@@ -246,7 +246,7 @@
 		padding: 0;
 	}
 	.mobile-lead-hero__search input::placeholder {
-		color: #66717f;
+		color: var(--mobile-entry-placeholder);
 		opacity: 1;
 	}
 	.mobile-lead-hero__link {
@@ -259,7 +259,7 @@
 	.mobile-lead-hero__link-label {
 		overflow: hidden;
 		min-width: 0;
-		color: #66717f;
+		color: var(--mobile-entry-placeholder);
 		font-size: var(--sa-mobile-type-input);
 		font-weight: var(--sa-weight-medium);
 		text-overflow: ellipsis;
@@ -288,7 +288,7 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 8px;
-		color: #66717f;
+		color: var(--mobile-entry-placeholder);
 		padding: 4px 4px 4px 17px;
 		font: var(--sa-weight-medium) var(--sa-text-base) / 1.2 var(--sa-font);
 		text-align: left;
