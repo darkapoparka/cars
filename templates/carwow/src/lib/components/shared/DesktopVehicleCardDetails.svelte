@@ -23,7 +23,7 @@
 		<span>{i18n.spec(vehicle.transmission)}</span><span>{i18n.spec(vehicle.fuel)}</span>
 	</p>
 	<VehiclePriceRow {vehicle} {financeLink} />
-	<div class="desktop-vehicle-details__footer">
+	<div class="desktop-vehicle-details__metadata">
 		<VehicleMetaRow {vehicle} styleClass="style2" plain />
 	</div>
 </div>
@@ -38,7 +38,7 @@
 	.card-box__title {
 		margin: 0;
 		color: var(--sa-ink);
-		font: var(--sa-weight-strong) var(--sa-text-xl)/1.3 var(--sa-font);
+		font: var(--sa-weight-strong) var(--sa-text-lg)/1.3 var(--sa-font);
 		letter-spacing: -0.02em;
 	}
 	.card-box__title a {
@@ -54,9 +54,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0 8px;
-		margin: 6px 0 16px;
+		margin: 6px 0 12px;
 		color: var(--discovery-muted, #62676e);
-		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
 	}
 	.desktop-vehicle-details__drivetrain span + span::before {
 		content: '·';
@@ -65,10 +65,8 @@
 	.desktop-vehicle-details :global(.card-box__price) {
 		margin: auto 0 0;
 	}
-	.desktop-vehicle-details__footer {
-		border-top: 1px solid var(--discovery-control-border, #d9dde1);
-		margin: 16px -20px -20px;
-		padding: 12px 20px;
+	.desktop-vehicle-details__metadata {
+		margin-top: 12px;
 	}
 	.desktop-vehicle-details a:focus-visible {
 		outline: 2px solid var(--desktop-focus, #171b1e);

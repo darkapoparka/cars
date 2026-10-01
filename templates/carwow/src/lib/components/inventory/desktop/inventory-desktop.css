@@ -1,3 +1,5 @@
+@import '../../../styles/desktop-page-frame.css';
+
 /* Canonical inventory-family cascade. Keep these layers in one module so Vite
  * cannot reorder shared CSS chunks differently between dev and production.
  * VehicleCard owns grid-card geometry; the remaining rules cover discovery and map layouts. */
@@ -1452,10 +1454,10 @@
 	.daynight-inventory-viewport--grid
 	.daynight-inventory-listings-shell.container {
 	margin-inline: auto !important;
-	max-width: 1760px !important;
+	max-width: 100% !important;
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-	width: calc(100% - 48px) !important;
+	width: 100% !important;
 }
 
 .inventory-template-shell
@@ -3339,6 +3341,9 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 /* NATIVE ROUTE OVERRIDES: ownership formerly split into InventoryDesktopPage. */
 
 .inventory-refined .inventory-hero .daynight-yellow-route-hero__content {
+	width: var(--desktop-content-width);
+	max-width: var(--desktop-content-max);
+	padding-inline: 0;
 	padding-top: 30px;
 	padding-bottom: 24px;
 }
@@ -3456,8 +3461,8 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	outline-offset: 3px;
 }
 .inventory-refined .daynight-inventory-viewport {
-	width: calc(100% - 64px) !important;
-	max-width: 1760px !important;
+	width: var(--desktop-content-width) !important;
+	max-width: var(--desktop-content-max) !important;
 	margin: 0 auto !important;
 	padding: 16px 0 0 !important;
 	border: 0 !important;

@@ -2,6 +2,150 @@ import { devices, expect, test } from '@playwright/test';
 
 test.use({ viewport: { width: 1440, height: 1000 } });
 
+test.afterEach(async ({ page }, testInfo) => {
+	if (testInfo.status === testInfo.expectedStatus) return;
+	await testInfo.attach('desktop-viewport-diagnostic', {
+		body: JSON.stringify(
+			await page.evaluate(() => ({
+				innerWidth,
+				clientWidth: document.documentElement.clientWidth,
+				desktopMedia: matchMedia('(min-width: 992px)').matches,
+				mobileMedia: matchMedia('(max-width: 991px)').matches,
+				scrollHeight: document.documentElement.scrollHeight,
+				scrollbarGutter: getComputedStyle(document.documentElement).scrollbarGutter,
+				bodyClass: document.body.className,
+				home: document.querySelector('.daynight-home-shell')?.getBoundingClientRect().toJSON(),
+				mobileHome: Boolean(document.querySelector('.mobile-home')),
+				grid: document
+					.querySelector('.daynight-home-inventory__grid')
+					?.getBoundingClientRect()
+					.toJSON(),
+				cards: [...document.querySelectorAll('.daynight-home-inventory__card')].map((card) => ({
+					display: getComputedStyle(card).display,
+					box: card.getBoundingClientRect().toJSON()
+				})),
+				cssLinks: [...document.querySelectorAll<HTMLLinkElement>('link[rel=stylesheet]')].map(
+					(link) => ({
+						href: link.href,
+						media: link.media,
+						mediaMatches: matchMedia(link.media || 'all').matches,
+						loaded: Boolean(link.sheet)
+					})
+				)
+			})),
+			null,
+			2
+		),
+		contentType: 'application/json'
+	});
+});
+
+test('home and inventory use matching centered frames and compact four or five column cards', async ({
+	page
+}, testInfo) => {
+	for (const width of [992, 1280, 1440, 1920]) {
+		await page.setViewportSize({ width, height: 1000 });
+		await page.goto('/en');
+		await expect(page.locator('.daynight-home-shell')).toBeVisible();
+		const homeGrid = page.locator('.daynight-home-inventory__grid');
+		const expectedColumns = width < 1440 ? 4 : 5;
+		await expect
+			.poll(() =>
+				homeGrid.evaluate(
+					(element) => getComputedStyle(element).gridTemplateColumns.split(' ').length
+				)
+			)
+			.toBe(expectedColumns);
+		await expect(homeGrid.locator('[data-daynight-vehicle-card]:visible')).toHaveCount(
+			expectedColumns * 2
+		);
+		const homeFrame = (await page.locator('.daynight-home-inventory__body').boundingBox())!;
+		await expect(homeGrid.locator('.desktop-vehicle-details__metadata').first()).toHaveCSS(
+			'border-top-width',
+			'0px'
+		);
+		await homeGrid.scrollIntoViewIfNeeded();
+		await page.screenshot({ path: testInfo.outputPath(`home-compact-${width}.png`) });
+		await page.goto('/en/inventory');
+		const inventoryGrid = page.locator('[data-daynight-grid-panel="3"].active > .grid');
+		await expect
+			.poll(() =>
+				inventoryGrid.evaluate(
+					(element) => getComputedStyle(element).gridTemplateColumns.split(' ').length
+				)
+			)
+			.toBe(expectedColumns);
+		const inventoryFrame = (await page.locator('.daynight-inventory-viewport').boundingBox())!;
+		expect(Math.abs(homeFrame.x - inventoryFrame.x)).toBeLessThan(1);
+		expect(Math.abs(homeFrame.width - inventoryFrame.width)).toBeLessThan(1);
+		const inventoryCards = (await inventoryGrid.boundingBox())!;
+		expect(Math.abs(homeFrame.x - inventoryCards.x)).toBeLessThan(1);
+		expect(Math.abs(homeFrame.width - inventoryCards.width)).toBeLessThan(1);
+		await expect(inventoryGrid.locator('.desktop-vehicle-details__metadata').first()).toHaveCSS(
+			'border-top-width',
+			'0px'
+		);
+		await expect
+			.poll(() =>
+				inventoryGrid
+					.locator('.daynight-card-price__value')
+					.evaluateAll((prices) =>
+						prices.every(
+							(price) =>
+								price.getBoundingClientRect().right <=
+								price.closest('[data-daynight-vehicle-card]')!.getBoundingClientRect().right - 12
+						)
+					)
+			)
+			.toBe(true);
+		await page.screenshot({ path: testInfo.outputPath(`inventory-compact-${width}.png`) });
+		await page.goto('/en/inventory/mercedes-benz-gla-45-amg-405323');
+		const detailContainer = page.locator('.daynight-detail .container').first();
+		await expect(detailContainer).toBeVisible();
+		await expect
+			.poll(async () => {
+				const detailFrame = await detailContainer.boundingBox();
+				return (
+					detailFrame !== null &&
+					Math.abs(homeFrame.x - detailFrame.x) < 1 &&
+					Math.abs(homeFrame.width - detailFrame.width) < 1
+				);
+			})
+			.toBe(true);
+	}
+});
+
+test('desktop card financing copy stays clear of its action in both languages', async ({
+	page
+}) => {
+	for (const locale of ['en', 'bg']) {
+		for (const width of [992, 1440]) {
+			await page.setViewportSize({ width, height: 1000 });
+			for (const route of [`/${locale}`, `/${locale}/inventory`]) {
+				await page.goto(route);
+				await expect(page.locator('.daynight-card-price__monthly').first()).toBeVisible();
+				await page.evaluate(() => document.fonts.ready);
+				await expect
+					.poll(() =>
+						page.locator('.daynight-card-price__monthly:visible').evaluateAll((captions) =>
+							captions.every((caption) => {
+								const arrow = caption
+									.closest('.card-box__price')!
+									.querySelector('.daynight-card-price__link')!;
+								return (
+									caption.getBoundingClientRect().right <=
+										arrow.getBoundingClientRect().left - 10 &&
+									caption.scrollWidth <= caption.clientWidth + 1
+								);
+							})
+						)
+					)
+					.toBe(true);
+			}
+		}
+	}
+});
+
 test('cold detail navigation waits for its desktop stylesheet', async ({ page }, testInfo) => {
 	let release!: () => void;
 	let requested!: () => void;
@@ -119,10 +263,10 @@ test('home stays visible at the scrollbar boundary and when resizing across it',
 	await expect(page.locator('.hero-intent')).toBeVisible();
 });
 
-test('desktop variants and the 991/992px composition boundary remain usable', async ({
-	page
-}, testInfo) => {
-	for (const width of [991, 992, 1440]) {
+for (const width of [991, 992, 1440]) {
+	test(`desktop variants and the 991/992px composition boundary remain usable at ${width}px`, async ({
+		page
+	}, testInfo) => {
 		await page.setViewportSize({ width, height: 1000 });
 		for (const path of [
 			'/en',
@@ -141,7 +285,7 @@ test('desktop variants and the 991/992px composition boundary remain usable', as
 			if (path.includes('/inventory/mercedes')) {
 				await expect(page.locator('.daynight-detail')).toHaveCount(width >= 992 ? 1 : 0);
 			} else if (path === '/en/inventory' && width >= 992) {
-				const grid = page.locator('[data-daynight-grid-panel="2"].active > .grid');
+				const grid = page.locator('[data-daynight-grid-panel="3"].active > .grid');
 				await expect(grid).toBeVisible();
 				await expect
 					.poll(() =>
@@ -149,9 +293,10 @@ test('desktop variants and the 991/992px composition boundary remain usable', as
 							(element) => getComputedStyle(element).gridTemplateColumns.split(' ').length
 						)
 					)
-					.toBe(width <= 1240 ? 3 : 4);
+					.toBe(width < 1440 ? 4 : 5);
 			} else if (!path.includes('/inventory')) {
 				await expect(page.locator('.mobile-home')).toHaveCount(width < 992 ? 1 : 0);
+				if (width >= 992) await expect(page.locator('.daynight-home-shell')).toBeVisible();
 				if (width === 992 && path === '/en')
 					await testInfo.attach('desktop-boundary-state', {
 						body: JSON.stringify(
@@ -160,9 +305,10 @@ test('desktop variants and the 991/992px composition boundary remain usable', as
 								clientWidth: document.documentElement.clientWidth,
 								desktopMedia: matchMedia('(min-width: 992px)').matches,
 								mobileMedia: matchMedia('(max-width: 991px)').matches,
-								homeDisplay: getComputedStyle(document.querySelector('.daynight-home-shell')!)
-									.display,
-								homeHeight: document.querySelector('.daynight-home-shell')!.getBoundingClientRect()
+								homeDisplay: document.querySelector('.daynight-home-shell')
+									? getComputedStyle(document.querySelector('.daynight-home-shell')!).display
+									: null,
+								homeHeight: document.querySelector('.daynight-home-shell')?.getBoundingClientRect()
 									.height,
 								cssLinks: [
 									...document.querySelectorAll<HTMLLinkElement>('link[rel=stylesheet]')
@@ -177,11 +323,10 @@ test('desktop variants and the 991/992px composition boundary remain usable', as
 						),
 						contentType: 'application/json'
 					});
-				if (width >= 992) await expect(page.locator('.daynight-home-shell')).toBeVisible();
 			}
 		}
-	}
-});
+	});
+}
 
 test.describe('mobile preservation', () => {
 	test.use({ viewport: { width: 390, height: 844 }, userAgent: devices['iPhone 13'].userAgent });

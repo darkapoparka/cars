@@ -70,8 +70,8 @@
 				src={i18n.asset(image.width && !desktopMounted ? desktopOnlyImagePlaceholder : image.src)}
 				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset, !desktopMounted)}
 				sizes={desktopMounted
-					? '(min-width: 1241px) calc((100vw - 160px) / 4), calc((100vw - 120px) / 3)'
-					: '(min-width: 1241px) calc((100vw - 160px) / 4), (min-width: 992px) calc((100vw - 120px) / 3), 1px'}
+					? '(min-width: 1440px) 248px, (min-width: 1200px) calc((100vw - 140px) / 4), calc((100vw - 108px) / 4)'
+					: '(min-width: 1440px) 248px, (min-width: 1200px) calc((100vw - 140px) / 4), (min-width: 992px) calc((100vw - 108px) / 4), 1px'}
 				alt={vehicle.shortTitle}
 				width={image.width}
 				height={image.height}
@@ -140,7 +140,7 @@
 	.content {
 		display: flex;
 		flex-direction: column;
-		padding: 20px;
+		padding: 16px;
 		position: relative;
 		flex: 1;
 		min-width: 0;

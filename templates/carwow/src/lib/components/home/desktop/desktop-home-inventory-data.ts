@@ -1,7 +1,7 @@
 import type { HomeDesktopVehicle } from '$lib/types/home';
 import { normalize } from '$lib/utils/daynight-quick-filter-dom';
 
-export const DESKTOP_HOME_INVENTORY_LIMIT = 6;
+export const DESKTOP_HOME_INVENTORY_LIMIT = 10;
 
 export type DesktopHomeQuickFieldName = 'brand' | 'model' | 'mileage' | 'price';
 

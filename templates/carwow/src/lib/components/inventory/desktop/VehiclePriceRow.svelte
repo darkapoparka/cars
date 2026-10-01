@@ -50,6 +50,7 @@
 	.daynight-card-price__stack {
 		align-items: flex-start;
 		display: flex;
+		flex: 1;
 		flex-direction: column;
 		gap: 4px;
 		min-width: 0;
@@ -57,7 +58,7 @@
 
 	.daynight-card-price__value {
 		color: #101828;
-		font-size: var(--sa-text-2xl);
+		font-size: var(--sa-text-xl);
 		font-weight: var(--sa-weight-strong);
 		letter-spacing: -0.025em;
 		line-height: 1.15;
@@ -70,7 +71,8 @@
 		font-weight: var(--sa-weight-regular);
 		letter-spacing: 0;
 		line-height: 1.2;
-		white-space: nowrap;
+		max-width: 100%;
+		white-space: normal;
 	}
 
 	.daynight-card-price__link {

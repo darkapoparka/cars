@@ -27,9 +27,9 @@
 		() => inventoryQuickFilters
 	);
 
-	let activeGridIndex = $state(2);
+	let activeGridIndex = $state(3);
 	let layoutMode = $state<InventoryLayoutMode>('grid');
-	const defaultGridIndex = $derived(page.gridDefinitions[2] ? 2 : page.gridDefinitions.length - 1);
+	const defaultGridIndex = $derived(page.gridDefinitions[3] ? 3 : page.gridDefinitions.length - 1);
 	// The left filter panel eats ~300px, so the sidebar layout caps the grid at 4
 	// columns (index 2); the column toggles still pick 2/3/4 within that cap.
 	const SIDEBAR_MAX_GRID_INDEX = 2;

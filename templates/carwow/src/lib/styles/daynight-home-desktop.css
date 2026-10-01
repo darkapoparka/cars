@@ -1,3 +1,5 @@
+@import './desktop-page-frame.css';
+
 /* Desktop home composition. Each section has one owner; mobile is a separate shell. */
 @media (min-width: 992px) {
 	.daynight-home-shell {
@@ -12,7 +14,7 @@
 		font-family: var(--sa-font);
 	}
 	.daynight-home-shell .daynight-home-container {
-		width: min(calc(100% - 80px), 1320px);
+		width: var(--desktop-content-width);
 		margin-inline: auto;
 	}
 	.daynight-home-shell .daynight-home-section {
@@ -179,8 +181,8 @@
 	}
 	.daynight-home-shell .daynight-home-inventory__grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 24px;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 20px;
 	}
 	.daynight-home-shell .daynight-home-inventory__card {
 		display: flex;
@@ -264,7 +266,7 @@
 	.daynight-home-shell .daynight-home-inventory-card__content {
 		display: flex;
 		flex: 1;
-		padding: 20px;
+		padding: 16px;
 	}
 	/* Browse grids and honest, readable zero-stock counts. */
 	.daynight-home-shell .daynight-vehicle-types__grid {
@@ -336,16 +338,25 @@
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-	.daynight-home-shell .daynight-home-container {
-		width: calc(100% - 48px);
-	}
 	.daynight-home-shell .daynight-home-inventory__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 16px;
+	}
+	.daynight-home-shell .daynight-home-inventory__card:nth-child(n + 9) {
+		display: none;
 	}
 	.daynight-home-shell .daynight-home-hero__car--left {
 		left: -160px;
 	}
 	.daynight-home-shell .daynight-home-hero__car--right {
 		right: -160px;
+	}
+}
+@media (min-width: 1200px) and (max-width: 1439px) {
+	.daynight-home-shell .daynight-home-inventory__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+	.daynight-home-shell .daynight-home-inventory__card:nth-child(n + 9) {
+		display: none;
 	}
 }

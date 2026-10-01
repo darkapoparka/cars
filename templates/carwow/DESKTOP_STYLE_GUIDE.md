@@ -1,6 +1,6 @@
 # Day & Night — desktop style guide
 
-Updated 2026-09-06. Desktop refinement of the existing dealer site, with separate mobile compositions preserved. This guide governs new desktop styling; it does not certify every legacy route as migrated.
+Updated 2026-10-01. Desktop refinement of the existing dealer site, with separate mobile compositions preserved. This guide governs new desktop styling; it does not certify every legacy route as migrated.
 
 ## Direction
 
@@ -16,6 +16,7 @@ The previous mismatch was measurable: home and inventory shortcuts used differen
 
 - Shared desktop CTA grammar: `src/lib/styles/desktop-controls.css` (992px and wider). `sa-cta-primary` and `desktop-primary-action` use black; secondary/ghost actions use white with a neutral border.
 - Shared desktop discovery roles and chip states: `src/lib/styles/desktop-discovery.css`.
+- Shared Home, catalogue and vehicle-detail content frame: `src/lib/styles/desktop-page-frame.css` (1320px maximum, matching desktop gutters).
 - Existing brand yellow, Geist font and responsive heading scale: `src/lib/styles/tokens.css`.
 - Do not change global/mobile tokens to solve a desktop-only issue.
 - The former generated visual specimen is not shipped. Review the live Home and Inventory routes; their components and shared styles are the implementation authority for complete controls.
@@ -97,11 +98,11 @@ Keyboard focus uses a solid 2px black outline with a 2–3px offset. For composi
 
 Inventory shortcuts have a separate row, aligned with the filter triggers, with a 12px row gap and 8px chip gaps. Let the chips wrap within the panel at smaller desktop widths. Active shortcuts keep their black state and remove affordance; keyboard activation preserves focus and the URL filter state.
 
-`InventoryPageShell.svelte` exclusively selects the desktop composition. Do not add a second CSS viewport gate around its shell: WebKit can disagree at the 992px scrollbar boundary. `InventoryDesktopPage.svelte` also keeps the shared route hero visible within this selected desktop branch, without changing the hero's other consumers. Avoid a breakpoint-conditioned `scrollbar-gutter: stable` on the document: WebKit can repeatedly change viewport mode at 992px, dropping focus and hiding content. Keep the existing scroll-lock compensation for open dialogs.
+`InventoryPageShell.svelte` exclusively selects the desktop composition. Do not add a second CSS viewport gate around its shell: WebKit can disagree at the 992px scrollbar boundary. `InventoryDesktopPage.svelte` also keeps the shared route hero visible within this selected desktop branch, without changing the hero's other consumers. The shared desktop frame keeps the document scrollbar gutter-free while Home, Inventory or vehicle detail's desktop shell is mounted. Native scrolling remains available; mobile compositions retain their existing scrollbar rules. Avoid a breakpoint-conditioned `scrollbar-gutter: stable` on the document: WebKit can repeatedly change viewport mode at 992px, dropping focus and hiding content. Keep the existing scroll-lock compensation for open dialogs.
 
 The paired action banners have matching grid geometry and a 272px minimum height, growing to fit longer copy. Keep the car illustrations in their own grid column instead of mixing absolute positioning with grid placement. Video and review sections use matching flat white containers with 28px padding; review quotes sit on quiet neutral surfaces inside the group.
 
-The desktop Home preview shows six cars in three columns. Card details follow the hierarchy reviewed against Carwow's current used-car listings: model, transmission/fuel, price, then year/mileage in a divided footer. Avoid spec pictograms and transmission badges over the photos. Keep actual availability, photo counts, save/compare actions, financing links and detail navigation.
+The desktop Home preview shows eight cars in four columns at 992–1439px and ten cars in five columns from 1440px. Default Inventory uses the same column counts and centered content frame; retain the existing alternate density and sidebar controls. Card details follow the hierarchy reviewed against Carwow's current used-car listings: model, transmission/fuel, price, then a plain year/mileage line. Keep details compact and omit internal divider lines. Avoid spec pictograms and transmission badges over the photos. Keep actual availability, photo counts, save/compare actions, financing links and detail navigation.
 
 Type and make headings are centered without a separate heading CTA. The last tile opens the full inventory, replacing the last preview tile; the complete taxonomy remains available through inventory filters. The strip variant retains its compact logo-only composition.
 

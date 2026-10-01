@@ -66,8 +66,8 @@
 				src={i18n.asset(image.width && !desktopMounted ? desktopOnlyImagePlaceholder : image.src)}
 				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset, !desktopMounted)}
 				sizes={desktopMounted
-					? '(min-width: 1400px) 424px, calc((100vw - 128px) / 3)'
-					: '(min-width: 1400px) 424px, (min-width: 992px) calc((100vw - 128px) / 3), 1px'}
+					? '(min-width: 1440px) 248px, (min-width: 1200px) calc((100vw - 140px) / 4), calc((100vw - 96px) / 4)'
+					: '(min-width: 1440px) 248px, (min-width: 1200px) calc((100vw - 140px) / 4), (min-width: 992px) calc((100vw - 96px) / 4), 1px'}
 				width={image.width}
 				height={image.height}
 				alt={vehicle.shortTitle}
