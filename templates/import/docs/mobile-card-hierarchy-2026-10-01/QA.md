@@ -26,7 +26,7 @@ Node `24.21.0`, retained npm lockfile. A complete temporary source copy had its 
 - Frozen production preview: `tests/commerce-banners.e2e.ts`, `tests/inventory.e2e.ts` and `tests/mobile-navigation.e2e.ts`, desktop/mobile with one worker: 17 passed, 11 viewport-specific skips, zero failures. Coverage includes eight menu banner size/language combinations, the scrolling locale control, homepage actions, Contact/Sell/Import navigation, focus/back dismissal, SSR inventory, filters and detail return.
 - Targeted `tests/mobile-final.e2e.ts` automated accessibility/reflow scans of `/en`, `/en/inventory` and `/en/import` at 320px: three passed, zero detected WCAG-tagged violations. The four EN/BG menu scans also passed.
 
-Final captures: [homepage](home-320.png), [inventory](inventory-320.png), [import](import-320.png), [menu](menu-320.png) and [200% inventory/navigation](inventory-320-large-text.png). [Card geometry](card-geometry.json) and [source manifest](source-manifest.json) preserve the measurements and digest. The temporary frozen build is retired after verification; the canonical dev preview remains on port 6790.
+Final captures: [homepage](home-320.png), [inventory](inventory-320.png), [import](import-320.png), [menu](menu-320.png) and [200% inventory/navigation](inventory-320-large-text.png). [Card geometry](card-geometry.json) and [source manifest](source-manifest.json) preserve the measurements and digest. The temporary production QA server is stopped; the canonical dev preview remains on port 6790.
 
 ## Limits and preservation
 
@@ -35,3 +35,5 @@ The repository-wide `npm run verify` gate is blocked by existing formatting diff
 Earlier mutable-dev navigation checks encountered a Rolldown out-of-memory error on cold routes. The final production run uses independent, immutable build output. Historical screenshot files briefly written by old test paths were restored to their original bytes; the tests now write captures to their own Playwright output directory.
 
 This local pass does not verify mounted `/variant-2`, physical devices, a public alias, real form delivery, an immutable template release or dealer rollout. Owner visual acceptance remains separate.
+
+Automatic approval review rejected removal of the task-owned temporary QA copy with `blocked by policy`, including a second attempt using its verified literal path. No more specific reason was returned. The preserved directory is `L:/CODEX/cars/runtime/import-mobile-hierarchy-20261001/source`; it is verification output with no branch or worktree. Its port 6791 server was stopped. The next cleanup action is to verify that exact directory again and remove only that copy when permitted; the master and saved evidence must remain.
