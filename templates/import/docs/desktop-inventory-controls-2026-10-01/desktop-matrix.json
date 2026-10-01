@@ -1,0 +1,582 @@
+[
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Марка",
+				"radius": "8px",
+				"width": 145.59375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Модел",
+				"radius": "8px",
+				"width": 145.59375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Цена",
+				"radius": "8px",
+				"width": 145.59375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Пробег",
+				"radius": "8px",
+				"width": 145.59375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Гориво",
+				"radius": "8px",
+				"width": 145.59375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Купе",
+				"radius": "8px",
+				"width": 145.59375
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 689,
+			"x": 32
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 768,
+		"locale": "bg"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Марка",
+				"radius": "8px",
+				"width": 230.921875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Модел",
+				"radius": "8px",
+				"width": 230.921875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Цена",
+				"radius": "8px",
+				"width": 230.921875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Пробег",
+				"radius": "8px",
+				"width": 230.921875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Гориво",
+				"radius": "8px",
+				"width": 230.921875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Купе",
+				"radius": "8px",
+				"width": 230.921875
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 945,
+			"x": 32
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 1024,
+		"locale": "bg"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Марка",
+				"radius": "8px",
+				"width": 140.796875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Модел",
+				"radius": "8px",
+				"width": 140.796875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Цена",
+				"radius": "8px",
+				"width": 140.796875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Пробег",
+				"radius": "8px",
+				"width": 140.796875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Гориво",
+				"radius": "8px",
+				"width": 140.796875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Купе",
+				"radius": "8px",
+				"width": 140.796875
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 1121,
+			"x": 32
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 1200,
+		"locale": "bg"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Марка",
+				"radius": "8px",
+				"width": 173.953125
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Модел",
+				"radius": "8px",
+				"width": 173.96875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Цена",
+				"radius": "8px",
+				"width": 173.96875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Пробег",
+				"radius": "8px",
+				"width": 173.953125
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Гориво",
+				"radius": "8px",
+				"width": 173.96875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Купе",
+				"radius": "8px",
+				"width": 173.96875
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 1320,
+			"x": 52.5
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 1440,
+		"locale": "bg"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Марка",
+				"radius": "8px",
+				"width": 173.953125
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Модел",
+				"radius": "8px",
+				"width": 173.96875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Цена",
+				"radius": "8px",
+				"width": 173.96875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Пробег",
+				"radius": "8px",
+				"width": 173.953125
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Гориво",
+				"radius": "8px",
+				"width": 173.96875
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Купе",
+				"radius": "8px",
+				"width": 173.96875
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 1320,
+			"x": 292.5
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 1920,
+		"locale": "bg"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Make",
+				"radius": "8px",
+				"width": 165.140625
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Model",
+				"radius": "8px",
+				"width": 165.15625
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Price",
+				"radius": "8px",
+				"width": 165.15625
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Mileage",
+				"radius": "8px",
+				"width": 165.140625
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Fuel",
+				"radius": "8px",
+				"width": 165.15625
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Body",
+				"radius": "8px",
+				"width": 165.15625
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 689,
+			"x": 32
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 768,
+		"locale": "en"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Make",
+				"radius": "8px",
+				"width": 250.484375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Model",
+				"radius": "8px",
+				"width": 250.484375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Price",
+				"radius": "8px",
+				"width": 250.484375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Mileage",
+				"radius": "8px",
+				"width": 250.484375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Fuel",
+				"radius": "8px",
+				"width": 250.484375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Body",
+				"radius": "8px",
+				"width": 250.484375
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 945,
+			"x": 32
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 1024,
+		"locale": "en"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Make",
+				"radius": "8px",
+				"width": 150.5625
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Model",
+				"radius": "8px",
+				"width": 150.578125
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Price",
+				"radius": "8px",
+				"width": 150.578125
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Mileage",
+				"radius": "8px",
+				"width": 150.578125
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Fuel",
+				"radius": "8px",
+				"width": 150.578125
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Body",
+				"radius": "8px",
+				"width": 150.5625
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 1121,
+			"x": 32
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 1200,
+		"locale": "en"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Make",
+				"radius": "8px",
+				"width": 183.734375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Model",
+				"radius": "8px",
+				"width": 183.75
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Price",
+				"radius": "8px",
+				"width": 183.734375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Mileage",
+				"radius": "8px",
+				"width": 183.75
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Fuel",
+				"radius": "8px",
+				"width": 183.734375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Body",
+				"radius": "8px",
+				"width": 183.75
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 1320,
+			"x": 52.5
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 1440,
+		"locale": "en"
+	},
+	{
+		"cards": 12,
+		"filterFields": [
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Make",
+				"radius": "8px",
+				"width": 183.734375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Model",
+				"radius": "8px",
+				"width": 183.75
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Price",
+				"radius": "8px",
+				"width": 183.734375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Mileage",
+				"radius": "8px",
+				"width": 183.75
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Fuel",
+				"radius": "8px",
+				"width": 183.734375
+			},
+			{
+				"clipped": false,
+				"height": 48,
+				"label": "Body",
+				"radius": "8px",
+				"width": 183.75
+			}
+		],
+		"height": 1000,
+		"overflow": false,
+		"panel": {
+			"width": 1320,
+			"x": 292.5
+		},
+		"utilitiesInFilterPanel": false,
+		"utilitiesInResults": true,
+		"utilityTargets": [44, 44, 44],
+		"width": 1920,
+		"locale": "en"
+	}
+]

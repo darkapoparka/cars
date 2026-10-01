@@ -136,3 +136,46 @@ test('desktop sidebar maximums and choices submit without JavaScript', async ({
 	await expect(page.locator('main .site-vehicle-card').first()).toBeVisible();
 	await context.close();
 });
+
+test('desktop sorting and view changes retain filters and keyboard menu behavior', async ({
+	page
+}, info) => {
+	test.skip(info.project.name !== 'desktop');
+	await visit(page, '/en/inventory?brand=BMW&maxPrice=50000&view=4&lang=en');
+	const sort = page.locator('.inventory-display select[name="sort"]');
+	await expect(sort).toHaveValue('best-match');
+	await sort.selectOption('lowest-price');
+	await expect(page).toHaveURL(
+		(url) =>
+			url.searchParams.get('sort') === 'lowest-price' &&
+			url.searchParams.get('brand') === 'BMW' &&
+			url.searchParams.get('maxPrice') === '50000' &&
+			url.searchParams.get('lang') === 'en'
+	);
+	await expect(sort).toHaveValue('lowest-price');
+	const view = page.locator('.inventory-view summary');
+	await view.click();
+	await expect(page.getByRole('link', { name: 'Comfortable grid', exact: true })).toBeVisible();
+	await view.press('Escape');
+	await expect(view).toBeFocused();
+	await expect(page.getByRole('link', { name: 'Comfortable grid', exact: true })).not.toBeVisible();
+	await view.click();
+	await page.getByRole('link', { name: 'Comfortable grid', exact: true }).click();
+	await expect(page).toHaveURL(
+		(url) =>
+			url.searchParams.get('view') === '3' &&
+			url.searchParams.get('sort') === 'lowest-price' &&
+			url.searchParams.get('brand') === 'BMW' &&
+			url.searchParams.get('maxPrice') === '50000'
+	);
+	await page.getByRole('link', { name: 'Show a persistent filter panel', exact: true }).click();
+	await expect(page.locator('.inventory-sidebar')).toBeVisible();
+	await expect(page).toHaveURL(
+		(url) =>
+			url.searchParams.get('layout') === 'dashboard' &&
+			url.searchParams.get('sort') === 'lowest-price' &&
+			url.searchParams.get('brand') === 'BMW' &&
+			url.searchParams.get('maxPrice') === '50000' &&
+			url.searchParams.get('lang') === 'en'
+	);
+});

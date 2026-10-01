@@ -8,6 +8,7 @@
 	import { linkHref } from '$lib/utils/links';
 	import InventoryMobilePage from './InventoryMobilePage.svelte';
 	import InventoryToolbar from './InventoryToolbar.svelte';
+	import InventoryDisplayControls from './InventoryDisplayControls.svelte';
 	import VehicleCard from './VehicleCard.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
@@ -91,8 +92,11 @@
 				{#if desktop.layout === 'dashboard'}<InventorySidebar {desktop} {english} />{/if}
 				<div class="inventory-results__content">
 					<header class="inventory-results__heading">
-						<h2 class="site-heading">{english ? 'Cars for sale' : 'Автомобили за продажба'}</h2>
-						<p role="status">{count} / {cards.length} {english ? 'cars' : 'автомобила'}</p>
+						<div class="inventory-results__summary">
+							<h2 class="site-heading">{english ? 'Cars for sale' : 'Автомобили за продажба'}</h2>
+							<p role="status">{count} / {cards.length} {english ? 'cars' : 'автомобила'}</p>
+						</div>
+						<InventoryDisplayControls {desktop} {english} />
 					</header>
 					<div class="inventory-grid" data-view={desktop.view}>
 						{#each visibleCards as card, index (card.slug)}<VehicleCard
@@ -144,10 +148,16 @@
 	.inventory-results__heading {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: baseline;
+		align-items: center;
 		justify-content: space-between;
 		gap: var(--bc-space-3);
 		margin-bottom: var(--bc-space-5);
+	}
+	.inventory-results__summary {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: var(--bc-space-2) var(--bc-space-4);
 	}
 	.inventory-results__heading p {
 		margin: 0;
@@ -156,7 +166,7 @@
 	}
 	.inventory-results {
 		background: var(--bc-bg);
-		padding-top: var(--bc-space-6);
+		padding-top: var(--bc-space-2);
 	}
 	.inventory-grid {
 		display: grid;

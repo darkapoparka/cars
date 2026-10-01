@@ -2,8 +2,6 @@
 	import { page } from '$app/state';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import X from '@lucide/svelte/icons/x';
-	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
-	import PanelLeft from '@lucide/svelte/icons/panel-left';
 	import { inventoryFilterParam } from '$lib/domain/inventory-query';
 	import InventoryFilter from './InventoryFilter.svelte';
 	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
@@ -25,18 +23,6 @@
 		const format = (value: string) => Number(value).toLocaleString(english ? 'en' : 'bg');
 		return `${filter.selectedValues[0] ? format(min) + ' – ' + format(filter.selectedValues[0]) : (english ? 'From ' : 'От ') + format(min)} ${filter.numericInput.unit}`;
 	}
-	let viewMenu: HTMLDetailsElement;
-	function dismissViewMenu(event: PointerEvent | FocusEvent) {
-		if (event.target instanceof Node && !viewMenu?.contains(event.target)) {
-			if (viewMenu) viewMenu.open = false;
-		}
-	}
-	function handleViewKey(event: KeyboardEvent) {
-		if (event.key === 'Escape' && viewMenu?.open) {
-			viewMenu.open = false;
-			viewMenu.querySelector('summary')?.focus();
-		}
-	}
 	const quickFilters = $derived(
 		['brand', 'q', 'maxPrice', 'maxMileage', 'fuel', 'body']
 			.map((name) => desktop.filters.find((filter) => inventoryFilterParam(filter.name) === name))
@@ -44,78 +30,42 @@
 	);
 </script>
 
-<svelte:document
-	onpointerdown={dismissViewMenu}
-	onfocusin={dismissViewMenu}
-	onkeydown={handleViewKey}
-/>
-
 <div class="inventory-toolbar">
-	<div class="inventory-toolbar__row site-container">
-		<Action
-			variant="strong"
-			class="inventory-toolbar__all"
-			aria-haspopup="dialog"
-			aria-expanded={allOpen}
-			onclick={() => dialog?.openFilters()}
-			><SlidersHorizontal size={18} aria-hidden="true" />{english
-				? 'All filters'
-				: 'Всички филтри'}</Action
-		>
-		<div class="inventory-toolbar__filters">
-			{#each quickFilters as filter (filter.id)}<InventoryFilter
-					{filter}
-					summary={appliedRangeSummary(filter)}
-					expanded={allOpen && activeFilter?.id === filter.id}
-					onopen={() => dialog?.openFilters(filter)}
-				/>{/each}
+	<div class="site-container">
+		<div class="inventory-toolbar__panel">
+			<div class="inventory-toolbar__row">
+				<div class="inventory-toolbar__filters">
+					{#each quickFilters as filter (filter.id)}<InventoryFilter
+							{filter}
+							summary={appliedRangeSummary(filter)}
+							expanded={allOpen && activeFilter?.id === filter.id}
+							onopen={() => dialog?.openFilters(filter)}
+						/>{/each}
+				</div>
+				<Action
+					variant="strong"
+					size="compact"
+					class="inventory-toolbar__all"
+					aria-haspopup="dialog"
+					aria-expanded={allOpen}
+					onclick={() => dialog?.openFilters()}
+					><SlidersHorizontal size={18} aria-hidden="true" />{english
+						? 'All filters'
+						: 'Всички филтри'}</Action
+				>
+			</div>
+			{#if desktop.activeFilters}<div class="inventory-toolbar__active">
+					{#each desktop.activeFilters.chips as chip (chip.href)}<a
+							href={linkHref(chip.href)}
+							aria-label={(english ? 'Remove filter: ' : 'Премахни филтър: ') + chip.label}
+							>{chip.label}<X size={14} aria-hidden="true" /></a
+						>{/each}<a
+						class="inventory-toolbar__clear"
+						href={linkHref(desktop.activeFilters.clearHref)}>{desktop.activeFilters.clearLabel}</a
+					>
+				</div>{/if}
 		</div>
-		<form action={linkHref('/inventory')} class="inventory-toolbar__sort">
-			{#each [...page.url.searchParams].filter(([name]) => name !== 'sort') as [name, value], i (i)}<input
-					type="hidden"
-					{name}
-					{value}
-				/>{/each}
-			<label
-				><span class="sr-only">{desktop.sortLabel}</span><select
-					name="sort"
-					value={desktop.sortOptions.find((option) => option.active)?.value ??
-						desktop.sortOptions[0]?.value}
-					onchange={(event) => event.currentTarget.form?.requestSubmit()}
-					>{#each desktop.sortOptions as option (option.value)}<option value={option.value}
-							>{option.label}</option
-						>{/each}</select
-				></label
-			>
-			<noscript><button type="submit">{english ? 'Sort' : 'Подреди'}</button></noscript>
-		</form>
-		<details class="inventory-view" bind:this={viewMenu}>
-			<summary><LayoutGrid size={18} aria-hidden="true" />{desktop.viewLabel}</summary>
-			<nav aria-label={desktop.viewLabel}>
-				{#each desktop.viewOptions as option (option.view)}<a
-						href={linkHref(option.href)}
-						aria-current={option.active ? 'true' : undefined}>{option.label}</a
-					>{/each}
-			</nav>
-		</details>
-		<Action
-			href={desktop.layoutToggle.href}
-			variant="secondary"
-			size="compact"
-			aria-label={desktop.layoutToggle.ariaLabel}
-			aria-controls="inventory-results"
-			class="inventory-toolbar__layout"
-		>
-			<PanelLeft size={18} aria-hidden="true" />{desktop.layoutToggle.label}
-		</Action>
 	</div>
-	{#if desktop.activeFilters}<div class="site-container inventory-toolbar__active">
-			{#each desktop.activeFilters.chips as chip (chip.href)}<a href={linkHref(chip.href)}
-					>{chip.label}<X size={14} aria-hidden="true" /></a
-				>{/each}<a href={linkHref(desktop.activeFilters.clearHref)}
-				>{desktop.activeFilters.clearLabel}</a
-			>
-		</div>{/if}
 </div>
 <InventoryFiltersDialog bind:this={dialog} {desktop} {english} bind:allOpen bind:activeFilter />
 
@@ -124,73 +74,32 @@
 		position: sticky;
 		top: 0;
 		z-index: 80;
-		background: var(--bc-surface-raised);
-		border-bottom: 1px solid var(--bc-border);
-		padding-block: var(--bc-space-3);
-		box-shadow: var(--bc-shadow-subtle);
+		background: var(--bc-bg);
+		padding-block: var(--bc-space-5) var(--bc-space-3);
 	}
-	.inventory-toolbar__row {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: var(--bc-space-3);
-	}
-	.inventory-toolbar__filters {
-		display: flex;
-		flex-wrap: wrap;
-		min-width: 0;
-		gap: var(--bc-space-2);
-		flex: 1;
-	}
-	.inventory-toolbar__sort {
-		margin: 0;
-		margin-left: auto;
-	}
-	select,
-	summary {
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-pill);
-		min-height: var(--bc-route-pill-height);
-		padding: 0 var(--bc-space-3);
-		background: var(--bc-surface-raised);
-		color: var(--bc-ink);
-		font-size: var(--bc-text-filter);
-	}
-	.inventory-view {
-		position: relative;
-	}
-	summary {
-		display: flex;
-		align-items: center;
-		gap: var(--bc-space-2);
-		list-style: none;
-	}
-	.inventory-view nav {
-		position: absolute;
-		right: 0;
-		top: calc(100% + 8px);
-		z-index: 10;
-		min-width: 160px;
-		padding: var(--bc-space-2);
+	.inventory-toolbar__panel {
+		padding: var(--bc-space-4);
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);
 		background: var(--bc-surface-raised);
-		box-shadow: var(--bc-shadow-panel);
+	}
+	.inventory-toolbar__row {
 		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: center;
+		gap: var(--bc-space-4);
 	}
-	.inventory-view a {
-		padding: var(--bc-space-2);
-		text-decoration: none;
-		color: var(--bc-ink);
-	}
-	.inventory-view a:hover {
-		background: var(--bc-surface);
+	.inventory-toolbar__filters {
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		min-width: 0;
+		gap: var(--bc-space-2);
 	}
 	.inventory-toolbar__active {
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--bc-space-2);
-		padding-top: var(--bc-space-3);
+		padding-top: var(--bc-space-4);
 	}
 	.inventory-toolbar__active a {
 		display: inline-flex;
@@ -199,42 +108,24 @@
 		color: var(--bc-copy);
 		font-size: var(--bc-text-label);
 		text-decoration: none;
+		min-height: var(--bc-control-height-standard);
 		padding: var(--bc-space-1) var(--bc-space-2);
 		border-radius: var(--bc-radius-sm);
 		background: var(--bc-surface);
 	}
+	.inventory-toolbar__active .inventory-toolbar__clear {
+		background: transparent;
+		text-decoration: underline;
+		text-underline-offset: var(--bc-space-1);
+	}
 	.inventory-toolbar__row :global(.inventory-toolbar__all) {
-		min-height: var(--bc-route-pill-height);
-		border-radius: var(--bc-radius-pill);
+		min-height: var(--bc-control-height-primary);
+		border-radius: var(--bc-radius-md);
 		white-space: nowrap;
 	}
-	.inventory-toolbar__filters :global(.site-filter-trigger) {
-		flex: 0 0 auto;
-	}
-	summary::-webkit-details-marker {
-		display: none;
-	}
-	@media (max-width: 1279px) {
+	@media (min-width: 768px) and (max-width: 1199px) {
 		.inventory-toolbar__filters {
-			order: 1;
-			flex-basis: 100%;
-		}
-	}
-	@media (min-width: 768px) {
-		select,
-		summary,
-		.inventory-toolbar__row :global(.inventory-toolbar__all) {
-			min-height: var(--bc-control-height-primary);
-			font-size: var(--bc-text-control);
-		}
-		.inventory-toolbar__active a {
-			min-height: var(--bc-control-height-compact);
-			padding-inline: var(--bc-space-3);
-		}
-		.inventory-view a[aria-current='true'] {
-			background: var(--bc-bg-strong);
-			border-radius: var(--bc-radius-md);
-			font-weight: var(--bc-weight-heading);
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 	}
 </style>

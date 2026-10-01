@@ -20,6 +20,7 @@
 	data-active={Boolean(summary) || filter.selectedValues.length > 0}
 	aria-haspopup="dialog"
 	aria-expanded={expanded}
+	title={summary ?? (filter.selectedValues.length ? filter.selectedSummary : filter.label)}
 	onclick={onopen}
 >
 	<span class="filter-trigger-label"
@@ -61,8 +62,26 @@
 		.site-filter-trigger {
 			font-weight: var(--bc-weight-control);
 			min-height: var(--bc-control-height-primary);
+			min-width: 0;
+			max-width: none;
+			border-radius: var(--bc-radius-md);
+			border-color: var(--bc-border-strong);
+			background: var(--bc-surface-raised);
 			padding-inline: var(--bc-space-3);
 			gap: var(--bc-space-2);
+		}
+		.site-filter-trigger:hover,
+		.site-filter-trigger[aria-expanded='true'] {
+			border-color: var(--bc-ink);
+			background: var(--bc-surface);
+		}
+		.site-filter-trigger[data-active='true'] {
+			border-color: var(--bc-accent);
+			background: var(--bc-accent-soft);
+		}
+		.site-filter-trigger :global(svg) {
+			flex-shrink: 0;
+			color: var(--bc-muted);
 		}
 	}
 </style>
