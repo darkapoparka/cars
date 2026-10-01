@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
 	type Review = { avatar?: string; name: string; role: string; text: string };
-	let { review }: { review: Review } = $props();
+	let { review, compactRole }: { review: Review; compactRole?: string } = $props();
 	let failed = $state(false);
 	const initials = $derived(
 		review.name
@@ -30,7 +30,10 @@
 					use:recoverAvatar
 				/>{:else}{initials}{/if}
 		</span>
-		<span class="review-card__person"><strong>{review.name}</strong><span>{review.role}</span></span
+		<span class="review-card__person"
+			><strong>{review.name}</strong><span class:review-card__role-full={Boolean(compactRole)}
+				>{review.role}</span
+			>{#if compactRole}<span class="review-card__role-compact">{compactRole}</span>{/if}</span
 		>
 	</figcaption>
 	<blockquote>{review.text}</blockquote>
@@ -88,6 +91,9 @@
 		font-size: var(--bc-text-label);
 		line-height: var(--bc-leading-label);
 	}
+	.review-card__role-compact {
+		display: none;
+	}
 	blockquote {
 		margin: 0;
 		color: var(--bc-copy);
@@ -95,6 +101,12 @@
 		line-height: var(--bc-leading-body-lg);
 	}
 	@media (max-width: 767.98px) {
+		.review-card__role-full {
+			display: none;
+		}
+		.review-card__role-compact {
+			display: block;
+		}
 		.review-card {
 			padding: var(--bc-space-5);
 		}

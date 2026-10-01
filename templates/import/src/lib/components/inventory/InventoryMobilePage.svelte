@@ -1127,7 +1127,7 @@
 		top: 0;
 		z-index: 40;
 		display: grid;
-		gap: var(--bc-space-2);
+		gap: 6px;
 		min-width: 0;
 		margin: 0;
 		/* Keep one 12px gap between the pills and results, owned by the sticky toolbar. */
@@ -1142,10 +1142,11 @@
 	}
 
 	.daynight-inventory-mobile__search {
+		--bc-mobile-icon-action-surface-size: var(--bc-control-height-standard);
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) repeat(2, var(--bc-control-height-standard));
 		align-items: center;
-		gap: var(--bc-space-2);
+		gap: var(--bc-space-1);
 		min-width: 0;
 	}
 

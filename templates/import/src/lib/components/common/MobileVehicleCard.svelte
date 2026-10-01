@@ -12,7 +12,6 @@
 	import type { VehicleCardSummary } from '$lib/domain/vehicle-card';
 	import Calendar from '@lucide/svelte/icons/calendar';
 	import CarFront from '@lucide/svelte/icons/car-front';
-	import Cog from '@lucide/svelte/icons/cog';
 	import Fuel from '@lucide/svelte/icons/fuel';
 	import Gauge from '@lucide/svelte/icons/gauge';
 
@@ -62,12 +61,14 @@
 			/>
 		{/if}
 		{#if card.tag}<span class="mobile-vehicle-card__tag">{card.tag}</span>{/if}
-		<span class="mobile-vehicle-card__mileage" title={card.mileageLabel}>
-			<Gauge size={12} strokeWidth={1.8} aria-hidden="true" /><span aria-hidden="true"
-				>{mileage}</span
-			>
-			<span class="sr-only">{locale === 'en' ? 'Mileage: ' : 'Пробег: '}{card.mileageLabel}</span>
-		</span>
+		{#if variant === 'import'}
+			<span class="mobile-vehicle-card__mileage" title={card.mileageLabel}>
+				<Gauge size={12} strokeWidth={1.8} aria-hidden="true" /><span aria-hidden="true"
+					>{mileage}</span
+				>
+				<span class="sr-only">{locale === 'en' ? 'Mileage: ' : 'Пробег: '}{card.mileageLabel}</span>
+			</span>
+		{/if}
 	</div>
 	<div class="mobile-vehicle-card__body">
 		{#if !card.title.toLocaleLowerCase().startsWith(card.brand.toLocaleLowerCase())}<p
@@ -96,9 +97,14 @@
 					aria-label={(locale === 'en' ? 'Transmission: ' : 'Скоростна кутия: ') +
 						card.transmission}
 				>
-					<Cog size={13} strokeWidth={1.8} aria-hidden="true" /><span
-						>{compactCardTransmission(card.transmission)}</span
-					>
+					<span>{compactCardTransmission(card.transmission)}</span>
+				</li>
+				<li
+					class="mobile-vehicle-card__distance"
+					title={card.mileageLabel}
+					aria-label={(locale === 'en' ? 'Mileage: ' : 'Пробег: ') + card.mileageLabel}
+				>
+					<span>{mileage}</span>
 				</li>
 			{/if}
 		</ul>
@@ -262,11 +268,10 @@
 		min-width: 0;
 		overflow-wrap: anywhere;
 	}
-	.mobile-vehicle-card__transmission {
-		grid-column: 1 / -1;
-		background: transparent;
-		padding: 0 7px;
-		color: var(--bc-muted);
+	.mobile-vehicle-card__transmission,
+	.mobile-vehicle-card__distance {
+		justify-content: center;
+		font-variant-numeric: tabular-nums;
 	}
 	.mobile-vehicle-card--import ul {
 		grid-template-columns: minmax(0, 1fr);

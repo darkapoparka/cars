@@ -12,7 +12,7 @@
 	import FeaturedMobile from './HomeFiveFeaturedVehicles.svelte';
 	import ActionBand from './HomeFiveActionBand.svelte';
 	import YouTubeSection from '$lib/components/common/YouTubeSection.svelte';
-	import { aboutVideos } from '$lib/data/about-videos';
+	import { aboutVideos, youtubeChannelHref } from '$lib/data/about-videos';
 	import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
 	let { data }: { data: ReturnType<typeof homePageData> } = $props();
 	const mobile = new MediaQuery('(max-width: 767.98px)', false);
@@ -90,7 +90,7 @@
 				>{/each}
 		</div>
 	</section>
-	<YouTubeSection videos={aboutVideos} {english} />
+	<YouTubeSection videos={aboutVideos} {english} channelHref={youtubeChannelHref} />
 	{#if data.reviewItems.length}
 		<section class="site-section site-container site-stack">
 			<header class="home-section-heading">
@@ -106,7 +106,10 @@
 				role="region"
 				aria-label={english ? 'Customer reviews' : 'Клиентски отзиви'}
 			>
-				{#each data.reviewItems as review (review.name)}<ReviewCard {review} />{/each}
+				{#each data.reviewItems as review (review.name)}<ReviewCard
+						{review}
+						compactRole={english ? 'Customer' : 'Клиент'}
+					/>{/each}
 				<a class="home-rail-end" href={href('/reviews')}
 					><ArrowRight size={32} aria-hidden="true" /><strong
 						>{english ? 'View all' : 'Виж всички'}</strong

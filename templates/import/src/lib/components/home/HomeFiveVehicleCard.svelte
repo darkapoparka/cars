@@ -727,16 +727,7 @@
 			gap: 8px;
 		}
 		.daynight-card-actions {
-			order: 3;
-			margin-top: 0;
-		}
-		.daynight-card-actions .view-details {
-			min-height: 44px;
-			border-color: var(--bc-border-strong);
-			background: transparent;
-			color: var(--bc-ink) !important;
-			font-size: 16px !important;
-			font-weight: var(--bc-weight-action) !important;
+			display: none;
 		}
 	}
 
