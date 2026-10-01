@@ -13,8 +13,15 @@
   import DesktopShowroom from '$components/company/DesktopShowroom.svelte';
   import EntryCard from '$components/ui/entry/EntryCard.svelte';
   import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
+  import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
   import { resolve } from '$app/paths';
   import { brand } from '$config/brand';
+
+  const socialProfiles = [
+    { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
+    { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
+    { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
+  ] as const;
 </script>
 
 <svelte:head>
@@ -24,11 +31,20 @@
 
 <AboutHero />
 <div class="dn-about-intro dn-information-panel">
-  <EntryCard title={i18n.t("m_b4b580a9ad8c")} titleId="about-intro-title">
+  <EntryCard title={i18n.t("m_b4b580a9ad8c")} titleId="about-intro-title" titleTag="h1">
     <p>{i18n.t("m_335a481bffd9", { p0: i18n.dealer('city') })}</p>
     <a class="dn-compact-control dn-entry-action dn-compact-primary" href={i18n.href(resolve('/listing-grid'))}>
       <span>{i18n.t("m_f92c64344e85")}</span><MobileActionIcon name="arrow" size={18} />
     </a>
+    {#if socialProfiles.some(profile => profile.href)}
+      <nav class="dn-about-intro__socials" aria-label={i18n.t("m_3931afa2068d")}>
+        {#each socialProfiles.filter(profile => profile.href) as profile (profile.name)}
+          <a href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={i18n.t("m_c0b8af66cd54", { p0: profile.label })} title={profile.label}>
+            <SocialBrandIcon name={profile.name} size={22} />
+          </a>
+        {/each}
+      </nav>
+    {/if}
   </EntryCard>
 </div>
 <AboutProcess />

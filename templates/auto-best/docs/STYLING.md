@@ -35,7 +35,9 @@ The existing mobile social layout remains separate.
 
 Below 992px, About and general Contact use an overlay header on their dark hero,
 with an inset white card overlapping the banner by 52px, as on Home. About uses
-`EntryCard.svelte` for its introduction and inventory action; Contact groups its
+`EntryCard.svelte` for its only visible page heading, introduction, inventory
+action and configured social profiles. Its compact mobile hero is a background;
+the desktop hero copy stays in its separate layout. Contact groups its
 phone and directions actions before address and visit details. Its actions stack
 when their container is narrower than 18rem, including enlarged text. Blog's
 header shares the yellow hero surface. `BlogHero.svelte` keeps its native GET

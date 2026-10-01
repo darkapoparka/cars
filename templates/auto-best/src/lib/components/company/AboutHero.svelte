@@ -4,18 +4,10 @@
   const i18n = getI18n();
 
   import { resolve } from '$app/paths';
-  import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
-  import SocialBrandIcon from './SocialBrandIcon.svelte';
   import HeroLocation from '$components/ui/HeroLocation.svelte';
   import DesktopSocialLinks from './DesktopSocialLinks.svelte';
-
-  const socialProfiles = [
-    { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
-    { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
-    { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
-  ] as const;
 </script>
 
 <section class="dn-about-hero dn-information-hero dn-route-hero dn-route-hero--studio dn-route-hero--light" aria-labelledby="about-title">
@@ -31,35 +23,12 @@
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>
     <DesktopSocialLinks hero />
-    {#if socialProfiles.some(profile => profile.href)}
-    <nav class="dn-about-socials dn-about-socials--mobile" aria-label={i18n.t("m_3931afa2068d")}>
-      <span>{i18n.t("m_9200ee75efd0")}</span>
-      <div class="dn-about-socials__links dn-social-profile-links">
-        {#each socialProfiles.filter(profile => profile.href) as profile (profile.name)}
-          <a class="dn-social-profile-link" href={i18n.href(profile.href)} target="_blank" rel="noopener noreferrer" aria-label={i18n.t("m_c0b8af66cd54", { p0: profile.label })}>
-            <SocialBrandIcon name={profile.name} size={28} />
-          </a>
-        {/each}
-      </div>
-    </nav>
-    {/if}
   </div>
 </section>
 
 <style>
-  .dn-about-socials { display: flex; flex-direction: column; align-items: center; gap: 10px; align-self: center; }
-  .dn-about-socials > span { color: #c9cbd0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
-  .dn-about-socials__links { display: flex; gap: 16px; }
-  .dn-about-socials a { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border: 1px solid #686c73; border-radius: 50%; color: #fff; }
-  .dn-about-socials a:hover { background: #fff; border-color: #fff; color: #1d1f23; }
-  .dn-about-socials a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
-  @media (max-width: 991px) {
-    .dn-about-hero__lead, .dn-about-hero > .dn-about-hero__content > .dn-about-button { display: none; }
-    .dn-about-socials--mobile { margin-top: var(--dn-space-5); }
-  }
   @media (min-width: 992px) {
     .dn-about-hero :global(.dn-desktop-hero-scene) { filter: grayscale(1); }
-    .dn-about-socials--mobile { display: none; }
     .dn-about-hero__lead { display: none; }
   }
 </style>
