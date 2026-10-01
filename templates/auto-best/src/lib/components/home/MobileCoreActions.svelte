@@ -5,28 +5,34 @@
   import { resolve } from '$app/paths';
   import FeatureArtwork from '$components/ui/FeatureArtwork.svelte';
   import { homeActionArtwork } from '$data/feature-artwork';
+  import { listingVehicles } from '$data/listing';
+  import { template } from '$config/template';
 
   const actions = [
     {
       title: 'home.action.cars.title',
+      detail: 'home.action.cars.detail',
       href: '/listing-grid',
       tone: 'blue',
       artwork: homeActionArtwork.collection
     },
     {
       title: 'home.action.sell.title',
+      detail: 'home.action.sell.detail',
       href: '/contact?topic=trade-in',
       tone: 'red',
       artwork: homeActionArtwork.sell
     },
     {
       title: 'home.action.import.title',
+      detail: 'home.action.import.detail',
       href: '/contact?topic=import',
       tone: 'ice',
       artwork: homeActionArtwork.import
     },
     {
       title: 'home.action.finance.title',
+      detail: 'home.action.finance.detail',
       href: '/contact?topic=leasing',
       tone: 'dark',
       artwork: homeActionArtwork.finance
@@ -40,6 +46,7 @@
       <a class={`dn-mobile-core-card dn-mobile-core-card--${action.tone}`} href={i18n.href(resolve(action.href))}>
         <span class="dn-mobile-core-card__copy">
           <strong>{i18n.t(action.title)}</strong>
+          <small>{action.tone === 'blue' ? i18n.t(template.verifiedInventory ? 'home.action.cars.availableCount' : 'home.action.cars.previewCount', { count: listingVehicles.length }) : i18n.t(action.detail)}</small>
         </span>
         <span class="dn-mobile-core-card__art" aria-hidden="true"><FeatureArtwork artwork={action.artwork} eager /></span>
       </a>
@@ -67,12 +74,11 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: var(--dn-space-2);
+      gap: var(--dn-space-1);
       padding-bottom: var(--dn-space-2);
       min-width: 0;
       width: 100%;
-      min-height: 112px;
-      aspect-ratio: 3 / 2;
+      min-height: 128px;
       overflow: hidden;
       border-radius: var(--dn-radius);
       color: #fff;
@@ -90,18 +96,25 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      gap: var(--dn-space-half);
       padding: var(--dn-space-3) var(--dn-space-3) 0;
     }
 
     .dn-mobile-core-card strong {
       max-width: 100%;
-      font-size: var(--dn-text-card);
+      font-size: var(--dn-text-lead);
       font-weight: var(--dn-weight-semibold);
       line-height: var(--dn-leading-heading);
       letter-spacing: var(--dn-tracking-heading);
       overflow-wrap: anywhere;
     }
-
+    .dn-mobile-core-card small {
+      max-width: 100%;
+      font-size: var(--dn-text-caption);
+      font-weight: var(--dn-weight-regular);
+      line-height: var(--dn-leading-meta);
+      overflow-wrap: anywhere;
+    }
 
     .dn-mobile-core-card__art {
       position: relative;

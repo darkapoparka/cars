@@ -7,6 +7,7 @@
   const i18n = getI18n();
 
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import { resolve } from '$app/paths';
   import { featuredVehicles } from '$data/inventory';
   import { bodyLabel, filterListingVehicles, listingFilterOptions, listingModelsForMake } from '$data/listing';
@@ -163,11 +164,12 @@
   aria-label={i18n.t("m_6d382243bfbe")}
   onclick={openSearch}
 >
-  <Icon name="search" size={18} strokeWidth={1.5} />
+  <span class="dn-quick-search__search-desktop"><Icon name="search" size={18} strokeWidth={1.5} /></span>
+  <span class="dn-quick-search__search-mobile"><MobileActionIcon name="search" size={22} /></span>
   <span class="dn-quick-search__label-full">{i18n.t("m_6d382243bfbe")}</span>
   <span class="dn-quick-search__label-mobile" aria-hidden="true">{i18n.t("m_cb8bed4ff8b8")}</span>
   <span class="dn-quick-search__hint" aria-hidden="true">{i18n.t("m_933643dcad14")}</span>
-  <span class="dn-quick-search__mobile-filter" aria-hidden="true"><Icon name="adjustments" size={18} strokeWidth={1.4} /></span>
+  <span class="dn-quick-search__mobile-filter" aria-hidden="true"><MobileActionIcon name="filters" size={20} /></span>
 </button>
 
 <dialog onkeydown={trapDialogTab}
@@ -337,9 +339,11 @@
     }
   }
 
-  .dn-quick-search__trigger:hover {
-    border-color: #b8bec7;
-    background: #f3f4f6;
+  @media (hover: hover) and (pointer: fine) {
+    .dn-quick-search__trigger:hover {
+      border-color: #b8bec7;
+      background: #f3f4f6;
+    }
   }
 
   .dn-quick-search__hint {
@@ -349,6 +353,7 @@
   }
 
   .dn-quick-search__label-mobile,
+  .dn-quick-search__search-mobile,
   .dn-quick-search__mobile-filter {
     display: none;
   }
@@ -433,13 +438,15 @@
   }
 
   @media (max-width: 767px) {
+    .dn-quick-search__search-desktop { display: none; }
+    .dn-quick-search__search-mobile { display: grid; place-items: center; }
     .dn-quick-search__label-full {
       display: none;
     }
 
     .dn-quick-search__label-mobile {
       display: inline;
-      color: var(--dn-muted);
+      color: var(--dn-ink-hover);
     }
 
     .dn-quick-search__trigger :global(.dn-icon) {

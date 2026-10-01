@@ -2,7 +2,7 @@
 
 Tests cover different layers: source/type checks, domain logic, runtime media, build output and real browser behavior. This document explains the available commands; it is not a claim that every suite currently passes.
 
-Mobile listing badges use four equal cells and compact localized labels; accessible text and detail views retain full values and units. Sell/Import replace the mobile process disclosure with a configured photo banner and telephone action. The desktop process disclosure stays intact. `mobile-polish-smoke.mjs` checks these contracts and `mobile-reflow-smoke.mjs` includes both service routes at normal and enlarged text sizes.
+Mobile listing badges use four equal cells and compact localized labels on one text line; carousel specifications share one badge row. Model titles stop at two lines while accessible labels and detail views retain complete values. Sell/Import replace the mobile process disclosure with a configured photo banner and telephone action. The desktop process disclosure stays intact. `mobile-polish-smoke.mjs` checks these contracts, including long Tesla and petrol/LPG layout fixtures, white entry fields, pointer/keyboard focus and larger header icons. `mobile-reflow-smoke.mjs` includes both service routes at normal and enlarged text sizes.
 
 ## Package commands
 
@@ -68,7 +68,7 @@ For the built preview, use that preview URL instead. `scripts/browser.mjs` contr
 | `scripts/enquiry-smoke.mjs` | Enquiry entry, steps, review, local photos and sharing/copy behavior |
 | `scripts/service-entry-overlay-smoke.mjs` | Mobile Sell/Import single-field entry, immediate criteria editor, full-screen geometry, shared close target, Save/Cancel/Escape, draft persistence, invalid URLs, contact/review continuation, 200% text and text spacing |
 | `scripts/mobile-filter-smoke.mjs` | Bulgarian returning-visitor filter draft, nested choices, application, empty results and result-label containment |
-| `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, full-height photographs loaded when browsed, subtle make and complete wrapping models, plain price hierarchy, equal card heights and right-column two-by-two badges, inventory search and quick filters matching Home pill size with 44px targets, flat white dock with official Hugeicons Stroke Rounded icons and baselines across main routes, matching Sort/Filter targets and rightmost Filters, filter footer, detail touch targets, short-viewport editors and configured settings title |
+| `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, full-height photographs loaded when browsed, subtle make and two-line models with complete accessible labels, plain price hierarchy, equal card heights and right-column two-by-two badges with one text line, long Tesla/electric/petrol-LPG layout fixtures, white entry fields and pointer/keyboard focus, inventory search and quick filters matching Home pill size with 44px targets, flat white dock with official Hugeicons Stroke Rounded icons and baselines across main routes, matching Sort/Filter targets and rightmost Filters, filter footer, detail touch targets, short-viewport editors and configured settings title |
 | `scripts/mobile-reflow-smoke.mjs` | English/Bulgarian pages and dialogs at 320/390/430px, 200% root text, WCAG text-spacing overrides and short viewports; rejects clipped actions and enlarged card copy, and checks equal inventory card heights |
 | `scripts/desktop-discovery-smoke.mjs` | Desktop discovery and sticky-control behavior |
 | `scripts/phase4-smoke.mjs` | URL/filter preservation, nested and outer draft ownership, pending desktop values, shell transitions, menu focus, duplicate IDs and 767/768/991/992 boundaries |
@@ -79,6 +79,8 @@ Additional mobile/accessibility/resilience and visual-comparison tools exist in 
 ## Focused mobile polish checks
 
 With `BASE_URL` set to the current build, run `node scripts/mobile-polish-smoke.mjs`. It covers 320, 390, 430 and 1440px in Bulgarian and English. The filter suite and this focused suite set explicit returning-visitor preferences; first-visit prompt behavior belongs to `scripts/qa-locale-preferences.mjs`. The mobile checks inspect control geometry as well as document overflow, because clipped labels and shrinking icons can occur without widening the page. Generated screenshots and results are saved under `artifacts/mobile-polish-smoke/`.
+
+For a focused reflow rerun, `REFLOW_CASE` accepts a regular expression matching the case names printed by `scripts/mobile-reflow-smoke.mjs`. For example, `$env:REFLOW_CASE='^en 320 / reflow$'` selects the narrow English Home case. Leave it unset for the full route/dialog matrix. `REFLOW_ENGINE=webkit` selects the installed WebKit engine; the default uses Chromium.
 
 ## Phase 4 regression contract
 

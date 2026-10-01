@@ -28,6 +28,14 @@ const listing = await import(pathToFileURL(`${out}/listing.mjs`));
 const listingDraft = await import(pathToFileURL(`${out}/listing-draft.mjs`));
 const journeys = await import(pathToFileURL(`${out}/journeys.mjs`));
 const records = inventory.featuredVehicles;
+const presentation = await import(pathToFileURL(`${out}/locale-presentation.mjs`));
+for (const source of ['Бензин/ЛПГ', 'Бензин / ЛПГ', 'Petrol/LPG', 'Petrol / LPG']) {
+  assert.equal(presentation.specificationLabel(source, 'bg'), 'Бензин/ЛПГ');
+  assert.equal(presentation.specificationLabel(source, 'en'), 'Petrol/LPG');
+  assert.equal(presentation.compactSpecificationLabel(source, 'bg'), 'Б/ЛПГ');
+  assert.equal(presentation.compactSpecificationLabel(source, 'en'), 'P/LPG');
+}
+assert.equal(presentation.compactSpecificationLabel('Hydrogen', 'en'), 'Hydrogen', 'Unknown vehicle data retains its source value');
 assert.equal(new Set(records.map(record => record.id)).size, records.length);
 for (const record of records) {
   assert(Number.isSafeInteger(record.id) && record.id > 0);

@@ -18,6 +18,10 @@ export function formatTemplate(locale: Locale, source: string, parameters: Messa
 const specificationCopy: Record<string, MessageKey> = {
   "Комби": "m_3e4e9a166ed6",
   "Бензин": "m_7fc05f87ca8e",
+  "Бензин/ЛПГ": "inventory.spec.petrolLpg",
+  "Бензин / ЛПГ": "inventory.spec.petrolLpg",
+  "Petrol/LPG": "inventory.spec.petrolLpg",
+  "Petrol / LPG": "inventory.spec.petrolLpg",
   "Дизел": "m_0a3408c47c37",
   "Автоматик": "inventory.spec.automatic",
   "Ръчна": "m_b0b9fe24ffa9",
@@ -73,7 +77,8 @@ export const compactMileage = (value: number, locale: Locale): string =>
 
 const compactSpecificationCopy: Record<string, MessageKey> = {
   'inventory.spec.automatic': 'inventory.spec.automaticCompact',
-  'm_a76dab2d1c01': 'inventory.spec.electricCompact'
+  'm_a76dab2d1c01': 'inventory.spec.electricCompact',
+  'inventory.spec.petrolLpg': 'inventory.spec.petrolLpgCompact'
 };
 export const compactSpecificationLabel = (value: string, locale: Locale): string => {
   const key = specificationCopy[value];

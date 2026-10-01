@@ -519,7 +519,7 @@
       min-width: 0;
       align-items: center;
       gap: 12px;
-      padding-block: var(--dn-space-3) var(--dn-space-4);
+      padding-block: var(--dn-space-1) var(--dn-space-2);
     }
     .dn-listing-filter__quick-row .dn-listing-filter__quick { min-width: 0; flex: 1; padding-block: 0; }
     .dn-listing-filter__count { display: none; }

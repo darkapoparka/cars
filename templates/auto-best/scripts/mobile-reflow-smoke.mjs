@@ -9,6 +9,8 @@ const engine = process.env.REFLOW_ENGINE || 'chromium';
 assert(['chromium', 'webkit'].includes(engine), 'Unsupported reflow browser engine');
 const output = `artifacts/mobile-reflow-${engine}`;
 const suite = await smokeReport(output, base);
+const casePattern = process.env.REFLOW_CASE ? new RegExp(process.env.REFLOW_CASE) : null;
+const check = (name, run) => casePattern && !casePattern.test(name) ? Promise.resolve() : suite.check(name, run);
 const browser = await (engine === 'webkit' ? webkit.launch({ headless: true }) : launchBrowser());
 const routes = ['', '/listing-grid', '/listing-detail-v1/1', '/about-us', '/blog', '/contact', '/contact?topic=trade-in', '/contact?topic=import', '/locale-settings'];
 const overrides = {
@@ -34,7 +36,7 @@ async function fits(page, mode) {
     return { pageOverflow: document.documentElement.scrollWidth > innerWidth + 1, dialogOverflow: root.tagName === 'DIALOG' && root.scrollWidth > root.clientWidth + 1, clipped, cardHeightSpread };
   }, mode === 'enlarged');
   assert(!geometry.pageOverflow && !geometry.dialogOverflow, JSON.stringify(geometry));
-  assert.deepEqual(geometry.clipped, [], `${mode}: visible copy and actions must fit`);
+  assert.deepEqual(geometry.clipped, [], `${mode}: visible copy and actions must fit: ${JSON.stringify(geometry.clipped)}`);
   assert(geometry.cardHeightSpread <= 1, `${mode}: inventory cards retain equal heights`);
   return geometry;
 }
@@ -60,16 +62,18 @@ try {
     const context = await browser.newContext({ viewport: { width, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'reduce' });
     await context.addCookies([{ name: 'cars_prompt', value: 'v1', url: base }, { name: 'cars_locale', value: locale, url: base }]);
     try {
-      for (const route of routes) await suite.check(`${locale} ${width} ${route || '/'} reflow`, async () => {
+      for (const route of routes) await check(`${locale} ${width} ${route || '/'} reflow`, async () => {
         const page = await context.newPage();
+        page.setDefaultNavigationTimeout(60000);
         try {
           await page.goto(`${base}/${locale}${route}`, { waitUntil: 'networkidle' });
           await page.evaluate(() => document.fonts.ready);
           return await checkReflow(page);
         } finally { await page.close(); }
       });
-      for (const name of ['make', 'preferences', 'import', 'sell']) await suite.check(`${locale} ${width} ${name} dialog reflow`, async () => {
+      for (const name of ['make', 'preferences', 'import', 'sell']) await check(`${locale} ${width} ${name} dialog reflow`, async () => {
         const page = await context.newPage();
+        page.setDefaultNavigationTimeout(60000);
         const route = name === 'make' ? '/listing-grid' : name === 'import' ? '/contact?topic=import' : name === 'sell' ? '/contact?topic=trade-in' : '';
         try {
           await page.goto(`${base}/${locale}${route}`, { waitUntil: 'networkidle' });

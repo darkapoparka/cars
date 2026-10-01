@@ -405,8 +405,11 @@
     }
 
     .dn-editorial-item__content {
-      padding: 14px 14px 16px;
+      padding: var(--dn-space-3) var(--dn-space-3) var(--dn-space-4);
     }
+
+    .dn-editorial-item__meta { margin-bottom: var(--dn-space-half); }
+    .dn-editorial-item__meta span { font-size: var(--dn-text-caption); font-weight: var(--dn-weight-regular); }
 
     .dn-editorial-item h3 {
       margin-bottom: 7px;

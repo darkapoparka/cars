@@ -51,6 +51,16 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
 .dn-entry-field .dn-entry-field__input::placeholder { color: var(--dn-muted); opacity: 1; }
 .dn-entry-field input.dn-entry-field__input { text-overflow: ellipsis; }
 .dn-entry-field:is(:focus-visible, :focus-within) { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
+@media (max-width: 767px) {
+  .dn-app-shell {
+    --dn-entry-surface: var(--dn-white);
+    --dn-entry-line: var(--dn-line);
+    --dn-focus: var(--dn-ink);
+  }
+  .dn-app-shell :is(a, button, input, select, textarea, summary) { -webkit-tap-highlight-color: transparent; }
+  .dn-app-shell .dn-entry-field { border-radius: var(--dn-radius-control); }
+  .dn-app-shell button.dn-entry-field:focus:not(:focus-visible) { outline: none; }
+}
 /* Keep native select behavior, with a consistent inset and centered chevron. */
 .dn-app-shell select:not([multiple]):not([size]):where(:not(#listing-sort)) {
   appearance: none;

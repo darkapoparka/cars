@@ -171,11 +171,11 @@
     .dn-blog-card__media { height: 100%; min-height: 132px; }
     .dn-blog-card__media img { height: 100%; }
     .dn-blog-card__body { min-height: 0; padding: 12px; }
-    .dn-blog-card__meta { min-height: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-heading); }
+    .dn-blog-card__meta { min-height: 0; font-size: var(--dn-text-caption); line-height: var(--dn-leading-meta); }
     .dn-blog-card__brand { display: none; }
     .dn-blog-card__category { padding-left: 0; }
     .dn-blog-card__category::before { display: none; }
-    h2 { margin: 5px 0 6px; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
+    h2 { margin: var(--dn-space-half) 0 var(--dn-space-2); font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
     .dn-blog-card__text { margin-top: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   }
 

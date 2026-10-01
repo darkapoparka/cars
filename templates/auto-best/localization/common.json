@@ -116,6 +116,14 @@
     "en": "Electric",
     "bg": "Електр."
   },
+  "inventory.spec.petrolLpg": {
+    "en": "Petrol/LPG",
+    "bg": "Бензин/ЛПГ"
+  },
+  "inventory.spec.petrolLpgCompact": {
+    "en": "P/LPG",
+    "bg": "Б/ЛПГ"
+  },
   "service.sell.step1.copy": {
     "en": "Add your car details and photos.",
     "bg": "Добави данни и снимки на автомобила."
@@ -159,6 +167,14 @@
   "home.action.cars.detail": {
     "en": "Find your car",
     "bg": "Избери своята"
+  },
+  "home.action.cars.availableCount": {
+    "en": "{count} available",
+    "bg": "{count} налични"
+  },
+  "home.action.cars.previewCount": {
+    "en": "{count} sample cars",
+    "bg": "{count} примерни"
   },
   "home.action.sell.title": {
     "en": "Sell",
