@@ -1,17 +1,20 @@
 # Modern mobile polish — 1 October 2026
 
-Scope: restrained refinement of the existing mobile patterns. No typography scale, imagery, service flow, desktop redesign, dealer refresh or deployment is part of this change.
+Scope: refinement of the existing mobile cards and sheets in the reusable Modern master. No dealer refresh or deployment is included.
 
-## Changes
+## Final card treatment
 
-- Inventory, leasing selections and related cards share a 42% image track (previously 44%) and a 12px outer right inset (previously 8px). The 8px image-to-copy gap is retained.
-- Fact rows remain equal where space permits. The second cell reserves its full content width on narrower cards, keeping mileage readable without smaller type, rounding or reduced padding. Before this pass, all 12 mileage labels were truncated at 320px in both Bulgarian and English.
-- Shared mobile sheet headers, search fields, search results, vehicle taxonomy options and leasing preferences use a 16px side inset. Headers gain 4px of bottom space and balanced multiline titles.
-- Existing browser coverage now measures the visible text itself, catching ellipsis clipping that the previous outer-element overflow check missed. The fixed equal-column assertion was replaced because it conflicted with preserving full mileage on narrow screens; font size, one-line text, padding and card alignment checks remain.
+- Inventory, leasing selections and related vehicle cards use a landscape 4:3 photo. A shared 46% media track replaces the tall image stretched to match all of the adjacent content.
+- Brand, model and price sit beside the photo. All four vehicle facts sit together in one row beneath the photo and copy, using the card's full width.
+- Badges have intrinsic widths, consistent type, 24px height and 6px horizontal padding. The year and mileage no longer stretch into uneven columns. Full year and mileage values remain visible at 320px in Bulgarian and English; abbreviated transmission labels retain their full accessible text.
+- The shared card constants and direct fact list keep inventory and leasing consistent. Desktop fact markup is retained.
+- Mobile sheet headers, search fields/results, taxonomy options and leasing preferences use a consistent 16px side inset. Headers gain 4px of bottom space and balanced multiline titles.
+
+The earlier two-row badge correction was rejected during review. This report and the paired inventory screenshots describe the revised single-row treatment.
 
 ## Before and after
 
-These are paired browser captures at identical viewport widths, with no retouching. The overlay captures wait for their opening animation to finish.
+Paired browser captures at identical viewport widths, without retouching. Before captures show the original mobile baseline; after captures show the final single-row cards. Overlay captures wait for the opening animation to finish.
 
 - [Inventory at 320px](mobile-final-2026-10-01/cars-320-comparison.png)
 - [Inventory at 390px](mobile-final-2026-10-01/cars-390-comparison.png)
@@ -20,17 +23,20 @@ These are paired browser captures at identical viewport widths, with no retouchi
 
 ## Validation
 
-- Node 22.23.2, pnpm 11.4.0; canonical source `L:/CODEX/cars/templates/modern` on `main`, local static-demo preview at `http://127.0.0.1:6462`.
-- Unit tests: 271 passing (85 marketplace UI and 186 web).
-- `pnpm --filter web typecheck`: passed.
-- Biome: all eight changed source/test files passed. `git diff --check`: passed.
-- Local visual/HTTP checks: inventory, vehicle detail, leasing, imports, sell and contact at 320px, 390px and 1440px; all 18 returned HTTP 200, with no horizontal overflow, page errors or failed loaded images.
-- Desktop comparison against `fbe8900c7`: inventory, leasing, imports, sell and contact are pixel-identical. The vehicle-detail difference is confined to the live map tiles.
-- Chromium/WebKit interaction run: 33 of 34 selected cases passed on the first run. One WebKit make/model test timed out after the initial filter tap; both isolated repeats passed unchanged. Covered search/filter selection, desktop search continuation, draft preservation, custom vehicle makes, focus return, import clear/focus, financing handoff, semantic type/contrast and full vehicle facts at 320/375/390/430px in BG/EN.
-- `pnpm --filter web build`: passed with the documented static-demo environment. The owned preview was paused for the build, then restored on 6462 using Cars start-preview.ps1.
+- Runtime: Node 22.23.2, pnpm 11.4.0, canonical source `L:/CODEX/cars/templates/modern`, static-demo preview `http://127.0.0.1:6462/bg/cars`.
+- Current source: 271 passing unit tests (85 marketplace UI, 186 web).
+- Current card geometry: all eight Chromium/WebKit cases pass at 320/375/390/430px, each in BG and EN. They check landscape photos, one complete badge row, padding, visible text, accessible titles/transmission and horizontal overflow.
+- The existing 320px semantic/fact case passed in Chromium. WebKit initially encountered an execution-context error during the unlocalized route redirect; using the explicit `/bg/cars` route resolved the test and its final run passed.
+- A desktop browser constrained to 320px (305px content with its scrollbar) and 390px retained all visible fact labels in both BG and EN.
+- Final `pnpm --filter web typecheck` and `pnpm --filter web build` pass. The owned preview was paused for the build and restored on port 6462 using the Cars preview script.
+- Final route checks cover inventory, vehicle detail, leasing, imports, sell and contact at 320px, 390px and 1440px. All 18 return HTTP 200 with no horizontal overflow, page errors or broken loaded images.
+- Biome passes for the three final changed source/test files; `git diff --check` passes.
+- Earlier interaction coverage: 33 of 34 selected Chromium/WebKit cases passed initially. One WebKit make/model test missed its first filter tap; both isolated repeats passed unchanged. This earlier run covered search/filter selection, desktop search continuation, draft preservation, custom vehicle makes, focus return, import clear/focus, financing handoff and semantic type/contrast.
 
-## Preservation and limits
+## Preservation and delivery
 
-The original mobile captures were taken at `3aa204ccb`. The separate desktop writer completed its work as `fbe8900c7` before mobile source edits began; desktop comparison captures were refreshed against that revision. No message was sent to another chat. The shared chat reference could not be read because the browser presented a verification screen, so the live Modern template was the visual reference.
+The original mobile baseline was `3aa204ccb`. Initial mobile changes were saved in commit `d3088de99`; the final single-row correction supersedes that card treatment. An existing Git index lock temporarily blocked the follow-up commit and was preserved until it cleared. The final delivery commit is recorded in the task handoff. Do not release the earlier commit alone as the final mobile treatment.
 
-Workspace doctor fetched current refs successfully. Unrelated Cars/dealer/template changes and the independent admin repository's ahead/behind state were preserved. This is local standalone static-demo evidence, not mounted dealer, hosted, physical-device or real enquiry-delivery verification. Owner visual acceptance remains with the owner.
+Another chat rolled back its desktop redesign locally. Those separate dirty files, all unrelated Cars/dealer/template changes, and the independent admin repository's state are preserved. Current desktop identity is not a result of this mobile task. Workspace doctor fetched refs successfully earlier in the pass. No message was sent to another chat.
+
+The shared ChatGPT reference could not be read because it presented a verification screen, so the live Modern template was used as the visual reference. Evidence is from the local standalone static demo, not mounted dealers, a hosted deployment, physical devices or real enquiry delivery. Visual acceptance remains with the owner.

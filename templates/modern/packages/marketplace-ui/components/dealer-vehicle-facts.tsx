@@ -10,46 +10,35 @@ export function DealerVehicleFacts({
   }[];
   readonly label: string;
 }) {
-  const rows = Array.from({ length: Math.ceil(facts.length / 2) }, (_, index) =>
-    facts.slice(index * 2, index * 2 + 2)
-  );
-
   return (
     <>
       <div className="lg:hidden">
         <ul
           aria-label={label}
-          className="grid gap-1.5 text-card-spec text-secondary-foreground"
+          className="flex gap-1 text-micro text-secondary-foreground min-[360px]:text-card-spec"
           data-slot="vehicle-card-spec-pills"
         >
-          {rows.map((row) => (
+          {facts.map((fact) => (
             <li
-              className="grid min-w-0 grid-cols-[minmax(0,1fr)_minmax(max-content,1fr)] gap-1.5"
-              key={row[0].id}
+              className="flex min-h-6 shrink-0 items-center justify-center rounded-md border border-border/40 bg-secondary px-1.5 py-0.5 font-normal tabular-nums"
+              data-fact={fact.id}
+              data-slot="vehicle-card-spec"
+              key={fact.id}
+              title={fact.value}
             >
-              {row.map((fact) => (
-                <span
-                  className="flex min-h-6 min-w-0 max-w-full items-center justify-center rounded-md border border-border/40 bg-secondary px-1.5 py-0.5 font-normal tabular-nums"
-                  data-fact={fact.id}
-                  data-slot="vehicle-card-spec"
-                  key={fact.id}
-                  title={fact.value}
-                >
-                  <span
-                    aria-hidden={
-                      fact.mobileDisplayValue || fact.displayValue
-                        ? true
-                        : undefined
-                    }
-                    className="min-w-0 truncate"
-                  >
-                    {fact.mobileDisplayValue ?? fact.displayValue ?? fact.value}
-                  </span>
-                  {fact.mobileDisplayValue || fact.displayValue ? (
-                    <span className="sr-only">{fact.value}</span>
-                  ) : null}
-                </span>
-              ))}
+              <span
+                aria-hidden={
+                  fact.mobileDisplayValue || fact.displayValue
+                    ? true
+                    : undefined
+                }
+                className="whitespace-nowrap"
+              >
+                {fact.mobileDisplayValue ?? fact.displayValue ?? fact.value}
+              </span>
+              {fact.mobileDisplayValue || fact.displayValue ? (
+                <span className="sr-only">{fact.value}</span>
+              ) : null}
             </li>
           ))}
         </ul>
