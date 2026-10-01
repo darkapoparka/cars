@@ -49,18 +49,30 @@
     "serial": "emulator-5554",
     "initiallyOnline": true,
     "mobileDeVersion": "10.26",
-    "autoScout24Version": "26.38.6",
-    "finalState": "stopped after recovery boot; absent from ADB",
+    "finalState": "online; mobile.de 10.26 home visible",
     "restarted": true,
     "recovery": {
-      "mode": "one controlled read-only recovery boot",
+      "mode": "complete C: AVD runtime",
+      "avdHome": "C:/Users/radev/AppData/Local/Cars/mobile-89e4395-20261001/avd-home",
       "dataDirectory": "C:/Users/radev/AppData/Local/Cars/mobile-89e4395-20261001/emulator-data",
-      "originalRamImageStillOn": "L:",
-      "stoppedThroughAdb": true,
-      "finalAdbState": "no devices",
+      "readOnly": true,
+      "allWritableImagePathsOn": "C:",
+      "previousPartialRuntimeStoppedThroughAdb": true,
+      "finalAdbState": "device",
+      "bootCompleted": true,
+      "processId": 52772,
+      "currentFocus": "de.mobile.android.app/de.mobile.android.host.HostActivity",
+      "currentSessionApps": [
+        "de.mobile.android.app"
+      ],
+      "cars24Restoration": "cached base APK lacks required splits; not installed",
+      "autoScout24Observation": "inspected on original AVD; not installed in current C: session",
       "originalFilesNotDeleted": true,
-      "verifiedDiskCopiesPreserved": true
-    }
+      "verifiedDiskCopiesPreserved": true,
+      "restartHelper": "runtime/mobile-20261001-artifacts/start-reference-emulator.ps1",
+      "finalCapture": "runtime/mobile-20261001-artifacts/native-mobile-ready.png"
+    },
+    "autoScout24ReferenceVersion": "26.38.6"
   },
   "reports": {
     "routes": "110af11a60e95f8db1106ed5c400125562d31ca24acb380b3727e9a99f040eaa",
@@ -68,5 +80,5 @@
   },
   "sourceFileCount": 653,
   "sourceCommit": "6a787b8c4dc17a58abf897119c49657c53bb51bc",
-  "receiptUpdatedAt": "2026-10-01T09:38:33.092Z"
+  "receiptUpdatedAt": "2026-10-01T09:59:05.598Z"
 }

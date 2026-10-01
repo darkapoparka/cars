@@ -60,7 +60,14 @@ preserved; no original reference files were moved or deleted.
 
 ## Android reference
 
-The preserved `Pawtreon_Reference_Pixel_9_Pro_API_36` AVD was opened once on
+**emulator-5554 is online with mobile.de 10.26 open on its home screen.** Its
+complete reference runtime now uses `C:/Users/radev/AppData/Local/Cars/mobile-89e4395-20261001/`.
+Launch logs confirm that user data, encryption, cache, RAM and temporary paths
+are on C:. System images remain read-only on I:. The original L: AVD remains
+preserved. The local restart helper is
+`runtime/mobile-20261001-artifacts/start-reference-emulator.ps1`.
+
+The preserved `Pawtreon_Reference_Pixel_9_Pro_API_36` AVD was initially opened on
 **emulator-5554**. It initially booted, passed ADB checks, and opened mobile.de 10.26.
 It also contained CARS24 UAE, AutoScout24 and DubiCars. AutoScout24 26.38.6 home,
 results and filter screens were inspected and captured.
@@ -71,11 +78,22 @@ about 4.2 GiB and RAM was checked, one controlled recovery boot used verified
 copies of its user-data and cache disks plus temporary files on C:, with read-only
 mode and snapshots disabled. It reached ADB online, but QEMU still mapped the
 original RAM image under the L: AVD, and L: fell to roughly 295 MiB free. The
-recovery emulator was shut down through ADB. It is currently stopped; no further
-restart was attempted. Original data and the verified C: recovery copies remain
-preserved. A runtime entirely on a drive with enough space is required before
-another boot. The observed timing does not by itself prove which process caused
-the first exit or every byte of drive growth.
+recovery emulator was shut down through ADB. The complete C: AVD was then
+configured after its six disk hashes were reverified. That runtime booted and
+kept its writable paths on C:. L: recovered to about 4.1 GiB free and remained
+stable. Original data and the verified C: recovery copies remain preserved.
+The observed timing does not by itself prove which process caused the first exit
+or every byte of drive growth.
+
+The complete C: cold boot did not expose the original installed app set. The
+cached mobile.de APK was restored into this read-only session, and its home was
+inspected after declining optional tracking and notifications. The restart helper
+restores this cached APK after boot. CARS24's cached base APK requires absent split
+APKs; installation failed with `INSTALL_FAILED_MISSING_SPLIT`. AutoScout24 and
+DubiCars were inspected/found on the original AVD, and are not installed in the
+current C: session. Original AutoScout24 captures remain under
+`runtime/mobile-20261001/native-autoscout24*.png`. No account or contact action
+was submitted.
 
 ## Final app reference recommendation
 
