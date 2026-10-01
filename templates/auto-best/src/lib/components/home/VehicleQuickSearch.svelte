@@ -169,7 +169,6 @@
   <span class="dn-quick-search__label-full">{i18n.t("m_6d382243bfbe")}</span>
   <span class="dn-quick-search__label-mobile" aria-hidden="true">{i18n.t("m_cb8bed4ff8b8")}</span>
   <span class="dn-quick-search__hint" aria-hidden="true">{i18n.t("m_933643dcad14")}</span>
-  <span class="dn-quick-search__mobile-filter" aria-hidden="true"><MobileActionIcon name="filters" size={20} /></span>
 </button>
 
 <dialog onkeydown={trapDialogTab}
@@ -212,7 +211,7 @@
       onformdata={cleanFormData}
     >
       <label class="dn-sr-only" for="quick-search-input">{i18n.t("m_13fd09148700")}</label>
-      <div class="dn-quick-search__input-wrap dn-entry-field">
+      <div class="dn-quick-search__input-wrap dn-entry-field dn-mobile-overlay-search">
         <Icon name="search" size={18} strokeWidth={1.8} />
         <input {@attach i18n.validation}
           id="quick-search-input"
@@ -353,8 +352,7 @@
   }
 
   .dn-quick-search__label-mobile,
-  .dn-quick-search__search-mobile,
-  .dn-quick-search__mobile-filter {
+  .dn-quick-search__search-mobile {
     display: none;
   }
 
@@ -438,7 +436,7 @@
   }
 
   @media (max-width: 767px) {
-    .dn-quick-search__trigger { gap: var(--dn-space-2); padding-inline: var(--dn-space-3); }
+    .dn-quick-search__trigger { grid-template-columns: auto minmax(0, 1fr); gap: var(--dn-space-2); padding-inline: var(--dn-space-3); }
     .dn-quick-search__search-desktop { display: none; }
     .dn-quick-search__search-mobile { display: grid; place-items: center; }
     .dn-quick-search__label-full {
@@ -456,11 +454,6 @@
 
     .dn-quick-search__trigger :global(.dn-icon) {
       color: var(--dn-entry-prominent-muted);
-    }
-
-    .dn-quick-search__mobile-filter {
-      display: grid;
-      place-items: center;
     }
 
     .dn-quick-search__hint {

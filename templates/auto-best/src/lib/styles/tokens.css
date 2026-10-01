@@ -176,9 +176,8 @@
   --dn-entry-height: var(--dn-control-height-editor);
   --dn-entry-surface: var(--dn-home-panel);
   --dn-entry-line: var(--dn-line-strong);
-  --dn-entry-mobile-line: #d8dde3;
   --dn-entry-prominent-font: var(--dn-weight-regular) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
-  --dn-entry-prominent-surface: var(--dn-white);
+  --dn-entry-prominent-surface: var(--dn-home-panel);
   --dn-entry-prominent-ink: var(--dn-ink);
   --dn-entry-prominent-muted: var(--dn-muted);
   --dn-control-hit-height: var(--dn-control-height-default);

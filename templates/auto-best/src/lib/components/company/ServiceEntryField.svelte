@@ -98,7 +98,7 @@
   form { display: flex; flex: 1; min-height: 0; flex-direction: column; }
   .dn-service-editor__fields { display: grid; gap: var(--dn-space-4); flex: 1; min-height: 0; align-content: start; padding: var(--dn-space-5) var(--dn-space-4); overflow-y: auto; overscroll-behavior: contain; }
   label { display: grid; min-width: 0; gap: var(--dn-space-2); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); }
-  input, textarea { width: 100%; min-width: 0; min-height: var(--dn-control-height-editor); padding: var(--dn-space-2) var(--dn-space-3); border: 1px solid var(--dn-entry-line); border-radius: var(--dn-radius-control); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-overlay-field-font); }
+  input, textarea { width: 100%; min-width: 0; min-height: var(--dn-control-height-editor); padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-overlay-field-font); }
   textarea { resize: vertical; }
   .dn-service-editor__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-3); }
   p { margin: 0; color: var(--dn-red); font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
