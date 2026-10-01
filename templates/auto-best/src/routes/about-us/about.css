@@ -212,7 +212,7 @@
   .dn-about-intro__socials a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; }
   .dn-about-process.dn-section { padding: var(--dn-space-6) 0 0; }
   .dn-about-process .dn-about-section-heading { display: none; }
-  .dn-app-shell .dn-about-hero.dn-information-hero.dn-route-hero { height: calc(var(--dn-space-8) * 5); min-height: 0; }
+  .dn-app-shell .dn-about-hero.dn-information-hero.dn-route-hero { display: block; height: auto; min-height: 0; padding: calc(var(--dn-space-6) * 2) 0 var(--dn-space-2); }
   .dn-about-hero .dn-about-hero__content { display: none; }
   .dn-about-process > .container,
   .dn-about-showroom > .container {
