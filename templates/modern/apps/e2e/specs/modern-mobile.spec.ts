@@ -324,7 +324,8 @@ test("leasing selection survives reopening with an honest phone handoff", async 
   await expect
     .poll(() => new URL(page.url()).searchParams.has("vehicle"))
     .toBe(false);
-  await page.reload();
+  // Check reset state without waiting for unrelated image loads.
+  await page.reload({ waitUntil: "domcontentloaded" });
   await expect(
     page.getByRole("button", { name: "Изберете автомобил", exact: true })
   ).toBeVisible();

@@ -505,6 +505,76 @@ test("320px inventory keeps semantic type and complete vehicle facts", async ({
   }
 });
 
+for (const width of [320, 375, 390, 430]) {
+  test(`mobile spec badges keep equal columns and one line at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 844 });
+    for (const locale of ["bg", "en"]) {
+      await page.goto(`/${locale}/cars`);
+      await page.evaluate(() => document.fonts.ready);
+      const cards = page.locator('[data-slot="vehicle-card-mobile-content"]');
+      await expect(cards.first()).toBeVisible();
+      const metrics = await cards.evaluateAll((elements) =>
+        elements.map((card) => ({
+          rows: [
+            ...card.querySelectorAll(
+              '[data-slot="vehicle-card-spec-pills"]:first-child > li'
+            ),
+          ]
+            .filter((row) => row.getBoundingClientRect().width > 0)
+            .map((row) =>
+              [...row.querySelectorAll('[data-slot="vehicle-card-spec"]')].map(
+                (pill) => {
+                  const text = pill.firstElementChild;
+                  const style = text ? getComputedStyle(text) : undefined;
+                  return {
+                    width: pill.getBoundingClientRect().width,
+                    height: pill.getBoundingClientRect().height,
+                    weight: getComputedStyle(pill).fontWeight,
+                    whiteSpace: style?.whiteSpace,
+                    textOverflow: style?.textOverflow,
+                    overflow: style?.overflow,
+                    padding: getComputedStyle(pill).paddingInlineStart,
+                  };
+                }
+              )
+            ),
+        }))
+      );
+      expect(metrics.length).toBeGreaterThan(0);
+      for (const card of metrics) {
+        expect(card.rows).toHaveLength(2);
+        for (const row of card.rows) {
+          expect(row).toHaveLength(2);
+          expect(Math.abs(row[0].width - row[1].width)).toBeLessThan(1);
+          for (const pill of row) {
+            expect(pill.height).toBe(24);
+            expect(pill.weight).toBe("400");
+            expect(pill.whiteSpace).toBe("nowrap");
+            expect(pill.textOverflow).toBe("ellipsis");
+            expect(pill.overflow).toBe("hidden");
+            expect(Number.parseFloat(pill.padding)).toBeGreaterThanOrEqual(6);
+          }
+        }
+      }
+      const automatic = cards
+        .locator('[data-fact="transmission"]')
+        .filter({ hasText: locale === "bg" ? "Автоматик" : "Automatic" })
+        .first();
+      await expect(automatic.locator("span").first()).toHaveText(
+        locale === "bg" ? "Автом." : "Auto"
+      );
+      await expect(automatic.locator(".sr-only")).toHaveText(
+        locale === "bg" ? "Автоматик" : "Automatic"
+      );
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth)
+      ).toBeLessThanOrEqual(width);
+    }
+  });
+}
+
 for (const viewport of [
   { width: 320, height: 700 },
   { width: 844, height: 390 },

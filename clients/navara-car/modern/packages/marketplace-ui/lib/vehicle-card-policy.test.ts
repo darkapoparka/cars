@@ -56,7 +56,11 @@ describe("vehicle card policy", () => {
       { id: "year", value: "2020" },
       { id: "mileage", value: "167 000 км" },
       { id: "fuel", value: "Дизел" },
-      { id: "transmission", value: "Автоматик" },
+      {
+        id: "transmission",
+        value: "Автоматик",
+        mobileDisplayValue: "Автом.",
+      },
     ]);
   });
 

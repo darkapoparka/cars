@@ -26,6 +26,7 @@ export type VehicleCardSpecFactId =
 export interface VehicleCardSpecFact {
   displayValue?: string;
   id: VehicleCardSpecFactId;
+  mobileDisplayValue?: string;
   value: string;
 }
 
@@ -140,6 +141,9 @@ export const getVehicleCardSpecFacts = (
       {
         id: "transmission",
         value: compactTransmissionLabels[listing.spec.transmission][language],
+        ...(listing.spec.transmission === "automatic"
+          ? { mobileDisplayValue: language === "bg" ? "Автом." : "Auto" }
+          : {}),
         ...(listing.spec.transmission === "semi_automatic" && language === "bg"
           ? { displayValue: "Полуавт." }
           : {}),
