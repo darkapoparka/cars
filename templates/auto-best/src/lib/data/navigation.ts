@@ -160,3 +160,9 @@ export const navigation: NavigationItem[] = [
   },
   { id: 'contact', label: 'Контакти', href: '/contact' }
 ];
+
+// Desktop puts guides before the company links; other menus retain their order.
+export const desktopNavigation: NavigationItem[] = [
+  ...navigation.filter(item => item.id !== 'about' && item.id !== 'contact'),
+  ...navigation.filter(item => item.id === 'about' || item.id === 'contact')
+];

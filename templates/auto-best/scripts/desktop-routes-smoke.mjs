@@ -51,15 +51,17 @@ async function heroGeometry(page) {
 }
 
 function assertDesktopFrame(geometry, route = '') {
+  const company = route === 'about-us' || route === 'contact';
   assert.equal(geometry.hero.height, 540, 'Desktop routes share one hero height');
-  assert.equal(geometry.copy.y - geometry.hero.y, 200, 'Hero introductions keep the same top anchor');
+  assert.equal(geometry.copy.y - geometry.hero.y, route === 'about-us' ? 232 : company ? 272 : 200, 'Each hero composition keeps its introduction anchor');
   if (route === 'about-us') {
-    assert.equal(geometry.lead.y - geometry.hero.y, 200, 'About starts with its location badge');
+    assert.equal(geometry.lead.y - geometry.hero.y, 232, 'About starts with its compact location badge');
+    assert.equal(geometry.lead.height, 28, 'About uses a compact city badge');
+    assert(geometry.lead.width <= 160, 'The About badge does not repeat the full street address');
     assert.equal(geometry.heading.y - geometry.lead.bottom, 12, 'About places its location above the title with a clear gap');
-  } else {
-    assert.equal(geometry.heading.y - geometry.hero.y, 200, 'Titles keep the same top anchor regardless of subtitle length');
   }
-  assert.equal(geometry.controls.y - geometry.hero.y, 340, 'Search panels and actions keep the same top anchor');
+  assert.equal(geometry.heading.y - geometry.hero.y, company ? 272 : 200, 'About and Contact align their titles lower in the photo banners');
+  assert.equal(geometry.controls.y - geometry.hero.y, company ? 384 : 340, 'Company actions align; search and service panels keep their anchor');
   assert(geometry.copy.y >= geometry.header.bottom + 60, 'Hero titles have at least 60px of breathing room below navigation');
   assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
   assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
@@ -130,6 +132,7 @@ try {
             }
             if (width >= 992) {
               assertDesktopFrame(geometry, route);
+              assert.deepEqual(await page.locator('.dn-nav__list > li > a').evaluateAll(links => links.map(link => new URL(link.href).pathname.replace(/^\/(bg|en)(?=\/|$)/, '').replace(/^\/|\/$/g, ''))), ['', 'listing-grid', 'blog', 'about-us', 'contact'], 'Desktop places Guides before About in DOM and keyboard order');
               assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
               assert.equal(geometry.leadSize, route === '' || route === 'about-us' ? '14px' : '18px', 'Location badges use metadata type; descriptions use lead type');
               if (route !== 'about-us') assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
@@ -190,6 +193,11 @@ try {
                 for (const link of await showroom.locator('a[target="_blank"]').all()) assert.match(await link.getAttribute('rel'), /noopener/, 'External links isolate their browsing context');
               }
               if (route === 'about-us') {
+                const location = page.locator('.dn-about-hero .dn-hero-location a');
+                const fullAddress = new URL(await location.getAttribute('href')).searchParams.get('query');
+                assert.equal(await location.getAttribute('title'), fullAddress, 'The compact badge retains the full address on hover');
+                assert.equal(await location.getAttribute('aria-label'), fullAddress, 'The compact badge retains the full accessible address');
+                assert(fullAddress.includes(await location.innerText()), 'The visible badge identifies the configured city');
                 assert.equal(await page.locator('.dn-about-showroom').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Map sits on the shared grey canvas');
                 for (const panel of await page.locator('.dn-about-process__panel, .dn-desktop-showroom').all()) assert.equal(await panel.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'About services and map have white outer containers');
                 assert(!(await page.locator('.dn-about-hero__lead').isVisible()), 'The demo description is replaced by the location badge on desktop');
@@ -247,6 +255,11 @@ try {
           await page.goto(`${base}/${locale}/`, { waitUntil: 'networkidle' });
           await settleHeroFonts(page);
           await page.locator('.dn-logo img').evaluate(image => image.decode());
+          const guides = page.locator(`.dn-nav__list > li > a[href="/${locale}/blog"]`);
+          const about = page.locator(`.dn-nav__list > li > a[href="/${locale}/about-us"]`);
+          await guides.focus();
+          await page.keyboard.press('Tab');
+          assert(await about.evaluate(link => link === document.activeElement), 'Keyboard navigation follows Guides with About');
           const initial = await heroGeometry(page);
           const frames = [];
           for (const route of ['listing-grid', 'about-us', 'contact', 'blog', '']) {

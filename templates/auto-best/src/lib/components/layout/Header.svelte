@@ -18,7 +18,7 @@
   import BottomNavIcon from './BottomNavIcon.svelte';
   import { vehicleContactHref } from '$data/journeys';
   import { brand } from '$config/brand';
-  import { navigation, type InternalNavigationHref, type MegaMenu, type NavigationHref, type NavigationItem } from '$data/navigation';
+  import { desktopNavigation, type InternalNavigationHref, type MegaMenu, type NavigationHref, type NavigationItem } from '$data/navigation';
   import type { HeaderPresentation } from '$data/shell';
 
   let { presentation, mobileFooterVisible = false }: { presentation: HeaderPresentation; mobileFooterVisible?: boolean } = $props();
@@ -241,7 +241,7 @@
 
           <nav class="dn-nav" aria-label={i18n.t("m_123e2803c10b")}>
             <ul class="dn-nav__list">
-              {#each navigation as item (item.id)}
+              {#each desktopNavigation as item (item.id)}
                 <li class:dn-nav__item--current={isActive(item)}>
                   <a
                     class:dn-nav__link--disclosure={Boolean(item.menu)}

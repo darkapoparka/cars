@@ -2,14 +2,20 @@
   import { getI18n } from '$lib/locale/context';
   import Icon from './Icon.svelte';
 
-  let { aboveTitle = false }: { aboveTitle?: boolean } = $props();
+  let { aboveTitle = false, compact = false }: { aboveTitle?: boolean; compact?: boolean } = $props();
   const i18n = getI18n();
   const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i18n.dealer('address'))}`);
 </script>
 
-<p class="dn-hero-location" class:dn-hero-location--above-title={aboveTitle}>
-  <Icon name="map-pin" size={16} />
-  <a href={directionsUrl} target="_blank" rel="noopener noreferrer">{i18n.dealer('city')}, {i18n.dealer('addressLine')}</a>
+<p class="dn-hero-location" class:dn-hero-location--above-title={aboveTitle} class:dn-hero-location--compact={compact}>
+  <Icon name="map-pin" size={compact ? 14 : 16} />
+  <a
+    href={directionsUrl}
+    title={compact ? i18n.dealer('address') : undefined}
+    aria-label={compact ? i18n.dealer('address') : undefined}
+    target="_blank"
+    rel="noopener noreferrer"
+  >{#if compact}{i18n.dealer('city')}{:else}{i18n.dealer('city')}, {i18n.dealer('addressLine')}{/if}</a>
 </p>
 
 <style>
@@ -36,6 +42,16 @@
     }
     :global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location--above-title {
       margin: 0 auto var(--dn-space-3);
+    }
+    :global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location--compact {
+      min-height: 28px;
+      gap: var(--dn-space-1);
+      padding: 0 var(--dn-space-3);
+    }
+    .dn-hero-location--compact a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
     }
     .dn-hero-location :global(svg) {
       flex-shrink: 0;

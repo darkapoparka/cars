@@ -206,6 +206,15 @@
     --dn-route-hero-overlay: rgba(10, 12, 16, 0.56);
   }
 
+  .dn-route-hero--company {
+    --dn-route-hero-content-top: 272px;
+    --dn-route-hero-control-top: 384px;
+  }
+
+  .dn-about-hero.dn-route-hero--company {
+    --dn-route-hero-content-top: 232px;
+  }
+
   .dn-app-shell main[data-layout='flush'] {
     padding-top: 0;
   }

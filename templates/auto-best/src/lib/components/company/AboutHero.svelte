@@ -11,7 +11,7 @@
   import DesktopSocialLinks from './DesktopSocialLinks.svelte';
 </script>
 
-<section class="dn-about-hero dn-information-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign" aria-labelledby="about-title">
+<section class="dn-about-hero dn-information-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign dn-route-hero--company" aria-labelledby="about-title">
   <DesktopHeroScene scene="about" />
   <picture class="dn-about-hero__showroom" aria-hidden="true">
     <source media="(max-width: 991px)" srcset={leadSite.artwork.routeHero.colored.showroom} />
@@ -19,7 +19,7 @@
   </picture>
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
-      <HeroLocation aboveTitle />
+      <HeroLocation aboveTitle compact />
       <h1 id="about-title">{i18n.t("m_b4b580a9ad8c")}</h1>
       <p class="dn-about-hero__lead">{i18n.t("m_b9634bb91bba", { p0: i18n.dealer('city') })}</p>
     </div>

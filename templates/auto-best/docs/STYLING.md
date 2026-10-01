@@ -13,10 +13,11 @@ the distorted Blog/Contact props are retained as provenance only. White headings
 red primary actions and white search/category/location controls share one
 treatment. Each scene is selected explicitly from `lead-site.ts`; Contact service
 entries use the Contact scene. All desktop
-route heroes share a 540px frame: introductions start at 200px, leaving 60px below
-the desktop header, and primary controls start at 340px. About starts with its
-location badge, followed by the title with a 12px gap; other routes start with
-their title. Subtitle length does not move the introduction or control anchors.
+route heroes share a 540px frame. Home, Inventory, Blog and service entries start
+their introductions at 200px and their controls at 340px. About and general
+Contact align their titles at 272px and their actions at 384px, giving the simpler
+photo banners more space below navigation. About's compact city badge starts at
+232px, with a 12px gap before the title. Subtitle length does not move these anchors.
 Home and Inventory use the same search-panel bounds, padding and
 radius; Blog uses that same center lane. The artwork has identical framing
 across routes. Vehicle alpha bounds set body height and tyre baselines without
@@ -32,7 +33,9 @@ it within the shared header. White Blog category pills remain distinct from the
 canvas; the active and hovered category uses the brand accent.
 
 `HeroLocation.svelte` owns the white 14px location badge used below the Home title
-and above the About title. `DesktopShowroom.svelte` owns the shared About/Contact visit panel:
+and above the About title. About uses a 28px city badge; its directions link keeps
+the full address as its accessible label and hover title. `DesktopShowroom.svelte`
+owns the shared About/Contact visit panel:
 address and appointment copy, one primary call action, directions, configured
 social profiles, and the Google map. Its coordinates come from `brand.ts`.
 The map mounts only at 992px and above; the external map link stays available
@@ -47,6 +50,10 @@ a white keyboard focus ring against dark hero artwork. Visit panels use the
 shared focus colour. Profiles come only from `brand.ts`.
 Empty profile URLs omit the corresponding icon instead of creating dead links.
 The existing mobile social layout remains separate.
+
+Desktop navigation runs Home, Inventory, Guides, About, Contact through the
+`desktopNavigation` export. Its DOM and keyboard order agree; other menus use
+their existing content order.
 
 Below 992px, About and general Contact use an overlay header on their dark hero,
 with an inset white card overlapping the banner by 52px, as on Home. About uses
