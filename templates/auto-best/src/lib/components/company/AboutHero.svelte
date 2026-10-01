@@ -9,6 +9,7 @@
   import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
   import HeroLocation from '$components/ui/HeroLocation.svelte';
+  import DesktopSocialLinks from './DesktopSocialLinks.svelte';
 
   const socialProfiles = [
     { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
@@ -29,8 +30,9 @@
       <span>{i18n.t("m_9304497d3f4b")}</span>
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>
+    <DesktopSocialLinks hero />
     {#if socialProfiles.some(profile => profile.href)}
-    <nav class="dn-about-socials" aria-label={i18n.t("m_3931afa2068d")}>
+    <nav class="dn-about-socials dn-about-socials--mobile" aria-label={i18n.t("m_3931afa2068d")}>
       <span>{i18n.t("m_9200ee75efd0")}</span>
       <div class="dn-about-socials__links dn-social-profile-links">
         {#each socialProfiles.filter(profile => profile.href) as profile (profile.name)}
@@ -53,7 +55,7 @@
   .dn-about-socials a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
   @media (min-width: 992px) {
     .dn-about-hero :global(.dn-desktop-hero-scene) { filter: grayscale(1); }
-    .dn-about-socials { display: none; }
+    .dn-about-socials--mobile { display: none; }
     .dn-about-hero__lead { display: none; }
   }
 </style>

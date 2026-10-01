@@ -91,7 +91,7 @@ try {
                 assert.equal(await page.locator('.dn-listing-hero__copy p').innerText(), locale === 'bg' ? `${count} автомобила` : `${count} cars`);
               }
               if (route === 'about-us' || route === 'contact') {
-                const social = page.locator('.dn-desktop-showroom__social a');
+                const social = page.locator('.dn-desktop-socials a');
                 assert.equal(await social.count(), 0, 'The master has no borrowed dealer social accounts');
               }
               const surface = { '': '.dn-inventory', 'listing-grid': '.dn-listing-results', 'about-us': '.dn-about-process', 'blog': '.dn-blog-index' }[route];

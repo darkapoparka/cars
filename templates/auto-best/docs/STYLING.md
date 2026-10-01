@@ -20,6 +20,12 @@ existing contact composition. General Contact uses the compact visit panel below
 the complete hero, with a 32px gap. Its map area reserves both grid rows before
 hydration so the external map link stays at the bottom while the iframe mounts.
 
+`DesktopSocialLinks.svelte` renders the same 44px social controls in both company
+heroes and visit panels. Hero controls sit 24px below the primary actions; dark
+heroes use a white keyboard focus ring. Profiles come only from `brand.ts`.
+Empty profile URLs omit the corresponding icon instead of creating dead links.
+The existing mobile social layout remains separate.
+
 ## CSS structure
 
 [app.css](../src/app.css) imports three global sheets in this order:

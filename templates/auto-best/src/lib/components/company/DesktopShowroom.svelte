@@ -3,7 +3,7 @@
   import { getI18n } from '$lib/locale/context';
   import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
-  import SocialBrandIcon from './SocialBrandIcon.svelte';
+  import DesktopSocialLinks from './DesktopSocialLinks.svelte';
 
   let { id, compact = false }: { id: string; compact?: boolean } = $props();
   const i18n = getI18n();
@@ -11,11 +11,6 @@
   const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${coordinates}`;
   const mapUrl = $derived(`https://maps.google.com/maps?q=${coordinates}&z=16&hl=${i18n.locale}&output=embed`);
-  const profiles = [
-    { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
-    { name: 'facebook', label: 'Facebook', href: brand.facebookUrl },
-    { name: 'youtube', label: 'YouTube', href: brand.youtubeUrl }
-  ] as const;
 </script>
 
 <section class="dn-desktop-showroom" class:dn-desktop-showroom--compact={compact} aria-labelledby={id}>
@@ -39,15 +34,7 @@
         {i18n.t('m_c95356784006')}<Icon name="arrow-right" size={18} />
       </a>
     </div>
-    {#if profiles.some(profile => profile.href)}
-      <nav class="dn-desktop-showroom__social" aria-label={i18n.t('m_3931afa2068d')}>
-        {#each profiles.filter(profile => profile.href) as profile (profile.name)}
-          <a href={profile.href} target="_blank" rel="noopener noreferrer" aria-label={i18n.t('m_c0b8af66cd54', { p0: profile.label })}>
-            <SocialBrandIcon name={profile.name} size={22} />
-          </a>
-        {/each}
-      </nav>
-    {/if}
+    <DesktopSocialLinks />
   </div>
   <div class="dn-desktop-showroom__map">
     {#if desktop.current}
@@ -146,23 +133,6 @@
     .dn-desktop-showroom a:focus-visible {
       outline: 3px solid var(--dn-focus);
       outline-offset: 3px;
-    }
-    .dn-desktop-showroom__social {
-      display: flex;
-      gap: var(--dn-space-2);
-    }
-    .dn-desktop-showroom__social a {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: var(--dn-pill);
-      background: var(--dn-surface-subtle);
-      color: var(--dn-ink);
-    }
-    .dn-desktop-showroom__social a:hover {
-      background: var(--dn-ink);
-      color: var(--dn-white);
     }
     .dn-desktop-showroom__map {
       display: grid;

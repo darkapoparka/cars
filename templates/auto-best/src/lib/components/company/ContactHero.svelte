@@ -11,6 +11,7 @@
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
   import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
   import { brand } from '$config/brand';
+  import DesktopSocialLinks from './DesktopSocialLinks.svelte';
   import type { ContactTopic } from '$data/company';
 
   let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
@@ -43,6 +44,7 @@
           {i18n.t('m_c95356784006')}<Icon name="chevron-down" size={18} />
         </a>
       </div>
+      <DesktopSocialLinks hero onDark />
     {/if}
     {#if topic.id === 'leasing'}
       {#if vehicle}
