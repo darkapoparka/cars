@@ -11,7 +11,7 @@
     width: 100%;
     color: var(--inverse-foreground);
     background: var(--inverse);
-    border-bottom: 1px solid var(--inverse-border);
+    border-bottom: 0;
   }
 
   .header:has(
@@ -52,7 +52,6 @@
   }
 
   .segments a {
-    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +61,7 @@
     font-weight: var(--font-weight-medium);
     color: var(--inverse-muted);
     border: 1px solid transparent;
-    border-radius: 0;
+    border-radius: var(--radius-pill);
     transition:
       color var(--duration-interaction),
       background-color var(--duration-interaction),
@@ -78,19 +77,9 @@
   .segments a[aria-current="page"] {
     font-weight: var(--font-weight-semibold);
     color: var(--inverse-foreground);
-    background: transparent;
-    border-color: transparent;
+    background: color-mix(in srgb, var(--inverse-foreground) 8%, transparent);
+    border-color: var(--inverse-border);
     box-shadow: none;
-  }
-
-  .segments a[aria-current="page"]::after {
-    position: absolute;
-    right: 0.9375rem;
-    bottom: 0;
-    left: 0.9375rem;
-    height: 2px;
-    content: "";
-    background: var(--brand);
   }
 
   .contact {

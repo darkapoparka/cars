@@ -17,8 +17,8 @@
     margin: 0 auto;
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 1.25rem;
-    box-shadow: var(--elevation-panel);
+    border-radius: 1rem;
+    box-shadow: none;
   }
   .panel h2 {
     margin: 0 0 1.25rem;
@@ -39,7 +39,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
   .contactCard {
     display: flex;
@@ -50,14 +50,16 @@
     color: var(--foreground);
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: var(--radius-vehicle);
-    transition:
-      border-color var(--duration-interaction),
-      box-shadow var(--duration-interaction);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--duration-interaction);
   }
   .contactCard > svg {
     flex-shrink: 0;
     color: var(--muted-foreground);
+  }
+  .contactCard > span {
+    flex: 1;
+    min-width: 0;
   }
   .contactCard small,
   .contactCard strong {
@@ -69,12 +71,17 @@
     color: var(--muted-foreground);
   }
   .contactCard strong {
-    font-size: var(--text-body);
+    font-size: 1.0625rem;
     font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+  }
+  .contactCard[href^="tel:"] strong {
+    font-size: 1.5rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.25;
   }
   .contactCard:hover {
     border-color: var(--muted-foreground);
-    box-shadow: var(--elevation-panel);
   }
   .contactCard:focus-visible,
   .serviceCard:focus-visible {
@@ -93,22 +100,22 @@
     gap: 1rem;
     padding: 1.5rem;
     color: var(--foreground);
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-vehicle);
-    transition:
-      border-color var(--duration-interaction),
-      box-shadow var(--duration-interaction);
+    background: var(--control);
+    border: 1px solid transparent;
+    border-radius: var(--radius-lg);
+    transition: border-color var(--duration-interaction);
   }
   .serviceCard:hover {
     border-color: var(--muted-foreground);
-    box-shadow: var(--elevation-panel);
   }
   .serviceCard strong {
     display: flex;
     gap: 0.5rem;
     justify-content: space-between;
     font-size: var(--text-body);
+  }
+  .serviceCard strong > svg {
+    flex-shrink: 0;
   }
   .serviceCard p {
     margin-top: 0.5rem;
@@ -120,6 +127,12 @@
     font-size: var(--text-section-title-lg);
     font-weight: var(--font-weight-semibold);
     line-height: var(--text-section-title-lg--line-height);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -224,7 +237,7 @@
   }
   .heroContent .panel {
     padding: 1.5rem;
-    border-radius: 1.25rem;
+    border-radius: 1rem;
   }
   .heroContent [data-slot="desktop-import-routes"] a,
   .editorialBody [data-slot="editorial-filter-pills"] button {
@@ -355,49 +368,5 @@
     padding-inline: 0.5rem;
     background: transparent;
     border-radius: 0.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer {
-    width: min(
-      calc(100% - 2 * var(--layout-gutter)),
-      var(--layout-content-max)
-    );
-    max-width: var(--layout-content-max);
-    padding-inline: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .loadingLanding {
-    padding: 0
-      max(var(--layout-gutter), calc((100% - var(--layout-content-max)) / 2))
-      1.5rem;
-    background: linear-gradient(var(--inverse) 15rem, var(--background) 15rem);
-  }
-  .loadingIntroduction {
-    display: grid;
-    gap: 0.75rem;
-    align-content: center;
-    justify-items: center;
-    min-height: 12rem;
-  }
-  .loadingSearch {
-    display: grid;
-    gap: 0.875rem;
-    min-height: 12.5rem;
-    padding: 1rem 1.25rem 1.25rem;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 0.75rem;
-  }
-  .loadingResults {
-    width: min(
-      calc(100% - 2 * var(--layout-gutter)),
-      var(--layout-content-max)
-    );
-    max-width: var(--layout-content-max);
-    padding: 2rem 0;
   }
 }

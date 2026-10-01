@@ -3,12 +3,12 @@
     position: relative;
     width: 100%;
     min-height: var(--desktop-action-panel-min-height, 0px);
-    padding: 1.25rem;
+    padding: 1.5rem;
     color: var(--foreground);
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 1.25rem;
-    box-shadow: 0 16px 40px rgb(0 0 0 / 14%);
+    border-radius: 1rem;
+    box-shadow: none;
   }
 
   .panel h2:not([class~="sr-only"]) {

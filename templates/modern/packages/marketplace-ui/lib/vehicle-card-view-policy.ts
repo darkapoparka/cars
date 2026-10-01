@@ -302,12 +302,8 @@ export const getVehicleCardSecondaryPriceLabel = (
 export const getVehicleCardImageSizes = (
   isCompact: boolean,
   isGrid: boolean,
-  isDesktopGrid: boolean,
-  isDiscovery = false
+  isDesktopGrid: boolean
 ) => {
-  if (isDiscovery) {
-    return `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (min-width: 1400px) ${isGrid ? "420px" : "380px"}, ${isGrid ? "33vw" : "29vw"}`;
-  }
   if (isDesktopGrid) {
     return `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1279px) 33vw, 25vw`;
   }

@@ -1,5 +1,4 @@
-﻿.landing,
-.discoveryContent {
+﻿.discoveryContent {
   display: none;
 }
 
@@ -11,7 +10,7 @@
       calc(100% - 2 * var(--layout-gutter)),
       var(--layout-content-max)
     );
-    margin: 0 auto;
+    margin-top: 0;
   }
 
   .serviceLinks {
@@ -78,27 +77,20 @@
 
   .serviceLinks[data-placement="inventory"] {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.75rem;
-    padding-top: 2rem;
-    margin-top: 3rem;
+    gap: 1rem;
+    margin-top: 2rem;
     color: var(--muted-foreground);
-    border-top: 1px solid var(--border);
   }
 
   .serviceLinks[data-placement="inventory"] a {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    min-height: 9rem;
-    padding: 1.5rem;
-    background: var(--panel);
-    border: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
-    border-radius: var(--radius-xl);
+    min-height: 4.25rem;
+    padding: 0.875rem 1rem;
+    background: var(--control);
+    border: 1px solid transparent;
+    border-radius: var(--radius-lg);
   }
 
   .serviceLinks[data-placement="inventory"] strong {
-    margin-bottom: 0.25rem;
-    font-size: 1rem;
     color: var(--foreground);
   }
 
@@ -128,7 +120,7 @@
       calc(100% - (2 * var(--layout-gutter))),
       var(--layout-content-max)
     );
-    padding-block: 2rem 3rem;
+    padding-block: 2rem 2.5rem;
     margin-inline: auto;
   }
 
@@ -137,12 +129,12 @@
     gap: 1.5rem;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.25rem;
   }
 
   .sectionHeading h2 {
     margin: 0;
-    font-size: 1.625rem;
+    font-size: var(--text-section-title-lg);
     font-weight: var(--font-weight-bold);
     line-height: var(--text-section-title-lg--line-height);
     letter-spacing: var(--tracking-heading);
@@ -201,70 +193,12 @@
 
 @media (min-width: 1280px) {
   .vehicleSlide {
-    flex-basis: 33.333333%;
+    flex-basis: 25%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
   .serviceLinks[data-placement="inventory"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .landing {
-    display: block;
-    padding-bottom: 1.5rem;
-    background: linear-gradient(var(--inverse) 15rem, var(--background) 15rem);
-  }
-  .introduction {
-    position: relative;
-    display: grid;
-    place-items: center;
-    min-height: 12rem;
-    overflow: hidden;
-    color: var(--inverse-foreground);
-    isolation: isolate;
-  }
-  .showroomScene {
-    z-index: -1;
-    object-fit: cover;
-    object-position: center 47%;
-  }
-  .introduction::after {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    content: "";
-    background: linear-gradient(
-      var(--inverse),
-      transparent 45%,
-      var(--inverse)
-    );
-  }
-  .introCopy {
-    max-width: 40rem;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  .eyebrow {
-    margin-bottom: 0.75rem;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    color: var(--inverse-muted);
-    letter-spacing: 0.12em;
-  }
-  .introCopy h1 {
-    font-size: clamp(2rem, 2.8vw, 2.5rem);
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.035em;
-    text-wrap: balance;
-  }
-  .introDescription {
-    margin-top: 0.75rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    color: var(--inverse-muted);
   }
 }

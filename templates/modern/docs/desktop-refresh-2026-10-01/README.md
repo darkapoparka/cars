@@ -1,5 +1,19 @@
 # Modern desktop refresh — 1 October 2026
 
+## Rolled back at the owner's request
+
+Both desktop passes (`3aa204ccb` and `fbe8900c7`) have been reversed in source.
+All 18 affected source paths match `3aa204ccb^`. The later mobile commit and
+the three mobile files already modified at rollback start were preserved;
+their SHA-256 hashes were unchanged after applying the reverse patch.
+The notes and screenshots below are retained historical evidence only.
+
+Rollback checks: web typecheck and all 271 web/UI tests passed. The preview
+at `http://127.0.0.1:6462/bg` returned HTTP 200 with the original heading.
+The former server process was gone; a replacement process was already running
+when inspected. Its exit cause was not established. Browser automation timed
+out, so restored visuals were not independently verified in this rollback.
+
 ## Revision after owner feedback
 
 The owner rejected the split introduction below. It is historical evidence, not
