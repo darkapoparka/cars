@@ -17,6 +17,7 @@
 	import ModeTabs from '$lib/components/common/MobileModeTabs.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import HeroFilterDialog from './HeroFilterDialog.svelte';
+	import DesktopHomeSearchEntry from './DesktopHomeSearchEntry.svelte';
 	import { linkHref } from '$lib/utils/links';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import { homeHeroModes } from '$lib/content/home-discovery';
@@ -168,25 +169,16 @@
 				aria-labelledby={'home-mode-' + mode}
 			>
 				{#if mode === 'buy'}
+					<DesktopHomeSearchEntry
+						id="home-query"
+						value={keyword}
+						placeholder={english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}
+						actionLabel={english ? 'Search' : 'Търси'}
+						href={searchHref}
+						open={searchOpen}
+						onopen={() => (searchOpen = true)}
+					/>
 					<div class="home-hero__filters">{@render searchFilters()}</div>
-					<div class="home-hero__search">
-						<button
-							id="home-query"
-							class="home-hero__search-trigger"
-							type="button"
-							aria-haspopup="dialog"
-							aria-expanded={searchOpen}
-							onclick={() => (searchOpen = true)}
-							><Search size={21} aria-hidden="true" />
-							<span
-								>{keyword ||
-									(english ? 'Make, model or keyword' : 'Марка, модел или ключова дума')}</span
-							>
-						</button>
-						<Action href={searchHref} size="hero" class="home-hero__search-action">
-							<Search size={19} aria-hidden="true" />{english ? 'Search' : 'Търси'}
-						</Action>
-					</div>
 					<noscript
 						><a href={linkHref(localized('/inventory'))}
 							>{english ? 'Browse all cars' : 'Разгледай всички автомобили'}</a
@@ -213,7 +205,7 @@
 				{:else}
 					<form class="home-hero__intent" action={linkHref(action)}>
 						{#if english}<input type="hidden" name="lang" value="en" />{/if}
-						<div class="home-hero__search">
+						<div class="home-hero__intent-row">
 							<label class="home-hero__intent-field" for="home-query">
 								<Search size={21} aria-hidden="true" /><span class="sr-only"
 									>{mode === 'import' ? 'LINK / VIN' : 'VIN'}</span
@@ -291,12 +283,11 @@
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: var(--bc-space-3);
 	}
-	.home-hero__search {
+	.home-hero__intent-row {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) auto;
 		gap: var(--bc-space-3);
 	}
-	.home-hero__search-trigger,
 	.home-hero__intent-field {
 		display: flex;
 		align-items: center;
@@ -312,30 +303,6 @@
 		font-weight: var(--bc-weight-control);
 		line-height: var(--bc-leading-search);
 		text-align: left;
-	}
-	.home-hero__search-trigger :global(svg) {
-		flex: 0 0 auto;
-		color: var(--bc-ink);
-	}
-	.home-hero__search-trigger {
-		min-height: var(--bc-control-height-hero);
-		border-color: var(--bc-border);
-	}
-	.home-hero__search :global(.home-hero__search-action) {
-		min-width: 160px;
-		padding-inline: var(--bc-space-5);
-		border-radius: var(--bc-radius-md);
-		font-size: var(--bc-text-search-trigger);
-		font-weight: var(--bc-weight-action);
-	}
-	.home-hero__search-trigger span {
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-	}
-	.home-hero__search-trigger:hover {
-		background: var(--bc-surface);
-		border-color: var(--bc-muted);
 	}
 	.home-hero__intent-field input {
 		flex: 1;
