@@ -11,7 +11,7 @@
 	const displayPrice = $derived(vehicle.priceEur.replace(/\s*EUR\b/, ' €'));
 </script>
 
-<div class="h6 card-box__price mb-15">
+<div class="card-box__price">
 	<span class="daynight-card-price__stack">
 		<span class="daynight-card-price__value">{displayPrice}</span>
 		<span class="daynight-card-price__monthly">

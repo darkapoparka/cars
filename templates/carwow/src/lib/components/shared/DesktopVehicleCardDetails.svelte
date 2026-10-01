@@ -19,13 +19,13 @@
 			{vehicle.shortTitle}
 		</a>
 	</h3>
-	<p class="desktop-vehicle-details__drivetrain">
-		<span>{i18n.spec(vehicle.transmission)}</span><span>{i18n.spec(vehicle.fuel)}</span>
-	</p>
-	<VehiclePriceRow {vehicle} {financeLink} />
 	<div class="desktop-vehicle-details__metadata">
 		<VehicleMetaRow {vehicle} styleClass="style2" plain />
+		<p class="desktop-vehicle-details__drivetrain">
+			<span>{i18n.spec(vehicle.transmission)}</span><span>{i18n.spec(vehicle.fuel)}</span>
+		</p>
 	</div>
+	<VehiclePriceRow {vehicle} {financeLink} />
 </div>
 
 <style>
@@ -54,7 +54,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0 8px;
-		margin: 6px 0 12px;
+		margin: 0;
 		color: var(--discovery-muted, #62676e);
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
 	}
@@ -64,9 +64,12 @@
 	}
 	.desktop-vehicle-details :global(.card-box__price) {
 		margin: auto 0 0;
+		padding-top: 16px;
 	}
 	.desktop-vehicle-details__metadata {
-		margin-top: 12px;
+		display: grid;
+		gap: 4px;
+		margin-top: 8px;
 	}
 	.desktop-vehicle-details a:focus-visible {
 		outline: 2px solid var(--desktop-focus, #171b1e);

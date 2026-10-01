@@ -121,7 +121,11 @@ test('desktop card financing copy stays clear of its action in both languages', 
 	for (const locale of ['en', 'bg']) {
 		for (const width of [992, 1440]) {
 			await page.setViewportSize({ width, height: 1000 });
-			for (const route of [`/${locale}`, `/${locale}/inventory`]) {
+			for (const route of [
+				`/${locale}`,
+				`/${locale}/inventory`,
+				`/${locale}/inventory/mercedes-benz-gla-45-amg-405323`
+			]) {
 				await page.goto(route);
 				await expect(page.locator('.daynight-card-price__monthly').first()).toBeVisible();
 				await page.evaluate(() => document.fonts.ready);
@@ -129,10 +133,17 @@ test('desktop card financing copy stays clear of its action in both languages', 
 					.poll(() =>
 						page.locator('.daynight-card-price__monthly:visible').evaluateAll((captions) =>
 							captions.every((caption) => {
-								const arrow = caption
-									.closest('.card-box__price')!
-									.querySelector('.daynight-card-price__link')!;
+								const details = caption.closest('.desktop-vehicle-details')!;
+								const facts = details.querySelector('.desktop-vehicle-details__metadata')!;
+								const price = details.querySelector('.daynight-card-price__value')!;
+								const arrow = details.querySelector('.daynight-card-price__link')!;
 								return (
+									Boolean(
+										facts.compareDocumentPosition(price) & Node.DOCUMENT_POSITION_FOLLOWING
+									) &&
+									facts.getBoundingClientRect().bottom <= price.getBoundingClientRect().top - 12 &&
+									facts.getBoundingClientRect().bottom <= arrow.getBoundingClientRect().top - 12 &&
+									details.lastElementChild?.matches('.card-box__price') &&
 									caption.getBoundingClientRect().right <=
 										arrow.getBoundingClientRect().left - 10 &&
 									caption.scrollWidth <= caption.clientWidth + 1
