@@ -85,11 +85,6 @@
 				loading={priority ? 'eager' : 'lazy'}
 				fetchpriority={priority ? 'high' : 'auto'}
 				decoding="async"
-				onerror={(event) => {
-					const image = event.currentTarget as HTMLImageElement;
-					if (!image.src.endsWith('/assets/vehicle-placeholder.svg'))
-						image.src = '/assets/vehicle-placeholder.svg';
-				}}
 			/>
 		</a>
 	</div>
@@ -140,7 +135,7 @@
 		<p class="card-box__price daynight-card-price h6">
 			<span class="daynight-card-price__amount">{vehicle.priceLabel.replace('EUR', '€')}</span>
 			<a
-				href={resolve('/financing')}
+				href={resolve(`/financing?vehicle=${encodeURIComponent(vehicle.slug)}`)}
 				class="daynight-card-price__monthly daynight-card-price__finance-link"
 				aria-label={`${copy.finance}: ${vehicle.monthlyLabel}`}
 				>{vehicle.monthlyLabel.replace('EUR', '€')}</a

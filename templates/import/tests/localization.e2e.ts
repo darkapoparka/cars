@@ -139,7 +139,11 @@ for (const width of [320, 390, 1440])
 		await expect(close).toBeFocused();
 		await dialog.getByRole('button', { name: 'Not now' }).click();
 		await expect(dialog).not.toBeVisible();
-		await expect(page.locator('[data-locale-selector]:focus')).toBeVisible();
+		await expect(
+			width < 768
+				? page.getByRole('button', { name: 'Menu', exact: true })
+				: page.locator('[data-locale-selector]:visible').first()
+		).toBeFocused();
 		await expect
 			.poll(async () => (await context.cookies()).filter((c) => c.name === 'cars_prompt').length)
 			.toBe(1);
@@ -147,7 +151,9 @@ for (const width of [320, 390, 1440])
 			(await context.cookies()).filter((c) => ['cars_locale', 'cars_country'].includes(c.name))
 		).toEqual([]);
 		await page.reload();
+		await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 		await expect(dialog).not.toBeVisible();
+		if (width < 768) await page.getByRole('button', { name: 'Menu', exact: true }).click();
 		await page.locator('[data-locale-selector]:visible').first().click();
 		await expect(dialog).toBeVisible();
 		await dialog.locator('[name=country]').selectOption('GB');

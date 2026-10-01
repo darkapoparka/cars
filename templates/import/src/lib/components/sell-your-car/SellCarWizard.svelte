@@ -524,10 +524,11 @@
 		border-color: var(--bc-accent);
 	}
 	.sell-summary {
-		position: relative;
 		display: grid;
-		gap: 2px;
-		padding: 10px 88px 10px 12px;
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 2px 12px;
+		padding: 8px 12px 10px;
 	}
 	.sell-summary span {
 		color: var(--bc-muted);
@@ -536,16 +537,18 @@
 		line-height: var(--bc-mobile-meta-leading);
 	}
 	.sell-summary strong {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		min-width: 0;
+		overflow-wrap: anywhere;
 		font-size: var(--bc-mobile-card-title);
 		font-weight: var(--bc-weight-heading);
 		line-height: var(--bc-mobile-card-title-leading);
 	}
 	.sell-summary button {
-		position: absolute;
-		top: 50%;
-		right: 8px;
-		transform: translateY(-50%);
-		min-height: 36px;
+		grid-column: 2;
+		grid-row: 1;
+		min-height: 44px;
 		border: 0;
 		border-radius: 9px;
 		color: var(--bc-ink);

@@ -10,6 +10,7 @@
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
+	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import Phone from '@lucide/svelte/icons/phone';
 	import MapPin from '@lucide/svelte/icons/map-pin';
 	import MessageCircle from '@lucide/svelte/icons/message-circle';
@@ -110,6 +111,7 @@
 	</div>
 	<noscript
 		><section class="site-container site-panel site-mobile-only">
+			<LocaleTrigger />
 			<h2>{nt('ui251')}</h2>
 			<LeadForm
 				{english}
