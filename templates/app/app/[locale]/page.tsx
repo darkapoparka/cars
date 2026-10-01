@@ -58,7 +58,7 @@ export default function HomePage() {
       </section> : null}
       {collectionVehicles.length ? <section aria-label={tx("Explore the collection")} {...stylex.props(s.hotDeals)}>
         <Link href="/cars" {...stylex.props(s.mobileCollectionBanner)}>
-          <img src={assetPath(collectionVehicles[0].image)} width={640} height={360} loading="lazy" alt="" {...stylex.props(s.collectionBannerImage)}/>
+          <img src={assetPath('/showroom/black/collection-lineup-v2.webp')} width={1200} height={500} loading="lazy" alt="" {...stylex.props(s.collectionBannerImage)}/>
           <span aria-hidden="true" {...stylex.props(s.collectionBannerShade)}/>
           <span {...stylex.props(s.collectionBannerContent)}><h2 {...stylex.props(s.collectionBannerTitle)}>{tx("Explore the collection")}</h2><span aria-hidden="true" {...stylex.props(s.collectionBannerArrow)}><ArrowRight size={18}/></span></span>
         </Link>
@@ -86,8 +86,8 @@ const s = stylex.create({
   inventoryLink: {minHeight: 44},
   hotDeals: {marginTop: {[media.mobile]: 24, default: 26}, paddingTop: {[media.mobile]: 0, default: 18}, paddingBottom: {[media.mobile]: 0, default: 8}, borderTopWidth: {[media.mobile]: 0, default: 1}, borderTopStyle: 'solid', borderTopColor: '#e8e8eb'},
   mobileCollectionBanner: {display: {[media.mobile]: 'block', default: 'none'}, position: 'relative', height: 156, overflow: 'hidden', color: '#fff', borderRadius: 18, backgroundColor: '#242428'},
-  collectionBannerImage: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 45%'},
-  collectionBannerShade: {position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(0deg, rgba(0,0,0,.86), rgba(0,0,0,.04) 78%)'},
+  collectionBannerImage: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'},
+  collectionBannerShade: {position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(0deg, rgba(0,0,0,.65), transparent 50%)'},
   collectionBannerContent: {position: 'absolute', insetInline: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, padding: 16},
   collectionBannerTitle: {color: '#fff', fontSize: 16, fontWeight: 600, lineHeight: 1.1, whiteSpace: 'nowrap'},
   collectionBannerArrow: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 32, height: 32, color: '#1b1b1d', borderRadius: 16, backgroundColor: '#fff'},
