@@ -148,7 +148,7 @@ export const MobileInventorySearch = ({
               commitDraft();
             }
           }}
-          placeholder={isBg ? "Търси марка, модел…" : "Search make or model…"}
+          placeholder={copy.search.makeModelPlaceholder}
           spellCheck={false}
           type="search"
           value={draft}
