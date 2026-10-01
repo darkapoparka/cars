@@ -6,12 +6,14 @@ Auto Best combines an image-led automotive layout, Onest typography, rounded sur
 
 Home, Inventory and Blog use `--dn-surface-canvas` behind their
 heroes. About retains its neutral showroom photograph; Contact uses its dark
-showroom photograph with white copy and call/directions actions. Home keeps its
-540px feature banner. Inventory uses a 460px banner with the search panel at 264px.
-About, Contact and Blog use `dn-route-hero--compact`: their desktop content flows
-from 176px below the page top and ends with 48px of padding after the actions.
-Optional social links expand the company hero instead of leaving a reserved gap.
-All retain centered type. White Blog category pills remain distinct from the
+showroom photograph with white copy and call/directions actions. All desktop
+route heroes share a 500px frame: titles start at 164px and primary controls at
+304px. Subtitle length does not move either anchor. Home and Inventory use the
+same search-panel bounds, padding and radius; Blog uses that same center lane. Wide car
+cutouts share their visible body scale and a baseline 50px above the hero bottom.
+About and Contact use the same full-scene frame and crop. The desktop logo has a
+fixed image box and flex alignment so decoding or route typography does not move
+it within the shared header. White Blog category pills remain distinct from the
 canvas; the active and hovered category uses the brand accent.
 
 `HeroLocation.svelte` owns the white 14px location badge used below the Home and

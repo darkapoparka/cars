@@ -32,8 +32,6 @@
 
 @media (min-width: 992px) {
   .dn-listing-stage[data-layout='hero-discovery'] {
-    --dn-route-hero-height: 460px;
-    --dn-route-hero-control-top: 264px;
     --dn-studio-background: var(--dn-surface-canvas);
     --dn-studio-heading: var(--dn-ink);
     --dn-studio-description: var(--dn-muted);

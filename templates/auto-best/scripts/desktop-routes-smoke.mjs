@@ -1,13 +1,72 @@
 import assert from 'node:assert/strict';
 import { launchBrowser, previewUrl } from './browser.mjs';
-import { returningContext } from './locale-smoke-fixture.mjs';
+import { returningContext, appPath } from './locale-smoke-fixture.mjs';
 import { smokeReport } from './smoke-report.mjs';
 
 const base = previewUrl();
-const output = 'artifacts/desktop-routes-smoke';
+const caseFilter = process.env.DESKTOP_ROUTE_CASE ? new RegExp(process.env.DESKTOP_ROUTE_CASE) : null;
+const output = caseFilter ? 'artifacts/desktop-routes-smoke-focused' : 'artifacts/desktop-routes-smoke';
 const suite = await smokeReport(output, base);
 const browser = await launchBrowser();
 const routes = ['', 'listing-grid', 'about-us', 'blog', 'contact'];
+
+const check = (name, run) => !caseFilter || caseFilter.test(name) ? suite.check(name, run) : Promise.resolve();
+
+async function settleHeroFonts(page) {
+  await page.evaluate(async () => {
+    const heading = document.querySelector('.dn-route-hero h1');
+    // Load the actual heading glyphs before sampling CDP font usage after route changes.
+    await document.fonts.load(getComputedStyle(heading).font, heading.textContent);
+    await document.fonts.ready;
+  });
+}
+
+async function heroGeometry(page) {
+  return page.evaluate(() => {
+    const hero = document.querySelector('.dn-route-hero');
+    const copy = hero.querySelector('.dn-route-hero__copy');
+    const heading = hero.querySelector('h1');
+    const lead = copy.querySelector('p');
+    const scene = hero.querySelector('.dn-desktop-hero-scene img');
+    const rect = e => e?.getBoundingClientRect().toJSON();
+    const controls = document.querySelector('.dn-search, .dn-listing-filter, .dn-blog-toolbar, .dn-about-hero .dn-about-button, .dn-contact-hero__desktop-actions, .dn-contact-hero__action');
+    return {
+      hero: rect(hero), copy: rect(copy), heading: rect(heading), lead: rect(lead), controls: rect(controls),
+      header: rect(document.querySelector('.dn-header-fixed')),
+      logo: rect(document.querySelector('.dn-logo img')),
+      navigation: rect(document.querySelector('.dn-nav')),
+      backgroundImage: getComputedStyle(hero).backgroundImage,
+      scene: scene ? { src: scene.currentSrc, ...rect(scene) } : null,
+      cutouts: [...hero.querySelectorAll('.dn-hero-vehicles__car img')].map(image => ({ src: image.currentSrc, ...rect(image) })),
+      carBodies: [...hero.querySelectorAll('.dn-hero-vehicles__car')].map(car => {
+        const bounds = car.getBoundingClientRect();
+        const style = getComputedStyle(car);
+        const height = bounds.height / parseFloat(style.getPropertyValue('--art-height-ratio'));
+        return { height, baseline: bounds.y + height * parseFloat(style.getPropertyValue('--art-bottom-ratio')) };
+      }),
+      font: getComputedStyle(heading).fontFamily,
+      headingSize: getComputedStyle(heading).fontSize,
+      leadSize: getComputedStyle(lead).fontSize,
+      overflow: document.documentElement.scrollWidth - innerWidth,
+      broken: [...document.images].filter(i => i.getBoundingClientRect().width && !i.naturalWidth).map(i => i.currentSrc)
+    };
+  });
+}
+
+function assertDesktopFrame(geometry, width) {
+  assert.equal(geometry.hero.height, 500, 'Desktop routes share one hero height');
+  assert.equal(geometry.heading.y - geometry.hero.y, 164, 'Titles keep the same top anchor regardless of subtitle length');
+  assert.equal(geometry.controls.y - geometry.hero.y, 304, 'Search panels and actions keep the same top anchor');
+  assert(geometry.copy.y >= geometry.header.bottom + 8, 'Hero text clears navigation');
+  assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
+  assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
+  if (width >= 1440) {
+    for (const car of geometry.carBodies) {
+      assert(Math.abs(car.height - Math.min(160, Math.max(120, width * .08333))) <= 1, 'Every cutout pair uses the shared visible-body scale');
+      assert(Math.abs(car.baseline - (geometry.hero.bottom - 50)) <= 1, 'Every cutout pair meets the shared body baseline');
+    }
+  }
+}
 
 try {
   for (const locale of ['bg', 'en']) {
@@ -16,7 +75,7 @@ try {
       await context.addCookies([{ name: 'cars_locale', value: locale, url: base, httpOnly: true, sameSite: 'Lax' }]);
       const page = await context.newPage();
       for (const route of routes) {
-        await suite.check(`${locale}/${route || 'home'} at ${width}`, async () => {
+        await check(`${locale}/${route || 'home'} at ${width}`, async () => {
           const errors = [];
           const sceneRequests = [];
           const onError = error => errors.push(error.message);
@@ -27,7 +86,7 @@ try {
             // Wait for the page's actual fonts/images below, not idle third-party map/video traffic.
             const response = await page.goto(`${base}/${locale}/${route}`, { waitUntil: 'domcontentloaded' });
             assert.equal(response.status(), 200);
-            await page.evaluate(() => document.fonts.ready);
+            await settleHeroFonts(page);
             // Scroll before screenshots so native lazy images are actually requested.
             for (let y = 0; y < await page.evaluate(() => document.documentElement.scrollHeight); y += 800) {
               await page.evaluate(y => scrollTo(0, y), y);
@@ -37,27 +96,7 @@ try {
               await Promise.all([...document.images].filter(i => i.getBoundingClientRect().width).map(i => i.decode().catch(() => {})));
               scrollTo(0, 0);
             });
-            const geometry = await page.evaluate(() => {
-              const hero = document.querySelector('.dn-route-hero');
-              const copy = hero.querySelector('.dn-route-hero__copy');
-              const heading = hero.querySelector('h1');
-              const lead = copy.querySelector('p');
-              const scene = hero.querySelector('.dn-desktop-hero-scene img');
-              const rect = e => e?.getBoundingClientRect().toJSON();
-              const controls = document.querySelector('.dn-search__desktop-form, .dn-listing-desktop-discovery, .dn-blog-toolbar, .dn-about-hero .dn-about-button, .dn-contact-hero__desktop-actions');
-              return {
-                hero: rect(hero), copy: rect(copy), heading: rect(heading), lead: rect(lead), controls: rect(controls),
-                header: rect(document.querySelector('.dn-header-fixed')),
-                backgroundImage: getComputedStyle(hero).backgroundImage,
-                scene: scene ? { src: scene.currentSrc, ...rect(scene) } : null,
-                cutouts: [...hero.querySelectorAll('.dn-hero-vehicles__car img')].map(image => ({ src: image.currentSrc, ...rect(image) })),
-                font: getComputedStyle(heading).fontFamily,
-                headingSize: getComputedStyle(heading).fontSize,
-                leadSize: getComputedStyle(lead).fontSize,
-                overflow: document.documentElement.scrollWidth - innerWidth,
-                broken: [...document.images].filter(i => i.getBoundingClientRect().width && !i.naturalWidth).map(i => i.currentSrc)
-              };
-            });
+            const geometry = await heroGeometry(page);
             assert(geometry.overflow <= 1, 'Horizontal page overflow');
             assert.deepEqual(geometry.broken, [], 'Broken visible images');
             assert.deepEqual(errors, [], 'Browser runtime errors');
@@ -83,17 +122,10 @@ try {
               }
             }
             if (width >= 992) {
-              if (route === '' || route === 'listing-grid') {
-                assert.equal(geometry.hero.height, route === '' ? 540 : 460, 'Home keeps its feature banner; inventory uses the compact search banner');
-              } else {
-                assert(Math.abs(geometry.hero.bottom - geometry.controls.bottom - 48) <= 1, 'Secondary heroes end 48px below their actual controls without reserving empty space');
-              }
+              assertDesktopFrame(geometry, width);
               if (!hasScene) assert.equal(geometry.backgroundImage, 'none', 'Cutouts use solid neutral surfaces');
               assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
               assert.equal(geometry.leadSize, route === '' || route === 'about-us' ? '14px' : '18px', 'Location badges use metadata type; descriptions use lead type');
-              assert(geometry.copy.y >= geometry.header.bottom + 8, 'Hero text clears navigation');
-              assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
-              assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
               assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
               if (route === 'listing-grid') {
                 const count = await page.locator('.dn-listing-results .dn-vehicle-card').count();
@@ -156,13 +188,15 @@ try {
                 assert.equal(await page.locator('.dn-desktop-hero-scene').evaluate(e => getComputedStyle(e).filter), 'grayscale(1)', 'Architecture uses the neutral palette');
               }
               // Verify actual glyph rendering, including Cyrillic, rather than only the CSS font stack.
+              // The inventory/map scroll pass can leave the heading unpainted when CDP samples it.
+              await page.locator('.dn-route-hero h1').screenshot();
               const cdp = await context.newCDPSession(page);
               await cdp.send('DOM.enable');
               await cdp.send('CSS.enable');
               const { root } = await cdp.send('DOM.getDocument');
               const { nodeId } = await cdp.send('DOM.querySelector', { nodeId: root.nodeId, selector: '.dn-route-hero h1' });
               const { fonts } = await cdp.send('CSS.getPlatformFontsForNode', { nodeId });
-              assert(fonts.length && fonts.every(font => font.familyName.includes('Onest')), 'Headings render in bundled Onest');
+              assert(fonts.length && fonts.every(font => font.familyName.includes('Onest')), `Headings render in bundled Onest: ${JSON.stringify(fonts)}`);
               await cdp.detach();
             }
             if (width < 992) assert.equal(await page.locator('.dn-desktop-showroom iframe').count(), 0, 'Mobile does not request the desktop map');
@@ -197,6 +231,50 @@ try {
             page.off('request', onRequest);
           }
         });
+      }
+      if (width === 1440) {
+        await check(`${locale}/desktop header navigation keeps hero anchors`, async () => {
+          await page.goto(`${base}/${locale}/`, { waitUntil: 'domcontentloaded' });
+          await settleHeroFonts(page);
+          await page.locator('.dn-logo img').evaluate(image => image.decode());
+          const initial = await heroGeometry(page);
+          const frames = [];
+          for (const route of ['listing-grid', 'about-us', 'contact', 'blog', '']) {
+            const links = page.locator('.dn-nav__list > li > a');
+            const index = await links.evaluateAll((items, route) => items.findIndex(link =>
+              new URL(link.href).pathname.replace(/^\/(bg|en)(?=\/|$)/, '').replace(/^\/|\/$/g, '') === route
+            ), route);
+            assert(index >= 0, `Header has a destination for ${route || 'home'}`);
+            // Hover opens the existing disclosure menu; clicking its title then navigates.
+            await links.nth(index).hover();
+            await links.nth(index).click();
+            await page.waitForURL(url => appPath(url) === (route ? `/${route}` : '/') && !url.search);
+            await settleHeroFonts(page);
+            await page.evaluate(async () => {
+              await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+            });
+            const geometry = await heroGeometry(page);
+            assertDesktopFrame(geometry, width);
+            for (const element of ['header', 'logo', 'navigation']) {
+              assert.deepEqual(geometry[element], initial[element], `${element} keeps its position and size when switching routes`);
+            }
+            if (route === 'listing-grid' || route === '') {
+              assert.deepEqual(geometry.controls, initial.controls, 'Home and Inventory share the complete search-panel bounds');
+            }
+            frames.push({ route: route || 'home', hero: geometry.hero, heading: geometry.heading, controls: geometry.controls, carBodies: geometry.carBodies, logo: geometry.logo });
+          }
+          return frames;
+        });
+        for (const topic of ['trade-in', 'import', 'leasing']) {
+          await check(`${locale}/contact ${topic} keeps the desktop hero frame`, async () => {
+            await page.goto(`${base}/${locale}/contact?topic=${topic}`, { waitUntil: 'domcontentloaded' });
+            await settleHeroFonts(page);
+            const geometry = await heroGeometry(page);
+            assertDesktopFrame(geometry, width);
+            assert(geometry.overflow <= 1, 'Service route has no horizontal overflow');
+            return geometry;
+          });
+        }
       }
       // Cancel embedded map traffic before disposing the context.
       await page.goto('about:blank');

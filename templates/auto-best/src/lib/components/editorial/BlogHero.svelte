@@ -11,7 +11,7 @@
   let { filters }: { filters: BlogFilters } = $props();
 </script>
 
-<section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--neutral dn-route-hero--compact" aria-labelledby="blog-title">
+<section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--neutral" aria-labelledby="blog-title">
   <HeroVehicles pair="blog" />
   <div class="container dn-blog-hero__inner dn-route-hero__layout">
     <div class="dn-blog-hero__copy dn-route-hero__copy">

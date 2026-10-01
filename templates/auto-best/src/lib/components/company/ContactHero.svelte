@@ -24,7 +24,7 @@
   });
 </script>
 
-<section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-information-hero={topic.id === 'general'} class:dn-route-hero--compact={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
+<section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-information-hero={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
   {#if topic.id === 'general'}
     <DesktopHeroScene scene="contact" />
   {:else}
@@ -44,7 +44,7 @@
           {i18n.t('m_c95356784006')}<Icon name="chevron-down" size={18} />
         </a>
       </div>
-      <DesktopSocialLinks hero flow onDark />
+      <DesktopSocialLinks hero onDark />
     {/if}
     {#if topic.id === 'leasing'}
       {#if vehicle}

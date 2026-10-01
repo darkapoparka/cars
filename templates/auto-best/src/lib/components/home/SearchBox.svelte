@@ -127,6 +127,12 @@
   @media (min-width: 992px) {
     .dn-search-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); margin-bottom: 34px; }
     .dn-search-wrap > .container { width: var(--dn-discovery-width); }
+    .dn-search-wrap :global(.dn-search) {
+      padding: var(--dn-discovery-padding);
+      border: 0;
+      border-radius: var(--dn-discovery-radius);
+      box-shadow: 0 12px 32px rgb(32 35 41 / 6%);
+    }
   }
 
   @media (max-width: 991px) {
