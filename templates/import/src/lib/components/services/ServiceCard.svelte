@@ -219,6 +219,34 @@
 			flex-shrink: 0;
 		}
 	}
+	@container service-list (16rem <= width < 22.5rem) {
+		.service-card > a {
+			gap: var(--bc-space-2) var(--bc-space-3);
+			padding: var(--bc-space-3);
+		}
+		.service-card__body {
+			display: contents;
+		}
+		.service-card h2 {
+			grid-column: 1 / -1;
+			grid-row: 1;
+		}
+		.service-card img {
+			grid-column: 1;
+			grid-row: 2 / span 2;
+			min-height: 0;
+			border-radius: var(--bc-radius-card);
+		}
+		.service-card p {
+			grid-column: 2;
+			grid-row: 2;
+		}
+		.service-card__cta {
+			grid-column: 2;
+			grid-row: 3;
+			justify-self: start;
+		}
+	}
 	@container service-list (width < 16rem) {
 		.service-card > a {
 			grid-template-columns: 1fr;

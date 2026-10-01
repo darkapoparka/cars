@@ -127,7 +127,7 @@ for (const locale of ['en', 'bg']) {
 		);
 	});
 
-	test(`${locale} service filters and search clear an empty result and keep service destinations`, async ({
+	test(`${locale} service filters and search preserve readable cards and service destinations`, async ({
 		page
 	}) => {
 		await page.setViewportSize({ width: 320, height: 568 });
@@ -177,6 +177,24 @@ for (const locale of ['en', 'bg']) {
 		await expect(search).toBeEmpty();
 		await expect(all).toHaveAttribute('aria-pressed', 'true');
 		await expect(page.locator('.service-card')).toHaveCount(6);
+		for (const width of [320, 360, 375, 390]) {
+			await page.setViewportSize({ width, height: 568 });
+			await page.evaluate(() => document.fonts.ready);
+			const wrappedTitles = await page.locator('.service-card h2').evaluateAll((titles) =>
+				titles
+					.filter((title) => {
+						const text = document.createRange();
+						text.selectNodeContents(title);
+						return text.getClientRects().length > 1;
+					})
+					.map((title) => title.textContent)
+			);
+			expect(wrappedTitles, `${locale} service titles at ${width}px`).toEqual([]);
+			expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+				width
+			);
+		}
+		await page.setViewportSize({ width: 320, height: 568 });
 		await search.fill('no matching service');
 		await expect(page.locator('.service-empty')).toBeVisible();
 		await page.locator('.service-empty button').click();
