@@ -1,10 +1,12 @@
 import {currency} from './currency';
-import type {Vehicle} from './data';
+import {vehicles, type Vehicle} from './data';
 
 export const filterTabs = ['BRAND', 'MODEL', 'BUDGET', 'DISCOUNTS', 'EMI', 'DOWN PAYMENT', 'YEAR', 'BODY TYPE', 'MILEAGE', 'CAR TYPE', 'FUEL TYPE', 'CATEGORIES', 'FEATURES', 'ENGINE'] as const;
 export type FilterTab = (typeof filterTabs)[number];
 export const quickFilterTabs = ['BRAND', 'MODEL', 'BUDGET', 'DISCOUNTS', 'YEAR', 'MILEAGE', 'BODY TYPE', 'FUEL TYPE'] as const satisfies readonly FilterTab[];
-export const filterMakes = ['Nissan', 'Toyota', 'Mitsubishi', 'MG', 'Mercedes-Benz', 'BMW', 'Ford', 'Chevrolet', 'Hyundai', 'Kia', 'Jeep', 'JAC', 'Mazda', 'Honda', 'Suzuki', 'Audi', 'Volkswagen', 'Lexus', 'Renault', 'Volvo', 'Land Rover', 'Infiniti', 'Peugeot', 'Porsche', 'Haval', 'Tesla', 'GMC', 'Dodge', 'Mini', 'Jaguar'];
+const referenceMakes = ['Nissan', 'Toyota', 'Mitsubishi', 'MG', 'Mercedes-Benz', 'BMW', 'Ford', 'Chevrolet', 'Hyundai', 'Kia', 'Jeep', 'JAC', 'Mazda', 'Honda', 'Suzuki', 'Audi', 'Volkswagen', 'Lexus', 'Renault', 'Volvo', 'Land Rover', 'Infiniti', 'Peugeot', 'Porsche', 'Haval', 'Tesla', 'GMC', 'Dodge', 'Mini', 'Jaguar'];
+// Every make offered by the brand strip must also be selectable in the filters.
+export const filterMakes = [...new Set([...referenceMakes, ...vehicles.map(vehicle => vehicle.make).filter(make => make.trim())])];
 export const bodyTypes = ['SUV', 'SEDAN', 'HATCHBACK', 'COUPE', 'CONVERTIBLE', 'SUV COUPE', 'DOUBLE CAB UTILITY', 'MPV', 'CREW CAB UTILITY', 'SPORTBACK', 'VAN', 'LIFTBACK', 'PICK-UP', 'ROADSTER'] as const;
 export const categoryOptions = ['Adventure car', 'As good as new', 'Budget friendly', 'Daily commuter/ Economical car', 'Family car', 'Latest SUVs', 'Luxury in budget', 'Hot deals', 'Premium sedans'];
 export const featureOptions = ['Fuel Efficient', 'Reverse Camera', 'Sunroof', 'Panoramic Sunroof', 'Moonroof'];

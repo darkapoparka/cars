@@ -55,7 +55,17 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  const modal=useModal(overlay!==null,close,{history:false});
  return <div {...stylex.props(s.screen)}>
   <PageHeader title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>
-  <div {...stylex.props(s.topInner)}><div data-search-field role="search" {...stylex.props(searchField.field)}><Search size={20} aria-hidden="true" {...stylex.props(searchField.icon)}/><input data-search-input type="search" autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={e=>setQuery(e.target.value)} placeholder={tx("Search make or model")} aria-label={tx("Search cars")} {...stylex.props(searchField.input)}/>{query?<button type="button" aria-label={tx("Clear search")} onClick={()=>setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button>:null}</div></div>
+  <div role="search" {...stylex.props(s.topInner)}><label data-search-field {...stylex.props(searchField.field)}>
+    <Search size={22} strokeWidth={2} aria-hidden="true" {...stylex.props(searchField.icon)}/>
+    <span {...stylex.props(searchField.editableGroup)}>
+      <span {...stylex.props(searchField.inputSlot)}>
+        <span data-search-measure aria-hidden="true" {...stylex.props(searchField.inputMeasure)}>{query || tx('Search make or model')}</span>
+        <input data-search-input type="search" autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={e=>setQuery(e.target.value)} placeholder={tx('Search make or model')} aria-label={tx('Search cars')} aria-describedby="inventory-result-count" {...stylex.props(searchField.input, searchField.inlineInput)}/>
+      </span>
+      <span id="inventory-result-count" data-result-count role="status" aria-live="polite" aria-atomic="true" {...stylex.props(searchField.count)}><span aria-hidden="true">({count})</span><span className="visually-hidden">{count} {tx(count===1?'car':'cars')}</span></span>
+    </span>
+    {query?<button type="button" aria-label={tx('Clear search')} onClick={()=>setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button>:null}
+  </label></div>
   <InventoryPromotion/>
   <nav aria-label={tx("Inventory filters")} {...stylex.props(s.toolbar)}>
     <FilterPill label={tx("Filter")} icon="filter" selected={filtered} onClick={()=>open('filters')}/>
@@ -63,9 +73,8 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
     {quickFilterTabs.map(tab=><FilterPill key={tab} label={tx(titleCase(tab))} selected={quickSelection[tab]} onClick={()=>open('filters',tab)}/>)}
   </nav>
   <main {...stylex.props(s.content)}><aside {...stylex.props(s.sidebar)}><h2 {...stylex.props(s.sideTitle)}>{tx("Filter cars")}</h2><label data-search-field {...stylex.props(searchField.field)}><Search size={18} aria-hidden="true" {...stylex.props(searchField.icon)}/><input data-search-input aria-label={tx("Search sidebar brands")} placeholder={tx("Search brand")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={brandSearch} onChange={e=>setBrandSearch(e.target.value)} {...stylex.props(searchField.input)}/></label>{makes.filter(make=>make.toLowerCase().includes(brandSearch.toLowerCase())).map(make=><CheckRow key={make} label={tx(make)} checked={filters.brands.includes(make)} onChange={()=>setFilters({...filters,brands:toggle(filters.brands,make)})}/>)}<button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Clear all filters")}</button></aside>
-   <section aria-busy={query!==deferredQuery} {...stylex.props(s.results)}>
+   <section aria-label={tx('Available cars')} aria-busy={query!==deferredQuery} {...stylex.props(s.results)}>
     {luxe?<div {...stylex.props(s.luxeBrands)}><BrandRow compact title={tx("Explore by brand")} onSelect={brand=>setFilters({...filters,brands:[brand]})}/></div>:null}
-    <div {...stylex.props(s.resultHeading)}><h2 aria-live="polite" aria-atomic="true" {...stylex.props(s.resultTitle)}>{tx(count)} {tx(count===1?'car':'cars')}</h2></div>
     {results.length?<div {...stylex.props(s.grid)}>{results.map(vehicle=><VehicleCard key={vehicle.slug} vehicle={vehicle}/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h3>{tx("No cars match these filters")}</h3><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
     {dealer.inventoryNotice?<p {...stylex.props(s.inventoryNotice)}>{tx(dealer.inventoryNotice)}</p>:null}
    </section>
@@ -92,8 +101,6 @@ const s=stylex.create({
  results:{minWidth:0},
  luxeBrands:{marginTop:-2,marginBottom:28},
  inventoryNotice:{marginTop:20,paddingTop:16,color:$.muted,fontSize:13,lineHeight:'20px',borderTopWidth:1,borderTopStyle:'solid',borderTopColor:$.line},
- resultHeading:{display:'flex',flexWrap:'wrap',alignItems:'center',justifyContent:'space-between',gap:'4px 12px',marginBottom:14},
- resultTitle:{fontSize:18,fontWeight:600,color:$.ink,letterSpacing:'-.025em'},
  grid:{display:'grid',gridTemplateColumns:{[media.mobile]:'1fr',default:'repeat(2,minmax(0,1fr))'},gap:13},
  empty:{display:'flex',alignItems:'center',flexDirection:'column',gap:16,padding:'50px 20px',textAlign:'center',color:$.muted},
  reset:{display:'block',width:'100%',minHeight:44,marginTop:20,color:$.violet,fontSize:14,fontWeight:500,borderColor:$.violet,borderWidth:1,borderStyle:'solid',borderRadius:12,backgroundColor:'#fff',cursor:'pointer'},

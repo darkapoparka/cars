@@ -8,7 +8,8 @@ import FilterPill from '@/components/FilterPill';
 import {showroom} from '@/lib/showroom';
 import {currency} from '@/lib/currency';
 import NativeIcon from '@/components/NativeIcon';
-import ShowroomBanner from '@/components/ShowroomBanner';
+import DealerHomeBanner from '@/components/DealerHomeBanner';
+import {brandLogo} from '@/lib/brand-logos';
 import {vehicles} from '@/lib/data';
 import { media, tokens as $ } from '@/app/tokens.stylex';
 
@@ -24,34 +25,18 @@ export function ServiceTabs({active,compact=false}: {active:ServiceKey;compact?:
 }
 
 export function ShowroomPromotion() {
-  const tx = useCopy();
-
-  const promo = showroom.promotion;
-  return <ShowroomBanner title={tx(promo.title)} mobileTitle={promo.mobileTitle} description={tx(promo.description)} mobileDescription={promo.mobileDescription} action={promo.action} mobileAction={promo.mobileAction} href={promo.href} image={promo.image} colourful />;
+  return <DealerHomeBanner/>;
 }
 
-const brandArtwork = [
-  {label: 'Mercedes Benz', make: 'Mercedes-Benz', image: 'brand-mercedes', compactImage: 'sell-brand-4'},
-  {label: 'BMW', make: 'BMW', image: 'brand-bmw', compactImage: 'sell-brand-5'},
-  {label: 'Audi', make: 'Audi', image: 'brand-audi', compactImage: 'sell-brand-6'},
-  {label: 'Nissan', make: 'Nissan', image: 'brand-nissan', compactImage: 'sell-brand-3'},
-  {label: 'Hyundai', make: 'Hyundai', image: 'brand-hyundai'},
-  {label: 'Toyota', make: 'Toyota', image: 'sell-brand-1', compactImage: 'sell-brand-1'},
-  {label: 'Honda', make: 'Honda', image: 'sell-brand-2'},
-  {label: 'Ford', make: 'Ford', image: 'sell-brand-7'},
-  {label: 'Kia', make: 'Kia', image: 'sell-brand-8'},
-  {label: 'Chevrolet', make: 'Chevrolet', image: 'brand-chevrolet'},
-] as const;
-export function BrandRow({title='Browse by brands',onSelect,compact=false}: {title?:string;onSelect?:(brand:string)=>void;compact?:boolean}) {
+export function BrandRow({title='Browse by brands',showTitle=true,onSelect,compact=false}: {title?:string;showTitle?:boolean;onSelect?:(brand:string)=>void;compact?:boolean}) {
   const tx = useCopy();
 
-  const stocked = new Set(vehicles.map(vehicle => vehicle.make.toLowerCase()));
-  const items = brandArtwork.filter(brand => stocked.has(brand.make.toLowerCase()) && (!compact || 'compactImage' in brand));
+  const stocked = [...new Map(vehicles.filter(vehicle => vehicle.make.trim()).map(vehicle => [vehicle.make.toLowerCase(), vehicle.make])).values()];
+  const items = stocked.map(make => ({make, artwork: brandLogo(make)}));
   if (!items.length) return null;
-  return <section aria-label={tx(title)} {...stylex.props(s.brandSection)}><h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2><div {...stylex.props(s.brandRow)}>{items.map(({label,make,image,...asset})=>{
-    const art = compact && 'compactImage' in asset ? asset.compactImage : image;
-    const content=<><img src={assetPath(`/reference-assets/${art}.png`)} width={210} height={192} alt={tx("")} {...stylex.props(s.brandImage,compact&&s.brandImageCompact)}/><span {...stylex.props(s.brandLabel,compact&&s.brandLabelCompact)}>{tx(make === 'Mercedes-Benz' ? 'Mercedes' : label)}</span></>;
-    return onSelect?<button key={make} type="button" aria-label={tx(label)} onClick={()=>onSelect(make)} {...stylex.props(s.brand)}>{tx(content)}</button>:<Link key={make} aria-label={tx(label)} href={`/cars?brand=${encodeURIComponent(make)}`} {...stylex.props(s.brand)}>{tx(content)}</Link>;
+  return <section data-stocked-brands aria-label={tx(title)} {...stylex.props(s.brandSection)}>{showTitle?<h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2>:null}<div {...stylex.props(s.brandRow,!showTitle&&s.brandRowWithoutTitle)}>{items.map(({make,artwork})=>{
+    const content=<><span {...stylex.props(s.brandIcon,artwork?.presentation==='framed'&&s.brandIconFramed)}>{artwork ? <img data-brand-logo src={assetPath(artwork.src)} width={72} height={72} alt="" {...stylex.props(s.brandImage,artwork.presentation==='framed'&&s.brandImageFramed,artwork.presentation==='badge'&&s.brandImageBadge,artwork.presentation==='tesla'&&s.brandImageTesla,artwork.presentation==='peugeot'&&s.brandImagePeugeot)}/> : <span {...stylex.props(s.brandName)}>{make}</span>}</span><span {...stylex.props(s.brandLabel,compact&&s.brandLabelCompact)}>{tx(make === 'Mercedes-Benz' ? 'Mercedes' : make)}</span></>;
+    return onSelect?<button key={make} type="button" aria-label={tx(make)} onClick={()=>onSelect(make)} {...stylex.props(s.brand)}>{content}</button>:<Link key={make} aria-label={tx(make)} href={`/cars?brand=${encodeURIComponent(make)}`} {...stylex.props(s.brand)}>{content}</Link>;
   })}</div></section>;
 }
 
@@ -94,10 +79,17 @@ const s=stylex.create({
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},
  brandSection:{paddingTop:10},
  brandRow:{display:'flex',gap:{[media.mobile]:10,default:12},overflowX:'auto',overscrollBehaviorX:'contain',marginTop:12,marginRight:{[media.mobile]:-12,default:0},paddingRight:{[media.mobile]:12,default:0},paddingBlock:4,scrollbarWidth:'none'},
- brand:{display:'flex',flexShrink:0,alignItems:'center',flexDirection:'column',gap:8,width:{[media.mobile]:78,default:108},padding:0,textAlign:'center',color:$.text,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
- brandImage:{width:'100%',height:'auto'},
- brandImageCompact:{width:74},
+ brandRowWithoutTitle:{marginTop:0},
+ brand:{display:'flex',flexShrink:0,alignItems:'center',flexDirection:'column',gap:8,width:{[media.mobile]:72,default:108},padding:0,textAlign:'center',color:$.text,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
+ brandIcon:{display:'grid',placeItems:'center',width:'100%',aspectRatio:'1',overflow:'hidden',borderWidth:1,borderStyle:'solid',borderColor:'#e1e6ed',borderRadius:'50%',backgroundColor:'#fff'},
+ brandIconFramed:{borderWidth:0},
+ brandImage:{width:'80%',height:'80%',objectFit:'contain'},
+ brandImageFramed:{width:'100%',height:'100%',objectFit:'cover'},
+ brandImageBadge:{width:'82%',height:'82%',objectFit:'cover'},
+ brandImageTesla:{width:'100%',height:'100%',objectFit:'cover',transform:'translateY(12%) scale(1.14)'},
+ brandImagePeugeot:{width:'100%',height:'100%',objectFit:'cover',transform:'translateY(14%) scale(1.25)'},
+ brandName:{maxWidth:'90%',fontSize:11,fontWeight:600,overflowWrap:'anywhere'},
  brandLabelCompact:{fontWeight:500},
- brandLabel:{fontSize:{[media.mobile]:14,default:15},fontWeight:400,lineHeight:'18px',maxWidth:80},
+ brandLabel:{fontSize:{[media.mobile]:12,default:15},fontWeight:400,lineHeight:'18px',maxWidth:'100%',overflowWrap:'anywhere'},
  filters:{display:'flex',alignItems:'center',gap:6,overflowX:'auto',overscrollBehaviorX:'contain',paddingBlock:{[media.mobile]:6,default:12},paddingInline:{[media.mobile]:12,default:28},backgroundColor:'#fff',scrollbarWidth:'none'},
 });

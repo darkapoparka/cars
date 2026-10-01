@@ -26,16 +26,9 @@ const moreFeed = homeFeed.slice(8).filter(vehicle => !collectionSlugs.has(vehicl
 export default function HomePage() {
   const tx = useCopy();
 
-  const [compact, setCompact] = useState(false);
   const [visibleCount, setVisibleCount] = useState(4);
   const sentinel = useRef<HTMLDivElement>(null);
   const recent = useRecentVehicles().map(getVehicle).filter(vehicle => vehicle !== undefined);
-  useEffect(() => {
-    const update = () => setCompact(window.scrollY > 90);
-    const frame = requestAnimationFrame(update);
-    window.addEventListener('scroll', update, {passive: true});
-    return () => {cancelAnimationFrame(frame); window.removeEventListener('scroll', update);};
-  }, []);
   useEffect(() => {
     const element = sentinel.current;
     if (!element || visibleCount >= moreFeed.length) return;
@@ -49,17 +42,17 @@ export default function HomePage() {
     <DiscoveryHeader active="buy" hideMobileIdentity />
     <ShowroomPromotion />
     <ShowroomSearch />
-    <div {...stylex.props(s.filters, compact && s.filtersCompact)}><FilterPills /></div>
     <main {...stylex.props(s.content)}>
-      <BrandRow />
+      <BrandRow showTitle={false} />
+      <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers)}><ShowroomHighlights /></section>
+      <div {...stylex.props(s.filters)}><FilterPills /></div>
+      <section aria-label={tx("Available cars")} {...stylex.props(s.feed)}>
+        {firstFeed.map((vehicle, index) => <div key={vehicle.slug} {...stylex.props(index === 4 && s.feedGroup)}><VehicleCard vehicle={vehicle} showDiscount={false} /></div>)}
+      </section>
       {recent.length ? <section {...stylex.props(s.recent)}>
         <h2 {...stylex.props(s.heading)}>{tx("Recently viewed cars")}</h2>
         <div {...stylex.props(s.recentRail)}>{recent.map(vehicle => <MiniVehicleCard key={vehicle.slug} vehicle={vehicle} green />)}</div>
       </section> : null}
-      <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers)}><ShowroomHighlights /></section>
-      <section aria-label={tx("Available cars")} {...stylex.props(s.feed)}>
-        {firstFeed.map((vehicle, index) => <div key={vehicle.slug} {...stylex.props(index === 4 && s.feedGroup)}><VehicleCard vehicle={vehicle} showDiscount={false} /></div>)}
-      </section>
       {collectionVehicles.length ? <section aria-label={tx("Explore the collection")} {...stylex.props(s.hotDeals)}>
         <Link href="/cars" {...stylex.props(s.mobileCollectionBanner)}>
           <img src={assetPath(collectionVehicles[0].image)} width={640} height={360} loading="lazy" alt="" {...stylex.props(s.collectionBannerImage)}/>
@@ -80,8 +73,7 @@ export default function HomePage() {
 }
 const s = stylex.create({
   screen: {minHeight: '100vh', backgroundColor: '#fff'},
-  filters: {position: 'sticky', top: {[media.mobile]: 'calc(112px + env(safe-area-inset-top))', [media.desktop]: 72, default: 0}, zIndex: 60, maxWidth: $.content, marginInline: 'auto', backgroundColor: '#fff'},
-  filtersCompact: {top: {[media.mobile]: 'calc(68px + env(safe-area-inset-top))', [media.desktop]: 72, default: 0}},
+  filters: {position: 'sticky', top: {[media.mobile]: 'calc(68px + env(safe-area-inset-top))', [media.desktop]: 72, default: 0}, zIndex: 60, marginInline: {[media.mobile]: -12, default: -28}, marginTop: 6, backgroundColor: '#fff'},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: 170},
   heading: {fontSize: {[media.mobile]: 18, default: 25}, fontWeight: {[media.mobile]: 600, default: 500}, lineHeight: 1.35, letterSpacing: 0},
   recent: {marginTop: 27},
