@@ -96,7 +96,9 @@
   @media (min-width: 992px) {
     .dn-brand-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .dn-brand-hero { padding: 0; }
-    .dn-brand-card { background: var(--dn-surface-raised); box-shadow: var(--dn-card-shadow); }
+    .dn-brand-card { border: 1px solid var(--dn-line); background: var(--dn-surface-raised); box-shadow: none; }
+    .dn-brand-card:hover,
+    .dn-brand-card:focus-visible { border-color: var(--dn-line-emphasis); background: var(--dn-surface-raised); box-shadow: none; }
     .dn-brand-card__image { height: 72px; }
     .dn-brand-card__frame { width: var(--logo-desktop-width); }
     .dn-brand-card strong { font-size: var(--dn-text-lead); line-height: var(--dn-leading-body); }
