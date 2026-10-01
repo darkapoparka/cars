@@ -361,8 +361,12 @@
     .dn-vehicle-card__badge {
       min-height: 26px;
       padding: 4px 8px;
-      font-size: var(--dn-text-meta);
+      font-size: var(--dn-text-caption);
       line-height: var(--dn-leading-meta);
+    }
+
+    .dn-vehicle-card__make {
+      font-size: var(--dn-text-caption);
     }
 
     .dn-vehicle-card__name {
@@ -391,7 +395,11 @@
       white-space: nowrap;
     }
     .dn-vehicle-card__spec :global(svg) { flex: 0 0 auto; }
-    .dn-vehicle-card__amount { margin-top: var(--dn-space-2); padding-top: 0; }
+    .dn-vehicle-card__amount {
+      margin-top: var(--dn-space-2);
+      padding-top: 0;
+      font-size: var(--dn-text-card);
+    }
 
     .dn-vehicle-card--listing {
       display: flex;
