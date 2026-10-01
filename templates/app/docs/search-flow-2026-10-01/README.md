@@ -1,5 +1,9 @@
 # Home and inventory search flow — 1 October 2026
 
+## Owner correction: banner restored
+
+The owner rejected moving the promotional carousel below four cars. It is restored directly under the make strip and before the inventory heading, with all eight initial cars in one feed. The search/filter changes remain. This supersedes the banner-placement notes and earlier screenshots below; `banner-restored-390.jpg` shows the corrected mobile composition. Checked at 320, 390 and 1440px with no document horizontal overflow. `npm run check` passed completely (lint, typecheck and production build, 407 pages) after this correction.
+
 Canonical App candidate: `L:/CODEX/cars/templates/app`, preview on port 6483. No dealer refresh or deployment.
 
 ## Change

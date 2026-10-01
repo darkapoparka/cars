@@ -44,14 +44,13 @@ export default function HomePage() {
     <ShowroomSearch />
     <main {...stylex.props(s.content)}>
       <BrandRow showTitle={false} />
+      <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers)}><ShowroomHighlights /></section>
       <section aria-labelledby="home-inventory-heading">
         <div {...stylex.props(s.collectionHeading, s.inventoryHeading)}>
           <h2 id="home-inventory-heading" {...stylex.props(s.heading)}>{tx('Available cars')}</h2>
           <Link href="/cars" aria-label={tx('View all cars')} {...stylex.props(s.collectionLink, s.inventoryLink)}>{tx('View all')}<ArrowRight size={15} aria-hidden="true"/></Link>
         </div>
-        <div {...stylex.props(s.feed)}>{firstFeed.slice(0, 4).map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} showDiscount={false} />)}</div>
-        <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers)}><ShowroomHighlights /></section>
-        <div {...stylex.props(s.feed)}>{firstFeed.slice(4).map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} showDiscount={false} />)}</div>
+        <div {...stylex.props(s.feed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} showDiscount={false} />)}</div>
       </section>
       {recent.length ? <section {...stylex.props(s.recent)}>
         <h2 {...stylex.props(s.heading)}>{tx("Recently viewed cars")}</h2>
