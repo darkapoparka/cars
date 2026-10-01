@@ -64,7 +64,7 @@
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 32px;
 }
 
 /* --- Headings --------------------------------------------------------------- */
@@ -315,10 +315,11 @@
 
 /* --- Title bar -------------------------------------------------------------- */
 .daynight-detail .title-section {
-	display: flex;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
 	align-items: center;
 	justify-content: space-between;
-	gap: 15px;
+	gap: 16px;
 }
 
 .daynight-detail .btn-icon-circle {
@@ -350,13 +351,15 @@
 /* --- Detail layout [2-column] ----------------------------------------------- */
 .daynight-detail .listing-details {
 	display: flex;
-	gap: 80px;
+	gap: 28px;
 }
 .daynight-detail .listing-details--sidebar {
-	width: 400px;
+	width: 360px;
+	flex: 0 0 auto;
 }
 .daynight-detail .listing-details--content {
-	width: calc(100% - 480px);
+	flex: 1;
+	min-width: 0;
 }
 
 @media (max-width: 1199px) {
@@ -367,7 +370,7 @@
 		width: 360px;
 	}
 	.daynight-detail .listing-details--content {
-		width: calc(100% - 430px);
+		width: auto;
 	}
 }
 
@@ -439,19 +442,22 @@
    DesktopDetailGallery scopes slide show/hide, thumb strip flex + opacity, and
    button reset. These rules add the visual framing app.css used to supply. */
 .daynight-detail .swiper-listing-details-main {
-	border-radius: 16px;
+	border-radius: 11px 11px 0 0;
 	margin-bottom: 12px;
 }
 .daynight-detail .swiper-listing-details-main .listing-details-item {
 	position: relative;
 	width: 100%;
-	height: 600px;
+	aspect-ratio: 4 / 3;
+	height: auto;
+	max-height: 600px;
+	background: #e7e9eb;
 }
 .daynight-detail .swiper-listing-details-main .listing-details-item .img-main {
 	width: 100%;
 	height: 100%;
-	border-radius: 16px;
-	object-fit: cover;
+	border-radius: 0;
+	object-fit: contain;
 }
 
 /* Prev/next arrows */

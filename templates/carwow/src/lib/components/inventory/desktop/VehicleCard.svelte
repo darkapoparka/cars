@@ -11,6 +11,8 @@
 	import VehiclePriceRow from './VehiclePriceRow.svelte';
 	import DesktopVehicleActions from '$lib/components/shared/DesktopVehicleActions.svelte';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
+	import { desktopVehicleImage, desktopVehicleImageSrcset } from '$lib/utils/desktop-vehicle-image';
+	import { desktopOnlyImagePlaceholder } from '$lib/utils/desktop-only-assets';
 
 	let {
 		vehicle,
@@ -19,8 +21,11 @@
 	}: { vehicle: InventoryListVehicle; index: number; extraClass?: string } = $props();
 
 	const delay = $derived(`0.${(index % 4) + 1}s`);
-	const cardClass = $derived(`card-box card-box-style-1${extraClass ? ` ${extraClass}` : ''}`);
+	const cardClass = $derived(
+		`card-box card-box-style-1 desktop-catalogue-card${extraClass ? ` ${extraClass}` : ''}`
+	);
 	const condition = $derived(getDayNightVehicleCondition(vehicle));
+	const image = $derived(desktopVehicleImage(vehicle.image));
 	// A placeholder-only gallery is not a real photo — no count badge for it.
 	const hasRealPhotos = $derived(
 		!placeholderImageSlugs.has(vehicle.slug) && vehicle.gallery.length > 0
@@ -46,7 +51,7 @@
 	data-daynight-year={vehicle.year}
 >
 	<div class="top">
-		<VehicleBadge {vehicle} {index} />
+		<VehicleBadge {vehicle} />
 		<DesktopVehicleActions slug={vehicle.slug} title={vehicle.shortTitle} />
 	</div>
 	<div class="image">
@@ -56,12 +61,14 @@
 		>
 			<img
 				class="card--img"
-				src={i18n.asset(vehicle.image)}
+				src={i18n.asset(image.width ? desktopOnlyImagePlaceholder : image.src)}
+				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset)}
+				sizes="(min-width: 1241px) calc((100vw - 160px) / 4), (min-width: 992px) calc((100vw - 120px) / 3), 1px"
 				alt={vehicle.shortTitle}
-				width="640"
-				height="478"
+				width={image.width}
+				height={image.height}
 				data-daynight-image-fallback
-				loading={index < 5 ? 'eager' : 'lazy'}
+				loading={index < 4 ? 'eager' : 'lazy'}
 				decoding="async"
 				{@attach imageFallbackAttachment}
 			/>
@@ -104,178 +111,107 @@
 </div>
 
 <style>
-	:global(.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card]) {
-		display: flex !important;
+	.desktop-catalogue-card {
+		background: #fff;
+		border: 1px solid var(--discovery-control-border, #d9dde1);
+		border-radius: 12px;
+		display: flex;
 		flex-direction: column;
 		height: 100%;
-		min-height: 0;
-		transition: none;
-	}
-
-	:global(.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card]:hover),
-	:global(
-		.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within
-	) {
-		border-color: transparent !important;
-		box-shadow: none !important;
-		transform: none !important;
-	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]:hover
-			.card-box__title
-			a
-	),
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within
-			.card-box__title
-			a
-	) {
-		color: #b00000 !important;
-	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.card-box__title
-	) {
-		display: block;
-		min-height: 27px;
-		max-height: 27px;
+		min-width: 0;
 		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		-webkit-line-clamp: 1;
-		line-clamp: 1;
+		position: relative;
 	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.card-box__title
-			> a
-	) {
-		display: block;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+	.desktop-catalogue-card:is(:hover, :focus-within) {
+		border-color: var(--discovery-border-hover, #9ca3af);
 	}
-
-	:global(.inventory-template-shell .card-box.card-box-style-1 .card-box__title.mb-8) {
-		margin-bottom: 6px;
-	}
-
-	:global(.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .image) {
-		aspect-ratio: 1.34 / 1;
-		flex: 0 0 auto;
-		height: auto;
-		overflow: hidden;
-	}
-
-	:global(
-		.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .content
-	) {
+	.top {
 		display: flex;
-		flex: 1 1 auto;
-		flex-direction: column;
-		min-height: 0;
+		justify-content: space-between;
+		align-items: start;
+		gap: 8px;
+		position: absolute;
+		inset: 12px 12px auto;
+		z-index: 1;
 	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.card-box__price
-	) {
-		margin-top: 0 !important;
+	.image {
+		aspect-ratio: 4 / 3;
+		background: #e7e9eb;
+		flex: none;
+		overflow: hidden;
+		position: relative;
 	}
-
-	:global(.inventory-template-shell .card-box.card-box-style-1 .tag.style2.mb-10) {
-		margin-bottom: 8px;
-	}
-
-	:global(.inventory-template-shell .card-box.card-box-style-1 .card-box__price.mb-15) {
-		margin-bottom: 0;
-	}
-
-	:global(
-		.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .card--img
-	) {
+	.image > a {
 		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.card--img {
+		display: block;
+		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		transition: none;
-		width: 100%;
 	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]:hover
-			.card--img
-	),
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within
-			.card--img
-	) {
-		filter: none;
-		transform: none !important;
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		padding: 16px;
+		position: relative;
+		flex: 1;
+		min-width: 0;
 	}
-
-	:global(.inventory-template-shell .card-box[data-daynight-vehicle-card] .heart),
-	:global(.inventory-template-shell .card-box[data-daynight-vehicle-card] .category) {
-		backdrop-filter: none !important;
-		-webkit-backdrop-filter: none !important;
-		box-shadow: none !important;
+	.bottom {
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		inset: auto 12px calc(100% + 12px);
 	}
-
-	@media (hover: none), (pointer: coarse) {
-		:global(.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card]:hover),
-		:global(
-			.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within
-		) {
-			box-shadow: none !important;
-		}
-
-		:global(
-			.inventory-template-shell
-				.card-box.card-box-style-1[data-daynight-vehicle-card]:hover
-				.card--img
-		),
-		:global(
-			.inventory-template-shell
-				.card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within
-				.card--img
-		) {
-			filter: none !important;
-			transform: none !important;
-		}
+	.category {
+		display: inline-flex;
+		align-items: center;
+		gap: 5px;
+		min-height: 26px;
+		padding: 4px 8px;
+		border-radius: 6px;
+		background: #171b1e;
+		color: #fff;
+		font-size: var(--sa-text-caption);
+		line-height: 18px;
 	}
-
-	@media (prefers-reduced-motion: reduce) {
-		:global(.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card]),
-		:global(
-			.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .card--img
-		) {
-			transition: none;
-		}
-
-		:global(.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card]:hover),
-		:global(
-			.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within
-		),
-		:global(
-			.inventory-template-shell
-				.card-box.card-box-style-1[data-daynight-vehicle-card]:hover
-				.card--img
-		),
-		:global(
-			.inventory-template-shell
-				.card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within
-				.card--img
-		) {
-			transform: none;
-		}
+	.category a {
+		color: inherit;
+		font: inherit;
+	}
+	.category img {
+		width: 16px;
+		height: 16px;
+	}
+	.desktop-catalogue-card .card-box__title {
+		margin: 0;
+		min-height: 47px;
+		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.3 var(--sa-font);
+		color: var(--sa-ink);
+	}
+	.card-box__title a {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		overflow: hidden;
+		color: inherit;
+		font: inherit;
+	}
+	.desktop-catalogue-card :global(.tag.style2) {
+		margin: 0;
+	}
+	.desktop-catalogue-card :global(.card-box__price) {
+		border-top: 1px solid #eaecf0;
+		margin: auto 0 0;
+		padding-top: 12px;
+	}
+	.desktop-catalogue-card a:focus-visible {
+		outline: 2px solid var(--desktop-focus, #171b1e);
+		outline-offset: 3px;
 	}
 </style>

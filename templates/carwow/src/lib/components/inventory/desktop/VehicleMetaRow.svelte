@@ -27,33 +27,30 @@
 
 <style>
 	.tag.style2 {
+		display: flex;
 		align-items: center;
-		flex-wrap: nowrap;
-		gap: 6px;
+		flex-wrap: wrap;
+		gap: 8px 12px;
 		justify-content: flex-start;
-		min-height: 28px;
-		overflow: hidden;
+		min-height: 20px;
+		padding: 0;
 	}
 
 	.tag.style2 li {
 		align-items: center;
-		background: #f6f8fb;
-		border: 1px solid #e4e8ef;
-		border-radius: 7px;
-		color: #344054;
+		color: #47515b;
 		display: inline-flex;
 		flex: 0 1 auto;
-		height: 28px;
+		min-height: 20px;
 		min-width: 0;
-		padding: 0 6px;
+		padding: 0;
 	}
 
 	.tag.style2 li img {
 		flex: 0 0 auto;
-		height: 13px;
+		height: 16px;
 		margin-right: 4px;
-		opacity: 0.72;
-		width: 13px;
+		width: 16px;
 	}
 
 	.tag.style2 li span {
@@ -67,47 +64,24 @@
 
 	@media (min-width: 992px) {
 		.tag.style2 {
-			gap: 6px;
-			min-height: 30px;
+			gap: 8px 12px;
+			min-height: 20px;
 		}
 
 		.tag.style2 li {
-			height: 30px;
-			padding: 0 7px;
+			min-height: 20px;
+			padding: 0;
 		}
 
 		.tag.style2 li img {
-			height: 13px;
+			height: 16px;
 			margin-right: 4px;
-			width: 13px;
+			width: 16px;
 		}
 
 		.tag.style2 li span {
 			font-size: var(--sa-text-caption);
 			line-height: 20px;
 		}
-	}
-
-	:global(
-		.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2
-	) {
-		flex-wrap: nowrap !important;
-		overflow: hidden;
-	}
-
-	:global(
-		.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2 li
-	) {
-		flex: 0 1 auto;
-	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.tag.style2
-			li
-			span
-	) {
-		min-width: 0;
 	}
 </style>

@@ -11,7 +11,8 @@
 		desktopOnlySrcset
 	} from '$lib/utils/desktop-only-assets';
 
-	const bodyCount = (body: string) => cars.filter((car) => car.body === body).length;
+	const bodyCount = (body: string) =>
+		cars.filter((car) => car.body === body || (body === 'SUV' && car.body === 'Джип')).length;
 
 	const formatCount = (count: number) =>
 		count > 0 ? i18n.count(count) : i18n.text('Няма наличност');
@@ -209,7 +210,7 @@
 	}
 
 	:global(body.daynight-home-page) .daynight-vehicle-type-card__count {
-		color: #64748b !important;
+		color: #47515b !important;
 		font-size: var(--sa-text-caption) !important;
 		line-height: 1.3 !important;
 		margin: 0 !important;
@@ -263,7 +264,7 @@
 	:global(body.daynight-home-page)
 		.daynight-vehicle-type-card--empty
 		.daynight-vehicle-type-card__count {
-		color: #94a3b8 !important;
+		color: #47515b !important;
 	}
 
 	@media (min-width: 992px) {

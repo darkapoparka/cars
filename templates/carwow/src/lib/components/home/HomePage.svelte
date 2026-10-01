@@ -64,18 +64,3 @@
 {/if}
 
 <CompareTray />
-
-<style>
-	@media (max-width: 991px) {
-		:global(.daynight-home-shell) {
-			display: none;
-		}
-	}
-
-	@media (min-width: 992px) {
-		:global(.daynight-home-shell .daynight-home-hero) {
-			height: clamp(560px, calc(100vh - 360px), 620px) !important;
-			min-height: clamp(560px, calc(100vh - 360px), 620px) !important;
-		}
-	}
-</style>

@@ -6,6 +6,7 @@
 	import geistLatinFont from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
 	import { onMount } from 'svelte';
 	import { initializeViewport } from '$lib/hooks/viewport.svelte';
+	import DesktopStylesheetNavigation from '$lib/components/layout/DesktopStylesheetNavigation.svelte';
 	import '$lib/styles/tokens.css';
 	import '$lib/styles/storefront.css';
 	// Native desktop chrome layer: re-emits the chrome's Tailwind utilities with
@@ -32,7 +33,7 @@
 	setLocaleContext(() => data.localeState);
 	const i18n = getI18n();
 	const applicationPath = $derived(routeParts(page.url.pathname).path);
-	initializeViewport(() => data.initialViewport === 'mobile');
+	const viewport = initializeViewport(() => data.initialViewport === 'mobile');
 	const garage = new GarageState();
 	const routeBodyClasses = $derived(getRouteBodyClasses(page.url.pathname));
 	const usesRouteManagedChrome = $derived(routeManagesOwnChrome(page.url.pathname));
@@ -113,6 +114,10 @@
 {/if}
 
 <RouteBodyClassRuntime bodyClasses={routeBodyClasses} />
+
+{#if !viewport.mobile}
+	<DesktopStylesheetNavigation />
+{/if}
 
 {#if !hidesGlobalChrome}
 	<SiteHeader variant="light" pathname={applicationPath} />

@@ -602,36 +602,37 @@
 	/* The task panel owns its controls; legacy hero selectors do not style it. */
 	.hero-intent {
 		background: var(--discovery-panel);
-		border-radius: 16px;
-		box-shadow: 0 12px 32px rgb(58 44 0 / 10%);
+		border-radius: var(--discovery-panel-radius);
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
-		padding: 8px 24px 24px;
+		padding: 20px;
 		text-align: left;
 		width: 100%;
 	}
 	.hero-intent__tabs {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		border-bottom: 1px solid var(--discovery-control-border);
-		margin: 0 0 20px;
+		gap: 4px;
+		padding: 3px;
+		background: var(--discovery-muted-surface);
+		border-radius: 8px;
+		margin: 0 0 18px;
 		width: 100%;
 	}
 	.hero-intent__tabs button {
 		background: transparent;
 		border: 0;
-		border-bottom: 3px solid transparent;
-		border-radius: 0;
+		border-radius: 6px;
 		color: #59616c;
 		cursor: pointer;
 		font: inherit;
-		font-size: var(--sa-text-hero-tab);
+		font-size: var(--sa-text-body-sm);
 		font-weight: var(--sa-button-font-weight);
-		min-height: 52px;
+		min-height: 36px;
 		padding: 0 18px;
 	}
 	.hero-intent__tabs button:hover {
-		background: #f8f8f6;
+		background: var(--discovery-light-hover);
 		color: var(--sa-ink);
 	}
 	.hero-intent button:disabled {
@@ -639,11 +640,11 @@
 		opacity: 0.6;
 	}
 	.hero-intent__tabs button[aria-selected='true'] {
-		border-bottom-color: var(--discovery-action);
-		color: var(--discovery-ink);
+		background: var(--discovery-action);
+		color: #fff;
 	}
 	.hero-intent__tabs button[aria-selected='true']:hover {
-		background: #f8f8f6;
+		background: var(--discovery-action-hover);
 	}
 	.hero-intent__panel {
 		min-height: 152px;
@@ -671,7 +672,7 @@
 		margin: 0;
 	}
 	.hero-intent .hero-intent__input {
-		background: #fff;
+		background: var(--discovery-filter-background);
 		border: 1px solid var(--discovery-control-border);
 		border-radius: 8px;
 		box-shadow: none;
@@ -751,18 +752,18 @@
 	}
 	.hero-intent__filter {
 		align-items: center;
-		background: #fff;
+		background: var(--discovery-filter-background);
 		border: 1px solid var(--discovery-filter-border);
 		border-radius: 8px;
 		color: var(--discovery-filter-foreground);
 		cursor: pointer;
 		display: flex;
 		font: inherit;
-		font-size: var(--sa-text-base);
+		font-size: var(--sa-text-body-sm);
 		font-weight: var(--sa-weight-medium);
 		gap: 8px;
 		justify-content: space-between;
-		min-height: 52px;
+		min-height: 46px;
 		min-width: 0;
 		padding: 8px 12px;
 	}

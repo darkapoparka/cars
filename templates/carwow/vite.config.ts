@@ -17,6 +17,9 @@ const generatedWatchIgnores = [
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
+	// URL-imported desktop CSS must have the same bytes/hash in both builds.
+	// SSR otherwise inherits a Node target and emits a second browser stylesheet.
+	build: { cssTarget: ['chrome111', 'edge111', 'firefox114', 'safari16.4', 'ios16.4'] },
 	server: {
 		host: '127.0.0.1',
 		port: 6463,

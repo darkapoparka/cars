@@ -190,15 +190,15 @@
 						<div class="content-tab">
 							<div class={isListPanelActive ? 'content-inner active' : 'content-inner'}>
 								<div class="grid grid-cols-1 gap-[20px]">
-									{#each filters.sorted as vehicle, index (vehicle.slug)}
-										<MapVehicleCard {vehicle} {index} />
+									{#each filters.sorted as vehicle (vehicle.slug)}
+										<MapVehicleCard {vehicle} />
 									{/each}
 								</div>
 							</div>
 							<div class={isGridPanelActive ? 'content-inner active' : 'content-inner'}>
 								<div class="grid grid-cols-1 gap-[20px]">
-									{#each filters.sorted as vehicle, index (vehicle.slug)}
-										<MapVehicleCard {vehicle} {index} />
+									{#each filters.sorted as vehicle (vehicle.slug)}
+										<MapVehicleCard {vehicle} />
 									{/each}
 								</div>
 							</div>

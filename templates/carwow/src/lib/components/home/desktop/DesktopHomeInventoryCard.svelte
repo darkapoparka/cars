@@ -5,18 +5,20 @@
 	import DesktopVehicleActions from '$lib/components/shared/DesktopVehicleActions.svelte';
 	import { resolve } from '$app/paths';
 	import { fromAction } from 'svelte/attachments';
-	import { getDayNightVehicleCondition, type DayNightVehicle } from '$lib/data/daynight-vehicles';
 	import {
-		desktopOnlyImagePlaceholder,
-		desktopOnlySizes,
-		desktopOnlySrcset
-	} from '$lib/utils/desktop-only-assets';
+		getDayNightVehicleCondition,
+		getDayNightVehicleAvailability,
+		type DayNightVehicle
+	} from '$lib/data/daynight-vehicles';
+	import { desktopVehicleImage, desktopVehicleImageSrcset } from '$lib/utils/desktop-vehicle-image';
+	import { desktopOnlyImagePlaceholder } from '$lib/utils/desktop-only-assets';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
 
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
 
 	const imageFallbackAttachment = fromAction(daynightImageFallback);
 	const condition = $derived(getDayNightVehicleCondition(vehicle));
+	const image = $derived(desktopVehicleImage(vehicle.image));
 	const featureList = $derived(vehicle.features.join(' | '));
 	const visiblePhotoCount = $derived(vehicle.gallery.length > 1 ? vehicle.gallery.length : 0);
 </script>
@@ -38,7 +40,14 @@
 	data-daynight-year={vehicle.year}
 >
 	<div class="daynight-home-inventory-card__top">
-		<p class="daynight-home-inventory-card__status">{i18n.spec(vehicle.badges[0] ?? 'VIP')}</p>
+		<p
+			class="daynight-home-inventory-card__status"
+			class:daynight-home-inventory-card__status--incoming={getDayNightVehicleAvailability(
+				vehicle
+			) === 'incoming'}
+		>
+			{i18n.spec(vehicle.badges[0] ?? 'VIP')}
+		</p>
 		<DesktopVehicleActions slug={vehicle.slug} title={vehicle.shortTitle} />
 	</div>
 	<div class="daynight-home-inventory-card__media">
@@ -48,9 +57,11 @@
 		>
 			<img
 				class="daynight-home-inventory-card__image"
-				src={i18n.asset(desktopOnlyImagePlaceholder)}
-				srcset={desktopOnlySrcset(vehicle.image, 900)}
-				sizes={desktopOnlySizes('25vw')}
+				src={i18n.asset(image.width ? desktopOnlyImagePlaceholder : image.src)}
+				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset)}
+				sizes="(min-width: 1400px) 312px, (min-width: 992px) calc((100vw - 152px) / 4), 1px"
+				width={image.width}
+				height={image.height}
 				alt={vehicle.shortTitle}
 				data-daynight-image-fallback
 				loading="lazy"
@@ -111,157 +122,3 @@
 		</p>
 	</div>
 </div>
-
-<style>
-	@media (min-width: 992px) {
-		:global(body.daynight-home-page .daynight-home-inventory__card) {
-			border: 1px solid var(--discovery-control-border) !important;
-			border-radius: 12px !important;
-			box-shadow: none !important;
-			transform: none !important;
-			transition:
-				border-color 0.16s ease,
-				box-shadow 0.16s ease !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory__card:hover),
-		:global(body.daynight-home-page .daynight-home-inventory__card:focus-within) {
-			border-color: var(--discovery-border-hover) !important;
-			box-shadow: none !important;
-			transform: none !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__top) {
-			left: 12px !important;
-			right: 12px !important;
-			top: 12px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__status) {
-			border-radius: 7px !important;
-			font-size: var(--sa-text-caption) !important;
-			min-height: 28px !important;
-			padding: 0 10px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__media),
-		:global(body.daynight-home-page .daynight-home-inventory-card__image) {
-			aspect-ratio: 16 / 11 !important;
-			border-radius: 11px 11px 0 0 !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__badges) {
-			bottom: 12px !important;
-			left: 12px !important;
-			right: 12px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__badge) {
-			backdrop-filter: none !important;
-			background: rgba(17, 24, 39, 0.8) !important;
-			border: 1px solid rgba(255, 255, 255, 0.45) !important;
-			border-radius: 7px !important;
-			box-shadow: none !important;
-			font-size: var(--sa-text-caption) !important;
-			min-height: 28px !important;
-			padding: 0 9px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__badge-link) {
-			font-size: var(--sa-text-caption) !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__content) {
-			border-radius: 0 0 11px 11px !important;
-			gap: 12px !important;
-			padding: 16px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__title),
-		:global(body.daynight-home-page .daynight-home-inventory-card__title a) {
-			font-size: var(--sa-text-lg) !important;
-			font-weight: var(--sa-weight-strong) !important;
-			height: 47px !important;
-			line-height: 1.3 !important;
-			max-height: 47px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__title a:focus-visible) {
-			border-radius: 4px;
-			outline: 2px solid #c91620;
-			outline-offset: 2px;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__specs) {
-			align-items: center !important;
-			gap: 0 !important;
-			min-height: 22px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__specs li) {
-			background: transparent !important;
-			border: 0 !important;
-			border-radius: 0 !important;
-			color: #475467 !important;
-			flex: 0 1 auto !important;
-			height: 22px !important;
-			padding: 0 !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__specs li:not(:first-child)) {
-			margin-left: 10px;
-		}
-
-		:global(
-			body.daynight-home-page .daynight-home-inventory-card__specs li:not(:first-child)::before
-		) {
-			background: #d8dee8;
-			content: '';
-			height: 14px;
-			margin-right: 10px;
-			width: 1px;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__specs li img) {
-			height: 13px !important;
-			margin-right: 5px !important;
-			opacity: 0.62 !important;
-			width: 13px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-home-inventory-card__specs li span) {
-			color: #475467 !important;
-			font-size: var(--sa-text-caption) !important;
-			line-height: 18px !important;
-		}
-
-		:global(
-			body.daynight-home-page .daynight-home-shell--original .daynight-home-inventory-card__price
-		) {
-			display: flex !important;
-			flex-direction: column !important;
-			align-items: flex-start !important;
-			gap: 6px !important;
-			border-top: 1px solid #eaecf0 !important;
-			column-gap: 12px !important;
-			margin: 0 !important;
-			min-height: 48px !important;
-			padding-top: 12px !important;
-		}
-
-		:global(body.daynight-home-page .daynight-card-price__value) {
-			font-size: var(--sa-text-2xl) !important;
-			font-weight: var(--sa-weight-strong) !important;
-		}
-
-		:global(body.daynight-home-page .daynight-card-price__link) {
-			font-size: var(--sa-text-caption) !important;
-			line-height: 17px !important;
-		}
-		:global(body.daynight-home-page .daynight-home-shell--original .daynight-card-price__meta) {
-			position: static !important;
-			text-align: left !important;
-			align-items: flex-start !important;
-		}
-	}
-</style>

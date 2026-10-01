@@ -3,31 +3,25 @@
 	const i18n = getI18n();
 
 	import { resolve } from '$app/paths';
-	import { getDayNightVehicleCondition } from '$lib/data/daynight-vehicles';
+	import { getDayNightVehicleCondition, placeholderImageSlugs } from '$lib/data/daynight-vehicles';
 	import { getOptionalGarageContext } from '$lib/state/garage.svelte';
 	import type { InventoryListVehicle } from '$lib/types/inventory';
+	import { desktopVehicleImage, desktopVehicleImageSrcset } from '$lib/utils/desktop-vehicle-image';
+	import { desktopOnlyImagePlaceholder, desktopOnlySizes } from '$lib/utils/desktop-only-assets';
+	import VehicleBadge from './VehicleBadge.svelte';
 	import VehicleMetaRow from './VehicleMetaRow.svelte';
 
-	let { vehicle, index }: { vehicle: InventoryListVehicle; index: number } = $props();
+	let { vehicle }: { vehicle: InventoryListVehicle } = $props();
 
 	const condition = $derived(getDayNightVehicleCondition(vehicle));
 	const garage = getOptionalGarageContext();
 	const isCompared = $derived(garage.isCompared(vehicle.slug));
 	const isFavorite = $derived(garage.isFavorite(vehicle.slug));
 	const displayPrice = $derived(vehicle.priceEur.replace(/\s*EUR\b/, ' €'));
-	const fallbackBadge = $derived(index % 5 === 1 ? 'Добра цена' : '');
-	const badge = $derived(
-		vehicle.badges.find((value) => normalizeBadgeLabel(value) !== 'vip') ??
-			vehicle.badges[0] ??
-			fallbackBadge
+	const hasRealPhotos = $derived(
+		!placeholderImageSlugs.has(vehicle.slug) && vehicle.gallery.length > 0
 	);
-	const badgeClass = $derived(
-		normalizeBadgeLabel(badge) === normalizeBadgeLabel(fallbackBadge) ? 'bg-green' : 'bg-primary-2'
-	);
-
-	function normalizeBadgeLabel(value: string) {
-		return value.trim().toLocaleLowerCase('bg-BG');
-	}
+	const image = $derived(desktopVehicleImage(vehicle.image));
 </script>
 
 <div
@@ -47,11 +41,7 @@
 	data-daynight-year={vehicle.year}
 >
 	<div class="top">
-		{#if badge}
-			<p class="{badgeClass} highlight text-white">{i18n.spec(badge)}</p>
-		{:else}
-			<p></p>
-		{/if}
+		<VehicleBadge {vehicle} />
 		<div class="daynight-card-tools">
 			<button
 				type="button"
@@ -128,21 +118,23 @@
 			>
 		</p>
 		<div class="flex items-center gap-[8px]">
-			<p class="category text-white uppercase">
-				<img src={i18n.asset('/assets/icons/picture.svg')} alt="" aria-hidden="true" />
-				8
-			</p>
-			<p class="category text-white uppercase">
-				<img src={i18n.asset('/assets/icons/play.svg')} alt="" aria-hidden="true" />
-				1
-			</p>
+			{#if hasRealPhotos}
+				<p class="category text-white uppercase">
+					<img src={i18n.asset('/assets/icons/picture.svg')} alt="" aria-hidden="true" />
+					{vehicle.gallery.length}
+				</p>
+			{/if}
 		</div>
 	</div>
 	<div class="image">
 		<a href={i18n.href(resolve('/inventory/[slug]', { slug: vehicle.slug }))}>
 			<img
 				class="card--img"
-				src={i18n.asset(vehicle.image)}
+				src={i18n.asset(image.width ? desktopOnlyImagePlaceholder : image.src)}
+				srcset={desktopVehicleImageSrcset(vehicle.image, i18n.asset)}
+				sizes={desktopOnlySizes('320px')}
+				width={image.width}
+				height={image.height}
 				alt={vehicle.shortTitle}
 				loading="lazy"
 				decoding="async"

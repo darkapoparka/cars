@@ -5,6 +5,16 @@
 	import { daynightSite } from '$lib/data/daynight-site';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import { homeVideos, youtubeChannelUrl } from '$lib/data/daynight-videos';
+	import Play from '@lucide/svelte/icons/play';
+	import X from '@lucide/svelte/icons/x';
+	import { tick } from 'svelte';
+	let activeVideo = $state<string | null>(null);
+	let triggerCard: HTMLElement | null = null;
+	async function stop() {
+		activeVideo = null;
+		await tick();
+		triggerCard?.querySelector<HTMLButtonElement>('.home-video__play')?.focus();
+	}
 </script>
 
 <section
@@ -34,19 +44,51 @@
 			{#each homeVideos as video (video.id)}
 				<article class="home-video">
 					<div class="home-video__image">
-						<iframe
-							src={i18n.asset(
-								`https://www.youtube-nocookie.com/embed/${video.id}?playsinline=1&rel=0&hl=bg`
-							)}
-							title={i18n.text(video.title)}
-							width="480"
-							height="270"
-							loading="lazy"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-							referrerpolicy="strict-origin-when-cross-origin"
-							allowfullscreen
-						></iframe>
+						{#if activeVideo === video.id}
+							<iframe
+								src={i18n.asset(
+									`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&playsinline=1&rel=0&hl=bg`
+								)}
+								title={i18n.text(video.title)}
+								width="480"
+								height="270"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen
+							></iframe>
+							<button
+								type="button"
+								class="home-video__close"
+								onclick={stop}
+								aria-label={i18n.t('pattern.a582794b4e06', { v0: i18n.text(video.title) })}
+								><X size={20} /></button
+							>
+						{:else}
+							<button
+								type="button"
+								class="home-video__play"
+								onclick={(event) => {
+									triggerCard = event.currentTarget.closest('.home-video');
+									activeVideo = video.id;
+								}}
+								aria-label={i18n.t('pattern.23e9e4cc63e8', { v0: i18n.text(video.title) })}
+							>
+								<img
+									src={i18n.asset(video.thumbnail)}
+									alt=""
+									width="480"
+									height="270"
+									loading="lazy"
+									decoding="async"
+								/>
+								<span class="home-video__playmark" aria-hidden="true"
+									><Play size={24} fill="currentColor" /></span
+								>
+								<span class="home-video__duration">{video.duration}</span>
+							</button>
+						{/if}
 					</div>
+					<h3>{i18n.text(video.title)}</h3>
 				</article>
 			{/each}
 		</div>
@@ -85,6 +127,74 @@
 		aspect-ratio: 16 / 9;
 		min-height: 200px;
 		background: #24282c;
+		position: relative;
+	}
+	.home-video h3 {
+		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);
+		padding: 16px 0 0;
+		color: var(--sa-ink);
+		margin: 0;
+	}
+	.home-video__play {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		border: 0;
+		cursor: pointer;
+		color: #fff;
+		background: #171b1e;
+	}
+	.home-video__play img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.home-video__playmark {
+		color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		display: grid;
+		place-items: center;
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		background: #171b1e;
+	}
+	.home-video__playmark :global(svg),
+	.home-video__playmark :global(svg *) {
+		color: inherit;
+		stroke: currentColor;
+	}
+	.home-video__play:hover .home-video__playmark {
+		background: var(--sa-red);
+	}
+	.home-video__duration {
+		color: #fff;
+		position: absolute;
+		right: 12px;
+		bottom: 12px;
+		padding: 4px 8px;
+		border-radius: 6px;
+		background: #171b1e;
+		font: var(--sa-weight-medium) var(--sa-text-caption)/1.4 var(--sa-font);
+	}
+	.home-video__close {
+		position: absolute;
+		right: 12px;
+		top: 12px;
+		display: grid;
+		place-items: center;
+		width: 40px;
+		height: 40px;
+		border: 0;
+		border-radius: 50%;
+		background: #fff;
+		color: #171b1e;
+		cursor: pointer;
 	}
 	.home-video__image iframe {
 		display: block;

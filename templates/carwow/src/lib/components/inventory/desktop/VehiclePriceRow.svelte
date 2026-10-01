@@ -36,9 +36,9 @@
 
 <style>
 	.card-box__price {
-		align-items: flex-end !important;
-		column-gap: 12px !important;
-		display: flex !important;
+		align-items: flex-end;
+		column-gap: 12px;
+		display: flex;
 		justify-content: space-between;
 		min-height: 52px;
 	}
@@ -53,17 +53,17 @@
 
 	.daynight-card-price__value {
 		color: #101828;
-		font-size: var(--sa-text-panel-title);
+		font-size: var(--sa-text-2xl);
 		font-weight: var(--sa-weight-strong);
 		letter-spacing: -0.025em;
-		line-height: 0.98;
+		line-height: 1.15;
 		white-space: nowrap;
 	}
 
 	.daynight-card-price__monthly {
-		color: #667085;
+		color: #47515b;
 		font-size: var(--sa-text-caption);
-		font-weight: var(--sa-weight-semibold);
+		font-weight: var(--sa-weight-regular);
 		letter-spacing: 0;
 		line-height: 1.2;
 		white-space: nowrap;
@@ -79,83 +79,21 @@
 		height: 32px;
 		justify-content: center;
 		text-decoration: none;
-		transition:
-			background-color 140ms ease,
-			transform 140ms ease;
+		transition: background-color 140ms ease;
 		width: 32px;
 	}
 
 	.daynight-card-price__link:hover {
-		background: #b00000;
-		transform: translateX(1px);
+		background: var(--desktop-action-hover);
 	}
 
 	.daynight-card-price__link:focus-visible {
-		outline: 2px solid #b00000;
+		outline: 2px solid var(--desktop-focus);
 		outline-offset: 3px;
 	}
 
 	.daynight-card-price__link svg {
 		height: 17px;
 		width: 17px;
-	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.card-box__price
-	) {
-		align-items: flex-end !important;
-		column-gap: 12px !important;
-		display: flex !important;
-		justify-content: space-between !important;
-		min-height: 52px !important;
-	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.card-box__price
-			.daynight-card-price__value
-	) {
-		color: #101828 !important;
-		font-size: var(--sa-text-panel-title) !important;
-		font-weight: var(--sa-weight-strong) !important;
-		letter-spacing: -0.025em !important;
-		line-height: 0.98 !important;
-	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.card-box__price
-			.daynight-card-price__monthly
-	) {
-		color: #667085 !important;
-		font-size: var(--sa-text-caption) !important;
-		font-weight: var(--sa-weight-semibold) !important;
-		line-height: 1.2 !important;
-	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.card-box__price
-			.daynight-card-price__link
-	) {
-		background: #050505 !important;
-		color: #fff !important;
-		flex: 0 0 32px !important;
-		height: 32px !important;
-		width: 32px !important;
-	}
-
-	:global(
-		.inventory-template-shell
-			.card-box.card-box-style-1[data-daynight-vehicle-card]
-			.card-box__price
-			.daynight-card-price__link:hover
-	) {
-		background: #b00000 !important;
 	}
 </style>

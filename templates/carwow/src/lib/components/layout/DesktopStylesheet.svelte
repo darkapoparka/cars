@@ -26,4 +26,7 @@
 
 <svelte:head>
 	<svelte:element this={'script'}>{bootstrap}</svelte:element>
+	{#if !viewport.mobile}
+		<noscript><link rel="stylesheet" {id} {href} media={DESKTOP_SHELL_MEDIA} /></noscript>
+	{/if}
 </svelte:head>

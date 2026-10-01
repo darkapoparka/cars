@@ -61,8 +61,7 @@
 	.pdp-canvas :global(.listing-details--sidebar-box) {
 		background: #fff;
 		border: 1px solid #eaedf2;
-		border-radius: 16px;
-		box-shadow: 0 2px 14px rgba(16, 24, 40, 0.06);
+		border-radius: 12px;
 	}
 
 	.pdp-card {
@@ -74,10 +73,10 @@
 		padding: 22px 24px;
 	}
 
-	/* Media card hugs the photo: thin frame, corners concentric with the image's 16px. */
+	/* Keep the photograph aligned with the other flat desktop panels. */
 	.pdp-card--media {
-		padding: 8px;
-		border-radius: 24px;
+		padding: 0;
+		overflow: hidden;
 	}
 
 	.pdp-card--media :global(.swiper-listing-details-thumbs) {

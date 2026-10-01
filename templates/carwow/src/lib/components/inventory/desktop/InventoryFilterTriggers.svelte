@@ -73,23 +73,23 @@
 		display: grid;
 		grid-template-columns: repeat(6, minmax(0, 1fr));
 		gap: 12px;
-		background: var(--discovery-panel);
+		background: transparent;
 		border-radius: 12px;
-		padding: 12px;
+		padding: 0;
 	}
 	button {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		height: 52px;
+		height: 46px;
 		min-width: 0;
 		padding: 0 14px;
 		border: 1px solid var(--discovery-filter-border);
 		border-radius: 8px;
 		color: var(--discovery-filter-foreground);
-		background: #fff;
-		font: var(--sa-button-font-weight) var(--sa-text-base) / var(--sa-button-line-height)
+		background: var(--discovery-filter-background);
+		font: var(--sa-weight-medium) var(--sa-text-body-sm) / var(--sa-button-line-height)
 			var(--sa-font);
 		cursor: pointer;
 	}

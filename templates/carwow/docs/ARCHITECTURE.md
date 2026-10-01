@@ -1,6 +1,6 @@
 # Native storefront architecture
 
-Updated 12 September 2026 for `darkapoparka/cars-template-carwow`. Desktop and mobile remain intentional, independently styled compositions. This is not a generic schema-driven page renderer.
+Updated 1 October 2026 for the Carwow master in `darkapoparka/cars`. Desktop and mobile remain intentional, independently styled compositions. This is not a generic schema-driven page renderer.
 
 ## Request and route boundaries
 
@@ -8,7 +8,7 @@ Updated 12 September 2026 for `darkapoparka/cars-template-carwow`. Desktop and m
 
 `src/lib/config/storefront-routes.ts` owns native chrome/body-class policy without an HTML-filename registry. Home's existing body classes remain a CSS contract. `src/lib/server/legacy-redirects.ts` preserves historical staff bookmarks; the catch-all cannot render raw templates or match inherited object properties.
 
-`DesktopStylesheet.svelte` and `src/lib/client/desktop-stylesheet.ts` own pre-hydration and client-navigation loading of desktop-only home/detail CSS. Links are deduplicated, media-gated, and installed when resizing into desktop. Home preserves its before-component-styles cascade; detail preserves append placement. Phones do not request these desktop-only sheets on initial load.
+`DesktopStylesheet.svelte` and `src/lib/client/desktop-stylesheet.ts` own pre-hydration loading of desktop-only home/detail CSS, including a desktop-only no-JavaScript fallback. Links are deduplicated, media-gated, and installed when resizing into desktop. `DesktopStylesheetNavigation.svelte` waits for destination CSS before client navigation replaces the current desktop page. Home preserves its before-component-styles cascade; detail preserves append placement. Phones do not mount the navigation helper or request these desktop-only sheets on initial load. The explicit client-baseline `build.cssTarget` in `vite.config.ts` keeps URL-imported CSS identical between client and server builds; otherwise hydration can request a second copy under another hash.
 
 Every page owns exactly one semantic main/skip target. Never repair landmarks after hydration or wrap a component that already provides its own main. Vehicle detail uses one exclusive viewport branch; do not hide that already-selected composition with a second CSS breakpoint. That redundant gate produced a blank page in WebKit at 992px with the reserved scrollbar gutter.
 
@@ -34,9 +34,11 @@ Garage persistence remains a separate, request-isolated context with fresh initi
 
 `daynight-image-fallback.ts` owns one reference-counted image listener per element, immediate failure detection and placeholder recovery. It uses image events, not timer polling. `RouteImageBehavior.svelte` uses one capture listener and only visits newly added subtrees; it does not repeatedly scan the complete document or mutate main landmarks. Native accordion components own their state; the legacy DOM accordion adapter is removed.
 
-The inventory family uses one ordered `inventory-desktop.css` module for base, layout, retained card rules and native overrides. Do not split these back into competing imports: development and production chunk order previously produced different search controls and listing gutters.
+The inventory family uses one ordered `inventory-desktop.css` module for layout, search controls, sidebar and map composition. Desktop grid cards own their presentation in `VehicleCard.svelte` and its metadata, price and badge components; avoid reintroducing global card overrides. Do not split the layout sheet back into competing imports: development and production chunk order previously produced different search controls and listing gutters.
 
-Component CSS owns local geometry. Shared family CSS may be extracted only with an explicit namespace and preserved specificity. The home sheet extraction keeps the previous one-class Svelte specificity; before/after overlay captures verify its cascade.
+Component CSS owns local geometry. `daynight-home-desktop.css` owns the desktop home composition and reusable card geometry within its 992px media gate; search, category and video controls retain local owners. Do not append another restyling block in `DesktopHome.svelte`. Shared family CSS may be extracted only with an explicit namespace and preserved specificity.
+
+`desktop-vehicle-images.ts` maps the original inventory image paths to verified 320px, 640px and 1280px desktop derivatives. `desktop-vehicle-image.ts` supplies accurate responsive card widths and falls back to the original asset when no larger source was available. Only desktop card/gallery components use this resolver; mobile retains the original image paths and gallery data. Source URLs and unavailable originals are recorded in `DESKTOP-PHOTO-SOURCES-2026-10-01.json`.
 
 ## Maintenance guardrails
 

@@ -2,17 +2,12 @@
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 	import type { InventoryListVehicle } from '$lib/types/inventory';
+	import { getDayNightVehicleAvailability } from '$lib/data/daynight-vehicles';
 
-	let { vehicle, index }: { vehicle: InventoryListVehicle; index: number } = $props();
+	let { vehicle }: { vehicle: InventoryListVehicle } = $props();
 
-	const fallbackBadge = $derived(index % 5 === 1 ? 'Добра цена' : '');
 	const badge = $derived(
-		vehicle.badges.find((value) => normalizeBadgeLabel(value) !== 'vip') ??
-			vehicle.badges[0] ??
-			fallbackBadge
-	);
-	const badgeClass = $derived(
-		normalizeBadgeLabel(badge) === normalizeBadgeLabel(fallbackBadge) ? 'bg-green' : 'bg-primary-2'
+		vehicle.badges.find((value) => normalizeBadgeLabel(value) !== 'vip') ?? vehicle.badges[0] ?? ''
 	);
 
 	function normalizeBadgeLabel(value: string) {
@@ -21,7 +16,24 @@
 </script>
 
 {#if badge}
-	<p class="{badgeClass} highlight text-white">{i18n.spec(badge)}</p>
+	<p class="highlight" class:incoming={getDayNightVehicleAvailability(vehicle) === 'incoming'}>
+		{i18n.spec(badge)}
+	</p>
 {:else}
 	<p></p>
 {/if}
+
+<style>
+	.highlight {
+		background: #fff;
+		color: #171b1e;
+		border-radius: 6px;
+		font: var(--sa-weight-semibold) var(--sa-text-caption)/1.4 var(--sa-font);
+		padding: 5px 9px;
+		margin: 0;
+	}
+	.highlight.incoming {
+		background: #171b1e;
+		color: #fff;
+	}
+</style>

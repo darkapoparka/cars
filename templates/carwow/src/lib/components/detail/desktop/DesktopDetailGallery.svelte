@@ -7,6 +7,7 @@
 	import { fromAction } from 'svelte/attachments';
 	import type { DayNightVehicle } from '$lib/data/daynight-vehicles';
 	import { daynightImageFallback } from '$lib/utils/daynight-image-fallback';
+	import { desktopVehicleImage } from '$lib/utils/desktop-vehicle-image';
 
 	type GalleryImage = {
 		id: string;
@@ -17,7 +18,10 @@
 	let { vehicle }: { vehicle: DayNightVehicle } = $props();
 
 	const imageFallbackAttachment = fromAction(daynightImageFallback);
-	const imageSrc = (src: string) => (src.startsWith('/') ? resolve(src as `/${string}`) : src);
+	const imageSrc = (src: string) => {
+		const desktopSrc = desktopVehicleImage(src, 1280).src;
+		return desktopSrc.startsWith('/') ? resolve(desktopSrc as `/${string}`) : desktopSrc;
+	};
 	const mainSlides = $derived.by<GalleryImage[]>(() =>
 		(vehicle.gallery.length ? vehicle.gallery : [vehicle.image]).map((src, index) => ({
 			id: `main-${index}-${src}`,

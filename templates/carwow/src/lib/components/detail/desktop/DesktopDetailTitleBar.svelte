@@ -170,12 +170,11 @@
 	.pdp-nav-button:hover {
 		background: #e9edf3;
 		border-color: #d4dbe5;
-		box-shadow: 0 7px 18px rgba(16, 24, 40, 0.07);
 		color: #111827;
 	}
 
 	.daynight-pdp-title {
-		font-size: var(--sa-heading-section);
+		font-size: var(--sa-text-2xl);
 		font-weight: var(--sa-weight-semibold);
 		line-height: 1.24;
 		margin: 0;
@@ -207,7 +206,8 @@
 	}
 
 	.pdp-nav-button--back {
-		flex: 0 0 auto;
+		grid-column: 1 / -1;
+		justify-self: start;
 	}
 
 	.pdp-title-actions {
@@ -229,5 +229,8 @@
 
 	.title-section {
 		position: relative;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 16px;
 	}
 </style>

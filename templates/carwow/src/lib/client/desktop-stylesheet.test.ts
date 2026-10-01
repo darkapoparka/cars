@@ -1,6 +1,10 @@
 import { runInNewContext } from 'node:vm';
-import { describe, expect, it } from 'vitest';
-import { desktopStylesheetBootstrap, type DesktopStylesheet } from './desktop-stylesheet';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import {
+	desktopStylesheetBootstrap,
+	loadDesktopStylesheet,
+	type DesktopStylesheet
+} from './desktop-stylesheet';
 
 const options: DesktopStylesheet = {
 	id: 'desktop-test',
@@ -12,10 +16,13 @@ function browser(matches: boolean) {
 	const links: Record<string, unknown>[] = [];
 	const anchor = { tagName: 'STYLE' };
 	const placements: unknown[] = [];
+	const events = new Map<string, () => void>();
 	const document = {
 		getElementById: (id: string) => links.find((link) => link.id === id),
 		createElement: () => {
 			const link: Record<string, unknown> = {};
+			link.addEventListener = (name: string, callback: () => void) => events.set(name, callback);
+			link.removeEventListener = (name: string) => events.delete(name);
 			link.getAttribute = (key: string) => link[key];
 			link.setAttribute = (key: string, value: string) => {
 				link[key] = value;
@@ -30,8 +37,17 @@ function browser(matches: boolean) {
 			}
 		}
 	};
-	return { document, window: { matchMedia: () => ({ matches }) }, links, placements, anchor };
+	return {
+		document,
+		window: { matchMedia: () => ({ matches }) },
+		links,
+		placements,
+		anchor,
+		events
+	};
 }
+
+afterEach(() => vi.unstubAllGlobals());
 
 describe('desktop-only CSS lifecycle', () => {
 	it('runs before hydration with no module closures', () => {
@@ -72,5 +88,37 @@ describe('desktop-only CSS lifecycle', () => {
 	});
 	it('is inert without a browser', () => {
 		expect(() => runInNewContext(desktopStylesheetBootstrap(options), {})).not.toThrow();
+	});
+	it('keeps navigation pending until the new stylesheet loads', async () => {
+		const context = browser(true);
+		vi.stubGlobal('window', context.window);
+		vi.stubGlobal('document', context.document);
+		let ready = false;
+		const pending = loadDesktopStylesheet(options).then(() => {
+			ready = true;
+		});
+		await Promise.resolve();
+		expect(ready).toBe(false);
+		context.events.get('load')!();
+		await pending;
+		expect(ready).toBe(true);
+		expect(context.events.size).toBe(0);
+	});
+	it('does not wait or request desktop CSS on mobile navigation', async () => {
+		const context = browser(false);
+		vi.stubGlobal('window', context.window);
+		vi.stubGlobal('document', context.document);
+		await loadDesktopStylesheet(options);
+		expect(context.links).toEqual([]);
+	});
+	it('reuses a stylesheet that is already loaded', async () => {
+		const context = browser(true);
+		runInNewContext(desktopStylesheetBootstrap(options), context);
+		context.links[0].sheet = {};
+		vi.stubGlobal('window', context.window);
+		vi.stubGlobal('document', context.document);
+		await loadDesktopStylesheet(options);
+		expect(context.links).toHaveLength(1);
+		expect(context.events.size).toBe(0);
 	});
 });

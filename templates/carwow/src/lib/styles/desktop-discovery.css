@@ -47,11 +47,10 @@ body.daynight-home-page
 	height: var(--discovery-chip-height) !important;
 	min-height: var(--discovery-chip-height) !important;
 	width: auto !important;
-	padding: 0 4px !important;
-	border: 0 !important;
-	border-bottom: 2px solid transparent !important;
-	border-radius: 0 !important;
-	background: transparent !important;
+	padding: 0 12px !important;
+	border: 1px solid var(--discovery-control-border) !important;
+	border-radius: var(--discovery-control-radius) !important;
+	background: var(--discovery-panel) !important;
 	background-image: none !important;
 	color: var(--discovery-ink) !important;
 	font: var(--sa-weight-medium) var(--sa-text-caption)/1.2 var(--sa-font, Arial, sans-serif) !important;
@@ -73,8 +72,8 @@ body.daynight-home-page
 	.inventory-refined
 	.inventory-results-shortcuts
 	a.desktop-discovery-chip:hover {
-	background: transparent !important;
-	border-bottom-color: var(--discovery-border-hover) !important;
+	background: var(--discovery-light-hover) !important;
+	border-color: var(--discovery-light-hover) !important;
 }
 .desktop-discovery-theme .desktop-discovery-chip.is-active,
 body.daynight-home-page
@@ -85,9 +84,9 @@ body.daynight-home-page
 	.inventory-refined
 	.inventory-results-shortcuts
 	a.desktop-discovery-chip.is-active {
-	background: transparent !important;
-	border-bottom-color: var(--discovery-action) !important;
-	color: var(--discovery-action) !important;
+	background: var(--discovery-action) !important;
+	border-color: var(--discovery-action) !important;
+	color: #fff !important;
 }
 .desktop-discovery-theme .desktop-discovery-chip.is-active:hover,
 body.daynight-home-page
@@ -98,8 +97,8 @@ body.daynight-home-page
 	.inventory-refined
 	.inventory-results-shortcuts
 	a.desktop-discovery-chip.is-active:hover {
-	background: transparent !important;
-	border-bottom-color: var(--discovery-action-hover) !important;
+	background: var(--discovery-action-hover) !important;
+	border-color: var(--discovery-action-hover) !important;
 }
 .desktop-discovery-chip:focus-visible {
 	outline: 2px solid var(--discovery-action) !important;

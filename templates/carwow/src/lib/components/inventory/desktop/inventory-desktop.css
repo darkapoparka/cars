@@ -1,6 +1,6 @@
 /* Canonical inventory-family cascade. Keep these layers in one module so Vite
  * cannot reorder shared CSS chunks differently between dev and production.
- * Native route overrides deliberately follow the retained card/layout rules. */
+ * VehicleCard owns grid-card geometry; the remaining rules cover discovery and map layouts. */
 /* BASE: retained native card/layout contracts. */
 /* App.css (Auxero) + generic template-head base styles the native inventory
    cards and controls used to sit on, reproduced and scoped to the native shells
@@ -12,14 +12,12 @@
 
 /* ============================ Card shell ============================ */
 /* shared by the grid card (.card-box-style-1) and map card (.card-box-style-9) */
-.inventory-template-shell .card-box,
 .inventory-map-template-shell .card-box {
 	border-radius: 16px;
 	height: fit-content;
 	position: relative;
 }
 
-.inventory-template-shell .card-box .image,
 .inventory-map-template-shell .card-box .image {
 	border-radius: 16px 16px 0 0;
 	display: flex;
@@ -27,13 +25,11 @@
 	position: relative;
 }
 
-.inventory-template-shell .card-box .image > a,
 .inventory-map-template-shell .card-box .image > a {
 	height: 100%;
 	width: 100%;
 }
 
-.inventory-template-shell .card-box .image .card--img,
 .inventory-map-template-shell .card-box .image .card--img {
 	border-radius: 16px 16px 0 0;
 	height: 100%;
@@ -42,7 +38,6 @@
 	width: 100%;
 }
 
-.inventory-template-shell .card-box .top,
 .inventory-map-template-shell .card-box .top {
 	display: flex;
 	justify-content: space-between;
@@ -55,7 +50,6 @@
 }
 
 /* Badge pill (`.highlight`). Colour comes from `.bg-primary-2` (red) / `.bg-green`. */
-.inventory-template-shell .card-box .top .highlight,
 .inventory-map-template-shell .card-box .top .highlight {
 	align-items: center;
 	border-radius: 8px;
@@ -68,7 +62,6 @@
 	padding: 4px 12px;
 }
 
-.inventory-template-shell .card-box .top .heart,
 .inventory-map-template-shell .card-box .top .heart {
 	align-items: center;
 	background-color: rgba(255, 255, 255, 0.1);
@@ -82,7 +75,6 @@
 	width: 28px;
 }
 
-.inventory-template-shell .card-box .bottom,
 .inventory-map-template-shell .card-box .bottom {
 	display: flex;
 	justify-content: space-between;
@@ -92,7 +84,6 @@
 	width: calc(100% - 12px);
 }
 
-.inventory-template-shell .card-box .bottom .category,
 .inventory-map-template-shell .card-box .bottom .category {
 	align-items: center;
 	backdrop-filter: blur(12px);
@@ -108,7 +99,6 @@
 	padding: 5px 9px;
 }
 
-.inventory-template-shell .card-box .bottom .category > a,
 .inventory-map-template-shell .card-box .bottom .category > a {
 	font-size: var(--sa-text-caption);
 	line-height: 20px;
@@ -116,10 +106,6 @@
 
 /* Placeholder/SVG fallback photos are light — flip the overlay chips to dark ink
    so they stay readable (legacy template-head `:has()` rule). */
-.inventory-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category,
-.inventory-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category a,
-.inventory-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category,
-.inventory-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category a,
 .inventory-map-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category,
 .inventory-map-template-shell .card-box:has(.card--img.daynight-img-fallback) .bottom .category a,
 .inventory-map-template-shell .card-box:has(.card--img[src^='data:image/svg']) .bottom .category,
@@ -127,15 +113,12 @@
 	color: #233044 !important;
 }
 
-.inventory-template-shell .card-box .content,
 .inventory-map-template-shell .card-box .content {
 	border-radius: 0 0 16px 16px;
 	padding: 16px;
 	position: relative;
 }
 
-.inventory-template-shell .card-box .content .card-box__title,
-.inventory-template-shell .card-box .content .card-box__title > a,
 .inventory-map-template-shell .card-box .content .card-box__title,
 .inventory-map-template-shell .card-box .content .card-box__title > a {
 	font-size: var(--sa-text-desktop-lead, var(--sa-text-xl));
@@ -143,45 +126,38 @@
 	line-height: 1.3;
 }
 
-.inventory-template-shell .card-box .content .tag,
 .inventory-map-template-shell .card-box .content .tag {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
-.inventory-template-shell .card-box .content .tag.style3,
 .inventory-map-template-shell .card-box .content .tag.style3 {
 	gap: 28px;
 	justify-content: start;
 }
 
-.inventory-template-shell .card-box .content .tag li,
 .inventory-map-template-shell .card-box .content .tag li {
 	align-items: center;
 	display: flex;
 }
 
-.inventory-template-shell .card-box .content .tag li img,
 .inventory-map-template-shell .card-box .content .tag li img {
 	margin-right: 4px;
 }
 
-.inventory-template-shell .card-box .content .tag li span,
 .inventory-map-template-shell .card-box .content .tag li span {
 	font-size: var(--sa-text-caption);
 	font-weight: var(--sa-weight-regular);
 	line-height: 20px;
 }
 
-.inventory-template-shell .card-box__price,
 .inventory-map-template-shell .card-box__price {
 	font-size: var(--sa-text-xl);
 	font-weight: var(--sa-weight-semibold);
 	line-height: 1.25;
 }
 
-.inventory-template-shell .card-box__price .daynight-card-price__value,
 .inventory-map-template-shell .card-box__price .daynight-card-price__value {
 	font-size: var(--sa-text-2xl);
 	font-weight: var(--sa-weight-strong);
@@ -237,8 +213,6 @@
 }
 
 /* Real-listing badge — DayNight red (legacy template-head override of `.bg-primary-2`). */
-.inventory-template-shell .card-box .top .bg-primary-2.highlight,
-.inventory-template-shell .card-box .top .bg-primary-2.text-white,
 .inventory-map-template-shell .card-box .top .bg-primary-2.highlight,
 .inventory-map-template-shell .card-box .top .bg-primary-2.text-white {
 	background: #e11c2a;
@@ -246,34 +220,28 @@
 }
 
 /* ======================= Card text utilities ======================= */
-.inventory-template-shell .card-box .text-secondary,
 .inventory-map-template-shell .card-box .text-secondary {
 	color: #4b4b4b;
 }
 
-.inventory-template-shell .card-box .text-muted,
 .inventory-map-template-shell .card-box .text-muted {
 	color: #9fa1a4;
 }
 
-.inventory-template-shell .card-box .text-underline,
 .inventory-map-template-shell .card-box .text-underline {
 	text-decoration: underline;
 }
 
-.inventory-template-shell .card-box .text-xs,
 .inventory-map-template-shell .card-box .text-xs {
 	font-size: var(--sa-text-caption);
 	line-height: 20px;
 }
 
-.inventory-template-shell .card-box .text-sm,
 .inventory-map-template-shell .card-box .text-sm {
 	font-size: var(--sa-text-base);
 	line-height: 22px;
 }
 
-.inventory-template-shell .card-box .clamp,
 .inventory-map-template-shell .card-box .clamp {
 	-webkit-box-orient: vertical;
 	display: -webkit-box;
@@ -282,7 +250,6 @@
 	text-overflow: ellipsis;
 }
 
-.inventory-template-shell .card-box .clamp-1,
 .inventory-map-template-shell .card-box .clamp-1 {
 	-webkit-line-clamp: 1;
 }
@@ -291,32 +258,9 @@
    their markup keeps the Auxero spacing classes (read from app.css on the PDP).
    app.css is gone on the native inventory, so reproduce the intended px here,
    scoped to the shell — otherwise Tailwind would reinterpret e.g. `mb-10` as 2.5rem. */
-.inventory-template-shell .card-box .mb-8 {
-	margin-bottom: 8px;
-}
-
-.inventory-template-shell .card-box .mb-10 {
-	margin-bottom: 10px;
-}
-
-.inventory-template-shell .card-box .mb-15 {
-	margin-bottom: 15px;
-}
-
-.inventory-template-shell .card-box .gap-8 {
-	gap: 8px;
-}
 
 /* ============== Card price (generic template-head layout) ============== */
-.inventory-template-shell .card-box.card-box-style-1 .card-box__price {
-	align-items: start;
-	column-gap: 18px;
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) auto;
-	min-height: 40px;
-}
 
-.inventory-template-shell .daynight-card-price__value,
 .inventory-map-template-shell .daynight-card-price__value {
 	align-items: flex-start;
 	align-self: start;
@@ -327,35 +271,6 @@
 	justify-self: start;
 	letter-spacing: 0;
 	line-height: 1.05;
-	white-space: nowrap;
-}
-
-.inventory-template-shell .daynight-card-price__meta {
-	align-items: flex-end;
-	display: inline-flex;
-	flex-direction: column;
-	gap: 0;
-	justify-content: flex-start;
-	justify-self: end;
-	line-height: 1;
-	min-width: 0;
-	text-align: right;
-}
-
-.inventory-template-shell .daynight-card-price__monthly {
-	font-size: var(--sa-text-base);
-	line-height: 20px;
-	white-space: nowrap;
-}
-
-.inventory-template-shell .daynight-card-price__link {
-	align-items: center;
-	color: #475569 !important;
-	display: inline-flex;
-	font-size: var(--sa-text-base);
-	line-height: 20px;
-	min-height: 20px;
-	text-decoration-color: currentColor !important;
 	white-space: nowrap;
 }
 
@@ -1588,6 +1503,10 @@
 
 	.inventory-template-shell
 		.daynight-inventory-viewport--grid
+		[data-daynight-grid-panel='2'].active
+		> .grid,
+	.inventory-template-shell
+		.daynight-inventory-viewport--grid
 		[data-daynight-grid-panel='3'].active
 		> .grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -1724,72 +1643,6 @@
 		> .grid {
 		gap: 32px 20px !important;
 		grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-	}
-
-	.inventory-template-shell
-		.daynight-inventory-viewport--grid
-		[data-daynight-grid-panel='3'].active
-		.card-box.card-box-style-1[data-daynight-vehicle-card] {
-		border-radius: 8px !important;
-	}
-
-	.inventory-template-shell
-		.daynight-inventory-viewport--grid
-		[data-daynight-grid-panel='3'].active
-		.card-box.card-box-style-1[data-daynight-vehicle-card]
-		.content {
-		min-height: 0 !important;
-		padding: 12px !important;
-	}
-
-	.inventory-template-shell
-		.daynight-inventory-viewport--grid
-		[data-daynight-grid-panel='3'].active
-		.card-box.card-box-style-1[data-daynight-vehicle-card]
-		.card-box__title {
-		display: block !important;
-		font-size: var(--sa-text-xl) !important;
-		font-weight: var(--sa-weight-heading) !important;
-		height: auto !important;
-		min-height: 27px !important;
-		line-height: 1.35 !important;
-		max-height: 27px !important;
-		overflow: hidden !important;
-		text-overflow: ellipsis !important;
-		white-space: nowrap !important;
-		-webkit-line-clamp: 1 !important;
-		line-clamp: 1 !important;
-	}
-
-	.inventory-template-shell
-		.daynight-inventory-viewport--grid
-		[data-daynight-grid-panel='3'].active
-		.card-box.card-box-style-1[data-daynight-vehicle-card]
-		.card-box__title
-		> a {
-		display: block !important;
-		overflow: hidden !important;
-		text-overflow: ellipsis !important;
-		white-space: nowrap !important;
-	}
-
-	.inventory-template-shell
-		.daynight-inventory-viewport--grid
-		[data-daynight-grid-panel='3'].active
-		.card-box.card-box-style-1[data-daynight-vehicle-card]
-		.card-box__price {
-		column-gap: 10px !important;
-		font-size: var(--sa-text-lg) !important;
-		min-height: 38px !important;
-	}
-
-	.inventory-template-shell
-		.daynight-inventory-viewport--grid
-		[data-daynight-grid-panel='3'].active
-		.card-box.card-box-style-1[data-daynight-vehicle-card]
-		.card-box__price
-		.daynight-card-price__value {
-		font-size: var(--sa-text-panel-title) !important;
 	}
 }
 
@@ -1929,29 +1782,6 @@
    desktop grid look survives the legacy template head CSS being dropped from the
    route. Grid -> .inventory-template-shell, half-map -> .inventory-map-template-shell. */
 
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] {
-	display: flex !important;
-	flex-direction: column;
-	height: 100%;
-	min-height: 0;
-}
-
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .image {
-	flex: 0 0 auto;
-}
-
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .content {
-	display: flex;
-	flex: 1 1 auto;
-	flex-direction: column;
-	min-height: 0;
-}
-
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .card-box__price {
-	margin-top: 0 !important;
-}
-
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2,
 .inventory-map-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2 {
 	align-items: center;
 	flex-wrap: wrap;
@@ -1960,7 +1790,6 @@
 	min-height: 30px;
 }
 
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2 li,
 .inventory-map-template-shell
 	.card-box.card-box-style-1[data-daynight-vehicle-card]
 	.tag.style2
@@ -1977,10 +1806,6 @@
 	padding: 0 7px;
 }
 
-.inventory-template-shell
-	.card-box.card-box-style-1[data-daynight-vehicle-card]
-	.tag.style2
-	li:last-child,
 .inventory-map-template-shell
 	.card-box.card-box-style-1[data-daynight-vehicle-card]
 	.tag.style2
@@ -1988,7 +1813,6 @@
 	flex: 0 0 auto;
 }
 
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .tag.style2 li img,
 .inventory-map-template-shell
 	.card-box.card-box-style-1[data-daynight-vehicle-card]
 	.tag.style2
@@ -2001,11 +1825,6 @@
 	width: 13px;
 }
 
-.inventory-template-shell
-	.card-box.card-box-style-1[data-daynight-vehicle-card]
-	.tag.style2
-	li
-	span,
 .inventory-map-template-shell
 	.card-box.card-box-style-1[data-daynight-vehicle-card]
 	.tag.style2
@@ -3439,56 +3258,10 @@
 	display: none !important;
 }
 
-.inventory-template-shell [data-daynight-filter-hidden='true'],
-.inventory-template-shell
-	.card-box.card-box-style-1[data-daynight-vehicle-card][data-daynight-filter-hidden='true'] {
+.inventory-template-shell [data-daynight-filter-hidden='true'] {
 	display: none !important;
 }
 
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] {
-	background: #fff !important;
-	border: 1px solid #dfe7f2 !important;
-	border-radius: 8px;
-	box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-	overflow: hidden;
-}
-
-.inventory-template-shell
-	.daynight-inventory-viewport
-	.card-box.card-box-style-1[data-daynight-vehicle-card]:hover,
-.inventory-template-shell
-	.daynight-inventory-viewport
-	.card-box.card-box-style-1[data-daynight-vehicle-card]:focus-within {
-	border-color: #cbd7e6 !important;
-	box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08) !important;
-}
-
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .image {
-	aspect-ratio: 1.34 / 1;
-	background: #eef2f7;
-	border-radius: 8px 8px 0 0;
-	height: auto;
-	overflow: hidden;
-}
-
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .content {
-	background: #fff !important;
-	border: 0 !important;
-	border-color: transparent !important;
-	border-radius: 0 0 8px 8px;
-	border-top: 0 !important;
-	padding: 14px;
-}
-
-.inventory-template-shell .card-box.card-box-style-1[data-daynight-vehicle-card] .card--img {
-	border-radius: 0 !important;
-	display: block;
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-}
-
-.inventory-template-shell .card-box.card-box-style-1 .card--img,
 .inventory-map-template-shell .card-box.card-box-style-1 .card--img,
 body.inner-page .card-box.card-box-style-1 .card--img {
 	transform: none !important;
@@ -3561,7 +3334,6 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 }
 
 @media (max-width: 575px) {
-	.inventory-template-shell .card-box.card-box-style-1 .card--img,
 	.inventory-map-template-shell .card-box.card-box-style-1 .card--img,
 	body.inner-page .card-box.card-box-style-1 .card--img {
 		transform: none !important;
@@ -3569,33 +3341,6 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 }
 
 /* NATIVE ROUTE OVERRIDES: ownership formerly split into InventoryDesktopPage. */
-
-.inventory-template-shell
-	.inventory-refined
-	.daynight-inventory-viewport
-	[data-daynight-grid-panel].active
-	.card-box.card-box-style-1[data-daynight-vehicle-card]
-	.card-box__title
-	> a {
-	font: inherit !important;
-	display: -webkit-box !important;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	line-clamp: 2;
-	white-space: normal !important;
-}
-
-.inventory-template-shell
-	.inventory-refined
-	.daynight-inventory-viewport
-	[data-daynight-grid-panel].active
-	.card-box.card-box-style-1[data-daynight-vehicle-card]
-	.card-box__title {
-	font: var(--sa-weight-semibold) var(--sa-text-control)/1.3 var(--sa-font) !important;
-	min-height: 45px !important;
-	max-height: 45px !important;
-	white-space: normal !important;
-}
 
 .inventory-refined .inventory-hero .daynight-yellow-route-hero__content {
 	padding-top: 30px;
@@ -3608,20 +3353,6 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 
 .inventory-refined .daynight-inventory-viewport--grid [data-daynight-grid-panel].active > .grid {
 	gap: 20px !important;
-}
-
-.inventory-template-shell
-	.inventory-refined
-	.card-box.card-box-style-1[data-daynight-vehicle-card]
-	.image {
-	aspect-ratio: 1.5 / 1;
-}
-.inventory-refined [data-daynight-vehicle-card] .content {
-	justify-content: flex-start !important;
-	gap: 0 !important;
-}
-.inventory-refined [data-daynight-vehicle-card] .tag.style2 {
-	min-height: 22px !important;
 }
 @media (min-width: 1440px) {
 	.inventory-template-shell
@@ -3642,7 +3373,7 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	}
 }
 .inventory-refined .inventory-hero .daynight-yellow-route-hero {
-	min-height: 390px;
+	min-height: 0;
 }
 
 .inventory-refined .inventory-hero .daynight-yellow-route-hero__deck {
@@ -3749,63 +3480,4 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	padding: 0 !important;
 	margin: 0 !important;
 	min-width: 0;
-}
-.inventory-refined [data-daynight-vehicle-card] .content {
-	padding: 12px !important;
-}
-
-.inventory-refined .card-box.card-box-style-1[data-daynight-vehicle-card] .card-box__title {
-	font: var(--sa-weight-semibold) var(--sa-text-lg)/1.35 var(--sa-font) !important;
-	letter-spacing: -0.25px !important;
-	min-height: 0 !important;
-	max-height: 49px !important;
-	white-space: normal !important;
-	margin: 0 0 6px !important;
-}
-
-.inventory-refined .card-box.card-box-style-1[data-daynight-vehicle-card] .card-box__title > a {
-	display: -webkit-box !important;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	line-clamp: 2;
-	white-space: normal !important;
-}
-
-.inventory-template-shell
-	.inventory-refined
-	.card-box.card-box-style-1[data-daynight-vehicle-card]
-	.card-box__price
-	.daynight-card-price__value {
-	font: var(--sa-weight-strong) var(--sa-text-panel-title)/1.15 var(--sa-font) !important;
-	letter-spacing: -0.65px !important;
-	color: #171b1e !important;
-}
-
-.inventory-template-shell
-	.inventory-refined
-	.card-box.card-box-style-1[data-daynight-vehicle-card]
-	.card-box__price
-	.daynight-card-price__monthly {
-	font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font) !important;
-	color: #68717a !important;
-}
-.inventory-refined [data-daynight-vehicle-card] .tag.style2 {
-	gap: 10px !important;
-	flex-wrap: wrap !important;
-	margin-bottom: 8px !important;
-}
-.inventory-refined [data-daynight-vehicle-card] .tag.style2 li {
-	background: transparent !important;
-	border: 0 !important;
-	padding: 0 !important;
-	height: 22px !important;
-}
-.inventory-refined [data-daynight-vehicle-card] .tag.style2 li span {
-	font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font) !important;
-	color: #59636c !important;
-}
-.inventory-refined [data-daynight-vehicle-card] {
-	border-color: var(--discovery-control-border) !important;
-	box-shadow: none !important;
-	border-radius: 11px !important;
 }

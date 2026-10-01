@@ -133,6 +133,8 @@
 										srcset={desktopOnlySrcset(review.avatar, 160)}
 										sizes={desktopOnlySizes('56px')}
 										alt={i18n.text(review.name)}
+										loading="lazy"
+										decoding="async"
 									/>
 									<div class="daynight-home-review-card__user-content">
 										<p class="daynight-home-review-card__name">{i18n.text(review.name)}</p>
@@ -168,6 +170,8 @@
 								srcset={desktopOnlySrcset(card.image, 1536)}
 								sizes={desktopOnlySizes('44vw')}
 								alt={i18n.text(card.alt)}
+								loading="lazy"
+								decoding="async"
 							/>
 							<div class="daynight-home-action-card__content">
 								<p class="daynight-home-action-card__heading">
