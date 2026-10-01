@@ -2,17 +2,17 @@
 
 The storefront uses the locally hosted DayNight Geist variable font, including Cyrillic. `src/lib/styles/tokens.css` owns font sizes, family and weights. CSS and Tailwind consume that same scale; do not add raw sizes, arbitrary weight utilities or a second family to components.
 
-| Role                              | Mobile          | Desktop                        | Weight  |
-| --------------------------------- | --------------- | ------------------------------ | ------- |
-| Ordinary body copy                | 16px            | 16px; 18px for leads           | 400     |
-| Supporting metadata               | 14px            | 14px                           | 400–500 |
-| Tiny badges/counts                | 12px            | 12px                           | 500–600 |
-| Inputs                            | at least 16px   | at least 16px                  | 400–500 |
-| Primary and secondary actions     | 17px            | 18px                           | 500     |
-| Buy/import tabs                   | 20px            | 20px                           | 500     |
-| Mobile card title / section title | 18px / 20px     | use desktop card/section roles | 600     |
-| Desktop card titles               | —               | 22px                           | 600     |
-| Display headings                  | responsive role | responsive role                | 600–700 |
+| Role                              | Mobile          | Desktop                                       | Weight  |
+| --------------------------------- | --------------- | --------------------------------------------- | ------- |
+| Ordinary body copy                | 16px            | 16px; 18px for leads                          | 400     |
+| Supporting metadata               | 14px            | 14px                                          | 400–500 |
+| Tiny badges/counts                | 12px            | 12px                                          | 500–600 |
+| Inputs                            | at least 16px   | at least 16px                                 | 400–500 |
+| Primary and secondary actions     | 17px            | 18px                                          | 500     |
+| Buy/import tabs                   | 20px            | 20px                                          | 500     |
+| Mobile card title / section title | 18px / 20px     | use desktop card/section roles                | 600     |
+| Desktop card titles               | —               | 18px compact vehicle grids; 22px larger cards | 600–700 |
+| Display headings                  | responsive role | responsive role                               | 600–700 |
 
 Use `--sa-button-font-size`, `--sa-button-font-weight` and `--sa-button-line-height` for action text. A phone action must not outrank a primary conversion action through a larger or heavier label. Use color and placement for action priority. Main navigation tabs use their dedicated larger role. Tiny badges are not a suitable role for body copy or buttons.
 

@@ -98,8 +98,4 @@
 	:global(.inventory-refined .inventory-list-view [data-daynight-vehicle-card] .bottom) {
 		display: none !important;
 	}
-	:global(.inventory-refined .inventory-list-view [data-daynight-vehicle-card] .card-box__title) {
-		min-height: auto !important;
-		margin-bottom: 16px !important;
-	}
 </style>

@@ -1,6 +1,48 @@
-import { devices, expect, test } from '@playwright/test';
+import { devices, expect, test, type Page } from '@playwright/test';
 
 test.use({ viewport: { width: 1440, height: 1000 } });
+
+async function expectAlignedCardDetails(page: Page) {
+	await expect
+		.poll(() =>
+			page.locator('.desktop-vehicle-details:visible').evaluateAll((cards) => {
+				const rowOffsets = new Map<number, number>();
+				return (
+					cards.length > 0 &&
+					cards.every((card) => {
+						const title = card.querySelector('.desktop-vehicle-details__title')!;
+						const facts = card.querySelector('.desktop-vehicle-details__metadata')!;
+						const values = [...facts.querySelectorAll('dd')];
+						if (values.length !== 4) return false;
+						const titleBox = title.getBoundingClientRect();
+						const factsBox = facts.getBoundingClientRect();
+						const valueBoxes = values.map((value) => value.getBoundingClientRect());
+						const cardBox = card.closest('[data-daynight-vehicle-card]')!.getBoundingClientRect();
+						const row = Math.round(cardBox.top);
+						const factsOffset = factsBox.top - cardBox.top;
+						const rowOffset = rowOffsets.get(row) ?? factsOffset;
+						rowOffsets.set(row, rowOffset);
+						return (
+							getComputedStyle(title).fontSize === '18px' &&
+							Math.abs(titleBox.height - parseFloat(getComputedStyle(title).lineHeight) * 2) < 1 &&
+							factsBox.top >= titleBox.bottom + 11 &&
+							Math.abs(factsOffset - rowOffset) < 1 &&
+							values.every(
+								(value) =>
+									getComputedStyle(value).fontSize === '14px' &&
+									value.scrollWidth <= value.clientWidth + 1
+							) &&
+							Math.abs(valueBoxes[0].top - valueBoxes[1].top) < 1 &&
+							Math.abs(valueBoxes[2].top - valueBoxes[3].top) < 1 &&
+							Math.abs(valueBoxes[0].left - valueBoxes[2].left) < 1 &&
+							Math.abs(valueBoxes[1].left - valueBoxes[3].left) < 1
+						);
+					})
+				);
+			})
+		)
+		.toBe(true);
+}
 
 test.afterEach(async ({ page }, testInfo) => {
 	if (testInfo.status === testInfo.expectedStatus) return;
@@ -60,6 +102,7 @@ test('home and inventory use matching centered frames and compact four or five c
 			expectedColumns * 2
 		);
 		const homeFrame = (await page.locator('.daynight-home-inventory__body').boundingBox())!;
+		await expectAlignedCardDetails(page);
 		await expect(homeGrid.locator('.desktop-vehicle-details__metadata').first()).toHaveCSS(
 			'border-top-width',
 			'0px'
@@ -76,6 +119,7 @@ test('home and inventory use matching centered frames and compact four or five c
 			)
 			.toBe(expectedColumns);
 		const inventoryFrame = (await page.locator('.daynight-inventory-viewport').boundingBox())!;
+		await expectAlignedCardDetails(page);
 		expect(Math.abs(homeFrame.x - inventoryFrame.x)).toBeLessThan(1);
 		expect(Math.abs(homeFrame.width - inventoryFrame.width)).toBeLessThan(1);
 		const inventoryCards = (await inventoryGrid.boundingBox())!;
@@ -115,7 +159,7 @@ test('home and inventory use matching centered frames and compact four or five c
 	}
 });
 
-test('desktop card financing copy stays clear of its action in both languages', async ({
+test('desktop cards align titles and specifications before pricing in both languages', async ({
 	page
 }) => {
 	for (const locale of ['en', 'bg']) {
@@ -129,6 +173,7 @@ test('desktop card financing copy stays clear of its action in both languages', 
 				await page.goto(route);
 				await expect(page.locator('.daynight-card-price__monthly').first()).toBeVisible();
 				await page.evaluate(() => document.fonts.ready);
+				await expectAlignedCardDetails(page);
 				await expect
 					.poll(() =>
 						page.locator('.daynight-card-price__monthly:visible').evaluateAll((captions) =>
