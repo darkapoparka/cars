@@ -1,0 +1,142 @@
+{
+  "checkedAt": "2026-10-01T22:26:55.429Z",
+  "scope": "Desktop mileage consistency and shared image-hero frame",
+  "source": [
+    {
+      "path": "src/lib/components/inventory/VehicleCard.svelte",
+      "sha256": "c9afc7a9c2e5f6bde33398b8128d8d424dcf6ca2c8ef5bcf82523e18365f4e3f",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/lib/components/common/PageIntro.svelte",
+      "sha256": "ed7798f4812b5efd838c3989a3c36f4e0532a0aa1719bf5790c01826fc6e14b1",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/lib/styles/tokens.css",
+      "sha256": "d2e3266a5602dac0f385f4728345d927c7dbba626fc4d46a3bb747bbe3aeccb0",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/routes/(site)/sell-your-car/+page.svelte",
+      "sha256": "f58b2e73177fcb70564a40ae96979576d911a81378b684c63f1d22f8f1e5f29a",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/routes/(site)/financing/+page.svelte",
+      "sha256": "f1a602d1e369cc0c27ffb291de86218b956abd6144b7376ddd27b34d98c05679",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "src/routes/(site)/import/+page.svelte",
+      "sha256": "e69dd1a6aa67218aeec8a7ec48b4efc54352cea8248f3329b627b2ff46ba4558",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "tests/desktop-page-patterns.e2e.ts",
+      "sha256": "c88495d2d3753077f0228f980fe614223f0fecd50390c16073c69cd5edb33d1b",
+      "matchesCheckedSource": true
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "82cf327d0689e0d5f887e1c85548cc21874a0e4d7b800d46200f9e918cae13ea",
+      "matchesCheckedSource": true
+    }
+  ],
+  "frozenProductionCheck": {
+    "head": "2cfebdee4fbf34b2fecb9be79383b3bca1340f01",
+    "digest": "01414c417248876974202d15b92cbac1cfa19665595115bc60b7da6e428d1e81",
+    "node": "24.21.0",
+    "mode": "preview",
+    "httpStatus": 200
+  },
+  "checks": [
+    {
+      "name": "check",
+      "exit": 0,
+      "seconds": 127
+    },
+    {
+      "name": "format",
+      "exit": 0,
+      "seconds": 14
+    },
+    {
+      "name": "lint",
+      "exit": 0,
+      "seconds": 50
+    },
+    {
+      "name": "architecture",
+      "exit": 0,
+      "seconds": 1
+    },
+    {
+      "name": "build",
+      "exit": 0,
+      "seconds": 70
+    }
+  ],
+  "browser": {
+    "passed": 21,
+    "skipped": 17,
+    "failed": 0,
+    "suites": [
+      "desktop-page-patterns.e2e.ts",
+      "inventory.e2e.ts",
+      "desktop-search.e2e.ts"
+    ]
+  },
+  "desktop": {
+    "heroRoutes": 8,
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "widths": [
+      768,
+      900,
+      1024,
+      1440,
+      1920
+    ],
+    "visualCases": 30,
+    "sharedFrame": true,
+    "plainFacts": true,
+    "contentFits": true
+  },
+  "mobile": {
+    "cases": 16,
+    "pixelIdentical": 14,
+    "noMobileCssOrComponentChanges": true,
+    "remainingDifferences": [
+      {
+        "route": "financing",
+        "width": 320,
+        "note": "Native select chevron paint; value and 48px control preserved."
+      },
+      {
+        "route": "contact",
+        "width": 390,
+        "note": "Embedded Google Maps tile and control painting with minor subpixel differences; surrounding layout preserved."
+      }
+    ]
+  },
+  "sourceDrift": [
+    {
+      "path": "L:\\CODEX\\cars",
+      "branch": "main",
+      "head": "18fc5e9cff7d6d6939e0aa97085bc4b4e113109f",
+      "ahead": 0,
+      "behind": 0
+    },
+    {
+      "path": "L:\\CODEX\\cars-admin",
+      "branch": "main",
+      "head": "b0baba6285d82d5cacc196c780535e7e1dc9b7d3",
+      "ahead": 4,
+      "behind": 4
+    }
+  ],
+  "limits": "Local source and production-preview verification. No template release promotion or dealer deployment."
+}

@@ -50,7 +50,6 @@
 >
 <main id="main-content">
 	<PageIntro
-		compact
 		{title}
 		align="center"
 		image="/assets/daynight/services/evaluate-link-service.webp"

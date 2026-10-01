@@ -1,0 +1,156 @@
+[
+  {
+    "route": "home",
+    "width": 320,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "inventory",
+    "width": 320,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "services",
+    "width": 320,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "about",
+    "width": 320,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "contact",
+    "width": 320,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "sell-your-car",
+    "width": 320,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "financing",
+    "width": 320,
+    "height": 844,
+    "changedPixels": 515,
+    "pixelIdentical": false,
+    "maxChannelDelta": 243,
+    "changeBounds": {
+      "left": 47,
+      "top": 687,
+      "right": 79,
+      "bottom": 704
+    }
+  },
+  {
+    "route": "import",
+    "width": 320,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "inventory",
+    "width": 390,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "services",
+    "width": 390,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "about",
+    "width": 390,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "contact",
+    "width": 390,
+    "height": 844,
+    "changedPixels": 39537,
+    "pixelIdentical": false,
+    "maxChannelDelta": 252,
+    "changeBounds": {
+      "left": 8,
+      "top": 8,
+      "right": 389,
+      "bottom": 695
+    }
+  },
+  {
+    "route": "sell-your-car",
+    "width": 390,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "financing",
+    "width": 390,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  },
+  {
+    "route": "import",
+    "width": 390,
+    "height": 844,
+    "changedPixels": 0,
+    "pixelIdentical": true,
+    "maxChannelDelta": 0,
+    "changeBounds": null
+  }
+]

@@ -255,9 +255,7 @@
 	--bc-glass-hover: rgb(255 255 255 / 0.24);
 	--bc-glass-border: rgb(255 255 255 / 0.4);
 	--bc-mobile-appbar-height: 56px;
-	--bc-desktop-page-hero-height: 360px;
 	--bc-desktop-hero-title: clamp(2.5rem, 3.5vw, 3.25rem);
-	--bc-desktop-page-hero-height-compact: 240px;
 	--bc-mobile-nav-height: 58px;
 	--bc-mobile-content-max: 480px;
 	--bc-mobile-nav-icon-size: 22px;
@@ -315,11 +313,10 @@
 @media (min-width: 768px) {
 	.site-shell {
 		--bc-text-meta: 0.875rem;
-		--bc-desktop-page-hero-height: 300px;
+		--bc-desktop-page-hero-height: 400px;
 		--bc-desktop-hero-title: clamp(2.25rem, 3vw, 2.75rem);
 		--bc-desktop-section-title: clamp(1.75rem, 2.25vw, 2rem);
 		--bc-desktop-discovery-width: 880px;
-		--bc-desktop-discovery-hero-height: 400px;
 		--bc-desktop-service-search-width: 640px;
 		--bc-desktop-home-panel-height: 160px;
 		--bc-desktop-card-title: 18px;
@@ -332,7 +329,7 @@
 
 @media (min-width: 768px) and (max-width: 900px) {
 	.site-shell {
-		--bc-desktop-discovery-hero-height: 450px;
+		--bc-desktop-page-hero-height: 450px;
 	}
 }
 

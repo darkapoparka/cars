@@ -12,7 +12,6 @@
 		mobileDescription,
 		mobileActions,
 		mobileAlign = 'start',
-		compact = false,
 		vehicleArtwork = false,
 		titleId,
 		class: className = '',
@@ -30,7 +29,6 @@
 		mobileDescription?: string;
 		mobileActions?: Snippet;
 		mobileAlign?: 'start' | 'center';
-		compact?: boolean;
 		vehicleArtwork?: boolean;
 		titleId?: string;
 		class?: string;
@@ -53,7 +51,6 @@
 	class={['site-intro', 'site-desktop-only', className]}
 	class:site-intro--image={Boolean(image) || vehicleArtwork}
 	class:site-intro--cars={vehicleArtwork}
-	class:site-intro--compact={compact}
 	class:site-intro--center={align === 'center'}
 	class:site-intro--interactive={Boolean(desktopActions)}
 >
@@ -149,12 +146,6 @@
 			align-items: center;
 			min-height: var(--bc-desktop-page-hero-height);
 			padding-block: var(--bc-space-6);
-		}
-		.site-intro--cars {
-			min-height: var(--bc-desktop-discovery-hero-height);
-		}
-		.site-intro--compact {
-			min-height: var(--bc-desktop-page-hero-height-compact);
 		}
 		.site-intro--interactive .site-intro__content {
 			display: grid;

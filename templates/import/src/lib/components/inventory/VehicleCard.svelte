@@ -252,9 +252,6 @@
 		.site-vehicle-card__desktop-mileage {
 			display: block;
 			flex: none;
-			border-radius: var(--bc-radius-sm);
-			padding: 2px var(--bc-space-2);
-			background: var(--bc-surface);
 			color: var(--bc-copy);
 			font-size: var(--bc-text-meta);
 			line-height: var(--bc-leading-meta);

@@ -7,26 +7,42 @@ test.beforeEach(({ isMobile }) => {
 });
 
 for (const locale of ['bg', 'en']) {
-	test(`${locale}: service, about and contact heroes share their geometry`, async ({ page }) => {
+	test(`${locale}: all desktop image heroes share their frame`, async ({ page }) => {
 		for (const width of [768, 1440, 1920]) {
 			await page.setViewportSize({ width, height: 1000 });
-			let baseline;
-			for (const route of ['services', 'about', 'contact']) {
-				await visit(page, `/${locale}/${route}`);
+			let frameBaseline;
+			let actionBaseline;
+			for (const route of [
+				'',
+				'inventory',
+				'services',
+				'about',
+				'contact',
+				'sell-your-car',
+				'financing',
+				'import'
+			]) {
+				await visit(page, `/${locale}${route ? '/' + route : ''}`);
 				const geometry = await page.locator('.site-intro').evaluate((node) => {
 					const rect = node.getBoundingClientRect();
 					return {
 						top: rect.y,
 						height: rect.height,
 						title: node.querySelector('h1')!.getBoundingClientRect().y,
-						actions: node.querySelector('.site-intro__desktop-actions')!.getBoundingClientRect().y
+						actions: node.querySelector('.site-intro__desktop-actions')?.getBoundingClientRect().y
 					};
 				});
-				baseline ??= geometry;
-				expect(geometry, `${width}: ${route}`).toEqual(baseline);
+				const frame = { top: geometry.top, height: geometry.height };
+				frameBaseline ??= frame;
+				expect(frame, `${width}: ${route || 'home'} hero frame`).toEqual(frameBaseline);
+				if (['services', 'about', 'contact'].includes(route)) {
+					actionBaseline ??= geometry;
+					expect(geometry, `${width}: ${route} action placement`).toEqual(actionBaseline);
+				}
 				expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
 					true
 				);
+				if (!['services', 'about', 'contact'].includes(route)) continue;
 				const underline = await page.locator('.site-nav-item.active > a').evaluate((node) => {
 					const style = getComputedStyle(node, '::after');
 					return {
