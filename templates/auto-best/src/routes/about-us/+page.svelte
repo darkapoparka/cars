@@ -39,10 +39,6 @@
   <div class="container">
     <DesktopShowroom id="about-showroom-desktop-title" />
     <div class="dn-about-showroom__card dn-about-showroom__mobile">
-      <div class="dn-about-showroom__heading">
-        <h2 id="about-showroom-title">{i18n.t("m_931269cbffaa")}</h2>
-        <p>{i18n.dealer('address')} · {i18n.dealer('appointment')}</p>
-      </div>
       <ShowroomMap />
     </div>
   </div>

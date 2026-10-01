@@ -37,11 +37,18 @@ with an inset white card overlapping the banner by 52px, as on Home. About uses
 `EntryCard.svelte` for its introduction and inventory action; Contact groups its
 phone and directions actions before address and visit details. Its actions stack
 when their container is narrower than 18rem, including enlarged text. Blog's
-header shares the yellow hero surface. `BlogHero.svelte` keeps one native GET
-search form, with Home's entry-field tokens and a 44px mobile submit control.
+header shares the yellow hero surface. `BlogHero.svelte` keeps its native GET
+search field fully inside that hero, without a subtitle or an overlapping card.
+Its mobile submit control has a 16px arrow and a 32px painted circle inside the
+44px hit area. Search stays inline and preserves the query/category URL contract.
 Its horizontally scrolling categories reuse the 44px target and 40px painted pill proportions;
 the active mobile category uses ink. Desktop Blog controls retain their own
 composition and accent selection.
+
+About's mobile location section shows `ShowroomMap.svelte` directly below the
+service cards. The card already provides the dealer, address and directions;
+it omits the duplicate visit heading and address/appointment paragraph.
+Its directions link flows after the address so enlarged text stays clear of it.
 
 Desktop inventory cards keep the existing five-column wide grid and 16px gutters.
 Model titles use one line with an ellipsis, while the heading tooltip, accessible

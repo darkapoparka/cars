@@ -20,14 +20,14 @@
     </div>
 
     <div class="dn-blog-toolbar dn-route-hero__control" aria-label={i18n.t("m_52a2403e77ab")}>
-      <div class="dn-blog-search-card dn-information-card">
+      <div class="dn-blog-search-card">
         <form class="dn-blog-search" role="search" aria-label={i18n.t("m_2de9b4285a63")} method="GET" action={i18n.href(resolve('/blog'))}>
           <label class="dn-sr-only" for="dn-blog-search">{i18n.t("m_2de9b4285a63")}</label>
           <span class="dn-blog-search__icon dn-blog-search__icon--desktop"><Icon name="search" size={20} strokeWidth={1.7} /></span>
           <span class="dn-blog-search__icon dn-blog-search__icon--mobile"><MobileActionIcon name="search" size={18} /></span>
           <input {@attach i18n.validation} id="dn-blog-search" type="search" name="q" value={filters.q} placeholder={i18n.t("m_2de9b4285a63")} />
           {#if filters.category}<input type="hidden" name="category" value={filters.category} />{/if}
-          <button class="dn-blog-search__submit dn-icon-button" type="submit" aria-label={i18n.t("m_2de9b4285a63")}><MobileActionIcon name="arrow" size={18} /></button>
+          <button class="dn-blog-search__submit dn-icon-button" type="submit" aria-label={i18n.t("m_2de9b4285a63")}><MobileActionIcon name="arrow" size={16} /></button>
         </form>
       </div>
 

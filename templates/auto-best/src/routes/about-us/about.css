@@ -72,8 +72,7 @@
   text-align: center;
 }
 
-.dn-about-section-heading h2,
-.dn-about-showroom__heading h2 {
+.dn-about-section-heading h2 {
   margin: 0;
   color: var(--dn-ink);
   font-size: var(--dn-text-section-compact);
@@ -204,6 +203,7 @@
 
 @media (max-width: 991px) {
   .dn-about-intro { display: block; }
+  .dn-about-intro .dn-entry-card { grid-template-columns: minmax(0, 1fr); overflow-wrap: anywhere; }
   .dn-about-intro p { margin: 0; color: var(--dn-muted); font: var(--dn-body-font); text-align: center; }
   .dn-about-intro .dn-entry-action { --dn-entry-action-width: min(100%, 240px); margin-inline: auto; }
   .dn-about-process.dn-section { padding: var(--dn-space-6) 0 0; }
@@ -224,7 +224,7 @@
     background: var(--dn-mobile-canvas);
   }
   .dn-about-showroom { padding: 32px 0; background: var(--dn-mobile-canvas); }
-  .dn-about-section-heading, .dn-about-showroom__heading, .dn-about-service-card, .dn-about-showroom__copy { min-width: 0; overflow-wrap: anywhere; }
+  .dn-about-section-heading, .dn-about-service-card, .dn-about-showroom__copy { min-width: 0; overflow-wrap: anywhere; }
   .dn-about-section-heading { text-align: left; }
   .dn-about-section-heading > p { font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
   .dn-about-section-heading h2 { font-size: var(--dn-text-subheading); }
@@ -263,15 +263,10 @@
     font: var(--dn-control-font);
   }
 
-  .dn-about-showroom__heading p {
-    max-width: none;
-    margin-inline: 0;
-  }
   .dn-about-showroom.dn-section { padding: var(--dn-space-6) 0 var(--dn-space-8); }
-  .dn-about-showroom__mobile { padding: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-lg); background: var(--dn-surface-raised); }
-  .dn-about-showroom__heading { margin-bottom: var(--dn-space-4); }
-  .dn-about-showroom__heading h2 { font-size: var(--dn-text-subheading); }
-  .dn-about-showroom__heading p { margin-block: var(--dn-space-2) 0; color: var(--dn-muted); font: var(--dn-body-font); }
+  .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map { grid-template-columns: minmax(0, 1fr); gap: var(--dn-space-4); }
+  .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map__place { padding-bottom: 0; }
+  .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map__link { position: static; width: 100%; padding: var(--dn-space-2) var(--dn-space-3); }
 }
 
 @media (prefers-reduced-motion: reduce) {
