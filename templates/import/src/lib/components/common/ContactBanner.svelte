@@ -9,15 +9,21 @@
 </script>
 
 <section class="contact-banner">
-	<img
-		src={assetHref('/assets/daynight/banners/commerce-visit.webp')}
-		srcset={`${assetHref('/assets/daynight/banners/commerce-visit-small.webp')} 360w, ${assetHref('/assets/daynight/banners/commerce-visit.webp')} 720w, ${assetHref('/assets/daynight/banners/commerce-visit-large.webp')} 1080w`}
-		sizes="(max-width: 767px) calc(100vw - 28px), 1080px"
-		alt=""
-		width="720"
-		height="405"
-		loading="lazy"
-	/>
+	<picture>
+		<source
+			media="(min-width: 768px)"
+			srcset={assetHref('/assets/daynight/banners/commerce-visit-desktop-v2.webp')}
+		/>
+		<img
+			src={assetHref('/assets/daynight/banners/commerce-visit.webp')}
+			srcset={`${assetHref('/assets/daynight/banners/commerce-visit-small.webp')} 360w, ${assetHref('/assets/daynight/banners/commerce-visit.webp')} 720w, ${assetHref('/assets/daynight/banners/commerce-visit-large.webp')} 1080w`}
+			sizes="(max-width: 767px) calc(100vw - 28px), 1080px"
+			alt=""
+			width="720"
+			height="405"
+			loading="lazy"
+		/>
+	</picture>
 	<div class="contact-banner__copy">
 		<h2>{title ?? (english ? 'Let’s discuss your car' : 'Нека обсъдим твоя автомобил')}</h2>
 		<p>
@@ -49,7 +55,13 @@
 		padding: var(--bc-space-8);
 		text-align: left;
 	}
-	.contact-banner > img {
+	.contact-banner picture {
+		display: contents;
+	}
+	.contact-banner source {
+		display: none;
+	}
+	.contact-banner img {
 		position: absolute;
 		inset: 0;
 		z-index: -2;

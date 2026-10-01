@@ -62,10 +62,9 @@
 	}
 	@media (min-width: 768px) {
 		.team-card {
-			display: grid;
-			grid-template-columns: minmax(0, 1fr);
-			grid-template-rows: 200px auto 1fr;
-			padding: var(--bc-space-3);
+			position: relative;
+			display: flex;
+			flex-direction: column;
 			border: 1px solid var(--bc-border);
 			background: var(--bc-surface-raised);
 			border-radius: var(--bc-radius-card);
@@ -76,33 +75,34 @@
 			box-shadow: var(--bc-shadow-card);
 		}
 		.team-card__portrait {
-			grid-area: 1 / 1;
-			height: 100%;
-			border-radius: var(--bc-radius-card);
+			height: var(--bc-desktop-team-image-height);
+			object-position: center 25%;
 		}
 		.team-card__body {
-			display: contents;
+			flex: 1;
+			justify-items: start;
+			align-content: start;
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-4);
+			text-align: left;
 		}
 		h3 {
-			grid-area: 2 / 1;
-			margin: var(--bc-space-4) var(--bc-space-1) 0;
-			font-size: var(--bc-text-h5);
-			text-align: left;
+			margin: 0;
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-text-cta);
 		}
 		p {
-			grid-area: 3 / 1;
-			margin: var(--bc-space-1) var(--bc-space-1);
-			font-size: var(--bc-text-label);
-			line-height: 1.5;
-			text-align: left;
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body-lg);
 		}
 		.team-card__socials {
+			position: absolute;
+			top: calc(
+				var(--bc-desktop-team-image-height) - var(--bc-control-height-primary) - var(--bc-space-3)
+			);
+			right: var(--bc-space-4);
 			display: block;
-			grid-area: 1 / 1;
-			align-self: end;
-			justify-self: center;
 			z-index: 1;
-			margin-bottom: var(--bc-space-3);
 			transition:
 				opacity var(--bc-motion-standard),
 				transform var(--bc-motion-standard);

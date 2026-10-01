@@ -56,6 +56,7 @@
 		<PageIntro
 			title={desktop.title}
 			class="inventory-hero"
+			compact
 			vehicleArtwork
 			align="center"
 			desktopDescription={desktop.subtitle}
@@ -128,7 +129,7 @@
 <style>
 	form[role='search'] {
 		width: 100%;
-		max-width: 880px;
+		max-width: var(--bc-desktop-discovery-width);
 		margin-inline: auto;
 	}
 	.inventory-results__layout,
@@ -151,7 +152,7 @@
 	.inventory-results__heading p {
 		margin: 0;
 		color: var(--bc-copy);
-		font-size: var(--bc-text-control);
+		font-size: var(--bc-text-body);
 	}
 	.inventory-results {
 		background: var(--bc-bg);

@@ -80,13 +80,13 @@
 	.site-field > span,
 	.site-field > label {
 		color: var(--bc-ink);
-		font-size: var(--bc-text-control);
-		font-weight: var(--bc-weight-heading);
+		font-size: var(--bc-text-body);
+		font-weight: var(--bc-weight-control);
 	}
 	.site-field input,
 	.site-field select,
 	.site-field textarea {
-		border-color: var(--bc-route-pill-border);
+		border-color: var(--bc-border);
 		background: var(--bc-surface);
 	}
 	.site-field input::placeholder,

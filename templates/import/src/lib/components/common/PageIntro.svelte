@@ -61,11 +61,7 @@
 		>{/if}
 	<div class="site-container site-intro__content">
 		<h1 id={titleId}>{title}</h1>
-		{#if description}<p>{description}</p>{:else if desktopDescription}<p
-				class="site-intro__desktop-description"
-			>
-				{desktopDescription}
-			</p>{/if}
+		{#if desktopDescription ?? description}<p>{desktopDescription ?? description}</p>{/if}
 		{#if desktopActions}<div class="site-intro__desktop-actions">
 				{@render desktopActions()}
 			</div>{/if}
@@ -79,7 +75,6 @@
 </section>
 
 <style>
-	.site-intro__desktop-description,
 	.site-intro__desktop-actions,
 	.site-intro__desktop-secondary {
 		display: none;
@@ -150,21 +145,23 @@
 			display: flex;
 			align-items: center;
 			min-height: var(--bc-desktop-page-hero-height);
-			padding-block: var(--bc-space-8);
+			padding-block: var(--bc-space-6);
 		}
 		.site-intro--compact {
 			min-height: var(--bc-desktop-page-hero-height-compact);
 		}
 		.site-intro--interactive .site-intro__content {
 			display: grid;
-			gap: var(--bc-space-5);
+			gap: var(--bc-space-4);
 		}
 		.site-intro--interactive p {
-			min-height: 2lh;
 			margin-block: 0;
 		}
-		.site-intro__desktop-description {
-			display: block;
+		p {
+			max-width: 76ch;
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body-lg);
+			color: inherit;
 		}
 		.site-intro__desktop-actions {
 			display: flex;

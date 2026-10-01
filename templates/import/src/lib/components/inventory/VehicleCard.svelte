@@ -220,13 +220,45 @@
 		color: var(--bc-accent);
 	}
 	@media (min-width: 768px) {
+		h2 {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-title);
+			line-height: 1.4;
+		}
 		h2 a {
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 2;
-			line-clamp: 2;
-			white-space: normal;
-			min-height: 2lh;
+			display: block;
+			white-space: nowrap;
+		}
+		.site-vehicle-card__body {
+			gap: var(--bc-space-2);
+		}
+		.site-vehicle-card__price {
+			margin-top: var(--bc-space-1);
+		}
+		ul {
+			flex-wrap: nowrap;
+			gap: var(--bc-space-2);
+		}
+		li {
+			min-width: 0;
+			overflow: hidden;
+			padding: 0;
+			background: transparent;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		li:first-child {
+			flex-shrink: 0;
+		}
+		li + li::before {
+			content: '·';
+			margin-right: var(--bc-space-2);
+			color: var(--bc-muted);
+		}
+		strong {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-price);
+			letter-spacing: var(--bc-tracking-tight);
 		}
 		.site-vehicle-card__media {
 			aspect-ratio: 1.6;

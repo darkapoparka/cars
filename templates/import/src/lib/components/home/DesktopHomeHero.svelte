@@ -263,20 +263,21 @@
 <style>
 	.home-hero__box {
 		width: 100%;
-		max-width: 880px;
+		max-width: var(--bc-desktop-discovery-width);
 		margin-inline: auto;
 		text-align: left;
 	}
 	.home-hero__box :global(.mobile-mode-tabs) {
-		margin-inline: var(--bc-space-6);
+		margin-inline: 0;
 	}
 	.home-hero__panel {
 		display: grid;
 		align-content: center;
 		gap: var(--bc-space-4);
-		min-height: calc(var(--bc-control-height-hero) * 2 + var(--bc-space-6) * 2);
+		min-height: var(--bc-desktop-home-panel-height);
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
+		border-top: 0;
+		border-radius: 0 0 var(--bc-radius-panel) var(--bc-radius-panel);
 		padding: var(--bc-space-5);
 		color: var(--bc-ink);
 		background: var(--bc-surface-raised);
@@ -318,7 +319,7 @@
 	}
 	.home-hero__search-trigger {
 		min-height: var(--bc-control-height-hero);
-		border-color: var(--bc-route-pill-border);
+		border-color: var(--bc-border);
 	}
 	.home-hero__search :global(.home-hero__search-action) {
 		min-width: 160px;

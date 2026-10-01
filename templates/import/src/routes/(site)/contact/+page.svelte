@@ -19,18 +19,21 @@
 	const english = $derived(data.locale === 'en');
 	const channels = $derived([
 		{
+			kind: 'phone',
 			href: data.site.contact.phoneHref,
 			title: english ? 'Call us' : 'Обади се',
 			text: data.site.contact.phone,
 			icon: Phone
 		},
 		{
+			kind: 'visit',
 			href: data.site.contact.mapHref,
 			title: english ? 'Visit the showroom' : 'Посети ни',
 			text: data.site.contact.address,
 			icon: MapPin
 		},
 		{
+			kind: 'message',
 			href: data.site.contact.messageHref,
 			title: english ? 'Message us' : 'Пиши ни',
 			text: 'Viber',
@@ -71,7 +74,7 @@
 		>
 			<div class="contact-channels">
 				{#each channels as channel (channel.href)}
-					<a class="contact-channel" href={linkHref(channel.href)}>
+					<a class="contact-channel" data-channel={channel.kind} href={linkHref(channel.href)}>
 						<span class="contact-channel__icon"
 							><channel.icon size={26} strokeWidth={1.6} aria-hidden="true" /></span
 						>
@@ -189,8 +192,10 @@
 			display: grid;
 			grid-template-columns: var(--bc-control-height-primary) minmax(0, 1fr);
 			align-items: start;
+			align-content: start;
+			grid-template-rows: auto auto;
 			gap: var(--bc-space-2) var(--bc-space-4);
-			padding: var(--bc-space-6);
+			padding: var(--bc-space-5);
 			text-align: left;
 		}
 		.contact-channel__icon {
@@ -201,7 +206,23 @@
 			grid-column: 2;
 		}
 		.contact-channel h2 {
-			font-size: var(--bc-text-h5);
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-text-body);
+			font-weight: var(--bc-weight-body);
+			color: var(--bc-copy);
+		}
+		.contact-channel p {
+			font-size: var(--bc-desktop-service-title);
+			font-weight: var(--bc-weight-heading);
+			line-height: var(--bc-leading-control);
+			color: var(--bc-ink);
+		}
+		.contact-channel[data-channel='visit'] p {
+			font-size: var(--bc-text-body-lg);
+			font-weight: var(--bc-weight-body);
+		}
+		.contact-overview {
+			padding-block: var(--bc-space-6);
 		}
 		.contact-channel:hover {
 			background: var(--bc-card-bg);

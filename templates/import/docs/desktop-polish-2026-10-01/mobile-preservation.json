@@ -1,0 +1,2063 @@
+{
+	"origin": "http://127.0.0.1:6790",
+	"height": 844,
+	"comparison": "Before and after the desktop patch with fresh matching browser state",
+	"results": [
+		{
+			"route": "home",
+			"width": 320,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Купи автомобил",
+						"x": 15,
+						"y": 91.796875,
+						"width": 1,
+						"height": 86.375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "40px",
+						"weight": "600"
+					},
+					{
+						"text": "Марки",
+						"x": 14,
+						"y": 615.9375,
+						"width": 292,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Типове",
+						"x": 14,
+						"y": 1167.53125,
+						"width": 292,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Day Night Auto Groupв YouTube",
+						"x": 29,
+						"y": 1854.125,
+						"width": 221.109375,
+						"height": 21.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Клиентски отзиви",
+						"x": 14,
+						"y": 2082.390625,
+						"width": 292,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Запази консултация",
+						"x": 30,
+						"y": 2455.5625,
+						"width": 177.953125,
+						"height": 23,
+						"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Полезно за автомобила",
+						"x": 14,
+						"y": 2623.8125,
+						"width": 292,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Какво проверява DAY NIGHT AUTO GROUP преди внос на автомобил от Европа",
+						"x": 29,
+						"y": 2858,
+						"width": 226.953125,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					},
+					{
+						"text": "Какво означава „готов за регистрация“",
+						"x": 297.953125,
+						"y": 2858,
+						"width": 226.953125,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					},
+					{
+						"text": "Как DAY NIGHT AUTO GROUP преглежда клиентски автомобил",
+						"x": 566.90625,
+						"y": 2858,
+						"width": 226.953125,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/mobile/photosorg/573/2/21754658377544573_w7.webp",
+					"/mobile/photosorg/460/2/21775141376627460_BG.webp",
+					"/assets/images/brand/brand-1.webp",
+					"/assets/images/brand/brand-2.webp",
+					"/assets/images/brand/brand-3.webp",
+					"/assets/daynight/brands/porsche.webp",
+					"/assets/images/brand/brand-10.webp",
+					"/assets/images/brand/brand-4.webp"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Купи автомобил",
+						"x": 15,
+						"y": 91.796875,
+						"width": 1,
+						"height": 86.375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "40px",
+						"weight": "600"
+					},
+					{
+						"text": "Марки",
+						"x": 14,
+						"y": 615.9375,
+						"width": 292,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Типове",
+						"x": 14,
+						"y": 1167.53125,
+						"width": 292,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Day Night Auto Groupв YouTube",
+						"x": 29,
+						"y": 1854.125,
+						"width": 221.109375,
+						"height": 21.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Клиентски отзиви",
+						"x": 14,
+						"y": 2082.390625,
+						"width": 292,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Запази консултация",
+						"x": 30,
+						"y": 2455.5625,
+						"width": 177.953125,
+						"height": 23,
+						"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Полезно за автомобила",
+						"x": 14,
+						"y": 2623.8125,
+						"width": 292,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Какво проверява DAY NIGHT AUTO GROUP преди внос на автомобил от Европа",
+						"x": 29,
+						"y": 2858,
+						"width": 226.953125,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					},
+					{
+						"text": "Какво означава „готов за регистрация“",
+						"x": 297.953125,
+						"y": 2858,
+						"width": 226.953125,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					},
+					{
+						"text": "Как DAY NIGHT AUTO GROUP преглежда клиентски автомобил",
+						"x": 566.90625,
+						"y": 2858,
+						"width": 226.953125,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/mobile/photosorg/573/2/21754658377544573_w7.webp",
+					"/mobile/photosorg/460/2/21775141376627460_BG.webp",
+					"/assets/images/brand/brand-1.webp",
+					"/assets/images/brand/brand-2.webp",
+					"/assets/images/brand/brand-3.webp",
+					"/assets/daynight/brands/porsche.webp",
+					"/assets/images/brand/brand-10.webp",
+					"/assets/images/brand/brand-4.webp"
+				]
+			}
+		},
+		{
+			"route": "inventory",
+			"width": 320,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Автомобили",
+						"x": 13,
+						"y": -1,
+						"width": 1,
+						"height": 1,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "40px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X5 40i M Sport Shadow Line",
+						"x": 146.625,
+						"y": 124,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X4 M Competition",
+						"x": 146.625,
+						"y": 294,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi SQ5 30T Black Optic",
+						"x": 146.625,
+						"y": 464,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi A7 55TFSI Technik Black Optic",
+						"x": 146.625,
+						"y": 634,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi Q8 55TFSI Technik Black Optic",
+						"x": 146.625,
+						"y": 804,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+						"x": 146.625,
+						"y": 974,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X5 40i Black Vermilion",
+						"x": 146.625,
+						"y": 1144,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLC 300 4M AMG Package",
+						"x": 146.625,
+						"y": 1314,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+						"x": 146.625,
+						"y": 1484,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X3 30e xDrive",
+						"x": 146.625,
+						"y": 1654,
+						"width": 149.375,
+						"height": 22,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW 850 GC xDrive Shadow Line",
+						"x": 146.625,
+						"y": 1818,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLC 300 4M AMG Package",
+						"x": 146.625,
+						"y": 1988,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/delivery/vehicles/card-48-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+					"/assets/daynight/delivery/vehicles/card-38-400.webp"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Автомобили",
+						"x": 13,
+						"y": -1,
+						"width": 1,
+						"height": 1,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "40px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X5 40i M Sport Shadow Line",
+						"x": 146.625,
+						"y": 124,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X4 M Competition",
+						"x": 146.625,
+						"y": 294,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi SQ5 30T Black Optic",
+						"x": 146.625,
+						"y": 464,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi A7 55TFSI Technik Black Optic",
+						"x": 146.625,
+						"y": 634,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi Q8 55TFSI Technik Black Optic",
+						"x": 146.625,
+						"y": 804,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+						"x": 146.625,
+						"y": 974,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X5 40i Black Vermilion",
+						"x": 146.625,
+						"y": 1144,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLC 300 4M AMG Package",
+						"x": 146.625,
+						"y": 1314,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+						"x": 146.625,
+						"y": 1484,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X3 30e xDrive",
+						"x": 146.625,
+						"y": 1654,
+						"width": 149.375,
+						"height": 22,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW 850 GC xDrive Shadow Line",
+						"x": 146.625,
+						"y": 1818,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLC 300 4M AMG Package",
+						"x": 146.625,
+						"y": 1988,
+						"width": 149.375,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/delivery/vehicles/card-48-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+					"/assets/daynight/delivery/vehicles/card-38-400.webp"
+				]
+			}
+		},
+		{
+			"route": "services",
+			"width": 320,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Услуги",
+						"x": 14,
+						"y": 68,
+						"width": 292,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Подбрани автомобили",
+						"x": 128.5,
+						"y": 241,
+						"width": 164.5,
+						"height": 45,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Проверка на обява",
+						"x": 128.5,
+						"y": 448,
+						"width": 164.5,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Продажба на автомобил",
+						"x": 128.5,
+						"y": 634,
+						"width": 164.5,
+						"height": 45,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Документи и регистрация",
+						"x": 128.5,
+						"y": 841,
+						"width": 164.5,
+						"height": 45,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Огледи с уговорка",
+						"x": 128.5,
+						"y": 1048,
+						"width": 164.5,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Сравнение на модели",
+						"x": 128.5,
+						"y": 1234,
+						"width": 164.5,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Нека обсъдим твоя автомобил",
+						"x": 30,
+						"y": 1439,
+						"width": 260,
+						"height": 76.78125,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "32px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/services/premium-cars-banner-generated.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/daynight/services/premium-cars-banner-generated.webp",
+					"/assets/daynight/services/evaluate-link-service.webp",
+					"/assets/daynight/services/sell-car-service.webp",
+					"/assets/daynight/footer-premium-request-v2.webp"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Услуги",
+						"x": 14,
+						"y": 68,
+						"width": 292,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Подбрани автомобили",
+						"x": 128.5,
+						"y": 241,
+						"width": 164.5,
+						"height": 45,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Проверка на обява",
+						"x": 128.5,
+						"y": 448,
+						"width": 164.5,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Продажба на автомобил",
+						"x": 128.5,
+						"y": 634,
+						"width": 164.5,
+						"height": 45,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Документи и регистрация",
+						"x": 128.5,
+						"y": 841,
+						"width": 164.5,
+						"height": 45,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Огледи с уговорка",
+						"x": 128.5,
+						"y": 1048,
+						"width": 164.5,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Сравнение на модели",
+						"x": 128.5,
+						"y": 1234,
+						"width": 164.5,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Нека обсъдим твоя автомобил",
+						"x": 30,
+						"y": 1439,
+						"width": 260,
+						"height": 76.78125,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "32px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/services/premium-cars-banner-generated.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/daynight/services/premium-cars-banner-generated.webp",
+					"/assets/daynight/services/evaluate-link-service.webp",
+					"/assets/daynight/services/sell-car-service.webp",
+					"/assets/daynight/footer-premium-request-v2.webp"
+				]
+			}
+		},
+		{
+			"route": "about",
+			"width": 320,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "За нас",
+						"x": 14,
+						"y": 68,
+						"width": 292,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Екипът",
+						"x": 115.0625,
+						"y": 284,
+						"width": 89.859375,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Кристиян Кирилов",
+						"x": 131,
+						"y": 346.59375,
+						"width": 162,
+						"height": 62.375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Мария Петрова",
+						"x": 131,
+						"y": 589.375,
+						"width": 157.296875,
+						"height": 31.1875,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Александър Иванов",
+						"x": 131,
+						"y": 744.96875,
+						"width": 162,
+						"height": 62.375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Как работим",
+						"x": 84.625,
+						"y": 912.34375,
+						"width": 150.734375,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Заявка",
+						"x": 82,
+						"y": 977.9375,
+						"width": 208,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Проверка",
+						"x": 82,
+						"y": 1138.9375,
+						"width": 208,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Решение",
+						"x": 82,
+						"y": 1299.9375,
+						"width": 208,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Оглед и предаване",
+						"x": 82,
+						"y": 1460.9375,
+						"width": 208,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Посети Day Night Auto Group",
+						"x": 30,
+						"y": 1641.9375,
+						"width": 260,
+						"height": 76.78125,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "32px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/hero/about-daynight-process-banner.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/icons/brands/facebook.svg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/icons/brands/tiktok.svg",
+					"/assets/daynight/team/kristian-kirilov-public.jpg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/daynight/team/demo-mariya.png",
+					"/assets/daynight/team/demo-aleksandar.png"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "За нас",
+						"x": 14,
+						"y": 68,
+						"width": 292,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Екипът",
+						"x": 115.0625,
+						"y": 284,
+						"width": 89.859375,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Кристиян Кирилов",
+						"x": 131,
+						"y": 346.59375,
+						"width": 162,
+						"height": 62.375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Мария Петрова",
+						"x": 131,
+						"y": 589.375,
+						"width": 157.296875,
+						"height": 31.1875,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Александър Иванов",
+						"x": 131,
+						"y": 744.96875,
+						"width": 162,
+						"height": 62.375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Как работим",
+						"x": 84.625,
+						"y": 912.34375,
+						"width": 150.734375,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Заявка",
+						"x": 82,
+						"y": 977.9375,
+						"width": 208,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Проверка",
+						"x": 82,
+						"y": 1138.9375,
+						"width": 208,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Решение",
+						"x": 82,
+						"y": 1299.9375,
+						"width": 208,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Оглед и предаване",
+						"x": 82,
+						"y": 1460.9375,
+						"width": 208,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Посети Day Night Auto Group",
+						"x": 30,
+						"y": 1641.9375,
+						"width": 260,
+						"height": 76.78125,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "32px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/hero/about-daynight-process-banner.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/icons/brands/facebook.svg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/icons/brands/tiktok.svg",
+					"/assets/daynight/team/kristian-kirilov-public.jpg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/daynight/team/demo-mariya.png",
+					"/assets/daynight/team/demo-aleksandar.png"
+				]
+			}
+		},
+		{
+			"route": "contact",
+			"width": 320,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Контакти",
+						"x": 14,
+						"y": 68,
+						"width": 292,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/proof-studio-import-handoff.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/icons/brands/facebook.svg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/icons/brands/tiktok.svg"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Контакти",
+						"x": 14,
+						"y": 68,
+						"width": 292,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/proof-studio-import-handoff.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/icons/brands/facebook.svg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/icons/brands/tiktok.svg"
+				]
+			}
+		},
+		{
+			"route": "home",
+			"width": 390,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Купи автомобил",
+						"x": 15,
+						"y": 91.796875,
+						"width": 1,
+						"height": 86.375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "40px",
+						"weight": "600"
+					},
+					{
+						"text": "Марки",
+						"x": 14,
+						"y": 648.734375,
+						"width": 362,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Типове",
+						"x": 14,
+						"y": 1200.328125,
+						"width": 362,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Day Night Auto Groupв YouTube",
+						"x": 29,
+						"y": 1886.921875,
+						"width": 221.109375,
+						"height": 21.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Клиентски отзиви",
+						"x": 14,
+						"y": 2149.84375,
+						"width": 362,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Запази консултация",
+						"x": 30,
+						"y": 2473.421875,
+						"width": 201.265625,
+						"height": 26.015625,
+						"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "22.62px",
+						"weight": "600"
+					},
+					{
+						"text": "Полезно за автомобила",
+						"x": 14,
+						"y": 2681.046875,
+						"width": 362,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Какво проверява DAY NIGHT AUTO GROUP преди внос на автомобил от Европа",
+						"x": 29,
+						"y": 2949.875,
+						"width": 288.546875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					},
+					{
+						"text": "Какво означава „готов за регистрация“",
+						"x": 359.546875,
+						"y": 2949.875,
+						"width": 288.546875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					},
+					{
+						"text": "Как DAY NIGHT AUTO GROUP преглежда клиентски автомобил",
+						"x": 690.09375,
+						"y": 2949.875,
+						"width": 288.546875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/mobile/photosorg/573/2/21754658377544573_w7.webp",
+					"/mobile/photosorg/460/2/21775141376627460_BG.webp",
+					"/assets/images/brand/brand-1.webp",
+					"/assets/images/brand/brand-2.webp",
+					"/assets/images/brand/brand-3.webp",
+					"/assets/daynight/brands/porsche.webp",
+					"/assets/images/brand/brand-10.webp",
+					"/assets/images/brand/brand-4.webp"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Купи автомобил",
+						"x": 15,
+						"y": 91.796875,
+						"width": 1,
+						"height": 86.375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "40px",
+						"weight": "600"
+					},
+					{
+						"text": "Марки",
+						"x": 14,
+						"y": 648.734375,
+						"width": 362,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Типове",
+						"x": 14,
+						"y": 1200.328125,
+						"width": 362,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Day Night Auto Groupв YouTube",
+						"x": 29,
+						"y": 1886.921875,
+						"width": 221.109375,
+						"height": 21.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Клиентски отзиви",
+						"x": 14,
+						"y": 2149.84375,
+						"width": 362,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Запази консултация",
+						"x": 30,
+						"y": 2473.421875,
+						"width": 201.265625,
+						"height": 26.015625,
+						"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "22.62px",
+						"weight": "600"
+					},
+					{
+						"text": "Полезно за автомобила",
+						"x": 14,
+						"y": 2681.046875,
+						"width": 362,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Какво проверява DAY NIGHT AUTO GROUP преди внос на автомобил от Европа",
+						"x": 29,
+						"y": 2949.875,
+						"width": 288.546875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					},
+					{
+						"text": "Какво означава „готов за регистрация“",
+						"x": 359.546875,
+						"y": 2949.875,
+						"width": 288.546875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					},
+					{
+						"text": "Как DAY NIGHT AUTO GROUP преглежда клиентски автомобил",
+						"x": 690.09375,
+						"y": 2949.875,
+						"width": 288.546875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "17px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/mobile/photosorg/573/2/21754658377544573_w7.webp",
+					"/mobile/photosorg/460/2/21775141376627460_BG.webp",
+					"/assets/images/brand/brand-1.webp",
+					"/assets/images/brand/brand-2.webp",
+					"/assets/images/brand/brand-3.webp",
+					"/assets/daynight/brands/porsche.webp",
+					"/assets/images/brand/brand-10.webp",
+					"/assets/images/brand/brand-4.webp"
+				]
+			}
+		},
+		{
+			"route": "inventory",
+			"width": 390,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Автомобили",
+						"x": 13,
+						"y": -1,
+						"width": 1,
+						"height": 1,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "40px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X5 40i M Sport Shadow Line",
+						"x": 178.03125,
+						"y": 126,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X4 M Competition",
+						"x": 178.03125,
+						"y": 300,
+						"width": 185.96875,
+						"height": 22,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi SQ5 30T Black Optic",
+						"x": 178.03125,
+						"y": 456,
+						"width": 185.96875,
+						"height": 22,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi A7 55TFSI Technik Black Optic",
+						"x": 178.03125,
+						"y": 612,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi Q8 55TFSI Technik Black Optic",
+						"x": 178.03125,
+						"y": 786,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+						"x": 178.03125,
+						"y": 960,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X5 40i Black Vermilion",
+						"x": 178.03125,
+						"y": 1134,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLC 300 4M AMG Package",
+						"x": 178.03125,
+						"y": 1308,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+						"x": 178.03125,
+						"y": 1482,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X3 30e xDrive",
+						"x": 178.03125,
+						"y": 1656,
+						"width": 185.96875,
+						"height": 22,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW 850 GC xDrive Shadow Line",
+						"x": 178.03125,
+						"y": 1824,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLC 300 4M AMG Package",
+						"x": 178.03125,
+						"y": 1998,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/delivery/vehicles/card-48-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+					"/assets/daynight/delivery/vehicles/card-38-400.webp"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Автомобили",
+						"x": 13,
+						"y": -1,
+						"width": 1,
+						"height": 1,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "40px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X5 40i M Sport Shadow Line",
+						"x": 178.03125,
+						"y": 126,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X4 M Competition",
+						"x": 178.03125,
+						"y": 300,
+						"width": 185.96875,
+						"height": 22,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi SQ5 30T Black Optic",
+						"x": 178.03125,
+						"y": 456,
+						"width": 185.96875,
+						"height": 22,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi A7 55TFSI Technik Black Optic",
+						"x": 178.03125,
+						"y": 612,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Audi Q8 55TFSI Technik Black Optic",
+						"x": 178.03125,
+						"y": 786,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package",
+						"x": 178.03125,
+						"y": 960,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X5 40i Black Vermilion",
+						"x": 178.03125,
+						"y": 1134,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLC 300 4M AMG Package",
+						"x": 178.03125,
+						"y": 1308,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz CLS 53 AMG 4M Night Package",
+						"x": 178.03125,
+						"y": 1482,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW X3 30e xDrive",
+						"x": 178.03125,
+						"y": 1656,
+						"width": 185.96875,
+						"height": 22,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "BMW 850 GC xDrive Shadow Line",
+						"x": 178.03125,
+						"y": 1824,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Mercedes-Benz GLC 300 4M AMG Package",
+						"x": 178.03125,
+						"y": 1998,
+						"width": 185.96875,
+						"height": 44,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/delivery/vehicles/card-48-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-bmw-x4m-cutout-v2-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-audi-sq5-cutout-400.webp",
+					"/assets/daynight/delivery/vehicles/inventory-audi-a7-cutout-400.webp",
+					"/assets/daynight/delivery/vehicles/card-38-400.webp"
+				]
+			}
+		},
+		{
+			"route": "services",
+			"width": 390,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Услуги",
+						"x": 14,
+						"y": 68,
+						"width": 362,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Подбрани автомобили",
+						"x": 153,
+						"y": 241,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Проверка на обява",
+						"x": 153,
+						"y": 427,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Продажба на автомобил",
+						"x": 153,
+						"y": 613,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Документи и регистрация",
+						"x": 153,
+						"y": 799,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Огледи с уговорка",
+						"x": 153,
+						"y": 985,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Сравнение на модели",
+						"x": 153,
+						"y": 1171,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Нека обсъдим твоя автомобил",
+						"x": 30,
+						"y": 1376,
+						"width": 330,
+						"height": 76.78125,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "32px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/services/premium-cars-banner-generated.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/daynight/services/premium-cars-banner-generated.webp",
+					"/assets/daynight/services/evaluate-link-service.webp",
+					"/assets/daynight/services/sell-car-service.webp",
+					"/assets/daynight/footer-premium-request-v2.webp"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Услуги",
+						"x": 14,
+						"y": 68,
+						"width": 362,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Подбрани автомобили",
+						"x": 153,
+						"y": 241,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Проверка на обява",
+						"x": 153,
+						"y": 427,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Продажба на автомобил",
+						"x": 153,
+						"y": 613,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Документи и регистрация",
+						"x": 153,
+						"y": 799,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Огледи с уговорка",
+						"x": 153,
+						"y": 985,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Сравнение на модели",
+						"x": 153,
+						"y": 1171,
+						"width": 210,
+						"height": 22.5,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "18px",
+						"weight": "600"
+					},
+					{
+						"text": "Нека обсъдим твоя автомобил",
+						"x": 30,
+						"y": 1376,
+						"width": 330,
+						"height": 76.78125,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "32px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/services/premium-cars-banner-generated.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/daynight/services/premium-cars-banner-generated.webp",
+					"/assets/daynight/services/evaluate-link-service.webp",
+					"/assets/daynight/services/sell-car-service.webp",
+					"/assets/daynight/footer-premium-request-v2.webp"
+				]
+			}
+		},
+		{
+			"route": "about",
+			"width": 390,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "За нас",
+						"x": 14,
+						"y": 68,
+						"width": 362,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Екипът",
+						"x": 150.0625,
+						"y": 260,
+						"width": 89.859375,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Кристиян Кирилов",
+						"x": 131,
+						"y": 322.59375,
+						"width": 187.15625,
+						"height": 31.1875,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Мария Петрова",
+						"x": 131,
+						"y": 508.1875,
+						"width": 157.296875,
+						"height": 31.1875,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Александър Иванов",
+						"x": 131,
+						"y": 678.1875,
+						"width": 191.171875,
+						"height": 31.1875,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Как работим",
+						"x": 119.625,
+						"y": 828.78125,
+						"width": 150.734375,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Заявка",
+						"x": 82,
+						"y": 894.375,
+						"width": 278,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Проверка",
+						"x": 82,
+						"y": 1029.375,
+						"width": 278,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Решение",
+						"x": 82,
+						"y": 1164.375,
+						"width": 278,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Оглед и предаване",
+						"x": 82,
+						"y": 1325.375,
+						"width": 278,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Посети Day Night Auto Group",
+						"x": 30,
+						"y": 1506.375,
+						"width": 330,
+						"height": 76.78125,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "32px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/hero/about-daynight-process-banner.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/icons/brands/facebook.svg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/icons/brands/tiktok.svg",
+					"/assets/daynight/team/kristian-kirilov-public.jpg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/daynight/team/demo-mariya.png",
+					"/assets/daynight/team/demo-aleksandar.png"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "За нас",
+						"x": 14,
+						"y": 68,
+						"width": 362,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Екипът",
+						"x": 150.0625,
+						"y": 260,
+						"width": 89.859375,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Кристиян Кирилов",
+						"x": 131,
+						"y": 322.59375,
+						"width": 187.15625,
+						"height": 31.1875,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Мария Петрова",
+						"x": 131,
+						"y": 508.1875,
+						"width": 157.296875,
+						"height": 31.1875,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Александър Иванов",
+						"x": 131,
+						"y": 678.1875,
+						"width": 191.171875,
+						"height": 31.1875,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "24px",
+						"weight": "600"
+					},
+					{
+						"text": "Как работим",
+						"x": 119.625,
+						"y": 828.78125,
+						"width": 150.734375,
+						"height": 33.59375,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					},
+					{
+						"text": "Заявка",
+						"x": 82,
+						"y": 894.375,
+						"width": 278,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Проверка",
+						"x": 82,
+						"y": 1029.375,
+						"width": 278,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Решение",
+						"x": 82,
+						"y": 1164.375,
+						"width": 278,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Оглед и предаване",
+						"x": 82,
+						"y": 1325.375,
+						"width": 278,
+						"height": 27,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "20px",
+						"weight": "600"
+					},
+					{
+						"text": "Посети Day Night Auto Group",
+						"x": 30,
+						"y": 1506.375,
+						"width": 330,
+						"height": 76.78125,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "32px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/hero/about-daynight-process-banner.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/icons/brands/facebook.svg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/icons/brands/tiktok.svg",
+					"/assets/daynight/team/kristian-kirilov-public.jpg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/daynight/team/demo-mariya.png",
+					"/assets/daynight/team/demo-aleksandar.png"
+				]
+			}
+		},
+		{
+			"route": "contact",
+			"width": 390,
+			"changedPixels": 0,
+			"geometryEqual": true,
+			"before": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Контакти",
+						"x": 14,
+						"y": 68,
+						"width": 362,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/proof-studio-import-handoff.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/icons/brands/facebook.svg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/icons/brands/tiktok.svg"
+				]
+			},
+			"after": {
+				"overflow": false,
+				"headings": [
+					{
+						"text": "Контакти",
+						"x": 14,
+						"y": 68,
+						"width": 362,
+						"height": 32,
+						"font": "\"Sofia Sans SemiCondensed\", \"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+						"size": "28px",
+						"weight": "600"
+					}
+				],
+				"images": [
+					"/assets/daynight/proof-studio-import-handoff.webp",
+					"/assets/daynight/brand/daynight-logo-generated-600.webp",
+					"/assets/icons/brands/facebook.svg",
+					"/assets/icons/brands/instagram.svg",
+					"/assets/icons/brands/tiktok.svg"
+				]
+			}
+		}
+	]
+}

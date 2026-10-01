@@ -84,7 +84,14 @@
 			align-content: start;
 		}
 		.process-steps--horizontal .process-steps__number {
-			background: var(--bc-bg-strong);
+			background: var(--bc-accent-tint);
+			color: var(--bc-accent);
+		}
+		.process-steps--horizontal h3 {
+			font-family: var(--bc-font-body);
+		}
+		.process-steps--horizontal p {
+			font-size: var(--bc-text-body);
 		}
 	}
 	@media (max-width: 575px) {

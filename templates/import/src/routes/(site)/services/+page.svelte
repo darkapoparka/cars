@@ -1,13 +1,11 @@
 <script lang="ts">
-	import { assetHref } from '$lib/utils/assets';
 	import type { PageProps } from './$types';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ContactBanner from '$lib/components/common/ContactBanner.svelte';
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import Check from '@lucide/svelte/icons/check';
+	import ServiceCard from '$lib/components/services/ServiceCard.svelte';
 	import SearchField from '$lib/components/common/SearchField.svelte';
 	import Action from '$lib/components/common/Action.svelte';
-	import { linkHref } from '$lib/utils/links';
+
 	let { data }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
 	let query = $derived(data.serviceQuery);
@@ -35,7 +33,7 @@
 		title={english ? 'Services for your car' : 'Услуги за твоя автомобил'}
 		mobileTitle={english ? 'Services' : 'Услуги'}
 		image="/assets/daynight/services/premium-cars-banner-generated.webp"
-		desktopImage="/assets/daynight/banners/services-desktop-v2.webp"
+		desktopImage="/assets/daynight/banners/services-studio-desktop.webp"
 		align="center"
 		desktopDescription={data.directory.description}
 	>
@@ -73,32 +71,7 @@
 	>
 		{#each matching as service, index (service.id)}
 			{@const detail = data.directory.details[service.id]}
-			<article class="service-card">
-				<a href={linkHref(detail.href)}>
-					<img
-						src={assetHref(service.image)}
-						alt=""
-						width="900"
-						height="500"
-						loading={index < 3 ? 'eager' : 'lazy'}
-						decoding="async"
-					/>
-					<div class="service-card__body">
-						<h2>{service.title}</h2>
-						<p>{service.description}</p>
-						<ul class="service-card__includes site-desktop-only">
-							{#each detail.includes as item (item)}<li>
-									<Check size={18} aria-hidden="true" />{item}
-								</li>{/each}
-						</ul>
-						<span class="service-card__cta"
-							><span class="site-desktop-only">{detail.action}</span><span class="site-mobile-only"
-								>{english ? 'Learn more' : 'Виж повече'}</span
-							><ArrowRight size={18} aria-hidden="true" /></span
-						>
-					</div>
-				</a>
-			</article>
+			<ServiceCard {service} {detail} {english} priority={index < 3} />
 		{/each}
 		{#if !matching.length}<div class="service-empty">
 				<p>{data.directory.empty}</p>
@@ -121,99 +94,33 @@
 	}
 	.service-search {
 		width: 100%;
-		max-width: 640px;
+		max-width: var(--bc-desktop-service-search-width);
 	}
 	.service-results-heading {
 		align-items: center;
 		gap: var(--bc-space-4);
-		padding-top: var(--bc-space-8);
+		padding-top: var(--bc-space-6);
 	}
 	.service-results-heading > span {
 		color: var(--bc-copy);
 		margin-left: auto;
-		font-size: var(--bc-text-control);
-	}
-	.service-card__includes {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 var(--bc-space-4);
-		color: var(--bc-copy);
-	}
-	.service-card__includes li {
-		display: flex;
-		align-items: start;
-		gap: var(--bc-space-2);
-	}
-	.service-card__includes :global(svg) {
-		flex: none;
-		margin-top: 3px;
-		color: var(--bc-accent);
+		font-size: var(--bc-text-body);
 	}
 	.service-empty {
 		grid-column: 1 / -1;
 		padding-block: var(--bc-space-8);
 		text-align: center;
 	}
-	.services-grid {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: var(--bc-space-6);
-	}
-	.service-card {
-		min-width: 0;
-		overflow: hidden;
-		border-radius: var(--bc-radius-panel);
-		background: var(--bc-surface);
-	}
-	.service-card > a {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		color: var(--bc-ink);
-		text-decoration: none;
-	}
-	.service-card img {
-		display: block;
-		width: 100%;
-		height: auto;
-		aspect-ratio: 1.8;
-		object-fit: cover;
-	}
-	.service-card__body {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--bc-space-4);
-		padding: var(--bc-space-6);
-		text-align: center;
-	}
-	.service-card h2 {
-		margin: 0;
-		font: var(--bc-weight-heading) var(--bc-text-h4)/1.3 var(--bc-font-heading);
-	}
-	p {
+	.service-empty p {
 		margin: 0 0 var(--bc-space-2);
 		color: var(--bc-copy);
 		font-size: var(--bc-text-body-lg);
 		line-height: var(--bc-leading-body-lg);
 	}
-	.service-card__cta {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--bc-space-2);
-		min-height: var(--bc-control-height-standard);
-		padding: 0 var(--bc-space-4);
-		margin-top: auto;
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-ink);
-		color: var(--bc-white);
-		font-size: var(--bc-text-cta);
-		font-weight: var(--bc-weight-heading);
-	}
-	a:hover .service-card__cta {
-		background: var(--bc-accent);
-		color: var(--bc-accent-contrast);
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: var(--bc-space-6);
 	}
 	@media (max-width: 1023px) {
 		.services-grid {
@@ -225,99 +132,15 @@
 			display: flex;
 		}
 		.services-grid {
-			padding-top: var(--bc-space-6);
-		}
-		.service-card {
-			border-radius: var(--bc-radius-card);
-			border: 1px solid var(--bc-border);
-			background: var(--bc-card-bg);
-		}
-		.service-card__body {
-			gap: var(--bc-space-3);
-			align-items: start;
-			text-align: left;
-		}
-		.service-card__includes {
-			display: grid;
-			gap: var(--bc-space-2);
-		}
-		.service-card__cta {
-			min-height: var(--bc-control-height-standard);
-			padding: var(--bc-space-2) var(--bc-space-4);
-			border-radius: var(--bc-radius-md);
-			background: var(--bc-control);
-			color: var(--bc-ink);
-			font-size: var(--bc-text-control);
-			font-weight: var(--bc-weight-action);
-		}
-		a:hover .service-card__cta {
-			background: var(--bc-accent);
-			color: var(--bc-accent-contrast);
+			padding-top: var(--bc-space-4);
 		}
 	}
 	@media (max-width: 767.98px) {
 		.services-grid {
 			grid-template-columns: 1fr;
 		}
-		.service-card__body {
-			padding: var(--bc-space-5);
-		}
-		p {
+		.service-empty p {
 			font-size: var(--bc-text-body);
-		}
-	}
-
-	@media (max-width: 767.98px) {
-		.service-card > a {
-			display: grid;
-			grid-template-columns: 35% minmax(0, 1fr);
-			align-items: stretch;
-		}
-		.service-card img {
-			min-height: 160px;
-		}
-		.service-card img {
-			height: 100%;
-			aspect-ratio: auto;
-			object-fit: cover;
-		}
-		.service-card {
-			background: var(--bc-white);
-			border: 1px solid var(--bc-border);
-		}
-		.service-card__body {
-			align-items: stretch;
-			text-align: left;
-			padding: var(--bc-space-3);
-			gap: var(--bc-space-2);
-		}
-		.service-card h2 {
-			font-size: var(--bc-text-control);
-			line-height: 1.25;
-		}
-		.service-card p {
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 2;
-			line-clamp: 2;
-			overflow: hidden;
-			font-size: var(--bc-text-body);
-			line-height: var(--bc-leading-body);
-			margin: 0;
-		}
-		.service-card__cta {
-			justify-content: space-between;
-			min-height: var(--bc-control-height-standard);
-			padding: 0;
-			border-radius: 0;
-			background: transparent;
-			color: var(--bc-ink);
-			font-size: var(--bc-text-body);
-			font-weight: var(--bc-weight-action);
-		}
-		a:hover .service-card__cta {
-			background: transparent;
-			color: var(--bc-ink);
 		}
 	}
 </style>

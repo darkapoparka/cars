@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
+	import { desktopCopy } from '$lib/content/desktop-copy';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ProcessSteps from '$lib/components/common/ProcessSteps.svelte';
 	import ContactBanner from '$lib/components/common/ContactBanner.svelte';
@@ -25,6 +26,7 @@
 			? 'Cars, checks and a clear next step.'
 			: 'Автомобили, проверка и ясен следващ ход.'}
 		description={about.hero.description}
+		desktopDescription={desktopCopy[data.locale].aboutCaption}
 		image={about.hero.image}
 		desktopImage="/assets/daynight/banners/about-desktop-v2.webp"
 		align="center"
@@ -90,11 +92,11 @@
 	}
 	@media (min-width: 768px) {
 		#about-team {
-			padding-top: var(--bc-space-8);
+			padding-top: var(--bc-space-6);
 		}
 		.about-team {
 			width: 100%;
-			max-width: 1056px;
+			max-width: var(--bc-desktop-team-width);
 			margin-inline: auto;
 		}
 	}

@@ -70,7 +70,7 @@
 		--bc-card-bg: var(--bc-surface-raised);
 	}
 	.site-section {
-		padding-block: var(--bc-space-8);
+		padding-block: var(--bc-space-6);
 	}
 	.site-empty-state {
 		width: 100%;
