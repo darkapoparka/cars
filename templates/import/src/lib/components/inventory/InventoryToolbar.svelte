@@ -5,6 +5,7 @@
 	import { inventoryFilterParam } from '$lib/domain/inventory-query';
 	import InventoryFilter from './InventoryFilter.svelte';
 	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
+	import InventoryDisplayControls from './InventoryDisplayControls.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import { linkHref } from '$lib/utils/links';
 	import type {
@@ -32,38 +33,40 @@
 
 <div class="inventory-toolbar">
 	<div class="site-container">
-		<div class="inventory-toolbar__panel">
-			<div class="inventory-toolbar__row">
-				<div class="inventory-toolbar__filters">
-					{#each quickFilters as filter (filter.id)}<InventoryFilter
-							{filter}
-							summary={appliedRangeSummary(filter)}
-							expanded={allOpen && activeFilter?.id === filter.id}
-							onopen={() => dialog?.openFilters(filter)}
-						/>{/each}
-				</div>
-				<Action
-					variant="strong"
-					size="compact"
-					class="inventory-toolbar__all"
-					aria-haspopup="dialog"
-					aria-expanded={allOpen}
-					onclick={() => dialog?.openFilters()}
-					><SlidersHorizontal size={18} aria-hidden="true" />{english
-						? 'All filters'
-						: 'Всички филтри'}</Action
-				>
+		<div class="inventory-toolbar__row">
+			<div class="inventory-toolbar__filters">
+				{#each quickFilters as filter (filter.id)}<InventoryFilter
+						{filter}
+						summary={appliedRangeSummary(filter)}
+						expanded={allOpen && activeFilter?.id === filter.id}
+						onopen={() => dialog?.openFilters(filter)}
+					/>{/each}
 			</div>
-			{#if desktop.activeFilters}<div class="inventory-toolbar__active">
-					{#each desktop.activeFilters.chips as chip (chip.href)}<a
-							href={linkHref(chip.href)}
-							aria-label={(english ? 'Remove filter: ' : 'Премахни филтър: ') + chip.label}
-							>{chip.label}<X size={14} aria-hidden="true" /></a
-						>{/each}<a
-						class="inventory-toolbar__clear"
-						href={linkHref(desktop.activeFilters.clearHref)}>{desktop.activeFilters.clearLabel}</a
-					>
-				</div>{/if}
+			<Action
+				variant="strong"
+				size="compact"
+				class="inventory-toolbar__all"
+				aria-haspopup="dialog"
+				aria-expanded={allOpen}
+				onclick={() => dialog?.openFilters()}
+				><SlidersHorizontal size={18} aria-hidden="true" />{english
+					? 'All filters'
+					: 'Всички филтри'}</Action
+			>
+		</div>
+		{#if desktop.activeFilters}<div class="inventory-toolbar__active">
+				{#each desktop.activeFilters.chips as chip (chip.href)}<a
+						href={linkHref(chip.href)}
+						aria-label={(english ? 'Remove filter: ' : 'Премахни филтър: ') + chip.label}
+						>{chip.label}<X size={14} aria-hidden="true" /></a
+					>{/each}<a
+					class="inventory-toolbar__clear"
+					href={linkHref(desktop.activeFilters.clearHref)}>{desktop.activeFilters.clearLabel}</a
+				>
+			</div>{/if}
+		<div class="inventory-toolbar__overview">
+			<p role="status"><strong>{desktop.resultCount}</strong> {english ? 'cars' : 'автомобила'}</p>
+			<InventoryDisplayControls {desktop} {english} />
 		</div>
 	</div>
 </div>
@@ -75,13 +78,8 @@
 		top: 0;
 		z-index: 80;
 		background: var(--bc-bg);
-		padding-block: var(--bc-space-5) var(--bc-space-3);
-	}
-	.inventory-toolbar__panel {
-		padding: var(--bc-space-4);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-panel);
-		background: var(--bc-surface-raised);
+		padding-block: var(--bc-space-3);
+		margin-bottom: var(--bc-space-2);
 	}
 	.inventory-toolbar__row {
 		display: grid;
@@ -94,6 +92,24 @@
 		grid-template-columns: repeat(6, minmax(0, 1fr));
 		min-width: 0;
 		gap: var(--bc-space-2);
+	}
+	.inventory-toolbar__overview {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--bc-space-2) var(--bc-space-4);
+		margin-top: var(--bc-space-2);
+	}
+	.inventory-toolbar__overview p {
+		margin: 0;
+		color: var(--bc-copy);
+		font-size: var(--bc-text-body);
+	}
+	.inventory-toolbar__overview strong {
+		color: var(--bc-ink);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-heading);
 	}
 	.inventory-toolbar__active {
 		display: flex;
@@ -123,7 +139,7 @@
 		border-radius: var(--bc-radius-md);
 		white-space: nowrap;
 	}
-	@media (min-width: 768px) and (max-width: 1199px) {
+	@media (min-width: 768px) and (max-width: 1023px) {
 		.inventory-toolbar__filters {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}

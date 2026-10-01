@@ -81,6 +81,7 @@ test('desktop sidebar submits canonical filters, keeps searched-out choices and 
 			url.searchParams.get('layout') === 'dashboard'
 	);
 	await expect(sidebar).toBeVisible();
+	await page.locator('.inventory-view summary').click();
 	await page
 		.getByRole('link', { name: 'Show the grid without a persistent filter panel', exact: true })
 		.click();
@@ -168,6 +169,7 @@ test('desktop sorting and view changes retain filters and keyboard menu behavior
 			url.searchParams.get('brand') === 'BMW' &&
 			url.searchParams.get('maxPrice') === '50000'
 	);
+	await view.click();
 	await page.getByRole('link', { name: 'Show a persistent filter panel', exact: true }).click();
 	await expect(page.locator('.inventory-sidebar')).toBeVisible();
 	await expect(page).toHaveURL(

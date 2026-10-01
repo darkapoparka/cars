@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import PanelLeft from '@lucide/svelte/icons/panel-left';
 	import Action from '$lib/components/common/Action.svelte';
 	import { linkHref } from '$lib/utils/links';
@@ -35,7 +36,7 @@
 				{value}
 			/>{/each}
 		<label
-			><span class="sr-only">{desktop.sortLabel}</span><select
+			><span>{desktop.sortLabel}</span><select
 				name="sort"
 				value={desktop.sortOptions.find((option) => option.active)?.value ??
 					desktop.sortOptions[0]?.value}
@@ -47,28 +48,40 @@
 		>
 		<noscript><button type="submit">{english ? 'Sort' : 'Подреди'}</button></noscript>
 	</form>
-	<div class="inventory-display__views">
-		<details class="inventory-view" bind:this={viewMenu}>
-			<summary><LayoutGrid size={18} aria-hidden="true" />{desktop.viewLabel}</summary>
-			<nav aria-label={desktop.viewLabel}>
-				{#each desktop.viewOptions as option (option.view)}<a
-						href={linkHref(option.href)}
-						aria-label={option.ariaLabel}
-						aria-current={option.active ? 'true' : undefined}>{option.label}</a
-					>{/each}
-			</nav>
-		</details>
-		<Action
-			href={desktop.layoutToggle.href}
-			variant="quiet"
-			size="compact"
-			aria-label={desktop.layoutToggle.ariaLabel}
-			aria-controls="inventory-results"
-			class="inventory-toolbar__layout"
+	<details class="inventory-view" bind:this={viewMenu}>
+		<summary
+			><LayoutGrid size={18} aria-hidden="true" />{desktop.viewLabel}<ChevronDown
+				size={16}
+				aria-hidden="true"
+			/></summary
 		>
-			<PanelLeft size={18} aria-hidden="true" />{desktop.layoutToggle.label}
-		</Action>
-	</div>
+		<nav aria-label={desktop.viewLabel}>
+			{#each desktop.viewOptions as option (option.view)}<a
+					href={linkHref(option.href)}
+					aria-label={option.ariaLabel}
+					aria-current={option.active ? 'true' : undefined}>{option.label}</a
+				>{/each}
+			<div class="inventory-view__layout">
+				<Action
+					href={desktop.layoutToggle.href}
+					variant="quiet"
+					size="compact"
+					aria-label={desktop.layoutToggle.ariaLabel}
+					aria-controls="inventory-results"
+					class="inventory-toolbar__layout"
+					onclick={() => (viewMenu.open = false)}
+				>
+					<PanelLeft size={18} aria-hidden="true" />{english
+						? desktop.layout === 'dashboard'
+							? 'Hide filter panel'
+							: 'Show filter panel'
+						: desktop.layout === 'dashboard'
+							? 'Скрий панела с филтри'
+							: 'Покажи панел с филтри'}
+				</Action>
+			</div>
+		</nav>
+	</details>
 </div>
 
 <style>
@@ -81,23 +94,23 @@
 	.inventory-display__sort {
 		margin: 0;
 	}
+	label {
+		display: flex;
+		align-items: center;
+		gap: var(--bc-space-1);
+		color: var(--bc-copy);
+		font-size: var(--bc-text-body);
+	}
 	select,
 	summary {
-		border: 1px solid var(--bc-border-strong);
-		border-radius: var(--bc-radius-md);
+		border: 0;
+		border-radius: var(--bc-radius-sm);
 		min-height: var(--bc-control-height-standard);
-		padding: 0 var(--bc-space-3);
-		background: var(--bc-surface-raised);
+		padding: 0 var(--bc-space-2);
+		background: transparent;
 		color: var(--bc-ink);
 		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-control);
-	}
-	.inventory-display__views {
-		display: flex;
-		align-items: center;
-		border: 1px solid var(--bc-border-strong);
-		border-radius: var(--bc-radius-md);
-		background: var(--bc-surface-raised);
 	}
 	.inventory-view {
 		position: relative;
@@ -111,6 +124,7 @@
 		list-style: none;
 		cursor: pointer;
 	}
+	select:hover,
 	summary:hover,
 	.inventory-view[open] summary {
 		background: var(--bc-surface);
@@ -123,7 +137,7 @@
 		right: 0;
 		top: calc(100% + var(--bc-space-2));
 		z-index: 90;
-		min-width: 180px;
+		min-width: max-content;
 		padding: var(--bc-space-2);
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);
@@ -145,9 +159,16 @@
 	.inventory-view a[aria-current='true'] {
 		background: var(--bc-surface-hover);
 	}
-	.inventory-display__views :global(.inventory-toolbar__layout) {
-		border-left: 1px solid var(--bc-border);
-		border-radius: 0 var(--bc-radius-md) var(--bc-radius-md) 0;
+	.inventory-view__layout {
+		margin-top: var(--bc-space-2);
+		padding-top: var(--bc-space-2);
+		border-top: 1px solid var(--bc-border);
+	}
+	.inventory-view__layout :global(.inventory-toolbar__layout) {
+		justify-content: flex-start;
+		width: 100%;
+		font-weight: var(--bc-weight-control);
+		border-radius: var(--bc-radius-md);
 		padding-inline: var(--bc-space-3);
 		white-space: nowrap;
 	}

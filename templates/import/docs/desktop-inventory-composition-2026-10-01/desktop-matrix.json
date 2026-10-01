@@ -1,0 +1,622 @@
+[
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Марка",
+        "top": 397,
+        "width": 156.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Модел",
+        "top": 397,
+        "width": 156.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "top": 397,
+        "width": 156.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "top": 453,
+        "width": 156.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "top": 453,
+        "width": 156.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "top": 453,
+        "width": 156.921875
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 32,
+    "gridX": 32,
+    "gridY": 573,
+    "height": 1000,
+    "locale": "bg",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 768
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Марка",
+        "top": 397,
+        "width": 200.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Модел",
+        "top": 397,
+        "width": 200.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "top": 397,
+        "width": 200.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "top": 453,
+        "width": 200.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "top": 453,
+        "width": 200.921875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "top": 453,
+        "width": 200.921875
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 32,
+    "gridX": 32,
+    "gridY": 573,
+    "height": 1000,
+    "locale": "bg",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 900
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Марка",
+        "top": 397,
+        "width": 117.125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Модел",
+        "top": 397,
+        "width": 117.125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "top": 397,
+        "width": 117.140625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "top": 397,
+        "width": 117.125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "top": 397,
+        "width": 117.125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "top": 397,
+        "width": 117.140625
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 32,
+    "gridX": 32,
+    "gridY": 517,
+    "height": 1000,
+    "locale": "bg",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 1024
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Марка",
+        "top": 358,
+        "width": 159.796875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Модел",
+        "top": 358,
+        "width": 159.796875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "top": 358,
+        "width": 159.796875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "top": 358,
+        "width": 159.796875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "top": 358,
+        "width": 159.796875
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "top": 358,
+        "width": 159.796875
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 32,
+    "gridX": 32,
+    "gridY": 478,
+    "height": 1000,
+    "locale": "bg",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 1280
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Марка",
+        "top": 358,
+        "width": 179.625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Модел",
+        "top": 358,
+        "width": 179.625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "top": 358,
+        "width": 179.625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "top": 358,
+        "width": 179.640625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "top": 358,
+        "width": 179.625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "top": 358,
+        "width": 179.625
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 52.5,
+    "gridX": 52.5,
+    "gridY": 478,
+    "height": 1000,
+    "locale": "bg",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 1440
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Марка",
+        "top": 358,
+        "width": 179.625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Модел",
+        "top": 358,
+        "width": 179.625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Цена",
+        "top": 358,
+        "width": 179.625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Пробег",
+        "top": 358,
+        "width": 179.640625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Гориво",
+        "top": 358,
+        "width": 179.625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Купе",
+        "top": 358,
+        "width": 179.625
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 292.5,
+    "gridX": 292.5,
+    "gridY": 478,
+    "height": 1000,
+    "locale": "bg",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 1920
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Make",
+        "top": 397,
+        "width": 176.484375
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Model",
+        "top": 397,
+        "width": 176.484375
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "top": 397,
+        "width": 176.484375
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "top": 453,
+        "width": 176.484375
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "top": 453,
+        "width": 176.484375
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "top": 453,
+        "width": 176.484375
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 32,
+    "gridX": 32,
+    "gridY": 573,
+    "height": 1000,
+    "locale": "en",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 768
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Make",
+        "top": 397,
+        "width": 126.90625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Model",
+        "top": 397,
+        "width": 126.90625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "top": 397,
+        "width": 126.90625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "top": 397,
+        "width": 126.90625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "top": 397,
+        "width": 126.90625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "top": 397,
+        "width": 126.90625
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 32,
+    "gridX": 32,
+    "gridY": 517,
+    "height": 1000,
+    "locale": "en",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 1024
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Make",
+        "top": 358,
+        "width": 169.5625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Model",
+        "top": 358,
+        "width": 169.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "top": 358,
+        "width": 169.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "top": 358,
+        "width": 169.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "top": 358,
+        "width": 169.578125
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "top": 358,
+        "width": 169.5625
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 32,
+    "gridX": 32,
+    "gridY": 478,
+    "height": 1000,
+    "locale": "en",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 1280
+  },
+  {
+    "canvas": "rgb(238, 241, 244)",
+    "filterFields": [
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Make",
+        "top": 358,
+        "width": 189.40625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Model",
+        "top": 358,
+        "width": 189.40625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Price",
+        "top": 358,
+        "width": 189.40625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Mileage",
+        "top": 358,
+        "width": 189.40625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Fuel",
+        "top": 358,
+        "width": 189.40625
+      },
+      {
+        "clipped": false,
+        "height": 48,
+        "label": "Body",
+        "top": 358,
+        "width": 189.421875
+      }
+    ],
+    "filterPanel": false,
+    "filterX": 52.5,
+    "gridX": 52.5,
+    "gridY": 478,
+    "height": 1000,
+    "locale": "en",
+    "overflow": false,
+    "repeatedHeading": false,
+    "scrollY": 0,
+    "toolbarInsideResults": true,
+    "utilityTargets": [
+      44,
+      44
+    ],
+    "width": 1440
+  }
+]
