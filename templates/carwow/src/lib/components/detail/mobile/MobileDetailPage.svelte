@@ -411,7 +411,6 @@
 			>
 				{#if activeTab === 'info'}
 					<section class="mobile-detail__section">
-						<h2>{i18n.t('copy.b3680f2cba5f')}</h2>
 						<p class="mobile-detail__section-lead">{i18n.spec(vehicle.conditionLine)}</p>
 						<p>{i18n.vehicleDescription(vehicle)}</p>
 					</section>
@@ -441,7 +440,6 @@
 					</section>
 				{:else if activeTab === 'extras'}
 					<section class="mobile-detail__section">
-						<h2>{i18n.t('copy.03868a05f1d2')}</h2>
 						<ul>
 							{#each vehicle.features as feature (feature)}
 								<li>{i18n.stock(feature)}</li>
